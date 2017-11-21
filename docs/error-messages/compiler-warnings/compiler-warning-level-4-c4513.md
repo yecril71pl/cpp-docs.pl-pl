@@ -1,0 +1,27 @@
+---
+title: "Kompilatora (poziom 4) ostrzeżenie C4513 | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4513
+dev_langs: C++
+helpviewer_keywords: C4513
+ms.assetid: 6877334a-f30a-4184-9483-dac3348737a4
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 08365d28394afbbce40ee758002922dc9ca30395
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="compiler-warning-level-4-c4513"></a>Kompilator C4513 ostrzegawcze (poziom 4)
+"class": nie można wygenerować — destruktor  
+  
+ Kompilator nie może wygenerować destruktora domyślny dla danej klasy; destruktor nie został utworzony. Destruktor jest w klasie podstawowej, która nie jest dostępna dla klasy pochodnej. Klasa podstawowa ma destruktor prywatne, aby go publiczne lub chronione.

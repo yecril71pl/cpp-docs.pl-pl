@@ -1,0 +1,50 @@
+---
+title: "C2798 błąd kompilatora | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C2798
+dev_langs: C++
+helpviewer_keywords: C2798
+ms.assetid: fb0cd861-b228-4f81-8090-e28344a727e0
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bb0a411651cf7c7f614942563baee5f04075fdf3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="compiler-error-c2798"></a>C2798 błąd kompilatora
+"super::member" jest niejednoznaczny  
+  
+ Wiele dziedziczone struktury zawierają element członkowski odwołania z [super](../../cpp/super.md). Błąd można rozwiązać przez:  
+  
+-   Usuwanie z listy dziedziczenia d. B1 lub B2  
+  
+-   Zmiana nazwy elementu członkowskiego danych w B1 lub B2.  
+  
+ Poniższy przykład generuje C2798:  
+  
+```  
+// C2798.cpp  
+struct B1 {  
+   int i;  
+};  
+  
+struct B2 {  
+   int i;  
+};  
+  
+struct D : B1, B2 {  
+   void g() {  
+      __super::i = 4; // C2798  
+   }  
+};  
+```

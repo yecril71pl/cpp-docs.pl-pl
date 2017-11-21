@@ -1,0 +1,97 @@
+---
+title: _seh_filter_dll, _seh_filter_exe | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _XcptFilter
+- _seh_filter_dll
+- _seh_filter_exe
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- XcptFilter
+- _XcptFilter
+- _seh_filter_dll
+- _seh_filter_exe
+- corecrt_startup/_seh_filter_exe
+- corecrt_startup/_seh_filter_dll
+dev_langs: C++
+helpviewer_keywords:
+- XcptFilter function
+- _XcptFilter function
+- _seh_filter_dll function
+- _seh_filter_exe function
+ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 677e203e552dfa2f057cb0631d73c9f48349c4b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="sehfilterdll-sehfilterexe"></a>_seh_filter_dll, _seh_filter_exe
+Identyfikuje wyjątku i powiązane działania podejmowane.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+int __cdecl _seh_filter_dll(  
+   unsigned long _ExceptionNum,  
+   struct _EXCEPTION_POINTERS* _ExceptionPtr  
+);  
+int __cdecl _seh_filter_exe(  
+   unsigned long _ExceptionNum,  
+   struct _EXCEPTION_POINTERS* _ExceptionPtr  
+);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ [in]`_ExceptionNum`  
+ Identyfikator dla wyjątku.  
+  
+ [in]`_ExceptionPtr`  
+ Wskaźnik do informacji o wyjątkach.  
+  
+## <a name="return-value"></a>Wartość zwracana  
+ Liczba całkowita, która wskazuje akcji, które należy podjąć, na podstawie wyniku wyjątek podczas przetwarzania.  
+  
+## <a name="remarks"></a>Uwagi  
+ Te metody są wywoływane przez wyrażenie filtru wyjątków [spróbuj-except — instrukcja](../../cpp/try-except-statement.md). Metoda sprawdza stałej tabeli wewnętrznej, aby zidentyfikować wyjątek i określić odpowiednią akcję, jak pokazano poniżej. Liczby wyjątków są zdefiniowane w pliku winnt.h i numery sygnału są zdefiniowane w signal.h.  
+  
+|Numer wyjątku (unsigned long)|Numer sygnału|  
+|----------------------------------------|-------------------|  
+|STATUS_ACCESS_VIOLATION|SIGSEGV —|  
+|STATUS_ILLEGAL_INSTRUCTION|SIGILL —|  
+|STATUS_PRIVILEGED_INSTRUCTION|SIGILL —|  
+|STATUS_FLOAT_DENORMAL_OPERAND|SIGFPE —|  
+|STATUS_FLOAT_DIVIDE_BY_ZERO|SIGFPE —|  
+|STATUS_FLOAT_INEXACT_RESULT|SIGFPE —|  
+|STATUS_FLOAT_INVALID_OPERATION|SIGFPE —|  
+|STATUS_FLOAT_OVERFLOW|SIGFPE —|  
+|STATUS_FLOAT_STACK_CHECK|SIGFPE —|  
+|STATUS_FLOAT_UNDERFLOW|SIGFPE —|  
+  
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** corecrt_startup.h  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

@@ -1,0 +1,108 @@
+---
+title: "Porady: dostęp do znaków w obiekcie System::String | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], accessing in System::String
+- examples [C++], strings
+- strings [C++], accessing characters
+ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2cc927d2e06def1eba726f3123e9968003e62d1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="how-to-access-characters-in-a-systemstring"></a>Porady: dostęp do znaków w obiekcie System::String
+Dostęp można uzyskać znaki <xref:System.String> obiektu dla wywołań wysokiej wydajności w niezarządzanych funkcji, które trwają `wchar_t*` ciągów. Metoda zwraca wskaźnik wewnętrzny do pierwszego znaku <xref:System.String> obiektu. This, wskaźnik można manipulować bezpośrednio lub przypięty i przekazany do funkcji, oczekiwano zwykłego `wchar_t` ciągu.  
+  
+## <a name="example"></a>Przykład  
+ `PtrToStringChars`Zwraca <xref:System.Char>, która jest wskaźnik wewnętrzny (znanej także jako `byref`). W efekcie go podlega wyrzucanie elementów bezużytecznych. Nie masz przypiąć ten wskaźnik, chyba że użytkownik chce go przekazać do funkcji macierzystej.  
+  
+ Rozważmy poniższy kod.  Przypinanie nie jest potrzebna, ponieważ `ppchar` jest wskaźnik wewnętrzny i jeśli moduł zbierający elementy bezużyteczne przenosi ciąg wskazuje, również spowoduje zaktualizowanie `ppchar`. Bez [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md), kod będzie działać i nie ma potencjalnych trafień wydajności spowodowany przez przypinanie.  
+  
+ W przypadku przekazania `ppchar` funkcji macierzystej, następnie należy ją przypiętego wskaźnika; moduł zbierający elementy bezużyteczne nie będzie mógł zaktualizować wszystkie wskaźniki w ramce stosu niezarządzane.  
+  
+```  
+// PtrToStringChars.cpp  
+// compile with: /clr  
+#include<vcclr.h>  
+using namespace System;  
+  
+int main() {  
+   String ^ mystring = "abcdefg";  
+  
+   interior_ptr<const Char> ppchar = PtrToStringChars( mystring );  
+  
+   for ( ; *ppchar != L'\0'; ++ppchar )  
+      Console::Write(*ppchar);  
+}  
+```  
+  
+```Output  
+abcdefg  
+```  
+  
+## <a name="example"></a>Przykład  
+ Przykładzie pokazano, gdzie jest potrzebna przypinania.  
+  
+```  
+// PtrToStringChars_2.cpp  
+// compile with: /clr  
+#include <string.h>  
+#include <vcclr.h>  
+// using namespace System;  
+  
+size_t getlen(System::String ^ s) {  
+   // Since this is an outside string, we want to be secure.  
+   // To be secure, we need a maximum size.  
+   size_t maxsize = 256;  
+   // make sure it doesn't move during the unmanaged call  
+   pin_ptr<const wchar_t> pinchars = PtrToStringChars(s);  
+   return wcsnlen(pinchars, maxsize);  
+};  
+  
+int main() {  
+   System::Console::WriteLine(getlen("testing"));  
+}  
+```  
+  
+```Output  
+7  
+```  
+  
+## <a name="example"></a>Przykład  
+ Wskaźnik wewnętrzny ma wszystkie właściwości wskaźnik natywny C++. Na przykład umożliwia ona szczegółowe struktury połączonych danych i do wstawienia i usunięcia za pomocą tylko jednego wskaźnika:  
+  
+```  
+// PtrToStringChars_3.cpp  
+// compile with: /clr /LD  
+using namespace System;  
+ref struct ListNode {  
+   Int32 elem;   
+   ListNode ^ Next;  
+};  
+  
+void deleteNode( ListNode ^ list, Int32 e ) {   
+   interior_ptr<ListNode ^> ptrToNext = &list;  
+   while (*ptrToNext != nullptr) {  
+      if ( (*ptrToNext) -> elem == e )  
+         *ptrToNext = (*ptrToNext) -> Next;   // delete node  
+      else  
+         ptrToNext = &(*ptrToNext) -> Next;   // move to next node  
+   }  
+}  
+```  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

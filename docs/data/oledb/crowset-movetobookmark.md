@@ -1,0 +1,69 @@
+---
+title: CRowset::MoveToBookmark | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::MoveToBookmark
+- ATL::CRowset<TAccessor>::MoveToBookmark
+- ATL.CRowset.MoveToBookmark
+- ATL.CRowset<TAccessor>.MoveToBookmark
+- MoveToBookmark
+- CRowset::MoveToBookmark
+- CRowset.MoveToBookmark
+- CRowset<TAccessor>::MoveToBookmark
+dev_langs: C++
+helpviewer_keywords: MoveToBookmark method
+ms.assetid: 90124723-8daf-4692-ae2f-0db26b5db920
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4edbfd018cadeb47691ac4fd70d5e518f8008f04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="crowsetmovetobookmark"></a>CRowset::MoveToBookmark
+Pobiera oznaczony przez zakładki lub wiersza od określonego przesunięcia wiersza (`lSkip`) z tej zakładki.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+  
+      HRESULT MoveToBookmark(   
+   const CBookmarkBase& bookmark,   
+   LONG lSkip = 0    
+) throw( );  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `bookmark`  
+ [in] Zakładki oznaczenie lokalizacji, z którego mają być pobierane dane.  
+  
+ `lSkip`  
+ [in] Liczbę wierszy z zakładkę do wiersza docelowego. Jeśli `lSkip` wynosi zero, pierwszy wiersz pobranych jest zakładką wiersza. Jeśli `lSkip` 1, pierwszy wiersz pobranych jest wiersz po wierszu zakładką. Jeśli `lSkip` wynosi -1, pierwszy wiersz pobranych jest wierszy przed wierszem zakładką.  
+  
+## <a name="return-value"></a>Wartość zwracana  
+ Standard `HRESULT`.  
+  
+## <a name="remarks"></a>Uwagi  
+ Ta metoda wymaga opcjonalny interfejs `IRowsetLocate`, który może nie być obsługiwany na wszystkich dostawców; Jeśli jest to możliwe, metoda zwraca **E_NOINTERFACE**. Należy także ustawić **DBPROP_IRowsetLocate** do `VARIANT_TRUE` i ustaw **DBPROP_CANFETCHBACKWARDS** do `VARIANT_TRUE` przed wywołaniem **Otwórz** tabeli lub polecenia zawierający zestaw wierszy.  
+  
+ Aby dowiedzieć się, jak korzystanie z zakładek użytkowników, zobacz [przy użyciu zakładki](../../data/oledb/using-bookmarks.md).  
+  
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** atldbcli.h  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Crowset — klasa](../../data/oledb/crowset-class.md)   
+ [CRowset::MoveNext](../../data/oledb/crowset-movenext.md)   
+ [CRowset::MoveFirst](../../data/oledb/crowset-movefirst.md)   
+ [IRowsetLocate::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)   
+ [CRowset::MovePrev](../../data/oledb/crowset-moveprev.md)   
+ [CRowset::MoveLast](../../data/oledb/crowset-movelast.md)
