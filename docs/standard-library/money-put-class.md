@@ -1,0 +1,294 @@
+---
+title: "money_put — klasa | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xlocmon/std::money_put
+- xlocmon/std::money_put::char_type
+- xlocmon/std::money_put::iter_type
+- xlocmon/std::money_put::string_type
+- xlocmon/std::money_put::do_put
+- xlocmon/std::money_put::put
+dev_langs: C++
+helpviewer_keywords:
+- std::money_put [C++]
+- std::money_put [C++], char_type
+- std::money_put [C++], iter_type
+- std::money_put [C++], string_type
+- std::money_put [C++], do_put
+- std::money_put [C++], put
+ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d93a25339802edc4f03b1f5e5cf03be0b2558dda
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="moneyput-class"></a>money_put — Klasa
+Klasa szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do sterowania konwersji wartości walutowej sekwencji typu `CharType`.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+template <class CharType,  
+    class OutputIterator = ostreambuf_iterator<CharType>>  
+class money_put : public locale::facet;  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `CharType`  
+ Typ używany w programie do kodowania znaków w ustawieniach regionalnych.  
+  
+ `OutputIterator`  
+ Typ iteratora, do którego funkcje pieniężne put zapisują swoje dane wyjściowe.  
+  
+## <a name="remarks"></a>Uwagi  
+ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba jej wartości przechowywanej dostępu są przechowywane w unikatową wartość dodatnią **identyfikator.**  
+  
+### <a name="constructors"></a>Konstruktorów  
+  
+|||  
+|-|-|  
+|[money_put —](#money_put)|Konstruktor dla obiektów typu `money_put`.|  
+  
+### <a name="typedefs"></a>Typedefs  
+  
+|||  
+|-|-|  
+|[char_type](#char_type)|Typ opisujący znak używany przez ustawienie regionalne.|  
+|[iter_type](#iter_type)|Typ, który opisuje iterator danych wyjściowych.|  
+|[STRING_TYPE](#string_type)|Typ, który opisuje ciąg zawierający znaki typu `CharType`.|  
+  
+### <a name="member-functions"></a>Funkcje elementów członkowskich  
+  
+|||  
+|-|-|  
+|[do_put](#do_put)|Funkcja wirtualna wywoływana w celu przekonwertowania liczby lub ciągu na sekwencję znaków, która reprezentuje wartość pieniężną.|  
+|[Umieść](#put)|Konwertuje liczbę lub ciąg na sekwencję znaków, która reprezentuje wartość pieniężną.|  
+  
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** \<ustawień regionalnych >  
+  
+ **Namespace:** Standard  
+  
+##  <a name="char_type"></a>money_put::char_type  
+ Typ opisujący znak używany przez ustawienie regionalne.  
+  
+```  
+typedef CharType char_type;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ jest synonimem parametru szablonu **CharType**.  
+  
+##  <a name="do_put"></a>money_put::do_put  
+ Funkcja wirtualna wywoływana w celu przekonwertowania liczby lub ciągu na sekwencję znaków, która reprezentuje wartość pieniężną.  
+  
+```  
+virtual iter_type do_put(
+    iter_type next,   
+    bool _Intl,   
+    ios_base& _Iosbase,  
+    CharType _Fill,   
+    const string_type& val) const;
+
+ 
+virtual iter_type do_put(
+    iter_type next,   
+    bool _Intl,   
+    ios_base& _Iosbase,  
+    CharType _Fill,  
+    long double val) const;
+```  
+  
+### <a name="parameters"></a>Parametry  
+ `next`  
+ Iteratora adresowania pierwszego elementu obiektu wstawionych ciągów.  
+  
+ `_Intl`  
+ Wartość logiczna określająca typ symbolu waluty oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowego.  
+  
+ `_Iosbase`  
+ Flaga formatu, który po zestaw oznacza, że symbol waluty jest opcjonalna. w przeciwnym razie jest wymagana  
+  
+ `_Fill`  
+ Znak, który jest używany do rozdzielenia.  
+  
+ `val`  
+ Obiekt ciągu do skonwertowania.  
+  
+### <a name="return-value"></a>Wartość zwracana  
+ Dane wyjściowe iteratora wyprodukowanych pozycji jeden po ostatnim elemencie adresy.  
+  
+### <a name="remarks"></a>Uwagi  
+ Pierwszej funkcji wirtualnych chroniony element członkowski generuje elementy sekwencyjnych, zaczynając od `next` aby wygenerować pole pieniężne dane wyjściowe z [string_type](#string_type) obiektu `val`. Sekwencja kontrolowane przez `val` musi rozpoczynać się od jednego lub więcej cyfr dziesiętnych, opcjonalnie poprzedzony znakiem minus (-), który reprezentuje ilość. Funkcja zwraca iteratora wyznaczenie pierwszy element poza pole wygenerowanych danych wyjściowych finansowe.  
+  
+ Funkcji second wirtualnego chroniony element członkowski działa tak samo jak pierwszy, z wyjątkiem, że pierwszy skutecznie konwertuje `val` sekwencji cyfr dziesiętnych, opcjonalnie poprzedzony znakiem minus, a następnie konwertuje tej sekwencji, jak powyżej.  
+  
+ Format pola pieniężne danych wyjściowych jest określany przez [aspektu ustawień regionalnych](../standard-library/locale-class.md#facet_class) fac zwrócony przez wywołanie (aktywne) [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct —](../standard-library/moneypunct-class.md) \< **CharType**, **wewnętrzna**>> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).  
+  
+ W szczególności:  
+  
+- **FAC**. [pos_format](../standard-library/moneypunct-class.md#pos_format) określa kolejność, w którym składniki pola są generowane dla wartość nieujemną.  
+  
+- **FAC**. [neg_format](../standard-library/moneypunct-class.md#neg_format) określa kolejność, w którym składniki pola są generowane dla wartości ujemnej.  
+  
+- **FAC**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) określa kolejność elementów do wygenerowania symbolu waluty.  
+  
+- **FAC**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) określa kolejność elementów do generowania znak dodatni.  
+  
+- **FAC**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) określa kolejność elementów w celu wygenerowania dla symbolu wartości ujemnej.  
+  
+- **FAC**. [Grupowanie](../standard-library/moneypunct-class.md#grouping) określa sposób grupowania cyfr na lewo od dowolnego punktu dziesiętnego.  
+  
+- **FAC**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) określa element oddzielający grup cyfr w lewą stronę dowolnego punktu dziesiętnego.  
+  
+- **FAC**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) określa element oddzielający cyfr liczbą całkowitą od dowolnego cyfr ułamek.  
+  
+- **FAC**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) określa liczbę cyfr znaczących ułamek na prawo od dowolnego punktu dziesiętnego.  
+  
+ Jeśli parametry logowania ( **fac**. `negative_sign`lub **fac**. `positive_sign`) ma więcej niż jeden element, tylko pierwszy element jest generowany w przypadku gdy element równa **money_base::sign** pojawia się we wzorcu formatu ( **fac**. `neg_format`lub **fac**. `pos_format`). Wszystkie pozostałe elementy są generowane na końcu pola pieniężne danych wyjściowych.  
+  
+ Jeśli **iosbase**. [flagi](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) jest różna od zera, ciąg **fac**. `curr_symbol`jest generowany w przypadku gdy element równa **money_base::symbol** jest wyświetlana w formacie wzorca. W przeciwnym razie jest generowany bez symbolu waluty.  
+  
+ Jeśli żadne ograniczenia grupowania są narzucone przez **fac**. **Grupowanie** (pierwszego elementu ma wartość char_max —), następnie żadnych wystąpień **fac**. `thousands_sep`są generowane w części wartość pola pieniężne danych wyjściowych (gdzie element równa **money_base::value** pojawia się we wzorcu formatu). Jeśli **fac**. `frac_digits`to zero, a następnie nie wystąpienie **fac**. `decimal_point`jest generowany po przecinku. W przeciwnym razie wynikowy pola pieniężne dane wyjściowe umieszcza znaczącymi bitami **fac**. `frac_digits`decimal cyfr z prawej strony punktu dziesiętnego.  
+  
+ Dopełnienie występuje, podobnie jak w przypadku dowolnego pola liczbowego danych wyjściowych, chyba że **iosbase**. **flagi** & **iosbase**. [wewnętrzny](../standard-library/ios-functions.md#internal) jest różna od zera, wewnętrznych any dopełnienie jest generowany w przypadku gdy element równa **money_base::space** pojawia się w wzorzec formatu, jeśli są wyświetlane. W przeciwnym razie dopełnienia wewnętrznego występuje przed wygenerowanym sekwencji. Jest znak dopełnienia **wypełnienia**.  
+  
+ Wywołania funkcji **iosbase**. **szerokość**(0), można zresetować szerokość pola od zera.  
+  
+### <a name="example"></a>Przykład  
+  Zobacz przykład [put](#put), w którym funkcja wirtualny element członkowski jest wywoływana przez **put**.  
+  
+##  <a name="iter_type"></a>money_put::iter_type  
+ Typ, który opisuje iterator danych wyjściowych.  
+  
+```  
+typedef OutputIterator iter_type;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ jest synonimem parametru szablonu **OutputIterator.**  
+  
+##  <a name="money_put"></a>money_put::money_put  
+ Konstruktor dla obiektów typu `money_put`.  
+  
+```  
+explicit money_put(size_t _Refs = 0);
+```  
+  
+### <a name="parameters"></a>Parametry  
+ `_Refs`  
+ Wartość całkowita używany do określania typu zarządzania pamięci dla obiektu.  
+  
+### <a name="remarks"></a>Uwagi  
+ Możliwe wartości `_Refs` i ich znaczenie są:  
+  
+-   0: okres istnienia obiektu zarządza ustawieniami regionalnymi, które zawierałoby proces.  
+  
+-   1: okres istnienia obiektu musi być zarządzane ręcznie.  
+  
+-   \>1: te wartości są niezdefiniowane.  
+  
+ Nie bezpośredniego przykładów to możliwe, ponieważ destruktor jest chroniony.  
+  
+ Konstruktor inicjuje jego obiektu podstawowego z **locale::**[aspektu](../standard-library/locale-class.md#facet_class)( `_Refs`).  
+  
+##  <a name="put"></a>money_put::Put  
+ Konwertuje liczbę lub ciąg na sekwencję znaków, która reprezentuje wartość pieniężną.  
+  
+```  
+iter_type put(
+    iter_type next,   
+    bool _Intl,   
+    ios_base& _Iosbase,  
+    CharType _Fill,   
+    const string_type& val) const;
+
+ 
+iter_type put(
+    iter_type next,   
+    bool _Intl,   
+    ios_base& _Iosbase,  
+    CharType _Fill,  
+    long double val) const;
+```  
+  
+### <a name="parameters"></a>Parametry  
+ `next`  
+ Iteratora adresowania pierwszego elementu obiektu wstawionych ciągów.  
+  
+ `_Intl`  
+ Wartość logiczna określająca typ symbolu waluty oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowego.  
+  
+ `_Iosbase`  
+ Flaga formatu, który po zestaw oznacza, że symbol waluty jest opcjonalna. w przeciwnym razie jest wymagana  
+  
+ `_Fill`  
+ Znak, który jest używany do rozdzielenia.  
+  
+ `val`  
+ Obiekt ciągu do skonwertowania.  
+  
+### <a name="return-value"></a>Wartość zwracana  
+ Dane wyjściowe iteratora wyprodukowanych pozycji jeden po ostatnim elemencie adresy.  
+  
+### <a name="remarks"></a>Uwagi  
+ Zarówno funkcje Członkowskie zwracają [do_put](#do_put)( `next`, `_Intl`, `_Iosbase`, `_Fill`, `val`).  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// money_put_put.cpp  
+// compile with: /EHsc  
+#include <locale>  
+#include <iostream>  
+#include <sstream>  
+using namespace std;  
+int main( )  
+{  
+//   locale loc( "german_germany" );  
+   locale loc( "english_canada" );  
+   basic_stringstream<char> psz, psz2;  
+   ios_base::iostate st = 0;  
+  
+   psz2.imbue( loc );  
+   psz2.flags( psz2.flags( )|ios_base::showbase ); // force the printing of the currency symbol  
+   use_facet < money_put < char > >(loc).put(basic_ostream<char>::_Iter( psz2.rdbuf( ) ), true, psz2, st, 100012);  
+   if (st & ios_base::failbit)  
+      cout << "money_put( ) FAILED" << endl;  
+   else  
+      cout << "money_put( ) = \"" << psz2.rdbuf( )->str( ) <<"\""<< endl;     
+  
+   st = 0;  
+};  
+```  
+  
+```Output  
+money_put( ) = "CAD1,000.12"  
+```  
+  
+##  <a name="string_type"></a>money_put::STRING_TYPE  
+ Typ, który opisuje ciąg zawierający znaki typu **CharType**.  
+  
+```  
+typedef basic_string<CharType, Traits, Allocator> string_type;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ w tym artykule opisano specjalizacji szablonu klasy [basic_string —](../standard-library/basic-string-class.md) których obiekty mogą być przechowywane sekwencji sekwencji źródłowej elementami.  
+  
+## <a name="see-also"></a>Zobacz też  
+ [\<Ustawienia regionalne >](../standard-library/locale.md)   
+ [facet — klasa](../standard-library/locale-class.md#facet_class)   
+ [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+

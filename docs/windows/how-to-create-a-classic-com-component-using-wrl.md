@@ -1,0 +1,99 @@
+---
+title: "Porady: tworzenie klasycznego składnika COM za pomocą biblioteki WRL | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e33eaebd49343c5c03b097eaf75d4745c7aaeac1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="how-to-create-a-classic-com-component-using-wrl"></a>Porady: tworzenie klasycznego składnika COM za pomocą biblioteki WRL
+Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) umożliwia tworzenie podstawowych składników modelu COM do użycia w aplikacjach klasycznych, oprócz do korzystania z niego dla [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)] aplikacji. Tworzenie składników COM Biblioteka szablonów C++ środowiska wykonawczego systemu Windows mogą wymagać mniejsza ilość kodu niż ATL. Aby uzyskać informacje o podzbiór COM, który obsługuje Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, zobacz [Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  
+  
+ Ten dokument przedstawia sposób użycia Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, aby utworzyć podstawowy składnik modelu COM. Chociaż można używać mechanizmu wdrażania, która najlepiej odpowiada Twoim potrzebom, ten dokument zawiera również najprostszy sposób rejestrowania i zużywać składnik modelu COM z pulpitu aplikacji.  
+  
+### <a name="to-use-the-windows-runtime-c-template-library-to-create-a-basic-classic-com-component"></a>Aby utworzyć podstawowy klasycznego składnika COM za pomocą Biblioteka szablonów C++ środowiska wykonawczego systemu Windows  
+  
+1.  W programie Visual Studio Utwórz **puste rozwiązanie** projektu. Nazwa projektu, na przykład `WRLClassicCOM`.  
+  
+2.  Dodaj **projektu Win32** do rozwiązania. Nazwa projektu, na przykład `CalculatorComponent`. Na **ustawienia aplikacji** wybierz opcję **DLL**.  
+  
+3.  Dodaj **pliku Midl (.idl)** plik do projektu. Nazwa pliku, na przykład `CalculatorComponent.idl`.  
+  
+4.  Dodaj ten kod do CalculatorComponent.idl:  
+  
+     [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]  
+  
+5.  W CalculatorComponent.cpp, zdefiniuj `CalculatorComponent` klasy. `CalculatorComponent` Klasa dziedziczy [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md). [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) Określa, że klasa pochodzi od [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) i nie [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` jest dostępna tylko dla [!INCLUDE[win8_appstore_short](../windows/includes/win8_appstore_short_md.md)] składniki aplikacji.) `CoCreatableClass` tworzy fabryki dla klasy, które mogą być używane z funkcji takich jak [wywołanie funkcji CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx).  
+  
+     [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]  
+  
+6.  Poniższy kod umożliwia Zastąp kod w dllmain.cpp. Ten plik definiuje funkcje eksportu biblioteki DLL. Użyj tych funkcji [Microsoft::WRL::Module](../windows/module-class.md) klasy do zarządzania fabryki klas dla modułu.  
+  
+     [!code-cpp[wrl-classic-com-component#3](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_3.cpp)]  
+  
+7.  Dodaj **plik definicji modułu (.def)** plik do projektu. Nazwa pliku, na przykład `CalculatorComponent.def`. Ten plik zawiera konsolidator nazwy funkcji do wyeksportowania.  
+  
+8.  Dodaj ten kod do CalculatorComponent.def:  
+  
+    ```
+    LIBRARY
+
+    EXPORTS
+        DllGetActivationFactory PRIVATE
+        DllGetClassObject       PRIVATE
+        DllCanUnloadNow         PRIVATE  
+    ```
+
+9. Dodaj runtimeobject.lib do wiersza konsolidatora. Aby dowiedzieć się więcej, zobacz temat [. Lib pliki jako dane wejściowe konsolidatora](../build/reference/dot-lib-files-as-linker-input.md).  
+  
+### <a name="to-consume-the-com-component-from-a-desktop-app"></a>Użycie składnika modelu COM z aplikacji klasycznych  
+  
+1.  Zarejestruj składnik modelu COM za pomocą rejestru systemu Windows. Aby to zrobić, należy utworzyć plik wpisów rejestracji, nadaj jej nazwę `RegScript.reg`i Dodaj następujący tekst. Zastąp  *\<ścieżka biblioteki dll >* ze ścieżką biblioteki DLL — na przykład `C:\\temp\\WRLClassicCOM\\Debug\\CalculatorComponent.dll`.  
+  
+    ```
+    Windows Registry Editor Version 5.00
+
+    [HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{E68F5EDD-6257-4E72-A10B-4067ED8E85F2}]
+    @="CalculatorComponent Class"
+
+    [HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{E68F5EDD-6257-4E72-A10B-4067ED8E85F2}\InprocServer32]
+    @="<dll-path>"
+    "ThreadingModel"="Apartment"
+
+    [HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{E68F5EDD-6257-4E72-A10B-4067ED8E85F2}\Programmable]
+
+    [HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{E68F5EDD-6257-4E72-A10B-4067ED8E85F2}\TypeLib]
+    @="{9D3E6826-CB8E-4D86-8B14-89F0D7EFCD01}"
+
+    [HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{E68F5EDD-6257-4E72-A10B-4067ED8E85F2}\Version]
+    @="1.0"
+    ```  
+  
+2.  Uruchom RegScript.reg lub dodaj je do projektu **zdarzenia Postkompilacyjnego**. Aby uzyskać więcej informacji, zobacz [prekompilacyjnego zdarzeń/po kompilacji — zdarzenie wiersza polecenia okno dialogowe](/visualstudio/ide/reference/pre-build-event-post-build-event-command-line-dialog-box).  
+  
+3.  Dodaj **aplikacji konsoli Win32** projektu do rozwiązania. Nazwa projektu, na przykład `Calculator`.  
+  
+4.  Zastąp zawartość Calculator.cpp przy użyciu tego kodu:  
+  
+     [!code-cpp[wrl-classic-com-component#6](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_6.cpp)]  
+  
+## <a name="robust-programming"></a>Niezawodne programowanie  
+ Ten dokument używa standardowych funkcji COM wykazać, że tworzyć składnika modelu COM i udostępnienie go do innych technologii systemów z obsługą COM można użyć Biblioteka szablonów C++ środowiska wykonawczego systemu Windows. Można również używać typów Biblioteka szablonów C++ środowiska wykonawczego systemu Windows takich jak [Microsoft::WRL::ComPtr](../windows/comptr-class.md) pulpitu aplikacji w celu zarządzania przez czas ich istnienia COM i innych obiektów. W poniższym kodzie użyto Biblioteka szablonów C++ środowiska wykonawczego systemu Windows do zarządzania przez czas ich istnienia `ICalculatorComponent` wskaźnika. `CoInitializeWrapper` Klasy jest otoki RAII, który gwarantuje, że biblioteki modelu COM jest zwolniony i gwarantuje również, że okres istnienia biblioteki COM outlives `ComPtr` obiekt wskaźnika inteligentnego.  
+  
+ [!code-cpp[wrl-classic-com-component#7](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_7.cpp)]  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Biblioteka szablonów C++ środowiska wykonawczego systemu Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

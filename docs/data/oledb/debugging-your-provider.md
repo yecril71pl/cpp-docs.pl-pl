@@ -1,0 +1,47 @@
+---
+title: Debugowanie dostawcy | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- debugging [C++], providers
+- OLE DB providers, debugging
+- Visual C++ debugger, debugging providers
+- Visual C++ debugger
+ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 03f8ebdf74dfcf8962b4308c467984d0a63c7968
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="debugging-your-provider"></a>Debugowanie dostawcy
+Istnieją dwa sposoby debugowania dostawcy:  
+  
+-   Ponieważ w procesie tworzenia dostawców, można utworzyć kodu konsumentów zwykle za pomocą szablony konsumentów OLE DB i Wkrocz do dostawcy.  
+  
+-   Można użyć narzędzia ITEST, który jest dostarczany z programem Visual C++.  
+  
+### <a name="to-use-the-itest-utility"></a>Aby korzystać z narzędzia ITEST  
+  
+1.  Otwórz projekt dostawcy.  
+  
+2.  Na **projekty** menu, kliknij przycisk **ustawienia**.  
+  
+3.  W **strony właściwości** okno dialogowe, kliknij przycisk **debugowania** kartę.  
+  
+4.  W **plik wykonywalny dla sesji debugowania** wybierz ITEST aplikacji.  
+  
+5.  Ustaw punkty przerwania, a następnie debugowania w zwykły sposób.  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

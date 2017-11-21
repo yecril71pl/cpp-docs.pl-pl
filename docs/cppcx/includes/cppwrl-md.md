@@ -1,0 +1,1 @@
+Biblioteka szablonów C++ środowiska wykonawczego systemu Windows

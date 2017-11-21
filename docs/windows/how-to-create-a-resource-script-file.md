@@ -1,0 +1,56 @@
+---
+title: 'Porady: Tworzenie pliku skryptu zasobu | Dokumentacja firmy Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- rc files, creating
+- .rc files, creating
+- resource script files, creating
+ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8521849ab71f05b10dc8d3b861c93ba71b552eb4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="how-to-create-a-resource-script-file"></a>Porady: tworzenie pliku skryptu zasobu
+> [!NOTE]
+>  Edytor zasobów nie jest dostępna w wersji Express.  
+>   
+>  W tym materiale ma zastosowanie do aplikacji klasycznych systemu Windows. Projekty w językach .NET należy używać pliki skryptów zasobów. Zobacz [pliki zasobów](../windows/resource-files-visual-studio.md), aby uzyskać więcej informacji.  
+  
+### <a name="to-create-a-new-resource-script-rc-file"></a>Aby utworzyć nowy plik skryptu (.rc) zasobu  
+  
+1.  Umieszczanie fokusu do istniejącego folderu projektu w `Solution Explorer`, na przykład "MyProject".  
+  
+    > [!NOTE]
+    >  Nie należy mylić folderu projektu z folderu rozwiązania w Eksploratorze rozwiązań. Wprowadza fokusu w folderze rozwiązania wyborów dokonanych w **Dodaj nowy element** okno dialogowe (w kroku 3) będą inne.  
+  
+2.  Na **projektu** kliknij menu **Dodaj nowy element**.  
+  
+3.  W **Dodaj nowy element** okno dialogowe, kliknij przycisk **Visual C++** a następnie wybierz folder **pliku zasobów (.rc)** w okienku po prawej stronie.  
+  
+4.  Podaj nazwę pliku skryptu zasobu w **nazwa** tekstu, a następnie kliknij przycisk **Otwórz**.  
+  
+ Możesz teraz [utworzyć](../windows/how-to-create-a-resource.md) i dodać nowe zasoby do pliku .rc.  
+  
+> [!NOTE]
+>  Skrypt zasobu (plik .rc) można dodawać tylko do istniejącego projektu, który jest ładowany do środowiska IDE programu Visual Studio. Nie można utworzyć autonomiczny plik .rc (jeden poza projektem). [Szablony zasobów](../windows/how-to-use-resource-templates.md) (.rct — pliki) mogą być tworzone w dowolnym momencie.  
+  
+ RRequirements  
+  
+ Win32  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Pliki zasobów](../windows/resource-files-visual-studio.md)   
+ [Edytory zasobów](../windows/resource-editors.md)

@@ -1,0 +1,189 @@
+---
+title: "_splitpath_s —, _wsplitpath_s — | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wsplitpath_s
+- _splitpath_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wsplitpath_s
+- splitpath_s
+- _splitpath_s
+- wsplitpath_s
+dev_langs: C++
+helpviewer_keywords:
+- splitpath_s function
+- pathnames
+- _splitpath_s function
+- _wsplitpath_s function
+- path names
+- wsplitpath_s function
+ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
+caps.latest.revision: "29"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b95813c79efc42ba9d0425ab453628f20d512e23
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
+Dzieli nazwa ścieżki na składniki. Są to wersje [_splitpath —, _wsplitpath —](../../c-runtime-library/reference/splitpath-wsplitpath.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+errno_t _splitpath_s(  
+   const char * path,  
+   char * drive,  
+   size_t driveNumberOfElements,  
+   char * dir,  
+   size_t dirNumberOfElements,  
+   char * fname,  
+   size_t nameNumberOfElements,  
+   char * ext,   
+   size_t extNumberOfElements  
+);  
+errno_t _wsplitpath_s(  
+   const wchar_t * path,  
+   wchar_t * drive,  
+   size_t driveNumberOfElements,  
+   wchar_t *dir,  
+   size_t dirNumberOfElements,  
+   wchar_t * fname,  
+   size_t nameNumberOfElements,  
+   wchar_t * ext,  
+   size_t extNumberOfElements  
+);  
+template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>  
+errno_t _splitpath_s(  
+   const char *path,  
+   char (&drive)[drivesize],  
+   char (&dir)[dirsize],  
+   char (&fname)[fnamesize],  
+   char (&ext)[extsize]  
+); // C++ only  
+template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>  
+errno_t _wsplitpath_s(  
+   const wchar_t *path,  
+   wchar_t (&drive)[drivesize],  
+   wchar_t (&dir)[dirsize],  
+   wchar_t (&fname)[fnamesize],  
+   wchar_t (&ext)[extsize]  
+); // C++ only  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ [in]`path`  
+ Pełna ścieżka.  
+  
+ [out]`drive`  
+ Dysk litery z dwukropkiem (`:`). Można przekazać `NULL` dla tego parametru, jeśli nie ma potrzeby literę dysku.  
+  
+ [in]`driveNumberOfElements`  
+ Rozmiar `drive` buforu w znaki jednobajtowe lub szerokości. Jeśli `drive` jest `NULL`, ta wartość musi wynosić 0.  
+  
+ [out]`dir`  
+ Ścieżka katalogu, w tym ukośnika. Przekazuj ukośniki ( `/` ), ukośników odwrotnych ( `\` ), lub mogą być używane. Można przekazać `NULL` dla tego parametru, jeśli nie ma potrzeby ścieżki katalogu.  
+  
+ [in]`dirNumberOfElements`  
+ Rozmiar `dir` buforu w znaki jednobajtowe lub szerokości. Jeśli `dir` jest `NULL`, ta wartość musi wynosić 0.  
+  
+ [out]`fname`  
+ Nazwa podstawowego pliku (bez rozszerzenia). Można przekazać `NULL` dla tego parametru, jeśli nazwa pliku nie ma potrzeby.  
+  
+ [in]`nameNumberOfElements`  
+ Rozmiar `fname` buforu w znaki jednobajtowe lub szerokości. Jeśli `fname` jest `NULL`, ta wartość musi wynosić 0.  
+  
+ [out]`ext`  
+ Rozszerzenie nazwy pliku, w tym wiodące okres (**.**). Można przekazać `NULL` dla tego parametru, jeśli nie ma potrzeby rozszerzenie nazwy pliku.  
+  
+ [in]`extNumberOfElements`  
+ Rozmiar `ext` buforu w znaki jednobajtowe lub szerokości. Jeśli `ext` jest `NULL`, ta wartość musi wynosić 0.  
+  
+## <a name="return-value"></a>Wartość zwracana  
+ Zero w przypadku powodzenia; błąd o kodzie błędu.  
+  
+### <a name="error-conditions"></a>Warunki błędów  
+  
+|Warunek|Wartość zwracana|  
+|---------------|------------------|  
+|`path`jest`NULL`|`EINVAL`|  
+|`drive`jest `NULL`, `driveNumberOfElements` jest różna od zera|`EINVAL`|  
+|`drive`ma wartość inną niż`NULL`, `driveNumberOfElements` wynosi zero|`EINVAL`|  
+|`dir`jest `NULL`, `dirNumberOfElements` jest różna od zera|`EINVAL`|  
+|`dir`ma wartość inną niż`NULL`, `dirNumberOfElements` wynosi zero|`EINVAL`|  
+|`fname`jest `NULL`, `nameNumberOfElements` jest różna od zera|`EINVAL`|  
+|`fname`ma wartość inną niż`NULL`, `nameNumberOfElements` wynosi zero|`EINVAL`|  
+|`ext`jest `NULL`, `extNumberOfElements` jest różna od zera|`EINVAL`|  
+|`ext`ma wartość inną niż`NULL`, `extNumberOfElements` wynosi zero|`EINVAL`|  
+  
+ Jeśli występuje którykolwiek z powyższych warunków, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwracać `EINVAL`.  
+  
+ Jeśli dowolny z bufor jest zbyt krótki, aby pomieścić wynik, te funkcje, wyczyść wszystkie bufory puste ciągi, ustaw `errno` do `ERANGE`i zwróć `ERANGE`.  
+  
+## <a name="remarks"></a>Uwagi  
+ `_splitpath_s` Funkcja dzieli ścieżki do jego czterech składników. `_splitpath_s`automatycznie obsługuje argumentów ciągów znaków wielobajtowych zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie ze strony kodowe wielobajtowe obecnie w użyciu. `_wsplitpath_s`jest to wersja znaków dwubajtowych `_splitpath_s`; argumenty `_wsplitpath_s` są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie  
+  
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
+  
+|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
+|`_tsplitpath_s`|`_splitpath_s`|`_splitpath_s`|`_wsplitpath_s`|  
+  
+ Każdy składnik pełnej ścieżki są przechowywane w oddzielnych buforu; stałe manifestu `_MAX_DRIVE`, `_MAX_DIR`, `_MAX_FNAME`, i `_MAX_EXT` (zdefiniowany w STDLIB. H) określić maksymalny dozwolony rozmiar dla każdego składnika pliku. Składniki plików większych niż odpowiedni stałe manifestu spowodować uszkodzenie sterty.  
+  
+ W poniższej tabeli wymieniono wartości stałe manifestu.  
+  
+|Nazwa|Wartość|  
+|----------|-----------|  
+|_MAX_DRIVE —|3|  
+|_MAX_DIR —|256|  
+|_MAX_FNAME —|256|  
+|_MAX_EXT —|256|  
+  
+ Jeśli pełna ścieżka nie zawiera składników (na przykład nazwy pliku), `_splitpath_s` przypisuje pustego ciągu do odpowiedniego buforu.  
+  
+ W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można wnioskować o długości buforu automatycznie, co eliminuje konieczność określić argument rozmiar. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
+  
+ Wersje tych funkcji do debugowania najpierw wprowadzić bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+  
+## <a name="requirements"></a>Wymagania  
+  
+|Procedura|Wymagany nagłówek|  
+|-------------|---------------------|  
+|`_splitpath_s`|\<stdlib.h >|  
+|`_wsplitpath_s`|\<stdlib.h > lub \<wchar.h >|  
+  
+ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
+  
+## <a name="example"></a>Przykład  
+ Zobacz przykład [_makepath_s —, _wmakepath_s —](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Obsługa plików](../../c-runtime-library/file-handling.md)   
+ [_splitpath —, _wsplitpath —](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
+ [_fullpath —, _wfullpath —](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_getmbcp —](../../c-runtime-library/reference/getmbcp.md)   
+ [_makepath —, _wmakepath —](../../c-runtime-library/reference/makepath-wmakepath.md)   
+ [_setmbcp —](../../c-runtime-library/reference/setmbcp.md)

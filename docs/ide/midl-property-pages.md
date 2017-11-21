@@ -1,0 +1,38 @@
+---
+title: "Strony właściwości MIDL | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MIDL
+- MIDL, property pages
+- property pages, MIDL
+ms.assetid: 57498a01-fccc-4a0e-a036-6ff702f83126
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8d78b47ded0e27a1708886b0c1531d6be3807511
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="midl-property-pages"></a>Strony właściwości MIDL
+**MIDL** węzła zawiera wiele stron właściwości. Dostęp do nich. Kliknij prawym przyciskiem myszy w pliku .idl w **Eksploratora rozwiązań**.  
+  
+-   [Strony właściwości MIDL: Ogólne](../ide/midl-property-pages-general.md)  
+  
+-   [Strony właściwości MIDL: dane wyjściowe](../ide/midl-property-pages-output.md)  
+  
+-   [Strony właściwości MIDL: Zaawansowane](../ide/midl-property-pages-advanced.md)  
+  
+ Aby uzyskać informacje dotyczące sposobu uzyskania programowego dostępu do MIDL opcje dla projektów C++ zobacz<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Strony właściwości](../ide/property-pages-visual-cpp.md)

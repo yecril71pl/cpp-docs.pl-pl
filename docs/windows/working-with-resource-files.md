@@ -1,0 +1,61 @@
+---
+title: "Praca z plikami zasobów | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- resources [Visual Studio], about resources
+- resources [C++], about resource files
+- resource files, about resource files
+ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 74e46aeae58e95b7d455923f6f082f5e10952826
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="working-with-resource-files"></a>Praca z plikami zasobów
+> [!WARNING]
+>  Ta sekcja dotyczy aplikacji klasycznych systemu Windows w języku C++. Aby uzyskać informacje o zasobach w aplikacjach platformy uniwersalnej systemu Windows w języku C++, zobacz [Definiowanie zasobów aplikacji](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4).  
+>   
+>  Informacje o dodawaniu zasobów do C + +/ projekty interfejsu wiersza polecenia można znaleźć pod adresem [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.*  
+  
+ Zasobów może składać się z wielu elementów, w tym elementów interfejsu, które zawierają informacje dla użytkownika (na przykład mapy bitowej, ikona lub kursora); zasoby niestandardowe, które zawierają dane, które potrzeb aplikacji. zasoby wersji, które są używane przez Instalatora interfejsów API; i zasoby pole menu i okien dialogowych.  
+  
+ Można dodać nowych zasobów do projektu i modyfikować tych zasobów za pomocą edytora odpowiednich zasobów. Większość kreatorów Visual C++ automatycznie wygeneruje plik .rc dla projektu.  
+  
+ Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](https://msdn.microsoft.com/library/f45fce5x.aspx) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](https://msdn.microsoft.com/library/xbx3z216.aspx). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+  
+## <a name="in-this-section"></a>W tej sekcji  
+ [Pliki zasobów](../windows/resource-files-visual-studio.md)  
+ Opisuje pliki zasobów i sposób ich użycia w aplikacjach pulpitu systemu Windows. Również zawiera łącza do tematów opisujących sposób użycia plików zasobów.  
+  
+ [Symbole: Identyfikatory zasobów](../windows/symbols-resource-identifiers.md)  
+ Opisuje symbole i zawiera informacje na temat używania **symbole zasobu** okno dialogowe Zarządzanie symbole w projektach.  
+  
+ [Edytory zasobów](../windows/resource-editors.md)  
+ Opisuje edytory zasobów dostępnych w programie Visual Studio typów zasobów możesz zmodyfikować z każdym edytorem oraz są udostępniane linki do szczegółowych informacji za pomocą edytora każdego.  
+  
+## <a name="related-sections"></a>Sekcje pokrewne  
+ [Visual C++](../visual-cpp-in-visual-studio.md)  
+ Oferuje łącza do dokumentacji języka Visual C++.  
+  
+ [Wprowadzenie do programu Visual Studio](http://msdn.microsoft.com/en-us/99997089-56ff-4d60-81a9-447062dc98ac)  
+ W tym artykule opisano pełny zestaw narzędzi programistycznych, które używają tego samego zintegrowane środowisko programistyczne (IDE), dzięki czemu mogą udostępnić narzędzia i ułatwia tworzenie rozwiązań dla wielu języków.  
+  
+ [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)  
+ Zawiera linki do informacji przy użyciu zestawu dokumentacji, kontakt z pomocą techniczną i wykorzystujących funkcje ułatwień dostępu.  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Aplikacje systemu Windows](../windows/windows-desktop-applications-cpp.md)   
+ [Menu i innych zasobów](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+

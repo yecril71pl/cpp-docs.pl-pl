@@ -1,0 +1,406 @@
+---
+title: '&lt;Tuple&gt; operatory | Dokumentacja firmy Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tuple/std::operator!=
+- tuple/std::operator>
+- tuple/std::operator>=
+- tuple/std::operator<
+- tuple/std::operator<=
+- tuple/std::operator==
+dev_langs: C++
+ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
+caps.latest.revision: "13"
+manager: ghogen
+ms.openlocfilehash: c336ed5e11a7db00475da735c827c23dadfa56c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="lttuplegt-operators"></a>&lt;Tuple&gt; operatory
+||||  
+|-|-|-|  
+|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator ==](#op_eq_eq)|  
+  
+##  <a name="op_neq"></a>operator! =  
+ Porównaj `tuple` obiekty pod kątem nierówności.  
+  
+```  
+template <class T1, class T2, ..., class TN,  
+    class U1, class U2, ..., class UN>  
+bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,  
+    const tuple<U1, U2, ..., UN>& tpl2);
+```  
+  
+### <a name="parameters"></a>Parametry  
+ `TN`  
+ Typ elementu n-ty spójnej kolekcji.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja zwraca wartość false, gdy `N` ma wartość 0, w przeciwnym razie `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__tuple__operator_ne.cpp   
+// compile with: /EHsc   
+#include <tuple>   
+#include <iostream>   
+  
+typedef std::tuple<int, double, int, double> Mytuple;   
+int main() {   
+    Mytuple c0(0, 1, 2, 3);   
+  
+// display contents " 0 1 2 3"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+    Mytuple c1 = std::make_tuple(4, 5, 6, 7);   
+  
+// display contents " 4 5 6 7"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+// display results of comparisons   
+    std::cout << std::boolalpha << " " << (c0 != c0);   
+    std::cout << std::endl;   
+    std::cout << std::boolalpha << " " << (c0 != c1);   
+    std::cout << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+0 1 2 3  
+0 1 2 3  
+false  
+true  
+```  
+  
+##  <a name="op_lt"></a>operator&lt;  
+ Porównaj `tuple` mniej obiektów.  
+  
+```  
+template <class T1, class T2, ..., class TN,  
+    class U1, class U2, ..., class UN>  
+bool operator<(const tuple<T1, T2, ..., TN>& tpl1,  
+    const tuple<U1, U2, ..., UN>& tpl2);
+```  
+  
+### <a name="parameters"></a>Parametry  
+ `TN`  
+ Typ elementu n-ty spójnej kolekcji.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja zwraca wartość true, gdy `N` jest większa niż 0 i pierwsza wartość różne `tpl1` porównuje poniżej odpowiednie wartości w `tpl2`, w przeciwnym razie zwraca wartość false.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__tuple__operator_lt.cpp   
+// compile with: /EHsc   
+#include <tuple>   
+#include <iostream>   
+  
+typedef std::tuple<int, double, int, double> Mytuple;   
+int main() {   
+    Mytuple c0(0, 1, 2, 3);   
+  
+// display contents " 0 1 2 3"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+    Mytuple c1 = std::make_tuple(4, 5, 6, 7);   
+  
+// display contents " 4 5 6 7"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+// display results of comparisons   
+    std::cout << std::boolalpha << " " << (c0 < c0);   
+    std::cout << std::endl;   
+    std::cout << std::boolalpha << " " << (c0 < c1);   
+    std::cout << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+0 1 2 3  
+0 1 2 3  
+false  
+true  
+```  
+  
+##  <a name="op_lt_eq"></a>operator&lt;=  
+ Porównaj `tuple` obiektów mniejsze lub równe.  
+  
+```  
+template <class T1, class T2, ..., class TN,  
+    class U1, class U2, ..., class UN>  
+bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,  
+    const tuple<U1, U2, ..., UN>& tpl2);
+```  
+  
+### <a name="parameters"></a>Parametry  
+ `TN`  
+ Typ elementu n-ty spójnej kolekcji.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja zwraca `!(tpl2 < tpl1)`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__tuple__operator_le.cpp   
+// compile with: /EHsc   
+#include <tuple>   
+#include <iostream>   
+  
+typedef std::tuple<int, double, int, double> Mytuple;   
+int main() {   
+    Mytuple c0(0, 1, 2, 3);   
+  
+// display contents " 0 1 2 3"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+    Mytuple c1 = std::make_tuple(4, 5, 6, 7);   
+  
+// display contents " 4 5 6 7"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+// display results of comparisons   
+    std::cout << std::boolalpha << " " << (c0 <= c0);   
+    std::cout << std::endl;   
+    std::cout << std::boolalpha << " " << (c1 <= c0);   
+    std::cout << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+0 1 2 3  
+0 1 2 3  
+true  
+false  
+```  
+  
+##  <a name="op_eq_eq"></a>operator ==  
+ Porównaj `tuple` obiekty pod kątem równości.  
+  
+```  
+template <class T1, class T2, ..., class TN,  
+    class U1, class U2, ..., class UN>  
+bool operator==(const tuple<T1, T2, ..., TN>& tpl1,  
+    const tuple<U1, U2, ..., UN>& tpl2);
+```  
+  
+### <a name="parameters"></a>Parametry  
+ `TN`  
+ Typ elementu n-ty spójnej kolekcji.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja zwraca wartość true, gdy `N` ma wartość 0, w przeciwnym razie `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__tuple__operator_eq.cpp   
+// compile with: /EHsc   
+#include <tuple>   
+#include <iostream>   
+  
+typedef std::tuple<int, double, int, double> Mytuple;   
+int main() {   
+    Mytuple c0(0, 1, 2, 3);   
+  
+// display contents " 0 1 2 3"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+    Mytuple c1 = std::make_tuple(4, 5, 6, 7);   
+  
+// display contents " 4 5 6 7"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+// display results of comparisons   
+    std::cout << std::boolalpha << " " << (c0 == c0);   
+    std::cout << std::endl;   
+    std::cout << std::boolalpha << " " << (c0 == c1);   
+    std::cout << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+0 1 2 3  
+0 1 2 3  
+true  
+false  
+```  
+  
+##  <a name="op_gt"></a>operator&gt;  
+ Porównaj `tuple` obiektów na większy.  
+  
+```  
+template <class T1, class T2, ..., class TN,  
+    class U1, class U2, ..., class UN>  
+bool operator>(const tuple<T1, T2, ..., TN>& tpl1,  
+    const tuple<U1, U2, ..., UN>& tpl2);
+```  
+  
+### <a name="parameters"></a>Parametry  
+ `TN`  
+ Typ elementu n-ty spójnej kolekcji.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja zwraca `tpl2 < tpl1`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__tuple__operator_gt.cpp   
+// compile with: /EHsc   
+#include <tuple>   
+#include <iostream>   
+  
+typedef std::tuple<int, double, int, double> Mytuple;   
+int main() {   
+    Mytuple c0(0, 1, 2, 3);   
+  
+// display contents " 0 1 2 3"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+    Mytuple c1 = std::make_tuple(4, 5, 6, 7);   
+  
+// display contents " 4 5 6 7"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+// display results of comparisons   
+    std::cout << std::boolalpha << " " << (c0 > c0);   
+    std::cout << std::endl;   
+    std::cout << std::boolalpha << " " << (c1 > c0);   
+    std::cout << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+0 1 2 3  
+0 1 2 3  
+false  
+true  
+```  
+  
+##  <a name="op_gt_eq"></a>operator&gt;=  
+ Porównaj `tuple` obiekty większy lub równy.  
+  
+```  
+template <class T1, class T2, ..., class TN,  
+    class U1, class U2, ..., class UN>  
+bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,  
+    const tuple<U1, U2, ..., UN>& tpl2);
+```  
+  
+### <a name="parameters"></a>Parametry  
+ `TN`  
+ Typ elementu n-ty spójnej kolekcji.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja zwraca `!(tpl1 < tpl2)`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__tuple__operator_ge.cpp   
+// compile with: /EHsc   
+#include <tuple>   
+#include <iostream>   
+  
+typedef std::tuple<int, double, int, double> Mytuple;   
+int main() {   
+    Mytuple c0(0, 1, 2, 3);   
+  
+// display contents " 0 1 2 3"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+    Mytuple c1 = std::make_tuple(4, 5, 6, 7);   
+  
+// display contents " 4 5 6 7"   
+    std::cout << " " << std::get<0>(c0);   
+    std::cout << " " << std::get<1>(c0);   
+    std::cout << " " << std::get<2>(c0);   
+    std::cout << " " << std::get<3>(c0);   
+    std::cout << std::endl;   
+  
+// display results of comparisons   
+    std::cout << std::boolalpha << " " << (c0 >= c0);   
+    std::cout << std::endl;   
+    std::cout << std::boolalpha << " " << (c0 >= c1);   
+    std::cout << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+0 1 2 3  
+0 1 2 3  
+true  
+false  
+```  
+  
+## <a name="see-also"></a>Zobacz też  
+ [\<Tuple >](../standard-library/tuple.md)
+

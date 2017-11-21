@@ -1,0 +1,54 @@
+---
+title: "Wektor&lt;bool&gt;:: klasę referencyjną | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vector/vector<bool>::reference
+dev_langs: C++
+helpviewer_keywords: vector<bool> reference class
+ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
+caps.latest.revision: "22"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1ca67fcf0ea4b74d167ddb6cdeb01de071a24862
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="vectorltboolgtreference-class"></a>Wektor&lt;bool&gt;:: klasę referencyjną
+`vector<bool>::reference` Klasa jest klasą proxy dostarczonych przez [wektor\<bool > klasy](../standard-library/vector-bool-class.md) do symulowania `bool&`.  
+  
+## <a name="remarks"></a>Uwagi  
+ Symulowane odwołanie jest wymagane, ponieważ C++ nie zezwala natywnie na bezpośrednie odwołania do bitów. `vector<bool>`używa tylko jeden bit na element, który można odwoływać się za pomocą tej klasy serwera proxy. Jednakże symulacja odwołania nie jest kompletna, ponieważ niektóre przypisania nie są prawidłowe. Na przykład ponieważ adres `vector<bool>::reference` obiektu nie można wykonywać, następujący kod, który używa [wektor\<bool >:: — operator &#91; &#93;](http://msdn.microsoft.com/Library/97738633-690d-4069-b2d9-8c54104fbfdd) jest nieprawidłowy:  
+  
+```cpp  
+vector<bool> vb;  
+// ...  
+bool* pb = &vb[1]; // conversion error - do not use  
+bool& refb = vb[1];   // conversion error - do not use  
+```  
+  
+### <a name="member-functions"></a>Funkcje elementów członkowskich  
+  
+|||  
+|-|-|  
+|[Przerzuć](../standard-library/vector-bool-reference-flip.md)|Odwraca wartość logiczną elementu wektora.|  
+|[bool — operator](../standard-library/vector-bool-reference-operator-bool.md)|Udostępnia niejawna konwersja z `vector<bool>::reference` do `bool`.|  
+|[operator =](../standard-library/vector-bool-reference-operator-assign.md)|Przypisuje do bitu wartość logiczną lub wartość przechowywaną przez odnośny element.|  
+  
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek**: \<wektor >  
+  
+ **Namespace:** Standard  
+  
+## <a name="see-also"></a>Zobacz też  
+ [\<Wektor >](../standard-library/vector.md)   
+ [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+

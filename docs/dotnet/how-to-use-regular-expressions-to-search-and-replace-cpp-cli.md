@@ -1,0 +1,59 @@
+---
+title: "Porady: Używanie wyrażeń regularnych do wyszukiwania i zamieniania (C + +/ CLI) | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search and replace
+- Replace method
+- regular expressions [C++], search and replace
+ms.assetid: 12fe3e18-fe10-4b25-a221-19dc5eab3821
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 17710654b0af2e03019a1e7b888d86e42c5e35c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>Porady: używanie wyrażeń regularnych do wyszukiwania i zamieniania (C++/CLI)
+Poniższy przykład kodu pokazuje sposób klasy wyrażeń regularnych <xref:System.Text.RegularExpressions.Regex> może służyć do wykonywania wyszukiwania i zamiany. Jest to zrobić za pomocą <xref:System.Text.RegularExpressions.Regex.Replace%2A> metody. Wersja użyta przyjmuje dwa ciągi jako dane wejściowe: ciąg, który ma być zmodyfikowana, a ciąg, który ma zostać wstawiony zamiast sekcje (jeśli istnieje) pasujących do wzorca <xref:System.Text.RegularExpressions.Regex> obiektu.  
+  
+ Ten kod zastępuje wszystkie cyfr w ciągu znaków podkreślenia (_) i zastąpi te za pomocą ciągu pustego, skutecznie usunięcie ich. Ten sam efekt można wykonywać w jednym kroku, ale w tym miejscu służą dwa kroki dla celów demonstracyjnych.  
+  
+## <a name="example"></a>Przykład  
+  
+```  
+// regex_replace.cpp  
+// compile with: /clr  
+#using <System.dll>  
+using namespace System::Text::RegularExpressions;  
+using namespace System;  
+  
+int main()  
+{  
+   String^ before = "The q43uick bro254wn f0ox ju4mped";  
+   Console::WriteLine("original  : {0}", before);  
+  
+   Regex^ digitRegex = gcnew Regex("(?<digit>[0-9])");  
+   String^ after = digitRegex->Replace(before, "_");  
+   Console::WriteLine("1st regex : {0}", after);  
+  
+   Regex^ underbarRegex = gcnew Regex("_");  
+   String^ after2 = underbarRegex->Replace(after, "");  
+   Console::WriteLine("2nd regex : {0}", after2);  
+  
+   return 0;  
+}  
+```  
+  
+## <a name="see-also"></a>Zobacz też  
+ [.NET framework — nieprawidłowe wyrażenia](/dotnet/standard/base-types/regular-expressions)   
+ [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,0 +1,67 @@
+---
+title: Architektura szablonu dostawcy OLE DB | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB [C++], object model
+- architecture [C++], OLE DB Provider
+- OLE DB provider templates, object model
+ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 289d1d5f09f60b829c6dd7d1f1b00c0de3562518
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="ole-db-provider-template-architecture"></a>Architektura szablonu dostawcy OLE DB
+## <a name="data-sources-and-sessions"></a>Źródła i sesje danych  
+ Architektura dostawcy OLE DB zawiera obiekt źródła danych i co najmniej jednej sesji. Obiekt źródła danych jest początkowy obiekt, który wymaga utworzenia wystąpień każdego dostawcy. Gdy aplikacja klienta wymaga danych, wspólnie tworzy obiekt źródła danych można uruchomić dostawcy. Obiekt źródła danych tworzy obiekt sesji (przy użyciu **IDBCreateSession** interfejsu) za pomocą którego klient łączy się z obiektu źródła danych. Obiekt źródła danych jako równoważne można traktować programistów ODBC **HENV** i obiektu sesji jako odpowiednik **HDBC**.  
+  
+ ![Architektura dostawcy](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
+  
+ Wraz z plików źródłowych utworzone przez kreatora dostawcy bazy danych OLE szablony OLE DB implementacji obiektu źródła danych. Sesja jest obiekt, który odpowiada OLE DB **TSession**.  
+  
+## <a name="mandatory-and-optional-interfaces"></a>Interfejsy obowiązkowe i opcjonalne  
+ Szablony dostawców OLE DB zapewniają opakowaniach jednostkowych implementacji dla wszystkich wymaganych interfejsów. Interfejsy obowiązkowe i opcjonalne są definiowane przez OLE DB dla kilku typów obiektów:  
+  
+-   [Źródło danych](../../data/oledb/data-source-object-interfaces.md)  
+  
+-   [Sesji](../../data/oledb/session-object-interfaces.md)  
+  
+-   [Zestaw wierszy](../../data/oledb/rowset-object-interfaces.md)  
+  
+-   [Polecenie](../../data/oledb/command-object-interfaces.md)  
+  
+-   [Transakcji](../../data/oledb/transaction-object-interfaces.md)  
+  
+ Należy pamiętać, szablony dostawców OLE DB nie implementują wiersza i przechowywania obiektów.  
+  
+ W poniższej tabeli wymieniono interfejsy obowiązkowe i opcjonalne dla obiektów wymienionych powyżej, zgodnie z [OLE DB 2.6 dokumentacji zestawu SDK](https://msdn.microsoft.com/en-us/library/ms722784.aspx).  
+  
+|Składnik|Interface|Komentarz|  
+|---------------|---------------|-------------|  
+|[Źródło danych](../../data/oledb/data-source-object-interfaces.md) ([CDataSource](../../data/oledb/cdatasource-class.md))|[wymagane] **IDBCreateSession**<br /><br /> [wymagane] **IDBInitialize**<br /><br /> [wymagane]`IDBProperties`<br /><br /> [wymagane]`IPersist`<br /><br /> [opcjonalnie] **IConnectionPointContainer**<br /><br /> [opcjonalnie] **IDBAsynchStatus**<br /><br /> [opcjonalnie] **IDBDataSourceAdmin**<br /><br /> [opcjonalnie] **Elementu IDBInfo**<br /><br /> [opcjonalnie]`IPersistFile`<br /><br /> [opcjonalnie] **ISupportErrorInfo**|Połączenie z klienta do dostawcy. Obiekt jest używany do określania właściwości połączenia, takie jak nazwa źródła identyfikator, hasło i danych użytkownika. Obiekt mogą służyć do administrowania źródła danych (Tworzenie, aktualizowanie, usuwanie tabel i tak dalej).|  
+|[Sesja](../../data/oledb/session-object-interfaces.md) ([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[wymagane] **IGetDataSource**<br /><br /> [wymagane]`IOpenRowset`<br /><br /> [wymagane] **ISessionProperties**<br /><br /> [opcjonalnie] **IAlterIndex**<br /><br /> [opcjonalnie] **IAlterTable**<br /><br /> [opcjonalnie] **IBindResource**<br /><br /> [opcjonalnie] **ICreateRow**<br /><br /> [opcjonalnie] **IDBCreateCommand**<br /><br /> [opcjonalnie] **IDBSchemaRowset**<br /><br /> [opcjonalnie] **IIndexDefinition**<br /><br /> [opcjonalnie] **ISupportErrorInfo**<br /><br /> [opcjonalnie] **ITableCreation**<br /><br /> [opcjonalnie] **ITableDefinition**<br /><br /> [opcjonalnie] **ITableDefinitionWithConstraints**<br /><br /> [opcjonalnie] **ITransaction**<br /><br /> [opcjonalnie] **ITransactionJoin**<br /><br /> [opcjonalnie] **ITransactionLocal**<br /><br /> [opcjonalnie] **ITransactionObject**|Obiekt sesji reprezentuje pojedynczy rozmowę między klienta oraz dostawcy. Przypomina trochę ODBC **HSTMT** , może istnieć wiele równoczesnych sesji aktywnych.<br /><br /> Obiekt sesji jest łącze podstawowe na uzyskanie dostępu do funkcji OLE DB. Aby przejść do polecenia, transakcji lub obiektu zestawu wierszy, można przejść przez obiekt sesji.|  
+|[Zestaw wierszy](../../data/oledb/rowset-object-interfaces.md) ([CRowset](../../data/oledb/crowset-class.md))|[wymagane]`IAccessor`<br /><br /> [wymagane]`IColumnsInfo`<br /><br /> [wymagane] **IConvertType**<br /><br /> [wymagane]`IRowset`<br /><br /> [wymagane]`IRowsetInfo`<br /><br /> [opcjonalnie] **IChapteredRowset**<br /><br /> [opcjonalnie] **IColumnsInfo2**<br /><br /> [opcjonalnie] **IColumnsRowset**<br /><br /> [opcjonalnie] **IConnectionPointContainer**<br /><br /> [opcjonalnie] **IDBAsynchStatus**<br /><br /> [opcjonalnie] **IGetRow**<br /><br /> [opcjonalnie]`IRowsetChange`<br /><br /> [opcjonalnie] **IRowsetChapterMember**<br /><br /> [opcjonalnie] **IRowsetCurrentIndex**<br /><br /> [opcjonalnie] **IRowsetFind**<br /><br /> [opcjonalnie] **IRowsetIdentity**<br /><br /> [opcjonalnie] **IRowsetIndex**<br /><br /> [opcjonalnie]`IRowsetLocate`<br /><br /> [opcjonalnie] **IRowsetRefresh**<br /><br /> [opcjonalnie]`IRowsetScroll`<br /><br /> [opcjonalnie]`IRowsetUpdate`<br /><br /> [opcjonalnie] **IRowsetView**<br /><br /> [opcjonalnie] **ISupportErrorInfo**<br /><br /> [opcjonalnie] **IRowsetBookmark**|Obiektu zestawu wierszy reprezentuje dane ze źródła danych. Obiekt jest odpowiedzialny za powiązania danych i wszystkie podstawowe operacje, (aktualizacji, pobieranie, przenoszenie i inne) na danych. Zawsze masz obiektu zestawu wierszy do przechowywania i obsługi danych.|  
+|[Polecenie](../../data/oledb/command-object-interfaces.md) ([CCommand](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409))|[wymagane]`IAccessor`<br /><br /> [wymagane]`IColumnsInfo`<br /><br /> [wymagane]`ICommand`<br /><br /> [wymagane] **ICommandProperties**<br /><br /> [wymagane]`ICommandText`<br /><br /> [wymagane] **IConvertType**<br /><br /> [opcjonalnie] **IColumnsRowset**<br /><br /> [opcjonalnie] **ICommandPersist**<br /><br /> [opcjonalnie] **ICommandPrepare**<br /><br /> [opcjonalnie]`ICommandWithParameters`<br /><br /> [opcjonalnie] **ISupportErrorInfo**<br /><br /> [opcjonalnie] **ICommandStream**|Obiekt polecenia obsługuje operacje na danych, takich jak zapytania. Może obsługiwać instrukcji sparametryzowanych lub bez parametrów.<br /><br /> Obiekt polecenia również jest odpowiedzialny za obsługę wiązania parametrów, a kolumny danych wyjściowych. Powiązanie jest strukturą, który zawiera informacje dotyczące sposobu kolumnę w zestawie wierszy, powinny zostać pobrane. Zawiera informacje, takie jak numer, typ danych, długość i stanu.|  
+|[Transakcja](../../data/oledb/transaction-object-interfaces.md) (opcjonalnie)|[wymagane] **IConnectionPointContainer**<br /><br /> [wymagane] **ITransaction**<br /><br /> [opcjonalnie] **ISupportErrorInfo**|Obiekt transaction definiuje Atomowej jednostki pracy w źródle danych i określa, jak te jednostki pracy odnoszą się do siebie. Ten obiekt nie jest bezpośrednio obsługiwana przez Szablony dostawców OLE DB (to znaczy tworzenia własnego obiektu).|  
+  
+ Więcej informacji znajduje się w następujących tematach:  
+  
+-   [Mapy właściwości](../../data/oledb/property-maps.md)  
+  
+-   [Rekord użytkownika](../../data/oledb/user-record.md)  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Interfejsy modelu OLE DB](https://msdn.microsoft.com/en-us/library/ms709709.aspx)

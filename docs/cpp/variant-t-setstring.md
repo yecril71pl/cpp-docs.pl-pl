@@ -1,0 +1,48 @@
+---
+title: _variant_t::SetString | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: _variant_t::SetString
+dev_langs: C++
+helpviewer_keywords: SetString method [C++]
+ms.assetid: 816b08e5-6830-46ca-b3d7-7689308b3be3
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc0fd027bbb4a1049e46351a8a544dac8c5a47aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="varianttsetstring"></a>_variant_t::SetString
+**Dotyczące firmy Microsoft**  
+  
+ Przypisuje to ciąg `_variant_t` obiektu.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+  
+      void SetString(  
+   const char* pSrc   
+);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `pSrc`  
+ Wskaźnik do ciągu znaków.  
+  
+## <a name="remarks"></a>Uwagi  
+ Konwertuje ciąg znaków ANSI na Unicode `BSTR` ciąg i przypisuje go do tego `_variant_t` obiektu.  
+  
+ **KOŃCOWY określonych firmy Microsoft**  
+  
+## <a name="see-also"></a>Zobacz też  
+ [_variant_t — klasa](../cpp/variant-t-class.md)

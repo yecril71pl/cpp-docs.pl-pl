@@ -1,0 +1,42 @@
+---
+title: " Klasy ATL — klasy fabryki | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.classes.factories
+dev_langs: C++
+helpviewer_keywords:
+- class factories
+- class factories, ATL classes
+ms.assetid: 1d8c2ae2-2c37-452c-a02d-1ecbdd309f84
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e664e4390461a3e1f4498759b336d5afe35ca97e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="class-factories-classes"></a>Klasa fabryki klas
+Następujące klasy implementuje lub obsługuje fabrykę klas:  
+  
+-   [CComClassFactory](../atl/reference/ccomclassfactory-class.md) udostępnia domyślną fabrykę klas do utworzenia obiektu.  
+  
+-   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) kontroluje tworzenie obiektu za pomocą licencji.  
+  
+-   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) umożliwia obiekty mogą być tworzone w wielu wątków w puli apartamentach.  
+  
+-   [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) tworzy jeden obiekt.  
+  
+-   [Klasy CComCoClass](../atl/reference/ccomcoclass-class.md) definiuje fabryki klasy dla obiekt.  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Przegląd klas](../atl/atl-class-overview.md)   
+ [Agregacja i makra fabryki klas](../atl/reference/aggregation-and-class-factory-macros.md)
+
