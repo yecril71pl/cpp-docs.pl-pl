@@ -1,0 +1,116 @@
+---
+title: "_ismbclower —, _ismbclower_l —, _ismbcupper —, _ismbcupper_l — | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbclower
+- _ismbclower_l
+- _ismbcupper_l
+- _ismbcupper
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ismbcupper
+- _ismbclower
+dev_langs: C++
+helpviewer_keywords:
+- _ismbcupper function
+- ismbclower function
+- _ismbclower_l function
+- ismbcupper_l function
+- _ismbclower function
+- ismbcupper function
+- ismbclower_l function
+- _ismbcupper_l function
+ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b0a94b0d15059c0ecf67a7a33b3be646ed7a2f59
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
+Sprawdza, czy znaków wielobajtowych małe lub wielkie litery.  
+  
+> [!IMPORTANT]
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+int _ismbclower(  
+   unsigned int c   
+);  
+int _ismbclower_l(  
+   unsigned int c,  
+   _locale_t locale   
+);  
+int _ismbcupper(  
+   unsigned int c   
+);  
+int _ismbcupper_l(  
+   unsigned int c,  
+   _locale_t locale  
+);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `c`  
+ Znak do sprawdzenia.  
+  
+ `locale`  
+ Ustawienia regionalne do użycia.  
+  
+## <a name="return-value"></a>Wartość zwracana  
+ Każdy z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli jej nie ma. Jeśli `c`< = 255 i ma odpowiadającego `_ismbb` procedura (na przykład `_ismbcalnum` odpowiada `_ismbbalnum`), wynik jest zwracana wartość odpowiadającego `_ismbb` procedury.  
+  
+## <a name="remarks"></a>Uwagi  
+ Każda z tych funkcji testy danego znaków wielobajtowych dla podanego warunku.  
+  
+ Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+  
+|Procedura|Stan testu|Przykład kodu strony 932|  
+|-------------|--------------------|---------------------------|  
+|`_ismbclower`|Małe litery|Zwraca wartość niezerową w przypadku i tylko wtedy, gdy `c` odzwierciedla jednobajtowe małe litery angielskie ASCII: 0x61 < =`c`< = 0x7A.|  
+|`_ismbclower_l`|Małe litery|Zwraca wartość niezerową w przypadku i tylko wtedy, gdy `c` odzwierciedla jednobajtowe małe litery angielskie ASCII: 0x61 < =`c`< = 0x7A.|  
+|`_ismbcupper`|Wielkie litery|Zwraca wartość niezerową w przypadku i tylko wtedy, gdy `c` odzwierciedla jednobajtowe wielkiej litery angielskie ASCII: 0x41 < =`c`< = 0x5A.|  
+|`_ismbcupper_l`|Wielkie litery|Zwraca wartość niezerową w przypadku i tylko wtedy, gdy `c` odzwierciedla jednobajtowe wielkiej litery angielskie ASCII: 0x41 < =`c`< = 0x5A.|  
+  
+## <a name="requirements"></a>Wymagania  
+  
+|Procedura|Wymagany nagłówek|  
+|-------------|---------------------|  
+|`_ismbclower`|\<mbstring.h >|  
+|`_ismbclower_l`|\<mbstring.h >|  
+|`_ismbcupper`|\<mbstring.h >|  
+|`_ismbcupper_l`|\<mbstring.h >|  
+  
+ Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)   
+ [_ismbc — procedury](../../c-runtime-library/ismbc-routines.md)   
+ [Ustawienia regionalne](../../c-runtime-library/locale.md)   
+ [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [jest isw — procedury](../../c-runtime-library/is-isw-routines.md)   
+ [_ismbb — procedury](../../c-runtime-library/ismbb-routines.md)

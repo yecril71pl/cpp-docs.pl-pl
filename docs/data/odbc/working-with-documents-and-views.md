@@ -1,0 +1,37 @@
+---
+title: Praca z dokumentami i widokami | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], documents
+- MFC [C++], views
+- views [C++], MFC
+- documents [C++], MFC
+ms.assetid: 349b142d-1c5a-4b99-9de4-241e41d3d2f1
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ba9228a92fe74b70494d75027c0e9656db749bdb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="working-with-documents-and-views"></a>Praca z dokumentami i widokami
+Biblioteka Microsoft Foundation Classes (MFC) oparte na architekturze dokument/widok dla wielu funkcji. Zazwyczaj dokumentu przechowuje dane, a widok wyświetla go w obszarze klienta w oknie ramowym i zarządza interakcji z użytkownikiem z danymi. Widok komunikuje się z dokumentu do aktualizacji danych. Klasy baz danych można użyć z architekturą lub bez niego.  
+  
+ Aby uzyskać więcej informacji o korzystaniu z klasami baz danych w ramach, zobacz [MFC: przy użyciu klasy baz danych z dokumentami i widokami](../../data/mfc-using-database-classes-with-documents-and-views.md).  
+  
+ Domyślnie Kreator aplikacji MFC tworzy szkielet aplikacji bez obsługi bazy danych. Jednak można wybrać opcje uwzględnić obsługi minimalnego bazy danych lub bardziej szczegółowy obsługi opartej na formularzu. Aby uzyskać więcej informacji o opcjach Kreatora aplikacji, zobacz [obsługi bazy danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md).  
+  
+ Klasy baz danych umożliwia także bez korzystania z architektury dokument/widok pełna. Aby uzyskać więcej informacji, zobacz [MFC: przy użyciu klasy bazy danych bez dokumentów i widoków](../../data/mfc-using-database-classes-without-documents-and-views.md).  
+  
+## <a name="see-also"></a>Zobacz też  
+ [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)

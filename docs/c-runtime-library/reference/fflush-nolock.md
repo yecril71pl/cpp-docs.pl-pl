@@ -1,0 +1,77 @@
+---
+title: "_fflush_nolock — | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: _fflush_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fflush_nolock
+- _fflush_nolock
+dev_langs: C++
+helpviewer_keywords:
+- fflush_nolock function
+- _fflush_nolock function
+- streams, flushing
+- flushing
+ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 779d986e2bca4c2b2d65100603462de1802e6061
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="fflushnolock"></a>_fflush_nolock
+Opróżnienia strumienia bez blokowania wątku.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+int _fflush_nolock(   
+   FILE *stream   
+);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `stream`  
+ Wskaźnik do `FILE` struktury.  
+  
+## <a name="return-value"></a>Wartość zwracana  
+ Zobacz [fflush —](../../c-runtime-library/reference/fflush.md).  
+  
+## <a name="remarks"></a>Uwagi  
+ Ta funkcja jest wersja — blokowanie `fflush`. Jest on identyczny `fflush` z tą różnicą, że nie jest chroniony przez inne wątki od zakłóceń. Może to oznaczać szybsze nie wpływa negatywnie obciążenie zablokowania inne wątki. Ta funkcja służy tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.  
+  
+## <a name="requirements"></a>Wymagania  
+  
+|Funkcja|Wymagany nagłówek|  
+|--------------|---------------------|  
+|`_fflush_nolock`|\<stdio.h >|  
+  
+ Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
+  
+## <a name="see-also"></a>Zobacz też  
+ [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
+ [fclose —, _fcloseall —](../../c-runtime-library/reference/fclose-fcloseall.md)   
+ [_flushall —](../../c-runtime-library/reference/flushall.md)   
+ [setvbuf —](../../c-runtime-library/reference/setvbuf.md)

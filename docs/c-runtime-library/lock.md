@@ -1,0 +1,65 @@
+---
+title: _Lock | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: _lock
+apilocation:
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr100.dll
+- msvcr90.dll
+- msvcr80.dll
+- msvcr110.dll
+- msvcrt.dll
+- msvcr120_clr0400.dll
+apitype: DLLExport
+f1_keywords:
+- lock
+- _lock
+dev_langs: C++
+helpviewer_keywords:
+- lock function
+- _lock function
+ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 851c4a72a4313867f06985e2c77a7035c6a5e9ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="lock"></a>_lock
+Uzyskuje blokadę wielu wątków.  
+  
+> [!IMPORTANT]
+>  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+void __cdecl _lock  
+   int locknum  
+);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ [in]`locknum`  
+ Identyfikator blokady do uzyskania dostępu.  
+  
+## <a name="remarks"></a>Uwagi  
+ Jeśli już uzyskano blokady, ta metoda uzyskuje blokadę mimo to i powoduje, że wystąpił błąd wewnętrzny C czasu wykonywania (CRT). Jeśli metoda nie może uzyskać blokady, kończy działanie z powodu błędu krytycznego i ustawia kod błędu: `_RT_LOCK`.  
+  
+## <a name="requirements"></a>Wymagania  
+ **Źródło:** mlock.c  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Alfabetyczne odwołanie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [_Unlock](../c-runtime-library/unlock.md)

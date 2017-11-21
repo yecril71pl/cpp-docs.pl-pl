@@ -1,0 +1,54 @@
+---
+title: Tworzenie C/C++ izolowany aplikacji i zestawy Side-by-side | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- isolated applications [C++]
+- WinSxS [C++]
+- native assembly cache [C++]
+- builds [C++], isolated applications
+- side-by-side applications [C++]
+- builds [C++], side-by-side assemblies
+ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
+caps.latest.revision: "20"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c91e6e6e4b74e1f2e9832d32b4bbf82cd62d6053
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie
+Visual C++ obsługuje model wdrożenia dla aplikacji klienckich systemu Windows oparte na koncepcja [izolowanych](http://msdn.microsoft.com/library/aa375190) i [zestawy side-by-side](http://msdn.microsoft.com/library/ff951640). Domyślnie program Visual C++ kompilacje wszystkich natywnych aplikacji C/C++ jako izolowanych aplikacji, które używają [manifesty](http://msdn.microsoft.com/library/aa375365) do opisywania ich zależności na bibliotek języka Visual C++.  
+  
+ Kompilowanie programów C/C++ jako izolowanych aplikacji zawiera szereg korzyści. Na przykład izolowanych aplikacji nie mają wpływu, gdy inne aplikacje C/C++ zainstalować lub odinstalować bibliotek języka Visual C++. Bibliotek języka Visual C++ używane przez aplikacje izolowane nadal można rozpowszechniać w folderze lokalnym w aplikacji lub przez instalację pamięć podręczna zestawów natywnych (folderze WinSxS); jednak obsługa bibliotek języka Visual C++ dla już wdrożonych aplikacji można uprościć przy użyciu [wydawcy pliku konfiguracji](http://msdn.microsoft.com/library/aa375680). Model wdrażania aplikacji izolowanych ułatwia upewnij się, że aplikacji C/C++, które są uruchomione na określonym komputerze używać najnowszej wersji biblioteki Visual C++, pozostawiając nadal otwarty możliwości dla administratorów systemów i Aplikacja autorom powiązanie jawne wersji aplikacji do ich zależnych bibliotek DLL.  
+  
+ W tej sekcji omówiono sposób tworzenia aplikacji jako aplikacji izolowanych C/C++ i upewnij się, że jest on powiązany z bibliotek języka Visual C++ przy użyciu manifestu. Informacje przedstawione w tej sekcji dotyczą przede wszystkim native lub niezarządzane, aplikacji Visual C++. Aby uzyskać informacje o wdrażaniu natywnych aplikacji skompilowanej za pomocą języka Visual C++, zobacz [redystrybuowanie pliki Visual C++](../ide/redistributing-visual-cpp-files.md).  
+  
+## <a name="in-this-section"></a>W tej sekcji  
+ [Aplikacje izolowane i zestawy Side-by-side](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)  
+  
+ [Tworzenie C/C++ izolowanych](../build/building-c-cpp-isolated-applications.md)  
+  
+ [Kompilowanie zestawów C/C++ Side-by-side](../build/building-c-cpp-side-by-side-assemblies.md)  
+  
+ [Porady: Tworzenie składników COM bez rejestrowania](../build/how-to-build-registration-free-com-components.md)  
+  
+ [Porady: kompilowanie izolowanych aplikacji korzystających ze składników COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
+  
+ [Opis Generowanie manifestu dla programów C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)  
+  
+ [Rozwiązywanie problemów z C/C++ izolowane Side-by-side zestawów ani aplikacji](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
+  
+## <a name="related-sections"></a>Sekcje pokrewne  
+ [Aplikacje izolowane i Side-by-side zestawów](http://msdn.microsoft.com/library/dd408052)  
+  
+ [Wdrażanie natywnych aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)
