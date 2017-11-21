@@ -1,0 +1,73 @@
+---
+title: . SETFRAME | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .SETFRAME
+dev_langs: C++
+helpviewer_keywords: .SETFRAME directive
+ms.assetid: eaa9b5ed-4daa-4f1e-bdb6-100758007ab3
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8666e0ecfd1b2f81236766a1a32baea7a939cd19
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="setframe"></a>.SETFRAME
+Wypełnienia ramki zarejestrować pola i przesunięcie w informacjach dotyczących unwind przy użyciu określonego rejestru (`reg`) i przesunięcia (`offset`). Przesunięcie musi być wielokrotnością 16 i mniejsza niż 240. Ta dyrektywa generuje również `UWOP_SET_FPREG` unwind kod dla określonego zarejestrować, używając bieżącej przesunięcie prologu.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+.SETFRAME reg, offset  
+```  
+  
+## <a name="remarks"></a>Uwagi  
+ . SETFRAME umożliwia użytkownikom ml64.exe określające, jak funkcja ramki cofa i jest dozwolone tylko w prologu, który rozciąga się od [PROC](../../assembler/masm/proc.md) deklaracji ramki [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) dyrektywy. Dyrektywy te nie generują kod; tylko generowanie `.xdata` i `.pdata`. . SETFRAME powinien być poprzedzony instrukcje faktycznie implementujących działania, które można oddzielić. Jest dobrą praktyką jest zawijany zarówno dyrektywy unwind i kodu, które są przeznaczone do unwind w makrze do zapewnienia umowy.  
+  
+ Aby uzyskać więcej informacji, zobacz [MASM dla x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
+  
+## <a name="sample"></a>Przykład  
+  
+### <a name="description"></a>Opis  
+ Poniższy przykład przedstawia sposób użycia wskaźnika ramki:  
+  
+### <a name="code"></a>Kod  
+  
+```  
+; ml64 frmex2.asm /link /entry:frmex2 /SUBSYSTEM:CONSOLE  
+_text SEGMENT  
+frmex2 PROC FRAME  
+   push rbp  
+.pushreg rbp  
+   sub rsp, 010h  
+.allocstack 010h  
+   mov rbp, rsp  
+.setframe rbp, 0  
+.endprolog  
+   ; modify the stack pointer outside of the prologue (similar to alloca)  
+   sub rsp, 060h  
+  
+   ; we can unwind from the following AV because of the frame pointer     
+   mov rax, 0  
+   mov rax, [rax] ; AV!  
+  
+   add rsp, 060h  
+   add rsp, 010h  
+   pop rbp  
+   ret  
+frmex2 ENDP  
+_text ENDS  
+END  
+```  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)

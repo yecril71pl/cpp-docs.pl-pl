@@ -1,0 +1,46 @@
+---
+title: Argumenty dla metody main | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+ms.assetid: 39824fef-05ad-461d-ae82-49447dda8060
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa4dda9a8735f0b57dd6dcefa0f16774c006da35
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="arguments-to-main"></a>Argumenty dla metody main
+**ANSI 2.1.2.2.1** semantykę argumenty dla metody main  
+  
+ W programie Microsoft C jest wywoływana funkcja wywoływana w momencie uruchamiania programu **głównego**. Nie istnieje bez prototypu zadeklarowanym dla **głównego**, a mogą być definiowane z zero, dwie lub trzy parametry:  
+  
+```  
+int main( void )  
+int main( int argc, char *argv[] )  
+int main( int argc, char *argv[], char *envp[] )  
+```  
+  
+ Trzeci wiersz powyżej, gdzie **głównego** akceptuje trzy parametry, to rozszerzenie Microsoft ze standardem ANSI C. Trzeci parametr **envp —**, jest tablicy wskaźników do zmiennych środowiskowych. **Envp —** tablicy jest został przerwany przez wskaźnika o wartości null. Zobacz [funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md) uzyskać więcej informacji o **głównego** i **envp —**.  
+  
+ Zmienna **argc —** nigdy nie przechowuje wartości ujemnej.  
+  
+ Tablica ciągów kończy się wyrazem **ARGV — [argc —]**, który zawiera wskaźnika o wartości null.  
+  
+ Wszystkie elementy **ARGV —** tablicy są wskaźnikami do ciągów.  
+  
+ Program wywołać bez argumentów wiersza polecenia otrzyma wartość jednego dla **argc —**, ponieważ nazwa pliku wykonywalnego jest umieszczana w **ARGV — [0]**. (W wersjach systemu MS-DOS przed 3.0, nazwa pliku wykonywalnego nie jest dostępna. Litera "C" znajduje się w **ARGV — [0]**.) Ciągi wskazywana przez **ARGV — [1]** za pośrednictwem **ARGV — [argc — - 1]** reprezentują parametry.  
+  
+ Parametry **argc —** i **ARGV —** można modyfikować i zachowywanie ich wartości przechowywane ostatnich między programów, uruchamianie i kończenie działania programu.  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Środowisko](../c-language/environment.md)
