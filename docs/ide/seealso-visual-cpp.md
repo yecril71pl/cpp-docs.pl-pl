@@ -1,0 +1,78 @@
+---
+title: '&lt;SeeAlso&gt; (Visual C++) | Dokumentacja firmy Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <seealso>
+- seealso
+dev_langs: C++
+helpviewer_keywords:
+- seealso C++ XML tag
+- <seealso> C++ XML tag
+ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bd43a5252481a8b21220dac14248ac5ae9f01d09
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="ltseealsogt-visual-c"></a>&lt;SeeAlso&gt; (Visual C++)
+\<Seealso > należy określić tekst, który ma być wyświetlane w sekcji Zobacz też. Użyj [ \<zobacz >](../ide/see-visual-cpp.md) można określić łącze od w tekście.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+<seealso cref="member"/>  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `member`  
+ Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywoływania z bieżącym środowisku kompilacji.  Nazwę należy ująć w cudzysłów pojedynczym lub podwójnym.  
+  
+ Kompilator sprawdza, czy element podanego kodu istnieje i jest rozpoznawany jako `member` do nazwy elementu w danych wyjściowych XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.  
+  
+ Aby uzyskać informacje na temat tworzenia cref odwołanie do typu ogólnego, zobacz [ \<zobacz >](../ide/see-visual-cpp.md).  
+  
+## <a name="remarks"></a>Uwagi  
+ Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+  
+ Zobacz [ \<podsumowania >](../ide/summary-visual-cpp.md) przykład za pomocą \<seealso >.  
+  
+ Kompilator Visual C++ podejmie próbę rozpoznawania odwołań cref w jednym przebiegu za pośrednictwem komentarzy do dokumentacji.  W związku z tym jeśli przy użyciu reguł wyszukiwania C++, symbol nie znaleziono przez kompilator, odwołanie zostanie oznaczona jako nierozwiązane.  
+  
+## <a name="example"></a>Przykład  
+ W poniższym przykładzie cref odwołuje się nierozwiązane symbolu. Komentarz XML dla cref do B::Test będzie `<seealso cref="!:B::Test" />`, podczas gdy odwołanie do A::Test jest poprawnie sformułowanym `<seealso cref="M:A.Test" />`.  
+  
+```  
+// xml_seealso_tag.cpp  
+// compile with: /LD /clr /doc  
+// post-build command: xdcmake xml_seealso_tag.dll  
+  
+/// Text for class A.  
+public ref struct A {  
+   /// <summary><seealso cref="A::Test"/>  
+   /// <seealso cref="B::Test"/>  
+   /// </summary>  
+   void MyMethod(int Int1) {}  
+  
+   /// text  
+   void Test() {}  
+};  
+  
+/// Text for class B.  
+public ref struct B {  
+   void Test() {}  
+};  
+```  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Plik dokumentacji XML](../ide/xml-documentation-visual-cpp.md)

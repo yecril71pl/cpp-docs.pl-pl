@@ -1,0 +1,269 @@
+---
+title: "tiled_index — klasa | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tiled_index
+- AMP/tiled_index
+- AMP/Concurrency::tiled_index::tiled_index
+- AMP/Concurrency::tiled_index::get_tile_extent
+- AMP/Concurrency::tiled_index::barrier
+- AMP/Concurrency::tiled_index::global
+- AMP/Concurrency::tiled_index::local
+- AMP/Concurrency::tiled_index::rank
+- AMP/Concurrency::tiled_index::tile
+- AMP/Concurrency::tiled_index::tile_dim0
+- AMP/Concurrency::tiled_index::tile_dim1
+- AMP/Concurrency::tiled_index::tile_dim2
+- AMP/Concurrency::tiled_index::tile_origin
+- AMP/Concurrency::tiled_index::tile_extent
+dev_langs: C++
+helpviewer_keywords: tiled_index class
+ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4acda08cac0e67559db48525e634cd21cdf5a8f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="tiledindex-class"></a>tiled_index — Klasa
+Zapewnia to indeks w [tiled_extent —](tiled-extent-class.md) obiektu. Ta klasa ma właściwości, które mają dostęp do elementów pokrewny ze źródłem Kafelek lokalnego i pokrewne ze źródłem globalnego. Aby uzyskać więcej informacji o układzie sąsiadującym spacje, zobacz [przy użyciu Kafelki](../../../parallel/amp/using-tiles.md).  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+template <
+    int _Dim0,  
+    int _Dim1 = 0,  
+    int _Dim2 = 0  
+>  
+class tiled_index : public _Tiled_index_base<3>;  
+ 
+template <
+    int _Dim0,  
+    int _Dim1  
+>  
+class tiled_index<_Dim0, _Dim1, 0> : public _Tiled_index_base<2>;  
+ 
+template <
+    int _Dim0  
+>  
+class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `_Dim0`  
+ Długość najważniejszych wymiaru.  
+  
+ `_Dim1`  
+ Długość dalej do najbardziej znaczących wymiaru.  
+  
+ `_Dim2`  
+ Długość najmniej znaczący wymiaru.  
+  
+## <a name="members"></a>Elementy członkowskie  
+  
+### <a name="public-constructors"></a>Konstruktory publiczne  
+  
+|Nazwa|Opis|  
+|----------|-----------------|  
+|[tiled_index — Konstruktor](#ctor)|Inicjuje nowe wystąpienie klasy `tile_index` klasy.|  
+
+  
+### <a name="public-methods"></a>Metody publiczne  
+  
+|Nazwa|Opis|  
+|----------|-----------------|  
+|[get_tile_extent](#tiled_index__get_tile_extent)|Zwraca [zakres](extent-class.md) obiekt zawierający wartości `tiled_index` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.|  
+
+
+  
+### <a name="public-constants"></a>Publiczny — stałe  
+  
+|Nazwa|Opis|  
+|----------|-----------------|  
+|[bariera stała](#tiled_index__barrier)|Magazyny [tile_barrier —](tile-barrier-class.md) obiekt, który reprezentuje bariery na kafelku bieżącego wątków.|  
+|||  
+|[Stała globalna](#tiled_index__global)|Magazyny [indeksu](index-class.md) obiektu indeksu stopień 1, 2 lub 3, który reprezentuje globalnej w [siatki](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) obiektu.|  
+|[Stała lokalnego](#tiled_index__local)|Magazyny `index` obiektu rangę 1, 2 lub 3, który reprezentuje względnej indeks bieżącego fragmentu [tiled_extent —](tiled-extent-class.md) obiektu.|  
+|[Rank — stała](#tiled_index__rank)|Przechowuje rangę `tiled_index` obiektu.|  
+|[Tile — stała](#tiled_index__tile)|Magazyny `index` obiektu o randze 1, 2 lub 3, który reprezentuje współrzędne bieżącego fragmentu `tiled_extent` obiektu.|  
+|[Stała tile_dim0](#tiled_index__tile_dim0)|Przechowuje długość najważniejszych wymiaru.|  
+|[Stała tile_dim1](#tiled_index__tile_dim1)|Przechowuje długość dalej do najbardziej znaczących wymiaru.|  
+|[Stała tile_dim2](#tiled_index__tile_dim2)|Przechowuje długość najmniej znaczący wymiaru.|  
+|[tile_origin stała](#tiled_index__tile_origin)|Magazyny `index` obiektu współrzędnych stopień 1, 2 lub 3, który reprezentuje globalnej pochodzenia bieżący Kafelek w `tiled_extent` obiektu.|  
+
+  
+### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
+  
+|Nazwa|Opis|  
+|----------|-----------------|  
+|[tile_extent —](#tile_extent)|Pobiera [zakres](extent-class.md) obiekt zawierający wartości `tiled_index` argumentów szablonu `tiled_index` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.|  
+
+  
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
+ `_Tiled_index_base`  
+  
+ `tiled_index`  
+  
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** amp.h  
+  
+ **Namespace:** współbieżności  
+
+
+## <a name="tiled_index__ctor"></a>tiled_index — Konstruktor  
+Inicjuje nowe wystąpienie klasy `tiled_index` klasy.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+tiled_index(  
+    const index<rank>& _Global,  
+    const index<rank>& _Local,  
+    const index<rank>& _Tile,  
+    const index<rank>& _Tile_origin,  
+    const tile_barrier& _Barrier ) restrict(amp,cpu);  
+  
+tiled_index(  
+    const tiled_index& _Other ) restrict(amp,cpu);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `_Global`  
+ Globalny [indeksu](index-class.md) z zbudowany `tiled_index`.  
+  
+ `_Local`  
+ Lokalna [indeksu](index-class.md) z zbudowany`tiled_index`  
+  
+ `_Tile`  
+ Kafelek [indeksu](index-class.md) z zbudowany`tiled_index`  
+  
+ `_Tile_origin`  
+ Punkt początkowy kafelka [indeksu](index-class.md) z zbudowany`tiled_index`  
+  
+ `_Barrier`  
+ [Tile_barrier —](tile-barrier-class.md) obiektu zbudowany `tiled_index`.  
+  
+ `_Other`  
+ `tile_index` Obiekt ma zostać skopiowany do skonstruowanego `tiled_index`.  
+  
+## <a name="overloads"></a>Overloads  
+  
+|||  
+|-|-|  
+|Nazwa|Opis|  
+|`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Inicjuje nowe wystąpienie klasy `tile_index` klasy z indeksu kafelka we współrzędnych globalnych i względne położenie w kafelku we współrzędnych lokalnych. `_Global` i `_Tile_origin` parametry są obliczane.|  
+|`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inicjuje nowe wystąpienie klasy `tile_index` przez skopiowanie określonego `tiled_index` obiektu.|  
+
+
+## <a name="tiled_index__get_tile_extent"></a>get_tile_extent
+Zwraca [zakres](extent-class.md) obiekt zawierający wartości `tiled_index` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+extent<rank> get_tile_extent()restrict(amp,cpu);  
+```  
+  
+## <a name="return-value"></a>Wartość zwracana  
+ `extent` Obiekt zawierający wartości `tiled_index` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.  
+
+## <a name="tiled_index__barrier"></a>bariery   
+Magazyny [tile_barrier —](tile-barrier-class.md) obiekt, który reprezentuje bariery na kafelku bieżącego wątków.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+const tile_barrier barrier;  
+```  
+
+## <a name="tiled_index__global"></a>globalne   
+Magazyny [indeksu](index-class.md) obiektu o randze 1, 2 lub 3 reprezentujący indeksu globalnego obiektu.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+const index<rank> global;  
+```  
+  
+## <a name="tiled_index__local"></a>lokalne   
+Magazyny [indeksu](index-class.md) obiektu rangę 1, 2 lub 3, który reprezentuje względnej indeks bieżącego fragmentu [tiled_extent —](tiled-extent-class.md) obiektu.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+const index<rank> local;  
+```  
+  
+## <a name="tiled_index__rank"></a>Ranga   
+Przechowuje rangę `tiled_index` obiektu.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+static const int rank = _Rank;  
+```  
+
+## <a name="tiled_index__tile"></a>Kafelek   
+Magazyny [indeksu](index-class.md) obiektu o randze 1, 2 lub 3, który reprezentuje współrzędne bieżącego fragmentu [tiled_extent —](tiled-extent-class.md) obiektu.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+const index<rank> tile;  
+```  
+  
+## <a name="tiled_index__tile_dim0"></a>tile_dim0  
+Przechowuje długość najważniejszych wymiaru.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+static const int tile_dim0 = _Dim0;  
+```  
+   
+## <a name="tiled_index__tile_dim1"></a>tile_dim1   
+Przechowuje długość dalej do najbardziej znaczących wymiaru.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+static const int tile_dim1 = _Dim1;  
+```  
+## <a name="tiled_index__tile_dim2"></a>tile_dim2   
+Przechowuje długość najmniej znaczący wymiaru.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+static const int tile_dim2 = _Dim2;  
+```  
+## <a name="tiled_index__tile_origin"></a>tile_origin   
+Magazyny [indeksu](index-class.md) obiektu współrzędnych stopień 1, 2 lub 3, który reprezentuje globalnej pochodzenia bieżący Kafelek w [tiled_extent —](tiled-extent-class.md) obiektu.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+const index<rank> tile_origin  
+```  
+## <a name="tile_extent"></a>tile_extent —
+  Pobiera [zakres](extent-class.md) obiekt zawierający wartości `tiled_index` argumentów szablonu `tiled_index` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+__declspec(property(get= get_tile_extent)) extent<rank> tile_extent;  
+```  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Namespace współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

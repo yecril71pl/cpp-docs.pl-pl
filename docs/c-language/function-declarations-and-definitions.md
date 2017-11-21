@@ -1,0 +1,38 @@
+---
+title: Deklaracje i definicje | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- local declarations
+- function definitions, function declarations
+- declaring functions, function definitions
+- internal declarations
+- external declarations
+- function prototypes, basics
+- external linkage, function declarations
+- declaring functions
+ms.assetid: 43fd98eb-7441-4473-a5d9-fc88c75577f7
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ea315c065e6f76215939bc4ccd70bcc907361ff4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="function-declarations-and-definitions"></a>Deklaracje i definicje funkcji
+Prototypy funkcji ustanowić nazwę funkcji, jego typ zwracany i typ i numer jego parametrów formalnych. Definicja funkcji zawiera treść funkcji.  
+  
+## <a name="remarks"></a>Uwagi  
+ Deklaracje zarówno funkcja i zmienna może występować wewnątrz lub na zewnątrz definicji funkcji. Żadnych deklaracji w definicji funkcji jest nazywany pojawiają się na poziomie "internal" lub "local". Deklaracja poza wszystkie definicje funkcji jest nazywany pojawiają się na poziomie "plik zakresu" lub "zewnętrzne" "globalne". Definicje zmiennych, takich jak deklaracje, może występować na poziomie wewnętrznym (w ramach definicji funkcji) lub na poziomie zewnętrzne (poza wszystkie definicje funkcji). Definicje funkcji są zawsze wykonywane na poziomie zewnętrznych. Definicje funkcji są omówione w dalszych [definicje funkcji](../c-language/c-function-definitions.md). Prototypy funkcji są objęte [prototypy funkcji](../c-language/function-prototypes.md).  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)

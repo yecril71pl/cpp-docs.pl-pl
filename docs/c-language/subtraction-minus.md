@@ -1,0 +1,33 @@
+---
+title: "Odejmowanie (–) | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- operators [C], subtraction
+- subtraction operator, syntax
+ms.assetid: 9cacba7d-20b3-4372-8a63-ba5d8ee64177
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7d07f6bf2c5d48b3149eb43448e217d1a66b92c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="subtraction--"></a>Odejmowania (-)
+Operator odejmowania (**-**) odejmuje drugi argument od pierwszego. Oba argumenty mogą być typy całkowitą lub zmiennoprzecinkową lub jeden argument może być wskaźnik i inne liczbą całkowitą.  
+  
+ Po dwóch wskaźników są odejmować, różnica jest konwertowana na podpisem całkowitej wartości przez podzielenie różnicy przez rozmiar wartości typu który adres wskaźników. Rozmiar całkowitą wartość jest definiowana za pomocą typu **ptrdiff_t —** w standardowych dołączanych plików STDDEF. H. Wynik reprezentuje liczbę pozycji pamięci między dwoma adresami tego typu. Wynik jest tylko gwarancji zrozumiały dla dwa elementy o tej samej tablicy, zgodnie z opisem w [arytmetyki wskaźnika](../c-language/pointer-arithmetic.md).  
+  
+ Jeśli wartość jest odejmowana od wartości wskaźnika, operator odejmowania konwertuje wartość całkowita (*i*) mnożąc przez rozmiar wartość, która dotyczy wskaźnika. Po przeprowadzeniu konwersji, wartość całkowita reprezentuje *i* pozycji pamięci, gdzie każda pozycja ma długości określonej przez typ wskaźnika. W przypadku przekonwertowanego całkowita jest odejmowany od wartości wskaźnika, wynik jest adresem pamięci *i* pozycji przed oryginalnego adresu. Wskaźnik nowych punktów do wartości typu opisany w oryginalnej wartości wskaźnika.  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Operatory dodawania języka C](../c-language/c-additive-operators.md)

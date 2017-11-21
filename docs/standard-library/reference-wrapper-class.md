@@ -1,0 +1,342 @@
+---
+title: "reference_wrapper — klasa | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- functional/std::reference_wrapper
+- type_traits/std::reference_wrapper
+- xrefwrap/std::reference_wrapper
+- type_traits/std::reference_wrapper::get
+- type_traits/std::reference_wrapper::operator()
+- functional/std::reference_wrapper::result_type
+- functional/std::reference_wrapper::type
+- functional/std::reference_wrapper::get
+- functional/std::reference_wrapper::operator()
+dev_langs: C++
+helpviewer_keywords:
+- std::reference_wrapper [C++]
+- std::reference_wrapper [C++]
+- std::reference_wrapper [C++], result_type
+- std::reference_wrapper [C++], type
+- std::reference_wrapper [C++], get
+ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b9460c2d08c7f5527af733c412fc22dda5944cb4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="referencewrapper-class"></a>reference_wrapper — Klasa
+Opakowuje odwołanie.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+template <class Ty>  
+class reference_wrapper  
+{  
+public:  
+    typedef Ty type;  
+ 
+    reference_wrapper(Ty&) noexcept;
+    operator Ty&() const noexcept;
+    Ty& get() const noexcept;
+
+    template <class... Types> 
+    auto operator()(Types&&... args) const ->
+        decltype(std::invoke(get(), std::forward<Types>(args)...));
+ 
+private:  
+    Ty *ptr; // exposition only  
+};  
+```  
+  
+## <a name="remarks"></a>Uwagi  
+A `reference_wrapper<Ty>` kopiowania umożliwia konstrukcji i kopiowania można przypisać otokę odwołanie do obiektu lub funkcji typu `Ty`oraz posiada wskaźnika, który wskazuje obiekt tego typu. A `reference_wrapper` może służyć do przechowywania odwołań w kontenerach standardowe oraz przekazywanie obiektów w odniesieniu do `std::bind`.  
+  
+Typ `Ty` musi być typu obiektu lub typu funkcji lub statycznej assert kończy się niepowodzeniem w czasie kompilacji.  
+  
+Funkcje pomocnicze [std::ref](functional-functions.md#ref) i [std::cref](functional-functions.md#cref) może służyć do tworzenia `reference_wrapper` obiektów.  
+  
+### <a name="constructors"></a>Konstruktorów  
+  
+|||  
+|-|-|  
+|[reference_wrapper —](#reference_wrapper)|Konstruuje `reference_wrapper`.|  
+  
+### <a name="typedefs"></a>Typedefs  
+  
+|||  
+|-|-|  
+|[result_type](#result_type)|Typ wyniku słabe opakowana odwołania.|  
+|[Typ](#type)|Typ odwołania opakowana.|  
+  
+### <a name="member-functions"></a>Funkcje elementów członkowskich  
+  
+|||  
+|-|-|  
+|[Pobierz](#get)|Pobiera odwołanie opakowana.|  
+  
+### <a name="operators"></a>Operatory  
+  
+|||  
+|-|-|  
+|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Pobiera wskaźnik do odwołania opakowana.|  
+|[reference_wrapper::operator()](#op_call)|Wywołuje opakowana odwołania.|  
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** \<funkcjonalności >  
+  
+ **Namespace:** Standard  
+  
+##  <a name="get"></a>reference_wrapper::Get  
+ Pobiera odwołanie opakowana.  
+  
+```  
+Ty& get() const noexcept;
+```  
+  
+### <a name="remarks"></a>Uwagi  
+Funkcja członkowska zwraca odwołanie opakowana.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__functional__reference_wrapper_get.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int main() {   
+    int i = 1;   
+    std::reference_wrapper<int> rwi(i);   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "rwi = " << rwi << std::endl;   
+    rwi.get() = -1;   
+    std::cout << "i = " << i << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+rwi = 1  
+i = -1  
+```  
+  
+##  <a name="op_ty_amp"></a>reference_wrapper::operator Ty&amp;  
+ Pobiera odniesienie opakowana.  
+  
+```  
+operator Ty&() const noexcept;
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Zwraca element członkowski operatora `*ptr`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__functional__reference_wrapper_operator_cast.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int main() {   
+    int i = 1;   
+    std::reference_wrapper<int> rwi(i);   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "(int)rwi = " << (int)rwi << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+(int)rwi = 1  
+```  
+  
+##  <a name="op_call"></a>reference_wrapper::operator()  
+ Wywołuje opakowana odwołania.  
+  
+```  
+template <class... Types>  
+auto operator()(Types&&... args);
+```  
+  
+### <a name="parameters"></a>Parametry  
+ `Types`  
+ Typy listy argumentów.  
+  
+ `args`  
+ Lista argumentów.  
+  
+### <a name="remarks"></a>Uwagi  
+ Element członkowski szablonu `operator()` zwraca `std::invoke(get(), std::forward<Types>(args)...)`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__functional__reference_wrapper_operator_call.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    std::reference_wrapper<int (int)> rwi(neg);   
+  
+    std::cout << "rwi(3) = " << rwi(3) << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+rwi(3) = -3  
+```  
+  
+##  <a name="reference_wrapper"></a>reference_wrapper::reference_wrapper  
+ Konstruuje `reference_wrapper`.  
+  
+```  
+reference_wrapper(Ty& val) noexcept;
+```  
+  
+### <a name="parameters"></a>Parametry  
+ `Ty`  
+ Typ do zakodowania.  
+  
+ `val`  
+ Wartość do zakodowania.  
+  
+### <a name="remarks"></a>Uwagi  
+ Konstruktor ustawia przechowywana wartość `ptr` do `&val`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__functional__reference_wrapper_reference_wrapper.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    int i = 1;   
+    std::reference_wrapper<int> rwi(i);   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "rwi = " << rwi << std::endl;   
+    rwi.get() = -1;   
+    std::cout << "i = " << i << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+rwi = 1  
+i = -1  
+```  
+  
+##  <a name="result_type"></a>reference_wrapper::result_type  
+ Typ wyniku słabe opakowana odwołania.  
+  
+```  
+typedef R result_type;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ `result_type` Element typedef jest synonimem typu słabe wyników opakowana funkcja. Ten element typedef jest znaczący tylko dla typów funkcji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__functional__reference_wrapper_result_type.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    typedef std::reference_wrapper<int (int)> Mywrapper;   
+    Mywrapper rwi(neg);   
+    Mywrapper::result_type val = rwi(3);   
+  
+    std::cout << "val = " << val << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+val = -3  
+```  
+  
+##  <a name="type"></a>reference_wrapper::type  
+ Typ odwołania opakowana.  
+  
+```  
+typedef Ty type;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Element typedef jest synonimem argument szablonu `Ty`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// std__functional__reference_wrapper_type.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    int i = 1;   
+    typedef std::reference_wrapper<int> Mywrapper;   
+    Mywrapper rwi(i);   
+    Mywrapper::type val = rwi.get();   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "rwi = " << val << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+rwi = 1  
+```  
+  
+## <a name="see-also"></a>Zobacz też  
+ [cref](../standard-library/functional-functions.md#cref)   
+ [REF](../standard-library/functional-functions.md#ref)
+

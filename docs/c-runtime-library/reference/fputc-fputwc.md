@@ -1,0 +1,133 @@
+---
+title: "fputc —, fputwc — | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fputc
+- fputwc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fputc
+- fputwc
+- _fputtc
+dev_langs: C++
+helpviewer_keywords:
+- streams, writing characters to
+- fputtc function
+- _fputtc function
+- fputwc function
+- fputc function
+ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
+caps.latest.revision: "20"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 75065ba914356db06f75e80acc4ca3a6350237de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="fputc-fputwc"></a>fputc, fputwc
+Zapisuje znak w strumieniu.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+int fputc(  
+   int c,  
+   FILE *stream   
+);  
+wint_t fputwc(  
+   wchar_t c,  
+   FILE *stream   
+);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `c`  
+ Znak do zapisania.  
+  
+ `stream`  
+ Wskaźnik do `FILE` struktury.  
+  
+## <a name="return-value"></a>Wartość zwracana  
+ Każda z tych funkcji zwraca znak zapisywane. Aby uzyskać `fputc`, zwracana wartość `EOF` wskazuje błąd. Aby uzyskać `fputwc`, zwracana wartość `WEOF` wskazuje błąd. Jeśli `stream` jest `NULL`, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają `EOF` i ustaw `errno` do `EINVAL`.  
+  
+ Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.  
+  
+## <a name="remarks"></a>Uwagi  
+ Każda z tych funkcji zapisuje pojedynczy znak `c` do pliku w pozycji wskazywana przez wskaźnik położenia skojarzony plik (jeśli jest zdefiniowana) i przesuwa wskaźnik zależnie od potrzeb. W przypadku liczby `fputc` i `fputwc`, plik jest skojarzony z `stream`. Jeśli plik nie może obsłużyć żądań pozycjonowania lub został otwarty w trybie append, znak jest dołączany do końca strumienia.  
+  
+ Dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `fputc`aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
+  
+ Wersje z `_nolock` sufiks są identyczne z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Aby uzyskać więcej informacji, zobacz[_fputc_nolock —, _fputwc_nolock —](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md).  
+  
+ Uwagi dotyczące procedury należy wykonać.  
+  
+|Procedura|Uwagi|  
+|-------------|-------------|  
+|`fputc`|Odpowiednikiem `putc`, ale zaimplementowany tylko jako funkcję, a nie jako funkcję i makra.|  
+|`fputwc`|Wersja znaków dwubajtowych `fputc`. Zapisuje `c` jako znaków wielobajtowych lub znaków dwubajtowych zgodnie z czy `stream` jest otwarty w trybie tekst lub binarny.|  
+  
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
+  
+|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
+|`_fputtc`|`fputc`|`fputc`|`fputwc`|  
+  
+## <a name="requirements"></a>Wymagania  
+  
+|Funkcja|Wymagany nagłówek|  
+|--------------|---------------------|  
+|`fputc`|\<stdio.h >|  
+|`fputwc`|\<stdio.h > lub \<wchar.h >|  
+  
+ Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+  
+## <a name="example"></a>Przykład  
+  
+```  
+// crt_fputc.c  
+// This program uses fputc  
+// to send a character array to stdout.  
+  
+#include <stdio.h>  
+  
+int main( void )  
+{  
+   char strptr1[] = "This is a test of fputc!!\n";  
+   char *p;  
+  
+   // Print line to stream using fputc.   
+   p = strptr1;  
+   while( (*p != '\0') && fputc( *(p++), stdout ) != EOF ) ;  
+  
+}  
+```  
+  
+```Output  
+This is a test of fputc!!  
+```  
+  
+## <a name="see-also"></a>Zobacz też  
+ [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
+ [fgetc —, fgetwc —](../../c-runtime-library/reference/fgetc-fgetwc.md)   
+ [putc —, putwc —](../../c-runtime-library/reference/putc-putwc.md)

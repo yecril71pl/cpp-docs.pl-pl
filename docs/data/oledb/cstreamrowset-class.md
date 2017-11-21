@@ -1,0 +1,75 @@
+---
+title: "Cstreamrowset — klasa | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CStreamRowset<TAccessor>
+- ATL::CStreamRowset
+- CStreamRowset
+- ATL.CStreamRowset<TAccessor>
+- ATL.CStreamRowset
+dev_langs: C++
+helpviewer_keywords: CStreamRowset class
+ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 003b6b84195c491d1c72c3de289de375459ba261
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="cstreamrowset-class"></a>CStreamRowset — Klasa
+Używane w `CCommand` lub `CTable` deklaracji.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+template <class TAccessor = CAccessorBase>  
+class CStreamRowset  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `TAccessor`  
+ Klasa metody dostępu.  
+  
+## <a name="members"></a>Elementy członkowskie  
+  
+### <a name="methods"></a>Metody  
+  
+|||  
+|-|-|  
+|[Cstreamrowset —](../../data/oledb/cstreamrowset-cstreamrowset.md)|Konstruktor. Tworzy i inicjuje `CStreamRowset` obiektu.|  
+|[Zamknij](../../data/oledb/cstreamrowset-close.md)|Wersje [ISequentialStream](https://msdn.microsoft.com/en-us/library/ms718035.aspx) wskaźnika interfejsu w klasie.|  
+  
+## <a name="remarks"></a>Uwagi  
+ Użyj `CStreamRowset` w Twojej `CCommand` lub `CTable` deklaracji, na przykład:  
+  
+ [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
+  
+ lub  
+  
+ [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
+  
+ `ICommand::Execute`Zwraca `ISequentialStream` wskaźnika, który jest przechowywany w `m_spStream`. Następnie należy użyć **odczytu** metody do pobierania danych (ciąg Unicode) w formacie XML. Na przykład:  
+  
+ [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
+  
+ SQL Server 2000 wykonuje formatowania XML i zwróci wszystkie kolumny i wszystkie wiersze z zestawu wierszy w postaci jednego ciągu XML.  
+  
+> [!NOTE]
+>  Ta funkcja działa tylko z programem SQL Server 2000.  
+  
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** atldbcli.h  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Dokumentacja szablonów konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

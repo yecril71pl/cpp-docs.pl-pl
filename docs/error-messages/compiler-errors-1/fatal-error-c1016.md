@@ -1,0 +1,49 @@
+---
+title: "Błąd krytyczny C1016 | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: C1016
+dev_langs: C++
+helpviewer_keywords: C1016
+ms.assetid: 33f45c3e-2d8f-43ad-a445-c412d1d54ce1
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ef8e1547b636ec6722daca3f73639d8e1db42d5f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="fatal-error-c1016"></a>Błąd krytyczny C1016
+\#ifdef oczekuje się, że identyfikator #ifndef Oczekiwano identyfikatora  
+  
+ Dyrektywa kompilacji warunkowej ([#ifdef](../../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md) lub `#ifndef`) ma identyfikator nie można obliczyć wartości. Aby rozwiązać problem, określ identyfikator.  
+  
+ Poniższy przykład generuje C1016:  
+  
+```  
+// C1016.cpp  
+#ifdef   // C1016  
+#define FC1016  
+#endif  
+  
+int main() {}  
+```  
+  
+ Możliwe rozwiązanie:  
+  
+```  
+// C1016b.cpp  
+#ifdef X  
+#define FC1016  
+#endif  
+  
+int main() {}  
+```

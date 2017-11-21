@@ -1,0 +1,51 @@
+---
+title: "Module::UnregisterObjects — metoda | Dokumentacja firmy Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::UnregisterObjects
+dev_langs: C++
+helpviewer_keywords: UnregisterObjects method
+ms.assetid: 3d8119a7-991d-45e9-b8c5-ed36c0be0332
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6f62ae76b0ff86c11ab0bc347550fe27b406acb5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects — Metoda
+Wyrejestrowuje obiektów określony moduł, dzięki czemu inne aplikacje nie mogą łączyć się je.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+HRESULT UnregisterObjects(  
+   ModuleBase* module,  
+   const wchar_t* serverName);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `module`  
+ Wskaźnik do modułu.  
+  
+ `serverName`  
+ Kwalifikujące nazwę, która określa podzbiór obiektów przez tę operację.  
+  
+## <a name="return-value"></a>Wartość zwracana  
+ Wartość S_OK, jeśli operacja zakończy się pomyślnie; w przeciwnym razie błąd HRESULT, która wskazuje przyczynę ta operacja nie powiodła się.  
+  
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** module.h  
+  
+ **Namespace:** Microsoft::wrl —
+ 
+ ## <a name="see-also"></a>Zobacz też
+ [Klasa modułu](../windows/module-class.md)

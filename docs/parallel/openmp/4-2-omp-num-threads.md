@@ -1,0 +1,41 @@
+---
+title: 4.2 OMP_NUM_THREADS | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+ms.assetid: 49dd55dd-25d5-4a5a-a998-cc7f47b2dae2
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7e02f29aeda7d555b7ac2678b030d2ff3475b639
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
+**OMP_NUM_THREADS** zmiennej środowiskowej ustawia domyślną liczbę wątków używanych podczas wykonywania, chyba że ten numer zostanie jawnie zmieniona przez wywołanie metody **omp_set_num_threads** procedury biblioteki lub przez jawne **num_threads** klauzula w **równoległych** dyrektywy.  
+  
+ Wartość **OMP_NUM_THREADS** zmiennej środowiskowej musi być dodatnią liczbą całkowitą. Jego wpływ zależy od tego, czy jest włączone dynamiczne Dostosowywanie to liczba wątków. Kompleksowy zestaw reguł o interakcji między **OMP_NUM_THREADS** środowiska zmiennej i dynamicznego dopasowania wątków, patrz sekcja 2.3 na stronie 8.  
+  
+ Jeśli nie określono wartości dla **OMP_NUM_THREADS** zmiennej środowiskowej, lub jeśli określona wartość nie jest dodatnią liczbą całkowitą lub jeśli wartość jest większa niż maksymalna liczba wątków systemu można obsługiwać, liczbę wątków używanych jest zdefiniowane w implementacji.  
+  
+ Przykład:  
+  
+```  
+setenv OMP_NUM_THREADS 16  
+```  
+  
+## <a name="cross-references"></a>Odsyłacze:  
+  
+-   **num_threads** klauzuli, zobacz [2.3 sekcji](../../parallel/openmp/2-3-parallel-construct.md) na stronie 8.  
+  
+-   **omp_set_num_threads** funkcji, zobacz [sekcji 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) na stronie 36.  
+  
+-   **omp_set_dynamic** funkcji, zobacz [sekcji 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stronie 39.

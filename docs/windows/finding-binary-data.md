@@ -1,0 +1,50 @@
+---
+title: Znajdowanie danych binarnych | Dokumentacja firmy Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.binary
+dev_langs: C++
+helpviewer_keywords:
+- hexadecimal bytes in binary data
+- strings [C++], searching for
+- file searches [C++]
+- binary data, finding
+- ASCII characters, finding in binary data
+ms.assetid: 1675b19c-66e3-4040-82c2-5dde4b1793f8
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 430f69eb6ae4d46ceb301db56ba9ee1904d028b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/24/2017
+---
+# <a name="finding-binary-data"></a>Znajdowanie danych binarnych
+Można wyszukiwać ciągi ASCII lub bajty szesnastkowe. Na przykład aby znaleźć "tekst Hello", możesz można wyszukać dla dowolnego ciągu "Hello" lub "48 65 6C 6 C 6 f" (szesnastkowy).  
+  
+### <a name="to-find-binary-data"></a>Aby znaleźć dane binarne  
+  
+1.  Z **Edytuj** menu, kliknij przycisk [znaleźć](/visualstudio/ide/reference/find-command).  
+  
+2.  W **Znajdź** Wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub typu danych, który ma zostać znaleziony.  
+  
+3.  Wybierz jedno z **znaleźć** opcje.  
+  
+4.  Kliknij przycisk **Znajdź następny**.  
+  
+ Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](https://msdn.microsoft.com/library/f45fce5x.aspx) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](https://msdn.microsoft.com/library/xbx3z216.aspx). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+  
+ Wymagania  
+  
+ Brak  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Edytor plików binarnych](binary-editor.md)
+
