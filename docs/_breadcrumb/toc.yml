@@ -1,0 +1,126 @@
+- name: Dokumenty
+  tocHref: /
+  topicHref: /
+  items:
+    - name: Visual C++
+      tocHref: /cpp/
+      topicHref: /cpp
+      items:
+        - name: Dokumentacja
+          tocHref: /cpp/
+          topicHref: /cpp/visual-cpp-in-visual-studio
+          items:
+            - name: C++ — język
+              tocHref: /cpp/cpp/
+              topicHref: /cpp/cpp/cpp-language-reference
+            - name: C — język
+              tocHref: /cpp/c-language/
+              topicHref: /cpp/c-language/c-language-reference
+            - name: Preprocesor języka C/C++
+              tocHref: /cpp/preprocessor/
+              topicHref: /cpp/c-cpp-preprocessor-reference
+            - name: Biblioteka środowiska uruchomieniowego języka C
+              tocHref: /cpp/c-runtime-library/
+              topicHref: /cpp/c-runtime-library/c-runtime-library-reference
+              items:
+                - name: Dokumentacja
+                  tocHref: /cpp/c-runtime-library/reference/
+                  topicHref: /cpp/c-runtime-library/reference/alphabetical-function-reference
+            - name: Standardowa biblioteka C++
+              tocHref: /cpp/standard-library/
+              topicHref: /cpp/standard-library/cpp-standard-library
+            - name: Windows
+              tocHref: /cpp/windows/
+              topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
+              items:
+                - name: ATL
+                  tocHref: /cpp/atl/
+                  topicHref: /cpp/atl/atl-com-desktop-components
+                  items:
+                    - name: Dokumentacja
+                      tocHref: /cpp/atl/reference/
+                      topicHref: /cpp/atl/reference/atl-classes
+                - name: MFC
+                  tocHref: /cpp/mfc/
+                  topicHref: /cpp/mfc/mfc-desktop-applications
+                  items:
+                    - name: Dokumentacja
+                      tocHref: /cpp/mfc/reference/
+                      topicHref: /cpp/mfc/reference/mfc-classes
+                - name: Klasy współdzielone ATL/MFC
+                  tocHref: /cpp/atl-mfc-shared/
+                  topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
+                  items:
+                    - name: Dokumentacja
+                      tocHref: /cpp/atl-mfc-shared/reference/
+                      topicHref: /cpp/atl-mfc/shared/reference/classes-shared-by-atl-and-mfc
+                - name: C++/CX
+                  tocHref: /cpp/cppcx/
+                  topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
+            - name: Linux
+              tocHref: /cpp/linux/
+              topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
+            - name: .NET
+              tocHref: /cpp/dotnet/
+              topicHref: /cpp/dotnet/dotnet-programming-with-cpp-cli
+            - name: Programowanie równoległe
+              tocHref: /cpp/parallel/
+              topicHref: /cpp/parallel/parallel-programming-in-visual-cpp
+            - name: Dostęp do danych
+              tocHref: /cpp/data/
+              topicHref: /cpp/data/
+              items:
+                - name: OLEDB
+                  tocHref: /cpp/data/oledb/
+                  topicHref: /cpp/data/oledb/ole-db-programming
+                - name: ODBC
+                  tocHref: /cpp/data/odbc/
+                  topicHref: /cpp/data/odbc/open-database-connectivity-odbc
+            - name: Zintegrowane środowisko projektowe i narzędzia
+              tocHref: /cpp/ide/
+              topicHref: /cpp/ide/ide-and-tools-for-visual-cpp-development
+              items:
+                - name: IDE
+                  tocHref: /cpp/ide/
+                  topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
+                - name: Kompilowanie
+                  tocHref: /cpp/build/building-c-cpp-programs
+                  items:
+                    - name: Dokumentacja kompilowania
+                      tocHref: /cpp/build/reference/
+                      topicHref: /cpp/build/reference/c-cpp-building-reference
+                      items:
+                        - name: Błędy kompilatora
+                          tocHref: /cpp/error-messages/compiler-errors-1/
+                          topicHref: /cpp/compiler-errors-1/c-cpp-build-errors
+                        - name: Ostrzeżenia kompilatora
+                          tocHref: /cpp/compiler-warnings/
+                          topicHref: /cpp/compiler-warnings/compiler-warnings-c4000-through-C4199
+                        - name: Inne narzędzia
+                          tocHref: /cpp/error-messages/tool-errors/
+                          topicHref: /cpp/error-messages/tool-errors/vectorizer-and-parallelizer-messages
+                - name: Funkcje wewnętrzne kompilatora i język asemblera
+                  tocHref: /cpp/intrinsics/
+                  topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
+                  items:
+                    - name: ARM
+                      tocHref: /cpp/assembler/arm/
+                      topicHref: /cpp/assembler/arm/arm-assembler-reference
+                    - name: Wbudowany asembler
+                      tocHref: /cpp/assembler/inline/
+                      topicHref: /cpp/assembler/inline-assembler-reference
+                    - name: MASM
+                      tocHref: /cpp/assembler/masm/
+                      topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
+            - name: Eksportowanie i uaktualnianie
+              tocHref: /cpp/porting/
+              topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide
+            - name: Tekst i ciągi
+              tocHref: /cpp/text/
+              topicHref: /cpp/text/text-and-strings
+            - name: Zabezpieczenia
+              tocHref: /cpp/security
+              topicHref: /cpp/security/security-best-practices-for-cpp
+            - name: Chmura i Internet
+              tocHref: /cpp/cloud
+              topicHref: /cpp/cloud/cloud-and-web-programming-in-visual-cpp
