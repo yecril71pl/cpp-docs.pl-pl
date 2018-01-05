@@ -16,11 +16,12 @@ caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9e95ae2929800729b4036136bd65254026be697e
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: bdcc02cf7c86b85684df0e8d8b7a1f0049ff7e25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Wskazówki: Tworzenie i używanie własnych dynamicznej biblioteki łącza (C++)
 
@@ -409,7 +410,7 @@ Podczas wdrażania aplikacji, należy wdrożyć używa bibliotek DLL. Najprostsz
 
 ## <a name="see-also"></a>Zobacz też
 
-[Biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md)  
+[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)  
 [Wdrażanie natywnych aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)  
-[Wskazówki: Wdrażanie Twojego programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
+[Przewodnik: wdrażanie Twojego programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
 [Wywoływanie funkcji DLL z aplikacji języka Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)

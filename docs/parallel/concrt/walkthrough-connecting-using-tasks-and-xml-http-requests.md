@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f309673b5f0362657434bf3160d1062fdefe881
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5fef2e682f8e2036eb2919c20879c60e879ec845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Wskazówki: Łączenie za pomocą zadań i żądań XML HTTP
 Ten przykład przedstawia sposób użycia [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) i [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfejsy wraz z zadań do wysyłania żądań HTTP GET i POST do usługi sieci web w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Połączenie interfejsu `IXMLHTTPRequest2` z zadaniami pozwala pisać kod, który komponuje się z innymi zadaniami. Na przykład zadanie pobierania można umieścić w łańcuchu zadań. Zadanie pobierania może być również inicjowane w odpowiedzi na anulowanie pracy.  
@@ -53,7 +54,7 @@ Ten przykład przedstawia sposób użycia [IXMLHTTPRequest2](http://msdn.microso
   
 1.  Użyj Visual C++ **pusta aplikacja (XAML)** szablonu, aby utworzyć pusty projekt aplikacji XAML. W tym przykładzie nazwy projektu `UsingIXMLHTTPRequest2`.  
   
-2.  Dodaj do projektu plik nagłówka o nazwie HttpRequest.h oraz plik źródłowy o nazwie HttpRequest.cpp.  
+2.  Dodaj do projektu plik nagłówkowy o nazwie HttpRequest.h oraz plik źródłowy o nazwie HttpRequest.cpp.  
   
 3.  W pliku pch.h dodaj następujący kod:  
   
@@ -80,7 +81,7 @@ Ten przykład przedstawia sposób użycia [IXMLHTTPRequest2](http://msdn.microso
   
      [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]  
   
-3.  W pliku MainPage.xaml.h dodaj następujące zmienne członkowskie `private` do klasy `MainPage`:  
+3.  W pliku MainPage.xaml.h dodaj następujące zmienne składowe `private` do klasy `MainPage`:  
   
      [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]  
   
@@ -114,7 +115,7 @@ Ten przykład przedstawia sposób użycia [IXMLHTTPRequest2](http://msdn.microso
  ![Uruchomionej aplikacji ze Sklepu Windows](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
   
 ## <a name="next-steps"></a>Następne kroki  
- [Współbieżność środowiska wykonawczego — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
+ [Środowisko uruchomieniowe współbieżności — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
@@ -123,4 +124,4 @@ Ten przykład przedstawia sposób użycia [IXMLHTTPRequest2](http://msdn.microso
  [Tworzenie operacji asynchronicznych w języku C++ dla aplikacji ze Sklepu Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
  [Szybki Start: Łączenie się za pomocą XML (IXMLHTTPRequest2) żądania HTTP](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
  [Task — klasa (współbieżność środowiska wykonawczego)](../../parallel/concrt/reference/task-class.md)   
- [task_completion_event — klasa](../../parallel/concrt/reference/task-completion-event-class.md)
+ [task_completion_event, klasa](../../parallel/concrt/reference/task-completion-event-class.md)

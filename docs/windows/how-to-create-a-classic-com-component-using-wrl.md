@@ -13,11 +13,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e33eaebd49343c5c03b097eaf75d4745c7aaeac1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 04b84a5deedc5ef112507f4e0f8ccb29af418c28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Porady: tworzenie klasycznego składnika COM za pomocą biblioteki WRL
 Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) umożliwia tworzenie podstawowych składników modelu COM do użycia w aplikacjach klasycznych, oprócz do korzystania z niego dla [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)] aplikacji. Tworzenie składników COM Biblioteka szablonów C++ środowiska wykonawczego systemu Windows mogą wymagać mniejsza ilość kodu niż ATL. Aby uzyskać informacje o podzbiór COM, który obsługuje Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, zobacz [Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  
@@ -96,4 +99,4 @@ Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) umożliwia tw
  [!code-cpp[wrl-classic-com-component#7](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_7.cpp)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka szablonów C++ środowiska wykonawczego systemu Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
+ [Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

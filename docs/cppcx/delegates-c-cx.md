@@ -12,11 +12,12 @@ caps.latest.revision: "30"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: dee99cf85ff47fe7dbde8bd8bc7f60f708a5ebc6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3612421c9089fbb97c0bf256040c8082cad01afc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delegates-ccx"></a>Delegaty (C + +/ CX)
 `delegate` — Słowo kluczowe służy do deklarowania typu odwołania, który jest odpowiednikiem obiektem funkcji w standardu C++ środowiska wykonawczego systemu Windows. Deklaracji obiektu delegowanego podobne do podpisu funkcji. Określa typ zwracany i typy parametrów, które muszą mieć jego opakowana funkcja. Jest to deklaracji obiektu delegowanego zdefiniowane przez użytkownika:  
