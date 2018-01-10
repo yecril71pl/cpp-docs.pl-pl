@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81c857a4ce12ec28be49e393886fc52a43d012d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae1169b438a181e22696502352c19353421469b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Sekwencja operacji przy tworzeniu aplikacji MFC
 W poniższej tabeli opisano ogólne sekwencji, które zwykle może wykonać podczas opracowywania aplikacji MFC.  

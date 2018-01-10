@@ -26,11 +26,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 181cd7dd55a41d5452ae02f48db9012e02a41041
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="string-and-character-literals--c"></a>Literały ciągów i znakowe (C++)
 C++ obsługuje różne typy ciągów i znakowe i zapewnia sposobów express wartości literałów dla każdego z tych typów. W kodzie źródłowym express jest zawartość z literały znaków i ciąg, przy użyciu zestawu znaków. Uniwersalne nazwy znaków i znaki specjalne umożliwia express dowolny ciąg przy użyciu zestawu znaków podstawowego źródła. Nieprzetworzonego literału ciągu pozwala uniknąć przy użyciu znaki specjalne i może służyć do express wszystkie typy literałów ciągów. Można również utworzyć literałów std::string bez konieczności wykonać kroki konwersji lub dodatkowe konstrukcji.  
@@ -247,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Literały ciągu surowego (C ++ 11)  
- Nieprzetworzonego literału ciągu jest tablicą zerem — dowolnego typu znak — zawiera dowolny znak grafiki, w tym podwójny cudzysłów ("), ukośnik odwrotny (\\), lub znakiem nowego wiersza. Literały ciągu pierwotnych są często używane w wyrażeniach regularnych korzystających z klas znaków i ciągi kodu HTML i XML ciągów. Aby uzyskać przykłady, zobacz następujący artykuł: [Bjarne Stroustrup — często zadawane pytania na C ++ 11](http://go.microsoft.com/fwlink/?LinkId=401172).  
+ Nieprzetworzonego literału ciągu jest tablicą zerem — dowolnego typu znak — zawiera dowolny znak grafiki, w tym podwójny cudzysłów ("), ukośnik odwrotny (\\), lub znakiem nowego wiersza. Literały ciągu pierwotnych są często używane w wyrażeniach regularnych korzystających z klas znaków i ciągi kodu HTML i XML ciągów. Aby uzyskać przykłady, zobacz następujący artykuł: [Bjarne Stroustrup — często zadawane pytania na C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
   
 ```cpp  
 // represents the string: An unescaped \ character  

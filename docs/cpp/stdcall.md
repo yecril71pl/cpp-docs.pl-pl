@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1134ef0c0c9854d76ff2c87b3650ec6e91e54180
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec45f93331178f62799fb826ff31dfb6e66c3337
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stdcall"></a>__stdcall
 **Dotyczące firmy Microsoft**  
@@ -50,7 +51,7 @@ return-type __stdcall function-name[(argument-list)]
   
  Na ARM i x64 procesorów, `__stdcall` zaakceptowaniu i ignorowane przez kompilator; na ARM i x64 architektur przez Konwencję, argumenty są przekazywane w rejestrach, gdy jest to możliwe, a pozostałe argumenty są przekazywane na stosie.  
   
- W przypadku funkcji niestatycznych klas, jeśli funkcja jest zdefiniowana poza wierszem, modyfikator konwencji wywoływania nie musi być określony w definicji poza wierszem. Oznacza to, że dla metod niestatycznego elementu członkowskiego klasy przyjmowana jest konwencja wywoływania określona podczas deklaracji w punkcie definicji. Podane tej definicji klasy  
+ W przypadku funkcji niestatycznych klas, jeśli funkcja jest zdefiniowana poza wierszem, modyfikator konwencji wywoływania nie musi być określony w definicji poza wierszem. Oznacza to, że dla metod niestatycznej składowej klasy przyjmowana jest konwencja wywoływania określona podczas deklaracji w punkcie definicji. Podane tej definicji klasy  
   
 ```cpp  
 struct CMyClass {  

@@ -13,16 +13,17 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b580d537c27e2a953ecab61eb37510a56d18a1d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17ad58a3af2171a50a7e538d71624e52c0b3d991
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rich-edit-control-examples"></a>Przykłady formantów edycji wzbogaconej
 Przykładowe MFC OLE [WORDPAD](../visual-cpp-samples.md) używa `CRichEditView`, `CRichEditDoc`, i `CRichEditCntrItem` klasy. Przez rozszerzenie, używa [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md). Szybkie opis tych trzech klas, zobacz [klasy powiązane z formantów edycji wzbogaconej](../mfc/classes-related-to-rich-edit-controls.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

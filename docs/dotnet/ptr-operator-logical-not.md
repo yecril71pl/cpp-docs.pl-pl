@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 82ff71586b495e42f7165f3782f41891767d583e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d3ef67f9ef6128560d8bb6fef9d0d6fd75d08aca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ptroperator"></a>ptr::operator!
 Operatora, aby określić, czy należących do obiektu COM jest nieprawidłowy.  
@@ -99,4 +102,4 @@ DOM Document created.
   
 ## <a name="see-also"></a>Zobacz też  
  [elementy członkowskie PTR](../dotnet/ptr-members.md)   
- [PTR::operator — wartość logiczna](../dotnet/ptr-operator-bool.md)
+ [ptr::operator, wartość logiczna](../dotnet/ptr-operator-bool.md)

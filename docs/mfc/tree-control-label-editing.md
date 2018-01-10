@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c46616914f9cf6d1069702c16cdd03f272d6561c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03fb11c29b51b30b1aaffccbe3e999f1cefc3fbb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-label-editing"></a>Edytowanie etykiety kontrolki drzewa
 Użytkownik może edytować bezpośrednio etykiety elementów formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) mający **TVS_EDITLABELS** stylu. Użytkownik rozpoczyna edycję, klikając etykietę elementu, który ma fokus. Aplikacja rozpoczyna edycję przy użyciu [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) funkcję elementu członkowskiego. Formant drzewa wysyła powiadomienia podczas edytowania rozpoczyna się i gdy jest anulowane lub zakończone. Po zakończeniu edycji jest odpowiedzialny za aktualizowanie etykiety elementu w razie potrzeby.  
@@ -35,5 +36,5 @@ Użytkownik może edytować bezpośrednio etykiety elementów formantu drzewa ([
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

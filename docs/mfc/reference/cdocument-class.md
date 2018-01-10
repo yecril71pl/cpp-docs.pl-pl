@@ -131,11 +131,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6cfe4dc779fb4ad50f2171ef8811785f48275a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dad4a2bb3da49b0163367761aeefe85384ecdfb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdocument-class"></a>Cdocument — klasa
 Zapewnia podstawowe funkcje dla klas zdefiniowanych przez użytkownika dokumentu.  
@@ -1123,4 +1124,4 @@ void UpdateAllViews(
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [CCmdTarget — klasa](../../mfc/reference/ccmdtarget-class.md)   
  [Cview — klasa](../../mfc/reference/cview-class.md)   
- [Cdoctemplate — klasa](../../mfc/reference/cdoctemplate-class.md)
+ [Klasa CDocTemplate](../../mfc/reference/cdoctemplate-class.md)

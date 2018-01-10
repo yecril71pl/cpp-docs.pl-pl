@@ -75,11 +75,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18fafd4fece0047a8dcb95e50f8d4e5133ca3760
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7732d58c8e37683f670f6f13bb4df5f49e4ef24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Klasa CMFCToolBarComboBoxButton
 Przycisk paska narzędzi, który zawiera kontrolki pola kombi ( [ccombobox — klasa](../../mfc/reference/ccombobox-class.md)).  
@@ -1173,7 +1174,7 @@ void SetText(LPCTSTR lpszText);
  [Klasa CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)   
  [Ccombobox — klasa](../../mfc/reference/ccombobox-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
- [Wskazówki: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+ [Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

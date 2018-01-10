@@ -17,11 +17,12 @@ caps.latest.revision: "1"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b30586116fff517818822f484b1285a59fd2a98b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9767c8b92316ffb9e458ba650e28db9ddf1a095b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 |||  
 |-|-|  
@@ -53,7 +54,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
  **Nagłówek:** msclr\event.h  
    
 ### <a name="see-also"></a>Zobacz też  
- [Porady: obiekt Sink zdarzenia Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
+ [Instrukcje: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
  
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP —
 Rozpoczyna się definicji podłączony mapy, gdy są używane w pliku implementacji.  
@@ -99,7 +100,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
  **Nagłówek:** afxwinforms.h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)  
    
 ### <a name="see-also"></a>Zobacz też  
- [Porady: Dodawanie polecenia routingu do systemu Windows formantu formularzy](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
+ [Instrukcje: dodawanie routingu poleceń do formantu interfejsu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
  
 ##  <a name="commanduihandler"></a>Commanduihandler — obiekt
 Rejestruje metody wywołania zwrotnego komunikat polecenia aktualizacji interfejsu użytkownika.  
@@ -125,7 +126,7 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
    
 ### <a name="see-also"></a>Zobacz też  
  [Porady: Dodawanie polecenia routingu do systemu Windows formantu formularzy](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
- [Commandhandler — obiekt](#commandhandler)
+ [CommandHandler](#commandhandler)
 
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP —
 Kończy się mapy delegata.  
@@ -143,7 +144,7 @@ END_DELEGATE_MAP();
    
 ### <a name="see-also"></a>Zobacz też  
 
- [Porady: obiekt Sink zdarzenia Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
+ [Instrukcje: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
  
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP —

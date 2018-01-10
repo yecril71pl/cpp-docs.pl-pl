@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fa023412ab7f79b04fcc6c3c2ebf52eeeda2e53a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 441765d85ce65a80102ed94b3f4394ae48c0e29f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk2039"></a>Błąd narzędzi konsolidatora LNK2039
 Importowanie klasy referencyjnej\<typu > "zdefiniowanego w another.obj; powinien być albo importowanych albo zdefiniowana, ale nie oba  

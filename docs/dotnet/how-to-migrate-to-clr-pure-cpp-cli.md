@@ -17,11 +17,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebff4ae1ac304ee0af073de49f4ee988922247d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b8d49ee233167c02570408ba091c2a99b78487d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-migrate-to-clrpure-ccli"></a>Porady: migracja do /clr:pure (C++/CLI)
 W tym temacie omówiono problemy mogą wystąpić podczas migracji do czysty MSIL przy użyciu **/CLR: pure** (zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji). W tym temacie założono kodu migrowane obecnie zgodności jako mieszanego zestawu za pomocą **/CLR** opcję jako ścieżki migracji z kodem niezarządzanym do czysty MSIL nie jest elementem bezpośredniego. Dla niezarządzanego kodu, zobacz [porady: Migracja do/CLR](../dotnet/how-to-migrate-to-clr.md) przed przystąpieniem do migracji do czysty MSIL.  
@@ -55,4 +58,4 @@ W tym temacie omówiono problemy mogą wystąpić podczas migracji do czysty MSI
  Konsolidatora Visual C++ nie będzie próbował połączyć mieszanych i czysty pliki OBJ jako magazynu zakresu i wywoływanie Konwencji są różne.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kod czysty i weryfikowalny (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+ [Kod czysty i weryfikowalny (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

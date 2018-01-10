@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84922f71433276157342dca8d91293b3c97b0717
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a55f7d288758b345dfc4f182f2153e0d39a1b349
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thiscall"></a>__thiscall
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
  Na ARM i [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] maszyny, `__thiscall` i akceptowany jest ignorowana przez kompilator.  
   
- W przypadku funkcji niestatycznych klas, jeśli funkcja jest zdefiniowana poza wierszem, modyfikator konwencji wywoływania nie musi być określony w definicji poza wierszem. Oznacza to, że dla metod niestatycznego elementu członkowskiego klasy przyjmowana jest konwencja wywoływania określona podczas deklaracji w punkcie definicji.  
+ W przypadku funkcji niestatycznych klas, jeśli funkcja jest zdefiniowana poza wierszem, modyfikator konwencji wywoływania nie musi być określony w definicji poza wierszem. Oznacza to, że dla metod niestatycznej składowej klasy przyjmowana jest konwencja wywoływania określona podczas deklaracji w punkcie definicji.  
   
 **KOŃCOWY określonych firmy Microsoft**  
   

@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ee3debcaf651a2a11ef51cac405edf816c5b8ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bbbded2cb679d1f55949095cae3508d658e020c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp losowy. Użyj kontenera `vector` do zarządzania sekwencję elementów jako ciągłego bloku pamięci masowej. Blok jest implementowany jako tablicę, która rozwoju na żądanie.  
@@ -53,59 +56,59 @@ template<typename Value>
   
 |Definicja typu|Opis|  
 |---------------------|-----------------|  
-|[Vector::const_iterator (STL/CLR)](../dotnet/vector-const-iterator-stl-clr.md)|Typ iteratora stałego dla kontrolowanej sekwencji.|  
-|[Vector::const_reference (STL/CLR)](../dotnet/vector-const-reference-stl-clr.md)|Typ stałego odwołania do elementu.|  
-|[Vector::const_reverse_iterator (STL/CLR)](../dotnet/vector-const-reverse-iterator-stl-clr.md)|Typ stałej iteratora wstecznego w kontrolowanej sekwencji.|  
-|[Vector::difference_type (STL/CLR)](../dotnet/vector-difference-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
-|[Vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)|Typ ogólny interfejs umożliwiający kontenera.|  
-|[Vector::generic_iterator (STL/CLR)](../dotnet/vector-generic-iterator-stl-clr.md)|Typ iteratora dla ogólnego interfejsu do kontenera.|  
-|[Vector::generic_reverse_iterator (STL/CLR)](../dotnet/vector-generic-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora dla ogólnego interfejsu do kontenera.|  
-|[Vector::generic_value (STL/CLR)](../dotnet/vector-generic-value-stl-clr.md)|Typ elementu dla ogólnego interfejsu do kontenera.|  
-|[Vector::iterator (STL/CLR)](../dotnet/vector-iterator-stl-clr.md)|Typ iteratora dla kontrolowanej sekwencji.|  
-|[Vector::Reference (STL/CLR)](../dotnet/vector-reference-stl-clr.md)|Typ odwołania do elementu.|  
-|[Vector::reverse_iterator (STL/CLR)](../dotnet/vector-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
-|[Vector::size_type (STL/CLR)](../dotnet/vector-size-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
-|[Vector::value_type (STL/CLR)](../dotnet/vector-value-type-stl-clr.md)|Typ elementu.|  
+|[vector::const_iterator (STL/CLR)](../dotnet/vector-const-iterator-stl-clr.md)|Typ iteratora stałego dla kontrolowanej sekwencji.|  
+|[vector::const_reference (STL/CLR)](../dotnet/vector-const-reference-stl-clr.md)|Typ stałego odwołania do elementu.|  
+|[vector::const_reverse_iterator (STL/CLR)](../dotnet/vector-const-reverse-iterator-stl-clr.md)|Typ stałej iteratora wstecznego w kontrolowanej sekwencji.|  
+|[vector::difference_type (STL/CLR)](../dotnet/vector-difference-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
+|[vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)|Typ ogólny interfejs umożliwiający kontenera.|  
+|[vector::generic_iterator (STL/CLR)](../dotnet/vector-generic-iterator-stl-clr.md)|Typ iteratora dla ogólnego interfejsu do kontenera.|  
+|[vector::generic_reverse_iterator (STL/CLR)](../dotnet/vector-generic-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora dla ogólnego interfejsu do kontenera.|  
+|[vector::generic_value (STL/CLR)](../dotnet/vector-generic-value-stl-clr.md)|Typ elementu dla ogólnego interfejsu do kontenera.|  
+|[vector::iterator (STL/CLR)](../dotnet/vector-iterator-stl-clr.md)|Typ iteratora dla kontrolowanej sekwencji.|  
+|[vector::reference (STL/CLR)](../dotnet/vector-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[vector::reverse_iterator (STL/CLR)](../dotnet/vector-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
+|[vector::size_type (STL/CLR)](../dotnet/vector-size-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
+|[vector::value_type (STL/CLR)](../dotnet/vector-value-type-stl-clr.md)|Typ elementu.|  
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[Vector::ASSIGN (STL/CLR)](../dotnet/vector-assign-stl-clr.md)|Zamienia wszystkie elementy.|  
-|[Vector::AT (STL/CLR)](../dotnet/vector-at-stl-clr.md)|Uzyskuje dostęp do elementu w określonej pozycji.|  
-|[Vector::back (STL/CLR)](../dotnet/vector-back-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
-|[Vector::BEGIN (STL/CLR)](../dotnet/vector-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
-|[Vector::Capacity (STL/CLR)](../dotnet/vector-capacity-stl-clr.md)|Informuje o rozmiarze Magazyn przydzielony do kontenera.|  
-|[Vector::Clear (STL/CLR)](../dotnet/vector-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
-|[Vector::EMPTY (STL/CLR)](../dotnet/vector-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
-|[Vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
-|[Vector::ERASE (STL/CLR)](../dotnet/vector-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[Vector::Front (STL/CLR)](../dotnet/vector-front-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
-|[Vector::INSERT (STL/CLR)](../dotnet/vector-insert-stl-clr.md)|Dodaje elementy na określonej pozycji.|  
-|[Vector::pop_back (STL/CLR)](../dotnet/vector-pop-back-stl-clr.md)|Usuwa ostatnim elemencie.|  
-|[Vector::push_back (STL/CLR)](../dotnet/vector-push-back-stl-clr.md)|Dodaje nowy element ostatni.|  
-|[Vector::rbegin (STL/CLR)](../dotnet/vector-rbegin-stl-clr.md)|Określa początek odwróconej kontrolowanej sekwencji.|  
-|[Vector::rend (STL/CLR)](../dotnet/vector-rend-stl-clr.md)|Określa koniec odwróconej kontrolowanej sekwencji.|  
-|[Vector::Reserve (STL/CLR)](../dotnet/vector-reserve-stl-clr.md)|Zapewnia wzrostu minimalnej pojemności dla kontenera.|  
-|[Vector::Resize (STL/CLR)](../dotnet/vector-resize-stl-clr.md)|Zmiany liczby elementów.|  
-|[Vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)|Liczy liczbę elementów.|  
-|[Vector::swap (STL/CLR)](../dotnet/vector-swap-stl-clr.md)|Zamienia zawartości dwóch kontenerów.|  
-|[Vector::to_array (STL/CLR)](../dotnet/vector-to-array-stl-clr.md)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|  
-|[Vector::Vector (STL/CLR)](../dotnet/vector-vector-stl-clr.md)|Konstruuje obiekt kontenera.|  
+|[vector::assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)|Zamienia wszystkie elementy.|  
+|[vector::at (STL/CLR)](../dotnet/vector-at-stl-clr.md)|Uzyskuje dostęp do elementu w określonej pozycji.|  
+|[vector::back (STL/CLR)](../dotnet/vector-back-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
+|[vector::begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[vector::capacity (STL/CLR)](../dotnet/vector-capacity-stl-clr.md)|Informuje o rozmiarze Magazyn przydzielony do kontenera.|  
+|[vector::clear (STL/CLR)](../dotnet/vector-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
+|[vector::empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
+|[vector::erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
+|[vector::front (STL/CLR)](../dotnet/vector-front-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
+|[vector::insert (STL/CLR)](../dotnet/vector-insert-stl-clr.md)|Dodaje elementy na określonej pozycji.|  
+|[vector::pop_back (STL/CLR)](../dotnet/vector-pop-back-stl-clr.md)|Usuwa ostatnim elemencie.|  
+|[vector::push_back (STL/CLR)](../dotnet/vector-push-back-stl-clr.md)|Dodaje nowy element ostatni.|  
+|[vector::rbegin (STL/CLR)](../dotnet/vector-rbegin-stl-clr.md)|Określa początek odwróconej kontrolowanej sekwencji.|  
+|[vector::rend (STL/CLR)](../dotnet/vector-rend-stl-clr.md)|Określa koniec odwróconej kontrolowanej sekwencji.|  
+|[vector::reserve (STL/CLR)](../dotnet/vector-reserve-stl-clr.md)|Zapewnia wzrostu minimalnej pojemności dla kontenera.|  
+|[vector::resize (STL/CLR)](../dotnet/vector-resize-stl-clr.md)|Zmiany liczby elementów.|  
+|[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)|Liczy liczbę elementów.|  
+|[vector::swap (STL/CLR)](../dotnet/vector-swap-stl-clr.md)|Zamienia zawartości dwóch kontenerów.|  
+|[vector::to_array (STL/CLR)](../dotnet/vector-to-array-stl-clr.md)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|  
+|[vector::vector (STL/CLR)](../dotnet/vector-vector-stl-clr.md)|Konstruuje obiekt kontenera.|  
   
 |Właściwość|Opis|  
 |--------------|-----------------|  
-|[Vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
-|[Vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
+|[vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
+|[vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[Vector::operator = (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
-|[Vector::operator(STL/CLR)](../dotnet/vector-operator-stl-clr.md)|Uzyskuje dostęp do elementu w określonej pozycji.|  
-|[Operator! = (wektor) (STL/CLR)](../dotnet/operator-inequality-vector-stl-clr.md)|Określa, czy `vector` obiekt nie jest równa innej `vector` obiektu.|  
-|[Operator < (wektor) (STL/CLR)](../dotnet/operator-less-than-vector-stl-clr.md)|Określa, czy `vector` obiekt jest mniejszy niż innego `vector` obiektu.|  
-|[Operator < = (wektor) (STL/CLR)](../dotnet/operator-less-or-equal-vector-stl-clr.md)|Określa, czy `vector` obiekt jest mniejszy niż lub równy do innego `vector` obiektu.|  
-|[Operator == (wektor) (STL/CLR)](../dotnet/operator-equality-vector-stl-clr.md)|Określa, czy `vector` obiekt jest taki sam do innego `vector` obiektu.|  
-|[operator > (wektor) (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)|Określa, czy `vector` obiekt jest większy niż innego `vector` obiektu.|  
-|[operator > = (wektor) (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)|Określa, czy `vector` obiektu jest większa lub równa innej `vector` obiektu.|  
+|[vector::operator= (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[vector::operator(STL/CLR)](../dotnet/vector-operator-stl-clr.md)|Uzyskuje dostęp do elementu w określonej pozycji.|  
+|[operator!= (vector) (STL/CLR)](../dotnet/operator-inequality-vector-stl-clr.md)|Określa, czy `vector` obiekt nie jest równa innej `vector` obiektu.|  
+|[operator< (vector) (STL/CLR)](../dotnet/operator-less-than-vector-stl-clr.md)|Określa, czy `vector` obiekt jest mniejszy niż innego `vector` obiektu.|  
+|[operator<= (vector) (STL/CLR)](../dotnet/operator-less-or-equal-vector-stl-clr.md)|Określa, czy `vector` obiekt jest mniejszy niż lub równy do innego `vector` obiektu.|  
+|[operator== (vector) (STL/CLR)](../dotnet/operator-equality-vector-stl-clr.md)|Określa, czy `vector` obiekt jest taki sam do innego `vector` obiektu.|  
+|[operator> (vector) (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)|Określa, czy `vector` obiekt jest większy niż innego `vector` obiektu.|  
+|[operator>= (vector) (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)|Określa, czy `vector` obiektu jest większa lub równa innej `vector` obiektu.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -141,5 +144,5 @@ template<typename Value>
  [priority_queue — (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
  [kolejki (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [stos (STL/CLR)](../dotnet/stack-stl-clr.md)   
- [Vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)  
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)  
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

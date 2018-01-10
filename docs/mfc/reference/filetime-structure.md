@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ecb4814a8bfc0b94bce8e160b973a81bb54cd48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f23f9d4a508158b392de6eb5c872f0b5762e1ae3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filetime-structure"></a>Struktura FILETIME
 `FILETIME` Struktura jest 64-bitowych wartość odpowiadającą liczbie 100-nanosekundowych interwałów od 1 stycznia 1601.  

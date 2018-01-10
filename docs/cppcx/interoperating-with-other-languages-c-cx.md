@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: aac27465e486dc4bd02fd5e35b4c037862343a31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72f8aec06388c0d548da1de903bf47225c05c734
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Współdziałanie z innymi językami (C + +/ CX)
 Ta część dokumentacji opisano sposób użycia C + +/ CX do tworzenia składników środowiska wykonawczego systemu Windows, które mogą być używane przez inne języki programowania i bibliotek. Można również tworzyć składników, które nie mogą być używane przez wszystkie języki. W tej sekcji opisano różne aspekty do rozważenia podczas C + +/ CX aplikacji współdziała ze składnikami, które zostały napisane przy użyciu języka JavaScript, języka .NET Framework zarządzane lub biblioteka szablonów C++ środowiska wykonawczego systemu Windows.  

@@ -20,11 +20,14 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33fa0d6e40be1a037632460e15fc453a8ba2853e
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f38450831ad85a09d3a43173f8febc7841f02c09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-migrate-to-clr"></a>Porady: migracja do /clr
 W tym temacie opisano problemy, które wystąpić podczas kompilowania kodu natywnego z **/CLR** (zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji). **/ CLR** umożliwia moduł Visual C++ do wywołania i można wywołać z zestawów platformy .NET, zachowując zgodność z modułami niezarządzane. Zobacz [zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md) i [natywne i .NET współdziałanie](../dotnet/native-and-dotnet-interoperability.md) uzyskać więcej informacji o zaletach kompilowania przy użyciu **/CLR**.  
@@ -148,9 +151,9 @@ COMObj2->Method(args);  // C++ equivalent
   
  Aby uzyskać informacje na temat programowania w języku Visual C++ .NET, zobacz:  
   
--   [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+-   [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
   
--   [Macierzysty i współdziałaniu .NET](../dotnet/native-and-dotnet-interoperability.md)  
+-   [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)  
   
 -   [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)  
   

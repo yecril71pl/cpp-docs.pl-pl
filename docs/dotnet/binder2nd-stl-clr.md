@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 237bf8bee11234939d93c5af0aa0114f9379cd3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b22c435952602afe96a7f310b931bda8a5bbb13c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binder2nd-stlclr"></a>binder2nd (STL/CLR)
 Klasa szablonu opisuje obiekt jeden argument, który po wywołaniu zwraca jego przechowywanych obiekt dwuargumentowej wywołana z dostarczony pierwszego argumentu i jego przechowywanych drugi argument. Można go użyć Określ obiekt funkcja pod względem jego przechowywanych obiekt.  
@@ -130,4 +133,4 @@ int main()
  **Namespace:** cliext  
   
 ## <a name="see-also"></a>Zobacz też  
- [bind2nd — (STL/CLR)](../dotnet/bind2nd-stl-clr.md)
+ [bind2nd (STL/CLR)](../dotnet/bind2nd-stl-clr.md)

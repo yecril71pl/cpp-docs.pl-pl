@@ -28,11 +28,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92c3b6b95bc1ddb51900d8274f76993c32a71ceb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3ee9fbed3fd82fd450fd179683fd119cb1630034
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Porównanie funkcji mieszanych, czystych i weryfikowalnych (C++/CLI)
 W tym temacie porównanie funkcji spośród różnych **/CLR** tryby kompilacji. Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).  
@@ -46,10 +49,10 @@ W tym temacie porównanie funkcji spośród różnych **/CLR** tryby kompilacji.
 |Biblioteka CRT|Obsługiwane|Obsługiwane||[Procedury czasu wykonywania według kategorii](../c-runtime-library/run-time-routines-by-category.md)|  
 |MFC/ATL|Obsługiwane|||[Aplikacje dla pulpitu MFC](../mfc/mfc-desktop-applications.md) &#124; [Przegląd klas](../atl/atl-class-overview.md)|  
 |Funkcje niezarządzane|Obsługiwane|||[Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)|  
-|Niezarządzanych danych|Obsługiwane|Obsługiwane||[Kod czysty i weryfikowalny (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
+|Niezarządzanych danych|Obsługiwane|Obsługiwane||[Kod czysty i weryfikowalny (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
 |Można wywołać z funkcjami niezarządzanymi|Obsługiwane|||[Porady: Migracja do/CLR: pure (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)|  
-|Obsługuje wywoływanie niezarządzanych funkcji|Obsługiwane|Tylko funkcje w stylu języka C|P/Invoke tylko|[Za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
-|Obsługuje odbicia|Tylko biblioteki dll|Obsługiwane|Obsługiwane|[Odbicie (C + +/ CLI)](../dotnet/reflection-cpp-cli.md)|  
+|Obsługuje wywoływanie niezarządzanych funkcji|Obsługiwane|Tylko funkcje w stylu języka C|P/Invoke tylko|[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
+|Obsługuje odbicia|Tylko biblioteki dll|Obsługiwane|Obsługiwane|[Odbicie (C++/CLI)](../dotnet/reflection-cpp-cli.md)|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kod czysty i weryfikowalny (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+ [Kod czysty i weryfikowalny (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

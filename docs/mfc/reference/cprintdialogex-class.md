@@ -49,11 +49,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 869a63f4fd86577a1ce8d424f7b3e3df575d9bd5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 147a3d638f76f291a9732b340335331730f5b74d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprintdialogex-class"></a>Klasa CPrintDialogEx
 Hermetyzuje usług świadczonych przez arkusz właściwości systemu Windows 2000 drukowania.  
@@ -341,4 +342,4 @@ BOOL PrintSelection() const;
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Cprintinfo — struktura](../../mfc/reference/cprintinfo-structure.md)
+ [Klasa CPrintInfo](../../mfc/reference/cprintinfo-structure.md)
