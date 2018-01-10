@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f243b18b2666c21a6d83eabe35ecd6ad9df5905c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fb7d184ebdb537c02b79a412d69a4bdcaabde424
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-access-using-adonet-ccli"></a>Dostęp do danych za pomocą ADO.NET (C++/CLI)
 ADO.NET jest interfejsu API programu .NET Framework w celu dostępu do danych i zapewnia zasilania i łatwość użycia niedopasowane przez poprzednie rozwiązania dostępu do danych. W tej sekcji opisano niektóre problemy dotyczące ADO.NET, które są unikatowe dla użytkowników programu Visual C++, takich jak przekazywanie natywnych typów.  
@@ -31,15 +34,15 @@ ADO.NET jest interfejsu API programu .NET Framework w celu dostępu do danych i 
  ADO.NET działa w obszarze środowiska uruchomieniowego języka wspólnego (CLR). W związku z tym dowolnej aplikacji, która współdziała z ADO.NET muszą również wskazywać środowiska CLR. Jednakże który oznacza, że natywnych aplikacji nie można użyć ADO.NET. Te przykłady pokazują, jak wchodzić w interakcję z bazy danych programu ADO.NET z kodu macierzystego.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: kierowanie ciągów ANSI dla ADO.NET (C + +/ CLI)](../dotnet/how-to-marshal-ansi-strings-for-adonet-cpp-cli.md)  
+ [Instrukcje: przeprowadzanie marshalingu ciągów ANSI dla ADO.NET (C++/CLI)](../dotnet/how-to-marshal-ansi-strings-for-adonet-cpp-cli.md)  
   
- [Porady: kierowanie ciągów BSTR dla ADO.NET (C + +/ CLI)](../dotnet/how-to-marshal-bstr-strings-for-adonet-cpp-cli.md)  
+ [Instrukcje: przeprowadzanie marshalingu ciągów BSTR dla ADO.NET (C++/CLI)](../dotnet/how-to-marshal-bstr-strings-for-adonet-cpp-cli.md)  
   
- [Porady: kierowanie ciągów Unicode dla ADO.NET (C + +/ CLI)](../dotnet/how-to-marshal-unicode-strings-for-adonet-cpp-cli.md)  
+ [Instrukcje: przeprowadzanie marshalingu ciągów Unicode dla ADO.NET (C++/CLI)](../dotnet/how-to-marshal-unicode-strings-for-adonet-cpp-cli.md)  
   
- [Porady: kierowanie obiektu VARIANT dla ADO.NET (C + +/ CLI)](../dotnet/how-to-marshal-a-variant-for-adonet-cpp-cli.md)  
+ [Instrukcje: przeprowadzanie marshalingu obiektu VARIANT dla ADO.NET (C++/CLI)](../dotnet/how-to-marshal-a-variant-for-adonet-cpp-cli.md)  
   
- [Porady: kierowanie obiektu SAFEARRAY dla ADO.NET (C + +/ CLI)](../dotnet/how-to-marshal-a-safearray-for-adonet-cpp-cli.md)  
+ [Instrukcje: przeprowadzanie marshalingu obiektu SAFEARRAY dla ADO.NET (C++/CLI)](../dotnet/how-to-marshal-a-safearray-for-adonet-cpp-cli.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
   
@@ -49,4 +52,4 @@ ADO.NET jest interfejsu API programu .NET Framework w celu dostępu do danych i 
   
 ## <a name="see-also"></a>Zobacz też  
  [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
- [Macierzysty i współdziałaniu .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

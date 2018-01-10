@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 93fe57edc4840d7d053ea61598b3da2c7f4ca05a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3876ee887cfeec811d88684927ea9a03af1a8f1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 Dołącz nagłówek STL/CLR `<cliext/utility>` w celu zdefiniowania szablonu klasy `pair` i niektóre funkcje pomocnicze szablonu.  
@@ -37,20 +40,20 @@ Dołącz nagłówek STL/CLR `<cliext/utility>` w celu zdefiniowania szablonu kla
   
 |Class|Opis|  
 |-----------|-----------------|  
-|[para (STL/CLR)](../dotnet/pair-stl-clr.md)|Zawijaj dwa elementy.|  
+|[pair (STL/CLR)](../dotnet/pair-stl-clr.md)|Zawijaj dwa elementy.|  
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[Operator == (para) (STL/CLR)](../dotnet/operator-equality-pair-stl-clr.md)|Para równa porównania.|  
-|[Operator! = (para) (STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)|Para równa porównania.|  
-|[Operator < (para) (STL/CLR)](../dotnet/operator-less-than-pair-stl-clr.md)|Para mniej niż porównania.|  
+|[operator== (pair) (STL/CLR)](../dotnet/operator-equality-pair-stl-clr.md)|Para równa porównania.|  
+|[operator!= (pair) (STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)|Para równa porównania.|  
+|[operator< (pair) (STL/CLR)](../dotnet/operator-less-than-pair-stl-clr.md)|Para mniej niż porównania.|  
 |[operator\<= (para) (STL/CLR)](../dotnet/operator-less-or-equal-pair-stl-clr.md)|Sparuj mniejsza lub równa porównania.|  
-|[operator > (para) (STL/CLR)](../dotnet/operator-greater-than-pair-stl-clr.md)|Para jest większa niż porównania.|  
-|[operator > = (para) (STL/CLR)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)|Para większa niż lub równe porównania.|  
+|[operator> (pair) (STL/CLR)](../dotnet/operator-greater-than-pair-stl-clr.md)|Para jest większa niż porównania.|  
+|[operator>= (pair) (STL/CLR)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)|Para większa niż lub równe porównania.|  
   
 |Funkcja|Opis|  
 |--------------|-----------------|  
-|[make_pair — (STL/CLR)](../dotnet/make-pair-stl-clr.md)|Należy parę z pary wartości.|  
+|[make_pair (STL/CLR)](../dotnet/make-pair-stl-clr.md)|Należy parę z pary wartości.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<cliext/Narzędzia >  
@@ -58,4 +61,4 @@ Dołącz nagłówek STL/CLR `<cliext/utility>` w celu zdefiniowania szablonu kla
  **Namespace:** cliext  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
