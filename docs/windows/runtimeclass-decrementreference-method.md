@@ -14,11 +14,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b39467f9e718cece5fe7505bee0148bac9bf2067
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fc2ccc45cad9d42ed47f88f66fa491f76dad8bc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeclassdecrementreference-method"></a>RuntimeClass::DecrementReference — Metoda
 Liczba odwołania dla bieżącego obiektu runtimeclass — zmniejsza.  
@@ -38,4 +41,4 @@ ULONG DecrementReference();
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Runtimeclass — klasa](../windows/runtimeclass-class.md)
+ [RuntimeClass, klasa](../windows/runtimeclass-class.md)

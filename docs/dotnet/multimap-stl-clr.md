@@ -18,11 +18,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b944be379b851410a7c45af5aa05e72dbf63037c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2c42fc8d71871a70e3a2d3ffa93a78a4e42d2f53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `multimap` do zarządzania sekwencję elementów jako drzewo uporządkowanej zrównoważony (prawie) węzły, każdy przechowywania jeden element. Element składa się z kluczem porządkowania sekwencji i zmapowane wartość, która dotyczy jazdy.  
@@ -77,7 +80,7 @@ template<typename Key,
 |[multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)|Delegat porządkowania dla dwa klucze.|  
 |[multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)|Typ klucza sortowania.|  
 |[multimap::mapped_type (STL/CLR)](../dotnet/multimap-mapped-type-stl-clr.md)|Typ zamapowanych wartość skojarzoną z każdego klucza.|  
-|[multimap::Reference (STL/CLR)](../dotnet/multimap-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[multimap::reference (STL/CLR)](../dotnet/multimap-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[multimap::reverse_iterator (STL/CLR)](../dotnet/multimap-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
 |[multimap::size_type (STL/CLR)](../dotnet/multimap-size-type-stl-clr.md)|Typ (nieujemną) odległość między dwoma elementami.|  
 |[multimap::value_compare (STL/CLR)](../dotnet/multimap-value-compare-stl-clr.md)|Delegat porządkowania dla dwóch wartości elementu.|  
@@ -85,15 +88,15 @@ template<typename Key,
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[multimap::BEGIN (STL/CLR)](../dotnet/multimap-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
-|[multimap::Clear (STL/CLR)](../dotnet/multimap-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
-|[multimap::Count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
-|[multimap::EMPTY (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[multimap::clear (STL/CLR)](../dotnet/multimap-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
+|[multimap::count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
+|[multimap::empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
 |[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
 |[multimap::equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|  
-|[multimap::ERASE (STL/CLR)](../dotnet/multimap-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[multimap::Find (STL/CLR)](../dotnet/multimap-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
-|[multimap::INSERT (STL/CLR)](../dotnet/multimap-insert-stl-clr.md)|Dodaje elementy.|  
+|[multimap::erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
+|[multimap::find (STL/CLR)](../dotnet/multimap-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
+|[multimap::insert (STL/CLR)](../dotnet/multimap-insert-stl-clr.md)|Dodaje elementy.|  
 |[multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)|Kopiuje porządkowania delegowanie dla dwa klucze.|  
 |[multimap::lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md)|Wyszukuje początek zakresu, który jest zgodny z określonym kluczem.|  
 |[multimap::make_value (STL/CLR)](../dotnet/multimap-make-value-stl-clr.md)|Tworzy obiekt wartość.|  
@@ -108,13 +111,13 @@ template<typename Key,
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[multimap::operator = (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
-|[Operator! = (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)|Określa, czy `multimap` obiekt nie jest równa innej `multimap` obiektu.|  
-|[Operator < (multimap) (STL/CLR)](../dotnet/operator-less-than-multimap-stl-clr.md)|Określa, czy `multimap` obiekt jest mniejszy niż innego `multimap` obiektu.|  
-|[Operator < = (multimap) (STL/CLR)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)|Określa, czy `multimap` obiekt jest mniejszy niż lub równy do innego `multimap` obiektu.|  
-|[Operator == (multimap) (STL/CLR)](../dotnet/operator-equality-multimap-stl-clr.md)|Określa, czy `multimap` obiekt jest taki sam do innego `multimap` obiektu.|  
-|[operator > (multimap) (STL/CLR)](../dotnet/operator-greater-than-multimap-stl-clr.md)|Określa, czy `multimap` obiekt jest większy niż innego `multimap` obiektu.|  
-|[operator > = (multimap) (STL/CLR)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)|Określa, czy `multimap` obiektu jest większa lub równa innej `multimap` obiektu.|  
+|[multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[operator!= (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)|Określa, czy `multimap` obiekt nie jest równa innej `multimap` obiektu.|  
+|[operator< (multimap) (STL/CLR)](../dotnet/operator-less-than-multimap-stl-clr.md)|Określa, czy `multimap` obiekt jest mniejszy niż innego `multimap` obiektu.|  
+|[operator<= (multimap) (STL/CLR)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)|Określa, czy `multimap` obiekt jest mniejszy niż lub równy do innego `multimap` obiektu.|  
+|[operator== (multimap) (STL/CLR)](../dotnet/operator-equality-multimap-stl-clr.md)|Określa, czy `multimap` obiekt jest taki sam do innego `multimap` obiektu.|  
+|[operator> (multimap) (STL/CLR)](../dotnet/operator-greater-than-multimap-stl-clr.md)|Określa, czy `multimap` obiekt jest większy niż innego `multimap` obiektu.|  
+|[operator>= (multimap) (STL/CLR)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)|Określa, czy `multimap` obiektu jest większa lub równa innej `multimap` obiektu.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -167,4 +170,4 @@ template<typename Key,
  [mapy (STL/CLR)](../dotnet/map-stl-clr.md)   
  [Zestaw wielokrotny (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [Ustaw (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

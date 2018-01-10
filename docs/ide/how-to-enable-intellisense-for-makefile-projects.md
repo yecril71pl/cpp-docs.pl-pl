@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d086540d3b8f1475916bf5f8174f98de3c62c810
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fae3ec35259250f71ad672d9468b991033608ae4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>Porady: włączenie funkcji IntelliSense dla projektów plików reguł programu make
 IntelliSense nie działają w IDE dla projektów Visual C++ makefile, gdy projekt niektórych ustawień lub opcji kompilatora jest nieprawidłowo skonfigurowana. Ta procedura umożliwia konfigurowanie projektów makefile Visual C++, dzięki czemu IntelliSense działa, gdy projekty pliku reguł programu make są otwarte w środowisku projektowym Visual Studio.  
@@ -57,4 +58,4 @@ IntelliSense nie działają w IDE dla projektów Visual C++ makefile, gdy projek
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z IntelliSense](/visualstudio/ide/using-intellisense)   
  [Odwołanie NMAKE](../build/nmake-reference.md)   
- [Porady: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)
+ [Instrukcje: tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)

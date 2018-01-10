@@ -13,11 +13,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25ac6c80689e60a412f0e5b66ddbf3aa0d8ab271
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8c505c44fe18f75eeb64c6b31ca222405f570761
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Porady: wykonywanie operacji asynchronicznych z użyciem biblioteki WRL
 Ten dokument przedstawia sposób użycia systemu Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) do uruchamiania operacji asynchronicznych i wykonywania pracy po ukończeniu operacji.  
@@ -126,4 +129,4 @@ Ten dokument przedstawia sposób użycia systemu Windows środowiska uruchomieni
  **Cl.exe wrl korzystać asyncOp.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka szablonów C++ środowiska wykonawczego systemu Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
+ [Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

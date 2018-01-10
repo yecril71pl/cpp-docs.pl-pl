@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b8feb74f1da11fb6c4205ec1d8381f78789f684f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad12de948227f98ec73f779030b8e644dfad8b2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comm"></a>COMM
 Tworzy zmienną gminna z atrybutów określonych w `definition`.  
@@ -39,4 +40,4 @@ COMM definition [[, definition]] ...
  *Etykiety* to nazwa zmiennej. `type` Może być dowolnym specyfikatora typu ([BAJTÓW](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md)i tak dalej) lub liczba całkowita określająca liczbę bajtów. *Liczba* określa liczbę obiektów danych (co jest ustawieniem domyślnym).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

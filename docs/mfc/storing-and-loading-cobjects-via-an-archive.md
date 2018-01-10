@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23c403d5e872818345b319ea6786da6b2f42fabc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 987f754ccdf03e5a252feae693a1f7718da1b353
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Przechowywanie i ładowanie obiektów CObject za pomocą archiwum
 Przechowywanie i ładowanie `CObject`s za pomocą archiwum wymaga dodatkowego rozważenia. W niektórych przypadkach należy wywołać `Serialize` funkcji obiektu, którym `CArchive` obiektu jest parametrem `Serialize` wywołanie, a nie za pomocą  **< \<**  lub  **>>**  operator `CArchive`. Jest to ważne fakt, do którego należy wziąć pod uwagę, że `CArchive`  **>>**  konstrukcji operator `CObject` w pamięci na podstawie `CRuntimeClass` informacji wcześniej zapisane w pliku przez zapisywanie archiwum.  
@@ -47,5 +48,5 @@ Przechowywanie i ładowanie `CObject`s za pomocą archiwum wymaga dodatkowego ro
  Podsumowując, jeśli możliwy do serializacji klasy definiuje osadzonych **CObjec**t jako element członkowski, należy *nie* użyj `CArchive`  **< \<**  i  **>>**  operatory dla tego obiektu, ale powinny wywoływać `Serialize` zamiast tego działania. Ponadto jeśli możliwy do serializacji klasy definiuje wskaźnik do `CObject` (lub typ pochodzący od obiektu `CObject`) jako element członkowski, ale konstrukcji tego innego obiektu w jego własnej konstruktora, należy także wywołać `Serialize`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Serializacja: Serializacja obiektu](../mfc/serialization-serializing-an-object.md)
+ [Serializacja: serializacja obiektu](../mfc/serialization-serializing-an-object.md)
 

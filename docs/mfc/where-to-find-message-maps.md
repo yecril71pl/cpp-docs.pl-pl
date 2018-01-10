@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 741c7a62083680c434f7eaa1c415441449525344
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fa0b0b31d76c55851d69f4c528f11e7d23ff0d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="where-to-find-message-maps"></a>Gdzie można znaleźć mapy komunikatów
 Podczas tworzenia nowej aplikacji szkielet przy użyciu Kreatora aplikacji, Kreator aplikacji zapisuje mapy komunikatów dla każdej klasy docelowym polecenia, który tworzy dla Ciebie. W tym aplikacji pochodnej, dokument, widok i klasy okien ramowych. Niektóre z tych mapy komunikatów już wpisy dostarczonych przez Kreatora aplikacji dla niektórych komunikatów i wstępnie zdefiniowanych poleceń i niektóre są tylko symbole zastępcze dla programów obsługi, które mają zostać dodane.  

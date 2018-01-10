@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8dc17ee63caf62ddeea4a134d61f8fbd47e0061c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b765be1043ac69ed735eb91deaf9419bce7f017
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector — Klasa
 `concurrent_vector` Klasa jest klasą kontenerem sekwencji umożliwiająca losowe dostęp do dowolnych. Umożliwia bezpieczne współbieżności dołączenia, element dostępu, dostęp iteratora i operacji przechodzenia iteratora.  
@@ -648,7 +649,7 @@ void swap(concurrent_vector& _Vector);
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [Równoległe kontenery i obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)
+ [Równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)
 
 
 

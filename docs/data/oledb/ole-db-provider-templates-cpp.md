@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: def429b9a284b7e440bd4bd4e6fc6f6ba7d3bcb9
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f95b32d62d964c83853025ed4e4af9b90e7a630a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-provider-templates-c"></a>Szablony dostawców OLE DB (C++)
 OLE DB jest ważną częścią strategii uniwersalnej Microsoft Data Access. Projekt OLE DB umożliwia dostęp do danych wysokiej wydajności z dowolnego źródła danych. Wszystkie dane tabelaryczne są widoczne za pośrednictwem OLE DB niezależnie od tego, czy pochodzi z bazy danych. Elastyczność zapewnia szeroką zasilania.  

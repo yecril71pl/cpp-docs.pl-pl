@@ -21,11 +21,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e520fb524cd25709b9d03ae992305a4fac41763
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a18ed3aad1d3a9ea697ac815658b5eba8d99bff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-editor"></a>Edytor okien dialogowych
 Edytor okien dialogowych pozwala na tworzenie lub edytowanie zasobów okien dialogowych. Otwórz Edytor okien dialogowych klikając dwukrotnie plik .rc okno dialogowe okno Widok zasobów (**widoku &#124; Widok zasobów**). Należy zauważyć, że widok zasobów nie jest dostępny w wersji Express.  
@@ -44,24 +47,24 @@ Edytor okien dialogowych pozwala na tworzenie lub edytowanie zasobów okien dial
   
 -   [Tworzenie okna dialogowego użytkowników nie może zamknąć w czasie wykonywania](../windows/creating-a-dialog-box-that-users-cannot-exit.md)  
   
--   [Pokazywanie lub ukrywanie paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)  
+-   [Pokazywanie i ukrywanie paska narzędzi Edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)  
   
 -   [Przełączanie między Edytor okien dialogowych i kodem](../windows/switching-between-dialog-box-controls-and-code.md)  
   
--   [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
+-   [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
   
--   [Dodawanie programów obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+-   [Dodawanie obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)  
   
 -   [Testowanie okna dialogowego](../windows/testing-a-dialog-box.md)  
   
--   [Klucze akceleratora dla edytora okien dialogowych](../windows/accelerator-keys-for-the-dialog-editor.md)  
+-   [Klucze akceleratora dla Edytora okien dialogowych](../windows/accelerator-keys-for-the-dialog-editor.md)  
   
--   [Rozwiązywanie problemów z edytora okien dialogowych](../windows/troubleshooting-the-dialog-editor.md)  
+-   [Rozwiązywanie problemów z Edytorem okien dialogowych](../windows/troubleshooting-the-dialog-editor.md)  
   
     > [!TIP]
     >  Podczas używania edytora okien dialogowych, w wielu przypadkach, kliknięcie prawym przyciskiem myszy wyświetli menu skrótów z najczęściej używanymi poleceniami.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](https://msdn.microsoft.com/library/f45fce5x.aspx) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](https://msdn.microsoft.com/library/xbx3z216.aspx). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
@@ -71,5 +74,5 @@ Edytor okien dialogowych pozwala na tworzenie lub edytowanie zasobów okien dial
  [Formanty](../mfc/controls-mfc.md)   
  [Klasy formantów](../mfc/control-classes.md)   
  [Klasy okien dialogowych](../mfc/dialog-box-classes.md)   
- [Formanty okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)
+ [Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)
 

@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d6789bd74924912361b3045d112c91ec6dcaedbe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1796351dc594712ef69ec5562f85501b30997104
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue — Klasa
 `concurrent_priority_queue` Klasy to kontener udostępniający wiele wątków jednocześnie elementów wypychania i pop. Elementy są zdjęte ze stosu w kolejności priorytetu, której priorytet jest określana przez obiekt podana jako argument szablonu.  
@@ -79,7 +80,7 @@ template <typename T,
 |[Wyczyść](#clear)|Usuwa wszystkie elementy w równoczesnych priorytet. Ta metoda nie jest bezpieczne współbieżności.|  
 |[pusty](#empty)|Testy, jeśli kolejka równoczesnych priorytet jest pusta w momencie ta metoda jest wywoływana. Ta metoda jest bezpieczne współbieżności.|  
 |[get_allocator](#get_allocator)|Zwraca kopię alokatora użyta do skonstruowania równoczesnych priorytet kolejki. Ta metoda jest bezpieczne współbieżności.|  
-|[wypychania](#push)|Przeciążone. Dodaje element do kolejki równoczesnych priorytet. Ta metoda jest bezpieczne współbieżności.|  
+|[push](#push)|Przeciążone. Dodaje element do kolejki równoczesnych priorytet. Ta metoda jest bezpieczne współbieżności.|  
 |[rozmiar](#size)|Zwraca liczbę elementów w kolejce równoczesnych priorytet. Ta metoda jest bezpieczne współbieżności.|  
 |[swap](#swap)|Zamienia zawartość dwie równoczesne priorytet kolejki. Ta metoda nie jest bezpieczne współbieżności.|  
 |[try_pop](#try_pop)|Usuwa i zwraca element najwyższy priorytet z kolejki, jeśli kolejka jest pusta. Ta metoda jest bezpieczne współbieżności.|  
@@ -272,7 +273,7 @@ bool try_pop(reference _Elem);
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [Równoległe kontenery i obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)
+ [Równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)
 
 
 

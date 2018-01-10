@@ -14,11 +14,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d09ba7fff2426f58f72b26a2c7e7681cecde8b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 97900bd44dfdcede187b20b181c64d235eac60fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringreference-class"></a>HStringReference — Klasa
 Reprezentuje wartość HSTRING utworzona na podstawie istniejących parametrów.  
@@ -38,22 +41,22 @@ class HStringReference;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Hstringreference::hstringreference — Konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Inicjuje nowe wystąpienie klasy hstringreference —.|  
+|[HStringReference::HStringReference, konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Inicjuje nowe wystąpienie klasy hstringreference —.|  
   
 ### <a name="members"></a>Elementy członkowskie  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|[HStringReference::CopyTo — metoda](../windows/hstringreference-copyto-method.md)|Kopie bieżącego hstringreference — obiektu do obiektu HSTRING.|  
-|[HStringReference::Get — metoda](../windows/hstringreference-get-method.md)|Pobiera wartość uchwytu HSTRING podstawowej.|  
+|[HStringReference::CopyTo, metoda](../windows/hstringreference-copyto-method.md)|Kopie bieżącego hstringreference — obiektu do obiektu HSTRING.|  
+|[HStringReference::Get, metoda](../windows/hstringreference-get-method.md)|Pobiera wartość uchwytu HSTRING podstawowej.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[HStringReference::Operator = — Operator](../windows/hstringreference-operator-assign-operator.md)|Przenosi bieżący obiekt hstringreference — wartość innego obiektu hstringreference —.|  
-|[HStringReference::Operator == — Operator](../windows/hstringreference-operator-equality-operator.md)|Wskazuje, czy dwa parametry są takie same.|  
-|[HStringReference::Operator! = — Operator](../windows/hstringreference-operator-inequality-operator.md)|Wskazuje, czy dwa parametry nie są takie same.|  
+|[HStringReference::Operator=, operator](../windows/hstringreference-operator-assign-operator.md)|Przenosi bieżący obiekt hstringreference — wartość innego obiektu hstringreference —.|  
+|[HStringReference::Operator==, operator](../windows/hstringreference-operator-equality-operator.md)|Wskazuje, czy dwa parametry są takie same.|  
+|[HStringReference::Operator!=, operator](../windows/hstringreference-operator-inequality-operator.md)|Wskazuje, czy dwa parametry nie są takie same.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `HStringReference`  
@@ -64,4 +67,4 @@ class HStringReference;
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: wrappers — Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

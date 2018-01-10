@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7ad2d09d45747733bd79fd6fe2a7139cef5269a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e535fac6330d6268629e8e3681fec47c7b0d65d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-in-remote-automation"></a>Zabezpieczenia w automatyzacji zdalnej
 Automatyzacja zdalna obsługuje podstawowy poziom zabezpieczeń, aby umożliwić moduł zapisujący aplikacji serwera (lub, zamiast jego administratora) określ, jak określony obiekt może zdalnie. Wszystkie obiekty automatyzacji w danym systemie mogą ustawiać globalnie "nie zezwalaj na aktywację zdalną" lub "zezwolenia na aktywację zdalną". Ponadto i częściej pojedyncze obiekty mogą mieć takiej możliwości. Automatyzacja zdalna jest stosowany klucz w rejestrze każdego obiektu, **AllowRemoteActivation**, aby ustalić, czy dany serwer może zdalnie aktywowane. Jeśli ustawienia ogólnosystemowe tego trybu należy używać, następnie każdego obiektu w rejestrze można przypisać ten klucz i poszczególnych stan każdego z nich może być równa "yes" lub "nie", zależnie od potrzeb.  

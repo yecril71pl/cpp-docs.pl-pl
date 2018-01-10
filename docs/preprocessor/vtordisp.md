@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b9341221ecafc6204a9f126ea50eb22d54ffec35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b06584862e7aa09b7a271f1c999787eed84d7af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vtordisp"></a>vtordisp
 **Określonego języka C++**  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/24/2017
  Odpowiednikiem `#pragma vtordisp(0)`.  
   
 ## <a name="remarks"></a>Uwagi  
- Pragma `vtordisp` ma zastosowanie tylko do kodu, który korzysta z baz wirtualnych. Jeśli w klasie pochodnej przeciążono funkcję wirtualną, która jest dziedziczona z wirtualnej klasy podstawowej, oraz jeśli konstruktor lub destruktor klasy pochodnej wywoła tę funkcję za pomocą wskaźnika do wirtualnej klasy podstawowej, kompilator może wprowadzić dodatkowe ukryte pola `vtordisp` do klas z bazami wirtualnymi.  
+ Pragma `vtordisp` ma zastosowanie tylko do kodu, który korzysta z baz wirtualnych. Jeśli w klasie pochodnej przeciążono funkcję wirtualną, która jest dziedziczona z wirtualnej klasy bazowej, oraz jeśli konstruktor lub destruktor klasy pochodnej wywoła tę funkcję za pomocą wskaźnika do wirtualnej klasy bazowej, kompilator może wprowadzić dodatkowe ukryte pola `vtordisp` do klas z bazami wirtualnymi.  
   
  Pragma `vtordisp` wpływa na układ klas, które po niej występują. Opcje /vd0, /vd1 i /vd2 określają jednakowe zachowanie dla kompletnych modułów. Określenie `0` lub `off` powoduje pominięcie ukrytych elementów członkowskich `vtordisp`. Wyłącz `vtordisp` tylko jeśli nie istnieje żadna możliwość, aby konstruktory i destruktory klasy wywoływały funkcje wirtualne obiektu wskazywanego przez wskaźnik `this`.  
   

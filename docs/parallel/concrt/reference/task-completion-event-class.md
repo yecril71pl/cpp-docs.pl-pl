@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78c5cb9bdd1da0876abacda48000a914c884d25a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48bf640d75a02b9033102b1c8fc7b824dc4a5be0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event — Klasa
 `task_completion_event` Klasa umożliwia opóźnienie wykonania zadania, dopóki spełniony jest warunek lub uruchomić zadanie w odpowiedzi na zdarzenie zewnętrzne.  
@@ -57,7 +58,7 @@ class task_completion_event<void>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[zestaw](#set)|Przeciążone. Ustawia zdarzenie ukończenia zadania.|  
+|[set](#set)|Przeciążone. Ustawia zdarzenie ukończenia zadania.|  
 |[set_exception](#set_exception)|Przeciążone. Propaguje wyjątek, aby wszystkie zadania skojarzone z tym zdarzeniem.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -122,4 +123,4 @@ task_completion_event();
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)
+ [Przestrzeń nazw współbieżności](concurrency-namespace.md)

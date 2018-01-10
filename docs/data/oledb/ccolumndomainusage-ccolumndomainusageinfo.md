@@ -53,11 +53,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e158e5ad1380ec36383fac7bca8329af192857aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d6f60436d0ae412489862d07a79f4d42e6c568ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccolumndomainusage-ccolumndomainusageinfo"></a>CColumnDomainUsage, CColumnDomainUsageInfo
 Call — klasa typedef **CColumnDomainUsage** do zaimplementowania w klasie parametru **CColumnDomainUsageInfo**.  
@@ -85,4 +88,4 @@ Call — klasa typedef **CColumnDomainUsage** do zaimplementowania w klasie para
  **Nagłówek:** atldbsch.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Klasa CRestrictions](../../data/oledb/crestrictions-class.md)
+ [CRestrictions, klasa](../../data/oledb/crestrictions-class.md)

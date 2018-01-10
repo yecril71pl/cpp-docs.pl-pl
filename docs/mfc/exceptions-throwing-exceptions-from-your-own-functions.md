@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff189a255fe9e3c54ac4c15fbea43dcf8d8a2b12
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15aeb1af7f41cf2df8be3f69657ec6870c55ab34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Wyjątki: zgłaszanie wyjątków z własnych funkcji
 Istnieje możliwość użycia model obsługi wyjątków MFC wyłącznie do przechwytuje wyjątków zgłaszanych przez funkcje MFC lub innych bibliotek. Oprócz przechwytywanie wyjątków zgłaszanych przez kod biblioteki, może zgłosić wyjątki z własnego kodu podczas pisania funkcje, które mogą wystąpić wyjątkowe warunki.  

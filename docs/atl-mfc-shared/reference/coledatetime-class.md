@@ -45,11 +45,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fda1737c32bbc63f4ffdd4e1226459a09595f635
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbe0e831a644dfc09c6b4afb3c54f23b220850d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledatetime-class"></a>Klasa COleDateTime
 Hermetyzuje `DATE` typu danych, który jest używany w automatyzacji OLE.  
@@ -804,7 +805,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
   
  Jeśli jeden z argumentów jest nieprawidłowa i nie ma innych wartości null, stan wynikowy `COleDateTime` wartość jest nieprawidłowa.  
   
- **+**  i  **-**  operatory będzie assert, jeśli `COleDateTime` obiekt jest ustawiony na wartość null. Zobacz [COleDateTime — operatory relacyjne](#coledatetime_relational_operators) przykład.  
+  **+**  i  **-**  operatory będzie assert, jeśli `COleDateTime` obiekt jest ustawiony na wartość null. Zobacz [COleDateTime — operatory relacyjne](#coledatetime_relational_operators) przykład.  
   
  Aby uzyskać więcej informacji o wartościach stan prawidłowy, nieprawidłowy i wartości null, zobacz [m_status](#m_status) zmiennej członkowskiej.  
   
@@ -830,7 +831,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
   
  Aby uzyskać więcej informacji o wartościach stan prawidłowy, nieprawidłowy i wartości null, zobacz [m_status](#m_status) zmiennej członkowskiej.  
   
- **+=**  i  **-=**  operatory będzie assert, jeśli `COleDateTime` obiekt jest ustawiony na wartość null. Zobacz [COleDateTime — operatory relacyjne](#coledatetime_relational_operators) przykład.  
+  **+=**  i  **-=**  operatory będzie assert, jeśli `COleDateTime` obiekt jest ustawiony na wartość null. Zobacz [COleDateTime — operatory relacyjne](#coledatetime_relational_operators) przykład.  
   
  Aby uzyskać więcej informacji na temat zakresem dla `COleDateTime` wartości, zobacz artykuł [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).  
   

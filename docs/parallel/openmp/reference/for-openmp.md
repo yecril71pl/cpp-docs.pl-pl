@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c1e7f5df003796050958f803cc931a49d2d52d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97c32bd93ca208d76fbcb418c6e851e3c50f49ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-openmp"></a>for (OpenMP)
 Powoduje, że pracy wykonanej dla pętli równoległego regionu do podzielony wątków.  
@@ -47,15 +48,15 @@ Powoduje, że pracy wykonanej dla pętli równoległego regionu do podzielony w�
   
 -   [lastprivate](../../../parallel/openmp/reference/lastprivate.md)  
   
--   [NOWAIT](../../../parallel/openmp/reference/nowait.md)  
+-   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
 -   [uporządkowane](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
--   [prywatne](../../../parallel/openmp/reference/private-openmp.md)  
+-   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
--   [redukcja](../../../parallel/openmp/reference/reduction.md)  
+-   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [Harmonogram](../../../parallel/openmp/reference/schedule.md)  
+-   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
  Jeśli **równoległych** jest określona, `clause` może zostać klauzuli zaakceptowane przez **równoległych** lub **dla** dyrektywy, z wyjątkiem **nowait**.  
   

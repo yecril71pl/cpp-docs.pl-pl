@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c5d5cb06359cb8328347426efbe3618276e1ebf1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4bfad181ee7c6b702af87bc8ff0a49ccfb42cb65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="buffer-overflow"></a>Przepełnienie buforu
 Różne rozmiary znaków może spowodować problemy, po wprowadzeniu znaków w buforze. Należy rozważyć następujący kod, który kopiuje znaków z ciągu, `sz`, w buforze, `rgch`:  

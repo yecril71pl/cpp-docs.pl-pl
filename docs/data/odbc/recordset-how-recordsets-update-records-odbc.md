@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ca360ce914fea69163a400df2f9bc00750920e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -78,4 +81,4 @@ Ten temat dotyczy klasach MFC ODBC.
   
 ## <a name="see-also"></a>Zobacz też  
  [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Zestaw rekordów: Jak AddNew, Edit i Delete działają (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+ [Zestaw rekordów: jak działają funkcje AddNew, Edit i Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 75c3b5356277e227832ecc94a9f6b70cc15f3a71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89c6ae27dacf5b8637c914c92b6805b1cc405353
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-specific-hot-keys"></a>Klawisze dostępu właściwe dla wątków
 Aplikacja ustawia klawisza dostępu właściwe dla wątków ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) przy użyciu systemu Windows **RegisterHotKey** funkcji. Gdy użytkownik naciśnie klawisz dostępu właściwe dla wątków, system Windows zapisuje [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) wiadomości na początek kolejki komunikatów dla wątku. **WM_HOTKEY** komunikat zawiera wirtualnego kod klucza, shift stanu i Identyfikatora użytkownika określonego klawisza dostępu, który został naciśnięty. Listę standardowych wirtualnego kodów klucza Zobacz Winuser.h. Aby uzyskać więcej informacji dotyczących tej metody, zobacz [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
@@ -31,5 +32,5 @@ Aplikacja ustawia klawisza dostępu właściwe dla wątków ([CHotKeyCtrl](../mf
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

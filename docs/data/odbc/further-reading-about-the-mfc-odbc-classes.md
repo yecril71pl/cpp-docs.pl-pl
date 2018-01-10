@@ -14,32 +14,35 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8940a85085d564404a2dd95f8707b9b986047113
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5f43b8fa403aad5b2df6aebf07c1aaf3b0dd191b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Dalsze informacje o klasach MFC ODBC
 Dodatkowo w poniższych tematach opisano, pojęcia i metody wprowadzone w tym temacie:  
   
--   [Obsługa baz danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
+-   [Obsługa bazy danych, kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
   
--   [Dodawanie klienta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
+-   [Dodawanie użytkownika MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
   
--   [Źródła danych (ODBC)](../../data/odbc/data-source-odbc.md)  
+-   [Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md)  
   
 -   [Zestaw dynamiczny](../../data/odbc/dynaset.md)  
   
--   [Wyjątki: Wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md)  
+-   [Wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md)  
   
--   [MFC: Używanie klas baz danych z dokumentami i widokami](../../data/mfc-using-database-classes-with-documents-and-views.md)  
+-   [MFC: używanie klas baz danych z dokumentami i widokami](../../data/mfc-using-database-classes-with-documents-and-views.md)  
   
--   [MFC: Używanie klas baz danych bez dokumentów i widoków](../../data/mfc-using-database-classes-without-documents-and-views.md)  
+-   [MFC: używanie klas baz danych bez dokumentów i widoków](../../data/mfc-using-database-classes-without-documents-and-views.md)  
   
 -   [ODBC](../../data/odbc/odbc-basics.md)  
   
--   [ODBC Administrator](../../data/odbc/odbc-administrator.md)  
+-   [Administrator ODBC](../../data/odbc/odbc-administrator.md)  
   
 -   [Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
   
@@ -47,9 +50,9 @@ Dodatkowo w poniższych tematach opisano, pojęcia i metody wprowadzone w tym te
   
 -   [Widoki rekordów](../../data/record-views-mfc-data-access.md)  
   
--   [Serializacja: Serializacja vs. Bazy danych we/wy](../../mfc/serialization-serialization-vs-database-input-output.md)  
+-   [Serializacja: serializacja a Bazy danych we/wy](../../mfc/serialization-serialization-vs-database-input-output.md)  
   
--   [Migawki](../../data/odbc/snapshot.md)  
+-   [Migawka](../../data/odbc/snapshot.md)  
   
 -   [SQL](../../data/odbc/sql.md)  
   

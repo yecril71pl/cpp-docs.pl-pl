@@ -46,11 +46,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 51cf03e0c06ea0a206f9ccbe11cba91372e28e1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 31950a8a3b90dc02ed2ec49749ecabe661eb38bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
 Odczytuje znak ze strumienia bez blokowania wątku.  
@@ -144,4 +145,4 @@ Line two.
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [fputc —, fputwc —](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc —, getwc —](../../c-runtime-library/reference/getc-getwc.md)
+ [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)

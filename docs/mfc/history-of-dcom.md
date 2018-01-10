@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e5607fd240c7a97691189b8a3afa5e7c0171e26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ef567c39c93c3d43fdfc0fa63886144b03cd474
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="history-of-dcom"></a>Historia modelu DCOM
 Automatyzacja została wprowadzona w wczesne 1993, został mogą być wykorzystywane tylko między aplikacjami działającymi na tym samym komputerze. Jednak ponieważ on udostępniony tego samego underpinnings jako reszty OLE, który jest (COM lub model Component Object Model), zawsze ma czy jego stanie się "lokalnie" COM sam czasie aktualizacji uwzględnienie możliwości komunikacji zdalnej. Również zaplanowano, że przejście od operacji wyłącznie lokalnych do rozproszonej operacji wymaga niewielkiego lub żadnego zmiany istniejącego kodu.  

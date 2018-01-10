@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71d0060866b6a02de3c58ed40100dee59743749b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 387344160cf2009b19ad8de820eabc6063ae1f7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drag-and-drop-customizing"></a>Przeciąganie i upuszczanie: dostosowywanie
 Domyślna implementacja funkcji przeciągania i upuszczania jest odpowiednia dla większości aplikacji. Jednak niektóre aplikacje mogą wymagać, że można zmienić to zachowanie standardowego. W tym artykule opisano kroki niezbędne zmienić te ustawienia domyślne. Ponadto można użyć tej metody ustanowienie aplikacje, które nie obsługują dokumenty złożone jako źródła listy.  
@@ -43,4 +44,4 @@ Domyślna implementacja funkcji przeciągania i upuszczania jest odpowiednia dla
 ## <a name="see-also"></a>Zobacz też  
  [Przeciąganie i upuszczanie (OLE)](../mfc/drag-and-drop-ole.md)   
  [Klasa COleDropSource](../mfc/reference/coledropsource-class.md)   
- [COleDataSource — klasa](../mfc/reference/coledatasource-class.md)
+ [Klasa COleDataSource](../mfc/reference/coledatasource-class.md)

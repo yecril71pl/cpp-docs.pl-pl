@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 348964eb2f9b17a00188dd3a2589ce0711767e64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry — Klasa
 `network_link_registry` Abstrakcyjna klasa podstawowa zarządza łącza między bloki źródłowe i docelowe.  
@@ -57,11 +58,11 @@ class network_link_registry;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Dodaj](#add)|W przypadku przesłonięcia w klasie pochodnej, dodaje łącze do `network_link_registry` obiektu.|  
+|[add](#add)|W przypadku przesłonięcia w klasie pochodnej, dodaje łącze do `network_link_registry` obiektu.|  
 |[Rozpocznij](#begin)|W przypadku przesłonięcia w klasie pochodnej zwraca iteratora do pierwszego elementu w `network_link_registry` obiektu.|  
 |[zawiera](#contains)|W przypadku przesłonięcia w klasie pochodnej, wyszukuje `network_link_registry` obiektu dla określonego bloku.|  
 |[Liczba](#count)|W przypadku przesłonięcia w klasie pochodnej zwraca liczbę elementów w `network_link_registry` obiektu.|  
-|[Usuń](#remove)|W przypadku przesłonięcia w klasie pochodnej usuwa określony blok z `network_link_registry` obiektu.|  
+|[remove](#remove)|W przypadku przesłonięcia w klasie pochodnej usuwa określony blok z `network_link_registry` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
  `network link registry` Nie jest bezpieczne dla współbieżny dostęp.  
@@ -144,4 +145,4 @@ virtual bool remove(_EType _Link) = 0;
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
  [single_link_registry — klasa](single-link-registry-class.md)   
- [multi_link_registry — klasa](multi-link-registry-class.md)
+ [multi_link_registry, klasa](multi-link-registry-class.md)

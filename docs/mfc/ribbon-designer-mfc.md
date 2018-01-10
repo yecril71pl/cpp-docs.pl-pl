@@ -17,14 +17,15 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a0076f9ce0bcf4787f4e848fbcb0d34ae8968f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0dde2c26855e8d8acd51b8c607867d9b92b3987f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ribbon-designer-mfc"></a>Projektant wstążki (MFC)
-Projektant wstążki umożliwia tworzenie i Dostosowywanie Wstążki w aplikacjach MFC. Wstążki jest elementem interfejsu użytkownika, który organizuje poleceń w grupy logiczne. Grupy te są wyświetlane na osobnych kartach pasek w górnej części okna. Wstążka zastępuje paska menu i pasków narzędzi. Wstążki może znacznie poprawić użyteczność aplikacji. Aby uzyskać więcej informacji, zobacz [wstążek](http://go.microsoft.com/fwlink/linkid=129233). Na poniższej ilustracji przedstawiono wstążki.  
+Projektant wstążki umożliwia tworzenie i Dostosowywanie Wstążki w aplikacjach MFC. Wstążki jest elementem interfejsu użytkownika, który organizuje poleceń w grupy logiczne. Grupy te są wyświetlane na osobnych kartach pasek w górnej części okna. Wstążka zastępuje paska menu i pasków narzędzi. Wstążki może znacznie poprawić użyteczność aplikacji. Aby uzyskać więcej informacji, zobacz [wstążek](http://go.microsoft.com/fwlink/p/?linkid=129233). Na poniższej ilustracji przedstawiono wstążki.  
   
  ![Formant zasobu wstążki MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
@@ -90,13 +91,13 @@ Projektant wstążki umożliwia tworzenie i Dostosowywanie Wstążki w aplikacja
   
  W następujących tematach opisano sposób korzystania z funkcji w Projektancie wstążki:  
   
-- [Porady: Dostosowywanie przycisku aplikacja](../mfc/how-to-customize-the-application-button.md)  
+- [Instrukcje: dostosowywanie przycisku Aplikacja](../mfc/how-to-customize-the-application-button.md)  
   
-- [Porady: Dostosowywanie paska narzędzi Szybki dostęp](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+- [Instrukcje: dostosowywanie paska narzędzi Szybki dostęp](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
-- [Porady: dodawanie formantów wstążki do programów obsługi zdarzeń](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
+- [Instrukcje: dodawanie kontrolek wstążki do programów obsługi zdarzeń](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
   
-- [Porady: ładowanie zasobu wstążki z aplikacji MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
+- [Instrukcje: ładowanie zasobu wstążki z aplikacji MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
   
 ## <a name="definitions-of-ribbon-elements"></a>Definicje elementów wstążki  
  ![Wstążka MFC](../mfc/media/ribbon.png "wstążki")  

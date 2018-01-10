@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e2ce9377d0ea4b2bd7b04255eb1c8099341af39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30c7833a4df80669b6223f1fe6b1ccceed0257cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-with-c-and-win32"></a>Wielowątkowość z językiem C i podsystemem Win32
 Microsoft Visual C++ zapewnia obsługę tworzenia wielowątkowe aplikacje w systemie Microsoft Windows: Windows XP, Windows 2000, Windows NT, Windows Me i Windows 98. Należy rozważyć użycie więcej niż jeden wątek, jeśli aplikacja musi zarządzać wielu działań, takich jak jednoczesnych klawiatury i myszy. Jeden wątek może przetwarzać danych wprowadzonych z klawiatury, gdy drugi wątek filtry działania myszy. Trzeci wątku można aktualizować ekranu na podstawie danych z wątków myszy i klawiatury. W tym samym czasie inne wątki można uzyskać dostęp do plików dysku lub Pobierz dane z portem komunikacyjnym.  

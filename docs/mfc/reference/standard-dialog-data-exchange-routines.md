@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e031cf6d142e611c81ae73ee8d201a12acdea529
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca598a9ac6a146457d24bcc80e54d003123d7dd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standardowe procedury wymiany danych w oknie dialogowym
 W tym temacie wymieniono standardowe procedury okna dialogowego danych programu exchange (DDX) używany dla typowych formantów okna dialogowego MFC.  
@@ -92,7 +93,7 @@ void AFXAPI DDX_CBString(
  `nIDC`  
  Identyfikator zasobu kontrolki pola kombi, które są skojarzone z właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -123,7 +124,7 @@ void AFXAPI DDX_CBStringExact(
  `nIDC`  
  Identyfikator zasobu kontrolki pola kombi, które są skojarzone z właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -154,7 +155,7 @@ void AFXAPI DDX_Check(
  `nIDC`  
  Identyfikator zasobu kontrolkę pola wyboru skojarzone z właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -220,7 +221,7 @@ void AFXAPI DDX_DateTimeCtrl(
  `nIDC`  
  Identyfikator zasobu formant wyboru daty i godziny, skojarzone ze zmienną elementu członkowskiego.  
   
- *wartość*  
+ *value*  
  W wersjach pierwsze dwa odwołania do `CTime` lub `COleDateTime` zmiennej członkowskiej, okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych. W trzeciej wersji odwołania do `CString` obiekt widoku formantu elementu członkowskiego danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -288,7 +289,7 @@ void AFXAPI DDX_IPAddress(
  `nIDC`  
  Identyfikator zasobu formantu adres IP skojarzony z właściwością formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do `DWORD` zawierający wartość pola czterech formant adresu IP. Pola są wypełnione lub odczytać w następujący sposób.  
   
 |Pole|Usługa BITS zawierający wartość pola|  
@@ -353,7 +354,7 @@ void AFXAPI DDX_LBString(
  `nIDC`  
  Identyfikator zasobu kontrolkę pola listy, które są skojarzone z właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -386,7 +387,7 @@ void AFXAPI DDX_LBStringExact(
  `nIDC`  
  Identyfikator zasobu kontrolkę pola listy, które są skojarzone z właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -424,7 +425,7 @@ void AFXAPI DDX_MonthCalCtrl(
  `nIDC`  
  Identyfikator zasobu w formancie kalendarza miesięcznego skojarzone ze zmienną elementu członkowskiego.  
   
- *wartość*  
+ *value*  
  Odwołanie do `CTime` lub `COleDateTime` zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -456,7 +457,7 @@ void AFXAPI DDX_Radio(
  `nIDC`  
  Identyfikator zasobu pierwszego radiowych formantu w grupie.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -486,7 +487,7 @@ void AFXAPI DDX_Scroll(
  `nIDC`  
  Identyfikator zasobu formantu paska przewijania skojarzony z właściwością formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -514,7 +515,7 @@ void AFXAPI DDX_Slider(
  `nIDC`  
  Identyfikator zasobu suwaka.  
   
- *wartość*  
+ *value*  
  Odwołanie do wartości, aby wymienić. Ten parametr zawiera lub ustawia bieżącego położenia kontrolki suwaka.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -592,7 +593,7 @@ void AFXAPI DDX_Text(
  `nIDC`  
  Identyfikator formantu edycyjnego w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- *wartość*  
+ *value*  
  Odwołanie do elementu członkowskiego danych w okno dialogowe, widoku Formularz lub formant widoku obiektu. Typ danych miary *wartość* zależy od której zastąpionej wersji `DDX_Text` używasz.  
   
 ### <a name="remarks"></a>Uwagi  

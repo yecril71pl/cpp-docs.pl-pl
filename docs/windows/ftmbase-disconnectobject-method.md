@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 618590f28dcb82be0bcb9c4407c9aa4eaa2432ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0dc57bb342f6a9625c968e918b67a7b5e1bbb668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject — Metoda
 Wymuszanie zwalnia wszystkie połączenia zewnętrzne do obiektu. Serwer obiektu wywołuje obiektu implementacja tej metody przed zamykanie.  
@@ -45,4 +48,4 @@ STDMETHODIMP DisconnectObject(
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Ftmbase — klasa](../windows/ftmbase-class.md)
+ [FtmBase, klasa](../windows/ftmbase-class.md)

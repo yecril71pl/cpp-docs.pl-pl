@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58c96e365a7ce3858f57ba9626c0181b60ddeec1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a97d2469fdec35c73e830d4a616a9e4487ffef86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Funkcje wewnętrzne dostępne na wszystkich architektury
 Następujące funkcje wewnętrzne są dostępne w przypadku x86, AMD64 i architektury ARM:  
@@ -40,7 +41,7 @@ Następujące funkcje wewnętrzne są dostępne w przypadku x86, AMD64 i archite
 |[_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)|intrin.h|  
 |[__debugbreak](../intrinsics/debugbreak.md)|intrin.h|  
 |[_disable](../intrinsics/disable.md)|intrin.h|  
-|[_włącz](../intrinsics/enable.md)|intrin.h|  
+|[_enable](../intrinsics/enable.md)|intrin.h|  
 |[__fastfail](../intrinsics/fastfail.md)|intrin.h|  
 |[_InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
 |[_InterlockedAnd16](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|  
@@ -183,4 +184,4 @@ Następujące funkcje wewnętrzne są dostępne w przypadku x86, AMD64 i archite
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne ARM](../intrinsics/arm-intrinsics.md)   
  [x86 lista funkcji wewnętrznych](../intrinsics/x86-intrinsics-list.md)   
- [x64 (amd64) lista funkcji wewnętrznych](../intrinsics/x64-amd64-intrinsics-list.md)
+ [Lista funkcji wewnętrznych x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)

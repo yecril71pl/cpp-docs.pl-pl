@@ -23,14 +23,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10fa52dbf477f970cee0695aba13ec2eb5cfd90c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63e599a2a24716de2de3e23cb3a7c2342b036b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-build-step-property-page-general"></a>Strona właściwości Niestandardowy krok budowania: ogólne
 Dla każdej kombinacji konfiguracji projektu i platformy docelowej w projekcie można określić niestandardowy krok wykonywany podczas kompilacji projektu.  
+
+Dla wersji systemu Linux na tej stronie, zobacz [właściwości kroku kompilacji niestandardowej (Linux C++)](../linux/prop-pages/custom-build-step-linux.md).
   
 ## <a name="uielement-list"></a>Lista elementów UI  
  **Wiersz polecenia**  

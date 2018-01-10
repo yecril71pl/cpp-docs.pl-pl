@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b3a64db489865463f914fa94c096605f8c9c56b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae095b59b07132bd7e4c6892b8e58d9e69fb39c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-an-unclipped-device-context"></a>Używanie nieobcinanego kontekstu urządzenia
 Jeśli masz pewność, że formantu nie można malować poza obszarem prostokąta jego klienta, można zrealizować korzyści szybkości mały, ale wykrywalny przez wyłączenie wywołanie `IntersectClipRect` który dokonuje `COleControl`. Aby to zrobić, należy usunąć **clipPaintDC** flagi z zestawu flagi zwrócony przez [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Na przykład:  
@@ -32,5 +33,5 @@ Jeśli masz pewność, że formantu nie można malować poza obszarem prostokąt
  Jeśli korzystasz z aktywacji niepowiązanej z oknami, optymalizacja nie ma znaczenia.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty MFC ActiveX: Optymalizacja](../mfc/mfc-activex-controls-optimization.md)
+ [Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
 

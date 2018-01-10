@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05ddb536dc4d7929141c7c153fdd9ec5ce1e9d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf0cd4d6d77f4479d5a1cfd56f74f83c3980f38f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setlocale"></a>setlocale
 Definiuje ustawienia regionalne (Kraj/Region i język) do użycia podczas tłumaczenia — stałe znaków dwubajtowych i literały ciągu.  

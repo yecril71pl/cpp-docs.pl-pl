@@ -32,11 +32,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5f75af68e7032d8365a2748624e75ef813b932bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bd7ff7ee99af78dba98e537a1c26b74ed5ed79c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtgetdumpclient"></a>_CrtGetDumpClient
 Pobiera bieżącą funkcję zrzucanie zdefiniowanym przez aplikację `_CLIENT_BLOCK` wpisz bloki pamięci (tylko wersja do debugowania).  
@@ -69,4 +70,4 @@ _CRT_DUMP_CLIENT _CrtGetDumpClient( void );
 ## <a name="see-also"></a>Zobacz też  
  [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
  [_Crtreportblocktype —](../../c-runtime-library/reference/crtreportblocktype.md)   
- [_Crtsetdumpclient —](../../c-runtime-library/reference/crtsetdumpclient.md)
+ [_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md)

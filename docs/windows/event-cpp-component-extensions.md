@@ -17,11 +17,14 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e821d68fac0467d48a2056e1818c3fd58963581
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event--c-component-extensions"></a>event (C++ Component Extensions)
 `event` Deklaruje — słowo kluczowe *zdarzeń*, czyli powiadomienia do subskrybentów w zarejestrowany (*procedury obsługi zdarzeń*) coś odsetek o wystąpieniu tego.  
@@ -50,7 +53,7 @@ modifiereventdelegate^ event_name
  *Modyfikator*  
  Modyfikator, które mogą być używane w deklaracji zdarzenia lub metoda dostępu zdarzenia.  Możliwe wartości to `static` i `virtual`.  
   
- *Delegowanie*  
+ *delegate*  
  [Delegować](../windows/delegate-cpp-component-extensions.md), którego sygnatura programu obsługi zdarzeń musi być zgodna.  
   
  *nazwa_zdarzenia*  
@@ -112,7 +115,7 @@ modifiereventdelegate^ event_name
  *Modyfikator*  
  Modyfikator, które mogą być używane w deklaracji zdarzenia lub metoda dostępu zdarzenia.  Możliwe wartości to `static` i `virtual`.  
   
- *Delegowanie*  
+ *delegate*  
  [Delegować](../windows/delegate-cpp-component-extensions.md), którego sygnatura programu obsługi zdarzeń musi być zgodna.  
   
  *nazwa_zdarzenia*  
@@ -229,7 +232,7 @@ int main() {
 }  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
 ```Output  
 OnClick: 7, 3.14159  
@@ -273,7 +276,7 @@ int main() {
 }  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
 ```Output  
 0  

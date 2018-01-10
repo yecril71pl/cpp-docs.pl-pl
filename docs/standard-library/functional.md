@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f7b09ed7c4b52b45efee0708f65d8d2f3e24cd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 036da9664c7b61e55e1322f12de3d9c8f72c3f53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfunctionalgt"></a>&lt;funkcjonalności&gt;
 Definiuje funkcje standardowej biblioteki C++, które Zdefiniuj *funkcji obiektów*— znanej także jako funktorów — i ich obiektów wiążących. Obiekt funkcji jest obiektem typu, który definiuje `operator()`. Obiekt funkcji może być wskaźnik funkcji, ale więcej zwykle obiekt jest używany do przechowywania dodatkowe informacje, które mogą uzyskiwać podczas wywołania funkcji.  
@@ -124,7 +125,7 @@ Definiuje funkcje standardowej biblioteki C++, które Zdefiniuj *funkcji obiekt�
 |[not1 —](../standard-library/functional-functions.md#not1)|Zwraca dopełnienia predykatu jednoargumentowy.|  
 |[not2 —](../standard-library/functional-functions.md#not2)|Zwraca dopełnienia predykatu binarnego.|  
 |[ptr_fun —](../standard-library/functional-functions.md#ptr_fun)|Funkcji szablonu pomocnika używany do jednoargumentowy convert i funkcja binarnej wskaźników, odpowiednio do funkcji dostosowywalne jednoargumentowy i danych binarnych.|  
-|[REF](../standard-library/functional-functions.md#ref)|Tworzy `reference_wrapper` z argumentem.|  
+|[ref](../standard-library/functional-functions.md#ref)|Tworzy `reference_wrapper` z argumentem.|  
 |[swap](../standard-library/functional-functions.md#swap)|Zamienia dwa `function` obiektów.|  
   
 ### <a name="structs"></a>Struktury  
@@ -160,10 +161,10 @@ Definiuje funkcje standardowej biblioteki C++, które Zdefiniuj *funkcji obiekt�
 |||  
 |-|-|  
 |[operator ==](../standard-library/functional-operators.md#op_eq_eq)|Uniemożliwia porównania równości można wywołać obiektów.|  
-|[operator! =](../standard-library/functional-operators.md#op_neq)|Uniemożliwia porównania nierówności można wywołać obiektów.|  
+|[operator!=](../standard-library/functional-operators.md#op_neq)|Uniemożliwia porównania nierówności można wywołać obiektów.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

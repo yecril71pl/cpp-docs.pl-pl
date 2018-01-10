@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 helpviewer_keywords: std::chrono [C++], time_point
-ms.openlocfilehash: f669baf6bbe9fa83965c8a3d28d2356291b859f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b8f6880968b899bcf28b60fa69edf1e4250d4d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timepoint-class"></a>time_point — Klasa
 A `time_point` opisuje typ, który reprezentuje punkt w czasie. Przechowuje obiekt typu [czas trwania](../standard-library/duration-class.md) który przechowuje czas, który upłynął od epoka reprezentowanego przez argument szablonu `Clock`.  

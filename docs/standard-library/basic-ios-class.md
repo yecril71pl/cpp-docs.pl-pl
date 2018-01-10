@@ -66,11 +66,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0558bd962d8f646cc599ba604dbe749f5a02138b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7068c2b94637a859c35c662350c27f157103e37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicios-class"></a>basic_ios — Klasa
 Klasy szablonów w tym artykule opisano funkcje magazynu i element członkowski wspólne dla obu strumienie wejściowe (szablonu klasy [basic_istream —](../standard-library/basic-istream-class.md)) i strumienie wyjściowe (szablonu klasy [basic_ostream —](../standard-library/basic-ostream-class.md)) zależnych od Parametry szablonu. (Klasa [ios_base —](../standard-library/ios-base-class.md) opisano typowe i nie jest zależna od parametrów szablonu.) Obiekt klasy **basic_ios —\<klasy elementu, klasa cech >** ułatwia kontrolowanie strumienia elementami typu **elementu**, którego cech znaków są określane przez klasę  **Cechy**.  
@@ -126,7 +127,7 @@ class basic_ios : public ios_base
 |[Zły](#bad)|Wskazuje utraty integralności buforu strumienia.|  
 |[Wyczyść](#clear)|Czyści wszystkie flagi błędu.|  
 |[copyfmt](#copyfmt)|Kopiuje flagi z jednego strumienia do innego.|  
-|[EOF](#eof)|Wskazuje, czy osiągnięto koniec strumienia.|  
+|[eof](#eof)|Wskazuje, czy osiągnięto koniec strumienia.|  
 |[Wyjątki](#exceptions)|Wskazuje, które wyjątki będą zgłaszane przez strumień.|  
 |[Niepowodzenie](#fail)|Wskazuje niepowodzenie wyodrębnienia prawidłowym polem ze strumienia.|  
 |[wypełnienia](#fill)|Określa, czy zwraca znak, który będzie używany, gdy tekst nie jest szerokie, jak strumienia.|  

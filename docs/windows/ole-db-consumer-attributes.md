@@ -20,23 +20,26 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86dc5e8ef939175cdda20c141ad397a26a73f712
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a42ce4f1d8f3a9f61840433ef83470882e42e647
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-consumer-attributes"></a>Atrybuty konsumentów OLE DB
 Atrybuty konsumentów OLE DB wstrzyknięcie kodu, na podstawie [szablony OLE DB konsumenta](../data/oledb/ole-db-consumer-templates-reference.md), aby utworzyć pracy OLE DB konsumenta wykonujące zadania, takie jak tabele otwierania wykonywania poleceń i uzyskiwanie dostępu do danych.  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|[db_accessor —](../windows/db-accessor.md)|Wiąże kolumn w zestawie wierszy i wiąże je do odpowiednich map metody dostępu.|  
-|[db_column —](../windows/db-column.md)|Wiąże określonej kolumny zestawu wierszy.|  
-|[db_command —](../windows/db-command.md)|Wykonuje polecenia OLE DB.|  
-|[db_param —](../windows/db-param.md)|Kojarzy zmiennej określonego elementu członkowskiego z parametrem wejściowych lub wyjściowych.|  
-|[db_source —](../windows/db-source.md)|Tworzy i hermetyzuje połączenie za pośrednictwem dostawcy, ze źródłem danych.|  
-|[db_table —](../windows/db-table.md)|Otwiera tabeli OLE DB.|  
+|[db_accessor](../windows/db-accessor.md)|Wiąże kolumn w zestawie wierszy i wiąże je do odpowiednich map metody dostępu.|  
+|[db_column](../windows/db-column.md)|Wiąże określonej kolumny zestawu wierszy.|  
+|[db_command](../windows/db-command.md)|Wykonuje polecenia OLE DB.|  
+|[db_param](../windows/db-param.md)|Kojarzy zmiennej określonego elementu członkowskiego z parametrem wejściowych lub wyjściowych.|  
+|[db_source](../windows/db-source.md)|Tworzy i hermetyzuje połączenie za pośrednictwem dostawcy, ze źródłem danych.|  
+|[db_table](../windows/db-table.md)|Otwiera tabeli OLE DB.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty według grup](../windows/attributes-by-group.md)

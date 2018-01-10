@@ -36,11 +36,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0378e35d182409cd4077b3f7c6fc270d116f18c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 467d806203687610265d1b199e01295f93557081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrayview-class"></a>array_view — Klasa
 Reprezentuje N-wielowymiarowy widok przez dane przechowywane w innym kontenerze.  
@@ -90,7 +91,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |[Odśwież](#refresh)|Powiadamia `array_view` obiekt, który powiązanej pamięci został zmodyfikowany poza `array_view` interfejsu. Wywołanie tej metody renderuje starych wszystkich buforowanych informacji.|  
 |[reinterpret_as](#reinterpret_as)|Zwraca Jednowymiarowa tablica, która zawiera wszystkie elementy w `array_view` obiektu.|  
 |[sekcja](#section)|Zwraca podsekcją `array_view` obiektu, który znajduje się w określonym pochodzenia i, opcjonalnie, który ma określony zakres.|  
-|[Synchronizuj](#synchronize)|Synchronizuje wszystkie modyfikacje `array_view` obiektu do jej dane źródłowe.|  
+|[synchronize](#synchronize)|Synchronizuje wszystkie modyfikacje `array_view` obiektu do jej dane źródłowe.|  
 |[synchronize_async](#synchronize_async)|Asynchronicznie synchronizuje wszelkie modyfikacje `array_view` obiektu do jej dane źródłowe.|  
 |[synchronize_to](#synchronize_to)|Synchronizuje wszystkie modyfikacje `array_view` obiektu do określonego [accelerator_view](accelerator-view-class.md).|  
 |[synchronize_to_async](#synchronize_to_async)|Asynchronicznie synchronizuje wszelkie modyfikacje `array_view` obiektu do określonego [accelerator_view](accelerator-view-class.md).|  
@@ -825,4 +826,4 @@ array_view<const value_type,_New_rank> view_as(
  `array_view` Obiektu, który jest tworzony.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

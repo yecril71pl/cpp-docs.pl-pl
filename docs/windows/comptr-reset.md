@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1227a2d8c38fd26b82e09d58326cc3790a4e7b14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ad9dd8bc8c180d8a1fd7bf90965349c620eab54b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrreset"></a>ComPtr::Reset
 Zwalnia wszystkie odwołania dla wskaźnika interfejsu, który jest skojarzony z tym comptr —.  
@@ -37,4 +40,4 @@ unsigned long Reset();
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Comptr — klasa](../windows/comptr-class.md)
+ [ComPtr, klasa](../windows/comptr-class.md)

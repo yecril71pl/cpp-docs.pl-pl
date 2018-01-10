@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a41ca93c91fad26c507c4e468e3c4ebf007c3aab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3457597edce1b7ce36b132d1bdd16d286cb94d03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drawing-in-a-view"></a>Rysowanie w widoku
 Prawie wszystkie rysowania w aplikacji występuje w widoku `OnDraw` funkcji członkowskiej, który należy zastąpić w klasie widoku. (Wyjątkiem jest myszy rysowania, omówione w [interpretowanie danych wejściowych za pośrednictwem widoku użytkownika](../mfc/interpreting-user-input-through-a-view.md).) Twoje `OnDraw` zastąpienia:  
@@ -54,5 +55,5 @@ Prawie wszystkie rysowania w aplikacji występuje w widoku `OnDraw` funkcji czł
  Aby uzyskać więcej przykładów dotyczących tworzenia `OnDraw`, zobacz [MFC — przykłady](../visual-cpp-samples.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Korzystanie z widoków](../mfc/using-views.md)
+ [Używanie widoków](../mfc/using-views.md)
 

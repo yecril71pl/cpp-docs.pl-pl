@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e75bc3bf4aae10f944ffcdb595709473c3e173d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: de253f989f516e8b0c17f0b3ec6e3247e182d6e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulemethodreleasenotifiermethod-data-member"></a>Module::MethodReleaseNotifier::method_ — Członek danych
 Zawiera wskaźnik do obsługi zdarzeń dla bieżącego obiektu Module::MethodReleaseNotifier.  
@@ -36,4 +39,4 @@ void (T::* method_)();
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Module::methodreleasenotifier — klasa](../windows/module-methodreleasenotifier-class.md)
+ [Module::MethodReleaseNotifier, klasa](../windows/module-methodreleasenotifier-class.md)

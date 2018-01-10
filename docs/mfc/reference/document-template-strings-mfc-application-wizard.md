@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96cbb565ffae20d449b2164280fa461b2acfd4fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d2fdabb971ab9aad06f5500b98e9d8591266c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Ciągi szablonu dokumentu, kreator aplikacji MFC
 Na tej stronie Kreatora aplikacji MFC Podaj lub Popraw następujące opcje ułatwiające zarządzanie dokumentami i lokalizacja. Ciągi szablonu dokumentu są dostępne dla aplikacji, które obejmują **wsparcie dla architektury dokument/widok** w [typu aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md). Nie są one dostępne w oknach dialogowych. Ponieważ większość ciągi szablonu dokumentu są widoczne i używane przez użytkowników aplikacji, są zlokalizowane w **języka zasobu** wskazane **typu aplikacji** stronie kreatora.  

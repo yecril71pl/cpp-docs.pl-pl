@@ -34,11 +34,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 902e7db5ae5d74b31fd244a211cfba442cba53d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2410da63f4e9db44243d2586b29aa70c114dc6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator — Klasa
 Klasa iteratora submatches.  
@@ -1464,11 +1465,11 @@ match == z
   
 ## <a name="see-also"></a>Zobacz też  
 [\<wyrażenie regularne >](../standard-library/regex.md)  
-[regex_constants — klasa](../standard-library/regex-constants-class.md)  
-[regex_error — klasa](../standard-library/regex-error-class.md)  
+[regex_constants, klasa](../standard-library/regex-constants-class.md)  
+[regex_error, klasa](../standard-library/regex-error-class.md)  
 [\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)  
-[regex_iterator — klasa](../standard-library/regex-iterator-class.md)  
+[regex_iterator, klasa](../standard-library/regex-iterator-class.md)  
 [\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)  
-[regex_traits — klasa](../standard-library/regex-traits-class.md)  
+[regex_traits, klasa](../standard-library/regex-traits-class.md)  
 [\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)  
 

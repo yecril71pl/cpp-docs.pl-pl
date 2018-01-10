@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 98be16e8e493592f06aa2e4963f748e32b3f345d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b6760f2051542a28e78f5f8f2fa81f6937388d82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-events"></a>Kontrolki ActiveX MFC: zdarzenia
 Kontrolki ActiveX użyć zdarzeń, aby powiadomić kontener, który ma coś się stało z formantem. Typowe zdarzenia przykładami kliknięć w formancie dane wprowadzane przy użyciu klawiatury i zmiany w stanie formantu. Gdy są wykonywane następujące akcje, formantu wyzwala zdarzenie powiadamiania w kontenerze.  
@@ -54,9 +55,9 @@ Kontrolki ActiveX użyć zdarzeń, aby powiadomić kontener, który ma coś się
   
 -   [Formanty MFC ActiveX: Dodawanie zdarzeń standardowych](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
   
--   [Formanty MFC ActiveX: Dodawanie zdarzeń niestandardowych](../mfc/mfc-activex-controls-adding-custom-events.md)  
+-   [Kontrolki ActiveX MFC: dodawanie zdarzeń niestandardowych](../mfc/mfc-activex-controls-adding-custom-events.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Formanty MFC ActiveX: metody](../mfc/mfc-activex-controls-methods.md)   
- [Colecontrol — klasa](../mfc/reference/colecontrol-class.md)
+ [Klasa COleControl](../mfc/reference/colecontrol-class.md)

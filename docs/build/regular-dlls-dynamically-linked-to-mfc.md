@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c1835ad660c9dbb9f8e4b43dbf697ea960f82ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 930d56f7bc296225e6fefcf92e49087a2aed99cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Biblioteki DLL MFC regularne połączone dynamicznie z MFC
 Regularne, które biblioteki MFC DLL połączone dynamicznie z MFC jest bibliotekę DLL, która MFC jest używane wewnętrznie i eksportowanych funkcji w bibliotece DLL może być wywoływany przez pliki wykonywalne MFC lub innego typu niż MFC. Zgodnie z opisem w nazwę, tego rodzaju biblioteki DLL jest utworzony przy użyciu wersja biblioteki DLL MFC (znanej także jako udostępniony wersja MFC). Funkcje eksportowane są zazwyczaj ze standardowych biblioteki MFC DLL przy użyciu standardowych interfejsów C.  
@@ -100,7 +101,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
   
 -   [Zarządzanie danymi stanu modułów MFC](../mfc/managing-the-state-data-of-mfc-modules.md)  
   
--   [Przy użyciu bazy danych, OLE i MFC gniazda biblioteki DLL rozszerzeń w zwykłych bibliotekach DLL MFC](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
+-   [Używanie bibliotek DLL baz danych, OLE i rozszerzeń MFC gniazd w zwykłych bibliotekach MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
   
 -   [Używanie MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
   

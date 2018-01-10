@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 416353ea79bc4ee4e09fe72490a87b70dd6f0029
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db5d067a391512d56a2d01ce3052ac3fab061f28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-structured-exception-handling-with-c"></a>Korzystanie z obsługi wyjątków strukturalnych za pomocą języka C++
 Obsługa wyjątków strukturalnych opisane w następujących artykułach działa zarówno C i C++ plików źródłowych. Jednak nie są specjalnie zaprojektowane dla języka C++ i nie jest zalecane. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto obsługa mechanizmu wyjątków C++ jest bardziej elastyczne i, w którym może obsłużyć wyjątki dowolnego typu.  
@@ -28,4 +29,4 @@ Obsługa wyjątków strukturalnych opisane w następujących artykułach działa
  Microsoft C++ obsługuje teraz model oparty na ANSI C++ Standard obsługi wyjątków C++. Ten mechanizm automatycznie obsługuje stosowanie i niszczenie obiektów lokalnych podczas unwind stosu. Jeśli piszesz kod w języku C++ odpornej na uszkodzenia i implementowania obsługi wyjątków, zdecydowanie zaleca się użycie C++ obsługi wyjątków, zamiast Obsługa wyjątków strukturalnych. (Pamiętaj, że kompilator języka C++ obsługuje obsługi konstrukcje, zgodnie z opisem w następujących artykułach wyjątków strukturalnych, standardowy kompilator C nie obsługują wyjątek języka C++, Obsługa składni). Aby uzyskać szczegółowe informacje dotyczące obsługi wyjątków języka C++, zobacz [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md) i *opatrzone adnotacjami podręcznika C++* Margaret Ellis i Bjarne Stroustrup.  
   
 ## <a name="see-also"></a>Zobacz też  
- [(C/C++) obsługi wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md)
+ [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

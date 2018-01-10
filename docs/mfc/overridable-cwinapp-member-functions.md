@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3de4444aaeb55ab30ec6ce7e0ebd187c8468f673
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64775ad9f44c55529107b50d0695e95e2b9c3a2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overridable-cwinapp-member-functions"></a>Funkcje członkowskie CWinApp z możliwością zastąpienia
 [Cwinapp —](../mfc/reference/cwinapp-class.md) udostępnia kilka kluczowe funkcje Członkowskie możliwym do zastąpienia (`CWinApp` zastępuje te elementy członkowskie z klasy [cwinthread —](../mfc/reference/cwinthread-class.md), z którego `CWinApp` pochodzi):  
@@ -38,4 +39,4 @@ ms.lasthandoff: 10/24/2017
  Jedynym `CWinApp` jest funkcji członkowskiej, który należy zastąpić `InitInstance`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+ [CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce2f96937bfd037cc949142bf357447ac29c0ace
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 87ccbbd178de3e8a724e65a04a04319a90b7a311
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatasourceopenwithservicecomponents"></a>CDataSource::OpenWithServiceComponents
 Otwiera obiekt źródła danych w oledb32.dll przy użyciu składników usługi.  
@@ -66,4 +69,4 @@ HRESULT OpenWithServiceComponents (
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Cdatasource — klasa](../../data/oledb/cdatasource-class.md)
+ [CDataSource, klasa](../../data/oledb/cdatasource-class.md)

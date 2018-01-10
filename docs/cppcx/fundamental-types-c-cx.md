@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1984ba2b2291c14403af1237a9c990de2c0e0217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a41a5a97e94bdf9476d8345a7f9e103b81466f6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fundamental-types-ccx"></a>Podstawowe typy (C + +/ CX)
 Oprócz standardowych C++ wbudowanych typów, C + +/ CX obsługuje system typu, który jest definiowana za pomocą architektury środowiska wykonawczego systemu Windows, zapewniając definicje typów dla podstawowych środowiska wykonawczego systemu Windows typy, które odpowiadają typom standard C++. C + +/ CX implementuje wartość logiczna, znaków i typy podstawowe liczbowe. Te definicje typów zdefiniowanych w `default` przestrzeni nazw, które nigdy nie musi być jawnie określona. Ponadto C + +/ CX udostępnia konkretnych implementacji i otoki dla niektórych typów środowiska wykonawczego systemu Windows i interfejsów.  

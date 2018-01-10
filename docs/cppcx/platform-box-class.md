@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 101c3b3bc5572dbf8bf87ed3730abbbee3157404
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac0940d9a7277b7b3f5b66e8d27750a593081471
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformbox-class"></a>Klasa platform::Box
 Włącza typu wartości, takich jak `Windows::Foundation::DateTime` lub typem skalarnym, takich jak `int` mają być przechowywane w `Platform::Object` typu. Zazwyczaj nie jest konieczne użycie `Box` jawnie, ponieważ pakującej sytuacji niejawnie podczas rzutowania typu wartości do `Object^`.  

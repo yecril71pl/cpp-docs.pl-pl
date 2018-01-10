@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f47c0de0a4bbfec89fa91b04d7894c6f1daf968
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 73f06fc8b0a37d0e8a2362735b6d80f1e4ee11f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-c"></a>Wyrażenia (C++)
 W tej sekcji opisano wyrażeń języka C++. Wyrażenia są sekwencji operatory i argumenty, które są używane dla co najmniej jednego z tych celów:  
@@ -53,7 +54,7 @@ W tej sekcji opisano wyrażeń języka C++. Wyrażenia są sekwencji operatory i
   
  Tematy dotyczące operatorów w innych częściach:  
   
--   [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+-   [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
   
 -   [Operatory przeciążone](../cpp/operator-overloading.md)  
   

@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2b7e3fbeab0f769e6b520b6e9c5637d7631bb5db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cab9a833ee9c65aef9d0ad51d5d3b82e00d5cf9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcwchargt"></a>&lt;cwchar —&gt;
 Zawiera nagłówek biblioteki standardowe C \<wchar.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.  

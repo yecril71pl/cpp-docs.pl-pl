@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f12bc8c3a6e2ecaa544ab5bbe875cc2ae358ef3a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3317e3c9349963fc24b37b421def05c475732fd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="requirements-for-stlclr-container-elements"></a>Wymagania dotyczące elementów kontenera STL/CLR
 Wszystkie typy odwołań, które są wstawiane do kontenery STL/CLR musi mieć co najmniej następujące elementy:  
@@ -38,4 +41,4 @@ Wszystkie typy odwołań, które są wstawiane do kontenery STL/CLR musi mieć c
  Jak typów referencyjnych, typy wartości i uchwytów odwoływać się do typów, które mają zostać wstawione do kontenera asocjacyjnej musi mieć operator porównania takich jak `operator<` zdefiniowane. Wymagania dotyczące konstruktora kopiującego publiczne, operator przypisania publicznego i destruktorem publicznym nie istnieją dla typów wartości lub uchwytów typy referencyjne.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

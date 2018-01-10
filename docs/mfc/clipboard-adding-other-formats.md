@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 030deda8b46492dba76fb85702fa40f22b0db594
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e6f7f21a64c062e2f210be9f13ce04428c397f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clipboard-adding-other-formats"></a>Schowek: dodawanie innych formatów
 W tym temacie wyjaśniono, jak i rozwiń listę obsługiwanych formatów, szczególnie w przypadku obsługi. Temat [Schowek: kopiowanie i wkleić danych](../mfc/clipboard-copying-and-pasting-data.md) opisuje minimalne wykonania niezbędnych do obsługi kopiowanie i wklejanie ze Schowka. Jeśli to wszystkie zaimplementowaniem tylko formaty w Schowku znajduje są `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**i prawdopodobnie `CF_LINKSOURCE`. Większości aplikacji potrzebna jest więcej formatów w Schowku niż tych trzech.  
@@ -54,5 +55,5 @@ W tym temacie wyjaśniono, jak i rozwiń listę obsługiwanych formatów, szczeg
 -   [OLE](../mfc/ole-background.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schowek: Korzystanie z mechanizmu Schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+ [Schowek: korzystanie z mechanizmu schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 

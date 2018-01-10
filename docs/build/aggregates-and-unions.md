@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e1eee05a9a206d3c02f34d619cf78822aaa4ed61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 74ee1bbcf1a39171b18c09274543c72e0b844748
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aggregates-and-unions"></a>Agregacje i unie
 Innych typów, takich jak tablice, struktur i Unii mieć bardziej rygorystyczne wymagania dotyczące wyrównywania, zapewniając spójne Unii i agregacji magazynu i danych pobierania. Poniżej przedstawiono definicje dla tablic, struktury i Unii:  
@@ -39,14 +40,14 @@ Innych typów, takich jak tablice, struktur i Unii mieć bardziej rygorystyczne 
 |Typ skalarne|C — typ danych|Wyrównanie wymagane|  
 |**INT8**|`char`|Byte|  
 |**UINT8**|`unsigned char`|Byte|  
-|**INT16**|**krótki**|Word|  
+|**INT16**|**short**|Word|  
 |**UINT16**|**short bez znaku**|Word|  
 |**INT32**|**int, długi**|Bitowego|  
 |**UINT32**|**unsigned int, long bez znaku**|Bitowego|  
 |**INT64**|`__int64`|Quadword|  
 |**UINT64 —**|**__int64 bez znaku**|Quadword|  
 |**FP32 (pojedynczy dokładności)**|**float**|Bitowego|  
-|**FP64 (Podwójna precyzja)**|**podwójne**|Quadword|  
+|**FP64 (Podwójna precyzja)**|**double**|Quadword|  
 |**WSKAŹNIK**|**\***|Quadword|  
 |`__m64`|**__m64 — struktura**|Quadword|  
 |`__m128`|**__m128 — struktura**|Octaword|  
@@ -64,4 +65,4 @@ Innych typów, takich jak tablice, struktur i Unii mieć bardziej rygorystyczne 
 -   Poszczególne kompilatora mogą dostosować pakowania struktury przyczyn rozmiar. Na przykład [/Zp (wyrównanie członka struktury)](../build/reference/zp-struct-member-alignment.md) umożliwia dostosowanie pakowania struktur.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Typy i Magazyn](../build/types-and-storage.md)
+ [Typy i magazyn](../build/types-and-storage.md)

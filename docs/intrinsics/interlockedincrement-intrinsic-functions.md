@@ -55,11 +55,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6185aee179febe77fa9f5b47793e4becd253e504
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64866df8d2c0927e35a62b188e1f320cdd0bb2e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedIncrement
 **Dotyczące firmy Microsoft**  
@@ -142,4 +143,4 @@ __int64 _InterlockedIncrement64_nf(
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)   
- [Powoduje konflikt z x86 kompilatora](../build/conflicts-with-the-x86-compiler.md)
+ [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)

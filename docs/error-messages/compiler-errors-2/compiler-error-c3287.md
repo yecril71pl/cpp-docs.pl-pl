@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b09d2af16ca6d38e476e7298b2b5fb61b2b30129
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f282b1fd67603b17bd9c2ea1ad267218c7650e40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3287"></a>C3287 błąd kompilatora
 Typ "type" (typ zwrotny z GetEnumerator) musi mieć odpowiednie publicznego funkcję członkowską MoveNext oraz publiczną właściwość Current  

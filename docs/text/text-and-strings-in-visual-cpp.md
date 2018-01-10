@@ -35,11 +35,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1e302fb7003358a75cb0b3022c4264c1e63518e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a911b3a4547be409047004969043943b54bb2480
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-and-strings-in-visual-c"></a>Tekst i ciągi w programie Visual C++
 Ważnym aspektem opracowywanie aplikacji dla międzynarodową jest odpowiednią reprezentację zestawy znaków lokalnych. Zestaw znaków ASCII definiuje znaków z zakresu 0x00 do 0x7F. Brak innych zestawów znaków, przede wszystkim Europejskiej, zdefiniuj znaków z zakresu 0x00 do 0x7F identycznie do zestawu znaków ASCII, który również definiować rozszerzonego zestawu z 0x80 do 0xFF znaków. W związku z tym 8-bitową i pojedynczych bajtów znaków zestaw (SBCS) jest wystarczająca do reprezentowania zestawu znaków ASCII, a także zestawy znaków dla wielu języków europejskich. Jednak niektóre zestawy Nieeuropejskie znaków, takich jak japoński Kanji obejmują wiele więcej znaków niż schemat kodowania jednobajtowe reprezentują i dlatego wymaga zestawu znaków wielobajtowych (MBCS) kodowania.  
@@ -54,14 +55,14 @@ Ważnym aspektem opracowywanie aplikacji dla międzynarodową jest odpowiednią 
  [Obsługa zestawów znaków wielobajtowych (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)  
  W tym artykule omówiono MBCS, zamiast Unicode do obsługi zestawów znaków, takich jak japoński i chiński, której nie można przedstawić w pojedynczy bajt.  
   
- [Mapowania zwykłego tekstu w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md)  
+ [Mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md)  
  Mapowania zwykłego tekstu specyficzne dla firmy Microsoft zawiera wiele typów danych, procedury i innych obiektów.  
   
- [Porady: konwertowanie między rozmaitymi typami ciągów](../text/how-to-convert-between-various-string-types.md)  
+ [Instrukcje: konwertowanie między rozmaitymi typami ciągów](../text/how-to-convert-between-various-string-types.md)  
  Pokazuje, jak przekonwertować rozmaitymi typami ciągów Visual C++ na innych ciągów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Przystosowywanie do warunków międzynarodowych](../c-runtime-library/internationalization.md)  
+ [Internacjonalizacja](../c-runtime-library/internationalization.md)  
  W tym artykule omówiono obsługi międzynarodowej biblioteki wykonawcze języka C.  
   
  [Międzynarodowe przykłady](http://msdn.microsoft.com/en-us/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  

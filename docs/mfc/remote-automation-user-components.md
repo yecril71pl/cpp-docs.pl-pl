@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3fa97dff482226c7a9e6554a0479eb76b25c47f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f82fe529586579109434da447e26b15dcb9503a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remote-automation-user-components"></a>Składniki użytkownika automatyzacji zdalnej
 Należy zapewnić, że każdy komputer kliencki zawiera program kliencki i wszelkie wsparcie wymaga bibliotek DLL. Należy również upewnić się, czy aplikacja serwera i wszystkie biblioteki dll wymaga obsługi znajdują się na komputerze z serwerem. Ponadto należy upewnić się, że server program jest zarejestrowane na każdym komputerze klienckim przed Aby skonfigurować połączenie, można uruchomić Menedżera RAC. Program samodzielnie rejestruje (jak najbardziej będzie), wymagają tylko wykonywania programu server na komputerze klienckim, aby go zarejestrować. Kończą się niepowodzeniem może być konieczne wykonanie plik rejestracji, który podasz lub ręcznej edycji rejestru.  

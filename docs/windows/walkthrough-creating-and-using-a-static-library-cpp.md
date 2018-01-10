@@ -16,11 +16,14 @@ caps.latest.revision: "38"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 97de0b4dba9aa05e34c03077d22f42bb7a2266b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3af6bc41d353f82bb1f95c73f079e530da19dba0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Wskazówki: tworzenie i używanie biblioteki statycznej (C++)
 Ten przewodnik krok po kroku przedstawiono sposób tworzenia biblioteki statycznej (pliku lib) do użytku z aplikacjami C++. Używanie biblioteki statycznej jest to dobry sposób na ponowne użycie kodu. Zamiast ponownego wykonywania tej samej procedury w każdej aplikacji, która wymaga funkcji, zapisze je jeden raz w bibliotece statycznej i odwoływanie się z aplikacji. Kod powiązany z biblioteką statyczną staje się częścią aplikacji — nie trzeba zainstalować inny plik do kodu.  

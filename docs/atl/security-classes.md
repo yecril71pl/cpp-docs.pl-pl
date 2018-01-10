@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 98c325570428699640923711730df8172a43631d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 375f4604e1d6064ce64fc1c74113cfb8d4bddf22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-classes"></a>Klasy zabezpieczeń
 Te klasy są otoki dla typowych Win32 zabezpieczeń klas i obiektów.  
@@ -45,5 +46,5 @@ Te klasy są otoki dla typowych Win32 zabezpieczeń klas i obiektów.
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd klas](../atl/atl-class-overview.md)   
- [Globalne funkcje zabezpieczeń](../atl/reference/security-global-functions.md)
+ [Funkcje globalne zabezpieczeń](../atl/reference/security-global-functions.md)
 

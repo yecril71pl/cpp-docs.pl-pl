@@ -39,11 +39,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e5c836c30d67f1d8c5b77e6fbdba4d312fbf6c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 118c792b1b732fa1e8b024bb6b80da5ea0e7aa31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcrebar-class"></a>Klasa CMFCReBar
 A `CMFCReBar` obiekt jest pasek sterowania, który zapewnia układu, trwałości i informacje o formantach paska pomocniczego stanie.  

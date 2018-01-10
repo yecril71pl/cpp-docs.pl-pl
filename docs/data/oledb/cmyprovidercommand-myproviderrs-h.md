@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68846352d3e6b407a4ec7ef6b7993969371a89de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 67a394ce3c3b05e3f5eea49cbd3a234a0dd89df2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 `CMyProviderCommand` Klasa jest implementacją dla obiekt polecenia dostawcy. Zapewnia implementację `IAccessor`, `ICommandText`, i **ICommandProperties** interfejsów. `IAccessor` Interfejsu jest taka sama jak w zestawie wierszy. Obiekt polecenia użyto metody dostępu do określenia powiązania parametrów. Obiektu zestawu wierszy używa ich, aby określić powiązania dla kolumny wyjściowe. `ICommandText` Interfejsu jest to wygodny sposób, aby określić polecenie w postaci tekstu. W tym przykładzie użyto `ICommandText` interfejs później, gdy dodaje kod niestandardowy; zastępuje ona również `ICommand::Execute` metody. **ICommandProperties** interfejs obsługuje wszystkie właściwości dla obiektów poleceń i zestawu wierszy.  

@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1879def3a66765c48d9f86e4b7f0c56785a0cf91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql"></a>SQL
 SQL (Structured Query Language) to sposób komunikowania się z relacyjnej bazy danych, który pozwala zdefiniować, zapytania, modyfikowania i kontrolowanie danych. Przy użyciu składni SQL, można utworzyć instrukcję, która wyodrębnia rekordów w zależności od określonych kryteriów.  
@@ -54,8 +57,8 @@ SQL (Structured Query Language) to sposób komunikowania się z relacyjnej bazy 
   
 |Słowa kluczowego SQL|Używany kreatorów i klasy baz danych|  
 |-----------------|---------------------------------------------|  
-|**WYBIERZ**|Aby określić, które tabele i kolumny w źródle danych mają być używane.|  
-|**GDZIE**|Aby zastosować filtr, który znajduje się w zakresie zaznaczenia.|  
+|**SELECT**|Aby określić, które tabele i kolumny w źródle danych mają być używane.|  
+|**WHERE**|Aby zastosować filtr, który znajduje się w zakresie zaznaczenia.|  
 |**ORDER BY**|Aby zastosować kolejność sortowania do zestawu rekordów.|  
 |**WSTAW**|Dodawanie nowych rekordów do zestawu rekordów.|  
 |**USUŃ**|Do usuwania rekordów z zestawu rekordów.|  
@@ -85,9 +88,9 @@ SQL (Structured Query Language) to sposób komunikowania się z relacyjnej bazy 
   
 -   [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
--   [SQL: SQL i typy danych języka C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)  
+-   [SQL: typy danych SQL i C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)  
   
--   [SQL: Wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)  
+-   [SQL: wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Otwórz połączenie z bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   

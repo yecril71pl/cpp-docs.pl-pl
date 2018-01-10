@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c703bc68a36dd21c837e62738d9d2c2631502a0d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78ae6c36011e3c10359988cf2c501514d1bcf70a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pgosweep"></a>pgosweep
 Używane w Optymalizacja sterowana profilem, aby zapisać wszystkie dane profilu z uruchomiony program plik .pgc.  
@@ -61,4 +62,4 @@ pgosweep myapp.exe myapp!1.pgc
  W tym przykładzie `pgosweep` zapisuje informacji o bieżącym profilu dla myapp.exe myapp!1.pgc.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Narzędzia do ręcznego optymalizacji sterowanych profilem](../../build/reference/tools-for-manual-profile-guided-optimization.md)
+ [Narzędzia do ręcznej optymalizacji sterowanej profilem](../../build/reference/tools-for-manual-profile-guided-optimization.md)

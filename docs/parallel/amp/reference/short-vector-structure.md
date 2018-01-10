@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8245c5ebf1013f226bcef5050e3a91680b837b67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e18b22bdc70accae1edae7159fafa3e9d679905c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shortvector-structure"></a>short_vector — Struktura
 short_vector — zapewnia metaprogramowania definicje, które są przydatne w przypadku objęty programowania wektory krótki.  
@@ -117,4 +118,4 @@ short_vector();
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [CONCURRENCY::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

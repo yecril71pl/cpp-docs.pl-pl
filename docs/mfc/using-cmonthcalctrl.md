@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b16df22efe86310e4d6faeadc35085507e15a7e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee958116b7eed8804bb6c540187eea6b37d750ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cmonthcalctrl"></a>Korzystanie z CMonthCalCtrl
 Formant kalendarza miesięcznego ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementuje interfejs użytkownika przypominającej kalendarza. To zapewnia użytkownikowi dostęp do bardzo intuicyjne i rozpoznawalnych metodę wprowadzania lub wybieranie daty. Formant zawiera również aplikacji, sposób uzyskiwania i ustawiania informacje o dacie w formancie przy użyciu istniejących typów danych. Domyślnie formant kalendarza miesięcznego Wyświetla bieżącego dnia i miesiąca. Jednak użytkownik będzie mógł przejdź do poprzedniego i następnego miesiąca i wybierz w określonym miesiącu i/lub roku.  
@@ -29,14 +30,14 @@ Formant kalendarza miesięcznego ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   
--   [Tworzenie kalendarza miesięcznego formantu](../mfc/creating-the-month-calendar-control.md)  
+-   [Tworzenie kontrolki kalendarza miesięcznego](../mfc/creating-the-month-calendar-control.md)  
   
--   [Przykłady formantów kalendarza miesięcznego](../mfc/month-calendar-control-examples.md)  
+-   [Przykłady kontrolek kalendarza miesięcznego](../mfc/month-calendar-control-examples.md)  
   
--   [Przetwarzanie komunikatów powiadomień w miesiącu formantach kalendarza](../mfc/processing-notification-messages-in-month-calendar-controls.md)  
+-   [Przetwarzanie komunikatów powiadomień w kontrolkach kalendarza miesięcznego](../mfc/processing-notification-messages-in-month-calendar-controls.md)  
   
--   [Ustawianie stanu dnia miesiąca w formancie kalendarza](../mfc/setting-the-day-state-of-a-month-calendar-control.md)  
+-   [Ustawianie stanu dnia kontrolki kalendarza miesięcznego](../mfc/setting-the-day-state-of-a-month-calendar-control.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

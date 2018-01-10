@@ -18,11 +18,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7eb84d1979d3655c49e5fe089fe04d44708d16a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Klasa szablonu opisuje obiekt, który kontroluje zróżnicowanie długości uporządkowane sekwencji elementów, który ma ograniczony dostęp. Użyj karty kontenera `priority_queue` Zarządzanie kontenerem podstawowej jako priorytet kolejki.  
@@ -56,21 +59,21 @@ template<typename Value,
 |[priority_queue::difference_type (STL/CLR)](../dotnet/priority-queue-difference-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
 |[priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)|Typ ogólny interfejs umożliwiający karty kontenera.|  
 |[priority_queue::generic_value (STL/CLR)](../dotnet/priority-queue-generic-value-stl-clr.md)|Typ elementu ogólnego interfejsu dla karty kontenera.|  
-|[priority_queue::Reference (STL/CLR)](../dotnet/priority-queue-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[priority_queue::reference (STL/CLR)](../dotnet/priority-queue-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[priority_queue::size_type (STL/CLR)](../dotnet/priority-queue-size-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
 |[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)|Delegat porządkowania dla dwóch elementów.|  
 |[priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)|Typ elementu.|  
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[priority_queue::ASSIGN (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)|Zamienia wszystkie elementy.|  
-|[priority_queue::EMPTY (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[priority_queue::assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)|Zamienia wszystkie elementy.|  
+|[priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
 |[priority_queue::get_container (STL/CLR)](../dotnet/priority-queue-get-container-stl-clr.md)|Uzyskuje dostęp do podstawowych kontenera.|  
-|[priority_queue::POP (STL/CLR)](../dotnet/priority-queue-pop-stl-clr.md)|Usuwa element najwyższa priorytet.|  
+|[priority_queue::pop (STL/CLR)](../dotnet/priority-queue-pop-stl-clr.md)|Usuwa element najwyższa priorytet.|  
 |[priority_queue::priority_queue (STL/CLR)](../dotnet/priority-queue-priority-queue-stl-clr.md)|Konstruuje obiekt kontenera.|  
 |[priority_queue::push (STL/CLR)](../dotnet/priority-queue-push-stl-clr.md)|Dodaje nowy element.|  
 |[priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)|Liczy liczbę elementów.|  
-|[priority_queue::Top (STL/CLR)](../dotnet/priority-queue-top-stl-clr.md)|Uzyskuje dostęp do elementu najwyższy priorytet.|  
+|[priority_queue::top (STL/CLR)](../dotnet/priority-queue-top-stl-clr.md)|Uzyskuje dostęp do elementu najwyższy priorytet.|  
 |[priority_queue::to_array (STL/CLR)](../dotnet/priority-queue-to-array-stl-clr.md)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|  
 |[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)|Kopiuje porządkowania delegowanie dla dwóch elementów.|  
   
@@ -80,7 +83,7 @@ template<typename Value,
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[priority_queue::operator = (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -126,4 +129,4 @@ template<typename Value,
  [kolejki (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [stos (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [Wektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

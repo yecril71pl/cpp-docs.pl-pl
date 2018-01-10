@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 148d4b734f0e2cb56e959f54b99fb89a5efa6669
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba6ac8e50764801052c051703a211c4605a33601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniqueptr-class"></a>unique_ptr — Klasa
 Przechowuje wskaźnik do obiektu należące do firmy lub tablicy. Obiekt/tablicy jest własnością nie innych `unique_ptr`. Obiekt/tablicy zostanie zniszczony podczas `unique_ptr` zostanie zniszczony.  
@@ -147,7 +148,7 @@ public:
   
 |||  
 |-|-|  
-|[Pobierz](#get)|Zwraca `stored_ptr`.|  
+|[get](#get)|Zwraca `stored_ptr`.|  
 |[get_deleter —](#get_deleter)|Zwraca odwołanie do `stored_deleter`.|  
 |[zlecenia](#release)|przechowuje `pointer()` w `stored_ptr` i zwraca jego poprzedniej zawartości.|  
 |[Resetowanie](#reset)|Zwalnia aktualnie posiadany zasób i akceptuje nowy zasób.|  

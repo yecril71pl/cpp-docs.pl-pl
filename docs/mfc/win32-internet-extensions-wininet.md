@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d56bef1545d582caab72b9e309b27a540ac62f39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a3730c7e0ae1dbbae299ddbe6128044effa101a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32-internet-extensions-wininet"></a>Rozszerzenia internetowe Win32 (WinInet)
 Klienckich aplikacji internetowych to program, który uzyskuje dostęp do informacji ze źródła danych sieci (serwer) przy użyciu protokołów internetowych, takich jak gopher, FTP lub HTTP. Klienckich aplikacji internetowych mogą uzyskiwać dostęp do serwera, aby pobrać dane, takie jak map pogodzie, giełdowych lub gazecie nagłówki, na przykład. Klienta internetowego dostęp do serwera za pośrednictwem sieci zewnętrznej (Internet) lub sieci wewnętrznej (nazywane w intranecie).  
@@ -45,15 +46,15 @@ Klienckich aplikacji internetowych to program, który uzyskuje dostęp do inform
   
  Poniższe tematy zawierają opis etapów wykonywania typowych zadań WinInet:  
   
--   [Kroki opisane w typowej klienckiej aplikacji internetowej](../mfc/steps-in-a-typical-internet-client-application.md)  
+-   [Kroki wykonywane w typowej klienckiej aplikacji internetowej](../mfc/steps-in-a-typical-internet-client-application.md)  
   
--   [Kroki opisane w typowej aplikacji klienckiej FTP](../mfc/steps-in-a-typical-ftp-client-application.md)  
+-   [Kroki wykonywane w typowej aplikacji klienckiej FTP](../mfc/steps-in-a-typical-ftp-client-application.md)  
   
--   [Kroki opisane w typowej aplikacji klienckiej FTP do usunięcia pliku](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
+-   [Procedura usuwania pliku w typowej aplikacji klienckiej FTP](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
   
--   [Kroki opisane w typowej aplikacji klienckiej Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
+-   [Kroki wykonywane w typowej aplikacji klienckiej Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
--   [Kroki opisane w typowej aplikacji klienckiej HTTP](../mfc/steps-in-a-typical-http-client-application.md)  
+-   [Kroki wykonywane w typowej aplikacji klienckiej HTTP](../mfc/steps-in-a-typical-http-client-application.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)   

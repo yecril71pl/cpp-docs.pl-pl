@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d03b67b1207827ae753c9d2583d57eab49dc223a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed3f9adb564676d54e06152bfd7d277c4a5d952
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="textureview-class"></a>texture_view — Klasa
 Zapewnia dostęp do odczytu i zapisu do tekstury. `texture_view`może służyć tylko do odczytu tekstury, którego typ wartości jest `int`, `unsigned int`, lub `float` , która ma domyślne bpse 32-bitowych. Aby odczytać inne formaty tekstury, należy użyć `texture_view<const value_type, _Rank>`.  
@@ -81,9 +82,9 @@ class texture_view<const value_type, _Rank>
 |[gather_blue](#gather_blue)|Przeciążone. Przykłady w określonych współrzędnych tekstury za pomocą konfiguracji określonego próbkowania i zwraca składniki cztery tekseli próbki niebieski (z).|  
 |[gather_green](#gather_green)|Przeciążone. Przykłady w określonych współrzędnych tekstury za pomocą konfiguracji określonego próbkowania i zwraca składniki cztery tekseli próbki zielony (y).|  
 |[gather_red](#gather_red)|Przeciążone. Przykłady w określonych współrzędnych tekstury za pomocą konfiguracji określonego próbkowania i zwraca składniki cztery tekseli próbki czerwony (x).|  
-|[Pobierz](#get)|Przeciążone. Pobiera wartość elementu według indeksu.|  
+|[get](#get)|Przeciążone. Pobiera wartość elementu według indeksu.|  
 |[próbki](#sample)|Przeciążone. Przykłady na poziomie szczegółowości i określonych współrzędnych tekstury za pomocą próbkowania określonej konfiguracji.|  
-|[zestaw](#set)|Ustawia wartość elementu według indeksu.|  
+|[set](#set)|Ustawia wartość elementu według indeksu.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -501,4 +502,4 @@ typedef typename const value_type value_type;
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [CONCURRENCY::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

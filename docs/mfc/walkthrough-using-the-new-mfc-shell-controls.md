@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0169cf171e519a4fd620cacd7e684c400f94929d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be882671da836f7d96f4c726753d6235735f363d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Wskazówki: używanie nowych formantów powłoki MFC
 W tym przewodniku utworzysz aplikację, która jest podobny Eksploratora plików. Utworzysz okna, który zawiera dwa okienka. W okienku po lewej stronie będzie zawierać [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) obiekt, który wyświetla pulpitu w hierarchiczny widok. Okienku po prawej stronie będzie zawierać [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) który zawiera pliki w folderze, który wybrano w okienku po lewej stronie.  
@@ -196,5 +197,5 @@ W tym przewodniku utworzysz aplikację, która jest podobny Eksploratora plików
 -   `CMFCShellListCtrl` Obsługuje wyświetlanie plików w różnych trybach, takich jak **duże ikony**, **małych ikon**, **listy**, i **szczegóły**. Aktualizuj aplikację, aby zaimplementować tę funkcję. Wskazówka: zobacz [Visual C++ — przykłady](../visual-cpp-samples.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Instruktaże](../mfc/walkthroughs-mfc.md)
+ [Przewodniki](../mfc/walkthroughs-mfc.md)
 

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6d4ea26a75d37e264344aaacfa660e6d66dc8d5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5407e201b25fdf9b5344d438a69e2fc3e972327b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="model"></a>.MODEL
 Inicjuje modelu pamięci programu.  
@@ -56,7 +57,7 @@ Inicjuje modelu pamięci programu.
 |`stackoption`|Nieużywane|`NEARSTACK`, `FARSTACK`|  
   
 ## <a name="code"></a>Kod  
- Dla MASM związane z przykładów pobierania próbek kompilatora z [Visual C++ — przykłady i dokumentacja pokrewna dla programu Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=178749).  
+ Dla MASM związane z przykładów pobierania próbek kompilatora z [Visual C++ — przykłady i dokumentacja pokrewna dla programu Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749).  
   
  W poniższym przykładzie pokazano użycie `.MODEL` dyrektywy.  
   
@@ -94,4 +95,4 @@ end
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)   
- [Visual C++ — przykłady i dokumentacja pokrewna dla programu Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=178749)
+ [Visual C++ — przykłady i dokumentacja pokrewna dla programu Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749)

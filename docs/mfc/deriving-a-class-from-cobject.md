@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0569f745c1531e59d9b45f54c957176de4896f25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97e151d8c3ec44286807baf5e68d4e4eac17e306
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deriving-a-class-from-cobject"></a>Wyprowadzanie klasy z obiektu CObject
 W tym artykule opisano minimalną kroki niezbędne do wyprowadzenia klasy z [CObject](../mfc/reference/cobject-class.md). Inne `CObject` klasy artykuły zawierają czynności, aby móc korzystać z określonych `CObject` funkcje, takie jak serializacji i diagnostycznych obsługę debugowania.  

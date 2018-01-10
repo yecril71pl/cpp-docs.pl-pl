@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc466f35b06790fd503c3b4684714e84f6ebac6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c97c12c00ec32d4311be811f0c81c34bbdda9e55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="equ"></a>EQU
 Pierwsza dyrektywa przypisuje wartość numeryczna *wyrażenie* do *nazwa*.  
@@ -38,4 +39,4 @@ name EQU <text>
  Drugi przypisuje dyrektywy określony *tekst* do *nazwa*. *Nazwa* można przypisać inną *tekst* później. Zobacz [textequ —](../../assembler/masm/textequ.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

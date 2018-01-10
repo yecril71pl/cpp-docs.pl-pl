@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aea20ee048ce0a11bb81893b0f492dcb28bd2aee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 643888b4a2bca802a9314d3468f2f416ff8a77b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-handling-and-io-ccli"></a>Obsługa plików i we/wy (C++/CLI)
 Przedstawia różne operacje pliku przy użyciu programu .NET Framework.  
@@ -31,20 +34,20 @@ Przedstawia różne operacje pliku przy użyciu programu .NET Framework.
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Porady: Wyliczanie plików w katalogu (C + +/ CLI)](../dotnet/how-to-enumerate-files-in-a-directory-cpp-cli.md)  
+-   [Instrukcje: wyliczanie plików w katalogu (C++/CLI)](../dotnet/how-to-enumerate-files-in-a-directory-cpp-cli.md)  
   
--   [Porady: monitorowane zmian systemu plików (C + +/ CLI)](../dotnet/how-to-monitor-file-system-changes-cpp-cli.md)  
+-   [Instrukcje: monitorowane zmian systemu plików (C++/CLI)](../dotnet/how-to-monitor-file-system-changes-cpp-cli.md)  
   
--   [Porady: odczytywanie pliku binarnego (C + +/ CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)  
+-   [Instrukcje: odczytywanie pliku binarnego (C++/CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)  
   
--   [Porady: odczytywanie pliku tekstowego (C + +/ CLI)](../dotnet/how-to-read-a-text-file-cpp-cli.md)  
+-   [Instrukcje: odczytywanie pliku tekstowego (C++/CLI)](../dotnet/how-to-read-a-text-file-cpp-cli.md)  
   
--   [Porady: pobieranie informacji o pliku (C + +/ CLI)](../dotnet/how-to-retrieve-file-information-cpp-cli.md)  
+-   [Instrukcje: pobieranie informacji o pliku (C++/CLI)](../dotnet/how-to-retrieve-file-information-cpp-cli.md)  
   
--   [Porady: wpisywanie danych do pliku binarnego (C + +/ CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)  
+-   [Instrukcje: wpisywanie danych do pliku binarnego (C++/CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)  
   
--   [Porady: wpisywanie tekstu do pliku (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)  
+-   [Instrukcje: wpisywanie tekstu do pliku tekstowego (C++/CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)  
   
  
 ## <a name="see-also"></a>Zobacz też  
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

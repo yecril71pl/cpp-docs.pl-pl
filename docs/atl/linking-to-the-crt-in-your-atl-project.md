@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59f6fa9ada7c69814d1841b350afc247ec489704
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 631426fece3960303d67d8929e99c404beaab998
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>Łączenie z CRT w ATL projektu
 [Biblioteki wykonawcze języka C](../c-runtime-library/crt-library-features.md) (CRT) zapewniają wiele przydatne funkcje, które mogą ułatwić programowania w języku znacznie podczas tworzenia biblioteki ATL. Wszystkie projekty ATL łącze do biblioteki CRT. Widać zalety i wady łączenie metody w [zalety i wady i zalety używania metody do łącza do CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md).  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Programowanie za pomocą ALT i C Run-Time kodu](../atl/programming-with-atl-and-c-run-time-code.md)   
- [Biblioteki dll i zachowanie biblioteki wykonawczej programu Visual C++](../build/run-time-library-behavior.md)
+ [Zachowanie biblioteki wykonawczej DLL i Visual C++](../build/run-time-library-behavior.md)
 

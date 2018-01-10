@@ -14,24 +14,24 @@ helpviewer_keywords:
 - enumerating collections [MFC]
 - collections [MFC], accessing
 - collection classes [MFC]
-- accessing members"
-- arrays [MFC], iterating
-- iteration [MFC], collections
-- member access [MFC], collections
-- list collection iteration [MFC]s
-- MFC collection classes [MFC], accessing members
-- collections [MFC], looping through
-- loop structures [MFC], looping through collections
+- ', '
+- ', '
+- ', '
+- ', '
+- ', '
+- ', '
+- ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
 caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5b3f6e78bfd0beac1c3c5eb2b2248ddaa7b6f1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34ba2795c12695702b2e38034081e17d69c156d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji
 Klasy kolekcji tablic MFC — zarówno na podstawie szablonu, a nie — umożliwia dostęp do swoich elementów indeksów. Klasy kolekcji listy, a następnie mapować MFC — zarówno na podstawie szablonu i nie — użyj wskaźnika typu **pozycji** do opisywania określonej pozycji w kolekcji. Aby uzyskać dostęp do co najmniej jeden członkowie tych kolekcji, należy najpierw zainicjować wskaźnik położenia wielokrotnie przekazania tej pozycji do kolekcji i poproś go do zwrócenia następnego elementu. Kolekcja nie jest odpowiedzialny za konserwację stanu informacje postępie iteracji. Czy informacje są przechowywane w wskaźnik położenia. Jednak podane określonej pozycji, Kolekcja jest odpowiedzialny za zwrócenie następnego elementu.  

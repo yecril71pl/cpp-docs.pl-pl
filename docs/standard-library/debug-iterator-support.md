@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0c2f0153d216292169b72e3e75d5d40fb5f35cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea016877744bed8e91f8e7144560969b2dbca745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-iterator-support"></a>Obsługa iteratora debugowania
 Biblioteki wykonawczej programu Visual C++ wykrywa Użyj iteratora niepoprawny i potwierdzeń i wyświetla okno dialogowe w czasie wykonywania. Aby włączona obsługa iteratora debugowania, należy użyć debugowania wersji standardowa biblioteka C++ i Biblioteka środowiska wykonawczego języka C do skompilowania programu. Aby uzyskać więcej informacji, zobacz [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md). Aby uzyskać informacje o sposobie używania zaznaczone Iteratory, zobacz [zaznaczone Iteratory](../standard-library/checked-iterators.md).  
@@ -196,7 +197,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
-[Przegląd biblioteki C++ Standard](../standard-library/cpp-standard-library-overview.md)
+[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)
 
 
 

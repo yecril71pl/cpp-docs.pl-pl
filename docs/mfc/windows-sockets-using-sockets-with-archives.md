@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3eb7d6c18e1a1fd77e0c0c8506d46536add5cb21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9956e48f88988dfec7e04cda5bba95e514ec109
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: używanie gniazd z archiwami
 W tym artykule opisano [CSocket — model programowania](#_core_the_csocket_programming_model). Klasa [CSocket —](../mfc/reference/csocket-class.md) dostarcza obsługi gniazda na wyższym poziomie abstrakcji niż klasa [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket`używana wersja protokołu serializacji MFC do przekazywania danych do i z obiektu gniazda za pomocą MFC [CArchive](../mfc/reference/carchive-class.md) obiektu. `CSocket`Umożliwia blokowanie (podczas zarządzania przetwarzania komunikatów systemu Windows w tle) i umożliwia dostęp do `CArchive`, która zarządza wielu aspektów komunikacji, który będzie musiał wykonać samodzielnie przy użyciu raw interfejsu API albo klasy `CAsyncSocket`.  
@@ -82,9 +83,9 @@ W tym artykule opisano [CSocket — model programowania](#_core_the_csocket_prog
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Windows Sockets: Gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)  
+-   [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows Sockets: Gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)   

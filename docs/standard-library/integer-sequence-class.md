@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 129847900bc64ea0696f2736f173b9e57f7595ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1765d6852248727e808cd9d8a98b56427abd6273
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integersequence-class"></a>integer_sequence — klasa
 Reprezentuje sekwencji liczby całkowitej. Można wywnioskować i rozwiń listę pakietów parametrów w typach ze zmienną liczbą argumentów, takich jak std::tuple\<T... > przekazywane jako argumenty do funkcji.  
@@ -131,5 +132,5 @@ int main()
  Zaimportowane: Standard  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielokropki i szablony Wariadyczne](../cpp/ellipses-and-variadic-templates.md)
+ [Wielokropki i szablony wariadyczne](../cpp/ellipses-and-variadic-templates.md)
 

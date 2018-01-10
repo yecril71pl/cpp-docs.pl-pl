@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 82daf0ecf506d55a6067b30ee568e11bf3e82364
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-member-overview"></a>Omówienie elementu członkowskiego klasy
 Klasy lub struktury składa się z jego elementów członkowskich. Pracy, który wykonuje klasy jest wykonywane przez funkcje elementu członkowskiego. Stan, który przechowuje jest przechowywany w jego elementów członkowskich danych. Inicjowania elementów członkowskich odbywa się przez konstruktory i oczyszczania pracy, takich jak zwalnianie pamięci i zwolnienie zasobów jest realizowane przez destruktorów. W języku C ++ 11 i nowszych, elementy członkowskie danych można i zazwyczaj powinien być inicjowane w punkcie deklaracji.  
@@ -51,7 +52,7 @@ Klasy lub struktury składa się z jego elementów członkowskich. Pracy, który
 -   [Aliasy i definicje typów](../cpp/aliases-and-typedefs-cpp.md).  
   
     > [!NOTE]
-    >  Elementy zaprzyjaźnione są ujęte w powyższej liście, ponieważ są zawarte w deklaracji klasy. Jednak nie są one elementami klas wartości true, ponieważ nie są one w zakresie tej klasy.  
+    >  Elementy zaprzyjaźnione są ujęte w powyższej liście, ponieważ są zawarte w deklaracji klasy. Jednak nie są one prawdziwymi składowymi klasy, ponieważ nie są one w zakresie tej klasy.  
   
 ## <a name="example-class-declaration"></a>Przykład deklaracji klasy  
  W poniższym przykładzie przedstawiono deklaracji klasy prosty:  
@@ -146,7 +147,7 @@ int main()
   
  Jeśli element członkowski jest przypisywana wartość w konstruktorze, ta wartość zastępuje wartość, której element członkowski został zainicjowany w punkcie deklaracji.  
   
- Istnieje tylko jedna kopia udostępnionych danych statycznych elementów członkowskich dla wszystkich obiektów typu danej klasy. Dane statyczne członków muszą być zdefiniowane i mogą być zainicjowane w zakresie pliku. (Aby uzyskać więcej informacji na temat statyczne elementy członkowskie danych, zobacz [statyczne elementy członkowskie danych](../cpp/static-members-cpp.md).) Poniższy przykład pokazuje sposób wykonywania takiego inicjowania:  
+ Istnieje tylko jedna kopia udostępnionych danych statycznych składowych dla wszystkich obiektów typu danej klasy. Dane statyczne członków muszą być zdefiniowane i mogą być zainicjowane w zakresie pliku. (Aby uzyskać więcej informacji na temat statyczne elementy członkowskie danych, zobacz [statyczne elementy członkowskie danych](../cpp/static-members-cpp.md).) Poniższy przykład pokazuje sposób wykonywania takiego inicjowania:  
   
 ```  
 // class_members2.cpp  
@@ -172,7 +173,7 @@ int CanInit2::j = i;
 ```  
   
 > [!NOTE]
->  Nazwa klasy `CanInit2` musi znajdować się przed `i`, aby określić, że `i` definiowany jest elementem członkowskim klasy `CanInit2`.  
+>  Nazwa klasy `CanInit2` musi znajdować się przed `i`, aby określić, że definiowany `i` jest składową klasy `CanInit2`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

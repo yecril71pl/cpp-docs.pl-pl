@@ -39,11 +39,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2eb503747b9e3a8b8a630fccdbdd8b0da9428058
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57b6903568f635ec2f92512c922fc7c8460e7d07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="int2-class"></a>int_2 — Klasa
 Reprezentuje krótki wektor dwóch liczb całkowitych.  
@@ -202,4 +203,4 @@ static const int size = 2;
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [CONCURRENCY::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

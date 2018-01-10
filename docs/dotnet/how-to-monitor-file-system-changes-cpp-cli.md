@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b0b75ea559cac35ef764818d3a99162a72cfc62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ba75c40b87da01052cd6511cdfd4b8b08219742d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-monitor-file-system-changes-ccli"></a>Porady: monitorowane zmian systemu plików (C++/CLI)
 Poniższy przykład kodu wykorzystuje <xref:System.IO.FileSystemWatcher> zarejestrować zdarzenia odpowiadające pliki tworzona zmienione, usunięty lub zmieniono nazwę. Zamiast okresowo sondowanie w katalogu dla zmian w plikach, możesz użyć <xref:System.IO.FileSystemWatcher> klasy do uruchamiania zdarzeń po wykryciu zmiany.  
@@ -93,4 +96,4 @@ int main()
 ## <a name="see-also"></a>Zobacz też  
  [System.IO — przestrzeń nazw](https://msdn.microsoft.com/en-us/library/system.io.aspx)   
  [Plik i strumienia I-O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

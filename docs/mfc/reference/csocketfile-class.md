@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b08bff6bd803d1552861adc52ee08152025f9240
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48ab1428d2c02e51b02977c8457d28e20597cbb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csocketfile-class"></a>Klasa CSocketFile
 A `CFile` obiekt używany do wysyłania i odbierania danych przez sieć za pośrednictwem usługi Windows Sockets.  
@@ -101,4 +102,4 @@ explicit CSocketFile(
  [Cfile — klasa](../../mfc/reference/cfile-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Casyncsocket — klasa](../../mfc/reference/casyncsocket-class.md)   
- [CSocket — klasa](../../mfc/reference/csocket-class.md)
+ [Klasa CSocket](../../mfc/reference/csocket-class.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8278a1dd22a242834fd4559c580820ae6e69e21d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4560905660ea80524c3e26bf14a803a2bc74344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn001-window-class-registration"></a>TN001: rejestracja klas okien
 Ta uwaga opisano procedury MFC, które rejestrują specjalną [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es wymagane przez program Microsoft Windows. Określone `WNDCLASS` omówiono atrybuty używane przez MFC i Windows.  

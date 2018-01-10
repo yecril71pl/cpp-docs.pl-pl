@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ce85d60f0a3dc7f7ec88e480fb17289aaaf9fa1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Komunikaty wektoryzatora i paralelizatora
 Można użyć opcji kompilatora Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) i [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) można ustawić [automatyczna Paralelizacja i Wektoryzacja](../../parallel/auto-parallelization-and-auto-vectorization.md) do kody przyczyn danych wyjściowych i komunikaty informacyjne o jego działaniu. Ten artykuł wyjaśnia kody przyczyn i komunikaty.  
@@ -989,7 +990,7 @@ void code_1505(int *A, int *B)
   
 ## <a name="see-also"></a>Zobacz też  
  [Automatyczna Paralelizacja i Wektoryzacja](../../parallel/auto-parallelization-and-auto-vectorization.md)   
- [Programowanie równoległe w kodzie natywnym](http://go.microsoft.com/fwlink/?LinkId=263662)   
+ [Programowanie równoległe w kodzie natywnym](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [#pragma loop()](../../preprocessor/loop.md)   
  [/Q opcje (operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md)   
  [/ Qpar raport (automatyczny Paralelizator poziom raportowania)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   

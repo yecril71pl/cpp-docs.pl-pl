@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 090c74c87810f6c2e7a7641deb248aa97931d93f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b031c4af05df7ad2b8c0850cefb116d4ac249d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyboard-and-mouse-customization"></a>Dostosowywanie klawiatury i myszy
 MFC umożliwia użytkownikom aplikacji w celu dostosowania sposobu obsługi klawiatury i myszy. Użytkownik może dostosować klawiatury, przypisując skróty klawiaturowe do poleceń. Użytkownika można również dostosować wejście myszy przez wybranie polecenia, który ma być wykonany, gdy użytkownik kliknie dwukrotnie wewnątrz windows określonych aplikacji. W tym temacie wyjaśniono, jak dostosować dane wejściowe dla aplikacji.  
@@ -76,5 +77,5 @@ Karta dostosowywania myszy
  [Dostosowywanie na potrzeby MFC](../mfc/customization-for-mfc.md)   
  [Klasa CKeyboardManager](../mfc/reference/ckeyboardmanager-class.md)   
  [Klasa CMouseManager](../mfc/reference/cmousemanager-class.md)   
- [Zabezpieczenia konsekwencje dostosowania związane z](../mfc/security-implications-of-customization.md)
+ [Konsekwencje dostosowania związane z zabezpieczeniami](../mfc/security-implications-of-customization.md)
 

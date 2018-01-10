@@ -13,17 +13,18 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3704330eba9a668c3a46f0efead7c86a54b465d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2da1911c291c4d052d380cfd3d63c5b25bda5010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>Optymalizacja sterowana profilem — Błędy i ostrzeżenia
 Ta sekcja jest odniesieniem do błędów generowanych przez narzędzia kompilacji. Aby uzyskać pomoc dotyczącą danego komunikatu o błędzie, albo kliknij przycisk numer błędu w oknie danych wyjściowych i naciśnij klawisz F1, wpisz numer błędu w **Wyszukaj** pola w indeksie, lub kliknij odpowiednie łącze:  
   
- [Optymalizacja sterowana profilem PG0165 błąd](../../error-messages/tool-errors/profile-guided-optimization-error-pg0165.md)  
+ [Błąd profilowanej optymalizacji PG0165](../../error-messages/tool-errors/profile-guided-optimization-error-pg0165.md)  
   
- [Optymalizacja sterowana profilem — ostrzeżenie PG1039](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1039.md)  
+ [Ostrzeżenie profilowanej optymalizacji PG1039](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1039.md)  
   
- [Optymalizacja sterowana profilem — ostrzeżenie PG1087](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1087.md)
+ [Ostrzeżenie profilowanej optymalizacji PG1087](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1087.md)

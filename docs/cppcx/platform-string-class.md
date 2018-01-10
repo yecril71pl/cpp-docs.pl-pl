@@ -28,11 +28,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 744ec295f7bcb86e3228d8f3c62637ad17c53450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformstring-class"></a>Klasa platform::String
 Reprezentuje kolekcję sekwencyjnych znaków Unicode, który jest używany do reprezentowania tekstu. Aby uzyskać dodatkowe informacje i przykłady, zobacz [ciągów](../cppcx/strings-c-cx.md).  

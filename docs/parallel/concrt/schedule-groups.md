@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 234288be0313c8e50fde08a3cb898f498ebe4174
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a61566878adc539af21e1645844eff27c5a8aec0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedule-groups"></a>Grupy harmonogramu
 Ten dokument zawiera opis roli grup harmonogramu współbieżność środowiska wykonawczego. A *grupy harmonogram* sposób tworzą koligacje lub grup, zadań powiązanych ze sobą. Każdy harmonogram ma jedną lub więcej grup harmonogramu. Grupy harmonogramu Użyj, jeśli wymagane jest wysoki stopień miejscowości spośród zadań, na przykład, gdy grupa powiązanych zadań korzystać z wykonania na tym samym węźle procesora. Z drugiej strony należy użyć wystąpienia harmonogramu, po aplikacji jakości określone wymagania, na przykład, jeśli chcesz ograniczyć ilość zasobów przetwarzania, które są przydzielone do zestawu zadań. Aby uzyskać więcej informacji na temat wystąpień harmonogramu, zobacz [wystąpienia harmonogramu](../../parallel/concrt/scheduler-instances.md).  
@@ -44,5 +45,5 @@ Ten dokument zawiera opis roli grup harmonogramu współbieżność środowiska 
 ## <a name="see-also"></a>Zobacz też  
  [Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [Wystąpienia harmonogramu](../../parallel/concrt/scheduler-instances.md)   
- [Porady: Używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
+ [Instrukcje: używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
 

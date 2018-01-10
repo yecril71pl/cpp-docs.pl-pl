@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 101d34c9ed610cb375c0755e7698f45a1b16e935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ad6eef0bbaad7860e7f4310ce283efe18c668eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="where-does-remote-automation-fit-in"></a>Kiedy warto korzystać z automatyzacji zdalnej?
 DCOM został wydany w 1996 i jest dostępne tylko na platformy 32-bitowe i 64-bitowych. Zespołu Visual Basic w firmie Microsoft ma zawsze występuje Visual Basic jako przy użyciu automatyzacji, aby umożliwić jego komunikację między składnikami. Brak wersji rozproszonej poważnie ograniczoną korzystanie z tych funkcji w środowiskach przedsiębiorstw, więc zespół opracowywanie Visual Basic 4.0 Enterprise Edition postanowiła zbadać tworzenie własny zestaw składników usług zdalnych dla automatyzacji części OLE i modelu COM. Wyraźnie widać głównych celem było upewnij się, że wynik będzie zgodny z i może zostać zastąpione przez protokół DCOM podczas stały się dostępne. Następnie one przystąpiła do zaimplementowania automatyzacji zdalnej (RA) dla platform Windows zarówno 16-bitowych, jak i 32-bitowych.  

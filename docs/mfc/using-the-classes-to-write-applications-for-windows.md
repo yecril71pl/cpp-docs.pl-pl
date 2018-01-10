@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90790e12d2137324c4d641f1beac6c5cae0cff31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a8edcabee2f835bd3a3acd0ff3789690764c397
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Używanie klas do pisania aplikacji dla systemu Windows
 Razem z klas w bibliotece Microsoft Foundation Class (MFC) składają się na "Struktura aplikacji," na którym tworzenia aplikacji dla systemu operacyjnego Windows. Na poziomie bardzo ogólne ramach definiuje szkielet aplikacji i dostarcza implementacji standardowy interfejs użytkownika, które mogą być umieszczane na szkielet. Zadanie jako programisty jest wypełnienie w pozostałej części szkielet, które są inne elementy, które są specyficzne dla aplikacji. Utworzyć można uzyskać za pomocą Kreatora aplikacji MFC do tworzenia plików dla aplikacji dokładnego początkowego. Przy użyciu programu Microsoft Visual C++ edytory zasobów zaprojektować wizualnie, elementów interfejsu użytkownika widoku klasy poleceń połączyć te elementy kodu i biblioteki klas logiki specyficzne dla aplikacji.  
@@ -57,7 +58,7 @@ Razem z klas w bibliotece Microsoft Foundation Class (MFC) składają się na "S
   
 -   [Okna dialogowe](../mfc/dialog-boxes.md)  
   
--   [Formanty](../mfc/controls-mfc.md)  
+-   [Kontrolki](../mfc/controls-mfc.md)  
   
 -   [Paski sterowania](../mfc/control-bars.md)  
   

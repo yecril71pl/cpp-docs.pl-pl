@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28be63dffff7d89b4967363670263f78b98d398a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b909ec7ccd830e088df81ca0b2db8cda133c7a20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-member-variable-wizard"></a>Kreator dodawania zmiennej członkowskiej
 Ten kreator dodaje deklaracji zmiennej członka do pliku nagłówka i, w zależności od opcji, go dodać kod do pliku .cpp. Po dodaniu zmiennej członkowskiej, za pomocą kreatora można edytować kodu w środowisku programistycznym.  
@@ -27,11 +28,11 @@ Ten kreator dodaje deklaracji zmiennej członka do pliku nagłówka i, w zależn
  **Dostęp**  
  Ustawia dostęp do zmiennej elementu członkowskiego. Modyfikatory dostępu są słów kluczowych, które Określ dostęp innych klas, że zmienna członka. Zobacz [kontroli dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md) Aby uzyskać więcej informacji na temat określania dostępu. Ustawiono poziom dostępu do zmiennych Członkowskich **publicznego** domyślnie.  
   
--   [publiczny](../cpp/public-cpp.md)  
+-   [public](../cpp/public-cpp.md)  
   
--   [chronione](../cpp/protected-cpp.md)  
+-   [protected](../cpp/protected-cpp.md)  
   
--   [prywatne](../cpp/private-cpp.md)  
+-   [private](../cpp/private-cpp.md)  
   
  **Typ zmiennej**  
  Ustawia typ zwrotny dla zmiennej członkowskiej, który dodajesz.  
@@ -42,11 +43,11 @@ Ten kreator dodaje deklaracji zmiennej członka do pliku nagłówka i, w zależn
   
     |||  
     |-|-|  
-    |`char`|**krótki**|  
-    |**podwójne**|`unsigned char`|  
+    |`char`|**short**|  
+    |**double**|`unsigned char`|  
     |**float**|`unsigned int`|  
     |`int`|`unsigned long`|  
-    |**długa**||  
+    |**long**||  
   
 -   W przypadku dodawania zmiennej członkowskiej dla kontrolka okna dialogowego, to pole jest wypełniane z typem obiektu zwróconego dla formantów i wartość. W przypadku wybrania **kontroli**, następnie **typ zmiennej** Określa klasę podstawową formantu, należy wybrać w **Identyfikatora formantu** pole. Jeśli kontrolka okna dialogowego może zawierać wartości, a w przypadku wybrania **wartość**, następnie **typ zmiennej** Określa typ odpowiednią wartość, która może zawierać formant. Zobacz [formantów okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md) Aby uzyskać więcej informacji.  
   

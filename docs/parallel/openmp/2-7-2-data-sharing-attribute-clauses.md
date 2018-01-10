@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e3fbc78792034c60c94972ca6b4ed63dfac01b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c63ece0feea0426fffbafa600f578e342e85fc2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Klauzule atrybutu udostępniania danych
 Kilka dyrektyw zaakceptować klauzule, które umożliwiają użytkownikom kontrolowanie udostępniania atrybutów zmienne w czasie trwania regionu. Klauzule atrybutu udostępniania mają zastosowanie tylko do zmiennych w zakresie leksykalne dyrektywy, na której znajduje się klauzuli. Nie wszystkie z poniższych klauzul są dozwolone w wszystkie dyrektywy. Lista klauzule, które są prawidłowe w szczególności dyrektywy opisano z dyrektywą.  

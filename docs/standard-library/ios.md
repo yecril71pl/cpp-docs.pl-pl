@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04992f8324196c5fd762ba01a96fff7cc6ba6539
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23fbac008c6954830fb016099fdf7ebc45ba685f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiosgt"></a>&lt;dla systemu IOS&gt;
 Definiuje kilka typy i funkcje podstawowe działania iostream. Ten nagłówek znajduje się zwykle dla Ciebie przez inny nagłówki iostream; rzadko uwzględniania go bezpośrednio.  
@@ -64,7 +65,7 @@ istr>> noskipws;
 |[defaultfloat —](../standard-library/ios-functions.md#ios_defaultfloat)|Konfiguruje flagi z `ios_base` obiekt, aby użyć domyślnego formatu wyświetlania dla wartości typu float.|  
 |[stałe](../standard-library/ios-functions.md#fixed)|Określa, że liczba zmiennoprzecinkowa jest wyświetlana w notacji stałej dziesiętnej.|  
 |[Hex](../standard-library/ios-functions.md#hex)|Określa, czy liczba całkowita zmienne są widoczne w podstawowej notacji 16.|  
-|[wewnętrzny](../standard-library/ios-functions.md#internal)|Powoduje, że liczba Zaloguj, aby być wyrównane do lewej oraz numer do prawej.|  
+|[internal](../standard-library/ios-functions.md#internal)|Powoduje, że liczba Zaloguj, aby być wyrównane do lewej oraz numer do prawej.|  
 |[po lewej](../standard-library/ios-functions.md#left)|Powoduje, że tekst, który nie jest szerokie, jak szerokość dane wyjściowe mają być widoczne w opróżnienia strumienia do lewego marginesu.|  
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako 1 lub 0 w strumieniu.|  
 |[noshowbase](../standard-library/ios-functions.md#noshowbase)|Wyłącza wskazujący base notational, w którym jest wyświetlany numer.|  

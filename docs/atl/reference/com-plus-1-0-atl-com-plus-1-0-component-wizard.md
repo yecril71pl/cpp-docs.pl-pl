@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a9a9d095f57b79990e72864662f34e06a8f007d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 102e6a0a9b7055000d051f5fb729dd45863a16cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>Model COM + 1.0, Kreator składnika ATL COM + 1.0
 Użyj tej strony ATL COM + 1.0 składnik kreatora, aby określić typ interfejsu i dodatkowe interfejsy do obsługi.  
@@ -45,7 +46,7 @@ Użyj tej strony ATL COM + 1.0 składnik kreatora, aby określić typ interfejsu
 |**IObjectControl**|Zapewnia dostęp do trzech obiektu [IObjectControl](http://msdn.microsoft.com/library/windows/desktop/ms686474) metody: [Aktywuj](http://msdn.microsoft.com/library/windows/desktop/ms681303), [CanBePooled](http://msdn.microsoft.com/library/windows/desktop/ms684322), i [Dezaktywuj](http://msdn.microsoft.com/library/windows/desktop/ms687094).|  
 |**IObjectConstruct**|Tworzy obsługę [IObjectConstruct](http://msdn.microsoft.com/library/windows/desktop/ms680583) interfejsu do zarządzania przekazywanie parametrów z innych metod lub obiektów.|  
   
- **Transakcji**  
+ **Transakcja**  
  Wskazuje, że obiekt obsługuje transakcji. Zawiera mtxattr.h pliku w pliku .idl (nonattributed projektów).  
   
 |Opcja|Opis|  

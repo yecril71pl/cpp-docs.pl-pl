@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70fc1210df4600fd63c938a7721f09dcdd206cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-project-properties"></a>Praca z właściwościami projektu
 W środowisku IDE, wszystkie informacje niezbędne do utworzenia projektu jest ujawniona jako *właściwości*. Informacje te obejmują nazwę aplikacji, rozszerzenia (takie jak biblioteki DLL, LIB EXE) — opcje kompilatora, opcje konsolidatora, ustawienia debugera, niestandardowe kroki procesu kompilacji i inne czynności. Zazwyczaj *strony właściwości* ( **projektu &#124; Właściwości**) do wyświetlania i modyfikowania tych właściwości. 
@@ -84,9 +85,9 @@ W środowisku IDE, wszystkie informacje niezbędne do utworzenia projektu jest u
   
  Więcej informacji na temat każdej strony właściwości można znaleźć w tych tematach:  
   
--   [Ogólna strona właściwości (projekt)](../ide/general-property-page-project.md)  
+-   [Strona właściwości ogólnych (projekt)](../ide/general-property-page-project.md)  
   
--   [Ogólna strona właściwości (plik)](../ide/general-property-page-file.md)  
+-   [Strona właściwości ogólnych (plik)](../ide/general-property-page-file.md)  
   
 -   [Strony właściwości wiersza polecenia](../ide/command-line-property-pages.md)  
   
@@ -100,9 +101,9 @@ W środowisku IDE, wszystkie informacje niezbędne do utworzenia projektu jest u
   
 -   [Strony właściwości MIDL](../ide/midl-property-pages.md)  
   
--   [Strona właściwości odwołania sieci Web](../ide/web-references-property-page.md)  
+-   [Strona właściwości Odwołania sieci Web](../ide/web-references-property-page.md)  
   
--   [Strona właściwości narzędzia generowania danych XML](../ide/xml-data-generator-tool-property-page.md)  
+-   [Strona właściwości Narzędzie generowania danych XML](../ide/xml-data-generator-tool-property-page.md)  
   
 ## <a name="to-quickly-browse-and-search-all-properties"></a>Aby szybko przeglądać i wyszukiwanie wszystkich właściwości  
  **Wszystkie opcje** strony właściwości (w obszarze **właściwości konfiguracji &#124; C/C++** w węźle **strony właściwości** okno dialogowe) zapewnia szybkie przeglądać i wyszukiwać właściwości, które są dostępne w bieżącym kontekście. Ma specjalne pole wyszukiwania i prostą składnię, aby pomóc w filtrowaniu wyników:  

@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 09be7a5efbf3f78aa3cbc1862b811fff3d487c75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c021b11809b3e6598e694fdaa46b7f829358e24f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="framework-mfc"></a>Struktura (MFC)
 Swoją pracę dzięki framework biblioteki Microsoft Foundation Class (MFC) jest przede wszystkim na podstawie kilku główne kategorie i kilka narzędzi Visual C++. Niektóre klasy hermetyzować duża część interfejsu programowania aplikacji (API) Win32. Inne klasy hermetyzować pojęcia dotyczące aplikacji, takich jak dokumenty, widoki i aplikacji. Nadal innym hermetyzować OLE funkcje i możliwości dostępu do danych ODBC i DAO.  
@@ -48,7 +49,7 @@ Swoją pracę dzięki framework biblioteki Microsoft Foundation Class (MFC) jest
   
  [Jak struktura wywołuje kod](../mfc/how-the-framework-calls-your-code.md)  
   
- [CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md)  
+ [CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)  
   
  [Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)  
   

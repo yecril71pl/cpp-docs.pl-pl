@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ae0c7a99ca64287c91cb1392f81ac82db103d29d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformobject-class"></a>Klasa platform::Object
 Zapewnia zachowanie typowych ref klas i struktur ref w aplikacjach w Sklepie Windows. Wszystkie klasy referencyjnej i ref struct wystąpienia są umożliwiają niejawnej konwersji na Platform::Object ^, można zmienić jego metody ToString wirtualnej.  

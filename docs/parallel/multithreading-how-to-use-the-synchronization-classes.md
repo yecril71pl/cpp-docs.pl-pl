@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6726596a22532bfe2095cca2e021afefaef80fec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d85ea58588ea889fc8294b23604d47aef725135
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>Wielowątkowość: jak używać klas synchronizacji
 Synchronizacja dostęp do zasobów między wątkami jest to powszechny problem, podczas pisania aplikacji wielowątkowych. Dwa lub więcej wątków jednocześnie dostęp do tych samych danych może prowadzić do niepożądanych i nieprzewidywalnych wyników. Na przykład jeden wątek może być aktualizowanie zawartości struktury, podczas gdy inny wątek odczytuje zawartość tej samej struktury. Jest nieznany otrzymają wątku czytania, jakie dane: stare dane nowo napisanych danych i prawdopodobnie ich kombinacjami. MFC zawiera pewną liczbę synchronizacji i klasy dostępu synchronizacji, aby pomóc w rozwiązaniu tego problemu. W tym temacie opisano klasy dostępne oraz sposób ich używać do tworzenia klas wątkowo w typowej aplikacji wielowątkowych.  

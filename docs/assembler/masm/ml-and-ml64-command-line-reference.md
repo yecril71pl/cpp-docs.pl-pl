@@ -64,11 +64,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0cc09c716e8867c03147a28e6c0eb7d4fc844937
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a7a2a5baadab38283b621cb2f6ae99b36fe0a50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Informacje w wierszu polecenia programu ML i ML64
 Składana i łączy co najmniej jeden plik źródłowy języka zestawu. Opcje wiersza polecenia jest uwzględniana wielkość liter.  
@@ -114,7 +115,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/H**`number`|Ogranicza nazw zewnętrznych numerów znaki znaczące. Wartość domyślna to 31 znaków.<br /><br /> Nie jest dostępna w ml64.exe.|  
 |**/ Help**|Wywołuje QuickHelp, aby uzyskać pomoc dotyczącą uczenia Maszynowego.|  
 |**/I**`pathname`|Ustawia ścieżkę do pliku include. Maksymalnie 10 **/I** opcje jest dozwolone.|  
-|**/ nologo**|Pomija wiadomości dla zestawu powiodło się.|  
+|**/nologo**|Pomija wiadomości dla zestawu powiodło się.|  
 |**/ omf**|Generuje typ obiektu modułu pliku formatu (OMF) obiektu modułu.  **/ omf** oznacza **/c**; ML.exe nie obsługuje tworzenia połączeń obiektów OMF.<br /><br /> Nie jest dostępna w ml64.exe.|  
 |**/SA**|Włącza listę wszystkich dostępnych informacji.|  
 |**Opcja/SAFESEH**|Oznacza obiekt jako albo niezawierające nie programów obsługi wyjątków lub zawierające programy obsługi wyjątków, zadeklarowane za [. SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Nie jest dostępna w ml64.exe.|  
@@ -159,4 +160,4 @@ ML64 [[options]] filename [[ [[options]]  filename]]
   
 ## <a name="see-also"></a>Zobacz też  
  [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)   
- [Microsoft Macro Assembler — odwołanie](../../assembler/masm/microsoft-macro-assembler-reference.md)
+ [Microsoft Macro Assembler — dokumentacja](../../assembler/masm/microsoft-macro-assembler-reference.md)

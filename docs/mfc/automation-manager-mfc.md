@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df073aa0e831d6809b3fcd02fb651574ab47c7e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 338b619580ef7967d871ff3f960fc467555ab72a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-manager-mfc"></a>Menedżer automatyzacji (MFC)
 AUTMGR32. EXE powinien zostać skopiowany do katalogu każdej z nich mają zostać zawierają obiekty automatyzacji zdalnej systemu Windows. W przypadku systemu Windows 95 i Windows 98 ten katalog jest zwykle C:\WINDOWS\SYSTEM. Dla systemu Windows NT i Windows 2000 jest zazwyczaj C:\WINNT\SYSTEM32.  

@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1879c939237275c279e1dd4bd1861ab3b02b468
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a11bce6d70c70bba2a4e75753c55d83bec32329f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove — Metoda
 Usuwa reprezentowanego przez określone zdarzenie tokenu rejestracji z zestawu programów obsługi zdarzeń skojarzonych z bieżącym obiektem EventSource programu obsługi zdarzeń.  
@@ -48,4 +51,4 @@ HRESULT Remove(
  **Namespace:** Microsoft::wrl —
  
  ## <a name="see-also"></a>Zobacz też
- [EventSource — klasa](../windows/eventsource-class.md)
+ [EventSource, klasa](../windows/eventsource-class.md)

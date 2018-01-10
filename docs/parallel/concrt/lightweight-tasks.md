@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b9caa028d7f870ecdd6c67503c6bc9448cff1d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 010f5fd443271bec1d28b6760f0c17f4e17d803b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lightweight-tasks"></a>Zadania lekkie
 Ten dokument zawiera opis roli zadań lekkich współbieżność środowiska wykonawczego. A *zadań lekkich* to zadanie, które można planować bezpośrednio z `concurrency::Scheduler` lub `concurrency::ScheduleGroup` obiektu. Zadania lekkie podobny funkcji, które świadczą interfejsu API systemu Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkcji. W związku z tym potrzeb zadań lekkich są przydatne, gdy dostosowania istniejącego kodu do korzystania z funkcji planowania programu współbieżności środowiska wykonawczego. Współbieżność środowiska wykonawczego sam używa zadań lekkich zaplanować agentów asynchronicznych i wysyłanie komunikatów między bloki komunikatów asynchronicznych.  
@@ -37,5 +38,5 @@ Ten dokument zawiera opis roli zadań lekkich współbieżność środowiska wyk
   
 ## <a name="see-also"></a>Zobacz też  
  [Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Wskazówki: Adaptacja istniejącego kodu do potrzeb zadań lekkich](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)
+ [Przewodnik: adaptacja istniejącego kodu do potrzeb zadań lekkich](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)
 

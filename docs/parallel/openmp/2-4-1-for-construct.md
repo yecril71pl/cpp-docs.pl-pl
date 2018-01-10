@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92f3af3fa84043d9e8755136ab66e345e455ff1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="241-for-construct"></a>2.4.1 — dla konstrukcji
 **Dla** dyrektywy identyfikuje iteracyjne konstrukcji podziału pracy określający, że iteracji pętli skojarzone będą wykonywane równolegle. Iteracje **dla** pętli są rozproszone na wątków, które już istnieją w zespole wykonywanie równoległe konstrukcji, do którego jest on powiązany. Składnia **dla** konstrukcja wygląda następująco:  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
  **Harmonogram (** *rodzaj*[, *chunk_size*]**)**  
   
- **NOWAIT**  
+ **nowait**  
   
  **Dla** dyrektywy wprowadza ograniczenia w strukturze odpowiadającego **dla** pętli. W szczególności odpowiadającego **dla** pętli musi być kanoniczny kształtu:  
   

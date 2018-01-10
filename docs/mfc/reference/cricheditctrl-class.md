@@ -163,11 +163,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51ccc21b89b7330eca084dbd740a36ce5e031ff8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03ef5135130590d142e9725e1d064b932cc7ff4d
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl — klasa
 Udostępnia funkcje kontrolki zaawansowanej edycji.  
@@ -273,7 +274,7 @@ class CRichEditCtrl : public CWnd
   
  Aby uzyskać więcej informacji na temat używania `CRichEditCtrl`, zobacz:  
   
-- [Formanty](../../mfc/controls-mfc.md)  
+- [Kontrolki](../../mfc/controls-mfc.md)  
   
 - [Korzystanie z CRichEditCtrl](../../mfc/using-cricheditctrl.md)  
   
@@ -1210,7 +1211,7 @@ int LineLength(int nLine = -1) const;
  Określa indeks znaków znaku w wierszu, którego długość ma być pobrana. Jeśli ten parametr ma wartość -1, jest zwracana długość bieżącego wiersza (wiersz zawiera karetkę), nie włączając długość każdego zaznaczonego tekstu w wierszu. Gdy `LineLength` jest wywoływana w formancie edycji jednowierszowego ten parametr jest ignorowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Gdy `LineLength` jest wywoływana dla formantu edycji wielu linii, wartość zwracana jest długość (w bajtach) wiersza określonego przez parametr `nLine`. Gdy `LineLength` jest wywoływana w formancie edycji jednowierszowego wartość zwracana jest długość (w bajtach) tekstu w formancie edycyjnym.  
+ Gdy `LineLength` nosi nazwę kontrolki edycji wielu linii, wartość zwracana jest długość (w `TCHAR`) wiersza określony przez `nLine`.  Nie zawiera znak powrotu karetki na końcu linii. Gdy `LineLength` nosi nazwę kontrolki edycji jeden wiersz, wartość zwracana jest długość (w `TCHAR`) tekstu w formancie edycyjnym. Jeśli nLine jest większa niż liczba znaków w formancie, zwracana wartość wynosi zero.
   
 ### <a name="remarks"></a>Uwagi  
  Użyj [LineIndex](#lineindex) funkcji członkowskiej pobrać indeks znaków dla wielu danego wiersza w ramach tego `CRichEditCtrl` obiektu.  
@@ -1915,4 +1916,4 @@ BOOL Undo();
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasa CEdit](../../mfc/reference/cedit-class.md)   
- [Cricheditview — klasa](../../mfc/reference/cricheditview-class.md)
+ [Klasa CRichEditView](../../mfc/reference/cricheditview-class.md)

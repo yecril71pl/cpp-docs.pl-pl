@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 260d56fa4a6944c7cf3a9971e3627d8b24936786
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7b5820686c3e6f01c37cbf527d0e631e5bcc25c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Tworzenie interfejsu COM (Visual C++)
 Visual C++ udostępnia kreatorów i szablony do tworzenia projektów używające definiującego interfejsy modelu COM i dispinterfaces dla obiektów COM i klas automatyzacji.  
@@ -34,7 +35,7 @@ Visual C++ udostępnia kreatorów i szablony do tworzenia projektów używające
   
      Otwórz [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md) można utworzyć formantu ActiveX dispinterface i mapę zdarzeń zdefiniowanych w pliku .idl i klasy formantu odpowiednio.  
   
--   [Dodawanie formantu ATL](../atl/reference/adding-an-atl-control.md)  
+-   [Dodawanie kontrolki ATL](../atl/reference/adding-an-atl-control.md)  
   
      Użyj kombinacji [Kreator projektu ATL](../atl/reference/atl-project-wizard.md) i [Kreator formantu ATL](../atl/reference/atl-control-wizard.md) można utworzyć formantu ATL ActiveX.  
   
@@ -44,13 +45,13 @@ Visual C++ udostępnia kreatorów i szablony do tworzenia projektów używające
   
  Po utworzeniu otwarcia, Projekt ATL [Dodaj klasę](../ide/add-class-dialog-box.md) okno dialogowe umożliwia wybór dodatkowe kreatorów i szablony, aby dodać interfejsy modelu COM do projektu. Następujących kreatorów pozwalają na wprowadzenie co najmniej jeden interfejs dla obiektu:  
   
--   [ATL COM + 1.0 Kreator składników stron ASP](../atl/reference/atl-com-plus-1-0-component-wizard.md)  
+-   [Kreator składników ATL COM+ 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)  
   
 -   [Kreator prostych obiektów ATL](../atl/reference/atl-simple-object-wizard.md)  
   
--   [Kreator składników stron ASP ATL](../atl/reference/atl-active-server-page-component-wizard.md)  
+-   [Kreator składników stron Active Server Page ATL](../atl/reference/atl-active-server-page-component-wizard.md)  
   
--   [Kreator formantu ATL](../atl/reference/atl-control-wizard.md)  
+-   [Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md)  
   
  Ponadto można wdrożyć nowe interfejsy COM formantu prawym przyciskiem myszy obiekt klasy formantu w widoku klas, a następnie klikając polecenie [implementować interfejs](../ide/implement-interface-wizard.md).  
   

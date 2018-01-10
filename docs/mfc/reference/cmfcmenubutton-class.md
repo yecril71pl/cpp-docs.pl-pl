@@ -33,11 +33,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43772dff0e09b7160c1ec28a6c62d341c124892e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fac8fe59fe5dbfb101ec0881dbf17925cf048caa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcmenubutton-class"></a>Klasa CMFCMenuButton
 Przycisk menu podręcznego i raporty w opcji menu użytkownika.  

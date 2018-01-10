@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 08c3b48ebfc96a93961c6c810312daa6072e8f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9166f62c51344cc9c620da34d9c6fcee4665f400
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Pojęcia związane z aplikacjami izolowanymi oraz aplikacjami wykonywanymi równocześnie
 Aplikacja jest uznawany za [izolowany aplikacji](http://msdn.microsoft.com/library/aa375190) , gdy wszystkie jego składniki są [zestawy side-by-side](http://msdn.microsoft.com/library/ff951640). Zestaw równoległy to zbiór zasobów — grupa bibliotek DLL, klas okien, serwerów COM, bibliotek typów lub interfejsów — które są wdrożone razem i udostępniane aplikacji do użytku w czasie wykonywania. Zwykle zestaw równoległy ma postać jednej lub kilku bibliotek DLL.  
@@ -40,4 +41,4 @@ Aplikacja jest uznawany za [izolowany aplikacji](http://msdn.microsoft.com/libra
  W programie Visual Studio 2005 i Visual Studio 2008 redystrybucyjne biblioteki, takie jak biblioteki ATL, MFC, CRT, Standard C++, OpenMP i MSDIA zostały wcześniej wdrożone jako współużytkowane zestawy równoległe w pamięci podręcznej zestawu macierzystego. W bieżącej wersji, redystrybucyjne biblioteki używają centralnego wdrożenia. Domyślnie wszystkie aplikacje, które są tworzone przy użyciu języka Visual C++, są kompilowane z manifestem osadzonym w końcowym pliku binarnym, a manifest zawiera opis zależności pliku binarnego od bibliotek Visual C++. Aby dowiedzieć się o tworzeniu manifestu dla aplikacji Visual C++, zobacz [opis Generowanie manifestu dla programów C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md). Manifest nie jest wymagany w przypadku aplikacji, które są statycznie łączone z używanymi bibliotekami, lub które używają lokalnego wdrożenia. Aby uzyskać więcej informacji na temat wdrażania, zobacz [wdrożenia w programie Visual C++](../ide/deployment-in-visual-cpp.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie C/C++ izolowane Side-by-side zestawów ani aplikacji](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+ [Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

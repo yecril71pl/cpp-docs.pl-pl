@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d81cd7e569cd2baa8ab50b1904fa3ac15b36d0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread"></a>wątek
 
 **Dotyczące firmy Microsoft**  
-**Wątku** modyfikator klasy magazynu rozszerzonego służy do deklarowania zmiennej lokalnej wątku. Komputer przenośny równoważne w języku C ++ 11 i nowszych można użyć [element thread_local](../cpp/storage-classes-cpp.md#thread_local) Specyfikator klasy magazynu.
+**Wątku** modyfikator klasy magazynu rozszerzonego służy do deklarowania zmiennej lokalnej wątku. Komputer przenośny równoważne w języku C ++ 11 i nowszych można użyć [element thread_local](../cpp/storage-classes-cpp.md#thread_local) Specyfikator klasy magazynu dla przenośnego kodu. W systemie Windows **element thread_local** jest realizowana za pomocą **__declspec(thread)**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,13 +47,18 @@ Deklaracje zmiennych lokalnych wątku należy użyć [rozszerzona Składnia atry
 __declspec( thread ) int tls_i = 1;  
 ```
 
-Musisz przestrzegać następujących wytycznych podczas deklarowania obiektów i zmiennych lokalnych wątku:
+Używając zmiennych thread-local w bibliotekach ładowane dynamicznie, należy zwrócić uwagę czynników, które mogą spowodować zmiennej lokalnej wątku nie można poprawnie zainicjować:
+
+1) Jeśli zmienna jest inicjowany z wywołania funkcji (łącznie z konstruktorów), ta funkcja będzie można wywołać tylko dla wątku, który spowodował binary/DLL załadować w procesie, a dla tych wątków, które są uruchomione, gdy załadowano danych binarnych/DLL. Funkcje inicjowania nie są nazywane do innego wątku, który jest już uruchomiona, gdy biblioteka DLL została załadowana. Dynamiczna Inicjalizacja występuje na wywołanie funkcji DllMain dla DLL_THREAD_ATTACH, ale plik DLL, który nigdy nie pobiera, które komunikatów, jeśli plik DLL, który nie jest w procesie uruchomienia wątku. 
+
+2) Zmienne lokalne wątków, zawierającymi statycznie o stałej wartości zwykle są poprawnie zainicjowane na wszystkie wątki. Począwszy od grudnia 2017 istnieje jednak problem znane zgodność kompilatora C++ firmy Microsoft zgodnie z którymi odbierania constexpr zmienne dynamiczne zamiast statycznego inicjowania.  
+  
+   Uwaga: Oba te problemy mogą naprawiony w przyszłych aktualizacji kompilatora.
+
+
+Ponadto narzucają wytyczne podczas deklarowania zmiennych i obiektów lokalnej wątku:
 
 - Możesz zastosować **wątku** atrybutu tylko do klasy i danych deklaracje i definicje; **wątku** nie można użyć w deklaracji lub definicji funkcji.
-
-- Korzystanie z **wątku** atrybut może zakłócać [opóźnienia ładowania](../build/reference/linker-support-for-delay-loaded-dlls.md) biblioteki DLL importuje.
-
-- W systemie XP **wątku** nie może działać prawidłowo, jeśli biblioteka DLL używa danych __declspec(thread) i jest ładowany dynamicznie za pośrednictwem metody LoadLibrary.
 
 - Można określić **wątku** atrybutu tylko dla elementów danych ze statycznym okresem magazynu. Obejmuje to obiekty danych globalnych (zarówno **statycznych** i **extern**), lokalnego obiektu statycznego i danymi statycznymi członkami klas. Nie można zadeklarować obiekty automatyczne dane o **wątku** atrybutu.
 

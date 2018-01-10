@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df03116e230a9cba7721a37701e9b67ac8e8a518
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ca10e245c4adf108799896b8dfad2e21c4f3758
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lttuplegt"></a>&lt;krotki&gt;
 Określa szablon `tuple` którego wystąpienia przechowywania obiektów różnych typów.  
@@ -43,17 +44,17 @@ Określa szablon `tuple` którego wystąpienia przechowywania obiektów różnyc
 |||  
 |-|-|  
 |[operator ==](../standard-library/tuple-operators.md#op_eq_eq)|Porównanie `tuple` obiekty, takie same|  
-|[operator! =](../standard-library/tuple-operators.md#op_neq)|Porównanie `tuple` obiektów, nie jest równy|  
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|Porównanie `tuple` obiektów, nie jest równy|  
 |[Operator <](../standard-library/tuple-operators.md#op_lt)|Porównanie `tuple` obiektów, mniejsza niż|  
 |[Operator < =](../standard-library/tuple-operators.md#op_lt_eq)|Porównanie `tuple` obiekty mniejsze niż lub równe|  
 |[operator >](../standard-library/tuple-operators.md#op_gt)|Porównanie `tuple` obiektów większa niż|  
-|[operator > =](../standard-library/tuple-operators.md#op_gt_eq)|Porównanie `tuple` obiektów, większe lub równe|  
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Porównanie `tuple` obiektów, większe lub równe|  
   
 ### <a name="functions"></a>Funkcje  
   
 |||  
 |-|-|  
-|[Pobierz](../standard-library/tuple-functions.md#get)|Pobiera element na podstawie `tuple` obiektu.|  
+|[get](../standard-library/tuple-functions.md#get)|Pobiera element na podstawie `tuple` obiektu.|  
 |[make_tuple —](../standard-library/tuple-functions.md#make_tuple)|Sprawia, że `tuple` od wartości elementu.|  
 |[Powiązanie](../standard-library/tuple-functions.md#tie)|Sprawia, że `tuple` z odwołania do elementu.|  
   

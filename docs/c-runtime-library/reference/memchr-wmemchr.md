@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dd7a16cb35257104b79d0347fe415c5b17cd4bb4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f0eb93347f76c7becf44fb7f36fb066fe41f3f41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 Znajdź znaków w buforze.  
@@ -157,4 +158,4 @@ Result:      r found at position 12
  [funkcji memcmp, wmemcmp —](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memcpy, wmemcpy —](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset —, wmemset —](../../c-runtime-library/reference/memset-wmemset.md)   
- [strchr —, wcschr —, _mbschr — _mbschr_l —](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)
+ [strchr, wcschr, _mbschr, _mbschr_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)

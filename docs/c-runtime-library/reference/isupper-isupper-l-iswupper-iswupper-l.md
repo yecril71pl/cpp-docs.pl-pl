@@ -44,11 +44,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65ba046c6e2f592dece527f73186220084ca576b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 242646319193e070e59256c71c53a25268e10e64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 Określa, czy liczba całkowita reprezentuje wielką literę.  
@@ -91,7 +92,7 @@ int _iwsupper_l(
 |Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_istupper`|`isupper`|[_ismbcupper —](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswupper`|  
-|`_istupper_l`|`_isupper_l`|[_ismbclower —, _ismbclower_l —, _ismbcupper — _ismbcupper_l —](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_iswupper_l`|  
+|`_istupper_l`|`_isupper_l`|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_iswupper_l`|  
   
 ## <a name="requirements"></a>Wymagania  
   
@@ -107,4 +108,4 @@ int _iwsupper_l(
 ## <a name="see-also"></a>Zobacz też  
  [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [jest isw — procedury](../../c-runtime-library/is-isw-routines.md)
+ [is, isw, procedury](../../c-runtime-library/is-isw-routines.md)

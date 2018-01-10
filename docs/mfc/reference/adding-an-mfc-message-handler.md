@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed68a99e35d5ab234e567e01ea264bea64579fdf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 170e8314759d24ce1cfe7413b0c41e81a5617445
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-mfc-message-handler"></a>Dodawanie handlera komunikatów MFC
 Możesz [okno właściwości i Dodaj program obsługi komunikatów](../../mfc/reference/mapping-messages-to-functions.md) (funkcję elementu członkowskiego, która obsługuje komunikatów systemu Windows) do klasy i mapowanie komunikatów systemu Windows do obsługi wiadomości. Można również dodać [program obsługi zdarzeń dla każdego formantu — okno dialogowe](../../windows/adding-event-handlers-for-dialog-box-controls.md).  

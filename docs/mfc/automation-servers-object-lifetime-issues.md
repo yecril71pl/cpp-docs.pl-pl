@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18db6e819d2fc51bb725a4f04ea7e2d38f3bd443
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c9fab7af74dee482c5e8dffb327da9c037796fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Serwery automatyzacji: kwestie okresu istnienia obiektów
 Gdy klient automatyzacji tworzy lub uaktywnia element OLE, serwer przekazuje klienta wskaźnik tego obiektu. Odwołanie do obiektu poprzez wywołanie funkcji OLE nawiązaniu przez klienta [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). To odwołanie jest włączona do momentu połączenia klienta [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Aplikacje klienckie napisany za pomocą biblioteki Microsoft Foundation klasy klasy OLE nie muszą wprowadzać tych wywołań; wykonuje tę platformę). OLE system i serwera może utworzyć odwołania do obiektu. Serwer nie należy zniszczyć obiektu tak długo, jak obowiązują zewnętrznych odwołań do obiektu.  

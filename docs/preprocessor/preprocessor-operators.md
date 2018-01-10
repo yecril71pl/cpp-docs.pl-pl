@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0eaa2a5c689dbe63957e5a0d5dcb8bbd1959949
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f28d2eba75636d6000f909ffe4527ca2b037dd85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="preprocessor-operators"></a>Operatory preprocesora
 Cztery operatory preprocesora specyficzne są używane w kontekście `#define` — dyrektywa (zobacz poniżej podsumowanie każdego). W trzech kolejnych sekcjach omówiono operatory tworzenia ciągów, konwersji na znaki i wklejania tokenu. Aby uzyskać informacje dotyczące **zdefiniowane** operatora, zobacz [#if, #elif, #else i #endif — dyrektywy](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
@@ -35,4 +36,4 @@ Cztery operatory preprocesora specyficzne są używane w kontekście `#define` �
 ## <a name="see-also"></a>Zobacz też  
  [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)   
  [Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)   
- [Odwołania preprocesora C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+ [Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

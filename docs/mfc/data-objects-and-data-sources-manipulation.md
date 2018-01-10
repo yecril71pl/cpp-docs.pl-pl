@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4561e055bd258ba2b276075ff337d62cf194813b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Obiekty danych i źródła danych: operowanie
 Po utworzeniu obiektu danych lub źródła danych, można wykonywać wiele typowych operacji na danych, takich jak wstawianie i usuwanie danych wyliczania formatów, z których dane są, i inne. W tym artykule opisano niezbędne do zakończenia operacji najbardziej typowe techniki. Tematy obejmują:  
@@ -94,9 +95,9 @@ Po utworzeniu obiektu danych lub źródła danych, można wykonywać wiele typow
   
 -   [Przeciągnij i upuść](../mfc/drag-and-drop-ole.md)  
   
--   [Schowka](../mfc/clipboard.md)  
+-   [Schowek](../mfc/clipboard.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
  [Klasa COleDataObject](../mfc/reference/coledataobject-class.md)   
- [COleDataSource — klasa](../mfc/reference/coledatasource-class.md)
+ [Klasa COleDataSource](../mfc/reference/coledatasource-class.md)

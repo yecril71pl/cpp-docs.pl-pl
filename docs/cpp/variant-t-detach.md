@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 014de597ffbc9a7004f821393902ffe05ac1f278
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 577b4874dd6d89c0c6c60b1a7981e74944e77ba8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Dotyczące firmy Microsoft**  
@@ -48,4 +49,4 @@ VARIANT Detach( );
  **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [_variant_t — klasa](../cpp/variant-t-class.md)
+ [_variant_t, klasa](../cpp/variant-t-class.md)

@@ -30,11 +30,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: daae662a39d012418b5cd178e26d731dbca1e715
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6dec5a3fd89703b3e27f9acf8c9edf976fdd18f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctype"></a>wctype
 Określa reguły klasyfikacji kodów znaków dwubajtowych.  
@@ -81,4 +82,4 @@ wctype_t wctype(
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
- [setLocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)

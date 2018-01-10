@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b4e45874b8cfebafbfedd6a8a91ef86816ac60b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8ea7130770f88c377aa7f332ac60bb244b66f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers-user-interface-issues"></a>Serwery: kwestie dotyczące interfejsu użytkownika
 Aplikacja serwera ma wiele funkcji, które muszą zostać dodane do interfejsu użytkownika do dostarczania elementów OLE do aplikacji kontenera. Aby uzyskać więcej informacji na menu i dodatkowe zasoby, które mają zostać dodane do aplikacji serwera, zobacz [menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md).  

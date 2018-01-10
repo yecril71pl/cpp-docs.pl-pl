@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6568582b7e6ea44298e5a332a16c22ae54b12cc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f70765d94b0104cf905130ce043c2b0e35b26a41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: sekwencja operacji
 W tym artykule przedstawiono obok siebie, sekwencja operacji przy gniazda serwera i klienta gniazda. Ponieważ jest używany przez gniazdami `CArchive` obiekty, są zawsze [strumienia sockets](../mfc/windows-sockets-stream-sockets.md).  
@@ -63,15 +64,15 @@ W tym artykule przedstawiono obok siebie, sekwencja operacji przy gniazda serwer
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: Porty i adresy gniazd](../mfc/windows-sockets-ports-and-socket-addresses.md)  
+-   [Gniazda systemu Windows: porty i adresy gniazd](../mfc/windows-sockets-ports-and-socket-addresses.md)  
   
--   [Windows Sockets: Gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)  
+-   [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows Sockets: Gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)   

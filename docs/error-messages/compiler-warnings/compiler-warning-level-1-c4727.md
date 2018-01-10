@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15a8a74fc4c15e507fc8a651e9849fc82e3b9c38
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 813c2ab18cc81c4477ae094e6c2aa771e3135b7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Kompilator C4727 ostrzegawcze (poziom 1)
 "PCH o nazwie pch_file z tą samą sygnaturą czasową w obj_file_1 i obj_file_2.  Za pomocą pierwszego układu PCH.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
  **Cl/CLR /GL b.cpp c.cpp /Yustdafx.h/Link a.obj**  
   
- Aby uzyskać więcej informacji, zobacz  
+ Aby uzyskać więcej informacji, zobacz artykuł  
   
 -   [/Yc (Utwórz prekompilowany plik nagłówka)](../../build/reference/yc-create-precompiled-header-file.md)  
   

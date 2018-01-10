@@ -39,11 +39,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f358376a16d811274978ccc730268e7cbe806df7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 327c55d92b9d23644807ecd52dbecf0fd0b62375
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
 Konwertuje odpowiednich znaków wielobajtowych jednobajtowe znaków wielobajtowych znaków dwubajtowych.  
@@ -94,4 +95,4 @@ unsigned int _mbctombb_l(
  [_mbbtombc —, _mbbtombc_l —](../../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
  [_mbcjistojms —, _mbcjistojms_l —, _mbcjmstojis — _mbcjmstojis_l —](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
  [_mbctohira —, _mbctohira_l —, _mbctokata — _mbctokata_l —](../../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)   
- [_mbctolower —, _mbctolower_l —, _mbctoupper — _mbctoupper_l —](../../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)
+ [_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l](../../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)

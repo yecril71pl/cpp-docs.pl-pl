@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c897cd0a9e4685cdd3dd202b4831504b9f4c88c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9db31d6e152be10f2c4934b7b1f239d1e08387f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Karta Edytor okien dialogowych, Przybornik
 Karta Edytor okien dialogowych zostanie wyświetlony w [okno przybornika](/visualstudio/ide/reference/toolbox) podczas pracy w edytorze okien dialogowych. Aby dodać kontrolki do Twoje nowe okno dialogowe, przeciągnij formanty z przybornika do okna dialogowego, które tworzysz (Aby uzyskać więcej informacji, zobacz [Dodawanie formantu do okna dialogowego](adding-a-control-to-a-dialog-box.md)). Można przenosić formantów lub zmienić ich rozmiar i kształt.  
@@ -90,7 +93,7 @@ Karta Edytor okien dialogowych zostanie wyświetlony w [okno przybornika](/visua
 
  Aby uzyskać więcej informacji o korzystaniu z formantu RichEdit 1.0 z MFC, zobacz [używanie formantu RichEdit 1.0 z MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](https://msdn.microsoft.com/library/f45fce5x.aspx) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](https://msdn.microsoft.com/library/xbx3z216.aspx). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
@@ -102,5 +105,5 @@ Karta Edytor okien dialogowych zostanie wyświetlony w [okno przybornika](/visua
  [Style paska przewijania](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)   
  [Przykłady formantów edycji wzbogaconej](../mfc/rich-edit-control-examples.md)   
  [Dodawanie programów obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)   
- [Formanty okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)
+ [Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)
 

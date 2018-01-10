@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b167f4064c73e126a745e5273592042dbf4a00e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Wdrożenia z menedżerem ciąg niestandardowy (zaawansowana metoda)
 W sytuacjach, specjalne można zaimplementować Menedżera niestandardowy ciąg, który więcej niż tylko ulega zmianie stosu, który służy do przydzielenia pamięci. W takiej sytuacji należy ręcznie zaimplementować [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfejsu Menedżera niestandardowy ciąg.  
@@ -38,5 +39,5 @@ W sytuacjach, specjalne można zaimplementować Menedżera niestandardowy ciąg,
      Podczas przydzielania `CStringData` struktury, należy ustawić to pole, aby odzwierciedlić typ udostępniania jest dozwolony dla buforu. W większości implementacji wartość tę należy ustawić na jeden. Dzięki temu zwykłe zachowanie udostępniania kopii przy zapisie. Jednak jeśli Menedżera ciągu nie obsługuje udostępniania buforu ciągu, należy ustawić w tym polu w stanie zablokowanym. Dzięki temu `CStringT` do użycia tylko bufor dla wystąpienia `CStringT` przydzielone go.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zarządzanie pamięcią z CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+ [Zarządzanie pamięcią za pomocą CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 

@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 99a4cf3fe356cf888101935aba5bec9a599135f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f4e99ce38bd5ae472d688dc779bdd4ccf9fd4c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="window-procedure-entry-points"></a>Punkty wejścia procedury okna
 Aby chronić procedury okna MFC, statycznych łączy modułu, z implementacją procedury specjalne okno. Powiązanie odbywa się automatycznie, gdy moduł jest połączony z MFC. Korzysta z tej procedury okna `AFX_MANAGE_STATE` makra, aby poprawnie ustawić stan modułu skuteczne, a następnie wywołuje **AfxWndProc**, który z kolei deleguje do `WindowProc` funkcji członkowskiej klasy odpowiednie `CWnd`-pochodnych obiekt.  

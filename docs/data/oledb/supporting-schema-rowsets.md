@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3cd1a75df607678546c53b53df134f45eb87026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-schema-rowsets"></a>Obsługa zestawów wierszy schematu
 Zestawy wierszy schematu umożliwiają konsumentów uzyskać informacje o magazynie danych bez uprzedniego uzyskania informacji o jego struktury lub schematu. Na przykład magazynu danych może być tabel zorganizowane w hierarchii zdefiniowanej przez użytkownika, więc nie byłoby żaden sposób zapewnić wiedzę na temat schematu z wyjątkiem odczytując go. (Inny przykład należy pamiętać, że kreatorów Visual C++ zestawów wierszy schematu do generowania metody dostępu dla użytkownika.) Aby zezwolić na odbiorców to zrobić, obiekt sesji dostawcy udostępnia metody na [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interfejsu. W aplikacji Visual C++, możesz użyć [idbschemarowsetimpl —](../../data/oledb/idbschemarowsetimpl-class.md) klasy do zaimplementowania **IDBSchemaRowset**.  

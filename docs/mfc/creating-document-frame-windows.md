@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25780092d11580225bef325c53e99c82263267b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9098026c1a38f8e60093415ba1c5a2b3678b64d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-document-frame-windows"></a>Tworzenie okien ramowych dokumentu
 [Tworzenie dokumentu/widoku](../mfc/document-view-creation.md) przedstawia sposób [cdoctemplate —](../mfc/reference/cdoctemplate-class.md) obiektu organizuje tworzenie okien ramowych dokumentu, a widok i łącząc je do wszystkich elementów. Trzy [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argumenty `CDocTemplate` Konstruktor Określ okno ramowe, klasy dokumentów i widoków tworzone przez szablon dokumentu dynamicznie w odpowiedzi na polecenia użytkownika, takie jak nowe polecenie do pliku menu lub nowe okno polecenia menu okna MDI. Szablon dokumentu przechowuje tych informacji do późniejszego użycia podczas tworzenia ramkę okna do widoku i dokumentu.  

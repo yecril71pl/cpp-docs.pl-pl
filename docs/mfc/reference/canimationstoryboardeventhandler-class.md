@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f14e3c2dd45c5ef68b30b3d5f33bb3c941568b17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 599164d1bb2eca17b935fc74f13fe9b134fc4f2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>Klasa CAnimationStoryboardEventHandler
 Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji w przypadku zmiany stanu scenorysu lub zaktualizowaniu scenorysu.  

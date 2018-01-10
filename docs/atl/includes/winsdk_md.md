@@ -1,3 +1,1 @@
----
----
-Zestaw SDK systemu Windows
+Windows SDK

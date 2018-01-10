@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17710654b0af2e03019a1e7b888d86e42c5e35c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f66df471d66a82a565fc5c072757664567d1f25c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>Porady: używanie wyrażeń regularnych do wyszukiwania i zamieniania (C++/CLI)
 Poniższy przykład kodu pokazuje sposób klasy wyrażeń regularnych <xref:System.Text.RegularExpressions.Regex> może służyć do wykonywania wyszukiwania i zamiany. Jest to zrobić za pomocą <xref:System.Text.RegularExpressions.Regex.Replace%2A> metody. Wersja użyta przyjmuje dwa ciągi jako dane wejściowe: ciąg, który ma być zmodyfikowana, a ciąg, który ma zostać wstawiony zamiast sekcje (jeśli istnieje) pasujących do wzorca <xref:System.Text.RegularExpressions.Regex> obiektu.  
@@ -56,4 +59,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [.NET framework — nieprawidłowe wyrażenia](/dotnet/standard/base-types/regular-expressions)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

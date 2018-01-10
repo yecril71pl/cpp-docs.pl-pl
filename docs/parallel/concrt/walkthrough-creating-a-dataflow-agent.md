@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b94fb68ad28e45141551b238acf99baedf78ef6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Wskazówki: tworzenie agenta przepływu danych
 Ten dokument przedstawia sposób tworzenia aplikacji opartych na agenta, oparte na przepływu danych, zamiast przepływu sterowania.  
@@ -36,7 +37,7 @@ Ten dokument przedstawia sposób tworzenia aplikacji opartych na agenta, oparte 
   
 - [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)  
   
-- [Porady: Użyj filtra bloku komunikatów](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
+- [Instrukcje: korzystanie z filtra bloku komunikatów](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
 ##  <a name="top"></a>Sekcje  
  Ten przewodnik zawiera następujące sekcje:  
@@ -154,5 +155,5 @@ info: ===Logging finished.===
  [[Górnej](#top)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność środowiska wykonawczego — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
+ [Środowisko uruchomieniowe współbieżności — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 

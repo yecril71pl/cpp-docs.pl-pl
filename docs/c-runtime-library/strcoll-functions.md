@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 224c30dfbc79ab91e60f7f55f4835d3f627c454c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcoll-functions"></a>strcoll — Funkcje
 Każdy z `strcoll` i `wcscoll` funkcje porównuje dwa ciągi zgodnie z `LC_COLLATE` ustawienie kategorii Strona kodowa ustawień lokalnych obecnie w użyciu. Każdy z `_mbscoll` funkcji porównuje dwa ciągi zgodnie ze strony kodowe wielobajtowe obecnie w użyciu. Użyj `coll` funkcje do porównywnania ciągów, gdy ma różnicy między kolejność zestaw znaków i kolejność lexicographic znaków w bieżącej stronie kodowej i różnica jest przydatne do porównania. Użyj odpowiedniej `cmp` funkcji, aby przetestować tylko w przypadku ciągu równości.  
@@ -63,4 +64,4 @@ Każdy z `strcoll` i `wcscoll` funkcje porównuje dwa ciągi zgodnie z `LC_COLLA
  [strcmp —, wcscmp —, _mbscmp —](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
  [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm —, wcsxfrm —, _strxfrm_l — _wcsxfrm_l —](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

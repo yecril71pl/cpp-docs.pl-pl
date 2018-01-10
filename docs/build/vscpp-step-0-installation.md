@@ -1,8 +1,8 @@
 ---
-title: "Krok 0 - zainstalować obsługi języka C++ w programie Visual Studio | Dokumentacja firmy Microsoft"
+title: "Instalowanie obsługi języka C++ w programie Visual Studio | Dokumentacja firmy Microsoft"
 description: "Zainstaluj obsługę programu Visual Studio dla programu Visual C++"
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,11 +11,12 @@ ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 840f23d894e8aacc53a735fa8e1c25a671ed3a2a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: b895569e5535fb05c1e2383df224f149815dd47f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalowanie obsługi języka C++ w programie Visual Studio
 
@@ -74,6 +75,6 @@ Po uruchomieniu programu Visual Studio można przystąpić do przejdź do nastę
 ## <a name="next-steps"></a>Następne kroki
 
 > [!div class="nextstepaction"]
-> [Krok 1: Tworzenie projektu C++](vscpp-step-1-create.md)
+> [Tworzenie projektu C++](vscpp-step-1-create.md)
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

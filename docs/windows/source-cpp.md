@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e807ee5a29a7794880f91e99eec057293ec01b66
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f4bfc79a76ece278c62b4895cdeb2e10d6df42aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-c"></a>source (C++)
 W klasie określa interfejsów źródłowego obiektu COM dla punkty połączenia. W właściwości lub metody oznacza, że element członkowski zwraca obiekt lub Typ VARIANT, który jest źródłem zdarzeń.  
@@ -93,4 +96,4 @@ class NN : public b
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Atrybuty klasy](../windows/class-attributes.md)   
  [Atrybuty — metoda](../windows/method-attributes.md)   
- [Klasa coclass](../windows/coclass.md)   
+ [coclass](../windows/coclass.md)   

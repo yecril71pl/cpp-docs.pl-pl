@@ -16,11 +16,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 365f54435c92ff464a0906cd719bd33ce28d61b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ccad9809ac7586fb94f3997e812cb5ca7245b17f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-enumerate-files-in-a-directory-ccli"></a>Porady: wyliczanie plików w katalogu (C++/CLI)
 Poniższy przykład kodu pokazuje, jak można pobrać listy plików w katalogu. Ponadto są wyliczane podkatalogów. Poniższy przykład kodu wykorzystuje <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> i <xref:System.IO.Directory.GetDirectories%2A> metody, aby wyświetlić zawartość katalogu C:\Windows.  
@@ -52,4 +55,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [Plik i strumienia I-O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 695e3e07af26c709dadc70935e1e4d72705ecab8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9159b9c8170ee73afd8bee5305506a842368a231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-containers-and-objects"></a>Równoległe kontenery oraz obiekty
 Biblioteka równoległych wzorców (PLL) obejmuje kilka kontenerów i obiektów, które dostarczają wątkowo dostęp do swoich elementów.  
@@ -35,7 +36,7 @@ Biblioteka równoległych wzorców (PLL) obejmuje kilka kontenerów i obiektów,
   
  Kontenery współbieżne:  
   
--   [concurrent_vector — klasa](#ctor)  
+-   [concurrent_vector, klasa](#ctor)  
   
     -   [Różnice między concurrent_vector — i wektora](#ctor)  
   
@@ -43,7 +44,7 @@ Biblioteka równoległych wzorców (PLL) obejmuje kilka kontenerów i obiektów,
   
     -   [Wyjątek bezpieczeństwa](#ctor)  
   
--   [concurrent_queue — klasa](#queue)  
+-   [concurrent_queue, klasa](#queue)  
   
     -   [Różnice między concurrent_queue — i kolejki](#queue-differences)  
   
@@ -51,21 +52,21 @@ Biblioteka równoległych wzorców (PLL) obejmuje kilka kontenerów i obiektów,
   
     -   [Obsługa iteratora](#queue-iterators)  
   
--   [concurrent_unordered_map — klasa](#unordered_map)  
+-   [concurrent_unordered_map, klasa](#unordered_map)  
   
     -   [Różnice między concurrent_unordered_map — i unordered_map](#map-differences)  
   
     -   [Operacje bezpieczne współbieżności](#map-safety)  
   
--   [concurrent_unordered_multimap — klasa](#unordered_multimap)  
+-   [concurrent_unordered_multimap, klasa](#unordered_multimap)  
   
--   [concurrent_unordered_set — klasa](#unordered_set)  
+-   [concurrent_unordered_set, klasa](#unordered_set)  
   
--   [concurrent_unordered_multiset — klasa](#unordered_multiset)  
+-   [concurrent_unordered_multiset, klasa](#unordered_multiset)  
   
  Obiekty współbieżnych:  
   
--   [combinable — klasa](#combinable)  
+-   [combinable, klasa](#combinable)  
   
     -   [Metody i funkcje](#combinable-features)  
   
@@ -163,7 +164,7 @@ Biblioteka równoległych wzorców (PLL) obejmuje kilka kontenerów i obiektów,
   
 |||  
 |-|-|  
-|[pusty](reference/concurrent-queue-class.md#empty)|[wypychania](reference/concurrent-queue-class.md#push)|  
+|[pusty](reference/concurrent-queue-class.md#empty)|[push](reference/concurrent-queue-class.md#push)|  
 |[get_allocator](reference/concurrent-queue-class.md#get_allocator)|[try_pop](reference/concurrent-queue-class.md#try_pop)|  
 
 
@@ -298,36 +299,36 @@ Biblioteka równoległych wzorców (PLL) obejmuje kilka kontenerów i obiektów,
 ###  <a name="combinable-examples"></a>Przykłady  
  Przykłady dotyczące korzystania `combinable` , zobacz następujące tematy:  
   
--   [Porady: Korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)  
+-   [Instrukcje: korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)  
   
--   [Porady: Korzystanie z wyników połączonych w celu łączenia zestawów](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)  
+-   [Instrukcje: korzystanie z wyników połączonych w celu łączenia zestawów](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)  
   
  [[Górnej](#top)]  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
- [Porady: Korzystanie z kontenerów równoległych do zwiększania wydajności](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)  
+ [Instrukcje: korzystanie z kontenerów równoległych do zwiększania wydajności](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)  
  Pokazuje, jak przy użyciu kontenerów równoległych wydajne przechowywanie i uzyskać dostęp do danych równolegle.  
   
- [Porady: Korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)  
+ [Instrukcje: korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)  
  Przedstawia sposób użycia `combinable` klasy w celu usunięcia udostępniony stan, a tym samym poprawić wydajność.  
   
- [Porady: Korzystanie z wyników połączonych w celu łączenia zestawów](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)  
+ [Instrukcje: korzystanie z wyników połączonych w celu łączenia zestawów](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)  
  Przedstawia sposób użycia `combine` funkcji do scalenia wątków lokalnych zestawów danych.  
   
- [Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
+ [Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
  W tym artykule opisano PPL, oferujący imperatywnych model programowania wspiera skalowalność i łatwość użycia dla tworzenie współbieżnych aplikacji.  
   
 ## <a name="reference"></a>Tematy pomocy  
- [concurrent_vector — klasa](../../parallel/concrt/reference/concurrent-vector-class.md)  
+ [concurrent_vector, klasa](../../parallel/concrt/reference/concurrent-vector-class.md)  
   
- [concurrent_queue — klasa](../../parallel/concrt/reference/concurrent-queue-class.md)  
+ [concurrent_queue, klasa](../../parallel/concrt/reference/concurrent-queue-class.md)  
   
- [concurrent_unordered_map — klasa](../../parallel/concrt/reference/concurrent-unordered-map-class.md)  
+ [concurrent_unordered_map, klasa](../../parallel/concrt/reference/concurrent-unordered-map-class.md)  
   
- [concurrent_unordered_multimap — klasa](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md)  
+ [concurrent_unordered_multimap, klasa](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md)  
   
- [concurrent_unordered_set — klasa](../../parallel/concrt/reference/concurrent-unordered-set-class.md)  
+ [concurrent_unordered_set, klasa](../../parallel/concrt/reference/concurrent-unordered-set-class.md)  
   
- [concurrent_unordered_multiset — klasa](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md)  
+ [concurrent_unordered_multiset, klasa](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md)  
   
- [combinable — klasa](../../parallel/concrt/reference/combinable-class.md)
+ [combinable, klasa](../../parallel/concrt/reference/combinable-class.md)

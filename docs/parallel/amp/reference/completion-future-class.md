@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40f4c4821a6141e7795f37f5a276a544677ba48b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07e41d6bf03df1231249a9e2ea5e54e420c9840c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="completionfuture-class"></a>completion_future — Klasa
 Reprezentuje przyszłych odpowiadający C++ AMP operację asynchroniczną.  
@@ -52,7 +53,7 @@ class completion_future;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Pobierz](#get)|Czeka, aż do zakończenia skojarzonego operację asynchroniczną.|  
+|[get](#get)|Czeka, aż do zakończenia skojarzonego operację asynchroniczną.|  
 |[następnie](#then)|Powiązany obiekt funkcja wywołania zwrotnego do `completion_future` obiektu ma być wykonywana w przypadku skojarzone operację asynchroniczną kończy działanie.|  
 |[to_task](#to_task)|Zwraca `task` obiektu odpowiadającego skojarzone operację asynchroniczną.|  
 |[Nieprawidłowa](#valid)|Pobiera wartość logiczną wskazującą, czy obiekt jest skojarzony z operacji asynchronicznej.|  
@@ -285,4 +286,4 @@ Niszczy `completion_future` obiektu.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

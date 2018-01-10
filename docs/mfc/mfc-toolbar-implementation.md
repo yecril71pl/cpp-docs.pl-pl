@@ -28,11 +28,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: defb0dc6faa5438dc7f040fbd09f318b60b5a2ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 540f3240588b8e6fde119a167eace8103ef58c5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC — implementacja paska narzędzi
 Pasek narzędzi jest [pasek sterowania](../mfc/control-bars.md) zawierający obrazy mapy bitowej kontrolek. Tych obrazów, może zachowywać się jak przyciski, pola wyboru lub przycisków radiowych. Klasa dostarcza MFC [ctoolbar —](../mfc/reference/ctoolbar-class.md) do zarządzania pasków narzędzi.  
@@ -102,7 +103,7 @@ Pasek narzędzi jest [pasek sterowania](../mfc/control-bars.md) zawierający obr
   
 -   [Etykietki narzędzi paska narzędzi](../mfc/toolbar-tool-tips.md)  
   
--   [Praca z formantem paska narzędzi](../mfc/working-with-the-toolbar-control.md)  
+-   [Praca z kontrolką paska narzędzi](../mfc/working-with-the-toolbar-control.md)  
   
 -   [Używanie swoich starych pasków narzędzi](../mfc/using-your-old-toolbars.md)  
   

@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5105a03b4db49eda1c2338cf85414c4bfc0c153d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c427dc034a37bf3b0686b0fd95e62c3b718fbaea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cricheditdoc-class"></a>Cricheditdoc — klasa
 Z [cricheditview —](../../mfc/reference/cricheditview-class.md) i [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), udostępnia funkcje kontrolki zaawansowanej edycji w kontekście architektura widoku dokumentu MFC.  
@@ -146,4 +147,4 @@ BOOL m_bRTF;
  [Cricheditview — klasa](../../mfc/reference/cricheditview-class.md)   
  [Klasa CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)   
  [Klasa COleDocument](../../mfc/reference/coledocument-class.md)   
- [CRichEditCtrl — klasa](../../mfc/reference/cricheditctrl-class.md)
+ [Klasa CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)

@@ -119,11 +119,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a8b9c9de69f9042f68cc04d435070ade9b24dd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fffa5c09f1572200ca7850c8870b7daee9e3e75f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccombobox-class"></a>Ccombobox — klasa
 Udostępnia funkcjonalność pola kombi systemu Windows.  
@@ -1358,4 +1359,4 @@ void ShowDropDown(BOOL bShowIt = TRUE);
  [Clistbox — klasa](../../mfc/reference/clistbox-class.md)   
  [Klasa CScrollBar](../../mfc/reference/cscrollbar-class.md)   
  [Klasa CStatic](../../mfc/reference/cstatic-class.md)   
- [Cdialog — klasa](../../mfc/reference/cdialog-class.md)
+ [Klasa CDialog](../../mfc/reference/cdialog-class.md)

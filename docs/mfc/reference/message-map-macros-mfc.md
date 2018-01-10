@@ -39,11 +39,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70f88d493ad557515cfac1f8cffeaa305c849f63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bf56b243118ceb7fdd995fc6970f6c49e0a5499
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="message-map-macros-mfc"></a>Makra mapy komunikatów (MFC)
 Aby obsługiwać mapy komunikatów, MFC dostarcza następujące makra:  
@@ -312,7 +313,7 @@ ON_MESSAGE( message, memberFxn )
  Powinien istnieć dokładnie jeden `ON_MESSAGE` oświadczenie makra mapy wiadomości dla każdej wiadomości zdefiniowane przez użytkownika, który musi być zamapowany na funkcję obsługi wiadomości.  
   
 > [!NOTE]
->  Oprócz wiadomości zdefiniowane przez użytkownika `ON_MESSAGE` obsługuje mniej typowych komunikatów systemu Windows. Aby uzyskać więcej informacji, zobacz artykule bazy wiedzy [99848: informacje o: Użyj ON_MESSAGE() makra mapy wiadomości mniej typowe](http://go.microsoft.com/fwlink/?linkId=192022).  
+>  Oprócz wiadomości zdefiniowane przez użytkownika `ON_MESSAGE` obsługuje mniej typowych komunikatów systemu Windows. Aby uzyskać więcej informacji, zobacz artykule bazy wiedzy [99848: informacje o: Użyj ON_MESSAGE() makra mapy wiadomości mniej typowe](http://go.microsoft.com/fwlink/p/?linkid=192022).  
   
  Aby uzyskać dodatkowe informacje i przykłady, zobacz [obsługi wiadomości i mapowania tematy](../../mfc/message-handling-and-mapping.md) i [programy obsługi zdefiniowane przez użytkownika](user-defined-handlers.md)  
   
@@ -577,7 +578,7 @@ ON_UPDATE_COMMAND_UI( id, memberFxn )
  **Nagłówek:** afxole.h  
   
 ### <a name="see-also"></a>Zobacz też  
- [Ccmdui — klasa](ccmdui-class.md)
+ [Klasa CCmdUI](ccmdui-class.md)
 
 ## <a name="on_command_range"></a>ON_COMMAND_RANGE —  
 Umożliwia to makro zmapować ciągły zakres identyfikatorów poleceń funkcji obsługi wiadomości.  

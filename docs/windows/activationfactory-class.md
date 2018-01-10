@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6876fb3d418a4dac8a68449da5d0eae855daa440
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 73690603b1be1dd74b7ae7626372e3ab6ff9101e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activationfactory-class"></a>ActivationFactory — Klasa
 Umożliwia co najmniej jedną klasę do aktywacji przez środowisko wykonawcze systemu Windows.  
@@ -62,18 +65,18 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Activationfactory::activationfactory — Konstruktor](../windows/activationfactory-activationfactory-constructor.md)|Inicjuje activationfactory — klasa.|  
+|[ActivationFactory::ActivationFactory, konstruktor](../windows/activationfactory-activationfactory-constructor.md)|Inicjuje activationfactory — klasa.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ActivationFactory::AddRef — metoda](../windows/activationfactory-addref-method.md)|Zwiększa liczbę odwołanie do bieżącego obiektu activationfactory —.|  
-|[ActivationFactory::GetIids — metoda](../windows/activationfactory-getiids-method.md)|Pobiera tablica zaimplementowanego interfejsu identyfikatorów.|  
-|[ActivationFactory::GetRuntimeClassName — metoda](../windows/activationfactory-getruntimeclassname-method.md)|Pobiera obiekt, który tworzy bieżącego activationfactory — Nazwa klasy środowiska wykonawczego.|  
-|[ActivationFactory::GetTrustLevel — metoda](../windows/activationfactory-gettrustlevel-method.md)|Pobiera obiekt, który tworzy bieżącego activationfactory — poziom zaufania.|  
-|[ActivationFactory::QueryInterface — metoda](../windows/activationfactory-queryinterface-method.md)|Pobiera wskaźnik do określonego interfejsu.|  
-|[ActivationFactory::Release — metoda](../windows/activationfactory-release-method.md)|Zmniejsza odwołanie liczba bieżącego obiektu activationfactory —.|  
+|[ActivationFactory::AddRef, metoda](../windows/activationfactory-addref-method.md)|Zwiększa liczbę odwołanie do bieżącego obiektu activationfactory —.|  
+|[ActivationFactory::GetIids, metoda](../windows/activationfactory-getiids-method.md)|Pobiera tablica zaimplementowanego interfejsu identyfikatorów.|  
+|[ActivationFactory::GetRuntimeClassName, metoda](../windows/activationfactory-getruntimeclassname-method.md)|Pobiera obiekt, który tworzy bieżącego activationfactory — Nazwa klasy środowiska wykonawczego.|  
+|[ActivationFactory::GetTrustLevel, metoda](../windows/activationfactory-gettrustlevel-method.md)|Pobiera obiekt, który tworzy bieżącego activationfactory — poziom zaufania.|  
+|[ActivationFactory::QueryInterface, metoda](../windows/activationfactory-queryinterface-method.md)|Pobiera wskaźnik do określonego interfejsu.|  
+|[ActivationFactory::Release, metoda](../windows/activationfactory-release-method.md)|Zmniejsza odwołanie liczba bieżącego obiektu activationfactory —.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `I0`  
@@ -102,4 +105,4 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

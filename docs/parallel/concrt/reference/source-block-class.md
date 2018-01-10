@@ -43,11 +43,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01961cf610a50ff9f0c858eeb0269288120edbe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1709ebf0a831fa7c1bba79b338a2978d6c6dae86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sourceblock-class"></a>source_block — Klasa
 `source_block` Klasa jest abstrakcyjna klasa podstawowa dla bloków tylko do źródła. Ta klasa dostarcza łącze podstawowe funkcje zarządzania jako również jako wspólne sprawdzanie błędów.  
@@ -500,4 +501,4 @@ void wait_for_outstanding_async_sends();
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [Isource — klasa](isource-class.md)
+ [ISource, klasa](isource-class.md)

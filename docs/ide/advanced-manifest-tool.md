@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 83f78603825cc8880063c8cfb4d750f6109c5d6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c756da4ef7b89113ce26e7218011d708ff4c935c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Zaawansowane narzędzia manifestu właściwości konfiguracji &lt;Projectname&gt; stron właściwości — okno dialogowe
 To okno dialogowe służy do określenia opcji zaawansowanych [Mt.exe](http://msdn.microsoft.com/library/aa375649).  

@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4abb20ba85407e12c71ca83af7dce96eb0f9d751
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39f2a901404a9c2c34dc9147cb4ed51f070396a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 Pobiera bieżący stan sterty debugowania i zapisuje w dostarczonych aplikacji `_CrtMemState` struktury (tylko wersja do debugowania).  
@@ -75,4 +76,4 @@ void _CrtMemCheckpoint(
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
- [_Crtmemdifference —](../../c-runtime-library/reference/crtmemdifference.md)
+ [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md)

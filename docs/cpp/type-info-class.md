@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 61e26b60916712e10c1c0fa5b255aa7bf2bc1fd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9cd5a1844bfeec798ee25a3cb8e65efd019e65e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typeinfo-class"></a>type_info — Klasa
 **Type_info —** klasa opisuje informacje o typie w program generowane przez kompilator. Obiekty tej klasy skutecznie przechowują wskaźnik do nazwy typu. **Type_info —** klasy przechowuje także zakodowaną wartość odpowiednie do porównywania dwóch typów równości lub kolejności sortowania. Reguły kodowania i sekwencja typów sortowania są nieokreślone i mogą się różnić między programami.  
@@ -56,4 +57,4 @@ public:
  Informacje o typie jest generowane dla klasy polimorficzne tylko wtedy, gdy [/GR (Włącz Run-Time informacji o typie)](../build/reference/gr-enable-run-time-type-information.md) określono opcję kompilatora.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Informacje typu Run-Time](../cpp/run-time-type-information.md)
+ [Informacje o typach uzyskiwane w czasie rzeczywistym](../cpp/run-time-type-information.md)

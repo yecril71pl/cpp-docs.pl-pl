@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 909f6793e6171e0f219493815ca520cf4c390025
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fcb37c1c14a9d09230bfa5d4fdce1da5eddfb4f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Porady: używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania
 Współbieżność środowiska wykonawczego kolejność zaplanowane zadania jest deterministyczna. Jednak służy zasad harmonogramu do wywierania wpływu na kolejność, w którym są uruchomione zadania. W tym temacie przedstawiono sposób używanie grup harmonogramu razem z [concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) zasad harmonogramu do wywierania wpływu na kolejność, w którym są uruchomione zadania.  

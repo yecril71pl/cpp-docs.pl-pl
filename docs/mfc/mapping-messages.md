@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 03a07410f6decb6497312a9f04b421bed367dfad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c415b12b22c19a5e1f2d19fd9c808a98485eb7ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-messages"></a>Mapowanie komunikatów
 Każda klasa framework, który może odbierać wiadomości lub poleceń ma własną "komunikat mapy." Platformę używa mapy komunikatów do nawiązywania ich funkcje obsługi wiadomości i poleceń. Każda klasa pochodzi od klasy `CCmdTarget` może mieć mapy komunikatów. Inne artykuły mapy komunikatów szczegółowo opisano i sposobu ich używania.  

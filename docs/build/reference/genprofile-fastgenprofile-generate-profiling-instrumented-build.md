@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e3b0f986d4bc805a3cac1ec49193f3749f31af9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 028b31044d035def628785969a04c27af4699f65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/ Opcję GENPROFILE, /FASTGENPROFILE (Generuj profilowania Instrumentowanej kompilacji)
 Określa Generowanie pliku .pgd przez konsolidator, aby obsługiwać Optymalizacja sterowana profilem — (PGO).  / Opcję GENPROFILE i /FASTGENPROFILE parametry różne domyślne. Użyj opcji/genprofile, aby preferował dokładności nad użyciem szybkość i pamięci podczas profilowania. Użyj /FASTGENPROFILE preferować mniejsze zużycie pamięci i szybkość nad dokładności.  

@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8100119dba1094ced9358e5ff0102d831a713b2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 130e4ecf7534b16ecabf4c35665a4dabe9eee34e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-maps"></a>Mapy zdarzeń
 Zawsze, gdy formant pragnie powiadomić jego kontenera, w którym wykonano akcję (określoną przez dewelopera kontrolek) (na przykład naciśnięcie klawisza, kliknięcie myszą lub zmianę stanu formantu) wywołuje funkcję inicjowanie zdarzeń. Ta funkcja powiadamia kontenera kontrolki, w którym niektóre akcje, ważne nastąpił przed wyzwoleniem zdarzenia pokrewne.  
@@ -131,10 +132,10 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
   
 |Symbol|Typ parametru|  
 |------------|--------------------|  
-|**VTS_I2**|**krótki**|  
-|**VTS_I4**|**długa**|  
+|**VTS_I2**|**short**|  
+|**VTS_I4**|**long**|  
 |**VTS_R4**|**float**|  
-|**VTS_R8**|**podwójne**|  
+|**VTS_R8**|**double**|  
 |**VTS_COLOR —**|**OLE_COLOR**|  
 |**VTS_CY**|**WALUTY**|  
 |**VTS_DATE**|**DATA**|  

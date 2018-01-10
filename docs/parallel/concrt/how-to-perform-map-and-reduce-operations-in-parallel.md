@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6648933aa972ec1391afe2d9cecd37b15ad53f9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84e38dd845f3503512f48c19e226d56d9978cc21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Porady: wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle
 
@@ -50,4 +51,4 @@ Ten przykład przedstawia sposób użycia [concurrency::parallel_transform](refe
  [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)   
  [parallel_transform — funkcja](reference/concurrency-namespace-functions.md#parallel_transform)   
  [parallel_reduce — funkcja](reference/concurrency-namespace-functions.md#parallel_reduce)   
- [concurrent_unordered_map — klasa](../../parallel/concrt/reference/concurrent-unordered-map-class.md)
+ [concurrent_unordered_map, klasa](../../parallel/concrt/reference/concurrent-unordered-map-class.md)

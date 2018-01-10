@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90edebe8e57e6720ad1cb7a83b59f478532c16c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellation-in-the-ppl"></a>Anulowanie w PPL
 W tym dokumencie opisano roli anulowania w Biblioteka równoległych wzorców (PLL), jak anulować równoległych pracy i sposób określania, kiedy pracy równoległej została anulowana.  
@@ -86,7 +87,7 @@ W tym dokumencie opisano roli anulowania w Biblioteka równoległych wzorców (P
  Więcej przykładów, które anulowanie zadań równoległych, zobacz [wskazówki: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [porady: Użyj anulowania, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), i [porady: użycie Obsługa aby przerwać pętlę równoległą wyjątków](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
 ###  <a name="tokens"></a>Przy użyciu Token anulowania do anulowania pracy równoległych  
- `task`, `task_group`, I `structured_task_group` klasy obsługuje anulowania przy użyciu anulowanie tokenów. Definiuje PPL [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) i [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) klas w tym celu. Gdy używasz token anulowania do anulowania pracy środowiska uruchomieniowego nie można uruchomić nowej pracy, które subskrybuje tokenu. Pracy, który jest już aktywna, można użyć [is_canceled] ((.. /.. / parallel/concrt/reference/cancellation-token-class.md#is_canceled) funkcji członkowskiej token anulowania i zatrzymywania po może.  
+ `task`, `task_group`, I `structured_task_group` klasy obsługuje anulowania przy użyciu anulowanie tokenów. Definiuje PPL [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) i [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) klas w tym celu. Gdy używasz token anulowania do anulowania pracy środowiska uruchomieniowego nie można uruchomić nowej pracy, które subskrybuje tokenu. Można użyć pracy, który jest już aktywny [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) funkcji członkowskiej token anulowania i zatrzymywania po może.  
   
 
  Aby zainicjować anulowanie, należy wywołać [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) metody. Uwzględniał anulowania w następujący sposób:  
@@ -263,23 +264,23 @@ Caught 50
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Porady: Użyj anulowania, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Przedstawia sposób użycia anulowania do zaimplementowania algorytmu wyszukiwania równoległego.|  
-|[Porady: Użyj obsługi aby przerwać pętlę równoległą wyjątków](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Przedstawia sposób użycia `task_group` klasa umożliwiająca zapisanie algorytmu wyszukiwania dla struktury drzewa podstawowe.|  
+|[Instrukcje: używanie anulowania, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Przedstawia sposób użycia anulowania do zaimplementowania algorytmu wyszukiwania równoległego.|  
+|[Instrukcje: używanie obsługi wyjątków, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Przedstawia sposób użycia `task_group` klasa umożliwiająca zapisanie algorytmu wyszukiwania dla struktury drzewa podstawowe.|  
 |[Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Opisuje sposób obsługi wyjątków, które są generowane przez grupy zadań, zadań lekkich i agentów asynchronicznych przez środowisko uruchomieniowe i odpowiadanie na wyjątków w aplikacji.|  
 |[Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Opisuje sposób zadania odnoszą się do grup zadań i używania zadań i niestrukturalnych w aplikacji.|  
 |[Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)|W tym artykule opisano algorytmy równoległe, które jednocześnie wykonywania pracy na zbiory danych|  
-|[Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Zawiera omówienie Biblioteka równoległych wzorców.|  
+|[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Zawiera omówienie Biblioteka równoległych wzorców.|  
   
 ## <a name="reference"></a>Tematy pomocy  
- [Task — klasa (współbieżność środowiska wykonawczego)](../../parallel/concrt/reference/task-class.md)  
+ [task, klasa (środowisko uruchomieniowe współbieżności)](../../parallel/concrt/reference/task-class.md)  
   
- [cancellation_token_source — klasa](../../parallel/concrt/reference/cancellation-token-source-class.md)  
+ [cancellation_token_source, klasa](../../parallel/concrt/reference/cancellation-token-source-class.md)  
   
- [cancellation_token — klasa](../../parallel/concrt/reference/cancellation-token-class.md)  
+ [cancellation_token, klasa](../../parallel/concrt/reference/cancellation-token-class.md)  
   
  [task_group — klasa](reference/task-group-class.md)  
   
- [structured_task_group — klasa](../../parallel/concrt/reference/structured-task-group-class.md)  
+ [structured_task_group, klasa](../../parallel/concrt/reference/structured-task-group-class.md)  
 
  [parallel_for — funkcja](reference/concurrency-namespace-functions.md#parallel_for)
 

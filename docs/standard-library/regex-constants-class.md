@@ -93,11 +93,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a901b656546b333fc5dd2416a88050ee761e601e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df0e2b795b7ba19b4981ae3caecd1d14f36e11e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regexconstants-class"></a>regex_constants — Klasa
 Przestrzeń nazw dla flag wyrażenia regularnego.  
@@ -285,10 +286,10 @@ enum syntax_option_type
   
 ## <a name="see-also"></a>Zobacz też  
 [\<wyrażenie regularne >](../standard-library/regex.md)  
-[regex_error — klasa](../standard-library/regex-error-class.md)  
+[regex_error, klasa](../standard-library/regex-error-class.md)  
 [\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)  
-[regex_iterator — klasa](../standard-library/regex-iterator-class.md)  
+[regex_iterator, klasa](../standard-library/regex-iterator-class.md)  
 [\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)  
-[regex_token_iterator — klasa](../standard-library/regex-token-iterator-class.md)  
-[regex_traits — klasa](../standard-library/regex-traits-class.md)  
+[regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)  
+[regex_traits, klasa](../standard-library/regex-traits-class.md)  
 [\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)  

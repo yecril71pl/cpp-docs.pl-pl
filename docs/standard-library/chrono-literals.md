@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a470c96670753fd98b97f9b9d5daffbb8c3eba0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f23208b916c190e2fbcdcd0db4ce0709485795ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chrono-literals"></a>literały chrono
 (C ++ 14) \<Chrono > nagłówka definiuje 12 [literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md) ułatwiające przy użyciu literałów, które reprezentują godzin, minut, sekund, w milisekundach, mikrosekundach i nanosekundach. Każdy literału zdefiniowanego przez użytkownika ma całkowitych i zmiennoprzecinkowych przeciążenia. Literały są zdefiniowane w przestrzeni nazw wbudowanego literals::chrono_literals, który wejścia zakresu automatycznie po std::chrono znajduje się w zakresie.  

@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae7a414f08a0bc40ab39c3835084a4456e02b685
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1bb6b9a9a1a3fbdeb3c8efc572c81cdef7876957
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmapoperatorstlclr"></a>hash_map::operator(STL/CLR)
 Mapuje klucz, do jej powiązaną wartość mapowane.  
@@ -94,4 +97,4 @@ c1[b] = 2
 ## <a name="see-also"></a>Zobacz też  
  [hash_map — (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_map::Find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)   
- [hash_map::INSERT (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)
+ [hash_map::insert (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)

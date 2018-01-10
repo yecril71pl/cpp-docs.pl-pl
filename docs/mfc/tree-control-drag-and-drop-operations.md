@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8dcfab9baf3a698da0880d9acd84a84c4580b53e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 978c577a01b2f574009c601ca594a235e0712d71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operacje przeciągania i upuszczania kontrolki drzewa
 Formant drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła powiadomienie, gdy użytkownik uruchomi przeciągnij element. Formant wysyła [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) powiadomienie, gdy użytkownik rozpocznie przeciąganie elementu z lewego przycisku myszy i [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) powiadomienie, gdy użytkownik rozpocznie przeciąganie z Prawy przycisk. Formant drzewa uniemożliwi wysyłanie powiadomień, zapewniając formantu drzewa **TVS_DISABLEDRAGDROP** stylu.  
@@ -36,5 +37,5 @@ Formant drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła powiad
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

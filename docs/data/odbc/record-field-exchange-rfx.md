@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6494773de5bd64e66c2031a618d7a8d899215c2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 50fc0aea1ef50124cd98b0d0498b767d1f00e5c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-rfx"></a>Wymiana pól rekordów (RFX)
 Klasy baz danych MFC ODBC zautomatyzować przenoszenie danych między źródłem danych a [rekordów](../../data/odbc/recordset-odbc.md) obiektu. Gdy klasa wyprowadzona z z [crecordset —](../../mfc/reference/crecordset-class.md) i nie należy używać zbiorcze pobieranie z wiersza, dane są przesyłane przez mechanizm pól rekordów (RFX) programu exchange.  
@@ -47,15 +50,15 @@ Klasy baz danych MFC ODBC zautomatyzować przenoszenie danych między źródłem
   
  W poniższych tematach opisano szczegóły przy użyciu obiektów zestaw rekordów:  
   
--   [Wymiana pól rekordów: Używanie RFX](../../data/odbc/record-field-exchange-using-rfx.md)  
+-   [Wymiana pól rekordów: używanie RFX](../../data/odbc/record-field-exchange-using-rfx.md)  
   
--   [Wymiana pól rekordów: Używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
+-   [Wymiana pól rekordów: używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
   
--   [Wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)  
+-   [Wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Otwórz połączenie z bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)   
  [Klient MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
  [Obsługa baz danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md)   
- [Crecordset — klasa](../../mfc/reference/crecordset-class.md)
+ [Klasa CRecordset](../../mfc/reference/crecordset-class.md)

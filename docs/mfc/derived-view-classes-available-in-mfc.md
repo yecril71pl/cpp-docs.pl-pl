@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: da8136b8090004312ba4b9a91f25fc66461eb5d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2426f3e547da6eaab6a4b38bb5199e87c93ef933
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Pochodne klasy widoków dostępne w MFC
 W poniższej tabeli przedstawiono MFC widoku klasy i ich relacji między nimi. Funkcje klasy widoku są zależne od klasy widoku MFC, z którego pochodzi.  
@@ -50,5 +51,5 @@ W poniższej tabeli przedstawiono MFC widoku klasy i ich relacji między nimi. F
  Aby korzystać z tych klas w aplikacji, pochodną klasy widoku aplikacji je. Aby uzyskać odpowiednie informacje, zobacz [przewijanie i skalowanie widoków](../mfc/scrolling-and-scaling-views.md). Aby uzyskać więcej informacji o klasach bazy danych, zobacz [omówienie: programowania bazy danych](../data/data-access-programming-mfc-atl.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Korzystanie z widoków](../mfc/using-views.md)
+ [Używanie widoków](../mfc/using-views.md)
 

@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4cccb224553bc217bbbcd37030f03419f6f5d55e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 654fab0aa5a5bf96e145f37ae4855f556f79bebf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-xml-data"></a>Uzyskiwanie dostępu do danych XML
 Istnieją dwie metody oddzielne polegającym na pobieranie danych XML źródła danych: jeden używa [cstreamrowset —](../../data/oledb/cstreamrowset-class.md) i innych celów [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  

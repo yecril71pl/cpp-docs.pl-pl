@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5efc5a12acbad786039b687e5a9e3bb00e62e090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a852e597c06a08c3e9eb83731dc7da7df077435
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drag-and-drop-ole"></a>Przeciąganie i upuszczanie (OLE)
 Funkcja przeciągania i upuszczania OLE jest głównie skrót do kopiowania i wklejania danych. Gdy używasz Schowka do kopiowania lub wklej dane liczbę czynności są wymagane. Wybierz dane, kliknij przycisk **Wytnij** lub **kopiowania** z **Edytuj** menu, aby przejść do pliku docelowego, okna lub aplikacji, umieść kursor w odpowiedniej lokalizacji, a następnie kliknij przycisk **Wklej** z **Edytuj** menu.  
@@ -41,9 +42,9 @@ Funkcja przeciągania i upuszczania OLE jest głównie skrót do kopiowania i wk
   
  Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania zobacz:  
   
--   [Przeciąganie i upuszczanie: Implementowanie miejsca źródłowego](../mfc/drag-and-drop-implementing-a-drop-source.md)  
+-   [Przeciąganie i upuszczanie: implementowanie miejsca źródłowego](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   
--   [Przeciąganie i upuszczanie: Implementowanie miejsca docelowego](../mfc/drag-and-drop-implementing-a-drop-target.md)  
+-   [Przeciąganie i upuszczanie: implementowanie miejsca docelowego](../mfc/drag-and-drop-implementing-a-drop-target.md)  
   
 -   [Przeciąganie i upuszczanie: dostosowywanie](../mfc/drag-and-drop-customizing.md)  
   

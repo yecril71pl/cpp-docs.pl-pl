@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e45ba5422f1d1c458cfeffe65b91122158bbbcff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4fdab6a7fae25845da81ee7263e045e50951f557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-slider-controls"></a>Używanie formantów suwaka
 Typowy sposób suwaka jest zgodny ze wzorcem poniżej:  
@@ -36,5 +37,5 @@ Typowy sposób suwaka jest zgodny ze wzorcem poniżej:
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

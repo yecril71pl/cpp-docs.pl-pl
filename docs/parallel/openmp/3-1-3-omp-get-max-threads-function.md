@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e021f0873aa94f53a1218a3278a744a0c7740e65
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13aee27dc04afb8414a89bb8f30a98c8e73fb694
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="313-ompgetmaxthreads-function"></a>3.1.3 Funkcja omp_get_max_threads
 **Omp_get_max_threads** funkcja zwróci liczbę całkowitą, która może być przynajmniej tak duże jak liczba wątków, które będzie używane do utworzenia zespołu, jeśli równoległego regionu bez **num_threads** — klauzula zostały w tym momencie występujących w kodzie. Format jest następujący:  

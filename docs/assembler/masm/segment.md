@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8648005f26e334ae8d184aa437aef68b0318eed6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce18933c27a62b1a89551320f75df7e25a67ef03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="segment"></a>SEGMENT
 Określa segment program o nazwie *nazwa* o atrybuty segmentu  
@@ -43,7 +44,7 @@ name ENDS
 |**WORD**|Następny adres dostępne word (2 bajty każdego wyrazu).|  
 |**DWORD**|Następny adres dostępne word o podwójnej precyzji (4 bajty każdego wyrazu o podwójnej precyzji).|  
 |**PARA**|Następny adres dostępne akapitu (16 bajtów na akapitu).|  
-|**STRONA**|Następny adres dostępne strony (256 bajtów na stronie).|  
+|**PAGE**|Następny adres dostępne strony (256 bajtów na stronie).|  
 |**DOPASUJ**(*n*)|Następny dostępny  *n* th bajtowy adres. Więcej informacji podano w sekcji uwag.|  
   
  Jeśli ten parametr nie jest określony, **PARA** jest używany domyślnie.  
@@ -71,4 +72,4 @@ name ENDS
  Aby uzyskać `ALIGN(n)`, `n` może być dowolnym potęgą liczby 2 z zakresu od 1 do 8192; nie jest obsługiwany z **/omf**.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

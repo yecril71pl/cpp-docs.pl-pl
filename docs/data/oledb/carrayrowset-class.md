@@ -20,11 +20,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 82c209938c7d124e787310cb859aeb6191f32c8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 541bf3ea26ae57d0fd61c2d561b4fc87bbcc2932
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset — Klasa
 Elementy uzyskuje dostęp do zestawu wierszy za pomocą składni tablicy.  
@@ -49,7 +52,7 @@ class CArrayRowset :
 |||  
 |-|-|  
 |[Carrayrowset —](../../data/oledb/carrayrowset-carrayrowset.md)|Konstruktor.|  
-|[Migawki](../../data/oledb/carrayrowset-snapshot.md)|Odczytuje całego zestawu wierszy do pamięci.|  
+|[Migawka](../../data/oledb/carrayrowset-snapshot.md)|Odczytuje całego zestawu wierszy do pamięci.|  
   
 ### <a name="operators"></a>Operatory  
   
@@ -69,4 +72,4 @@ class CArrayRowset :
 ## <a name="see-also"></a>Zobacz też  
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Dokumentacja szablonów konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Crowset — klasa](../../data/oledb/crowset-class.md)
+ [CRowset, klasa](../../data/oledb/crowset-class.md)

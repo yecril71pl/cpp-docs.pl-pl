@@ -15,11 +15,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e2c1f1b0d9c3b7c5949166b0018bf1e6e6fcbd14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ac628b660c37c4d281c1b889ccf5a3628240573
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltvectorgt"></a>&lt;Wektor&gt;
 Definiuje wektor klasy szablonu kontenera i kilku szablonów pomocniczych.  
@@ -100,13 +101,13 @@ void swap (
 |[operator\<=](../standard-library/vector-operators.md#op_gt_eq)|Testy, jeśli obiekt wektora po lewej stronie operatora jest mniejsza niż lub równe obiekt wektora po prawej stronie.|  
 |[operator ==](../standard-library/vector-operators.md#op_eq_eq)|Testy, jeśli obiekt wektora po lewej stronie operatora jest taki sam jak obiekt wektora po prawej stronie.|  
 |[operator >](../standard-library/vector-operators.md#op_gt)|Testy, jeśli obiekt wektora po lewej stronie operatora jest większa niż obiekt wektora po prawej stronie.|  
-|[operator > =](../standard-library/vector-operators.md#op_gt_eq)|Testy, jeśli obiekt wektora po lewej stronie operatora jest większa niż lub równa obiekt wektora po prawej stronie.|  
+|[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Testy, jeśli obiekt wektora po lewej stronie operatora jest większa niż lub równa obiekt wektora po prawej stronie.|  
   
 ### <a name="classes"></a>Klasy  
   
 |||  
 |-|-|  
-|[Vector — klasa](../standard-library/vector-class.md)|Klasy szablonów sekwencji kontenerów, które Rozmieść elementy danego typu w układzie liniowej i dostęp do szybkiego losowego dowolnego elementu.|  
+|[vector, klasa](../standard-library/vector-class.md)|Klasy szablonów sekwencji kontenerów, które Rozmieść elementy danego typu w układzie liniowej i dostęp do szybkiego losowego dowolnego elementu.|  
   
 ### <a name="specializations"></a>Specjalizacje  
   
@@ -122,5 +123,5 @@ void swap (
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

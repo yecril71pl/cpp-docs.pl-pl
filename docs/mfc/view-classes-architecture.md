@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 184245411f44a9aa9a6747adda0aafa5a8f68010
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b2761253da0907b1736754068fa196dda361a8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-classes-architecture"></a>Klasy widoków (architektura)
 `CView`i jej klas pochodnych są okno podrzędne, które reprezentują obszar kliencki okno ramowe. Widoki Pokaż dane i akceptuje dane wejściowe dla dokumentu.  

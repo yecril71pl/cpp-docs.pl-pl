@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 545a713ebfda9ad4f4dcbfa3e8b55e27ab9c570f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb3e64f82c95cdffeef4091efb76458e9b28e967
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="support-for-ansi"></a>Obsługa standardu ANSI
 Większość klas MFC i metod obsługuje zestawu znaków ANSI, mimo że stopniowo ewoluuje programu MFC framework jako całość do obsługi tylko Unicode zestaw znaków. Z powodu trwającej ulepszenia w [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] i formanty standardowe systemu Windows w wersji 6.1, obsługę kilku ANSI klasy i metody jest przestarzały.  Aby uzyskać więcej informacji, zobacz [przestarzałe interfejsy API ANSI](../mfc/deprecated-ansi-apis.md) i [obsługę standardu Unicode](../text/support-for-unicode.md).  

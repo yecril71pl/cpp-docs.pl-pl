@@ -42,11 +42,14 @@ f1_keywords:
 - VC.Project.VCClangCompilerTool.CompileAs
 - VC.Project.VCClangCompilerTool.ForcedIncludeFiles
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 94a22843c15e537a7af8e1e44827f8c1ab365165
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 096775841841574571b7ef731db52f3bbda6485f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-properties-linux-c"></a>Właściwości C/C++ (Linux C++)
 
@@ -98,8 +101,8 @@ Włącz wyjątki C++ | Określa model obsługi wyjątków, aby używane przez ko
 Właściwość | Opis | Opcje
 --- | ---| ---
 Włącz informacje typu Run-Time | Dodaje kod do sprawdzania typów obiektów C++ w czasie wykonywania (informacje o typie środowiska uruchomieniowego).     (frtti, fno-rtti)
-Standard języka C | Określa standard języka C. | **Domyślne**<br>**C89** -C89 Standard języka.<br>**C99** -C99 Standard języka.<br>**C11** -C11 Standard języka.<br>**C99 (GNU dialekt)** — Standard języka C99 (GNU dialekt).<br>**C11 (GNU dialekt)** — Standard języka C11 (GNU dialekt).<br>
-Standard języka C++ | Określa standard języka C++. | **Domyślne**<br>**C ++ 03** — Standard 03 języka C ++.<br>**C ++ 11** -C ++ 11 języka Standard.<br>**C ++ 14** -C ++ 14 języka Standard.<br>**03 c ++ (GNU dialekt)** C ++ - 03 Standard języka (GNU dialekt).<br>**C ++ 11 (GNU dialekt)** - C ++ 11 Standard języka (GNU dialekt).<br>**C ++ 14 (GNU dialekt)** - C ++ 14 Standard języka (GNU dialekt).<br>
+Standard języka C | Określa standard języka C. | **Default**<br>**C89** -C89 Standard języka.<br>**C99** -C99 Standard języka.<br>**C11** -C11 Standard języka.<br>**C99 (GNU dialekt)** — Standard języka C99 (GNU dialekt).<br>**C11 (GNU dialekt)** — Standard języka C11 (GNU dialekt).<br>
+Standard języka C++ | Określa standard języka C++. | **Default**<br>**C ++ 03** — Standard 03 języka C ++.<br>**C ++ 11** -C ++ 11 języka Standard.<br>**C ++ 14** -C ++ 14 języka Standard.<br>**03 c ++ (GNU dialekt)** C ++ - 03 Standard języka (GNU dialekt).<br>**C ++ 11 (GNU dialekt)** - C ++ 11 Standard języka (GNU dialekt).<br>**C ++ 14 (GNU dialekt)** - C ++ 14 Standard języka (GNU dialekt).<br>
 
 ## <a name="advanced"></a>Zaawansowane
 Właściwość | Opis | Opcje

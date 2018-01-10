@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e377b3945f85d1c5759344992046e9fafb16103
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab065c78d8ea5d2de105abdc2fa651e05f9d1875
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-connection-point-visual-c"></a>Implementacja punktu połączenia (Visual C++)
 Do zaimplementowania punktu połączenia za pomocą Kreatora punktu połączenia wdrożenia, musi mieć projekt został utworzony jako aplikacji ATL COM lub aplikacji MFC, która zawiera obsługę ATL. Można użyć [Kreator projektu ATL](../atl/reference/atl-project-wizard.md) Aby utworzyć aplikację ATL lub [Dodaj obiekt ATL do aplikacji MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL Obsługa aplikacji MFC.  

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 201d4a6493b71a78f2a438ac43c003a8b7d36ce7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb9541bfc4a94253ac26e118e22c3abb2663a893
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="safebuffers"></a>safebuffers
 **Dotyczące firmy Microsoft**  
@@ -35,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **/GS** — opcja kompilatora powoduje, że kompilator, aby przetestować nastąpiło przepełnienie buforu, wstawiając kontroli zabezpieczeń na stosie. Typy struktur danych, które kwalifikują się do kontroli zabezpieczeń są opisane w [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md). Aby uzyskać więcej informacji na temat wykrywania przepełnienie buforu, zobacz [kompilatora zabezpieczeń sprawdza w głębokość](http://go.microsoft.com/fwlink/?linkid=7260) w witrynie MSDN.  
+ **/GS** — opcja kompilatora powoduje, że kompilator, aby przetestować nastąpiło przepełnienie buforu, wstawiając kontroli zabezpieczeń na stosie. Typy struktur danych, które kwalifikują się do kontroli zabezpieczeń są opisane w [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md). Aby uzyskać więcej informacji na temat wykrywania przepełnienie buforu, zobacz [kompilatora zabezpieczeń sprawdza w głębokość](http://go.microsoft.com/fwlink/p/?linkid=7260) w witrynie MSDN.  
   
  Przegląd kodu lub zewnętrzna analiza eksperta może pomóc w ustaleniu, czy funkcja jest zabezpieczona przed przepełnieniem buforu. W takim przypadku można pominąć kontroli zabezpieczeń dla funkcji, stosując `__declspec(safebuffers)` — słowo kluczowe do deklaracji funkcji.  
   

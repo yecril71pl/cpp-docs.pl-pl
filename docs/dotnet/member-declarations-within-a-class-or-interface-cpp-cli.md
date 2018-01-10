@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3475ae25a6c11dbbbead1de4fb4f3180e2e24f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 96a12f544babbf188c3718bcd49233472ad0d002
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>Deklaracje członków w obrębie klasy lub interfejsu (C++/CLI)
 Deklaracja właściwości i operatory została często przerobiona z rozszerzeń zarządzanych dla języka C++ dla Visual C++, ukrywanie podstawowe szczegóły implementacji, które były dostępne w projekcie rozszerzeń zarządzanych. Zmodyfikowano również deklaracje zdarzeń.  
@@ -46,14 +49,14 @@ Deklaracja właściwości i operatory została często przerobiona z rozszerzeń
  [Zmiany operatorów konwersji](../dotnet/changes-to-conversion-operators.md)  
  W tym artykule omówiono zmiany operatorów konwersji.  
   
- [Jawne przesłanianie elementu członkowskiego interfejsu](../dotnet/explicit-override-of-an-interface-member.md)  
+ [Jawne przesłanianie składowej interfejsu](../dotnet/explicit-override-of-an-interface-member.md)  
  Zawiera omówienie zmian jawne zastępowanie elementu członkowskiego interfejsu z metodą.  
   
  [Prywatne funkcje wirtualne](../dotnet/private-virtual-functions.md)  
  Zawiera omówienie zmian w sposobie prywatne funkcje wirtualne są w klasach pochodnych.  
   
- [Połączenie static Const Int nie jest już literałem](../dotnet/static-const-int-linkage-is-no-longer-literal.md)  
+ [Połączenie static const int nie jest już literałem](../dotnet/static-const-int-linkage-is-no-longer-literal.md)  
  Zawiera omówienie zmian w sposobie `static const` integralną elementy członkowskie są połączone oraz sposób jawnie deklarować stałą przy użyciu nowego `literal` — słowo kluczowe.  
   
 ## <a name="see-also"></a>Zobacz też  
- [C + +/ CLI Elementarz migracji](../dotnet/cpp-cli-migration-primer.md)
+ [Podręcznik migracji C++/CLI](../dotnet/cpp-cli-migration-primer.md)

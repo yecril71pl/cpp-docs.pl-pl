@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5d9fb768c4c1030a43094565aae5f88fdabf4eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f56321b71642f9d615c4d85fd66f878b19e44485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftmbase-class"></a>FtmBase — Klasa
 Reprezentuje obiekt opcja.  
@@ -42,25 +45,25 @@ class FtmBase : public Microsoft::WRL::Implements<
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Ftmbase::ftmbase — Konstruktor](../windows/ftmbase-ftmbase-constructor.md)|Inicjuje nowe wystąpienie klasy ftmbase —.|  
+|[FtmBase::FtmBase, konstruktor](../windows/ftmbase-ftmbase-constructor.md)|Inicjuje nowe wystąpienie klasy ftmbase —.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[FtmBase::CreateGlobalInterfaceTable — metoda](../windows/ftmbase-createglobalinterfacetable-method.md)|Tworzy tabelę interfejsu globalnego (GIT).|  
-|[FtmBase::DisconnectObject — metoda](../windows/ftmbase-disconnectobject-method.md)|Wymuszanie zwalnia wszystkie połączenia zewnętrzne do obiektu. Serwer obiektu wywołuje obiektu implementacja tej metody przed zamykanie.|  
-|[FtmBase::GetMarshalSizeMax — metoda](../windows/ftmbase-getmarshalsizemax-method.md)|Pobierz górnej granicy liczby bajtów potrzebne do organizowania wskaźników określonego interfejsu w określonym obiekcie.|  
-|[FtmBase::GetUnmarshalClass — metoda](../windows/ftmbase-getunmarshalclass-method.md)|Pobiera identyfikator klasy, który COM używa do lokalizowania biblioteki DLL zawierającej kod dla odpowiedniego serwera proxy. COM ładuje tę bibliotekę DLL, można utworzyć niezainicjowanych wystąpienia serwera proxy.|  
-|[FtmBase::MarshalInterface — metoda](../windows/ftmbase-marshalinterface-method.md)|Zapisuje do strumienia dane wymagane do zainicjowania obiektu serwera proxy, w niektórych procesu klienta.|  
-|[FtmBase::ReleaseMarshalData — metoda](../windows/ftmbase-releasemarshaldata-method.md)|Niszczy pakiet danych organizowane.|  
-|[FtmBase::UnmarshalInterface — metoda](../windows/ftmbase-unmarshalinterface-method.md)|Inicjuje nowo utworzonego serwera proxy i zwraca wskaźnika interfejsu do tego serwera proxy.|  
+|[FtmBase::CreateGlobalInterfaceTable, metoda](../windows/ftmbase-createglobalinterfacetable-method.md)|Tworzy tabelę interfejsu globalnego (GIT).|  
+|[FtmBase::DisconnectObject, metoda](../windows/ftmbase-disconnectobject-method.md)|Wymuszanie zwalnia wszystkie połączenia zewnętrzne do obiektu. Serwer obiektu wywołuje obiektu implementacja tej metody przed zamykanie.|  
+|[FtmBase::GetMarshalSizeMax, metoda](../windows/ftmbase-getmarshalsizemax-method.md)|Pobierz górnej granicy liczby bajtów potrzebne do organizowania wskaźników określonego interfejsu w określonym obiekcie.|  
+|[FtmBase::GetUnmarshalClass, metoda](../windows/ftmbase-getunmarshalclass-method.md)|Pobiera identyfikator klasy, który COM używa do lokalizowania biblioteki DLL zawierającej kod dla odpowiedniego serwera proxy. COM ładuje tę bibliotekę DLL, można utworzyć niezainicjowanych wystąpienia serwera proxy.|  
+|[FtmBase::MarshalInterface, metoda](../windows/ftmbase-marshalinterface-method.md)|Zapisuje do strumienia dane wymagane do zainicjowania obiektu serwera proxy, w niektórych procesu klienta.|  
+|[FtmBase::ReleaseMarshalData, metoda](../windows/ftmbase-releasemarshaldata-method.md)|Niszczy pakiet danych organizowane.|  
+|[FtmBase::UnmarshalInterface, metoda](../windows/ftmbase-unmarshalinterface-method.md)|Inicjuje nowo utworzonego serwera proxy i zwraca wskaźnika interfejsu do tego serwera proxy.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Ftmbase::marshaller_ — członek danych](../windows/ftmbase-marshaller-data-member.md)|Zawiera odwołanie do Organizator trybu wolnych wątków.|  
+|[FtmBase::marshaller_, składowa danych](../windows/ftmbase-marshaller-data-member.md)|Zawiera odwołanie do Organizator trybu wolnych wątków.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `FtmBase`  
@@ -71,4 +74,4 @@ class FtmBase : public Microsoft::WRL::Implements<
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

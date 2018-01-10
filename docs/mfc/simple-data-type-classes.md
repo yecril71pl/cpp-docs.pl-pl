@@ -18,18 +18,19 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25511a531d78e26c752f9694a8f3845d408bdd58
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: d2b4df05d64cb97032477ca50ff4b0ce572829b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simple-data-type-classes"></a>Proste klasy typów danych
 Następujące klasy Hermetyzowanie rysowania współrzędne, ciągi znaków i czas i informacje o dacie, dzięki czemu wygodne użycie składni języka C++. Te obiekty są często używane jako parametry do funkcji Członkowskich klas systemu Windows w bibliotece klas. Ponieważ `CPoint`, `CSize`, i `CRect` odpowiadają **punktu**, **rozmiar**, i `RECT` struktury odpowiednio w zestawie SDK systemu Windows można użyć tych obiektów C++ klas wszędzie tam, gdzie można użyć tych konstrukcji języka C. Klasy zawierają użyteczne interfejsy za pośrednictwem ich funkcje Członkowskie. `CStringT`zapewnia bardzo elastyczne ciągi dynamicznych. `CTime`, `COleDateTime`, `CTimeSpan`, i **COleTimeSpan** reprezentują wartości godziny i daty. Aby uzyskać więcej informacji na temat tych klas, zobacz artykuł [datę i godzinę](../atl-mfc-shared/date-and-time.md).  
   
  Klasy, które zaczynają się od "**COle**" są encapsulations typów danych dostarczanych przez OLE. W programów systemu Windows, niezależnie od tego, czy są używane inne funkcje OLE można używać tych typów danych.  
   
- [Klasa CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+ [CStringT, klasa](../atl-mfc-shared/reference/cstringt-class.md)  
  Posiada ciągi znaków.  
   
  [Ctime —](../atl-mfc-shared/reference/ctime-class.md)  

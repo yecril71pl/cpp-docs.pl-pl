@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 902044e23974b882c52f5cb715d42f0fe1f2f610
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46f62b3d208d4b5822ab259614823509970b2842
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-dll-wizard"></a>Kreator biblioteki MFC DLL
 Kreator biblioteki MFC DLL umożliwia tworzenie projektu MFC DLL, daje starter działającą aplikację z wbudowanej funkcji, gdy kompilowane, zostaną zaimplementowane podstawowych funkcji [DLL](../../build/dlls-in-visual-cpp.md). MFC starter program zawiera pliki źródłowe (.cpp) C++, pliki zasobów (.rc) i pliku projektu (.vcxproj). Kod wygenerowany w tych plikach starter jest oparta na MFC. Aby uzyskać szczegółowe informacje, zobacz szczegóły plik Readme.txt, generowany dla projektu programu Visual Studio i [klasy i funkcje generowane przez kreatora biblioteki DLL MFC](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -53,5 +54,5 @@ Kreator biblioteki MFC DLL umożliwia tworzenie projektu MFC DLL, daje starter d
  [Klasy MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Dodawanie funkcji członkowskiej](../../ide/adding-a-member-function-visual-cpp.md)   
  [Implementowanie interfejsu](../../ide/implementing-an-interface-visual-cpp.md)   
- [Kreator obsługi innych języków](../../ide/wizard-support-for-other-languages.md)
+ [Obsługa kreatora dla innych języków](../../ide/wizard-support-for-other-languages.md)
 

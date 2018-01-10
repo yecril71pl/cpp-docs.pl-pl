@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8f5c751bffbc8ae7c5dc71ab507ed878fc94d82d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 75b41ea146096a60210918b5f21e7b6278e35001
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-c"></a>moduł (C++)
 Określa blok biblioteki w pliku .idl.  
@@ -68,13 +71,13 @@ Określa blok biblioteki w pliku .idl.
  `uuid`  
  Unikatowy identyfikator w bibliotece. Jeśli ten parametr zostanie pominięty, identyfikator będą automatycznie generowane w bibliotece. Należy pobrać *uuid* bloku biblioteki można wykonać za pomocą identyfikatora **__uuidof (***libraryname***)**.  
   
- **Identyfikator LCID**  
+ **lcid**  
  Parametr lokalizacja. Zobacz [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) Aby uzyskać więcej informacji.  
   
  **formant** (opcjonalnie)  
  Określa, czy formanty wszystkie klasy coclass w bibliotece.  
   
- **HelpString —**  
+ **helpstring**  
  Określa bibliotekę typów.  
   
  ***helpstringdll —*** (opcjonalnie)  

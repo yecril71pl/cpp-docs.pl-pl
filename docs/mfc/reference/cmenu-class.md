@@ -95,11 +95,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b54a2cecf6ae091680582a3997cc8ee9c1c625d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 104c965da403040308386e019d56684577318eee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmenu-class"></a>Cmenu — klasa
 Hermetyzacja systemu Windows `HMENU`.  
@@ -382,7 +383,7 @@ CMenu();
   
 - [LoadMenuIndirect](#loadmenuindirect)  
   
-- [Dołącz](#attach)  
+- [Attach](#attach)  
   
 ##  <a name="createmenu"></a>CMenu::CreateMenu  
  Tworzy menu i dołącza go do `CMenu` obiektu.  
@@ -1323,4 +1324,4 @@ BOOL TrackPopupMenuEx(
  [Przykładowe MFC DYNAMENU](../../visual-cpp-samples.md)   
  [CObject — klasa](../../mfc/reference/cobject-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [CObject — klasa](../../mfc/reference/cobject-class.md)
+ [Klasa CObject](../../mfc/reference/cobject-class.md)

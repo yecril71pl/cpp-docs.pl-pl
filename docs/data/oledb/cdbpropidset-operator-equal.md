@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 20fa125fcfe238aef222f1d471c44821fc7e0c32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6648cd488fec0ac8cbe1b4475b4276ae6d783375
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdbpropidsetoperator-"></a>CDBPropIDSet::operator =
 Przypisuje zawartość identyfikator jedną właściwość ustawiony na inny zestaw właściwości Identyfikatora.  
@@ -44,4 +47,4 @@ Przypisuje zawartość identyfikator jedną właściwość ustawiony na inny zes
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Cdbpropidset — klasa](../../data/oledb/cdbpropidset-class.md)
+ [CDBPropIDSet, klasa](../../data/oledb/cdbpropidset-class.md)

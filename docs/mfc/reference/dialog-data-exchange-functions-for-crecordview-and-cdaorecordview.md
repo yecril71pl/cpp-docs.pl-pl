@@ -31,11 +31,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69c70c42a2b4c83933464249a1096339cf1eb98f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkcje wymiany danych w oknie dialogowym dla formularzy CRecordView i CDaoRecordView
 W tym temacie wymieniono ddx_field — funkcje używane do wymiany danych między [crecordset —](../../mfc/reference/crecordset-class.md) i [CRecordView](../../mfc/reference/crecordview-class.md) formularza lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) i [ Cdaorecordview —](../../mfc/reference/cdaorecordview-class.md) formularza.  
@@ -126,7 +127,7 @@ void AFXAPI DDX_FieldCBString(
  `nIDC`  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
- *wartość*  
+ *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
  `pRecordset`  
@@ -169,7 +170,7 @@ void AFXAPI DDX_FieldCBStringExact(
  `nIDC`  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
- *wartość*  
+ *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
  `pRecordset`  
@@ -212,7 +213,7 @@ void AFXAPI DDX_FieldCheck(
  `nIDC`  
  Identyfikator zasobu kontrolkę pola wyboru skojarzone z właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych.  
   
  `pRecordset`  
@@ -293,7 +294,7 @@ void AFXAPI DDX_FieldLBString(
  `nIDC`  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
- *wartość*  
+ *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
  `pRecordset`  
@@ -336,7 +337,7 @@ void AFXAPI DDX_FieldLBStringExact(
  `nIDC`  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
- *wartość*  
+ *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
  `pRecordset`  
@@ -379,7 +380,7 @@ void AFXAPI DDX_FieldRadio(
  `nIDC`  
  Identyfikator pierwszego w grupie (stylem **ws_group —**) kontrolek przycisków radiowych sąsiadujących ze sobą w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
- *wartość*  
+ *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
  `pRecordset`  
@@ -422,7 +423,7 @@ void AFXAPI DDX_FieldScroll(
  *nIDC\**  
  Identyfikator pierwszego w grupie (stylem **ws_group —**) kontrolek przycisków radiowych sąsiadujących ze sobą w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
- *wartość*  
+ *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
  `pRecordset`  
@@ -465,7 +466,7 @@ void AFXAPI DDX_FieldSlider(
  `nIDC`  
  Identyfikator zasobu suwaka.  
   
- *wartość*  
+ *value*  
  Odwołanie do wartości, aby wymienić. Ten parametr zawiera lub będzie można określić bieżącej pozycji przycisku przewijania suwaka.  
   
  `pRecordset`  
@@ -609,7 +610,7 @@ void AFXAPI DDX_FieldText(
  `nIDC`  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
- *wartość*  
+ *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu. Typ danych wartości zależy od której zastąpionej wersji `DDX_FieldText` używasz.  
   
  `pRecordset`  

@@ -33,11 +33,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46aa51c97ec58d5e083b2cad7b622e3b75a04749
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 411d89c7796ea9ab48c013d4efd53aedd9225aba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmemfile-class"></a>Klasa CMemFile
 [Cfile —](../../mfc/reference/cfile-class.md)-klasy, który obsługuje pliki pamięci.  
@@ -270,7 +271,7 @@ virtual BYTE* Realloc(
   
 ## <a name="see-also"></a>Zobacz też  
  [Cfile — klasa](../../mfc/reference/cfile-class.md)   
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

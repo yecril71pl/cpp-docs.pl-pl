@@ -13,11 +13,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a37b20af7ee9ef43c64fc0df24b47a380000eb6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest Biblioteka szablonów, które niskiego poziomu umożliwia tworzenie i używanie składnika środowiska wykonawczego systemu Windows.  
@@ -56,19 +59,19 @@ Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest B
  [Wskazówki: Tworzenie składnika środowiska wykonawczego podstawowa systemu Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
  Przedstawia sposób umożliwia tworzenie podstawowego składnika środowiska wykonawczego systemu Windows, która dodaje dwie liczby Biblioteka szablonów C++ środowiska wykonawczego systemu Windows. Także przedstawiono sposób wywołania zdarzeń składnika i korzystanie z aplikacji platformy uniwersalnej systemu Windows, który używa języka JavaScript.  
   
- [Wskazówki: Tworzenie aplikacji ze Sklepu Windows za pomocą biblioteki WRL i platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ [Przewodnik: tworzenie aplikacji sklepu Windows Store z użyciem biblioteki WRL i platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  Informacje o sposobie tworzenia aplikacji platformy uniwersalnej systemu Windows, który używa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Porady: tworzenie klasycznego składnika COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
  Przedstawia sposób użycia Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, aby utworzyć podstawowy składnik modelu COM i najprostszy sposób rejestrowania i zużywać składnik modelu COM z pulpitu aplikacji.  
   
- [Porady: bezpośrednie wystąpienia składników biblioteki WRL](../windows/how-to-instantiate-wrl-components-directly.md)  
+ [Instrukcje: bezpośrednie tworzenie wystąpień składników biblioteki WRL](../windows/how-to-instantiate-wrl-components-directly.md)  
  Dowiedz się, jak używać [Microsoft::WRL::Make](../windows/make-function.md) i [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funkcji do utworzenia wystąpienia składnika z moduł, który definiuje ją.  
   
- [Porady: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+ [Instrukcje: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
  Pokazuje, jak korzystać z niestandardowych składników środowiska wykonawczego systemu Windows z biblioteki WRL przez utworzenie pliku IDL z metadanych winmd.  
   
- [Wskazówki: Łączenie za pomocą zadań i żądań XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+ [Przewodnik: łączenie za pomocą zadań i żądań XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
  Przedstawia sposób użycia [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) i [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfejsy wraz z zadań do wysyłania żądań HTTP GET i POST do usługi sieci web w aplikacji platformy uniwersalnej systemu Windows.  
   
  [Przykładowe Optymalizator podróży mapy Bing](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
@@ -141,6 +144,6 @@ Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest B
 |-|-|  
 |[Szablon projektu biblioteki klas](../windows/wrl-class-library-project-template.md)|Opisuje sposób uzyskać dostęp do szablonu projektu biblioteki klas WRL. Ten szablon upraszcza zadanie do tworzenia składników środowiska wykonawczego systemu Windows za pomocą programu Visual Studio.|  
 |[Kluczowe interfejsy API według kategorii](../windows/key-wrl-apis-by-category.md)|Omówiono podstawowe typy Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, funkcje i makr.|  
-|[Odwołanie](../windows/wrl-reference.md)|Zawiera informacje dotyczące Biblioteka szablonów C++ środowiska wykonawczego systemu Windows.|  
-|[Szybkie odwołanie (środowisko wykonawcze systemu Windows i program Visual C++)](http://go.microsoft.com/fwlink/?LinkId=229180)|Krótko opisano C + +/ CX funkcje obsługi środowiska uruchomieniowego systemu Windows.|  
-|[Przy użyciu składników środowiska wykonawczego systemu Windows w programie Visual C++](http://go.microsoft.com/fwlink/?LinkId=229155)|Przedstawia sposób użycia C + +/ CX do Tworzenie podstawowego składnika środowiska wykonawczego systemu Windows.|
+|[Dokumentacja](../windows/wrl-reference.md)|Zawiera informacje dotyczące Biblioteka szablonów C++ środowiska wykonawczego systemu Windows.|  
+|[Szybkie odwołanie (środowisko wykonawcze systemu Windows i program Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Krótko opisano C + +/ CX funkcje obsługi środowiska uruchomieniowego systemu Windows.|  
+|[Przy użyciu składników środowiska wykonawczego systemu Windows w programie Visual C++](http://go.microsoft.com/fwlink/p/?linkid=229155)|Przedstawia sposób użycia C + +/ CX do Tworzenie podstawowego składnika środowiska wykonawczego systemu Windows.|

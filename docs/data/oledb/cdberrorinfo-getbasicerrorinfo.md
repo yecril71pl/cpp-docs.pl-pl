@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e8fa2ae4e7e44fb04b6fd3747ffd50ff617c227
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ac722f5f9e92b41152905681cb2eb80708752cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdberrorinfogetbasicerrorinfo"></a>CDBErrorInfo::GetBasicErrorInfo
 Wywołania [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/en-us/library/ms723907.aspx) do zwrócenia podstawowe informacje o błędzie, takie jak kod powrotny i numer błędu specyficznego dla dostawcy.  
@@ -49,4 +52,4 @@ Wywołania [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/en-us/l
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Cdberrorinfo — klasa](../../data/oledb/cdberrorinfo-class.md)
+ [CDBErrorInfo, klasa](../../data/oledb/cdberrorinfo-class.md)

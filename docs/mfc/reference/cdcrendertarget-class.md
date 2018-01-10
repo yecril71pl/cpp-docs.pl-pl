@@ -31,11 +31,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68ab290c70b4e7811753c4aa6fbb6e8e28414a03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 502c9d7cedf782c6ce23ebaf22d30c9b0e5e7409
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdcrendertarget-class"></a>Klasa CDCRenderTarget
 Otoka dla ID2D1DCRenderTarget.  

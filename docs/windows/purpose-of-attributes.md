@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3feb2d9d72fbfcda7237ed0889158b1ee4f2a844
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ed20c29d017527d5c2ce0b0c5ab8053fc75dc6ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="purpose-of-attributes"></a>Cel atrybutów
 Atrybuty rozszerzenia C++ w kierunkach nie jest obecnie możliwe bez przerywania klasycznego struktury języka. Atrybuty zezwalać dostawców (oddzielne dll), aby rozszerzyć funkcjonalność języka dynamicznie. Podstawowym celem atrybutów jest uproszczenie tworzenia składników modelu COM, oprócz zwiększeniu poziomu wydajności projektanta składników. Można zastosować atrybutów do niemal wszystkie konstrukcji języka C++, takich jak klasy, elementy członkowskie danych lub funkcji elementów członkowskich. Poniżej przedstawiono wyróżnienie korzyści zapewniane przez to nowa technologia:  
