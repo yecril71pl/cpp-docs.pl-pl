@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28fb749a705ed01b4c10d22cea0062c2f0d799c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf1dd68a3ca8e6735b07c5bd7247b457bd7d246d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interfaces-atl"></a>Interfejsy (ALT)
 Interfejs jest sposób, w którym obiekt ujawnia jego działanie na zewnątrz. W modelu COM interfejs jest tabeli wskaźników (na przykład C++ vtable) do funkcji implementowane przez obiekt. Tabeli reprezentuje interfejs i funkcje, które wskazuje to metody tego interfejsu. Obiekt mogą uwidaczniać tyle interfejsy jako wybiera.  

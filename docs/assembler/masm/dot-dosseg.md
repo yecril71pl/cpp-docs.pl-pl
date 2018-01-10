@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4d2156161686583ba00d357c1dbca2e2e2867e9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a53159911c47d1c88df90c53f3302f813e5bd95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dosseg"></a>.DOSSEG
 Porządkuje segmentów zgodnie z Konwencją segmentu systemu MS-DOS: kod najpierw, następnie segmenty nie znajduje się w DGROUP, a następnie segmenty w DGROUP.  
@@ -36,4 +37,4 @@ Porządkuje segmentów zgodnie z Konwencją segmentu systemu MS-DOS: kod najpier
  Postępuj zgodnie z segmentów w DGROUP to zamówienie: segmentów nie BSS lub STOS, a następnie BSS segmentów, a na końcu segmentów STOSU. Są używane głównie za zapewnienie obsługi CodeView w programach autonomicznej MASM. Taki sam jak [dosseg —](../../assembler/masm/dosseg.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 566f2d29da9ff8422b8a29178f63a553bfe33668
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 42353a9c59bead96da8eb3b114c8acb2361b53d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-cstring-operations"></a>Cstring — podstawowe operacje
 W tym temacie opisano następujące basic [cstring —](../atl-mfc-shared/reference/cstringt-class.md) operacje:  
@@ -107,5 +108,5 @@ CString cs("meow");
  [Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
  [Klasa CStringT](../atl-mfc-shared/reference/cstringt-class.md)   
  [Specjalizacja szablonu](../cpp/template-specialization-cpp.md)   
- [Porady: konwertowanie między rozmaitymi typami ciągów](../text/how-to-convert-between-various-string-types.md)
+ [Instrukcje: konwertowanie między rozmaitymi typami ciągów](../text/how-to-convert-between-various-string-types.md)
 

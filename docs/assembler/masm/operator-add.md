@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1dbac7e2eb65fb9a20db8373cb8a5ac78d5dbf4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a70a3c4a89e7b1a52a87285f65505e62b56a787
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-"></a>operator +
 Zwraca pierwszy operator *wyrażenie1* plus *wyrażenie2*. Drugi operator zmieni znak *wyrażenia*.  
@@ -39,4 +40,4 @@ Zwraca pierwszy operator *wyrażenie1* plus *wyrażenie2*. Drugi operator zmieni
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do operatorów](../../assembler/masm/operators-reference.md)
+ [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)

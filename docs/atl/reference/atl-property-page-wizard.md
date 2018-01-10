@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eaab86ab72ef41bfe97a67c6d8845e8ce3d3c899
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-property-page-wizard"></a>Kreator strony właściwości ATL
 Ten kreator [dodaje do projektu ATL strony właściwości](../../atl/reference/adding-an-atl-property-page.md) lub do projektu MFC z obsługą ATL. Strony właściwości ATL udostępnia interfejs użytkownika do ustawiania właściwości (lub wywołanie metody) jeden lub więcej obiektów COM.  
@@ -65,5 +66,5 @@ Ten kreator [dodaje do projektu ATL strony właściwości](../../atl/reference/a
 ## <a name="see-also"></a>Zobacz też  
  [Opcje, Kreator strony właściwości ATL](../../atl/reference/options-atl-property-page-wizard.md)   
  [Ciągi, Kreator strony właściwości ATL](../../atl/reference/strings-atl-property-page-wizard.md)   
- [Przykład: Implementacja strony właściwości](../../atl/example-implementing-a-property-page.md)
+ [Przykład: Implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)
 

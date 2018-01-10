@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a4095ae7cccf33110e4f530c533256aba009aa6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fbd1b955ae8ed3caf4f67dbcb9aa71419eb620c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-and-atl"></a>Obsługa zdarzeń i ATL
 W tej sekcji pokazano, jak obiekt sink zdarzenia przy użyciu ATL. Obejmuje on zasad obsługi zdarzeń COM i specyfice wychwytywanie zdarzeń za pomocą obsługi dostarczonych przez ATL.  
@@ -26,19 +27,19 @@ W tej sekcji pokazano, jak obiekt sink zdarzenia przy użyciu ATL. Obejmuje on z
  Aby uzyskać informacje na temat wyzwalać zdarzeń i implementować punkty połączenia, przeczytaj [punkty połączenia ATL](../atl/atl-connection-points.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zasady obsługi zdarzeń](../atl/event-handling-principles.md)  
+ [Reguły obsługi zdarzeń](../atl/event-handling-principles.md)  
  W tym artykule omówiono typowe kroki, aby przekazywanie wszystkich zdarzeń.  
   
- [Implementowanie obsługi interfejsu zdarzeń](../atl/implementing-the-event-handling-interface.md)  
+ [Implementowanie interfejsu obsługi zdarzeń](../atl/implementing-the-event-handling-interface.md)  
  W tym artykule omówiono klasy służące do implementacji interfejsu zdarzenia.  
   
- [Przy użyciu IDispEventImpl](../atl/using-idispeventimpl.md)  
+ [Korzystanie z interfejsu IDispEventImpl](../atl/using-idispeventimpl.md)  
  Zawiera listę czynności dotyczące korzystania z `IDispEventImpl` i zawiera przykładowy kod.  
   
- [Przy użyciu IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)  
+ [Korzystanie z interfejsu IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)  
  Zawiera listę czynności dotyczące korzystania z `IDispEventSimpleImpl` i zawiera przykładowy kod.  
   
- [Podsumowanie obsługi zdarzenia ATL](../atl/atl-event-handling-summary.md)  
+ [Podsumowanie obsługi zdarzeń ATL](../atl/atl-event-handling-summary.md)  
  Podsumowanie, przy użyciu tabel, sposoby dotyczące implementowania interfejsu zdarzenia i udzielanie porad i unadvising źródło zdarzeń przy użyciu ATL.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

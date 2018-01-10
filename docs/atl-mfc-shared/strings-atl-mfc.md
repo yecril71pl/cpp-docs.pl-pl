@@ -32,20 +32,21 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d2b48b1454c988819953c03d6de449d8290c12d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a82f0d02cc8dc9b7c487c8cd9506a4c7d0360fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strings-atlmfc"></a>Ciągi (ATL/MFC)
 Prawie wszystkie programy pracować z danymi ciągu. Visual C++ udostępnia kilka sposobów zarządzania danych tego ciągu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przy użyciu CStringT](../atl-mfc-shared/using-cstringt.md)  
+ [Użycie CStringT](../atl-mfc-shared/using-cstringt.md)  
  Zawiera opis programowania przy użyciu szablonu klasy CStringT.  
   
- [Przy użyciu obiektu CString](../atl-mfc-shared/using-cstring.md)  
+ [Użycie CString](../atl-mfc-shared/using-cstring.md)  
  Zawiera opis programowania w języku cstring —, domyślna implementacja CStringT.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

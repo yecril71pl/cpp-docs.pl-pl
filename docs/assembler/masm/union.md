@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b13942f47726bb2e6e6dfcbdea9a6b89c30d1f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bb68652bb1b26164e52e0218b4b71c24e9356f8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="union"></a>UNION
 Deklaruje związek między co najmniej jeden typ danych. *Fielddeclarations* musi być definicje prawidłowe dane. Pomiń [kończy się](../../assembler/masm/ends-masm.md) *nazwa* zagnieżdżone etykiety na **Unii** definicje.  
@@ -35,4 +36,4 @@ Deklaruje związek między co najmniej jeden typ danych. *Fielddeclarations* mus
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

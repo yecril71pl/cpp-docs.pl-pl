@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d3b9a6b2c40d8f733241421f836771b6e82a284a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc9be4a3739a33f8b044967b0f360f5c81319dff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator--masm"></a>operator != (MASM)
 Nie jest równa. Używana tylko wewnątrz [. Jeśli](../../assembler/masm/dot-if.md), [. GDY](../../assembler/masm/dot-while.md), lub [. Powtórz](../../assembler/masm/dot-repeat.md) blokuje i oceniane w czasie wykonywania, nie w czasie zestawu.  
@@ -34,4 +35,4 @@ expression1 != expression2
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do operatorów](../../assembler/masm/operators-reference.md)
+ [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8666e0ecfd1b2f81236766a1a32baea7a939cd19
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 277eb151fabc62a5d6cd44ba34bac7c230cec39f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setframe"></a>.SETFRAME
 Wypełnienia ramki zarejestrować pola i przesunięcie w informacjach dotyczących unwind przy użyciu określonego rejestru (`reg`) i przesunięcia (`offset`). Przesunięcie musi być wielokrotnością 16 i mniejsza niż 240. Ta dyrektywa generuje również `UWOP_SET_FPREG` unwind kod dla określonego zarejestrować, używając bieżącej przesunięcie prologu.  
@@ -70,4 +71,4 @@ END
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

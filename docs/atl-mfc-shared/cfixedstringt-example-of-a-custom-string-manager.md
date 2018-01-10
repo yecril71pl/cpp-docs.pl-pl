@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceb64bb71ad43dd1a6e6fd45a3a0480d68eb643a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7164d2313f5610d1d7e56f5449c81ea9e2282981
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Przykład z menedżerem ciąg niestandardowy
 Przykładem menedżera niestandardowy ciąg używane przez klasę implementuje biblioteki ATL [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)o nazwie **CFixedStringMgr**. `CFixedStringT`jest pochodną [CStringT](../atl-mfc-shared/reference/cstringt-class.md) i implementuje ciąg, który przydziela jego danych znakowych jako część `CFixedStringT` sam obiekt tak długo, jak ciąg znaków jest mniejsza od długości określonej przez **t_nChars** Parametr szablonu `CFixedStringT`. Takie podejście ciąg nie wymaga sterty, chyba, że długość ciągu przekroczy rozmiar stałego buforu. Ponieważ `CFixedStringT` jest zawsze używana sterty można przydzielić jego dane ciągu nie może używać **CAtlStringMgr** jako jego menedżera ciągu. Używa Menedżera niestandardowy ciąg (**CFixedStringMgr**), wdrożenia [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfejsu. Ten interfejs jest omówiona w [implementacji programu Menedżer ciąg niestandardowy (zaawansowane metody)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
@@ -64,5 +65,5 @@ Przykładem menedżera niestandardowy ciąg używane przez klasę implementuje b
  **Nagłówek:** cstringt.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zarządzanie pamięcią z CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+ [Zarządzanie pamięcią za pomocą CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 

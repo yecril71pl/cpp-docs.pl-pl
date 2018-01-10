@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a5fea30e39094bf344bd87c823dfcf4b8b3b91e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 603ad00f1d100a4545c9e4f1447425978815574d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dq"></a>DQ
 Przydziela i opcjonalnie inicjuje 8 bajtów magazynu dla każdej `initializer`. Można także używać jako Specyfikator typu dowolnym typem jest dozwolony. `DQ`jest synonimem [QWORD](../../assembler/masm/qword.md).  

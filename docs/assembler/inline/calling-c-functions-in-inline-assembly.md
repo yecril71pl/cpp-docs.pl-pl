@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3cd162026792bf8458c3725011b583d1eeb00772
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d337e7a276318d6a1d39087b6809e3f62838cad8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Wywoływanie funkcji C w asemblerze wbudowanym
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
@@ -69,4 +70,4 @@ printf( format, hello, world );
  **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [Asembler wbudowany](../../assembler/inline/inline-assembler.md)
+ [Wbudowany asembler](../../assembler/inline/inline-assembler.md)

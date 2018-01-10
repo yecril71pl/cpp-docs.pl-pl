@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fc353475f61d2e49c030baa3b42be6926225c0d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2a610799a6db3845ba0883d4fd524e066c08d29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sdword"></a>SDWORD
 Przydziela i opcjonalnie inicjuje podpisem word o podwójnej precyzji (4 bajty) magazynu dla każdej `initializer`. Można także używać jako Specyfikator typu dowolnym typem jest dozwolony.  

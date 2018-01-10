@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cef973849a9af88cd952be69ce9d33e7a516d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c42befe57bdc7a01da31bd6c4e010458e1d3ba7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Dodawanie zdarzenia (ALT — Samouczek, część 5)
 W tym kroku zostaną dodane `ClickIn` i `ClickOut` zdarzenia do formantu ATL. Zostanie zastosowana `ClickIn` zdarzeń, gdy użytkownik kliknie w wielokąta i fire `ClickOut` gdy użytkownik kliknie poza. Dostępne są następujące zadania, aby dodać zdarzenie:  
