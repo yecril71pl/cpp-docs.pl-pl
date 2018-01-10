@@ -53,11 +53,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d55957c3ad210c75d08e92e698ae9230a8336f88
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5804df97c54a111a02b79dc849c20c91ba8176b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwordarray-class"></a>Klasa CWordArray
 Obsługuje tablic słowa 16-bitowych.  
@@ -492,7 +493,7 @@ void OnUpdate();
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe MFC ZBIERANIE](../../visual-cpp-samples.md)   
  [CObject — klasa](../../mfc/reference/cobject-class.md)   
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

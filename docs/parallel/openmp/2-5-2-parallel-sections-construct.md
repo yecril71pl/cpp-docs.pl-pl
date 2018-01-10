@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 086552c72e37822920e0afa213c7966befa052f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e3a76a950d547effccf0b50fa04799814597bc5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 Konstrukcja sekcji równoległych
 **Sekcji równoległych** dyrektywa zawiera formularza skrótów w celu określenia **równoległych** zawierających tylko jeden region **sekcje** dyrektywy. Semantyka są takie same jak jawne określenie **równoległych** dyrektywy poprzedzającą **sekcje** dyrektywy. Składnia **sekcji równoległych** dyrektywy wygląda następująco:  

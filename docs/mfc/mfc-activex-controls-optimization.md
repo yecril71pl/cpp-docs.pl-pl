@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b1dab85041f63afd3904bc026bdf2a4d94b5301
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46a17a6594db6c59148042f6e8c6cc72c7068dc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-optimization"></a>Kontrolki ActiveX MFC: optymalizacja
 W tym artykule opisano metod, które służy do optymalizacji formantów ActiveX w celu poprawy wydajności.  
@@ -48,10 +49,10 @@ W tym artykule opisano metod, które służy do optymalizacji formantów ActiveX
 |-------------------------------------------------------|------------|----------------------|  
 |**Uaktywnij, gdy widoczny** pole wyboru|Wyczyść|[Wyłączanie aktywacji, gdy opcja widoczne](../mfc/turning-off-the-activate-when-visible-option.md)|  
 |**Aktywacja bez okien** pole wyboru|Wybierz|[Zapewnianie aktywacji niepowiązanej z oknami](../mfc/providing-windowless-activation.md)|  
-|**Nieobcinanego kontekstu urządzenia** pole wyboru|Wybierz|[Przy użyciu Nieobcinanego kontekstu urządzenia](../mfc/using-an-unclipped-device-context.md)|  
+|**Nieobcinanego kontekstu urządzenia** pole wyboru|Wybierz|[Używanie nieobcinanego kontekstu urządzenia](../mfc/using-an-unclipped-device-context.md)|  
 |**Pozbawione migotania aktywacji** pole wyboru|Wybierz|[Zapewnianie aktywacji pozbawionej migotania](../mfc/providing-flicker-free-activation.md)|  
 |**Mysz powiadomienia wskaźnika, gdy nieaktywny** pole wyboru|Wybierz|[Zapewnianie interakcji z myszą przy braku aktywności](../mfc/providing-mouse-interaction-while-inactive.md)|  
-|**Zoptymalizowany kod rysowania** pole wyboru|Wybierz|[Optymalizacja rysowania formantów](../mfc/optimizing-control-drawing.md)|  
+|**Zoptymalizowany kod rysowania** pole wyboru|Wybierz|[Optymalizacja rysowania kontrolek](../mfc/optimizing-control-drawing.md)|  
   
  Aby uzyskać szczegółowe informacje dotyczące funkcji elementów członkowskich, które implementują te optymalizacje, zobacz [colecontrol —](../mfc/reference/colecontrol-class.md). Funkcje Członkowskie są wyświetlane według użycia, takich jak [operacji bez okien](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) i [nieaktywne wskaźnika funkcji obsługi](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
   
@@ -67,9 +68,9 @@ W tym artykule opisano metod, które służy do optymalizacji formantów ActiveX
   
 -   [Zapewnianie aktywacji pozbawionej migotania](../mfc/providing-flicker-free-activation.md)  
   
--   [Przy użyciu Nieobcinanego kontekstu urządzenia](../mfc/using-an-unclipped-device-context.md)  
+-   [Używanie nieobcinanego kontekstu urządzenia](../mfc/using-an-unclipped-device-context.md)  
   
--   [Optymalizacja rysowania formantów](../mfc/optimizing-control-drawing.md)  
+-   [Optymalizacja rysowania kontrolek](../mfc/optimizing-control-drawing.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)

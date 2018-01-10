@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f0f6e34ef6c95d4c1942cdc1348000213647b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b5f9fb1f7562b26382c6b36e3947367013631bf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-runtime-error-r6035"></a>Po R6035 błąd w czasie wykonywania C
 Biblioteka programu Microsoft Visual C++ środowiska wykonawczego, po R6035 błąd - module w tej aplikacji jest podczas inicjowania pliku cookie zabezpieczeń globalnych modułu, gdy funkcja polegania na ten plik cookie zabezpieczeń jest aktywny.  Wywołanie __security_init_cookie — wcześniej.  
@@ -76,4 +77,4 @@ void DllEntryHelper() {
 >  Komunikat o błędzie, który jest po R6035 tylko wygenerowane przez x86 debugowania CRT i tylko w przypadku obsługa wyjątków strukturalnych, ale warunku błędu na wszystkich platformach i dla wszystkich formularzy wyjątku obsługuje, takich jak C++ EH.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kontrole zabezpieczeń kompilatora szczegółowo](http://go.microsoft.com/fwlink/?linkid=7260)
+ [Kontrole zabezpieczeń kompilatora szczegółowo](http://go.microsoft.com/fwlink/p/?linkid=7260)

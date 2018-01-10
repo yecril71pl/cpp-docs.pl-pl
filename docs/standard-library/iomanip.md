@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d8476743513fa4373b267af3891c59680d2657cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c2f229f5706902eac1c0326cfb446b4dc650c54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip —&gt;
 Obejmują `iostreams` standardowy nagłówek `<iomanip>` do definiowania kilka manipulatory każdy wykonać jeden argument.  

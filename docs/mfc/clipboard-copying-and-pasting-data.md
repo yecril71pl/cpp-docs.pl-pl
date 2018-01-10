@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27305572c31bebdf2530aa96b4af29b709f6b1b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Schowek: kopiowanie i wklejanie danych
 W tym temacie opisano minimalną pracy, należy wykonać, kopiowanie i wklejanie ze Schowka w aplikacji OLE. Zaleca się przeczytanie [obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md) tematy przed kontynuowaniem.  
@@ -76,5 +77,5 @@ W tym temacie opisano minimalną pracy, należy wykonać, kopiowanie i wklejanie
 -   [OLE](../mfc/ole-background.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schowek: Korzystanie z mechanizmu Schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+ [Schowek: korzystanie z mechanizmu schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 

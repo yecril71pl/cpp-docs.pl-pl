@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc7999791b52ade2b657c8602fbb9b7693c277de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ddbab63bb587ac726337ee719cfab03a760a305
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>Klasy MFC do tworzenia klienckich aplikacji internetowych
 MFC udostępnia następujące klasy i funkcje globalne dla pisanie klienckich aplikacji internetowych. Wcięcie oznacza, że klasa pochodzi od klasy niewciętego powyżej. `CGopherFile`i `CHttpFile` pochodzi od `CInternetFile`, np. Te klasy i funkcje globalne są zadeklarowane w AFXINET. H, z wyjątkiem `CFileFind`, która jest zadeklarowana w AFX. H.  

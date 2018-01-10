@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25ab4b9cdba5a9a71d1258960e4da89d2d5e657d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dfb654ba2cce069086713322624e947e14bc26f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>Porady: odczytywanie danych z rejestru systemu Windows (C++/CLI)
 Poniższy przykład kodu wykorzystuje <xref:Microsoft.Win32.Registry.CurrentUser> klucza można odczytać danych z rejestru systemu Windows. Najpierw podkluczy są wyliczane przy użyciu <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> metody, a następnie podklucz tożsamości jest otwarty przy użyciu <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> metody. Podobnie jak kluczy głównych każdy jest reprezentowany przez <xref:Microsoft.Win32.RegistryKey> klasy. Ponadto nowe <xref:Microsoft.Win32.RegistryKey> obiekt jest używany do wyliczenia pary klucz wartość.  
@@ -76,4 +79,4 @@ int main( )
 ## <a name="see-also"></a>Zobacz też  
  [Porady: wpisywanie danych do rejestru systemu Windows (C + +/ CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
  [Operacje w systemie Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

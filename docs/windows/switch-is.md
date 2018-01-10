@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f2f694c03e0aed3e5c5f5072a6fa73365de1fa7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fcf2345774b6df2453dcc4be3c0022e61792b716
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="switchis"></a>switch_is
 Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera element członkowski typu union.  
@@ -54,4 +57,4 @@ Określa wyrażenie lub identyfikator działający jako discriminant Unii, któr
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [switch_type —](../windows/switch-type.md)   
+ [switch_type](../windows/switch-type.md)   

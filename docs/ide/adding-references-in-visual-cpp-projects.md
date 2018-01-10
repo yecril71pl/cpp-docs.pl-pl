@@ -17,11 +17,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7aacc70a74b7c7fccb66a0a8363a261f4a8f1ba3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Dodawanie odwołań do projektów Visual C++
 Bardzo często programy do wywołania do interfejsów API w innych plików binarnych, takich jak biblioteki dll, składników środowiska wykonawczego systemu Windows, rozszerzenia SDK składników COM i zestawów platformy .NET. Sposób, w jaki te pliki binarne wyszukiwany zależy od zarówno na typ projektu, a typ danych binarnych.  
@@ -102,10 +103,10 @@ Bardzo często programy do wywołania do interfejsów API w innych plików binar
  **Pełna ścieżka**  
  Wyświetla ścieżkę katalogu przywoływanego zestawu.  
   
- **Tożsamości**  
+ **Tożsamość**  
  W przypadku .NET Frameworkassemblies Wyświetla pełną ścieżkę. Dla składników COM Wyświetla identyfikator GUID.  
   
- **Etykiety**  
+ **Etykieta**  
  Wyświetla etykieta odwołania.  
   
  **Nazwa**  

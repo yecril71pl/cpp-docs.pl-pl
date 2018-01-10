@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad0744da891c93dab44c980ed10aa4213a4dddb3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea635d701b4dea2471067072083d9568f11f3d82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xdcmake-reference"></a>XDCMake — odwołanie
 xdcmake.exe to program, który kompiluje plikach xdc do pliku XML. Plik .xdc jest tworzony przez kompilator języka Visual C++ dla każdego pliku źródła kodu, podczas kompilowania kodu źródłowego z [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) i gdy pliku kodu źródłowego zawiera komentarzy do dokumentacji oznaczonych tagów XML.  
@@ -60,4 +61,4 @@ xdcmake.exe to program, który kompiluje plikach xdc do pliku XML. Plik .xdc jes
  Zobacz [tagi zalecane dla komentarzy do dokumentacji](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) Aby uzyskać więcej informacji na temat dodawania komentarzy do dokumentacji do plików kodu źródłowego.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Plik dokumentacji XML](../ide/xml-documentation-visual-cpp.md)
+ [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

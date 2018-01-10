@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fef86892bc26ce4e1c0d4651aa5c0efcc189606f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3699c3315ba8aa4b85467adce08e95fe1501ae2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="container-classconstreverseiterator"></a>Kontener Class::const_reverse_iterator
 > [!NOTE]
@@ -37,4 +38,4 @@ typedef T8 const_reverse_iterator;
  Jest on opisany tutaj jako synonimem nieokreślonego typu **T8** (zazwyczaj [reverse_iterator](../standard-library/container-class-reverse-iterator.md) <[const_iterator](../standard-library/container-class-const-iterator.md)`>`).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Sample Container — klasa](../standard-library/sample-container-class.md)
+ [Sample Container, klasa](../standard-library/sample-container-class.md)

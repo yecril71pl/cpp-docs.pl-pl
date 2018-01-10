@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f6f72036e897a51b907fb41387f25fd7d20df69e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e48952788e7bbef86ade1177ce243da503ec8b9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checkstack"></a>check_stack
 Instruuje kompilator, aby wyłączyć sondy stosu **poza** (lub  **-** ) jest określona, lub Włącz sondy stosu, jeśli **na** (lub  **+** ) został określony.  

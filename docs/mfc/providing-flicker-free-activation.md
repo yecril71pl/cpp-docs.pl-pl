@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f98cc77ecc11f2b3ea07352e48c1e6a096125300
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f14998ce663e5a8e53901acf9192719fa41e724
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="providing-flicker-free-activation"></a>Zapewnianie aktywacji pozbawionej migotania
 Jeśli formantu rysuje się tak samo w Stanach stanem nieaktywnym i aktywnym (i nie używa aktywacji niepowiązanej z oknami), można wyeliminować operacje rysowania i towarzyszące im migotanie, które normalnie występuje podczas wykonywania przejścia między nieaktywnych i aktywne stany. Aby to zrobić, należy uwzględnić **noFlickerActivate** flagi w zestawie flagi zwrócony przez [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Na przykład:  
@@ -35,5 +36,5 @@ Jeśli formantu rysuje się tak samo w Stanach stanem nieaktywnym i aktywnym (i 
  Jeśli korzystasz z aktywacji niepowiązanej z oknami, optymalizacja nie ma znaczenia.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty MFC ActiveX: Optymalizacja](../mfc/mfc-activex-controls-optimization.md)
+ [Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
 

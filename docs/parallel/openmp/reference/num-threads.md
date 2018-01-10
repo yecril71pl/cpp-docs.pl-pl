@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d07c2f59572b5e771013d5162f974d865ed97880
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7289a843c33fbc9ba23d6006997dea8e09ba7c79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numthreads"></a>num_threads
 Ustawia liczbę wątków w zespole wątku.  
@@ -41,9 +42,9 @@ num_threads(num)
   
  `num_threads`ma zastosowanie do następujących dyrektyw:  
   
--   [równoległe](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [dla](../../../parallel/openmp/reference/for-openmp.md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [sekcje](../../../parallel/openmp/reference/sections-openmp.md)  
   

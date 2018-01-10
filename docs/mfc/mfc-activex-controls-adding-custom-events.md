@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a93f0354395dee3110749a942e1800581f146fdf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Kontrolki ActiveX MFC: dodawanie zdarzeń niestandardowych
 Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one automatycznie uruchamiane przez klasę `COleControl`. Zdarzenie niestandardowe rozpoznaje niektórych działań, określany przez dewelopera kontrolek jako zdarzenie. Wpisy mapy zdarzeń dla zdarzenia niestandardowe są reprezentowane przez `EVENT_CUSTOM` makra. Poniższa sekcja implementuje zdarzenie niestandardowe dla projektu formantu ActiveX, który został utworzony przy użyciu Kreatora formantów ActiveX.  
@@ -139,4 +140,4 @@ Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one a
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Formanty MFC ActiveX: metody](../mfc/mfc-activex-controls-methods.md)   
- [Colecontrol — klasa](../mfc/reference/colecontrol-class.md)
+ [Klasa COleControl](../mfc/reference/colecontrol-class.md)

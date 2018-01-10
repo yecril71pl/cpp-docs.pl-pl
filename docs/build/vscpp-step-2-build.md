@@ -1,8 +1,8 @@
 ---
-title: "Krok 2 — kompilacji i uruchomić projekt aplikacji konsoli języka C++ | Dokumentacja firmy Microsoft"
+title: "Skompilować i uruchomić projekt aplikacji konsoli języka C++ | Dokumentacja firmy Microsoft"
 description: "Zainstaluj obsługę programu Visual Studio dla programu Visual C++"
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,11 +11,12 @@ ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20a8bafa69631ef8df1fb20f613dfbb81578f94a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Skompilować i uruchomić projekt aplikacji konsoli języka C++
 
@@ -23,9 +24,9 @@ Po utworzeniu projekt aplikacji konsoli języka C++ i wprowadzić swój kod, kom
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Masz program Visual Studio z tworzenia klasycznych aplikacji z C++ obciążenia zainstalowana i uruchomiona na komputerze. Jeśli nie jest jeszcze zainstalowany, postępuj zgodnie z instrukcjami [krok 0 - zainstalować obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md).
+- Masz program Visual Studio z tworzenia klasycznych aplikacji z C++ obciążenia zainstalowana i uruchomiona na komputerze. Jeśli nie jest jeszcze zainstalowany, postępuj zgodnie z instrukcjami [zainstalować obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md).
 
-- Tworzenie "Hello, World!" Projekt, a następnie wprowadź jego kod źródłowy. Jeśli to nie zostało to jeszcze zrobione jeszcze, postępuj zgodnie z instrukcjami [krok 1 — Tworzenie projektu C++ aplikacji konsoli](../build/vscpp-step-1-create.md).
+- Tworzenie "Hello, World!" Projekt, a następnie wprowadź jego kod źródłowy. Jeśli to nie zostało to jeszcze zrobione jeszcze, postępuj zgodnie z instrukcjami [Utwórz projekt aplikacji konsoli C++](../build/vscpp-step-1-create.md).
 
 Jeśli program Visual Studio wygląda tak, możesz przystąpić do tworzenia i uruchamiania aplikacji:
 
@@ -67,7 +68,7 @@ Gratulacje, został utworzony i uruchamianie aplikacji konsoli w programie Visua
 
 ## <a name="next-steps"></a>Następne kroki
 
-Po wbudowane i uruchom to prosta aplikacja, możesz przystąpić do bardziej złożonych projektów. Zobacz poradniki Szybki Start, samouczki i przykładowy kod przykłady rzeczy, które można wykonać w języku C++ za pomocą programu Visual Studio.
+Po wbudowane i uruchom to prosta aplikacja, możesz przystąpić do bardziej złożonych projektów. Zobacz [za pomocą środowiska IDE programu Visual Studio dla programowania w języku C++ pulpitu](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) Aby uzyskać szczegółowe wskazówki, które Poznaj możliwości programu Visual C++ w programie Visual Studio.
 
 ## <a name="troubleshooting-guide"></a>Przewodnik rozwiązywania problemów
 

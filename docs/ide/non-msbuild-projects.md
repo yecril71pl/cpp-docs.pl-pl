@@ -13,11 +13,12 @@ ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: da81f8731be97c69a73eddb96e9e56e49c59c91b
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Otwórz Folder projekty w programie Visual C++
 Visual Studio 2017 wprowadza funkcji "Otwórz Folder", która umożliwia otwieranie folderu plików źródłowych i natychmiast programować o obsługę funkcji IntelliSense, przeglądanie, refaktoryzacji, debugowanie i tak dalej. Żadne pliki SLN lub .vcxproj są ładowane; w razie potrzeby można określić niestandardowych zadań oraz tworzenie i uruchamianie parametrów za pomocą plików prostych JSON. Obsługiwane przez Otwórz Folder, Visual C++ może teraz obsługiwać nie tylko utracić kolekcje plików, ale również praktycznie dowolnego kompilacji systemu, w tym CMake, Nindżą, QMake (dla projektów Qt), gyp, SCons, Gradle, Buck, Utwórz i inne. 
@@ -229,5 +230,5 @@ Aby określić dodatkowe argumenty, po prostu dodaj je w `args` tablicy JSON, ja
 Po zapisaniu tego pliku nowej konfiguracji zostanie wyświetlona na liście rozwijanej debugowania docelowych i możesz wybrać je można uruchomić debugera. Można utworzyć wiele konfiguracje debugowania, jak lubisz, dla dowolnej liczby plików wykonywalnych. Jeśli naciśniesz **F5** teraz, uruchom i trafień dowolnego punktu przerwania może już zostały ustawione przez debuger. Wszystkie znane debugera systemu windows i ich funkcje są teraz dostępne.
 
 ## <a name="see-also"></a>Zobacz też
-[IDE i narzędzia do programowania w języku Visual C++](ide-and-tools-for-visual-cpp-development.md)
+[Zintegrowane środowisko projektowe i narzędzia projektowe Visual C++](ide-and-tools-for-visual-cpp-development.md)
 

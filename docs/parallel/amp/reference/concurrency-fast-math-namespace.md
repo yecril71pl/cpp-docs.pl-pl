@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 14bdfdf5ab570567f78befd3c99bca5c56c5195e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 047eee60eb409e86d77faf6f637a88a56f271094
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math — Przestrzeń nazw
 Funkcje w `fast_math` przestrzeni nazw ma zmniejszenie dokładności, obsługuje tylko pojedynczej precyzji (`float`) i Wywołaj funkcje wewnętrzne DirectX. Dostępne są dwie wersje każdej funkcji, na przykład `cos` i `cosf`. Obie wersje przyjmować i zwracać `float`, a każdego wywołania tej samej technologii DirectX wewnętrznej.  
@@ -63,12 +64,12 @@ namespace fast_math;
 |[fminf —](concurrency-fast-math-namespace-functions.md#fminf)|Określić minimalną wartość liczbową argumentów|  
 |[fmod —](concurrency-fast-math-namespace-functions.md#fmod)|Oblicza resztę zmiennoprzecinkowe z _X/_Y|  
 |[fmodf —](concurrency-fast-math-namespace-functions.md#fmodf)|Oblicza resztę zmiennoprzecinkowe z _X/_Y|  
-|[frexp —](concurrency-fast-math-namespace-functions.md#frexp)|Pobiera mantysa i wykładnik _X|  
+|[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Pobiera mantysa i wykładnik _X|  
 |[frexpf —](concurrency-fast-math-namespace-functions.md#frexpf)|Pobiera mantysa i wykładnik _X|  
 |[isfinite](concurrency-fast-math-namespace-functions.md#isfinite)|Określa, czy argument ma wartością skończoną|  
 |[isinf —](concurrency-fast-math-namespace-functions.md#isinf)|Określa, czy argument jest nieskończoność.|  
 |[isNaN](concurrency-fast-math-namespace-functions.md#isnan)|Określa, czy argument jest wartością typu NaN|  
-|[ldexp —](concurrency-fast-math-namespace-functions.md#ldexp)|Oblicza liczba rzeczywista z mantysa i wykładnik|  
+|[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Oblicza liczba rzeczywista z mantysa i wykładnik|  
 |[ldexpf —](concurrency-fast-math-namespace-functions.md#ldexpf)|Oblicza liczba rzeczywista z mantysa i wykładnik|  
 |[Dziennik](concurrency-fast-math-namespace-functions.md#log)|Oblicza logarytm naturalny argumentu|  
 |[LOG10](concurrency-fast-math-namespace-functions.md#log10)|Oblicza logarytm base 10 argumentu|  
@@ -107,4 +108,4 @@ namespace fast_math;
  **Namespace:** CONCURRENCY::fast_math —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

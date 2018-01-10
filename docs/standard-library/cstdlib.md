@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2f00674eccf5d6e66d5b164a9cdebc2e0afd8c99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d36ba969a5af7a52b8547ece70ff5757f72cedd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib —&gt;
 Zawiera nagłówek biblioteki standardowe C \<stdlib.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.  

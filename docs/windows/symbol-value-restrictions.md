@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c3edccbf88ea6aeb975b9861ebd80817362c245
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5f2188d6904274fabce0f8626fa2f440ac324ff5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="symbol-value-restrictions"></a>Ograniczenia dotyczące wartości symbolu
 Wartości symboli może być liczbą całkowitą, wyrażone w normalnym trybie dla #define dyrektywy preprocesora. Poniżej przedstawiono przykładowe wartości symboli:  
@@ -67,4 +70,4 @@ Wartości symboli może być liczbą całkowitą, wyrażone w normalnym trybie d
 ## <a name="see-also"></a>Zobacz też  
  [Zmiana wartości numerycznej symbolu](../windows/changing-a-symbol-s-numeric-value.md)   
  [Ograniczenia dotyczące nazwy symbolu](../windows/symbol-name-restrictions.md)   
- [Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)
+ [Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)

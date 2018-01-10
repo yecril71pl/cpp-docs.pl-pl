@@ -30,11 +30,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0466b374869ac34c56f58c94111c1738980286a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec7383340e9502764514bb61ce8e10f6cb64c616
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choice-class"></a>Klasa wyboru
 A `choice` bloku komunikatów jest blok wielu źródłach, jednego docelowego reprezentuje przepływ sterowania interakcji z zestawu źródeł. Blokowanie wybór będzie czekać do jednego z wielu źródeł, który zwróci komunikat i rozpropaguje indeksu źródła wytworzonego wiadomości.  
@@ -82,7 +83,7 @@ class choice: public ISource<size_t>;
 |[rezerwowa](#reserve)|Rezerwuje komunikat wcześniej oferowane przez to `choice` bloku obsługi wiadomości.|  
 |[unlink_target](#unlink_target)|Odłączenie od tego bloku docelowego `choice` bloku obsługi wiadomości.|  
 |[unlink_targets](#unlink_targets)|Wstrzymuje wszystkie elementy docelowe tego `choice` bloku obsługi wiadomości. (Przesłania [ISource::unlink_targets](isource-class.md#unlink_targets).)|  
-|[wartość](#value)|Pobiera komunikat, którego indeks wybraną przez `choice` bloku obsługi wiadomości.|  
+|[value](#value)|Pobiera komunikat, którego indeks wybraną przez `choice` bloku obsługi wiadomości.|  
   
 ## <a name="remarks"></a>Uwagi  
  Blokowanie wybór zapewnia tylko jeden z komunikatów przychodzących jest używane.  
@@ -347,4 +348,4 @@ _Payload_type const& value();
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
  [JOIN — klasa](join-class.md)   
- [Klasa single_assignment](single-assignment-class.md)
+ [single_assignment, klasa](single-assignment-class.md)

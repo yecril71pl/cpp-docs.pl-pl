@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0dcf311843f212991f303b5cd9b74ea90e269c3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b279b78c309dd9fff87954d9b50b255b7f0d9f25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="complexltdoublegt"></a>złożone&lt;podwójne&gt;
 Opisuje obiekt, który przechowuje uporządkowanej parę obiektów zarówno typu **podwójne***,* najpierw reprezentujący część liczby złożonej, a drugi rzeczywista reprezentujący urojony części.  

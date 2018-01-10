@@ -45,11 +45,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 542be13898b18fb6f73a724eebe72f135f7ebde2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitset-class"></a>bitset — Klasa
 Opisuje typ obiektu, który przechowuje sekwencji składającej się z określoną liczbę bitów, które umożliwiają compact zachowania flagi zbiór elementów lub warunków. Bitset — klasa obsługuje operacje na obiektach typu bitset — zawierających kolekcję usługi bits, a każdy bit stała czas udostępnienia.  
@@ -92,7 +93,7 @@ class bitset
 |[Przerzuć](#flip)|Odwraca wartość wszystkie bity w `bitset` lub odwraca jednej ręki na określonej pozycji.|  
 |[Brak](#none)|Testy, jeżeli nie bitowe nie ustawiono na wartość 1 w `bitset` obiektu.|  
 |[Resetowanie](#reset)|Resetuje wszystkie bity w `bitset` 0 lub resetuje nieco na określonej pozycji na 0.|  
-|[zestaw](#set)|Ustawia wszystkie bity w `bitset` 1 lub ustawia bit na określonej pozycji 1.|  
+|[set](#set)|Ustawia wszystkie bity w `bitset` 1 lub ustawia bit na określonej pozycji 1.|  
 |[rozmiar](#size)|Zwraca liczbę bitów w `bitset` obiektu.|  
 |[Test](#test)|Testy czy bitowych na określonej pozycji w `bitset` jest ustawiona na 1.|  
 |[to_string](#to_string)|Konwertuje `bitset` obiekt do reprezentacji w postaci ciągu.|  
@@ -109,7 +110,7 @@ class bitset
   
 |||  
 |-|-|  
-|[operator! =](#op_neq)|Testy docelowy `bitset` pod kątem nierówności z określonym `bitset`.|  
+|[operator!=](#op_neq)|Testy docelowy `bitset` pod kątem nierówności z określonym `bitset`.|  
 |[Operator & =](#op_and_eq)|Wykonuje bitowe połączenie bitsets z logicznym `AND` operacji.|  
 |[Operator <<](#op_lshift)|Wykonuje przesunięcie bitów w `bitset` określoną liczbę pozycji z lewej strony i zwraca wynik do nowego `bitset`.|  
 |[Operator << =](#op_lshift_eq)|Wykonuje przesunięcie bitów w `bitset` określoną liczbę pozycji z lewej strony i zwraca wynik na docelową `bitset`.|  

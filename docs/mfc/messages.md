@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1766075663ef924e9a731169a09c3d396d643d2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d03eed129fd5a2a7c73f7c7948cb766813f63c34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messages"></a>Komunikaty
 Pętli komunikatów w **Uruchom** funkcji członkowskiej klasy `CWinApp` pobiera komunikaty generowane przez różne zdarzenia w kolejce. Na przykład, gdy użytkownik kliknie przycisk myszy, system Windows wysyła kilka myszy komunikatów, takie jak `WM_LBUTTONDOWN` po naciśnięciu lewego przycisku myszy, a `WM_LBUTTONUP` po zwolnieniu lewego przycisku myszy. W ramach wykonania pętli komunikatów aplikacji wysyła wiadomości do okna odpowiednie.  

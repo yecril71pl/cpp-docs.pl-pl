@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b863f841d5edf04ccdfcc1a3376df43ffe2429b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6a3a961ca0197eb80a8fafeee16c6e54cce8579
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-mfc-applications"></a>Pisanie aplikacji MFC
 W tym artykule opisano początkowe kroki, które należy wykonać w celu opracowywania aplikacji. Najpierw należy zdecydować, jakiego rodzaju aplikacji pisania. Niektóre opcje zostały omówione w [decyzji projektowych aplikacji](../mfc/application-design-choices.md). Czy będzie aplikacji:  
@@ -47,7 +48,7 @@ W tym artykule opisano początkowe kroki, które należy wykonać w celu opracow
   
  Poniższe artykuły zawierają również szczegółowe instrukcje dotyczące uruchamiania zadań programowania:  
   
--   [Opcje projektowania aplikacji](../mfc/application-design-choices.md)  
+-   [Opcje do wyboru przy projektowaniu aplikacji](../mfc/application-design-choices.md)  
   
 -   [Monikery asynchroniczne w Internecie](../mfc/asynchronous-monikers-on-the-internet.md)  
   

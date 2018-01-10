@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46310e3194104fd5a0470c810dddf26cd362287c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b63507ba50f5f9d7dfb0fe5487e2758ced02cdd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Ustawienia aplikacji, kreator kontrolek ActiveX MFC
 Użyj tej strony Kreator kontrolek ActiveX MFC do projektowania i dodać podstawowe funkcje do nowego projektu MFC ActiveX. Te ustawienia mają zastosowanie do aplikacji, a nie do określonych funkcji ani elementu formantu.  
@@ -46,5 +47,5 @@ Użyj tej strony Kreator kontrolek ActiveX MFC do projektowania i dodać podstaw
 ## <a name="see-also"></a>Zobacz też  
  [Kreator kontrolek ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)   
  [Nazwy formantów, Kreator kontrolek ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
- [Sterowanie ustawieniami, Kreator kontrolek ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+ [Ustawienia kontrolki, kreator kontrolek ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
 

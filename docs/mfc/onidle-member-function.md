@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d601ac8da59e4b980c4f1a5bd85bc1b347e8e11e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4dfbc0a1f20cb6cc01143ed6f07a63e84b53be6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onidle-member-function"></a>OnIdle — Funkcja członkowska
 Gdy nie komunikaty systemu Windows są przetwarzane, struktura wywołuje [CWinApp](../mfc/reference/cwinapp-class.md) funkcji członkowskiej [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (opisanej w odwołanie do biblioteki MFC).  
@@ -37,4 +38,4 @@ Pętla wiadomości
  Aby uzyskać więcej informacji na temat działania w pętli bezczynności, zobacz [przetwarzanie pętli bezczynności](../mfc/idle-loop-processing.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+ [CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)

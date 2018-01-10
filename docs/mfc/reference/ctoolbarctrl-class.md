@@ -193,11 +193,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae8e41f1381daeb97b2fa918a436db9dab8bc953
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 054e3de4daa7d5bd25583286e958c0c9b07c4090
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctoolbarctrl-class"></a>Ctoolbarctrl — klasa
 Udostępnia funkcje formantu typowych narzędzi systemu Windows.  
@@ -2092,4 +2093,4 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  [Przykładowe MFC MFCIE](../../visual-cpp-samples.md)   
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Ctoolbar — klasa](../../mfc/reference/ctoolbar-class.md)
+ [Klasa CToolBar](../../mfc/reference/ctoolbar-class.md)

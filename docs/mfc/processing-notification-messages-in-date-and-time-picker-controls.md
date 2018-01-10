@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5057f29192661b858a0a54eccd3189c6147777d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 836714f7a7ca17d759d0d71a7cbb30d63fdfaf95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Przetwarzanie komunikatów powiadomień w formantach selektora dat i godzin
 Jak użytkownicy korzystają z datą i formant wyboru godziny, formantu (`CDateTimeCtrl`) wysyła komunikaty powiadomień do nadrzędnego okna, zazwyczaj obiekt widoku lub okna dialogowego. Obsługi tych wiadomości, jeśli chcesz zrobić coś w odpowiedzi. Na przykład gdy użytkownik otwiera selektora daty i godziny do wyświetlenia w formancie kalendarza miesięcznego osadzone, **dtn_dropdown —** powiadomienie jest wysyłane.  
@@ -54,5 +55,5 @@ Jak użytkownicy korzystają z datą i formant wyboru godziny, formantu (`CDateT
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

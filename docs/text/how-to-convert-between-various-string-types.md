@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: d48e8e41d48b7a663f9dff37adc79f87f9a0c3d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Porady: konwertowanie między rozmaitymi typami ciągów
 W tym temacie przedstawiono sposób konwertowania rozmaitymi typami ciągów Visual C++ do innych ciągów. Typy parametrów, które są objęte obejmują `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [cstring —](../atl-mfc-shared/using-cstring.md), [basic_string —](../standard-library/basic-string-class.md), i <xref:System.String?displayProperty=fullName>. We wszystkich przypadkach kopię ciąg ma zostać przekonwertowany do nowego typu. Wszelkie zmiany wprowadzone do nowego ciągu nie wpłynie na oryginalny ciąg znaków i na odwrót.  
@@ -830,4 +831,4 @@ Hello, World! (basic_string)
  [wcstombs_s —, _wcstombs_s_l —](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)   
  [strcpy_s —, wcscpy_s —, _mbscpy_s —](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
  [strcat_s —, wcscat_s —, _mbscat_s —](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   
- [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md)
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

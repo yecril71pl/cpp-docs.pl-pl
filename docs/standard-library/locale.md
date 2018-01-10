@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 87e478109df859fc6c95da70500ab84a1cba1b4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2b617870bdeec43dcdc9bf5d9031c0c4d78d0aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltlocalegt"></a>&lt;Ustawienia regionalne&gt;
 Definiuje klasy szablonów i funkcje, których programy C++ mogą używać do hermetyzacji i manipulowania różnymi konwencjami kulturalnymi dotyczącymi reprezentacji i formatowania danych liczbowych, pieniężnych i kalendarzowych, w tym obsługi funkcji wielojęzycznych klasyfikacji znaków i sortowania ciągów.  
@@ -65,13 +66,13 @@ Definiuje klasy szablonów i funkcje, których programy C++ mogą używać do he
 |[collate_byname —](../standard-library/collate-byname-class.md)|Klasa pochodna szablonu opisująca obiekt, który może służyć jako zestaw reguł sortowania danych ustawień regionalnych, umożliwiając pobieranie informacji specyficznych dla obszaru kulturowego dotyczących konwencji sortowania ciągów.|  
 |[CType —](../standard-library/ctype-class.md)|Klasa szablonu zawierająca zestaw reguł, który służy do klasyfikowania znaków, konwersji z wielkich i małych liter i konwersji między macierzystym zestawem znaków i zestawem używanym przez ustawienia regionalne.|  
 |[CType —\<char >](../standard-library/ctype-char-class.md)|Klasa, która jest jawnej specjalizacji szablonu klasy **ctype\<CharType**> na typ `char`, opisujący obiekt, który może służyć jako zestaw reguł ustawień regionalnych charakteryzujących różne właściwości znaku typu `char`.|  
-|[ctype_base —](../standard-library/ctype-base-class.md)|Klasa podstawowa dla klasy ctype, która jest używana do definiowania typów wyliczeń używanych w celu klasyfikowania lub testowania znaków indywidualnie lub w ramach całych zakresów.|  
+|[ctype_base —](../standard-library/ctype-base-class.md)|Klasa bazowa dla klasy ctype, która jest używana do definiowania typów wyliczeń używanych w celu klasyfikowania lub testowania znaków indywidualnie lub w ramach całych zakresów.|  
 |[ctype_byname —](../standard-library/ctype-byname-class.md)|Klasa pochodna szablonu, opisująca obiekt, który może służyć jako zestaw reguł ctype danych ustawień regionalnych, umożliwiając klasyfikację znaków i konwersję znaków między wielkimi i małymi literami oraz zestawami znaków macierzystymi i określonymi przez ustawienia regionalne.|  
 |[Ustawienia regionalne](../standard-library/locale-class.md)|Klasa opisująca obiekt ustawień regionalnych, który hermetyzuje informacje specyficzne dla kultury jako zbiór zestawu reguł, które wspólnie definiują specyficzne środowisko zlokalizowane.|  
 |[komunikaty](../standard-library/messages-class.md)|Klasa szablonu opisująca obiekt, który może służyć jako zestaw reguł ustawień regionalnych w celu pobrania zlokalizowanych komunikatów z katalogu międzynarodowych wiadomości dla danego ustawienia regionalnego.|  
 |[messages_base —](../standard-library/messages-base-class.md)|Klasa podstawowa, która opisuje `int` typ katalogu wiadomości.|  
 |[messages_byname —](../standard-library/messages-byname-class.md)|Klasa pochodna szablonu opisująca obiekt, który może służyć jako zestaw reguł komunikatów danych ustawień regionalnych, umożliwiając pobieranie zlokalizowanych komunikatów.|  
-|[money_base —](../standard-library/money-base-class.md)|Klasa podstawowa dla klasy ctype, która jest używana do definiowania typów wyliczeń używanych w celu klasyfikowania lub testowania znaków indywidualnie lub w ramach całych zakresów.|  
+|[money_base —](../standard-library/money-base-class.md)|Klasa bazowa dla klasy ctype, która jest używana do definiowania typów wyliczeń używanych w celu klasyfikowania lub testowania znaków indywidualnie lub w ramach całych zakresów.|  
 |[money_get —](../standard-library/money-get-class.md)|Szablon klasy, która opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do sterowania konwersje sekwencji typu **CharType** do wartości monetarnych.|  
 |[money_put —](../standard-library/money-put-class.md)|Klasy szablonu, który opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do sterowania konwersji wartości walutowej sekwencji typu **CharType**.|  
 |[moneypunct —](../standard-library/moneypunct-class.md)|Szablon klasy, która opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do opisywania sekwencji typu **CharType** używany do reprezentowania pieniężnego pole wejściowe lub pole pieniężne danych wyjściowych.|  
@@ -80,13 +81,13 @@ Definiuje klasy szablonów i funkcje, których programy C++ mogą używać do he
 |[num_put —](../standard-library/num-put-class.md)|Szablon klasy, która opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do sterowania konwersji wartości liczbowych sekwencji typu **CharType**.|  
 |[numpunct —](../standard-library/numpunct-class.md)|Szablon klasy, która opisuje obiekt, który może służyć jako lokalnego aspektu do opisywania sekwencji typu **CharType** używany do reprezentowania informacje dotyczące formatowania i znaków interpunkcyjnych wyrażeń liczbowych i logicznych.|  
 |[numpunct_byname —](../standard-library/numpunct-byname-class.md)|Klasa pochodna szablonu opisująca obiekt, który może służyć jako zestaw reguł moneypunct danych ustawień regionalnych, umożliwiając formatowanie i interpunkcję wyrażeń liczbowych i logicznych.|  
-|[time_base —](../standard-library/time-base-class.md)|Klasa, która służy jako klasa podstawowa dla zestawów reguł klasy szablonu time_get, definiująca tylko typ wyliczenia dateorder oraz kilka stałych tego typu.|  
+|[time_base —](../standard-library/time-base-class.md)|Klasa, która służy jako klasa bazowa dla zestawów reguł klasy szablonu time_get, definiująca tylko typ wyliczenia dateorder oraz kilka stałych tego typu.|  
 |[time_get —](../standard-library/time-get-class.md)|Szablon klasy, która opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do sterowania konwersje sekwencji typu **CharType** do wartości typu time.|  
 |[time_get_byname —](../standard-library/time-get-byname-class.md)|Klasy pochodne szablonu, która opisuje obiekt, który może służyć jako zestaw reguł ustawień regionalnych z time_get — typ\<**CharType**, **InputIterator**>.|  
 |[time_put —](../standard-library/time-put-class.md)|Klasy szablonu, który opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do sterowania konwersji wartości czasu sekwencji typu **CharType**.|  
 |[time_put_byname —](../standard-library/time-put-byname-class.md)|Klasy pochodne szablonów opisujący obiekt, który może służyć jako zestaw reguł ustawień regionalnych typu `time_put` \< **CharType**, **OutputIterator**>.|  
-|[wbuffer_convert — klasa](../standard-library/wbuffer-convert-class.md)|W tym artykule opisano buforu strumienia, który kontroluje przesyłania elementów do i z buforu strumienia bajtów.|  
-|[wstring_convert — klasa](../standard-library/wstring-convert-class.md)|Klasy szablonu, który wykonuje konwersje między ciąg typu wide i ciąg bajtów.|  
+|[wbuffer_convert, klasa](../standard-library/wbuffer-convert-class.md)|W tym artykule opisano buforu strumienia, który kontroluje przesyłania elementów do i z buforu strumienia bajtów.|  
+|[wstring_convert, klasa](../standard-library/wstring-convert-class.md)|Klasy szablonu, który wykonuje konwersje między ciąg typu wide i ciąg bajtów.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Strony kodowe](../c-runtime-library/code-pages.md)   

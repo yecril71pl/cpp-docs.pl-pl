@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 245952bd8dfb9acc8fc8550955232a30b9dbfe9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Wskazówki: tworzenie aplikacji opartej o agentów
 W tym temacie opisano sposób tworzenia podstawowej aplikacji opartej o agentów. W ramach tego przewodnika można utworzyć agenta asynchronicznie odczytuje dane z pliku tekstowego. Aplikacja używa algorytmu sumy kontrolnej Adler 32 do obliczania sum kontrolnych zawartość tego pliku.  
@@ -192,5 +193,5 @@ Adler-32 sum is fefb0d75
  [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)   
  [Funkcje przekazywania komunikatów](../../parallel/concrt/message-passing-functions.md)   
  [Struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md)   
- [Wskazówki: Używanie w celu zapobiegania zakleszczeniom](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
+ [Przewodnik: korzystanie ze złączy w celu zapobiegania zakleszczeniom](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
 

@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 677c2ec66bdf8f7b210f96a30aaf7722b43fb035
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c381a68e913be77a1d62dc0f90fecdca9ee8d226
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltccomplexgt"></a>&lt;ccomplex&gt;
 Zawiera nagłówek standardowa biblioteka C++ [ \<złożonych >](../standard-library/complex.md), w tym skutecznie nagłówka biblioteki standardowe C \<complex.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.  
@@ -37,7 +38,7 @@ Zawiera nagłówek standardowa biblioteka C++ [ \<złożonych >](../standard-lib
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
- [Przegląd biblioteki C++ Standard](../standard-library/cpp-standard-library-overview.md)
+ [Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)
 
 
 

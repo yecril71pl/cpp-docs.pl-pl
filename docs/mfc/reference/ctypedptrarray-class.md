@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 975844d2a5dcad3afecd07411d2992abb6c8578b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e08749341bd7865c89e397e36aeff3a6ccc0d71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctypedptrarray-class"></a>Ctypedptrarray — klasa
 Udostępnia bezpieczne "otoki" dla obiektów klasy `CPtrArray` lub `CObArray`.  
@@ -273,7 +274,7 @@ void SetAt(
  *TYP*  
  Typ elementów przechowywane w tablicy klasy podstawowej.  
   
- *PTR*  
+ *ptr*  
  Wskaźnik do elementu, który ma zostać wstawiony w tablicy w nIndex. Wartość NULL jest dozwolona.  
   
 ### <a name="remarks"></a>Uwagi  

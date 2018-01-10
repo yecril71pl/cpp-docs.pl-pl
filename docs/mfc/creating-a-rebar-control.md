@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0f1cc709bf09d03f211f3123bd47c82bb590348
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 263541d9dc462b067caf763fe969f3809f1daa7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-rebar-control"></a>Tworzenie formantu paska pomocniczego
 [Crebarctrl —](../mfc/reference/crebarctrl-class.md) obiektów należy utworzyć przed obiektem nadrzędnym jest widoczny. Pozwala to zmniejszyć możliwości malowania problemów.  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

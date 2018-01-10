@@ -25,11 +25,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ece6e335360c151271187ae75d45adafb1f57c15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 90d7b1523c8a61405224fc21701b5203e2cfb006
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Typy plików utworzonych dla projektów Visual C++
 W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów Visual C++ w klasycznej aplikacji klasycznych. Rzeczywiste pliki zawarte w projekcie zależą od opcji wybranych przy użyciu kreatora i typ projektu.  
@@ -38,9 +39,9 @@ W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów
   
 -   [Projekty CLR](../ide/files-created-for-clr-projects.md)  
   
--   [ATL Program lub źródło kontroli i pliki nagłówkowe](../ide/atl-program-or-control-source-and-header-files.md)  
+-   [Program ATL lub źródło kontroli i pliki nagłówkowe](../ide/atl-program-or-control-source-and-header-files.md)  
   
--   [MFC Program lub źródło kontroli i pliki nagłówkowe](../ide/mfc-program-or-control-source-and-header-files.md)  
+-   [Program MFC lub źródło kontroli i pliki nagłówkowe](../ide/mfc-program-or-control-source-and-header-files.md)  
   
 -   [Prekompilowane pliki nagłówka](../ide/precompiled-header-files.md)  
   
@@ -48,7 +49,7 @@ W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów
   
 -   [Pliki pomocy (WinHelp)](../ide/help-files-winhelp.md)  
   
--   [Pliki wskazówki](../ide/hint-files.md)  
+-   [Pliki wskazówek](../ide/hint-files.md)  
   
  Gdy użytkownik [utworzyć projekt Visual C++](../ide/creating-desktop-projects-by-using-application-wizards.md), tworzenia nowego rozwiązania lub może być dodaniu projektu do rozwiązania. Aplikacje inne niż trivial często są tworzone z wielu projektów w rozwiązaniu.  
   
@@ -60,17 +61,17 @@ W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów
 |--------------------|----------|--------------|  
 |.asmx|Źródło|Plik wdrożenia.|  
 |ASP|Źródło|Active Server Page pliku.|  
-|.ATP|Project|Plik projektu szablonu aplikacji.|  
+|.ATP|Projekt|Plik projektu szablonu aplikacji.|  
 |BMP, dib, GIF, jpg, jpe, PNG|Zasób|Pliki obrazów ogólne.|  
 |.BSC|Trwa kompilowanie...|Przeglądarka plików kodu.|  
 |.cpp; .c|Źródło|Pliki kodu źródłowego głównego aplikacji.|  
 |.CUR|Zasób|Kursor graficzne plik mapy bitowej.|  
-|.DBP|Project|Plik projektu bazy danych.|  
+|.DBP|Projekt|Plik projektu bazy danych.|  
 |.disco|Źródło|Dynamiczne odnajdowanie pliku dokumentu. Obsługuje odnajdowania usługi XML sieci Web.|  
-|.exe, .dll|Project|Pliki wykonywalne lub dołączanej biblioteki.|  
+|.exe, .dll|Projekt|Pliki wykonywalne lub dołączanej biblioteki.|  
 |.h|Źródło|Nagłówek (Dołącz) pliku.|  
 |htm, HTML, .xsp, .asp, .htc, HTA, .xml|Zasób|Wspólne pliki sieci Web.|  
-|. HxC.|Project|Plik projektu pomocy.|  
+|. HxC.|Projekt|Plik projektu pomocy.|  
 |ICO|Zasób|Ikona graficzne plik mapy bitowej.|  
 |.IDB|Trwa kompilowanie...|Plik stanu, zawierający informacje o zależnościach między pliki źródłowe i definicje klas, które mogą być używane przez kompilator podczas minimalna ponowna kompilacja i kompilacji przyrostowej. Użyj [/Fd](../build/reference/fd-program-database-file-name.md) opcję kompilatora, aby określić nazwę pliku .idb. Zobacz [/GM ponowną (Włącz minimalnego odbudować)](../build/reference/gm-enable-minimal-rebuild.md) Aby uzyskać więcej informacji.|  
 |.IDL|Trwa kompilowanie...|Plik języka definicji interfejsu. Zobacz [plik definicji interfejsu (IDL)](http://msdn.microsoft.com/library/windows/desktop/aa378712) w zestawie SDK systemu Windows, aby uzyskać więcej informacji.|  
@@ -84,15 +85,15 @@ W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów
 |.sln|Rozwiązanie|[Rozwiązania](http://msdn.microsoft.com/en-us/a45c299d-69f5-4b67-879d-1383417df0a7) pliku.|  
 |.suo|Rozwiązanie|Opcje pliku rozwiązania.|  
 |.txt|Zasób|Plik tekstowy, zwykle w pliku "readme".|  
-|.VAP|Project|Plik projektu programu Visual Studio Analyzer.|  
+|.VAP|Projekt|Plik projektu programu Visual Studio Analyzer.|  
 |.vbg|Rozwiązanie|Plik grupy zgodnego projektu.|  
-|.vbp, .vip, vbproj|Project|Plik projektu w języku Visual Basic.|  
-|.vcxitems|Project|Udostępniane elementy projektu do udostępniania plików kodu między wiele projektów C++. Zobacz [pliki projektu i pliki reguł programu make](../ide/project-and-solution-files.md) Aby uzyskać więcej informacji.|
-|.vcxproj|Project|Plik projektu Visual C++. Zobacz [pliki projektu i pliki reguł programu make](../ide/project-and-solution-files.md) Aby uzyskać więcej informacji.|  
-|. vcxproj.filters|Project|W przypadku Eksploratora rozwiązań aby dodać plik do projektu pliku filtrów definiuje gdzie w widoku drzewa Eksploratora rozwiązań plik zostanie dodany, na podstawie ich rozszerzenia nazwy pliku.|  
-|vdproj|Project|Plik projektu programu Visual Studio wdrożenia.|  
-|vmx|Project|Makro pliku projektu.|  
-|.vup|Project|Narzędzie pliku projektu.|  
+|.vbp, .vip, vbproj|Projekt|Plik projektu w języku Visual Basic.|  
+|.vcxitems|Projekt|Udostępniane elementy projektu do udostępniania plików kodu między wiele projektów C++. Zobacz [pliki projektu i pliki reguł programu make](../ide/project-and-solution-files.md) Aby uzyskać więcej informacji.|
+|.vcxproj|Projekt|Plik projektu Visual C++. Zobacz [pliki projektu i pliki reguł programu make](../ide/project-and-solution-files.md) Aby uzyskać więcej informacji.|  
+|. vcxproj.filters|Projekt|W przypadku Eksploratora rozwiązań aby dodać plik do projektu pliku filtrów definiuje gdzie w widoku drzewa Eksploratora rozwiązań plik zostanie dodany, na podstawie ich rozszerzenia nazwy pliku.|  
+|vdproj|Projekt|Plik projektu programu Visual Studio wdrożenia.|  
+|vmx|Projekt|Makro pliku projektu.|  
+|.vup|Projekt|Narzędzie pliku projektu.|  
   
  Aby uzyskać informacje na inne pliki skojarzone z programem Visual Studio, zobacz [typy plików i rozszerzenia plików w programie Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).  
   
@@ -103,4 +104,4 @@ W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie i zarządzanie projektami Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
  [Typy projektów Visual C++](../ide/visual-cpp-project-types.md)   
- [Kreator obsługi innych języków](../ide/wizard-support-for-other-languages.md)
+ [Obsługa kreatora dla innych języków](../ide/wizard-support-for-other-languages.md)

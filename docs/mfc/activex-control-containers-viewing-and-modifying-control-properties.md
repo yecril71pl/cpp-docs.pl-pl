@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90e866d1a3be4600b3b98e542caff6ed793f4226
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e3a12f9d591cb94c8c16e7b9f22a4db0872e78f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Kontenery kontrolek ActiveX: wyświetlanie i modyfikowanie właściwości kontrolki
 Po wstawieniu formantu ActiveX w projekcie jest przydatne do wyświetlania i zmieniania właściwości jest obsługiwana przez kontrolkę ActiveX. W tym artykule omówiono sposób to zrobić za pomocą edytora zasobów języka Visual C++.  
@@ -49,5 +50,5 @@ Po wstawieniu formantu ActiveX w projekcie jest przydatne do wyświetlania i zmi
  Użyj **właściwości** okno dialogowe do modyfikowania i testowania nowych właściwości natychmiast.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kontenery formantów ActiveX](../mfc/activex-control-containers.md)
+ [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
 

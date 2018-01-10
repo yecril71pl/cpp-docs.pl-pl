@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb442fdd9e46e4e043c42b6d2289cf0b9e2a53a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 927643d467433d1a88e9b38d6c050bcc758e64c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-classes"></a>Klasy OLE
 Klasy OLE współpracować z innych aplikacji framework klas aby zapewnić łatwy dostęp do interfejsu API ActiveX, podając programy łatwy sposób możliwości ActiveX dla użytkowników. Przy użyciu ActiveX, można:  
@@ -44,17 +45,17 @@ Klasy OLE współpracować z innych aplikacji framework klas aby zapewnić łatw
   
 -   [Klasy serwerów OLE](../mfc/ole-server-classes.md)  
   
--   [OLE przeciągania i upuszczania oraz transferów danych klasy](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
+-   [Klasy przeciągania i upuszczania oraz transferów danych OLE](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
   
 -   [Klasy wspólnych okien dialogowych OLE](../mfc/ole-common-dialog-classes.md)  
   
 -   [Klasy automatyzacji OLE](../mfc/ole-automation-classes.md)  
   
--   [Klasy formantów OLE](../mfc/ole-control-classes.md)  
+-   [Klasy kontrolek OLE](../mfc/ole-control-classes.md)  
   
 -   [Klasy dokumentów aktywnych](../mfc/active-document-classes.md)  
   
--   [Klasy związane z mechanizmem OLE](../mfc/ole-related-classes.md)  
+-   [Klasy związane z OLE](../mfc/ole-related-classes.md)  
   
  Aby wyświetlić dziedziczenia klasy, należy użyć [diagram hierarchii klasy](../mfc/hierarchy-chart.md).  
   

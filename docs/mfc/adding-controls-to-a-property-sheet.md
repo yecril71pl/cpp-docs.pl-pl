@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5623f95a77710e0ffbfa8a444de6f569f24105e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2acbbed1a253a502aea8b19af6fd16ddb343e3ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-controls-to-a-property-sheet"></a>Dodawanie formantów do arkusza właściwości
 Domyślnie arkusz właściwości przydziela obszar okien na stronach właściwości, indeks i przyciski OK, Anuluj i Zastosuj. (Niemodalnego arkusza właściwości nie ma OK, Anuluj i zastosować przycisków). Można dodać inne formanty do arkusza właściwości. Na przykład można dodać okno podglądu po prawej stronie obszaru strony właściwości do wyświetlenia użytkownika, jak bieżące ustawienia będzie wyglądać czy zastosowana do obiektu zewnętrznego.  
@@ -30,4 +31,4 @@ Domyślnie arkusz właściwości przydziela obszar okien na stronach właściwo�
 ## <a name="see-also"></a>Zobacz też  
  [Arkusze właściwości](../mfc/property-sheets-mfc.md)   
  [Cpropertypage — klasa](../mfc/reference/cpropertypage-class.md)   
- [Cpropertysheet — klasa](../mfc/reference/cpropertysheet-class.md)
+ [Klasa CPropertySheet](../mfc/reference/cpropertysheet-class.md)

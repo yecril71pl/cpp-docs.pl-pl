@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2853c40a5eaa3ccb8dbbf5855b92b4cba9b3a140
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="virtual-list-controls"></a>Wirtualne kontrolki listy
 Formant listy wirtualnej znajduje się kontrolka widoku listy, który ma **LVS_OWNERDATA** stylu. Ten styl umożliwia kontrolę do obsługi liczba elementów do `DWORD` (domyślna liczba elementów rozciąga się tylko do `int`). Jednak Największą zaletą udostępniane przez ten styl jest możliwość tylko podzbiór elementów danych w pamięci w dowolnym momencie. Dzięki temu formantu widoku listy wirtualnej do nadają się do użytku z dużych baz danych informacji, których konkretnych metod uzyskiwania dostępu do danych znajdują się już w miejscu.  
@@ -71,5 +72,5 @@ Formant listy wirtualnej znajduje się kontrolka widoku listy, który ma **LVS_O
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

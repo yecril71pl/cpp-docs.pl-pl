@@ -55,11 +55,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb4852990bd928a00c5aaf8de4669ed791f68468
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a911ff6251a6b34162377610ae139cfa3a7cefaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontrolbar-class"></a>Ccontrolbar — klasa
 Klasa podstawowa dla klasy pasków sterowania [cstatusbar —](../../mfc/reference/cstatusbar-class.md), [ctoolbar —](../../mfc/reference/ctoolbar-class.md), [cdialogbar —](../../mfc/reference/cdialogbar-class.md), [crebar —](../../mfc/reference/crebar-class.md), i [ COleResizeBar](../../mfc/reference/coleresizebar-class.md).  
@@ -504,4 +505,4 @@ void SetInPlaceOwner(CWnd* pWnd);
  [Ctoolbar — klasa](../../mfc/reference/ctoolbar-class.md)   
  [Cdialogbar — klasa](../../mfc/reference/cdialogbar-class.md)   
  [Cstatusbar — klasa](../../mfc/reference/cstatusbar-class.md)   
- [Crebar — klasa](../../mfc/reference/crebar-class.md)
+ [Klasa CReBar](../../mfc/reference/crebar-class.md)

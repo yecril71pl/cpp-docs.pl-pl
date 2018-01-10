@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81964c410f01505ef49c75b51ef2629daed2f6ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adb4ba4fdcc141438b2eeb87b4e3c9151bb9a5c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>Program MFC lub źródło kontroli i pliki nagłówkowe
 Następujące pliki są tworzone podczas tworzenia projektu MFC w programie Visual Studio, w zależności od opcji wybranej dla projektu, który można utworzyć. Na przykład projekt zawiera *nazwa_projektu.nazwa_modułu.nazwa_procedury*dlg.cpp i *nazwa_projektu.nazwa_modułu.nazwa_procedury*dlg.h pliki tylko w przypadku tworzenia opartych na oknach dialogowych projektu lub klasy.  

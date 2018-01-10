@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0bdaf5b8f6128e9b718b35b7332707a5249b33ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65359e76e036a0d8d33de2de9f6c96c6425d2152
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrowanie z OpenMP do współbieżności środowiska wykonawczego
 Współbieżność środowiska wykonawczego umożliwia różne modele programowania. Te modele mogą nakładać się lub uzupełniają modeli z innych bibliotek. Dokumenty w tej sekcji porównaj [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) do współbieżności środowiska wykonawczego i zawierają przykłady dotyczące migracji istniejącego kodu OpenMP do współbieżności środowiska wykonawczego.  
@@ -54,18 +55,18 @@ Współbieżność środowiska wykonawczego umożliwia różne modele programowa
 |Aplikacja została napisana C.|Ponieważ współbieżności środowiska wykonawczego korzysta z wielu funkcji języka C++, może nie być odpowiednie, gdy nie można zapisać kodu, który umożliwia aplikacji C w pełni wykorzystać go.|  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
- [Porady: konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)  
+ [Instrukcje: konwertowanie paraleli OpenMP dla pętli do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)  
 
  Podane podstawowe pętli, które używa OpenMP [równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) i [dla](../../parallel/openmp/reference/for-openmp.md) dyrektywy, pokazuje, jak przekonwertować go do korzystania ze współbieżności środowiska wykonawczego [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm.  
 
   
- [Porady: konwertowanie pętli OpenMP stosującej anulowanie do korzystania ze współbieżności środowiska wykonawczego](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)  
+ [Instrukcje: konwertowanie pętli OpenMP stosującej anulowanie do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)  
  Podane OpenMP [równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, które nie wymaga wszystkich iteracji, aby uruchomić, pokazuje, jak przekonwertować go do korzystania ze współbieżności środowiska wykonawczego mechanizmu anulowania.  
   
- [Porady: konwertowanie pętli OpenMP używającej obsługi wyjątków do korzystania ze współbieżności środowiska wykonawczego](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)  
+ [Instrukcje: konwertowanie pętli OpenMP używającej obsługi wyjątków do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)  
  Podane OpenMP [równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, które wykonuje obsługi wyjątków, pokazuje, jak przekonwertować go pod kątem użycia mechanizmu obsługi wyjątków współbieżności środowiska wykonawczego.  
   
- [Porady: konwertowanie pętli OpenMP używającej zmiennej redukcji do korzystania ze współbieżności środowiska wykonawczego](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)  
+ [Instrukcje: konwertowanie pętli OpenMP używającej zmiennej redukcji do korzystania ze środowiska uruchomieniowego współbieżności](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)  
  Podane OpenMP [równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[dla](../../parallel/openmp/reference/for-openmp.md) pętli, które używa [redukcji](../../parallel/openmp/reference/reduction.md) klauzuli pokazano, jak przekonwertować go do korzystania ze współbieżności środowiska wykonawczego.  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0280caf7100f5a9739efa6c78bf048518926955
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ada7618d66089550fb7bbdf64e2062120a1dcdad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setinsert-stlclr"></a>set::insert (STL/CLR)
 Dodaje elementy.  
@@ -141,4 +144,4 @@ insert(begin(), L'y') = y
  **Namespace:** cliext  
   
 ## <a name="see-also"></a>Zobacz też  
- [Ustaw (STL/CLR)](../dotnet/set-stl-clr.md)
+ [set (STL/CLR)](../dotnet/set-stl-clr.md)

@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 297d11731a16ecbe69793f2a29944470206acc18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2d0c4c714cb9cf605de5cf42cf922a74d09146c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>Porady: iterowanie przez kolekcję zdefiniowaną przez użytkownika za pomocą instrukcji for each
 Klasa była zarządzana Kolekcja musi on funkcję GetEnumerator nieprywatny, która zwraca dojście do klasy modułu wyliczającego lub interfejs.  Klasa modułu wyliczającego musi zawierać deklaracji niestatyczna funkcja MoveNext i właściwość Current.  
@@ -103,4 +106,4 @@ Return Code: 0
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [w przypadku każdego w](../dotnet/for-each-in.md)
+ [for each, in](../dotnet/for-each-in.md)

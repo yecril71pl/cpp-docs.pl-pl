@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a9e3716390f16e319e8dad95f31789fb890b6f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d1621a8251bddb1d4c7d1bf3f00c4ccf3ea5242
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;wartość&gt; (Visual C++)
 \<Wartość > znacznik umożliwia opis właściwości i metod dostępu właściwości. Należy pamiętać, że podczas dodawania właściwości za pomocą Kreatora kodu w programie Visual Studio zintegrowane środowisko programistyczne, spowoduje to dodanie [ \<podsumowania >](../ide/summary-visual-cpp.md) tag nowej właściwości. Następnie należy ręcznie dodać \<wartość > tag do opisywania wartość, która reprezentuje właściwość.  
@@ -66,4 +67,4 @@ public:
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Plik dokumentacji XML](../ide/xml-documentation-visual-cpp.md)
+ [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

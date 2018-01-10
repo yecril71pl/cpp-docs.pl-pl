@@ -24,11 +24,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5f7b9d6eeda8192fe05a73d25c04527bea2ee80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5421cf47214d4ceeb7f8388835cb7a1cc57110ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsection-class"></a>critical_section — Klasa
 Mutex nie obsługującą, która jawnie rozpoznaje współbieżności środowiska wykonawczego.  
@@ -64,7 +65,7 @@ class critical_section;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[blokady](#lock)|Uzyskuje w tej sekcji krytycznych.|  
+|[lock](#lock)|Uzyskuje w tej sekcji krytycznych.|  
 |[native_handle](#native_handle)|Zwraca określonego uchwyt macierzysty platformy, jeśli taka istnieje.|  
 |[try_lock](#try_lock)|Próbuje uzyskać blokady bez blokowania.|  
 |[try_lock_for](#try_lock_for)|Próbuje uzyskać blokady bez blokowania określoną liczbę milisekund.|  
@@ -190,4 +191,4 @@ void unlock();
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [reader_writer_lock — klasa](reader-writer-lock-class.md)
+ [reader_writer_lock, klasa](reader-writer-lock-class.md)

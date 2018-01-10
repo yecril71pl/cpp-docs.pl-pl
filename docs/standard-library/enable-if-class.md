@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7753c840fe1b4c9850408b53fa0adf09ed1bc121
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enableif-class"></a>enable_if — Klasa
 Warunkowo sprawia, że wystąpienie typu techniki SFINAE przeciążenia. Zagnieżdżony element typedef `enable_if<Condition,Type>::type` istnieje, i jest synonimem `Type`— tylko wtedy, gdy `Condition` jest `true`.  
@@ -52,7 +53,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- W języku C++ awarii podstawiania parametrów szablonu nie jest to błąd w sobie — jest to określane jako *techniki SFINAE* (błąd podstawienia nie jest błąd). Zazwyczaj `enable_if` służy do usuwania z wiązaniem kandydatów — to znaczy go culls zestaw przeciążenia — tak, aby jedna definicja można odrzucić na rzecz innej. Odpowiada to zachowanie techniki SFINAE. Aby uzyskać więcej informacji na temat techniki SFINAE, zobacz [awarii podstawienia nie jest błąd](http://go.microsoft.com/fwlink/LinkId=394798) w witrynie Wikipedia.  
+ W języku C++ awarii podstawiania parametrów szablonu nie jest to błąd w sobie — jest to określane jako *techniki SFINAE* (błąd podstawienia nie jest błąd). Zazwyczaj `enable_if` służy do usuwania z wiązaniem kandydatów — to znaczy go culls zestaw przeciążenia — tak, aby jedna definicja można odrzucić na rzecz innej. Odpowiada to zachowanie techniki SFINAE. Aby uzyskać więcej informacji na temat techniki SFINAE, zobacz [awarii podstawienia nie jest błąd](http://go.microsoft.com/fwlink/p/?linkid=394798) w witrynie Wikipedia.  
   
  Poniżej przedstawiono cztery przykładowe scenariusze:  
   
@@ -142,7 +143,7 @@ func(make_pair("foo", "bar"));
  **Namespace:** Standard  
   
 ## <a name="see-also"></a>Zobacz też  
- [< type_traits >](../standard-library/type-traits.md)
+ [<type_traits>](../standard-library/type-traits.md)
 
 
 

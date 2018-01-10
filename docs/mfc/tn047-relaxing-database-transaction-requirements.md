@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d8e5e50aea253f92187d936d7b9c684a33fec69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92631d96e8782a80275695ef4bf2623dc1bff833
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn047-relaxing-database-transaction-requirements"></a>TN047: mniejsze wymagania dotyczące transakcji bazy danych
 Ta uwaga techniczna, omówiono wymagania dotyczące transakcji z klasami baz danych MFC ODBC, jest już nieaktualny. Przed MFC 4.2 klasy baz danych wymagane zachowywanie kursorów na zestawy rekordów po **CommitTrans** lub **wycofywania** operacji. Jeśli sterownik ODBC i bazami danych nie obsługuje tego poziomu zachowywania kursora, klas baz danych nie włączono transakcji.  

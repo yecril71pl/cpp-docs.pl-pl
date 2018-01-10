@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4153bf3a1cf219d50d8e412eec8a0113409f5f8e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03045fcda597edcf5f1e0a32da466dc40953d4f3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="halt"></a>__halt
 **Dotyczące firmy Microsoft**  
@@ -45,7 +46,7 @@ void __halt( void );
  **Plik nagłówka** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- `__halt` Funkcji jest odpowiednikiem `HLT` maszyny instrukcji i jest dostępna tylko w trybie jądra. Aby uzyskać więcej informacji, Wyszukaj w dokumencie "ręcznego deweloper oprogramowania architekturze firmy Intel, wolumin 2: Odwołanie zestaw instrukcji," w [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) lokacji.  
+ `__halt` Funkcji jest odpowiednikiem `HLT` maszyny instrukcji i jest dostępna tylko w trybie jądra. Aby uzyskać więcej informacji, Wyszukaj w dokumencie "ręcznego deweloper oprogramowania architekturze firmy Intel, wolumin 2: Odwołanie zestaw instrukcji," w [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokacji.  
   
 **KOŃCOWY określonych firmy Microsoft**  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 103e76f32e9b7296af53fbebbd1d837991facec5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a431061704bf2affa8a343487ff20f8b55b9e6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu
 Jeśli znasz funkcje DDX, można użyć właściwości formantu w [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) utworzyć bezpieczny dostęp. Ta metoda jest łatwiejsze niż Tworzenie formantów bez użycia kreatorów kodu.  
@@ -45,5 +46,5 @@ Jeśli znasz funkcje DDX, można użyć właściwości formantu w [Dodaj kreator
 ## <a name="see-also"></a>Zobacz też  
  [Bezpieczny dostęp do formantów w oknie dialogowym](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
  [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)   
- [Bezpieczny dostęp do formantów bez użycia kreatorów kodu](../mfc/type-safe-access-to-controls-without-code-wizards.md)
+ [Bezpieczny dostęp do kontrolek bez użycia kreatorów kodu](../mfc/type-safe-access-to-controls-without-code-wizards.md)
 

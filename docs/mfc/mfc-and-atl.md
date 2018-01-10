@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b626eb6edbd740ab9c11a9da9d5d72d83c19fc56
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b53607c1ca163bf7e1e50728e64da0e3497f4cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-and-atl"></a>MFC i ATL
 Biblioteka Microsoft Foundation Classes (MFC) zapewniają otoka zorientowane obiektowo C++ za pośrednictwem Win32 do szybkiego opracowywania aplikacji pulpitu. Active Template Library (ATL) to biblioteka otoki upraszcza tworzenie modelu COM, który jest często używany do tworzenia kontrolek ActiveX.  
@@ -28,8 +29,8 @@ Biblioteka Microsoft Foundation Classes (MFC) zapewniają otoka zorientowane obi
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Aplikacje dla pulpitu MFC](../mfc/mfc-desktop-applications.md)|Biblioteka Microsoft Foundation Classes zapewniają cienką otoką zorientowane obiektowo za pośrednictwem Win32 umożliwiające szybkie opracowywanie aplikacji graficznego interfejsu użytkownika w języku C++.|  
-|[Składniki COM pulpitu ATL](../atl/atl-com-desktop-components.md)|ATL udostępnia szablony klas oraz inne użycie konstrukcji uprościć tworzenie obiektów COM w języku C++.|  
+|[Aplikacje klasyczne MFC](../mfc/mfc-desktop-applications.md)|Biblioteka Microsoft Foundation Classes zapewniają cienką otoką zorientowane obiektowo za pośrednictwem Win32 umożliwiające szybkie opracowywanie aplikacji graficznego interfejsu użytkownika w języku C++.|  
+|[Składniki ATL COM pulpitu](../atl/atl-com-desktop-components.md)|ATL udostępnia szablony klas oraz inne użycie konstrukcji uprościć tworzenie obiektów COM w języku C++.|  
 |[ATL/MFC udostępnionych klas](../atl-mfc-shared/atl-mfc-shared-classes.md)|Odwołuje się do [klasy CStringT](../atl-mfc-shared/reference/cstringt-class.md) i innych klas, które są udostępniane przez MFC i ATL.|  
 |[Praca z plikami zasobów](../windows/working-with-resource-files.md)|Edytor zasobów umożliwia edytowanie zasobów interfejsu użytkownika, takich jak ciągów, obrazy i oknach dialogowych.|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Temat nadrzędny dla całej zawartości C++ w bibliotece MSDN.|

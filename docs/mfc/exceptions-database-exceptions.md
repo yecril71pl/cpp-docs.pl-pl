@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aaebe39e758d3fa0ea919433204ce1b7313019b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-database-exceptions"></a>Wyjątki: wyjątki bazy danych
 W tym artykule opisano sposób obsługi wyjątków bazy danych. Większość materiału w tym artykule ma zastosowanie, czy użytkownik pracuje z klas MFC otwarte połączenie bazy danych (ODBC) lub klas MFC dla obiektów DAO (Data Access). Jawnie jest oznaczony jako materiałów specyficzne dla jednej lub innego modelu. Tematy obejmują:  

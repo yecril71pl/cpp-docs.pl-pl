@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 264236c68e7d6f83f569692893c378c6d8fc441a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 824fe03c771e0da40f9a587ad076df03604fd53c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="equalto-stlclr"></a>equal_to (STL/CLR)
 Obiekt opisano klasy szablonu, że po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest równe drugiemu. Można go użyć Określ obiekt funkcja pod względem jego typ argumentu.  
@@ -126,4 +129,4 @@ int main()
  **Namespace:** cliext  
   
 ## <a name="see-also"></a>Zobacz też  
- [not_equal_to — (STL/CLR)](../dotnet/not-equal-to-stl-clr.md)
+ [not_equal_to (STL/CLR)](../dotnet/not-equal-to-stl-clr.md)

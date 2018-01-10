@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 704bcbb81939ecb721b5b119f8c02a6409c2b82a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4701b0ae9f71099febb1a239cea6285fb0a7b229
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapowanie komunikatów systemu Windows na klasę
 Twoje okno dialogowe do obsługi komunikatów systemu Windows, należy zastąpić funkcje obsługi odpowiednie. Aby to zrobić, użyj okna właściwości do [mapy komunikatów](../mfc/reference/mapping-messages-to-functions.md) do klasy okien dialogowych. Zapisuje wpisu mapy komunikatów dla każdego komunikatu i dodaje funkcje Członkowskie obsługi wiadomości do klasy. Edytor kodu źródłowego języka Visual C++ umożliwia pisanie kodu w programy obsługi wiadomości.  

@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31093e45b19cc83769c44958b3fa67e11ee0a6bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14d076865cd83837e2de218ad0189c037c78cd83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Wielowątkowość z C++ i MFC
 Biblioteka Microsoft Foundation Class (MFC) zapewnia obsługę dla aplikacji wielowątkowych. W tym temacie opisano procesów i wątków oraz podejście MFC dla wielowątkowości.  
@@ -49,17 +50,17 @@ Biblioteka Microsoft Foundation Class (MFC) zapewnia obsługę dla aplikacji wie
   
  Aby uzyskać więcej informacji na temat obsługi wielowątkowości MFC zobacz następujące tematy:  
   
--   [Wielowątkowość: Tworzenie wątków interfejsu użytkownika](../parallel/multithreading-creating-user-interface-threads.md)  
+-   [Wielowątkowość: tworzenie wątków interfejsu użytkownika](../parallel/multithreading-creating-user-interface-threads.md)  
   
--   [Wielowątkowość: Tworzenie wątków roboczych](../parallel/multithreading-creating-worker-threads.md)  
+-   [Wielowątkowość: tworzenie wątków roboczych](../parallel/multithreading-creating-worker-threads.md)  
   
--   [Wielowątkowość: Jak używać klas synchronizacji](../parallel/multithreading-how-to-use-the-synchronization-classes.md)  
+-   [Wielowątkowość: jak używać klas synchronizacji](../parallel/multithreading-how-to-use-the-synchronization-classes.md)  
   
--   [Wielowątkowość: Przerywanie wątków](../parallel/multithreading-terminating-threads.md)  
+-   [Wielowątkowość: przerywanie wątków](../parallel/multithreading-terminating-threads.md)  
   
--   [Wielowątkowość: Porady dotyczące programowania](../parallel/multithreading-programming-tips.md)  
+-   [Wielowątkowość: porady dotyczące programowania](../parallel/multithreading-programming-tips.md)  
   
--   [Wielowątkowość: Kiedy używać klas synchronizacji](../parallel/multithreading-when-to-use-the-synchronization-classes.md)  
+-   [Wielowątkowość: kiedy używać klas synchronizacji](../parallel/multithreading-when-to-use-the-synchronization-classes.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)

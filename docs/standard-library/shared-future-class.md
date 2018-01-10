@@ -29,11 +29,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 32523bd64ccb5583e789b812d41e58ba734d80f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6d7946de6440ad33c844e140ca7cbcc2199a0b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sharedfuture-class"></a>shared_future — Klasa
 W tym artykule opisano *asynchronicznego obiektu zwracanego*. Contrast z [przyszłych](../standard-library/future-class.md) obiektu *asynchroniczne dostawcy* można skojarzyć z dowolną liczbę `shared_future` obiektów.  
@@ -62,7 +63,7 @@ class shared_future;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Pobierz](#get)|Pobiera wynik, który jest przechowywany w *skojarzony stan asynchronicznego*.|  
+|[get](#get)|Pobiera wynik, który jest przechowywany w *skojarzony stan asynchronicznego*.|  
 |[Nieprawidłowa](#valid)|Określa, czy obiekt nie jest pusty.|  
 |[oczekiwania](#wait)|Blokuje bieżącego wątku, dopóki skojarzony stan asynchroniczne jest gotowy.|  
 |[wait_for](#wait_for)|Bloki do skojarzony stan asynchroniczne jest gotowy lub przed upływem czasu określonego.|  

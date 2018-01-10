@@ -17,14 +17,15 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eecb599d84cedd742a15c4a5572ce4c130b19669
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e86fad8191c4dea2eed3ae34ec96ed853ac1deae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Tworzenie obiektu CToolBarCtrl
-[Ctoolbarctrl —](../mfc/reference/ctoolbarctrl-class.md) obiekty zawierają szeregu struktur danych wewnętrznych — lista mapy bitowe przycisków obrazu, lista ciągów Etykieta przycisku i listę `TBBUTTON` struktury — która skojarzyć obrazu i/lub ciągu pozycji, style, stan, i Identyfikator polecenia przycisku. Każdy z elementów tych struktur danych odwołuje się liczony od zera indeks. Przed użyciem `CToolBarCtrl` obiektu, należy skonfigurować te struktury danych. Aby uzyskać listę struktury danych, zobacz [formanty paska narzędzi](https://msdn.microsoft.com/library/47xcww9x.aspx) w zestawie Windows SDK. Lista ciągów można używać tylko etykiet przycisk; Nie można pobrać ciągów z paska narzędzi.  
+[Ctoolbarctrl —](../mfc/reference/ctoolbarctrl-class.md) obiekty zawierają szeregu struktur danych wewnętrznych — lista mapy bitowe przycisków obrazu, lista ciągów Etykieta przycisku i listę `TBBUTTON` struktury — która skojarzyć obrazu i/lub ciągu pozycji, style, stan, i Identyfikator polecenia przycisku. Każdy z elementów tych struktur danych odwołuje się liczony od zera indeks. Przed użyciem `CToolBarCtrl` obiektu, należy skonfigurować te struktury danych. Aby uzyskać listę struktury danych, zobacz [formanty paska narzędzi](controls-mfc.md) w zestawie Windows SDK. Lista ciągów można używać tylko etykiet przycisk; Nie można pobrać ciągów z paska narzędzi.  
   
  Aby użyć `CToolBarCtrl` obiektu, zazwyczaj będzie wykonaj następujące kroki:  
   
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

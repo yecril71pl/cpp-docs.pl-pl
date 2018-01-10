@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0beb14c2ddb159616f7cbb34b83b68e84ef0a1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 510e6ed244fb8920c55c4b3ffedcbd0801c3e202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Pomijanie mechanizmu serializacji
 Jak już wspomniano, platformę umożliwia domyślne do odczytywania i zapisywania danych do i z plików. Serializacja za pośrednictwem obiektu archiwum odpowiada potrzebom z bardzo wielu aplikacji. Takiej aplikacji odczytuje plik wyłącznie w pamięci, użytkownicy będą mogli zaktualizować pliku, a następnie zapisuje zaktualizowanej wersji na dysku, ponownie.  

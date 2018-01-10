@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: efa29bc2be74ae2388082b5c25e47dc6c90ae4d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8a135edefcfa0e62f1e5619a954eca5c3ed02463
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsectioncs-data-member"></a>CriticalSection::cs_ — Członek danych
 Deklaruje element członkowski danych sekcja krytyczna.  
@@ -39,4 +42,4 @@ CRITICAL_SECTION cs_;
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Criticalsection — klasa](../windows/criticalsection-class.md)
+ [CriticalSection, klasa](../windows/criticalsection-class.md)

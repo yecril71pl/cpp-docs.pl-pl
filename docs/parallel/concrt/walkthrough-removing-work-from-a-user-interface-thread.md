@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0372e407927d270fe5115fd3b5646d59049d269d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Wskazówki: usuwanie pracy z wątku interfejs użytkownika
 Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska wykonawczego można przenieść pracy, które jest przeprowadzane przez wątek interfejsu użytkownika (UI) w aplikacji Microsoft Foundation Classes (MFC) do wątku roboczego. Ten dokument również pokazano, jak poprawić wydajność długotrwałej operacji rysowania.  
@@ -233,4 +234,4 @@ Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska
  [Funkcje przekazywania komunikatów](../../parallel/concrt/message-passing-functions.md)   
  [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)   
  [Anulowanie w PPL](cancellation-in-the-ppl.md)   
- [Aplikacje dla pulpitu MFC](../../mfc/mfc-desktop-applications.md)
+ [Aplikacje klasyczne MFC](../../mfc/mfc-desktop-applications.md)

@@ -23,17 +23,17 @@ helpviewer_keywords:
 - std::error_condition::category
 - std::error_condition::clear
 - std::error_condition::message
-- 
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
 caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c8109db3a6607abd1792485c93a59795d432f824
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eaf36a6f078fd41eee75788a2adbbb5efed7f5d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcondition-class"></a>error_condition — Klasa
 Reprezentuje kody błędów zdefiniowanych przez użytkownika.  
@@ -66,14 +66,14 @@ class error_condition;
 |[Przypisz](#assign)|Przypisuje wartość kodu błędu i kategorii warunek błędu.|  
 |[Kategoria](#category)|Zwraca błąd kategorii.|  
 |[Wyczyść](#clear)|Czyści wartość kodu błędu i kategorii.|  
-|[Komunikat](#message)|Zwraca nazwę kod błędu.|  
+|[komunikat](#message)|Zwraca nazwę kod błędu.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
 |[operator ==](#op_eq_eq)|Testy równości między `error_condition` obiektów.|  
-|[operator! =](#op_neq)|Testy pod kątem nierówności między `error_condition` obiektów.|  
+|[operator!=](#op_neq)|Testy pod kątem nierówności między `error_condition` obiektów.|  
 |[Operator <](#op_lt)|Sprawdza, czy `error_condition` obiekt jest mniejsza niż `error_code` przekazano obiekt do porównania.|  
 |[operator =](#op_eq)|Przypisuje nową wartość wyliczenia do `error_condition` obiektu.|  
 |[bool — operator](#op_bool)|Rzutuje zmiennej typu `error_condition`.|  
@@ -281,7 +281,7 @@ typedef int value_type;
   
 ## <a name="see-also"></a>Zobacz też  
  [error_category — klasa](../standard-library/error-category-class.md)   
- [< system_error — >](../standard-library/system-error.md)
+ [<system_error>](../standard-library/system-error.md)
 
 
 

@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3553ac8948e10271da449356bde20d2a9ae4378b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Wskazówki: korzystanie ze złączy w celu zapobiegania zakleszczeniom
 W tym temacie używa lokali problem philosophers ilustrujący sposób użycia [concurrency::join](../../parallel/concrt/reference/join-class.md) klasę, aby zapobiec zakleszczenie w aplikacji. W aplikacji *zakleszczenie* występuje, gdy dwie lub więcej procesów każdego przechowywania zasobu i wzajemnie poczekaj, aż inny proces zwolnić innego zasobu.  
@@ -34,7 +35,7 @@ W tym temacie używa lokali problem philosophers ilustrujący sposób użycia [c
   
 - [Agenci asynchroniczni](../../parallel/concrt/asynchronous-agents.md)  
   
-- [Wskazówki: Tworzenie aplikacji opartej o agentów](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
+- [Przewodnik: tworzenie aplikacji opartej o agentów](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
   
 - [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)  
   

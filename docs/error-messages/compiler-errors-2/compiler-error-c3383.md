@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a97cd1348bc927b633e683bed80a6b907f88a58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4edf434b9bd1d7a1e8c6609541bd29fab3c0e66d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3383"></a>C3383 błąd kompilatora
 "operator new" nie jest obsługiwany z/CLR: Safe  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [/ CLR (kompilacja języka wspólnego środowiska wykonawczego)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
--   [Typowe problemy przy migracji 64-bitowe języka Visual C++](../../build/common-visual-cpp-64-bit-migration-issues.md)  
+-   [Typowe problemy przy migracji Visual C++ w wersji 64-bitowej](../../build/common-visual-cpp-64-bit-migration-issues.md)  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład generuje C3383.  

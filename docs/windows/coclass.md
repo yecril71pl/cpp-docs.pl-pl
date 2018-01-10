@@ -15,11 +15,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d1699d47e9c3ca8778922af16587915fb3e6df45
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6bcae762c603f05ce11eae5d14eb2e182c666797
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coclass"></a>coclass
 Tworzy obiekt COM, które można zaimplementować interfejsu COM.  
@@ -152,4 +155,4 @@ public:
  [Atrybuty COM](../windows/com-attributes.md)   
  [Atrybuty klasy](../windows/class-attributes.md)   
  [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [appobject —](../windows/appobject.md)
+ [appobject](../windows/appobject.md)

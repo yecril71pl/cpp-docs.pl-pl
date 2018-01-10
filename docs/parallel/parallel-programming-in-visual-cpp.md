@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a873c2f9bba754287367cff3f6707c44225ae2db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f353c6ece59a550d558d3326f836f012e8a4090
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-programming-in-visual-c"></a>Programowanie równoległe w programie Visual C++
 Visual C++ zawiera następujące technologie ułatwiające tworzenie wielowątkowej i równoległych programów, które skorzystać z wieloma rdzeniami i użycia procesora GPU w przypadku ogólnych celu programowania.  
@@ -26,8 +27,8 @@ Visual C++ zawiera następujące technologie ułatwiające tworzenie wielowątko
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Automatyczna Paralelizacja i Wektoryzacja](../parallel/auto-parallelization-and-auto-vectorization.md)|Optymalizacje kompilatora, które przyspieszają kodu.|  
-|[Współbieżność środowiska wykonawczego](../parallel/concrt/concurrency-runtime.md)|Klasy, które upraszczają pisania programów, które używają równoległość danych lub równoległość zadań.|  
+|[Automatyczna paralelizacja i wektoryzacja](../parallel/auto-parallelization-and-auto-vectorization.md)|Optymalizacje kompilatora, które przyspieszają kodu.|  
+|[Środowisko uruchomieniowe współbieżności](../parallel/concrt/concurrency-runtime.md)|Klasy, które upraszczają pisania programów, które używają równoległość danych lub równoległość zadań.|  
 |[C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)|Klasy, które umożliwiają użycie procesorów graficznych nowoczesnych programowania ogólnego przeznaczenia.|  
 |[Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)|Starsze technologie, które mogą być przydatne w starszych aplikacjach. W przypadku nowych aplikacji użyj współbieżność środowiska wykonawczego lub C++ AMP.|  
 |[OpenMP](../parallel/openmp/openmp-in-visual-cpp.md)|Przez firmę Microsoft implementacją interfejsu API OpenMP.|  

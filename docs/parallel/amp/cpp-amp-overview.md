@@ -19,11 +19,12 @@ caps.latest.revision: "60"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54823d53cfe6e83879db70dac7809a1b40217bd2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-amp-overview"></a>Przegląd C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) przyspiesza wykonywanie kodu C++ dzięki wykorzystaniu danych równoległe sprzętu, takie jak procesor graficzny (GPU) na karcie odrębne grafika. Przy użyciu C++ AMP, można kodu algorytmy danych wielowymiarowych, dzięki czemu wykonanie może przyspieszyć przy użyciu równoległości w heterogenicznych sprzętu. Model programowania C++ AMP zawiera tablice wielowymiarowe, indeksowania, transfer pamięci, kafelków i bibliotekę matematyczna funkcji. Aby kontrolować sposób przenoszenia danych z Procesora GPU i na odwrót, dzięki czemu można zwiększyć wydajność, można użyć rozszerzenia języka C++ AMP.  
@@ -427,7 +428,7 @@ for (int i = 0; i <4; i++) {
 ```  
   
 ## <a name="math-libraries"></a>Biblioteki matematyczne  
- C++ AMP zawiera dwa biblioteki matematyczne. Biblioteka podwójnej precyzji w [Namespace CONCURRENCY::precise_math —](../../parallel/amp/reference/concurrency-precise-math-namespace.md) zapewnia obsługę funkcji podwójnej precyzji. Zapewnia także obsługę funkcji pojedynczej precyzji, mimo że nadal wymagana jest obsługa podwójnej precyzji na sprzęcie. Jest on zgodny z [C99 specyfikacji (ISO/IEC 9899)](http://go.microsoft.com/fwlink/linkid=225887). Akceleratora musi obsługiwać pełnej podwójnej precyzji. Można określić, czy operacje wartości [Accelerator::supports_double_precision — członek danych](reference/accelerator-class.md#supports_double_precision). Biblioteki matematyczne szybkiego, w [Namespace CONCURRENCY::fast_math —](../../parallel/amp/reference/concurrency-fast-math-namespace.md), zawiera inny zestaw funkcji matematycznych. Te funkcje, które obsługują tylko `float` argumentów operacji, wykonać szybciej, ale nie jako dokładne, jak te w bibliotece matematyczne podwójnej precyzji. Funkcje są zawarte w \<amp_math.h > plik nagłówka i wszystkie są deklarowane jako z `restrict(amp)`. Funkcje w \<cmath > plik nagłówka są importowane do obu `fast_math` i `precise_math` przestrzeni nazw. `restrict` Słowo kluczowe jest używane w celu rozróżnienia \<cmath > i wersja C++ AMP. Poniższy kod oblicza logarytm base-10, przy użyciu metody szybkiego, w każdej wartości, który znajduje się w domenie obliczeniowej.  
+ C++ AMP zawiera dwa biblioteki matematyczne. Biblioteka podwójnej precyzji w [Namespace CONCURRENCY::precise_math —](../../parallel/amp/reference/concurrency-precise-math-namespace.md) zapewnia obsługę funkcji podwójnej precyzji. Zapewnia także obsługę funkcji pojedynczej precyzji, mimo że nadal wymagana jest obsługa podwójnej precyzji na sprzęcie. Jest on zgodny z [C99 specyfikacji (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887). Akceleratora musi obsługiwać pełnej podwójnej precyzji. Można określić, czy operacje wartości [Accelerator::supports_double_precision — członek danych](reference/accelerator-class.md#supports_double_precision). Biblioteki matematyczne szybkiego, w [Namespace CONCURRENCY::fast_math —](../../parallel/amp/reference/concurrency-fast-math-namespace.md), zawiera inny zestaw funkcji matematycznych. Te funkcje, które obsługują tylko `float` argumentów operacji, wykonać szybciej, ale nie jako dokładne, jak te w bibliotece matematyczne podwójnej precyzji. Funkcje są zawarte w \<amp_math.h > plik nagłówka i wszystkie są deklarowane jako z `restrict(amp)`. Funkcje w \<cmath > plik nagłówka są importowane do obu `fast_math` i `precise_math` przestrzeni nazw. `restrict` Słowo kluczowe jest używane w celu rozróżnienia \<cmath > i wersja C++ AMP. Poniższy kod oblicza logarytm base-10, przy użyciu metody szybkiego, w każdej wartości, który znajduje się w domenie obliczeniowej.  
 
   
 ```cpp  
@@ -467,32 +468,32 @@ void MathExample() {
 ## <a name="includewin8appnamelongbuildincludeswin8appnamelongmdmd-apps"></a>[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]Aplikacje  
  Podobnie jak inne biblioteki języka C++, można użyć C++ AMP w Twojej [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Te artykuły zawierają opis uwzględnienie kodu C++ AMP w aplikacjach, która jest tworzona przy użyciu języka C++, C#, Visual Basic lub JavaScript:  
   
-- [Korzystanie z C++ AMP w aplikacjach w Sklepie Windows](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [Korzystanie z C++ AMP w aplikacjach sklepu Windows Store](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
-- [Wskazówki: Tworzenie podstawowego składnika środowiska wykonawczego systemu Windows w języku C++ i wywoływania go z poziomu języka JavaScript](http://go.microsoft.com/fwlink/p/linkid=249077)  
+- [Wskazówki: Tworzenie podstawowego składnika środowiska wykonawczego systemu Windows w języku C++ i wywoływania go z poziomu języka JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   
-- [Optymalizator podróży, aplikację ze Sklepu Windows, JavaScript i C++ mapy Bing](http://go.microsoft.com/fwlink/p/linkid=249078)  
+- [Optymalizator podróży, aplikację ze Sklepu Windows, JavaScript i C++ mapy Bing](http://go.microsoft.com/fwlink/p/?linkid=249078)  
   
-- [Jak używać C++ AMP w języku C# za pomocą środowiska wykonawczego systemu Windows](http://go.microsoft.com/fwlink/p/linkid=249080)  
+- [Jak używać C++ AMP w języku C# za pomocą środowiska wykonawczego systemu Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)  
   
-- [Jak używać C++ AMP w języku C#](http://go.microsoft.com/fwlink/p/linkid=249081)  
+- [Jak używać C++ AMP w języku C#](http://go.microsoft.com/fwlink/p/?linkid=249081)  
   
 - [Wywoływanie funkcji natywnych z kodu zarządzanego](../../dotnet/calling-native-functions-from-managed-code.md)  
   
 ## <a name="c-amp-and-concurrency-visualizer"></a>C++ AMP i Concurrency Visualizer  
  Narzędzia Concurrency Visualizer obsługuje analizowania wydajności kodu C++ AMP. Te artykuły zawierają następujące funkcje:  
   
-- [Wykres aktywności GPU](/visualstudio/profiling/gpu-activity-graph)  
+- [Wykres aktywności procesora GPU](/visualstudio/profiling/gpu-activity-graph)  
   
-- [Aktywność GPU (stronicowanie)](/visualstudio/profiling/gpu-activity-paging)  
+- [Aktywność procesora GPU (Stronicowanie)](/visualstudio/profiling/gpu-activity-paging)  
   
-- [Działanie procesora GPU (ten proces)](/visualstudio/profiling/gpu-activity-this-process)  
+- [Aktywności procesora GPU (ten proces)](/visualstudio/profiling/gpu-activity-this-process)  
   
-- [Działanie procesora GPU (inne procesy)](/visualstudio/profiling/gpu-activity-other-processes)  
+- [Aktywność procesora GPU (inne procesy)](/visualstudio/profiling/gpu-activity-other-processes)  
   
 - [Kanały (Widok wątków)](/visualstudio/profiling/channels-threads-view)  
   
-- [Analizowanie kodu C++ AMP z narzędzia Concurrency Visualizer](http://go.microsoft.com/fwlink/linkid=253987&clcid=0x409)  
+- [Analizowanie kodu C++ AMP z narzędzia Concurrency Visualizer](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
   
 ## <a name="performance-recommendations"></a>Zalecenia dotyczące wydajności  
  Modulo i dzielenia liczb całkowitych bez znaku mają znacznie lepszą wydajność niż modulo i dzielenia liczb całkowitych ze znakiem. Zaleca się, że używasz możliwe liczb całkowitych bez znaku.  
@@ -501,4 +502,4 @@ void MathExample() {
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [Składnia wyrażenia lambda](../../cpp/lambda-expression-syntax.md)   
  [Odwołanie (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)   
- [Programowanie równoległe w blogu kodu natywnego](http://go.microsoft.com/fwlink/p/linkid=238472)
+ [Programowanie równoległe w blogu kodu natywnego](http://go.microsoft.com/fwlink/p/?linkid=238472)

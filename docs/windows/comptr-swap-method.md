@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a8ff215bf3461fcbcadd20b0680829af81630aa4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b402d60b5f9cda3f9c98e6a92ac451cbdd6bfa79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrswap-method"></a>ComPtr::Swap — Metoda
 Zamienia interfejsu zarządzanych przez bieżący comptr — przy użyciu interfejsu zarządzana przez określony comptr —.  
@@ -46,4 +49,4 @@ void Swap(
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Comptr — klasa](../windows/comptr-class.md)
+ [ComPtr, klasa](../windows/comptr-class.md)

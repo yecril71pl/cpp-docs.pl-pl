@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d7850721f5005ac1a1ab47c6557dcd99cede897
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a13acdf07e2f6055326aea2097cb923baa153a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-patterns-library-ppl"></a>Biblioteka równoległych wzorców (PLL)
 Biblioteka równoległych wzorców (PLL) zapewnia imperatywnych model programowania wspiera skalowalność i łatwość użycia dla tworzenie współbieżnych aplikacji. PPL opiera się na planowanie i składniki zarządzania współbieżności środowiska wykonawczego. Uruchamia poziom abstrakcji między kod aplikacji i wątków podstawowy mechanizm przez podanie ogólnych, bezpieczne algorytmy i kontenerów, które działają na danych równolegle. PPL umożliwia również tworzenie aplikacji, które zapewniając alternatyw do stanu udostępnionego.  
@@ -62,7 +63,7 @@ fib(42): 267914296
 |-----------|-----------------|  
 |[Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Zawiera opis roli zadań i grupy zadań w PPL.|  
 |[Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)|Informacje dotyczące używania algorytmy równoległe, takich jak `parallel_for` i `parallel_for_each`.|  
-|[Równoległe kontenery i obiekty](../../parallel/concrt/parallel-containers-and-objects.md)|Zawiera opis różnych równoległe kontenery oraz obiekty, które są udostępniane przez PPL.|  
+|[Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)|Zawiera opis różnych równoległe kontenery oraz obiekty, które są udostępniane przez PPL.|  
 |[Anulowanie w PPL](cancellation-in-the-ppl.md)|Wyjaśniono, jak można anulować pracy, która jest wykonywana przez algorytm równoległych.|  
-|[Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)|W tym artykule opisano współbieżność środowiska wykonawczego, co upraszcza Programowanie równoległe i zawiera linki do powiązanych tematów.|
+|[Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)|W tym artykule opisano współbieżność środowiska wykonawczego, co upraszcza Programowanie równoległe i zawiera linki do powiązanych tematów.|
 

@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43521d3412c7ca7c1f03896fa7732e24bd6d880b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c46b212f200b2ef7d46afae567efdf3f5bcef0f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `hash_set` do zarządzania sekwencję elementów jako tablicy skrótów, każdego wpisu tabeli przechowywania dwukierunkowy połączone listy węzłów i w każdym węźle przechowywania jeden element. Wartość każdego elementu jest używany jako klucz porządkowania sekwencji.  
@@ -65,7 +68,7 @@ template<typename Key>
 |[hash_set::iterator (STL/CLR)](../dotnet/hash-set-iterator-stl-clr.md)|Typ iteratora dla kontrolowanej sekwencji.|  
 |[hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)|Delegat porządkowania dla dwa klucze.|  
 |[hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)|Typ klucza sortowania.|  
-|[hash_set::Reference (STL/CLR)](../dotnet/hash-set-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[hash_set::reference (STL/CLR)](../dotnet/hash-set-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[hash_set::reverse_iterator (STL/CLR)](../dotnet/hash-set-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
 |[hash_set::size_type (STL/CLR)](../dotnet/hash-set-size-type-stl-clr.md)|Typ (nieujemną) odległość między dwoma elementami.|  
 |[hash_set::value_compare (STL/CLR)](../dotnet/hash-set-value-compare-stl-clr.md)|Delegat porządkowania dla dwóch wartości elementu.|  
@@ -73,18 +76,18 @@ template<typename Key>
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[hash_set::BEGIN (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[hash_set::begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
 |[hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)|Zlicza zasobników.|  
-|[hash_set::Clear (STL/CLR)](../dotnet/hash-set-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
-|[hash_set::Count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
-|[hash_set::EMPTY (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[hash_set::clear (STL/CLR)](../dotnet/hash-set-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
+|[hash_set::count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
+|[hash_set::empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
 |[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
 |[hash_set::equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|  
-|[hash_set::ERASE (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[hash_set::Find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
+|[hash_set::erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
+|[hash_set::find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
 |[hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)|Kopiuje delegat wyznaczania wartości skrótu z kluczem.|  
 |[hash_set::hash_set (STL/CLR)](../dotnet/hash-set-hash-set-stl-clr.md)|Konstruuje obiekt kontenera.|  
-|[hash_set::INSERT (STL/CLR)](../dotnet/hash-set-insert-stl-clr.md)|Dodaje elementy.|  
+|[hash_set::insert (STL/CLR)](../dotnet/hash-set-insert-stl-clr.md)|Dodaje elementy.|  
 |[hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)|Kopiuje porządkowania delegowanie dla dwa klucze.|  
 |[hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md)|Oblicza średnią liczbę elementów na przedział.|  
 |[hash_set::lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)|Wyszukuje początek zakresu, który jest zgodny z określonym kluczem.|  
@@ -101,7 +104,7 @@ template<typename Key>
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[hash_set::operator = (STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[hash_set::operator= (STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -160,4 +163,4 @@ template<typename Key>
  [Ustaw (STL/CLR)](../dotnet/set-stl-clr.md)   
  [Ustaw (STL/CLR)](../dotnet/set-stl-clr.md)   
  [Ustaw (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

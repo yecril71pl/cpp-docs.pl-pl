@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e68ca7ef9033e14b5463c4d2db11620a71e0d94e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6919f1e3670251b952ce797df5ad10b786b1bbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="macros-cc"></a>Makra (C/C++)
 Przetwarzanie wstępne rozszerza makra w wszystkie wiersze, które nie są dyrektywy preprocesora (wiersze, które nie mają  **#**  jako pierwszy znak z systemem innym niż biały) i w częściach niektóre dyrektywy, które nie są pomijane w ramach kompilacja warunkowa. Dyrektywy „kompilacji warunkowej” pozwalają na pomijanie kompilacji części pliku źródłowego przez testowanie wyrażenia stałego lub identyfikatora służącego do określania bloków tekstu, które są przekazywane do kompilatora i bloków tekstu, które są usuwane z pliku źródłowego podczas przetwarzania wstępnego.  
@@ -40,9 +41,9 @@ Przetwarzanie wstępne rozszerza makra w wszystkie wiersze, które nie są dyrek
   
 -   [Makra i język C++](../preprocessor/macros-and-cpp.md)  
   
--   [Makra Wariadyczne](../preprocessor/variadic-macros.md)  
+-   [Makra wariadyczne](../preprocessor/variadic-macros.md)  
   
 -   [Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania preprocesora C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+ [Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

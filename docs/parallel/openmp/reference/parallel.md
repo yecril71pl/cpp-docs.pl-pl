@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 289a4928c9c46f6d758ddc2f30ed864488ab725e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f6b10c681eb12d38d33c50fe9e652ffd095dd4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel"></a>równoległe
 Definiuje równoległego regionu jest kod, który zostanie wykonane przez wiele wątków jednocześnie.  
@@ -44,7 +45,7 @@ Definiuje równoległego regionu jest kod, który zostanie wykonane przez wiele 
   
 -   [copyin](../../../parallel/openmp/reference/copyin.md)  
   
--   [domyślne](../../../parallel/openmp/reference/default-openmp.md)  
+-   [default](../../../parallel/openmp/reference/default-openmp.md)  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -52,9 +53,9 @@ Definiuje równoległego regionu jest kod, który zostanie wykonane przez wiele 
   
 -   [num_threads](../../../parallel/openmp/reference/num-threads.md)  
   
--   [prywatne](../../../parallel/openmp/reference/private-openmp.md)  
+-   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
--   [redukcja](../../../parallel/openmp/reference/reduction.md)  
+-   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
 -   [udostępnione](../../../parallel/openmp/reference/shared-openmp.md)  
   

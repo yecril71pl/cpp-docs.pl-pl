@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb5f30dfaf3710e1b3dbe782a0aa24b3cd02deb4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e23f1a138bfa6d297c33597b81035a11c1d96c03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-mfc-application"></a>Tworzenie aplikacji MFC
 Aplikacja MFC jest aplikacją wykonywalną dla systemu Windows, która jest oparta na biblioteki Microsoft Foundation Class (MFC). Najprostszym sposobem tworzenia aplikacji MFC jest za pomocą Kreatora aplikacji MFC.  
@@ -37,9 +38,9 @@ Aplikacja MFC jest aplikacją wykonywalną dla systemu Windows, która jest opar
   
 -   [Tworzenie aplikacji MFC opartej na formularzach](../../mfc/reference/creating-a-forms-based-mfc-application.md)  
   
--   [Tworzenie aplikacji MFC w stylu Eksploratora plików](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)  
+-   [Tworzenie aplikacji MFC w stylu eksploratora plików](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)  
   
--   [Tworzenie aplikacji MFC w stylu przeglądarki sieci Web](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)  
+-   [Tworzenie aplikacji MFC w stylu przeglądarki internetowej](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)  
   
  Kreator aplikacji MFC generuje odpowiedniej klasy i pliki dla każdego z tych typów aplikacji, w zależności od opcji wybranych w kreatorze.  
   

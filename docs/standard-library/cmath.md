@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 33472efaa7756c287ec851a544a1da46f27c6027
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a7ecd2383f27eb91650659404ed59ac1933c59f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 Zawiera nagłówek biblioteki standardowe C \<math.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.  

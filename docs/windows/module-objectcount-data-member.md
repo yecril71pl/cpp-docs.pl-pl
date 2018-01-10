@@ -14,11 +14,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25f8ac7bb1ff8347f51fbd4ddc0811fe723d2ecf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d6be8496d35f56590be6c3398b9c4db4879eafe7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moduleobjectcount-data-member"></a>Module::objectCount_ — Członek danych
 Przechowuje informacje o ile klasy zostały utworzone z [upewnij](../windows/make-function.md) funkcji.  

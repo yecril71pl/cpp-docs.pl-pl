@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 818f8e3548525235eaf3b91c76b5fc30f5219223
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34a08aab618609c5c8a756eb7a2fe2dbf2004576
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltarraygt"></a>&lt;Tablica&gt;
 Definiuje klasę szablonu kontenera `array` i kilka szablonów pomocniczych.  
@@ -43,9 +44,9 @@ Definiuje klasę szablonu kontenera `array` i kilka szablonów pomocniczych.
 |||  
 |-|-|  
 |[operator ==](../standard-library/array-operators.md#op_eq_eq)|Porównanie tablicy równa|  
-|[operator! =](../standard-library/array-operators.md#op_neq)|Porównanie tablicy nie jest równy|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|Porównanie tablicy nie jest równy|  
 |[operator\<](../standard-library/array-operators.md#op_lt)|Tablica porównania, mniejsza niż|  
-|[operator > =](../standard-library/array-operators.md#op_gt_eq)|Porównanie tablicy, większe lub równe|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|Porównanie tablicy, większe lub równe|  
 |[operator >](../standard-library/array-operators.md#op_gt)|Porównanie tablicy większa niż|  
 |[Operator < =](../standard-library/array-operators.md#op_lt_eq)|Porównanie tablicy, mniejsze niż lub równe|  
   
@@ -53,7 +54,7 @@ Definiuje klasę szablonu kontenera `array` i kilka szablonów pomocniczych.
   
 |||  
 |-|-|  
-|[Pobierz](../standard-library/array-functions.md#get)|Pobierz element określonej tablicy.|  
+|[get](../standard-library/array-functions.md#get)|Pobierz element określonej tablicy.|  
 |[swap](../standard-library/array-functions.md#swap)|Zamienia zawartości tablicy o zawartość innej tablicy.|  
   
 ## <a name="see-also"></a>Zobacz też  

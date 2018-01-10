@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f0c62e8b783b7d97a6158a3f4a55501ed4450b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55d1744d67156bcfcf6f76c757fc97ab0d4fd380
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-class"></a>message — Klasa
 Koperty wiadomości podstawowe zawierającego ładunek danych są przekazywane między bloki komunikatów.  
@@ -54,7 +55,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Komunikat](#ctor)|Przeciążone. Konstruuje `message` obiektu.|  
+|[komunikat](#ctor)|Przeciążone. Konstruuje `message` obiektu.|  
 |[~ message — destruktor](#dtor)|Niszczy `message` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
@@ -164,4 +165,4 @@ long remove_ref();
  Nowa wartość liczebności referencyjnej.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)
+ [Przestrzeń nazw współbieżności](concurrency-namespace.md)

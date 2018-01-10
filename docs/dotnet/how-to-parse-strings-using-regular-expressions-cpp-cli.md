@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fed9fd05ed9916e4d285c64a398b48b82d99f884
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 629486c98888fd8012d616c9e845e7d70a90fdcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Porady: analizowanie ciągów za pomocą wyrażeń regularnych (C++/CLI)
 Poniższy przykład kodu pokazuje prostego ciągu analizy przy użyciu <xref:System.Text.RegularExpressions.Regex> klasy w <xref:System.Text.RegularExpressions?displayProperty=fullName> przestrzeni nazw. Ciąg zawierający wiele typów ukośników word jest tworzony. Ten ciąg jest następnie analizować przy użyciu <xref:System.Text.RegularExpressions.Regex> klasy w połączeniu z <xref:System.Text.RegularExpressions.Match> klasy. Następnie każdego wyrazu w zdaniu jest wyświetlany osobno.  
@@ -63,4 +66,4 @@ int main( )
   
 ## <a name="see-also"></a>Zobacz też  
  [.NET framework — nieprawidłowe wyrażenia](/dotnet/standard/base-types/regular-expressions)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

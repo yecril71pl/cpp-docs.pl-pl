@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5fcd308f21d66535a983e70506fe91afb5c7042f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cef1bac78afbcc8b852c3bd42e0904e1963137c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="4-environment-variables"></a>4. Zmienne środowiskowe
 W tym rozdziale opisano zmienne środowiskowe Openmpc i C++ interfejsu API (lub odpowiednik specyficznego dla platformy mechanizmów) umożliwiające sterowanie wykonywanie równoległe kodu.  Nazwy zmiennych środowiskowych muszą być pisane wielkimi literami. Przypisanych do nich wartości uwzględniana jest wielkość liter i może mieć wiodące i końcowe biały znak.  Zmiany w wartości po uruchomieniu programu są ignorowane.  

@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c76bf7708c3bbe11ee7336b4c87f195fa01297d1
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 3007e2fbae5bb0cee4472b6488be8ceb614bc1f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 Podczas pisania aplikacji, Utwórz jeden [CWinApp](../../mfc/reference/cwinapp-class.md)-pochodzi z obiektu. W czasie, może zajść potrzeba uzyskania informacji na temat tego obiektu wynikające ze poza `CWinApp`-pochodzi z obiektu. Lub może być wymagany dostęp do innych obiektów globalnych "mananger".
@@ -755,4 +756,4 @@ BOOL AFXAPI AfxWinInit(
     
 ## <a name="see-also"></a>Zobacz też  
  [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)   
- [Cwinapp — klasa](../../mfc/reference/cwinapp-class.md)
+ [Klasa CWinApp](../../mfc/reference/cwinapp-class.md)

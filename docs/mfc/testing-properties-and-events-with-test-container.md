@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 88b1240666c15601f4a003d0d021fd12dc039fe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 381f4e421b63b2ba48fe649a30e5bf7648b50d27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Testowanie właściwości i zdarzeń za pomocą kontenera testu
 Kontener testu aplikacji, w programie Visual C++, jest kontenera formantu ActiveX, testowanie i debugowanie kontrolki ActiveX. Kontener testu umożliwia deweloperowi kontroli przetestować funkcje formantu przez zmianę jego właściwości, wywoływanie metod i wyzwalania jego zdarzenia. Kontener testu można wyświetlać dzienniki powiadomień wiązania z danymi i udostępnia również urządzenia do testowania funkcji trwałości formantu ActiveX: można zapisać właściwości do strumienia lub substorage, Załaduj ponownie je i sprawdzić dane przechowywane strumienia. Tej sekcji opisano sposób użycia podstawowych funkcji kontener testu. Aby uzyskać dodatkowe informacje, wybierz **pomocy** menu podczas wykonywania kontener testu.  

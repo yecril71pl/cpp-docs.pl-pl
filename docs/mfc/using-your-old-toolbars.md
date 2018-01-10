@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86a26667c065ec8b10694c0bc16e79979b01eab7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b64c1b9c5cf38337cd286a86275331f4f5f65daf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-your-old-toolbars"></a>Używanie swoich starych pasków narzędzi
 Użycie poprzedniej wersji programu Visual C++ można utworzyć niestandardowe paski narzędzi, nowej implementacji klasy [ctoolbar —](../mfc/reference/ctoolbar-class.md) mogą powodować problemy. Tak, aby nie trzeba zrezygnować swoich starych pasków narzędzi, aby korzystać z nowych funkcji, stare implementacji nadal jest obsługiwany.  
@@ -41,5 +42,5 @@ Użycie poprzedniej wersji programu Visual C++ można utworzyć niestandardowe p
 -   [Praca z formantem paska narzędzi](../mfc/working-with-the-toolbar-control.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [MFC — implementacja paska narzędzi](../mfc/mfc-toolbar-implementation.md)
+ [MFC, implementacja paska narzędzi](../mfc/mfc-toolbar-implementation.md)
 

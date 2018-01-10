@@ -39,11 +39,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0fe6762e9e8f98895deda9ac8cbbe9a6fe3bb4fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a335ffe93f0a695643c84b60cbc581ea5545da9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="valarray-class"></a>valarray — Klasa
 Klasa szablonu opisuje obiekt, który określa sekwencję elementów typu **typu** który są przechowywane w postaci tablicy, przeznaczony dla szybkich operacji matematycznych i zoptymalizowane pod kątem wydajności obliczeniowej.  
@@ -81,7 +82,7 @@ Klasa szablonu opisuje obiekt, który określa sekwencję elementów typu **typu
 |-|-|  
 |[Zastosuj](#apply)|Dotyczy określona funkcja każdy element `valarray`.|  
 |[cshift](#cshift)|Cyklicznie kierowany wszystkie elementy w `valarray` przez określoną liczbę pozycji.|  
-|[w warstwie bezpłatna](#free)|Zwalnia pamięć używana przez `valarray`.|  
+|[free](#free)|Zwalnia pamięć używana przez `valarray`.|  
 |[Maksymalna](#max)|Wyszukuje największy element w `valarray`.|  
 |[min](#min)|Wyszukuje najmniejszy element w `valarray`.|  
 |[Zmiana rozmiaru](#resize)|Zmienia liczbę elementów w `valarray` do określonej liczby, dodawanie lub usuwanie elementów zgodnie z potrzebami.|  

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 42bd20fc051175bf9aaaba6103a1f9e29f0818b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 821890c7fdb719b5ab320588476bd1ebb73793ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floatcontrol"></a>float_control
 Określa zachowania zmiennoprzecinkowego dla funkcji.  
@@ -42,7 +43,7 @@ float_control( value,setting [push] | push | pop )
   
  Jeśli opcjonalny **wypychania** token zostanie dodany, bieżące ustawienia dla `value` spoczywa stos wewnętrznych kompilatora.  
   
- **wypychania**  
+ **push**  
  Wypychanie bieżącej `float_control` ustawienie na stosie wewnętrznych kompilatora  
   
  **POP**  

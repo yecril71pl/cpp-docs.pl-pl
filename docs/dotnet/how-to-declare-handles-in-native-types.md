@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7507a0c941fa651f55fdf462b9d832cfd929632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 097889acd9a77cea5e0a81dd3bd13be712a70550
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Porady: deklarowanie dojść w typach natywnych
 Nie można zadeklarować typu uchwytu w typie natywnym. vcclr.h zapewnia bezpieczny otoki szablonu `gcroot` w odwołaniu do obiektu CLR ze stosu C++. Ten szablon umożliwia osadzanie dojścia wirtualnego w typie natywnym i traktować go tak, jakby była typu bazowego. W większości przypadków można użyć `gcroot` jako osadzony typ bez żadnych rzutowania. Jednak w przypadku [dla poszczególnych usług, w](../dotnet/for-each-in.md), należy użyć `static_cast` można pobrać odwołanie do podstawowej zarządzanych.  
@@ -118,4 +121,4 @@ String in V: Hello
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+ [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

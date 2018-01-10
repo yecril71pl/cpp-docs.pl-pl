@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe8917c18937856a6ca310a2bbf8380840202699
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46500f4f1658c613ee8422791e46015b0e129532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 Dołącz nagłówek standardowy \<chrono > Aby zdefiniować klasy i funkcje, które reprezentują i modyfikowania okresach czasu i czasie czasu.  
@@ -42,18 +43,18 @@ Dołącz nagłówek standardowy \<chrono > Aby zdefiniować klasy i funkcje, kt�
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[DURATION — klasa](../standard-library/duration-class.md)|Opisuje typ, który przechowuje przedział czasu.|  
-|[time_point — klasa](../standard-library/time-point-class.md)|Opisuje typ, który reprezentuje punkt w czasie.|  
+|[duration, klasa](../standard-library/duration-class.md)|Opisuje typ, który przechowuje przedział czasu.|  
+|[time_point, klasa](../standard-library/time-point-class.md)|Opisuje typ, który reprezentuje punkt w czasie.|  
   
 ### <a name="structs"></a>Struktury  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[common_type — struktura](../standard-library/common-type-structure.md)|W tym artykule opisano specjalizacji szablonu klasy [common_type —](../standard-library/common-type-class.md) dla wystąpień elementu `duration` i `time_point`.|  
-|[duration_values — struktura](../standard-library/duration-values-structure.md)|Udostępnia wartości określonej dla `duration` parametr szablonu `Rep`.|  
-|[steady_clock — struktura](../standard-library/steady-clock-struct.md)|Reprezentuje `steady` zegara.|  
-|[system_clock — struktura](../standard-library/system-clock-structure.md)|Reprezentuje *typ zegara* opartego na zegarze w czasie rzeczywistym systemu.|  
-|[treat_as_floating_point — struktura](../standard-library/treat-as-floating-point-structure.md)|Określa, czy typem może być traktowana jako typ zmiennoprzecinkowy.|  
+|[common_type, struktura](../standard-library/common-type-structure.md)|W tym artykule opisano specjalizacji szablonu klasy [common_type —](../standard-library/common-type-class.md) dla wystąpień elementu `duration` i `time_point`.|  
+|[duration_values, struktura](../standard-library/duration-values-structure.md)|Udostępnia wartości określonej dla `duration` parametr szablonu `Rep`.|  
+|[steady_clock, struktura](../standard-library/steady-clock-struct.md)|Reprezentuje `steady` zegara.|  
+|[system_clock, struktura](../standard-library/system-clock-structure.md)|Reprezentuje *typ zegara* opartego na zegarze w czasie rzeczywistym systemu.|  
+|[treat_as_floating_point, struktura](../standard-library/treat-as-floating-point-structure.md)|Określa, czy typem może być traktowana jako typ zmiennoprzecinkowy.|  
   
 ### <a name="functions"></a>Funkcje  
   
@@ -67,7 +68,7 @@ Dołącz nagłówek standardowy \<chrono > Aby zdefiniować klasy i funkcje, kt�
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[operator-](../standard-library/chrono-operators.md#operator-)|Operator odejmowania lub Negacja `duration` i `time_point` obiektów.|  
-|[operator! =](../standard-library/chrono-operators.md#op_neq)|Operator nierówności, który jest używany z `duration` lub `time_point` obiektów.|  
+|[operator!=](../standard-library/chrono-operators.md#op_neq)|Operator nierówności, który jest używany z `duration` lub `time_point` obiektów.|  
 |[Operator modulo](../standard-library/chrono-operators.md#op_modulo)|Operator modulo operacje na `duration` obiektów.|  
 |[operator *](../standard-library/chrono-operators.md#op_star)|Operator mnożenia dla `duration` obiektów.|  
 |[operator /](../standard-library/chrono-operators.md#op_div)|Operator dzielenia dla `duration` obiektów.|  

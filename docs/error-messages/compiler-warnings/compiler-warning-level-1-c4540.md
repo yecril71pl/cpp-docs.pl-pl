@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04ae3142d319659c1f76dfccf31fe870a82692e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aaaef1edaa6af093ae03fe69231a9686e3d087a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4540"></a>Kompilator C4540 ostrzegawcze (poziom 1)
 dynamic_cast służący do konwertowania do niedostępnej lub niejednoznacznej podstawy; test czasu wykonywania nie powiedzie się ("type1" na "type2")  

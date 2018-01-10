@@ -31,11 +31,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31406418b14c6b3008fc734d53be6ca6319df8c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce34abd10b4681ba378cf4fbd777c96277f4db4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation"></a>Automatyzacja
 Automatyzacja (wcześniej znane jako automatyzacji OLE) umożliwia jednej aplikacji do modyfikowania obiektów w innej aplikacji lub na uwidocznienie obiektów, więc można manipulować.  
@@ -98,4 +99,4 @@ Automatyzacja (wcześniej znane jako automatyzacji OLE) umożliwia jednej aplika
 -   [Pisanie w języku C++ klienci automatyzacji](../mfc/automation-clients.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [MODEL COM MFC](../mfc/mfc-com.md)
+ [MFC COM](../mfc/mfc-com.md)

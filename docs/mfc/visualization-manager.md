@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6f516f52e20acec0feeea434d1812eea217e03c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 654ffc0f3fb4c33f153f3389442486ffa86b74a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visualization-manager"></a>Menedżer wizualizacji
 Menedżer visual jest obiekt, który określa wygląd całej aplikacji. Działa ona jako pojedyncza klasa gdzie możesz umieścić cały kod rysowania aplikacji. Biblioteki MFC obejmuje kilka menedżerów visual. Można również utworzyć Menedżera visual, aby utworzyć widok niestandardowy dla aplikacji. Na poniższych ilustracjach przedstawiono tej samej aplikacji, gdy włączone są różnych menedżerów visual:  

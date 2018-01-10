@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba55de8c308e7f2a76559006ff5dad0a7fe6f5d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 390f094b05994dcf2b3b2351a24f163b06554f84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Komunikaty i polecenia w strukturze
 Aplikacje przeznaczone dla Microsoft Windows są "na komunikat". W odpowiedzi na zdarzenia, takie jak kliknięcie myszą, naciśnięcia klawiszy, przeniesień okna i tak dalej system Windows wysyła wiadomości do okna właściwe. Aplikacje w ramach przetwarzania komunikatów systemu Windows, takich jak innych aplikacji dla systemu Windows. Ale niektóre ulepszenia powodujących, że przetwarzanie komunikatów łatwiejszy, więcej łatwy w obsłudze i lepsze hermetyzowany udostępnia platformę.  

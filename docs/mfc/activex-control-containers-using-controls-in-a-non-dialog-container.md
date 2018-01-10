@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e773085167266cd413b4d2279863d2b68c52bed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c380d0a525c2f026054ebae1812450c4d4634c1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Kontenery kontrolek ActiveX: używanie kontrolek w kontenerze innym niż okno dialogowe
 W niektórych aplikacjach, takich jak SDI lub MDI aplikacji można osadzić formantu w oknie aplikacji. **Utwórz** funkcji członkowskiej klasy otoki wstawiane przez Visual C++, można utworzyć wystąpienia formantu dynamicznie, bez konieczności dla okna dialogowego.  
@@ -71,5 +72,5 @@ W niektórych aplikacjach, takich jak SDI lub MDI aplikacji można osadzić form
 5.  Skompiluj ponownie projekt. Formant OK zostanie utworzony dynamicznie zawsze, gdy jest tworzony widok aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kontenery formantów ActiveX](../mfc/activex-control-containers.md)
+ [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
 
