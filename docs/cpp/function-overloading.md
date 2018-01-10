@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2486357766d2dbd9f5d4250e2d0fb38e02ba51bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-overloading"></a>Przeładowywanie funkcji
 C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Takie funkcje są nazywane funkcjami przeciążonymi i opisano je szczegółowo w temacie Przeciążenia. Przeciążone funkcje umożliwiają deweloperom podanie różnego znaczenia dla funkcji, w zależności od typów i liczby argumentów.  
@@ -445,7 +446,7 @@ obj.name
 ## <a name="declaration-matching"></a>Zgodność deklaracji  
  Wszelkie dwie deklaracje funkcji o tej samej nazwie w tym samym zakresie, mogą odwoływać się do tej samej funkcji lub do dwóch funkcji dyskretnych, które są przeciążone. Jeśli wykazy argumentów deklaracji zawierają równoważne typy argumentów (zgodnie z opisem w poprzedniej sekcji), deklaracje funkcji odnoszą się do tej samej funkcji. W przeciwnym razie, odnoszą się do dwóch różnych funkcji, które są wybrane za pomocą przeciążenia.  
   
- Zakres klasy jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w klasie podstawowej nie jest w tym samym zakresie, co funkcja zadeklarowana w klasie pochodnej. Jeśli funkcja klasy pochodnej jest zadeklarowana z tą samą nazwą, jako funkcja w klasie podstawowej, funkcja klasy pochodnej ukrywa funkcje klasy podstawowej, zamiast powodować przeciążenie.  
+ Zakres klasy jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w klasie bazowej nie jest w tym samym zakresie, co funkcja zadeklarowana w klasie pochodnej. Jeśli funkcja klasy pochodnej jest zadeklarowana z tą samą nazwą, jako funkcja w klasie bazowej, funkcja klasy pochodnej ukrywa funkcje klasy bazowej, zamiast powodować przeciążenie.  
   
  Zakres bloku jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w zakresie pliku nie jest w tym samym zakresie, co funkcja zadeklarowana lokalnie. Jeśli funkcja zadeklarowana lokalnie ma taką samą nazwę, co funkcja zadeklarowana w zakresie pliku, funkcja zadeklarowana lokalnie ukrywa funkcje należącą do zakresu pliku, zamiast powodować przeciążenie. Na przykład:  
   
@@ -481,7 +482,7 @@ int main()
   
  Zamiarem tego przykładu jest dostarczenie klasy `Account`, w której wymagane jest poprawne hasło, aby wykonać depozyty. Jest to uzyskiwane za pomocą przeciążenia.  
   
- Należy zauważyć, że wywołanie `Deposit` w klasie `Account::Deposit` wywołuje prywatne funkcje członkowskie. To wywołanie jest poprawne ponieważ `Account::Deposit` jest funkcją członkowską, a zatem ma dostęp do prywatnych elementów członkowskich klasy.  
+ Należy zauważyć, że wywołanie `Deposit` w klasie `Account::Deposit` wywołuje prywatne funkcje członkowskie. To wywołanie jest poprawne, ponieważ `Account::Deposit` jest funkcją składową, a zatem ma dostęp do prywatnych składowych klasy.  
   
 ```  
 // declaration_matching2.cpp  

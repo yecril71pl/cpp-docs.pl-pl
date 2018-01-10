@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 02c1b7de9a8ed5f560a5999af453970785c487f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0899f5f617fd28d121b85183280bd28fe91ee46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="code-pages"></a>Strony kodowe
 A `code page` jest zestaw znaków, który może zawierać cyfry, znaki interpunkcyjne i inne znaki. Różnych języków i ustawień regionalnych może używać innej strony kodowe. Na przykład stronę kodową ANSI 1252 jest używana w języku angielskim i większości języków europejskich; Strona kodowa OEM 932 jest używana do japoński Kanji.  

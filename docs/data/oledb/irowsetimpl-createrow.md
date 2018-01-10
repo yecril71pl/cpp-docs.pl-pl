@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f455935a1736eae2c70d95f4528d216a80e782a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f90a5de73b5eea37eea192a4886fe29d1d8b435b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetimplcreaterow"></a>IRowsetImpl::CreateRow
 Metoda wywoływana przez metodę Pomocnika [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) można przydzielić nowego **HROW**.  
@@ -57,4 +60,4 @@ Metoda wywoływana przez metodę Pomocnika [GetNextRows](../../data/oledb/irowse
  **Nagłówek:** atldb.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Irowsetimpl — klasa](../../data/oledb/irowsetimpl-class.md)
+ [IRowsetImpl, klasa](../../data/oledb/irowsetimpl-class.md)

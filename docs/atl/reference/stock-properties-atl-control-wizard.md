@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d878f0b0c30096e49a317956e083497b31ad2de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e85dee126440007ac07d724e5da7b8651a1e167
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stock-properties-atl-control-wizard"></a>Właściwości podstawowe, Kreator formantu ATL
 Ta strona kreatora identyfikuje właściwości podstawowe obsługiwane dla formantu. Domyślnie są identyfikowane żadnych właściwości.  
@@ -37,5 +38,5 @@ Ta strona kreatora identyfikuje właściwości podstawowe obsługiwane dla forma
 |**<<**|Usuwa wszystkie nazwy właściwości, w obecnie na liście **obsługiwane** listy.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kreator formantu ATL](../../atl/reference/atl-control-wizard.md)
+ [Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)
 

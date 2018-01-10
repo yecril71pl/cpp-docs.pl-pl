@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c91c3834b5a4647f7c9cd41820dc04e5597277f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-declarations"></a>Deklaracje struktur
 "Deklaracja struktury" nazwy typu i określa sekwencję wartości zmiennych (nazywany "Członkowie" lub "pola" konstrukcji), które mogą mieć różnych typów. Opcjonalny identyfikator o nazwie "tag", nadaje nazwę typu struktury i mogą być używane w kolejnych odwołań do typ struktury. Zmienna typu Struktura zawiera całą sekwencję wynika z tego typu. Struktury w języku C są podobne do typów znana jako "rekordy" w innych językach.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
  *Identyfikator struktury lub związku*  
   
  *Struktura lub Unia*:  
- **— Struktura**  
+ **struct**  
   
  **Unii**  
   

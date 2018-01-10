@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a43ad22484ec8502c66c16caa40933bf8f422df9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b95b1bfd093a12bca5398c266d6a7c8236140105
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="range-c"></a>range (C++)
 Określa zakresu wartości dozwoloną dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.  
@@ -77,4 +80,4 @@ __interface ICustom {
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Atrybuty — metoda](../windows/method-attributes.md)   
  [Atrybuty parametrów](../windows/parameter-attributes.md)   
- [Atrybuty elementów członkowskich danych](../windows/data-member-attributes.md)   
+ [Atrybuty składowych danych](../windows/data-member-attributes.md)   

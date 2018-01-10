@@ -41,11 +41,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 24ac78fad64877cb789451cd84db4ff5cd27142c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cd59fec5d8b5b2a6a05634242e0506688422f81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numpunct-class"></a>numpunct — Klasa
 Szablon klasy, która opisuje obiekt, który może służyć jako lokalnego aspektu do opisywania sekwencji typu `CharType` używany do reprezentowania informacje dotyczące formatowania i znaków interpunkcyjnych wyrażeń liczbowych i logicznych.  

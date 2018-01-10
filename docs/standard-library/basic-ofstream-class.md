@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fa5bdad26039217a52c480d747d3dac1ba2db5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 235bf7fc118f8752adefc61f5ed18ea01caec727
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicofstream-class"></a>basic_ofstream — Klasa
 Opis obiektu, który kontroluje wstawiania elementów i obiektów zakodowanych do buforu strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, elementami typu `Elem`, którego znak cechy są określane przez klasę `Tr`.  
@@ -86,9 +87,9 @@ int main(int argc, char **argv)
   
 |||  
 |-|-|  
-|[Zamknij](#close)|Zamyka plik.|  
+|[close](#close)|Zamyka plik.|  
 |[is_open](#is_open)|Określa, czy plik jest otwarty.|  
-|[Otwórz](#open)|Otwiera plik.|  
+|[open](#open)|Otwiera plik.|  
 |[rdbuf](#rdbuf)|Zwraca adres buforu przechowywanych strumienia.|  
 |[swap](#swap)|Wymiana zawartość tych `basic_ofstream` dla zawartości określonego `basic_ofstream`.|  
   

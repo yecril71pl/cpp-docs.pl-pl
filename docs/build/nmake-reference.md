@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: acae66ff8de61854d1fbaf38955ab275a01cffda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 326f54db7f9edc30e924750143fdcdb78c02357b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nmake-reference"></a>Odwołanie NMAKE
 Narzędzie do konserwacji programów firmy Microsoft (NMAKE. EXE) jest narzędziem wiersza polecenia dołączone [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] który kompilacji projektów opartych na poleceń, które są zawarte w pliku opisu.  
@@ -32,11 +33,11 @@ Narzędzie do konserwacji programów firmy Microsoft (NMAKE. EXE) jest narzędzi
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
  [Uruchomienie NMAKE](../build/running-nmake.md)  
   
- [Zawartość pliku reguł programu make](../build/contents-of-a-makefile.md)  
+ [Zawartość pliku reguł programu Make](../build/contents-of-a-makefile.md)  
   
  [Bloki opisów](../build/description-blocks.md)  
   
- [Polecenia w pliku reguł programu make](../build/commands-in-a-makefile.md)  
+ [Polecenia w pliku reguł programu Make](../build/commands-in-a-makefile.md)  
   
  [Makra i NMAKE](../build/macros-and-nmake.md)  
   
@@ -51,4 +52,4 @@ Narzędzie do konserwacji programów firmy Microsoft (NMAKE. EXE) jest narzędzi
  [Narzędzia kompilacji C/C++](../build/reference/c-cpp-build-tools.md)   
  [Tworzenie i zarządzanie projektami Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
  [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   
- [Odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md)
+ [Dokumentacja kompilacji w języku C/C++](../build/reference/c-cpp-building-reference.md)

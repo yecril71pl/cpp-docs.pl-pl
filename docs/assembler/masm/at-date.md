@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ca68ec26b5516869b3a404a271f42c42aa878cad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1830bd60451d6857fb7f832ffbf48a744ce5ef64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date"></a>@Date
 System Data w formacie mm/dd/rr (tekst makro).  
@@ -33,4 +34,4 @@ System Data w formacie mm/dd/rr (tekst makro).
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do symboli](../../assembler/masm/symbols-reference.md)
+ [Dokumentacja symboli](../../assembler/masm/symbols-reference.md)

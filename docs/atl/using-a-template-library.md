@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a074b48335f0c359ff240e58b78c85d28021caa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5232d2169ae9442a945b48ba141a609003611a90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-template-library"></a>Przy użyciu biblioteki szablonów
 Szablon jest nieco jak makra. Podobnie jak w przypadku makra, wywoływania szablonu powoduje, że go, aby rozwinąć (za pomocą odpowiednich parametrów podstawiania) do kodu, które zostały zapisane. Jednak szablonu przechodzi dalej niż to, aby umożliwić tworzenie nowych klas na podstawie typów przekazywane jako parametry. Te nowe klasy implementuje bezpieczny sposób wykonania operacji wyrażoną w kodzie szablonu.  

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a4cb304e014412e16f425b4162fd4950dcc7789f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36d577369dea4f5fe2fffa9801bbd8ae8501f71a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-chotkeyctrl"></a>Korzystanie z CHotKeyCtrl
 Formantu klawisza dostępu, reprezentowany przez klasę [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), jest wyświetlany tekst reprezentację kombinacji klawiszy użytkownik wpisze, np. CTRL + SHIFT + Q okno. Ta funkcja obsługuje również reprezentacji wewnętrznej tego klucza w postaci wirtualnego kodu klucza i zestaw flag, które reprezentują stan shift. Formantu klawisza dostępu nie ustawia faktycznie klawisza dostępu, które zależy od programu. (Listę standardowych wirtualnego kodów klucza, zobacz Winuser.h).  
@@ -31,7 +32,7 @@ Formantu klawisza dostępu, reprezentowany przez klasę [CHotKeyCtrl](../mfc/ref
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   
--   [Za pomocą formantu klawisza dostępu](../mfc/using-a-hot-key-control.md)  
+-   [Używanie kontrolki klawisza dostępu](../mfc/using-a-hot-key-control.md)  
   
 -   [Ustawianie klawisza dostępu](../mfc/setting-a-hot-key.md)  
   
@@ -40,5 +41,5 @@ Formantu klawisza dostępu, reprezentowany przez klasę [CHotKeyCtrl](../mfc/ref
 -   [Klawisze dostępu właściwe dla wątków](../mfc/thread-specific-hot-keys.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

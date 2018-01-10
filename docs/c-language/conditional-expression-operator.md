@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e8c9b14ece9f3af56be11909679592cfe5ca2de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: acfb89584de60c41d17c532b389099b815d0fb3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conditional-expression-operator"></a>Operator wyrażenia warunkowego
 C o jeden trójargumentowy: operator wyrażenia warunkowego (**?:**).  
@@ -77,4 +78,4 @@ int y;
  W tym przykładzie dwie funkcje `f1` i `f2`, a dwie zmienne `x` i `y`, został zadeklarowany. Nowsze w programie, jeśli dwie zmienne mają taką samą wartość, funkcja `f1` jest wywoływana. W przeciwnym razie `f2` jest wywoływana.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Operator warunkowy:? :](../cpp/conditional-operator-q.md)
+ [Operator warunkowy: ? :](../cpp/conditional-operator-q.md)

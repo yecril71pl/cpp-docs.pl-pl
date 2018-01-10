@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d70249536945d6426598eade2ecb50965221727e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd146ecd4a5c1b431ea63a98e770b0cb2e0917d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controls-mfc"></a>Formanty (MFC)
 Formanty są obiektami, które użytkownicy mogą wykorzystywać do wprowadzania lub manipulować danymi. Występują najczęściej w oknach dialogowych lub na paskach narzędzi. Ten temat rodziny obejmuje trzy główne rodzaje kontrolki:  
@@ -73,7 +74,7 @@ Formanty są obiektami, które użytkownicy mogą wykorzystywać do wprowadzania
 |[Nagłówek](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Przycisk, który pojawi się powyżej kolumny tekstu; Określa szerokość wyświetlanego tekstu|Tak|  
 |[klawisze skrótu](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Okno, który umożliwia użytkownikowi utworzenie "klawisza dostępu" szybko wykonania akcji|Tak|  
 |[listy obrazów](../mfc/using-cimagelist.md)|[Cimagelist —](../mfc/reference/cimagelist-class.md)|Kolekcją obrazów, które umożliwiają zarządzanie dużymi zbiorami ikony lub mapy bitowe (listy obrazów nie jest naprawdę formantu; obsługuje list używane przez inne formanty)|Tak|  
-|[Lista](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Okno, który wyświetla listę wartości tekstowych z ikonami|Tak|  
+|[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Okno, który wyświetla listę wartości tekstowych z ikonami|Tak|  
 |pola listy|[Clistbox —](../mfc/reference/clistbox-class.md)|Pole zawierające listę ciągów|Nie|  
 |[kalendarza miesięcznego](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Formant, który wyświetla informacje o dacie|Tak|  
 |[postęp](../mfc/using-cprogressctrl.md)|[Cprogressctrl —](../mfc/reference/cprogressctrl-class.md)|Okno, która wskazuje postępu długotrwałej operacji|Tak|  

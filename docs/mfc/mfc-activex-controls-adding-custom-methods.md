@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ead8411d22539218c18d21b8af7d020cc267879f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f79d4c5f7407e3de12ccf180a68b2b22e35bf10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Kontrolki ActiveX MFC: dodawanie metod niestandardowych
 Niestandardowe metody różnią się od metod standardowych, nie są już zaimplementowane przez `COleControl`. Należy podać implementacji dla każdej niestandardowej metody dodawany do formantu.  
@@ -82,5 +83,5 @@ Niestandardowe metody różnią się od metod standardowych, nie są już zaimpl
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Widok klas i przeglądarka obiektów ― ikony](/visualstudio/ide/class-view-and-object-browser-icons)
+ [Widok klasy i Przeglądarka obiektów, ikony](/visualstudio/ide/class-view-and-object-browser-icons)
 

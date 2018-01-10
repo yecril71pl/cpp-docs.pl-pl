@@ -31,11 +31,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3834e557b4060fd214be137490580412fd2902b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d08410c68a2cff5a1c85733c4a2a2ed1775754b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicostream-class"></a>basic_ostream — Klasa
 Ta klasa szablonu opisuje obiekt, który kontroluje wstawiania elementów i obiektów zakodowanych w buforze strumienia, elementami typu **elementu**, znanej także jako [char_type](../standard-library/basic-ios-class.md#char_type), są którego cech znaków Określona klasa **Tr**, znanej także jako [traits_type](../standard-library/basic-ios-class.md#traits_type).  
@@ -130,7 +131,7 @@ return (*this);
 |[Sentry](#sentry)|Zagnieżdżona klasa opisuje obiekt, którego deklaracji struktury sformatowane dane wyjściowe funkcji i funkcji niesformatowanych danych wyjściowych.|  
 |[swap](#op_eq)|Zamienia wartości to `basic_ostream` obiektu dla osób z dostarczonych `basic_ostream` obiektu.|  
 |[tellp](#tellp)|Raporty pozycja w strumieniu wyjściowym.|  
-|[zapisu](#write)|Umieszcza znaków w strumieniu.|  
+|[write](#write)|Umieszcza znaków w strumieniu.|  
   
 ### <a name="operators"></a>Operatory  
   

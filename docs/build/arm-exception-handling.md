@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 803e4e0556026eaa5a3fb75c8faa7fd87f34052f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fdbb6ea3563fb82e90b2bc4ca19f76c43c703cf3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 System Windows na ARM używa tego samego wyjątków strukturalnych obsługę mechanizmem asynchroniczne wyjątki generowane przez sprzęt i synchroniczne wyjątki generowane przez oprogramowanie. Programy obsługi wyjątków specyficzne dla języka są wbudowane obsługi przy użyciu funkcji języka pomocnika wyjątków strukturalnych systemu Windows. W tym dokumencie opisano obsługi wyjątków w systemu Windows na ARM i pomocników języka używany przez kod, który jest generowany przez MASM i kompilatora języka Visual C++.  
@@ -736,4 +737,4 @@ Function:
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd Konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)   
- [Typowe problemy przy migracji ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)
+ [Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)

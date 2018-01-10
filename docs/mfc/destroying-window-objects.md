@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67d2df7d72de079a0408847c433000a652ac6aaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8e7b8b2cf605e0f53418755b65151fd9eb2cff5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destroying-window-objects"></a>Niszczenie obiektów okien
 Należy uważać z okien podrzędnych do zniszczenia obiektem okna języka C++, gdy zostanie zakończone w oknie. Jeśli te obiekty nie zostały zniszczone, aplikacja nie odzyska ich pamięci. Na szczęście w ramach zarządza zniszczenie okna, a także tworzenie okien ramowych, widoków i okien dialogowych. Jeśli utworzysz dodatkowe okna jest odpowiedzialny za zniszczenia.  

@@ -22,11 +22,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be954451335deef88ad459b9de6b865ff45ed909
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 610e970ad84c6c89d91182b7a61bb759112fcd7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-includes-dialog-box"></a>Zasób zawiera okno dialogowe
 Można użyć **zasobów zawiera** okno dialogowe, aby zmodyfikować rozmieszczenie normalnej pracy w środowisku przechowywania wszystkich zasobów w plik .rc projektu i wszystkie [symbole](../windows/symbols-resource-identifiers.md) w Resource.h.  

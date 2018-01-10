@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc380109f228077e9ee2a928202bf7514a7c2ebd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ba264612923e101c63b5ec3503bbfbce426d8bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execution-character-set"></a>Zestaw znaków wykonania
 Ta zawartość dotyczy często "wykonywania zestaw znaków". Zestaw znaków wykonania nie jest zawsze taki sam jak źródłowy zestaw znaków używany do zapisywania C — programy. Zestaw znaków wykonania zawiera wszystkie znaki w zestaw znaków źródła oraz znak null, znaku nowego wiersza, backspace, tabulator poziomy, tabulator pionowy, znaków powrotu karetki i sekwencje specjalne. Zestawy znaków źródła i wykonania może różnić się w innych implementacjach.  

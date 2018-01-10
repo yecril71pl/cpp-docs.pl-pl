@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f824d9148f45b7744ca2e911c8a83b0074784f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 361085290fa70f4449c122467bce5d33ca1cf29b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-composite-control-fundamentals"></a>Podstawy złożonych kontrolek ALT
 Formantu złożonego jest typem formantu ActiveX, który może zawierać (podobnie do okna dialogowego) innych formantów ActiveX lub formantów systemu Windows. Po utworzeniu złożonych kontrolek, aby można było wstawić wszędzie tam, gdzie mogą być hostowane kontrolki ActiveX.  
@@ -38,5 +39,5 @@ Formantu złożonego jest typem formantu ActiveX, który może zawierać (podobn
 ## <a name="see-also"></a>Zobacz też  
  [Pojęcia](../atl/active-template-library-atl-concepts.md)   
  [Funkcje globalne złożonych kontrolek](../atl/reference/composite-control-global-functions.md)   
- [Makra złożonych kontrolek](../atl/reference/composite-control-macros.md)
+ [Makra kontrolek złożonych](../atl/reference/composite-control-macros.md)
 

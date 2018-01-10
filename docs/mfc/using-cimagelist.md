@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5db9ede8dc87fcb6b32eb825efed3e028872b6ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 053e670b5a6d932c50e2f967ee38cf9191710ff4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cimagelist"></a>Korzystanie z CImageList
 Listy obrazów, reprezentowany przez klasę [CImageList](../mfc/reference/cimagelist-class.md), to zbiór tego samego rozmiaru obrazów, z których każdy może być przywoływane przez jej indeks. Listy obrazów umożliwiają wydajne zarządzanie dużymi zbiorami ikony lub mapy bitowe. Listy obrazów są same nie formantów, ponieważ nie są one windows; jednak są używane z kilkoma różnymi typami formantów, w tym kontrolki listy ([CListCtrl](../mfc/reference/clistctrl-class.md)), kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) i na karcie formantów ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  
@@ -32,7 +33,7 @@ Listy obrazów, reprezentowany przez klasę [CImageList](../mfc/reference/cimage
   
 -   [Typy list obrazów](../mfc/types-of-image-lists.md)  
   
--   [Używanie List obrazów](../mfc/using-an-image-list.md)  
+-   [Używanie list obrazów](../mfc/using-an-image-list.md)  
   
 -   [Operowanie listami obrazów](../mfc/manipulating-image-lists.md)  
   
@@ -45,5 +46,5 @@ Listy obrazów, reprezentowany przez klasę [CImageList](../mfc/reference/cimage
 -   [Informacje o obrazach na listach obrazów](../mfc/image-information-in-image-lists.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

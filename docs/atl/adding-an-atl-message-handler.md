@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a30c8d2c26893ddf101d7084a91215c7ed55bf48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4358dc54589971c559bec48adf77252d4f4cda28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-message-handler"></a>Dodawanie obsługi ATL wiadomości
 Aby dodać program obsługi komunikatów (funkcję elementu członkowskiego, która obsługuje komunikatów systemu Windows) do formantu, należy najpierw wybrać formant w widoku klas. Następnie otwórz **właściwości** wybierz **wiadomości** ikonę, a następnie kliknij przycisk, kontrolować listy rozwijanej w polu obok komunikatu wymagane. Spowoduje to dodanie deklaracji dla obsługi wiadomości w pliku nagłówka formantu i szkielet implementację programu obsługi w pliku .cpp formantu. Zostanie również dodać mapy wiadomości i Dodaj wpis dla programu obsługi.  

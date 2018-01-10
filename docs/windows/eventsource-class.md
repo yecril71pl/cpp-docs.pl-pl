@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95bb322944b6a7c68c5b9abde53e67382fe73ced
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 705260547d5a42b463d61b79c38592874f9dfa19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventsource-class"></a>EventSource — Klasa
 Reprezentuje zdarzenie. Funkcje Członkowskie EventSource dodawania, usuwania i wywołanie procedury obsługi zdarzeń.  
@@ -43,24 +46,24 @@ class EventSource;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[EventSource::EventSource — Konstruktor](../windows/eventsource-eventsource-constructor.md)|Inicjuje nowe wystąpienie klasy EventSource.|  
+|[EventSource::EventSource, konstruktor](../windows/eventsource-eventsource-constructor.md)|Inicjuje nowe wystąpienie klasy EventSource.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[EventSource::Add — metoda](../windows/eventsource-add-method.md)|Dołącza reprezentowany przez interfejs określonego delegata do zestawu obsługi zdarzeń dla bieżącego obiektu EventSource programu obsługi zdarzeń.|  
-|[EventSource::GetSize — metoda](../windows/eventsource-getsize-method.md)|Pobiera liczbę programów obsługi zdarzeń skojarzonych z bieżącym obiektem źródła zdarzeń|  
-|[EventSource::InvokeAll — metoda](../windows/eventsource-invokeall-method.md)|Wywołuje każdego obsługi zdarzeń skojarzonych z bieżącego obiektu EventSource przy użyciu określone typy argumentów i argumentów.|  
-|[EventSource::Remove — Metoda](../windows/eventsource-remove-method.md)|Usuwa reprezentowanego przez określone zdarzenie tokenu rejestracji z zestawu programów obsługi zdarzeń skojarzonych z bieżącym obiektem EventSource programu obsługi zdarzeń.|  
+|[EventSource::Add, metoda](../windows/eventsource-add-method.md)|Dołącza reprezentowany przez interfejs określonego delegata do zestawu obsługi zdarzeń dla bieżącego obiektu EventSource programu obsługi zdarzeń.|  
+|[EventSource::GetSize, metoda](../windows/eventsource-getsize-method.md)|Pobiera liczbę programów obsługi zdarzeń skojarzonych z bieżącym obiektem źródła zdarzeń|  
+|[EventSource::InvokeAll, metoda](../windows/eventsource-invokeall-method.md)|Wywołuje każdego obsługi zdarzeń skojarzonych z bieżącego obiektu EventSource przy użyciu określone typy argumentów i argumentów.|  
+|[EventSource::Remove, metoda](../windows/eventsource-remove-method.md)|Usuwa reprezentowanego przez określone zdarzenie tokenu rejestracji z zestawu programów obsługi zdarzeń skojarzonych z bieżącym obiektem EventSource programu obsługi zdarzeń.|  
   
 ### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[EventSource::addremovelock_ — członek danych](../windows/eventsource-addremovelock-data-member.md)|Synchronizuje dostęp do [targets_ —](../windows/eventsource-targets-data-member.md) tablicy podczas dodawania, usuwania lub wywoływanie programów obsługi zdarzeń.|  
-|[EventSource::targets_ — członek danych](../windows/eventsource-targets-data-member.md)|Tablica procedury obsługi zdarzeń.|  
-|[EventSource::targetspointerlock_ — członek danych](../windows/eventsource-targetspointerlock-data-member.md)|Synchronizuje dostępu do elementów członkowskich danych wewnętrznych, nawet wtedy, gdy programy obsługi zdarzeń dla tego elementu EventSource są dodawane, usunięte lub wywołany.|  
+|[EventSource::addRemoveLock_, składowa danych](../windows/eventsource-addremovelock-data-member.md)|Synchronizuje dostęp do [targets_ —](../windows/eventsource-targets-data-member.md) tablicy podczas dodawania, usuwania lub wywoływanie programów obsługi zdarzeń.|  
+|[EventSource::targets_, składowa danych](../windows/eventsource-targets-data-member.md)|Tablica procedury obsługi zdarzeń.|  
+|[EventSource::targetsPointerLock_, składowa danych](../windows/eventsource-targetspointerlock-data-member.md)|Synchronizuje dostępu do elementów członkowskich danych wewnętrznych, nawet wtedy, gdy programy obsługi zdarzeń dla tego elementu EventSource są dodawane, usunięte lub wywołany.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `EventSource`  
@@ -71,4 +74,4 @@ class EventSource;
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

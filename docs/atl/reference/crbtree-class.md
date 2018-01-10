@@ -37,11 +37,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f9014233631eda9d1f3576382e71e377a3f7fcfd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f436a3661f027ba1026a60982cb18b48a2c48cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crbtree-class"></a>Klasa CRBTree
 Ta klasa dostarcza metody do tworzenia i przy użyciu drzewa czarne czerwony.  
@@ -183,7 +184,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
  `key`  
  Zmienna, która odbiera klucz.  
   
- *wartość*  
+ *value*  
  Zmienna, która odbiera wartość.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -269,7 +270,7 @@ void GetNextAssoc(
  `key`  
  Parametr szablonu określający typ klucza w drzewie.  
   
- *wartość*  
+ *value*  
  Parametr szablonu określający typ wartości drzewa.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -415,7 +416,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
  `pos`  
  Licznik pozycji, takich jak zwrócony przez poprzednie wywołanie metody [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).  
   
- *wartość*  
+ *value*  
  Wartość do dodania do `CRBTree` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  

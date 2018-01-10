@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 861eceef234b77b96179c51979cb7d1c0d09eeeb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: aad9f1dbd4542ad763e7303d9a750f1856208025
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>Redystrybucja składników ODBC wśród klientów
 Jeśli funkcje programów ODBC Administrator należy dołączyć do aplikacji, należy rozproszyć użytkownikom również pliki, które uruchamiać te programy. Te pliki ODBC znajdują się w katalogu \OS\System dysku CD programu Visual C++. Plik Redistrb.wri i umowy licencyjnej, w tym samym katalogu zawierają listę plików ODBC, które można było ponownie dystrybuować.  
@@ -35,12 +38,12 @@ Jeśli funkcje programów ODBC Administrator należy dołączyć do aplikacji, n
   
  Więcej informacji o korzystaniu z klasami baz danych ODBC można znaleźć w następujących tematach:  
   
--   [ODBC: Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)  
+-   [ODBC: biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)  
   
--   [ODBC: Konfigurowanie źródła danych ODBC](../../data/odbc/odbc-configuring-an-odbc-data-source.md)  
+-   [ODBC: konfigurowanie źródła danych ODBC](../../data/odbc/odbc-configuring-an-odbc-data-source.md)  
   
--   [ODBC: Bezpośrednie wywoływanie funkcji ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
+-   [ODBC: bezpośrednie wywoływanie funkcji ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Podstawy ODBC](../../data/odbc/odbc-basics.md)   
- [ODBC Administrator](../../data/odbc/odbc-administrator.md)
+ [Administrator ODBC](../../data/odbc/odbc-administrator.md)

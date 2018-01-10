@@ -18,27 +18,28 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38a3a64f4853948fcd9ebca1593254e803333a83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c14b52ef062b2a60815f47adfb2b8d39e6aa31f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programowanie za pomocą kodu ATL i C Run-Time
 W tej sekcji omówiono korzystanie z połączeń statyczne lub dynamiczne biblioteki wykonawcze języka C (CRT).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zalety i wady i zalety metody używanej do łącza do CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
+ [Zalety i wady metody używanej do tworzenia linków do CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
  Przedstawiono zalety i wady i zalety objętego łączenia statycznie CRT lub łączone dynamicznie.  
   
- [Łączenie z CRT w ATL projektu](../atl/linking-to-the-crt-in-your-atl-project.md)  
+ [Tworzenie linków do CRT w projekcie ATL](../atl/linking-to-the-crt-in-your-atl-project.md)  
  W tym artykule omówiono ustawienia projektu i opcje konsolidatora do łączenia z CRT; zawiera także szczegółowe informacje o łączenie z CRT wpływ obraz programu.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [ATL](../atl/active-template-library-atl-concepts.md)  
  Zawiera łącza do tematów koncepcyjne na temat programowania przy użyciu biblioteki Active Template Library.  
   
- [Biblioteki dll i zachowanie biblioteki wykonawczej programu Visual C++](../build/run-time-library-behavior.md)  
+ [Zachowanie biblioteki wykonawczej DLL i Visual C++](../build/run-time-library-behavior.md)  
  Zawiera szczegółowe informacje dotyczące sposobu działania kodu uruchamiania VCRuntime i CRT.  
   
  [Biblioteki wykonawcze języka C](../c-runtime-library/crt-library-features.md)  

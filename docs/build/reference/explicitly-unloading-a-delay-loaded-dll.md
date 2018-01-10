@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b59ad181ea39382a4f79b1af5e6f1d1dbc1ded62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b26a1a17952693be9db6a80649aad2c40227d53e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Jawne zwalnianie bibliotek DLL załadowanych z opóźnieniem
 [/Delay](../../build/reference/delay-delay-load-import-settings.md): unload — opcja konsolidatora można zwolnić bibliotekę DLL, która załadowane z opóźnieniem. Domyślnie po kodzie zwalnia biblioteki DLL (przy użyciu/DELAY: Unload i **__FUnloadDelayLoadedDLL2**), pozostają Importy załadowane z opóźnieniem w tabelę adresów importu (IAT). Jednak jeśli używasz/DELAY: Unload w wierszu polecenia konsolidatora funkcji Pomocnik będzie obsługiwać ładowanej biblioteki DLL zresetowanie IAT do postaci oryginalnej; wskaźniki obecnie nieprawidłowym zostaną zastąpione. IAT jest polem w [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) zawierający adres kopię oryginalnej IAT (jeśli istnieje).  

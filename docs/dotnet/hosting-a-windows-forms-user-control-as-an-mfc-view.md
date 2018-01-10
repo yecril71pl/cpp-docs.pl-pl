@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a8ee337c6e647f88fc4ef8730f100681c37a170
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7e4e0b7bc081d3b16b3f9aa55719d298f710cdab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hostowanie kontrolki użytkownika interfejsu Windows Forms jako widoku MFC
 MFC używa klasy CWinFormsView do hostowania kontrolki użytkownika formularzy systemu Windows w widoku MFC. Widoki formularzy systemu Windows MFC są formantów ActiveX. Kontrola użytkownika jest obsługiwany jako element podrzędny widoku macierzystego i zajmuje całego obszaru klienta natywnego widoku.  
@@ -33,12 +36,12 @@ MFC używa klasy CWinFormsView do hostowania kontrolki użytkownika formularzy s
  Dla przykładowej aplikacji, która zawiera formularze systemu Windows używana z MFC, zobacz [MFC i integracja z formularzy systemu Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: Tworzenie formantu użytkownika i hostowanie widoku MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)  
+ [Instrukcje: tworzenie kontrolki użytkownika i hostowanie widoku MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)  
   
- [Porady: Dodawanie polecenia routingu do systemu Windows formantu formularzy](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)  
+ [Instrukcje: dodawanie routingu poleceń do formantu interfejsu Windows Forms](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)  
   
- [Porady: kontrolowanie wywoływanie właściwości i metod formularzy systemu Windows](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)  
+ [Instrukcje: wywoływanie właściwości i metod kontrolki interfejsu Windows Forms](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Używanie formantu użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [Porady: autoryzowanie formantów złożonych](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
+ [Instrukcje: tworzenie kontrolek złożonych](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

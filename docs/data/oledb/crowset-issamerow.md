@@ -24,11 +24,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a67952947275789fbcb38e8807a2b754cd4baf8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 48af58b417b3af16c69ff1c5677f30327c781030
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetissamerow"></a>CRowset::IsSameRow
 Porównuje określony wiersz z bieżącego wiersza.  
@@ -53,4 +56,4 @@ Porównuje określony wiersz z bieżącego wiersza.
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Crowset — klasa](../../data/oledb/crowset-class.md)
+ [CRowset, klasa](../../data/oledb/crowset-class.md)

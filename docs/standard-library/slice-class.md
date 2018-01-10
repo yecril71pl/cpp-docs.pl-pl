@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f5cecf08cbc64a75354bdd28522990c474f493da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c49abb87a3a1b9c480c9267f21f6fc9d3de55b9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="slice-class"></a>slice — Klasa
 Klasa narzędzia valarray —, który służy do definiowania jednowymiarowa podzbiór nadrzędnej valarray —. Jeśli valarray — jest traktowany jako macierz dwuwymiarowa z wszystkich elementów w tablicy, wycinka wyodrębnia wektor w jednym wymiarze poza tablicą dwuwymiarową.  

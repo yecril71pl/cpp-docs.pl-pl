@@ -28,11 +28,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aab3048667099a698bd4aff928c7a23d7fbb01e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab4bb1e04bd21900cdf8d8122af51547e79aea22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialogimpl-class"></a>Cdialogimpl — klasa
 Ta klasa dostarcza metody do tworzenia modalne i niemodalne okno dialogowe.  
@@ -100,7 +101,7 @@ template <class T,
 |Aby uzyskać więcej informacji dotyczących|Zobacz|  
 |--------------------------------|---------|  
 |Tworzenie formantów|[ALT — samouczek](../../atl/active-template-library-atl-tutorial.md)|  
-|Za pomocą okien dialogowych w ATL|[Klasy okien ALT](../../atl/atl-window-classes.md)|  
+|Za pomocą okien dialogowych w ATL|[Klasy okien ATL](../../atl/atl-window-classes.md)|  
 |Kreator projektu ATL|[Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)|  
 |Okna dialogowe|[Okna dialogowe](http://msdn.microsoft.com/library/windows/desktop/ms632588) i kolejnych tematach w zestawie SDK systemu Windows|  
   

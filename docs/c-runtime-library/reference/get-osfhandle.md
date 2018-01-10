@@ -1,7 +1,7 @@
 ---
 title: "_get_osfhandle — | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-standard-libraries
@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e3b15b4577d1d8c0b24df82acff76494474c4e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b810edac60b08ccc31d6767cb11b7176fb981b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -55,15 +56,16 @@ intptr_t _get_osfhandle(
   
 ### <a name="parameters"></a>Parametry
 
-*FD* istniejącego pliku deskryptora.  
+*FD*  
+Istniejące deskryptorów plików.  
   
 ## <a name="return-value"></a>Wartość zwracana
 
-Dojście do pliku systemu operacyjnego Jeśli *fd* jest nieprawidłowy. W przeciwnym razie program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca `INVALID_HANDLE_VALUE` (-1) i ustawia `errno` do `EBADF`, wskazując nieprawidłowe dojście do pliku.  
+Zwraca dojście do pliku systemu operacyjnego, jeśli *fd* jest nieprawidłowy. W przeciwnym razie program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca `INVALID_HANDLE_VALUE` (-1) i ustawia `errno` do `EBADF`, wskazując nieprawidłowe dojście do pliku.  
   
 ## <a name="remarks"></a>Uwagi
 
-Aby zamknąć plik, którego dojście do pliku systemu operacyjnego są uzyskiwane przez `_get_osfhandle`, wywołaj [ \_zamknąć](../../c-runtime-library/reference/close.md) na deskryptorów plików *fd*. Dojście podstawowych jest również zamknięte przez wywołanie do `_close`, więc nie jest konieczne do wywołania funkcji Win32 `CloseHandle` w dojściu do oryginalnego.  
+Aby zamknąć plik, którego dojście do pliku systemu operacyjnego (OS) są uzyskiwane przez `_get_osfhandle`, wywołaj [ \_zamknąć](../../c-runtime-library/reference/close.md) na deskryptorów plików *fd*. Nie wywołuj `CloseHandle` wartości zwracanej tej funkcji. Dojście do pliku podstawowego systemu operacyjnego jest własnością *fd* pliku deskryptora i zostanie zamknięty kiedy `_close` jest wywoływana na *fd*. Jeśli właścicielem jest deskryptorów plików `FILE *` strumienia, wywołując [fclose —](../../c-runtime-library/reference/fclose-fcloseall.md) na tej `FILE *` strumienia zamyka zarówno deskryptorów plików, jak i dojście do pliku podstawowego systemu operacyjnego. W takim przypadku nie wywołuj `_close` na deskryptorów plików.
   
 ## <a name="requirements"></a>Wymagania  
   
@@ -79,4 +81,4 @@ Aby zamknąć plik, którego dojście do pliku systemu operacyjnego są uzyskiwa
 [_zamknij](../../c-runtime-library/reference/close.md)   
 [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
 [_dup —, _dup2 —](../../c-runtime-library/reference/dup-dup2.md)   
-[_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)
+[_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

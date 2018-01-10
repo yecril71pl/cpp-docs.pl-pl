@@ -32,11 +32,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9e06ca944768f8c4af2b207a75b923f5e1278943
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26e88abf30c0f67fe5b104d560c40dd2adc57752
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Konwencja wywoływania)
 Opcje te określają kolejność funkcji argumenty są przenoszone na stosie, czy funkcja wywołujący lub wywołana funkcja usuwa argumenty ze stosu na końcu wywołania i Konwencji dekoracji nazwa używana przez kompilator poszczególne funkcje.  

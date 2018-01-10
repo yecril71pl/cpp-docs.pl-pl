@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3844dc5b53defcb02f1dab1a97f05760d05d531f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 617236d30f3c4473f6c7785db97789105d6cd565
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-overloading"></a>Przeciążanie operatora
 `operator` — Słowo kluczowe deklaruje funkcję określenie, jakie `operator-symbol` oznacza to, gdy jest stosowany do wystąpienia klasy. Zapewnia znaczenie więcej niż jeden operator lub "overloads" go. Kompilator rozróżnia znaczenie innego operatora, sprawdzając typy argumentów.  
@@ -102,7 +103,7 @@ type operator operator-symbol ( parameter-list )
   
 -   [Operatory binarne](../cpp/binary-operators.md)  
   
--   [Przypisania](../cpp/assignment.md)  
+-   [Przypisanie](../cpp/assignment.md)  
   
 -   [Wywołania funkcji](../cpp/function-call-cpp.md)  
   
@@ -177,17 +178,17 @@ int main() {
   
 1.  [Zasady ogólne dotyczące przeciążania operatorów](../cpp/general-rules-for-operator-overloading.md)  
   
-2.  [Przeładowanie operatorów Jednoargumentowych](../cpp/overloading-unary-operators.md)  
+2.  [Przeładowanie operatorów jednoargumentowych](../cpp/overloading-unary-operators.md)  
   
 3.  [Operatory binarne](../cpp/binary-operators.md)  
   
-4.  [Przypisania](../cpp/assignment.md)  
+4.  [Przypisanie](../cpp/assignment.md)  
   
 5.  [Wywołania funkcji](../cpp/function-call-cpp.md)  
   
 6.  [Tworzenie indeksów dolnych](../cpp/subscripting.md)  
   
-7.  [Dostęp do elementu członkowskiego](../cpp/member-access.md)  
+7.  [Dostęp do składowej](../cpp/member-access.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   

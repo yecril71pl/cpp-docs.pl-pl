@@ -102,11 +102,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc0da7a9e93846bc0d51f0eaa84fa69876a62b1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2e3e4bc37bc62d061571d1b52b0f92ac59a949c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Program CMFCVisualManagerOffice2003 — klasa
 `CMFCVisualManagerOffice2003`daje aplikacji wygląd pakietu Microsoft Office 2003.  
@@ -2279,4 +2280,4 @@ static void SetUseGlobalTheme(BOOL bUseGlobalTheme = TRUE);
  [Klasy](../../mfc/reference/mfc-classes.md)   
  [Klasa CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)   
  [Program CMFCVisualManagerOfficeXP — klasa](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
- [Program CMFCVisualManagerWindows — klasa](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
+ [Klasa CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

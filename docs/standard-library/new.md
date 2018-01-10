@@ -15,13 +15,14 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a19b6e4dd9e407a85097de5719e8bdf1b4522e3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 263c6ec455c55492425617d2ffee499655a727dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ltnewgt"></a>&lt;Nowy&gt;
+# <a name="ltnewgt"></a>&lt;new&gt;
 Definiuje kilka typy i funkcje tego formantu alokacji i zwalnianie magazynu pod kontrolą programu. Definiuje również składniki raportowania błędów zarządzania magazynu.  
   
 ## <a name="syntax"></a>Składnia  
@@ -65,7 +66,7 @@ Definiuje kilka typy i funkcje tego formantu alokacji i zwalnianie magazynu pod 
   
 |||  
 |-|-|  
-|[bad_alloc — klasa](../standard-library/bad-alloc-class.md)|Klasa opisuje wyjątek, aby wskazać, że żądanie alokacji nie powiodła się.|  
+|[bad_alloc, klasa](../standard-library/bad-alloc-class.md)|Klasa opisuje wyjątek, aby wskazać, że żądanie alokacji nie powiodła się.|  
 |[nothrow_t — klasa](../standard-library/nothrow-t-structure.md)|Klasa jest używana jako parametru funkcji operatora nowe do wskazują, że funkcja powinna zwrócić pustego wskaźnika Zgłoś błąd alokacji zamiast Zgłoś wyjątek.|  
   
 ## <a name="see-also"></a>Zobacz też  

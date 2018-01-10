@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0798263caee416d3ce020104a6ac9bbb711fd22c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f43ac8951eae91925bddb752423d5719086ab2ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-platforms-crt"></a>Platformy systemu Windows (CRT)
 Biblioteki wykonawcze języka C dla [!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)] obsługuje [!INCLUDE[win8](../build/reference/includes/win8_md.md)], [!INCLUDE[winserver8](../build/reference/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/reference/includes/winsvr08_md.md)], Windows Vista, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3) dla x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 (SP2) dla x64, i [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Dodatek Service Pack 2 (SP2) dla x x86 i x64. Wszystkie systemy operacyjne obsługują Windows interfejsu programowania aplikacji (API) i zapewniają obsługę standardu Unicode. Ponadto dowolnej aplikacji Win32 można skorzystać z zestawu znaków wielobajtowych (MBCS).  

@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 127f8b0448d141917193d41d11d5ed95576ff482
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cfa4d6fff6b46341f01b4d5ce18d9ec418738bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crbmap-class"></a>Klasa CRBMap
 Ta klasa reprezentuje struktury mapowanie za pomocą czarnego Red drzewa binarnego.  
@@ -135,7 +136,7 @@ CPair* Lookup(KINARGTYPE key) throw();
  `key`  
  Określa klucz identyfikujący element, aby wyszukiwać.  
   
- *wartość*  
+ *value*  
  Zmienna, która odbiera wartość wyszukiwanego w górę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -180,7 +181,7 @@ POSITION SetAt(
  `key`  
  Wartość klucza można dodać do `CRBMap` obiektu.  
   
- *wartość*  
+ *value*  
  Wartość do dodania do `CRBMap` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  

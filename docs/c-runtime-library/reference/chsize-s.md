@@ -34,11 +34,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3805800a89842ba23d0778a3a5aabf9d60880c38
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b00b0afdf9ba2daac8b4a64a8527d3b73e3c0cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chsizes"></a>_chsize_s
 Zmienia rozmiar pliku. To jest wersja [_chsize —](../../c-runtime-library/reference/chsize.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -84,4 +85,4 @@ errno_t _chsize_s(
  [_chsize —](../../c-runtime-library/reference/chsize.md)   
  [_zamknij](../../c-runtime-library/reference/close.md)   
  [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
- [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77a5e1c01254a67151d5b8577676537709bdba4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9371aaf978f2ea9498445d0124b9be16cf3b0fa7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unions"></a>Unie
 A `union` jest typem zdefiniowane przez użytkownika, w której wszyscy członkowie mają tę samą lokalizację pamięci. Oznacza to, w danym momencie Unii może zawierać nie więcej niż jeden obiekt z listy elementów członkowskich. Oznacza to również, że niezależnie od tego, jak wiele elementów członkowskich Unii ma, zawsze używa tylko wystarczającej ilości pamięci do przechowywania największy element członkowski.  
@@ -661,4 +662,4 @@ Oprócz ograniczeń dla nazwanego unie związki anonimowe obowiązują następuj
  [Klasy i struktury](../cpp/classes-and-structs-cpp.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)   
  [klasy](../cpp/class-cpp.md)   
- [— Struktura](../cpp/struct-cpp.md)
+ [struct](../cpp/struct-cpp.md)

@@ -32,11 +32,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7742b9f26c2eaffada242b7a0322fd0d2a426c0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c1fb85ab41c02bb9f604f024f86ebb42706eeda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetreporthook"></a>_CrtSetReportHook
 Instaluje zdefiniowane przez klienta funkcji raportowania przez Przechwytywanie go do procesu raportowania debugowania środowiska wykonawczego C (tylko wersja do debugowania).  
@@ -89,4 +90,4 @@ int YourReportHook( int reportType, char *message, int *returnValue );
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
- [_Crtgetreporthook —](../../c-runtime-library/reference/crtgetreporthook.md)
+ [_CrtGetReportHook](../../c-runtime-library/reference/crtgetreporthook.md)

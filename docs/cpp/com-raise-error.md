@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a7dc58ae5d50c59836dd6471b8118c37f739702
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cfb51d4188917ebcdbad2fead13a9792875d2f11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Dotyczące firmy Microsoft**  
@@ -65,4 +66,4 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje globalne kompilatora COM](../cpp/compiler-com-global-functions.md)   
- [_set_com_error_handler —](../cpp/set-com-error-handler.md)
+ [_set_com_error_handler](../cpp/set-com-error-handler.md)

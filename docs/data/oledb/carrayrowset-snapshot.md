@@ -24,11 +24,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 770f69d5a553452da4125b8bf5aeac7030061afb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d54c1a48e5ea6eeb96ef8ece6ad68efec80ae6e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="carrayrowsetsnapshot"></a>CArrayRowset::Snapshot
 Odczytuje całego zestawu wierszy w pamięci, tworzenie obrazu lub jego migawki.  
@@ -45,4 +48,4 @@ HRESULT Snapshot( ) throw( );
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Carrayrowset — klasa](../../data/oledb/carrayrowset-class.md)
+ [CArrayRowset, klasa](../../data/oledb/carrayrowset-class.md)

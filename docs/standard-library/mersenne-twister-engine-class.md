@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58a777a049b270702e63391ebc7bd4c1addc3b32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9db5fd19c480ac7dfa6f647a1e1bf4beec5609d1
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine — Klasa
 Generuje losowe sekwencji liczb całkowitych na podstawie algorytmu — trąba powietrzna w ramach projektu Mersenne wysokiej jakości.  
@@ -104,7 +105,7 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;  
 ```  
   
- Aby uzyskać szczegółowe informacje na temat algorytm — trąba powietrzna w ramach projektu Mersenne, zobacz artykuł Wikipedia [— trąba powietrzna w ramach projektu Mersenne](http://go.microsoft.com/fwlink/LinkId=402356).  
+ Aby uzyskać szczegółowe informacje na temat algorytm — trąba powietrzna w ramach projektu Mersenne, zobacz artykuł Wikipedia [— trąba powietrzna w ramach projektu Mersenne](http://go.microsoft.com/fwlink/p/?linkid=402356).  
   
 ## <a name="example"></a>Przykład  
  Na przykład kod, zobacz [ \<losowe >](../standard-library/random.md).  

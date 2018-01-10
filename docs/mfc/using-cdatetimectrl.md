@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59353359afc1ddb1ea28f22a2049c6fca8ea049f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab0f8c64b953a9ddaffa3382863762256b90c6c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cdatetimectrl"></a>Korzystanie z CDateTimeCtrl
 Formant selektora daty i godziny ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementuje metodę intuicyjne i rozpoznawalnych wprowadzania lub wybranie określonej daty. Główne interfejsu formantu jest podobne do pola kombi. Użytkownik rozwija formantu (domyślnie), jest wyświetlany formant kalendarza miesięcznego zezwolenie użytkownikowi określenie określonej daty. Po wybraniu typu date, formant kalendarza miesięcznego automatycznie zniknie.  
@@ -29,18 +30,18 @@ Formant selektora daty i godziny ([CDateTimeCtrl](../mfc/reference/cdatetimectrl
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   
--   [Tworzenie formantu selektora czasu i daty](../mfc/creating-the-date-and-time-picker-control.md)  
+-   [Tworzenie kontrolki selektora dat i godzin](../mfc/creating-the-date-and-time-picker-control.md)  
   
--   [Przykłady formantu selektora czasu i daty](../mfc/date-and-time-picker-control-examples.md)  
+-   [Przykłady kontrolki selektora dat i godzin](../mfc/date-and-time-picker-control-examples.md)  
   
--   [Uzyskiwanie dostępu do osadzonych miesiąca w formancie kalendarza](../mfc/accessing-the-embedded-month-calendar-control.md)  
+-   [Uzyskiwanie dostępu do osadzonej kontrolki kalendarza miesięcznego](../mfc/accessing-the-embedded-month-calendar-control.md)  
   
--   [Używanie niestandardowych ciągów formatu w selektora dat i godzin formantu](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)  
+-   [Używanie niestandardowych ciągów formatu w kontrolce selektora dat i godzin](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)  
   
--   [Używanie pól wywołania zwrotnego w selektora dat i godzin formantu](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)  
+-   [Używanie pól wywołania zwrotnego w kontrolce selektora dat i godzin](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)  
   
--   [Przetwarzanie komunikatów powiadomień w selektora dat i godzin formantów](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)  
+-   [Przetwarzanie komunikatów powiadomień w kontrolkach selektora dat i godzin](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

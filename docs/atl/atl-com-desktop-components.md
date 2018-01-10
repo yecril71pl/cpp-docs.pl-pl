@@ -16,17 +16,18 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d27371a994f13ebe8c91452d44645c5d3f5eac29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffabd4c9ebb3f439fa1e1e70b06def3506b1227d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-desktop-components"></a>Składniki COM pulpitu ATL
 Odwołanie do biblioteki ATL dokumentów aktywnych szablonu Library (ATL), zestaw na podstawie szablonu klasy C++, które upraszczają programowanie obiektów składnika modelu COM (Object). Aby w pełni korzystać z ATL, zaleca się pracy znajomość COM.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd klasy ATL](../atl/atl-class-overview.md)  
+ [Przegląd klas ATL](../atl/atl-class-overview.md)  
  Zawiera linki do i krótkie opisy klasy ATL według kategorii.  
   
  [ATL — klasy](../atl/reference/atl-classes.md)  

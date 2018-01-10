@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b62c3a7423cb9e9f273dca3079b80571a71d60f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7864b6367d716ff7504982c4a8cbbed55f7784c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container — Klasa
 W tym artykule opisano [filtr synchronizacji](../standard-library/allocators-header.md) zapewnia obiektu osobne dla każdego obiektu przydzielania.  
@@ -44,7 +45,7 @@ class sync_per_container
   
 |||  
 |-|-|  
-|[równa się](#equals)|Porównuje dwa pamięci podręcznych pod kątem równości.|  
+|[equals](#equals)|Porównuje dwa pamięci podręcznych pod kątem równości.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<allocators — >  

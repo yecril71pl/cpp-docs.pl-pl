@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d6ee10aaf2486788ba468235b48597652c531c63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea2b7e10641a8215dfb3338092d967d188f1011d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>Kojarzenie klawisza skrótu z elementem menu
 Wiele razy ma element menu i kombinację klawiszy wydania tego samego polecenia programu. Można to zrobić, przypisując ten sam identyfikator zasobów (ID) element menu i wpis w tabeli akceleratora aplikacji. Następnie Edytuj podpis elementu menu, aby wyświetlić nazwę akceleratora. Aby uzyskać więcej informacji na elementów menu oraz klawisze skrótów, zobacz [Kojarzenie elementów Menu z klawiszem skrótu](../windows/associating-a-menu-command-with-an-accelerator-key.md).  

@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc7ac9a55818022a4238565ed4309fe96f7ec058
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c1a104ffc30a7463d640f63d26f7a80faad333b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-in-mfc"></a>Format Unicode w MFC
 MFC obsługuje Unicode standard dla kodowania znaki dwubajtowe na platformach Windows NT, Windows 2000 i Windows XP. Unicode nie mogą być uruchomione na platformach Windows 98.  

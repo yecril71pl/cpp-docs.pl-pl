@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 498f4404f0b3f6b291eca0e78315d2a010cbf846
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03797d266dc0f3104d6153b9d946d06ac963fafc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-and-solution-files"></a>Pliki projektu i rozwiązania
 Następujące pliki są tworzone podczas tworzenia projektu w programie Visual Studio. Są one używane do zarządzania plików projektów w rozwiązaniu.  
@@ -40,7 +41,7 @@ Następujące pliki są tworzone podczas tworzenia projektu w programie Visual S
 |*Nazwa_projektu.nazwa_modułu.nazwa_procedury.* vcxproj.filters|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*|Nie są wyświetlane w Eksploratorze rozwiązań|*Filtry* pliku. Określa gdzie umieścić plik, który zostanie dodany do rozwiązania. Na przykład plik .h jest umieszczany **pliki nagłówkowe** węzła.|  
 |*Nazwa_projektu.nazwa_modułu.nazwa_procedury.* vcxproj.user|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*|Nie są wyświetlane w Eksploratorze rozwiązań|*Użytkownika migracji* pliku. Po przeprowadzeniu migracji z programu Visual Studio 2008 projektu, ten plik zawiera informacje, które zostało skonwertowane z dowolnego pliku .vsprops —.|  
 |*Nazwa_projektu.nazwa_modułu.nazwa_procedury*.idl|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*|Źródło|(Specyficzne dla projektu) Zawiera kod źródłowy języka opisu interfejsu (IDL) dla biblioteki typu formantu. Ten plik jest używany przez Visual C++ można wygenerować biblioteki typów. Biblioteka wygenerowanego uwidacznia interfejs formantu dla innych klientów automatyzacji. Aby uzyskać więcej informacji, zobacz [plik definicji interfejsu (IDL)](http://msdn.microsoft.com/library/windows/desktop/aa378712) w zestawie Windows SDK.|  
-|Readme.txt|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*|Project|*Readme* pliku. Wygenerowane przez Kreatora aplikacji, a opisuje pliki w projekcie.|  
+|Readme.txt|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*|Projekt|*Readme* pliku. Wygenerowane przez Kreatora aplikacji, a opisuje pliki w projekcie.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cf2dcd59800617639f986a8bb33d962d7819cdfe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a9a37c640f0262e24a66e6880d469331826d559
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Podręczniki programowania od producenta procesora
 Ten artykuł zawiera łącza do witryn sieci Web, która może zawierać programowania informacji na temat procesorów, które nie są produkowane, sprzedaży lub obsługiwane przez firmę Microsoft. Microsoft nie posiadanych lub kontrolowanych witryn sieci Web lub zawartości na nich.  
@@ -34,4 +35,4 @@ Ten artykuł zawiera łącza do witryn sieci Web, która może zawierać program
  Ani [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] ani Microsoft Macro Assembler obsługują wszystkie procesory.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft Macro Assembler — odwołanie](../../assembler/masm/microsoft-macro-assembler-reference.md)
+ [Microsoft Macro Assembler — dokumentacja](../../assembler/masm/microsoft-macro-assembler-reference.md)

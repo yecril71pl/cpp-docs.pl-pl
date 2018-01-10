@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3bc7646dab51b9a1fdd73b23d1f58c7b474c363e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Porady: osadzanie manifestu w aplikacji C/C++
 Jest zalecane aplikacji C/C++ (lub biblioteka) swoim manifeście osadzony w ostatnim pliku binarnego, ponieważ gwarantuje to poprawne zachowanie w większości przypadków. Domyślnie [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] próbuje osadzania manifestu podczas tworzenia projektu przy użyciu plików źródłowych; zobacz [Generowanie manifestu w Visual Studio](../build/manifest-generation-in-visual-studio.md) Aby uzyskać więcej informacji. Jednak jeśli aplikacja jest zbudowany przy użyciu nmake, konieczne są pewne zmiany do istniejącego pliku reguł programu make. W tej sekcji przedstawiono, jak zmienić istniejące pliki reguł programu make automatycznie osadzanie manifestu w ostatnim pliku binarnego.  
@@ -260,4 +261,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opis Generowanie manifestu dla programów C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+ [Ogólne informacje o tworzeniu manifestu dla programów C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 76eee66ff45d30f78675036f11dce9b40953badb
-ms.sourcegitcommit: fb540c28941b4c501c35675b559adbaf7048ca6e
+ms.workload: cplusplus
+ms.openlocfilehash: 67b36afce92140c4f205f8e5a4a46dfc7ac2d300
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="link-environment-variables"></a>Zmienne środowiskowe LINK
 
@@ -41,5 +42,5 @@ LINK-narzędzie używa następujących zmiennych środowiskowych:
 
 [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
 [Opcje konsolidatora](../../build/reference/linker-options.md)   
-[Kompilowania kodu C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md)  
+[Kompilowanie kodu C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md)  
 [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji z wiersza polecenia](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)

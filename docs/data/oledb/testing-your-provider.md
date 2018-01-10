@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1c97db59b88672f390fc88b78f8d5f843ca7099
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 551ccfdf236eb5828b1d41ae8867acdb259b1d4f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="testing-your-provider"></a>Testowanie dostawcy
 Przed udostępnieniem dostawcę, należy wykonać następujące testy w kolejności wskazanej. Te testy upewnij się, że funkcje dostawcy prawidłowo dla większości użytkowników potencjalnych.  
@@ -30,7 +33,7 @@ Przed udostępnieniem dostawcę, należy wykonać następujące testy w kolejno�
   
 2.  Testowanie dostawcy przy użyciu aplikacji konsumenta napisany za pomocą ADO. Większość deweloperów (szczególnie deweloperów języka Visual Basic i Microsoft C#) Użyj ADO lub ADO.NET dla aplikacji klienta. Konsument testu powinno obejmować wszystkich obszarów funkcjonalnych dostawcy. Na przykład aplikacja konsumenta ADO zobacz [ADO przykłady kodu w języku Microsoft Visual Basic](https://msdn.microsoft.com/en-us/library/ms807514.aspx).  
   
-3.  Uruchom testy zgodności OLE DB (w tym testy zgodności ADO), aby upewnić się, że Twój dostawca spełnia poziom 0 standardowe dla dostawcy OLE DB. (Aby uzyskać informacje o poziomie 0, wyszukaj "OLE DB poziom 0 testów zgodności" w [OLE DB przewodnik](http://go.microsoft.com/fwlink/?linkid=121548). Te testy i skojarzone dokumentacji są dołączone do programu Visual C++ w zestawie SDK dostępu do danych. Te testy również ułatwić zapewnienie, że dostawcy działa również w przypadku, gdy agregowana przez inne [dostawców usług](../../data/oledb/ole-db-resource-pooling-and-services.md) i są szczególnie przydatne w przypadku modyfikowanie lub dodawanie właściwości. Aby uzyskać więcej informacji dotyczących testów zgodności zobacz plik Readme dla zestawu SDK dostępu do danych, który znajduje się na jednym z dysków CD programu Visual Studio.  
+3.  Uruchom testy zgodności OLE DB (w tym testy zgodności ADO), aby upewnić się, że Twój dostawca spełnia poziom 0 standardowe dla dostawcy OLE DB. (Aby uzyskać informacje o poziomie 0, wyszukaj "OLE DB poziom 0 testów zgodności" w [OLE DB przewodnik](http://go.microsoft.com/fwlink/p/?linkid=121548). Te testy i skojarzone dokumentacji są dołączone do programu Visual C++ w zestawie SDK dostępu do danych. Te testy również ułatwić zapewnienie, że dostawcy działa również w przypadku, gdy agregowana przez inne [dostawców usług](../../data/oledb/ole-db-resource-pooling-and-services.md) i są szczególnie przydatne w przypadku modyfikowanie lub dodawanie właściwości. Aby uzyskać więcej informacji dotyczących testów zgodności zobacz plik Readme dla zestawu SDK dostępu do danych, który znajduje się na jednym z dysków CD programu Visual Studio.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

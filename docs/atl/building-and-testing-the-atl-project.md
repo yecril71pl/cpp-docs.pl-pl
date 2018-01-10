@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2bb3fc7d9d1e47546e4475057a11dcf560a84c1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a3dbd570a16228c02215560e8133a77b98a2489
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-and-testing-the-atl-project"></a>Tworzenie i testowanie Projekt ATL
 Jak wspomniano w [Wstawianie formantu złożonego](../atl/inserting-a-composite-control.md), jeden ze składników początkowej projektu jest domyślną stronę HTML, która obsługuje nowego formantu złożonego. Po zakończeniu modyfikacji złożonego formantu, kliknij przycisk **Kompiluj rozwiązanie** lub **Kompiluj ponownie rozwiązanie** z **kompilacji** menu. Po pomyślnie utworzy projekt, ładowanie strony HTML, znajduje się w katalogu głównym projektu formantu złożonego, do programu Internet Explorer lub innej przeglądarki i przetestować funkcje formantu.  

@@ -49,11 +49,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b128257c06c2d2a0c1e19b67aa33217138d88c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1127a6ec3e921e19c9626cc51197eb2a87d6ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatorbase-class"></a>allocator_base — Klasa
 Definiuje klasę podstawową i typowe funkcje niezbędne do utworzenia programu przydzielania zdefiniowane przez użytkownika z filtru synchronizacji.  
@@ -97,7 +98,7 @@ class allocator_base
 |[_Charalloc](#charalloc)|Przydziela magazynu dla tablicy typu `char`.|  
 |[_Chardealloc](#chardealloc)|Zwalnia magazynu dla macierzy zawierających elementy typu `char`.|  
 |[adres](#address)|Umożliwia znalezienie adresu obiektu, którego wartość jest określona.|  
-|[Przydziel](#allocate)|Przydziela bloku pamięci wystarczająco duże, aby przechowywać przynajmniej określoną liczbę elementów.|  
+|[allocate](#allocate)|Przydziela bloku pamięci wystarczająco duże, aby przechowywać przynajmniej określoną liczbę elementów.|  
 |[konstrukcja](#construct)|Tworzy określonego typu obiektu na określony adres, który został zainicjowany z określoną wartością.|  
 |[cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|  
 |[Destroy](#destroy)|Wywołanie destruktora obiektów bez cofanie przydziału pamięci przechowywania obiektu.|  

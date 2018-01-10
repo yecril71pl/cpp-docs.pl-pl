@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 839a597624c0f1a00ab983ecd5f2f31aeefbd953
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7b9c76ffd4366522dce366a165698bd3a26173
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego kontrolki ActiveX
 Formanty ActiveX istniejących (dawniej formanty OLE) można używać w Internecie bez żadnych modyfikacji. Można zmodyfikować formantów, aby zwiększyć ich wydajność. Korzystając z formantu na stronie sieci Web, istnieją dodatkowe zagadnienia. Plik ocx i wszystkie pliki pomocnicze musi znajdować się na komputerze docelowym lub można pobrać przez Internet. Dzięki temu rozmiar kodu i pobierania czasu ważną kwestią. W pliku cab podpisem można spakować pliki do pobrania. Można oznaczyć jako bezpieczne do wykonywania skryptów i jako bezpieczne inicjowanie formantu.  
@@ -85,7 +86,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
  Pliki cab są zalecanym sposobem formantów ActiveX pakietu, które używają MFC. Kontrolki MFC ActiveX w pliku cabinet pakowania umożliwia pliku .inf do uwzględnienia kontroli Instalacja formantu ActiveX i wszelkich zależnych bibliotek DLL (takich jak biblioteki DLL MFC). Przy użyciu pliku CAB automatycznie kompresuje kod szybsze pobieranie. Korzystania z pliku cab do pobrania składnika jest szybsze do podpisywania pliku cab całego niż poszczególnych składników.  
   
 ### <a name="creating-cab-files"></a>Tworzenie plików CAB  
- Plik Cabinet Development Kit można pobrać z artykułu bazy wiedzy [310618: Microsoft Cabinet Software Development Kit](http://go.microsoft.com/fwlink/linkid=148204). Ten zestaw zawiera narzędzia niezbędne do utworzenia plików cabinet.  
+ Plik Cabinet Development Kit można pobrać z artykułu bazy wiedzy [310618: Microsoft Cabinet Software Development Kit](http://go.microsoft.com/fwlink/p/?linkid=148204). Ten zestaw zawiera narzędzia niezbędne do utworzenia plików cabinet.  
   
  Plik cabinet wskazywana przez `CODEBASE` powinien zawierać plik ocx dla formantu ActiveX i pliku .inf, aby kontrolować jego instalacji. Tworzy plik cab, określając nazwę pliku kontroli i plik inf. Nie dołączaj zależnych bibliotek DLL, które może już istnieć w systemie, w tym pliku cabinet. Na przykład biblioteki DLL MFC są umieszczone w osobnym pliku cabinet i odwołuje się plik .inf kontrolowanie.  
   
@@ -266,5 +267,5 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ## <a name="see-also"></a>Zobacz też  
  [Zadania związane z programowaniem Internetu MFC](../mfc/mfc-internet-programming-tasks.md)   
  [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)   
- [Formanty MFC ActiveX: Licencjonowanie formantu ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
+ [Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
 

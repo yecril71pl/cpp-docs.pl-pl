@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46aaf6677a779ada2457814aecba5c84a59e1f1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1eef6199f67702aeb3d3a886c52e910302a7dcad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-local-storage"></a>Lokalny magazyn wątków
 **Dotyczące firmy Microsoft**  
@@ -38,7 +39,7 @@ __declspec( thread ) int tls_i = 1;
   
  Kiedy są deklarowanie statycznie powiązanej wątku ich w zmiennych lokalnych należy przestrzegać poniższych wskazówek:  
   
--   Korzystanie z **__declspec(thread)** może zakłócać [opóźnienia ładowania](../build/reference/linker-support-for-delay-loaded-dlls.md) biblioteki DLL importuje**.**  
+-   Zmienne lokalne wątków, które mają dynamiczna Inicjalizacja są inicjowane tylko w wątku, który powoduje, że można załadować biblioteki DLL i wątków, które są już uruchomione w procesie. Aby uzyskać więcej informacji, zobacz [wątku](../cpp/thread.md).  
   
 -   Atrybut wątku można stosować tylko do danych deklaracje i definicje. Nie można użyć w deklaracji lub definicji funkcji. Na przykład następujący kod generowany jest błąd kompilatora:  
   
@@ -102,4 +103,4 @@ __declspec( thread ) int tls_i = 1;
  **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [C rozszerzone atrybuty klasy magazynu](../c-language/c-extended-storage-class-attributes.md)
+ [Rozszerzone atrybuty klasy magazynu języka C](../c-language/c-extended-storage-class-attributes.md)

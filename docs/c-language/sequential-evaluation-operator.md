@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df14f32b8b51d8b74b56a697f3928ff8da485a5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6dee769d0a5bc2d0992dfb51de240bdd5e3d62d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sequential-evaluation-operator"></a>Operator obliczania sekwencyjnego
 Operator obliczania sekwencyjnego, nazywane również "operatora przecinka" oblicza dwóch argumentów sekwencyjnie od lewej do prawej.  
@@ -55,4 +56,4 @@ func_two( (x--, y + 2), z );
  W funkcji wywołanie `func_one`, trzech argumentów rozdzielonych przecinkami, są przekazywane: `x`, `y + 2`, i `z`. W funkcji wywołanie `func_two`, kompilator, aby zinterpretować przecinkiem jako operator obliczania sekwencyjnego wymusić nawiasów. Wywołanie tej funkcji przekazuje dwa argumenty do `func_two`. Pierwszy argument jest wynik operacji obliczania sekwencyjnego `(x--, y + 2)`, która zawiera wartości i typ wyrażenia `y + 2`; drugi argument jest `z`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Operator przecinkowy:,](../cpp/comma-operator.md)
+ [Operator przecinkowy: ,](../cpp/comma-operator.md)

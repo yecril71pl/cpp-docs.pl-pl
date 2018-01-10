@@ -14,11 +14,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec8e77d1074b3dbd10d68f205af656d7f33aa334
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5abaa00030b301607c19def42920cb01eb72600a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator= Operator
 Przenosi bieżący obiekt HString wartość innego obiektu HString.  
@@ -42,4 +45,4 @@ HString& operator=(HString&& other) throw()
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Hstring — klasa](../windows/hstring-class.md)
+ [HString, klasa](../windows/hstring-class.md)

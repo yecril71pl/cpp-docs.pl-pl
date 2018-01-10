@@ -14,17 +14,18 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1781d5c5bba0d818111673594a5526354a490bd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec7d357d53cb93ad5ba81c02fc3ccf1931cdd1cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-debug-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Określ ustawienia konfiguracji debugowania, Kreator Utwórz nowy projekt z istniejących plików z kodem
 Ta strona kreatora Utwórz nowy projekt z istniejących plików kodu do określania ustawień projektu konfiguracji debugowania.  
   
 ## <a name="task-list"></a>Lista zadań  
- [Porady: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+ [Instrukcje: tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>Lista elementów UI  
  **Wiersz polecenia kompilacji**  
@@ -55,4 +56,4 @@ Ta strona kreatora Utwórz nowy projekt z istniejących plików kodu do określa
  Określa zestawów platformy .NET do przetworzenia podczas tworzenia nowego projektu. Aby uzyskać więcej informacji, zobacz [/FU (nazwij wymuszone #using)](../build/reference/fu-name-forced-hash-using-file.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Określ ustawienia projektu, Utwórz nowy projekt z istniejących Kreatora plików kodu](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)
+ [Określanie ustawień projektu, Kreator Utwórz nowy projekt z istniejących plików z kodem](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)

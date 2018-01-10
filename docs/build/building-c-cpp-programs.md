@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 54c6b947dd82cec01ec1bfa831fd266238b48a0d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc4b8c70c7be83e108104cf91d4629072a9324f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-cc-programs"></a>Kompilowanie programów C/C++
 
@@ -34,27 +35,27 @@ Można tworzyć projektów Visual C++ w programie Visual Studio lub w wierszu po
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
-[Kompilowanie projektów C++ w programie Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)  
+[Kompilowanie projektów C++ w Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)  
 W tym artykule omówiono sposób używania środowiska IDE programu Visual Studio, aby skompilować projekt C/C++.  
   
-[Kompilowania kodu C/C++ w wierszu polecenia](../build/building-on-the-command-line.md)  
+[Kompilowanie kodu C/C++ w wierszu polecenia](../build/building-on-the-command-line.md)  
 W tym artykule omówiono sposób używania kompilatora wiersza polecenia języka C/C++ i kompilacji narzędzia, które są uwzględniane w programie Visual Studio.  
   
-[Tworzenie C/C++ izolowane Side-by-side zestawów ani aplikacji](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
+[Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
 W tym artykule opisano model wdrożenia dla aplikacji Windows Desktop w pomysł izolowanych aplikacji i zestawy side-by-side.  
   
-[Odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md)  
+[Dokumentacja kompilacji w języku C/C++](../build/reference/c-cpp-building-reference.md)  
 Zawiera łącza do artykułów odwołanie o programie kompilacji w C++ kompilatorze i konsolidatorze i opcje różnych narzędzi kompilacji.  
   
-[Visual C++ for x64 64-bitowy, konfigurowanie obiektów docelowych](../build/configuring-programs-for-64-bit-visual-cpp.md)  
+[Konfigurowanie Visual C++ dla wersji 64-bitowych, platformy docelowe x64](../build/configuring-programs-for-64-bit-visual-cpp.md)  
 Opisuje do skonfigurowania programu Visual Studio i wiersza polecenia służące do 64-bitowego zestawu narzędzi oraz pod kątem architektur 64-bitowych i omówiono typowe problemy przy migracji, gdy kod zostanie przeniesiony do architektury 64-bitowych.  
   
-[Konfigurowanie programu Visual C++ dla procesorów ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)  
+[Konfigurowanie Visual C++ dla procesorów ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)  
 W tym artykule opisano konwencje używane przez procesory ARM i omówiono typowe problemy przy migracji, gdy kod zostanie przeniesiony do architektury ARM.  
   
-[Konfigurowanie programów dla systemu Windows XP](../build/configuring-programs-for-windows-xp.md)  
+[Konfigurowanie programów pod kątem systemu Windows XP](../build/configuring-programs-for-windows-xp.md)  
 Opisuje sposób ustawiania zestaw narzędzi platformy docelowej rozwoju systemu Windows XP.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kompilowanie i tworzenia](/visualstudio/ide/compiling-and-building-in-visual-studio)  
+ [Kompilowanie i tworzenie](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  Opisuje system kompilacji programu Visual Studio i narzędzi.

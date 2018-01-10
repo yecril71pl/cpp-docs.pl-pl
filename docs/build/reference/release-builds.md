@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b6ba275b3a287130df111ba89ec2f4dd91170d17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12e81b26cd83214a5d62a42689bfc3a866ef1c10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="release-builds"></a>Kompilacje wydania
 Kompilacji wydania używa optymalizacji. Podczas optymalizacji umożliwia tworzenie kompilacji wydania, kompilator nie przyniesie symboliczna informacja o debugowaniu. Brak symboliczne informacje debugowania, a także fakt nie wygenerować kodu dla śledzenia i ASSERT wywołuje oznacza, że rozmiar pliku wykonywalnego, zostanie zmniejszona i w związku z tym będzie można szybciej.  
@@ -44,4 +45,4 @@ Kompilacji wydania używa optymalizacji. Podczas optymalizacji umożliwia tworze
   
 ## <a name="see-also"></a>Zobacz też  
  [Kompilowanie projektów C++ w programie Visual Studio](../../ide/building-cpp-projects-in-visual-studio.md)   
- [Odwołanie kompilacji C/C++](../../build/reference/c-cpp-building-reference.md)
+ [Dokumentacja kompilacji w języku C/C++](../../build/reference/c-cpp-building-reference.md)

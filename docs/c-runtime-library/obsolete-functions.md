@@ -38,11 +38,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a8811703234f2c4e23dab6ad2b99b1aae316c04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 195dc17d41c2c089600958976d37dd59f2d60232
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="obsolete-functions"></a>Przestarzałe funkcje
 Niektóre funkcje są przestarzałe i mieć nowszą odpowiedniki. Firma Microsoft zaleca się, że możesz zmienić zaktualizowanych wersji. Inne przestarzałe funkcje zostały usunięte z CRT. W tym temacie wymieniono funkcje przestarzałe jako przestarzałe i funkcje usunięte w przypadku konkretnej wersji programu Visual Studio.  
@@ -65,18 +66,18 @@ Niektóre funkcje są przestarzałe i mieć nowszą odpowiedniki. Firma Microsof
   
 |Funkcja przestarzała|Alternatywne|  
 |-----------------------|-----------------|  
-|[_cgets —, _cgetws —](../c-runtime-library/cgets-cgetws.md)|[_cgets_s —, _cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md)|  
-|[pobiera _getws —](../c-runtime-library/gets-getws.md)|[gets_s —, _getws_s —](../c-runtime-library/reference/gets-s-getws-s.md)|  
-|[_get_output_format —](../c-runtime-library/get-output-format.md)|Brak|  
-|[_heapadd —](../c-runtime-library/heapadd.md)|Brak|  
-|[_heapset —](../c-runtime-library/heapset.md)|Brak|  
-|[INP, inpw —](../c-runtime-library/inp-inpw.md)|Brak|  
-|[_inp —, _inpw —, _inpd —](../c-runtime-library/inp-inpw-inpd.md)|Brak|  
-|[Dz, outpw —](../c-runtime-library/outp-outpw.md)|Brak|  
-|[_outp —, _outpw —, _outpd —](../c-runtime-library/outp-outpw-outpd.md)|Brak|  
-|[_set_output_format —](../c-runtime-library/set-output-format.md)|Brak|  
+|[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|  
+|[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|  
+|[_get_output_format](../c-runtime-library/get-output-format.md)|Brak|  
+|[_heapadd](../c-runtime-library/heapadd.md)|Brak|  
+|[_heapset](../c-runtime-library/heapset.md)|Brak|  
+|[inp, inpw](../c-runtime-library/inp-inpw.md)|Brak|  
+|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Brak|  
+|[outp, outpw](../c-runtime-library/outp-outpw.md)|Brak|  
+|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Brak|  
+|[_set_output_format](../c-runtime-library/set-output-format.md)|Brak|  
   
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Usunięte z CRT we wcześniejszych wersjach programu Visual Studio  
- [_Lock](../c-runtime-library/lock.md)  
+ [_lock](../c-runtime-library/lock.md)  
   
- [_Unlock](../c-runtime-library/unlock.md)
+ [_unlock](../c-runtime-library/unlock.md)

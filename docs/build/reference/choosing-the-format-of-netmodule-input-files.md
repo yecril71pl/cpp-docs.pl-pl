@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0be66a528585bd86c4dbc39c17917229c3353bd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a46c2fa9ce553948c03cd2ab6ad20001d0021bed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Wybieranie formatu plików wejściowych .netmodule
 Plik .obj MSIL (skompilowane z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)) może również służyć jako plik modułu .netmodule.  pliki .obj zawierają metadanych i symboli natywnych.  modułów .netmodule zawierają tylko metadane.  
@@ -46,4 +47,4 @@ Plik .obj MSIL (skompilowane z [/CLR](../../build/reference/clr-common-language-
 -   Jeśli moduły będą służyć do tworzenia zarządzanej biblioteki i co najmniej jeden modułów dane wejściowe konsolidatora zostaną zwrócone z tylko/CLR, użyj pliki obj jako dane wejściowe modułu konsolidator i generowanie dll (assembly).  Jeśli chcesz udostępnić typy zarządzane z biblioteki i czy ma aplikacjom korzystać z natywnych typów w bibliotece C++, biblioteki będzie zawierał pliki .obj dla modułów składowych bibliotek (również można wysłać pliki .h dla każdego modułu Dlatego może być przywoływany z #include z kodu źródłowego).  
   
 ## <a name="see-also"></a>Zobacz też  
- [modułu .netmodule pliki jako dane wejściowe konsolidatora](../../build/reference/netmodule-files-as-linker-input.md)
+ [Pliki .netmodule — wejście konsolidatora](../../build/reference/netmodule-files-as-linker-input.md)

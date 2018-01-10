@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec77e462b357708153f26b5289f35c2ee7b7a104
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 Mnoży dwie wartości ze sobą, dodaje trzecia wartość, a następnie zaokrągla wyniku bez utraty żadnych precyzji z powodu pośredniczące zaokrąglania.  
@@ -129,4 +130,4 @@ long double fmal(
 ## <a name="see-also"></a>Zobacz też  
  [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [pozostałe remainderf —, remainderl](../../c-runtime-library/reference/remainder-remainderf-remainderl.md)   
- [remquo —, remquof —, remquol —](../../c-runtime-library/reference/remquo-remquof-remquol.md)
+ [remquo, remquof, remquol](../../c-runtime-library/reference/remquo-remquof-remquol.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a9ab87cc24a106e70e9662f58e7c7266dd39d8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed85e0f1e1ce94401c505281c0e693a4904f92d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Porady: modyfikowanie platformy docelowej i zestawu narzędzi platformy
 Możesz zmienić ustawienia projektu Visual C++ pod kątem różnych wersji programu .NET Framework i używać innej platformie procesami. Domyślnie system projektu używa wersji programu .NET Framework i wersję zestawu narzędzi odnoszą się do wersji programu Visual Studio, która służy do tworzenia projektu. Zestaw narzędzi platformy docelowej można zmienić, modyfikując właściwości projektu. Element docelowy Framework można zmienić, modyfikując plik projektu (.vcxproj). Nie masz Obsługa oddzielny kod podstawowy dla każdego obiektu docelowego kompilacji.  
@@ -32,7 +33,7 @@ Możesz zmienić ustawienia projektu Visual C++ pod kątem różnych wersji prog
 > [!NOTE]
 >  Aby zmienić zestaw narzędzi platformy docelowej, musi mieć odpowiednie wersje programu Visual Studio lub zestawu SDK platformy Windows, które zostały zainstalowane. Na przykład, aby Docelowa platforma Itanium z **Windows7.1SDK** zestaw narzędzi platformy, musi mieć [Microsoft Windows SDK dla systemu Windows 7 i .NET Framework 4 z dodatkiem SP1](http://www.microsoft.com/download/details.aspx?id=8279) zainstalowany; można jednak użyć inny zgodnej wersji programu Visual Studio do pracy programowania, pod warunkiem, że docelowa poprawne Framework w wersji i zestawu narzędzi platformy.  
   
- Platforma docelowa dalsze można rozszerzyć przez utworzenie zestawu narzędzi platformy niestandardowej. Aby uzyskać więcej informacji, zobacz [C++ natywnego Wielowersyjności](http://go.microsoft.com/fwlink/?LinkId=196619) na blogu Visual C++.  
+ Platforma docelowa dalsze można rozszerzyć przez utworzenie zestawu narzędzi platformy niestandardowej. Aby uzyskać więcej informacji, zobacz [C++ natywnego Wielowersyjności](http://go.microsoft.com/fwlink/p/?linkid=196619) na blogu Visual C++.  
   
 ### <a name="to-change-the-target-framework"></a>Aby zmienić docelowy Framework  
   

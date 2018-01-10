@@ -23,11 +23,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3389a92be2dcb1a183cfbc297e45fb8360a9288d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 47bd233e384bbe21775d02b35cb878bf6bc402b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="guide-settings-dialog-box"></a>Okno dialogowe Ustawienia prowadnic
 ## <a name="layout-guides"></a>Prowadnic  
@@ -41,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
  Po włączeniu dodaje linijki do narzędzia układu; przewodniki można umieścić w linijki. Przewodniki domyślne są marginesy, które mogą być przenoszone przez przeciągnięcie. Kliknij linijki umieścić przewodnik. Formanty "snap", do przewodniki po przeniesieniu formantów za pośrednictwem lub obok nich. Formanty również przenieść z przewodnikiem po podłączeniu do niego. Gdy formant jest dołączony do przewodnika po każdej stronie, a przewodnik jest przenoszony, zmieniony rozmiar formantu.  
   
- **Siatki**  
+ **Siatka**  
   
  Tworzy siatki układu. Nowe formanty automatycznie są wyrównane do siatki.  
   
@@ -56,12 +59,12 @@ ms.lasthandoff: 10/24/2017
   
  Ustawia wysokość siatki układu w Dlu. DLU pionowe jest średnią wysokość okna dialogowego czcionki pole podzielić przez 8.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](https://msdn.microsoft.com/library/f45fce5x.aspx) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](https://msdn.microsoft.com/library/xbx3z216.aspx). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Modyfikowanie siatki układu](../windows/modifying-the-layout-grid.md)   
- [Stany Edytor okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)
+ [Stany dla Edytora okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)
 

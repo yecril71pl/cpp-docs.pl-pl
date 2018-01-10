@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: adff972c3e2f343c45accc8ff79230e7156ffd44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1efc61e097d7e1136fdb7b6ef740dc00342077e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Dodawanie klasy MFC z biblioteki typów
 Ten kreator umożliwia tworzenie klasy MFC z interfejsu w bibliotece typów dostępne. Można dodać klasy MFC do [aplikacji MFC](../../mfc/reference/creating-an-mfc-application.md), [biblioteki MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md), lub [kontrolki MFC ActiveX](../../mfc/reference/creating-an-mfc-activex-control.md).  
@@ -45,5 +46,5 @@ Ten kreator umożliwia tworzenie klasy MFC z interfejsu w bibliotece typów dost
   
 ## <a name="see-also"></a>Zobacz też  
  [Klienci automatyzacji](../../mfc/automation-clients.md)   
- [Klienci automatyzacji: Korzystanie z bibliotek typów](../../mfc/automation-clients-using-type-libraries.md)
+ [Klienci automatyzacji: korzystanie z bibliotek typów](../../mfc/automation-clients-using-type-libraries.md)
 

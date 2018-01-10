@@ -11,11 +11,12 @@ ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
 dev_langs: C++
 manager: ghogen
-ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0728827cb2cd604ec4e7ff1ef58b68ed8fb64532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Menedżer pakietów C++ dla systemu Windows 
 vcpkg jest wiersza polecenia Menedżera pakietów, które znacząco upraszcza nabycia i Instalacja bibliotek innych firm w systemie Windows. Jeśli projekt korzysta z bibliotek innych firm, firma Microsoft zaleca, użyj vcpkg mają być instalowane. vcpkg obsługuje zarówno open source i zastrzeżonych biblioteki. Wszystkie biblioteki w katalogu publicznego vcpkg zostały przetestowane na zgodność z programu Visual Studio 2015 i Visual Studio 2017 r. Począwszy od 2017 maja w katalogu są ponad 238 bibliotek i społeczności C++ jest dodanie więcej bibliotek w sposób ciągły.
@@ -107,14 +108,16 @@ Wymaganie wszyscy członkowie zespołu, aby pobrać i tworzenie bibliotek może 
 Publiczny katalogu jest zawsze na bieżąco najnowsze wersje bibliotek. Aby określić, które biblioteki lokalnych są nieaktualne, użyj `vcpkg update`. Po zakończeniu aktualizowanie kolekcji portów do najnowszej wersji katalogu publiczne, po prostu wykonania operacji ściągnięcia git względem repozytorium github lub utworzyć nowy klon i zachować stare hasło, jeśli jest nadal wymagana.
 
 ### <a name="contribute-new-libraries"></a>Współtworzenia nowe biblioteki
-Może zawierać żadnych bibliotek żądanych w kolekcji prywatnych portów. Aby zasugerować nową biblioteką dla katalogu publiczne 
-
+Może zawierać żadnych bibliotek żądanych w kolekcji prywatnych portów. Sugerowanie nową biblioteką dla publicznych katalogu, należy otworzyć problemu na [GitHub vcpkg problem strony](https://github.com/Microsoft/vcpkg/issues).
 
 ### <a name="remove-a-library"></a>Usuwanie biblioteki
 Typ `vcpkg remove` Aby usunąć zainstalowane biblioteki. Jeśli inne biblioteki zależą od niej, zostanie wyświetlony monit o ponowne uruchomienie polecenia z `--recurse`, który spowoduje, że wszystkie podrzędne biblioteki do usunięcia.
 
 ### <a name="customize-vcpkg"></a>Dostosowywanie vcpkg
 Można zmodyfikować z klonu vcpkg w żaden sposób, który chcesz. Można tworzyć wiele klony vcpkg i modyfikować portfiles w każdej z nich uzyskać określonych wersji biblioteki lub określić parametry wiersza polecenia. Na przykład w przedsiębiorstwie, jedna grupa deweloperów może działać na oprogramowanie, które ma jeden zestaw zależności, a inna grupa może mieć inny zestaw. Można skonfigurować dwie klonów vcpkg i zmodyfikować każdą z nich pobrać wersje bibliotek i przełączników kompilacji, itd., zgodnie z potrzebami. 
+
+### <a name="uninstall-vcpkg"></a>Odinstaluj vcpkg
+Po prostu Usuń katalog. 
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Hierarchia folderów vcpkg
 Wszystkie dane i vcpkg funkcji są całkowicie niezależne w hierarchii jednego katalogu; jest to "instance". Nie ma żadnych ustawień rejestru lub zmiennych środowiskowych. Może mieć dowolną liczbę wystąpień vcpkg na maszynie i będzie przeszkadzają ze sobą. 

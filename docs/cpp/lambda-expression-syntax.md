@@ -14,11 +14,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89914c902c6519f2bd3b890757f417cfd1d220c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e41be4a1c69f6bf39e4ca0ede5b0afbe3a09f776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda
 W tym artykule przedstawiono składnię i elementy wyrażenia lambda. Aby uzyskać opis wyrażenia lambda, zobacz [wyrażenia Lambda](../cpp/lambda-expressions-in-cpp.md).  

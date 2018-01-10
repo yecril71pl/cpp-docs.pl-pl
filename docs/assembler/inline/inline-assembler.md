@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 22f428a21af037b86e063261003baf9849357c9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bdbfdc47ad0bca868ce7594b84adfa093ef580ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inline-assembler"></a>Asembler wbudowany
 **Dotyczące firmy Microsoft**  
@@ -41,21 +42,21 @@ ms.lasthandoff: 10/24/2017
   
 -   [__asm](../../assembler/inline/asm.md)  
   
--   [Korzystanie z języka asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)  
+-   [Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)  
   
--   [Przy użyciu języka C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)  
+-   [Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)  
   
--   [Przy użyciu rejestrów i zachowanie ich w zestawie wbudowanym](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)  
+-   [Korzystanie z rejestrów i zachowywanie ich w asemblerze wbudowanym](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)  
   
--   [Przeskakiwanie do etykiet w zestawie wbudowanym](../../assembler/inline/jumping-to-labels-in-inline-assembly.md)  
+-   [Przeskakiwanie do etykiet w asemblerze wbudowanym](../../assembler/inline/jumping-to-labels-in-inline-assembly.md)  
   
--   [Wywoływanie funkcji języka C w asemblerze wbudowanym](../../assembler/inline/calling-c-functions-in-inline-assembly.md)  
+-   [Wywoływanie funkcji C w asemblerze wbudowanym](../../assembler/inline/calling-c-functions-in-inline-assembly.md)  
   
 -   [Wywoływanie funkcji C++ w asemblerze wbudowanym](../../assembler/inline/calling-cpp-functions-in-inline-assembly.md)  
   
 -   [Definiowanie bloków __asm jako makr C](../../assembler/inline/defining-asm-blocks-as-c-macros.md)  
   
--   [Optymalizowanie zestawu wbudowanego](../../assembler/inline/optimizing-inline-assembly.md)  
+-   [Optymalizacja wbudowanego asemblera](../../assembler/inline/optimizing-inline-assembly.md)  
   
  **KOŃCOWY określonych firmy Microsoft**  
   

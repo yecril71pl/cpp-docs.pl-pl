@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 26947b0c2c779f65fb01dd78d56ffe19afaf27ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eea42401255f0aa99dd7a42b8e9b69e45dfe7b5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-properties"></a>Kontrolki ActiveX MFC: właściwości
 Kontrolki ActiveX generowane zdarzeń do komunikowania się z jego formantu kontenera. Kontener, w zamian używa metody i właściwości do komunikowania się z formantem. Metody i właściwości są podobne w użycie i cel, odpowiednio do funkcji Członkowskich i zmiennych Członkowskich klasy C++. Właściwości są członkami danych formantu ActiveX, które są widoczne dla żadnych kontenera. Właściwości zapewniają interfejs do aplikacji, które zawierają kontrolki ActiveX, takich jak klienci automatyzacji i kontenery formantów ActiveX.  
@@ -36,13 +37,13 @@ Kontrolki ActiveX generowane zdarzeń do komunikowania się z jego formantu kont
   
  Właściwości formantu ActiveX bardziej szczegółowo omówiono w nim następujące artykuły:  
   
--   [Formanty MFC ActiveX: Dodawanie właściwości standardowych](../mfc/mfc-activex-controls-adding-stock-properties.md)  
+-   [Kontrolki ActiveX MFC: dodawanie właściwości standardowych](../mfc/mfc-activex-controls-adding-stock-properties.md)  
   
--   [Formanty MFC ActiveX: Dodawanie właściwości niestandardowych](../mfc/mfc-activex-controls-adding-custom-properties.md)  
+-   [Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych](../mfc/mfc-activex-controls-adding-custom-properties.md)  
   
--   [Formanty MFC ActiveX: Implementacja właściwości zaawansowanych](../mfc/mfc-activex-controls-advanced-property-implementation.md)  
+-   [Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych](../mfc/mfc-activex-controls-advanced-property-implementation.md)  
   
--   [Formanty MFC ActiveX: Uzyskiwanie dostępu do właściwości otaczających](../mfc/mfc-activex-controls-accessing-ambient-properties.md)  
+-   [Kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otaczających](../mfc/mfc-activex-controls-accessing-ambient-properties.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)

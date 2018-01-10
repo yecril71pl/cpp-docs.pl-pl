@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fcd376a5322c525c59b2423bd59507699f0a7c4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 564ec6bf4fafe2116c41c0f817e2754e1de12abd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interpretation-of-subscript-operator"></a>Interpretacja operatora indeksu dolnego
 Jak innymi operatorami operator indeksu dolnego (**[**) można ponownie zdefiniować przez użytkownika. Domyślnym zachowaniem operatora indeksu dolnego, jeśli nie jest przeciążona, jest łączenie nazwa tablicy i indeks przy użyciu następujących metod:  
@@ -35,7 +36,7 @@ Jak innymi operatorami operator indeksu dolnego (**[**) można ponownie zdefinio
   
  **((**   
  ***Nazwa tablicy* ) + ()**   
- ***Indeks dolny* 1***max*2  *\* max*3*.. opisanej*n)  **+**  *indeks dolny*2  *\* max*3*.. opisanej*n).   . . *+**indeks dolny*n))  
+ ***Indeks dolny* 1***max*2  *\* max*3*.. opisanej*n)  **+**  *indeks dolny*2  *\* max*3*.. opisanej*n). . . *+**indeks dolny*n))  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tablice](../cpp/arrays-cpp.md)

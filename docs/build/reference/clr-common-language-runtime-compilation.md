@@ -24,11 +24,12 @@ caps.latest.revision: "72"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c6882732064b002f0c2d4eef03a0fee2f62287
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a867203585a66bd07eb9f95e289557e82e0553a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)
 Umożliwia aplikacji i składników można używać funkcji z środowisko uruchomieniowe języka wspólnego (CLR).  
@@ -46,7 +47,7 @@ Umożliwia aplikacji i składników można używać funkcji z środowisko urucho
  **/ CLR**  
  Tworzy metadane dla aplikacji. Metadane mogą być używane przez inne aplikacje CLR i pozwala aplikacji używać typów i danych w metadanych innych składników CLR.  
   
- Aby uzyskać więcej informacji, zobacz  
+ Aby uzyskać więcej informacji, zobacz artykuł  
   
  [Mieszane (natywne i zarządzane) zestawy](../../dotnet/mixed-native-and-managed-assemblies.md) i  
   
@@ -75,7 +76,7 @@ Umożliwia aplikacji i składników można używać funkcji z środowisko urucho
  Przed Visual C++ 2005 **/clr:noAssembly** wymagane **/LD**. **/LD** jest teraz niejawnego po określeniu **/clr:noAssembly**.  
   
  **/CLR:initialAppDomain**  
- Włącza [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] aplikację do uruchamiania w wersji 1 środowiska CLR. Jeśli używasz **initialAppDomain**, a następnie może zostać wyświetlony niektóre problemy, które zostały omówione w [USTERKI: AppDomainUnloaded wyjątku, gdy używasz rozszerzenia managed extensions dla składników programu Visual C++](http://go.microsoft.com/fwlink/?LinkID=169465) w programie Microsoft Witryna sieci Web pomocy technicznej.  
+ Włącza [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] aplikację do uruchamiania w wersji 1 środowiska CLR. Jeśli używasz **initialAppDomain**, a następnie może zostać wyświetlony niektóre problemy, które zostały omówione w [USTERKI: AppDomainUnloaded wyjątku, gdy używasz rozszerzenia managed extensions dla składników programu Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) w programie Microsoft Witryna sieci Web pomocy technicznej.  
   
  Aplikacja, która ma być kompilowana przy użyciu **initialAppDomain** nie powinna być używana przez aplikację, która używa platformy ASP.NET, ponieważ nie jest obsługiwany w wersji 1 środowiska CLR.  
   

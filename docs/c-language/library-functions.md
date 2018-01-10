@@ -13,14 +13,15 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9722c37c34201e87a94c995df0b90a49ebba270f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cce35e3c6c2125a42a5da0b79beec8077d0db74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="library-functions"></a>Funkcje bibliotek
--   [NULL — makro](../c-language/null-macro.md)  
+-   [NULL, makro](../c-language/null-macro.md)  
   
 -   [Diagnostyka wydrukowana przez funkcję assert](../c-language/diagnostic-printed-by-the-assert-function.md)  
   
@@ -40,9 +41,9 @@ ms.lasthandoff: 10/24/2017
   
 -   [Puste wiersze](../c-language/blank-lines.md)  
   
--   [Znaki null](../c-language/null-characters.md)  
+-   [Znaki Null](../c-language/null-characters.md)  
   
--   [Położenie pliku w trybie Append](../c-language/file-position-in-append-mode.md)  
+-   [Położenie pliku w trybie append](../c-language/file-position-in-append-mode.md)  
   
 -   [Obcięcie plików tekstowych](../c-language/truncation-of-text-files.md)  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Usuwanie otwartych plików](../c-language/deleting-open-files.md)  
   
--   [Zmiana nazwy z nazwą istnieje](../c-language/renaming-with-a-name-that-exists.md)  
+-   [Zmiana nazwy na nazwę już istniejącą](../c-language/renaming-with-a-name-that-exists.md)  
   
 -   [Odczytywanie wartości wskaźnika](../c-language/reading-pointer-values.md)  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13003d247e1fb90ff078746af0cbbe2d7255ea18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2b5dbd0821516f5de1d05bc2069ee165e762241
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-conventions"></a>Konwencje wywoływania
 Kompilator Visual C/C++ udostępnia kilka różnych konwencji wywoływania funkcji wewnętrznych i zewnętrznych. Opis tych różne podejścia może ułatwić debugowania programu, a następnie połącz kodu za pomocą procedury języka zestawu.  
@@ -31,11 +32,11 @@ Kompilator Visual C/C++ udostępnia kilka różnych konwencji wywoływania funkc
   
 -   [Przekazywanie argumentów i konwencje nazewnictwa](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`i inne)  
   
--   [Przykład wywołania: Prototyp funkcji i wywołanie](../cpp/calling-example-function-prototype-and-call.md)  
+-   [Przykład wywołania: prototyp funkcji i wywołanie](../cpp/calling-example-function-prototype-and-call.md)  
   
 -   [Pisanie kodu niestandardowego kodu prologu/epilogu przy użyciu wywołania funkcji naked](../cpp/naked-function-calls.md)  
   
--   [Koprocesor zmiennoprzecinkowy i Konwencje wywoływania](../cpp/floating-point-coprocessor-and-calling-conventions.md)  
+-   [Koprocesor zmiennoprzecinkowy i konwencje wywoływania](../cpp/floating-point-coprocessor-and-calling-conventions.md)  
   
 -   [Przestarzałe Konwencje wywoływania](../cpp/obsolete-calling-conventions.md)  
   

@@ -17,11 +17,14 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74e46aeae58e95b7d455923f6f082f5e10952826
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ad7961177133e43d3c3b8d66998ec9b0d1b8f150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-resource-files"></a>Praca z plikami zasobów
 > [!WARNING]
@@ -33,13 +36,13 @@ ms.lasthandoff: 10/24/2017
   
  Można dodać nowych zasobów do projektu i modyfikować tych zasobów za pomocą edytora odpowiednich zasobów. Większość kreatorów Visual C++ automatycznie wygeneruje plik .rc dla projektu.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](https://msdn.microsoft.com/library/f45fce5x.aspx) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](https://msdn.microsoft.com/library/xbx3z216.aspx). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Pliki zasobów](../windows/resource-files-visual-studio.md)  
  Opisuje pliki zasobów i sposób ich użycia w aplikacjach pulpitu systemu Windows. Również zawiera łącza do tematów opisujących sposób użycia plików zasobów.  
   
- [Symbole: Identyfikatory zasobów](../windows/symbols-resource-identifiers.md)  
+ [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)  
  Opisuje symbole i zawiera informacje na temat używania **symbole zasobu** okno dialogowe Zarządzanie symbole w projektach.  
   
  [Edytory zasobów](../windows/resource-editors.md)  

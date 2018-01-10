@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 671bc9f6f21871e27cc6edc54f4fc45de4317e10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e3f6d964f4cf4debefa3044a458704554233447
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsort"></a>qsort
 Wykonuje szybkie sortowanie. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [qsort_s —](../../c-runtime-library/reference/qsort-s.md).  
@@ -143,4 +144,4 @@ boy deserves every favor good
 ## <a name="see-also"></a>Zobacz też  
  [Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch —](../../c-runtime-library/reference/bsearch.md)   
- [_lsearch —](../../c-runtime-library/reference/lsearch.md)
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c3a87f1277abb9d5cf3b9d87c6713104ba8e108
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cd8dc389f4a4140b78a78753f7f5a91168bd984
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>Wypełnienie i wyrównanie struktur członkowskich
 **ANSI 3.5.2.1** wypełnienie i wyrównanie członków struktur i czy pole bitowe można wokół granic jednostkę magazynową  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/24/2017
   
  Każdy obiekt danych ma wymaganie wyrównania. Wyrównanie wymagań dla wszystkich danych z wyjątkiem struktur, związków i tablice jest rozmiar obiektu lub bieżący rozmiar pakowania (określony za pomocą obu /Zp lub `pack` pragma, ta wartość jest mniejsza). W przypadku struktur, związków i tablice wymaganie wyrównania jest największego zapotrzebowania wyrównanie jego elementów członkowskich. Każdy obiekt został przydzielony przesunięcia, aby  
   
- *Przesunięcie* `%` *wyrównanie wymaganie* `==` 0    
+ *Przesunięcie* `%` *wyrównanie wymaganie* `==` 0  
   
  Sąsiadujące pola bitowe są pakowane w takie same 1-, 2- lub 4-bajtowe jednostki alokacji, jeśli typy całkowite mają taki sam rozmiar i jeśli następne pole bitowe pasuje do bieżącej jednostki alokacji bez przekraczania granicy nałożonej przez wspólne wymagania wyrównania pól bitowych.  
   

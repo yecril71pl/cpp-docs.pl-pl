@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f956dedb8be270eb9974fa035d38e7fbb6714499
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5fea7a8700eb2f5a5deee7afd05af8b0de0e4e71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lib-input-files"></a>Pliki wyjściowe LIB
 Pliki wejściowe oczekiwany przez LIB zależą od tryb, w którym jest on używany, jak pokazano w poniższej tabeli.  

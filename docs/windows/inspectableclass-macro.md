@@ -14,11 +14,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f9cb2ac0ef10492d226fee9ef40d95c18b4f3ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1ac1f84c76bb61d24ee25e8ca431e13620f6f85a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass — Makro
 Ustawia poziom nazwy i zaufania klasy środowiska wykonawczego.  
@@ -47,4 +50,4 @@ InspectableClass(
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Runtimeclass — klasa](../windows/runtimeclass-class.md)
+ [RuntimeClass, klasa](../windows/runtimeclass-class.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 128b670302683208680fbf1499c26af474c72c3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9dd4873d8f9b3a658996bfd057372e8fb29e3478
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commit-to-disk-constants"></a>Stałe typu commit-to-disk
 **Dotyczące firmy Microsoft**  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
  Zapisuje zawartość niezapisanych określonego bufora na dysku. Ta funkcja commit-to-disk jest wykonywana wyłącznie w jawnego wywołania albo [fflush —](../c-runtime-library/reference/fflush.md) lub [_flushall —](../c-runtime-library/reference/flushall.md) funkcji. Ten tryb jest przydatny podczas pracy z danymi poufnymi. Na przykład, jeśli program kończy się po wywołaniu `fflush` lub `_flushall`, można zapewnić, że osiągnięcie systemu operacyjnego buforów danych. Jednak jeśli plik jest otwarty z **c** opcji danych może nigdy nie była na dysku, jeśli system operacyjny również zakończy się.  
   
  **n**  
- Zapisuje zawartość niezapisanych określonego bufora do buforów systemu operacyjnego. System operacyjny może dane z pamięci podręcznej, a następnie określenie optymalny czas zapisu na dysku. W warunkach wiele to zachowanie sprawia, że program wydajne zachowania. Jednak w przypadku przechowywania danych krytyczne (np. transakcje bank lub informacje o bilecie linii lotniczych) należy rozważyć użycie **c** opcji. **n**  Tryb jest ustawieniem domyślnym.  
+ Zapisuje zawartość niezapisanych określonego bufora do buforów systemu operacyjnego. System operacyjny może dane z pamięci podręcznej, a następnie określenie optymalny czas zapisu na dysku. W warunkach wiele to zachowanie sprawia, że program wydajne zachowania. Jednak w przypadku przechowywania danych krytyczne (np. transakcje bank lub informacje o bilecie linii lotniczych) należy rozważyć użycie **c** opcji.  **n**  Tryb jest ustawieniem domyślnym.  
   
 > [!NOTE]
 >  **c** i  **n**  opcje nie są częścią standardu ANSI `fopen`, ale są rozszerzenia Microsoft i nie powinna być używana których przenośność ANSI jest potrzebne.  

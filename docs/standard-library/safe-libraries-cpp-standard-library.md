@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b8cc4b94534845901a900a8c0ecff1d89c6bb600
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20b68338dd15eaea0d74af9299da5ce8657f65f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safe-libraries-c-standard-library"></a>Bezpieczne biblioteki: Standardowa biblioteka C++
 Wprowadzono kilka ulepszeń bibliotek, które są dostarczane z programem Visual C++, w tym standardowa biblioteka C++, aby były bardziej bezpieczne.  
@@ -46,10 +47,10 @@ Wprowadzono kilka ulepszeń bibliotek, które są dostarczane z programem Visual
   
  [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)  
   
- [Zaznaczone Iteratory](../standard-library/checked-iterators.md)  
+ [Zaznaczone iteratory](../standard-library/checked-iterators.md)  
   
  [Obsługa iteratora debugowania](../standard-library/debug-iterator-support.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd biblioteki C++ Standard](../standard-library/cpp-standard-library-overview.md)
+ [Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)
 

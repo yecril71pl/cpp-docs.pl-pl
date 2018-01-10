@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57ada98b0171711ea93fa8639e7c6c7aa1d7060a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88998f18c750e064ee8eae254ca7ee4487be7176
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
 **Dotyczące firmy Microsoft**  
@@ -127,39 +128,39 @@ _variant_t& operator=(
 ## <a name="remarks"></a>Uwagi  
  Operator przypisuje nową wartość do `_variant_t` obiektu:  
   
--   **Operator = (***varSrc***)** przypisuje istniejące **VARIANT** do `_variant_t` obiektu.      
+-   **Operator = (***varSrc***)** przypisuje istniejące **VARIANT** do `_variant_t` obiektu.  
   
--   **Operator = (***pVarSrc***)** przypisuje istniejące **VARIANT** do `_variant_t` obiektu.      
+-   **Operator = (***pVarSrc***)** przypisuje istniejące **VARIANT** do `_variant_t` obiektu.  
   
--   **Operator = (***var_t_Src***)** przypisuje istniejące `_variant_t` do obiektu `_variant_t` obiektu.      
+-   **Operator = (***var_t_Src***)** przypisuje istniejące `_variant_t` do obiektu `_variant_t` obiektu.  
   
--   **Operator = (***sSrc***)** przypisuje **krótki** wartość całkowitą `_variant_t` obiektu.      
+-   **Operator = (***sSrc***)** przypisuje **krótki** wartość całkowitą `_variant_t` obiektu.  
   
--   **Operator = (**`lSrc`**)** przypisuje **długi** wartość całkowitą `_variant_t` obiektu.      
+-   **Operator = (**`lSrc`**)** przypisuje **długi** wartość całkowitą `_variant_t` obiektu.  
   
--   **Operator = (***fltSrc***)** przypisuje **float** wartość liczbową `_variant_t` obiektu.      
+-   **Operator = (***fltSrc***)** przypisuje **float** wartość liczbową `_variant_t` obiektu.  
   
--   **Operator = (***dblSrc***)** przypisuje **podwójne** wartość liczbową `_variant_t` obiektu.      
+-   **Operator = (***dblSrc***)** przypisuje **podwójne** wartość liczbową `_variant_t` obiektu.  
   
--   **Operator = (***cySrc***)** przypisuje **CY** do obiektu `_variant_t` obiektu.      
+-   **Operator = (***cySrc***)** przypisuje **CY** do obiektu `_variant_t` obiektu.  
   
--   **Operator = (***bstrSrc***)** przypisuje `BSTR` do obiektu `_variant_t` obiektu.      
+-   **Operator = (***bstrSrc***)** przypisuje `BSTR` do obiektu `_variant_t` obiektu.  
   
--   **Operator = (***wstrSrc***)** przypisuje ciąg Unicode `_variant_t` obiektu.      
+-   **Operator = (***wstrSrc***)** przypisuje ciąg Unicode `_variant_t` obiektu.  
   
--   **Operator = (**`strSrc`**)** przypisuje wielobajtowe ciąg `_variant_t` obiektu.      
+-   **Operator = (**`strSrc`**)** przypisuje wielobajtowe ciąg `_variant_t` obiektu.  
   
--   **Operator = (** `bSrc` **)** przypisuje `bool` do wartości `_variant_t` obiektu.    
+-   **Operator = (** `bSrc` **)** przypisuje `bool` do wartości `_variant_t` obiektu.  
   
--   **Operator = (***pDispSrc***)** przypisuje **VT_DISPATCH** do obiektu `_variant_t` obiektu.      
+-   **Operator = (***pDispSrc***)** przypisuje **VT_DISPATCH** do obiektu `_variant_t` obiektu.  
   
--   **Operator = (***pIUnknownSrc***)** przypisuje **VT_UNKNOWN** do obiektu `_variant_t` obiektu.      
+-   **Operator = (***pIUnknownSrc***)** przypisuje **VT_UNKNOWN** do obiektu `_variant_t` obiektu.  
   
--   **Operator = (***decSrc***)** przypisuje **DZIESIĘTNĄ** do wartości `_variant_t` obiektu.      
+-   **Operator = (***decSrc***)** przypisuje **DZIESIĘTNĄ** do wartości `_variant_t` obiektu.  
   
--   **Operator = (** `bSrc` **)** przypisuje **BAJTÓW** do wartości `_variant_t` obiektu.    
+-   **Operator = (** `bSrc` **)** przypisuje **BAJTÓW** do wartości `_variant_t` obiektu.  
   
  **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [_variant_t — klasa](../cpp/variant-t-class.md)
+ [_variant_t, klasa](../cpp/variant-t-class.md)

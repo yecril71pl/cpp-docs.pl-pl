@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba591b6bba935ff5ee6669dd0feb62fb9bd05177
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 356d0f0a71feccee953a0b1bd7dc54bc64a0e233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="missing-function-body-or-variable"></a>Brakująca treść funkcji lub zmienna
 Z właśnie prototypu funkcji kompilator może kontynuować bez błędów, ale konsolidator nie można rozpoznać wywołania adres, ponieważ nie jest dostępna funkcja kodu ani zastrzeżonej zmiennej. Nie będą widzieć tego błędu, dopóki nie zostaną utworzone wywołanie funkcji, że konsolidator musi zostać rozpoznany.  

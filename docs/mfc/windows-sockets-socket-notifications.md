@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d37a45443efe1ad45e21c5729907135d0e037baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa9fb14dd09ace2d641fa69fa4cf39ccefeb3d01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: powiadomienia dotyczące gniazd
 W tym artykule opisano funkcje powiadomień z klas gniazd. Funkcje Członkowskie są funkcje wywołania zwrotnego, które struktura wywołuje powiadomiono obiektu gniazda ważnych zdarzeń. Dostępne są następujące funkcje powiadomień:  
@@ -56,18 +57,18 @@ W tym artykule opisano funkcje powiadomień z klas gniazd. Funkcje Członkowskie
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: Wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)  
+-   [Gniazda systemu Windows: wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)  
   
--   [Windows Sockets: Jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Gniazda systemu Windows: jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows Sockets: blokowanie](../mfc/windows-sockets-blocking.md)  
+-   [Gniazda systemu Windows: blokowanie](../mfc/windows-sockets-blocking.md)  
   
--   [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)  
+-   [Gniazda systemu Windows: określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)  
   
--   [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)  
+-   [Gniazda systemu Windows: konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)
+ [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
 

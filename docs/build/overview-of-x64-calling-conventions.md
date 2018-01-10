@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b1b361bf01e067a1fe76829aa4217e87b107915
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Przegląd konwencji wywoływania x64
 Dwie ważne różnice między x86 i [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] są możliwości adresowania 64-bitowe i rejestruje płaski zestaw 16 64-bitowej do użytku ogólnego. Podany rozwinięte zarejestrować zestawu, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] używa [__fastcall](../cpp/fastcall.md) wywoływanie Konwencji i opartych na standardzie RISC model obsługi wyjątków. `__fastcall` Konwencji używa rejestruje pierwsze cztery argumenty i ramki stosu, aby przekazać dodatkowe argumenty.  
@@ -38,4 +39,4 @@ Dwie ważne różnice między x86 i [!INCLUDE[vcprx64](../assembler/inline/inclu
  Funkcje, które nie zmieniają się żadnych rejestrów trwałej są funkcje typu liść. Funkcja elementu członkowskiego typu liść może zmienić źródło trwałej, na przykład przez wywołanie funkcji lub przydzielenie miejsca na stosie dodatkowych dla zmiennych lokalnych. Aby odzyskać rejestrów trwałej, jeśli wyjątek jest obsługiwany, elementu członkowskiego typu liść funkcji musi być adnotowany przy dane statyczne, który opisuje sposób prawidłowo unwind funkcji w instrukcji dowolnego. Te dane są przechowywane jako *pdata*, lub procedury danych, który z kolei odwołuje się do *xdata*, danych obsługi wyjątków. Xdata odwijaniem informacjami i może wskazywać dodatkowe pdata lub funkcję obsługi wyjątków. Prologs i epilogs są zastrzeżonych, tak aby mogły być poprawnie opisanej w xdata. Wskaźnik stosu musi być wyrównany do 16 bajtów w dowolnym regionie kodu, który nie jest częścią epilogu lub prologu, z wyjątkiem w funkcjach typu liść. Funkcje liścia można odwinięty po prostu symulując zwracanym, więc pdata i xdata nie są wymagane. Aby uzyskać szczegółowe informacje o strukturze prawidłowego prologs funkcji i epilogs, zobacz [Prolog i Epilog](../build/prolog-and-epilog.md). Aby uzyskać więcej informacji na temat obsługi wyjątków i wyjątków, obsługa i odwijanie pdata i xdata, zobacz [(x64) obsługi wyjątków](../build/exception-handling-x64.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [x64 konwencje kodowania](../build/x64-software-conventions.md)
+ [Konwencje kodowania x64](../build/x64-software-conventions.md)

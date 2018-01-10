@@ -39,11 +39,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1c1da38d40c45ecd6dc36eed594304894a25dcc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0443ce4ec90a9c6aef8fb07854200341cc369cb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ldiv-lldiv"></a>ldiv, lldiv
 Oblicza iloraz i pozostałej części dwie liczb całkowitych jako jedna operacja.  
@@ -117,4 +118,4 @@ For 5149627 / 234879, the quotient is 21, and the remainder is 217168
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [DIV](../../c-runtime-library/reference/div.md)   
- [imaxdiv —](../../c-runtime-library/reference/imaxdiv.md)
+ [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)

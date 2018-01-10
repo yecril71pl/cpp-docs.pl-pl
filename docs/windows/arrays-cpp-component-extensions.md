@@ -23,11 +23,14 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2f0f4100344fbb2990e9feeb2b455642852c320
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrays-c-component-extensions"></a>Tablice (C++ Component Extensions)
 `Platform::Array<T>` Typu w języku C + +/ CX, lub `array` słów kluczowych w języku C + +/ CLI, deklaruje tablicę określonego typu i wartości początkowej.  
@@ -40,9 +43,9 @@ ms.lasthandoff: 10/24/2017
   
  Aby uzyskać więcej informacji dotyczących tablic zobacz:  
   
--   [Porady: Korzystanie z tablic w języku C + +/ CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)  
+-   [Instrukcje: korzystanie z tablic w języku C++/interfejsie wiersza polecenia](../dotnet/how-to-use-arrays-in-cpp-cli.md)  
     
--   [Listy zmiennych argumentów (...) (C + +/ CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
+-   [Listy zmiennych argumentów (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
  Tablice są elementami członkowskimi `Platform` przestrzeni nazw. Tablice mogą być tylko jednowymiarowa.  

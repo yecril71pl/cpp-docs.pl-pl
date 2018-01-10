@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ccda8d6fa2573245f34a38f327395955bf92fdc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8977c70fc2ebdc6e9fccf22e44a04afaceae1392
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-signed-integral-types"></a>Konwersje z podpisanych typów całkowitych
 Gdy całkowita jest konwertowany na liczbę całkowitą bez znaku z równym lub większym rozmiarze, a wartość całkowita nie jest ujemna, wartość jest bez zmian. Konwersja zostało utworzone przez znak rozszerzanie liczbę całkowitą ze znakiem. Całkowita jest konwertowana na krótszą całkowita tworzy bardziej znaczących bitów. Wynik jest interpretowana jako wartość bez znaku, jak pokazano w poniższym przykładzie.  
@@ -45,30 +46,30 @@ printf_s( "%hu\n", u );  // Prints 65533
   
 |Z|Do|Metoda|  
 |----------|--------|------------|  
-|**CHAR**1|**krótki**|Rozszerzanie logowania|  
-|**char**|**długa**|Rozszerzanie logowania|  
+|**CHAR**1|**short**|Rozszerzanie logowania|  
+|**char**|**long**|Rozszerzanie logowania|  
 |**char**|**char bez znaku**|Zachowaj wzorzec; bit znaczącymi bitami traci funkcję jako bitem|  
 |**char**|**short bez znaku**|Rozszerz logowania do **krótki**; przekonwertować **krótki** do **krótko bez znaku**|  
 |**char**|**unsigned long**|Rozszerz logowania do **długi**; przekonwertować **długi** do **unsigned long**|  
 |**char**|**float**|Rozszerz logowania do **długi**; przekonwertować **długi** do **float**|  
-|**char**|**podwójne**|Rozszerz logowania do **długi**; przekonwertować **długi** do **podwójne**|  
+|**char**|**double**|Rozszerz logowania do **długi**; przekonwertować **długi** do **podwójne**|  
 |**char**|**Liczba typu double**|Rozszerz logowania do **długi**; przekonwertować **długi** do **podwójne**|  
-|**krótki**|**char**|Zachowaj mniej znaczącego bajtu|  
-|**krótki**|**długa**|Rozszerzanie logowania|  
-|**krótki**|**char bez znaku**|Zachowaj mniej znaczącego bajtu|  
-|**krótki**|**short bez znaku**|Zachowaj wzorca bitowego; bit znaczącymi bitami traci funkcję jako bitem|  
-|**krótki**|**unsigned long**|Rozszerz logowania do **długi**; przekonwertować **długi** do **unsigned long**|  
-|**krótki**|**float**|Rozszerz logowania do **długi**; przekonwertować **długi** do **float**|  
-|**krótki**|**podwójne**|Rozszerz logowania do **długi**; przekonwertować **długi** do **podwójne**|  
-|**krótki**|**Liczba typu double**|Rozszerz logowania do **długi**; przekonwertować **długi** do **podwójne**|  
-|**długa**|**char**|Zachowaj mniej znaczącego bajtu|  
-|**długa**|**krótki**|Zachowaj znaczącymi bitami programu word|  
-|**długa**|**char bez znaku**|Zachowaj mniej znaczącego bajtu|  
-|**długa**|**short bez znaku**|Zachowaj znaczącymi bitami programu word|  
-|**długa**|**unsigned long**|Zachowaj wzorca bitowego; bit znaczącymi bitami traci funkcję jako bitem|  
-|**długa**|**float**|Reprezentuje jako **float**. Jeśli **długi** nie może być reprezentowany dokładnie, precyzyjnie zostaną utracone.|  
-|**długa**|**podwójne**|Reprezentuje jako **podwójne**. Jeśli **długi** nie może być reprezentowany dokładnie jako **podwójne**, precyzyjnie zostaną utracone.|  
-|**długa**|**Liczba typu double**|Reprezentuje jako **podwójne**. Jeśli **długi** nie może być reprezentowany dokładnie jako **podwójne**, precyzyjnie zostaną utracone.|  
+|**short**|**char**|Zachowaj mniej znaczącego bajtu|  
+|**short**|**long**|Rozszerzanie logowania|  
+|**short**|**char bez znaku**|Zachowaj mniej znaczącego bajtu|  
+|**short**|**short bez znaku**|Zachowaj wzorca bitowego; bit znaczącymi bitami traci funkcję jako bitem|  
+|**short**|**unsigned long**|Rozszerz logowania do **długi**; przekonwertować **długi** do **unsigned long**|  
+|**short**|**float**|Rozszerz logowania do **długi**; przekonwertować **długi** do **float**|  
+|**short**|**double**|Rozszerz logowania do **długi**; przekonwertować **długi** do **podwójne**|  
+|**short**|**Liczba typu double**|Rozszerz logowania do **długi**; przekonwertować **długi** do **podwójne**|  
+|**long**|**char**|Zachowaj mniej znaczącego bajtu|  
+|**long**|**short**|Zachowaj znaczącymi bitami programu word|  
+|**long**|**char bez znaku**|Zachowaj mniej znaczącego bajtu|  
+|**long**|**short bez znaku**|Zachowaj znaczącymi bitami programu word|  
+|**long**|**unsigned long**|Zachowaj wzorca bitowego; bit znaczącymi bitami traci funkcję jako bitem|  
+|**long**|**float**|Reprezentuje jako **float**. Jeśli **długi** nie może być reprezentowany dokładnie, precyzyjnie zostaną utracone.|  
+|**long**|**double**|Reprezentuje jako **podwójne**. Jeśli **długi** nie może być reprezentowany dokładnie jako **podwójne**, precyzyjnie zostaną utracone.|  
+|**long**|**Liczba typu double**|Reprezentuje jako **podwójne**. Jeśli **długi** nie może być reprezentowany dokładnie jako **podwójne**, precyzyjnie zostaną utracone.|  
   
  1. Wszystkie **char** wpisy przyjęto założenie, że **char** typ ma znak domyślnie.  
   

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 35f48a87a0b9526ad6150a700190f4509e1128d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c954354321d814952ec3ac5ea148cc9177cd0fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Ustawianie trybu obiektu CStatusBarCtrl
 Istnieją dwa tryby `CStatusBarCtrl` obiektu: proste i prostymi. W większości przypadków formantu paska stanu będzie mieć jeden lub więcej części, wraz z tekstu i prawdopodobnie ikony lub ikony. Jest to tryb prostymi. Aby uzyskać więcej informacji na ten tryb, zobacz [inicjowanie części obiektu CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
@@ -39,5 +40,5 @@ Istnieją dwa tryby `CStatusBarCtrl` obiektu: proste i prostymi. W większości 
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

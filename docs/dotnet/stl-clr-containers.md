@@ -16,11 +16,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21ebfee07e9faa35046ccfd1cb88894b45dab7c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1b8aa8ef5b1425d4aa41b1811dca5ec5d56acd1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stlclr-containers"></a>Kontenery STL/CLR
 Biblioteka STL/CLR ma tego samego kontenerów, które znajdują się w standardowa biblioteka C++, ale działa w środowisku zarządzanym programu .NET Framework. Jeśli już znasz standardowa biblioteka C++, STL/CLR jest najlepszy sposób, aby nadal używać umiejętności, które został już utworzony podczas uaktualniania kodu docelowe środowisko uruchomieniowe języka wspólnego (CLR).  
@@ -309,4 +312,4 @@ int main()
  Podczas wywołania wyczyść lub erase — metoda kontenera obiektów dojścia obiektów, które dotyczą uchwyty nie są zwalniane z pamięci. Należy jawnie usunąć obiekt, lub, ponieważ obiekty te znajdują się na stercie zarządzanej Zezwalaj moduł zbierający elementy bezużyteczne zwolnić pamięć, gdy ustali, że obiekt jest już używana.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

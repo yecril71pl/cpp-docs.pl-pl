@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a17825c9b02d646fc7c73a5809058d39bb2db66
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a4fc9e9065017e04b6375d1e5a8e336d4366755
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="slider-notification-messages"></a>Komunikaty powiadomień suwaka
 Formantu suwaka powiadamia jej okna nadrzędnego akcje użytkownika, wysyłając nadrzędnego `WM_HSCROLL` lub `WM_VSCROLL` komunikaty, w zależności od Orientacja formantu suwaka. Aby obsługiwać te komunikaty, Dodaj obsługę `WM_HSCROLL` i `WM_VSCROLL` wiadomości do okna nadrzędnego. [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) i [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) funkcje Członkowskie zostanie przekazany kod powiadomienia, położenie suwaka i wskaźnika do [CSliderCtrl](../mfc/reference/csliderctrl-class.md) obiektu. Należy pamiętać, że wskaźnik jest typu **CScrollBar \***  mimo że wskazuje `CSliderCtrl` obiektu. Konieczne może być rzutowanie typu ten wskaźnik, jeśli potrzebujesz do manipulowania suwaka.  
@@ -45,5 +46,5 @@ Formantu suwaka powiadamia jej okna nadrzędnego akcje użytkownika, wysyłając
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

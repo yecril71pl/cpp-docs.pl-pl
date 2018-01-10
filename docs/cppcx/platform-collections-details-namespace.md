@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 8c7866594eb7acc18261ee40435dd0a0045c26cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d354dc62050915558467e7608456a92b7bfe3d2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Namespace platform::Collections::details
 Ta przestrzeń nazw obsługuje `Platform` infrastrukturę i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,7 +35,7 @@ namespace Platform {  namespace Collections {    namespace Details {}}}
  Członkowie tej przestrzeni nazw są definiowane w collection.h i nie są wyświetlane w przeglądarce obiektów.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md)  
+ [Platform::Collections, przestrzeń nazw](../cppcx/platform-collections-namespace.md)  
   
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** Collection.h  

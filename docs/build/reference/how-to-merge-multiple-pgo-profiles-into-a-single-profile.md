@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dcd10c25e4512683b840bd2feeee287995ab8776
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 880e9fbba7852a9a7919e73f80b73e34394cd037
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Porady: scalanie wielu profili PGO w jeden profil
 Optymalizacja sterowana profilem — (PGO) to doskonałe narzędzie do tworzenia zoptymalizowane pliki binarne, oparta na scenariuszu, który jest profilowane. Ale co zrobić, jeśli masz aplikację, która ma kilka ważnych, jeszcze różne scenariusze; jak utworzyć jeden profil, który PGO można używać z kilku różnych scenariuszy W programie Visual Studio Menedżer PGO, Pgomgr.exe, wykonuje to zadanie możesz.  

@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7304b45f59219c529be5c1d430ea3183febd958a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a27e07884b4ada54f694136ea2fbca474c9d214d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Porady: konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego
 
@@ -62,5 +63,5 @@ found 107254 prime numbers.
 ## <a name="see-also"></a>Zobacz też  
  [Migrowanie z OpenMP do współbieżności środowiska wykonawczego](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
  [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)   
- [Równoległe kontenery i obiekty](../../parallel/concrt/parallel-containers-and-objects.md)
+ [Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)
 

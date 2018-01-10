@@ -29,11 +29,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 719acc2706483a3fcfa5506da077cee9e5fc1a5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funkcje wymiany danych w oknie dialogowym dla formantów OLE
 W tym temacie wymieniono funkcje DDX_OC używanego do wymiany danych między właściwości formantu OLE w okno dialogowe, widoku formularza lub kontrolki widoku obiektu i element członkowski danych klasy okno dialogowe, widoku Formularz lub formant widoku obiektu.  
@@ -76,7 +77,7 @@ void AFXAPI DDX_OCBool(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -106,7 +107,7 @@ void AFXAPI DDX_OCBoolRO(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -136,7 +137,7 @@ void AFXAPI DDX_OCColor(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -166,7 +167,7 @@ void AFXAPI DDX_OCColorRO(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -202,7 +203,7 @@ void AFXAPI DDX_OCFloat(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -238,7 +239,7 @@ void AFXAPI DDX_OCFloatRO(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -274,7 +275,7 @@ void AFXAPI DDX_OCInt(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -310,7 +311,7 @@ void AFXAPI DDX_OCIntRO(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -340,7 +341,7 @@ void AFXAPI DDX_OCShort(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -370,7 +371,7 @@ void AFXAPI DDX_OCShortRO(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -400,7 +401,7 @@ void AFXAPI DDX_OCText(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -430,7 +431,7 @@ void AFXAPI DDX_OCTextRO(
  `dispid`  
  Identyfikator wysyłania właściwości formantu.  
   
- *wartość*  
+ *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant wyświetlania obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  

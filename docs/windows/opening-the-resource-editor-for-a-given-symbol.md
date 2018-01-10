@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 752a9b82bd6515f5ccceb89869e0d8b09577f057
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6b2d8da5a03289d65dd00d280d6fc3ef3f13b038
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>Otwieranie Edytora zasobów dla podanego symbolu
 Kiedy przeglądasz symbole w [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), może być więcej informacji na temat sposobu używania określonego symbolu. **Użycie widoku** przycisk umożliwia szybkie uzyskanie tych informacji.  
@@ -45,4 +48,4 @@ Kiedy przeglądasz symbole w [okno dialogowe symboli zasobów](../windows/resour
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyświetlanie symboli zasobów](../windows/viewing-resource-symbols.md)   
- [Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)
+ [Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)

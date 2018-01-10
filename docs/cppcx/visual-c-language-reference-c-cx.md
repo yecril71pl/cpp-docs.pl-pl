@@ -12,11 +12,12 @@ caps.latest.revision: "27"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 55d890fa369bade254d145ca4935911fef367159
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a0e7cba73d85253db28d719932d02cfb3cdecca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-language-reference-ccx"></a>Dokumentacja języka Visual C++ (C + +/ CX)
 
@@ -40,6 +41,6 @@ Nowy model reprezentuje generacji natywnych języka C++ programowania w systemie
 |[Współdziałanie z innymi językami](../cppcx/interoperating-with-other-languages-c-cx.md)|W tym artykule omówiono sposób składników, które zostały napisane przy użyciu języka C + +/ CX może być używana ze składnikami, które zostały napisane w języku JavaScript, dowolny zarządzany języka, lub [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)].|
 |[Wątkowość i organizowanie](../cppcx/threading-and-marshaling-c-cx.md)|W tym artykule omówiono sposób określania zachowania wątków i organizowania składników, które można utworzyć.|
 |[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)|Dokumentacja referencyjna dla domyślnej przestrzeni nazw, przestrzeń nazw platformy, Platform::Collections i pokrewne przestrzeni nazw.|
-|[Funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Zawiera listę funkcji CRT, które nie są dostępne do użycia w aplikacjach środowiska wykonawczego systemu Windows.|
+|[Funkcje CRT nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Zawiera listę funkcji CRT, które nie są dostępne do użycia w aplikacjach środowiska wykonawczego systemu Windows.|
 |[Jak przewodniki dla aplikacji systemu Windows 10](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Zawiera ogólne wskazówki dotyczące aplikacji systemu Windows 10 i łącza do dodatkowych informacji.|
 |[C + +/ CX część 0 \[ n \]: wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + +/ CX część 1 z \[ n \]: prostą klasę](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + +/ CX część 2 \[ n \]: typy, które nosić Kapelusze](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + +/ CX część 3 \[ n \]: konstruowanego](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + +/ CX część 4 \[ n \]: statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Wstępne cyklu blogów Visual C++ w języku C + +/ CX.|

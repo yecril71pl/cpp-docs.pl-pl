@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 94790e94308127c5e5c0337f5ab5d1fee1a98ec2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ee4ea13565c7837180765852d53a75f2f5bfe12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-masm"></a>RECORD (MASM)
 Deklaruje typ rekordu składające się z określone pola. *Nazwa pola* nazwy pola *szerokość* określa liczbę bitów, i *wyrażenie* daje swojej wartości początkowej.  
@@ -33,4 +34,4 @@ Deklaruje typ rekordu składające się z określone pola. *Nazwa pola* nazwy po
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

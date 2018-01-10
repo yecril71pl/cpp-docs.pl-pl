@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e55ed4fec962fcafa97b155d8688fcf62c1f2fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e79b1c88996e835a907129fa5810d4c4dca0770
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-advanced-features"></a>Kontenery: funkcje zaawansowane
 W tym artykule opisano kroki niezbędne do włączają opcjonalne funkcje zaawansowane do istniejących aplikacji kontenera. Te funkcje są:  

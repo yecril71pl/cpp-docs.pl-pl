@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e4417fc2d4714a249b04bb0c1d04e5642495835
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8117d175d59859c97a360ca6a6d2af559b403e32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-boxes"></a>Okna dialogowe
 Dla systemu Windows często komunikują się z aplikacjami użytkownika za pomocą okien dialogowych. Klasa [cdialog —](../mfc/reference/cdialog-class.md) udostępnia interfejs dla zarządzania okien dialogowych, Edytor okien dialogowych programu Visual C++ ułatwia projektowanie okien dialogowych i utworzyć ich zasobów szablonu okna dialogowego i kreatorów kodu uprościć proces inicjowania i Sprawdzanie poprawności formantów w oknie dialogowym i zbierania wartości wprowadzonej przez użytkownika.  
@@ -42,7 +43,7 @@ Dla systemu Windows często komunikują się z aplikacjami użytkownika za pomoc
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   
--   [Przykład: Wyświetlanie okna dialogowego za pomocą polecenia Menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)  
+-   [Przykład: wyświetlanie okna dialogowego za pomocą polecenia menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)  
   
 -   [Składniki okna dialogowego w strukturze](../mfc/dialog-box-components-in-the-framework.md)  
   
@@ -62,9 +63,9 @@ Dla systemu Windows często komunikują się z aplikacjami użytkownika za pomoc
   
 -   [Mapowanie komunikatów systemu Windows na klasę](../mfc/mapping-windows-messages-to-your-class.md)  
   
--   [Powszechnie zastępowane funkcje Członkowskie](../mfc/commonly-overridden-member-functions.md)  
+-   [Powszechnie zastępowane funkcje składowe](../mfc/commonly-overridden-member-functions.md)  
   
--   [Powszechnie dodawane funkcje Członkowskie](../mfc/commonly-added-member-functions.md)  
+-   [Powszechnie dodawane funkcje składowe](../mfc/commonly-added-member-functions.md)  
   
 -   [Klasy wspólnych okien dialogowych](../mfc/common-dialog-classes.md)  
   

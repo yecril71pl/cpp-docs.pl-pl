@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7872e01516ea7420533cccf0398164d50603dded
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3bc721131e5cb47bf17d7e683f3a6df249f4dd38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="align-c"></a>align (C++)
 W programie Visual Studio 2015 lub nowszego oraz używać języka C ++ 11 standard `alignas` specyfikator do kontroli nad położeniem. Aby uzyskać więcej informacji, zobacz [wyrównanie](../cpp/alignment-cpp-declarations.md).  
@@ -248,4 +249,4 @@ struct S {
 ## <a name="see-also"></a>Zobacz też  
  [__declspec](../cpp/declspec.md)   
  [Przegląd Konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)   
- [Omówienie x64 Konwencje wywoływania](../build/overview-of-x64-calling-conventions.md)
+ [Przegląd konwencji wywoływania x64](../build/overview-of-x64-calling-conventions.md)

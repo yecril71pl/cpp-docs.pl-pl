@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1996ce93be7fc5f722936dee0f04923cafa5d767
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02366a53f02142f66aa5dca493c5460c9f2d1d92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="protected-c"></a>chronione (C++)
 ## <a name="syntax"></a>Składnia  
@@ -33,17 +34,17 @@ protected base-class
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `protected` — Słowo kluczowe określa dostęp do elementów członkowskich klasy w *listy członków* do następnego specyfikator dostępu (**publicznego** lub `private`) lub na końcu definicji klasy. Elementy członkowskie klasy zadeklarowani jako `protected` mogą być używani tylko przez następujące:  
+ `protected` — Słowo kluczowe określa dostęp do elementów członkowskich klasy w *listy członków* do następnego specyfikator dostępu (**publicznego** lub `private`) lub na końcu definicji klasy. Składowe klasy zadeklarowane jako `protected` mogą być używane tylko przez następujące:  
   
--   Funkcje członkowskie klasy, która pierwotnie zadeklarowała tych elementów członkowskich.  
+-   Funkcje składowe klasy, która pierwotnie zadeklarowała te składowe.  
   
--   Przyjaciół klasy, która pierwotnie zadeklarowała tych elementów członkowskich.  
+-   Przyjaciół klasy, która pierwotnie zadeklarowała te składowe.  
   
--   Klasy pochodne z publicznym lub chronionym dostępem do klasy, która pierwotnie zadeklarowała te elementy członkowskie.  
+-   Klasy pochodne z publicznym lub chronionym dostępem do klasy, która pierwotnie zadeklarowała te składowe.  
   
--   Bezpośrednie klasy pochodne prywatnie, które także mają prywatny dostęp do chronionych elementów członkowskich.  
+-   Bezpośrednie klasy pochodne prywatnie, które także mają prywatny dostęp do chronionych składowych.  
   
- Gdy nazwę klasy podstawowej poprzedza słowo kluczowe `protected`, określa ono, że publiczne i chronione elementy członkowskie klasy podstawowej są chronionymi elementami członkowskimi klas pochodnych.  
+ Gdy nazwę klasy podstawowej poprzedza słowo kluczowe `protected`, określa ono, że publiczne i chronione składowe klasy podstawowej są chronionymi składowymi klas pochodnych.  
   
  Chronione elementy członkowskie nie są jako prywatny jako `private` elementów członkowskich, które są dostępne tylko dla elementów członkowskich klasy, w której zostały zgłoszone, ale nie są one jako publiczną jako **publicznego** elementów członkowskich, które są dostępne w żadnych funkcji.  
   

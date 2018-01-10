@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f7d7e43ab50cc50321aea79aad200231f719c3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb0e4929b55d6cfc0ef01ee183b74b2439b85d10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="if-statement-c"></a>if — instrukcja (C)
 **Jeśli** instrukcji steruje rozgałęzień warunkowych. Treść **Jeśli** instrukcja jest wykonywana, jeśli wartość wyrażenia jest różna od zera. Składnia **Jeśli** instrukcji ma dwie formy.  
@@ -80,4 +81,4 @@ else
  Nawiasy otaczające wewnętrzny **Jeśli** instrukcji w tym przykładzie należy **else** klauzuli część zewnętrznego **Jeśli** instrukcji. Jeśli `i` jest mniejsza niż lub równa 0, `i` jest przypisany do `x`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [if-else — instrukcja (C++)](../cpp/if-else-statement-cpp.md)
+ [if-else, instrukcja (C++)](../cpp/if-else-statement-cpp.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 183a3db0236e8aabc528905e19ef1fb7e4858647
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f027da0e90bc8dde015c2d42bd72ceb388aa0bba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Wskazówki: dodawanie animacji do projektu MFC
 Ten przewodnik zawiera wskazówki jak dodać obiekt animowany podstawowe dla języka Visual C++ projektu Microsoft Foundation Class biblioteki (MFC).  
@@ -431,5 +432,5 @@ if (pManager != NULL)
 1.  Skompiluj i uruchom aplikację. Na **animacji** menu, kliknij przycisk **Start do przodu**. Prostokąt powinna występować, a następnie wprowadź obszaru roboczego. Po kliknięciu **Uruchom tyłu**, powinny odwracać animacji i po kliknięciu **zatrzymać**, należy ją zatrzymać. Kolor wypełnienia prostokąta należy zmieniać w trakcie animacji, a bieżący kolor powinien być wyświetlany w górnej części okna animacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Instruktaże](../mfc/walkthroughs-mfc.md)
+ [Przewodniki](../mfc/walkthroughs-mfc.md)
 

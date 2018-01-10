@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 426a0c5a40f3be3effdf4ba8316f6a72a8295965
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 Procesy jawnie łączenia wywołanie biblioteki DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) do uzyskiwania adresów wyeksportowanej funkcji w bibliotece DLL. Wywoływanie funkcji DLL za pomocą wskaźnika funkcji zwrócony. **GetProcAddress** przyjmuje jako parametry uchwytu modułu DLL (zwrócony przez **LoadLibrary**, `AfxLoadLibrary`, lub **GetModuleHandle**) i pobiera nazwę funkcji można chcesz wywołania lub funkcji eksportu porządkowych.  
@@ -76,4 +77,4 @@ if (hDLL != NULL)
 -   [Eksportowanie z biblioteki DLL przy użyciu plików DEF](../build/exporting-from-a-dll-using-def-files.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md)
+ [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0dfa6a3a2e399ff108bdd97b3dfb9a16b627aefe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 74b271f56fe7c8d3345ce53de06a18a2700175f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Określający elementy projektu kontroli DHTML
 Większość kodu kontroli DHTML dokładnie tak samo, jak to jest tworzony dla każdego formantu ATL. Dla podstawy Kod rodzajowy pracy za pośrednictwem [ALT — samouczek](../atl/active-template-library-atl-tutorial.md), i odczytywane sekcji [tworzenie Projekt ATL](../atl/reference/creating-an-atl-project.md) i [podstawy ATL obiektów COM](../atl/fundamentals-of-atl-com-objects.md).  

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e8c676a950979906bbc741679735ba452baec18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ee45ec7a2a842cc45c01c0e6f43ab49ba55aa3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Podsumowanie okresu istnienia i widoczności
 Poniższa tabela znajduje się podsumowanie okresu istnienia i widoczności właściwości dla większości identyfikatorów. Pierwsze trzy kolumny nadaj atrybuty, które definiują okres istnienia i widoczności. Identyfikator z atrybutami przez pierwsze trzy kolumny ma okres istnienia i widoczności wyświetlane w kolumnach czwartym i piątym. Jednak tabeli nie obejmuje wszystkich możliwych przypadków. Zapoznaj się [klasy magazynu](../c-language/c-storage-classes.md) Aby uzyskać więcej informacji.  
@@ -29,12 +30,12 @@ Poniższa tabela znajduje się podsumowanie okresu istnienia i widoczności wła
   
 |Atrybuty:<br /><br /> Poziom|Element|Klasa magazynu<br /><br /> Specyfikator|Wynik:<br /><br /> Okres istnienia|Widoczność|  
 |---------------------------|----------|----------------------------------|--------------------------|----------------|  
-|Zakres pliku|Definicja zmiennej|**statyczne**|Globalne|Pozostała część pliku źródłowego, w którym występuje|  
+|Zakres pliku|Definicja zmiennej|**static**|Globalne|Pozostała część pliku źródłowego, w którym występuje|  
 ||Deklaracja zmiennej|`extern`|Globalne|Pozostała część pliku źródłowego, w którym występuje|  
-||Prototyp funkcji lub definicji|**statyczne**|Globalne|Pojedyncze źródło plików|  
+||Prototyp funkcji lub definicji|**static**|Globalne|Pojedyncze źródło plików|  
 ||Prototyp funkcji|`extern`|Globalne|Pozostała część pliku źródłowego|  
 |Zakres bloku|Deklaracja zmiennej|`extern`|Globalne|Blok|  
-||Definicja zmiennej|**statyczne**|Globalne|Blok|  
+||Definicja zmiennej|**static**|Globalne|Blok|  
 ||Definicja zmiennej|**automatycznie** lub **zarejestrować**|Lokalny|Blok|  
   
 ## <a name="example"></a>Przykład  
