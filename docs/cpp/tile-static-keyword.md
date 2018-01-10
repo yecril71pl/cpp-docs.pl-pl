@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1259fb7731e188bdb5a02a7a573b5eddd6a47df5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad47c85a8815d8a1a77f15788c3b312267cb055b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tilestatic-keyword"></a>tile_static — słowo kluczowe
 `tile_static` Słowo kluczowe jest używane w celu zadeklarowania zmiennej dostępnej przez wszystkie wątki na kafelku wątków. Okres istnienia zmiennej uruchamiana, gdy wykonanie osiągnie punkt deklaracji i kończy się po powrocie z funkcji jądra. Aby uzyskać więcej informacji na temat używania Kafelki, zobacz [przy użyciu Kafelki](../parallel/amp/using-tiles.md).  
@@ -155,4 +156,4 @@ for (int i = 0; i < 4; i++) {
  [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md)   
  [Przegląd C++ AMP](../parallel/amp/cpp-amp-overview.md)   
  [parallel_for_each — funkcja (C++ AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   
- [Wskazówki: Mnożenie macierzy](../parallel/amp/walkthrough-matrix-multiplication.md)
+ [Przewodnik: mnożenie macierzy](../parallel/amp/walkthrough-matrix-multiplication.md)

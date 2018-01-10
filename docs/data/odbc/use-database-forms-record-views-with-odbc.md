@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a40d0b20e67c4c41ba376c9f94a62dc561b05477
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 35d9cfeaf970c01f94094d1fb3cbf02703281298
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>Używanie formularzy bazy danych (widoków rekordów) z ODBC
 Niektóre aplikacje, takie jak wprowadzania danych lub wyświetlanie danych wymagają widok z okna dialogowego styl formantu w formularzu.  
@@ -40,4 +43,4 @@ Niektóre aplikacje, takie jak wprowadzania danych lub wyświetlanie danych wyma
 -   [Używanie widoku rekordu](../../data/using-a-record-view-mfc-data-access.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Otwórz połączenie z bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

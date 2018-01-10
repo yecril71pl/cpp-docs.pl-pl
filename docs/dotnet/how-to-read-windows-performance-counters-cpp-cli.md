@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ad77e459d32ed0fc0b3798d2a37b4754d556f20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>Porady: odczytywanie liczników wydajności systemu Windows (C++/CLI)
 Niektóre aplikacje i podsystemy Windows ujawniać dane wydajności za pośrednictwem wydajności systemu Windows. Te liczniki mogą uzyskać dostęp za pomocą <xref:System.Diagnostics.PerformanceCounterCategory> i <xref:System.Diagnostics.PerformanceCounter> klasy, które znajdują się w <xref:System.Diagnostics?displayProperty=fullName> przestrzeni nazw.  
@@ -127,4 +130,4 @@ int main()
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do monitorowania wydajności](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
  [Operacje w systemie Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

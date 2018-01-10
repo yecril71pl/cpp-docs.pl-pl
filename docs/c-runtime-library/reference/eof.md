@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a81e289f5496393966109cd7b3940e55918cb29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4e53bbed704b0acb1ad613bb05a0653ea305ba2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eof"></a>_eof
 Testy do końca pliku (EOF).  
@@ -128,4 +129,4 @@ Number of bytes read = 29
  [clearerr —](../../c-runtime-library/reference/clearerr.md)   
  [feof —](../../c-runtime-library/reference/feof.md)   
  [ferror —](../../c-runtime-library/reference/ferror.md)   
- [perror, _wperror —](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

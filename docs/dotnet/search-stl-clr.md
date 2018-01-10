@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1b7228bc8c44c9cb6996a65aa4c558d8e4f99e32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 86f21b80d20e1f84e8f0e2091054fa5c9c3fe463
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-stlclr"></a>search (STL/CLR)
 Wyszukuje pierwsze wystąpienie sekwencji w zakresie docelowym, której elementy są równe tym w danej sekwencji elementów lub której elementy są równoważne w sensie określonym przez predykat binarny dla elementów w danej sekwencji.  
@@ -44,4 +47,4 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
  **Namespace:** cliext  
   
 ## <a name="see-also"></a>Zobacz też  
- [Algorytm (STL/CLR)](../dotnet/algorithm-stl-clr.md)
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

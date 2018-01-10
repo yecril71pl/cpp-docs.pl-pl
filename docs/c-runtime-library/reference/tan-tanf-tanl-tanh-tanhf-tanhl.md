@@ -55,11 +55,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0f094272514966655e8ecfe45a3f35e179db333
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a418683e23525d6e3c46853312b217788c0969e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>TAN, tanf —, tanl —, tanh tanhf —, tanhl —
 Oblicza tangens (`tan`, `tanf`, lub `tanl`), lub tangens hiperboliczny (`tanh`, `tanhf`, lub `tanhl`).  

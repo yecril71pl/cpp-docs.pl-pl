@@ -51,11 +51,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0cada5532bdaeec4a36e7b9790d930ae91d2ba64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9708c23fc76095a591a2eceafcb875ce173383ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 Generowania nazw, który służy do tworzenia plików tymczasowych. Niektóre z tych funkcji bezpieczniejsze wersje są dostępne; zobacz [tmpnam_s —, _wtmpnam_s —](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md).  
@@ -183,4 +184,4 @@ C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.
  [— funkcja malloc](../../c-runtime-library/reference/malloc.md)   
  [_setmbcp —](../../c-runtime-library/reference/setmbcp.md)   
  [tmpfile —](../../c-runtime-library/reference/tmpfile.md)   
- [tmpfile_s —](../../c-runtime-library/reference/tmpfile-s.md)
+ [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)

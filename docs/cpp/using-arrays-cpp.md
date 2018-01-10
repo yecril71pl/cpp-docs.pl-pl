@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b77d561f0d33e86ef2e8c9c9fd009febd392281d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7cab4f8bcc4deb8353f4cef0828af829da008e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-arrays-c"></a>Używanie tablic (C++)
 Dostęp do poszczególnych elementów w tablicy za pomocą operatora indeksu dolnego tablicy (`[ ]`). Jeśli jest tablicą jednowymiarową jest używany w wyrażeniu, która ma indeks nie, nazwa tablicy ocenia się na wskaźnik do pierwszego elementu w tablicy.  

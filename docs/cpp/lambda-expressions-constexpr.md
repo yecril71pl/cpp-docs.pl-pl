@@ -14,11 +14,12 @@ caps.latest.revision: "0"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e33918193e92e432845052f875cba2e4baf22600
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 307ce6ab87ca36de561ebcf1ad8bd30eb73e4192
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>constexpr wyrażenia Lambda w języku C++
 **Visual Studio 2017 wersji 15.3 i nowszych** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): wyrażenia lambda, może być zadeklarowana jako `constexpr` lub użyć w wyrażeniu zawartość podczas inicjowania dla każdego elementu członkowskiego danych it Przechwytuje lub wprowadza jest dozwolona w wyrażeniu stałym.  

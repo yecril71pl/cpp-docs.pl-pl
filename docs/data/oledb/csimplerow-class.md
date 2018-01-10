@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8c7f1ca1823970dec3f9a8c1ceb0198bc8a71b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8a5d8777a1219e204e0db1a16858ef30009dc67d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplerow-class"></a>CSimpleRow — Klasa
 Udostępnia domyślną implementację dla dojście do wiersza, który jest używany w [irowsetimpl —](../../data/oledb/irowsetimpl-class.md) klasy.  
@@ -60,4 +63,4 @@ class CSimpleRow
 ## <a name="see-also"></a>Zobacz też  
  [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Irowsetimpl — klasa](../../data/oledb/irowsetimpl-class.md)
+ [IRowsetImpl, klasa](../../data/oledb/irowsetimpl-class.md)

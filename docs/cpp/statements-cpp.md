@@ -14,18 +14,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e6d2579eb6d86c53f72d3910c1dd83f973905ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d61dfb9e670e472ddaf7b46136e02a52ef3299e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="statements-c"></a>Instrukcje (C++)
 Instrukcje C++ są określające, jak i w jakiej kolejności obiekty są manipulować elementów programu. Ta sekcja zawiera:  
   
 -   [Omówienie](../cpp/overview-of-cpp-statements.md)  
   
--   [Labeled — instrukcje](../cpp/labeled-statements.md)  
+-   [Instrukcje z etykietami](../cpp/labeled-statements.md)  
   
 -   Kategorie — instrukcje  
   

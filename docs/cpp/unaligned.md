@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c148803da11ea85857cb77753d2e6af6a6ae22e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da662cf9cbe17539381766d37255e63d958fb7b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unaligned"></a>__unaligned
 Gdy zadeklarować wskaźnika z `__unaligned` modyfikator, kompilator przyjęto założenie, że wskaźnik adresów dane, które nie jest wyrównany. W rezultacie aplikacji przeznaczonego komputerze rodziny procesora Itanium (IPF), kompilator generuje kod, który odczyta dane niewyrównany jeden naraz.  
@@ -33,7 +34,7 @@ Gdy zadeklarować wskaźnika z `__unaligned` modyfikator, kompilator przyjęto z
   
 -   [Dopasuj](../cpp/align-cpp.md)  
   
--   [__alignof operator](../cpp/alignof-operator.md)  
+-   [Operator __alignof](../cpp/alignof-operator.md)  
   
 -   [pakiet](../preprocessor/pack.md)  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d64e375375deac828689f37475d9bfe04b08925b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-declarators"></a>Przegląd deklaratorów
 Deklaratory są składnikami deklaracji, które określają nazwy obiektów lub funkcji. Deklaratory określają również, czy nazwany obiekt jest obiektem, wskaźnikiem, odwołaniem lub tablicą.  Deklaratory nie określają typu podstawowego, ale modyfikują informacje o typie w obrębie typu podstawowego w celu określenia typów pochodnych, takich jak wskaźniki, odwołania i tablice.  Deklarator w zastosowaniu do funkcji współpracuje ze specyfikatorem typu, aby w pełni określić, że typ zwracany funkcji jest obiektem, wskaźnikiem lub odwołaniem. (Specyfikatory omówione w [deklaracje i definicje](declarations-and-definitions-cpp.md), przedstawienia właściwości, takie jak klasa typu i magazynu. Modyfikatory omówione w tej sekcji, a w [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md), zmodyfikuj deklaratorów.) Na poniższej ilustracji pokazano pełną deklarację `MyFunction` i wywołano składniki deklaracji.  
@@ -52,7 +53,7 @@ const char *pch, ch;
   
  **Deklaratory wskaźniki, odwołania i tablice**  
   
- Operatory wskaźników wstawione przed nazwą powodują, że obiekt jest wskaźnikiem lub odwołaniem.  **\***  Operator deklaruje nazwę jako wskaźnik;  **&**  operator deklaruje go jako odwołanie.  
+ Operatory wskaźników wstawione przed nazwą powodują, że obiekt jest wskaźnikiem lub odwołaniem.   **\***  Operator deklaruje nazwę jako wskaźnik;  **&**  operator deklaruje go jako odwołanie.  
   
 ```  
 int *i; // declarator is *i  
@@ -70,7 +71,7 @@ const char *const cpcc; // const pointer to const char
   
  Więcej informacji można znaleźć w [wskaźniki stałe i nietrwałe](../cpp/const-and-volatile-pointers.md).  
   
- Wskaźnik do elementu członkowskiego klasy lub struktury jest zadeklarowany z odpowiednim zagnieżdżonym specyfikatorem nazwy:  
+ Wskaźnik do składowej klasy lub struktury jest zadeklarowany z odpowiednim zagnieżdżonym specyfikatorem nazwy:  
   
 ```  
 int X::* pIntMember;   

@@ -18,11 +18,14 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5315f13588aa22696989be208e8b5e7dce5fc586
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9bd847b2641e6670a91d2edf1eb926aca423ad2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp losowy. Użyj kontenera `deque` do zarządzania sekwencję elementów wygląda jak ciągłego bloku magazynu, ale który można zwiększać i zmniejszać na końcu bez konieczności kopiowania wszelkie pozostałe elementy. W związku z tym można efektywnie zaimplementować `double-ended queue`. (Stąd nazwa.)  
@@ -65,31 +68,31 @@ template<typename Value>
 |[deque::generic_reverse_iterator (STL/CLR)](../dotnet/deque-generic-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora dla ogólnego interfejsu do kontenera.|  
 |[deque::generic_value (STL/CLR)](../dotnet/deque-generic-value-stl-clr.md)|Typ elementu dla ogólnego interfejsu do kontenera.|  
 |[deque::iterator (STL/CLR)](../dotnet/deque-iterator-stl-clr.md)|Typ iteratora dla kontrolowanej sekwencji.|  
-|[deque::Reference (STL/CLR)](../dotnet/deque-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[deque::reference (STL/CLR)](../dotnet/deque-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[deque::reverse_iterator (STL/CLR)](../dotnet/deque-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
 |[deque::size_type (STL/CLR)](../dotnet/deque-size-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
 |[deque::value_type (STL/CLR)](../dotnet/deque-value-type-stl-clr.md)|Typ elementu.|  
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[deque::ASSIGN (STL/CLR)](../dotnet/deque-assign-stl-clr.md)|Zamienia wszystkie elementy.|  
-|[deque::AT (STL/CLR)](../dotnet/deque-at-stl-clr.md)|Uzyskuje dostęp do elementu w określonej pozycji.|  
+|[deque::assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)|Zamienia wszystkie elementy.|  
+|[deque::at (STL/CLR)](../dotnet/deque-at-stl-clr.md)|Uzyskuje dostęp do elementu w określonej pozycji.|  
 |[deque::back (STL/CLR)](../dotnet/deque-back-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
-|[deque::BEGIN (STL/CLR)](../dotnet/deque-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
-|[deque::Clear (STL/CLR)](../dotnet/deque-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
+|[deque::begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[deque::clear (STL/CLR)](../dotnet/deque-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
 |[deque::deque (STL/CLR)](../dotnet/deque-deque-stl-clr.md)|Konstruuje obiekt kontenera.|  
-|[deque::EMPTY (STL/CLR)](../dotnet/deque-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[deque::empty (STL/CLR)](../dotnet/deque-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
 |[deque::end (STL/CLR)](../dotnet/deque-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
-|[deque::ERASE (STL/CLR)](../dotnet/deque-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[deque::Front (STL/CLR)](../dotnet/deque-front-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
-|[deque::INSERT (STL/CLR)](../dotnet/deque-insert-stl-clr.md)|Dodaje elementy na określonej pozycji.|  
+|[deque::erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
+|[deque::front (STL/CLR)](../dotnet/deque-front-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
+|[deque::insert (STL/CLR)](../dotnet/deque-insert-stl-clr.md)|Dodaje elementy na określonej pozycji.|  
 |[deque::pop_back (STL/CLR)](../dotnet/deque-pop-back-stl-clr.md)|Usuwa ostatnim elemencie.|  
 |[deque::pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)|Usuwa pierwszego elementu.|  
 |[deque::push_back (STL/CLR)](../dotnet/deque-push-back-stl-clr.md)|Dodaje nowy element ostatni.|  
 |[deque::push_front (STL/CLR)](../dotnet/deque-push-front-stl-clr.md)|Dodaje nowy element pierwszy.|  
 |[deque::rbegin (STL/CLR)](../dotnet/deque-rbegin-stl-clr.md)|Określa początek odwróconej kontrolowanej sekwencji.|  
 |[deque::rend (STL/CLR)](../dotnet/deque-rend-stl-clr.md)|Określa koniec odwróconej kontrolowanej sekwencji.|  
-|[deque::Resize (STL/CLR)](../dotnet/deque-resize-stl-clr.md)|Zmiany liczby elementów.|  
+|[deque::resize (STL/CLR)](../dotnet/deque-resize-stl-clr.md)|Zmiany liczby elementów.|  
 |[deque::size (STL/CLR)](../dotnet/deque-size-stl-clr.md)|Liczy liczbę elementów.|  
 |[deque::swap (STL/CLR)](../dotnet/deque-swap-stl-clr.md)|Zamienia zawartości dwóch kontenerów.|  
 |[deque::to_array (STL/CLR)](../dotnet/deque-to-array-stl-clr.md)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|  
@@ -101,14 +104,14 @@ template<typename Value>
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[deque::operator! = (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)|Określa, czy dwa `deque` obiekty nie są takie same.|  
+|[deque::operator!= (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)|Określa, czy dwa `deque` obiekty nie są takie same.|  
 |[deque::operator(STL/CLR)](../dotnet/deque-operator-stl-clr.md)|Uzyskuje dostęp do elementu w określonej pozycji.|  
-|[Operator < (deque —) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)|Określa, czy `deque` obiekt jest mniejszy niż innego `deque` obiektu.|  
-|[Operator < = (deque —) (STL/CLR)](../dotnet/operator-less-or-equal-deque-stl-clr.md)|Określa, czy `deque` obiekt jest mniejszy niż lub równy do innego `deque` obiektu.|  
-|[Operator = (deque —) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
-|[Operator == (deque —) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)|Określa, czy `deque` obiekt jest taki sam do innego `deque` obiektu.|  
-|[operator > (deque —) (STL/CLR)](../dotnet/operator-greater-than-deque-stl-clr.md)|Określa, czy `deque` obiekt jest większy niż innego `deque` obiektu.|  
-|[operator > = (deque —) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)|Określa, czy `deque` obiektu jest większa lub równa innej `deque` obiektu.|  
+|[operator< (deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)|Określa, czy `deque` obiekt jest mniejszy niż innego `deque` obiektu.|  
+|[operator<= (deque) (STL/CLR)](../dotnet/operator-less-or-equal-deque-stl-clr.md)|Określa, czy `deque` obiekt jest mniejszy niż lub równy do innego `deque` obiektu.|  
+|[operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[operator== (deque) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)|Określa, czy `deque` obiekt jest taki sam do innego `deque` obiektu.|  
+|[operator> (deque) (STL/CLR)](../dotnet/operator-greater-than-deque-stl-clr.md)|Określa, czy `deque` obiekt jest większy niż innego `deque` obiektu.|  
+|[operator>= (deque) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)|Określa, czy `deque` obiektu jest większa lub równa innej `deque` obiektu.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -144,4 +147,4 @@ template<typename Value>
  [kolejki (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [stos (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [Wektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

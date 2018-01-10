@@ -52,11 +52,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4eb4bbd2888b0da8fb1c8431cfb7150ed468d86d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e9bfbad40112632642a0e0a4698e48a19cc334c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 Drukowanie sformatowanych danych do strumienia.  
@@ -187,4 +188,4 @@ this is a string
  [_cprintf_p —, _cprintf_p_l —, _cwprintf_p — _cwprintf_p_l —](../../c-runtime-library/reference/cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)   
  [_cprintf_s —, _cprintf_s_l —, _cwprintf_s — _cwprintf_s_l —](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)   
  [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md)   
- [fscanf_s —, _fscanf_s_l —, fwscanf_s — _fwscanf_s_l —](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)
+ [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)

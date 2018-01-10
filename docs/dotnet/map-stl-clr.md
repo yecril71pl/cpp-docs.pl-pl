@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b6e535dac08e473e281f45e45a084d856c931b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c90fcb415b186257cd2aef801867918b367413b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `map` do zarządzania sekwencję elementów jako drzewo uporządkowanej zrównoważony (prawie) węzły, każdy przechowywania jeden element. Element składa się z kluczem porządkowania sekwencji i zmapowane wartość, która dotyczy jazdy.  
@@ -78,7 +81,7 @@ template<typename Key,
 |[map::key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)|Delegat porządkowania dla dwa klucze.|  
 |[map::key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)|Typ klucza sortowania.|  
 |[map::mapped_type (STL/CLR)](../dotnet/map-mapped-type-stl-clr.md)|Typ zamapowanych wartość skojarzoną z każdego klucza.|  
-|[map::Reference (STL/CLR)](../dotnet/map-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[map::reference (STL/CLR)](../dotnet/map-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[map::reverse_iterator (STL/CLR)](../dotnet/map-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
 |[map::size_type (STL/CLR)](../dotnet/map-size-type-stl-clr.md)|Typ (nieujemną) odległość między dwoma elementami.|  
 |[map::value_compare (STL/CLR)](../dotnet/map-value-compare-stl-clr.md)|Delegat porządkowania dla dwóch wartości elementu.|  
@@ -86,15 +89,15 @@ template<typename Key,
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[map::BEGIN (STL/CLR)](../dotnet/map-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
-|[map::Clear (STL/CLR)](../dotnet/map-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
-|[map::Count (STL/CLR)](../dotnet/map-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
-|[map::EMPTY (STL/CLR)](../dotnet/map-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[map::begin (STL/CLR)](../dotnet/map-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[map::clear (STL/CLR)](../dotnet/map-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
+|[map::count (STL/CLR)](../dotnet/map-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
+|[map::empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
 |[map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
 |[map::equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|  
-|[map::ERASE (STL/CLR)](../dotnet/map-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[map::Find (STL/CLR)](../dotnet/map-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
-|[map::INSERT (STL/CLR)](../dotnet/map-insert-stl-clr.md)|Dodaje elementy.|  
+|[map::erase (STL/CLR)](../dotnet/map-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
+|[map::find (STL/CLR)](../dotnet/map-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
+|[map::insert (STL/CLR)](../dotnet/map-insert-stl-clr.md)|Dodaje elementy.|  
 |[map::key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)|Kopiuje porządkowania delegowanie dla dwa klucze.|  
 |[map::lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)|Wyszukuje początek zakresu, który jest zgodny z określonym kluczem.|  
 |[map::make_value (STL/CLR)](../dotnet/map-make-value-stl-clr.md)|Tworzy obiekt wartość.|  
@@ -109,14 +112,14 @@ template<typename Key,
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[map::operator = (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[map::operator= (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
 |[map::operator(STL/CLR)](../dotnet/map-operator-stl-clr.md)|Mapuje klucz, do jej powiązaną wartość mapowane.|  
-|[Operator! = (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)|Określa, czy `map` obiekt nie jest równa innej `map` obiektu.|  
-|[Operator < (map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)|Określa, czy `map` obiekt jest mniejszy niż innego `map` obiektu.|  
-|[Operator < = (map) (STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)|Określa, czy `map` obiekt jest mniejszy niż lub równy do innego `map` obiektu.|  
-|[Operator == (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)|Określa, czy `map` obiekt jest taki sam do innego `map` obiektu.|  
-|[operator > (map) (STL/CLR)](../dotnet/operator-greater-than-map-stl-clr.md)|Określa, czy `map` obiekt jest większy niż innego `map` obiektu.|  
-|[operator > = (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)|Określa, czy `map` obiektu jest większa lub równa innej `map` obiektu.|  
+|[operator!= (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)|Określa, czy `map` obiekt nie jest równa innej `map` obiektu.|  
+|[operator< (map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)|Określa, czy `map` obiekt jest mniejszy niż innego `map` obiektu.|  
+|[operator<= (map) (STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)|Określa, czy `map` obiekt jest mniejszy niż lub równy do innego `map` obiektu.|  
+|[operator== (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)|Określa, czy `map` obiekt jest taki sam do innego `map` obiektu.|  
+|[operator> (map) (STL/CLR)](../dotnet/operator-greater-than-map-stl-clr.md)|Określa, czy `map` obiekt jest większy niż innego `map` obiektu.|  
+|[operator>= (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)|Określa, czy `map` obiektu jest większa lub równa innej `map` obiektu.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -170,4 +173,4 @@ template<typename Key,
  [mapy](../dotnet/map-stl-clr.md)   
  [Zestaw wielokrotny (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [Ustaw (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

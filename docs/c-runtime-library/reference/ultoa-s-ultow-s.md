@@ -42,11 +42,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7968e8f7eb3d69ec40d0fddab75ec2abee348823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1785204bc6043973fac4eeb490b8e072e3ec4a95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ultoas-ultows"></a>_ultoa_s, _ultow_s
 Konwertuj niepodpisane długich liczb całkowitych na ciąg. Są to wersje [_ultoa —, _ultow —](../../c-runtime-library/reference/ultoa-ultow.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -123,4 +124,4 @@ errno_t _ultow_s(
  [_ultoa —, _ultow —](../../c-runtime-library/reference/ultoa-ultow.md)   
  [_ltoa —, _ltow —](../../c-runtime-library/reference/ltoa-ltow.md)   
  [_ltoa_s —, _ltow_s —](../../c-runtime-library/reference/ltoa-s-ltow-s.md)   
- [_ltoa_s —, _ltow_s —](../../c-runtime-library/reference/ltoa-s-ltow-s.md)
+ [_ltoa_s, _ltow_s](../../c-runtime-library/reference/ltoa-s-ltow-s.md)

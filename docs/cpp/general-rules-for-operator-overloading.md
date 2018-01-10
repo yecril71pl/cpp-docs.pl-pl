@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92bcbc85a3edf683d00818a4c1da76849dbc29cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 199db318eb847687d10044e0376b70c8d6d44feb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-rules-for-operator-overloading"></a>Zasady ogólne dotyczące przeciążania operatorów
 Następujące reguły ograniczają sposób implementacji przeciążonych operatorów. Jednak nie dotyczą one [nowe](../cpp/new-operator-cpp.md) i [usunąć](../cpp/delete-operator-cpp.md) operatory, które są przedstawione oddzielnie.  
@@ -27,7 +28,7 @@ Następujące reguły ograniczają sposób implementacji przeciążonych operato
   
 -   Nie można ponownie zdefiniować znaczenia operatorów po zastosowaniu wbudowanych typów danych.  
   
--   Przeciążone operatory muszą być niestatyczną funkcją członkowską klasy lub funkcją globalną. Funkcja globalna, która wymaga dostępu do prywatnych lub chronionych elementów członkowskich klasy musi być zadeklarowana jako zaprzyjaźniona z tą klasą. Funkcja globalna musi mieć przynajmniej jeden argument klasy lub typu wyliczeniowego lub odwołanie do klasy lub typu wyliczeniowego. Na przykład:  
+-   Przeciążone operatory muszą być niestatyczną funkcją składową klasy lub funkcją globalną. Funkcja globalna, która wymaga dostępu do prywatnych lub chronionych składowych, klasy musi być zadeklarowana jako zaprzyjaźniona z tą klasą. Funkcja globalna musi mieć przynajmniej jeden argument klasy lub typu wyliczeniowego lub odwołanie do klasy lub typu wyliczeniowego. Na przykład:  
   
     ```  
     // rules_for_operator_overloading.cpp  
@@ -60,7 +61,7 @@ Następujące reguły ograniczają sposób implementacji przeciążonych operato
   
 -   Wszystkie przeciążone operatory z wyjątkiem przypisania (`operator=`) są dziedziczone przez klasy pochodne.  
   
--   Pierwszy argument dla przeciążonego operatora funkcji członkowskiej jest zawsze typem klasy obiektu, dla którego operator jest wywoływany (klasy, w której operator jest zadeklarowany lub klasa pochodnej dla tej klasy). Konwersje nie są dostarczane dla pierwszego argumentu.  
+-   Pierwszy argument dla przeciążonego operatora funkcji składowej jest zawsze typem klasy obiektu, dla którego operator jest wywoływany (klasy, w której operator jest zadeklarowany lub klasa pochodnej dla tej klasy). Konwersje nie są dostarczane dla pierwszego argumentu.  
   
  Należy zauważyć, że znaczenie któregokolwiek z operatorów może być całkowicie zmienione. Zawiera znaczenie adresu z (**&**), przypisanie (**=**) i operatory wywołania funkcji. Tożsamości, które mogą być powoływane dla wbudowanych typów, mogą być zmienione za pomocą przeciążenia operatora. Na przykład, poniższe cztery instrukcje są zazwyczaj równoważne po całkowitym obliczeniu:  
   

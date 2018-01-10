@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cafab92b157fb0da39471d96a23a69e2ce209e5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9624f08c54629657e7f52c2c688d2083aa557a56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `set` do zarządzania sekwencję elementów jako drzewo uporządkowanej zrównoważony (prawie) węzły, każdy przechowywania jeden element.  
@@ -64,7 +67,7 @@ template<typename Key>
 |[set::iterator (STL/CLR)](../dotnet/set-iterator-stl-clr.md)|Typ iteratora dla kontrolowanej sekwencji.|  
 |[set::key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)|Delegat porządkowania dla dwa klucze.|  
 |[set::key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)|Typ klucza sortowania.|  
-|[set::Reference (STL/CLR)](../dotnet/set-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[set::reference (STL/CLR)](../dotnet/set-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[set::reverse_iterator (STL/CLR)](../dotnet/set-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
 |[set::size_type (STL/CLR)](../dotnet/set-size-type-stl-clr.md)|Typ (nieujemną) odległość między dwoma elementami.|  
 |[set::value_compare (STL/CLR)](../dotnet/set-value-compare-stl-clr.md)|Delegat porządkowania dla dwóch wartości elementu.|  
@@ -72,15 +75,15 @@ template<typename Key>
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[set::BEGIN (STL/CLR)](../dotnet/set-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
-|[set::Clear (STL/CLR)](../dotnet/set-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
-|[set::Count (STL/CLR)](../dotnet/set-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
-|[set::EMPTY (STL/CLR)](../dotnet/set-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[set::begin (STL/CLR)](../dotnet/set-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[set::clear (STL/CLR)](../dotnet/set-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
+|[set::count (STL/CLR)](../dotnet/set-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
+|[set::empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
 |[set::end (STL/CLR)](../dotnet/set-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
 |[set::equal_range (STL/CLR)](../dotnet/set-equal-range-stl-clr.md)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|  
-|[set::ERASE (STL/CLR)](../dotnet/set-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[set::Find (STL/CLR)](../dotnet/set-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
-|[set::INSERT (STL/CLR)](../dotnet/set-insert-stl-clr.md)|Dodaje elementy.|  
+|[set::erase (STL/CLR)](../dotnet/set-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
+|[set::find (STL/CLR)](../dotnet/set-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
+|[set::insert (STL/CLR)](../dotnet/set-insert-stl-clr.md)|Dodaje elementy.|  
 |[set::key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)|Kopiuje porządkowania delegowanie dla dwa klucze.|  
 |[set::lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md)|Wyszukuje początek zakresu, który jest zgodny z określonym kluczem.|  
 |[set::make_value (STL/CLR)](../dotnet/set-make-value-stl-clr.md)|Tworzy obiekt wartość.|  
@@ -95,13 +98,13 @@ template<typename Key>
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[set::operator = (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
-|[Operator! = (set) (STL/CLR)](../dotnet/operator-inequality-set-stl-clr.md)|Określa, czy `set` obiekt nie jest równa innej `set` obiektu.|  
-|[Operator < (set) (STL/CLR)](../dotnet/operator-less-than-set-stl-clr.md)|Określa, czy `set` obiekt jest mniejszy niż innego `set` obiektu.|  
-|[Operator < = (set) (STL/CLR)](../dotnet/operator-less-or-equal-set-stl-clr.md)|Określa, czy `set` obiekt jest mniejszy niż lub równy do innego `set` obiektu.|  
-|[Operator == (set) (STL/CLR)](../dotnet/operator-equality-set-stl-clr.md)|Określa, czy `set` obiekt jest taki sam do innego `set` obiektu.|  
-|[operator > (set) (STL/CLR)](../dotnet/operator-greater-than-set-stl-clr.md)|Określa, czy `set` obiekt jest większy niż innego `set` obiektu.|  
-|[operator > = (set) (STL/CLR)](../dotnet/operator-greater-or-equal-set-stl-clr.md)|Określa, czy `set` obiektu jest większa lub równa innej `set` obiektu.|  
+|[set::operator= (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[operator!= (set) (STL/CLR)](../dotnet/operator-inequality-set-stl-clr.md)|Określa, czy `set` obiekt nie jest równa innej `set` obiektu.|  
+|[operator< (set) (STL/CLR)](../dotnet/operator-less-than-set-stl-clr.md)|Określa, czy `set` obiekt jest mniejszy niż innego `set` obiektu.|  
+|[operator<= (set) (STL/CLR)](../dotnet/operator-less-or-equal-set-stl-clr.md)|Określa, czy `set` obiekt jest mniejszy niż lub równy do innego `set` obiektu.|  
+|[operator== (set) (STL/CLR)](../dotnet/operator-equality-set-stl-clr.md)|Określa, czy `set` obiekt jest taki sam do innego `set` obiektu.|  
+|[operator> (set) (STL/CLR)](../dotnet/operator-greater-than-set-stl-clr.md)|Określa, czy `set` obiekt jest większy niż innego `set` obiektu.|  
+|[operator>= (set) (STL/CLR)](../dotnet/operator-greater-or-equal-set-stl-clr.md)|Określa, czy `set` obiektu jest większa lub równa innej `set` obiektu.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -154,4 +157,4 @@ template<typename Key>
  [mapy (STL/CLR)](../dotnet/map-stl-clr.md)   
  [zestaw](../dotnet/set-stl-clr.md)   
  [zestaw](../dotnet/set-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

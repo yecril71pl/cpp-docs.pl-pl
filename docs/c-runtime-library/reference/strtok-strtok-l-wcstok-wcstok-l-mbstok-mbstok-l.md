@@ -56,11 +56,12 @@ caps.latest.revision: "34"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e41fb5edc039b1d1bb98bfee48a234c9d4c8f62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa20ca680481ffce009a362bf0f4b21923ef572d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 Znajduje następny token w ciągu, używając bieżących ustawień regionalnych lub określone ustawienia regionalne, który jest przekazywany w. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [strtok_s —, _strtok_s_l —, wcstok_s —, _wcstok_s_l —, _mbstok_s —, _mbstok_s_l —](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).  
@@ -184,4 +185,4 @@ Tokens:
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [strcspn —, wcscspn —, _mbscspn — _mbscspn_l —](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strspn —, wcsspn —, _mbsspn — _mbsspn_l —](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

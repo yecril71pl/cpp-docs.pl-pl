@@ -21,11 +21,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5189794a8f9c1aa44d46a5580fbfa177f15f7b53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8ebd53b8b39fb94e4275f5052a74f77bf71bd790
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="consumer-wizard-generated-classes"></a>Klasy konsumentów generowane przez kreatora
 Gdy używasz OLE DB Kreator konsumenta ATL do wygenerowania z klientem, użytkownik może przy użyciu atrybutów szablony OLE DB lub OLE DB. W obu przypadkach kreator generuje klasę polecenie i klasy rekordu użytkownika. Klasa polecenia zawiera kod, aby otworzyć źródła danych i zestawu wierszy określone w kreatorze. Klasa rekordu użytkownika zawiera mapy kolumny dla wybranej tabeli bazy danych. Jednak wygenerowany kod różni się w każdym przypadku:  
@@ -187,4 +190,4 @@ class CProducts : public CCommand<CAccessor<_CProductsAccessor> >
  Aby uzyskać informacje o wyświetlaniu wprowadzony kod, zobacz [debugowania wstrzyknięcie kodu](/visualstudio/debugger/how-to-debug-injected-code).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie konsumenta OLE DB przy użyciu Kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+ [Tworzenie konsumenta OLE DB przy użyciu kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

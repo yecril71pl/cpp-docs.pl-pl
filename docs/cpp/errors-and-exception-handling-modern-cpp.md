@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab5b54c820095b54be28a5868505d07f9b0e39d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b1ee1c7307f4e19db4ca0b7d03e218b0916538c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Błędy w obsłudze wyjątków (Modern C++)
 W nowoczesnych wersji języka C++, w większości przypadków preferowany sposób raportu i obsługiwać zarówno błędów logicznych i błędów czasu wykonywania jest używać wyjątków. Dotyczy to zwłaszcza stosu może zawierać kilka wywołania funkcji między funkcję, która wykrywa błąd i funkcji, która ma kontekstu wiedzieć, jak je obsłużyć. Wyjątki umożliwiają formalne, dobrze zdefiniowany kod, który wykryje błędy do przekazywania informacji w górę stosu wywołań.  

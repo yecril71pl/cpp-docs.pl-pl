@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e347683a079227226513ce82f9623860e826228
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5bf7d2b1708e74d50adb417f531c741a467ed889
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: konfigurowanie źródła danych ODBC
 Aby użyć [źródła danych](../../data/odbc/data-source-odbc.md) z aplikacją korzystasz, należy użyć konta administratora ODBC ją skonfigurować. ODBC Administrator przechowuje informacje o dostępnych źródeł danych i parametry połączenia w rejestrze systemu Windows. Administrator ODBC używana do dodawania, modyfikowania i usuwania źródeł danych w **źródeł danych** okno dialogowe i do dodawania i usuwania sterowników ODBC.  
@@ -35,4 +38,4 @@ Aby użyć [źródła danych](../../data/odbc/data-source-odbc.md) z aplikacją 
   
 ## <a name="see-also"></a>Zobacz też  
  [Podstawy ODBC](../../data/odbc/odbc-basics.md)   
- [ODBC: Bezpośrednie wywoływanie funkcji ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
+ [ODBC: bezpośrednie wywoływanie funkcji ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

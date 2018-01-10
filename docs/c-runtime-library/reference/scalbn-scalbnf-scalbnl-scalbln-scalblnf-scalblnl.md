@@ -47,11 +47,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4c447569279f57226b44b79b3fd22f60c2a30e70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ef24a46d7152934351fddf4be6b58392ce0a0ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 Mnoży liczba zmiennoprzecinkowa przez całkowitą potęgą liczby flt_radix —.  
@@ -154,4 +155,4 @@ int main( void )
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [frexp —](../../c-runtime-library/reference/frexp.md)   
  [ldexp —](../../c-runtime-library/reference/ldexp.md)   
- [modf —, modff —, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)
+ [modf, modff, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)

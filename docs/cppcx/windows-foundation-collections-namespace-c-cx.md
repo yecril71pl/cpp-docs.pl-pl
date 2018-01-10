@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ed7868a1f9c0f5d163928c85a09577b9d6db2f37
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd6a2440ea5f3ad708fcd6f569e701e2f47f74a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections Namespace (C + +/ CX)
 C + +/ CX uzupełniają Windows::Foundation::Collections przestrzeni nazw z funkcjami, które upraszczają przy użyciu klasy kolekcji wektora, VectorView mapy i MapView.  
@@ -39,10 +40,10 @@ namespace Windows {
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[back_inserter — funkcja](../cppcx/back-inserter-function.md)|Zwraca iterację, który może służyć do wstawienia wartości na końcu kolekcji.|  
-|[BEGIN — funkcja](../cppcx/begin-function.md)|Zwraca iteratora tego na początku kolekcji.|  
-|[End — funkcja](../cppcx/end-function.md)|Zwraca iteratora tego punkty za końcem kolekcji.|  
-|[to_vector — funkcja](../cppcx/to-vector-function.md)|Zwraca kolekcję jako std::vector.|  
+|[back_inserter, funkcja](../cppcx/back-inserter-function.md)|Zwraca iterację, który może służyć do wstawienia wartości na końcu kolekcji.|  
+|[begin, funkcja](../cppcx/begin-function.md)|Zwraca iteratora tego na początku kolekcji.|  
+|[end, funkcja](../cppcx/end-function.md)|Zwraca iteratora tego punkty za końcem kolekcji.|  
+|[to_vector, funkcja](../cppcx/to-vector-function.md)|Zwraca kolekcję jako std::vector.|  
   
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** collection.h  

@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 15fd185e085af9ffe58976b6c2859e905cccff6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4392125d1834f31b02e4087644f8b8a06ad238f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-classes-and-structs-ccx"></a>Wartość klas i struktur (C + +/ CX)
 A *struktury wartość* lub *klasę wartości* jest systemu Windows POD zgodnego środowiska uruchomieniowego ("zwykły starych danych struktury"). Ma stały rozmiar i składa się z pól. w odróżnieniu od klasy ref go nie ma właściwości.  
@@ -159,4 +160,4 @@ public:
  [System typów (C + +/ CX)](../cppcx/type-system-c-cx.md)   
  [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)   
- [REF klas i struktur (C + +/ CX)](../cppcx/ref-classes-and-structs-c-cx.md)
+ [Klasy i struktury odwołania (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

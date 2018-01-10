@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b5e744d80e0f95f6938a19ed31f403be5728fd0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 87cdf5def79ed212ba90fe2737309f12b0f1e687
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caccessorrowsetbind"></a>CAccessorRowset::Bind
 Tworzy powiązań, jeśli określono **bBind** jako wartość false w [CCommand::Open](../../data/oledb/ccommand-open.md).  
@@ -41,4 +44,4 @@ HRESULT Bind( );
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Caccessorrowset — klasa](../../data/oledb/caccessorrowset-class.md)
+ [CAccessorRowset, klasa](../../data/oledb/caccessorrowset-class.md)

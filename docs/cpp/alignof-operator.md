@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 94940b15e185866d8f24a20c417e730c52b8502c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50a8d6e524847d46d62b5f1da134332f35edcf92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignof-operator"></a>Operator __alignof
 Wprowadza c ++ 11 `alignof` operator, który zwraca wyrównania w bajtach określonego typu. Przenośności maksymalna należy użyć operatora alignof zamiast operator __alignof specyficzne dla firmy Microsoft.  
@@ -97,7 +98,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
  Aby uzyskać więcej informacji na temat różnic w wyrównania w kodzie x86 i x64 zobacz:  
   
--   [Powoduje konflikt z x86 kompilatora](../build/conflicts-with-the-x86-compiler.md)  
+-   [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)  
   
 **KOŃCOWY określonych firmy Microsoft**  
   

@@ -19,11 +19,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bae9c7d8e50ca12767e5baed436912f04daafd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: eaefb5f3ed8bd0c586e42527d47918dbb0dd5a57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-access-in-visual-c"></a>Dostęp do danych w programie Visual C++
 
@@ -46,7 +49,7 @@ Ponieważ 2011 Microsoft ma dostosowane ODBC jako standardowe rozwiązanie dla n
 
 [13.1 sterownika ODBC dla programu SQL Server — wydania systemu Windows](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server) najnowszy sterownik ODBC zapewnia dostęp do danych niezawodne do firmy Microsoft SQL Server 2016 Microsoft Azure bazy danych SQL dla aplikacji opartych na języku C/C++. Zapewnia obsługę funkcji, w tym zawsze zaszyfrowane, Azure Active Directory i zawsze włączone grupy dostępności. Również dostępne dla MacOS i Linux.     
  
-[SQL Server Native Client](https://msdn.microsoft.com/library/ms130892.aspx) SQL Server Native Client jest danych autonomicznej dostępu interfejsu programowania aplikacji (API), używana dla OLE DB i ODBC, która obsługuje program SQL Server 2005 za pomocą programu SQL Server 2014. Nowe aplikacje powinny używać 13.1 sterownika ODBC dla programu SQL Server.
+[SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming) SQL Server Native Client jest danych autonomicznej dostępu interfejsu programowania aplikacji (API), używana dla OLE DB i ODBC, która obsługuje program SQL Server 2005 za pomocą programu SQL Server 2014. Nowe aplikacje powinny używać 13.1 sterownika ODBC dla programu SQL Server.
 
 [Microsoft Azure C i C++ w Centrum deweloperów](https://azure.microsoft.com/develop/cpp/) Azure ułatwia tworzenie aplikacji C++ z większą elastyczność, skalowalność i niezawodność przy użyciu narzędzia do siebie.    
 

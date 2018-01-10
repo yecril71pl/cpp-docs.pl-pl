@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce62a6ad0f0cb36678de0756d77155769393f760
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e507c2b7c05f9ea818f55b10d222592fe0172cc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifiers-in-primary-expressions"></a>Identyfikatory w wyrażeniach podstawowych
 Identyfikatory mogą mieć typu całkowitego, **float**, `enum`, `struct`, **Unii**, tablica wskaźnika lub typ funkcji. Identyfikator jest podstawowym wyrażenie pod warunkiem, że jej został zadeklarowany jako wyznaczenie obiektu (w takim przypadku jest wartością l-value) lub funkcji (w takim przypadku jest oznaczeniem funkcji). Zobacz [wartości L i r wyrażenia](../c-language/l-value-and-r-value-expressions.md) definicję l wartość.  

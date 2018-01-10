@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb286e837d06ca12ebffa22d15ff9c534d815e83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1a7960780f1f83833e25c9a094a36314a299a042
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Wyświetlanie danych w formularzu i operowanie nimi
 Wiele aplikacji dostęp do danych wybierz dane i wyświetl ją w polach w formularzu. Klasy bazy danych [CRecordView](../../mfc/reference/crecordview-class.md) daje [CFormView](../../mfc/reference/cformview-class.md) obiektu podłączone bezpośrednio do obiektu zestawu rekordów. Używa widoku rekordu [wymiana danych okna dialogowego (DDX)](../../mfc/dialog-data-exchange-and-validation.md) Przenieś wartości pól bieżącego rekordu w zestawie do formantów w formularzu i przenieść zaktualizowane informacje z powrotem do zestawu rekordów. Zestaw rekordów, z kolei używa wymiana pól rekordów (RFX) aby przenoszenie danych między jego elementy członkowskie danych pola i odpowiednie kolumny w tabeli w źródle danych.  

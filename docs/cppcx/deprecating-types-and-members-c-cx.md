@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 0fbed1c29feccc6a999545daab6be8bd9ccfc7f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d743d63e46b20ab043173f0f5d353a2331a0e9c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Wycofano typy i składniki (C + +/ CX)
 W języku C + +/ CX, amortyzacja typów środowiska wykonawczego systemu Windows i elementów członkowskich, producenci i konsumenci przy użyciu [przestarzały](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atrybut jest obsługiwany. Możesz korzystać z interfejsu API, do których zastosowano ten atrybut, otrzymasz komunikat ostrzegawczy kompilacji, który wskazuje, że interfejs API jest przestarzały i zaleca także alternatywne API do użycia. Własne typy publiczne i metody można zastosować ten atrybut i podaj własnego niestandardowego komunikatu.  

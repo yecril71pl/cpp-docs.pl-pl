@@ -44,11 +44,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9554272eda10c77dcbb464904897f47729b45f44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 112e5b6c29f73cb162a1d417fb23842fafc80ff9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 Skopiuj czas w buforze. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_strtime_s —, _wstrtime_s —](../../c-runtime-library/reference/strtime-s-wstrtime-s.md).  
@@ -131,4 +132,4 @@ The current time is 14:21:44
  [czas lokalny, _localtime32 —, _localtime64 —](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [mktime —, _mktime32 —, _mktime64 —](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
  [czas, _time32 —, _time64 —](../../c-runtime-library/reference/time-time32-time64.md)   
- [_tzset —](../../c-runtime-library/reference/tzset.md)
+ [_tzset](../../c-runtime-library/reference/tzset.md)

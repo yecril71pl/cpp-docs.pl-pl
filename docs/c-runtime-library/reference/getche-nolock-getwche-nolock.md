@@ -44,11 +44,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f687d05ec1d9f4f41ab92d4a48cd321d7b70e53a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa9406f88ef7cc0a4b1e3079946f3ea05372eddb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getchenolock-getwchenolock"></a>_getche_nolock, _getwche_nolock
 Pobiera znak z poziomu konsoli z echa i bez blokowania wątku.  
@@ -124,4 +125,4 @@ Type 'Y' when finished typing keys: abcdefyY
  [We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)   
  [_cgets —, _cgetws —](../../c-runtime-library/cgets-cgetws.md)   
  [getc —, getwc —](../../c-runtime-library/reference/getc-getwc.md)   
- [_ungetch —, _ungetwch —, _ungetch_nolock — _ungetwch_nolock —](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
+ [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)

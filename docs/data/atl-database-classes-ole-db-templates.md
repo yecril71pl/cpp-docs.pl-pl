@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 711ddfb76ea9e8be2420ea9a9a31af4cfb5f6c93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ca7607c037cdb1f6a42a2267d64ef274d1041cb2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Klasy baz danych ATL (Szablony OLE DB)
 Firma Microsoft udostępnia kilka implementacje OLE DB, zestaw interfejsów modelu COM, które umożliwiają uniform dostęp do danych w formatach i informacje o różnych źródeł.  OLE DB oficjalnie jest przestarzały; Niniejsza dokumentacja jest dla deweloperów, którzy są utrzymywanie starszej wersji kodu. Nowe aplikacje powinny używać ODBC do łączenia się ze źródłami danych SQL.
@@ -38,7 +41,7 @@ Firma Microsoft udostępnia kilka implementacje OLE DB, zestaw interfejsów mode
   
  Należy pamiętać, że biblioteka MFC zawiera jedną klasę [coledbrecordview —](../mfc/reference/coledbrecordview-class.md), który wyświetla w formantach rekordów bazy danych. Widok jest widokiem formularza bezpośrednio podłączone do `CRowset` obiektu i są wyświetlane pola `CRowset` obiektu w formantach szablonu okna dialogowego.  
   
- Aby uzyskać więcej informacji, zobacz [OLE DB programowania](../data/oledb/ole-db-programming.md) i [OLE DB przewodnik](http://go.microsoft.com/fwlink/?linkid=121548).  
+ Aby uzyskać więcej informacji, zobacz [OLE DB programowania](../data/oledb/ole-db-programming.md) i [OLE DB przewodnik](http://go.microsoft.com/fwlink/p/?linkid=121548).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie konsumenta OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   

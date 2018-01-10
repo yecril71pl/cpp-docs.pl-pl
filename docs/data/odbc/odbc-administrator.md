@@ -22,11 +22,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 834825b38eb8d5c81752dfed85f44202fbce3299
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4a7d60f11457e509ae67da83aa6bc589af1ce43a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-administrator"></a>Administrator ODBC
 ODBC Administrator rejestruje i konfiguruje [źródeł danych](../../data/odbc/data-source-odbc.md) dostępne lokalnie lub w sieci. Kreatorzy Użyj informacji dostarczonych przez administratora ODBC, aby utworzyć kod w aplikacjach, które łączy użytkowników ze źródłami danych.  
@@ -61,4 +64,4 @@ ODBC Administrator rejestruje i konfiguruje [źródeł danych](../../data/odbc/d
   
 ## <a name="see-also"></a>Zobacz też  
  [Otwórz połączenie z bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
- [Źródła danych (ODBC)](../../data/odbc/data-source-odbc.md)
+ [Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md)

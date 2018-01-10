@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 271dee456d47f9ef6286b4a9543583145f69bc41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7aec0e5aedb2d17e7d22b4f480eaef2be26413fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-atexit"></a>Używanie funkcji atexit
 Z [atexit —](../c-runtime-library/reference/atexit.md) funkcji, można określić funkcji przetwarzania zakończenia, która wykonuje przed Kończenie działania programu. Nie statycznych obiektów globalnych zainicjowany przed wywołaniem do `atexit` zostaną zniszczone przed wykonywanie funkcji przetwarzania zakończenia.  

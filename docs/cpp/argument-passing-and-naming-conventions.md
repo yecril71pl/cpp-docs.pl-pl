@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b9b72da1cb8da3a74334b09e4e3b99cc3cad3789
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d57afcd518455ffb836e4d724a68b7d3e5682d6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Przekazywanie argumentów i konwencje nazewnictwa
 **Dotyczące firmy Microsoft**  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
 |[__clrcall](../cpp/clrcall.md)|n/d|Załadować parametrów na stosie wyrażenie CLR w kolejności (od lewej do prawej).|  
 |[__stdcall](../cpp/stdcall.md)|wywoływany|Wypchnięcia parametrów na stosie, w kolejności odwrotnej (od prawej do lewej)|  
 |[__fastcall](../cpp/fastcall.md)|wywoływany|Przechowywane w rejestrach, następnie wypychana na stosie|  
-|[Konwencja __thiscall](../cpp/thiscall.md)|wywoływany|Wypychana na stosie; **to** przechowywane w ECX wskaźnika|  
+|[__thiscall](../cpp/thiscall.md)|wywoływany|Wypychana na stosie; **to** przechowywane w ECX wskaźnika|  
 |[__vectorcall](../cpp/vectorcall.md)|wywoływany|Przechowywane w rejestrach, następnie wypychana na stosie w odwrotnej kolejności (od prawej do lewej)|  
   
  Aby uzyskać odpowiednie informacje, zobacz [przestarzałe Konwencje wywoływania](../cpp/obsolete-calling-conventions.md).  

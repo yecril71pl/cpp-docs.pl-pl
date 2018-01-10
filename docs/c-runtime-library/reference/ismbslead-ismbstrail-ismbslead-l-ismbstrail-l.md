@@ -51,11 +51,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c895deff6a855a6ccc19f9816d359476907c2f22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af774ccf790c258e1b0bc6bc5f8509eb4537607d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 Wykonuje testy kontekstowa bajtów realizacji ciągu w przypadku znaków wielobajtowych i ślad bajtów i określa, czy wskaźnik danego podciągu wskazuje bajtu lub bajt.  
@@ -121,4 +122,4 @@ int _ismbstrail_l(
  [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)   
  [_ismbc — procedury](../../c-runtime-library/ismbc-routines.md)   
  [jest isw — procedury](../../c-runtime-library/is-isw-routines.md)   
- [_ismbb — procedury](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)

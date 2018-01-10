@@ -117,11 +117,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 18cfdda310149c18ef8983b10afb5c901b256510
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed4a232cc5d563a724adf29500e70aa28cf36432
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32 —, _stat64 —, _stati64 —, _stat32i64 —, _stat64i32 —, _wstat —, _wstat32 —, _wstat64 —, _wstati64 —, _wstat32i64 —, _wstat64i32 —
 Pobierz informacje o stanie pliku.  
@@ -344,4 +345,4 @@ Time modified : Thu Feb 07 14:39:36 2002
  [_access —, _waccess —](../../c-runtime-library/reference/access-waccess.md)   
  [_fstat —, _fstat32 —, _fstat64 —, _fstati64 — _fstat32i64 —, _fstat64i32 —](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
  [_getmbcp —](../../c-runtime-library/reference/getmbcp.md)   
- [_setmbcp —](../../c-runtime-library/reference/setmbcp.md)
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)

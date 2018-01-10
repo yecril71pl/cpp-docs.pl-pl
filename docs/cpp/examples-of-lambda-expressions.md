@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 552452d7da81836c5f88ad98b5168d6ceee47bf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="examples-of-lambda-expressions"></a>Przykłady wyrażeń lambda
 W tym artykule przedstawiono sposób stosowania wyrażeń lambda w programach. Aby zapoznać się z omówieniem wyrażeń lambda, zobacz [wyrażenia Lambda](../cpp/lambda-expressions-in-cpp.md). Aby uzyskać więcej informacji o strukturze wyrażenia lambda, zobacz [składnia wyrażenia Lambda](../cpp/lambda-expression-syntax.md).  
@@ -528,4 +529,4 @@ Hello!
  [Wywołania funkcji](../cpp/function-call-cpp.md)   
  [Szablony](../cpp/templates-cpp.md)   
  [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

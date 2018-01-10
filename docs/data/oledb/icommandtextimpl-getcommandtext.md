@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df72d8d6e5c3c5c85d1216bf321216aef515a1d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b24afdf4bddd30ca2644edb1c7970a193251bdb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandtextimplgetcommandtext"></a>ICommandTextImpl::GetCommandText
 Zwraca tekst polecenia ustawione przez ostatnie wywołanie [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).  
@@ -44,4 +47,4 @@ Zwraca tekst polecenia ustawione przez ostatnie wywołanie [SetCommandText](../.
  **Nagłówek:** atldb.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Icommandtextimpl — klasa](../../data/oledb/icommandtextimpl-class.md)
+ [ICommandTextImpl, klasa](../../data/oledb/icommandtextimpl-class.md)

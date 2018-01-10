@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27fa09fa79280c6fa9207ddfc4bb1228f7801434
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c11664b5a7089187099898fa375cd612e92a83b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assignment"></a>Przypisanie
 Operator przypisania (**=**) jest mówiąc ściślej, operator binarny. Jego deklaracji jest taki sam jak inne operatora binarnego, z następującymi wyjątkami:  

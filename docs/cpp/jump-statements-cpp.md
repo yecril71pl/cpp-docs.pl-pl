@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0765fd9fac779893edafe745c73d44df3a2c1487
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84fb6cf5b1710389bbe0f2065a3d8f46606656a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="jump-statements-c"></a>Instrukcje skoku (C++)
 Instrukcja skok C++ wykonuje natychmiastowego lokalnego przekazanie sterowania.  
@@ -35,11 +36,11 @@ goto identifier;
 ## <a name="remarks"></a>Uwagi  
  Zobacz poniższe tematy zawierają opis instrukcji skok C++.  
   
--   [Instrukcja BREAK](../cpp/break-statement-cpp.md)  
+-   [break, instrukcja](../cpp/break-statement-cpp.md)  
   
--   [Continue — instrukcja](../cpp/continue-statement-cpp.md)  
+-   [continue, instrukcja](../cpp/continue-statement-cpp.md)  
   
--   [Return — instrukcja](../cpp/return-statement-cpp.md)  
+-   [return, instrukcja](../cpp/return-statement-cpp.md)  
   
 -   [goto — instrukcja](../cpp/goto-statement-cpp.md)  
   

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36abe3a63515dcb3b8f07ce5d0d169329ed5f7ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c551ed3a6befbf646394929a6bcc6406ea93b19f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="fatal-error-c1060"></a>Błąd krytyczny C1060
 za mało miejsca na stercie dla kompilatora  
@@ -34,7 +35,7 @@ za mało miejsca na stercie dla kompilatora
   
 2.  Jeśli kompilacja na platformie 64-bitowych, należy użyć zestawu narzędzi kompilatora 64-bitowych. Aby uzyskać informacje, zobacz [porady: Włączanie 64-bitowych Visual C++ narzędzi w wierszu polecenia](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
   
-3.  W 32-bitowego systemu Windows, spróbuj użyć [3 GB](http://go.microsoft.com/fwlink/?LinkId=177831) boot.ini przełącznika.  
+3.  W 32-bitowego systemu Windows, spróbuj użyć [3 GB](http://go.microsoft.com/fwlink/p/?linkid=177831) boot.ini przełącznika.  
   
 4.  Zwiększ rozmiar pliku wymiany systemu Windows.  
   

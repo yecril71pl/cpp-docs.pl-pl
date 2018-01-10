@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 168b9a8e73ea1c9c365ba87b2b8900e710de8bcc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0382c114975733b07616b697b709a297bef9ec48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iopenrowsetimplopenrowset"></a>IOpenRowsetImpl::OpenRowset
 Otwiera i zwraca zestaw wierszy, która obejmuje wszystkie wiersze z jednej tabeli podstawowej lub indeks.  
@@ -52,4 +55,4 @@ Otwiera i zwraca zestaw wierszy, która obejmuje wszystkie wiersze z jednej tabe
  **Nagłówek:** atldb.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Iopenrowsetimpl — klasa](../../data/oledb/iopenrowsetimpl-class.md)
+ [IOpenRowsetImpl, klasa](../../data/oledb/iopenrowsetimpl-class.md)

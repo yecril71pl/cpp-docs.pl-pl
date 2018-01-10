@@ -33,11 +33,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: da756da1c9657af851a3b457a2c2b7e6ab83244c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 018fb7fdce1aeb2a69ac2e6381df1c0da24036a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msizedbg"></a>_msize_dbg
 Oblicza rozmiar bloku pamięci sterty (tylko wersja do debugowania).  
@@ -141,4 +142,4 @@ Size of block after _realloc_dbg of 40 more longs: 320
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
- [_malloc_dbg —](../../c-runtime-library/reference/malloc-dbg.md)
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)

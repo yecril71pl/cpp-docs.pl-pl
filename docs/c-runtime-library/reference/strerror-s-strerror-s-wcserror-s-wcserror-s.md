@@ -50,11 +50,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d14c4fd98a9191e8a92d3f24dc24c19de2433e15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2733adb5cfc2328fdc0fb39650f6013c11960b3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 Komunikat o błędzie systemu (`strerror_s`, `_wcserror_s`) lub drukować komunikat dostarczone przez użytkownika (`_strerror_s`, `__wcserror_s`). Są to wersje [strerror —, _strerror —, _wcserror —, \__wcserror —](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -176,4 +177,4 @@ if (( _access( "datafile",2 )) == -1 )
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
  [clearerr —](../../c-runtime-library/reference/clearerr.md)   
  [ferror —](../../c-runtime-library/reference/ferror.md)   
- [perror, _wperror —](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

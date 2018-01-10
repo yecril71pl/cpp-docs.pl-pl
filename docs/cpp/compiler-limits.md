@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e64bedc169fb4737a7e16175099df5571df82ef2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf668ddfa1c2d7e62ca10963827056f9661b83f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-limits"></a>Limity kompilatora
 C++ standard zaleca limity dotyczące konstrukcji języka różne. Poniżej znajduje się lista przypadków, w którym kompilator języka Visual C++ nie implementuje zalecane limity. Pierwsza liczba jest limit, która jest określana w ISO C++ 11 standardowe (INCITS/ISO/IEC 14882 2011 [2012] załącznik B), a druga liczba jest limit implementowane przez Visual C++:  
