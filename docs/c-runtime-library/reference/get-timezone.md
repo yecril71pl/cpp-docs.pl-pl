@@ -34,11 +34,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 46181817aaf455ef777ba479a1bd2abe774ba792
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c83765da12b7e29d3e90037508a3cba4aa6d1ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gettimezone"></a>_get_timezone
 Pobiera różnica w sekundach między uniwersalny czas koordynowany (UTC) i czasem lokalnym.  
@@ -77,4 +78,4 @@ Pobiera różnica w sekundach między uniwersalny czas koordynowany (UTC) i czas
  [errno, _doserrno — _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
  [_get_daylight —](../../c-runtime-library/reference/get-daylight.md)   
  [_get_dstbias —](../../c-runtime-library/reference/get-dstbias.md)   
- [_get_tzname —](../../c-runtime-library/reference/get-tzname.md)
+ [_get_tzname](../../c-runtime-library/reference/get-tzname.md)

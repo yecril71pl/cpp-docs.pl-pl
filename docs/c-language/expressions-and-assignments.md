@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ab58e3e787afa24114c1bbad2713a7ab2e51a99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3465272e2d582c36a16b9a68a165bd6d371055f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-and-assignments"></a>Wyrażenia i przydziały
 W tej sekcji opisano, jak tworzą wyrażeń i przypisywanie wartości w języku C. Stałe, identyfikatory, ciągi i wywołania funkcji są wszystkie argumenty, które są przetwarzane w wyrażeniach. Język C ma wszystkich operatorów zwykle języka. W tej sekcji omówiono te operatory, a także operatory, które są unikatowe dla języka C lub Microsoft C. Tematy omówione obejmują:  

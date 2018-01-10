@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6d7166c0729abed67328b4d47afba3fea65e273c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 116cbfc7d1d3a97b395ee9197ece78cc11fc12fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dd"></a>DD
 Przydziela i opcjonalnie inicjuje wyraz o podwójnej precyzji (4 bajty) magazynu dla każdej `initializer`. `DD`jest synonimem [DWORD](../../assembler/masm/dword.md).  
@@ -34,4 +35,4 @@ Przydziela i opcjonalnie inicjuje wyraz o podwójnej precyzji (4 bajty) magazynu
  Może także służyć jako Specyfikator typu dowolnym typem jest dozwolony.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

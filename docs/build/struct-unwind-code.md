@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40b47b2b04d73c30e6c876199dbd98483490f4f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76059ff24b46fd537db0c2670a30cf3f42ee2166
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="struct-unwindcode"></a>struktura UNWIND_CODE
 Tablica kodu unwind jest używana do rejestrowania sekwencja operacji w prologu, które mają wpływ na nieulotnej rejestrów i źródło. Każdy element kodu ma następujący format:  
@@ -140,4 +141,4 @@ Tablica kodu unwind jest używana do rejestrowania sekwencja operacji w prologu,
 |8 – 15|R8 do R15|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dane operacji unwind dla obsługi wyjątków, obsługa debugera](../build/unwind-data-for-exception-handling-debugger-support.md)
+ [Dane operacji Unwind dla obsługi wyjątków, obsługa debugera](../build/unwind-data-for-exception-handling-debugger-support.md)

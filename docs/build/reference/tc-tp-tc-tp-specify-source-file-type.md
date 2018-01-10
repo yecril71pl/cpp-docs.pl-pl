@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3b7508bf3ff65e27cab3260577d2831de00eb2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69ccd08967d386780744fb85476033430127ba3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Określ typ pliku źródłowego)
 **/TC** opcja określa, że `filename` jest plikiem źródłowym C, nawet jeśli nie ma rozszerzenia .c. **/Tp** opcja określa, że `filename` jest plik źródłowy języka C++, nawet jeśli nie ma rozszerzenia .cpp lub .cxx. Odstęp między opcji i `filename` jest opcjonalna. Każda opcja określa jeden plik; Aby określić dodatkowe pliki, powtórz opcji.  

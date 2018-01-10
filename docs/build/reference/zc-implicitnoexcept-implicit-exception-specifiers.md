@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20789d226ace8ba41a9635f0039274b68d37922c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9af0a7a3a175699a4f4b738271fe0d4c5bbac4b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (niejawne specyfikatory wyjątków)
 Gdy **/Zc: implicitnoexcept** zostanie określona opcja, kompilator dodaje niejawny [noexcept](../../cpp/noexcept-cpp.md) specyfikator wyjątków zdefiniowanych przez kompilator specjalnych funkcji Członkowskich i destruktory zdefiniowane przez użytkownika i deallocators. Domyślnie **/Zc: implicitnoexcept** jest włączona, aby był zgodny ze standardem C ++ 11 ISO. Włączenie tej opcji wyłącza niejawne `noexcept` destruktory zdefiniowane przez użytkownika i dealloacators i zdefiniowanych przez kompilator specjalnych funkcji Członkowskich.  

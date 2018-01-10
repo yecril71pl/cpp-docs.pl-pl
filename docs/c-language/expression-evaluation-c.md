@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21b78b659b4d4cd8f3bb5db849b3c64a5f66f971
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9984444bd7de3144cb1e81ddb527c68531a9d7d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expression-evaluation-c"></a>Szacowanie wyrażeń (C)
 Wyrażeń zawierających przypisania, przyrost jednoargumentowe, dekrementacja jednoargumentowy lub wywołanie funkcji może mieć skutki uboczne ich oceny (efekty uboczne). Po osiągnięciu "punktu sekwencji" wszystko poprzedzających punktu sekwencji, w tym żadnych efektów ubocznych, jest gwarantowane zostało obliczone przed rozpoczęciem oceny na niczego następującego punktu sekwencji.  

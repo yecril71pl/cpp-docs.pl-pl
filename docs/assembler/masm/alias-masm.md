@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 39f539c18ce23fb3ef9630e4bfdfca8f265beb33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59dc4fd5481b22e69153c68e94a81b2887118ebc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 **ALIAS** dyrektywy tworzy alternatywną nazwę funkcji.  Dzięki temu można utworzyć wiele nazw dla funkcji lub bibliotek, które umożliwia konsolidator (LINK.exe) do mapowania funkcji starego nową funkcję.  
@@ -44,4 +45,4 @@ actual-name
  Alternatywną nazwę.  Nawiasy są wymagane.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

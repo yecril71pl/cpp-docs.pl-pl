@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15d37f6adb5d6a5588d9b727ff8ba5adb56dda67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32a3bdd1e227b894ca5a32ddfaa8c46a478a19f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cl-invokes-the-linker"></a>CL wywołuje konsolidator
 CL wywołuje konsolidator automatycznie, po kompilacji, chyba że używana jest opcja /c. CL przekazuje do konsolidator nazwy plików .obj utworzone podczas kompilowania kodu i nazwy inne pliki określone w wierszu polecenia. Konsolidator używa opcji wymienionych w zmiennej środowiskowej łącza. Opcja/Link umożliwia określenie opcji konsolidatora w wierszu polecenia CL. Opcje, które należy wykonać opcji/Link zastępują w zmiennej środowiskowej łącza. W poniższej tabeli przedstawiono opcje Pomiń łączenie.  

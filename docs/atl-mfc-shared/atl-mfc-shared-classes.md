@@ -31,13 +31,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e0910ddf8ec43adab68c5354c0aec596616d8d1
-ms.sourcegitcommit: ce115fcfb20b4fbc198f0f7b6d0ca3e94d7ce947
+ms.workload: cplusplus
+ms.openlocfilehash: 2da6815b1620d855c6850c657a85e539c3e4b3c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="atlmfc-shared-classes"></a>ATL/MFC udostępnionych klas
+# <a name="atlmfc-shared-classes"></a>Klasy współdzielone ATL/MFC
 Te klasy narzędzia mogą być używane w dowolnej natywnego projektu C++ bez konieczności każdej biblioteki DLL MFC.  
   
 ## <a name="in-this-section"></a>W tej sekcji  

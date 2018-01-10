@@ -41,11 +41,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5efcf042932163f1e932a55622f7dddd167b8961
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23ca6fc8c18a7f2f2013ffdeabd70a7eb9fb0057
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Wskazówki dotyczące poprawiania kodu wrażliwego na czas
 Pisanie kodu szybkiego wymaga opis wszystkich aspektów aplikacji i sposób interakcji z systemu. W tym temacie sugeruje alternatywy dla niektórych bardziej oczywistymi technik kodowania w celu zapewnienia pomyślnie wykonać wrażliwego na czas fragmentów kodu.  

@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 467888dc773a8d84e5a1b3fc1fd2c337b06654be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2d72ddda460a88830f7f7692f4c9707fa3101a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profile-guided-optimizations"></a>Optymalizacje sterowane profilem
 Funkcjonalność optymalizacji sterowanej profilem umożliwia optymalizowanie pliku wyjściowego w taki sposób, że optymalizator używa danych z przebiegów testowych pliku .exe lub .dll. Dane pokazują, jak program będzie prawdopodobnie działał w środowisku produkcyjnym.  
@@ -83,9 +84,9 @@ Funkcjonalność optymalizacji sterowanej profilem umożliwia optymalizowanie pl
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wtyczka do optymalizacji profilowej](../../build/reference/profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)  
   
- [Narzędzia do ręcznego optymalizacji sterowanych profilem](../../build/reference/tools-for-manual-profile-guided-optimization.md)  
+ [Narzędzia do ręcznej optymalizacji sterowanej profilem](../../build/reference/tools-for-manual-profile-guided-optimization.md)  
   
- [Porady: scalanie wielu profili PGO w jeden profil](../../build/reference/how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)  
+ [Instrukcje: scalanie wielu profili PGO w jeden profil](../../build/reference/how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)

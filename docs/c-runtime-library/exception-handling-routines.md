@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d12410aba4f64f54cbbfcc123d842171441192a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95ecbc69dd9cbd86bd7891c79f115442f659ff94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-routines"></a>Obsługa wyjątków — Procedury
 Do odzyskania z nieoczekiwanych zdarzeń podczas wykonywania programu, należy użyć funkcji obsługi wyjątków języka C++.  
@@ -28,7 +29,7 @@ Do odzyskania z nieoczekiwanych zdarzeń podczas wykonywania programu, należy u
   
 |Funkcja|Zastosowanie|  
 |--------------|---------|  
-|[_set_se_translator —](../c-runtime-library/reference/set-se-translator.md)|Uchwyt Win32 wyjątków (C strukturalnych wyjątkami), ponieważ C++ wpisane wyjątków|  
+|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Uchwyt Win32 wyjątków (C strukturalnych wyjątkami), ponieważ C++ wpisane wyjątków|  
 |[set_terminate —](../c-runtime-library/reference/set-terminate-crt.md)|Zainstaluj własne procedury zakończenia ma zostać wywołana przez`terminate`|  
 |[set_unexpected —](../c-runtime-library/reference/set-unexpected-crt.md)|Zainstaluj własnej funkcji zakończenia ma zostać wywołana przez`unexpected`|  
 |[Zakończenie](../c-runtime-library/reference/terminate-crt.md)|Wywołuje się automatycznie w pewnych okolicznościach po wyjątku. `terminate` Wywołania funkcji `abort` lub funkcję należy ją określić za pomocą`set_terminate`|  

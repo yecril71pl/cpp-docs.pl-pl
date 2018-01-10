@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 72949601269dea510ba7b9078b022a28905349c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csacl-class"></a>Klasa CSacl
 Ta klasa jest otoki dla struktury SACL (systemowa lista kontroli dostępu).  
@@ -210,4 +211,4 @@ void RemoveAllAces() throw();
  [Listy kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [Przegląd klas](../../atl/atl-class-overview.md)   
- [Globalne funkcje zabezpieczeń](../../atl/reference/security-global-functions.md)
+ [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

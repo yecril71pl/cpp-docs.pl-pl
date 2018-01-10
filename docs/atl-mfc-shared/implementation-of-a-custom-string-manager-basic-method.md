@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e31d9f86b9ff6d2de8ef0bfa9fb039324c1556db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b80af4fc8b463b6987f586c426bd465520f75ba6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Wdrożenia z menedżerem ciąg niestandardowy (Metoda podstawowa)
 Najprostszym sposobem dostosowania schematu alokacji pamięci dla danych dotyczących ciągu jest korzystanie z warunkiem ATL **CAtlStringMgr** klasy, ale podać własne pamięci procedury alokacji. Konstruktor **CAtlStringMgr** przyjmuje jeden parametr: wskaźnik do `IAtlMemMgr` obiektu. `IAtlMemMgr`jest to abstrakcyjna klasa podstawowa, który udostępnia interfejs rodzajowy na stos. Przy użyciu `IAtlMemMgr` interfejsu **CAtlStringMgr** przydziela ponownie i zwalnia pamięć używana do przechowywania danych ciągu. Można albo zaimplementuj `IAtlMemMgr` interfejsu użytkownika, lub użyj jednej z pięciu klasy Menedżer pamięci ATL — pod warunkiem. Menedżerowie pamięci ATL — pod warunkiem zawijać po prostu istniejących urządzeń alokacji pamięci:  
@@ -42,5 +43,5 @@ Najprostszym sposobem dostosowania schematu alokacji pamięci dla danych dotycz�
  [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zarządzanie pamięcią z CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+ [Zarządzanie pamięcią za pomocą CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 

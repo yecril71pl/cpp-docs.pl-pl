@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e3ae72f5f8cd268bae88a0b5f0be74864317ad0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 677779aa8550869fe0859974b2aa4bbbb1c23d83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Wskazówki: kompilowanie programu w języku C++/CX w wierszu polecenia
 Można utworzyć programy Visual C++, które docelowego środowiska uruchomieniowego systemu Windows, a następnie utworzyć je w wierszu polecenia. Visual C++ obsługuje rozszerzenia składników dla programu Visual C++ (C + +/ CX), który ma dodatkowe typy i operatory pod kątem modelu programowania środowiska wykonawczego systemu Windows. Można użyć C + +/ CX umożliwia tworzenie aplikacji dla systemu Windows Phone 8.1, Sklep Windows i Windows desktop. Aby uzyskać więcej informacji, zobacz [A samouczek c + +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) i [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md).  

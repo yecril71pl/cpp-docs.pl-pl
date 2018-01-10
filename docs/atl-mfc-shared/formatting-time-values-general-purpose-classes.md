@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d1f8369de82db15af3e9c64b0c24e900b0c030f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4479fea641a21edf3f037924b50247798f5a6e6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Formatowania wartości czasu: Klasy ogólnego przeznaczenia
 Poniższa procedura przedstawia sposób formatowania wartości czasu.  

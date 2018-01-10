@@ -53,11 +53,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9e98d29cb6226c2fe99d9ffc3755cc48414da5ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15694740fe14f4b9694086efc3c0dae7be04dc02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 Testy i konwertuje znaków wielobajtowych wielkość liter.  
@@ -129,4 +130,4 @@ unsigned int _mbctoupper_l(
  [_mbbtombc —, _mbbtombc_l —](../../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
  [_mbcjistojms —, _mbcjistojms_l —, _mbcjmstojis — _mbcjmstojis_l —](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
  [_mbctohira —, _mbctohira_l —, _mbctokata — _mbctokata_l —](../../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)   
- [_mbctombb —, _mbctombb_l —](../../c-runtime-library/reference/mbctombb-mbctombb-l.md)
+ [_mbctombb, _mbctombb_l](../../c-runtime-library/reference/mbctombb-mbctombb-l.md)

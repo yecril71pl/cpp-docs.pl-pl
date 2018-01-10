@@ -13,20 +13,21 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fee551d667b40b3fc36b3ca1f91e093148083a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-directives"></a>Dyrektywy ARM dotycząca asemblera
-W większości przypadków asemblera Microsoft ARM wykorzystuje język asemblera ARM, które opisano w rozdziale 7 [przewodnik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/?LinkId=246102). Jednak niektóre dyrektywy zestawu implementacje firmy Microsoft różnią się od dyrektywy zestawów ARM. W tym artykule opisano różnice.  
+W większości przypadków asemblera Microsoft ARM wykorzystuje język asemblera ARM, które opisano w rozdziale 7 [przewodnik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/p/?linkid=246102). Jednak niektóre dyrektywy zestawu implementacje firmy Microsoft różnią się od dyrektywy zestawów ARM. W tym artykule opisano różnice.  
   
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implementacje firmy Microsoft dyrektywy zestawów ARM  
  OBSZAR  
  Te atrybuty obszaru obsługuje asemblera ARM firmy Microsoft: WYRÓWNAJ kod, CODEALIGN, dane, NOINIT, tylko do odczytu, READWRITE, THUMB, ARM.  
   
- Wszystkie z wyjątkiem THUMB i ARM działać zgodnie z opisem w [przewodnik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Wszystkie z wyjątkiem THUMB i ARM działać zgodnie z opisem w [przewodnik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  W asemblera Microsoft ARM THUMB wskazuje, że sekcji kodu zawiera kod Thumb i jest ustawieniem domyślnym dla sekcji kodu.  ARM wskazuje, że sekcja zawiera kod ARM.  
   

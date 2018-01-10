@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 41e31e82c97252a2ab5e34a78db5af1fd4e24f98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: defc933014bd287eb48f53635efba12a40960711
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Dodawanie konsumenta OLE DB ATL
 Ten kreator umożliwia dodawanie konsumenta ATL OLE DB do projektu. Konsumenta ATL OLE DB składa się z OLE DB akcesor klasy danych powiązania i trzeba uzyskiwać dostęp do źródła danych. Projekt musi być utworzony jako aplikacji ATL COM lub MFC lub Win32 aplikacji z obsługą ATL (która automatycznie dodaje OLE DB Kreator konsumenta ATL).  

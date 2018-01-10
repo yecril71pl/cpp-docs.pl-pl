@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebbccf147cc45ce5e3dab512e13a8b059f104cdd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc8b3b21cdc9aad183f39bf709f93e022e790eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Porady: korzystanie ze zdarzeń kompilacji w projektach MSBuild
 To zdarzenie kompilacji jest polecenie który [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] wykonuje określonego etapu w procesie kompilacji. *Prekompilacyjnego* zdarzenie przed rozpoczęciem kompilacji; *prekonsolidacyjnego* zdarzenie przed uruchomieniem kroku łącze; i *postkompilacyjnego* zdarzenie po kompilacji kończy się pomyślnie. Zdarzenia kompilacji występuje tylko wtedy, gdy występuje kroku kompilacji. Zdarzenia prekonsolidacyjnego nie występuje na przykład, jeśli krok łącze nie działa.  
@@ -78,4 +79,4 @@ To zdarzenie kompilacji jest polecenie który [!INCLUDE[vstecmsbuild](../build/i
   
 ## <a name="see-also"></a>Zobacz też  
  [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)   
- [Wskazówki: Korzystanie z MSBuild do tworzenia projektu Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+ [Przewodnik: Korzystanie z MSBuild do tworzenia projektu Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

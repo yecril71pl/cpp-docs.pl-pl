@@ -1,7 +1,7 @@
 ---
 title: ". Pliki obj jako wejście konsolidatora | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 12/29/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -16,32 +16,35 @@ helpviewer_keywords:
 - COFF files
 - OBJ files as linker input
 - .obj files as linker input
-ms.assetid: 3028e423-8b10-4972-8eb4-6e9ae58f0a26
-caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ca8346f9ff29d097450eda4d8bfbfee7f7a3f522
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a2896822e97bdbb5ffdf8f869e67beadc1675b7
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="obj-files-as-linker-input"></a>Pliki .Obj — Wejście konsolidatora
-Narzędzia konsolidatora (łącze. Wywołanie pliku EXE) akceptuje pliki obj w typowych obiektu pliku formatu (COFF).  
-  
-## <a name="remarks"></a>Uwagi  
- Firma Microsoft udostępnia dokument do pobrania, który definiuje wspólne format pliku obiektu. Aby uzyskać więcej informacji, należy pobrać poprawkę 8.1 lub nowszy z [Microsoft przenośny plik wykonywalny i wspólne specyfikacją formatu pliku obiektu](http://go.microsoft.com/fwlink/?LinkId=93292).  
-  
-## <a name="unicode-support"></a>Obsługa formatu Unicode  
- Począwszy od programu Visual Studio 2005, kompilator Microsoft Visual C++ obsługuje znaki Unicode w identyfikatorach zgodnie z definicją ISO/IEC C i C++ standardów. Poprzednie wersje kompilatora obsługiwane tylko znaki ASCII w identyfikatorach. Do obsługi standardu Unicode w nazwach funkcji, klasy i statyczne, kompilatorze i konsolidatorze Użyj kodowania Unicode UTF-8 dla symboli COFF w plikach .obj. Kodowanie UTF-8 jest upwardly zgodny z kodowaniem ASCII używane we wcześniejszych wersjach programu Visual Studio.  
-  
- Aby uzyskać więcej informacji na temat kompilatorze i konsolidatorze, zobacz [obsługi formatu Unicode w kompilatorze i Konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Aby uzyskać więcej informacji na temat standardu Unicode, zobacz [Unicode](http://go.microsoft.com/fwlink/?LinkId=37123) organizacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki wyjściowe LINK](../../build/reference/link-input-files.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)   
- [Obsługa formatu Unicode](../../text/support-for-unicode.md)   
- [Obsługa standardu Unicode w kompilatorze i Konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md)   
- [Unicode standard](http://go.microsoft.com/fwlink/?LinkId=37123)   
- [Typowe specyfikacją formatu pliku obiektu](http://go.microsoft.com/fwlink/?LinkId=93292)
+
+Narzędzia konsolidatora (łącze. Wywołanie pliku EXE) akceptuje pliki obj w typowych obiektu pliku formatu (COFF).
+
+## <a name="remarks"></a>Uwagi
+
+Firma Microsoft udostępnia pełny opis typowych format pliku obiektu. Aby uzyskać więcej informacji, zobacz [formatu PE](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+
+## <a name="unicode-support"></a>Obsługa formatu Unicode
+
+Począwszy od programu Visual Studio 2005, kompilator Microsoft Visual C++ obsługuje znaki Unicode w identyfikatorach zgodnie z definicją ISO/IEC C i C++ standardów. Poprzednie wersje kompilatora obsługiwane tylko znaki ASCII w identyfikatorach. Do obsługi standardu Unicode w nazwach funkcji, klasy i statyczne, kompilatorze i konsolidatorze Użyj kodowania Unicode UTF-8 dla symboli COFF w plikach .obj. Kodowanie UTF-8 jest upwardly zgodny z kodowaniem ASCII używane we wcześniejszych wersjach programu Visual Studio.
+
+Aby uzyskać więcej informacji na temat kompilatorze i konsolidatorze, zobacz [obsługi formatu Unicode w kompilatorze i Konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Aby uzyskać więcej informacji na temat standardu Unicode, zobacz [Unicode](http://go.microsoft.com/fwlink/p/?linkid=37123) organizacji.
+
+## <a name="see-also"></a>Zobacz także
+
+[Pliki wejściowe LINK](../../build/reference/link-input-files.md)  
+[Opcje konsolidatora](../../build/reference/linker-options.md)  
+[Obsługa formatu Unicode](../../text/support-for-unicode.md)  
+[Obsługa formatu Unicode w kompilatorze i konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
+[Unicode standard](http://go.microsoft.com/fwlink/p/?linkid=37123)  
+[Formatu PE](https://msdn.microsoft.com/library/windows/desktop/ms680547)  

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e462fb157f035be275e6d97b9ccb35e136c24d4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a51cab03c1361c178846e8b7f00ba7111dc8d731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profile-guided-optimization-in-the-performance-and-diagnostics-hub"></a>Optymalizacja sterowana profilem w Centrum Wydajności i Diagnostyki
 Optymalizacja sterowana profilem w języku Visual C++ wtyczki w Centrum diagnostyki i wydajności usprawnia proces optymalizacji oparte na profilach dla deweloperów. Możesz [pobrać](http://go.microsoft.com/fwlink/p/?LinkId=327915) z witryny sieci Web programu Visual Studio.  

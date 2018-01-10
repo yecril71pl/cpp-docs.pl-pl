@@ -13,14 +13,15 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976b3c21e24a8e1e6c99664b31d32f85985d7f55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 903e4890bfad23310f0663fde52af4065e78486e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-program"></a>Program przykładowy
-Następujący program źródłowy C składa się z dwóch plików źródłowych. To daje przegląd różnych deklaracji i możliwych definicji w programie C. Nowsze w tej sekcji opisano sposób zapisania tych deklaracji, definicje i inicjalizacji i sposobu używania słowa kluczowe języka C, takich jak **statycznych** i `extern`. Funkcja `printf` jest zadeklarowana w pliku nagłówka STDIO.H języka C  
+Następujący program źródłowy C składa się z dwóch plików źródłowych. To daje przegląd różnych deklaracji i możliwych definicji w programie C. Nowsze w tej sekcji opisano sposób zapisania tych deklaracji, definicje i inicjalizacji i sposobu używania słowa kluczowe języka C, takich jak **statycznych** i `extern`. Funkcja `printf` jest zadeklarowana w pliku nagłówkowym STDIO.H języka C.  
   
  Założono, że funkcje `main` i `max` są w oddzielnych plikach i wykonywanie programu rozpoczyna się od funkcji `main`. Niejawne funkcje użytkownika są wykonywane przed `main`.  
   

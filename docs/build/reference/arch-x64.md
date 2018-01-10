@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49da6dca3325836b10bf5e5848811be31ca60cca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27a453601988c22ed03ae9cb267480d88d6a1cc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arch-x64"></a>/arch (x64)
 Określa generowanie kodu na x64 architektury. Zobacz też [/arch (x86)](../../build/reference/arch-x86.md) i [/arch (ARM)](../../build/reference/arch-arm.md).  

@@ -18,36 +18,37 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38dfcb75db204a501cb3669a5ba292037d7b7759
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Hierarchia i kolejność ocen
 Priorytet i łączność operatorów C wpłynąć na grupowanie i oceny operandów w wyrażeniach. Kolejność jest znaczący tylko wtedy, gdy istnieją inne operatory o priorytecie większej lub mniejszej. Wyrażenia z operatorami o wyższym priorytecie są sprawdzane jako pierwsze. Pierwszeństwo można również opisać za pomocą słowa "powiązania." Operatory o wyższym priorytecie są określane jako ma większego powiązania.  
   
  W poniższej tabeli przedstawiono priorytet i łączność (kolejności, w jakiej są oceniane operandy) operatorów C, listę w kolejności od najwyższego do najniższego. W przypadku, gdy pojawią się ze sobą kilka operatorów, mają taki sam priorytet i są obliczane zgodnie z ich łączność. Operatory w tabeli są opisane w sekcjach, począwszy od [operatory przyrostka](../c-language/postfix-operators.md). Pozostałej części tej sekcji zawiera ogólne informacje na temat priorytet i łączność.  
   
-### <a name="precedence-and-associativity-of-c-operators"></a>Priorytet i łączność operatory języka C  
+## <a name="precedence-and-associativity-of-c-operators"></a>Priorytet i łączność operatory języka C  
   
-|Symbol1|Typ operacji|Łączność|  
+|Symbol <sup>1</sup>|Typ operacji|Łączność|  
 |-------------|-----------------------|-------------------|  
-|**[ ] ( ) . ->** przyrostka `++` i przyrostka**--**|Wyrażenie|Od lewej do prawej|  
-|prefiks `++` i prefiks **— sizeof & \* + - ~!**|Jednoargumentowe|Od prawej do lewej|  
+|**\[ ] ( ) . ->**<br /><br />**++** **--**  (przyrostka)|Wyrażenie|Od lewej do prawej|  
+**sizeof & \* + - ~!**<br /><br />**++ —** (prefiks)|Jednoargumentowe|Od prawej do lewej|  
 |*typecasts*|Jednoargumentowe|Od prawej do lewej|  
 |**\* / %**|Mnożenia|Od lewej do prawej|  
 |**+ -**|Dodatku|Od lewej do prawej|  
-|**<\< >>**|Operatory przesunięcia bitowego|Od lewej do prawej|  
+|**\<\< >>**|Operatory przesunięcia bitowego|Od lewej do prawej|  
 |**\< > \<= >=**|Relacyjnych|Od lewej do prawej|  
 |**== !=**|Równość|Od lewej do prawej|  
 |**&**|Operator- i|Od lewej do prawej|  
 |**^**|Bitowe lub na wyłączność|Od lewej do prawej|  
 |**&#124;**|Wraz z wartościami granicznymi Alternatywy|Od lewej do prawej|  
 |**&&**|Logiczne- i|Od lewej do prawej|  
-|`&#124;&#124;`|Alternatywą logiczną|Od lewej do prawej|  
+|**&#124;&#124;**|Alternatywą logiczną|Od lewej do prawej|  
 |**? :**|Wyrażenia warunkowego|Od prawej do lewej|  
-|**= \*= /= %=**<br /><br /> **+= -= <\<= >>=&=**<br /><br /> **^= &#124;=**|Proste i złożone assignment2|Od prawej do lewej|  
+|**= \*= /= %=**<br /><br /> **+= -= \<\<= >>= &=**<br /><br /> **^= &#124;=**|Przypisanie proste i złożone <sup>2</sup>|Od prawej do lewej|  
 |**,**|Obliczanie sekwencyjne|Od lewej do prawej|  
   
  1. Operatory są wymienione w kolejności malejącej według priorytetu. Jeśli wiele operatorów pojawia się w tym samym wierszu lub w grupie, mają taki sam priorytet.  
@@ -60,22 +61,20 @@ Priorytet i łączność operatorów C wpłynąć na grupowanie i oceny operand�
   
  Operatory logiczne gwarantuje również oceny operandy od lewej do prawej. Jednak umożliwiają podawanie wartości najmniejszą liczbę argumentów operacji potrzebne do określenia wynik wyrażenia. Jest on nazywany "zwarcia" oceny. W związku z tym niektóre argumenty wyrażenia nie może obliczyć. Na przykład w wyrażeniu  
   
-```  
-x && y++  
-```  
+`x && y++`  
   
  drugi argument operacji `y++`, jest oceniane tylko wtedy, gdy `x` ma wartość true (różną od zera). W związku z tym `y` nie jest zwiększany, jeśli `x` ma wartość false (0).  
   
- **Przykłady**  
+## <a name="examples"></a>Przykłady
   
  Na poniższej liście przedstawiono, jak kompilator automatycznie wiąże kilka przykładowych wyrażeń:  
-  
+
 |Wyrażenie|Automatyczne powiązania|  
 |----------------|-----------------------|  
-|`a & b &#124;&#124; c`|`(a & b) &#124;&#124; c`|  
-|`a = b &#124;&#124; c`|`a = (b &#124;&#124; c)`|  
-|`q && r &#124;&#124; s--`|`(q && r) &#124;&#124; s--`|  
-  
+|& b &#124; &#124; c|(& (b) &#124; &#124; c|  
+|= b &#124; &#124; c|= (b &#124; &#124; c)|  
+|q & & r &#124; &#124; s —|(q & & r) &#124; &#124; s —|  
+
  W pierwszym wyrażeniu operatora testu koniunkcji- i — operator (`&`) mają wyższy priorytet niż operator logiczny OR (`||`), więc `a & b` formularzy pierwszy argument operacji operatora logicznego OR.  
   
  Drugie wyrażenie operator logiczny OR (`||`) mają wyższy priorytet niż operator przypisania prostego (`=`), więc `b || c` są grupowane jako prawostronny operand przypisania. Należy pamiętać, że wartość przypisaną do `a` jest równa 0 lub 1.  
@@ -86,13 +85,11 @@ x && y++
   
 |Niedozwolone wyrażenie|Domyślne grupowanie|  
 |------------------------|----------------------|  
-|`p == 0 ? p += 1: p += 2`|`( p == 0 ? p += 1 : p ) += 2`|  
+|p == 0? p += 1: p += 2|(p == 0? p += 1: p) += 2|  
   
  W tym wyrażeniu operatora równości (`==`) ma pierwszeństwo, dlatego `p == 0` są grupowane jako argumentu. Operator wyrażenia warunkowego (`? :`) dalej najwyższy priorytet. Jego pierwszy argument operacji jest `p == 0`, a jej drugi argument operacji jest `p += 1`. Jednak ostatni argument operacji operatora wyrażenia warunkowego jest traktowany jako `p` zamiast `p += 2`, od momentu wystąpienia `p` dokładniejsze wiąże operator wyrażenia warunkowego niż operator przypisania złożone. Występuje błąd składni, ponieważ `+= 2` nie ma lewostronny operand. Należy Użyj nawiasów w celu uniknięcia błędów tego rodzaju i tworzy czytelność kodu. Na przykład można użyć nawiasów w sposób przedstawiony poniżej Popraw i wyjaśnić w poprzednim przykładzie:  
   
-```  
-( p == 0 ) ? ( p += 1 ) : ( p += 2 )  
-```  
+`( p == 0 ) ? ( p += 1 ) : ( p += 2 )`  
   
 ## <a name="see-also"></a>Zobacz też  
  [Operatory języka C](../c-language/c-operators.md)

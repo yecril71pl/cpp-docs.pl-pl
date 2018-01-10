@@ -49,11 +49,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 81d44f12b363cf74efd334e8ff7daadb4fee5036
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4042e5f7b67db8e29d167f96457a91a6d47c4bfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
 Wyodrębnianie wartości wykładnika liczb zmiennoprzecinkowych argumentu.  
@@ -115,4 +116,4 @@ float _logbf(
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [frexp —](../../c-runtime-library/reference/frexp.md)
+ [frexp](../../c-runtime-library/reference/frexp.md)

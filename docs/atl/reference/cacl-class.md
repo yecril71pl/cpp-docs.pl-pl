@@ -32,11 +32,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b49d7bf064d65e9a160311d23b304745f4d1b04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd3b17c3cf74e87b709353a8dd2cd00c5355c7fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cacl-class"></a>Klasa CAcl
 Ta klasa jest otoki dla `ACL` struktury (lista kontroli dostępu).  
@@ -358,4 +359,4 @@ void SetNull() throw();
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd klas](../../atl/atl-class-overview.md)   
- [Globalne funkcje zabezpieczeń](../../atl/reference/security-global-functions.md)
+ [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

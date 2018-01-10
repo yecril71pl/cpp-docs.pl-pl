@@ -28,23 +28,24 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f326ec0ed43463d0d2ca15103c77bb914a11592
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad7e454af3ff8923d60315cd74d48daf9bd665a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbb-routines"></a>_ismbb — Procedury
 Testy danego całkowitą `c` dla konkretnego warunku, używając bieżących ustawień regionalnych lub określona kategoria Stan konwersji lc_ctype —.  
   
 |||  
 |-|-|  
-|[_ismbbalnum —, _ismbbalnum_l —](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|[_ismbbkprint —, _ismbbkprint_l —](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|  
-|[_ismbbalpha —, _ismbbalpha_l —](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)|[_ismbbkpunct —, _ismbbkpunct_l —](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|  
-|[_ismbbblank, _ismbbblank_l](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)|[_ismbblead —, _ismbblead_l —](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|  
-|[_ismbbgraph —, _ismbbgraph_l —](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|[_ismbbprint —, _ismbbprint_l —](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|  
-|[_ismbbkalnum —, _ismbbkalnum_l —](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct —, _ismbbpunct_l —](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|  
-|[_ismbbkana —, _ismbbkana_l —](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail —, _ismbbtrail_l —](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|  
+|[_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|[_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|  
+|[_ismbbalpha, _ismbbalpha_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)|[_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|  
+|[_ismbbblank, _ismbbblank_l](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)|[_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|  
+|[_ismbbgraph, _ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|[_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|  
+|[_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|  
+|[_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|  
   
 ## <a name="remarks"></a>Uwagi  
  Procedury co w `_ismbb` rodziny testów danego całkowitą `c` dla określonego warunku. Wynik testu jest zależna od strony kodowe wielobajtowe, który jest włączona. Strony kodowe wielobajtowe domyślnie na stronę kodową ANSI są uzyskiwane z systemu operacyjnego podczas uruchamiania programu. Można użyć [_getmbcp —](../c-runtime-library/reference/getmbcp.md) kwerendy strony kodowe wielobajtowe, który jest używany, lub [_setmbcp —](../c-runtime-library/reference/setmbcp.md) je zmienić.  
@@ -88,4 +89,4 @@ Testy danego całkowitą `c` dla konkretnego warunku, używając bieżących ust
  [Klasyfikacja bajtów](../c-runtime-library/byte-classification.md)   
  [jest isw — procedury](../c-runtime-library/is-isw-routines.md)   
  [_mbbtombc —, _mbbtombc_l —](../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
- [_mbctombb —, _mbctombb_l —](../c-runtime-library/reference/mbctombb-mbctombb-l.md)
+ [_mbctombb, _mbctombb_l](../c-runtime-library/reference/mbctombb-mbctombb-l.md)

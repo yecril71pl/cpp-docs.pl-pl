@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c8334a446c995155fb0632ed135ca9578f6ff881
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d3d352394b61f95e083a2e6e6f0d888fe210b37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc:referenceBinding (wymuszanie zasad powiązanie odwołanie)
 Gdy **/Zc:referenceBinding** zostanie określona opcja, kompilator nie zezwala na odwołania do wartości innej niż stała powiązać do tymczasowej.  

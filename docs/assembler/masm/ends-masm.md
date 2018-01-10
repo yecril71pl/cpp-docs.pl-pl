@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c44bdc2f30e91d0a023175784996e735dffe77fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed6fb7576d4ede937d432037fc2e3cdf0b65f9e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
 Oznacza koniec segmentu, struktury lub związku *nazwa* wcześniej uruchomione za pomocą [segmentu](../../assembler/masm/segment.md), [struktury](../../assembler/masm/struct-masm.md), [Unii](../../assembler/masm/union.md), lub segment uproszczony dyrektywa.  
@@ -32,4 +33,4 @@ name ENDS
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

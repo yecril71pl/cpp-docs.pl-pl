@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2bce480d906210ebd8eb597902c7f1aac855c6ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1458070f85678d30c716622bf57740d90feb65d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Korzystaj z randomizacji układu przestrzeni adresowej)
 Określa, czy Generuj obraz wykonywalny, który może być losowo przebazowanych w czasie obciążenia za pomocą funkcji adres miejsca układu losowe (ASLR) z [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  

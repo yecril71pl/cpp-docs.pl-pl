@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c56703b02b4e2c325072c164e484fdc3d9f66f47
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 031d8896a99f9b02103216d0670d581c1ea4efaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-functions"></a>Funkcje ATL
 
@@ -30,43 +31,43 @@ Aby znaleźć funkcja ATL według kategorii, zobacz następujące tematy.
  [Funkcje ścieżki ATL](../../atl/reference/com-map-global-functions.md)  
  Zapewnia obsługę manipulowanie ścieżki do pliku.
  
- [Funkcje globalne mapie modelu COM](../../atl/reference/com-map-global-functions.md)  
+ [Funkcje globalne mapy interfejsu COM](../../atl/reference/com-map-global-functions.md)  
  Zapewniają obsługę dla modelu COM mapy **IUnknown** implementacji.  
   
- [Funkcje globalne złożonych kontrolek](../../atl/reference/composite-control-global-functions.md)  
+ [Funkcje globalne kontrolek złożonych](../../atl/reference/composite-control-global-functions.md)  
  Zapewniają obsługę tworzenia okna dialogowe, a także do tworzenia, obsługi i licencjonowanie formantów ActiveX.  
   
- [Globalne funkcje punktu połączenia](../../atl/reference/connection-point-global-functions.md)  
+ [Funkcje globalne punktu połączenia](../../atl/reference/connection-point-global-functions.md)  
  Obsługuje punkty połączenia i mapy wychwytywania.  
   
- [Debugowanie i funkcje globalne raportowania błędów](../../atl/reference/debugging-and-error-reporting-global-functions.md)  
+ [Funkcje globalne debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-global-functions.md)  
  Udostępniać przydatne narzędzia debugowania i śledzenia.  
   
  [Funkcje globalne kontekstu urządzenia](../../atl/reference/device-context-global-functions.md)  
  Tworzy kontekstu urządzenia dla danego urządzenia.  
   
- [Globalne funkcje obsługi zdarzeń](../../atl/reference/event-handling-global-functions.md)  
+ [Funkcje globalne obsługi zdarzeń](../../atl/reference/event-handling-global-functions.md)  
  Udostępnia program obsługi zdarzeń.  
   
- [Organizowanie globalne funkcje](../../atl/reference/marshaling-global-functions.md)  
+ [Funkcje globalne kierowania](../../atl/reference/marshaling-global-functions.md)  
  Zapewnia obsługę organizowanie konwertowanie przekazywanie danych do wskaźników interfejsów.  
   
  [Funkcje globalne pikseli/HIMETRIC konwersji](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
  Konwertowanie do i z pikseli i jednostki HIMETRIC zapewniają obsługę.  
   
- [Globalne funkcje rejestru i biblioteki typów](../../atl/reference/registry-and-typelib-global-functions.md)  
+ [Funkcje globalne rejestru i elementu TypeLib](../../atl/reference/registry-and-typelib-global-functions.md)  
  Zapewnia obsługę ładowania rejestrowania biblioteki typów.  
   
- [Globalne funkcje zabezpieczeń](../../atl/reference/security-global-functions.md)  
+ [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)  
  Modyfikowanie obiektów identyfikator SID i listy ACL zapewniają obsługę.  
   
- [Funkcje globalne identyfikator zabezpieczeń](../../atl/reference/security-identifier-global-functions.md)  
+ [Funkcje globalne identyfikatora zabezpieczeń](../../atl/reference/security-identifier-global-functions.md)  
  Zwraca obiekty typowych dobrze znany identyfikator SID.  
   
- [Funkcje globalne serwera rejestracji](../../atl/reference/server-registration-global-functions.md)  
+ [Funkcje globalne rejestracji serwera](../../atl/reference/server-registration-global-functions.md)  
  Zapewniają obsługę rejestrowanie i wyrejestrowywanie obiektów serwera w mapie obiektu.  
   
- [Funkcje globalne WinModule](../../atl/reference/winmodule-global-functions.md)  
+ [Funkcje globalne elementu WinModule](../../atl/reference/winmodule-global-functions.md)  
  Zapewniają obsługę `_AtlCreateWndData` struktury operacji.  
   
 ## <a name="see-also"></a>Zobacz też  

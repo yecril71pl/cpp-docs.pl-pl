@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eeda445cc1177ce26cf0c717a67619a33d760422
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ba1677b5dd0aa51481a2f7fc850f8cceca1669e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-parity"></a>operator PARITY?
 Stan flagi parzystości. Używana tylko wewnątrz [. Jeśli](../../assembler/masm/dot-if.md), [. GDY](../../assembler/masm/dot-while.md), lub [. Powtórz](../../assembler/masm/dot-repeat.md) blokuje i oceniane w czasie wykonywania, nie w czasie zestawu.  
@@ -37,4 +38,4 @@ PARITY?
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do operatorów](../../assembler/masm/operators-reference.md)
+ [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)

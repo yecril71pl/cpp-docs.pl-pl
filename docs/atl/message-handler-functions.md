@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3441a5d71ede812edb121253f858b647896e5516
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19f882ec7148a0be23ace01a0157d34ed76f7aa0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-handler-functions"></a>Funkcje programu obsługi wiadomości
 ATL udostępnia trzy typy funkcji obsługi komunikatów:  
@@ -35,7 +36,7 @@ ATL udostępnia trzy typy funkcji obsługi komunikatów:
 |Typ obsługi wiadomości|Odpowiedniego komunikatu — makro|  
 |-----------------------------|---------------------------------|  
 |[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|  
-|[Commandhandler — obiekt](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|  
+|[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|  
 |[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|  
   
 ## <a name="see-also"></a>Zobacz też  

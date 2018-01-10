@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40bb3e7e35b00f6c09cdaf5a87fc558db8324989
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a07947dc7de4529d8cef3aa0f104d529d0b95ea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="targets"></a>Obiekty docelowe
 W wierszu zależności, należy określić co najmniej jednego celu, przy użyciu dowolnego prawidłową nazwę pliku, nazwy katalogu, lub [pseudotarget](../build/pseudotargets.md). Oddziel wiele elementów docelowych spacji lub kart. Obiekty docelowe nie jest uwzględniana. Ścieżki są dozwolone z nazwami plików. Element docelowy nie może przekroczyć 256 znaków. Jeśli element docelowy przed dwukropkiem pojedynczym znakiem, użyj oddzielający miejsca; w przeciwnym razie NMAKE dwukropek litery kombinacja interpretowana jako specyfikator dysku.  

@@ -35,11 +35,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae0d3c60ee17683a1d46b35caadea7784e167b7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>Klasa CAtlTransactionManager
 Klasa CAtlTransactionManager udostępnia otokę dla funkcji Menedżera transakcji jądra (KTM).  
@@ -466,10 +467,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  Nazwa pliku lub katalogu.  
   
  `dwAttributes`  
- Atrybuty plików, które można ustawić dla pliku. Aby uzyskać więcej informacji, zobacz [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/linkid=158699).  
+ Atrybuty plików, które można ustawić dla pliku. Aby uzyskać więcej informacji, zobacz [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699).  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `SetFileAttributesTransacted` funkcji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Składniki COM pulpitu ATL](../../atl/atl-com-desktop-components.md)
+ [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)

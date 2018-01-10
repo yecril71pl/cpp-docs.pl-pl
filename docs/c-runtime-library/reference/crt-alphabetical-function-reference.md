@@ -13,18 +13,19 @@ ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cf32d38e05da75772ae817c686b154eaed0f69ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6149962694f9ff60a27645d014389d5b3467b7b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-alphabetical-function-reference"></a>Alfabetyczne odwołanie funkcji CRT
 Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabetycznie przez procedury. Aby uzyskać procedury CRT, w oparciu o funkcje, zobacz [procedury czasu wykonywania według kategorii](../../c-runtime-library/run-time-routines-by-category.md).  
   
  **A**  
   
- [przerwania](../../c-runtime-library/reference/abort.md)  
+ [abort](../../c-runtime-library/reference/abort.md)  
   
  [ABS](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)  
   
@@ -48,43 +49,43 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [acosl —](../../c-runtime-library/reference/acos-acosf-acosl.md)  
   
- [_aligned_free —](../../c-runtime-library/reference/aligned-free.md)  
+ [_aligned_free](../../c-runtime-library/reference/aligned-free.md)  
   
- [_aligned_free_dbg —](../../c-runtime-library/reference/aligned-free-dbg.md)  
+ [_aligned_free_dbg](../../c-runtime-library/reference/aligned-free-dbg.md)  
   
- [_aligned_malloc —](../../c-runtime-library/reference/aligned-malloc.md)  
+ [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)  
   
- [_aligned_malloc_dbg —](../../c-runtime-library/reference/aligned-malloc-dbg.md)  
+ [_aligned_malloc_dbg](../../c-runtime-library/reference/aligned-malloc-dbg.md)  
   
- [_aligned_msize —](../../c-runtime-library/reference/aligned-msize.md)  
+ [_aligned_msize](../../c-runtime-library/reference/aligned-msize.md)  
   
  [_aligned_msize_dbg](../../c-runtime-library/reference/aligned-msize-dbg.md)  
   
- [_aligned_offset_malloc —](../../c-runtime-library/reference/aligned-offset-malloc.md)  
+ [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md)  
   
- [_aligned_offset_malloc_dbg —](../../c-runtime-library/reference/aligned-offset-malloc-dbg.md)  
+ [_aligned_offset_malloc_dbg](../../c-runtime-library/reference/aligned-offset-malloc-dbg.md)  
   
- [_aligned_offset_realloc —](../../c-runtime-library/reference/aligned-offset-realloc.md)  
+ [_aligned_offset_realloc](../../c-runtime-library/reference/aligned-offset-realloc.md)  
   
- [_aligned_offset_realloc_dbg —](../../c-runtime-library/reference/aligned-offset-realloc-dbg.md)  
+ [_aligned_offset_realloc_dbg](../../c-runtime-library/reference/aligned-offset-realloc-dbg.md)  
   
- [_aligned_offset_recalloc —](../../c-runtime-library/reference/aligned-offset-recalloc.md)  
+ [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md)  
   
- [_aligned_offset_recalloc_dbg —](../../c-runtime-library/reference/aligned-offset-recalloc-dbg.md)  
+ [_aligned_offset_recalloc_dbg](../../c-runtime-library/reference/aligned-offset-recalloc-dbg.md)  
   
- [_aligned_realloc —](../../c-runtime-library/reference/aligned-realloc.md)  
+ [_aligned_realloc](../../c-runtime-library/reference/aligned-realloc.md)  
   
- [_aligned_realloc_dbg —](../../c-runtime-library/reference/aligned-realloc-dbg.md)  
+ [_aligned_realloc_dbg](../../c-runtime-library/reference/aligned-realloc-dbg.md)  
   
- [_aligned_recalloc —](../../c-runtime-library/reference/aligned-recalloc.md)  
+ [_aligned_recalloc](../../c-runtime-library/reference/aligned-recalloc.md)  
   
- [_aligned_recalloc_dbg —](../../c-runtime-library/reference/aligned-recalloc-dbg.md)  
+ [_aligned_recalloc_dbg](../../c-runtime-library/reference/aligned-recalloc-dbg.md)  
   
  [_alloca](../../c-runtime-library/reference/alloca.md)  
   
  [_amsg_exit](../../c-runtime-library/reference/amsg-exit.md)  
   
- [i](../../c-runtime-library/reference/and.md)  
+ [and](../../c-runtime-library/reference/and.md)  
   
  [and_eq](../../c-runtime-library/reference/and-eq.md)  
   
@@ -132,7 +133,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [atanl —](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)  
   
- [atexit —](../../c-runtime-library/reference/atexit.md)  
+ [atexit](../../c-runtime-library/reference/atexit.md)  
   
  [_atodbl —](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)  
   
@@ -172,15 +173,15 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_beginthreadex —](../../c-runtime-library/reference/beginthread-beginthreadex.md)  
   
- [BITAND](../../c-runtime-library/reference/bitand.md)  
+ [bitand](../../c-runtime-library/reference/bitand.md)  
   
- [BITOR](../../c-runtime-library/reference/bitor.md)  
+ [bitor](../../c-runtime-library/reference/bitor.md)  
   
- [bsearch —](../../c-runtime-library/reference/bsearch.md)  
+ [bsearch](../../c-runtime-library/reference/bsearch.md)  
   
- [bsearch_s —](../../c-runtime-library/reference/bsearch-s.md)  
+ [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)  
   
- [btowc —](../../c-runtime-library/reference/btowc.md)  
+ [btowc](../../c-runtime-library/reference/btowc.md)  
   
  [_byteswap_uint64 —](../../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)  
   
@@ -196,7 +197,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [c32rtomb](../../c-runtime-library/reference/c16rtomb-c32rtomb1.md)  
   
- [_cabs —](../../c-runtime-library/reference/cabs.md)  
+ [_cabs](../../c-runtime-library/reference/cabs.md)  
   
  [pliki cab](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)  
   
@@ -218,9 +219,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_callnewh](../../c-runtime-library/reference/callnewh.md)  
   
- [calloc —](../../c-runtime-library/reference/calloc.md)  
+ [calloc](../../c-runtime-library/reference/calloc.md)  
   
- [_calloc_dbg —](../../c-runtime-library/reference/calloc-dbg.md)  
+ [_calloc_dbg](../../c-runtime-library/reference/calloc-dbg.md)  
   
  [carg](../../c-runtime-library/reference/carg-cargf-cargl.md)  
   
@@ -284,7 +285,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [cexpl](../../c-runtime-library/reference/cexp-cexpf-cexpl.md)  
   
- [cgets —](../../c-runtime-library/reference/cgets.md)  
+ [cgets](../../c-runtime-library/reference/cgets.md)  
   
  [_cgets_s —](../../c-runtime-library/reference/cgets-s-cgetws-s.md)  
   
@@ -294,7 +295,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_chdir —](../../c-runtime-library/reference/chdir-wchdir.md)  
   
- [_chdrive —](../../c-runtime-library/reference/chdrive.md)  
+ [_chdrive](../../c-runtime-library/reference/chdrive.md)  
   
  [_chgsign —](../../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)  
   
@@ -306,11 +307,11 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_chmod —](../../c-runtime-library/reference/chmod-wchmod.md)  
   
- [chsize —](../../c-runtime-library/reference/posix-chsize.md)  
+ [chsize](../../c-runtime-library/reference/posix-chsize.md)  
   
- [_chsize —](../../c-runtime-library/reference/chsize.md)  
+ [_chsize](../../c-runtime-library/reference/chsize.md)  
   
- [_chsize_s —](../../c-runtime-library/reference/chsize-s.md)  
+ [_chsize_s](../../c-runtime-library/reference/chsize-s.md)  
   
  [cimag](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)  
   
@@ -320,13 +321,13 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_clear87 —](../../c-runtime-library/reference/clear87-clearfp.md)  
   
- [clearerr —](../../c-runtime-library/reference/clearerr.md)  
+ [clearerr](../../c-runtime-library/reference/clearerr.md)  
   
- [clearerr_s —](../../c-runtime-library/reference/clearerr-s.md)  
+ [clearerr_s](../../c-runtime-library/reference/clearerr-s.md)  
   
  [_clearfp —](../../c-runtime-library/reference/clear87-clearfp.md)  
   
- [zegara](../../c-runtime-library/reference/clock.md)  
+ [clock](../../c-runtime-library/reference/clock.md)  
   
  [clog](../../c-runtime-library/reference/clog-clogf-clogl.md)  
   
@@ -340,15 +341,15 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [clogl](../../c-runtime-library/reference/clog-clogf-clogl.md)  
   
- [Zamknij](../../c-runtime-library/reference/posix-close.md)  
+ [close](../../c-runtime-library/reference/posix-close.md)  
   
- [_zamknij](../../c-runtime-library/reference/close.md)  
+ [_close](../../c-runtime-library/reference/close.md)  
   
- [_commit —](../../c-runtime-library/reference/commit.md)  
+ [_commit](../../c-runtime-library/reference/commit.md)  
   
  [compl](../../c-runtime-library/reference/compl.md)  
   
- [_configthreadlocale —](../../c-runtime-library/reference/configthreadlocale.md)  
+ [_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md)  
   
  [conj](../../c-runtime-library/reference/conj-conjf-conjl.md)  
   
@@ -362,7 +363,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_controlfp —](../../c-runtime-library/reference/control87-controlfp-control87-2.md)  
   
- [_controlfp_s —](../../c-runtime-library/reference/controlfp-s.md)  
+ [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)  
   
  [copysign —](../../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)  
   
@@ -396,7 +397,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [cpowl](../../c-runtime-library/reference/cpow-cpowf-cpowl.md)  
   
- [cprintf —](../../c-runtime-library/reference/cprintf.md)  
+ [cprintf](../../c-runtime-library/reference/cprintf.md)  
   
  [_cprintf —](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)  
   
@@ -416,7 +417,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)  
   
- [cputs —](../../c-runtime-library/reference/cputs.md)  
+ [cputs](../../c-runtime-library/reference/cputs.md)  
   
  [_cputs —](../../c-runtime-library/reference/cputs-cputws.md)  
   
@@ -428,67 +429,67 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [creall](../../c-runtime-library/reference/creal-crealf-creall.md)  
   
- [Utwórz](../../c-runtime-library/reference/creat.md)  
+ [creat](../../c-runtime-library/reference/creat.md)  
   
  [_creat —](../../c-runtime-library/reference/creat-wcreat.md)  
   
  [_create_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)  
   
- [_Crtcheckmemory —](../../c-runtime-library/reference/crtcheckmemory.md)  
+ [_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md)  
   
- [_Crtdbgbreak —](../../c-runtime-library/reference/crtdbgbreak.md)  
+ [_CrtDbgBreak](../../c-runtime-library/reference/crtdbgbreak.md)  
   
  [_Crtdbgreport —](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)  
   
  [_Crtdbgreportw —](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)  
   
- [_Crtdoforallclientobjects —](../../c-runtime-library/reference/crtdoforallclientobjects.md)  
+ [_CrtDoForAllClientObjects](../../c-runtime-library/reference/crtdoforallclientobjects.md)  
   
- [_Crtdumpmemoryleaks —](../../c-runtime-library/reference/crtdumpmemoryleaks.md)  
+ [_CrtDumpMemoryLeaks](../../c-runtime-library/reference/crtdumpmemoryleaks.md)  
   
- [_Crtgetallochook —](../../c-runtime-library/reference/crtgetallochook.md)  
+ [_CrtGetAllocHook](../../c-runtime-library/reference/crtgetallochook.md)  
   
- [_Crtgetdumpclient —](../../c-runtime-library/reference/crtgetdumpclient.md)  
+ [_CrtGetDumpClient](../../c-runtime-library/reference/crtgetdumpclient.md)  
   
- [_Crtgetreporthook —](../../c-runtime-library/reference/crtgetreporthook.md)  
+ [_CrtGetReportHook](../../c-runtime-library/reference/crtgetreporthook.md)  
   
- [_Crtismemoryblock —](../../c-runtime-library/reference/crtismemoryblock.md)  
+ [_CrtIsMemoryBlock](../../c-runtime-library/reference/crtismemoryblock.md)  
   
- [_Crtisvalidheappointer —](../../c-runtime-library/reference/crtisvalidheappointer.md)  
+ [_CrtIsValidHeapPointer](../../c-runtime-library/reference/crtisvalidheappointer.md)  
   
- [_Crtisvalidpointer —](../../c-runtime-library/reference/crtisvalidpointer.md)  
+ [_CrtIsValidPointer](../../c-runtime-library/reference/crtisvalidpointer.md)  
   
- [_Crtmemcheckpoint —](../../c-runtime-library/reference/crtmemcheckpoint.md)  
+ [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md)  
   
- [_Crtmemdifference —](../../c-runtime-library/reference/crtmemdifference.md)  
+ [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md)  
   
- [_Crtmemdumpallobjectssince —](../../c-runtime-library/reference/crtmemdumpallobjectssince.md)  
+ [_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md)  
   
- [_Crtmemdumpstatistics —](../../c-runtime-library/reference/crtmemdumpstatistics.md)  
+ [_CrtMemDumpStatistics](../../c-runtime-library/reference/crtmemdumpstatistics.md)  
   
- [_Crtreportblocktype —](../../c-runtime-library/reference/crtreportblocktype.md)  
+ [_CrtReportBlockType](../../c-runtime-library/reference/crtreportblocktype.md)  
   
- [_Crtsetallochook —](../../c-runtime-library/reference/crtsetallochook.md)  
+ [_CrtSetAllocHook](../../c-runtime-library/reference/crtsetallochook.md)  
   
- [_Crtsetbreakalloc —](../../c-runtime-library/reference/crtsetbreakalloc.md)  
+ [_CrtSetBreakAlloc](../../c-runtime-library/reference/crtsetbreakalloc.md)  
   
- [_Crtsetdbgflag —](../../c-runtime-library/reference/crtsetdbgflag.md)  
+ [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)  
   
- [_Crtsetdebugfillthreshold —](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)  
+ [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)  
   
- [_Crtsetdumpclient —](../../c-runtime-library/reference/crtsetdumpclient.md)  
+ [_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md)  
   
- [_Crtsetreportfile —](../../c-runtime-library/reference/crtsetreportfile.md)  
+ [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md)  
   
- [_Crtsetreporthook —](../../c-runtime-library/reference/crtsetreporthook.md)  
+ [_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md)  
   
  [_Crtsetreporthook2 —](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)  
   
  [_Crtsetreporthookw2 —](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)  
   
- [_Crtsetreportmode —](../../c-runtime-library/reference/crtsetreportmode.md)  
+ [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)  
   
- [cscanf —](../../c-runtime-library/reference/cscanf.md)  
+ [cscanf](../../c-runtime-library/reference/cscanf.md)  
   
  [_cscanf —](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)  
   
@@ -540,9 +541,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_ctime64_s —](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)  
   
- [_cwait —](../../c-runtime-library/reference/cwait.md)  
+ [_cwait](../../c-runtime-library/reference/cwait.md)  
   
- [cwait —](../../c-runtime-library/reference/posix-cwait.md)  
+ [cwait](../../c-runtime-library/reference/posix-cwait.md)  
   
  [_cwprintf —](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)  
   
@@ -564,7 +565,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_cwscanf_s_l —](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)  
   
- [_Cxxthrowexception —](../../c-runtime-library/reference/cxxthrowexception.md)  
+ [_CxxThrowException](../../c-runtime-library/reference/cxxthrowexception.md)  
   
  **D**  
   
@@ -574,7 +575,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_difftime64 —](../../c-runtime-library/reference/difftime-difftime32-difftime64.md)  
   
- [DIV](../../c-runtime-library/reference/div.md)  
+ [div](../../c-runtime-library/reference/div.md)  
   
  [_dup —](../../c-runtime-library/reference/dup-dup2.md)  
   
@@ -590,19 +591,19 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  **E**  
   
- [_ecvt —](../../c-runtime-library/reference/ecvt.md)  
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)  
   
- [ecvt —](../../c-runtime-library/reference/posix-ecvt.md)  
+ [ecvt](../../c-runtime-library/reference/posix-ecvt.md)  
   
- [_ecvt_s —](../../c-runtime-library/reference/ecvt-s.md)  
+ [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)  
   
  [_endthread —](../../c-runtime-library/reference/endthread-endthreadex.md)  
   
  [_endthreadex —](../../c-runtime-library/reference/endthread-endthreadex.md)  
   
- [EOF](../../c-runtime-library/reference/posix-eof.md)  
+ [eof](../../c-runtime-library/reference/posix-eof.md)  
   
- [_eof —](../../c-runtime-library/reference/eof.md)  
+ [_eof](../../c-runtime-library/reference/eof.md)  
   
  [ERF](../../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)  
   
@@ -616,35 +617,35 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [erfl —](../../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)  
   
- [execl —](../../c-runtime-library/reference/execl.md)  
+ [execl](../../c-runtime-library/reference/execl.md)  
   
  [_execl —](../../c-runtime-library/reference/execl-wexecl.md)  
   
- [execle —](../../c-runtime-library/reference/execle.md)  
+ [execle](../../c-runtime-library/reference/execle.md)  
   
  [_execle —](../../c-runtime-library/reference/execle-wexecle.md)  
   
- [execlp —](../../c-runtime-library/reference/execlp.md)  
+ [execlp](../../c-runtime-library/reference/execlp.md)  
   
  [_execlp —](../../c-runtime-library/reference/execlp-wexeclp.md)  
   
- [execlpe —](../../c-runtime-library/reference/execlpe.md)  
+ [execlpe](../../c-runtime-library/reference/execlpe.md)  
   
  [_execlpe —](../../c-runtime-library/reference/execlpe-wexeclpe.md)  
   
- [execv —](../../c-runtime-library/reference/execv.md)  
+ [execv](../../c-runtime-library/reference/execv.md)  
   
  [_execv —](../../c-runtime-library/reference/execv-wexecv.md)  
   
- [execve —](../../c-runtime-library/reference/execve.md)  
+ [execve](../../c-runtime-library/reference/execve.md)  
   
  [_execve —](../../c-runtime-library/reference/execve-wexecve.md)  
   
- [execvp —](../../c-runtime-library/reference/execvp.md)  
+ [execvp](../../c-runtime-library/reference/execvp.md)  
   
  [_execvp —](../../c-runtime-library/reference/execvp-wexecvp.md)  
   
- [execvpe —](../../c-runtime-library/reference/execvpe.md)  
+ [execvpe](../../c-runtime-library/reference/execvpe.md)  
   
  [_execvpe —](../../c-runtime-library/reference/execvpe-wexecvpe.md)  
   
@@ -662,9 +663,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [exp2l](../../c-runtime-library/reference/exp2-exp2f-exp2l.md)  
   
- [_rozszerz lokację](../../c-runtime-library/reference/expand.md)  
+ [_expand](../../c-runtime-library/reference/expand.md)  
   
- [_expand_dbg —](../../c-runtime-library/reference/expand-dbg.md)  
+ [_expand_dbg](../../c-runtime-library/reference/expand-dbg.md)  
   
  [expf —](../../c-runtime-library/reference/exp-expf.md)  
   
@@ -682,17 +683,17 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [fclose —](../../c-runtime-library/reference/fclose-fcloseall.md)  
   
- [_fclose_nolock —](../../c-runtime-library/reference/fclose-nolock.md)  
+ [_fclose_nolock](../../c-runtime-library/reference/fclose-nolock.md)  
   
  [_fcloseall —](../../c-runtime-library/reference/fclose-fcloseall.md)  
   
- [fcloseall —](../../c-runtime-library/reference/fcloseall.md)  
+ [fcloseall](../../c-runtime-library/reference/fcloseall.md)  
   
- [_fcvt —](../../c-runtime-library/reference/fcvt.md)  
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)  
   
- [fcvt —](../../c-runtime-library/reference/posix-fcvt.md)  
+ [fcvt](../../c-runtime-library/reference/posix-fcvt.md)  
   
- [_fcvt_s —](../../c-runtime-library/reference/fcvt-s.md)  
+ [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)  
   
  [fdim —](../../c-runtime-library/reference/fdim-fdimf-fdiml.md)  
   
@@ -700,7 +701,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [fdiml](../../c-runtime-library/reference/fdim-fdimf-fdiml.md)  
   
- [fdopen —](../../c-runtime-library/reference/fdopen.md)  
+ [fdopen](../../c-runtime-library/reference/fdopen.md)  
   
  [_fdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md)  
   
@@ -714,11 +715,11 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [feholdexcept](../../c-runtime-library/reference/feholdexcept2.md)  
   
- [feof —](../../c-runtime-library/reference/feof.md)  
+ [feof](../../c-runtime-library/reference/feof.md)  
   
  [feraiseexcept](../../c-runtime-library/reference/feraiseexcept.md)  
   
- [ferror —](../../c-runtime-library/reference/ferror.md)  
+ [ferror](../../c-runtime-library/reference/ferror.md)  
   
  [fesetenv](../../c-runtime-library/reference/fesetenv1.md)  
   
@@ -730,19 +731,19 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)  
   
- [fflush —](../../c-runtime-library/reference/fflush.md)  
+ [fflush](../../c-runtime-library/reference/fflush.md)  
   
- [_fflush_nolock —](../../c-runtime-library/reference/fflush-nolock.md)  
+ [_fflush_nolock](../../c-runtime-library/reference/fflush-nolock.md)  
   
  [fgetc —](../../c-runtime-library/reference/fgetc-fgetwc.md)  
   
  [_fgetc_nolock —](../../c-runtime-library/reference/fgetc-nolock-fgetwc-nolock.md)  
   
- [fgetchar —](../../c-runtime-library/reference/fgetchar.md)  
+ [fgetchar](../../c-runtime-library/reference/fgetchar.md)  
   
  [_fgetchar —](../../c-runtime-library/reference/fgetchar-fgetwchar.md)  
   
- [fgetpos —](../../c-runtime-library/reference/fgetpos.md)  
+ [fgetpos](../../c-runtime-library/reference/fgetpos.md)  
   
  [fgets —](../../c-runtime-library/reference/fgets-fgetws.md)  
   
@@ -754,17 +755,17 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [fgetws —](../../c-runtime-library/reference/fgets-fgetws.md)  
   
- [filelength —](../../c-runtime-library/reference/filelength.md)  
+ [filelength](../../c-runtime-library/reference/filelength.md)  
   
  [_filelength —](../../c-runtime-library/reference/filelength-filelengthi64.md)  
   
  [_filelengthi64 —](../../c-runtime-library/reference/filelength-filelengthi64.md)  
   
- [fileno —](../../c-runtime-library/reference/posix-fileno.md)  
+ [fileno](../../c-runtime-library/reference/posix-fileno.md)  
   
- [_fileno —](../../c-runtime-library/reference/fileno.md)  
+ [_fileno](../../c-runtime-library/reference/fileno.md)  
   
- [_findclose —](../../c-runtime-library/reference/findclose.md)  
+ [_findclose](../../c-runtime-library/reference/findclose.md)  
   
  [_findfirst —](../../c-runtime-library/reference/findfirst-functions.md)  
   
@@ -800,9 +801,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [floorl —](../../c-runtime-library/reference/floor-floorf-floorl.md)  
   
- [flushall —](../../c-runtime-library/reference/posix-flushall.md)  
+ [flushall](../../c-runtime-library/reference/posix-flushall.md)  
   
- [_flushall —](../../c-runtime-library/reference/flushall.md)  
+ [_flushall](../../c-runtime-library/reference/flushall.md)  
   
  [FMA](../../c-runtime-library/reference/fma-fmaf-fmal.md)  
   
@@ -834,11 +835,11 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)  
   
- [fpclassify —](../../c-runtime-library/reference/fpclassify.md)  
+ [fpclassify](../../c-runtime-library/reference/fpclassify.md)  
   
- [_fpieee_flt —](../../c-runtime-library/reference/fpieee-flt.md)  
+ [_fpieee_flt](../../c-runtime-library/reference/fpieee-flt.md)  
   
- [_fpreset —](../../c-runtime-library/reference/fpreset.md)  
+ [_fpreset](../../c-runtime-library/reference/fpreset.md)  
   
  [fprintf —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)  
   
@@ -856,7 +857,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_fputc_nolock —](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md)  
   
- [fputchar —](../../c-runtime-library/reference/fputchar.md)  
+ [fputchar](../../c-runtime-library/reference/fputchar.md)  
   
  [_fputchar —](../../c-runtime-library/reference/fputchar-fputwchar.md)  
   
@@ -870,27 +871,27 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [fputws —](../../c-runtime-library/reference/fputs-fputws.md)  
   
- [fread —](../../c-runtime-library/reference/fread.md)  
+ [fread](../../c-runtime-library/reference/fread.md)  
   
- [_fread_nolock —](../../c-runtime-library/reference/fread-nolock.md)  
+ [_fread_nolock](../../c-runtime-library/reference/fread-nolock.md)  
   
  [_fread_nolock_s](../../c-runtime-library/reference/fread-nolock-s2.md)  
   
  [fread_s](../../c-runtime-library/reference/fread-s.md)  
   
- [w warstwie bezpłatna](../../c-runtime-library/reference/free.md)  
+ [free](../../c-runtime-library/reference/free.md)  
   
- [_free_dbg —](../../c-runtime-library/reference/free-dbg.md)  
+ [_free_dbg](../../c-runtime-library/reference/free-dbg.md)  
   
- [_free_locale —](../../c-runtime-library/reference/free-locale.md)  
+ [_free_locale](../../c-runtime-library/reference/free-locale.md)  
   
- [_freea —](../../c-runtime-library/reference/freea.md)  
+ [_freea](../../c-runtime-library/reference/freea.md)  
   
  [freopen —](../../c-runtime-library/reference/freopen-wfreopen.md)  
   
  [freopen_s —](../../c-runtime-library/reference/freopen-s-wfreopen-s.md)  
   
- [frexp —](../../c-runtime-library/reference/frexp.md)  
+ [frexp](../../c-runtime-library/reference/frexp.md)  
   
  [fscanf —](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)  
   
@@ -908,7 +909,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_fseeki64_nolock —](../../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md)  
   
- [fsetpos —](../../c-runtime-library/reference/fsetpos.md)  
+ [fsetpos](../../c-runtime-library/reference/fsetpos.md)  
   
  [_fsopen —](../../c-runtime-library/reference/fsopen-wfsopen.md)  
   
@@ -954,7 +955,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_futime64 —](../../c-runtime-library/reference/futime-futime32-futime64.md)  
   
- [fwide —](../../c-runtime-library/reference/fwide.md)  
+ [fwide](../../c-runtime-library/reference/fwide.md)  
   
  [fwprintf —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)  
   
@@ -968,9 +969,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_fwprintf_s_l —](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)  
   
- [fwrite —](../../c-runtime-library/reference/fwrite.md)  
+ [fwrite](../../c-runtime-library/reference/fwrite.md)  
   
- [_fwrite_nolock —](../../c-runtime-library/reference/fwrite-nolock.md)  
+ [_fwrite_nolock](../../c-runtime-library/reference/fwrite-nolock.md)  
   
  [fwscanf —](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)  
   
@@ -982,53 +983,53 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  **K**  
   
- [gcvt —](../../c-runtime-library/reference/posix-gcvt.md)  
+ [gcvt](../../c-runtime-library/reference/posix-gcvt.md)  
   
- [_gcvt —](../../c-runtime-library/reference/gcvt.md)  
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)  
   
- [_gcvt_s —](../../c-runtime-library/reference/gcvt-s.md)  
+ [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)  
   
- [_get_current_locale —](../../c-runtime-library/reference/get-current-locale.md)  
+ [_get_current_locale](../../c-runtime-library/reference/get-current-locale.md)  
   
- [_get_daylight —](../../c-runtime-library/reference/get-daylight.md)  
+ [_get_daylight](../../c-runtime-library/reference/get-daylight.md)  
   
- [_get_doserrno —](../../c-runtime-library/reference/get-doserrno.md)  
+ [_get_doserrno](../../c-runtime-library/reference/get-doserrno.md)  
   
- [_get_dstbias —](../../c-runtime-library/reference/get-dstbias.md)  
+ [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)  
   
- [_get_errno —](../../c-runtime-library/reference/get-errno.md)  
+ [_get_errno](../../c-runtime-library/reference/get-errno.md)  
   
  [_get_FMA3_enable](../../c-runtime-library/reference/get-fma3-enable-set-fma3-enable.md)  
   
- [_get_fmode —](../../c-runtime-library/reference/get-fmode.md)  
+ [_get_fmode](../../c-runtime-library/reference/get-fmode.md)  
   
- [_get_heap_handle —](../../c-runtime-library/reference/get-heap-handle.md)  
+ [_get_heap_handle](../../c-runtime-library/reference/get-heap-handle.md)  
   
  [_get_invalid_parameter_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)  
   
- [_get_osfhandle —](../../c-runtime-library/reference/get-osfhandle.md)  
+ [_get_osfhandle](../../c-runtime-library/reference/get-osfhandle.md)  
   
- [_get_pgmptr —](../../c-runtime-library/reference/get-pgmptr.md)  
+ [_get_pgmptr](../../c-runtime-library/reference/get-pgmptr.md)  
   
- [_get_printf_count_output —](../../c-runtime-library/reference/get-printf-count-output.md)  
+ [_get_printf_count_output](../../c-runtime-library/reference/get-printf-count-output.md)  
   
- [_get_terminate —](../../c-runtime-library/reference/get-terminate.md)  
+ [_get_terminate](../../c-runtime-library/reference/get-terminate.md)  
   
  [_get_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)  
   
- [_get_timezone —](../../c-runtime-library/reference/get-timezone.md)  
+ [_get_timezone](../../c-runtime-library/reference/get-timezone.md)  
   
- [_get_tzname —](../../c-runtime-library/reference/get-tzname.md)  
+ [_get_tzname](../../c-runtime-library/reference/get-tzname.md)  
   
- [_get_unexpected —](../../c-runtime-library/reference/get-unexpected.md)  
+ [_get_unexpected](../../c-runtime-library/reference/get-unexpected.md)  
   
- [_get_wpgmptr —](../../c-runtime-library/reference/get-wpgmptr.md)  
+ [_get_wpgmptr](../../c-runtime-library/reference/get-wpgmptr.md)  
   
  [getc —](../../c-runtime-library/reference/getc-getwc.md)  
   
  [_getc_nolock —](../../c-runtime-library/reference/getc-nolock-getwc-nolock.md)  
   
- [getch —](../../c-runtime-library/reference/getch.md)  
+ [getch](../../c-runtime-library/reference/getch.md)  
   
  [_getch —](../../c-runtime-library/reference/getch-getwch.md)  
   
@@ -1038,13 +1039,13 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_getchar_nolock —](../../c-runtime-library/reference/getchar-nolock-getwchar-nolock.md)  
   
- [getche —](../../c-runtime-library/reference/getche.md)  
+ [getche](../../c-runtime-library/reference/getche.md)  
   
  [_getche —](../../c-runtime-library/reference/getche-getwche.md)  
   
  [_getche_nolock —](../../c-runtime-library/reference/getche-nolock-getwche-nolock.md)  
   
- [getcwd —](../../c-runtime-library/reference/getcwd.md)  
+ [getcwd](../../c-runtime-library/reference/getcwd.md)  
   
  [_getcwd —](../../c-runtime-library/reference/getcwd-wgetcwd.md)  
   
@@ -1056,29 +1057,29 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_getdcwd_nolock —](../../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md)  
   
- [_getdiskfree —](../../c-runtime-library/reference/getdiskfree.md)  
+ [_getdiskfree](../../c-runtime-library/reference/getdiskfree.md)  
   
- [_getdrive —](../../c-runtime-library/reference/getdrive.md)  
+ [_getdrive](../../c-runtime-library/reference/getdrive.md)  
   
- [_getdrives —](../../c-runtime-library/reference/getdrives.md)  
+ [_getdrives](../../c-runtime-library/reference/getdrives.md)  
   
  [getenv —](../../c-runtime-library/reference/getenv-wgetenv.md)  
   
  [getenv_s —](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)  
   
- [_getmaxstdio —](../../c-runtime-library/reference/getmaxstdio.md)  
+ [_getmaxstdio](../../c-runtime-library/reference/getmaxstdio.md)  
   
- [_getmbcp —](../../c-runtime-library/reference/getmbcp.md)  
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)  
   
- [_getpid —](../../c-runtime-library/reference/getpid.md)  
+ [_getpid](../../c-runtime-library/reference/getpid.md)  
   
- [getpid —](../../c-runtime-library/reference/posix-getpid.md)  
+ [getpid](../../c-runtime-library/reference/posix-getpid.md)  
   
  [gets_s —](../../c-runtime-library/reference/gets-s-getws-s.md)  
   
- [_getw —](../../c-runtime-library/reference/getw.md)  
+ [_getw](../../c-runtime-library/reference/getw.md)  
   
- [getw —](../../c-runtime-library/reference/posix-getw.md)  
+ [getw](../../c-runtime-library/reference/posix-getw.md)  
   
  [getwc —](../../c-runtime-library/reference/getc-getwc.md)  
   
@@ -1112,11 +1113,11 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  **H**  
   
- [_heapchk —](../../c-runtime-library/reference/heapchk.md)  
+ [_heapchk](../../c-runtime-library/reference/heapchk.md)  
   
- [_heapmin —](../../c-runtime-library/reference/heapmin.md)  
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)  
   
- [_heapwalk —](../../c-runtime-library/reference/heapwalk.md)  
+ [_heapwalk](../../c-runtime-library/reference/heapwalk.md)  
   
  [hypot —](../../c-runtime-library/reference/hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)  
   
@@ -1146,9 +1147,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [ilogbl](../../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)  
   
- [imaxabs —](../../c-runtime-library/reference/imaxabs.md)  
+ [imaxabs](../../c-runtime-library/reference/imaxabs.md)  
   
- [imaxdiv —](../../c-runtime-library/reference/imaxdiv.md)  
+ [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)  
   
  [_initterm —](../../c-runtime-library/reference/initterm-initterm-e.md)  
   
@@ -1174,9 +1175,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [__isascii —](../../c-runtime-library/reference/isascii-isascii-iswascii.md)  
   
- [_isatty —](../../c-runtime-library/reference/isatty.md)  
+ [_isatty](../../c-runtime-library/reference/isatty.md)  
   
- [isatty —](../../c-runtime-library/reference/posix-isatty.md)  
+ [isatty](../../c-runtime-library/reference/posix-isatty.md)  
   
  [ISBLANK](../../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)  
   
@@ -1430,7 +1431,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_isxdigit_l —](../../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)  
   
- [itoa —](../../c-runtime-library/reference/itoa.md)  
+ [itoa](../../c-runtime-library/reference/itoa.md)  
   
  [_itoa —](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)  
   
@@ -1456,23 +1457,23 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  **K**  
   
- [_kbhit —](../../c-runtime-library/reference/kbhit.md)  
+ [_kbhit](../../c-runtime-library/reference/kbhit.md)  
   
- [kbhit —](../../c-runtime-library/reference/posix-kbhit.md)  
+ [kbhit](../../c-runtime-library/reference/posix-kbhit.md)  
   
  **L**  
   
  [Labs](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)  
   
- [ldexp —](../../c-runtime-library/reference/ldexp.md)  
+ [ldexp](../../c-runtime-library/reference/ldexp.md)  
   
  [ldiv —](../../c-runtime-library/reference/ldiv-lldiv.md)  
   
- [_lfind —](../../c-runtime-library/reference/lfind.md)  
+ [_lfind](../../c-runtime-library/reference/lfind.md)  
   
- [lfind —](../../c-runtime-library/reference/posix-lfind.md)  
+ [lfind](../../c-runtime-library/reference/posix-lfind.md)  
   
- [_lfind_s —](../../c-runtime-library/reference/lfind-s.md)  
+ [_lfind_s](../../c-runtime-library/reference/lfind-s.md)  
   
  [lgamma —](../../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)  
   
@@ -1496,7 +1497,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [llroundl —](../../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)  
   
- [localeconv —](../../c-runtime-library/reference/localeconv.md)  
+ [localeconv](../../c-runtime-library/reference/localeconv.md)  
   
  [czas lokalny](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)  
   
@@ -1510,11 +1511,11 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_localtime64_s —](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)  
   
- [_lock_file —](../../c-runtime-library/reference/lock-file.md)  
+ [_lock_file](../../c-runtime-library/reference/lock-file.md)  
   
- [blokowanie](../../c-runtime-library/reference/posix-locking.md)  
+ [locking](../../c-runtime-library/reference/posix-locking.md)  
   
- [_locking —](../../c-runtime-library/reference/locking.md)  
+ [_locking](../../c-runtime-library/reference/locking.md)  
   
  [Dziennik](../../c-runtime-library/reference/log-logf-log10-log10f.md)  
   
@@ -1564,19 +1565,19 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [lroundl —](../../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)  
   
- [_lsearch —](../../c-runtime-library/reference/lsearch.md)  
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)  
   
- [lsearch —](../../c-runtime-library/reference/posix-lsearch.md)  
+ [lsearch](../../c-runtime-library/reference/posix-lsearch.md)  
   
- [_lsearch_s —](../../c-runtime-library/reference/lsearch-s.md)  
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)  
   
- [lseek —](../../c-runtime-library/reference/lseek.md)  
+ [lseek](../../c-runtime-library/reference/lseek.md)  
   
  [_lseek —](../../c-runtime-library/reference/lseek-lseeki64.md)  
   
  [_lseeki64 —](../../c-runtime-library/reference/lseek-lseeki64.md)  
   
- [ltoa —](../../c-runtime-library/reference/ltoa.md)  
+ [ltoa](../../c-runtime-library/reference/ltoa.md)  
   
  [_ltoa —](../../c-runtime-library/reference/ltoa-ltow.md)  
   
@@ -1592,15 +1593,15 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_makepath_s —](../../c-runtime-library/reference/makepath-s-wmakepath-s.md)  
   
- [— funkcja malloc](../../c-runtime-library/reference/malloc.md)  
+ [malloc](../../c-runtime-library/reference/malloc.md)  
   
- [_malloc_dbg —](../../c-runtime-library/reference/malloc-dbg.md)  
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)  
   
- [_malloca —](../../c-runtime-library/reference/malloca.md)  
+ [_malloca](../../c-runtime-library/reference/malloca.md)  
   
- [_matherr —](../../c-runtime-library/reference/matherr.md)  
+ [_matherr](../../c-runtime-library/reference/matherr.md)  
   
- [__max —](../../c-runtime-library/reference/max.md)  
+ [__max](../../c-runtime-library/reference/max.md)  
   
  [_mbbtombc —](../../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)  
   
@@ -1652,13 +1653,13 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_mblen_l —](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)  
   
- [mbrlen —](../../c-runtime-library/reference/mbrlen.md)  
+ [mbrlen](../../c-runtime-library/reference/mbrlen.md)  
   
  [mbrtoc16](../../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)  
   
  [mbrtoc32](../../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)  
   
- [mbrtowc —](../../c-runtime-library/reference/mbrtowc.md)  
+ [mbrtowc](../../c-runtime-library/reference/mbrtowc.md)  
   
  [_mbsbtype —](../../c-runtime-library/reference/mbsbtype-mbsbtype-l.md)  
   
@@ -1704,7 +1705,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_mbsinc_l](../../c-runtime-library/reference/strinc-wcsinc-mbsinc-mbsinc-l.md)  
   
- [mbsinit —](../../c-runtime-library/reference/mbsinit.md)  
+ [mbsinit](../../c-runtime-library/reference/mbsinit.md)  
   
  [_mbslen —](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)  
   
@@ -1830,9 +1831,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_mbsrev_l —](../../c-runtime-library/reference/strrev-wcsrev-mbsrev-mbsrev-l.md)  
   
- [mbsrtowcs —](../../c-runtime-library/reference/mbsrtowcs.md)  
+ [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md)  
   
- [mbsrtowcs_s —](../../c-runtime-library/reference/mbsrtowcs-s.md)  
+ [mbsrtowcs_s](../../c-runtime-library/reference/mbsrtowcs-s.md)  
   
  [_mbsset —](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)  
   
@@ -1890,9 +1891,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_mbtowc_l —](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)  
   
- [memccpy —](../../c-runtime-library/reference/posix-memccpy.md)  
+ [memccpy](../../c-runtime-library/reference/posix-memccpy.md)  
   
- [_memccpy —](../../c-runtime-library/reference/memccpy.md)  
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)  
   
  [memchr](../../c-runtime-library/reference/memchr-wmemchr.md)  
   
@@ -1902,7 +1903,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [memcpy_s —](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)  
   
- [memicmp —](../../c-runtime-library/reference/memicmp.md)  
+ [memicmp](../../c-runtime-library/reference/memicmp.md)  
   
  [_memicmp —](../../c-runtime-library/reference/memicmp-memicmp-l.md)  
   
@@ -1914,7 +1915,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [funkcji memset](../../c-runtime-library/reference/memset-wmemset.md)  
   
- [__min —](../../c-runtime-library/reference/min.md)  
+ [__min](../../c-runtime-library/reference/min.md)  
   
  [mkdir](../../c-runtime-library/reference/mkdir.md)  
   
@@ -1926,7 +1927,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_mkgmtime64 —](../../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)  
   
- [mktemp —](../../c-runtime-library/reference/mktemp.md)  
+ [mktemp](../../c-runtime-library/reference/mktemp.md)  
   
  [_mktemp —](../../c-runtime-library/reference/mktemp-wmktemp.md)  
   
@@ -1942,9 +1943,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [modff —](../../c-runtime-library/reference/modf-modff-modfl.md)  
   
- [_msize —](../../c-runtime-library/reference/msize.md)  
+ [_msize](../../c-runtime-library/reference/msize.md)  
   
- [_msize_dbg —](../../c-runtime-library/reference/msize-dbg.md)  
+ [_msize_dbg](../../c-runtime-library/reference/msize-dbg.md)  
   
  **N**  
   
@@ -1982,7 +1983,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [norml](../../c-runtime-library/reference/norm-normf-norml1.md)  
   
- [nie](../../c-runtime-library/reference/not.md)  
+ [not](../../c-runtime-library/reference/not.md)  
   
  [not_eq](../../c-runtime-library/reference/not-eq.md)  
   
@@ -1994,23 +1995,23 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_onexit_m —](../../c-runtime-library/reference/onexit-onexit-m.md)  
   
- [Otwórz](../../c-runtime-library/reference/open.md)  
+ [open](../../c-runtime-library/reference/open.md)  
   
  [_otwórz](../../c-runtime-library/reference/open-wopen.md)  
   
- [_open_osfhandle —](../../c-runtime-library/reference/open-osfhandle.md)  
+ [_open_osfhandle](../../c-runtime-library/reference/open-osfhandle.md)  
   
- [lub](../../c-runtime-library/reference/or.md)  
+ [or](../../c-runtime-library/reference/or.md)  
   
  [or_eq](../../c-runtime-library/reference/or-eq.md)  
   
  **P**  
   
- [_pclose —](../../c-runtime-library/reference/pclose.md)  
+ [_pclose](../../c-runtime-library/reference/pclose.md)  
   
  [perror](../../c-runtime-library/reference/perror-wperror.md)  
   
- [_pipe —](../../c-runtime-library/reference/pipe.md)  
+ [_pipe](../../c-runtime-library/reference/pipe.md)  
   
  [_popen —](../../c-runtime-library/reference/popen-wpopen.md)  
   
@@ -2032,13 +2033,13 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_printf_s_l —](../../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
   
- [_purecall —](../../c-runtime-library/reference/purecall.md)  
+ [_purecall](../../c-runtime-library/reference/purecall.md)  
   
  [putc —](../../c-runtime-library/reference/putc-putwc.md)  
   
  [_putc_nolock —](../../c-runtime-library/reference/putc-nolock-putwc-nolock.md)  
   
- [putch —](../../c-runtime-library/reference/putch.md)  
+ [putch](../../c-runtime-library/reference/putch.md)  
   
  [_putch —](../../c-runtime-library/reference/putch-putwch.md)  
   
@@ -2048,7 +2049,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_putchar_nolock —](../../c-runtime-library/reference/putchar-nolock-putwchar-nolock.md)  
   
- [putenv —](../../c-runtime-library/reference/putenv.md)  
+ [putenv](../../c-runtime-library/reference/putenv.md)  
   
  [_putenv —](../../c-runtime-library/reference/putenv-wputenv.md)  
   
@@ -2056,9 +2057,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [umieszcza](../../c-runtime-library/reference/puts-putws.md)  
   
- [putw —](../../c-runtime-library/reference/posix-putw.md)  
+ [putw](../../c-runtime-library/reference/posix-putw.md)  
   
- [_putw —](../../c-runtime-library/reference/putw.md)  
+ [_putw](../../c-runtime-library/reference/putw.md)  
   
  [putwc —](../../c-runtime-library/reference/putc-putwc.md)  
   
@@ -2076,35 +2077,35 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  **Q**  
   
- [qsort —](../../c-runtime-library/reference/qsort.md)  
+ [qsort](../../c-runtime-library/reference/qsort.md)  
   
- [qsort_s —](../../c-runtime-library/reference/qsort-s.md)  
+ [qsort_s](../../c-runtime-library/reference/qsort-s.md)  
   
- [_query_new_handler —](../../c-runtime-library/reference/query-new-handler.md)  
+ [_query_new_handler](../../c-runtime-library/reference/query-new-handler.md)  
   
- [_query_new_mode —](../../c-runtime-library/reference/query-new-mode.md)  
+ [_query_new_mode](../../c-runtime-library/reference/query-new-mode.md)  
   
  [quick_exit](../../c-runtime-library/reference/quick-exit1.md)  
   
  **R**  
   
- [Zgłoś](../../c-runtime-library/reference/raise.md)  
+ [raise](../../c-runtime-library/reference/raise.md)  
   
- [RAND](../../c-runtime-library/reference/rand.md)  
+ [rand](../../c-runtime-library/reference/rand.md)  
   
- [rand_s —](../../c-runtime-library/reference/rand-s.md)  
+ [rand_s](../../c-runtime-library/reference/rand-s.md)  
   
- [Odczyt](../../c-runtime-library/reference/posix-read.md)  
+ [read](../../c-runtime-library/reference/posix-read.md)  
   
- [_przeczytaj](../../c-runtime-library/reference/read.md)  
+ [_read](../../c-runtime-library/reference/read.md)  
   
  [realloc](../../c-runtime-library/reference/realloc.md)  
   
- [_realloc_dbg —](../../c-runtime-library/reference/realloc-dbg.md)  
+ [_realloc_dbg](../../c-runtime-library/reference/realloc-dbg.md)  
   
- [_recalloc —](../../c-runtime-library/reference/recalloc.md)  
+ [_recalloc](../../c-runtime-library/reference/recalloc.md)  
   
- [_recalloc_dbg —](../../c-runtime-library/reference/recalloc-dbg.md)  
+ [_recalloc_dbg](../../c-runtime-library/reference/recalloc-dbg.md)  
   
  [pozostałe](../../c-runtime-library/reference/remainder-remainderf-remainderl.md)  
   
@@ -2112,7 +2113,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [remainderl](../../c-runtime-library/reference/remainder-remainderf-remainderl.md)  
   
- [Usuń](../../c-runtime-library/reference/remove-wremove.md)  
+ [remove](../../c-runtime-library/reference/remove-wremove.md)  
   
  [remquo —](../../c-runtime-library/reference/remquo-remquof-remquol.md)  
   
@@ -2124,7 +2125,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)  
   
- [przewijanie do tyłu](../../c-runtime-library/reference/rewind.md)  
+ [rewind](../../c-runtime-library/reference/rewind.md)  
   
  [Drukowanie](../../c-runtime-library/reference/rint-rintf-rintl.md)  
   
@@ -2136,9 +2137,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_rmdir —](../../c-runtime-library/reference/rmdir-wrmdir.md)  
   
- [rmtmp —](../../c-runtime-library/reference/posix-rmtmp.md)  
+ [rmtmp](../../c-runtime-library/reference/posix-rmtmp.md)  
   
- [_rmtmp —](../../c-runtime-library/reference/rmtmp.md)  
+ [_rmtmp](../../c-runtime-library/reference/rmtmp.md)  
   
  [_rotl —](../../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)  
   
@@ -2162,19 +2163,19 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_RPTW](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)  
   
- [_Rtc_geterrdesc —](../../c-runtime-library/reference/rtc-geterrdesc.md)  
+ [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)  
   
- [_Rtc_numerrors —](../../c-runtime-library/reference/rtc-numerrors.md)  
+ [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md)  
   
- [_Rtc_seterrorfunc —](../../c-runtime-library/reference/rtc-seterrorfunc.md)  
+ [_RTC_SetErrorFunc](../../c-runtime-library/reference/rtc-seterrorfunc.md)  
   
- [_Rtc_seterrorfuncw —](../../c-runtime-library/reference/rtc-seterrorfuncw.md)  
+ [_RTC_SetErrorFuncW](../../c-runtime-library/reference/rtc-seterrorfuncw.md)  
   
- [_Rtc_seterrortype —](../../c-runtime-library/reference/rtc-seterrortype.md)  
+ [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md)  
   
  **S**  
   
- [_scalb —](../../c-runtime-library/reference/scalb.md)  
+ [_scalb](../../c-runtime-library/reference/scalb.md)  
   
  [scalbln](../../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)  
   
@@ -2216,39 +2217,39 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_searchenv_s —](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)  
   
- [__security_init_cookie —](../../c-runtime-library/reference/security-init-cookie.md)  
+ [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md)  
   
  [_seh_filter_dll](../../c-runtime-library/reference/seh-filter-dll-seh-filter-exe.md)  
   
  [_seh_filter_exe](../../c-runtime-library/reference/seh-filter-dll-seh-filter-exe.md)  
   
- [_set_abort_behavior —](../../c-runtime-library/reference/set-abort-behavior.md)  
+ [_set_abort_behavior](../../c-runtime-library/reference/set-abort-behavior.md)  
   
- [_set_controlfp —](../../c-runtime-library/reference/set-controlfp.md)  
+ [_set_controlfp](../../c-runtime-library/reference/set-controlfp.md)  
   
- [_set_doserrno —](../../c-runtime-library/reference/set-doserrno.md)  
+ [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md)  
   
- [_set_errno —](../../c-runtime-library/reference/set-errno.md)  
+ [_set_errno](../../c-runtime-library/reference/set-errno.md)  
   
- [_set_error_mode —](../../c-runtime-library/reference/set-error-mode.md)  
+ [_set_error_mode](../../c-runtime-library/reference/set-error-mode.md)  
   
  [_set_FMA3_enable](../../c-runtime-library/reference/get-fma3-enable-set-fma3-enable.md)  
   
- [_set_fmode —](../../c-runtime-library/reference/set-fmode.md)  
+ [_set_fmode](../../c-runtime-library/reference/set-fmode.md)  
   
  [_set_invalid_parameter_handler —](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)  
   
- [_set_new_handler —](../../c-runtime-library/reference/set-new-handler.md)  
+ [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md)  
   
- [_set_new_mode —](../../c-runtime-library/reference/set-new-mode.md)  
+ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md)  
   
- [_set_printf_count_output —](../../c-runtime-library/reference/set-printf-count-output.md)  
+ [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)  
   
  [_set_purecall_handler —](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)  
   
- [_set_se_translator —](../../c-runtime-library/reference/set-se-translator.md)  
+ [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)  
   
- [_set_sse2_enable —](../../c-runtime-library/reference/set-sse2-enable.md)  
+ [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)  
   
  [set_terminate —](../../c-runtime-library/reference/set-terminate-crt.md)  
   
@@ -2260,19 +2261,19 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [setjmp](../../c-runtime-library/reference/setjmp.md)  
   
- [setLocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)  
+ [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)  
   
- [_setmaxstdio —](../../c-runtime-library/reference/setmaxstdio.md)  
+ [_setmaxstdio](../../c-runtime-library/reference/setmaxstdio.md)  
   
- [_setmbcp —](../../c-runtime-library/reference/setmbcp.md)  
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)  
   
- [setmode —](../../c-runtime-library/reference/posix-setmode.md)  
+ [setmode](../../c-runtime-library/reference/posix-setmode.md)  
   
- [_setmode —](../../c-runtime-library/reference/setmode.md)  
+ [_setmode](../../c-runtime-library/reference/setmode.md)  
   
- [setvbuf —](../../c-runtime-library/reference/setvbuf.md)  
+ [setvbuf](../../c-runtime-library/reference/setvbuf.md)  
   
- [sygnał](../../c-runtime-library/reference/signal.md)  
+ [signal](../../c-runtime-library/reference/signal.md)  
   
  [SIN](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)  
   
@@ -2320,41 +2321,41 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_snwscanf_s_l —](../../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)  
   
- [sopen —](../../c-runtime-library/reference/sopen.md)  
+ [sopen](../../c-runtime-library/reference/sopen.md)  
   
  [_sopen —](../../c-runtime-library/reference/sopen-wsopen.md)  
   
  [_sopen_s —](../../c-runtime-library/reference/sopen-s-wsopen-s.md)  
   
- [spawnl —](../../c-runtime-library/reference/spawnl.md)  
+ [spawnl](../../c-runtime-library/reference/spawnl.md)  
   
  [_spawnl —](../../c-runtime-library/reference/spawnl-wspawnl.md)  
   
- [spawnle —](../../c-runtime-library/reference/spawnle.md)  
+ [spawnle](../../c-runtime-library/reference/spawnle.md)  
   
  [_spawnle —](../../c-runtime-library/reference/spawnle-wspawnle.md)  
   
- [spawnlp —](../../c-runtime-library/reference/spawnlp.md)  
+ [spawnlp](../../c-runtime-library/reference/spawnlp.md)  
   
  [_spawnlp —](../../c-runtime-library/reference/spawnlp-wspawnlp.md)  
   
- [spawnlpe —](../../c-runtime-library/reference/spawnlpe.md)  
+ [spawnlpe](../../c-runtime-library/reference/spawnlpe.md)  
   
  [_spawnlpe —](../../c-runtime-library/reference/spawnlpe-wspawnlpe.md)  
   
- [spawnv —](../../c-runtime-library/reference/spawnv.md)  
+ [spawnv](../../c-runtime-library/reference/spawnv.md)  
   
  [_spawnv —](../../c-runtime-library/reference/spawnv-wspawnv.md)  
   
- [spawnve —](../../c-runtime-library/reference/spawnve.md)  
+ [spawnve](../../c-runtime-library/reference/spawnve.md)  
   
  [_spawnve —](../../c-runtime-library/reference/spawnve-wspawnve.md)  
   
- [spawnvp —](../../c-runtime-library/reference/spawnvp.md)  
+ [spawnvp](../../c-runtime-library/reference/spawnvp.md)  
   
  [_spawnvp —](../../c-runtime-library/reference/spawnvp-wspawnvp.md)  
   
- [spawnvpe —](../../c-runtime-library/reference/spawnvpe.md)  
+ [spawnvpe](../../c-runtime-library/reference/spawnvpe.md)  
   
  [_spawnvpe —](../../c-runtime-library/reference/spawnvpe-wspawnvpe.md)  
   
@@ -2380,7 +2381,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [sqrtl —](../../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)  
   
- [srand —](../../c-runtime-library/reference/srand.md)  
+ [srand](../../c-runtime-library/reference/srand.md)  
   
  [sscanf —](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)  
   
@@ -2418,7 +2419,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [strcmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)  
   
- [strcmpi —](../../c-runtime-library/reference/strcmpi.md)  
+ [strcmpi](../../c-runtime-library/reference/strcmpi.md)  
   
  [strcoll —](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)  
   
@@ -2624,9 +2625,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_strxfrm_l —](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)  
   
- [swab —](../../c-runtime-library/reference/posix-swab.md)  
+ [swab](../../c-runtime-library/reference/posix-swab.md)  
   
- [_swab —](../../c-runtime-library/reference/swab.md)  
+ [_swab](../../c-runtime-library/reference/swab.md)  
   
  [swprintf —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)  
   
@@ -2666,13 +2667,13 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [tanl —](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)  
   
- [Poinformuj](../../c-runtime-library/reference/tell.md)  
+ [tell](../../c-runtime-library/reference/tell.md)  
   
  [_tell —](../../c-runtime-library/reference/tell-telli64.md)  
   
  [_telli64 —](../../c-runtime-library/reference/tell-telli64.md)  
   
- [tempnam —](../../c-runtime-library/reference/tempnam.md)  
+ [tempnam](../../c-runtime-library/reference/tempnam.md)  
   
  [_tempnam —](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)  
   
@@ -2698,9 +2699,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_timespec64_get](../../c-runtime-library/reference/timespec-get-timespec32-get-timespec64-get1.md)  
   
- [tmpfile —](../../c-runtime-library/reference/tmpfile.md)  
+ [tmpfile](../../c-runtime-library/reference/tmpfile.md)  
   
- [tmpfile_s —](../../c-runtime-library/reference/tmpfile-s.md)  
+ [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)  
   
  [tmpnam —](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)  
   
@@ -2722,7 +2723,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_toupper_l —](../../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)  
   
- [towctrans —](../../c-runtime-library/reference/towctrans.md)  
+ [towctrans](../../c-runtime-library/reference/towctrans.md)  
   
  [towlower —](../../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)  
   
@@ -2738,9 +2739,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [truncl](../../c-runtime-library/reference/trunc-truncf-truncl.md)  
   
- [tzset —](../../c-runtime-library/reference/posix-tzset.md)  
+ [tzset](../../c-runtime-library/reference/posix-tzset.md)  
   
- [_tzset —](../../c-runtime-library/reference/tzset.md)  
+ [_tzset](../../c-runtime-library/reference/tzset.md)  
   
  **U**  
   
@@ -2752,7 +2753,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_ui64tow_s —](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md)  
   
- [ultoa —](../../c-runtime-library/reference/ultoa.md)  
+ [ultoa](../../c-runtime-library/reference/ultoa.md)  
   
  [_ultoa —](../../c-runtime-library/reference/ultoa-ultow.md)  
   
@@ -2762,11 +2763,11 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_ultow_s —](../../c-runtime-library/reference/ultoa-s-ultow-s.md)  
   
- [umask —](../../c-runtime-library/reference/posix-umask.md)  
+ [umask](../../c-runtime-library/reference/posix-umask.md)  
   
- [_umask —](../../c-runtime-library/reference/umask.md)  
+ [_umask](../../c-runtime-library/reference/umask.md)  
   
- [_umask_s —](../../c-runtime-library/reference/umask-s.md)  
+ [_umask_s](../../c-runtime-library/reference/umask-s.md)  
   
  [__uncaught_exception](../../c-runtime-library/reference/uncaught-exception.md)  
   
@@ -2776,7 +2777,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_ungetc_nolock —](../../c-runtime-library/reference/ungetc-nolock-ungetwc-nolock.md)  
   
- [ungetch —](../../c-runtime-library/reference/ungetch.md)  
+ [ungetch](../../c-runtime-library/reference/ungetch.md)  
   
  [_ungetch —](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)  
   
@@ -2790,11 +2791,11 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_ungetwch_nolock —](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)  
   
- [Rozłącz](../../c-runtime-library/reference/unlink.md)  
+ [unlink](../../c-runtime-library/reference/unlink.md)  
   
  [_unlink —](../../c-runtime-library/reference/unlink-wunlink.md)  
   
- [_unlock_file —](../../c-runtime-library/reference/unlock-file.md)  
+ [_unlock_file](../../c-runtime-library/reference/unlock-file.md)  
   
  [_utime —](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)  
   
@@ -2990,9 +2991,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)  
   
- [wcrtomb —](../../c-runtime-library/reference/wcrtomb.md)  
+ [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)  
   
- [wcrtomb_s —](../../c-runtime-library/reference/wcrtomb-s.md)  
+ [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)  
   
  [wcscat —](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)  
   
@@ -3040,7 +3041,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_wcsicoll —](../../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)  
   
- [wcsicoll —](../../c-runtime-library/reference/wcsicoll.md)  
+ [wcsicoll](../../c-runtime-library/reference/wcsicoll.md)  
   
  [_wcsicoll_l](../../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)  
   
@@ -3118,9 +3119,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [wcsrev —](../../c-runtime-library/reference/strrev-wcsrev.md)  
   
- [wcsrtombs —](../../c-runtime-library/reference/wcsrtombs.md)  
+ [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md)  
   
- [wcsrtombs_s —](../../c-runtime-library/reference/wcsrtombs-s.md)  
+ [wcsrtombs_s](../../c-runtime-library/reference/wcsrtombs-s.md)  
   
  [_wcsset —](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)  
   
@@ -3224,7 +3225,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_wctime64_s —](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)  
   
- [wctob —](../../c-runtime-library/reference/wctob.md)  
+ [wctob](../../c-runtime-library/reference/wctob.md)  
   
  [wctomb —](../../c-runtime-library/reference/wctomb-wctomb-l.md)  
   
@@ -3234,9 +3235,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_wctomb_s_l —](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)  
   
- [wctrans —](../../c-runtime-library/reference/wctrans.md)  
+ [wctrans](../../c-runtime-library/reference/wctrans.md)  
   
- [wctype —](../../c-runtime-library/reference/wctype.md)  
+ [wctype](../../c-runtime-library/reference/wctype.md)  
   
  [_wdupenv_s —](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md)  
   
@@ -3362,9 +3363,9 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  [_wrename —](../../c-runtime-library/reference/rename-wrename.md)  
   
- [_Write](../../c-runtime-library/reference/write.md)  
+ [_write](../../c-runtime-library/reference/write.md)  
   
- [zapisu](../../c-runtime-library/reference/posix-write.md)  
+ [write](../../c-runtime-library/reference/posix-write.md)  
   
  [_wrmdir —](../../c-runtime-library/reference/rmdir-wrmdir.md)  
   
@@ -3466,7 +3467,7 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
   
  **X**  
   
- [XOR](../../c-runtime-library/reference/xor.md)  
+ [xor](../../c-runtime-library/reference/xor.md)  
   
  [xor_eq](../../c-runtime-library/reference/xor-eq.md)  
   
@@ -3485,4 +3486,4 @@ Dokumentację odwołanie do biblioteki C Run-Time (CRT) są rozmieszczone alfabe
  [Yn](../../c-runtime-library/reference/y0-y1-yn.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki wykonawcze języka C](../../c-runtime-library/c-run-time-library-reference.md)
+ [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../../c-runtime-library/c-run-time-library-reference.md)

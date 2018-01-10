@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 275b1798665caaaa70aaa0de20aaec20c9979440
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a48382f5f7a3ab64518c44ec953005cd54a4fe03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-types"></a>Typy znaku
 Stała znakowa całkowitą nie poprzedzony literą **L** ma typ `int`. Wartość stała znakowa liczba całkowita zawierająca pojedynczy znak jest wartością liczbową znaku interpretowane jako liczba całkowita. Na przykład wartość liczbową znaku `a` 97 dziesiętnie i 61 w formacie szesnastkowym.  

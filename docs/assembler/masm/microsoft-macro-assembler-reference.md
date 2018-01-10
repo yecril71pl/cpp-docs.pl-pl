@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df9df0f039bb9fcf9b157c642025b3f140c26ccc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ea2a2222df26c05bce7daf1852d68ba40329b92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler — odwołanie
 Asemblera makr firmy Microsoft (MASM) zawiera kilka zalet w porównaniu z zestawu wbudowanego. MASM zawiera języka makra, którego funkcje, takie jak przetwarzania ciągu zapętlenie, arytmetyczne i tekstu. MASM również zapewnia większą kontrolę nad sprzętu, ponieważ obsługuje on zbiór instrukcji 386, 486 i procesory Pentium. Za pomocą MASM, możesz również zmniejszyć obciążenie pamięci i czasu.  
@@ -34,19 +35,19 @@ Asemblera makr firmy Microsoft (MASM) zawiera kilka zalet w porównaniu z zestaw
  [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)  
  W tym artykule opisano komunikaty ML.exe krytyczne i niekrytyczne o błędach i ostrzeżenia.  
   
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)  
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)  
  Zawiera łącza do artykułów, które omówiono użycie dyrektywy w MASM.  
   
- [Odwołania do symboli](../../assembler/masm/symbols-reference.md)  
+ [Dokumentacja symboli](../../assembler/masm/symbols-reference.md)  
  Zawiera łącza do artykułów, które omówiono używanie symboli w MASM.  
   
- [Odwołanie do operatorów](../../assembler/masm/operators-reference.md)  
+ [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)  
  Zawiera łącza do artykułów, które omówiono korzystanie z operatorów w MASM.  
   
  [Podręczniki programowania od producenta procesora](../../assembler/masm/processor-manufacturer-programming-manuals.md)  
  Zawiera łącza do witryn sieci Web, która może zawierać programowania informacji na temat procesorów, które nie są produkowane, sprzedaży lub obsługiwane przez firmę Microsoft.  
   
- [MASM dla x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)  
+ [MASM dla wersji x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)  
  Informacje o sposobie tworzenia dane wyjściowe pliki [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

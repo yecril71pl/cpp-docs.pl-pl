@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd0f4b448de3fcaabe33822c0d8b1ee834260609
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2a97809fefdc0a5e6e7d90e7b62bbee83f28bfb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-encoding-reference"></a>Odwołanie kodowania ALT
 Kodowanie w szereg typowych standardy internetowe, takie jak uuencode szesnastkowych i UTF8 jest obsługiwane przez kod w atlenc.h.  
@@ -53,5 +54,5 @@ Kodowanie w szereg typowych standardy internetowe, takie jak uuencode szesnastko
   
 ## <a name="see-also"></a>Zobacz też  
  [Pojęcia](../atl/active-template-library-atl-concepts.md)   
- [Składniki COM pulpitu ATL](../atl/atl-com-desktop-components.md)
+ [Składniki ATL COM pulpitu](../atl/atl-com-desktop-components.md)
 

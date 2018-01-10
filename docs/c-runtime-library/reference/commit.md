@@ -36,11 +36,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4df750e90ccd36545348f765ecd00e02728481e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e4a195566479f9e7e9f5b68a46069701462bb2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commit"></a>_commit
 Liczba opróżnień pliku bezpośrednio na dysku.  
@@ -78,4 +79,4 @@ int _commit(
  [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_przeczytaj](../../c-runtime-library/reference/read.md)   
- [_Write](../../c-runtime-library/reference/write.md)
+ [_write](../../c-runtime-library/reference/write.md)

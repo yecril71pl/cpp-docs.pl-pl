@@ -39,11 +39,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b4e891a7819be98892ff9868c868cc716a90dbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 73e89121dda53300b276b76f49625ad274df4519
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 Tworzy obiekt ustawień regionalnych.  
@@ -196,4 +197,4 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
  [strftime —, wcsftime —, _strftime_l — _wcsftime_l —](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
  [strxfrm —, wcsxfrm —, _strxfrm_l — _wcsxfrm_l —](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
  [wcstombs —, _wcstombs_l —](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [wctomb —, _wctomb_l —](../../c-runtime-library/reference/wctomb-wctomb-l.md)
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)

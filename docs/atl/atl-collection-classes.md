@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8be61044a9cc6883eab74eb8093b79ea84aacc60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24b0fbdc5ab68319704fb59746862384198f232b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-collection-classes"></a>Klasy kolekcji ATL
 ATL zawiera wiele klas do przechowywania i uzyskiwania dostępu do danych. Klasy, które będą używane zależy od wielu czynników, takich jak:  
@@ -71,8 +72,8 @@ ATL zawiera wiele klas do przechowywania i uzyskiwania dostępu do danych. Klasy
 |[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Udostępnia metody przydatne podczas konstruowania listy wskaźniki inteligentne.|  
 |[CComUnkArray](../atl/reference/ccomunkarray-class.md)|Magazyny `IUnknown` wskaźniki i jest przeznaczony do użycia jako parametr [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) klasy szablonu.|  
 |[CHeapPtrList](../atl/reference/cheapptrlist-class.md)|Udostępnia metody przydatne podczas konstruowania listy wskaźniki stosu.|  
-|[CInterfaceArray](../atl/reference/cinterfacearray-class.md)|Udostępnia metody przydatne podczas tworzenia tablicy wskaźników interfejsów COM..|  
-|[CInterfaceList](../atl/reference/cinterfacelist-class.md)|Udostępnia metody przydatne podczas konstruowania listy wskaźników interfejsów COM..|  
+|[CInterfaceArray](../atl/reference/cinterfacearray-class.md)|Udostępnia metody przydatne podczas tworzenia tablicy wskaźników interfejsów COM.|  
+|[CInterfaceList](../atl/reference/cinterfacelist-class.md)|Udostępnia metody przydatne podczas konstruowania listy wskaźników interfejsów COM.|  
   
 ## <a name="choosing-a-collection-class"></a>Wybieranie klasy kolekcji  
  Kolekcja dostępnych klas oferuje różne charakterystyki, jak pokazano w poniższej tabeli.  

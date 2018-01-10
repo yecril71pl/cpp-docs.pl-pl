@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6279ede332ffbcc12db4f8c72e17fe9050cc96e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9fd1efe80cf5227c682a3bac47299a0daea49e1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-postfix-increment-and-decrement-operators"></a>Operatory przyrostka inkrementacji i dekrementacji języka C
 Zwiększ operandy przyrostek i dekrementacji są typy skalarne, które są modyfikowalną l wartości.  
@@ -42,4 +43,4 @@ if( var++ > 0 )
  W tym przykładzie zmienna `var` jest porównywany 0, a następnie zwiększany. Jeśli `var` dodatnią przed jest zwiększany, następna instrukcja jest wykonywana. Po pierwsze, wartość obiektu wskazywana przez `q` jest przypisany do obiektu wskazywana przez `p`. Następnie `q` i `p` są zwiększane.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Operatory przyrostka inkrementacji i dekrementacji: ++ i--](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)
+ [Operatory przyrostka inkrementacji i dekrementacji: ++ i --](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)

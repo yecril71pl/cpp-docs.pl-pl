@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5142d0f5e3ede3a7cdd51af0fc54964b1cecec14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3bda4043693d14451a2de14cbc71fbecdcdddba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-registrar-scripts"></a>Tworzenie skryptów rejestratora
 Skryptu rejestratora zapewnia oparte na danych, a nie obsługiwanego interfejsu API, dostępu do rejestru systemowego. Danymi dostępu jest zazwyczaj bardziej wydajne, ponieważ trwa tylko jeden lub dwa wiersze w skrypcie, aby dodać klucz w rejestrze.  
@@ -34,15 +35,15 @@ Skryptu rejestratora zapewnia oparte na danych, a nie obsługiwanego interfejsu 
   
  W tym artykule omówiono następujące tematy związane z skrypty rejestratora:  
   
--   [Opis Nauer formularz Backus składni formularza (BNF)](../atl/understanding-backus-nauer-form-bnf-syntax.md)  
+-   [Opis składni formularza Backus Nauer (BNF)](../atl/understanding-backus-nauer-form-bnf-syntax.md)  
   
--   [Opis analizy drzew](../atl/understanding-parse-trees.md)  
+-   [Opis drzew analizy](../atl/understanding-parse-trees.md)  
   
 -   [Przykłady skryptów rejestru](../atl/registry-scripting-examples.md)  
   
--   [Przy użyciu parametry wymienne (rejestratora preprocesora)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
+-   [Używanie wymiennych parametrów (preprocesor rejestratora)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
   
--   [Skrypty wywołania](../atl/invoking-scripts.md)  
+-   [Wywoływanie skryptów](../atl/invoking-scripts.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Składnik rejestru (Rejestrator)](../atl/atl-registry-component-registrar.md)

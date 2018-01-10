@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d73f285647d3ef4947454fd4bc831b746ef754c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8532984c8557b095753c0e8cf30b6e63d8b01ce0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lccodepagefunc"></a>___lc_codepage_func
 Funkcji CRT wewnętrznej. Pobiera bieżącej stronie kodowej wątku.  
@@ -62,4 +63,4 @@ UINT ___lc_codepage_func(void);
  [_get_current_locale —](../c-runtime-library/reference/get-current-locale.md)   
  [setLocale, _wsetlocale —](../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [_free_locale —](../c-runtime-library/reference/free-locale.md)
+ [_free_locale](../c-runtime-library/reference/free-locale.md)

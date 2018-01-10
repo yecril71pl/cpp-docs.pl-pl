@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d54a7efdf80d9f1ee26d6954cca7f4e6efe8f71f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6ca8a9e9804aa6c14077b023d0014062067f324
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internal-linkage"></a>Połączenie wewnętrzne
 Jeśli zawiera deklarację identyfikatora zakres pliku dla obiekt lub funkcji *Specyfikator klasy magazynu* **statycznych**, identyfikator ma połączenie zewnętrzne. W przeciwnym razie identyfikator ma połączenie zewnętrzne. Zobacz [klasy magazynu](../c-language/c-storage-classes.md) omówienie *Specyfikator klasy magazynu* nonterminal.  
