@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca6e6cd8dd9f7d67ba8a000f33143a12c0978a25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d81d288453e56acfb02a123075692b907d371578
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-a-dialog-box"></a>Testowanie okna dialogowego
 Podczas projektowania okno dialogowe, można symulować i przetestować jego zachowania w czasie wykonywania bez kompilowania programu. W tym trybie można wykonywać następujące czynności:  
@@ -54,5 +57,5 @@ Podczas projektowania okno dialogowe, można symulować i przetestować jego zac
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Edytor okien dialogowych](../windows/dialog-editor.md)   
- [Pokazywanie lub ukrywanie paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
+ [Pokazywanie i ukrywanie paska narzędzi Edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
 

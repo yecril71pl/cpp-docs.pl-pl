@@ -35,11 +35,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4af73cd84e21ea23f7bdacdeff91cacdda322198
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d8fcbf7f354def49056c1e519e910edccde56cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 Pobiera lub modyfikuje próg kontrolowanie zachowania wypełnianiem buforów w funkcje debugowania.  
@@ -66,41 +67,41 @@ size_t _CrtSetDebugFillThreshold(
   
  Poniżej przedstawiono listę odpowiednich funkcji.  
   
--   [strcpy_s —, wcscpy_s —, _mbscpy_s —](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)  
+-   [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)  
   
--   [strncpy_s — _strncpy_s_l —, wcsncpy_s —, _wcsncpy_s_l —, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
+-   [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
   
--   [_mbsnbcpy_s —, _mbsnbcpy_s_l —](../../c-runtime-library/reference/mbsnbcpy-s-mbsnbcpy-s-l.md)  
+-   [_mbsnbcpy_s, _mbsnbcpy_s_l](../../c-runtime-library/reference/mbsnbcpy-s-mbsnbcpy-s-l.md)  
   
--   [strcat_s —, wcscat_s —, _mbscat_s —](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)  
+-   [strcat_s, wcscat_s, _mbscat_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)  
   
--   [strncat_s —, _strncat_s_l, wcsncat_s —, _wcsncat_s_l _mbsncat_s —, _mbsncat_s_l —](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
+-   [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
   
--   [_mbsnbcat_s —, _mbsnbcat_s_l —](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)  
+-   [_mbsnbcat_s, _mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)  
   
--   [_strset_s —, _strset_s_l —, _wcsset_s —, _wcsset_s_l — _mbsset_s —, _mbsset_s_l —](../../c-runtime-library/reference/strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md)  
+-   [_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l](../../c-runtime-library/reference/strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md)  
   
--   [_strnset_s — _strnset_s_l —, _wcsnset_s —, _wcsnset_s_l, _mbsnset_s —, _mbsnset_s_l —](../../c-runtime-library/reference/strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)  
+-   [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](../../c-runtime-library/reference/strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)  
   
--   [_mbsnbset_s —, _mbsnbset_s_l —](../../c-runtime-library/reference/mbsnbset-s-mbsnbset-s-l.md)  
+-   [_mbsnbset_s, _mbsnbset_s_l](../../c-runtime-library/reference/mbsnbset-s-mbsnbset-s-l.md)  
   
--   [_makepath_s —, _wmakepath_s —](../../c-runtime-library/reference/makepath-s-wmakepath-s.md)  
+-   [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md)  
   
--   [_splitpath_s —, _wsplitpath_s —](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)  
+-   [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)  
   
--   [_strlwr_s —, _strlwr_s_l —, _mbslwr_s —, _mbslwr_s_l — _wcslwr_s —, _wcslwr_s_l —](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)  
+-   [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)  
   
--   [_strupr_s —, _strupr_s_l —, _mbsupr_s —, _mbsupr_s_l — _wcsupr_s —, _wcsupr_s_l —](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)  
+-   [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)  
   
 -   [strerror_s —, _strerror_s —, _wcserror_s —, \__wcserror_s —](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)  
   
--   [_itoa_s —, _i64toa_s —, _ui64toa_s —, _itow_s — _i64tow_s —, _ui64tow_s —](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md)  
+-   [_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md)  
   
--   [_ecvt_s —](../../c-runtime-library/reference/ecvt-s.md)  
+-   [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)  
   
--   [_fcvt_s —](../../c-runtime-library/reference/fcvt-s.md)  
+-   [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)  
   
--   [_gcvt_s —](../../c-runtime-library/reference/gcvt-s.md)  
+-   [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)  
   
 ## <a name="requirements"></a>Wymagania  
   

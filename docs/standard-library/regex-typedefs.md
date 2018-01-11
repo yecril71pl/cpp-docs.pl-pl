@@ -31,11 +31,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7dad87e2d6e402333db5f51bdf8deaee1090df86
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52dec61f23f5468ddd0492d4d6a82b0cc5472a7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltregexgt-typedefs"></a>&lt;wyrażenie regularne&gt; definicje typów
 ||||  
@@ -232,10 +233,10 @@ typedef sub_match<wstring::const_iterator> wssub_match;
   
 ## <a name="see-also"></a>Zobacz też  
 [\<wyrażenie regularne >](../standard-library/regex.md)  
-[regex_constants — klasa](../standard-library/regex-constants-class.md)  
-[regex_error — klasa](../standard-library/regex-error-class.md)  
+[regex_constants, klasa](../standard-library/regex-constants-class.md)  
+[regex_error, klasa](../standard-library/regex-error-class.md)  
 [\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)  
-[regex_iterator — klasa](../standard-library/regex-iterator-class.md)  
+[regex_iterator, klasa](../standard-library/regex-iterator-class.md)  
 [\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)  
-[regex_token_iterator — klasa](../standard-library/regex-token-iterator-class.md)  
-[regex_traits — klasa](../standard-library/regex-traits-class.md)  
+[regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)  
+[regex_traits, klasa](../standard-library/regex-traits-class.md)  

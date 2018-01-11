@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae75f8b831af1a2eb58529c09273a6e61cc58223
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d6781709c105c606f6ceb856654525385738c1ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Porady: tworzenie projektu C++ z istniejącego kodu
 
@@ -45,4 +46,4 @@ Przenoszenie istniejących plików kodu do projektu Visual C++ pozwala korzysta�
 [Określ projektu lokalizacji i plików źródłowych, Utwórz nowy projekt z istniejących Kreatora plików kodu](../ide/specify-project-location-and-source-files.md)   
 [Określ ustawienia projektu, Utwórz nowy projekt z istniejących Kreatora plików kodu](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)   
 [Określ ustawienia konfiguracji debugowania, Utwórz nowy projekt z istniejących Kreatora plików kodu](../ide/specify-debug-configuration-settings.md)   
-[Określ ustawienia konfiguracji wydania, Utwórz nowy projekt z istniejących Kreatora plików kodu](../ide/specify-release-configuration.md)
+[Określanie ustawień konfiguracji wydania, Kreator Utwórz nowy projekt z istniejących plików z kodem](../ide/specify-release-configuration.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d914781dc2591f90871daf67b9faf4925ac1a192
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4241b1fd947ce9ddb4023dd7fab1025c2fcf7d69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="orchestrating-other-window-actions"></a>Organizowanie innych akcji okna
 Okno ramowe organizuje stany półmodalne, takich jak Pomoc kontekstowa i Podgląd wydruku. Opis roli okno ramowe w podglądzie wydruku, zobacz [drukowania i podglądu wydruku](../mfc/printing-and-print-preview.md).  

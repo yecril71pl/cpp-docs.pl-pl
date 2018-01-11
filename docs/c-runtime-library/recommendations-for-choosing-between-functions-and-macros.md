@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6e10a2a2991f314d61bd8c2df22b59d7791b6c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 810a4c2dbf5c80688dd739c48df0056ab394cafd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Zalecenia dotyczące wybierania pomiędzy funkcjami i makrami
 Większość procedury biblioteki wykonawczej firmy Microsoft są kompilowane lub złożonego funkcji, ale niektóre procedury są zaimplementowane jako makra. Gdy plik nagłówka deklaruje zarówno funkcję, jak i wersji makro procedury, definicji makra ma pierwszeństwo, ponieważ zawsze jest wyświetlany po deklaracji funkcji. Po wywołaniu procedury, który jest implementowany jako funkcję i makra, możesz wymusić kompilatora, aby korzystać z funkcji wersji na dwa sposoby:  
@@ -51,4 +52,4 @@ Większość procedury biblioteki wykonawczej firmy Microsoft są kompilowane lu
 -   **Sprawdzanie typu** zadeklarowania funkcji, kompilator sprawdzić typy argumentów. Ponieważ nie można zadeklarować makra, kompilator nie może sprawdzić typy argumentów makra; Mimo że można sprawdzić liczbę argumentów przekazywane do makra.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md)
+ [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

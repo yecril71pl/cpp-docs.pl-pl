@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3220b96f66465af8348fc50f0c702423439d34bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d48af3fb762100fa52b37db58cfc57caca1b6e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internationalization"></a>Internacjonalizacja
 Biblioteka środowiska uruchomieniowego Microsoft udostępnia wiele procedur, które są przydatne do tworzenia różnych wersji programu na rynki międzynarodowe. Obejmuje to [procedury dotyczące ustawień regionalnych](../c-runtime-library/locale.md), procedury znaków dwubajtowych, procedury znaków wielobajtowych i procedury zwykłego tekstu. Dla wygody, większość procedur związanych z ustawieniami regionalnymi również została ujęta wśród kategorii tego dokumentu odniesienia, zgodnie z operacjami, które wykonują. W tej sekcji, w kolejności alfabetycznej, opisano procedury obsługi znaków wielobajtowych i dwubajtowych, wraz z odpowiednikami dla znaków jednobajtowych, jeśli takie istnieją.  

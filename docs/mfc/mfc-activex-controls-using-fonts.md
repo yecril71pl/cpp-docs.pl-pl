@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae3c6586153403e3c82078d4f7559ae89767f40a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a788285aed8e8b7483e13c954ee193aca69d1100
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Kontrolki ActiveX MFC: używanie czcionek
 Jeśli formant ActiveX jest wyświetlany tekst, można zezwolić użytkownikowi kontroli Zmienianie wyglądu tekstu, zmieniając właściwość czcionki. Właściwości czcionki są zaimplementowane jako obiekty czcionki i może być jedna z dwóch typów: standardowych lub niestandardowych. Właściwości podstawowe czcionki są właściwości preimplemented czcionki, które można dodać za pomocą Kreatora dodawania właściwości. Właściwości niestandardowe czcionki nie są preimplemented i dewelopera kontrolek określa zachowanie i użycia właściwości.  
@@ -236,5 +237,5 @@ Wdrażanie wielu interfejsów obiektów czcionek
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Formanty MFC ActiveX: Używanie obrazów w formancie ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)   
- [Formanty MFC ActiveX: Używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+ [Kontrolki ActiveX MFC: używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 

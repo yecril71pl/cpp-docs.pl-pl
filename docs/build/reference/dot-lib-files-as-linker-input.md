@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ad61a8fa3672dd6f243c611e8ad363769dc5fa05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 181c8c3e5e762f2f20d99ca2acadaf285e717b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lib-files-as-linker-input"></a>Pliki .Lib — Wejście konsolidatora
 ŁĄCZE akceptuje COFF standardowych bibliotek i COFF Importuj biblioteki, które zwykle mają rozszerzenie. lib. Biblioteki standardowe zawierają obiekty i są tworzone przez narzędzie LIB. Import biblioteki zawierają informacje o eksportu w inne programy i są tworzone przez łącze podczas tworzenia programu, który zawiera eksportu lub przez narzędzie LIB. Uzyskać informacji na temat używania LIB można utworzyć standardowy lub Importuj biblioteki, zobacz [odwołanie do biblioteki LIB](../../build/reference/lib-reference.md). Aby uzyskać więcej informacji dotyczących używania łącze do tworzenia biblioteki importowanej, zobacz [/dll](../../build/reference/dll-build-a-dll.md) opcji.  

@@ -49,11 +49,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f406dd3d420289aa237a58c3026e677caf2e5145
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d2b866c847055a37e4415b020b3e7e02fdaa5f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn
 Oblicza funkcji Bessela rodzaju pierwszej lub drugiej zamówień 0, 1 lub n. Funkcje Bessela są często używane w matematyce teorii elektromagnetycznych wave.  
@@ -159,4 +160,4 @@ Bessel functions for x = 2.387000:
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [_matherr —](../../c-runtime-library/reference/matherr.md)
+ [_matherr](../../c-runtime-library/reference/matherr.md)

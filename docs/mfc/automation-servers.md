@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d44d1f5f9a9d37bd38f441820dd75cb9a4b92df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-servers"></a>Serwery automatyzacji
 Automatyzacja umożliwia aplikacji do modyfikowania obiektów w innej aplikacji lub na uwidocznienie obiektów, więc można manipulować. Serwer automatyzacji to aplikacja, która udostępnia obiekty programowalny (nazywane obiektami automatyzacji) do innych aplikacji (nazywane [klientów automatyzacji](../mfc/automation-clients.md)). Serwery automatyzacji są nazywane składniki automatyzacji.  

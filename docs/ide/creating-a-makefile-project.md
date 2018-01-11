@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 834475840fbe20a0d6938c563f3541c294e09bee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e86bedbf83cd417cfc41317e5887304cda7ee76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-makefile-project"></a>Tworzenie projektu pliku reguł programu make
 Jeśli masz projekt, który kompilujesz z wiersza polecenia za pomocą pliku makefile, środowisko programistyczne Visual Studio nie rozpozna projektu. Aby otworzyć i kompilacji, Twój projekt używający [!INCLUDE[vsUltShort](../ide/includes/vsultshort_md.md)], Visual Studio Professional i Visual Studio Express for Windows Desktop, wybierając szablon projektu pliku reguł programu make najpierw utworzyć pusty projekt. Następnie użyj tego projektu do stworzenia własnego projektu w środowisku programistycznym Visual Studio.  
@@ -45,4 +46,4 @@ Jeśli masz projekt, który kompilujesz z wiersza polecenia za pomocą pliku mak
 ## <a name="see-also"></a>Zobacz też  
  [Kreator projektu pliku reguł programu make](../ide/makefile-project-wizard.md)   
  [Znaki specjalne w pliku reguł programu make](../build/special-characters-in-a-makefile.md)   
- [Zawartość pliku reguł programu make](../build/contents-of-a-makefile.md)
+ [Zawartość pliku reguł programu Make](../build/contents-of-a-makefile.md)

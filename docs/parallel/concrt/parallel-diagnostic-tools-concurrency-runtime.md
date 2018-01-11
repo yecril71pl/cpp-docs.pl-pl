@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e85ee1a0c250cf67f2a379ccad8c11a99b96f76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7c6aa769faaacd128bb51a422227230fa4a851
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Równoległe narzędzia diagnostyczne (współbieżność środowiska wykonawczego)
 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]obsługuje szeroką gamę debugowanie i profilowania aplikacji wielowątkowych.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="event-tracing"></a>Śledzenie zdarzeń  
  Współbieżność środowiska wykonawczego używa [śledzenia zdarzeń dla systemu Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW), aby powiadomić narzędzia instrumentacji, takie jak profilowania, gdy występują różne zdarzenia. Zdarzenia te obejmują podczas harmonogramu jest aktywowany lub dezaktywowany, kontekst rozpoczyna, kończy się, blokuje, odblokowuje lub daje i podczas równoległego algorytm zaczyna się lub kończy się.  
   
- Narzędzi takich jak [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) korzystać z tej funkcji; w związku z tym zazwyczaj nie trzeba pracować bezpośrednio z tych zdarzeń. Jednak te zdarzenia są przydatne, gdy tworzysz niestandardowy profilera lub jeśli używasz narzędzia Śledzenie zdarzeń takich jak [narzędzia Xperf](http://go.microsoft.com/fwlink/linkid=160628).  
+ Narzędzi takich jak [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) korzystać z tej funkcji; w związku z tym zazwyczaj nie trzeba pracować bezpośrednio z tych zdarzeń. Jednak te zdarzenia są przydatne, gdy tworzysz niestandardowy profilera lub jeśli używasz narzędzia Śledzenie zdarzeń takich jak [narzędzia Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).  
   
  Współbieżność środowiska wykonawczego informuje o tych zdarzeniach tylko wtedy, gdy śledzenie jest włączone. Wywołanie [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) funkcji, aby włączyć śledzenie zdarzeń i [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) funkcji, aby wyłączyć śledzenie.  
   
@@ -70,5 +71,5 @@ ms.lasthandoff: 10/24/2017
  Środowisko uruchomieniowe śledzi liczbę razy, które należy wywołać `EnableTracing` i `DisableTracing`. W związku z tym jeśli wywołujesz `EnableTracing` wielokrotnie, należy wywołać `DisableTracing` taką samą liczbę razy, aby wyłączyć śledzenie.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)
+ [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)
 

@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96ef9bde4895cfc35ae5858e913389b51829d864
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Porady: używanie parallel_invoke do napisania procedury sortowania równoległego
 W tym dokumencie opisano sposób użycia [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algorytmu, aby poprawić wydajność bitonic algorytm sortowania. Rekursywnie algorytm sortowania bitonic dzieli sekwencji wejściowych na mniejsze partycje posortowane. Algorytm sortowania bitonic może działać równolegle, ponieważ każda operacja partycja jest niezależna od innych operacji.  

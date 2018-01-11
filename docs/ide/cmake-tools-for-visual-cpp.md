@@ -13,11 +13,12 @@ ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 770b7f70e52859b1489b984d8aef3c3876a9ca83
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: d38538ce929410782eee7a0a6540bb62a05b7669
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake projekty w programie Visual C++
 W tym artykule przyjęto założenie, że czytelnik zna CMake, narzędzia i platform, open source do definiowania kompilacji procesy uruchomione na wielu platformach.  

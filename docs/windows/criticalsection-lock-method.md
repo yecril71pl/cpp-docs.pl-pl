@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4df91ea9030ca4917f246bc05be1ba059673680e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: af996faeebd0fcddb85993badd71ceecd32d494e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock — Metoda
 Czeka na prawo własności obiektu określona sekcja krytyczna. Funkcja zwraca, gdy wątek wywołujący jest własność.  
@@ -50,4 +53,4 @@ SyncLock Lock();
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Criticalsection — klasa](../windows/criticalsection-class.md)
+ [CriticalSection, klasa](../windows/criticalsection-class.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebb8a9db0e22f3b9d794859c03729b019fd65703
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20f4c2d7d33d07a5eca5a980c376056c3fe68e2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmemorystate-structure"></a>Struktura CMemoryState
 Zapewnia to wygodny sposób wykrywania przecieki pamięci w programie.  
@@ -189,7 +190,7 @@ void DumpStatistics() const;
  Teraz możesz uruchomić program w trybie debugowania, aby wyświetlić dane wyjściowe `DumpStatistics` funkcji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

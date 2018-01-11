@@ -32,11 +32,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 11481343d358785d15c669b2e1fb2c8af6f35c0d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c79a3d73806e82c5de6f7f241d011b3d8e19590
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clearerrs"></a>clearerr_s
 Resetuje wskaźnik błędów dla strumienia. To jest wersja [clearerr —](../../c-runtime-library/reference/clearerr.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -130,4 +131,4 @@ Will input cause an error? n
  [_eof —](../../c-runtime-library/reference/eof.md)   
  [feof —](../../c-runtime-library/reference/feof.md)   
  [ferror —](../../c-runtime-library/reference/ferror.md)   
- [perror, _wperror —](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 749d4badb3a7b5a2c61fa753a840765f14e2a329
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-containment"></a>Zawieranie dokumentów aktywnych
 Zawieranie dokumentów aktywnych jest technologia, która udostępnia jeden ramki, w której do pracy z dokumentami, zamiast wymuszania wielokrotnego do utworzenia i użycia wielu klatek aplikacji dla każdego typu dokumentu. Różni się z podstawową technologię OLE w tym OLE współpracuje z obiektami osadzonego wewnątrz złożonego dokumentu, w którym mogą być aktywne tylko jednego fragmentu zawartości. W kontekście jedną ramkę z zawieranie dokumentów aktywnych aktywowania całego dokumentu (to znaczy całej aplikacji, w tym skojarzone menu, paski narzędzi i tak dalej).  
@@ -47,5 +48,5 @@ Zawieranie dokumentów aktywnych jest technologia, która udostępnia jeden ramk
 -   [MFCBIND](../visual-cpp-samples.md) przykładową wdrożenia aplikacji kontenera dokumentów aktywnych.  
   
 ## <a name="see-also"></a>Zobacz też  
- [MODEL COM MFC](../mfc/mfc-com.md)
+ [MFC COM](../mfc/mfc-com.md)
 

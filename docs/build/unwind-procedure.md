@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c6ecdc6490b3d5792737eed65661ef7d53c54f14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b8caa2be1528c26cf374637f3d0357847721de9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unwind-procedure"></a>Procedura Unwind
 Tablica kodu unwind jest sortowany w kolejności malejącej. Po wystąpieniu wyjątku, pełną kontekst jest przechowywany przez system operacyjny w rekordu kontekstu. Następnie wywoływana jest logiki wysyłania wyjątek, który wielokrotnie wykonuje następujące czynności, aby znaleźć obsługi wyjątków.  
@@ -43,4 +44,4 @@ Tablica kodu unwind jest sortowany w kolejności malejącej. Po wystąpieniu wyj
  Dane operacji unwind najmniejszy zestaw jest 8 bajtów. Spowoduje to reprezentuje funkcję, która tylko przydzielone 128 bajtów stosu lub mniej i prawdopodobnie zapisane jednego nieulotnej rejestru. Dotyczy to również rozmiar łańcuchowa unwind struktury informacji z żadnych kodów unwind prologu o zerowej długości.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obsługa (x64) wyjątków](../build/exception-handling-x64.md)
+ [Obsługa wyjątków (x64)](../build/exception-handling-x64.md)

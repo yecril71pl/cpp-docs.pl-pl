@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 82f33d178799f56465f0d1a9794dacad7c01c77a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 073c906e7ecdfcf933e4b91cbcf8d6a77324df76
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (Automatyczny paralelizator)
 Umożliwia [zrównoleglenia automatycznego](../../parallel/auto-parallelization-and-auto-vectorization.md) funkcji kompilator, aby automatycznie parallelize pętli w kodzie.  
@@ -54,4 +55,4 @@ Umożliwia [zrównoleglenia automatycznego](../../parallel/auto-parallelization-
  [Opcje kompilatora](../../build/reference/compiler-options.md)   
  [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
  [#pragma loop()](../../preprocessor/loop.md)   
- [Programowanie równoległe w kodzie natywnym](http://go.microsoft.com/fwlink/?LinkId=263662)
+ [Programowanie równoległe w kodzie natywnym](http://go.microsoft.com/fwlink/p/?linkid=263662)

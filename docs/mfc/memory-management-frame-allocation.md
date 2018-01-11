@@ -29,11 +29,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a8b0f35874dcf7a51bc2e54045df2c96965b08d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03a8e5f81e55398ffba30479ecfafc42726e9519
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memory-management-frame-allocation"></a>Zarządzanie pamięcią: alokacja ramek
 Podział na ramce przyjmuje nazwy z "ramki stosu", która jest ustawiona zawsze, gdy jest wywoływana funkcja. Ramka stosu jest to obszar pamięci, która tymczasowo przechowuje argumentów do funkcji, a także wszystkie zmienne, które są zdefiniowane lokalne do funkcji. Zmienne ramek są często nazywane zmiennych "Automatyczny", ponieważ kompilator automatycznie przydziela miejsce dla nich.  

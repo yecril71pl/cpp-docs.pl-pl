@@ -63,11 +63,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02fca1aac6b197ae3f06b4cdb0254ea30cab4f14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52c5d167390826578c4e3a2380c885bf1d507d19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet — klasa
 Reprezentuje arkuszy właściwości, znanej także jako okna dialogowe kart.  
@@ -759,7 +760,7 @@ void SetWizardMode();
  [Przykładowe MFC PROPDLG](../../visual-cpp-samples.md)   
  [Przykładowe MFC SNAPVW](../../visual-cpp-samples.md)   
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

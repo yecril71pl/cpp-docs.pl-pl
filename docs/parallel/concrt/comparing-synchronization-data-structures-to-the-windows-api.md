@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bed81cc8b212b6deef13cc0c6fed013b854fb4ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4590724bfc34d0ed9136e74e85b09db6a805c50c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Porównywanie struktur danych synchronizacji z Windows API
 W tym temacie porównuje zachowanie struktur danych synchronizacji, które są udostępniane przez współbieżność środowiska wykonawczego tych zapewnianych przez interfejs API systemu Windows.  

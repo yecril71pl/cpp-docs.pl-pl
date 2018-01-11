@@ -9,11 +9,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e9d4d86abd15f59e94ce7e51d40e119f8ebd336
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: fa79bfc63a3906b3f7eb698c3d44ee8136db2c14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-language-conformance"></a>Zgodność języka Visual C++
 
@@ -250,8 +251,8 @@ __15,5 cala 2017 VS__ wskazuje funkcje, które są obsługiwane w programie Visu
 
 [Dokumentacja języka C++](cpp/cpp-language-reference.md)  
 [Standardowa biblioteka C++](standard-library/cpp-standard-library-reference.md)   
-[Ulepszenia zgodność języka C++ w programie Visual Studio 2017 r.](cpp-conformance-improvements-2017.md)  
-[Nowości w języku Visual C++ w programie Visual Studio 2017 r.](what-s-new-for-visual-cpp-in-visual-studio.md)  
+[Ulepszenia zgodności języka C++ w programie Visual Studio 2017](cpp-conformance-improvements-2017.md)  
+[Co nowego w języku Visual C++ w programie Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)  
 [Visual C++ historii zmian 2003 za pośrednictwem 2015](porting/visual-cpp-change-history-2003-2015.md)  
-[Visual C++ co to jest nowe 2003 za pośrednictwem 2015](porting/visual-cpp-what-s-new-2003-through-2015.md)  
+[Visual C++ — co nowego od roku 2003 do 2015](porting/visual-cpp-what-s-new-2003-through-2015.md)  
 [Blogu zespołu Visual C++](https://blogs.msdn.microsoft.com/vcblog/)  

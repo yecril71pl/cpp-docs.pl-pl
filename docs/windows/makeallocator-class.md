@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0333dec823cb3996a9546bbfa702b3febf711a61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 523bcdb17fc0a1b74fe615e5ff15a6fcef99cc32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makeallocator-class"></a>MakeAllocator — Klasa
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -65,15 +68,15 @@ class MakeAllocator<T, true>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Makeallocator::makeallocator — Konstruktor](../windows/makeallocator-makeallocator-constructor.md)|Inicjuje nowe wystąpienie klasy makeallocator —.|  
-|[Makeallocator —:: ~ MakeAllocator — destruktor](../windows/makeallocator-tilde-makeallocator-destructor.md)|Deinitializes bieżące wystąpienie klasy makeallocator — klasa.|  
+|[MakeAllocator::MakeAllocator, konstruktor](../windows/makeallocator-makeallocator-constructor.md)|Inicjuje nowe wystąpienie klasy makeallocator —.|  
+|[MakeAllocator::~MakeAllocator, destruktor](../windows/makeallocator-tilde-makeallocator-destructor.md)|Deinitializes bieżące wystąpienie klasy makeallocator — klasa.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[MakeAllocator::Allocate — metoda](../windows/makeallocator-allocate-method.md)|Przydziela pamięć i kojarzy ją z bieżącym obiektem makeallocator —.|  
-|[MakeAllocator::Detach — metoda](../windows/makeallocator-detach-method.md)|Usuwa skojarzenia pamięci przydzielonej przez [przydziel](../windows/makeallocator-allocate-method.md) metody z bieżącego obiektu makeallocator —.|  
+|[MakeAllocator::Allocate, metoda](../windows/makeallocator-allocate-method.md)|Przydziela pamięć i kojarzy ją z bieżącym obiektem makeallocator —.|  
+|[MakeAllocator::Detach, metoda](../windows/makeallocator-detach-method.md)|Usuwa skojarzenia pamięci przydzielonej przez [przydziel](../windows/makeallocator-allocate-method.md) metody z bieżącego obiektu makeallocator —.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `MakeAllocator`  
@@ -84,4 +87,4 @@ class MakeAllocator<T, true>;
  **Namespace:** Microsoft::wrl:: details —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: details — Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

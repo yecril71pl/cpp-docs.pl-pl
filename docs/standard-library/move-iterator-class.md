@@ -31,11 +31,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 59ad715516adfa716a307e1a4e0b7e4cf39e154a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54691a7d25e9229143e17476d5e0e09c6732e69e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moveiterator-class"></a>move_iterator — Klasa
 Szablon klasy `move_iterator` jest otokę dla iteratora. Move_iterator zapewnia takie samo zachowanie, jak iterator, który zawija (przechowuje), z tym wyjątkiem, że zamienia operator dereferencji przechowywanego iteratora na odwołanie rvalue, zamieniając kopię na przesunięcie. Aby uzyskać więcej informacji o rvalues, zobacz [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -70,7 +71,7 @@ class move_iterator;
   
 |||  
 |-|-|  
-|[Podstawa](#base)|Funkcja członkowska zwraca przechowywanych iteratora opakowane przez to `move_iterator`.|  
+|[base](#base)|Funkcja członkowska zwraca przechowywanych iteratora opakowane przez to `move_iterator`.|  
   
 ### <a name="operators"></a>Operatory  
   
@@ -297,7 +298,7 @@ typedef typename iterator_traits<RandomIterator>::value_type   value_type;
  [\<Iterator >](../standard-library/iterator.md)   
  [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)   
  [Konstruktory przenoszące i przenoszące operatory przypisania (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

@@ -15,65 +15,66 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8945eb3ca53d6402e2db31c8a174d45394bcfb2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80f142071a2a6b71dd134a7fb31474f917d5348f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dumpbin-options"></a>Opcje DUMPBIN
 Opcja składa się z specyfikator opcji kreski (-) lub ukośnikiem (/), a po niej nazwę opcji. Nie można stosować skrót nazw opcji. Niektóre opcje przyjmują argumentów, podać po dwukropkiem (:). Bez spacji i karty są dozwolone w obrębie Specyfikacja opcji. Użyj spacji lub karty do oddzielania specyfikacje opcji w wierszu polecenia. Nazwy opcji i ich argumentów nazwy — słowo kluczowe lub plik nie jest uwzględniana. Większość opcji dotyczą wszystkich plików binarnych; kilka mają zastosowanie tylko do niektórych typów plików. Domyślnie DUMPBIN wysyła informacje do wyjścia standardowego. Użyj [/OUT](../../build/reference/out-dumpbin.md) opcję, aby wysłać dane wyjściowe do pliku.  
   
  DUMPBIN ma następujące opcje:  
   
--   [/ ALL](../../build/reference/all.md)  
+-   [/ALL](../../build/reference/all.md)  
   
--   [/ ARCHIVEMEMBERS](../../build/reference/archivemembers.md)  
+-   [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md)  
   
--   [/ CLRHEADER](../../build/reference/clrheader.md)  
+-   [/CLRHEADER](../../build/reference/clrheader.md)  
   
--   [/ DEPENDENTS](../../build/reference/dependents.md)  
+-   [/DEPENDENTS](../../build/reference/dependents.md)  
   
--   [/ DIRECTIVES](../../build/reference/directives.md)  
+-   [/DIRECTIVES](../../build/reference/directives.md)  
   
--   [/ DISASM](../../build/reference/disasm.md)  
+-   [/DISASM](../../build/reference/disasm.md)  
   
--   [/ ERRORREPORT (dumpbin.exe)](../../build/reference/errorreport-dumpbin-exe.md)  
+-   [/ERRORREPORT (dumpbin.exe)](../../build/reference/errorreport-dumpbin-exe.md)  
   
--   [/ EKSPORTU](../../build/reference/dash-exports.md)  
+-   [/EXPORTS](../../build/reference/dash-exports.md)  
   
--   [/ FPO](../../build/reference/fpo.md)  
+-   [/FPO](../../build/reference/fpo.md)  
   
--   [/ HEADERS](../../build/reference/headers.md)  
+-   [/HEADERS](../../build/reference/headers.md)  
   
 -   [/ IMPORTS](../../build/reference/imports-dumpbin.md)  
   
--   [/ LINENUMBERS](../../build/reference/linenumbers.md)  
+-   [/LINENUMBERS](../../build/reference/linenumbers.md)  
   
--   [/ LINKERMEMBER](../../build/reference/linkermember.md)  
+-   [/LINKERMEMBER](../../build/reference/linkermember.md)  
   
--   [/ LOADCONFIG](../../build/reference/loadconfig.md)  
+-   [/LOADCONFIG](../../build/reference/loadconfig.md)  
   
 -   [/ OUT](../../build/reference/out-dumpbin.md)  
   
--   [/ PDATA](../../build/reference/pdata.md)  
+-   [/PDATA](../../build/reference/pdata.md)  
   
--   [/ PDBPATH](../../build/reference/pdbpath.md)  
+-   [/PDBPATH](../../build/reference/pdbpath.md)  
   
--   [/ ZAKRESU](../../build/reference/range.md)  
+-   [/RANGE](../../build/reference/range.md)  
   
--   [/ RAWDATA](../../build/reference/rawdata.md)  
+-   [/RAWDATA](../../build/reference/rawdata.md)  
   
--   [/ RELOCATIONS](../../build/reference/relocations.md)  
+-   [/RELOCATIONS](../../build/reference/relocations.md)  
   
 -   [/ SECTION](../../build/reference/section-dumpbin.md)  
   
--   [/ SUMMARY](../../build/reference/summary.md)  
+-   [/SUMMARY](../../build/reference/summary.md)  
   
--   [/ SYMBOLE](../../build/reference/symbols.md)  
+-   [/SYMBOLS](../../build/reference/symbols.md)  
   
--   [/ TLS](../../build/reference/tls.md)  
+-   [/TLS](../../build/reference/tls.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)   
- [Odwołanie DUMPBIN](../../build/reference/dumpbin-reference.md)
+ [DUMPBIN — dokumentacja](../../build/reference/dumpbin-reference.md)

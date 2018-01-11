@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bdf0a02155329de5b77ffa67a8bc77ab34cc3e07
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc6035caeb3b2fe466d18ea92300b3135a6189f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="section"></a>sekcja
 Tworzy sekcję w pliku .obj.  
@@ -44,10 +45,10 @@ Tworzy sekcję w pliku .obj.
   
  `attributes`opcjonalny parametr składający się z co najmniej jeden przecinkami atrybutów, które chcesz przypisać do sekcji. Możliwe `attributes` są:  
   
- **Odczyt**  
+ **read**  
  Zezwala na operacje odczytu danych.  
   
- **zapisu**  
+ **write**  
  Zezwala na wykonywanie operacji zapisu na danych.  
   
  **wykonanie**  
@@ -65,7 +66,7 @@ Tworzy sekcję w pliku .obj.
  **Odrzuć**  
  Oznacza sekcji jako discardable; przydatne dla sterowników urządzeń Win32.  
   
- **Usuń**  
+ **remove**  
  Oznacza sekcji jako nie rezydentny; sterowniki urządzeń wirtualnych (V*x*D) tylko.  
   
  Jeśli nie określisz atrybuty, sekcji będzie mieć odczytu i zapisu atrybutów.  

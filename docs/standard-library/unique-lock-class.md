@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a6ce74fb7f4238f89fe177013b28536f9b27a95e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8974633a19e6f30f552eac4e5e7c3ec3b104c2ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniquelock-class"></a>unique_lock — Klasa
 Reprezentuje szablon, który można wdrożyć do tworzenia obiektów, które zarządzają blokowanie i odblokowywanie `mutex`.  
@@ -54,7 +55,7 @@ class unique_lock;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[blokady](#lock)|Blokuje wątek wywołujący, dopóki wątek uzyskuje własność skojarzonego `mutex`.|  
+|[lock](#lock)|Blokuje wątek wywołujący, dopóki wątek uzyskuje własność skojarzonego `mutex`.|  
 |[mutex](#mutex)|Pobiera przechowywanych wskaźnik do skojarzonego `mutex`.|  
 |[owns_lock](#owns_lock)|Określa, czy wątek wywołujący jest właścicielem skojarzony `mutex`.|  
 |[zlecenia](#release)|Usuwa skojarzenia `unique_lock` skojarzony obiekt `mutex` obiektu.|  

@@ -27,11 +27,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d079edd919d54149b527330a7a3cb49fa496f676
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 77d73ef71854753ffd561053cc71509c7654d33b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Wymagania wstępne dotyczące klas klientów internetowych
 Niektóre akcje podejmowane przez klienta internetowego (odczytywania pliku, na przykład) mają akcje wymagań wstępnych (w tym przypadku ustanawiania połączenia z Internetem). W poniższej tabeli wymieniono wymagania wstępne dotyczące niektóre akcje klienta.  

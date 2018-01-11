@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c22164fdc2bd8236b6f4819609175c80bd472abf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc923e8c638f51720aaffbb8c26aaa65bb230731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="low-level-io"></a>We/Wy niskiego poziomu
 Te funkcje wywoływać bezpośrednio dla operacji niższe niż te dostarczone przez strumień we/wy systemu operacyjnego. Niskiego poziomu dane wejściowe i wyjściowe wywołania czy nie buforu lub format danych.  
@@ -43,19 +44,19 @@ Te funkcje wywoływać bezpośrednio dla operacji niższe niż te dostarczone pr
   
 |Funkcja|Zastosowanie|  
 |--------------|---------|  
-|[_zamknij](../c-runtime-library/reference/close.md)|Zamknij plik|  
-|[_commit —](../c-runtime-library/reference/commit.md)|Zapisywanie plików do dysku|  
-|[_creat —, _wcreat —](../c-runtime-library/reference/creat-wcreat.md)|Utwórz plik|  
+|[_close](../c-runtime-library/reference/close.md)|Zamknij plik|  
+|[_commit](../c-runtime-library/reference/commit.md)|Zapisywanie plików do dysku|  
+|[_creat, _wcreat](../c-runtime-library/reference/creat-wcreat.md)|Utwórz plik|  
 |[_dup —](../c-runtime-library/reference/dup-dup2.md)|Zwracany dalej deskryptorów plików dostępnych dla danego pliku|  
 |[_dup2 —](../c-runtime-library/reference/dup-dup2.md)|Utworzyć drugi deskryptora dla danego pliku|  
-|[_eof —](../c-runtime-library/reference/eof.md)|Test na koniec pliku|  
-|[_lseek —, _lseeki64 —](../c-runtime-library/reference/lseek-lseeki64.md)|Zmiana położenia wskaźnika pliku do podanej lokalizacji|  
-|[_otwórz, _wopen —](../c-runtime-library/reference/open-wopen.md)|Otwórz plik|  
-|[_przeczytaj](../c-runtime-library/reference/read.md)|Odczyt danych z pliku|  
+|[_eof](../c-runtime-library/reference/eof.md)|Test na koniec pliku|  
+|[_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|Zmiana położenia wskaźnika pliku do podanej lokalizacji|  
+|[_open, _wopen](../c-runtime-library/reference/open-wopen.md)|Otwórz plik|  
+|[_read](../c-runtime-library/reference/read.md)|Odczyt danych z pliku|  
 |[_sopen —, _wsopen —](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s —, _wsopen_s —](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Otwórz plik do udostępniania plików|  
-|[_tell —, _telli64 —](../c-runtime-library/reference/tell-telli64.md)|Pobierz bieżącą pozycję wskaźnika pliku|  
+|[_tell, _telli64](../c-runtime-library/reference/tell-telli64.md)|Pobierz bieżącą pozycję wskaźnika pliku|  
 |[_umask —](../c-runtime-library/reference/umask.md), [_umask_s —](../c-runtime-library/reference/umask-s.md)|Ustaw uprawnienia pliku maska|  
-|[_Write](../c-runtime-library/reference/write.md)|Wpisywanie danych do pliku|  
+|[_write](../c-runtime-library/reference/write.md)|Wpisywanie danych do pliku|  
   
  `_dup`i `_dup2` są zwykle używane do skojarzenia z różnych plików deskryptorów plików wstępnie zdefiniowane.  
   

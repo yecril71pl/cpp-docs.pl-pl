@@ -16,16 +16,17 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7c6f24a6fbb4d1b1cfff871a8568d4e08b1582d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f104f6772cdd1c778c166e27d697146c1280444a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-x64"></a>Obsługa wyjątków (x64)
 W tej sekcji omówiono, obsługa wyjątków strukturalnych i wyjątków C++, obsługa zachowanie podczas [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
   
--   [Dane operacji unwind dla obsługi wyjątków, obsługa debugera](../build/unwind-data-for-exception-handling-debugger-support.md)  
+-   [Dane operacji Unwind dla obsługi wyjątków, obsługa debugera](../build/unwind-data-for-exception-handling-debugger-support.md)  
   
 -   [Procedura Unwind](../build/unwind-procedure.md)  
   
@@ -33,9 +34,9 @@ W tej sekcji omówiono, obsługa wyjątków strukturalnych i wyjątków C++, obs
   
 -   [Pomocnicy operacji unwind dla MASM](../build/unwind-helpers-for-masm.md)  
   
--   [Definicje danych unwind w C](../build/unwind-data-definitions-in-c.md)  
+-   [Definicje danych Unwind w języku C](../build/unwind-data-definitions-in-c.md)  
   
  Aby uzyskać więcej informacji, zobacz [obsługi wyjątków](../cpp/exception-handling-in-visual-cpp.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [x64 konwencje kodowania](../build/x64-software-conventions.md)
+ [Konwencje kodowania x64](../build/x64-software-conventions.md)

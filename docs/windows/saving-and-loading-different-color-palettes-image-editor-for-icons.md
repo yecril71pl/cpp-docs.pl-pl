@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86105734a4ade50b8c3e568100dda468a891beb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d7ef7200300eb4809496bfa342e9bab645f4c40e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Zapisywanie i ładowanie różnych palet kolorów (Edytor obrazów dla ikon)
 Można zapisywać i załadować paletę kolorów, która zawiera [dostosować kolory](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Domyślnie palety kolorów ostatnio używane są ładowane automatycznie po uruchomieniu programu Visual Studio.)  

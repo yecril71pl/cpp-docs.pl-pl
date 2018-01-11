@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 06d33c021d5bb7e802a9aba362fcd0152ff5eab0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 953dd61247f7d14ad04d5d5f85529c89f3aaad9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-examining-exception-contents"></a>Wyjątki: badanie zawartości wyjątku
 Mimo że **catch** bloku argument może być prawie każdego typu danych, funkcje MFC zgłaszają wyjątki typów pochodnych klasy `CException`. Aby przechwycić wyjątek zgłoszony przez funkcję MFC, następnie należy napisać **catch** blok, którego argument jest wskaźnik do `CException` obiektu (lub typ pochodzący od obiektu `CException`, takich jak `CMemoryException`). W zależności od dokładnej typ wyjątku można zbadać elementów członkowskich danych obiektu wyjątku Aby zebrać informacje dotyczące określonego powodu wyjątku.  

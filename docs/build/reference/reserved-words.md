@@ -28,11 +28,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a7040ac0093471be657c2ed7a064719abcd0230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35f9a3e907b72b4b8cf8e673e771832ba3fc0527
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reserved-words"></a>Słowa zastrzeżone
 Wyrazy są zastrzeżone przez konsolidator. Te nazwy mogą być używane jako argumenty w [instrukcji definicji modułu](../../build/reference/module-definition-dot-def-files.md) tylko wtedy, gdy nazwa jest ujęta w znaki podwójnego cudzysłowu ("").  
@@ -52,7 +53,7 @@ Wyrazy są zastrzeżone przez konsolidator. Te nazwy mogą być używane jako ar
 |**EXECUTEONLY**|**NODATA**1|**SEGMENTY**|  
 |**EXECUTEREAD**|**NOIOPL**1|**UDOSTĘPNIONE**|  
 |**EXETYPE**|**NONAME**|**POJEDYNCZY**|  
-|**EKSPORTY**|**NIEZGODNE**1|**STACKSIZE**|  
+|**EXPORTS**|**NIEZGODNE**1|**STACKSIZE**|  
 |**STAŁE**1|**NONDISCARDABLE**|**STUB**|  
 |**FUNKCJE**2|**BRAK**|**WERSJA**|  
 |**HEAPSIZE**|**UDOSTĘPNIANA**|**WINDOWAPI**|  

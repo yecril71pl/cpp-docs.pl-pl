@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8e97253f74365ef0b3c3a235257c85ceee37b3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu eksploratora plików
 Wiele aplikacji systemu Windows używa interfejsu użytkownika (UI) w Eksploratorze plików. Po ponownym uruchomieniu Eksploratora plików, na przykład pojawić aplikacji przy użyciu rozdzielacza pionowy pasek dzielenia obszaru klienckiego. Lewej obszaru klienckiego zapewnia nawigacji i funkcji przeglądania, i prawego obszaru klienckiego przedstawia szczegółowe informacje dotyczące zaznaczenie w okienku po lewej stronie. Po kliknięciu elementu w okienku po lewej stronie aplikacji repopulates okienku po prawej stronie. W aplikacji MDI, możesz użyć polecenia w **widoku** menu, aby zmienić poziom szczegółów wyświetlany w okienku po prawej stronie. (W SDI lub wiele dokumentów najwyższego poziomu aplikacji, można zmienić szczegóły, korzystając z przycisków paska narzędzi.)  
@@ -55,7 +56,7 @@ Wiele aplikacji systemu Windows używa interfejsu użytkownika (UI) w Eksplorato
   
 -   [Pochodne klasy widoków](../../mfc/derived-view-classes-available-in-mfc.md)  
   
--   [Opcje projektowania aplikacji](../../mfc/application-design-choices.md)  
+-   [Opcje do wyboru przy projektowaniu aplikacji](../../mfc/application-design-choices.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)   

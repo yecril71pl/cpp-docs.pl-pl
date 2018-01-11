@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10de04ebed31835d93daca9cf4caa5d96ed605b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 60373c12220fce57672389b98455a123990f3c93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="semaphore-class"></a>Semaphore — Klasa
 Reprezentuje obiekt synchronizacji, która kontroluje, czy obsługują ograniczoną liczbę użytkowników zasobu udostępnionego.  
@@ -43,25 +46,25 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Semaphore::semaphore — Konstruktor](../windows/semaphore-semaphore-constructor.md)|Inicjuje nowe wystąpienie klasy semafora.|  
+|[Semaphore::Semaphore, konstruktor](../windows/semaphore-semaphore-constructor.md)|Inicjuje nowe wystąpienie klasy semafora.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke — metoda](../windows/invokehelper-invoke-method.md)|Wywołuje program obsługi zdarzeń, którego sygnatura zawiera określoną liczbę argumentów.|  
+|[InvokeHelper::Invoke, metoda](../windows/invokehelper-invoke-method.md)|Wywołuje program obsługi zdarzeń, którego sygnatura zawiera określoną liczbę argumentów.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Semaphore::Lock — Metoda](../windows/semaphore-lock-method.md)|Czeka, aż do bieżącego obiektu lub obiektów skojarzonych z określonego dojścia jest w stanie sygnałowego lub przed upływem określonego limitu czasu.|  
+|[Semaphore::Lock, metoda](../windows/semaphore-lock-method.md)|Czeka, aż do bieżącego obiektu lub obiektów skojarzonych z określonego dojścia jest w stanie sygnałowego lub przed upływem określonego limitu czasu.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Semaphore::operator = — Operator](../windows/semaphore-operator-assign-operator.md)|Przenosi bieżący obiekt semafora określone dojście z obiektu semafora.|  
+|[Operator Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Przenosi bieżący obiekt semafora określone dojście z obiektu semafora.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Semaphore`  
@@ -72,4 +75,4 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: wrappers — Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

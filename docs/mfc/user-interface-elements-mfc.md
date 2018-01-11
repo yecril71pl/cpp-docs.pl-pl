@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d323e32cf52530ab8f03c151ca2fa30cb5ebe42b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f32f1b1906dbcd0a653f6dfe0b3f573dd0836a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-elements-mfc"></a>Elementy interfejsu użytkownika (MFC)
 Aby uzyskać informacje o sposobie tworzenia interfejsu użytkownika dla aplikacji za pomocą biblioteki Microsoft Foundation Class (MFC) zobacz następujące tematy.  
@@ -30,10 +31,10 @@ Aby uzyskać informacje o sposobie tworzenia interfejsu użytkownika dla aplikac
  [Kontrolki ActiveX](../mfc/activex-controls.md)  
  Informacje dotyczące używania oparte na modelu COM (Component Object), która obsługuje wiele funkcji OLE i można dostosować, aby spełniały potrzeby oprogramowania wiele składników oprogramowania wielokrotnego użytku  
   
- [Schowka](../mfc/clipboard.md)  
+ [Schowek](../mfc/clipboard.md)  
  Zawiera opis sposobu wdrożenia pomocy technicznej dla Schowka systemu Windows w aplikacjach MFC.  
   
- [Formanty](../mfc/controls-mfc.md)  
+ [Kontrolki](../mfc/controls-mfc.md)  
  W tym artykule opisano formanty standardowe systemu Windows, w tym formanty rysowane przez właściciela, formantów ActiveX i inne klasy formantów dostarczonych przez biblioteki MFC.  
   
  [Paski sterowania](../mfc/control-bars.md)  
@@ -51,7 +52,7 @@ Aby uzyskać informacje o sposobie tworzenia interfejsu użytkownika dla aplikac
  [Widoki formularzy](../mfc/form-views-mfc.md)  
  Opisuje sposób dodawania obsługi formularzy do aplikacji.  
   
- [Pomoc HTML: Pomoc kontekstowa do programów](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
+ [Pomoc HTML: pomoc kontekstowa do programów](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
  Opisuje sposób dodawania Pomoc kontekstowa do aplikacji przy użyciu Pomocy HTML.  
   
  [Grupy z kartami MDI](../mfc/mdi-tabbed-groups.md)  
@@ -63,7 +64,7 @@ Aby uzyskać informacje o sposobie tworzenia interfejsu użytkownika dla aplikac
  [OLE](../mfc/ole-mfc.md)  
  Zawiera łącza do tematów, które omówiono w nim łączenie i osadzanie obiektów.  
   
- [Drukowanie i Podgląd wydruku](../mfc/printing-and-print-preview.md)  
+ [Drukowanie i podgląd wydruku](../mfc/printing-and-print-preview.md)  
  W tym artykule opisano obsługę MFC drukowania i podglądu wydruku z aplikacji.  
   
  [Arkusze właściwości](../mfc/property-sheets-mfc.md)  
@@ -88,6 +89,6 @@ Aby uzyskać informacje o sposobie tworzenia interfejsu użytkownika dla aplikac
  Opisuje podstawowe informacje na temat sposobu korzystania z systemu windows w MFC.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Aplikacje dla pulpitu MFC](../mfc/mfc-desktop-applications.md)  
+ [Aplikacje klasyczne MFC](../mfc/mfc-desktop-applications.md)  
  Zawiera materiały odwołanie do biblioteki MFC. MFC jest zestaw klas, które stanowią struktury aplikacji, który jest strukturą aplikacji napisanych dla interfejsu API systemu Windows.
 

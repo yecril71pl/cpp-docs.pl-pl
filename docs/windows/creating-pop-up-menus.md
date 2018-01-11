@@ -20,11 +20,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 529e0b4a659a3ea0c879db2c3b2a3bd4a9a3d160
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6185f52eeaf56ac0d31cb8e9f22715db36514725
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-pop-up-menus"></a>Tworzenie menu wyskakujących
 [Menu wyskakujące](../mfc/menus-mfc.md) wyświetlania często używanych poleceń. Mogą to być kontekstowa do lokalizacji wskaźnika. Za pomocą menu podręcznego w aplikacji wymaga tworzenia samo menu, a następnie łącząc go do kodu aplikacji.  

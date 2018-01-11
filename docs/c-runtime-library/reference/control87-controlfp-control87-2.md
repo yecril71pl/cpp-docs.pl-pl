@@ -49,11 +49,12 @@ caps.latest.revision: "34"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ee8d874a84d8f1246c0990b4bf29d07c28237057
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c4c6188917737e46807979d5f4a7fec350cb3e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 Pobiera i ustawia słowa formantu zmiennoprzecinkowych. Bezpieczniejsza wersja `_controlfp` jest dostępna; zobacz [_controlfp_s —](../../c-runtime-library/reference/controlfp-s.md).  
@@ -205,4 +206,4 @@ Default:  0x0001
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [_clear87 —, _clearfp —](../../c-runtime-library/reference/clear87-clearfp.md)   
  [_status87 —, _statusfp —, _statusfp2 —](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)   
- [_controlfp_s —](../../c-runtime-library/reference/controlfp-s.md)
+ [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)

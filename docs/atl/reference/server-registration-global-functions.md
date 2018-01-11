@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 300cab10480adf201bf6bf0b0275bb0f331c2602
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="server-registration-global-functions"></a>Funkcje globalne serwera rejestracji
 Funkcje te zapewniają obsługę rejestrowania i wyrejestrowywania obiektów serwera w mapie obiektu.  

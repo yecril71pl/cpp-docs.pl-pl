@@ -23,11 +23,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d566afbea5b955024172a44309e5d00e47b6afbe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8ccc7cc8662e33e5999ceafbcd8f029e2675341b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>Zmiana nazw symboli plików nagłówkowych
 Zwykle wszystkie definicje są zapisywane w Resource.h symbolu. Może jednak może być konieczna zmiana to obejmują nazwę pliku, dzięki czemu możesz na przykład pracować z więcej niż jeden plik zasobu w tym samym katalogu.  
@@ -49,4 +52,4 @@ Zwykle wszystkie definicje są zapisywane w Resource.h symbolu. Może jednak mo�
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyświetlanie symboli zasobów](../windows/viewing-resource-symbols.md)   
- [Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)
+ [Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)

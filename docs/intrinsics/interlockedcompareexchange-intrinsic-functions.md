@@ -59,11 +59,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ce9c8f3fb5a53ed19ddbb07e7e75b197c05f0fd2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6a29141e233e7e95cc35e6229e9bd37237cf1d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedCompareExchange
 **Dotyczące firmy Microsoft**  
@@ -443,4 +444,4 @@ int main(
  [Funkcje wewnętrzne _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)   
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)   
- [Powoduje konflikt z x86 kompilatora](../build/conflicts-with-the-x86-compiler.md)
+ [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)

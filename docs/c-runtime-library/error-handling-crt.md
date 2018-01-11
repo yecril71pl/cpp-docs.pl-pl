@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 176e744423441711715cc32b355278db20491e8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f40b2deb5c78667e5343bd2be0948252e2f2e154
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-handling-crt"></a>Obsługa błędów (CRT)
 Użyj tych procedur obsługi błędów programu.  
@@ -34,12 +35,12 @@ Użyj tych procedur obsługi błędów programu.
 |-------------|---------|  
 |[Assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) — makro|Testowanie programowania błędy logiczne; dostępne w wersji i debugowania wersja biblioteki wykonawczej.|  
 |[_ASSERT, _asserte —](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) makra|Podobnie jak `assert`, ale są dostępne tylko w wersjach debugowania biblioteki czasu wykonywania.|  
-|[clearerr —](../c-runtime-library/reference/clearerr.md)|Resetowanie wskaźnika błędów. Wywoływanie `rewind` lub zamykania strumienia również resetuje wskaźnik błędów.|  
-|[_eof —](../c-runtime-library/reference/eof.md)|Sprawdź, czy koniec pliku w we/wy niskiego poziomu.|  
-|[feof —](../c-runtime-library/reference/feof.md)|Test na końcu pliku. Koniec pliku jest również wskazane, gdy `_read` zwraca wartość 0.|  
-|[ferror —](../c-runtime-library/reference/ferror.md)|Sprawdź błędy We/Wy strumienia.|  
+|[clearerr](../c-runtime-library/reference/clearerr.md)|Resetowanie wskaźnika błędów. Wywoływanie `rewind` lub zamykania strumienia również resetuje wskaźnik błędów.|  
+|[_eof](../c-runtime-library/reference/eof.md)|Sprawdź, czy koniec pliku w we/wy niskiego poziomu.|  
+|[feof](../c-runtime-library/reference/feof.md)|Test na końcu pliku. Koniec pliku jest również wskazane, gdy `_read` zwraca wartość 0.|  
+|[ferror](../c-runtime-library/reference/ferror.md)|Sprawdź błędy We/Wy strumienia.|  
 |[_RPT, _RPTF](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) makra|Generowanie raportu, podobnie jak `printf`, ale są dostępne tylko w wersjach debugowania biblioteki czasu wykonywania.|  
-|[_set_error_mode —](../c-runtime-library/reference/set-error-mode.md)|Modyfikuje `__error_mode` do określenia lokalizacji innych niż domyślne, gdzie C, czas wykonywania zapisuje komunikat o błędzie dla błędu, który prawdopodobnie będzie zakończyć program.|  
+|[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Modyfikuje `__error_mode` do określenia lokalizacji innych niż domyślne, gdzie C, czas wykonywania zapisuje komunikat o błędzie dla błędu, który prawdopodobnie będzie zakończyć program.|  
 |[_set_purecall_handler —](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Ustawia wywołanie czystej funkcji wirtualnej programu obsługi.|  
   
 ## <a name="see-also"></a>Zobacz też  

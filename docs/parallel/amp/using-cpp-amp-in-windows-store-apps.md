@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e912d5043c1b908d875dca50af12e38fd05f64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fa6b42dd4e00f3b5314806933d06b3c1534b4d7
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-c-amp-in-windows-store-apps"></a>Korzystanie z C++ AMP w aplikacjach sklepu Windows Store
 C++ AMP (C++ Accelerated Massive Parallelism) można używać w sieci [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji do wykonywania obliczeń w procesora GPU (przetwarzania graficzny) lub innych akceleratorów obliczeniową. Jednak C++ AMP nie udostępnia interfejsy API do pracy bezpośrednio z typów środowiska wykonawczego systemu Windows i środowiska wykonawczego systemu Windows nie udostępnia otokę dla C++ AMP. Jeśli używasz typów środowiska wykonawczego systemu Windows w kodzie — łącznie z tymi, które zostały utworzone samodzielnie — muszą być konwertowane na typy, które są zgodne z C++ AMP.  
@@ -119,8 +120,8 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie pierwszej aplikacji Sklepu Windows w języku C++](http://go.microsoft.com/fwlink/p/linkid=249073)   
- [Tworzenie składników środowiska wykonawczego systemu Windows w języku C++](http://go.microsoft.com/fwlink/p/linkid=249076)
+ [Tworzenie pierwszej aplikacji Sklepu Windows w języku C++](http://go.microsoft.com/fwlink/p/?linkid=249073)   
+ [Tworzenie składników środowiska wykonawczego systemu Windows w języku C++](http://go.microsoft.com/fwlink/p/?linkid=249076)
 
 
 

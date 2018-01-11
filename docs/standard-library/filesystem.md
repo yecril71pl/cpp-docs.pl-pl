@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c8e09c494ee23d227321a807c8c533d16f981a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;System plików&gt;
 Dołącz nagłówek &lt;filesystem > do uzyskiwania dostępu do klasy i funkcje, które manipulowania i pobieranie informacji na temat ścieżek, plików i katalogów.  
@@ -102,18 +103,18 @@ using namespace std::experimental::filesystem::v1;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[directory_entry — klasa](../standard-library/directory-entry-class.md)|Opisuje obiekt, który jest zwracany przez `directory_iterator` lub `recursive_directory_iterator` i zawiera ścieżkę.|  
-|[directory_iterator — klasa](../standard-library/directory-iterator-class.md)|W tym artykule opisano iterację wejściowych, które sekwencji za pomocą nazwy pliku w katalogu systemu plików.|  
-|[filesystem_error — klasa](../standard-library/filesystem-error-class.md)|Klasa podstawowa dla wyjątków, które są zgłaszane do zgłaszania przepełnienie niskiego poziomu systemu.|  
-|[PATH — klasa](../standard-library/path-class.md)|Definiuje klasę, która przechowuje typu szablonu obiektu `String` jest odpowiednie do użycia jako nazwę pliku.|  
-|[recursive_directory_iterator — klasa](../standard-library/recursive-directory-iterator-class.md)|W tym artykule opisano iterację wejściowych, które sekwencji za pomocą nazwy pliku w katalogu systemu plików. Iterator można również malejąca do podkatalogów.|  
-|[file_status — klasa](../standard-library/file-status-class.md)|Opakowuje `file_type`.|  
+|[directory_entry, klasa](../standard-library/directory-entry-class.md)|Opisuje obiekt, który jest zwracany przez `directory_iterator` lub `recursive_directory_iterator` i zawiera ścieżkę.|  
+|[directory_iterator, klasa](../standard-library/directory-iterator-class.md)|W tym artykule opisano iterację wejściowych, które sekwencji za pomocą nazwy pliku w katalogu systemu plików.|  
+|[filesystem_error, klasa](../standard-library/filesystem-error-class.md)|Klasa podstawowa dla wyjątków, które są zgłaszane do zgłaszania przepełnienie niskiego poziomu systemu.|  
+|[path, klasa](../standard-library/path-class.md)|Definiuje klasę, która przechowuje typu szablonu obiektu `String` jest odpowiednie do użycia jako nazwę pliku.|  
+|[recursive_directory_iterator, klasa](../standard-library/recursive-directory-iterator-class.md)|W tym artykule opisano iterację wejściowych, które sekwencji za pomocą nazwy pliku w katalogu systemu plików. Iterator można również malejąca do podkatalogów.|  
+|[file_status, klasa](../standard-library/file-status-class.md)|Opakowuje `file_type`.|  
   
 ## <a name="structs"></a>Struktury  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[space_info — struktura](../standard-library/space-info-structure.md)|Przechowuje informacje o woluminie.|  
+|[space_info, struktura](../standard-library/space-info-structure.md)|Przechowuje informacje o woluminie.|  
   
 ## <a name="functions"></a>Funkcje  
  [\<FileSystem > Funkcje](../standard-library/filesystem-functions.md)  

@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a6722e2cea4141a44bee43a162a73176ce35fea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 546f5b5daa88578fc7dd062018257f0929bc0cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Unikanie obszarów problemów z programami wielowątkowymi
 Istnieje kilka problemów, które mogą wystąpić w tworzeniu, łączenie i wykonywania program więlowątkowy w języku C. W poniższej tabeli opisano niektóre z najczęściej problemów. (Omówienie podobne z punktu widzenia MFC, zobacz [Multithreading: Programowanie porady](../parallel/multithreading-programming-tips.md).)  
@@ -33,4 +34,4 @@ Istnieje kilka problemów, które mogą wystąpić w tworzeniu, łączenie i wyk
 |Program generuje wiele błędów kompilacji i łącza.|Wiele potencjalnych problemów można wyeliminować, ustawiając poziom ostrzeżeń kompilatora do jednego z jego największe wartości i heeding komunikaty ostrzegawcze. Przy użyciu poziomu 3 lub poziom 4 ostrzeżenia poziomu opcje, można wykryć konwersji danych przypadkowe, brak prototypy funkcji i korzystanie z funkcji standardem ANSI.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z C i Win32](../parallel/multithreading-with-c-and-win32.md)
+ [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)

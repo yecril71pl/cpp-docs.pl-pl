@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a736a1e66fd857b7d959279a6b44a6d0f9ebd6f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2183aead53ee02f36bc982e4f33ad174346da5f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-and-union-members"></a>Elementy członkowskie struktury i złożenia
 „Wyrażenie wyboru elementu członkowskiego” dotyczy elementów członkowskich struktur i unii. Takie wyrażenie ma wartość i typ wybranego elementu członkowskiego.  
@@ -106,4 +107,4 @@ list[8].b = 12;
  Ta instrukcja pokazuje, jak wybrać dany element członkowski struktury z tablicy struktur.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Operatory dostępu do elementów członkowskich:. i ->](../cpp/member-access-operators-dot-and.md)
+ [Operatory dostępu do składowych: . i ->](../cpp/member-access-operators-dot-and.md)

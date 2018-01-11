@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a5f48fd19e4170ede161935ea39197741586b66e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dff8b99d6378928583cea0c5eec7d69130c56557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 Wywołania funkcji aplikacji dla wszystkich `_CLIENT_BLOCK` typy w stercie (tylko wersja do debugowania).  
@@ -81,4 +82,4 @@ void _CrtDoForAllClientObjects(
  [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
  [_Crtsetdbgflag —](../../c-runtime-library/reference/crtsetdbgflag.md)   
  [Funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details)   
- [_Crtreportblocktype —](../../c-runtime-library/reference/crtreportblocktype.md)
+ [_CrtReportBlockType](../../c-runtime-library/reference/crtreportblocktype.md)

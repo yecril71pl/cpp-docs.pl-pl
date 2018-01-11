@@ -31,11 +31,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45e3fde574dee564e126ae7fbbc42e8ee5a61442
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c3c9d961c69616df05975f2d484d0bbfd43f514
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colevariant-class"></a>Klasa COleVariant
 Hermetyzuje [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) — typ danych.  
@@ -382,7 +383,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
  Zestaw rekordów DAO kompilacji z systemem innym niż UNICODE oczekuje ciągów ANSI za. W związku z tym dla DAO funkcje używające `COleVariant` obiekty, jeśli nie utworzysz zestaw rekordów UNICODE, należy użyć **COleVariant::COleVariant (** `lpszSrc` **,** `vtSrc` **)**  forma konstruktora z `vtSrc` ustawioną `VT_BSTRT` (ANSI) lub użyj `SetString` z `vtSrc` ustawioną `VT_BSTRT` dokonanie ciągów ANSI. Na przykład `CDaoRecordset` funkcje [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) i [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) użyć `COleVariant` obiektów jako parametry. Te obiekty muszą być ANSI, jeśli zestaw rekordów DAO nie jest UNICODE.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

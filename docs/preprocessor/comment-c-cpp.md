@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bebf531c0ecf3288d14269cc1cc1be351372c401
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4dc4c9036565c2571371c172f61de4948c188f83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comment-cc"></a>komentarz (C/C++)
 Umieszcza rekord komentarz w pliku obiektu lub plik wykonywalny.  

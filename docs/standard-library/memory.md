@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 21948def2d4c67f14b5342b213754b3b669731d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6133b5a2f60cba4554ac4a0f1a358380df0dc7c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmemorygt"></a>&lt;pamięci&gt;
 Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zwalniać obiekty.  
@@ -69,9 +70,9 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
   
 |||  
 |-|-|  
-|[operator! =](../standard-library/memory-operators.md#op_neq)|Testuje pod kątem nierówności pomiędzy obiektami alokatora określonej klasy.|  
+|[operator!=](../standard-library/memory-operators.md#op_neq)|Testuje pod kątem nierówności pomiędzy obiektami alokatora określonej klasy.|  
 |[operator ==](../standard-library/memory-operators.md#op_eq_eq)|Testuje pod kątem równości pomiędzy obiektami alokatora określonej klasy.|  
-|[operator > =](../standard-library/memory-operators.md#op_gt_eq)|Testuje, czy jeden obiekt alokatora jest większy niż lub równy drugiemu obiektowi alokatora określonej klasy.|  
+|[operator>=](../standard-library/memory-operators.md#op_gt_eq)|Testuje, czy jeden obiekt alokatora jest większy niż lub równy drugiemu obiektowi alokatora określonej klasy.|  
 |[Operator <](../standard-library/memory-operators.md#op_lt)|Testuje, czy jeden obiekt jest mniejszy niż drugi obiekt określonej klasy.|  
 |[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|Testuje, czy jeden obiekt jest mniejszy niż lub równy drugiemu obiektowi określonej klasy.|  
 |[operator >](../standard-library/memory-operators.md#op_gt)|Testuje, czy jeden obiekt jest większy niż drugi obiekt określonej klasy.|  
@@ -96,7 +97,7 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
   
 |||  
 |-|-|  
-|[Program przydzielania\<void >](../standard-library/allocator-void-class.md)|Specjalizacja alokatora klasy szablonu do typu void, definiująca tylko typy elementów członkowskich, które mają sens w tym wyspecjalizowanym kontekście.|  
+|[Program przydzielania\<void >](../standard-library/allocator-void-class.md)|Specjalizacja alokatora klasy szablonu do typu void, definiująca tylko typy składowych, które mają sens w tym wyspecjalizowanym kontekście.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   

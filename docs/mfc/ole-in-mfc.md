@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c2a7fcd7db19d9dcc6e12c351a3fd55f0e67b118
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38b2f6c936ff314f56e4b1868837729ad00efce4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-in-mfc"></a>OLE w MFC
 Artykuły te wyjaśniają zasady podstawy programowania OLE za pomocą MFC. MFC zapewnia Najprostszym sposobem pisania programów, które używają OLE:  
@@ -49,7 +50,7 @@ Artykuły te wyjaśniają zasady podstawy programowania OLE za pomocą MFC. MFC 
  [Podstawy OLE](../mfc/ole-background.md)  
  W tym artykule omówiono OLE i znajdują się informacje koncepcyjne na temat jej działania.  
   
- [Aktywacji](../mfc/activation-cpp.md)  
+ [Aktywacja](../mfc/activation-cpp.md)  
  Zawiera opis roli aktywacji edytowania elementów OLE.  
   
  [Kontenery](../mfc/containers.md)  
@@ -58,13 +59,13 @@ Artykuły te wyjaśniają zasady podstawy programowania OLE za pomocą MFC. MFC 
  [Obiekty danych i źródła danych](../mfc/data-objects-and-data-sources-ole.md)  
  Zawiera łącza do tematów korzystanie z omówieniem `COleDataObject` i `COleDataSource` klasy.  
   
- [Przeciągnij i upuść](../mfc/drag-and-drop-ole.md)  
+ [Przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md)  
  W tym artykule omówiono za pomocą kopiowania i wklejania z OLE.  
   
  [Menu i zasoby OLE](../mfc/menus-and-resources-ole.md)  
  Wyjaśnienia dotyczące korzystania z menu i zasoby w aplikacji MFC OLE dokumentu.  
   
- [Rejestracji](../mfc/registration.md)  
+ [Rejestracja](../mfc/registration.md)  
  W tym artykule omówiono instalacji serwera i inicjowania.  
   
  [Serwery](../mfc/servers.md)  

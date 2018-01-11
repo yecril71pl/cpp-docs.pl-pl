@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 93e3b33e6e5e9eee52ec08eac32c47bf0ae6213f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e73e7aa3ff62782c6ebd3b5a8728aa05e78b1784
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameters"></a>Parametry
 Argumenty są nazwy wartości przekazanych do funkcji według wywołania funkcji. Parametry są wartościami, które Funkcja spodziewa się otrzymywać. W prototypu funkcji nawiasów po nazwie funkcji zawiera pełną listę parametrów funkcji i ich typów. Deklaracji parametru określić typy, rozmiarów i identyfikatory wartości przechowywanych w parametrach.  

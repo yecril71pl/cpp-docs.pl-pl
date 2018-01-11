@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4f16c9f5c96712c311928e0389fec0a1ce1f0dca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9766c6088e3f99711b936b10db0443da49b52c6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)
 Program, który używa publicznego symboli zdefiniowanych przez bibliotekę DLL jest nazywany ich importowania. Po utworzeniu pliki nagłówkowe dla aplikacji, które korzystają z bibliotek DLL do skompilowania z użyciem, użyj **__declspec(dllimport)** w deklaracjach symbole publiczne. Słowo kluczowe **__declspec(dllimport)** działa, czy możesz wyeksportować z .def — pliki lub **__declspec(dllexport)** — słowo kluczowe.  

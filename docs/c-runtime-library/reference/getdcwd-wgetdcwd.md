@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7541bf3135dfcc3734a43fe64277e5b8ea141e9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e314db740322fc3d5e7df5aeb6bd7de747e77695
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 Pobiera pełną ścieżkę bieżącego katalogu roboczego na określonym dysku.  
@@ -94,7 +95,7 @@ wchar_t *_wgetdcwd(
   
  `_wgetdcwd`jest to wersja znaków dwubajtowych `_getdcwd`, a jego `buffer` parametrów i wartości zwracanej są ciągami znaków dwubajtowych. W przeciwnym razie `_wgetdcwd` i `_getdcwd` zachowują się tak samo.  
   
- Ta funkcja jest bezpieczne wątkowo, nawet jeśli zależy od **GetFullPathName**, które jest nie wątkowo. Jednak jeśli funkcja ta wymaga aplikacji wielowątkowych może naruszyć bezpieczeństwo wątków i **GetFullPathName**. Aby uzyskać więcej informacji, przejdź do [biblioteki MSDN Library](http://go.microsoft.com/fwlink/?LinkID=150542) , a następnie wyszukaj **GetFullPathName**.  
+ Ta funkcja jest bezpieczne wątkowo, nawet jeśli zależy od **GetFullPathName**, które jest nie wątkowo. Jednak jeśli funkcja ta wymaga aplikacji wielowątkowych może naruszyć bezpieczeństwo wątków i **GetFullPathName**. Aby uzyskać więcej informacji, przejdź do [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) , a następnie wyszukaj **GetFullPathName**.  
   
  Wersja tej funkcji, która ma `_nolock` sufiks zachowuje się tak samo do tej funkcji z tą różnicą, że nie jest bezpieczne wątkowo i nie jest chroniony przez inne wątki zakłóceń. Aby uzyskać więcej informacji, zobacz [_getdcwd_nolock —, _wgetdcwd_nolock —](../../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md).  
   
@@ -124,4 +125,4 @@ wchar_t *_wgetdcwd(
  [_getcwd —, _wgetcwd —](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
  [_getdrive —](../../c-runtime-library/reference/getdrive.md)   
  [_mkdir —, _wmkdir —](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [_rmdir —, _wrmdir —](../../c-runtime-library/reference/rmdir-wrmdir.md)
+ [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)

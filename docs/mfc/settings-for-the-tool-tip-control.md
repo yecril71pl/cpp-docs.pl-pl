@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c7e88956ab7c7fe1c03d10a8519aedad4767e48e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 406e35b6ab694ca972d4cd6add0dcca7586e5005
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Ustawienia formantu etykietki narzędzia
 Można ustawić formantem etykietki narzędzia ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) być aktywne lub nieaktywne. Po ustawieniu go jako aktywne formantem etykietki narzędzia jest wyświetlany, gdy kursor znajduje się na to narzędzie. Po ustawieniu go jako nieaktywny formantem etykietki narzędzia nie ma, nawet jeśli kursor znajduje się na to narzędzie. Wywołanie [Aktywuj](../mfc/reference/ctooltipctrl-class.md#activate) aktywować lub dezaktywować formantem etykietki narzędzia.  
@@ -31,5 +32,5 @@ Można ustawić formantem etykietki narzędzia ([CToolTipCtrl](../mfc/reference/
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40175e8d7e9c81295efd9cda96a63625b40c40b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57b5b7a2939dfeea0ead87851b4bb4cef953b94d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcvtwbuffergt"></a>&lt;CVT/wbuffer —&gt;
 Nagłówek `<cvt/wstring>` w poprzednich wersjach programu Visual Studio definicja klasy szablonu [wbuffer_convert — klasa](../standard-library/wbuffer-convert-class.md) w przestrzeni nazw stdext::cvt. Nagłówek jest zachowywana na potrzeby zgodności z poprzednimi wersjami. Nowy kod należy używać wersji klasy, która jest zdefiniowana w [ \<ustawień regionalnych >](../standard-library/locale.md) w `std` przestrzeni nazw  

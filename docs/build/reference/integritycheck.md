@@ -1,7 +1,7 @@
 ---
-title: -INTEGRITYCHECK | Dokumentacja firmy Microsoft
+title: / INTEGRITYCHECK | Dokumentacja firmy Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 12/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -13,27 +13,26 @@ helpviewer_keywords:
 - -INTEGRITYCHECK editbin options
 - /INTEGRITYCHECK editbin options
 - INTEGRITYCHECK editbin options
-ms.assetid: 2a293705-4396-421b-a5a5-693b4b867a85
-caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20fa72f8cc2d12c719f0e50c250052a191b5ee81
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99caec18162a7506b8b7a467eb7374b6fe4a38d9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="integritycheck"></a>/INTEGRITYCHECK
-Określa, że podpis cyfrowy obraz binarny, muszą zostać sprawdzone w czasie ładowania.  
-  
-```  
-  
-/INTEGRITYCHECK[:NO]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- W nagłówku pliku DLL lub pliku wykonywalnego ta opcja umożliwia ustawienie Flaga, która wymaga sprawdzenia podpisu cyfrowego, przez Menedżera pamięci można załadować obrazu w systemie Windows. Wersje systemu Windows starszych niż Windows Vista zignorować tę flagę. Tę opcję należy wybrać dla 64-bitowych bibliotek DLL, zaimplementować kod trybu jądra, które jest zalecane w przypadku wszystkich sterowników urządzeń. Aby uzyskać więcej informacji, zobacz [wskazówki podpisywania kodu w trybie jądra](http://go.microsoft.com/fwlink/?linkid=237093) w witrynie MSDN.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje polecenia EDITBIN](../../build/reference/editbin-options.md)
+
+Określa, że podpis cyfrowy obraz binarny, muszą zostać sprawdzone w czasie ładowania.
+
+> **/ INTEGRITYCHECK**[**: NO**]
+
+## <a name="remarks"></a>Uwagi
+
+W nagłówku pliku DLL lub pliku wykonywalnego ta opcja umożliwia ustawienie Flaga, która wymaga sprawdzenia podpisu cyfrowego, przez Menedżera pamięci można załadować obrazu w systemie Windows. Wersje systemu Windows starszych niż Windows Vista zignorować tę flagę. Tę opcję należy wybrać dla 64-bitowych bibliotek DLL, zaimplementować kod trybu jądra, które jest zalecane w przypadku wszystkich sterowników urządzeń. Aby uzyskać więcej informacji, zobacz [wymagania dotyczące podpisywania kodu w trybie jądra](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-).
+
+## <a name="see-also"></a>Zobacz także
+
+[Opcje EDITBIN](../../build/reference/editbin-options.md)  

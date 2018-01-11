@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 474d4f82b41eaab43c5e87ca335b911db0b4e64e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 113ea9179292606461a8fe67ff161f63e58161da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier — Klasa
 Wywołuje program obsługi zdarzeń po zwolnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określona przez obiekt i jego elementów członkowskich wskaźnika do metody.  
@@ -43,20 +46,20 @@ class MethodReleaseNotifier : public ReleaseNotifier;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::methodreleasenotifier:: methodreleasenotifier — Konstruktor](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Inicjuje nowe wystąpienie klasy Module::MethodReleaseNotifier.|  
+|[Module::MethodReleaseNotifier::MethodReleaseNotifier, konstruktor](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Inicjuje nowe wystąpienie klasy Module::MethodReleaseNotifier.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::MethodReleaseNotifier:: Invoke — metoda](../windows/module-methodreleasenotifier-invoke-method.md)|Wywołuje program obsługi zdarzeń skojarzonych z bieżącym obiektem Module::MethodReleaseNotifier.|  
+|[Module::MethodReleaseNotifier::Invoke, metoda](../windows/module-methodreleasenotifier-invoke-method.md)|Wywołuje program obsługi zdarzeń skojarzonych z bieżącym obiektem Module::MethodReleaseNotifier.|  
   
 ### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::methodreleasenotifier:: method_ — członek danych](../windows/module-methodreleasenotifier-method-data-member.md)|Zawiera wskaźnik do obsługi zdarzeń dla bieżącego obiektu Module::MethodReleaseNotifier.|  
-|[Module::methodreleasenotifier:: object_ — członek danych](../windows/module-methodreleasenotifier-object-data-member.md)|Zawiera wskaźnik do obiektu, którego funkcja członkowska jest program obsługi zdarzeń dla bieżącego obiektu Module::MethodReleaseNotifier.|  
+|[Module::MethodReleaseNotifier::method_, składowa danych](../windows/module-methodreleasenotifier-method-data-member.md)|Zawiera wskaźnik do obsługi zdarzeń dla bieżącego obiektu Module::MethodReleaseNotifier.|  
+|[Module::MethodReleaseNotifier::object_, składowa danych](../windows/module-methodreleasenotifier-object-data-member.md)|Zawiera wskaźnik do obiektu, którego funkcja członkowska jest program obsługi zdarzeń dla bieżącego obiektu Module::MethodReleaseNotifier.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ReleaseNotifier`  

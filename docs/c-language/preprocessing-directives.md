@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5531254a987e4d8ca72249459dae92dec21f995a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5130f1edcce8491be10c4b94da63bc0aa80768fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="preprocessing-directives"></a>Dyrektywy przetwarzania wstępnego
 -   [Znaki stałej i dołączenie warunkowe](../c-language/character-constants-and-conditional-inclusion.md)  
@@ -31,9 +32,9 @@ ms.lasthandoff: 10/24/2017
   
 -   [Sekwencje znaków](../c-language/character-sequences.md)  
   
--   [Pragma — dyrektywy](../c-language/pragmas.md)  
+-   [Pragmy](../c-language/pragmas.md)  
   
--   [Domyślne Data i godzina](../c-language/default-date-and-time.md)  
+-   [Domyślne data i godzina](../c-language/default-date-and-time.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

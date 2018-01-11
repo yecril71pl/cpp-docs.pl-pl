@@ -30,11 +30,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 281bc00e46cf28f7cc7d5f1e072fd41ad4cce61a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01c6ac22ecdbf6f66afcec3816ae9d3a3d686942
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Klasa CAtlPreviewCtrlImpl
 Ta klasa jest implementacją ATL okna, który znajduje się w oknie hostów udostępnianych przez powłokę dla podglądu rozbudowanego.  
@@ -296,4 +297,4 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 ### <a name="remarks"></a>Uwagi  
   
 ## <a name="see-also"></a>Zobacz też  
- [Składniki COM pulpitu ATL](../../atl/atl-com-desktop-components.md)
+ [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)

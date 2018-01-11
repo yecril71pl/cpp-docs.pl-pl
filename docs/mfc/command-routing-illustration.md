@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 03f9547197e2d5dca26fd17c9d4090eb20e795ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24ac591005d5df6b18102d296352b8b2528ba839
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-routing-illustration"></a>Ilustracja routingu poleceń
 Aby zilustrować, należy wziąć pod uwagę komunikatem polecenia z elementu menu Wyczyść wszystko w menu Edycja aplikacji MDI. Załóżmy, że funkcja obsługi dla tego polecenia stanie się być funkcją członkowską klasy dokumentów aplikacji. Oto, jak polecenie osiągnie jej procedura obsługi po wybraniu elementu menu:  
@@ -39,5 +40,5 @@ Aby zilustrować, należy wziąć pod uwagę komunikatem polecenia z elementu me
  Jeśli dokument nie ma obsługi, go polecenie będzie dalej trasy do jego szablonu dokumentu. Następnie polecenie zwróci się do widoku, a następnie okno ramowe. Ponadto okno ramowe czy sprawdź jego mapy komunikatów. Jeśli sprawdzanie również zakończyło się niepowodzeniem, polecenia zostanie przekierowane do głównego okna MDI ramki, a następnie do obiektu aplikacji — ultimate docelowego nieobsługiwanych poleceń.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Jak struktura wywołuje program obsługi](../mfc/how-the-framework-calls-a-handler.md)
+ [Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
 

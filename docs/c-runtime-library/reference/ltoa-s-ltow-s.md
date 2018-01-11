@@ -41,11 +41,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a9a6bc0bc74463ad38cc43a0adb514d9eb722783
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de078e5ad6d2488b852e14247d2d72ca751a9635
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltoas-ltows"></a>_ltoa_s, _ltow_s
 Konwertuje długich liczb całkowitych na ciąg. Są to wersje [_ltoa —, _ltow —](../../c-runtime-library/reference/ltoa-ltow.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -121,4 +122,4 @@ errno_t _ltow_s(
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [_itoa —, _i64toa —, _ui64toa —, _itow — _i64tow —, _ui64tow —](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)   
  [_ultoa —, _ultow —](../../c-runtime-library/reference/ultoa-ultow.md)   
- [_ultoa_s —, _ultow_s —](../../c-runtime-library/reference/ultoa-s-ultow-s.md)
+ [_ultoa_s, _ultow_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ea192e863fe9813a762c0c948cc141b068c3f43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9226cf2630ad18651f9bda2f154f49b5b739a433
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementowanie obsługi interfejsu zdarzeń
 ATL pomaga wszystkie trzy elementy wymagane do obsługi zdarzeń: implementacja interfejsu zdarzenia, udzielanie porad źródło zdarzenia i unadvising źródło zdarzenia. Dokładne kroki, które należy podjąć, zależą od typu interfejsu zdarzenia i wymagania dotyczące wydajności aplikacji.  

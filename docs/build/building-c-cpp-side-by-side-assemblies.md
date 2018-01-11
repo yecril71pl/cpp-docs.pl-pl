@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40b8099a1159514d3ffce8cfeb9b38274c3e68b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c54f0e3b8bceff3daa92ecb3e0ee46d7fbeb666
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Kompilowanie wykonywanych jednocześnie aplikacji C/C++
 A [zestawu side-by-side](http://msdn.microsoft.com/library/windows/desktop/ff951640) jest kolekcją zasobów — Grupa bibliotek DLL, klasy okien, serwery COM, biblioteki typów lub interfejsy — dostępne dla aplikacji do użycia w czasie wykonywania. Główną zaletą ponowne utworzenie pakietu bibliotek DLL w zestawach jest wiele wersji zestawy mogą być używane przez aplikacje w tym samym czasie, a istnieje możliwość zestawy aktualnie zainstalowanej usługi w przypadku wersji aktualizacji.  
@@ -40,4 +41,4 @@ A [zestawu side-by-side](http://msdn.microsoft.com/library/windows/desktop/ff951
 ## <a name="see-also"></a>Zobacz też  
  [Przykłady wdrożeń](../ide/deployment-examples.md)   
  [Tworzenie C/C++ izolowanych](../build/building-c-cpp-isolated-applications.md)   
- [Tworzenie C/C++ izolowane Side-by-side zestawów ani aplikacji](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+ [Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

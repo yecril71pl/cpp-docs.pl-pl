@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d332c13356620b97497f505bf194ea82919cd9dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3720a0445f3d43324c2c5963f2dc2cb21e18b3f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044: obsługa MFC dla DBCS
 Ta uwaga techniczna opisane Obsługa w MFC "zestawy znaków dwubajtowych" lub zestawów znaków Dwubajtowych. Ta informacje, a także informacji na temat MFC obsługę standardu UNICODE jest teraz dostępna w *informacje dotyczące biblioteki klas*.  

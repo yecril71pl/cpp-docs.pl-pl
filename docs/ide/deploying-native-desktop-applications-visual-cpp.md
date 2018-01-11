@@ -20,11 +20,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a8dcf4a49813ae108edb23b50676e751db5e2f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fe88a322314ac24fa5799735e84ff100efa2e79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Wdrażanie natywnych aplikacji komputerowych (Visual C++)
 Wdrażanie to proces, za pomocą którego można dystrybuować Zakończono aplikację lub składnik można zainstalować na innych komputerach. Planowanie wdrożenia zostanie uruchomiony po utworzeniu aplikacji na komputerze dewelopera. Wdrożenie kończy się, gdy aplikacja jest zainstalowana i gotowa do uruchomienia na komputerze użytkownika.  
@@ -38,29 +39,29 @@ Wdrażanie to proces, za pomocą którego można dystrybuować Zakończono aplik
  Artykuły w tej sekcji dokumentacji omówiono sposób upewnić się, że natywnych aplikacji Visual C++ działa na dowolnym komputerze, który zawiera pliki, które należy uwzględnić w pakietu instalacyjnego i zalecane sposoby platformy docelowej, Ponowna dystrybucja składników, które zależy od aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wdrożenia w programie Visual C++](../ide/deployment-in-visual-cpp.md)  
+ [Wdrażanie w Visual C++](../ide/deployment-in-visual-cpp.md)  
   
  [Pojęcia związane z wdrażaniem](../ide/deployment-concepts.md)  
   
- [Poznanie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)  
+ [Objaśnienie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)  
   
- [Określanie, które biblioteki dll do ponownej dystrybucji](../ide/determining-which-dlls-to-redistribute.md)  
+ [Ustalanie, które biblioteki DLL są przeznaczone do ponownej dystrybucji](../ide/determining-which-dlls-to-redistribute.md)  
   
  [Wybieranie metody wdrażania](../ide/choosing-a-deployment-method.md)  
   
- [Redystrybuowanie plików programu Visual C++](../ide/redistributing-visual-cpp-files.md)  
+ [Ponowne dystrybuowanie plików programu Visual C++](../ide/redistributing-visual-cpp-files.md)  
   
  [Przykłady wdrożeń](../ide/deployment-examples.md)  
   
  [Ponowne dystrybuowanie aplikacji klienta sieci Web](../ide/redistributing-web-client-applications.md)  
   
- [Wdrożenie ClickOnce dla aplikacji Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md)  
+ [Wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md)  
   
  [Uruchomiona C++/CLR aplikacji na poprzedniej wersji środowiska uruchomieniowego](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Tworzenie C/C++ izolowane Side-by-side zestawów ani aplikacji](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
+ [Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
   
- [Wdrożenia](/dotnet/framework/deployment/index)  
+ [Wdrażanie](/dotnet/framework/deployment/index)  
   
- [Rozwiązywanie problemów z C/C++ izolowane Side-by-side zestawów ani aplikacji](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+ [Rozwiązywanie problemów związanych z aplikacjami izolowanymi C/C++ oraz aplikacjami wykonywanymi równocześnie](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

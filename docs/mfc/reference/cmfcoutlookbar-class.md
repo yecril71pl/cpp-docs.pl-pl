@@ -49,11 +49,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 00988ef4a0b70561ec3a5687502ddae95508dad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 257b9157059f20d9023abee092c38ad8c1a57167
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcoutlookbar-class"></a>Klasa CMFCOutlookBar
 Okienko z kartami z wygląd **okienka nawigacji** w programie Microsoft Outlook 2000 lub Outlook 2003. `CMFCOutlookBar` Zawiera obiekt [klasy CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) obiekt i szereg kart. Karty mogą być [klasy CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) obiektów lub `CWnd`-pochodnych obiektów. Do użytkownika zostanie wyświetlony pasek Outlook jako serię przycisków i obszaru wyświetlania. Gdy użytkownik kliknie przycisk, odpowiedniego formantu lub przycisk okienko jest wyświetlana.  

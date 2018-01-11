@@ -14,14 +14,15 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bbe718ef448f49f02fa6742015af59fa11d75574
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08f1e170fcba0b9b11c80668e3e4f2cec696a9bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-edit-control"></a>Kontrola nad edytowaniem wartości
 Aby używać formantu, wprowadź wartość, wklej je ze Schowka, lub przeciągnij i upuść go z debugera do tego formantu edycji. Wprowadź wartość w postaci szesnastkowej lub dziesiętnej, a następnie kliknij przycisk **przeglądowych**. Wartości szesnastkowe powinien być poprzedzony 0 x; Prawidłowymi znakami są 0-9, A-F, a -f. Wartości dziesiętnych mogą być poprzedzone znak minus (-); Prawidłowymi znakami są 0-9.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie ERRLOOK](../../build/reference/errlook-reference.md)
+ [ERRLOOK — dokumentacja](../../build/reference/errlook-reference.md)

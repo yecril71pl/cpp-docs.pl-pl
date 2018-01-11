@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aeb679ce2cc8e4e768d5af43ff94c6b2cdb8dea1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 917dfbf870959b6934eaa49cbaab05e27304fb77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray —&gt;
 Definiuje valarray — klasa szablonu i wiele pomocniczych szablonu klasy i funkcje.  
@@ -60,12 +61,12 @@ Definiuje valarray — klasa szablonu i wiele pomocniczych szablonu klasy i funk
   
 |||  
 |-|-|  
-|[operator! =](../standard-library/valarray-operators.md#op_neq)|Sprawdza, czy są odpowiednie elementy dwóch valarrays równej wielkości nierównej lub czy są równe wszystkie elementy valarray — określona wartość valarray — typ elementu.|  
+|[operator!=](../standard-library/valarray-operators.md#op_neq)|Sprawdza, czy są odpowiednie elementy dwóch valarrays równej wielkości nierównej lub czy są równe wszystkie elementy valarray — określona wartość valarray — typ elementu.|  
 |[% — operator](../standard-library/valarray-operators.md#op_mod)|Uzyskuje resztę z dzielenia odpowiednie elementy dwóch valarrays równej wielkości lub podzielenie valarray — przez określoną wartość typu elementu valarray — lub podziału przez valarray — określona wartość.|  
 |[Operator &](../standard-library/valarray-operators.md#op_amp)|Uzyskuje operatora testu koniunkcji **i** między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość typu elementu.|  
 |[Operator & &](../standard-library/valarray-operators.md#op_amp_amp)|Uzyskuje logicznym **i** między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość valarray — typ elementu.|  
 |[operator >](../standard-library/valarray-operators.md#op_gt)|Sprawdza, czy elementy jeden valarray — są większe niż elementów równej wielkości valarray — lub czy wszystkie elementy valarray — większa lub mniejsza niż określona wartość valarray — typ elementu.|  
-|[operator > =](../standard-library/valarray-operators.md#op_gt_eq)|Sprawdza, czy elementy jeden valarray — są większe niż lub równe elementów równej wielkości valarray — lub czy wszystkie elementy valarray — są większe niż lub równe lub mniejsze niż lub równa określonej wartości.|  
+|[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Sprawdza, czy elementy jeden valarray — są większe niż lub równe elementów równej wielkości valarray — lub czy wszystkie elementy valarray — są większe niż lub równe lub mniejsze niż lub równa określonej wartości.|  
 |[operator >>](../standard-library/valarray-operators.md#op_gt_gt)|Prawo zmian usługi bits dla każdego elementu valarray — określonej liczby miejsc lub element-wise wartość określoną w drugim valarray —.|  
 |[Operator <](../standard-library/valarray-operators.md#op_lt)|Sprawdza, czy elementy valarray — co jest mniejsza od elementów równej wielkości valarray — lub czy wszystkie elementy valarray — większa lub mniejsza niż określona wartość.|  
 |[Operator < =](../standard-library/valarray-operators.md#op_lt_eq)|Sprawdza, czy elementy jeden valarray — są mniejsze niż lub równe elementów równej wielkości valarray — lub czy wszystkie elementy valarray — są większe niż lub równe lub mniejsze niż lub równa określonej wartości.|  
@@ -83,13 +84,13 @@ Definiuje valarray — klasa szablonu i wiele pomocniczych szablonu klasy i funk
   
 |||  
 |-|-|  
-|[gslice — klasa](../standard-library/gslice-class.md)|Klasa narzędzia valarray —, który służy do definiowania wielowymiarowych wycinków valarray —.|  
-|[gslice_array — klasa](../standard-library/gslice-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty ogólne wycinek zapewniając operacji między macierzami z podzbioru zdefiniowanych przez ogólne wycinek valarray —.|  
-|[indirect_array — klasa](../standard-library/indirect-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty, które są podzbiorem valarrays zapewniając operacji między macierzami podzbioru zdefiniowanych przez określenie podzbiór indeksów valarray — nadrzędnego.|  
-|[mask_array — klasa](../standard-library/mask-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty, które są podzbiorem valarrays nadrzędnego określić z wyrażenie logiczne, wprowadzając operacji między macierzami podzbioru.|  
-|[Slice — klasa](../standard-library/slice-class.md)|Klasa narzędzia valarray —, który służy do definiowania jednowymiarowa, vector przypominającej podzbiór valarray —.|  
-|[slice_array — klasa](../standard-library/slice-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty wycinek zapewniając operacji między macierzami z podzbioru zdefiniowanych przez wycinka valarray —.|  
-|[valarray — klasa](../standard-library/valarray-class.md)|Klasa szablonu opisuje obiekt, który określa sekwencję elementów typu **typu** który są przechowywane w postaci tablicy i przeznaczone do wykonywania operacji matematycznych o dużej szybkości, zoptymalizowana pod kątem wydajności obliczeniowej.|  
+|[gslice, klasa](../standard-library/gslice-class.md)|Klasa narzędzia valarray —, który służy do definiowania wielowymiarowych wycinków valarray —.|  
+|[gslice_array, klasa](../standard-library/gslice-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty ogólne wycinek zapewniając operacji między macierzami z podzbioru zdefiniowanych przez ogólne wycinek valarray —.|  
+|[indirect_array, klasa](../standard-library/indirect-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty, które są podzbiorem valarrays zapewniając operacji między macierzami podzbioru zdefiniowanych przez określenie podzbiór indeksów valarray — nadrzędnego.|  
+|[mask_array, klasa](../standard-library/mask-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty, które są podzbiorem valarrays nadrzędnego określić z wyrażenie logiczne, wprowadzając operacji między macierzami podzbioru.|  
+|[slice, klasa](../standard-library/slice-class.md)|Klasa narzędzia valarray —, który służy do definiowania jednowymiarowa, vector przypominającej podzbiór valarray —.|  
+|[slice_array, klasa](../standard-library/slice-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty wycinek zapewniając operacji między macierzami z podzbioru zdefiniowanych przez wycinka valarray —.|  
+|[valarray, klasa](../standard-library/valarray-class.md)|Klasa szablonu opisuje obiekt, który określa sekwencję elementów typu **typu** który są przechowywane w postaci tablicy i przeznaczone do wykonywania operacji matematycznych o dużej szybkości, zoptymalizowana pod kątem wydajności obliczeniowej.|  
   
 ### <a name="specializations"></a>Specjalizacje  
   

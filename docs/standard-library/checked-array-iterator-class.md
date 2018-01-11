@@ -24,11 +24,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb39271a7df2471c1373e6b272bbf262f34375ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97e0a5f9276d6ae9f4c5b4dea289227e59437525
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator — Klasa
 `checked_array_iterator` Klasa umożliwia przekształcanie tablicy lub wskaźnika do zaznaczenia iteratora. Klasa jest używana jako otoka (przy użyciu [make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator) funkcji) dla wskaźników raw lub tablic jako docelowych sposób sprawdzania i zarządzanie ostrzeżenia wskaźnika niezaznaczone zamiast globalnie wykluczania tych ostrzeżeń. Jeśli to konieczne, można niezaznaczone wersja tej klasy, [unchecked_array_iterator —](../standard-library/unchecked-array-iterator-class.md).  
@@ -163,18 +164,18 @@ int main()
   
 |||  
 |-|-|  
-|[Podstawa](#base)|Odzyskuje podstawowej iteratora z jego `checked_array_iterator`.|  
+|[base](#base)|Odzyskuje podstawowej iteratora z jego `checked_array_iterator`.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
 |[operator ==](#op_eq_eq)|Sprawdza dwie `checked_array_iterator`s pod kątem równości.|  
-|[operator! =](#op_neq)|Sprawdza dwie `checked_array_iterator`s pod kątem nierówności.|  
+|[operator!=](#op_neq)|Sprawdza dwie `checked_array_iterator`s pod kątem nierówności.|  
 |[Operator <](#op_lt)|Sprawdza, czy `checked_array_iterator` po lewej stronie operatora jest mniejsza niż `checked_array_iterator` po prawej stronie.|  
 |[operator >](#op_gt)|Sprawdza, czy `checked_array_iterator` po lewej stronie operatora jest większa niż `checked_array_iterator` po prawej stronie.|  
 |[Operator < =](#op_lt_eq)|Sprawdza, czy `checked_array_iterator` po lewej stronie operatora jest mniejsze niż lub równe `checked_array_iterator` po prawej stronie.|  
-|[operator > =](#op_gt_eq)|Sprawdza, czy `checked_array_iterator` po lewej stronie operatora jest większa niż lub równa `checked_array_iterator` po prawej stronie.|  
+|[operator>=](#op_gt_eq)|Sprawdza, czy `checked_array_iterator` po lewej stronie operatora jest większa niż lub równa `checked_array_iterator` po prawej stronie.|  
 |[operator *](#op_star)|Zwraca element, który `checked_array_iterator` adresów.|  
 |[operator ->](#operator-_gt)|Zwraca wskaźnik do elementu dotyczy `checked_array_iterator`.|  
 |[operator ++](#op_add_add)|Zwiększa `checked_array_iterator` do następnego elementu.|  
@@ -939,7 +940,7 @@ typedef typename iterator_traits<_Iterator>::reference reference;
   
 ## <a name="see-also"></a>Zobacz też  
  [\<Iterator >](../standard-library/iterator.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

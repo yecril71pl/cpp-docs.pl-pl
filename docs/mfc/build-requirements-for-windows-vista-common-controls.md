@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6f6dabd14ddb95f1b4c2b49389c27f61a69970f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76919bcdd416ed7195e94ed1fa0b2e3f3a4d573d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji
 Biblioteka Microsoft Foundation Class (MFC) obsługuje formanty standardowe systemu Windows w wersji 6.1. Formanty standardowe są uwzględnione w [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] i biblioteki wchodzi w skład [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. Biblioteka zawiera nowych metod, które podnoszą istniejących klas i nowe klasy i metody, które obsługują [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] formantów standardowych. Podczas tworzenia aplikacji, należy wykonać wymagania dotyczące kompilacji i migracji, które zostały opisane w poniższych sekcjach.  

@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f8bf50dbae25390de01180f592959a7fb76a04b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3c6f3c15b0ea398ec621ba5f6e34a9fb6e0aae8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-background-containers-and-servers"></a>Podstawy OLE: kontenery i serwery
 Aplikacji kontenera jest aplikacja, który można zastosować elementy osadzone lub połączone w swoich własnych dokumentów. Zarządza aplikacji kontenera dokumentów musi mieć możliwość przechowywania i wyświetlania elementów dokumentu OLE, a także dane utworzone przez samą aplikację. Aplikacji kontenera należy także zezwolić użytkownikom na wstawianie nowych elementów lub edytować istniejące elementy aktywowania aplikacji serwerowych, gdy jest to konieczne. Wymagania interfejsu użytkownika aplikacji kontenera są wymienione w artykule [kontenery: kwestie dotyczące interfejsu użytkownika](../mfc/containers-user-interface-issues.md).  
@@ -48,5 +49,5 @@ Aplikacji kontenera jest aplikacja, który można zastosować elementy osadzone 
  [Kontenery](../mfc/containers.md)   
  [Serwery](../mfc/servers.md)   
  [Kontenery: Elementy klienckie](../mfc/containers-client-items.md)   
- [Serwery: Elementy serwera](../mfc/servers-server-items.md)
+ [Serwery: elementy serwera](../mfc/servers-server-items.md)
 

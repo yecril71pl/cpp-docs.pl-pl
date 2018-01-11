@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 337bca0c446faa36b54e2b033f503f21db4af71d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f3206fa7f67fcd676b1490c6fad3be9a03c1ea40
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Dotyczące firmy Microsoft**  
@@ -44,7 +45,7 @@ void __svm_invlpga(
 |[in]`ASID`|Adres miejsca identyfikator (ASID) strony unieważnić.|  
   
 ## <a name="remarks"></a>Uwagi  
- `__svm_invlpga` Funkcji jest odpowiednikiem `INVLPGA` maszyny instrukcji. Ta funkcja obsługuje interakcji z hosta maszyny wirtualnej monitor Gość operacyjnego i jego zastosowań. Aby uzyskać więcej informacji, wyszukaj dokumentu, "wolumin ręczne AMD64 architektura programisty 2: programowania w języku systemu," numer 24593, poprawki 3.11, dokumentu w [AMD corporation](http://go.microsoft.com/fwlink/?LinkId=23746) lokacji.  
+ `__svm_invlpga` Funkcji jest odpowiednikiem `INVLPGA` maszyny instrukcji. Ta funkcja obsługuje interakcji z hosta maszyny wirtualnej monitor Gość operacyjnego i jego zastosowań. Aby uzyskać więcej informacji, wyszukaj dokumentu, "wolumin ręczne AMD64 architektura programisty 2: programowania w języku systemu," numer 24593, poprawki 3.11, dokumentu w [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokacji.  
   
 ## <a name="requirements"></a>Wymagania  
   

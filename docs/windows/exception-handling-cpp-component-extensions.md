@@ -21,11 +21,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa42bfc67a94ed4e25045dc6656651a7b9bd645e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d6f43bd1953cc13189f53d97090d3913a49072ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling--c-component-extensions"></a>Obsługa wyjątków (C++ Component Extensions)
 Aplikacje skompilowane z **/ZW** — opcja kompilatora lub **/CLR** — opcja kompilatora oba rozwiązania używają *wyjątki* obsługi nieoczekiwane błędy podczas wykonywania programu. W poniższych tematach opisano obsługi wyjątków w obu C + +/ CX lub C + +/ CLI aplikacji.  
@@ -37,16 +40,16 @@ Aplikacje skompilowane z **/ZW** — opcja kompilatora lub **/CLR** — opcja ko
  [Różnice w zachowaniu obsługi wyjątków w/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
  W tym artykule omówiono różnic od standardowego zachowania C++, obsługa wyjątków.  
   
- [na koniec](../dotnet/finally.md)  
+ [finally](../dotnet/finally.md)  
  W tym artykule omówiono sposób użycia finally — słowo kluczowe.  
   
- [Porady: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+ [Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
  Pokazuje, jak nieobsługiwanych wyjątków, można przechwycić.  
   
- [Porady: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
+ [Instrukcje: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
  Omówiono sposób przechwytywanie wyjątków CLR i C++ w kodzie natywnym.  
   
- [Porady: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+ [Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
  Demonstracja catch wszystkie nieobsługiwane wyjątki.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1968d34302cea355f174c96fb51b5bec3941fcb5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc40ac38d4f74848448b26284ad225faad04864e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdiframewnd-class"></a>Cmdiframewnd — klasa
 Udostępnia funkcje systemu Windows wielu okno ramowe interfejsu (MDI) dokumentu, wraz z elementów członkowskich do zarządzania okna.  
@@ -419,4 +420,4 @@ void MDITile(int nType);
  [Cframewnd — klasa](../../mfc/reference/cframewnd-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   
- [Cmdichildwnd — klasa](../../mfc/reference/cmdichildwnd-class.md)
+ [Klasa CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)

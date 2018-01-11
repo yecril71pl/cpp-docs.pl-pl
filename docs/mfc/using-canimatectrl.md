@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2054fcd5ca73263f8d26713c4e6c1e9a59323659
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f27fd24c3c4334476c78ba0b59c90cbbb0d51f5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-canimatectrl"></a>Korzystanie z CAnimateCtrl
 Formantu animacji reprezentowany przez klasę [CAnimateCtrl](../mfc/reference/canimatectrl-class.md), jest oknem, które wyświetla klip wideo z przeplotem AVI (Audio) format — standardowy format audio/wideo systemu Windows. Klip AVI jest szereg ramki mapy bitowej, takich jak filmu.  
@@ -33,10 +34,10 @@ Formantu animacji reprezentowany przez klasę [CAnimateCtrl](../mfc/reference/ca
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   
--   [Używanie formantu animacji](../mfc/using-an-animation-control.md)  
+-   [Używanie kontrolki animacji](../mfc/using-an-animation-control.md)  
   
--   [Powiadomienia wysyłane przez formanty animacji](../mfc/notifications-sent-by-animation-controls.md)  
+-   [Powiadomienia wysyłane przez kontrolki animacji](../mfc/notifications-sent-by-animation-controls.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

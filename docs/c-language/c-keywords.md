@@ -17,25 +17,26 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e5c715c6065e8c05466bc3f09eba57606b304e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2fd746124cdfc267267bc5d6803700cca507c34d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C
 „Słowa kluczowe” to słowa, które mają specjalne znaczenie dla kompilatora C. W fazach translacji 7 i 8 identyfikator nie może mieć tej samej pisowni i wielkości liter co słowo kluczowe C. (Zobacz opis [fazy tłumaczenia](../preprocessor/phases-of-translation.md) w *odwołania preprocesora*; w przypadku informacji na temat identyfikatorów, zobacz [identyfikatory](../c-language/c-identifiers.md).) Język C używa następujących słów kluczowych:  
   
 |||||  
 |-|-|-|-|  
-|**Automatycznie**|**podwójne**|**int**|**— Struktura**|  
-|**podział**|**else**|**długa**|**Przełącznik**|  
-|**Case**|**wyliczenia**|**Rejestr**|**Element TypeDef**|  
-|**char**|**extern**|**Zwraca**|**Unii**|  
-|**Const**|**float**|**krótki**|**bez znaku**|  
-|**Kontynuuj**|**dla**|**podpisany**|**void**|  
-|**domyślne**|**Przejdź do**|**sizeof**|**volatile**|  
-|**czy**|**Jeśli**|**statyczne**|**Podczas**|  
+|**Automatycznie**|**double**|**int**|**struct**|  
+|**break**|**else**|**long**|**switch**|  
+|**Case**|**enum**|**Rejestr**|**Element TypeDef**|  
+|**char**|**extern**|**return**|**Unii**|  
+|**const**|**float**|**short**|**bez znaku**|  
+|**continue**|**for**|**podpisany**|**void**|  
+|**default**|**goto**|**sizeof**|**volatile**|  
+|**do**|**Jeśli**|**static**|**while**|  
   
  Nie można przedefiniować słów kluczowych. Można jednak określić tekst, który można podstawić przed kompilacji za pomocą C [dyrektywy preprocesora](../preprocessor/preprocessor-directives.md).  
   

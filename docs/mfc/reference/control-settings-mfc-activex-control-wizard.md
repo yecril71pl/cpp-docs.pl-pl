@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 119c98c8cf5f5a3077afce4e706b177513113d03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60828b7f40009a5fd88c7f0a7f820ede3de4aa93
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Ustawienia kontrolki, kreator kontrolek ActiveX MFC
 Ta strona kreatora można określić sposób formantu ma zachowywać się. Można na przykład podstawowa formantu na standardowe typy formantów systemu Windows, zoptymalizować jego działanie i wygląd lub wskazują, że formant może działać jako kontener dla innych formantów.  
@@ -59,7 +60,7 @@ Ta strona kreatora można określić sposób formantu ma zachowywać się. Możn
  Określa, czy formant ma standard Windows **o** okno dialogowe, które wyświetla numer wersji i informacje o prawach autorskich.  
   
 > [!NOTE]
->  Jak użytkownik uzyskuje dostęp do pomocy dla formantu zależy od tego, jak zostały zaimplementowane pomocy i określa, czy pomoc w kontroli jest zintegrowana z kontenera pomocy. Aby uzyskać więcej informacji na temat sposobu integracji Pomocy, na [biblioteki MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) witryny sieci Web, wyszukaj "Dodawanie Context-Sensitive pomoc do MFC formantu ActiveX".  
+>  Jak użytkownik uzyskuje dostęp do pomocy dla formantu zależy od tego, jak zostały zaimplementowane pomocy i określa, czy pomoc w kontroli jest zintegrowana z kontenera pomocy. Aby uzyskać więcej informacji na temat sposobu integracji Pomocy, na [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) witryny sieci Web, wyszukaj "Dodawanie Context-Sensitive pomoc do MFC formantu ActiveX".  
   
  Po wybraniu tej opcji wstawia `AboutBox` kontrolować metody w klasie kontroli projektu (C*nazwa_projektu.nazwa_modułu.nazwa_procedury*Ctrl.cpp) i dodaje AboutBox do mapy wysyłania projektu. Domyślnie ta opcja jest zaznaczona.  
   
@@ -82,7 +83,7 @@ Ta strona kreatora można określić sposób formantu ma zachowywać się. Możn
  Umożliwia formant powiadomienia wskaźnika myszy proces, czy formant jest aktywny, czy nie. Po wybraniu tej opcji, `pointerInactive` flaga jest jedną z flag, które są zwracane przez [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Aby uzyskać więcej informacji o tym, jak użyć tej opcji, zobacz [dostarczanie myszy interakcji podczas nieaktywne](../../mfc/providing-mouse-interaction-while-inactive.md).  
   
  **Działa jako formant ramki proste**  
- Określa, czy formant jest kontenerem dla innych formantów przez ustawienie `OLEMISC_SIMPLEFRAME` bit dla formantu. Aby uzyskać więcej informacji na [biblioteki MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) witryny sieci Web, wyszukaj "Proste zawierania lokacji ramki".  
+ Określa, czy formant jest kontenerem dla innych formantów przez ustawienie `OLEMISC_SIMPLEFRAME` bit dla formantu. Aby uzyskać więcej informacji na [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) witryny sieci Web, wyszukaj "Proste zawierania lokacji ramki".  
   
  **Ładuje właściwości w sposób asynchroniczny**  
  Włącza Resetowanie wszelkich wcześniejszych danych asynchronicznych i inicjuje nowego załadowania właściwości asynchronicznej formantu.  
@@ -90,5 +91,5 @@ Ta strona kreatora można określić sposób formantu ma zachowywać się. Możn
 ## <a name="see-also"></a>Zobacz też  
  [Kreator kontrolek ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)   
  [Ustawienia aplikacji, Kreator kontrolek ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [Nazwy formantów, Kreator kontrolek ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
+ [Nazwy kontrolek, kreator kontrolek ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
 

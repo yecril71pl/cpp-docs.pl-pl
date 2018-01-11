@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33835dcaa40b217e9248e5c03b775f968332b687
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ef1188c9519e57c8132a2b20fc3b272d6c0ac51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="communicating-with-a-tree-control"></a>Komunikacja z kontrolką drzewa
 Użyj różnych metod wywoływania funkcji Członkowskich [CTreeCtrl](../mfc/reference/ctreectrl-class.md) obiektu, w zależności od sposobu utworzenia obiektu:  
@@ -35,5 +36,5 @@ Użyj różnych metod wywoływania funkcji Członkowskich [CTreeCtrl](../mfc/ref
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

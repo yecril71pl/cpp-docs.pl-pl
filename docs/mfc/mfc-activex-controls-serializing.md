@@ -26,11 +26,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc6a81fd32b4a32ba6468ee8d03c68d2678409c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34b8f0520d1f071bb408f782b0f2370ef29f528e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-serializing"></a>Kontrolki ActiveX MFC: serializacja
 W tym artykule omówiono sposób zserializować formantu ActiveX. Serializacja jest proces Odczyt lub zapis na nośniku magazynu trwałego, takich jak pliku na dysku. Biblioteka Microsoft Foundation Class (MFC) udostępnia wbudowaną obsługę serializacji w klasie `CObject`. `COleControl`Rozszerza ta obsługa do formantu ActiveX przy użyciu właściwości mechanizm wymiany.  

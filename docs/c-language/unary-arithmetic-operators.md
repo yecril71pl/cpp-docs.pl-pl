@@ -24,11 +24,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a655523a22c66d4b255d82d071a4efff29e6a6a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9741286ba4af5820f8d8eebadfd88d3bb14abaef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unary-arithmetic-operators"></a>Jednoargumentowe operatory arytmetyczne
 Jednoargumentowy C plus, negacja arytmetyczna, uzupełnienie i operatory negacji logicznej omawiane są na poniższej liście:  
@@ -66,4 +67,4 @@ if( !(x < y) )
  Jeśli `x` jest większy lub równy od `y`, wynikiem wyrażenia jest 1 (true). Jeśli `x` jest mniejszy od `y`, wynik jest równy 0 (false).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)
+ [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)

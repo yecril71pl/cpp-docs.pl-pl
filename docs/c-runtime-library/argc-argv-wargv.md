@@ -27,11 +27,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbb6e0886844cda7142ee52fcb545e122c38ea8e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14e1a7e98e3d152d54c1d7d3d8f47671f71129cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argc-argv-wargv"></a>__argc __argv, __wargv
 `__argc` — Zmienna globalna jest liczba liczba argumentów wiersza polecenia przekazywane do programu. `__argv`wskaźnik do tablicy bajtów jednoznakowym lub kilku byte znak ciągi, które zawierają argumenty programu i `__wargv` wskaźnika do tablicy znaków dwubajtowych ciągi, które zawierają argumenty programu. Te zmienne globalne podać argumenty `main` lub `wmain`.  

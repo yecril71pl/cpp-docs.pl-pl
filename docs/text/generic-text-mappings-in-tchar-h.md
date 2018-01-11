@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 6fe2773ab5a6429f2ab2c863598dabb4dddef628
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapowania typ ogólny-tekst w pliku Tchar.h
 Aby uprościć transportowania kodu do użytku międzynarodowego [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] zapewnia biblioteki czasu wykonywania [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-określonego mapowania zwykłego tekstu dla wielu typów danych, procedury i innych obiektów. Można użyć tych mapowania, które są zdefiniowane w pliku Tchar.h do pisania kodu ogólnego, który może zostać skompilowany dla jednobajtowe, wielobajtowe, lub [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] znak zestawów, w zależności od manifestu stałą, której można zdefiniować przy użyciu `#define` instrukcji. Mapowania zwykłego tekstu są [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] rozszerzeń, które nie są [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] zgodne.  
@@ -101,4 +102,4 @@ RetVal = strrev(szString);
   
 ## <a name="see-also"></a>Zobacz też  
  [Tekst i ciągi](../text/text-and-strings-in-visual-cpp.md)   
- [Przy użyciu tchar —. Typy danych H z kodem _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)
+ [Używanie typów danych TCHAR.H z kodem _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)

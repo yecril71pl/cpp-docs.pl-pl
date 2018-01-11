@@ -203,11 +203,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07c01988c3bd70f6889a687111cca162b180407b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99e773dc7c5039574901c2a13433615f8a0c0aad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinapp-class"></a>Cwinapp — klasa
 Klasa podstawowa, z którego pochodzi obiektu aplikacji systemu Windows.  
@@ -2114,7 +2115,7 @@ void SetAppID(LPCTSTR lpcszAppID);
 ## <a name="see-also"></a>Zobacz też  
  [Cwinthread — klasa](../../mfc/reference/cwinthread-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Porady: Dodawanie obsługi Menedżera ponownego uruchamiania](../../mfc/how-to-add-restart-manager-support.md)
+ [Instrukcje: dodawanie obsługi menedżera ponownego uruchamiania](../../mfc/how-to-add-restart-manager-support.md)
 
 
 

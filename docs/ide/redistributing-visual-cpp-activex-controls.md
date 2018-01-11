@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b29c6ce5b71b103068f0fe34673dcdcfe6820856
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c520d365a259c36baab8edeb9049aab9ac89925a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redystrybuowanie kontrolek ActiveX programu Visual C++
 Visual C++ 6.0 dostarcza formantów ActiveX, używanych w aplikacjach, które następnie ponownie rozesłać. Formanty znajdują się już w programie Visual C++. Na umów licencjonowania Visual C++ 6.0 można ponownie rozesłać tych kontrolek z aplikacji utworzonych w programie Visual C++.  
@@ -51,4 +52,4 @@ Visual C++ 6.0 dostarcza formantów ActiveX, używanych w aplikacjach, które na
  Niektóre pakietu redystrybucyjnego kontrolki ActiveX ma dodatkowe zależności. Dla każdego pliku .ocx w folderze Os\System na dysku CD produktu Visual C++ 6.0 jest również plik .dep. Dla każdego pliku ocx, który chcesz ponownie rozesłać Wyszukaj jeden lub więcej wpisów UŻYWA w odpowiedni plik .dep. Jeśli plik jest wyświetlana, upewnij się, że plik znajduje się na komputerze docelowym. Wszystkie biblioteki DLL bezpośrednio obsługi pliku ocx należy zarejestrować. (Dla Regsvr32.exe została wykonana pomyślnie, na komputerze docelowym musi najpierw zawiera wszystkie kontrolki statycznie ładuje bibliotek DLL). Ponadto jeśli bibliotekę DLL, która jest wymieniony jako zależność ma również plik .dep w folderze Os\System na dysku CD programu Visual C++ 6.0, musi także zbadać tego pliku .dep UŻYWA wpisy.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Redystrybuowanie plików programu Visual C++](../ide/redistributing-visual-cpp-files.md)
+ [Ponowne dystrybuowanie plików programu Visual C++](../ide/redistributing-visual-cpp-files.md)

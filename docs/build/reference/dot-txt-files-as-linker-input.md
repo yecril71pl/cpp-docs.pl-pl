@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9ce3d795816de7eced1927523aa57965f43603aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 61112fc5c701c7fa027d98b873332fd00df3dfad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="txt-files-as-linker-input"></a>Pliki .Txt — Wejście konsolidatora
 ŁĄCZE wejściową różne pliki tekstowe dodatkowe. [Pliku polecenia](../../build/reference/link-command-files.md) specyfikator (@) i [adresu podstawowego](../../build/reference/base-base-address.md) (/ BASE) [/DEF](../../build/reference/def-specify-module-definition-file.md), i [/kolejność](../../build/reference/order-put-functions-in-order.md) wszystkie opcje Określ plików tekstowych. Te pliki mogą mieć żadnych rozszerzenia, nie tylko .txt.  

@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad32c1ed42a2a991ba9ed9bd550330bc460834cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c33d48c69852ab22cfa2bfb4f33d45edcc469662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asyncbase-class"></a>AsyncBase — Klasa
 Implementuje automatu stanów asynchroniczne środowiska wykonawczego systemu Windows.  
@@ -58,40 +61,40 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Asyncbase::asyncbase — Konstruktor](../windows/asyncbase-asyncbase-constructor.md)|Inicjuje wystąpienie klasy asyncbase —.|  
+|[AsyncBase::AsyncBase, konstruktor](../windows/asyncbase-asyncbase-constructor.md)|Inicjuje wystąpienie klasy asyncbase —.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[AsyncBase::Cancel — metoda](../windows/asyncbase-cancel-method.md)|Anuluje operację asynchroniczną.|  
-|[AsyncBase::Close — metoda](../windows/asyncbase-close-method.md)|Zamyka operację asynchroniczną.|  
-|[AsyncBase::FireCompletion — metoda](../windows/asyncbase-firecompletion-method.md)|Wywołuje program obsługi zdarzeń zakończenia lub resetuje delegata wewnętrzny postępu.|  
-|[AsyncBase::FireProgress — metoda](../windows/asyncbase-fireprogress-method.md)|Wywołuje Bieżący postęp obsługi zdarzeń.|  
-|[AsyncBase::get_ErrorCode — metoda](../windows/asyncbase-get-errorcode-method.md)|Pobiera kod błędu dla bieżącej operacji asynchronicznej.|  
-|[AsyncBase::get_Id — metoda](../windows/asyncbase-get-id-method.md)|Pobiera dojście operację asynchroniczną.|  
-|[AsyncBase::get_Status — metoda](../windows/asyncbase-get-status-method.md)|Pobiera wartość, która wskazuje stan operacji asynchronicznej.|  
-|[AsyncBase::GetOnComplete — metoda](../windows/asyncbase-getoncomplete-method.md)|Kopiuje adres bieżącej obsługi zdarzeń zakończenia do określonej zmiennej.|  
-|[AsyncBase::GetOnProgress — metoda](../windows/asyncbase-getonprogress-method.md)|Kopiuje adres bieżący postęp obsługi zdarzeń do określonej zmiennej.|  
-|[AsyncBase::put_Id — metoda](../windows/asyncbase-put-id-method.md)|Ustawia dojście operację asynchroniczną.|  
-|[AsyncBase::PutOnComplete — metoda](../windows/asyncbase-putoncomplete-method.md)|Ustawia adres zakończenia obsługi zdarzeń do określonej wartości.|  
-|[AsyncBase::PutOnProgress — metoda](../windows/asyncbase-putonprogress-method.md)|Ustawia adres programu obsługi zdarzeń postępu na określoną wartość.|  
-|[AsyncBase::Start — metoda](../windows/asyncbase-start-method.md)|Rozpoczyna operację asynchroniczną.|  
+|[AsyncBase::Cancel, metoda](../windows/asyncbase-cancel-method.md)|Anuluje operację asynchroniczną.|  
+|[AsyncBase::Close, metoda](../windows/asyncbase-close-method.md)|Zamyka operację asynchroniczną.|  
+|[AsyncBase::FireCompletion, metoda](../windows/asyncbase-firecompletion-method.md)|Wywołuje program obsługi zdarzeń zakończenia lub resetuje delegata wewnętrzny postępu.|  
+|[AsyncBase::FireProgress, metoda](../windows/asyncbase-fireprogress-method.md)|Wywołuje Bieżący postęp obsługi zdarzeń.|  
+|[AsyncBase::get_ErrorCode, metoda](../windows/asyncbase-get-errorcode-method.md)|Pobiera kod błędu dla bieżącej operacji asynchronicznej.|  
+|[AsyncBase::get_Id, metoda](../windows/asyncbase-get-id-method.md)|Pobiera dojście operację asynchroniczną.|  
+|[AsyncBase::get_Status, metoda](../windows/asyncbase-get-status-method.md)|Pobiera wartość, która wskazuje stan operacji asynchronicznej.|  
+|[AsyncBase::GetOnComplete, metoda](../windows/asyncbase-getoncomplete-method.md)|Kopiuje adres bieżącej obsługi zdarzeń zakończenia do określonej zmiennej.|  
+|[AsyncBase::GetOnProgress, metoda](../windows/asyncbase-getonprogress-method.md)|Kopiuje adres bieżący postęp obsługi zdarzeń do określonej zmiennej.|  
+|[AsyncBase::put_Id, metoda](../windows/asyncbase-put-id-method.md)|Ustawia dojście operację asynchroniczną.|  
+|[AsyncBase::PutOnComplete, metoda](../windows/asyncbase-putoncomplete-method.md)|Ustawia adres zakończenia obsługi zdarzeń do określonej wartości.|  
+|[AsyncBase::PutOnProgress, metoda](../windows/asyncbase-putonprogress-method.md)|Ustawia adres programu obsługi zdarzeń postępu na określoną wartość.|  
+|[AsyncBase::Start, metoda](../windows/asyncbase-start-method.md)|Rozpoczyna operację asynchroniczną.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[AsyncBase::CheckValidStateForDelegateCall — metoda](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Sprawdza, czy można modyfikować właściwości delegata w bieżącym stanie asynchronicznego.|  
-|[AsyncBase::CheckValidStateForResultsCall — metoda](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Sprawdza, czy wyniki operacji asynchronicznej mogą być zbierane w bieżącym stanie asynchronicznego.|  
-|[AsyncBase::ContinueAsyncOperation — metoda](../windows/asyncbase-continueasyncoperation-method.md)|Określa, czy operacja asynchroniczna przetwarzanie powinno być kontynuowane, czy należy zatrzymać.|  
-|[AsyncBase::CurrentStatus — metoda](../windows/asyncbase-currentstatus-method.md)|Pobiera stan bieżącego operację asynchroniczną.|  
-|[AsyncBase::ErrorCode — metoda](../windows/asyncbase-errorcode-method.md)|Pobiera kod błędu dla bieżącej operacji asynchronicznej.|  
-|[AsyncBase::OnCancel — metoda](../windows/asyncbase-oncancel-method.md)|W przypadku przesłonięcia w klasie pochodnej, anuluje operację asynchroniczną.|  
-|[AsyncBase::OnClose — metoda](../windows/asyncbase-onclose-method.md)|W przypadku przesłonięcia w klasie pochodnej, zamyka operację asynchroniczną.|  
-|[AsyncBase::OnStart — metoda](../windows/asyncbase-onstart-method.md)|W przypadku przesłonięcia w klasie pochodnej, rozpoczyna operację asynchroniczną.|  
-|[AsyncBase::TryTransitionToCompleted — metoda](../windows/asyncbase-trytransitiontocompleted-method.md)|Wskazuje, czy bieżąca operacja asynchroniczna została ukończona.|  
-|[AsyncBase::TryTransitionToError — metoda](../windows/asyncbase-trytransitiontoerror-method.md)|Wskazuje, czy określonego kodu błędu, można zmodyfikować stanu błędu wewnętrznego.|  
+|[AsyncBase::CheckValidStateForDelegateCall, metoda](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Sprawdza, czy można modyfikować właściwości delegata w bieżącym stanie asynchronicznego.|  
+|[AsyncBase::CheckValidStateForResultsCall, metoda](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Sprawdza, czy wyniki operacji asynchronicznej mogą być zbierane w bieżącym stanie asynchronicznego.|  
+|[AsyncBase::ContinueAsyncOperation, metoda](../windows/asyncbase-continueasyncoperation-method.md)|Określa, czy operacja asynchroniczna przetwarzanie powinno być kontynuowane, czy należy zatrzymać.|  
+|[AsyncBase::CurrentStatusm metoda](../windows/asyncbase-currentstatus-method.md)|Pobiera stan bieżącego operację asynchroniczną.|  
+|[AsyncBase::ErrorCode, metoda](../windows/asyncbase-errorcode-method.md)|Pobiera kod błędu dla bieżącej operacji asynchronicznej.|  
+|[AsyncBase::OnCancel, metoda](../windows/asyncbase-oncancel-method.md)|W przypadku przesłonięcia w klasie pochodnej, anuluje operację asynchroniczną.|  
+|[AsyncBase::OnClose, metoda](../windows/asyncbase-onclose-method.md)|W przypadku przesłonięcia w klasie pochodnej, zamyka operację asynchroniczną.|  
+|[AsyncBase::OnStart, metoda](../windows/asyncbase-onstart-method.md)|W przypadku przesłonięcia w klasie pochodnej, rozpoczyna operację asynchroniczną.|  
+|[AsyncBase::TryTransitionToCompleted, metoda](../windows/asyncbase-trytransitiontocompleted-method.md)|Wskazuje, czy bieżąca operacja asynchroniczna została ukończona.|  
+|[AsyncBase::TryTransitionToError, metoda](../windows/asyncbase-trytransitiontoerror-method.md)|Wskazuje, czy określonego kodu błędu, można zmodyfikować stanu błędu wewnętrznego.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `AsyncBase`  
@@ -104,4 +107,4 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

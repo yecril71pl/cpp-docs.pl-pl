@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bd46ddafa76d47be7e237066c034e16010ff7b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d10db5f1282c726b30536be35b348d50c8bb4a14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Karty i atrybuty formantu karty
 Masz znaczną kontrolę nad wyglądu i zachowania kart, które tworzą formantu karty ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Każda karta może mieć etykietę, ikonę stanu elementu i zdefiniowanym przez aplikację 32-bitową wartość skojarzonych z nim. Dla każdej karty można wyświetlić ikony i etykiety.  
@@ -38,5 +39,5 @@ Masz znaczną kontrolę nad wyglądu i zachowania kart, które tworzą formantu 
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTabCtrl](../mfc/using-ctabctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

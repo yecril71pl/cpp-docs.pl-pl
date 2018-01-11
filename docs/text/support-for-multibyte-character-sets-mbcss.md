@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 19bbcd1030bdc89de2d3e05281786c1d0efa5ad6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c6c7bd1477f62e9c78b5e71dfe3723e804283d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Obsługa zestawów znaków wielobajtowych (zestawy MBCS)
 Zestawy znaków wielobajtowych (zestawy MBCS) są to metoda starszych konieczna Obsługa zestawów znaków, takich jak japoński i chiński, której nie można przedstawić w pojedynczy bajt. Jeśli przeprowadzasz nowych aplikacji należy używać Unicode dla wszystkich łańcuchów tekstowych, z wyjątkiem prawdopodobnie ciągów systemu, które nie są widoczne dla użytkowników końcowych. MBCS to starszych technologia która nie jest zalecane w przypadku nowych wdrożeń.  

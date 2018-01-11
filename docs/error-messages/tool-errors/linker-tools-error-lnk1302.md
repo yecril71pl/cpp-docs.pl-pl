@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7154cc538e17050eafec251729cf26a3cd62e573
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a5b9201608d6d457288c7ade9376147da08bcb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1302"></a>Błąd narzędzi konsolidatora LNK1302
 obsługiwana jest tylko połączenie bezpiecznych modułów .netmodule; Nie można skonsolidować modułu .netmodule pliku  
@@ -28,8 +29,8 @@ obsługiwana jest tylko połączenie bezpiecznych modułów .netmodule; Nie moż
   
  Aby rozwiązać ten problem, skompiluj z **/CLR: Safe** do włączenia Konsolidacja MSIL lub Przekaż **/CLR** lub **/CLR: pure** pliku obj. do konsolidatora zamiast modułu.  
   
- Aby uzyskać więcej informacji, zobacz  
+ Aby uzyskać więcej informacji, zobacz artykuł  
   
 -   [/LN (Utwórz moduł MSIL)](../../build/reference/ln-create-msil-module.md)  
   
--   [modułu .netmodule pliki jako dane wejściowe konsolidatora](../../build/reference/netmodule-files-as-linker-input.md)
+-   [Pliki .netmodule — wejście konsolidatora](../../build/reference/netmodule-files-as-linker-input.md)

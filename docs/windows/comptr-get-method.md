@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e9096848e3fb387bbca12e1141823007472f5a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dc2146115da2b97228474e33234dc0ffe6124084
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrget-method"></a>ComPtr::Get — Metoda
 Pobiera wskaźnik do interfejsu, który jest skojarzony z tym comptr —.  
@@ -39,4 +42,4 @@ T* Get() const;
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Comptr — klasa](../windows/comptr-class.md)
+ [ComPtr, klasa](../windows/comptr-class.md)

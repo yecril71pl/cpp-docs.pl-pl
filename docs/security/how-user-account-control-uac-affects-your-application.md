@@ -18,20 +18,21 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 742d84300a7139e392bda19142643fe469231bdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e609c16d63974506a06d6ec553cf4be09509acb9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Jak kontrola konta użytkownika (UAC) wpływa na aplikację?
 Kontrola konta użytkownika (UAC) jest funkcją systemu Windows Vista, w którym użytkownik kont ma ograniczone uprawnienia. Można znaleźć szczegółowe informacje na temat funkcji Kontrola konta użytkownika w tych lokacjach:  
   
--   [Przewodnik krok po kroku kontroli konta użytkownika systemu Windows Vista](http://go.microsoft.com/fwlink/?linkid=53781)  
+-   [Przewodnik krok po kroku kontroli konta użytkownika systemu Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=53781)  
   
--   [Deweloper najlepsze rozwiązania i wskazówki dotyczące aplikacji w środowisku najniższych uprawnieniach](http://go.microsoft.com/fwlink/?linkid=82444)  
+-   [Deweloper najlepsze rozwiązania i wskazówki dotyczące aplikacji w środowisku najniższych uprawnieniach](http://go.microsoft.com/fwlink/p/?linkid=82444)  
   
--   [Opis i konfigurowanie Kontrola konta użytkownika w systemie Windows Vista](http://go.microsoft.com/fwlink/?LinkId=82445)  
+-   [Opis i konfigurowanie Kontrola konta użytkownika w systemie Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=82445)  
   
 ## <a name="building-projects-after-enabling-uac"></a>Kompilowanie projektów po włączeniu funkcji Kontrola konta użytkownika  
  W przypadku kompilowania projektu Visual C++ w systemie Windows Vista z funkcji Kontrola konta użytkownika jest wyłączone, a później włączyć funkcji Kontrola konta użytkownika, należy wyczyścić, skompiluj ponownie projekt, aby działał poprawnie.  

@@ -28,11 +28,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed41372637e9ee68db087fbe0ad532d9e6bb4935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50ca3fd6d60e7fecf84c81d14c859f5b2f51e120
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-library-features"></a>Biblioteka CRT — Funkcje
 W tym temacie omówiono różne pliki .lib wchodzące w skład biblioteki wykonawcze języka C, a także ich — opcje kompilatora skojarzone i dyrektywy preprocesora.  
@@ -114,4 +115,4 @@ W tym temacie omówiono różne pliki .lib wchodzące w skład biblioteki wykona
  Jeśli program używa więcej niż jedną wersję CRT, niektóre uwagę podczas przekazywania niektórych obiektów CRT (na przykład dojść do plików, ustawień regionalnych i zmiennych środowiskowych) poprzek granic DLL. Aby uzyskać więcej informacji na temat zagadnień związanych oraz sposobu ich rozwiązania zobacz [potencjalne błędy przekazywanie CRT obiektów między granic DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki wykonawcze języka C](../c-runtime-library/c-run-time-library-reference.md)
+ [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)

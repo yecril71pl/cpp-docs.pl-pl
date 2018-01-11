@@ -35,11 +35,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b3baee04a5faad77c81d07a6ebeee39e5ac1d12
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b83d470eaf6a30698d8c2836620a0688daa35cc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Rozszerzenie funkcji wbudowanej)
 
@@ -87,6 +88,6 @@ Można użyć `#pragma` [auto_inline](../../preprocessor/auto-inline.md) dyrekty
 
 ## <a name="see-also"></a>Zobacz też
 
-[/O opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)  
+[/O Opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)  
 [Opcje kompilatora](../../build/reference/compiler-options.md)  
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

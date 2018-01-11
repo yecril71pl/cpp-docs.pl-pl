@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fac78eddcdf36ecc295841019f9e3f05e537802
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d4997d2d793102119e5021ba1110db2674e1b42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-application-wizard"></a>Kreator aplikacji MFC
 Kreator aplikacji MFC tworzy aplikację, która po skompilowaniu implementuje podstawowe funkcje aplikacji wykonywalnej systemu Windows (.exe). Aplikacja startowa MFC starter zawiera pliki źródłowe (.cpp) języka C++, pliki zasobów (.rc), pliki nagłówków (.h) i pliki projektu (.vcxproj). Kod generowany w tych plikach startowych jest oparty na bibliotece MFC.  
@@ -32,7 +33,7 @@ Kreator aplikacji MFC tworzy aplikację, która po skompilowaniu implementuje po
 ## <a name="overview"></a>Omówienie  
  Ta strona kreatora zawiera opis bieżących ustawień tworzonej aplikacji MFC. Domyślnie kreator tworzy projekt w następujący sposób:  
   
--   [Typ aplikacji, Kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md)  
+-   [Typ aplikacji, kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md)  
   
     -   Projekt jest tworzony z obsługą interfejsu kart dla wielu dokumentów (MDI). Aby uzyskać więcej informacji, zobacz [SDI i MDI](../../mfc/sdi-and-mdi.md).  
   
@@ -44,23 +45,23 @@ Kreator aplikacji MFC tworzy aplikację, która po skompilowaniu implementuje po
   
     -   Projekt używa biblioteki MFC w udostępnionym pliku DLL. Aby uzyskać więcej informacji, zobacz [biblioteki dll w programie Visual C++](../../build/dlls-in-visual-cpp.md).  
   
--   [Obsługa dokumentów złożonych, Kreator aplikacji MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
+-   [Obsługa dokumentów złożonych, kreator aplikacji MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
   
     -   Projekt nie obsługuje dokumentów złożonych.  
   
--   [Ciągi szablonu dokumentu, Kreator aplikacji MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md)  
+-   [Ciągi szablonu dokumentu, kreator aplikacji MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md)  
   
     -   Nazwa projektu jest używana dla ciągów tekstowych domyślnego szablonu dokumentów.  
   
--   [Obsługa baz danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
+-   [Obsługa bazy danych, kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
   
     -   Projekt nie obsługuje baz danych.  
   
--   [Funkcje interfejsu użytkownika, Kreator aplikacji MFC](../../mfc/reference/user-interface-features-mfc-application-wizard.md)  
+-   [Funkcje interfejsu użytkownika, kreator aplikacji MFC](../../mfc/reference/user-interface-features-mfc-application-wizard.md)  
   
     -   Projekt implementuje standardowe systemu Windows, interfejs użytkownika funkcji, takich jak system menu, paska stanu, zmaksymalizować oraz zminimalizować pola, **o** okno, paska menu standardowego i Dokowanie paska narzędzi i ramek podrzędnych.  
   
--   [Funkcje zaawansowane, Kreator aplikacji MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)  
+-   [Funkcje zaawansowane, kreator aplikacji MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)  
   
     -   Projekt obsługuje drukowanie i podgląd wydruku.  
   
@@ -70,7 +71,7 @@ Kreator aplikacji MFC tworzy aplikację, która po skompilowaniu implementuje po
   
     -   Projekt obsługuje **Explorer** okienko dokujące **dane wyjściowe** okienko dokujące i **właściwości** okienko dokujące.  
   
--   [Klasy generowane, Kreator aplikacji MFC](../../mfc/reference/generated-classes-mfc-application-wizard.md)  
+-   [Klasy generowane, kreator aplikacji MFC](../../mfc/reference/generated-classes-mfc-application-wizard.md)  
   
     -   Klasa widoku projektu jest pochodną [cview — klasa](../../mfc/reference/cview-class.md).  
   

@@ -26,11 +26,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9cb1f1618f140ad9183d50d8aaacc8e9cc59c75d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e2e572574bfd8313106dbdda64b63077d5d2e7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue — Klasa
 `concurrent_queue` Klasa jest sekwencji kontenera klasy, która umożliwia w pierwszej, FIFO dostęp do swoich elementów. Umożliwia ona ograniczony zestaw operacji bezpieczne współbieżności, takich jak `push` i `try_pop`.  
@@ -78,7 +79,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |[Wyczyść](#clear)|Czyści równoczesnych kolejki niszczenie żadnego obecnie elementów umieszczonych w kolejce. Ta metoda nie jest bezpieczne współbieżności.|  
 |[pusty](#empty)|Testy, jeśli równoczesnych kolejka jest pusta w tej chwili ta metoda jest wywoływana. Ta metoda jest bezpieczne współbieżności.|  
 |[get_allocator](#get_allocator)|Zwraca kopię alokatora użyta do skonstruowania równoczesnych kolejki. Ta metoda jest bezpieczne współbieżności.|  
-|[wypychania](#push)|Przeciążone. Enqueues element na końcu tail równoczesnych kolejki. Ta metoda jest bezpieczne współbieżności.|  
+|[push](#push)|Przeciążone. Enqueues element na końcu tail równoczesnych kolejki. Ta metoda jest bezpieczne współbieżności.|  
 |[try_pop](#try_pop)|Dequeues element z kolejki, jeśli jest dostępny. Ta metoda jest bezpieczne współbieżności.|  
 |[unsafe_begin](#unsafe_begin)|Przeciążone. Zwraca iteratora typu `iterator` lub `const_iterator` na początek kolejki współbieżnych. Ta metoda nie jest bezpieczne współbieżności.|  
 |[unsafe_end](#unsafe_end)|Przeciążone. Zwraca iteratora typu `iterator` lub `const_iterator` na końcu równoczesnych kolejki. Ta metoda nie jest bezpieczne współbieżności.|  
@@ -268,4 +269,4 @@ size_type unsafe_size() const;
  `unsafe_size`nie jest bezpieczne współbieżności i może prowadzić do niepoprawnych wyników przypadku równocześnie z wywołaniami metod `push`, `try_pop`, i `empty`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)
+ [Przestrzeń nazw współbieżności](concurrency-namespace.md)

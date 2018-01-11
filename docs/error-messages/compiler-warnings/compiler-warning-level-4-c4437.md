@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88873faa9978da7c068d35cb88cc92317b7509d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a50534ca7e25b18d32d37a9120e478f78ea56daf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Kompilator C4437 ostrzegawcze (poziom 4)
 dynamic_cast z wirtualnej podstawowej "class1" do "class2" może zakończyć się niepowodzeniem w niektórych kontekstach kompilacji z opcją/vd2 lub zdefiniować "class2" z #pragma vtordisp(2) w celu  
@@ -88,4 +89,4 @@ int main()
 ## <a name="see-also"></a>Zobacz też  
  [Operator dynamic_cast](../../cpp/dynamic-cast-operator.md)   
  [vtordisp](../../preprocessor/vtordisp.md)   
- [Kompilator C4436 ostrzegawcze (poziom 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+ [Ostrzeżenie kompilatora (poziom 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

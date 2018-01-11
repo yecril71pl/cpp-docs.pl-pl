@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8ad37d66e0e73e7ee75e2c44869c59c545025bd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b0c027623f5b562219e46c67ef730754538d602
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localunwind2"></a>_local_unwind2
 Funkcji CRT wewnętrznej. Uruchamia wszystkie programy obsługi zakończenia, które są wymienione w tabeli wskazany zakres.  
@@ -60,4 +61,4 @@ void _local_unwind2(
  Gdy ta metoda jest wykonywana programy obsługi zakończenia, zaczynała się na bieżącym poziomie leksykalne i działa drodze się w poziomach leksykalne, dopóki nie osiągnie poziom które jest określane przez `stop`. Nie wykonuj programy obsługi zakończenia na poziomie, który jest wskazywany przez `stop`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne odwołanie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+ [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

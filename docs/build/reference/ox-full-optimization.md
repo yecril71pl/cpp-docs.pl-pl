@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 30794416ea166f6e41d8c0de81ef7812c7b71c31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85efa8a2beab34d0dcf1bdb74e3cf89008b10d6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>OX (Włącz większości prędkości optymalizacji)
 
@@ -43,9 +44,9 @@ ms.lasthandoff: 10/24/2017
 
 - [/OB (rozszerzenie funkcji wbudowanej)](../../build/reference/ob-inline-function-expansion.md), gdzie parametr opcji jest 2 (**/ob2**)
 
-- [/Og (optymalizacje globalne)](../../build/reference/og-global-optimizations.md)
+- [/Og (Optymalizacje globalne)](../../build/reference/og-global-optimizations.md)
 
-- [/OI (Generuj funkcje wewnętrzne)](../../build/reference/oi-generate-intrinsic-functions.md)
+- [/Oi (Generuj funkcje wewnętrzne)](../../build/reference/oi-generate-intrinsic-functions.md)
 
 - [/OT (Preferuj szybki kod)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
 
@@ -77,6 +78,6 @@ Aby zastosować wszystkie dostępne optymalizacje poziomu plików dla wersji kom
 
 ## <a name="see-also"></a>Zobacz też
 
-[/O opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)  
+[/O Opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)  
 [Opcje kompilatora](../../build/reference/compiler-options.md)  
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

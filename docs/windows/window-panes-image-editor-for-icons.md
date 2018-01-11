@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce9716e810f48c237eabb0ea11b222e3590d795b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c4b28d49d698f5bc39d8a3915c635c28ecca4193
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Okienka (Edytor obrazów dla ikon)
 Okno Edytor obrazów zwykle wyświetla obraz w dwie części oddzielone pasek podziału. Jeden widok jest aktualny rozmiar i innych powiększenia (współczynnik rozszerzenia domyślna to 6). Widoki te dwa okienka są automatycznie aktualizowane: zmiany wprowadzone w jednym oknie natychmiast są wyświetlane w innym. Dwa okienka ułatwiać pracę nad powiększania widoku obrazu, w którym można rozróżnić piksele i, w tym samym czasie obserwować wpływ pracę na widoku rozmiaru rzeczywistego obrazu.  
@@ -36,7 +39,7 @@ Okno Edytor obrazów zwykle wyświetla obraz w dwie części oddzielone pasek po
   
  W okienku edytora obrazów powiększenia o 4 lub nowszym, można [wyświetlania siatki pikseli](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md) który rozgranicza piksele obrazu.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](https://msdn.microsoft.com/library/f45fce5x.aspx) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](https://msdn.microsoft.com/library/xbx3z216.aspx). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Brak  

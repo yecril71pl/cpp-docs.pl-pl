@@ -28,11 +28,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a891a03f9b54946060cc41d535c7dfc44fd94e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6131f2349a065052c9860038ca4b9f08de89f37d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="texture-class"></a>texture — Klasa
 Tekstura jest agregacji na danych `accelerator_view` w domenie zakresu. Jest kolekcja zmiennych, po jednej dla każdego elementu w zakresie domeny. Każda zmienna przechowuje wartość odpowiadającą typów pierwotnych języka C++ ( `unsigned int`, `int`, `float`, `double`), typem skalarnym ( `norm`, lub `unorm`), lub typu krótkich wektora.  
@@ -73,11 +74,11 @@ class texture;
 |----------|-----------------|  
 |[copy_to](#copy_to)|Kopie `texture` obiektu docelowego, wykonując kopię bezpośrednich.|  
 |[dane](#data)|Zwraca wskaźnik Procesora do danych pierwotnych z tym tekstury.|  
-|[Pobierz](#get)|Zwraca wartość elementu pod określonym indeksem.|  
+|[get](#get)|Zwraca wartość elementu pod określonym indeksem.|  
 |[get_associated_accelerator_view](#get_associated_accelerator_view)|Zwraca [accelerator_view](accelerator-view-class.md) czyli preferowanych cel dla tego tekstury ma zostać skopiowany na.|  
 |[get_depth_pitch](#get_depth_pitch)|Zwraca liczbę bajtów między każdy Wycinek głębokości 3D przemieszczania tekstury na Procesor.|  
 |[get_row_pitch](#get_row_pitch)|Zwraca liczbę bajtów między każdego wiersza w 2W i 3W przemieszczania tekstury procesora.|  
-|[zestaw](#set)|Ustawia wartość elementu pod określonym indeksem.|  
+|[set](#set)|Ustawia wartość elementu pod określonym indeksem.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -616,4 +617,4 @@ texture(
  Ranga sekcji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [CONCURRENCY::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05b718b20ad941764158f2de461614885b0627fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -44,4 +45,4 @@ ms.lasthandoff: 10/24/2017
 |W DÓŁ|Określa, że polecenia EDITBIN do ponownego przypisania podstawowy adres w dół z adresu końcowego. Pliki są przekazywane w kolejności określonej z pierwszy plik znajdujący się w adresie można najwyższy pod koniec zakresu adresów. BASE należy użyć do zapewnienia wystarczającej przestrzeni adresowej używanej przez utworzenie plików z w dół. Aby ustalić przestrzeń adresowa wymaganych przez określone pliki, Uruchom polecenia EDITBIN z /REBASE plików, a następnie dodaj 64 KB wyświetlanych całkowity rozmiar.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje polecenia EDITBIN](../../build/reference/editbin-options.md)
+ [Opcje EDITBIN](../../build/reference/editbin-options.md)

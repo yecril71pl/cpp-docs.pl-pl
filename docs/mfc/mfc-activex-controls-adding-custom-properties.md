@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f27cd9d86586bbf7890c5c6bf515892bc60162ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f64154142c4c5f0fb3f24dc63120799132983880
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych
 Właściwości niestandardowe różnią się od właściwości podstawowe właściwości niestandardowe nie są już implementowana przez `COleControl` klasy. Właściwość niestandardowa służy do ujawniać niektórych stanu lub wygląd formantu ActiveX do programisty, za pomocą formantu.  
@@ -103,4 +104,4 @@ Właściwości niestandardowe różnią się od właściwości podstawowe właś
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Formanty MFC ActiveX: właściwości](../mfc/mfc-activex-controls-properties.md)   
  [Formanty MFC ActiveX: metody](../mfc/mfc-activex-controls-methods.md)   
- [Colecontrol — klasa](../mfc/reference/colecontrol-class.md)
+ [Klasa COleControl](../mfc/reference/colecontrol-class.md)

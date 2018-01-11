@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9a7d32e202c7184ecbf974dc095c223686d6dff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7e69c8c0d80fea2720ea436bf0bff796ae57a60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cptrlist-class"></a>Klasa CPtrList
 Obsługuje listy wskaźniki typu void.  
@@ -62,4 +63,4 @@ class CPtrList : public CObject
 ## <a name="see-also"></a>Zobacz też  
  [CObject — klasa](../../mfc/reference/cobject-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Klasa cObList](../../mfc/reference/coblist-class.md)
+ [Klasa CObList](../../mfc/reference/coblist-class.md)

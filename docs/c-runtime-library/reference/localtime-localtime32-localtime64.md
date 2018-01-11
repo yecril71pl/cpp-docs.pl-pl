@@ -43,11 +43,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b584d3e255bf3b2add52d5db00c6325b578ebf51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 77a0a297413c053dee3e165ece07034487535b06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localtime-localtime32-localtime64"></a>localtime, _localtime32, _localtime64
 Konwertuj na godzinę i popraw na podstawie lokalnej strefy czasowej. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [localtime_s —, _localtime32_s —, _localtime64_s —](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).  
@@ -186,4 +187,4 @@ Tue Feb 12 10:05:58 AM
  [gmtime —, _gmtime32 —, _gmtime64 —](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
  [localtime_s —, _localtime32_s —, _localtime64_s —](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
  [czas, _time32 —, _time64 —](../../c-runtime-library/reference/time-time32-time64.md)   
- [_tzset —](../../c-runtime-library/reference/tzset.md)
+ [_tzset](../../c-runtime-library/reference/tzset.md)

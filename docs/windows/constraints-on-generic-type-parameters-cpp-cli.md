@@ -17,11 +17,14 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01cd21e00cbf8947f5eb2ff8d2f578ab4912a03a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e59c5ecb6101667c7d8546afcc6cbbfb9e024488
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Ograniczenia parametrów typu ogólnego (C++/CLI)
 W ogólnym typie lub metoda deklaracje kwalifikować się parametr typu z ograniczeniami. Ograniczenie jest wymaganie, które muszą spełniać typy używane jako argumentów typu. Na przykład ograniczenie może być czy argument typu musi implementować interfejs niektórych lub dziedziczyć po określonej klasy.  

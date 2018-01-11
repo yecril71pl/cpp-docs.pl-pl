@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 61aa53ba93a15b1460088f0dbf56cc92404aeb4d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c160281631a99d0b99a5dafa890f4ada8edb409
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcwctypegt"></a>&lt;cwctype —&gt;
 Zawiera nagłówek biblioteki standardowe C \<wctype.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.  

@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ecc0257cf087a28c0186adaffb795f3e33253b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25521d75921b377730a7f9afac71f2a60c055216
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="turning-off-the-activate-when-visible-option"></a>Wyłączanie opcji aktywacji w przypadku widoczności
 Formant ma dwa stany podstawowe: aktywnych i nieaktywnych. Zazwyczaj te stany zostały rozróżnianych na podstawie tego, czy formant miał okna. Aktywny formant miał okna; nie kontrolkę, która jest nieaktywne. Ta różnica nie jest już uniwersalnych wraz z wprowadzeniem aktywacji niepowiązanej z oknami, ale nadal mają zastosowanie wielu formantów.  
@@ -34,5 +35,5 @@ Formant ma dwa stany podstawowe: aktywnych i nieaktywnych. Zazwyczaj te stany zo
  **OLEMISC_ACTIVATEWHENVISIBLE** flagi automatycznie zostanie pominięty, Jeśli wyłączysz **aktywacji, gdy widoczny** opcji [ustawienia kontroli](../mfc/reference/control-settings-mfc-activex-control-wizard.md) strony MFC ActiveX Kreator formantów podczas tworzenia formantu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty MFC ActiveX: Optymalizacja](../mfc/mfc-activex-controls-optimization.md)
+ [Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
 

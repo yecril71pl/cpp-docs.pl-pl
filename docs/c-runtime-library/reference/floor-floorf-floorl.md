@@ -40,11 +40,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6eda1db54148009d87ef6b7a59522d61332304dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3bad88cdfbc9ee589a695de5da5f3bf722ace56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 Oblicza Zaokrąglenie w dół o wartości.  
@@ -132,4 +133,4 @@ The ceil of -2.8 is -2.000000
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [ceil ceilf —, ceill —](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [ROUND, roundf — roundl —](../../c-runtime-library/reference/round-roundf-roundl.md)   
- [fmod —, fmodf —](../../c-runtime-library/reference/fmod-fmodf.md)
+ [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)

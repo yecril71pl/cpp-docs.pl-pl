@@ -32,11 +32,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a614e37c8fe106289d1530a9dac01daee8b8a88a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac777b2e2a7ca791821be52b68f136998c33d243
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetallochook"></a>_CrtSetAllocHook
 Instaluje funkcję alokacji zdefiniowaną przez klienta przez podłączenie jej do procesu alokacji pamięci debugowania w czasie wykonywania C (tylko wersja debug).  
@@ -98,4 +99,4 @@ lineNumber);
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
- [_Crtgetallochook —](../../c-runtime-library/reference/crtgetallochook.md)
+ [_CrtGetAllocHook](../../c-runtime-library/reference/crtgetallochook.md)

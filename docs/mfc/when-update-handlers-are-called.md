@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b19a01ce06b76b49593adf54fa8af728be2d5c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eaf2773a2d9e393c783a39e01c75f8efa62796df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="when-update-handlers-are-called"></a>Kiedy są wywoływane programy obsługi aktualizacji
 Załóżmy, że użytkownik kliknie przycisk myszy w menu Plik, który generuje `WM_INITMENUPOPUP` wiadomości. W ramach mechanizmu aktualizacji zbiorczo aktualizuje wszystkie elementy w menu plik przed menu górnego poziomu, więc użytkownik może go wyświetlić.  
@@ -45,5 +46,5 @@ Załóżmy, że użytkownik kliknie przycisk myszy w menu Plik, który generuje 
  Inicjowanie menu odbywa się automatycznie w ramach występuje, gdy aplikacja odbiera `WM_INITMENUPOPUP` wiadomości. Podczas wykonywania pętli bezczynności struktura wyszukuje polecenia routingu dla przycisku programy obsługi aktualizacji w podobny sposób jak w przypadku menu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: aktualizowanie obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)
+ [Instrukcje: aktualizowanie obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)
 

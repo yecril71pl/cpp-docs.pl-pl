@@ -25,11 +25,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a757cbbb7bb9e080a9492ecabfd0542714cf2c7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e3e39bbd2b630d35942c1c5107041b2fbadf7549
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-an-attributed-program"></a>Kompilowanie programu opartego na atrybutach
 Po wprowadzeniu atrybutów języka Visual C++ w kodzie źródłowym może być kompilatora Visual C++, aby wygenerować plik biblioteki i .idl typu dla Ciebie. Konsolidator następujące opcje tworzenia plików .tlb i .idl pomocy:  

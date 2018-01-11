@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2fe145a2bfac01bd201284bbbaa8250ee20b3612
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb9b0c3e24094deb0d4fd4ac20d673d9ffafca6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-is-a-carchive-object"></a>Co to jest obiekt CArchive
 A `CArchive` obiektu zapewnia bezpieczny mechanizm buforowania do zapisywania lub odczytywania obiekty możliwe do serializacji do lub z `CFile` obiektu. Zazwyczaj `CFile` obiekt reprezentuje pliku na dysku; jednak również może być pliku pamięci (`CSharedFile` obiektu), być może reprezentujący Schowka.  
@@ -36,5 +37,5 @@ A `CArchive` obiektu zapewnia bezpieczny mechanizm buforowania do zapisywania lu
  Jak dane są serializowane archiwum, archiwum zebrane dane do momentu swojego bufora jest pełny. Następnie archiwum zapisuje buforu do `CFile` obiekt wskazywany przez `CArchive` obiektu. Podobnie jak odczytać danych z archiwum odczytuje dane z pliku do buforu, a następnie z buforu obiektowi zdeserializowany. To buforowanie zmniejsza liczbę razy na dysku twardym jest fizycznie do odczytu, co poprawia wydajność aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Serializacja: Serializacja obiektu](../mfc/serialization-serializing-an-object.md)
+ [Serializacja: serializacja obiektu](../mfc/serialization-serializing-an-object.md)
 

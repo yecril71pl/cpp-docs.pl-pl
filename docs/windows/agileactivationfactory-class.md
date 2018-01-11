@@ -14,11 +14,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 072f160dbdbb8116ab4546890b6e9eeb6e309023
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8e7856026125d91d8665bad52420b49f936eb31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory — Klasa
 Reprezentuje fabrykę apartamentu przyjaznego aktywacji, który implementuje [ftmbase —](../windows/ftmbase-class.md).  
@@ -42,4 +45,4 @@ class AgileActivationFactory :
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)   
- [Activationfactory — klasa](../windows/activationfactory-class.md)
+ [ActivationFactory, klasa](../windows/activationfactory-class.md)

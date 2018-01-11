@@ -173,11 +173,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5437cef55a0e46f38eaf0e97b56ed9f82b4bb31c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 573b81ce8d78cde67b63579caa5ed96bbe557ae3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ctreectrl-class"></a>Ctreectrl — klasa
 Udostępnia funkcje formantu widoku drzewa wspólne systemu Windows.  
@@ -285,7 +286,7 @@ class CTreeCtrl : public CWnd
   
  Aby uzyskać więcej informacji na temat używania `CTreeCtrl`, zobacz:  
   
-- [Formanty](../../mfc/controls-mfc.md)  
+- [Kontrolki](../../mfc/controls-mfc.md)  
   
 - [Korzystanie z CTreeCtrl](../../mfc/using-ctreectrl.md)  
   
@@ -1328,7 +1329,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
  Dojście do elementu widoku drzewa ( `HTREEITEM`), który odpowiada `uAccId` parametru. Aby uzyskać więcej informacji, zobacz `hItem` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.  
   
 ### <a name="remarks"></a>Uwagi  
- Aplikacje, które pomagają osobom niepełnosprawnym używać komputery są narzędzi ułatwień dostępu. Identyfikator ułatwień dostępu jest używana przez `IAccessible` interfejsu, aby jednoznacznie określić elementu w oknie. Aby uzyskać więcej informacji o identyfikatorach ułatwień dostępu, wyszukaj temat "O Active Accessibility Obsługa" w [Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322).  
+ Aplikacje, które pomagają osobom niepełnosprawnym używać komputery są narzędzi ułatwień dostępu. Identyfikator ułatwień dostępu jest używana przez `IAccessible` interfejsu, aby jednoznacznie określić elementu w oknie. Aby uzyskać więcej informacji o identyfikatorach ułatwień dostępu, wyszukaj temat "O Active Accessibility Obsługa" w [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
  Ta metoda wysyła [TVM_MAPACCIDTOHTREEITEM](http://msdn.microsoft.com/library/windows/desktop/bb773734) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
@@ -1359,7 +1360,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
  Identyfikator ułatwień dostępu, który odpowiada identyfikatorowi `hItem` parametru.  
   
 ### <a name="remarks"></a>Uwagi  
- Aplikacje, które pomagają osobom niepełnosprawnym używać komputery są narzędzi ułatwień dostępu. Identyfikator ułatwień dostępu jest używana przez `IAccessible` interfejsu, aby jednoznacznie określić elementu w oknie. Aby uzyskać więcej informacji o identyfikatorach ułatwień dostępu, wyszukaj temat "O Active Accessibility Obsługa" w [Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322).  
+ Aplikacje, które pomagają osobom niepełnosprawnym używać komputery są narzędzi ułatwień dostępu. Identyfikator ułatwień dostępu jest używana przez `IAccessible` interfejsu, aby jednoznacznie określić elementu w oknie. Aby uzyskać więcej informacji o identyfikatorach ułatwień dostępu, wyszukaj temat "O Active Accessibility Obsługa" w [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
  Ta metoda wysyła [TVM_MAPHTREEITEMTOACCID](http://msdn.microsoft.com/library/windows/desktop/bb773735) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
@@ -1987,7 +1988,7 @@ void ShowInfoTip(HTREEITEM hItem);
 |[in]`hItem`|Dojście do elementu widok drzewa w formancie. Aby uzyskać więcej informacji, zobacz `hItem` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat różnic między etykietki narzędzi i infotips wyszukaj temat "Etykietki narzędzi i Infotips" w [Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322).  
+ Aby uzyskać więcej informacji na temat różnic między etykietki narzędzi i infotips wyszukaj temat "Etykietki narzędzi i Infotips" w [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
  Ta metoda wysyła [TVM_SHOWINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb773779) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
@@ -2039,4 +2040,4 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
  [CMNCTRL1 próbki MFC](../../visual-cpp-samples.md)   
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Cimagelist — klasa](../../mfc/reference/cimagelist-class.md)
+ [Klasa CImageList](../../mfc/reference/cimagelist-class.md)

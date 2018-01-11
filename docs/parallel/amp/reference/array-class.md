@@ -32,11 +32,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad9e098ad485c7a96670c4249770b038333e1bc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b76fcb181d955fc051ade5183b67b9d55b823ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class"></a>array — Klasa
 Reprezentuje kontener danych używane do przenoszenia danych do akceleratora.  
@@ -817,4 +818,4 @@ array_view<const value_type,_New_rank> view_as(
  [Array_view —](array-view-class.md) obiektu, który jest tworzony.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

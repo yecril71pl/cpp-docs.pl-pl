@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e564ee0c9d8ec47db68c49db1dfcbdc86b393e02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee24d39c8769eaf2216ca4f64b9856b778a51ac7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers"></a>Kontenery kontrolek ActiveX
 Kontenera formantu ActiveX jest kontenerem, który w pełni obsługuje formantów ActiveX i włączyć je do swoich własnych systemu windows lub w oknach dialogowych. Formant ActiveX jest element oprogramowania wielokrotnego użytku, który można używać w wielu rozwoju projektów. Formanty umożliwiają użytkownika aplikacji do bazy danych programu access, monitorować dane, a różne opcje w aplikacjach. Aby uzyskać więcej informacji na formantów ActiveX, zobacz artykuł [kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md).  
@@ -37,21 +38,21 @@ Kontenera formantu ActiveX jest kontenerem, który w pełni obsługuje formantó
   
 -   [Tworzenie kontenera kontrolek ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control-container.md)  
   
--   [Kontenery formantów ActiveX](../mfc/containers-for-activex-controls.md)  
+-   [Kontenery dla kontrolek ActiveX](../mfc/containers-for-activex-controls.md)  
   
--   [Kontenery formantów ActiveX: Ręczne Włączanie zawierania formantów ActiveX](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)  
+-   [Kontenery kontrolek ActiveX: ręczne włączanie zawierania kontrolek ActiveX](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)  
   
--   [Kontenery formantów ActiveX: Wstawianie formantu do aplikacji kontenera formantów](../mfc/inserting-a-control-into-a-control-container-application.md)  
+-   [Kontenery kontrolek ActiveX: wstawianie kontrolki do aplikacji kontenera kontrolek](../mfc/inserting-a-control-into-a-control-container-application.md)  
   
--   [Kontenery formantów ActiveX: Łączenie formantu ActiveX ze zmienną członkowską](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)  
+-   [Kontenery kontrolek ActiveX: łączenie kontrolki ActiveX ze zmienną składową](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)  
   
 -   [Kontenery formantów ActiveX: Obsługa zdarzeń z ActiveX kontroli](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)  
   
--   [Kontenery formantów ActiveX: Wyświetlanie i modyfikowanie właściwości formantu](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)  
+-   [Kontenery kontrolek ActiveX: wyświetlanie i modyfikowanie właściwości kontrolki](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)  
   
--   [Kontenery formantów ActiveX: Programowanie formantów ActiveX w kontenerze formantów ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)  
+-   [Kontenery kontrolek ActiveX: programowanie kontrolek ActiveX w kontenerze kontrolek ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
--   [Kontenery formantów ActiveX: Używanie formantów w kontenerze bez okien dialogowych](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)  
+-   [Kontenery kontrolek ActiveX: używanie kontrolek w kontenerze innym niż okno dialogowe](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)  
   
  Aby uzyskać więcej informacji o używaniu formantów ActiveX w oknie dialogowym, zobacz [Edytor okien dialogowych](../windows/dialog-editor.md) tematów.  
   

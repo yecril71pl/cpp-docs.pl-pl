@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e7b9beac4d87e0580279190cca005fc56c951af8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596f558ea5c22f1850800d95b0d4ad0b5edd6a8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-constant-expressions"></a>Wyrażenia stałe języka C
 Wyrażenie stałe jest oceniane w czasie kompilacji w czasie wykonywania nie i można w dowolnym miejscu może służyć stałą. Stałe wyrażenia musi być stała, który znajduje się w zakresie można przedstawić wartości dla tego typu. Operandy wyrażenia stałego można być stałe całkowite, stałe znakowe, stałe zmiennoprzecinkowe, stałe wyliczenie typu rzutowania, `sizeof` wyrażenia i inne wyrażenia stałej.  

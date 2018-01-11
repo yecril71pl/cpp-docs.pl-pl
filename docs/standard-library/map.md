@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7079794aed6140dd4d21a7bf5bc7576363811b5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6256f5a900872f967c8ea4c069098bd8eeeb733d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmapgt"></a>&lt;mapy&gt;
 Definiuje mapowania klasy szablonu kontenera i multimap i ich obsługi szablonów.  
@@ -54,14 +55,14 @@ Definiuje mapowania klasy szablonu kontenera i multimap i ich obsługi szablonó
   
 |||  
 |-|-|  
-|[value_compare — klasa](../standard-library/value-compare-class-map.md)|Udostępnia obiekt funkcji, który można porównać elementów mapy porównując wartości ich kluczy, aby określić ich kolejność względne w planie.|  
-|[map — klasa](../standard-library/map-class.md)|Używany do przechowywania i pobierania danych z kolekcji, w którym każdy z elementów ma unikatowy klucz, z którym automatycznie porządkowania danych.|  
-|[multimap — klasa](../standard-library/multimap-class.md)|Używany do przechowywania i pobierania danych z kolekcji, w którym każdy z elementów ma klucz, w którym automatycznie porządkowania danych i kluczy nie muszą mieć unikatowe wartości.|  
+|[value_compare, klasa](../standard-library/value-compare-class-map.md)|Udostępnia obiekt funkcji, który można porównać elementów mapy porównując wartości ich kluczy, aby określić ich kolejność względne w planie.|  
+|[map, klasa](../standard-library/map-class.md)|Używany do przechowywania i pobierania danych z kolekcji, w którym każdy z elementów ma unikatowy klucz, z którym automatycznie porządkowania danych.|  
+|[multimap, klasa](../standard-library/multimap-class.md)|Używany do przechowywania i pobierania danych z kolekcji, w którym każdy z elementów ma klucz, w którym automatycznie porządkowania danych i kluczy nie muszą mieć unikatowe wartości.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

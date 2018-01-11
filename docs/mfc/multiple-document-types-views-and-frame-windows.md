@@ -26,11 +26,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54f04a8add767805bb2ee6a8e554a9937a825a7b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ab8bff6484f81c482ddd8629ff33772fab1aeba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Wiele typów dokumentów, widoków i okien ramowych
 Standardowe relacji między dokumentu, jego widoku i ramki okna jest opisany w [tworzenia dokumentu/widoku](../mfc/document-view-creation.md). Wiele aplikacji obsługuje jeden dokument typu (ale prawdopodobnie wielu otwarte dokumenty tego typu) z jednego widoku na tylko jedną ramkę okna w dokumencie i dokumentów. Jednak niektóre aplikacje mogą należy zmodyfikować co najmniej jednego z tych wartości domyślnych.  

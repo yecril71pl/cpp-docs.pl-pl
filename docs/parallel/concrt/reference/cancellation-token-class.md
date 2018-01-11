@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e4e656fa567342dde9ba990bff5b0d8081337385
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a27bb4221e1a8db19f0dd7be37bb6ca3966635de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token — Klasa
 `cancellation_token` Klasa reprezentuje możliwość określenia, czy zażądano operacji do anulowania. Skojarzono danego tokenu `task_group`, `structured_task_group`, lub `task` zapewnienie niejawne anulowania. Można go również sondowany anulowania lub wywołania zwrotnego zarejestrowany dla przypadku, gdy skojarzony `cancellation_token_source` zostało anulowane.  
@@ -61,7 +62,7 @@ class cancellation_token;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator! =](#operator_neq)||  
+|[operator!=](#operator_neq)||  
 |[operator =](#operator_eq)||  
 |[operator ==](#operator_eq_eq)||  
   
@@ -190,4 +191,4 @@ template<typename _Function>
  A `cancellation_token_registration` obiektu, który może być wykorzystana w `deregister` metodę wyrejestrowania wcześniej zarejestrowane wywołanie zwrotne i uniemożliwić odniesienia. Metoda zgłosi [invalid_operation —](invalid-operation-class.md) wyjątek, jeśli jest to `cancellation_token` obiekt, który został utworzony przy użyciu [cancellation_token::none](#none) metody.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)
+ [Przestrzeń nazw współbieżności](concurrency-namespace.md)

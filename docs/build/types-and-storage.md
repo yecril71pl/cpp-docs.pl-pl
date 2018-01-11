@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d112d7d27d798c410cd6873d5e3433cdf92a31eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d85d59da52089d1cae1bd0d3c62384647f882e5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-and-storage"></a>Typy i magazyn
 W tej sekcji opisano wyliczenie i magazynu danych typów [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] architektury.  
@@ -30,7 +31,7 @@ W tej sekcji opisano wyliczenie i magazynu danych typów [!INCLUDE[vcprx64](../a
   
 -   [Pola bitów](../build/bitfields.md)  
   
--   [Powoduje konflikt z x86 kompilatora](../build/conflicts-with-the-x86-compiler.md)  
+-   [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [x64 konwencje kodowania](../build/x64-software-conventions.md)
+ [Konwencje kodowania x64](../build/x64-software-conventions.md)

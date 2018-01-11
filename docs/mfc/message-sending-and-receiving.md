@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4cfe46b872c50ec5601fe8f3f86e07f441902624
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c587e3b84ae7afd7869a5c1405d8ddc4ab417b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-sending-and-receiving"></a>Wysyłanie i odbieranie komunikatów
 Należy wziąć pod uwagę wysyłania część procesu i sposób odpowiadania przez platformę.  
@@ -42,5 +43,5 @@ Należy wziąć pod uwagę wysyłania część procesu i sposób odpowiadania pr
  Gdy obiekt docelowy polecenia odbiera wiadomości lub polecenia, wyszukuje jego mapy komunikatów pod kątem dopasowania. W przypadku odnalezienia obsługi wiadomości, wywołuje program obsługi. Aby uzyskać więcej informacji o sposobie są przeszukiwane mapy komunikatów, zobacz [jak Framework wyszukiwania mapy wiadomości](../mfc/how-the-framework-searches-message-maps.md). Odwołuje się ponownie na figurę [polecenia w strukturze](../mfc/user-interface-objects-and-command-ids.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Jak struktura wywołuje program obsługi](../mfc/how-the-framework-calls-a-handler.md)
+ [Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
 

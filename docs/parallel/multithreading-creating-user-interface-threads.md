@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9186b7c056321dcb3ef394e44ae93d530e29810
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 105685e0db4689978ef1e6f8615bb5e5f8acdd43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>Wielowątkowość: tworzenie wątków interfejsu użytkownika
 Wątek interfejsu użytkownika jest najczęściej używany do obsługi danych wejściowych użytkownika zdarzeń i reagowanie na użytkownika niezależnie od wątków wykonywania innych części aplikacji. Wątku głównego aplikacji (w Twojej `CWinApp`-klasy) jest już utworzony i uruchomiona. W tym temacie opisano kroki niezbędne do tworzenia wątków interfejsu użytkownika.  
@@ -62,9 +63,9 @@ Wątek interfejsu użytkownika jest najczęściej używany do obsługi danych we
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
   
--   [Wielowątkowość: Przerywanie wątków](../parallel/multithreading-terminating-threads.md)  
+-   [Wielowątkowość: przerywanie wątków](../parallel/multithreading-terminating-threads.md)  
   
--   [Wielowątkowość: Tworzenie wątków roboczych](../parallel/multithreading-creating-worker-threads.md)  
+-   [Wielowątkowość: tworzenie wątków roboczych](../parallel/multithreading-creating-worker-threads.md)  
   
 -   [Procesów i wątków](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
   

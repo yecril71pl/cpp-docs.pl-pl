@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8492610721846e8252cbe71b358e428a2aaf024f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f3d22a5c3f20480d1e904ec8e087114385ba7ee9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="varargs"></a>Elementy vararg
 Jeśli parametry są przekazywane za pośrednictwem VARARG (na przykład wielokropka argumentów), zasadniczo przekazywanie normalne parametru dotyczy tym przechodzeniu piątego i kolejne argumenty. Odpowiada ponownie wywołującej zrzutu argumenty, które mają ich pobrać adresu. Tylko wartości zmiennoprzecinkowych zarówno liczb całkowitych i zmiennoprzecinkowych rejestru będzie zawierać wartości typu float w przypadku, gdy wywoływany oczekuje, że wartość w rejestrach liczby całkowitej.  

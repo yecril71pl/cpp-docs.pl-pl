@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fc49278dbf143d7594f0a46eeb2fd5901a60830
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a42b1b823ac69ba9a92535076ba8ec45f6c9710d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="define-directive-cc"></a>#define — dyrektywa (C/C++)
 `#define` Tworzy *makro*, który jest skojarzenie identyfikatora lub identyfikatora sparametryzowane zawierające ciąg tokenu. Po zdefiniowaniu makro, kompilator może zastąpić ciąg tokenu dla każdego wystąpienia identyfikatora w pliku źródłowym.  

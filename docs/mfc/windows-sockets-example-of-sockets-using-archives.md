@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1e66a6fd81e1d6240c6b5c203a7101d18f987e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0e70e8ecc14496b03bc758d91f078a926f33532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: przykład gniazd korzystających z archiwów
 W tym artykule przedstawiono przykład za pomocą klasy [CSocket —](../mfc/reference/csocket-class.md). Przykład wykorzystuje `CArchive` obiekty do serializowania danych za pośrednictwem gniazda. Należy pamiętać, że nie jest serializacji dokumentu do lub z pliku.  
@@ -56,11 +57,11 @@ W tym artykule przedstawiono przykład za pomocą klasy [CSocket —](../mfc/ref
   
  Aby uzyskać więcej informacji, zobacz Specyfikacja systemu Windows Sockets: **htonl**, **htons**, **ntohl**, **ntohs**. Aby uzyskać więcej informacji, zobacz też:  
   
--   [Windows Sockets: Wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)  
+-   [Gniazda systemu Windows: wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)  
   
--   [Windows Sockets: Jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Gniazda systemu Windows: jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows Sockets: tła](../mfc/windows-sockets-background.md)  
+-   [Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)   

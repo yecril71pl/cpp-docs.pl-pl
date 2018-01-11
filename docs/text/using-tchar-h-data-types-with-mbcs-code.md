@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 8eb50d8e49b195ffb3322bb30a8f147c2f248273
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28255b2e47c48b89b0bd6aea044fe0c15c1f2a08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Używanie typów danych TCHAR.H z kodem _MBCS
 Gdy manifestu stała **_MBCS** jest zdefiniowana, danej procedury zwykłego tekstu mapuje jedną z następujących rodzajów procedury:  
@@ -76,4 +77,4 @@ Gdy manifestu stała **_MBCS** jest zdefiniowana, danej procedury zwykłego teks
      Po zastosowaniu takiego podejścia, należy zachować ostrożność upewnić się na użytek typów danych odpowiednie argumenty typu string i zwracanych wartości ciągu. Rzutowanie typów służy do zapewnienia odpowiedniego typu dopasowania lub skorzystać z **_txchar —** — typ danych — zwykły tekst. **_Txchar —** mapy na typ `char` w kodzie SBCS, ale mapy na typ `unsigned` `char` w kodzie MBCS. Aby uzyskać więcej informacji na temat makra zwykłego tekstu, zobacz [mapowania zwykłego tekstu](../c-runtime-library/generic-text-mappings.md) w *odwołanie do biblioteki wykonawczej*.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Mapowania zwykłego tekstu w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md)
+ [Mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md)

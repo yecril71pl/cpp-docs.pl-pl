@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 191d368d6152f5eb8bd9bb3c7ff7e77a54182a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbabb499d67a2248ebaefa5cbc787afe2c6cfc08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-algorithms"></a>Algorytmy równoległe
 Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wykonywania pracy na kolekcji danych. Algorytmy te przypominają te udostępniane przez standardowa biblioteka C++.  
@@ -318,12 +319,12 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Porady: pisanie pętli parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|Przedstawia sposób użycia `parallel_for` algorytm mnożenie macierzy.|  
-|[Porady: pisanie pętli parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|Przedstawia sposób użycia `parallel_for_each` algorytm obliczania liczby liczb pierwszych w [std::array](../../standard-library/array-class-stl.md) obiektu równolegle.|  
-|[Porady: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Przedstawia sposób użycia `parallel_invoke` algorytmu, aby poprawić wydajność bitonic algorytm sortowania.|  
-|[Porady: Korzystanie z parallel_invoke do przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Przedstawia sposób użycia `parallel_invoke` algorytmu, aby poprawić wydajność program, który wykonuje wiele operacji na udostępnione źródło danych.|  
-|[Porady: wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Przedstawia sposób użycia `parallel_transform` i `parallel_reduce` algorytmy do wykonywanie mapowania i zmniejszanie operacji liczby wystąpień słowa w plikach.|  
-|[Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|W tym artykule opisano PPL, oferujący imperatywnych model programowania wspiera skalowalność i łatwość użycia dla tworzenie współbieżnych aplikacji.|  
+|[Instrukcje: pisanie pętli parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|Przedstawia sposób użycia `parallel_for` algorytm mnożenie macierzy.|  
+|[Instrukcje: pisanie pętli parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|Przedstawia sposób użycia `parallel_for_each` algorytm obliczania liczby liczb pierwszych w [std::array](../../standard-library/array-class-stl.md) obiektu równolegle.|  
+|[Instrukcje: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Przedstawia sposób użycia `parallel_invoke` algorytmu, aby poprawić wydajność bitonic algorytm sortowania.|  
+|[Instrukcje: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Przedstawia sposób użycia `parallel_invoke` algorytmu, aby poprawić wydajność program, który wykonuje wiele operacji na udostępnione źródło danych.|  
+|[Instrukcje: równoległe wykonywanie operacji mapowania i zmniejszania](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Przedstawia sposób użycia `parallel_transform` i `parallel_reduce` algorytmy do wykonywanie mapowania i zmniejszanie operacji liczby wystąpień słowa w plikach.|  
+|[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|W tym artykule opisano PPL, oferujący imperatywnych model programowania wspiera skalowalność i łatwość użycia dla tworzenie współbieżnych aplikacji.|  
 |[Anulowanie w PPL](cancellation-in-the-ppl.md)|Opisano rolę anulowanie w PPL, jak anulować równoległych pracy i sposób określania, kiedy grupy zadań została anulowana.|  
 |[Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Opisano rolę obsługi wyjątków w współbieżności środowiska wykonawczego.|  
   
@@ -336,13 +337,13 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
  [parallel_invoke — funkcja](reference/concurrency-namespace-functions.md#parallel_invoke)  
 
   
- [affinity_partitioner — klasa](../../parallel/concrt/reference/affinity-partitioner-class.md)  
+ [affinity_partitioner, klasa](../../parallel/concrt/reference/affinity-partitioner-class.md)  
   
- [auto_partitioner — klasa](../../parallel/concrt/reference/auto-partitioner-class.md)  
+ [auto_partitioner, klasa](../../parallel/concrt/reference/auto-partitioner-class.md)  
   
- [simple_partitioner — klasa](../../parallel/concrt/reference/simple-partitioner-class.md)  
+ [simple_partitioner, klasa](../../parallel/concrt/reference/simple-partitioner-class.md)  
   
- [static_partitioner — klasa](../../parallel/concrt/reference/static-partitioner-class.md)  
+ [static_partitioner, klasa](../../parallel/concrt/reference/static-partitioner-class.md)  
   
 
  [parallel_sort — funkcja](reference/concurrency-namespace-functions.md#parallel_sort)  

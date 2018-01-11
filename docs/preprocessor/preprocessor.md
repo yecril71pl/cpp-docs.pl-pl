@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac8f12739493b07d8dacf782fb6355aa02b64a17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596e17d0574f9f4935cf31ec71eb74cb2587d312
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="preprocessor"></a>Preprocesor
 Preprocesora jest procesora tekstu, który operuje tekst pliku źródłowego w ramach pierwszej fazy tłumaczenia. Preprocesora nie analizuje tekst źródłowy, ale go Podziel je na tokeny na potrzeby lokalizowanie makro wywołania. Mimo że kompilator wywołuje zwykle preprocesora w jego pierwszym przebiegu, preprocesora również można wywołać oddzielnie przetwarzania tekstu bez kompilowania.  
@@ -31,7 +32,7 @@ Preprocesora jest procesora tekstu, który operuje tekst pliku źródłowego w r
   
 -   [Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)  
   
--   [Pragma — dyrektywy](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+-   [Pragmy](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
   
  **Dotyczące firmy Microsoft**  
   

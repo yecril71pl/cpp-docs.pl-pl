@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1921cd54a1ea3679766c5475b2524097039dcc75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 682412beda59552edf7fb7929213ef1e6b8e500e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-by-usage"></a>Atrybuty w zależności od zastosowania
 Ten temat zawiera listę atrybutów zgodnie z elementów języka C++, których dotyczą.  
@@ -30,10 +33,10 @@ Ten temat zawiera listę atrybutów zgodnie z elementów języka C++, których d
 |[Atrybuty modułów](../windows/module-attributes.md)|Dotyczy [modułu](../windows/module-cpp.md) atrybutu.|  
 |[Atrybuty interfejsu](../windows/interface-attributes.md)|Dotyczy [__interface](../cpp/interface.md) słowa kluczowego języka C++.|  
 |[Atrybuty klasy](../windows/class-attributes.md)|Zastosowanie słowa kluczowego języka C++.|  
-|[Atrybuty — metoda](../windows/method-attributes.md)|Zastosowanie metody w klasie, coclass lub interfejs.|  
-|[Atrybuty parametrów](../windows/parameter-attributes.md)|Dotyczy parametry metody w klasie lub interfejs.|  
-|[Atrybuty elementów członkowskich danych](../windows/data-member-attributes.md)|Ma zastosowanie do elementów członkowskich danych w klasie, coclass lub interfejs.|  
-|[Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)|Zastosowanie słowa kluczowe języka C++.|  
+|[Atrybuty metody](../windows/method-attributes.md)|Zastosowanie metody w klasie, coclass lub interfejs.|  
+|[Atrybuty parametru](../windows/parameter-attributes.md)|Dotyczy parametry metody w klasie lub interfejs.|  
+|[Atrybuty składowych danych](../windows/data-member-attributes.md)|Ma zastosowanie do elementów członkowskich danych w klasie, coclass lub interfejs.|  
+|[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)|Zastosowanie słowa kluczowe języka C++.|  
 |[Atrybuty tablicy](../windows/array-attributes.md)|Ma zastosowanie do tablic lub **SAFEARRAY**s.|  
 |[Oddzielne atrybuty](../windows/stand-alone-attributes.md)|Działa więcej jak linia kodu, ale nie będzie działać na słowo kluczowe języka C++. Instrukcje atrybutu autonomicznego wymagają średnik na końcu linii.|  
 |[Atrybuty niestandardowe](../windows/custom-attributes-cpp.md)|Umożliwia użytkownikowi rozszerzenie metadanych.|  

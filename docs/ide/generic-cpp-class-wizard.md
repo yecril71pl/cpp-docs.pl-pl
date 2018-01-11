@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33f359a58a6341cbf7cbd042c5713f0c1ab4c406
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82d706c30c729f490f6bfdec3344d5dab537a689
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-c-class-wizard"></a>Kreator klasy generycznej C++
 Dodaje klasy ogólnej C++ do projektu. Klasa nie dziedziczy z ATL ani MFC.  
@@ -57,4 +58,4 @@ Dodaje klasy ogólnej C++ do projektu. Klasa nie dziedziczy z ATL ani MFC.
  Po wybraniu dodaje plik zarządzanej klasy i nagłówek. Po wyczyszczeniu dodaje natywny plik klasy i nagłówek.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dodawanie klasy ogólnej C++](../ide/adding-a-generic-cpp-class.md)
+ [Dodawanie rodzajowej klasy C++](../ide/adding-a-generic-cpp-class.md)

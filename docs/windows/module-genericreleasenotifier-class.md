@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b753d1eac4de6b7c6684a33889163344dfefe19f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c87205d1d52c8273ac7eea55fcc5385810349f1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier — Klasa
 Wywołuje program obsługi zdarzeń po zwolnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określona przez na lambda, obiekt lub wskaźnik do funkcji.  
@@ -43,19 +46,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::genericreleasenotifier:: genericreleasenotifier — Konstruktor](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicjuje nowe wystąpienie klasy Module::GenericReleaseNotifier.|  
+|[Module::GenericReleaseNotifier::GenericReleaseNotifier, konstruktor](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicjuje nowe wystąpienie klasy Module::GenericReleaseNotifier.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier:: Invoke — metoda](../windows/module-genericreleasenotifier-invoke-method.md)|Wywołuje program obsługi zdarzeń skojarzonych z bieżącym obiektem Module::GenericReleaseNotifier.|  
+|[Module::GenericReleaseNotifier::Invoke, metoda](../windows/module-genericreleasenotifier-invoke-method.md)|Wywołuje program obsługi zdarzeń skojarzonych z bieżącym obiektem Module::GenericReleaseNotifier.|  
   
 ### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::genericreleasenotifier:: callback_ — członek danych](../windows/module-genericreleasenotifier-callback-data-member.md)|Przechowuje lambda, obiekt lub program obsługi zdarzeń wskaźnika do funkcji skojarzonych z bieżącym obiektem Module::GenericReleaseNotifier.|  
+|[Module::GenericReleaseNotifier::callback_, składowa danych](../windows/module-genericreleasenotifier-callback-data-member.md)|Przechowuje lambda, obiekt lub program obsługi zdarzeń wskaźnika do funkcji skojarzonych z bieżącym obiektem Module::GenericReleaseNotifier.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ReleaseNotifier`  

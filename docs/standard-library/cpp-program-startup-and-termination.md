@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b5092b4b21a1eea11559c30aa95c747816f098e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24fda25f0d0766442e05c1661dce5e2f08a01b09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-program-startup-and-termination"></a>Uruchamianie i kończenie działania programu C++
 Program w języku C++ wykonuje te same operacje, jak C program w momencie uruchamiania programu i kończenie działania programu, a także kilka więcej opisana w tym temacie.  

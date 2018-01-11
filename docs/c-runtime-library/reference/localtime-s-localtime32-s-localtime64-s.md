@@ -43,11 +43,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 571cb758016d3682289ee787dc8886768538d27b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ddce7d73919e7e7942d8ddd7954ce6cbec4789fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 Konwertuje wartość czasu i poprawia na podstawie lokalnej strefy czasowej. Są to wersje [konwersję _localtime32 —, _localtime64 —](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -204,4 +205,4 @@ Fri Apr 25 01:19:27 PM
  [gmtime_s —, _gmtime32_s —, _gmtime64_s —](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
  [czas lokalny, _localtime32 —, _localtime64 —](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [czas, _time32 —, _time64 —](../../c-runtime-library/reference/time-time32-time64.md)   
- [_tzset —](../../c-runtime-library/reference/tzset.md)
+ [_tzset](../../c-runtime-library/reference/tzset.md)

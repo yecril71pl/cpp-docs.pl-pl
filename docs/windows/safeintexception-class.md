@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 22f6bb428d601be960162ba0a9390d1ba784cdcd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 91f1c80273d0e1ed41ea86774c71fcbe8ad1bbf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safeintexception-class"></a>SafeIntException — Klasa
 `SafeInt` Klasy używa `SafeIntException` ustalenie, dlaczego nie można ukończyć operacji matematycznych.  
@@ -40,7 +43,7 @@ class SafeIntException;
  [Safeint — klasa](../windows/safeint-class.md) jest to jedyna klasa, która używa `SafeIntException` klasy.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [Safeintexception — klasa](../windows/safeintexception-class.md)  
+ [SafeIntException, klasa](../windows/safeintexception-class.md)  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** safeint.h  
@@ -49,4 +52,4 @@ class SafeIntException;
   
 ## <a name="see-also"></a>Zobacz też  
  [Biblioteka SafeInt](../windows/safeint-library.md)   
- [Safeint — klasa](../windows/safeint-class.md)
+ [SafeInt, klasa](../windows/safeint-class.md)

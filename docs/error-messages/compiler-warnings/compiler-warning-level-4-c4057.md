@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 553cd9a79755d90dc53f552b7e980f2d5cd9b454
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c9ef5041d26e2e5a8933a53d4f6f0153c7106cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4057"></a>Kompilator C4057 ostrzegawcze (poziom 4)
 "operator": operator pośredni "identifier1" do nieco innych typów podstawowych z "identifier2"  

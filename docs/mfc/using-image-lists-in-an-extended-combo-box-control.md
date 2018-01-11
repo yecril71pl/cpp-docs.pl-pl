@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec0dfb151660ffc0246428adb79ebf649975c90e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ac69e7d0dbe1748a409b107579c747b7f9a4a7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Używanie list obrazów w formancie rozszerzonego pola kombi
 Funkcja main formantach rozszerzonego pola kombi jest możliwość kojarzenia obrazów z listy obrazów z poszczególnych elementów w formancie pola kombi. Każdy element nie może zostać wyświetlony trzy różne obrazy: jeden dla stan zaznaczenia, jedną dla nonselected stanu i innych obrazu nakładki.  
@@ -46,5 +47,5 @@ Funkcja main formantach rozszerzonego pola kombi jest możliwość kojarzenia ob
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CComboBoxEx](../mfc/using-ccomboboxex.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

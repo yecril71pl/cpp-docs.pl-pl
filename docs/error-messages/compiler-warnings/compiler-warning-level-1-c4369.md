@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6e3150b60de6019968680a5a7350f09868dd5564
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c0419908ed7d914196cd65d07a3fb43a16d75ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4369"></a>Kompilator C4369 ostrzegawcze (poziom 1)
 "moduł wyliczający": moduł wyliczający wartość "wartość" nie może być reprezentowany jako "type", wartość to "nowa_wartość"  

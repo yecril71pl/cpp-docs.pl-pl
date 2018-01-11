@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40f86574e849bae8c1defafcfeab46fced2d77b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26a7cef5e023c0fb0d5e24fe68fed6b33bc8ae75
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="do-while-statement-c"></a>do-while — instrukcja (C)
 `do-while` Instrukcji umożliwia Powtórz instrukcji lub złożonej instrukcji określone wyrażenie staje się wartość false.  
@@ -53,4 +54,4 @@ do
  W tym `do-while` instrukcji, dwie instrukcje `y = f( x );` i `x--;` są wykonywane niezależnie od początkowej wartości `x`. Następnie `x > 0` oceny. Jeśli `x` jest większa niż 0, treść instrukcji jest wykonywane ponownie i `x > 0` jest ponownie oceniane. Treść instrukcji jest wykonywany wielokrotnie tak długo, jak `x` większe niż 0. Wykonywanie `do-while` kończy instrukcji, gdy `x` staje się 0 ani ujemna. Treści pętli jest wykonywane co najmniej raz.  
   
 ## <a name="see-also"></a>Zobacz też  
- [czy-while — instrukcja (C++)](../cpp/do-while-statement-cpp.md)
+ [do-while, instrukcja (C++)](../cpp/do-while-statement-cpp.md)

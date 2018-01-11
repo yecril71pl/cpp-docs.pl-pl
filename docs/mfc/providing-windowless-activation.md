@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 536788ec2a09d00f4bd92cc602ea9a558415ef72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb33f1dd9f8be8cb06cdfcc2aeecb653c2762410
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="providing-windowless-activation"></a>Zapewnianie aktywacji niepowiązanej z oknami
 Kod tworzenia okna (czyli wszystko, co się stanie w przypadku wywołania **właściwości CreateWindow**) jest kosztowne do wykonania. Formant, który obsługuje ekranowa okno ma zarządzać wiadomości dla okna. Formanty bez okien w związku z tym są szybsze niż formantów z systemem windows.  
@@ -64,5 +65,5 @@ Kod tworzenia okna (czyli wszystko, co się stanie w przypadku wywołania **wła
  [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty MFC ActiveX: Optymalizacja](../mfc/mfc-activex-controls-optimization.md)
+ [Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
 

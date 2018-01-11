@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66736e9b131725475d6f10f4a332edaa980a54f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a73da6d96b0dc03fa3f4c4807d6a2dff4fef2879
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="usual-arithmetic-conversions"></a>Popularne konwersje arytmetyczne
 Większość operatorów C wykonywania konwersji typu można wyświetlić operandy wyrażenia na wspólny typ, albo aby rozszerzyć krótkich wartości rozmiar całkowitą w operacjach maszyny. Konwersje wykonywane przez operatorów C zależy od określonego operatora i typu argumentu lub argumentów operacji. Jednak wielu operatorów wykonywać podobne konwersje typów całkowitych i zmiennoprzecinkowych argumentów operacji. Konwersje te są określane jako "konwersje arytmetyczne." Konwersja wartości operandu na zgodne z typem nie powoduje żadnych zmian, jego wartość.  

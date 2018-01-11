@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 652e299ad7dc01f070e3fe4ed9738fc9ed47a493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-com"></a>MFC COM
 Podzbiór MFC zaprojektowano w celu obsługi modelu COM, podczas gdy większość Active biblioteki szablonu (ATL) jest przeznaczony dla modelu COM programowania. Tematy w tej części opisano Obsługa MFC dla modelu COM.  
@@ -40,7 +41,7 @@ Podzbiór MFC zaprojektowano w celu obsługi modelu COM, podczas gdy większoś�
   
     -   [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)  
   
-    -   [Formanty ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md)  
+    -   [Kontrolki ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md)  
   
     -   [Omówienie: Internet](../mfc/mfc-internet-programming-basics.md)  
   

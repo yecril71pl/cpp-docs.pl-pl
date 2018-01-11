@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb8e05ca3ef52515af58db455ed83da593d6bdfb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8985434365cb8144fc2ee3680ef19c5b8ed99301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakreference-class1"></a>Weakreference — Class1
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -45,17 +48,17 @@ class WeakReference;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Weakreference::weakreference — Konstruktor](../windows/weakreference-weakreference-constructor.md)|Inicjuje nowe wystąpienie klasy weakreference —.|  
-|[Weakreference —:: ~ WeakReference — destruktor](../windows/weakreference-tilde-weakreference-destructor.md)|Deinitializes (niszczy) bieżące wystąpienie klasy weakreference — klasa.|  
+|[WeakReference::WeakReference, konstruktor](../windows/weakreference-weakreference-constructor.md)|Inicjuje nowe wystąpienie klasy weakreference —.|  
+|[WeakReference::~WeakReference, destruktor](../windows/weakreference-tilde-weakreference-destructor.md)|Deinitializes (niszczy) bieżące wystąpienie klasy weakreference — klasa.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[WeakReference::DecrementStrongReference — metoda](../windows/weakreference-decrementstrongreference-method.md)|Zmniejsza silne odwołanie liczba bieżące weakreference — obiektu.|  
-|[WeakReference::IncrementStrongReference — metoda](../windows/weakreference-incrementstrongreference-method.md)|Zwiększa liczbę silne odwołanie do bieżącego obiektu weakreference —.|  
-|[WeakReference::Resolve — metoda](../windows/weakreference-resolve-method.md)|Ustawia określony wskaźnik do bieżącej wartości silne odwołanie, jeśli liczba silne odwołanie jest różna od zera.|  
-|[WeakReference::SetUnknown — metoda](../windows/weakreference-setunknown-method.md)|Ustawia silne odwołanie obiektu bieżące weakreference — wskaźnik określonego interfejsu.|  
+|[WeakReference::DecrementStrongReference, metoda](../windows/weakreference-decrementstrongreference-method.md)|Zmniejsza silne odwołanie liczba bieżące weakreference — obiektu.|  
+|[WeakReference::IncrementStrongReference, metoda](../windows/weakreference-incrementstrongreference-method.md)|Zwiększa liczbę silne odwołanie do bieżącego obiektu weakreference —.|  
+|[WeakReference::Resolve, metoda](../windows/weakreference-resolve-method.md)|Ustawia określony wskaźnik do bieżącej wartości silne odwołanie, jeśli liczba silne odwołanie jest różna od zera.|  
+|[WeakReference::SetUnknown, metoda](../windows/weakreference-setunknown-method.md)|Ustawia silne odwołanie obiektu bieżące weakreference — wskaźnik określonego interfejsu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `WeakReference`  
@@ -66,4 +69,4 @@ class WeakReference;
  **Namespace:** Microsoft::wrl:: details —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: details — Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

@@ -275,11 +275,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47d12b9cef2aa36aae8e43d6de2d74875808a3cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4d11da722ee9c933e6fbded6d8724db3da47ff4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clistctrl-class"></a>Clistctrl — klasa
 Hermetyzuje funkcjonalność "kontrolka widoku listy," którym są wyświetlane kolekcję elementów każde składa się z ikoną (z listy obrazów) oraz etykiety.  
@@ -4031,5 +4032,5 @@ BOOL Update(int nItem);
  [Przykładowe MFC ROWLIST](../../visual-cpp-samples.md)   
  [Klasa CWnd](cwnd-class.md)   
  [Diagram hierarchii](../hierarchy-chart.md)   
- [Cimagelist — klasa](cimagelist-class.md)
+ [Klasa CImageList](cimagelist-class.md)
 

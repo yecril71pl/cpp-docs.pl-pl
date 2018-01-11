@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d41e6f1fd4cf66b45d4f79f4f1b27b3fc4d67a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04f6ad8889c9a713b3b64284b329c21d5a2cd49e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hlsl-property-pages-output-files"></a>Strony właściwości HLSL: pliki wyjściowe
 Aby skonfigurować następujące właściwości kompilatora HLSL (fxc.exe), użyj jej **pliki wyjściowe** właściwości. Aby uzyskać informacje dotyczące dostępu do **pliki wyjściowe** zobacz stronę właściwości w folderze HLSL [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
@@ -55,4 +56,4 @@ Aby skonfigurować następujące właściwości kompilatora HLSL (fxc.exe), uży
 ## <a name="see-also"></a>Zobacz też  
  [Strony właściwości HLSL](../ide/hlsl-property-pages.md)   
  [Strony właściwości HLSL: Ogólne](../ide/hlsl-property-pages-general.md)   
- [Strony właściwości HLSL: Zaawansowane](../ide/hlsl-property-pages-advanced.md)
+ [Strony właściwości HLSL: zaawansowane](../ide/hlsl-property-pages-advanced.md)

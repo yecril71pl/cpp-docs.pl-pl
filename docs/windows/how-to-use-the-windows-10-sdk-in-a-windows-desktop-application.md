@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d8aea199ff45da06d434150bb8346f24131136f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1f5e6f09b371c4d295b4bcdff469396a2671d22a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu systemu Windows
 Po utworzeniu klasycznego projekt pulpitu systemu Windows w programie Visual Studio 2017 ją skonfigurowano domyślnie do kompilacji z wersją systemu Windows 10 SDK został zainstalowany, gdy obciążenie pulpitu C++ został zainstalowany lub ostatniej aktualizacji. Ta wersja zestawu Windows SDK jest zgodna z wszystkich najnowszych wersji systemu Windows. Jeśli chcesz przeanalizować starszej wersji zestawu SDK, można otworzyć projektu | Właściwości i wybierz jedną z dostępnych na liście rozwijanej zestawu SDK systemu Windows w wersji wersji zestawu SDK.  
@@ -26,7 +29,7 @@ Po utworzeniu klasycznego projekt pulpitu systemu Windows w programie Visual Stu
   
 ### <a name="to-target-the-windows-10-sdk"></a>Docelowy zestaw Windows 10 SDK  
   
-1.  Upewnij się, że jest zainstalowany zestaw Windows 10 SDK. Zestaw Windows 10 SDK jest instalowane jako część [narzędzi dla systemu Windows 10](http://go.microsoft.com/fwlink/?LinkID=617631).  
+1.  Upewnij się, że jest zainstalowany zestaw Windows 10 SDK. Zestaw Windows 10 SDK jest instalowane jako część [narzędzi dla systemu Windows 10](http://go.microsoft.com/fwlink/p/?linkid=617631).  
   
 2.  Otwórz menu skrótów węzła projektu i wybierz polecenie **Przekieruj zestawu SDK w wersji**.  
   

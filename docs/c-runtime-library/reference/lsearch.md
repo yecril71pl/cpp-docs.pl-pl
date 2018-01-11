@@ -38,11 +38,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10d308709947a602b1049d9bfdab8ad238f1cb5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffb2c0ec3547278f048855bb72a2e4ae1bb00287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lsearch"></a>_lsearch
 Wykonuje wyszukiwanie liniowe dla wartości; dodaje do końca listy, jeśli nie można odnaleźć. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [_lsearch_s —](../../c-runtime-library/reference/lsearch-s.md).  
@@ -139,4 +140,4 @@ wordlist after _lsearch: hello thanks bye extra
  [Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch —](../../c-runtime-library/reference/bsearch.md)   
  [_lfind —](../../c-runtime-library/reference/lfind.md)   
- [_lsearch_s —](../../c-runtime-library/reference/lsearch-s.md)
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)

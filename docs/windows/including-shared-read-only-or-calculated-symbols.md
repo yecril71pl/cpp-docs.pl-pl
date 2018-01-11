@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fefc31c6ac9eb1f66c2fb6481bd7bb63171a8a8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bf0beeb90e2d4c4d22f45322f881bb7a247acf12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Włączanie symboli udostępnionych (tylko do odczytu) lub obliczonych
 Środowisko projektowe odczytuje plik zasobów utworzony przez inną aplikację po raz pierwszy oznacza wszystkie pliki nagłówkowe dołączone jako tylko do odczytu. Następnie można użyć [zasób zawiera okno dialogowe](../windows/resource-includes-dialog-box.md) Aby dodać pliki nagłówkowe dodatkowego symbolu tylko do odczytu.  
@@ -83,4 +86,4 @@ ms.lasthandoff: 10/24/2017
  [Ograniczenia dotyczące nazwy symbolu](../windows/symbol-name-restrictions.md)   
  [Ograniczenia dotyczące wartości symbolu](../windows/symbol-value-restrictions.md)   
  [Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)   
- [Symbole: Identyfikatory zasobów](../windows/symbols-resource-identifiers.md)
+ [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e447b6b8d4895bf0103995742fe0b2a5c8d62484
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0fb0f9bdaa032340256eee4781bfd775767f62ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualizowanie tekstu w okienku paska stanu
 W tym artykule wyjaśniono, jak zmienić tekst wyświetlany w okienku paska stanu MFC. Pasek stanu — obiekt window klasy [cstatusbar —](../mfc/reference/cstatusbar-class.md) — zawiera kilka "okienka." Każdy okienko jest prostokątny obszar paska stanu, który służy do wyświetlania informacji. Na przykład wiele aplikacji wyświetlany stan włączony klawisz CAPS LOCK, NUM LOCK i innych kluczy w okienku po prawej stronie. Aplikacje również często jest wyświetlany tekst informacyjny w okienku po lewej stronie (okienko 0), nazywane czasem "okienko komunikat". Na przykład domyślny pasek stanu MFC używa okienku komunikat do wyświetlenia ciąg wyjaśniający menu obecnie wybranego elementu lub przycisku paska narzędzi. Wartość w [pasków stanu](../mfc/status-bar-implementation-in-mfc.md) Wyświetla pasek stanu z aplikacji utworzone przez Kreatora aplikacji MFC.  
@@ -84,4 +85,4 @@ W tym artykule wyjaśniono, jak zmienić tekst wyświetlany w okienku paska stan
   
 ## <a name="see-also"></a>Zobacz też  
  [Implementacja paska stanu w MFC](../mfc/status-bar-implementation-in-mfc.md)   
- [Cstatusbar — klasa](../mfc/reference/cstatusbar-class.md)
+ [Klasa CStatusBar](../mfc/reference/cstatusbar-class.md)

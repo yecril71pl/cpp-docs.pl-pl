@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2d740d06f1db16e305734a29d9ac76ac46608408
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f0a89ca5b23bd698f6e219121870188620550cf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="making-owner-drawn-tabs"></a>Tworzenie kart rysowanych przez właściciela
 Można zdefiniować poszczególnych elementów formantu karty ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) jako elementy rysowanych przez właściciela. Aby uzyskać więcej informacji, zobacz [karty Owner-Drawn](http://msdn.microsoft.com/library/windows/desktop/bb760550) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTabCtrl](../mfc/using-ctabctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

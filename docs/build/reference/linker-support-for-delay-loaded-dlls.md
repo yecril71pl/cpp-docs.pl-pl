@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c44c2ed7962ab3be94af435eda6114688f9260d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83e75df963889730e4514c38d0551af241a788fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem
 Konsolidatora Visual C++ obsługuje teraz opóźnione ładowanie bibliotek DLL. To zwalnia od konieczność użycia funkcji zestawu SDK systemu Windows **LoadLibrary** i **GetProcAddress** do zaimplementowania opóźnienie załadowanie DLL.  
@@ -53,10 +54,10 @@ Konsolidatora Visual C++ obsługuje teraz opóźnione ładowanie bibliotek DLL. 
   
 -   [Ograniczenia bibliotek DLL ładowanych z opóźnieniem](../../build/reference/constraints-of-delay-loading-dlls.md)  
   
--   [Opis funkcji Pomocnik](understanding-the-helper-function.md)  
+-   [Ogólne informacje funkcji Pomocnik](understanding-the-helper-function.md)  
   
 -   [Tworzenie własnej funkcji Pomocnik](../../build/reference/developing-your-own-helper-function.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Biblioteki dll w programie Visual C++](../../build/dlls-in-visual-cpp.md)   
- [Łączenie](../../build/reference/linking.md)
+ [Konsolidacja](../../build/reference/linking.md)

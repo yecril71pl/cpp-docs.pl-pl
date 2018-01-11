@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2357e3d3bf06a1f9d3216b1e0b93a6f80949b9ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f059396c91ddb51247347d10e6c8f79a6c95522f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>Dodawanie klasy z kontrolki ActiveX (Visual C++)
 Ten kreator umożliwia tworzenie klasy MFC z interfejsu, dostępne kontrolki ActiveX. Można dodać klasy MFC do [aplikacji MFC](../mfc/reference/creating-an-mfc-application.md), [biblioteki MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md), lub [kontrolki MFC ActiveX](../mfc/reference/creating-an-mfc-activex-control.md).  
@@ -46,4 +47,4 @@ Ten kreator umożliwia tworzenie klasy MFC z interfejsu, dostępne kontrolki Act
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Wprowadzenie do COM i ATL](../atl/introduction-to-com-and-atl.md)
+ [Wprowadzenie do modelu COM i ATL](../atl/introduction-to-com-and-atl.md)

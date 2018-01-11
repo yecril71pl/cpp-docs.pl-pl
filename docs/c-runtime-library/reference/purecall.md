@@ -33,11 +33,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c475c66c92dec7990aa8056a1791c8eeb87d6afa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef2670188374dc7af5fa34c76df73c3d261efc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="purecall"></a>_purecall
 Obsługę błędów wywołanie czystej funkcji wirtualnej domyślne. Kompilator generuje kod, aby wywołanie tej funkcji, gdy jest wywoływana przez pure wirtualną funkcją członkowską.  
@@ -58,4 +59,4 @@ extern "C" int __cdecl _purecall();
   
 ## <a name="see-also"></a>Zobacz też  
  [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_get_purecall_handler, _set_purecall_handler —](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)
+ [_get_purecall_handler, _set_purecall_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)

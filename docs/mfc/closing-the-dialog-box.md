@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d7cd57819c5ab462b0310162d3c043c5f39d2a69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4c311a8d09ac3e1329b495fc321028e9f674993
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="closing-the-dialog-box"></a>Zamykanie okna dialogowego
 Modalne okno dialogowe zostanie zamknięte, jeśli użytkownik wybierze jeden z jej przyciski, zwykle przycisk OK lub przycisk Anuluj. Wybierając przycisk OK lub Anuluj spowoduje, że system Windows do wysyłania obiektu okna dialogowego **BN_CLICKED** komunikatów powiadomień dotyczących formantu przy użyciu przycisku przez identyfikator, albo **IDOK** lub **IDCANCEL**. `CDialog`udostępnia domyślne funkcje programu obsługi dla tych wiadomości: `OnOK` i `OnCancel`. Wywołanie procedury obsługi domyślne `EndDialog` funkcji członkowskiej, aby zamknąć okno dialogowe. Możesz także wywołać `EndDialog` z własnego kodu. Aby uzyskać więcej informacji, zobacz [EndDialog](../mfc/reference/cdialog-class.md#enddialog) funkcji członkowskiej klasy `CDialog` w *odwołania MFC*.  

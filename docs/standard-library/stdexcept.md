@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1cebff3122ed32a8c166324283a8e18f3b247361
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b67e1bdd9377c81965dd212836e0f224ff618788
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept —&gt;
 Definiuje kilka standardowych klasy służące do raportowania wyjątków. Klasy tworzą hierarchię pochodnym wszystkie pochodną klasy [wyjątek](../standard-library/exception-class.md) i obejmują dwa typy ogólne wyjątki: błędów logicznych i błędów czasu wykonywania. Błędy logiczne są spowodowane programisty błędów. Będą pochodzić od logic_error — klasa podstawowa i obejmują:  
@@ -44,15 +45,15 @@ Definiuje kilka standardowych klasy służące do raportowania wyjątków. Klasy
   
 |||  
 |-|-|  
-|[domain_error — klasa](../standard-library/domain-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych zgłosić błąd domeny.|  
-|[invalid_argument — klasa](../standard-library/invalid-argument-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania nieprawidłowy argument.|  
-|[length_error — klasa](../standard-library/length-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania próby generowania zbyt długi, aby określić obiekt.|  
-|[logic_error — klasa](../standard-library/logic-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych może raportować błędy prawdopodobnie wykrywalny, przed wykonaniem programu, np. naruszenia logicznej warunki wstępne.|  
-|[out_of_range — klasa](../standard-library/out-of-range-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania argument, który jest poza prawidłowym zakresem.|  
-|[overflow_error — klasa](../standard-library/overflow-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania przepełnienie arytmetyczne.|  
-|[range_error — klasa](../standard-library/range-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych zgłosić błąd zakresu.|  
-|[runtime_error — klasa](../standard-library/runtime-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych może raportować błędy prawdopodobnie wykrywalny, tylko wtedy, gdy program jest wykonywana.|  
-|[underflow_error — klasa](../standard-library/underflow-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania arytmetycznego underflow.|  
+|[domain_error, klasa](../standard-library/domain-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych zgłosić błąd domeny.|  
+|[invalid_argument, klasa](../standard-library/invalid-argument-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania nieprawidłowy argument.|  
+|[length_error, klasa](../standard-library/length-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania próby generowania zbyt długi, aby określić obiekt.|  
+|[logic_error, klasa](../standard-library/logic-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych może raportować błędy prawdopodobnie wykrywalny, przed wykonaniem programu, np. naruszenia logicznej warunki wstępne.|  
+|[out_of_range, klasa](../standard-library/out-of-range-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania argument, który jest poza prawidłowym zakresem.|  
+|[overflow_error, klasa](../standard-library/overflow-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania przepełnienie arytmetyczne.|  
+|[range_error, klasa](../standard-library/range-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych zgłosić błąd zakresu.|  
+|[runtime_error, klasa](../standard-library/runtime-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych może raportować błędy prawdopodobnie wykrywalny, tylko wtedy, gdy program jest wykonywana.|  
+|[underflow_error, klasa](../standard-library/underflow-error-class.md)|Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania arytmetycznego underflow.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   

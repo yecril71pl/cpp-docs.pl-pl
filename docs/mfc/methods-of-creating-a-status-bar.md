@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f077c54902f69d181adbdfc8788f826f00239230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce14870db466727f93daea15b60c99d975783e87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="methods-of-creating-a-status-bar"></a>Metody tworzenia paska stanu
 MFC oferuje dwie klasy, aby utworzyć paski stanu: [cstatusbar —](../mfc/reference/cstatusbar-class.md) i [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (który opakowuje interfejs API sterowania wspólne systemu Windows). `CStatusBar`zawiera wszystkie funkcje stanu paska formantu wspólnego automatycznie interakcji z menu i pasków narzędzi i obsługuje wiele wymagane typowe ustawienia kontroli i struktur dla Ciebie; jednak wynikowego pliku wykonywalnego zazwyczaj będzie większy niż utworzony przy użyciu `CStatusBarCtrl`.  
@@ -41,5 +42,5 @@ MFC oferuje dwie klasy, aby utworzyć paski stanu: [cstatusbar —](../mfc/refer
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

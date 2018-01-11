@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b1e38a6ca424a71418790b18b3c115d12bb3065
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eeddfe4c67de2e96d42c7714619463ae3be45187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optymalizacja stanu trwałego i inicjalizacji
 Domyślnie stanu trwałego i inicjalizacji w formancie są obsługiwane przez `DoPropExchange` funkcję elementu członkowskiego. W formancie typowe tej funkcji zawiera kilka wywołania **PX_** funkcje (`PX_Color`, `PX_Font`i tak dalej), po jednej dla każdej właściwości.  
@@ -54,5 +55,5 @@ Domyślnie stanu trwałego i inicjalizacji w formancie są obsługiwane przez `D
  Mimo że `Serialize` i `OnResetState` została zastąpiona, `DoPropExchange` funkcji powinny być przechowywane bez zmian, ponieważ jest nadal używana trwałości w formacie zbioru właściwości. Należy zachować wszystkie trzy te funkcje zapewniające formantu spójnie zarządza jego właściwości, niezależnie od tego, które trwałości używa mechanizmu kontenera.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty MFC ActiveX: Optymalizacja](../mfc/mfc-activex-controls-optimization.md)
+ [Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
 

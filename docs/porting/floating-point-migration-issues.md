@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e922872f302e6a6fb00170878a5033ba75e6b8a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59898a5ad6af6728b16163c766f6295c850dc577
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floating-point-migration-issues"></a>Problemy przy migracji liczb zmiennoprzecinkowych  
   
@@ -42,5 +43,5 @@ W większości przypadków zmiennoprzecinkowe zmian w najnowszej kompilatory i b
 ## <a name="see-also"></a>Zobacz także  
   
 [Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Omówienie potencjalne problemy z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
-[Historia 2003 2015 zmian Visual C++](visual-cpp-change-history-2003-2015.md)  
+[Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Visual C++ — historia zmian w latach 2003–2015](visual-cpp-change-history-2003-2015.md)  

@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 849f430caaaf8dacef53ecedd5dc4897041b624a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46b4962e30a6990f6de2c67437fc2af3989c2407
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d — Przestrzeń nazw
 `direct3d` Przestrzeń nazw zawiera funkcje, które obsługują współdziałanie D3D. Go umożliwia bezproblemowe na użytek D3D zasobów obliczeniowych w kodzie AMP także Zezwalaj na korzystanie z zasobów utworzone w AMP w kodzie D3D bez tworzenia nadmiarowe kopie pośrednich. Można przyrostowo przyspieszanie znacznym obliczeń części aplikacji DirectX przy użyciu C++ AMP i na podstawie obliczenia AMP danych za pomocą interfejsu API D3D.  
@@ -41,13 +42,13 @@ namespace direct3d;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[scoped_d3d_access_lock — klasa](scoped-d3d-access-lock-class.md)|Otoka RAII dla dostępu D3D blokadę `accelerator_view` obiektu.|  
+|[scoped_d3d_access_lock, klasa](scoped-d3d-access-lock-class.md)|Otoka RAII dla dostępu D3D blokadę `accelerator_view` obiektu.|  
   
 ### <a name="structures"></a>Struktury  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[adopt_d3d_access_lock_t — struktura](adopt-d3d-access-lock-t-structure.md)|Typie tag, aby określić blokowania dostępu D3D powinny być przyjęte zamiast nabyte.|  
+|[adopt_d3d_access_lock_t, struktura](adopt-d3d-access-lock-t-structure.md)|Typie tag, aby określić blokowania dostępu D3D powinny być przyjęte zamiast nabyte.|  
   
 ### <a name="functions"></a>Funkcje  
   
@@ -85,4 +86,4 @@ namespace direct3d;
  **Namespace:** współbieżności  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

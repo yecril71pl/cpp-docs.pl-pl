@@ -14,11 +14,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fbb709d0f79a1fd57dfe84567b0bc7f8d1d15c3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 608f67267b8a82341ff3beb3e27f8e0eb9891c8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simpleactivationfactorygettrustlevel-method"></a>SimpleActivationFactory::GetTrustLevel — Metoda
 Pobiera poziom zaufania wystąpienia z klasą określoną przez `Base` parametr szablonu klasy.  
@@ -44,4 +47,4 @@ STDMETHOD(
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Simpleactivationfactory — klasa](../windows/simpleactivationfactory-class.md)
+ [SimpleActivationFactory, klasa](../windows/simpleactivationfactory-class.md)

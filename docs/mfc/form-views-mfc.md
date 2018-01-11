@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16bcdf6c3ffd0c88233a01a6d3a9b71250224d9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e784858c17c01c8a538edebdb15a89863d16438
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="form-views-mfc"></a>Widoki formularzy (MFC)
 Formularze można dodawać do dowolnej aplikacji Visual C++, która obsługuje biblioteki MFC, włączając [oparte na formularzach aplikacji](../mfc/reference/creating-a-forms-based-mfc-application.md) (jeden do którego widoku klasa pochodzi od `CFormView`). Jeśli aplikacja do obsługi formularzy nie został początkowo utworzony Visual C++ doda to obsługa po wstawieniu nowego formularza. SDI lub MDI aplikacji, które implementuje domyślny [architektura dokument/widok](../mfc/document-view-architecture.md), gdy użytkownik wybierze `New` polecenia (domyślnie na **pliku** menu), Visual C++ monituje użytkownika o Wybierz spośród dostępnych formularzy.  

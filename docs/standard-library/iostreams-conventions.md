@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7d9004c82d740b6abca87e3cce9d0e73e0b6fc62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53d9b40b2535caf637547589c6bc13941257c3f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iostreams-conventions"></a>Konwencje iostream
 Nagłówki iostream obsługuje konwersje między tekst i zakodowanego formularzy i dane wejściowe i wyjściowe do zewnętrznych plików:  

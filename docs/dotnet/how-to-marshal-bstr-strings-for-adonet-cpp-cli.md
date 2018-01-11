@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9423dcc177db68319ea6d8e1771fe4b18a86c5c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8b7abdd9df0aaba774cdf918db4ec0100f5f12c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-bstr-strings-for-adonet-ccli"></a>Porady: przeprowadzanie marshalingu ciągów BSTR dla ADO.NET (C++/CLI)
 Pokazuje, jak dodać ciąg COM (`BSTR`) do bazy danych i sposobu zorganizowania <xref:System.String?displayProperty=fullName> z bazy danych do `BSTR`.  
@@ -163,4 +166,4 @@ StringCol: This is string 2.
  [Dostęp do danych za pomocą ADO.NET (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
  [ADO.NET](/dotnet/framework/data/adonet/index)   
  [Współdziałanie](http://msdn.microsoft.com/en-us/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
- [Macierzysty i współdziałaniu .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

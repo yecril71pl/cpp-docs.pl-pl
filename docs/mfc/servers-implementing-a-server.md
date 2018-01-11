@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ed4ca1b131e56b2735b3a6e4ba408f3ad79b8de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 148a3da3c904f5c314c75fb71deede3c92163cc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers-implementing-a-server"></a>Serwery: implementowanie serwera
 W tym artykule opisano kod, który tworzy Kreator aplikacji MFC visual edytowania aplikacji serwera. Jeśli nie używasz Kreatora aplikacji, w tym artykule wymieniono obszarów, gdzie należy napisać kod do implementacji aplikacji serwera.  
@@ -53,5 +54,5 @@ W tym artykule opisano kod, który tworzy Kreator aplikacji MFC visual edytowani
  [Serwery](../mfc/servers.md)   
  [Kontenery](../mfc/containers.md)   
  [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)   
- [Rejestracji](../mfc/registration.md)
+ [Rejestracja](../mfc/registration.md)
 

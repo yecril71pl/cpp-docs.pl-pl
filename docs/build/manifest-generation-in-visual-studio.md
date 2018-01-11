@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ecd9ce0236a305fd31dec2ccc1ac3197d02908bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d701d73103ee2c5ac72eb36d9919132f0578b1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generowanie manifestu w Visual Studio
 Generowanie pliku manifestu dla określonego projektu mogą być kontrolowane w projekcie **strony właściwości** okna dialogowego. Na **właściwości konfiguracji** , kliknij pozycję **konsolidatora**, następnie **plik manifestu**, następnie **Generuj Manifest**. Domyślnie nowe projekty właściwości projektu są ustawiane na generowanie pliku manifestu. Jednak jest możliwe wyłącz generowanie manifestu dla projektu przy użyciu **Generuj Manifest** właściwości projektu. Jeśli ta właściwość jest skonfigurowana **tak**, jest generowany manifestu dla tego projektu. W przeciwnym razie konsolidator ignoruje informacji o zestawie podczas rozpoznawania zależności kodu aplikacji i nie powoduje generowania manifestu.  
@@ -41,4 +42,4 @@ Generowanie pliku manifestu dla określonego projektu mogą być kontrolowane w 
  [Porady: osadzanie manifestu w aplikacji C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)   
  [Informacje o zestawach prywatnych](http://msdn.microsoft.com/library/ff951638)   
  [Narzędzie manifestu](http://msdn.microsoft.com/library/aa375649)   
- [Opis Generowanie manifestu dla programów C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+ [Ogólne informacje o tworzeniu manifestu dla programów C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

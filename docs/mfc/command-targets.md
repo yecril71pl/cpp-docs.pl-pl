@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16a2599b97d88cf4e36b15a70203fc0ca91ca2a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bb8d2bff69e95a089827c85ade6dc4bcd67eb7ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-targets"></a>Obiekty docelowe poleceń
 Rysunek [polecenia w strukturze](../mfc/user-interface-objects-and-command-ids.md) pokazuje połączenie między obiektu interfejsu użytkownika, takie jak element menu i funkcji programu obsługi, która struktura wywołuje do wykonania tego polecenia wynikowy, gdy obiekt zostanie kliknięty.  

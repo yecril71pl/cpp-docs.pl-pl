@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c5fa79de11c7c3a1526fc91361eecdc74f8bdcd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0355b1c6a2731c9ca82e7ced37ad28f30a881eca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potencjalne przekazywanie błędów obiektów CRT w poprzek granic DLL
 Podczas przekazywania C Run-time (CRT) obiekty takie jak dojścia do plików, ustawień regionalnych i zmiennych środowiskowych do lub z biblioteki DLL (wywołania funkcji granicy biblioteki DLL), nieoczekiwane zachowanie może wystąpić, jeśli plik DLL, a także pliki wywołanie do biblioteki DLL, użyj innej kopii Bibliotek CRT.  
@@ -128,4 +129,4 @@ New MYLIB variable is: c:\mylib;c:\yourlib
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md)
+ [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

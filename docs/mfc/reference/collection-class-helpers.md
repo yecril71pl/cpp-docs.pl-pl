@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3d6baf4ba1622a9a9b54dcb25ed42eae89c86a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collection-class-helpers"></a>Pomocnicy klasy kolekcji
 Klasy kolekcji `CMap`, `CList`, i `CArray` za pomocą funkcji opartego na szablonie globalne pomocnika do celów takich jak porównywanie, kopiowanie i elementy serializacji. Jako część implementacji klasy na podstawie `CMap`, `CList`, i `CArray`, konieczne jest przesłonięcie tych funkcji w razie potrzeby z wersjami dostosowane do typu danych przechowywanych w mapie, listy lub tablicy. Aby uzyskać informacje dotyczące zastępowania takich jak funkcje pomocnicze `SerializeElements`, zapoznaj się z artykułem [kolekcje: porady: tworzenie bezpiecznej kolekcji](../../mfc/how-to-make-a-type-safe-collection.md). Należy pamiętać, że **constructelements —** i **destructelements —** są przestarzałe.  
@@ -215,4 +216,4 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  [Makra i funkcje globalne](mfc-macros-and-globals.md)   
  [Klasa CMap](cmap-class.md)   
  [Clist — klasa](clist-class.md)   
- [Carray — klasa](carray-class.md)
+ [Klasa CArray](carray-class.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55c62444cbe9fec8e099520cddba7992fad6f208
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51b07b5b46a8324a9bec0ef300018b8abbdce624
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isarithmetic-class"></a>is_arithmetic — Klasa
 Testy, jeśli typ jest arytmetyczne.  
@@ -80,4 +81,4 @@ is_arithmetic<float> == true
 ## <a name="see-also"></a>Zobacz też  
  [< type_traits >](../standard-library/type-traits.md)   
  [is_floating_point — klasa](../standard-library/is-floating-point-class.md)   
- [is_integral — klasa](../standard-library/is-integral-class.md)
+ [is_integral, klasa](../standard-library/is-integral-class.md)

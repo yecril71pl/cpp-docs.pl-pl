@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e755ae6b0d6170087af64f7561b310894f0768d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registration"></a>Rejestracja
 Gdy użytkownik chce, aby wstawić element OLE do aplikacji, OLE wyświetla listę typów obiektów do wyboru. OLE pobiera tej listy z systemu bazie danych rejestracji, który zawiera informacje o wszystkich aplikacji serwera. Gdy serwer rejestruje się, wpisów, które następnie są umieszczane w bazie danych rejestracji systemu (rejestr) opis każdego typu obiektu, który dostarcza mu, rozszerzenia i ścieżki do samej siebie, między innymi informacje o pliku.  

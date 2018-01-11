@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2fd356ae37eda8820e3a6e0e31a8cecde8d3929
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40811087cedd83bcd34745be7f1d5a404f4bb628
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cumulative-dependencies"></a>Zależności zbiorcze
 Zależności kumulują się w bloku opis, jeśli element docelowy jest powtarzany.  
@@ -64,4 +65,4 @@ climb.exe : up.obj
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obiekty docelowe](../build/targets.md)
+ [Docelowe elementy](../build/targets.md)

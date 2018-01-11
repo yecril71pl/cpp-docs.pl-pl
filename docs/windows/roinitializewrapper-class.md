@@ -14,11 +14,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b94db5e54089fa91c3b79c185df8b366de07c38
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5f6330c78a6bbac5f14e94c253f05515e3d29575
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper — Klasa
 Inicjuje środowiska uruchomieniowego systemu Windows.  
@@ -38,14 +41,14 @@ class RoInitializeWrapper
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Roinitializewrapper::roinitializewrapper — Konstruktor](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Inicjuje nowe wystąpienie klasy RoInitializeWrapper.|  
-|[RoInitializeWrapper:: ~ RoInitializeWrapper — destruktor](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Niszczy bieżące wystąpienie klasy RoInitializeWrapper.|  
+|[RoInitializeWrapper::RoInitializeWrapper, konstruktor](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Inicjuje nowe wystąpienie klasy RoInitializeWrapper.|  
+|[RoInitializeWrapper::~RoInitializeWrapper, destruktor](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Niszczy bieżące wystąpienie klasy RoInitializeWrapper.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[RoInitializeWrapper::HRESULT() Operator](../windows/roinitializewrapper-hresult-parens-operator.md)|Pobiera HRESULT utworzonego przez konstruktora RoInitializeWrapper.|  
+|[Operator RoInitializeWrapper::HRESULT()](../windows/roinitializewrapper-hresult-parens-operator.md)|Pobiera HRESULT utworzonego przez konstruktora RoInitializeWrapper.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `RoInitializeWrapper`  
@@ -56,4 +59,4 @@ class RoInitializeWrapper
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: wrappers — Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

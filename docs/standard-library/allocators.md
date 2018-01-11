@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05f774b6cc243223d396d7c18648a2451bf8dd18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb2c193fd12578e69abef2db555ebbc4fa061e1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocators"></a>Allocators
 Allocators — są używane przez standardowa biblioteka C++ do obsługi alokacji i dezalokacji elementy przechowywane w kontenerach. Wszystkie kontenery standardowa biblioteka C++ z wyjątkiem std::array ma parametrem szablonu typu `allocator<Type>`, gdzie `Type` reprezentuje typ kontenera. Na przykład klasa vector jest zadeklarowany w następujący sposób:  
@@ -129,7 +130,7 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
  Aby uzyskać więcej informacji o tych definicje typów i metod, zobacz [Allocator — klasa](../standard-library/allocator-class.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

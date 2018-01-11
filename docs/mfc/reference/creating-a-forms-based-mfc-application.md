@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 764721114bb87127c892563211f7fcc85171ea68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5d43412da21edce2633c17b5a38e4b1b787495
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Tworzenie aplikacji MFC opartej na formularzach
 Formularz to okno dialogowe z kontrolkami, które umożliwiają użytkownikowi dostęp i ewentualnie modyfikowanie danych. Można utworzyć aplikację, w której użytkownik wybiera jeden z wielu formularzy. Zazwyczaj oparte na formularzach aplikacji umożliwia formularzy dostępu użytkownika przez kliknięcie **nowy** z **pliku** menu. Aplikacji opartych na oknach dialogowych, który nie zapewnia użytkownikom dostęp do **nowy** opcji **pliku** menu jest traktowana jako aplikację na podstawie formularzy.  
@@ -40,7 +41,7 @@ Formularz to okno dialogowe z kontrolkami, które umożliwiają użytkownikowi d
   
  Nawet w przypadku takich jak używać klasy podstawowej [CView](../../mfc/reference/cview-class.md), później pozwala aplikacji na podstawie formularzy przez [Dodawanie klasy MFC](../../mfc/reference/adding-an-mfc-class.md) pochodną `CFormView` i sprawdzanie **Generowanie opcję zasoby** checkbox w [Kreator klas MFC](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
   
- Po ukończeniu pracy w kreatorze zostanie otwarty projekt. Jeśli jako klasę podstawową wybrano `CFormView` (lub klasę dziedziczącą z klasy `CFormView`) lub jeśli utworzono aplikację opartą na oknach dialogowych, zostanie otwarty edytor okien dialogowych. Teraz można przystąpić do projektowania pierwszego formularza.  
+ Po ukończeniu pracy w kreatorze zostanie otwarty projekt. Jeśli jako klasę bazową wybrano `CFormView` (lub klasę dziedziczącą z klasy `CFormView`) lub jeśli utworzono aplikację opartą na oknach dialogowych, zostanie otwarty edytor okien dialogowych. Teraz można przystąpić do projektowania pierwszego formularza.  
   
 ### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>Aby rozpocząć tworzenie pliku wykonywalnego MFC opartego na formularzach  
   
@@ -51,7 +52,7 @@ Formularz to okno dialogowe z kontrolkami, które umożliwiają użytkownikowi d
 3.  Wybierz **pojedynczego dokumentu**, **wielu dokumentów**, lub **wiele dokumentów najwyższego poziomu**.  
   
     > [!NOTE]
-    >  W przypadku wybrania SDI MDI i aplikacji interfejsu wielu dokumentów najwyższego poziomu, domyślnie `CView` jest ustawiony jako klasę podstawową dla widoku aplikacji w [wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) stronie kreatora. Aby utworzyć aplikację opartą na formularzach, jako klasę podstawową widoku aplikacji należy wybrać klasę `CFormView`. Kreator nie zapewnia funkcji drukowania dla aplikacji opartej na formularzach.  
+    >  W przypadku wybrania SDI MDI i aplikacji interfejsu wielu dokumentów najwyższego poziomu, domyślnie `CView` jest ustawiony jako klasę podstawową dla widoku aplikacji w [wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) stronie kreatora. Aby utworzyć aplikację opartą na formularzach, jako klasę bazową widoku aplikacji należy wybrać klasę `CFormView`. Kreator nie zapewnia funkcji drukowania dla aplikacji opartej na formularzach.  
   
 4.  Na pozostałych stronach kreatora skonfiguruj inne opcje projektu.  
   
@@ -63,11 +64,11 @@ Formularz to okno dialogowe z kontrolkami, które umożliwiają użytkownikowi d
   
 -   [Alternatywy dla architektury dokument/widok](../../mfc/alternatives-to-the-document-view-architecture.md)  
   
--   [Opcje projektowania aplikacji](../../mfc/application-design-choices.md)  
+-   [Opcje do wyboru przy projektowaniu aplikacji](../../mfc/application-design-choices.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)   
  [Widoki formularzy](../../mfc/form-views-mfc.md)   
  [Tworzenie aplikacji MFC w stylu Eksploratora plików](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
- [Tworzenie aplikacji MFC w stylu przeglądarki sieci Web](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
+ [Tworzenie aplikacji MFC w stylu przeglądarki internetowej](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
 

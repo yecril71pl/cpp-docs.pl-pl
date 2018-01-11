@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02df11739582cbfa84361a7c92e0cd7ee1856716
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7b90000279e00c9be8f43ecdb33f8e3dedf6b8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX
 Licencjonowania pomocy technicznej, opcjonalna funkcja formantów ActiveX służy do kontrolowania, kto może używać lub rozkładanie formantu. (Aby uzyskać dodatkowe informacje dotyczące licencjonowania, zobacz licencjonowania problemy w [Uaktualnianie istniejącego formantu ActiveX](../mfc/upgrading-an-existing-activex-control.md).)  

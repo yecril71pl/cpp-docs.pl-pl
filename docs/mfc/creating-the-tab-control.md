@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db477a8966e7a7ec5368e5ed9e783b466acbf103
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91349f46e577a2a433217f84d9e028139eb09c9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-tab-control"></a>Tworzenie formantu karty
 Sposób tworzenia formantu karty zależy od tego, czy za pomocą formantu w oknie dialogowym lub tworzenia go w oknie nondialog.  
@@ -69,5 +70,5 @@ Sposób tworzenia formantu karty zależy od tego, czy za pomocą formantu w okni
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTabCtrl](../mfc/using-ctabctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

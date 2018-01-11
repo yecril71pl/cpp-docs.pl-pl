@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ef1dff813c709a117d92abcdd7a2d4f9d3420c65
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 817450fb6b72f985d7ff49f7e65f9dfa0933b4d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-build-error-prj0006"></a>Błąd PRJ0006 kompilacji projektu
 Nie można otworzyć pliku tymczasowego 'Plik'. Upewnij się, że plik istnieje i że katalog jest nie zabezpieczony przed zapisem.  

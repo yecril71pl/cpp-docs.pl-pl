@@ -59,13 +59,14 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4de72103a06230c88025e7df8f4f862b9a25ca53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c7eb0c56b34232725cdb7268ed09477063b1a1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ltatomicgt"></a>&lt;niepodzielne&gt;
+# <a name="ltatomicgt"></a>&lt;atomic&gt;
 Definiuje klasy i klasy szablonu na potrzeby tworzenia typów, które obsługują operacjach niepodzielnych.  
   
 ## <a name="syntax"></a>Składnia  
@@ -161,8 +162,8 @@ Definiuje klasy i klasy szablonu na potrzeby tworzenia typów, które obsługuj�
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Atomic — struktura](../standard-library/atomic-structure.md)|Opis obiektu, który wykonuje niepodzielne operacje na przechowywanej wartości.|  
-|[atomic_flag — struktura](../standard-library/atomic-flag-structure.md)|Opisuje obiekt, który automatycznie ustawia i usuwa `bool` flagi.|  
+|[atomic, struktura](../standard-library/atomic-structure.md)|Opis obiektu, który wykonuje niepodzielne operacje na przechowywanej wartości.|  
+|[atomic_flag, struktura](../standard-library/atomic-flag-structure.md)|Opisuje obiekt, który automatycznie ustawia i usuwa `bool` flagi.|  
   
 ## <a name="enums"></a>Wyliczenia  
   
@@ -207,7 +208,7 @@ Definiuje klasy i klasy szablonu na potrzeby tworzenia typów, które obsługuj�
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

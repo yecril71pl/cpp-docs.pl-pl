@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 60b654fb107b8496921846a6f8bbfa3ee00272db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 204d5a7140c90310de5d3e96d90624f3945a7ba9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1141"></a>Błąd narzędzi konsolidatora LNK1141
 Błąd podczas kompilowania pliku eksportów  
@@ -31,4 +32,4 @@ Błąd podczas kompilowania pliku eksportów
  Ten błąd jest poprzedzony inny błąd, który zapewnia dodatkowe informacje.  
   
 ## <a name="see-also"></a>Zobacz też  
- [. EXP, pliki jako dane wejściowe konsolidatora](../../build/reference/dot-exp-files-as-linker-input.md)
+ [Pliki .Exp — wejście konsolidatora](../../build/reference/dot-exp-files-as-linker-input.md)

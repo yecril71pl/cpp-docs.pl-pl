@@ -14,11 +14,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df791e5ef12dfeef72ebf48e673b774ddfd6aee5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4647a8b1001cd6acd6b70a3d15f127c8e3891c1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Event — Klasa (Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows)
 Reprezentuje zdarzenie.  
@@ -35,13 +38,13 @@ class Event : public HandleT<HandleTraits::EventTraits>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Event::Event Constructor (Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Inicjuje nowe wystąpienie klasy zdarzeń.|  
+|[Event::Event Constructor (Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Inicjuje nowe wystąpienie klasy zdarzeń.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Event::operator = — Operator](../windows/event-operator-assign-operator.md)|Przypisuje określonego zdarzenia odwołanie do bieżącego wystąpienia zdarzenia.|  
+|[Operator Event::operator=](../windows/event-operator-assign-operator.md)|Przypisuje określonego zdarzenia odwołanie do bieżącego wystąpienia zdarzenia.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `HandleT`  
@@ -54,4 +57,4 @@ class Event : public HandleT<HandleTraits::EventTraits>;
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: wrappers — Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c47e458d4cd6e9df556eef5e1f61806633208011
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33f536a86a21e56eb36e546109f916ae5d6ca806
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-header-control"></a>Tworzenie formantu nagłówka
 Formantu nagłówka nie jest bezpośrednio dostępny w edytorze okien dialogowych (mimo że można dodać kontrolkę listy, w tym formancie nagłówka).  
@@ -51,5 +52,5 @@ Formantu nagłówka nie jest bezpośrednio dostępny w edytorze okien dialogowyc
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

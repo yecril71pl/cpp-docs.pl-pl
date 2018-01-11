@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b95af3e80234cf7f3910fc9a4ef3468ab5d90ba7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c4a62d3f9631d4e2807bf12e1eda3bd4b4f5112
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaofieldexchange-class"></a>Klasa CDaoFieldExchange
 Obsługuje procedury programu exchange (DFX) pól rekordów DAO używane przez klas baz danych DAO.  
@@ -154,4 +155,4 @@ void SetFieldType(UINT nFieldType);
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Cdaorecordset — klasa](../../mfc/reference/cdaorecordset-class.md)
+ [Klasa CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)

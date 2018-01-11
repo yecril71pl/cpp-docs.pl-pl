@@ -34,11 +34,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e718ae6c92664c3d1966dd5eaade409e104dd63f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d4381d45adc2e6b1330bfbacd960b2dac8d51d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fpreset"></a>_fpreset
 Resetuje zmiennoprzecinkowe pakietu.  
@@ -181,4 +182,4 @@ Error 131: Divide by zero
  [_execwexec — funkcje](../../c-runtime-library/exec-wexec-functions.md)   
  [sygnał](../../c-runtime-library/reference/signal.md)   
  [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md)   
- [System, _wsystem —](../../c-runtime-library/reference/system-wsystem.md)
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

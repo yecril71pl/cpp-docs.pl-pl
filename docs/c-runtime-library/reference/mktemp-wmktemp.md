@@ -44,11 +44,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ade54aef0413e6db897b00f7bfa2e78c428366a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac2fd19254cce03b7cd7efc4324f5dc03c608b7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 Tworzy unikatową nazwę pliku. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_mktemp_s —, _wmktemp_s —](../../c-runtime-library/reference/mktemp-s-wmktemp-s.md).  
@@ -223,4 +224,4 @@ Out of unique filenames.
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_setmbcp —](../../c-runtime-library/reference/setmbcp.md)   
  [_tempnam —, _wtempnam —, tmpnam — _wtmpnam —](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   
- [tmpfile —](../../c-runtime-library/reference/tmpfile.md)
+ [tmpfile](../../c-runtime-library/reference/tmpfile.md)

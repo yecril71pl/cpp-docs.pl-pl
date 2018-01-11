@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1d5dd2696a48a84672350b90b569c8f0caf7c3cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c250af9f1af96bb051be0b2cd347ecd8d98d809
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bscmake-command-file-response-file"></a>Plik polecenia BSCMAKE (Plik odpowiedzi)
 Możesz podać części lub całości danych wejściowych wiersza polecenia w pliku poleceń. Określ plik polecenia, używając następującej składni:  
@@ -53,4 +54,4 @@ file1.sbr file2.sbr file3.sbr file4.sbr
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie BSCMAKE](../../build/reference/bscmake-reference.md)
+ [BSCMAKE — dokumentacja](../../build/reference/bscmake-reference.md)

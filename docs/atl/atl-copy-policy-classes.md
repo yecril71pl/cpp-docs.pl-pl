@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 667a6c35d979b0fb1da3675efd03e2840285b845
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54ac3c9d53c3b6d2b295643001fd15b1e4c6c46d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-copy-policy-classes"></a>Klasy zasad kopii ATL
 Kopiowanie zasady klasy są [klasy narzędzi](../atl/utility-classes.md) używany do inicjowania, kopiowanie i usuwanie danych. Klasy zasad kopii pozwalają Aby zdefiniować semantykę kopiowania dla dowolnego typu danych oraz do definiowania konwersje między różnych typów danych.  

@@ -35,11 +35,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6dd54fcfc9612b5c20288b78b60d84257ab8f2f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5ff232a914b929153d8dc2ea6bb0951b4ff187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-features-in-the-crt"></a>Funkcje zabezpieczeń w CRT
 Wiele funkcji CRT starego ma bezpieczniejsze nowszej wersji. Jeśli istnieje funkcja bezpieczny, starszej wersji mniej bezpieczne jest oznaczony jako przestarzały i nowa wersja ma `_s` sufiks ("zabezpieczenia").  
@@ -69,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
 ## <a name="additional-security-features"></a>Dodatkowe funkcje zabezpieczeń  
  Niektóre z funkcji zabezpieczeń są następujące:  
   
--   `Parameter Validation`. Parametry przekazane do funkcji CRT są weryfikowane, w obu tych funkcji bezpiecznego i wiele wersji istniejących funkcji. Te operacje sprawdzania poprawności obejmują:  
+-   `Parameter Validation`., Parametry przekazane do funkcji CRT są weryfikowane, w obu tych funkcji bezpiecznego i wiele wersji istniejących funkcji. Te operacje sprawdzania poprawności obejmują:  
   
     -   Sprawdzanie `NULL` wartości przekazane do funkcji.  
   
@@ -81,19 +82,19 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   Program obsługi nieprawidłowych parametrów jest również dostępny do deweloperów. W przypadku napotkania nieprawidłowy parametr, zamiast potwierdzające i zamykanie aplikacji, CRT zapewnia sposób, aby sprawdzić te problemy z [_set_invalid_parameter_handler —, _set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)funkcji.  
   
--   `Sized Buffers`. Bezpieczne funkcje wymagają, że rozmiar buforu przekazywane do dowolnej funkcji, która zapisuje w buforze. Bezpieczne wersji sprawdzić, czy bufor jest wystarczająco duży, przed zapisaniem, co pomaga uniknąć błędów przepełnienia buforu niebezpieczne, zezwalających na wykonanie złośliwego kodu. Funkcje te zwykle zwracają `errno` wpisz kod błędu, a następnie Wywołaj program obsługi nieprawidłowych parametrów, jeśli rozmiar buforu jest za mały. Funkcje, które odczytywać bufory wejściowe, takie jak `gets`, bezpiecznego wersje, które trzeba określić maksymalny rozmiar.  
+-   `Sized Buffers`., Bezpieczne funkcje wymagają, że rozmiar buforu przekazywane do dowolnej funkcji, która zapisuje w buforze. Bezpieczne wersji sprawdzić, czy bufor jest wystarczająco duży, przed zapisaniem, co pomaga uniknąć błędów przepełnienia buforu niebezpieczne, zezwalających na wykonanie złośliwego kodu. Funkcje te zwykle zwracają `errno` wpisz kod błędu, a następnie Wywołaj program obsługi nieprawidłowych parametrów, jeśli rozmiar buforu jest za mały. Funkcje, które odczytywać bufory wejściowe, takie jak `gets`, bezpiecznego wersje, które trzeba określić maksymalny rozmiar.  
   
--   `Null termination`. Niektóre funkcje, które po lewej stronie ciągi potencjalnie z systemem innym niż zakończone mają bezpiecznego wersje, które upewnij się, że parametry są prawidłowo zakończony znakiem null.  
+-   `Null termination`., Niektóre funkcje, które po lewej stronie ciągi potencjalnie z systemem innym niż zakończone mają bezpiecznego wersje, które upewnij się, że parametry są prawidłowo zakończony znakiem null.  
   
--   `Enhanced error reporting`. Bezpieczne funkcje zwracają kodów błędów z więcej informacji o błędzie nie była dostępna z istniejących funkcji. Bezpieczne funkcje i wielu istniejących funkcji teraz ustawić `errno` i często zwracać `errno` kodu typu również, aby zapewnić lepsze raportowanie błędów.  
+-   `Enhanced error reporting`., Bezpieczne funkcje zwracają kodów błędów z więcej informacji o błędzie nie była dostępna z istniejących funkcji. Bezpieczne funkcje i wielu istniejących funkcji teraz ustawić `errno` i często zwracać `errno` kodu typu również, aby zapewnić lepsze raportowanie błędów.  
   
--   `Filesystem security`. Plik bezpiecznego dostępu bezpiecznych plików obsługę interfejsów API we/wy w przypadku domyślnej.  
+-   `Filesystem security`., Plik bezpiecznego dostępu bezpiecznych plików obsługę interfejsów API we/wy w przypadku domyślnej.  
   
--   `Windows security`. Proces bezpiecznego interfejsów API wymuszać zasady zabezpieczeń i umożliwić listy kontroli dostępu, należy określić.  
+-   `Windows security`., Proces bezpiecznego interfejsów API wymuszać zasady zabezpieczeń i umożliwić listy kontroli dostępu, należy określić.  
   
--   `Format string syntax checking`. Nieprawidłowe ciągi zostaną wykryte, na przykład przy użyciu niepoprawnego typu pola znaków `printf` ciągi formatujące.  
+-   `Format string syntax checking`., Nieprawidłowe ciągi zostaną wykryte, na przykład przy użyciu niepoprawnego typu pola znaków `printf` ciągi formatujące.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Sprawdzanie poprawności parametru](../c-runtime-library/parameter-validation.md)   
  [Przeciążenia bezpiecznych szablonów](../c-runtime-library/secure-template-overloads.md)   
- [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md)
+ [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

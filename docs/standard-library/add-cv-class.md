@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be91a6c0567b06c033d71d07ba6fb64eec18acb7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ccea9fe28ab942341a431585b7d536687dd85345
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addcv-class"></a>add_cv — Klasa
 Sprawia, że stała nietrwałe typu z typu.  
@@ -97,4 +98,4 @@ invoked const volatile S.f()
 ## <a name="see-also"></a>Zobacz też  
 [< type_traits >](../standard-library/type-traits.md)   
 [remove_const — klasa](../standard-library/remove-const-class.md)   
-[remove_volatile — klasa](../standard-library/remove-volatile-class.md)
+[remove_volatile, klasa](../standard-library/remove-volatile-class.md)

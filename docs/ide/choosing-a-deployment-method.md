@@ -23,11 +23,12 @@ caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 969086f11addf91c417b0f2bf0037cf01338f565
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c444b3319c60b80bdfdc14000a41d65869d0514
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Wybieranie metody wdrażania
 Jeśli aplikacji Visual C++ nie jest niezależna i można wdrożyć przy użyciu polecenia kopiowania, zalecane jest użycie Instalatora systemu Windows dla wdrożenia. Instalator Windows obsługuje instalację, naprawę oraz dezinstalację, a także obsługuje atomowe aktualizowanie plików aplikacji, zależności i wpisów rejestru.  
@@ -41,7 +42,7 @@ Jeśli aplikacji Visual C++ nie jest niezależna i można wdrożyć przy użyciu
 ## <a name="redistributing-visual-c-libraries"></a>Redystrybucja bibliotek Visual C++  
  We wdrożeniach można redystrybuować dowolną wersję biblioteki Visual C++, której licencja na to pozwala. Poniżej przedstawiono trzy sposoby ich wdrożenia:  
   
--   Centralnej wdrożenie przy użyciu pakietu redystrybucyjnego pakiety, w którym bibliotek języka Visual C++ jest instalowany jako pliki dll w %windir%\system32\\. (Instalacja w tym folderze wymaga uprawnień administratora). Można utworzyć program Instalatora lub skrypt, który uruchamia pakiet redystrybucyjny przed zainstalowaniem aplikacji na komputerze docelowym. Pakiety redystrybucyjne są dostępne dla platform x86, x64 i ARM (VCRedist_x86.exe, VCRedist_x64.exe lub VCRedist_arm.exe). Visual Studio zawiera te pakiety w % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Można również pobrać je z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=132793). (W Centrum pobierania, wyszukaj "Pakiet redystrybucyjny Visual C++ *wersji programu Visual Studio i aktualizacji*", które odpowiadają aplikacji. Na przykład, jeśli użyłeś Visual Studio 2012 update 4 do stworzenia aplikacji, wyszukaj „Visual C++ Redistributable Package 2012 update 4”.) Aby uzyskać informacje o sposobie używania pakiet redystrybucyjny, zobacz [wskazówki: Wdrażanie Visual C++ aplikacji za pomocą pakietu redystrybucyjnego Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
+-   Centralnej wdrożenie przy użyciu pakietu redystrybucyjnego pakiety, w którym bibliotek języka Visual C++ jest instalowany jako pliki dll w %windir%\system32\\. (Instalacja w tym folderze wymaga uprawnień administratora). Można utworzyć program Instalatora lub skrypt, który uruchamia pakiet redystrybucyjny przed zainstalowaniem aplikacji na komputerze docelowym. Pakiety redystrybucyjne są dostępne dla platform x86, x64 i ARM (VCRedist_x86.exe, VCRedist_x64.exe lub VCRedist_arm.exe). Visual Studio zawiera te pakiety w % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Można również pobrać je z [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (W Centrum pobierania, wyszukaj "Pakiet redystrybucyjny Visual C++ *wersji programu Visual Studio i aktualizacji*", które odpowiadają aplikacji. Na przykład, jeśli użyłeś Visual Studio 2012 update 4 do stworzenia aplikacji, wyszukaj „Visual C++ Redistributable Package 2012 update 4”.) Aby uzyskać informacje o sposobie używania pakiet redystrybucyjny, zobacz [wskazówki: Wdrażanie Visual C++ aplikacji za pomocą pakietu redystrybucyjnego Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
   
 -   Wdrożenie centralnej za pomocą modułów scalania, z których każdy jest instalowany jako udostępnionej biblioteki DLL w %windir%\system32 określonej biblioteki Visual C++\\. (Instalacja w tym folderze wymaga uprawnień administratora.) Moduły scalania stają się częścią pliku .msi Instalatora aplikacji. Visual C++ redistributable scalania modułów znajdują się w programie Visual Studio w \Common Files\Merge pliki (x86) \Program modułów\\. Aby uzyskać więcej informacji, zobacz [redystrybuowanie przez za pomocą scalania modułów](../ide/redistributing-components-by-using-merge-modules.md).  
   
@@ -49,7 +50,7 @@ Jeśli aplikacji Visual C++ nie jest niezależna i można wdrożyć przy użyciu
   
  Jeśli wdrożenie korzysta z modułów scalania pakietu redystrybucyjnego i instalacja jest uruchomiona przez użytkownika, który nie ma praw administracyjnych, bibliotek DLL programu Visual C++ nie są zainstalowane i nie uruchomi aplikacji. Ponadto programy instalacyjne aplikacji, skompilowane z wykorzystaniem modułów scalania, które zezwalają na instalację dla poszczególnych użytkowników, instalują biblioteki we współdzielonej lokalizacji, która wpływa na wszystkich użytkowników systemu. Wdrożenia lokalnego umożliwia instalowanie wymaganych bibliotek DLL programu Visual C++ w katalogu aplikacji określonego użytkownika bez wpływu na innych użytkowników i wymagające uprawnień administracyjnych. Ponieważ może to prowadzić do problemów użytkowanie, nie zaleca się lokalnego wdrożenia programu Visual C++ redistributable biblioteki dll.  
   
- Nieprawidłowe wdrożenie bibliotek Visual C++ może spowodować błędy w czasie wykonywania aplikacji, która od nich zależy. Gdy system operacyjny ładuje aplikację, wykorzystuje kolejność wyszukiwania opisane w [LoadLibraryEx](http://go.microsoft.com/fwlink/?LinkId=132792)  
+ Nieprawidłowe wdrożenie bibliotek Visual C++ może spowodować błędy w czasie wykonywania aplikacji, która od nich zależy. Gdy system operacyjny ładuje aplikację, wykorzystuje kolejność wyszukiwania opisane w [LoadLibraryEx](http://go.microsoft.com/fwlink/p/?linkid=132792)  
   
 ## <a name="dynamic-linking-is-better-than-static-linking"></a>Łączenie dynamiczne jest lepsze niż łączenie statyczne  
  Zaleca się unikać statyczne połączenie w przypadku ponownego rozsyłania bibliotek języka Visual C++. Chociaż łączenie statyczne prawie nigdy nie zwiększa znacznie wydajności aplikacji, to prawie zawsze sprawia, że serwisowanie jest droższe. Rozważmy na przykład aplikację, statycznie połączoną z biblioteką, która to biblioteka została zaktualizowana, aby poprawić jej zabezpieczenia — aplikacja z nich nie skorzysta, chyba że zostanie zrekompilowana i ponownie wdrożona. Zamiast tego zaleca się dynamiczne łączenie aplikacji z bibliotekami, od których zależą, aby można było aktualizować biblioteki, kiedy zostaną wdrożone.  

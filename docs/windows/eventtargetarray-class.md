@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7f23265601411c0a1913b1e06b9fffa62bfa07f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ac591a1d27792d3b825336ed46e38fa5d002fa73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray — Klasa
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -41,17 +44,17 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Eventtargetarray::eventtargetarray — Konstruktor](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicjuje nowe wystąpienie klasy eventtargetarray —.|  
-|[Eventtargetarray —:: ~ EventTargetArray — destruktor](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Deinitializes bieżącego eventtargetarray — klasa.|  
+|[EventTargetArray::EventTargetArray, konstruktor](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicjuje nowe wystąpienie klasy eventtargetarray —.|  
+|[EventTargetArray::~EventTargetArray, destruktor](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Deinitializes bieżącego eventtargetarray — klasa.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[EventTargetArray::AddTail — metoda](../windows/eventtargetarray-addtail-method.md)|Dołącza określona procedura obsługi zdarzeń do końca tablicy wewnętrznej procedury obsługi zdarzeń.|  
-|[EventTargetArray::Begin — metoda](../windows/eventtargetarray-begin-method.md)|Pobiera adres pierwszego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.|  
-|[EventTargetArray::End — Metoda](../windows/eventtargetarray-end-method.md)|Pobiera adres ostatniego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.|  
-|[EventTargetArray::Length — metoda](../windows/eventtargetarray-length-method.md)|Pobiera bieżącą liczbę elementów w tablicy wewnętrznej procedury obsługi zdarzeń.|  
+|[EventTargetArray::AddTail, metoda](../windows/eventtargetarray-addtail-method.md)|Dołącza określona procedura obsługi zdarzeń do końca tablicy wewnętrznej procedury obsługi zdarzeń.|  
+|[EventTargetArray::Begin, metoda](../windows/eventtargetarray-begin-method.md)|Pobiera adres pierwszego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.|  
+|[EventTargetArray::End, metoda](../windows/eventtargetarray-end-method.md)|Pobiera adres ostatniego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.|  
+|[EventTargetArray::Length, metoda](../windows/eventtargetarray-length-method.md)|Pobiera bieżącą liczbę elementów w tablicy wewnętrznej procedury obsługi zdarzeń.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `EventTargetArray`  
@@ -62,4 +65,4 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
  **Namespace:** Microsoft::wrl:: details —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: details — Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

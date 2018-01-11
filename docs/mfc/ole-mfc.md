@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b599a8fe4d2eef8cd6b2b11cb79e02b04943d234
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7a2ae4bb60e59db3984c07967ffaf3cee60c791
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-mfc"></a>OLE (MFC)
 Implementowanie OLE funkcjonalność w programie dotyczy interfejsu użytkownika na kilka sposobów:  
@@ -39,7 +40,7 @@ Implementowanie OLE funkcjonalność w programie dotyczy interfejsu użytkownika
   
 -   [Edycja wizualna (aktywacji)](../mfc/activation-cpp.md)  
   
--   [Przeciągnij i upuść](../mfc/drag-and-drop-ole.md)  
+-   [Przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md)  
   
 -   [Trackery](../mfc/trackers.md)  
   

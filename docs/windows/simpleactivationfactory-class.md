@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3c56d03b74080ae65f84ffbad8c4dd2092be1082
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 991d428e90654fd29cfbb9c5c7e110708a05de01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory — Klasa
 Udostępnia mechanizm podstawowych do utworzenia środowiska wykonawczego systemu Windows lub klasycznego modelu COM klasy podstawowej.  
@@ -50,9 +53,9 @@ class SimpleActivationFactory : public ActivationFactory<>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SimpleActivationFactory::ActivateInstance — metoda](../windows/simpleactivationfactory-activateinstance-method.md)|Tworzy wystąpienie określonego interfejsu.|  
-|[SimpleActivationFactory::GetRuntimeClassName — metoda](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Pobiera nazwę klasy środowiska uruchomieniowego wystąpienia z klasą określoną przez `Base` parametr szablonu klasy.|  
-|[SimpleActivationFactory::GetTrustLevel — metoda](../windows/simpleactivationfactory-gettrustlevel-method.md)|Pobiera poziom zaufania wystąpienia z klasą określoną przez `Base` parametr szablonu klasy.|  
+|[SimpleActivationFactory::ActivateInstance, metoda](../windows/simpleactivationfactory-activateinstance-method.md)|Tworzy wystąpienie określonego interfejsu.|  
+|[SimpleActivationFactory::GetRuntimeClassName, metoda](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Pobiera nazwę klasy środowiska uruchomieniowego wystąpienia z klasą określoną przez `Base` parametr szablonu klasy.|  
+|[SimpleActivationFactory::GetTrustLevel, metoda](../windows/simpleactivationfactory-gettrustlevel-method.md)|Pobiera poziom zaufania wystąpienia z klasą określoną przez `Base` parametr szablonu klasy.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `I0`  
@@ -83,4 +86,4 @@ class SimpleActivationFactory : public ActivationFactory<>;
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

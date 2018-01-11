@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e51b6af4006ad3d8b35f9167e4db4e3ea84a89f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94087d5e07765b1052404a4c3e51f37db2a31e3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assignment-conversions"></a>Konwersje przypisań
 W operacjach przypisania typ wartości jest przypisany jest konwertowana na typ zmiennej, która odbiera przypisania. C umożliwia konwersje przez przypisanie między typów całkowitych i zmiennoprzecinkowych, nawet wtedy, gdy informacje są tracone w konwersji. Metodę konwersji zależy od typów objętego przypisania, zgodnie z opisem w [popularne konwersje arytmetyczne](../c-language/usual-arithmetic-conversions.md) i w następujących sekcjach:  

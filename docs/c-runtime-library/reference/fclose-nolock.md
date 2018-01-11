@@ -34,11 +34,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec7c34187ea426688419b7171ea0c22333a1f1a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a993376f1174a86506f5c61d3b403953bedec3f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fclosenolock"></a>_fclose_nolock
 Zamyka strumienia bez blokowania wątku.  
@@ -75,4 +76,4 @@ int _fclose_nolock(
  [_fdopen —, _wfdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md)   
  [fflush —](../../c-runtime-library/reference/fflush.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen —, _wfreopen —](../../c-runtime-library/reference/freopen-wfreopen.md)
+ [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)

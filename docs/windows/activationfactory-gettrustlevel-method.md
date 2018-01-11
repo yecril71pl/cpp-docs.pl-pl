@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bbd06799b6872d2db947b127267d2d9314b5f288
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 48db1632c50726073372e314a338cdca543c29e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel — Metoda
 Pobiera obiekt, który tworzy bieżącego activationfactory — poziom zaufania.  
@@ -45,4 +48,4 @@ STDMETHOD(
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Activationfactory — klasa](../windows/activationfactory-class.md)
+ [ActivationFactory, klasa](../windows/activationfactory-class.md)

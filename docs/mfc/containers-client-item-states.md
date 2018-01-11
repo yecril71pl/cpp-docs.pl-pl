@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1048cdce98be99b13d306e9ff36eb75b30e43cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6bcc43d4e8b32a8766eef7c50e45bece569ef5c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-client-item-states"></a>Kontenery: stany elementu klienckiego
 W tym artykule opisano różne stany, które element Klient przechodzi w okresie użytkowania.  
@@ -52,4 +53,4 @@ W tym artykule opisano różne stany, które element Klient przechodzi w okresie
  [Aktywacji](../mfc/activation-cpp.md)   
  [Kontenery: Powiadomienia elementów klienckich](../mfc/containers-client-item-notifications.md)   
  [Trackery](../mfc/trackers.md)   
- [Crecttracker — klasa](../mfc/reference/crecttracker-class.md)
+ [Klasa CRectTracker](../mfc/reference/crecttracker-class.md)

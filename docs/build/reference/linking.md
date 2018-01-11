@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d3c0b1a912846da6f36fc0bc05904c61a86183e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5cd7aacecf96b1908c18a23326876dbf71ce4b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linking"></a>Konsolidacja
 Aby uzyskać informacje na temat używania konsolidator zobacz następujące sekcje:  
@@ -31,4 +32,4 @@ Aby uzyskać informacje na temat używania konsolidator zobacz następujące sek
 -   [Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie kompilacji C/C++](../../build/reference/c-cpp-building-reference.md)
+ [Dokumentacja kompilacji w języku C/C++](../../build/reference/c-cpp-building-reference.md)

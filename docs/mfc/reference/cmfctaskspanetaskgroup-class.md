@@ -35,11 +35,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ccac37a7ffa7ab5967118ec2bcb4c2c4cf5501c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34bd53dec328ebf94e8bb9eb6f72aae1e8a90bc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Klasa CMFCTasksPaneTaskGroup
 `CMFCTasksPaneTaskGroup` Klasa jest używana przez klasę Pomocnika [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) formantu. Obiekty typu `CMFCTasksPaneTaskGroup` reprezentują *grupy zadań*. Grupy zadań znajduje się lista elementów, które w ramach będzie wyświetlany w osobnym oknie posiadające przycisk Zwiń. Pole może mieć opcjonalnym podpisem (nazwa grupy). Jeśli grupa jest zwinięte, na liście zadań nie jest widoczne.  
@@ -231,4 +232,4 @@ virtual BOOL SetACCData(
  [Klasa CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)   
  [Klasa CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)   
  [Klasa CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)   
- [CObject — klasa](../../mfc/reference/cobject-class.md)
+ [Klasa CObject](../../mfc/reference/cobject-class.md)

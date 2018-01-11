@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50d1c551f0ae51daafb3d83075091fa299db0fed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 921687fbc5d8ab0b509e5a2e43c9c9ff4b18727a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freea"></a>_freea
 Cofa alokację lub zwalnia blok pamięci.  
@@ -89,4 +90,4 @@ void _freea(
  [_malloc_dbg —](../../c-runtime-library/reference/malloc-dbg.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
  [_free_dbg —](../../c-runtime-library/reference/free-dbg.md)   
- [_heapmin —](../../c-runtime-library/reference/heapmin.md)
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)

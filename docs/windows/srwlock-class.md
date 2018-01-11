@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6721620490a00da0b9c8fa039be0379f4d7dd1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1325a089739b3820009aa239f56805264dbb6b83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="srwlock-class"></a>SRWLock — Klasa
 Reprezentuje cienki czytnika/blokadę.  
@@ -46,23 +49,23 @@ class SRWLock;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Srwlock::srwlock — Konstruktor](../windows/srwlock-srwlock-constructor.md)|Inicjuje nowe wystąpienie klasy srwlock —.|  
-|[Srwlock —:: ~ SRWLock — destruktor](../windows/srwlock-tilde-srwlock-destructor.md)|Deinitializes wystąpienia klasy srwlock —.|  
+|[SRWLock::SRWLock, konstruktor](../windows/srwlock-srwlock-constructor.md)|Inicjuje nowe wystąpienie klasy srwlock —.|  
+|[SRWLock::~SRWLock, destruktor](../windows/srwlock-tilde-srwlock-destructor.md)|Deinitializes wystąpienia klasy srwlock —.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SRWLock::LockExclusive — metoda](../windows/srwlock-lockexclusive-method.md)|Uzyskuje obiekt srwlock — w trybie wyłączności.|  
-|[SRWLock::LockShared — metoda](../windows/srwlock-lockshared-method.md)|Uzyskuje obiekt srwlock — w trybie udostępniania.|  
-|[SRWLock::TryLockExclusive — metoda](../windows/srwlock-trylockexclusive-method.md)|Próby uzyskania obiektu srwlock — w trybie wyłączności dla bieżącego lub określonego obiektu srwlock —.|  
-|[SRWLock::TryLockShared — metoda](../windows/srwlock-trylockshared-method.md)|Próby uzyskania obiektu srwlock — w trybie udostępniania dla bieżącego lub określonego obiektu srwlock —.|  
+|[SRWLock::LockExclusive, metoda](../windows/srwlock-lockexclusive-method.md)|Uzyskuje obiekt srwlock — w trybie wyłączności.|  
+|[SRWLock::LockShared, metoda](../windows/srwlock-lockshared-method.md)|Uzyskuje obiekt srwlock — w trybie udostępniania.|  
+|[SRWLock::TryLockExclusive, metoda](../windows/srwlock-trylockexclusive-method.md)|Próby uzyskania obiektu srwlock — w trybie wyłączności dla bieżącego lub określonego obiektu srwlock —.|  
+|[SRWLock::TryLockShared, metoda](../windows/srwlock-trylockshared-method.md)|Próby uzyskania obiektu srwlock — w trybie udostępniania dla bieżącego lub określonego obiektu srwlock —.|  
   
 ### <a name="protected-data-member"></a>Element członkowski chronionych danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Srwlock::srwlock_ — członek danych](../windows/srwlock-srwlock-data-member.md)|Zawiera zmienną podstawowej blokady dla bieżącego obiektu srwlock —.|  
+|[SRWLock::SRWLock_, składowa danych](../windows/srwlock-srwlock-data-member.md)|Zawiera zmienną podstawowej blokady dla bieżącego obiektu srwlock —.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `SRWLock`  
@@ -73,4 +76,4 @@ class SRWLock;
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: wrappers — Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

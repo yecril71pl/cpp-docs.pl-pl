@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb53ac2375a5afa9ac3c2f1d2d7b2ba9de1b7141
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0b1362d5cb0451f5190ca63ab0344f557256190
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-float"></a>Typ float
 Liczby zmiennoprzecinkowe formatu IEEE (Institute of Electrical and Electronics Engineers). Wartości o pojedynczej precyzji z typem float mieć 4 bajty, składające się z bitu znaku, 8-bitową 127 nadmiarowe binarne wykładnik i mantysy 23-bitowych. Mantysa reprezentuje liczbą z zakresu od 1.0 i 2.0. Ponieważ bit znaczącymi bitami mantysa ma zawsze numer 1, nie są przechowywane w kodzie. Taka reprezentacja zapewnia szereg około 3.4E-38 do 3.4E + 38 na typ float.  

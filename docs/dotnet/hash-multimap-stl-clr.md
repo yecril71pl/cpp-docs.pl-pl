@@ -18,11 +18,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd7b35758caaf76904eb3144d22d747c22f02804
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b6927b25d627874f5a3d649099a4ed5e099bc6cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `hash_multimap` do zarządzania sekwencję elementów jako tablicy skrótów, każdego wpisu tabeli przechowywania dwukierunkowy połączone listy węzłów i w każdym węźle przechowywania jeden element. Element składa się z kluczem porządkowania sekwencji i zmapowane wartość, która dotyczy jazdy.  
@@ -78,7 +81,7 @@ template<typename Key,
 |[hash_multimap::key_compare (STL/CLR)](../dotnet/hash-multimap-key-compare-stl-clr.md)|Delegat porządkowania dla dwa klucze.|  
 |[hash_multimap::key_type (STL/CLR)](../dotnet/hash-multimap-key-type-stl-clr.md)|Typ klucza sortowania.|  
 |[hash_multimap::mapped_type (STL/CLR)](../dotnet/hash-multimap-mapped-type-stl-clr.md)|Typ zamapowanych wartość skojarzoną z każdego klucza.|  
-|[hash_multimap::Reference (STL/CLR)](../dotnet/hash-multimap-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[hash_multimap::reference (STL/CLR)](../dotnet/hash-multimap-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[hash_multimap::reverse_iterator (STL/CLR)](../dotnet/hash-multimap-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
 |[hash_multimap::size_type (STL/CLR)](../dotnet/hash-multimap-size-type-stl-clr.md)|Typ (nieujemną) odległość między dwoma elementami.|  
 |[hash_multimap::value_compare (STL/CLR)](../dotnet/hash-multimap-value-compare-stl-clr.md)|Delegat porządkowania dla dwóch wartości elementu.|  
@@ -86,18 +89,18 @@ template<typename Key,
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[hash_multimap::BEGIN (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[hash_multimap::begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
 |[hash_multimap::bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md)|Zlicza zasobników.|  
-|[hash_multimap::Clear (STL/CLR)](../dotnet/hash-multimap-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
-|[hash_multimap::Count (STL/CLR)](../dotnet/hash-multimap-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
-|[hash_multimap::EMPTY (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[hash_multimap::clear (STL/CLR)](../dotnet/hash-multimap-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
+|[hash_multimap::count (STL/CLR)](../dotnet/hash-multimap-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
+|[hash_multimap::empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
 |[hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
 |[hash_multimap::equal_range (STL/CLR)](../dotnet/hash-multimap-equal-range-stl-clr.md)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|  
-|[hash_multimap::ERASE (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[hash_multimap::Find (STL/CLR)](../dotnet/hash-multimap-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
+|[hash_multimap::erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
+|[hash_multimap::find (STL/CLR)](../dotnet/hash-multimap-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
 |[hash_multimap::hash_delegate (STL/CLR)](../dotnet/hash-multimap-hash-delegate-stl-clr.md)|Kopiuje delegat wyznaczania wartości skrótu z kluczem.|  
 |[hash_multimap::hash_multimap (STL/CLR)](../dotnet/hash-multimap-hash-multimap-stl-clr.md)|Konstruuje obiekt kontenera.|  
-|[hash_multimap::INSERT (STL/CLR)](../dotnet/hash-multimap-insert-stl-clr.md)|Dodaje elementy.|  
+|[hash_multimap::insert (STL/CLR)](../dotnet/hash-multimap-insert-stl-clr.md)|Dodaje elementy.|  
 |[hash_multimap::key_comp (STL/CLR)](../dotnet/hash-multimap-key-comp-stl-clr.md)|Kopiuje porządkowania delegowanie dla dwa klucze.|  
 |[hash_multimap::load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md)|Oblicza średnią liczbę elementów na przedział.|  
 |[hash_multimap::lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md)|Wyszukuje początek zakresu, który jest zgodny z określonym kluczem.|  
@@ -114,7 +117,7 @@ template<typename Key,
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[hash_multimap::operator = (STL/CLR)](../dotnet/hash-multimap-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[hash_multimap::operator= (STL/CLR)](../dotnet/hash-multimap-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -173,4 +176,4 @@ template<typename Key,
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [Zestaw wielokrotny (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [Ustaw (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

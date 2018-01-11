@@ -31,11 +31,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c7b9e26013a505f5de137797964ed19376569a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colestreamfile-class"></a>Klasa COleStreamFile
 Reprezentuje strumienia danych ( `IStream`) w pliku złożonego jako część OLE magazynem strukturalnym.  
@@ -226,7 +227,7 @@ BOOL OpenStream(
   
 ## <a name="see-also"></a>Zobacz też  
  [Cfile — klasa](../../mfc/reference/cfile-class.md)   
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

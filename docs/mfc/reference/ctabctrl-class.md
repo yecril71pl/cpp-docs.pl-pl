@@ -83,11 +83,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e9720d407fb13b5a87335da08eb40c2886fdcdb3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed981a2f7345a59f3df479bcd82b9326fd84de12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctabctrl-class"></a>Ctabctrl — klasa
 Udostępnia funkcje formantu karty wspólne systemu Windows.  
@@ -825,4 +826,4 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Cheaderctrl — klasa](../../mfc/reference/cheaderctrl-class.md)   
- [Clistctrl — klasa](../../mfc/reference/clistctrl-class.md)
+ [Klasa CListCtrl](../../mfc/reference/clistctrl-class.md)

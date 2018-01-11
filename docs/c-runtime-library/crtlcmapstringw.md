@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88af917cb86826cc4615948f7a5d2e53e888bad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 261fb23c96bee0d646f64d587d9f7afecc59d4d2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Mapuje jedną ciągu znaków do drugiego wykonywania określone przekształcenie zależnych od ustawień regionalnych. Tej funkcji można również generowanie klucza sortowania dla ciągu wejściowego.  
@@ -75,7 +76,7 @@ int __crtLCMapStringW(
  Zero oznacza błąd. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać `GetLastError` funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `cchSrc` jest większa od zera i `lpSrcStr` jest ciągiem zakończonym znakiem null `__crtLCMapStringW` ustawia `cchSrc` do długości ciągu. Następnie `__crtLCMapStringW` wywołuje wersji szeroki ciąg (Unicode) `LCMapString` funkcji z określonymi parametrami. Aby uzyskać więcej informacji o tych parametrów i wartości zwracanej przez tę funkcję, zobacz `LCMapString` działać przy [biblioteki MSDN Library](http://go.microsoft.com/fwlink/?linkID=150542).  
+ Jeśli `cchSrc` jest większa od zera i `lpSrcStr` jest ciągiem zakończonym znakiem null `__crtLCMapStringW` ustawia `cchSrc` do długości ciągu. Następnie `__crtLCMapStringW` wywołuje wersji szeroki ciąg (Unicode) `LCMapString` funkcji z określonymi parametrami. Aby uzyskać więcej informacji o tych parametrów i wartości zwracanej przez tę funkcję, zobacz `LCMapString` działać przy [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542).  
   
 ## <a name="requirements"></a>Wymagania  
   

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a51dfc10ac0ae05a67a280b4b76c2c92eb57a0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c957b78eeb506e9f1f91a670cf5cc4d52ad72878
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="static-storage-class-specifier"></a>Specyfikator statycznej klasy magazynowania
 Zmienna zadeklarowana na poziomie wewnętrznym z **statycznych** Specyfikator klasy składującej ma globalny okres istnienia, ale nie jest widoczna tylko w bloku, w którym jest zadeklarowany. Stałe ciągi, przy użyciu **statycznych** jest przydatne, ponieważ jego eliminuje koszty częste inicjowania w funkcjach często nazywane.  

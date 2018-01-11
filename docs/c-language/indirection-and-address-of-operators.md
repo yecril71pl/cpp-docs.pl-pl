@@ -26,11 +26,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85d2510658bdf534f25ccc3efc29c88da1c93eff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 715221da8ea960f19e9c4ab0e386afc61c3439fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indirection-and-address-of-operators"></a>Operatory pośrednie i „Address-of”
 Operator pośredni (**\***) uzyskuje dostęp do wartości pośrednio, za pomocą wskaźnika. Operand musi być wartością wskaźnika. Wynik operacji jest wartością adresowaną przez operand; czyli wartość pod adresem, na który wskazuje operand. Typ wyniku jest typem adresowanym przez operand.  

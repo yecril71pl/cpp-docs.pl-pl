@@ -11,11 +11,12 @@ ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1dec9728679629f25ddbea93956fd25d9b29ef59
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 48afd89f4b795a4f582d8b9506c527a602a1d2b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Domyślnie wyłączone ostrzeżenia kompilatora
 
@@ -40,8 +41,8 @@ Następujące ostrzeżenia są domyślnie wyłączone.
 |[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) (poziom 4)|'identyfikator': konwersja z 'typ1' na 'typ2', możliwa utrata danych|
 |[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) (poziom 4)|'operator': konwersja z 'typ1' na 'typ2', możliwa utrata danych|
 |[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) (poziom 4)|'funkcja': nie podano prototypu funkcji: konwertowanie '()' na '(void)'|
-|[C4263](../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md) (poziom 4)|'funkcja': funkcja elementu członkowskiego nie zastępuje żadnej funkcji wirtualnego elementu członkowskiego klasy podstawowej|
-|[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md) (poziom 1)|'virtual_function': niedostępne zastąpienie dla funkcji wirtualnego elementu członkowskiego z klasy podstawowej 'class'; funkcja jest ukryta|
+|[C4263](../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md) (poziom 4)|'funkcja': funkcja składowa nie zastępuje żadnej funkcji wirtualnej składowej klasy podstawowej|
+|[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md) (poziom 1)|'virtual_function': niedostępne zastąpienie dla funkcji wirtualnej składowej z klasy podstawowej 'class'; funkcja jest ukryta|
 |[C4265](../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md) (poziom 3)|'class': klasa ma funkcje wirtualne, ale destruktor nie jest wirtualny|
 |[C4266](../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md) (poziom 4)|'funkcja': niedostępne zastąpienie dla funkcji wirtualnego elementu członkowskiego z typu podstawowego 'type'; funkcja jest ukryta|
 |[C4287](../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md) (poziom 3)|'operator': niezgodność stałej bez znaku/ujemnej|
@@ -53,7 +54,7 @@ Następujące ostrzeżenia są domyślnie wyłączone.
 |[C4355](../error-messages/compiler-warnings/compiler-warning-c4355.md)|'this': używany na liście inicjatora bazowego elementu członkowskiego|
 |[C4365](../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md) (poziom 4)|'działanie': konwersja z 'typ_1' na 'typ_2', niezgodność ze znakiem/bez znaku|
 |C4370 (poziom 3)|układ klasy zmienił się z poprzedniej wersji kompilatora ze względu na lepsze pakowanie|
-|C4371 (poziom 3)|układ klasy mógł się zmienić z poprzedniej wersji kompilatora ze względu na lepsze pakowanie elementu członkowskiego 'członek'|
+|C4371 (poziom 3)|układ klasy mógł się zmienić z poprzedniej wersji kompilatora ze względu na lepsze pakowanie składowej 'składowa'|
 |C4388 (poziom 4)|niezgodność ze znakiem/bez znaku|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (poziom 2)|'funkcja': podpis funkcji podpis zawiera typ 'typ'; nie jest bezpieczne przekazywanie obiektów C++ między kodem czystym i mieszanym lub macierzystym|
 |C4426 (poziom 1)|flagi optymalizacji zmieniły się po dołączeniu nagłówka, może #pragma Optimize()|
@@ -81,15 +82,15 @@ Następujące ostrzeżenia są domyślnie wyłączone.
 |C4599 (poziom 3)|"*opcji* *ścieżki*": numer argumentu wiersza polecenia *numer* nie pasuje do wstępnie skompilowanym nagłówkiem|
 |C4605 (poziom 1)|"/D*makro*" określony w bieżącym wierszu polecenia, ale nie została określona, gdy został skompilowany prekompilowanego nagłówka|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (poziom 3)|ostrzeżenie #pragma: nie ma numeru ostrzeżenia 'numer'|
-|[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (poziom 4)|'klasa pochodna': nie można wygenerować konstruktora domyślnego, ponieważ domyślny konstruktor klasy podstawowej jest niedostępny|
-|[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) (poziom 4)|'klasa pochodna': nie można wygenerować konstruktora kopiowania, ponieważ konstruktor kopiowania klasy podstawowej jest niedostępny|
-|[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (poziom 4)|'klasa pochodna': nie można wygenerować operatora przypisania, ponieważ operator przypisania klasy podstawowej jest niedostępny|
+|[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (poziom 4)|„klasa pochodna”: nie można wygenerować konstruktora domyślnego, ponieważ domyślny konstruktor klasy bazowej jest niedostępny|
+|[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) (poziom 4)|„klasa pochodna”: nie można wygenerować konstruktora kopiowania, ponieważ konstruktor kopiowania klasy bazowej jest niedostępny|
+|[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (poziom 4)|„klasa pochodna”: nie można wygenerować operatora przypisania, ponieważ operator przypisania klasy bazowej jest niedostępny|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (poziom 1)|dwuznaki nieobsługiwane z -Ze. Sekwencja znaków 'dwuznak' nie jest interpretowana jako alternatywny token dla 'char'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (poziom 3)|'instancja': konstrukcja lokalnego obiektu statycznego nie jest bezpieczna pod względem wątków|
 |C4647 (poziom 3)|Zmiana zachowania: __is_pod (*typu*) ma inną wartość w poprzednich wersjach|
 |C4654 (poziom 4)|Kod umieszczony przed obejmują prekompilowanego nagłówka wiersza zostanie zignorowany. Dodaj kod do wstępnie skompilowanego nagłówka.|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (poziom 4)|"*symbol*"nie jest zdefiniowany jako preprocesor makra, zastępując "0" do"*dyrektywy*"|
-|C4682 (poziom 4)|"*symbol*": nie określonego atrybutu parametru bezpośredniego, domyślnie na [in]|
+|[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (poziom 4)|"*symbol*": nie określonego atrybutu parametru bezpośredniego, domyślnie na [in]|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (poziom 3)|"*typ zdefiniowany przez użytkownika*": możliwe zmiany w zachowaniu, zmiana UDT zwracać konwencji wywoływania|
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (poziom 1)|"*funkcja*": podpis z innych niż nieprywatnego elementu członkowskiego zawiera prywatny typ macierzysty "native_type" zestawu|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (poziom 4)|"*funkcja*": funkcja nie została wbudowana|
@@ -153,4 +154,4 @@ Ostrzeżenia zostały wyłączone domyślnie wersji kompilatora przed programu V
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ostrzeżenie](../preprocessor/warning.md)
+[ostrzeżenie](../preprocessor/warning.md)

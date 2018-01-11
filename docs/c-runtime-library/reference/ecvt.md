@@ -33,11 +33,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 09fa0329da2e2c143c219291c3b8c2018f84e445
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 237924bce3bb4b659e72cec060738035d91c7cbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ecvt"></a>_ecvt
 Konwertuje `double` numer na ciąg. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [_ecvt_s —](../../c-runtime-library/reference/ecvt-s.md).  
@@ -124,4 +125,4 @@ source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [atof —, _atof_l —, _wtof — _wtof_l —](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
  [_fcvt —](../../c-runtime-library/reference/fcvt.md)   
- [_gcvt —](../../c-runtime-library/reference/gcvt.md)
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)

@@ -32,11 +32,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f53f9a32da84c450825fc61b8316593e1041784c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0227c6bd088337a4ad3024faebed2c72d870d360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale-class"></a>locale — Klasa
 Klasa opisująca obiekt ustawień regionalnych, który hermetyzuje informacje specyficzne dla kultury jako zbiór zestawu reguł, które wspólnie definiują specyficzne środowisko zlokalizowane.  
@@ -169,14 +170,14 @@ cout.imbue(loc);
   
 |||  
 |-|-|  
-|[Classic](#classic)|Funkcja statycznego elementu członkowskiego zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.|  
-|[globalne](#global)|Resetuje domyślne ustawienia lokalne dla programu.|  
+|[Classic](#classic)|Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.|  
+|[global](#global)|Resetuje domyślne ustawienia lokalne dla programu.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
-|[operator! =](#op_neq)|Testuje dwa ustawienia lokalne pod kątem nierówności.|  
+|[operator!=](#op_neq)|Testuje dwa ustawienia lokalne pod kątem nierówności.|  
 |[operator)](#op_call)|Porównuje dwa `basic_string` obiektów.|  
 |[operator ==](#op_eq_eq)|Testuje dwa ustawienia lokalne pod kątem równości.|  
   
@@ -184,8 +185,8 @@ cout.imbue(loc);
   
 |||  
 |-|-|  
-|[aspekt](#facet_class)|Klasa, która służy jako klasa podstawowa dla wszystkich zestawów reguł ustawień regionalnych.|  
-|[Identyfikator](#id_class)|Klasa elementu członkowskiego zapewnia unikatową identyfikację zestawu reguł używaną jako indeks do wyszukiwania zestawów reguł w ustawieniach regionalnych.|  
+|[aspekt](#facet_class)|Klasa, która służy jako klasa bazowa dla wszystkich zestawów reguł ustawień regionalnych.|  
+|[id](#id_class)|Klasa składowej zapewnia unikatową identyfikację zestawu reguł używaną jako indeks do wyszukiwania zestawów reguł w ustawieniach regionalnych.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<ustawień regionalnych >  
@@ -231,7 +232,7 @@ static const int none = 0;
  Użytkownik poświadcza dowolnego grupy kategorii, za pomocą `OR` za pomocą tych stałych jako w **pieniężnego** &#124; **czas**.  
   
 ##  <a name="classic"></a>Locale::Classic  
- Funkcja statycznego elementu członkowskiego zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.  
+ Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.  
   
 ```  
 static const locale& classic();
@@ -328,7 +329,7 @@ int main() {
 ```  
   
 ##  <a name="facet_class"></a>facet — klasa  
- Klasa, która służy jako klasa podstawowa dla wszystkich zestawów reguł ustawień regionalnych.  
+ Klasa, która służy jako klasa bazowa dla wszystkich zestawów reguł ustawień regionalnych.  
 
 ```    
 class facet { 
@@ -392,7 +393,7 @@ The previous locale was: C
 ```  
   
 ##  <a name="id_class"></a>ID — klasa  
- Klasa elementu członkowskiego zapewnia unikatową identyfikację zestawu reguł używaną jako indeks do wyszukiwania zestawów reguł w ustawieniach regionalnych.  
+ Klasa składowej zapewnia unikatową identyfikację zestawu reguł używaną jako indeks do wyszukiwania zestawów reguł w ustawieniach regionalnych.  
   
 Identyfikator klasy {chronione: id(); private: id(const id&) / / nie zdefiniowano void operator =(const id&) / / nie zdefiniowano};  
   

@@ -32,21 +32,22 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c14f4bf492b18107aefc744d6e443fdeef3fec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81ab3701ac99aece4710208a0a5d19ce645d287a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone, i _tzname
 `_daylight`, `_dstbias`, `_timezone`, i `_tzname` są używane w niektórych procedury Data i godzina zmiany czasu lokalnego. Te zmienne globalne są używane w bardziej bezpieczne wersji funkcjonalności, których należy użyć zamiast zmiennych globalnych.  
   
 |Zmienna globalna|Odpowiednik funkcjonalności|  
 |---------------------|---------------------------|  
-|`_daylight`|[_get_daylight —](../c-runtime-library/reference/get-daylight.md)|  
-|`_dstbias`|[_get_dstbias —](../c-runtime-library/reference/get-dstbias.md)|  
-|`_timezone`|[_get_timezone —](../c-runtime-library/reference/get-timezone.md)|  
-|`_tzname`|[_get_tzname —](../c-runtime-library/reference/get-tzname.md)|  
+|`_daylight`|[_get_daylight](../c-runtime-library/reference/get-daylight.md)|  
+|`_dstbias`|[_get_dstbias](../c-runtime-library/reference/get-dstbias.md)|  
+|`_timezone`|[_get_timezone](../c-runtime-library/reference/get-timezone.md)|  
+|`_tzname`|[_get_tzname](../c-runtime-library/reference/get-tzname.md)|  
   
  Zostały zgłoszone następujące w Time.h.  
   
@@ -75,4 +76,4 @@ extern char *_tzname[2];
  [_get_daylight —](../c-runtime-library/reference/get-daylight.md)   
  [_get_dstbias —](../c-runtime-library/reference/get-dstbias.md)   
  [_get_timezone —](../c-runtime-library/reference/get-timezone.md)   
- [_get_tzname —](../c-runtime-library/reference/get-tzname.md)
+ [_get_tzname](../c-runtime-library/reference/get-tzname.md)

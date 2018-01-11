@@ -39,11 +39,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4f0dcc7490ee6b2d9468bc1c5f83a4585f073295
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c24a7426c788ac7ecfc98f3e649397912960505a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 Tłumaczy wielobajtowe pierwszego znaku w ciągu typu narrow na równoważne znaku UTF-16 lub UTF-32.  
@@ -113,4 +114,4 @@ size_t mbrtoc32(
  [c16rtomb, c32rtomb](../../c-runtime-library/reference/c16rtomb-c32rtomb1.md)   
  [mbrtowc —](../../c-runtime-library/reference/mbrtowc.md)   
  [mbsrtowcs —](../../c-runtime-library/reference/mbsrtowcs.md)   
- [mbsrtowcs_s —](../../c-runtime-library/reference/mbsrtowcs-s.md)
+ [mbsrtowcs_s](../../c-runtime-library/reference/mbsrtowcs-s.md)

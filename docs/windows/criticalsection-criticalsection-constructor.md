@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bf4e9cd4d4fde31f1809e7d583e662188558d5b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 532a7b2e046bbdb64db118741a939dadb049f081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>CriticalSection::CriticalSection — Konstruktor
 Inicjuje obiekt synchronizacji, który jest podobny do obiektu mutex, ale mogą być używane przez wątki tylko jednego procesu.  
@@ -37,7 +40,7 @@ explicit CriticalSection(
  Spin liczbę elementów w obiekcie sekcja krytyczna. Wartość domyślna to 0.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat sekcje crticial i spincounts, zobacz **InitializeCriticalSectionAndSpinCount** funkcji w sekcji synchronizacja dokumentacja interfejsu API systemu Windows zawiera.  
+ Aby uzyskać więcej informacji na temat sekcje krytyczne i spincounts, zobacz **InitializeCriticalSectionAndSpinCount** funkcji w sekcji synchronizacja dokumentacja interfejsu API systemu Windows zawiera.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
@@ -45,4 +48,4 @@ explicit CriticalSection(
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Criticalsection — klasa](../windows/criticalsection-class.md)
+ [CriticalSection, klasa](../windows/criticalsection-class.md)

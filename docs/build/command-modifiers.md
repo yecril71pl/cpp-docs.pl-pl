@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c1790a89381219191f273cfacb16e69b1495171a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 610725bf52522cd5041d2f6dcadb422bf942458a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-modifiers"></a>Modyfikatory poleceń
 Można określić co najmniej jeden Modyfikatory poleceń poprzedzających polecenia, opcjonalnie oddzielone spacjami lub kart. Podobnie jak w przypadku poleceń, można wcięty modyfikatorów.  
@@ -32,4 +33,4 @@ Można określić co najmniej jeden Modyfikatory poleceń poprzedzających polec
 |**!** *polecenie*|Wykonuje *polecenia* dla każdego pliku zależnego Jeśli *polecenia* używa  **$ \* \***  (wszystkie pliki zależne w zależności) lub **$?** (wszystkie pliki zależne w zależności z sygnaturą czasową nowsze niż wersja docelowa).|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Polecenia w pliku reguł programu make](../build/commands-in-a-makefile.md)
+ [Polecenia w pliku reguł programu Make](../build/commands-in-a-makefile.md)

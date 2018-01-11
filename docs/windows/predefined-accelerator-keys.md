@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee7aed9bfcbc105892e647c5e59b45805120ba39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b04ab7fafba9f17aeba4f15f937972389467593c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="predefined-accelerator-keys"></a>Wstępnie zdefiniowane klawisze skrótów
 Istnieje szereg wstępnie zdefiniowane klawisze skrótów, które mogą być częścią projekt aplikacji systemu Windows. Niektóre z tych klawiszy wirtualnych są środowiska systemu Windows. Inne przeglądarki pomocy technicznej lub aplikacje Unicode. Można użyć dowolnej z tych kluczy w dowolnym akceleratora.  

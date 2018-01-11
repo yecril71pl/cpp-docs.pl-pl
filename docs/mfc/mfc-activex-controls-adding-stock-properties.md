@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6523e5758e96c140b05f8416ba886a1e8636cc7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed6fec6c878fe505b18a39df1200117f4b426878
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Kontrolki ActiveX MFC: dodawanie właściwości standardowych
 Właściwości podstawowe różnią się od właściwości niestandardowe, są one już zaimplementowany przez klasę `COleControl`. `COleControl`zawiera funkcje wstępnie zdefiniowanego elementu członkowskiego, które obsługuje wspólne właściwości formantu. Niektóre typowe właściwości obejmują Podpis formantu i kolory pierwszego planu i tła. Uzyskać informacji o innych właściwości podstawowych, zobacz [giełdowych właściwości obsługiwane przez Kreatora dodawania właściwości](#_core_stock_properties_supported_by_classwizard) dalszej części tego artykułu. Wpisy mapy wysyłania dla właściwości podstawowe są zawsze poprzedzone **DISP_STOCKPROP**.  
@@ -108,4 +109,4 @@ Właściwości podstawowe różnią się od właściwości niestandardowe, są o
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Formanty MFC ActiveX: właściwości](../mfc/mfc-activex-controls-properties.md)   
  [Formanty MFC ActiveX: metody](../mfc/mfc-activex-controls-methods.md)   
- [Colecontrol — klasa](../mfc/reference/colecontrol-class.md)
+ [Klasa COleControl](../mfc/reference/colecontrol-class.md)

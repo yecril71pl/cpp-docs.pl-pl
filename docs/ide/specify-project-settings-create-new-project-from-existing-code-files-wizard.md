@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac4e4a0e9454567be98e4534614c725df70368ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2cf1e8eba11063f7f2e46f836cd2ef84cc70dfe8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Określ ustawienia projektu, Kreator Utwórz nowy projekt z istniejących plików z kodem
 Umożliwia określenie tej strony kreator Utwórz nowy projekt z istniejących plików kodu:  
@@ -29,7 +30,7 @@ Umożliwia określenie tej strony kreator Utwórz nowy projekt z istniejących p
 -   Ustawienia do dopasowania dla określonego typu nowy projekt, aby wygenerować kompilacji  
   
 ## <a name="task-list"></a>Lista zadań  
- [Porady: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+ [Instrukcje: tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>Lista elementów UI  
  **Program Visual Studio**  
@@ -73,4 +74,4 @@ Umożliwia określenie tej strony kreator Utwórz nowy projekt z istniejących p
   
 ## <a name="see-also"></a>Zobacz też  
  [Określ ustawienia konfiguracji debugowania, Utwórz nowy projekt z istniejących Kreatora plików kodu](../ide/specify-debug-configuration-settings.md)   
- [Określ ustawienia konfiguracji wydania, Utwórz nowy projekt z istniejących Kreatora plików kodu](../ide/specify-release-configuration.md)
+ [Określanie ustawień konfiguracji wydania, Kreator Utwórz nowy projekt z istniejących plików z kodem](../ide/specify-release-configuration.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6bdd34d34fc7b1395a6f06a052ed21e60bf319d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3452bccd4bdf94c84e4549f99829aaa087e1803b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="persistence-of-ole-controls"></a>Stan trwały formantów OLE
 Jeden możliwości formantów OLE jest właściwość trwałości (lub serializacji), co pozwala kontrolkę OLE do odczytu lub zapisu wartości właściwości do i z pliku lub strumienia. Aplikacji kontenera można użyć serializacji do przechowywania wartości właściwości formantu, nawet po aplikacji został zniszczony formantu. Wartości właściwości formantu OLE następnie można odczytać z pliku lub strumienia, gdy nowe wystąpienie kontrolki jest tworzona w późniejszym czasie.  

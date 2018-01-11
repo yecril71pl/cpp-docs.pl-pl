@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 987d15638446cf09ffda9d6e2922867f7a975918
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c037d1b433344b0b831be11b0972ffb475f29f11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-user-interface-issues"></a>Kontenery: kwestie dotyczące interfejsu użytkownika
 Należy dodać do aplikacji kontenera interfejsu użytkownika do odpowiedniego zarządzania elementami łączenie i osadzanie szereg funkcji. Te funkcje obejmują zmiany w strukturze menu i zdarzenia, które obsługuje aplikację. Aby uzyskać szczegółowe informacje na ich temat zobacz następujące artykuły:  

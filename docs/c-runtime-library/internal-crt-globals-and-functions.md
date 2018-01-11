@@ -851,11 +851,12 @@ ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2b3dea72647bc4c4f0d49b0af1de9d6bcb0f116
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: bab5e5e8316ff181ce8b2a190c721336fb5032cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internal-crt-globals-and-functions"></a>Wewnętrzny Globals CRT i funkcje  
   
@@ -985,7 +986,7 @@ Te funkcje i makra funkcji są używane do implementowania CRT i standardowej bi
 |_EH_prolog|  
 |_errno|  
 |_except_handler2|  
-|[_except_handler3 —](../c-runtime-library/except-handler3.md)|  
+|[_except_handler3](../c-runtime-library/except-handler3.md)|  
 |_except_handler4_common|  
 |_except1|  
 |[_execute_onexit_table](../c-runtime-library/execute-onexit-table-initialize-onexit-table-register-onexit-function.md)|  
@@ -1071,7 +1072,7 @@ Te funkcje i makra funkcji są używane do implementowania CRT i standardowej bi
 |__libm_sse2_tan|  
 |_libm_sse2_tan_precise|  
 |__libm_sse2_tanf|  
-|[_local_unwind2 —](../c-runtime-library/local-unwind2.md)|  
+|[_local_unwind2](../c-runtime-library/local-unwind2.md)|  
 |_local_unwind4|  
 |_lock_locales|  
 |_longjmpex|  
@@ -1126,7 +1127,7 @@ Te funkcje i makra funkcji są używane do implementowania CRT i standardowej bi
 |_seh_longjmp_unwind4|  
 |[__set_app_type](../c-runtime-library/internal-set-app-type.md)|  
 |_set_malloc_crt_max_wait|  
-|[_setjmp3 —](../c-runtime-library/setjmp3.md)|  
+|[_setjmp3](../c-runtime-library/setjmp3.md)|  
 |__setlc_active|  
 |[___setlc_active_func](../c-runtime-library/setlc-active-func-unguarded-readlc-active-add-func.md)|  
 |[__setusermatherr](../c-runtime-library/setusermatherr.md)|  

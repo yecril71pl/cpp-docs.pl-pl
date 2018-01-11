@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 04c76cee41a6cf79379b65a276f24d56f7090b98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e5526b0f8826a91eb0b1c5a6eae250abbb02fcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Używanie pól wywołania zwrotnego w formancie selektora dat i godzin
 Oprócz standardowych format znaków, które definiują pola selektora daty i godziny dane wyjściowe można dostosować, określając niektórych części ciągu formatu niestandardowego pola wywołania zwrotnego. Aby zadeklarować pole wywołania zwrotnego, zawierają co najmniej jeden znak "X" (88 kodu ASCII) dowolne miejsce w treści ciąg formatu. Na przykład, następujący ciąg "" obecnie jest: "yy" / "MM" / "dd" (dzień "X") ""powoduje, że formant wyboru daty i godziny wyświetlić bieżącą wartość jako rok, miesiąc, datę oraz finally dzień roku.  
@@ -75,5 +76,5 @@ Oprócz standardowych format znaków, które definiują pola selektora daty i go
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

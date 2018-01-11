@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0985459e74586151ef0dbe12f9d46ec87728c6ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 605e428c0712a657b7b3d0df35558a61c6dbc54a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference — klasa
 Tworzy typ referencyjny wartościowany prawostronnie parametru szablonu, jeśli jest to typ obiektu lub funkcji. W przeciwnym razie ze względu na semantykę odwołania zwijanie typ jest taki sam, jak parametr szablonu.  
@@ -79,4 +80,4 @@ All static_assert tests of add_rvalue_reference passed.
 ## <a name="see-also"></a>Zobacz też  
  [< type_traits >](../standard-library/type-traits.md)   
  [add_lvalue_reference — klasa](../standard-library/add-lvalue-reference-class.md)   
- [is_rvalue_reference — klasa](../standard-library/is-rvalue-reference-class.md)
+ [is_rvalue_reference, klasa](../standard-library/is-rvalue-reference-class.md)

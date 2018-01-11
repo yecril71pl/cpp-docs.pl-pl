@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 774d7398e871de88540856d9ced6a44f037b648e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e3ea32a33a3194282657999712effbad0e334bea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Rozwiązywanie problemów związanych z aplikacjami izolowanymi C/C++ oraz aplikacjami wykonywanymi równocześnie
 Podczas ładowania aplikacji C/C++ może zakończyć się niepowodzeniem, jeśli nie można odnaleźć zależnych bibliotek. W tym artykule opisano niektóre typowe przyczyny niepowodzenia aplikacji C/C++ załadować, a także sugeruje czynności umożliwiające rozwiązywanie problemów.  
@@ -110,4 +111,4 @@ Podczas ładowania aplikacji C/C++ może zakończyć się niepowodzeniem, jeśli
   
 ## <a name="see-also"></a>Zobacz też  
  [Aplikacje izolowane i zestawy Side-by-side](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
- [Tworzenie C/C++ izolowane Side-by-side zestawów ani aplikacji](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+ [Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8482e50eb57013d366389217ad13a6c5b14c092
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1bcfccb7b9252bf28e5b180b1df6b6d36fcbfbd0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Ustawienie kursora &#39; s Hot miejscu (edytor obrazów dla ikon)
 Punkt aktywny o [kursora](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) jest punktem na które Windows odwołuje się w bieżącej pozycji kursora śledzenia. Domyślnie punkt aktywny jest ustawiona w lewym górnym rogu kursora (współrzędne 0,0). Właściwości punktu aktywnego w [okna właściwości](/visualstudio/ide/reference/properties-window) zawiera współrzędne punktu aktywnego.  
@@ -37,7 +40,7 @@ Punkt aktywny o [kursora](../windows/icons-and-cursors-image-resources-for-displ
     > [!TIP]
     >  Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Te porady mogą pomóc w identyfikacji funkcji każdego przycisku.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](https://msdn.microsoft.com/library/f45fce5x.aspx) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](https://msdn.microsoft.com/library/xbx3z216.aspx). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Wymagania  
   

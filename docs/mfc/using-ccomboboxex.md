@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 803f58daf4a4be4773c81db51b6289602f930820
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59732c2315bafca46bdcf99f31beaa528336669b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ccomboboxex"></a>Korzystanie z CComboBoxEx
 Formancie rozszerzonego pola kombi jest rozszerzeniem kontrolki pola kombi standardowe, który zapewnia macierzystą obsługę obrazów elementów. Obrazy te można wskazać stan poszczególnych elementów w polu kombi, takich jak aktualnie zaznaczone i niezaznaczone elementy. Aby udostępnić obrazy elementu łatwe, formantu zapewnia obsługę listy obrazu.  
@@ -32,14 +33,14 @@ Formancie rozszerzonego pola kombi jest rozszerzeniem kontrolki pola kombi stand
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   
--   [Tworzenie w formancie rozszerzonego pola kombi](../mfc/creating-an-extended-combo-box-control.md)  
+-   [Tworzenie kontrolki rozszerzonego pola kombi](../mfc/creating-an-extended-combo-box-control.md)  
   
--   [Używanie list obrazów w formancie rozszerzonego pola kombi](../mfc/using-image-lists-in-an-extended-combo-box-control.md)  
+-   [Używanie list obrazów w kontrolce rozszerzonego pola kombi](../mfc/using-image-lists-in-an-extended-combo-box-control.md)  
   
 -   [Ustawianie obrazów dla pojedynczego elementu](../mfc/setting-the-images-for-an-individual-item.md)  
   
--   [Przetwarzanie komunikatów powiadomień w formantach rozszerzonego pola kombi](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)  
+-   [Przetwarzanie komunikatów powiadomień w kontrolkach rozszerzonego pola kombi](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

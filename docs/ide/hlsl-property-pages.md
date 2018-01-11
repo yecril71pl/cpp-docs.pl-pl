@@ -14,24 +14,25 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33c40b6f240d89c9f38b1fba075679da26b1cb21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82fdaeb1da213a435718d074b33f385145c211d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hlsl-property-pages"></a>Strony właściwości HLSL
 Strony właściwości HLSL kompilatora (fxc.exe) służy do konfigurowania poszczególnych cieniowania HLSL pliki zostaną utworzone. Właściwości są podzielone na trzy kategorie:  
   
--   [Strony właściwości HLSL: Ogólne](../ide/hlsl-property-pages-general.md)  
+-   [Strony właściwości HLSL: ogólne](../ide/hlsl-property-pages-general.md)  
   
      Dostarcza właściwości, aby określić najczęściej używanych opcji dla kompilatora HLSL.  
   
--   [Strony właściwości HLSL: Zaawansowane](../ide/hlsl-property-pages-advanced.md)  
+-   [Strony właściwości HLSL: zaawansowane](../ide/hlsl-property-pages-advanced.md)  
   
      Dostarcza właściwości, aby określić dodatkowe opcje kompilatora HLSL.  
   
--   [Strony właściwości HLSL: Pliki wyjściowe](../ide/hlsl-property-pages-output-files.md)  
+-   [Strony właściwości HLSL: pliki wyjściowe](../ide/hlsl-property-pages-output-files.md)  
   
      Dostarcza właściwości, aby określić, jak pliki są danymi wyjściowymi kompilatora HLSL.  
   

@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63ec2b42f405c19c6e95c14327ee90039426e1c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 103f02109558d9f301f9f1eec867e9379c102e17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits — Struktura
 Definiuje wspólne właściwości obiektu semafora.  
@@ -36,7 +39,7 @@ struct SemaphoreTraits : HANDLENullTraits;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SemaphoreTraits::Unlock — Metoda](../windows/semaphoretraits-unlock-method.md)|Kontrola wersji zasobu udostępnionego.|  
+|[SemaphoreTraits::Unlock, metoda](../windows/semaphoretraits-unlock-method.md)|Kontrola wersji zasobu udostępnionego.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `HANDLENullTraits`  
@@ -49,4 +52,4 @@ struct SemaphoreTraits : HANDLENullTraits;
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+ [Microsoft::WRL::Wrappers::HandleTraits, przestrzeń nazw](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

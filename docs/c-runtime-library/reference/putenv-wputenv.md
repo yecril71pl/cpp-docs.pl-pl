@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fdb0ee73b6ee289a97e3debfb7b4b5427ba003f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 509766f9f324c1dd9488488861e7c64200d44837
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 Tworzy, modyfikuje lub usuwa zmienne środowiskowe. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_putenv_s —, _wputenv_s —](../../c-runtime-library/reference/putenv-s-wputenv-s.md).  
@@ -110,4 +111,4 @@ int _wputenv(
 ## <a name="see-also"></a>Zobacz też  
  [Proces i kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)   
  [getenv —, _wgetenv —](../../c-runtime-library/reference/getenv-wgetenv.md)   
- [_searchenv —, _wsearchenv —](../../c-runtime-library/reference/searchenv-wsearchenv.md)
+ [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)

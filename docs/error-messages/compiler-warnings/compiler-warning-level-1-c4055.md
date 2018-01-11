@@ -1,5 +1,3 @@
----
----
 # <a name="compiler-warning-level-1-c4055"></a>Kompilator C4055 ostrzegawcze (poziom 1)  
   
 "konwersji": ze wskaźnika danych "type1" do wskaźnika funkcji "type2".  

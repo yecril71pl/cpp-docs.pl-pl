@@ -49,11 +49,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a774573a2a42904d89159697dd444db98ddc8243
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9678ef4472f2bcb44a04d3484988033542aae243
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>Program CMFCVisualManagerVS2005 — klasa
 `CMFCVisualManagerVS2005`daje aplikacji wygląd Microsoft Visual Studio 2005.  
@@ -400,4 +401,4 @@ virtual void OnUpdateSystemColors();
  [Klasa CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)   
  [Program CMFCVisualManagerOfficeXP — klasa](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
  [Program CMFCVisualManagerWindows — klasa](../../mfc/reference/cmfcvisualmanagerwindows-class.md)   
- [Program CMFCVisualManagerOffice2003 — klasa](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)
+ [Klasa CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)

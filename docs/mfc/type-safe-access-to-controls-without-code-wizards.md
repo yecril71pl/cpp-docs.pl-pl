@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50206ec8196247deb4a63f7ac2685eed47fab5bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c5a4adce63851620326add61857433b32e1fad5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>Bezpieczny dostęp do kontrolek bez użycia kreatorów kodu
 Pierwszym sposobem tworzenia bezpieczny dostęp do formantów używa wbudowanej funkcji członkowskich można rzutować typu zwracanego klasy `CWnd`w `GetDlgItem` funkcji członkowskiej do odpowiedniego typu formantu C++, jak w poniższym przykładzie:  
@@ -33,5 +34,5 @@ Pierwszym sposobem tworzenia bezpieczny dostęp do formantów używa wbudowanej 
   
 ## <a name="see-also"></a>Zobacz też  
  [Bezpieczny dostęp do formantów w oknie dialogowym](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
- [Bezpieczny dostęp do formantów z użyciem kreatorów kodu](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+ [Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu](../mfc/type-safe-access-to-controls-with-code-wizards.md)
 

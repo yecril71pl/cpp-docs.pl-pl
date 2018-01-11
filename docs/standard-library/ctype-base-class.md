@@ -15,14 +15,15 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dc45c762c4abe772164f2db365361b9f2277a260
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83f467f8d06956678795bf97fed60fe9f22c32f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctypebase-class"></a>ctype_base — Klasa
-Klasa służy jako klasę podstawową dla aspekty szablonu klasy [ctype](../standard-library/ctype-class.md). Klasa podstawowa dla klasy ctype, która jest używana do definiowania typów wyliczeń używanych w celu klasyfikowania lub testowania znaków indywidualnie lub w ramach całych zakresów.  
+Klasa służy jako klasę podstawową dla aspekty szablonu klasy [ctype](../standard-library/ctype-class.md). Klasa bazowa dla klasy ctype, która jest używana do definiowania typów wyliczeń używanych w celu klasyfikowania lub testowania znaków indywidualnie lub w ramach całych zakresów.  
   
 ## <a name="syntax"></a>Składnia  
   

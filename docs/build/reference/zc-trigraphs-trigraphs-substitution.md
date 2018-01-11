@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 56068f6cb630ac12b9c8417940411616cec65c69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 739e772c87c937a552e07a32fa5bb80b1a1e2508
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs (Podstawianie trigramów)
 Gdy **/Zc: trigraphs** określono kompilator zastępuje sekwencja znaków — trigram przy użyciu odpowiedniego znak interpunkcyjny. Aby wyłączyć — trigram podstawienia, określ **/Zc:trigraphs-**. Domyślnie **/Zc: trigraphs** jest wyłączona.  
@@ -41,4 +42,4 @@ Gdy **/Zc: trigraphs** określono kompilator zastępuje sekwencja znaków — tr
   
 ## <a name="see-also"></a>Zobacz też  
  [/Zc (zgodność)](../../build/reference/zc-conformance.md)   
- [Trigramów](../../c-language/trigraphs.md)
+ [Trigramy](../../c-language/trigraphs.md)

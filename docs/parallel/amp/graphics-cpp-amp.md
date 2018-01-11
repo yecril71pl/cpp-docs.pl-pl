@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 601cf58a8238e34b1186e9d5d022a315342d4e6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="graphics-c-amp"></a>Grafika (C++ AMP)
 C++ AMP zawiera kilka interfejsów API w [Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) przestrzeni nazw, która umożliwia dostęp do pomocy technicznej tekstury na procesorach GPU. Niektóre typowe scenariusze są następujące:  
@@ -32,7 +33,7 @@ C++ AMP zawiera kilka interfejsów API w [Concurrency::graphics](../../parallel/
  `norm` i `unorm` typy są typy skalarne, które ograniczyć zakres `float` wartości, jest to nazywane *ładunku*. Te typy mogą zostać jawnie utworzone na podstawie innych typów skalarnych. W rzutowanie, wartość jest najpierw rzutowane na `float` , a następnie zablokowane za pomocą odpowiednich regionie, który jest dozwolony przez normy [-1,0, 1.0] lub unorm — [0.0, 1.0]. Rzutowanie +/-nieskończoności zwraca +/-1. Rzutowanie NaN nie jest zdefiniowana. Norm — może zostać niejawnie utworzone na podstawie unorm — i nie ma bez utraty danych. Operator niejawnej konwersji do typu float jest zdefiniowany w tych typów. Operatorów binarnych są definiowane pomiędzy te typy i inne wbudowane typy skalarne, takie jak `float` i `int`: +, -, *, /, =,! =, >, \<, > =, < =. Złożone operatory przypisania są również obsługiwane: +=,-=, \*= / =. Jednoargumentowy operator negacji (-) jest zdefiniowany dla typów normy.  
   
 ## <a name="short-vector-library"></a>Biblioteka krótkich wektora  
- Krótki biblioteki wektor zawiera niektóre z funkcji [typu wektora](http://go.microsoft.com/fwlink/p/linkid=248500) który jest zdefiniowany w HLSL i zazwyczaj jest używane do definiowania tekseli. Wektor krótkie jest strukturą danych, który przechowuje wartości 1 do 4 tego samego typu. Obsługiwane typy to `double`, `float`, `int`, `norm`, `uint`, i `unorm`. W poniższej tabeli przedstawiono nazwy typu. Dla każdego typu, jest również odpowiedniego `typedef` które nie mają znaku podkreślenia w nazwie. Typy, które mają znaki podkreślenia są w [Namespace Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, które nie mają znaki podkreślenia są w [Namespace CONCURRENCY::Graphics:: Direct3D —](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) tak, aby ich wyraźnie rozdzieleniu z typów podstawowych podobnie o nazwie takich jak `__int8` i `__int16`.  
+ Krótki biblioteki wektor zawiera niektóre z funkcji [typu wektora](http://go.microsoft.com/fwlink/p/?linkid=248500) który jest zdefiniowany w HLSL i zazwyczaj jest używane do definiowania tekseli. Wektor krótkie jest strukturą danych, który przechowuje wartości 1 do 4 tego samego typu. Obsługiwane typy to `double`, `float`, `int`, `norm`, `uint`, i `unorm`. W poniższej tabeli przedstawiono nazwy typu. Dla każdego typu, jest również odpowiedniego `typedef` które nie mają znaku podkreślenia w nazwie. Typy, które mają znaki podkreślenia są w [Namespace Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, które nie mają znaki podkreślenia są w [Namespace CONCURRENCY::Graphics:: Direct3D —](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) tak, aby ich wyraźnie rozdzieleniu z typów podstawowych podobnie o nazwie takich jak `__int8` i `__int16`.  
   
 ||Długość 2|Długość 3|Długość 4|  
 |-|--------------|--------------|--------------|  
@@ -71,7 +72,7 @@ C++ AMP zawiera kilka interfejsów API w [Concurrency::graphics](../../parallel/
   
 -   Wektor krótkich zawiera dwie lub cztery składniki. Jedynym wyjątkiem jest `double_4`, co jest niedozwolone.  
   
- `texture` Obiekt może mieć Rząd równy 1, 2 lub 3. `texture` Obiektu można przechwycić tylko przez odwołanie w wyrażeniu lambda wywołania `parallel_for_each`. Tekstura jest przechowywana na procesora GPU jako obiekty tekstury Direct3D. Aby uzyskać więcej informacji na temat tekstur i tekseli w Direct3D, zobacz [wprowadzenie do tekstury programu Direct3D 11](http://go.microsoft.com/fwlink/p/linkid=248502).  
+ `texture` Obiekt może mieć Rząd równy 1, 2 lub 3. `texture` Obiektu można przechwycić tylko przez odwołanie w wyrażeniu lambda wywołania `parallel_for_each`. Tekstura jest przechowywana na procesora GPU jako obiekty tekstury Direct3D. Aby uzyskać więcej informacji na temat tekstur i tekseli w Direct3D, zobacz [wprowadzenie do tekstury programu Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
   
  Używanego typu teksela może być jedną z wielu formatów tekstury, które są używane w programowania grafiki. Na przykład formatu RGBA można użyć 32-bitowy, z 8 bitów R, G, B i skalarne elementy. Sprzęt tekstury karty graficznej mogą uzyskiwać dostęp do poszczególnych elementów na podstawie formatu. Na przykład jeśli używasz formatu RGBA tekstury sprzętu można wyodrębnić każdy element 8-bitową w wersji 32-bitowej. W C++ AMP można ustawić bitów na skalarne elementu z teksela, dzięki czemu można automatycznie dostęp do poszczególnych elementów skalarne w kodzie, bez użycia przesunięcia bitowego.  
   
@@ -429,7 +430,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
   
 ## <a name="interoperability"></a>Współdziałanie  
 
- Współdziałanie obsługuje środowiska uruchomieniowego C++ AMP `texture<T,1>` i [interfejsu ID3D11Texture1D](http://go.microsoft.com/fwlink/p/LinkId=248503), między `texture<T,2>` i [interfejsu ID3D11Texture2D](http://go.microsoft.com/fwlink/p/LinkId=255317)oraz między `texture<T,3>`i [ID3D11Texture3D interfejsu](http://go.microsoft.com/fwlink/p/LinkId=255377). [Get_texture —](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) ma metodę `texture` obiektu i zwraca `IUnknown` interfejsu. [Make_texture —](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) ma metodę `IUnknown` interfejsu i `accelerator_view` obiektu i zwraca `texture` obiektu.  
+ Współdziałanie obsługuje środowiska uruchomieniowego C++ AMP `texture<T,1>` i [interfejsu ID3D11Texture1D](http://go.microsoft.com/fwlink/p/?linkId=248503), między `texture<T,2>` i [interfejsu ID3D11Texture2D](http://go.microsoft.com/fwlink/p/?linkId=255317)oraz między `texture<T,3>`i [ID3D11Texture3D interfejsu](http://go.microsoft.com/fwlink/p/?linkId=255377). [Get_texture —](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) ma metodę `texture` obiektu i zwraca `IUnknown` interfejsu. [Make_texture —](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) ma metodę `IUnknown` interfejsu i `accelerator_view` obiektu i zwraca `texture` obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [double_2 — klasa](../../parallel/amp/reference/double-2-class.md)   
@@ -451,4 +452,4 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
  [uint_4 — klasa](../../parallel/amp/reference/uint-4-class.md)   
  [unorm_2 — klasa](../../parallel/amp/reference/unorm-2-class.md)   
  [unorm_3 — klasa](../../parallel/amp/reference/unorm-3-class.md)   
- [unorm_4 — klasa](../../parallel/amp/reference/unorm-4-class.md)
+ [unorm_4, klasa](../../parallel/amp/reference/unorm-4-class.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4191adb10693ea224a89fb62c09a2299c3a6bee2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8bd42a7da91f984c4cedc4deafc0ab9f4417495
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrolling-and-scaling-views"></a>Przewijanie i skalowanie widoków
 MFC obsługuje widoki, które przewiń i widoki, które są automatycznie przeskalowany do rozmiaru okna ramki, która wyświetla je. Klasa `CScrollView` obsługuje oba rodzaje widoków.  
@@ -55,5 +56,5 @@ MFC obsługuje widoki, które przewiń i widoki, które są automatycznie przesk
  Widok, aby automatycznie Dopasuj rozmiar okna ramki, należy służy `CScrollView` skalowania zamiast przewijania. Widok logiczny jest rozciągany tak, lub zmniejszyć, aby dokładnie dopasować obszaru klienckiego okna. Skalowanie widoku nie ma pasków przewijania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Korzystanie z widoków](../mfc/using-views.md)
+ [Używanie widoków](../mfc/using-views.md)
 

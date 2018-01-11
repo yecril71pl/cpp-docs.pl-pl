@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a0747147f247f7400e2455fdf5f63e61378e96e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16e4a707c4bc1f0fde76ab3a146424d2d34d5ec8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-item-information"></a>Informacje o elementach kontrolki drzewa
 Kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) oferują szereg funkcji elementów członkowskich, które pobrać informacji na temat elementów w formancie. [GetItem](../mfc/reference/ctreectrl-class.md#getitem) funkcji członkowskiej pobiera niektóre lub wszystkie dane skojarzone z elementem. Dane te mogą obejmować tekstu elementu, stan, obrazów, liczbę elementów podrzędnych i wartość zdefiniowane przez aplikację 32-bitowych danych. Istnieje również [SetItem](../mfc/reference/ctreectrl-class.md#setitem) funkcji, które mogą zostać umieszczone niektóre lub wszystkie dane skojarzone z elementem.  
@@ -33,5 +34,5 @@ Kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) oferują sze
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

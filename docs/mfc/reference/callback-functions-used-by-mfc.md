@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c25693b31359b70ba36fd43394b7074e464c954
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkcje wywołania zwrotnego używane przez MFC
 Trzy funkcje wywołania zwrotnego są wyświetlane w programie Microsoft Foundation Class Library. Te funkcje wywołania zwrotnego są przekazywane do [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), i [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Należy pamiętać, że wszystkie funkcje wywołania zwrotnego musi przechwytują wyjątki MFC przed zwróceniem do systemu Windows, ponieważ nie może być wyjątek w granicach wywołania zwrotnego. Aby uzyskać więcej informacji o wyjątkach, zobacz artykuł [wyjątki](../../mfc/exception-handling-in-mfc.md).  

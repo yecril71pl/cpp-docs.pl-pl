@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7390f68d7bc7c7856d1fef35ba1fb180b8341559
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f7633bcd784fa7b9b5f7255e25e8ddc52c5b93db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers — Przestrzeń nazw
 Określa typy otoki zasobów nabycia jest inicjowania (RAII), upraszczające Zarządzanie okresem istnienia obiektów, ciągi i uchwytów.  
@@ -42,15 +45,15 @@ namespace Microsoft::WRL::Wrappers;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Criticalsection — klasa](../windows/criticalsection-class.md)|Reprezentuje obiekt sekcja krytyczna.|  
-|[Event — klasa (Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows)](../windows/event-class-windows-runtime-cpp-template-library.md)|Reprezentuje zdarzenie.|  
-|[Handlet — klasa](../windows/handlet-class.md)|Reprezentuje uchwyt do obiektu.|  
-|[Hstring — klasa](../windows/hstring-class.md)|Zapewnia obsługę manipulowanie HSTRING uchwytów.|  
-|[Hstringreference — klasa](../windows/hstringreference-class.md)|Reprezentuje wartość HSTRING utworzona na podstawie istniejących parametrów.|  
+|[CriticalSection, klasa](../windows/criticalsection-class.md)|Reprezentuje obiekt sekcja krytyczna.|  
+|[Event, klasa (Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows)](../windows/event-class-windows-runtime-cpp-template-library.md)|Reprezentuje zdarzenie.|  
+|[HandleT, klasa](../windows/handlet-class.md)|Reprezentuje uchwyt do obiektu.|  
+|[HString, klasa](../windows/hstring-class.md)|Zapewnia obsługę manipulowanie HSTRING uchwytów.|  
+|[HStringReference, klasa](../windows/hstringreference-class.md)|Reprezentuje wartość HSTRING utworzona na podstawie istniejących parametrów.|  
 |[Mutex — klasa](../windows/mutex-class1.md)|Reprezentuje obiekt synchronizacji wyłącznie kontrolujące zasobu udostępnionego.|  
-|[Roinitializewrapper — klasa](../windows/roinitializewrapper-class.md)|Inicjuje środowiska uruchomieniowego systemu Windows.|  
-|[Klasa semaforu](../windows/semaphore-class.md)|Reprezentuje obiekt synchronizacji, która kontroluje, czy obsługują ograniczoną liczbę użytkowników zasobu udostępnionego.|  
-|[Srwlock — klasa](../windows/srwlock-class.md)|Reprezentuje cienki czytnika/blokadę.|  
+|[RoInitializeWrapper, klasa](../windows/roinitializewrapper-class.md)|Inicjuje środowiska uruchomieniowego systemu Windows.|  
+|[Semaphore, klasa](../windows/semaphore-class.md)|Reprezentuje obiekt synchronizacji, która kontroluje, czy obsługują ograniczoną liczbę użytkowników zasobu udostępnionego.|  
+|[SRWLock, klasa](../windows/srwlock-class.md)|Reprezentuje cienki czytnika/blokadę.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
@@ -58,4 +61,4 @@ namespace Microsoft::WRL::Wrappers;
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

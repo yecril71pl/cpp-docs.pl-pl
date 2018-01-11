@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 622853951c9119bb2a32e9e624966bf77579b557
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-routing"></a>Routing poleceń
 Twoje odpowiedzialność w pracy z poleceń jest ograniczona do tworzenia mapy komunikatów połączeń między polecenia i ich funkcje programu obsługi, zadań, które okno właściwości. Należy również napisać większości programy obsługi poleceń.  
@@ -53,5 +54,5 @@ Twoje odpowiedzialność w pracy z poleceń jest ograniczona do tworzenia mapy k
  W przypadku, gdy numerowane wpisów w drugiej kolumnie powyższej tabeli zawierać inne obiekty, takie jak dokument, zobacz odpowiadający mu element w pierwszej kolumnie. Na przykład podczas czytania w drugiej kolumnie czy widok przekazuje polecenia do swoich dokumentów, zobacz wpis "Dokumentu" w pierwszej kolumnie, które należy wykonać dodatkowe routingu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Jak struktura wywołuje program obsługi](../mfc/how-the-framework-calls-a-handler.md)
+ [Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
 

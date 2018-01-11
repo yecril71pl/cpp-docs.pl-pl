@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a11b7847e83a129099e0f54cccce35032cf68fe4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70262673935e67fc6ee868a400fd57358a31547a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 Ustawia określony obiekt numer zamówienia alokacji (tylko wersja do debugowania) punkt przerwania.  

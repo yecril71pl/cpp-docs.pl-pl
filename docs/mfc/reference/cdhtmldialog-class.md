@@ -127,11 +127,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a82079e43a5c4e1bfbcb9bb339663314d4ab2a49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb546ffc35438e19bd5230d6e71db28061109bc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog — klasa
 Służy do tworzenia okien dialogowych, które używają HTML zamiast zasoby okna dialogowego do zaimplementowania interfejsu użytkownika.  
@@ -394,7 +395,7 @@ void DDX_DHtml_CheckBox(
  `szId`  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- *wartość*  
+ *value*  
  Wartość wymianie.  
   
 ### <a name="example"></a>Przykład  
@@ -463,7 +464,7 @@ void DDX_DHtml_ElementText(
  *identyfikator DISPID*  
  Identyfikator wysyłania elementu HTML, z którym chcesz wymiany danych.  
   
- *wartość*  
+ *value*  
  Wartość wymianie.  
   
 ##  <a name="ddx_dhtml_radio"></a>CDHtmlDialog::DDX_DHtml_Radio  
@@ -483,7 +484,7 @@ void DDX_DHtml_Radio(
  `szId`  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- *wartość*  
+ *value*  
  Wartość wymianie.  
   
 ##  <a name="ddx_dhtml_selectindex"></a>CDHtmlDialog::DDX_DHtml_SelectIndex  
@@ -503,7 +504,7 @@ void DDX_DHtml_SelectIndex(
  `szId`  
  Wartość określona dla parametru identyfikatora kontrolka HTML.  
   
- *wartość*  
+ *value*  
  Wartość wymianie.  
   
 ##  <a name="ddx_dhtml_selectstring"></a>CDHtmlDialog::DDX_DHtml_SelectString  
@@ -523,7 +524,7 @@ void DDX_DHtml_SelectString(
  `szId`  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- *wartość*  
+ *value*  
  Wartość wymianie.  
   
 ##  <a name="ddx_dhtml_selectvalue"></a>CDHtmlDialog::DDX_DHtml_SelectValue  
@@ -543,7 +544,7 @@ void DDX_DHtml_SelectValue(
  `szId`  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- *wartość*  
+ *value*  
  Wartość wymianie.  
   
 ### <a name="example"></a>Przykład  
@@ -1392,6 +1393,6 @@ STDMETHOD(UpdateUI)(void);
 ## <a name="see-also"></a>Zobacz też  
  [DHtmlExplore próbki MFC](../../visual-cpp-samples.md)   
  [Makra pomocnika DDX_DHtml](#ddx_dhtml_helper_macros)   
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 

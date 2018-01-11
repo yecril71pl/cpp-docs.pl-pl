@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9e75a88eb4093387317a3cdb84be4b0b73f4201
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51f630f5a3fe1ee5833ac2796ff2acb1841af4c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Menu Plik w aplikacji bazy danych MFC
 Jeśli tworzenie aplikacji bazy danych MFC i nie używaj serializacji, jak należy interpretować otwarte, Zamknij, Zapisz i Zapisz jako polecenia w menu Plik w czasie nie wytyczne dla tego pytania poniżej przedstawiono kilka sugestii:  
@@ -42,5 +43,5 @@ Jeśli tworzenie aplikacji bazy danych MFC i nie używaj serializacji, jak nale�
 -   Ponieważ aplikacje baz danych zwykle nie zapisuj całego dokumentu, prawdopodobnie należy do usunięcia zapisywania i Zapisz jako implementacji, chyba że serializacji dokumentu jest używany do przechowywania informacji o profilu. W przeciwnym razie może zastosować polecenia Zapisz jako, na przykład "zatwierdzić transakcji." Zobacz [22 Uwaga techniczna](../mfc/tn022-standard-commands-implementation.md) Aby uzyskać więcej informacji na temat tych poleceń zastępowanie.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Serializacja: Serializacja vs. Bazy danych we/wy](../mfc/serialization-serialization-vs-database-input-output.md)
+ [Serializacja: serializacja a Bazy danych we/wy](../mfc/serialization-serialization-vs-database-input-output.md)
 

@@ -144,11 +144,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5250ab17fa6da4ed54d5bda84e32b409ca53869d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math — Przestrzeń nazw
 Funkcje w `precise_math` zgodnych C99 są przestrzeni nazw. Zarówno pojedynczy dokładność i Podwójna precyzja wersje każdej funkcji są uwzględniane. Na przykład `acos` jest wersja podwójnej precyzji i `acosf` jest wersja pojedynczej precyzji. Te funkcje, w tym funkcji pojedynczej precyzji wymagają rozszerzoną obsługę podwójnej precyzji na akceleratora. Można użyć [Accelerator::supports_double_precision —](accelerator-class.md#supports_double_precision) ustalenie, jeśli te funkcje można uruchamiać na określonych akceleratora. 
@@ -224,8 +225,8 @@ namespace precise_math;
 |[fminf —](concurrency-precise-math-namespace-functions.md#fminf)|Określić minimalną wartość liczbową argumentów|  
 |[fmod — funkcja (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Przeciążone. Oblicza resztę zmiennoprzecinkowe z _X/_Y|  
 |[fmodf —](concurrency-precise-math-namespace-functions.md#fmodf)|Oblicza resztę zmiennoprzecinkowe z _X/_Y|  
-|[fpclassify —](concurrency-precise-math-namespace-functions.md#fpclassify)|Przeciążone. Klasyfikuje wartość argumentu, ponieważ NaN, nieskończone, normalny, subnormal, zero|  
-|[frexp —](concurrency-precise-math-namespace-functions.md#frexp)|Przeciążone. Pobiera mantysa i wykładnik _X|  
+|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Przeciążone. Klasyfikuje wartość argumentu, ponieważ NaN, nieskończone, normalny, subnormal, zero|  
+|[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Przeciążone. Pobiera mantysa i wykładnik _X|  
 |[frexpf —](concurrency-precise-math-namespace-functions.md#frexpf)|Pobiera mantysa i wykładnik _X|  
 |[hypot —](concurrency-precise-math-namespace-functions.md#hypot)|Przeciążone. Oblicza pierwiastek kwadratowy liczby sumę kwadratów _X i _Y|  
 |[hypotf —](concurrency-precise-math-namespace-functions.md#hypotf)|Oblicza pierwiastek kwadratowy liczby sumę kwadratów _X i _Y|  
@@ -235,7 +236,7 @@ namespace precise_math;
 |[isinf —](concurrency-precise-math-namespace-functions.md#isinf)|Przeciążone. Określa, czy argument jest nieskończoność.|  
 |[isNaN](concurrency-precise-math-namespace-functions.md#isnan)|Przeciążone. Określa, czy argument jest wartością typu NaN|  
 |[isnormal —](concurrency-precise-math-namespace-functions.md#isnormal)|Przeciążone. Określa, czy argument jest zwykłym|  
-|[ldexp —](concurrency-precise-math-namespace-functions.md#ldexp)|Przeciążone. Oblicza liczba rzeczywista z mantysa i wykładnik|  
+|[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Przeciążone. Oblicza liczba rzeczywista z mantysa i wykładnik|  
 |[ldexpf —](concurrency-precise-math-namespace-functions.md#ldexpf)|Oblicza liczba rzeczywista z mantysa i wykładnik|  
 |[lgamma —](concurrency-precise-math-namespace-functions.md#lgamma)|Przeciążone. Oblicza logarytm naturalny wartość bezwzględną liczby gamma argumentu|  
 |[lgammaf —](concurrency-precise-math-namespace-functions.md#lgammaf)|Oblicza logarytm naturalny wartość bezwzględną liczby gamma argumentu|  
@@ -306,4 +307,4 @@ namespace precise_math;
  **Namespace:** współbieżności  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

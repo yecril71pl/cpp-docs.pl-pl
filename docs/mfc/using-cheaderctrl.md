@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 316066f8476d413f9a92e11cc69f709080829f18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88b4da42944c3c42e48fae4c0cf503f7f6ace1a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cheaderctrl"></a>Korzystanie z CHeaderCtrl
 Użyj formantu nagłówka reprezentowany przez klasę [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), aby wyświetlić nagłówki kolumn do listy kolumnowym. Na przykład formantu nagłówka będą przydatne podczas implementowania kontroli kolumny w arkuszu kalkulacyjnym.  
@@ -33,30 +34,30 @@ Użyj formantu nagłówka reprezentowany przez klasę [CHeaderCtrl](../mfc/refer
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   
--   [Formant nagłówka i formant listy](../mfc/header-control-and-list-control.md)  
+-   [Kontrolka nagłówka i kontrolka listy](../mfc/header-control-and-list-control.md)  
   
--   [Przykłady formantów nagłówka](../mfc/header-control-examples.md)  
+-   [Przykłady kontrolek nagłówka](../mfc/header-control-examples.md)  
   
--   [Elementy nagłówka w formancie nagłówka](../mfc/header-items-in-a-header-control.md)  
+-   [Elementy nagłówka w kontrolce nagłówka](../mfc/header-items-in-a-header-control.md)  
   
 -   [Dostosowywanie wyglądu elementu nagłówka](../mfc/customizing-the-header-item-s-appearance.md)  
   
 -   [Zapewnianie obsługi przeciągania i upuszczania w przypadku elementów nagłówka](../mfc/providing-drag-and-drop-support-for-header-items.md)  
   
--   [Używanie list obrazów z formantami nagłówka](../mfc/using-image-lists-with-header-controls.md)  
+-   [Używanie list obrazów z kontrolkami nagłówka](../mfc/using-image-lists-with-header-controls.md)  
   
--   [Tworzenie formantów nagłówka rysowanych przez właściciela](../mfc/making-owner-drawn-header-controls.md)  
+-   [Tworzenie kontrolek nagłówka rysowanych przez właściciela](../mfc/making-owner-drawn-header-controls.md)  
   
--   [Praca z formantem nagłówka](../mfc/working-with-a-header-control.md)  
+-   [Praca z kontrolką nagłówka](../mfc/working-with-a-header-control.md)  
   
--   [Tworzenie formantu nagłówka](../mfc/creating-the-header-control.md)  
+-   [Tworzenie kontrolki nagłówka](../mfc/creating-the-header-control.md)  
   
--   [Dodawanie elementów do formantu nagłówka](../mfc/adding-items-to-the-header-control.md)  
+-   [Dodawanie elementów do kontrolki nagłówka](../mfc/adding-items-to-the-header-control.md)  
   
--   [Określanie kolejności elementów w formancie nagłówka](../mfc/ordering-items-in-the-header-control.md)  
+-   [Określanie kolejności elementów w kontrolce nagłówka](../mfc/ordering-items-in-the-header-control.md)  
   
--   [Przetwarzanie powiadomień dotyczących formantu karty](../mfc/processing-header-control-notifications.md)  
+-   [Przetwarzanie powiadomień dotyczących kontrolki karty](../mfc/processing-header-control-notifications.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd387ad53bc02995c5be76819e9db1f2f7d6edbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b6ff5f07e3662e61a7ba6260bb90459f3aebd7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: jak działają gniazda z archiwami
 W tym artykule opisano sposób [CSocket —](../mfc/reference/csocket-class.md) obiektu, [CSocketFile](../mfc/reference/csocketfile-class.md) obiektu, a [CArchive](../mfc/reference/carchive-class.md) obiektu połączone uprościć wysyłania i odbierania danych za pośrednictwem systemu Windows Gniazda.  

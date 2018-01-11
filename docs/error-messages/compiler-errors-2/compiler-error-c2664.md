@@ -15,11 +15,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 933ef66a4f4fabea46c3f1ebaede1ea51429141c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b35cc8e9935ba476854cce92918def7134198da2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2664"></a>C2664 błąd kompilatora
 "Funkcja": nie można przekonwertować argumentu n z "type1" na "type2"  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
 -   Jeśli to konieczne, podaj konwersję jawną.  
   
- C2664 może być też wygenerowany, jeśli klasa ukrywa element członkowski w jednej z jej klas podstawowych.  
+ C2664 może być też wygenerowany, jeśli klasa ukrywa składową w jednej z jej klas podstawowych.  
   
  Aby uzyskać więcej informacji, zobacz [porady: konwertowanie System::String na wchar_t * lub char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).  
   

@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e958328b2f434132ae1e9a2012983b10f04bc1f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b5d7bc352f536f427d14e495d8a218f27aceb102
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messagesbyname-class"></a>messages_byname — Klasa
 Klasy pochodne szablonu opisuje obiekt, który może służyć jako zestaw reguł komunikatów z danego ustawienia regionalne, włączanie pobieranie zlokalizowanych komunikatów.  

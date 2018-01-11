@@ -38,11 +38,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 431a79be49b723c874409c030a166a7ef78b9730
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38ab921dc120fc82e05845c62dcc355167ad09c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execvp-wexecvp"></a>_execvp, _wexecvp
 Ładuje i wykonuje nowych procesów podrzędnych.  
@@ -110,4 +111,4 @@ intptr_t _wexecvp(
  [exit, _exit — _exit —](../../c-runtime-library/reference/exit-exit-exit.md)   
  [_onexit —, _onexit_m —](../../c-runtime-library/reference/onexit-onexit-m.md)   
  [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md)   
- [System, _wsystem —](../../c-runtime-library/reference/system-wsystem.md)
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

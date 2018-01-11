@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a16b6fd7d166b7a997257bfd6cb741b82911c5bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 29a5eb3a085682f243f1497e56b12a0b7d760edb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Problemy z wersją w przypadku typów wartości zagnieżdżonych w typach natywnych (C++/CLI)
 Należy wziąć pod uwagę składnika zestawu podpisem (silnej nazwy), używany do tworzenia zestawu klienta. Składnik zawiera typ wartości, który jest używany w kliencie jako typ elementu Członkowskiego Unii macierzystego, klasy lub tablicy. W przypadku przyszłych wersji składnika zmiany rozmiaru lub układ typu wartości, klient musi ponownie kompilowana.  
@@ -84,4 +87,4 @@ S.i = 11
  Jednak jeśli dodasz innego członka do `struct S` w nested_value_types.cpp, (na przykład `double d;`) i skompiluj ponownie składnik bez konieczności ponownego kompilowania klienta, wynikiem jest nieobsługiwany wyjątek (typu <xref:System.IO.FileLoadException?displayProperty=fullName>).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Typy zarządzane (C + +/ CLI)](../dotnet/managed-types-cpp-cli.md)
+ [Typy zarządzane (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

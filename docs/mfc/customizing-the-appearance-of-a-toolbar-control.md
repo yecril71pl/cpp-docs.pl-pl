@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 452debf30eec9f5ca5eacd562302a578e0d0138a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c40b7e055585a11b90c2cec1fefb967b51b35cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Dostosowywanie wyglądu formantu paska narzędzi
 Klasa `CToolBarCtrl` udostępnia wiele style, które wpływają na wygląd (i, czasami zachowanie) obiektu paska narzędzi. Zmodyfikuj obiekt paska narzędzi przez ustawienie `dwCtrlStyle` parametr `CToolBarCtrl::Create` (lub `CToolBar::CreateEx`) funkcji członkowskiej, podczas tworzenia formantu paska narzędzi.  
@@ -62,5 +63,5 @@ Klasa `CToolBarCtrl` udostępnia wiele style, które wpływają na wygląd (i, c
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

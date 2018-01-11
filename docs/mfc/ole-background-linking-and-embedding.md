@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ecbc8bb39d9cba3a5d13567811221fe0a703ab5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d9b7de075b3c32d130639c60c7fcc389ae37da54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-background-linking-and-embedding"></a>Podstawy OLE: łączenie i osadzanie
 Za pomocą polecenia wklejania w aplikacji kontenera można utworzyć składnika osadzonego lub element osadzony. Źródło danych pod kątem element osadzony jest przechowywana jako część dokumentu OLE, który go zawiera. W ten sposób plik dokumentu do dokumentu edytora tekstów mogą zawierać tekst i również może zawierać mapy bitowe, wykresy, formuły lub typu danych.  
@@ -40,5 +41,5 @@ Za pomocą polecenia wklejania w aplikacji kontenera można utworzyć składnika
  [Podstawy OLE](../mfc/ole-background.md)   
  [Podstawy OLE: Kontenery i serwery](../mfc/ole-background-containers-and-servers.md)   
  [Kontenery: Elementy klienckie](../mfc/containers-client-items.md)   
- [Serwery: Elementy serwera](../mfc/servers-server-items.md)
+ [Serwery: elementy serwera](../mfc/servers-server-items.md)
 

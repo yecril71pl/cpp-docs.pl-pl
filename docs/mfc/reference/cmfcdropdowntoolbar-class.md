@@ -31,11 +31,12 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50ecdd614aaf3bd81817ff81a68818b6816c9a71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a2f53fa75d8637445e155043d6a40787402accb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolbar — klasa
 Pasek narzędzi, który jest wyświetlany, gdy użytkownik naciśnie i przechowuje przycisku paska narzędzi najwyższego poziomu.  
@@ -252,7 +253,7 @@ virtual void OnUpdateCmdUI(
  [CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
  [Klasa CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)   
- [Wskazówki: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+ [Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

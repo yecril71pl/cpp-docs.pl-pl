@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 817e710546a695addaa6cae0e266bd1ff1ddc701
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c47be3ddb2302124b233c39aaf8bd829cd481d79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarinfo-class"></a>Klasa CMFCToolBarInfo
 Zawiera identyfikatorów obrazów paska narzędzi w zależności od różnych stanów zasobów. `CMFCToolBarInfo`Klasa pomocy, który jest używany jako parametr typu jest [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metody.  

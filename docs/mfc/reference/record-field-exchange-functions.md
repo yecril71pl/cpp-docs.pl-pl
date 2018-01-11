@@ -56,11 +56,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a16876148aa73fada420a58aa4ba38b8a557ab93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-functions"></a>Funkcje wymiany pól rekordów
 W tym temacie wymieniono wymiana pól rekordów (RFX RFX zbiorcze i DFX) funkcje używane do automatyzowania transferu danych między obiektem zestawu rekordów a źródłem danych i wykonywać inne operacje na danych.  
@@ -144,7 +145,7 @@ void RFX_Binary(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu [CByteArray](cbytearray-class.md), pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `nMaxLength`  
@@ -178,7 +179,7 @@ void RFX_Bool(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu **BOOL**, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
 ### <a name="example"></a>Przykład  
@@ -206,7 +207,7 @@ void RFX_Byte(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu **BAJTÓW**, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
 ### <a name="example"></a>Przykład  
@@ -244,7 +245,7 @@ void RFX_Date(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w element członkowski danych wskazany; wartość do przeniesienia. Różne wersje funkcji wykonać różne typy danych dla wartości:  
   
  Pierwszą wersję funkcja przyjmuje odwołanie do [ctime —](../../atl-mfc-shared/reference/ctime-class.md) obiektu. Transferu z zestawu rekordów do źródła danych ta wartość jest pobierana z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
@@ -279,7 +280,7 @@ void RFX_Double(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu **podwójne**, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
 ### <a name="example"></a>Przykład  
@@ -307,7 +308,7 @@ void RFX_Int(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu `int`, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
 ### <a name="example"></a>Przykład  
@@ -336,7 +337,7 @@ value );
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu **długi**, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
 ### <a name="example"></a>Przykład  
@@ -364,7 +365,7 @@ void RFX_LongBinary(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu `CLongBinary`, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
 ### <a name="example"></a>Przykład  
@@ -392,7 +393,7 @@ void RFX_Single(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu **float**, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
 ### <a name="example"></a>Przykład  
@@ -424,7 +425,7 @@ void RFX_Text(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu `CString`, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `nMaxLength`  
@@ -697,7 +698,7 @@ void RFX_Int(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu `int`, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
 ### <a name="example"></a>Przykład  
@@ -873,7 +874,7 @@ void AFXAPI DFX_Binary(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu [CByteArray](cbytearray-class.md), pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `nPreAllocSize`  
@@ -915,7 +916,7 @@ void AFXAPI DFX_Bool(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu **BOOL**, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `dwBindOptions`  
@@ -953,7 +954,7 @@ void AFXAPI DFX_Byte(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu **BAJTÓW**, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `dwBindOptions`  
@@ -991,7 +992,7 @@ void AFXAPI DFX_Currency(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, ta wartość jest pobierana z elementu członkowskiego danych określonego typu [COleCurrency](colecurrency-class.md). W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `dwBindOptions`  
@@ -1029,7 +1030,7 @@ void AFXAPI DFX_DateTime(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. Funkcja przyjmuje odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) obiektu. Transferu z zestawu rekordów do źródła danych ta wartość jest pobierana z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `dwBindOptions`  
@@ -1070,7 +1071,7 @@ void AFXAPI DFX_Double(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu **podwójne**, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `dwBindOptions`  
@@ -1108,7 +1109,7 @@ void AFXAPI DFX_Long(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu **długi**, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `dwBindOptions`  
@@ -1148,7 +1149,7 @@ void AFXAPI DFX_LongBinary(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu [clongbinary —](clongbinary-class.md), pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  *dwPreAllocSize*  
@@ -1189,7 +1190,7 @@ void AFXAPI DFX_Short(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu **krótki**, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `dwBindOptions`  
@@ -1231,7 +1232,7 @@ void AFXAPI DFX_Single(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu **float**, pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `dwBindOptions`  
@@ -1270,7 +1271,7 @@ void AFXAPI DFX_Text(
  `szName`  
  Nazwa kolumny danych.  
   
- *wartość*  
+ *value*  
  Wartość przechowywana w elemencie członkowskim danych wskazany — wartość do przeniesienia. W przypadku przeniesienia z zestawu rekordów do źródła danych, wartości typu [cstring —](../../atl-mfc-shared/reference/cstringt-class.md), pochodzi z elementu członkowskiego określone dane. W przypadku przeniesienia ze źródła danych do zestawu rekordów wartość jest przechowywana w elemencie członkowskim określone dane.  
   
  `nPreAllocSize`  

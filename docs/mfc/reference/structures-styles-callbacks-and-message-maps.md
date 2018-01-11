@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3531ab24116cd64778f43604fa6196b9ffd67f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c341f208d9aa54e60568b066f462db65b9172394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Struktury, style, wywołania zwrotne i mapy komunikatów
 W tej sekcji omówiono struktury, style i funkcje wywołania zwrotnego używane przez Microsoft Foundation Class Library i mapy komunikatów MFC.  
@@ -42,7 +43,7 @@ W tej sekcji omówiono struktury, style i funkcje wywołania zwrotnego używane 
  W tym artykule opisano makra mapowania wiadomości i `CWnd` wpisy mapy wiadomości.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Przegląd biblioteki klas](../../mfc/class-library-overview.md)  
+ [Omówienie biblioteki klas](../../mfc/class-library-overview.md)  
  Zawiera klasy biblioteki MFC według kategorii.  
   
  [MFC — przykłady](../../visual-cpp-samples.md)  

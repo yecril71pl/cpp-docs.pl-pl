@@ -15,11 +15,12 @@ caps.latest.revision: "58"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e89416c18fce65f19ff63c73ef441ee0bdb6165
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bef9205fd583dd66a0f3cfe791ff95a861435c0
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ltrandomgt"></a>&lt;losowe&gt;
 Definiuje urządzeń Generowanie liczby losowej umożliwia utworzenie jednolicie rozproszonej liczb losowych.  
@@ -54,7 +55,7 @@ Definiuje urządzeń Generowanie liczby losowej umożliwia utworzenie jednolicie
   
 -   Parowanie najbardziej przydatne w przypadku większości aplikacji jest `mt19937` aparat z `uniform_int_distribution`, jak pokazano w [przykładowy kod](#code) dalszej części tego artykułu.  
   
- Istnieje wiele opcji do wyboru w `<random>` nagłówka i z nich jest preferowane nieaktualne funkcji C Runtime `rand()`. Aby uzyskać informacje o problem z `rand()` i w jaki sposób `<random>` dotyczy tych nieprawidłowości, zobacz [ten film](http://go.microsoft.com/fwlink/?LinkId=397615).  
+ Istnieje wiele opcji do wyboru w `<random>` nagłówka i z nich jest preferowane nieaktualne funkcji C Runtime `rand()`. Aby uzyskać informacje o problem z `rand()` i w jaki sposób `<random>` dotyczy tych nieprawidłowości, zobacz [ten film](http://go.microsoft.com/fwlink/p/?linkid=397615).  
   
 ##  <a name="code"></a>Przykłady  
  Poniższy przykład kodu pokazuje sposób generowania niektórych liczb losowych w takim przypadku pięć ich przy użyciu generator utworzone za pomocą inicjatora deterministyczna.  
@@ -227,7 +228,7 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
 |||  
 |-|-|  
-|[random_device — klasa](../standard-library/random-device-class.md)|Generuje deterministyczna, bezpieczne kryptograficznie losowe sekwencji za pomocą zewnętrznego urządzenia. Zazwyczaj używany do generowania aparatu. Niska wydajność bardzo wysokiej jakości. Aby uzyskać więcej informacji, zobacz [uwagi](#comments).|  
+|[random_device, klasa](../standard-library/random-device-class.md)|Generuje deterministyczna, bezpieczne kryptograficznie losowe sekwencji za pomocą zewnętrznego urządzenia. Zazwyczaj używany do generowania aparatu. Niska wydajność bardzo wysokiej jakości. Aby uzyskać więcej informacji, zobacz [uwagi](#comments).|  
   
 ####  <a name="typedefs"></a>Definicje typów aparat wstępnie zdefiniowanych parametrów  
  Tworzenie wystąpień aparaty i adapterów aparatu. Aby uzyskać więcej informacji, zobacz [aparaty i dystrybucji](#engdist).  
@@ -267,18 +268,18 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
 |||  
 |-|-|  
-|[linear_congruential_engine — klasa](../standard-library/linear-congruential-engine-class.md)|Generuje losowe sekwencji przy użyciu algorytmu congruential liniowej. Najbardziej simplistic i najniższym jakości.|  
-|[mersenne_twister_engine — klasa](../standard-library/mersenne-twister-engine-class.md)|Generuje losowe sekwencji za pomocą algorytmu — trąba powietrzna w ramach projektu Mersenne. Najbardziej złożonych i jest najwyższej jakości, z wyjątkiem random_device — klasa. Bardzo duża wydajność.|  
-|[subtract_with_carry_engine — klasa](../standard-library/subtract-with-carry-engine-class.md)|Generuje losowe sekwencji za pomocą algorytmu subtract z przenoszące. Udoskonalenia w `linear_congruential_engine`, ale znacznie mniejszą jakości i wydajność niż `mersenne_twister_engine`.|  
+|[linear_congruential_engine, klasa](../standard-library/linear-congruential-engine-class.md)|Generuje losowe sekwencji przy użyciu algorytmu congruential liniowej. Najbardziej simplistic i najniższym jakości.|  
+|[mersenne_twister_engine, klasa](../standard-library/mersenne-twister-engine-class.md)|Generuje losowe sekwencji za pomocą algorytmu — trąba powietrzna w ramach projektu Mersenne. Najbardziej złożonych i jest najwyższej jakości, z wyjątkiem random_device — klasa. Bardzo duża wydajność.|  
+|[subtract_with_carry_engine, klasa](../standard-library/subtract-with-carry-engine-class.md)|Generuje losowe sekwencji za pomocą algorytmu subtract z przenoszące. Udoskonalenia w `linear_congruential_engine`, ale znacznie mniejszą jakości i wydajność niż `mersenne_twister_engine`.|  
   
 ####  <a name="engadapt"></a>Aparat szablonów karty  
  Aparat adapterów są szablony, które dostosowania innych aparatów (podstawowy). Zazwyczaj są tworzone z [wstępnie zdefiniowane typedef aparat](#typedefs) i przekazywane do [dystrybucji](#distributions). Aby uzyskać więcej informacji, zobacz [aparaty i dystrybucji](#engdist) sekcji.  
   
 |||  
 |-|-|  
-|[discard_block_engine — klasa](../standard-library/discard-block-engine-class.md)|Generuje losowe sekwencji odrzucając wartości zwracanych przez silnik podstawowej.|  
-|[independent_bits_engine — klasa](../standard-library/independent-bits-engine-class.md)|Generuje losowe sekwencję z określoną liczbę bitów przez przepakowaniu bitów spośród wartości zwróconych przez silnik podstawowej.|  
-|[shuffle_order_engine — klasa](../standard-library/shuffle-order-engine-class.md)|Generuje losowe sekwencji zmiana kolejności wartości zwracane z jego podstawowej aparatu.|  
+|[discard_block_engine, klasa](../standard-library/discard-block-engine-class.md)|Generuje losowe sekwencji odrzucając wartości zwracanych przez silnik podstawowej.|  
+|[independent_bits_engine, klasa](../standard-library/independent-bits-engine-class.md)|Generuje losowe sekwencję z określoną liczbę bitów przez przepakowaniu bitów spośród wartości zwróconych przez silnik podstawowej.|  
+|[shuffle_order_engine, klasa](../standard-library/shuffle-order-engine-class.md)|Generuje losowe sekwencji zmiana kolejności wartości zwracane z jego podstawowej aparatu.|  
   
  [[Aparat szablonów](#eng)]  
   
@@ -289,8 +290,8 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
 |||  
 |-|-|  
-|[uniform_int_distribution — klasa](../standard-library/uniform-int-distribution-class.md)|Tworzy dystrybucji wartości jednolitego całkowitą w zakresie w interwale zamknięte \[a, b] (włącznie włącznie).|  
-|[uniform_real_distribution — klasa](../standard-library/uniform-real-distribution-class.md)|Tworzy uniform rzeczywistym dystrybucji wartość (zmiennoprzecinkowa) w zakresie w zakresie połowy Otwórz [a b) (wraz z wartościami granicznymi wyłączne).|  
+|[uniform_int_distribution, klasa](../standard-library/uniform-int-distribution-class.md)|Tworzy dystrybucji wartości jednolitego całkowitą w zakresie w interwale zamknięte \[a, b] (włącznie włącznie).|  
+|[uniform_real_distribution, klasa](../standard-library/uniform-real-distribution-class.md)|Tworzy uniform rzeczywistym dystrybucji wartość (zmiennoprzecinkowa) w zakresie w zakresie połowy Otwórz [a b) (wraz z wartościami granicznymi wyłączne).|  
 |[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Tworzy nawet dystrybucji wartości rzeczywistych (liczba zmiennoprzecinkowa) danego dokładności między [0, 1) (wraz z wartościami granicznymi wyłączne).|  
   
  [[Losowych liczb dystrybucje](#distributions)]  
@@ -299,10 +300,10 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
 |||  
 |-|-|  
-|[bernoulli_distribution — klasa](../standard-library/bernoulli-distribution-class.md)|Tworzy Rozkład Bernoulliego `bool` wartości.|  
-|[binomial_distribution — klasa](../standard-library/binomial-distribution-class.md)|Tworzy dwumianowy z wartości całkowitych.|  
-|[geometric_distribution — klasa](../standard-library/geometric-distribution-class.md)|Tworzy geometrycznych rozkład wartości będące liczbami całkowitymi.|  
-|[negative_binomial_distribution — klasa](../standard-library/negative-binomial-distribution-class.md)|Tworzy ujemny dwumianowy z wartości całkowitych.|  
+|[bernoulli_distribution, klasa](../standard-library/bernoulli-distribution-class.md)|Tworzy Rozkład Bernoulliego `bool` wartości.|  
+|[binomial_distribution, klasa](../standard-library/binomial-distribution-class.md)|Tworzy dwumianowy z wartości całkowitych.|  
+|[geometric_distribution, klasa](../standard-library/geometric-distribution-class.md)|Tworzy geometrycznych rozkład wartości będące liczbami całkowitymi.|  
+|[negative_binomial_distribution, klasa](../standard-library/negative-binomial-distribution-class.md)|Tworzy ujemny dwumianowy z wartości całkowitych.|  
   
  [[Losowych liczb dystrybucje](#distributions)]  
   
@@ -310,12 +311,12 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
 |||  
 |-|-|  
-|[cauchy_distribution — klasa](../standard-library/cauchy-distribution-class.md)|Tworzy dystrybucji Cauchy wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
-|[chi_squared_distribution — klasa](../standard-library/chi-squared-distribution-class.md)|Tworzy rozkład chi kwadrat wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
-|[fisher_f_distribution — klasa](../standard-library/fisher-f-distribution-class.md)|Tworzy F dystrybucji (znanej także jako jego Snedecor F dystrybucji lub dystrybucji Snedecor Fishera) wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
-|[lognormal_distribution — klasa](../standard-library/lognormal-distribution-class.md)|Tworzy rozkładu normalnego dziennika wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
-|[normal_distribution — klasa](../standard-library/normal-distribution-class.md)|Tworzy normalnej dystrybucji (Gaussa) wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
-|[student_t_distribution — klasa](../standard-library/student-t-distribution-class.md)|Tworzy studenta *t*— rozkład wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
+|[cauchy_distribution, klasa](../standard-library/cauchy-distribution-class.md)|Tworzy dystrybucji Cauchy wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
+|[chi_squared_distribution, klasa](../standard-library/chi-squared-distribution-class.md)|Tworzy rozkład chi kwadrat wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
+|[fisher_f_distribution, klasa](../standard-library/fisher-f-distribution-class.md)|Tworzy F dystrybucji (znanej także jako jego Snedecor F dystrybucji lub dystrybucji Snedecor Fishera) wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
+|[lognormal_distribution, klasa](../standard-library/lognormal-distribution-class.md)|Tworzy rozkładu normalnego dziennika wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
+|[normal_distribution, klasa](../standard-library/normal-distribution-class.md)|Tworzy normalnej dystrybucji (Gaussa) wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
+|[student_t_distribution, klasa](../standard-library/student-t-distribution-class.md)|Tworzy studenta *t*— rozkład wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
   
  [[Losowych liczb dystrybucje](#distributions)]  
   
@@ -323,11 +324,11 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
 |||  
 |-|-|  
-|[exponential_distribution — klasa](../standard-library/exponential-distribution-class.md)|Tworzy rozkład wykładniczy wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
-|[extreme_value_distribution — klasa](../standard-library/extreme-value-distribution-class.md)|Tworzy dystrybucji najwyższą wartość rzeczywista (liczba zmiennoprzecinkowa) wartości.|  
-|[gamma_distribution — klasa](../standard-library/gamma-distribution-class.md)|Tworzy dystrybucji gamma wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
-|[poisson_distribution — klasa](../standard-library/poisson-distribution-class.md)|Tworzy rozkład Poissona wartości będące liczbami całkowitymi.|  
-|[weibull_distribution — klasa](../standard-library/weibull-distribution-class.md)|Tworzy dystrybucji Weibulla wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
+|[exponential_distribution, klasa](../standard-library/exponential-distribution-class.md)|Tworzy rozkład wykładniczy wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
+|[extreme_value_distribution, klasa](../standard-library/extreme-value-distribution-class.md)|Tworzy dystrybucji najwyższą wartość rzeczywista (liczba zmiennoprzecinkowa) wartości.|  
+|[gamma_distribution, klasa](../standard-library/gamma-distribution-class.md)|Tworzy dystrybucji gamma wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
+|[poisson_distribution, klasa](../standard-library/poisson-distribution-class.md)|Tworzy rozkład Poissona wartości będące liczbami całkowitymi.|  
+|[weibull_distribution, klasa](../standard-library/weibull-distribution-class.md)|Tworzy dystrybucji Weibulla wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
   
  [[Losowych liczb dystrybucje](#distributions)]  
   
@@ -335,9 +336,9 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
 |||  
 |-|-|  
-|[discrete_distribution — klasa](../standard-library/discrete-distribution-class.md)|Tworzy dystrybucji odrębny liczby całkowitej.|  
-|[piecewise_constant_distribution — klasa](../standard-library/piecewise-constant-distribution-class.md)|Tworzy piecewise dystrybucji stałej wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
-|[piecewise_linear_distribution — klasa](../standard-library/piecewise-linear-distribution-class.md)|Tworzy piecewise liniowej dystrybucji wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
+|[discrete_distribution, klasa](../standard-library/discrete-distribution-class.md)|Tworzy dystrybucji odrębny liczby całkowitej.|  
+|[piecewise_constant_distribution, klasa](../standard-library/piecewise-constant-distribution-class.md)|Tworzy piecewise dystrybucji stałej wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
+|[piecewise_linear_distribution, klasa](../standard-library/piecewise-linear-distribution-class.md)|Tworzy piecewise liniowej dystrybucji wartości rzeczywistych (liczba zmiennoprzecinkowa).|  
   
  [[Losowych liczb dystrybucje](#distributions)]  
   
@@ -346,7 +347,7 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
 |||  
 |-|-|  
-|[seed_seq — klasa](../standard-library/seed-seq-class.md)|Generuje sekwencji-ukierunkowane zaszyfrowane inicjatora. Pozwala uniknąć replikacji losowe variate strumieni. Przydatne w przypadku wielu URNGs są utworzone z aparatów.|  
+|[seed_seq, klasa](../standard-library/seed-seq-class.md)|Generuje sekwencji-ukierunkowane zaszyfrowane inicjatora. Pozwala uniknąć replikacji losowe variate strumieni. Przydatne w przypadku wielu URNGs są utworzone z aparatów.|  
   
 ### <a name="operators"></a>Operatory  
  Ta sekcja zawiera operatory w `<random>` nagłówka.  
@@ -451,7 +452,7 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
  <sup>* Jeśli wyposażone w znanych inicjatora.</sup>  
   
- Mimo że standardowi ISO C++ nie wymaga `random_device` do kryptograficznie zabezpieczenia, w programie Visual Studio jest zaimplementowany jako kryptograficznie bezpieczny. (Termin "kryptograficznie bezpiecznego" oznacza gwarancji, ale odwołuje się do minimalny poziom entropii — i w związku z tym poziomu przewidywalności — algorytm danego losowe. Aby uzyskać więcej informacji, zobacz artykuł Wikipedia [kryptograficznie bezpiecznego generatora liczb pseudolosowych](http://go.microsoft.com/fwlink/LinkId=398017).) Ponieważ standardowi ISO C++ nie wymaga to, może wprowadzić innych platform `random_device` jako proste pseudolosowego generatora liczb (kryptograficznie niezabezpieczony) i tylko może być odpowiednie jako źródło inicjatora dla innego generatora. Sprawdź dokumentację dla tych platform, korzystając z `random_device` w kodzie i platform.  
+ Mimo że standardowi ISO C++ nie wymaga `random_device` do kryptograficznie zabezpieczenia, w programie Visual Studio jest zaimplementowany jako kryptograficznie bezpieczny. (Termin "kryptograficznie bezpiecznego" oznacza gwarancji, ale odwołuje się do minimalny poziom entropii — i w związku z tym poziomu przewidywalności — algorytm danego losowe. Aby uzyskać więcej informacji, zobacz artykuł Wikipedia [kryptograficznie bezpiecznego generatora liczb pseudolosowych](http://go.microsoft.com/fwlink/p/?linkid=398017).) Ponieważ standardowi ISO C++ nie wymaga to, może wprowadzić innych platform `random_device` jako proste pseudolosowego generatora liczb (kryptograficznie niezabezpieczony) i tylko może być odpowiednie jako źródło inicjatora dla innego generatora. Sprawdź dokumentację dla tych platform, korzystając z `random_device` w kodzie i platform.  
   
  Zgodnie z definicją `random_device` wyniki nie są odtworzenia i efektem ubocznym jest, że może znacznie mniejszą od innych URNGs uruchomione. Większość aplikacji, które nie są wymagane do kryptograficznie można zabezpieczyć użyj `mt19937` lub podobnych aparat, chociaż może zajść potrzeba inicjatora go wywołaniem `random_device`, jak pokazano w [przykładowy kod](#code).  
   

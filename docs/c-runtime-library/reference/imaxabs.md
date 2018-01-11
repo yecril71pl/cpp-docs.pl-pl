@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2bdd796b23275b4585f0e94aeb20197f7e6b893a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15bd5e6a83449e161a2756ffcc22e60e1c0eebab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="imaxabs"></a>imaxabs
 Oblicza wartość bezwzględna liczby całkowitej o dowolnym rozmiarze.  
@@ -96,4 +97,4 @@ The absolute value of -9223372036854775806 is 9223372036854775806
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [ABS, laboratoria, llabs — _abs64 —](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
  [_cabs —](../../c-runtime-library/reference/cabs.md)   
- [fabs —, fabsf —, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
+ [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   

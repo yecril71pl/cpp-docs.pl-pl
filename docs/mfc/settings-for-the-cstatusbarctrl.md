@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7065d234fa9d57d1a4b3f97f38464b530b0561f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 814c12b13333d589cb568c5c637f0fa34956847e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Ustawienia formantu CStatusBarCtrl
 To domyślne położenie [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) okno stanu jest wzdłuż dolnej części okna nadrzędnego, ale można określić `CCS_TOP` styl, który był wyświetlany u góry obszaru klienckiego okna nadrzędnego.  
@@ -41,5 +42,5 @@ To domyślne położenie [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

@@ -25,11 +25,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65b930cece9dd940da3171811fb027fccc3074b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutual-imports"></a>Importy wzajemne
 Eksportowanie lub importowanie do innego pliku wykonywalnego przedstawia komplikacji, gdy Importy wzajemne (lub cykliczne). Na przykład dwa pliki dll importować symbole od siebie, podobnie jak funkcje wzajemnie rekursywne.  

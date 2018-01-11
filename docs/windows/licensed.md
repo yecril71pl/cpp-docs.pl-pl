@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 36d04d47f65e0a37bb5d4807480a4f898d42039a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d33e51cf938642f2ff54c48e1ecd22c3f48b71f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="licensed"></a>licensed
 Wskazuje, że obiekt COM, do którego jest stosowany jest licencjonowana i musi być utworzone przy użyciu **IClassFactory2**.  
@@ -64,7 +67,7 @@ public:
 |-|-|  
 |**Dotyczy**|**Klasa**,`struct`|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**Klasa coclass**|  
+|**Wymaganych atrybutów**|**coclass**|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  

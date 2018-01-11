@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9078c01456f2766d544280b57297dc3cc64d54f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de7ef22d66befda28c6a374e8fb39f6b24a1dd62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-a-header-control"></a>Praca z formantem nagłówka
 Prosty sposób używać formantu nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) znajduje się w połączeniu z formantu listy; zobacz [za pomocą CListCtrl](../mfc/using-clistctrl.md) dalszej części tego tematu rodziny. Umożliwia także formantu nagłówka samodzielnie. Wywołania MFC **InitCommonControls** dla Ciebie. Kluczowe zadania są następujące:  
@@ -37,5 +38,5 @@ Prosty sposób używać formantu nagłówka ([CHeaderCtrl](../mfc/reference/chea
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

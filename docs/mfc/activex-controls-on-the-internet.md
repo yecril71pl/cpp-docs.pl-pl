@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2b883e5f46e274c19b3e5c4ed3ae2698cef694e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-controls-on-the-internet"></a>Kontrolki ActiveX w Internecie
 Formanty ActiveX są zaktualizowaną wersję specyfikacji formantu OLE. Formanty są podstawowej architektury do tworzenia składników programowalny oprogramowania, których można użyć w wielu różnych kontenerów, w tym przeglądarek sieci Web obsługującej COM w Internecie. Formantu ActiveX mogą być formantu Internet i można dodać jego działanie do aktywnego dokumentu lub być częścią strony sieci Web. Formanty na stronie sieci Web może komunikować się ze sobą za pomocą skryptów.  

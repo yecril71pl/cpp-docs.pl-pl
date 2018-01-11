@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2ff302aa9cc8088b583e0c772d0a7ff7959ab164
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07b97d4af18ff560a48aadb3ba71b61609f82a85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet
 Podstawą co klienckich aplikacji internetowych jest sesji internetowej. MFC implementuje sesji internetowej jako obiektów klasy [CInternetSession](../mfc/reference/cinternetsession-class.md). Za pomocą tej klasy, można utworzyć sesji Internet jeden lub kilka jednoczesnych sesji.  

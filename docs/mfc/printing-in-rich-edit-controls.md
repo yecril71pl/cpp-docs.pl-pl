@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d93611d66d394d4ed182261d3bba3121464931d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab8e15e25e2d419bb7c3ac67fc2c6f3453fb03c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printing-in-rich-edit-controls"></a>Drukowanie w formantach edycji wzbogaconej
 Można ustalić formantów edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) do renderowania dane wyjściowe dla określonego urządzenia, takie jak drukarka. Można również określić, że urządzenia wyjściowego, dla którego formantu edycji wzbogaconej formatowania tekstu.  
@@ -34,5 +35,5 @@ Można ustalić formantów edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

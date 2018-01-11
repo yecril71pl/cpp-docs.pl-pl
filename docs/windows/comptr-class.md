@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96b46fe15b2c101ed3ebc8bb58033074f409b41c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 04f8181c7308d63cc4fe07aaf4a05d34ccfaf132
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptr-class"></a>ComPtr — Klasa
 Tworzy *wskaźnika inteligentnego* typu, który reprezentuje interfejs określonej przez parametr szablonu. Comptr — automatycznie przechowuje licznika odwołań do podstawowej wskaźnika interfejsu i zwalnia interfejsu, gdy liczba odwołań do zera.  
@@ -62,48 +65,48 @@ friend class ComPtr;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Comptr::comptr — Konstruktor](../windows/comptr-comptr-constructor.md)|Intializes nowe wystąpienie klasy comptr — klasa. Przeciążenia Podaj konstruktorów domyślnej, copy, przenoszenia i konwersji.|  
-|[Comptr —:: ~ ComPtr — destruktor](../windows/comptr-tilde-comptr-destructor.md)|Deinitializes wystąpienia comptr —.|  
+|[ComPtr::ComPtr, konstruktor](../windows/comptr-comptr-constructor.md)|Intializes nowe wystąpienie klasy comptr — klasa. Przeciążenia Podaj konstruktorów domyślnej, copy, przenoszenia i konwersji.|  
+|[ComPtr::~ComPtr, destruktor](../windows/comptr-tilde-comptr-destructor.md)|Deinitializes wystąpienia comptr —.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ComPtr::As — metoda](../windows/comptr-as-method.md)|Zwraca obiekt comptr —, który reprezentuje interfejs identyfikowane przez parametr określonego szablonu.|  
-|[ComPtr::AsIID — metoda](../windows/comptr-asiid-method.md)|Zwraca obiekt comptr —, który reprezentuje interfejs identyfikowany przez identyfikator określonego interfejsu.|  
-|[ComPtr::AsWeak — metoda](../windows/comptr-asweak-method.md)|Pobiera słabe odwołanie do bieżącego obiektu.|  
-|[ComPtr::Attach — metoda](../windows/comptr-attach-method.md)|Kojarzy tego comptr — z typu interfejsu, określony przez parametr typu bieżącego szablonu.|  
-|[ComPtr::CopyTo — metoda](../windows/comptr-copyto-method.md)|Kopiuje bieżąca lub określona interfejsu skojarzonego z tym comptr — na wskaźnik określonym produktem wyjściowym.|  
-|[ComPtr::Detach — metoda](../windows/comptr-detach-method.md)|Usuwa skojarzenia tego comptr — z interfejsu, który reprezentuje.|  
-|[ComPtr::Get — metoda](../windows/comptr-get-method.md)|Pobiera wskaźnik do interfejsu, który jest skojarzony z tym comptr —.|  
-|[ComPtr::GetAddressOf — metoda](../windows/comptr-getaddressof-method.md)|Pobiera adres [ptr_ — element](../windows/comptr-ptr-data-member.md) danych elementu członkowskiego, który zawiera wskaźnik do interfejsu reprezentowany przez ten comptr —.|  
-|[ComPtr::ReleaseAndGetAddressOf — metoda](../windows/comptr-releaseandgetaddressof-method.md)|Zwalnia skojarzony z tym comptr — interfejs, a następnie pobiera adres [ptr_ — element](../windows/comptr-ptr-data-member.md) danych elementu członkowskiego, który zawiera wskaźnik do interfejsu, która została opublikowana.|  
+|[ComPtr::As, metoda](../windows/comptr-as-method.md)|Zwraca obiekt comptr —, który reprezentuje interfejs identyfikowane przez parametr określonego szablonu.|  
+|[ComPtr::AsIID, metoda](../windows/comptr-asiid-method.md)|Zwraca obiekt comptr —, który reprezentuje interfejs identyfikowany przez identyfikator określonego interfejsu.|  
+|[ComPtr::AsWeak, metoda](../windows/comptr-asweak-method.md)|Pobiera słabe odwołanie do bieżącego obiektu.|  
+|[ComPtr::Attach, metoda](../windows/comptr-attach-method.md)|Kojarzy tego comptr — z typu interfejsu, określony przez parametr typu bieżącego szablonu.|  
+|[ComPtr::CopyTo, metoda](../windows/comptr-copyto-method.md)|Kopiuje bieżąca lub określona interfejsu skojarzonego z tym comptr — na wskaźnik określonym produktem wyjściowym.|  
+|[ComPtr::Detach, metoda](../windows/comptr-detach-method.md)|Usuwa skojarzenia tego comptr — z interfejsu, który reprezentuje.|  
+|[ComPtr::Get, metoda](../windows/comptr-get-method.md)|Pobiera wskaźnik do interfejsu, który jest skojarzony z tym comptr —.|  
+|[ComPtr::GetAddressOf, metoda](../windows/comptr-getaddressof-method.md)|Pobiera adres [ptr_ — element](../windows/comptr-ptr-data-member.md) danych elementu członkowskiego, który zawiera wskaźnik do interfejsu reprezentowany przez ten comptr —.|  
+|[ComPtr::ReleaseAndGetAddressOf, metoda](../windows/comptr-releaseandgetaddressof-method.md)|Zwalnia skojarzony z tym comptr — interfejs, a następnie pobiera adres [ptr_ — element](../windows/comptr-ptr-data-member.md) danych elementu członkowskiego, który zawiera wskaźnik do interfejsu, która została opublikowana.|  
 |[ComPtr::Reset](../windows/comptr-reset.md)|Zwalnia wszystkie odwołania dla wskaźnika interfejsu, który jest skojarzony z tym comptr —.|  
-|[ComPtr::Swap — metoda](../windows/comptr-swap-method.md)|Zamienia interfejsu zarządzanych przez bieżący comptr — przy użyciu interfejsu zarządzana przez określony comptr —.|  
+|[ComPtr::Swap, metoda](../windows/comptr-swap-method.md)|Zamienia interfejsu zarządzanych przez bieżący comptr — przy użyciu interfejsu zarządzana przez określony comptr —.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ComPtr::InternalAddRef — metoda](../windows/comptr-internaladdref-method.md)|Zwiększa liczbę odniesienia skojarzony z tym comptr — interfejs.|  
-|[ComPtr::InternalRelease — metoda](../windows/comptr-internalrelease-method.md)|Wykonuje operację wydania COM na skojarzony z tym comptr — interfejs.|  
+|[ComPtr::InternalAddRef, metoda](../windows/comptr-internaladdref-method.md)|Zwiększa liczbę odniesienia skojarzony z tym comptr — interfejs.|  
+|[ComPtr::InternalRelease, metoda](../windows/comptr-internalrelease-method.md)|Wykonuje operację wydania COM na skojarzony z tym comptr — interfejs.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ComPtr::operator Microsoft::WRL::Details::BoolType Operator](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)|Wskazuje, czy comptr — Zarządzanie okres istnienia obiektu interfejsu.|  
-|[ComPtr::operator — Operator &](../windows/comptr-operator-ampersand-operator.md)|Pobiera adres bieżącej comptr —.|  
-|[ComPtr::operator = — Operator](../windows/comptr-operator-assign-operator.md)|Przypisuje wartość do bieżącego comptr —.|  
-|[ComPtr::operator -> — Operator](../windows/comptr-operator-arrow-operator.md)|Pobiera wskaźnik do typu określonego przez parametr bieżącego szablonu.|  
-|[ComPtr::operator == — Operator](../windows/comptr-operator-equality-operator.md)|Wskazuje, czy dwa obiekty comptr — są takie same.|  
-|[ComPtr::operator! = — Operator](../windows/comptr-operator-inequality-operator.md)|Wskazuje, czy dwa obiekty comptr — nie są takie same.|  
+|[Operator ComPtr::operator Microsoft::WRL::Details::BoolType](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)|Wskazuje, czy comptr — Zarządzanie okres istnienia obiektu interfejsu.|  
+|[Operator ComPtr::operator&](../windows/comptr-operator-ampersand-operator.md)|Pobiera adres bieżącej comptr —.|  
+|[Operator ComPtr::operator=](../windows/comptr-operator-assign-operator.md)|Przypisuje wartość do bieżącego comptr —.|  
+|[Operator ComPtr::operator->](../windows/comptr-operator-arrow-operator.md)|Pobiera wskaźnik do typu określonego przez parametr bieżącego szablonu.|  
+|[Operator ComPtr::operator==](../windows/comptr-operator-equality-operator.md)|Wskazuje, czy dwa obiekty comptr — są takie same.|  
+|[Operator ComPtr::operator!=](../windows/comptr-operator-inequality-operator.md)|Wskazuje, czy dwa obiekty comptr — nie są takie same.|  
   
 ### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Comptr::ptr_ — członek danych](../windows/comptr-ptr-data-member.md)|Zawiera wskaźnik do interfejsu, który jest skojarzony z i zarządzany przez ten comptr —.|  
+|[ComPtr::ptr_, składowa danych](../windows/comptr-ptr-data-member.md)|Zawiera wskaźnik do interfejsu, który jest skojarzony z i zarządzany przez ten comptr —.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ComPtr`  
@@ -114,4 +117,4 @@ friend class ComPtr;
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

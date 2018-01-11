@@ -33,11 +33,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 201bdc8956ec33c6bfa105a534ed796d84e7064c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 886b90cd6509978d5af48d7d6be4dc0aa6e02ae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedoffsetrecalloc"></a>_aligned_offset_recalloc
 Zmienia rozmiar blok pamięci przydzielony przy [_aligned_malloc —](../../c-runtime-library/reference/aligned-malloc.md) lub [_aligned_offset_malloc —](../../c-runtime-library/reference/aligned-offset-malloc.md) i inicjuje pamięci na 0.  
@@ -91,4 +92,4 @@ void * _aligned_offset_recalloc(
 ## <a name="see-also"></a>Zobacz też  
  [Wyrównywanie danych](../../c-runtime-library/data-alignment.md)   
  [_recalloc —](../../c-runtime-library/reference/recalloc.md)   
- [_aligned_recalloc —](../../c-runtime-library/reference/aligned-recalloc.md)
+ [_aligned_recalloc](../../c-runtime-library/reference/aligned-recalloc.md)

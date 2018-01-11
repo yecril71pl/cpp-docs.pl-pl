@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f8157d4006d3f2a53e2f32a87d8923baf73628f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69f4dfa2feb48bf0fb8ea6f8fca90107c788137e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="while-statement-c"></a>while — instrukcja (C)
 `while` Instrukcji umożliwia Powtórz instrukcję określone wyrażenie staje się wartość false.  
@@ -53,4 +54,4 @@ while ( i >= 0 )
  Ten przykładowy kod kopiuje znaków z `string2` do `string1`. Jeśli `i` jest większa niż lub równa 0, `string2[i]` jest przypisany do `string1[i]` i `i` zostanie zmniejszona. Gdy `i` osiągnie lub spadnie poniżej 0, wykonywanie `while` kończy instrukcji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [while — instrukcja (C++)](../cpp/while-statement-cpp.md)
+ [while, instrukcja (C++)](../cpp/while-statement-cpp.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f70ef6431f8dab37b6df185efe1c7494ff0d9b1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3c4d37dfe5182e375e7581d6f5ef8188b922e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Porady: konwertowanie pętli OpenMP stosującej anulowanie do korzystania ze współbieżności środowiska wykonawczego
 Niektóre pętle równoległe nie wymagają wykonywane wszystkich iteracji. Algorytm wyszukiwania przez wartość można na przykład przerwanie po znalezieniu wartość. OpenMP nie udostępniają mechanizm break poza równoległej pętli. Jednak można użyć wartość logiczna lub flagę, aby włączyć iteracji pętli, aby wskazać, że rozwiązanie zostało znalezione. Współbieżność środowiska wykonawczego udostępnia funkcje umożliwiające jedno zadanie anulować inne zadania, które nie zostały jeszcze uruchomione.  

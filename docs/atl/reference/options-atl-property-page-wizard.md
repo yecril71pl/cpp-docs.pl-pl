@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07e8ad589e2b06605e2891ad4233479a0f89ae01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbc27457fa3ace7b1cdfad4894bbd296739de2ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-atl-property-page-wizard"></a>Opcje, Kreator strony właściwości ATL
 Ta strona kreatora umożliwia definiowanie wątkowy model i agregacji poziomu strony właściwości, które tworzysz.  
@@ -31,10 +32,10 @@ Ta strona kreatora umożliwia definiowanie wątkowy model i agregacji poziomu st
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|`Single`|Strona właściwości działa tylko w podstawowym wątku com..|  
+|`Single`|Strona właściwości działa tylko w podstawowym wątku com.|  
 |**Apartamentu**|Strona właściwości mogą być tworzone w dowolnym komórka wątku pojedynczego. Domyślnie.|  
   
- **Agregacji**  
+ **Agregacja**  
  Dodaje obsługę funkcji agregacji dla strony właściwości, które tworzysz. Zobacz [agregacji](../../atl/aggregation.md) Aby uzyskać więcej informacji.  
   
 |Opcja|Opis|  

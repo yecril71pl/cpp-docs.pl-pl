@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2211a2a2bb5121921928166626d726db8dea67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d6b2678add561eda41a7426a840b9c4ad074301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controlling-streams"></a>Sterowanie strumieniami
 [fopen —](../c-runtime-library/reference/fopen-wfopen.md) zwraca adres typu obiektu `FILE`. Możesz użyć tego adresu jako `stream` argument kilka funkcji biblioteki można wykonywać różne operacje, w której plik otwarty. Dla strumienia bajtów wszystkich wejściowych odbywa się tak, jakby każdy znak jest do odczytu przez wywołanie metody [fgetc —](../c-runtime-library/reference/fgetc-fgetwc.md), oraz wszystkie dane wyjściowe odbywa się tak, jakby każdy znak jest zapisywane przez wywołanie metody [fputc —](../c-runtime-library/reference/fputc-fputwc.md). Dla strumienia szerokości, wszystkie wejściowych odbywa się tak, jakby każdy znak jest do odczytu przez wywołanie metody [fgetwc —](../c-runtime-library/reference/fgetc-fgetwc.md), oraz wszystkie dane wyjściowe odbywa się tak, jakby każdy znak jest zapisywane przez wywołanie metody [fputwc —](../c-runtime-library/reference/fputc-fputwc.md).  

@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ea4ac4e5f88df6d6e5de35377a4cf13f34abf900
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="security-best-practices-for-c"></a>Najlepsze praktyki w zakresie zabezpieczeń dla C++
 Ten artykuł zawiera informacje o narzędziach zabezpieczeń i rozwiązań. Ich użycie nie oznacza, że aplikacje odporna na ataki, ale ułatwia udanych ataków rzadziej.  
@@ -87,7 +88,7 @@ Ten artykuł zawiera informacje o narzędziach zabezpieczeń i rozwiązań. Ich 
   s
 -   Zidentyfikuj potencjalne problemy w aplikacji.  
   
- Użycie narzędzia AppVerifier wchodzi w skład narzędzi zgodności aplikacji, która jest dostępna z [zgodności aplikacji](http://go.microsoft.com/fwlink/?LinkId=91277) w witrynie TechNet.  
+ Użycie narzędzia AppVerifier wchodzi w skład narzędzi zgodności aplikacji, która jest dostępna z [zgodności aplikacji](http://go.microsoft.com/fwlink/p/?linkid=91277) w witrynie TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Konta użytkownika systemu Windows  
@@ -96,4 +97,4 @@ Ten artykuł zawiera informacje o narzędziach zabezpieczeń i rozwiązań. Ich 
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Security>   
  [Zabezpieczeń](/dotnet/standard/security/index)   
- [Jak Kontrola konta użytkownika (UAC) wpływa na aplikację](how-user-account-control-uac-affects-your-application.md)
+ [Jak kontrola konta użytkownika (UAC) wpływa na aplikację?](how-user-account-control-uac-affects-your-application.md)

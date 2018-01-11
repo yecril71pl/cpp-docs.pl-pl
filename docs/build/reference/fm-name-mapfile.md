@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 153a91d25a45a86f01885b679f039f41390dc291
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a5111291ea92b8650896faf3117f0056510e5ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Nazwa Mapfile)
 Informuje konsolidator, aby utworzyć plik mapowania zawierającego listę segmentów w kolejności, w jakiej występują w odpowiedniego pliku .exe lub DLL.  

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40ca730a9d9564248bb43dc49366041c3e5bcf04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd221c0252ec9714cc21c65884c7ec385c6fe0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="container-classdifferencetype"></a>Kontener Class::difference_type
 > [!NOTE]
@@ -37,4 +38,4 @@ typedef T1 difference_type;
  Jest on opisany tutaj jako synonimem nieokreślonego typu **T1** (zazwyczaj **Alloc::difference_type**).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Sample Container — klasa](../standard-library/sample-container-class.md)
+ [Sample Container, klasa](../standard-library/sample-container-class.md)

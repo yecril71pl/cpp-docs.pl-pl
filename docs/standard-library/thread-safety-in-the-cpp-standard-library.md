@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a30ad3887ace197276556aab929a7d16ae7922e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fa4c69e79a918d7b8cf77e03f76c81e846d5a5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>Bezpieczeństwo wątku w standardowej bibliotece C++
 Mają zastosowanie następujące reguły bezpieczeństwa wątków wszystkie klasy w standardowej bibliotece C++ — dotyczy to również `shared_ptr`, zgodnie z poniższym opisem.  Czasami podano większą — na przykład standardowe iostream obiekty, zgodnie z poniższym opisem i typy przeznaczony specjalnie dla wielowątkowości, jak w [ \<atomic >](../standard-library/atomic.md).  
@@ -42,7 +43,7 @@ Mają zastosowanie następujące reguły bezpieczeństwa wątków wszystkie klas
 >  Odczytywanie z buforu strumienia nie jest uważany za operacji odczytu. Zamiast tego jest on uznawany za można operacji zapisu, ponieważ stan klasy zostanie zmieniona.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd biblioteki C++ Standard](../standard-library/cpp-standard-library-overview.md)
+ [Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)
 
 
 

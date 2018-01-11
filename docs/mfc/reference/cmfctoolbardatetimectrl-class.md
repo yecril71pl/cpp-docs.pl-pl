@@ -59,11 +59,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60e9427b569c7f3e15b779b0764e0316945880b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4f7bdc964da8df8d8a402ae70b38eec1dbbf436
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>Klasa CMFCToolBarDateTimeCtrl
 Przycisk paska narzędzi, który zawiera formant selektora daty i godziny.  
@@ -547,7 +548,7 @@ static BOOL SetTimeAll(
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasy](../../mfc/reference/mfc-classes.md)   
  [Klasa CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [Wskazówki: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+ [Przewodnik: umieszczanie kontrolek na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

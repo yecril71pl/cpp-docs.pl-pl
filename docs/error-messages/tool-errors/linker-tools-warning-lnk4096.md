@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 37f937fd0681ec84785950f183bdfc2bae605df9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 089529835ddfa11c9c0af9b5703a700d13ee1caa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4096"></a>Ostrzeżenie LNK4096 narzędzi konsolidatora
 / BASE "numer" jest nieprawidłowa dla systemu Windows 95 i Windows 98; Obraz może nie działać.  

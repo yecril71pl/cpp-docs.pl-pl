@@ -27,11 +27,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 792d2f658ed64b44254b5e93b9f2b2bde9eb0a1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c94ed10a0b97820c5a787e4350d39dcf6286fee7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ostreambufiterator-class"></a>Klasa ostreambuf_iterator
 Ostreambuf_iterator — klasa szablonu opisuje obiekt iteratora wyjściowy, który zapisuje elementy kolejnych znaków do strumienia wyjściowego o wyodrębnianiu **operator >>**. `ostreambuf_iterator`s różnią się od [ostream_iterator — klasa](../standard-library/ostream-iterator-class.md) w mających znaków, a nie typu ogólnego typu obiektu wstawiana do strumienia wyjściowego.  
@@ -337,7 +338,7 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 ### <a name="remarks"></a>Uwagi  
  Pierwszy Konstruktor inicjuje wskaźnika buforu strumienia wyjściowego za pomocą `strbuf`.  
   
- Drugi Konstruktor inicjuje wskaźnika buforu strumienia wyjściowego za pomocą `Ostr`. `rdbuf`. Wskaźnik przechowywanych nie może mieć pustego wskaźnika.  
+ Drugi Konstruktor inicjuje wskaźnika buforu strumienia wyjściowego za pomocą `Ostr`. `rdbuf`., Wskaźnik przechowywanych nie może mieć pustego wskaźnika.  
   
 ### <a name="example"></a>Przykład  
   
@@ -449,7 +450,7 @@ The characters written to the output stream
 ## <a name="see-also"></a>Zobacz też  
  [\<Iterator >](../standard-library/iterator.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

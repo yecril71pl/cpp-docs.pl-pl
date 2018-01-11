@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3dee6fb7423ba9245c1b52a8aa7b90a14d52cc9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21d739fb3ead0512776cfd996b59f1ceab5e8250
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 — prywatna kopia
 **Copyprivate** klauzuli zapewnia mechanizm na potrzeby zmiennej prywatnej emisji wartość z jednego członka do zespołu do innych elementów członkowskich. Jest to alternatywa dla użycia udostępniona zmienna wartości, gdy dostarczanie udostępniona zmienna jest trudna (na przykład w rekursją wymagające innej zmiennej na każdym poziomie). **Copyprivate** klauzula może występować tylko w **pojedynczego** dyrektywy.  

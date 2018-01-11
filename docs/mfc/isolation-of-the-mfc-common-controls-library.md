@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: effc8b927aadc821e189837ab3506f05cb426e93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04ed1be46d4c3d7f36bfa501bfc933fbba41e8d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>Izolacja biblioteki formantów wspólnych MFC
 Biblioteka formantów standardowych teraz jest izolowana w MFC, umożliwiając różnych modułach (na przykład użytkownik bibliotek DLL) Aby użyć innej wersji biblioteki formantów wspólnych przez określenie wersji w manifestach ich.  

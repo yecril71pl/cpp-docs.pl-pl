@@ -29,18 +29,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 678d8dbed5d8ba659a6c0a33752f28b3e2d2c61b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70017721fb59fa0c6d18d568546d9618257328b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activation-c"></a>Aktywacja (C++)
 W tym artykule opisano rolę aktywacji w edycja wizualna elementy OLE. Po użytkownika osadzone elementu OLE w dokumencie kontenera, może być konieczne można użyć. Aby to zrobić, użytkownik kliknie dwukrotnie element, który uaktywnia elementu. Najczęstsze działania dotyczące aktywacji jest edytowany. Wiele bieżącego elementów OLE, gdy aktywowany do edycji, spowodować okno ramowe bieżący można zmieniać, aby odzwierciedlić te należące do aplikacji serwera, który utworzył element menu i pasków narzędzi. To zachowanie, znany jako aktywacja w miejscu, umożliwia użytkownikowi Edytuj dowolny element osadzonego wewnątrz złożonego dokumentu bez opuszczania okno dokumentu kontenera.  
   
  Jest również możliwe edytowanie elementy osadzone OLE w osobnym oknie. Dzieje się tak, jeśli aplikacja kontenera lub serwer nie obsługuje aktywacji w miejscu. W takim przypadku gdy użytkownik kliknie dwukrotnie element osadzony, aplikacja jest uruchamiana w oddzielnym oknie i osadzonych element będzie wyświetlany jako własny dokument. Użytkownik edytuje element w tym oknie. Po zakończeniu edycji użytkownik zamyka aplikację serwera i zwraca do aplikacji kontenera.  
   
- Alternatywnie, użytkownik może wybrać "Edytowanie otwartej" z  **\<obiektu > Otwórz** na **Edytuj** menu. Spowoduje to otwarcie obiekt w osobnym oknie.  
+ Alternatywnie, użytkownik może wybrać "Edytowanie otwartej" z ** \<obiektu > Otwórz** na **Edytuj** menu. Spowoduje to otwarcie obiekt w osobnym oknie.  
   
 > [!NOTE]
 >  Edytowanie elementów osadzonych w osobnym oknie był standardowe zachowanie w wersji 1 OLE, a niektóre aplikacje OLE może obsługiwać tylko ten styl edycji.  

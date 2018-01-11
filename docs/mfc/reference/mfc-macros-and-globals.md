@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71011177634e92b22cce1bc88a2ee711ad9537ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eeb53dea24ccd4d34ef90045e3254915135e70c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-macros-and-globals"></a>Makra i funkcje globalne MFC
 Microsoft Foundation Class Library można podzielić na dwie główne części: (1 klasy MFC i (2) makra i funkcje globalne. Jeśli funkcja lub zmienna nie jest elementem członkowskim klasy, to globalnej funkcji lub zmienna.  
@@ -54,7 +55,7 @@ Microsoft Foundation Class Library można podzielić na dwie główne części: 
 
 -   [Mapy interfejsu i delegata](delegate-and-interface-maps.md)
 
--   [Moduły i bibliotek DLL](extension-dll-macros.md)
+-   [Moduły i biblioteki DLL](extension-dll-macros.md)
   
 -   [Informacje o aplikacji i zarządzanie](application-information-and-management.md)  
   
@@ -70,9 +71,9 @@ Microsoft Foundation Class Library można podzielić na dwie główne części: 
   
 -   [Komunikaty AFX](afx-messages.md)  
   
--   [Style formantu toolBar](toolbar-control-styles.md)  
+-   [Style kontrolki ToolBar](toolbar-control-styles.md)  
   
--   [Cmfcimagepaintarea::image_edit_mode — wyliczenie](cmfcimagepaintarea-image-edit-mode-enumeration.md)  
+-   [Wyliczanie CMFCImagePaintArea::IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)  
 
   
 ## <a name="database"></a>Baza danych  

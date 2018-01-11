@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 76fc842626890f48b641a495567338404330d8d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3112c092a4e1d6eb970fb50153c543baa98ee853
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dispatch-maps"></a>Mapy wysyłania
 Automatyzacja OLE udostępnia metody do wywołania metody i mieć dostęp do właściwości w aplikacjach. Mechanizm dostarczonych przez Microsoft Foundation Class Library na potrzeby rozsyłania te żądania jest "mapy wysyłania," który wyznacza wewnętrznych i zewnętrznych nazwy obiektu funkcje i właściwości, a także same właściwości i elementu typy danych argumenty funkcji.  
@@ -129,10 +130,10 @@ DISP_FUNCTION(
 |Symbol|Zwracany typ|  
 |------------|-----------------|  
 |`VT_EMPTY`|`void`|  
-|`VT_I2`|**krótki**|  
-|`VT_I4`|**długa**|  
+|`VT_I2`|**short**|  
+|`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
-|`VT_R8`|**podwójne**|  
+|`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
 |`VT_DATE`|**DATA**|  
 |`VT_BSTR`|`BSTR`|  
@@ -210,10 +211,10 @@ DISP_PROPERTY(
   
 |Symbol|**Typ właściwości**|  
 |------------|-----------------------|  
-|`VT_I2`|**krótki**|  
-|`VT_I4`|**długa**|  
+|`VT_I2`|**short**|  
+|`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
-|`VT_R8`|**podwójne**|  
+|`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
 |`VT_DATE`|**DATA**|  
 |`VT_BSTR`|`CString`|  
@@ -299,10 +300,10 @@ DISP_PROPERTY_NOTIFY(
   
 |Symbol|**Typ właściwości**|  
 |------------|-----------------------|  
-|`VT_I2`|**krótki**|  
-|`VT_I4`|**długa**|  
+|`VT_I2`|**short**|  
+|`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
-|`VT_R8`|**podwójne**|  
+|`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
 |`VT_DATE`|**DATA**|  
 |`VT_BSTR`|`CString`|  

@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 300c83a256e2a60ce9f7605093a2016f2d322785
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b0ed56fc3663b99af311c52e463bd2f16fcef0a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>Zmiana symbolu lub nazwy symbolu (ID)
 Podczas tworzenia nowego zasobu lub obiektu zasobów, środowisko projektowe przypisuje go domyślną nazwę symbolu, na przykład IDD_DIALOG1. Można użyć [okna właściwości](/visualstudio/ide/reference/properties-window) zmienić domyślną nazwę symbolu lub zmienić nazwę symbolu, wszystkie już skojarzony z zasobem.  
@@ -47,4 +50,4 @@ Podczas tworzenia nowego zasobu lub obiektu zasobów, środowisko projektowe prz
   
 ## <a name="see-also"></a>Zobacz też  
  [Ograniczenia dotyczące nazwy symbolu](../windows/symbol-name-restrictions.md)   
- [Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)
+ [Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)

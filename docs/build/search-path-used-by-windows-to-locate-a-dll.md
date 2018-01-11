@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 79f6ca137c16100ac1d6b9bfa818f35d5ae21f14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53350ed473226c86dd4fefa93cff376a371dedf7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-path-used-by-windows-to-locate-a-dll"></a>Ścieżka wyszukiwania używana przez system Windows do lokalizowania biblioteki DLL
 Z łączenie jawne i niejawne, systemu Windows najpierw szuka "znanych DLLs", takie jak Kernel32.dll i User32.dll. System Windows wyszukuje dla bibliotek DLL w następującej kolejności:  
@@ -52,4 +53,4 @@ Z łączenie jawne i niejawne, systemu Windows najpierw szuka "znanych DLLs", ta
 -   [Określić jakiej metody łączenia użyć](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md)
+ [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)

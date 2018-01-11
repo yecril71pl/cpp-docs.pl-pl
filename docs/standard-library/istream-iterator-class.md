@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b5fa9a3636b9aa83344b6ae433afefd2c959d31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef5ba7c445325131ad620efcbb6061a0fa49039a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istreamiterator-class"></a>istream_iterator — Klasa
 Opisuje obiekt iteratora wejściowego. Wyodrębnia on obiektów klasy `Type` ze strumienia wejściowego, które it uzyskuje dostęp do za pośrednictwem obiektu go magazyny typu `pointer` do `basic_istream` <  `CharType`, `Traits`>.  
@@ -379,7 +380,7 @@ int main( )
  [Iterator — struktura](../standard-library/iterator-struct.md)   
  [\<Iterator >](../standard-library/iterator.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

@@ -40,11 +40,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e22f2d3c69bf4f0daf38c4f59b416d8d44a431a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ece67a7c2b50423ea9ff4610e638dcdc2b979e14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="link-options"></a>Opcje łącz
 Katalogu lib CRT zawiera wiele plików małego obiektu, które umożliwiają określonych funkcji CRT bez zmiany kodu. Są one nazywane "Opcje łącza", ponieważ należy je dodać do wiersza polecenia konsolidatora z nich korzystać.  
@@ -69,4 +70,4 @@ Katalogu lib CRT zawiera wiele plików małego obiektu, które umożliwiają okr
 |wsetargv.obj|pwsetargv.obj|Umożliwia rozwijanie symbolu wieloznacznego argumentu wiersza polecenia. Zobacz [rozszerzanie argumentów z symbolami wieloznacznymi](../c-language/expanding-wildcard-arguments.md).|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md)
+ [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

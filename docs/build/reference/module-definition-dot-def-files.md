@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15dbdfcd1074b32e2a707616571484db3ced9d2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49f5eb5b75bad22b59cb4fbb98554bbfd44d13b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-definition-def-files"></a>Pliki definicji modułu (.Def)
 Pliki definicji modułu (.def) podaj konsolidatora z informacjami o eksportu, atrybutów i innych informacji o programie być połączony. Plik .def jest najbardziej przydatna podczas tworzenia biblioteki DLL. Ponieważ istnieją [opcje konsolidatora](../../build/reference/linker-options.md) którego można użyć zamiast instrukcji definicji modułu .def — pliki nie są zazwyczaj konieczne. Można również użyć [__declspec(dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) jako sposobu na określenie wyeksportowanych funkcji.  
@@ -36,11 +37,11 @@ Pliki definicji modułu (.def) podaj konsolidatora z informacjami o eksportu, at
   
 -   [Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)  
   
--   [EKSPORTY](../../build/reference/exports.md)  
+-   [EXPORTS](../../build/reference/exports.md)  
   
 -   [HEAPSIZE](../../build/reference/heapsize.md)  
   
--   [BIBLIOTEKA](../../build/reference/library.md)  
+-   [LIBRARY](../../build/reference/library.md)  
   
 -   [NAZWA](../../build/reference/name-c-cpp.md)  
   

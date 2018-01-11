@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c932d90cd2d896ebfe861ccd21d67b0071293c64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae30c39a26379aaa8a6f786b5fe2542abde2c2df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Operowanie formantem etykietki narzędzia
 Klasa `CToolTipCtrl` udostępnia funkcje kontrolować różne atrybuty elementu członkowskiego grupy `CToolTipCtrl` obiekt i Porada okna narzędzia.  
@@ -45,5 +46,5 @@ Klasa `CToolTipCtrl` udostępnia funkcje kontrolować różne atrybuty elementu 
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

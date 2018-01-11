@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 310ac33fa4e34e75273732f715472114bab9650f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c1728dfda3ec29e8df2b7f5480e9bffb161da7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="names-add-property-wizard"></a>Nazwy, Dodaj kreatora właściwości
 Ten kreator umożliwia dodawanie właściwości do interfejsu.  
@@ -43,7 +44,7 @@ Ten kreator umożliwia dodawanie właściwości do interfejsu.
  **Funkcja powiadomień**  
  Tylko dispinterfaces MFC. Dostępne tylko w przypadku określenia **zmiennej członkowskiej** w obszarze **typ implementacji**. Ustawia nazwę Jeśli wywołana funkcja powiadomień zmiany właściwości. Domyślnie nazwa funkcji powiadomień jest ustawiona na*PropertyName*zmienione. Można edytować tej nazwy.  
   
- **Get — funkcja**  
+ **Funkcja Get**  
  Dla MFC dispinterfaces. Dostępne tylko w przypadku określenia **metod Get/Set** w obszarze **typ implementacji**. Ustawia nazwę funkcji do pobrania właściwości. Nazwa funkcji Get jest domyślnie GET*PropertyName*. Można edytować tej nazwy. Jeśli nazwa funkcji [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) są wstawiane do mapy interfejsu wysyłania. Pobierz*PropertyName* funkcji określa, że właściwość jako czytelna.  
   
  **Set — funkcja**  
@@ -58,7 +59,7 @@ Ten kreator umożliwia dodawanie właściwości do interfejsu.
 |**Zmiennej członkowskiej**|Określa, że właściwość nie zostanie dodany jako zmienną członkowską. Zmienne członkowskie można dodać właściwości niestandardowe lub większość standardowych właściwości. Nie można określić **zmiennej członkowskiej** dla **podpis**, **hWnd**, i **tekst** właściwości.<br /><br /> Udostępnia domyślne nazwy w obszarze **nazwa zmiennej** i **funkcję powiadomień**. Można edytować tej nazwy.|  
 |**Pobierz/Ustaw metody**|Określa właściwość jest dodawany jako Get*PropertyName* i*PropertyName* funkcje domyślnie. Te nazwy są wyświetlane w polu **Get — funkcja** i **Set — funkcja**.<br /><br /> Możesz zmienić domyślną **typ właściwości**, która przekazuje wartość funkcji Get. Można określić parametrów **uzyskać** i `Set` funkcji.|  
   
- **Get — funkcja**  
+ **Funkcja Get**  
  Na ALT interfejsów. Ustawia właściwość jako czytelna; oznacza to, tworzy **uzyskać** metodę pobierania tej właściwości z obiektu. Musisz wybrać **uzyskać**, `Put`, lub obie.  
   
  **Put — funkcja**  
@@ -74,8 +75,8 @@ Ten kreator umożliwia dodawanie właściwości do interfejsu.
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**w**|Wskazuje, że parametr jest przekazywany z procedury wywołującej do procedury wywoływanej.|  
-|**limit**|Wskazuje, że parametr wskaźnika jest zwracana z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|  
+|**in**|Wskazuje, że parametr jest przekazywany z procedury wywołującej do procedury wywoływanej.|  
+|**out**|Wskazuje, że parametr wskaźnika jest zwracana z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|  
   
  **Typ parametru**  
  Ustawia typ danych parametru. Wybierz typ z listy.  

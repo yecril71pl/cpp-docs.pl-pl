@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1596e4c890142947af74f8a117222705082d553
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bc86e066e57978bee0953e233edbb2aefbe61c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formatowanie obiektu CString i wyświetlanie okna komunikatu
 Wiele funkcji służą do formatowania i przeanalizować `CString` obiektów. Zawsze do manipulowania można używać tych funkcji `CString` obiektów, ale są szczególnie użyteczne w przypadku formatowanie ciągów, które będą wyświetlane w oknie komunikatu tekstu.  
@@ -201,4 +202,4 @@ int AFXAPI AfxMessageBox(
   
 ## <a name="see-also"></a>Zobacz też  
  [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)   
- [Klasa CStringT](../../atl-mfc-shared/reference/cstringt-class.md)
+ [CStringT, klasa](../../atl-mfc-shared/reference/cstringt-class.md)
