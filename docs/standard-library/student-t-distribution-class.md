@@ -32,11 +32,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ac4d4e6a27c7686cb6a8f34209870fe3f89c265
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f611d9c7093006a5212c68096aecd4b723086e4c
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution — Klasa
 Generuje studenta *t*-dystrybucji.  
@@ -85,7 +86,7 @@ public:
   
  Aby uzyskać więcej informacji o dystrybucji klasy i ich elementy członkowskie, zobacz [ \<losowe >](../standard-library/random.md).  
   
- Aby uzyskać szczegółowe informacje o studenta *t*— dystrybucji, zobacz artykuł Wolfram MathWorld [t — rozkład studenta](http://go.microsoft.com/fwlink/LinkId=401094).  
+ Aby uzyskać szczegółowe informacje o studenta *t*— dystrybucji, zobacz artykuł Wolfram MathWorld [t — rozkład studenta](http://go.microsoft.com/fwlink/p/?linkid=401094).  
   
 ## <a name="example"></a>Przykład  
   

@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 37383047b16b26f1d059896d892693e67664cb47
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2f2d55994342cdfc923aecc3b65fc14dced4ef7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unarynegate-class"></a>unary_negate — Klasa
 Zapewnianie funkcji członkowskiej, która Negacja wartość zwracana funkcji jednoargumentowy określonej klasy szablonów.  
@@ -111,7 +112,7 @@ The number of elements in v1 not greater than 10 is: 3.
   
 ## <a name="see-also"></a>Zobacz też  
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fceb15c713eee25c4ae04ef2a095737e587170a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 662b540548c0594364bf11087c3b52420d29cf0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-contexts"></a>Konteksty atrybutu
 Atrybuty C++ można opisać za pomocą czterech pola podstawowe: element docelowy, mogą być stosowane do (**dotyczy**), jeśli są one powtarzalne, czy nie (**Repeatable**), wymagane obecności innych atrybutów ( **Wymagane atrybuty**), a niezgodności z innymi atrybutami (**nieprawidłowe atrybuty**). Te pola są wyświetlane w towarzyszący tabeli w temacie Odwołanie do każdego atrybutu. Poniżej opisano każdy z tych pól.  
@@ -38,4 +41,4 @@ Atrybuty C++ można opisać za pomocą czterech pola podstawowe: element docelow
  To pole zawiera inne atrybuty, które są niezgodne z określonego atrybutu. Jest on nietypowe dla atrybutu do wpisów dla tego pola.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Atrybuty C++ — dokumentacja](../windows/cpp-attributes-reference.md)
+ [Dokumentacja atrybutów (C++)](../windows/cpp-attributes-reference.md)

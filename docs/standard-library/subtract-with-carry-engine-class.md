@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c1a284af52195db1c25d6175876d732da7255962
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8de1c19ac793dd78ee55a15bc1156408936174bc
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine — Klasa
 Generuje losowe sekwencji przez algorytm subtract z przenoszące (połączenie z otuliną Fibonacci).  
@@ -81,7 +82,7 @@ class subtract_with_carry_engine;
  `ranlux48_base`: Użyty jako podstawa dla `ranlux48`.                   
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
- Aby uzyskać szczegółowe informacje na temat subract z algorytmem aparat przenoszące, zobacz artykuł Wikipedia [generator połączenie z otuliną Fibonacci](http://go.microsoft.com/fwlink/LinkId=402445).  
+ Aby uzyskać szczegółowe informacje na temat subract z algorytmem aparat przenoszące, zobacz artykuł Wikipedia [generator połączenie z otuliną Fibonacci](http://go.microsoft.com/fwlink/p/?linkid=402445).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<losowe >  

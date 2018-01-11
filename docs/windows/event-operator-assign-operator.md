@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6001462a5618251acc838d1d8fad3bd93968c81
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: de46ba0d6749120fc391b4a55527904ed1321ad9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventoperator-operator"></a>Event::operator= Operator
 Przypisuje określonego zdarzenia odwołanie do bieżącego wystąpienia zdarzenia.  
@@ -45,4 +48,4 @@ WRL_NOTHROW Event& operator=(
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Event — klasa (Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows)](../windows/event-class-windows-runtime-cpp-template-library.md)
+ [Event, klasa (Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows)](../windows/event-class-windows-runtime-cpp-template-library.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e8b3f6e8df8ff7f493c50f52e1e839f4ca9baa9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0dfddd72ed6db154868bd058f0e0e3ef9963a255
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sizeis"></a>size_is
 Określ rozmiar pamięci przydzielona dla wskaźników rozmiarze o rozmiarze wskaźniki do wskaźników o rozmiarze i jedno - lub tablice wielowymiarowe.  
@@ -52,7 +55,7 @@ Określ rozmiar pamięci przydzielona dla wskaźników rozmiarze o rozmiarze wsk
 |**Dotyczy**|Pole w `struct` lub **Unii**, interfejs parametru, interfejsu — metoda|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|**max_is —**|  
+|**Nieprawidłowe atrybuty**|**max_is**|  
   
  Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
@@ -63,4 +66,4 @@ Określ rozmiar pamięci przydzielona dla wskaźników rozmiarze o rozmiarze wsk
  [first_is —](../windows/first-is.md)   
  [last_is —](../windows/last-is.md)   
  [max_is —](../windows/max-is.md)   
- [length_is —](../windows/length-is.md)   
+ [length_is](../windows/length-is.md)   

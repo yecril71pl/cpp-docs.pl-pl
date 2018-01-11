@@ -49,11 +49,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6178c35ff5d9ed0fbe53af7d488cc24cbcf81f2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bc6d855b1ff1776cdbb1777a4250317accac68a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timeget-class"></a>time_get — Klasa
 Klasa szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do sterowania konwersje sekwencji typu `CharType` do wartości typu time.  
@@ -101,7 +102,7 @@ class time_get : public time_base;
 |[do_get_time](#do_get_time)|A chronione wirtualnej funkcji członkowskiej wywoływaną, można przeanalizować ciągu jako data utworzonego przez `X` specyfikatora `strftime`.|  
 |[do_get_weekday](#do_get_weekday)|Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana, aby przeanalizować ciąg jako nazwę dnia tygodnia.|  
 |[do_get_year](#do_get_year)|Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana, aby przeanalizować ciąg jako nazwę roku.|  
-|[Pobierz](#get)|Odczytuje ze źródła danych znakowych i konwertuje te dane na czas, który jest przechowywany w strukturze czasu.|  
+|[get](#get)|Odczytuje ze źródła danych znakowych i konwertuje te dane na czas, który jest przechowywany w strukturze czasu.|  
 |[get_date](#get_date)|Analizuje ciąg jako data utworzonego przez `x` specyfikatora `strftime`.|  
 |[get_monthname](#get_monthname)|Analizuje ciąg jako nazwę miesiąca.|  
 |[get_time](#get_time)|Analizuje ciąg jako data utworzonego przez `X` specyfikatora `strftime`.|  

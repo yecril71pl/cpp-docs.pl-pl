@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6766b2fcc5d277b86f979252bf22e6ae343e608e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4a82b26a1e6c208a584dfd19ebfd4530b4bdf76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-does-remote-automation-provide"></a>Co oferuje zdalna automatyzacja?
 Automatyzacja zdalna umożliwia programom wywołania `IDispatch` implementacje na jednej maszynie z innej. Obsługuje ona również inne interfejsy wymagane przez automatyzację, w szczególności **interfejsu IEnumVARIANT** kolekcji pomocy technicznej. Nie zapewnia możliwość dystrybucji innego interfejsu COM (z wyjątkiem **IUnknown**, oczywiście) i jak regularne automatyzacji zawiera obsługi organizowania tylko dla tych typów danych obsługiwanych przez automatyzację.  

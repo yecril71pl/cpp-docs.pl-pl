@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d5335b36e9ac80399a965c3717fcc0f5c2bab1fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02669609e25fc772f1efa49f55045eaddbaad6b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source — Klasa
 `cancellation_token_source` Klasa reprezentuje możliwości można anulować operacji anulowania.  
@@ -57,7 +58,7 @@ class cancellation_token_source;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator! =](#operator_neq)||  
+|[operator!=](#operator_neq)||  
 |[operator =](#operator_eq)||  
 |[operator ==](#operator_eq_eq)||  
   
@@ -171,4 +172,4 @@ bool operator== (const cancellation_token_source& _Src) const;
 ### <a name="return-value"></a>Wartość zwracana  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)
+ [Przestrzeń nazw współbieżności](concurrency-namespace.md)

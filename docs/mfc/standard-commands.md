@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 93471fa28adf2c094b953b70daaf9c81d05047f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bbdb763b2d7da04267a195e5d534da9528f2b74d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-commands"></a>Polecenia standardowe
 Platformę definiuje wiele poleceń standardowych komunikatów. Identyfikatory dla tych poleceń zwykle mieć postać:  

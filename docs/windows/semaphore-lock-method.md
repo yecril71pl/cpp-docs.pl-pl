@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1a4f931333c4dfe949678cc4bb6bf90b6dec0e85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 11531a07f161722947d03a53392b8315b7593958
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock — Metoda
 Czeka, aż do bieżącego obiektu lub obiektu semafora skojarzonego z określonego dojścia jest w stanie sygnałowego lub przed upływem określonego limitu czasu.  
@@ -53,5 +56,5 @@ static SyncLock Lock(
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
-[Klasa semaforu](../windows/semaphore-class.md)
+[Semaphore, klasa](../windows/semaphore-class.md)
  

@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c1dfeafab3ffa3c9a25c5c2284f6ca2c047a6c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8c37c016809d31fcb072f23768e9f54313331016
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classfactory-class"></a>ClassFactory — Klasa
 Implementuje podstawowych funkcji interfejsu IClassFactory.  
@@ -65,16 +68,16 @@ class ClassFactory : public Details::RuntimeClass<
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ClassFactory::ClassFactory — Konstruktor](../windows/classfactory-classfactory-constructor.md)||  
+|[ClassFactory::ClassFactory, konstruktor](../windows/classfactory-classfactory-constructor.md)||  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ClassFactory::AddRef — metoda](../windows/classfactory-addref-method.md)|Zwiększa liczbę odwołania dla bieżącego obiektu ClassFactory —.|  
-|[ClassFactory::LockServer — metoda](../windows/classfactory-lockserver-method.md)|Zwiększa lub zmniejsza liczbę podstawowych obiektów, które są śledzone przez bieżący obiekt ClassFactory —.|  
-|[ClassFactory::QueryInterface — metoda](../windows/classfactory-queryinterface-method.md)|Pobiera wskaźnik do interfejsu określonego przez parametr.|  
-|[ClassFactory::Release — metoda](../windows/classfactory-release-method.md)|Liczba odwołania dla bieżącego obiektu ClassFactory — zmniejsza.|  
+|[ClassFactory::AddRef, metoda](../windows/classfactory-addref-method.md)|Zwiększa liczbę odwołania dla bieżącego obiektu ClassFactory —.|  
+|[ClassFactory::LockServer, metoda](../windows/classfactory-lockserver-method.md)|Zwiększa lub zmniejsza liczbę podstawowych obiektów, które są śledzone przez bieżący obiekt ClassFactory —.|  
+|[ClassFactory::QueryInterface, metoda](../windows/classfactory-queryinterface-method.md)|Pobiera wskaźnik do interfejsu określonego przez parametr.|  
+|[ClassFactory::Release, metoda](../windows/classfactory-release-method.md)|Liczba odwołania dla bieżącego obiektu ClassFactory — zmniejsza.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `I0`  
@@ -104,4 +107,4 @@ class ClassFactory : public Details::RuntimeClass<
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)   
- [Runtimeclasstype — wyliczenie](../windows/runtimeclasstype-enumeration.md)
+ [RuntimeClassType, wyliczenie](../windows/runtimeclasstype-enumeration.md)

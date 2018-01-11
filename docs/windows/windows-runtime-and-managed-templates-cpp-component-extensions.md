@@ -14,11 +14,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ace505bf8c9da090a3b871dfd06573a7ce1d6400
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 81e803db04ebd9d3a851a04e8656131d85649751
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Środowisko wykonawcze systemu Windows i zarządzane szablony (C++ Component Extensions)
 Szablony umożliwiają zdefiniowanie prototyp środowiska wykonawczego systemu Windows lub typ środowiska uruchomieniowego języka wspólnego, a następnie wystąpienia zmian tego typu za pomocą parametrów typu szablonu.  

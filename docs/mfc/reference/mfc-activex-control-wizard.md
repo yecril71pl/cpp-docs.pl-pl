@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8fd62c603fd657c545c8fff4e6341f1964d822f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82e562ceb73da2b103360ab9607cecbbe9f1da02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-control-wizard"></a>Kreator kontrolek ActiveX MFC
 Formant ActiveX jest określonego typu [serwer automatyzacji](../../mfc/automation-servers.md); jest komponentów wielokrotnego użytku. Hosting kontrolki ActiveX aplikacji jest [klienta automatyzacji](../../mfc/automation-clients.md) tego formantu. Jeśli do utworzenia komponentów wielokrotnego użytku, użyj tego kreatora można utworzyć formantu. Zobacz [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md) Aby uzyskać więcej informacji.  

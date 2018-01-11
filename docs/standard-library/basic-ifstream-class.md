@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c1c70749a805d94c79fd1b9d2521575cc99022
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d300abc29a88c8beaa5e5992b4bca073732b0233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicifstream-class"></a>basic_ifstream — Klasa
 Zawiera opis obiektu, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, elementami typu `Elem`, którego znak cechy są określane przez klasę `Tr`.  
@@ -99,9 +100,9 @@ This is the contents of basic_ifstream_class.txt.
   
 |||  
 |-|-|  
-|[Zamknij](#close)|Zamyka plik.|  
+|[close](#close)|Zamyka plik.|  
 |[is_open](#is_open)|Określa, czy plik jest otwarty.|  
-|[Otwórz](#open)|Otwiera plik.|  
+|[open](#open)|Otwiera plik.|  
 |[rdbuf](#rdbuf)|Zwraca adres buforu przechowywanych strumienia.|  
 |[swap](#swap)|Zamienia zawartość tego `basic_ifstream` zawartości dotyczącej dostępnego `basic_ifstream`.|  
   

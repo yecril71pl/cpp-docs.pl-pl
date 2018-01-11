@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6130a7d582dc5c3e83d230ca2a90569712d979a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 254515aa7847b8562748604954ab18c56ca38783
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="container-classreference"></a>Kontener Class::reference
 > [!NOTE]
@@ -37,4 +38,4 @@ typedef T2 reference;
  Jest on opisany tutaj jako synonimem nieokreślonego typu **T2** (zazwyczaj **Alloc::reference**). Obiekt typu **odwołania** mogą być rzutowane na obiekt typu [const_reference](../standard-library/container-class-const-reference.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Sample Container — klasa](../standard-library/sample-container-class.md)
+ [Sample Container, klasa](../standard-library/sample-container-class.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28ac6f7dfc4e53e6aadc4fd082e10a0325124ee0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3c70c37523132d06bfb04c86cf6f737109da43e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptroperator-gt-operator"></a>ComPtr::operator —&gt; — Operator
 Pobiera wskaźnik do typu określonego przez parametr bieżącego szablonu.  
@@ -42,4 +45,4 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Comptr — klasa](../windows/comptr-class.md)
+ [ComPtr, klasa](../windows/comptr-class.md)

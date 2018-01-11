@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd7aa1d66697058d711edd38b3c2eb0679b73c07
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 358a85f6ec0a451534684f2201caffefb1c1ad1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asyncbasefireprogress-method"></a>AsyncBase::FireProgress — Metoda
 Wywołuje Bieżący postęp obsługi zdarzeń.  
@@ -45,4 +48,4 @@ void FireProgress(
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Asyncbase — klasa](../windows/asyncbase-class.md)
+ [AsyncBase, klasa](../windows/asyncbase-class.md)

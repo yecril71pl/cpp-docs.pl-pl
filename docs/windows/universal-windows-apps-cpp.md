@@ -13,11 +13,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 656c8ac642ae9c8a6a76e1ed52ca014b5515e65f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9ad7a56663081941f3b3ca18193da55d5df2ab6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="universal-windows-apps-c"></a>Aplikacje uniwersalne systemu Windows (C++)
 Uniwersalnych aplikacji platformy systemu Windows (UWP) opracowane zestaw reguł projektowania, które wyróżnić użytkownika proste interfejsy, które są skupia się wokół zawartości, która automatycznie dopasowane do różnych rozmiarów ekranu na różnych urządzeniach. Możesz utworzyć interfejsu użytkownika w kodzie XAML i kodem w natywnym kodzie C++. Można również utworzyć składników (dll), które mogą być używane przez aplikacje platformy uniwersalnej systemu Windows, które są zapisywane w innych językach. Powierzchnia interfejsu API dla aplikacji platformy uniwersalnej systemu Windows jest środowiska wykonawczego systemu Windows, który jest dobrze factored biblioteki, która zapewnia szerokiej gamy usług systemu operacyjnego.  
@@ -31,7 +34,7 @@ Uniwersalnych aplikacji platformy systemu Windows (UWP) opracowane zestaw reguł
 |||  
 |-|-|  
 |[Dokumentacja języka języka Visual C++ (C + +/ CX)](../cppcx/visual-c-language-reference-c-cx.md)|W tym artykule opisano zestaw rozszerzeń, które upraszczają zużycie C++ interfejsów API środowiska wykonawczego systemu Windows i włączyć obsługi błędów, który jest oparty na wyjątki.|  
-|[Tworzenie aplikacji i bibliotek (C + +/ CX)](../cppcx/building-apps-and-libraries-c-cx.md)|Opisuje sposób tworzenia biblioteki dll i biblioteki statyczne, które są dostępne z C + +/ CX aplikację lub składnik.|  
+|[Tworzenie aplikacji i bibliotek (C++/CX)](../cppcx/building-apps-and-libraries-c-cx.md)|Opisuje sposób tworzenia biblioteki dll i biblioteki statyczne, które są dostępne z C + +/ CX aplikację lub składnik.|  
 |[Samouczek: Tworzenie pierwszej aplikacji Sklepu Windows w języku C++](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Przewodnik wprowadzający podstawowych pojęć dotyczących tworzenia aplikacji platformy uniwersalnej systemu Windows w języku C++. (Nie został jeszcze zaktualizowany do tworzenia aplikacji platformy uniwersalnej systemu Windows w systemie Windows 10.)|  
 |[Tworzenie składników środowiska wykonawczego systemu Windows w języku C++](https://docs.microsoft.com/en-us/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Opisuje sposób tworzenia bibliotek DLL, które mogą korzystać z innych aplikacji platformy uniwersalnej systemu Windows i składników.|  
 |[Projektowanie gier](https://docs.microsoft.com/en-us/windows/uwp/gaming/)|Informacje dotyczące używania programu DirectX i C++ do tworzenia gier.|  
