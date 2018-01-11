@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1506eb2f2220ebfdf4c116c8e7b4a41ccf0e9085
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbe0ee3eaa3dd5e53d213496fa2520f4de1e1776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>Visual C++ for x64 64-bitowy, konfigurowanie obiektów docelowych
 
@@ -31,13 +32,13 @@ Ta sekcja zawiera tematy dotyczące przeznaczonych dla 64-bitowych x64 sprzętu 
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Porady: Konfigurowanie projektów Visual C++ pod kątem 64-bitowy, x64 platformy](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
+-   [Instrukcje: konfigurowanie projektów programu Visual C ++ dla wersji 64-bitowych, platformy docelowe x64](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
   
--   [Porady: Włączanie 64-bitowych Visual C++ narzędzi w wierszu polecenia](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
+-   [Instrukcje: włączanie 64-bitowego zestawu narzędzi języka Visual C++ w wierszu polecenia](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
   
--   [Typowe problemy przy migracji 64-bitowe języka Visual C++](../build/common-visual-cpp-64-bit-migration-issues.md)  
+-   [Typowe problemy przy migracji Visual C++ w wersji 64-bitowej](../build/common-visual-cpp-64-bit-migration-issues.md)  
   
--   [x64 konwencje kodowania](../build/x64-software-conventions.md)  
+-   [Konwencje kodowania x64](../build/x64-software-conventions.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
@@ -51,9 +52,9 @@ Ta sekcja zawiera tematy dotyczące przeznaczonych dla 64-bitowych x64 sprzętu 
   
 [Przewodnik programowania w języku dla 64-bitowego systemu Windows](http://msdn.microsoft.com/library/windows/desktop/bb427430)  
   
-[MASM dla x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)  
+[MASM dla wersji x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)  
   
-[x64 (amd64) lista funkcji wewnętrznych](../intrinsics/x64-amd64-intrinsics-list.md)  
+[Lista funkcji wewnętrznych x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)  
   
 ## <a name="see-also"></a>Zobacz też  
 

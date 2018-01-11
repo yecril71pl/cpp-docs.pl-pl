@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54c76d640171a6068421ff4199b6e77480db28d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af16748bb3b2048ce854ccc7a03b2400039184a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nonextensible-attribute"></a>nonextensible — atrybut
 Jeśli w czasie wykonywania nie zostanie rozszerzony podwójną interfejsu (oznacza to, że nie będzie zapewniać metody lub właściwości za pośrednictwem **IDispatch::Invoke** które nie są dostępne za pośrednictwem vtable), należy zastosować **nonextensible —** atrybut do definicji interfejsu. Ten atrybut informuje języków klienta (na przykład w języku Visual Basic), których można użyć, aby włączyć weryfikację pełnego kodu w czasie kompilacji. Jeśli ten atrybut nie zostanie podany, usterki mogą pozostać ukryte w kodzie klienta do czasu wykonywania.  

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40c0f03b09a5f056ae260641c588996d3bd2043b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-access-control-c"></a>Kontrola dostępu do elementów członkowskich (C++)
 Kontrolę dostępu umożliwiają oddzielenie [publicznego](../cpp/public-cpp.md) interfejsu klasy z [prywatnej](../cpp/private-cpp.md) szczegóły implementacji i [chronione](../cpp/protected-cpp.md) elementów członkowskich, które są tylko w przypadku użycia przez klasy pochodne. Specyfikator dostępu ma zastosowanie do wszystkich elementów członkowskich zadeklarowanych po nim, dopóki nie napotkano dalej specyfikator dostępu.  
@@ -51,9 +52,9 @@ protected:      // Declare protected function for derived classes only.
   
 |Typ dostępu|Znaczenie|  
 |--------------------|-------------|  
-|[prywatne](../cpp/private-cpp.md)|Elementy członkowskie klasy zadeklarowany jako `private` mogą być używane tylko przez funkcje Członkowskie i znajomych (klasy lub funkcje) klasy.|  
-|[chronione](../cpp/protected-cpp.md)|Elementy członkowskie klasy zadeklarowany jako `protected` mogą być używane przez funkcje Członkowskie i znajomych (klasy lub funkcje) klasy. Ponadto może być używany przez klasy pochodnej z klasy.|  
-|[publiczny](../cpp/public-cpp.md)|Elementy członkowskie klasy zadeklarowany jako **publicznego** może być używana przez funkcję.|  
+|[private](../cpp/private-cpp.md)|Elementy członkowskie klasy zadeklarowany jako `private` mogą być używane tylko przez funkcje Członkowskie i znajomych (klasy lub funkcje) klasy.|  
+|[protected](../cpp/protected-cpp.md)|Elementy członkowskie klasy zadeklarowany jako `protected` mogą być używane przez funkcje Członkowskie i znajomych (klasy lub funkcje) klasy. Ponadto może być używany przez klasy pochodnej z klasy.|  
+|[public](../cpp/public-cpp.md)|Elementy członkowskie klasy zadeklarowany jako **publicznego** może być używana przez funkcję.|  
   
  Kontrola dostępu ułatwia uniemożliwić korzystanie z obiektów w sposób, które nie zostały one przeznaczone do użycia. Ta ochrona jest utracone, gdy są wykonywane jawne konwersje typów (rzutowania).  
   

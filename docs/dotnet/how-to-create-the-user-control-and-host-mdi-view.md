@@ -16,11 +16,14 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 298a08689d6c4aa69d4a52af5fad965e3e353b5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8b9b3c8ff385aed22785386c035ed537d8d97e97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Porady: tworzenie kontrolki użytkownika i hostowanie widoku MDI
 Poniższe kroki pokazują, jak utworzyć kontrolkę użytkownika platformy .NET Framework, tworzenie kontrolki użytkownika w bibliotece klas formantu (w szczególności Projekt Biblioteka formantów systemu Windows) i następnie skompilować projektu do zestawu. Formant mogą być następnie używane z aplikacji MFC, która używa klas pochodnych [cview — klasa](../mfc/reference/cview-class.md) i [CWinFormsView klasy](../mfc/reference/cwinformsview-class.md).  
@@ -110,4 +113,4 @@ Poniższe kroki pokazują, jak utworzyć kontrolkę użytkownika platformy .NET 
      Na **debugowania** menu, kliknij przycisk **uruchomienie bez debugowania**.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Hostowanie formantu użytkownika formularzy systemu Windows jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)
+ [Hostowanie kontrolki użytkownika interfejsu Windows Forms jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

@@ -21,11 +21,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38348bb2c1e78111e996cf84ae4bc81aceb96895
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2816e1cfe3c62fecede5c909bc1593779aa90d54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-odbc"></a>Transakcja (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -52,9 +55,9 @@ Ten temat dotyczy klasach MFC ODBC.
   
  Więcej informacji na temat realizację transakcji można znaleźć w następujących tematach:  
   
--   [Transakcja: Wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)  
+-   [Transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)  
   
--   [Transakcja: Jak transakcje wpływają na aktualizacje (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)  
+-   [Transakcja: jak transakcje wpływają na aktualizacje (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Otwórz połączenie z bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

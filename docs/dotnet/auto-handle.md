@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 335776f2b0318e520479bf990615ccdfb1c47995
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0cd87cf23bd3d151225e4814eaa7fa57aac6f11c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autohandle"></a>auto_handle
 Definiuje `auto_handle` klasy i `swap` funkcji.  
@@ -33,9 +36,9 @@ Definiuje `auto_handle` klasy i `swap` funkcji.
 ## <a name="remarks"></a>Uwagi  
  W tym pliku nagłówka:  
   
- [auto_handle — klasa](../dotnet/auto-handle-class.md)  
+ [auto_handle, klasa](../dotnet/auto-handle-class.md)  
   
- [Funkcja SWAP (auto_handle)](../dotnet/swap-function-auto-handle.md)  
+ [Funkcja swap (auto_handle)](../dotnet/swap-function-auto-handle.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

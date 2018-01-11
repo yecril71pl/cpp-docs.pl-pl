@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb870adea1e13a9e97ac0cf36f6eb4960e87cf30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e5883cc7f028c2d64c038a2cdbd9b8365b7e61d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="smart-pointers-modern-c"></a>Wskaźniki inteligentne (Modern C++)
 W nowoczesnych programowania w języku C++, biblioteki standardowej zawiera *wskaźniki inteligentne*, które są używane do zapewnienia, że programy są wolnej pamięci i przecieków zasobów i są bezpieczne dla wyjątku.  
@@ -96,7 +97,7 @@ W nowoczesnych programowania w języku C++, biblioteki standardowej zawiera *wsk
  [Klasa CComGITPtr](../atl/reference/ccomgitptr-class.md)  
  Inteligentny wskaźnik dla interfejsów, które są uzyskiwane z tabeli interfejsu globalnego (GIT).  
   
- [_com_ptr_t — klasa](../cpp/com-ptr-t-class.md)  
+ [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)  
  Podobny `CComQIPtr` funkcji, ale nie zależy od nagłówki ATL.  
   
  **Wskaźniki inteligentne ATL dla obiektów POCO**  

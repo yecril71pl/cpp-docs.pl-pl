@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f3d72b72280ecc841cc349f20c68f90a6cbd227
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd662b149f56cf0d6bd5e7a3c912e0ecd14f21b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Eksportowanie klas ciągu przy użyciu CStringT
 W przeszłości deweloperzy MFC ma pochodzi od `CString` do specialize własnych klas ciągu. W programie Microsoft Visual C++ .NET (MFC 8.0) [cstring —](../atl-mfc-shared/using-cstring.md) klasy został zastąpiony przez szablon klasy o nazwie [CStringT](../atl-mfc-shared/reference/cstringt-class.md). Ta udostępniona kilka korzyści:  
@@ -58,9 +59,9 @@ W przeszłości deweloperzy MFC ma pochodzi od `CString` do specialize własnych
 -   `CString`, `CStringA`, i `CStringW` tylko powinna być oznaczona jako `__declspec(dllexport/dllimport)` gdy tworzysz z MFC współdzielonej biblioteki DLL. Jeśli połączenie z biblioteką statyczną MFC, należy nie oznaczyć te klasy eksportowanie; użycie, w przeciwnym razie wewnętrzny `CString`, `CStringA`, i `CStringW` wewnątrz oznaczy użytkownika biblioteki dll `CString` jak również wyeksportować.  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
- [Klasa CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+ [CStringT, klasa](../atl-mfc-shared/reference/cstringt-class.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przy użyciu CStringT](../atl-mfc-shared/using-cstringt.md)   
- [Przy użyciu obiektu CString](../atl-mfc-shared/using-cstring.md)
+ [Użycie CString](../atl-mfc-shared/using-cstring.md)
 

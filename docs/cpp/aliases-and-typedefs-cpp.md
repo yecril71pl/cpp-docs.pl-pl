@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1d408e0e6fe021caf7f3722a55528020d94bb83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8946c87c18e1781f95df7a91e8cc4fa0eba02158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliasy i definicje typów (C++)
 Można użyć *Deklaracja aliasu* Aby zadeklarować nazwa ma być używana jako synonim wcześniej zadeklarowanego typu. (Ten mechanizm jest również nazywany nieformalnego *alias typu*). Ten mechanizm również służy do tworzenia *szablonu aliasu*, które mogą być szczególnie przydatne w przypadku niestandardowych allocators —.  

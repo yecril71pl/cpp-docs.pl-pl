@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7559bdf725727b79f99ed3bfcd4d6b7301528110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specyfikacje wyjątków (throw, noexcept) (C++)
 Specyfikacje wyjątków są funkcją języka C++, która wskazuje zamiar programisty o typów wyjątków, które mogą być przekazywane przez funkcję. Można określić, czy funkcja może lub nie może zamknąć przez wyjątek przy użyciu *specyfikacji wyjątku*. Kompilator można wykorzystać te informacje do optymalizacji wywołania funkcji, a zakończenie program, jeśli wystąpił nieoczekiwany wyjątek specjalne funkcji. Istnieją dwa rodzaje specyfikacji wyjątku. *Specyfikacji noexcept* nowego w języku C ++ 11. Określa, czy zestaw potencjalnych wyjątki, które można wprowadzić funkcji jest pusta. *Specyfikacji wyjątków dynamicznych*, lub `throw(optional_type_list)` specyfikacji, jest przestarzała w języku C ++ 11 i jest tylko częściowo obsługiwane przez program Visual Studio. Specyfikacja tego wyjątku została zaprojektowana w celu zapewnienia podsumowanie informacji o jakie wyjątki może zostać wygenerowany poza funkcją, ale w praktyce znaleziono problemów. Jedną specyfikację wyjątków dynamicznych, które okazać się przydatne w pewnym stopniu został bezwarunkowe `throw()` specyfikacji. Na przykład deklaracji funkcji:  
@@ -139,4 +140,4 @@ in handler
   
 ## <a name="see-also"></a>Zobacz też  
  [Spróbuj, throw i catch instrukcji (C++)](../cpp/try-throw-and-catch-statements-cpp.md)   
- [C++, obsługa wyjątków](../cpp/cpp-exception-handling.md)
+ [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)

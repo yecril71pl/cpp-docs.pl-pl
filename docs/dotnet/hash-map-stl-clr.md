@@ -18,11 +18,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aae2ca596a04a6502fc50bc7ac2cb6344463f739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cff0a45360a74bcfd7612b4eabe60dcc1057507a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `hash_map` do zarządzania sekwencję elementów jako tablicy skrótów, każdego wpisu tabeli przechowywania dwukierunkowy połączone listy węzłów i w każdym węźle przechowywania jeden element. Element składa się z kluczem porządkowania sekwencji i zmapowane wartość, która dotyczy jazdy.  
@@ -79,7 +82,7 @@ template<typename Key,
 |[hash_map::key_compare (STL/CLR)](../dotnet/hash-map-key-compare-stl-clr.md)|Delegat porządkowania dla dwa klucze.|  
 |[hash_map::key_type (STL/CLR)](../dotnet/hash-map-key-type-stl-clr.md)|Typ klucza sortowania.|  
 |[hash_map::mapped_type (STL/CLR)](../dotnet/hash-map-mapped-type-stl-clr.md)|Typ zamapowanych wartość skojarzoną z każdego klucza.|  
-|[hash_map::Reference (STL/CLR)](../dotnet/hash-map-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[hash_map::reference (STL/CLR)](../dotnet/hash-map-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[hash_map::reverse_iterator (STL/CLR)](../dotnet/hash-map-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
 |[hash_map::size_type (STL/CLR)](../dotnet/hash-map-size-type-stl-clr.md)|Typ (nieujemną) odległość między dwoma elementami.|  
 |[hash_map::value_compare (STL/CLR)](../dotnet/hash-map-value-compare-stl-clr.md)|Delegat porządkowania dla dwóch wartości elementu.|  
@@ -87,18 +90,18 @@ template<typename Key,
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[hash_map::BEGIN (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[hash_map::begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
 |[hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)|Zlicza zasobników.|  
-|[hash_map::Clear (STL/CLR)](../dotnet/hash-map-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
-|[hash_map::Count (STL/CLR)](../dotnet/hash-map-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
-|[hash_map::EMPTY (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[hash_map::clear (STL/CLR)](../dotnet/hash-map-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
+|[hash_map::count (STL/CLR)](../dotnet/hash-map-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
+|[hash_map::empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
 |[hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
 |[hash_map::equal_range (STL/CLR)](../dotnet/hash-map-equal-range-stl-clr.md)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|  
-|[hash_map::ERASE (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[hash_map::Find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
+|[hash_map::erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
+|[hash_map::find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
 |[hash_map::hash_delegate (STL/CLR)](../dotnet/hash-map-hash-delegate-stl-clr.md)|Kopiuje delegat wyznaczania wartości skrótu z kluczem.|  
 |[hash_map::hash_map (STL/CLR)](../dotnet/hash-map-hash-map-stl-clr.md)|Konstruuje obiekt kontenera.|  
-|[hash_map::INSERT (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)|Dodaje elementy.|  
+|[hash_map::insert (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)|Dodaje elementy.|  
 |[hash_map::key_comp (STL/CLR)](../dotnet/hash-map-key-comp-stl-clr.md)|Kopiuje porządkowania delegowanie dla dwa klucze.|  
 |[hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md)|Oblicza średnią liczbę elementów na przedział.|  
 |[hash_map::lower_bound (STL/CLR)](../dotnet/hash-map-lower-bound-stl-clr.md)|Wyszukuje początek zakresu, który jest zgodny z określonym kluczem.|  
@@ -115,7 +118,7 @@ template<typename Key,
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[hash_map::operator = (STL/CLR)](../dotnet/hash-map-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[hash_map::operator= (STL/CLR)](../dotnet/hash-map-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
 |[hash_map::operator(STL/CLR)](../dotnet/hash-map-operator-stl-clr.md)|Mapuje klucz, do jej powiązaną wartość mapowane.|  
   
 ## <a name="interfaces"></a>Interfejsy  
@@ -176,4 +179,4 @@ template<typename Key,
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [Zestaw wielokrotny (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [Ustaw (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

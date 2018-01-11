@@ -14,11 +14,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 182478ffdd0175fc2b5f80b4a534b85bb97190a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f4bf38fa6512b0dc86edad43c893d2dd09a97a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semantyka stosu języka C++ dla typów odwołań
 Przed Visual C++ 2005, typu odwołania tylko można utworzyć wystąpienia przy użyciu `new` sterty zbierane operatora, który utworzył obiekt na odzyskiwanie. Teraz można jednak utworzyć wystąpienia typu referencyjnego przy użyciu takiej samej składni, który ma zostać użyty do utworzenia wystąpienia typu natywnego na stosie. Tak, nie trzeba używać [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) do utworzenia obiektu typu referencyjnego. Gdy obiekt poza zakresem, kompilator wywołań destruktor obiektu i.  
@@ -48,7 +51,7 @@ Przed Visual C++ 2005, typu odwołania tylko można utworzyć wystąpienia przy 
   
  Następujące typy odwołań nie są dostępne do użycia z semantyka stosu:  
   
--   [Delegat (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md)  
+-   [delegate (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md)  
   
 -   [Tablice](../windows/arrays-cpp-component-extensions.md)  
   

@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cbf22e57abaefc7b14be9c4eab404f7c20cb9359
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatory przyrostka inkrementacji i dekrementacji: ++ i --
 ## <a name="syntax"></a>Składnia  
@@ -84,4 +85,4 @@ for( myCompass = North; myCompass != West; myCompass++ ) // Error
 ## <a name="see-also"></a>Zobacz też  
  [Wyrażenia przyrostków](../cpp/postfix-expressions.md)   
  [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [C operatory przyrostka inkrementacji i dekrementacji](../c-language/c-postfix-increment-and-decrement-operators.md)
+ [Operatory przyrostka inkrementacji i dekrementacji języka C](../c-language/c-postfix-increment-and-decrement-operators.md)

@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 423334c3300d0218eb76df8f90a2eb30ea8cc369
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05869e1497ab173bc0f847482225ff215f3690af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 Porównanie znaków w dwóch buforów.  
@@ -148,4 +149,4 @@ int_arr1 is equal to int_arr2.
  [memcpy, wmemcpy —](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset —, wmemset —](../../c-runtime-library/reference/memset-wmemset.md)   
  [strcmp —, wcscmp —, _mbscmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)

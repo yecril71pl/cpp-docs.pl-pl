@@ -33,11 +33,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f695cb018a09725f23fb0943f9acbef83a338314
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c89c5adba9224c11f8d5ec77e13b06a8cea4d0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 Kojarzy błąd, który jest wykrywany przez sprawdzanie błędów czasu wykonywania (RTCs) z typem. Twoje obsługi błędu przetwarza jak dane wyjściowe błędów określonego typu.  

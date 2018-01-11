@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73858235f949c07da646944efcae6e846a96d900
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f17f73efc8fba19bb129e3b118f8a4357444aad0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="avoidance-of-heap-contention"></a>Unikanie stos rywalizacji
 Menedżerowie ciąg domyślnej zapewniane przez MFC i ATL są proste otoki na szczycie stosu globalne. Tym globalnych sterty jest całkowicie bezpieczne wątkowo, co oznacza, że wiele wątków można przydzielić i zwolnić pamięć z niego bez jednocześnie uszkodzenie sterty. Aby zapewnić bezpieczeństwo wątków sterty musi serializować dostępu do samej siebie. Zazwyczaj jest to realizowane za pomocą sekcja krytyczna lub podobny mechanizm blokowania. Zawsze, gdy dwa wątków próbuje uzyskać jednocześnie dostęp do sterty, jeden wątek jest zablokowany do momentu zakończenia żądania innego wątku. Dla wielu aplikacji ta sytuacja rzadko występuje i wpływu na wydajność mechanizmu blokującego sterty jest niewielka. Dla aplikacji, które często dostęp wiele wątków stos rywalizacji o blokadę sterty może jednak spowodować aplikacji działać wolniej niż jeśli zostały jednowątkowe (nawet na komputerach wieloprocesorowych).  
@@ -38,5 +39,5 @@ Menedżerowie ciąg domyślnej zapewniane przez MFC i ATL są proste otoki na sz
  Bardziej skomplikowane procedury wątku może być wygodną do przechowywania wskaźnik do Menedżera ciąg wątku w gnieździe (TLS) magazynu lokalnego wątku. Dzięki temu innych funkcji o nazwie przez procedurę wątku, aby otworzyć Menedżera ciąg wątku.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zarządzanie pamięcią z CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+ [Zarządzanie pamięcią za pomocą CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 

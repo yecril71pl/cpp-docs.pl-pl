@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8bb95ab9a70fd0144256f85d3fae6ccc3c034c1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f3bd5cedbf3c981964c9d03eb8a30fc5e1652081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-data-to-the-windows-registry-ccli"></a>Porady: wpisywanie danych do rejestru systemu Windows (C++/CLI)
 Poniższy przykład kodu wykorzystuje <xref:Microsoft.Win32.Registry.CurrentUser> klawisz, aby utworzyć wystąpienie zapisywalny <xref:Microsoft.Win32.RegistryKey> klasy odpowiadający **oprogramowania** klucza. <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> Metody jest następnie używany do tworzenia klucza, a następnie dodaj do par klucz/wartość.  
@@ -78,4 +81,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [Porady: odczytywanie danych z rejestru systemu Windows (C + +/ CLI)](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

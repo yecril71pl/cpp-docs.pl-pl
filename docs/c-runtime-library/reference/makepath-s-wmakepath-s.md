@@ -40,11 +40,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0e3a2885adffda35b4e55117b5ffa591ecf487c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b808d41bfb0d9da3f709f8f655a86c168b15e00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
 Tworzy nazwę ścieżki ze składników. Są to wersje [_makepath —, _wmakepath —](../../c-runtime-library/reference/makepath-wmakepath.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -202,4 +203,4 @@ Path extracted with _splitpath_s:
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
  [_fullpath —, _wfullpath —](../../c-runtime-library/reference/fullpath-wfullpath.md)   
  [_splitpath_s —, _wsplitpath_s —](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)   
- [_makepath —, _wmakepath —](../../c-runtime-library/reference/makepath-wmakepath.md)
+ [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)

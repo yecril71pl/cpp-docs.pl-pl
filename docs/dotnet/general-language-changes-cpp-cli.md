@@ -13,11 +13,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3f9d5a04a5613d9a8ee10fbd115672234034b9dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 87ff7f55b67c4e8a84d15099432962ee0939d13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-language-changes-ccli"></a>Ogólne zmiany w języku (C++/CLI)
 Liczba — funkcje językowe CLR zmieniła się z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  
@@ -30,14 +33,14 @@ Liczba — funkcje językowe CLR zmieniła się z rozszerzeń zarządzanych dla 
  [Tablica parametrów i wielokropek](../dotnet/param-array-and-ellipsis.md)  
  W tym artykule omówiono sposób `ParamArray` jest teraz pierwszeństwo nad wielokropka (`...`) w celu rozwiązania wywołania funkcji z różną liczbę argumentów.  
   
- [TypeOf operatorem T::TypeID](../dotnet/typeof-goes-to-t-typeid.md)  
+ [Operator typeof został zastąpiony operatorem T::typeid](../dotnet/typeof-goes-to-t-typeid.md)  
  W tym artykule omówiono sposób `typeof` operator ma zostać supplanted przez `typeid`.  
   
  [Listy inicjatorów](../dotnet/initializer-lists.md)  
  Zawiera omówienie zmian w kolejności wywoływania listy inicjatorów.  
   
- [Notacja rzutowania i przedstawienie safe_cast <>](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)  
+ [Notacja rzutowania i przedstawienie operacji safe_cast<>](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)  
  Zawiera omówienie zmian do notacji rzutowania, w szczególności wprowadzenia `safe_cast`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [C + +/ CLI Elementarz migracji](../dotnet/cpp-cli-migration-primer.md)
+ [Podręcznik migracji C++/CLI](../dotnet/cpp-cli-migration-primer.md)

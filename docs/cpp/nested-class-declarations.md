@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c48ee39a9053e098b67367d0c144fbf6e284b9d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 247be4e212efbe2b8061deed200a8350b87fc7a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nested-class-declarations"></a>Zagnieżdżone deklaracje klas
 Klasa może być zadeklarowana w zakresie innej klasy. Taka klasa nosi nazwę „klasy zagnieżdżonej”. Klasy zagnieżdżone są rozważane w zakresie otaczającej klasy i są dostępne do użycia w tym zakresie. Aby odwołać się do klasy zagnieżdżonej z zakresu innego niż jego bezpośredni zasięg, należy użyć w pełni kwalifikowanej nazwy.  
@@ -65,9 +66,9 @@ int main()
   
  `BufferedIO::BufferedInput` i `BufferedIO::BufferedOutput` są zadeklarowane w ramach `BufferedIO`. Nazwy klas nie są widoczne w zakresie klasy `BufferedIO`. Jednak obiekt typu `BufferedIO` nie zawiera żadnych obiektów typu `BufferedInput` lub `BufferedOutput`.  
   
- Klasy zagnieżdżone mogą bezpośrednio korzystać z nazw, nazwy typów, nazw statycznych elementów członkowskich i wyliczeń tylko z otaczającej klasy. Aby używać nazw innych elementów członkowskich klasy, należy użyć wskaźników, odwołań lub nazw obiektów.  
+ Klasy zagnieżdżone mogą bezpośrednio korzystać z nazw, nazwy typów, nazw statycznych składowych i wyliczeń tylko z otaczającej klasy. Aby używać nazw innych składowych klasy, należy użyć wskaźników, odwołań lub nazw obiektów.  
   
- W poprzednim przykładzie `BufferedIO`, wyliczenie `IOError` jest dostępne bezpośrednio przez funkcje członkowskie w klasach zagnieżdżonych `BufferedIO::BufferedInput` lub `BufferedIO::BufferedOutput`, jak pokazano w funkcji `good`.  
+ W poprzednim przykładzie `BufferedIO`, wyliczenie `IOError` jest dostępne bezpośrednio przez funkcje składowe w klasach zagnieżdżonych `BufferedIO::BufferedInput` lub `BufferedIO::BufferedOutput`, jak pokazano w funkcji `good`.  
   
 > [!NOTE]
 >  Klasy zagnieżdżone deklarują tylko typy w zakresie klasy. Nie przyczyniają się do tworzenia obiektów, w których zagnieżdżone są klasy. Poprzedni przykład deklaruje dwie klasy zagnieżdżone, ale nie deklaruje żadnych obiektów tego typu klas.  

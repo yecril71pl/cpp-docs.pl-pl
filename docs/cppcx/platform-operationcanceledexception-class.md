@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f4879acaa0f8f5a033f4650c5db58b6ed08ac3a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa984d52ea050d6e17d904cc159ff5c6d3e36a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformoperationcanceledexception-class"></a>Klasa platform::OperationCanceledException
 Element zgłaszany, gdy operacja została przerwana.  
@@ -45,4 +46,4 @@ public ref class OperationCanceledException : COMException,    IException,    IP
  **Metadane:** platform.winmd  
   
 ## <a name="see-also"></a>Zobacz też  
- [Klasa platform::COMException](../cppcx/platform-comexception-class.md)
+ [Platform::COMException, klasa](../cppcx/platform-comexception-class.md)

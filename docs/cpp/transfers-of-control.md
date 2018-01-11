@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be3af57862b41a2de398869f11d0a9559dbe9c76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 594ec49242e919f1ea9bd059588b21292af55409
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transfers-of-control"></a>Transferowanie kontroli
 Można użyć `goto` instrukcji lub **przypadku** etykiety w `switch` instrukcji, aby określić program, który gałęzi poza inicjatora. Taki kod jest niedozwolone, chyba że deklaracji, która zawiera inicjator jest w bloku wewnątrz bloku, w której występuje instrukcja przeskoku.  

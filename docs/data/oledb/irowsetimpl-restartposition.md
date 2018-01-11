@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28aeb5548235fc49c8dd4c412e2a27eaa38a02d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d8ed3217a635f8a0b9af5e2c94fff325e07bff61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetimplrestartposition"></a>IRowsetImpl::RestartPosition
 Zmienia położenie dalej pozycji pobierania do pozycji początkowej; oznacza to utworzyć jej położenie podczas pierwszego zestawu wierszy.  
@@ -48,4 +51,4 @@ Zmienia położenie dalej pozycji pobierania do pozycji początkowej; oznacza to
  **Nagłówek:** atldb.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Irowsetimpl — klasa](../../data/oledb/irowsetimpl-class.md)
+ [IRowsetImpl, klasa](../../data/oledb/irowsetimpl-class.md)

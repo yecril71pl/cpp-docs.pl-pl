@@ -13,11 +13,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a7ff6cb106745ff4f5c1d26d6992d3114f772f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 35469281b96b2989c2c511855b46c9eba76c58a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-in-ccli"></a>Wyjątki w języku C++/CLI
 Artykuły w tej sekcji dokumentacji opisano obsługi wyjątków w języku C + +/ CLI i jak różni się od standardowego wyjątków.  
@@ -28,7 +31,7 @@ Artykuły w tej sekcji dokumentacji opisano obsługi wyjątków w języku C + +/
 |-----------|-----------------|  
 |[Podstawowe pojęcia związane z używaniem wyjątków zarządzanych](../dotnet/basic-concepts-in-using-managed-exceptions.md)|W tym artykule omówiono obsługi wyjątków w zarządzanych aplikacji.|  
 |[Różnice w zachowaniu obsługi wyjątków w/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)|W tym artykule omówiono różnice między standardowe wyjątków i wyjątków w języku C + +/ CLI.|  
-|[na koniec](../dotnet/finally.md)|W tym artykule opisano `finally` bloku, który służy do wyczyścić zasoby, które są pozostawione po wystąpieniu wyjątku.|  
-|[Porady: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)|Pokazuje, jak używać `__try` i `__except` przechwytują wyjątki w kodzie natywnym, które są generowane w języku MSIL.|  
-|[Porady: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)|Pokazuje, jak przechwytywania nieobsłużonych wyjątków.|  
-|[.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Artykuł najwyższego poziomu programowania .NET w dokumentacji Visual C++.|
+|[finally](../dotnet/finally.md)|W tym artykule opisano `finally` bloku, który służy do wyczyścić zasoby, które są pozostawione po wystąpieniu wyjątku.|  
+|[Instrukcje: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)|Pokazuje, jak używać `__try` i `__except` przechwytują wyjątki w kodzie natywnym, które są generowane w języku MSIL.|  
+|[Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)|Pokazuje, jak przechwytywania nieobsłużonych wyjątków.|  
+|[Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Artykuł najwyższego poziomu programowania .NET w dokumentacji Visual C++.|

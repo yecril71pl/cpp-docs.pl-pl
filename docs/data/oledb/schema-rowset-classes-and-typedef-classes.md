@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27cb8085711ae9756b9bb5c1042bbe5475619025
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a48ad06318f71b637cc0d16e577d4a15a29177cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Klasy zestawów wierszy schematu i klasy Typedef
 Schemat jest kolekcją obiektów bazy danych, które należą do firmy lub zostały utworzone przez określonego użytkownika. Katalog może zawierać co najmniej jeden schemat, ale musi zawsze zawierać schemat o nazwie INFORMATION_SCHEMA, zawierający widoki i domen schematu informacji. Informacje o schemacie w bazie danych OLE DB są pobierane za pomocą zestawów wierszy schematu wstępnie zdefiniowane i zawiera typy, tabel, kolumn, indeksów, widoki, potwierdzeń i ograniczenia, statystyki, zestawów znaków, sortowania i domen.  
@@ -67,4 +70,4 @@ Schemat jest kolekcją obiektów bazy danych, które należą do firmy lub zosta
  **Nagłówek:** atldbsch.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Klasa CRestrictions](../../data/oledb/crestrictions-class.md)
+ [CRestrictions, klasa](../../data/oledb/crestrictions-class.md)

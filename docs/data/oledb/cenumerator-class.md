@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 856356117161a0c9e3588732faf01c3a663b6a9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a64ac02e7b16bfab70966ffaf2a1897ae955f8c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cenumerator-class"></a>Klasa CEnumerator
 Obiekt enumerator OLE DB, który udostępnia używa [ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx) interfejsu zwrócą zestawu wierszy opisu wszystkich źródeł danych i moduły wyliczające.  
@@ -50,4 +53,4 @@ class CEnumerator :
 ## <a name="see-also"></a>Zobacz też  
  [DBViewer](../../visual-cpp-samples.md)   
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Dokumentacja szablonów konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

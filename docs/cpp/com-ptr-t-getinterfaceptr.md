@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2d15bcec2527b15f70e2b7a5e5e38ddcd98e77bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d570b7d1d25ee14b0cabd5ecec02d6f7d1573d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrtgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
 **Dotyczące firmy Microsoft**  
@@ -40,4 +41,4 @@ Interface*& GetInterfacePtr() throw();
  **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [_com_ptr_t — klasa](../cpp/com-ptr-t-class.md)
+ [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

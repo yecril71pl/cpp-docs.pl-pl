@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1326a0813e0d4092a7033e3e995336ac1f29056
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 019884793eb3472e52c7772351b2f5826520a193
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignment-c-declarations"></a>Wyrównanie (deklaracje języka C++)
 Jedną z niskiego poziomu funkcji C++ jest możliwość określenia dokładne dostosowanie obiektów w pamięci, aby wykorzystać maksymalną architektury sprzętu. Domyślnie kompilator wyrównuje klasy i struktury elementów członkowskich na ich wartość rozmiaru: bool i char są wyrównane co granice jednego bajtu, short na dwubajtowo, int na 4 bajty, long double i long double 8 bajtów. W większości przypadków nie trzeba być związane z wyrównania, ponieważ domyślne wyrównanie już jest optymalna. W niektórych przypadkach jednak można osiągnąć znaczną poprawę wydajności lub zużycie pamięci, określając niestandardowy Wyrównanie struktury danych użytkownika. Przed Visual Studio 2015 umożliwiają __alignof słowa kluczowe specyficzne dla firmy Microsoft i declspec(alignas) określ wyrównanie większe niż wartość domyślna. Poczynając od programu Visual Studio 2015 należy używać języka C ++ 11 standardowe słowa kluczowe [alignof i alignas](../cpp/alignof-and-alignas-cpp.md) przenośności maksymalną kodu. Zachowanie nowych słów kluczowych w taki sam sposób kulisy jako rozszerzenia specyficzne dla firmy Microsoft, a w dokumentacji tych rozszerzeń ma również zastosowanie do nowych słów kluczowych. Zobacz [__alignof Operator](../cpp/alignof-operator.md) i [Dopasuj](../cpp/align-cpp.md) Aby uzyskać więcej informacji. C++ standard nie określa zachowanie pakowania wyrównywania na granicach mniejszą niż domyślne kompilatora dla platformy docelowej, dzięki czemu nadal trzeba korzystać z usługi Microsoft #pragma [pakietu](../preprocessor/pack.md) w takiej sytuacji.  

@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 530a75cdebd5799e8c46fd6f8ae1f40d4f785ba6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 60e7a38ede07a3cf3b1c21b1c5fe26e9f588f2f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
 Klasa szablonu opisuje obiekt, który po wywołaniu zwraca logicznym nie pochodzi z jego przechowywanych argumentu jeden obiekt. Można go użyć Określ obiekt funkcja pod względem jego przechowywanych obiekt.  
@@ -126,4 +129,4 @@ int main()
  **Namespace:** cliext  
   
 ## <a name="see-also"></a>Zobacz też  
- [not1 — (STL/CLR)](../dotnet/not1-stl-clr.md)
+ [not1 (STL/CLR)](../dotnet/not1-stl-clr.md)

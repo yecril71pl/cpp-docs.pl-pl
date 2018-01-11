@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c97e1215ce7380ec917166622e12bcefebd5083
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d74854ce4d4e7e0fa2636fe04b01908582754f38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>Instalowanie ODBC i wprowadzenie do ODBC
 Poniższe tematy ułatwiające zainstalowanie składników, które należy rozpocząć pracę z otwarte połączenie bazy danych (ODBC).  
@@ -32,4 +35,4 @@ Poniższe tematy ułatwiające zainstalowanie składników, które należy rozpo
 -   [Ponowna dystrybucja składników ODBC wśród klientów](../../data/odbc/odbc-basics.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Otwórz połączenie z bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

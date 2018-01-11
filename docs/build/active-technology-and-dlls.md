@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb97e43f589718f79f64483593cfea870258d9f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44dcc58aed4025af2e3e2177e978633c13f0ef20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-technology-and-dlls"></a>Technologia Active i biblioteki DLL
 Technologia Active umożliwia serwerom obiektu do zaimplementowania całości wewnątrz biblioteki DLL. Ten typ serwera nosi nazwę serwera w procesie. MFC nie całkowicie obsługuje serwery wewnątrzprocesowe dla wszystkich funkcji edycja wizualna głównie, ponieważ jest to technologia Active nie umożliwiają serwerowi przyłączanie się do pętli komunikatów głównego kontenera. MFC wymaga dostępu do aplikacji kontenera pętli komunikatów do obsługi klawisze skrótów i przetwarzania w czasie bezczynności.  
@@ -35,4 +36,4 @@ Technologia Active umożliwia serwerom obiektu do zaimplementowania całości we
 -   [Serwery automatyzacji](../mfc/automation-servers.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md)
+ [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)

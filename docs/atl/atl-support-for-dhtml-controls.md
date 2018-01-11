@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16848150802ec3fb097f6d19f0b1b4f8b11c8f69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab796752cef10c48036966c2947d711a0e385032
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-support-for-dhtml-controls"></a>Obsługa ALT dla kontrolek DHTML
 Za pomocą biblioteki ATL, można utworzyć formantu z możliwości dynamicznej DHTML (HTML). Formant ATL DHTML:  
@@ -39,19 +40,19 @@ Za pomocą biblioteki ATL, można utworzyć formantu z możliwości dynamicznej 
  Formant ATL DHTML można wyświetlić w przeglądarce sieci Web lub innych kontenera, takich jak kontener testu formantu ActiveX.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Określający elementy projektu kontroli DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
+ [Identyfikowanie elementów projektu kontrolki DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
  W tym artykule opisano elementy projektu kontroli DHTML.  
   
- [Wywoływanie kodu w języku C++ z DHTML](../atl/calling-cpp-code-from-dhtml.md)  
+ [Wywoływanie kodu C++ z elementu DHTML](../atl/calling-cpp-code-from-dhtml.md)  
  Przykład wywołania z formantu DHTML kod w języku C++.  
   
- [Tworzenie formantu ATL DHTML](../atl/creating-an-atl-dhtml-control.md)  
+ [Tworzenie kontrolki DHTML ATL](../atl/creating-an-atl-dhtml-control.md)  
  Zawiera listę kroków do tworzenia kontrolek DHTML.  
   
- [Testowanie formant ATL DHTML](../atl/testing-the-atl-dhtml-control.md)  
+ [Testowanie kontrolki DHTML ATL](../atl/testing-the-atl-dhtml-control.md)  
  Przedstawia sposób tworzenia i testowania początkowej projektu kontroli DHTML.  
   
- [Modyfikowanie formant ATL DHTML](../atl/modifying-the-atl-dhtml-control.md)  
+ [Modyfikowanie kontrolki DHTML ATL](../atl/modifying-the-atl-dhtml-control.md)  
  Pokazuje, jak dodać niektóre funkcje do formantu.  
   
  [Testowanie kontroli zmieniony DHTML ATL](../atl/testing-the-modified-atl-dhtml-control.md)  

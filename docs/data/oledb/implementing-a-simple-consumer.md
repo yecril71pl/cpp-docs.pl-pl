@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7dc97c0e64558f066250a54098f7316ac8b33076
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 43ebcd38a3125db7373755b1ebf5366cae8af56b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementowanie prostego konsumenta
 W następujących tematach opisano, jak edytować pliki tworzone przez Kreatora aplikacji MFC i ATL OLE DB Kreator konsumenta Tworzenie prostego konsumenta. Ten przykład zawiera następujące części:  
@@ -267,4 +270,4 @@ W następujących tematach opisano, jak edytować pliki tworzone przez Kreatora 
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie konsumenta OLE DB przy użyciu Kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+ [Tworzenie konsumenta OLE DB przy użyciu kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

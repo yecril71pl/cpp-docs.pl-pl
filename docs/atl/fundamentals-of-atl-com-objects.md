@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30527a705d880e96620edfee5f7ad7897f9371a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a5a43af31a88420c154d7a57d27d2b69787d11d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Podstawowe informacje na temat ATL COM — obiekty
 Na poniższej ilustracji przedstawiono relacje między klasy i interfejsy, które są używane do definiowania obiekt ATL COM.  
@@ -55,22 +56,22 @@ Na poniższej ilustracji przedstawiono relacje między klasy i interfejsy, któr
 -   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementuje **ISupportErrorInfo** interfejsu, który zapewnia informacje o błędzie mogą być poprawnie propagowane zapasowej łańcuch wywołań.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Implementowanie CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
+ [Implementowanie klasy CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
  Pokaż przykład COM wpisy mapy implementacji `CComObjectRootEx`.  
   
- [Implementowanie element CComObject, CComAggObject i CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+ [Implementowanie klas CComObject, CComAggObject i CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
  W tym artykule omówiono sposób **DECLARE_\*_AGGREGATABLE** makra mają wpływ na korzystanie z `CComObject`, `CComAggObject`, i `CComPolyObject`.  
   
- [Obsługa interfejsu IDispatch i IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
+ [Obsługa interfejsów IDispatch i IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
  Zawiera klasy implementacji ATL do użycia na potrzeby obsługi `IDispatch` i **IErrorInfo** interfejsów.  
   
- [Obsługa IDispEventImpl](../atl/supporting-idispeventimpl.md)  
+ [Obsługa interfejsu IDispEventImpl](../atl/supporting-idispeventimpl.md)  
  W tym artykule omówiono kroki implementacji punktu połączenia dla klasy.  
   
- [Zmiana domyślnego fabryki klasy i modelu agregacji](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+ [Zmienianie domyślnej fabryki klas i modelu agregacji](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
  Pokaż makra, jakie można użyć, aby zmienić klasy domyślny model fabryki i agregacji.  
   
- [Tworzenie obiektu zagregowane](../atl/creating-an-aggregated-object.md)  
+ [Tworzenie obiektu zagregowanego](../atl/creating-an-aggregated-object.md)  
  Zawiera listę kroków tworzenia zagregowane obiektu.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

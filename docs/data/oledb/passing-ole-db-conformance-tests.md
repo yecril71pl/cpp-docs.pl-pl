@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8ef7e32f56fdff81c7a66a1dfcc6c613201e2f49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0df51ea0086104a45385673b310b5717bfa1c9ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Przechodzenie testów zgodności z OLE DB
 Aby dostawców był bardziej spójny, zestaw SDK dostępu do danych zawiera zestaw testów zgodności z OLE DB. Testy Sprawdź wszystkie aspekty dostawcy i zapewniają wystarczającą pewność, że dostawca funkcji jako oczekiwano. Na temat zestawu SDK dostępu do danych firmy Microsoft można znaleźć testów zgodności z OLE DB. Tej części przedstawiono czynności, które należy wykonać przejść testy zgodności. Aby uzyskać informacje na temat uruchamiania testów zgodności z OLE DB zobacz zestaw SDK.  

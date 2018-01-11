@@ -46,11 +46,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ac41aff966956506c79dda65d895f805dede1d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af0601299046276c135571be2bac615df1571140
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-ranges"></a>Zakresy typu danych
 Visual C++ 32-bitowe i 64-bitowe kompilatory rozpoznaje typy w tabeli w dalszej części tego artykułu.  
@@ -100,7 +101,7 @@ Visual C++ 32-bitowe i 64-bitowe kompilatory rozpoznaje typy w tabeli w dalszej 
 |enum|Zmienia się|brak| |  
 |float|4|brak|3.4e +/-38 (7 cyfr)|  
 |double|8|brak|1.7e +/-308 (15 cyfr)|  
-|liczba typu double|identyczny o podwójnej precyzji|brak|Identyczny o podwójnej precyzji|  
+|liczba typu double|Identyczny o podwójnej precyzji|brak|Identyczny o podwójnej precyzji|  
 |wchar_t|2|__wchar_t|0 do 65 535.|  
   
  W zależności od sposobu ich wykorzystywania, zmienna `__wchar_t` typu znaków dwubajtowych lub znaków wielobajtowych typu. Użyj `L` prefiksu przed znakiem lub stała do wyznaczenia stała całej znaków typu string.  

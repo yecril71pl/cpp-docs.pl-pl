@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e927afba7de87acbfffd611cb7bad2b4953c20ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8539578e8030862e63f4dda36c6b9c93a29547ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-visual-c-for-arm-processors"></a>Konfigurowanie programu Visual C++ dla procesorów ARM
 
@@ -25,10 +26,10 @@ Ta sekcja dokumentacji zawiera informacje o sposobie korzystania z narzędzi kom
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
-[Przegląd Konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)  
+[Przegląd konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)  
 Opisuje interfejs binarne aplikacji używane przez system Windows na ARM dla rejestrowania użycia, Konwencje wywoływania oraz obsługi wyjątków.  
   
-[Typowe problemy przy migracji ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
+[Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)  
 W tym artykule opisano elementy kodu C++, które są często zakłada się, że można przenośnych w ramach architektury, ale które wygenerować różne wyniki dla ARM niż dla x86 i x64.  
   
 [Obsługa wyjątków ARM](../build/arm-exception-handling.md)  

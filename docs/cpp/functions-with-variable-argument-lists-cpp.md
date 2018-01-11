@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9cde959d2a2b17bf346a23aca7a7724523b69b6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Funkcje z argumentem zmiennej listy (C++)
 Deklaracje funkcji, w których ostatniego członka jest wielokropek (...) może potrwać zmienną liczbę argumentów. W takich przypadkach C++ zawiera tylko sprawdzanie jawnie zadeklarowana argumentów typu. Listy zmiennych argumentów można użyć, gdy trzeba tworzyć funkcję, co może różnić się ogólne, że nawet liczbę i typy argumentów. Rodziny funkcji jest przykład funkcji, które używają listy zmiennych argumentów. `printf` *listy argumentów — deklaracja*  

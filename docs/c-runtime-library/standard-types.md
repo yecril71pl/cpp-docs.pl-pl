@@ -171,11 +171,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b80a4b8c947064886d6afa18e9c24d62195a049a
-ms.sourcegitcommit: c9108f0c45b7a634d4e6e5c2d2ec192d50ffdbab
+ms.workload: cplusplus
+ms.openlocfilehash: 4fd51f03d9a4134ee7193d5aede410bb541cd19f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-types"></a>Standardowe typy
 Biblioteka wykonawcza Microsoft definiuje następujące typy standardowe i definicje typów.  
@@ -263,4 +264,4 @@ Biblioteka wykonawcza Microsoft definiuje następujące typy standardowe i defin
 |`wint_t`Liczba całkowita|Typ obiektu danych, które może mieć dowolny znak dwubajtowy lub dwubajtową wartość znaku końca pliku.|WCHAR.H,<br /><br /> CRTDEFS.H|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki wykonawcze języka C](../c-runtime-library/c-run-time-library-reference.md)
+ [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)

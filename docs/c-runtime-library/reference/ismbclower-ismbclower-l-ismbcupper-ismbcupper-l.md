@@ -43,11 +43,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0a94b0d15059c0ecf67a7a33b3be646ed7a2f59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5dc706f59672f60874a5f525bb37067c1b13ff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 Sprawdza, czy znaków wielobajtowych małe lub wielkie litery.  
@@ -113,4 +114,4 @@ int _ismbcupper_l(
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [jest isw — procedury](../../c-runtime-library/is-isw-routines.md)   
- [_ismbb — procedury](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 499f7d7b1a286f85a13f2b2a8e87a3ee09f44086
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04be31fa3209aace6fd5446532510e2a27e6bdce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Cstring — operacji odnoszących się do ciągów w stylu języka C
 A [cstring —](../atl-mfc-shared/using-cstring.md) obiekt zawiera dane ciągu znaków. `CString`dziedziczy zbiór [metody i operatory](../atl-mfc-shared/reference/cstringt-class.md) które zostały zdefiniowane w szablonie klasy [CStringT](../atl-mfc-shared/reference/cstringt-class.md) do pracy z danych ciągu. (`CString` jest `typedef` który specjalizuje się `CStringT` do pracy z typu danych znakowych który `CString` obsługuje.)  
@@ -105,5 +106,5 @@ strcpy(myString, (LPCTSTR)aCString);
   
 ## <a name="see-also"></a>Zobacz też  
  [Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
- [Przekazywanie argumentów cstring —](../atl-mfc-shared/cstring-argument-passing.md)
+ [CString — przekazywanie argumentów](../atl-mfc-shared/cstring-argument-passing.md)
 

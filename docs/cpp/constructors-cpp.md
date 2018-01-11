@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77007b3d3805bb2fa159680c88d8e41825336da2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57854ec15d3104d80e8dbba68ebc33937222172f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 Konstruktor jest rodzajem funkcji członkowskiej, która inicjuje wystąpienie swojej klasy. Konstruktor ma taką samą nazwę jak klasa i brak wartości zwracanej. Konstruktor może mieć dowolną liczbę parametrów i klasa może zawierać dowolną liczbę przeciążone konstruktory. Konstruktory mogą mieć żadnych dostępności publicznych, chronionych lub prywatnych. Jeśli nie zdefiniowano żadnych konstruktorów, kompilator generuje domyślnego konstruktora, który nie przyjmuje żadnych parametrów; Aby zmienić to zachowanie, należy deklarowanie konstruktora domyślnego jako usunięte.  
@@ -57,7 +58,7 @@ Konstruktor jest rodzajem funkcji członkowskiej, która inicjuje wystąpienie s
 ##  <a name="order_of_construction"></a>Kolejność konstrukcji  
  Konstruktor wykonuje pracę w następującej kolejności:  
   
-1.  Wywołuje klasę podstawową i konstruktory elementów członkowskich w kolejności deklaracji.  
+1.  Wywołuje klasę podstawową i konstruktory składowych w kolejności deklaracji.  
   
 2.  Jeśli klasa jest pochodną wirtualnych klas bazowych, inicjuje wskaźniki wirtualnej bazy obiektu.  
   
@@ -65,7 +66,7 @@ Konstruktor jest rodzajem funkcji członkowskiej, która inicjuje wystąpienie s
   
 4.  Wykonuje każdy kod w jego treści funkcji.  
   
- Poniższy przykład pokazuje kolejność, w której konstruktory klasy podstawowej i elementów członkowskich są wywoływane w konstruktorze klasy pochodnej. Najpierw jest wywoływany podstawowy konstruktor, następnie elementy członkowskie klas bazowych są inicjowane w kolejności, w której pojawiają się w deklaracji klasy, a na koniec jest wywoływany pochodny konstruktor.  
+ Poniższy przykład pokazuje kolejność, w której konstruktory klasy podstawowej i składowych są wywoływane w konstruktorze klasy pochodnej. Najpierw jest wywoływany podstawowy konstruktor, następnie składowe klas bazowych są inicjowane w kolejności, w której pojawiają się w deklaracji klasy, a na koniec jest wywoływany pochodny konstruktor.  
   
 ```cpp  
 #include <iostream>  
@@ -132,9 +133,9 @@ DerivedContainer constructor.
   
 1.  Kod w treści funkcji konstruktora jest rozwinięty.  
   
-2.  Klasa podstawowa i elementy członkowskie są usuwane w kolejności odwrotnej do deklarowania.  
+2.  Klasa podstawowa i obiekty składowe są usuwane w kolejności odwrotnej do deklarowania.  
   
-3.  Jeśli konstruktor nie jest delegujący, wszystkie w pełni skonstruowane obiekty i elementy członkowskie klasy podstawowej zostaną zniszczone. Jednak ponieważ sam obiekt nie jest w pełni skonstruowany, destruktor nie zostanie uruchomiony.  
+3.  Jeśli konstruktor nie jest delegujący, wszystkie w pełni skonstruowane obiekty i składowe klasy podstawowej zostaną zniszczone. Jednak ponieważ sam obiekt nie jest w pełni skonstruowany, destruktor nie zostanie uruchomiony.  
   
 ##  <a name="member_lists"></a>Listach elementów członkowskich  
  Inicjowanie elementów członkowskich klasy z argumentów konstruktora za pomocą listy inicjatorów elementu członkowskiego. Ta metoda używa *bezpośredniego inicjowania*, który jest bardziej efektywne niż przy użyciu operatorów przypisania wewnątrz treści konstruktora.  
@@ -273,9 +274,9 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
  Można jawnie *domyślne* kopiowanie konstruktorów, konstruktory domyślne, Przenieś konstruktorów, skopiuj operatory przypisania, Przenieś operatory przypisania i destruktory. Można jawnie *usunąć* wszystkie funkcje specjalne elementu członkowskiego. Aby uzyskać więcej informacji, zobacz [jawnie ustawiana domyślnie i usunięte funkcje](../cpp/explicitly-defaulted-and-deleted-functions.md).  
   
 ##  <a name="constructors_in_derived_classes"></a>Konstruktorów w klasach pochodnych  
- Konstruktor klasy pochodnej zawsze wywołuje konstruktora klasy podstawowej, tak aby mógł polegać na całkowicie skonstruowanych podstawowych klasach, zanim wszelkie dodatkowe prace zostaną wykonane. Konstruktory klasy podstawowej są wywoływane w kolejności wyprowadzenia — na przykład, jeśli ClassA jest wyprowadzany z ClassB, który z kolei jest wyprowadzany z ClassC, konstruktor ClassC jest wywoływany jako pierwszy, następnie konstruktor ClassB, a na koniec konstruktor ClassA.  
+ Konstruktor klasy pochodnej zawsze wywołuje konstruktora klasy bazowej, tak aby mógł polegać na całkowicie skonstruowanych klasach bazowych, zanim wszelkie dodatkowe prace zostaną wykonane. Konstruktory klasy bazowej są wywoływane w kolejności wyprowadzenia — na przykład, jeśli ClassA jest wyprowadzany z ClassB, który z kolei jest wyprowadzany z ClassC, konstruktor ClassC jest wywoływany jako pierwszy, następnie konstruktor ClassB, a na koniec konstruktor ClassA.  
   
- Jeśli klasa podstawowa nie ma domyślnego konstruktora, musisz podać parametry konstruktora klasy podstawowej w konstruktorze klasy pochodnej:  
+ Jeśli klasa bazowa nie ma domyślnego konstruktora, musisz podać parametry konstruktora klasy bazowej w konstruktorze klasy pochodnej:  
   
 ```cpp  
 class Box {  
@@ -309,7 +310,7 @@ int main(){
 ```  
   
 ### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Konstruktory dla klas, które mają wiele dziedziczeń  
- Jeśli klasa jest pochodną wielu klas podstawowych, konstruktory klas podstawowych są wywoływane w kolejności, w której są wymienione w deklaracji klasy pochodnej:  
+ Jeśli klasa jest pochodną wielu klas bazowych, konstruktory klas bazowych są wywoływane w kolejności, w której są wymienione w deklaracji klasy pochodnej:  
   
 ```cpp  
 #include <iostream>  
@@ -356,7 +357,7 @@ DerivedClass constructor.
 ```  
   
 ##  <a name="virtual_functions_in_constructors"></a>Funkcje wirtualne w konstruktorach  
- Zalecamy, aby uważać podczas wywołania funkcji wirtualnych w konstruktorach. Ponieważ konstruktor klasy podstawowej zawsze jest wywoływany przed konstruktorem klasy pochodnej, funkcja, która jest wywołana w konstruktorze klasy podstawowej, jest wersją klasy podstawowej, a nie wersją klasy pochodnej. W poniższym przykładzie konstruowania `DerivedClass` powoduje, że `BaseClass` implementacja `print_it()` do uruchomienia przed `DerivedClass` przyczyny konstruktora `DerivedClass` implementacja `print_it()` do wykonania:  
+ Zalecamy, aby uważać podczas wywołania funkcji wirtualnych w konstruktorach. Ponieważ konstruktor klasy bazowej zawsze jest wywoływany przed konstruktorem klasy pochodnej, funkcja, która jest wywołana w konstruktorze klasy bazowej, jest wersją klasy bazowej, a nie wersją klasy pochodnej. W poniższym przykładzie konstruowania `DerivedClass` powoduje, że `BaseClass` implementacja `print_it()` do uruchomienia przed `DerivedClass` przyczyny konstruktora `DerivedClass` implementacja `print_it()` do wykonania:  
   
 ```cpp  
 #include <iostream>  
@@ -396,7 +397,7 @@ Derived Class print_it
 ```  
   
 ##  <a name="constructors_in_composite_classes"></a>Konstruktory i klasy złożone  
- Klasy, które zawierają elementy członkowskie typu klasy są określane jako *klasy złożone*. Gdy jest tworzony element członkowski typu klasa klasy złożonej, konstruktor jest wywoływany przed konstruktorem tej klasy. Gdy klasa zamknięta nie ma domyślnego konstruktora, należy użyć listy inicjalizacji w konstruktorze klasy złożonej. W starszych `StorageBox` przykład, jeśli zmienisz typ `m_label` zmiennej członkowskiej na nowy `Label` klasy, należy wywołać konstruktora klasy podstawowej i zainicjować `m_label` zmiennej w `StorageBox` konstruktora:  
+ Klasy, które zawierają elementy członkowskie typu klasy są określane jako *klasy złożone*. Gdy jest tworzona składowa typu klasa klasy złożonej, konstruktor jest wywoływany przed konstruktorem tej klasy. Gdy klasa zamknięta nie ma domyślnego konstruktora, należy użyć listy inicjalizacji w konstruktorze klasy złożonej. W starszych `StorageBox` przykład, jeśli zmienisz typ `m_label` zmiennej członkowskiej na nowy `Label` klasy, należy wywołać konstruktora klasy podstawowej i zainicjować `m_label` zmiennej w `StorageBox` konstruktora:  
   
 ```cpp  
 class Label {  
@@ -606,9 +607,9 @@ class Derived : T {
   
  Jeśli nie dostarczysz żadnego konstruktora, kompilator spróbuje wygenerować konstruktor domyślny. Jeśli nie dostarczysz konstruktora kopiującego, kompilator spróbuje go wygenerować. Konstruktory wygenerowane przez kompilator są traktowane jak publiczne funkcje członkowskie. Jeśli określisz konstruktor kopiujący, którego pierwszy argument jest obiektem, a nie odwołaniem, to wygenerowany zostanie błąd.  
   
- Konstruktor domyślny wygenerowany przez kompilator ustawia obiekt (inicjuje vftables i vbtables, jak opisano wcześniej) i wywołuje konstruktory domyślne klas podstawowych oraz elementów członkowskich, ale nie podejmuje żadnej innej akcji. Konstruktory klas podstawowych i elementów członkowskich są wywoływane tylko jeśli istnieją, są dostępne i jednoznaczne.  
+ Konstruktor domyślny wygenerowany przez kompilator ustawia obiekt (inicjuje vftables i vbtables, jak opisano wcześniej) i wywołuje konstruktory domyślne klas podstawowych oraz składowych, ale nie podejmuje żadnej innej akcji. Konstruktory klas podstawowych i składowych są wywoływane tylko jeśli istnieją, są dostępne i jednoznaczne.  
   
- Konstruktor kopiujący wygenerowany przez kompilator ustawia nowy obiekt i wykonuje kopię zawartości wszystkich elementów członkowskich kopiowanego obiektu. Jeśli istnieje konstruktor klasy podstawowej lub elementu członkowskiego, to zostanie on wywołany; w przeciwnym razie wykonywane jest kopiowanie bitowe.  
+ Konstruktor kopiujący wygenerowany przez kompilator ustawia nowy obiekt i wykonuje kopię zawartości wszystkich elementów członkowskich kopiowanego obiektu. Jeśli istnieje konstruktor klasy podstawowej lub składowej, to zostanie on wywołany; w przeciwnym razie wykonywane jest kopiowanie bitowe.  
   
  Jeśli wszystkie klasy podstawowe i element członkowski klasy `type` mieć konstruktorów kopiowania, które akceptują **const** argumentu, Konstruktor kopiujący generowane przez kompilator akceptuje jeden argument typu **const** `type` **&**. W przeciwnym razie Konstruktor kopiujący generowane przez kompilator akceptuje jeden argument typu `type`  **&** .  
   
@@ -616,7 +617,7 @@ class Derived : T {
   
  Stdcall konwencji wywoływania jest używany dla statycznych funkcji Członkowskich i funkcje globalne zadeklarowana z **__stdcall** — słowo kluczowe oraz że nie należy używać zmiennej listy argumentów. Jeśli używasz **__stdcall** — słowo kluczowe dla niestatycznego elementu członkowskiego funkcji, takich jak konstruktora, kompilator użyje thiscall konwencji wywoływania. "  
   
- Konstruktory klas podstawowych nie są dziedziczone przez klasy pochodne. Gdy tworzony jest obiekt o typie klasy pochodnej, konstrukcja rozpoczyna się od składników klasy podstawowej, a następnie przenoszona jest na składniki klasy pochodnej. Kompilator używa konstruktora każdej klasy podstawowej jako część cały obiekt został zainicjowany (z wyjątkiem przypadków wirtualnego pochodnym.  
+ Konstruktory klas bazowych nie są dziedziczone przez klasy pochodne. Gdy tworzony jest obiekt o typie klasy pochodnej, konstrukcja rozpoczyna się od składników klasy bazowej, a następnie przenoszona jest na składniki klasy pochodnej. Kompilator używa konstruktora każdej klasy podstawowej jako część cały obiekt został zainicjowany (z wyjątkiem przypadków wirtualnego pochodnym.  
   
 ##  <a name="explicitly_invoking_constructors"></a>Jawne wywołania konstruktorów  
  Konstruktory można jawnie wywołać programu do tworzenia obiektów danego typu. Na przykład, aby utworzyć dwa `Point` obiektów, które opisują końców linii, mogą być zapisywane następujący kod:  

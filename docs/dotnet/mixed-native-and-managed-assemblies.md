@@ -23,11 +23,14 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c58f69057a7da709ec79c614fe60beef5a203f0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Zestawy mieszane (natywne i zarządzane)
 Zestawy mieszane mogą zawierać zarówno niezarządzane instrukcje maszynowe, jak i instrukcje MSIL. Pozwala im to na wywołanie i bycie wywoływanym przez składniki .NET, przy zachowaniu zgodność ze składnikami, które są całkowicie niezarządzane. Używając zestawów mieszanych, deweloperzy mogą tworzyć aplikacje przy użyciu mieszanki funkcjonalności zarządzanej i niezarządzanej. Dzięki temu, zestawy mieszane są idealne do migrowania istniejących aplikacji Visual C++ do platformy .NET.  
@@ -43,7 +46,7 @@ Zestawy mieszane mogą zawierać zarówno niezarządzane instrukcje maszynowe, j
  [Porady: kompilowanie kodu MFC i ATL za pomocą opcji/CLR](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)  
  W tym artykule omówiono sposób kompilowania istniejących programów MFC i ATL do elementu docelowego środowiska uruchomieniowego języka wspólnego.  
   
- [Inicjalizacja zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md)  
+ [Inicjowanie zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md)  
  W tym artykule opisano problem „blokady modułu ładującego” i jego rozwiązania.  
   
  [Obsługa bibliotek dla zestawów mieszanych](../dotnet/library-support-for-mixed-assemblies.md)  
@@ -52,7 +55,7 @@ Zestawy mieszane mogą zawierać zarówno niezarządzane instrukcje maszynowe, j
  [Zagadnienia dotyczące wydajności](../dotnet/performance-considerations-for-interop-cpp.md)  
  W tym artykule opisano wpływ zestawów mieszanych i przekazywania danych na wydajność.  
   
- [Domeny aplikacji i programu Visual C++](../dotnet/application-domains-and-visual-cpp.md)  
+ [Domeny aplikacji i program Visual C++](../dotnet/application-domains-and-visual-cpp.md)  
  W tym artykule omówiono obsługę języka Visual C++ dla domen aplikacji.  
   
  [Podwójna konwersja bitowa adresów](../dotnet/double-thunking-cpp.md)  
@@ -61,10 +64,10 @@ Zestawy mieszane mogą zawierać zarówno niezarządzane instrukcje maszynowe, j
  [Unikanie wyjątków CLR zamknięcia przypadku konsumowania obiektów COM skompilowanych z/CLR](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)  
  W tym artykule omówiono sposób zapewnienia poprawnego zamknięcia aplikacji zarządzanej, który wykorzystuje obiektów COM skompilowanych z **/CLR**.  
   
- [Porady: tworzenie aplikacji częściowo zaufanej przez usunięcie zależności biblioteki DLL środowiska CRT](../dotnet/create-a-partially-trusted-application.md)  
+ [Instrukcje: tworzenie aplikacji częściowo zaufanej przez usunięcie zależności od biblioteki DLL środowiska CRT](../dotnet/create-a-partially-trusted-application.md)  
  W tym artykule omówiono sposób tworzenia aplikacji środowisko uruchomieniowe języka wspólnego częściowo zaufanej przez usunięcie zależności msvcm90.dll przy użyciu programu Visual C++.  
   
  Aby uzyskać więcej informacji na temat wytycznych programowania dla zestawów mieszanych, zobacz artykuł w witrynie MSDN "Przegląd z zarządzanego/niezarządzany współdziałanie kodu" w [http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Macierzysty i współdziałaniu .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0843e3e9798087a1ed5d9415e8397149b0cd74f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Wywoływanie funkcji natywnych z kodu zarządzanego
 Środowisko uruchomieniowe języka wspólnego zapewnia usług wywołania platformy lub funkcji PInvoke, że umożliwia zarządzanego kodu do wywołania funkcji w stylu języka C w natywnej biblioteki łączone dynamicznie (dll). Organizowanie danych sam jest używany jak w przypadku współdziałania COM ze środowiskiem uruchomieniowym i mechanizmu "Ją po prostu działa" lub IJW.  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
--   [Za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
 -   [Bliższe spojrzenie na platformie wywołania](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
@@ -230,4 +233,4 @@ int main() {
  W celu poprawy wydajności ma mniejszą liczbę wywołań PInvoke kierować jak najwięcej danych, jak to możliwe, zamiast kolejnych wywołań, które kierować mniejszej ilości danych na wywołanie.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Macierzysty i współdziałaniu .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

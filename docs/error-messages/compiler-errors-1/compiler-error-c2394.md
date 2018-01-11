@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c716a3562a9f99ef0094d8ca7ba5fdf2d11f15f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d9cdfb2ace09bfc3aae4fa4afabd0d45117a80a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2394"></a>C2394 błąd kompilatora
 "your_type::operator'op" ": CLR lub WinRToperator nie jest prawidłowy. Co najmniej jeden parametr musi być następujących typów: 'T ^ ", t ^ %", t ^ & ", gdzie T ="your_type"  

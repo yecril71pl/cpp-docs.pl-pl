@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 09d0000dd7ac6fbe7c57d0b903694754e2d390e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Obszary nazw i typ widoczności (C + +/ CX)
 Przestrzeń nazw jest standardowa konstrukcja C++ do grupowania typów, które ma funkcje związane z a zapobiegania konflikty nazw w bibliotekach. System typów środowiska wykonawczego systemu Windows wymaga, aby wszystkich publicznych typów środowiska wykonawczego systemu Windows, włącznie z zawartymi w swoim własnym kodem musi być zadeklarowana w przestrzeni nazw w zakresie przestrzeni nazw. Typy publiczne, które są zadeklarowane w zakresie globalnym lub zagnieżdżona w innej klasy spowoduje błąd w czasie kompilacji.  
@@ -59,4 +60,4 @@ Przestrzeń nazw jest standardowa konstrukcja C++ do grupowania typów, które m
 |Platform::details|Zawiera typy, które są używane przez kompilator i nie są przeznaczone dla publicznych zużycia.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [System typów (C + +/ CX)](../cppcx/type-system-c-cx.md)
+ [System typów (C++/CX)](../cppcx/type-system-c-cx.md)

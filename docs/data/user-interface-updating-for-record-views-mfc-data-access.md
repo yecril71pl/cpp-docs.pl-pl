@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aab6ea73fc5726771877640268c89edea4d0745a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 68b013f3b1211c42ffc7355df73f47f6520fac1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>Aktualizowanie interfejsu użytkownika dla widoków rekordów (dostęp do danych MFC)
 `CRecordView`udostępnia domyślny interfejs użytkownika aktualizacji procedury obsługi polecenia nawigacji. Te programy obsługi zdarzeń automatyzacji Włączanie i wyłączanie obiektów interfejsu użytkownika — elementy menu i przycisków paska narzędzi. Kreator aplikacji udostępnia standardowe menu i, w przypadku wybrania **dokującego paska narzędzi** opcję zestaw przycisków paska narzędzi dla poleceń. W przypadku utworzenia klasy widoków rekordów przy użyciu `CRecordView`, można dodać podobne obiekty interfejsu użytkownika do aplikacji.  

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 32de1d1eb3262e1fca0a00048a61d3129347cb19
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bea4f0c4fea2c2d04681674734bc989424c7951
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Wyrażenia w przetwarzaniu wstępnym pliku reguł programu Make
 **! Jeśli** lub **! ELSE IF** `constantexpression` składa się z stałe całkowite (w notacji dziesiętnej lub języka C), stałe typu string lub polecenia. Użyj nawiasów do wyrażeń grupy. Wyrażenia użyć stylu języka C podpisem długich liczb całkowitych arytmetyczne; numery są w formie uzupełnienia do dwóch 32-bitowe w zakresie od-2147483648 do 2147483647.  
@@ -34,4 +35,4 @@ ms.lasthandoff: 10/24/2017
  [Wykonywanie programu w przetwarzaniu wstępnym](../build/executing-a-program-in-preprocessing.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przetwarzanie wstępne pliku reguł programu make](../build/makefile-preprocessing.md)
+ [Przetwarzanie wstępne pliku reguł programu Make](../build/makefile-preprocessing.md)

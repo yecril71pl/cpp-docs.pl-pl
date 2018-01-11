@@ -17,18 +17,19 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b2061f887c9f0b391e05ed0c3d2cf3e3c2a5434e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a1a6fd82a042ab29ad9216746dcabce9e9ed15f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="virtual-functions"></a>Funkcje wirtualne
-Funkcja wirtualna jest funkcją członkowską, której powinna zostać ponownie zdefiniowana w klasach pochodnych. Przy odwoływaniu się do obiektu klasy pochodnej za pomocą wskaźnika lub odwołania do klasy podstawowej, można wywołać funkcję wirtualną dla tego obiektu i wykonać wersję klasy pochodnej tej funkcji.  
+Funkcja wirtualna jest funkcją składową, która powinna zostać ponownie zdefiniowana w klasach pochodnych. Przy odwoływaniu się do obiektu klasy pochodnej za pomocą wskaźnika lub odwołania do klasy bazowej, można wywołać funkcję wirtualną dla tego obiektu i wykonać wersję klasy pochodnej tej funkcji.  
   
  Funkcje wirtualne zapewniają wywołanie poprawnej funkcji dla obiektu, bez względu na wyrażenie użyte do wywołania funkcji.  
   
- Załóżmy, że klasa podstawowa zawiera funkcję zadeklarowany jako [wirtualnego](../cpp/virtual-cpp.md) i Klasa pochodna definiuje tej samej funkcji. Funkcja z klasy pochodnej jest wywoływana dla obiektów klasy pochodnej, nawet jeśli jest wywoływana przy użyciu wskaźnika lub odwołania do klasy podstawowej. W poniższym przykładzie przedstawiono klasę podstawową, która dostarcza implementację funkcji `PrintBalance` i dwie klasy pochodne  
+ Załóżmy, że klasa podstawowa zawiera funkcję zadeklarowany jako [wirtualnego](../cpp/virtual-cpp.md) i Klasa pochodna definiuje tej samej funkcji. Funkcja z klasy pochodnej jest wywoływana dla obiektów klasy pochodnej, nawet jeśli jest wywoływana przy użyciu wskaźnika lub odwołania do klasy bazowej. W poniższym przykładzie przedstawiono klasę bazową, która dostarcza implementację funkcji `PrintBalance` i dwie klasy pochodne  
   
 ```  
 // deriv_VirtualFunctions.cpp  
@@ -72,11 +73,11 @@ int main() {
 }  
 ```  
   
- W powyższym kodzie, wywołania `PrintBalance` są identyczne, z wyjątkiem tego, na co wskazuje obiekt `pAccount`. Ponieważ `PrintBalance` jest wirtualna, wywoływana jest wersja funkcji zdefiniowana dla każdego obiektu. Funkcja `PrintBalance` w klasach pochodnych `CheckingAccount` i `SavingsAccount` „zastępuje” funkcję w klasie podstawowej `Account`.  
+ W powyższym kodzie, wywołania `PrintBalance` są identyczne, z wyjątkiem tego, na co wskazuje obiekt `pAccount`. Ponieważ `PrintBalance` jest wirtualna, wywoływana jest wersja funkcji zdefiniowana dla każdego obiektu. Funkcja `PrintBalance` w klasach pochodnych `CheckingAccount` i `SavingsAccount` „zastępuje” funkcję w klasie bazowej `Account`.  
   
- Jeżeli zadeklarowano klasę, która nie dostarcza zastąpionej implementacji funkcji `PrintBalance`, używana jest domyślna implementacja z klasy podstawowej `Account`.  
+ Jeśli zadeklarowano klasę, która nie dostarcza zastąpionej implementacji funkcji `PrintBalance`, używana jest domyślna implementacja z klasy bazowej `Account`.  
   
- Funkcje w klasach pochodnych zastępują funkcje wirtualne w klasach podstawowych tylko wtedy, gdy ich typ jest taki sam. Funkcja w klasie pochodnej nie może różnić się od funkcji wirtualnej w klasie podstawowej tylko pod względem zwracanego typu; lista argumentów również musi się różnić.  
+ Funkcje w klasach pochodnych zastępują funkcje wirtualne w klasach bazowych tylko wtedy, gdy ich typ jest taki sam. Funkcja w klasie pochodnej nie może różnić się od funkcji wirtualnej w klasie bazowej tylko pod względem zwracanego typu; lista argumentów również musi się różnić.  
   
  Podczas wywoływania funkcji za pomocą wskaźników lub odwołań, obowiązują następujące zasady:  
   
@@ -156,7 +157,7 @@ Invoked by Derived
   
  Funkcje wirtualne w klasie podstawowej musi być zdefiniowana, chyba że są one uznane za pomocą *czysty specyfikator*. (Aby uzyskać więcej informacji na temat czystych funkcji wirtualnych, zobacz [klas abstrakcyjnych](../cpp/abstract-classes-cpp.md).)  
   
- Mechanizm wywołania funkcji wirtualnych można pominąć przez jawną kwalifikację nazwy funkcji za pomocą operatora rozpoznawania zakresu (`::`). Rozważmy wcześniejszy przykład obejmujący klasę `Account`. Aby wywołać `PrintBalance` w klasie podstawowej, należy użyć następującego kodu:  
+ Mechanizm wywołania funkcji wirtualnych można pominąć przez jawną kwalifikację nazwy funkcji za pomocą operatora rozpoznawania zakresu (`::`). Rozważmy wcześniejszy przykład obejmujący klasę `Account`. Aby wywołać `PrintBalance` w klasie bazowej, należy użyć następującego kodu:  
   
 ```  
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  

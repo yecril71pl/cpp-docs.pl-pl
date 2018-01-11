@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6d34f0d0616ae3980d1132b1f70812fe273d275
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f39db3e844df884e8e95352bed2a078b01beede8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>Obsługa interfejsu IDispatch i IErrorInfo
 Można użyć klasy szablonu [elementem IDispatchImpl](../atl/reference/idispatchimpl-class.md) zapewnienie domyślną implementację `IDispatch Interface` część interfejsami podwójną na obiekt.  
@@ -33,5 +34,5 @@ Można użyć klasy szablonu [elementem IDispatchImpl](../atl/reference/idispatc
  Jeśli używa obiektu `IErrorInfo` interfejsu na zgłaszanie błędów z powrotem do klienta, a następnie obiekt musi obsługiwać `ISupportErrorInfo Interface` interfejsu. Klasy szablonów [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) zapewnia łatwy sposób wdrożyć, jeśli masz tylko jeden interfejs, który generuje błędy na obiekt.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podstawowe informacje na temat ATL COM — obiekty](../atl/fundamentals-of-atl-com-objects.md)
+ [Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)
 

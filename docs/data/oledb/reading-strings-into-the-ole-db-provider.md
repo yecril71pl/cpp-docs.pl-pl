@@ -14,11 +14,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c4c88f29cd0ad7989c079a17f66f1f48e4874a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e798b3e85bbb5d6b362900c25d4c3414458ea63d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Wczytywanie ciągów do dostawcy OLE DB
 `RMyProviderRowset::Execute` Funkcji otwiera plik i odczytuje ciągów. Konsument przekazuje nazwę pliku do dostawcy przez wywołanie metody [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Dostawca otrzymuje nazwę pliku i zapisuje go w zmiennej członkowskiej `m_szCommandText`. `Execute`odczytuje nazwę pliku z `m_szCommandText`. Jeśli nazwa pliku jest nieprawidłowa lub plik jest niedostępny, `Execute` zwraca błąd. W przeciwnym razie zostanie otwarty plik i wywołania `fgets` można pobrać ciągów. Dla każdego zestawu ciągów go odczytów, `Execute` tworzy wystąpienie rekord użytkownika (`CAgentMan`) i umieszcza je w tablicy.  

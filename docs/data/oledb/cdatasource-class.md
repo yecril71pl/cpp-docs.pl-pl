@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: feb829812bd4223ca7c348f3a2825ad3b11839a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a8f5a7b4c09400ad31be0b8b403899c5e8401afa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatasource-class"></a>CDataSource — Klasa
 Odnosi się do obiektu źródła danych OLE DB, który reprezentuje połączenie za pośrednictwem dostawcy źródła danych.  
@@ -59,4 +62,4 @@ class CDataSource
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Dokumentacja szablonów konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

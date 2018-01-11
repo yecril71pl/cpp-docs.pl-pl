@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b9b97612da759ebe21803d5bcd39bf51714bfeeb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d87b13f5b62e14bf1a72680f909cb34eb4a2cbf7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator--masm"></a>operator! (MASM)
 Traktuje `character` jako literał znaków, a nie jako operator lub symbol.  
@@ -37,4 +38,4 @@ character
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do operatorów](../../assembler/masm/operators-reference.md)
+ [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)

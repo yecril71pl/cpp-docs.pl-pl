@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb74d68bb8974f820ac09a0c56930d835a3fe7f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54f237a629c4af9ea7ae30aeca21c03786abcd97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementowanie element CComObject, CComAggObject i CComPolyObject
 Klasy szablonów [element CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), i [CComPolyObject](../atl/reference/ccompolyobject-class.md) są zawsze najdalszych pochodnych klas w łańcuch dziedziczenia. Ich odpowiedzialność za obsługę wszystkich metod **IUnknown**: `QueryInterface`, `AddRef`, i **wersji**. Ponadto `CComAggObject` i `CComPolyObject` (jeśli jest używane dla obiektów zagregowane) podaj liczenie odwołań w specjalne i `QueryInterface` semantyki wymagane wewnętrzny nieznany.  
@@ -46,5 +47,5 @@ Klasy szablonów [element CComObject](../atl/reference/ccomobject-class.md), [CC
   
 ## <a name="see-also"></a>Zobacz też  
  [Podstawowe informacje na temat ATL COM — obiekty](../atl/fundamentals-of-atl-com-objects.md)   
- [Agregacja i makra fabryki klas](../atl/reference/aggregation-and-class-factory-macros.md)
+ [Makra agregacji i fabryki klas](../atl/reference/aggregation-and-class-factory-macros.md)
 

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 9d1c04acc5754627906448db9ac4f3afd65fbe7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9d538e42d4173008343df186bd2579dc088fb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-namespace"></a>Domyślna przestrzeń nazw
 `default` Przestrzeni nazw zakresów wbudowanych typów, które są obsługiwane przez C + +/ CX.  
@@ -33,10 +34,10 @@ namespace default;
   
 |||  
 |-|-|  
-|[domyślne:: (type_name):: jest równe](../cppcx/default-type-name-equals-method.md)|Określa, czy określony obiekt jest równy bieżącemu obiektowi.|  
-|[domyślne:: (type_name):: GetHashCode](../cppcx/default-type-name-gethashcode-method.md)|Zwraca kod skrótu dla tego wystąpienia.|  
-|[domyślne:: (type_name):: GetType](../cppcx/default-type-name-gettype-method.md)|Zwraca ciąg reprezentujący bieżący typ.|  
-|[domyślne:: (type_name):: ToString](../cppcx/default-type-name-tostring-method.md)|Zwraca ciąg reprezentujący bieżący typ.|  
+|[default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md)|Określa, czy określony obiekt jest równy bieżącemu obiektowi.|  
+|[default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md)|Zwraca kod skrótu dla tego wystąpienia.|  
+|[default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md)|Zwraca ciąg reprezentujący bieżący typ.|  
+|[default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md)|Zwraca ciąg reprezentujący bieżący typ.|  
   
 ### <a name="built-in-types"></a>Typy wbudowane  
   

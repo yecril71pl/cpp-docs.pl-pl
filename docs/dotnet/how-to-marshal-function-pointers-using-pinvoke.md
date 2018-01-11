@@ -18,18 +18,21 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 83899d25712cbf8ebe81be364baa9d67fecc1510
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Porady: przeprowadzanie marshalingu wskaźników funkcji za pomocą funkcji PInvoke
 W tym temacie opisano sposób zarządzanych obiektów delegowanych podczas współpracy z niezarządzanych funkcji przy użyciu funkcji .NET Framework P/Invoke można użyć zamiast wskaźników funkcji. Jednak programistów Visual C++ są zachęcani do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe), ponieważ P/Invoke zapewnia małego błąd kompilacji raportowania, nie jest bezpieczne i może być niewygodne wdrożenia. Jeśli niezarządzanego API jest dostarczana jako biblioteki DLL i kod źródłowy jest niedostępny, P/Invoke jest jedyną opcją. W przeciwnym razie zobacz następujące tematy:  
   
--   [Za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [Porady: kierowanie wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
+-   [Instrukcje: przeprowadzanie marshalingu wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
   
  Niezarządzane interfejsy API prowadzące wskaźników funkcji argumentów można wywołać z kodu zarządzanego z zarządzanego delegatem zamiast wskaźnika funkcji macierzystej. Kompilator automatycznie marshals delegata z funkcjami niezarządzanymi jako wskaźnik funkcji i wstawia kod niezbędne przejścia zarządzanych/niezarządzanych.  
   

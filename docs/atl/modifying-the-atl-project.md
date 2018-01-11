@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0385903a0580d06c03d3973e697e7a7fc88bbd1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7de670642e80a32158b84c739d7081ca02d483a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-atl-project"></a>Modyfikowanie Projekt ATL
 W tym momencie projektu formantu złożonego implementuje niezbędnych obiektów dla formantu złożonego. Następnym krokiem jest dodać wszystkie formanty, że złożonych kontrolek będzie zawierać i obsługiwać wszelkie niezbędne zdarzenia.  
@@ -32,5 +33,5 @@ W tym momencie projektu formantu złożonego implementuje niezbędnych obiektów
   
 ## <a name="see-also"></a>Zobacz też  
  [Podstawy złożonych kontrolek](../atl/atl-composite-control-fundamentals.md)   
- [Porady: Tworzenie pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md)
+ [Instrukcje: tworzenie pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md)
 

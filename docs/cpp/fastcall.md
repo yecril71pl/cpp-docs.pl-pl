@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba2178c2dc06001476d8e9ff4b9aef239aa13fea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2d7678738d7da4528b23551e56bf3766970cbfe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fastcall"></a>__fastcall
 **Dotyczące firmy Microsoft**  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
  `__fastcall` — Słowo kluczowe i akceptowany jest ignorowana przez kompilatorów, które odnoszą się do ARM i x64 architektury; na x64 mikroukładu, zwyczajowo pierwsze cztery argumenty są przekazywane w rejestrach, gdy jest to możliwe, a dodatkowe argumenty są przekazywane na stosie. Aby uzyskać więcej informacji, zobacz [omówienie x64 konwencji wywoływania](../build/overview-of-x64-calling-conventions.md). W układzie ARM maksymalnie cztery liczby całkowitej argumentów i osiem argumenty zmiennoprzecinkowe mogą być przekazywane w rejestrach, a dodatkowe argumenty są przekazywane na stosie.  
   
- W przypadku funkcji niestatycznych klas, jeśli funkcja jest zdefiniowana poza wierszem, modyfikator konwencji wywoływania nie musi być określony w definicji poza wierszem. Oznacza to, że dla metod niestatycznego elementu członkowskiego klasy przyjmowana jest konwencja wywoływania określona podczas deklaracji w punkcie definicji. Biorąc pod uwagę tę definicję klasy:  
+ W przypadku funkcji niestatycznych klas, jeśli funkcja jest zdefiniowana poza wierszem, modyfikator konwencji wywoływania nie musi być określony w definicji poza wierszem. Oznacza to, że dla metod niestatycznej składowej klasy przyjmowana jest konwencja wywoływania określona podczas deklaracji w punkcie definicji. Biorąc pod uwagę tę definicję klasy:  
   
 ```cpp  
 struct CMyClass {  

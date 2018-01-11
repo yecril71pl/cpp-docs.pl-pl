@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b4f19be127a9ffefa985b27a15101308c05c10b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 89f5fedddd65726b8c9819e43418182601c49dfb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schema-rowsets"></a>Zestawy wierszy schematu
 Schemat (lub metadanych) jest żadnych informacji o bazie danych struktury lub organizacji, takich jak informacje o dostawcy, zestawu wierszy tabeli, kolumny, ani innych informacji od rzeczywistej bazy danych zawartości. OLE DB umożliwia uzyskiwanie tych informacji bez konieczności otwierania zestawu wierszy za pomocą zestawów wierszy schematu.  

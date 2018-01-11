@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 080b4fcfb005d0d04c10ad5c0a6f4d1c7a49fe0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 58b53159bab17ef0fddf5b26606889f89412856e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>Porady: wpisywanie tekstu do pliku tekstowego (C++/CLI)
 Poniższy przykład kodu pokazuje, jak utworzyć plik tekstowy i zapisywanie tekstu do niej przy użyciu <xref:System.IO.StreamWriter> klasy, która jest zdefiniowana w <xref:System.IO> przestrzeni nazw. <xref:System.IO.StreamWriter> Konstruktora pobiera nazwę pliku, który ma zostać utworzony. Jeśli plik istnieje, zostanie zastąpiony (chyba że przekazujesz True jako drugi <xref:System.IO.StringWriter> argumentów konstruktora).  
@@ -55,4 +58,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [Plik i strumienia I-O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

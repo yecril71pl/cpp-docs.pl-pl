@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ed1224fd00d5decb8dc99910563b47e4ba60350
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cadd771e6c3a9e7addb6893b4427183cfff293c9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="csocketaddr-class"></a>Klasa CSocketAddr
 Ta klasa dostarcza metody do konwertowania nazwy hosta na adresy hosta, obsługa formatów protokołów IPv4 i IPV6.  
@@ -207,7 +208,7 @@ addrinfo* const GetAddrInfoList() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do listy połączonej z jedną lub więcej `addrinfo` struktury zawierające odpowiedzi informacje o hoście. Aby uzyskać więcej informacji na temat `addrinfo` struktury, zobacz artykuł "addrinfo" w [biblioteki MSDN](http://go.microsoft.com/fwlink/linkid=556)  
+ Wskaźnik do listy połączonej z jedną lub więcej `addrinfo` struktury zawierające odpowiedzi informacje o hoście. Aby uzyskać więcej informacji, zobacz [struktury addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530).
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd klas](../../atl/atl-class-overview.md)

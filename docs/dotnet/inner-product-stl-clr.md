@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d10b4b3b62c135e110f63acb555691c256450491
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5d61de34fcb029000ac27efcf74bd1321d1b7e32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="innerproduct-stlclr"></a>inner_product (STL/CLR)
 Oblicza sumę element-wise iloczyn dwóch zakresów i dodaje go do określonej wartości początkowej lub oblicza wynik uogólniony procedury, których operacji binarnych sum i produktu są zastępowane przez inne operacje określonego pliku binarnego.  
@@ -45,4 +48,4 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
  **Namespace:** cliext  
   
 ## <a name="see-also"></a>Zobacz też  
- [liczbowe (STL/CLR)](../dotnet/numeric-stl-clr.md)
+ [numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)

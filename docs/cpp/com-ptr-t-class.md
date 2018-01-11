@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d395b6981e167bf759e0e26577dca962632a22c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44179c3c34207b8f1bf3abbef2efd9505df47181
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrt-class"></a>_com_ptr_t — Klasa
 **Dotyczące firmy Microsoft**  
@@ -47,9 +48,9 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 |||  
 |-|-|  
 |[AddRef](../cpp/com-ptr-t-addref.md)|Wywołania `AddRef` funkcji członkowskiej klasy **IUnknown** na wskaźnik hermetyzowany interfejsu.|  
-|[Dołącz](../cpp/com-ptr-t-attach.md)|Hermetyzuje wskaźnik interfejsu pierwotnego, typu wskaźnika inteligentnego.|  
+|[Attach](../cpp/com-ptr-t-attach.md)|Hermetyzuje wskaźnik interfejsu pierwotnego, typu wskaźnika inteligentnego.|  
 |[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Tworzy nowe wystąpienie obiektu podane **CLSID** lub **ProgID**.|  
-|[Odłączanie](../cpp/com-ptr-t-detach.md)|Wyodrębnia i zwraca wskaźnik hermetyzowany interfejsu.|  
+|[Detach](../cpp/com-ptr-t-detach.md)|Wyodrębnia i zwraca wskaźnik hermetyzowany interfejsu.|  
 |[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|Dołącza do istniejącego wystąpienia obiektu podane **CLSID** lub **ProgID**.|  
 |[GetInterfacePtr](../cpp/com-ptr-t-getinterfaceptr.md)|Zwraca wskaźnik hermetyzowany interfejsu.|  
 |[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Wywołania `QueryInterface` funkcji członkowskiej klasy **IUnknown** na wskaźnik hermetyzowany interfejsu.|  

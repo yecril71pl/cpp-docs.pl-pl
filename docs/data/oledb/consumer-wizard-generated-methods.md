@@ -25,11 +25,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7be8bbf011964411431d754afa058763e70e3265
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody konsumenta generowane przez kreatora
 Generowanie niektórych funkcji, które należy zwrócić uwagę, OLE DB Kreator konsumenta ATL i Kreator aplikacji MFC. Należy pamiętać, że niektóre metody są implementowane inaczej w przypisanych projektów, więc istnieje kilka ostrzeżenia; każdej sprawy zostało opisane poniżej. Aby uzyskać informacje o wyświetlaniu wprowadzony kod, zobacz [debugowania wstrzyknięcie kodu](/visualstudio/debugger/how-to-debug-injected-code).  
@@ -164,4 +167,4 @@ void CloseDataSource();
  Kreator definiuje metody `OpenDataSource` i `CloseDataSource`; `OpenDataSource` wywołania [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie konsumenta OLE DB przy użyciu Kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+ [Tworzenie konsumenta OLE DB przy użyciu kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

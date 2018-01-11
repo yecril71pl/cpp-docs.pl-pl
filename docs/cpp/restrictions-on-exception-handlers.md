@@ -16,15 +16,16 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 42207a9bc1e9a355e6785a609ab0b130be063d55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9e55ba9c36fdbc5f3c19e7ad81373599ab138e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restrictions-on-exception-handlers"></a>Ograniczenia dotyczące obsługi wyjątków
 Główna ograniczenie używania programów obsługi wyjątków w kodzie jest, że nie można użyć `goto` instrukcji, aby przejść do `__try` blok instrukcji. Zamiast tego należy wprowadzić bloku instrukcji za pomocą przepływu sterowania. Można przejść z `__try` instrukcji blokować i zagnieździć programy obsługi wyjątków, wybierz polecenie.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pisanie programu do obsługi wyjątków](../cpp/writing-an-exception-handler.md)   
- [(C/C++) obsługi wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md)
+ [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

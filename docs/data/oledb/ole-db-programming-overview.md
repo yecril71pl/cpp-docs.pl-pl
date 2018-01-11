@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f3d97dda514b3cdb0773adb3d7830e611bca3d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 17e80f5a1fbe94a1d2bd4c7fc3b77525a77bbd4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-programming-overview"></a>Omówienie programowania OLE DB
 OLE DB to technologia wysokiej wydajności, oparte na modelu COM bazy danych. Zapewnia to często stosowana metoda dostępu do danych niezależnie od tego formularza, w której jest przechowywany. W przypadku typowych godzin pracy ogromnych ilości informacji znajduje się poza baz danych firmowych. Te informacje znajdują się w systemie plików (np. FAT lub NTFS), pliki indeksowane sekwencji, osobiste bazy danych (takich jak dostęp) arkuszy kalkulacyjnych (takich jak program Excel), aplikacje planowania projektu (na przykład projekt) i wiadomości e-mail (np. Outlook). OLE DB umożliwia dostęp do dowolnego rodzaju magazynu danych w taki sam sposób, dopóki magazyn danych ma dostawcy OLE DB.

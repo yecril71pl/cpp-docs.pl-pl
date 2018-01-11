@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1e8413e5d09cc4889445177d4b63946cda765d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3f7c5afd4010983ea943193b7abfb99f22eda38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="final-specifier"></a>final, specyfikator
 Można użyć `final` — słowo kluczowe do wyznaczenia wirtualnego funkcje, których nie można zastąpić w klasie pochodnej. Można również użyć do wyznaczenia klasy, które nie może być dziedziczona.  
@@ -74,4 +75,4 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
   
 ## <a name="see-also"></a>Zobacz też  
  [Słowa kluczowe](../cpp/keywords-cpp.md)   
- [override, Specyfikator](../cpp/override-specifier.md)
+ [override, specyfikator](../cpp/override-specifier.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7cc8ffa40b337765a0970e95862947155c7ae6f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d15df2f810848bb9349bc98c722ac02ff8cda17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-design-for-exception-safety"></a>Porady: projektowanie pod kątem bezpieczeństwa wyjątków
 Jedna z zalet mechanizmu wyjątków polega na tym, że wykonywanie, wraz z danymi o wyjątku, przechodzi bezpośrednio z instrukcji generującej wyjątek do pierwszej instrukcji „catch” zdolnej go obsłużyć. Program obsługi może się znajdować o dowolną liczbę poziomów wyżej w stosie wywołań. Funkcje wywoływane między instrukcjami „try” i „throw” nie muszą nic wiedzieć o zgłaszanym wyjątku.  Muszą jednak być zaprojektowane w taki sposób, aby mogły wykroczyć poza zakres „niespodziewanie” w każdym momencie, gdy istnieje ryzyko rozpowszechnienia wyjątku z niższego poziomu, nie pozostawiając przy tym za sobą żadnych częściowo utworzonych obiektów, przecieków pamięci ani struktur danych w bezużytecznych stanach.  
@@ -113,12 +114,12 @@ public:
   
 -   Do zarządzania wszystkimi zasobami używaj inteligentnych wskaźników lub innych otok typu RAII. Staraj się nie umieszczać funkcji zarządzania zasobami w destruktorach klas, ponieważ gdy konstruktor zgłosi wyjątek, destruktor nie będzie wywoływany. Jeśli jednak klasa jest dedykowanym menedżerem zasobów kontrolującym dokładnie jeden zasób, można użyć destruktora do zarządzania zasobami.  
   
--   Pamiętaj, że wyjątek zgłoszony w konstruktorze klasy podstawowej nie może zostać wchłonięty w konstruktorze klasy pochodnej. Jeśli chcesz dokonać translacji wyjątku klasy podstawowej i wygenerować go ponownie w konstruktorze klasy pochodnej, użyj bloku funkcji „try”.   
+-   Pamiętaj, że wyjątek zgłoszony w konstruktorze klasy bazowej nie może zostać wchłonięty w konstruktorze klasy pochodnej. Jeśli chcesz dokonać translacji wyjątku klasy bazowej i wygenerować go ponownie w konstruktorze klasy pochodnej, użyj bloku funkcji „try”.   
   
--   Rozważ, czy wszystkie stany klasy mają być przechowywane w elemencie członkowskim danych opakowanym w inteligentny wskaźnik, szczególnie jeśli klasę utworzono według koncepcji „inicjalizacja, która może się zakończyć niepowodzeniem”. Mimo iż język C++ dopuszcza niezainicjowane elementy członkowskie danych, nie obsługuje niezainicjowanych ani częściowo zainicjowanych wystąpień klas. Działanie konstruktora musi się kończyć się sukcesem lub niepowodzeniem. Jeśli konstruktor nie wykona swojego pełnego procesu, nie zostanie utworzony żaden obiekt.  
+-   Rozważ, czy wszystkie stany klasy mają być przechowywane w składowej danych opakowanej w inteligentny wskaźnik, szczególnie jeśli klasę utworzono według koncepcji „inicjalizacja, która może się zakończyć niepowodzeniem”. Mimo iż język C++ dopuszcza niezainicjowane składowe danych, nie obsługuje niezainicjowanych ani częściowo zainicjowanych wystąpień klas. Działanie konstruktora musi się kończyć się sukcesem lub niepowodzeniem. Jeśli konstruktor nie wykona swojego pełnego procesu, nie zostanie utworzony żaden obiekt.  
   
 -   Nie pozwól, aby jakikolwiek wyjątek został pominięty przez destruktora. Podstawowy aksjomat języka C++ mówi, że destruktory nigdy nie powinny pozwalać na przekazywanie wyjątków do wyższych poziomów stosu wywołań. Jeśli destruktor musi wykonać operację, która może się skończyć zgłoszeniem wyjątku, musi zrobić to w bloku „try catch” i wchłonąć wyjątek. Standardowa biblioteka zapewnia tę gwarancję wszystkim destruktorom, które definiuje.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)   
- [Porady: interfejs między kodem obsługi wyjątków a innym kodem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+ [Instrukcje: interfejs między kodem obsługi wyjątków a innym kodem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

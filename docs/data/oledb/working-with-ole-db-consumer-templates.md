@@ -16,18 +16,21 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be52ccf8ba42b61d7393c32587e54a5a768d2f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 333b72f2ad27fb079380ea8f2fb07c06f32e5b26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Praca z szablonami konsumentów OLE DB
 Poniższe tematy zawierają przykładowe sposoby używania szablony OLE DB odbiorców w typowych scenariuszy:  
   
--   [Upraszczanie dostępu do danych z atrybutami bazy danych](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
+-   [Upraszczanie dostępu do danych za pomocą atrybutów bazy danych](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
--   [Elementy członkowskie dotyczących stanu pola w metodach dostępu generowanych przez kreatora](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
+-   [Składowe danych dotyczące stanu pola w metodach dostępu generowanych przez kreatora](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
   
 -   [Przechodzenie przez prosty zestaw wierszy](../../data/oledb/traversing-a-simple-rowset.md)  
   
@@ -47,7 +50,7 @@ Poniższe tematy zawierają przykładowe sposoby używania szablony OLE DB odbio
   
 -   [Korzystanie z widoków rekordów OLE DB](../../data/oledb/using-ole-db-record-views.md)  
   
--   [Przy użyciu istniejącego zestawu rekordów ADO](../../data/oledb/using-an-existing-ado-recordset.md)  
+-   [Korzystanie z istniejącego zestawu rekordów ADO](../../data/oledb/using-an-existing-ado-recordset.md)  
   
 -   [Aktualizowanie kolumny, gdy inna tabela zawiera odwołanie do wiersza](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
   

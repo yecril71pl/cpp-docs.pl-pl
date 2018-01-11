@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1e222e3fb78807f4c67c746677e1223c7776a41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae69cd9e88b97a31dda86648d86e143ab9bd5d40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codeseg-declspec"></a>code_seg (__declspec)
 **Dotyczące firmy Microsoft**  
@@ -41,7 +42,7 @@ __declspec(code_seg("segname")) declarator
   
  Jeśli jednostka ma `code_seg` atrybutu wszystkie deklaracje i definicje tej samej jednostki muszą mieć identyczne `code_seg` atrybutów. Jeśli klasa podstawowa ma `code_seg` atrybutu pochodnego klas muszą być tego samego atrybutu.  
   
- Gdy `code_seg` atrybut jest stosowany dla funkcji zakresie przestrzeni nazw lub funkcji członkowskiej, kod obiektu dla tej funkcji jest umieszczany w segmencie określony tekst. Gdy ten atrybut jest stosowany do klasy, wszystkie funkcje elementów członkowskich klasy i klas zagnieżdżonych — dotyczy to również generowanych przez kompilator specjalnych funkcji elementów członkowskich — są umieszczane w określonym segmencie. Lokalnie zdefiniowany klasy — na przykład klas zdefiniowanych w treści funkcji Członkowskich — nie dziedziczą `code_seg` atrybutu otaczającego zakresu.  
+ Gdy `code_seg` atrybut jest stosowany dla funkcji zakresie przestrzeni nazw lub funkcji członkowskiej, kod obiektu dla tej funkcji jest umieszczany w segmencie określony tekst. Gdy ten atrybut jest stosowany do klasy, wszystkie funkcje składowych klasy i klas zagnieżdżonych — dotyczy to również generowanych przez kompilator specjalnych składowych funkcji — są umieszczane w określonym segmencie. Lokalnie zdefiniowany klasy — na przykład klas zdefiniowanych w treści funkcji Członkowskich — nie dziedziczą `code_seg` atrybutu otaczającego zakresu.  
   
  Gdy `code_seg` atrybut jest stosowany do szablonu klasy lub szablonu funkcji, wszystkie niejawne specjalizacji szablonu są umieszczane w określony segment. Jawna lub częściowa specjalizacje nie dziedziczą `code_seg` atrybut z szablonu podstawowego. Można określić tej samej lub innej `code_seg` atrybutu w specjalizacji. A `code_seg` atrybutu nie można zastosować do wystąpienia jawnego szablonu.  
   
@@ -53,7 +54,7 @@ __declspec(code_seg("segname")) declarator
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };  
 ```  
   
- Należy zachować ostrożność przy umieszczaniu określonych funkcji elementów członkowskich — zwłaszcza wirtualnych funkcji elementów członkowskich — w różnych segmentach. W przypadku definiowania funkcji wirtualnej w klasie pochodnej, która znajduje się w segmencie stronicowanym, gdy metoda klasy podstawowej znajduje się w segmencie niestronicowanym, inne metody klasy podstawowej lub kod użytkownika mogą przyjąć, że wywołanie wirtualnej metody nie wywoła błędu stronicowania.  
+ Należy zachować ostrożność przy umieszczaniu określonych funkcji elementów członkowskich — zwłaszcza wirtualnych funkcji elementów członkowskich — w różnych segmentach. W przypadku definiowania funkcji wirtualnej w klasie pochodnej, która znajduje się w segmencie stronicowanym, gdy metoda klasy bazowej znajduje się w segmencie niestronicowanym, inne metody klasy bazowej lub kod użytkownika mogą przyjąć, że wywołanie wirtualnej metody nie wywoła błędu stronicowania.  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie pokazano sposób `code_seg` formanty atrybutu segment umieszczania podczas niejawnego i jawnego szablonu specjalizacji jest używany:  

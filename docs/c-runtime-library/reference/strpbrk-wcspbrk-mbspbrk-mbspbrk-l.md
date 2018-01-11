@@ -55,11 +55,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aef34a8cddfde1088c8535a1835b157146400faa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 323ee2842799cdfe948bdf0a8af7ec2bfad92439
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 Skanowanie ciągów znaków w określonych zestawów znaków.  
@@ -206,4 +207,4 @@ int main( void )
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [strcspn —, wcscspn —, _mbscspn — _mbscspn_l —](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
  [strchr —, wcschr —, _mbschr — _mbschr_l —](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   
- [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)

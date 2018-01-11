@@ -12,11 +12,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: aef6920b9133280a20cc41344fa707a2cb1cfe97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af74c81186591062214e2a8eb1695a2d177cfc04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="events-ccx"></a>Zdarzenia (C + +/ CX)
 Windows obsługi można zadeklarować typu (publikowanie) zdarzenia i kod klienta w tej samej składnika lub inne składniki mogą subskrybować te zdarzenia, kojarząc metody wywołane *procedury obsługi zdarzeń* ze zdarzeniem. Wielu obsług zdarzeń może być skojarzony z pojedynczego zdarzenia. Podczas publikowania obiektu zgłasza zdarzenie, powoduje wszystkich procedur obsługi zdarzeń do wywołania. W ten sposób subskrybującego klasy mogą wykonywać, niezależnie od akcji niestandardowej jest odpowiednia, gdy wydawca wywołuje zdarzenie. Zdarzenie ma typ delegata, który określa podpis musi mieć wszystkie procedury obsługi zdarzeń, aby subskrybować zdarzenia.  

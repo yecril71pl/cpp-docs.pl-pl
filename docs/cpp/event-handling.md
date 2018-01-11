@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ae45cf1ea8b2540038bab12f28c244ed7b5de7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4167a76d3e301f76ebba09f78abcd7e64fc7f108
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling"></a>Obsługa zdarzeń
 Obsługa zdarzeń przede wszystkim jest obsługiwana dla klasy COM (C++ klasy, które implementują obiektów COM, zwykle za pomocą klasy ATL lub [coclass](../windows/coclass.md) atrybutu).  Aby uzyskać więcej informacji, zobacz [obsługi zdarzeń w modelu COM](../cpp/event-handling-in-com.md).  
@@ -34,9 +35,9 @@ Obsługa zdarzeń przede wszystkim jest obsługiwana dla klasy COM (C++ klasy, k
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[event_source —](../windows/event-source.md)|Tworzy źródła zdarzenia.|  
+|[event_source](../windows/event-source.md)|Tworzy źródła zdarzenia.|  
 |[event_receiver](../windows/event-receiver.md)|Tworzy odbiorcy zdarzeń (zbiornika).|  
-|[__Event](../cpp/event.md)|Deklaruje zdarzenie.|  
+|[__event](../cpp/event.md)|Deklaruje zdarzenie.|  
 |[__raise](../cpp/raise.md)|Zwrócono szczególną uwagę na miejsce wywołania zdarzenia.|  
 |[__hook](../cpp/hook.md)|Kojarzy metoda obsługi ze zdarzeniem.|  
 |[__unhook](../cpp/unhook.md)|Dissociates metody obsługi zdarzeń.|  

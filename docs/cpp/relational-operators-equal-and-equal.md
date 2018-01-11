@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25ff07e3f80d51a0bfe06ae3b1c6dc7d5728bcf0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28d7cf77f9bea05a9220aea3d4006f64899b84ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relational-operators-lt-gt-lt-and-gt"></a>Operatory relacyjne: &lt;, &gt;, &lt;=, i&gt;=
 ## <a name="syntax"></a>Składnia  
@@ -95,11 +96,11 @@ int main() {
   
 -   Jeśli dwa elementy członkowskie są oddzielone *specyfikatora dostępu*, wyniki są niezdefiniowane.  
   
--   Jeśli typem klasy jest unia, wskaźniki do różnych elementów członkowskich danych w tej unii są sobie równe.  
+-   Jeśli typem klasy jest unia, wskaźniki do różnych składowych danych w tej unii są sobie równe.  
   
  Jeśli dwa wskaźniki wskazują elementy tej samej tablicy lub na pierwszy element poza tablicą, wskaźnik do obiektu z wyższym indeksem dolnym daje większy wynik porównania. Porównanie wskaźników jest gwarantowane jako prawidłowe tylko wtedy, gdy wskaźniki dotyczą obiektów w jednej tablicy lub do pierwszej lokalizacji poza tablicą.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyrażenia z operatorami Dwuargumentowymi](../cpp/expressions-with-binary-operators.md)   
  [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [C relacyjnych i operatory porównania](../c-language/c-relational-and-equality-operators.md)
+ [Operatory relacyjne i porównania języka C](../c-language/c-relational-and-equality-operators.md)

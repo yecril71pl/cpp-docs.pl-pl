@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eedfb9c453fbd48ef2c5868fb186156397eeb500
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2b354ebaa72c5257e2752a948ece6320a5d8e70
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Wyjątki i odwijanie stosu w języku C++
 W mechanizmie wyjątków C++, kontrola zostaje przekazana z instrukcji throw do pierwszej instrukcji catch, która może obsłużyć wyrzucony typ. Po osiągnięciu instrukcji catch wszystkie automatyczne zmienne, które znajdują się w zakresie między throw i catch instrukcji zostaną zniszczone w procesie, znany jako *stosu rozwinięcia*. W odwijaniu stosu, wykonanie przebiega w następujący sposób:  

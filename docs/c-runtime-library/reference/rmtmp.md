@@ -37,11 +37,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 79103471b09815b2ca4a99c2e9c22ed5af512ef4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12a0bef6622d8f65b450701dcfb86976da6029da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rmtmp"></a>_rmtmp
 Usuwa pliki tymczasowe.  
@@ -77,4 +78,4 @@ int _rmtmp( void );
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [_flushall —](../../c-runtime-library/reference/flushall.md)   
  [tmpfile —](../../c-runtime-library/reference/tmpfile.md)   
- [_tempnam —, _wtempnam —, tmpnam — _wtmpnam —](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)
+ [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)

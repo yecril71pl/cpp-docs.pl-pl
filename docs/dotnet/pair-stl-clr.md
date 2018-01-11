@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca6ee4a44ea9e126be16b785b9ae52c7a852bc5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a8c4ae8ee9fbcfddd6009d4e91134d59a9a02cc9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pair-stlclr"></a>pair (STL/CLR)
 Klasa szablonu opisuje obiekt, który opakowuje pary wartości.  
@@ -43,22 +46,22 @@ template<typename Value1,
   
 |Definicja typu|Opis|  
 |---------------------|-----------------|  
-|[Pair::first_type (STL/CLR)](../dotnet/pair-first-type-stl-clr.md)|Typ pierwszego zakodowana wartość.|  
-|[Pair::second_type (STL/CLR)](../dotnet/pair-second-type-stl-clr.md)|Typ drugiego zakodowana wartość.|  
+|[pair::first_type (STL/CLR)](../dotnet/pair-first-type-stl-clr.md)|Typ pierwszego zakodowana wartość.|  
+|[pair::second_type (STL/CLR)](../dotnet/pair-second-type-stl-clr.md)|Typ drugiego zakodowana wartość.|  
   
 |Element członkowski obiektu|Opis|  
 |-------------------|-----------------|  
-|[Pair::First (STL/CLR)](../dotnet/pair-first-stl-clr.md)|Pierwszy przechowywana wartość.|  
-|[Pair::Second (STL/CLR)](../dotnet/pair-second-stl-clr.md)|Druga wartość przechowywane.|  
+|[pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)|Pierwszy przechowywana wartość.|  
+|[pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)|Druga wartość przechowywane.|  
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[Pair::Pair (STL/CLR)](../dotnet/pair-pair-stl-clr.md)|Tworzy obiekt pary.|  
-|[Pair::swap (STL/CLR)](../dotnet/pair-swap-stl-clr.md)|Zamienia zawartość dwie pary.|  
+|[pair::pair (STL/CLR)](../dotnet/pair-pair-stl-clr.md)|Tworzy obiekt pary.|  
+|[pair::swap (STL/CLR)](../dotnet/pair-swap-stl-clr.md)|Zamienia zawartość dwie pary.|  
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[Pair::operator = (STL/CLR)](../dotnet/pair-operator-assign-stl-clr.md)|Zastępuje para przechowywanej wartości.|  
+|[pair::operator= (STL/CLR)](../dotnet/pair-operator-assign-stl-clr.md)|Zastępuje para przechowywanej wartości.|  
   
 ## <a name="remarks"></a>Uwagi  
  Obiekt przechowuje pary wartości. Klasa szablonu jest używana do łączenia dwóch wartości w jeden obiekt. Należy pamiętać, że `cliext::pair` (opisanych poniżej) magazynów tylko typy zarządzane, aby przechowywać pary niezarządzane przy użyciu typów `std::pair`, zadeklarowanych w `<utility>`.  
@@ -69,4 +72,4 @@ template<typename Value1,
  **Namespace:** cliext  
   
 ## <a name="see-also"></a>Zobacz też  
- [make_pair — (STL/CLR)](../dotnet/make-pair-stl-clr.md)
+ [make_pair (STL/CLR)](../dotnet/make-pair-stl-clr.md)

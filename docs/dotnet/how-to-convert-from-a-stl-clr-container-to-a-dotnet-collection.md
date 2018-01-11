@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 817f04af0f6d2c24296b5775a9863b8c34dccd30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aa58c8db46d1443ca5b39449222cc22e31eafb5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Porady: konwertowanie kontenera STL/CLR na kolekcję .NET
 W tym temacie przedstawiono sposób Konwertuj kontenery STL/CLR na ich równoważne kolekcji .NET. Na przykład zostanie przedstawiony sposób konwertowania STL/CLR [wektor](../dotnet/vector-stl-clr.md) do .NET <xref:System.Collections.Generic.ICollection%601> oraz sposobach przekształcania STL/CLR [mapy](../dotnet/map-stl-clr.md) do .NET <xref:System.Collections.Generic.IDictionary%602>, ale procedura jest podobnych dla wszystkich zbiorów i kontenery.  
@@ -121,4 +124,4 @@ Key: 74.00 Value: 74
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)   
  [Porady: konwertowanie kolekcji .NET na kontener STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)   
- [range_adapter — (STL/CLR)](../dotnet/range-adapter-stl-clr.md)
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

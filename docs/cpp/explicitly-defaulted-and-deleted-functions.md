@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73e1d52d1c13e2defa51a5cab9da625b75aac757
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f31304a63ddedb90c0aa76ff77883bd1b007b77f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Jawnie domyślne i usunięte funkcje
 W języku C ++ 11 domyślne i usunięte funkcje mieć jawną kontrolę nad czy specjalnych funkcji Członkowskich są generowane automatycznie. Funkcje usunięte udostępniają prosty język, aby zapobiegać występowaniu problematycznych promocji typu w argumentach funkcji wszystkich typów – zarówno w specjalnych funkcjach członkowskich, jak i w normalnych funkcjach członkowskich oraz funkcjach nieczłonkowskich – które mogą w przeciwnym razie spowodować niechciane wywołania funkcji.  
@@ -51,7 +52,7 @@ W języku C ++ 11 domyślne i usunięte funkcje mieć jawną kontrolę nad czy s
 >   
 >  W obu przypadkach, program Visual Studio kontynuuje automatyczne generowanie niezbędnych funkcji niejawnie i nie emituje ostrzeżenia.  
   
- Konsekwencje tych reguł mogą również wyciec do hierarchii obiektów. Na przykład, jeżeli z jakiegokolwiek powodu klasa podstawowa nie będzie mieć domyślnego konstruktora wywoływanego z klasy pochodnej (to znaczy konstruktora o widoczności `public` lub `protected`, który nie przyjmuje żadnych parametrów), to klasa pochodna nie będzie mogła automatycznie wygenerować własnego konstruktora domyślnego.  
+ Konsekwencje tych reguł mogą również wyciec do hierarchii obiektów. Na przykład, jeżeli z jakiegokolwiek powodu klasa bazowa nie będzie mieć domyślnego konstruktora wywoływanego z klasy pochodnej (to znaczy konstruktora o widoczności `public` lub `protected`, który nie przyjmuje żadnych parametrów), to klasa pochodna nie będzie mogła automatycznie wygenerować własnego konstruktora domyślnego.  
   
  Te reguły skomplikować wykonania co powinna być typy proste, zdefiniowane przez użytkownika i wspólnego idioms C++ — na przykład zapewnienie typu zdefiniowanego przez użytkownika z systemem innym niż copyable przez zadeklarowanie konstruktora kopiującego i operatora przypisania kopii prywatnie, a nie definiując je.  
   

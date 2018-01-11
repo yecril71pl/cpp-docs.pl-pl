@@ -45,11 +45,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 11f5a9a0629aa7012418cdb74d849d838e8cc5b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96273d317409f8c79740b1c7200af1533467d9f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
 Kopiuje znaków wielobajtowych z jednego ciągu na inny ciąg. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_mbccpy_s —, _mbccpy_s_l —](../../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md).  
@@ -109,4 +110,4 @@ void _mbccpy_l(
 ## <a name="see-also"></a>Zobacz też  
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbclen —, mblen —, _mblen_l —](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)

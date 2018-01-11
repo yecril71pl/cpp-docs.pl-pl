@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4124ab3d8606ef36b19d6196f680b41bc65fc5a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7ce54717a65630089b4bfa0cafe0af70f0292206
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-accessors"></a>Korzystanie z metod dostępu
 W poniższych tematach opisano, jak ustalić, jakiego typu metody dostępu jest najlepsze dla danych aplikacji, a następnie sposób użycia różne typy dostępnych metod dostępu:  

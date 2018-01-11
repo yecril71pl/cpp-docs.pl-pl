@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8d0595078c9515c5c705a1cbfb1ed6b5e55db788
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e35d0efc92e011cfb4d93746efd1b03ac94a0779
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Deklarator odwołania do wartości:&amp;&amp;
 Zawiera odwołanie do r-wartości wyrażenia.  
@@ -59,7 +60,7 @@ int main()
   
  Przed Visual C++ 2010, każdy wywołanie `operator+` przydziela i zwraca nowy tymczasowy `string` obiektu (r-wartości). `operator+`Nie można dołączyć jeden ciąg wzajemnie, ponieważ nie może określić, czy ciągi źródła są lvalues i rvalues. Jeśli parametry źródła są obie lvalues, może być przywoływany w innym miejscu w programie i w związku z tym nie może być modyfikowany. Za pomocą odwołania wartościowane prawostronnie `operator+` można zmodyfikować, aby wykonać rvalues, która nie może być przywoływany w innym miejscu w programie. W związku z tym `operator+` teraz dołączyć jednego ciągu na inny. Może to znacznie zmniejszyć liczbę alokacji pamięci dynamicznej który `string` klasy należy wykonać. Aby uzyskać więcej informacji na temat `string` , zobacz [basic_string — klasa](../standard-library/basic-string-class.md).  
   
- Semantyki przenoszenia pomaga również w przypadku, gdy kompilator nie można użyć zwrócić wartość optymalizacji (RVO) lub o nazwie zwrócić wartość optymalizacji (NRVO). W takich przypadkach kompilator wywołuje konstruktor przenoszenia, jeśli typ definiuje ją. Aby uzyskać więcej informacji na temat o nazwie optymalizacji wartości, zobacz [o nazwie zwracać optymalizacji wartość w programie Visual C++ 2005](http://go.microsoft.com/fwlink/?LinkId=131571).  
+ Semantyki przenoszenia pomaga również w przypadku, gdy kompilator nie można użyć zwrócić wartość optymalizacji (RVO) lub o nazwie zwrócić wartość optymalizacji (NRVO). W takich przypadkach kompilator wywołuje konstruktor przenoszenia, jeśli typ definiuje ją. Aby uzyskać więcej informacji na temat o nazwie optymalizacji wartości, zobacz [o nazwie zwracać optymalizacji wartość w programie Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   
  Aby lepiej zrozumieć semantyki przenoszenia, należy wziąć pod uwagę przykład wstawianie do elementu `vector` obiektu. Jeśli pojemność `vector` przekroczeniu obiektu `vector` obiektu musi ponownie przydzielić pamięci dla elementów, a następnie skopiuj każdy element do innej lokalizacji pamięci, aby zwolnić miejsce dla wstawiony element. Podczas operacji wstawiania kopiuje element, tworzy nowy element, wywołuje Konstruktor kopiujący, aby skopiować dane z poprzedniego elementu do nowego elementu i następnie niszczy poprzedni element. Przenieś semantyki umożliwia przenoszenie obiektów bezpośrednio, bez konieczności wykonywania alokacji pamięci kosztowne i operacje kopiowania.  
   

@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a286be3d29e22cc3bae3d34241f08735f5f7b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Operatory C++ wbudowanych, priorytet i łączność
 
@@ -62,8 +63,8 @@ Operator *pierwszeństwo* określa kolejność operacji w wyrażeniach zawieraj�
 |[Jednoargumentowe plus](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[Address-of](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Operator pośredni](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
-|[Tworzenie obiektu](../cpp/new-operator-cpp.md)|[Nowy](../cpp/new-operator-cpp.md)|
-|[Zniszczyć obiektu](../cpp/delete-operator-cpp.md)|[Usuń](../cpp/delete-operator-cpp.md)|
+|[Tworzenie obiektu](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
+|[Zniszczyć obiektu](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Rzutowania](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**Priorytet grupy 4, od lewej do prawej łączność**|
 |[Wskaźnik do-elementu członkowskiego (obiekty lub wskaźniki)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; lub -> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
@@ -98,7 +99,7 @@ Operator *pierwszeństwo* określa kolejność operacji w wyrażeniach zawieraj�
 |**Priorytet grupy 15, od prawej do lewej łączność**|
 |[Warunkowe](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
 |**Priorytet grupy 16, od prawej do lewej łączność**|
-|[Przypisania](../cpp/assignment-operators.md)|[=](../cpp/assignment-operators.md)|
+|[Przypisanie](../cpp/assignment-operators.md)|[=](../cpp/assignment-operators.md)|
 |[Przypisania mnożenia](../cpp/assignment-operators.md)|[&#42;=](../cpp/assignment-operators.md)|
 |[Przypisania dzielenia](../cpp/assignment-operators.md)|[/=](../cpp/assignment-operators.md)|
 |[Przypisanie modulo](../cpp/assignment-operators.md)|[%=](../cpp/assignment-operators.md)|

@@ -21,11 +21,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c330ee2f9d3952068e2a400cd8f6e23103dc20e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a270b26fc0fd9be721ee0656f9f0d14ab579b477
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Wymiana pól rekordów: używanie funkcji RFX
 W tym temacie opisano sposób korzystania z wywołania funkcji RFX wchodzące w skład treści Twojej `DoFieldExchange` zastąpienia.  
@@ -58,10 +61,10 @@ W tym temacie opisano sposób korzystania z wywołania funkcji RFX wchodzące w 
 |`RFX_Bool`|**WARTOŚĆ LOGICZNA**|  
 |`RFX_Byte`|**BAJTÓW**|  
 |`RFX_Binary`|`CByteArray`|  
-|`RFX_Double`|**podwójne**|  
+|`RFX_Double`|**double**|  
 |`RFX_Single`|**float**|  
 |`RFX_Int`|`int`|  
-|`RFX_Long`|**długa**|  
+|`RFX_Long`|**long**|  
 |`RFX_LongBinary`|`CLongBinary`|  
 |`RFX_Text`|`CString`|  
 |`RFX_Date`|`CTime`|  

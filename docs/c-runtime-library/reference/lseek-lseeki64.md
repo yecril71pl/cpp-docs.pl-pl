@@ -40,11 +40,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: af250c88b7c5443529cf4aa9524f3d2e78413e87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4dad9abf8b82cc5c6e876af22a1a2f61a6216ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 Przesuwa kursor pliku do określonej lokalizacji.  
@@ -179,4 +180,4 @@ Position for end of file seek = 57
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)   
  [fseek, _fseeki64 —](../../c-runtime-library/reference/fseek-fseeki64.md)   
- [_tell —, _telli64 —](../../c-runtime-library/reference/tell-telli64.md)
+ [_tell, _telli64](../../c-runtime-library/reference/tell-telli64.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45cb4bb1537f7d897b1dd53ada413e73a54162ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Zapraszamy ponownie do języka C++ (Modern C++)
 C++ jest jednym z najpopularniejszych języków programowania na świecie. Programy dobrze napisane w języku C++ są szybkie i wydajne. Język jest bardziej elastyczna niż innych języków, ponieważ służy do tworzenia szerokiej gamy aplikacji — od fun i gry atrakcyjnych, wysokiej wydajności naukowych oprogramowaniem, sterowników urządzeń, osadzonych programy i aplikacje klienta systemu Windows. Ponad 20 lat C++ został użyty do rozwiązywania problemów, takich jak te i wiele innych. Co może być niemożliwe jest coraz programistów języka C++ ma złożony dowdy programowania stylu języka C wczoraj oraz ma zamiast tego donned nowoczesnych wersji języka C++.  
@@ -116,7 +117,7 @@ for( auto& s : v ) {
   
 -   [Przenośność na granicach ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Aby uzyskać więcej informacji, zobacz artykuł StackOverflow [idioms C++, które zostały uznane za przestarzałe w języku C ++ 11](http://go.microsoft.com/fwlink/?LinkId=402836)  
+ Aby uzyskać więcej informacji, zobacz artykuł StackOverflow [idioms C++, które zostały uznane za przestarzałe w języku C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   

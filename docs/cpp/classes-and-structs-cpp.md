@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d5f690846954dde21252b2aabdd229abdf33ec6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac15db222aed3abad980f4e1a0c715c099e2019c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-and-structs-c"></a>Klasy i struktury (C++)
 W tej sekcji przedstawiono C++ klas i struktur. Dwa konstrukcje są takie same jak w języku C++, ale w strukturach dostępność domyślny jest publiczny, w klasach wartość domyślna jest prywatny.  
@@ -32,11 +33,11 @@ W tej sekcji przedstawiono C++ klas i struktur. Dwa konstrukcje są takie same j
   
  Omówiono następujące zagadnienia:  
   
--   [klasy](../cpp/class-cpp.md)  
+-   [class](../cpp/class-cpp.md)  
   
--   [— Struktura](../cpp/struct-cpp.md)  
+-   [struct](../cpp/struct-cpp.md)  
   
--   [Omówienie elementu członkowskiego klasy](../cpp/class-member-overview.md)  
+-   [Omówienie składowej klasy](../cpp/class-member-overview.md)  
   
 -   [Kontrola dostępu do elementów członkowskich](../cpp/member-access-control-cpp.md)  
   
@@ -52,7 +53,7 @@ W tej sekcji przedstawiono C++ klas i struktur. Dwa konstrukcje są takie same j
   
 -   [Anonimowe typy klas](../cpp/anonymous-class-types.md)  
   
--   [Wskaźniki do elementów członkowskich](../cpp/pointers-to-members.md)  
+-   [Wskaźniki do składowych](../cpp/pointers-to-members.md)  
   
 -   [this, wskaźnik](../cpp/this-pointer.md)  
   

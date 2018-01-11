@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f65933a1cbd81c0794263dfe3fa2628f52599257
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a2cb3ffb8e0bfd8eba04555286894b6f1e58cfd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-determine-the-user-interactive-state-ccli"></a>Porady: określanie stanu interaktywności użytkownika (C++/CLI)
 Poniższy przykład kodu pokazuje sposób określania, czy kod jest uruchamiany w kontekście interakcji z użytkownikiem. Jeśli <xref:System.Environment.UserInteractive%2A> to false, a następnie kod jest uruchomiona jako proces usługi lub z wewnątrz aplikacji sieci Web, w którym to przypadku należy zrezygnować do interakcji z użytkownikiem.  
@@ -44,4 +47,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [Operacje w systemie Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

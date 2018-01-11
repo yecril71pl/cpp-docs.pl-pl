@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5421447cfbe1e1bd8f5d25d80c492d10b1469e0f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 852f4522ecf32643611f6bbd4d86028e883bb6eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-language-reference"></a>Materiał referencyjny na temat języka C++
 To źródło odniesienia wyjaśnia sposób implementacji C++ w Microsoft Visual C++. Organizacja jest oparta na *opatrzone adnotacjami C++ podręcznika* Margaret Ellis i Bjarne Stroustrup oraz na ANSI/ISO C++ międzynarodowej standardowy (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.  
@@ -68,10 +69,10 @@ Omówienie programowania rozwiązań nowoczesnych wersji języka C++, zobacz [j�
  Wprowadzenie do klas, struktur i unii. Ponadto funkcje Członkowskie, specjalnych funkcji Członkowskich, elementy członkowskie danych, pola bitowe, ten wskaźnik, zagnieżdżonych klas.  
   
  [Klasy pochodne](../cpp/inheritance-cpp.md)  
- Dziedziczenie pojedyncze lub wielokrotne, funkcje wirtualne, wiele klas podstawowych, klasy abstrakcyjne, reguły zakresu. Ponadto słowa kluczowego __super i \__interfejs słów kluczowych.  
+ Dziedziczenie pojedyncze lub wielokrotne, funkcje wirtualne, wiele klas bazowych, klasy abstrakcyjne, reguły zakresu. Ponadto słowa kluczowego __super i \__interfejs słów kluczowych.  
   
  [Kontrola dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md)  
- Kontrolowanie dostępu do elementów członkowskich klasy: słowa kluczowe public, private i protected. Funkcje i klasy zaprzyjaźnione.  
+ Kontrolowanie dostępu do składowych klasy: słowa kluczowe public, private i protected. Funkcje i klasy zaprzyjaźnione.  
   
  [Przeciążanie](operator-overloading.md)  
  Operatory przeciążone zasady dotyczące przeciążania operatorów.  
@@ -91,7 +92,7 @@ Omówienie programowania rozwiązań nowoczesnych wersji języka C++, zobacz [j�
  [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md)  
  Modyfikatory specyficzne dla Microsoft C++. Pamięć adresowania, wywoływanie Konwencji, używania funkcji naked, rozszerzone atrybuty klasy magazynu (__declspec), \__w64.  
   
- [Asembler wbudowany](../assembler/inline/inline-assembler.md)  
+ [Wbudowany asembler](../assembler/inline/inline-assembler.md)  
  Korzystanie z języka asembler i C++ w blokach __asm.  
   
  [Obsługa kompilatora COM](../cpp/compiler-com-support.md)  
@@ -109,10 +110,10 @@ Omówienie programowania rozwiązań nowoczesnych wersji języka C++, zobacz [j�
  [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)  
  Materiał odniesienia na temat użycia języka Visual C++ do ukierunkowania środowiska uruchomieniowego języka wspólnego.  
   
- [Odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md)  
+ [Dokumentacja kompilacji w języku C/C++](../build/reference/c-cpp-building-reference.md)  
  Opcje kompilatora, opcje konsolidatora i inne narzędzia kompilacji.  
   
- [Odwołania preprocesora C/C++](../preprocessor/c-cpp-preprocessor-reference.md)  
+ [Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)  
  Materiał referencyjny na temat pragm, dyrektyw preprocesora, wstępnie zdefiniowanych makr i preprocesora.  
   
  [Bibliotek języka Visual C++](../standard-library/cpp-standard-library-reference.md)  

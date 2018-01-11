@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ff111b73d81fd3c008e53db0f5e41b82f9e3753
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1094be23074fe71e65a3077de51263f01a81c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 Słowo kluczowe `constexpr` została wprowadzona w języku C ++ 11 i ulepszona w języku C ++ 14. Oznacza to *wyrażenie stałe*. Podobnie jak `const`, dzięki czemu wystąpi błąd kompilatora zostanie wygenerowany, jeśli dowolny kod próbuje zmodyfikować wartości można je stosować do zmiennych. W odróżnieniu od `const`, `constexpr` również będą stosowane do funkcji i klasy konstruktorów. `constexpr`Wskazuje, że wartość lub wartości zwracanej jest stałe i, jeśli to możliwe, będzie obliczana w czasie kompilacji.  A `constexpr` całkowitą wartość może być używana, wszędzie tam, gdzie stała liczba całkowita jest wymagane, takie jak argumentów szablonu i deklaracje tablicy. I gdy wartość może być obliczona w czasie kompilacji zamiast w czasie wykonywania, może ułatwić program szybsze i użyj mniejszej ilości pamięci.  
@@ -195,4 +196,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [Deklaracje i definicje](../cpp/declarations-and-definitions-cpp.md)   
- [Const](../cpp/const-cpp.md)
+ [const](../cpp/const-cpp.md)

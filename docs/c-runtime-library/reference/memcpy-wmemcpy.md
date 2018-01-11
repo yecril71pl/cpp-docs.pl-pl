@@ -34,11 +34,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 38c00e7d7c5eb9f4a1076ae3814c17a8062fe322
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 312e4a63803f3661799c6ad832fdfee22af876c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 Kopie bajty pomiędzy buforów. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [memcpy_s —, wmemcpy_s —](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md).  
@@ -116,4 +117,4 @@ wchar_t *wmemcpy(
  [memmove —, wmemmove —](../../c-runtime-library/reference/memmove-wmemmove.md)   
  [memset —, wmemset —](../../c-runtime-library/reference/memset-wmemset.md)   
  [strcpy_s —, wcscpy_s —, _mbscpy_s —](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
- [strncpy_s — _strncpy_s_l —, wcsncpy_s —, _wcsncpy_s_l —, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)

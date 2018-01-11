@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 16eed3844487671a72538d8fbbbd9d4669e01dbc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebc971ea109a0e83288f5bb000e09461f4fbefec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scanf-type-field-characters"></a>scanf — Znaki pola typu
 Poniższe informacje dotyczą poszczególnych `scanf` rodzinę funkcji, w tym bezpiecznego wersje, takie jak `scanf_s`.  
@@ -74,4 +75,4 @@ scanf_s("%10s %8s", string1, 11, string2, 9);
  Skanowanie ciągów `scanf` funkcje, i `wscanf` funkcji, należy użyć powyższej tabeli z specyfikatory typ formatu `s` i `S` zamiast `c` i `C`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [scanf, _scanf_l —, wscanf — _wscanf_l —](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)
+ [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe8d93d39d298b65b61218356f70bc65b82810bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 309d32e5cd92d37942f4267bbd7c7cc5a1bf1805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -37,4 +40,4 @@ Ten temat dotyczy klasach MFC ODBC.
  [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)   
  [Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
  [Zestaw rekordów: Deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [Zestaw rekordów: Wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+ [Zestaw rekordów: wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

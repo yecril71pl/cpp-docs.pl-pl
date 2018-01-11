@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e016b6bb8c37fe24d9f1929f19904f17592e6f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="issuing-a-parameterized-query"></a>Uruchamianie zapytania parametrycznego
 Poniższy przykład problemy z prostego zapytania parametrycznego pobierający rekordy z pola wiek (która jest większa niż 30) z tabeli w bazie danych programu Microsoft Access. Aby obsługiwać parametr, rekord użytkownika musi mieć dodatkowe mapy. Następujący kod w Projekt ATL używa `CCommand` klasy zamiast `CTable` klasa używana w poprzednim przykładzie [przechodzenie przez prosty zestaw wierszy](../../data/oledb/traversing-a-simple-rowset.md).  

@@ -32,11 +32,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f8045010875713588fb20a8f05a230717a21a9a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 025acdf18d0e5322ef43de800e3577233a93cb86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 Konwertowanie ciągu znaków typu wide reprezentacji ciągu znaków wielobajtowych. Wersja [wcsrtombs —](../../c-runtime-library/reference/wcsrtombs.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -182,4 +183,4 @@ The string was successfully converted.
  [wcrtomb_s —](../../c-runtime-library/reference/wcrtomb-s.md)   
  [wctomb —, _wctomb_l —](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [wcstombs —, _wcstombs_l —](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [mbsinit —](../../c-runtime-library/reference/mbsinit.md)
+ [mbsinit](../../c-runtime-library/reference/mbsinit.md)

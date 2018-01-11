@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d4d324e16a40db6da5bef20ed5190cdac4f2279
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 22c9e440383963662bd5cb050da7ecb056d52f0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-odbc-to-work-with-other-users"></a>Używanie ODBC do pracy z innymi użytkownikami
 Używanie ODBC w środowiskach, w którym wielu użytkowników pracuje z tej samej bazy danych ODBC.  
@@ -26,4 +29,4 @@ Używanie ODBC w środowiskach, w którym wielu użytkowników pracuje z tej sam
 ## <a name="in-this-section"></a>W tej sekcji  
   
 ## <a name="see-also"></a>Zobacz też  
- [Otwórz połączenie z bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

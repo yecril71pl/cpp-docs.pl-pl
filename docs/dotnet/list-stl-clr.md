@@ -18,11 +18,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 991b72b312c8ad1b36a9a401a6452ec36ea25d6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 40046e2b7263559765c2aab2bef13a17c341f7c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `list` Zarządzanie sekwencję elementów jako dwukierunkowy połączonej listy węzłów, w każdym przechowywania jeden element.  
@@ -61,22 +64,22 @@ template<typename Value>
 |[list::generic_reverse_iterator (STL/CLR)](../dotnet/list-generic-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora dla ogólnego interfejsu do kontenera.|  
 |[list::generic_value (STL/CLR)](../dotnet/list-generic-value-stl-clr.md)|Typ elementu dla ogólnego interfejsu do kontenera.|  
 |[list::iterator (STL/CLR)](../dotnet/list-iterator-stl-clr.md)|Typ iteratora dla kontrolowanej sekwencji.|  
-|[list::Reference (STL/CLR)](../dotnet/list-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[list::reference (STL/CLR)](../dotnet/list-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[list::reverse_iterator (STL/CLR)](../dotnet/list-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
 |[list::size_type (STL/CLR)](../dotnet/list-size-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
 |[list::value_type (STL/CLR)](../dotnet/list-value-type-stl-clr.md)|Typ elementu.|  
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[list::ASSIGN (STL/CLR)](../dotnet/list-assign-stl-clr.md)|Zamienia wszystkie elementy.|  
+|[list::assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)|Zamienia wszystkie elementy.|  
 |[list::back (STL/CLR)](../dotnet/list-back-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
-|[list::BEGIN (STL/CLR)](../dotnet/list-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
-|[list::Clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
-|[list::EMPTY (STL/CLR)](../dotnet/list-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[list::clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
+|[list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
 |[list::end (STL/CLR)](../dotnet/list-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
-|[list::ERASE (STL/CLR)](../dotnet/list-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[list::Front (STL/CLR)](../dotnet/list-front-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
-|[list::INSERT (STL/CLR)](../dotnet/list-insert-stl-clr.md)|Dodaje elementy na określonej pozycji.|  
+|[list::erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
+|[list::front (STL/CLR)](../dotnet/list-front-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
+|[list::insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)|Dodaje elementy na określonej pozycji.|  
 |[list::list (STL/CLR)](../dotnet/list-list-stl-clr.md)|Konstruuje obiekt kontenera.|  
 |[list::merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)|Scala dwie uporządkowane kontrolowanej sekwencji.|  
 |[list::pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)|Usuwa ostatnim elemencie.|  
@@ -84,17 +87,17 @@ template<typename Value>
 |[list::push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)|Dodaje nowy element ostatni.|  
 |[list::push_front (STL/CLR)](../dotnet/list-push-front-stl-clr.md)|Dodaje nowy element pierwszy.|  
 |[list::rbegin (STL/CLR)](../dotnet/list-rbegin-stl-clr.md)|Określa początek odwróconej kontrolowanej sekwencji.|  
-|[list::Remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)|Usuwa element z określoną wartością.|  
+|[list::remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)|Usuwa element z określoną wartością.|  
 |[list::remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)|Usuwa elementy przekazujące określonego testu.|  
 |[list::rend (STL/CLR)](../dotnet/list-rend-stl-clr.md)|Określa koniec odwróconej kontrolowanej sekwencji.|  
-|[list::Resize (STL/CLR)](../dotnet/list-resize-stl-clr.md)|Zmiany liczby elementów.|  
+|[list::resize (STL/CLR)](../dotnet/list-resize-stl-clr.md)|Zmiany liczby elementów.|  
 |[list::reverse (STL/CLR)](../dotnet/list-reverse-stl-clr.md)|Odwraca kontrolowanej sekwencji.|  
 |[list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)|Liczy liczbę elementów.|  
 |[list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)|Ustala kolejność kontrolowanej sekwencji.|  
 |[list::splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)|Restitches łącza między węzłami.|  
 |[list::swap (STL/CLR)](../dotnet/list-swap-stl-clr.md)|Zamienia zawartości dwóch kontenerów.|  
 |[list::to_array (STL/CLR)](../dotnet/list-to-array-stl-clr.md)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|  
-|[list::Unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)|Usuwa elementy sąsiednie przekazujące określonego testu.|  
+|[list::unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)|Usuwa elementy sąsiednie przekazujące określonego testu.|  
   
 |Właściwość|Opis|  
 |--------------|-----------------|  
@@ -103,13 +106,13 @@ template<typename Value>
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[list::operator = (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
-|[Operator! = (lista) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)|Określa, czy `list` obiekt nie jest równa innej `list` obiektu.|  
-|[Operator < (lista) (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)|Określa, czy `list` obiekt jest mniejszy niż innego `list` obiektu.|  
-|[Operator < = (lista) (STL/CLR)](../dotnet/operator-less-or-equal-list-stl-clr.md)|Określa, czy `list` obiekt jest mniejszy niż lub równy do innego `list` obiektu.|  
-|[Operator == (lista) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)|Określa, czy `list` obiekt jest taki sam do innego `list` obiektu.|  
-|[operator > (Wyświetl) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)|Określa, czy `list` obiekt jest większy niż innego `list` obiektu.|  
-|[operator > = (lista) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)|Określa, czy `list` obiektu jest większa lub równa innej `list` obiektu.|  
+|[list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[operator!= (list) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)|Określa, czy `list` obiekt nie jest równa innej `list` obiektu.|  
+|[operator< (list) (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)|Określa, czy `list` obiekt jest mniejszy niż innego `list` obiektu.|  
+|[operator<= (list) (STL/CLR)](../dotnet/operator-less-or-equal-list-stl-clr.md)|Określa, czy `list` obiekt jest mniejszy niż lub równy do innego `list` obiektu.|  
+|[operator== (list) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)|Określa, czy `list` obiekt jest taki sam do innego `list` obiektu.|  
+|[operator> (list) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)|Określa, czy `list` obiekt jest większy niż innego `list` obiektu.|  
+|[operator>= (list) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)|Określa, czy `list` obiektu jest większa lub równa innej `list` obiektu.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -144,4 +147,4 @@ template<typename Value>
  [kolejki (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [stos (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [Wektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

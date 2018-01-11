@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc0fd027bbb4a1049e46351a8a544dac8c5a47aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c433aafbe9799486d141e04ca747cbb4f7c3e22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="varianttsetstring"></a>_variant_t::SetString
 **Dotyczące firmy Microsoft**  
@@ -45,4 +46,4 @@ ms.lasthandoff: 10/24/2017
  **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [_variant_t — klasa](../cpp/variant-t-class.md)
+ [_variant_t, klasa](../cpp/variant-t-class.md)

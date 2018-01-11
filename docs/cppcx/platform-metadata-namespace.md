@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 7c108dd9435d433076ea2f2c9b573f2ebf3685e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce300956045c0a111deef6d514d1699bea8d794b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformmetadata-namespace"></a>Namespace platform::METADATA
 Ta przestrzeń nazw zawiera atrybuty, które modyfikują deklaracje typów.  
@@ -39,7 +40,7 @@ namespace Platform {
 |Nazwa|Uwagi|  
 |----------|------------|  
 |Atrybut|Klasa podstawowa dla atrybutów.|  
-|[Atrybut platform::METADATA::DefaultMemberAttribute](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Wskazuje preferowaną funkcji do wywołania między kilka możliwych przeciążonej funkcji.|  
+|[Platform::Metadata::DefaultMemberAttribute, atrybut](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Wskazuje preferowaną funkcji do wywołania między kilka możliwych przeciążonej funkcji.|  
 |[Atrybut platform::METADATA::FlagsAttribute](../cppcx/platform-metadata-flagsattribute-attribute.md)flagi|Deklaruje wyliczenie jako wyliczenie pól bitowych.<br /><br /> Poniższy przykład przedstawia sposób zastosowania `Flags` atrybutu wyliczenia.<br /><br /> `[Flags] enum class MyEnumeration { enumA = 1, enumB = 2, enumC = 3}`|  
 |[Platform::METADATA::RuntimeClassNameAttribute](../cppcx/platform-metadata-runtimeclassname.md)|Zapewnia, że prywatnej klasy ref ma prawidłowe środowisko uruchomieniowe nazwę klasy.|  
   

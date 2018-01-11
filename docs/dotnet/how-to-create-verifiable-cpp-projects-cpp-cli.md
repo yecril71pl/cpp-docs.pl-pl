@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aad327c26c8684804c294fe5eb6b5bf41507f603
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4d6a7806183766d96c0d106d9d9e890b046f4563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Porady: tworzenie weryfikowalnych projektów C++ (C++/CLI)
 Kreatorzy aplikacji w usłudze Visual C++ nie twórz weryfikowalnych projektów, ale projekty mogą być konwertowane jako możliwe do zweryfikowania. W tym temacie opisano sposób ustawiania właściwości projektu i zmodyfikować pliki źródłowe projektu do przekształcania projektów Visual C++ do tworzenia aplikacji możliwe do zweryfikowania.  
@@ -62,4 +65,4 @@ Kreatorzy aplikacji w usłudze Visual C++ nie twórz weryfikowalnych projektów,
 3.  Na **zaawansowane** w obszarze **konsolidatora** węzła, wprowadź `Main` jako **punktu wejścia** wartości właściwości.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kod czysty i weryfikowalny (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+ [Kod czysty i weryfikowalny (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

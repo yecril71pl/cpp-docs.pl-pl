@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b8271e7a5a69c91612a3bda13ad4b1cc817f012
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a68c3f0b161a21749ad49b1b89a1356b757d4b76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-provider-templates-reference"></a>Szablony dostawców OLE DB — kompendium
 Klasy i interfejsy dla OLE DB szablonów dostawców można podzielić na następujące kategorie. Materiałów referencyjnych zawiera także informacje o [makra dla szablony OLE DB Provider](../../data/oledb/macros-for-ole-db-provider-templates.md).  

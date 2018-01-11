@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 95cce7367eac5e4637d148b2c54cd5271f4f3026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fc9ce614cb67bef1904e8dc464402f362b0cbde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cl-filename-syntax"></a>Składnia nazwy pliku CL
 CL akceptuje pliki, których nazwy zgodne z konwencjami systemu plików NTFS, FAT i HPFS nazewnictwa. Nazwy pliku może zawierać ścieżki pełnej lub częściowej. Pełna ścieżka zawiera nazwę dysku i co najmniej jedną nazwę katalogu. CL akceptuje nazw plików rozdzielonych przez ukośników odwrotnych (\\) lub przesyłane ukośnikami (/). Nazwy zawierające spacje muszą być ujęte w znaki podwójnego cudzysłowu. Ścieżka częściowa pomija nazwa dysku CL zakłada się na bieżącym dysku. Jeśli nie określisz ścieżkę CL przyjęto założenie, że plik znajduje się w bieżącym katalogu.  

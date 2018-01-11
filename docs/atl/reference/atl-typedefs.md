@@ -34,11 +34,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae5a0d527bd503422176fb01f4024d98100ef351
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d721cefd20ae5eb208c74d973069fb9365273d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-typedefs"></a>Definicje typów ATL
 Biblioteki Active Template Library obejmuje następujące elementy TypeDef.  
@@ -50,7 +51,7 @@ Biblioteki Active Template Library obejmuje następujące elementy TypeDef.
 |[_ATL_MODULE](#_atl_module)|Zdefiniowany jako element typedef, na podstawie [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).|  
 |[_ATL_WIN_MODULE](#_atl_win_module)|Zdefiniowany jako element typedef, na podstawie [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|  
 |[ATL_URL_PORT](#atl_url_port)|Typ użyty przez [CUrl](../../atl/reference/curl-class.md) służący do określania numeru portu.|  
-|[CComDispatchDriver](#ccomdispatchdriver)|Ta klasa zarządza wskaźników interfejsów COM..|  
+|[CComDispatchDriver](#ccomdispatchdriver)|Ta klasa zarządza wskaźników interfejsów COM.|  
 |[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|Wywołuje metody modelu, niezależnie od używanego modelu wątkowości odpowiedniego wątku.|  
 |[CComObjectThreadModel](#ccomobjectthreadmodel)|Wywołuje metody modelu, niezależnie od używanego modelu wątkowości odpowiedniego wątku.|  
 |[CContainedWindow](#ccontainedwindow)|Ta klasa jest specjalizacją **CContainedWindowT.**|  
@@ -126,7 +127,7 @@ typedef WORD ATL_URL_PORT;
 **Nagłówek:** atlutil.h
 
 ##  <a name="ccomdispatchdriver"></a>CComDispatchDriver  
- Ta klasa zarządza wskaźników interfejsów COM..  
+ Ta klasa zarządza wskaźników interfejsów COM.  
   
 ```   
 typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;   
