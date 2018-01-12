@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38c5d65e89aa4fb76ff96fa82cd52e42475e2353
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e698cad29405fce4b5a0d23e166217502753dc1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-views--mfc-data-access"></a>Widoki rekordów (dostęp do danych MFC)
 Ta sekcja dotyczy tylko dla klas MFC ODBC. Aby uzyskać informacje na temat widoków rekordów OLE DB, zobacz [coledbrecordview —](../mfc/reference/coledbrecordview-class.md) i [przy użyciu OLE DB widoków rekordów](../data/oledb/using-ole-db-record-views.md).  

@@ -14,11 +14,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a986dcea2eec183ae09eb9af275082922257ef76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: baae8c5317f1e5c9c5acf5bef26a4b79de281a3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-tracking-handle-to-a-boxed-value"></a>Śledzenie dojścia do wartości spakowanej
 Użycie śledzenie dojścia do typu wartości odwołania został zmieniony z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  
@@ -99,4 +102,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy wartości i ich zachowania (C + +/ CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
- [Porady: jawne żądanie konwersji Boxing](../dotnet/how-to-explicitly-request-boxing.md)
+ [Instrukcje: jawne żądanie konwersji boxing](../dotnet/how-to-explicitly-request-boxing.md)

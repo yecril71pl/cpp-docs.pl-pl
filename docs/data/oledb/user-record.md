@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08b0e369629bc93002ee73a31978ef8d00493f6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 587f10c14a360d2c5bbf447d13a161f985edf5b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-record"></a>Rekord użytkownika
 Rekord użytkownika zawiera struktura kodu i danych, która reprezentuje dane kolumn dla zestawu wierszy. Rekord użytkownika mogą być tworzone w czasie kompilacji lub w czasie wykonywania. Podczas tworzenia dostawcę przy użyciu ATL OLE DB Provider kreatora, Kreator tworzy domyślny rekord użytkownika, który wygląda następująco (przy założeniu, że określono nazwę dostawcy [krótką nazwę] "MyProvider"):  

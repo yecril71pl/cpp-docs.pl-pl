@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fcb5870fc1c66fed6657e342c8aea119fa727fcf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 618f09e2bd0aab553741495fd42f8b2dbca18185
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iconverttypeimplcanconvert"></a>IConvertTypeImpl::CanConvert
 Zapewnia informacje o dostępności konwersje typów polecenia lub w zestawie wierszy.  
@@ -48,4 +51,4 @@ Zapewnia informacje o dostępności konwersje typów polecenia lub w zestawie wi
  **Nagłówek:** atldb.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Iconverttypeimpl — klasa](../../data/oledb/iconverttypeimpl-class.md)
+ [IConvertTypeImpl, klasa](../../data/oledb/iconverttypeimpl-class.md)

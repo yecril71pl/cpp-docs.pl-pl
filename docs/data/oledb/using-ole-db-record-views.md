@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4e57f320c8b207e7b1c8721ab25744cd1f128bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 03e88eaafa82e346c720810bf567d867a9cd6096
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ole-db-record-views"></a>Korzystanie z widoków rekordów OLE DB
 Jeśli chcesz wyświetlać dane zestawu wierszy OLE DB w aplikacji MFC, należy użyć klasy MFC [coledbrecordview —](../../mfc/reference/coledbrecordview-class.md). Obiekt widoku rekordu utworzone na podstawie `COleDBRecordView` służy do wyświetlania rekordów bazy danych w kontrolkach MFC. Widok rekordu jest widoku Formularz okna dialogowego podłączone bezpośrednio do obiektu wierszy OLE DB utworzone na podstawie `CRowset` klasy szablonu. Uzyskiwanie dojścia do obiektu zestawu wierszy jest prosty:  
@@ -42,4 +45,4 @@ CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)   
- [Coledbrecordview — klasa](../../mfc/reference/coledbrecordview-class.md)
+ [Klasa COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)

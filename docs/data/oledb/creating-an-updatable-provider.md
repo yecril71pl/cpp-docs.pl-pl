@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9360e9446d4e42e6e6c08c97694743e14d2e0d14
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a57a54ac330e191961715440d652b9f084006b29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-updatable-provider"></a>Tworzenie aktualizowalnego dostawcy
 Visual C++ obsługuje aktualizowalni dostawcy lub dostawców, które mogą aktualizować (zapisu) magazynu danych. W tym temacie omówiono tworzenie aktualizowalnego dostawcy za pomocą szablonów OLE DB.  
@@ -124,7 +127,7 @@ Visual C++ obsługuje aktualizowalni dostawcy lub dostawców, które mogą aktua
   
      W przypadku zastosowania `IRowsetUpdateImpl`, należy ustawić następujące właściwości na dostawcy, oprócz z ustawieniem dla wszystkich właściwości `IRowsetChangeImpl` wymienionego powyżej:  
   
-    -   `DBPROP_IRowsetUpdate`.  
+    -   `DBPROP_IRowsetUpdate`.,  
   
     -   `DBPROP_OWNINSERT`: Musi być READ_ONLY i VARIANT_TRUE.  
   
@@ -136,7 +139,7 @@ Visual C++ obsługuje aktualizowalni dostawcy lub dostawców, które mogą aktua
   
     -   `DBPROP_REMOVEDELETED`: Musi być READ_ONLY i VARIANT_TRUE.  
   
-    -   `DBPROP_MAXPENDINGROWS`.  
+    -   `DBPROP_MAXPENDINGROWS`.,  
   
         > [!NOTE]
         >  Jeśli obsługuje powiadomienia, można również zainstalować niektórych także inne właściwości; zobacz sekcję dotyczącą `IRowsetNotifyCP` dla tej listy.  

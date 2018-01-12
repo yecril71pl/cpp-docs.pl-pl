@@ -34,11 +34,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8356034c9111740ccc6039514c4b8a3766089221
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6839893f0beffa13ee2c2688d465369688627ca0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cviewtableusage-cviewtableinfo"></a>CViewTableUsage, CViewTableInfo
 Call — klasa typedef **CViewTableUsage** do zaimplementowania w klasie parametru **CViewTableInfo**.  
@@ -63,4 +66,4 @@ Call — klasa typedef **CViewTableUsage** do zaimplementowania w klasie paramet
  **Nagłówek:** atldbsch.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Klasa CRestrictions](../../data/oledb/crestrictions-class.md)
+ [CRestrictions, klasa](../../data/oledb/crestrictions-class.md)

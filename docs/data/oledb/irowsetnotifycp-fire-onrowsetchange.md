@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a59f8e13a371472e8355f9fd6903ada04c09d6c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c86cf959ff2b1b9e05577823aa99da39b90222ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetnotifycpfireonrowsetchange"></a>IRowsetNotifyCP::Fire_OnRowsetChange
 Emituje [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx) zdarzenia do wszystkich obiektów nasłuchujących w punkcie połączenia **IID_IRowsetNotify** powiadomił użytkowników zmian wpływających na cały zestaw wierszy.  
@@ -48,4 +51,4 @@ Emituje [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx)
  **Nagłówek:** atldb.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Irowsetnotifycp — klasa](../../data/oledb/irowsetnotifycp-class.md)
+ [IRowsetNotifyCP, klasa](../../data/oledb/irowsetnotifycp-class.md)

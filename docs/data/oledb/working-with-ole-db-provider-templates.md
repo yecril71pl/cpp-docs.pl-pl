@@ -18,22 +18,25 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9158351892c8a8d097f0eccd498c05b2833d862
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b3411463070055a8ba1d1f37085c45bd2ed42a28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Praca z szablonami dostawców OLE DB
 Aby dowiedzieć się, jak pracować z szablonami dostawców OLE DB, zobacz następujące tematy:  
   
 -   [Dodawanie interfejsu do dostawcy](../../data/oledb/adding-an-interface-to-your-provider.md)  
   
--   [Odwołanie do właściwości w dostawcy](../../data/oledb/referencing-a-property-in-your-provider.md)  
+-   [Odwoływanie się do właściwości w dostawcy](../../data/oledb/referencing-a-property-in-your-provider.md)  
   
 -   [Ustawianie właściwości w dostawcy](../../data/oledb/setting-properties-in-your-provider.md)  
   
--   [Dynamiczne wiązanie kolumn w dostawcy](../../data/oledb/dynamically-binding-columns-in-your-provider.md)  
+-   [Dynamiczne powiązanie kolumn w dostawcy](../../data/oledb/dynamically-binding-columns-in-your-provider.md)  
   
 -   [Obsługa wolnych wątków w dostawcy](../../data/oledb/supporting-free-threading-in-your-provider.md)  
   

@@ -23,11 +23,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2fd2839c4d6ff552658024e2b75b3ddba3cf1df1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 525e89bd49a7bf67ac20a2f580241e7ff982c71b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetdelete"></a>CRowset::Delete
 Wywołania [IRowsetChange::DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx) można usunąć bieżącego wiersza z zestawu wierszy.  
@@ -47,4 +50,4 @@ HRESULT Delete( ) const throw( );
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Crowset — klasa](../../data/oledb/crowset-class.md)
+ [CRowset, klasa](../../data/oledb/crowset-class.md)

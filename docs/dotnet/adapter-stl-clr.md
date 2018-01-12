@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc5480896ed931fffdd4087eb5f39cfd8bbe67aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 347fab2782f9ff19681dbaab25b7ec86ef8721ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 Nagłówek STL/CLR `<cliext/adapter>` określa dwóch szablonów klas (`collection_adapter` i `range_adapter`), a funkcja szablonu `make_collection`.  
@@ -37,12 +40,12 @@ Nagłówek STL/CLR `<cliext/adapter>` określa dwóch szablonów klas (`collecti
   
 |Class|Opis|  
 |-----------|-----------------|  
-|[collection_adapter — (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)|Opakowuje kolekcji biblioteki klasy podstawowej (BCL) jako zakres.|  
-|[range_adapter — (STL/CLR)](../dotnet/range-adapter-stl-clr.md)|Opakowuje zakres jako kolekcja BCL.|  
+|[collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)|Opakowuje kolekcji biblioteki klasy podstawowej (BCL) jako zakres.|  
+|[range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)|Opakowuje zakres jako kolekcja BCL.|  
   
 |Funkcja|Opis|  
 |--------------|-----------------|  
-|[make_collection — (STL/CLR)](../dotnet/make-collection-stl-clr.md)|Tworzy kartą zakresu przy użyciu pary iteratora.|  
+|[make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)|Tworzy kartą zakresu przy użyciu pary iteratora.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<cliext/karty >  
@@ -50,4 +53,4 @@ Nagłówek STL/CLR `<cliext/adapter>` określa dwóch szablonów klas (`collecti
  **Namespace:** cliext  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

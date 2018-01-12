@@ -49,11 +49,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 874ca73ceae98d7603b7318b093645a0cd8104dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ae759b77aa5e95eda7334cea1357e8882667aba9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cusageprivileges-cusageprivilegeinfo"></a>CUsagePrivileges, CUsagePrivilegeInfo
 Call — klasa typedef **CUsagePrivileges** do zaimplementowania w klasie parametru **CUsagePrivilegeInfo**.  
@@ -80,4 +83,4 @@ Call — klasa typedef **CUsagePrivileges** do zaimplementowania w klasie parame
  **Nagłówek:** atldbsch.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Klasa CRestrictions](../../data/oledb/crestrictions-class.md)
+ [CRestrictions, klasa](../../data/oledb/crestrictions-class.md)
