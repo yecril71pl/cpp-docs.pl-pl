@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84540ff24938826f61c4454aa30a293ed648e8e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: db51146858db1d1f6624943aa4fc5f357f918334
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulus-stlclr"></a>modulus (STL/CLR)
 Klasa szablonu opisuje obiekt, który po wywołaniu zwraca pierwszy argument modulo drugiego. Można go użyć Określ obiekt funkcja pod względem jego typ argumentu.  
@@ -127,4 +130,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [dzieli (STL/CLR)](../dotnet/divides-stl-clr.md)   
- [Mnoży (STL/CLR)](../dotnet/multiplies-stl-clr.md)
+ [multiplies (STL/CLR)](../dotnet/multiplies-stl-clr.md)

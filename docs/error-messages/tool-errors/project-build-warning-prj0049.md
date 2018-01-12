@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a8cd0a5a30f5ae3e7c2f551c667a014f8bb85f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f87bc7e26fd7cc50defbc086594c92a3ea339ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-build-warning-prj0049"></a>Ostrzeżenie PRJ0049 dotyczące kompilacji projektu
 Przywoływany docelowego "\<odwołania >" wymaga programu .NET Framework \<MinFrameworkVersion > i nie będzie można uruchamiać na platformę docelową tego projektu  
@@ -34,4 +35,4 @@ Przywoływany docelowego "\<odwołania >" wymaga programu .NET Framework \<MinFr
     -   Usuń odwołanie do zestawu lub projekt, który ma minimalny framework w wersji, która jest nowsza niż docelową platformę. Te elementy zostaną oznaczone ikoną ostrzeżenia w projekcie **strony właściwości**.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Błędy kompilacji projektu oraz ostrzeżenia (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+ [Błędy i ostrzeżenia kompilowania projektu (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

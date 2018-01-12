@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a517362ebb4d439394197234eaa51a5aef7f5940
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2531f84974626fcdb364df67b12f27d61e75a62a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Kontrolki ActiveX MFC: dodawanie metod standardowych
 Podstawowe metody różni się od niestandardowej metody w tym został już zaimplementowany przez klasę [colecontrol —](../mfc/reference/colecontrol-class.md). Na przykład `COleControl` zawiera funkcję wstępnie zdefiniowanego elementu członkowskiego, która obsługuje metoda odświeżania dla formantu. Wpis mapy wysyłania dla tej metody akcji jest **DISP_STOCKFUNC_REFRESH**.  

@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 641ea3d50be4d739b19ea8e53424cc311016362b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26d4a0e32a8b24a72447cf4227be128659316c0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="device-contexts"></a>Konteksty urządzenia
 Kontekst urządzenia jest strukturą danych systemu Windows zawierający informacje o atrybuty rysowania urządzeniami, takimi jak ekranu lub drukarki. Wszystkie wywołania rysowania są wykonywane za pośrednictwem obiektu kontekstu urządzenia, który hermetyzuje interfejsy API systemu Windows do rysowania linii, kształty i tekst. Konteksty urządzenia zezwala na rysowanie niezależne od urządzenia w systemie Windows. Konteksty urządzenia może służyć do rysowania ekranu, drukarki lub metaplik.  
@@ -69,7 +70,7 @@ Kontekst urządzenia jest strukturą danych systemu Windows zawierający informa
   
 -   [Rysowanie w widoku](../mfc/drawing-in-a-view.md)  
   
--   [Interpretowanie danych wejściowych użytkownika za pośrednictwem widoku](../mfc/interpreting-user-input-through-a-view.md)  
+-   [Interpretowanie danych wprowadzonych przez użytkownika za pośrednictwem widoku](../mfc/interpreting-user-input-through-a-view.md)  
   
 -   [Linii i krzywych](http://msdn.microsoft.com/library/windows/desktop/dd145028)  
   

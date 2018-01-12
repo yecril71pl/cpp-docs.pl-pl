@@ -21,11 +21,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cff5256d94593959c280614858cdde8be3dee9f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fab5bb3c912aeea2598189965d424ba4508cf5c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reflection-ccli"></a>Odbicie (C++/CLI)
 Odbicie umożliwia znanych typów poddanych w czasie wykonywania. Odbicie umożliwia wyliczanie typów danych w ramach danego zestawu, a członkami danego typu klasy lub wartości, które mogą być wykrywane. Dotyczy to niezależnie od tego, czy wiadomo lub odwołuje się do kompilacji typu. Dzięki temu odbicia przydatna funkcja dla rozwoju i narzędzia do zarządzania kodem.  
@@ -38,9 +41,9 @@ Odbicie umożliwia znanych typów poddanych w czasie wykonywania. Odbicie umożl
   
  Tematy w tej sekcji:  
   
--   [Porady: implementacja architektury składnika Plug-In przy użyciu odbicia (C + +/ CLI)](../dotnet/how-to-implement-a-plug-in-component-architecture-using-reflection-cpp-cli.md)  
+-   [Instrukcje: implementacja architektury składnika plug-in przy użyciu odbicia (C++/CLI)](../dotnet/how-to-implement-a-plug-in-component-architecture-using-reflection-cpp-cli.md)  
   
--   [Porady: Wyliczanie typów danych w zestawach za pomocą odbicia (C + +/ CLI)](../dotnet/how-to-enumerate-data-types-in-assemblies-using-reflection-cpp-cli.md)  
+-   [Instrukcje: wyliczanie typów danych w zestawach za pomocą odbicia (C++/CLI)](../dotnet/how-to-enumerate-data-types-in-assemblies-using-reflection-cpp-cli.md)  
   
  Aby uzyskać więcej informacji, zobacz [System.Reflection Namespace](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)  
   
@@ -233,4 +236,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -20,14 +20,15 @@ caps.latest.revision: "54"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 306bf3d556f61035f51798ffb6167e323793b0c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Wskazówki: Aktualizowanie aplikacji bazgrołów MFC (część 1)
-W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC korzystanie ze Wstążki. Program Visual Studio obsługuje zarówno wstążki pakietu Office 2007 i Windows 7 scen wstążki. Aby uzyskać więcej informacji na temat interfejsu użytkownika wstążki, zobacz [wstążek](http://go.microsoft.com/fwlink/linkid=129233) w witrynie MSDN.  
+W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC korzystanie ze Wstążki. Program Visual Studio obsługuje zarówno wstążki pakietu Office 2007 i Windows 7 scen wstążki. Aby uzyskać więcej informacji na temat interfejsu użytkownika wstążki, zobacz [wstążek](http://go.microsoft.com/fwlink/p/?linkid=129233) w witrynie MSDN.  
   
  W tym przewodniku modyfikuje klasycznego próbka Bazgroły MFC 1.0, która pozwala na rysunkach za pomocą myszy. Ta część przewodnika pokazano, jak zmodyfikować przykładowy bazgrołów Wyświetla pasek wstążki. [Część 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) dodaje więcej przycisków na pasku wstążki.  
   

@@ -27,11 +27,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f7d59d91f82a0fa86efcae7214874e0b2ca16a12
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 720a1de11dcf4c37b4b321bb0e014a9ae4e2e459
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonundobutton-class"></a>Klasa CMFCRibbonUndoButton
 `CMFCRibbonUndoButton` Klasa implementuje przycisk listy rozwijanej, który zawiera najnowsze poleceń użytkownika. Użytkownicy mogą wybrać co najmniej jeden z najnowszych poleceń, z listy rozwijanej, aby cofnąć je albo wykonaj ponownie.  

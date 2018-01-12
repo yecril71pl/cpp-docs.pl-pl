@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47252169ab061f2318cd5a664920bdfffc44fd1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9fa2236702b47b214ea076305e0e6a1c03ce778
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-runtime-best-practices"></a>Współbieżność środowiska wykonawczego — Najlepsze praktyki
 W tej sekcji opisano najważniejsze wskazówki, które ułatwiają efektywne wykorzystanie współbieżności środowiska wykonawczego. Następujące najlepsze rozwiązania dotyczą [Biblioteka równoległych wzorców](../../parallel/concrt/parallel-patterns-library-ppl.md) (PLL), [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)i [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
@@ -31,17 +32,17 @@ W tej sekcji opisano najważniejsze wskazówki, które ułatwiają efektywne wyk
  [Biblioteka wzorów równoległych — najlepsze praktyki](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)  
  Opis najlepszych rozwiązań, które należy wykonać, korzystając z Biblioteka równoległych wzorców (PLL).  
   
- [Biblioteki agentów asynchronicznych — najlepsze praktyki](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)  
+ [Biblioteka agentów asynchronicznych — najlepsze praktyki](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)  
  Opis najlepszych rozwiązań, które należy wykonać, korzystając z biblioteki agentów asynchronicznych.  
   
- [Najlepsze praktyki ogólne współbieżności środowiska wykonawczego](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)  
+ [Środowisko uruchomieniowe współbieżności — najlepsze praktyki ogólne](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)  
  Opis najlepszych rozwiązań, które są stosowane do wielu obszarów współbieżności środowiska wykonawczego.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)  
+ [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)  
  Wprowadza współbieżność środowiska wykonawczego, ramy współbieżności dla języka C++.  
   
- [Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
+ [Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
  Informacje dotyczące używania różnych równoległych wzorców, na przykład algorytmy równoległe w aplikacji.  
   
  [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)  

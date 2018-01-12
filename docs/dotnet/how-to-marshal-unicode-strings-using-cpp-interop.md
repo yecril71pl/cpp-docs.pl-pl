@@ -19,11 +19,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80cfc5f13a09eaed93c894e277e870895c812b24
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9226eaf035cee7614f2d072a5e2493c067012c2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Porady: przeprowadzanie marshalingu ciągów Unicode za pomocą międzyoperacyjności języka C++
 W tym temacie przedstawiono jeden aspekt współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
@@ -32,9 +35,9 @@ W tym temacie przedstawiono jeden aspekt współdziałania Visual C++. Aby uzysk
   
  W tym temacie przedstawiono, jak można ciągów Unicode przekazany z zarządzanego do funkcji niezarządzanej i na odwrót. Do współpracy z innych typów parametrów, zobacz następujące tematy:  
   
--   [Porady: kierowanie ciągów ANSI za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
+-   [Instrukcje: przeprowadzanie marshalingu ciągów ANSI za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
--   [Porady: kierowanie ciągów COM za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
+-   [Instrukcje: przeprowadzanie marshalingu ciągów COM za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
   
 ## <a name="example"></a>Przykład  
  Aby przekazać do funkcji niezarządzanej ciągu Unicode z zarządzanego, funkcja PtrToStringChars (deklaracja w Vcclr.h) może służyć do dostępu w pamięci przechowywania zarządzanych ciągu. Ponieważ ten adres zostanie przekazany do funkcji macierzystej, jest ważne, przypięty pamięć z [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) aby zapobiec przeniesieniu danych string, należy cykl zbierania odzyskiwanie została wykonana podczas wykonuje funkcji niezarządzanej.  
@@ -102,4 +105,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+ [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

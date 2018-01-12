@@ -18,11 +18,12 @@ caps.latest.revision: "63"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 723410eb8b634e3e01c26b505e619eed7fc371d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64bd526bfd72c16cc993d3992c179f107a35fbd8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Wskazówki: kompilowanie natywnego programu C++ na wiersz polecenia
 Visual C++ obejmuje wiersza polecenia kompilatora C++, używanej do tworzenia wszystko z aplikacji konsoli podstawowe aplikacji uniwersalnych systemu Windows, aplikacje ze Sklepu Windows i składniki platformy .NET.  
@@ -36,7 +37,7 @@ Visual C++ obejmuje wiersza polecenia kompilatora C++, używanej do tworzenia ws
   
  Program Visual Studio jest wydajne zintegrowane środowisko projektowe obsługującego edytorze kompletne, menedżerowie zasobów, debugery i kompilatory dla wielu języków i platform. Aby uzyskać informacje o tych funkcjach i jak pobrać i zainstalować program Visual Studio, w tym bezpłatna wersja programu Visual Studio Community, zobacz [VisualStudio.com](https://www.visualstudio.com/).  
   
- Visual Studio Tools kompilacji instaluje tylko kompilatory w wierszu polecenia, narzędzia i biblioteki należy utworzyć programów C i C++. Doskonale w laboratoriach kompilacji lub klasą wykonuje i instaluje stosunkowo szybko. Aby zainstalować tylko narzędzia wiersza polecenia, Pobierz [programu Visual Studio Tools kompilacji](https://go.microsoft.com/fwlink/?linkid=840931) i uruchom Instalatora. Aby uzyskać więcej informacji, zobacz [Visual C++ Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+ Visual Studio Tools kompilacji instaluje tylko kompilatory w wierszu polecenia, narzędzia i biblioteki należy utworzyć programów C i C++. Doskonale w laboratoriach kompilacji lub klasą wykonuje i instaluje stosunkowo szybko. Aby zainstalować tylko narzędzia wiersza polecenia, Pobierz [programu Visual Studio Tools kompilacji](https://go.microsoft.com/fwlink/p/?linkid=840931) i uruchom Instalatora. Aby uzyskać więcej informacji, zobacz [Visual C++ Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
   
  Przed dokonaniem kompilacji programu C lub C++ w wierszu polecenia, należy sprawdzić, czy są zainstalowane narzędzia i czy użytkownik może uzyskiwać do nich dostęp z poziomu wiersza polecenia. Visual C++ ma złożonych wymagań dotyczących środowiska wiersza polecenia, aby odnaleźć narzędzia nagłówków i bibliotek, które są używane. **Nie można użyć programu Visual C++ w oknie wiersza polecenia zwykły**. Na szczęście Visual C++ instaluje skróty klawiaturowe do uruchamiania wiersza polecenia dewelopera ma środowisko dla kompilacji wiersza polecenia. Niestety nazwy skrótów wiersza polecenia dewelopera i gdzie znajdują się różnią się w praktycznie każdej wersji programu Visual C++ i w różnych wersjach systemu Windows. Pierwsze zadanie wskazówki jest znajdowania właściwy do użycia.  
   

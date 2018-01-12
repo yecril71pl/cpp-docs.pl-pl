@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6685edbe2e6e4805cadb38ada55624eaec2a7ce8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9b407bc469a345706f99cf5bad578f678e652a4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="private-virtual-functions"></a>Prywatne funkcje wirtualne
 Prywatne funkcje wirtualne są obsługiwane w klasach pochodnych sposób zmienił się z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  
@@ -60,5 +63,5 @@ public:
  Należy pamiętać, że brak jawnych `virtual` — słowo kluczowe w klasie podstawowej, w obszarze nowej składni generuje ostrzeżenie.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Deklaracje członków w obrębie klasy lub interfejsu (C + +/ CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [Deklaracje składowych w obrębie klasy lub interfejsu (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  

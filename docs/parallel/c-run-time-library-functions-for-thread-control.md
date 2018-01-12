@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f9691a4edcbf617be415ba8d48d80938cba4979
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49d3d9029f85a8a80da6a7cd38bb26b887223d35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funkcje biblioteki czasu wykonywania języka C do sterowania wątkami
 Wszystkie programy Win32 ma co najmniej jeden wątek. Którymkolwiek wątku można utworzyć dodatkowe wątki. Wątek można szybko wykonać pracę i następnie zakończyć lub mogą pozostać aktywne przez cały okres istnienia program.  
@@ -51,4 +52,4 @@ Wszystkie programy Win32 ma co najmniej jeden wątek. Którymkolwiek wątku moż
  [_Endthread —](../c-runtime-library/reference/endthread-endthreadex.md) funkcja kończy utworzone przez wątek `_beginthread` (i podobnie `_endthreadex` kończy utworzone przez wątek `_beginthreadex`). Wątki przerwanie automatycznie po zakończeniu. `_endthread`i `_endthreadex` są przydatne w przypadku warunkowego zakończenia od w wątku. Na przykład wątku dedykowane do obsługi komunikacji przetwarzania, można Zamknij, jeśli nie może uzyskać kontrolę nad port komunikacyjny.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z C i Win32](../parallel/multithreading-with-c-and-win32.md)
+ [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)

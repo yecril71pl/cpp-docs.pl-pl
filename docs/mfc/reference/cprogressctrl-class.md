@@ -53,11 +53,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff7011c9a12acf54fbc7de561409f5f0278d90c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7def2d1a6b421259a2b0d5e8229165ea0593874
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprogressctrl-class"></a>Cprogressctrl — klasa
 Udostępnia funkcje formantu paska postępu wspólnej systemu Windows.  
@@ -535,6 +536,6 @@ int StepIt();
 ## <a name="see-also"></a>Zobacz też  
  [CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)   
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 550fbc2e8058c5cca7dd21c23ae37c23efba014e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b848cf1a839940925222a50ce016ba91da4d371d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-classes"></a>Klasy wyjątków
 Biblioteka klas udostępnia mechanizm obsługi wyjątków, na podstawie klasy `CException`. Struktura aplikacji używa wyjątków w jego kod; można także używać ich w należy do Ciebie. Aby uzyskać więcej informacji, zobacz artykuł [wyjątki](../mfc/exception-handling-in-mfc.md). Mogą pochodzić własnych typów wyjątków z `CException`.  

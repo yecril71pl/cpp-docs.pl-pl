@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48eed1a72649d1f43bd86e6049d39dfe075c8b6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: acb4ed52982f7ab23dac044eeacf315f45aa1232
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Używanie listy obrazów z formantem paska pomocniczego
 Każdej grupy paska pomocniczego może zawierać między innymi obraz z listy skojarzony obraz. Poniższa procedura zawiera szczegóły dotyczące czynności niezbędnych do wyświetlania obrazu w paśmie paska pomocniczego.  
@@ -45,5 +46,5 @@ Każdej grupy paska pomocniczego może zawierać między innymi obraz z listy sk
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a07e596531957294be304efb6a95cc05ce75aec4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4708d45defe151b85ad132621838f1648aebc457
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Alfabetyczną listę funkcje wewnętrzne
 W poniższych sekcjach opisano specyficzne dla firmy Microsoft wewnętrznej funkcji dostępnych w niektórych lub wszystkich architektury. Inne obsługiwane funkcje wewnętrzne są udokumentowane przez producentów procesora, w plikach nagłówka lub w swoich witrynach internetowych. Zobacz [funkcje wewnętrzne ARM](../intrinsics/arm-intrinsics.md), [x86 funkcje wewnętrzne](../intrinsics/x86-intrinsics-list.md), i [x64 funkcje wewnętrzne](../intrinsics/x64-amd64-intrinsics-list.md) sekcje łączy się z dokumentacją producenta. C funkcje biblioteki czasu wykonywania (CRT), które mają zaimplementowany dla nich funkcje wewnętrzne nie opisano w tym miejscu; te funkcje są udokumentowane w artykule [odwołanie do biblioteki C Run-Time](../c-runtime-library/c-run-time-library-reference.md).  
@@ -54,7 +55,7 @@ W poniższych sekcjach opisano specyficzne dla firmy Microsoft wewnętrznej funk
   
  [__emul, \__emulu](../intrinsics/emul-emulu.md)  
   
- [_włącz](../intrinsics/enable.md)  
+ [_enable](../intrinsics/enable.md)  
   
  [__fastfail](../intrinsics/fastfail.md)  
   
@@ -78,7 +79,7 @@ W poniższych sekcjach opisano specyficzne dla firmy Microsoft wewnętrznej funk
   
  [__int2c](../intrinsics/int2c.md)  
   
- [_InterlockedAdd — funkcje](../intrinsics/interlockedadd-intrinsic-functions.md)  
+ [Funkcje wewnętrzne _InterlockedAdd](../intrinsics/interlockedadd-intrinsic-functions.md)  
   
  [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)  
   
@@ -98,7 +99,7 @@ W poniższych sekcjach opisano specyficzne dla firmy Microsoft wewnętrznej funk
   
  [Funkcje wewnętrzne _InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)  
   
- [_InterlockedExchangeAdd — funkcje](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)  
+ [Funkcje wewnętrzne _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)  
   
  [Funkcje wewnętrzne _InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)  
   

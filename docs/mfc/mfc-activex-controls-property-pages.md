@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3dd62127d5fb09675d6c91963d85dd6ae7f44f35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dde35df301c34a6c3a29c48d5ad145681b64a72e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Kontrolki ActiveX MFC: strony właściwości
 Strony właściwości umożliwiają użytkownikowi formantu ActiveX wyświetlanie i zmiana właściwości formantu ActiveX. Te właściwości są dostępne przez okno dialogowe właściwości formantu, który zawiera jeden lub więcej stron właściwości, które zapewniają dostosowany interfejs graficzny służący do wyświetlania i edytowania właściwości formantu.  
@@ -51,9 +52,9 @@ Okno dialogowe właściwości
   
  Aby uzyskać więcej informacji na używanie stron właściwości formantu ActiveX zobacz następujące artykuły:  
   
--   [Formanty ActiveX MFC: Dodawanie dodatkowej niestandardowej strony właściwości](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
+-   [Kontrolki ActiveX MFC: dodawanie dodatkowej niestandardowej strony właściwości](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
--   [Formanty MFC ActiveX: Używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
+-   [Kontrolki ActiveX MFC: używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
  Informacje na używanie arkuszy właściwości w aplikacji MFC niż formantu ActiveX, zobacz [arkusze właściwości](../mfc/property-sheets-mfc.md).  
   
@@ -121,4 +122,4 @@ Okno dialogowe właściwości
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [COlePropertyPage — klasa](../mfc/reference/colepropertypage-class.md)
+ [Klasa COlePropertyPage](../mfc/reference/colepropertypage-class.md)

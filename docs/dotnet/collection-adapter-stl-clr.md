@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79dbc2ff2e47e7aa277a2176dbd8605c5a78c749
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4a1a03dd6ecc52cd3921428e681fe5affa11d275
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
 Opakowuje kolekcji .NET do użycia jako kontenera STL/CLR. A `collection_adapter` to klasa szablonu, który opisuje prostego obiektu kontenera STL/CLR. Opakowuje interfejsu biblioteki klasy podstawowej (BCL) i zwraca pary iteratora używanej do manipulowania kontrolowanej sekwencji.  
@@ -82,14 +85,14 @@ template<typename Key,
 |[collection_adapter::iterator (STL/CLR)](../dotnet/collection-adapter-iterator-stl-clr.md)|Typ iteratora dla kontrolowanej sekwencji.|  
 |[collection_adapter::key_type (STL/CLR)](../dotnet/collection-adapter-key-type-stl-clr.md)|Typ klucza słownika.|  
 |[collection_adapter::mapped_type (STL/CLR)](../dotnet/collection-adapter-mapped-type-stl-clr.md)|Typ wartości słownika.|  
-|[collection_adapter::Reference (STL/CLR)](../dotnet/collection-adapter-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[collection_adapter::reference (STL/CLR)](../dotnet/collection-adapter-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[collection_adapter::size_type (STL/CLR)](../dotnet/collection-adapter-size-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
 |[collection_adapter::value_type (STL/CLR)](../dotnet/collection-adapter-value-type-stl-clr.md)|Typ elementu.|  
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[collection_adapter::Base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)|Określa interfejs BCL opakowana.|  
-|[collection_adapter::BEGIN (STL/CLR)](../dotnet/collection-adapter-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)|Określa interfejs BCL opakowana.|  
+|[collection_adapter::begin (STL/CLR)](../dotnet/collection-adapter-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
 |[collection_adapter::collection_adapter (STL/CLR)](../dotnet/collection-adapter-collection-adapter-stl-clr.md)|Tworzy obiekt karty.|  
 |[collection_adapter::end (STL/CLR)](../dotnet/collection-adapter-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
 |[collection_adapter::size (STL/CLR)](../dotnet/collection-adapter-size-stl-clr.md)|Liczy liczbę elementów.|  
@@ -97,7 +100,7 @@ template<typename Key,
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[collection_adapter::operator = (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)|Zastępuje przechowywanych dojście BCL.|  
+|[collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)|Zastępuje przechowywanych dojście BCL.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ta klasa szablon służy do manipulowania kontener BCL jako kontenera STL/CLR. `collection_adapter` Przechowuje dojście do interfejsu BCL, który z kolei kontroluje sekwencję elementów. A `collection_adapter` obiektu `X` zwraca parę wejściowych Iteratory `X.begin()` i `X.end()` umożliwia odwiedź elementów, w kolejności. Niektóre specjalizacji pozwalają również zapisu `X.size()` do określania długości kontrolowanej sekwencji.  
@@ -109,4 +112,4 @@ template<typename Key,
   
 ## <a name="see-also"></a>Zobacz też  
  [range_adapter — (STL/CLR)](../dotnet/range-adapter-stl-clr.md)   
- [make_collection — (STL/CLR)](../dotnet/make-collection-stl-clr.md)
+ [make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)

@@ -33,11 +33,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ba1751a62feb417902c56880289011353b184e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fab339300de907169ab7f4471d9892feadffad81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Klasa CMFCRibbonFontComboBox
 Implementuje pola kombi, który zawiera listę czcionek. Umieszcza pole kombi na panelu wstążki.  

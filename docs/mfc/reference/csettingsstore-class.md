@@ -33,11 +33,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d30a06cc420b5e9f00f0340e92295ca629ad6fee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csettingsstore-class"></a>Klasa CSettingsStore
 Opakowuje funkcje interfejsu API systemu Windows, zapewniając zorientowane obiektowo interfejs, który umożliwia uzyskiwanie dostępu do rejestru.  
@@ -128,7 +129,7 @@ CSettingsStore(
  Parametrów typu Boolean określającą czy `CSettingsStore` obiekt jest tworzony w trybie tylko do odczytu.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bAdmin` ustawiono `false`, `m_hKey` ustawiono zmiennej członkowskiej `HKEY_LOCAL_MACHINE`. Jeśli ustawisz `bAdmin` do `true`, `m_hKey` ma ustawioną wartość `HKEY_CURRENT_USER`.  
+ Jeśli `bAdmin` ustawiono `true`, `m_hKey` ustawiono zmiennej członkowskiej `HKEY_LOCAL_MACHINE`. Jeśli ustawisz `bAdmin` do `false`, `m_hKey` ma ustawioną wartość `HKEY_CURRENT_USER`.  
   
  Zabezpieczenia dostępu jest zależna od `bReadOnly` parametru. Jeśli `bReadonly` jest `false`, zabezpieczenia dostępu zostaną ustawione na `KEY_ALL_ACCESS`. Jeśli `bReadyOnly` jest `true`, zabezpieczenia dostępu zostaną ustawione na kombinacji `KEY_QUERY_VALUE, KEY_NOTIFY` i `KEY_ENUMERATE_SUB_KEYS`. Aby uzyskać więcej informacji o dostępie wraz z rejestru, zobacz [zabezpieczeń klucza rejestru i prawa dostępu](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
   

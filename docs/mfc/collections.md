@@ -28,11 +28,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 88afc0f7ae61dcf822a84c514fbc98da2bf827c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e980f3f8fe86b621cb1494b08aec3fcdcb49f54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collections"></a>Kolekcje
 Microsoft Foundation Class Library zawiera klasy kolekcji do zarządzania grupami obiektów. Te klasy istnieją dwa typy:  
@@ -104,7 +105,7 @@ Microsoft Foundation Class Library zawiera klasy kolekcji do zarządzania grupam
   
 -   [Zalecenia dotyczące wybierania klasy kolekcji](../mfc/recommendations-for-choosing-a-collection-class.md)  
   
--   [Porady: tworzenie bezpiecznej kolekcji](../mfc/how-to-make-a-type-safe-collection.md)  
+-   [Instrukcje: tworzenie bezpiecznej kolekcji](../mfc/how-to-make-a-type-safe-collection.md)  
   
 -   [Tworzenie kolekcji stosów i kolejek](../mfc/creating-stack-and-queue-collections.md)  
   
@@ -116,7 +117,7 @@ Microsoft Foundation Class Library zawiera klasy kolekcji do zarządzania grupam
   
 #### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Uzyskiwanie dostępu do elementów członkowskich kolekcji (na podstawie szablonu lub nie)  
   
--   [Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji](../mfc/accessing-all-members-of-a-collection.md)  
+-   [Uzyskiwanie dostępu do wszystkich składowych kolekcji](../mfc/accessing-all-members-of-a-collection.md)  
   
 -   [Usuwanie wszystkich obiektów z kolekcji CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
   

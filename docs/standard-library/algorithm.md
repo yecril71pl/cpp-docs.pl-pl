@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65cb348e19031965d70175d73ed8df94692f9db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cd9ac613dd788b116e648e2b1fd612aa07abcab
+ms.sourcegitcommit: 669f45f11b98b71b8a0e6808c0fe0cdf17484089
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="ltalgorithmgt"></a>&lt;Algorytm&gt;
 Definiuje standardowa biblioteka C++ kontenera szablonu funkcji, wykonujących algorytmów.  
@@ -44,7 +45,7 @@ Definiuje standardowa biblioteka C++ kontenera szablonu funkcji, wykonujących a
   
 -   Przyrostek _copy oznacza, że algorytm nie tylko manipuluje wartościami elementów, ale również kopiuje zmodyfikowane wartości do zakresu docelowego. `reverse` Algorytm Odwraca kolejność elementów w zakresie, a `reverse_copy` algorytm kopiuje wynik do zakresu docelowego.  
   
- Algorytmy standardowa biblioteka C++ często są klasyfikowane w grupach, które wskazują coś o ich przeznaczenia lub wymagań. Obejmują one modyfikowanie algorytmów zmienić wartości elementów w porównaniu z systemem innym niż modyfikowanie algorytmy, które nie. Algorytmy mutujące zmieniają kolejność elementów, ale nie ich wartości. Algorytmy usuwające mogą wyeliminować elementy z zakresu lub kopii zakresu. Algorytmy sortujące zmieniają kolejność elementów w zakresie na różne sposoby, a algorytmy sortowanego zakresu działają jedynie na algorytmach, których elementy zostały posortowane w określony sposób.  
+ Algorytmy standardowa biblioteka C++ często są klasyfikowane w grupach, które wskazują coś o ich przeznaczenia lub wymagań. Obejmują one modyfikowanie algorytmów zmienić wartości elementów w porównaniu z systemem innym niż modyfikowanie algorytmy, które nie. Algorytmy mutujące zmieniają kolejność elementów, ale nie ich wartości. Algorytmy usuwające mogą wyeliminować elementy z zakresu lub kopii zakresu. Sortowanie algorytmów zmiany kolejności elementów w zakresie na różne sposoby i algorytmy posortowane zakres tylko działania zakresów, której elementy są posortowane w określony sposób.  
   
  Standardowa biblioteka C++ algorytmy liczbowych, używane do przetwarzania numeryczny mają własne pliku nagłówka [ \<liczbowych >](../standard-library/numeric.md), a obiekty funkcji i adapterów są definiowane w nagłówku [ \<funkcjonalności >](../standard-library/functional.md) obiekty funkcji, które zwracają wartości logiczne są określane jako predykatów. Predykat binarne domyślny jest porównanie `operator<`. Ogólnie rzecz biorąc, szeregowane elementy muszą być mniej niż porównywalne, tak aby, mając dowolne dwa elementy, można było określić, czy są one równoważne (w sensie, żaden nie jest mniejszy niż ten drugi), czy że jeden jest mniejszy od drugiego. Skutkuje to ustaleniem kolejności elementów nierównoważnych.  
   
@@ -108,7 +109,7 @@ Definiuje standardowa biblioteka C++ kontenera szablonu funkcji, wykonujących a
 |[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)|Zmienia kolejność elementów w zakresie, tak że oryginalna kolejność jest zastąpiona przez leksykograficznie kolejną większą permutację, o ile takowa istnieje, gdzie sens „kolejna” może być określony przez predykat binarny.|  
 |[push_heap —](../standard-library/algorithm-functions.md#push_heap)|Dodaje element znajdujący się na końcu zakresu do istniejącej sterty, która składa się z poprzednich elementów w zakresie.|  
 |[random_shuffle —](../standard-library/algorithm-functions.md#random_shuffle)|Rozmieszcza sekwencji *N* elementy w zakresie do jednego z *N*! możliwości ustalenia losowo wybrany.|  
-|[Usuń](../standard-library/algorithm-functions.md#remove)|Eliminuje określoną wartość z danego zakresu bez zakłócania kolejności pozostałych elementów i zwracania końca nowego zakresu wolnego od określonej wartości.|  
+|[remove](../standard-library/algorithm-functions.md#remove)|Eliminuje określoną wartość z danego zakresu bez zakłócania kolejności pozostałych elementów i zwracania końca nowego zakresu wolnego od określonej wartości.|  
 |[remove_copy](../standard-library/algorithm-functions.md#remove_copy)|Kopiuje elementy z zakresu źródłowego do zakresu docelowego, z tym wyjątkiem, że elementy o określonej wartości nie są kopiowane, bez naruszania kolejności pozostałych elementów i zwracania końca nowego zakresu docelowego.|  
 |[remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if)|Kopiuje elementy z zakresu źródłowego do zakresu docelowego, z tym wyjątkiem, że elementy spełniające predykat nie są kopiowane, bez naruszania kolejności pozostałych elementów i zwracania końca nowego zakresu docelowego.|  
 |[remove_if](../standard-library/algorithm-functions.md#remove_if)|Eliminuje elementy, które spełniają predykat, z danego zakresu bez zakłócania kolejności pozostałych elementów i zwracania końca nowego zakresu wolnego od określonej wartości.|  
@@ -141,7 +142,7 @@ Definiuje standardowa biblioteka C++ kontenera szablonu funkcji, wykonujących a
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

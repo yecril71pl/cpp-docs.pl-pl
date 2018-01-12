@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 541425a073b4d179a20a33646844723d655f8160
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4c095c643f54ee81124a736b0eaa65628cbd23ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makra i funkcje globalne dla szablonów konsumentów OLE DB
 Szablony OLE DB klienta obejmują następujące makra i funkcje globalne:  
@@ -36,8 +39,8 @@ Szablony OLE DB klienta obejmują następujące makra i funkcje globalne:
   
 |||  
 |-|-|  
-|[BEGIN_ACCESSOR —](../../data/oledb/begin-accessor.md)|Oznacza początek wpis dostępu.|  
-|[BEGIN_ACCESSOR_MAP —](../../data/oledb/begin-accessor-map.md)|Oznacza początek wpisów map metody dostępu.|  
+|[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)|Oznacza początek wpis dostępu.|  
+|[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)|Oznacza początek wpisów map metody dostępu.|  
 |[END_ACCESSOR](../../data/oledb/end-accessor.md)|Oznacza koniec wpis dostępu.|  
 |[END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)|Oznacza koniec wpisów map metody dostępu.|  
   
@@ -55,7 +58,7 @@ Szablony OLE DB klienta obejmują następujące makra i funkcje globalne:
 |[BLOB_NAME_LENGTH_STATUS](../../data/oledb/blob-name-length-status.md)|Raporty długość i stan kolumny danych obiektów BLOB.|  
 |[BLOB_NAME_STATUS](../../data/oledb/blob-name-status.md)|Informuje o stanie kolumny danych obiektów BLOB.|  
 |[BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)|Reprezentuje wpisem zakładek w zestawie wierszy. Wpis zakładki jest specjalnym rodzajem wpis w kolumnie.|  
-|[COLUMN_ENTRY —](../../data/oledb/column-entry.md)|Reprezentuje powiązanie do określonej kolumny w bazie danych.|  
+|[COLUMN_ENTRY](../../data/oledb/column-entry.md)|Reprezentuje powiązanie do określonej kolumny w bazie danych.|  
 |[COLUMN_ENTRY_EX](../../data/oledb/column-entry-ex.md)|Reprezentuje powiązanie do określonej kolumny w bazie danych. Obsługuje `type`, *długość*, *dokładności*, `scale`, i *stan* parametrów.|  
 |[COLUMN_ENTRY_LENGTH](../../data/oledb/column-entry-length.md)|Reprezentuje powiązanie do określonej kolumny w bazie danych. Obsługuje *długość* zmiennej.|  
 |[COLUMN_ENTRY_LENGTH_STATUS](../../data/oledb/column-entry-length-status.md)|Reprezentuje powiązanie do określonej kolumny w bazie danych. Obsługuje *stan* i *długość* parametrów.|  
@@ -99,4 +102,4 @@ Szablony OLE DB klienta obejmują następujące makra i funkcje globalne:
 ## <a name="see-also"></a>Zobacz też  
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Dokumentacja szablonów konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

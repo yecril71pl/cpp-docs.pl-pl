@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e682435989c520b5212b412741e1f3549b4b7852
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1fcee2cff1867fc57cc15914c304cd121954d9b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-predefined-symbols"></a>Wstępnie zdefiniowane symbole MFC
 Projekty MFC, zawsze należy uwzględniać kilka pliki nagłówkowe, które obsługują system windows. Są one dodawane za pośrednictwem # instrukcji include w pliku StdAfx.h:  
@@ -221,4 +224,4 @@ Projekty MFC, zawsze należy uwzględniać kilka pliki nagłówkowe, które obs�
   
 ## <a name="see-also"></a>Zobacz też  
  [Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)   
- [Symbole: Identyfikatory zasobów](../windows/symbols-resource-identifiers.md)
+ [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)

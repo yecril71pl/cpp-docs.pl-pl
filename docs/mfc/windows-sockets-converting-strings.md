@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b0b66cb83dc13f74e5417cab7f8cec0fe65b73a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f87d200ca6c5b0b1edb003636e5f8c33570da50d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows Sockets: konwertowanie ciągów
 W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowaniu Windows Sockets. W tym artykule omówiono Konwertowanie ciągów. Inne problemy zostały omówione w [Windows Sockets: Blokowanie](../mfc/windows-sockets-blocking.md) i [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md).  
@@ -33,16 +34,16 @@ W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowani
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets: tła](../mfc/windows-sockets-background.md)  
+-   [Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)  
   
--   [Windows Sockets: Gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)  
+-   [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows Sockets: Gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)
+ [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
 

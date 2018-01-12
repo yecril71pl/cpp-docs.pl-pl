@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 757ab7a6d2c8b846a51da359c4b8dc5a72c6e9e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: db6c31df932890799f68e2ae466b0a927f0f999f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-c"></a>version (C++)
 Identyfikuje określoną wersją wśród wielu wersji klasy.  
@@ -53,7 +56,7 @@ Identyfikuje określoną wersją wśród wielu wersji klasy.
 |-|-|  
 |**Dotyczy**|**Klasa**,`struct`|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**Klasa coclass**|  
+|**Wymaganych atrybutów**|**coclass**|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
  Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  

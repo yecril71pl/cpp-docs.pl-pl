@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0152afbafe7c4756bebd87f931b9a6b6f4e31269
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63f8b8f735b62c1cbfedd50320bf65cec5905632
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: wyprowadzanie z klas gniazd
 W tym artykule opisano niektóre funkcje, które można uzyskać przez wyprowadzanie własne klasy z jednej z klas gniazd.  
@@ -36,16 +37,16 @@ W tym artykule opisano niektóre funkcje, które można uzyskać przez wyprowadz
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: blokowanie](../mfc/windows-sockets-blocking.md)  
+-   [Gniazda systemu Windows: blokowanie](../mfc/windows-sockets-blocking.md)  
   
--   [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)  
+-   [Gniazda systemu Windows: określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)  
   
--   [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)  
+-   [Gniazda systemu Windows: konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)
+ [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
 

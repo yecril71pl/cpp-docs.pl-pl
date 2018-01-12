@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43d8cf7ae406f2d29a381f765686e6537243de3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 747f5d55821c6911e80087ebbad65b2169e6fc49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="slider-control-styles"></a>Style formantu suwaka
 Formanty suwaka ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) może mieć orientacji pionowej lub poziomej. Mogą oni mieć znaczniki osi po obu stronach obu stronach lub nie. One mogą służyć do określania zakresu kolejnych wartości. Te właściwości są określane za pomocą style formantu suwaka, które można określić podczas tworzenia suwaka.  
@@ -39,5 +40,5 @@ Formanty suwaka ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) może mie
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

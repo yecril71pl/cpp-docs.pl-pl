@@ -25,11 +25,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d90e9898d830dd9468e51ca615f5d25417ed2f01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc3c391c624351b2835e1ec497d78bc191eb1fe7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmultilock-class"></a>Klasa CMultiLock
 Reprezentuje mechanizm kontroli dostępu, używany w kontrolowania dostępu do zasobów w programie wielowątkowych.  
@@ -182,7 +183,7 @@ BOOL Unlock(
  Pierwszy formę `Unlock` podejmuje próbę odblokowania obiektu synchronizacji zarządzanego przez `CMultiLock`. Drugiej formy `Unlock` podejmuje próbę odblokowania `CSemaphore` obiektów należących do `CMultiLock`. Jeśli `CMultiLock` nie ma żadnego zablokowanym `CSemaphore` obiektu, funkcja zwraca **FALSE**; w przeciwnym razie zwraca **TRUE**. `lCount`i `lpPrevCount` są dokładnie takie same jak parametry [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). Drugiej formy `Unlock` rzadko dotyczy sytuacji multilock.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

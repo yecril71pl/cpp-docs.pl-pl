@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 967ab7a95ba2f3f0b617db7f88eabf00b48efcd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 134605f86ef8019d34f5246fd75abbbf94d40fbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Ograniczniki tagów dokumentacji Visual C++
 Korzystanie z tagów dokumentacji wymaga ograniczników, które wskazują w kompilatorze, gdzie komentarzy dokumentacji rozpoczęcia i zakończenia.  
@@ -78,4 +79,4 @@ Korzystanie z tagów dokumentacji wymaga ograniczników, które wskazują w komp
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Plik dokumentacji XML](../ide/xml-documentation-visual-cpp.md)
+ [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

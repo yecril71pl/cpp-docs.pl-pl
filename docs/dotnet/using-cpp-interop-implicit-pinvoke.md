@@ -31,11 +31,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f400ed3e93af8f7e0727d3fe378d0ac471bd18f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3a5f6b6cd68906753bc4f9a5fbc1d9e00bad02f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)
 W przeciwieństwie do innych języków .NET, Visual C++ obsługuje współdziałania umożliwiający zarządzane i niezarządzane kod, mogą znajdować się w tej samej aplikacji, a nawet w tym samym pliku (z [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) pragm). Dzięki temu Visual C++ deweloperom zintegrowanie funkcji .NET do istniejących aplikacji Visual C++, bez zakłócania pozostałej części aplikacji.  
@@ -91,55 +94,55 @@ Done
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Porady: kierowanie ciągów ANSI za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
+-   [Instrukcje: przeprowadzanie marshalingu ciągów ANSI za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
--   [Porady: kierowanie ciągów Unicode za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [Instrukcje: przeprowadzanie marshalingu ciągów Unicode za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [Porady: kierowanie ciągów COM za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
+-   [Instrukcje: przeprowadzanie marshalingu ciągów COM za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
   
--   [Porady: kierowanie struktur za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-structures-using-cpp-interop.md)  
+-   [Instrukcje: przeprowadzanie marshalingu struktur za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-structures-using-cpp-interop.md)  
   
--   [Porady: kierowanie tablic za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)  
+-   [Instrukcje: przeprowadzanie marshalingu tablic za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)  
   
--   [Porady: kierowanie wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
+-   [Instrukcje: przeprowadzanie marshalingu wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
   
--   [Porady: kierowanie wskaźników osadzonych za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)  
+-   [Instrukcje: przeprowadzanie marshalingu wskaźników osadzonych za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)  
   
--   [Porady: dostęp do znaków w obiekcie System::String](../dotnet/how-to-access-characters-in-a-system-string.md)  
+-   [Instrukcje: dostęp do znaków w obiekcie System::String](../dotnet/how-to-access-characters-in-a-system-string.md)  
   
--   [Porady: konwertowanie char * ciąg na tablicę System::Byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)  
+-   [Instrukcje: konwertowanie ciągu char * na tablicę System::Byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)  
   
 -   [Porady: konwertowanie obiektu System::String na wchar_t * lub char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)  
   
--   [Porady: konwertowanie obiektu System::String na ciąg standardowy](../dotnet/how-to-convert-system-string-to-standard-string.md)  
+-   [Instrukcje: konwertowanie obiektu System::String na ciąg standardowy](../dotnet/how-to-convert-system-string-to-standard-string.md)  
   
--   [Porady: konwertowanie ciągu standardowego na obiekt System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)  
+-   [Instrukcje: konwertowanie ciągu standardowego na obiekt System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)  
   
--   [Porady: uzyskiwanie wskaźnika do tablicy typu Byte](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)  
+-   [Instrukcje: uzyskiwanie wskaźnika do tablicy typu Byte](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)  
   
--   [Porady: ładowanie zasobów niezarządzanych do tablicy typu Byte](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)  
+-   [Instrukcje: ładowanie zasobów niezarządzanych do tablicy typu Byte](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)  
   
--   [Porady: modyfikowanie klasy odwołań w funkcji natywnej](../dotnet/how-to-modify-reference-class-in-a-native-function.md)  
+-   [Instrukcje: modyfikowanie klasy odwołań w funkcji natywnej](../dotnet/how-to-modify-reference-class-in-a-native-function.md)  
   
--   [Porady: ustalić, czy obraz jest natywnym, czy CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)  
+-   [Instrukcje: ustalanie, czy obraz jest obrazem natywnym, czy CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)  
   
--   [Porady: Dodawanie natywnej biblioteki DLL do globalnej pamięci podręcznej zestawów](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)  
+-   [Instrukcje: dodawanie natywnej biblioteki DLL do globalnej pamięci podręcznej zestawów](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)  
   
--   [Porady: utrzymywanie odwołania do typu wartości w typie natywnym](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)  
+-   [Instrukcje: utrzymywanie odwołania do typu wartości w typie natywnym](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)  
   
--   [Porady: utrzymywanie odwołania do obiektu w pamięci niezarządzanej](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)  
+-   [Instrukcje: utrzymywanie odwołania do obiektu w pamięci niezarządzanej](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)  
   
 -   [Porady: wykrywanie kompilacji/CLR](../dotnet/how-to-detect-clr-compilation.md)  
   
--   [Porady: konwertowanie między identyfikatorami System::Guid i _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)  
+-   [Instrukcje: konwertowanie między identyfikatorami System::Guid i _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)  
   
--   [Porady: Określanie poza parametru](../dotnet/how-to-specify-an-out-parameter.md)  
+-   [Instrukcje: określanie parametru wyjściowego](../dotnet/how-to-specify-an-out-parameter.md)  
   
 -   [Porady: używanie typu natywnego w kompilacji/CLR](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)  
   
--   [Porady: deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md)  
+-   [Instrukcje: deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md)  
   
--   [Porady: opakowywanie klasy natywnej do użycia w języku C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
+-   [Instrukcje: opakowywanie klasy natywnej do użycia w języku C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
   
  Uzyskać przy użyciu delegatów w scenariuszu międzyoperacyjnego, zobacz [delegata (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md).  
   

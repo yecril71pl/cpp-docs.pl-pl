@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78afaeb771cac88d02fe15870df329e97c4cd1d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44403cc22e061a5a492c4177d5ba385c17da0e12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-sheets-mfc"></a>Arkusze właściwości (MFC)
 Tej rodziny artykuły omówiono implementuje obsługę arkuszy właściwości w aplikacjach MFC. Arkusz właściwości, znanej także jako okno dialogowe kartę, umożliwia zarządzanie dużą liczbą formantów w oknie dialogowym. Arkusz właściwości zawiera strony właściwości, każdy oparty na osobnym oknie dialogowym zasobu szablon. Można podzielić formantów okna dialogowego na logiczne grupy i umieścić na stronie właściwości każdej grupy.  
@@ -41,7 +42,7 @@ Tej rodziny artykuły omówiono implementuje obsługę arkuszy właściwości w 
   
 -   [Obsługa przycisku Zastosuj](../mfc/handling-the-apply-button.md)  
   
--   [Arkusze właściwości jako kreatorzy](../mfc/property-sheets-as-wizards.md)  
+-   [Arkusze właściwości jako kreatory](../mfc/property-sheets-as-wizards.md)  
   
 -   [Cpropertysheet — klasa](../mfc/reference/cpropertysheet-class.md)  
   

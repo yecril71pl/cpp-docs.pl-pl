@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7cce7a5d24062d06ed1f12d49e4754627f28aa92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f80d870f9804454dc652fdda00f34fcdb7a52062
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-documents-and-views"></a>Inicjowanie dokumentów i widoków
 Dokumenty są tworzone na dwa różne sposoby, więc klasy dokumentu musi obsługiwać obu kierunkach. Po pierwsze użytkownik może utworzyć nowy, pusty dokument przy użyciu polecenia nowy plik. W takim przypadku Inicjowanie dokumentu w zastąpienia z [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) funkcji członkowskiej klasy [CDocument](../mfc/reference/cdocument-class.md). Po drugie użytkownik służy polecenie Otwórz w menu Plik można utworzyć nowego dokumentu, których zawartość są odczytywane z pliku. W takim przypadku Inicjowanie dokumentu w zastąpienia z [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) funkcji członkowskiej klasy **CDocument**. Zarówno inicjalizacji są takie same, należy wywołać typowych funkcji członkowskiej z obu zastąpienia lub `OnOpenDocument` można wywołać `OnNewDocument` do zainicjowania czystą dokumentu, a następnie Zakończ operacja otwierania.  

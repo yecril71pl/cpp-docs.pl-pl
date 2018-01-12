@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 53d6986d569bbf928282dce9e9e1cba0601bc4ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ffbe20fb6c2b35cef46f975e99191bf96fdc6b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-intrinsics"></a>Funkcje wewnętrzne kompilatora
 Większość funkcji są zawarte w bibliotekach, ale niektóre funkcje są wbudowane w (to znaczy wewnętrzna) do kompilatora. Te są określane jako funkcje wewnętrzne lub funkcje wewnętrzne.  
@@ -44,16 +45,16 @@ Większość funkcji są zawarte w bibliotekach, ale niektóre funkcje są wbudo
   
 -   [Funkcje wewnętrzne ARM](../intrinsics/arm-intrinsics.md)  
   
--   [x86 lista funkcji wewnętrznych](../intrinsics/x86-intrinsics-list.md)  
+-   [Lista funkcji wewnętrznych x86](../intrinsics/x86-intrinsics-list.md)  
   
--   [x64 (amd64) lista funkcji wewnętrznych](../intrinsics/x64-amd64-intrinsics-list.md)  
+-   [Lista funkcji wewnętrznych x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)  
   
--   [Funkcje wewnętrzne dostępne na wszystkich architektury](../intrinsics/intrinsics-available-on-all-architectures.md)  
+-   [Funkcje wewnętrzne dostępne we wszystkich architekturach](../intrinsics/intrinsics-available-on-all-architectures.md)  
   
--   [Alfabetyczną listę funkcje wewnętrzne](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)  
+-   [Alfabetyczna lista funkcji wewnętrznych](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do asemblera ARM](../assembler/arm/arm-assembler-reference.md)   
  [Microsoft Macro Assembler — odwołanie](../assembler/masm/microsoft-macro-assembler-reference.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)   
- [Odwołanie do biblioteki wykonawcze języka C](../c-runtime-library/c-run-time-library-reference.md)
+ [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)

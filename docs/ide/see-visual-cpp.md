@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25dc28c993289942d0eafd2f20fb5c849f1658c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15e1aedefe6d20c181ff208f76a61f49e15f5214
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltseegt-visual-c"></a>&lt;zobacz&gt; (Visual C++)
 \<Zobacz > należy określić łącze znajdujących się w tekście. Użyj [ \<seealso >](../ide/seealso-visual-cpp.md) wskazująca tekstu, które mogą zostać wyświetlone w sekcji Zobacz też.  
@@ -76,4 +77,4 @@ ref class C {};
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Plik dokumentacji XML](../ide/xml-documentation-visual-cpp.md)
+ [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

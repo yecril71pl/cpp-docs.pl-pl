@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1e780bda6850ef2096ecaf1dbffeefdb9d11c9f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Kompilowania kodu C/C++ w wierszu polecenia
 
@@ -48,7 +49,7 @@ Skróty wiersza polecenia są zainstalowane w określonej wersji [!INCLUDE[vsprv
 
 Rzeczywiste Start menu folderu i skrót nazwy różnią się zależnie od wersji [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] został zainstalowany i instalacji pseudonimu, jeśli zostanie ustawiona. Na przykład, jeśli masz program Visual Studio 2017 r zainstalowana i został przyznany instalacji pseudonim 15 ustęp 3, skrót do wiersza polecenia dewelopera nosi nazwę **wiersz polecenia dla programu VS 2017 (15 ustęp 3) deweloperów**, w folderze o nazwie  **Visual Studio 2017**. 
 
-Jeśli po zainstalowaniu [Build Tools dla programu Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=840931) lub [Visual C++ 2015 kompilacji narzędzia](http://landinghub.visualstudio.com/visual-cpp-build-tools) edition, może istnieć tylko określonych native lub różnych narzędzi opcje wiersza polecenia dewelopera. 
+Jeśli po zainstalowaniu [Build Tools dla programu Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) lub [Visual C++ 2015 kompilacji narzędzia](http://landinghub.visualstudio.com/visual-cpp-build-tools) edition, może istnieć tylko określonych native lub różnych narzędzi opcje wiersza polecenia dewelopera. 
 
 <a name="developer_command_prompt"></a>
 ## <a name="to-open-a-developer-command-prompt-window"></a>Aby otworzyć okno wiersza polecenia dewelopera  
@@ -86,11 +87,11 @@ Najprostszym sposobem, aby określić architektury określonej kompilacji w istn
 |Argument architektura Vcvarsall.bat|Kompilatora|Architektura komputera hosta|Architektura danych wyjściowych kompilacji|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
 |x86|x86 native 32-bitowych|x86, x64|x86|  
-|x86\_amd64 lub x86\_x64|krzyżowe x64 na x86|x86, x64|x64|  
+|x86\_amd64 lub x86\_x64|krzyżowe x64 na x86|x86, x64|X64|  
 |x86_arm|ARM na x86 między|x86, x64|ARM|  
-|amd64 lub x64|x64 native 64-bitowych|x64|x64|  
-|AMD64\_x86 lub x64\_x86|x86 na x64 cross|x64|x86|  
-|AMD64\_arm lub x64\_arm|ARM na x64 między|x64|ARM|  
+|amd64 lub x64|x64 native 64-bitowych|X64|X64|  
+|AMD64\_x86 lub x64\_x86|x86 na x64 cross|X64|x86|  
+|AMD64\_arm lub x64\_arm|ARM na x64 między|X64|ARM|  
   
 Można użyć **przechowywania** lub **uwp** opcji, aby określić typ platformy, lub ani do określenia aplikacji komputerowej. Określenie wersji zestawu Windows SDK, użyj pełnej liczbę zestawu Windows 10 SDK 10.0.10240.0 lub określ 8.1 korzystanie z zestawu Windows 8.1 SDK. Umożliwia określenie zestawu narzędzi kompilatora Visual Studio 2015; 14.0 środowisko domyślnie używać zestawu narzędzi kompilatora Visual Studio 2017 r.
 
@@ -152,22 +153,22 @@ Podczas kompilowania w wierszu polecenia można uzyskać informacji o ostrzeżen
 
 Artykuły w tej sekcji dokumentacji pokazują, jak tworzyć aplikacje w wierszu polecenia, opisano sposób dostosowywania środowiska kompilacji wiersza polecenia, użyj procesami 64-bitowe i docelowej x86, x64, ARM platform i pokazują, jak używać kompilacji wiersza polecenia narzędzia MSBuild i NMAKE.  
   
-[Wskazówki: Kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)  
+[Przewodnik: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)  
 Podaje przykład pokazujący sposób tworzenia i skompilować prosty program w języku C++ w wierszu polecenia.  
   
 [Wskazówki: Kompilowanie programu C w wierszu polecenia](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
 Opisuje sposób kompilowania program napisany w języku programowania C.  
   
-[Wskazówki: Kompilowanie C + +/ CLI Program w wierszu polecenia](../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)  
+[Przewodnik: kompilowanie programu w języku C++/CLI w wierszu polecenia](../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)  
 Opisuje sposób tworzenia i skompilować C + +/ CLI program, który używa programu .NET Framework.  
   
-[Wskazówki: Kompilowanie C + +/ CX Program w wierszu polecenia](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)  
+[Przewodnik: kompilowanie programu w języku C++/CX w wierszu polecenia](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)  
 Opisuje sposób tworzenia i skompilować C + +/ CX program, który używa środowiska wykonawczego systemu Windows.  
   
 [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji z wiersza polecenia](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)  
 Opisuje sposób uruchamiania okno wiersza polecenia, zawierający zmienne środowiskowe wymagane dla kompilacji z wiersza polecenia kierowanych x86, x64 oraz ARM przy użyciu 32-bitowy lub 64-bitowego zestawu narzędzi platformy.  
   
-[Odwołanie NMAKE](../build/nmake-reference.md)  
+[NMAKE — dokumentacja](../build/nmake-reference.md)  
 Zawiera łącza do artykułów, które opisują Program obsługi narzędzie Microsoft (NMAKE. WYWOŁANIE PLIKU EXE).  
   
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)  
@@ -175,7 +176,7 @@ Zawiera łącza do artykułów, które omówiono sposób użycia MSBuild.EXE.
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
-[/ MD, / MT, /LD (Biblioteka Użyj środowiska wykonawczego)](../build/reference/md-mt-ld-use-run-time-library.md)  
+[/MD, /MT, /LD (Korzystaj z bibliotek wykonawczych)](../build/reference/md-mt-ld-use-run-time-library.md)  
 Opisuje sposób korzystać z tych opcji kompilatora przy użyciu biblioteki wykonawcze debugowania i wydania.  
   
 [Opcje kompilatora C/C++](../build/reference/compiler-options.md)  

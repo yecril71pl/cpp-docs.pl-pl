@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0aea958eb441f3b2b4d1adb993f1b92ae8359530
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: cd4934f3075f963efe59e8d73d8c72347fd53912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Kompilowanie projektów C++ w Visual Studio
 W programie Visual Studio zintegrowane środowisko programistyczne (IDE) istnieje kilka sposobów skompiluj całe rozwiązanie lub tylko jednego projektu w nim. Można również zmodyfikować ustawienia kompilacji i określić niestandardowe kroki procesu kompilacji dokonanie efektywniejsze procesie tworzenia aplikacji.  
@@ -55,13 +56,13 @@ W programie Visual Studio zintegrowane środowisko programistyczne (IDE) istniej
  Aby przeczytać więcej informacji o sposobie tworzenia, zmodyfikuj ustawienia kompilacji i określić niestandardowe kroki procesu kompilacji, zobacz następujące artykuły.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Opis niestandardowe kroki procesu kompilacji lub zdarzeniach kompilacji](../ide/understanding-custom-build-steps-and-build-events.md)  
+ [Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](../ide/understanding-custom-build-steps-and-build-events.md)  
  Opisuje sposób dostosowywania procesu kompilacji w zintegrowane środowisko programistyczne.  
   
- [Typowe makra dla poleceń kompilacji oraz właściwości](../ide/common-macros-for-build-commands-and-properties.md)  
+ [Typowe makra dla właściwości i poleceń kompilacji](../ide/common-macros-for-build-commands-and-properties.md)  
  Wyświetla listę makra, które są dostępne, gdzie parametry są akceptowane.  
   
- [Kompilowanie projektów zewnętrznych](../ide/building-external-projects.md)  
+ [Konstruowanie projektów zewnętrznych](../ide/building-external-projects.md)  
  W tym artykule omówiono kompilowania projektów, korzystających z urządzeń poza zintegrowane środowisko programistyczne.  
   
  [Pliki projektu](../ide/project-files.md)  
@@ -71,19 +72,19 @@ W programie Visual Studio zintegrowane środowisko programistyczne (IDE) istniej
  [VC ++ katalogów, projektów, opcje — Okno dialogowe](vcpp-directories-property-page.md)  
  (Tylko dla projektów MSBuild) Omówiono sposób zmodyfikować ścieżkę wyszukiwania dla plików wykonywalnych, Dołącz pliki, pliki bibliotek i pliki kodu źródłowego podczas kompilacji.  
   
- [Kompilowanie i tworzenia](/visualstudio/ide/compiling-and-building-in-visual-studio)  
+ [Kompilowanie i tworzenie](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  Zawiera informacje na temat tworzenia w programie Visual Studio.  
   
  [Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)  
  Zawiera łącza do tematów opisujących kompilowania programu z wiersza polecenia lub zintegrowane środowisko programistyczne Visual Studio.  
   
- [Odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md)  
+ [Dokumentacja kompilacji w języku C/C++](../build/reference/c-cpp-building-reference.md)  
  Zawiera łącza do omówienie tworzenia programów w języku C++, kompilatora i konsolidatora, narzędzi i opcji dodatkowych kompilacji.  
   
  [Uaktualnianie projektów ze starszych wersji programu Visual C++](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
  Zawiera łącza do tematów obejmujących problemów dotyczących uaktualniania projektu C++ do nowszej wersji zestawu narzędzi kompilatora.  
   
-[Visual C++, przenoszenie i uaktualnianie przewodnik](../porting/visual-cpp-porting-and-upgrading-guide.md)  
+[Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)  
   Szczegółowe informacje o sposobie uaktualniania aplikacji C++, które zostały utworzone we wcześniejszych wersjach programu Visual Studio i przeprowadzanie migracji aplikacji, które zostały utworzone przy użyciu narzędzia innego niż Visual Studio.  
   
 ## <a name="see-also"></a>Zobacz też  

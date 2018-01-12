@@ -16,11 +16,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16962e39533eb2ac3d698622f8bb3a27d068b0ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 56bacf88b2c633704b46c6d0de3bb313767b7b2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Różnice w zachowaniu obsługi wyjątków w przypadku użycia opcji /CLR
 [Podstawowe pojęcia związane z wyjątków zarządzanych przy użyciu](../dotnet/basic-concepts-in-using-managed-exceptions.md) omówiono obsługi wyjątków w zarządzanych aplikacji. W tym temacie opisano szczegółowo różnic od standardowego zachowania wyjątków i pewne ograniczenia. Aby uzyskać więcej informacji, zobacz [_set_se_translator — funkcja](../c-runtime-library/reference/set-se-translator.md).  

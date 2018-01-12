@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db15abf9aca532b8c0fb712733c4e87350b58747
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6e67b6de0b7769322d0b7f1176245c8f68634afb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Porady: używanie wyrażeń regularnych do walidacji formatowania danych (C++/CLI)
 Poniższy przykład kodu pokazuje użycie wyrażenia regularnego, aby upewnić się, formatowania ciągu. W poniższym przykładzie kodu powinien on zawierać prawidłowy numer telefonu. Poniższy przykład kodu wykorzystuje ciąg "\d{3}-\d{3}-\d{4}", aby wskazać, że każde pole reprezentuje prawidłowy numer telefonu. W ciągu "d" oznacza cyfrę, a argument po każdym "d" wskazuje liczbę miejsc po przecinku, które muszą być obecne. W takim przypadku numer będzie musiał być oddzielone kreskami.  
@@ -67,4 +70,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [.NET framework — nieprawidłowe wyrażenia](/dotnet/standard/base-types/regular-expressions)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

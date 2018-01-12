@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b989b32add712a9f9c97385104ed65a5cc704c9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4fb06a0d818c23c3e5d79cecb6e0f9a8ae6f9a73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeclassrelease-method"></a>RuntimeClass::Release — Metoda
 Wykonuje operację wydania COM w bieżącym obiekcie runtimeclass —.  
@@ -45,4 +48,4 @@ STDMETHOD_(
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Runtimeclass — klasa](../windows/runtimeclass-class.md)
+ [RuntimeClass, klasa](../windows/runtimeclass-class.md)

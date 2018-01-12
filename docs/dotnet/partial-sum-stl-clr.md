@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d8a92858303af5050706849f7e688d08ad36f321
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7200fbf4adb7866125cfd8956b7b35ad5d5a2657
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partialsum-stlclr"></a>partial_sum (STL/CLR)
 Oblicza szereg sum zakresu wejściowego od pierwszego elementu za pomocą `i`th element i zapisuje wynik każdego kwoty w `i`element th zakresu docelowego lub oblicza wynik uogólniony procedury gdzie operacji sum zastępuje inna operacja określonego pliku binarnego.  
@@ -43,4 +46,4 @@ template<class _InIt, class _OutIt, class _Fn2> inline
  **Namespace:** cliext  
   
 ## <a name="see-also"></a>Zobacz też  
- [liczbowe (STL/CLR)](../dotnet/numeric-stl-clr.md)
+ [numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)

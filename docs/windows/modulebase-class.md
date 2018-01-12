@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe24bd4995acb7a36f6aa50378a03b519c8d8e3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b02efe3ee61234b2439c1cbbae07827d6a879b2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulebase-class"></a>ModuleBase — Klasa
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -39,15 +42,15 @@ class ModuleBase;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Modulebase::modulebase — Konstruktor](../windows/modulebase-modulebase-constructor.md)|Inicjuje wystąpienie klasy modułu.|  
-|[ModuleBase:: ~ ModuleBase — destruktor](../windows/modulebase-tilde-modulebase-destructor.md)|Deinitializes bieżącego wystąpienia klasy modułu.|  
+|[ModuleBase::ModuleBase, konstruktor](../windows/modulebase-modulebase-constructor.md)|Inicjuje wystąpienie klasy modułu.|  
+|[ModuleBase::~ModuleBase, destruktor](../windows/modulebase-tilde-modulebase-destructor.md)|Deinitializes bieżącego wystąpienia klasy modułu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ModuleBase::DecrementObjectCount — metoda](../windows/modulebase-decrementobjectcount-method.md)|Po zaimplementowaniu, zmniejsza liczbę obiektów śledzone przez moduł.|  
-|[ModuleBase::IncrementObjectCount — metoda](../windows/modulebase-incrementobjectcount-method.md)|Po zaimplementowaniu, zwiększa liczbę obiektów śledzone przez moduł.|  
+|[ModuleBase::DecrementObjectCount, metoda](../windows/modulebase-decrementobjectcount-method.md)|Po zaimplementowaniu, zmniejsza liczbę obiektów śledzone przez moduł.|  
+|[ModuleBase::IncrementObjectCount, metoda](../windows/modulebase-incrementobjectcount-method.md)|Po zaimplementowaniu, zwiększa liczbę obiektów śledzone przez moduł.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ModuleBase`  
@@ -58,4 +61,4 @@ class ModuleBase;
  **Namespace:** Microsoft::wrl:: details —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: details — Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

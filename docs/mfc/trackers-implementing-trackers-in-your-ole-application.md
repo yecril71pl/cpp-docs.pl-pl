@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f791f0b853a46770a3303e3a0228d5d02371b94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84972615ec5cac344731ee5a4aeaefacaa46ba5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>Trackery: implementowanie trackerów w aplikacji OLE
 Trackery Podaj interfejsu graficznego, aby umożliwić użytkownikom na interakcję z elementami klienta OLE. Przy użyciu różnych tracker style, OLE klienta, które elementy mogą być wyświetlane z kreskowanym granicach, Zmień rozmiar dojść lub różne inne efekty wizualne. W tym artykule opisano:  

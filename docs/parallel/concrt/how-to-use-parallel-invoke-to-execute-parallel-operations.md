@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2190d7809791fbc66f6070eb3ae721ec1bc0a04f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cefabd21e04c4c3cc39934de111fe94151317ca5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Porady: korzystanie z parallel_invoke do przeprowadzania operacji równoległych
 Ten przykład przedstawia sposób użycia [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytmu, aby poprawić wydajność program, który wykonuje wiele operacji na udostępnione źródło danych. Ponieważ nie ma operacji zmodyfikować źródło, mogą być wykonywane równolegle w sposób proste.  

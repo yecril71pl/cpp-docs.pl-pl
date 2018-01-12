@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 748b28288df33ab61674dc0cf4044db28c263d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d949486867200c0349d52805a94b6cddf48d357f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-concepts"></a>Pojęcia związane z MFC
 Ta sekcja zawiera tematy dotyczące pojęć i oparty na zadaniach ułatwiające program za pomocą biblioteki Microsoft Foundation Class (MFC).  
@@ -58,16 +59,16 @@ Ta sekcja zawiera tematy dotyczące pojęć i oparty na zadaniach ułatwiające 
  [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)  
  W tym artykule omówiono klas MFC, które obsługują programowania Internetu.  
   
- [Zadania związane z programowaniem Internetu MFC](../mfc/mfc-internet-programming-tasks.md)  
+ [MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)  
  W tym artykule omówiono, jak dodać obsługę Internetu dla poszczególnych aplikacji.  
   
- [MODEL COM MFC](../mfc/mfc-com.md)  
+ [MFC COM](../mfc/mfc-com.md)  
  W tym artykule omówiono podzbiór MFC, przeznaczoną do obsługi modelu COM, podczas gdy większość Active biblioteki szablonu (ATL) jest przeznaczony dla modelu COM programowania.  
   
  [Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
  W tym artykule opisano, jakie są procesów i wątków oraz omówiono podejście MFC dla wielowątkowości.  
   
- [Windows Sockets w MFC](../mfc/windows-sockets.md)  
+ [Gniazda systemu Windows w MFC](../mfc/windows-sockets.md)  
  Obejmuje implementacja MFC Windows Sockets.  
   
  [Odwołanie do biblioteki MFC](../mfc/mfc-desktop-applications.md)  

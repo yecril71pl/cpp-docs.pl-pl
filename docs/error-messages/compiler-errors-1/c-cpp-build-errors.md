@@ -1,7 +1,7 @@
 ---
 title: "Błędy kompilacji C/C++ | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -311,24 +311,20 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25ec72c39a01474bc90a1ad20c73b1e3d28c7a6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80e723e5fc51ee166b61999396ddfe6be7bdd991
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-errors"></a>Błędy kompilacji C/C++
-Artykuły w tej sekcji dokumentacji opisano komunikaty o błędach, które są generowane przez narzędzia kompilacji. [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Narzędzia kompilatora i kompilacji może raportować wiele rodzajów błędy i ostrzeżenia. Narzędzia kompilacji może wprowadzić założeń dotyczących przeznaczenia kodu i podejmie próbę kontynuacji po wystąpieniu błędu lub ostrzeżenia zostanie znaleziony, dzięki czemu mogą być zgłaszane problemy więcej w tym samym czasie. Jeśli narzędzia niewłaściwy założono, nowsze błędy lub ostrzeżenia nie mogą stosować do projektu. Gdy rozwiązanie problemów w projekcie, zawsze należy rozpoczynać się od pierwszego błędu lub ostrzeżenia, która jest raportowana i skompiluj ponownie często.  
-  
- Aby uzyskać pomoc dotyczącą danego komunikatu o błędzie w programie Visual Studio, wybierz numer błędu w **dane wyjściowe** okna i naciśnij klawisz F1, aby otworzyć MSDN strony dla tego błędu. W witrynie MSDN możesz również wyszukiwania artykułów na temat błędów lub przeglądać listę błędów według kategorii w okienku nawigacji.  
-  
-> [!NOTE]
->  Nie każdy [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] błąd lub ostrzeżenie jest opisane w witrynie MSDN. W wielu przypadkach diagnostycznych komunikat zawiera wszystkie informacje, które są dostępne. Jeśli uważasz, że komunikat o błędzie musi dodatkowe informacje, można Daj nam znać. Można Użyj formularza opinii na tej stronie, lub przejdź do paska menu w programie Visual Studio i wybierz **pomocy**, **zgłosić usterkę**, lub można przesłać raportu sugestię lub usterki na [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
-  
- Błędy i ostrzeżenia na forach MSDN publicznego może się okazać dodatkowej pomocy. [Języka Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) forum jest pytania i dyskusji o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] składni języka i kompilatora. [Visual C++ ogólne](http://go.microsoft.com/fwlink/?LinkId=158194) forum jest odpowiedzi na pytania dotyczące [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] nie opisano w innych forach. Można również znaleźć pomoc na temat błędów i ostrzeżeń w [przepełnienie stosu](http://stackoverflow.com/).  
-  
- Łącza do dodatkowych zasobów dotyczących [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], zobacz [Pomoc programu Visual C++ i społeczność](../../visual-cpp-help-and-community.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie kompilacji C/C++](../../build/reference/c-cpp-building-reference.md)   
- [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+
+Artykuły w tej sekcji dokumentacji wyjaśnić, diagnostyki błędów i ostrzeżeń, które są generowane przez narzędzia kompilacji.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="see-also"></a>Zobacz także
+
+[Odwołanie kompilacji C/C++](../../build/reference/c-cpp-building-reference.md)   
+[Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

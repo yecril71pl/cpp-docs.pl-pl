@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976852b11101a608a47f37ec1c796ef1363ec648
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7420dbdc1f7560eae9bc5b1a15954c3d68b59678
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-gdi-resources"></a>Alokowanie zasobów GDI
 W tym artykule wyjaśniono, jak można przydzielić i deallocate potrzebne do drukowania obiekty interfejsu (GDI) systemu Windows grafiki urządzeń.  
@@ -39,5 +40,5 @@ W tym artykule wyjaśniono, jak można przydzielić i deallocate potrzebne do dr
   
 ## <a name="see-also"></a>Zobacz też  
  [Drukowanie](../mfc/printing.md)   
- [Jak jest wykonywane Drukowanie domyślne](../mfc/how-default-printing-is-done.md)
+ [Jak jest wykonywane drukowanie domyślne](../mfc/how-default-printing-is-done.md)
 

@@ -27,11 +27,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a3c8bec06315982725cce531476cbe7daaf154a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-container-additions"></a>Menu i zasoby: dodatki do kontenera
 W tym artykule opisano zmiany, które należy wprowadzić do menu i innych zasobów w programie visual edycji aplikacji kontenera.  

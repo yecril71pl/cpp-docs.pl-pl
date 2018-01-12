@@ -50,11 +50,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5bdb3d081e9f7f1c2333d8bc577401b95ab0f858
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff64eeedb324d3a849029b15744cd630603aef67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accelerator-class"></a>accelerator — Klasa
 Akceleratora jest możliwość sprzętu, która została zoptymalizowana pod kątem przetwarzania równoległego danych. Akceleratora może być urządzenie podłączone do magistrali PCIe (np. procesora GPU), lub można ją zestawu głównego procesora rozszerzonych instrukcji.  
@@ -100,7 +101,7 @@ class accelerator;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator! =](#operator_neq)|Porównuje to `accelerator` obiekt z inną i zwraca `false` , jeśli są takie same; w przeciwnym razie zwraca `true`.|  
+|[operator!=](#operator_neq)|Porównuje to `accelerator` obiekt z inną i zwraca `false` , jeśli są takie same; w przeciwnym razie zwraca `true`.|  
 |[operator =](#operator_eq)|Kopiuje zawartość określonego `accelerator` obiektu do tego.|  
 |[operator ==](#operator_eq_eq)|Porównuje to `accelerator` obiekt z inną i zwraca `true` , jeśli są takie same; w przeciwnym razie zwraca `false`.|  
   
@@ -779,4 +780,4 @@ void wait();
  Zwraca `void`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

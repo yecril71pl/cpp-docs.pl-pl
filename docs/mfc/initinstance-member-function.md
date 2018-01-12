@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c33a058c126cea4dc6ce6d51fb2d4866ceb9218f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96042b4d2931fb3709f992f6e43e408c919fe014
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initinstance-member-function"></a>InitInstance — Funkcja członkowska
 System operacyjny Windows umożliwia uruchamianie więcej niż jedną kopię lub "instance" tej samej aplikacji. `WinMain`wywołania [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) za każdym razem uruchamia nowe wystąpienie aplikacji.  
@@ -46,4 +47,4 @@ System operacyjny Windows umożliwia uruchamianie więcej niż jedną kopię lub
 >  Aplikacje MFC musi zostać zainicjowany jako pojedynczy wątków typu apartment (STA). Jeśli należy wywołać [funkcja CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) w Twojej `InitInstance` zastępowania, określ `COINIT_APARTMENTTHREADED` (zamiast `COINIT_MULTITHREADED`). Aby uzyskać więcej informacji, zobacz PRB: MFC aplikacja przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) w [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
   
 ## <a name="see-also"></a>Zobacz też  
- [CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+ [CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)

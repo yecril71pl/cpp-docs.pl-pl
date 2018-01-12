@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90c4fced8be41ea7266b144a95875be3fbfb5a41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e154e2672a9410af979c2e5aa0f6fb0aba7a50f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo — Struktura
 `CDaoWorkspaceInfo` Struktura zawiera informacje o zdefiniowanych dla dostępu do danych dostępu do obiektów (DAO) bazy danych obszaru roboczego.  

@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ceebaf35c9e6bb2c5be9b8b1a33f5f943e25274
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a78e7b9fd8f9c67f14a4bb51088866785d372cca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Przetwarzanie komunikatów powiadomień w formantach rozszerzonego pola kombi
 Jak użytkownicy korzystają z pola kombi rozszerzonej, formantu (`CComboBoxEx`) wysyła komunikaty powiadomień do nadrzędnego okna, zazwyczaj obiekt widoku lub okna dialogowego. Obsługi tych wiadomości, jeśli chcesz zrobić coś w odpowiedzi. Na przykład gdy użytkownik aktywuje listy rozwijanej lub pole tekstowe kliknięć w formancie **CBEN_BEGINEDIT** powiadomienie jest wysyłane.  
@@ -43,5 +44,5 @@ Jak użytkownicy korzystają z pola kombi rozszerzonej, formantu (`CComboBoxEx`)
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CComboBoxEx](../mfc/using-ccomboboxex.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

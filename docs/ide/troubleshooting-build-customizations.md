@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 91067753fcb02dd88165e406dc5c0a39183e5d33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5fa3b2d3910a71d189f5177e13fbd91930e15ee8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-build-customizations"></a>Rozwiązywanie problemów z dostosowaniami kompilacji
 Niestandardowe kroki procesu kompilacji lub zdarzenia nie zachowują się zgodnie z oczekiwaniami, istnieje kilka kwestii, które może wykonywać próby zrozumieć, co się dzieje niewłaściwy.  
@@ -45,4 +46,4 @@ Niestandardowe kroki procesu kompilacji lub zdarzenia nie zachowują się zgodni
 -   Uruchom niestandardowe kroki procesu kompilacji i zdarzenia pojedynczo, aby sprawdzić ich zachowanie kompilacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opis niestandardowe kroki procesu kompilacji lub zdarzeniach kompilacji](../ide/understanding-custom-build-steps-and-build-events.md)
+ [Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](../ide/understanding-custom-build-steps-and-build-events.md)

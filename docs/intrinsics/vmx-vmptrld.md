@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6491eb24b8ed615d6309f81ceb0770ba0973d79b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78c6ba1a4545a03ae7f67821cf649eb936b4ed8a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 **Dotyczące firmy Microsoft**  
@@ -53,7 +54,7 @@ int __vmx_vmptrld(
 ## <a name="remarks"></a>Uwagi  
  Wskaźnik VMCS jest 64-bitowy adres fizyczny.  
   
- `__vmx_vmptrld` Funkcji jest odpowiednikiem `VMPTRLD` maszyny instrukcji. Ta funkcja obsługuje interakcji z hosta maszyny wirtualnej monitor Gość operacyjnego i jego zastosowań. Aby uzyskać więcej informacji, wyszukaj dokumentu "Intel Virtualization Technical specyfikacji dla IA-32 Intel architektury," dokumentu numer C97063-002 na [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) lokacji.  
+ `__vmx_vmptrld` Funkcji jest odpowiednikiem `VMPTRLD` maszyny instrukcji. Ta funkcja obsługuje interakcji z hosta maszyny wirtualnej monitor Gość operacyjnego i jego zastosowań. Aby uzyskać więcej informacji, wyszukaj dokumentu "Intel Virtualization Technical specyfikacji dla IA-32 Intel architektury," dokumentu numer C97063-002 na [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokacji.  
   
 ## <a name="requirements"></a>Wymagania  
   

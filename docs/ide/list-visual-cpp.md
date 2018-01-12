@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d7b4e97cb5e14bb50b914f883fdd5237afa5496
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e04fb5f7ff2ba22b53c0fe163455bfdb666f9b9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;Lista&gt; (Visual C++)
 \<Listheader > Blok służy do definiowania wiersz nagłówka tabeli lub definicji listy. Podczas definiowania tabeli, wystarczy podać wpis termin w nagłówku.  
@@ -77,4 +78,4 @@ class MyClass {};
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Plik dokumentacji XML](../ide/xml-documentation-visual-cpp.md)
+ [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

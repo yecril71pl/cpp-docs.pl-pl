@@ -28,11 +28,14 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ec68a6179cd74020638aa895028942bc76e21f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7bcaabb9f0a696a5eb7b01c4bd78757681e4e6a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pure-and-verifiable-code-ccli"></a>Kod czysty i weryfikowalny (C++/CLI)
 Programowania .NET, Visual C++ obsługuje tworzenie trzy różne typy składników i aplikacji: mieszanych, czystych i weryfikowalnych. Wszystkie trzy są dostępne za pośrednictwem [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora.  
@@ -40,15 +43,15 @@ Programowania .NET, Visual C++ obsługuje tworzenie trzy różne typy składnik�
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji na temat zestawy podlegające weryfikacji zobacz:  
   
--   [Porównanie funkcji mieszanych, czystych i weryfikowalnych (C + +/ CLI)](../dotnet/mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)  
+-   [Porównanie funkcji mieszanych, czystych i weryfikowalnych (C++/CLI)](../dotnet/mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)  
   
 -   [Porady: Migracja do/CLR: pure (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)  
   
--   [Porady: tworzenie weryfikowalnych projektów C++ (C + +/ CLI)](../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md)  
+-   [Instrukcje: tworzenie weryfikowalnych projektów C++ (C++/CLI)](../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md)  
   
 -   [Porady: Migracja do/CLR: safe (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)  
   
--   [Używanie zestawów weryfikowalnych z programem SQL Server (C + +/ CLI)](../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md)  
+-   [Używanie zestawów weryfikowalnych z programem SQL Server (C++/CLI)](../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md)  
   
 -   [Najlepsze rozwiązania](../security/security-best-practices-for-cpp.md)  
   
@@ -108,4 +111,4 @@ Programowania .NET, Visual C++ obsługuje tworzenie trzy różne typy składnik�
 >  Istnieje jeden scenariusz kodowania, które przechodzą przez kompilator, ale który spowoduje w zestawie, do którego nie można zweryfikować: wywołanie funkcji wirtualnych do wystąpienia obiektu przy użyciu operator rozpoznawania zakresów.  Na przykład: `MyObj -> A::VirtualFunction();`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

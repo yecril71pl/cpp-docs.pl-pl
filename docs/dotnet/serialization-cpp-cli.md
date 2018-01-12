@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57ec673e945d0db14ce8fee0d477d7aeb2a9e238
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6efd56655cb5b262eab7d7f14c197e11466fb8bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serialization-ccli"></a>Serializacja (C++/CLI)
 Serializacja (proces przechowywania stanu obiektu lub elementu członkowskiego, stałego średni) klas zarządzanych (w tym poszczególnych pól lub właściwości) jest obsługiwana przez <xref:System.SerializableAttribute> i <xref:System.NonSerializedAttribute> klasy.  
@@ -58,4 +61,4 @@ private:
  Należy pamiętać, że oba atrybuty można odwoływać się przy użyciu ich "krótkiej nazwy" (**Serializable** i **NonSerialized**). To jest omówiona w [stosowanie atrybutów](/dotnet/standard/attributes/applying-attributes).  
   
 ## <a name="see-also"></a>Zobacz też  
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

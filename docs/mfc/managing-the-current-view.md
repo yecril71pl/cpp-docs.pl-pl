@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 339a3677783b789c6026dc0e46c09cfdb1d2e451
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1510b005f452174acfe8ad65ae3f66cf8aafaa2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-the-current-view"></a>Zarządzanie bieżącym widokiem
 W ramach Domyślna implementacja ramka okna okno ramowe przechowuje informacje o aktualnie aktywny widok. Jeśli okno ramowe zawiera więcej niż jeden widok, na przykład w oknie podziału, bieżący widok jest najnowszych widoku w użyciu. Widok aktywny jest niezależna od aktywnego okna w systemie Windows lub bieżący fokus wprowadzania.  

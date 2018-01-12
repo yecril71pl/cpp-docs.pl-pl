@@ -100,11 +100,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f11d008afed6743594043ee2dd95d98c09f5505
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02a792717690215c572089f11525f1f92c0e90e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>CONCURRENCY::precise_math — przestrzeń nazw funkcji
 ||||  
@@ -128,11 +129,11 @@ ms.lasthandoff: 10/24/2017
 |[floorf —](#floorf)|[FMA](#fma)|[fmaf —](#fmaf)|
 [Fmax](#fmax)|[fmaxf —](#fmaxf)|| 
 |[Fmin —](#fmin)|[fminf —](#fminf)|[fmod —](#fmod)|  
-|[fmodf —](#fmodf)|[fpclassify —](#fpclassify)|[frexp —](#frexp)|  
+|[fmodf —](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|  
 |[frexpf —](#frexpf)|[hypot —](#hypot)|[hypotf —](#hypotf)|  
 |[ilogb —](#ilogb)|[ilogbf —](#ilogbf)|[isfinite](#isfinite)|  
 |[isinf —](#isinf)|[isNaN](#isnan)|[isnormal —](#isnormal)|  
-|[ldexp —](#ldexp)|[ldexpf —](#ldexpf)|[lgamma —](#lgamma)|  
+|[ldexp](#ldexp)|[ldexpf —](#ldexpf)|[lgamma —](#lgamma)|  
 |[lgammaf —](#lgammaf)|[Dziennik](#log)|[LOG10](#log10)|  
 |[log10f —](#log10f)|[log1p —](#log1p)|[log1pf —](#log1pf)|  
 |[log2](#log2)|[log2f —](#log2f)|[logb —](#logb)|  
@@ -2416,4 +2417,4 @@ inline float truncf(float _X) restrict(amp);
  Zwraca liczbę całkowitą argumentu  
   
 ## <a name="see-also"></a>Zobacz też  
- [CONCURRENCY::precise_math — Namespace](concurrency-precise-math-namespace.md)
+ [Concurrency::precise_math, przestrzeń nazw](concurrency-precise-math-namespace.md)

@@ -103,11 +103,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f83ed395860033aa35dfedc4713653976a1f2763
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f96e403516d6f85804fa798d7a0c28575482ff43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>Typowe makra dla poleceń kompilacji oraz właściwości
 W zależności od opcji instalacji program Visual Studio można udostępnić setki makra użytkownika. Odpowiadają one właściwości programu MSBuild, które są ustawione domyślnie lub .props lub .targets plików lub ustawienia projektu. Użyj tych makr dowolne miejsce w projekcie **strony właściwości** okno dialogowe, w którym są akceptowane ciągów. Tych makr nie jest uwzględniana.  
@@ -161,4 +162,4 @@ W zależności od opcji instalacji program Visual Studio można udostępnić set
 |**$(Fxcopdir) —**|Ścieżka do pliku fxcop.cmd. Plik fxcop.cmd nie jest zainstalowany we wszystkich wersjach Visual C++.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kompilowanie projektów C++ w programie Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)
+ [Kompilowanie projektów C++ w Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dca7c6bc7c423018959a9ff38b5c54fa43f06c5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68cd21e21c14a34122f1b26345fab767728ac6a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crebar-vs-crebarctrl"></a>Crebar — vs. CReBarCtrl
 MFC oferuje dwie klasy, aby utworzyć pręty zbrojeniowe: [crebar —](../mfc/reference/crebar-class.md) i [crebarctrl —](../mfc/reference/crebarctrl-class.md) (który opakowuje interfejs API sterowania wspólne systemu Windows). **Crebar —** zawiera wszystkie funkcje formantu wspólnego paska pomocniczego i obsługuje wiele wymagane typowe ustawienia kontroli i struktur dla Ciebie.  
@@ -44,5 +45,5 @@ MFC oferuje dwie klasy, aby utworzyć pręty zbrojeniowe: [crebar —](../mfc/re
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

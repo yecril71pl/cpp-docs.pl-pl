@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c65647d2e4bd6107b53d4980b4c243af1b4cf3bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 91d97658436e2d5563c70765da5c3c98e1cbeed5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-ansi-strings-for-adonet-ccli"></a>Porady: przeprowadzanie marshalingu ciągów ANSI dla ADO.NET (C++/CLI)
 Pokazuje, jak dodać ciąg natywnego (`char *`) do bazy danych i sposobu zorganizowania <xref:System.String?displayProperty=fullName> z bazy danych na ciąg macierzystego.  
@@ -155,4 +158,4 @@ StringCol: This is string 2.
  [Dostęp do danych za pomocą ADO.NET (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
  [ADO.NET](/dotnet/framework/data/adonet/index)   
  [Współdziałanie](http://msdn.microsoft.com/en-us/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
- [Macierzysty i współdziałaniu .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

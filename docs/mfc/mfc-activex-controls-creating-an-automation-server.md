@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 56b05c85212630b8e368817006098aeff2ceb832
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c3de04fbbfa9f2d0b55b7e31ca02faeddfa5c12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>Kontrolki ActiveX MFC: tworzenie serwera automatyzacji
 Kontrolki MFC ActiveX można tworzyć jako serwer automatyzacji na potrzeby programowo osadzanie tego formantu w innej aplikacji i z aplikacji podczas wywoływania metody w formancie. Takie formantu pozostaje dostępny ma być obsługiwana w kontenerze formantów ActiveX.  

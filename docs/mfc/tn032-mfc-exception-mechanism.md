@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d2be26d5a3c5ab456d745119d540276edeed2d0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf82d4b158cedd2d8f6916dfb01d26db6c62d83b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn032-mfc-exception-mechanism"></a>TN032: mechanizm wyjątków MFC
 Poprzednie wersje programu Visual C++ nie obsługuje standardowe mechanizm wyjątków C++ i MFC udostępniona makra **TRY/CATCH/THROW** który użyto zamiast tego. Ta wersja programu Visual C++ w pełni obsługuje wyjątków języka C++. Ta uwaga objętych niektóre szczegóły implementacji zaawansowane makra poprzedniego tym jak automatycznie Oczyszczanie na podstawie stosu obiektów. Ponieważ wyjątki C++ obsługuje odwijanie domyślnie stosu, ta uwaga techniczna nie jest już konieczne.  

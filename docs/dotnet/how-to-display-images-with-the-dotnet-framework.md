@@ -16,11 +16,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23e8445e5a407e71061a971bccfb77d6b4170a35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7c12d6a67f6fbe73802d3b876621a2ea606af553
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>Porady: wyświetlanie obrazów za pomocą programu .NET Framework
 Poniższy przykład kodu modyfikuje pobrać wskaźnika do obsługi zdarzeń OnPaint <xref:System.Drawing.Graphics> obiekt dla tego formularza. <xref:System.Windows.Forms.Form.OnPaint%2A> Funkcji jest przeznaczony dla aplikacji formularzy systemu Windows, najprawdopodobniej utworzone za pomocą Kreatora aplikacji Visual Studio.  
@@ -30,7 +33,7 @@ Poniższy przykład kodu modyfikuje pobrać wskaźnika do obsługi zdarzeń OnPa
  <xref:System.Drawing.Graphics> i <xref:System.Drawing.Image> klasy znajdują się w <xref:System.Drawing?displayProperty=fullName> przestrzeni nazw.  
   
 > [!NOTE]
->  GDI + jest dołączony do systemu Windows XP i jest dostępny jako pakiet redystrybucyjny systemu Windows NT 4.0 SP 6, Windows 2000, Windows 98 i systemu Windows. Aby pobrać najnowszy pakiet redystrybucyjny programu, zobacz [http://go.microsoft.com/fwlink/?linkid=11232](http://go.microsoft.com/fwlink/?linkid=11232).   
+>  GDI + jest dołączony do systemu Windows XP i jest dostępny jako pakiet redystrybucyjny systemu Windows NT 4.0 SP 6, Windows 2000, Windows 98 i systemu Windows. Aby pobrać najnowszy pakiet redystrybucyjny programu, zobacz [http://go.microsoft.com/fwlink/p/?linkid=11232](http://go.microsoft.com/fwlink/p/?linkid=11232).   
   
 ## <a name="example"></a>Przykład  
   
@@ -52,4 +55,4 @@ virtual Void Form1::OnPaint(PaintEventArgs^ pe) override
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Drawing?displayProperty=fullName>   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

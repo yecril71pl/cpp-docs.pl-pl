@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84e603da97d31b240ad4b2d0471128be95028296
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70e2fd6d436120b6bae0cf02600a6d8866e11b39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-crebarctrl"></a>Korzystanie z CReBarCtrl
 Formantu paska pomocniczego działa jako kontener dla okien podrzędnych. Te okna podrzędnego często inne formanty są przypisane do grupy formantu paska pomocniczego. Formantu paska pomocniczego może zawierać jeden lub więcej grup, z każdej grupy o dowolnej kombinacji pasek uchwytu, mapy bitowej etykietę tekstową i okna podrzędnego. Jednak pasma nie może zawierać więcej niż jedno okno podrzędne.  
@@ -33,18 +34,18 @@ Formantu paska pomocniczego działa jako kontener dla okien podrzędnych. Te okn
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   
--   [Crebar — vs. Crebarctrl —](../mfc/crebar-vs-crebarctrl.md)  
+-   [CReBar a CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)  
   
--   [Tworzenie formantu paska pomocniczego](../mfc/creating-a-rebar-control.md)  
+-   [Tworzenie kontrolki paska pomocniczego](../mfc/creating-a-rebar-control.md)  
   
--   [Formanty paska pomocniczego i paski](../mfc/rebar-controls-and-bands.md)  
+-   [Kontrolki paska pomocniczego i paski](../mfc/rebar-controls-and-bands.md)  
   
--   [Używanie List obrazów z formantem paska pomocniczego](../mfc/using-an-image-list-with-a-rebar-control.md)  
+-   [Używanie listy obrazów z kontrolką paska pomocniczego](../mfc/using-an-image-list-with-a-rebar-control.md)  
   
--   [Używanie paska dialogowego z formantem paska pomocniczego](../mfc/using-a-dialog-bar-with-a-rebar-control.md)  
+-   [Używanie paska dialogowego z kontrolką paska pomocniczego](../mfc/using-a-dialog-bar-with-a-rebar-control.md)  
   
--   [Przetwarzanie komunikatów powiadomień w formancie paska pomocniczego](../mfc/processing-notification-messages-in-a-rebar-control.md)  
+-   [Przetwarzanie komunikatów powiadomień w kontrolce paska pomocniczego](../mfc/processing-notification-messages-in-a-rebar-control.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

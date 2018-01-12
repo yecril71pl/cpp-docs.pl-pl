@@ -13,17 +13,18 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b92eb646b152a7bbd4588fe953a762389ce111dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff80109c1f3a5e03ecb85406cdaea24804f96783
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurowanie programów dla systemu Windows XP
 Ponieważ program Visual Studio obsługuje wiele platform procesami, można kierować systemów operacyjnych i bibliotek środowiska uruchomieniowego, które nie są obsługiwane przez zestaw domyślny. Na przykład, przełączając zestaw narzędzi platformy służy C ++ 11, języka C ++ 14 i C ++ 17 języka ulepszenia obsługiwane przez kompilator języka Visual C++ w programie Visual Studio do tworzenia aplikacji przeznaczonych [!INCLUDE[winxp](../build/includes/winxp_md.md)] i [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Można również obsługa zgodnych binarnie starszego kodu za pomocą starszej procesami platformy i nadal korzystać z najnowszych funkcji środowiska IDE programu Visual Studio.  
   
 > [!NOTE]
->  Jeśli używasz [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], musisz zainstalować [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aktualizacji 4, aby dodać zestaw narzędzi platformy obsługiwane [!INCLUDE[winxp](../build/includes/winxp_md.md)] i [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Aby pobrać i zainstalować kopię [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aktualizacji 4, zobacz [programu Microsoft Visual Studio Express 2012 for Windows Desktop](http://go.microsoft.com/fwlink/?LinkID=265464) w programie Microsoft Download Center. Następnie zainstaluj [programu Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/?LinkID=335900) można pobrać zestaw narzędzi platformy v110_xp. Użyj usługi Windows Update do uzyskania najnowszych aktualizacji oprogramowania po instalacji.  
+>  Jeśli używasz [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], musisz zainstalować [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aktualizacji 4, aby dodać zestaw narzędzi platformy obsługiwane [!INCLUDE[winxp](../build/includes/winxp_md.md)] i [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Aby pobrać i zainstalować kopię [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aktualizacji 4, zobacz [programu Microsoft Visual Studio Express 2012 for Windows Desktop](http://go.microsoft.com/fwlink/p/?linkid=265464) w programie Microsoft Download Center. Następnie zainstaluj [programu Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/p/?linkid=335900) można pobrać zestaw narzędzi platformy v110_xp. Użyj usługi Windows Update do uzyskania najnowszych aktualizacji oprogramowania po instalacji.  
   
 ## <a name="windows-xp-targeting-experience"></a>Windows XP przeznaczonych dla środowiska  
  Zestaw narzędzi platformy systemu Windows XP, który znajduje się w programie Visual Studio jest wersja [!INCLUDE[win7](../build/includes/win7_md.md)] zestawu SDK, który został uwzględniony w [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], ale używa bieżącej kompilatora języka C++. Konfiguruje również właściwości projektu do odpowiednich wartości domyślnych — na przykład specyfikację zgodne konsolidatora przeznaczony do niższego poziomu. Tylko Windows aplikacji klasycznych, które są tworzone za pomocą zestawu narzędzi platformy systemu Windows XP, uruchom na [!INCLUDE[winxp](../build/includes/winxp_md.md)] i [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], ale tych aplikacji można również uruchomić na nowszą systemów operacyjnych Windows.  

@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb5b9968ad652e5ab6ef4dd29eb3c6ccc6da7493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17853a43d3a94be779b659b0da825467fa66f61c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-documentation-visual-c"></a>Dokumentacja XML (Visual C++)
 W programie Visual C++ komentarze można dodawać do kodu źródłowego, które będą przetwarzane do pliku XML. Ten plik można następnie dane wejściowe do procesu, który tworzy dokumentację dla klas w kodzie.  
@@ -42,11 +43,11 @@ W programie Visual C++ komentarze można dodawać do kodu źródłowego, które 
   
 |Aby uzyskać informacje na temat|Zobacz|  
 |---------------------------|---------|  
-|Opcje kompilatora do użycia|[/ doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
+|Opcje kompilatora do użycia|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
 |Znaczniki służy do zapewnienia najczęściej używane funkcje w dokumentacji|[Zalecane tagi przeznaczone do komentarzy dokumentacji](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
 |Ciągi identyfikatorów, które kompilator generuje do identyfikowania konstrukcje w kodzie|[Przetwarzanie pliku XML](../ide/dot-xml-file-processing.md)|  
 |Jak ograniczyć tagów dokumentacji|[Ograniczniki tagów dokumentacji Visual C++](../ide/delimiters-for-visual-cpp-documentation-tags.md)|  
-|Generowanie pliku XML z jednego lub więcej plików xdc.|[Xdcmake — odwołanie](../ide/xdcmake-reference.md)|  
+|Generowanie pliku XML z jednego lub więcej plików xdc.|[XDCMake — dokumentacja](../ide/xdcmake-reference.md)|  
 |Linki do informacji dotyczących XML, ponieważ odnosi się do obszarów funkcji programu Visual Studio|[Kod XML w Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)|  
   
  Jeśli trzeba umieścić specjalne znaki XML w tekście komentarza do dokumentacji, należy użyć jednostki XML lub sekcji CDATA.  

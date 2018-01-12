@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6034dc13c554769ab62b37bd1ca143527b5f82e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e48872907b07b0adf18cf17cca6ec6ecabe9e2de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumenty, widoki i struktura
 Istotą programu MFC framework są dokumentu i widoku. Dokument jest obiekt danych, z którą użytkownik wchodzi w interakcję w sesji. Jest tworzona przez `New` lub **Otwórz** na **pliku** menu i są zwykle zapisywane w pliku. (Dokumentów standardowego MFC, pochodzi z klasy **CDocument**, są inne niż dokumenty aktywne i dokumentów złożonych OLE.) Widok jest obiekt window, za pomocą którego użytkownik wchodzi w interakcję z dokumentu.  

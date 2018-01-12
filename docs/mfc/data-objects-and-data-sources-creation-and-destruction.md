@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b919fec6f9e835a788b6d9c7b5f5d8715bd22b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28d468bef2eee05600b4d298f966533a7e6bc025
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Obiekty danych i źródła danych: tworzenie i likwidacja
 Jak opisano w artykule [obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md), obiekty danych i źródeł danych reprezentują obie strony transferu danych. W tym artykule opisano, kiedy należy utworzyć i zniszcz te obiekty i źródła przeprowadzanie Twojej transferów danych, w tym:  
@@ -90,4 +91,4 @@ Jak opisano w artykule [obiekty danych i źródła danych (OLE)](../mfc/data-obj
 ## <a name="see-also"></a>Zobacz też  
  [Obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
  [Klasa COleDataObject](../mfc/reference/coledataobject-class.md)   
- [COleDataSource — klasa](../mfc/reference/coledatasource-class.md)
+ [Klasa COleDataSource](../mfc/reference/coledatasource-class.md)

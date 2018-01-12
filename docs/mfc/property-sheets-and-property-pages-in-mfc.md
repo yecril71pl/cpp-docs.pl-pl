@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 93288308f78d719c4b2cad60ac4a95a607726f4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24a66bf9e062e43225827afdbb0bba45511c5f13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>Arkusze właściwości i strony właściwości w MFC
 Arkusz właściwości, znanej także jako okno dialogowe kartę, to okno dialogowe, który zawiera strony właściwości. Każdej strony właściwości jest oparta na zasobu szablonu okna dialogowego i zawiera formanty. Na stronie będzie znajdował się z karty w górnej części. Karcie nazwy strony i wskazuje jej celem. Użytkownicy kartę w arkuszu właściwości, aby wybrać zestaw kontrolek.  

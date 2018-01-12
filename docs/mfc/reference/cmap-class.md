@@ -49,11 +49,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b745bb345377336377e46b9e49a45b340a2609b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd7c1b23e3c586bf89a86e17d85ee5b5050fbf37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmap-class"></a>Klasa CMap
 Klasa kolekcji słownik mapujący klucze unikatowe wartości.  
@@ -213,7 +214,7 @@ void GetNextAssoc(
  `rNextPosition`  
  Określa odwołania do **pozycji** wartość zwrócona przez poprzednie `GetNextAssoc` lub `GetStartPosition` wywołania.  
   
- *KLUCZ*  
+ *KEY*  
  Parametr szablonu określający typ klucza mapy.  
   
  `rKey`  
@@ -477,4 +478,4 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe MFC ZBIERANIE](../../visual-cpp-samples.md)   
  [CObject — klasa](../../mfc/reference/cobject-class.md)   
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)  
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)  

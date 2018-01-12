@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8065af989f220f5954b851149c1b7c7a814a7d1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04f1edc7f181bdb23e050d2fa608c9b3a2056749
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Usuwanie wszystkich obiektów z kolekcji CObject
 W tym artykule opisano sposób usuwania wszystkich obiektów z kolekcji (bez usuwania samego obiektu kolekcji).  
@@ -88,5 +89,5 @@ W tym artykule opisano sposób usuwania wszystkich obiektów z kolekcji (bez usu
  Możesz wywołać `RemoveAll` Aby usunąć wszystkie elementy na mapie lub `RemoveKey` usunąć pojedynczy element z określonym kluczem.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji](../mfc/accessing-all-members-of-a-collection.md)
+ [Uzyskiwanie dostępu do wszystkich składowych kolekcji](../mfc/accessing-all-members-of-a-collection.md)
 

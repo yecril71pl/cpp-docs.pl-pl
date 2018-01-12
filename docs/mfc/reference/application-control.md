@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b5c64a8e624d48bf07348c591d42920911d711b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c055f5489c7b85f5f974256709451426b614db47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-control"></a>Sterowanie aplikacjami
 OLE wymaga znacznej kontrolę nad ich obiektów i aplikacji. Biblioteki DLL systemu OLE musi mieć możliwość uruchamiania i automatycznie wersji aplikacji, koordynować ich produkcyjnego i modyfikacji obiektów i tak dalej. Funkcje, w tym temacie spełnienia tych wymagań. Oprócz wywoływana przez system OLE bibliotek DLL, można wywołać przez aplikacje, a także czasami tych funkcji. 

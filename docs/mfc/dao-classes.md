@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1fc852bf2becb429c5931341cfd426bc7c877ae
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: c80351071318b88956fa3717875561bdf30232dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dao-classes"></a>Klasy DAO
 Te klasy współpracować z innych aplikacji framework klas aby zapewnić łatwy dostęp do baz danych obiektu DAO (Data Access), korzystających z tego samego aparatu bazy danych programu Microsoft Visual Basic i programu Microsoft Access. Klasy DAO można także uzyskać dostęp do różnych baz danych, dla których dostępne są sterowniki otwarte połączenie bazy danych (ODBC).  

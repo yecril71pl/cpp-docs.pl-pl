@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 494372aa3e6dcc418a6ffdacbb7b06635a010310
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dacb5cc7aa1c6d7c74a07ee911c5887efe1d877b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Dostosowywanie elementu nagłówka &#39; wygląd s
 Przez ustawienie *dwStyle* parametru podczas tworzenia formantu nagłówka ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), można określić wygląd i zachowanie nagłówka elementy lub nagłówka samą kontrolką.  
@@ -44,5 +45,5 @@ Przez ustawienie *dwStyle* parametru podczas tworzenia formantu nagłówka ([CHe
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

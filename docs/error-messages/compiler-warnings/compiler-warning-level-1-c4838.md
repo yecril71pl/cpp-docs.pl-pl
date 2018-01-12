@@ -14,11 +14,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 227af1840fe5aee63545e35456fe09749f00de1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76002ebf0a6ac6e610b1fcd10d02fab49287495b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4838"></a>Kompilator C4838 ostrzegawcze (poziom 1)
 Konwersja z "type_1" na "type_2" wymaga konwersji zawężającej  

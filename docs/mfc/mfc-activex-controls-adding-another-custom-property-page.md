@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 225535055f05fa8d6eeb08476004fbc5074e86b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e342df8bee9b69d0d84e3096f727d2c260b7493
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Kontrolki ActiveX MFC: dodawanie dodatkowej niestandardowej strony właściwości
 Czasami formantu ActiveX ma więcej właściwości, niż można przypuszczać zmieścić na jednej stronie właściwości. W takim przypadku można dodać strony właściwości do formantu ActiveX, aby wyświetlić te właściwości.  
@@ -33,9 +34,9 @@ Czasami formantu ActiveX ma więcej właściwości, niż można przypuszczać zm
   
  Aby uzyskać więcej informacji na używanie stron właściwości formantu ActiveX zobacz następujące artykuły:  
   
--   [Formanty MFC ActiveX: Strony właściwości](../mfc/mfc-activex-controls-property-pages.md)  
+-   [Kontrolki ActiveX MFC: strony właściwości](../mfc/mfc-activex-controls-property-pages.md)  
   
--   [Formanty MFC ActiveX: Używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
+-   [Kontrolki ActiveX MFC: używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
     > [!NOTE]
     >  Zalecane jest tej właściwości nowej strony odpowiednia rozmiar standardowego dla strony właściwości formantu ActiveX. Właściwości podstawowych obrazu i kolor strony miary 250 x 62 jednostki okna dialogowego (DLU). Strona właściwości standardowej czcionki jest Dlu 250 x 110. Właściwości domyślnej strony utworzone przez kreatora formantu ActiveX korzysta ze standardu DLU 250 x 62.  

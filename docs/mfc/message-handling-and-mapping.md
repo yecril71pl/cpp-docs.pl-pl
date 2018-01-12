@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 64a99bad7d6bc7fa937100cc5bf864e968572402
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e6c13ed0bb19ef1ed2864378e151c6be8d98887
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-handling-and-mapping"></a>Obsługa i mapowanie komunikatów
 Rodziny tego artykułu opisano, jak komunikaty i polecenia są przetwarzane przez MFC framework i jak łączyć się ich funkcje programu obsługi.  
@@ -44,16 +45,16 @@ Rodziny tego artykułu opisano, jak komunikaty i polecenia są przetwarzane prze
   
 -   [Deklarowanie funkcji obsługi komunikatów](../mfc/declaring-message-handler-functions.md)  
   
--   [Mapowanie komunikatów na funkcje](../mfc/reference/mapping-messages-to-functions.md)  
+-   [Mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)  
   
 -   [Sposób wyświetlania informacji o poleceniu na pasku stanu](../mfc/how-to-display-command-information-in-the-status-bar.md)  
   
 -   [Aktualizacja dynamiczna obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)  
   
--   [Porady: Tworzenie mapy komunikatów dla klasy szablonów](../mfc/how-to-create-a-message-map-for-a-template-class.md)  
+-   [Instrukcje: tworzenie mapy komunikatów dla klasy szablonów](../mfc/how-to-create-a-message-map-for-a-template-class.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pojęcia](../mfc/mfc-concepts.md)   
  [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)   
  [Klasa CWnd](../mfc/reference/cwnd-class.md)   
- [CCmdTarget — klasa](../mfc/reference/ccmdtarget-class.md)
+ [Klasa CCmdTarget](../mfc/reference/ccmdtarget-class.md)

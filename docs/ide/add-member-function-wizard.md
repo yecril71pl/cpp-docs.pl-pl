@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 001af91af02f5b24e58737181258f036fe73a407
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 775b519b304549b474cd21980ef5a4cbe8f2d4d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-member-function-wizard"></a>Kreator dodawania funkcji członkowskiej
 Ten kreator dodaje deklaracji funkcji elementu członkowskiego do pliku nagłówka i implementacji funkcji elementu członkowskiego klasy zastępczej, do pliku implementacji dla wybranej klasy.  
@@ -32,8 +33,8 @@ Ten kreator dodaje deklaracji funkcji elementu członkowskiego do pliku nagłów
 ||||  
 |-|-|-|  
 |`char`|`int`|`unsigned int`|  
-|**podwójne**|**długa**|`unsigned long`|  
-|**float**|**krótki**|`void`|  
+|**double**|**long**|`unsigned long`|  
+|**float**|**short**|`void`|  
 |`HRESULT`|`unsigned char`||  
   
  **Nazwa funkcji**  
@@ -45,8 +46,8 @@ Ten kreator dodaje deklaracji funkcji elementu członkowskiego do pliku nagłów
 ||||  
 |-|-|-|  
 |`char`|`int`|`unsigned char`|  
-|**podwójne**|**długa**|`unsigned int`|  
-|**float**|**krótki**|`unsigned long`|  
+|**double**|**long**|`unsigned int`|  
+|**float**|**short**|`unsigned long`|  
   
  **Nazwa parametru**  
  Ustawia nazwę parametru dodawanego do funkcji członkowskiej, jeśli funkcja członkowska ma następujące parametry.  
@@ -57,17 +58,17 @@ Ten kreator dodaje deklaracji funkcji elementu członkowskiego do pliku nagłów
  **Dostęp**  
  Ustawia dostęp do funkcji członkowskiej. Modyfikatory dostępu są słów kluczowych, które Określ dostęp innych klas, że funkcja elementu członkowskiego. Zobacz [kontroli dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md) Aby uzyskać więcej informacji na temat określania dostępu. Poziom dostępu do funkcji Członkowskich ustawiono **publicznego** domyślnie.  
   
--   [publiczny](../cpp/public-cpp.md)  
+-   [public](../cpp/public-cpp.md)  
   
--   [chronione](../cpp/protected-cpp.md)  
+-   [protected](../cpp/protected-cpp.md)  
   
--   [prywatne](../cpp/private-cpp.md)  
+-   [private](../cpp/private-cpp.md)  
   
  Sprawdź, czy nowych funkcji członkowskiej jest statyczny lub wirtualnych oraz czy jest wbudowany lub czystej. Jeśli ustawisz funkcji członkowskiej jako czysty, `Virtual` pole wyboru jest zaznaczone oraz **wbudowanego** pole wyboru jest niedostępny. Wartość domyślna to funkcja członkowska Niestatyczne, niewirtualna.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|[Statyczne](../cpp/storage-classes-cpp.md)|Określa, że funkcja działa jak globalnym i może zostać wywołana poza klasy, nawet w przypadku nie wystąpienia klasy. Funkcja członkowska nie ma dostępu do niestatycznego elementów członkowskich. Funkcja członkowska określony jako `Static` nie może być wirtualny.|  
+|[Static](../cpp/storage-classes-cpp.md)|Określa, że funkcja działa jak globalnym i może zostać wywołana poza klasy, nawet w przypadku nie wystąpienia klasy. Funkcja członkowska nie ma dostępu do niestatycznego elementów członkowskich. Funkcja członkowska określony jako `Static` nie może być wirtualny.|  
 |[Wirtualny](../cpp/virtual-cpp.md)|Zapewnia, że funkcja poprawny element członkowski jest wywoływana dla obiektu, niezależnie od wyrażenia używane do tworzenia wywołań funkcji członkowskiej. Funkcja członkowska określony jako `Virtual` nie może być statyczna.|  
 |**Czysty**|Wskazuje, że implementacja nie są udostępniane dla funkcji wirtualny element członkowski został zadeklarowany; w związku z tym **czystej** można określić tylko dla funkcji wirtualnych elementów członkowskich. Klasa, która zawiera co najmniej jeden czystej wirtualnej funkcji członkowskiej jest traktowany jako klasy abstrakcyjnej. Klasy pochodne klasy abstrakcyjnej klasy należy zaimplementować czystej wirtualnej funkcji członkowskiej lub są one, zbyt, klas abstrakcyjnych.|  
 |[Wbudowany](../cpp/inline-functions-cpp.md)|Instruuje kompilator, aby wstawić kopię treści funkcji Członkowskich do każdego miejsca, gdy funkcja członkowska zostanie wywołana. Funkcja członkowska określony jako **wbudowanego** nie może być czystym.|  

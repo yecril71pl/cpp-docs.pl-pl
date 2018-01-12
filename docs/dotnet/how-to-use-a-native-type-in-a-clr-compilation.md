@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b79e8038b95d6d60332301d0c744b50ea852f82
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c0a73d5bd9c165645dbf3c3cdee7a740cc3c16a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Porady: używanie typu natywnego w kompilacji /clr
 Można zdefiniować typu macierzystego w **/CLR** kompilacji i użycia tego typu z macierzystego w zestawie jest nieprawidłowy. Jednak natywnych typów nie będą dostępne do użycia, z którym związane są odwołania metadanych.  
@@ -68,4 +71,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+ [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

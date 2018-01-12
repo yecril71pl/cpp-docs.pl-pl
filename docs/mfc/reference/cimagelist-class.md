@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07065470a7dda56650224bc794579a5038c9b643
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dae44f60c61222659304bea4ee811999d50280b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimagelist-class"></a>Cimagelist — klasa
 Udostępnia funkcje formantu listy typowych obrazu systemu Windows.  
@@ -680,7 +681,7 @@ BOOL DrawIndirect(
  *fState*  
  Flaga określający stan rysowania. Ten element członkowski może zawierać jedną lub więcej flag stan listy obrazów.  
   
- *Ramki*  
+ *Ramka*  
  Wpływa na działanie efekty saturate i przenikanie alfa.  
   
  W przypadku użycia z **ILS_SATURATE**, ten element członkowski ma wartość, która jest dodawana do każdego składnika kolor Trzykolumnowa RGB dla każdego piksela ikony.  
@@ -1066,4 +1067,4 @@ BOOL Write(CArchive* pArchive);
  [CObject — klasa](../../mfc/reference/cobject-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Clistctrl — klasa](../../mfc/reference/clistctrl-class.md)   
- [Ctabctrl — klasa](../../mfc/reference/ctabctrl-class.md)
+ [Klasa CTabCtrl](../../mfc/reference/ctabctrl-class.md)

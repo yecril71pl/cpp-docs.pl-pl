@@ -243,7 +243,6 @@
 ## [Makra klasy okna](window-class-macros.md)
 ## [Makra komunikatów systemu Windows](windows-messages-macros.md)
 # [Zmienne globalne ATL](atl-global-variables.md)
-## [_pAtlModule](patlmodule.md)
 # [Kreatory i okna dialogowe ATL](atl-wizards-and-dialog-boxes.md)
 ## [Ustawienia aplikacji, kreator projektów ATL](application-settings-atl-project-wizard.md)
 ## [Kreator składników stron Active Server Page ATL, ASP](asp-atl-active-server-page-component-wizard.md)

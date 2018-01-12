@@ -37,11 +37,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9ce4874fc0dd2a238f26219fe6dd0fd36a01a79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79cea720391127f52d441de8f02c53756790d4b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinterpolatorbase-class"></a>Klasa CInterpolatorBase
 Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy należy obliczyć nową wartość zmiennej animacji.  

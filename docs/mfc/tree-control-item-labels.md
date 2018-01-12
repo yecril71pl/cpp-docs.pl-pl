@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de81e2694d25375c56a2aa8300146b4d1f5f7b87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d9baece3986b00aa2fbcea2b4b64217618834a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-item-labels"></a>Etykiety elementów kontrolki drzewa
 Zazwyczaj należy określić tekst etykiety elementu podczas dodawania elementu do kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). `InsertItem` Może przekazać funkcji członkowskiej [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) struktury, która definiuje właściwości elementu, w tym ciąg zawierający tekst etykiety. `InsertItem`ma kilka przeciążeń, które mogą być wywoływane z różnych kombinacji parametrów.  
@@ -34,5 +35,5 @@ Zazwyczaj należy określić tekst etykiety elementu podczas dodawania elementu 
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

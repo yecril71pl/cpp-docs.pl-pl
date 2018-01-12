@@ -413,11 +413,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 11ece1ca08fc7f8b02c3f32284a986abc3e8e361
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e8424638311cd6fdbe220bfd98bb27409ee670e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdc-class"></a>Klasa CDC
 Definiuje klasę obiektów kontekstu urządzenia.  
@@ -6366,4 +6367,4 @@ BOOL WidenPath();
  [Cpaintdc — klasa](../../mfc/reference/cpaintdc-class.md)   
  [Klasa CWindowDC](../../mfc/reference/cwindowdc-class.md)   
  [Cclientdc — klasa](../../mfc/reference/cclientdc-class.md)   
- [Cmetafiledc — klasa](../../mfc/reference/cmetafiledc-class.md)
+ [Klasa CMetaFileDC](../../mfc/reference/cmetafiledc-class.md)

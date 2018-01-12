@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5bde60a4e0c8ec9c0f9091edd40397a371e0e66e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ca153ec9ca079bf13b1c1c1dcedd6e41497307f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="redistributing-the-mfc-library"></a>Redystrybuowanie biblioteki MFC
 Dynamiczne łącze aplikacji do biblioteki MFC, należy wykonać ponowną dystrybucję zgodne biblioteki MFC DLL. Na przykład jeśli aplikacja MFC jest zbudowany przy użyciu wersji biblioteki MFC, który jest dostarczany z programem Visual Studio 2015, należy ponownie rozesłać mfc140.dll lub mfc140u.dll, w zależności od tego, czy aplikacja jest kompilowany dla wąskie znaków lub obsługi formatu Unicode.  
@@ -28,7 +29,7 @@ Dynamiczne łącze aplikacji do biblioteki MFC, należy wykonać ponowną dystry
 > [!NOTE]
 >  Pliki mfc140.dll zostały pominięte z katalogu plików pakietu redystrybucyjnego programu Visual Studio 2015 RTM. Wersje zainstalowane przez Visual Studio 2015 w katalogach Windows\system32 i Windows\syswow64 zamiast tego można użyć.  
   
- Ponieważ wszystkie biblioteki DLL MFC korzystają z udostępnionej wersji biblioteki środowiska uruchomieniowego C (CRT), konieczne może być ponownie rozesłać CRT. Wersja MFC, który jest dostarczany z programem Visual Studio 2015 korzysta z biblioteki CRT uniwersalnego jest rozpowszechniany jako część systemu Windows 10. Aby uruchomić aplikację MFC utworzony za pomocą programu Visual Studio 2015 we wcześniejszych wersjach systemu Windows, należy ponownie rozesłać Universal CRT. Aby uzyskać informacje na temat sposobu ponownej dystrybucji universal CRT jako składnik systemu operacyjnego lub przy użyciu lokalnego wdrożenia, zobacz [wprowadzenie Universal CRT](http://go.microsoft.com/fwlink/?LinkId=617977). Aby pobrać uniwersalne CRT centralnej wdrożenia w obsługiwanych wersjach systemu Windows, zobacz [Windows 10 Universal C Runtime](http://go.microsoft.com/fwlink/p/?LinkId=619489). Pakiet redystrybucyjny wersje architektury ucrtbase.dll dla wdrożenia lokalnego znajdują się w zestawie Windows SDK. Domyślnie program Visual Studio instaluje je w \Windows Kits\10\Redist\ucrt\DLLs\ C:\Program Files (x86) w podkatalogu architektury.  
+ Ponieważ wszystkie biblioteki DLL MFC korzystają z udostępnionej wersji biblioteki środowiska uruchomieniowego C (CRT), konieczne może być ponownie rozesłać CRT. Wersja MFC, który jest dostarczany z programem Visual Studio 2015 korzysta z biblioteki CRT uniwersalnego jest rozpowszechniany jako część systemu Windows 10. Aby uruchomić aplikację MFC utworzony za pomocą programu Visual Studio 2015 we wcześniejszych wersjach systemu Windows, należy ponownie rozesłać Universal CRT. Aby uzyskać informacje na temat sposobu ponownej dystrybucji universal CRT jako składnik systemu operacyjnego lub przy użyciu lokalnego wdrożenia, zobacz [wprowadzenie Universal CRT](http://go.microsoft.com/fwlink/p/?linkid=617977). Aby pobrać uniwersalne CRT centralnej wdrożenia w obsługiwanych wersjach systemu Windows, zobacz [Windows 10 Universal C Runtime](http://go.microsoft.com/fwlink/p/?LinkId=619489). Pakiet redystrybucyjny wersje architektury ucrtbase.dll dla wdrożenia lokalnego znajdują się w zestawie Windows SDK. Domyślnie program Visual Studio instaluje je w \Windows Kits\10\Redist\ucrt\DLLs\ C:\Program Files (x86) w podkatalogu architektury.  
   
  Jeśli aplikacja jest zbudowany przy użyciu wcześniejszej wersji biblioteki MFC, należy ponownie rozesłać pasującego DLL CRT z katalogu plików pakietu redystrybucyjnego. Na przykład jeśli aplikacja MFC jest utworzony za pomocą narzędzi Visual Studio 2013 (vc120), należy ponownie rozesłać msvcr120.dll. Należy ponownie rozesłać pasującego mfc`<version>`u.dll lub mfc`<version>`dll.  
   
@@ -49,9 +50,9 @@ Dynamiczne łącze aplikacji do biblioteki MFC, należy wykonać ponowną dystry
   
  Pliki pakietu redystrybucyjnego .msm zawierają bibliotek DLL, które są używane do lokalizacji. Brak jednej biblioteki DLL dla każdego z obsługiwanych języków. Proces instalacji instaluje te biblioteki dll w folderze %windir%\system32\ na komputerze docelowym.  
   
- Aby uzyskać więcej informacji na temat do zlokalizowania w aplikacjach MFC, zobacz [TN057: Lokalizacja składników MFC](../mfc/tn057-localization-of-mfc-components.md)oraz [208983 artykuł: jak przy użyciu Lokalizacja biblioteki DLL MFC](http://go.microsoft.com/fwlink/?LinkId=198025) w witrynie sieci Web Microsoft Support.  
+ Aby uzyskać więcej informacji na temat do zlokalizowania w aplikacjach MFC, zobacz [TN057: Lokalizacja składników MFC](../mfc/tn057-localization-of-mfc-components.md)oraz [208983 artykuł: jak przy użyciu Lokalizacja biblioteki DLL MFC](http://go.microsoft.com/fwlink/p/?linkid=198025) w witrynie sieci Web Microsoft Support.  
   
  Można ponownie rozesłać Lokalizacja biblioteki MFC DLL przez wdrożenie biblioteki MFC DLL w lokalnym folderze aplikacji. Aby uzyskać więcej informacji o sposobie Ponowna dystrybucja bibliotek języka Visual C++, zobacz [redystrybuowanie pliki Visual C++](../ide/redistributing-visual-cpp-files.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Redystrybuowanie plików programu Visual C++](../ide/redistributing-visual-cpp-files.md)
+ [Ponowne dystrybuowanie plików programu Visual C++](../ide/redistributing-visual-cpp-files.md)

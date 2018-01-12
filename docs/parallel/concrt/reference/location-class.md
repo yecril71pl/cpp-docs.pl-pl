@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aafe0500568cd9d4c9419345560272e18008df83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26a45809ce41beb36a5f69d2ab219b85e3aafcdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="location-class"></a>location — Klasa
 Abstrakcja lokalizację fizyczną na sprzęcie.  
@@ -55,7 +56,7 @@ class location;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator! =](#operator_neq)|Określa, czy dwa `location` reprezentować innej lokalizacji.|  
+|[operator!=](#operator_neq)|Określa, czy dwa `location` reprezentować innej lokalizacji.|  
 |[operator =](#operator_eq)|Przypisuje zawartość innym `location` obiektu do tego.|  
 |[operator ==](#operator_eq_eq)|Określa, czy dwa `location` reprezentować tej samej lokalizacji.|  
   
@@ -171,4 +172,4 @@ bool operator== (const location& _Rhs) const;
  `true`Jeśli dwie lokalizacje są identyczne, i `false` inaczej.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)
+ [Przestrzeń nazw współbieżności](concurrency-namespace.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb13e31df1b30c775d1e961f09b10163d06b1ea7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27046704975bf8f5e28f12acbfa72e860660fdbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimage-limitations-with-earlier-operating-systems"></a>Ograniczenia funkcji CImage w przypadku starszych systemów operacyjnych
 Wiele `CImage` funkcje działają tylko z nowszymi wersjami systemu Windows: Windows 95/98 lub Windows NT 4.0 ani Windows 2000. W tym artykule opisano ograniczenia wersji niektórych metod.  
@@ -46,4 +47,4 @@ Wiele `CImage` funkcje działają tylko z nowszymi wersjami systemu Windows: Win
  Jeśli kompilacja Twojej aplikacji z ustawioną 0x0500 _WIN32_WINNT lub większą, **rysowania** obsłuży przejrzystości automatycznie na komputerach z systemem Windows 2000 lub Windows 98 i nowszych. Może ona również działać, ale bez obsługi przezroczystości, z systemu Windows NT 4.0 i system operacyjny Windows 95; jednak należy użyć **/delayload** opóźnienia ładowania msimg32. LIB, jak opisano powyżej dla `AlphaBlend` i `TransparentBlt`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [CImage — klasa](../atl-mfc-shared/reference/cimage-class.md)
+ [CImage, klasa](../atl-mfc-shared/reference/cimage-class.md)

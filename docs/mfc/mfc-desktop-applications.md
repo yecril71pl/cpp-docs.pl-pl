@@ -20,14 +20,15 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8bc3b4b2273db0c5b090bf24875daafe7c63ec6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5f99270afc1f603b8e5e44a23cd422f96558efb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-desktop-applications"></a>Aplikacje dla Pulpitu MFC
-Biblioteka Microsoft Foundation Class (MFC) zapewnia otoki zorientowane obiektowo przez większość Win32 i interfejsów API modelu COM.. Mimo że może służyć do tworzenia aplikacji klasycznych bardzo proste, jest najbardziej przydatne w przypadku należy utworzyć bardziej złożoną interfejsów użytkownika za pomocą wielu formantów. MFC służy do tworzenia aplikacji z interfejsem użytkownika w stylu pakietu Office.  
+Biblioteka Microsoft Foundation Class (MFC) zapewnia otoki zorientowane obiektowo przez większość Win32 i interfejsów API modelu COM. Mimo że może służyć do tworzenia aplikacji klasycznych bardzo proste, jest najbardziej przydatne w przypadku należy utworzyć bardziej złożoną interfejsów użytkownika za pomocą wielu formantów. MFC służy do tworzenia aplikacji z interfejsem użytkownika w stylu pakietu Office.  
   
  Odwołanie do biblioteki MFC obejmuje klas, funkcje globalne, zmienne globalne i makra, które tworzą Microsoft Foundation Class Library.  
   
@@ -46,13 +47,13 @@ Biblioteka Microsoft Foundation Class (MFC) zapewnia otoki zorientowane obiektow
  [Pojęcia](mfc-concepts.md)  
  Artykuły koncepcyjne na tematy dotyczące MFC.  
   
- [Diagram hierarchii](hierarchy-chart.md)  
+ [Wykres hierarchii](hierarchy-chart.md)  
  Szczegóły wizualnie relacje klas w bibliotece klas.  
   
  [Przegląd klas](class-library-overview.md)  
  Zawiera klasy biblioteki MFC według kategorii.  
   
- [Instruktaże](walkthroughs-mfc.md)  
+ [Przewodniki](walkthroughs-mfc.md)  
  Zawiera artykuły, które umożliwia przeprowadzenie różnych zadań związanych z funkcjami biblioteki MFC.  
   
  [Uwagi techniczne](mfc-technical-notes.md)  
@@ -73,14 +74,14 @@ Biblioteka Microsoft Foundation Class (MFC) zapewnia otoki zorientowane obiektow
  [Struktury, style, wywołania zwrotne i mapy komunikatów](reference/structures-styles-callbacks-and-message-maps.md)  
  Zawiera łącza do struktury, style, wywołania zwrotne i mapy komunikatów używany przez bibliotekę MFC.  
   
- [MFC kreatorach i oknach dialogowych](reference/mfc-wizards-and-dialog-boxes.md)  
+ [Kreatory i okna dialogowe MFC](reference/mfc-wizards-and-dialog-boxes.md)  
  Przewodnik dotyczący funkcji w programie Visual Studio przy tworzeniu aplikacji MFC.  
   
  [Praca z plikami zasobów](../windows/working-with-resource-files.md)  
  Jak używać plików zasobów do zarządzania danymi interfejsu statycznego użytkownika, takich jak parametry interfejsu użytkownika i układ okna dialogowego.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kategorie diagramów hierarchii](hierarchy-chart-categories.md)  
+ [Kategorie wykresów hierarchii](hierarchy-chart-categories.md)  
  Opisuje MFC diagram hierarchii według kategorii.  
   
  [ATL/MFC udostępnionych klas](../atl-mfc-shared/atl-mfc-shared-classes.md)  

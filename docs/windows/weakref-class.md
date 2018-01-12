@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 148c39f1ef38b6b20de6d50cc75352a4f30a9090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8263595bdd564c313a8783a3a9baf0c6d562494
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakref-class"></a>WeakRef — Klasa
 Reprezentuje *słabe odwołanie* które mogą być używane przez tylko środowiska uruchomieniowego systemu Windows, nie klasycznego modelu COM. Słabe odwołanie reprezentuje obiekt, który może lub nie mogą być niedostępne.  
@@ -71,22 +74,22 @@ if (strongRef == nullptr)
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Weakref::weakref — Konstruktor](../windows/weakref-weakref-constructor.md)|Inicjuje nowe wystąpienie klasy weakref —.|  
-|[Weakref —:: ~ WeakRef — destruktor](../windows/weakref-tilde-weakref-destructor.md)|Deinitializes bieżące wystąpienie klasy weakref — klasa.|  
+|[WeakRef::WeakRef, konstruktor](../windows/weakref-weakref-constructor.md)|Inicjuje nowe wystąpienie klasy weakref —.|  
+|[WeakRef::~WeakRef, destruktor](../windows/weakref-tilde-weakref-destructor.md)|Deinitializes bieżące wystąpienie klasy weakref — klasa.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[WeakRef::As — metoda](../windows/weakref-as-method.md)|Ustawia określony parametr wskaźnika comptr — do reprezentowania określonego interfejsu.|  
-|[WeakRef::AsIID — metoda](../windows/weakref-asiid-method.md)|Ustawia określony parametr wskaźnika comptr — do reprezentowania identyfikator określonego interfejsu.|  
-|[WeakRef::CopyTo — metoda](../windows/weakref-copyto-method.md)|Przypisuje wskaźnik interfejsu, jeśli jest dostępny do zmiennej wskaźnikowej określony.|  
+|[WeakRef::As, metoda](../windows/weakref-as-method.md)|Ustawia określony parametr wskaźnika comptr — do reprezentowania określonego interfejsu.|  
+|[WeakRef::AsIID, metoda](../windows/weakref-asiid-method.md)|Ustawia określony parametr wskaźnika comptr — do reprezentowania identyfikator określonego interfejsu.|  
+|[WeakRef::CopyTo, metoda](../windows/weakref-copyto-method.md)|Przypisuje wskaźnik interfejsu, jeśli jest dostępny do zmiennej wskaźnikowej określony.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[WeakRef::operator — Operator &](../windows/weakref-operator-ampersand-operator.md)|Zwraca obiekt comptrref — reprezentujący bieżący obiekt weakref —.|  
+|[Operator WeakRef::operator&](../windows/weakref-operator-ampersand-operator.md)|Zwraca obiekt comptrref — reprezentujący bieżący obiekt weakref —.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ComPtr`  
@@ -99,4 +102,4 @@ if (strongRef == nullptr)
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

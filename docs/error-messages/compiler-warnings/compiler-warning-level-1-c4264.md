@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b24153edcfb88ab8edc0ebf715e8f908ed1ce13a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b00bcad367f9eaf3d4ffa90b9916a79a92ac11be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4264"></a>Kompilator C4264 ostrzegawcze (poziom 1)
 "virtual_function": Brak dostępnego przesłonięcia dla wirtualnej funkcji członkowskiej z podstawowej "class"; funkcja jest ukryta.  

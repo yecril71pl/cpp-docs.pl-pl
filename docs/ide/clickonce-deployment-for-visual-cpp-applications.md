@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 454bc2d4fd19568f526881208da77deabbe72087
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1a036a1520a747448c5541f367f0b43711e30b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++
 Program Visual Studio oferuje dwa różne technologie wdrażania aplikacji systemu Windows: wdrażania ClickOnce lub [Instalatora Windows](http://msdn.microsoft.com/library/cc185688) wdrożenia.  
@@ -57,4 +58,4 @@ Program Visual Studio oferuje dwa różne technologie wdrażania aplikacji syste
  [Zabezpieczenia ClickOnce i wdrażania](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Tworzenie pakietów programu inicjującego](/visualstudio/deployment/creating-bootstrapper-packages)   
  [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
- [Macierzysty i współdziałaniu .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

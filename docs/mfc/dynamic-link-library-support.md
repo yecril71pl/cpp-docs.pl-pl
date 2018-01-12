@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95e7586dc15c641ff4915b3257f4ed33a552fde2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 394c48644c3b5cdc2514fefef2f4451e4098856f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamic-link-library-support"></a>Obsługa bibliotek dołączanych dynamicznie
 Biblioteki NAFXCW.lib i NAFXCWD.lib (wymienione w tabeli konwencje nazewnictwa bibliotek statyczne łącze w [konwencje nazewnictwa bibliotek](../mfc/library-naming-conventions.md)) tworzenia projektu jako biblioteki dll, nazywany "Regularne DLL MFC" (wcześniej "USRDLL") który może służyć z aplikacjami, które nie zostały skompilowane z biblioteki klas. Ta obsługa biblioteki DLL nie jest taka sama jak MFCx0.DLL i MFCx0D.DLL (nazywane AFXDLL), zawierających biblioteki całej klasy w bibliotece DLL. Aby uzyskać więcej informacji, zobacz [biblioteki dll](../build/dlls-in-visual-cpp.md). Dla tabeli nazwy bibliotek DLL, zobacz [konwencje nazewnictwa bibliotek MFC dll](../build/naming-conventions-for-mfc-dlls.md).  

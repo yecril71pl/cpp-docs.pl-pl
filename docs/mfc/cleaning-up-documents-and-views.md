@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f9bb1cbcb58e2693b33693b390a09d3826c77cfd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a95193d5ca3df890c9c97f458b76413e588bc59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cleaning-up-documents-and-views"></a>Oczyszczanie dokumentów i widoków
 Gdy dokument jest zamykany, struktura najpierw wywołuje jego [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) funkcję elementu członkowskiego. Jeśli przydzielone wszystkie pamięci na stercie w trakcie operacji dokumentu `DeleteContents` jest najlepszym miejscem, aby zwolnić go.  

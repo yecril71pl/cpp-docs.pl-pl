@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f257f12ebcf49ea12fded5e658ce2c2e25d4156c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81ec1f2a1f419715a3e8e9fbac2fcba3c7584a9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-handling-and-command-targets"></a>Obsługa komunikatów i obiekty docelowe poleceń
 Interfejs wysyłania polecenia `IOleCommandTarget` definiuje proste i rozszerzalny mechanizm zapytań i wykonywania poleceń. Ten mechanizm jest łatwiejsze niż automatyzacja `IDispatch` ponieważ opiera się na standardowy zestaw poleceń; polecenia mają rzadko argumentów i uczestniczy nie informacji o typie (typ bezpieczeństwa będzie mniejsza dla argumentów polecenia również).  

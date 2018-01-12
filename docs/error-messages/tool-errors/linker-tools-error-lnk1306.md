@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d020d7ca037c737dfb03c32ff2d773730c118311
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32b6589fa5e4d7dc02ccb9a6c3157c109725b895
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1306"></a>Błąd narzędzi konsolidatora LNK1306  
   
@@ -35,13 +36,13 @@ Aby rozwiązać ten problem
   
 Aby uzyskać więcej informacji, zobacz:  
   
--   [/ CLR (kompilacja języka wspólnego środowiska wykonawczego)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [zarządzane, niezarządzane](../../preprocessor/managed-unmanaged.md)  
   
--   [Inicjalizacja zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md)  
+-   [Inicjowanie zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md)  
   
--   [Biblioteki dll i zachowanie biblioteki wykonawczej programu Visual C++](../../build/run-time-library-behavior.md)  
+-   [Zachowanie biblioteki wykonawczej DLL i Visual C++](../../build/run-time-library-behavior.md)  
   
 ## <a name="example"></a>Przykład  
   

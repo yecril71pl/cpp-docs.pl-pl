@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 75a232816e73cf19550ca897660708cdf200784f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 05e7b2a6814cefffee258909f4bab11fcfe34f1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits — Struktura
 W tym artykule opisano typowe cechy srwlock — klasa w trybie blokady na wyłączność.  
@@ -42,8 +45,8 @@ struct SRWLockExclusiveTraits;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SRWLockExclusiveTraits::GetInvalidValue — metoda](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Pobiera obiekt srwlockexclusivetraits —, który zawsze jest nieprawidłowy.|  
-|[SRWLockExclusiveTraits::Unlock — Metoda](../windows/srwlockexclusivetraits-unlock-method.md)|Zwalnia wyłączną kontrolę określonego obiektu srwlock —.|  
+|[SRWLockExclusiveTraits::GetInvalidValue, metoda](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Pobiera obiekt srwlockexclusivetraits —, który zawsze jest nieprawidłowy.|  
+|[SRWLockExclusiveTraits::Unlock, metoda](../windows/srwlockexclusivetraits-unlock-method.md)|Zwalnia wyłączną kontrolę określonego obiektu srwlock —.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `SRWLockExclusiveTraits`  
@@ -54,4 +57,4 @@ struct SRWLockExclusiveTraits;
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+ [Microsoft::WRL::Wrappers::HandleTraits, przestrzeń nazw](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

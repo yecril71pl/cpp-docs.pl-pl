@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f4575f212752a43df2b130fbde9aa7264186d6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4d89fa475c997e0842ef9de5a21c26e664f25d78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-determine-if-shutdown-has-started-ccli"></a>Porady: ustalanie, czy rozpoczęło się zamykanie systemu (C++/CLI)
 Poniższy przykład kodu pokazuje sposób określania, czy jest obecnie przerywanie aplikacji lub programu .NET Framework. Jest to przydatne w przypadku uzyskiwania dostępu do elementów statycznych w programie .NET Framework, ponieważ podczas zamykania, tych konstrukcji sfinalizowaniu przez system i nie może być niezawodnie używany. Sprawdzając <xref:System.Environment.HasShutdownStarted%2A> właściwości, można uniknąć potencjalnych błędów przez nie dostępu do tych elementów.  
@@ -45,4 +48,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [Operacje w systemie Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

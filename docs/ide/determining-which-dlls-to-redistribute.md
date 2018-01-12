@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ae47ec92ecea46aba5f0e1bf144a34fd5532af9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3cc7b80e16abeecc756e7fa480c7bfe71682382
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Ustalanie, które biblioteki DLL są przeznaczone do ponownej dystrybucji
 
@@ -39,7 +40,7 @@ Pakiet redystrybucyjny poszczególnych bibliotek dll znajdują się również w 
 
 Aby ustalić, które biblioteki DLL trzeba przeprowadzać ponownej dystrybucji z aplikacją, zebrać listę bibliotek DLL, które zależy od aplikacji. Są zwykle wyświetlane na liście importu danych wejściowych biblioteki do konsolidatora. Niektóre biblioteki, takich jak vcruntime i Universal C Runtime Library (Biblioteka UCRT), są domyślnie dołączone. Jeśli aplikacji lub jednej z jego zależności za pomocą metody LoadLibrary dynamicznie załadować biblioteki DLL, że biblioteki DLL nie mogą być wyświetlane w danych wejściowych do konsolidatora. Jednym ze sposobów zebrać listę dynamicznie ładowanych bibliotek DLL jest uruchomienie Walkera zależności (depends.exe) w aplikacji, zgodnie z opisem w [poznanie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Niestety to narzędzie jest przestarzałe i może zgłosić, że nie można odnaleźć niektórych bibliotek DLL.
 
-Jeśli na liście zależności, porównaj je do listy połączone w pliku Redist.txt znajdują się w katalogu instalacyjnym programu Microsoft Visual Studio, lub "Lista REDYSTRYBUCYJNA" dll pakietu redystrybucyjnego do którego odwołuje się w sekcji "Pliki kodu dystrybucyjnego" Microsoft postanowień licencyjnych dotyczących oprogramowania dla tej kopii programu Visual Studio. Dla programu Visual Studio 2017 r, zobacz [Kod dystrybucyjny dla programu Microsoft Visual Studio 2017 r (zawiera narzędzia rozszerzalności i pliki BuildServer)](http://go.microsoft.com/fwlink/?LinkId=823098). Dla programu Visual Studio 2015, zobacz [Kod dystrybucyjny dla programu Microsoft Visual Studio 2015 i Microsoft Visual Studio 2015 SDK (obejmuje narzędzia i pliki BuildServer)](http://go.microsoft.com/fwlink/?LinkId=799794). Dla programu Visual Studio 2013, lista jest dostępna online w [Kod dystrybucyjny dla programu Microsoft Visual Studio 2013 i zestawu SDK programu Microsoft Visual Studio 2013](http://go.microsoft.com/fwlink/p/?LinkId=313603).
+Jeśli na liście zależności, porównaj je do listy połączone w pliku Redist.txt znajdują się w katalogu instalacyjnym programu Microsoft Visual Studio, lub "Lista REDYSTRYBUCYJNA" dll pakietu redystrybucyjnego do którego odwołuje się w sekcji "Pliki kodu dystrybucyjnego" Microsoft postanowień licencyjnych dotyczących oprogramowania dla tej kopii programu Visual Studio. Dla programu Visual Studio 2017 r, zobacz [Kod dystrybucyjny dla programu Microsoft Visual Studio 2017 r (zawiera narzędzia rozszerzalności i pliki BuildServer)](http://go.microsoft.com/fwlink/p/?linkid=823098). Dla programu Visual Studio 2015, zobacz [Kod dystrybucyjny dla programu Microsoft Visual Studio 2015 i Microsoft Visual Studio 2015 SDK (obejmuje narzędzia i pliki BuildServer)](http://go.microsoft.com/fwlink/p/?linkid=799794). Dla programu Visual Studio 2013, lista jest dostępna online w [Kod dystrybucyjny dla programu Microsoft Visual Studio 2013 i zestawu SDK programu Microsoft Visual Studio 2013](http://go.microsoft.com/fwlink/p/?LinkId=313603).
 
 W wersjach programu Visual Studio przed Visual Studio 2015, C Runtime Library (CRT) został uwzględniony jako pakiet redystrybucyjny biblioteki DLL w msvc*wersji*dll. Począwszy od programu Visual Studio 2015, funkcje w CRT zostały zrefaktoryzowany do vcruntime i Biblioteka UCRT. Biblioteka UCRT teraz jest składnikiem systemu w systemie Windows 10, zarządzane przez usługę Windows Update. Jest ona dostępna we wszystkich systemach operacyjnych Windows 10. Aby wdrożyć aplikację na starsze systemy operacyjne, może być konieczne ponownie rozesłać również Biblioteka UCRT. Wcześniejszą wersję programu Biblioteka UCRT jest uwzględniane w plikach pakietu redystrybucyjnego programu Visual Studio, które jest instalowany tylko w systemach operacyjnych starszych niż Windows 10, jeśli nie ma wersji Biblioteka UCRT jest już zainstalowana. Wersja instalowalnych Biblioteka UCRT systemów niskiego poziomu, jak pakiet aktualizacji systemu Microsoft dla [Windows 10 Universal C Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=48234) w programie Microsoft Download Center.
 

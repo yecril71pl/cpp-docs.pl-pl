@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc2da54365af1d09d92608c4e6f37c3b04fd7230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97f3b609a68071f34e1841128a66b5518e1b17db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-mfc-topics"></a>Tematy ogólne dotyczące MFC
 Tej rodziny artykułów zawiera szczegółowe informacje techniczne dotyczące biblioteki Microsoft Foundation Class (MFC) i zawiera omówienie programu MFC framework najważniejsze składniki i podsystemy.  
@@ -41,7 +42,7 @@ Tej rodziny artykułów zawiera szczegółowe informacje techniczne dotyczące b
   
  [Opieranie się na strukturze](../mfc/building-on-the-framework.md)  
   
- [CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md)  
+ [CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)  
   
  [Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)  
   
@@ -53,9 +54,9 @@ Tej rodziny artykułów zawiera szczegółowe informacje techniczne dotyczące b
   
  [Izolacja biblioteki formantów wspólnych MFC](../mfc/isolation-of-the-mfc-common-controls-library.md)  
   
- [Wymagania formantów standardowych systemu Windows Vista dotyczące kompilacji](../mfc/build-requirements-for-windows-vista-common-controls.md)  
+ [Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji](../mfc/build-requirements-for-windows-vista-common-controls.md)  
   
- [Porady: Dodawanie obsługi Menedżera ponownego uruchamiania](../mfc/how-to-add-restart-manager-support.md)  
+ [Instrukcje: dodawanie obsługi menedżera ponownego uruchamiania](../mfc/how-to-add-restart-manager-support.md)  
   
  [Układ dynamiczny](../mfc/dynamic-layout.md)  
   

@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b32cc69cfa9758ac13d54326e2c6ff6574f237be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1329cb6dd799d44d7810de22479638a105a8538f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managed-types-ccli"></a>Typy zarządzane (C++/CLI)
 Visual C++ zezwala na dostęp do funkcji typy zarządzane, które zapewniają obsługę funkcji środowiska CLR i korzyści i ograniczeń środowiska uruchomieniowego .NET.  
@@ -31,13 +34,13 @@ Visual C++ zezwala na dostęp do funkcji typy zarządzane, które zapewniają ob
   
 -   [Typy zarządzane i funkcja main](../dotnet/managed-types-and-the-main-function-cpp-cli.md)  
   
--   [.NET framework odpowiedniki typów natywnych języka C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)  
+-   [Odpowiedniki typów natywnych języka C++ w programie .NET Framework (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)  
   
--   [Problemy z wersją w przypadku typów wartości zagnieżdżonych w typach natywnych (C + +/ CLI)](../dotnet/version-issues-for-value-types-nested-in-native-types-cpp-cli.md)  
+-   [Problemy z wersją w przypadku typów wartości zagnieżdżonych w typach natywnych (C++/CLI)](../dotnet/version-issues-for-value-types-nested-in-native-types-cpp-cli.md)  
   
--   [Porady: testowanie równości (C + +/ CLI)](../dotnet/how-to-test-for-equality-cpp-cli.md)  
+-   [Instrukcje: testowanie równości (C++/CLI)](../dotnet/how-to-test-for-equality-cpp-cli.md)  
   
--   [Porady: diagnozowanie i usuwanie problemów ze zgodnością zestawu (C + +/ CLI)](../dotnet/how-to-diagnose-and-fix-assembly-compatibility-problems-cpp-cli.md)  
+-   [Instrukcje: diagnozowanie i usuwanie problemów ze zgodnością zestawu (C++/CLI)](../dotnet/how-to-diagnose-and-fix-assembly-compatibility-problems-cpp-cli.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

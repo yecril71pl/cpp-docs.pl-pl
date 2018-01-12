@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e86ca1959ce22370e47bca508602d5efa35cd4f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a413f28909a52e3bc82e9d8f2694d559bf8a885c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-restart-manager-support"></a>Porady: dodawanie obsługi menedżera ponownego uruchamiania
 Menedżer ponownego uruchamiania jest dodane do funkcji [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] dla [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. Menedżer ponownego uruchamiania dodaje obsługę aplikacji, jeśli nieoczekiwane zamknięcie lub ponowne uruchomienie. Zachowanie ponownego uruchamiania Menedżera zależy od typu aplikacji. Jeśli aplikacja jest Edytor dokumentów, Menedżer ponownego uruchamiania włączona automatycznie Zapisz stan aplikacji i zawartości wszelkie otwarte dokumenty i ponowne uruchomienie aplikacji po nieoczekiwanego zamknięcia. Jeśli aplikacja nie jest to edytor dokumentu, Menedżer ponownego uruchamiania spowoduje ponowne uruchomienie aplikacji, ale domyślnie nie może zapisać stanu aplikacji.  

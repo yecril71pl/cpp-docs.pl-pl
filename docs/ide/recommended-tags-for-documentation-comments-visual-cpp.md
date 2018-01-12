@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65d2161edc4b2aa03cd547467ca0f38158850051
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c1b0e762ec2167a988e8e18f3dce932214716c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>Tagi zalecane dla komentarzy do dokumentacji (Visual C++)
 Kompilator Visual C++ przetworzy komentarze do dokumentacji w kodzie i tworzy plik .xdc dla każdego compiland i xdcmake.exe rozpoczyna przetwarzanie plików xdc do pliku XML. Przetwarzanie pliku XML dokumentacji jest szczegółów, który musi zostać wdrożone w lokacji.  
@@ -45,4 +46,4 @@ Kompilator Visual C++ przetworzy komentarze do dokumentacji w kodzie i tworzy pl
  W bieżącej wersji kompilatora Visual C++ nie obsługuje `<paramref>`, tag, który jest obsługiwany przez inne kompilatory Visual Studio. Visual C++ może obsługiwać `<paramref>` w przyszłej wersji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Plik dokumentacji XML](../ide/xml-documentation-visual-cpp.md)
+ [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

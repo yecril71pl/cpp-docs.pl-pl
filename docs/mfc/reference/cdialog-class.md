@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b823d40d4504be0180c3af3a6fb5359bf86725cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89c9670d19330e63a466c38a205a3122237e4f02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialog-class"></a>Cdialog — klasa
 Klasa podstawowa używana do wyświetlania okien dialogowych na ekranie.  
@@ -519,5 +520,5 @@ void SetHelpID(UINT nIDR);
  [DLGCBR32 próbki MFC](../../visual-cpp-samples.md)   
  [Przykładowe MFC DLGTEMPL](../../visual-cpp-samples.md)   
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 

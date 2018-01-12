@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 677a4a06402af1115f419dcd5979a13a84d79e08
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 958f308a089f2f503159b2ce56c2096595fc7613
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-maps-mfc"></a>Mapy komunikatów (MFC)
 Ta sekcja dokumentacji Wyświetla listę wszystkich [makra mapowania wiadomości](../../mfc/reference/message-map-macros-mfc.md) i wszystkie [CWnd](../../mfc/reference/cwnd-class.md) prototypy funkcji wpisy mapy wiadomości wraz z odpowiadającego mu członka:  
@@ -31,7 +32,7 @@ Ta sekcja dokumentacji Wyświetla listę wszystkich [makra mapowania wiadomości
 |Kategoria|Opis|  
 |--------------|-----------------|  
 |ON\_polecenie obsługi wiadomości|Obsługuje `WM_COMMAND` komunikaty generowane przez użytkownika opcji menu lub menu klucze dostępu.|  
-|[Programy obsługi komunikatów powiadomień okna podrzędnego](../../mfc/reference/child-window-notification-message-handlers.md)|Obsługa komunikatów powiadomień z okien podrzędnych.|  
+|[Programy obsługi komunikatów powiadomień dotyczących okna podrzędnego](../../mfc/reference/child-window-notification-message-handlers.md)|Obsługa komunikatów powiadomień z okien podrzędnych.|  
 |[Programy obsługi komunikatów WM_](../../mfc/reference/handlers-for-wm-messages.md)|Obsługa `WM_` komunikaty, takie jak `WM_PAINT`.|  
 |[Programy obsługi komunikatów zdefiniowanych przez użytkownika](../../mfc/reference/user-defined-handlers.md)|Obsługa wiadomości zdefiniowane przez użytkownika.|  
   

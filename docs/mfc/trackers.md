@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a36a327bcf2a1beb46119c9b6c2947d95473cbaf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 29e4d3c556a5f7b6b3aed5daa0285ea6c2c15447
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trackers"></a>Trackery
 [Crecttracker —](../mfc/reference/crecttracker-class.md) klasy udostępnia interfejs użytkownika między elementami prostokątne w aplikacji i użytkownika, podając różnych stylów wyświetlania. Te style zawierają stały, kreskowanym lub przerywane obramowania; kreskowane wzorzec, który obejmuje pozycję; i uchwytów zmiany rozmiaru, które mogą znajdować się na zewnątrz lub wewnątrz obramowania. Trackery są często używane w połączeniu z elementami OLE, czyli obiekty pochodne `COleClientItem`. Prostokąty tracker nadaj wizualnych na bieżący stan elementu.  

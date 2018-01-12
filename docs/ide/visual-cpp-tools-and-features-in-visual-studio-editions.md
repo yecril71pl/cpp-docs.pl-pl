@@ -17,11 +17,12 @@ caps.latest.revision: "51"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37f1eed2287c8fe655a124b1f76f48a203ab1607
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48c1adadb674f8dac2c5e8d6422a6594cd4fa695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Narzędzia Visual C++ i funkcji w wersjach programu Visual Studio
 W poniższej tabeli przedstawiono funkcje programu Visual C++, które są dostępne w programie Visual Studio. X w komórce oznacza, że funkcja jest dostępna; pusta komórka wskazuje, że funkcja nie jest dostępna. Uwagi w nawiasach wskazują, że funkcja jest dostępne, ale ograniczone.  

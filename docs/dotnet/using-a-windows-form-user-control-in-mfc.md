@@ -20,11 +20,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e836730942b3293ff8adc6aa7f8c75f4d2376cc1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 59b4d974a6b25b896067bce0042d9a5ff9221cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Używanie formantu użytkownika formularza systemu Windows w MFC
 Przy użyciu klasy obsługi formularzy systemu Windows MFC, może obsługiwać formanty formularzy systemu Windows w aplikacjach MFC jako formant ActiveX w obrębie okna dialogowe MFC lub widoków. Ponadto formularzy Windows forms może być obsługiwany jako okna dialogowe MFC.  
@@ -50,11 +53,11 @@ Przy użyciu klasy obsługi formularzy systemu Windows MFC, może obsługiwać f
  Aplikacja MFC używa formularzy systemu Windows, należy ponownie rozesłać mfcmifc90.dll z aplikacją. Aby uzyskać więcej informacji, zobacz [redystrybuowanie biblioteki MFC](../ide/redistributing-the-mfc-library.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Hostowanie formantu użytkownika formularza systemu Windows w oknie dialogowym MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)  
+ [Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)  
   
- [Hostowanie formantu użytkownika formularzy systemu Windows jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)  
+ [Hostowanie kontrolki użytkownika interfejsu Windows Forms jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)  
   
- [Hostowanie formantu użytkownika formularza systemu Windows jako okna dialogowego MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)  
+ [Hostowanie kontrolki użytkownika formularza systemu Windows jako okna dialogowego MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  [Klasa CWinFormsControl](../mfc/reference/cwinformscontrol-class.md)  
@@ -63,24 +66,24 @@ Przy użyciu klasy obsługi formularzy systemu Windows MFC, może obsługiwać f
   
  [Klasa CWinFormsView](../mfc/reference/cwinformsview-class.md)  
   
- [Interfejs ICommandSource](../mfc/reference/icommandsource-interface.md)  
+ [Klasa ICommandSource](../mfc/reference/icommandsource-interface.md)  
   
- [Interfejs obiektu ICommandTarget](../mfc/reference/icommandtarget-interface.md)  
+ [Klasa ICommandTarget](../mfc/reference/icommandtarget-interface.md)  
   
- [Interfejs ICommandUI](../mfc/reference/icommandui-interface.md)  
+ [Klasa ICommandUI](../mfc/reference/icommandui-interface.md)  
   
  [Interfejs IView](../mfc/reference/iview-interface.md)  
   
- [Commandhandler — obiekt](../atl/commandhandler.md)  
+ [CommandHandler](../atl/commandhandler.md)  
   
  [Ddx_managedcontrol —](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)  
   
  [Uicheckstate —](../mfc/reference/uicheckstate-enumeration.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formularze systemu Windows](/dotnet/framework/winforms/index)  
+ [Windows Forms](/dotnet/framework/winforms/index)  
   
- [Formanty formularzy systemu Windows](/dotnet/framework/winforms/controls/index)  
+ [Kontrolki formularzy Windows Forms](/dotnet/framework/winforms/controls/index)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)   

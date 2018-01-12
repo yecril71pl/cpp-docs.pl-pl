@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a80e5d0815c919eaa1983d07d714cbe314a9916b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 484abaf5344400e03b53038d2c137497c202345f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cctrlview-class"></a>Klasa CCtrlView
 Dostosowuje widok dokumentu architektury formanty standardowe obsługiwane przez wersje systemu Windows 98 i Windows NT 3.51 lub nowszy.  
@@ -159,4 +160,4 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [CTreeView — klasa](../../mfc/reference/ctreeview-class.md)   
  [Clistview — klasa](../../mfc/reference/clistview-class.md)   
- [Cricheditview — klasa](../../mfc/reference/cricheditview-class.md)
+ [Klasa CRichEditView](../../mfc/reference/cricheditview-class.md)

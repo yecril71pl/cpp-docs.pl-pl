@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be83831c79b398de9e9b0791d172cf7608e322aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0a011201a521ed97cf9ebe4c0a8249526b9d7c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers"></a>Serwery
 Aplikacja serwera (lub składników aplikacji) tworzy elementy OLE (lub składników) do użycia przez aplikacje kontenera. Visual edytowania aplikacji serwera obsługuje również edycja wizualna lub Aktywacja w miejscu. Formularz innego serwera OLE [serwer automatyzacji](../mfc/automation-servers.md). Niektóre aplikacje serwera obsługuje tylko tworzenie elementy osadzone; obsługuje inne tworzenia elementów zarówno osadzone i połączone. Niektóre obsługiwana jest konsolidacja tylko, ale jest to rzadko. Wszystkie aplikacje serwera musi obsługiwać aktywacji przez kontener aplikacji, gdy użytkownik chce edytować element. Aplikacja może być zarówno kontener, jak i serwera. Innymi słowy go można jednocześnie dołączyć dane do swoich dokumentów i tworzyć dane, które można włączyć jako elementy w dokumentach inne aplikacje.  
@@ -52,15 +53,15 @@ Aplikacja serwera (lub składników aplikacji) tworzy elementy OLE (lub składni
   
  Aby uzyskać więcej informacji na serwerach zobacz:  
   
--   [Serwery: Implementowanie serwera](../mfc/servers-implementing-a-server.md)  
+-   [Serwery: implementowanie serwera](../mfc/servers-implementing-a-server.md)  
   
--   [Serwery: Implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md)  
+-   [Serwery: implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md)  
   
--   [Serwery: Implementowanie okien ramowych w miejscu](../mfc/servers-implementing-in-place-frame-windows.md)  
+-   [Serwery: implementowanie okien ramowych w miejscu](../mfc/servers-implementing-in-place-frame-windows.md)  
   
--   [Serwery: Elementy serwera](../mfc/servers-server-items.md)  
+-   [Serwery: elementy serwera](../mfc/servers-server-items.md)  
   
--   [Serwery: Kwestie interfejsu użytkownika](../mfc/servers-user-interface-issues.md)  
+-   [Serwery: kwestie dotyczące interfejsu użytkownika](../mfc/servers-user-interface-issues.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [OLE](../mfc/ole-in-mfc.md)   

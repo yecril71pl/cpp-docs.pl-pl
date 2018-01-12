@@ -29,11 +29,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27d3a1fc08dea41add59b19ec42d4b18db940648
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0ea0572667ef45264fd52934cd2d4ee750a6d4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcfontinfo-class"></a>Klasa CMFCFontInfo
 `CMFCFontInfo` Klasa opisuje nazwę i inne atrybuty czcionki.  

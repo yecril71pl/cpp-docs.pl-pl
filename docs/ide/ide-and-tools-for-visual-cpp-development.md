@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1fc416d6856b2b84005e4e1d66e17a3b10e93eb6
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: e503c3ecbf0cd7245aadeb231030a91577e1e865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE i narzędzia do programowania w języku Visual C++
 Jako część programu Visual Studio programowanie środowiska IDE (Integrated) Visual C++ udostępnia wiele systemu windows i narzędzia wspólne z innych języków. Wiele osób, w tym **Eksploratora rozwiązań**, opisano w edytorze kodu i debugera, [programu Visual Studio IDE](/visualstudio/ide/visual-studio-ide). Często udostępnionego narzędzia lub okno ma nieco inny zestaw funkcji dla języka C++ niż dla języków .NET lub Javascript. Niektóre systemu windows lub narzędzia są dostępne tylko w Pro programu Visual Studio lub Visual Studio Enterprise.   
@@ -58,7 +59,7 @@ Jako część programu Visual Studio programowanie środowiska IDE (Integrated) 
   
  Edytor kodu obsługuje również kilka funkcji, które są ze sobą znane jako Intellisense. Możesz umieść kursor nad metody i niektóre podstawowe dokumentacji dla niego. Po wpisaniu nazwy zmiennej klasy i a. lub ->, zostanie wyświetlona lista elementów członkowskich wystąpienia tej klasy. Jeśli wpiszesz nazwę klasy, a następnie::, zostanie wyświetlona lista statycznych elementów członkowskich. Po ponownym uruchomieniu, wpisując nazwę klasy lub metody, edytora kodu oferuje sugestie do wykonania instrukcji. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense).  
   
- **Wstawki kodu**  
+ **Fragmenty kodu**  
   
  Wstawki kodu Intellisense służy do generowania najczęściej używanych lub konstrukcje kodu złożonej z klawiszy skrótów. Aby uzyskać więcej informacji, zobacz [wstawki kodu](/visualstudio/ide/code-snippets).  
   
@@ -116,10 +117,10 @@ Jako część programu Visual Studio programowanie środowiska IDE (Integrated) 
   
 |||  
 |-|-|  
-|[Narzędzia Visual C++ i funkcji w wersjach programu Visual Studio](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)|Pokazuje, które funkcje są dostępne w różnych wersjach programu Visual Studio.|  
+|[Narzędzia i funkcje programu Visual C++ w wydaniach programu Visual Studio](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)|Pokazuje, które funkcje są dostępne w różnych wersjach programu Visual Studio.|  
 |[Tworzenie projektów i zarządzanie nimi na podstawie MSBuild](../ide/creating-and-managing-visual-cpp-projects.md)|Zawiera omówienie projekty oparte na C++ MSBuild w Visual Studio i łącza do innych artykułów, które wyjaśniono, jak utworzyć i zarządzać nimi.|  
 |[CMake projekty w programie Visual C++](cmake-tools-for-visual-cpp.md).|Zawiera opis sposobu tworzenia CMake lub innych projektów z systemem innym niż MSBuild w programie Visual C++.|
 |[Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)|Zawiera opis sposobu tworzenia projektów C++.|  
 |[Wdrażanie natywnych aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)|Zawiera omówienie wdrożenia dla aplikacji C++ i łącza do innych artykułów opisujących wdrożenia szczegółowo.|  
-|[Visual C++, przenoszenie i uaktualnianie przewodnik](../porting/visual-cpp-porting-and-upgrading-guide.md)|Szczegółowe informacje o sposobie uaktualniania aplikacji C++, które zostały utworzone we wcześniejszych wersjach programu Visual Studio i przeprowadzanie migracji aplikacji, które zostały utworzone przy użyciu narzędzia innego niż Visual Studio.|  
+|[Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)|Szczegółowe informacje o sposobie uaktualniania aplikacji C++, które zostały utworzone we wcześniejszych wersjach programu Visual Studio i przeprowadzanie migracji aplikacji, które zostały utworzone przy użyciu narzędzia innego niż Visual Studio.|  
 |[Visual C++](../top/visual-cpp-in-visual-studio.md)|W tym artykule opisano najważniejsze funkcje programu Visual C++ w Visual Studio i łącza do pozostałej części dokumentacji Visual C++.|

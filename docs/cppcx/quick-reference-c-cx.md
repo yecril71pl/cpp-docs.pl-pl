@@ -12,14 +12,15 @@ caps.latest.revision: "31"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 7c6e36d00d27f5fcf32faec666871ced1d9d0ac5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b34c0d36c33652ecbef3a1af745015d92fc05f3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="quick-reference-ccx"></a>Krótki przewodnik (C + +/ CX)
-Środowisko wykonawcze systemu Windows obsługuje aplikacje platformy uniwersalnej systemu Windows, wykonać tylko w środowisku godne zaufania systemu operacyjnego, korzystając z funkcji autoryzowanych, typy danych i urządzeń, które są dystrybuowane za pośrednictwem [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. C + +/ CX uprościć podczas opracowywania aplikacji dla środowiska uruchomieniowego systemu Windows. W tym artykule jest szybkie odwołanie; bardziej szczegółowy dokumentację można znaleźć [System typów](../cppcx/type-system-c-cx.md) i [Component Extensions dla platform środowiska uruchomieniowego](http://go.microsoft.com/fwlink/?LinkId=228720).  
+Środowisko wykonawcze systemu Windows obsługuje aplikacje platformy uniwersalnej systemu Windows, wykonać tylko w środowisku godne zaufania systemu operacyjnego, korzystając z funkcji autoryzowanych, typy danych i urządzeń, które są dystrybuowane za pośrednictwem [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. C + +/ CX uprościć podczas opracowywania aplikacji dla środowiska uruchomieniowego systemu Windows. W tym artykule jest szybkie odwołanie; bardziej szczegółowy dokumentację można znaleźć [System typów](../cppcx/type-system-c-cx.md) i [Component Extensions dla platform środowiska uruchomieniowego](http://go.microsoft.com/fwlink/p/?linkid=228720).  
   
  Podczas kompilowania w wierszu polecenia, użyj **/ZW** opcję kompilatora, aby utworzyć uniwersalną aplikację systemu Windows lub składnik środowiska wykonawczego systemu Windows. Aby dostęp deklaracje środowiska wykonawczego systemu Windows, które są zdefiniowane w pliku metadanych (.winmd) środowiska wykonawczego systemu Windows, należy określić `#using` dyrektywy lub **/FU** — opcja kompilatora. Podczas tworzenia projektu dla aplikacji platformy uniwersalnej systemu Windows, programu Visual Studio domyślnie ustawia te opcje i dodaje odwołania do wszystkich bibliotek środowiska uruchomieniowego systemu Windows.  
   

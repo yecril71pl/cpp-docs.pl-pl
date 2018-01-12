@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 16927af104b08ed7a65db68ee1500bf249669b98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f5092d4f3ce7b4f96ca4dc5c1554483a7fc3a0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1181"></a>Błąd narzędzi konsolidatora LNK1181
 Nie można otworzyć pliku wejściowego "filename"  
@@ -39,4 +40,4 @@ Nie można otworzyć pliku wejściowego "filename"
  Aby uzyskać więcej informacji, zobacz [pliki .lib — wejście konsolidatora](../../build/reference/dot-lib-files-as-linker-input.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [/ LIBPATH (dodatkowa Libpath)](../../build/reference/libpath-additional-libpath.md)
+ [/LIBPATH (Dodatkowa Libpath)](../../build/reference/libpath-additional-libpath.md)

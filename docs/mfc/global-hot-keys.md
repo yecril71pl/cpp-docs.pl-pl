@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48f3e2a1e0c1461180291342a8cd18682173e8bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82297507d8725e6292def759272f48d0d63e84b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-hot-keys"></a>Globalne klawisze dostępu
 Globalne klawisza dostępu jest skojarzony z oknem nonchild konkretnego. Umożliwia użytkownikowi aktywować okna z dowolnym części systemu. Aplikacja ustawia globalne klawisza dostępu dla określonego okna, wysyłając [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) komunikat do tego okna. Na przykład jeśli `m_HotKeyCtrl` jest [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) obiektu i `pMainWnd` wskaźnik do okna do aktywacji, gdy zostanie naciśnięty klawisz dostępu, można użyć poniższego kodu, aby skojarzyć klawisz dostępu określonego w kontrolki z Okno wskazywana przez `pMainWnd`.  
@@ -33,5 +34,5 @@ Globalne klawisza dostępu jest skojarzony z oknem nonchild konkretnego. Umożli
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

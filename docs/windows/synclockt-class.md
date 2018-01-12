@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70e50f4ab18cdfddc3330e5c23e5808040c354bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3f3a9794f7b00a2029f6706db3a846ba127a4d5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synclockt-class"></a>SyncLockT — Klasa
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -48,27 +51,27 @@ class SyncLockT;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Synclockt::synclockt — Konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicjuje nowe wystąpienie klasy SyncLockT.|  
-|[SyncLockT:: ~ SyncLockT — destruktor](../windows/synclockt-tilde-synclockt-destructor.md)|Deinitializes wystąpienia klasy SyncLockT.|  
+|[SyncLockT::SyncLockT, konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicjuje nowe wystąpienie klasy SyncLockT.|  
+|[SyncLockT::~SyncLockT, destruktor](../windows/synclockt-tilde-synclockt-destructor.md)|Deinitializes wystąpienia klasy SyncLockT.|  
   
 ### <a name="protected-constructors"></a>Konstruktory chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Synclockt::synclockt — Konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicjuje nowe wystąpienie klasy SyncLockT.|  
+|[SyncLockT::SyncLockT, konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicjuje nowe wystąpienie klasy SyncLockT.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SyncLockT::IsLocked — metoda](../windows/synclockt-islocked-method.md)|Wskazuje, czy bieżący obiekt SyncLockT jest właścicielem zasobu; Obiekt SyncLockT jest *zablokowany*.|  
-|[SyncLockT::Unlock — Metoda](../windows/synclockt-unlock-method.md)|Zwalnia kontrolę nad zasobem posiadanych przez bieżący obiekt SyncLockT, jeśli istnieją.|  
+|[SyncLockT::IsLocked, metoda](../windows/synclockt-islocked-method.md)|Wskazuje, czy bieżący obiekt SyncLockT jest właścicielem zasobu; Obiekt SyncLockT jest *zablokowany*.|  
+|[SyncLockT::Unlock, metoda](../windows/synclockt-unlock-method.md)|Zwalnia kontrolę nad zasobem posiadanych przez bieżący obiekt SyncLockT, jeśli istnieją.|  
   
 ### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Synclockt::sync_ — członek danych](../windows/synclockt-sync-data-member.md)|Przechowuje podstawowej zasobu reprezentowanego przez synclockt — klasa.|  
+|[SyncLockT::sync_, składowa danych](../windows/synclockt-sync-data-member.md)|Przechowuje podstawowej zasobu reprezentowanego przez synclockt — klasa.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `SyncLockT`  
@@ -80,4 +83,4 @@ class SyncLockT;
   
 ## <a name="see-also"></a>Zobacz też  
  [Namespace Microsoft::WRL::Wrappers::details](../windows/microsoft-wrl-wrappers-details-namespace.md)   
- [Srwlock — klasa](../windows/srwlock-class.md)
+ [SRWLock, klasa](../windows/srwlock-class.md)

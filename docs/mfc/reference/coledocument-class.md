@@ -63,11 +63,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976f6845deb93dc8bf6a2e008de0d68fb62bfbb0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 147a3bca2f4ad91aeaa2c74ac7a356d9404943fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledocument-class"></a>Klasa COleDocument
 Klasa podstawowa dla dokumentów OLE, które obsługują edycji.  
@@ -482,7 +483,7 @@ virtual void UpdateModifiedFlag();
  [Przykładowe MFC kontenera](../../visual-cpp-samples.md)   
  [Przykładowe MFC MFCBIND](../../visual-cpp-samples.md)   
  [Cdocument — klasa](../../mfc/reference/cdocument-class.md)   
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d0bff223639a3d7f099b7134d519d5a0e43ae3b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ab339ce7dc883c80941f0fe7f72da7ef852af52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-mfc-class"></a>Dodawanie klasy MFC
 Aby dodać klasy pochodnej z klasy biblioteki Microsoft Foundation Class (MFC) do projektu, należy użyć **Dodaj klasę** dostępne z polecenie [widoku klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Określ nazwę nowej klasy, wybierz klasę podstawową, a następnie wybierz identyfikator okna dialogowego, z którym jest skojarzona (jeśli istnieje). Kreator kod tworzy plik nagłówka i pliku z implementacją i dodaje je do projektu.  

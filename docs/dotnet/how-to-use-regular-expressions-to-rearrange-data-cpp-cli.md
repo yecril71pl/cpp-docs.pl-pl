@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 62154cf33ba3705c89a5ad5a520b678e3f516498
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf60fff6c15313a6f7df1104f67c1f043f885eac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>Porady: używanie wyrażeń regularnych do zmiany rozmieszczenia danych (C++/CLI)
 W poniższym przykładzie kodu pokazano, jak obsługa wyrażeń regularnych programu .NET Framework może służyć do zmiany rozmieszczenia ani formatowania danych. Poniższy przykład kodu wykorzystuje <xref:System.Text.RegularExpressions.Regex> i <xref:System.Text.RegularExpressions.Match> klasy, aby wyodrębnić imiona i nazwiska z ciągu, a następnie wyświetlenia tych elementów nazwy w odwrotnej kolejności.  
@@ -67,4 +70,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [.NET framework — nieprawidłowe wyrażenia](/dotnet/standard/base-types/regular-expressions)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

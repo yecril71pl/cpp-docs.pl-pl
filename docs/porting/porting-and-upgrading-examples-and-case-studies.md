@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 554134b71c4dc45a828595c0c7dfb639940494df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 212b51f417fc84b602e6231f2e769cb73c9a1460
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Przenoszenie i uaktualnianie: Przykłady i analizy przypadków
 Można uzyskać wyobrażenie o rodzaju problemy mogą wystąpić czas trwania migracji z poprzedniej wersji programu Visual C++ do bieżącej, przeglądając wątki pomyślnej migracji.  
@@ -32,4 +33,4 @@ Można uzyskać wyobrażenie o rodzaju problemy mogą wystąpić czas trwania mi
 -   [Spy ++](../porting/porting-guide-spy-increment.md) jest aplikacja, która sprawdza i informacje na temat elementów interfejsu użytkownika w aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Visual C++, przenoszenie i uaktualnianie przewodnik](../porting/visual-cpp-porting-and-upgrading-guide.md)
+ [Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

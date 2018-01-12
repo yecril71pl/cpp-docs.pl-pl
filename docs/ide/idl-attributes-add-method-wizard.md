@@ -17,16 +17,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 583b2c0ec67c4799753fe52d74131e7238b11d46
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9792f8b7758ff5a1e5742b6643d9f73931bce6f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idl-attributes-add-method-wizard"></a>Atrybuty IDL, Kreator dodawania metody
 Ta strona kreatora dodawania metody umożliwia Określ jakiekolwiek ustawienia języka (IDL) definicji interfejsu dla metody.  
   
- **Identyfikator**  
+ **id**  
  Ustawia identyfikator numeryczny, który identyfikuje metodę. Zobacz [identyfikator](http://msdn.microsoft.com/library/windows/desktop/aa367040) w *odwołania MIDL*.  
   
  To pole jest niedostępna dla niestandardowych interfejsów i nie jest dostępna dla MFC dispinterfaces.  
@@ -41,7 +42,7 @@ Ta strona kreatora dodawania metody umożliwia Określ jakiekolwiek ustawienia j
   
  Nie jest dostępna dla MFC dispinterfaces.  
   
- **HelpString —**  
+ **helpstring**  
  Określa ciąg znaków używany do opisania elementu, którego dotyczy. Domyślnie jest ustawiona "metody *nazwę metody*." Zobacz [HelpString —](http://msdn.microsoft.com/library/windows/desktop/aa366856) w *odwołania MIDL*.  
   
  Nie jest dostępna dla MFC dispinterfaces.  
@@ -51,11 +52,11 @@ Ta strona kreatora dodawania metody umożliwia Określ jakiekolwiek ustawienia j
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**ukryte**|Wskazuje, że metoda istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika. Zobacz [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) w *odwołania MIDL*.|  
+|**hidden**|Wskazuje, że metoda istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika. Zobacz [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) w *odwołania MIDL*.|  
 |**źródło**|Wskazuje, że członkiem metoda jest źródłem zdarzeń. Zobacz [źródła](http://msdn.microsoft.com/library/windows/desktop/aa367166) w *odwołania MIDL*.|  
 |`local`|Określa kompilatorowi MIDL, metoda nie jest zdalny. Zobacz [lokalnego](http://msdn.microsoft.com/library/windows/desktop/aa367071) w *odwołania MIDL*.|  
-|**ograniczone**|Określa, że metoda nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](http://msdn.microsoft.com/library/windows/desktop/aa367157) w *odwołania MIDL*.|  
-|**VARARG**|Określa, że metoda przyjmuje zmienną liczbę argumentów. Aby to zrobić, ostatni argument musi być bezpieczną tablicą o **VARIANT** typu, który zawiera wszystkie pozostałe argumenty. Zobacz [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) w *odwołania MIDL*.|  
+|**restricted**|Określa, że metoda nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](http://msdn.microsoft.com/library/windows/desktop/aa367157) w *odwołania MIDL*.|  
+|**vararg**|Określa, że metoda przyjmuje zmienną liczbę argumentów. Aby to zrobić, ostatni argument musi być bezpieczną tablicą o **VARIANT** typu, który zawiera wszystkie pozostałe argumenty. Zobacz [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) w *odwołania MIDL*.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dodawanie metody](../ide/adding-a-method-visual-cpp.md)   

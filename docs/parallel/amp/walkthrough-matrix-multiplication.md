@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b66a95499c64970c31c7d71fe5dc43f1aa7854d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Wskazówki: mnożenie macierzy
 Ten przewodnik krok po kroku przedstawiono sposób użycia C++ AMP w celu przyspieszenia wykonywania mnożenie macierzy. Dwa algorytmy są prezentowane, jeden bez kafelków i jeden z kafelków.  
@@ -304,5 +305,5 @@ void main() {
   
 ## <a name="see-also"></a>Zobacz też  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [Wskazówki: Debugowanie aplikacji C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
+ [Przewodnik: debugowanie aplikacji C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
 

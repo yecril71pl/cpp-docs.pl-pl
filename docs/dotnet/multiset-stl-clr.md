@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 801f6a99a6b479ebc72f62c59fc5fcf099814996
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9f964fd511d87d2fd5ca460eb72dc5c9db8351ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `multiset` do zarządzania sekwencję elementów jako drzewo uporządkowanej zrównoważony (prawie) węzły, każdy przechowywania jeden element.  
@@ -64,7 +67,7 @@ template<typename Key>
 |[multiset::iterator (STL/CLR)](../dotnet/multiset-iterator-stl-clr.md)|Typ iteratora dla kontrolowanej sekwencji.|  
 |[multiset::key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)|Delegat porządkowania dla dwa klucze.|  
 |[multiset::key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)|Typ klucza sortowania.|  
-|[multiset::Reference (STL/CLR)](../dotnet/multiset-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[multiset::reference (STL/CLR)](../dotnet/multiset-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[multiset::reverse_iterator (STL/CLR)](../dotnet/multiset-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
 |[multiset::size_type (STL/CLR)](../dotnet/multiset-size-type-stl-clr.md)|Typ (nieujemną) odległość między dwoma elementami.|  
 |[multiset::value_compare (STL/CLR)](../dotnet/multiset-value-compare-stl-clr.md)|Delegat porządkowania dla dwóch wartości elementu.|  
@@ -72,15 +75,15 @@ template<typename Key>
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[multiset::BEGIN (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
-|[multiset::Clear (STL/CLR)](../dotnet/multiset-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
-|[multiset::Count (STL/CLR)](../dotnet/multiset-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
-|[multiset::EMPTY (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[multiset::begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[multiset::clear (STL/CLR)](../dotnet/multiset-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
+|[multiset::count (STL/CLR)](../dotnet/multiset-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
+|[multiset::empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
 |[multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
 |[multiset::equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|  
-|[multiset::ERASE (STL/CLR)](../dotnet/multiset-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[multiset::Find (STL/CLR)](../dotnet/multiset-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
-|[multiset::INSERT (STL/CLR)](../dotnet/multiset-insert-stl-clr.md)|Dodaje elementy.|  
+|[multiset::erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
+|[multiset::find (STL/CLR)](../dotnet/multiset-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
+|[multiset::insert (STL/CLR)](../dotnet/multiset-insert-stl-clr.md)|Dodaje elementy.|  
 |[multiset::key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)|Kopiuje porządkowania delegowanie dla dwa klucze.|  
 |[multiset::lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md)|Wyszukuje początek zakresu, który jest zgodny z określonym kluczem.|  
 |[multiset::make_value (STL/CLR)](../dotnet/multiset-make-value-stl-clr.md)|Tworzy obiekt wartość.|  
@@ -95,13 +98,13 @@ template<typename Key>
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[multiset::operator = (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
-|[Operator! = (multiset) (STL/CLR)](../dotnet/operator-inequality-multiset-stl-clr.md)|Określa, czy `multiset` obiekt nie jest równa innej `multiset` obiektu.|  
-|[Operator < (multiset) (STL/CLR)](../dotnet/operator-less-than-multiset-stl-clr.md)|Określa, czy `multiset` obiekt jest mniejszy niż innego `multiset` obiektu.|  
-|[Operator < = (multiset) (STL/CLR)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)|Określa, czy `multiset` obiekt jest mniejszy niż lub równy do innego `multiset` obiektu.|  
-|[Operator == (multiset) (STL/CLR)](../dotnet/operator-equality-multiset-stl-clr.md)|Określa, czy `multiset` obiekt jest taki sam do innego `multiset` obiektu.|  
-|[operator > (multiset) (STL/CLR)](../dotnet/operator-greater-than-multiset-stl-clr.md)|Określa, czy `multiset` obiekt jest większy niż innego `multiset` obiektu.|  
-|[operator > = (multiset) (STL/CLR)](../dotnet/operator-greater-or-equal-multiset-stl-clr.md)|Określa, czy `multiset` obiektu jest większa lub równa innej `multiset` obiektu.|  
+|[multiset::operator= (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[operator!= (multiset) (STL/CLR)](../dotnet/operator-inequality-multiset-stl-clr.md)|Określa, czy `multiset` obiekt nie jest równa innej `multiset` obiektu.|  
+|[operator< (multiset) (STL/CLR)](../dotnet/operator-less-than-multiset-stl-clr.md)|Określa, czy `multiset` obiekt jest mniejszy niż innego `multiset` obiektu.|  
+|[operator<= (multiset) (STL/CLR)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)|Określa, czy `multiset` obiekt jest mniejszy niż lub równy do innego `multiset` obiektu.|  
+|[operator== (multiset) (STL/CLR)](../dotnet/operator-equality-multiset-stl-clr.md)|Określa, czy `multiset` obiekt jest taki sam do innego `multiset` obiektu.|  
+|[operator> (multiset) (STL/CLR)](../dotnet/operator-greater-than-multiset-stl-clr.md)|Określa, czy `multiset` obiekt jest większy niż innego `multiset` obiektu.|  
+|[operator>= (multiset) (STL/CLR)](../dotnet/operator-greater-or-equal-multiset-stl-clr.md)|Określa, czy `multiset` obiektu jest większa lub równa innej `multiset` obiektu.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -154,4 +157,4 @@ template<typename Key>
  [mapy (STL/CLR)](../dotnet/map-stl-clr.md)   
  [Zestaw wielokrotny](../dotnet/multiset-stl-clr.md)   
  [Ustaw (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

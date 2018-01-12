@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 528ce6f8b94d73acde2a92412c6f3578dd83b4bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6462f0d9c0b1e3d25b50000c63e10c88895cc0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3060"></a>C3060 błąd kompilatora
 "członek": funkcja zaprzyjaźniona nie może być zdefiniowana wewnątrz klasy przy użyciu nazwy kwalifikowanej (go może być tylko zadeklarowana)  

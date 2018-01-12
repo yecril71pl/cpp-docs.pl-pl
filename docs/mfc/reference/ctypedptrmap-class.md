@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b35de0ea2b0f7e11dddcdf7b99f2ab01dcf7a7de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9056fc73e2718b2a21936c39e630f4d4fddf1eed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctypedptrmap-class"></a>Ctypedptrmap — klasa
 Udostępnia bezpieczne "otoki" dla obiektów klasy mapy wskaźnika `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, i `CMapStringToPtr`.  
@@ -97,7 +98,7 @@ void GetNextAssoc(
  `rPosition`  
  Określa odwołania do **pozycji** wartość zwrócona przez poprzednie `GetNextAssoc` lub `BASE_CLASS` **:: GetStartPosition** wywołania.  
   
- *KLUCZ*  
+ *KEY*  
  Parametr szablonu określenie typu kluczy mapy.  
   
  `rKey`  
@@ -170,7 +171,7 @@ BOOL RemoveKey(KEY key);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *KLUCZ*  
+ *KEY*  
  Parametr szablonu określenie typu kluczy mapy.  
   
  `key`  
@@ -190,7 +191,7 @@ void SetAt(KEY key, VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *KLUCZ*  
+ *KEY*  
  Parametr szablonu określenie typu kluczy mapy.  
   
  `key`  

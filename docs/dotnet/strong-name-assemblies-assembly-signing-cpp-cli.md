@@ -20,11 +20,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32a9502bbb1143e23ee542c1d9fff593925c527a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2099389131145838a70b579053c65698dbc3a857
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Zestawy o silnych nazwach (podpisywanie zestawów) (C++/CLI)
 W tym temacie opisano, jak można podpisać zestawu często określany jako nadanie używanemu zestawowi silną nazwę.  
@@ -46,13 +49,13 @@ W tym temacie opisano, jak można podpisać zestawu często określany jako nada
   
  Następujące opcje konsolidatora obsługują podpisywanie zestawu:  
   
--   [/ DELAYSIGN (częściowo Podpisz zestaw)](../build/reference/delaysign-partially-sign-an-assembly.md)  
+-   [/DELAYSIGN (Częściowo podpisz zestaw)](../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [/ KEYFILE (Określ klucz lub parę kluczy, aby podpisać zestaw)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/KEYFILE (Określ klucz lub parę kluczy, aby podpisać zestaw)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [/ KEYCONTAINER (Określ klucz kontenera, aby podpisać zestaw)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/KEYCONTAINER (Określ klucz kontenera, aby podpisać zestaw)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
  Aby uzyskać więcej informacji na silne zestawy, zobacz [tworzenie i zestawy Using Strong-Named](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).  
   
 ## <a name="see-also"></a>Zobacz też  
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

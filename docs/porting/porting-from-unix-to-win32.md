@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa15cb2eac229201dd0f686428133224b2f32afe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b10ee9e9b5a53d6f9f936c4bc158db8ebfb6be13
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="porting-from-unix-to-win32"></a>Eksportowanie z systemu UNIX do Win32
 Podczas migrowania aplikacji z systemu UNIX do systemu Windows, masz kilka opcji:  
@@ -44,11 +45,11 @@ Podczas migrowania aplikacji z systemu UNIX do systemu Windows, masz kilka opcji
 ### <a name="unix-migration-guides"></a>Przewodniki migracji systemu UNIX  
  Przewodnik migracji aplikacji niestandardowe UNIX zawiera pomoc techniczną po migracji kodu z systemu UNIX do środowiska Win32.  
   
- [http://go.microsoft.com/fwlink/?LinkId=95428](http://go.microsoft.com/fwlink/?LinkId=95428)  
+ [http://go.microsoft.com/fwlink/p/?LinkId=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
   
  Przewodnik po programie Project migracji Unix uzupełnia Przewodnik migracji aplikacji niestandardowe UNIX przez zapewnienie wysokiego poziomu pomocy w przypadku migrowania projektów znacznej z systemu UNIX do systemu Win32. Przewodnik zawiera wskazówki dotyczące zagadnień do uwzględnienia na każdym etapie migracji projektu. Przewodnik może zostać pobrana z:  
   
- [http://go.microsoft.com/fwlink/?LinkId=20012](http://go.microsoft.com/fwlink/?linkid=20012)  
+ [http://go.microsoft.com/fwlink/p/?LinkId=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Usługi systemu Microsoft Windows dla systemu UNIX (SFU)  
  Microsoft Windows Services dla systemu UNIX (SFU) udostępnia szeroką gamę między platformami usługi integracji systemu Windows w istniejących środowiskach systemu UNIX. Usługi dla systemu UNIX zapewnia udostępniania plików, dostępu zdalnego i administracji, synchronizacji haseł, wspólnego zarządzania katalogu, ze wspólnego zestawu narzędzi i powłoki.  

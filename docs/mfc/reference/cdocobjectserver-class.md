@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bdda622f27dab68e50e58c02ce31c97266ab86f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 912262c4f1ba85c181bb30ee5d6f38a0defe5d5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdocobjectserver-class"></a>Klasa CDocObjectServer
 Implementuje dodatkowe interfejsy OLE potrzebne do podejmowania zwykłym `COleDocument` serwera do całego serwera DocObject: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, i `IPrint`.  

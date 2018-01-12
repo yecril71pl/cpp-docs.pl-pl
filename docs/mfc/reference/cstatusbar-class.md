@@ -47,11 +47,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d5a669551bcc28328054e369ff70bbccbc505c5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c373f21762c1bf7f21d2a775453bab74c735891d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstatusbar-class"></a>Cstatusbar — klasa
 Pasek sterowania z wiersza tekstu wyjściowego okienka lub "wskaźników."  
@@ -467,4 +468,4 @@ BOOL SetPaneText(
  [Ccontrolbar — klasa](../../mfc/reference/ccontrolbar-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Cstatusbarctrl — klasa](../../mfc/reference/cstatusbarctrl-class.md)   
- [Ccontrolbar — klasa](../../mfc/reference/ccontrolbar-class.md)
+ [Klasa CControlBar](../../mfc/reference/ccontrolbar-class.md)

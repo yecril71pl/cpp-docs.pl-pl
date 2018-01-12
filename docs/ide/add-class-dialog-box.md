@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fbca889234f476e0f7dcd67974105931cf11a44b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9936120a28e7120b5efcaaf6e05318b3970dab99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-class-dialog-box"></a>Okno dialogowe Dodaj klasę
 **Dodaj klasę** okno dialogowe zawiera szablony, które umożliwiają:  
@@ -53,10 +54,10 @@ ms.lasthandoff: 10/24/2017
 |Szablon|Kreator|  
 |--------------|------------|  
 |Dodaj obsługę ATL do MFC|Niedostępne|  
-|Składnik strony Active Server ATL|[Kreator składników stron ASP ATL](../atl/reference/atl-active-server-page-component-wizard.md)|  
-|Formant ATL|[Kreator formantu ATL](../atl/reference/atl-control-wizard.md)|  
+|Składnik strony Active Server ATL|[Kreator składników stron Active Server Page ATL](../atl/reference/atl-active-server-page-component-wizard.md)|  
+|Formant ATL|[Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md)|  
 |Okno dialogowe ATL|[Kreator okna dialogowego ATL](../atl/reference/atl-dialog-wizard.md)|  
-|Składnik ATL COM + 1.0|[ATL COM + 1.0 Kreator składników stron ASP](../atl/reference/atl-com-plus-1-0-component-wizard.md)|  
+|Składnik ATL COM + 1.0|[Kreator składników ATL COM+ 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)|  
 |Konsument OLE DB ATL|[Kreator konsumenta OLE DB ATL](../atl/reference/atl-ole-db-consumer-wizard.md)|  
 |Dostawca OLE DB ATL|[Kreator dostawcy interfejsu OLE DB ATL](../atl/reference/atl-ole-db-provider-wizard.md)|  
 |Strony właściwości ATL|[Kreator strony właściwości ATL](../atl/reference/atl-property-page-wizard.md)|  
@@ -69,15 +70,15 @@ ms.lasthandoff: 10/24/2017
 |Szablon|Kreator|  
 |--------------|------------|  
 |Klasa MFC|[Kreator dodawania klasy MFC](../mfc/reference/mfc-add-class-wizard.md)|  
-|Klasa MFC z formantu ActiveX|[Formant ActiveX, Kreator dodawania klasy z](../ide/add-class-from-activex-control-wizard.md)|  
+|Klasa MFC z formantu ActiveX|[Kreator dodawania klasy z kontrolki ActiveX](../ide/add-class-from-activex-control-wizard.md)|  
 |Klasa MFC z biblioteki typów|[Biblioteki typów Kreator dodawania klasy z](../mfc/reference/add-class-from-typelib-wizard.md)|  
-|Konsumenta MFC ODBC|[Kreator konsumenta MFC ODBC](../mfc/reference/mfc-odbc-consumer-wizard.md)|  
+|Konsumenta MFC ODBC|[Kreator użytkownika MFC ODBC](../mfc/reference/mfc-odbc-consumer-wizard.md)|  
   
 ### <a name="generic-classes"></a>Klasy ogólne  
   
 |Szablon|Kreator|  
 |--------------|------------|  
-|Klasy generycznej C++|[Kreator klasy generycznej C++](../ide/generic-cpp-class-wizard.md)|  
+|Klasy generycznej C++|[Kreator rodzajowej klasy C++](../ide/generic-cpp-class-wizard.md)|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)   

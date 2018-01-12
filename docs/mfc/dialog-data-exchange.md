@@ -30,11 +30,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e6da394a91eab08f0c79b3edb33132e3c85401af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35f280228d523c7401e2a90ca395a79a9c87cd51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange"></a>Wymiana danych w oknie dialogowym
 Używany mechanizm DDX, należy ustawić wartości początkowe okna dialogowego zmienne Członkowskie obiektu, zwykle w Twojej `OnInitDialog` obsługi lub konstruktora okna dialogowego. Natychmiast przed wyświetleniem okna dialogowego, w ramach mechanizmu DDX przesyła wartości zmiennych Członkowskich do formantów w oknie dialogowym, gdzie są wyświetlane po sam wyświetli się okno dialogowe w odpowiedzi na `DoModal` lub **Utwórz** . Domyślna implementacja `OnInitDialog` w `CDialog` wywołania `UpdateData` funkcji członkowskiej klasy `CWnd` zainicjować formantów w oknie dialogowym.  

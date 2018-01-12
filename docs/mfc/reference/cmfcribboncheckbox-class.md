@@ -35,11 +35,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0e475da616c56f7867ce28bf253ddcff8f581be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc46d934c99e24b63ef314ef1f63402893c6bb18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribboncheckbox-class"></a>Klasa CMFCRibbonCheckBox
 `CMFCRibbonCheckBox` Klasa implementuje pole wyboru, które można dodać do menu panelu, pasek narzędzi Szybki dostęp lub okna podręcznego wstążki.  

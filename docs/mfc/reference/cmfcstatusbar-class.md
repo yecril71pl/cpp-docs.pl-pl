@@ -83,11 +83,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 734097d8fffcbe21f17b68432d6233a03b11a28a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a235b88b676f7cf643a878e9a06408c87b20bcba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar — klasa
 `CMFCStatusBar` Klasa implementuje paska stanu, podobnie jak `CStatusBar` klasy. Jednak `CMFCStatusBar` klasa ma funkcje nie są oferowane przez `CStatusBar` klasy, takie jak możliwość wyświetlania obrazów, animacji i paski postępu; oraz możliwość odpowiadanie na myszy kliknie dwukrotnie. 
@@ -777,4 +778,4 @@ void SetTipText(
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasy](../../mfc/reference/mfc-classes.md)   
  [Klasa CPane](../../mfc/reference/cpane-class.md)   
- [Cstatusbar — klasa](../../mfc/reference/cstatusbar-class.md)
+ [Klasa CStatusBar](../../mfc/reference/cstatusbar-class.md)

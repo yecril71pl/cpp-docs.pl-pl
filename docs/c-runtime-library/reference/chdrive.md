@@ -34,11 +34,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 214083f511067c102fcb3ab7d3e6637cfeb548ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7733a366ade87dd937eb20eab97a5258db8787a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="chdrive"></a>_chdrive
 Zmienia bieżący stacji roboczych.  
@@ -64,7 +65,7 @@ int _chdrive(
 ## <a name="remarks"></a>Uwagi  
  Jeśli `drive` jest nie jest w zakresie od 1 do 26 obsługi nieprawidłowy parametr jest wywoływany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **_chdrive —** funkcja zwraca wartość -1, `errno` ustawiono `EACCES`, i `_doserrno` ma ustawioną wartość `ERROR_INVALID_DRIVE`.  
   
- **_Chdrive —** funkcja nie jest bezpieczne wątkowo, ponieważ zależy on od **SetCurrentDirectory** funkcji, która jest elementem nie wątkowo. Aby użyć **_chdrive —** bezpiecznie w aplikacji wielowątkowej, musisz podać własne synchronizacja wątku. Aby uzyskać więcej informacji, przejdź do [biblioteki MSDN Library](http://go.microsoft.com/fwlink/?LinkID=150542) , a następnie wyszukaj **SetCurrentDirectory**.  
+ **_Chdrive —** funkcja nie jest bezpieczne wątkowo, ponieważ zależy on od **SetCurrentDirectory** funkcji, która jest elementem nie wątkowo. Aby użyć **_chdrive —** bezpiecznie w aplikacji wielowątkowej, musisz podać własne synchronizacja wątku. Aby uzyskać więcej informacji, przejdź do [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) , a następnie wyszukaj **SetCurrentDirectory**.  
   
  **_Chdrive —** funkcja zmienia tylko bieżący pracy dysk;  **_chdir —** zmienia bieżący katalog roboczy.  
   
@@ -72,7 +73,7 @@ int _chdrive(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|**_chdrive —**|\<Direct.h >|  
+|**_chdrive**|\<Direct.h >|  
   
  Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -87,4 +88,4 @@ int _chdrive(
  [_getdrive —](../../c-runtime-library/reference/getdrive.md)   
  [_mkdir —, _wmkdir —](../../c-runtime-library/reference/mkdir-wmkdir.md)   
  [_rmdir —, _wrmdir —](../../c-runtime-library/reference/rmdir-wrmdir.md)   
- [System, _wsystem —](../../c-runtime-library/reference/system-wsystem.md)
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

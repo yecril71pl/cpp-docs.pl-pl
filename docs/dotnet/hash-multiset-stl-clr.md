@@ -18,11 +18,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b98e8d858c154e344320c759ac4a38c1cf78cbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f07e2e063be9c5a30a63b445d06100124e4250a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `hash_multiset` do zarządzania sekwencję elementów jako tablicy skrótów, każdego wpisu tabeli przechowywania dwukierunkowy połączone listy węzłów i w każdym węźle przechowywania jeden element. Wartość każdego elementu jest używany jako klucz porządkowania sekwencji.  
@@ -65,7 +68,7 @@ template<typename Key>
 |[hash_multiset::iterator (STL/CLR)](../dotnet/hash-multiset-iterator-stl-clr.md)|Typ iteratora dla kontrolowanej sekwencji.|  
 |[hash_multiset::key_compare (STL/CLR)](../dotnet/hash-multiset-key-compare-stl-clr.md)|Delegat porządkowania dla dwa klucze.|  
 |[hash_multiset::key_type (STL/CLR)](../dotnet/hash-multiset-key-type-stl-clr.md)|Typ klucza sortowania.|  
-|[hash_multiset::Reference (STL/CLR)](../dotnet/hash-multiset-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[hash_multiset::reference (STL/CLR)](../dotnet/hash-multiset-reference-stl-clr.md)|Typ odwołania do elementu.|  
 |[hash_multiset::reverse_iterator (STL/CLR)](../dotnet/hash-multiset-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
 |[hash_multiset::size_type (STL/CLR)](../dotnet/hash-multiset-size-type-stl-clr.md)|Typ (nieujemną) odległość między dwoma elementami.|  
 |[hash_multiset::value_compare (STL/CLR)](../dotnet/hash-multiset-value-compare-stl-clr.md)|Delegat porządkowania dla dwóch wartości elementu.|  
@@ -73,18 +76,18 @@ template<typename Key>
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[hash_multiset::BEGIN (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
+|[hash_multiset::begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
 |[hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)|Zlicza zasobników.|  
-|[hash_multiset::Clear (STL/CLR)](../dotnet/hash-multiset-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
-|[hash_multiset::Count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
-|[hash_multiset::EMPTY (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[hash_multiset::clear (STL/CLR)](../dotnet/hash-multiset-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
+|[hash_multiset::count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)|Liczba elementów pasujących określonego klucza.|  
+|[hash_multiset::empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
 |[hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
 |[hash_multiset::equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|  
-|[hash_multiset::ERASE (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[hash_multiset::Find (STL/CLR)](../dotnet/hash-multiset-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
+|[hash_multiset::erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
+|[hash_multiset::find (STL/CLR)](../dotnet/hash-multiset-find-stl-clr.md)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
 |[hash_multiset::hash_delegate (STL/CLR)](../dotnet/hash-multiset-hash-delegate-stl-clr.md)|Kopiuje delegat wyznaczania wartości skrótu z kluczem.|  
 |[hash_multiset::hash_multiset (STL/CLR)](../dotnet/hash-multiset-hash-multiset-stl-clr.md)|Konstruuje obiekt kontenera.|  
-|[hash_multiset::INSERT (STL/CLR)](../dotnet/hash-multiset-insert-stl-clr.md)|Dodaje elementy.|  
+|[hash_multiset::insert (STL/CLR)](../dotnet/hash-multiset-insert-stl-clr.md)|Dodaje elementy.|  
 |[hash_multiset::key_comp (STL/CLR)](../dotnet/hash-multiset-key-comp-stl-clr.md)|Kopiuje porządkowania delegowanie dla dwa klucze.|  
 |[hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md)|Oblicza średnią liczbę elementów na przedział.|  
 |[hash_multiset::lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)|Wyszukuje początek zakresu, który jest zgodny z określonym kluczem.|  
@@ -101,7 +104,7 @@ template<typename Key>
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[hash_multiset::operator = (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[hash_multiset::operator= (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -160,4 +163,4 @@ template<typename Key>
  [Zestaw wielokrotny (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [Zestaw wielokrotny (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [Ustaw (STL/CLR)](../dotnet/set-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

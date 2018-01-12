@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b1b537685097d5574f85f7754c2283a682be56c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5deea89ccc9c340537b1b33563455ea91b46fe8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpropexchange-class"></a>Klasa CPropExchange
 Obsługuje implementacji trwałości dla formantów OLE.  
@@ -196,13 +197,13 @@ virtual BOOL ExchangeProp(
   
 |Symbol|Typ właściwości|  
 |------------|-------------------|  
-|`VT_I2`|**krótki**|  
-|`VT_I4`|**długa**|  
+|`VT_I2`|**short**|  
+|`VT_I4`|**long**|  
 |`VT_BOOL`|**WARTOŚĆ LOGICZNA**|  
 |`VT_BSTR`|`CString`|  
 |`VT_CY`|**CY**|  
 |`VT_R4`|**float**|  
-|`VT_R8`|**podwójne**|  
+|`VT_R8`|**double**|  
   
  `pvProp`  
  Wskaźnik do wartości właściwości.  

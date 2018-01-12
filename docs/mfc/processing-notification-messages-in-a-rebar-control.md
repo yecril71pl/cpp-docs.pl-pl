@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b4c452280997a843966bb7580c241a312ebf4662
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22a8b584c309cd6698ddd73449fcbba866111190
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Przetwarzanie komunikatów powiadomień w formancie paska pomocniczego
 W klasie nadrzędnej formantu paska pomocniczego, Utwórz `OnChildNotify` funkcji obsługi z instrukcji switch dla każdego formantu paska pomocniczego (`CReBarCtrl`) komunikatów powiadomień, które mają być obsługiwane. Powiadomienia są wysyłane do okna nadrzędnego, gdy użytkownik przeciąga obiektów nad formantem paska pomocniczego, zmiany układu paskami pomocniczymi, usuwa paskami w formancie paska pomocniczego i tak dalej.  
@@ -51,5 +52,5 @@ W klasie nadrzędnej formantu paska pomocniczego, Utwórz `OnChildNotify` funkcj
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

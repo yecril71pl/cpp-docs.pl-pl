@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a36e871c8cea0a1ed16362ab7d8683151fe17825
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cce496f205052bdb6986abc0cee158622e93545
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-select-among-completed-tasks"></a>Porady: wybieranie spośród zadań wykonanych
 Ten przykład przedstawia sposób użycia [concurrency::choice](../../parallel/concrt/reference/choice-class.md) i [concurrency::join](../../parallel/concrt/reference/join-class.md) klasy do wybrania pierwszego zadania do wykonania algorytmu wyszukiwania.  
@@ -63,4 +64,4 @@ No employee has id 899 or salary 31223.00.
  [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)   
  [Funkcje przekazywania komunikatów](../../parallel/concrt/message-passing-functions.md)   
  [Klasa wyboru](../../parallel/concrt/reference/choice-class.md)   
- [JOIN — klasa](../../parallel/concrt/reference/join-class.md)
+ [join, klasa](../../parallel/concrt/reference/join-class.md)

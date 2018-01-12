@@ -39,11 +39,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c8ad9086520a7a9f12869cf35e3a11a10673659
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ea5972a46d6e8d5ff106ddcc1c8692a3cdd8ff3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colemessagefilter-class"></a>Klasa COleMessageFilter
 Zarządza współbieżności wymagane przez interakcji w aplikacji OLE.  
@@ -266,4 +267,4 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ## <a name="see-also"></a>Zobacz też  
  [CCmdTarget — klasa](../../mfc/reference/ccmdtarget-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [CCmdTarget — klasa](../../mfc/reference/ccmdtarget-class.md)
+ [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)

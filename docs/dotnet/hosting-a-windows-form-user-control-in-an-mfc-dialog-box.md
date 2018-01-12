@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 311a07b81eb5450853d94332cbc742007546ee8e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: da8e8a54947b329fe36eea5c80bdc13ba5cdfa74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC
 MFC obsługuje formantu formularzy systemu Windows jako specjalny rodzaj formantu ActiveX i komunikuje się za pomocą formantu przy użyciu interfejsów ActiveX i właściwości i metody <xref:System.Windows.Forms.Control> klasy. Zalecane jest użycie .NET Framework właściwości i metod do działania w formancie.  
@@ -32,11 +35,11 @@ MFC obsługuje formantu formularzy systemu Windows jako specjalny rodzaj formant
 >  W bieżącej wersji `CDialogBar` obiektu nie może obsługiwać formanty formularzy systemu Windows.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: Tworzenie formantu użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)  
+ [Instrukcje: tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)  
   
  [Porady: czy powiązanie danych DDX/ddv za pomocą interfejsu Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)  
   
- [Porady: obiekt Sink zdarzenia Windows Forms z klas natywnych języka C++](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)  
+ [Instrukcje: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  [Klasa CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) &#124; [Cdialog — klasa](../mfc/reference/cdialog-class.md) &#124; [Klasa CWnd](../mfc/reference/cwnd-class.md) &#124;<xref:System.Windows.Forms.Control>  
@@ -45,4 +48,4 @@ MFC obsługuje formantu formularzy systemu Windows jako specjalny rodzaj formant
  [Używanie formantu użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
  [Różnice w programowaniu Windows Forms/MFC](../dotnet/windows-forms-mfc-programming-differences.md)   
  [Hostowanie formantu użytkownika formularzy systemu Windows jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)   
- [Hostowanie formantu użytkownika formularza systemu Windows jako okna dialogowego MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)
+ [Hostowanie kontrolki użytkownika formularza systemu Windows jako okna dialogowego MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)

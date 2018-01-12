@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40cb73049d7dbb8722b456c3d41ec7538dabdab0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 530cc14135fd38e2177e00dc87974e96ffe24b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-background-mfc-implementation"></a>Podstawy OLE: implementacja MFC
 Ze względu na rozmiar i złożoność raw OLE interfejsu API wywoływania go bezpośrednio do pisania aplikacji OLE może być bardzo czasochłonne. Celem wdrożenia Microsoft Foundation Class Library OLE jest aby zmniejszyć ilość pracy, które musisz wykonać do pisania aplikacji obsługujących OLE, kompletne.  
@@ -58,5 +59,5 @@ Ze względu na rozmiar i złożoność raw OLE interfejsu API wywoływania go be
   
 ## <a name="see-also"></a>Zobacz też  
  [Podstawy OLE](../mfc/ole-background.md)   
- [Podstawy OLE: Strategie implementacji](../mfc/ole-background-implementation-strategies.md)
+ [Podstawy OLE: strategie implementacji](../mfc/ole-background-implementation-strategies.md)
 

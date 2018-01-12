@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43ac6b407de3f828db6b5c4403ab0a2169c8cd49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: deca38c7c1fdaf9523e4186b801e5ed25042e46e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdichildwnd-class"></a>Cmdichildwnd — klasa
 Udostępnia funkcje systemu Windows wiele okien podrzędnych interfejsu (MDI) dokumentu, wraz z elementów członkowskich do zarządzania okna.  
@@ -271,4 +272,4 @@ void SetHandles(
  [Cframewnd — klasa](../../mfc/reference/cframewnd-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   
- [Cmdiframewnd — klasa](../../mfc/reference/cmdiframewnd-class.md)
+ [Klasa CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)

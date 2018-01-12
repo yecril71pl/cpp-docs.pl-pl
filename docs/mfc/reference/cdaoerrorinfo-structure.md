@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e3d7637bfd6247dee79df4716a3e638a49e36cbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da47b4b68a9fd73b3962254121006eff47282336
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo — Struktura
 `CDaoErrorInfo` Struktura zawiera informacje o obiektach błąd zdefiniowany dla obiektów dostępu do danych (DAO).  

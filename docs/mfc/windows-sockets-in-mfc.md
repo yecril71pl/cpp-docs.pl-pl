@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01c61a00fe9a0f34a6f1237e0b7307fd8924e6be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bdade770449b7ae5db9db9a170198b81cbeaf970
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows Sockets w MFC
 > [!NOTE]
@@ -56,32 +57,32 @@ ms.lasthandoff: 10/24/2017
   
  Aby uzyskać więcej informacji na temat usługi Windows Sockets zobacz:  
   
--   [Windows Sockets: Gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)  
+-   [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows Sockets: Gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)  
   
--   [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets: Sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md)  
+-   [Gniazda systemu Windows: sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md)  
   
--   [Windows Sockets: Przykład gniazd korzystających z archiwów](../mfc/windows-sockets-example-of-sockets-using-archives.md)  
+-   [Gniazda systemu Windows: przykład gniazd korzystających z archiwów](../mfc/windows-sockets-example-of-sockets-using-archives.md)  
   
--   [Windows Sockets: Jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Gniazda systemu Windows: jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: Wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)  
+-   [Gniazda systemu Windows: wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)  
   
--   [Windows Sockets: Powiadomienia dotyczące gniazd](../mfc/windows-sockets-socket-notifications.md)  
+-   [Gniazda systemu Windows: powiadomienia dotyczące gniazd](../mfc/windows-sockets-socket-notifications.md)  
   
--   [Windows Sockets: blokowanie](../mfc/windows-sockets-blocking.md)  
+-   [Gniazda systemu Windows: blokowanie](../mfc/windows-sockets-blocking.md)  
   
--   [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)  
+-   [Gniazda systemu Windows: określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)  
   
--   [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)  
+-   [Gniazda systemu Windows: konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)  
   
--   [Windows Sockets: Porty i adresy gniazd](../mfc/windows-sockets-ports-and-socket-addresses.md)  
+-   [Gniazda systemu Windows: porty i adresy gniazd](../mfc/windows-sockets-ports-and-socket-addresses.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Windows Sockets](../mfc/windows-sockets.md)
+ [Gniazda systemu Windows](../mfc/windows-sockets.md)
 

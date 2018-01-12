@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31a3857169ad27ad75ed3ef38022048420d1bf0f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f284532e96e0a985aad8797a8caac0306f1f56f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-between-systemguid-and-guid"></a>Porady: konwertowanie między identyfikatorami System::Guid i _GUID
 Poniższy przykład kodu pokazuje sposób konwertowania między <xref:System.Guid> i `_GUID`.  
@@ -74,4 +77,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+ [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

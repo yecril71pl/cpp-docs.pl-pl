@@ -39,11 +39,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2fc453acf01b978a7cc9ba7eb569ff1775f6c11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc0ef44371a4ade68e80f3169778b9e867c15b17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cscrollview-class"></a>Klasa CScrollView
 A [CView](../../mfc/reference/cview-class.md) dzięki możliwości.  

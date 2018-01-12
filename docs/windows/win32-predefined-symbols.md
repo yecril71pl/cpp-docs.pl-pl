@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01aa83fc5d0be468252b8593ee343ff28648d218
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 865d61611546e2550aaa241220dc226cea9f9b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32-predefined-symbols"></a>Wstępnie zdefiniowane symbole Win32
 Te symbole są definiowane w pliki nagłówkowe Win32 i obsługują standardowe funkcje aplikacji systemu Windows i działań. Te symbole są używane głównie z typowymi elementami interfejsu użytkownika. Podczas pracy z kontrolkami w edytory zasobów symbole te będą wyświetlane w [okna właściwości](/visualstudio/ide/reference/properties-window) skojarzone z formantów standardowych. Na przykład jeśli ikona aplikacji powinien być wyświetlany pasek narzędzi, ikony zostanie skojarzona z symbol IDI_SMALL w oknie właściwości.  
@@ -48,4 +51,4 @@ Te symbole są definiowane w pliki nagłówkowe Win32 i obsługują standardowe 
   
 ## <a name="see-also"></a>Zobacz też  
  [Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)   
- [Symbole: Identyfikatory zasobów](../windows/symbols-resource-identifiers.md)
+ [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)

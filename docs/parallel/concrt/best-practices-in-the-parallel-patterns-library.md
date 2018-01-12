@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea611f555abe21a6ad3196bca287a7bd4ff00aa4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Biblioteka wzorów równoległych — Najlepsze praktyki
 W tym dokumencie opisano jak najbardziej efektywne wykorzystanie równoległych biblioteki wzorców (PLL). PPL udostępnia ogólnego przeznaczenia kontenerów, obiektów i algorytmy do wykonywania równoległości szczegółowych.  
@@ -286,5 +287,5 @@ Container 1: Freeing resources...Exiting program...
  [Porady: Użyj anulowania, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)   
  [Porady: Korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)   
  [Biblioteki agentów asynchronicznych — najlepsze praktyki](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)   
- [Najlepsze praktyki ogólne współbieżności środowiska wykonawczego](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
+ [Środowisko uruchomieniowe współbieżności — najlepsze praktyki ogólne](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
 

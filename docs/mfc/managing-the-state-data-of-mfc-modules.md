@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 295d10f3b586dab6e45d103d8e65244887b759e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d070bb91d9c1c229feaa563123c12702a7b5027
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Zarządzanie danymi stanu modułów MFC
 W tym artykule omówiono dane stanu modułów MFC i jak ten stan jest aktualizowany, gdy przepływ wykonania (ścieżka kod ma za pośrednictwem aplikacji podczas wykonywania) uzyskuje i opuszcza modułu. Przełączanie stany modułów z `AFX_MANAGE_STATE` i `METHOD_PROLOGUE` również omówione makra.  

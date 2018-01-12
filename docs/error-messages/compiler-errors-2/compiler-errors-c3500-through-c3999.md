@@ -1,6 +1,6 @@
 ---
 title: "C3500 błędy kompilatora za pośrednictwem C3999 | Dokumentacja firmy Microsoft"
-ms.date: 10/25/2017
+ms.date: 11/17/2017
 ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
@@ -252,34 +252,34 @@ ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f480eafdf210f623ade26d7b9db783fdb46d8734
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 7a34b3f3fb635cc666b0e9cca079373bb7c5636e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>C3500 błędy kompilatora za pośrednictwem C3999
 
-Artykuły w tej części dokumentacji zawierają informacje o podsekcji błędów kompilatora Visual C++. Można uzyskać dostępu do informacji w tym miejscu lub w **dane wyjściowe** okna w programie Visual Studio, możesz wybrać numer błędu, a następnie wybierz pozycję klawisz F1.
+Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty o błędach, które są generowane przez kompilator.
 
-> [!NOTE]
-> Nie każdy [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] błędu jest opisane w witrynie MSDN. W wielu przypadkach diagnostycznych komunikat zawiera wszystkie informacje, które są dostępne. Jeśli uważasz, że komunikat o błędzie musi dodatkowe informacje, można Daj nam znać. Można Użyj formularza opinii na tej stronie, lub przejdź do paska menu w programie Visual Studio i wybierz **pomocy**, **zgłosić usterkę**, lub można przesłać raportu sugestię lub usterki na [Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-Błędy i ostrzeżenia na forach MSDN publicznego może się okazać dodatkowej pomocy. [Języka Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) forum jest pytania i dyskusji o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] składni języka i kompilatora. [Visual C++ ogólne](http://go.microsoft.com/fwlink/?LinkId=158194) forum jest odpowiedzi na pytania dotyczące [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] nie opisano w innych forach. Można również znaleźć pomoc na temat błędów i ostrzeżeń w [przepełnienie stosu](http://stackoverflow.com/).
+## <a name="error-messages"></a>Komunikaty o błędach
 
 |Błąd|Komunikat|
 |-----------|-------------|
-|[C3500 błąd kompilatora](compiler-error-c3500.md)|Nieprawidłowy atrybut ProgID "*progid*"|
-|[C3501 błąd kompilatora](compiler-error-c3501.md)|Brak żadnych zarejestrowanych typelib dla identyfikatora ProgID "*progid*"|
+|[Błąd kompilatora C3500](compiler-error-c3500.md)|Nieprawidłowy atrybut ProgID "*progid*"|
+|[Błąd kompilatora C3501](compiler-error-c3501.md)|Brak żadnych zarejestrowanych typelib dla identyfikatora ProgID "*progid*"|
 |C3502 błąd kompilatora|Nie można uzyskać identyfikatora LIBID dla ProgID "*progid*"|
 |C3503 błąd kompilatora|znak "0 x*wartość*" nie jest dozwolona w nieprzetworzony ciąg literału|
 |C3504 błąd kompilatora|Nie można utworzyć identyfikatora GUID z ciągu "*ciąg*"|
-|[C3505 błąd kompilatora](compiler-error-c3505.md)|Nie można załadować biblioteki typów '*biblioteki*"|
-|[C3506 błąd kompilatora](compiler-error-c3506.md)|Brak żadnych zarejestrowanych typelib dla identyfikatora LIBID "*biblioteki*"|
-|[C3507 błąd kompilatora](compiler-error-c3507.md)|Identyfikator ProgID może zawierać nie więcej niż 39 znaków*progid*"; ani zawierać jakichkolwiek znaków interpunkcyjnych z wyjątkiem". "; ani rozpoczynających się od cyfry|
-|[C3508 błąd kompilatora](compiler-error-c3508.md)|"*typu*": nie jest prawidłowym typem automatyzacji|
-|[C3509 błąd kompilatora](compiler-error-c3509.md)|"*typu*": nieprawidłowy zwracany typ automatyzacji; gdy parametr jest oznaczony jako "retval", zwracany typ musi być "void", "HRESULT" lub "SCODE"|
-|[C3510 błąd kompilatora](compiler-error-c3510.md)|Nie można zlokalizować biblioteki typów zależnych *biblioteki*|
+|[Błąd kompilatora C3505](compiler-error-c3505.md)|Nie można załadować biblioteki typów '*biblioteki*"|
+|[Błąd kompilatora C3506](compiler-error-c3506.md)|Brak żadnych zarejestrowanych typelib dla identyfikatora LIBID "*biblioteki*"|
+|[Błąd kompilatora C3507](compiler-error-c3507.md)|Identyfikator ProgID może zawierać nie więcej niż 39 znaków*progid*"; ani zawierać jakichkolwiek znaków interpunkcyjnych z wyjątkiem". "; ani rozpoczynających się od cyfry|
+|[Błąd kompilatora C3508](compiler-error-c3508.md)|"*typu*": nie jest prawidłowym typem automatyzacji|
+|[Błąd kompilatora C3509](compiler-error-c3509.md)|"*typu*": nieprawidłowy zwracany typ automatyzacji; gdy parametr jest oznaczony jako "retval", zwracany typ musi być "void", "HRESULT" lub "SCODE"|
+|[Błąd kompilatora C3510](compiler-error-c3510.md)|Nie można zlokalizować biblioteki typów zależnych *biblioteki*|
 |C3511 błąd kompilatora|"*identyfikator*": wywołanie konstruktora delegującego są tylko inicjator elementu członkowskiego|
 |C3512 błąd kompilatora|ograniczająca sekwencja znaków dla nieprzetworzonego literału ciągu powinna mieć nie więcej niż 16 znaków|
 |C3513 błąd kompilatora|"*ciąg*": nieobsługiwany znak ograniczający literału nieprzetworzonego ciągu|
@@ -288,7 +288,7 @@ Błędy i ostrzeżenia na forach MSDN publicznego może się okazać dodatkowej 
 |C3516 błąd kompilatora|Nieoczekiwany koniec pliku podczas przetwarzania nieprzetworzonego ciągu literału; znaleziono Sekwencja ogranicznika "*ciąg*" nie został uzyskany.|
 |C3517 błąd kompilatora|"*identyfikator*" Deklaracja aliasu nie może mieć typu zawierającego "auto"|
 |C3518 błąd kompilatora|"*identyfikator*": w kontekście Inicjalizacja listy bezpośrednio typu dla "*typu*" można określić tylko na podstawie pojedynczego wyrażenia inicjatora|
-|[C3519 błąd kompilatora](compiler-error-c3519.md)|"*parametru*": nieprawidłowy parametr dla atrybutu embedded_idl|
+|[Błąd kompilatora C3519](compiler-error-c3519.md)|"*parametru*": nieprawidłowy parametr dla atrybutu embedded_idl|
 |C3520 błąd kompilatora|"*identyfikator*": pakiet parametrów musi być rozwinięty w tym kontekście|
 |C3521 błąd kompilatora|"*identyfikator*" nie jest pakietem parametrów|
 |C3522 błąd kompilatora|"*typu*": pakiet parametrów nie może być rozwinięty w tym kontekście|
@@ -299,18 +299,18 @@ Błędy i ostrzeżenia na forach MSDN publicznego może się okazać dodatkowej 
 |C3527 błąd kompilatora|"*identyfikator*" nie jest prawidłowym argumentem operacji "sizeof...". Czy zamierzałeś użyć "sizeof"?|
 |C3528 błąd kompilatora|"*identifier1*": liczba elementów w tym rozwinięciu pakietu jest niezgodna z liczbą elementów w "*identifier2*"|
 |C3529 błąd kompilatora|"*parametru*": pakiet parametrów szablonu nie może mieć argumentu domyślnego|
-|[C3530 błąd kompilatora](compiler-error-c3530.md)|"*typu*" nie można łączyć z jakimkolwiek innym specyfikatorem typu|
-|[C3531 błąd kompilatora](compiler-error-c3531.md)|"*identyfikator*": symbol, którego typ zawiera "*typu*" musi mieć inicjator|
-|[C3532 błąd kompilatora](compiler-error-c3532.md)|Typ elementu tablicy nie może być typu zawierającego "*typu*"|
-|[C3533 błąd kompilatora](compiler-error-c3533.md)|Parametr nie może mieć typu zawierającego "*typu*"|
+|[Błąd kompilatora C3530](compiler-error-c3530.md)|"*typu*" nie można łączyć z jakimkolwiek innym specyfikatorem typu|
+|[Błąd kompilatora C3531](compiler-error-c3531.md)|"*identyfikator*": symbol, którego typ zawiera "*typu*" musi mieć inicjator|
+|[Błąd kompilatora C3532](compiler-error-c3532.md)|Typ elementu tablicy nie może być typu zawierającego "*typu*"|
+|[Błąd kompilatora C3533](compiler-error-c3533.md)|Parametr nie może mieć typu zawierającego "*typu*"|
 |C3534 błąd kompilatora|Nieaktualne.|
-|[C3535 błąd kompilatora](compiler-error-c3535.md)|Nie można ustalić typu "*type1*"od"*type2*"|
-|[C3536 błąd kompilatora](compiler-error-c3536.md)|"*identyfikator*": nie można użyć, zanim zostanie zainicjowany|
-|[C3537 błąd kompilatora](compiler-error-c3537.md)|Nie można rzutować typu zawierającego "*typu*"|
-|[C3538 błąd kompilatora](compiler-error-c3538.md)|na liście deklaratorów "*typu*" należy zawsze ustalać do tego samego typu|
-|[C3539 błąd kompilatora](compiler-error-c3539.md)|argument szablonu nie może być typu zawierającego "*typu*"|
-|[C3540 błąd kompilatora](compiler-error-c3540.md)|Nie można zastosować operatora sizeof do typu, który zawiera "*typu*"|
-|[C3541 błąd kompilatora](compiler-error-c3541.md)|Identyfikator typu nie można zastosować do typu zawierającego "*typu*"|
+|[Błąd kompilatora C3535](compiler-error-c3535.md)|Nie można ustalić typu "*type1*"od"*type2*"|
+|[Błąd kompilatora C3536](compiler-error-c3536.md)|"*identyfikator*": nie można użyć, zanim zostanie zainicjowany|
+|[Błąd kompilatora C3537](compiler-error-c3537.md)|Nie można rzutować typu zawierającego "*typu*"|
+|[Błąd kompilatora C3538](compiler-error-c3538.md)|na liście deklaratorów "*typu*" należy zawsze ustalać do tego samego typu|
+|[Błąd kompilatora C3539](compiler-error-c3539.md)|argument szablonu nie może być typu zawierającego "*typu*"|
+|[Błąd kompilatora C3540](compiler-error-c3540.md)|Nie można zastosować operatora sizeof do typu, który zawiera "*typu*"|
+|[Błąd kompilatora C3541](compiler-error-c3541.md)|Identyfikator typu nie można zastosować do typu zawierającego "*typu*"|
 |C3542 błąd kompilatora|"*identyfikator*": funkcja wirtualny element członkowski nie ma zwracanego typu, który zawiera "*typu*"|
 |C3543 błąd kompilatora|"*typu*": nie zawiera pakietu parametrów|
 |C3544 błąd kompilatora|"*parametru*": pakiet parametrów oczekuje argumentu szablonu typu|
@@ -319,13 +319,13 @@ Błędy i ostrzeżenia na forach MSDN publicznego może się okazać dodatkowej 
 |C3547 błąd kompilatora|Parametr szablonu "*parametru*"nie można użyć, ponieważ pakiet parametrów szablonu jest zgodny i nie można wywnioskować z parametrów funkcji"*funkcja*"|
 |C3548 błąd kompilatora|"*identyfikator*": pakiet parametrów nie można użyć w tym kontekście|
 |C3549 błąd kompilatora|"*wartość*": pakiet parametrów funkcji nie może mieć argumentu domyślnego|
-|[C3550 błąd kompilatora](compiler-error-c3550.md)|w tym kontekście dozwolone jest tylko zwykły element "decltype(auto)"|
-|[C3551 błąd kompilatora](compiler-error-c3551.md)|Jeśli jest używany końcowego typu zwracanego, początkowy typ zwracany powinien być pojedynczym specyfikatorem typu "auto" (nie "*typu*")|
-|[C3552 błąd kompilatora](compiler-error-c3552.md)|Oczekiwano "decltype(auto)"|
-|[C3553 błąd kompilatora](compiler-error-c3553.md)|decltype oczekuje wyrażenia nie jest typem|
-|[C3554 błąd kompilatora](compiler-error-c3554.md)|"*typu*" nie można łączyć z jakimkolwiek innym specyfikatorem typu|
-|[C3555 błąd kompilatora](compiler-error-c3555.md)|Nieprawidłowy argument dla "decltype"|
-|[C3556 błąd kompilatora](compiler-error-c3556.md)|"*wyrażenie*": nieprawidłowy argument dla "decltype"|
+|[Błąd kompilatora C3550](compiler-error-c3550.md)|w tym kontekście dozwolone jest tylko zwykły element "decltype(auto)"|
+|[Błąd kompilatora C3551](compiler-error-c3551.md)|Jeśli jest używany końcowego typu zwracanego, początkowy typ zwracany powinien być pojedynczym specyfikatorem typu "auto" (nie "*typu*")|
+|[Błąd kompilatora C3552](compiler-error-c3552.md)|Oczekiwano "decltype(auto)"|
+|[Błąd kompilatora C3553](compiler-error-c3553.md)|decltype oczekuje wyrażenia nie jest typem|
+|[Błąd kompilatora C3554](compiler-error-c3554.md)|"*typu*" nie można łączyć z jakimkolwiek innym specyfikatorem typu|
+|[Błąd kompilatora C3555](compiler-error-c3555.md)|Nieprawidłowy argument dla "decltype"|
+|[Błąd kompilatora C3556](compiler-error-c3556.md)|"*wyrażenie*": nieprawidłowy argument dla "decltype"|
 |C3557 błąd kompilatora|Nieaktualne.|
 |C3558 błąd kompilatora|Nieaktualne.|
 |C3559 błąd kompilatora|Wywołanie rekurencyjne dla "*funkcja*": rekursja została wykryta podczas kompilacji wykresu wywołań dla concurrency::parallel_for_each w:: "*funkcja*"|
@@ -372,79 +372,79 @@ Błędy i ostrzeżenia na forach MSDN publicznego może się okazać dodatkowej 
 |C3600 błąd kompilatora|"*funkcja*": użycie kafelka\_pamięci statycznej wykryta podczas kompilacji wykresu wywołań dla concurrency::parallel niekafelkowanego\_for_each na: "*funkcja*"|
 |C3601 błąd kompilatora|"*typu*": jest nieprawidłowym typem argumentu dla diagnostycznej funkcji amp "*funkcja*"|
 |C3602 błąd kompilatora|Wykryto podczas kompilacji wykresu wywołań dla concurrency::parallel_for_each w: nieobsługiwany przepływ sterowania: "*funkcja*"|
-|[C3603 błąd kompilatora](compiler-error-c3603.md)|"*symbol*": typ "*typu*" nie jest jeszcze obsługiwane|
+|[Błąd kompilatora C3603](compiler-error-c3603.md)|"*symbol*": typ "*typu*" nie jest jeszcze obsługiwane|
 |C3604 błąd kompilatora|"*identyfikator*": można tylko utworzyć obiekt zarządzany na stercie gc|
 |C3605 błąd kompilatora|Całkowita liczba próbników (*numer* przechwycony i *numer* wstępnie zdefiniowanych) przekracza *numer* podczas kompilacji wykresu wywołań dla concurrency::parallel_for_each w:: " *Funkcja*"|
 |C3606 błąd kompilatora|Nieaktualne.|
 |C3607 błąd kompilatora|Nieaktualne.|
 |C3608 błąd kompilatora|Nieaktualne.|
-|[C3609 błąd kompilatora](compiler-error-c3609.md)|"*identyfikator*": funkcja "zapieczętowany/final" musi być wirtualna|
-|[C3610 błąd kompilatora](compiler-error-c3610.md)|"*identyfikator*": typ wartościowy musi być "boxed" przed metodą "*— metoda*" można wywołać|
-|[C3611 błąd kompilatora](compiler-error-c3611.md)|"*identyfikator*": funkcja zamknięta nie może mieć czystego specyfikatora|
-|[C3612 błąd kompilatora](compiler-error-c3612.md)|"*identyfikator*": zapieczętowana klasa nie może mieć żadnych czystych metod wirtualnych|
+|[Błąd kompilatora C3609](compiler-error-c3609.md)|"*identyfikator*": funkcja "zapieczętowany/final" musi być wirtualna|
+|[Błąd kompilatora C3610](compiler-error-c3610.md)|"*identyfikator*": typ wartościowy musi być "boxed" przed metodą "*— metoda*" można wywołać|
+|[Błąd kompilatora C3611](compiler-error-c3611.md)|"*identyfikator*": funkcja zamknięta nie może mieć czystego specyfikatora|
+|[Błąd kompilatora C3612](compiler-error-c3612.md)|"*identyfikator*": zapieczętowana klasa nie może mieć żadnych czystych metod wirtualnych|
 |C3613 błąd kompilatora|Brak typu zwracanego po "->" ("założono typ int")|
 |C3614 błąd kompilatora|Różne wartości rozmiaru pakietu w tej samej klasie; Poprzednia wartość: "*wartość*", nowa wartość to"*wartość*"|
 |[C3615 błąd kompilatora](compiler-error-c3615.md)|Funkcja constexpr "*funkcja*" nie może być wyrażeniem stałym|
 |C3616 błąd kompilatora|Nieaktualne.|
 |C3617 błąd kompilatora|Nieaktualne.|
-|[C3618 błąd kompilatora](compiler-error-c3618.md)|"*deklaracji*": nie można zdefiniować metody oznaczonej jako DllImport|
-|[C3619 błąd kompilatora](compiler-error-c3619.md)|Nie można deklarować szablonu w ramach typu managed WinRT|
+|[Błąd kompilatora C3618](compiler-error-c3618.md)|"*deklaracji*": nie można zdefiniować metody oznaczonej jako DllImport|
+|[Błąd kompilatora C3619](compiler-error-c3619.md)|Nie można deklarować szablonu w ramach typu managed WinRT|
 |C3620 błąd kompilatora|"*typu*": ustawienie wyrównania jest niedozwolone dla typów WinRT|
 |C3621 błąd kompilatora|"*typu*": tylko domyślna wartość pakowania (*numer*) jest dozwolona dla typów WinRT|
-|[C3622 błąd kompilatora](compiler-error-c3622.md)|*Typ*": klasy zadeklarowanej jako"*— słowo kluczowe*"nie można utworzyć wystąpienia|
-|[C3623 błąd kompilatora](compiler-error-c3623.md)|"*identyfikator*": pola bitowe nie są obsługiwane w typach zarządzanych WinRT|
-|[C3624 błąd kompilatora](compiler-error-c3624.md)|"*typu*": użycie tego typu wymaga odwołania do zestawu/modułu "*identyfikator*"|
-|[C3625 błąd kompilatora](compiler-error-c3625.md)|"*klasy*": typ natywny nie może pochodzić od typu zarządzanego WinRT "*typu*"|
-|[C3626 błąd kompilatora](compiler-error-c3626.md)|"*identyfikator*": "*— słowo kluczowe*" — słowo kluczowe można używać tylko interfejsów modelu COM, funkcji Członkowskich i elementy członkowskie danych, które są wskaźnikami do delegatów|
-|[C3627 błąd kompilatora](compiler-error-c3627.md)|Można go opakować typ wartościowy|
-|[C3628 błąd kompilatora](compiler-error-c3628.md)|"*klasy*": klasy managed WinRT obsługują tylko publiczne dziedziczenie|
+|[Błąd kompilatora C3622](compiler-error-c3622.md)|*Typ*": klasy zadeklarowanej jako"*— słowo kluczowe*"nie można utworzyć wystąpienia|
+|[Błąd kompilatora C3623](compiler-error-c3623.md)|"*identyfikator*": pola bitowe nie są obsługiwane w typach zarządzanych WinRT|
+|[Błąd kompilatora C3624](compiler-error-c3624.md)|"*typu*": użycie tego typu wymaga odwołania do zestawu/modułu "*identyfikator*"|
+|[Błąd kompilatora C3625](compiler-error-c3625.md)|"*klasy*": typ natywny nie może pochodzić od typu zarządzanego WinRT "*typu*"|
+|[Błąd kompilatora C3626](compiler-error-c3626.md)|"*identyfikator*": "*— słowo kluczowe*" — słowo kluczowe można używać tylko interfejsów modelu COM, funkcji Członkowskich i elementy członkowskie danych, które są wskaźnikami do delegatów|
+|[Błąd kompilatora C3627](compiler-error-c3627.md)|Można go opakować typ wartościowy|
+|[Błąd kompilatora C3628](compiler-error-c3628.md)|"*klasy*": klasy managed WinRT obsługują tylko publiczne dziedziczenie|
 |C3629 błąd kompilatora|"*tokenu*": wartość domyślna przechwytywania może wystąpić tylko na początku listy przechwytywania lambda|
-|[C3630 błąd kompilatora](compiler-error-c3630.md)|Błąd podczas przetwarzania tokenu "*tokenu*"|
-|[C3631 błąd kompilatora](compiler-error-c3631.md)|"*zdarzeń*": nie można przeciążyć zdarzeń managed WinRT|
-|[C3632 błąd kompilatora](compiler-error-c3632.md)|"*zdarzeń*": niedozwolony styl zdarzenia dla *utworzenia*|
-|[C3633 błąd kompilatora](compiler-error-c3633.md)|Nie można zdefiniować "*identyfikator*"jako członka zarządzany"*klasy*"|
-|[C3634 błąd kompilatora](compiler-error-c3634.md)|"*elementu członkowskiego*": nie można definiować metody abstrakcyjnej klasy managed WinRT|
+|[Błąd kompilatora C3630](compiler-error-c3630.md)|Błąd podczas przetwarzania tokenu "*tokenu*"|
+|[Błąd kompilatora C3631](compiler-error-c3631.md)|"*zdarzeń*": nie można przeciążyć zdarzeń managed WinRT|
+|[Błąd kompilatora C3632](compiler-error-c3632.md)|"*zdarzeń*": niedozwolony styl zdarzenia dla *utworzenia*|
+|[Błąd kompilatora C3633](compiler-error-c3633.md)|Nie można zdefiniować "*identyfikator*"jako członka zarządzany"*klasy*"|
+|[Błąd kompilatora C3634](compiler-error-c3634.md)|"*elementu członkowskiego*": nie można definiować metody abstrakcyjnej klasy managed WinRT|
 |C3635 błąd kompilatora|"*identyfikator*": nie można zastosować do klasy managed WinRT (Użyj "*identyfikator*" zamiast niego)|
 |C3636 błąd kompilatora|"*identyfikator*": nie można zastosować do tego typu|
-|[C3637 błąd kompilatora](compiler-error-c3637.md)|"*funkcja*": definicja funkcji friend nie może być specjalizacja szablonu funkcji/ogólnego|
-|[C3638 błąd kompilatora](compiler-error-c3638.md)|"*operator*": standardowe opakowywanie i rozpakowywanie operatory konwersji nie można ponownie zdefiniować|
+|[Błąd kompilatora C3637](compiler-error-c3637.md)|"*funkcja*": definicja funkcji friend nie może być specjalizacja szablonu funkcji/ogólnego|
+|[Błąd kompilatora C3638](compiler-error-c3638.md)|"*operator*": standardowe opakowywanie i rozpakowywanie operatory konwersji nie można ponownie zdefiniować|
 |C3639 błąd kompilatora|Nieaktualne.|
-|[C3640 błąd kompilatora](compiler-error-c3640.md)|"*elementu członkowskiego*": funkcja członkowska odwołanie lub wirtualna lokalnej klasy musi być zdefiniowana|
-|[C3641 błąd kompilatora](compiler-error-c3641.md)|"*funkcja*": Nieprawidłowa konwencja wywoływania "*Konwencji*" dla funkcji kompilowanych z/CLR: pure lub/CLR: Safe|
-|[C3642 błąd kompilatora](compiler-error-c3642.md)|"*funkcja*": nie można wywołać funkcji w Konwencji wywołania __clrcall z natywnego kodu|
+|[Błąd kompilatora C3640](compiler-error-c3640.md)|"*elementu członkowskiego*": funkcja członkowska odwołanie lub wirtualna lokalnej klasy musi być zdefiniowana|
+|[Błąd kompilatora C3641](compiler-error-c3641.md)|"*funkcja*": Nieprawidłowa konwencja wywoływania "*Konwencji*" dla funkcji kompilowanych z/CLR: pure lub/CLR: Safe|
+|[Błąd kompilatora C3642](compiler-error-c3642.md)|"*funkcja*": nie można wywołać funkcji w Konwencji wywołania __clrcall z natywnego kodu|
 |C3643 błąd kompilatora|Nieaktualne.|
-|[C3644 błąd kompilatora](compiler-error-c3644.md)|"*funkcja*": nie można kompilować funkcji do generowania kodu zarządzanego|
-|[C3645 błąd kompilatora](compiler-error-c3645.md)|"*funkcja*": __clrcall nie można używać w funkcjach skompilowanych do natywnego kodu|
-|[C3646 błąd kompilatora](compiler-error-c3646.md)|"*identyfikator*': nieznany specyfikator przesłonięcia|
+|[Błąd kompilatora C3644](compiler-error-c3644.md)|"*funkcja*": nie można kompilować funkcji do generowania kodu zarządzanego|
+|[Błąd kompilatora C3645](compiler-error-c3645.md)|"*funkcja*": __clrcall nie można używać w funkcjach skompilowanych do natywnego kodu|
+|[Błąd kompilatora C3646](compiler-error-c3646.md)|"*identyfikator*': nieznany specyfikator przesłonięcia|
 |C3647 błąd kompilatora|Nieaktualne.|
-|[C3648 błąd kompilatora](compiler-error-c3648.md)|Ta składnia jawnego przesłaniania nie jest obsługiwane w typach zarządzanych|
+|[Błąd kompilatora C3648](compiler-error-c3648.md)|Ta składnia jawnego przesłaniania nie jest obsługiwane w typach zarządzanych|
 |C3649 błąd kompilatora|Ta składnia jawnego przesłaniania nie jest dozwolona z /ZW|
-|[C3650 błąd kompilatora](compiler-error-c3650.md)|"*elementu członkowskiego*": nie można użyć jako jawnego przesłaniania, musi być wirtualną funkcją członkowską klasy podstawowej|
-|[C3651 błąd kompilatora](compiler-error-c3651.md)|"*elementu członkowskiego*": nie można użyć jako jawnego przesłaniania, musi być elementem członkowskim klasy podstawowej|
-|[C3652 błąd kompilatora](compiler-error-c3652.md)|"*elementu członkowskiego*": funkcja, która jawnie przesłania, musi być wirtualna|
-|[C3653 błąd kompilatora](compiler-error-c3653.md)|"*identyfikator*": nie można użyć jako nazwanego przesłaniania: przesłaniana funkcja nie znaleziona; czy pamiętasz o nazwie funkcji jawnie, przy użyciu a:: operator?|
-|[C3654 błąd kompilatora](compiler-error-c3654.md)|"*tokenu*": błąd składni w jawnym przesłanianiu|
-|[C3655 błąd kompilatora](compiler-error-c3655.md)|"*elementu członkowskiego*": funkcja została już jawnie przesłonięta|
-|[C3656 błąd kompilatora](compiler-error-c3656.md)|"*— słowo kluczowe*": Zastąp specyfikator nie może powtarzać|
-|[C3657 błąd kompilatora](compiler-error-c3657.md)|destruktor/finalizator nie można jawnie przesłonić lub być jawnie przesłonięte|
+|[Błąd kompilatora C3650](compiler-error-c3650.md)|"*elementu członkowskiego*": nie można użyć jako jawnego przesłaniania, musi być wirtualną funkcją członkowską klasy podstawowej|
+|[Błąd kompilatora C3651](compiler-error-c3651.md)|"*elementu członkowskiego*": nie można użyć jako jawnego przesłaniania, musi być elementem członkowskim klasy podstawowej|
+|[Błąd kompilatora C3652](compiler-error-c3652.md)|"*elementu członkowskiego*": funkcja, która jawnie przesłania, musi być wirtualna|
+|[Błąd kompilatora C3653](compiler-error-c3653.md)|"*identyfikator*": nie można użyć jako nazwanego przesłaniania: przesłaniana funkcja nie znaleziona; czy pamiętasz o nazwie funkcji jawnie, przy użyciu a:: operator?|
+|[Błąd kompilatora C3654](compiler-error-c3654.md)|"*tokenu*": błąd składni w jawnym przesłanianiu|
+|[Błąd kompilatora C3655](compiler-error-c3655.md)|"*elementu członkowskiego*": funkcja została już jawnie przesłonięta|
+|[Błąd kompilatora C3656](compiler-error-c3656.md)|"*— słowo kluczowe*": Zastąp specyfikator nie może powtarzać|
+|[Błąd kompilatora C3657](compiler-error-c3657.md)|destruktor/finalizator nie można jawnie przesłonić lub być jawnie przesłonięte|
 |C3658 błąd kompilatora|Nieaktualne.|
 |C3659 błąd kompilatora|"*elementu członkowskiego*": specyfikator przesłonięcia "*— słowo kluczowe*" nie jest obsługiwane|
 |C3660 błąd kompilatora|"*Członek1*": ukrywa dziedziczony element członkowski "*member2*"|
-|[C3661 błąd kompilatora](compiler-error-c3661.md)|Lista jawnego przesłałania nie znalazła żadnych metod aby je zastąpić|
-|[C3662 błąd kompilatora](compiler-error-c3662.md)|"*elementu członkowskiego*": specyfikator przesłonięcia "*— słowo kluczowe*" dozwolone tylko w funkcjach Członkowskich klas zarządzanych WinRT|
+|[Błąd kompilatora C3661](compiler-error-c3661.md)|Lista jawnego przesłałania nie znalazła żadnych metod aby je zastąpić|
+|[Błąd kompilatora C3662](compiler-error-c3662.md)|"*elementu członkowskiego*": specyfikator przesłonięcia "*— słowo kluczowe*" dozwolone tylko w funkcjach Członkowskich klas zarządzanych WinRT|
 |C3663 błąd kompilatora|Nieaktualne.|
 |C3664 błąd kompilatora|"*elementu członkowskiego*": nie można użyć jako jawnego przesłaniania, musi mieć dostępność "public" lub "protected"|
-|[C3665 błąd kompilatora](compiler-error-c3665.md)|"*elementu członkowskiego*": specyfikator przesłonięcia "*— słowo kluczowe*" niedozwolone w destruktorze/finalizator|
-|[C3666 błąd kompilatora](compiler-error-c3666.md)|"*Konstruktor*": specyfikator przesłonięcia "*— słowo kluczowe*" nie jest dozwolony na konstruktorze|
+|[Błąd kompilatora C3665](compiler-error-c3665.md)|"*elementu członkowskiego*": specyfikator przesłonięcia "*— słowo kluczowe*" niedozwolone w destruktorze/finalizator|
+|[Błąd kompilatora C3666](compiler-error-c3666.md)|"*Konstruktor*": specyfikator przesłonięcia "*— słowo kluczowe*" nie jest dozwolony na konstruktorze|
 |C3667 błąd kompilatora|"*atrybutu*": atrybut nie obsługuje rozwinięcia pakietu|
-|[C3668 błąd kompilatora](compiler-error-c3668.md)|"*elementu członkowskiego*": metoda ze specyfikatorem przesłonięcia "override" nie przesłania żadnej metody klasy podstawowej|
-|[C3669 błąd kompilatora](compiler-error-c3669.md)|"*elementu członkowskiego*": specyfikator override "override" nie dozwolony na statycznych funkcjach Członkowskich lub konstruktorach|
-|[C3670 błąd kompilatora](compiler-error-c3670.md)|"*elementu członkowskiego*": nie można zastąpić metodę niedostępnej klasy podstawowej "*elementu członkowskiego*"|
-|[C3671 błąd kompilatora](compiler-error-c3671.md)|"*elementu członkowskiego*": funkcja nie przesłania "*elementu członkowskiego*"|
-|[C3672 błąd kompilatora](compiler-error-c3672.md)|wyrażenie pseudo-destruktora może służyć jedynie jako część wywołania funkcji|
-|[C3673 błąd kompilatora](compiler-error-c3673.md)|"*klasy*": klasa nie ma konstruktora kopiującego|
+|[Błąd kompilatora C3668](compiler-error-c3668.md)|"*elementu członkowskiego*": metoda ze specyfikatorem przesłonięcia "override" nie przesłania żadnej metody klasy podstawowej|
+|[Błąd kompilatora C3669](compiler-error-c3669.md)|"*elementu członkowskiego*": specyfikator override "override" nie dozwolony na statycznych funkcjach Członkowskich lub konstruktorach|
+|[Błąd kompilatora C3670](compiler-error-c3670.md)|"*elementu członkowskiego*": nie można zastąpić metodę niedostępnej klasy podstawowej "*elementu członkowskiego*"|
+|[Błąd kompilatora C3671](compiler-error-c3671.md)|"*elementu członkowskiego*": funkcja nie przesłania "*elementu członkowskiego*"|
+|[Błąd kompilatora C3672](compiler-error-c3672.md)|wyrażenie pseudo-destruktora może służyć jedynie jako część wywołania funkcji|
+|[Błąd kompilatora C3673](compiler-error-c3673.md)|"*klasy*": klasa nie ma konstruktora kopiującego|
 |C3674 błąd kompilatora|Nie można odnaleźć modułu biblioteki standardowej "*modułu*"|
-|[C3675 błąd kompilatora](compiler-error-c3675.md)|"*funkcja*": jest zarezerwowana, ponieważ "*właściwości*" jest zdefiniowana|
+|[Błąd kompilatora C3675](compiler-error-c3675.md)|"*funkcja*": jest zarezerwowana, ponieważ "*właściwości*" jest zdefiniowana|
 |C3676 błąd kompilatora|"*klasy*": klasa ref i klasa podstawowa mają niezgodne atrybuty "[*atrybutu*]"|
 |C3677 błąd kompilatora|literał ciągu po słowie kluczowym "operator" nie może mieć prefiksu kodowania|
 |C3678 błąd kompilatora|literał ciągu po słowie kluczowym "operator" może być ciągiem pustym "" "" "|
@@ -466,82 +466,82 @@ Błędy i ostrzeżenia na forach MSDN publicznego może się okazać dodatkowej 
 |C3694 błąd kompilatora|Nieaktualne.|
 |C3695 błąd kompilatora|Nieaktualne.|
 |C3696 błąd kompilatora|"*— słowo kluczowe*": nie można użyć tego kwalifikatora na "%"|
-|[C3697 błąd kompilatora](compiler-error-c3697.md)|"*— słowo kluczowe*": nie można użyć tego kwalifikatora na "^"|
-|[C3698 błąd kompilatora](compiler-error-c3698.md)|"*typu*": nie można użyć tego typu jako argumentu "*operator*"|
-|[C3699 błąd kompilatora](compiler-error-c3699.md)|"*operator*": nie można użyć tego operatora pośredniego na typie "*typu*"|
+|[Błąd kompilatora C3697](compiler-error-c3697.md)|"*— słowo kluczowe*": nie można użyć tego kwalifikatora na "^"|
+|[Błąd kompilatora C3698](compiler-error-c3698.md)|"*typu*": nie można użyć tego typu jako argumentu "*operator*"|
+|[Błąd kompilatora C3699](compiler-error-c3699.md)|"*operator*": nie można użyć tego operatora pośredniego na typie "*typu*"|
 |C3700 błąd kompilatora|Nieaktualne.|
-|[C3701 błąd kompilatora](compiler-error-c3701.md)|"*funkcja*": źródło zdarzeń nie ma żadnych zdarzeń|
-|[C3702 błąd kompilatora](compiler-error-c3702.md)|ATL jest wymagany dla zdarzeń COM|
-|[C3703 błąd kompilatora](compiler-error-c3703.md)|"*event_handler*": metoda obsługi zdarzeń musi mieć tą samą klasę magazynu jako źródło "*zdarzeń*"|
-|[C3704 błąd kompilatora](compiler-error-c3704.md)|"*elementu członkowskiego*": metoda vararg nie może wyzwalać zdarzeń|
-|[C3705 błąd kompilatora](compiler-error-c3705.md)|"*funkcja*": nie można odnaleźć interfejsu zdarzeń|
-|[C3706 błąd kompilatora](compiler-error-c3706.md)|"*funkcja*": musi być interfejsem COM żeby wyzwalać zdarzenia COM|
-|[C3707 błąd kompilatora](compiler-error-c3707.md)|"*elementu członkowskiego*": metoda dispinterface musi posiadać identyfikator dispid|
-|[C3708 błąd kompilatora](compiler-error-c3708.md)|"*funkcja*": nieprawidłowe użycie "*— słowo kluczowe*"; musi być elementem członkowskim zgodnego źródła zdarzeń|
-|[C3709 błąd kompilatora](compiler-error-c3709.md)|"*funkcja*": Niewłaściwa składnia określająca zdarzenie w __hook/__unhook|
-|[C3710 błąd kompilatora](compiler-error-c3710.md)|"*funkcja*": Niewłaściwa składnia określająca obsługę zdarzeń w __hook/__unhook|
-|[C3711 błąd kompilatora](compiler-error-c3711.md)|"*zdarzeń*": metoda źródła zdarzeń niezarządzanych musi zwracać typ void lub typ całkowity|
-|[C3712 błąd kompilatora](compiler-error-c3712.md)|"*event_handler*": metoda obsługi zdarzeń musi zwracać taki sam typ jak źródło "*zdarzeń*"|
-|[C3713 błąd kompilatora](compiler-error-c3713.md)|"*event_handler*": metoda obsługi zdarzeń musi mieć te same parametry funkcji jako źródło "*zdarzeń*"|
-|[C3714 błąd kompilatora](compiler-error-c3714.md)|"*event_handler*": metoda obsługi zdarzeń musi mieć tą samą konwencję wywołania jako źródło "*zdarzeń*"|
-|[C3715 błąd kompilatora](compiler-error-c3715.md)|"*wskaźnika*": musi być wskaźnikiem do "*typu*"|
+|[Błąd kompilatora C3701](compiler-error-c3701.md)|"*funkcja*": źródło zdarzeń nie ma żadnych zdarzeń|
+|[Błąd kompilatora C3702](compiler-error-c3702.md)|ATL jest wymagany dla zdarzeń COM|
+|[Błąd kompilatora C3703](compiler-error-c3703.md)|"*event_handler*": metoda obsługi zdarzeń musi mieć tą samą klasę magazynu jako źródło "*zdarzeń*"|
+|[Błąd kompilatora C3704](compiler-error-c3704.md)|"*elementu członkowskiego*": metoda vararg nie może wyzwalać zdarzeń|
+|[Błąd kompilatora C3705](compiler-error-c3705.md)|"*funkcja*": nie można odnaleźć interfejsu zdarzeń|
+|[Błąd kompilatora C3706](compiler-error-c3706.md)|"*funkcja*": musi być interfejsem COM żeby wyzwalać zdarzenia COM|
+|[Błąd kompilatora C3707](compiler-error-c3707.md)|"*elementu członkowskiego*": metoda dispinterface musi posiadać identyfikator dispid|
+|[Błąd kompilatora C3708](compiler-error-c3708.md)|"*funkcja*": nieprawidłowe użycie "*— słowo kluczowe*"; musi być elementem członkowskim zgodnego źródła zdarzeń|
+|[Błąd kompilatora C3709](compiler-error-c3709.md)|"*funkcja*": Niewłaściwa składnia określająca zdarzenie w __hook/__unhook|
+|[Błąd kompilatora C3710](compiler-error-c3710.md)|"*funkcja*": Niewłaściwa składnia określająca obsługę zdarzeń w __hook/__unhook|
+|[Błąd kompilatora C3711](compiler-error-c3711.md)|"*zdarzeń*": metoda źródła zdarzeń niezarządzanych musi zwracać typ void lub typ całkowity|
+|[Błąd kompilatora C3712](compiler-error-c3712.md)|"*event_handler*": metoda obsługi zdarzeń musi zwracać taki sam typ jak źródło "*zdarzeń*"|
+|[Błąd kompilatora C3713](compiler-error-c3713.md)|"*event_handler*": metoda obsługi zdarzeń musi mieć te same parametry funkcji jako źródło "*zdarzeń*"|
+|[Błąd kompilatora C3714](compiler-error-c3714.md)|"*event_handler*": metoda obsługi zdarzeń musi mieć tą samą konwencję wywołania jako źródło "*zdarzeń*"|
+|[Błąd kompilatora C3715](compiler-error-c3715.md)|"*wskaźnika*": musi być wskaźnikiem do "*typu*"|
 |C3716 błąd kompilatora|Nieaktualne.|
-|[C3717 błąd kompilatora](compiler-error-c3717.md)|"*elementu członkowskiego*": metoda wyzwalająca zdarzenia nie może być zdefiniowana|
-|[C3718 błąd kompilatora](compiler-error-c3718.md)|można tylko wywołania "__*— słowo kluczowe*" w kontekście funkcji członkowskiej klasy odbiorczej|
-|[C3719 błąd kompilatora](compiler-error-c3719.md)|"*elementu członkowskiego*": źródło zdarzeń bazujące na interfejsie może służyć jedynie dla zdarzeń COM|
+|[Błąd kompilatora C3717](compiler-error-c3717.md)|"*elementu członkowskiego*": metoda wyzwalająca zdarzenia nie może być zdefiniowana|
+|[Błąd kompilatora C3718](compiler-error-c3718.md)|można tylko wywołania "__*— słowo kluczowe*" w kontekście funkcji członkowskiej klasy odbiorczej|
+|[Błąd kompilatora C3719](compiler-error-c3719.md)|"*elementu członkowskiego*": źródło zdarzeń bazujące na interfejsie może służyć jedynie dla zdarzeń COM|
 |C3720 błąd kompilatora|"*typu*": można tylko zaimplementować interfejs IDispatch podwójnie lub dispinterface|
-|[C3721 błąd kompilatora](compiler-error-c3721.md)|"*podpisu*": niezgodny podpis dla zdarzenia|
-|[C3722 błąd kompilatora](compiler-error-c3722.md)|Zdarzenie generyczne nie jest dozwolone.|
-|[C3723 błąd kompilatora](compiler-error-c3723.md)|"*funkcja*": nie można rozpoznać zdarzenia|
-|[C3724 błąd kompilatora](compiler-error-c3724.md)|należy #include < windows.h > Aby użyć wielowątkowości ze zdarzeniami|
+|[Błąd kompilatora C3721](compiler-error-c3721.md)|"*podpisu*": niezgodny podpis dla zdarzenia|
+|[Błąd kompilatora C3722](compiler-error-c3722.md)|Zdarzenie generyczne nie jest dozwolone.|
+|[Błąd kompilatora C3723](compiler-error-c3723.md)|"*funkcja*": nie można rozpoznać zdarzenia|
+|[Błąd kompilatora C3724](compiler-error-c3724.md)|należy #include < windows.h > Aby użyć wielowątkowości ze zdarzeniami|
 |C3725 błąd kompilatora|Nieaktualne.|
 |C3726 błąd kompilatora|Nieaktualne.|
-|[C3727 błąd kompilatora](compiler-error-c3727.md)|"*zdarzeń*": zarządzanych zdarzeń musi być funkcją członkowską lub elementu członkowskiego danych, który jest wskaźnikiem do delegata|
-|[C3728 błąd kompilatora](compiler-error-c3728.md)|"*zdarzeń*": zdarzenie nie posiada metody wzrostu|
+|[Błąd kompilatora C3727](compiler-error-c3727.md)|"*zdarzeń*": zarządzanych zdarzeń musi być funkcją członkowską lub elementu członkowskiego danych, który jest wskaźnikiem do delegata|
+|[Błąd kompilatora C3728](compiler-error-c3728.md)|"*zdarzeń*": zdarzenie nie posiada metody wzrostu|
 |C3729 błąd kompilatora|Nieaktualne.|
 |C3730 błąd kompilatora|Nieaktualne.|
-|[C3731 błąd kompilatora](compiler-error-c3731.md)|niezgodne zdarzenie "*zdarzeń*"i obsługi"*event_handler*"; źródło zdarzeń i program obsługi zdarzeń musi mieć ten sam typ zdarzenia|
-|[C3732 błąd kompilatora](compiler-error-c3732.md)|"*interfejsu*": niestandardowy interfejs wyzwalający zdarzenia COM nie może dziedziczyć z IDispatch|
-|[C3733 błąd kompilatora](compiler-error-c3733.md)|"*zdarzeń*": Niewłaściwa składnia określająca zdarzenie COM; czy pamiętasz "__interface"?|
-|[C3734 błąd kompilatora](compiler-error-c3734.md)|"*klasy*": klasa managed WinRT nie może być klasą coclass|
+|[Błąd kompilatora C3731](compiler-error-c3731.md)|niezgodne zdarzenie "*zdarzeń*"i obsługi"*event_handler*"; źródło zdarzeń i program obsługi zdarzeń musi mieć ten sam typ zdarzenia|
+|[Błąd kompilatora C3732](compiler-error-c3732.md)|"*interfejsu*": niestandardowy interfejs wyzwalający zdarzenia COM nie może dziedziczyć z IDispatch|
+|[Błąd kompilatora C3733](compiler-error-c3733.md)|"*zdarzeń*": Niewłaściwa składnia określająca zdarzenie COM; czy pamiętasz "__interface"?|
+|[Błąd kompilatora C3734](compiler-error-c3734.md)|"*klasy*": klasa managed WinRT nie może być klasą coclass|
 |C3735 błąd kompilatora|Nieaktualne.|
-|[C3736 błąd kompilatora](compiler-error-c3736.md)|"*elementu członkowskiego*": musi być metodą lub, w przypadku zarządzanych zdarzeń, opcjonalnie elementem członkowskim danych|
-|[C3737 błąd kompilatora](compiler-error-c3737.md)|"*identyfikator*": Delegat może nie mieć jawnej konwencji wywoływania|
-|[C3738 błąd kompilatora](compiler-error-c3738.md)|"*Konwencji*": jawne utworzenie wystąpienia konwencja wywołania musi być zgodna z wystąpienia szablonu|
-|[C3739 błąd kompilatora](compiler-error-c3739.md)|"*klasy*": składnia jest tylko obsługiwane w przypadku "układu\_zależnego" parametr event_receiver ma wartość true|
-|[C3740 błąd kompilatora](compiler-error-c3740.md)|"*szablonu*": szablony nie źródła lub zdarzenia|
-|[C3741 błąd kompilatora](compiler-error-c3741.md)|"*klasy*": musi być klasą coclass gdy "układu\_zależnego" parametr event_receiver ma wartość true|
+|[Błąd kompilatora C3736](compiler-error-c3736.md)|"*elementu członkowskiego*": musi być metodą lub, w przypadku zarządzanych zdarzeń, opcjonalnie elementem członkowskim danych|
+|[Błąd kompilatora C3737](compiler-error-c3737.md)|"*identyfikator*": Delegat może nie mieć jawnej konwencji wywoływania|
+|[Błąd kompilatora C3738](compiler-error-c3738.md)|"*Konwencji*": jawne utworzenie wystąpienia konwencja wywołania musi być zgodna z wystąpienia szablonu|
+|[Błąd kompilatora C3739](compiler-error-c3739.md)|"*klasy*": składnia jest tylko obsługiwane w przypadku "układu\_zależnego" parametr event_receiver ma wartość true|
+|[Błąd kompilatora C3740](compiler-error-c3740.md)|"*szablonu*": szablony nie źródła lub zdarzenia|
+|[Błąd kompilatora C3741](compiler-error-c3741.md)|"*klasy*": musi być klasą coclass gdy "układu\_zależnego" parametr event_receiver ma wartość true|
 |C3742 błąd kompilatora|"*token1*": nieprawidłowo ustawiona sekwencja tokenów w argumencie atrybutu "*atrybutu*", oczekiwano"*token2*"|
-|[C3743 błąd kompilatora](compiler-error-c3743.md)|można tylko zaczepić/odczepić cały interfejs gdy parametr "layout_dependent" od event_receiver ma wartość true|
-|[C3744 błąd kompilatora](compiler-error-c3744.md)|__unhook musi mieć co najmniej 3 argumenty dla zdarzeń zarządzanych|
-|[C3745 błąd kompilatora](compiler-error-c3745.md)|"*funkcja*": tylko zdarzenie może być "raised"|
+|[Błąd kompilatora C3743](compiler-error-c3743.md)|można tylko zaczepić/odczepić cały interfejs gdy parametr "layout_dependent" od event_receiver ma wartość true|
+|[Błąd kompilatora C3744](compiler-error-c3744.md)|__unhook musi mieć co najmniej 3 argumenty dla zdarzeń zarządzanych|
+|[Błąd kompilatora C3745](compiler-error-c3745.md)|"*funkcja*": tylko zdarzenie może być "raised"|
 |C3746 błąd kompilatora|Atrybut standardowy "*identyfikator*" może występować co najwyżej raz na liście atrybutów|
-|[C3747 błąd kompilatora](compiler-error-c3747.md)|Brak domyślnego parametru szablonu/ogólny: parametr *numer*|
-|[C3748 błąd kompilatora](compiler-error-c3748.md)|"*interfejsu*": interfejsy niezarządzane nie mogą wyzwalać zdarzeń|
-|[C3749 błąd kompilatora](compiler-error-c3749.md)|"*atrybutu*": atrybut niestandardowy nie można używać wewnątrz funkcji|
+|[Błąd kompilatora C3747](compiler-error-c3747.md)|Brak domyślnego parametru szablonu/ogólny: parametr *numer*|
+|[Błąd kompilatora C3748](compiler-error-c3748.md)|"*interfejsu*": interfejsy niezarządzane nie mogą wyzwalać zdarzeń|
+|[Błąd kompilatora C3749](compiler-error-c3749.md)|"*atrybutu*": atrybut niestandardowy nie można używać wewnątrz funkcji|
 |C3750 błąd kompilatora|"*tokenu*": nieoczekiwany token na liście atrybutów|
 |C3751 błąd kompilatora|"*identyfikator*": nieoczekiwany identyfikator na liście atrybutów|
-|[C3752 błąd kompilatora](compiler-error-c3752.md)|"*atrybutu*": nie można sklasyfikować atrybutu; "*— słowo kluczowe*" nie należy używać w tym kontekście|
-|[C3753 błąd kompilatora](compiler-error-c3753.md)|Właściwość generyczna nie jest dozwolone.|
-|[C3754 błąd kompilatora](compiler-error-c3754.md)|Konstruktor delegata: funkcja członkowska "*elementu członkowskiego*"nie można wywołać wystąpienia typu"*typu*"|
-|[C3755 błąd kompilatora](compiler-error-c3755.md)|"*identyfikator*": Delegat może nie być zdefiniowana|
+|[Błąd kompilatora C3752](compiler-error-c3752.md)|"*atrybutu*": nie można sklasyfikować atrybutu; "*— słowo kluczowe*" nie należy używać w tym kontekście|
+|[Błąd kompilatora C3753](compiler-error-c3753.md)|Właściwość generyczna nie jest dozwolone.|
+|[Błąd kompilatora C3754](compiler-error-c3754.md)|Konstruktor delegata: funkcja członkowska "*elementu członkowskiego*"nie można wywołać wystąpienia typu"*typu*"|
+|[Błąd kompilatora C3755](compiler-error-c3755.md)|"*identyfikator*": Delegat może nie być zdefiniowana|
 |C3756 błąd kompilatora|Nieaktualne.|
 |C3757 błąd kompilatora|"*typu*": typ nie jest dozwolony dla funkcji "constexpr"|
 |C3758 błąd kompilatora|"*elementu członkowskiego*": funkcja wirtualna nie można zadeklarować jako "constexpr"|
 |C3759 błąd kompilatora|"*elementu członkowskiego*": funkcja członkowska typu innego niż literał nie można zadeklarować jako "constexpr"|
 |C3760 błąd kompilatora|Użyj słowa kluczowego __property Aby zadeklarować właściwość w zarządzanych WinRT "*klasy*"|
-|[C3761 błąd kompilatora](compiler-error-c3761.md)|"*funkcja*": "retval" może wystąpić tylko ostatni argument funkcji|
-|[C3762 błąd kompilatora](compiler-error-c3762.md)|Nie można przetworzyć atrybutu "*atrybutu*"|
-|[C3763 błąd kompilatora](compiler-error-c3763.md)|"*typu*": "retval" i "out" może występować tylko w typie wskaźnikowych danych|
-|[C3764 błąd kompilatora](compiler-error-c3764.md)|"*elementu członkowskiego*": nie można zastąpić metody klasy podstawowej "*elementu członkowskiego*"|
-|[C3765 błąd kompilatora](compiler-error-c3765.md)|"*zdarzeń*": nie można definiować zdarzenia w klasie/strukturze "*typu*" oznaczonej jako event_receiver|
-|[C3766 błąd kompilatora](compiler-error-c3766.md)|"*typu*"musi zapewniać implementację metody interfejsu"*funkcja*"|
-|[C3767 błąd kompilatora](compiler-error-c3767.md)|"*funkcja*": funkcje kandydujące nie jest dostępna|
-|[C3768 błąd kompilatora](compiler-error-c3768.md)|Nie można przyjąć adresu wirtualnej funkcji vararg w czystym kodzie zarządzanym|
-|[C3769 błąd kompilatora](compiler-error-c3769.md)|"*identyfikator*": zagnieżdżona klasa nie może mieć taką samą nazwę jako natychmiastowo otaczającą klasę|
+|[Błąd kompilatora C3761](compiler-error-c3761.md)|"*funkcja*": "retval" może wystąpić tylko ostatni argument funkcji|
+|[Błąd kompilatora C3762](compiler-error-c3762.md)|Nie można przetworzyć atrybutu "*atrybutu*"|
+|[Błąd kompilatora C3763](compiler-error-c3763.md)|"*typu*": "retval" i "out" może występować tylko w typie wskaźnikowych danych|
+|[Błąd kompilatora C3764](compiler-error-c3764.md)|"*elementu członkowskiego*": nie można zastąpić metody klasy podstawowej "*elementu członkowskiego*"|
+|[Błąd kompilatora C3765](compiler-error-c3765.md)|"*zdarzeń*": nie można definiować zdarzenia w klasie/strukturze "*typu*" oznaczonej jako event_receiver|
+|[Błąd kompilatora C3766](compiler-error-c3766.md)|"*typu*"musi zapewniać implementację metody interfejsu"*funkcja*"|
+|[Błąd kompilatora C3767](compiler-error-c3767.md)|"*funkcja*": funkcje kandydujące nie jest dostępna|
+|[Błąd kompilatora C3768](compiler-error-c3768.md)|Nie można przyjąć adresu wirtualnej funkcji vararg w czystym kodzie zarządzanym|
+|[Błąd kompilatora C3769](compiler-error-c3769.md)|"*identyfikator*": zagnieżdżona klasa nie może mieć taką samą nazwę jako natychmiastowo otaczającą klasę|
 |C3770 błąd kompilatora|"*typu*": nie jest prawidłową klasę podstawową|
-|[C3771 błąd kompilatora](compiler-error-c3771.md)|"*identyfikator*": deklaracja friend nie można odnaleźć w najbliższym zakresie przestrzeni nazw|
-|[C3772 błąd kompilatora](compiler-error-c3772.md)|"*identyfikator*": Nieprawidłowa deklaracja szablonu zaprzyjaźnionego|
+|[Błąd kompilatora C3771](compiler-error-c3771.md)|"*identyfikator*": deklaracja friend nie można odnaleźć w najbliższym zakresie przestrzeni nazw|
+|[Błąd kompilatora C3772](compiler-error-c3772.md)|"*identyfikator*": Nieprawidłowa deklaracja szablonu zaprzyjaźnionego|
 |C3773 błąd kompilatora|należy użyć przełącznika kompilatora / await w celu włączenia procedur wspólnych|
 |C3774 błąd kompilatora|Nie można odnaleźć '*zakres*::*identyfikator*": Dołącz *nagłówka* nagłówka|
 |C3775 błąd kompilatora|zwracany typ "*funkcja*"nie powinien być"*typu*"|
@@ -566,133 +566,133 @@ Błędy i ostrzeżenia na forach MSDN publicznego może się okazać dodatkowej 
 |C3794 błąd kompilatora|Nieaktualne.|
 |C3795 błąd kompilatora|Nieaktualne.|
 |C3796 błąd kompilatora|Nieaktualne.|
-|[C3797 błąd kompilatora](compiler-error-c3797.md)|"*— słowo kluczowe*": deklaracja zdarzenia nie może posiadać specyfikatora przesłonięcia (powinna być umieszczona dla zdarzenia metod dodawania/usuwania/podbicia zamiast)|
-|[C3798 błąd kompilatora](compiler-error-c3798.md)|"*— słowo kluczowe*": deklaracja właściwości nie może posiadać specyfikatora przesłonięcia (powinna być umieszczona dla właściwości pobierania/ustawiania metody zamiast tego)|
-|[C3799 błąd kompilatora](compiler-error-c3799.md)|Właściwości indeksowane nie może mieć pustą listę parametrów|
-|[C3800 błąd kompilatora](compiler-error-c3800.md)|"*deklaracji*": nie można mieszać właściwości i zdarzenia|
+|[Błąd kompilatora C3797](compiler-error-c3797.md)|"*— słowo kluczowe*": deklaracja zdarzenia nie może posiadać specyfikatora przesłonięcia (powinna być umieszczona dla zdarzenia metod dodawania/usuwania/podbicia zamiast)|
+|[Błąd kompilatora C3798](compiler-error-c3798.md)|"*— słowo kluczowe*": deklaracja właściwości nie może posiadać specyfikatora przesłonięcia (powinna być umieszczona dla właściwości pobierania/ustawiania metody zamiast tego)|
+|[Błąd kompilatora C3799](compiler-error-c3799.md)|Właściwości indeksowane nie może mieć pustą listę parametrów|
+|[Błąd kompilatora C3800](compiler-error-c3800.md)|"*deklaracji*": nie można mieszać właściwości i zdarzenia|
 |C3801 błąd kompilatora|"*atrybutu*": atrybut nie może mieć klauzuli argumentu|
 |C3802 błąd kompilatora|Nieaktualne.|
-|[C3803 błąd kompilatora](compiler-error-c3803.md)|"*właściwości*": właściwość ma typ, który jest niezgodny z jednym z jego akcesorów*akcesor*"|
-|[C3804 błąd kompilatora](compiler-error-c3804.md)|"*elementu członkowskiego*": metod typu accessor dla właściwości muszą albo być wszystkie statyczne albo wszystkie Niestatyczne|
-|[C3805 błąd kompilatora](compiler-error-c3805.md)|"*tokenu*": nieoczekiwany token, oczekiwano albo "}"lub ","|
+|[Błąd kompilatora C3803](compiler-error-c3803.md)|"*właściwości*": właściwość ma typ, który jest niezgodny z jednym z jego akcesorów*akcesor*"|
+|[Błąd kompilatora C3804](compiler-error-c3804.md)|"*elementu członkowskiego*": metod typu accessor dla właściwości muszą albo być wszystkie statyczne albo wszystkie Niestatyczne|
+|[Błąd kompilatora C3805](compiler-error-c3805.md)|"*tokenu*": nieoczekiwany token, oczekiwano albo "}"lub ","|
 |C3806 błąd kompilatora|"*tokenu*": nieoczekiwany token, oczekiwano albo "{" lub inicjator elementu członkowskiego|
-|[C3807 błąd kompilatora](compiler-error-c3807.md)|"*typu*": klasa z atrybutem ComImport nie może pochodzić od "*typu*", tylko implementacja interfejsu jest dozwolona|
-|[C3808 błąd kompilatora](compiler-error-c3808.md)|"*typu*": klasa z atrybutem ComImport nie może definiować elementu członkowskiego "*elementu członkowskiego*" tylko jako abstract i funkcje dllimport są dozwolone|
-|[C3809 błąd kompilatora](compiler-error-c3809.md)|"*typu*": typ zarządzany WinRT nie może mieć żadnych friend funkcji/klas/interfejsów|
+|[Błąd kompilatora C3807](compiler-error-c3807.md)|"*typu*": klasa z atrybutem ComImport nie może pochodzić od "*typu*", tylko implementacja interfejsu jest dozwolona|
+|[Błąd kompilatora C3808](compiler-error-c3808.md)|"*typu*": klasa z atrybutem ComImport nie może definiować elementu członkowskiego "*elementu członkowskiego*" tylko jako abstract i funkcje dllimport są dozwolone|
+|[Błąd kompilatora C3809](compiler-error-c3809.md)|"*typu*": typ zarządzany WinRT nie może mieć żadnych friend funkcji/klas/interfejsów|
 |C3810 błąd kompilatora|Nieaktualne.|
 |C3811 błąd kompilatora|Nieaktualne.|
-|[C3812 błąd kompilatora](compiler-error-c3812.md)|"__property" musi być pierwszym tokenem w deklaracji właściwości|
-|[C3813 błąd kompilatora](compiler-error-c3813.md)|Deklaracja właściwości może wystąpić tylko wewnątrz definicji typu zarządzanego WinRT|
+|[Błąd kompilatora C3812](compiler-error-c3812.md)|"__property" musi być pierwszym tokenem w deklaracji właściwości|
+|[Błąd kompilatora C3813](compiler-error-c3813.md)|Deklaracja właściwości może wystąpić tylko wewnątrz definicji typu zarządzanego WinRT|
 |C3814 błąd kompilatora|Nieaktualne.|
-|[C3815 błąd kompilatora](compiler-error-c3815.md)|zwracany typ metody "*elementu członkowskiego*" musi odpowiadać typowi ostatniego parametru metody ustawiającej|
-|[C3816 błąd kompilatora](compiler-error-c3816.md)|"klasie/strukturze *elementu członkowskiego*" poprzednio zadeklarowany lub zdefiniowany za pomocą innego modyfikatora managed WinRT|
-|[C3817 błąd kompilatora](compiler-error-c3817.md)|"*deklaracji*": właściwość może być stosowany tylko do funkcji|
-|[C3818 błąd kompilatora](compiler-error-c3818.md)|Deklaracja właściwości tablicy "*właściwości*"nie powinny przeciążać właściwości indeksu"*właściwości*"|
+|[Błąd kompilatora C3815](compiler-error-c3815.md)|zwracany typ metody "*elementu członkowskiego*" musi odpowiadać typowi ostatniego parametru metody ustawiającej|
+|[Błąd kompilatora C3816](compiler-error-c3816.md)|"klasie/strukturze *elementu członkowskiego*" poprzednio zadeklarowany lub zdefiniowany za pomocą innego modyfikatora managed WinRT|
+|[Błąd kompilatora C3817](compiler-error-c3817.md)|"*deklaracji*": właściwość może być stosowany tylko do funkcji|
+|[Błąd kompilatora C3818](compiler-error-c3818.md)|Deklaracja właściwości tablicy "*właściwości*"nie powinny przeciążać właściwości indeksu"*właściwości*"|
 |C3819 błąd kompilatora|Nieaktualne.|
-|[C3820 błąd kompilatora](compiler-error-c3820.md)|"*identyfikator*": inicjatory muszą być zarządzane|
-|[C3821 błąd kompilatora](compiler-error-c3821.md)|"*funkcja*": typ zarządzany lub funkcja nie można użyć w funkcji niezarządzanej|
+|[Błąd kompilatora C3820](compiler-error-c3820.md)|"*identyfikator*": inicjatory muszą być zarządzane|
+|[Błąd kompilatora C3821](compiler-error-c3821.md)|"*funkcja*": typ zarządzany lub funkcja nie można użyć w funkcji niezarządzanej|
 |C3822 błąd kompilatora|Nieaktualne.|
 |C3823 błąd kompilatora|Nieaktualne.|
-|[C3824 błąd kompilatora](compiler-error-c3824.md)|"*typu*": ten typ nie może występować w tym kontekście (parametr funkcji, zwracany typ lub statyczny element członkowski)|
-|[C3825 błąd kompilatora](compiler-error-c3825.md)|"*typu*": klasa managed WinRT może obsługiwać tylko zdarzenia managed WinRT|
+|[Błąd kompilatora C3824](compiler-error-c3824.md)|"*typu*": ten typ nie może występować w tym kontekście (parametr funkcji, zwracany typ lub statyczny element członkowski)|
+|[Błąd kompilatora C3825](compiler-error-c3825.md)|"*typu*": klasa managed WinRT może obsługiwać tylko zdarzenia managed WinRT|
 |C3826 błąd kompilatora|Nieaktualne.|
 |C3827 błąd kompilatora|Atrybut standardowy "deprecated" może mieć żadnych argumentów lub jeden literał ciągu opisujący przyczynę|
-|[C3828 błąd kompilatora](compiler-error-c3828.md)|Nie można określić argumentów położenia "*— słowo kluczowe*"wyrażenia dla typu"*typu*"|
+|[Błąd kompilatora C3828](compiler-error-c3828.md)|Nie można określić argumentów położenia "*— słowo kluczowe*"wyrażenia dla typu"*typu*"|
 |C3829 błąd kompilatora|Atrybut standardowy "noreturn" można stosować tylko do funkcji|
-|[C3830 błąd kompilatora](compiler-error-c3830.md)|"*type1*": nie może dziedziczyć po "*type2*", typy wartości może dziedziczyć tylko z klas interfejsów|
-|[C3831 błąd kompilatora](compiler-error-c3831.md)|"*identyfikator*": "*typu*" nie może mieć przypiętego elementu członkowskiego danych lub funkcji członkowskiej zwracającej przypięty wskaźnik|
-|[C3832 błąd kompilatora](compiler-error-c3832.md)|"*typelib*": typ Biblioteka wygląda tak, jakby został zbudowany dla 32-bitowych wskaźników; Zmień kwalifikator "ptrsize"|
-|[C3833 błąd kompilatora](compiler-error-c3833.md)|"*typu*": nieprawidłowy typ docelowy dla *identyfikator*|
-|[C3834 błąd kompilatora](compiler-error-c3834.md)|niedozwolone jawne rzutowanie do przypiętego wskaźnika; Zamiast tego użyj przypiętej zmiennej lokalnej|
+|[Błąd kompilatora C3830](compiler-error-c3830.md)|"*type1*": nie może dziedziczyć po "*type2*", typy wartości może dziedziczyć tylko z klas interfejsów|
+|[Błąd kompilatora C3831](compiler-error-c3831.md)|"*identyfikator*": "*typu*" nie może mieć przypiętego elementu członkowskiego danych lub funkcji członkowskiej zwracającej przypięty wskaźnik|
+|[Błąd kompilatora C3832](compiler-error-c3832.md)|"*typelib*": typ Biblioteka wygląda tak, jakby został zbudowany dla 32-bitowych wskaźników; Zmień kwalifikator "ptrsize"|
+|[Błąd kompilatora C3833](compiler-error-c3833.md)|"*typu*": nieprawidłowy typ docelowy dla *identyfikator*|
+|[Błąd kompilatora C3834](compiler-error-c3834.md)|niedozwolone jawne rzutowanie do przypiętego wskaźnika; Zamiast tego użyj przypiętej zmiennej lokalnej|
 |C3835 błąd kompilatora|Nieaktualne.|
-|[C3836 błąd kompilatora](compiler-error-c3836.md)|Konstruktor statyczny nie może mieć listy inicjatorów elementu członkowskiego|
+|[Błąd kompilatora C3836](compiler-error-c3836.md)|Konstruktor statyczny nie może mieć listy inicjatorów elementu członkowskiego|
 |C3837 błąd kompilatora|w tym kontekście atrybuty są niedozwolone.|
-|[C3838 błąd kompilatora](compiler-error-c3838.md)|Nie można dziedziczyć po "*typu*"|
-|[C3839 błąd kompilatora](compiler-error-c3839.md)|Nie można zmienić wyrównania w typie managed WinRT|
+|[Błąd kompilatora C3838](compiler-error-c3838.md)|Nie można dziedziczyć po "*typu*"|
+|[Błąd kompilatora C3839](compiler-error-c3839.md)|Nie można zmienić wyrównania w typie managed WinRT|
 |C3840 błąd kompilatora|Nieaktualne.|
 |C3841 błąd kompilatora|Nieaktualne.|
-|[C3842 błąd kompilatora](compiler-error-c3842.md)|"*identyfikator*": kwalifikatory "const" i "volatile" dla funkcji Członkowskich typów zarządzanych/WinRT nie są obsługiwane.|
+|[Błąd kompilatora C3842](compiler-error-c3842.md)|"*identyfikator*": kwalifikatory "const" i "volatile" dla funkcji Członkowskich typów zarządzanych/WinRT nie są obsługiwane.|
 |C3843 błąd kompilatora|"*identyfikator*": kwalifikatory ref w funkcjach Członkowskich typów zarządzanych/WinRT nie są obsługiwane.|
 |C3844 błąd kompilatora|"*identyfikator*": nie można zaimportować symbolu z "*źródła*": jako*identyfikator*"już istnieje w bieżącym zakresie|
 |C3845 błąd kompilatora|Nieaktualne.|
-|[C3846 błąd kompilatora](compiler-error-c3846.md)|"*identyfikator*": nie można zaimportować symbolu z "*źródła*": jako*identyfikator*"został już zaimportowany z innego zestawu"*zestawu*'|
+|[Błąd kompilatora C3846](compiler-error-c3846.md)|"*identyfikator*": nie można zaimportować symbolu z "*źródła*": jako*identyfikator*"został już zaimportowany z innego zestawu"*zestawu*'|
 |C3847 błąd kompilatora|Nieaktualne.|
-|[C3848 błąd kompilatora](compiler-error-c3848.md)|Wyrażenie typu "*typu*"spowoduje utratę niektórych kwalifikatorów const-volatile celu wywołania"*identyfikator*"|
-|[C3849 błąd kompilatora](compiler-error-c3849.md)|Wywołanie w stylu funkcji na wyrażeniu typu "*typu*" spowoduje utratę kwalifikatorów const i/lub volatile dla wszystkich *numer* dostępnych przeciążeń operatora|
-|[C3850 błąd kompilatora](compiler-error-c3850.md)|"*tokenu*": universal-character-name Określa nieprawidłowy znak|
-|[C3851 błąd kompilatora](compiler-error-c3851.md)|"*tokenu*": universal-character-name nie może wyznaczyć znaku w podstawowym zestawie znaków|
-|[C3852 błąd kompilatora](compiler-error-c3852.md)|"*elementu członkowskiego*"o typie"*typu*": Inicjalizacja agregująca nie może zainicjować tego elementu członkowskiego|
-|[C3853 błąd kompilatora](compiler-error-c3853.md)|"=": ponowna inicjalizacja odwołania lub przypisania poprzez odwołanie do funkcji jest niedozwolone|
-|[C3854 błąd kompilatora](compiler-error-c3854.md)|Wyrażenie po lewej stronie "=" daje w wyniku funkcję. Nie można przypisać do funkcji (funkcja nie jest wartością l)|
-|[C3855 błąd kompilatora](compiler-error-c3855.md)|"*funkcja*": parametr szablonu/ogólne "*identyfikator*" jest niezgodny z deklaracją|
-|[C3856 błąd kompilatora](compiler-error-c3856.md)|"*klasy*": klasa nie jest szablon klasy/ogólnego|
-|[C3857 błąd kompilatora](compiler-error-c3857.md)|"*szablonu*": wiele listy parametrów szablonu/ogólne są niedozwolone.|
-|[C3858 błąd kompilatora](compiler-error-c3858.md)|"*identyfikator*": nie można ponownie zadeklarować w bieżącym zakresie|
-|[C3859 błąd kompilatora](compiler-error-c3859.md)|zakres wirtualnej pamięci dla PCH jest przekroczony; Skompiluj ponownie, używając opcji wiersza polecenia z "-Zm*numer*" lub nowszej|
-|[C3860 błąd kompilatora](compiler-error-c3860.md)|listy argumentów szablonu/zwykły po nazwie szablonu/ogólnej klasy musi zawierać parametrów w kolejności użytej w liście parametrów szablonu/generic|
-|[C3861 błąd kompilatora](compiler-error-c3861.md)|"*identyfikator*": nie odnaleziono identyfikatora|
-|[C3862 błąd kompilatora](compiler-error-c3862.md)|"*funkcja*": nie można kompilować niezarządzanej funkcji z/CLR: pure lub/CLR: Safe|
+|[Błąd kompilatora C3848](compiler-error-c3848.md)|Wyrażenie typu "*typu*"spowoduje utratę niektórych kwalifikatorów const-volatile celu wywołania"*identyfikator*"|
+|[Błąd kompilatora C3849](compiler-error-c3849.md)|Wywołanie w stylu funkcji na wyrażeniu typu "*typu*" spowoduje utratę kwalifikatorów const i/lub volatile dla wszystkich *numer* dostępnych przeciążeń operatora|
+|[Błąd kompilatora C3850](compiler-error-c3850.md)|"*tokenu*": universal-character-name Określa nieprawidłowy znak|
+|[Błąd kompilatora C3851](compiler-error-c3851.md)|"*tokenu*": universal-character-name nie może wyznaczyć znaku w podstawowym zestawie znaków|
+|[Błąd kompilatora C3852](compiler-error-c3852.md)|"*elementu członkowskiego*"o typie"*typu*": Inicjalizacja agregująca nie może zainicjować tego elementu członkowskiego|
+|[Błąd kompilatora C3853](compiler-error-c3853.md)|"=": ponowna inicjalizacja odwołania lub przypisania poprzez odwołanie do funkcji jest niedozwolone|
+|[Błąd kompilatora C3854](compiler-error-c3854.md)|Wyrażenie po lewej stronie "=" daje w wyniku funkcję. Nie można przypisać do funkcji (funkcja nie jest wartością l)|
+|[Błąd kompilatora C3855](compiler-error-c3855.md)|"*funkcja*": parametr szablonu/ogólne "*identyfikator*" jest niezgodny z deklaracją|
+|[Błąd kompilatora C3856](compiler-error-c3856.md)|"*klasy*": klasa nie jest szablon klasy/ogólnego|
+|[Błąd kompilatora C3857](compiler-error-c3857.md)|"*szablonu*": wiele listy parametrów szablonu/ogólne są niedozwolone.|
+|[Błąd kompilatora C3858](compiler-error-c3858.md)|"*identyfikator*": nie można ponownie zadeklarować w bieżącym zakresie|
+|[Błąd kompilatora C3859](compiler-error-c3859.md)|zakres wirtualnej pamięci dla PCH jest przekroczony; Skompiluj ponownie, używając opcji wiersza polecenia z "-Zm*numer*" lub nowszej|
+|[Błąd kompilatora C3860](compiler-error-c3860.md)|listy argumentów szablonu/zwykły po nazwie szablonu/ogólnej klasy musi zawierać parametrów w kolejności użytej w liście parametrów szablonu/generic|
+|[Błąd kompilatora C3861](compiler-error-c3861.md)|"*identyfikator*": nie odnaleziono identyfikatora|
+|[Błąd kompilatora C3862](compiler-error-c3862.md)|"*funkcja*": nie można kompilować niezarządzanej funkcji z/CLR: pure lub/CLR: Safe|
 |C3863 błąd kompilatora|typu tablicy "*typu*" nie jest możliwa do przypisania|
 |C3864 błąd kompilatora|Nieaktualne.|
-|[C3865 błąd kompilatora](compiler-error-c3865.md)|"*— słowo kluczowe*": można używać tylko w natywnych funkcjach Członkowskich|
-|[C3866 błąd kompilatora](compiler-error-c3866.md)|wywołanie destruktora/finalizator brakuje listy argumentów|
-|[C3867 błąd kompilatora](compiler-error-c3867.md)|"*funkcja*": niestandardowa składnia; Użyj "&", aby utworzyć wskaźnik do elementu członkowskiego|
-|[C3868 błąd kompilatora](compiler-error-c3868.md)|"*typu*": ograniczenia na parametry generyczne "*parametru*" różnią się od tych w deklaracji|
-|[C3869 błąd kompilatora](compiler-error-c3869.md)|ograniczeniu gcnew brakuje parametru pusta lista '()'|
+|[Błąd kompilatora C3865](compiler-error-c3865.md)|"*— słowo kluczowe*": można używać tylko w natywnych funkcjach Członkowskich|
+|[Błąd kompilatora C3866](compiler-error-c3866.md)|wywołanie destruktora/finalizator brakuje listy argumentów|
+|[Błąd kompilatora C3867](compiler-error-c3867.md)|"*funkcja*": niestandardowa składnia; Użyj "&", aby utworzyć wskaźnik do elementu członkowskiego|
+|[Błąd kompilatora C3868](compiler-error-c3868.md)|"*typu*": ograniczenia na parametry generyczne "*parametru*" różnią się od tych w deklaracji|
+|[Błąd kompilatora C3869](compiler-error-c3869.md)|ograniczeniu gcnew brakuje parametru pusta lista '()'|
 |C3870 błąd kompilatora|"*parametru*": "__declspec (*specyfikator*)" może być stosowany tylko do parametrów typu całkowitego|
 |C3871 błąd kompilatora|"*parametru*": "__declspec(guard(overflow))" jest obsługiwana tylko w pierwszych 64 parametrach funkcji|
-|[C3872 błąd kompilatora](compiler-error-c3872.md)|"0 x*wartość*": ten znak nie jest dozwolony w identyfikatorze|
-|[C3873 błąd kompilatora](compiler-error-c3873.md)|"0 x*wartość*": ten znak nie jest dozwolona jako pierwszy znak identyfikatora|
-|[C3874 błąd kompilatora](compiler-error-c3874.md)|zwracany typ "*identyfikator*powinien być*type1*"zamiast elementu"*type2*"|
+|[Błąd kompilatora C3872](compiler-error-c3872.md)|"0 x*wartość*": ten znak nie jest dozwolony w identyfikatorze|
+|[Błąd kompilatora C3873](compiler-error-c3873.md)|"0 x*wartość*": ten znak nie jest dozwolona jako pierwszy znak identyfikatora|
+|[Błąd kompilatora C3874](compiler-error-c3874.md)|zwracany typ "*identyfikator*powinien być*type1*"zamiast elementu"*type2*"|
 |C3875 błąd kompilatora|Wywołanie funkcji niestatycznego elementu członkowskiego brakuje listy argumentów|
 |C3876 błąd kompilatora|Nieaktualne.|
 |C3877 błąd kompilatora|Nieaktualne.|
 |C3878 błąd kompilatora|Nieaktualne.|
 |C3879 błąd kompilatora|"*elementu członkowskiego*": nie może być element członkowski danych initonly|
-|[C3880 błąd kompilatora](compiler-error-c3880.md)|"*elementu członkowskiego*": nie może być literałem elementu członkowskiego danych|
+|[Błąd kompilatora C3880](compiler-error-c3880.md)|"*elementu członkowskiego*": nie może być literałem elementu członkowskiego danych|
 |C3881 błąd kompilatora|może dziedziczyć Konstruktor tylko z bezpośredniej klasy podstawowej|
 |C3882 błąd kompilatora|"*klasy*": konstruktor został już odziedziczony z "*klasy*"|
 |C3883 błąd kompilatora|"*elementu członkowskiego*": element członkowski danych statycznych initonly musi zostać zainicjowany|
 |C3884 błąd kompilatora|"*typu*": tablica o nieznanym rozmiarze nie może być inicjowany przez wartość|
 |C3885 błąd kompilatora|"*typu*": nie można zainicjować tablicy o nieznanym rozmiarze przy użyciu pustej listy inicjatora|
-|[C3886 błąd kompilatora](compiler-error-c3886.md)|"*elementu członkowskiego*": literał elementu członkowskiego danych musi zostać zainicjowany|
-|[C3887 błąd kompilatora](compiler-error-c3887.md)|"*elementu członkowskiego*": Inicjator literału elementu członkowskiego danych musi być wyrażeniem stałym|
-|[C3888 błąd kompilatora](compiler-error-c3888.md)|"*elementu członkowskiego*": wyrażenie const powiązane z tym literałem elementu członkowskiego danych nie jest obsługiwane przez C + +/ CLI|
+|[Błąd kompilatora C3886](compiler-error-c3886.md)|"*elementu członkowskiego*": literał elementu członkowskiego danych musi zostać zainicjowany|
+|[Błąd kompilatora C3887](compiler-error-c3887.md)|"*elementu członkowskiego*": Inicjator literału elementu członkowskiego danych musi być wyrażeniem stałym|
+|[Błąd kompilatora C3888](compiler-error-c3888.md)|"*elementu członkowskiego*": wyrażenie const powiązane z tym literałem elementu członkowskiego danych nie jest obsługiwane przez C + +/ CLI|
 |C3889 błąd kompilatora|Nieaktualne.|
-|[C3890 błąd kompilatora](compiler-error-c3890.md)|"*elementu członkowskiego*": nie można przyjąć adresu literału elementu członkowskiego danych|
-|[C3891 błąd kompilatora](compiler-error-c3891.md)|"*elementu członkowskiego*": literał elementu członkowskiego danych nie można użyć jako l wartością|
-|[C3892 błąd kompilatora](compiler-error-c3892.md)|"*zmiennej*": nie można przypisać do zmiennej, która jest stałą|
-|[C3893 błąd kompilatora](compiler-error-c3893.md)|"*elementu członkowskiego*": wykorzystanie wartości l elementu członkowskiego danych initonly jest dozwolone tylko w konstruktorze wystąpienia klasy*klasy*"|
-|[C3894 błąd kompilatora](compiler-error-c3894.md)|"*elementu członkowskiego*": wykorzystanie wartości l elementu członkowskiego danych initonly jest dozwolone tylko w konstruktorze wystąpienia klasy*klasy*"|
-|[C3895 błąd kompilatora](compiler-error-c3895.md)|"*elementu członkowskiego*": *typu* elementy członkowskie danych nie może być "volatile"|
-|[C3896 błąd kompilatora](compiler-error-c3896.md)|"*elementu członkowskiego*": niewłaściwy inicjator: ten literał elementu członkowskiego danych może zostać zainicjowana tylko z "nullptr"|
+|[Błąd kompilatora C3890](compiler-error-c3890.md)|"*elementu członkowskiego*": nie można przyjąć adresu literału elementu członkowskiego danych|
+|[Błąd kompilatora C3891](compiler-error-c3891.md)|"*elementu członkowskiego*": literał elementu członkowskiego danych nie można użyć jako l wartością|
+|[Błąd kompilatora C3892](compiler-error-c3892.md)|"*zmiennej*": nie można przypisać do zmiennej, która jest stałą|
+|[Błąd kompilatora C3893](compiler-error-c3893.md)|"*elementu członkowskiego*": wykorzystanie wartości l elementu członkowskiego danych initonly jest dozwolone tylko w konstruktorze wystąpienia klasy*klasy*"|
+|[Błąd kompilatora C3894](compiler-error-c3894.md)|"*elementu członkowskiego*": wykorzystanie wartości l elementu członkowskiego danych initonly jest dozwolone tylko w konstruktorze wystąpienia klasy*klasy*"|
+|[Błąd kompilatora C3895](compiler-error-c3895.md)|"*elementu członkowskiego*": *typu* elementy członkowskie danych nie może być "volatile"|
+|[Błąd kompilatora C3896](compiler-error-c3896.md)|"*elementu członkowskiego*": niewłaściwy inicjator: ten literał elementu członkowskiego danych może zostać zainicjowana tylko z "nullptr"|
 |C3897 błąd kompilatora|Nieaktualne.|
-|[C3898 błąd kompilatora](compiler-error-c3898.md)|"*elementu członkowskiego*": *typu* elementy członkowskie danych mogą być tylko członkami typów zarządzanych|
-|[C3899 błąd kompilatora](compiler-error-c3899.md)|"*elementu członkowskiego*": wykorzystanie wartości l elementu członkowskiego danych initonly nie jest dozwolone bezpośrednio w ramach równoległego regionu w klasie*klasy*"|
-|[C3900 błąd kompilatora](compiler-error-c3900.md)|"*elementu członkowskiego*": niedozwolona w bieżącym zakresie|
-|[C3901 błąd kompilatora](compiler-error-c3901.md)|"*funkcja*": musi mieć typ zwracany "*typu*"|
-|[C3902 błąd kompilatora](compiler-error-c3902.md)|"*funkcja*": Typ ostatniego parametru musi być "*typu*"|
-|[C3903 błąd kompilatora](compiler-error-c3903.md)|"*właściwości*": jest nie ustawiono lub get, metoda|
-|[C3904 błąd kompilatora](compiler-error-c3904.md)|"*właściwości*": należy określić *numer* parametrów|
+|[Błąd kompilatora C3898](compiler-error-c3898.md)|"*elementu członkowskiego*": *typu* elementy członkowskie danych mogą być tylko członkami typów zarządzanych|
+|[Błąd kompilatora C3899](compiler-error-c3899.md)|"*elementu członkowskiego*": wykorzystanie wartości l elementu członkowskiego danych initonly nie jest dozwolone bezpośrednio w ramach równoległego regionu w klasie*klasy*"|
+|[Błąd kompilatora C3900](compiler-error-c3900.md)|"*elementu członkowskiego*": niedozwolona w bieżącym zakresie|
+|[Błąd kompilatora C3901](compiler-error-c3901.md)|"*funkcja*": musi mieć typ zwracany "*typu*"|
+|[Błąd kompilatora C3902](compiler-error-c3902.md)|"*funkcja*": Typ ostatniego parametru musi być "*typu*"|
+|[Błąd kompilatora C3903](compiler-error-c3903.md)|"*właściwości*": jest nie ustawiono lub get, metoda|
+|[Błąd kompilatora C3904](compiler-error-c3904.md)|"*właściwości*": należy określić *numer* parametrów|
 |C3905 błąd kompilatora|niewyrównane dostępy nie są obsługiwane dla wewnętrznego typu "*typu*"|
 |C3906 błąd kompilatora|wewnętrznego typu "*typu*" nie jest obsługiwanym typem zwracanym lub argumentu dla funkcji vararg lub funkcji nieprototypowanych|
 |C3907 błąd kompilatora|Nieaktualne.|
-|[C3908 błąd kompilatora](compiler-error-c3908.md)|mniej restrykcyjny niż poziom dostępu "*identyfikator*"|
-|[C3909 błąd kompilatora](compiler-error-c3909.md)|Deklaracja zdarzenia managed WinRT musi wystąpić w typie managed WinRT|
-|[C3910 błąd kompilatora](compiler-error-c3910.md)|"*zdarzeń*": należy zdefiniować element członkowski "*elementu członkowskiego*"|
-|[C3911 błąd kompilatora](compiler-error-c3911.md)|"*elementu członkowskiego*": funkcja musi być typu "*typu*"|
-|[C3912 błąd kompilatora](compiler-error-c3912.md)|"*zdarzeń*": typ zdarzenia musi być typem delegata|
-|[C3913 błąd kompilatora](compiler-error-c3913.md)|Domyślna właściwość musi być indeksowana|
-|[C3914 błąd kompilatora](compiler-error-c3914.md)|Domyślna właściwość nie może być statyczna|
-|[C3915 błąd kompilatora](compiler-error-c3915.md)|"*identyfikator*" ma nie właściwość domyślnie indeksowana (klasa indeksatora)|
+|[Błąd kompilatora C3908](compiler-error-c3908.md)|mniej restrykcyjny niż poziom dostępu "*identyfikator*"|
+|[Błąd kompilatora C3909](compiler-error-c3909.md)|Deklaracja zdarzenia managed WinRT musi wystąpić w typie managed WinRT|
+|[Błąd kompilatora C3910](compiler-error-c3910.md)|"*zdarzeń*": należy zdefiniować element członkowski "*elementu członkowskiego*"|
+|[Błąd kompilatora C3911](compiler-error-c3911.md)|"*elementu członkowskiego*": funkcja musi być typu "*typu*"|
+|[Błąd kompilatora C3912](compiler-error-c3912.md)|"*zdarzeń*": typ zdarzenia musi być typem delegata|
+|[Błąd kompilatora C3913](compiler-error-c3913.md)|Domyślna właściwość musi być indeksowana|
+|[Błąd kompilatora C3914](compiler-error-c3914.md)|Domyślna właściwość nie może być statyczna|
+|[Błąd kompilatora C3915](compiler-error-c3915.md)|"*identyfikator*" ma nie właściwość domyślnie indeksowana (klasa indeksatora)|
 |C3916 błąd kompilatora|Nieaktualne.|
-|[C3917 błąd kompilatora](compiler-error-c3917.md)|"*tokenu*": przestarzałe *skonstruować* styl deklaracji (czy zamierzałeś użyć "[" "]" zamiast niego?)|
-|[C3918 błąd kompilatora](compiler-error-c3918.md)|użycie wymaga "*identyfikator*" jako element członkowski danych|
-|[C3919 błąd kompilatora](compiler-error-c3919.md)|"*funkcja*": funkcja musi być typu "*zwracany_typ* (*typu*)"|
-|[C3920 błąd kompilatora](compiler-error-c3920.md)|"*operator*": nie można definiować operatory przyrostka inkrementacji/dekrementacja wywołanie przyrostkowego operatora CLR i WinRT operator CLR i WinRT wywoła odpowiedni prefiks CLR i WinRT — operator (op_Increment/op_Decrement), ale z przyrostek Semantyka|
+|[Błąd kompilatora C3917](compiler-error-c3917.md)|"*tokenu*": przestarzałe *skonstruować* styl deklaracji (czy zamierzałeś użyć "[" "]" zamiast niego?)|
+|[Błąd kompilatora C3918](compiler-error-c3918.md)|użycie wymaga "*identyfikator*" jako element członkowski danych|
+|[Błąd kompilatora C3919](compiler-error-c3919.md)|"*funkcja*": funkcja musi być typu "*zwracany_typ* (*typu*)"|
+|[Błąd kompilatora C3920](compiler-error-c3920.md)|"*operator*": nie można definiować operatory przyrostka inkrementacji/dekrementacja wywołanie przyrostkowego operatora CLR i WinRT operator CLR i WinRT wywoła odpowiedni prefiks CLR i WinRT — operator (op_Increment/op_Decrement), ale z przyrostek Semantyka|
 |C3921 błąd kompilatora|Nieaktualne.|
 |C3922 błąd kompilatora|Nieaktualne.|
-|[C3923 błąd kompilatora](compiler-error-c3923.md)|"*elementu członkowskiego*": lokalne klasy, struktury lub Unii definicje są niedozwolone w funkcji członkowskiej klasy managed WinRT|
+|[Błąd kompilatora C3923](compiler-error-c3923.md)|"*elementu członkowskiego*": lokalne klasy, struktury lub Unii definicje są niedozwolone w funkcji członkowskiej klasy managed WinRT|
 |C3924 błąd kompilatora|Błąd w argumencie #*numer* wywołania konstruktora delegata "*Konstruktor*":|
 |C3925 błąd kompilatora|Oczekiwano pętli (, podczas lub) następujące "*dyrektywy*" — dyrektywa|
 |C3926 błąd kompilatora|Nieprawidłowa stała w dyrektywie "parallel"|

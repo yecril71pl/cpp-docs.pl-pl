@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6457e82928a5a705377b90e2acc0989768fcd9f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f49ce6bed9e77680017b0aa26b677fd18e3efc1a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Komunikaty diagnostyczne asemblera ARM
 Asemblera ARM firmy Microsoft (*armasm*) emituje diagnostycznych ostrzeżenia i błędy po napotkaniu je. W tym artykule opisano najbardziej powszechnie napotkano wiadomości.  
@@ -33,7 +34,7 @@ filename(lineno) : [error|warning] Anum: message
   
 ### <a name="errors"></a>błędy  
  A2193: Ta instrukcja generuje nieprzewidywalne zachowanie  
- Architektura ARM nie może zagwarantować, co się stanie po wykonaniu tej instrukcji.  Aby uzyskać szczegółowe informacje dotyczące dobrze zdefiniowany formy tej instrukcji, zapoznaj się [ręczne odwołanie do architektury ARM](http://go.microsoft.com/fwlink/?LinkId=246464).  
+ Architektura ARM nie może zagwarantować, co się stanie po wykonaniu tej instrukcji.  Aby uzyskać szczegółowe informacje dotyczące dobrze zdefiniowany formy tej instrukcji, zapoznaj się [ręczne odwołanie do architektury ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).  
   
 ```  
   
@@ -115,7 +116,7 @@ ANDS r0, r0, #4, #2            ; A4508: Use of this rotated constant is deprecat
 ```  
   
  A4509: Ten formularz instrukcji warunkowej jest przestarzały.  
- Ten formularz instrukcji warunkowej została zastąpiona przez RAMIĘ architektury ARMv8. Firma Microsoft zaleca zmianę kodu w celu użycia warunkowych gałęzi. Aby zobaczyć, które instrukcje warunkowego nadal są obsługiwane, zapoznaj się [ręczne odwołanie do architektury ARM](http://go.microsoft.com/fwlink/?LinkId=246464).  
+ Ten formularz instrukcji warunkowej została zastąpiona przez RAMIĘ architektury ARMv8. Firma Microsoft zaleca zmianę kodu w celu użycia warunkowych gałęzi. Aby zobaczyć, które instrukcje warunkowego nadal są obsługiwane, zapoznaj się [ręczne odwołanie do architektury ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).  
   
  To ostrzeżenie nie jest wysyłanego, gdy `-oldit` jest używany przełącznik wiersza polecenia.  
   

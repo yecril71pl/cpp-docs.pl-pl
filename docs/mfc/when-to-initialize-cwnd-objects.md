@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c2e9d99fe2f01111308a9a7a002aeefbf472a0b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d1efceb4fa826d5cd2bf8dc900180eb36cea4de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>Kiedy inicjować obiekty CWnd
 Nie można utworzyć własne podrzędne systemu windows lub wywołaniem dowolnej funkcji interfejsu API systemu Windows w Konstruktorze `CWnd`-pochodzi z obiektu. Jest to spowodowane `HWND` dla `CWnd` obiektu nie został jeszcze utworzony. Inicjowanie najbardziej właściwe dla systemu Windows, takie jak dodanie okno podrzędne, musi zostać wykonane w [OnCreate](../mfc/reference/cwnd-class.md#oncreate) obsługi wiadomości.  

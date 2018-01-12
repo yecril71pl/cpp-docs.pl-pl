@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1bb9bbdd6deb0a8e459f2f2b8d5b6188c7517e6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Informacje w wierszu polecenia asemblera ARM
 W tym artykule omówiono wiersza polecenia asemblera Microsoft ARM *armasm*, który kompiluje języka zestawu ARMv7 Thumb do przez firmę Microsoft implementacją z typowych Format pliku obiektu (COFF). Konsolidator połączyć COFF kodu za pomocą kodu obiektu, który jest generowany przez asemblera ARM lub za pomocą kompilatora C, wraz z biblioteki obiektów, które są tworzone przez bibliotekarza.  
@@ -41,7 +42,7 @@ armasm [[options]] -o objectfile sourcefile
  Dodaj określone katalogi na ścieżkę wyszukiwania dyrektywy include.  
   
  -wstępnie`directive`  
- Określ SETA, SETL lub zestawy dyrektywy wstępnie symbolu. Przykład: **armasm.exe-wstępnie "COUNT SETA 150" source.asm**. Aby uzyskać więcej informacji, zobacz [przewodnik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Określ SETA, SETL lub zestawy dyrektywy wstępnie symbolu. Przykład: **armasm.exe-wstępnie "COUNT SETA 150" source.asm**. Aby uzyskać więcej informacji, zobacz [przewodnik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  -nowarn  
  Wyłącz wszystkie ostrzeżenia.  

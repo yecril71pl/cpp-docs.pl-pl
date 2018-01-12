@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 648e0cada61e15c29ab908e93cc8e457581f9239
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14dabd345f47b064f78a4e9a3dede834bddeb9d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frame-windows"></a>Okna ramowe
 Gdy aplikacja działa w systemie Windows, użytkownik wchodzi w interakcję z dokumentów wyświetlanych w oknach ramowych. Okno ramowe dokument ma dwa główne składniki: ramki i zawartość, która go ramki. Okna ramowe dokumentu może być [interfejs pojedynczego dokumentu](../mfc/sdi-and-mdi.md) okien ramowych (SDI) lub [interfejsu wielu dokumentów](../mfc/sdi-and-mdi.md) okna podrzędnego (MDI). System Windows zarządza większość interakcji z okno ramowe: przenoszenie i zmienia rozmiar okna, zamknięcia, minimalizując i jego zmaksymalizowaniu. Możesz zarządzać zawartości wewnątrz ramki.  
@@ -83,11 +84,11 @@ Okno ramowe i widoku
   
  **Tematy dotyczące inne rodzaje okien**  
   
--   [Korzystanie z widoków](../mfc/using-views.md)  
+-   [Używanie widoków](../mfc/using-views.md)  
   
 -   [Okna dialogowe](../mfc/dialog-boxes.md)  
   
--   [Formanty](../mfc/controls-mfc.md)  
+-   [Kontrolki](../mfc/controls-mfc.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Windows](../mfc/windows.md)

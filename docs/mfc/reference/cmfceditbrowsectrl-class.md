@@ -37,11 +37,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceca13bd09483c788c430d420b53c88bb97ed34d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de1e30e6ca9f404199c6db43837f35d612a02b69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Klasa CMFCEditBrowseCtrl
 `CMFCEditBrowseCtrl` Klasa obsługuje przeglądania edycji, znajduje się pole edycji tekstu, która opcjonalnie zawiera przycisk Przeglądaj. Gdy użytkownik kliknie przycisk Przeglądaj, formantu wykonuje akcję niestandardową lub wyświetla standardowe okno dialogowe zawiera przeglądarka plików lub folder przeglądarki.  
@@ -200,9 +201,9 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`BrowseMode_Default`|`custom mode`. Zdefiniowane przez programistę czynności.|  
-|`BrowseMode_File`|`file mode`. Zostanie wyświetlone okno dialogowe przeglądarki standardowego pliku.|  
-|`BrowseMode_Folder`|`folder mode`. Zostanie wyświetlone okno dialogowe przeglądarki folderu standard.|  
+|`BrowseMode_Default`|`custom mode`., Zdefiniowane przez programistę czynności.|  
+|`BrowseMode_File`|`file mode`., Zostanie wyświetlone okno dialogowe przeglądarki standardowego pliku.|  
+|`BrowseMode_Folder`|`folder mode`., Zostanie wyświetlone okno dialogowe przeglądarki folderu standard.|  
 |`BrowseMode_None`|Przycisk przeglądania nie jest wyświetlana.|  
   
 ### <a name="remarks"></a>Uwagi  

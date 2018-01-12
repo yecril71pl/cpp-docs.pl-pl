@@ -45,11 +45,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95e863c1d80c84767f5ce90d9f91f02cac0ffb94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7166fd1b0ce0f8e9152c617979d0ec80bfb2b57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmapwordtoob-class"></a>Klasa CMapWordToOb
 Obsługuje mapy `CObject` wskaźniki wyznaczaną przez słowa 16-bitowych.  
@@ -120,7 +121,7 @@ class CMapWordToOb : public CObject
   
 ## <a name="see-also"></a>Zobacz też  
  [CObject — klasa](../../mfc/reference/cobject-class.md)   
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

@@ -48,11 +48,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63236a8422ac45f18e4a554b784ac601918fd0e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 108afac12d47c009b423e62321eb31a78e2c09d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wm-message-handlers-n---o"></a>Programy obsługi komunikatów WM_: N - O
 Następujące wpisy mapy po lewej stronie odpowiadają prototypy funkcji po prawej stronie:  

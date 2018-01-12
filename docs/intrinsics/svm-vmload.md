@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9aee6ce3d9a3554e4722a143bcb683c40b78ea14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 458a650214ab2186f9697ca587b2b429e9cb5a6f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Dotyczące firmy Microsoft**  
@@ -43,7 +44,7 @@ void __svm_vmload(
 |[in]`VmcbPhysicalAddress`|Adres fizyczny VMCB.|  
   
 ## <a name="remarks"></a>Uwagi  
- `__svm_vmload` Funkcji jest odpowiednikiem `VMLOAD` maszyny instrukcji. Ta funkcja obsługuje interakcji z hosta maszyny wirtualnej monitor Gość operacyjnego i jego zastosowań. Aby uzyskać więcej informacji, wyszukaj dokumentu, "wolumin ręczne AMD64 architektura programisty 2: programowania w języku systemu," numer 24593, poprawki 3.11, dokumentu w [AMD corporation](http://go.microsoft.com/fwlink/?LinkId=23746) lokacji.  
+ `__svm_vmload` Funkcji jest odpowiednikiem `VMLOAD` maszyny instrukcji. Ta funkcja obsługuje interakcji z hosta maszyny wirtualnej monitor Gość operacyjnego i jego zastosowań. Aby uzyskać więcej informacji, wyszukaj dokumentu, "wolumin ręczne AMD64 architektura programisty 2: programowania w języku systemu," numer 24593, poprawki 3.11, dokumentu w [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokacji.  
   
 ## <a name="requirements"></a>Wymagania  
   

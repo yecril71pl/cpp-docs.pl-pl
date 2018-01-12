@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1ffbffede067a34c737216a95351f097ca0eed7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc61b0bb9e1df702424c2e95d3d4ef3b2186dea0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-clistctrl"></a>Korzystanie z CListCtrl
 Formant listy umożliwia wyświetlenie każdy układ ikon z etykiet, jak Eksploratora plików lub list kolumnowy tekstu, z lub bez ikon. Opis cztery możliwe "opinie" (nie należy mylić z MFC widoków) może mieć w formancie listy — Widok ikony, widoku małych ikon widok listy i widok raportu — Zobacz widoków w [CListCtrl](../mfc/reference/clistctrl-class.md) Przegląd klasy.  
@@ -33,32 +34,32 @@ Formant listy umożliwia wyświetlenie każdy układ ikon z etykiet, jak Eksplor
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   
--   [Formant listy i widok listy](../mfc/list-control-and-list-view.md)  
+-   [Kontrolka listy i widok listy](../mfc/list-control-and-list-view.md)  
   
--   [Elementy listy, listy obrazów](../mfc/list-items-and-image-lists.md)  
+-   [Elementy listy oraz listy obrazów](../mfc/list-items-and-image-lists.md)  
   
 -   [Elementy wywołania zwrotnego i maska wywołania zwrotnego](../mfc/callback-items-and-the-callback-mask.md)  
   
--   [Tworzenie formantu listy](../mfc/creating-the-list-control.md)  
+-   [Tworzenie kontrolki listy](../mfc/creating-the-list-control.md)  
   
 -   [Tworzenie list obrazów](../mfc/creating-the-image-lists.md)  
   
--   [Dodawanie kolumn do formantu (widok raportu)](../mfc/adding-columns-to-the-control-report-view.md)  
+-   [Dodawanie kolumn do kontrolki (widok raportu)](../mfc/adding-columns-to-the-control-report-view.md)  
   
--   [Dodawanie elementów do formantu](../mfc/adding-items-to-the-control.md)  
+-   [Dodawanie elementów do kontrolki](../mfc/adding-items-to-the-control.md)  
   
--   [Przewijanie, porządkowanie, sortowanie i znajdowanie w formantach listy](../mfc/scrolling-arranging-sorting-and-finding-in-list-controls.md)  
+-   [Przewijanie, porządkowanie, sortowanie i znajdowanie w kontrolkach listy](../mfc/scrolling-arranging-sorting-and-finding-in-list-controls.md)  
   
--   [Implementowanie obszarów roboczych w formantach listy](../mfc/implementing-working-areas-in-list-controls.md)  
+-   [Implementowanie obszarów roboczych w kontrolkach listy](../mfc/implementing-working-areas-in-list-controls.md)  
   
--   [Przetwarzanie komunikatów powiadomień w formantach listy](../mfc/processing-notification-messages-in-list-controls.md)  
+-   [Przetwarzanie komunikatów powiadomień w kontrolkach listy](../mfc/processing-notification-messages-in-list-controls.md)  
   
--   [Zmienianie stylów formantu listy](../mfc/changing-list-control-styles.md)  
+-   [Zmienianie stylów kontrolki listy](../mfc/changing-list-control-styles.md)  
   
--   [Wirtualne formanty listy](../mfc/virtual-list-controls.md)  
+-   [Wirtualne kontrolki listy](../mfc/virtual-list-controls.md)  
   
--   [Likwidowanie formantu listy](../mfc/destroying-the-list-control.md)  
+-   [Likwidowanie kontrolki listy](../mfc/destroying-the-list-control.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

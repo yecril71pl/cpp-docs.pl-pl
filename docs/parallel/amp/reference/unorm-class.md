@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5aa633b67bcd5b313faa475d911300635d727f5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fffce416bebda4bcc1d5aa0078135aff27bdb7e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorm-class"></a>unorm — Klasa
 Reprezentuje numer unorm —. Każdy element jest liczbą zmiennoprzecinkową wskaż liczbę z zakresu [0.0f, 1,0 f].  
@@ -109,4 +110,4 @@ inline explicit unorm(
  Obiekt normy używaną do inicjalizacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [CONCURRENCY::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

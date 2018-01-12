@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d147d57d3858d34091d66cdd602bf150eb8f2761
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bb43f8e43197d86f692a84d36e7abe41f88f198c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-queue-stlclr"></a>operator&lt;= (kolejki) (STL/CLR)
 Kolejka mniejsza lub równa porównania.  
@@ -101,4 +104,4 @@ int main()
  [Operator! = (kolejki) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)   
  [operator\< (kolejki) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)   
  [operator > = (kolejki) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
- [operator > (kolejki) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)
+ [operator> (queue) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)

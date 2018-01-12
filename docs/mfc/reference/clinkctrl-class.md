@@ -45,11 +45,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d61e3f09b96c236277cdaf3c38008be2a661f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e6834190d7693e60f80285b04a04c484313d3c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clinkctrl-class"></a>Klasa CLinkCtrl
 Udostępnia funkcje formantu SysLink wspólne systemu Windows.  
@@ -132,7 +133,7 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>Parametry  
  `lpszLinkMarkup`  
- Wskaźnik do zakończony zerem ciąg, który zawiera oznaczony jako tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczników i łącze Access" w temacie [omówienie formanty SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706) w [biblioteki MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
+ Wskaźnik do zakończony zerem ciąg, który zawiera oznaczony jako tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczników i łącze Access" w temacie [omówienie formanty SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwStyle`  
  Określa styl kontrolki łącza. Zastosuj dowolną kombinację stylów formantu. Zobacz [najczęściej używane style formantu](http://msdn.microsoft.com/library/windows/desktop/bb775498) w `Windows SDK` Aby uzyskać więcej informacji.  
@@ -186,7 +187,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>Parametry  
  `lpszLinkMarkup`  
- Wskaźnik do zakończony zerem ciąg, który zawiera oznaczony jako tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczników i łącze Access" w temacie [omówienie formanty SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706) w [biblioteki MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
+ Wskaźnik do zakończony zerem ciąg, który zawiera oznaczony jako tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczników i łącze Access" w temacie [omówienie formanty SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwExStyle`  
  Określa styl rozszerzony kontrolki łącza. Aby uzyskać listę rozszerzone style systemu Windows, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  

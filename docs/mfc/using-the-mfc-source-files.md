@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 342c687ad992b6c587ea7518811e43bcca9db6b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 930c205ffd690c190f68766f7a51c83b68ef8d2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-the-mfc-source-files"></a>Korzystanie z plików źródłowych MFC
 Biblioteka Microsoft Foundation Class (MFC) udostępnia pełny kod źródłowy. Pliki nagłówków (.h) znajdują się w katalogu \atlmfc\include; pliki implementacji (.cpp) znajdują się w katalogu \atlmfc\src\mfc.  

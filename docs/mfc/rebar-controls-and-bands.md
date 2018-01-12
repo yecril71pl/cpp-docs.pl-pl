@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc9e78f38f911feac117023fc46b9c15d43e9128
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6426a25746858ed5bd7c0d8ef70575e029453bae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rebar-controls-and-bands"></a>Formanty paska pomocniczego i paski
 Głównym celem formantu paska pomocniczego ma działać jako kontener dla okien podrzędnych, formanty standardowe okno dialogowe, menu, paski narzędzi i tak dalej. Zawieranie ten jest obsługiwany przez pojęcie "poza pasmem". Każdej grupy paska pomocniczego może zawierać dowolną kombinację pasek uchwytu, mapy bitowej etykietę tekstową i okna podrzędnego.  
@@ -49,5 +50,5 @@ Głównym celem formantu paska pomocniczego ma działać jako kontener dla okien
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89fc982eba1a4eeeb291a33440cfae71c4b2a745
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 09d7673450834fbe6824e731679c1a6517c247a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cprogressctrl"></a>Korzystanie z CProgressCtrl
 Formant postępu przedstawienia postępu długotrwałej operacji. Jest prostokąt stopniowo jest wypełniony kolorem wyróżnienie systemu w trakcie operacji.  
@@ -34,12 +35,12 @@ Formant postępu przedstawienia postępu długotrwałej operacji. Jest prostoką
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   
--   [Style formantu postępu](../mfc/styles-for-the-progress-control.md)  
+-   [Style kontrolki postępu](../mfc/styles-for-the-progress-control.md)  
   
--   [Ustawienia formantu postępu](../mfc/settings-for-the-progress-control.md)  
+-   [Ustawienia kontrolki postępu](../mfc/settings-for-the-progress-control.md)  
   
--   [Operowanie formantem postępu](../mfc/manipulating-the-progress-control.md)  
+-   [Operowanie kontrolką postępu](../mfc/manipulating-the-progress-control.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

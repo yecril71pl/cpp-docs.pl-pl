@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 36b20340da6cae933acb0650b3e073e3835a0204
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04f73f89745f797658029eac2331d1764af4c065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>Określ lokalizację projektu i plików źródłowych, Kreator Utwórz nowy projekt z istniejących plików z kodem
 Umożliwia określenie tej strony kreator Utwórz nowy projekt z istniejących plików kodu:  
@@ -30,7 +31,7 @@ Umożliwia określenie tej strony kreator Utwórz nowy projekt z istniejących p
 -   Typy plików kreatora zostaną zaimportowane do nowego projektu  
   
 ## <a name="task-list"></a>Lista zadań  
- [Porady: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+ [Instrukcje: tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>Lista elementów UI  
  **Lokalizacja pliku projektu**  

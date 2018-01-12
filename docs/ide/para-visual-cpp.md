@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b73e3d37adb6339e2edf85eb62834611dd141fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 642b4d08f8414db19542e6a00a3718206eee8e4b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 \<Para > tag jest używany wewnątrz tagu, takich jak [ \<podsumowania >](../ide/summary-visual-cpp.md), [ \<Uwagi >](../ide/remarks-visual-cpp.md), lub [ \<zwraca >](../ide/returns-visual-cpp.md)i umożliwia dodawanie struktury w tekście.  
@@ -45,4 +46,4 @@ ms.lasthandoff: 10/24/2017
  Zobacz [ \<podsumowania >](../ide/summary-visual-cpp.md) przykład przy użyciu \<para >.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Plik dokumentacji XML](../ide/xml-documentation-visual-cpp.md)
+ [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

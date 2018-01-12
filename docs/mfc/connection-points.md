@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a96c3ebe943e2ede844c554cf943555e2aa83fc6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d8bbb131aa5d4ce1b12cba84c3928b80a8b2a7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-points"></a>Punkty połączenia
 W tym artykule wyjaśniono, jak wdrożyć punkty połączenia (wcześniej znane jako punkty połączenia OLE) przy użyciu klas MFC `CCmdTarget` i `CConnectionPoint`.  
@@ -73,5 +74,5 @@ Punkt połączenia zaimplementowany z MFC
  W tym przykładzie pobierana bieżącego zestawu połączeń na `SampleConnPt` punkt połączenia z wywołaniem do `CConnectionPoint::GetConnections`. Następnie wykonuje iterację za pośrednictwem połączenia i wywołania **ISampleSink::SinkFunc** dla każdego aktywnego połączenia.  
   
 ## <a name="see-also"></a>Zobacz też  
- [MODEL COM MFC](../mfc/mfc-com.md)
+ [MFC COM](../mfc/mfc-com.md)
 

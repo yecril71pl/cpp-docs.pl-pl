@@ -15,11 +15,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a0a323b1348b41f354cab88b0c0970af06a4ccd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cfb12ca9660259a4451d2841a921a566cf54505
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>Struktura CMFCTabToolTipInfo
 Ta struktura zawiera informacje dotyczące użytkownika znajduje się na karcie MDI.  

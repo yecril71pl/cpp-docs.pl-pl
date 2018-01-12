@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9c9e9967fec6d52207e87803fa2d7a2bf42ccca
-ms.sourcegitcommit: 0bbc9aac12c926b2b03726ae5b4a09d916e17d6b
+ms.workload: cplusplus
+ms.openlocfilehash: ddc156d8518318a686796a25e89ee84a9a67ee59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automatic-linking-of-mfc-library-version"></a>Automatyczne łączenie wersji biblioteki MFC
 W wersjach MFC przed w wersji 3.0 (przed Visual C++ w wersji 2.0) trzeba było ręcznie określić poprawną wersję biblioteki MFC na liście wejściowej biblioteki dla konsolidatora. Z MFC w wersji 3.0 i nowszych go nie trzeba już ręcznie określić wersji biblioteki MFC. Zamiast tego pliki nagłówków MFC automatycznie określić poprawną wersję biblioteki MFC, na podstawie wartości zdefiniowane z `#define`, takich jak **_DEBUG** lub **_unicode —**. Dodaj pliki nagłówków MFC **/defaultlib** dyrektywy poinstruowanie konsolidator łącze w określonej wersji biblioteki MFC.  

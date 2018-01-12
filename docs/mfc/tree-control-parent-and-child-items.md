@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6fa3efc37b251024feae79343ddfbd51769c7d53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: feaf59932da66be2bf269316c7ee9587d4037b3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-parent-and-child-items"></a>Elementy nadrzędne i podrzędne kontrolki drzewa
 Dowolny element formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) może mieć listy elementów podrzędnych, które są nazywane związane z nim elementy podrzędne. Element, który ma co najmniej jeden element podrzędny nosi nazwę elementu nadrzędnego. Element podrzędny jest wyświetlony poniżej jego element nadrzędny i tworzone jest wcięcie wskazująca, że jest podrzędny w stosunku do obiektu nadrzędnego. Element, który nie ma nadrzędnego znajduje się na szczycie hierarchii i nosi nazwę elementu głównego.  
@@ -37,5 +38,5 @@ Dowolny element formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

@@ -24,11 +24,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e64d55250a9739e8465a4ae79ecb293e2879daef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4971ceaea57b91ff708315a2c32c7bac2801798f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandui-interface"></a>Interfejs ICommandUI
 Zarządza polecenia interfejsu użytkownika.  
@@ -127,4 +128,4 @@ Ta właściwość określa tekst elementu interfejsu użytkownika dla tego polec
  **Nagłówek:** afxwinforms.h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Ccmdui — klasa](../../mfc/reference/ccmdui-class.md)
+ [Klasa CCmdUI](../../mfc/reference/ccmdui-class.md)

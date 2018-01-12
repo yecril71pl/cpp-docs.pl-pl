@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e55cb83461ed1a0229babf98c384b74de357aeb8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d5b91a2556a93f3cd74a24ea57306d70f2cbdb41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp w pierwszym FIFO. Użyj karty kontenera `queue` Zarządzanie kontenerem podstawowej jako kolejki.  
@@ -52,42 +55,42 @@ template<typename Value,
   
 |Definicja typu|Opis|  
 |---------------------|-----------------|  
-|[Queue::const_reference (STL/CLR)](../dotnet/queue-const-reference-stl-clr.md)|Typ stałego odwołania do elementu.|  
-|[Queue::container_type (STL/CLR)](../dotnet/queue-container-type-stl-clr.md)|Typ podstawowy kontenera.|  
-|[Queue::difference_type (STL/CLR)](../dotnet/queue-difference-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
-|[Queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)|Typ ogólny interfejs umożliwiający karty kontenera.|  
-|[Queue::generic_value (STL/CLR)](../dotnet/queue-generic-value-stl-clr.md)|Typ elementu ogólnego interfejsu dla karty kontenera.|  
-|[Queue::Reference (STL/CLR)](../dotnet/queue-reference-stl-clr.md)|Typ odwołania do elementu.|  
-|[Queue::size_type (STL/CLR)](../dotnet/queue-size-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
-|[Queue::value_type (STL/CLR)](../dotnet/queue-value-type-stl-clr.md)|Typ elementu.|  
+|[queue::const_reference (STL/CLR)](../dotnet/queue-const-reference-stl-clr.md)|Typ stałego odwołania do elementu.|  
+|[queue::container_type (STL/CLR)](../dotnet/queue-container-type-stl-clr.md)|Typ podstawowy kontenera.|  
+|[queue::difference_type (STL/CLR)](../dotnet/queue-difference-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
+|[queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)|Typ ogólny interfejs umożliwiający karty kontenera.|  
+|[queue::generic_value (STL/CLR)](../dotnet/queue-generic-value-stl-clr.md)|Typ elementu ogólnego interfejsu dla karty kontenera.|  
+|[queue::reference (STL/CLR)](../dotnet/queue-reference-stl-clr.md)|Typ odwołania do elementu.|  
+|[queue::size_type (STL/CLR)](../dotnet/queue-size-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
+|[queue::value_type (STL/CLR)](../dotnet/queue-value-type-stl-clr.md)|Typ elementu.|  
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[Queue::ASSIGN (STL/CLR)](../dotnet/queue-assign-stl-clr.md)|Zamienia wszystkie elementy.|  
-|[Queue::back (STL/CLR)](../dotnet/queue-back-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
-|[Queue::EMPTY (STL/CLR)](../dotnet/queue-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
-|[Queue::Front (STL/CLR)](../dotnet/queue-front-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
-|[Queue::get_container (STL/CLR)](../dotnet/queue-get-container-stl-clr.md)|Uzyskuje dostęp do podstawowych kontenera.|  
-|[Queue::POP (STL/CLR)](../dotnet/queue-pop-stl-clr.md)|Usuwa pierwszego elementu.|  
-|[Queue::push (STL/CLR)](../dotnet/queue-push-stl-clr.md)|Dodaje nowy element ostatni.|  
-|[Queue::Queue (STL/CLR)](../dotnet/queue-queue-stl-clr.md)|Konstruuje obiekt kontenera.|  
-|[Queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)|Liczy liczbę elementów.|  
-|[Queue::to_array (STL/CLR)](../dotnet/queue-to-array-stl-clr.md)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|  
+|[queue::assign (STL/CLR)](../dotnet/queue-assign-stl-clr.md)|Zamienia wszystkie elementy.|  
+|[queue::back (STL/CLR)](../dotnet/queue-back-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
+|[queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
+|[queue::front (STL/CLR)](../dotnet/queue-front-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
+|[queue::get_container (STL/CLR)](../dotnet/queue-get-container-stl-clr.md)|Uzyskuje dostęp do podstawowych kontenera.|  
+|[queue::pop (STL/CLR)](../dotnet/queue-pop-stl-clr.md)|Usuwa pierwszego elementu.|  
+|[queue::push (STL/CLR)](../dotnet/queue-push-stl-clr.md)|Dodaje nowy element ostatni.|  
+|[queue::queue (STL/CLR)](../dotnet/queue-queue-stl-clr.md)|Konstruuje obiekt kontenera.|  
+|[queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)|Liczy liczbę elementów.|  
+|[queue::to_array (STL/CLR)](../dotnet/queue-to-array-stl-clr.md)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|  
   
 |Właściwość|Opis|  
 |--------------|-----------------|  
-|[Queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
-|[Queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
+|[queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
+|[queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[Queue::operator = (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
-|[Operator! = (kolejki) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)|Określa, czy `queue` obiekt nie jest równa innej `queue` obiektu.|  
-|[Operator < (kolejki) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)|Określa, czy `queue` obiekt jest mniejszy niż innego `queue` obiektu.|  
-|[Operator < = (kolejki) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)|Określa, czy `queue` obiekt jest mniejszy niż lub równy do innego `queue` obiektu.|  
-|[Operator == (kolejki) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)|Określa, czy `queue` obiekt jest taki sam do innego `queue` obiektu.|  
-|[operator > (kolejki) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)|Określa, czy `queue` obiekt jest większy niż innego `queue` obiektu.|  
-|[operator > = (kolejki) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)|Określa, czy `queue` obiektu jest większa lub równa innej `queue` obiektu.|  
+|[queue::operator= (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
+|[operator!= (queue) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)|Określa, czy `queue` obiekt nie jest równa innej `queue` obiektu.|  
+|[operator< (queue) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)|Określa, czy `queue` obiekt jest mniejszy niż innego `queue` obiektu.|  
+|[operator<= (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)|Określa, czy `queue` obiekt jest mniejszy niż lub równy do innego `queue` obiektu.|  
+|[operator== (queue) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)|Określa, czy `queue` obiekt jest taki sam do innego `queue` obiektu.|  
+|[operator> (queue) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)|Określa, czy `queue` obiekt jest większy niż innego `queue` obiektu.|  
+|[operator>= (queue) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)|Określa, czy `queue` obiektu jest większa lub równa innej `queue` obiektu.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -110,4 +113,4 @@ template<typename Value,
  [priority_queue — (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
  [stos (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [Wektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
- [Odwołanie do biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+ [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)

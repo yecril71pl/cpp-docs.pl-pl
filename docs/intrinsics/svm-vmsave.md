@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49f0f2bc2446c45c394daa9a4ec1e8c0a6278c83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5da09a52b2d3bab14ca56b32df15325c324dc5cc
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Dotyczące firmy Microsoft**  
@@ -43,7 +44,7 @@ void __svm_vmsave(
 |[in]`VmcbPhysicalAddress`|Adres fizyczny VMCB.|  
   
 ## <a name="remarks"></a>Uwagi  
- `__svm_vmsave` Funkcji jest odpowiednikiem `VMSAVE` maszyny instrukcji. Ta funkcja obsługuje interakcji z hosta maszyny wirtualnej monitor Gość operacyjnego i jego zastosowań. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektura programisty ręczne wolumin 2: programowania w języku systemu," dokumentu numer 24593, poprawki 3.11 lub nowszym, w [AMD Corporation](http://go.microsoft.com/fwlink/?LinkId=23746) lokacji.  
+ `__svm_vmsave` Funkcji jest odpowiednikiem `VMSAVE` maszyny instrukcji. Ta funkcja obsługuje interakcji z hosta maszyny wirtualnej monitor Gość operacyjnego i jego zastosowań. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektura programisty ręczne wolumin 2: programowania w języku systemu," dokumentu numer 24593, poprawki 3.11 lub nowszym, w [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokacji.  
   
 ## <a name="requirements"></a>Wymagania  
   

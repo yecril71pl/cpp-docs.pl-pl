@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b4b532003de90fa036ac5d03fb8e3b40b57c0aac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b34df09ca53441789fc90061748ad591149d6b2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (Zgłaszaj wewnętrzne błędy kompilatora)
 Pozwala zapewnić wewnętrznych kompilatora informacje o błędzie (ICE) bezpośrednio do firmy Microsoft.  
@@ -62,7 +63,7 @@ Pozwala zapewnić wewnętrznych kompilatora informacje o błędzie (ICE) bezpoś
   
 3.  Kliknij przycisk **zaawansowane** strony właściwości.  
   
-4.  Modyfikowanie **raportowanie błędów**właściwości.  
+4.  Modyfikowanie **raportowanie błędów** właściwości.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
   

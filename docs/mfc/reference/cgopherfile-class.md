@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48c8da8fda2cd70676476532b3ed3646285f0782
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce90eb2baf4ce8f6ba0136a9efd503086b686aa6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgopherfile-class"></a>Cgopherfile — klasa
 Udostępnia funkcje znajdowania i odczytywania plików na serwerze gopher.  
@@ -95,7 +96,7 @@ CGopherFile(
  Dojście do bieżącej sesji Internet.  
   
  `pstrLocator`  
- Wskaźnik do ciągu używana do lokalizowania serwera gopher. Zobacz [sesji Gopher](https://msdn.microsoft.com/library/24wz8xze.aspx) Aby uzyskać więcej informacji na temat lokalizatorów gopher.  
+ Wskaźnik do ciągu używana do lokalizowania serwera gopher. Zobacz [sesji Gopher](cgopherlocator-class.md) Aby uzyskać więcej informacji na temat lokalizatorów gopher.  
   
  *dwLocLen*  
  Wartość typu DWORD zawierającą liczbę bajtów w `pstrLocator`.  

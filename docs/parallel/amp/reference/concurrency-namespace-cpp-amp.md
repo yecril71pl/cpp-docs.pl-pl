@@ -15,11 +15,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c67ed88a395b6d688fdc753ed45f08fd5b41925c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c4dd1773e74334f342ebb7e3cd64b68e6bab2b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-c-amp"></a>Przestrzeń nazw współbieżności (C++ AMP)
 Zawiera klasy i funkcje, które przyspieszenie wykonywania kodu C++ na sprzęcie równoległe danych. Aby uzyskać więcej informacji, zobacz [Przegląd C++ AMP](../cpp-amp-overview.md)  
@@ -36,31 +37,31 @@ namespace Concurrency;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CONCURRENCY::Direct3D — Namespace](concurrency-direct3d-namespace.md)|Udostępnia funkcje, które obsługują współdziałanie D3D. Umożliwia bezproblemowe na użytek D3D zasobów obliczeniowych w kodzie AMP i korzystania z zasobów utworzone w AMP w kodzie D3D bez tworzenia nadmiarowe kopie pośrednich. C++ AMP umożliwia przyrostowo przyspieszenia sekcje obliczeniowych aplikacji DirectX i na podstawie obliczenia AMP danych za pomocą interfejsu API D3D.|  
-|[CONCURRENCY::fast_math — Namespace](concurrency-fast-math-namespace.md)|Funkcje w `fast_math` nie są zgodnych C99 przestrzeni nazw. Podano tylko pojedynczej precyzji wersje każdej funkcji. Funkcje wewnętrzne DirectX, które są szybsze niż w odpowiednie funkcje używać tych funkcji `precise_math` przestrzeni nazw i nie wymagają rozszerzoną obsługę podwójnej precyzji na akceleratora, ale są mniej dokładne. Istnieją dwie wersje każdej funkcji poziomu zgodności z kodem C99; obie wersje przyjmować i zwracać wartości o pojedynczej precyzji.|  
-|[CONCURRENCY::Graphics Namespace](concurrency-graphics-namespace.md)|Zawiera typy i funkcje, które są przeznaczone do programowania grafiki.|  
-|[CONCURRENCY::precise_math — Namespace](concurrency-precise-math-namespace.md)|Funkcje w `precise_math` zgodnych C99 są przestrzeni nazw. Zarówno pojedynczej precyzji, jak i podwójnej precyzji wersje każdej funkcji są uwzględniane. Te funkcje — dotyczy to również funkcje pojedynczej precyzji — wymagają rozszerzoną obsługę podwójnej precyzji na akceleratora.|  
+|[Concurrency::direct3d, przestrzeń nazw](concurrency-direct3d-namespace.md)|Udostępnia funkcje, które obsługują współdziałanie D3D. Umożliwia bezproblemowe na użytek D3D zasobów obliczeniowych w kodzie AMP i korzystania z zasobów utworzone w AMP w kodzie D3D bez tworzenia nadmiarowe kopie pośrednich. C++ AMP umożliwia przyrostowo przyspieszenia sekcje obliczeniowych aplikacji DirectX i na podstawie obliczenia AMP danych za pomocą interfejsu API D3D.|  
+|[Concurrency::fast_math, przestrzeń nazw](concurrency-fast-math-namespace.md)|Funkcje w `fast_math` nie są zgodnych C99 przestrzeni nazw. Podano tylko pojedynczej precyzji wersje każdej funkcji. Funkcje wewnętrzne DirectX, które są szybsze niż w odpowiednie funkcje używać tych funkcji `precise_math` przestrzeni nazw i nie wymagają rozszerzoną obsługę podwójnej precyzji na akceleratora, ale są mniej dokładne. Istnieją dwie wersje każdej funkcji poziomu zgodności z kodem C99; obie wersje przyjmować i zwracać wartości o pojedynczej precyzji.|  
+|[Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)|Zawiera typy i funkcje, które są przeznaczone do programowania grafiki.|  
+|[Concurrency::precise_math, przestrzeń nazw](concurrency-precise-math-namespace.md)|Funkcje w `precise_math` zgodnych C99 są przestrzeni nazw. Zarówno pojedynczej precyzji, jak i podwójnej precyzji wersje każdej funkcji są uwzględniane. Te funkcje — dotyczy to również funkcje pojedynczej precyzji — wymagają rozszerzoną obsługę podwójnej precyzji na akceleratora.|  
   
 ### <a name="classes"></a>Klasy  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Accelerator — klasa](accelerator-class.md)|Reprezentuje abstrakcję węzła fizycznego obliczeń zoptymalizowanych pod kątem punktu dystrybucji.|  
-|[accelerator_view — klasa](accelerator-view-class.md)|Reprezentuje abstrakcji urządzenia wirtualnego na akceleratora równoległe danych C++ AMP.|  
-|[accelerator_view_removed — klasa](accelerator-view-removed-class.md)|Wyjątek zgłaszany, gdy podstawowy wywołań programu DirectX zakończy się niepowodzeniem z powodu mechanizmu limit czasu wykrywania i odzyskiwania systemu Windows.|  
-|[Array — klasa](array-class.md)|Łączny na danych `accelerator_view` w domenie siatce. Jest to zbiór zmienne, jedną dla każdego elementu w domenie siatce. Każda zmienna przechowuje wartość, która odpowiada niektórych typów języka C++.|  
-|[array_view — klasa](array-view-class.md)|Reprezentuje zapewnia wgląd w dane w tablicy\<T, N >.|  
-|[completion_future — klasa](completion-future-class.md)|Reprezentuje przyszłe, która odpowiada C++ AMP operację asynchroniczną.|  
-|[Extent — klasa](extent-class.md)|Reprezentuje wektor N liczby całkowitej wartości, które określają granice przestrzeni trójwymiarowej N, zawierający początek 0. Wartości w przypadku wektora współrzędnych są uporządkowane od najważniejszych do najmniej znaczący. Na przykład kartezjańskimi 3-wymiarową miejsca, vector zakresu (7,5,3) reprezentuje miejsca, w którym Współrzędna z zakresu od 0 do 7, y współrzędnych w zakresie od 0 do 5, a współrzędna x zakresu od 0 do 3.|  
-|[INDEX — klasa](index-class.md)|Definiuje N-wymiarowej punkt indeksu.|  
-|[invalid_compute_domain — klasa](invalid-compute-domain-class.md)|Wyjątek zgłaszany, gdy środowisko uruchomieniowe nie może uruchomić jądra przy użyciu określonych w domenie obliczeniowej `parallel_for_each` wywołania.|  
-|[out_of_memory — klasa](out-of-memory-class.md)|Wyjątek zgłaszany, gdy metoda kończy się niepowodzeniem z powodu braku pamięci systemu lub urządzenia.|  
-|[runtime_exception — klasa](runtime-exception-class.md)|Typ podstawowy dla wyjątków w bibliotece C++ AMP.|  
-|[tile_barrier — klasa](tile-barrier-class.md)|Klasy funkcji jest tylko możliwość utworzenia przez system, który jest przekazywany do sąsiadującym `parallel_for_each` lambda jako część `tiled_index` parametru. Zapewnia jedną metodę `wait()`, których celem jest synchronizowanie wykonywania wątków, które są uruchomione w grupie wątku (kafelka).|  
-|[tiled_extent — klasa](tiled-extent-class.md)|A `tiled_extent` obiekt jest `extent` obiektu wymiarów jednej do trzech dzielący miejsca zakres do jednowymiarowa, dwuwymiarowa lub trójwymiarowy Kafelki.|  
-|[tiled_index — klasa](tiled-index-class.md)|Zapewnia to indeks w `tiled_grid` obiektu. Ta klasa ma właściwości, które mają dostęp element pokrewny ze źródłem Kafelek lokalnego i pokrewne ze źródłem globalnego.|  
-|[uninitialized_object — klasa](uninitialized-object-class.md)|Wyjątek zgłaszany, gdy jest używany niezainicjowanego obiektu.|  
-|[unsupported_feature — klasa](unsupported-feature-class.md)|Wyjątek zgłaszany, gdy jest używany nieobsługiwanej funkcji.|  
+|[accelerator, klasa](accelerator-class.md)|Reprezentuje abstrakcję węzła fizycznego obliczeń zoptymalizowanych pod kątem punktu dystrybucji.|  
+|[accelerator_view, klasa](accelerator-view-class.md)|Reprezentuje abstrakcji urządzenia wirtualnego na akceleratora równoległe danych C++ AMP.|  
+|[accelerator_view_removed, klasa](accelerator-view-removed-class.md)|Wyjątek zgłaszany, gdy podstawowy wywołań programu DirectX zakończy się niepowodzeniem z powodu mechanizmu limit czasu wykrywania i odzyskiwania systemu Windows.|  
+|[array, klasa](array-class.md)|Łączny na danych `accelerator_view` w domenie siatce. Jest to zbiór zmienne, jedną dla każdego elementu w domenie siatce. Każda zmienna przechowuje wartość, która odpowiada niektórych typów języka C++.|  
+|[array_view, klasa](array-view-class.md)|Reprezentuje zapewnia wgląd w dane w tablicy\<T, N >.|  
+|[completion_future, klasa](completion-future-class.md)|Reprezentuje przyszłe, która odpowiada C++ AMP operację asynchroniczną.|  
+|[extent, klasa](extent-class.md)|Reprezentuje wektor N liczby całkowitej wartości, które określają granice przestrzeni trójwymiarowej N, zawierający początek 0. Wartości w przypadku wektora współrzędnych są uporządkowane od najważniejszych do najmniej znaczący. Na przykład kartezjańskimi 3-wymiarową miejsca, vector zakresu (7,5,3) reprezentuje miejsca, w którym Współrzędna z zakresu od 0 do 7, y współrzędnych w zakresie od 0 do 5, a współrzędna x zakresu od 0 do 3.|  
+|[index, klasa](index-class.md)|Definiuje N-wymiarowej punkt indeksu.|  
+|[invalid_compute_domain, klasa](invalid-compute-domain-class.md)|Wyjątek zgłaszany, gdy środowisko uruchomieniowe nie może uruchomić jądra przy użyciu określonych w domenie obliczeniowej `parallel_for_each` wywołania.|  
+|[out_of_memory, klasa](out-of-memory-class.md)|Wyjątek zgłaszany, gdy metoda kończy się niepowodzeniem z powodu braku pamięci systemu lub urządzenia.|  
+|[runtime_exception, klasa](runtime-exception-class.md)|Typ podstawowy dla wyjątków w bibliotece C++ AMP.|  
+|[tile_barrier, klasa](tile-barrier-class.md)|Klasy funkcji jest tylko możliwość utworzenia przez system, który jest przekazywany do sąsiadującym `parallel_for_each` lambda jako część `tiled_index` parametru. Zapewnia jedną metodę `wait()`, których celem jest synchronizowanie wykonywania wątków, które są uruchomione w grupie wątku (kafelka).|  
+|[tiled_extent, klasa](tiled-extent-class.md)|A `tiled_extent` obiekt jest `extent` obiektu wymiarów jednej do trzech dzielący miejsca zakres do jednowymiarowa, dwuwymiarowa lub trójwymiarowy Kafelki.|  
+|[tiled_index, klasa](tiled-index-class.md)|Zapewnia to indeks w `tiled_grid` obiektu. Ta klasa ma właściwości, które mają dostęp element pokrewny ze źródłem Kafelek lokalnego i pokrewne ze źródłem globalnego.|  
+|[uninitialized_object, klasa](uninitialized-object-class.md)|Wyjątek zgłaszany, gdy jest używany niezainicjowanego obiektu.|  
+|[unsupported_feature, klasa](unsupported-feature-class.md)|Wyjątek zgłaszany, gdy jest używany nieobsługiwanej funkcji.|  
   
 ### <a name="enumerations"></a>Wyliczenia  
   
@@ -118,7 +119,7 @@ namespace Concurrency;
  **Nagłówek:** amp.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie (C++ AMP)](reference-cpp-amp.md)
+ [Dokumentacja (C++ AMP)](reference-cpp-amp.md)
 
 
 

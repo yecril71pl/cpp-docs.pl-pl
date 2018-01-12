@@ -16,11 +16,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95e35564c759a5ede802f3e1377f64df7ccaab67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff845e9766cadb1af2e018b3ab56097d74e8c6bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-asynchronous-operations-in-c-for-windows-8x-apps"></a>Tworzenie operacji asynchronicznych w języku C++ dla aplikacji Windows 8.x
 W tym dokumencie opisano niektóre z najważniejszych należy wziąć pod uwagę, gdy klasa zadanie służy do utworzenia puli wątków systemu Windows na podstawie operacji asynchronicznych w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji.  
@@ -201,4 +202,4 @@ W tym dokumencie opisano niektóre z najważniejszych należy wziąć pod uwagę
  W tym przykładzie, istnieje możliwość anulowania obsługi, ponieważ `task` obiekty obsługujące `create_async` Użyj tokenu niejawne anulowania. Definiowanie funkcji pracy podjęcie `cancellation_token` obiekt zadań muszą odpowiadać na anulowanie w sposób współpracy. Aby uzyskać więcej informacji na temat anulowanie w PPL, zobacz [anulowanie w PPL](cancellation-in-the-ppl.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)
+ [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)

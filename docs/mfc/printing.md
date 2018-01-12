@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48395276acfac71cd940be307c3b5f0735c356ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01ee396a7866179bd140f203192d1bdcbfb4681e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printing"></a>Drukowanie
 Microsoft Windows implementuje wyświetlania niezależnych od urządzenia. W MFC, oznacza to, że tego samego wywołań rysowania, w `OnDraw` funkcji członkowskiej klasy widoku, są zobowiązani do rysowania na ekranie i na innych urządzeniach, takich jak drukarki. Podglądu wydruku urządzenie docelowe jest symulowane wydruk do wyświetlenia.  
@@ -65,5 +66,5 @@ Microsoft Windows implementuje wyświetlania niezależnych od urządzenia. W MFC
 -   [Podgląd wydruku](../mfc/print-preview-architecture.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Drukowanie i Podgląd wydruku](../mfc/printing-and-print-preview.md)
+ [Drukowanie i podgląd wydruku](../mfc/printing-and-print-preview.md)
 

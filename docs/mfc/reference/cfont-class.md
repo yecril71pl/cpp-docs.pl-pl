@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65c1fd6d86c153881f8674732db2b61edcfab8cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5431461c7c2cc33131f72f059edcfbd984eae5fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfont-class"></a>Cfont — klasa
 Hermetyzuje czcionkę interfejsu (GDI) systemu Windows grafiki urządzenia i udostępnia funkcje Członkowskie do manipulowania czcionki.  
@@ -330,7 +331,7 @@ operator HFONT() const;
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe MFC HIERSVR](../../visual-cpp-samples.md)   
  [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)   
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)
+ [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

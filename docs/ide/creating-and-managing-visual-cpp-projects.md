@@ -22,11 +22,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3e9ab166605d4d67e450a206cf1b47ea6d97f0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c38f4c75a41de8b2f2b494941c6a52b1ff46fa4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Tworzenie projektów i zarządzanie nimi na podstawie MSBuild Visual C++
 MSBuild system natywnej kompilacji dla programu Visual C++ oraz jest zazwyczaj najlepiej systemu na potrzeby aplikacji platformy uniwersalnej systemu Windows, a także aplikacji klasycznych, które używają biblioteki MFC lub ATL kompilacji. MSBuild jest ściśle zintegrowany z programu Visual Studio IDE i system projektu, ale można również użyć go w wierszu polecenia. Począwszy od programu Visual Studio 2017 Visual C++ obsługuje [CMake i innych systemów innych niż MSBuild za pomocą funkcji Otwórz Folder](non-msbuild-projects.md).
@@ -52,7 +53,7 @@ Projekty Visual C++ można utworzyć, wybierając **plik &#124; Nowy &#124; Proj
  [Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)  
  W tym artykule opisano typy plików, które są używane z różnymi typami projektu MSBuild.  
   
- [Tworzenie projektów pulpitu za pomocą kreatorów aplikacji](../ide/creating-desktop-projects-by-using-application-wizards.md)  
+ [Tworzenie projektów wykorzystujących interfejs Pulpitu za pomocą kreatorów aplikacji](../ide/creating-desktop-projects-by-using-application-wizards.md)  
  Sposób tworzenia projektów w języku Visual C++ za pomocą kreatorów.  
   
  [Praca z właściwościami projektu](../ide/working-with-project-properties.md)  
@@ -61,7 +62,7 @@ Projekty Visual C++ można utworzyć, wybierając **plik &#124; Nowy &#124; Proj
  [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md)  
  Opisuje sposób dodawania klas, metod, zmienne i inne elementy do projektu, aby dodać funkcje.  
   
- [Porady: porządkowanie plików wyjściowych projektu dla kompilacji](../ide/how-to-organize-project-output-files-for-builds.md)  
+ [Instrukcje: porządkowanie plików wyjściowych projektu na potrzeby kompilacji](../ide/how-to-organize-project-output-files-for-builds.md)  
  Opisuje sposób porządkowanie plików wyjściowych projektu.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

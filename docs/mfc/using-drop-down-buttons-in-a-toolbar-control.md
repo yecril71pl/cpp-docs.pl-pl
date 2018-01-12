@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 273c73ebfcda13217185b0f1f651229d299632c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01c09cb2bec4b466928557434767ce49948f46ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>Używanie przycisków listy rozwijanej w formancie paska narzędzi
 Oprócz standardowych przycisków pasek narzędzi może zawierać również przycisków listy rozwijanej. Obecność dołączone klawisz Strzałka zwykle wskazuje przycisku rozwijanego.  
@@ -58,5 +59,5 @@ Oprócz standardowych przycisków pasek narzędzi może zawierać również przy
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

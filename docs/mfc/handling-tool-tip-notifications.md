@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d6ec102d38e91389fddb3faf4eb83ace9ba7129
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b7668420b849dc08215a4fc309edf86e9171462
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-tool-tip-notifications"></a>Obsługa powiadomień dotyczących etykietek narzędzi
 Po określeniu `TBSTYLE_TOOLTIPS` styl, na pasku narzędzi tworzy i którymi zarządza formantem etykietki narzędzia. Etykietka narzędzia, która jest mała okno podręczne zawiera wiersz tekst opisujący przycisku paska narzędzi. Etykietka narzędzia, która jest ukryty, znajdujących się tylko użytkownik umieszcza kursor na przycisku paska narzędzi po pozostawia jej istnieje dla około połowy drugi. Etykietka narzędzia, która jest wyświetlana obok kursora.  
@@ -53,5 +54,5 @@ Po określeniu `TBSTYLE_TOOLTIPS` styl, na pasku narzędzi tworzy i którymi zar
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

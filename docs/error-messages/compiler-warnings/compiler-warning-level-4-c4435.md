@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3e907aac68727b752ac0516d2b6fbcbc5d4de84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7136cfb61a7452b7e835030216d08f064874df8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4435"></a>Kompilator C4435 ostrzegawcze (poziom 4)
 'klasa1': Układ obiektu pod /vd2 zmieni się ze względu na wirtualną klasę podstawową 'klasa2'  
@@ -45,4 +46,4 @@ class B : public virtual A  // C4435
   
 ## <a name="see-also"></a>Zobacz też  
  [vtordisp](../../preprocessor/vtordisp.md)   
- [/VD (Wyłącz przemieszczanie konstrukcji)](../../build/reference/vd-disable-construction-displacements.md)
+ [/vd (Wyłącz przemieszczanie konstrukcji)](../../build/reference/vd-disable-construction-displacements.md)

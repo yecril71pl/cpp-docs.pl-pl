@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c79a01e5c6724ab37a29e8f3b80ca9a3346f1440
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 919573139ee8bd37c210d91f223a1c41d28d7b3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>Tworzenie projektów wykorzystujących interfejs Pulpitu za pomocą kreatorów aplikacji
 Każdy typ projektu Visual C++ zawiera Kreatora aplikacji, który pomaga szybko i łatwo generować nowe projekty, stworzone na podstawie szablonu projektu.  Aby otworzyć Kreatora aplikacji, użyj **nowy projekt** okno dialogowe, aby określić właściwości projektu, takie jak nazwa projektu lub katalogu i rozwiązania której będą znajdować się projektu.  
@@ -48,4 +49,4 @@ Każdy typ projektu Visual C++ zawiera Kreatora aplikacji, który pomaga szybko 
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie i zarządzanie projektami Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
  [MFC kreatorach i oknach dialogowych](../mfc/reference/mfc-wizards-and-dialog-boxes.md)   
- [ATL kreatorach i oknach dialogowych](../atl/reference/atl-wizards-and-dialog-boxes.md)
+ [Kreatory i okna dialogowe ATL](../atl/reference/atl-wizards-and-dialog-boxes.md)

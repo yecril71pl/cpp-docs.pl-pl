@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68ac5503f32d257d27ceb0f3f56fbf6305f42763
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44101d4b0c9ab9bf5766514a75ef510bc5b8d7e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-on-the-framework"></a>Opieranie się na strukturze
 Twoja rola w Konfigurowanie aplikacji przy użyciu programu MFC framework jest podanie kodu źródłowego aplikacji, a także łączenie składników przez określenie, jakie komunikaty i polecenia, do których one odpowiadać. Umożliwia języka C++ i standardowej technik C++ pochodzić od tych dostarczonych przez biblioteki klas własnych klas specyficzne dla aplikacji i zastępowania i rozszerzyć zachowanie klasy podstawowej.  
@@ -33,7 +34,7 @@ Twoja rola w Konfigurowanie aplikacji przy użyciu programu MFC framework jest p
   
 -   [Sekwencja operacji przy tworzeniu aplikacji OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
   
--   [Sekwencja operacji przy tworzeniu formantów ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
+-   [Sekwencja operacji przy tworzeniu kontrolek ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
   
 -   [Sekwencja operacji przy tworzeniu aplikacji bazy danych](../mfc/sequence-of-operations-for-creating-database-applications.md)  
   

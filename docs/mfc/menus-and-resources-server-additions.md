@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65417079c3241feca9c43e058026674c6e35d18b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7aaf4a087fbcfc28686e7ec8d2411d6f7531466
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-server-additions"></a>Menu i zasoby: dodatki do serwera
 W tym artykule opisano zmiany, które należy wprowadzić do menu i innych zasobów w programie visual edycji aplikacji serwera (składnik). Aplikacja serwera wymaga wielu dodatków do struktury menu i innych zasobów, ponieważ może być uruchamiany w jednym z trzech trybów: autonomiczna samego, lub osadzonych w miejscu. Zgodnie z opisem w [menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md) artykuł, są maksymalnie cztery zestawy menu. Wszystkie cztery są używane dla aplikacji MDI pełny serwer, a tylko trzy służą do miniserver. Kreator aplikacji utworzy niezbędne dla typu serwera, który ma układ menu. Może być konieczne dostosowanie niektórych.  
@@ -76,5 +77,5 @@ W tym artykule opisano zmiany, które należy wprowadzić do menu i innych zasob
   
 ## <a name="see-also"></a>Zobacz też  
  [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)   
- [Menu i zasoby: scalanie Menu](../mfc/menus-and-resources-menu-merging.md)
+ [Menu i zasoby: scalanie menu](../mfc/menus-and-resources-menu-merging.md)
 

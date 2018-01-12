@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d35bc7781b1a57fdc0b8b68c5d4f78046d19134
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 785c214ed904d1591c5d532ec9f09d42c93dc2ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="norm-class"></a>norm — Klasa
 Reprezentuje numer normy. Każdy element jest liczbą zmiennoprzecinkową wskaż liczbę z zakresu [-1,0 f, 1,0 f].  
@@ -110,4 +111,4 @@ norm(
  Obiekt używany do inicjowania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [CONCURRENCY::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

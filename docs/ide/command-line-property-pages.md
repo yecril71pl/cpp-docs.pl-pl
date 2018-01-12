@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 320e3ac5126ec1e60d768e7c109f32610103f93b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d6c2958c1f6cd5954efb9c8166c151cf2a8cc29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-property-pages"></a>Strony właściwości wiersza polecenia
 Większość foldery strony właściwości zawierają **wiersza polecenia** strony właściwości. Ten wyświetla stronę właściwości, które są ustawiane w folderze. **Wiersza polecenia** właściwości strona zawiera również **dodatkowe opcje** polu, w którym można określić właściwości, które są prawidłowe dla tego narzędzia, ale dla których nie ma właściwości w folderze.  
@@ -30,4 +31,4 @@ Większość foldery strony właściwości zawierają **wiersza polecenia** stro
   
 ## <a name="see-also"></a>Zobacz też  
  [Strony właściwości](../ide/property-pages-visual-cpp.md)   
- [. Lib pliki jako dane wejściowe konsolidatora](../build/reference/dot-lib-files-as-linker-input.md)
+ [Pliki .Lib — wejście konsolidatora](../build/reference/dot-lib-files-as-linker-input.md)

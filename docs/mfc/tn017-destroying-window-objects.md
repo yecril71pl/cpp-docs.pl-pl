@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f3448fdfbd67db1591d6abd38cefea94dccb4ed2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d9aa4cabaafd4eebc3a0fb0b0023a82d446d74a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: niszczenie obiektów okien
 Opisuje tej uwagi [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) metody. Użyj tej metody, jeśli chcesz wykonać przydziału dostosowanego `CWnd`-pochodnych obiektów. Ta uwaga wyjaśnia, dlaczego warto korzystać [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) zniszczenie obiektu Windows w języku C++ zamiast `delete` operatora.  

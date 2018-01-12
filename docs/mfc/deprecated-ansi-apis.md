@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 185ed8c530f6d18e22fddadaa668e37af66351b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ba520f133ff020b6a1a51e8be7ae75b6fcdb969
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deprecated-ansi-apis"></a>Przestarzałe interfejsy API ANSI
 Biblioteka Microsoft Foundation Class (MFC) jest migrowana do klasy i metody, które są oparte na zestawie znaków Unicode. W rezultacie wersje ANSI kilka metod MFC są przestarzałe. Użyj wersji Unicode tych metod w przyszłych aplikacji.  
@@ -177,5 +178,5 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wymagania formantów standardowych systemu Windows Vista dotyczące kompilacji](../mfc/build-requirements-for-windows-vista-common-controls.md)
+ [Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji](../mfc/build-requirements-for-windows-vista-common-controls.md)
 

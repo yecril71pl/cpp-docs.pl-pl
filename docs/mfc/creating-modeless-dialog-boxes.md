@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c5a701f42b2707b957753c1f8a22640c7818d72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0549f898a076b140e7b5bed23c1c1e8c60d6adba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Tworzenie niemodalnych okien dialogowych
 Pola z niemodalnego okna dialogowego należy podać własne Konstruktor publiczny w klasy okien dialogowych. Aby utworzyć niemodalne okno dialogowe, wywołaj z publicznego konstruktora, a następnie wywołać obiektu okna dialogowego [Utwórz](../mfc/reference/cdialog-class.md#create) funkcji członkowskiej można załadować zasobu okna dialogowego. Możesz wywołać **Utwórz** podczas lub po wywołaniu konstruktora. Jeśli właściwość ma zasobu okna dialogowego **ws_visible —**, natychmiast pojawi się okno dialogowe. Jeśli nie, należy wywołać jej [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) funkcję elementu członkowskiego.  

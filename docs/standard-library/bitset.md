@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe22a58d3f7b5d19658f648343541a238ed296c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fe8d012c0034354328e5a10f1fa977002639506b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset —&gt;
 Definiuje bitset — klasa szablonu i dwa obsługi funkcji szablonu dla reprezentujący i operowanie nimi sekwencji stałym rozmiarze bitów.  
@@ -48,7 +49,7 @@ Definiuje bitset — klasa szablonu i dwa obsługi funkcji szablonu dla reprezen
   
 |||  
 |-|-|  
-|[bitset — klasa](../standard-library/bitset-class.md)|Klasa szablonu opisuje typ obiektu, który przechowuje sekwencji składającej się z określoną liczbę bitów, które umożliwiają compact zachowania flagi zbiór elementów lub warunków.|  
+|[bitset, klasa](../standard-library/bitset-class.md)|Klasa szablonu opisuje typ obiektu, który przechowuje sekwencji składającej się z określoną liczbę bitów, które umożliwiają compact zachowania flagi zbiór elementów lub warunków.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   

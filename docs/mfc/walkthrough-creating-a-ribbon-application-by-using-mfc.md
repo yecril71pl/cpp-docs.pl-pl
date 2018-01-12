@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c695f50760736b989b355cae7f7708f95dc431db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bfad78b64f72b9ee9a896832e008039aa241e2ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Wskazówki: tworzenie aplikacji wstążki za pomocą MFC
 Ten przewodnik przedstawia sposób użycia **Kreator aplikacji MFC** do tworzenia aplikacji, która domyślnie ma wstążki. Można następnie rozwiń węzeł wstążki, dodając **niestandardowy** wstążki kategorię, która ma **ulubione** wstążki panelu, a następnie dodać niektóre często używane polecenia do panelu.  
@@ -90,9 +91,9 @@ Ten przewodnik przedstawia sposób użycia **Kreator aplikacji MFC** do tworzeni
 3.  Aby sprawdzić, czy przyciski zostały dodane do panelu wstążki, skompiluj aplikację i ją uruchom. Do skompilowania aplikacji, na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**. Jeśli aplikacja tworzy się pomyślnie, uruchom aplikację, klikając **Rozpocznij debugowanie** na **debugowania** menu. **Drukowania** przycisk i pole kombi pole na **ulubione** panelu na **niestandardowy** powinna być wyświetlana na Wstążce.  
   
 ## <a name="next-steps"></a>Następne kroki  
- [Porady: Dostosowywanie paska narzędzi Szybki dostęp](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+ [Instrukcje: dostosowywanie paska narzędzi Szybki dostęp](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
- [Porady: Dostosowywanie przycisku aplikacja](../mfc/how-to-customize-the-application-button.md)  
+ [Instrukcje: dostosowywanie przycisku Aplikacja](../mfc/how-to-customize-the-application-button.md)  
   
  Przykłady end-to-end można wyświetlić [przykłady (pakiet funkcji MFC)](../visual-cpp-samples.md).  
   

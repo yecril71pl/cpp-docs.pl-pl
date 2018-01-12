@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c99ee29adb900154b3e9943f4f40d6301af5ce5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd726860e181eb352d7368f31a31d2cbd7489000
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC — zadania związane z programowaniem Internetu
 Ta sekcja zawiera szczegółowe informacje na temat dodawania obsługę Internetu dla poszczególnych aplikacji. Tematy zawierają dotyczące używania klas MFC do Internet Włącz istniejących aplikacji i jak dodać obsługę dokumentów aktywnych do istniejących składnika COM. Czy chcesz utworzyć dokument z aktualny giełdowych, wyniki football Pittsburgh firmy, i najnowszych temperatury w programie Microsoft Antarktyka zapewnia różne technologie, aby to zrobić za pośrednictwem Internetu.  
@@ -41,13 +42,13 @@ Ta sekcja zawiera szczegółowe informacje na temat dodawania obsługę Internet
   
  Zobacz poniższe tematy zawierają szczegółowe informacje ułatwiające rozpoczęcie pracy:  
   
--   [Opcje projektowania aplikacji](../mfc/application-design-choices.md)  
+-   [Opcje do wyboru przy projektowaniu aplikacji](../mfc/application-design-choices.md)  
   
 -   [Pisanie aplikacji MFC](../mfc/writing-mfc-applications.md)  
   
--   [Formanty ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md)  
+-   [Kontrolki ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md)  
   
--   [Uaktualnianie istniejącego formantu ActiveX](../mfc/upgrading-an-existing-activex-control.md)  
+-   [Uaktualnianie istniejącej kontrolki ActiveX](../mfc/upgrading-an-existing-activex-control.md)  
   
 -   [Dokumenty aktywne w Internecie](../mfc/active-documents-on-the-internet.md)  
   

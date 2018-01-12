@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e0ce24f1f7b50a899f02cc8578a293aa5734548b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c91928edf1617d8572cf6a6087afecb8e08eec3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-preprocessor-reference"></a>Odwołania preprocesora języka C/C++
 *Odwołania preprocesora języka C/C++* wyjaśniono preprocesora zaimplementowanego w Microsoft C/C++. Preprocesora przeprowadza wstępne operacje na plikach C i C++, zanim zostaną one przekazane do kompilatora. Preprocesora umożliwia warunkowo skompilować kod, Wstaw pliki, określ komunikaty o błędzie kompilacji i stosowania reguł dotyczących komputera do fragmentów kodu.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
  [Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)  
  W tym artykule omówiono wstępnie zdefiniowane makra zdefiniowanym ANSI i Microsoft C++.  
   
- [Pragma — dyrektywy](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+ [Pragmy](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
  W tym artykule omówiono pragm, które umożliwiają dla każdego kompilatora oferowanie funkcji specyficznych dla komputera i systemu operacyjnego przy zachowaniu ogólnej zgodności z języków C i C++.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

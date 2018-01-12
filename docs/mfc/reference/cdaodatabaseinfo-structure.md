@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c445d2db084e6148032cfde0c356ad88ad1cccfa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 085d0e525cb00c9fffb3698080194da92a6dbb8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo — Struktura
 `CDaoDatabaseInfo` Struktura zawiera informacje dotyczące obiektu bazy danych zdefiniowany dla obiektów dostępu do danych (DAO).  

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d75a6692eadaa3a080803b9aa69d30e4b384307a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4601a04932f467be3b63527f12c46f797d9e11d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derived-window-classes"></a>Pochodne klasy okien
 Można utworzyć systemu windows bezpośrednio z [CWnd](../mfc/reference/cwnd-class.md), lub wyprowadzać nowe klasy okna z `CWnd`. Jest to, jak zwykle tworzenie własnych niestandardowych systemu windows. Jednak większość systemu windows używane w ramach programu zamiast tego są tworzone na podstawie jednej z `CWnd`-pochodnej klasy okien ramowych dostarczonych przez MFC.  
@@ -53,7 +54,7 @@ Można utworzyć systemu windows bezpośrednio z [CWnd](../mfc/reference/cwnd-cl
  *Formularze*  
  Widoki formularzy na podstawie szablonu okna dialogowego zasobów, takich jak okna dialogowe, są tworzone przy użyciu klasy [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), lub [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).  
   
- *Formanty*  
+ *Kontrolki*  
  Formanty, takie jak przycisków i pola listy, pola kombi są tworzone przy użyciu innych klas pochodnych `CWnd`. Zobacz [kontrolować tematy](../mfc/controls-mfc.md).  
   
  *Paski sterowania*  

@@ -26,20 +26,21 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 04f49395959ec3b62f20716ddfb4ba7f4d89032d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed2d8cd6c852a15c4190c16c049e29577b754ce7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>Kontrolki ActiveX MFC: używanie stron właściwości standardowych
 W tym artykule omówiono stron właściwości standardowych dostępnych dla formantów ActiveX i sposobu ich używania.  
   
  Aby uzyskać więcej informacji na używanie stron właściwości formantu ActiveX zobacz następujące artykuły:  
   
--   [Formanty MFC ActiveX: Strony właściwości](../mfc/mfc-activex-controls-property-pages.md)  
+-   [Kontrolki ActiveX MFC: strony właściwości](../mfc/mfc-activex-controls-property-pages.md)  
   
--   [Formanty ActiveX MFC: Dodawanie dodatkowej niestandardowej strony właściwości](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
+-   [Kontrolki ActiveX MFC: dodawanie dodatkowej niestandardowej strony właściwości](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
  MFC udostępnia trzy stron właściwości standardowych do użycia z formantami ActiveX: **CLSID_CColorPropPage**, **CLSID_CFontPropPage**, i **CLSID_CPicturePropPage**. Te strony odpowiednio wyświetlenia interfejsu użytkownika dla standardowych kolorów, czcionki i właściwości obrazu.  
   
@@ -59,5 +60,5 @@ W tym artykule omówiono stron właściwości standardowych dostępnych dla form
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Formanty MFC ActiveX: Dodawanie właściwości standardowych](../mfc/mfc-activex-controls-adding-stock-properties.md)
+ [Kontrolki ActiveX MFC: dodawanie właściwości standardowych](../mfc/mfc-activex-controls-adding-stock-properties.md)
 

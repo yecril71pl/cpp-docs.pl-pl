@@ -19,11 +19,12 @@ caps.latest.revision: "50"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b2e0af195270b55f80f7eaba37f273765b3cf4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 106123557c4efab5ccddf9f1292570d36b0f8313
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="redistributing-visual-c-files"></a>Redystrybuowanie plików programu Visual C++
 Podczas wdrażania aplikacji należy również wdrożyć pliki, które są wymagane do jej obsługi. Jeśli któryś z tych plików jest dostarczany przez firmę Microsoft, sprawdź, czy masz pozwolenie na jego redystrybucję. Aby przejrzeć postanowienia licencyjne programu Visual Studio, zobacz łącze postanowień licencyjnych w oknie dialogowym Microsoft Visual Studio IDE lub pobrać [postanowienia licencyjne dotyczące oprogramowania firmy Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=831114) pliku. Aby wyświetlić "Lista REDYSTRYBUCYJNA", o której mowa w sekcji "Kod dystrybucyjny" postanowień licencyjnych oprogramowania firmy Microsoft do niektórych wydań programu Visual Studio, zobacz [Kod dystrybucyjny dla programu Microsoft Visual Studio 2017 i 2017 r Microsoft Visual Studio Zestaw SDK (obejmuje narzędzia i pliki BuildServer)](http://go.microsoft.com/fwlink/p/?LinkId=823098), lub dla programu Visual Studio 2015, zobacz [Kod dystrybucyjny dla programu Microsoft Visual Studio 2015 i Microsoft Visual Studio 2015 SDK](http://go.microsoft.com/fwlink/p/?LinkId=523763). Aby uzyskać więcej informacji na temat plików pakietu redystrybucyjnego zobacz [określania które biblioteki dll do ponownej dystrybucji](../ide/determining-which-dlls-to-redistribute.md) i [przykłady wdrożeń](../ide/deployment-examples.md).  
@@ -46,9 +47,9 @@ Podczas wdrażania aplikacji należy również wdrożyć pliki, które są wymag
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Redystrybucja za pomocą modułów scalania](../ide/redistributing-components-by-using-merge-modules.md)|Informacje dotyczące używania modułów scalania pakietu redystrybucyjnego Visual C++ do zainstalowania bibliotek środowiska uruchomieniowego Visual C++ jako udostępnionej biblioteki dll w folderze %windir%\system32\.|  
-|[Redystrybuowanie formantów ActiveX programu Visual C++](../ide/redistributing-visual-cpp-activex-controls.md)|Opisuje sposób rozpowszechniania aplikacji korzystającej z formantów ActiveX.|  
-|[Redystrybuowanie plików obsługi baz danych](../ide/redistributing-database-support-files.md)|Omawia, w jaki sposób przeprowadzać redystrybucję plików obsługi dla obiektów Data Access (DAO) oraz technologie bazy danych w programie Microsoft Data Access SDK.|  
-|[Redystrybuowanie biblioteki MFC](../ide/redistributing-the-mfc-library.md)|Opisuje sposób rozpowszechniania aplikacji korzystającej z MFC.|  
-|[Ponowna dystrybucja aplikacji ATL](../ide/redistributing-an-atl-application.md)|Zawiera opis sposobu ponownej dystrybucji aplikacji, która używa ATL. Począwszy od programu Visual Studio 2012 nie pakietu redystrybucyjnego biblioteki ATL jest wymagany.|  
+|[Ponowne dystrybuowanie kontrolek ActiveX programu Visual C++](../ide/redistributing-visual-cpp-activex-controls.md)|Opisuje sposób rozpowszechniania aplikacji korzystającej z formantów ActiveX.|  
+|[Ponowne dystrybuowanie plików obsługi baz danych](../ide/redistributing-database-support-files.md)|Omawia, w jaki sposób przeprowadzać redystrybucję plików obsługi dla obiektów Data Access (DAO) oraz technologie bazy danych w programie Microsoft Data Access SDK.|  
+|[Ponowne dystrybuowanie biblioteki MFC](../ide/redistributing-the-mfc-library.md)|Opisuje sposób rozpowszechniania aplikacji korzystającej z MFC.|  
+|[Ponowne dystrybuowanie aplikacji ATL](../ide/redistributing-an-atl-application.md)|Zawiera opis sposobu ponownej dystrybucji aplikacji, która używa ATL. Począwszy od programu Visual Studio 2012 nie pakietu redystrybucyjnego biblioteki ATL jest wymagany.|  
 |[Przykłady wdrożeń](../ide/deployment-examples.md)|Zawiera łącza do przykładów, które pokazują sposób wdrażania aplikacji Visual C++.|  
 |[Wdrażanie natywnych aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)|Wprowadza koncepcje i technologie wdrażania Visual C++.|

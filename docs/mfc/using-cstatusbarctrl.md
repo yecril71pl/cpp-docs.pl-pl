@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a3216724721c57798a9f11a4a095195ca0612163
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8960d7093fcc950eb3118115459a414bc0f0fda3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cstatusbarctrl"></a>Korzystanie z CStatusBarCtrl
 Można użyć formantu paska stanu ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) można utworzyć okna kontroli, które odzwierciedla różne rodzaje stanu informacji o aplikacji. Okno stanu można podzielić na części zawierające więcej niż jeden typ danych.  
@@ -30,9 +31,9 @@ Można użyć formantu paska stanu ([CStatusBarCtrl](../mfc/reference/cstatusbar
   
 -   [Metody tworzenia paska stanu](../mfc/methods-of-creating-a-status-bar.md)  
   
--   [Ustawienia formantu CStatusBarCtrl](../mfc/settings-for-the-cstatusbarctrl.md)  
+-   [Ustawienia CStatusBarCtrl](../mfc/settings-for-the-cstatusbarctrl.md)  
   
--   [Używanie formantu CStatusBarCtrl do tworzenia obiektu CStatusBarCtrl](../mfc/using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md)  
+-   [Używanie kontrolki CStatusBarCtrl do tworzenia obiektu CStatusBarCtrl](../mfc/using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md)  
   
 -   [Ustawianie trybu obiektu CStatusBarCtrl](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)  
   
@@ -41,5 +42,5 @@ Można użyć formantu paska stanu ([CStatusBarCtrl](../mfc/reference/cstatusbar
 -   [Używanie etykietek narzędzi w obiekcie CStatusBarCtrl](../mfc/using-tooltips-in-a-cstatusbarctrl-object.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

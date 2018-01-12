@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6042a480eef506af736ad958643288efa67402d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 77137e9bc0a4af60080234aac85afa59034d2c6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Dane wejściowe i wyjściowe narzędzie, właściwości konfiguracji manifestu &lt;Projectname&gt; stron właściwości — okno dialogowe
 To okno dialogowe służy do określania opcji wejściowymi i wyjściowymi dla [Mt.exe](http://msdn.microsoft.com/library/aa375649).  

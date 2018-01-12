@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f93763a3d29e19feaa110b336c4cc9bb832539d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8c2f30bbab85760020c19a25b098b31eb0a8893
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messageprocessor-class"></a>message_processor — Klasa
 `message_processor` Klasa jest abstrakcyjna klasa podstawowa dla przetwarzania `message` obiektów. Nie ma żadnej gwarancji z kolejnością wiadomości.  
@@ -125,4 +126,4 @@ virtual void wait() = 0;
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [ordered_message_processor — klasa](ordered-message-processor-class.md)
+ [ordered_message_processor, klasa](ordered-message-processor-class.md)

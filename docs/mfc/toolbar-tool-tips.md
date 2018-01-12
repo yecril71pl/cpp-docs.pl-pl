@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f597d0058e008f1adf1cb366f163594ef4b7472a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 248c975c51a2f44f6c9b17094d6b05082a9016a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="toolbar-tool-tips"></a>Etykietki narzędzi paska narzędzi
 Etykietki narzędzi są okna podręczne niewielki rozmiar, udostępniające krótkie opisy celu przycisku paska narzędzi, gdy umieszczenie wskaźnika myszy nad przyciskiem w danym okresie czasu. Po utworzeniu aplikacji przy użyciu Kreatora aplikacji, który ma paska narzędzi Narzędzia Porada jest obsługiwane dla Ciebie. W tym artykule opisano zarówno narzędzia Porada obsługi utworzone przez Kreatora aplikacji oraz sposób dodawania obsługi Porada narzędzia do aplikacji.  
@@ -77,5 +78,5 @@ Etykietki narzędzi są okna podręczne niewielki rozmiar, udostępniające kró
 -   [Używanie swoich starych pasków narzędzi](../mfc/using-your-old-toolbars.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [MFC — implementacja paska narzędzi](../mfc/mfc-toolbar-implementation.md)
+ [MFC, implementacja paska narzędzi](../mfc/mfc-toolbar-implementation.md)
 

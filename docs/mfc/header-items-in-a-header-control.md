@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c084e38085c9cb1144a35900699a11bd58f3f105
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2143a89d9b91c9c6db53beedce0875ee76f34cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="header-items-in-a-header-control"></a>Elementy nagłówka w formancie nagłówka
 Masz znaczną kontrolę nad wygląd i zachowanie elementów nagłówka, wchodzące w skład formantu nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Każdy element nagłówka może mieć ciągu, map bitowych obrazów, obraz z listy skojarzony obraz lub zdefiniowane przez aplikację 32-bitową wartość skojarzonych z nim. Ciąg, mapa bitowa lub obraz jest wyświetlany w elemencie nagłówka.  

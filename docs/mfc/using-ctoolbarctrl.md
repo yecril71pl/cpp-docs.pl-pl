@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c15def4acc3daad2cb0739da0f53e2a9871d172
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86bca4c48403bd41ce40b79a4b9f7c041ebb26e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ctoolbarctrl"></a>Korzystanie z CToolBarCtrl
 Można użyć formantu toolbar ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) można utworzyć okna formantu zawierającego przycisków i opcjonalne spacje. Każdy przycisk w oknie Kontrola narzędzi wysyła komunikat polecenia do okna nadrzędnego jako użytkownik zdecyduje się on. Zazwyczaj przycisków na pasku narzędzi odpowiadają elementy w menu aplikacji, zapewniając dodatkowe i bardziej bezpośrednie sposób użytkownikowi dostęp do poleceń aplikacji.  
@@ -30,16 +31,16 @@ Można użyć formantu toolbar ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-cla
   
 -   [Metody tworzenia paska narzędzi](../mfc/methods-of-creating-a-toolbar.md)  
   
--   [Ustawienia formantu paska narzędzi](../mfc/settings-for-the-toolbar-control.md)  
+-   [Ustawienia kontrolki paska narzędzi](../mfc/settings-for-the-toolbar-control.md)  
   
 -   [Tworzenie obiektu CToolBarCtrl](../mfc/creating-a-ctoolbarctrl-object.md)  
   
--   [Używanie list obrazów w formancie paska narzędzi](../mfc/using-image-lists-in-a-toolbar-control.md)  
+-   [Używanie list obrazów w kontrolce paska narzędzi](../mfc/using-image-lists-in-a-toolbar-control.md)  
   
--   [Używanie przycisków listy rozwijanej w formancie paska narzędzi](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)  
+-   [Używanie przycisków listy rozwijanej w kontrolce paska narzędzi](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)  
   
--   [Dostosowywanie wyglądu formantu paska narzędzi](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
+-   [Dostosowywanie wyglądu kontrolki paska narzędzi](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

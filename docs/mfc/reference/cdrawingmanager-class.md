@@ -67,11 +67,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73b8adbff021a179f3bd3185fa85ee18c84a441a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 689d538c03a35175040663aedb7bd6130aae10fd
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cdrawingmanager-class"></a>Klasa CDrawingManager
 `CDrawingManager` Klasa implementuje złożonych algorytmów rysowania.  
@@ -576,7 +577,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
  Reprezentacja RGB kolor HLS podane.  
   
 ### <a name="remarks"></a>Uwagi  
- Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji o różnych reprezentacji kolorów, zobacz [kolor](http://go.microsoft.com/fwlink/linkid=119126).  
+ Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji o różnych reprezentacji kolorów, zobacz [kolor](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  Ta metoda i `CDrawingManager::HLStoRGB_TWO` metody do tej samej operacji, ale wymagają różnych wartości `H` parametru. W przypadku tej metody `H` procent okręgu. W `CDrawingManager::HLStoRGB_TWO` metody `H` jest wartością stopnia od 0 do 360, reprezentujące zarówno czerwony. Na przykład z `HLStoRGB_ONE`, wartość 0,25 dla `H` jest odpowiednikiem wartości 90 z `HLStoRGB_TWO`.  
   
@@ -604,7 +605,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
  Reprezentacja RGB kolor HLS podane.  
   
 ### <a name="remarks"></a>Uwagi  
- Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji o różnych reprezentacji kolorów, zobacz [kolor](http://go.microsoft.com/fwlink/linkid=119126).  
+ Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji o różnych reprezentacji kolorów, zobacz [kolor](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  Ta metoda i [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metody do tej samej operacji, ale wymagają różnych wartości `H` parametru. W przypadku tej metody `H` jest wartością stopnia od 0 do 360, reprezentujące zarówno czerwony. W [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metody `H` procent okręgu. Na przykład z `HLStoRGB_ONE`, wartość 0,25 dla `H` jest odpowiednikiem wartości 90 z `HLStoRGB_TWO`.  
   
@@ -631,7 +632,7 @@ static COLORREF __stdcall HSVtoRGB(
  Reprezentacja RGB kolor HSV podane.  
   
 ### <a name="remarks"></a>Uwagi  
- Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji o różnych reprezentacji kolorów, zobacz [kolor](http://go.microsoft.com/fwlink/linkid=119126).  
+ Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji o różnych reprezentacji kolorów, zobacz [kolor](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
 ##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB  
  Konwertuje wartość hue składnika czerwony, zielony lub niebieski.  
@@ -800,7 +801,7 @@ static void __stdcall RGBtoHSL(
 |[out]`L`|Wskaźnik na wartość typu double, której metody przechowuje jasność koloru.|  
   
 ### <a name="remarks"></a>Uwagi  
- Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji o różnych reprezentacji kolorów, zobacz [kolor](http://go.microsoft.com/fwlink/linkid=119126).  
+ Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji o różnych reprezentacji kolorów, zobacz [kolor](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  Zwrócona wartość dla `H` jest reprezentowany jako ułamek od 0 do 1, w którym zarówno 0 i 1 reprezentują czerwony. Wartości zwracane przez `S` i `L` są liczbami z przedziału od 0 do 1.  
   
@@ -829,7 +830,7 @@ static void __stdcall RGBtoHSV(
  Wskaźnik na wartość typu double, w której ta metoda przechowuje wynikowej wartości koloru.  
   
 ### <a name="remarks"></a>Uwagi  
- Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji o różnych reprezentacji kolorów, zobacz [kolor](http://go.microsoft.com/fwlink/linkid=119126).  
+ Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji o różnych reprezentacji kolorów, zobacz [kolor](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
  Zwrócona wartość dla `H` jest liczbą z zakresu od 0 do 360, gdzie zarówno 0 do 360 wskazać czerwony. Zwracane wartości dla `S` i `V` są liczbami z przedziału od 0 do 1.  
   

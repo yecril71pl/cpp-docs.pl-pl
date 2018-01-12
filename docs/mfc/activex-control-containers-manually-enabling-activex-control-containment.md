@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 625a4445aebcb03cce7068c216782326619e3c6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf1ba1273a349f685b70fec6706b566c2b618f23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>Kontenery kontrolek ActiveX: ręczne włączanie zawierania kontrolek ActiveX
 Gdy Kreator aplikacji MFC jest używane do generowania aplikacji nie włączono obsługi formantu ActiveX, należy ręcznie dodać tę obsługę. W tym artykule opisano proces ręczne dodanie zawierania formantów ActiveX do istniejącej aplikacji kontenera OLE. Jeśli znasz z wyprzedzeniem mają obsługi formantów ActiveX w kontenerze sieci OLE, zapoznaj się z artykułem [Tworzenie kontenera kontrolki ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control-container.md).  
@@ -43,5 +44,5 @@ Gdy Kreator aplikacji MFC jest używane do generowania aplikacji nie włączono 
  Po wykonaniu tych kroków ponownie skompiluj projekt, klikając **kompilacji** na **kompilacji** menu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kontenery formantów ActiveX](../mfc/activex-control-containers.md)
+ [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
 

@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a3491ce0b61880d3dfa1969a38fb3b351c2a8903
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 213d2eeec7628c54d68bbd8f636ae85d90e7e8de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="header-control-and-list-control"></a>Kontrolka nagłówka i kontrolka listy
 W większości przypadków użyje osadzony w formancie nagłówka [CListCtrl](../mfc/reference/clistctrl-class.md) lub [clistview —](../mfc/reference/clistview-class.md) obiektu. Istnieją jednak przypadkach, gdy obiekt formantu nagłówka oddzielne jest pożądane, takich jak manipulowania danymi uporządkowane wierszy lub kolumn, w [CView](../mfc/reference/cview-class.md)-pochodzi z obiektu. W takich sytuacjach należy większą kontrolę nad wyglądem i domyślne zachowanie formantu osadzonego nagłówka.  
@@ -46,5 +47,5 @@ W większości przypadków użyje osadzony w formancie nagłówka [CListCtrl](..
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 200e50e2a10470e7078d31b35849c82ee9c11fd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da8fba1e5be97c692b08b8e89cf36b4ae6f5ddab
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution — Klasa
 Generuje dystrybucji Fishera F.  
@@ -100,7 +101,7 @@ Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` dy
   
  Aby uzyskać więcej informacji o dystrybucji klasy i ich elementy członkowskie, zobacz [ \<losowe >](../standard-library/random.md).  
   
- Aby uzyskać szczegółowe informacje na temat dystrybucji F, zobacz artykuł Wolfram MathWorld [rozkład F](http://go.microsoft.com/fwlink/LinkId=400899).  
+ Aby uzyskać szczegółowe informacje na temat dystrybucji F, zobacz artykuł Wolfram MathWorld [rozkład F](http://go.microsoft.com/fwlink/p/?linkid=400899).  
   
 ## <a name="example"></a>Przykład  
   

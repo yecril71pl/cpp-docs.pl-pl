@@ -20,11 +20,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 384c8bac652e16a4f66a82ee7e4dbb5cc92fd32b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9d910c7d6346d23f094e9359f0e5fe3536ee09dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-marshaling-in-c"></a>Omówienie marshalingu w języku C++
 W trybie mieszanym możesz czasami należy kierować danych między typami natywnych i zarządzanych. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]wprowadzono biblioteki marshalingu w celu organizowania i przekonwertować danych w prosty sposób.  
@@ -71,4 +74,4 @@ W trybie mieszanym możesz czasami należy kierować danych między typami natyw
   
 ## <a name="see-also"></a>Zobacz też  
  [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)   
- [Porady: rozszerzanie biblioteki Marshalingu](../dotnet/how-to-extend-the-marshaling-library.md)
+ [Instrukcje: rozszerzanie biblioteki marshalingu](../dotnet/how-to-extend-the-marshaling-library.md)

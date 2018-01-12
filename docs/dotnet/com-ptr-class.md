@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc7dbfdd5ca20ab330a0c4dd855593b6c91fb953
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ae02518b60190dd129443f00d82b377317c816b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptr-class"></a>com::ptr — Klasa
 Otoka dla obiekt COM, który może być używany jako element członkowski klasy CLR.  Otoka automatyzuje również zarządzanie okresem istnienia obiektu modelu COM, zwolnienie wszystkich należących do odwołania do obiektu, gdy jego destruktora jest wywoływana. Odpowiednikiem [CComPtr klasy](../atl/reference/ccomptr-class.md).  
@@ -168,4 +171,4 @@ int main() {
   
 ## <a name="see-also"></a>Zobacz też  
  [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)   
- [elementy członkowskie PTR](../dotnet/ptr-members.md)
+ [ptr, składowe](../dotnet/ptr-members.md)

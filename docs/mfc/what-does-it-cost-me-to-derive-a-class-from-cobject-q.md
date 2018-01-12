@@ -15,14 +15,15 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e440897bd3c047a5f6598187004808defb4f6eaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 253982da087dfc4b8ae9878b9788529960ecd8a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>Jaki jest koszt wyprowadzenia klasy z obiektu CObject?
 Obciążenie w tworzenia klasy pochodnej z klasy [CObject](../mfc/reference/cobject-class.md) jest minimalny. Pochodne klasy dziedziczy tylko cztery funkcji wirtualnych i jeden [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Klasa CObject: Często zadawane pytania](../mfc/cobject-class-frequently-asked-questions.md)
+ [Klasa CObject: często zadawane pytania](../mfc/cobject-class-frequently-asked-questions.md)

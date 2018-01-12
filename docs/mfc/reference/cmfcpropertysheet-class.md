@@ -51,11 +51,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8b8624d65e6bee9aacb8ac1f8d7ec9537e5e9c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2684de5c72dcc755c2a75e2553eed509ce76533
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpropertysheet-class"></a>Klasa CMFCPropertySheet
 `CMFCPropertySheet` Klasa obsługuje arkusza właściwości, w którym każdej strony właściwości jest wskazywane przez kartę strony, przycisku paska narzędzi, węzeł kontrolny drzewa lub element listy.  

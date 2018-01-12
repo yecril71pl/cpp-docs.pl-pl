@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6aea339b4ddb91336405d281d9b902a8f2a86c3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc8ad34ccce059caca8e86a014622e29c14022ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandsource-interface"></a>Interfejs ICommandSource
 Zarządza polecenia przesyłane z obiektem źródłowym polecenia do kontrolki użytkownika.  
@@ -85,7 +86,7 @@ Dojście do metody obsługi poleceń.
 
 ### <a name="remarks"></a>Uwagi
 Ta metoda dodaje cmdHandler obsługi polecenia do obiektu źródłowego polecenia i mapowania programu obsługi do z cmdID.
-Zobacz [porady: dodawanie do formantu formularzy systemu Windows Routing poleceń](https://msdn.microsoft.com/library/y33d8624.aspx) przykład sposobu użycia AddCommandHandler.
+Zobacz [porady: dodawanie do formantu formularzy systemu Windows Routing poleceń](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia AddCommandHandler.
 
 ## <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
 
@@ -218,4 +219,4 @@ Identyfikator polecenia komunikatu do wysłania.
 Ta metoda synchronicznie wysyła wiadomość zamapowane na identyfikator określony przez polecenie. Wywołuje CWnd::SendMessage do umieszczenia wiadomości w kolejce wiadomości okna, a czeka, aż tej procedury okna przed zwróceniem przetworzył wiadomość.
 ## <a name="see-also"></a>Zobacz też  
  [Porady: Dodawanie polecenia routingu do systemu Windows formantu formularzy](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
- [Interfejs obiektu ICommandTarget](../../mfc/reference/icommandtarget-interface.md)
+ [Klasa ICommandTarget](../../mfc/reference/icommandtarget-interface.md)

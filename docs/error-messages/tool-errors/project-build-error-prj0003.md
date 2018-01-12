@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f06779fb8f2d5265d93cc4376b42669b978c4e5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bcf80eb4d45fe1ae163772b96339c123996ae377
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="project-build-error-prj0003"></a>Błąd PRJ0003 kompilacji projektu  
   
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/24/2017
 
 Możliwe przyczyny tego błędu:  
   
--   Projekt zależy od serwera ATL. Począwszy od programu Visual Studio 2008, serwer ATL nie jest już częścią programu Visual Studio, ale zostało zwolnione jako projektu udostępnionego źródła w witrynie CodePlex. Aby pobrać kodu źródłowego serwera ATL i narzędzi, przejdź do [narzędzia i biblioteki serwera ATL.](http://go.microsoft.com/fwlink/?LinkID=81979).  
+-   Projekt zależy od serwera ATL. Począwszy od programu Visual Studio 2008, serwer ATL nie jest już częścią programu Visual Studio, ale zostało zwolnione jako projektu udostępnionego źródła w witrynie CodePlex. Aby pobrać kodu źródłowego serwera ATL i narzędzi, przejdź do [narzędzia i biblioteki serwera ATL.](http://go.microsoft.com/fwlink/p/?linkid=81979).  
   
 -   Niewystarczające zasoby systemu. Zamknij niektóre aplikacje, aby rozwiązać ten problem.  
   
@@ -40,4 +41,4 @@ Możliwe przyczyny tego błędu:
 -   Dla projektów makefile brakuje polecenie do uruchomienia na albo **kompilacji wiersza polecenia** lub **odbudować wiersza polecenia**.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Błędy kompilacji projektu oraz ostrzeżenia (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+ [Błędy i ostrzeżenia kompilowania projektu (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

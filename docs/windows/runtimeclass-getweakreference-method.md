@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a0406991fca38b586b27c7f8a0d01cf2e4689af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ba87fe5097f9aff52b54770c1d438be2be425259
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeclassgetweakreference-method"></a>RuntimeClass::GetWeakReference — Metoda
 Pobiera wskaźnik do obiektu słabego odwołania dla bieżącego obiektu runtimeclass —.  
@@ -45,4 +48,4 @@ STDMETHOD(
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Runtimeclass — klasa](../windows/runtimeclass-class.md)
+ [RuntimeClass, klasa](../windows/runtimeclass-class.md)

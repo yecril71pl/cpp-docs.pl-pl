@@ -44,11 +44,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d90482cc7b58962e76558a26bbf2777d8854e4ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 544130f27fb01d0d29652087351c8a5bbc5bd5c7
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="exception-handling-in-mfc"></a>Obsługa wyjątków w MFC
 W tym artykule opisano dostępne w MFC mechanizmy obsługi wyjątków. Dostępne są dwa mechanizmy:  
@@ -115,27 +116,27 @@ W tym artykule opisano dostępne w MFC mechanizmy obsługi wyjątków. Dostępne
 ##  <a name="_core_further_reading_about_exceptions"></a>Dalsze informacje dotyczące wyjątków  
  Następujące artykuły wyjaśniają, za pomocą biblioteki MFC dla przekazywanie wyjątek:  
   
--   [Wyjątki: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md)  
+-   [Wyjątki: przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md)  
   
--   [Wyjątki: Badanie zawartości wyjątku](../mfc/exceptions-examining-exception-contents.md)  
+-   [Wyjątki: badanie zawartości wyjątku](../mfc/exceptions-examining-exception-contents.md)  
   
--   [Wyjątki: Zwalnianie obiektów w wyjątkach](../mfc/exceptions-freeing-objects-in-exceptions.md)  
+-   [Wyjątki: zwalnianie obiektów w wyjątkach](../mfc/exceptions-freeing-objects-in-exceptions.md)  
   
--   [Wyjątki: Zgłaszanie wyjątków z własnych funkcji](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)  
+-   [Wyjątki: zgłaszanie wyjątków z własnych funkcji](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)  
   
--   [Wyjątki: Wyjątki bazy danych](../mfc/exceptions-database-exceptions.md)  
+-   [Wyjątki: wyjątki bazy danych](../mfc/exceptions-database-exceptions.md)  
   
--   [Wyjątki: Wyjątki OLE](../mfc/exceptions-ole-exceptions.md)  
+-   [Wyjątki: wyjątki OLE](../mfc/exceptions-ole-exceptions.md)  
   
  Następujące artykuły porównania makr wyjątków MFC z słowa kluczowe języka C++ wyjątku i wyjaśniono, jak można dostosować kodu:  
   
--   [Wyjątki: Zmiany w makrach wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)  
+-   [Wyjątki: zmiany w makrach wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)  
   
--   [Wyjątki: Konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)  
+-   [Wyjątki: konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)  
   
--   [Wyjątki: Używanie makr MFC i wyjątków języka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)  
+-   [Wyjątki: używanie makr MFC i wyjątków języka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [C++, obsługa wyjątków](../cpp/cpp-exception-handling.md)   
- [Jak: utworzyć własne klasy wyjątków niestandardowych](http://go.microsoft.com/fwlink/linkid=128045)
+ [Jak: utworzyć własne klasy wyjątków niestandardowych](http://go.microsoft.com/fwlink/p/?linkid=128045)
 

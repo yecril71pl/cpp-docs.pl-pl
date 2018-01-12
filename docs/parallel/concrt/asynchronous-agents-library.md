@@ -16,11 +16,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77f0008e3bf3956d55dbeb68a24ed54a506e3ff3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be12f47a6fb33350137a8f9b1c78ff75519c8af7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-agents-library"></a>Biblioteki agentów asynchronicznych
 Biblioteki agentów asynchronicznych (lub po prostu *biblioteki agentów*) zapewnia model programowania, który pozwala zwiększyć niezawodność rozwoju aplikacji z obsługą współbieżności. Biblioteki agentów jest Biblioteka szablonów C++, która wspiera aktora na podstawie modelu programowania i komunikatów w trakcie przekazywanie dla coarse-grained przepływu danych i przetwarzanie potokowe zadania. Biblioteki agentów opiera się na planowanie i składniki zarządzania współbieżności środowiska wykonawczego.  
@@ -71,27 +72,27 @@ agent1: received '42'.
  [Funkcje przekazywania komunikatów](../../parallel/concrt/message-passing-functions.md)  
  Zawiera opis różnych procedur przekazywanie komunikatów, które są udostępniane przez biblioteki agentów.  
   
- [Porady: Implementowanie różnych wzorców producent — konsument](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
+ [Instrukcje: implementowanie różnych wzorców producent — konsument](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
  Opisuje sposób Implementowanie wzorca producent — konsument w aplikacji.  
   
- [Porady: zapewnianie funkcji pracy wywoływania oraz klasy transformatora](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
+ [Instrukcje: zapewnianie funkcji pracy dla wywoływania oraz klasy transformatora](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
  Przedstawiono kilka sposobów zapewnianie funkcji pracy do [concurrency::call](../../parallel/concrt/reference/call-class.md) i [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) klasy.  
   
- [Porady: używanie transformatora w potoku danych](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)  
+ [Instrukcje: używanie transformatora w potoku danych](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)  
  Przedstawia sposób użycia [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) klasy w potoku danych.  
   
- [Porady: Wybieranie spośród zadań wykonanych](../../parallel/concrt/how-to-select-among-completed-tasks.md)  
+ [Instrukcje: wybieranie spośród zadań wykonanych](../../parallel/concrt/how-to-select-among-completed-tasks.md)  
  Przedstawia sposób użycia [concurrency::choice](../../parallel/concrt/reference/choice-class.md) i [concurrency::join](../../parallel/concrt/reference/join-class.md) klasy do wybrania pierwszego zadania do wykonania algorytmu wyszukiwania.  
   
- [Porady: wysyłanie komunikatu w regularnych odstępach czasu](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)  
+ [Instrukcje: wysyłanie komunikatu w regularnych odstępach czasu](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)  
  Przedstawia sposób użycia [concurrency::timer](../../parallel/concrt/reference/timer-class.md) klasy do wysyłania komunikatu w regularnych odstępach czasu.  
   
- [Porady: Użyj filtra bloku komunikatów](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
+ [Instrukcje: korzystanie z filtra bloku komunikatów](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
  Pokazuje, jak użyć filtru w celu włączenia komunikatów asynchronicznych block o zaakceptowanie lub odrzucenie wiadomości.  
   
- [Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
+ [Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
  Informacje dotyczące używania różnych równoległych wzorców, takich jak algorytmy równoległe w aplikacji.  
   
- [Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)  
+ [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)  
  W tym artykule opisano współbieżność środowiska wykonawczego, co upraszcza Programowanie równoległe i zawiera linki do powiązanych tematów.
 

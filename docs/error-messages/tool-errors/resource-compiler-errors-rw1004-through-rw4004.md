@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b67307078e80360fbe4e9b076ebbf9c1e4ac6f7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 58f5af7906e7c55b58dcb1adec63c774a6af88d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-compiler-errors-rw1004-through-rw4004"></a>Błędy kompilatora zasobów od RW1004 do RW4004
 Ta sekcja jest odniesieniem do błędów generowanych przez narzędzia kompilacji. Aby uzyskać pomoc dotyczącą danego komunikatu o błędzie, kliknij przycisk myszy na numer błędu w oknie danych wyjściowych i naciśnij klawisz F1 albo wpisz numer błędu w **Wyszukaj** pola w indeksie.

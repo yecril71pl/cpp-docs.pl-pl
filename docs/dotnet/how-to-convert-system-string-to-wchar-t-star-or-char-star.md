@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0616e76985a06f9525a300c318fe1518cd6a70c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c304b3d01fa8d1cdece410d70ebe437d41d72cd0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Porady: konwertowanie obiektu System::String na ciąg wchar_t* lub char*
 Można użyć `PtrToStringChars` w Vcclr.h przekonwertować <xref:System.String> do kodu natywnego `wchar_t *` lub `char *`.  Ponieważ wewnętrznie jest CLR ciągów Unicode zawsze zwraca wskaźnik szeroki ciąg Unicode. Następnie można przekonwertować z całej jak pokazano w poniższym przykładzie.  
@@ -73,4 +76,4 @@ Hello
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+ [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

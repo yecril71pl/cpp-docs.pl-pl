@@ -829,11 +829,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a4fc6c962ffeaeb8c81da8053aeb2e96aad448c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f1d622c2b10b9483a1c40a99bd4956ad24fa07f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 Udostępnia podstawowe funkcje wszystkie klasy okna w programie Microsoft Foundation Class Library.  
@@ -11136,4 +11137,4 @@ virtual void ResizeDynamicLayout();
  [CCmdTarget — klasa](../../mfc/reference/ccmdtarget-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Cframewnd — klasa](../../mfc/reference/cframewnd-class.md)   
- [Cview — klasa](../../mfc/reference/cview-class.md)
+ [Klasa CView](../../mfc/reference/cview-class.md)

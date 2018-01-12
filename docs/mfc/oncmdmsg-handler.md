@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71913ede29f3a8e02c319b3c713d2c33bbcb5b8e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 173741ef73cd4bf6426787ef56e8334f504d7c0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="oncmdmsg-handler"></a>Program obsługi OnCmdMsg
 Aby osiągnąć routingu poleceń, wywołuje każdym obiekcie docelowym polecenia `OnCmdMsg` funkcji członkowskiej dalej docelowego polecenia w sekwencji. Polecenie celem użycia `OnCmdMsg` ustalenie, czy ich obsługi polecenia i przekazać go do innej docelowej polecenia, jeśli go nie obsługują.  
@@ -34,5 +35,5 @@ Aby osiągnąć routingu poleceń, wywołuje każdym obiekcie docelowym poleceni
  Wartość domyślna `CCmdTarget` implementacja `OnCmdMsg` używa mapę komunikatów w wybranej klasy docelowej polecenia do wyszukiwania dla funkcji programu obsługi dla każdego komunikatu polecenia odbierze — w taki sam sposób, że są przeszukiwane standardowych komunikatów. Jeśli znajdzie dopasowanie wywołuje program obsługi. Mapy wiadomości wyszukiwanie zostało wyjaśnione w dokumencie [jak Framework wyszukuje mapy komunikatów](../mfc/how-the-framework-searches-message-maps.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Jak struktura wywołuje program obsługi](../mfc/how-the-framework-calls-a-handler.md)
+ [Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
 
