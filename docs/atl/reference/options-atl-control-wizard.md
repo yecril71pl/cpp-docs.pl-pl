@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 314f0c7675212ad1f453da189d6483fc9b8284c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60cc90ca5d5c374c223f9fe350d1a6a7357329ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-atl-control-wizard"></a>Opcje, Kreator formantu ATL
 Tutaj należy wstawić "Wyszukiwanie" podsumowania.  
@@ -53,7 +54,7 @@ Tutaj należy wstawić "Wyszukiwanie" podsumowania.
  **Minimalny formantu**  
  Obsługuje tylko interfejsy, które są całkowicie wymagane przez większość kontenerów. Można ustawić **minimalnego kontroli** dla dowolnego typu kontrolki: można utworzyć minimalnego formantu standardowego, minimalnym formantu złożonego lub minimalnego formantu DHTML.  
   
- **Agregacji**  
+ **Agregacja**  
  Dodaje obsługę funkcji agregacji dla formantu, który tworzysz. Aby uzyskać więcej informacji, zobacz [agregacji](../../atl/aggregation.md).  
   
 -   **Tak**: Tworzenie formantu, który może być agregowany.  
@@ -65,7 +66,7 @@ Tutaj należy wstawić "Wyszukiwanie" podsumowania.
  **Model wątkowości**  
  Określa, że model wątkowy używany przez formant.  
   
--   **Pojedynczy**: formantu zostanie uruchomiony tylko w podstawowym wątku com..  
+-   **Pojedynczy**: formantu zostanie uruchomiony tylko w podstawowym wątku com.  
   
 -   **Apartamentu**: formantu można tworzyć w dowolnym komórka wątku pojedynczego. Domyślnie.  
   
@@ -88,5 +89,5 @@ Tutaj należy wstawić "Wyszukiwanie" podsumowania.
 -   **Licencjonowane**: dodaje obsługę do formantu [licencjonowania](http://msdn.microsoft.com/library/windows/desktop/ms690543). Licencjonowane formanty może być obsługiwany tylko, jeśli komputer kliencki ma odpowiednią licencję.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kreator formantu ATL](../../atl/reference/atl-control-wizard.md)
+ [Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)
 

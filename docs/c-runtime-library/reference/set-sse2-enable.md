@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6db305c6674b974786cd6c17e6bf8b63b304aa2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28cbebdd46f9e6b95ff88bf159550e7ccc5f3ec0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
 Włącza lub wyłącza użycie [Streaming SIMD Extensions 2](http://msdn.microsoft.com/en-us/f98440eb-73a9-4f96-b203-ac41bb6701ea) instrukcjami procedury matematyczne CRT (SSE2). (Ta funkcja nie jest dostępna w x64 architektury ponieważ SSE2 jest domyślnie włączona.)  
@@ -111,9 +112,9 @@ int main()
 }  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
  `SSE2 enabled.`  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka CRT — funkcje](../../c-runtime-library/crt-library-features.md)
+ [Biblioteka CRT, funkcje](../../c-runtime-library/crt-library-features.md)

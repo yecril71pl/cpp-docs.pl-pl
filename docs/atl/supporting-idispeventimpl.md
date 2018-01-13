@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81976652c14693c54980f6e0901f5db5576fbbe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8bf10a68ae15743a637df2dee52bee83c3dfcbe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-idispeventimpl"></a>Obsługa IDispEventImpl
 Klasy szablonów [IDispEventImpl](../atl/reference/idispeventimpl-class.md) może służyć do zapewnienia obsługi wychwytywanie punktu połączenia w klasie ATL. W zbiorniku punktu połączenia umożliwia klasy do obsługi zdarzenia wywoływane z zewnętrznych obiektów COM. Te wychwytywanie punktu połączenia są mapowane z mapą obiekt sink zdarzenia, pochodzącymi od swojej klasy.  
@@ -87,5 +88,5 @@ Klasy szablonów [IDispEventImpl](../atl/reference/idispeventimpl-class.md) moż
  Ze względu na unikatowe charakter obiektów COM ta procedura różni się szczegółów i wykonanie, od implementacji. Te szczegóły wykraczają poza zakres tego tematu i nie zostały opisane.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podstawowe informacje na temat ATL COM — obiekty](../atl/fundamentals-of-atl-com-objects.md)
+ [Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)
 

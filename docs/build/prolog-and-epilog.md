@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c382f3a35b87dd6eeb21975ef692afd4127816d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 700b467065d17a61dcfabf9dcaa6577a7ecffc11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prolog-and-epilog"></a>Prolog i epilog
 Każda funkcja przydziela miejsce na stosie, wywołania innych funkcji, zapisuje nieulotnej rejestrów lub korzysta z obsługi wyjątków muszą mieć prologu, w których limity adresu są opisane w skojarzonych z wpisu tabeli funkcji odpowiednich danych unwind (zobacz [(X64) obsługi wyjątków](../build/exception-handling-x64.md)). Prologu zapisuje argument rejestrów w ich adresy domowe w razie potrzeby wypchnięcia nieulotnej rejestrów na stosie, przydziela stała część stosu dla zmiennych lokalnych i obiekty tymczasowe i opcjonalnie ustanawia wskaźnika ramki. Skojarzone dane operacji unwind musi opisywać akcji prologu i podać informacje niezbędne do cofania efekt kod prologu.  
@@ -99,4 +100,4 @@ ret
  Następujących reguł pozwala kod unwind, aby określić, czy jest obecnie wykonywana epilogu i symulowanie wykonywania w pozostałej części epilogu umożliwia odtworzenie kontekstu wywołania funkcji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [x64 konwencje kodowania](../build/x64-software-conventions.md)
+ [Konwencje kodowania x64](../build/x64-software-conventions.md)

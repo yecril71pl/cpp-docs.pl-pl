@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0839724e932912c35544463831e9bb540c9cd421
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ce1a86614ac39535a284bd336da585465aa8990
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2054"></a>Błąd niekrytyczny ML A2054
 **wymuszone błąd: wartość nie jest równa 0**  

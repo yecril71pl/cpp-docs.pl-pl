@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 638132f640fd342a752ec45541275178f6f26692
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e4516c3206a08c2b9ee32aea4bbb669ce4cdf0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini i NMAKE
 NMAKE odczytuje Tools.ini przed odczytuje pliki reguł programu make, chyba że używana jest /R. Szuka Tools.ini najpierw w bieżącym katalogu, a następnie w katalogu określonym przez zmienną środowiskową INIT. W sekcji Ustawienia NMAKE pliku inicjującego rozpoczyna się od `[NMAKE]` i może zawierać żadnych informacji o pliku reguł programu make. Określ komentarz w osobnym wierszu rozpoczynający się od znaku numeru (#).  

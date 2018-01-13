@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f92bcc90c67ce7c9f52f9b06843080d969e4af44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e02fa7fbe912ac51b8d3a2719ecea82fa64d0b20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="end-masm"></a>END (MASM)
 Oznacza koniec modułu i, opcjonalnie, ustawia punkt wejścia programu *adres*.  
@@ -32,4 +33,4 @@ END [[address]]
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c65dd9b05c2bbf30aa729199ad25b740455e2201
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 639af542c84ac1c661ca60d47e0e652c6673f80e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-quot-quot"></a>operator &quot;&quot;
 Traktuje "*tekst*" jako ciąg.  
@@ -35,4 +36,4 @@ Traktuje "*tekst*" jako ciąg.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do operatorów](../../assembler/masm/operators-reference.md)
+ [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ddc151a2a0f74c6f77be68cd026147a318a595a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 130b6efb1c05775cd7859144d91a30051fb4ca53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Obsługa modelu zmiennoprzecinkowego w przypadku starszego kodu (Visual C++)
 MMX i rejestrów zmiennoprzecinkowych stosu (MM0-MM7/ST0-ST7) są zachowywane między przełączeń kontekstu.  Nie ma żadnych jawnej konwencji wywoływania dla tych rejestrów.  Użyj tych rejestrów jest zabronione w kod trybu jądra.  

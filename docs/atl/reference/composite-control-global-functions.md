@@ -28,11 +28,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6f9bd7613254bfd0fd4aaef239b5e848ae87b99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="composite-control-global-functions"></a>Funkcje globalne złożonych kontrolek
 Funkcje te zapewniają obsługę tworzenia okna dialogowe, a także do tworzenia, obsługi i licencjonowanie formantów ActiveX.  
@@ -502,4 +503,4 @@ ATLAPI AtlGetObjectSourceInterface(
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje](../../atl/reference/atl-functions.md)   
- [Makra złożonych kontrolek](../../atl/reference/composite-control-macros.md)
+ [Makra kontrolek złożonych](../../atl/reference/composite-control-macros.md)

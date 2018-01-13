@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e607d3e1d02a985225f1ae41be66200ecf754ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3f922bb052d6a69bc8a051769bc552b1f2653de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cast-operators"></a>Operatory rzutowania
 Rzutowanie typu zapewnia metodę jawnej konwersji typu obiektu w konkretnej sytuacji.  
@@ -36,4 +37,4 @@ Rzutowanie typu zapewnia metodę jawnej konwersji typu obiektu w konkretnej sytu
  Kompilator traktuje *wyrażenie cast* jako typ *nazwy typu* po dokonaniu rzutowanie typu. Rzutowania może służyć do przekonwertowania obiekty dowolnego typu skalarnych do lub z innych typów skalarnych. Rzutowania jawnego typu są ograniczone przez określenia wpływu niejawne konwersje omówione w tym samym reguły [konwersje przypisań](../c-language/assignment-conversions.md). Dodatkowe ograniczenia na prezentacji mogą wynikać z rzeczywistego rozmiarów lub reprezentację określonych typów. Zobacz [magazyn typów podstawowych](../c-language/storage-of-basic-types.md) informacji na temat rzeczywistego rozmiary typów całkowitych. Aby uzyskać więcej informacji na rzutowania typów, zobacz [konwersje rzutowania typów](../c-language/type-cast-conversions.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Operator rzutowania:)](../cpp/cast-operator-parens.md)
+ [Operator rzutowania: ()](../cpp/cast-operator-parens.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20436df9fd2f54193183505eb56da7c7b3371164
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd3a83b59a1b1a0e95dd46ebca57c814c7d680c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (Optymalizacja całego programu)
 Włącza optymalizację całego programu.  
@@ -59,7 +60,7 @@ Włącza optymalizację całego programu.
   
  Format plików utworzony z **/GL** w bieżącej wersji może nie być odczytywane w kolejnych wersjach programu Visual C++. Nie powinien dostarczać pliku lib złożoną z plików .obj, które zostały utworzone z **/GL** , chyba że chcesz wysłać kopii pliku lib dla wszystkich wersji programu Visual C++ spodziewasz się użytkowników, aby używali obecnie i w przyszłości.  
   
- pliki .obj utworzonej z **/GL** i prekompilowane pliki nagłówka nie należy używać do tworzenia pliku .lib, chyba że plików lib zostaną połączone na tym samym komputerze, wytworzonego **/GL** pliku obj.. Informacje z pliku obj. prekompilowany plik nagłówka będą potrzebne w czasie łącza.  
+ pliki .obj utworzonej z **/GL** i prekompilowane pliki nagłówka nie należy używać do tworzenia pliku .lib, chyba że plików lib zostaną połączone na tym samym komputerze, wytworzonego **/GL** pliku obj. Informacje z pliku obj. prekompilowany plik nagłówka będą potrzebne w czasie łącza.  
   
  Aby uzyskać więcej informacji na ograniczenia optymalizacja całego programu i dostępne z optymalizacji, zobacz [opcję/LTCG](../../build/reference/ltcg-link-time-code-generation.md).  **/GL** również sprawia, że profil z przewodnikiem optymalizacji dostępne; zobacz opcję/LTCG.  W przypadku kompilowania kodu dla profilowanej optymalizacji i jeśli funkcja porządkowania z Twojej optymalizacje profilowe z przewodnikiem, należy skompilować z [/Gy](../../build/reference/gy-enable-function-level-linking.md) lub opcję kompilatora, która oznacza /Gy.  
   

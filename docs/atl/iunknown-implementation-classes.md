@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac484e58b585a09eff40d1b058e44dad6b8d394c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34c0b46d8a7d89ca46dc4361fe85469bd64e538c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iunknown-implementation-classes"></a>Klasy implementacji interfejsu IUnknown
 Następujące klasy wdrożenie **IUnknown** i powiązanych metod:  
@@ -47,11 +48,11 @@ Następujące klasy wdrożenie **IUnknown** i powiązanych metod:
 -   [CComObjectStack](../atl/reference/ccomobjectstack-class.md) tworzy tymczasowy obiekt COM za pomocą szkieletowych implementacja **IUnknown**.  
   
 ## <a name="related-articles"></a>Powiązane artykuły  
- [Podstawowe informacje na temat ATL COM — obiekty](../atl/fundamentals-of-atl-com-objects.md)  
+ [Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd klas](../atl/atl-class-overview.md)   
  [Agregacja i makra fabryki klas](../atl/reference/aggregation-and-class-factory-macros.md)   
  [Makra mapy COM](../atl/reference/com-map-macros.md)   
- [Funkcje globalne mapie modelu COM](../atl/reference/com-map-global-functions.md)
+ [Funkcje globalne mapy interfejsu COM](../atl/reference/com-map-global-functions.md)
 

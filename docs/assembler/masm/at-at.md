@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f46da8128325cb92b83a1d0c8503b248d38c65aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14d12c14144887df5bc3be0878e9a848dcb4de9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name=""></a>@@:
 Określa etykietę kodu rozpoznawalnych tylko między *label1* i *label2*, gdzie *label1* polega na początku kodu albo poprzedniej `@@:` etykiety i *label2* jest koniec kodu lub następne `@@:` etykiety. Zobacz [ @B ](../../assembler/masm/at-b.md) i [ @F ](../../assembler/masm/at-f.md).  
@@ -33,4 +34,4 @@ Określa etykietę kodu rozpoznawalnych tylko między *label1* i *label2*, gdzie
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do symboli](../../assembler/masm/symbols-reference.md)
+ [Dokumentacja symboli](../../assembler/masm/symbols-reference.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a408af2ac7de2f71c98467e08c49187c346304e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44f275568df9b4f8200a3fac1d77520bab38e8d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="worker-archetype"></a>Archetype procesu roboczego
 Klasy, które odpowiadają *procesu roboczego* archetype Podaj kod do elementów roboczych procesu umieszczonych w kolejce na puli wątków.  
@@ -29,7 +30,7 @@ Klasy, które odpowiadają *procesu roboczego* archetype Podaj kod do elementów
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Inicjowanie](#initialize)|Wywoływana w celu zainicjowania obiektu proces roboczy, zanim wszystkie żądania są przekazywane do [Execute](#execute).|  
+|[Initialize](#initialize)|Wywoływana w celu zainicjowania obiektu proces roboczy, zanim wszystkie żądania są przekazywane do [Execute](#execute).|  
 |[Wykonanie](#execute)|Wywołuje się, by przetworzyć elementu roboczego.|  
 |[Zakończenie](#terminate)|O nazwie uninitialize obiektu procesu roboczego po przejściu do wszystkich żądań [Execute](#execute).|  
   
@@ -120,7 +121,7 @@ void Terminate(void* pvParam) throw();
 ## <a name="see-also"></a>Zobacz też  
  [Archetypes](../../atl/reference/atl-archetypes.md)   
  [Pojęcia](../../atl/active-template-library-atl-concepts.md)   
- [Składniki COM pulpitu ATL](../../atl/atl-com-desktop-components.md)
+ [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)
 
 
 

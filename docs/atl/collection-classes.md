@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d2aacc778e6df974f364f2be9da72aa46fed8f4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a0c710629b69ffe690767d2d2948ce73631344d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collection-classes"></a>Klasy kolekcji
 Następujące klasy zapewniają obsługę dla tablic, list, map, a także metody cech przy porównań i dostępu do elementu.  
@@ -61,9 +62,9 @@ Następujące klasy zapewniają obsługę dla tablic, list, map, a także metody
   
 -   [CHeapPtrList](../atl/reference/cheapptrlist-class.md) ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźniki stosu.  
   
--   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) ta klasa dostarcza metody przydatne podczas tworzenia tablicy wskaźników interfejsów COM..  
+-   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) ta klasa dostarcza metody przydatne podczas tworzenia tablicy wskaźników interfejsów COM.  
   
--   [CInterfaceList](../atl/reference/cinterfacelist-class.md) ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźników interfejsów COM..  
+-   [CInterfaceList](../atl/reference/cinterfacelist-class.md) ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźników interfejsów COM.  
   
 -   [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) ta klasa dostarcza metody domyślnej i funkcje do klasy kolekcji składa się z następujących typów danych pierwotnych.  
   
@@ -92,7 +93,7 @@ Następujące klasy zapewniają obsługę dla tablic, list, map, a także metody
 -   [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) ta klasa udostępnia statyczne funkcje związane z przechowywane w obiektach klasy kolekcji ciągów. Obiekty ciągu są traktowane jako odwołania.  
   
 ## <a name="related-articles"></a>Powiązane artykuły  
- [Klasy kolekcji ATL](../atl/atl-collection-classes.md)  
+ [Kolekcje klas ATL](../atl/atl-collection-classes.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd klas](../atl/atl-class-overview.md)   

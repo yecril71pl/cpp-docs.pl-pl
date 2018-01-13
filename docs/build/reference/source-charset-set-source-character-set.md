@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 33e02b645d13c848c9cb9b3a5d082ccf05960433
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4aa81ba41587a183aca921177a62a45229810f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-charset-set-source-character-set"></a>/ Source-Charset (Ustaw źródło zestawu znaków)
 Pozwala określić źródło zestaw znaków dla pliku wykonywalnego.  
@@ -65,4 +66,4 @@ Pozwala określić źródło zestaw znaków dla pliku wykonywalnego.
  [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
  [/ Execution-Charset (Ustaw wykonywania zestaw znaków)](../../build/reference/execution-charset-set-execution-character-set.md)   
  [/ UTF-8 (Ustaw źródło i plik wykonywalny zestawów znaków UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)   
- [Charset (weryfikacji zgodne znaków)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+ [/validate-charset (Zweryfikuj zgodność znaków)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

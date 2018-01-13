@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92ffe32890df1b9ca68f638833c88fb2afe4bf98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d5c9a79a5e23d8295855ed2028c5f1402d3925b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-and-exceptions-classes"></a>Debugowanie i klasy wyjątków
 Te klasy zapewniają obsługę wyjątków, obsługa i debugowania.  
@@ -30,5 +31,5 @@ Te klasy zapewniają obsługę wyjątków, obsługa i debugowania.
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd klas](../atl/atl-class-overview.md)   
  [Debugowanie i funkcje globalne raportowania błędów](../atl/reference/debugging-and-error-reporting-global-functions.md)   
- [Makra debugowania i raportowanie błędów](../atl/reference/debugging-and-error-reporting-macros.md)
+ [Makra debugowania i raportowania błędów](../atl/reference/debugging-and-error-reporting-macros.md)
 

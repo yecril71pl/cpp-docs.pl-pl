@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 41e94b6a32dba603f36626abd1ceb7671d24cabd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15c4cbf72b8731a23ef6b7810d34921e21095699
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inline-files-in-a-makefile"></a>Pliki wbudowane w pliku reguł programu Make
 Wbudowany plik zawiera tekst w pliku reguł programu make. Jego nazwa może być używana w poleceniach jako dane wejściowe (na przykład pliku poleceń LINK) lub jej przekazywania poleceń do systemu operacyjnego. Po uruchomieniu polecenia, który powoduje utworzenie pliku, plik jest tworzony na dysku.  
@@ -38,4 +39,4 @@ Wbudowany plik zawiera tekst w pliku reguł programu make. Jego nazwa może być
  [Wiele plików wbudowanych](../build/multiple-inline-files.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Polecenia w pliku reguł programu make](../build/commands-in-a-makefile.md)
+ [Polecenia w pliku reguł programu Make](../build/commands-in-a-makefile.md)

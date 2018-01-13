@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd8bcd1cf83c134d4a3709329093ba0eeececde1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-utilities-reference"></a>Odwołanie do narzędzi ALT
 ATL udostępnia kod do manipulowania adresy URL i ścieżki w formie [CPathT](../atl/reference/cpatht-class.md) i [CUrl](../atl/reference/curl-class.md). Puli wątków [CThreadPool](../atl/reference/cthreadpool-class.md), mogą być używane w aplikacji. Ten kod znajduje się w atlpath.h i atlutil.h.  
@@ -31,7 +32,7 @@ ATL udostępnia kod do manipulowania adresy URL i ścieżki w formie [CPathT](..
 |[Klasa CNonStatelessWorker](../atl/reference/cnonstatelessworker-class.md)|Odbiera żądania z puli wątków i przekazuje je do obiektu procesu roboczego, który zostanie utworzona i zniszczona na każdym żądaniu.|  
 |[Klasa CNoWorkerThread](../atl/reference/cnoworkerthread-class.md)|Klasa jest używana jako argument dla `MonitorClass` parametr szablonu klasy pamięci podręcznej, jeśli chcesz wyłączyć konserwacji dynamiczne pamięci podręcznej.|  
 |[Klasa CThreadPool](../atl/reference/cthreadpool-class.md)|Ta klasa udostępnia puli wątków roboczych, które przetwarzają kolejki elementów roboczych.|  
-|[Klasa cUrl](../atl/reference/curl-class.md)|Ta klasa reprezentuje adres URL. Umożliwia manipulowania każdy element adresu URL, niezależnie od innych, czy podczas analizowania istniejący adres URL ciągu lub tworzenia ciągu od początku.|  
+|[Klasa CUrl](../atl/reference/curl-class.md)|Ta klasa reprezentuje adres URL. Umożliwia manipulowania każdy element adresu URL, niezależnie od innych, czy podczas analizowania istniejący adres URL ciągu lub tworzenia ciągu od początku.|  
 |[Klasa CWorkerThread](../atl/reference/cworkerthread-class.md)|Ta klasa tworzy wątku roboczego lub korzysta z jednego z istniejących, czeka na jeden lub więcej dojść obiektu jądra i wykonuje funkcję określonego klienta, gdy jeden z uchwytów zostanie zasygnalizowane.|  
   
 ### <a name="typedefs"></a>Typedefs  
@@ -102,4 +103,4 @@ ATL udostępnia kod do manipulowania adresy URL i ścieżki w formie [CPathT](..
 
 ## <a name="see-also"></a>Zobacz też  
  [Pojęcia](../atl/active-template-library-atl-concepts.md)   
- [Składniki COM pulpitu ATL](../atl/atl-com-desktop-components.md)
+ [Składniki ATL COM pulpitu](../atl/atl-com-desktop-components.md)

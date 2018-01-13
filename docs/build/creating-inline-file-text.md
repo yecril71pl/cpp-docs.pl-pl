@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 174160657e5494f5566fd0828815b3c0f1b3d601
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dcc27a303e9d03d2e899a76703bcfae5abfd0c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-inline-file-text"></a>Tworzenie tekstu pliku wbudowanego
 Pliki śródwierszowe są tymczasowe i stałe.  
@@ -43,4 +44,4 @@ Pliki śródwierszowe są tymczasowe i stałe.
  Plik tymczasowy istnieje podczas sesji i mogą być ponownie używane przez inne polecenia. Określ **zachować** po zamykającego nawiasu ostrego zachowania plik po sesji NMAKE; bez nazwy pliku jest zachowywany na dysku z nazwą wygenerowanego pliku. Określ **NOKEEP** lub Brak pliku tymczasowego. **Zachowaj** i **NOKEEP** nie jest uwzględniana wielkość liter.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Pliki wbudowane w pliku reguł programu make](../build/inline-files-in-a-makefile.md)
+ [Pliki wbudowane w pliku reguł programu Make](../build/inline-files-in-a-makefile.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8d206db7699b955d1440da53731d4c8574fdf81c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a940000b5330c4eccdcabcc5a31f0c3e3e74d65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="v-version-number"></a>/V (Numer wersji)
 Przestarzałe. W pliku obj. osadzony ciąg tekstowy.  
@@ -42,7 +43,7 @@ Przestarzałe. W pliku obj. osadzony ciąg tekstowy.
 ## <a name="remarks"></a>Uwagi  
  Etykieta stringcan plik .obj z numeru wersji lub informacje o prawach autorskich. Znaków spację lub tabulator musi być ujęta w znaki cudzysłowu ("), jeśli są one częścią ciąg. Ukośnik odwrotny (\\) musi poprzedzać wszystkie znaki cudzysłowu, jeśli są one częścią ciąg. Odstęp między **/V** i `string` jest opcjonalna.  
   
- Można również użyć [komentarz (C/C++)](../../preprocessor/comment-c-cpp.md) z argumentem typu komentarza kompilatora, aby umieścić nazwę i numer wersji kompilatora w pliku obj..  
+ Można również użyć [komentarz (C/C++)](../../preprocessor/comment-c-cpp.md) z argumentem typu komentarza kompilatora, aby umieścić nazwę i numer wersji kompilatora w pliku obj.  
   
  **/V** opcji jest przestarzały, począwszy od programu Visual Studio 2005; **/V** został głównie używane do obsługi tworzenia sterowniki urządzeń wirtualnych urządzenia (vxd) i tworzenia urządzenia vxd nie jest już obsługiwana przez zestaw narzędzi Visual C++. Listę opcji kompilatora przestarzałe, zobacz **uznane za przestarzałe i usunąć — opcje kompilatora** w [kompilatora opcje rozbiciu na kategorie](../../build/reference/compiler-options-listed-by-category.md).  
   

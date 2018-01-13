@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a3ab92878e17eea7164a965d3d61af01ea7f486d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23c449081a93049113a32bb30e25142493565449
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iso646-operators"></a>Operatory ISO646
 Zawiera czytelne alternatywy dla niektórych operatorów lub separatorów. Standardowy nagłówek \<iso646.h > jest dostępna nawet w niezależnych implementacji.  
@@ -26,16 +27,16 @@ Zawiera czytelne alternatywy dla niektórych operatorów lub separatorów. Stand
   
 |||  
 |-|-|  
-|[i](../c-runtime-library/reference/and.md)|Zamiast & & — operator.|  
+|[and](../c-runtime-library/reference/and.md)|Zamiast & & — operator.|  
 |[and_eq](../c-runtime-library/reference/and-eq.md)|Zamiast & = — operator.|  
-|[BITAND](../c-runtime-library/reference/bitand.md)|Zamiast & operatora.|  
-|[BITOR](../c-runtime-library/reference/bitor.md)|Zamiast &#124; operator.|  
+|[bitand](../c-runtime-library/reference/bitand.md)|Zamiast & operatora.|  
+|[bitor](../c-runtime-library/reference/bitor.md)|Zamiast &#124; operator.|  
 |[compl](../c-runtime-library/reference/compl.md)|Alternatywa dla operatora ~.|  
-|[nie](../c-runtime-library/reference/not.md)|Zamiast! operator.|  
+|[not](../c-runtime-library/reference/not.md)|Zamiast! operator.|  
 |[not_eq](../c-runtime-library/reference/not-eq.md)|Alternatywa dla operatora !=.|  
-|[lub](../c-runtime-library/reference/or.md)|Zamiast &#124; &#124; operator.|  
+|[or](../c-runtime-library/reference/or.md)|Zamiast &#124; &#124; operator.|  
 |[or_eq](../c-runtime-library/reference/or-eq.md)|Zamiast &#124; = operator.|  
-|[XOR](../c-runtime-library/reference/xor.md)|Alternatywa dla operatora ^.|  
+|[xor](../c-runtime-library/reference/xor.md)|Alternatywa dla operatora ^.|  
 |[xor_eq](../c-runtime-library/reference/xor-eq.md)|Alternatywa dla operatora ^=.|  
   
 ## <a name="see-also"></a>Zobacz też  

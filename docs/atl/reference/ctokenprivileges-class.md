@@ -28,11 +28,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1b6a7d1c76b9ddb0aa555e8856f26da99611f553
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0dc0fb58d1b92fac1462b355b9afb353554f3f23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctokenprivileges-class"></a>Klasa CTokenPrivileges
 Ta klasa jest otoki dla **TOKEN_PRIVILEGES** struktury.  
@@ -305,4 +306,4 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
  [IDENTYFIKATOR LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
  [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)   
  [Przegląd klas](../../atl/atl-class-overview.md)   
- [Globalne funkcje zabezpieczeń](../../atl/reference/security-global-functions.md)
+ [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

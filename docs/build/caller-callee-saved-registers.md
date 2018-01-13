@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebdcf30ea56587b71015a04b5e514dd9ff21aeba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 61e8d57c177ded8102f257cf84adedc0de0e312a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="callercallee-saved-registers"></a>Zapisane rejestrowania wywołującego/wywoływanego
 Rejestruje RAX, RCX, RDX, R8, R9, R10, R11 są traktowane jako nietrwałe i muszą być traktowane jako zniszczona na wywołania funkcji (chyba że w przeciwnym razie bezpieczeństwa-możliwością ich kontrolowania podczas analizy, takie jak optymalizacja całego programu).  

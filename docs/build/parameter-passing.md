@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3fa561d28ec402e631833310cdd76ecf41beef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-passing"></a>Przekazywanie parametru
 Pierwszy argumenty cztery liczby całkowitej są przekazywane w rejestrach. Liczby całkowite są przekazywane (w kolejności od lewej do prawej) w RCX, RDX, R8 i R9. Argumenty 5 i nowszym są przekazywane na stosie. Wszystkie argumenty mają wyrównany do prawej w rejestrach. Jest to zrobić, jeśli wywoływany można zignorować górny bitów rejestru musi być i może uzyskać dostęp tylko część konieczne rejestru.  

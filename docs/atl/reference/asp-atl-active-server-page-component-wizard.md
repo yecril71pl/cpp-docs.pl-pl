@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2ffa9ed5a25417cfcf46c5b47b55b3eecc2fe27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69d3837cc0996c0e0e0784214cfbfa6744afbf94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Kreator składników stron ASP ATL
 Ta strona ATL Active Server strona kreatora składników umożliwia określenie ustawienia opcjonalne obsługi informacji i stanu dotyczące składnika ASP.  
@@ -36,8 +37,8 @@ Ta strona ATL Active Server strona kreatora składników umożliwia określenie 
 |------------|-----------------|  
 |**Żądanie**|Zapewnia dostęp do strony ASP wewnętrzne **żądania** obiektu. Obiekt żądania jest używany do przekazania żądania HTTP.|  
 |**Odpowiedź**|Zapewnia dostęp do strony ASP wewnętrzne **odpowiedzi** obiektu. W odpowiedzi na żądanie obiekt odpowiedzi wysyła informacje do przeglądarki, aby wyświetlić dla użytkownika.|  
-|**Sesji**|Zapewnia dostęp do strony ASP wewnętrzne **sesji** obiektu. **Sesji** obiekt przechowuje informacje o bieżącej sesji użytkownika, w tym przechowywania i pobierania informacji o stanie.|  
-|**Aplikacji**|Zapewnia dostęp do strony ASP wewnętrzne **aplikacji** obiektu. **Aplikacji** obiektu zarządza stanem, który jest współużytkowany przez wiele obiektów ASP.|  
+|**Sesja**|Zapewnia dostęp do strony ASP wewnętrzne **sesji** obiektu. **Sesji** obiekt przechowuje informacje o bieżącej sesji użytkownika, w tym przechowywania i pobierania informacji o stanie.|  
+|**Aplikacja**|Zapewnia dostęp do strony ASP wewnętrzne **aplikacji** obiektu. **Aplikacji** obiektu zarządza stanem, który jest współużytkowany przez wiele obiektów ASP.|  
 |**Serwer**|Zapewnia dostęp do strony ASP wewnętrzne **serwera** obiektu. **Serwera** obiektu pozwala tworzyć inne obiekty ASP.|  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50d382b8f6dbb8c6468bba3bcb2d5c65607de99d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40eb4875b195871aff8d274667e005d63424a110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-module-definition-statements"></a>Zasady dla instrukcji definicji modułu
 Wszystkie instrukcje w pliku .def mają zastosowanie następujące reguły składni. Inne zasady, które są stosowane do instrukcji określonych opisano z każdej instrukcji.  
@@ -45,4 +46,4 @@ Wszystkie instrukcje w pliku .def mają zastosowanie następujące reguły skła
 -   Jeśli argument ciągu odpowiada [słowa zarezerwowanego](../../build/reference/reserved-words.md), musi być ujęta w znaki cudzysłowu (").  
   
 ## <a name="see-also"></a>Zobacz też  
- [Definicji modułu (. Pliki DEF)](../../build/reference/module-definition-dot-def-files.md)  
+ [Pliki definicji modułu (.Def)](../../build/reference/module-definition-dot-def-files.md)  

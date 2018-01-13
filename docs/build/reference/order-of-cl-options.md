@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fdcc4b315f2e223e59e88e2f5876965d106a49c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef67792b01d4d4dab535bfb180cd70beb2316b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="order-of-cl-options"></a>Kolejność opcji CL
 Opcje mogą występować w dowolnym miejscu w wierszu polecenia CL, z wyjątkiem opcji/Link musi występować jako ostatnia. Kompilator rozpoczyna się od określonego w opcji [zmiennej środowiskowej CL](../../build/reference/cl-environment-variables.md) i odczytuje wiersza polecenia od lewej do prawej — przetwarzania plików poleceń w kolejności ich wystąpienia. Każda opcja ma zastosowanie do wszystkich plików w wierszu polecenia. Jeśli CL napotka opcje powodujące konflikt, używa opcji po prawej stronie.  

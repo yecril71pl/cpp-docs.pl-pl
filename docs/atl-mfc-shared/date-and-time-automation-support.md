@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63d77d4260c507b71e2269d2f404b8109af16dfd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a40a8fe49d9564714c328b657bc0d85d52ad84b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-and-time-automation-support"></a>Data i godzina: Obsługa automatyzacji
 W tym artykule opisano, jak korzystać z usług biblioteki klasy związane z zarządzaniem daty i godziny. Procedury opisane obejmują:  

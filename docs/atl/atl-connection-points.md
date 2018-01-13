@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e0ef927ad6e2a0e9b0c71e211fa525ba7fc8ea0d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2063bd35627fd86c0cab82e4e50e5e8a126ddfa7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-connection-points"></a>Punkty połączenia ATL
 Obiekt składnika jest taki, który obsługuje interfejsy wychodzących. Wychodzące interfejs sprawia, że obiekt do komunikacji z klientem. Dla każdego interfejsu wychodzącego składnika obiekt ujawnia punktu połączenia. Każdy wychodzących interfejs jest implementowany przez klienta do obiektu o nazwie zbiorniku.  
@@ -31,7 +32,7 @@ Obiekt składnika jest taki, który obsługuje interfejsy wychodzących. Wychodz
  Każdy punkt połączenia obsługuje [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) interfejsu. Obiekt składnika udostępnia jego punkty połączenia klienta za pośrednictwem [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857) interfejsu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Klasy punktu połączenia ATL](../atl/atl-connection-point-classes.md)  
+ [Klasy punktów połączenia ATL](../atl/atl-connection-point-classes.md)  
  Krótko opisano klasy ATL, które obsługują punkty połączenia.  
   
  [Dodawanie punktów połączenia do obiektu](../atl/adding-connection-points-to-an-object.md)  

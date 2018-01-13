@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8908fb93cf6bc1c5a0c19cbbdb6597451c1cfa51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b88f895255c698f04b6988e63b8b75372fa59b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Stany modułu zwykłej biblioteki MFC DLL połączone dynamicznie z MFC
 Dynamicznie połączyć zwykły biblioteki MFC DLL biblioteki MFC DLL możliwości niektóre konfiguracje, które są bardzo skomplikowane. Na przykład regularną bibliotekę DLL MFC i plik wykonywalny, który używa zarówno dynamicznie połączyć do biblioteki MFC DLL i wszystkie biblioteki DLL rozszerzeń MFC.  
@@ -51,4 +52,4 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 -   [Biblioteki DLL rozszerzeń MFC](../build/extension-dlls-overview.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md)
+ [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)

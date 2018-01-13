@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 59c9ff71c2528cb1accb345cc4a1411b2c8febdb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5ce78422658e5df75afc53149ddc04db93b46ae5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="endp"></a>ENDP
 Oznacza koniec procedury *nazwa* wcześniej uruchomione za pomocą **PROC**.  
@@ -37,4 +38,4 @@ name
  Zobacz [PROC](../../assembler/masm/proc.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

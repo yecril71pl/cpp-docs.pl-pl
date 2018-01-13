@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a29b5f58517a8348c20bb233491aec01fda7f771
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cec8aa3d1b3417b6bfcb35757ac4a4a51961e16b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (Wymuś synchroniczne zapisy do bazy PDB)
 Wymusza zapisuje plik programu (PDB) bazy danych — utworzone przez [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) lub [/zi](../../build/reference/z7-zi-zi-debug-information-format.md)— za pośrednictwem MSPDBSRV szeregowanie. WYWOŁANIE PLIKU EXE.  

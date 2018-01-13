@@ -16,18 +16,19 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a61d2d7679542059a40c8ae6b2c3eb03910ec2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3b016fb60670dc8674691c52d593b468e597eed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="x64-software-conventions"></a>Konwencje kodowania x64
 W tej sekcji opisano Visual C++ metodologia konwencji wywoływania [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], 64-bitowe rozszerzenia x86 architektury.  
   
--   [Omówienie x64 Konwencje wywoływania](../build/overview-of-x64-calling-conventions.md)  
+-   [Przegląd konwencji wywoływania x64](../build/overview-of-x64-calling-conventions.md)  
   
--   [Typy i Magazyn](../build/types-and-storage.md)  
+-   [Typy i magazyn](../build/types-and-storage.md)  
   
 -   [Użycie metody Register](../build/register-usage.md)  
   
@@ -35,7 +36,7 @@ W tej sekcji opisano Visual C++ metodologia konwencji wywoływania [!INCLUDE[vcp
   
 -   [Wykorzystanie stosu](../build/stack-usage.md)  
   
--   [Prolog i Epilog](../build/prolog-and-epilog.md)  
+-   [Prolog i epilog](../build/prolog-and-epilog.md)  
   
 -   [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)  
   
@@ -45,7 +46,7 @@ W tej sekcji opisano Visual C++ metodologia konwencji wywoływania [!INCLUDE[vcp
   
  Następująca opcja kompilatora pomaga zoptymalizować aplikacji dla [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [/ favor pod (Optymalizuj pod kątem specyfiki architektury)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor (Optymalizacja pod kątem specyfiki architektury)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwencje wywoływania](../cpp/calling-conventions.md)

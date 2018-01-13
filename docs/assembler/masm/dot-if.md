@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2416b73fa42f9cac629644ea624a9545f3988dc3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2883ae63664248fdce054b39dd9291a6c1d7c431
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="if"></a>.IF
 Generuje kod, który umożliwia sprawdzenie `condition1` (na przykład AX > 7) i wykonuje *instrukcje* Jeśli ten warunek jest spełniony.  
@@ -41,4 +42,4 @@ statements
  Jeśli [. ELSE](../../assembler/masm/dot-else.md) następujące, jego instrukcje są wykonywane, jeśli fabrycznego była wartość false. Należy pamiętać, że warunki są oceniane w czasie wykonywania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

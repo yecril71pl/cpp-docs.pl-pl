@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 66ec1e2e86996b8044909961bef9ab4ea3e76312
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d9acaf1c8912e1b563bb5d05ae600d1430049e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="malloc-alignment"></a>Wyrównanie — funkcja malloc
 [malloc](../c-runtime-library/reference/malloc.md) może zwracać odpowiednio wyrównania przechowywania dowolny obiekt wyrównanie podstawowych i który może pasować ilości pamięci przydzielonej pamięci. A *podstawowych wyrównanie* jest wyrównania, która jest mniejsza niż największa wyrównania, która jest obsługiwana przez implementację bez wyrównania. (W programie Visual C++, to wyrównania, która jest wymagana dla `double`, lub 8 bajtów. W kodzie, przeznaczonego dla platformy 64-bitowych jest 16 bajtów). Na przykład alokacji 4 bajtowych może być wyrównany na granicy obsługuje dowolny obiekt 4 bajtowych lub mniejszy.  

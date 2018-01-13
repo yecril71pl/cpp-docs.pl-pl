@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05a2ffa5f886318524267aeb348557a413960f7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ea488841290ff1e5eaa7279e209dff2928b82c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="instr"></a>@InStr
 Makra funkcji, która znajduje pierwsze wystąpienie *ciąg2* w *ciąg1*, początkowe na *pozycji* w *ciąg1*. Jeśli *pozycji* nie ma, wyszukiwanie rozpoczyna się od początku *ciąg1*. Zwraca całkowitą pozycji lub 0, jeśli *ciąg2* nie znaleziono.  
@@ -32,4 +33,4 @@ Makra funkcji, która znajduje pierwsze wystąpienie *ciąg2* w *ciąg1*, począ
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do symboli](../../assembler/masm/symbols-reference.md)
+ [Dokumentacja symboli](../../assembler/masm/symbols-reference.md)

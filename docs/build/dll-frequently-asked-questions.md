@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ddacf677dab37bc85492dff1ec13dde23132da15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39c3a36f697527c7e133409f49656e4415f86a7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL — często zadawane pytania  
   
@@ -39,7 +40,7 @@ Poniżej przedstawiono często zadawane pytania dotyczące bibliotek DLL.
 
 ## <a name="mfc_multithreaded_1"></a>Biblioteki MFC DLL może tworzyć wiele wątków?  
   
-Z wyjątkiem podczas inicjowania biblioteki MFC DLL może bezpiecznie tworzyć wiele wątków tak długo, jak używa wątku Win32 Magazyn lokalny (TLS) funkcje takie jak **TlsAlloc** przydzielić pamięć lokalna wątku. Jednak jeśli korzysta z biblioteki MFC DLL **__declspec(thread)** przydzielić pamięć lokalna wątku, aplikacja kliencka musi niejawnie połączona z biblioteki DLL. Jeśli aplikacja kliencka jawnie łącza do pliku DLL, wywołanie **LoadLibrary** nie zostanie pomyślnie załadować biblioteki DLL. Aby uzyskać więcej informacji o tworzeniu wielu wątków wewnątrz biblioteki DLL MFC zobacz artykuł bazy wiedzy, "PRB: wywołanie wywołanie funkcji LoadLibrary() do ładowania biblioteki DLL czy ma statycznych TLS" (Q118816).  
+Z wyjątkiem podczas inicjowania biblioteki MFC DLL może bezpiecznie tworzyć wiele wątków tak długo, jak używa wątku Win32 Magazyn lokalny (TLS) funkcje takie jak **TlsAlloc** przydzielić pamięć lokalna wątku. Jednak jeśli korzysta z biblioteki MFC DLL **__declspec(thread)** przydzielić pamięć lokalna wątku, aplikacja kliencka musi niejawnie połączona z biblioteki DLL. Jeśli aplikacja kliencka jawnie łącza do pliku DLL, wywołanie **LoadLibrary** nie zostanie pomyślnie załadować biblioteki DLL. Aby uzyskać więcej informacji o tworzeniu wielu wątków wewnątrz biblioteki DLL MFC zobacz artykuł bazy wiedzy, "PRB: wywołanie wywołanie funkcji LoadLibrary() do ładowania biblioteki DLL czy ma statycznych TLS" (Q118816). Aby uzyskać więcej informacji o zmiennych thread-local w bibliotekach DLL, zobacz [wątku](../cpp/thread.md).
   
  Biblioteki MFC DLL, która tworzy nowego wątku MFC podczas uruchamiania przestanie odpowiadać, gdy jest ładowany przez aplikację. Obejmuje to zawsze, gdy jest tworzony wątek, wywołując `AfxBeginThread` lub `CWinThread::CreateThread` wewnątrz:  
   
@@ -78,4 +79,4 @@ Regularne biblioteki DLL MFC, która jest połączone statycznie z MFC, zmieniaj
 Jedną z możliwych przyczyn przeciek pamięci jest, że MFC tworzy obiekty tymczasowe, które są używane wewnątrz funkcji obsługi komunikatów. W aplikacjach MFC, te obiekty tymczasowe są automatycznie czyszczone w `CWinApp::OnIdle()` funkcję wywoływaną Between przetwarzanie komunikatów. Jednak w MFC bibliotek dołączanych dynamicznie (dll) `OnIdle()` funkcja nie jest wywoływana automatycznie. W efekcie obiekty tymczasowe są nie automatycznie czyszczone. Aby wyczyścić obiekty tymczasowe, biblioteki DLL muszą jawnie wywołać `OnIdle(1)` okresowo.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md)
+ [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)

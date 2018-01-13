@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be9a3cf9c91fecedd596ae7db74158f376ffc00c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a481f8c461cb4fddd4acb090edb2f2b5fd18636d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filename-parts-syntax"></a>Składnia nazwy pliku-części
 Składnia nazwy pliku części w poleceniach reprezentuje składniki pierwszy filename zależne (które mogą być domniemanych zależnych). Składniki filename są dysku pliku, ścieżka, nazwie podstawowej i rozszerzenia określone, nie, które znajdują się na dysku. Użyj **%s** do reprezentowania pełną nazwę pliku. Użyj **% &#124;** [*części*]**F** (pionowy pasek symbol procentu następuje znak) do reprezentowania części nazwy pliku, gdzie *części* może być zero lub więcej z następujących w dowolnej kolejności.  
@@ -49,4 +50,4 @@ Składnia nazwy pliku części w poleceniach reprezentuje składniki pierwszy fi
 -   % &#124; eF będzie exe  
   
 ## <a name="see-also"></a>Zobacz też  
- [Polecenia w pliku reguł programu make](../build/commands-in-a-makefile.md)
+ [Polecenia w pliku reguł programu Make](../build/commands-in-a-makefile.md)

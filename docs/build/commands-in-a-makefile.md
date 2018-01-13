@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c20707f2fc36790fc1b90e9a9df295bcd25f7af3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5361012fd388f49d8eb956ec1a4fa1bdd53a2dcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commands-in-a-makefile"></a>Polecenia w pliku reguł programu Make
 Opis reguły blokowanie lub wnioskowania określa blok polecenia do uruchomienia, jeśli zależność jest nieaktualne. NMAKE Wyświetla każde polecenie przed uruchomieniem go, chyba że/s, **. DYSKRETNEJ**, **! CMDSWITCHES**, lub @ jest używany. NMAKE szuka reguły wnioskowania dopasowania, jeśli blok opis nie następuje blok poleceń.  
@@ -41,4 +42,4 @@ project.obj : project.c project.h ; cl /c project.c
  [Pliki wbudowane w pliku reguł programu make](../build/inline-files-in-a-makefile.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie NMAKE](../build/nmake-reference.md)
+ [NMAKE — dokumentacja](../build/nmake-reference.md)

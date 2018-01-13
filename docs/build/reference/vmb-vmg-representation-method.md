@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 061943dc029a566b7bc636a2bb4b37e276413245
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a9d64f8b1035f731adef79356d24eeb3e4f7ee3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Metoda reprezentacji)
 Wybierz metodę używaną do reprezentowania wskaźników do elementów członkowskich klasy kompilatora.  

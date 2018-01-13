@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e608d3b6826eb8bfbcebdec7fdf9891d033b418
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ac09c1f107b51542b7a17c8661eb784b4abf14a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chained-unwind-info-structures"></a>Struktury informacji o operacji łańcuchowej unwind
 Jeśli ustawiono flagi UNW_FLAG_CHAININFO, struktura informacji unwind ubocznym i pole udostępnionego adresu — program obsługi/łańcuchowej — informacje o wyjątku zawiera informacje unwind podstawowego. Następujące pobiera kod podstawowy unwind informacji, przy założeniu, że `unwindInfo` jest struktura, która ma UNW_FLAG_CHAININFO Flaga.  
@@ -33,4 +34,4 @@ PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode
  Element UNWIND_INFO UNW_FLAG_CHAININFO ustawić może zawierać wpis RUNTIME_FUNCTION, którego element UNWIND_INFO ma również UNW_FLAG_CHAININFO Ustaw (shrink-wrapping wielu). Po pewnym czasie łańcuchowej unwind informacje może wskaźniki pojawią się na element UNWIND_INFO UNW_FLAG_CHAININFO wyczyszczone; jest to elementu UNWIND_INFO podstawowego wskazuje punktu wejścia procedury rzeczywistych.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dane operacji unwind dla obsługi wyjątków, obsługa debugera](../build/unwind-data-for-exception-handling-debugger-support.md)
+ [Dane operacji Unwind dla obsługi wyjątków, obsługa debugera](../build/unwind-data-for-exception-handling-debugger-support.md)

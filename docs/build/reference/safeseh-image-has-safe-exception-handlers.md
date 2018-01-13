@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 430991838245e258a8f1b4bffe16a2f559019901
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c57a882e3a421d03b2edf97c9fb4bf2f352e5d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (Obraz ma bezpieczną obsługę wyjątków)
 ```  

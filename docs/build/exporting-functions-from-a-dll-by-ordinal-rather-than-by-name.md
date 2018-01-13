@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4d5420a426f0dc1244ede19fc4abddf56469608d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17b49cc54336f596d6815a2ebe53e60ed2dd51e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Eksportowanie funkcji z biblioteki DLL według numeru porządkowego a nie nazwy
 Najprostszym sposobem, aby wyeksportować funkcji z biblioteki DLL jest wyeksportować je według nazwy. Jest to, co się dzieje, gdy używasz **__declspec(dllexport)**, np. Ale zamiast tego można wyeksportować funkcji według liczby porządkowej. W przypadku tej techniki, należy użyć pliku .def zamiast **__declspec(dllexport)**. Aby określić wartość porządkową funkcji, należy dołączyć jego liczby porządkowej nazwa funkcji w pliku .def. Informacje o określaniu porządkowe, zobacz [eksportowanie z biblioteki DLL przy użyciu .def — pliki](../build/exporting-from-a-dll-using-def-files.md).  

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5a4b30b5fdc3294220b210001cc19a58bdf4b3b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2658b2ca23ef34b63e0788791f3fb528107e1efd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editbin-options"></a>Opcje EDITBIN
 Aby zmodyfikować plików obiektów, plików wykonywalnych i bibliotek dołączanych dynamicznie (dll), można użyć polecenia EDITBIN. Opcje określ zmiany, które wprowadza polecenia EDITBIN.  
@@ -30,27 +31,27 @@ Aby zmodyfikować plików obiektów, plików wykonywalnych i bibliotek dołącza
   
 |Opcja|Cel|  
 |------------|-------------|  
-|[/ ALLOWBIND](../../build/reference/allowbind.md)|Określa, czy biblioteka DLL może być powiązana.|  
-|[/ ALLOWISOLATION](../../build/reference/allowisolation.md)|Określa plik DLL lub pliku wykonywalnego przeszukiwanie manifestu zachowanie.|  
-|[/ APPCONTAINER](../../build/reference/appcontainer.md)|Określa, czy uruchomić aplikację w kontenerze AppContainer — na przykład [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji.|  
-|[POWIĄZANIA](../../build/reference/bind.md)|Ustawia adres punktów wejścia w określonych obiektów do czasu ładowania szybkości.|  
-|[/ DYNAMICBASE](../../build/reference/dynamicbase.md)|Określa, czy plik DLL lub wykonywalnego obrazu może być losowo przebazowanych w trakcie ładowania przy użyciu randomizacji układu przestrzeni adresowej (ASLR).|  
+|[/ALLOWBIND](../../build/reference/allowbind.md)|Określa, czy biblioteka DLL może być powiązana.|  
+|[/ALLOWISOLATION](../../build/reference/allowisolation.md)|Określa plik DLL lub pliku wykonywalnego przeszukiwanie manifestu zachowanie.|  
+|[/APPCONTAINER](../../build/reference/appcontainer.md)|Określa, czy uruchomić aplikację w kontenerze AppContainer — na przykład [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji.|  
+|[/BIND](../../build/reference/bind.md)|Ustawia adres punktów wejścia w określonych obiektów do czasu ładowania szybkości.|  
+|[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Określa, czy plik DLL lub wykonywalnego obrazu może być losowo przebazowanych w trakcie ładowania przy użyciu randomizacji układu przestrzeni adresowej (ASLR).|  
 |[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Raporty wewnętrzne błędy do firmy Microsoft.|  
-|[/ HEAP](../../build/reference/heap.md)|Ustawia rozmiar sterty obrazu wykonywalnego w bajtach.|  
-|[/ HIGHENTROPYVA](../../build/reference/highentropyva.md)|Określa, czy plik DLL lub obrazu wykonywalnego obsługuje wysokiej entropii randomizacji układu przestrzeni adresowej (64-bitowy) (ASLR).|  
-|[/ INTEGRITYCHECK](../../build/reference/integritycheck.md)|Określa, czy do sprawdzenia podpisu cyfrowego w czasie ładowania.|  
-|[/ LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Określa, czy obiekt obsługuje adresy, które są większe niż dwa gigabajty.|  
+|[/HEAP](../../build/reference/heap.md)|Ustawia rozmiar sterty obrazu wykonywalnego w bajtach.|  
+|[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Określa, czy plik DLL lub obrazu wykonywalnego obsługuje wysokiej entropii randomizacji układu przestrzeni adresowej (64-bitowy) (ASLR).|  
+|[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Określa, czy do sprawdzenia podpisu cyfrowego w czasie ładowania.|  
+|[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Określa, czy obiekt obsługuje adresy, które są większe niż dwa gigabajty.|  
 |[/ NOLOGO](../../build/reference/nologo-editbin.md)|Pomijaj transparent startowy polecenia EDITBIN.|  
-|[/ NXCOMPAT](../../build/reference/nxcompat.md)|Określa, czy obraz wykonywalny jest zgodny z zapobieganiem wykonywaniu danych systemu Windows.|  
-|[/ REBASE](../../build/reference/rebase.md)|Ustawia adres podstawowy dla określonych obiektów.|  
-|[/ RELEASE](../../build/reference/release.md)|Ustawia sumę kontrolną w nagłówku.|  
+|[/NXCOMPAT](../../build/reference/nxcompat.md)|Określa, czy obraz wykonywalny jest zgodny z zapobieganiem wykonywaniu danych systemu Windows.|  
+|[/REBASE](../../build/reference/rebase.md)|Ustawia adres podstawowy dla określonych obiektów.|  
+|[/RELEASE](../../build/reference/release.md)|Ustawia sumę kontrolną w nagłówku.|  
 |[/ SECTION](../../build/reference/section-editbin.md)|Zastępuje atrybuty sekcji.|  
-|[/ STACK](../../build/reference/stack.md)|Ustawia rozmiar stosu obrazu wykonywalnego w bajtach.|  
-|[/ SUBSYSTEM](../../build/reference/subsystem.md)|Określa środowiska wykonawczego.|  
-|[/ SWAPRUN](../../build/reference/swaprun.md)|Określa, że obrazu wykonywalnego musi być kopiowane do pliku wymiany, a następnie uruchom stamtąd.|  
-|[/ TSAWARE](../../build/reference/tsaware.md)|Określa, że aplikacja jest przeznaczona do uruchamiania w środowisku wielu użytkowników.|  
-|[/ VERSION](../../build/reference/version.md)|Ustawia numer wersji w nagłówku.|  
+|[/STACK](../../build/reference/stack.md)|Ustawia rozmiar stosu obrazu wykonywalnego w bajtach.|  
+|[/SUBSYSTEM](../../build/reference/subsystem.md)|Określa środowiska wykonawczego.|  
+|[/SWAPRUN](../../build/reference/swaprun.md)|Określa, że obrazu wykonywalnego musi być kopiowane do pliku wymiany, a następnie uruchom stamtąd.|  
+|[/TSAWARE](../../build/reference/tsaware.md)|Określa, że aplikacja jest przeznaczona do uruchamiania w środowisku wielu użytkowników.|  
+|[/VERSION](../../build/reference/version.md)|Ustawia numer wersji w nagłówku.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)   
- [Odwołanie EDITBIN](../../build/reference/editbin-reference.md)
+ [EDITBIN — dokumentacja](../../build/reference/editbin-reference.md)

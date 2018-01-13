@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8f016d6aa223d1532c90dcd9e82812444195b11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59c59cf6e17e763d0e672d2bc0c33d6d55c609dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arm-assembler-reference"></a>Odwołanie do asemblera ARM
 
@@ -27,7 +28,7 @@ Artykuły w tej sekcji dokumentacji zawierają materiału odwołanie do asembler
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Informacje w wierszu polecenia asemblera ARM](../../assembler/arm/arm-assembler-command-line-reference.md)|Opis opcji wiersza polecenia armasm.|  
+|[Dokumentacja wiersza polecenia asemblera ARM](../../assembler/arm/arm-assembler-command-line-reference.md)|Opis opcji wiersza polecenia armasm.|  
 |[Komunikaty diagnostyczne asemblera ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Opis najczęściej spotykanych armasm ostrzeżenia i komunikaty o błędach.|  
 |[Dyrektywy ARM dotycząca asemblera](../../assembler/arm/arm-assembler-directives.md)|W tym artykule opisano dyrektywy ARM, które różnią się w armasm.|  
 |[Ręczne odwołanie do architektury ARM](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual) w witrynie sieci Web ARM Developer.|Wybierz odpowiednie ręcznego dla architektury ARM. Każdy zawiera sekcje odwołania o ARM, Thumb i NEON, VFP i dodatkowe informacje na temat języka asemblera ARM.|  

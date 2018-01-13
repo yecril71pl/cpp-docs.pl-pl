@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b487cc29bb61943bca676b3473897f04be59230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1ed7eb2b467fd52545f65f98b87e8e34ad71f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-type"></a>DATE — typ
 **Data** typu jest implementowane za pomocą 8-bajtowa liczba zmiennoprzecinkowa. Liczba dni są reprezentowane przez zwiększa liczbę całkowitą, począwszy od 30 grudnia 1899, północy czasu zero. Wartości godziny są wyrażone jako wartość bezwzględną liczby ułamkową część liczby. W poniższej tabeli przedstawiono kilka dat wraz z ich **data** odpowiednik liczbowy typu:  
@@ -74,5 +75,5 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Data i godzina](../atl-mfc-shared/date-and-time.md)   
- [Klasa COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)
+ [COleDateTime, klasa](../atl-mfc-shared/reference/coledatetime-class.md)
 

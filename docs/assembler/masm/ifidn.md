@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6b109fad05988797c25bb3c0584622d13671a044
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59d5ee5079ecf5034bc883f264728c9d3696d885
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ifidn"></a>IFIDN]
 Zestaw przyznaje, jeśli elementy tekstowe są identyczne.  
@@ -35,4 +36,4 @@ IFIDN[[I]] textitem1, textitem2
  Jeśli **I** jest podany, wynik porównania ma bez uwzględniania wielkości liter. Zobacz [IF](../../assembler/masm/if-masm.md) dla pełnej składni.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

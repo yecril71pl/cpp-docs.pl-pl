@@ -18,14 +18,15 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a06fe0f7fab05b6b73856fa3f326f1c54d4f55c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ece9858d0be171febaeb52e820e922665ac2a351
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinterfacearray-class"></a>Klasa CInterfaceArray
-Ta klasa dostarcza metody przydatne podczas tworzenia tablicy wskaźników interfejsów COM..  
+Ta klasa dostarcza metody przydatne podczas tworzenia tablicy wskaźników interfejsów COM.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,7 +53,7 @@ class CInterfaceArray :
 |[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Konstruktor dla tablicy interfejsu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa udostępnia konstruktora i pochodnej metody tworzenia tablicy wskaźników interfejsów COM.. Użyj [CInterfaceList](../../atl/reference/cinterfacelist-class.md) gdy jest wymagany.  
+ Ta klasa udostępnia konstruktora i pochodnej metody tworzenia tablicy wskaźników interfejsów COM. Użyj [CInterfaceList](../../atl/reference/cinterfacelist-class.md) gdy jest wymagany.  
   
  Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).  
   

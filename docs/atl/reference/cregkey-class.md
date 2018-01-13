@@ -53,11 +53,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 627d4961f5783a9acb9b264a1142ea3596b5b9bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dffc650c54c4a50fb4b3b1fe2c22ac82501b8b45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
 Ta klasa dostarcza metody do manipulowania wpisy w rejestrze systemu.  
@@ -344,7 +345,7 @@ LONG GetKeySecurity(
  Rozmiar w bajtach buforu wskazywana przez `psd`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest niezerowa błąd jest zdefiniowany w powiodło się.. H.  
+ Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest niezerowa błąd jest zdefiniowany w powiodło się. H.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313).  
@@ -427,7 +428,7 @@ LONG Open(
  Zabezpieczeń dostępu do klucza. Wartość domyślna to KEY_ALL_ACCESS. Aby uzyskać listę możliwych wartości i opisy, zobacz [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się.. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się. H.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli `lpszKeyName` parametr ma wartość NULL lub punktów na pusty ciąg, **Otwórz** otwiera nowy uchwyt klucz identyfikowany przez `hKeyParent`, ale nie zamyka wszystkie wcześniej otwarte dojście.  
@@ -666,7 +667,7 @@ ATL_DEPRECATED LONG QueryValue(
  Rozmiar danych ciągu. Jego wartość jest początkowo ustawiona rozmiar `szValue` buforu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się.. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się. H.  
   
 ### <a name="remarks"></a>Uwagi  
  Dwie wersje oryginalnego `QueryValue` nie są już obsługiwane i są oznaczone jako **ATL_DEPRECATED**. Kompilator będzie ostrzeżenie, jeśli formularze te są używane.  
@@ -688,7 +689,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
  Określa nazwę klucza do usunięcia. Ta nazwa musi być podklucz [m_hKey](#m_hkey).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się.. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się. H.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli klucz ma podklucze, należy wywołać tę metodę, aby usunąć klucz.  
@@ -780,7 +781,7 @@ LONG SetKeyValue(
  Określa pole wartość do ustawienia. Jeśli wartość pola o tej nazwie nie istnieje już w kluczu, jest dodawany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się.. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się. H.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej metody można utworzyć lub otworzyć `lpszKeyName` klucza i przechowywać `lpszValue` danych w `lpszValueName` wartość pola.  
@@ -940,7 +941,7 @@ ATL_DEPRECATED LONG SetValue(
  Jeśli `bMulti` ma wartość true, `nValueLen` długość *lpszValue* ciąg znaków. Jeśli `bMulti` ma wartość false, wartość -1 wskazuje, że metoda obliczania długości automatycznie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się.. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się. H.  
   
 ### <a name="remarks"></a>Uwagi  
  Dwie wersje oryginalnego `SetValue` są oznaczone jako **ATL_DEPRECATED** i nie powinna być używana. Kompilator będzie ostrzeżenie, jeśli formularze te są używane.  

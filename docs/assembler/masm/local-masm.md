@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 60dac02a5bf08f7ced2fbb8adb46cc558cbfe44b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45ee0a98d614ee10cb7393c0e616459526b37531
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
 W pierwszej dyrektywy wewnątrz makr **lokalnego** definiuje etykiety, które są unikatowe dla każdego wystąpienia makra.  
@@ -36,4 +37,4 @@ LOCAL label [[ [count ] ]] [[:type]] [[, label [[ [count] ]] [[type]]]]...
  W drugiej dyrektywy w ramach definicji procedury (**PROC**), **lokalnego** tworzy opartego na stosie zmienne, które istnieją w czasie trwania procedury. *Etykiety* może być prostej zmiennej lub tablica zawierająca *liczba* elementów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fecb7c614320c202a1159a527b34159c01099af6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c5e71f969f86aee419a0ff9d3701f4d43be5c32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwintraits-class"></a>Klasa CWinTraits
 Ta klasa udostępnia metodę standaryzacji style używane podczas tworzenia obiektu okna.  

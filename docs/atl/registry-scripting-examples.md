@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bcb1b2307ccb16e7b842e221c48c0f2a99b31db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-scripting-examples"></a>Przykłady skryptów rejestru
 Przykłady skryptów w tym temacie przedstawiają sposób Dodaj klucz do rejestru systemowego, Zarejestruj serwer COM rejestratora i określ wiele drzewa analizy.  

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1fc6893b02dccff6bb30d7a20d1a2c1dce9fbb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbf969f601bd90e84bf0ee15ae2ea3dcb392610
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invoking-scripts"></a>Skrypty wywołania
 [Przy użyciu parametry wymienne (Rejestrator preprocesora)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) omówiono mapy zastąpienia i uwagi metody rejestratora **AddReplacement**. Rejestrator ma osiem innych metod specyficzne dla skryptów, a wszystkie są opisane w poniższej tabeli.  

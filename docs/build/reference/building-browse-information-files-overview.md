@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 51a922e75d0cc7232a7e45472e505440b7b1631c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5b369d5a708e0ee56df635234c68ee88a31af48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-browse-information-files-overview"></a>Kompilowanie plików przeglądania informacji: Przegląd
 Aby utworzyć informacje o przeglądaniu do przeglądania symbolu, kompilator tworzy plik SBR dla każdego pliku źródłowego w projekcie, a następnie BSCMAKE. EXE łączy pliki SBR w jednym pliku .bsc.  
@@ -54,4 +55,4 @@ Aby utworzyć informacje o przeglądaniu do przeglądania symbolu, kompilator tw
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)   
- [Odwołanie BSCMAKE](../../build/reference/bscmake-reference.md)
+ [BSCMAKE — dokumentacja](../../build/reference/bscmake-reference.md)

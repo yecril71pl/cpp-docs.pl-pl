@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c610b5a65dfc676d12d414754248ba74ebc4b81c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a70a265318914b70928dce5fae2f486e63c16f0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-targets"></a>Wiele obiektów docelowych
 NMAKE oblicza wiele obiektów docelowych w jednej zależności tak, jakby każdego zostały określone w oddzielnych opis bloku.  
@@ -44,4 +45,4 @@ leap.exe : jump.obj
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obiekty docelowe](../build/targets.md)
+ [Docelowe elementy](../build/targets.md)

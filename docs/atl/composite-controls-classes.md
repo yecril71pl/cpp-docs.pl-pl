@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 848a2fbf6ef5a20f966093a73eeb22e619650f71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 847c447bf1b412961398acd8a08be27ce3df98b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="composite-controls-classes"></a>Formanty złożone klas
 Następujące klasy umożliwia tworzenie złożonych kontrolek  
@@ -34,5 +35,5 @@ Następujące klasy umożliwia tworzenie złożonych kontrolek
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd klas](../atl/atl-class-overview.md)   
  [Makra złożonych kontrolek](../atl/reference/composite-control-macros.md)   
- [Funkcje globalne złożonych kontrolek](../atl/reference/composite-control-global-functions.md)
+ [Funkcje globalne kontrolek złożonych](../atl/reference/composite-control-global-functions.md)
 

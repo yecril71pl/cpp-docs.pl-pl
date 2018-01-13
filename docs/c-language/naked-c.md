@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2aa9ba1d3e6397a35389c2ee46ab30f19c0e6227
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 474cb57ced17088c0ce9be8613a9373c702afe69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="naked-c"></a>Naked (C)
 **Dotyczące firmy Microsoft**  
@@ -34,4 +35,4 @@ ms.lasthandoff: 10/24/2017
  **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [C rozszerzone atrybuty klasy magazynu](../c-language/c-extended-storage-class-attributes.md)
+ [Rozszerzone atrybuty klasy magazynu języka C](../c-language/c-extended-storage-class-attributes.md)

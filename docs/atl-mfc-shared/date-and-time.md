@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd64280ffea287df4f865442e21d126b008c196b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed221cfe695ef04a7759fb0385153029ef9a892d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-and-time"></a>Data i godzina
 MFC obsługuje różne sposoby pracy z daty i godziny. Należą do nich następujące elementy:  
@@ -37,9 +38,9 @@ MFC obsługuje różne sposoby pracy z daty i godziny. Należą do nich następu
   
 -   [Data i godzina: klasy ogólnego przeznaczenia](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
--   [Data i godzina: Obsługa SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
+-   [Data i godzina: obsługa SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
--   [Data i godzina: Obsługa automatyzacji](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [Data i godzina: obsługa automatyzacji](../atl-mfc-shared/date-and-time-automation-support.md)  
   
 -   [Data i godzina: obsługa bazy danych](../atl-mfc-shared/date-and-time-database-support.md)  
   

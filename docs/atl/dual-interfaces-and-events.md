@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d18124646f4d4fcb02246234bf74b5870246e7e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87774f0237eb42c4bd2f97185230b3c869688ca8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dual-interfaces-and-events"></a>Podwójne interfejsy i zdarzenia
 Jest możliwe do projektowania interfejsu zdarzenia jako dwuportową, istnieje wiele powodów dobry projekt nie w tym celu. Podstawowe przyczyny jest źródło zdarzenia uruchomią tylko zdarzenia za pośrednictwem vtable lub za pośrednictwem `Invoke`, nie oba. Jeśli źródło zdarzenia generowane zdarzenie jako vtable bezpośrednie wywołania metody `IDispatch` nigdy nie będzie można używać metod i jest jasne, czy interfejs powinien być interfejsem czysty vtable. Jeśli źródło zdarzenia generowane zdarzenie jako wywołanie `Invoke`, nigdy nie będzie można używać metod vtable i jest jasne, czy interfejs powinien być dispinterface. W przypadku definiowania interfejsów zdarzeń jako duals, będzie można wymagających klientów do zaimplementowania część interfejs, który nigdy nie będą używane.  

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 90a58f53aa713bcb2499e3fe720e78fd2e7e6383
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebbc91b9144a7fe8025a34e9c1476ab23b604c46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-data-using-declspecdllimport"></a>Importowanie danych przy użyciu atrybutu __declspec(dllimport)
 W przypadku danych przy użyciu **__declspec(dllimport)** jest elementem wygody, która usuwa warstwa pośrednia. Podczas importowania danych z biblioteki DLL, musisz przejść przez tabelę adresów importu. Przed **__declspec(dllimport)**, oznacza to pamiętaj, aby wykonać dodatkowy poziom pośredni podczas uzyskiwania dostępu do danych eksportu z biblioteki DLL:  

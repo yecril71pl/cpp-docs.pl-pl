@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d79f2a7ae74b17c544e8da9ce2df0d34fe0e3874
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 838c3ffb92c77a624271b91adcfea89257ed7126
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fardata"></a>.FARDATA?
 W przypadku użycia z [. MODEL](../../assembler/masm/dot-model.md), uruchamia segmentu danych daleko niezainicjowanych danych (Nazwa segmentu FAR_BSS lub *nazwa*).  
@@ -32,4 +33,4 @@ W przypadku użycia z [. MODEL](../../assembler/masm/dot-model.md), uruchamia se
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

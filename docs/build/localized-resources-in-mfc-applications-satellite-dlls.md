@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8f601c32a1fe2accec2663246a56830fda5ed930
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ba1c8d52796ae9251a79df9600be80612db33e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Zasoby zlokalizowane w aplikacjach MFC: biblioteki DLL Satellite
 MFC w wersji 7.0 lub nowszym obsługuje satelitarne bibliotek DLL, funkcją, która pomaga w tworzeniu aplikacji zlokalizowane dla wielu języków. Biblioteka DLL jest Satelita [DLL tylko z zasobami](../build/creating-a-resource-only-dll.md) zawierający zasoby aplikacji są zlokalizowane dla określonego języka. Po rozpoczęciu wykonywania aplikacji MFC automatycznie ładuje zlokalizowany zasób najbardziej odpowiednie dla środowiska. Na przykład można mieć aplikację z języka angielskiego zasobów przy użyciu dwóch satelitarne bibliotek DLL, zawierający francuskim tłumaczenie zasobów, a drugi zawierający translację niemieckiego. Gdy aplikacja jest uruchamiana w systemie język angielski, używa zasobów angielskiej wersji językowej. Jeśli działa w systemie francuskim, używa zasobów francuskim; Jeśli działa w systemie niemieckim, używa zasobów niemieckim.  
@@ -62,4 +63,4 @@ MFC w wersji 7.0 lub nowszym obsługuje satelitarne bibliotek DLL, funkcją, kt�
   
 ## <a name="see-also"></a>Zobacz też  
  [Biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md)   
- [TN057: Lokalizacja składników MFC](../mfc/tn057-localization-of-mfc-components.md)
+ [TN057: lokalizacja składników MFC](../mfc/tn057-localization-of-mfc-components.md)

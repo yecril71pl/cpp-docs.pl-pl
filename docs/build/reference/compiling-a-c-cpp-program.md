@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 75a48da1f4b0bf2832b1c82978e739ab01b96ca2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79fe25913f5b86768f60a13d37d188ae8101bf14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiling-a-cc-program"></a>Kompilowanie programu C/C++
 
@@ -32,10 +33,10 @@ Aby uzyskać informacje na temat używania kompilatora zobacz następujące sekc
   
 -   [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)  
   
--   [Obsługa standardu Unicode w kompilatorze i Konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
+-   [Obsługa formatu Unicode w kompilatorze i konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
 
 Więcej informacji o wyborze Architektura źródłowa i docelowa kompilatora, zobacz [skonfigurować Visual C++ dla 64-bitowy, x64 cele](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
   
 ## <a name="see-also"></a>Zobacz też  
 
-[Odwołanie kompilacji C/C++](../../build/reference/c-cpp-building-reference.md)
+[Dokumentacja kompilacji w języku C/C++](../../build/reference/c-cpp-building-reference.md)

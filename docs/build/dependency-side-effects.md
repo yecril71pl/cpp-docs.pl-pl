@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9d19426a34620cfdd14b426b94757715ca2d1cbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f595099d2a71c948c769adf7f7eafcbc373f3146
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dependency-side-effects"></a>Skutki uboczne zależności
 Jeśli określono element docelowy z dwukropkiem (:) w dwóch wierszach zależności w różnych lokalizacjach, a polecenia są wyświetlane po tylko jednego z wierszy, NMAKE interpretuje zależności tak, jakby sąsiadujących lub połączone. Nie jest wywoływany reguła wnioskowania dla zależności, która ma żadnych poleceń, ale zamiast tego założono, że zależności należą do bloku jeden opis i wykonuje polecenia określony za pomocą innych zależności. Na przykład to zbiór reguł:  
@@ -59,4 +60,4 @@ bounce.exe : up.obj
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obiekty docelowe](../build/targets.md)
+ [Docelowe elementy](../build/targets.md)

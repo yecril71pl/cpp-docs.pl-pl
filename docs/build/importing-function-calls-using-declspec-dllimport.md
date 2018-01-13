@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d1501506d4575c5f7fe1ff1dc7823cbd1545b974
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5553bd5e9999a4737dc258358402eb71269b9c40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Importowanie wywołań funkcji przy użyciu atrybutu __declspec(dllimport)
 Poniższy przykładowy kod przedstawia sposób użycia **_declspec(dllimport)** do importowania wywołania funkcji z biblioteki DLL do aplikacji. Przyjęto założenie, że `func1` jest funkcją, która znajduje się w bibliotece DLL niezależnie od pliku .exe, który zawiera **głównego** funkcji.  

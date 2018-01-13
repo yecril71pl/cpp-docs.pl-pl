@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68556e771716b57c8a80a7fbfc06bd206693ab41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83de3c9fc55b9eafb3863b70dfb1cd6fa6c23de7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-and-time-database-support"></a>Data i godzina: obsługa bazy danych
 Począwszy od wersji 4.0, bazy danych MFC programowania zastosowań [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) i [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) klasy do reprezentowania danych daty i godziny. Klasy pochodne tych klas, również w automatyzacji, [COleVariant](../mfc/reference/colevariant-class.md). Dostarczają lepszą obsługę zarządzania danych daty i godziny niż [ctime —](../atl-mfc-shared/reference/ctime-class.md) i [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md).  

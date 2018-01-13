@@ -24,11 +24,12 @@ ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f79815d873a7c9f5f8c5f0397248f54776a7c20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c0b304b00b5cc5c613ff7e81818d1c637989e5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iregistrar-interface"></a>Interfejs IRegistrar
 Ten interfejs jest zdefiniowany w atliface.h i jest używana wewnętrznie przez funkcje Członkowskie CAtlModule takich jak [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
@@ -140,7 +141,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 ```  
  
 ## <a name="see-also"></a>Zobacz też  
- [Przy użyciu parametry wymienne (rejestratora preprocesora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
+ [Używanie wymiennych parametrów (preprocesor rejestratora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
  [Przegląd klas](../../atl/atl-class-overview.md)   
  [Klasy modułów](../../atl/atl-module-classes.md)   
  [Składnik rejestru (Rejestrator)](../../atl/atl-registry-component-registrar.md)  

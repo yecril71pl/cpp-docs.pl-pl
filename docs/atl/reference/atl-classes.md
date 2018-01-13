@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58b0a6c8baa52acf82bffaacb7dd309b4420f3f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab3e57cc5ccaedb5ad75ffa601f1d6c679c0ea6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-classes"></a>ATL — klasy
 Active Template Library (ATL) zawiera następujące klasy. Aby znaleźć określonej klasy według kategorii, zobacz [Przegląd klasy ATL](../../atl/atl-class-overview.md).  
@@ -104,7 +105,7 @@ Active Template Library (ATL) zawiera następujące klasy. Aby znaleźć określ
 |[CComPtr](../../atl/reference/ccomptr-class.md)|Klasa wskaźnika inteligentnego do wskaźników interfejsów COM. zarządzania.|atlcomcli.h|  
 |[CComPtrBase](../../atl/reference/ccomptrbase-class.md)|Ta klasa stanowi podstawę dla klas wskaźnika inteligentnego przy użyciu procedury oparte na modelu COM pamięci.|atlcomcli.h|  
 |[CComQIPtr](../../atl/reference/ccomqiptr-class.md)|Klasa wskaźnika inteligentnego do wskaźników interfejsów COM. zarządzania.|atlcomcli.h|  
-|[CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)|Ta klasa udostępnia metody statyczne funkcje i definicje typów przydatne podczas tworzenia kolekcji wskaźników interfejsów COM..|atlcoll.h|  
+|[CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)|Ta klasa udostępnia metody statyczne funkcje i definicje typów przydatne podczas tworzenia kolekcji wskaźników interfejsów COM.|atlcoll.h|  
 |[CComSafeArray](../../atl/reference/ccomsafearray-class.md)|Ta klasa jest otoki dla `SAFEARRAY Data Type` struktury.|atlsafe.h|  
 |[CComSafeArrayBound](../../atl/reference/ccomsafearraybound-class.md)|Ta klasa jest otoki dla `SAFEARRAYBOUND` struktury.|atlsafe.h|  
 |[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)|Ta klasa zarządza wyboru wątku dla klasy [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).|atlbase.h|  
@@ -133,8 +134,8 @@ Active Template Library (ATL) zawiera następujące klasy. Aby znaleźć określ
 |[Klasa CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)|Ta klasa udostępnia metody statyczne funkcje i definicje typów przydatne podczas tworzenia kolekcji wskaźniki stosu.|atlcoll.h|  
 |[CHeapPtrList](../../atl/reference/cheapptrlist-class.md)|Ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźniki stosu.|atlcoll.h|  
 |[CImage](../../atl-mfc-shared/reference/cimage-class.md)|Zapewnia obsługę rozszerzonych mapy bitowej, łącznie z możliwością przy ładowaniu i zapisywaniu obrazów w formacie JPEG, GIF, BMP i Portable Network Graphics (PNG).|atlimage.h|  
-|[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)|Ta klasa dostarcza metody przydatne podczas tworzenia tablicy wskaźników interfejsów COM..|atlcoll.h|  
-|[CInterfaceList](../../atl/reference/cinterfacelist-class.md)|Ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźników interfejsów COM..|atlcoll.h|  
+|[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)|Ta klasa dostarcza metody przydatne podczas tworzenia tablicy wskaźników interfejsów COM.|atlcoll.h|  
+|[CInterfaceList](../../atl/reference/cinterfacelist-class.md)|Ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźników interfejsów COM.|atlcoll.h|  
 |[CLocalHeap](../../atl/reference/clocalheap-class.md)|Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji lokalnego stosu Win32.|atlmem.h|  
 |[CMessageMap](../../atl/reference/cmessagemap-class.md)|Ta klasa umożliwia mapy wiadomości obiekt udostępniany przez inny obiekt.|atlwin.h|  
 |[Klasa CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Odbiera żądania z puli wątków i przekazuje je do obiektu procesu roboczego, który zostanie utworzona i zniszczona na każdym żądaniu.|atlutil.h|  
@@ -167,7 +168,7 @@ Active Template Library (ATL) zawiera następujące klasy. Aby znaleźć określ
 |[Klasa CThreadPool](../../atl/reference/cthreadpool-class.md)|Ta klasa udostępnia puli wątków roboczych, które przetwarzają kolejki elementów roboczych.|atlutil.h|  
 |[CTokenGroups](../../atl/reference/ctokengroups-class.md)|Ta klasa jest otoki dla **TOKEN_GROUPS** struktury.|atlsecurity.h|  
 |[CTokenPrivileges](../../atl/reference/ctokenprivileges-class.md)|Ta klasa jest otoki dla **TOKEN_PRIVILEGES** struktury.|atlsecurity.h|  
-|[Klasa cUrl](../../atl/reference/curl-class.md)|Ta klasa reprezentuje adres URL. Umożliwia manipulowania każdy element adresu URL, niezależnie od innych, czy podczas analizowania istniejący adres URL ciągu lub tworzenia ciągu od początku.|atlutil.h|  
+|[Klasa CUrl](../../atl/reference/curl-class.md)|Ta klasa reprezentuje adres URL. Umożliwia manipulowania każdy element adresu URL, niezależnie od innych, czy podczas analizowania istniejący adres URL ciągu lub tworzenia ciągu od początku.|atlutil.h|  
 |[CW2AEX](../../atl/reference/cw2aex-class.md)|Ta klasa jest używana przez makra konwersji ciągu `CT2AEX`, `CW2TEX`, `CW2CTEX`, i `CT2CAEX`i typedef **CW2A**.|atlconv.h|  
 |[CW2CWEX](../../atl/reference/cw2cwex-class.md)|Ta klasa jest używana przez makra konwersji ciągu `CW2CTEX` i `CT2CWEX`i typedef **CW2CW**.|atlconv.h|  
 |[CW2WEX](../../atl/reference/cw2wex-class.md)|Ta klasa jest używana przez makra konwersji ciągu `CW2TEX` i `CT2WEX`i typedef `CW2W`.|atlconv.h|  

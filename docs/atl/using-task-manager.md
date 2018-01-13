@@ -17,15 +17,16 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb099a534fba9c34d46d634bbca9648af1577a85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fffe15d74323b798fc6de1b318e55d47602774ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-task-manager"></a>Za pomocą Menedżera zadań
 Jednym z najprostszych sposobów debugowanie jest za pomocą Menedżera zadań systemu Windows NT 4.0 lub Windows 2000. Gdy usługa jest uruchomiona, uruchom Menedżera zadań i kliknij przycisk **procesów** kartę. Kliknij prawym przyciskiem myszy nazwę pliku EXE, a następnie kliknij przycisk **debugowania**. Spowoduje to uruchomienie programu Visual C++ dołączony do uruchomionego procesu. Teraz, kliknij przycisk **Podziel** na **debugowania** menu pozwala ustawić punkty przerwania w kodzie. Kliknij przycisk **Uruchom** do Twojej wybrane punkty przerwania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Debugowanie porady](../atl/debugging-tips.md)
+ [Wskazówki dotyczące debugowania](../atl/debugging-tips.md)
 

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18925307a685dc338912a80398154065edfa12dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4cce6fd98d4ea476900d8b248442fdddbe3c2d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-window-classes"></a>Klasy okien ALT
 ATL zawiera kilka klas, dzięki którym można użyć, wdrożyć system windows. Tych klas, podobnie jak inne klasy ATL zapewniać implementację wydajne, który nie nakłada obciążenie kodu.  
@@ -33,19 +34,19 @@ ATL zawiera kilka klas, dzięki którym można użyć, wdrożyć system windows.
  Ta sekcja zawiera opis klas okien ALT i wyjaśniono, jak ich używać.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wprowadzenie do klas okien ALT](../atl/introduction-to-atl-window-classes.md)  
+ [Wprowadzenie do klas okien ATL](../atl/introduction-to-atl-window-classes.md)  
  Zwięźle opisujący każdej klasy okna ATL i łącza do materiałów referencyjnych na nich.  
   
- [Przy użyciu okna](../atl/using-a-window.md)  
+ [Korzystanie z okna](../atl/using-a-window.md)  
  W tym artykule omówiono sposób użycia `CWindow` do manipulowania okna.  
   
  [Implementowanie okna](../atl/implementing-a-window.md)  
  W tym artykule omówiono programy obsługi wiadomości, mapy komunikatów i przy użyciu `CWindowImpl`. Zawiera szczegółowe informacje o tworzenie nadklas i podklasy.  
   
- [Implementowanie okno dialogowe](../atl/implementing-a-dialog-box.md)  
+ [Implementowanie okna dialogowego](../atl/implementing-a-dialog-box.md)  
  W tym artykule omówiono te dwie metody dodawania klasy okno dialogowe i zawiera przykładowy kod.  
   
- [Używanie okien zawartych w niej](../atl/using-contained-windows.md)  
+ [Używanie okien zawartych](../atl/using-contained-windows.md)  
  W tym artykule omówiono zawartych w niej systemu windows w ATL, które są systemu windows, który deleguje ich komunikatów do obiektu kontenera, zamiast ich obsługę w swojej klasy.  
   
  [Opis cech okna](../atl/understanding-window-traits.md)  
@@ -55,6 +56,6 @@ ATL zawiera kilka klas, dzięki którym można użyć, wdrożyć system windows.
  [ATL](../atl/active-template-library-atl-concepts.md)  
  Zawiera łącza do tematów koncepcyjne na temat programowania przy użyciu biblioteki Active Template Library.  
   
- [Klasy obsługi systemu Windows](../atl/windows-support-classes.md)  
+ [Klasy obsługi okien](../atl/windows-support-classes.md)  
  Zawiera listę dodatkowych ATL — klasy obsługujące systemu windows i mapy komunikatów w ATL.
 

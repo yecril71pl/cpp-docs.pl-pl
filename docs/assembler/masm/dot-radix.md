@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 89359ca5fef89e7790ab96621965e6c105dcfbb9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9cd0e1b1978a2b62bce99c9cc03c6b4771ce1a4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="radix"></a>.RADIX
 Ustawia podstawa domyślne w zakresie 2 do 16 wartość *wyrażenia*.  
@@ -32,4 +33,4 @@ Ustawia podstawa domyślne w zakresie 2 do 16 wartość *wyrażenia*.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

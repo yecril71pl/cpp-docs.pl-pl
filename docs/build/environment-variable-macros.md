@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b64e6c167df00d072b70a2f39e882a84357b4eab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69fae15b7a12d990d2fb2c8e457bfdc0407f7702
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="environment-variable-macros"></a>Makra zmiennych środowiskowych
 NMAKE dziedziczy definicji makra zmiennych środowiskowych, które istnieją przed rozpoczęciem sesji. Jeśli zmienna została ustawiona w środowisku systemu operacyjnego, jest dostępna jako makro NMAKE. Dziedziczony nazwy są konwertowane na wielkie litery. Dziedziczenie występuje przed przetwarzania wstępnego. Opcja /E spowodować makra odziedziczone zmiennych środowiskowych, aby zastąpić makr o takiej samej nazwie w pliku reguł programu make.  

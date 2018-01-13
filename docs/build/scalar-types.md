@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 279c4eefb072c6caab85a61bba3abc73be22d3a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15b0915637025e176ee98d01be3991b30b4e6544
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scalar-types"></a>Typy skalarne
 Mimo że dostępu do danych mogą wynikać z wyrównanie, zaleca się, że dane być dostosowane do jego granic fizycznych, aby uniknąć utraty wydajności (lub jej wielokrotność). Typy wyliczeniowe są stałe całkowite i są traktowane jako 32-bitowych liczb całkowitych. W poniższej tabeli opisano definicji typu i zalecane magazynu dla niego w odniesieniu do dostosowania przy użyciu następujących wartości wyrównania:  
@@ -37,17 +38,17 @@ Mimo że dostępu do danych mogą wynikać z wyrównanie, zaleca się, że dane 
 |Typ skalarne|C — typ danych|Rozmiar magazynu (w bajtach)|Zalecane wyrównania|  
 |**INT8**|`char`|1|Byte|  
 |**UINT8**|`unsigned char`|1|Byte|  
-|**INT16**|**krótki**|2|Word|  
+|**INT16**|**short**|2|Word|  
 |**UINT16**|**short bez znaku**|2|Word|  
 |**INT32**|**int, długi**|4|Bitowego|  
 |**UINT32**|**unsigned int, long bez znaku**|4|Bitowego|  
 |**INT64**|`__int64`|8|Quadword|  
 |**UINT64 —**|**__int64 bez znaku**|8|Quadword|  
 |**FP32 (pojedynczy dokładności)**|**float**|4|Bitowego|  
-|**FP64 (Podwójna precyzja)**|**podwójne**|8|Quadword|  
+|**FP64 (Podwójna precyzja)**|**double**|8|Quadword|  
 |**WSKAŹNIK**|**\***|8|Quadword|  
 |`__m64`|**__m64 — struktura**|8|Quadword|  
 |`__m128`|**__m128 — struktura**|16|Octaword|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Typy i Magazyn](../build/types-and-storage.md)
+ [Typy i magazyn](../build/types-and-storage.md)

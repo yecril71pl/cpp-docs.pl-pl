@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96ca4417cea6b4bdd1107d3f5d7b4ea9d85269e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 308f9deada47998c2f639d01ea5b9fdc9d04faa5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-support-classes"></a>Klasy obsługi systemu Windows
 Następujące klasy zapewniają obsługę dla systemu windows:  
@@ -55,7 +56,7 @@ Następujące klasy zapewniają obsługę dla systemu windows:
 -   [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) zawiera wartości domyślne style okna i rozszerzone style używane można utworzyć okna. Te wartości są dodawane przy użyciu operatora logicznego OR, wartości podane podczas tworzenia okna.  
   
 ## <a name="related-articles"></a>Powiązane artykuły  
- [Klasy okien ALT](../atl/atl-window-classes.md)  
+ [Klasy okien ATL](../atl/atl-window-classes.md)  
   
  [ALT — samouczek](../atl/active-template-library-atl-tutorial.md)  
   

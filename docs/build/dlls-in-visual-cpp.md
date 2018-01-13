@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: debf3f934f7b9ad5f4c8dd337b03234cb25f7f22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed3679d29b8d181e2cbd9896d0322fea634bfbf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dlls-in-visual-c"></a>Biblioteki DLL w programie Visual C++  
   
@@ -72,7 +73,7 @@ Konsolidacja dynamiczna ma następujące zalety:
   
 Poniższe tematy zawierają szczegółowe informacje o tym, jak do bibliotek DLL programu w języku Visual C++.  
   
- [Wskazówki: Tworzenie i używanie biblioteki dołączanej dynamicznie (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)  
+ [Przewodnik: tworzenie i używanie biblioteki dołączanej dynamicznie (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)  
  Zawiera opis sposobu tworzenia i używania biblioteki DLL przy użyciu Visual Studio.  
   
  [Rodzaje bibliotek DLL](../build/kinds-of-dlls.md)  
@@ -87,7 +88,7 @@ Poniższe tematy zawierają szczegółowe informacje o tym, jak do bibliotek DLL
  [Inicjowanie biblioteki DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
  W tym artykule omówiono kod inicjowania biblioteki DLL, który musi być wykonywany podczas ładowania biblioteki DLL.  
   
- [Biblioteki dll i zachowanie biblioteki wykonawczej programu Visual C++](../build/run-time-library-behavior.md)  
+ [Zachowanie biblioteki wykonawczej DLL i Visual C++](../build/run-time-library-behavior.md)  
  Opisuje, jak biblioteka uruchomieniowa wykonuje sekwencję uruchamiania biblioteki DLL.  
   
  [LoadLibrary i AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
@@ -102,13 +103,13 @@ Poniższe tematy zawierają szczegółowe informacje o tym, jak do bibliotek DLL
  [Ścieżka wyszukiwania używana przez system Windows do lokalizowania biblioteki DLL](../build/search-path-used-by-windows-to-locate-a-dll.md)  
  W tym artykule opisano ścieżki wyszukiwania, używaną do lokalizowania biblioteki DLL w systemie systemu operacyjnego Windows.  
   
- [Stany modułu zwykłej biblioteki MFC DLL połączone dynamicznie z MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)  
+ [Stany modułu zwykłej biblioteki MFC DLL łączonej dynamicznie z MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)  
  W tym artykule opisano Stany modułu regularne, które biblioteki MFC DLL połączone dynamicznie z MFC.  
   
  [Biblioteki DLL rozszerzeń MFC](../build/extension-dlls-overview.md)  
  Omawia biblioteki DLL, które zazwyczaj implementują klasy wielokrotnego użytku, pochodzące z istniejących klas biblioteki klas Microsoft Foundation.  
   
- [Tworzenie biblioteki DLL tylko z zasobami](../build/creating-a-resource-only-dll.md)  
+ [Tworzenie biblioteki DLL z samymi zasobami](../build/creating-a-resource-only-dll.md)  
  Omawia bibliotekę zasobów DLL, która zawierają tylko zasoby, takie jak ikony, mapy bitowe, ciągi i okna dialogowe.  
   
  [Zasoby zlokalizowane w aplikacjach MFC: biblioteki DLL Satellite](../build/localized-resources-in-mfc-applications-satellite-dlls.md)  
@@ -117,13 +118,13 @@ Poniższe tematy zawierają szczegółowe informacje o tym, jak do bibliotek DLL
  [Importowanie i eksportowanie](../build/importing-and-exporting.md)  
  Zawiera opis importowania symboli publicznych do aplikacji lub eksportowania funkcji z biblioteki DLL  
   
- [Technologia Active i biblioteki dll](../build/active-technology-and-dlls.md)  
+ [Technologia Active i biblioteki DLL](../build/active-technology-and-dlls.md)  
  Umożliwia serwerom obiektu do zaimplementowania wewnątrz biblioteki DLL.  
   
  [Automatyzacja w bibliotece DLL](../build/automation-in-a-dll.md)  
  Zawiera opis opcji automatyzacji w Kreatorze MFC DLL.  
   
- [Konwencje nazewnictwa bibliotek MFC dll](../build/naming-conventions-for-mfc-dlls.md)  
+ [Konwencje nazewnictwa bibliotek MFC DLL](../build/naming-conventions-for-mfc-dlls.md)  
  Omawia ustrukturyzowaną konwencję nazewnictwa bibliotek DLL i bibliotek zawartych w MFC.  
   
  [Wywoływanie funkcji DLL z aplikacji języka Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)  

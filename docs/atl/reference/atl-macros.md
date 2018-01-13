@@ -16,46 +16,47 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 926340e6f221a561a74dce95ad0bff6de2abcb9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b78ca454112d05f75def6969c25669e52a8b3dee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-macros"></a>Makra ATL
 Aby znaleźć makro ATL według kategorii, zobacz następujące tematy.  
   
- [Agregacja i makra fabryki klas](../../atl/reference/aggregation-and-class-factory-macros.md)  
+ [Makra agregacji i fabryki klas](../../atl/reference/aggregation-and-class-factory-macros.md)  
  Umożliwiają kontrolowanie agregacji i deklarowanie fabryki klas.  
   
  [Makra kategorii](../../atl/reference/category-macros.md)  
  Definiowanie kategorii mapy.  
   
- [Makra mapy COM](../../atl/reference/com-map-macros.md)  
+ [Makra mapy modelu COM](../../atl/reference/com-map-macros.md)  
  Zdefiniuj mapy interfejsu COM.  
   
  [Makra opcji kompilatora](../../atl/reference/compiler-options-macros.md)  
  Formant kompilatora określonych funkcji.  
   
- [Makra złożonych kontrolek](../../atl/reference/composite-control-macros.md)  
+ [Makra kontrolek złożonych](../../atl/reference/composite-control-macros.md)  
  Zdefiniuj mapy wychwytywania zdarzeń i zapisów.  
   
- [Makra punktu połączenia](../../atl/reference/connection-point-macros.md)  
+ [Makra punktów połączenia](../../atl/reference/connection-point-macros.md)  
  Zdefiniuj mapy punktu połączenia i zapisów.  
   
- [Makra debugowania i raportowanie błędów](../../atl/reference/debugging-and-error-reporting-macros.md)  
+ [Makra debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-macros.md)  
  Udostępniać przydatne narzędzia debugowania i śledzenia.  
   
- [Makra Obsługa wyjątków](../../atl/reference/exception-handling-macros.md)  
+ [Makra obsługi wyjątków](../../atl/reference/exception-handling-macros.md)  
  Zapewnia obsługę wyjątków.  
   
  [Makra mapy wiadomości](../../atl/reference/message-map-macros-atl.md)  
  Zdefiniuj mapy komunikatów i zapisów.  
   
- [Makra mapy obiektu](../../atl/reference/object-map-macros.md)  
+ [Makra mapy obiektów](../../atl/reference/object-map-macros.md)  
  Zdefiniuj map obiekt i zapisów.  
   
- [Obiekt stanu makra](../../atl/reference/object-status-macros.md)  
+ [Makra stanu obiektów](../../atl/reference/object-status-macros.md)  
  Ustawia flagi należących do formantu ActiveX.  
   
  [Makra mapy właściwości](../../atl/reference/property-map-macros.md)  
@@ -70,10 +71,10 @@ Aby znaleźć makro ATL według kategorii, zobacz następujące tematy.
  [Makra mapy usługi](../../atl/reference/service-map-macros.md)  
  Zdefiniuj map usług i zapisów.  
   
- [Przystawka obiekt makra](../../atl/reference/snap-in-object-macros.md)  
+ [Makra obiektu przystawki](../../atl/reference/snap-in-object-macros.md)  
  Zapewnia obsługę rozszerzeń przystawek.  
   
- [Makra konwersji ciągu](string-conversion-macros.md)  
+ [Makra konwersji ciągów](string-conversion-macros.md)  
  Podaj ciąg funkcji konwersji.  
   
  [Makra klasy okna](../../atl/reference/window-class-macros.md)  

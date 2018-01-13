@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 39e515cadf2930cdbe5ef600bcba4c86cb79a191
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cd6351623b230e3be1e432bd6ee0fb760da5abd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exp-files-as-linker-input"></a>Pliki .Exp — Wejście konsolidatora
 Pliki eksportu (.exp) zawierają informacje o wyeksportowanej funkcji i danych elementów. Gdy LIB tworzy bibliotekę importowaną, również tworzy plik EXP. Plik EXP można użyć podczas połączyć program, który eksportuje do, a także importuje z innego programu, bezpośrednio lub pośrednio. Jeśli łączysz się przy użyciu pliku .exp łącze nie tworzy biblioteki importowanej, ponieważ przyjęto założenie, że biblioteka już utworzone. Aby uzyskać więcej informacji o .exp — pliki i biblioteki importu, zobacz [Praca z bibliotekami importowania i eksportowania plików](../../build/reference/working-with-import-libraries-and-export-files.md).  

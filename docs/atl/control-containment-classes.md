@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f7dad827ce51510dfb572a27a3d8aec97ae39cf7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ee9d94bd13c41b269a897d4e752ee674e3fdc1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="control-containment-classes"></a>Klasy zawierania formantów
 Następujące klasy zapewniają obsługę zawierania dla kontrolki hostingu:  
@@ -33,7 +34,7 @@ Następujące klasy zapewniają obsługę zawierania dla kontrolki hostingu:
 -   [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) wywoływać metody tego interfejsu do utworzenia i/lub dołączyć formantu do obiektu hosta lub można pobrać interfejsu z obsługiwanego formantu.  
   
 ## <a name="related-articles"></a>Powiązane artykuły  
- [Zawieranie kontrolek ALT — często zadawane pytania](../atl/atl-control-containment-faq.md)  
+ [Zawieranie kontrolek ATL — często zadawane pytania](../atl/atl-control-containment-faq.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd klas](../atl/atl-class-overview.md)

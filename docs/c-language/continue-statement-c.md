@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d0fc645bdeec7ea9ec6df124279140fcd63f77d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cdf4d877ef1b88826d66e36a7ce24fdcff2cb348
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="continue-statement-c"></a>continue — instrukcja (C)
 `continue` Instrukcja przekazuje formantu do następnej iteracji najbliższej otaczającej `do`, `for`, lub `while` instrukcji, w którym zostanie wyświetlona, pomijanie wszelkie pozostałe instrukcje w `do`, `for`, lub `while` treść instrukcji.  
@@ -51,4 +52,4 @@ while ( i-- > 0 )
  W tym przykładzie jest wykonywane w treści instrukcji podczas `i` jest większa niż 0. Pierwszy `f(i)` jest przypisany do `x`; następnie, jeśli `x` jest równa 1, `continue` instrukcja jest wykonywana. Pozostałe instrukcje w treści są ignorowane, a wykonanie wznawia w górnej części pętli z oceną testu pętli.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Continue — instrukcja](../cpp/continue-statement-cpp.md)
+ [continue, instrukcja](../cpp/continue-statement-cpp.md)

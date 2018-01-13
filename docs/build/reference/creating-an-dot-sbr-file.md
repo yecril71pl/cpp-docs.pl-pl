@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fb3638f70d19d88228b8ff65eb78c479868f1b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d87b71daaf5d7b37e67c2c0e56e844bd5251a490
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-sbr-file"></a>Tworzenie pliku .Sbr
 Pliki wejściowe dla BSCMAKE są pliki .sbr. Kompilator tworzy plik SBR dla każdego pliku obiektu (.obj) skompilowany. Podczas tworzenia lub zaktualizuj plik informacji o przeglądaniu wszystkich plików SBR dla projektu musi być dostępny na dysku.  
@@ -38,4 +39,4 @@ Pliki wejściowe dla BSCMAKE są pliki .sbr. Kompilator tworzy plik SBR dla każ
  Proces kompilacji może być bardziej wydajne, jeśli pliki SBR najpierw są pakować usunąć nieużywane definicje. Kompilator automatycznie pakietów pliki .sbr.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie. Pliku BSC](../../build/reference/building-a-dot-bsc-file.md)
+ [Kompilowanie pliku .Bsc](../../build/reference/building-a-dot-bsc-file.md)

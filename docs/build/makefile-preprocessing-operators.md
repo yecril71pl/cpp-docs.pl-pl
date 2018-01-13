@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d2d8aa3d428b45da81b2f9256988e089f121dd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59007bdabc81b5fe49aa4b5265dc0fc73ef4f0b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makefile-preprocessing-operators"></a>Operatory przetwarzania wstępnego pliku reguł programu Make
 Pliku reguł programu make przetwarzania wstępnego wyrażenia można używać operatorów, które działają na stałych kody wyjścia z poleceń, ciągi makra i ścieżki systemu plików. Można oszacować wyrażenia, preprocesora najpierw rozszerza makra, a następnie wykonuje polecenia, a następnie wykonuje operacje. Operacje są oceniane według grupowanie jawne w nawiasy, a następnie według kolejność wykonywania działań. Wynik jest wartością stałą.  
@@ -78,4 +79,4 @@ Pliku reguł programu make przetwarzania wstępnego wyrażenia można używać o
 >  Bitowy operator XOR (`^`) jest taka sama jak znak ucieczki i należy zastosować ucieczkę (jako `^^`) gdy jest używana w wyrażeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wyrażenia w przetwarzaniu wstępnym pliku reguł programu make](../build/expressions-in-makefile-preprocessing.md)
+ [Wyrażenia w przetwarzaniu wstępnym pliku reguł programu Make](../build/expressions-in-makefile-preprocessing.md)

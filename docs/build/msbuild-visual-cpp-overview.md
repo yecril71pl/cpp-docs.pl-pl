@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c238aabdfee5de1896e24934edee1ebec135be4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msbuild-visual-c-overview"></a>Informacje o MSBuild (Visual C++)  
   
@@ -31,13 +32,13 @@ Przeczytaj następujące dokumenty dotyczące programu MSBuild.
 - [MSBuild](/visualstudio/msbuild/msbuild)  
  Omówienie pojęć MSBuild.  
   
-- [Odwołanie do MSBuild](/visualstudio/msbuild/msbuild-reference)  
+- [Odwołanie do narzędzia MSBuild](/visualstudio/msbuild/msbuild-reference)  
  Informacje o systemie MSBuild.  
   
 - [Odwołanie do schematu pliku projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference)  
  Wyświetla listę elementów schematu XML programu MSBuild, wraz z ich atrybuty i elementy nadrzędne i podrzędne. Należy zwrócić uwagę szczególnie [ItemGroup](/visualstudio/msbuild/itemgroup-element-msbuild), [PropertyGroup](/visualstudio/msbuild/propertygroup-element-msbuild), [docelowej](/visualstudio/msbuild/target-element-msbuild), i [zadań](/visualstudio/msbuild/task-element-msbuild) elementów.  
   
-- [Informacje dotyczące wiersza polecenia](/visualstudio/msbuild/msbuild-command-line-reference)  
+- [Dokumentacja wiersza polecenia](/visualstudio/msbuild/msbuild-command-line-reference)  
  Opisano opcje używane z msbuild.exe i argumenty wiersza polecenia.  
   
 - [Odwołanie do zadania](/visualstudio/msbuild/msbuild-task-reference)  

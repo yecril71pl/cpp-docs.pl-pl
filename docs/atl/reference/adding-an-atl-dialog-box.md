@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74eb8615a3dcda140713c9ecab8ab9a3400bf0bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d8c9969f4747c6c3fa2a39b7b0452f6ac54c9d58
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-dialog-box"></a>Dodawanie ATL — okno dialogowe
 Aby dodać okna dialogowego ATL do projektu, projekt musi być Projekt ATL i MFC projekt, który obsługuje ATL. Można użyć [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md) Aby utworzyć aplikację ATL lub [Dodaj obiekt ATL do aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL Obsługa aplikacji MFC.  

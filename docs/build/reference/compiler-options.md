@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 490814f85199450d4261bf4071184b75b5ea10c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c433abea04ff81c69fe1b73569ea7e043e6e81ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options"></a>Opcje kompilatora
 Cl.exe to narzędzie, które kontroluje Kompilatory języka Microsoft C i C++ i konsolidatora. Cl.exe można uruchomić tylko w systemach operacyjnych, które obsługuje program Microsoft Visual Studio.  
@@ -51,7 +52,7 @@ Cl.exe to narzędzie, które kontroluje Kompilatory języka Microsoft C i C++ i 
   
 -   [Pliki poleceń CL](../../build/reference/cl-command-files.md)  
   
--   [Zmienne środowiskowe](../../build/reference/cl-environment-variables.md)  
+-   [Zmienne środowiskowe CL](../../build/reference/cl-environment-variables.md)  
   
 ## <a name="related-build-tools"></a>Narzędzia kompilacji pokrewne  
  Użyj [NMAKE](../../build/nmake-reference.md) do tworzenia pliku wyjściowego.  

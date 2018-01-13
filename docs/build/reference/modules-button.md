@@ -14,14 +14,15 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c88f22506a2f65c3385cc7d0851954f1115fb2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fd8c95775eb8db2256d35715cc117a9bb0fab22e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modules-button"></a>Przycisk modułów
 Kliknij przycisk **modułów** przycisk, aby wyświetlić **dodatkowych modułów do wyszukiwania błąd** okna dialogowego. Wprowadź nazwę żądany plik EXE lub DLL w polu edycji, a następnie kliknij przycisk **Dodaj** do dołączenia modułów błąd wyszukiwania wiadomości. Usuń moduł z listy wyróżnianie ją i klikając przycisk **Usuń** przycisku.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kontrola nad edytowaniem wartości](../../build/reference/value-edit-control.md)
+ [Kontrolka edycji wartości](../../build/reference/value-edit-control.md)

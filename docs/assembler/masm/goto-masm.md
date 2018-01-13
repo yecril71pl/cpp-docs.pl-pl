@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 896d99b2ed4abe2080e646b6a541eb1e489d2b75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed7e20bb7f81b74a2f670e604e958ca02f132531
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
 Przenosi zestaw zaznaczony wiersz **:***macrolabel*.  
@@ -37,4 +38,4 @@ macrolabel
  **Przejdź do** jest dozwolona tylko wewnątrz [makro](../../assembler/masm/macro.md), [dla](../../assembler/masm/for-masm.md), [forc —](../../assembler/masm/forc.md), [Powtórz](../../assembler/masm/repeat.md), i **podczas**bloków. Etykieta musi być tylko dyrektywy w wierszu i musi być poprzedzony znakiem dwukropka wiodące.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)
+ [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

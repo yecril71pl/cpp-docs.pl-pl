@@ -17,20 +17,21 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7fc4859d9008135cf1e8ff39b0f00f1a86d35088
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7fdb5ba2c9c2be7693f5c447528f846127cc3ba1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dual-interfaces-and-atl"></a>Podwójne interfejsy i ATL
 Podwójna interfejs umożliwiający jego metody można uzyskać dostępu do metody dispinterface lub metody vtable. W tej sekcji opisano niektóre funkcje podwójne interfejsy z perspektywy ATL.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Implementacja interfejsu podwójne](../atl/implementing-a-dual-interface.md)  
+ [Implementacja podwójnego interfejsu](../atl/implementing-a-dual-interface.md)  
  W tym artykule omówiono klas i kreatorów objętego implementującej interfejs podwójny.  
   
- [Wiele podwójne interfejsy](../atl/multiple-dual-interfaces.md)  
+ [Wiele podwójnych interfejsów](../atl/multiple-dual-interfaces.md)  
  Omówiono sposób ujawniać wiele interfejsów dwa na jeden obiekt.  
   
  [Nonextensible — atrybut](../atl/nonextensible-attribute.md)  

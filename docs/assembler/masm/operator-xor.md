@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f544ca53cc12e4f24a1a93ec43aa20e874ae92dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d173efd898d37649dad675a4adfabfcc37371075
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-xor"></a>operator XOR
 Zwraca wynik bitowej **XOR** operacji *wyrażenie1* i *wyrażenie2*.  
@@ -36,4 +37,4 @@ expression1 XOR expression2
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do operatorów](../../assembler/masm/operators-reference.md)
+ [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)

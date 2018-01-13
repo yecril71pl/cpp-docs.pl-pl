@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b86ec1bf3c47de45eaf9120d8e8f68ac9377db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 419d97357fd3424d5de980f76c6758eaa47f3c7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Umieść informacje o debugowaniu w pliku obiektu)
 Pełne informacje we wszystkich plikach obiektu debugowania nadać tempo utworzone na podstawie pliku prekompilowanego nagłówka (.pch), gdy jest używany z [/Yc](../../build/reference/yc-create-precompiled-header-file.md) i [/z7](../../build/reference/z7-zi-zi-debug-information-format.md) opcje. Przestarzałe.  
@@ -45,7 +46,7 @@ Pełne informacje we wszystkich plikach obiektu debugowania nadać tempo utworzo
   
  Aby uzyskać więcej informacji o prekompilowanych nagłówków zobacz:  
   
--   [/Y (prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)  
   
 -   [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)  
   

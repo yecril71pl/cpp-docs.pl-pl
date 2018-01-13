@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb525964025ce3ffce497087ec42b72aff0a4b9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e2269be27dd039357c11d38a2be83b5fc9d6504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-building-reference"></a>Odwołanie kompilacji C/C++
 Visual C++ udostępnia dwa sposoby tworzenia programu C/C++. Sposób najprostszym (i najbardziej typowych) polega na [kompilacji w środowisku programowania Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). Innym sposobem jest [kompilacji z wiersza polecenia przy użyciu narzędzia wiersza polecenia](../../build/building-on-the-command-line.md). W obu przypadkach można utworzyć plików źródłowych, za pomocą edytora źródła Visual C++ lub dowolnego edytora innych firm.  
@@ -33,7 +34,7 @@ Visual C++ udostępnia dwa sposoby tworzenia programu C/C++. Sposób najprostszy
  [Kompilowanie programu C/C++](../../build/reference/compiling-a-c-cpp-program.md)  
  W tym artykule opisano kompilatora, która tworzy plik obiektu zawierającego kod maszynowy, dyrektywy konsolidatora, sekcje, odwołań zewnętrznych i nazwy funkcji i danych.  
   
- [Łączenie](../../build/reference/linking.md)  
+ [Konsolidacja](../../build/reference/linking.md)  
  Opisuje konsolidator, która łączy kodu z plików obiekt utworzony przez kompilator i biblioteki statycznie połączonej, usuwa odwołania do nazwy i tworzy plik wykonywalny.  
   
  [Kompilacje wydania](../../build/reference/release-builds.md)  
@@ -49,10 +50,10 @@ Visual C++ udostępnia dwa sposoby tworzenia programu C/C++. Sposób najprostszy
  Wprowadza sekcji błędy kompilacji w tabeli treści.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Odwołania preprocesora C/C++](../../preprocessor/c-cpp-preprocessor-reference.md)  
+ [Dokumentacja preprocesora języka C/C++](../../preprocessor/c-cpp-preprocessor-reference.md)  
  W tym artykule omówiono preprocesora, który przygotowuje pliki źródłowe dla kompilatora przez tłumaczenie makra, Operatorzy i dyrektywy.  
   
- [Opis niestandardowe kroki procesu kompilacji lub zdarzeniach kompilacji](../../ide/understanding-custom-build-steps-and-build-events.md)  
+ [Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](../../ide/understanding-custom-build-steps-and-build-events.md)  
  W tym artykule omówiono Dostosowywanie procesu kompilacji.  
   
  [Kompilowanie programu C/C++](../../build/building-c-cpp-programs.md)  
@@ -70,17 +71,17 @@ Visual C++ udostępnia dwa sposoby tworzenia programu C/C++. Sposób najprostszy
  [Opcje konsolidatora](../../build/reference/linker-options.md)  
  Zawiera łącza do tematów dyskutować przy użyciu opcji konsolidatora.  
   
- [Odwołanie BSCMAKE](../../build/reference/bscmake-reference.md)  
+ [BSCMAKE — dokumentacja](../../build/reference/bscmake-reference.md)  
  W tym artykule opisano narzędzie konserwacji przeglądarki Microsoft informacji (BSCMAKE. (EXE), które kompilacje pliku informacyjnego przeglądarki (.bsc) z .sbr plików utworzonych podczas kompilacji.  
   
- [Odwołanie do biblioteki LIB](../../build/reference/lib-reference.md)  
+ [LIB — dokumentacja](../../build/reference/lib-reference.md)  
  W tym artykule opisano menedżera biblioteki Microsoft (LIB.exe), który tworzy i którymi zarządza biblioteki plików obiektów wspólnej obiektu pliku formatu (COFF).  
   
- [Odwołanie EDITBIN](../../build/reference/editbin-reference.md)  
+ [EDITBIN — dokumentacja](../../build/reference/editbin-reference.md)  
  W tym artykule opisano edytora pliku binarnego Microsoft COFF (polecenia EDITBIN. (EXE), który modyfikuje pliki binarne wspólnej obiektu pliku formatu (COFF).  
   
- [Odwołanie DUMPBIN](../../build/reference/dumpbin-reference.md)  
+ [DUMPBIN — dokumentacja](../../build/reference/dumpbin-reference.md)  
  W tym artykule opisano Microsoft COFF plik binarny zrzutu (DUMPBIN. (EXE), który wyświetla informacje o pliki binarne wspólnej obiektu pliku formatu (COFF).  
   
- [Odwołanie NMAKE](../../build/nmake-reference.md)  
+ [NMAKE — dokumentacja](../../build/nmake-reference.md)  
  W tym artykule opisano narzędzie do konserwacji programów firmy Microsoft (NMAKE. EXE), który jest narzędziem do kompilacji projekty oparte na polecenia zawarte w pliku opisu.

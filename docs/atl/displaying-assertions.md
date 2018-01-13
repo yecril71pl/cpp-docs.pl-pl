@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebfa692f422283e69395639295b3bf2ace1741ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bff1ab29841ff2dd9973d538bb763d1fc1126a8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="displaying-assertions"></a>Wyświetlanie potwierdzeń
 Jeżeli klient połączony z usługą przestaje odpowiadać, usługa zostały potwierdzone i wyświetlane okno komunikatu, które nie są widoczne. Można to potwierdzić, za pomocą programu Visual C++ — debuger do debugowania kodu (zobacz [za pomocą Menedżera zadań](../atl/using-task-manager.md) wcześniej w tej sekcji).  
@@ -30,5 +31,5 @@ Jeżeli klient połączony z usługą przestaje odpowiadać, usługa zostały po
  Jeśli okaże się, że usługi są wyświetlane okno komunikatu, który nie jest widoczne, możesz ustawić **umożliwiają usługi do interakcja z pulpitem** opcji przed ponownie przy użyciu usługi. Ta opcja jest parametru uruchamiania umożliwiającą okien komunikatów wyświetlanych przez usługę, aby można było wyświetlane na pulpicie. Tę opcję, Otwórz aplikację usługi w Panelu sterowania, wybierz usługę, kliknij przycisk **uruchamiania**, a następnie wybierz **umożliwiają usługi do interakcja z pulpitem** opcji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Debugowanie porady](../atl/debugging-tips.md)
+ [Wskazówki dotyczące debugowania](../atl/debugging-tips.md)
 

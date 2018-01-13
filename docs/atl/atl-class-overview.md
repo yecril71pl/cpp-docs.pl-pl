@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab4ee45f254a1b0149f05c2b8ba63f95c98fcf66
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fef95bb108f6d38f6196b324360b60635b1a9b64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-class-overview"></a>Przegląd klasy ATL
 Klasy w Active Template Library (ATL) mogą zostać podzielone w następujący sposób:  
@@ -35,12 +36,12 @@ Klasy w Active Template Library (ATL) mogą zostać podzielone w następujący s
 |[Formanty złożone](../atl/composite-controls-classes.md)|[Właściwości i strony właściwości](../atl/properties-and-property-pages-classes.md)|  
 |[Punkty połączenia](../atl/connection-points-classes.md)|[Obsługa rejestru](../atl/registry-support-classes.md)|  
 |[Zawierania formantów](../atl/control-containment-classes.md)|[Uruchomiona obiektów](../atl/running-objects-classes.md)|  
-|[Kontrolki: Obsługa ogólne](../atl/controls-general-support-classes.md)|[Zabezpieczeń](../atl/security-classes.md)|  
+|[Kontrolki: Obsługa ogólne](../atl/controls-general-support-classes.md)|[Zabezpieczenia](../atl/security-classes.md)|  
 |[Transfer danych](../atl/data-transfer-classes.md)|[Obsługa dostawcy usługi](../atl/service-provider-support-classes.md)|  
 |[Typy danych](../atl/data-types-classes.md)|[Informacje o lokacji](../atl/site-information-classes.md)|  
 |[Debugowania i wyjątków](../atl/debugging-and-exceptions-classes.md)|[Ciąg i tekst](../atl/string-and-text-classes.md)|  
 |[Podwójne interfejsy](../atl/dual-interfaces-classes.md)|[Oderwania interfejsów](../atl/tear-off-interfaces-classes.md)|  
-|[Moduły wyliczające i kolekcji](../atl/enumerators-and-collections-classes.md)|[Pula wątków](../atl/thread-pooling-classes.md)|  
+|[Moduły wyliczające i kolekcji](../atl/enumerators-and-collections-classes.md)|[Korzystanie z puli wątków](../atl/thread-pooling-classes.md)|  
 |[Informacje o błędzie](../atl/error-information-classes.md)|[Wątkowość modeli i sekcje krytyczne](../atl/threading-models-and-critical-sections-classes.md)|  
 |[Obsługa plików](../atl/file-handling-classes.md)|[Obsługa interfejsu użytkownika](../atl/ui-support-classes.md)|  
 |[Wskaźniki interfejsu](../atl/interface-pointers-classes.md)|[Obsługa systemu Windows](../atl/windows-support-classes.md)|  

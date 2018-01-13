@@ -41,11 +41,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d510973a7b7c12185f5cde32a49af3537a436c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c839538b94ff8f80eabed98dbaf16e4009d3e500
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-assignment-operators"></a>Operatory przypisania w języku C
 Operacja przypisania przypisuje wartość prawostronny operand do lokalizacji magazynu o nazwie przez argument po lewej stronie. W związku z tym lewostronny operand operatora przypisania musi być modyfikowalną l wartość. Po przypisania wyrażenie przypisania ma wartość lewy operand, ale nie jest wartością l-value.  

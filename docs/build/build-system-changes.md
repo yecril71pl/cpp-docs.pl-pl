@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 90266f54dd6972e68abe770bad4ee323eebf46b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-system-changes"></a>Zmiany systemu kompilacji
 MSBuild system jest używany do tworzenia projektów Visual C++. Jednak w programie Visual Studio 2008 i wcześniejszych wersjach systemu program VCBuild została użyta. Niektóre typy plików i założenia, że program VCBuild nie istnieją lub są reprezentowane inaczej w bieżącym systemie. W tym dokumencie omówiono różnice w systemie kompilacji.  
