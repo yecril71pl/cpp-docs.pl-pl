@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ffe0e2d8f4c26274a71082bec2cecaf19acb1af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: caf2cc77cd31df611f71d07c5a0a49f600767f81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource — Struktura
 Interfejs do zasobu wykonywania zdefiniowanej przez Menedżera zasobów.  
@@ -75,4 +76,4 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
  Interfejs do następnego zasobu wykonywania w kolejności wyliczenia. Jeśli nie ma żadnych więcej węzłów w kolejności wyliczenia węzła, do której należy dany zasób wykonywania, ta metoda zwróci wartość `NULL`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)
+ [Przestrzeń nazw współbieżności](concurrency-namespace.md)

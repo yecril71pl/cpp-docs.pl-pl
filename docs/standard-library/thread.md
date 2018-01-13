@@ -14,13 +14,14 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7685bd1c112651b07540fefd2a28be91c9671706
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0847d92d890026ce6cfb963b022a3859370877fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ltthreadgt"></a>&lt;Wątek&gt;
+# <a name="ltthreadgt"></a>&lt;wątek&gt;
 Dołącz nagłówek standardowy \<wątku > w celu zdefiniowania klasy `thread` i różne funkcje pomocnicze.  
   
 ## <a name="syntax"></a>Składnia  
@@ -42,13 +43,13 @@ Dołącz nagłówek standardowy \<wątku > w celu zdefiniowania klasy `thread` i
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Thread — klasa](../standard-library/thread-class.md)|Definiuje obiekt, który służy do obserwować i zarządzanie nimi wątku do wykonania w aplikacji.|  
+|[thread, klasa](../standard-library/thread-class.md)|Definiuje obiekt, który służy do obserwować i zarządzanie nimi wątku do wykonania w aplikacji.|  
   
 ### <a name="public-structures"></a>Publiczny struktury  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[hash — Struktura (standardowa biblioteka C++)](../standard-library/hash-structure-stl.md)|Definiuje funkcję elementu członkowskiego, która zwraca wartość, która unikatowo jest określany przez `thread::id`. Definiuje funkcję elementu członkowskiego [skrótu](../standard-library/hash-class.md) funkcji, które jest odpowiednie dla wartości mapowanie typu `thread::id` dystrybucji wartości indeksu.|  
+|[hash, struktura (Standardowa biblioteka C++)](../standard-library/hash-structure-stl.md)|Definiuje funkcję elementu członkowskiego, która zwraca wartość, która unikatowo jest określany przez `thread::id`. Definiuje funkcję elementu członkowskiego [skrótu](../standard-library/hash-class.md) funkcji, które jest odpowiednie dla wartości mapowanie typu `thread::id` dystrybucji wartości indeksu.|  
   
 ### <a name="public-functions"></a>Funkcje publiczne  
   
@@ -58,7 +59,7 @@ Dołącz nagłówek standardowy \<wątku > w celu zdefiniowania klasy `thread` i
 |[sleep_for —](../standard-library/thread-functions.md#sleep_for)|Blokuje wątek wywołujący.|  
 |[sleep_until —](../standard-library/thread-functions.md#sleep_until)|Blokuje wątek wywołujący co najmniej do określonego czasu.|  
 |[swap](../standard-library/thread-functions.md#swap)|Zamienia stanów dwóch `thread` obiektów.|  
-|[YIELD](../standard-library/thread-functions.md#yield)|Sygnały do innych wątków systemu operacyjnego, nawet wtedy, gdy bieżący wątek zazwyczaj będzie nadal działał.|  
+|[yield](../standard-library/thread-functions.md#yield)|Sygnały do innych wątków systemu operacyjnego, nawet wtedy, gdy bieżący wątek zazwyczaj będzie nadal działał.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   

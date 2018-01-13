@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a123d5585447d71076dbe96bd58dfb87a68df147
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ed04d3258ad5f4d5ed68a32b32923432577453ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicparameteraccessorgetparamstring"></a>CDynamicParameterAccessor::GetParamString
 Pobiera dane ciągu określonego parametru przechowywane w buforze.  
@@ -81,4 +84,4 @@ bool GetParamString(
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Cdynamicparameteraccessor — klasa](../../data/oledb/cdynamicparameteraccessor-class.md)
+ [CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)

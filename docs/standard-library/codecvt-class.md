@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 290b48c5417aa5511b34f2e4ec2e0d4b7358b026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36631c1a23c90b875d2a2fba8a1cec23b97c2400
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codecvt-class"></a>codecvt — Klasa
 Klasa szablonu opisująca obiekt, który może służyć jako zestaw reguł ustawień regionalnych. Jest w stanie kontrolować konwersje między sekwencją wartości używaną do kodowania znaków w ramach programu i sekwencją wartości używanych do kodowania znaków poza programem.  
@@ -133,10 +134,10 @@ class codecvt : public locale::facet, codecvt_base;
 |[do_out](#do_out)|Funkcję wirtualną o nazwie przekonwertować sekwencji wewnętrznej `CharType`s do sekwencji bajtów zewnętrznych.|  
 |[do_unshift](#do_unshift)|Wywołuje funkcję wirtualną zapewnienie `Byte`s wymagane podczas konwersji zależny od stanu do ukończenia ostatni znak w sekwencji `Byte`s.|  
 |[kodowanie](#encoding)|Sprawdza, czy kodowanie `Byte` strumień jest stan zależnych, czy stosunek `Byte`s używane i `CharType`s tworzone jest stałe i, jeśli tak, określa wartość tego stosunku.|  
-|[w](#in)|Konwertuje zewnętrznej reprezentacja sekwencji `Byte`s do reprezentacji wewnętrznej sekwencji `CharType`s.|  
+|[in](#in)|Konwertuje zewnętrznej reprezentacja sekwencji `Byte`s do reprezentacji wewnętrznej sekwencji `CharType`s.|  
 |[długość](#length)|Określa, ile `Byte`s z danej sekwencji zewnętrzne `Byte`produktu s nie więcej niż podany numer wewnętrzny `CharType`s i zwraca ten numer `Byte`s.|  
 |[MAX_LENGTH](#max_length)|Zwraca maksymalną liczbę zewnętrzne `Byte`s należy utworzyć jeden wewnętrzny `CharType`.|  
-|[limit](#out)|Konwertuje sekwencji wewnętrznej `CharType`s z zewnętrznego sekwencji `Byte`s.|  
+|[out](#out)|Konwertuje sekwencji wewnętrznej `CharType`s z zewnętrznego sekwencji `Byte`s.|  
 |[unshift](#unshift)|Udostępnia zewnętrznej `Byte`s wymagane podczas konwersji zależny od stanu do ukończenia ostatni znak w sekwencji `Byte`s.|  
   
 ## <a name="requirements"></a>Wymagania  

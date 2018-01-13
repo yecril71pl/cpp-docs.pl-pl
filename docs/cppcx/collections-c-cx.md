@@ -12,11 +12,12 @@ caps.latest.revision: "35"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c8496e0128d3ebd88c5a3a2fafad593c135f6fbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c97a264488e8b382091b24cdef8faae4c7bbfc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collections-ccx"></a>Kolekcje (C + +/ CX)
 W języku C + +/ CX programu, możesz wprowadzić wolnego korzystanie z kontenerów standardowa biblioteka szablonów (STL) lub dowolnego typu kolekcja zdefiniowanych przez użytkownika. Jednak gdy przekazujesz kolekcji i z powrotem przez interfejs binarne (ABI) środowiska wykonawczego systemu Windows — na przykład do formantu XAML lub klientowi JavaScript — należy użyć typów kolekcji środowiska wykonawczego systemu Windows.  
@@ -104,27 +105,27 @@ void FindButton(UIElementCollection^ col)
   
  Elementy można modyfikować kolekcji można zmienić, ale elementów kolekcji tylko do odczytu, znany jako *widoku*, mogą być odczytywane tylko. Elementy [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) lub[Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md) kolekcji jest możliwy za pomocą iteratora lub kolekcji [Vector::GetAt](../cppcx/platform-collections-vector-class.md#getat) i indeksu. Elementy kolekcji asocjacyjnej jest możliwy za pomocą kolekcji [Map::Lookup](../cppcx/platform-collections-map-class.md#lookup) i klucza.  
   
- [Klasa platform::Collections::map](../cppcx/platform-collections-map-class.md)  
+ [Platform::Collections::Map, klasa](../cppcx/platform-collections-map-class.md)  
  Można modyfikować asocjacyjnej kolekcji. Pary klucz wartość są elementy mapy. Wyszukiwanie klucza można pobrać jej wartość skojarzoną i przechodzenie przez wszystkie pary klucz wartość, są obsługiwane.  
   
  `Map`i `MapView` są opartą na `<K, V, C = std::less<K>>`; w związku z tym komparatora można dostosować.  Ponadto `Vector` i `VectorView` są opartą na `<T, E = std::equal_to<T>>` tak, aby dostosować zachowanie `IndexOf()`. Jest to ważne głównie dla `Vector` i `VectorView` struktur wartość. Na przykład, aby utworzyć\<Windows::Foundation::DateTime >, należy podać niestandardowy komparatora ponieważ daty i godziny nie przeciążać == — operator.  
   
- [Klasa platform::Collections::MapView](../cppcx/platform-collections-mapview-class.md)  
+ [Platform::Collections::MapView, klasa](../cppcx/platform-collections-mapview-class.md)  
  Wersja tylko do odczytu do `Map`.  
   
- [Klasa platform::Collections::Vector](../cppcx/platform-collections-vector-class.md)  
+ [Platform::Collections::Vector, klasa](../cppcx/platform-collections-vector-class.md)  
  Kolekcja sekwencji można modyfikować. `Vector<T>`obsługuje dostęp losowy czas stała i amortyzowanego stała time [Append](../cppcx/platform-collections-vector-class.md#append) operacji...  
   
- [Klasa platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)  
+ [Platform::Collections::VectorView, klasa](../cppcx/platform-collections-vectorview-class.md)  
  Wersja tylko do odczytu do `Vector`.  
   
- [Klasa platform::Collections::InputIterator](../cppcx/platform-collections-inputiterator-class.md)  
+ [Platform::Collections::InputIterator, klasa](../cppcx/platform-collections-inputiterator-class.md)  
  Iterator STL spełniająca wymagania STL iteratora wejściowego.  
   
- [Klasa platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)  
+ [Platform::Collections::VectorIterator, klasa](../cppcx/platform-collections-vectoriterator-class.md)  
  Iterator STL spełniająca wymagania STL modyfikowalną dostępie swobodnym iteratora.  
   
- [Klasa platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)  
+ [Platform::Collections::VectorViewIterator, klasa](../cppcx/platform-collections-vectorviewiterator-class.md)  
  Iterator STL, który spełnia wymagania STL `const` dostępie swobodnym iteratora.  
   
 ### <a name="begin-and-end-functions"></a>Funkcje BEGIN() i end()  

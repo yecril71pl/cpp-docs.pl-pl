@@ -25,17 +25,17 @@ helpviewer_keywords:
 - std::error_code::clear
 - std::error_code::default_error_condition
 - std::error_code::message
-- 
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
 caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7674aeb2a2a1e15ceb38af662f51964884b81ada
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2d451de1cacbb9654d7aafeb59cb1c23006dce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcode-class"></a>error_code — Klasa
 Reprezentuje błędy systemu niskiego poziomu, które są specyficzne dla wdrożenia.  
@@ -69,14 +69,14 @@ class error_code;
 |[Kategoria](#category)|Zwraca błąd kategorii.|  
 |[Wyczyść](#clear)|Czyści wartość kodu błędu i kategorii.|  
 |[default_error_condition —](#default_error_condition)|Zwraca domyślny warunek błędu.|  
-|[Komunikat](#message)|Zwraca nazwę kod błędu.|  
+|[komunikat](#message)|Zwraca nazwę kod błędu.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
 |[operator ==](#op_eq_eq)|Testy równości między `error_code` obiektów.|  
-|[operator! =](#op_neq)|Testy pod kątem nierówności między `error_code` obiektów.|  
+|[operator!=](#op_neq)|Testy pod kątem nierówności między `error_code` obiektów.|  
 |[Operator <](#op_lt)|Sprawdza, czy `error_code` obiekt jest mniejsza niż `error_code` przekazano obiekt do porównania.|  
 |[operator =](#op_eq)|Przypisuje nową wartość wyliczenia do `error_code` obiektu.|  
 |[bool — operator](#op_bool)|Rzutuje zmiennej typu `error_code`.|  
@@ -293,7 +293,7 @@ typedef int value_type;
   
 ## <a name="see-also"></a>Zobacz też  
  [error_category — klasa](../standard-library/error-category-class.md)   
- [< system_error — >](../standard-library/system-error.md)
+ [<system_error>](../standard-library/system-error.md)
 
 
 

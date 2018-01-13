@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8d89c1b353237aa84a852337b272f95a7b6d0df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 600a4fcf49328c4cfd2bd31e8c36b02cacd9609c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Rozmieszczenie formantów w oknach dialogowych
 Edytor okien dialogowych udostępnia narzędzia układu, które wyrównywanie i rozmiaru formantów automatycznie. W przypadku większości zadań można użyć [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Wszystkie polecenia paska narzędzi edytora okien dialogowych są również dostępne w Format menu, a większość [klawiszy skrótów](../windows/accelerator-keys-for-the-dialog-editor.md).  
@@ -30,26 +33,26 @@ Edytor okien dialogowych udostępnia narzędzia układu, które wyrównywanie i 
   
  Lokalizacja, wysokość i szerokość bieżącego formantu są wyświetlane w prawym dolnym rogu paska stanu. Po wybraniu całe okno dialogowe pasek stanu wyświetla położenie okna dialogowego jako całości, a jej wysokości i szerokości.  
   
--   [Stany Edytor okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)  
+-   [Stany dla Edytora okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)  
   
 -   [Grupowanie przycisków radiowych w oknie dialogowym](../windows/grouping-radio-buttons-on-a-dialog-box.md)  
   
--   [Dopasowanie grup formantów](../windows/aligning-groups-of-controls.md)  
+-   [Dopasowanie grup kontrolek](../windows/aligning-groups-of-controls.md)  
   
--   [Wprowadzanie odstępów między formantami](../windows/evening-the-spacing-between-controls.md)  
+-   [Wprowadzanie odstępów między kontrolkami](../windows/evening-the-spacing-between-controls.md)  
   
--   [Centrowanie formantów w oknie dialogowym](../windows/centering-controls-in-a-dialog-box.md)  
+-   [Centrowanie kontrolek w oknie dialogowym](../windows/centering-controls-in-a-dialog-box.md)  
   
--   [Rozmieszczanie przycisków poleceń po prawej lub dolnej części okna dialogowego](../windows/arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box.md)  
+-   [Rozmieszczanie przycisków poleceń po prawej stronie lub u dołu okna dialogowego](../windows/arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box.md)  
   
--   [Zmiana kolejności kart formantów](../windows/changing-the-tab-order-of-controls.md)  
+-   [Zmiana kolejności kart kontrolek](../windows/changing-the-tab-order-of-controls.md)  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](https://msdn.microsoft.com/library/f45fce5x.aspx) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](https://msdn.microsoft.com/library/xbx3z216.aspx). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

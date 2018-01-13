@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d5fdb93880ec29343d38acba7d7d42caf155214
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8ecdc146610fe20dcc007d6b1223d7108e1ee595
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Zestaw rekordów: deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -163,4 +166,4 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
  [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)   
  [Zestaw rekordów: Ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)   
  [Zestaw rekordów: Deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [Zestaw rekordów: Wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+ [Zestaw rekordów: wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

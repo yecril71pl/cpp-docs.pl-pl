@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63143532c5f5ad770c6234a24fbedf1b478ba143
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 Kreator utworzy klasę, aby zawierać jeden wiersz danych. w tym przypadku jest to `CMyProviderWindowsFile`. Poniższy kod dla `CMyProviderWindowsFile` jest generowany kreatora i listę wszystkich plików w katalogu za pomocą **WIN32_FIND_DATA** struktury. `CMyProviderWindowsFile`dziedziczy **WIN32_FIND_DATA** struktury:  

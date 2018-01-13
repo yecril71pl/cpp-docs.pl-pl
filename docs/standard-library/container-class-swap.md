@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 13d083c596dcbaa275ed8d0f05ded2c5cb5547eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 09229429c64e895a722d52d203f0259cf69e6d24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="container-classswap"></a>Kontener Class::swap
 > [!NOTE]
@@ -36,4 +37,4 @@ void swap(Container& right);
 Jeśli  **\*this.get\_alokatora ==** _prawo_**.get_allocator**, robi zamiana w czasie stałej. W przeciwnym razie wykonuje szereg element zadania i wywołania konstruktora proporcjonalny do liczby elementów w dwóch kontrolowanej sekwencji.  
   
 ## <a name="see-also"></a>Zobacz też  
-[Sample Container — klasa](../standard-library/sample-container-class.md)
+[Sample Container, klasa](../standard-library/sample-container-class.md)

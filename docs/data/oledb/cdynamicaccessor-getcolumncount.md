@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 19a105bae181f4186d6873f67b8cc4cb494f71b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e245454484330c786f0e23ffd184e45f48fc094e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicaccessorgetcolumncount"></a>CDynamicAccessor::GetColumnCount
 Pobiera liczbę kolumn.  
@@ -44,4 +47,4 @@ DBORDINAL GetColumnCount( ) const throw( );
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Cdynamicaccessor — klasa](../../data/oledb/cdynamicaccessor-class.md)
+ [CDynamicAccessor, klasa](../../data/oledb/cdynamicaccessor-class.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9429a54a21d58be7f2dd1667478ae653da5a8c35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ad36a68078856706a4d1d994e72fd001c36dbaf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lastprivate"></a>lastprivate
 Określa, że wersja otaczającym kontekście zmiennej jest taki sam, niezależnie od wątku wykonuje końcowego iteracji (konstrukcji pętli for) lub ostatniej sekcji (#pragma sekcje) wersji prywatnej.  
@@ -39,7 +40,7 @@ lastprivate(var)
 ## <a name="remarks"></a>Uwagi  
  `lastprivate`ma zastosowanie do następujących dyrektyw:  
   
--   [dla](../../../parallel/openmp/reference/for-openmp.md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [sekcje](../../../parallel/openmp/reference/sections-openmp.md)  
   

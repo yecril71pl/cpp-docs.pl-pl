@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e741324e6871846aba8912d53ca9aad5ce1cb739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7894e47b14dffc1685fbce8194f0fc45ed6b5d1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfuturegt"></a>&lt;przyszłe&gt;
 Dołącz nagłówek standardowy \<przyszłych > do definiowania klas szablonów i obsługi szablonów, które upraszczają uruchomiona funkcja — prawdopodobnie w oddzielnym wątku — i pobierania jej wynik. Wynik jest wartością zwróconą przez funkcję lub wyjątek, który jest emitowany przez funkcję, ale nie zawiera funkcji.  
@@ -56,24 +57,24 @@ Dołącz nagłówek standardowy \<przyszłych > do definiowania klas szablonów 
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Future — klasa](../standard-library/future-class.md)|W tym artykule opisano zwracanego obiektu asynchronicznego.|  
-|[future_error — klasa](../standard-library/future-error-class.md)|Opisuje obiekt wyjątku, który może zostać wygenerowany przez metody typów, które zarządzają `future` obiektów.|  
-|[packaged_task — klasa](../standard-library/packaged-task-class.md)|Opisuje dostawcę asynchroniczne wywołanie otoką i których sygnatury wywołania `Ty(ArgTypes...)`. Jego skojarzony stan asynchronicznego przechowuje kopię jego można wywołać obiektu oprócz potencjalnych wyników.|  
-|[Promise — klasa](../standard-library/promise-class.md)|Opisuje dostawcę asynchronicznego.|  
-|[shared_future — klasa](../standard-library/shared-future-class.md)|W tym artykule opisano zwracanego obiektu asynchronicznego. Contrast z `future` obiekt asynchroniczny dostawcy można skojarzyć z dowolną liczbę `shared_future` obiektów.|  
+|[future, klasa](../standard-library/future-class.md)|W tym artykule opisano zwracanego obiektu asynchronicznego.|  
+|[future_error, klasa](../standard-library/future-error-class.md)|Opisuje obiekt wyjątku, który może zostać wygenerowany przez metody typów, które zarządzają `future` obiektów.|  
+|[packaged_task, klasa](../standard-library/packaged-task-class.md)|Opisuje dostawcę asynchroniczne wywołanie otoką i których sygnatury wywołania `Ty(ArgTypes...)`. Jego skojarzony stan asynchronicznego przechowuje kopię jego można wywołać obiektu oprócz potencjalnych wyników.|  
+|[promise, klasa](../standard-library/promise-class.md)|Opisuje dostawcę asynchronicznego.|  
+|[shared_future, klasa](../standard-library/shared-future-class.md)|W tym artykule opisano zwracanego obiektu asynchronicznego. Contrast z `future` obiekt asynchroniczny dostawcy można skojarzyć z dowolną liczbę `shared_future` obiektów.|  
   
 ### <a name="structures"></a>Struktury  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[is_error_code_enum — struktura](../standard-library/is-error-code-enum-structure.md)|Specjalizacja, która wskazuje, że `future_errc` nadaje się do przechowywania `error_code`.|  
-|[uses_allocator — struktura](../standard-library/uses-allocator-structure.md)|Specjalizacja, który zawsze jest spełniony.|  
+|[is_error_code_enum, struktura](../standard-library/is-error-code-enum-structure.md)|Specjalizacja, która wskazuje, że `future_errc` nadaje się do przechowywania `error_code`.|  
+|[uses_allocator, struktura](../standard-library/uses-allocator-structure.md)|Specjalizacja, który zawsze jest spełniony.|  
   
 ### <a name="functions"></a>Funkcje  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[asynchroniczne](../standard-library/future-functions.md#async)|Reprezentuje dostawcę asynchronicznego.|  
+|[async](../standard-library/future-functions.md#async)|Reprezentuje dostawcę asynchronicznego.|  
 |[future_category —](../standard-library/future-functions.md#future_category)|Zwraca odwołanie do `error_category` obiektu, która charakteryzuje się błędy, które są skojarzone z `future` obiektów.|  
 |[make_error_code —](../standard-library/future-functions.md#make_error_code)|Tworzy `error_code` mający `error_category` obiekt, który charakteryzuje `future` błędy.|  
 |[make_error_condition —](../standard-library/future-functions.md#make_error_condition)|Tworzy `error_condition` mający `error_category` obiekt, który charakteryzuje `future` błędy.|  

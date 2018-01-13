@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13471dae28bec066ebe8aeec785a1a060c7f975f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57b1de8fbbdb3d969dca8e84e57e18b81749d944
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="additional-startup-considerations"></a>Dodatkowe zagadnienia dotyczące uruchamiania
 W języku C++ konstrukcji obiektów i likwidacja może obejmować wykonywanie kodu użytkownika. W związku z tym należy zrozumieć, których inicjowanie stanie przed wejściem do **głównego** i destruktory, które są wywoływane po wyjściu z **głównego**. (Aby uzyskać szczegółowe informacje dotyczące konstruowania i niszczenie obiektów, zobacz [konstruktorów](../cpp/constructors-cpp.md) i [destruktory](../cpp/destructors-cpp.md).)  

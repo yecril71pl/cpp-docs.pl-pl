@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60f2b216252b4accd47172d8088e9029e5d402df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1c9bcddcff84e23400d610b23b97d0fde82cea22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caccessorrowsetfreerecordmemory"></a>CAccessorRowset::FreeRecordMemory
 Zwalnia wszystkie kolumny w bieżącego rekordu, który musi zostać zwolniony.  
@@ -41,4 +44,4 @@ void FreeRecordMemory( );
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Caccessorrowset — klasa](../../data/oledb/caccessorrowset-class.md)
+ [CAccessorRowset, klasa](../../data/oledb/caccessorrowset-class.md)

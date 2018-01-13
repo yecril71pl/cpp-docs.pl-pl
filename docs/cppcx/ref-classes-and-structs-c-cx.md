@@ -12,11 +12,12 @@ caps.latest.revision: "42"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f02bbb91563233e4e49537dd8f7a5290aad64b6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 405f1890dc99e5a20102b7602ac83534cb5ded8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ref-classes-and-structs-ccx"></a>REF klas i struktur (C + +/ CX)
 C + +/ CX obsługuje użytkownika *klasy ref* i *struktury ref*i zdefiniowanych przez użytkownika *wartość klasy* i *wartość struktury*. Te struktury danych są głównej kontenerów, przez które C + +/ CX obsługuje system typów środowiska wykonawczego systemu Windows. Ich zawartość są emitowane metadanych zgodnie z niektórych określone zasady, a dzięki temu przekazywane między składników środowiska wykonawczego systemu Windows i aplikacji platformy uniwersalnej systemu Windows, które są napisane w języku C++ lub innych języków.  

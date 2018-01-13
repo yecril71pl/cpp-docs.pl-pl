@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df3bb5be4f2032353dd08e551591a03cdc2f4b17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50fd2381174e947e243ad6aa40516be5fd728902
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList — Struktura
 Reprezentuje listę uzupełniania UMS. Podczas planowania wyznaczony harmonogramu UMS wątku bloków, aby podjąć decyzję dotyczącą tego, jaki można zaplanować na komputerze podstawowym głównego procesora wirtualnego podczas oryginalnego wątek jest zablokowany wywoływane jest kontekstu. Gdy odblokowuje oryginalnego wątku, system operacyjny kolejek do listy zakończenia, która jest dostępna za pośrednictwem tego interfejsu. Harmonogram można badać listy uzupełniania na wyznaczonych kontekstu planowania lub w innym miejscu przeszukiwanych do pracy.  
@@ -68,4 +69,4 @@ virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
  [Struktura IUMSScheduler](iumsscheduler-structure.md)   
- [Iumsunblocknotification — struktura](iumsunblocknotification-structure.md)
+ [IUMSUnblockNotification, struktura](iumsunblocknotification-structure.md)

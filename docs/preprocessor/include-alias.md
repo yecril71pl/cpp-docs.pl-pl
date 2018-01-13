@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b03ec43ff213e330c88886fb485c0e18700c8a86
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: a45dce64ce0dfb2f5112b22c7577c7174effc12b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="includealias"></a>include_alias
 
@@ -36,7 +37,7 @@ Określa, że *short_filename* ma być używany jako alias *long_filename*.
 
 ## <a name="remarks"></a>Uwagi
 
-Niektóre systemy plików umożliwiają dłuższe nazwy plików nagłówków niż limit 8.3 systemu plików FAT. Kompilator nie może po prostu obciąć dłuższej nazwy do 8.3, ponieważ pierwsze osiem znaków dłuższej nazwy plików nagłówka nie musi być unikatowe. Zawsze, gdy wystąpi kompilator *long_filename* ciągu zastępuje *short_filename*oraz szuka pliku nagłówka *short_filename* zamiast tego. Ta pragma musi pojawić się przed odpowiednimi dyrektywami `#include`. Na przykład:
+Niektóre systemy plików umożliwiają dłuższe nazwy plików nagłówkowych niż limit 8.3 systemu plików FAT. Kompilator nie może po prostu obciąć dłuższej nazwy do 8.3, ponieważ pierwsze osiem znaków dłuższej nazwy plików nagłówkowych nie musi być unikatowe. Zawsze, gdy wystąpi kompilator *long_filename* ciągu zastępuje *short_filename*oraz szuka pliku nagłówka *short_filename* zamiast tego. Ta pragma musi pojawić się przed odpowiednimi dyrektywami `#include`. Na przykład:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -58,7 +59,7 @@ Poszukiwany alias musi odpowiadać specyfikacji, zarówno w wielkości liter jak
 #include "sys/mymath.h"
 ```
 
-aliasing (podstawienie) nie jest wykonywany, ponieważ ciągi pliku nagłówka nie są dokładnie zgodne. Ponadto nagłówka nazw plików używane jako argumenty opcji kompilatora /Yu i /Yc lub **hdrstop** pragma, nie są zastępowane. Na przykład, jeśli plik z kodem źródłowym zawiera następujące dyrektywy,
+aliasing (podstawienie) nie jest wykonywany, ponieważ ciągi pliku nagłówkowego nie są dokładnie zgodne. Ponadto nagłówka nazw plików używane jako argumenty opcji kompilatora /Yu i /Yc lub **hdrstop** pragma, nie są zastępowane. Na przykład, jeśli plik z kodem źródłowym zawiera następujące dyrektywy,
   
 ```cpp
 #include <AppleSystemHeaderStop.h>

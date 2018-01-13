@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1671a0b03b3dbc637d83fd1e0f5125bc4abb1f1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 883bea68992d646fd7ee82257f794394a1d2ffc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbulkrowsetmovetobookmark"></a>CBulkRowset::MoveToBookmark
 Pobiera oznaczony przez zakładki lub wiersza od określonego przesunięcia wiersza (`lSkip`) z tej zakładki.  
@@ -55,4 +58,4 @@ Pobiera oznaczony przez zakładki lub wiersza od określonego przesunięcia wier
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Cbulkrowset — klasa](../../data/oledb/cbulkrowset-class.md)
+ [CBulkRowset, klasa](../../data/oledb/cbulkrowset-class.md)

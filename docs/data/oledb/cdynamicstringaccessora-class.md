@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9e7e2119bf25fda107ff529781efa5c517b01fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 25d53a92f24fa485e080f02c6c889263b3abe18f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA — Klasa
 Umożliwia dostęp do źródła danych, gdy użytkownik nie korzystają z nie schematu bazy danych (struktury).  
@@ -45,4 +48,4 @@ typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
  [Cdynamicparameteraccessor — klasa](../../data/oledb/cdynamicparameteraccessor-class.md)   
  [Cmanualaccessor — klasa](../../data/oledb/cmanualaccessor-class.md)   
  [Cdynamicaccessor — klasa](../../data/oledb/cdynamicaccessor-class.md)   
- [Cdynamicstringaccessor — klasa](../../data/oledb/cdynamicstringaccessor-class.md)
+ [CDynamicStringAccessor, klasa](../../data/oledb/cdynamicstringaccessor-class.md)

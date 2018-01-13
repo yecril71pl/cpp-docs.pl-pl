@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5da5c7522ab83800a0190b0a80f95f10b511f078
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc87ba00f28b63fb204358649e8bb791bfb1a4ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lttypeinfogt"></a>&lt;element TypeInfo&gt;
 Dołącz nagłówek standardowy `<typeinfo>` do definiowania kilka typów skojarzone z operatorem identyfikację typu [typeid — Operator](../cpp/typeid-operator.md), która daje informacji na temat typów statycznych i dynamicznych.  
@@ -34,8 +35,8 @@ Dołącz nagłówek standardowy `<typeinfo>` do definiowania kilka typów skojar
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać informacje dotyczące klas zdefiniowanych w \<typeinfo >, zobacz następujące tematy:  
   
-- [bad_cast — wyjątek](../cpp/bad-cast-exception.md)  
+- [bad_cast, wyjątek](../cpp/bad-cast-exception.md)  
   
-- [bad_typeid — wyjątek](../cpp/bad-typeid-exception.md)  
+- [bad_typeid, wyjątek](../cpp/bad-typeid-exception.md)  
   
-- [type_info — klasa](../cpp/type-info-class.md)
+- [type_info, klasa](../cpp/type-info-class.md)

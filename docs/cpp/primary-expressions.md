@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 980be1e393fab633f3417dcc250c1820def3ff90
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a6e811e1fe074ce488b09fca29926989bc7f355
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="primary-expressions"></a>Wyrażenia podstawowe
 Wyrażenia podstawowe są blokami konstrukcyjnymi bardziej złożonych wyrażeń. Są one literały, nazwy i nazwy kwalifikowanej przez operatora rozpoznawanie zakresów (`::`).  Wyrażenie podstawowe może mieć jedną z następujących form:  
@@ -37,7 +38,7 @@ Wyrażenia podstawowe są blokami konstrukcyjnymi bardziej złożonych wyrażeń
   
  A *literału* jest podstawowym wyrażeniem stałym. Jego typ zależy od postaci jego specyfikacji. Zobacz [literały](../cpp/numeric-boolean-and-pointer-literals-cpp.md) pełne informacje dotyczące określania literały.  
   
- **To** — słowo kluczowe jest wskaźnik do obiektu klasy. Jest on dostępny w ramach funkcji niestatycznego elementu członkowskiego i wskazuje na wystąpienie klasy, dla której wywołano funkcję. **To** poza ciałem funkcji członkowskiej klasy nie można użyć słowa kluczowego.  
+ **To** — słowo kluczowe jest wskaźnik do obiektu klasy. Jest on dostępny w ramach niestatycznych funkcji składowych i wskazuje na wystąpienie klasy, dla której wywołano funkcję. **To** poza ciałem funkcji członkowskiej klasy nie można użyć słowa kluczowego.  
   
  Typ **to** wskaźnika jest `type`  **\*const** (gdzie `type` jest nazwą klasy) w funkcjach, które nie zostały modyfikowanie **tego** wskaźnika. W poniższym przykładzie pokazano element członkowski deklaracje funkcji i typów **to**:  
   

@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48ef4f4646aedf648e3bb9efb572c203d7047378
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8178ca25aaf1abe9047317673a9f47354112407
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context — Klasa
 `task_continuation_context` Klasa służy do określenia, gdzie chcesz kontynuacji do wykonania. Jest tylko warto użyć tej klasy z aplikacji ze Sklepu Windows. Dla aplikacji ze Sklepu Windows kontekstu wykonywania kontynuacji zadań jest określone przez środowisko uruchomieniowe i nie można skonfigurować.  
@@ -152,4 +153,4 @@ static task_continuation_context use_synchronous_execution();
   
  
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)
+ [Przestrzeń nazw współbieżności](concurrency-namespace.md)

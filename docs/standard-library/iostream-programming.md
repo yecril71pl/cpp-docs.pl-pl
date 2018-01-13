@@ -28,11 +28,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c817ab67fecb1479971d729977ad55d6b3e506fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4492f590c1be5604fcd630c41cdf79ce21e8b76f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iostream-programming"></a>iostream Programming
 Ta sekcja zawiera [ogólny opis](../standard-library/what-a-stream-is.md) z iostream klasy, a następnie opis [strumieni wyjściowych](../standard-library/output-streams.md), [strumienie](../standard-library/input-streams.md), i [wejścia/wyjścia strumienie](../standard-library/input-output-streams.md). Koniec sekcji zawiera informacje o zaawansowanych iostream — programowanie.  
@@ -40,7 +41,7 @@ Ta sekcja zawiera [ogólny opis](../standard-library/what-a-stream-is.md) z iost
  Istnieje również omówione w [bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md) i [stdext — przestrzeń nazw](../standard-library/stdext-namespace.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Co to jest strumienia](../standard-library/what-a-stream-is.md)  
+ [Czym jest strumień?](../standard-library/what-a-stream-is.md)  
   
  [Strumienie wyjściowe](../standard-library/output-streams.md)  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 384184fd8932c134ebb4554fab2d6e2af736a5d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55e44e447ee8ad2e449c46acb5535a41346fd19f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator — klasa
 w tym artykule opisano wejściowych iteratora który sekwencji za pomocą nazwy plików w katalogu, prawdopodobnie malejącej do podkatalogów rekursywnie. Dla iteratora X, wyrażenie * X ocenia się do obiektu directory_entry — klasa, która opakowuje nazwę pliku i wszystkie znane o jej stanie.  

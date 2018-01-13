@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c32cc76c27b89bd3820e24bc7f38da0d12e0add
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81eb92a93b60259abdb90020bb6e89cb0664eea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-expressions-c"></a>Wyrażenia regularne (C++)
 Standardowa biblioteka C++ obsługuje wiele gramatyk wyrażenia regularnego. W tym temacie omówiono warianty gramatyki, gdy za pomocą wyrażeń regularnych.  
@@ -34,7 +35,7 @@ Gramatyka wyrażenie regularne do użycia przez określono przy użyciu jednego 
 -   `extended`POSIX rozszerzone wyrażenia regularne lub ERE.
 -   `awk`: W tym `extended`, ale ma dodatkowe specjalne niedrukowalne znaki.
 -   `grep`: W tym `basic`, ale pozwala także nowy wiersz znaków (\n) do oddzielania alternations.
--   `egrep`: W tym `extended`, ale pozwala także znaki nowego wiersza oddzielić alternatios.
+-   `egrep`: W tym `extended`, ale pozwala także znaki nowego wiersza oddzielić alternations.
 
 Domyślnie, jeśli gramatyki nie jest określony `ECMAScript` zakłada, że. Można określić tylko jeden gramatyki.  
   
@@ -462,5 +463,5 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
 |„$nn”||Sekwencja znaków, zgodny z grupą przechwytywania na pozycji `nn`, gdzie `nn` jest liczbą z zakresu od 10 do 99 (`[match[nn].first, match[nn].second)`)|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd biblioteki C++ Standard](../standard-library/cpp-standard-library-overview.md)
+ [Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)
 

@@ -47,11 +47,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 29ad3d47b88f7af2b5d98bc4e4be19c973399b3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assignment-operators"></a>Operatory przypisania
 ## <a name="syntax"></a>Składnia  
@@ -125,7 +126,7 @@ int main() {
   
  Przypisanie do obiektów klasy typów (struct, unia oraz typy klas) jest wykonywane przez funkcję o nazwie operator=. Domyślne zachowanie tej funkcji operatora ma wykonywać kopię bitową; jednak to zachowanie może być modyfikowane przy użyciu przeciążonych operatorów. (Zobacz [przeciążone operatory](../cpp/operator-overloading.md) Aby uzyskać więcej informacji.)  
   
- Obiekt dowolnej jednoznacznej klasy pochodnej od danej klasy podstawowej może być przypisany do obiektu klasy podstawowej. Przeciwny warunek nie jest spełniony, ponieważ istnieje niejawna konwersja z klasy pochodnej do klasy podstawowej, ale nie z klasy podstawowej do klasy pochodnej. Na przykład:  
+ Obiekt dowolnej jednoznacznej klasy pochodnej od danej klasy bazowej może być przypisany do obiektu klasy bazowej. Przeciwny warunek nie jest spełniony, ponieważ istnieje niejawna konwersja z klasy pochodnej do klasy bazowej, ale nie z klasy bazowej do klasy pochodnej. Na przykład:  
   
 ```  
 // expre_SimpleAssignment.cpp  

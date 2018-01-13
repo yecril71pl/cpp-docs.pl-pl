@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 81a40835fc5122d6384578e1b6e48e81a70db18b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75a8e720fa1a3add6dc8017df8b970dfa746f439
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt —&gt;
 Definiuje kilka klasy szablonu, które opisują obiekty na podstawie szablonu klasy [codecvt](../standard-library/codecvt-class.md). Te obiekty mogą służyć jako [aspekty ustawień regionalnych](../standard-library/locale-class.md#facet_class) umożliwiające sterowanie konwersje między sekwencję wartości typu `Elem` i sekwencję wartości typu `char`.  
@@ -72,9 +73,9 @@ Definiuje kilka klasy szablonu, które opisują obiekty na podstawie szablonu kl
   
 |||  
 |-|-|  
-|[codecvt_utf8 —](codecvt-utf8-class.md)|Reprezentuje aspektu ustawień regionalnych, który wykonuje konwersję między znaki dwubajtowe zakodowane jako UCS 2 lub UCS 4 i strumień bajtów zakodowane jako UTF-8.|  
-|[codecvt_utf8_utf16 —](codecvt-utf8-utf16-class.md)|Reprezentuje aspektu ustawień regionalnych, który wykonuje konwersję między znaki dwubajtowe zakodowane jako UTF-16, a strumień bajtów zakodowane jako UTF-8.|  
-|[codecvt_utf16 —](codecvt-utf16-class.md)|Reprezentuje aspektu ustawień regionalnych, który wykonuje konwersję między znaki dwubajtowe zakodowane jako UCS 2 lub UCS 4 i strumień bajtów zakodowane jako UTF-16LE lub UTF-16BE.|  
+|[codecvt_utf8](codecvt-utf8-class.md)|Reprezentuje aspektu ustawień regionalnych, który wykonuje konwersję między znaki dwubajtowe zakodowane jako UCS 2 lub UCS 4 i strumień bajtów zakodowane jako UTF-8.|  
+|[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Reprezentuje aspektu ustawień regionalnych, który wykonuje konwersję między znaki dwubajtowe zakodowane jako UTF-16, a strumień bajtów zakodowane jako UTF-8.|  
+|[codecvt_utf16](codecvt-utf16-class.md)|Reprezentuje aspektu ustawień regionalnych, który wykonuje konwersję między znaki dwubajtowe zakodowane jako UCS 2 lub UCS 4 i strumień bajtów zakodowane jako UTF-16LE lub UTF-16BE.|  
 
   
 ## <a name="requirements"></a>Wymagania  

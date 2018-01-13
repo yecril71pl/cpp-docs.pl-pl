@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47d8fdec93c9d77e6648c5f648171a8ff349474d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-type-system-modern-c"></a>System typów języka C++ (Modern C++)
 Pojęcie *typu* jest bardzo ważna w języku C++. Zwracana wartość każdej zmiennej, argumentu funkcji oraz funkcji musi mieć typ, aby mogła zostać skompilowana. Ponadto, kompilator niejawnie nadaje typ każdemu wyrażeniu (w tym wartości literału), zanim zostanie on oceniony. Oto przykłady typów `int` do przechowywania wartości całkowite `double` do przechowywania wartości zmiennoprzecinkowych (znanej także jako *skalarne* typów danych), lub klasy biblioteki standardowej [std::basic_string](../standard-library/basic-string-class.md) do przechowywania tekstu. Można utworzyć własny typ, definiując `class` lub `struct`. Typ określa wielkość pamięci, która zostanie zaalokowana dla zmiennej (lub wyniku wyrażenia), rodzaje wartości, które mogą być przechowywane w tej zmiennej, sposób interpretacji tych wartości (jako wzorców bajtów) oraz operacje, jakie mogą zostać na nich wykonane. Ten artykuł zawiera nieformalny przegląd głównych funkcji systemu typów C++.  
@@ -27,7 +28,7 @@ Pojęcie *typu* jest bardzo ważna w języku C++. Zwracana wartość każdej zmi
   
  **Obiekt**: dla uproszczenia i spójności, w tym artykule używany jest termin *obiektu* do odwoływania się do dowolnego wystąpienia klasy lub struktury i gdy jest używany w tym sensie, ogólne obejmuje wszystkie typy, nawet zmienne skalarne.  
   
- **Typ POD** (zwykły starych danych): Ta kategoria nieformalne typów danych w języku C++ odwołuje się do typów, które są skalarne (patrz sekcja typów podstawowych) lub *klasy POD*. Klasa POD nie ma żadnych statycznych elementów członkowskich danych, które nie są również POD, i nie ma zdefiniowanych przez użytkownika konstruktorów, zdefiniowanych przez użytkownika destruktorów ani zdefiniowanych przez użytkownika operatorów przypisania. Klasa POD nie ma też żadnych funkcji wirtualnych, nie ma klasy podstawowej ani żadnych prywatnych lub chronionych niestatycznych elementów członkowskich danych. Typy POD są często używane do wymiany danych zewnętrznych, na przykład przy użyciu modułu napisanego w języku C (który ma tylko typy POD).  
+ **Typ POD** (zwykły starych danych): Ta kategoria nieformalne typów danych w języku C++ odwołuje się do typów, które są skalarne (patrz sekcja typów podstawowych) lub *klasy POD*. Klasa POD nie ma żadnych statycznych składowych danych, które nie są również POD, i nie ma zdefiniowanych przez użytkownika konstruktorów, zdefiniowanych przez użytkownika destruktorów ani zdefiniowanych przez użytkownika operatorów przypisania. Klasa POD nie ma też żadnych funkcji wirtualnych, nie ma klasy podstawowej ani żadnych prywatnych lub chronionych niestatycznych składowych danych. Typy POD są często używane do wymiany danych zewnętrznych, na przykład przy użyciu modułu napisanego w języku C (który ma tylko typy POD).  
   
 ## <a name="specifying-variable-and-function-types"></a>Określanie typów zmiennych i funkcji  
  C++ jest *silnie typizowane* języka i stanowi również *statycznie wpisany*; każdy obiekt ma typ i który typu nigdy nie zmiany (nie należy mylić z obiektami dane statyczne).   
@@ -106,7 +107,7 @@ PI = .75 //Error. Cannot modify const variable.
   
 -   Kompilator nie ma wbudowanej wiedzy o typie zdefiniowanym przez użytkownika. Dowie się typu po pierwszym napotkaniu definicji podczas procesu kompilacji.  
   
--   Ty określasz, jakie operacje mogą zostać przeprowadzone na typie i jak może on zostać przekonwertowany do innych typów, definiując (przez przeciążenie) odpowiednie operatory, albo jako funkcje elementów członkowskich, albo jako funkcje, które nie są elementami członkowskimi. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](function-overloading.md).  
+-   Ty określasz, jakie operacje mogą zostać przeprowadzone na typie i jak może on zostać przekonwertowany do innych typów, definiując (przez przeciążenie) odpowiednie operatory, albo jako funkcje składowych, albo jako funkcje, które nie są składowymi. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](function-overloading.md).  
   
 -   Nie muszą zostać statycznie wpisane (zasada, że typ obiektu nigdy nie ulega zmianie). Za pomocą mechanizmów *dziedziczenia* i *polimorfizm*, zmienna zadeklarowany jako typ zdefiniowany przez użytkownika klasy (nazywane wystąpienia obiektu klasy) może mieć inny typ w czasie wykonywania niż w czas kompilacji. Aby uzyskać więcej informacji, zobacz [dziedziczenia](../cpp/inheritance-cpp.md).  
   

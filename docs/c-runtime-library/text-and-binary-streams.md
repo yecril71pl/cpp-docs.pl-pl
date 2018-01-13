@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fd9cfcc54e672d16b631662d9d41c02327ac2a57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1665ff1551ffe94b475c463d8f93eba2184eaa27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-and-binary-streams"></a>Strumienie binarne i tekstowe
 Strumień tekstu składa się z jednego lub więcej wierszy tekstu, które mogą być zapisywane na wyświetlenie tekstowych, dzięki czemu mogą być odczytywane. Podczas odczytywania ze strumienia tekstu, program odczytuje `NL` (nowego wiersza) pod koniec każdego wiersza. Podczas zapisywania do strumienia tekstu, program zapisuje `NL` która sygnalizuje koniec wiersza. Odpowiadające różne konwencje między środowiska docelowego reprezentujący tekstu w plikach funkcji biblioteki można zmienić numer reprezentacje znaków przesyłane między programem a strumienia tekstu.  

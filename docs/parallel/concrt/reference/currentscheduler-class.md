@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad1d49bb90a5f3c0732fd81851e34485e95f3ccb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 936904f19687463a9b5c51262c8e6f7a8b9fe5a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler — Klasa
 Reprezentuje abstrakcję dla bieżącego harmonogramu, skojarzone z kontekstem wywołującego.  
@@ -50,7 +51,7 @@ class CurrentScheduler;
 |----------|-----------------|  
 |[Utwórz](#create)|Tworzy nowy harmonogram, w których zachowanie jest opisane przez `_Policy` parametru i dołącza go do kontekstu wywołania. Nowo utworzony harmonogram będzie bieżącego harmonogramu dla kontekstu wywołania.|  
 |[CreateScheduleGroup](#createschedulegroup)|Przeciążone. Tworzy nową grupę harmonogramu w ramach harmonogramu, skojarzone z kontekstem wywołującego. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w grupie nowo utworzonego harmonogramu, aby być ukierunkowane pod kątem wykonywania w lokalizacji określonej w tym parametrze.|  
-|[Odłączanie](#detach)|Odłącza bieżącego harmonogramu z kontekstu wywołania i przywraca wcześniej dołączone harmonogram jako bieżącego harmonogramu, jeśli taka istnieje. Po powrocie z tej metody, kontekst wywołania jest wtedy zarządzana przez harmonogram, który wcześniej był dołączony do kontekstu za pomocą `CurrentScheduler::Create` lub `Scheduler::Attach` metody.|  
+|[Detach](#detach)|Odłącza bieżącego harmonogramu z kontekstu wywołania i przywraca wcześniej dołączone harmonogram jako bieżącego harmonogramu, jeśli taka istnieje. Po powrocie z tej metody, kontekst wywołania jest wtedy zarządzana przez harmonogram, który wcześniej był dołączony do kontekstu za pomocą `CurrentScheduler::Create` lub `Scheduler::Attach` metody.|  
 |[Pobierz](#get)|Zwraca wskaźnik do harmonogramu, skojarzone z wywołania kontekstem, nazywane również bieżącego harmonogramu.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Zwraca bieżącą liczbę procesorów wirtualnych harmonogramu, skojarzone z kontekstem wywołującego.|  
 |[GetPolicy](#getpolicy)|Zwraca kopię bieżącego harmonogramu utworzony za pomocą zasad.|  

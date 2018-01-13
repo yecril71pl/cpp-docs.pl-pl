@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee5e34ce0af330ec9a788ceda758a412e3d7ac2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 59eb8aecbf2dd2138c8a0469d71364b55fd82774
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transakcja: jak transakcje wpływają na aktualizacje (ODBC)
 Aktualizacje [źródła danych](../../data/odbc/data-source-odbc.md) są zarządzane podczas transakcji przy użyciu buforu edycji (tej samej metody poza transakcji). Elementy członkowskie danych pola rekordów zbiorczo służyć jako edycji buforu, który zawiera rekord bieżący zestaw rekordów kopię zapasową tymczasowego podczas `AddNew` lub **Edytuj**. Podczas **usunąć** operacji, bieżący rekord nie kopii zapasowej w obrębie transakcji. Aby uzyskać więcej informacji na temat buforu edycji i jak przechowywać bieżącego rekordu w aktualizacji, zobacz [zestaw rekordów: jak zestawy rekordów aktualizacji rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
@@ -64,4 +67,4 @@ Aktualizacje [źródła danych](../../data/odbc/data-source-odbc.md) są zarząd
  [Transakcja (ODBC)](../../data/odbc/transaction-odbc.md)   
  [Transakcja: Wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
  [Cdatabase — klasa](../../mfc/reference/cdatabase-class.md)   
- [Crecordset — klasa](../../mfc/reference/crecordset-class.md)
+ [Klasa CRecordset](../../mfc/reference/crecordset-class.md)

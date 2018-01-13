@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cfecdabea3a65815600c36b0ece1b14778305e15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22d73156d4f03a32bd9aa382dd0cc610f8a5f03f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="phases-of-translation"></a>Fazy tłumaczenia
 Programy C i C++ składają się z jednego lub więcej plików źródłowych, z których każdy zawiera część tekstu programu. Plik źródłowy, wraz z dołączonymi plikami (plikami dołączonymi za pomocą dyrektywy preprocesora `#include`), ale bez sekcji kodu usuniętych przez dyrektywy kompilacji warunkowej takie jak `#if`, nosi nazwę „jednostki translacji”.  
@@ -35,7 +36,7 @@ Programy C i C++ składają się z jednego lub więcej plików źródłowych, z 
   
 -   Wywołań funkcji, które mają powiązania zewnętrzne.  
   
--   Wywołań funkcji członkowskich klasy, które mają powiązania zewnętrzne.  
+-   Wywołań funkcji składowych klasy, które mają powiązania zewnętrzne.  
   
 -   Bezpośrednich modyfikacji obiektów, które mają powiązania zewnętrzne.  
   
@@ -74,4 +75,4 @@ Programy C i C++ składają się z jednego lub więcej plików źródłowych, z 
  Konsolidator usuwa wszystkie odwołania zewnętrzne i tworzy plik wykonywalny lub bibliotekę DLL przez połączenie jednej lub więcej jednostek translacji z bibliotekami standardowymi.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Preprocesora](../preprocessor/preprocessor.md)
+ [Preprocesor](../preprocessor/preprocessor.md)

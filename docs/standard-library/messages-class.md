@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d60a1ba5ac8acbb6fbaf9e5b7e922a1f373f9293
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1bf1320e138224b36e0d73e1d2702b9cf85fb8c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messages-class"></a>messages — Klasa
 Klasa szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawień regionalnych w celu pobrania zlokalizowanych komunikatów z katalogu międzynarodowych wiadomości dla danego ustawienia regionalnego.  
@@ -58,7 +59,7 @@ class messages : public messages_base;
 ## <a name="remarks"></a>Uwagi  
  Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba jej wartości przechowywanej dostępu są przechowywane w unikatową wartość dodatnią **identyfikator.**  
   
- W zasadzie ten zestaw reguł otwiera katalog komunikatów zdefiniowany w klasie podstawowej messages_base, pobiera wymagane informacje i zamyka katalog.  
+ W zasadzie ten zestaw reguł otwiera katalog komunikatów zdefiniowany w klasie bazowej messages_base, pobiera wymagane informacje i zamyka katalog.  
   
 ### <a name="constructors"></a>Konstruktorów  
   
@@ -77,12 +78,12 @@ class messages : public messages_base;
   
 |||  
 |-|-|  
-|[Zamknij](#close)|Zamyka katalog komunikatów.|  
+|[close](#close)|Zamyka katalog komunikatów.|  
 |[do_close](#do_close)|Funkcja wirtualna wywoływana, aby zamknąć katalog komunikatów.|  
 |[do_get](#do_get)|Funkcja wirtualna wywoływana, aby pobrać katalog komunikatów.|  
 |[do_open](#do_open)|Funkcja wirtualna wywoływana, aby otworzyć katalog komunikatów.|  
-|[Pobierz](#get)|Pobiera katalog komunikatów.|  
-|[Otwórz](#open)|Otwiera katalog komunikatów.|  
+|[get](#get)|Pobiera katalog komunikatów.|  
+|[open](#open)|Otwiera katalog komunikatów.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<ustawień regionalnych >  

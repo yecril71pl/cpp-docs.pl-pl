@@ -54,11 +54,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a40beb8f814fd4a2761242f9b93c1ae4b3b7387
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49684bcb7f1022bad7a0f3dad3a0ec5692373996
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
 Zapis sformatowane wyniki za pomocą wskaźnika do listy argumentów, z możliwością określić kolejność, że argumenty są używane w ciągu formatu.  
@@ -148,4 +149,4 @@ int _vfwprintf_p_l(
  [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md)   
  [_fprintf_p —, _fprintf_p_l —, _fwprintf_p — _fwprintf_p_l —](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
  [_vsprintf_p —, _vsprintf_p_l —, _vswprintf_p — _vswprintf_p_l —](../../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)   
- [_sprintf_p —, _sprintf_p_l —, _swprintf_p — _swprintf_p_l —](../../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)
+ [_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)

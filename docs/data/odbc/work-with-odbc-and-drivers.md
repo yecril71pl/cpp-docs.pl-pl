@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7256f202e5e3b2e974f736875be18c8952884b64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 842a09224a9ea61e6c53a6d700435f05176cee55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-odbc-and-drivers"></a>Praca z ODBC i sterownikami
 ODBC pozwala pisać aplikacje, które nie są zależne od tylko jeden system zarządzania bazami (danych DBMS). Można zapisać jedną aplikację, która może działać w wielu systemach DBMS, dla których użytkownicy mają odpowiedni sterownik ODBC specyficznych dla systemu DBMS.  
@@ -36,4 +39,4 @@ ODBC pozwala pisać aplikacje, które nie są zależne od tylko jeden system zar
 -   [Wywołania funkcji ODBC API bezpośrednio w MFC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Otwórz połączenie z bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

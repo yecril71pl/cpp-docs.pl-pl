@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc3f87c5841ce99219ba0d5bac55e70852df632d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 981e8c04b305ccef12a463b0a4defd3017916b82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-time-error-checking"></a>Sprawdzanie błędów czasu wykonywania
 Biblioteki wykonawcze języka C zawiera funkcje, które obsługują sprawdzanie błędów czasu wykonywania (RTC). Sprawdzanie błędów czasu wykonywania umożliwia tworzenie programu w taki sposób, że niektóre rodzaje błędów czasu wykonywania są zgłaszane. Należy określić sposób zgłaszania błędów oraz jakie rodzaje błędy są zgłaszane. Aby uzyskać więcej informacji, zobacz [porady: Użyj natywnego Run-Time sprawdza](/visualstudio/debugger/how-to-use-native-run-time-checks).  
@@ -32,10 +33,10 @@ Biblioteki wykonawcze języka C zawiera funkcje, które obsługują sprawdzanie 
   
 |Funkcja|Zastosowanie|  
 |--------------|---------|  
-|[_Rtc_geterrdesc —](../c-runtime-library/reference/rtc-geterrdesc.md)|Zwraca krótki opis typu sprawdzanie błędów czasu wykonywania.|  
-|[_Rtc_numerrors —](../c-runtime-library/reference/rtc-numerrors.md)|Zwraca sumę błędów, które mogą być wykryte przez sprawdzanie błędów czasu wykonywania.|  
-|[_Rtc_seterrorfunc —](../c-runtime-library/reference/rtc-seterrorfunc.md)|Określa funkcję jako program obsługi raportowania sprawdzanie błędów czasu wykonywania.|  
-|[_Rtc_seterrortype —](../c-runtime-library/reference/rtc-seterrortype.md)|Kojarzy błąd, który jest wykrywany przez sprawdzanie błędów czasu wykonywania typu.|  
+|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Zwraca krótki opis typu sprawdzanie błędów czasu wykonywania.|  
+|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Zwraca sumę błędów, które mogą być wykryte przez sprawdzanie błędów czasu wykonywania.|  
+|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|Określa funkcję jako program obsługi raportowania sprawdzanie błędów czasu wykonywania.|  
+|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|Kojarzy błąd, który jest wykrywany przez sprawdzanie błędów czasu wykonywania typu.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury czasu wykonywania według kategorii](../c-runtime-library/run-time-routines-by-category.md)   

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab27107ad76e77601286b77ad28e90b69fa0411e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 952a2b88ebb91449341085a923e06d389aa10fe4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="missingwait-class"></a>missing_wait — Klasa
 Ta klasa opisuje wyjątek wywoływany, gdy nadal zaplanowane zadania `task_group` lub `structured_task_group` obiektów w czasie tego obiektu wykonuje destruktora. Ten wyjątek nigdy nie zostanie wygenerowany, jeśli osiągnięto destruktor ze względu na stosie rozwinięcia wyniku Wystąpił wyjątek.  
@@ -73,4 +74,4 @@ missing_wait() throw();
  [task_group — klasa](task-group-class.md)   
  [oczekiwania](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
- [structured_task_group — klasa](structured-task-group-class.md)
+ [structured_task_group, klasa](structured-task-group-class.md)

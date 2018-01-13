@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 72c8ee6a0d3b5a61e5fb60236269f89055a56a9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e83743859d4c4bdfb515df6008969a9cc7b56e2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-attributes"></a>Atrybuty kompilatora
 Atrybuty kompilatora udostępniać różne funkcje.  
@@ -29,15 +32,15 @@ Atrybuty kompilatora udostępniać różne funkcje.
 |---------------|-----------------|  
 |[emitidl](../windows/emitidl.md)|Określa, czy wszystkie kolejne atrybuty IDL zostanie przetworzona i umieszczony w pliku .idl wygenerowany.|  
 |[event_receiver](../windows/event-receiver.md)|Tworzy odbiorca zdarzenia.|  
-|[event_source —](../windows/event-source.md)|Tworzy źródła zdarzenia.|  
-|[Eksportuj](../windows/export.md)|Powoduje, że struktura danych mają być umieszczone w pliku .idl.|  
+|[event_source](../windows/event-source.md)|Tworzy źródła zdarzenia.|  
+|[export](../windows/export.md)|Powoduje, że struktura danych mają być umieszczone w pliku .idl.|  
 |[implementuje](../windows/implements-cpp.md)|Określa wysyłania interfejsów, które muszą być członkami IDL coclass.|  
-|[importidl —](../windows/importidl.md)|Wstawia pliku .idl określony w pliku .idl wygenerowany.|  
+|[importidl](../windows/importidl.md)|Wstawia pliku .idl określony w pliku .idl wygenerowany.|  
 |[importlib](../windows/importlib.md)|Powoduje, że typy, które już zostały skompilowane w innej bibliotece typu dostępne do tworzenia biblioteki typów.|  
 |[includelib —](../windows/includelib-cpp.md)|Powoduje, że pliku .idl lub .h do uwzględnienia w pliku .idl wygenerowany.|  
-|[library_block —](../windows/library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|  
+|[library_block](../windows/library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|  
 |[no_injected_text](../windows/no-injected-text.md)|Zabezpiecza kompilator przed wstrzyknięcie kodu w wyniku użycia atrybutu.|  
-|[satype —](../windows/satype.md)|Określa typ danych **SAFEARRAY**.|  
+|[satype](../windows/satype.md)|Określa typ danych **SAFEARRAY**.|  
 |[Wersja](../windows/version-cpp.md)|Identyfikuje określoną wersją wśród wielu wersji interfejsu lub klasy.|  
   
 ## <a name="see-also"></a>Zobacz też  

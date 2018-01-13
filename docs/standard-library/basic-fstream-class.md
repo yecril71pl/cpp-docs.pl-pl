@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9f4c174050d2280f116f41be94741dc3c71ae91a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc53ce776dd494c4af312c16d751f883afecc69d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicfstream-class"></a>basic_fstream — Klasa
 Zawiera opis obiektu, który kontroluje wstawiania i wyodrębniania elementów i obiektów zakodowany przy użyciu buforu strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, elementami typu `Elem`, których cech znaków są określane przez klasę `Tr`.  
@@ -99,9 +100,9 @@ Writing to a basic_fstream object...
   
 |||  
 |-|-|  
-|[Zamknij](#close)|Zamyka plik.|  
+|[close](#close)|Zamyka plik.|  
 |[is_open](#is_open)|Określa, czy plik jest otwarty.|  
-|[Otwórz](#open)|Otwiera plik.|  
+|[open](#open)|Otwiera plik.|  
 |[rdbuf](#rdbuf)|Zwraca adres buforu przechowywanych strumienia, typu wskaźnika do [basic_filebuf —](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>.|  
 |[swap](#swap)|Zamienia zawartości tego obiektu z zawartością innego `basic_fstream` obiektu.|  
   

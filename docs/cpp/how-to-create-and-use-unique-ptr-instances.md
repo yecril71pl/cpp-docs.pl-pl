@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08f597a160b3447743646c4cccfc2e05485a47b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae4610e7b26eecd6ef444f3c7c73e95af365ca71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Porady: tworzenie wystąpień unique_ptr i korzystanie z nich
 A [unique_ptr](../standard-library/unique-ptr-class.md) udostępniaj go. Nie można skopiować do innego `unique_ptr`, przekazany przez wartość do funkcji lub używane w dowolny algorytm standardowa biblioteka C++ wymagającego kopie ma zostać wykonane. A `unique_ptr` tylko mogą zostać przeniesione. Oznacza to, że własności zasobów pamięci jest przenoszona do innego `unique_ptr` i oryginalny `unique_ptr` nie jest właścicielem. Zalecamy, aby ograniczyć obiekt do jednego właściciela, ponieważ wiele własności zwiększa złożoność logiki programu. W związku z tym wskaźnika inteligentnego dla obiekt zwykły C++, użyj `unique_ptr`, i kiedy utworzyć `unique_ptr`, użyj [make_unique](../standard-library/memory-functions.md#make_unique) funkcji pomocnika.  

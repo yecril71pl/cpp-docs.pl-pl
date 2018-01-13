@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e854c87355831980f768fd0027f8ac70d9001a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2c21872c5d6fe6000038a3a2f4fe39451b566dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restrict"></a>__restrict
 Podobnie jak **__declspec ( [ograniczyć](../cpp/restrict.md) )** , modyfikator `__restrict` — słowo kluczowe wskazuje, czy symbol nie jest używane z aliasem w bieżącym zakresie. `__restrict` — Słowo kluczowe różni się od `__declspec ( restrict )` modyfikator w następujący sposób:  

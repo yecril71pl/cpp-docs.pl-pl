@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 5f86d24c693cfcd5eecf8b37f0e4567c9c7af3a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a68475447ed520298b0eab7949386c2e8d078ac6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="static-libraries-ccx"></a>Biblioteki statyczne (C + +/ CX)
 Biblioteka statyczna, który jest używany w aplikacji platformy uniwersalnej systemu Windows może zawierać kod ISO standard C++, w tym typy STL i wywołania funkcji Win32 API, które nie są wykluczone z platformy aplikacji platformy uniwersalnej systemu Windows. Biblioteka statyczna zużywa składników środowiska wykonawczego systemu Windows i może utworzyć składników środowiska wykonawczego systemu Windows z pewnymi ograniczeniami.  

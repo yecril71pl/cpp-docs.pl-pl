@@ -14,11 +14,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aee9abf10646df6395984607544755dcb0ed802a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synchronization-data-structures"></a>Struktury danych synchronizacji
 Współbieżność środowiska wykonawczego zawiera kilka struktury danych, które pozwalają synchronizujący dostęp do danych udostępnionych przez wiele wątków. Te struktury danych są przydatne, gdy udostępniasz dane, które rzadko modyfikacji. Obiekt synchronizacji, na przykład sekcja krytyczna, powoduje, że inne wątki poczekać, aż udostępniony zasób jest dostępny. W związku z tym Jeśli używasz takiego obiektu synchronizujący dostęp do danych, która jest często używane, zostaną utracone skalowalności w aplikacji. [Równoległych biblioteki wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md) zapewnia [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy, która umożliwia udostępnianie zasobów między kilka wątków lub zadań bez konieczności synchronizacji. Aby uzyskać więcej informacji na temat `combinable` , zobacz [równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -32,7 +33,7 @@ Współbieżność środowiska wykonawczego zawiera kilka struktury danych, któ
   
 -   [scoped_lock i scoped_lock_read](#scoped_lock)  
   
--   [zdarzenia](#event)  
+-   [event](#event)  
   
 ##  <a name="critical_section"></a>critical_section  
  [Concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) klasa reprezentuje obiekt współpracy wzajemne wykluczenie, zwracające do wykonywania innych zadań zamiast preempting je. Sekcje krytyczne są przydatne, gdy wiele wątków wymaga wyłącznego dostępu odczytu i zapisu do współużytkowanych danych.  
@@ -46,7 +47,7 @@ Współbieżność środowiska wykonawczego zawiera kilka struktury danych, któ
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[blokady](reference/critical-section-class.md#lock)|Uzyskuje sekcja krytyczna. Wywołanie kontekstu bloki do momentu jego uzyskuje blokady.|  
+|[lock](reference/critical-section-class.md#lock)|Uzyskuje sekcja krytyczna. Wywołanie kontekstu bloki do momentu jego uzyskuje blokady.|  
 |[try_lock](reference/critical-section-class.md#try_lock)|Próbuje uzyskać sekcja krytyczna, ale nie są blokowane.|  
 |[odblokowywanie](reference/critical-section-class.md#unlock)|Zwalnia sekcja krytyczna.|  
   
@@ -73,7 +74,7 @@ Współbieżność środowiska wykonawczego zawiera kilka struktury danych, któ
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[blokady](reference/reader-writer-lock-class.md#lock)|Uzyskuje dostęp do odczytu i zapisu do blokady.|  
+|[lock](reference/reader-writer-lock-class.md#lock)|Uzyskuje dostęp do odczytu i zapisu do blokady.|  
 |[try_lock](reference/reader-writer-lock-class.md#try_lock)|Próbuje uzyskać dostęp do odczytu i zapisu do blokady, ale nie są blokowane.|  
 |[lock_read](reference/reader-writer-lock-class.md#lock_read)|Uzyskuje dostęp tylko do odczytu do blokady.|  
 |[try_lock_read](reference/reader-writer-lock-class.md#try_lock_read)|Próbuje uzyskać dostęp tylko do odczytu do blokady, ale nie są blokowane.|  
@@ -103,7 +104,7 @@ Współbieżność środowiska wykonawczego zawiera kilka struktury danych, któ
 |Metoda|Opis|  
 |------------|-----------------|  
 |[oczekiwania](reference/event-class.md#wait)|Czeka na zdarzenie sygnalizuje stają się.|  
-|[zestaw](reference/event-class.md#set)|Ustawia stan sygnałowego zdarzenia.|  
+|[set](reference/event-class.md#set)|Ustawia stan sygnałowego zdarzenia.|  
 |[Resetowanie](reference/event-class.md#reset)|Ustawia stan sygnalizowane zdarzenia.|  
 |[wait_for_multiple](reference/event-class.md#wait_for_multiple)|Czeka na wiele zdarzeń stać się sygnalizowane.|  
 
@@ -117,6 +118,6 @@ Współbieżność środowiska wykonawczego zawiera kilka struktury danych, któ
  [Porównywanie struktur danych synchronizacji z Windows API](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)  
  Porównuje zachowanie struktury danych synchronizacji tych zapewnianych przez interfejs API systemu Windows.  
   
- [Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)  
+ [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)  
  W tym artykule opisano współbieżność środowiska wykonawczego, co upraszcza Programowanie równoległe i zawiera linki do powiązanych tematów.
 

@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9122b9dde98dfa556855e419fcc62707527ccd18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9b7c12430c4e7a6872afd46e72e93a29a3189333
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase — Klasa
 Wszystkie metody dostępu w szablonach OLE DB dziedziczyć po tej klasie. `CAccessorBase`Umożliwia jednego zestawu wierszy do zarządzania wielu metod dostępu. Umożliwia także powiązanie dla parametrów i kolumn wyjściowych.  
@@ -47,4 +50,4 @@ Wszystkie metody dostępu w szablonach OLE DB dziedziczyć po tej klasie. `CAcce
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Dokumentacja szablonów konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

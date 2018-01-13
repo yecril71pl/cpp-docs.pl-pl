@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 960c8e3f96a79edf8159774e24c1b9744a54cee1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 781da070e5678eab16d746a39a854fda17d5bc38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="greater-struct"></a>greater — Struktura
 Predykat binarne wykonująca większa — od operacji ( `operator>`) na argumenty.  
@@ -124,7 +125,7 @@ Resorted vector v1 = (29358 26500 19169 18467 15724 11478 6334 41)
  **Namespace:** Standard  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

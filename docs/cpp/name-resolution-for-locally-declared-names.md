@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9561b1e0b270dd245b5617653d5cf8c909434a98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92037e6194499372061c8c1e2ded82af86612f95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>Rozpoznawanie nazwy dla lokalnie zadeklarowanych nazw
 
@@ -49,7 +50,7 @@ template<> class A<int> {
 
  W przypadku konfliktu nazw między parametrem szablonu i innym obiektem, parametr szablonu może lub nie może być ukryty. Następujące reguły pomogą określić pierwszeństwo.  
   
- Parametr szablonu jest w zakresie od punktu, gdzie po raz pierwszy występuje aż do końca szablonu klasy lub funkcji. Jeśli nazwa pojawi się ponownie na liście argumentów szablonu lub na liście klas podstawowych, dotyczy ona tego samego typu. W standardzie języka C++ żadna inna nazwa, która jest identyczna z parametrem szablonu nie może być zadeklarowana w tym samym zakresie. Rozszerzenie Microsoft pozwala przedefiniować parametr szablonu na nowo w zakresie szablonu. Poniższy przykład pokazuje użycie parametru szablonu w podstawowej specyfikacji szablonu klasy.  
+ Parametr szablonu jest w zakresie od punktu, gdzie po raz pierwszy występuje aż do końca szablonu klasy lub funkcji. Jeśli nazwa pojawi się ponownie na liście argumentów szablonu lub na liście klas bazowych, dotyczy ona tego samego typu. W standardzie języka C++ żadna inna nazwa, która jest identyczna z parametrem szablonu nie może być zadeklarowana w tym samym zakresie. Rozszerzenie Microsoft pozwala przedefiniować parametr szablonu na nowo w zakresie szablonu. Poniższy przykład pokazuje użycie parametru szablonu w podstawowej specyfikacji szablonu klasy.  
   
 ```cpp
 // template_name_resolution4.cpp  
@@ -67,7 +68,7 @@ int main() {
   
 ## <a name="example"></a>Przykład
 
- Podczas definiowania funkcji członkowskich szablonu poza szablonem klasy, nazwy parametru może używać inny szablon. Jeśli definicja funkcji członkowskiej szablonu używa innej nazwy parametru szablonu, niż ta zgłoszona, a nazwa używana w definicji powoduje konflikt z innym elementem członkowskim deklaracji, element członkowski w deklaracji szablonu ma pierwszeństwo.  
+ Podczas definiowania funkcji skkładowych szablonu poza szablonem klasy nazwy parametru może używać inny szablon. Jeśli definicja funkcji członkowskiej szablonu używa innej nazwy parametru szablonu, niż ta zgłoszona, a nazwa używana w definicji powoduje konflikt z innym elementem członkowskim deklaracji, element członkowski w deklaracji szablonu ma pierwszeństwo.  
   
 ```cpp
 // template_name_resolution5.cpp  
@@ -136,7 +137,7 @@ C<T>::g
   
 ## <a name="example"></a>Przykład
 
- W definicjach, które nie należą do deklaracji klasy szablonu, jeśli klasa szablonu ma klasę podstawową, która nie zależy od argumentu szablonu i jeśli klasa podstawowa lub jeden z jej elementów członkowskich ma taką samą nazwę jak argument szablonu, wówczas klasa podstawowa lub nazwa elementu członkowskiego ukrywa argument szablonu.  
+ W definicjach, które nie należą do deklaracji klasy szablonu, jeśli klasa szablonu ma klasę podstawową, która nie zależy od argumentu szablonu i jeśli klasa podstawowa lub jedna z jej składowych ma taką samą nazwę jak argument szablonu, wówczas klasa podstawowa lub nazwa składowej ukrywa argument szablonu.  
   
 ```cpp
 // template_name_resolution7.cpp  

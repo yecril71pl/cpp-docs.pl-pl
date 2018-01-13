@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1fafeb199acfb4422f2e08fe8971fa39752461a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 41bf7f6ba3a2a17c6355ee9239cadb6e5014ee96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-template-instantiation"></a>Tworzenie wystąpienia szablonu funkcji
 Gdy szablonu funkcji najpierw zostanie wywołana dla każdego typu, kompilator tworzy wystąpienia. Każdego wystąpienia jest wersja szablonem funkcji przeznaczone dla typu. Tego wystąpienia zostanie wywołana za każdym razem, gdy funkcja jest używana dla typu. Jeśli masz kilka wystąpień identyczne, nawet w różnych modułach tylko jedna kopia wystąpienia zakończą się w pliku wykonywalnego.  

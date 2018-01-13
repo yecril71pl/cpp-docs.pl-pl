@@ -32,11 +32,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 937a452b145fd3d30518f8c4b786ab79b46d5cea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a0ad6631d9171e8fcdc59e13e60eda2cc729c79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setoutputformat"></a>_set_output_format
 Dostosowuje formatów wyjściowych przez sformatowany funkcje We/Wy.  
@@ -126,4 +127,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [printf_s —, _printf_s_l —, wprintf_s — _wprintf_s_l —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
- [_get_output_format —](../c-runtime-library/get-output-format.md)
+ [_get_output_format](../c-runtime-library/get-output-format.md)

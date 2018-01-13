@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: d075ccda653ed04722026d5f1ab71ff83a4936db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce0210546dafd354d0d62225c97df8b36a8d84e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="international-enabling"></a>Włączanie internacjonalizacji
 Najbardziej tradycyjnych kodu C i C++ sprawia, że założenia dotyczące znaków i ciąg, które działa dobrze w aplikacjach międzynarodowych. Gdy zarówno MFC, jak i biblioteki wykonawczej obsługują standardu Unicode i MBCS, jest nadal pracy należy wykonać. Pomocny, w tej sekcji wyjaśniono znaczenie "Włączanie internacjonalizacji" w programie Visual C++:  

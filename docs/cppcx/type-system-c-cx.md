@@ -12,11 +12,12 @@ caps.latest.revision: "28"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c1839fad0c929f6e24b74f74c2cc91e29e07005b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5c0db625db458bf4fb530ba4b07e742b1aad964
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-system-ccx"></a>System typów (C + +/ CX)
 Za pomocą architektury środowiska wykonawczego systemu Windows, można użyć C + +/ CX, Visual Basic, Visual C# i JavaScript do pisania aplikacji i składników, które bezpośrednio uzyskać dostępu do interfejsu API systemu Windows i współpraca z innymi środowiska wykonawczego systemu Windows, aplikacje i składniki. Uniwersalnych aplikacji platformy systemu Windows, które zostały napisane w języku C++ skompiluj do kodu natywnego, która wykonuje bezpośrednio w Procesor. Uniwersalnych aplikacji platformy systemu Windows, które zostały napisane w języku C# lub Visual Basic kompilacji na język pośredni firmy Microsoft (MSIL), a następnie wykonaj w środowisku uruchomieniowym języka (wspólnego CLR). Wykonanie uniwersalnych aplikacji platformy systemu Windows, które zostały napisane w języku JavaScript w środowisku czasu wykonywania. Samych elementów systemu operacyjnego środowiska wykonawczego systemu Windows są napisane w języku C++ i Uruchom jako kodu natywnego. Wszystkie te składniki i aplikacje platformy uniwersalnej systemu Windows komunikują się bezpośrednio za pośrednictwem interfejsu binarne (ABI) środowiska wykonawczego systemu Windows.  

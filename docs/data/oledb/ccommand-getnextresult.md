@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a0b4c03d7aa31949752e4362380d1705d7db6e9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a3bf105f0c85d831d1a8e4bb0048a1385e6275da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommandgetnextresult"></a>CCommand::GetNextResult
 Pobiera następnego wyniku, jeśli jest dostępny.  
@@ -58,4 +61,4 @@ Pobiera następnego wyniku, jeśli jest dostępny.
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [CCommand — klasa](../../data/oledb/ccommand-class.md)
+ [CCommand, klasa](../../data/oledb/ccommand-class.md)

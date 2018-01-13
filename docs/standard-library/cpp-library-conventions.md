@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 67848252bf875303c8120c9d4935e0135f705489
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0699e589340081d5dd13e8ab879094445005e327
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-library-conventions"></a>Konwencje biblioteki C++
 Biblioteka języka C++ przestrzega znacznie tej samej Konwencji jako standardowa biblioteka języka C, a także kilka kolejnych opisana w tym temacie.  

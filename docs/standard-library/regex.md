@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50aaf3f695b023d6316fdd5d601962435903e15c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7da90e13c325380cb8aad54d1af712c1567e0420
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltregexgt"></a>&lt;wyrażenia regularnego&gt;
 Definiuje klasę szablonu, aby przeanalizować [wyrażenia regularne (C++)](../standard-library/regular-expressions-cpp.md)oraz kilka klas szablonów i funkcji do wyszukiwania tekstu pasuje do obiektu będącego wyrażeniem regularnym.  
@@ -93,22 +94,22 @@ Definiuje klasę szablonu, aby przeanalizować [wyrażenia regularne (C++)](../s
 |||  
 |-|-|  
 |[operator ==](../standard-library/regex-operators.md#op_eq_eq)|Porównanie różnych obiektów, takie same.|  
-|[operator! =](../standard-library/regex-operators.md#op_neq)|Porównanie różnych obiektów, nie jest równa.|  
+|[operator!=](../standard-library/regex-operators.md#op_neq)|Porównanie różnych obiektów, nie jest równa.|  
 |[Operator <](../standard-library/regex-operators.md#op_lt)|Porównanie różnych obiektów, poniżej.|  
 |[operator\<=](../standard-library/regex-operators.md#op_gt_eq)|Porównanie różnych obiektów, co najwyżej.|  
 |[operator >](../standard-library/regex-operators.md#op_gt)|Porównanie różnych obiektów, większe.|  
-|[operator > =](../standard-library/regex-operators.md#op_gt_eq)|Porównanie różnych obiektów, większe lub równe.|  
+|[operator>=](../standard-library/regex-operators.md#op_gt_eq)|Porównanie różnych obiektów, większe lub równe.|  
 |[Operator <<](../standard-library/regex-operators.md#op_lt_lt)|Wstawia `sub_match` w strumieniu.|  
   
 ## <a name="see-also"></a>Zobacz też  
 [Wyrażenia regularne (C++)](../standard-library/regular-expressions-cpp.md)  
-[regex_constants — klasa](../standard-library/regex-constants-class.md)  
-[regex_error — klasa](../standard-library/regex-error-class.md)  
+[regex_constants, klasa](../standard-library/regex-constants-class.md)  
+[regex_error, klasa](../standard-library/regex-error-class.md)  
 [\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)  
-[regex_iterator — klasa](../standard-library/regex-iterator-class.md)  
+[regex_iterator, klasa](../standard-library/regex-iterator-class.md)  
 [\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)  
-[regex_token_iterator — klasa](../standard-library/regex-token-iterator-class.md)  
-[regex_traits — klasa](../standard-library/regex-traits-class.md)  
+[regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)  
+[regex_traits, klasa](../standard-library/regex-traits-class.md)  
 [\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)  
 
 

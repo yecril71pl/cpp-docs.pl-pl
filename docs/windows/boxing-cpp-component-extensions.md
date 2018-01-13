@@ -14,11 +14,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8d597466204aa17475ee732b77f321464ccc010
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 15fa5471280935c54cdb936af378634e2b60cacd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="boxing--c-component-extensions"></a>Boxing (C++ Component Extensions)
 Kompilatora Visual C++ można przekonwertować wartości typów obiektów w procesie nazywanym *boxing*i konwersji obiektów na typy wartości w procesie nazywanym *rozpakowującej*.  
@@ -88,13 +91,13 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Porady: jawne żądanie konwersji Boxing](../dotnet/how-to-explicitly-request-boxing.md)  
+-   [Instrukcje: jawne żądanie konwersji boxing](../dotnet/how-to-explicitly-request-boxing.md)  
   
--   [Porady: używanie funkcji gcnew do tworzenia typów wartości i użyj niejawnej konwersji Boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
+-   [Instrukcje: używanie funkcji gcnew do tworzenia typów wartości i korzystanie z niejawnej konwersji boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
   
--   [Porady: unbox —](../dotnet/how-to-unbox.md)  
+-   [Instrukcje: rozpakowywanie](../dotnet/how-to-unbox.md)  
   
--   [Konwersje standardowe i niejawnej konwersji Boxing](../dotnet/standard-conversions-and-implicit-boxing.md)  
+-   [Konwersje standardowe i niejawne konwersje boxing](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
 ### <a name="requirements"></a>Wymagania  
  — Opcja kompilatora:   **/CLR**  
@@ -174,7 +177,7 @@ int main() {
 }  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
 ```Output  
 1  

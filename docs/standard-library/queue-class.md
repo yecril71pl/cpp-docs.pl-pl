@@ -33,11 +33,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2bfb8e0cbfb65b8cd1ad038ffe2bcc2e4bf2d9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9161a04f9007f660df7ea7293426e9a90ada20c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queue-class"></a>queue — Klasa
 Klasa karty kontenera szablonu, która umożliwia ograniczenie funkcjonalności dla niektórych odpowiedni typ kontenera, ograniczanie dostępu do elementów front i back. Elementy można dodać na tylnej lub wiodących i elementy mogą być kontrolowane na końcu kolejki.  
@@ -93,7 +94,7 @@ class queue
 |[pusty](#empty)|Sprawdza, czy `queue` jest pusta.|  
 |[Front](#front)|Zwraca odwołanie do pierwszego elementu z przodu `queue`.|  
 |[POP](#pop)|Usuwa element z przodu `queue`.|  
-|[wypychania](#push)|Dodaje element do tyłu `queue`.|  
+|[push](#push)|Dodaje element do tyłu `queue`.|  
 |[rozmiar](#size)|Zwraca liczbę elementów w `queue`.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -510,5 +511,5 @@ The element at the front of the queue is 69.
   
 ## <a name="see-also"></a>Zobacz też  
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 39c93cf2c2e3642d2ed6c3fcf08cadafea4ce8bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5d95a98d56ea666ed823f3caef2190dea1591cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry — Klasa
 `multi_link_registry` Obiekt jest `network_link_registry` który zarządza wiele bloków źródła lub wiele bloków docelowej.  
@@ -57,11 +58,11 @@ class multi_link_registry : public network_link_registry<_Block>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Dodaj](#add)|Dodaje link do `multi_link_registry` obiektu. (Przesłania [network_link_registry::add](network-link-registry-class.md#add).)|  
+|[add](#add)|Dodaje link do `multi_link_registry` obiektu. (Przesłania [network_link_registry::add](network-link-registry-class.md#add).)|  
 |[Rozpocznij](#begin)|Zwraca pierwszy element w iteratora `multi_link_registry` obiektu. (Przesłania [network_link_registry::begin](network-link-registry-class.md#begin).)|  
 |[zawiera](#contains)|Wyszukiwanie `multi_link_registry` obiektu dla określonego bloku. (Przesłania [network_link_registry::contains](network-link-registry-class.md#contains).)|  
 |[Liczba](#count)|Zlicza elementy `multi_link_registry` obiektu. (Przesłania [network_link_registry::count](network-link-registry-class.md#count).)|  
-|[Usuń](#remove)|Usuwa link z `multi_link_registry` obiektu. (Przesłania [network_link_registry::remove](network-link-registry-class.md#remove).)|  
+|[remove](#remove)|Usuwa link z `multi_link_registry` obiektu. (Przesłania [network_link_registry::remove](network-link-registry-class.md#remove).)|  
 |[set_bound](#set_bound)|Ustawia górnej granicy liczby łącza `multi_link_registry` obiekt może przechowywać.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
@@ -180,4 +181,4 @@ void set_bound(size_t _MaxLinks);
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [single_link_registry — klasa](single-link-registry-class.md)
+ [single_link_registry, klasa](single-link-registry-class.md)

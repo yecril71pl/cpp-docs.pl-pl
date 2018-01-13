@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 010d1b2e10d1435855c35929516ff0e7f3fd8d4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a318ba69fe5e5d19bacb6d5890889d31a5a44d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comerrorerror"></a>_com_error::Error
 **Dotyczące firmy Microsoft**  
@@ -45,4 +46,4 @@ HRESULT Error( ) const throw( );
  **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [_com_error — klasa](../cpp/com-error-class.md)
+ [_com_error, klasa](../cpp/com-error-class.md)

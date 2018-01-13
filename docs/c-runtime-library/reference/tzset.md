@@ -32,11 +32,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 494d8908660913396fb86f4cbbcfcc577a3f3166
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f103da7ca67721f6c654c593746b9427954c6930
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tzset"></a>_tzset
 Ustawia czas zmiennych środowiskowych.  
@@ -144,4 +145,4 @@ _tzname[0] = Pacific Standard Time
  [gmtime —, _gmtime32 —, _gmtime64 —](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
  [czas lokalny, _localtime32 —, _localtime64 —](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [czas, _time32 —, _time64 —](../../c-runtime-library/reference/time-time32-time64.md)   
- [_utime —, _utime32 —, _utime64 —, _wutime — _wutime32 —, _wutime64 —](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)
+ [_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)

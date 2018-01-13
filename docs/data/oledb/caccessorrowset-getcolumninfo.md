@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3f982c516ef6c85ae2650bb26e2a7e1cdf28b7be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6a9503f02d5cf7c98f98a31d250e3412b6afec07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caccessorrowsetgetcolumninfo"></a>CAccessorRowset::GetColumnInfo
 Pobiera informacje dotyczące kolumn z otwartego zestawu wierszy.  
@@ -57,4 +60,4 @@ HRESULT GetColumnInfo(
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Caccessorrowset — klasa](../../data/oledb/caccessorrowset-class.md)
+ [CAccessorRowset, klasa](../../data/oledb/caccessorrowset-class.md)

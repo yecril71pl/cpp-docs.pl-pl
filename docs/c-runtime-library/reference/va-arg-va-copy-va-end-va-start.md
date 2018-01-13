@@ -48,11 +48,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4dc911bfd08781240eaaa73492b61278348bd790
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d131a02caf931a7696076094372678741c7a897e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 Uzyskuje dostęp do listy zmiennych argumentów.  
@@ -237,4 +238,4 @@ Deviation is: 0.000000
   
 ## <a name="see-also"></a>Zobacz też  
  [Dostęp do argumentów](../../c-runtime-library/argument-access.md)   
- [vfprintf —, _vfprintf_l —, vfwprintf — _vfwprintf_l —](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)
+ [vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)

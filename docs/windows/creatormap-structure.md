@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c61238a809da49686975acbfb8016996cf5d5c1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a941f052527b3617772bcb18b2092fdc35ea3a22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creatormap-structure"></a>CreatorMap — Struktura
 Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego systemu Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -49,10 +52,10 @@ struct CreatorMap;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Creatormap::activationid — członek danych](../windows/creatormap-activationid-data-member.md)|Reprezentuje identyfikator obiektu, który jest identyfikowany przez identyfikator klasy klasycznego modelu COM lub nazwę środowiska wykonawczego systemu Windows.|  
-|[Creatormap::factorycache — członek danych](../windows/creatormap-factorycache-data-member.md)|Creatormap — przechowuje wskaźnik do pamięci podręcznej fabryki.|  
-|[Creatormap::factorycreator — członek danych](../windows/creatormap-factorycreator-data-member.md)|Tworzy fabrykę dla określonego creatormap —.|  
-|[Creatormap::servername — członek danych](../windows/creatormap-servername-data-member.md)|Przechowuje nazwę serwera dla creatormap —.|  
+|[CreatorMap::activationId, składowa danych](../windows/creatormap-activationid-data-member.md)|Reprezentuje identyfikator obiektu, który jest identyfikowany przez identyfikator klasy klasycznego modelu COM lub nazwę środowiska wykonawczego systemu Windows.|  
+|[CreatorMap::factoryCache, składowa danych](../windows/creatormap-factorycache-data-member.md)|Creatormap — przechowuje wskaźnik do pamięci podręcznej fabryki.|  
+|[CreatorMap::factoryCreator, składowa danych](../windows/creatormap-factorycreator-data-member.md)|Tworzy fabrykę dla określonego creatormap —.|  
+|[CreatorMap::serverName, składowa danych](../windows/creatormap-servername-data-member.md)|Przechowuje nazwę serwera dla creatormap —.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `CreatorMap`  
@@ -63,4 +66,4 @@ struct CreatorMap;
  **Namespace:** Microsoft::wrl:: details —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: details — Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

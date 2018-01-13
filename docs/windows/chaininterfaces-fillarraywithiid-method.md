@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a45a9f8a709b70ae48597923bb153d28b22980af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 02e78ade52de45cfe06ba9d8cddfe0a2362d1bc9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid — Metoda
 Identyfikator interfejsu zdefiniowanych przez magazynów `I0` parametr szablonu do określonej lokalizacji w określonej tablicy interfejsu identyfikatorów.  
@@ -46,4 +49,4 @@ __forceinline static void FillArrayWithIid(
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Chaininterfaces — struktura](../windows/chaininterfaces-structure.md)
+ [ChainInterfaces, struktura](../windows/chaininterfaces-structure.md)

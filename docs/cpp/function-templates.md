@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4186329b164ab3fe6daba12ed3cbbd2008085fb9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 721e466e5d7e77592e66aa3ebacb3ad59eb89bb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-templates"></a>Szablony funkcji
 Szablony klas definiują rodzinę powiązanych klas, które są oparte na argumentach typu przekazywanych do klasy podczas tworzenia jej wystąpienia. Szablony funkcji są podobne do szablonów klas, ale definiują rodzinę funkcji. Dzięki szablonom funkcji, możesz określić zestaw funkcji, które są oparte na tym samym kodzie, ale działają na różnych typach lub klasach. Następujący szablon funkcji zamienia dwa elementy:  

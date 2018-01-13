@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6954c3eecfb3e6048a653401f4238b950e3aecf0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b7410d34b7b9f31c96cf7e991133770099735a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unhandled-c-exceptions"></a>Nieobsługiwane wyjątki języka C++
 Jeśli pasujące obsługi (lub wielokropek **catch** obsługi) nie można odnaleźć dla bieżącego wyjątku, wstępnie zdefiniowane `terminate` została wywołana funkcja czasu wykonywania. (Można również jawnie wywołać `terminate` w żadnym z programu obsługi.) Domyślną akcję `terminate` jest wywołanie `abort`. Jeśli chcesz `terminate` wywoływanie niektórych innych funkcji w programie przed zakończeniem pracy aplikacji, należy wywołać `set_terminate` funkcji o nazwie funkcja wywoływana, jako jego jeden argument. Możesz wywołać `set_terminate` w dowolnym momencie w programie. `terminate` Procedura zawsze wywołuje ostatniej podany jako argument do funkcji `set_terminate`.  
@@ -63,4 +64,4 @@ term_func was called by terminate.
  `term_func` Funkcja powinna zakończyć działanie programu lub bieżący wątek, najlepiej przez wywołanie metody `exit`. Jeśli nie, a zamiast tego zwraca do swojego obiektu wywołującego `abort` jest wywoływana.  
   
 ## <a name="see-also"></a>Zobacz też  
- [C++, obsługa wyjątków](../cpp/cpp-exception-handling.md)
+ [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)

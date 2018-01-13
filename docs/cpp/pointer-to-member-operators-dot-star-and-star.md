@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a77c69b2268ea1d97cc92122ab587b1c70be0e42
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6db7b7190a1374564071775ce2ea6c0777bdf567
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>Operatory wskaźników do elementów członkowskich:. * i -&gt;*
 ## <a name="syntax"></a>Składnia  
@@ -37,7 +38,7 @@ expression ->* expression
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Operatory wskaźników do elementów członkowskich. * i ->\*, zwróć wartość elementu członkowskiego klasy określonego dla obiektu określonego po lewej stronie wyrażenia.  Po prawej stronie należy określić element członkowski klasy.  Poniższy przykład ilustruje sposób używania operatorów:  
+ Operatory wskaźników do elementów członkowskich. * i ->\*, zwróć wartość elementu członkowskiego klasy określonego dla obiektu określonego po lewej stronie wyrażenia.  Po prawej stronie należy określić składową klasy.  Poniższy przykład ilustruje sposób używania operatorów:  
   
 ```  
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
@@ -88,11 +89,11 @@ m_func1
   
  W poprzednim przykładzie, wskaźnik do elementu członkowskiego, `pmfn`, jest używany do wywoływania funkcji członkowskiej `m_func1`. Inny wskaźnik do elementu członkowskiego, `pmd`, jest używany w celu uzyskania dostępu do członka `m_num`.  
   
- Operator binarny .* łączy pierwszy argument operacji, który musi być obiektem typu klasy, z drugim argumentem operacji, który musi być typem wskaźnika do elementu członkowskiego.  
+ Operator binarny .* łączy pierwszy argument operacji, który musi być obiektem typu klasy, z drugim argumentem operacji, który musi być typem wskaźnika do składowej.  
   
  Binarny operator -> * łączy jego pierwszy argument, który musi być wskaźnik do obiektu typu klasy, z drugi argument, który musi być typu wskaźnika do elementu członkowskiego.  
   
- W wyrażeniu zawierającym operator .* pierwszy argument operacji musi być typem klasy oraz zapewniać dostęp dla wskaźnika do elementu członkowskiego określonego w drugim argumencie operacji lub być typem jednoznacznie pochodnym i dostępnym dla tej klasy.  
+ W wyrażeniu zawierającym operator .* pierwszy argument operacji musi być typem klasy oraz zapewniać dostęp dla wskaźnika do składowej określonej w drugim argumencie operacji lub być typem jednoznacznie pochodnym i dostępnym dla tej klasy.  
   
  W wyrażeniu zawierającym-> * pierwszy argument musi być typu "wskaźnik do typu klasy" typ określony w drugi operand operatora, lub go musi być typu jednoznacznie pochodną klasy.  
   
@@ -141,5 +142,5 @@ int main() {
 >  Jeżeli wynik jednego z operatorów wskaźnika do elementu członkowskiego jest funkcją, wynik może używany tylko jako argument operatora wywołania funkcji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+ [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 

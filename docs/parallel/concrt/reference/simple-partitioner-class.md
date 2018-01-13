@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9e4526f86423d1b374bf08a6837e47afb884960
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1d509afd9cddd8ac119d12ce2a0cb88906e83aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simplepartitioner-class"></a>simple_partitioner — Klasa
 `simple_partitioner` Klasa reprezentuje partycjonowania statycznego zakresu iterowane przez `parallel_for`. Obiekt partitioner dzieli zakres fragmentów tak, aby każdy fragment jest co najmniej liczby iteracji określony przez rozmiar fragmentu.  
@@ -70,4 +71,4 @@ explicit simple_partitioner(_Size_type _Chunk_size);
  `_Chunk_size`  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)
+ [Przestrzeń nazw współbieżności](concurrency-namespace.md)

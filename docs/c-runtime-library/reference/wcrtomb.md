@@ -33,11 +33,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3da63f898e1bf1b218ae71d6918d09388667c6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c9dfe3b112754d573226fe992d346d57de56406
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcrtomb"></a>wcrtomb
 Przekonwertuj znaków dwubajtowych na jej reprezentację znaków wielobajtowych. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [wcrtomb_s —](../../c-runtime-library/reference/wcrtomb-s.md).  
@@ -136,4 +137,4 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [mbsinit —](../../c-runtime-library/reference/mbsinit.md)
+ [mbsinit](../../c-runtime-library/reference/mbsinit.md)

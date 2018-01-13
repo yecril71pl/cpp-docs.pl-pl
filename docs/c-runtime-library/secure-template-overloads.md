@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04eae2c263c8b26e44e8c1b05736061ad9291ef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92ad08738ea2c8c748ac642c5ea15f4b0a257da9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="secure-template-overloads"></a>Przeciążenia bezpiecznych szablonów
 Microsoft ma przestarzały wiele C Runtime (CRT) funkcje na rzecz wersje rozszerzonymi zabezpieczeniami. Na przykład `strcpy_s` bezpieczniejsze zastępuje `strcpy`. Przestarzałe funkcje są wspólnych źródeł błędów zabezpieczeń, ponieważ nie uniemożliwiają operacje, które mogą zastąpić pamięci. Domyślnie kompilator generuje ostrzeżenie podczas korzystania z jednego z tych funkcji. CRT zapewnia przeciążenia szablonów języka C++ dla tych funkcji w celu ułatwienia przejście do bardziej bezpieczne wariantów.  
@@ -102,4 +103,4 @@ strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md)   
- [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md)
+ [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25a65dae7b030cc1728194cce5d989c34fa06667
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5166dd4d8c57d3d64fb9d794319b7f2b0398e3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="join-class"></a>join — Klasa
 A `join` Blok obsługi wiadomości jest element docelowy jednym wielu źródłach, uporządkowanych `propagator_block` które łączy ze sobą komunikaty typu `T` każdego z jego źródła.  
@@ -259,4 +260,4 @@ virtual void resume_propagation();
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
  [Klasa wyboru](choice-class.md)   
- [multitype_join — klasa](multitype-join-class.md)
+ [multitype_join, klasa](multitype-join-class.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c43b8453b592369d8179c9d3917bdbcc7381fa00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94a047de82bebb03f681e1bfdf6f68d56554fe8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-creating-worker-threads"></a>Wielowątkowość: tworzenie wątków roboczych
 Wątek roboczy jest najczęściej używany do obsługi zadań w tle, które użytkownik nie powinny mieć zaczekać, aby kontynuować korzystanie z aplikacji. Zadania, takie jak ponowne obliczenie i drukowanie w tle są dobrym przykładem wątków roboczych. W tym temacie opisano kroki niezbędne do utworzenia wątku roboczego. Tematy obejmują:  
@@ -98,7 +99,7 @@ AfxBeginThread(MyThreadProc, pNewObject);
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
   
--   [Wielowątkowość: Tworzenie wątków interfejsu użytkownika](../parallel/multithreading-creating-user-interface-threads.md)  
+-   [Wielowątkowość: tworzenie wątków interfejsu użytkownika](../parallel/multithreading-creating-user-interface-threads.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)

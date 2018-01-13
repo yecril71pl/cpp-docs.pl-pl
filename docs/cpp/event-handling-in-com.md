@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3173d01898fc63327c5e4d4c6ce4f536b1245450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c57b8429a05ab3989dce318f4c16a58475560a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-in-com"></a>Obsługa zdarzeń w modelu COM
 W obsłudze zdarzeń COM, konfigurowanie obsługiwanego odbiornika źródła i zdarzeń za pomocą [event_source —](../windows/event-source.md) i [event_receiver](../windows/event-receiver.md) atrybutów, określając `type` = **com**. Te atrybuty wprowadzają odpowiedni kod dla interfejsów niestandardowych, wysyłania i dualnych, aby umożliwić odpowiednim klasom wywoływanie zdarzeń i obsługę zdarzeń za pośrednictwem punktów połączenia COM.  
@@ -46,7 +47,7 @@ W obsłudze zdarzeń COM, konfigurowanie obsługiwanego odbiornika źródła i z
  Również w klasy odbiorcy zdarzeń, można używać funkcji wewnętrznej [__hook](../cpp/hook.md) do skojarzenia zdarzeń z obsługi zdarzeń i [__unhook](../cpp/unhook.md) można usunąć skojarzenia zdarzenia z obsługi zdarzeń. Można podłączyć kilka zdarzeń do programu obsługi zdarzeń lub kilka programów obsługi zdarzeń do zdarzenia.  
   
 > [!NOTE]
->  Zwykle istnieją dwie techniki udostępniające odbiorcy zdarzenia COM definicje interfejsu źródła zdarzeń. Pierwszą techniką, jak pokazano poniżej, jest udostępnienie wspólnego pliku nagłówka. Druga to użycie [#import](../preprocessor/hash-import-directive-cpp.md) z `embedded_idl` zaimportować kwalifikator, dzięki czemu biblioteki typów źródła zdarzenia są zapisywane do pliku danych .tlh — kod wygenerowany przez atrybut zachowane.  
+>  Zwykle istnieją dwie techniki udostępniające odbiorcy zdarzenia COM definicje interfejsu źródła zdarzeń. Pierwszą techniką, jak pokazano poniżej, jest udostępnienie wspólnego pliku nagłówkowego. Druga to użycie [#import](../preprocessor/hash-import-directive-cpp.md) z `embedded_idl` zaimportować kwalifikator, dzięki czemu biblioteki typów źródła zdarzenia są zapisywane do pliku danych .tlh — kod wygenerowany przez atrybut zachowane.  
   
 ## <a name="firing-events"></a>Wyzwalanie zdarzeń  
  Aby wyzwolić zdarzenie, po prostu wywołaj metodę w zadeklarowanym interfejsie za pomocą słowa kluczowego `__event` w klasie źródła zdarzenia. Jeśli programy obsługi zostały podłączone do zdarzenia, zostaną wywołane programy obsługi.  

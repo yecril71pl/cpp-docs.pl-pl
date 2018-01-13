@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f4e90281b3202303fa95e44684f8250259d0d653
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 48dd657d4cf1b315b29fda881b949dea29204f24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-and-mfc"></a>ODBC i MFC
 > [!NOTE]
@@ -33,11 +36,11 @@ ms.lasthandoff: 10/24/2017
   
  W tym temacie główne pojęcia związane z klasami bazy danych opartej na ODBC biblioteki Microsoft Foundation Classes (MFC) i zawiera omówienie sposobu klasy współpracują ze sobą. Aby uzyskać więcej informacji na temat ODBC i MFC zobacz następujące tematy:  
   
--   [Połączenie ze źródłem danych](connecting-to-a-data-source.md)  
+-   [Nawiązywanie połączenia ze źródłem danych](connecting-to-a-data-source.md)  
   
 -   [Wybieranie rekordów i operowanie nimi](selecting-and-manipulating-records.md)  
   
--   [Wyświetlanie i manipulowanie danymi w formularzu](displaying-and-manipulating-data-in-a-form.md)  
+-   [Wyświetlanie danych w formularzu i operowanie nimi](displaying-and-manipulating-data-in-a-form.md)  
   
 -   [Praca z dokumentami i widokami](working-with-documents-and-views.md)  
   
@@ -48,4 +51,4 @@ ms.lasthandoff: 10/24/2017
  Klasy baz danych MFC ODBC w oparciu mają na celu zapewnienia dostępu do dowolnej bazy danych, dla którego jest dostępny sterownik ODBC. Ponieważ klasy używają ODBC, aplikacji można uzyskać dostępu do danych w wielu formatów danych i różne konfiguracje zdalni lokalnego. Nie trzeba napisać kod specjalny przypadek do obsługi systemów zarządzania innej bazy danych (DBMS). Użytkownicy mają odpowiedni sterownik ODBC dla danych, które chcą uzyskać dostęp, korzystają z programem do manipulowania dane w tabelach przechowywanych.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Otwórz połączenie z bazą danych (ODBC)](open-database-connectivity-odbc.md)
+ [Open Database Connectivity (ODBC)](open-database-connectivity-odbc.md)

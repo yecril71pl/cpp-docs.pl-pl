@@ -19,11 +19,12 @@ caps.latest.revision: "56"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 26b41c4fa3f3cdc9840eecbd31790b7cf82d7659
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2a177f30829719022afdedd810ecc265c94130d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Równoległość zadania (współbieżność środowiska wykonawczego)
 Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, który wykonuje określone zadanie i zwykle uruchamia się równolegle z innymi zadaniami. Zadanie może być rozłożone na dodatkowych, bardziej szczegółowych zadań, które są podzielone na *grupy zadań*.  
@@ -319,16 +320,16 @@ Message from task: 42
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Porady: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Przedstawia sposób użycia `parallel_invoke` algorytmu, aby poprawić wydajność bitonic algorytm sortowania.|  
-|[Porady: Korzystanie z parallel_invoke do przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Przedstawia sposób użycia `parallel_invoke` algorytmu, aby poprawić wydajność program, który wykonuje wiele operacji na udostępnione źródło danych.|  
-|[Porady: Tworzenie zadania kończonego po opóźnieniu](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Przedstawia sposób użycia `task`, `cancellation_token_source`, `cancellation_token`, i `task_completion_event` klasy Tworzenie zadania kończonego po opóźnieniu.|  
-|[Wskazówki: Wdrażanie przyszłych operacji](../../parallel/concrt/walkthrough-implementing-futures.md)|Pokazuje, jak połączyć istniejące funkcje współbieżność środowiska wykonawczego na coś nieistniejącego więcej.|  
-|[Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|W tym artykule opisano PPL, które zapewnia model programowania konieczne tworzenie współbieżnych aplikacji.|  
+|[Instrukcje: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Przedstawia sposób użycia `parallel_invoke` algorytmu, aby poprawić wydajność bitonic algorytm sortowania.|  
+|[Instrukcje: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Przedstawia sposób użycia `parallel_invoke` algorytmu, aby poprawić wydajność program, który wykonuje wiele operacji na udostępnione źródło danych.|  
+|[Instrukcje: tworzenie zadania kończonego po opóźnieniu](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Przedstawia sposób użycia `task`, `cancellation_token_source`, `cancellation_token`, i `task_completion_event` klasy Tworzenie zadania kończonego po opóźnieniu.|  
+|[Przewodnik: wdrażanie przyszłych operacji](../../parallel/concrt/walkthrough-implementing-futures.md)|Pokazuje, jak połączyć istniejące funkcje współbieżność środowiska wykonawczego na coś nieistniejącego więcej.|  
+|[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|W tym artykule opisano PPL, które zapewnia model programowania konieczne tworzenie współbieżnych aplikacji.|  
   
 ## <a name="reference"></a>Tematy pomocy  
- [Task — klasa (współbieżność środowiska wykonawczego)](../../parallel/concrt/reference/task-class.md)  
+ [task, klasa (środowisko uruchomieniowe współbieżności)](../../parallel/concrt/reference/task-class.md)  
   
- [task_completion_event — klasa](../../parallel/concrt/reference/task-completion-event-class.md)  
+ [task_completion_event, klasa](../../parallel/concrt/reference/task-completion-event-class.md)  
 
  [when_all — funkcja](reference/concurrency-namespace-functions.md#when_all)  
   
@@ -338,4 +339,4 @@ Message from task: 42
   
  [parallel_invoke — funkcja](reference/concurrency-namespace-functions.md#parallel_invoke)  
   
- [structured_task_group — klasa](../../parallel/concrt/reference/structured-task-group-class.md)
+ [structured_task_group, klasa](../../parallel/concrt/reference/structured-task-group-class.md)

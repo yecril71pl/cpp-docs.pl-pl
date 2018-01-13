@@ -21,16 +21,17 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4fc108f6f4755319d500227d9163dc090847e2ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e034a268a6ff3c3fc04da4e50a4477324ec1880
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointerstomembers"></a>pointers_to_members
 **Określonego języka C++**  
   
- Określa, czy wskaźnik do członka klasy może być zadeklarowany przed jego definicją klasy skojarzonej i jest używany do kontroli rozmiaru wskaźnika oraz kodu wymaganego do interpretacji wskaźnika.  
+ Określa, czy wskaźnik do składowej klasy może być zadeklarowany przed jego definicją klasy skojarzonej i jest używany do kontroli rozmiaru wskaźnika oraz kodu wymaganego do interpretacji wskaźnika.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,14 +48,14 @@ ms.lasthandoff: 10/24/2017
 |Argument|Komentarze|  
 |--------------|--------------|  
 |**full_generality**|Generuje bezpieczny, czasem nieoptymalny kod. Możesz użyć **full_generality** zadeklarowana przed definicji klasy skojarzone żadnych wskaźnika do elementu członkowskiego. Ten argument zawsze używa reprezentacja wskaźnika określony przez *większość ogólna reprezentacja* argumentu. Równoważny z /vmg.|  
-|**best_case**|Generuje bezpieczny, optymalny kod przy użyciu reprezentacji najlepszego przypadku dla wszystkich wskaźników do członków. Wymaga zdefiniowania klasy przed zadeklarowaniem wskaźnika do członka klasy. Wartość domyślna to **best_case**.|  
+|**best_case**|Generuje bezpieczny, optymalny kod przy użyciu reprezentacji najlepszego przypadku dla wszystkich wskaźników do członków. Wymaga zdefiniowania klasy przed zadeklarowaniem wskaźnika do składowej klasy. Wartość domyślna to **best_case**.|  
   
  *Większość ogólna reprezentacja* argument określa najmniejszy reprezentacja wskaźnika kompilator bezpiecznie umożliwia odwołanie wszelkich wskaźnika do elementu członkowskiego klasy w jednostce tłumaczenia. Argument może być jednym z następujących:  
   
 |Argument|Komentarze|  
 |--------------|--------------|  
-|**pojedynczego dziedziczenia**|Najbardziej ogólną reprezentacją jest pojedyncze dziedziczenie, wskaźnik do funkcji członkowskiej. Powoduje błąd, jeśli model dziedziczenia definicji klasy, do której zgłaszany jest wskaźnik do członka jest wielokrotny lub wirtualny.|  
-|**multiple_inheritance**|Najbardziej ogólną reprezentacją jest wielokrotne dziedziczenie, wskaźnik do funkcji członkowskiej. Powoduje błąd, jeśli model dziedziczenia definicji klasy, do której zgłaszany jest wskaźnik do członka jest wirtualny.|  
+|**pojedynczego dziedziczenia**|Najbardziej ogólną reprezentacją jest pojedyncze dziedziczenie, wskaźnik do funkcji członkowskiej. Powoduje błąd, jeśli model dziedziczenia definicji klasy, do której zgłaszany jest wskaźnik do składowej, jest wielokrotny lub wirtualny.|  
+|**multiple_inheritance**|Najbardziej ogólną reprezentacją jest wielokrotne dziedziczenie, wskaźnik do funkcji członkowskiej. Powoduje błąd, jeśli model dziedziczenia definicji klasy, do której zgłaszany jest wskaźnik do składowej, jest wirtualny.|  
 |**virtual_inheritance**|Najbardziej ogólną reprezentacją jest wirtualne dziedziczenie, wskaźnik do funkcji członkowskiej. Nigdy nie powoduje błędu. To jest argument domyślny po **#pragma pointers_to_members(full_generality)** jest używany.|  
   
 > [!CAUTION]

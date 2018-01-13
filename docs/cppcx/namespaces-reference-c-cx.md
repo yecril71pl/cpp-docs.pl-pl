@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: d2c241add0893535be3932e85f1a37daa0d5b642
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b98510e6a027927ee7e24bdf7ba44c7a902b84a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-reference-ccx"></a>Odwołanie do przestrzeni nazw (C + +/ CX)
 Artykuły w tej sekcji dokumentacji opisano przestrzeni nazw, który obsługuje kompilator C + +/ CX.  
@@ -30,7 +31,7 @@ Artykuły w tej sekcji dokumentacji opisano przestrzeni nazw, który obsługuje 
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Domyślna przestrzeń nazw](../cppcx/default-namespace.md)|Zawiera opisy typów wbudowanych, podstawowe.|  
+|[domyślna przestrzeń nazw](../cppcx/default-namespace.md)|Zawiera opisy typów wbudowanych, podstawowe.|  
 |[Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)|Zawiera opisy typów, które są dostępne, a także wewnętrzne typy, które są używane tylko przez infrastrukturę kompilatora.|  
 |[Namespace Windows::Foundation::Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Zawiera opisy ulepszeń i rozszerzenia do środowiska wykonawczego systemu Windows`Windows::Foundation::Collections` przestrzeni nazw.|  
   

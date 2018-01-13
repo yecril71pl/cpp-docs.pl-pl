@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e260306a896c39f070be6794cf2f63a307b7cd99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8de8f3a9a027a1b9ae4862d21e27a45f110047b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key — Klasa
 Ta klasa opisuje wyjątek wywoływany, gdy jest nieprawidłowa lub nieznany klucz jest przekazywana do `SchedulerPolicy` konstruktora obiektów lub `SetPolicyValue` metody `SchedulerPolicy` przekazanego obiektu klucz, który musi zostać zmienione za pomocą innych środków, takich jak `SetConcurrencyLimits` metody.  
@@ -67,4 +68,4 @@ invalid_scheduler_policy_key() throw();
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [Schedulerpolicy — klasa](schedulerpolicy-class.md)
+ [SchedulerPolicy, klasa](schedulerpolicy-class.md)

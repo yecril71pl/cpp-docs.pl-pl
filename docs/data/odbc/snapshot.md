@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8671ce1eefd73b2b8af506b621258e81cbed9b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c31e08fdda3cef526f46946e45ef956f9ad1adaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="snapshot"></a>Migawka
 Migawka jest zestaw rekordów, które odzwierciedla widok statyczny danych, który istniał w momencie utworzenia migawki. Po otwarciu migawki i Przenieś do wszystkich rekordów, zestaw rekordów zawiera i ich wartości nie należy zmieniać dopóki odbudować migawki przez wywołanie metody **Requery**.  
@@ -54,4 +57,4 @@ Migawka jest zestaw rekordów, które odzwierciedla widok statyczny danych, któ
  Aby uzyskać więcej informacji o udziale migawki właściwości z wszystkich zestawów rekordów, zobacz [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md). Aby uzyskać więcej informacji na temat ODBC i migawki, łącznie z biblioteki kursorów ODBC zobacz [ODBC](../../data/odbc/odbc-basics.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Otwórz połączenie z bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

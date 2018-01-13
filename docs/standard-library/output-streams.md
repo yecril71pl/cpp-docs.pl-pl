@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2a16e9125c0c121aea3905b6e20eba59ef1dc68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8fee8ecffda86f306b44f0d5b873d5192d4d181
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-streams"></a>Strumienie wyjściowe
 Obiekt strumień wyjściowy jest docelowy dla bajtów. Są trzy najważniejsze klasy strumienia wyjściowego `ostream`, `ofstream`, i `ostringstream`.  
@@ -44,18 +45,18 @@ Obiekt strumień wyjściowy jest docelowy dla bajtów. Są trzy najważniejsze k
   
  [Korzystanie z operatorów wstawiania i formatu kontrolującego](../standard-library/using-insertion-operators-and-controlling-format.md)  
   
- [Funkcje elementów członkowskich strumienia pliku danych wyjściowych](../standard-library/output-file-stream-member-functions.md)  
+ [Funkcje składowe strumienia pliku danych wyjściowych](../standard-library/output-file-stream-member-functions.md)  
   
  [Efekty buforowania](../standard-library/effects-of-buffering.md)  
   
- [Binarne pliki wyjściowe](../standard-library/binary-output-files.md)  
+ [Wyjściowe pliki binarne](../standard-library/binary-output-files.md)  
   
- [Przeciążanie << operatora dla własnych klas](../standard-library/overloading-the-output-operator-for-your-own-classes.md)  
+ [Przeciążanie operatora << dla własnych klas](../standard-library/overloading-the-output-operator-for-your-own-classes.md)  
   
  [Tworzenie manipulatorów bez argumentów](../standard-library/writing-your-own-manipulators-without-arguments.md)  
   
 ## <a name="see-also"></a>Zobacz też 
  [ofstream](../standard-library/basic-ofstream-class.md)   
  [ostringstream](../standard-library/basic-ostringstream-class.md)   
- [iostream — programowanie](../standard-library/iostream-programming.md)
+ [iostream, programowanie](../standard-library/iostream-programming.md)
 

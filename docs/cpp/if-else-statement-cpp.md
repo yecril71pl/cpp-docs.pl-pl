@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32fbc99ab51736b5950ce7982457dd0f2f1bc1b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="if-else-statement-c"></a>if-else — instrukcja (C++)
 Formanty warunkowego rozgałęziania. Instrukcje w *bloku if* są wykonywane tylko wtedy, gdy *wyrażenie if* ma wartość inną niż zero (lub `true`). Jeśli wartość *wyrażenie* jest różna od zera, *statement1* i inne instrukcje w bloku są wykonywane oraz innego bloku, jeśli istnieje, zostanie pominięty. Jeśli wartość *wyrażenie* wynosi zero, a następnie bloku Jeśli zostanie pominięta i innego bloku, jeśli istnieje, jest wykonywane. Są wyrażenia, których ocena ma inną niż zero
@@ -199,4 +200,4 @@ void f(T&& t, Rest&&... r)
 ## <a name="see-also"></a>Zobacz też  
  [Zaznaczenie — instrukcje](../cpp/selection-statements-cpp.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)   
- [Switch — instrukcja (C++)](../cpp/switch-statement-cpp.md)
+ [switch, instrukcja (C++)](../cpp/switch-statement-cpp.md)

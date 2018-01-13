@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 05b83a284dcf599890985f1f01d8327ac5ef75e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-operator-c"></a>new — Operator (C++)
 Przydziela pamięć dla obiekt lub tablicę obiektów *nazwy typu* z bezpłatną magazynu i zwraca wskaźnik typizowany odpowiednio, różną od zera do obiektu.  
@@ -232,7 +233,7 @@ int main()
   
 -   Zwraca wskaźnik do obiektów typu wskaźnika pochodną *nową nazwę typu* lub *nazwy typu*. Program używa tego wskaźnika do dostępu do nowo przydzielonego obiektu.  
   
- **Nowe** operator wywołuje funkcję `operator new`. Dla tablic dowolnego typu, a dla obiektów, które nie mają **klasy**, `struct`, lub **Unii** typów, funkcją globalną **:: nowy operator**, jest wywoływana, aby przydzielić magazyn. Obiekty typu klasy mogą definiować własne statyczne funkcje członkowskie `operator new` na podstawie klasy.  
+ **Nowe** operator wywołuje funkcję `operator new`. Dla tablic dowolnego typu, a dla obiektów, które nie mają **klasy**, `struct`, lub **Unii** typów, funkcją globalną **:: nowy operator**, jest wywoływana, aby przydzielić magazyn. Obiekty typu klasy mogą definiować własne statyczne funkcje składowe `operator new` na podstawie klasy.  
   
  Gdy wystąpi kompilator **nowe** operator można przydzielić obiektu typu `type`, wystawia wywołanie `type` **:: nowy operator (sizeof (** `type` **))**  lub, jeśli nie, zdefiniowane przez użytkownika `operator new` jest zdefiniowany, **:: nowy operator (sizeof (** `type` **))**. W związku z tym **nowe** operator może Przydziel poprawną ilość pamięci dla obiektu.  
   

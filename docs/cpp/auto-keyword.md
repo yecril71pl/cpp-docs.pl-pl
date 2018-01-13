@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21b2155ffd5bb3861202c112bd9552ed36113a02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3508217e7dc333543fa2dbff9cf0643d6faff060
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="auto-keyword"></a>auto — słowo kluczowe
 `auto` — Słowo kluczowe jest Specyfikator deklaracji. Jednak C++ standard definiuje oryginalny i poprawione znaczenie dla tego słowa kluczowego. Przed Visual C++ 2010 `auto` — słowo kluczowe deklaruje zmienną w *automatyczne* Klasa magazynu; oznacza to, że zmienna, która ma lokalnego czas istnienia. Począwszy od programu Visual C++ 2010, `auto` — słowo kluczowe deklaruje zmienną, którego typ jest ustalane z wyrażenia inicjowania w jego deklaracji. [/Zc: Auto &#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md) — opcja kompilatora steruje znaczenie `auto` — słowo kluczowe.  

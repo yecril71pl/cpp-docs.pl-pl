@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 45e9d2e6940955b07624b89cafd09b7d89d9cd2c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9dde09f2125b595ffb3d79a69b4755353a0116bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="required-and-optional-header-files"></a>Wymagane i opcjonalne nagłówki plików
 Opis każdej procedury czasu wykonywania zawiera listę wymaganych i opcjonalnych obejmują, lub nagłówek (. H), pliki dla tej procedury. Pliki nagłówkowe wymagane należy dołączone w celu uzyskania deklaracji funkcji dla procedury lub definicji używany przez inny procedury wywoływana wewnętrznie. Opcjonalne nagłówki plików znajdują się zwykle mógł korzystać z wstępnie zdefiniowanych stałe, definicje typów lub makra w tekście. W poniższej tabeli wymieniono niektóre przykłady opcjonalne nagłówki plików zawartości:  
@@ -35,4 +36,4 @@ Opis każdej procedury czasu wykonywania zawiera listę wymaganych i opcjonalnyc
  Pliki nagłówka biblioteki wykonawczej Podaj deklaracje funkcji w standardowej stylu zalecane ANSI/ISO C. Kompilator wykonuje sprawdzanie na wszystkich odwołań rutynowych występujący po jego deklaracji funkcji skojarzonego typu. Deklaracje funkcji są szczególnie ważne w przypadku procedury, które zwracają wartości typu innego niż `int`, co jest ustawieniem domyślnym. Procedury, które nie określają ich zwraca wartość w deklaracji będą uznawane za przez kompilator do zwrócenia `int`, co może spowodować nieoczekiwane wyniki. Zobacz [Sprawdzanie typu](../c-runtime-library/type-checking-crt.md) Aby uzyskać więcej informacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md)
+ [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

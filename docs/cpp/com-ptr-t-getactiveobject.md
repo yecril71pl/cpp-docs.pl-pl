@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 153f7ffce400fd09e46706a361eebc87bbe1e1c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a67d571c2e5b80eaa1c095cc517872b8e3918fd6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Dotyczące firmy Microsoft**  
@@ -54,13 +55,13 @@ HRESULT GetActiveObject(
 ## <a name="remarks"></a>Uwagi  
  Wywołanie funkcji tych elementów członkowskich `GetActiveObject` pobrać wskaźnika do uruchomionego obiektu, który został zarejestrowany z OLE, a następnie typ interfejsu zapytania dotyczące wskaźnika inteligentnego. Wynikowa wskaźnika jest następnie hermetyzowany w ramach tego `_com_ptr_t` obiektu. **Wersja** jest wywoływana, aby zmniejszyć licznika odwołań do wcześniej hermetyzowany wskaźnika. Ta procedura zwraca `HRESULT` do wskazania powodzenia lub niepowodzenia.  
   
--   **GetActiveObject (**`rclsid`**)** dołącza do istniejącego wystąpienia obiektu podane **CLSID**.      
+-   **GetActiveObject (**`rclsid`**)** dołącza do istniejącego wystąpienia obiektu podane **CLSID**.  
   
--   **GetActiveObject (**`clsidString`**)** dołącza do istniejącego wystąpienia obiektu podany ciąg Unicode, która przechowuje albo **CLSID** (począwszy od "**{**") lub **ProgID**.      
+-   **GetActiveObject (**`clsidString`**)** dołącza do istniejącego wystąpienia obiektu podany ciąg Unicode, która przechowuje albo **CLSID** (począwszy od "**{**") lub **ProgID**.  
   
--   **GetActiveObject (**`clsidStringA`**)** dołącza do istniejącego wystąpienia obiektu podany ciąg znaków wielobajtowych, który przechowuje albo **CLSID** (począwszy od "**{**") lub **ProgID**.     Wywołania [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), który zakłada, że ten ciąg w stronę kodową ANSI zamiast strony kodowej OEM.  
+-   **GetActiveObject (**`clsidStringA`**)** dołącza do istniejącego wystąpienia obiektu podany ciąg znaków wielobajtowych, który przechowuje albo **CLSID** (począwszy od "**{**") lub **ProgID**. Wywołania [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), który zakłada, że ten ciąg w stronę kodową ANSI zamiast strony kodowej OEM.  
   
  **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [_com_ptr_t — klasa](../cpp/com-ptr-t-class.md)
+ [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

@@ -119,11 +119,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04605ec5df5512549822d0e585bf1b28eb0b42e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39098fc501ba94c4fa2cd6cf779e7c5c71cc2f1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iosbase-class"></a>ios_base — Klasa
 Klasa opisuje magazyn i funkcje Członkowskie wspólne dla wejścia i wyjścia strumieni, które nie są zależne od parametrów szablonu. (Klasy szablonu [basic_ios —](../standard-library/basic-ios-class.md) opisano, co jest typowe i jest zależna od parametrów szablonu.)  
@@ -164,7 +165,7 @@ Klasa opisuje magazyn i funkcje Członkowskie wspólne dla wejścia i wyjścia s
   
 |||  
 |-|-|  
-|[zdarzenia](#event)|Określa typy zdarzeń.|  
+|[event](#event)|Określa typy zdarzeń.|  
   
 ### <a name="constants"></a>Stałe  
   
@@ -187,11 +188,11 @@ Klasa opisuje magazyn i funkcje Członkowskie wspólne dla wejścia i wyjścia s
 |[floatfield](#fmtflags)|Maska bitowa zdefiniowany jako `fixed` &#124;`scientific`|  
 |[goodbit](#iostate)|Wyczyść wszystkie bity stanu.|  
 |[Hex](#fmtflags)|Określa, wstawiania lub wyodrębniania wartości całkowite w formacie szesnastkowym.|  
-|[w](#openmode)|Określa wyodrębniania ze strumienia.|  
-|[wewnętrzny](#fmtflags)|Konsole do szerokości pola, wstawiając znaki w punkcie wewnętrzny wygenerowanego pola liczbowego.|  
+|[in](#openmode)|Określa wyodrębniania ze strumienia.|  
+|[internal](#fmtflags)|Konsole do szerokości pola, wstawiając znaki w punkcie wewnętrzny wygenerowanego pola liczbowego.|  
 |[po lewej](#fmtflags)|Określa wyrównania do lewej.|  
 |[OCT](#fmtflags)|Określa wstawiania lub wyodrębniania wartości całkowite w formacie ósemkowe.|  
-|[limit](#openmode)|Określa wstawiania do strumienia.|  
+|[out](#openmode)|Określa wstawiania do strumienia.|  
 |[prawo](#fmtflags)|Określa prawej strony.|  
 |[naukowe](#fmtflags)|Określa wstawiania wartości zmiennoprzecinkowych formatu naukowe (z polem wykładnika).|  
 |[showbase](#fmtflags)|Określa wstawiania prefiks, który ujawnia base całkowitą wygenerowanego pola.|  

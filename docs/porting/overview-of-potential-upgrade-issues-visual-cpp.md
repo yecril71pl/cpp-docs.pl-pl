@@ -11,11 +11,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 977c13eabe0f25081b1bfe6b25e615002f0e6987
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1a727920ffe5e79bd62fd877e191dc6f6f3cc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Omówienie potencjalne problemy z uaktualnieniem (Visual C++)
 Całościowo kompilatora Visual C++ wprowadzono wiele zmian oraz zmian w samego języka C++, standardowa biblioteka C++, C runtime (CRT) i innych bibliotek, takie jak MFC i ATL. W związku z tym podczas uaktualniania aplikacji z wcześniejszej wersji programu Visual C++ może wystąpić kompilatorze i konsolidatorze błędów i ostrzeżeń w kodzie, który wcześniej skompilowany prawidłowo. Starsze oryginalny kod podstawowy, oznacza większe możliwości takie błędy. W tym omówieniu przedstawiono klasy najbardziej typowe problemy, które prawdopodobnie mogą wystąpić, oraz udostępniono linki do bardziej szczegółowych informacji.  
@@ -38,7 +39,7 @@ Całościowo kompilatora Visual C++ wprowadzono wiele zmian oraz zmian w samego 
   
  Standardowe biblioteki C++, mieszania i dopasowywania został jawnie zabroniony wykorzystaniem `#pragma detect_mismatch` w standardowych nagłówków od programu Visual Studio 2010. Jeśli użytkownik próbuje połączyć pliki niezgodny obiekt lub próba łączyć się z niewłaściwego biblioteki standardowej łącze zakończy się niepowodzeniem.  
   
- CRT mieszania i dopasowywania nigdy nie było obsługiwane, ale często działał, co najmniej do programu Visual Studio 2015 i uniwersalne środowisko CRT, ponieważ nie zmieniły się znacznie w czasie powierzchni interfejsu API. Uniwersalne środowisko CRT spowodowało przerwanie zapewnienia zgodności, aby w przyszłości firma Microsoft może zapewnić wstecz zgodność. Innymi słowy nie mamy żadnych planów wprowadzenie nowych wersji w przyszłości Universal CRT plików binarnych.. Zamiast tego istniejących uniwersalne środowisko CRT jest teraz zaktualizować w miejscu.  
+ CRT mieszania i dopasowywania nigdy nie było obsługiwane, ale często działał, co najmniej do programu Visual Studio 2015 i uniwersalne środowisko CRT, ponieważ nie zmieniły się znacznie w czasie powierzchni interfejsu API. Uniwersalne środowisko CRT spowodowało przerwanie zapewnienia zgodności, aby w przyszłości firma Microsoft może zapewnić wstecz zgodność. Innymi słowy nie mamy żadnych planów wprowadzenie nowych wersji w przyszłości Universal CRT plików binarnych. Zamiast tego istniejących uniwersalne środowisko CRT jest teraz zaktualizować w miejscu.  
   
  Ze względu na zgodność częściowe łącza z obiektu plików (i biblioteki) skompilowany ze starszymi wersjami programu Microsoft C Runtime nagłówków, firma Microsoft udostępnia bibliotekę legacy_stdio_definitions.lib, z programu Visual Studio 2015 i nowszych. Ta biblioteka zawiera symbole zgodności dla większości eksportuje funkcji i danych, które zostały usunięte z Universal CRT. Zestaw symboli zgodności dostarczonych przez legacy_stdio_definitions.lib jest niewystarczająca do zapewnienia większości zależności, w tym wszystkie zależności w biblioteki dołączony do zestawu SDK systemu Windows. Istnieją jednak niektóre symbole, które zostały usunięte z Universal CRT, dla których nie jest możliwe zapewnienie zgodności symbole, takie jak to. Niektóre funkcje obejmują te symbole (np. \_ \_iob —\_func) i eksportuje dane (np. \_ \_— Importowanie pakietu administracyjnego\_\_\_iob —, \_ \_— Importowanie pakietu administracyjnego\_\_\_pctype —, \_ \_— Importowanie pakietu administracyjnego\_\_\_mb\_Waluta\_maksymalnej).  
   

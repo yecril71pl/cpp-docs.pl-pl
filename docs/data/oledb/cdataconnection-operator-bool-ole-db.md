@@ -21,11 +21,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be875b6d8a048472a2ddafa56f16101959704270
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d446e0082381a927e139fc803a0c5ee17ce610f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdataconnectionoperator-bool-ole-db"></a>CDataConnection::operator bool (OLE DB)
 Określa, czy bieżąca sesja jest otwarty.  
@@ -46,4 +49,4 @@ operator bool( ) throw( );
   
 ## <a name="see-also"></a>Zobacz też  
  [Cdataconnection — klasa](../../data/oledb/cdataconnection-class.md)   
- [CDataConnection::operator BOOL](../../data/oledb/cdataconnection-operator-bool.md)
+ [CDataConnection::operator, wartość logiczna](../../data/oledb/cdataconnection-operator-bool.md)

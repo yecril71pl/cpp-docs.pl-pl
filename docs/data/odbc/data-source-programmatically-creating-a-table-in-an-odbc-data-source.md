@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8009d587007e618bfecf46911c5b30486cf1aba4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 43be9c8a2339bb47d598304145a8c34f391b11c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Źródło danych: programowe tworzenie tabeli w źródle danych ODBC
 W tym temacie wyjaśniono, jak utworzyć tabelę danych źródle, przy użyciu `ExecuteSQL` funkcji członkowskiej klasy `CDatabase`, przekazywanie funkcji ciąg, który zawiera **CREATE TABLE** instrukcji SQL.  
@@ -42,4 +45,4 @@ myDB.ExecuteSQL("CREATE TABLE OFFICES (OfficeID TEXT(4)" ",
 >  Typy pól określone w **CREATE TABLE** instrukcji SQL może być różny w zależności od sterownika ODBC, którego używasz. Program Microsoft Query (rozpowszechnianej za pomocą programu Visual C++ 1.5) jest jednym ze sposobów odnajdywanie, jakie typy pól są dostępne dla źródła danych. W programie Microsoft Query, kliknij przycisk **pliku**, kliknij przycisk **Table_Definition**, wybierz tabelę ze źródła danych i przyjrzyj się typ pokazano **typu** pola kombi. Istnieje również składni SQL do tworzenia indeksów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Źródła danych (ODBC)](../../data/odbc/data-source-odbc.md)
+ [Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md)

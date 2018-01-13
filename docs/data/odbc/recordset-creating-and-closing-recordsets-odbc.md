@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1dc9183d9007703de7025d77d5dcaf22d9860850
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9ec09c08aa4730c11960d675aef68c8a1007c900
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -116,4 +119,4 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 ## <a name="see-also"></a>Zobacz też  
  [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)   
  [Zestaw rekordów: Przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)   
- [Zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+ [Zestaw rekordów: dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

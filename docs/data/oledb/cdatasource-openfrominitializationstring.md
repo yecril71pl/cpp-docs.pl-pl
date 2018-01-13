@@ -20,11 +20,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa25389a5924dc235791d11ee7d37eb1febe4259
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 294c5cd893b04dd477a002adb6dc03fa33c60a29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatasourceopenfrominitializationstring"></a>CDataSource::OpenFromInitializationString
 Otwiera źródło danych określona przez ciąg inicjowania dostarczone przez użytkownika.  
@@ -58,4 +61,4 @@ Otwiera źródło danych określona przez ciąg inicjowania dostarczone przez u�
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Cdatasource — klasa](../../data/oledb/cdatasource-class.md)
+ [CDataSource, klasa](../../data/oledb/cdatasource-class.md)

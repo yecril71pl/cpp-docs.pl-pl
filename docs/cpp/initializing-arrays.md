@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13e02dda301059204f6feaa085ce97d1568e74d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 42d47f8ba7f7df8285d3c4f685a212c77974b144
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-arrays"></a>Inicjowanie tablic
 Jeśli klasa zawiera konstruktora, tablic tej klasy są inicjowane przez konstruktora. W przypadku mniejszej liczby elementów na liście inicjatora niż elementów w tablicy, domyślny konstruktor jest używany dla pozostałe elementy. Jeśli żaden konstruktor domyślny jest zdefiniowany w klasie, lista inicjatora musi być ukończone — to znaczy musi być jednego inicjatora dla każdego elementu w tablicy.  

@@ -15,11 +15,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68ff63d5b596d575f26ec0f56a3ac7a568c8471e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1d5af53c04c6ff9ec28e7b83cd3a8f9bce8307c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Kontekstowe słowa kluczowe (C++ Component Extensions)
 *Kontekstowe słowa kluczowe* są elementy języka, które są rozpoznawane tylko w określonych kontekstach. Poza określonym kontekście kontekstowa — słowo kluczowe może być symbol zdefiniowany przez użytkownika.  
@@ -29,15 +32,15 @@ ms.lasthandoff: 10/24/2017
   
  Poniżej przedstawiono listę kontekstowe słowa kluczowe:  
   
--   [abstrakcyjny](../windows/abstract-cpp-component-extensions.md)  
+-   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
--   [Delegowanie](../windows/delegate-cpp-component-extensions.md)  
+-   [delegate](../windows/delegate-cpp-component-extensions.md)  
   
--   [zdarzenia](../windows/event-cpp-component-extensions.md)  
+-   [event](../windows/event-cpp-component-extensions.md)  
   
--   [na koniec](../dotnet/finally.md)  
+-   [finally](../dotnet/finally.md)  
   
--   [w przypadku każdego w](../dotnet/for-each-in.md)  
+-   [for each, in](../dotnet/for-each-in.md)  
   
 -   [InitOnly](../dotnet/initonly-cpp-cli.md)  
   
@@ -45,11 +48,11 @@ ms.lasthandoff: 10/24/2017
   
 -   [literału](../windows/literal-cpp-component-extensions.md)  
   
--   [zastąpienie](../windows/override-cpp-component-extensions.md)  
+-   [override](../windows/override-cpp-component-extensions.md)  
   
--   [Właściwość](../windows/property-cpp-component-extensions.md)  
+-   [właściwość](../windows/property-cpp-component-extensions.md)  
   
--   [zapieczętowane](../windows/sealed-cpp-component-extensions.md)  
+-   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
 -   `where`(część [ogólne](../windows/generics-cpp-component-extensions.md))  
   
@@ -97,7 +100,7 @@ int main() {
 }  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
 ```Output  
 100  

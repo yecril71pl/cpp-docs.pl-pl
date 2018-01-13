@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 954ba431378317a3f9079677f49223a336af5d9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
 Język C++ definiuje konwersji między typami podstawowymi. Definiuje również konwersji dla wskaźnika, odwołanie, i typów pochodnych wskaźnika do elementu członkowskiego. Konwersje te są nazywane "konwersje standardowe." (Aby uzyskać więcej informacji na temat typów, standardowych typów i typów pochodnych, zobacz [typy](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  

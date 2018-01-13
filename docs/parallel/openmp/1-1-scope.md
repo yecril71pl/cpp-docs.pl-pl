@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b4f348f55cb956802bab9651b22804c941c53cdb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07859a95b739cf649ab6516cb2e8b605efe442dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="11-scope"></a>1.1 Zakres
 Określenie tej wartości obejmuje tylko przekierowywany użytkownik paralelizacja, w którym użytkownik jawnie określa akcje podejmowane przez kompilator i środowiska wykonawczego systemu w celu wykonania programu równolegle. Implementacje Openmpc i C++ nie są wymagane do sprawdzenia zależności konflikty, zakleszczenie, wyścigu lub innych problemów, które powoduje wykonanie programu niepoprawne. Użytkownik jest odpowiedzialny za egzekwowanie poprawnie wykonuje aplikacji przy użyciu konstrukcji Openmpc i C++ interfejsu API. W tym dokumencie nie są objęte generowane przez kompilator automatyczna paralelizacja i dyrektywy kompilatora ułatwiających takich paralelizacja.

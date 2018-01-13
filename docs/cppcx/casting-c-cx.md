@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f1373686ca960f86ca9e8b2ea4756911906fd66d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18963860b1f9398343370378140ebee7314690b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casting-ccx"></a>Rzutowanie (C + +/ CX)
 Cztery operatory rzutowania różnych dotyczą typów środowiska wykonawczego systemu Windows: [static_cast Operator](../cpp/static-cast-operator.md), [dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **operatora safe_cast**, i [ reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md). `safe_cast`i `static_cast` zgłosić wyjątek, gdy nie można wykonać konwersji; [static_cast Operator](../cpp/static-cast-operator.md) oraz wykonuje sprawdzanie typów w czasie kompilacji. `dynamic_cast`Zwraca `nullptr` Jeżeli nie Konwertuj typu. Mimo że `reinterpret_cast` zwraca wartość inną niż null, może być nieprawidłowy. Z tego powodu zaleca się, że nie używasz `reinterpret_cast` chyba że rzutowanie powiedzie się. Ponadto zaleca się nie używać rzutowania w stylu języka C w języku C + +/ CX kodu, ponieważ są one takie same jak `reinterpret_cast`.  

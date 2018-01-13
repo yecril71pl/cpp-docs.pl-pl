@@ -18,11 +18,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: edb506b17cce617c438bc518bfbd5410b9dabbe2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cd3e79306cb97413a833e039b0b333cb85b8e56d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 *Wskaźnik wewnętrzny* deklaruje wskaźnik do wewnątrz typu odwołania, ale nie samego obiektu. Wskaźnik wewnętrzny może wskazywać dojścia odwołania, typu wartości, dojście do typu opakowanego, elementu członkowskiego typu zarządzanego lub element tablicy zarządzanej.  
@@ -75,13 +78,13 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
   
  Aby uzyskać więcej informacji o wewnętrznych wskaźników zobacz  
   
--   [Porady: deklarowanie i użycie wewnętrznych wskaźników i zarządzanych tablic (C + +/ CLI)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
+-   [Instrukcje: deklarowanie wewnętrznych wskaźników i zarządzanych tablic oraz posługiwanie się nimi (C++/CLI)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
   
--   [Porady: deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C + +/ CLI)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
+-   [Instrukcje: deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C++/CLI)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
   
--   [Porady: funkcje przeładowania z wewnętrznymi i Natywnymi wskaźnikami (C + +/ CLI)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
+-   [Instrukcje: funkcje przeładowania z wewnętrznymi i natywnymi wskaźnikami (C++/CLI)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
   
--   [Porady: deklarowanie wewnętrznych wskaźników za pomocą słowa kluczowego const (C + +/ CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
+-   [Instrukcje: deklarowanie wewnętrznych wskaźników za pomocą słowa kluczowego const (C++/CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
   
 ### <a name="requirements"></a>Wymagania  
  — Opcja kompilatora:   **/CLR**  
@@ -117,7 +120,7 @@ int main() {
 }  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
 ```Output  
 1  

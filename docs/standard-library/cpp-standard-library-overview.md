@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c676f5bb8b667bdc3ef26f823737df5c4f97217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2285c2237001aa02c77b17241e6de62804d6b700
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-overview"></a>Standardowa biblioteka C++ — Przegląd
 Wszystkie obiekty biblioteki C++ są zadeklarowane lub zdefiniowane w co najmniej jeden nagłówek standardowy. Ta implementacja obejmuje dwóch dodatkowych nagłówków, `<hash_map>` i `<hash_set>`, które nie są wymagane przez C++ Standard. Aby uzyskać pełną listę nagłówków, obsługiwanych przez tę implementację, zobacz [odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md).  
@@ -49,19 +50,19 @@ Wszystkie obiekty biblioteki C++ są zadeklarowane lub zdefiniowane w co najmnie
   
 -   [Konwencje iostream](../standard-library/iostreams-conventions.md)  
   
--   [Uruchamianie programu C++ i kończenie działania](../standard-library/cpp-program-startup-and-termination.md)  
+-   [Uruchamianie i kończenie działania programu C++](../standard-library/cpp-program-startup-and-termination.md)  
   
 -   [Bezpieczne biblioteki: Standardowa biblioteka C++](../standard-library/safe-libraries-cpp-standard-library.md)  
   
--   [Zaznaczone Iteratory](../standard-library/checked-iterators.md)  
+-   [Zaznaczone iteratory](../standard-library/checked-iterators.md)  
   
 -   [Obsługa iteratora debugowania](../standard-library/debug-iterator-support.md)  
   
--   [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)  
+-   [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)  
   
 -   [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)  
   
--   [stdext — Namespace](../standard-library/stdext-namespace.md)  
+-   [stdext, przestrzeń nazw](../standard-library/stdext-namespace.md)  
   
 -   [Wyrażenia regularne (C++)](../standard-library/regular-expressions-cpp.md)  
   

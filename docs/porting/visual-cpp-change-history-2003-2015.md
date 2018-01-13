@@ -14,11 +14,12 @@ caps.latest.revision: "124"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89b02c277faa3da102909ce88f33aea0c653ea50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historia 2003 2015 zmian Visual C++
 W tym artykule opisano zmiany podziału z programu Visual Studio 2015, wracając do programu Visual Studio 2003 oraz w tym artykule warunki "nowe zachowanie" lub "teraz" odnoszą się do programu Visual Studio 2015 i później. Warunki "stare zachowanie" i "przed" odnoszą się do programu Visual Studio 2013 i wcześniejszych wersjach. 
@@ -2848,7 +2849,7 @@ C c;
   
      W programie Visual C++ w programie Visual Studio 2012 rozpoznać E1 w wyrażeniu E1::b:: E1 w zakresie globalnym. W programie Visual C++ w programie Visual Studio 2013 E1 w wyrażeniu E1::b jest rozpoznawany jako element typedef E2 definicji w main() i ma typ:: E2.  
   
--   Układ obiektu został zmieniony. W x64, układ obiektu klasy może się zmienić w porównaniu z poprzednimi wydaniami. Jeśli ma on funkcję wirtualną, ale nie ma klasy podstawowej, która ma funkcję wirtualną, model obiektu kompilatora wstawia wskaźnik do tablicy funkcji wirtualnych po układzie elementu członkowskiego danych. Oznacza to, że układ może nie być optymalny we wszystkich przypadkach. W poprzednich wersjach Optymalizacja x64 może spróbować poprawić układu dla Ciebie, ale ponieważ nie działa prawidłowo w sytuacjach złożonego kodu, został usunięty w programie Visual C++ w programie Visual Studio 2013. Na przykład, rozważmy ten kod:  
+-   Układ obiektu został zmieniony. W x64, układ obiektu klasy może się zmienić w porównaniu z poprzednimi wydaniami. Jeśli ma on funkcję wirtualną, ale nie ma klasy podstawowej, która ma funkcję wirtualną, model obiektu kompilatora wstawia wskaźnik do tablicy funkcji wirtualnych po układzie składowej danych. Oznacza to, że układ może nie być optymalny we wszystkich przypadkach. W poprzednich wersjach Optymalizacja x64 może spróbować poprawić układu dla Ciebie, ale ponieważ nie działa prawidłowo w sytuacjach złożonego kodu, został usunięty w programie Visual C++ w programie Visual Studio 2013. Na przykład, rozważmy ten kod:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -3394,7 +3395,7 @@ C c;
   
 -   Makra PROP_ENTRY i PROP_ENTRY_EX zostały przestarzałe i zastępowane andPROP_ENTRY_TYPE_EX PROP_ENTRY_TYPE makra ze względów bezpieczeństwa.  
   
-### <a name="atlmfc-shared-classes"></a>ATL/MFC udostępnionych klas  
+### <a name="atlmfc-shared-classes"></a>Klasy współdzielone ATL/MFC  
   
 -   ATL nie może być wbudowane bez zależności w CRT. We wcześniejszych wersjach programu Visual Studio, można użyć #define atl_min_crt — aby Projekt ATL minimalny zestaw zależny od CRT. W programie Visual C++ 2008 wszystkie projekty ATL zależą od co najmniej CRT niezależnie od tego, czy atl_min_crt — jest zdefiniowane.  
   

@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 98c59ec6c0eed419cdac05a39a65ea1bde624d49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49cc917ddcd4d7de274a8f6bb1f61c940493a365
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock — Klasa
 Składnik zapisywania — preferencji na podstawie kolejki czytnika-blokadę wirowania tylko lokalnie. Blokada najpierw przyznaje - najpierw out (FIFO) dostępu do zapisywania i starves czytników obciążenie ciągłego składników zapisywania.  
@@ -60,7 +61,7 @@ class reader_writer_lock;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[blokady](#lock)|Uzyskuje blokadę czytnika jako edytor.|  
+|[lock](#lock)|Uzyskuje blokadę czytnika jako edytor.|  
 |[lock_read](#lock_read)|Uzyskuje blokadę czytnik do odczytu. W przypadku zapisywania active czytników trzeba poczekaj na wykonanie zadania. Czytnik po prostu rejestruje zainteresowanie blokady i czeka na składników zapisywania do jego zwolnienia.|  
 |[try_lock](#try_lock)|Próbuje uzyskać blokadę czytnika jako edytor bez blokowania.|  
 |[try_lock_read](#try_lock_read)|Próbuje uzyskać blokadę czytnik do odczytu bez blokowania.|  
@@ -216,4 +217,4 @@ void unlock();
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [critical_section — klasa](critical-section-class.md)
+ [critical_section, klasa](critical-section-class.md)

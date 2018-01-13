@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: e0c04ac1d90000191ca7b8eaa1cde9ed9a15d806
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dc9c5dfd0dafe96e2d37b789b64c8215aa454e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbcs-programming-tips"></a>Porady dotyczące programowania MBCS
 W nowo tworzonym należy użyć kodowania znaków Unicode dla wszystkich ciągów, które prawdopodobnie mogą zobaczyć użytkownicy końcowi. MBCS jest technologią starszej wersji, która została zastąpiona Unicode. W tej sekcji udostępnia wskazówki dla deweloperów, którzy muszą zachować istniejące programy, które używają MBCS i których nie jest praktyczne można przekonwertować na ciąg Unicode. Zalecenia dotyczą aplikacji MFC i aplikacji napisanych bez MFC. Tematy obejmują:  
   
--   [Porady dotyczące programowania MBSC ogólne](../text/general-mbcs-programming-advice.md)  
+-   [Ogólne porady dotyczące programowania MBSC](../text/general-mbcs-programming-advice.md)  
   
 -   [Inkrementacja i dekrementacja wskaźników](../text/incrementing-and-decrementing-pointers.md)  
   

@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 494942ce3c50889cae7a8867dc2b86ed6a609313
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1c28c7c1eef2fc278a0667ec4b7c635005331467
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -64,17 +67,17 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[InterfaceTraits::CanCastTo — metoda](../windows/interfacetraits-cancastto-method.md)|Wskazuje, czy określony wskaźnik mogą być rzutowane na wskaźnik do `Base`.|  
-|[InterfaceTraits::CastToBase — metoda](../windows/interfacetraits-casttobase-method.md)|Rzutuje określony wskaźnik na wskaźnik do `Base`.|  
-|[InterfaceTraits::CastToUnknown — metoda](../windows/interfacetraits-casttounknown-method.md)|Rzutuje określony wskaźnik na wskaźnik do elementu IUnknown.|  
-|[InterfaceTraits::FillArrayWithIid — metoda](../windows/interfacetraits-fillarraywithiid-method.md)|Przypisuje identyfikator interfejsu `Base` do elementu tablicy argumentu indeksu.|  
-|[InterfaceTraits::Verify — metoda](../windows/interfacetraits-verify-method.md)|Sprawdza, czy poprawnie pochodzi Base.|  
+|[InterfaceTraits::CanCastTo, metoda](../windows/interfacetraits-cancastto-method.md)|Wskazuje, czy określony wskaźnik mogą być rzutowane na wskaźnik do `Base`.|  
+|[InterfaceTraits::CastToBase, metoda](../windows/interfacetraits-casttobase-method.md)|Rzutuje określony wskaźnik na wskaźnik do `Base`.|  
+|[InterfaceTraits::CastToUnknown, metoda](../windows/interfacetraits-casttounknown-method.md)|Rzutuje określony wskaźnik na wskaźnik do elementu IUnknown.|  
+|[InterfaceTraits::FillArrayWithIid, metoda](../windows/interfacetraits-fillarraywithiid-method.md)|Przypisuje identyfikator interfejsu `Base` do elementu tablicy argumentu indeksu.|  
+|[InterfaceTraits::Verify, metoda](../windows/interfacetraits-verify-method.md)|Sprawdza, czy poprawnie pochodzi Base.|  
   
 ### <a name="public-constants"></a>Publiczny — stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Interfacetraits::iidcount — stała](../windows/interfacetraits-iidcount-constant.md)|Przechowuje numer interfejsu identyfikatory z bieżącym obiektem interfacetraits —.|  
+|[InterfaceTraits::IidCount, stała](../windows/interfacetraits-iidcount-constant.md)|Przechowuje numer interfejsu identyfikatory z bieżącym obiektem interfacetraits —.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `InterfaceTraits`  
@@ -85,4 +88,4 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
  **Namespace:** Microsoft::wrl:: details —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: details — Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2261f5c2b843f607f8f0906764aee833c6a100f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-scope-rules"></a>Podsumowanie reguł zakresu
 Użycie nazwy musi być jednoznaczne w jego zakresie (do punktu, w której jest określana przeładowanie). Jeśli nazwa oznacza funkcję, funkcja musi być jednoznaczne względem liczba i typ parametrów. Jeśli nazwa pozostanie jednoznaczne, [dostęp do elementu członkowskiego](../cpp/member-access-control-cpp.md) reguły są stosowane.  
@@ -41,7 +42,7 @@ Użycie nazwy musi być jednoznaczne w jego zakresie (do punktu, w której jest 
 -   Wybór elementu członkowskiego dla wskaźników (**->**)  
   
 ## <a name="qualified-names"></a>Kwalifikowane nazwy  
- Nazwy używane z binarnym operatorem rozwiązywania zakresu (`::`) są nazywane „nazwami kwalifikowanymi”. Nazwa określona po binarnym operatorze rozwiązywania zakresu musi być elementem członkowskim klasy określonej po lewej stronie operatora lub elementem członkowskim jej klas podstawowych.  
+ Nazwy używane z binarnym operatorem rozwiązywania zakresu (`::`) są nazywane „nazwami kwalifikowanymi”. Nazwa określona po binarnym operatorze rozwiązywania zakresu musi być składową klasy określonej po lewej stronie operatora lub składową jej klas podstawowych.  
   
  Nazwy określone po operatorze wyboru elementu członkowskiego (**.** lub  **->** ) muszą być elementami członkowskimi typu klasy obiektu określonego w lewej strony operatora i członkowie jego klasy podstawowej. Nazwy określone po prawej stronie operatora wyboru elementu członkowskiego (**->**) może być także obiekty innego typu klasy, pod warunkiem, że po lewej stronie  **->**  jest obiektem klasy i Czy tej klasy definiuje operator przeciążone wyboru elementu członkowskiego (**->**) zwraca wskaźnik do innego typu klasy. (Niniejszymi omówiono bardziej szczegółowo w [dostęp do elementu członkowskiego klasy](../cpp/member-access.md).)  
   
@@ -51,9 +52,9 @@ Użycie nazwy musi być jednoznaczne w jego zakresie (do punktu, w której jest 
   
 2.  Na zewnątrz za pośrednictwem każdej otaczającym zakresie bloku, w tym zakresie najbardziej zewnętrzną funkcję, (w tym parametry funkcji).  
   
-3.  Jeśli nazwa jest używana wewnątrz funkcji członkowskiej, to nazwa jest wyszukiwana w zakresie klasy.  
+3.  Jeśli nazwa jest używana wewnątrz funkcji składowej, to nazwa jest wyszukiwana w zakresie klasy.  
   
-4.  Nazwa jest wyszukiwana w klasa podstawowych klasy.  
+4.  Nazwa jest wyszukiwana w klasach bazowych klasy.  
   
 5.  Przeszukiwany jest otaczający, zagnieżdżony zakres klasy (jeśli istnieje) oraz jego klasy podstawowe. Wyszukiwanie jest kontynuowane, dopóki nie zostanie przeszukany najbardziej zewnętrzny, otaczający zakres klasy.  
   
