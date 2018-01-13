@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c4bcfb9dc75afe952eb472b7ae01ace6e087f615
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cbcb74272fa7cae3dd0c641bd6371c8f0f9c204
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Włącz dodatkowe kontrole zabezpieczeń)
 Dodaje zalecane kontroli Security Development Lifecycle (SDL). Kontrole te obejmują bardzo związanych z zabezpieczeniami ostrzeżenia jako błędy i funkcje dodatkowe bezpiecznego generowania kodu.  

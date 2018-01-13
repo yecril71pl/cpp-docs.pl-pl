@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4cb43b7c3535fd5e09d08e1e488cf9ea3f39631a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ad914a9aa5e7207d1b39e4917a965d755564848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Kompilacja z wieloma procesami)
 **/MP** opcji zmniejsza całkowity czas do kompilowania plików źródłowych w wierszu polecenia. **/MP** opcja powoduje, że kompilator, aby utworzyć jeden lub więcej kopie sama każdej z nich w oddzielnych procesach. Następnie te kopie jednocześnie Kompiluj pliki źródłowe. W związku z tym łączny czas wymagany do kompilacji pliki źródłowe, można znacznie zmniejszyć.  
@@ -131,4 +132,4 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [#import — dyrektywa](../../preprocessor/hash-import-directive-cpp.md)   
- [Informacje dotyczące wiersza polecenia](/visualstudio/msbuild/msbuild-command-line-reference)
+ [Dokumentacja wiersza polecenia](/visualstudio/msbuild/msbuild-command-line-reference)

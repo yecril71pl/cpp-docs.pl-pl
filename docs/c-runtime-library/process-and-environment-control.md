@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b60b1544e277ef4fece8368b6913cf686960dcaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cee24f0e5142af37681bd293a3be3600ddbd1cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process-and-environment-control"></a>Procedury kontroli środowiska
 Procedury kontroli procesu umożliwia uruchamianie, zatrzymywanie i zarządzanie nimi procesy w programie. Pobierz i zmieniać informacje o środowisku systemu operacyjnego za pomocą procedury kontroli środowiska.  
@@ -34,46 +35,46 @@ Procedury kontroli procesu umożliwia uruchamianie, zatrzymywanie i zarządzanie
   
 |Procedura|Zastosowanie|  
 |-------------|---------|  
-|[przerwania](../c-runtime-library/reference/abort.md)|Przerwij proces bez opróżniania buforów lub wywołaniem funkcji zarejestrowane przez `atexit` i`_onexit`|  
+|[abort](../c-runtime-library/reference/abort.md)|Przerwij proces bez opróżniania buforów lub wywołaniem funkcji zarejestrowane przez `atexit` i`_onexit`|  
 |[Assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Testowanie błąd logiczny|  
 |[_ASSERT, _asserte —](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) makra|Podobnie jak `assert`, ale są dostępne tylko w wersjach debugowania biblioteki wykonawczej|  
-|[atexit —](../c-runtime-library/reference/atexit.md)|Procedury harmonogramem do wykonania na zakończenie programu|  
-|[_beginthread —, _beginthreadex —](../c-runtime-library/reference/beginthread-beginthreadex.md)|Tworzenie nowego wątku w procesie systemu operacyjnego Windows|  
+|[atexit](../c-runtime-library/reference/atexit.md)|Procedury harmonogramem do wykonania na zakończenie programu|  
+|[_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)|Tworzenie nowego wątku w procesie systemu operacyjnego Windows|  
 |[_cexit —](../c-runtime-library/reference/cexit-c-exit.md)|Wykonaj `exit` procedury zakończenia (na przykład opróżniania buforów), następnie zwrócić kontrolkę do wywoływania programu bez przerywa proces|  
 |[_c_exit —](../c-runtime-library/reference/cexit-c-exit.md)|Wykonaj `_exit` zakończenia procedury, następnie zwrócić kontrolkę do wywoływania programu bez przerywa proces|  
-|[_cwait —](../c-runtime-library/reference/cwait.md)|Poczekaj na zakończenie innego procesu|  
-|[_endthread —, _endthreadex —](../c-runtime-library/reference/endthread-endthreadex.md)|Zakończenie wątku systemu operacyjnego Windows|  
-|[_execl —, _wexecl —](../c-runtime-library/reference/execl-wexecl.md)|Wykonaj nowy proces z listą argumentów|  
-|[_execle —, _wexecle —](../c-runtime-library/reference/execle-wexecle.md)|Wykonaj nowy proces z listą argumentów i danego środowiska|  
-|[_execlp —, _wexeclp —](../c-runtime-library/reference/execlp-wexeclp.md)|Wykonywanie za pomocą nowego procesu `PATH` zmienną i argumentu listy|  
-|[_execlpe —, _wexeclpe —](../c-runtime-library/reference/execlpe-wexeclpe.md)|Wykonywanie za pomocą nowego procesu `PATH` zmiennej danego środowiska i listy argumentów|  
-|[_execv —, _wexecv —](../c-runtime-library/reference/execv-wexecv.md)|Wykonaj nowy proces z tablica argumentów|  
-|[_execve —, _wexecve —](../c-runtime-library/reference/execve-wexecve.md)|Wykonaj nowy proces z tablica argumentów i danego środowiska|  
-|[_execvp —, _wexecvp —](../c-runtime-library/reference/execvp-wexecvp.md)|Wykonywanie za pomocą nowego procesu `PATH` zmienną i argument tablicy|  
-|[_execvpe —, _wexecvpe —](../c-runtime-library/reference/execvpe-wexecvpe.md)|Wykonywanie za pomocą nowego procesu `PATH` zmiennej danego środowiska, a tablica argumentów|  
+|[_cwait](../c-runtime-library/reference/cwait.md)|Poczekaj na zakończenie innego procesu|  
+|[_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)|Zakończenie wątku systemu operacyjnego Windows|  
+|[_execl, _wexecl](../c-runtime-library/reference/execl-wexecl.md)|Wykonaj nowy proces z listą argumentów|  
+|[_execle, _wexecle](../c-runtime-library/reference/execle-wexecle.md)|Wykonaj nowy proces z listą argumentów i danego środowiska|  
+|[_execlp, _wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|Wykonywanie za pomocą nowego procesu `PATH` zmienną i argumentu listy|  
+|[_execlpe, _wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|Wykonywanie za pomocą nowego procesu `PATH` zmiennej danego środowiska i listy argumentów|  
+|[_execv, _wexecv](../c-runtime-library/reference/execv-wexecv.md)|Wykonaj nowy proces z tablica argumentów|  
+|[_execve, _wexecve](../c-runtime-library/reference/execve-wexecve.md)|Wykonaj nowy proces z tablica argumentów i danego środowiska|  
+|[_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|Wykonywanie za pomocą nowego procesu `PATH` zmienną i argument tablicy|  
+|[_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|Wykonywanie za pomocą nowego procesu `PATH` zmiennej danego środowiska, a tablica argumentów|  
 |[Zakończ](../c-runtime-library/reference/exit-exit-exit.md)|Wywołanie funkcji w zarejestrowany przez `atexit` i `_onexit`, opróżnienia buforów wszystkie, zamknij otwarte pliki i zakończenie procesu|  
 |[_exit —](../c-runtime-library/reference/exit-exit-exit.md)|Zakończenie procesu natychmiast bez wywoływania elementu `atexit` lub `_onexit` lub opróżnianie buforów|  
 |[getenv —, _wgetenv —](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s —, _wgetenv_s —](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Pobierz wartość zmiennej środowiskowej|  
-|[_getpid —](../c-runtime-library/reference/getpid.md)|Pobierz identyfikator procesu|[System::Diagnostics::process::ID](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|  
+|[_getpid](../c-runtime-library/reference/getpid.md)|Pobierz identyfikator procesu|[System::Diagnostics::process::ID](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|  
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Przywróć zapisany stosu środowiska; Umożliwia wykonanie nielokalne`goto`|  
 |[_onexit —](../c-runtime-library/reference/onexit-onexit-m.md)|Procedury harmonogramem do wykonania po zakończeniu programu; zachowania zgodności z programem Microsoft C/C++ version 7.0 i starszych wersji|  
-|[_pclose —](../c-runtime-library/reference/pclose.md)|Poczekaj, aż nowe procesora poleceń i zamknąć strumienia skojarzone potoku|  
-|[perror, _wperror —](../c-runtime-library/reference/perror-wperror.md)|Drukuj komunikat o błędzie|  
-|[_pipe —](../c-runtime-library/reference/pipe.md)|Tworzenie potoku do odczytywania i zapisywania|  
-|[_popen —, _wpopen —](../c-runtime-library/reference/popen-wpopen.md)|Tworzenie potoku i wykonywanie polecenia|  
+|[_pclose](../c-runtime-library/reference/pclose.md)|Poczekaj, aż nowe procesora poleceń i zamknąć strumienia skojarzone potoku|  
+|[perror, _wperror](../c-runtime-library/reference/perror-wperror.md)|Drukuj komunikat o błędzie|  
+|[_pipe](../c-runtime-library/reference/pipe.md)|Tworzenie potoku do odczytywania i zapisywania|  
+|[_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)|Tworzenie potoku i wykonywanie polecenia|  
 |[_putenv —, _wputenv —](../c-runtime-library/reference/putenv-wputenv.md), [_putenv_s —, _wputenv_s —](../c-runtime-library/reference/putenv-s-wputenv-s.md)|Dodaj lub zmień wartość zmiennej środowiskowej|  
-|[Zgłoś](../c-runtime-library/reference/raise.md)|Wysyłanie sygnałów do wywoływania procesu|  
+|[raise](../c-runtime-library/reference/raise.md)|Wysyłanie sygnałów do wywoływania procesu|  
 |[setjmp](../c-runtime-library/reference/setjmp.md)|Zapisz stosu środowiska; Służy do wykonywania innych niż lokalne`goto`|  
-|[sygnał](../c-runtime-library/reference/signal.md)|Sygnał przerwania dojścia|  
-|[_spawnl —, _wspawnl —](../c-runtime-library/reference/spawnl-wspawnl.md)|Tworzenie i wykonywanie nowego procesu z określona lista argumentów|  
-|[_spawnle —, _wspawnle —](../c-runtime-library/reference/spawnle-wspawnle.md)|Tworzenie i wykonywanie nowego procesu określona lista argumentów i środowiska|  
-|[_spawnlp —, _wspawnlp —](../c-runtime-library/reference/spawnlp-wspawnlp.md)|Tworzenie i wykonywanie nowego procesu przy użyciu `PATH` zmienną i określona lista argumentów|  
-|[_spawnlpe —, _wspawnlpe —](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|Tworzenie i wykonywanie nowego procesu przy użyciu `PATH` zmiennej, określonego środowiska i listy argumentów|  
-|[_spawnv —, _wspawnv —](../c-runtime-library/reference/spawnv-wspawnv.md)|Tworzenie i wykonywanie nowego procesu z określonego argumentu tablicy|  
-|[_spawnve —, _wspawnve —](../c-runtime-library/reference/spawnve-wspawnve.md)|Tworzenie i wykonywanie nowego procesu z określonego środowiska i Tablica argumentów|  
-|[_spawnvp —, _wspawnvp —](../c-runtime-library/reference/spawnvp-wspawnvp.md)|Tworzenie i wykonywanie nowego procesu przy użyciu `PATH` zmienną i określony argument tablicy|  
-|[_spawnvpe —, _wspawnvpe —](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|Tworzenie i wykonywanie nowego procesu przy użyciu `PATH` zmiennej, określonego środowiska i Tablica argumentów|  
-|[System, _wsystem —](../c-runtime-library/reference/system-wsystem.md)|Wykonanie polecenia systemu operacyjnego|  
+|[signal](../c-runtime-library/reference/signal.md)|Sygnał przerwania dojścia|  
+|[_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|Tworzenie i wykonywanie nowego procesu z określona lista argumentów|  
+|[_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|Tworzenie i wykonywanie nowego procesu określona lista argumentów i środowiska|  
+|[_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|Tworzenie i wykonywanie nowego procesu przy użyciu `PATH` zmienną i określona lista argumentów|  
+|[_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|Tworzenie i wykonywanie nowego procesu przy użyciu `PATH` zmiennej, określonego środowiska i listy argumentów|  
+|[_spawnv, _wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|Tworzenie i wykonywanie nowego procesu z określonego argumentu tablicy|  
+|[_spawnve, _wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|Tworzenie i wykonywanie nowego procesu z określonego środowiska i Tablica argumentów|  
+|[_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|Tworzenie i wykonywanie nowego procesu przy użyciu `PATH` zmienną i określony argument tablicy|  
+|[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|Tworzenie i wykonywanie nowego procesu przy użyciu `PATH` zmiennej, określonego środowiska i Tablica argumentów|  
+|[system, _wsystem](../c-runtime-library/reference/system-wsystem.md)|Wykonanie polecenia systemu operacyjnego|  
   
  W systemie operacyjnym Windows proces jest odpowiednikiem ikrę procesu. Żaden proces, można użyć `_cwait` oczekiwania innego procesu, dla którego jest znany identyfikator procesu.  
   

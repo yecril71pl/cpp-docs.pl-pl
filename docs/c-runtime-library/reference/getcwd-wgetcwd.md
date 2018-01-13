@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e72618467666a98bdda5867b23d9ef2ce37319f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14047c8143d982bc6b26bef6e46679341d9abd36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 Pobiera bieżący katalog roboczy.  
@@ -139,4 +140,4 @@ C:\Code
  [Kontrola katalogu](../../c-runtime-library/directory-control.md)   
  [_chdir —, _wchdir —](../../c-runtime-library/reference/chdir-wchdir.md)   
  [_mkdir —, _wmkdir —](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [_rmdir —, _wrmdir —](../../c-runtime-library/reference/rmdir-wrmdir.md)
+ [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)

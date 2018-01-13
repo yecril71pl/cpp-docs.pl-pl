@@ -75,11 +75,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 971d67e75594649851f3c21f7727fe697486be85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 719ee1e0a39cbf3cd7d7721807bb4a9dcf2883d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstockpropimpl-class"></a>Klasa CStockPropImpl
 Ta klasa dostarcza metody do obsługi wartości właściwości standardowych.  
@@ -1000,4 +1001,4 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd klas](../../atl/atl-class-overview.md)   
- [Klasa elementem IDispatchImpl](../../atl/reference/idispatchimpl-class.md)
+ [Klasa IDispatchImpl](../../atl/reference/idispatchimpl-class.md)

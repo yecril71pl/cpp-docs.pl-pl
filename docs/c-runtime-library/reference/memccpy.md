@@ -31,11 +31,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0ef1e7ca2587a63116ffde0b0025c77566a0dc90
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 570422a3ae6884275a6a21fa3f8dd277fafe411a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memccpy"></a>_memccpy
 Znaki kopie z buforu.  
@@ -123,4 +124,4 @@ Length: 25 characters
  [memchr, wmemchr —](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [funkcji memcmp, wmemcmp —](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memcpy, wmemcpy —](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [memset —, wmemset —](../../c-runtime-library/reference/memset-wmemset.md)
+ [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)

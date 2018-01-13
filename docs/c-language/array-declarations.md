@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74cfdf5393487ddd2cda7d478c0940c6db74b35a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06742239c48503a5917317a674a39f50a38702c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-declarations"></a>Deklaracje tablicy
 "Array deklaracji" nazwy tablicy i określa typ swoich elementów. Można również zdefiniować liczbę elementów w tablicy. Zmienna typu tablicy jest traktowany jako wskaźnika na typ elementów tablicy.  

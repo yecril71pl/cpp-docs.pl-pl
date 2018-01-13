@@ -49,11 +49,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b6bd520f0c84a71caadb9e480a19d8d42ea69828
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60ac5a99e307e73569fe165d675e90c5da2af3a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
 Drukowanie sformatowanych dane wyjściowe do standardowego strumienia wyjściowego. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [printf_s —, _printf_s_l —, wprintf_s —, _wprintf_s_l —](../../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md).  
@@ -238,4 +239,4 @@ Address as:   0012FF3C
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vprintf — funkcje](../../c-runtime-library/vprintf-functions.md)   
- [_set_output_format —](../../c-runtime-library/set-output-format.md)
+ [_set_output_format](../../c-runtime-library/set-output-format.md)

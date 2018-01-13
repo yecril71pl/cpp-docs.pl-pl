@@ -68,11 +68,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 658c012461dab9a70672070689c9ddb0482028b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04c3e1979fa3eb7cc02a8be2236496fbdaaac83a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat —, _strncat_l, wcsncat —, _wcsncat_l _mbsncat —, _mbsncat_l —
 Dołącza znaków ciągu. Dostępne są bardziej bezpieczne wersje tych funkcji, zobacz [strncat_s —, _strncat_s_l, wcsncat_s —, _wcsncat_s_l, _mbsncat_s —, _mbsncat_s_l —](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .  

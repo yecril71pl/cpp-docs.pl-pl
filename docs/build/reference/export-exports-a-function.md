@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d3b1dd8f3bac22fc2359b447a69f42d7bcfafdb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Eksportuje funkcję)
 ```  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
   
  Wszystkie trzy metody może służyć do programu. Gdy łącze tworzy program, który zawiera eksportu, tworzy również biblioteki importowanej, chyba że używana jest plik EXP w kompilacji.  
   
- ŁĄCZE używa dekorowane formularze identyfikatorów. Kompilator decorates identyfikator podczas tworzenia pliku obj.. Jeśli *Nazwa_wpisu* określono do konsolidatora w jego bez tworzą (która jest wyświetlana w kodzie źródłowym), łącze próbuje dopasować nazwę. Nie można znaleźć unikatowego dopasowania, LINK generuje komunikat o błędzie. Użyj [DUMPBIN](../../build/reference/dumpbin-reference.md) narzędzia można pobrać [nazwy ozdobione](../../build/reference/decorated-names.md) formę identyfikator, gdy konieczne jest określenie jego do konsolidatora.  
+ ŁĄCZE używa dekorowane formularze identyfikatorów. Kompilator decorates identyfikator podczas tworzenia pliku obj. Jeśli *Nazwa_wpisu* określono do konsolidatora w jego bez tworzą (która jest wyświetlana w kodzie źródłowym), łącze próbuje dopasować nazwę. Nie można znaleźć unikatowego dopasowania, LINK generuje komunikat o błędzie. Użyj [DUMPBIN](../../build/reference/dumpbin-reference.md) narzędzia można pobrać [nazwy ozdobione](../../build/reference/decorated-names.md) formę identyfikator, gdy konieczne jest określenie jego do konsolidatora.  
   
 > [!NOTE]
 >  Nie określaj ozdobione formę identyfikatory języka C, które są zadeklarowane `__cdecl` lub `__stdcall`.  

@@ -18,16 +18,17 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05b3411fd9b8c9da13138f025bbc2a60ce8c73de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa7bdc75bd994b5220d4f6fbbc0d4defeb68c691
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-file-f-options"></a>Plik wyjściowy (/F) — Opcje
 Opcje pliku wyjściowego tworzenia lub zmiany nazwy plików wyjściowych. Wpływają na wszystkie C lub C++ określono plików źródłowych w zmiennej środowiskowej CL, w wierszu polecenia lub pliku polecenia.  
   
--   [/ FA, /Fa (umieszczanie pliku)](../../build/reference/fa-fa-listing-file.md)  
+-   [/FA, /Fa (Umieszczanie pliku na liście)](../../build/reference/fa-fa-listing-file.md)  
   
 -   [Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)  
   
@@ -35,9 +36,9 @@ Opcje pliku wyjściowego tworzenia lub zmiany nazwy plików wyjściowych. Wpływ
   
 -   [/Fe (Nazwij plik EXE)](../../build/reference/fe-name-exe-file.md)  
   
--   [/Fi (nazwa pliku wymuszonego dołączenia)](../../build/reference/fi-name-forced-include-file.md)  
+-   [/FI (Nazwa pliku wymuszonego dołączenia)](../../build/reference/fi-name-forced-include-file.md)  
   
--   [/FM (nazwa Mapfile)](../../build/reference/fm-name-mapfile.md)  
+-   [/Fm (Nazwa Mapfile)](../../build/reference/fm-name-mapfile.md)  
   
 -   [/FO (nazwa pliku obiektu)](../../build/reference/fo-object-file-name.md)  
   
@@ -45,9 +46,9 @@ Opcje pliku wyjściowego tworzenia lub zmiany nazwy plików wyjściowych. Wpływ
   
 -   [/ FR, /Fr (Utwórz plik .sbr)](../../build/reference/fr-fr-create-dot-sbr-file.md)  
   
--   [/Fu (nazwij wymuszone #using)](../../build/reference/fu-name-forced-hash-using-file.md)  
+-   [/FU (Nazwij wymuszone pliki dyrektywy #using)](../../build/reference/fu-name-forced-hash-using-file.md)  
   
--   [/FX (Scalaj wprowadzony kod)](../../build/reference/fx-merge-injected-code.md)  
+-   [/Fx (Scalaj wprowadzony kod)](../../build/reference/fx-merge-injected-code.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora](../../build/reference/compiler-options.md)   

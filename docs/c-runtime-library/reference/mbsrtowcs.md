@@ -29,11 +29,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e2e3a202eb50159c43c57c96f785c74156336af8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b51f8ccbac43e30202598499613d3b1c7c6e0a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 Konwertuje ciąg znaków wielobajtowych w bieżących ustawień regionalnych na odpowiedni ciąg znaków typu wide, z możliwością ponownego uruchomienia w środku znaków wielobajtowych. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [mbsrtowcs_s —](../../c-runtime-library/reference/mbsrtowcs-s.md).  
@@ -103,4 +104,4 @@ size_t mbsrtowcs(
  [mbrtowc —](../../c-runtime-library/reference/mbrtowc.md)   
  [mbtowc —, _mbtowc_l —](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
  [mbstowcs —, _mbstowcs_l —](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbsinit —](../../c-runtime-library/reference/mbsinit.md)
+ [mbsinit](../../c-runtime-library/reference/mbsinit.md)

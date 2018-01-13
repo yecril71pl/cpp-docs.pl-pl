@@ -39,11 +39,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ce45b5467032b7660202749117e60a1bb3b88b74
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19c80094cb613900ce8ffb2713b8e94a5826def4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getche-getwche"></a>_getche, _getwche
 Pobiera konsoli z echa znak.  
@@ -121,4 +122,4 @@ Type 'Y' when finished typing keys: abcdefyY
  [We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)   
  [_cgets —, _cgetws —](../../c-runtime-library/cgets-cgetws.md)   
  [getc —, getwc —](../../c-runtime-library/reference/getc-getwc.md)   
- [_ungetch —, _ungetwch —, _ungetch_nolock — _ungetwch_nolock —](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
+ [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)

@@ -47,11 +47,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d16ff30313a9346aa25f8febfba2f6e0d8307f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9166e8f7804a3138d3e891fbe15b54cb0e270811
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlmap-class"></a>Klasa CAtlMap
 Ta klasa dostarcza metody do tworzenia i zarządzania obiektu mapy.  
@@ -284,7 +285,7 @@ CPair* GetAt(POSITION& pos) throw();
  `key`  
  Parametr szablonu określający typ klucza mapy.  
   
- *wartość*  
+ *value*  
  Parametr szablonu określający typ wartości mapy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -365,7 +366,7 @@ void GetNextAssoc(
  `key`  
  Parametr szablonu określający typ klucza mapy.  
   
- *wartość*  
+ *value*  
  Parametr szablonu określający typ wartości mapy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -507,7 +508,7 @@ CPair* Lookup(KINARGTYPE key) throw();
  `key`  
  Określa klucz identyfikujący element, aby wyszukiwać.  
   
- *wartość*  
+ *value*  
  Zmienna, która odbiera wartość wyszukiwanego w górę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -601,7 +602,7 @@ POSITION SetAt(
  `key`  
  Wartość klucza można dodać do `CAtlMap` obiektu.  
   
- *wartość*  
+ *value*  
  Wartość do dodania do `CAtlMap` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -650,7 +651,7 @@ void SetValueAt(
  `pos`  
  Licznik pozycji zwrócony przez poprzednie wywołanie [CAtlMap::GetNextAssoc](#getnextassoc) lub [CAtlMap::GetStartPosition](#getstartposition).  
   
- *wartość*  
+ *value*  
  Wartość do dodania do `CAtlMap` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  

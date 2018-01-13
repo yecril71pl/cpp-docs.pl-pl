@@ -15,24 +15,25 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 63ac517b7687404d236deb3f3bd9ece1f11e165c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad7d6bf60e34bf9db328736279832c3ac55b8e1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="y-precompiled-headers"></a>/Y (Prekompilowane nagłówki)
 Następujące opcje kompilatora wpłynąć na generowanie i nagłówków prekompilowanych:  
   
--   [/ Y - (Ignoruj opcje Prekompilowanego nagłówka)](../../build/reference/y-ignore-precompiled-header-options.md)  
+-   [/Y- (Ignoruj opcje prekompilowanego nagłówka)](../../build/reference/y-ignore-precompiled-header-options.md)  
   
 -   [/Yc (Utwórz prekompilowany plik nagłówka)](../../build/reference/yc-create-precompiled-header-file.md)  
   
--   [/YD (umieść informacje o debugowaniu w pliku obiektu)](../../build/reference/yd-place-debug-information-in-object-file.md)  
+-   [/Yd (Umieść informacje o debugowaniu w pliku obiektu)](../../build/reference/yd-place-debug-information-in-object-file.md)  
   
--   [/Yl (Wstaw Odnośnik PCH dla bibliotek debugowania)](../../build/reference/yl-inject-pch-reference-for-debug-library.md)  
+-   [/Yl (Wprowadź odnośnik PCH dla bibliotek debugowania)](../../build/reference/yl-inject-pch-reference-for-debug-library.md)  
   
--   [/YU (Korzystaj z Prekompilowanego nagłówka pliku)](../../build/reference/yu-use-precompiled-header-file.md)  
+-   [/Yu (Korzystaj z prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md)  
   
  Aby uzyskać więcej informacji na temat pracy z prekompilowanych nagłówków, zobacz [tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md).  
   

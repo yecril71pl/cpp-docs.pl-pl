@@ -43,11 +43,12 @@ caps.latest.revision: "56"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c5a81cdcba10d65c496a946fb8847fdb09b1ff70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01558dfa6b28f10746c1487384bad44768b5877e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 Otwiera plik. Bardziej bezpiecznych wersje tych funkcji, wykonujących kody błędów weryfikacji i przywracać dodatkowy parametr są dostępne; zobacz [fopen_s —, _wfopen_s —](../../c-runtime-library/reference/fopen-s-wfopen-s.md).  
@@ -336,4 +337,4 @@ int main(int argc, char** argv)
  [freopen —, _wfreopen —](../../c-runtime-library/reference/freopen-wfreopen.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_setmode —](../../c-runtime-library/reference/setmode.md)   
- [_sopen —, _wsopen —](../../c-runtime-library/reference/sopen-wsopen.md)
+ [_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)

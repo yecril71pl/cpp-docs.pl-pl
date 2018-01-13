@@ -28,11 +28,12 @@ caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2b43a6b08087dcaeeda7959eaadbee9c250f4de9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25d2e84bb6d336b2e530b833252b2b4a05dce4e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uncaughtexception"></a>__uncaught_exception
 Wskazuje, czy co najmniej jeden wyjątek został zgłoszony, ale nie było obsługiwane przez odpowiednie `catch` zablokować z [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) instrukcji.  
@@ -56,4 +57,4 @@ bool __uncaught_exception(
 |__uncaught_exception|EH.h|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Spróbuj, throw i catch instrukcji (C++)](../../cpp/try-throw-and-catch-statements-cpp.md)
+ [Instrukcje try, throw i catch (C++)](../../cpp/try-throw-and-catch-statements-cpp.md)

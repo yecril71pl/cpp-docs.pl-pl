@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d65dc3b8d7dd62994eb0a8b546e290d1b6e47b9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="language-strings"></a>Ciągi języka
 `setlocale` i `_create_locale` funkcji można użyć interfejsu API NLS systemu Windows obsługiwane języki w systemach operacyjnych, które nie korzystają z strony kodowej Unicode. Aby uzyskać listę języków obsługiwanych przez wersję systemu operacyjnego, zobacz [dokumentacja interfejsu API National obsługi Language (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Ciąg języka może być dowolna z wartości w **języka** i **skrót nazwy języka** kolumn listę obsługiwanych języków. Aby uzyskać dodatkowe informacje na temat obsługi języków przez wersję systemu operacyjnego, zobacz [dodatek A: produktu zachowanie](http://msdn.microsoft.com/goglobal/bb896001.aspx) w [MS-LCID]: odwołanie do identyfikatora kodu języka systemu Windows (LCID).   

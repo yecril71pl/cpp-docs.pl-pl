@@ -24,11 +24,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a34b4098b04be1c121ed4a70fdbde8de4a57a94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98ff527e9abbb4e80e9a2460cce9ea067b09a557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-constants"></a>Instrukcje obsługi wyjątków — Stałe
 Stała `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION`, lub `EXCEPTION_EXECUTE_HANDLER` jest zwracany, gdy wystąpi wyjątek podczas wykonywania sekcji ochroną **spróbuj — z wyjątkiem** instrukcji. Wartość zwracana określa sposób obsługi wyjątków. Aby uzyskać więcej informacji, zobacz [spróbuj-except — instrukcja](../cpp/try-except-statement.md) w *dokumentacja języka C++*.  

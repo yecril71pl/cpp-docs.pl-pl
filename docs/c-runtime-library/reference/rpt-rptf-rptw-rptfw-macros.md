@@ -97,11 +97,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 453b04174325a7c112105bdef1147e1b7909ccdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW — Makra
 Śledzi postęp aplikacji przez Generowanie raportu debugowania (tylko wersja do debugowania). Należy pamiętać, że  *n*  określa liczbę argumentów `args` i może być 0, 1, 2, 3, 4 i 5.  

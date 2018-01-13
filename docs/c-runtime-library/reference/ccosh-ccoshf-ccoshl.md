@@ -43,11 +43,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 61b20bfec861988a82a05adab4684d76d93f179b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adf6fc31ad3c0a7ab52db35373b94b751cce0be5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh ccoshf, ccoshl
 Pobiera cosinus hiperboliczny dla liczby złożonej.  
@@ -103,4 +104,4 @@ _Lcomplex ccoshl(
  [csin csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
  [casin casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
  [ccos ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+ [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)

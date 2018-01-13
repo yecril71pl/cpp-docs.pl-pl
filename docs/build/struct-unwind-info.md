@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c306e8920bb058b64133b7fec18f21a243e1f715
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1effec5bc753f1b23f8d43a8406c61cb6663fa56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="struct-unwindinfo"></a>struktura UNWIND_INFO
 Struktury informacji o danych unwind służy do rejestrowania wpływ, jaki ma funkcji na wskaźnik stosu i którym nieulotnej rejestrów są zapisywane na stosie:  
@@ -87,4 +88,4 @@ Struktury informacji o danych unwind służy do rejestrowania wpływ, jaki ma fu
  Jeśli jest ustawiona flaga UNW_FLAG_CHAININFO struktura UNWIND_INFO kończy się z trzech UWORDs.  Te UWORDs reprezentuje informacje RUNTIME_FUNCTION łańcuchowej unwind dla funkcji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dane operacji unwind dla obsługi wyjątków, obsługa debugera](../build/unwind-data-for-exception-handling-debugger-support.md)
+ [Dane operacji Unwind dla obsługi wyjątków, obsługa debugera](../build/unwind-data-for-exception-handling-debugger-support.md)

@@ -54,11 +54,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a3b2048a7d5e05032960cdba7be4c5952b0a755
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84e0cae612e1ee27b841089176ce1e2dfa368d29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 Zwraca liczbę znaków w ciągu sformatowaną umożliwia określenie kolejności, w którym są używane parametry w ciągu formatu.  
@@ -132,4 +133,4 @@ int _scwprintf_p _l(
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [_scprintf —, _scprintf_l —, _scwprintf — _scwprintf_l —](../../c-runtime-library/reference/scprintf-scprintf-l-scwprintf-scwprintf-l.md)   
- [_printf_p —, _printf_p_l —, _wprintf_p — _wprintf_p_l —](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)
+ [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)

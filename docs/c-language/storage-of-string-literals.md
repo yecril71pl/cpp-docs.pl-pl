@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a1a001899e46fbd8894b72f2c8cd806f1834b7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc3314e569a7229e3cf316b46e1a8df4c9bb722e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-of-string-literals"></a>Magazynowanie literałów ciągu
 Znaki literału ciągu są przechowywane w kolejności, w lokalizacji pamięci ciągłej. Sekwencja specjalna (takich jak  **\\ \\**  lub  **\\"**) wewnątrz literału ciągu traktowana jako pojedynczy znak. Znak null (reprezentowane przez **\0** sekwencja unikowa) jest automatycznie dołączane do i oznacza koniec, każdy ciąg literału. (Dzieje się tak podczas [fazy tłumaczenia](../preprocessor/phases-of-translation.md) 7.) Należy pamiętać, że kompilator nie mogą być przechowywane w dwóch identycznych ciągów w dwóch różnych adresów. [/GF](../build/reference/gf-eliminate-duplicate-strings.md) wymusza na umieszczenie pojedynczej kopii identycznych ciągów w pliku wykonywalnego.  

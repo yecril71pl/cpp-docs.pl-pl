@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fbc76f70eba6fab46e709978bbadcd10312af6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596e3fcf4dab3f88abc17cac4bc32471e63b4bbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Specyfikatory typu danych i odpowiedniki
 Ten podręcznik zazwyczaj używa formularze specyfikatorów typu wymienione w poniższej tabeli, a nie długich formularzy i przy założeniu, że `char` typ ma znak domyślnie. W związku z tym w niniejszym podręczniku `char` jest odpowiednikiem **podpisany char**.  

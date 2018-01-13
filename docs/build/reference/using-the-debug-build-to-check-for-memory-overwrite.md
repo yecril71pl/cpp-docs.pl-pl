@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b8fc223a1e4e1162ce99bb3275152c49828aa99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f18a13992e41cd88bc8edec44f16b02da38ad10c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Korzystanie z kompilacji debugowania do sprawdzania nadpisywania pamięci
 Aby korzystać z kompilacji debugowania do sprawdzania nadpisywania pamięci, należy najpierw ponownie skompiluj projekt do debugowania. Następnie przejdź do początku części aplikacji `InitInstance` funkcji i Dodaj następujący wiersz:  

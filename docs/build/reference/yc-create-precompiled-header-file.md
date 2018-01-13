@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c73f7f4c0061a16d9a3696067eee6fcf28de115a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 865b5e0fa7039a0b60f524c2f13a367569757d92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Utwórz prekompilowany plik nagłówka)
 Instruuje kompilator, aby utworzyć plik prekompilowanego nagłówka (.pch), który reprezentuje stan kompilacji w określonym punkcie.  
@@ -56,7 +57,7 @@ Instruuje kompilator, aby utworzyć plik prekompilowanego nagłówka (.pch), kt�
   
  Aby uzyskać więcej informacji o prekompilowanych nagłówków zobacz:  
   
--   [/Y (prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)  
   
 -   [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)  
   

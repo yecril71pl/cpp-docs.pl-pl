@@ -51,11 +51,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6ef7f9b1cbeb3aeab28a4c02bce9099aaaf0078d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05ced49a960aea0b32365b80fe76095893f63d5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-a-library"></a>Zarządzanie biblioteką
 Jest to domyślny tryb dla LIB do tworzenia lub modyfikowania biblioteki obiektów COFF. LIB działa w tym trybie, jeśli nie określisz/extract (Aby skopiować obiekt do pliku) lub/DEF (do tworzenia biblioteki importowanej).  
@@ -109,4 +110,4 @@ LIB [options...] files...
 >  Jednocześnie nie można usunąć element członkowski i wyodrębnij go do pliku w tym samym kroku. Należy najpierw wyodrębnić obiektu elementu członkowskiego przy użyciu/extract, a następnie uruchom ponownie za pomocą/Remove LIB. To zachowanie różni się od LIB 16-bitowych (dla biblioteki OMF) dostępnych w innych produktów firmy Microsoft.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki LIB](../../build/reference/lib-reference.md)
+ [LIB — dokumentacja](../../build/reference/lib-reference.md)

@@ -46,11 +46,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bb4405c893552f38e613b9cb23ae0335c1a914c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b54a6aac55554cd7bd4698762779e540c4bc4c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Korzystaj z bibliotek wykonawczych)
 Wskazuje, czy moduł wielowątkowy jest biblioteką DLL i określa wersje biblioteki wykonawczej handlowe lub przeznaczone do debugowania.  
@@ -67,7 +68,7 @@ Wskazuje, czy moduł wielowątkowy jest biblioteką DLL i określa wersje biblio
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/ / MD**|Powoduje, że aplikacja korzysta z wersji biblioteki wykonawczej specyficznej dla wielowątkowości i specyficznej dla DLL. Definiuje `_MT` i `_DLL` i powoduje, że kompilator umieszcza nazwę biblioteki MSVCRT.lib w pliku obj..<br /><br /> Aplikacje skompilowane przy użyciu tej opcji są łączone statycznie z MSVCRT.lib. Ta biblioteka zawiera warstwę kodu, która umożliwia konsolidatorowi rozwiązywanie odwołań zewnętrznych. Rzeczywisty kod pracy jest zawarta w MSVCR*numerwersji*. Biblioteki DLL, który musi być dostępny w czasie wykonywania dla aplikacji związane z MSVCRT.lib.|  
+|**/ / MD**|Powoduje, że aplikacja korzysta z wersji biblioteki wykonawczej specyficznej dla wielowątkowości i specyficznej dla DLL. Definiuje `_MT` i `_DLL` i powoduje, że kompilator umieszcza nazwę biblioteki MSVCRT.lib w pliku obj.<br /><br /> Aplikacje skompilowane przy użyciu tej opcji są łączone statycznie z MSVCRT.lib. Ta biblioteka zawiera warstwę kodu, która umożliwia konsolidatorowi rozwiązywanie odwołań zewnętrznych. Rzeczywisty kod pracy jest zawarta w MSVCR*numerwersji*. Biblioteki DLL, który musi być dostępny w czasie wykonywania dla aplikacji związane z MSVCRT.lib.|  
 |**/ MDd**|Definiuje `_DEBUG`, `_MT`, i `_DLL` i powoduje, że aplikacja korzysta z debugowania specyficzne dla wielowątkowej i specyficznej dla biblioteki DLL wersji biblioteki czasu wykonywania. Powoduje też, że kompilator umieszcza nazwę biblioteki MSVCRTD.lib w pliku .obj.|  
 |**/ MT**|Powoduje, że aplikacja korzysta ze statycznej, wielowątkowej wersji biblioteki wykonawczej. Definiuje `_MT` i powoduje, że kompilator umieszcza nazwę biblioteki LIBCMT.lib w pliku .obj, tak aby konsolidator używał LIBCMT.lib do rozpoznawania symboli zewnętrznych.|  
 |**/ MTd**|Definiuje `_DEBUG` i `_MT`. Ta opcja również powoduje, że kompilator umieszcza nazwę biblioteki LIBCMTD.lib w pliku .obj, tak aby konsolidator użył LIBCMTD.lib, aby rozwiązać zewnętrzne symbole.|  

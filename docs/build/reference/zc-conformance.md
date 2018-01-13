@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8c959926cd1ae15ebc8087a9dc3237fdeeb34fa8
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: 86b12604a5348c3a1aabb33c7e13a4e7a3c57932
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zc-conformance"></a>/Zc (Zgodność)
 
@@ -41,6 +42,7 @@ Są to `/Zc` — opcje kompilatora:
 
 |Opcja|Zachowanie|
 |---|---|
+|[alignedNew\[-\]](zc-alignednew.md)|Włączanie języka C ++ 17 nadmiernie wyrównany dynamicznej alokacji (domyślnie włączone w języku C ++ 17).|
 |[Automatycznie\[-\]](zc-auto-deduce-variable-type.md)|Wymuszaj nowe znaczenie standardu C++ dla `auto` (na domyślnie).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Włącz połączenie zewnętrzne dla `constexpr` zmienne (domyślnie wyłączone).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Wymuszaj Standard C++ `for` reguł ustawiania zakresu (na domyślnie).|

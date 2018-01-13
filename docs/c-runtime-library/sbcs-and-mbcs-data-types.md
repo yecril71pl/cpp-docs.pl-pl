@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d32c9e792971b20da99377ad36f3872f5824dcc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c54b6e9716e7f0aee9a0b211148b76804d9520bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS i MBCS — Typy danych
 Udostępnianych przez firmę Microsoft `MBCS` oczekuje procedury biblioteki wykonawczej, który obsługuje tylko znaków wielobajtowych jednego lub jeden bajt znaków wielobajtowych `unsigned int` argumentu (gdzie 0x00 < = wartość znaku < = 0xFFFF i 0x00 < = wartość bajtu < = 0xFF). `MBCS` Procedura obsługuje wielobajtowe bajtów lub znaków w kontekście ciąg spodziewa się ciągu znaków wielobajtowych może być reprezentowana jako `unsigned char` wskaźnika.  

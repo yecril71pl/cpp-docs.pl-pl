@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ca454b0087bd9cc1b8ded6f7b2d4ccb201373dc4
-ms.sourcegitcommit: 2a5d0e9e6829150cbc22c6de3395ec13008e3266
+ms.workload: cplusplus
+ms.openlocfilehash: 90f7f9431ddfc2d21a29b35643ee3dff3e34cd6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interpretation-of-multibyte-character-sequences"></a>Interpretacja wielobajtowych sekwencji znaków
 Większość procedur znaków wielobajtowych biblioteki wykonawczej Microsoft rozpoznaje wielobajtowych sekwencji znaków odnoszących się do strony kodowe wielobajtowe. Wartość wyjściowa jest zagrożony ustawienie `LC_CTYPE` ustawienie kategorii ustawień regionalnych; zobacz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez `_l` Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane zamiast przekazany parametr ustawień regionalnych.  
@@ -28,10 +29,10 @@ Większość procedur znaków wielobajtowych biblioteki wykonawczej Microsoft ro
   
 |Procedura|Zastosowanie|  
 |-------------|---------|  
-|[_mbclen —, mblen —, _mblen_l —](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)|Sprawdzanie poprawności i zwraca liczbę bajtów w znaków wielobajtowych|  
-|[strlen —, wcslen —, _mbslen —, _mbslen_l — _mbstrlen —, _mbstrlen_l —](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|Ciągi znaków wielobajtowych: Sprawdzanie poprawności każdego znaku w ciągu; Zwraca długość ciągu. Ciągi znaków typu wide: zwraca długość ciągu.|  
+|[_mbclen, mblen, _mblen_l](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)|Sprawdzanie poprawności i zwraca liczbę bajtów w znaków wielobajtowych|  
+|[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|Ciągi znaków wielobajtowych: Sprawdzanie poprawności każdego znaku w ciągu; Zwraca długość ciągu. Ciągi znaków typu wide: zwraca długość ciągu.|  
 |[mbstowcs —, _mbstowcs_l —](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md), [mbstowcs_s —, _mbstowcs_s_l —](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)|Konwertuj sekwencja znaków wielobajtowych sekwencji odpowiednie znaki dwubajtowe|  
-|[mbtowc —, _mbtowc_l —](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|Konwertuj znaków wielobajtowych na odpowiednich znaków dwubajtowych|  
+|[mbtowc, _mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|Konwertuj znaków wielobajtowych na odpowiednich znaków dwubajtowych|  
 |[wcstombs —, _wcstombs_l —](../c-runtime-library/reference/wcstombs-wcstombs-l.md), [wcstombs_s —, _wcstombs_s_l —](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|Konwertuj do odpowiedniej sekwencji znaków wielobajtowych sekwencji znaki dwubajtowe|  
 |[wctomb —, _wctomb_l —](../c-runtime-library/reference/wctomb-wctomb-l.md), [wctomb_s —, _wctomb_s_l —](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Konwertuj znaków dwubajtowych na odpowiednich znaków wielobajtowych|  
 |[mbrtoc16, mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|Konwertuj odpowiednik znaku UTF-16 lub UTF-32 znaków wielobajtowych|  

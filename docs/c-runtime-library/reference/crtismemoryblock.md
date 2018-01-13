@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 739a3625f264492ec59d3b5e9f9fef67b3c20df7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec6bea115ba509c7275a2d220cf4b10c6faecae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 Sprawdza, czy blok pamięci określony w lokalnej sterty i ma identyfikator typu bloku sterty debugowania prawidłowe (tylko wersja do debugowania).  

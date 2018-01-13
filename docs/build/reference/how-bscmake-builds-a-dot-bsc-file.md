@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: adc340a30fcf0292c3dc7fa0e595d488b4046431
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb8e03bed85a5e466a3c41f0cffc51d35c4b4561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>W jaki sposób BSCMAKE kompiluje plik .Bsc
 BSCMAKE kompiluje lub odtwarza pliku .bsc w najbardziej wydajny sposób, może on. Aby uniknąć potencjalnych problemów, ważne jest zrozumienie procesu kompilacji.  
@@ -32,4 +33,4 @@ BSCMAKE kompiluje lub odtwarza pliku .bsc w najbardziej wydajny sposób, może o
 -   Dla kompilacji przyrostowej powiodła się musi istnieć w pliku .bsc. Wszystkie pliki SBR uczestniczących, nawet pustych plików, musi istnieć i musi być określona w wierszu polecenia BSCMAKE. W przypadku pominięcia pliku .sbr z wiersza polecenia, BSCMAKE usuwa swojego wkładu z pliku.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie. Pliku BSC](../../build/reference/building-a-dot-bsc-file.md)
+ [Kompilowanie pliku .Bsc](../../build/reference/building-a-dot-bsc-file.md)

@@ -29,11 +29,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72489315ad23bf65086105c5d76da1edea48674d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b701362fd8ed19575f5de34f998bc8fd4f7e6de1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 Konwertowanie ciągu znaków wielobajtowych w bieżących ustawień regionalnych reprezentacji ciągu znaków dwubajtowych. Wersja [mbsrtowcs —](../../c-runtime-library/reference/mbsrtowcs.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -136,4 +137,4 @@ errno_t mbsrtowcs_s(
  [mbrtowc —](../../c-runtime-library/reference/mbrtowc.md)   
  [mbtowc —, _mbtowc_l —](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
  [mbstowcs_s —, _mbstowcs_s_l —](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
- [mbsinit —](../../c-runtime-library/reference/mbsinit.md)
+ [mbsinit](../../c-runtime-library/reference/mbsinit.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e1476369a798228361b89fdef12c94624ca4a70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a03f3ea67c9ecabd6fa68d653a3e1812fb0266cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/Zc:threadSafeInit (wątkowo lokalnego statycznego inicjowania)  
 `/Zc:threadSafeInit` — Opcja kompilatora informuje kompilator, aby zainicjować zmienne lokalne statyczne (zakresem funkcji) w sposób zapewniający obsługę wielowątkowości, eliminując konieczność ręcznej synchronizacji. Tylko Inicjalizacja jest bezpieczne wątkowo. Nadal należy ręcznie zsynchronizować użycia i modyfikacji statycznych zmiennych lokalnych przez wiele wątków. Ta opcja jest dostępna, począwszy od programu Visual Studio 2015. Domyślnie program Visual Studio umożliwia tej opcji.  
@@ -54,4 +55,4 @@ Aby uzyskać więcej informacji na temat problemów zgodności w programie Visua
 ## <a name="see-also"></a>Zobacz też  
 [Opcje kompilatora](../../build/reference/compiler-options.md)  
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)  
-[/Zc (zgodność)](../../build/reference/zc-conformance.md)  
+[/Zc (Zgodność)](../../build/reference/zc-conformance.md)  

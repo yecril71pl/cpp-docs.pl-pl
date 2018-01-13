@@ -36,11 +36,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d0cb985b4e2ddeea853ccd40668a3e378834e68a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d670ead8214f54323cf9f6b284eaaef9a582757
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fclose-fcloseall"></a>fclose, _fcloseall
 Zamyka strumienia (`fclose`) lub zamyka wszystkie otwarte strumieni (`_fcloseall`).  
@@ -90,4 +91,4 @@ int _fcloseall( void );
  [_fdopen —, _wfdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md)   
  [fflush —](../../c-runtime-library/reference/fflush.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen —, _wfreopen —](../../c-runtime-library/reference/freopen-wfreopen.md)
+ [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)

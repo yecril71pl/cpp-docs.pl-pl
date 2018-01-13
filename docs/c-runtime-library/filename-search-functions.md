@@ -28,11 +28,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ee67049241067285f564e59791f408347cc0c747
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16aff4db1a04c31b3b45c9a61f74c44d6c9465f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filename-search-functions"></a>Funkcje wyszukiwania nazwy pliku
 Te funkcje wyszukiwania i zamknij wyszukiwanie nazwy określonego pliku:  
@@ -41,7 +42,7 @@ Te funkcje wyszukiwania i zamknij wyszukiwanie nazwy określonego pliku:
   
 -   [_findfirst —, _wfindfirst —](../c-runtime-library/reference/findfirst-functions.md)  
   
--   [_findclose —](../c-runtime-library/reference/findclose.md)  
+-   [_findclose](../c-runtime-library/reference/findclose.md)  
   
 ## <a name="remarks"></a>Uwagi  
  `_findfirst` Funkcja zawiera informacje o pierwszego wystąpienia nazwy pliku, który pasuje do pliku określonego w `filespec` argumentu. Można użyć w `filespec` dowolną kombinację symboli wieloznacznych, która jest obsługiwana przez system operacyjny hosta.  

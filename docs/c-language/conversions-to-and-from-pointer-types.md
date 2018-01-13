@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1751c19ba222bbdf9dfc30a290201289db1af850
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca8507d8890b1f1865ccefd6ce56a1b6f069d0f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Konwersje do i z typów wskaźnika
 Wskaźnik do jednego typu wartości może być przekonwertowany na wskaźnik do innego typu. Jednakże wynik może być niezdefiniowany, ze względu na wymagania wyrównania i rozmiary różnych typów w magazynie. Wskaźnik do obiektu może być przekonwertowany na wskaźnik do obiektu, którego typ wymaga mniejszego lub takiego samego wyrównania w magazynie i na odwrót bez zmiany.  

@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6afa8ac8561b8ba2dcc7b8f7c2253ae29ecf6844
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a3163dcb844892cd4add63c4c985d3742831523
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ciatan2"></a>_CIatan2
 Oblicza tangens *x* / *y* gdzie *x* i *y* wartości wierzchołku stosu.  
@@ -54,4 +55,4 @@ void __cdecl _CIatan2();
   
 ## <a name="see-also"></a>Zobacz też  
  [Alfabetyczne odwołanie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [ATAN, atanf —, atanl —, atan2 atan2f —, atan2l —](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)
+ [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)

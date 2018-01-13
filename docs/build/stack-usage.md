@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7a74abff7a2971fe66fa2df878078ac95f58fe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d6e3aa8d01dcc85b6c37684ccccaf82c84d8dfb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack-usage"></a>Wykorzystanie stosu
 Cała pamięć poza bieżący adres źródło jest uznawany za volatile: system operacyjny lub debugera, mogą zastąpić tę pamięć podczas sesji debugowania użytkownika lub obsługi przerwań. W związku z tym źródło musi być zawsze ustawiony przed podjęciem próby odczytu lub zapisu wartości do ramki stosu.  
@@ -30,9 +31,9 @@ Cała pamięć poza bieżący adres źródło jest uznawany za volatile: system 
   
 -   [Typy funkcji](../build/function-types.md)  
   
--   [Wyrównanie — funkcja malloc](../build/malloc-alignment.md)  
+-   [malloc, wyrównanie](../build/malloc-alignment.md)  
   
 -   [alloca](../build/alloca.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [x64 konwencje kodowania](../build/x64-software-conventions.md)
+ [Konwencje kodowania x64](../build/x64-software-conventions.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "66"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ab900cf342754aed7d7d9ba7f9a499c537ad8a22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee6062b04c1f406fe3286f6035eba1cda65ef1fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 Oto kompleksowe alfabetyczną listę opcji kompilatora. Lista kategorii, [kompilatora opcje rozbiciu na kategorie](../../build/reference/compiler-options-listed-by-category.md).  
@@ -39,7 +40,7 @@ Oto kompleksowe alfabetyczną listę opcji kompilatora. Lista kategorii, [kompil
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Formant oceny specyfikatora constexpr w czasie kompilacji.|  
 |[/D](../../build/reference/d-preprocessor-definitions.md)|Określa stałe i makr.|  
 |[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Określa format komunikaty diagnostyczne.|  
-|[/ doc](../../build/reference/doc-process-documentation-comments-c-cpp.md)|Komentarze dokumentacji procesów do pliku XML.|  
+|[/doc](../../build/reference/doc-process-documentation-comments-c-cpp.md)|Komentarze dokumentacji procesów do pliku XML.|  
 |[/E](../../build/reference/e-preprocess-to-stdout.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego.|  
 |[/EH](../../build/reference/eh-exception-handling-model.md)|Określa model obsługi wyjątków.|  
 |[/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego.|  
@@ -91,14 +92,14 @@ Oto kompleksowe alfabetyczną listę opcji kompilatora. Lista kategorii, [kompil
 |[/ Kernel](../../build/reference/kernel-create-kernel-mode-binary.md)|Kompilatorze i konsolidatorze spowoduje utworzenie pliku binarnego, który może zostać wykonany jądra systemu Windows.|  
 |[/LD](../../build/reference/md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę DLL.|  
 |[/ LDd](../../build/reference/md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę DLL debugowania.|  
-|[/ Link](../../build/reference/link-pass-options-to-linker.md)|Przekazuje określona opcja łącza.|  
+|[/link](../../build/reference/link-pass-options-to-linker.md)|Przekazuje określona opcja łącza.|  
 |[/LN](../../build/reference/ln-create-msil-module.md)|Tworzy moduł MSIL.|  
 |[/ / MD](../../build/reference/md-mt-ld-use-run-time-library.md)|Tworzy wielowątkowe biblioteki DLL przy użyciu MSVCRT.lib.|  
 |[/ MDd](../../build/reference/md-mt-ld-use-run-time-library.md)|Tworzy Debuguj wielowątkowe biblioteki DLL przy użyciu MSVCRTD.lib.|  
 |[/MP](../../build/reference/mp-build-with-multiple-processes.md)|Kompiluje wiele plików źródłowych przy użyciu wielu procesów.|  
 |[/ MT](../../build/reference/md-mt-ld-use-run-time-library.md)|Tworzy plik wykonywalny wielowątkowe przy użyciu LIBCMT.lib.|  
 |[/ MTd](../../build/reference/md-mt-ld-use-run-time-library.md)|Tworzy Debuguj wielowątkowe plik wykonywalny przy użyciu biblioteki LIBCMTD.lib.|  
-|[/ nologo](../../build/reference/nologo-suppress-startup-banner-c-cpp.md)|Pomija wyświetlanie banera logowania jednokrotnego.|  
+|[/nologo](../../build/reference/nologo-suppress-startup-banner-c-cpp.md)|Pomija wyświetlanie banera logowania jednokrotnego.|  
 |[/ O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)|Tworzy mały kod.|  
 |[/ O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)|Tworzy szybki kod.|  
 |[/OB](../../build/reference/ob-inline-function-expansion.md)|Określa rozszerzenie funkcji wbudowanej.|  
@@ -115,9 +116,9 @@ Oto kompleksowe alfabetyczną listę opcji kompilatora. Lista kategorii, [kompil
 |[/ Qfast_transcendentals](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md)|Generuje fast transcendentals.|  
 |[/ QIfist](../../build/reference/qifist-suppress-ftol.md)|Przestarzałe. Pomija `_ftol` podczas konwersji z typu zmiennoprzecinkowego na typ całkowity jest wymagana (tylko x86).|  
 |[/ Qimprecise_fwaits](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Usuwa `fwait` poleceniach wewnątrz `try` bloków.|  
-|[/ Qpar (automatyczny Paralelizator)](../../build/reference/qpar-auto-parallelizer.md)|Umożliwia automatyczne paralelizacja pętli, które są oznaczone ikoną z [#pragma loop()](../../preprocessor/loop.md) dyrektywy.|  
-|[/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md)|Instrukcje przenoszenia całkowitą używa wartości zmiennoprzecinkowych i wyłącza niektórych zmiennoprzecinkową optymalizacje obciążenia punktu.|  
-|[/ Qvec raport (raportowania automatycznej Wektoryzacji poziomu)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)|Włącza raportowanie poziomy vectorization automatycznego.|  
+|[/Qpar (Automatyczny paralelizator)](../../build/reference/qpar-auto-parallelizer.md)|Umożliwia automatyczne paralelizacja pętli, które są oznaczone ikoną z [#pragma loop()](../../preprocessor/loop.md) dyrektywy.|  
+|[/Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md)|Instrukcje przenoszenia całkowitą używa wartości zmiennoprzecinkowych i wyłącza niektórych zmiennoprzecinkową optymalizacje obciążenia punktu.|  
+|[/Qvec-report (Poziom raportowania automatycznej wektoryzacji)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)|Włącza raportowanie poziomy vectorization automatycznego.|  
 |[/ RTC](../../build/reference/rtc-run-time-error-checks.md)|Włącza sprawdzanie błędów czasu wykonywania.|  
 |[/ SDL](../../build/reference/sdl-enable-additional-security-checks.md)|Włącza dodatkowe funkcje zabezpieczeń i ostrzeżenia.|  
 |[/ showincludes](../../build/reference/showincludes-list-include-files.md)|Wyświetlanie listy plików dołączanych podczas kompilacji.|  

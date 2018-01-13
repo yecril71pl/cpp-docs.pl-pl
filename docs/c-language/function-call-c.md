@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0faf339877b075a1337c73ec5ca3c41a869ceec2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b4275c57b26808b7fbb4497572913ccfe951fcb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-call-c"></a>Wywołanie funkcji (C)
 "Wywołanie funkcji" to wyrażenie, która zawiera nazwę wywoływanej funkcji lub wartość wskaźnika funkcji i, opcjonalnie, argumenty przekazywany do funkcji.  
@@ -40,4 +41,4 @@ ms.lasthandoff: 10/24/2017
  Wyrażenie wywołania funkcji ma wartość i typ wartości zwracanej przez funkcję. Funkcja nie może zwracać obiektu typu array. Jeśli funkcja zwracany typ jest `void` (oznacza to, że funkcja została zadeklarowana nigdy nie, aby zwrócić wartość), ma także wyrażenie wywołania funkcji `void` typu. (Zobacz [wywołania funkcji](../c-language/function-calls.md) Aby uzyskać więcej informacji.)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Operator wywołania funkcji:)](../cpp/function-call-operator-parens.md)
+ [Operator wywołania funkcji: ()](../cpp/function-call-operator-parens.md)

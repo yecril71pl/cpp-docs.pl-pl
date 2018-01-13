@@ -64,21 +64,22 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1f571a6d0a84ca6d2990ed4910ef52ea0d54e2d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2b01ce48463f3aad723bee38ee9f3ef1b499c3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exec-wexec-functions"></a>_exec, _wexec — Funkcje
 Każda funkcja w tej rodzinie ładuje i wykonuje nowy proces:  
   
 |||  
 |-|-|  
-|[_execl —, _wexecl —](../c-runtime-library/reference/execl-wexecl.md)|[_execv —, _wexecv —](../c-runtime-library/reference/execv-wexecv.md)|  
-|[_execle —, _wexecle —](../c-runtime-library/reference/execle-wexecle.md)|[_execve —, _wexecve —](../c-runtime-library/reference/execve-wexecve.md)|  
-|[_execlp —, _wexeclp —](../c-runtime-library/reference/execlp-wexeclp.md)|[_execvp —, _wexecvp —](../c-runtime-library/reference/execvp-wexecvp.md)|  
-|[_execlpe —, _wexeclpe —](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe —, _wexecvpe —](../c-runtime-library/reference/execvpe-wexecvpe.md)|  
+|[_execl, _wexecl](../c-runtime-library/reference/execl-wexecl.md)|[_execv, _wexecv](../c-runtime-library/reference/execv-wexecv.md)|  
+|[_execle, _wexecle](../c-runtime-library/reference/execle-wexecle.md)|[_execve, _wexecve](../c-runtime-library/reference/execve-wexecve.md)|  
+|[_execlp, _wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|[_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|  
+|[_execlpe, _wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|  
   
  Litery na końcu nazwy funkcji określa odmiany.  
   
@@ -248,4 +249,4 @@ int main( int ac, char* av[] )
  [exit, _exit — _exit —](../c-runtime-library/reference/exit-exit-exit.md)   
  [_onexit —, _onexit_m —](../c-runtime-library/reference/onexit-onexit-m.md)   
  [_spawn, _wspawn — funkcje](../c-runtime-library/spawn-wspawn-functions.md)   
- [System, _wsystem —](../c-runtime-library/reference/system-wsystem.md)
+ [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

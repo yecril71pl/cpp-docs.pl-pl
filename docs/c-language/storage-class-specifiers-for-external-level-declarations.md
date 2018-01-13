@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 729d46f1e228127b712e1533c7eab5976f690663
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Specyfikatory klasy magazynowania dla deklaracji na poziomie zewnętrznym (C)
 Zmienne zewnętrzne są zmiennymi w zakresie pliku. Są zdefiniowane poza jakąkolwiek funkcją i są potencjalnie dostępne dla wielu funkcji. Funkcje mogą być definiowane tylko na poziomie zewnętrznym i dlatego nie mogą być zagnieżdżane. Domyślnie wszystkie odwołania do zmiennych zewnętrznych i funkcji o tej samej nazwie są odwołaniami do tego samego obiektu, co oznacza, że mają one „powiązanie zewnętrzne”. (Można użyć **statycznych** słowo kluczowe, aby zastąpić. Informacje w dalszej części tej sekcji, aby uzyskać więcej informacji o **statycznych**.)  

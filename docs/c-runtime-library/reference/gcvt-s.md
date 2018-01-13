@@ -39,11 +39,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ba9f1a7a77c0f9d23423906c18b05ace5b20ec8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a028431bb324fe634ee30ae81eec6c2d3371441
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gcvts"></a>_gcvt_s
 Konwertuje wartość zmiennoprzecinkowa na ciąg. To jest wersja [_gcvt —](../../c-runtime-library/reference/gcvt.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -89,7 +90,7 @@ errno_t _gcvt_s(
 |nie `NULL` (wskazuje prawidłowy pamięci)|zero|wszystkie|wszystkie|`EINVAL`|Nie modyfikować.|  
 |nie `NULL` (wskazuje prawidłowy pamięci)|wszystkie|wszystkie|>= `sizeInBytes`|`EINVAL`|Nie modyfikować.|  
   
- **Problemy z zabezpieczeniami**  
+ **Problemy dotyczące zabezpieczeń**  
   
  `_gcvt_s`można wygenerować naruszenia zasad dostępu, jeśli `buffer` nie wskazuje na prawidłową pamięci i nie jest `NULL`.  
   
@@ -146,4 +147,4 @@ Converted value: 1.2
  [atof —, _atof_l —, _wtof — _wtof_l —](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
  [_ecvt_s —](../../c-runtime-library/reference/ecvt-s.md)   
  [_fcvt_s —](../../c-runtime-library/reference/fcvt-s.md)   
- [_gcvt —](../../c-runtime-library/reference/gcvt.md)
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)

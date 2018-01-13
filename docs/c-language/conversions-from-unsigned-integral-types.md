@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15e1bc61e9b15293290098b9414642d8edf46707
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2ecc7c4a0308a1a7d182cc0bdaf04c2ed6b6e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Konwersje z niepodpisanych typów całkowitych
 Całkowitą bez znaku jest konwertowana na krótszą całkowitą bez znaku lub podpisany tworzy bardziej znaczących bitów lub już niepodpisany lub podpisany liczby całkowitej przez zero, rozszerzanie (zobacz [konwersje z niepodpisanych typów całkowitych](#_clang_table_4..3) tabeli).  
@@ -49,28 +50,28 @@ printf_s( "%hd\n", j );   // Prints -3
 |Z|Do|Metoda|  
 |----------|--------|------------|  
 |`unsigned char`|`char`|Zachowaj wzorca bitowego; bit znaczących staje się bitu znaku|  
-|`unsigned char`|**krótki**|Rozszerzanie zero|  
-|`unsigned char`|**długa**|Rozszerzanie zero|  
+|`unsigned char`|**short**|Rozszerzanie zero|  
+|`unsigned char`|**long**|Rozszerzanie zero|  
 |`unsigned char`|**short bez znaku**|Rozszerzanie zero|  
 |`unsigned char`|`unsigned long`|Rozszerzanie zero|  
 |`unsigned char`|**float**|Konwertuj na **długi**; przekonwertować **długi** do **liczb zmiennoprzecinkowych**|  
-|`unsigned char`|**podwójne**|Konwertuj na **długi**; przekonwertować **długi** do **podwójne**|  
+|`unsigned char`|**double**|Konwertuj na **długi**; przekonwertować **długi** do **podwójne**|  
 |`unsigned char`|`long double`|Konwertuj na **długi**; przekonwertować **długi** do **podwójne**|  
 |**short bez znaku**|`char`|Zachowaj mniej znaczącego bajtu|  
-|**short bez znaku**|**krótki**|Zachowaj wzorca bitowego; bit znaczących staje się bitu znaku|  
-|**short bez znaku**|**długa**|Rozszerzanie zero|  
+|**short bez znaku**|**short**|Zachowaj wzorca bitowego; bit znaczących staje się bitu znaku|  
+|**short bez znaku**|**long**|Rozszerzanie zero|  
 |**short bez znaku**|`unsigned char`|Zachowaj mniej znaczącego bajtu|  
 |**short bez znaku**|`unsigned long`|Rozszerzanie zero|  
 |**short bez znaku**|**float**|Konwertuj na **długi**; przekonwertować **długi** do **liczb zmiennoprzecinkowych**|  
-|**short bez znaku**|**podwójne**|Konwertuj na **długi**; przekonwertować **długi** do **podwójne**|  
+|**short bez znaku**|**double**|Konwertuj na **długi**; przekonwertować **długi** do **podwójne**|  
 |**short bez znaku**|`long double`|Konwertuj na **długi**; przekonwertować **długi** do **podwójne**|  
 |`unsigned long`|`char`|Zachowaj mniej znaczącego bajtu|  
-|`unsigned long`|**krótki**|Zachowaj znaczącymi bitami programu word|  
-|`unsigned long`|**długa**|Zachowaj wzorca bitowego; bit znaczących staje się bitu znaku|  
+|`unsigned long`|**short**|Zachowaj znaczącymi bitami programu word|  
+|`unsigned long`|**long**|Zachowaj wzorca bitowego; bit znaczących staje się bitu znaku|  
 |`unsigned long`|`unsigned char`|Zachowaj mniej znaczącego bajtu|  
 |`unsigned long`|**short bez znaku**|Zachowaj znaczącymi bitami programu word|  
 |`unsigned long`|**float**|Konwertuj na **długi**; przekonwertować **długi** do **liczb zmiennoprzecinkowych**|  
-|`unsigned long`|**podwójne**|Konwertuj bezpośrednio do **podwójne**|  
+|`unsigned long`|**double**|Konwertuj bezpośrednio do **podwójne**|  
 |`unsigned long`|`long double`|Konwertuj na **długi**; przekonwertować **długi** do **podwójne**|  
   
  **Dotyczące firmy Microsoft**  

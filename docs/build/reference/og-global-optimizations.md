@@ -24,11 +24,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a48d01437ad72bcc239de0465b62732efb805dd1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 196e89a958ce49bf5e0087d98d2f40ada210cc87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="og-global-optimizations"></a>/Og (Optymalizacje globalne)
 
@@ -104,7 +105,7 @@ Następujące funkcje optymalizacji są dostępne w ramach **/Og**:
 
 ## <a name="see-also"></a>Zobacz też
 
-[/O opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)
+[/O Opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)
 
 [Opcje kompilatora](../../build/reference/compiler-options.md)
 

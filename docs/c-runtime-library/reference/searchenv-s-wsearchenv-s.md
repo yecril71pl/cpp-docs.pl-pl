@@ -47,11 +47,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8d2b78a892308b6984ef11d317cf46c1d46ca6ef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6f1089aa1f772832417168a2262fa72069b3ede7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 Wyszukiwanie plików przy użyciu ścieżki środowiska. Te wersje programu [_searchenv —, _wsearchenv —](../../c-runtime-library/reference/searchenv-wsearchenv.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -182,4 +183,4 @@ C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE
  [Kontrola katalogu](../../c-runtime-library/directory-control.md)   
  [_searchenv —, _wsearchenv —](../../c-runtime-library/reference/searchenv-wsearchenv.md)   
  [getenv —, _wgetenv —](../../c-runtime-library/reference/getenv-wgetenv.md)   
- [_putenv —, _wputenv —](../../c-runtime-library/reference/putenv-wputenv.md)
+ [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)

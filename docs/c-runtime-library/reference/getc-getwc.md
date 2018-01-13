@@ -43,11 +43,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 78a94d954631dfffbdcdc4bcad252599c673f44b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12ddc1fa68f1b27fa96ffb81ef24004fd1fb0a19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getc-getwc"></a>getc, getwc
 Znak odczytu ze strumienia.  
@@ -154,4 +155,4 @@ Input was: Line one.
  [fgetc —, fgetwc —](../../c-runtime-library/reference/fgetc-fgetwc.md)   
  [_getch —, _getwch —](../../c-runtime-library/reference/getch-getwch.md)   
  [putc —, putwc —](../../c-runtime-library/reference/putc-putwc.md)   
- [ungetc —, ungetwc —](../../c-runtime-library/reference/ungetc-ungetwc.md)
+ [ungetc, ungetwc](../../c-runtime-library/reference/ungetc-ungetwc.md)

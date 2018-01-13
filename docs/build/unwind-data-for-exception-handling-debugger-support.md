@@ -13,22 +13,23 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b489048f168693385edd9090b27f2ffc4923757f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e96ff2f4b69ee89dc22aaf3be8df19d2ec8f3cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Dane operacji Unwind dla obsługi wyjątków, obsługa debugera
 W tej sekcji omówiono struktur danych wymagane dla wyjątków, obsługa i obsługa debugowania.  
   
--   [Struktura RUNTIME_FUNCTION](../build/struct-runtime-function.md)  
+-   [struktura RUNTIME_FUNCTION](../build/struct-runtime-function.md)  
   
--   [Struktura UNWIND_INFO](../build/struct-unwind-info.md)  
+-   [struktura UNWIND_INFO](../build/struct-unwind-info.md)  
   
--   [Struktura UNWIND_CODE](../build/struct-unwind-code.md)  
+-   [struktura UNWIND_CODE](../build/struct-unwind-code.md)  
   
--   [Łańcuchowej Unwind struktury informacji o](../build/chained-unwind-info-structures.md)  
+-   [Struktury informacji o operacji łańcuchowej unwind](../build/chained-unwind-info-structures.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obsługa (x64) wyjątków](../build/exception-handling-x64.md)
+ [Obsługa wyjątków (x64)](../build/exception-handling-x64.md)

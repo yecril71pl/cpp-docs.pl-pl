@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a66102153400b62998207f5510b20f7d60e90ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01fbd345daa6243a0385d556dd7cb6642a881de7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-pragmas"></a>Pragma — dyrektywy języka C
 **Dotyczące firmy Microsoft**  
@@ -27,10 +28,10 @@ ms.lasthandoff: 10/24/2017
   
 |||||  
 |-|-|-|-|  
-|**alloc_text**|**data_seg**|**inline_recursion**|**setLocale**|  
-|**auto_inline**|**Funkcja**|**— wewnętrzne**|**Ostrzeżenie**|  
-|**check_stack —**|**hdrstop**|**Komunikat**||  
-|**code_seg**|**include_alias**|**Optymalizacja**||  
+|**alloc_text**|**data_seg**|**inline_recursion**|**setlocale**|  
+|**auto_inline**|**Funkcja**|**intrinsic**|**ostrzeżenie**|  
+|**check_stack**|**hdrstop**|**komunikat**||  
+|**code_seg**|**include_alias**|**optymalizuj**||  
 |**komentarz**|**inline_depth**|**pakiet**||  
   
  Zobacz [dyrektywy Pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md) w *odwołania preprocesora* opis pragm kompilatora C firmy Microsoft.  

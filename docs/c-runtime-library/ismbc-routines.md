@@ -26,20 +26,21 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8b512bad001ed86ad0720002cd49c54b21b6e555
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbe2879f031f261871676f9e11f0b6f2a0908a95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbc-routines"></a>_ismbc — Procedury
 Każdy **_ismbc —** procedury testów danego znaków wielobajtowych `c` dla określonego warunku.  
   
 |||  
 |-|-|  
-|[_ismbcalnum —, _ismbcalnum_l —, _ismbcalpha —, _ismbcalpha_l — _ismbcdigit —, _ismbcdigit_l —](../c-runtime-library/reference/ismbcalnum-functions.md)|[_ismbcl0 —, _ismbcl0_l —, _ismbcl1 —, _ismbcl1_l — _ismbcl2 —, _ismbcl2_l —](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|  
-|[_ismbcgraph — _ismbcgraph_l —, _ismbcprint —, _ismbcprint_l —, _ismbcpunct —, _ismbcpunct_l —, _ismbcblank, _ismbcblank_l, _ismbcspace —, _ismbcspace_l —](../c-runtime-library/reference/ismbcgraph-functions.md)|[_ismbclegal —, _ismbclegal_l —, _ismbcsymbol — _ismbcsymbol_l —](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|  
-|[_ismbchira —, _ismbchira_l —, _ismbckata — _ismbckata_l —](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower —, _ismbclower_l —, _ismbcupper — _ismbcupper_l —](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|  
+|[_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|[_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|  
+|[_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)|[_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|  
+|[_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|  
   
 ## <a name="remarks"></a>Uwagi  
  Wynik testu każdego **_ismbc —** procedura zależy od strony kodowe wielobajtowe obowiązywać. Strony kodowe wielobajtowe ma alfabetyczne znaki jednobajtowe. Strony kodowe wielobajtowe domyślnie system domyślną stronę kodową ANSI uzyskane z systemu operacyjnego podczas uruchamiania programu. Zapytań, lub Zmień strony kodowe wielobajtowe używany z [_getmbcp —](../c-runtime-library/reference/getmbcp.md) lub [_setmbcp —](../c-runtime-library/reference/setmbcp.md)odpowiednio.  
@@ -80,4 +81,4 @@ Każdy **_ismbc —** procedury testów danego znaków wielobajtowych `c` dla ok
 ## <a name="see-also"></a>Zobacz też  
  [Klasyfikacja znaków](../c-runtime-library/character-classification.md)   
  [jest isw — procedury](../c-runtime-library/is-isw-routines.md)   
- [_ismbb — procedury](../c-runtime-library/ismbb-routines.md)
+ [_ismbb, procedury](../c-runtime-library/ismbb-routines.md)

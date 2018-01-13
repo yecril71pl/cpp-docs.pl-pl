@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ead6c1bb4ad5330ed23c90019ec4e5e03282fb8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f505c926370bfbee98bf28970ee78d3152feb025
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="null-statement-c"></a>Instrukcja o wartości Null (C)
 "Instrukcja o wartości null" jest instrukcji zawierającej tylko średnika; może być wyświetlany wszędzie tam, gdzie jest oczekiwany instrukcję. Nic się nie dzieje podczas wykonywania instrukcja o wartości null. Prawidłowy sposób kodowania instrukcja o wartości null jest:  

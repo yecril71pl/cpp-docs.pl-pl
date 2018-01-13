@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b8604c90c4af46d98c3d9da72899670e86ca154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3a013cf584c37f84331a5ab5dfe74eaa213c851
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-helper-function"></a>Ogólne informacje funkcji Pomocnik
 Funkcja pomocnika służąca do ładowania opóźnionego obsługiwane konsolidatora to, co faktycznie ładuje bibliotekę DLL w czasie wykonywania. Funkcja pomocnika, aby dostosować zachowanie przy jego własnej funkcji zapisywania i łącząc go do programu zamiast przy użyciu funkcji pomocnika podany w Delayimp.lib można modyfikować. Jedna funkcja pomocnika służy wszystkie opóźnienie załadować biblioteki dll.  
@@ -62,11 +63,11 @@ Funkcja pomocnika służąca do ładowania opóźnionego obsługiwane konsolidat
   
  Funkcja pomocnika można znaleźć w następujących tematach:  
   
--   [Zmiany w bibliotece DLL funkcjach pomocnika opóźnionego załadunku po Visual C++ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
+-   [Zmiany w funkcjach pomocnika opóźnionego załadunku bibliotek DLL po Visual C++ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
   
 -   [Konwencje wywoływania, parametry oraz zwracany typ](../../build/reference/calling-conventions-parameters-and-return-type.md)  
   
--   [Struktura i stała — definicje](../../build/reference/structure-and-constant-definitions.md)  
+-   [Struktura i stała, definicje](../../build/reference/structure-and-constant-definitions.md)  
   
 -   [Obliczanie niezbędnych wartości](../../build/reference/calculating-necessary-values.md)  
   

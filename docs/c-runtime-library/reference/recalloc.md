@@ -33,11 +33,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 007f174b3cbdb7e8ca53af19b6f9764200ff690a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d1f6052e71746bb05701e0d34f10585d5533be4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recalloc"></a>_recalloc
 Kombinację `realloc` i `calloc`. Przydziela ponownie tablicy w pamięci i inicjuje swoich elementów na 0.  

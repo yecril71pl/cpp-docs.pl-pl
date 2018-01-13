@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 83771532c05d00ebd52c62646b04c3de14dbbe3b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e87589421c5a1e24c490a0f03928281bc7fb92b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cisin"></a>_CIsin
 Oblicza sinus wartość top w stosie.  
@@ -54,4 +55,4 @@ void __cdecl _CIsin();
   
 ## <a name="see-also"></a>Zobacz też  
  [Alfabetyczne odwołanie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [SIN, sinf —, sinl —, sinh sinhf —, sinhl —](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)
+ [sin, sinf, sinl, sinh, sinhf, sinhl](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)

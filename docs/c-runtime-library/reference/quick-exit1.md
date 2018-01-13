@@ -34,11 +34,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2ae187d0132ca53b1ffba2b26ef18fa467b9072
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb6a8bdea6cb37bd70d6aeda490e2470aa74e999
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="quickexit"></a>quick_exit
 Powoduje, że Kończenie działania programu normalne występuje.  
@@ -81,4 +82,4 @@ __declspec(noreturn) void quick_exit(
  [exit, _exit — _exit —](../../c-runtime-library/reference/exit-exit-exit.md)   
  [_onexit —, _onexit_m —](../../c-runtime-library/reference/onexit-onexit-m.md)   
  [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md)   
- [System, _wsystem —](../../c-runtime-library/reference/system-wsystem.md)
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

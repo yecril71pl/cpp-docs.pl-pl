@@ -13,25 +13,26 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a41ffad94af09cb4228aadb901004ed4de9b7522
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 74a48a8f087bc70cda0ba7fb61772646d1446aa5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-keywords"></a>Podsumowanie dotyczące słów kluczowych
 *słowo kluczowe* : jeden z  
   
 |||||  
 |-|-|-|-|  
-|**Automatycznie**|**podwójne**|`int`|`struct`|  
-|**podział**|**else**|**długa**|`switch`|  
+|**Automatycznie**|**double**|`int`|`struct`|  
+|**break**|**else**|**long**|`switch`|  
 |**Case**|`enum`|**Rejestr**|`typedef`|  
 |`char`|`extern`|`return`|**Unii**|  
-|**Const**|**float**|**krótki**|`unsigned`|  
-|**Kontynuuj**|**dla**|**podpisany**|`void`|  
-|**domyślne**|`goto`|`sizeof`|`volatile`|  
-|**czy**|**Jeśli**|**statyczne**|`while`|  
+|**const**|**float**|**short**|`unsigned`|  
+|**continue**|**for**|**podpisany**|`void`|  
+|**default**|`goto`|`sizeof`|`volatile`|  
+|**do**|**Jeśli**|**static**|`while`|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Gramatyka leksykalna](../c-language/lexical-grammar.md)

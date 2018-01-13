@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f20054dac02857187ef4507b0b4ebfd6b7c6fe0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f89c777a25da5288709683750c907114dac1e5c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 `_environ` Zmienna jest wskaźnik do tablicy wskaźników do ciągów znaków wielobajtowych, które stanowi środowisko procesu. Tę zmienną globalną jest przestarzała bezpieczniejsze funkcjonalne wersje [getenv_s —, _wgetenv_s —](../c-runtime-library/reference/getenv-s-wgetenv-s.md) i [_putenv_s —, _wputenv_s —](../c-runtime-library/reference/putenv-s-wputenv-s.md), którego należy użyć zamiast zmiennej globalnej. `_environ`jest zadeklarowana w Stdlib.h.  
@@ -87,4 +88,4 @@ j = _wputenv( "env_var_y=string2" );  // also results in implicit call:
  [getenv —, _wgetenv —](../c-runtime-library/reference/getenv-wgetenv.md)   
  [getenv_s —, _wgetenv_s —](../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
  [_putenv —, _wputenv —](../c-runtime-library/reference/putenv-wputenv.md)   
- [_putenv_s —, _wputenv_s —](../c-runtime-library/reference/putenv-s-wputenv-s.md)
+ [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)

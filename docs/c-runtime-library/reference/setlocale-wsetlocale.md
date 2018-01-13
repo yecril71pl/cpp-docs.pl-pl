@@ -41,11 +41,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a86fa0962ab55c8df1bcd81f83d10d92ea8f304
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0610dff5366f72010de965b7b9df0cd4e02c1e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 Ustawia lub pobiera ustawienia regionalne czasu wykonywania.  
@@ -324,4 +325,4 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
  [strftime —, wcsftime —, _strftime_l — _wcsftime_l —](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
  [strxfrm —, wcsxfrm —, _strxfrm_l — _wcsxfrm_l —](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
  [wcstombs —, _wcstombs_l —](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [wctomb —, _wctomb_l —](../../c-runtime-library/reference/wctomb-wctomb-l.md)
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)

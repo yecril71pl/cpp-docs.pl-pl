@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6ea2a91e50bab33ab46f96d63cdc0c1c1023c6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-lib"></a>Informacje o LIB
 LIB tworzy standardowych bibliotek, importowanie bibliotek i eksportowanie plików, których można używać z [łącze](../../build/reference/linker-options.md) podczas tworzenia programu. LIB uruchamiane z wiersza polecenia.  
@@ -107,7 +108,7 @@ LIB tworzy standardowych bibliotek, importowanie bibliotek i eksportowanie plik�
   
  Aby uzyskać więcej informacji, zobacz [Zarządzanie biblioteką](../../build/reference/managing-a-library.md).  
   
- **/ SUBSYSTEM**  
+ **/SUBSYSTEM**  
  Informuje system operacyjny, jak uruchomić program utworzony przez łączenie z biblioteki wyjściowej.  
   
  Aby uzyskać więcej informacji, zobacz [Zarządzanie biblioteką](../../build/reference/managing-a-library.md).  

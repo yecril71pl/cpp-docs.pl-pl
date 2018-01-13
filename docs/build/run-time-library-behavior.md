@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: feb84e03b189186342bd8ffcc8a75a07d6e99c64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75bf84eeaf9277c5cf037c4fa59c28d109d95856
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Biblioteki dll i zachowanie biblioteki wykonawczej programu Visual C++  
   
@@ -190,6 +191,6 @@ Funkcja inicjowania próbki uchwyty wielowątkowość jest zawarte w [za pomocą
   
 ## <a name="see-also"></a>Zobacz też  
   
-[Biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md)  
+[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)  
 [Punkt wejścia funkcji DllMain](https://msdn.microsoft.com/library/windows/desktop/ms682583.aspx)  
 [Biblioteka DLL najlepsze rozwiązania](https://msdn.microsoft.com/library/windows/desktop/dn633971.aspx)  

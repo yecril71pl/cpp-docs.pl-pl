@@ -47,11 +47,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c7d976606d292cbe7cd7ce8e8c24e20d0dfa688
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dcd45f8ccd7147fae7036c88477722b77f150193
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
 Pobiera długość i ważność znaków wielobajtowych określa.  
@@ -161,4 +162,4 @@ Length in bytes of NULL multibyte character 0: 0
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [_mbccpy —, _mbccpy_l —](../../c-runtime-library/reference/mbccpy-mbccpy-l.md)   
- [strlen —, wcslen —, _mbslen —, _mbslen_l — _mbstrlen —, _mbstrlen_l —](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
+ [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

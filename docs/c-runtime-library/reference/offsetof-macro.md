@@ -29,11 +29,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 47243b64519540397573a47180dca5eed25f4c57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d99947615f2f24116f3d9b64e94daba60c848ec4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="offsetof-macro"></a>makra offsetof — makro
 Pobiera przesunięcie elementu członkowskiego z początku jego struktury nadrzędnej.  

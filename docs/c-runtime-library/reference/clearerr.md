@@ -32,11 +32,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e1c9c815307c8a454456c76fee419f1c048fded1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35fafbe762780ace0fbd255f905307f7793d4c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clearerr"></a>clearerr
 Resetuje wskaźnik błędów dla strumienia. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [clearerr_s —](../../c-runtime-library/reference/clearerr-s.md).  
@@ -121,4 +122,4 @@ No read error
  [_eof —](../../c-runtime-library/reference/eof.md)   
  [feof —](../../c-runtime-library/reference/feof.md)   
  [ferror —](../../c-runtime-library/reference/ferror.md)   
- [perror, _wperror —](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1ae32ba6acd758d958bbcc1db419a2946471b1e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 817b8ef39758a47fe28a3a2e2320ae7384a2bc86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwait"></a>_cwait
 Oczekuje, aż inny proces zakończy się.  
@@ -160,4 +161,4 @@ Hi, Dad. It's Dave.
   
 ## <a name="see-also"></a>Zobacz też  
  [Proces i kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)   
- [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md)
+ [_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)

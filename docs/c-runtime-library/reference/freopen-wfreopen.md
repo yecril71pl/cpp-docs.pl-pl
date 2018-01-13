@@ -40,11 +40,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f25c4966b567d165be8f33a0c04f58ba0ac611b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3eb18b70ea672b095dc6d24dfd45e1bdda8f88b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 Ponownie przypisuje wskaźnika pliku. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [freopen_s —, _wfreopen_s —](../../c-runtime-library/reference/freopen-s-wfreopen-s.md).  
@@ -179,4 +180,4 @@ This will go to the file 'freopen.out'
  [_fileno —](../../c-runtime-library/reference/fileno.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
- [_setmode —](../../c-runtime-library/reference/setmode.md)
+ [_setmode](../../c-runtime-library/reference/setmode.md)

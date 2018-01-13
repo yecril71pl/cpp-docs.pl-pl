@@ -14,11 +14,12 @@ caps.latest.revision: "64"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50589e18914ed452381a416cfb0f59d87b4be6a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec2b8f0f05da535fd6a4f212a08af847c997a860
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options-listed-by-category"></a>Opcje kompilatora w rozbiciu na kategorie
 Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetyczną listę, zobacz [kompilatora wymienione opcje alfabetycznie](../../build/reference/compiler-options-listed-alphabetically.md).  
@@ -74,8 +75,8 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetycz
 |[/ Qimprecise_fwaits](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Usuwa `fwait` poleceniach wewnątrz `try` bloków.|  
 |[/ Qpar](../../build/reference/qpar-auto-parallelizer.md)|Umożliwia automatyczne paralelizacja pętli.|  
 |[/ Qpar raport](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)|Włącza raportowanie poziomy automatyczna paralelizacja.|  
-|[/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md)|Instrukcje przenoszenia całkowitą używa wartości zmiennoprzecinkowych i wyłącza niektórych zmiennoprzecinkową optymalizacje obciążenia punktu.|  
-|[/ Qvec raport (raportowania automatycznej Wektoryzacji poziomu)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)|Włącza raportowanie poziomy vectorization automatycznego.|  
+|[/Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md)|Instrukcje przenoszenia całkowitą używa wartości zmiennoprzecinkowych i wyłącza niektórych zmiennoprzecinkową optymalizacje obciążenia punktu.|  
+|[/Qvec-report (Poziom raportowania automatycznej wektoryzacji)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)|Włącza raportowanie poziomy vectorization automatycznego.|  
 |[/ RTC](../../build/reference/rtc-run-time-error-checks.md)|Włącza sprawdzanie błędów czasu wykonywania.|  
 |[/ volatile](../../build/reference/volatile-volatile-keyword-interpretation.md)|Wybiera interpretacji volatile — słowo kluczowe.|  
   
@@ -83,7 +84,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetycz
   
 |Opcja|Cel|  
 |------------|-------------|  
-|[/ doc](../../build/reference/doc-process-documentation-comments-c-cpp.md)|Przetwarza komentarzy do dokumentacji do pliku XML.|  
+|[/doc](../../build/reference/doc-process-documentation-comments-c-cpp.md)|Przetwarza komentarzy do dokumentacji do pliku XML.|  
 |[/FA](../../build/reference/fa-fa-listing-file.md)|Konfiguruje plik listy zestawu.|  
 |[/FA](../../build/reference/fa-fa-listing-file.md)|Tworzy plik listy zestawu.|  
 |[/FD](../../build/reference/fd-program-database-file-name.md)|Zmienia nazwę pliku bazy danych programu.|  
@@ -142,14 +143,14 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetycz
 |[/F](../../build/reference/f-set-stack-size.md)|Ustawia rozmiar stosu.|  
 |[/LD](../../build/reference/md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę DLL.|  
 |[/ LDd](../../build/reference/md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę DLL debugowania.|  
-|[/ Link](../../build/reference/link-pass-options-to-linker.md)|Przekazuje określona opcja łącza.|  
+|[/link](../../build/reference/link-pass-options-to-linker.md)|Przekazuje określona opcja łącza.|  
 |[/LN](../../build/reference/ln-create-msil-module.md)|Tworzy moduł MSIL.|  
 |[/ / MD](../../build/reference/md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkowe biblioteki DLL przy użyciu MSVCRT.lib.|  
 |[/ MDd](../../build/reference/md-mt-ld-use-run-time-library.md)|Kompiluje się do tworzenia debugowania wielowątkowe biblioteki DLL, za pomocą MSVCRTD.lib.|  
 |[/ MT](../../build/reference/md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkowe plik wykonywalny przy użyciu LIBCMT.lib.|  
 |[/ MTd](../../build/reference/md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkowe plik wykonywalny debugowania, za pomocą biblioteki LIBCMTD.lib.|  
   
-### <a name="miscellaneous"></a>Inne  
+### <a name="miscellaneous"></a>Różne  
   
 |Opcja|Cel|  
 |------------|-------------|  
@@ -167,7 +168,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetycz
 |[/J](../../build/reference/j-default-char-type-is-unsigned.md)|Zmienia domyślny `char` typu.|  
 |[/ Kernel](../../build/reference/kernel-create-kernel-mode-binary.md)|Kompilatorze i konsolidatorze spowoduje utworzenie pliku binarnego, który może zostać wykonany jądra systemu Windows.|  
 |[/MP](../../build/reference/mp-build-with-multiple-processes.md)|Tworzy jednocześnie wiele plików źródłowych.|  
-|[/ nologo](../../build/reference/nologo-suppress-startup-banner-c-cpp.md)|Pomija wyświetlanie banera logowania jednokrotnego.|  
+|[/nologo](../../build/reference/nologo-suppress-startup-banner-c-cpp.md)|Pomija wyświetlanie banera logowania jednokrotnego.|  
 |[/ SDL](../../build/reference/sdl-enable-additional-security-checks.md)|Włącza dodatkowe funkcje zabezpieczeń i ostrzeżenia.|  
 |[/ showincludes](../../build/reference/showincludes-list-include-files.md)|Wyświetla listę wszystkich pliki dołączane podczas kompilacji.|  
 |[/ TC](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy C.|  

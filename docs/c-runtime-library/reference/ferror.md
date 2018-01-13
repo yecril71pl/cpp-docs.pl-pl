@@ -32,11 +32,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 412202787b7c62223cb6335dfd6a752033ae4fef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86e057171070681b3ca0b66828be19999c3175c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ferror"></a>ferror
 Testy wystąpił błąd w strumieniu.  
@@ -79,4 +80,4 @@ int ferror(
  [_eof —](../../c-runtime-library/reference/eof.md)   
  [feof —](../../c-runtime-library/reference/feof.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
- [perror, _wperror —](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

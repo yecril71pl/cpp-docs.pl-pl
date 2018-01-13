@@ -32,11 +32,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba249bc78b2e6b6aac95bef2c39b0d9526489ec9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a5063a82ca90b9f854adb1ef68328272df54f4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
 Sprawdza, czy wskaźnik nie jest zerowa. W wersji biblioteki wykonawcze języka C przed Visual Studio 2010 sprawdza, czy pamięci określony zakres jest nieprawidłowy do odczytu i zapisu (tylko wersja do debugowania).  

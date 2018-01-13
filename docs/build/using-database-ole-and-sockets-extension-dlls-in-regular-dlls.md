@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fda176229d8f6bea5a586c6f6f538a40d7ed8a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Przy użyciu bazy danych, OLE i MFC gniazda biblioteki DLL rozszerzeń w zwykłych bibliotekach DLL MFC
 Jeśli z rozszerzeniem MFC DLL z regularne biblioteki DLL MFC rozszerzenia MFC DLL nie jest dostępna w **CDynLinkLibrary** obiekt łańcucha regularne biblioteki DLL MFC może działać w co najmniej jeden zbiór problemów pokrewnych. Ponieważ obsługuje wersje debugowania MFC bazy danych, OLE i gniazda biblioteki DLL są zaimplementowane jako biblioteki DLL rozszerzeń MFC, można napotkać funkcje podobne problemy, jeśli używasz tych MFC, nawet jeśli nie jest jawnie używana żadnego własne biblioteki DLL rozszerzeń MFC. Niektóre symptomy są:  
@@ -146,9 +147,9 @@ BOOL CYourRegularDLL::InitInstance()
   
 -   [Biblioteki DLL rozszerzeń MFC](../build/extension-dlls.md)  
   
--   [Biblioteki DLL MFC regularne połączone statycznie z MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [Zwykłe biblioteki DLL MFC połączone statycznie z MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [Biblioteki DLL MFC regularne połączone dynamicznie z MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
 -   [Używanie MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
   

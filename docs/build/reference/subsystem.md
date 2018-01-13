@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 906ab5406fb6ccfb8905c3cf76ae6968ef0979da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f42efd011dfe5938eb455c885c6aa2c458910dfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 Określa środowiska wykonawczego, który jest wymagany przez obrazu wykonywalnego.  
@@ -72,4 +73,4 @@ Określa środowiska wykonawczego, który jest wymagany przez obrazu wykonywalne
  Aby uzyskać więcej informacji, w tym minimum i domyślne wartości dla numerów wersji głównej i pomocniczej dla każdego podsystemu zobacz [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) — opcja konsolidatora.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje polecenia EDITBIN](../../build/reference/editbin-options.md)
+ [Opcje EDITBIN](../../build/reference/editbin-options.md)

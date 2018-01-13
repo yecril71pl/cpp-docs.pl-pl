@@ -41,11 +41,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e25d66ba7fd25c52758bfb44cc74326c67ce4db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92501f119d0f0222de0ffeca0611e5fd6c96b697
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fpclass-fpclassf"></a>_fpclass, _fpclassf
 Zwraca wartość wskazującą zmiennoprzecinkowe klasyfikacji argumentu.  
@@ -96,4 +97,4 @@ int _fpclassf(
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [isNaN _isnan —, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)   
- [fpclassify —](../../c-runtime-library/reference/fpclassify.md)
+ [fpclassify](../../c-runtime-library/reference/fpclassify.md)

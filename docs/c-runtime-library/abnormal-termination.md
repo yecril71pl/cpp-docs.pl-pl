@@ -25,11 +25,12 @@ caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 17dbe8079972626439f2706061258265303f5226
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc205afd297c7cce87ae630369551e02f3109d88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
 Wskazuje, czy `__finally` zablokować z [try-finally — instrukcja](../cpp/try-finally-statement.md) jest wprowadzana, gdy system wykonuje wewnętrzną listę programy obsługi zakończenia.  
@@ -54,4 +55,4 @@ int   _abnormal_termination(
 |_abnormal_termination|excpt.h|  
   
 ## <a name="see-also"></a>Zobacz też  
- [try-finally — instrukcja](../cpp/try-finally-statement.md)
+ [try-finally, instrukcja](../cpp/try-finally-statement.md)

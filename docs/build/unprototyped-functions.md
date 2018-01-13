@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbc9324753f6ec2c9a332af00a00dd85116e1943
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 574c4564394e251dde9345d3658304019dae838d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unprototyped-functions"></a>Funkcje bez pierwowzoru
 Nie w pełni prototypowanych funkcji wywołujący przechodzą wartości całkowitych jako liczb całkowitych i zmiennoprzecinkowych wartości jako podwójnej precyzji. Tylko wartości zmiennoprzecinkowych, zarówno rejestru całkowitą i zmiennoprzecinkowa rejestr będzie zawierał wartości typu float w przypadku, gdy wywoływany oczekuje, że wartość w rejestrach liczby całkowitej.  

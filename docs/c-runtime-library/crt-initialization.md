@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1cdc3bd0d6370848859b16ce30eff6a224d83a60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d472026649bbe1d72a9afba42f224b0b9159258d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-initialization"></a>Inicjalizacja CRT
 W tym temacie opisano, jak CRT inicjuje globalne stanów w kodzie natywnym.  
@@ -101,4 +102,4 @@ RELOCATIONS #6
  Tak, biblioteka CRT używa zarówno `__xc_a` i `__xc_z` ustalenie początek i koniec listy inicjatorów globalnych ze względu na sposób, w którym one zostały przedstawione w pamięci po załadowaniu obrazu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md)
+ [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

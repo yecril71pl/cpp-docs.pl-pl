@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 129267c69a2cf4830587f8ebc7c445a01591235b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-handling"></a>Obsługa plików
 Za pomocą tych procedur tworzenia, usuwania i manipulowanie plikami i ustawianie i sprawdzanie uprawnień dostępu do plików.  
@@ -36,13 +37,13 @@ Za pomocą tych procedur tworzenia, usuwania i manipulowanie plikami i ustawiani
 |Procedura|Zastosowanie|  
 |-------------|---------|  
 |[_chsize —](../c-runtime-library/reference/chsize.md),[_chsize_s —](../c-runtime-library/reference/chsize-s.md)|Zmienić rozmiar pliku|  
-|[_filelength —, _filelengthi64 —](../c-runtime-library/reference/filelength-filelengthi64.md)|Pobieranie długości pliku|  
-|[_fstat —, _fstat32 —, _fstat64 —, _fstati64 — _fstat32i64 —, _fstat64i32 —](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)|Pobierz stan pliku informacji o deskryptora|  
-|[_get_osfhandle —](../c-runtime-library/reference/get-osfhandle.md)|Dojście do powrotu pliku systemu operacyjnego skojarzonego z istniejącego deskryptora czasu wykonywania pliku C|  
-|[_isatty —](../c-runtime-library/reference/isatty.md)|Sprawdzanie urządzenia znakowego|  
-|[_locking —](../c-runtime-library/reference/locking.md)|Obszary blokady pliku|  
-|[_open_osfhandle —](../c-runtime-library/reference/open-osfhandle.md)|Skojarz deskryptorów plików wykonawcze języka C z istniejących dojście do pliku systemu operacyjnego|  
-|[_setmode —](../c-runtime-library/reference/setmode.md)|Ustaw tryb tłumaczenia pliku|  
+|[_filelength, _filelengthi64](../c-runtime-library/reference/filelength-filelengthi64.md)|Pobieranie długości pliku|  
+|[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)|Pobierz stan pliku informacji o deskryptora|  
+|[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|Dojście do powrotu pliku systemu operacyjnego skojarzonego z istniejącego deskryptora czasu wykonywania pliku C|  
+|[_isatty](../c-runtime-library/reference/isatty.md)|Sprawdzanie urządzenia znakowego|  
+|[_locking](../c-runtime-library/reference/locking.md)|Obszary blokady pliku|  
+|[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Skojarz deskryptorów plików wykonawcze języka C z istniejących dojście do pliku systemu operacyjnego|  
+|[_setmode](../c-runtime-library/reference/setmode.md)|Ustaw tryb tłumaczenia pliku|  
   
 ### <a name="file-handling-routines-path-or-filename"></a>Procedury obsługi plików (ścieżka lub nazwa pliku)  
   
@@ -51,16 +52,16 @@ Za pomocą tych procedur tworzenia, usuwania i manipulowanie plikami i ustawiani
 |Procedura|Zastosowanie|  
 |-------------|---------|  
 |[_access —, _waccess —](../c-runtime-library/reference/access-waccess.md), [_access_s —, _waccess_s —](../c-runtime-library/reference/access-s-waccess-s.md)|Sprawdź ustawienie uprawnień do pliku|  
-|[_chmod —, _wchmod —](../c-runtime-library/reference/chmod-wchmod.md)|Zmień ustawienie uprawnień do pliku|  
-|[_fullpath —, _wfullpath —](../c-runtime-library/reference/fullpath-wfullpath.md)|Rozwiń węzeł ścieżki względnej do jego nazwy ścieżki bezwzględne|  
+|[_chmod, _wchmod](../c-runtime-library/reference/chmod-wchmod.md)|Zmień ustawienie uprawnień do pliku|  
+|[_fullpath, _wfullpath](../c-runtime-library/reference/fullpath-wfullpath.md)|Rozwiń węzeł ścieżki względnej do jego nazwy ścieżki bezwzględne|  
 |[_makepath —, _wmakepath —](../c-runtime-library/reference/makepath-wmakepath.md), [_makepath_s —, _wmakepath_s —](../c-runtime-library/reference/makepath-s-wmakepath-s.md)|Scal składników ścieżki, w jednej, pełna ścieżka|  
 |[_mktemp —, _wmktemp —](../c-runtime-library/reference/mktemp-wmktemp.md), [_mktemp_s —, _wmktemp_s —](../c-runtime-library/reference/mktemp-s-wmktemp-s.md)|Utworzyć unikatową nazwę pliku|  
-|[Usuń _wremove —](../c-runtime-library/reference/remove-wremove.md)|Usuń plik|  
-|[Zmień nazwę, _wrename —](../c-runtime-library/reference/rename-wrename.md)|Zmień nazwę pliku|  
+|[remove, _wremove](../c-runtime-library/reference/remove-wremove.md)|Usuń plik|  
+|[rename, _wrename](../c-runtime-library/reference/rename-wrename.md)|Zmień nazwę pliku|  
 |[_splitpath —, _wsplitpath —](../c-runtime-library/reference/splitpath-wsplitpath.md), [_splitpath_s —, _wsplitpath_s —](../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)|Przeanalizować ścieżkę do składników|  
 |[_stat, _stat64 —, _stati64 —, _wstat — _wstat64 —, _wstati64 —](../c-runtime-library/reference/stat-functions.md)|Pobierz stan pliku informacji w pliku o nazwie|  
 |[_umask —](../c-runtime-library/reference/umask.md), [_umask_s —](../c-runtime-library/reference/umask-s.md)|Ustaw domyślną maskę uprawnień dla nowych plików utworzonych przez program|  
-|[_unlink —, _wunlink —](../c-runtime-library/reference/unlink-wunlink.md)|Usuń plik|  
+|[_unlink, _wunlink](../c-runtime-library/reference/unlink-wunlink.md)|Usuń plik|  
   
 ### <a name="file-handling-routines-open-file"></a>Procedury obsługi plików (Otwórz plik)  
   
@@ -69,20 +70,20 @@ Za pomocą tych procedur tworzenia, usuwania i manipulowanie plikami i ustawiani
 |Procedura|Zastosowanie|  
 |-------------|---------|  
 |[fopen —, _wfopen —](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s —, _wfopen_s —](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Otwiera plik i zwraca wskaźnik do otwartego pliku.|  
-|[_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md)|Otwórz strumienia z udostępnianiem plików i zwraca wskaźnik do otwartego pliku.|  
-|[_otwórz, _wopen —](../c-runtime-library/reference/open-wopen.md)|Otwiera plik i zwraca deskryptorów plików do otwartego pliku.|  
+|[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Otwórz strumienia z udostępnianiem plików i zwraca wskaźnik do otwartego pliku.|  
+|[_open, _wopen](../c-runtime-library/reference/open-wopen.md)|Otwiera plik i zwraca deskryptorów plików do otwartego pliku.|  
 |[_sopen —, _wsopen —](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s —, _wsopen_s —](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Otwórz plik z udostępnianiem plików i zwraca deskryptorów plików do otwartego pliku.|  
-|[_pipe —](../c-runtime-library/reference/pipe.md)|Tworzy potoku do odczytu i zapisu.|  
+|[_pipe](../c-runtime-library/reference/pipe.md)|Tworzy potoku do odczytu i zapisu.|  
 |[freopen —, _wfreopen —](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s —, _wfreopen_s —](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|Ponowne przypisanie wskaźnika pliku.|  
   
  Te procedury umożliwiają zmienić reprezentację plików między `FILE` strukturę, deskryptorów plików i dojście do pliku Win32.  
   
 |Procedura|Zastosowanie|  
 |-------------|---------|  
-|[_fdopen —, _wfdopen —](../c-runtime-library/reference/fdopen-wfdopen.md)|Kojarzy strumienia z pliku, który został poprzednio otwarty dla niskiego poziomu we/wy i zwraca wskaźnik można otworzyć strumienia.|  
-|[_fileno —](../c-runtime-library/reference/fileno.md)|Pobiera deskryptor pliku skojarzone z strumienia.|  
-|[_get_osfhandle —](../c-runtime-library/reference/get-osfhandle.md)|Dojście do powrotu pliku systemu operacyjnego skojarzonego z istniejącego deskryptora czasu wykonywania pliku C|  
-|[_open_osfhandle —](../c-runtime-library/reference/open-osfhandle.md)|Kojarzy deskryptorów plików wykonawcze języka C z istniejących dojście do pliku systemu operacyjnego.|  
+|[_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Kojarzy strumienia z pliku, który został poprzednio otwarty dla niskiego poziomu we/wy i zwraca wskaźnik można otworzyć strumienia.|  
+|[_fileno](../c-runtime-library/reference/fileno.md)|Pobiera deskryptor pliku skojarzone z strumienia.|  
+|[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|Dojście do powrotu pliku systemu operacyjnego skojarzonego z istniejącego deskryptora czasu wykonywania pliku C|  
+|[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Kojarzy deskryptorów plików wykonawcze języka C z istniejących dojście do pliku systemu operacyjnego.|  
   
  Następujące funkcje Win32 również otworzyć pliki i potoków:  
   

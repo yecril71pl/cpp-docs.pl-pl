@@ -33,11 +33,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 288e91384ed2438ccb40d24802cc67cf3efcd95c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fab2792c46579ef702dfd16cdd248de3d4b7076c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fileno"></a>_fileno
 Pobiera deskryptor pliku skojarzone z strumienia.  
@@ -102,4 +103,4 @@ The file descriptor for stderr is 2
  [_fdopen —, _wfdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md)   
  [_filelength —, _filelengthi64 —](../../c-runtime-library/reference/filelength-filelengthi64.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen —, _wfreopen —](../../c-runtime-library/reference/freopen-wfreopen.md)
+ [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)

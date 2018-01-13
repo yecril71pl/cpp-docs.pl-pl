@@ -41,11 +41,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a1cc6a80609828d084b56ef4f981c9d03de8070
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c96e806615d165bcdc3b5a5b89e4b8a966d8b1e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 Tworzy ścieżkę bezwzględną lub pełną nazwę określoną ścieżką względną.  
@@ -156,4 +157,4 @@ Full path is: C:\Documents and Settings\user\test
  [_getcwd —, _wgetcwd —](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
  [_getdcwd —, _wgetdcwd —](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
  [_makepath —, _wmakepath —](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [_splitpath —, _wsplitpath —](../../c-runtime-library/reference/splitpath-wsplitpath.md)
+ [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)

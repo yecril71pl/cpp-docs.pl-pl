@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a95596b2c9e7312d4581d1a4c641c2466420158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-floating-point-types"></a>Konwersje z typów zmiennoprzecinkowych
 A **float** konwertowane na wartość **podwójne** lub `long double`, lub **podwójne** przekonwertować `long double`, ulega ma zmiany w wartości. A **podwójne** konwertowane na wartość **float** wartość jest reprezentowany dokładnie, jeśli to możliwe. Dokładność mogą zostać utracone, jeśli wartość nie może być reprezentowany dokładnie. Jeśli wynik jest poza zakresem, zachowanie jest niezdefiniowany. Zobacz [limity dla stałych Floating-Point](../c-language/limits-on-floating-point-constants.md) dla typów zmiennoprzecinkowych.  
@@ -40,25 +41,25 @@ A **float** konwertowane na wartość **podwójne** lub `long double`, lub **pod
 |Z|Do|Metoda|  
 |----------|--------|------------|  
 |**float**|`char`|Konwertuj na **długi**; przekonwertować **długi** do`char`|  
-|**float**|**krótki**|Konwertuj na **długi**; przekonwertować **długi** do **krótki**|  
-|**float**|**długa**|Obciąć po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długi**, wynikiem jest niezdefiniowany.|  
+|**float**|**short**|Konwertuj na **długi**; przekonwertować **długi** do **krótki**|  
+|**float**|**long**|Obciąć po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długi**, wynikiem jest niezdefiniowany.|  
 |**float**|**short bez znaku**|Konwertuj na **długi**; przekonwertować **długi** do `unsigned` **krótki**|  
 |**float**|`unsigned long`|Konwertuj na **długi**; przekonwertować **długi** do `unsigned` **długa**|  
-|**float**|**podwójne**|Zmień reprezentacji wewnętrznej|  
+|**float**|**double**|Zmień reprezentacji wewnętrznej|  
 |**float**|`long double`|Zmień reprezentacji wewnętrznej|  
-|**podwójne**|`char`|Konwertuj na **float**; przekonwertować **float** do`char`|  
-|**podwójne**|**krótki**|Konwertuj na **float**; przekonwertować **float** do **krótki**|  
-|**podwójne**|**długa**|Obciąć po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długi**, wynikiem jest niezdefiniowany.|  
-|**podwójne**|**short bez znaku**|Konwertuj na **długi**; przekonwertować **długi** do **krótko bez znaku**|  
-|**podwójne**|`unsigned long`|Konwertuj na **długi**; przekonwertować **długi** do `unsigned` **długa**|  
-|**podwójne**|**float**|Reprezentuje jako **float**. Jeśli **podwójne** wartość nie może być reprezentowany dokładnie jako **float**, utrata dokładności. Jeśli wartość jest za duży, może być reprezentowana jako **float**, wynikiem jest niezdefiniowany.|  
+|**double**|`char`|Konwertuj na **float**; przekonwertować **float** do`char`|  
+|**double**|**short**|Konwertuj na **float**; przekonwertować **float** do **krótki**|  
+|**double**|**long**|Obciąć po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długi**, wynikiem jest niezdefiniowany.|  
+|**double**|**short bez znaku**|Konwertuj na **długi**; przekonwertować **długi** do **krótko bez znaku**|  
+|**double**|`unsigned long`|Konwertuj na **długi**; przekonwertować **długi** do `unsigned` **długa**|  
+|**double**|**float**|Reprezentuje jako **float**. Jeśli **podwójne** wartość nie może być reprezentowany dokładnie jako **float**, utrata dokładności. Jeśli wartość jest za duży, może być reprezentowana jako **float**, wynikiem jest niezdefiniowany.|  
 |`long double`|`char`|Konwertuj na **float**; przekonwertować **float** do`char`|  
-|`long double`|**krótki**|Konwertuj na **float**; przekonwertować **float** do **krótki**|  
-|`long double`|**długa**|Obciąć po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długi**, wynikiem jest niezdefiniowany.|  
+|`long double`|**short**|Konwertuj na **float**; przekonwertować **float** do **krótki**|  
+|`long double`|**long**|Obciąć po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długi**, wynikiem jest niezdefiniowany.|  
 |`long double`|**short bez znaku**|Konwertuj na **długi**; przekonwertować **długi** do `unsigned` **krótki**|  
 |`long double`|`unsigned long`|Konwertuj na **długi**; przekonwertować **długi** do `unsigned` **długa**|  
 |`long double`|**float**|Reprezentuje jako **float**. Jeśli **podwójne** wartość nie może być reprezentowany dokładnie jako **float**, utrata dokładności. Jeśli wartość jest za duży, może być reprezentowana jako **float**, wynikiem jest niezdefiniowany.|  
-|`long double`|**podwójne**|**Podwójnej długości** wartość jest traktowana jako **podwójne**.|  
+|`long double`|**double**|**Podwójnej długości** wartość jest traktowana jako **podwójne**.|  
   
  Konwersje z **float**, **podwójne**, lub `long double` wartości do `unsigned long` nie są dokładne, jeśli wartość konwertowanej jest większa niż maksymalna dodatnich **long**wartość.  
   

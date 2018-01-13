@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6bffc721ac685be91531b3d876234de8be2477c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d18ae0818dd839bee0d93bd7194dadcc9abf6627
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-checking-crt"></a>Sprawdzać typ (CRT)
 Kompilator wykonuje ograniczone typu sprawdzanie na funkcje, które można wykonać zmienną liczbę argumentów w następujący sposób:  
@@ -40,4 +41,4 @@ Kompilator wykonuje ograniczone typu sprawdzanie na funkcje, które można wykon
  Kompilator wykonuje ten sam typ ograniczony sprawdzanie na odpowiedniki znaków dwubajtowych tych funkcji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md)
+ [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

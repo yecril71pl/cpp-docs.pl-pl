@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0962059e6e55ce68133960cc9f8d1de8c7f0ef61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b47969da4c560f28c07ac09caef83873e362ddc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Zwalnianie bibliotek DLL załadowanych z opóźnieniem
 Pomocnika dostarczony domyślne załadować z opóźnieniem sprawdza, czy deskryptory załadować z opóźnieniem są wskaźnik i kopię oryginalnej tabelę adresów importu (IAT) w polu pUnloadIAT. Jeśli tak, zapisze wskaźnik na liście do deskryptora opóźnienia importowania. Dzięki temu funkcja pomocnika można znaleźć biblioteki DLL według nazwy do obsługi jawne zwalnianie tej biblioteki DLL.  
@@ -69,4 +70,4 @@ __FUnloadDelayLoadedDLL2("User32.DLL");.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opis funkcji Pomocnik](understanding-the-helper-function.md)
+ [Ogólne informacje funkcji Pomocnik](understanding-the-helper-function.md)

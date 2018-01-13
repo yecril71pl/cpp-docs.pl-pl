@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 467a342b612a82532acb04f11b5fa9f36ce9fe82
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 61dae4cf26f881014f0d98bbf30ebd10a360b10f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-declarations"></a>Podsumowanie deklaracji
 `declaration`:  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
  ||||  
 |-|-|-|  
 |[__asm](../assembler/inline/asm.md)|[__clrcall](../cpp/clrcall.md)|[__stdcall](../cpp/stdcall.md)|  
-|[__based](../cpp/based-grammar.md)|[__fastcall](../cpp/fastcall.md)|[Konwencja __thiscall](../cpp/thiscall.md)|  
+|[__based](../cpp/based-grammar.md)|[__fastcall](../cpp/fastcall.md)|[__thiscall](../cpp/thiscall.md)|  
 |[__cdecl](../cpp/cdecl.md)|[__inline](../cpp/inline-functions-cpp.md)|[__vectorcall](../cpp/vectorcall.md)|  
   
  *init — deklarator — lista*:  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
   
  **Rejestr**  
   
- **statyczne**  
+ **static**  
   
  **extern**  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/24/2017
   
  **char**  
   
- **krótki**  
+ **short**  
   
  **int**  
   
@@ -82,11 +83,11 @@ ms.lasthandoff: 10/24/2017
   
  `__int64`/ * Określonych firmy Microsoft\*/  
   
- **długa**  
+ **long**  
   
  **float**  
   
- **podwójne**  
+ **double**  
   
  **podpisany**  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 10/24/2017
  *Nazwa typu TypeDef*  
   
  *Kwalifikator typu*:  
- **Const**  
+ **const**  
   
  `volatile`  
   
@@ -159,7 +160,7 @@ ms.lasthandoff: 10/24/2017
  *Identyfikator struktury lub Unii*<sub>opt</sub>**{** *struktury deklaracji listy* **}**  *Identyfikator struktury lub związku*  
   
  *Struktura lub Unia*:  
- **— Struktura**  
+ **struct**  
   
  **Unii**  
   
@@ -230,7 +231,7 @@ ms.lasthandoff: 10/24/2017
  *rozszerzony rozszerzony decl — modyfikator seq — decl — modyfikator*  
   
  *rozszerzony decl — modyfikator*: /\* Specific firmy Microsoft\*/  
- **Wątek**  
+ **wątek**  
   
  **naked**  
   
@@ -241,4 +242,4 @@ ms.lasthandoff: 10/24/2017
 ## <a name="see-also"></a>Zobacz też  
  [Konwencje wywoływania](../cpp/calling-conventions.md)   
  [Gramatyka struktury fazy](../c-language/phrase-structure-grammar.md)   
- [Przestarzałe Konwencje wywoływania](../cpp/obsolete-calling-conventions.md)
+ [Przestarzałe konwencje wywoływania](../cpp/obsolete-calling-conventions.md)

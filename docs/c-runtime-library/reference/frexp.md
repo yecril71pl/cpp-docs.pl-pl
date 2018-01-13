@@ -37,11 +37,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f463ee2e077d4d1cc90e4fe2fc04eeda025bb6a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86152082b081cb93ba264e607b256a2448874af2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frexp"></a>frexp
 Pobiera mantysa i wykładnik liczby zmiennoprzecinkowej.  
@@ -114,4 +115,4 @@ frexp( 16.400000, &n ) = 0.512500, n = 5
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [ldexp —](../../c-runtime-library/reference/ldexp.md)   
- [modf —, modff —, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)
+ [modf, modff, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)
