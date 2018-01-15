@@ -1,7 +1,7 @@
 ---
 title: "Formant użytkownika przy użyciu systemu Windows formularza w MFC | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/08/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-windows
@@ -23,68 +23,73 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 59b4d974a6b25b896067bce0042d9a5ff9221cc2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3289509c0cfe6016fcace34c76f145a505ecf3b
+ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Używanie formantu użytkownika formularza systemu Windows w MFC
-Przy użyciu klasy obsługi formularzy systemu Windows MFC, może obsługiwać formanty formularzy systemu Windows w aplikacjach MFC jako formant ActiveX w obrębie okna dialogowe MFC lub widoków. Ponadto formularzy Windows forms może być obsługiwany jako okna dialogowe MFC.  
-  
- W poniższych sekcjach opisano sposób:  
-  
--   Hostowanie kontrolki formularza systemu Windows, w oknie dialogowym MFC.  
-  
--   Hostowanie formantu użytkownika formularzy systemu Windows jako widoku MFC.  
-  
--   Host formularza formularzy systemu Windows jako okna dialogowego MFC.  
-  
+
+Przy użyciu klasy obsługi formularzy systemu Windows MFC, może obsługiwać formanty formularzy systemu Windows w aplikacjach MFC jako formant ActiveX w obrębie okna dialogowe MFC lub widoków. Ponadto formularzy Windows forms może być obsługiwany jako okna dialogowe MFC.
+
+W poniższych sekcjach opisano sposób:
+
+- Hostowanie kontrolki formularza systemu Windows, w oknie dialogowym MFC.
+
+- Hostowanie formantu użytkownika formularzy systemu Windows jako widoku MFC.
+
+- Host formularza formularzy systemu Windows jako okna dialogowego MFC.
+
 > [!NOTE]
->  Formularze systemu Windows MFC integracji działa tylko w projektach połączone dynamicznie z MFC (projekty, w których zdefiniowano AFXDLL).  
-  
+> Formularze systemu Windows MFC integracji działa tylko w projektach połączone dynamicznie z MFC (projekty, w którym `_AFXDLL` jest zdefiniowana).
+
 > [!NOTE]
->  Podczas kompilowania aplikacji za pomocą prywatnego kopiowania (zmodyfikowany) interfejsów formularzy systemu Windows MFC DLL (mfcmifc80.dll), nie będzie można instalować w pamięci GAC, jeśli nie można zastąpić klucz Microsoft klucz dostawcy. Aby uzyskać więcej informacji na podpisywanie zestawu, zobacz [programowanie za pomocą zestawów](/dotnet/framework/app-domains/programming-with-assemblies) i [silnych nazwach (podpisywanie zestawów) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
-  
- Dla przykładowych aplikacji przy użyciu formularzy systemu Windows, temacie [BirthdayPicker próbki: przedstawiono zasoby platformy .NET w formularzach systemu Windows](http://msdn.microsoft.com/en-us/ac932aed-5502-4667-be29-709bca435317), [próbki Kalkulator: Kalkulator Pocket formularzy systemu Windows](http://msdn.microsoft.com/en-us/2283b516-3b7e-45f2-80c4-fdcfb366ce25)i [ Przykład bazgrołów: MDI rysunku aplikacji](http://msdn.microsoft.com/en-us/f025da3e-659b-4222-b991-554a1b8b2358).  
-  
- Dla przykładowej aplikacji, która zawiera formularze systemu Windows używana z MFC, zobacz [MFC i integracja z formularzy systemu Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
-  
- Aplikacja MFC używa formularzy systemu Windows, należy ponownie rozesłać mfcmifc90.dll z aplikacją. Aby uzyskać więcej informacji, zobacz [redystrybuowanie biblioteki MFC](../ide/redistributing-the-mfc-library.md).  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)  
-  
- [Hostowanie kontrolki użytkownika interfejsu Windows Forms jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)  
-  
- [Hostowanie kontrolki użytkownika formularza systemu Windows jako okna dialogowego MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)  
-  
-## <a name="reference"></a>Tematy pomocy  
- [Klasa CWinFormsControl](../mfc/reference/cwinformscontrol-class.md)  
-  
- [Klasa CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md)  
-  
- [Klasa CWinFormsView](../mfc/reference/cwinformsview-class.md)  
-  
- [Klasa ICommandSource](../mfc/reference/icommandsource-interface.md)  
-  
- [Klasa ICommandTarget](../mfc/reference/icommandtarget-interface.md)  
-  
- [Klasa ICommandUI](../mfc/reference/icommandui-interface.md)  
-  
- [Interfejs IView](../mfc/reference/iview-interface.md)  
-  
- [CommandHandler](../atl/commandhandler.md)  
-  
- [Ddx_managedcontrol —](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)  
-  
- [Uicheckstate —](../mfc/reference/uicheckstate-enumeration.md)  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
- [Windows Forms](/dotnet/framework/winforms/index)  
-  
- [Kontrolki formularzy Windows Forms](/dotnet/framework/winforms/controls/index)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)   
- [Widoki formularzy](../mfc/form-views-mfc.md)
+> Podczas kompilowania aplikacji za pomocą prywatnego kopiowania (zmodyfikowany) interfejsów formularzy systemu Windows MFC DLL (mfcmifc80.dll), nie będzie można instalować w pamięci GAC, jeśli nie można zastąpić klucz Microsoft klucz dostawcy. Aby uzyskać więcej informacji na podpisywanie zestawu, zobacz [programowanie za pomocą zestawów](/dotnet/framework/app-domains/programming-with-assemblies) i [silnych nazwach (podpisywanie zestawów) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+
+Dla przykładowych aplikacji przy użyciu formularzy systemu Windows, temacie [BirthdayPicker próbki: przedstawiono zasoby platformy .NET w formularzach systemu Windows](http://msdn.microsoft.com/ac932aed-5502-4667-be29-709bca435317), [próbki Kalkulator: Kalkulator Pocket formularzy systemu Windows](http://msdn.microsoft.com/2283b516-3b7e-45f2-80c4-fdcfb366ce25)i [ Przykład bazgrołów: MDI rysunku aplikacji](http://msdn.microsoft.com/f025da3e-659b-4222-b991-554a1b8b2358).
+
+Dla przykładowej aplikacji, która zawiera formularze systemu Windows używana z MFC, zobacz [MFC i integracja z formularzy systemu Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+
+Aplikacja MFC używa formularzy systemu Windows, należy ponownie rozesłać mfcmifc80.dll z aplikacją. Aby uzyskać więcej informacji, zobacz [redystrybuowanie biblioteki MFC](../ide/redistributing-the-mfc-library.md).
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)
+
+[Hostowanie kontrolki użytkownika interfejsu Windows Forms jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)
+
+[Hostowanie kontrolki użytkownika formularza systemu Windows jako okna dialogowego MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)
+
+## <a name="reference"></a>Tematy pomocy
+
+[Klasa CWinFormsControl](../mfc/reference/cwinformscontrol-class.md)
+
+[Klasa CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md)
+
+[Klasa CWinFormsView](../mfc/reference/cwinformsview-class.md)
+
+[Klasa ICommandSource](../mfc/reference/icommandsource-interface.md)
+
+[Klasa ICommandTarget](../mfc/reference/icommandtarget-interface.md)
+
+[Klasa ICommandUI](../mfc/reference/icommandui-interface.md)
+
+[Interfejs IView](../mfc/reference/iview-interface.md)
+
+[CommandHandler](../atl/commandhandler.md)
+
+[Ddx_managedcontrol —](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)
+
+[Uicheckstate —](../mfc/reference/uicheckstate-enumeration.md)
+
+## <a name="related-sections"></a>Sekcje pokrewne
+
+[Windows Forms](/dotnet/framework/winforms/index)
+
+[Kontrolki formularzy Windows Forms](/dotnet/framework/winforms/controls/index)
+
+## <a name="see-also"></a>Zobacz także
+
+[Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)  
+[Widoki formularzy](../mfc/form-views-mfc.md)  
