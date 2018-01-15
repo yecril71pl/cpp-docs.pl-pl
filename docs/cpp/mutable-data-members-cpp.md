@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a3c960c5fcf5a73d339b7565cd0bec38dba98f12
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a93ae14e6f630d8974163ce8295626a524b49e3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutable-data-members-c"></a>Modyfikowalne elementy członkowskie danych (C++)
 To słowo kluczowe można stosować do elementów członkowskich danych niestatyczna i z systemem innym niż stała klasy. Jeśli element członkowski danych jest zadeklarowany jako `mutable`, wówczas jest można przypisać wartości do tego elementu członkowskiego danych z **const** funkcji członkowskiej.  

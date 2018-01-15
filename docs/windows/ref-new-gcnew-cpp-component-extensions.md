@@ -20,11 +20,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cabe15639d75a1dfe7c41463ea9b95332f6dafa3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 616117f7274d6f68456aa23614fb354a71982fb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (C++ Component Extensions)
 `ref new` Agregacji — słowo kluczowe przydziela wystąpienia typu, który jest bezużytecznych, gdy obiekt staje się niedostępny, i który zwraca uchwyt ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) do przydzielonego obiektu.  
@@ -89,7 +92,7 @@ int main()
 }  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
 ```Output  
 32  

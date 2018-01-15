@@ -1,5 +1,5 @@
 ---
-title: "#<a name=\"include-directive-cc--microsoft-docs\"></a>include — dyrektywa (C/C++) | Dokumentacja firmy Microsoft"
+title: "#include — dyrektywa (C/C++) | Dokumentacja firmy Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 218a19225286de9dbcb75bf3e134b9ae66e0271a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f724d566703300d0f929df680b659b7adbfa9577
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="include-directive-cc"></a>#include — dyrektywa (C/C++)
 Określa, że na traktowanie zawartość określonego pliku, tak jakby pojawią się one w programie źródłowym w momencie, w którym pojawi się dyrektywy preprocesora.  

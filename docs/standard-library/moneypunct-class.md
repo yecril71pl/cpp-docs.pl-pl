@@ -57,11 +57,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c475dc3a992ef31c90f3be184428d8c9aa79fe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 569aa946ac324c833e651e6b9b74b8cc402a4d04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneypunct-class"></a>moneypunct — Klasa
 Klasa szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do opisywania sekwencji typu `CharType` używany do reprezentowania pieniężnego pole wejściowe lub pole pieniężne danych wyjściowych. Jeśli parametr szablonu `Intl` jest `true`, międzynarodowych konwencji są przestrzegane.  

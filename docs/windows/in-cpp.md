@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba7999f9834b0efc100fc66f19506a6f25843f9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 37eaee8d796897b14d4780f0cf65e36908d7c66b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="in-c"></a>in (C++)
 Wskazuje, że parametr zostanie przekazany z procedury wywołującej do procedury wywoływanej.  
@@ -57,4 +60,4 @@ Wskazuje, że parametr zostanie przekazany z procedury wywołującej do procedur
  [Atrybuty — metoda](../windows/method-attributes.md)   
  [Wartość domyślna](../windows/defaultvalue.md)   
  [Identyfikator](../windows/id.md)   
- [limit](../windows/out-cpp.md)   
+ [out](../windows/out-cpp.md)   

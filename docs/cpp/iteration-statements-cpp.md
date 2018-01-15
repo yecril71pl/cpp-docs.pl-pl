@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f81ffa2e6b8f1dc07e409b737f76cb8e6aca5258
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c06ae1c043551bbb4ed6469ab3f87d1ed86fd92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteration-statements-c"></a>Instrukcje iteracji (C++)
 Iteracja — instrukcje spowodować instrukcji (lub instrukcje złożone) można wykonać zero lub więcej razy może ulec pewne kryteria zakończenia pętli. Jeśli te instrukcje są instrukcje złożone, są wykonywane w kolejności, chyba że albo [podziału](../cpp/break-statement-cpp.md) instrukcji lub [kontynuować](../cpp/continue-statement-cpp.md) napotkano instrukcji.  
@@ -32,8 +33,8 @@ Iteracja — instrukcje spowodować instrukcji (lub instrukcje złożone) można
 |Instrukcja|Oceniane w|Inicjalizacja|Przyrost|  
 |---------------|------------------|--------------------|---------------|  
 |`while`|Początku pętli|Nie|Nie|  
-|**czy**|Dołu pętli|Nie|Nie|  
-|**dla**|Początku pętli|Tak|Tak|  
+|**do**|Dołu pętli|Nie|Nie|  
+|**for**|Początku pętli|Tak|Tak|  
 |**na podstawie zakresu dla**|Początku pętli|Tak|Tak|  
   
  Instrukcja część instrukcji iteracji nie może być deklaracji. Można go jednak instrukcji złożonej zawierającej deklaracji.  

@@ -18,11 +18,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45fc41430fbbf04f8b1b56fe6355fb0b81f8e1ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d75bc7f0935ef7444d37f3708379598a549417e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Klasy i struktury (C++ Component Extensions)
 Deklaruje klasie lub strukturze których *okres istnienia obiektu* podawana jest automatycznie. Gdy obiekt nie jest już dostępny lub poza zakresem, Visual C++ spowoduje odrzucenie na pamięci, która jest przydzielona do obiektu.  
@@ -81,13 +84,13 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
 -   [Destruktory i finalizatory w porady: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)  
   
--   [Operatory zdefiniowane przez użytkownika (C + +/ CLI)](../dotnet/user-defined-operators-cpp-cli.md)  
+-   [Operatory zdefiniowane przez użytkownika (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)  
   
--   [Konwersje zdefiniowane przez użytkownika (C + +/ CLI)](../dotnet/user-defined-conversions-cpp-cli.md)  
+-   [Konwersje zdefiniowane przez użytkownika (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)  
   
--   [Porady: opakowywanie klasy natywnej do użycia w języku C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
+-   [Instrukcje: opakowywanie klasy natywnej do użycia w języku C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
   
--   [Klasy ogólne (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)  
+-   [Klasy ogólne [C++/CLI]](../windows/generic-classes-cpp-cli.md)  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
  **Uwagi**  

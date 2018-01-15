@@ -25,11 +25,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7411a11a396627fb01d1dad1d47dc957ce968a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 960da86c5ae3efa0cb50077becfb526000f71b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autoptr-class"></a>auto_ptr — Klasa
 Zawija się wokół zasobów, które zapewnia, że zasób zostanie zniszczony automatycznie, gdy formant opuszcza blok wskaźnika inteligentnego.  
@@ -91,7 +92,7 @@ public:
   
 |||  
 |-|-|  
-|[Pobierz](#get)|Funkcja członkowska zwraca wskaźnik przechowywanych `myptr`.|  
+|[get](#get)|Funkcja członkowska zwraca wskaźnik przechowywanych `myptr`.|  
 |[zlecenia](#release)|Element członkowski zastępuje przechowywanych wskaźnika `myptr` za pomocą wskaźnika null i zwraca wskaźnik zapisanych wcześniej.|  
 |[Resetowanie](#reset)|Funkcja członkowska oblicza wyrażenie `delete myptr`, ale tylko wtedy, gdy wartość wskaźnika przechowywanych `myptr` zmiany w wyniku wywołania funkcji. Następnie zastępuje przechowywanych wskaźnik z `ptr`.|  
   
@@ -523,5 +524,5 @@ Destructing 00311B88 Value: 6
   
 ## <a name="see-also"></a>Zobacz też  
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [unique_ptr — klasa](../standard-library/unique-ptr-class.md)
+ [unique_ptr, klasa](../standard-library/unique-ptr-class.md)
 

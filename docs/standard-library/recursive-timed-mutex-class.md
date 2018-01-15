@@ -29,11 +29,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 0a47e7794dd38169b99711bbc1898083a1c8c149
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ed5930eca492d6793ab08c39b6af8b45a9124c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex — Klasa
 Reprezentuje *upłynął typu obiektu mutex*. Obiekty tego typu są używane do wymuszania wykluczanie wzajemne przy użyciu czas blokowania w programie. W przeciwieństwie do obiektów typu [timed_mutex](../standard-library/timed-mutex-class.md), efekt podczas wywoływania metody blokowania `recursive_timed_mutex` obiektów jest dobrze zdefiniowany.  
@@ -57,7 +58,7 @@ class recursive_timed_mutex;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[blokady](#lock)|Wątek wywołujący blokuje, dopóki wątek uzyskuje prawo własności do `mutex`.|  
+|[lock](#lock)|Wątek wywołujący blokuje, dopóki wątek uzyskuje prawo własności do `mutex`.|  
 |[try_lock](#try_lock)|Próbuje uzyskać prawo własności `mutex` bez blokowania.|  
 |[try_lock_for](#try_lock_for)|Próbuje uzyskać prawo własności `mutex` określony interwał czasu.|  
 |[try_lock_until](#try_lock_until)|Próbuje uzyskać prawo własności `mutex` dopiero po określonym czasie.|  

@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: daa70cb5bc1bcb1fef77930a9955f7afbd618f67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d56fcfa8fb65f183acfe96c3981023d06f5e524a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-predefined-symbols"></a>Wstępnie zdefiniowane symbole ATL
 Te symbole są definiowane w ATL pliki nagłówkowe, ale obsługuje standardowe funkcje aplikacji systemu Windows i działań. Symbole są używane głównie z okien dialogowych. Podczas pracy z okien dialogowych i formantów w [Edytor okien dialogowych](../windows/dialog-editor.md), te symbole będą wyświetlane w oknie właściwości skojarzone z formantów standardowych. Na przykład, jeśli Twoje okno dialogowe ma przycisk Anuluj, tego polecenia zostanie skojarzona z symbol IDCANCEL w [okna właściwości](/visualstudio/ide/reference/properties-window).  
@@ -43,4 +46,4 @@ Te symbole są definiowane w ATL pliki nagłówkowe, ale obsługuje standardowe 
   
 ## <a name="see-also"></a>Zobacz też  
  [Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)   
- [Symbole: Identyfikatory zasobów](../windows/symbols-resource-identifiers.md)
+ [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)

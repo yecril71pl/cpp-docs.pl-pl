@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d95e5dc4b137e050c65bc95b6b872ae1f5391baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scanf-width-specification"></a>scanf — Specyfikacje szerokości
 Te informacje dotyczą interpretacji ciągów formatu w `scanf` rodziny funkcji, takich jak także bezpiecznego wersji `scanf_s`. Funkcje te zwykle założenie, że strumień wejściowy jest podzielony na sekwencja tokenów. Tokeny są rozdzielone odstępem (miejsce, karty lub nowego wiersza) lub w przypadku typów wartości liczbowych, do końca fizycznych typu danych numerycznych wskazywany przez pierwszego znaku, której nie można przekonwertować na tekst wartości liczbowych. Specyfikacja szerokości można jednak powoduje analizowanie danych wejściowych zatrzymać przed zakończeniem fizycznych tokenu.  
@@ -56,7 +57,7 @@ scanf_s("%20s", str, 21);
   
 |Aby określić|Użyj prefiksu|Ze specyfikatorem typu|  
 |----------------|----------------|-------------------------|  
-|**podwójne**|**l**|**e**, **E**, **f**, **g**, lub **G**|  
+|**double**|**l**|**e**, **E**, **f**, **g**, lub **G**|  
 |**Long double** (taki sam, jak podwójna)|**L**|**e**, **E**, **f**, **g**, lub **G**|  
 |**długie int**|**l**|**d**, **i**, **o**, **x**, lub **X**|  
 |**Long unsigned int**|**l**|**u**|  
@@ -107,4 +108,4 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [scanf_s —, _scanf_s_l —, wscanf_s — _wscanf_s_l —](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
  [Pola specyfikacji formatu: funkcji wscanf](../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)   
- [scanf — znaki pola typu](../c-runtime-library/scanf-type-field-characters.md)
+ [scanf, znaki pola typu](../c-runtime-library/scanf-type-field-characters.md)

@@ -27,11 +27,12 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 37a6d72ab7f79c24606a5ffb0dcafe1e6c6d1e18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c1039ceae802984762dbb1aaf50c259bf8a2e95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex — klasa (standardowa biblioteka C++)
 Reprezentuje *typu obiektu mutex*. Obiekty tego typu może służyć do wymuszania wzajemne wykluczenie w programie.  
@@ -55,7 +56,7 @@ class mutex;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[blokady](#lock)|Wątek wywołujący blokuje, dopóki wątek uzyskuje prawo własności do `mutex`.|  
+|[lock](#lock)|Wątek wywołujący blokuje, dopóki wątek uzyskuje prawo własności do `mutex`.|  
 |[native_handle](#native_handle)|Zwraca typ konkretnej implementacji, który reprezentuje dojście obiektu mutex.|  
 |[try_lock](#try_lock)|Próbuje uzyskać prawo własności `mutex` bez blokowania.|  
 |[odblokowywanie](#unlock)|Zwalnia własność `mutex`.|  

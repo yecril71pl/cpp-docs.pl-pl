@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1e7fca06a16cf879ab46a132a6f35b79532cc6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a91d10a1705e14663443c1471397478aad85b68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timebase-class"></a>time_base — Klasa
 Klasa służy jako klasę podstawową dla aspekty time_get — klasa szablonu, definiowanie tylko typ wyliczeniowy **dateorder** i kilka stałych tego typu.  

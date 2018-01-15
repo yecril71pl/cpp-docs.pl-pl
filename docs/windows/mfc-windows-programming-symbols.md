@@ -17,11 +17,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67c1924b1e9ed3f533fc1f22fbc0f34a2ecf03be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d7d2d69cfdfd12f0a8dbdcf3a771e01db19da2c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-windows-programming-symbols"></a>Symbole programowania Windows MFC
 Te symbole należą również pliki obsługi MFC, ale obsługuje standardowe funkcje aplikacji systemu Windows i działań. Symbole są używane głównie z menu. Podczas pracy z menu w edytorze Menu symbole będą wyświetlane w oknie właściwości skojarzone z typowych poleceń menu. Na przykład, jeśli aplikacja ma menu plik przy użyciu polecenia Exit, tego polecenia zostanie skojarzona z id_app_exit — symbol w [okna właściwości](/visualstudio/ide/reference/properties-window).  
@@ -69,4 +72,4 @@ Te symbole należą również pliki obsługi MFC, ale obsługuje standardowe fun
   
 ## <a name="see-also"></a>Zobacz też  
  [Wstępnie zdefiniowane symbole MFC](../windows/mfc-predefined-symbols.md)   
- [Symbole: Identyfikatory zasobów](../windows/symbols-resource-identifiers.md)
+ [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)

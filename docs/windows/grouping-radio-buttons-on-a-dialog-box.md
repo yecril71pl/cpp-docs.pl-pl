@@ -20,11 +20,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40d1c75dfe70a5dcdf664f105f2872475219e294
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 39d6f8ac03d4b7c75098306b4b2eb85350a9efe9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Grupowanie przycisków radiowych w oknie dialogowym
 Po dodaniu przycisków radiowych do okna dialogowego potraktować je jako grupę, przez ustawienie właściwości grupy w oknie dialogowym Właściwości przycisku pierwszej w grupie. Identyfikator formantu dla tego przycisku radiowego pojawia się w [Kreator dodawania zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md), co umożliwia dodawanie zmiennej członkowskiej w grupie przycisków radiowych.  
@@ -58,7 +61,7 @@ Po dodaniu przycisków radiowych do okna dialogowego potraktować je jako grupę
   
 6.  Można również zmodyfikować swój kod, aby określić przycisku radiowego, która powinna zostać wyświetlona wybrane. Na przykład m_radioBox1 = 0; wybiera pierwszy przycisk radiowy w grupie.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](https://msdn.microsoft.com/library/f45fce5x.aspx) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](https://msdn.microsoft.com/library/xbx3z216.aspx). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Wymagania  
   
@@ -67,5 +70,5 @@ Po dodaniu przycisków radiowych do okna dialogowego potraktować je jako grupę
 ## <a name="see-also"></a>Zobacz też  
  [Rozmieszczenie formantów w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
- [Formanty](../mfc/controls-mfc.md)
+ [Kontrolki](../mfc/controls-mfc.md)
 

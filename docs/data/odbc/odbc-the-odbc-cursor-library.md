@@ -27,11 +27,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a704a4904683d2b1a448e9f5f327723b7681c96b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3d849580ce3e9b264c854633c6bb9f274874c21d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC: biblioteka kursorów ODBC
 W tym temacie opisano z biblioteki kursorów ODBC oraz wyjaśniono, jak z niego korzystać. Aby uzyskać więcej informacji, zobacz:  

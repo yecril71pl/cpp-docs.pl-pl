@@ -91,11 +91,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eba062342aeb0ecc6e9818d7da9eead94b81a9af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36354e8b6e6e0c456334caed402a700129b32dae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="forwardlist-class"></a>forward_list — Klasa
 Opis obiektu, który określa sekwencję zróżnicowanych długość elementów. Sekwencja jest przechowywana lista pojedynczo połączonych węzłów, każdy z nich zawierający element członkowski typu `Type`.  
@@ -169,7 +170,7 @@ class forward_list
 |[scalania](#merge)|Usuwa elementy z listy argumentów, wstawia je do listy do przodu docelowej oraz zamówienia nowe, łączny zbiór elementów w kolejności rosnącej lub w określonej kolejności.|  
 |[pop_front](#pop_front)|Usuwa element na początku listy do przodu.|  
 |[push_front](#push_front)|Dodaje element na początku listy do przodu.|  
-|[Usuń](#remove)|Usuwa elementy na liście do przodu, który spełnia określone wymagania.|  
+|[remove](#remove)|Usuwa elementy na liście do przodu, który spełnia określone wymagania.|  
 |[remove_if](#remove_if)|Usuwa elementy z listy do przodu, dla których jest spełniony określony predykat.|  
 |[Zmiana rozmiaru](#resize)|Określa nowy rozmiar listy do przodu.|  
 |[wstecznego](#reverse)|Odwraca kolejność, w którym elementy występuje na liście do przodu.|  
@@ -957,5 +958,5 @@ typedef typename Allocator::value_type value_type;
  Typ jest synonimem _ parametru szablonu `Ty`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [< forward_list — >](../standard-library/forward-list.md)
+ [<forward_list>](../standard-library/forward-list.md)
 

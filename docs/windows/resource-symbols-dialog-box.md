@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23095aba32846a61d4fd61f9910994892e1f5ca1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0e21f60fb2ca90e9e4825e93103fa74be3563780
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-symbols-dialog-box"></a>Okno dialogowe symboli zasobów
 **Symbole zasobu** okno dialogowe służy do dodawania nowych symboli zasobów, Zmień symbole, które są wyświetlane lub przejść do lokalizacji w kodzie źródłowym, w którym symbol jest używany.  

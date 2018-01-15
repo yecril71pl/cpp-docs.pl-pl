@@ -31,11 +31,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a69f26f344fd4cdccd2ff2a700dcd7e7d473e26a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f59b48022cc448b8b06502febdaf1634998ac9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-class"></a>Klasa harmonogramu
 Reprezentuje abstrakcję harmonogramu współbieżność środowiska wykonawczego.  
@@ -59,14 +60,14 @@ class Scheduler;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Dołącz](#attach)|Dołącza planista Kontekst wywołania. Po powrocie z tej metody, wywołujący kontekstu jest zarządzany przez harmonogram i planista staje się bieżącego harmonogramu.|  
+|[Attach](#attach)|Dołącza planista Kontekst wywołania. Po powrocie z tej metody, wywołujący kontekstu jest zarządzany przez harmonogram i planista staje się bieżącego harmonogramu.|  
 |[Utwórz](#create)|Tworzy nowy harmonogram, w których zachowanie jest opisane przez `_Policy` parametr, umieszcza początkowej odwołania na harmonogram i zwraca wskaźnik do niego.|  
 |[CreateScheduleGroup](#createschedulegroup)|Przeciążone. Tworzy nową grupę harmonogramu w ramach harmonogramu zadań. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w grupie nowo utworzonego harmonogramu, aby być ukierunkowane pod kątem wykonywania w lokalizacji określonej w tym parametrze.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu.|  
 |[GetPolicy](#getpolicy)|Zwraca kopię planista utworzony za pomocą zasad.|  
 |[Identyfikator](#id)|Zwraca unikatowy identyfikator dla harmonogramu.|  
 |[IsAvailableLocation](#isavailablelocation)|Określa, czy danej lokalizacji jest dostępny w ramach harmonogramu zadań.|  
-|[Odwołanie](#reference)|Zwiększa liczbę odwołanie harmonogramu.|  
+|[Dokumentacja](#reference)|Zwiększa liczbę odwołanie harmonogramu.|  
 |[RegisterShutdownEvent](#registershutdownevent)|Powoduje, że obsługi zdarzeń systemu Windows przekazany `_Event` parametr, aby zostać zgłoszony, gdy harmonogram zamyka i niszczy się. W czasie, które zdarzenie jest sygnalizowane wszystkie pracy, który miał zostało zaplanowane do harmonogramu zostanie zakończona. Za pomocą tej metody można zarejestrować wiele zdarzeń zamknięcia systemu.|  
 |[Wersja](#release)|Zmniejsza liczba odwołanie harmonogramu.|  
 |[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|Przywraca domyślne zasady harmonogramu domyślnej środowiska uruchomieniowego. Przy następnym harmonogram domyślny jest tworzony, zostanie użyty domyślne ustawienia zasad środowiska uruchomieniowego.|  

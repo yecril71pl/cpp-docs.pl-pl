@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e12869710694083bb0608f158c91e14df36b9ed9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7edf8ebb089b3e39135edb14931197c984c6946c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptras-method"></a>ComPtr::As — Metoda
 Zwraca obiekt comptr —, który reprezentuje interfejs identyfikowane przez parametr określonego szablonu.  
@@ -63,4 +66,4 @@ HRESULT As(
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Comptr — klasa](../windows/comptr-class.md)
+ [ComPtr, klasa](../windows/comptr-class.md)

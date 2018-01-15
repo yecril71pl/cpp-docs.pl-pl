@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2d0e3c65101455958772415228d5cf0d95fbd4d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f0918b5d4c222506173c03859cb74ec3fd13bdd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiteratorgt"></a>&lt;iteratora&gt;
 Definiuje iteratory pierwotne, iteratory wstępnie zdefiniowane i iteratory strumienia, a także kilka szablonów pomocniczych. Wstępnie zdefiniowane iteratory obejmują adaptery wstawiania i odwracania. Istnieją trzy klasy adapterów iteratorów wstawiania: na przód, na tył i ogólne. Zapewniają one semantykę wstawiania zamiast semantyki zastępowania, którą dostarczają iteratory elementów członkowskich.  
@@ -73,12 +74,12 @@ Definiuje iteratory pierwotne, iteratory wstępnie zdefiniowane i iteratory stru
   
 |||  
 |-|-|  
-|[operator! =](../standard-library/iterator-operators.md#op_neq)|Testuje, czy obiekt iteratora po lewej stronie operatora nie jest równy obiektowi iteratora po prawej stronie.|  
+|[operator!=](../standard-library/iterator-operators.md#op_neq)|Testuje, czy obiekt iteratora po lewej stronie operatora nie jest równy obiektowi iteratora po prawej stronie.|  
 |[operator ==](../standard-library/iterator-operators.md#op_eq_eq)|Testuje, czy obiekt iteratora po lewej stronie operatora jest równy obiektowi iteratora po prawej stronie.|  
 |[Operator <](../standard-library/iterator-operators.md#op_lt)|Testuje, czy obiekt iteratora po lewej stronie operatora jest mniejszy niż obiekt iteratora po prawej stronie.|  
 |[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|Testuje, czy obiekt iteratora po lewej stronie operatora jest mniejszy niż lub równy obiektowi iteratora po prawej stronie.|  
 |[operator >](../standard-library/iterator-operators.md#op_gt)|Testuje, czy obiekt iteratora po lewej stronie operatora jest większy niż obiekt iteratora po prawej stronie.|  
-|[operator > =](../standard-library/iterator-operators.md#op_gt_eq)|Testuje, czy obiekt iteratora po lewej stronie operatora jest większy niż lub równy obiektowi iteratora po prawej stronie.|  
+|[operator>=](../standard-library/iterator-operators.md#op_gt_eq)|Testuje, czy obiekt iteratora po lewej stronie operatora jest większy niż lub równy obiektowi iteratora po prawej stronie.|  
 |[operator +](../standard-library/iterator-operators.md#op_add)|Dodaje przesunięcia do iteratora i zwraca nowy `reverse_iterator` adresowania wstawiony element w nowe położenie przesunięcia.|  
 |[operator-](../standard-library/iterator-operators.md#operator-)|Odejmuje jeden iterator od innego i zwraca różnicę.|  
   
@@ -99,7 +100,7 @@ Definiuje iteratory pierwotne, iteratory wstępnie zdefiniowane i iteratory stru
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|Klasa pomocnika szablonu udostępnia typy krytyczne, które są skojarzone z innymi typami iteratora, tak że można się do nich odwoływać w taki sam sposób.|  
 |[move_iterator —](../standard-library/move-iterator-class.md)|A `move_iterator` obiekt przechowuje iteratora dostępie swobodnym typu `RandomIterator`. Zachowuje się jak iterator dostępu swobodnego, z wyjątkiem przypadków wyłuskania. Wynik `operator*` niejawnie jest rzutowane na `value_type&&:` dokonanie `rvalue reference`.|  
 |[ostream_iterator —](../standard-library/ostream-iterator-class.md)|Klasa szablonu opisuje obiekt iteratora wyjściowego. Wstawia obiektów klasy **typu** do strumienia wyjściowego, które it uzyskuje dostęp do za pośrednictwem obiektu go magazyny typu **wskaźnika** do `basic_ostream` \< **elementu** , **Tr**>.|  
-|[ostreambuf_iterator — klasa](../standard-library/ostreambuf-iterator-class.md)|Klasa szablonu opisuje obiekt iteratora wyjściowego. Wstawia elementy klasy **elementu** do buforu strumienia wyjściowego, który uzyskuje dostęp do za pośrednictwem przechowuje, typ wskaźnika do obiektu `basic_streambuf` \< **elementu**, **Tr**>.|  
+|[ostreambuf_iterator, klasa](../standard-library/ostreambuf-iterator-class.md)|Klasa szablonu opisuje obiekt iteratora wyjściowego. Wstawia elementy klasy **elementu** do buforu strumienia wyjściowego, który uzyskuje dostęp do za pośrednictwem przechowuje, typ wskaźnika do obiektu `basic_streambuf` \< **elementu**, **Tr**>.|  
 |[output_iterator_tag —](../standard-library/output-iterator-tag-struct.md)|Klasa, która zawiera typ zwracany dla **iterator_category** funkcja, która reprezentuje iteratora danych wyjściowych.|  
 |[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Klasa, która zawiera typ zwracany dla **iterator_category** funkcja, która reprezentuje iteratora dostępie swobodnym.|  
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|Klasa szablonu opisuje obiekt, który zachowuje się jak iterator dostępu swobodnego, tylko w odwrotnej kolejności.|  
@@ -108,7 +109,7 @@ Definiuje iteratory pierwotne, iteratory wstępnie zdefiniowane i iteratory stru
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

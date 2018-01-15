@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85b9c40d5253c707567a7cb0a1c751b1392fc995
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-policies"></a>Zasady harmonogramu
 Ten dokument zawiera opis roli zasad harmonogramu współbieżność środowiska wykonawczego. A *zasad harmonogramu* steruje strategii, używany w harmonogramie podczas zarządzania zadaniami. Rozważmy na przykład aplikację, która wymaga niektórych zadań do wykonania w `THREAD_PRIORITY_NORMAL` i innych zadań do wykonania w `THREAD_PRIORITY_HIGHEST`.  Można tworzyć dwa wystąpienia harmonogramu: jedną, która określa `ContextPriority` zasadach `THREAD_PRIORITY_NORMAL` oraz inne, które określa jednych zasad można `THREAD_PRIORITY_HIGHEST`.  
@@ -65,5 +66,5 @@ Ten dokument zawiera opis roli zasad harmonogramu współbieżność środowiska
 ## <a name="see-also"></a>Zobacz też  
  [Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [Porady: Określanie specjalnych zasad harmonogramu](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)   
- [Porady: tworzenie agentów korzystających ze specjalnych zasad harmonogramu](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
+ [Instrukcje: tworzenie agentów korzystających ze specjalnych zasad harmonogramu](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
 

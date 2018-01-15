@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e89fdf2b1af11b40c13f57b0febd1daa05894ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cbb348ec11c9c4f832c993ad1e4799c8a39aad2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltutilitygt"></a>&lt;Narzędzie&gt;
 Określa typy, funkcje i operatory, które pomogą utworzyć i zarządzać nimi pary obiektów, które są przydatne, gdy dwa obiekty muszą być traktowane jakby były one standardowa biblioteka C++.  
@@ -46,7 +47,7 @@ Określa typy, funkcje i operatory, które pomogą utworzyć i zarządzać nimi 
 |||  
 |-|-|  
 |[Prześlij dalej](../standard-library/utility-functions.md#forward)|Zachowuje typu odwołania (albo `lvalue` lub `rvalue`) argumentu z trwa zasłonięty przez doskonałego przekazywania dalej.|  
-|[Pobierz](../standard-library/utility-functions.md#get)|Funkcja, która pobiera element na podstawie `pair` obiektu.|  
+|[get](../standard-library/utility-functions.md#get)|Funkcja, która pobiera element na podstawie `pair` obiektu.|  
 |[make_pair —](../standard-library/utility-functions.md#make_pair)|Funkcja pomocnika szablonu, użyty do utworzenia obiektów typu `pair`, gdzie typów składników są oparte na typach danych przekazywane jako parametry.|  
 |[Przenieś](../standard-library/utility-functions.md#move)|Zwraca przekazany argument jako `rvalue` odwołania.|  
 |[swap](../standard-library/utility-functions.md#swap)|Zamienia elementy dwóch `pair` obiektów.|  
@@ -55,12 +56,12 @@ Określa typy, funkcje i operatory, które pomogą utworzyć i zarządzać nimi 
   
 |||  
 |-|-|  
-|[operator! =](../standard-library/utility-operators.md#op_neq)|Testy, jeśli obiekt pary po lewej stronie operatora nie jest taki sam jak obiekt pary po prawej stronie.|  
+|[operator!=](../standard-library/utility-operators.md#op_neq)|Testy, jeśli obiekt pary po lewej stronie operatora nie jest taki sam jak obiekt pary po prawej stronie.|  
 |[operator ==](../standard-library/utility-operators.md#op_eq_eq)|Testy, jeśli obiekt pary po lewej stronie operatora jest taki sam jak obiekt pary po prawej stronie.|  
 |[Operator <](../standard-library/utility-operators.md#op_lt)|Testy, jeśli obiekt pary po lewej stronie operatora jest mniejsza niż obiekt pary po prawej stronie.|  
 |[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Testy, jeśli obiekt pary po lewej stronie operatora jest mniejsza niż lub równe obiekt pary po prawej stronie.|  
 |[operator >](../standard-library/utility-operators.md#op_gt)|Testy, jeśli obiekt pary po lewej stronie operatora jest większy niż obiekt pary po prawej stronie.|  
-|[operator > =](../standard-library/utility-operators.md#op_gt_eq)|Testy, jeśli obiekt pary po lewej stronie operatora jest większa niż lub równa obiekt pary po prawej stronie.|  
+|[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Testy, jeśli obiekt pary po lewej stronie operatora jest większa niż lub równa obiekt pary po prawej stronie.|  
   
 ### <a name="structs"></a>Struktury  
   

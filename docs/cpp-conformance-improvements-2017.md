@@ -11,11 +11,12 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c0fe11f502fbfedda226e1d699a2822bdfd676a
-ms.sourcegitcommit: 78f3f8208d49b7c1d87f4240f4a1496b7c29333e
+ms.workload: cplusplus
+ms.openlocfilehash: 3a1010d7061fb8df20cc821e26e903e356050850
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-and-155improvements155"></a>Ulepszenia zgodność języka C++ w wersji Visual Studio 2017 15.0, [15 ustęp 3](#improvements_153) i [15,5 cala](#improvements_155).
 
@@ -67,7 +68,7 @@ Funkcje oznaczonej jako [14] są dostępne bezwarunkowo nawet w /std:c ++ 14 try
 
 **Nowy przełącznik dla wyrażeń constexpr extern** we wcześniejszych wersjach programu Visual Studio, zawsze nadać kompilator `constexpr` zmiennej zewnętrzne nawet wtedy, gdy zmienna została oznaczona jako `extern`. W Visual Studio 2017 wersji 15,5 cala, nowy przełącznik, [/Zc:externConstexpr](build/reference/zc-externconstexpr.md), umożliwia poprawne zachowanie zgodnych standardów. Aby uzyskać więcej informacji, zobacz [połączenie constexpr extern](#extern_linkage).
 
-**Usuwanie specyfikacje wyjątków dynamicznych**: [P0003R5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html). Specyfikacje wyjątków dynamicznych są przestarzałe w języku C ++ 11. funkcja zostanie usunięta z języka C ++ 17, ale przestarzałe (nadal) `throw()` specyfikacji są przechowywane wyłącznie jako alias `noexcept(true)`. Aby uzyskać więcej informacji, zobacz [usuwania specyfikacji wyjątków dynamicznych i noexcept](#noexcept_removal). 
+**Usuwanie specyfikacje wyjątków dynamicznych**: [P0003R5](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html). Specyfikacje wyjątków dynamicznych zostały oznaczone jako przestarzałe w wersji C++11. funkcja zostanie usunięta z języka C ++ 17, ale przestarzałe (nadal) `throw()` specyfikacji są przechowywane wyłącznie jako alias `noexcept(true)`. Aby uzyskać więcej informacji, zobacz [usuwania specyfikacji wyjątków dynamicznych i noexcept](#noexcept_removal). 
 
 **not_fn()** : [P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) zastępuje not1 — i not2 —.
 

@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a5fe3fec23975f6ed582445c376f6ea6db5dfbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e2eff342264bf7866a4eb95147bca7ce41acb997
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Module::ReleaseNotifier::Invoke — Metoda
 Po zaimplementowaniu, wywołuje program obsługi zdarzeń po zwolnieniu ostatni obiekt w module.  
@@ -36,4 +39,4 @@ virtual void Invoke() = 0;
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Module::releasenotifier — klasa](../windows/module-releasenotifier-class.md)
+ [Module::ReleaseNotifier, klasa](../windows/module-releasenotifier-class.md)

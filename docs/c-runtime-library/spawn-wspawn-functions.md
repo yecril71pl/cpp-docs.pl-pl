@@ -56,21 +56,22 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10de882f1d1942d2abec027da76aa40a201bfaad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0634aeb37d0374f5e6e1dfae0ac004792c279fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn — Funkcje
 Każdy z `_spawn` funkcje tworzy i wykonuje nowy proces:  
   
 |||  
 |-|-|  
-|[_spawnl —, _wspawnl —](../c-runtime-library/reference/spawnl-wspawnl.md)|[_spawnv —, _wspawnv —](../c-runtime-library/reference/spawnv-wspawnv.md)|  
-|[_spawnle —, _wspawnle —](../c-runtime-library/reference/spawnle-wspawnle.md)|[_spawnve —, _wspawnve —](../c-runtime-library/reference/spawnve-wspawnve.md)|  
-|[_spawnlp —, _wspawnlp —](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp —, _wspawnvp —](../c-runtime-library/reference/spawnvp-wspawnvp.md)|  
-|[_spawnlpe —, _wspawnlpe —](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[_spawnvpe —, _wspawnvpe —](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|  
+|[_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|[_spawnv, _wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|  
+|[_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|[_spawnve, _wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|  
+|[_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|  
+|[_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|  
   
  Liter na końcu nazwy funkcji ustalić zmiany.  
   
@@ -251,4 +252,4 @@ from SPAWN!
  [_getmbcp —](../c-runtime-library/reference/getmbcp.md)   
  [_onexit —, _onexit_m —](../c-runtime-library/reference/onexit-onexit-m.md)   
  [_setmbcp —](../c-runtime-library/reference/setmbcp.md)   
- [System, _wsystem —](../c-runtime-library/reference/system-wsystem.md)
+ [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

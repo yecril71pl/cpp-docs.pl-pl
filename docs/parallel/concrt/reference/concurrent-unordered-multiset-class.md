@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58dd056bc3a4d397fc8e77b8e2c0b508b489eb2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 518e0b7bef29e9d10e7cf603fc3bf387d986fa09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset — Klasa
 `concurrent_unordered_multiset` Klasy jest kontenerem bezpieczne współbieżności kontrolujące zróżnicowanych długość sekwencję elementów typu K. Sekwencja jest reprezentowana w sposób umożliwiający bezpieczny współbieżności dołączenia, element dostępu, dostęp iteratora i operacji przechodzenia iteratora.  
@@ -661,7 +662,7 @@ size_type unsafe_max_bucket_count() const;
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [Równoległe kontenery i obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)
+ [Równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)
 
 
 

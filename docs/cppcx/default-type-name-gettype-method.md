@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c02af9875c753d67905c805e8850ad8b4ef73003
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6afceba53ea5202f18bbb7a67deaa63c63d3816
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defaulttypenamegettype-method"></a>domyślne:: (type_name):: GetType — metoda
 Zwraca Platform::Type ^ reprezentujący bieżącego typu.  
@@ -43,4 +44,4 @@ Platform::Type^ GetType()
  **Nagłówek:** vccorlib.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Domyślna przestrzeń nazw](../cppcx/default-namespace.md)
+ [domyślna przestrzeń nazw](../cppcx/default-namespace.md)

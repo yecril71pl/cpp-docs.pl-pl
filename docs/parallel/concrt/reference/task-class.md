@@ -24,11 +24,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a44245ea212a770902787e01d1896612b7cb37b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ea618ca6a5784b44666c70d79bb10b2e9f6e394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-class-concurrency-runtime"></a>task — Klasa (współbieżność środowiska wykonawczego)
 Biblioteka równoległych wzorców (PLL) `task` klasy. A `task` obiekt reprezentuje pracy, które mogą być wykonywane asynchronicznie, a równocześnie z innymi zadaniami i współbieżność środowiska wykonawczego pracy równoległej utworzonych przez algorytmy równoległe. Tworzy wynik typu `_ResultType` na pomyślne zakończenie. Zadania typu `task<void>` utworzyć żadnego wyniku. Zadania można czas potrzebny na i anulowane niezależnie od innych zadań. Mogą być składane również z innymi zadaniami za pomocą kontynuacje ( `then`), a sprzężenia ( `when_all`) i wyboru ( `when_any`) wzorce.  
@@ -70,7 +71,7 @@ class task;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Pobierz](#get)|Przeciążone. Zwraca wynik tego zadania utworzone. Jeśli zadanie nie jest w terminalu, stan, wywołanie `get` będzie czekać na zakończenie zadania. Ta metoda nie zwraca wartości, gdy jest wywoływana dla zadania z `result_type` z `void`.|  
+|[get](#get)|Przeciążone. Zwraca wynik tego zadania utworzone. Jeśli zadanie nie jest w terminalu, stan, wywołanie `get` będzie czekać na zakończenie zadania. Ta metoda nie zwraca wartości, gdy jest wywoływana dla zadania z `result_type` z `void`.|  
 |[is_apartment_aware](#is_apartment_aware)|Określa, czy zadanie dekoduje Windows Runtime `IAsyncInfo` interfejsu lub podrzędne takich zadań.|  
 |[is_done](#is_done)|Określa, czy zadanie zostało ukończone.|  
 |[Harmonogram](#scheduler)|Zwraca harmonogramu dla tego zadania|  
@@ -81,7 +82,7 @@ class task;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator! =](#operator_neq)|Przeciążone. Określa, czy dwa `task` reprezentować różnych zadań wewnętrznych.|  
+|[operator!=](#operator_neq)|Przeciążone. Określa, czy dwa `task` reprezentować różnych zadań wewnętrznych.|  
 |[operator =](#operator_eq)|Przeciążone. Zastępuje zawartość jednej `task` obiekt z inną.|  
 |[operator ==](#operator_eq_eq)|Przeciążone. Określa, czy dwa `task` obiekty reprezentują tego samego zadania wewnętrznego.|  
   
@@ -328,4 +329,4 @@ task_status wait() const;
 >  W [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] aplikacji, nie należy wywoływać `wait` w kodzie, który jest uruchamiany na pozostaje tryb komórek jednowątkowych W przeciwnym razie zwraca środowiska uruchomieniowego [concurrency::invalid_operation](invalid-operation-class.md) , ponieważ ta metoda umożliwia blokowanie bieżącego wątku i może spowodować, że aplikacja przestanie odpowiadać. Jednak możesz wywołać [concurrency::task::get](#get) metodę, aby odbierać wynik zadania poprzedzających kontynuację opartego na zadaniach.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)
+ [Przestrzeń nazw współbieżności](concurrency-namespace.md)

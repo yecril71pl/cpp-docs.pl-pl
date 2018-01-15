@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b5ed543cb58316a617590d4304a72459d606429
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ce793d4238a043dc7567ac5f003ff8872094d26f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommandcreatecommand"></a>CCommand::CreateCommand
 Tworzy nowe polecenie.  
@@ -50,4 +53,4 @@ Tworzy nowe polecenie.
  **Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [CCommand — klasa](../../data/oledb/ccommand-class.md)
+ [CCommand, klasa](../../data/oledb/ccommand-class.md)

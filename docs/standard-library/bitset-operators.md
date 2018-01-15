@@ -22,11 +22,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 09c3ac2317fce1e539ed02a501078fe83c217ca1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aca0affd587eb0d90b312e13687d138300f94570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset —&gt; operatory
 ||||  
@@ -104,7 +105,7 @@ basic_ostream<CharType, Traits>& operator<<(
 ### <a name="remarks"></a>Uwagi  
  Przeciążenia funkcji szablonu **operator <<**, dzięki czemu bitset — należy zapisać bez uprzedniego przekonwertowania na ciąg. Funkcja szablonu skutecznie wykonuje:  
   
- **OSTR** << _ *prawej*. [to_string](https://msdn.microsoft.com/library/2f93c55z.aspx) < **CharType**, **cech**, **alokatora** \< **CharType**>> ( )  
+ **OSTR** << _ *prawej*. [to_string](bitset-class.md) < **CharType**, **cech**, **alokatora** \< **CharType**>> ( )  
   
 ### <a name="example"></a>Przykład  
   
@@ -161,7 +162,7 @@ _Istr,
  Funkcja szablonu zwraca ciąg `_Istr`.  
   
 ### <a name="remarks"></a>Uwagi  
- Przeciążenia funkcji szablonu **operator >>** do przechowywania w _ bitset — *prawej* bitset — wartość ( `str`), gdzie `str` jest obiektem typu [basic_string — ](https://msdn.microsoft.com/library/syxtdd4f.aspx)  <  **CharType**, **cech**, **alokatora** \< **CharType**> >  **&**  wyodrębniony z `_Istr`.  
+ Przeciążenia funkcji szablonu **operator >>** do przechowywania w _ bitset — *prawej* bitset — wartość ( `str`), gdzie `str` jest obiektem typu [basic_string — ](basic-string-class.md)  <  **CharType**, **cech**, **alokatora** \< **CharType**> >  **&**  wyodrębniony z `_Istr`.  
   
  Funkcja szablonu wyodrębnia elementy z `_Istr` i wstawia je do bitset — do:  
   

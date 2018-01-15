@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4fb96ae6763d9b2ca86f99ee42a10f56e93d7e3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destructors-c"></a>Destruktory (C++)
 Destruktora jest funkcją członkowską, która jest wywoływana automatycznie, gdy obiekt wykracza poza zakres lub jawnie zostanie zniszczony przez wywołanie do `delete`. Destruktor ma taką samą nazwę jak klasa poprzedzone tyldy (`~`). Na przykład destruktora dla klasy `String` zadeklarowano: `~String()`. Jeśli nie zostanie zdefiniowana destruktor, kompilator zapewni domyślny; wiele klas są wystarczające. Konieczne jest zdefiniowanie destruktora niestandardowych, jeśli klasa przechowuje dojść do zasobów systemowych, które muszą zostać zwolniony, lub wskaźników, które posiadają pamięć one wskazywać.
@@ -71,7 +72,7 @@ int main() {
   
  W powyższym przykładzie destruktor `String::~String` używa `delete` operatora, aby zwolnić miejsce dynamicznie przydzielonego do przechowywania tekstu.  
   
-## <a name="delcaring-destructors"></a>Delcaring destruktorów  
+## <a name="declaring-destructors"></a>Deklarowanie destruktorów  
  Destruktory są funkcje z taką samą nazwę jak klasy, ale poprzedzającą tyldy (`~`)  
   
  Kilka reguł określają deklaracji destruktorów. Destruktory:  
@@ -97,7 +98,7 @@ int main() {
   
 -   Destruktor zostanie jawnie wywołany przy użyciu funkcji destruktora w pełni kwalifikowanej nazwy.
   
- Destruktory mogą swobodnie wywoływać funkcje członkowskie klasy i uzyskać dostęp do danych członkowskich klasy.
+ Destruktory mogą swobodnie wywoływać funkcje składowe klasy i uzyskać dostęp do danych składowych klasy.
   
  Istnieją dwa ograniczenia na używanie destruktorów:
  - Nie można przyjąć adresu

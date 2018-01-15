@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60480cef84f04c8c962e94d8f550823f637cfd84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structured-exception-handling-cc"></a>Obsługa wyjątków strukturalnych (C/C++)
 Chociaż system Windows i program Visual C++ obsługuje (SEH) do obsługi wyjątków strukturalnych, zalecane jest użycie normy ISO Obsługa wyjątków języka C++ ponieważ sprawia, że kod bardziej przenośne i elastyczne. Niemniej jednak w istniejącym kodzie lub konkretnej rodzaje programów, użytkownik nadal może być konieczne użycie SEH.  
@@ -65,11 +66,11 @@ Chociaż system Windows i program Visual C++ obsługuje (SEH) do obsługi wyjąt
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Pisanie programu do obsługi wyjątków](../cpp/writing-an-exception-handler.md)  
+-   [Pisanie programu do obsługi wyjątku](../cpp/writing-an-exception-handler.md)  
   
 -   [Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)  
   
--   [Przy użyciu obsługi z C++ wyjątków strukturalnych](../cpp/using-structured-exception-handling-with-cpp.md)  
+-   [Korzystanie z obsługi wyjątków strukturalnych za pomocą języka C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>Przykład  
  Jak wspomniano wcześniej, destruktory dla lokalnych obiektów są nazywane, jeśli używasz SEH programu C++ i skompiluj go za pomocą **/EH** opcji z niektórych Modyfikatory — na przykład **/ehsc** i   **/eha**. Jednak w zachowanie podczas wykonywania oczekiwać Jeśli używane są również wyjątki C++ nie może być. W poniższym przykładzie pokazano te różnice funkcjonalne.  

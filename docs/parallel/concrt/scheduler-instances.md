@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b21ea045d8c875bac6ca5b068cdeb919f0d6ad85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-instances"></a>Wystąpienia harmonogramu
 W tym dokumencie opisano rolę wystąpienia harmonogramu w współbieżności środowiska wykonawczego i sposobu użycia [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) i [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) klasy Tworzenie i zarządzanie nimi wystąpienia harmonogramu. Wystąpienia harmonogramu są przydatne, jeśli chcesz skojarzyć z określonych rodzajów obciążeń jawne zasadami planowania. Na przykład można utworzyć jedno wystąpienie harmonogramu niektórych zadań godzinie priorytetu wątku z podwyższonym poziomem uprawnień i użyć domyślnego harmonogramu do wykonywania innych zadań podczas priorytetu wątku normalnego.  
@@ -104,7 +105,7 @@ W tym dokumencie opisano rolę wystąpienia harmonogramu w współbieżności ś
 |------------|-----------------|  
 |[Utwórz](reference/currentscheduler-class.md#create)|Tworzy `Scheduler` obiekt, który korzysta z określonych zasad i kojarzy ją z bieżącego kontekstu.|  
 |[Pobierz](reference/currentscheduler-class.md#get)|Pobiera wskaźnik do `Scheduler` obiekt, który jest skojarzony z bieżącego kontekstu. Ta metoda nie zwiększa się liczba odwołań z `Scheduler` obiektu.|  
-|[Odłączanie](reference/currentscheduler-class.md#detach)|Odłącza bieżącego harmonogramu z bieżącego kontekstu i ustawia poprzedni jako bieżącego harmonogramu.|  
+|[Detach](reference/currentscheduler-class.md#detach)|Odłącza bieżącego harmonogramu z bieżącego kontekstu i ustawia poprzedni jako bieżącego harmonogramu.|  
 |[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|Rejestruje zdarzenie ustawia środowisko uruchomieniowe, gdy zostanie zniszczony bieżącego harmonogramu.|  
 |[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|Tworzy [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) obiektu w bieżącego harmonogramu.|  
 |[ScheduleTask](reference/currentscheduler-class.md#scheduletask)|Dodaje lekkie zadania do kolejki harmonogramu bieżącego harmonogramu.|  
@@ -115,8 +116,8 @@ W tym dokumencie opisano rolę wystąpienia harmonogramu w współbieżności ś
 |Metoda|Opis|  
 |------------|-----------------|  
 |[Utwórz](reference/scheduler-class.md#create)|Tworzy `Scheduler` obiekt, który korzysta z określonych zasad.|  
-|[Dołącz](reference/scheduler-class.md#attach)|Kojarzy `Scheduler` obiektu wraz z bieżącym kontekście.|  
-|[Odwołanie](reference/scheduler-class.md#reference)|Zwiększa licznik odwołanie `Scheduler` obiektu.|  
+|[Attach](reference/scheduler-class.md#attach)|Kojarzy `Scheduler` obiektu wraz z bieżącym kontekście.|  
+|[Dokumentacja](reference/scheduler-class.md#reference)|Zwiększa licznik odwołanie `Scheduler` obiektu.|  
 |[Wersja](reference/scheduler-class.md#release)|Zmniejsza licznik odwołanie `Scheduler` obiektu.|  
 |[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|Rejestruje zdarzenie środowiska wykonawczego Ustawia, kiedy `Scheduler` obiekt zostanie zniszczony.|  
 |[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|Tworzy [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) obiektu w `Scheduler` obiektu.|  

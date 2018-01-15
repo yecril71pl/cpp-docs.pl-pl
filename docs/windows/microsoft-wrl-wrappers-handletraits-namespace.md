@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3369f7b9264c7b0fd0bfbb9f137278a9f53848d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aec9ff1b4294257f692d76a96960820379116b0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits — Przestrzeń nazw
 Opisuje właściwości popularnych typów zasobów na podstawie dojścia.  
@@ -36,15 +39,15 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Criticalsectiontraits — struktura](../windows/criticalsectiontraits-structure.md)|Specjalizuje się `CriticalSection` obiektu do obsługi Nieprawidłowa sekcja krytyczna lub funkcję, aby zwolnić sekcja krytyczna.|  
-|[Eventtraits — struktura](../windows/eventtraits-structure.md)|Definiuje właściwości `Event` dojście do klasy.|  
-|[Filehandletraits — struktura](../windows/filehandletraits-structure.md)|Definiuje właściwości dojście do pliku.|  
-|[Handlenulltraits — struktura](../windows/handlenulltraits-structure.md)|Definiuje wspólne cechy niezainicjowany uchwyt.|  
-|[Handletraits — struktura](../windows/handletraits-structure.md)|Definiuje wspólne cechy dojścia.|  
-|[Mutextraits — struktura](../windows/mutextraits-structure.md)|Definiuje typowe cechy [obiektu Mutex](../windows/mutex-class1.md) klasy.|  
-|[Semaphoretraits — struktura](../windows/semaphoretraits-structure.md)|Definiuje wspólne właściwości obiektu semafora.|  
-|[Srwlockexclusivetraits — struktura](../windows/srwlockexclusivetraits-structure.md)|W tym artykule opisano typowe cechy `SRWLock` klasy w trybie blokady na wyłączność.|  
-|[Srwlocksharedtraits — struktura](../windows/srwlocksharedtraits-structure.md)|W tym artykule opisano typowe cechy `SRWLock` klasy w trybie blokady udostępniania.|  
+|[CriticalSectionTraits, struktura](../windows/criticalsectiontraits-structure.md)|Specjalizuje się `CriticalSection` obiektu do obsługi Nieprawidłowa sekcja krytyczna lub funkcję, aby zwolnić sekcja krytyczna.|  
+|[EventTraits, struktura](../windows/eventtraits-structure.md)|Definiuje właściwości `Event` dojście do klasy.|  
+|[FileHandleTraits, struktura](../windows/filehandletraits-structure.md)|Definiuje właściwości dojście do pliku.|  
+|[HANDLENullTraits, struktura](../windows/handlenulltraits-structure.md)|Definiuje wspólne cechy niezainicjowany uchwyt.|  
+|[HANDLETraits, struktura](../windows/handletraits-structure.md)|Definiuje wspólne cechy dojścia.|  
+|[MutexTraits, struktura](../windows/mutextraits-structure.md)|Definiuje typowe cechy [obiektu Mutex](../windows/mutex-class1.md) klasy.|  
+|[SemaphoreTraits, struktura](../windows/semaphoretraits-structure.md)|Definiuje wspólne właściwości obiektu semafora.|  
+|[SRWLockExclusiveTraits, struktura](../windows/srwlockexclusivetraits-structure.md)|W tym artykule opisano typowe cechy `SRWLock` klasy w trybie blokady na wyłączność.|  
+|[SRWLockSharedTraits, struktura](../windows/srwlocksharedtraits-structure.md)|W tym artykule opisano typowe cechy `SRWLock` klasy w trybie blokady udostępniania.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
@@ -52,4 +55,4 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: wrappers — Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

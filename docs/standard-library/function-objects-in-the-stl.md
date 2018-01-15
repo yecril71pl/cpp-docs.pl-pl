@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 90b37372123031026017e23c683a5a65555577ca
-ms.sourcegitcommit: b3ffb717e2af6ca8072b56bf4aa96b3afff73414
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba5024590a0682f8d65c7d21ca2cb15d2f481b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Obiekty funkcji w standardowej bibliotece C++
 A *obiekt funkcji*, lub *obiekt*, jest dowolnego typu, który implementuje operator(). Ten operator jest określany jako *operator wywołania* lub czasami *operatora aplikacji*. Standardowa biblioteka C++ używa funkcji obiektów głównie jako kryteria dla kontenerów i algorytmy sortowania.  
@@ -71,5 +72,5 @@ ForwardIterator remove_if(
  Ostatni argument `remove_if` jest obiektem funkcji, która zwraca wartość logiczną ( *predykatu*). Jeśli wynik obiekt funkcji jest `true`, a następnie element zostanie usunięty z kontenera, do której uzyskuje dostęp Iteratory `first` i `last`. Można użyć dowolnego z obiektów funkcja zadeklarowana w [ \<funkcjonalności >](../standard-library/functional.md) nagłówka dla argumentu `pred` lub Utwórz swój własny.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

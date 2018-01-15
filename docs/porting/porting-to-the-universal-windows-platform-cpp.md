@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffd33877602ebb666ffbd11ff76aa973927f307a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6dd42eae54f61d03d4d490a17cf1282e2d2e51f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Przenoszenie na platformę uniwersalną systemu Windows (C++)
 Informacje na temat portu istniejącego kodu C++ do platformy aplikacji systemu Windows 10, platformy uniwersalnej systemu Windows można znaleźć w tym temacie. Co oznacza termin *uniwersalnych* kodu mogą działać na dowolnym z urządzeń z systemem Windows 10, łącznie z pulpitu, telefonów, tabletów i przyszłości urządzenia z systemem Windows 10. Możesz utworzyć pojedynczego projektu i jeden interfejs użytkownika XAML base, który działa poprawnie na dowolnym urządzeniu z systemem Windows 10. Układ dynamiczny funkcji w języku XAML służy do zezwalania Interfejsie użytkownika aplikacji do dostosowania do rozmiarów ekranów.  
@@ -114,4 +115,4 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik przenoszenia Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)   
- [Tworzenie aplikacji dla platformy uniwersalnej systemu Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
+ [Opracowywanie aplikacji na platformę uniwersalną systemu Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

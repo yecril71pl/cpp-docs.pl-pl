@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eda3892f843535edf5778e569c025eb00a19e666
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf910f1223a4ccfdd85734ef9bd314d5664679ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a4---using-the-nowait-clause"></a>A.4   Użycie klauzuli nowait
 Jeśli istnieje wiele niezależnych pętli w ramach równoległego regionu, możesz użyć `nowait` klauzuli ([sekcji 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na stronie 11) w celu uniknięcia domniemanych bariery na końcu `for` dyrektywy w następujący sposób:  

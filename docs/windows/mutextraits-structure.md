@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eebe8ffefedbc28be1f16a0d02a195d4af4ac0c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dd8dac513b5eec049fbb739ab79628d9f41c96b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutextraits-structure"></a>MutexTraits — Struktura
 Definiuje typowe cechy [obiektu Mutex](../windows/mutex-class1.md) klasy.  
@@ -36,7 +39,7 @@ struct MutexTraits : HANDLENullTraits;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[MutexTraits::Unlock — Metoda](../windows/mutextraits-unlock-method.md)|Zwalnia wyłączną kontrolę zasobu udostępnionego.|  
+|[MutexTraits::Unlock, metoda](../windows/mutextraits-unlock-method.md)|Zwalnia wyłączną kontrolę zasobu udostępnionego.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `HANDLENullTraits`  
@@ -49,4 +52,4 @@ struct MutexTraits : HANDLENullTraits;
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+ [Microsoft::WRL::Wrappers::HandleTraits, przestrzeń nazw](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

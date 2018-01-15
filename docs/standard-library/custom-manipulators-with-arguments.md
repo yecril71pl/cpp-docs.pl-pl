@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5848e4f200f528261a135e38e1898a256433871b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad62906f5ee509bd6f99caca55b0df581e1f629b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-manipulators-with-arguments"></a>Niestandardowe manipulatory z argumentami
 W tej sekcji opisano sposób tworzenia manipulatory strumieni wyjściowych z jednego lub więcej argumentów i jak używać manipulatory strumieni nonoutput.  
@@ -29,8 +30,8 @@ W tej sekcji opisano sposób tworzenia manipulatory strumieni wyjściowych z jed
 ## <a name="in-this-section"></a>W tej sekcji  
  [Manipulatory strumieni wyjściowych z jednym argumentem](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md) (`int` lub `long`)  
   
- [Jeden z nich-Argument — manipulatory strumieni wyjściowych](../standard-library/other-one-argument-output-stream-manipulators.md)  
+ [Inne manipulatory strumieni wyjściowych z jednym argumentem](../standard-library/other-one-argument-output-stream-manipulators.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [iostream — programowanie](../standard-library/iostream-programming.md)
+ [iostream, programowanie](../standard-library/iostream-programming.md)
 

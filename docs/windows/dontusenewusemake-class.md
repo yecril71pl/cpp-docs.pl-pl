@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 62f8abc151758ac9253698390cbab3e2ba62a4c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c09276fb761dcd1f2f5be78afa40606e262aa3e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake — Klasa
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -39,7 +42,7 @@ class DontUseNewUseMake;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[DontUseNewUseMake::operator nowy Operator](../windows/dontusenewusemake-operator-new-operator.md)|Overloads operator `new` i uniemożliwia użycie w runtimeclass —.|  
+|[DontUseNewUseMake::operator nowy operator](../windows/dontusenewusemake-operator-new-operator.md)|Overloads operator `new` i uniemożliwia użycie w runtimeclass —.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `DontUseNewUseMake`  
@@ -51,4 +54,4 @@ class DontUseNewUseMake;
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::wrl:: details — Namespace](../windows/microsoft-wrl-details-namespace.md)   
- [Make — funkcja](../windows/make-function.md)
+ [Make, funkcja](../windows/make-function.md)

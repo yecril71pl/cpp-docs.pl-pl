@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f9fb195bfb5e6e35d035ba5a3660bb91644a04ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aa6fc5331340c110f2325762bbe46409d53d1b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-stream-member-functions"></a>Input Stream Member — Funkcje
 Funkcje elementów członkowskich strumienia wejściowego służą do wprowadzania dysku. Funkcje Członkowskie obejmują:  

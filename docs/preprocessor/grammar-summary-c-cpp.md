@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 075c960967a04d4850c964f69041e89bd405d066
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf98754c5efc0f897775fd4e99ba5d6d6ea98218
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="grammar-summary-cc"></a>Podsumowanie gramatyki (C/C++)
 W tej sekcji opisano formalne gramatyki preprocesora. Obejmuje on składnia dyrektyw preprocesora i operatory omówione w [preprocesora](../preprocessor/preprocessor.md) i [dyrektywy Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
@@ -34,4 +35,4 @@ W tej sekcji opisano formalne gramatyki preprocesora. Obejmuje on składnia dyre
 -   [Gramatyka preprocesora](../preprocessor/preprocessor-grammar.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania preprocesora C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+ [Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

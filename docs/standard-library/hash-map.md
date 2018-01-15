@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e69496f3383233c45ba994305342c3340459a287
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: a996142e128f4113fb9d1057cd061155dae251f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map —&gt;
 > [!NOTE]
@@ -54,10 +55,10 @@ ms.lasthandoff: 10/31/2017
   
 |||  
 |-|-|  
-|[hash_compare — klasa](hash-compare-class.md)|Opisuje obiekt, który mogą być używane przez dowolny kontener asocjacyjna skrótu — hash_map hash_multimap, hash_set, lub hash_multiset — domyślnie **cech** obiektu parameter kolejność i wyznaczania wartości skrótu elementy zawierają.|  
-|[value_compare — klasa](value-compare-class.md)|Udostępnia obiekt funkcji, który można porównać elementów hash_map porównując wartości ich kluczy, aby określić ich kolejność względne w hash_map.|  
-|[hash_map — klasa](hash-map-class.md)|Używany do przechowywania i szybkie pobieranie danych z kolekcji, w którym każdy element jest parę klucza sortowania, którego wartość jest unikatowa i skojarzone dane wartości.|  
-|[hash_multimap — klasa](hash-multimap-class.md)|Używany do przechowywania i szybkie pobieranie danych z kolekcji, w którym każdy element jest parę klucza sortowania, którego wartość nie musi być unikatowa i skojarzone dane wartości.|  
+|[hash_compare, klasa](hash-compare-class.md)|Opisuje obiekt, który mogą być używane przez dowolny kontener asocjacyjna skrótu — hash_map hash_multimap, hash_set, lub hash_multiset — domyślnie **cech** obiektu parameter kolejność i wyznaczania wartości skrótu elementy zawierają.|  
+|[value_compare, klasa](value-compare-class.md)|Udostępnia obiekt funkcji, który można porównać elementów hash_map porównując wartości ich kluczy, aby określić ich kolejność względne w hash_map.|  
+|[hash_map, klasa](hash-map-class.md)|Używany do przechowywania i szybkie pobieranie danych z kolekcji, w którym każdy element jest parę klucza sortowania, którego wartość jest unikatowa i skojarzone dane wartości.|  
+|[hash_multimap, klasa](hash-multimap-class.md)|Używany do przechowywania i szybkie pobieranie danych z kolekcji, w którym każdy element jest parę klucza sortowania, którego wartość nie musi być unikatowa i skojarzone dane wartości.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<hash_map >  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](cpp-standard-library-header-files.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](cpp-standard-library-reference.md)
 
 
 

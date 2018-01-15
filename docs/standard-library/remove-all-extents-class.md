@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f1440cc02c7f86582f702fe3fab14820837bc0fe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06800c8f85c6eb9e0ea93cd1001fcfbc8a0e1312
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="removeallextents-class"></a>remove_all_extents — Klasa
 Tworzy typ inny niż tablica z typu tablicy.  
@@ -72,4 +73,4 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [< type_traits >](../standard-library/type-traits.md)   
- [remove_extent — klasa](../standard-library/remove-extent-class.md)
+ [remove_extent, klasa](../standard-library/remove-extent-class.md)

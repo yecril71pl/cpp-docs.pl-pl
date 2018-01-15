@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52dc2118f537535b81163d375db483a57c5a9854
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: acabc6833e23c4f17bc337b67a89578bc95bbd6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -108,19 +111,19 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Invokehelper::invokehelper — Konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Inicjuje nowe wystąpienie klasy invokehelper —.|  
+|[InvokeHelper::InvokeHelper, konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Inicjuje nowe wystąpienie klasy invokehelper —.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke — metoda](../windows/invokehelper-invoke-method.md)|Wywołuje program obsługi zdarzeń, którego sygnatura zawiera określoną liczbę argumentów.|  
+|[InvokeHelper::Invoke, metoda](../windows/invokehelper-invoke-method.md)|Wywołuje program obsługi zdarzeń, którego sygnatura zawiera określoną liczbę argumentów.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Invokehelper::callback_ — członek danych](../windows/invokehelper-callback-data-member.md)|Reprezentuje program obsługi zdarzeń do wywołania po wystąpieniu zdarzenia.|  
+|[InvokeHelper::callback_, składowa danych](../windows/invokehelper-callback-data-member.md)|Reprezentuje program obsługi zdarzeń do wywołania po wystąpieniu zdarzenia.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `InvokeHelper`  
@@ -131,4 +134,4 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
  **Namespace:** Microsoft::wrl:: details —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: details — Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

@@ -19,11 +19,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bde9c1d76c2c8196f7773a8af042acb2ef0d2d89
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5e5fa26b46a110fd59f7568a9101270766928f89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Przestrzeń nazw platformy, domyślna i cli (C++ Component Extensions)
 Przestrzeń nazw kwalifikuje nazwy elementów języka, tak aby nazwy nie były sprzeczne z identycznymi nazwami zdefiniowanymi w innych miejscach w kodzie źródłowym. Na przykład kolizję nazw może uniemożliwić kompilatorowi rozpoznawanie [słowa kluczowe Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md). Przestrzenie nazw są używane przez kompilator, ale nie są zachowywane w skompilowanym zestawie.  
@@ -52,9 +55,9 @@ using namespace cli;
   
 -   [Tablice](../windows/arrays-cpp-component-extensions.md)  
   
--   [interior_ptr (C + +/ CLI)](../windows/interior-ptr-cpp-cli.md)  
+-   [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)  
   
--   [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md)  
+-   [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)  
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)  
   

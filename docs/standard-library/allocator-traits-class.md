@@ -51,11 +51,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 5ddb30840a3f92de70d688cc763394e92b356417
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d96b4a03085a2a6486fa2f2fe0d7050323682c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatortraits-class"></a>allocator_traits — klasa
 Obiekt, który uzupełnia opisano klasy szablonu *typu alokatora*. Typ alokatora jest dowolnego typu, który opisuje alokatora obiektu, który jest używany do zarządzania przydzielone magazynu. W szczególności dla dowolnego typu alokatora `Alloc`, można użyć `allocator_traits<Alloc>` ustalenie, wszystkie informacje, które są wymagane przez kontener włączone przydzielania. Aby uzyskać więcej informacji, zobacz domyślne [Allocator — klasa](../standard-library/allocator-class.md).  
@@ -88,7 +89,7 @@ class allocator_traits;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Przydziel](#allocate)|Metoda statyczna przydziela pamięć przy użyciu parametru danego przydzielania.|  
+|[allocate](#allocate)|Metoda statyczna przydziela pamięć przy użyciu parametru danego przydzielania.|  
 |[konstrukcja](#construct)|Metoda statyczna używa określonego programu przydzielania do utworzenia obiektu.|  
 |[cofnięcie przydziału](#deallocate)|Metoda statyczna używa określonego alokatora można cofnąć alokacji określoną liczbę obiektów.|  
 |[Destroy](#destroy)|Metoda statyczna używa określonego alokatora aby wywołać destruktor dla obiekt bez cofanie przydziału pamięci.|  
@@ -224,4 +225,4 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 ## <a name="see-also"></a>Zobacz też  
  [\<pamięci >](../standard-library/memory.md)   
  [pointer_traits — struktura](../standard-library/pointer-traits-struct.md)   
- [scoped_allocator_adaptor — klasa](../standard-library/scoped-allocator-adaptor-class.md)
+ [scoped_allocator_adaptor, klasa](../standard-library/scoped-allocator-adaptor-class.md)

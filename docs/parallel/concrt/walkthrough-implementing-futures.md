@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86d4eeaadd8c2afcd5b223e7431614436ab8a786
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 119969860f031acbc2f1764a34a456d2e8a16437
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-implementing-futures"></a>Wskazówki: wdrażanie przyszłych operacji
 W tym temacie przedstawiono sposób wykonania przyszłych operacji w aplikacji. Temat pokazuje, jak połączyć istniejące funkcje współbieżność środowiska wykonawczego na coś nieistniejącego więcej.  
@@ -104,4 +105,4 @@ caught exception: error
  [Współbieżność środowiska wykonawczego — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
  [task_group — klasa](reference/task-group-class.md)   
- [Klasa single_assignment](../../parallel/concrt/reference/single-assignment-class.md)
+ [single_assignment, klasa](../../parallel/concrt/reference/single-assignment-class.md)

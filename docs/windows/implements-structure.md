@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dc11fac57cc70e1556e681ab43fd48ce695a4a6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 63da9ea650c34b7b1ed75d351587c39e52a88098
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implements-structure"></a>Implements — Struktura
 Implementuje metody QueryInterface i GetIid dla określonych interfejsów.  
@@ -106,15 +109,15 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Implements::CanCastTo — metoda](../windows/implements-cancastto-method.md)|Pobiera wskaźnik do określonego interfejsu.|  
-|[Implements::CastToUnknown — metoda](../windows/implements-casttounknown-method.md)|Pobiera wskaźnik do podstawowego interfejsu IUnknown.|  
-|[Implements::FillArrayWithIid — metoda](../windows/implements-fillarraywithiid-method.md)|Wstawia podany identyfikator interfejsu przez bieżący parametr szablonu zeroth w element określonej tablicy.|  
+|[Implements::CanCastTo, metoda](../windows/implements-cancastto-method.md)|Pobiera wskaźnik do określonego interfejsu.|  
+|[Implements::CastToUnknown, metoda](../windows/implements-casttounknown-method.md)|Pobiera wskaźnik do podstawowego interfejsu IUnknown.|  
+|[Implements::FillArrayWithIid, metoda](../windows/implements-fillarraywithiid-method.md)|Wstawia podany identyfikator interfejsu przez bieżący parametr szablonu zeroth w element określonej tablicy.|  
   
 ### <a name="protected-constants"></a>Stałe chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Implements::iidcount — stała](../windows/implements-iidcount-constant.md)|Przechowuje numer zaimplementowany interfejs identyfikatorów.|  
+|[Implements::IidCount, stała](../windows/implements-iidcount-constant.md)|Przechowuje numer zaimplementowany interfejs identyfikatorów.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `I0`  
@@ -135,4 +138,4 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
  **Namespace:** Microsoft::wrl —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

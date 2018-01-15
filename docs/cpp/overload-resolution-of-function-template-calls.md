@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e32b681edc6c6b4c0187d5d0ec89ff609e52858d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64bc9371fcddad5f76f1474832a8d69188b60583
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Rozpoznawanie przeciążenia wywołań szablonów funkcji
 Szablon funkcji można przeciążyć funkcji nieszablonu o takiej samej nazwie. W tym scenariuszu wywołania funkcji są rozpoznawane przy pierwszym przy użyciu Wnioskowanie argumentu szablonu do utworzenia wystąpienia szablonu funkcji z specjalizacji unikatowy. W przypadku niepowodzenia Wnioskowanie argumentu szablonu inne przeciążenia funkcji są traktowane jako wywołanie rozpoznawania. Te inne przeciążenia, tzw. zestaw candidate obejmują funkcje nieszablonu i innych szablonów funkcji wystąpień. Jeśli Wnioskowanie argumentu szablonu zakończy się powodzeniem, generowanej funkcji jest porównywany z innymi funkcjami, aby określić najlepsze dopasowanie, zgodnie z regułami Rozpoznanie przeciążenia. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](function-overloading.md).  
@@ -91,5 +92,5 @@ void f(T1, T2)
 ## <a name="see-also"></a>Zobacz też
 
  [Rozpoznawanie nazw](../cpp/templates-and-name-resolution.md)   
- [Właściwość TypeName](../cpp/typename.md)   
+ [typename](../cpp/typename.md)   
  

@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3f0295ce9456822337c9beac3e6d1c35f7d80bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c0e849d1fee7eca67f3b5765d31b54e0660eaa25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutex-class1"></a>Mutex Class1
 Reprezentuje obiekt synchronizacji wyłącznie kontrolujące zasobu udostępnionego.  
@@ -42,19 +45,19 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Mutex::mutex — Konstruktor](../windows/mutex-mutex-constructor.md)|Inicjuje nowe wystąpienie klasy obiektu Mutex.|  
+|[Mutex::Mutex, konstruktor](../windows/mutex-mutex-constructor.md)|Inicjuje nowe wystąpienie klasy obiektu Mutex.|  
   
 ### <a name="public-members"></a>Publiczne elementy członkowskie  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Mutex::Lock — Metoda](../windows/mutex-lock-method.md)|Czeka, aż do bieżącego obiektu lub obiektu Mutex skojarzonego z określonego dojścia zwalnia obiektu mutex lub przed upływem określonego limitu czasu.|  
+|[Mutex::Lock, metoda](../windows/mutex-lock-method.md)|Czeka, aż do bieżącego obiektu lub obiektu Mutex skojarzonego z określonego dojścia zwalnia obiektu mutex lub przed upływem określonego limitu czasu.|  
   
 ### <a name="public-operator"></a>Operator publiczny  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Mutex::operator = — Operator](../windows/mutex-operator-assign-operator.md)|Przypisuje (przenosi) określonego obiektu Mutex obiekt do bieżącego obiektu Mutex.|  
+|[Operator Mutex::operator=](../windows/mutex-operator-assign-operator.md)|Przypisuje (przenosi) określonego obiektu Mutex obiekt do bieżącego obiektu Mutex.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Mutex`  
@@ -65,4 +68,4 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: wrappers — Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

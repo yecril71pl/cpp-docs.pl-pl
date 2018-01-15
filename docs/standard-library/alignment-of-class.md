@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e20d01c50ea743f62c1cca9e45eedd86a5d4b8c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de94e34dd0e00a2902454b4ab41f1790c194b6dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignmentof-class"></a>alignment_of — Klasa
 Pobiera wyrównanie określonego typu. Ta struktura jest zaimplementowana w postaci liczby [alignof](../cpp/alignof-and-alignas-cpp.md). Użyj `alignof` bezpośrednio po prostu konieczność wartość wyrównania zapytania. Alignment_of — należy używać wtedy, gdy konieczne stałej, na przykład podczas wysyłania tagu.  
@@ -47,4 +48,4 @@ struct alignment_of;
   
 ## <a name="see-also"></a>Zobacz też  
  [< type_traits >](../standard-library/type-traits.md)   
- [aligned_storage — klasa](../standard-library/aligned-storage-class.md)
+ [aligned_storage, klasa](../standard-library/aligned-storage-class.md)

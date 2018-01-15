@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43f15ec1bf80c15f160d2a0b08a899806a3a7e01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-base-classes"></a>Wiele klas podstawowych
 Zgodnie z opisem w [dziedziczenie wielokrotne](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), klasy mogą pochodzić z więcej niż jedną klasę podstawową. W modelu dziedziczenia wielokrotnego (gdzie klasy pochodne więcej niż jedną klasę podstawową) klasy podstawowe są określane za pomocą *lista podstawowego* element gramatyki. Na przykład, można określić deklarację klasy dla `CollectionOfBook`, pochodzącej z `Collection` i `Book`:  
@@ -38,23 +39,23 @@ class CollectionOfBook : public Book, public Collection {
 };  
 ```  
   
- Kolejność, w której określane są klasy podstawowe nie ma znaczenia z wyjątkiem niektórych przypadków, gdy wywoływane są konstruktory i destruktory. W tych przypadkach, kolejność, w której określane są klasy podstawowe ma wpływ na:  
+ Kolejność, w której określane są klasy bazowe nie ma znaczenia z wyjątkiem niektórych przypadków, gdy wywoływane są konstruktory i destruktory. W tych przypadkach, kolejność, w której określane są klasy bazowe ma wpływ na:  
   
 -   Kolejność, w której następuje inicjowanie przez konstruktor. Jeśli kod opiera się na tym, aby część `Book` kolekcji `CollectionOfBook` została zainicjowana przed częścią `Collection`, kolejność specyfikacji ma znaczenie. Inicjowanie odbywa się w kolejności klas są określone w *lista podstawowego*.  
   
 -   Kolejność, w której wywoływane są destruktory, aby dokonać czyszczenia. Ponownie, jeśli określona „część” klasy musi być obecna, gdy niszczona jest inna część, kolejność ma znaczenie. W odwrotnej kolejności klasy określony w zostaną wywołane destruktory *lista podstawowego*.  
   
     > [!NOTE]
-    >  Kolejność specyfikacji klas podstawowych może wpływać na układ pamięci klasy. Nie należy podejmować żadnych decyzji programistycznych na podstawie kolejności elementów podstawowych w pamięci.  
+    >  Kolejność specyfikacji klas bazowych może wpływać na układ pamięci klasy. Nie należy podejmować żadnych decyzji programistycznych na podstawie kolejności elementów podstawowych w pamięci.  
   
  Podczas określania *lista podstawowego*, tej samej nazwie klasy nie można określić więcej niż raz. Jednak klasa może być pośrednią podstawą dla klasy pochodnej więcej niż raz.  
   
 ## <a name="virtual-base-classes"></a>Wirtualne klasy podstawowe  
- Ponieważ klasa może być pośrednią klasą podstawową do klasy pochodnej więcej niż raz, w języku C++ zapewniono możliwość optymalizacji sposobu działania klas podstawowych. Wirtualne klasy podstawowe oferują sposób, aby zaoszczędzić miejsce i uniknąć niejasności w hierarchii klas, które używają wielokrotnego dziedziczenia.  
+ Ponieważ klasa może być pośrednią klasą bazową do klasy pochodnej więcej niż raz, w języku C++ zapewniono możliwość optymalizacji sposobu działania klas bazowych. Wirtualne klasy bazowe oferują sposób, aby zaoszczędzić miejsce i uniknąć niejasności w hierarchii klas, które używają wielokrotnego dziedziczenia.  
   
- Każdy obiekt niewirtualny zawiera kopię elementów członkowskich danych zdefiniowanych w klasie podstawowej. Ta duplikacja powoduje utratę miejsca i wymaga od użytkownika wybrania kopii elementów członkowskich klasy podstawowej przy każdym uzyskiwaniu dostępu do nich.  
+ Każdy obiekt niewirtualny zawiera kopię składowych danych zdefiniowanych w klasie podstawowej. Ta duplikacja powoduje utratę miejsca i wymaga od użytkownika wybrania kopii składowych klasy podstawowej przy każdym uzyskiwaniu dostępu do nich.  
   
- Gdy klasa podstawowa jest określona jako baza wirtualna, może ona działać jako baza pośrednia więcej niż raz, bez duplikacji jej elementów członkowskich danych. Pojedyncza kopia elementów członkowskich danych jest współużytkowana przez wszystkie klasy podstawowe, które używają jej jako bazy wirtualnej.  
+ Gdy klasa podstawowa jest określona jako baza wirtualna, może ona działać jako baza pośrednia więcej niż raz, bez duplikacji jej składowych danych. Pojedyncza kopia składowych danych jest współużytkowana przez wszystkie klasy podstawowe, które używają jej jako bazy wirtualnej.  
   
  Przy deklarowaniu wirtualna klasa podstawowa **wirtualnego** — słowo kluczowe zostanie wyświetlony na liście podstawowej klas pochodnych.  
   
@@ -63,12 +64,12 @@ class CollectionOfBook : public Book, public Collection {
  ![Wykres wiersza symulowane obiad](../cpp/media/vc38xp1.gif "vc38XP1")  
 Wykres symulowanej kolejki po obiad  
   
- Na rysunku `Queue` jest klasą podstawową dla `CashierQueue` i `LunchQueue`. Jednakże, gdy obie klasy są połączone, tworząc `LunchCashierQueue`, pojawia się następujący problem: nowa klasa zawiera dwa podobiekty typu `Queue`, jeden `CashierQueue`, a drugi `LunchQueue`. Na poniższej ilustracji pokazano koncepcyjny układ pamięci (rzeczywisty układ pamięci może być zoptymalizowany).  
+ Na rysunku `Queue` jest klasą bazową dla `CashierQueue` i `LunchQueue`. Jednakże, gdy obie klasy są połączone, tworząc `LunchCashierQueue`, pojawia się następujący problem: nowa klasa zawiera dwa podobiekty typu `Queue`, jeden `CashierQueue`, a drugi `LunchQueue`. Na poniższej ilustracji pokazano koncepcyjny układ pamięci (rzeczywisty układ pamięci może być zoptymalizowany).  
   
  ![Symulowane obiad &#45; obiekt](../cpp/media/vc38xp2.gif "vc38XP2")  
 Obiekt symulowanej kolejki po obiad  
   
- Należy zauważyć, że istnieją dwa podobiekty `Queue` w obiekcie `LunchCashierQueue`. W poniższym kodzie `Queue` zadeklarowano jako wirtualną klasę podstawową:  
+ Należy zauważyć, że istnieją dwa podobiekty `Queue` w obiekcie `LunchCashierQueue`. W poniższym kodzie `Queue` zadeklarowano jako wirtualną klasę bazową:  
   
 ```  
 // deriv_VirtualBaseClasses.cpp  
@@ -89,7 +90,7 @@ Obiekt symulowanej kolejki po obiad z wirtualnymi klasami podstawowymi
  ![Składniki wirtualnej i niewirtualne klasy](../cpp/media/vc38xp4.gif "vc38XP4")  
 Wirtualne i niewirtualne składniki tej samej klasy  
   
- Na rysunku `CashierQueue` i `LunchQueue` używają `Queue` jako wirtualnej klasy podstawowej. Jednakże, `TakeoutQueue` określa `Queue` jako klasę podstawową, a nie wirtualną klasę podstawową. W związku z tym `LunchTakeoutCashierQueue` posiada dwa podobiekty typu `Queue`: jeden ze ścieżki dziedziczenia, która zawiera `LunchCashierQueue` a drugi ze ścieżki, która zawiera `TakeoutQueue`. To zostało zilustrowane na poniższym rysunku.  
+ Na rysunku `CashierQueue` i `LunchQueue` używają `Queue` jako wirtualnej klasy bazowej. Jednak `TakeoutQueue` określa `Queue` jako klasę bazową, a nie wirtualną klasę bazową. W związku z tym `LunchTakeoutCashierQueue` posiada dwa podobiekty typu `Queue`: jeden ze ścieżki dziedziczenia, która zawiera `LunchCashierQueue` a drugi ze ścieżki, która zawiera `TakeoutQueue`. To zostało zilustrowane na poniższym rysunku.  
   
  ![Wirtualne i niewirtualne dziedziczenia w układzie obiektu](../cpp/media/vc38xp5.gif "vc38XP5")  
 Układ obiektu z wirtualnym i niewirtualnym dziedziczeniem  
@@ -97,7 +98,7 @@ Układ obiektu z wirtualnym i niewirtualnym dziedziczeniem
 > [!NOTE]
 >  Dziedziczenie wirtualne zapewnia znaczące korzyści dotyczące rozmiaru w porównaniu do dziedziczenia niewirtualnego. Jednak może to wprowadzić dodatkowe obciążenie dotyczące przetwarzania.  
   
- Jeśli w klasie pochodnej przeciążono funkcję wirtualną, która jest dziedziczona z wirtualnej klasy podstawowej, oraz jeśli konstruktor lub destruktor klasy pochodnej wywołuje tę funkcję za pomocą wskaźnika do wirtualnej klasy podstawowej, kompilator może wprowadzić dodatkowe ukryte pola „vtordisp” do klas z bazami wirtualnymi. Opcja kompilatora /vd0 pomija dodanie ukrytego elementu członkowskiego przemieszczenia konstruktora/destruktora vtordisp. Domyślna opcja kompilatora /vd1 włącza je wtedy, gdy są niezbędne. Wyłącz vtordisps tylko wtedy, gdy masz pewność, że wszystkie konstruktory i destruktory klas wywołują funkcje wirtualne w sposób wirtualny.  
+ Jeśli w klasie pochodnej przeciążono funkcję wirtualną, która jest dziedziczona z wirtualnej klasy bazowej, oraz jeśli konstruktor lub destruktor klasy pochodnej wywołuje tę funkcję za pomocą wskaźnika do wirtualnej klasy bazowej, kompilator może wprowadzić dodatkowe ukryte pola „vtordisp” do klas z bazami wirtualnymi. Opcja kompilatora /vd0 pomija dodanie ukrytego elementu członkowskiego przemieszczenia konstruktora/destruktora vtordisp. Domyślna opcja kompilatora /vd1 włącza je wtedy, gdy są niezbędne. Wyłącz vtordisps tylko wtedy, gdy masz pewność, że wszystkie konstruktory i destruktory klas wywołują funkcje wirtualne w sposób wirtualny.  
   
  Opcja kompilatora /vd wpływa na cały moduł kompilacji. Użyj **vtordisp** pragma, aby wyłączyć i ponownie włączyć vtordisp — pola na podstawie klasy klasy:  
   
@@ -108,9 +109,9 @@ class GetReal : virtual public { ... };
 ```  
   
 ## <a name="name-ambiguities"></a>Niejednoznaczności nazw  
- Wielokrotne dziedziczenie wprowadza dla nazw możliwość dziedziczenia wzdłuż więcej niż jednej ścieżki. Nazwy klas członkowskich wzdłuż tych ścieżek nie muszą być unikatowe. Te konflikty nazw są nazywane „niejasnościami”.  
+ Wielokrotne dziedziczenie wprowadza dla nazw możliwość dziedziczenia wzdłuż więcej niż jednej ścieżki. Nazwy klas składowych wzdłuż tych ścieżek nie muszą być unikatowe. Te konflikty nazw są nazywane „niejasnościami”.  
   
- Dowolne wyrażenie, które odwołuje się do elementu członkowskiego klasy musi być jednoznacznym odniesieniem. W poniższym przykładzie pokazano, jak rozwijają się niejasności:  
+ Dowolne wyrażenie, które odwołuje się do składowej klasy, musi być jednoznacznym odniesieniem. W poniższym przykładzie pokazano, jak rozwijają się niejasności:  
   
 ```  
 // deriv_NameAmbiguities.cpp  
@@ -141,7 +142,7 @@ C *pc = new C;
 pc->b();  
 ```  
   
- Należy rozważyć poprzedni przykład. Ponieważ nazwa `a` jest elementem członkowskim obu klas `A` i `B`, kompilator nie może rozpoznać, które `a` wyznacza funkcję, która ma być wywoływana. Dostęp do elementu członkowskiego jest niejednoznaczny, jeżeli może odnosić się do więcej niż jednej funkcji, obiektu, typu lub modułu wyliczającego.  
+ Należy rozważyć poprzedni przykład. Ponieważ nazwa `a` jest składową obu klas `A` i `B`, kompilator nie może rozpoznać, które `a` wyznacza funkcję, która ma być wywoływana. Dostęp do elementu członkowskiego jest niejednoznaczny, jeżeli może odnosić się do więcej niż jednej funkcji, obiektu, typu lub modułu wyliczającego.  
   
  Kompilator wykrywa niejasności wykonując testy w następującej kolejności:  
   

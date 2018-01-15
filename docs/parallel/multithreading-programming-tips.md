@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 180039627049dee0be8ebcaf211dabc2e42086c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30ecf45c8a22dfb42917affa59152aeefbc35425
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-programming-tips"></a>Wielowątkowość: porady dotyczące programowania
 Aplikacje wielowątkowe wymagają uwagę na bardziej restrykcyjne niż jednowątkowe aplikacji podczas uzyskiwania dostępu do danych. Ponieważ istnieje wiele, niezależne ścieżki wykonywania w jednocześnie używać w aplikacjach wielowątkowych algorytmów, danych lub oba muszą znać te dane mogą zostać użyte przez więcej niż jeden wątek na raz. W tym temacie wyjaśniono technik w celu uniknięcia potencjalnych problemów programowania aplikacji wielowątkowych z biblioteki Microsoft Foundation Class (MFC).  

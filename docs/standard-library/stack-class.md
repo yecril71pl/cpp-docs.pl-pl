@@ -31,11 +31,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a0c593042bf92e63b1c1514326440d9aee8101b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 824ca5e9726146323639974f9506d4efbf454d6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack-class"></a>stack — Klasa
 Klasa karty kontenera szablonu, która umożliwia ograniczenie funkcjonalności ograniczanie dostępu do elementu ostatnio dodane do niektórych podstawowy typ kontenera. Klasa stosu jest używana, jeśli ważne jest, aby być jasne, czy tylko stosu operacje są wykonywane w kontenerze.  
@@ -87,7 +88,7 @@ class stack
 |-|-|  
 |[pusty](#empty)|Sprawdza, czy `stack` jest pusta.|  
 |[POP](#pop)|Usuwa element z góry `stack`.|  
-|[wypychania](#push)|Dodaje element do góry `stack`.|  
+|[push](#push)|Dodaje element do góry `stack`.|  
 |[rozmiar](#size)|Zwraca liczbę elementów w `stack`.|  
 |[Do góry](#top)|Zwraca odwołanie do elementu w górnej części `stack`.|  
   
@@ -447,5 +448,5 @@ The element at the top of the stack is 69.
   
 ## <a name="see-also"></a>Zobacz też  
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

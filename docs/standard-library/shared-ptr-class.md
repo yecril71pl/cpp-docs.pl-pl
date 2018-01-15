@@ -42,11 +42,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25def6932680b47e69fc9b16064f046319bb5023
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03876821780ec2f4e2258b9553e936bfdda13c17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sharedptr-class"></a>shared_ptr — Klasa
 Otacza inteligentny wskaźnik zliczonych odwołań wokół obiektu przydzielanego dynamicznie.  
@@ -145,7 +146,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 |||  
 |-|-|  
 |[ELEMENT_TYPE](#element_type)|Typ elementu.|  
-|[Pobierz](#get)|Pobiera adres należących do zasobu.|  
+|[get](#get)|Pobiera adres należących do zasobu.|  
 |[owner_before](#owner_before)|Zwraca wartość PRAWDA, jeśli `shared_ptr` jest umieszczane przed (lub mniej niż) podany wskaźnik.|  
 |[Resetowanie](#reset)|Zastąp należących do zasobu.|  
 |[swap](#swap)|Zamienia dwa `shared_ptr` obiektów.|  

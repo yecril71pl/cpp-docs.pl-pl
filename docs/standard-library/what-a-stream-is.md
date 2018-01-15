@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd6b99e59810c08e0e053d93ef0d6ef09700ed3a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7084a0fb74d963532e01623e8e9047768c67f801
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-a-stream-is"></a>Czym jest strumień?
 Podobnie jak C C++ nie ma wbudowaną funkcję wejścia/wyjścia. Wszystkie Kompilatory języka C++, jednak być powiązany z systematyczne, zorientowany obiektowo pakiet we/wy, znany jako klasach iostream. Strumień jest głównym pojęciem klasach iostream. Obiekt stream można traktować jako plik inteligentne, który działa jako źródło i miejsce docelowe bajtów. Strumień właściwości są określane przez jego klasa i dostosowane operatorów wstawiania i wyodrębniania.  
@@ -33,5 +34,5 @@ Podobnie jak C C++ nie ma wbudowaną funkcję wejścia/wyjścia. Wszystkie Kompi
  [Input/Output Alternatives](../standard-library/input-output-alternatives.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [iostream — programowanie](../standard-library/iostream-programming.md)
+ [iostream, programowanie](../standard-library/iostream-programming.md)
 

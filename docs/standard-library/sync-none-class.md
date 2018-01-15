@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6b4c21cc7788bdfa6511e93873bf64bcfe796e2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf0d71bc517e97a99db79dfc905935fba81faed0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="syncnone-class"></a>sync_none — Klasa
 W tym artykule opisano [filtr synchronizacji](../standard-library/allocators-header.md) zapewnia ma synchronizacji.  
@@ -49,9 +50,9 @@ class sync_none
   
 |||  
 |-|-|  
-|[Przydziel](#allocate)|Przydziela bloku pamięci.|  
+|[allocate](#allocate)|Przydziela bloku pamięci.|  
 |[cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|  
-|[równa się](#equals)|Porównuje dwa pamięci podręcznych pod kątem równości.|  
+|[equals](#equals)|Porównuje dwa pamięci podręcznych pod kątem równości.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<allocators — >  

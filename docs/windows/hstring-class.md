@@ -14,11 +14,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb71f24cb62beb672979fab30ad335181dbfaba1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3e8d66f134eef5f2ecb75b30fd68874418dbc49d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstring-class"></a>HString — Klasa
 Klasa pomocnicza do zarządzania przez czas ich istnienia HSTRING przy użyciu wzorca RAII.
@@ -38,29 +41,29 @@ class HString;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Hstring::hstring — Konstruktor](../windows/hstring-hstring-constructor.md)|Inicjuje nowe wystąpienie klasy HString.|  
-|[HString:: ~ HString — destruktor](../windows/hstring-tilde-hstring-destructor.md)|Niszczy bieżące wystąpienie klasy HString.|  
+|[HString::HString, konstruktor](../windows/hstring-hstring-constructor.md)|Inicjuje nowe wystąpienie klasy HString.|  
+|[HString::~HString, destruktor](../windows/hstring-tilde-hstring-destructor.md)|Niszczy bieżące wystąpienie klasy HString.|  
   
 ### <a name="members"></a>Elementy członkowskie  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[HString::Set — metoda](../windows/hstring-set-method.md)|Ustawia wartość bieżącego obiektu hstring — określony ciąg znaków dwubajtowych lub parametr HString.|  
-|[HString::Attach — metoda](../windows/hstring-attach-method.md)|Kojarzy dany obiekt HString z bieżącym obiektem HString.|  
-|[HString::CopyTo — metoda](../windows/hstring-copyto-method.md)|Kopie HString bieżącego obiektu do obiektu HSTRING.|  
-|[HString::Detach — metoda](../windows/hstring-detach-method.md)|Usuwa skojarzenie określonego obiektu HString od wartości podstawowej.|  
-|[HString::GetAddressOf — metoda](../windows/hstring-getaddressof-method.md)|Pobiera wskaźnik do podstawowego dojście HSTRING.|  
-|[HString::Get — metoda](../windows/hstring-get-method.md)|Pobiera wartość uchwytu HSTRING podstawowej.|  
-|[HString::Release — metoda](../windows/hstring-release-method.md)|Usuwa wartość ciągu podstawowej i intializes bieżącego obiektu HString wartość pustą.|  
-|[HString::MakeReference — metoda](../windows/hstring-makereference-method.md)|Tworzy obiekt hstringreference — z parametru określonego ciągu.|  
+|[HString::Set, metoda](../windows/hstring-set-method.md)|Ustawia wartość bieżącego obiektu hstring — określony ciąg znaków dwubajtowych lub parametr HString.|  
+|[HString::Attach, metoda](../windows/hstring-attach-method.md)|Kojarzy dany obiekt HString z bieżącym obiektem HString.|  
+|[HString::CopyTo, metoda](../windows/hstring-copyto-method.md)|Kopie HString bieżącego obiektu do obiektu HSTRING.|  
+|[HString::Detach, metoda](../windows/hstring-detach-method.md)|Usuwa skojarzenie określonego obiektu HString od wartości podstawowej.|  
+|[HString::GetAddressOf, metoda](../windows/hstring-getaddressof-method.md)|Pobiera wskaźnik do podstawowego dojście HSTRING.|  
+|[HString::Get, metoda](../windows/hstring-get-method.md)|Pobiera wartość uchwytu HSTRING podstawowej.|  
+|[HString::Release, metoda](../windows/hstring-release-method.md)|Usuwa wartość ciągu podstawowej i intializes bieżącego obiektu HString wartość pustą.|  
+|[HString::MakeReference, metoda](../windows/hstring-makereference-method.md)|Tworzy obiekt hstringreference — z parametru określonego ciągu.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[HString::Operator = — Operator](../windows/hstring-operator-assign-operator.md)|Przenosi bieżący obiekt HString wartość innego obiektu HString.|  
-|[HString::Operator == — Operator](../windows/hstring-operator-equality-operator.md)|Wskazuje, czy dwa parametry są takie same.|  
-|[HString::Operator! = — Operator](../windows/hstring-operator-inequality-operator.md)|Wskazuje, czy dwa parametry nie są takie same.|  
+|[Operator HString::Operator=](../windows/hstring-operator-assign-operator.md)|Przenosi bieżący obiekt HString wartość innego obiektu HString.|  
+|[Operator HString::Operator==](../windows/hstring-operator-equality-operator.md)|Wskazuje, czy dwa parametry są takie same.|  
+|[Operator HString::Operator!=](../windows/hstring-operator-inequality-operator.md)|Wskazuje, czy dwa parametry nie są takie same.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `HString`  
@@ -71,4 +74,4 @@ class HString;
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: wrappers — Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

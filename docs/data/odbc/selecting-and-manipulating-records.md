@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 978dc1940fd4e1c659631edc8feb712e594c9457
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dec5e0094405cf9d038e53959da97ba079736505
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-manipulating-records"></a>Wybieranie rekordów i operowanie nimi
 Zwykle po wybraniu rekordy ze źródła danych przy użyciu SQL **wybierz** instrukcji, możesz uzyskać zestaw wyników, który jest zestaw rekordów z tabeli lub zapytania. Z klasami baz danych umożliwia obiekty zestawów rekordów wybierz i korzystać z zestawu wyników. To jest obiekt klasy specyficzne dla aplikacji, która pochodzi z klasy [crecordset —](../../mfc/reference/crecordset-class.md). Podczas definiowania klasy zestawu rekordów, określ źródło danych, aby skojarzyć ją z tabeli używanej i kolumn tabeli. Kreator aplikacji MFC lub **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) tworzy klasę z połączeniem z określonego źródła danych. Kreatorzy zapisu [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) funkcji członkowskiej klasy `CRecordset` do zwracania nazwy tabeli. Aby uzyskać więcej informacji na temat Korzystanie z kreatorów, aby utworzyć zestaw rekordów klas, zobacz [obsługi bazy danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md) i [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  

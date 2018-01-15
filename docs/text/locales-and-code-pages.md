@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1115af5eb7726138a1954f832ec2761a47667e44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locales-and-code-pages"></a>Ustawienia regionalne i strony kodowe
 Identyfikator ustawień regionalnych odzwierciedla konwencje lokalnych i język dla określonego regionu geograficznego. Danego języka może być używany w więcej niż jeden kraj/region; na przykład portugalski jest używany w Brazylia także jak Portugalii. Z drugiej strony kraj/region może mieć więcej niż jednym języku. Na przykład Kanada ma dwa języki: angielski i francuski. W związku z tym Kanada ma dwa różne ustawienia regionalne: kanadyjskich w języku angielskim i francuskim kanadyjskich. Niektóre kategorie zależne od ustawień regionalnych obejmują formatowanie dat i format wyświetlania wartości pieniężnych.  
@@ -53,4 +54,4 @@ Identyfikator ustawień regionalnych odzwierciedla konwencje lokalnych i język 
   
 ## <a name="see-also"></a>Zobacz też  
  [Unicode i MBCS](../text/unicode-and-mbcs.md)   
- [Zalety znak przenośności zestawu](../text/benefits-of-character-set-portability.md)
+ [Zalety przenośności zestawu znaków](../text/benefits-of-character-set-portability.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31d818eb056643b30a28bd3cc88946ee58d62c7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b965027e67cc2b2581c2ab00e51d2be7a899302
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="postfix-expressions"></a>Wyrażenia przyrostków
 Wyrażenia przyrostkowe składają się z podstawowego wyrażenia lub wyrażeń, w których operatory przyrostkowe następują po wyrażeniu podstawowym. Operatory przyrostkowe są wymienione w poniższej tabeli.  
@@ -51,7 +52,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- W powyższym wyrażeniu, func jest wyrażeniem podstawowym, func(1) jest wyrażeniem przyrostkowym funkcji, func(1)->GetData jest wyrażeniem przyrostkowym określającym element członkowski klasy, func(1)->GetData() jest innym wyrażeniem przyrostkowym funkcji, a całe wyrażenie jest wyrażeniem przyrostkowym, zwiększającym wartość zwracaną GetData.  Znaczenie wyrażenia jako całości to „wywołaj funkcję przekazywania 1 jako argument i uzyskaj wskaźnik do klasy jako wartość zwracaną.  Następnie wywołaj GetValue() dla tej klasy i zwiększ wartość zwracaną.  
+ W powyższym wyrażeniu, func jest wyrażeniem podstawowym, func(1) jest wyrażeniem przyrostkowym funkcji, func(1)->GetData jest wyrażeniem przyrostkowym określającym składową klasy, func(1)->GetData() jest innym wyrażeniem przyrostkowym funkcji, a całe wyrażenie jest wyrażeniem przyrostkowym, zwiększającym wartość zwracaną GetData.  Znaczenie wyrażenia jako całości to „wywołaj funkcję przekazywania 1 jako argument i uzyskaj wskaźnik do klasy jako wartość zwracaną.  Następnie wywołaj GetValue() dla tej klasy i zwiększ wartość zwracaną.  
   
  Wyrażenia wymienione powyżej są wyrażeniami przypisania, co oznacza, że wyniki wyrażenia muszą być r-wartościami.  
   

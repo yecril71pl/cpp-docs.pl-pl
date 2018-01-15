@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63c31758b1664f80a350c1d381873e1ac9665bc4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d4fa9ca3f1dd5b73b07f705c453c29ba150e4754
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="disabling-guides"></a>Wyłączanie prowadnic
 Klawisze specjalne w połączeniu z myszą umożliwia wyłączanie przyciągania efekt prowadnice. Za pomocą klawisza ALT wyłącza przyciągania skutków przewodnik wybrane. Przenoszenie przewodnik klawisz SHIFT uniemożliwia przyciągniętą przenoszenie z przewodnika.  
@@ -48,7 +51,7 @@ Klawisze specjalne w połączeniu z myszą umożliwia wyłączanie przyciągania
   
 -   Na **Format** menu, kliknij przycisk **przewodniki Przełącz**.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](https://msdn.microsoft.com/library/f45fce5x.aspx) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](https://msdn.microsoft.com/library/xbx3z216.aspx). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Wymagania  
   
@@ -56,5 +59,5 @@ Klawisze specjalne w połączeniu z myszą umożliwia wyłączanie przyciągania
   
 ## <a name="see-also"></a>Zobacz też  
  [Stany Edytor okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)   
- [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)
+ [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)
 

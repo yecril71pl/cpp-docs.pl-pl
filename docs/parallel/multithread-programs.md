@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: effbb235ef678253f5258d3eb01a3a82292385cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ff73b4d3a1c8ee6971fbd3f88f491c2a5c76311
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithread-programs"></a>Programy wielowątkowe
 Wątek jest zasadniczo ścieżka wykonywania za pośrednictwem programu. Istnieje również najmniejsza wykonanie, które planuje Win32. Wątek składa się z stosu, stan rejestrów Procesora i wpis na liście wykonywania Harmonogram systemu. Każdy wątek udostępnia zasoby wszystkich procesów.  
@@ -30,4 +31,4 @@ Wątek jest zasadniczo ścieżka wykonywania za pośrednictwem programu. Istniej
  Każdy wątek w procesie działa niezależnie. Jeśli nie możesz wyświetlić je ze sobą, wątki wykonaj indywidualnie i znają innych wątków w procesie. Udostępnianie wspólnych zasobów wątków jednak musi koordynować pracę przy użyciu semaforów lub innej metody komunikacji międzyprocesowej. Aby uzyskać więcej informacji na temat synchronizacja wątków, zobacz [zapisywania wielowątkowe programu systemu Win32](../parallel/writing-a-multithreaded-win32-program.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z C i Win32](../parallel/multithreading-with-c-and-win32.md)
+ [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)

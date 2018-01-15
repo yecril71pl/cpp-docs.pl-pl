@@ -30,11 +30,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a9098f6f8f0374ad10396f30cf5aa636d9843d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f41348b77d65f3ade8016c9e23a31555db2d3612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overwritebuffer-class"></a>Klasa overwrite_buffer
 `overwrite_buffer` Blok komunikatów jest wiele docelowych, wielu źródłach, uporządkowanych `propagator_block` można przechowywać w czasie pojedynczym komunikacie. Nowe komunikaty zastąpienie wcześniej przechowywanych z nich.  
@@ -64,7 +65,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[has_value](#has_value)|Sprawdza, czy to `overwrite_buffer` bloku obsługi wiadomości nie został jeszcze wartość.|  
-|[wartość](#value)|Pobiera odwołanie do bieżącego ładunku komunikatu są przechowywane w `overwrite_buffer` bloku obsługi wiadomości.|  
+|[value](#value)|Pobiera odwołanie do bieżącego ładunku komunikatu są przechowywane w `overwrite_buffer` bloku obsługi wiadomości.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
@@ -330,4 +331,4 @@ T value();
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
  [Klasa unbounded_buffer](unbounded-buffer-class.md)   
- [Klasa single_assignment](single-assignment-class.md)
+ [single_assignment, klasa](single-assignment-class.md)

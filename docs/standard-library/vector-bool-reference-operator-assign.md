@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 286608c9a0695143914e076c6e4e3c5a87e3d8dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 067a351fee066612f09d44938c8a627797447402
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>Wektor&lt;bool&gt;:: reference::operator =
 Przypisuje do bitu wartość logiczną lub wartość przechowywaną przez odnośny element.  
@@ -126,5 +127,5 @@ The original value of the 3rd element still stored in a bool: false
   
 ## <a name="see-also"></a>Zobacz też  
  [Wektor\<bool >:: klasę referencyjną](../standard-library/vector-bool-reference-class.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

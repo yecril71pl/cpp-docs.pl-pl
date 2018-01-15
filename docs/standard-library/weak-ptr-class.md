@@ -39,11 +39,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: db0ab662735a29e1b37536ebbccf3e94fa056070
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 821992a6a0684e965f804729b470075038310ef1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakptr-class"></a>weak_ptr — Klasa
 Otacza słabo połączony wskaźnik.  
@@ -99,7 +100,7 @@ public:
 |-|-|  
 |[ELEMENT_TYPE](#element_type)|Typ elementu.|  
 |[ważność](#expired)|Testy, jeśli prawo własności wygasło.|  
-|[blokady](#lock)|Uzyskuje wyłącznego prawa własności do zasobu.|  
+|[lock](#lock)|Uzyskuje wyłącznego prawa własności do zasobu.|  
 |[owner_before](#owner_before)|Zwraca `true` Jeśli `weak_ptr` jest umieszczane przed (lub mniej niż) podany wskaźnik.|  
 |[Resetowanie](#reset)|Wersje właściciela zasobów.|  
 |[swap](#swap)|Zamienia dwa `weak_ptr` obiektów.|  
@@ -551,5 +552,5 @@ wp0.expired() == true
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [shared_ptr — klasa](../standard-library/shared-ptr-class.md)
+ [shared_ptr, klasa](../standard-library/shared-ptr-class.md)
 

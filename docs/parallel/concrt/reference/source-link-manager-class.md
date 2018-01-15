@@ -27,11 +27,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 75be5687e63fe38f1ffa8f91c41963dfa1171e48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67cf15c6681c989a2da2b4e6824fec6012c517bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager — Klasa
 `source_link_manager` Obiektu zarządza komunikatów łączy sieciowych bloku do `ISource` bloków.  
@@ -69,14 +70,14 @@ class source_link_manager;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Dodaj](#add)|Dodaje link do źródła `source_link_manager` obiektu.|  
+|[add](#add)|Dodaje link do źródła `source_link_manager` obiektu.|  
 |[Rozpocznij](#begin)|Zwraca pierwszy element w iteratora `source_link_manager` obiektu.|  
 |[zawiera](#contains)|Wyszukiwanie `network_link_registry` w ramach tego `source_link_manager` obiektu dla określonego bloku.|  
 |[Liczba](#count)|Zlicza połączonego bloków w `source_link_manager` obiektu.|  
 |[Odwołanie](#reference)|Uzyskuje odwołania na `source_link_manager` obiektu.|  
 |[register_target_block](#register_target_block)|Rejestruje blok docelowy przechowujący to `source_link_manager` obiektu.|  
 |[zlecenia](#release)|Zwalnia odwołania na `source_link_manager` obiektu.|  
-|[Usuń](#remove)|Usuwa link z `source_link_manager` obiektu.|  
+|[remove](#remove)|Usuwa link z `source_link_manager` obiektu.|  
 |[set_bound](#set_bound)|Ustawia maksymalną liczbę łączy źródła, które mogą zostać dodane do tego `source_link_manager` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -216,4 +217,4 @@ source_link_manager();
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
  [single_link_registry — klasa](single-link-registry-class.md)   
- [multi_link_registry — klasa](multi-link-registry-class.md)
+ [multi_link_registry, klasa](multi-link-registry-class.md)

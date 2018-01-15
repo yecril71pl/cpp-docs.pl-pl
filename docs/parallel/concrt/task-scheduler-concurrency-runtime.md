@@ -27,11 +27,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 692f02f6ad2d7486c8460d3dae42500f165f60b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Harmonogram zadań (współbieżność środowiska wykonawczego)
 W tematach w tej części dokumentacji opisano ważne funkcje harmonogram zadań współbieżności środowiska wykonawczego. Harmonogram zadań jest przydatne, gdy chcesz dostrojenie wydajności istniejący kod, który korzysta ze współbieżności środowiska wykonawczego.  
@@ -63,7 +64,7 @@ W tematach w tej części dokumentacji opisano ważne funkcje harmonogram zadań
 |[Konteksty](../../parallel/concrt/contexts.md)|Zawiera opis roli kontekstów, `concurrency::wait` funkcji i `concurrency::Context` klasy. Tej funkcji należy używać wtedy, gdy będziesz potrzebować kontrolę nad po kontekstów zablokować odblokować i uzyskanie lub jeśli chcesz włączyć nadsubskrypcji w aplikacji.|  
 |[Funkcje zarządzania pamięcią](../../parallel/concrt/memory-management-functions.md)|W tym artykule opisano `concurrency::Alloc` i `concurrency::Free` funkcji. Te funkcje umożliwiają poprawę wydajności pamięci przydzielając i zwolnić pamięć, w sposób współbieżnych.|  
 |[Porównywanie z innymi modelami współbieżności](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|W tym artykule opisano różnice między mechanizmy planowania cenią sobie wcześniejsze i współpracy.|  
-|[Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Informacje dotyczące używania różnych równoległych wzorców, na przykład algorytmy równoległe w aplikacji.|  
+|[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Informacje dotyczące używania różnych równoległych wzorców, na przykład algorytmy równoległe w aplikacji.|  
 |[Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)|Opisuje sposób korzystania z agentów asynchronicznych w aplikacjach użytkownika.|  
-|[Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)|W tym artykule opisano współbieżność środowiska wykonawczego, co upraszcza Programowanie równoległe i zawiera linki do powiązanych tematów.|
+|[Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)|W tym artykule opisano współbieżność środowiska wykonawczego, co upraszcza Programowanie równoległe i zawiera linki do powiązanych tematów.|
 

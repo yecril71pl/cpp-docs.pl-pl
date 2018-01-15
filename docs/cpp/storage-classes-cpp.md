@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3830f91683399eba4784b5348ca252e9caa22d57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6914ace20d299b526dc7c0d5b066948a2759287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-classes-c"></a>Klasy magazynu (C++)  
   
@@ -30,7 +31,7 @@ A *Klasa magazynu* w kontekście C++ deklaracje zmiennej to Specyfikator typu ok
   
 **Uwagi**  
   
-1.  [Modyfikowalną](../cpp/mutable-data-members-cpp.md) — słowo kluczowe może zostać uznany za Specyfikator klasy magazynu. Jednak jest ono dostępne tylko na liście elementów członkowskich definicji klasy.  
+1.  [Modyfikowalną](../cpp/mutable-data-members-cpp.md) — słowo kluczowe może zostać uznany za Specyfikator klasy magazynu. Jednak jest ono dostępne tylko na liście składowych definicji klasy.  
   
 2.  **Visual C++ 2010 lub nowszy:** `auto` — słowo kluczowe nie jest już specyfikatora klasy magazynu języka C++ i `register` — słowo kluczowe jest przestarzały. **Visual Studio 2017 wersji 15.3 i nowszych:** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): `register` — słowo kluczowe nie jest już klasę magazynu obsługiwane. Słowo kluczowe jest nadal zarezerwowane w standardzie do użytku w przyszłości. 
 ```cpp
@@ -39,7 +40,7 @@ A *Klasa magazynu* w kontekście C++ deklaracje zmiennej to Specyfikator typu ok
 
 ## <a name="in-this-section"></a>W tej sekcji:
   
--   [statyczne](#static)  
+-   [static](#static)  
 -   [extern](#extern)  
 -   [Element thread_local](#thread_local)
 
@@ -217,14 +218,12 @@ void DoSomething()
 ```  
   
 Rzeczy do uwzględnienia o `thread_local` specyfikator:  
+
+- Dynamicznie zainicjowany zmiennymi lokalnymi wątku w bibliotekach DLL nie można prawidłowo zainicjować na wszystkie wątki wywołującego. Aby uzyskać więcej informacji, zobacz [wątku](thread.md).
   
 -  `thread_local` Specyfikator mogą być łączone z `static` lub `extern`.  
   
 -  Możesz zastosować `thread_local` tylko do danych deklaracje i definicje; `thread_local` nie można użyć w deklaracji lub definicji funkcji.  
-  
--  Korzystanie z `thread_local` może zakłócać [opóźnienia ładowania](../build/reference/linker-support-for-delay-loaded-dlls.md) biblioteki DLL importuje. 
-  
--  W systemie XP `thread_local` nie może działać prawidłowo, jeśli korzysta z biblioteki DLL `thread_local` danych i jej załadowaniu dynamicznie za pośrednictwem `LoadLibrary`.  
   
 -  Można określić `thread_local` tylko dla elementów danych ze statycznym okresem magazynu. Obejmuje to obiekty danych globalnych (zarówno `static` i `extern`), lokalnego obiektu statycznego i danymi statycznymi członkami klas. Wszelkie zmienna lokalna zadeklarowana `thread_local` jest niejawnie statyczny, jeśli podano inną klasę magazynu; innymi słowy, w zakresie bloku `thread_local` jest odpowiednikiem `thread_local static`. 
   

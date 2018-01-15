@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cca827bb8ba7fa43619a6e61e2c16ffba5e4563
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b72db4fb44191340b71c8bff26018221650ae34b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handlethandlet-constructor"></a>HandleT::HandleT — Konstruktor
 Inicjuje nowe wystąpienie klasy handlet —.  
@@ -50,4 +53,4 @@ HandleT(
  **Namespace:** Microsoft::wrl:: wrappers —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Handlet — klasa](../windows/handlet-class.md)
+ [HandleT, klasa](../windows/handlet-class.md)

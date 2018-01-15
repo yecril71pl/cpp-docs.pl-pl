@@ -31,11 +31,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 705ffaa38222d83fe02e20f20c47ee4c06f22294
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueue-class"></a>priority_queue — Klasa
 Klasa karty kontenera szablonu, która umożliwia ograniczenie funkcjonalności ograniczanie dostępu do elementu górnego niektórych odpowiedni typ kontenera, która jest zawsze największej lub o najwyższym priorytecie. Nowe elementy mogą zostać dodane do priority_queue — i górnego elementu priority_queue — mogą być kontrolowane lub usunięty.  
@@ -94,7 +95,7 @@ class priority_queue
 |-|-|  
 |[pusty](#empty)|Sprawdza, czy `priority_queue` jest pusta.|  
 |[POP](#pop)|Usuwa element największą `priority_queue` z górnej pozycji.|  
-|[wypychania](#push)|Dodaje element do kolejki priorytetu na podstawie priorytetu elementu od operatora <.|  
+|[push](#push)|Dodaje element do kolejki priorytetu na podstawie priorytetu elementu od operatora <.|  
 |[rozmiar](#size)|Zwraca liczbę elementów w `priority_queue`.|  
 |[Do góry](#top)|Zwraca wartość typu const odwołanie do największy element na początku `priority_queue`.|  
   
@@ -557,5 +558,5 @@ The element at the top of the priority_queue is 69.
   
 ## <a name="see-also"></a>Zobacz też  
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37b08b5108d609deca2eed94a05d4eb01d09f10b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fbb3d19101358012df795000907a0b3e8139601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-program-startup"></a>main: uruchamianie programu
 Specjalnych funkcji o nazwie `main` jest punktem początkowym wykonywania dla wszystkich programów C i C++. Jeśli jesteś pisanie kodu, która jest zgodna [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] modelu programowania, można użyć `wmain`, która jest wersja znaków dwubajtowych `main`.  
@@ -69,4 +70,4 @@ int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 ## <a name="see-also"></a>Zobacz też  
  [Słowa kluczowe](../cpp/keywords-cpp.md)   
  [Korzystanie z wmain zamiast main](../cpp/using-wmain-instead-of-main.md)   
- [Ograniczenia funkcji Main](../cpp/main-function-restrictions.md)
+ [Ograniczenia funkcji main](../cpp/main-function-restrictions.md)

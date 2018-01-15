@@ -17,11 +17,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1fbf79a38dedf2a7978bdaf1be4bea084283efe9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 051eb51a4461d1b3f9ab180507022cdfa955f0ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activateinstance-function"></a>ActivateInstance — Funkcja
 Rejestruje i pobiera wystąpienia określonego typu zdefiniowane w identyfikatora dla określonej klasy.  
@@ -57,4 +60,4 @@ inline HRESULT ActivateInstance(
  **Namespace:** Windows::Foundation —  
   
 ## <a name="see-also"></a>Zobacz też  
- [Windows::Foundation — Namespace](../windows/windows-foundation-namespace.md)
+ [Windows::Foundation, przestrzeń nazw](../windows/windows-foundation-namespace.md)

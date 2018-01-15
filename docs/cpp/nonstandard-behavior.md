@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73b60bbdbd38738f8cb5d127b464b14465de413b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 967f182451c712b46c5f2da545d2fed7ffd59bca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nonstandard-behavior"></a>Niestandardowe zachowanie
 Poniższa sekcja wymienia niektóre z miejsc, w których implementacja C++ w języku Visual C++ jest niezgodna ze standardem C++. Numery sekcji podane poniżej odnoszą się do numerów sekcji w standardzie C++11 (ISO/IEC 14882:2011(E)).  
@@ -29,7 +30,7 @@ Poniższa sekcja wymienia niektóre z miejsc, w których implementacja C++ w ję
  Lista limity kompilatora, które różnią się od tych określonych w C++ standard znajduje się w [limity kompilatora](../cpp/compiler-limits.md).  
   
 ## <a name="covariant-return-types"></a>Kowariantne typy zwracane  
- Wirtualne klasy podstawowe nie są obsługiwane jako kowariantne typy zwracane, gdy funkcja wirtualna ma zmienną liczbę argumentów. Jest to niezgodne z sekcją 10.3.7 specyfikacji ISO C++. Poniższy przykład kompilacja niemożliwa, podając błąd kompilatora [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
+ Wirtualne klasy bazowe nie są obsługiwane jako kowariantne typy zwracane, gdy funkcja wirtualna ma zmienną liczbę argumentów. Jest to niezgodne z sekcją 10.3.7 specyfikacji ISO C++. Poniższy przykład kompilacja niemożliwa, podając błąd kompilatora [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  

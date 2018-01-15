@@ -45,11 +45,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d8189e621ac137986c72657441c5584e09795edd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14f41a90aab8e95d336df6724a7217947ec1c57c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicistream-class"></a>basic_istream — Klasa
 Zawiera opis obiektu, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia elementami typu `Elem`, znanej także jako [char_type](../standard-library/basic-ios-class.md#char_type), którego cech znaków są określane przez klasę *Tr* , znanej także jako [traits_type](../standard-library/basic-ios-class.md#traits_type).  
@@ -149,12 +150,12 @@ setstate(state);
 |||  
 |-|-|  
 |[gcount](#gcount)|Zwraca liczbę znaków do odczytu podczas ostatniego niesformatowanych danych wejściowych.|  
-|[Pobierz](#get)|Odczytuje co najmniej jeden znak ze strumienia wejściowego.|  
+|[get](#get)|Odczytuje co najmniej jeden znak ze strumienia wejściowego.|  
 |[getline](#getline)|Odczytuje wiersz ze strumienia wejściowego.|  
 |[Ignoruj](#ignore)|Powoduje, że liczba elementów do pominięcia z bieżącej pozycji do odczytu.|  
 |[Peek](#peek)|Zwraca następny znak do odczytania.|  
 |[putback](#putback)|Przełącza określony znak w strumieniu.|  
-|[Odczyt](#read)|Odczytuje określoną liczbę znaków ze strumienia i przechowuje je w tablicy.|  
+|[read](#read)|Odczytuje określoną liczbę znaków ze strumienia i przechowuje je w tablicy.|  
 |[readsome](#readsome)|Z buforu tylko do odczytu.|  
 |[seekg](#seekg)|Przenosi odczytu pozycji w strumieniu.|  
 |[Sentry](#sentry)|Zagnieżdżona klasa opisuje obiekt, którego deklaracji struktury niesformatowany funkcji wejściowych i sformatowany funkcji wejściowych.|  

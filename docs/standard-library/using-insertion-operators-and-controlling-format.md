@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2860a0bfd050c4e2a86e948c7008327d237bc5ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Korzystanie z operatorów wstawiania i formatu kontrolującego
 W tym temacie przedstawia sposób kontrolowania format oraz sposobu tworzenia operatorów wstawiania własnych klas. Wstawiania (**<<**) operatora, który jest wcześniej zaplanowane dla wszystkie standardowe typy danych języka C++, wysyła bajtów do obiektu strumienia wyjściowego. Operatory wstawienia współpracować z wstępnie zdefiniowanych "manipulatory,", które są elementami, które zmienić domyślny format liczby całkowitej argumentów.  
