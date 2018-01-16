@@ -97,11 +97,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba5b35c7bff46369236bf9be719e351d10a8900d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84fae58f0a1f57ca18fa053607c9d5bf60c068aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiset-class"></a>multiset — Klasa
 Standardowa biblioteka C++ multiset — klasa jest używana do przechowywania i pobierania danych z kolekcji, w której wartości elementów zawartych nie musi być unikatowa i które służą jako wartości klucza, zgodnie z którymi automatycznie porządkowania danych. Nie można bezpośrednio zmienić wartości klucza elementu w zestawie wielokrotnym. Zamiast tego trzeba usunąć stare wartości i wstawić elementy z nowymi wartościami.  
@@ -114,7 +115,7 @@ class multiset
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Klucz*  
+ *Key*  
  Typ danych elementu do przechowywania w zestawie wielokrotnym.  
   
  *Porównaj*  
@@ -2212,5 +2213,5 @@ The multiset has elements: 10 20.
  [\<Ustaw > elementy członkowskie](http://msdn.microsoft.com/en-us/0c2d57c0-173f-4204-b579-c5f06aad8b95)   
  [Kontenery](../cpp/containers-modern-cpp.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

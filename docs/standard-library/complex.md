@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3df6dab957b886c13dcd2fa8f7f6aa2f9859dc61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 178318ba212665e9157d1c49289d3167056b0e83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcomplexgt"></a>&lt;złożone&gt;
 Definiuje klasę szablonu kontenera **złożonych** i jego obsługi szablonów.  
@@ -106,7 +107,7 @@ Definiuje klasę szablonu kontenera **złożonych** i jego obsługi szablonów.
   
 |||  
 |-|-|  
-|[operator! =](../standard-library/complex-operators.md#op_neq)|Testy pod kątem nierówności między dwie liczb zespolonych, jeden lub oba mogą należeć do podzbioru typ części rzeczywistych i urojony.|  
+|[operator!=](../standard-library/complex-operators.md#op_neq)|Testy pod kątem nierówności między dwie liczb zespolonych, jeden lub oba mogą należeć do podzbioru typ części rzeczywistych i urojony.|  
 |[operator *](../standard-library/complex-operators.md#op_star)|Mnoży dwie liczby złożone, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|  
 |[operator +](../standard-library/complex-operators.md#op_add)|Dodaje dwie liczb zespolonych, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|  
 |[operator-](../standard-library/complex-operators.md#operator-)|Odejmuje dwie liczby złożone, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|  

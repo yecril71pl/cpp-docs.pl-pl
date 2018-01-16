@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e4906924f3a572f2e8a00d226acdb3da7097cdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 234a24152b0f5ce02caf3948baf7ee3b183622ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sample-multithread-c-program"></a>Przykładowy program więlowątkowy w języku C
 Bounce.c jest przykładowy program wielowątkowe, która tworzy nowy wątków zawsze literę **a** lub **A** został wpisany. Każdy wątek odrzuceń wszystkiego krój innego koloru po ekranie. Można utworzyć maksymalnie 32 wątków. Zakończenie normalne programu występuje podczas `q` lub **Q** został wpisany. Aby uzyskać informacje o kompilowanie i łączenie Bounce.c, zobacz [kompilowanie i łączenie programów wielowątkowej](../parallel/compiling-and-linking-multithread-programs.md).  
@@ -219,4 +220,4 @@ q
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z C i Win32](../parallel/multithreading-with-c-and-win32.md)
+ [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)

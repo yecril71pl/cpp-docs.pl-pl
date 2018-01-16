@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 189f18f5d8944fc61635b5aa83522e5a89a3a100
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53720e93c7d45f1eaeb0e62749194720373bee1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Formatowanie danych wyjściowych niestandardowego kroku budowania lub zdarzenia kompilacji
 Jeśli w danych wyjściowych niestandardowego kroku budowania lub zdarzenia kompilacji są poprawnie sformatowane, użytkownicy uzyskują następujące korzyści:  
@@ -58,4 +59,4 @@ Jeśli w danych wyjściowych niestandardowego kroku budowania lub zdarzenia komp
  ŁĄCZA: błąd krytyczny LNK1104: nie można otworzyć pliku "*somelib.lib*"  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opis niestandardowe kroki procesu kompilacji lub zdarzeniach kompilacji](../ide/understanding-custom-build-steps-and-build-events.md)
+ [Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](../ide/understanding-custom-build-steps-and-build-events.md)

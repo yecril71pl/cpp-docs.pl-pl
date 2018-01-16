@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d141ec66aa7ed0bac53c8242a87d08e092272eaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cdf7598e00bab72966fe79454567b0a59dcbaae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   Przykłady klauzuli atrybutu danych prywatnej kopii
 **Przykład 1:** `copyprivate` klauzuli ([sekcji 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) na stronie 32) może służyć do emisji wartości uzyskaną przez pojedynczy wątek bezpośrednio do wszystkich wystąpień zmiennych prywatnych w innych wątków.  

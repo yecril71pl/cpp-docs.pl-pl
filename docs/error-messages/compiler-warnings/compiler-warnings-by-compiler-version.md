@@ -16,11 +16,12 @@ caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0f4a4aedc85cade0d5b7b895e5998733460a7ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52513b156ee8c86d8358be84a27c28d15eb86641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Ostrzeżenia kompilatora w wersji kompilatora  
   
@@ -362,7 +363,7 @@ C4678|Klasa podstawowa*deklaracji*"jest mniej dostępny niż"*nazwa*"
 C4679|"*opis*": nie można zaimportować elementu członkowskiego
 C4687|"*typu*": zapieczętowana klasa abstrakcyjna nie może implementować interfejsu "*typu*"
 C4688|"*nazwa*": Lista ograniczeń zawiera prywatny typ zestawu "*deklaracji*"
-C4690|[emitidl (pop)]: więcej zdejmowań niż włożeń
+C4690|[ emitidl( pop ) ]: więcej zdejmowań niż włożeń
 C4691|"*typu*": oczekiwano typu odwołania w których nie ma odwołań *modułu* "*opis*", typ zdefiniowany w bieżącej jednostce tłumaczenia, zamiast tego użyć
 C4692|"*nazwa*": podpis elementu z systemem innym niż nieprywatnego elementu członkowskiego zawiera prywatny typ macierzysty zestawu "*deklaracji*"
 C4693|"*typu*": zapieczętowana klasa abstrakcyjna nie może mieć żadnych członków wystąpienia*nazwa*"
@@ -605,4 +606,4 @@ C4998|Nie można zrealizować oczekiwania: *opis*(*numer*)
 ## <a name="see-also"></a>Zobacz też  
 [/WV — opcja kompilatora](../../build/reference/compiler-option-warning-level.md)  
 [Są domyślnie wyłączone ostrzeżenia kompilatora](../../preprocessor/compiler-warnings-that-are-off-by-default.md)  
-[Ostrzeżenie](../../preprocessor/warning.md)  
+[ostrzeżenie](../../preprocessor/warning.md)  

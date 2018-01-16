@@ -37,11 +37,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 319a00cfd69ef2e83da5744606b9c4c10d4f9942
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e08b64c18a44083f1af0fd899f71409c69473981
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution — Klasa
 Generuje rozkładu Weibulla.  
@@ -99,7 +100,7 @@ Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` dy
   
 Aby uzyskać więcej informacji o dystrybucji klasy i ich elementy członkowskie, zobacz [ \<losowe >](../standard-library/random.md).  
   
-Aby uzyskać szczegółowe informacje na temat dystrybucji Weibulla, zobacz artykuł Wolfram MathWorld [rozkładu Weibulla](http://go.microsoft.com/fwlink/LinkId=401115).  
+Aby uzyskać szczegółowe informacje na temat dystrybucji Weibulla, zobacz artykuł Wolfram MathWorld [rozkładu Weibulla](http://go.microsoft.com/fwlink/p/?linkid=401115).  
   
 ## <a name="example"></a>Przykład  
   

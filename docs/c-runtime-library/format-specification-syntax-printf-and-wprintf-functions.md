@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e8c81bfa9f87d9612d989cef84ddf538ff28d98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
@@ -81,7 +82,7 @@ Liczba całkowita typów, takie jak `short`, `int`, `long`, `long long`i ich `un
 |**K**|Zmiennoprzecinkowe|Taki sam jak **g** sformatować, z wyjątkiem **E**, a nie **e**, wprowadza wykładnik (o ile jest to możliwe).|
 |**a**|Zmiennoprzecinkowe|Podpisana szesnastkową wartość zmiennoprzecinkowe podwójnej precyzji, która ma formę [-] 0 x*h.hhhh*__p±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu małych liter) mantysa i *dd* są co najmniej jedną cyfrę dla wykładnik. Dokładność określa liczbę cyfr po punkcie.|
 |**A**|Zmiennoprzecinkowe|Podpisana szesnastkową wartość zmiennoprzecinkowe podwójnej precyzji, która ma formę [-] 0 X*h.hhhh*__P±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu wielkimi literami) mantysa i *dd* są co najmniej jedną cyfrę dla wykładnik. Dokładność określa liczbę cyfr po punkcie.|
-|**n**|Wskaźnik do liczby całkowitej.|Liczba znaków, które zostały pomyślnie zapisane do tej pory strumienia lub buforu. Ta wartość jest przechowywana w całkowitą, której adres jest podawana jako argument. Rozmiar całkowitą wskazywał kontrolowana przez prefiks Specyfikacja rozmiaru argumentu. **n**  Specyfikator jest domyślnie wyłączona; informacji, zobacz uwagę ważny.|
+|**n**|Wskaźnik do liczby całkowitej.|Liczba znaków, które zostały pomyślnie zapisane do tej pory strumienia lub buforu. Ta wartość jest przechowywana w całkowitą, której adres jest podawana jako argument. Rozmiar całkowitą wskazywał kontrolowana przez prefiks Specyfikacja rozmiaru argumentu.  **n**  Specyfikator jest domyślnie wyłączona; informacji, zobacz uwagę ważny.|
 |**p**|Typ wskaźnika|Wyświetla argument jako adresu cyfr szesnastkowych.|
 |**s**|String|W przypadku użycia z `printf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowego; w przypadku użycia z `wprintf` funkcje, określa ciąg znaków dwubajtowych. Znaki są wyświetlane do pierwszego znaku null lub do czasu *dokładności* osiągnięciem wartości.|
 |**S**|String|W przypadku użycia z `printf` funkcje, określa ciąg znaków dwubajtowych; w przypadku użycia z `wprintf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowego. Znaki są wyświetlane do pierwszego znaku null lub do czasu *dokładności* osiągnięciem wartości.|
@@ -130,7 +131,7 @@ Pierwsze pole opcjonalne w specyfikacji konwersji zawiera *Flaga dyrektywy*, zer
 |----------|-------------|-------------|
 |**-**|Wyrównaj do lewej wynik względem szerokości danego pola.|Wyrównaj do prawej.|
 |**+**|Użyj znaku (+ lub -) jako prefiks wartość wyjściowa, jeśli jest z poziomu typu ze znakiem.|Znak pojawia się tylko w przypadku wartości ujemnych podpisem (-).|
-|**0**|Jeśli *szerokość* jest poprzedzony **0**, początkowego znaku są dodawane zera, aż do osiągnięcia minimalnej szerokości. Jeśli oba **0** i  **-**  są wyświetlane, **0** jest ignorowana. Jeśli **0** określono format liczby całkowitej (**i**, **u**, **x**, **X**, **o**, **d**), a także znajdują się specyfikacja dokładności — na przykład `%04.d`— **0** jest ignorowana. Jeśli **0** określono **a** lub **A** format liczb zmiennoprzecinkowych zera wiodące jest dołączany na początku mantysa, po `0x` lub `0X` prefiks.|Nie dopełnienie.|
+|**0**|Jeśli *szerokość* jest poprzedzony **0**, początkowego znaku są dodawane zera, aż do osiągnięcia minimalnej szerokości. Jeśli oba **0** i **-** są wyświetlane, **0** jest ignorowana. Jeśli **0** określono format liczby całkowitej (**i**, **u**, **x**, **X**, **o**, **d**), a także znajdują się specyfikacja dokładności — na przykład `%04.d`— **0** jest ignorowana. Jeśli **0** określono **a** lub **A** format liczb zmiennoprzecinkowych zera wiodące jest dołączany na początku mantysa, po `0x` lub `0X` prefiks.|Nie dopełnienie.|
 |**puste** ("")|Użyj pustego jako prefiks wartość wyjściowa, jeśli jest on podpisany i dodatnią. Pusty jest ignorowana, jeśli obie pustym i + flagi pojawiają się.|Pojawi się puste.|
 |**#**|Gdy jest używana z **o**, **x**, lub **X** format  **#**  Flaga używa 0, 0 x, lub 0 X, odpowiednio do prefiksu any różną od zera Wartość wyjściowa.|Pojawi się puste.|
 ||Gdy jest używana z **e**, **E**, **f**, **F**, **a** lub **A** Format,  **#**  flaga wymusza wartość wyjściowa zawiera separatorem dziesiętnym.|Dziesiętnego jest wyświetlana tylko wtedy, gdy cyfry po nim.|
@@ -170,7 +171,7 @@ Jeśli specyfikacja dokładności jest znak gwiazdki (\*), `int` argumentu z lis
 
 |Typ|Znaczenie|Domyślny|
 |----------|-------------|-------------|
-|**a**, **A**|Dokładność określa liczbę cyfr po punkcie.|Domyślna dokładność to 13. Jeśli dokładności ma wartość 0, chyba że drukowania dziesiętnego nie  **#**  flaga jest wykorzystywana.|
+|****, **A**|Dokładność określa liczbę cyfr po punkcie.|Domyślna dokładność to 13. Jeśli dokładności ma wartość 0, chyba że drukowania dziesiętnego nie  **#**  flaga jest wykorzystywana.|
 |**c**, **C**|Dokładność nie ma znaczenia.|Znak jest drukowana.|
 |**d**, **i**, **o**, **u**, **x**, **X**|Dokładność określa minimalną liczbę cyfr ma być drukowana. Jeśli liczba cyfr w argumencie jest mniejsza niż *dokładności*, wartość wyjściowa jest uzupełniana na zerami z lewej strony. Wartość nie zostanie obcięta podczas przekracza liczbę miejsc po przecinku *dokładności*.|Dokładność domyślna to 1.|
 |**e**, **E**|Dokładność określa liczbę miejsc po przecinku do wydrukowania po punkcie dziesiętnym. Ostatnia cyfra drukowanych jest zaokrąglana.|Dokładność domyślna to 6. Jeśli *dokładności* ma wartość 0 lub kropki (.) pojawi się bez numer, drukowania nie separatorem dziesiętnym.|
@@ -195,7 +196,7 @@ Niektóre typy są różne rozmiary w kodzie 32-bitowe i 64-bitowych. Na przykł
 |`__int32`<br />`unsigned __int32`|**I32**|**d**, **i**, **o**, **u**, **x**, lub **X**|
 |`__int64`<br />`unsigned __int64`|**KOMPUTERACH 64**|**d**, **i**, **o**, **u**, **x**, lub **X**|
 |`intmax_t`<br />`uintmax_t`|**j** lub **komputerach 64**|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|`long double`|**l** (małe litery L) lub **L**|**a**, **A**, **e**, **E**, **f**, **F**, **g**, lub **G**|
+|`long double`|**l** (małe litery L) lub **L**|****, **A**, **e**, **E**, **f**, **F**, **g**, lub **G**|
 |`long int`<br />`long unsigned int`|**l** (małe litery L)|**d**, **i**, **o**, **u**, **x**, lub **X**|
 |`long long int`<br />`unsigned long long int`|**Wszystki** (małe litery LL)|**d**, **i**, **o**, **u**, **x**, lub **X**|
 |`ptrdiff_t`|**t** lub **I** (wielkie i)|**d**, **i**, **o**, **u**, **x**, lub **X**|
@@ -217,6 +218,6 @@ W programie Visual C++ mimo że `long double` jest typem różne składa się z 
 
 ## <a name="see-also"></a>Zobacz też
 
-[printf, _printf_l —, wprintf, _wprintf_l —](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
-[printf_s —, _printf_s_l —, wprintf_s — _wprintf_s_l —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
-[printf_p parametry pozycyjne](../c-runtime-library/printf-p-positional-parameters.md)  
+[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
+[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
+[printf_p Parametry pozycyjne](../c-runtime-library/printf-p-positional-parameters.md)  
