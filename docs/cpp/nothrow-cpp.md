@@ -1,7 +1,7 @@
 ---
 title: nothrow (C++) | Dokumentacja firmy Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/03/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-language
@@ -13,45 +13,50 @@ helpviewer_keywords:
 - __declspec keyword [C++], nothrow
 - nothrow __declspec keyword
 ms.assetid: 0a475139-459c-4ec6-99e8-7ecd0d7f44a3
-caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a6200a8207fdf25b533c7db7e05247797592744e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e0f5f40fbcfcb95952fd956060801e862e9cdaf
+ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
-**Dotyczące firmy Microsoft**  
-  
- A `__declspec` rozszerzonych atrybutów, które mogą być używane w deklaracji funkcji.  
-  
+
+**Microsoft Specific**
+
+A `__declspec` rozszerzonych atrybutów, które mogą być używane w deklaracji funkcji.
+
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-return-type __declspec(nothrow) [call-convention] function-name ([argument-list])  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ten atrybut informuje kompilator, że zadeklarowanej funkcji i funkcji wywoływanych przez nią nigdy nie zgłoszenia wyjątku. Z wyjątkiem synchroniczne obsługi modelu, a teraz domyślne, kompilator można wyeliminować mechanika śledzenia okres istnienia niektórych obiektów unwindable w tych funkcji i znacznie zmniejszyć rozmiar kodu. Biorąc pod uwagę następujące dyrektywy preprocesora, deklaracje funkcji trzy poniżej są równoważne:  
-  
-```  
-#define WINAPI __declspec(nothrow) __stdcall   
-  
-void WINAPI f1();  
-void __declspec(nothrow) __stdcall f2();  
-void __stdcall f3() throw();  
-```  
-  
- Przy użyciu `void __declspec(nothrow) __stdcall f2();` ma tę zaletę, które umożliwiają definicji interfejsu API, takim jak pokazano `#define` instrukcji, aby łatwo określić `nothrow` na zestaw funkcji. Trzeci deklaracji`, void __stdcall f3() throw();` jest składnia zdefiniowanych przez C++ standard.  
-  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [__declspec](../cpp/declspec.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+> *zwracanego typu* __declspec(nothrow) [*konwencji wywołania*] *nazwy funkcji* ([*listy argumentów*])
+
+## <a name="remarks"></a>Uwagi
+
+Zalecane jest użycie wszystkich nowy kod [noexcept](noexcept-cpp.md) operator zamiast `__declspec(nothrow)`.
+
+Ten atrybut informuje kompilator, że zadeklarowanej funkcji i funkcji wywoływanych przez nią nigdy nie zgłoszenia wyjątku. Jednak nie wymusza dyrektywy. Innymi słowy, nigdy nie powoduje [std::terminate](../standard-library/exception-functions.md#terminate) do wywołania, w odróżnieniu od `noexcept`, lub w **std:c ++ 17** trybu (Visual Studio 2017 wersji 15.5 i nowszych), `throw()`.
+
+Z wyjątkiem synchroniczne obsługi modelu, a teraz domyślne, kompilator można wyeliminować mechanika śledzenia okres istnienia niektórych obiektów unwindable w tych funkcji i znacznie zmniejszyć rozmiar kodu. Biorąc pod uwagę następujące dyrektywy preprocesora, deklaracje funkcji trzy poniżej są równoważne w **/std:c ++ 14** tryb:
+
+```cpp
+#define WINAPI __declspec(nothrow) __stdcall
+
+void WINAPI f1();
+void __declspec(nothrow) __stdcall f2();
+void __stdcall f3() throw();
+```
+
+W **/std:c ++ 17** trybie `throw()` nie jest odpowiednikiem korzystających z innych `__declspec(nothrow)` ponieważ powoduje ona `std::terminate` do wywołania, jeśli funkcja jest zgłaszany wyjątek.
+
+`void __stdcall f3() throw();` Deklaracji używa składni zdefiniowanych przez C++ standard. W języku C ++ 17 `throw()` — słowo kluczowe została uznana za przestarzałą.
+
+**KOŃCOWY określonych firmy Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[__declspec](../cpp/declspec.md)  
+[noexcept](noexcept-cpp.md)  
+[Słowa kluczowe](../cpp/keywords-cpp.md)  

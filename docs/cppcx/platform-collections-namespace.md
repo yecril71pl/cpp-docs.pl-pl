@@ -16,27 +16,27 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 0c328ebbaa18ad318981a63c717cafd614bc1521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a93282a233f98d7a384d1fdad2ba6ca862e9e3f2
+ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections Namespace
-Przestrzeń nazw Platform::Collection zawiera `Map`, `MapView`, `Vector`, i `VectorView` klasy. Te klasy są konkretnych implementacje odpowiednie interfejsy, które są zdefiniowane w [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) przestrzeni nazw. Typy kolekcji konkretnych nie są przenośny między ABI (na przykład gdy Javascript lub program wywołuje składnik C++ C#), ale są one niejawnego jako odpowiednie typy interfejsu. Na przykład, jeśli należy zaimplementować metodę publiczną, która wypełnia i zwraca kolekcję, użyj [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) do zaimplementowania wewnętrznie zbierania i użycia [Windows::Foundation::Collections: : IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) jako typ zwracany. Aby uzyskać więcej informacji, zobacz [kolekcje](../cppcx/collections-c-cx.md) i [tworzenia składników środowiska wykonawczego systemu Windows w języku C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md).  
+Przestrzeń nazw Platform::Collections zawiera `Map`, `MapView`, `Vector`, i `VectorView` klasy. Te klasy są konkretnych implementacje odpowiednie interfejsy, które są zdefiniowane w [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) przestrzeni nazw. Typy kolekcji konkretnych nie są przenośny między ABI (na przykład gdy Javascript lub program wywołuje składnik C++ C#), ale są one niejawnego jako odpowiednie typy interfejsu. Na przykład, jeśli należy zaimplementować metodę publiczną, która wypełnia i zwraca kolekcję, użyj [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) do zaimplementowania wewnętrznie zbierania i użycia [Windows::Foundation::Collections: : IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) jako typ zwracany. Aby uzyskać więcej informacji, zobacz [kolekcje](../cppcx/collections-c-cx.md) i [tworzenia składników środowiska wykonawczego systemu Windows w języku C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md).  
   
  Można utworzyć Platform::Collections::Vector z [std::vector](../standard-library/vector-class.md) i [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) z [std::map](../standard-library/map-class.md).  
   
- Ponadto Platform::Collection przestrzeń nazw zapewnia obsługę insert Wstecz i wejściowych Iteratory i `Vector` i `VectorView` Iteratory.  
+ Ponadto Platform::Collections przestrzeń nazw zapewnia obsługę insert Wstecz i wejściowych Iteratory i `Vector` i `VectorView` Iteratory.  
   
- Należy uwzględnić (`#include`) Użyj typów w przestrzeni nazw Platform::Collection nagłówek collection.h.  
+ Należy uwzględnić (`#include`) Użyj typów w przestrzeni nazw Platform::Collections nagłówek collection.h.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
   
 #include <collection.h>  
-using namespace Platform::Collection;  
+using namespace Platform::Collections;  
 ```  
   
 ### <a name="members"></a>Elementy członkowskie  
