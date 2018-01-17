@@ -20,11 +20,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 86b12604a5348c3a1aabb33c7e13a4e7a3c57932
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="zc-conformance"></a>/Zc (Zgodność)
 
@@ -43,16 +43,17 @@ Są to `/Zc` — opcje kompilatora:
 |Opcja|Zachowanie|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Włączanie języka C ++ 17 nadmiernie wyrównany dynamicznej alokacji (domyślnie włączone w języku C ++ 17).|
-|[Automatycznie\[-\]](zc-auto-deduce-variable-type.md)|Wymuszaj nowe znaczenie standardu C++ dla `auto` (na domyślnie).|
+|[auto\[-\]](zc-auto-deduce-variable-type.md)|Wymuszaj nowe znaczenie standardu C++ dla `auto` (na domyślnie).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Włącz połączenie zewnętrzne dla `constexpr` zmienne (domyślnie wyłączone).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Wymuszaj Standard C++ `for` reguł ustawiania zakresu (na domyślnie).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Włącz niejawny `noexcept` dla funkcji wymaganych (na domyślnie).|
-|[wbudowany\[-\]](zc-inline-remove-unreferenced-comdat.md)|Usuń nieużywane funkcję lub dane, jeśli jest COMDAT lub zawierają tylko powiązanie wewnętrzne (domyślnie wyłączone).|
+|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Usuń nieużywane funkcję lub dane, jeśli jest COMDAT lub zawierają tylko powiązanie wewnętrzne (domyślnie wyłączone).|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|Wymuś reguły 17 noexcept C ++ (na domyślnie w języku C ++ 17 lub nowszej).|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|Tymczasowe UDT nie zostanie powiązana z odwołania do wartości innej niż stała (domyślnie wyłączone).|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Wymuś reguły konwersji typu jawnego Standard C++ (domyślnie wyłączone).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|Włącz funkcje 14 globalnego cofania alokacji o rozmiarze C ++ (na domyślnie).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Wyłącz literał ciągu do `char*` lub `wchar_t*` konwersji (domyślnie wyłączone).|
+|[trzyargumentowe\[-\]](zc-ternary.md)|Operator warunkowy zasady na typy argumentów operacji (domyślnie wyłączone).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Włącz wątkowo lokalnego Inicjowanie statyczne (w domyślnym).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Załóżmy `operator new` zgłoszenie błędu (domyślnie wyłączone).|
 |[trigramów\[-\]](zc-trigraphs-trigraphs-substitution.md)|Włącz trigramów (przestarzałe, wyłącz domyślnie).|

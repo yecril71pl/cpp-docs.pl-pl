@@ -18,11 +18,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 90ff6d2be6174f32d7d93252ebd8b693b422076d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ ograniczająca-(standardów zgodność)
 
@@ -42,7 +42,7 @@ Domyślnie **/ ograniczająca-** opcja jest ustawiona w nowych projektach utworz
 
 **/ Ograniczająca-** opcję zestawy [/Zc: strictstrings](../../build/reference/zc-conformance.md) i [/Zc: rvaluecast](../../build/reference/zc-conformance.md) opcje do zachowania zgodności. One domyślne zachowanie niezgodnych. Można przekazać określonego **/Zc** opcje po **/ ograniczająca-** w wierszu polecenia, aby zmienić to zachowanie.
 
-W wersji kompilatora, począwszy od programu Visual Studio 2017 wersji 15 ustęp 3 **/ ograniczająca-** opcję zestawy **/Zc:ternary** opcji. Kompilator implementuje więcej wymagania dotyczące dwufazowego nazwę wyszukiwania. Gdy **/ ograniczająca-** jest ustawiona opcja, kompilator analizuje funkcji i klasa definicje szablonów identyfikacji nazwy zależne i zależne od innych niż używane w szablonach. W tej wersji odbywa się tylko nazwa analizy zależności.
+W wersji kompilatora, począwszy od programu Visual Studio 2017 wersji 15 ustęp 3 **/ ograniczająca-** opcję zestawy [/Zc:ternary](../../build/reference/zc-ternary.md) opcji. Kompilator implementuje więcej wymagania dotyczące dwufazowego nazwę wyszukiwania. Gdy **/ ograniczająca-** jest ustawiona opcja, kompilator analizuje funkcji i klasa definicje szablonów identyfikacji nazwy zależne i zależne od innych niż używane w szablonach. W tej wersji odbywa się tylko nazwa analizy zależności.
 
 Rozszerzenia określonego środowiska i obszary języka standardowego pozostawia do wykonania nie dotyczy **/ ograniczająca-**. Na przykład specyficzne dla firmy Microsoft `__declspec`, konwencja wywołania i wyjątków strukturalnych obsługi słów kluczowych i dyrektywy pragma specyficznych dla kompilatora lub atrybutów nie są oznaczone za pomocą kompilatora w **/ ograniczająca-** tryb.
 
