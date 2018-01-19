@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: ffad61c015c38d808b35ebffd98f74733d0997de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4fc8bbc3a983e6fa50e4ae5e8590e1f1de37f02f
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="containers-modern-c"></a>Kontenery (Modern C++)  
   
@@ -41,7 +41,7 @@ W razie potrzeby optymalizacji wydajności wziąć pod uwagę:
   
 1.  [Tablicy](../standard-library/array-class-stl.md) wpisz podczas osadzania jest ważne, na przykład jako element członkowski klasy.  
   
-2.  Nieuporządkowane asocjacyjnej kontenerów, takich jak [unordered_map] ((.. /Standard-Library/unordered-map-Class.MD). Mają one element niższe obciążenie i stała czas wyszukiwania, ale może być trudniejsza umożliwia prawidłowe i efektywne.  
+2.  Nieuporządkowane asocjacyjnej kontenerów, takich jak [unordered_map](../standard-library/unordered-map-class.md). Mają one element niższe obciążenie i stała czas wyszukiwania, ale może być trudniejsza umożliwia prawidłowe i efektywne.  
   
 3.  Sortowane `vector`. Aby uzyskać więcej informacji, zobacz [algorytmy](../cpp/algorithms-modern-cpp.md).  
   

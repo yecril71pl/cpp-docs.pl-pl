@@ -1,9 +1,6 @@
 ---
 title: "Jak zgłosić Problem z zestawu narzędzi programu Visual C++ | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 1/03/2018
-ms.reviewer: 
-ms.suite: 
+ms.date: 1/11/2018
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,31 +9,31 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Jak zgłosić Problem z zestawu narzędzi programu Visual C++
 
-Jeśli wystąpią problemy z kompilatora Visual C++, konsolidatora lub innych narzędzi, chcemy się dowiedzieć się o nich.
+Jeśli wystąpią problemy z kompilatora Visual C++, konsolidatora, lub inne narzędzia i biblioteki chcemy się dowiedzieć się o nich.
 
-Najlepszy sposób, aby poinformować nas o problemie jest aby wysłać nam raport zawierający opis problemu, który został napotkany szczegółowe informacje dotyczące sposobu tworzysz programu, a niektóre kodu, który możemy użyć do odtworzenia problemu na własnych maszynach. Te informacje ułatwiają szybko sprawdzić, czy problem istnieje i nie jest lokalny dla danego środowiska, określić, czy ma to wpływ na inne wersje kompilatora i zdiagnozować jego przyczyna.
+Najlepszy sposób, aby poinformować nas o problemie jest aby wysłać nam raport zawierający opis problemu został napotkany szczegółowe informacje o, jak w przypadku tworzenia programu, a *reprodukcja*, pełną przypadek testowy, możemy użyć do odtworzenia problem na własnych maszynach. Te informacje ułatwiają szybko sprawdzić, czy problem istnieje w naszym kodzie i nie jest lokalny dla danego środowiska, aby ustalić, czy ma to wpływ na inne wersje kompilatora i zdiagnozować jego przyczyna.
 
 W tym dokumencie będzie temat
 
-- [Jak przygotować raport](#prepare), i co sprawia, że dobrej raportu.
+- [Jak przygotować raport](#how-to-prepare-your-report), i co sprawia, że dobrej raportu.
 
-- [Sposób generowania reprodukcja](#generate)oraz różne rodzaje reprodukcje.
+- [Sposób generowania reprodukcja](#how-to-generate-a-repro)oraz różne rodzaje reprodukcje.
 
-- [Sposoby wysyłania raportu](#send), i co sprawia, że ich inną.
+- [Sposoby wysyłania raportu](#ways-to-send-your-report), i co sprawia, że ich inną.
 
 Raporty są ważne dla nas i innymi deweloperami jak. Dziękujemy za pomoc nam w ulepszeniu programu Visual C++!
 
-## <a name="prepare"></a>Jak przygotować raport
+## <a name="how-to-prepare-your-report"></a>Jak przygotować raport
 
-Tworzenie raportu wysokiej jakości ważne jest, ponieważ jego bardzo trudne do odtworzenia problemu napotkał na własnych maszynach bez pełne informacje. Jest raport lepsze, im bardziej efektywnie jesteśmy stanie Utwórz i zdiagnozować problem.
+Tworzenie raportu wysokiej jakości jest ważne, ponieważ jest bardzo trudne do odtworzenia problemu, który napotkał na własnych maszynach bez pełne informacje. Jest raport lepsze, im bardziej efektywnie jesteśmy stanie Utwórz i zdiagnozować problem.
 
 Co najmniej powinna zawierać raportu
 
@@ -46,58 +43,45 @@ Co najmniej powinna zawierać raportu
 
 - Szczegółowy opis napotkany problem.
 
-- Reprodukcja: źródła kodu, który demonstruje problem.
+- Reprodukcja: przykładowego kodu źródłowego pełną, uproszczona, niezależna demonstrujący problem.
 
-W dalszej dowiedzieć się więcej o konkretnych informacji możemy potrzeby i gdzie go znaleźć.
+W dalszej Dowiedz się więcej o konkretnych informacji, musimy i gdzie można znaleźć, a także tworzenie dobrej reprodukcja.
 
 ### <a name="the-toolset-version"></a>Wersja zestawu narzędzi
 
-Potrzebujemy informacji pełnej wersji zestawu narzędzi używanego tak, aby Twoje reprodukcja względem tego samego zestawu narzędzi można było przetestować na naszych maszyny. Jeśli firma Microsoft może odtworzyć problem, te informacje udostępnia także punkt wyjścia do badania które inne wersje zestawu narzędzi zawiera ten sam problem.
+Potrzebujemy informacji pełnej wersji i Architektura docelowa zestawu narzędzi przyczyną problemu, aby Twoje reprodukcja względem tego samego zestawu narzędzi można było przetestować na naszych maszyny. Jeśli firma Microsoft może odtworzyć problem, te informacje udostępnia także punkt wyjścia do badania które inne wersje zestawu narzędzi zawiera ten sam problem.
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Do pełnej wersji kompilatora, którego używasz raportu
 
-1. Na klawiaturze naciśnij klawisz systemu Windows i rozpocznij wpisywanie `Developer Command Prompt`.
+1. Otwórz **wiersza polecenia dewelopera** odpowiadającego architektura konfiguracji i wersji programu Visual Studio używany do tworzenia projektu. Na przykład w przypadku tworzenia przy użyciu programu Visual Studio 2017 na x64 x64 wybierz elementy docelowe, **x64 natywnego narzędzia wiersza polecenia VS 2017**. Aby uzyskać więcej informacji, zobacz [skrótów wiersza polecenia dewelopera](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
 
-1. Wybierz **wiersza polecenia dewelopera** zgodna z wersją programu Visual Studio używanej wersji pojawiają się w listy dopasowań.
-
-1. W **wiersza polecenia dewelopera** konsoli, wpisz polecenie `cl /Bv /CLR`.
+1. W oknie konsoli dewelopera wiersza polecenia, wpisz polecenie **cl**.
 
 Dane wyjściowe powinny wyglądać podobnie do poniższego:
 
 ```Output
-C:\Compiler>cl /Bv /CLR
-Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40209
-for Microsoft (R) .NET Framework version 4.00.30319.34014
+C:\Users\username\Source>cl
+Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-Compiler Passes:
- C:\WinCComp\binaries.x86chk\bin\i386\cl.exe:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c1.dll:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c1xx.dll:      Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c2.dll:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\link.exe:      Version 12.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\mspdb120.dll:  Version 12.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\1033\clui.dll: Version 18.00.40209.0
- Common Language Runtime:                            Version  4.00.30319.34014
-
-cl : Command line error D8003 : missing source filename
+usage: cl [ option... ] filename... [ /link linkoption... ]
 ```
 
 Skopiuj i Wklej całego dokumentu w raporcie.
 
 ### <a name="the-command-line"></a>W wierszu polecenia
 
-Potrzebujemy pełny wiersz polecenia (cl.exe i argumenty) używany do tworzenia kodu, dzięki czemu można oprzemy się go w taki sam sposób na naszych maszyny. Jest to ważne, ponieważ został napotkany problem może istnieć tylko podczas kompilowania z określonego argumentu lub kombinacja argumentów.
+Potrzebujemy dokładny wiersz polecenia (cl.exe i wszystkie argumenty) używany do tworzenia kodu, dzięki czemu można oprzemy się go w taki sam sposób na naszych maszyny. Jest to ważne, ponieważ został napotkany problem może istnieć tylko podczas kompilowania z określonego argumentu lub kombinacja argumentów.
 
 Dziennik kompilacji jest najlepszym miejscem, aby znaleźć te informacje bezpośrednio po ten problem. Dzięki temu, że wiersz polecenia zawiera dokładnie te same argumenty, które mogą przyczyniać się do problemu.
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Aby zgłosić zawartość wiersza polecenia
 
-1. Zlokalizuj **CL.command.1.tlog** pliku i otwórz go. Domyślnie ten plik znajduje się w \\...\Visual Studio *wersji*\Projects\\*Nazwa rozwiązania*\\*ProjectName*\ Config\\*ProjectName*.tlog\CL.command.1.tlog.
+1. Zlokalizuj **CL.command.1.tlog** pliku i otwórz go. Domyślnie ten plik znajduje się w folderze dokumenty w \\programu Visual Studio *wersji*\\projekty\\*Nazwa rozwiązania* \\ *ProjectName*\\*konfiguracji*\\*ProjectName*.tlog\\CL.command.1.tlog, lub w folderze użytkownika w obszarze \\Źródła\\repozytoriów\\*Nazwa rozwiązania*\\*ProjectName*\\*konfiguracji* \\ *ProjectName*.tlog\\CL.command.1.tlog. Jeśli używasz innej system kompilacji lub zmiana domyślnej lokalizacji dla projektu może być w innej lokalizacji.
 
    Wewnątrz tego pliku znajdują się nazwy plików kodu źródłowego, a następnie używana do kompilowania nimi w osobnych wierszach argumenty wiersza polecenia.
 
-1. Odszukaj wiersz, który zawiera nazwę pliku źródła kodu, w którym występuje problem; wiersz poniżej zawiera odpowiednie polecenie cl.exe i jego argumenty.
+1. Odszukaj wiersz, który zawiera nazwę pliku źródła kodu, w którym występuje problem; wiersz poniżej zawiera odpowiednie argumenty polecenia cl.exe.
 
 Skopiuj i Wklej pełny wiersz polecenia w raporcie.
 
@@ -105,18 +89,37 @@ Skopiuj i Wklej pełny wiersz polecenia w raporcie.
 
 Potrzebujemy, aby uzyskać szczegółowy opis problemu, który został napotkano, dzięki czemu można sprawdzić, czy widzimy ten sam efekt na naszych maszyny; jego również czasami przydatne firmie Microsoft w celu próbowano wykonać, a oczekiwano niepożądane.
 
-Podaj dokładne komunikaty przez zestaw narzędzi, krótki opis próbowano wykonać, aby pomóc nam poznać kod reprodukcja i inne szczegółowe informacje, które mogą pomóc nam zdiagnozować problem wystąpił, takich jak dowolnego obejścia możesz może mieć znaleziono. Należy unikać powtarzania informacje znajdujące się w innym miejscu w raporcie.
+Podaj dokładny komunikaty o błędach podane przez zestaw narzędzi lub dokładną działanie że zostaną wyświetlone. Potrzebujemy tych informacji, aby sprawdzić, czy możemy zostały prawidłowo odtworzyć problem. Dołącz wszystkie dane wyjściowe kompilatora, nie tylko ostatni komunikat o błędzie. Potrzebujemy wyświetlić wszystkie elementy, które doprowadziły do problemu, który można raportować. Jeśli ten problem można duplikować przy użyciu kompilatora wiersza polecenia, że dane wyjściowe kompilatora jest preferowana; IDE i innych systemów kompilacji mogą filtrować komunikaty o błędach Zobacz lub przechwytywać tylko pierwszego wiersza komunikatu o błędzie.
+
+Jeśli problem jest, że kompilator akceptuje nieprawidłowy kod i nie generuje diagnostyki, zwróć uwagę na to w raporcie.
+
+Aby zgłosić problem zachowanie środowiska uruchomieniowego obejmują dokładną kopię program drukuje i powinny być widoczne. Najlepiej, jeśli to jest osadzony w danych wyjściowych instrukcji, na przykład `printf("This should be 5: %d\n", actual_result);`. Jeśli program ulegnie awarii, zawiesza się mówią, że również.
+
+Dodaj inne szczegóły, które mogą pomóc nam zdiagnozować problem, który wystąpił, takich jak dowolnego obejść znalezionego może. Należy unikać powtarzania informacje znajdujące się w innym miejscu w raporcie.
 
 ### <a name="the-repro"></a>Reprodukcja
 
-Potrzebujemy *reprodukcja*, przykładowego kodu źródłowego niezależne demonstrujący problem został napotkany, tak, aby firma Microsoft odtwarzania błędu na naszych maszyny. Rodzaju problemy, które wystąpią określi, jakiego rodzaju reprodukcja należy uwzględnić w raporcie. Bez odpowiedniego reprodukcja nie mamy nic do badania.
+Reprodukcja podano przykładowy kod źródłowy kompletny, niezależny odtwarzalnie demonstrujący problem już wystąpił (stąd nazwa). Potrzebujemy reprodukcja, dzięki czemu możemy odtwarzania błędu na naszych maszyny. Kod powinien być wystarczające samodzielnie utworzyć prosty plik wykonywalny, który kompiluje i uruchamia lub czy skompilować i uruchomić w przeciwnym razie problemu, które zostały znalezione. Reprodukcja nie jest fragment kodu; powinien mieć pełną funkcje i klas i zawiera wszystkie niezbędne # dyrektyw, nawet w przypadku standardowych nagłówków include.
 
-Krótkie, niezależne reprodukcje może obejmować bezpośrednio w tekście raportu, ale większych reprodukcje kod źródłowy musi być podłączona do raportu. Reprodukcje, których nie można zmniejszyć do pliku kodu jednego źródła powinna być opakowane przez kompresowanie katalog zawierający wszystkie pliki do pliku zip lub podobną, a dołączone do raportu. Dodatkowe informacje specyficzne dla scenariusza zawsze powinna być uwzględniane w tekście raportu, nigdy nie w kodzie źródłowym.
+#### <a name="what-makes-a-good-repro"></a>Co sprawia, że reprodukcja dobra
 
-Jest najlepszym rodzaj reprodukcja możesz wysłać nam *minimalnego reprodukcja*. Jest to jeden, niezależny pliku kodu źródłowego (bez odwołania do użytkownika nagłówki) zawierający wystarczającego kod, aby zademonstrować problem. Jeśli podasz reprodukcja tego formularza, do raportu; dołącza pliku kodu źródłowego jego wszystkie potrzebne.
+Dobrym reprodukcja jest:
 
-Jeśli nie można zmniejszyć problemu na minimalnym reprodukcja bez zależności, można znaleźć w poniższych sekcjach, aby określić rodzajem reprodukcja, które powinny być uwzględnione w raporcie.
+- **Minimal.** Reprodukcje powinien być możliwie jak najmniejszy jeszcze nadal pokazują napotkany problem. Reprodukcje musi być złożony lub realistyczne; potrzebna jest tylko do wyświetlenia kodu, który odpowiada standardowej implementacji kompilatorem udokumentowany lub w przypadku braku diagnostycznych, kod, który nie jest zgodna. Najlepiej nadają się proste, aby punkt reprodukcje zawierających wystarczającego kod, aby zademonstrować problem. Jeśli można wyeliminować lub uprościć kod i pozostają zgodność i pozostanie bez zmian problem, należy to zrobić. Nie trzeba przeprowadzać obejmują zaradczych przykłady kodu, który działa. 
 
+- **Self-Contained.** Reprodukcje Unikaj niepotrzebnych zależności. Jeśli można odtworzyć problem bez bibliotek innych firm, należy to zrobić. Jeśli można odtworzyć problem bez dowolny kod biblioteki oprócz instrukcje prosty wyjściowy (na przykład `puts("this shouldn't compile");`, `std::cout << value;`, i `printf("%d\n", value);` zgadzasz), należy to zrobić. Jest idealne rozwiązanie w przykładzie można zmniejszenia do pliku kodu jednego źródła bez odwołania do żadnych nagłówków użytkownika. Zmniejszenie ilości kodu, który mamy można rozważyć jako możliwych współtwórca tego problemu jest enormously NAS.
+
+- **W najnowszej wersji kompilatora.** Reprodukcje należy używać najnowszej aktualizacji do najnowszej wersji zestawu narzędzi lub najnowszej wersji wstępnej Następna aktualizacja lub kolejna główna wersja, jeśli to możliwe. Bardzo często Naprawiono problemów, które mogą wystąpić w starszych wersjach zestawu narzędzi w nowszej wersji. Poprawki są backported do starszych wersji tylko w wyjątkowych okolicznościach.
+
+- **Sprawdza, czy inne kompilatory** w razie potrzeby. Reprodukcje obejmujących przenośnego kodu C++ powinien sprawdzić zachowanie przed inne kompilatory, jeśli to możliwe. Standardowe określa poprawność programu i kompilator nie jest to doskonałe rozwiązanie, ale podczas Clang oraz GCC zaakceptować kodu bez Diagnostyka, a nie jest MSVC, istnieje duże prawdopodobieństwo, patrzy na usterkę w naszym kompilatora. (Inne możliwości obejmują różnic działania systemu Unix i systemu Windows lub różne poziomy implementacji standardów języka C++ i tak dalej). Z drugiej strony wszystkie kompilatory odrzucenia kodu, następnie jest prawdopodobne, że kod jest nieprawidłowa. Wyświetlanie różnych komunikatów o błędach mogą pomóc zdiagnozować problem samodzielnie.
+
+   Można znaleźć listy online kompilatory do testowania kodu przed w [kompilatory Online C++](https://isocpp.org/blog/2013/01/online-c-compilers) ISO C++ witryny sieci Web lub to wyselekcjonowanych [listy kompilatory C++ Online](https://arnemertz.github.io/online-compilers/) w witrynie GitHub. Oto kilka przykładów obejmują [Wandbox](https://wandbox.org/), [Explorer kompilatora](https://godbolt.org/), i [Coliru](http://coliru.stacked-crooked.com/). 
+
+   > [!NOTE]
+   > Kompilator online witryny sieci Web nie są powiązane z firmą Microsoft. Wiele witryn sieci Web online kompilatora są uruchamiane jako osobiste projektów, a niektóre z tych witrynach mogą być niedostępne po to odczytu, ale wyszukiwania stwierdzi, że inne osoby, których można używać.
+
+Problemy z kompilatora, konsolidatora i w bibliotekach, często pojawiają się w szczególności sposobów. Rodzaju problemy, które wystąpią określi, jakiego rodzaju reprodukcja należy uwzględnić w raporcie. Bez odpowiedniego reprodukcja nie mamy nic do badania. Poniżej przedstawiono niektóre rodzaje problemów, które mogą zobaczyć i instrukcje dotyczące generowania rodzaje reprodukcje musi być używane do zgłaszania każdego rodzaju problemów.
+ 
 #### <a name="frontend-parser-crash"></a>Awaria serwera sieci Web (analizator)
 
 Awarie frontonu wystąpić podczas fazy analizy kompilatora. Zazwyczaj kompilator będzie emitować [krytyczny błąd C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) i referencyjne źródła plików i wierszy kod na którym wystąpił błąd; często zaznaczyć msc1.cpp pliku, ale możesz zignorować ten szczegółów.
@@ -144,13 +147,13 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information
 ```
 
-#### <a name="backend_crash"></a>Awaria wewnętrznej bazy danych (generowania kodu)
+#### <a name="backend-code-generation-crash"></a>Awaria wewnętrznej bazy danych (generowania kodu)
 
-Występują awarie wewnętrznej bazy danych podczas kodu generowania faza kompilatora. Zazwyczaj kompilator będzie emitować [krytyczny błąd C1001](error-messages/compiler-errors-1/fatal-error-c1001.md)i może nie odwołanie do źródła plików kodu i skojarzone z tym problemem numer wiersza; często zaznaczyć compiler\utc\src\p2\main.c pliku, ale możesz zignorować ten szczegółów.
+Występują awarie wewnętrznej bazy danych podczas kodu generowania faza kompilatora. Zazwyczaj kompilator będzie emitować [krytyczny błąd C1001](error-messages/compiler-errors-1/fatal-error-c1001.md)i nie może być odwoływania się do pliku kodu źródłowego i skojarzone z tym problemem numer wiersza; często zaznaczyć kompilatora pliku\\utc\\src\\p2\\main.c, ale można zignorować ten szczegółów.
 
-Dla tego typu awarii (Crash) podaj [reprodukcja łącze](#link-repros) Jeśli używasz łącza — czas generowania kodu (LTCG) lub na [wstępnie przetworzony reprodukcja](#preprocessed-repros) , jeśli nie. LTGC jest włączana przez `/GL` cl.exe argument wiersza polecenia.
+Dla tego typu awarii (Crash), podaj [reprodukcja łącze](#link-repros) Jeśli używasz łącza — czas generowania kodu (LTCG), są włączane przez **/GL** cl.exe argument wiersza polecenia. Jeśli nie, Dodaj [wstępnie przetworzony reprodukcja](#preprocessed-repros) zamiast tego.
 
-Oto przykładowe dane wyjściowe kompilatora dla tego typu awarii, w którym jest LTCG **nie** używane. Jeśli dane wyjściowe kompilatora wygląda następująco należy zapewnić [wstępnie przetworzony reprodukcja](#preprocessed-repros).
+Oto przykładowe dane wyjściowe kompilatora dla awarii wewnętrznej bazy danych, w którym LTCG nie jest używany. Jeśli dane wyjściowe kompilatora wygląda następująco należy zapewnić [wstępnie przetworzony reprodukcja](#preprocessed-repros).
 
 ```Output
 repro.cpp
@@ -167,14 +170,14 @@ INTERNAL COMPILER ERROR in
     Help menu, or open the Technical Support help file for more information
 ```
 
-Jeśli wiersz, który rozpoczyna się **wewnętrzny błąd KOMPILATORA** wymienia link.exe zamiast cl.exe, LTCG został włączony i powinien zawierać [reprodukcja łącze](#link-repros). Jeśli nie jest on jasne, czy LTCG została włączona w komunikacie o błędzie kompilatora, konieczne może być zbadać dziennika argumenty wiersza polecenia, które zostały skopiowane z kompilacji w poprzednim kroku dla `/GL` argumentu wiersza polecenia.
+Jeśli wiersz, który rozpoczyna się **wewnętrzny błąd KOMPILATORA** wymienia link.exe zamiast cl.exe, LTCG został włączony i powinien zawierać [reprodukcja łącze](#link-repros). Jeśli nie jest on jasne, czy LTCG została włączona w komunikacie o błędzie kompilatora, konieczne może być zbadać dziennika argumenty wiersza polecenia, które zostały skopiowane z kompilacji w poprzednim kroku dla **/GL** argumentu wiersza polecenia.
 
 #### <a name="linker-crash"></a>Awaria konsolidatora
 
 Awarie konsolidatora występują w fazie połączeń, po uruchomieniu przez kompilator. Zazwyczaj będzie emitować konsolidator [błąd narzędzi konsolidatora LNK1000](error-messages/tool-errors/linker-tools-error-lnk1000.md).
 
 > [!NOTE]
-> Jeśli dane wyjściowe wymienia C1001 lub obejmuje generowanie kodu w czasie konsolidacji, zapoznaj się [awarii wewnętrznej bazy danych (generowania kodu)](#backend_crash) zamiast niego uzyskać więcej informacji.
+> Jeśli dane wyjściowe wymienia C1001 lub obejmuje generowanie kodu w czasie konsolidacji, zapoznaj się [awarii wewnętrznej bazy danych (generowania kodu)](#backend-code-generation-crash) zamiast niego uzyskać więcej informacji.
 
 Dla tego typu awarii (Crash), podaj [reprodukcja łącze](#link-repros).
 
@@ -212,88 +215,80 @@ CONTEXT:
   Dr2    = 0000000000000000  Dr7    = 0000000000000000
 ```
 
-Jeśli konsolidowania przyrostowego jest włączona i awarii wystąpił tylko po początkowej łączenie (oznacza to, że tylko po pierwszym pełnej konsolidacji jest oparty kolejnych konsolidowania przyrostowego) również Podaj kopię obiektu (.obj) i biblioteki plików (lib), które odpowiadają do plików źródłowych, które zostały zmodyfikowane po początkowej połączenie zostało zakończone.
+Jeśli konsolidowania przyrostowego jest włączona i awarii wystąpił dopiero po pomyślnym łącze początkowej, (oznacza to, że tylko po pierwszym pełnej konsolidacji jest oparty kolejnych konsolidowania przyrostowego) Podaj również kopię obiektu (.obj) i pliki biblioteki (lib) odpowiadają plików źródłowych, które zostały zmodyfikowane po początkowej łącze zostało ukończone.
 
 #### <a name="bad-code-generation"></a>Wygenerowanie złego kodu
 
-Wygenerowanie złego kodu jest rzadko, ale występuje, gdy kompilator generuje przez pomyłkę niepoprawny kod, który spowoduje, że aplikacja do awarii na środowisko uruchomieniowe nie wykrycia tego problemu w czasie kompilacji. Jeśli podejrzewasz problem występuje wyniki w wygenerowanie złego kodu, raport będzie traktowany takie same [awarii wewnętrznej bazy danych (generowania kodu)](#backend_crash).
+Wygenerowanie złego kodu jest rzadko, ale występuje, gdy kompilator generuje przez pomyłkę niepoprawny kod, który spowoduje, że aplikacja do awarii na środowisko uruchomieniowe nie wykrycia tego problemu w czasie kompilacji. Jeśli podejrzewasz problem występuje wyniki w wygenerowanie złego kodu, raport będzie traktowany takie same [awarii wewnętrznej bazy danych (generowania kodu)](#backend-code-generation-crash).
 
-Dla tego typu awarii (Crash) podaj [reprodukcja łącze](#link-repros) Jeśli używasz łącza — czas generowania kodu (LTCG) lub na [wstępnie przetworzony reprodukcja](#preprocessed-repros) , jeśli nie. LTGC jest włączana przez `/GL` cl.exe argument wiersza polecenia.
+Dla tego typu awarii (Crash) podaj [reprodukcja łącze](#link-repros) korzystając z łącza — czas generowania kodu (LTCG), są włączane przez **/GL** cl.exe argument wiersza polecenia. Podaj [wstępnie przetworzony reprodukcja](#preprocessed-repros) , jeśli nie.
 
-## <a name="generate"></a>Generowanie reprodukcja
+## <a name="how-to-generate-a-repro"></a>Sposób generowania reprodukcja
 
-Reprodukcja podano przykładowy kod kompletny, niezależny, demonstrujący problem, który jest raportowania. Reprodukcja jest **nie** fragment kodu; musi być z pełnym przykładem kompiluje i uruchamia (lub czy, z wyjątkiem utworzonego przez problem w przypadku raportowania błędów). Ta lista powinna zawierać wszystkie niezbędne # dyrektyw, nawet w przypadku standardowych nagłówków include.
-
-Ponadto jest dobrym reprodukcja
-
-- **Minimalny.** Reprodukcje powinna być możliwie jak najmniejszy podczas nadal prezentacja napotkany problem. Reprodukcje musi być złożony lub realistyczne; proste, aby punkt reprodukcje są lepsze. Ich nie trzeba podawać zaradczych przykłady kodu, który działa, ale może, jeśli jest opisowy; niezbędne jest tylko przykładowy kod, który powoduje, że problem.
-
-- **Niezależne.** Reprodukcje Unikaj niepotrzebnych zależności. Jeśli można odtworzyć problem bez bibliotek innych firm, należy to zrobić. Czy można odtworzyć problem bez żadnego kodu biblioteki (`std::out`, `printf()` są ok), należy to zrobić. Zmniejszenie ilości kodu, który mamy można rozważyć jako możliwych współtwórca tego problemu jest enormously NAS.
-
-- **W najnowszej wersji kompilatora.** Reprodukcje należy używać najnowszej wersji zestawu narzędzi, jeśli to możliwe. Bardzo często Naprawiono problemów, które nadal mogą wystąpić w starszych wersjach zestawu narzędzi w nowszej wersji.
-
-- **Sprawdza, czy inne kompilatory**, w razie potrzeby. Reprodukcje obejmujących przenośnego kodu C++ powinien sprawdzić zachowanie przed inne kompilatory, jeśli to możliwe.
-
-   Ten krok pozwala określić, czy kod jest prawidłowy, jak kiedy MSVC nie zgadza się z Clang i GCC lub niepoprawne, gdy MSVC, Clang i GCC oświadczasz, że kodu powoduje błąd.
+Aby pomóc nam śledzenie źródło problemu, [reprodukcja dobrej](#what-makes-a-good-repro) jest ważna. Przed wykonaniem tych kroków opisanych poniżej dla określonych rodzajów reprodukcje spróbuj zmniejszyć kod, który demonstruje możliwie problem. Spróbuj wyeliminować lub zminimalizować zależności, wymagane nagłówków i bibliotek i ograniczyć opcje kompilatora i definicje preprocesora używane, jeśli to możliwe.
 
 Poniżej znajdują się instrukcje dotyczące generowania różne rodzaje reprodukcje, które będą używane do raportu różne rodzaje problemów.
 
 ### <a name="preprocessed-repros"></a>Wstępnie przetworzony reprodukcje
 
-Wstępnie przetworzony reprodukcja to plik jednego źródła, który pokazuje problem i został wygenerowany z danych wyjściowych preprocesora C przez przetwarzanie oryginalnego pliku źródłowego. Ten proces inlines dołączany nagłówków, aby usunąć zależności dodatkowe źródła i pliki nagłówkowe i rozwiązuje również makra, #ifdefs i innych poleceń preprocesora, zależne środowisku lokalnym.
+A *wstępnie przetworzony reprodukcja* jest jednym pliku źródłowym demonstrujący problem, wygenerowany z danych wyjściowych preprocesora C za pomocą **/P** dla oryginalnego pliku źródłowego reprodukcja — opcja kompilatora. Tego inlines zawarta nagłówków, aby usunąć zależności dodatkowe źródła i pliki nagłówkowe, a także rozpoznaje makra, #ifdefs i innych poleceń preprocesora, zależne środowisku lokalnym.
 
 > [!NOTE]
-> Należy zauważyć, że wstępnie przetworzonych reprodukcje najmniej wygodny dla problemów, które może być skutkiem błędów w naszym biblioteki standardowej implementacji, ponieważ firma Microsoft będzie często mają zostać podstawione naszych najnowsze, trwa implementacji, aby zobaczyć, czy już problem został rozwiązany problem. W takim przypadku nie Przetwarzaj wstępnie reprodukcja i jeśli problemu nie można zmniejszyć pliku jednego źródła, pakietu kodu do pliku zip lub podobnych lub należy rozważyć użycie reprodukcja projektu IDE (zobacz [inne reprodukcje](#other-repros) poniżej).
+> Wstępnie przetworzony reprodukcje nie są jako przydatne w przypadku problemów, które może być skutkiem błędów w naszym implementacji biblioteki standardowej, ponieważ firma Microsoft będzie często mają zostać podstawione naszych najnowsze, trwa implementacji, aby zobaczyć, czy już problem został rozwiązany problem. W takim przypadku nie Przetwarzaj wstępnie reprodukcja i nie można zmniejszyć problem z plikiem jednego źródła pakietu kodu do pliku zip lub podobne, czy należy rozważyć użycie reprodukcja projektu IDE. Aby uzyskać więcej informacji, zobacz [innych reprodukcje](#other-repros).
 
 #### <a name="to-preprocess-a-source-code-file"></a>Aby przetwarzanie wstępne pliku kodu źródłowego
 
-1. Na klawiaturze naciśnij klawisz systemu Windows i rozpocznij wpisywanie `Developer Command Prompt`.
+1. Przechwyć argumenty wiersza polecenia używany do tworzenia sieci reprodukcja zgodnie z opisem w [zgłoszenia zawartość wiersza polecenia](#to-report-the-contents-of-the-command-line).
 
-1. Wybierz **wiersza polecenia dewelopera** zgodna z wersją programu Visual Studio używanej wersji pojawiają się w listy dopasowań.
+1. Otwórz **wiersza polecenia dewelopera** odpowiadającego architektura konfiguracji i wersji programu Visual Studio używany do tworzenia projektu.
 
-1. W **wiersza polecenia dewelopera** oknie konsoli, wpisz polecenie `cl /P argumentsfilename.cpp`.
+1. Przejdź do katalogu zawierającego reprodukcja projektu.
 
-Po utworzeniu wstępnie przetworzonych plików (teraz filename.i) jest dobrym pomysłem jest upewnij się, że reprodukcje nadal problem przy użyciu wstępnie przetworzonych plików. Można użyć `/TP` argument wiersza polecenia, aby sprawdzić cl.exe Aby pominąć krok preprocesora i spróbuj skompilować w zwykły sposób.
+1. W oknie konsoli dewelopera wiersza polecenia, wpisz polecenie **cl /P** *argumenty* *filename.cpp*, gdzie *argumenty* jest Lista argumentów przechwycić powyżej, i *filename.cpp* to nazwa pliku źródłowego reprodukcja. To polecenie replikuje wiersz polecenia używany do odtworzenia, ale zatrzymuje kompilację po przebiegu preprocesora i danych wyjściowych, aby kod źródłowy wstępnie przetworzonych *filename*. i.
+
+Po wygenerowaniu wstępnie przetworzonych plików jest dobrym pomysłem jest upewnij się, że reprodukcje nadal problem przy użyciu wstępnie przetworzonych plików.
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Aby upewnić się, że błąd nadal reprodukcje z wstępnie przetworzonych plików
 
-1. Na klawiaturze naciśnij klawisz systemu Windows i rozpocznij wpisywanie `Developer Command Prompt`.
-
-1. Wybierz **wiersza polecenia dewelopera** zgodna z wersją programu Visual Studio używanej wersji pojawiają się w listy dopasowań.
-
-1. W **wiersza polecenia dewelopera** oknie konsoli, wpisz polecenie `cl arguments /TP filename.i`.
+1. W oknie konsoli dewelopera wiersza polecenia, wpisz polecenie **cl** *argumenty* **/TP** *filename *** .i** mówić cl.exe do Skompiluj plik wstępnie przetworzonych jako plik źródłowy języka C++, gdzie *argumenty* znajduje się lista argumentów przechwycić powyżej, ale ze wszystkimi **/D** i **/I** argumentów usunięte (ponieważ są one już zawiera plik wstępnie przetworzonych); miejsce i *filename *** .i** jest nazwą pliku wstępnie przetworzony.
 
 1. Upewnij się, że jest odtworzyć problem.
 
-Na koniec należy dołączyć ten reprodukcja do raportu.
+Na koniec dołączyć wstępnie przetworzonych reprodukcja *filename*.i do raportu.
 
 ### <a name="link-repros"></a>Reprodukcje łącza
 
-Reprodukcja łącze jest jeden katalog zawierający artefakty kompilacji, które zbiorczo wskazują problem, który występuje w momencie łącza, takiej jak awaria wewnętrznej bazy danych, w czasie konsolidacji generowania kodu (LTCG) lub awarii konsolidatora; Artefakty kompilacji uwzględnione są potrzebne konsolidatora danych wejściowych, dzięki czemu można odtworzyć problem. Łącze reprodukcje można łatwo utworzyć za pomocą przez konsolidator.
+A *link reprodukcja* jest generowanych przez konsolidator zawartość katalogu określonego przez **łącze\_reprodukcja** zmiennej środowiskowej. Zawiera ona artefaktów kompilacji, które zbiorczo wskazują problem, który występuje w momencie łącza, takie jak awaria wewnętrznej bazy danych obejmujących łącza — czas generowania kodu (LTCG) lub awarii konsolidatora. Tworzenie te artefakty mogą wymaganiom konsolidatora danych wejściowych, dzięki czemu można odtworzyć problem. Reprodukcja łącza mogą być tworzone łatwo za pomocą tej zmiennej środowiskowej, aby włączyć możliwości generowania wbudowanych reprodukcja konsolidator.
 
 #### <a name="to-generate-a-link-repro"></a>Aby wygenerować reprodukcja łącza
 
-1. Otwórz wiersz polecenia, a następnie wprowadź polecenie `mkdir directory` można utworzyć katalogu dla reprodukcja łącza.
+1. Przechwyć argumenty wiersza polecenia używany do tworzenia sieci reprodukcja zgodnie z opisem w [zgłoszenia zawartość wiersza polecenia](#to-report-the-contents-of-the-command-line).
 
-1. Ustaw zmienną środowiskową link_repro do katalogu utworzonego; Wprowadź polecenie `set link_repro=directory`.
+1. Otwórz **wiersza polecenia dewelopera** odpowiadającego architektura konfiguracji i wersji programu Visual Studio używany do tworzenia projektu.
 
-1. Jeśli chcesz wykonać kompilację od w programie Visual Studio, uruchomić go z wiersza polecenia przez wprowadzenie polecenia `devenv`. Dzięki temu, że wartość zmiennej środowiskowej link_repro jest widoczna dla programu Visual Studio.
+1. W oknie konsoli dewelopera wiersza polecenia przejdź do katalogu zawierającego reprodukcja projektu.
 
-1. Tworzenie aplikacji i upewnij się, że wystąpił problem oczekiwanego.
+1. Wprowadź **mkdir linkrepro** można utworzyć katalogu dla reprodukcja łącza.
 
-1. Jeśli zostanie uruchomione w kroku 3 teraz zamknąć program Visual Studio.
+1. Wprowadź polecenie **łącze zestawu\_reprodukcja = linkrepro** można ustawić **łącze\_reprodukcja** zmiennej środowiskowej do katalogu, który został utworzony.
 
-1. Wyczyść zmiennej środowiskowej link_repro; Wprowadź polecenie`set link_repro=`
+1. Aby skompilować projekt reprodukcja w programie Visual Studio, w oknie konsoli dewelopera wiersza polecenia, wpisz polecenie **devenv**. Gwarantuje to, że wartość **łącze\_reprodukcja** zmiennej środowiskowej jest widoczny dla programu Visual Studio. Aby skompilować projekt w wierszu polecenia, użyj przechwycić powyżej mają zostać zduplikowane kompilacji reprodukcja argumenty wiersza polecenia.
 
-Na koniec pakietu reprodukcja przez kompresowanie całego katalogu do pliku zip lub podobne i dołącz je do raportu.
+1. Skompilowanie projektu reprodukcja i upewnij się, że wystąpił problem oczekiwanego.
+
+1. Jeśli używasz do wykonywania kompilacji zamknij program Visual Studio.
+
+1. W oknie konsoli dewelopera wiersza polecenia, wpisz polecenie **łącze zestawu\_reprodukcja =** wyczyść **łącze\_reprodukcja** zmiennej środowiskowej.
+
+Na koniec pakietu reprodukcja przez kompresowanie cały linkrepro katalogu do pliku zip lub podobne i dołącz je do raportu.
 
 ### <a name="other-repros"></a>Inne reprodukcje
 
-Jeśli problem nie można zmniejszyć pliku jednego źródła lub reprodukcja wstępnie przetworzony, a problem nie wymaga reprodukcja łącza, zbadanie i projektu IDE. Kodu wewnątrz projektu powinny być nadal minimalne i nadal mają zastosowanie wszystkie wskazówek z tego dokumentu.
+Jeśli problem nie można zmniejszyć pliku jednego źródła lub reprodukcja wstępnie przetworzony, a problem nie wymaga reprodukcja łącza, firma Microsoft zbadać projektu IDE. Nadal mają zastosowanie wszystkie wskazówki dotyczące sposobu tworzenia dobrej reprodukcja; Kod powinna być minimalna i samodzielną problem w przypadku wystąpienia w naszym najnowsze narzędzia i w razie potrzeby, problem nie jest widoczny w inne kompilatory.
 
 Utwórz użytkownika reprodukcja jako minimalny projekt IDE, a następnie ją spakować przez kompresowanie całej struktury katalogów, do pliku zip lub podobne i dołączenie go do raportu.
 
-## <a name="send"></a>Sposoby wysyłania raportu
+## <a name="ways-to-send-your-report"></a>Sposoby wysyłania raportu
 
 Istnieje kilka sposobów umożliwiająca pobranie raportu. Można użyć wbudowanych programu Visual Studio [Zgłoś Problem narzędzie](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), lub [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) stron. Istnieje również możliwość wysłać wiadomość e-mail z raportem, ale pierwsze dwie metody są preferowane. Wybór zależy od sposobu interakcji z inżynierów, którzy sprawdzi raportu i określa, czy chcesz śledzić postęp lub udostępnić raport ze społecznością.
 
@@ -339,4 +334,3 @@ Source code and repro steps:
 
 > [!TIP]
 > Dla innych rodzajów problemów występujących w programie Visual Studio, które nie są związane z zestawu narzędzi (na przykład interfejsu użytkownika problemy, przerwane funkcji IDE lub ogólne awarii) raport narzędzia Problem może być szczególnie użyteczna z powodu jego możliwości zrzut ekranu i napotkano możliwości rejestrowanie akcji interfejsu użytkownika, które mogą prowadzić do problemu. Nigdy nie Zgłoś te inne rodzaje błędów, wysyłając wiadomość e-mail na adres compilercrash@microsoft.com.
-

@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Zapraszamy ponownie do języka C++ (Modern C++)
 C++ jest jednym z najpopularniejszych języków programowania na świecie. Programy dobrze napisane w języku C++ są szybkie i wydajne. Język jest bardziej elastyczna niż innych języków, ponieważ służy do tworzenia szerokiej gamy aplikacji — od fun i gry atrakcyjnych, wysokiej wydajności naukowych oprogramowaniem, sterowników urządzeń, osadzonych programy i aplikacje klienta systemu Windows. Ponad 20 lat C++ został użyty do rozwiązywania problemów, takich jak te i wiele innych. Co może być niemożliwe jest coraz programistów języka C++ ma złożony dowdy programowania stylu języka C wczoraj oraz ma zamiast tego donned nowoczesnych wersji języka C++.  
@@ -50,40 +50,60 @@ C++ jest jednym z najpopularniejszych języków programowania na świecie. Progr
  Również powstał języka C++, do samej siebie. Porównaj poniższe fragmenty kodu. Ta pokazuje, jak używać w języku C++:  
   
 ```cpp  
-// circle and shape are user-defined types  
-circle* p = new circle( 42 );   
-vector<shape*> v = load_shapes();  
-  
-for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
-    if( *i && **i == *p )  
-        cout << **i << " is a match\n";  
-}  
-  
-for( vector<circle*>::iterator i = v.begin();  
-        i != v.end(); ++i ) {  
-    delete *i; // not exception safe  
-}  
-  
-delete p;  
-```  
-  
+
+#include <vector>
+
+void f()
+{
+    // Assume circle and shape are user-defined types  
+    circle* p = new circle( 42 );   
+    vector<shape*> v = load_shapes();  
+
+    for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
+        if( *i && **i == *p )  
+            cout << **i << " is a match\n";  
+    }  
+
+    // CAUTION: If v's pointers own the objects, then you
+    // must delete them all before v goes out of scope.
+    // If v's pointers do not own the objects, and you delete
+    // them here, any code that tries to dereference copies
+    // of the pointers will cause null pointer exceptions.
+    for( vector<circle*>::iterator i = v.begin();  
+            i != v.end(); ++i ) {  
+        delete *i; // not exception safe  
+    }  
+
+    // Don't forget to delete this, too.  
+    delete p;  
+} // end f()
+```
+
  Oto jak to samo odbywa się w nowoczesnych wersji języka C++:  
   
-```cpp  
+```cpp
+
 #include <memory>  
 #include <vector>  
-// ...  
-// circle and shape are user-defined types  
-auto p = make_shared<circle>( 42 );  
-vector<shared_ptr<shape>> v = load_shapes();  
-  
-for( auto& s : v ) {  
-    if( s && *s == *p )  
-        cout << *s << " is a match\n";  
-} 
-```  
-  
- W nowoczesnych wersji języka C++ nie trzeba używać nowych lub usuń lub obsługi, ponieważ wskaźniki inteligentne mogą używać zamiast niej jawne wyjątków. Jeśli używasz `auto` wpisz wnioskowanie i [funkcja lambda](../cpp/lambda-expressions-in-cpp.md), można napisać kod szybszy, zwiększyć jego i zrozumienie go lepiej. I `for_each` jest czyszczący, łatwiejsza w użyciu i mniej podatna na błędy niezamierzone niż `for` pętli. Schematyczny wraz z minimalnym wierszy kodu można użyć do pisania aplikacji. I wprowadzić ten kod wyjątek bezpieczny i bezpieczne pamięci i mieć żadnych kodów alokacji/dezalokacji lub błąd radzenia sobie z.  
+
+void f()
+{
+    // ...  
+    auto p = make_shared<circle>( 42 );  
+    vector<shared_ptr<shape>> v = load_shapes();  
+
+    for( auto& s : v ) 
+    {  
+        if( s && *s == *p )
+        {
+            cout << *s << " is a match\n";
+        }
+    }
+}
+
+```
+
+ W nowoczesnych wersji języka C++ nie trzeba używać nowych lub usuń lub obsługi, ponieważ wskaźniki inteligentne mogą używać zamiast niej jawne wyjątków. Jeśli używasz `auto` wpisz wnioskowanie i [funkcja lambda](../cpp/lambda-expressions-in-cpp.md), można napisać kod szybszy, zwiększyć jego i zrozumienie go lepiej. I opartej na zakresie `for` pętla jest czyszczący, łatwiejsza w użyciu i mniej podatna na błędy niezamierzone niż stylu języka C `for` pętli. Schematyczny wraz z minimalnym wierszy kodu można użyć do pisania aplikacji. I wprowadzić ten kod wyjątek bezpieczny i bezpieczne pamięci i mieć żadnych kodów alokacji/dezalokacji lub błąd radzenia sobie z.  
   
  Modern C++ zawiera dwa rodzaje polimorfizm: kompilacji, za pomocą szablonów i środowiska wykonawczego, za pośrednictwem dziedziczenia i wirtualizacji. Można mieszać dwa rodzaje polimorfizm w celu dużą. Standardowa biblioteka C++ szablonu `shared_ptr` używa wewnętrznego metod wirtualnych celu jego usunięcia najwyraźniej łatwe typu. Ale nie nadmiernie wirtualizacji dla polimorfizm kiedy szablon jest lepszym rozwiązaniem. Szablony mogą być bardzo zaawansowane.  
   
