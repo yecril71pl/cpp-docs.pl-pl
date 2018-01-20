@@ -1,5 +1,5 @@
 ---
-title: "_mkdir —, _wmkdir — | Dokumentacja firmy Microsoft"
+title: _mkdir, _wmkdir | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8dac3a0e796d24ed714cd1a15be34081476d77d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a94c21cb35237f08a4a8860b1a414c91d5e8801
+ms.sourcegitcommit: 4df3cf1ae6ac1154a9dff9de0063377df43380a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 Tworzy nowy katalog.  
@@ -58,7 +58,7 @@ Tworzy nowy katalog.
   
 ```  
   
-      int _mkdir(  
+int _mkdir(
    const char *dirname   
 );  
 int _wmkdir(  
@@ -96,7 +96,7 @@ int _wmkdir(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_mkdir`|\<Direct.h >|  
+|`_mkdir`|\<direct.h>|  
 |`_wmkdir`|\<Direct.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -147,5 +147,5 @@ Directory '\testtmp' was successfully removed
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrola katalogu](../../c-runtime-library/directory-control.md)   
- [_chdir —, _wchdir —](../../c-runtime-library/reference/chdir-wchdir.md)   
+ [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
  [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)
