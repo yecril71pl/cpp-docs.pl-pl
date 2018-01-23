@@ -1,7 +1,7 @@
 ---
 title: "Integracja języka JavaScript (C + +/ CX) | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 12/30/2016
+ms.date: 01/18/2018
 ms.prod: windows-client-threshold
 ms.technology: cpp-windows
 ms.reviewer: 
@@ -14,14 +14,16 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 4458ba0c8f72c79b4053573937dd7eefcbe89ace
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a8e90c9156ac45986d245bbf97c574e58258e39
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="javascript-integration-ccx"></a>Integracja języka JavaScript (C + +/ CX)
-Aby uzyskać więcej informacji, zobacz [tworzenia składników środowiska wykonawczego systemu Windows w języku C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Współdziałanie z innymi językami](../cppcx/interoperating-with-other-languages-c-cx.md)
+
+Aby uzyskać więcej informacji, zobacz [tworzenia składników środowiska wykonawczego systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+
+## <a name="see-also"></a>Zobacz także
+
+[Współdziałanie z innymi językami](../cppcx/interoperating-with-other-languages-c-cx.md)  

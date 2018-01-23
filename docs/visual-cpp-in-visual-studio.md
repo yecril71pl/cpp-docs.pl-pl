@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a4eccca9e7afd26684d5845d853b4be98001cf58
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ w programie Visual Studio
 
@@ -32,7 +32,7 @@ Visual Studio 2017 programowania języka i programowanie narzędzia ułatwiają 
 
 Ta zawartość jest dla deweloperów języka C++, którzy pisania programów.
 
-- Jeśli szukasz pakiet redystrybucyjny programu C++ i składniki wykonawcze tak, aby uruchomić program, przejdź do [Microsoft Download Center](http://www.microsoft.com/en-us/download/) , a następnie wprowadź **Visual C++** w polu wyszukiwania.
+- Jeśli szukasz określonego pakietu redystrybucyjnego C++ i składniki wykonawcze tak, aby uruchomić program, przejdź do [Microsoft](http://www.microsoft.com/) witryny sieci Web, a następnie wprowadź **Visual C++ Redistributable** w polu wyszukiwania. Pobierz i zainstaluj pakiet redystrybucyjny architektura komputera (na przykład x64 Jeśli używasz 64-bitowego systemu Windows) i wersji programu Visual C++, które są potrzebne. 
 
 - Jeśli szukasz wprowadzenie do pojęcia dotyczące programowania C++, przejdź do jednej z wielu witryn sieci Web, które oferują tej zawartości lub uzyskaj kopię [programowania — zasady i praktyki przy użyciu C++ (wydanie)](http://stroustrup.com/Programming/) przez odłożenie c++, Bjarne Stroustrup. Zawartość Visual C++ przyjęto założenie, że masz już podstawowa znajomość języka C++.
 

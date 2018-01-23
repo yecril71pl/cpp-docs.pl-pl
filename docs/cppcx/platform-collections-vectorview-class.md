@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8ef351759814ee03b54160cac2340eafd304d5f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Klasa platform::Collections::VectorView
 Reprezentuje widok tylko do odczytu sekwencyjną kolekcją obiektów, których można indywidualnie uzyskać dostęp przez indeks. Typ każdego obiektu w kolekcji jest określony przez parametr szablonu.  
@@ -242,7 +242,7 @@ VectorView(
  `InIt`  
  Typ kolekcji obiektów służy do inicjowania VectorView bieżącej.  
   
- Il  
+ il  
  A [std::initializer_list](../standard-library/initializer-list-class.md) której elementy będą używać w celu inicjowania VectorView.  
   
  `N`  
@@ -277,4 +277,4 @@ VectorView(
   
 ## <a name="see-also"></a>Zobacz też  
  [Namespace platformy](platform-namespace-c-cx.md)   
- [Tworzenie składników środowiska wykonawczego systemu Windows w języku C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)
+ [Tworzenie składników środowiska wykonawczego systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

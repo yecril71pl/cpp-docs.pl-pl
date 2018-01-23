@@ -20,13 +20,17 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 106123557c4efab5ccddf9f1292570d36b0f8313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a89795e19df46b3701cf8dcc7a402540f693db94
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="redistributing-visual-c-files"></a>Redystrybuowanie plików programu Visual C++
+
+> [!NOTE]
+> Jesteś tutaj ponieważ szukasz pobierania jednego z plików środowiska uruchomieniowego Visual C++? Przejdź do [Microsoft](http://www.microsoft.com/) witryny sieci Web, a następnie wprowadź **Visual C++ Redistributable** w polu wyszukiwania. Pobierz i zainstaluj pakiet redystrybucyjny architektura komputera (na przykład x64 Jeśli używasz 64-bitowego systemu Windows) i wersji programu Visual C++, które są potrzebne.   
+  
 Podczas wdrażania aplikacji należy również wdrożyć pliki, które są wymagane do jej obsługi. Jeśli któryś z tych plików jest dostarczany przez firmę Microsoft, sprawdź, czy masz pozwolenie na jego redystrybucję. Aby przejrzeć postanowienia licencyjne programu Visual Studio, zobacz łącze postanowień licencyjnych w oknie dialogowym Microsoft Visual Studio IDE lub pobrać [postanowienia licencyjne dotyczące oprogramowania firmy Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=831114) pliku. Aby wyświetlić "Lista REDYSTRYBUCYJNA", o której mowa w sekcji "Kod dystrybucyjny" postanowień licencyjnych oprogramowania firmy Microsoft do niektórych wydań programu Visual Studio, zobacz [Kod dystrybucyjny dla programu Microsoft Visual Studio 2017 i 2017 r Microsoft Visual Studio Zestaw SDK (obejmuje narzędzia i pliki BuildServer)](http://go.microsoft.com/fwlink/p/?LinkId=823098), lub dla programu Visual Studio 2015, zobacz [Kod dystrybucyjny dla programu Microsoft Visual Studio 2015 i Microsoft Visual Studio 2015 SDK](http://go.microsoft.com/fwlink/p/?LinkId=523763). Aby uzyskać więcej informacji na temat plików pakietu redystrybucyjnego zobacz [określania które biblioteki dll do ponownej dystrybucji](../ide/determining-which-dlls-to-redistribute.md) i [przykłady wdrożeń](../ide/deployment-examples.md).  
   
  Aby wdrożyć pakiet redystrybucyjny Visual C++ pliki, można użyć pakiety Visual C++ Redistributable (program VCRedist\_x86.exe, program VCRedist\_x64.exe lub program VCRedist\_arm.exe) dostępnych w programie Visual Studio. W programie Visual Studio 2017 r, te pliki znajdują się w folderze Program Files [(x86)]\\programu Microsoft Visual Studio\\2017\\_wersji_\\VC\\Redist\\ MSVC\\_wersji lib_ folder, gdzie _wersji_ jest w wersji Visual Studio zainstalowany, i _wersji lib_ jest wersja biblioteki, aby ponownie rozesłać. W programie Visual Studio 2015, te pliki znajdują się w katalogu instalacyjnym programu Visual Studio w Program Files [(x 86)] \Microsoft Visual Studio *wersji*\VC\redist\\*ustawień regionalnych* \\. Inną opcją jest użycie modułów scalania redistributable (pliki .msm), które w Visual Studio 2017 znajduje się w folderze Program Files [(x 86)]\\programu Microsoft Visual Studio\\2017\\_wersji_ \\ VC\\Redist\\MSVC\\_wersji lib_\\MergeModules\\ folderu. W programie Visual Studio 2015 te można znaleźć w \Common Files\Merge Program Files [(x 86)] modułów\\. Istnieje również możliwość bezpośrednio zainstaluj pakiet redystrybucyjny Visual dll języka C++ w *aplikacji w lokalnym folderze*, która jest folder zawierający plik wykonywalny aplikacji. Do obsługi przyczyn, nie zaleca się używanie tej lokalizacji instalacji.  
