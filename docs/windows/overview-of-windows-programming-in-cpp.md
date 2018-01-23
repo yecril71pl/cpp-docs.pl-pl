@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bf25d8f3653d2146774efd333daff74a5fb33e2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
@@ -40,7 +40,7 @@ Istnieje kilka kategorii szerokie aplikacji systemu Windows, które można progr
 
 ##  <a name="BK_WindowsUniversal"></a>Uniwersalnych aplikacji systemu Windows
 
-Z systemem Windows 10 aplikacje są można uruchamiać na wszystkich urządzeniach z systemem Windows 10, takich jak tablety i telefony komórkowe, a także na pulpicie. Na pulpicie, są w stanie uruchomić okna pulpitu, zamiast zawsze uruchomiona w trybie pełnoekranowym. Te aplikacje można również uruchomić na konsoli Xbox i na urządzeniach w przyszłości.  Model programowania do dwa typy aplikacji różni się od aplikacji klasycznych systemu Win32. Te aplikacje systemu Windows uruchomić środowiska uruchomieniowego systemu Windows, który zawiera elementy interfejsu użytkownika, najważniejsze usługi te aplikacje i zapewnia, i interfejs do różnych urządzeń, które są obsługiwane. Te aplikacje skompiluj do kodu natywnego i masz interfejsu użytkownika XAML lub użyj programu DirectX. Można również napisać składników środowiska wykonawczego systemu Windows w kodzie natywnym, które mogą korzystać z innych aplikacji systemu Windows — te obejmują aplikacje, które są napisane w języku C#, Visual Basic lub JavaScript. Aby uzyskać więcej informacji, zobacz [tworzenie aplikacji platformy uniwersalnej systemu Windows w języku C++](http://go.microsoft.com/fwlink/p/?linkid=534976), [Utwórz pierwszy gry platformy uniwersalnej systemu Windows za pomocą programu DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), i [składniki tworzenia środowiska wykonawczego systemu Windows w języku C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
+Z systemem Windows 10 aplikacje są można uruchamiać na wszystkich urządzeniach z systemem Windows 10, takich jak tablety i telefony komórkowe, a także na pulpicie. Na pulpicie, są w stanie uruchomić okna pulpitu, zamiast zawsze uruchomiona w trybie pełnoekranowym. Te aplikacje można również uruchomić na konsoli Xbox i na urządzeniach w przyszłości.  Model programowania do dwa typy aplikacji różni się od aplikacji klasycznych systemu Win32. Te aplikacje systemu Windows uruchomić środowiska uruchomieniowego systemu Windows, który zawiera elementy interfejsu użytkownika, najważniejsze usługi te aplikacje i zapewnia, i interfejs do różnych urządzeń, które są obsługiwane. Te aplikacje skompiluj do kodu natywnego i masz interfejsu użytkownika XAML lub użyj programu DirectX. Można również napisać składników środowiska wykonawczego systemu Windows w kodzie natywnym, które mogą korzystać z innych aplikacji systemu Windows — te obejmują aplikacje, które są napisane w języku C#, Visual Basic lub JavaScript. Aby uzyskać więcej informacji, zobacz [tworzenie aplikacji platformy uniwersalnej systemu Windows "Hello world" w języku C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp), [Tworzenie prostego gry platformy uniwersalnej systemu Windows z DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game), i [składniki tworzenia środowiska wykonawczego systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 > [!TIP]
 > Dla systemu Windows 10 można konwertera aplikacji pulpitu pakietu istniejącej aplikacji klasycznych dla wdrożenia za pomocą portalu Sklepu Windows. Aby uzyskać więcej informacji, zobacz [przy użyciu środowiska uruchomieniowego Visual C++ w projekcie Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) i [przełączyć aplikację pulpitu do systemu Windows platformy Uniwersalnej z Mostek pulpitu](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
@@ -83,7 +83,7 @@ W systemie Windows 10 Visual C++ służy do tworzenia wielu rodzajów programy:
 
 - Usługi systemu Windows. Aby uzyskać więcej informacji, zobacz [wprowadzenie do aplikacji usług systemu Windows](/dotnet/framework/windows-services/introduction-to-windows-service-applications).
 
-Można używać Visual C++, aby zapakować prawie każdy rodzaj niestandardowej funkcjonalności o wysokiej wydajności do bibliotek Win32 DLL lub bibliotek DLL modelu COM, które mogą być wykorzystywane przez aplikacje napisane w języku C++ lub innym — na przykład C# lub Visual Basic. Aby uzyskać więcej informacji na temat biblioteki DLL systemu WIn32, zobacz [biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md). Aby uzyskać więcej informacji na temat programowanie COM, zobacz [składnik modelu COM.](https://msdn.microsoft.com/library/windows/desktop/ms680573).
+Można używać Visual C++, aby zapakować prawie każdy rodzaj niestandardowej funkcjonalności o wysokiej wydajności do bibliotek Win32 DLL lub bibliotek DLL modelu COM, które mogą być wykorzystywane przez aplikacje napisane w języku C++ lub innym — na przykład C# lub Visual Basic. Aby uzyskać więcej informacji na temat biblioteki DLL systemu WIn32, zobacz [biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md). Aby uzyskać więcej informacji na temat programowanie COM, zobacz [składnik modelu COM](https://msdn.microsoft.com/library/windows/desktop/ms680573).
 
 ## <a name="sdks-and-header-files"></a>Zestawy SDK i pliki nagłówkowe
 
