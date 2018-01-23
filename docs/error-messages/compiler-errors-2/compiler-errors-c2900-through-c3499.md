@@ -116,7 +116,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty o błędach, kt
 |[Błąd kompilatora C2913](compiler-error-c2913.md)|jawna specjalizacja; "*deklaracji*" nie jest specjalizacją szablonu klasy|
 |[Błąd kompilatora C2914](compiler-error-c2914.md)|"*identyfikator*": nie można wywnioskować argumentu szablonu/ogólny jako argument funkcji jest niejednoznaczny|
 |C2915 błąd kompilatora|"*identyfikator*": "*typu*" nie może być użyte bezpośrednio na publikowanej powierzchni typu WinRT. Użyj "Platform::Object ^" zamiast przekazywać ten typ|
-|C2916 błąd kompilatora|"*identyfikator*': [FlagsAttribute] (tylko) muszą być określone na publicznym typie wyliczeniowym z typ podstawowy"unsigned int"|
+|C2916 błąd kompilatora|"*identyfikator*': [FlagsAttribute] \(tylko) muszą być określone na publicznym typie wyliczeniowym z typ podstawowy"unsigned int"|
 |[Błąd kompilatora C2917](compiler-error-c2917.md)|"*identyfikator*": nieprawidłowy parametr szablonu|
 |[Błąd kompilatora C2918](compiler-error-c2918.md)|"*identyfikator*": nie można używać właściwości indeksowanych na publikowanej powierzchni typu WinRT|
 |[Błąd kompilatora C2919](compiler-error-c2919.md)|"*typu*": nie można używać operatorów na publikowanej powierzchni typu WinRT|
