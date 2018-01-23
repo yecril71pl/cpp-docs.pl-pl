@@ -148,11 +148,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25a555048252039a2d888fe69d50b1a6ef422e4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0fa73588a2ee2b593e12f98cac387d9d4323ad9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap — Klasa
 Klasa szablonu opisuje obiekt, który kontroluje sekwencji zróżnicowanych długość elementów typu `std::pair<const Key, Ty>`. Sekwencja jest słabo uporządkowana według funkcji mieszania, która dzieli sekwencję na uporządkowany zestaw podsekwencji, zwanych przedziałami, segmentami lub pakietami. W ramach każdego przedziału funkcja porównania określa, czy jakaś para elementów ma równoważną kolejność. Każdy element przechowuje dwa obiekty, klucz sortowania i wartość. Sekwencja jest reprezentowana w sposób, który pozwala na wyszukiwanie, wstawianie i usuwanie dowolnego elementu z wielu operacji, które mogą być niezależne od liczby elementów w sekwencji (stały czas), co najmniej kiedy wszystkie przedziały są w przybliżeniu jednakowej długości. W najgorszym przypadku, gdy wszystkie elementy znajdują się w jednym przedziale, liczba operacji jest proporcjonalna do liczby elementów w sekwencji (liniowy czas). Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.  
@@ -2704,5 +2705,5 @@ int main()
  [< unordered_map >](../standard-library/unordered-map.md)   
  [Kontenery](../cpp/containers-modern-cpp.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

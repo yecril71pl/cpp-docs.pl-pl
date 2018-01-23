@@ -97,11 +97,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdc1385f5aafecc3608ced9e3e5ac1e89247f724
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e9ec4f9c4b4f97b3a55102cb41d83e088d55e03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-class"></a>set — Klasa
 Zestaw klas kontenera standardowa biblioteka C++ jest używany do przechowywania i pobierania danych z kolekcji, w której wartości elementy zawarte są unikatowe i służyć jako wartości klucza, zgodnie z którymi automatycznie porządkowania danych. Nie można bezpośrednio zmienić wartości elementu w zestawie. Zamiast tego musisz usunąć stare wartości i wstawić elementy z nowymi wartościami.  
@@ -154,7 +155,7 @@ class set
   
 |||  
 |-|-|  
-|[zestaw](#set)|Konstruuje zestaw, który jest pusty lub jest kopią całości lub części innego zestawu.|  
+|[set](#set)|Konstruuje zestaw, który jest pusty lub jest kopią całości lub części innego zestawu.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -2379,5 +2380,5 @@ The set has elements: 10 20.
  [\<Ustaw >](../standard-library/set.md)   
  [Kontenery](../cpp/containers-modern-cpp.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Odwołanie do biblioteki C++ Standard](../standard-library/cpp-standard-library-reference.md)
+ [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
