@@ -37,15 +37,15 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 240b8ad1b0cfd9c8b85b58c8d2309fb97f961573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="try-except-statement"></a>try-except — instrukcja
 
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
 **Spróbuj — z wyjątkiem** instrukcji to rozszerzenie firmy Microsoft do C i obsługa wyjątków strukturalnych języków C++, które obsługuje.  
 
 ## <a name="syntax"></a>Składnia  
@@ -113,13 +113,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
 ```  
 
-Typy wskaźników `PEXCEPTION_RECORD` i `PCONTEXT` są zdefiniowane w pliku dołączanego Windows NT. H, i `_EXCEPTION_RECORD` i `_CONTEXT` są zdefiniowane w pliku dyrektywy include z wyjątkiem. H
+Typy wskaźników `PEXCEPTION_RECORD` i `PCONTEXT` są zdefiniowane w pliku dołączanego \<pliku winnt.h >, a `_EXCEPTION_RECORD` i `_CONTEXT` są zdefiniowane w pliku dołączanego \<excpt.h >
 
 Można użyć `GetExceptionCode` wewnątrz obsługi wyjątków. Można jednak użyć `GetExceptionInformation` tylko w wyrażeniu filtru wyjątków. Informacje na które wskazuje są na ogół na stosie i nie są dostępne po przekazaniu kontroli do programu obsługi wyjątków.
 
 Wewnętrzna funkcja `AbnormalTermination` jest dostępna w ramach programu obsługi zakończenia. Zwraca 0, jeśli treść **try-finally** instrukcji kończy się po kolei. We wszystkich pozostałych przypadkach zwraca wartość 1.
 
-EXCPT.H definiuje kilka nazw alternatywnych dla funkcji wewnętrznych:
+excpt.h definiuje niektóre alternatywne nazwy te funkcje wewnętrzne:
 
 `GetExceptionCode`jest odpowiednikiem`_exception_code`
 

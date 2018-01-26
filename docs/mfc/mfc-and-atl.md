@@ -1,7 +1,7 @@
 ---
 title: MFC i ATL | Dokumentacja firmy Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/24/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-windows
@@ -14,16 +14,20 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 4b53607c1ca163bf7e1e50728e64da0e3497f4cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b863b002f6ab8362ed51e8cb16747de53eeb1b8
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="mfc-and-atl"></a>MFC i ATL
 Biblioteka Microsoft Foundation Classes (MFC) zapewniają otoka zorientowane obiektowo C++ za pośrednictwem Win32 do szybkiego opracowywania aplikacji pulpitu. Active Template Library (ATL) to biblioteka otoki upraszcza tworzenie modelu COM, który jest często używany do tworzenia kontrolek ActiveX.  
   
- Można utworzyć MFC lub ATL programów z programu Visual Studio Community Edition lub nowszy. W wersjach Express nie obsługują MFC lub ATL. W programie Visual Studio 2015 Visual C++ jest opcjonalnym składnikiem i składniki MFC i ATL są opcjonalne składniki podrzędne w programie Visual C++. Jeśli nie wybierzesz tych składników podczas pierwszej instalacji programu Visual Studio, pojawi się monit mają być instalowane przystąpieniem do tworzenia lub otwierania projektu MFC lub ATL po raz pierwszy.  
+Można utworzyć MFC lub ATL programów z programu Visual Studio Community Edition lub nowszy. W wersjach Express nie obsługują MFC lub ATL. 
+
+W programie Visual Studio 2015 Visual C++ jest opcjonalnym składnikiem i składniki MFC i ATL są opcjonalne składniki podrzędne w programie Visual C++. Jeśli nie wybierzesz tych składników podczas pierwszej instalacji programu Visual Studio, pojawi się monit mają być instalowane przystąpieniem do tworzenia lub otwierania projektu MFC lub ATL po raz pierwszy.  
+
+W programie Visual Studio 2017 lub nowszego oraz MFC i ATL są opcjonalne składniki podrzędne w obszarze **tworzenia klasycznych aplikacji w języku C++** obciążenia w programie Visual Studio Instalatora. Można zainstalować obsługi ATL bez MFC lub połączone MFC i ATL obsługi (MFC zależy od ATL). Aby uzyskać więcej informacji na temat obciążeń i składników, zobacz [zainstalować program Visual Studio 2017](/visualstudio/install/install-visual-studio).
   
 ## <a name="related-articles"></a>Powiązane artykuły  
   

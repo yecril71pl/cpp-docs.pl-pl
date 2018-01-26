@@ -15,14 +15,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 496bbd686b0baaacda42de29c825c9539fb50371
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e531de79621eb3a010a41c7e5059dd5b76b2c2fc
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="numerical-limits-c"></a>Limity wartości liczbowych (C++)
-Dwa standardowe Dołącz pliki, limity. H i ZMIENNOPRZECINKOWYCH. H, zdefiniować limity wartości liczbowych lub wartości minimalną i maksymalną, zawierających zmiennej danego typu. Te minimów i maksymalne wartości są gwarancji przenośne do dowolnego kompilator języka C++, mający taką samą reprezentację danych co ANSI c LIMITY. Plik dołączany H definiuje [limity wartości liczbowych w przypadku typów całkowitych](../cpp/integer-limits.md)i FLOAT. Definiuje H [limity wartości liczbowych dla typów zmiennoprzecinkowych](../cpp/floating-limits.md).  
+Dwa standardowe Dołącz pliki, \<Limits.h — > i \<float.h — >, zdefiniować limity wartości liczbowych lub wartości minimalną i maksymalną, zawierających zmiennej danego typu. Te minimów i maksymalne wartości są gwarancji przenośne do dowolnego kompilator języka C++, mający taką samą reprezentację danych co ANSI c \<Limits.h — > obejmują plik definiuje [limity wartości liczbowych w przypadku typów całkowitych](../cpp/integer-limits.md), i \<float.h — > definiuje [limity wartości liczbowych dla typów zmiennoprzecinkowych](../cpp/floating-limits.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)

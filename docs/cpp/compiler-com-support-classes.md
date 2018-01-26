@@ -18,23 +18,23 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 9560b4b3a0623a0e712d5b54d2bbe5de7dbc17e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54377893135c2b933c25387bccbb750d2f3eb734
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="compiler-com-support-classes"></a>Kompilator klas obsługi COM
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
- Standardowa klas są używane do obsługi typów COM. Klasy są zdefiniowane w comdef.h i pliki nagłówkowe wygenerowane z biblioteki typów.  
+ Standardowa klas są używane do obsługi typów COM. Klasy są zdefiniowane w \<comdef.h > i pliki nagłówkowe wygenerowane z biblioteki typów.  
   
 |Class|Cel|  
 |-----------|-------------|  
-|[_bstr_t —](../cpp/bstr-t-class.md)|Opakowuje `BSTR` typu zapewnienie przydatne operatory i metody.|  
+|[_bstr_t](../cpp/bstr-t-class.md)|Opakowuje `BSTR` typu zapewnienie przydatne operatory i metody.|  
 |[_com_error](../cpp/com-error-class.md)|Definiuje obiekt błąd zgłoszony przez [_com_raise_error —](../cpp/com-raise-error.md) w większość awarii.|  
-|[_com_ptr_t —](../cpp/com-ptr-t-class.md)|Hermetyzuje wskaźników interfejsów COM. i zautomatyzować wymagane wywołań `AddRef`, **wersji**, i `QueryInterface`.|  
-|[_variant_t —](../cpp/variant-t-class.md)|Opakowuje **VARIANT** typu zapewnienie przydatne operatory i metody.|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Hermetyzuje wskaźników interfejsów COM. i zautomatyzować wymagane wywołań `AddRef`, **wersji**, i `QueryInterface`.|  
+|[_variant_t](../cpp/variant-t-class.md)|Opakowuje **VARIANT** typu zapewnienie przydatne operatory i metody.|  
   
 **KOŃCOWY określonych firmy Microsoft**  
   

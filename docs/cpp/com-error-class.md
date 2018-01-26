@@ -16,14 +16,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comerror-class"></a>_com_error — Klasa
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  A `_com_error` obiekt reprezentuje wykryte przez funkcje otoki obsługi błędów w plikach nagłówka wygenerowane z biblioteki typu lub jednej z klas obsługi COM warunku wyjątku. `_com_error` Klasa hermetyzuje `HRESULT` kod błędu i wszelkie powiązane `IErrorInfo Interface` obiektu.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** comdef.h  
+ **Nagłówek:** \<comdef.h >  
   
  `Lib:`comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)  
   

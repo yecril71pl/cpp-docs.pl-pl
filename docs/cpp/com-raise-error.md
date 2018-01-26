@@ -16,14 +16,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: cfb51d4188917ebcdbad2fead13a9792875d2f11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71a4be4ebf6029d0573aee71d74bf9faa241319f
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comraiseerror"></a>_com_raise_error
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Zgłasza wyjątek [_com_error](../cpp/com-error-class.md) w odpowiedzi na awarię.  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  **IErrorInfo** obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- `_com_raise_error`, która jest zdefiniowana w comdef.h, może być zastąpiony zapisane przez użytkownika wersja tej samej nazwie i prototypu. Można to zrobić, jeśli chcesz użyć `#import` , ale nie chcesz używać C++, obsługa wyjątków. W takim przypadku użytkownik wersji **_com_raise_error —** zdecydować, czy `longjmp` lub wyświetlać okno komunikatu i zatrzymany. Wersja użytkownika nie może zwracać, jednak ponieważ kod obsługa kompilatora COM nie powinien zwrócić.  
+ `_com_raise_error`, która jest zdefiniowana w \<comdef.h >, może być zastąpiony zapisane przez użytkownika wersja tej samej nazwie i prototypu. Można to zrobić, jeśli chcesz użyć `#import` , ale nie chcesz używać C++, obsługa wyjątków. W takim przypadku użytkownik wersji **_com_raise_error —** zdecydować, czy `longjmp` lub wyświetlać okno komunikatu i zatrzymany. Wersja użytkownika nie może zwracać, jednak ponieważ kod obsługa kompilatora COM nie powinien zwrócić.  
   
  Można również użyć [_set_com_error_handler —](../cpp/set-com-error-handler.md) zastąpić domyślnej funkcji obsługi błędów.  
   
@@ -60,7 +60,7 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** comdef.h  
+ **Nagłówek:** \<comdef.h >  
   
  **Lib:** Jeśli **wchar_t jest typem natywnym** kompilatora opcja jest włączona, należy użyć comsuppw.lib lub comsuppwd.lib. Jeśli **wchar_t jest typem natywnym** jest wyłączone, należy użyć comsupp.lib. Aby uzyskać więcej informacji, zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   

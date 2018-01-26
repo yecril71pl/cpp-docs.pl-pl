@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: b9e0d6a7f903d4af39698b2d98c005cbf64515eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee6a34a70465904e6725f42e68eb4a00c03a1661
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="exit-function"></a>Funkcja exit
-**Zakończyć** funkcja zadeklarowany w pliku dołączanego standardowe STDLIB. H, kończy program w języku C++.  
+**Zakończyć** funkcja zadeklarowany w pliku dołączanego standardowe \<stdlib.h >, program w języku C++ kończy.  
   
  Wartość podana jako argument **zakończyć** jest zwracana do systemu operacyjnego jako zwracany kod lub zakończenia kod programu. Według Konwencji kod powrotny zero oznacza, że program została ukończona pomyślnie.  
   
 > [!NOTE]
->  Można użyć stałe `EXIT_FAILURE` i `EXIT_SUCCESS`zdefiniowanej w STDLIB. H do wskazania powodzenia lub niepowodzenia programu.  
+>  Można użyć stałe `EXIT_FAILURE` i `EXIT_SUCCESS`zdefiniowanej w \<stdlib.h >, aby wskazać powodzenie lub niepowodzenie działania programu.  
   
  Wystawianie `return` instrukcji z **głównego** jest odpowiednikiem wywołania funkcji **zakończyć** funkcji z wartością zwracaną jako jej argument.  
   

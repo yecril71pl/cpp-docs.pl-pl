@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a715662ac6680218e3b15822108f429733569bfa
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Funkcje z argumentem zmiennej listy (C++)
 Deklaracje funkcji, w których ostatniego członka jest wielokropek (...) może potrwać zmienną liczbę argumentów. W takich przypadkach C++ zawiera tylko sprawdzanie jawnie zadeklarowana argumentów typu. Listy zmiennych argumentów można użyć, gdy trzeba tworzyć funkcję, co może różnić się ogólne, że nawet liczbę i typy argumentów. Rodziny funkcji jest przykład funkcji, które używają listy zmiennych argumentów. `printf` *listy argumentów — deklaracja*  
   
 ## <a name="functions-with-variable-arguments"></a>Funkcji ze zmiennymi argumentami  
- Aby uzyskać dostęp do argumentów po deklarowane, użyj makra zawarte w pliku dołączanego standardowe STDARG. H, zgodnie z poniższym opisem.  
+ Dostęp do argumentów po deklarowane, użyj makra zawarte w pliku dołączanego standardowe \<stdarg.h > zgodnie z poniższym opisem.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Microsoft C++ pozwala wielokropka określony jako argument, jeśli wielokropek jest ostatni argument i wielokropek jest poprzedzony przecinkami. W związku z tym deklaracji `int Func( int i, ... );` jest dozwolony, ale `int Func( int i ... );` nie jest.  
   
@@ -43,9 +43,9 @@ Deklaracje funkcji, w których ostatniego członka jest wielokropek (...) może 
   
  Gdy argumenty typu `char` są przekazywane jako argumenty zmienne są konwertowane na typ `int`. Podobnie, jeśli argumenty typu **float** są przekazywane jako argumenty zmienne są konwertowane na typ **podwójne**. Argumenty inne typy są poddawane zwykle promocje typów całkowitych i zmiennoprzecinkowych. Zobacz [konwersje standardowe](standard-conversions.md) Aby uzyskać więcej informacji.  
   
- Funkcje, które wymagają zmiennej listy są zadeklarowane za pomocą wielokropek (...) na liście argumentów. Użyj typów i makra, które zostały opisane w STDARG. H dołączyć plik do dostępu do argumentów, które są przekazywane przez listy zmiennych. Aby uzyskać więcej informacji na temat makr, zobacz [va_arg, va_copy, va_end, va_start —](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). w dokumentacji dotyczącej biblioteki wykonawczej języka C.  
+ Funkcje, które wymagają zmiennej listy są zadeklarowane za pomocą wielokropek (...) na liście argumentów. Użyj typów i makra, które zostały opisane w \<stdarg.h > dołączyć plik do dostępu do argumentów, które są przekazywane przez listy zmiennych. Aby uzyskać więcej informacji na temat makr, zobacz [va_arg, va_copy, va_end, va_start —](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). w dokumentacji dotyczącej biblioteki wykonawczej języka C.  
   
- W poniższym przykładzie pokazano, jak makra współdziała z typem (deklaracja w STDARG. H): 
+ W poniższym przykładzie pokazano, jak makra współdziała z typem (zadeklarowany w \<stdarg.h >): 
   
 ```  
 // variable_argument_lists.cpp  

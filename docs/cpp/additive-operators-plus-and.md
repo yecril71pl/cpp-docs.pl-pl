@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8d316505939b22149b53a1012113a7aba88e2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="additive-operators--and--"></a>Operatory dodawania: + i -
 ## <a name="syntax"></a>Składnia  
@@ -56,20 +56,20 @@ expression - expression
 |Typ|Znaczenie|  
 |----------|-------------|  
 |*operacje arytmetyczne*|Typów całkowitych i zmiennoprzecinkowych są nazywane zbiorczo "arytmetycznego" typów.|  
-|*wartości całkowitych*|Typy char i int (krótki czas,) i wyliczenia są typy "zintegrowane".|  
-|*skalarne*|Argumenty skalarne są argumentów operacji typu arytmetycznego lub wskaźnikowego.|  
+|*integral*|Typy char i int (krótki czas,) i wyliczenia są typy "zintegrowane".|  
+|*scalar*|Argumenty skalarne są argumentów operacji typu arytmetycznego lub wskaźnikowego.|  
   
  Prawne kombinacje operatorów te są:  
   
  *arytmetyczny* + *arytmetyczne*  
   
- *skalarne* + *wartości całkowitych*  
+ *scalar* + *integral*  
   
- *całkowite* + *skalarne*  
+ *integral* + *scalar*  
   
  *arytmetyczny* - *arytmetyczne*  
   
- *skalarne* - *skalarne*  
+ *scalar* - *scalar*  
   
  Należy pamiętać, że dodawanie i odejmowanie nie są równoważne operacji.  
   
@@ -116,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 >  Kod w postaci `pIntArray = pIntArray + 1` rzadko zostanie znaleziony w programach języka C++; przeprowadzić przyrostu te formularze są preferowane: `pIntArray++` lub `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Odejmowanie wskaźnika  
- Jeśli oba argumenty są wskaźnikami, wynik odejmowania różni się (w elementach tablicy) argumenty operacji. Wyrażenie odejmowania daje podpisem integralną wyniku ptrdiff_t — typ (zdefiniowany w pliku dołączanego standardowe STDDEF. H).  
+ Jeśli oba argumenty są wskaźnikami, wynik odejmowania różni się (w elementach tablicy) argumenty operacji. Wyrażenie odejmowania daje podpisem integralną wyniku ptrdiff_t — typ (zdefiniowany w pliku dołączanego standardowe \<stddef.h >).  
   
  Jeden z argumentów może być typu całkowitego, tak długo, jak jest drugi argument operacji. Wynik odejmowania jest taki sam typ jak oryginalny wskaźnika. Wartość odejmowania jest wskaźnik do (*n* - *i*) th elementu tablicy, której  *n*  jest element wskazywana przez Oryginalny wskaźnik i *i* jest integralną wartość drugiego argumentu operacji.  
   

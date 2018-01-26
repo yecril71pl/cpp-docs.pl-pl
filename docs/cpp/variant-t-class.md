@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a670d18ab64637b54b063cfeb38f8d0cd8fee5d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57a4d7e4019e742ff8adc50bb78a926dff34d55a
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variantt-class"></a>_variant_t — Klasa
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  A `_variant_t` hermetyzuje `VARIANT` — typ danych. Klasa zarządza alokacji zasobów i dezalokacji i wykonywania wywołań funkcji do **VariantInit** i **VariantClear** odpowiednio.  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[_variant_t —](../cpp/variant-t-variant-t.md)|Konstruuje `_variant_t` obiektu.|  
+|[_variant_t](../cpp/variant-t-variant-t.md)|Konstruuje `_variant_t` obiektu.|  
   
 ### <a name="operations"></a>Operacje  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/21/2017
 **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** comutil.h  
+ **Nagłówek:** \<comutil.h >  
   
  **Lib:** comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)  
   

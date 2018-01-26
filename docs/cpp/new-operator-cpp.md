@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-operator-c"></a>new — Operator (C++)
 Przydziela pamięć dla obiekt lub tablicę obiektów *nazwy typu* z bezpłatną magazynu i zwraca wskaźnik typizowany odpowiednio, różną od zera do obiektu.  
@@ -69,13 +69,13 @@ delete *p;
   
  Na poniższej liście opisano elementy gramatyki **nowe**:  
   
- *umieszczania*  
+ *placement*  
  Umożliwia przekazywanie dodatkowe argumenty, jeśli można przeciążać **nowe**.  
   
  *Nazwa typu*  
  Określa typ do przydzielenia; może być typu wbudowanego lub zdefiniowanej przez użytkownika. Jeśli specyfikacja typu jest skomplikowane, może być ujęte w nawiasy, aby wymusić kolejności wiązania.  
   
- *Inicjator*  
+ *initializer*  
  Zawiera wartość dla obiekt zainicjowane. Nie można określić Inicjatory dla tablic. **Nowe** operator utworzy tablice obiektów tylko wtedy, gdy klasa ma konstruktora domyślnego.  
   
 ## <a name="example"></a>Przykład  
@@ -238,7 +238,7 @@ int main()
  Gdy wystąpi kompilator **nowe** operator można przydzielić obiektu typu `type`, wystawia wywołanie `type` **:: nowy operator (sizeof (** `type` **))**  lub, jeśli nie, zdefiniowane przez użytkownika `operator new` jest zdefiniowany, **:: nowy operator (sizeof (** `type` **))**. W związku z tym **nowe** operator może Przydziel poprawną ilość pamięci dla obiektu.  
   
 > [!NOTE]
->  Argument `operator new` jest typu **size_t**. Ten typ jest zdefiniowany w DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H i TIME.H.  
+>  Argument `operator new` jest typu **size_t**. Ten typ jest zdefiniowany w \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio.h >, \<stdlib.h >, \<string.h >, a \<time.h >.  
   
  Opcja w gramatyce umożliwia określenie *umieszczania* (zobacz gramatyki dla [operatora new](../cpp/new-operator-cpp.md)). *Umieszczania* parametr może zostać użyty tylko w przypadku wdrożeń użytkownika `operator new`; umożliwia dodatkowe informacje, które mają być przekazane do `operator new`. Wyrażenia z *umieszczania* pola, takie jak `T *TObject = new ( 0x0040 ) T;` jest translacji `T *TObject = T::operator new( sizeof( T ), 0x0040 );` Jeśli klasa T operator członkowski nowe, w przeciwnym razie `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
   
@@ -257,5 +257,5 @@ T *TObject =::new TObject;
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
  [nowe i delete — operatory](../cpp/new-and-delete-operators.md)

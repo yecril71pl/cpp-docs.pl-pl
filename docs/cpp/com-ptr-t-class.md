@@ -16,14 +16,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 44179c3c34207b8f1bf3abbef2efd9505df47181
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9a17309ab08d50be1366b8db71798766b52baa9
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comptrt-class"></a>_com_ptr_t — Klasa
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  A `_com_ptr_t` obiekt hermetyzuje wskaźnika interfejsu COM i nosi nazwę "inteligentne" wskaźnik. Ta klasa szablonu zarządza alokacji zasobów i dezalokacji za pośrednictwem wywołania funkcji **IUnknown** funkcji elementów członkowskich: `QueryInterface`, `AddRef`, i **wersji**.  
   
@@ -41,7 +41,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[_com_ptr_t —](../cpp/com-ptr-t-com-ptr-t.md)|Konstruuje `_com_ptr_t` obiektu.|  
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Konstruuje `_com_ptr_t` obiektu.|  
   
 ### <a name="low-level-operations"></a>Operacje na niskim poziomie  
   
@@ -67,7 +67,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** comip.h  
+ **Nagłówek:** \<comip.h >  
   
  **Lib:** comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)  
   

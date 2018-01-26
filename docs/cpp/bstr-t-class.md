@@ -19,14 +19,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 34af81829c90aa5e56c7358a3e0b23d6f6ab949f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6943a75f83bac517ce3c9677b0abd8ef560e9b77
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bstrt-class"></a>_bstr_t — Klasa
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  A `_bstr_t` hermetyzuje [BSTR, typ danych](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Klasa zarządza alokacji zasobów i dezalokacji za pośrednictwem wywołania funkcji **SysAllocString** i **SysFreeString** i innych `BSTR` interfejsów API, gdy jest to konieczne. `_bstr_t` Klasy używa zliczanie, aby uniknąć nadmiernego obciążenia.  
   
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[_bstr_t —](../cpp/bstr-t-bstr-t.md)|Konstruuje `_bstr_t` obiektu.|  
+|[_bstr_t](../cpp/bstr-t-bstr-t.md)|Konstruuje `_bstr_t` obiektu.|  
   
 ### <a name="operations"></a>Operacje  
   
@@ -42,11 +42,11 @@ ms.lasthandoff: 12/21/2017
 |-|-|  
 |[Przypisz](../cpp/bstr-t-assign.md)|Kopie `BSTR` do `BSTR` opakowane przez `_bstr_t`.|  
 |[Attach](../cpp/bstr-t-attach.md)|Łącza `_bstr_t` otoki do `BSTR`.|  
-|[Kopiuj](../cpp/bstr-t-copy.md)|Tworzy kopię hermetyzowany `BSTR`.|  
+|[copy](../cpp/bstr-t-copy.md)|Tworzy kopię hermetyzowany `BSTR`.|  
 |[Detach](../cpp/bstr-t-detach.md)|Zwraca `BSTR` opakowane przez `_bstr_t` i odłącza `BSTR` z `_bstr_t`.|  
 |[GetAddress](../cpp/bstr-t-getaddress.md)|Wskazuje `BSTR` opakowane przez `_bstr_t`.|  
 |[GetBSTR](../cpp/bstr-t-getbstr.md)|Wskazuje początek `BSTR` opakowane przez `_bstr_t`.|  
-|[długość](../cpp/bstr-t-length.md)|Zwraca liczbę znaków w `_bstr_t`.|  
+|[length](../cpp/bstr-t-length.md)|Zwraca liczbę znaków w `_bstr_t`.|  
   
 ### <a name="operators"></a>Operatory  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** comutil.h  
+ **Nagłówek:** \<comutil.h >  
   
  **Lib:** comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)  
   
