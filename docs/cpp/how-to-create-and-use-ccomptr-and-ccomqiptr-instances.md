@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 342fd293983840257e83e287df3a8ef6767826c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 35f007cadb3afca1ccacebf1e831ba761602c904
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Porady: tworzenie wystąpień CComPtr i CComQIPtr i korzystanie z nich
 W klasycznym programowania w języku systemu Windows, bibliotek często są zaimplementowane jako obiekty COM (i bardziej precyzyjnie serwerów COM). Wiele składników systemu operacyjnego Windows są zaimplementowane jako serwerów COM i wiele współautorzy zapewnia biblioteki w tym formularzu. Aby uzyskać informacje dotyczące podstawowych informacji o modelu COM, zobacz [składnik modelu COM.](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
@@ -30,7 +33,7 @@ W klasycznym programowania w języku systemu Windows, bibliotek często są zaim
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr`i jego odmian są częścią ATL są zdefiniowane w atlcomcli.h. `_com_ptr_t`jest zadeklarowana w comip.h. Kompilator tworzy specjalizacjach `_com_ptr_t` podczas generowania klasy otoki dla biblioteki typów.  
+ `CComPtr`i jego odmian są częścią ATL są zdefiniowane w \<atlcomcli.h >. `_com_ptr_t`zadeklarowano w \<comip.h >. Kompilator tworzy specjalizacjach `_com_ptr_t` podczas generowania klasy otoki dla biblioteki typów.  
   
 ## <a name="example"></a>Przykład  
  Udostępnia również ATL `CComQIPtr`, mającego prostsze składni zapytań obiektu COM można pobrać dodatkowe interfejs. Firma Microsoft zaleca jednak `CComPtr` gdyż wszystko, co który `CComQIPtr` możliwość i jest semantycznie bardziej spójny z wskaźników interfejsów COM. raw. Jeśli używasz `CComPtr` dla interfejsu kwerendy, nowe wskaźnika interfejsu jest umieszczany w parametrem out. Jeśli połączenie nie powiedzie się, jest zwracany HRESULT, która jest typowy wzorzec COM. Z `CComQIPtr`, zwracana wartość jest wskaźnik sam i jeśli połączenie nie powiedzie się, zwracana wartość HRESULT wewnętrzny jest niedostępny. Następujące dwa wiersze nie są wyświetlane jak błąd mechanizmów obsługi `CComPtr` i `CComQIPtr` różnią się.  
