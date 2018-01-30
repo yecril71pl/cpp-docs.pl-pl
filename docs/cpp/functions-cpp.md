@@ -1,13 +1,15 @@
 ---
 title: Funkcje (C++) | Dokumentacja firmy Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88031e4f47bea363c441986c72d5f890c03447f7
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="functions-c"></a>Funkcje (C++)
 Funkcja jest blok kodu, który wykonuje pewne operacje. Funkcja Opcjonalnie można określić parametrów wejściowych umożliwiających wywołań przekazać argumenty do funkcji. Funkcja opcjonalnie może zwracać wartości jako dane wyjściowe. Funkcje są przydatne w przypadku hermetyzując typowych operacji w jeden blok wielokrotnego użytku, najlepiej z nazwę, która wyraźnie opisuje, jak działa funkcja. Następująca funkcja akceptuje dwie liczb całkowitych z obiekt wywołujący i zwraca ich sumy; `a` i `b` są *parametry* typu `int`.  
@@ -50,6 +53,8 @@ int main()
  Nie ma żadnego limitu praktyczne do długości funkcji, ale ma dobrej projektowania dla funkcji wykonujących pojedyncze zadanie dobrze zdefiniowany. Złożonych algorytmów powinny być dzielone na łatwe do zrozumienia funkcje prostsze zawsze, gdy jest to możliwe.  
   
  Funkcje, które są zdefiniowane w zakresie klasy są nazywane funkcji elementów członkowskich. W języku C++ w przeciwieństwie do innych języków, funkcja może być także definiowane w zakresie przestrzeni nazw (w tym niejawne globalnej przestrzeni nazw). Takie funkcje są nazywane *wolne funkcji* lub *funkcji nieczłonkowskich*; są często używane w standardowej bibliotece.  
+
+Funkcje mogą być *przeciążony*, co oznacza, że różne wersje funkcji mogą takiej samej nazwie, jeśli różnią się one numer i/lub typ parametrów formalnych. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](../cpp/function-overloading.md).
   
 ## <a name="parts-of-a-function-declaration"></a>Części deklaracji funkcji  
  Funkcja minimalnego *deklaracji* składa się z typem zwracanym, nazwy funkcji i lista parametrów (które mogą być puste), oraz opcjonalne słów kluczowych, które zapewniają dodatkowe instrukcje dla kompilatora. Poniższy przykład jest deklaracji funkcji:
@@ -127,7 +132,7 @@ int sum(int a, int b)
   
 7.  (tylko funkcje Członkowskie) `static` stosowany do elementu członkowskiego funkcji oznacza, że funkcja nie jest skojarzony z wystąpienia obiektu klasy.  
   
-8.  (Tylko funkcje niestatyczny element członkowski) Kwalifikator ref, określający w kompilatorze, które przeładowanie funkcji, aby zdecydować, kiedy parametr obiektu niejawne (* to) jest odwołanie do r-wartości, a odwołania do wartości.  
+8.  (Tylko funkcje niestatyczny element członkowski) Kwalifikator ref, określający w kompilatorze, które przeładowanie funkcji, aby zdecydować, kiedy parametr obiektu niejawne (* to) jest odwołanie do r-wartości, a odwołania do wartości. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](function-overloading.md#ref-qualifiers). 
   
  Na poniższej ilustracji przedstawiono części definicji funkcji. W obszarze przyciemnione ma treści funkcji.  
   
@@ -373,7 +378,7 @@ int main()
 }
 ```
 
-4. Oprócz przy użyciu sama wartość zwrotną, możesz można "return" wartości, definiując dowolną liczbę parametry używane przekazywany przez odwołanie, tak aby funkcji można zmodyfikować lub zainicjować wartości obiektów, które zawiera obiekt wywołujący. Aby uzyskać więcej informacji, zobacz [argumenty funkcji typu odwołania](reference-type-function-arguments.md).
+4. Oprócz przy użyciu sama wartość zwrotną, możesz można "return" wartości, definiując dowolną liczbę parametry używane przekazywany przez odwołanie, tak aby funkcji można zmodyfikować lub zainicjować wartości obiektów, które zawiera obiekt wywołujący. Aby uzyskać więcej informacji, zobacz [argumenty funkcji typu odwołania](reference-type-function-arguments.md).  
   
 ## <a name="function-pointers"></a>Wskaźniki funkcji  
  C++ obsługuje wskaźników funkcji w taki sam sposób jak w języku C. Jednak bardziej bezpieczne alternatywą jest zwykle użycie obiektem funkcji.  

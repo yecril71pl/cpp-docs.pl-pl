@@ -1,5 +1,5 @@
 ---
-title: "nearbyint —, nearbyintf —, nearbyintl1 | Dokumentacja firmy Microsoft"
+title: "nearbyint —, nearbyintf —, nearbyintl | Dokumentacja firmy Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,22 +33,24 @@ f1_keywords:
 - math/nearbyint
 - math/narbyintf
 - math/narbyintl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - nearbyint function
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d95f92d15dcf4b8baf84b762b994bdb52930346d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d981df622450ef0b52a9b0d81427497a3e180bc
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 Zaokrągla określona wartość zmiennoprzecinkowa na liczbę całkowitą i zwraca tę wartość w formacie liczb zmiennoprzecinkowych.  
@@ -89,7 +91,7 @@ long double nearbyintl(
 |-----------|------------|  
 |`x`= ±INFINITY|±INFINITY nie mają być modyfikowane|  
 |`x` = ±0|±0, nie mają być modyfikowane|  
-|`x`= NaN|NaN|  
+|`x` = NaN|NaN|  
   
  Błędy nie są zgłaszane przez [_matherr —](../../c-runtime-library/reference/matherr.md); ściślej mówiąc, ta funkcja nie raportuje wszystkie wyjątki FE_INEXACT.  
   
@@ -102,7 +104,7 @@ long double nearbyintl(
   
 |Funkcja|Nagłówek C|Nagłówek C++|  
 |--------------|--------------|------------------|  
-|`nearbyint`,                `nearbyintf`,  `nearbyintl`|\<Math.h >|\<cmath >|  
+|`nearbyint`,                `nearbyintf`,  `nearbyintl`|\<math.h>|\<cmath>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

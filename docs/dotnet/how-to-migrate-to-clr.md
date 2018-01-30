@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - upgrading Visual C++ applications, /clr compiler option
 - compiling native code [C++]
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f38450831ad85a09d3a43173f8febc7841f02c09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>Porady: migracja do /clr
 W tym temacie opisano problemy, które wystąpić podczas kompilowania kodu natywnego z **/CLR** (zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji). **/ CLR** umożliwia moduł Visual C++ do wywołania i można wywołać z zestawów platformy .NET, zachowując zgodność z modułami niezarządzane. Zobacz [zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md) i [natywne i .NET współdziałanie](../dotnet/native-and-dotnet-interoperability.md) uzyskać więcej informacji o zaletach kompilowania przy użyciu **/CLR**.  
@@ -147,7 +149,7 @@ COMObj2->Method(args);  // C++ equivalent
 ## <a name="using-new-visual-c-features"></a>Korzystać z nowych funkcji programu Visual C++  
  Po kompiluje aplikacji, łączy i działa, możesz rozpocząć korzystanie z funkcji .NET w module skompilowanym z **/CLR**. Aby uzyskać więcej informacji, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md).  
   
- Jeśli używasz rozszerzeń zarządzanych dla języka C++, możesz przekonwertować kod, aby używał nowej składni. Aby uzyskać podsumowanie różnice składniowe, zobacz [(NOTINBUILD) zarządzanych rozszerzeń Lista kontrolna uaktualnienia składni języka C++](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada). Aby uzyskać szczegółowe informacje o konwersji rozszerzeń zarządzanych dla języka C++, zobacz [C + +/ CLI migracji Elementarz](../dotnet/cpp-cli-migration-primer.md).  
+ Jeśli używasz rozszerzeń zarządzanych dla języka C++, możesz przekonwertować kod, aby używał nowej składni. Aby uzyskać szczegółowe informacje o konwersji rozszerzeń zarządzanych dla języka C++, zobacz [C + +/ CLI migracji Elementarz](../dotnet/cpp-cli-migration-primer.md).  
   
  Aby uzyskać informacje na temat programowania w języku Visual C++ .NET, zobacz:  
   

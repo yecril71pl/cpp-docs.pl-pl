@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CREATE_SUSPENDED
-dev_langs: C++
+f1_keywords:
+- CREATE_SUSPENDED
+dev_langs:
+- C++
 helpviewer_keywords:
 - premature thread termination
 - starting threads
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="multithreading-terminating-threads"></a>Wielowątkowość: przerywanie wątków
 Dwie sytuacje normalne spowodować zakończenie wątku: zamyka kontrolowanie funkcji lub wątek nie może zostać wykonane. Jeśli Edytor tekstów używana przez wątek na potrzeby drukowania w tle, kontrolowanie funkcji spowoduje przerwanie normalnie, jeśli drukowanie ukończone pomyślnie. Jeśli użytkownik chce anulować drukowanie, jednak wątku drukowania w tle musi zostać zakończone przedwcześnie. W tym temacie opisano zarówno do zaimplementowania w każdej sytuacji oraz sposobu pobrać kodu zakończenia wątku po zostaje zakończone.  
@@ -58,12 +62,12 @@ Dwie sytuacje normalne spowodować zakończenie wątku: zamyka kontrolowanie fun
   
 -   Ustaw `m_bAutoDelete` element członkowski danych do **FALSE**. Dzięki temu `CWinThread` obiektu przetrwać po wątek został zakończony. Następnie można uzyskać dostęp `m_hThread` element członkowski danych po wątek został zakończony. Jeśli używasz tej techniki, jednak jest odpowiedzialny za niszczenie `CWinThread` obiektu, ponieważ w ramach nie powoduje automatycznego usunięcia go dla Ciebie. Jest to preferowana metoda.  
   
--   Dojście wątku należy przechowywać oddzielnie. Po utworzeniu wątek, skopiuj jej `m_hThread` elementu członkowskiego danych (przy użyciu **:: DuplicateHandle**) do innej zmiennej i do niego dostęp za pośrednictwem tej zmiennej. Dzięki temu obiekt jest usuwane automatycznie, gdy występuje zakończenia i może nadal dowiedzieć się, dlaczego wątek zakończony. Pamiętaj, że wątek nie zakończyć przed można zduplikować dojścia. Jest to najbezpieczniejszy sposób, w tym do przekazania **CREATE_SUSPENDED** do [afxbeginthread —](../mfc/reference/application-information-and-management.md#afxbeginthread)i przechowywania dojście oraz wywołując wznowienie wątku [ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread).  
+-   Dojście wątku należy przechowywać oddzielnie. Po utworzeniu wątek, skopiuj jej `m_hThread` elementu członkowskiego danych (przy użyciu **:: DuplicateHandle**) do innej zmiennej i do niego dostęp za pośrednictwem tej zmiennej. Dzięki temu obiekt jest usuwane automatycznie, gdy występuje zakończenia i może nadal dowiedzieć się, dlaczego wątek zakończony. Pamiętaj, że wątek nie zakończyć przed można zduplikować dojścia. Jest to najbezpieczniejszy sposób, w tym do przekazania **CREATE_SUSPENDED** do [afxbeginthread —](../mfc/reference/application-information-and-management.md#afxbeginthread)i przechowywania dojście oraz wywołując wznowienie wątku [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).  
   
  Każda metoda pozwala określić dlaczego `CWinThread` obiektu zakończone.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
  [_endthread —, _endthreadex —](../c-runtime-library/reference/endthread-endthreadex.md)   
- [_beginthread —, _beginthreadex —](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+ [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

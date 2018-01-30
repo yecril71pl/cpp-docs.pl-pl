@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - AFXMOUSEMANAGER/CMouseManager::LoadState
 - AFXMOUSEMANAGER/CMouseManager::SaveState
 - AFXMOUSEMANAGER/CMouseManager::SetCommandForDblClk
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMouseManager [MFC], AddView
 - CMouseManager [MFC], GetViewDblClickCommand
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f50b74731089346a9675b5340ba0ea1a0b2879f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7d019bedd63e7b7700ec91309c9ccaa0a41bf1ed
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="cmousemanager-class"></a>Klasa CMouseManager
 Umożliwia użytkownikowi skojarzyć różne polecenia z określonego [CView](../../mfc/reference/cview-class.md) obiektu, gdy użytkownik kliknie dwukrotnie w tym widoku.  
@@ -138,7 +141,7 @@ UINT GetViewDblClickCommand(int iId) const;
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator polecenia, czy widok jest skojarzony z polecenia; w przeciwnym razie 0.  
   
-##  <a name="getviewiconid"></a>CMouseManager::GetViewIconId  
+##  <a name="getviewiconid"></a>  CMouseManager::GetViewIconId  
  Pobiera ikon skojarzonych z identyfikatorem widoku.  
   
 ```  
@@ -241,7 +244,7 @@ void SetCommandForDblClk(
  Identyfikator polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby można było skojarzyć polecenia niestandardowych z widoku, najpierw należy zarejestrować widoku przy użyciu [CMouseManager::AddView](#addview). `AddView` Metoda wymaga identyfikatora widoku jako parametr wejściowy. Po zarejestrowaniu widoku można wywołać `CMouseManager::SetCommandForDblClk` z tego samego widoku identyfikator parametr wejściowy dostarczona do `AddView`. Następnie, gdy użytkownik kliknie dwukrotnie myszy w zarejestrowany widoku, aplikacji spowoduje wykonanie polecenia wskazywanym przez `uiCmd.` do obsługi myszy niestandardowe zachowanie, również należy dostosować widok zarejestrowana przy użyciu Menedżera myszy. Aby uzyskać więcej informacji dotyczących zachowania myszy niestandardowych, zobacz [Dostosowywanie klawiatury i myszy]--brokenlink--(.. / customization.md myszy i klawiatury).  
+ Aby można było skojarzyć polecenia niestandardowych z widoku, najpierw należy zarejestrować widoku przy użyciu [CMouseManager::AddView](#addview). `AddView` Metoda wymaga identyfikatora widoku jako parametr wejściowy. Po zarejestrowaniu widoku można wywołać `CMouseManager::SetCommandForDblClk` z tego samego widoku identyfikator parametr wejściowy dostarczona do `AddView`. Następnie, gdy użytkownik kliknie dwukrotnie myszy w zarejestrowany widoku, aplikacji spowoduje wykonanie polecenia wskazywanym przez `uiCmd.` do obsługi myszy niestandardowe zachowanie, również należy dostosować widok zarejestrowana przy użyciu Menedżera myszy. Aby uzyskać więcej informacji dotyczących zachowania myszy niestandardowych, zobacz [Dostosowywanie klawiatury i myszy](../keyboard-and-mouse-customization.md).  
   
  Jeśli `uiCmd` jest ustawiony na wartość 0, określony widok nie jest już skojarzona z poleceniem.  
   

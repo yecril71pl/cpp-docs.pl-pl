@@ -4,13 +4,15 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - LoadStdProfileSettings
 - EnableShellOpen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - files [MFC], most recently used
 - DragAcceptFiles method [MFC]
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f8734bfd4e673e1298d6822bbd272e2d70ff7a81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 28a12d9553e1519c158c0a0e9d2fcec6365b65fe
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="special-cwinapp-services"></a>Specjalne usługi CWinApp
 Poza systemem pętli komunikatów i zapewniając możliwość inicjowania aplikacji i wyczyścić, po którym [CWinApp](../mfc/reference/cwinapp-class.md) zawiera kilka innych usług.  
@@ -60,9 +63,9 @@ Poza systemem pętli komunikatów i zapewniając możliwość inicjowania aplika
   
  Ta obsługa automatycznej rejestracji w `CWinApp` eliminuje potrzebę dostarczać pliku reg z aplikacją lub wykonać pracę specjalnej instalacji.  
   
- Jeśli chcesz zainicjować GDI + aplikacji (wywołując [GdiplusStartup] — brokenlink — (_gdiplus_FUNC_GdiplusStartup_token_input_output_) w Twojej [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) funkcji), należy Pomiń GDI + wątek w tle.  
+ Jeśli chcesz zainicjować GDI + aplikacji (wywołując [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) w Twojej [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) funkcji), należy pominąć GDI + wątek w tle.  
   
- Można to zrobić przez ustawienie **SuppressBackgroundThread** członkiem [struktury GdiplusStartupInput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupInput) **TRUE**. Gdy pomijanie GDI + w tle wątku, **NotificationHook** i **NotificationUnhook** wywołania (zobacz [GdiplusStartupOutput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupOutput)) powinien się tuż przed wprowadzanie i zamykanie pętli komunikatów aplikacji. W związku z tym dobrym miejscem do wywołania **GdiplusStartup** i funkcji punktów zaczepienia powiadomień będzie znajdować się w przesłonięcie funkcji wirtualnej [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), jak pokazano poniżej:  
+ Można to zrobić przez ustawienie **SuppressBackgroundThread** członkiem [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) struktury do **TRUE**. Gdy pomijanie GDI + w tle wątku, **NotificationHook** i **NotificationUnhook** wywołania należy po prostu wcześniejsze wprowadzanie i zamykanie pętli komunikatów aplikacji. Aby uzyskać więcej informacji o tych wywołań, zobacz [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). W związku z tym dobrym miejscem do wywołania **GdiplusStartup** i funkcji punktów zaczepienia powiadomień będzie znajdować się w przesłonięcie funkcji wirtualnej [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), jak pokazano poniżej:  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

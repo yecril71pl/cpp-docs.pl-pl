@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.runtime
-dev_langs: C++
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9b393bc72bbc6722d353295dc244f75f504b9730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7683dd8c6c896f972df3e47d5ba37a0f413724fa
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="c-run-time-library-reference"></a>Odwołanie do biblioteki C-Run-Time
 Biblioteka wykonawcza Microsoft zawiera procedury programowania dla systemu operacyjnego Microsoft Windows. Te procedury zautomatyzować wiele typowych zadań programowania, które nie są dostarczane przez języków C i C++.  
@@ -62,11 +66,5 @@ Biblioteka wykonawcza Microsoft zawiera procedury programowania dla systemu oper
  [Zachowanie biblioteki wykonawczej DLL i Visual C++](../build/run-time-library-behavior.md)  
  W tym artykule omówiono kod punktu i uruchamiania wpis używany do biblioteki DLL.  
   
- [Bibliotek języka Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Zawiera łącza do bibliotek różnych dostarczone z programem Visual C++, w tym ATL, MFC, szablony OLE DB, biblioteki wykonawczej języka C i standardowa biblioteka C++.  
-  
  [Debugowanie](/visualstudio/debugger/debugging-in-visual-studio)  
  Zawiera łącza do poprawianie błędów logikę w aplikacji lub procedury składowane za pomocą debugera programu Visual Studio.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja bibliotek języka Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)

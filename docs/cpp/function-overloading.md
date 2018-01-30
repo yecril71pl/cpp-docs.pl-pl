@@ -1,33 +1,38 @@
 ---
 title: "Przeciążanie funkcji | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="function-overloading"></a>Przeładowywanie funkcji
-C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Takie funkcje są nazywane funkcjami przeciążonymi i opisano je szczegółowo w temacie Przeciążenia. Przeciążone funkcje umożliwiają deweloperom podanie różnego znaczenia dla funkcji, w zależności od typów i liczby argumentów.  
+C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Są one nazywane *przeciążony* funkcji. Funkcje przeciążone umożliwiają podać semantykę różną dla funkcji, w zależności od typów i liczby argumentów. 
   
- Na przykład **drukowanie** funkcji wykorzystującej ciąg (lub **char \*** ) argument wykonuje zadania bardzo inny niż jeden, który przyjmuje argument typu **podwójne** . Przeciążenie dopuszcza takie same nazwy i powstrzymuje programistów przed wymyślaniem takich nazw jak `print_sz` lub `print_d`. W poniższej tabeli przedstawiono, które części deklaracji funkcji język C++ używa do rozróżniania grup funkcji o tej samej nazwie w tym samym zakresie.  
+ Na przykład **drukowanie** funkcja, która przyjmuje **std::string** argument może wykonywać bardzo różnych zadań niż jeden, który przyjmuje argument typu **podwójne**. Przeciążanie pozwala uniknąć konieczności użycia nazwy, takie jak `print_string` lub `print_double`. W czasie kompilacji wybierze kompilator które przeładowanie do użycia na podstawie typu argumentów przekazany przez wywołującego.  Jeśli należy wywołać **print(42.0)** , a następnie **void drukowania (dwa razy d)** funkcja zostanie wywołana. Jeśli należy wywołać **drukowania (tekst "hello world")** , a następnie **void print(std::string)** przeciążenia zostanie wywołany.
+
+Można przeciążać zarówno funkcji Członkowskich i funkcji z systemem innym niż elementów członkowskich. W poniższej tabeli przedstawiono, które części deklaracji funkcji język C++ używa do rozróżniania grup funkcji o tej samej nazwie w tym samym zakresie.  
   
 ### <a name="overloading-considerations"></a>Zagadnienia przeciążania  
   
@@ -39,9 +44,8 @@ C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym 
 |Obecność lub brak wielokropka|Tak|  
 |Korzystanie z nazw `typedef`|Nie|  
 |Nieokreślone granice tablic|Nie|  
-|**Const** lub `volatile` (patrz poniżej)|Tak|  
-  
- Chociaż funkcje można wyodrębnić na podstawie zwracany typ nie może zostać przeciążony na tej podstawie.  `Const`lub `volatile` są używane tylko jako podstawa dla przeciążeniu, jeśli są używane w klasie do zastosowania do **to** wskaźnika do klasy, a nie typ zwracany przez funkcję.  Innymi słowy, przeładowanie ma zastosowanie tylko wtedy, gdy **const** lub `volatile` — słowo kluczowe następuje lista argumentów funkcji w deklaracji.  
+|**Const** lub`volatile`|Tak, gdy jest stosowany do całej funkcji|
+|[ref-qualifier](#ref-qualifier)|Tak|  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład ilustruje sposób użycia przeciążenia.  
@@ -51,68 +55,71 @@ C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym 
 // compile with: /EHsc  
 #include <iostream>  
 #include <math.h>  
-  
+#include <string>
+
 // Prototype three print functions.  
-int print( char *s );                  // Print a string.  
-int print( double dvalue );            // Print a double.  
-int print( double dvalue, int prec );  // Print a double with a  
-//  given precision.  
-using namespace std;  
-int main( int argc, char *argv[] )  
-{  
-const double d = 893094.2987;  
-if( argc < 2 )  
-    {  
-// These calls to print invoke print( char *s ).  
-print( "This program requires one argument." );  
-print( "The argument specifies the number of" );  
-print( "digits precision for the second number" );  
-print( "printed." );  
-exit(0);  
-    }  
-  
-// Invoke print( double dvalue ).  
-print( d );  
-  
-// Invoke print( double dvalue, int prec ).  
-print( d, atoi( argv[1] ) );  
-}  
-  
+int print(std::string s);             // Print a string.  
+int print(double dvalue);            // Print a double.  
+int print(double dvalue, int prec);  // Print a double with a  
+                                     //  given precision.  
+using namespace std;
+int main(int argc, char *argv[])
+{
+    const double d = 893094.2987;
+    if (argc < 2)
+    {
+        // These calls to print invoke print( char *s ).  
+        print("This program requires one argument.");
+        print("The argument specifies the number of");
+        print("digits precision for the second number");
+        print("printed.");
+        exit(0);
+    }
+
+    // Invoke print( double dvalue ).  
+    print(d);
+
+    // Invoke print( double dvalue, int prec ).  
+    print(d, atoi(argv[1]));
+}
+
 // Print a string.  
-int print( char *s )  
-{  
-cout << s << endl;  
-return cout.good();  
-}  
-  
+int print(string s)
+{
+    cout << s << endl;
+    return cout.good();
+}
+
 // Print a double in default precision.  
-int print( double dvalue )  
-{  
-cout << dvalue << endl;  
-return cout.good();  
-}  
-  
-// Print a double in specified precision.  
+int print(double dvalue)
+{
+    cout << dvalue << endl;
+    return cout.good();
+}
+
+//  Print a double in specified precision.  
 //  Positive numbers for precision indicate how many digits  
 //  precision after the decimal point to show. Negative  
 //  numbers for precision indicate where to round the number  
 //  to the left of the decimal point.  
-int print( double dvalue, int prec )  
-{  
-// Use table-lookup for rounding/truncation.  
-static const double rgPow10[] = {   
-10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 10E0,  
-10E1,  10E2,  10E3,  10E4, 10E5,  10E6  
-    };  
-const int iPowZero = 6;  
-// If precision out of range, just print the number.  
-if( prec < -6 || prec > 7 )  
-return print( dvalue );  
-// Scale, truncate, then rescale.  
-dvalue = floor( dvalue / rgPow10[iPowZero - prec] ) *  
-rgPow10[iPowZero - prec];  
-cout << dvalue << endl;  
-return cout.good();  
+int print(double dvalue, int prec)
+{
+    // Use table-lookup for rounding/truncation.  
+    static const double rgPow10[] = {
+        10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 
+        10E0, 10E1,  10E2,  10E3,  10E4, 10E5,  10E6 };
+    const int iPowZero = 6;
+
+    // If precision out of range, just print the number.  
+    if (prec < -6 || prec > 7)
+    {
+        return print(dvalue);
+    }
+    // Scale, truncate, then rescale.  
+    dvalue = floor(dvalue / rgPow10[iPowZero - prec]) *
+        rgPow10[iPowZero - prec];
+    cout << dvalue << endl;
+    return cout.good();
 }  
 ```  
   
@@ -399,15 +406,54 @@ obj.name
 ```  
   
  Lewy argument operacji `->*` i `.*` operatory (wskaźnik do elementu członkowskiego) są traktowane w taki sam sposób jak `.` i `->` operatory (wyboru elementu członkowskiego) względem dopasowania argumentów.  
+
+## <a name="ref-qualifiers"></a>Kwalifikatory ref w funkcjach Członkowskich  
+Kwalifikatory REF umożliwiają przeciążyć funkcji członkowskiej na podstawie tego, czy obiekt wskazywany przez `this` r-wartości lub l-wartością.  Tej funkcji można uniknąć operacje kopiowania niepotrzebnych w scenariuszach, w których użytkownik chce nie wskaźnika dostęp do danych. Załóżmy na przykład, klasa **C** niektóre dane w jego Konstruktor inicjuje i zwraca kopię danych w funkcji członkowskiej **get_data()**. Jeśli obiekt typu **C** jest r-wartości jest zniszczony, a następnie wybierze kompilator **get_data() & &** przeciążenia, które przenosi dane, a nie skopiować go. 
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class C
+{
+
+public:
+    C() {/*expensive initialization*/}
+    vector<unsigned> get_data() & 
+    { 
+        cout << "lvalue\n";
+        return _data;
+    }
+    vector<unsigned> get_data() && 
+    {
+        cout << "rvalue\n";
+        return std::move(_data);
+    }
+    
+private:
+    vector<unsigned> _data;
+};
+
+int main()
+{
+    C c;
+    auto v = c.get_data(); // get a copy. prints "lvalue".
+    auto v2 = C().get_data(); // get the original. prints "rvalue"
+    return 0;
+}
+
+```
   
-## <a name="restrictions"></a>Ograniczenia  
+## <a name="restrictions-on-overloading"></a>Ograniczenia przeciążania  
  Kilka ograniczeń regulują dopuszczalnego zestawu przeciążonej funkcji:  
   
 -   Wszelkie dwóch funkcji w zestawie przeciążonej funkcji musi mieć listy argumentów inny.  
   
 -   Przeciążanie funkcji z listy argumentów tego samego typu na podstawie zwracanego typu samodzielnie, występuje błąd.  
   
-     **Dotyczące firmy Microsoft**  
+     **Microsoft Specific**  
   
  Można przeciążać **nowy operator** wyłącznie w oparciu o typ zwracany — w szczególności na podstawie modyfikator modelu pamięci określono.  
   
@@ -443,10 +489,13 @@ obj.name
     void Print( char szToPrint[][9][42] );  
     ```  
   
-## <a name="declaration-matching"></a>Zgodność deklaracji  
+## <a name="overloading-overriding-and-hiding"></a>Przeładowanie, zastępowanie i ukrywanie
+  
  Wszelkie dwie deklaracje funkcji o tej samej nazwie w tym samym zakresie, mogą odwoływać się do tej samej funkcji lub do dwóch funkcji dyskretnych, które są przeciążone. Jeśli wykazy argumentów deklaracji zawierają równoważne typy argumentów (zgodnie z opisem w poprzedniej sekcji), deklaracje funkcji odnoszą się do tej samej funkcji. W przeciwnym razie, odnoszą się do dwóch różnych funkcji, które są wybrane za pomocą przeciążenia.  
   
- Zakres klasy jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w klasie bazowej nie jest w tym samym zakresie, co funkcja zadeklarowana w klasie pochodnej. Jeśli funkcja klasy pochodnej jest zadeklarowana z tą samą nazwą, jako funkcja w klasie bazowej, funkcja klasy pochodnej ukrywa funkcje klasy bazowej, zamiast powodować przeciążenie.  
+ Zakres klasy jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w klasie bazowej nie jest w tym samym zakresie, co funkcja zadeklarowana w klasie pochodnej. Jeśli funkcja w klasie pochodnej jest zadeklarowany z taką samą nazwę jak funkcję wirtualną w klasie podstawowej funkcji klas pochodnych *zastępuje* funkcji klasy podstawowej. Aby uzyskać więcej informacji, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).
+
+Jeśli funkcji klasy podstawowej nie jest zadeklarowany jako "virtual", a następnie funkcja klasy pochodnej jest nazywany *Ukryj* go. Zarówno zastępowanie i ukrywanie różnią się od przeciążenia.  
   
  Zakres bloku jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w zakresie pliku nie jest w tym samym zakresie, co funkcja zadeklarowana lokalnie. Jeśli funkcja zadeklarowana lokalnie ma taką samą nazwę, co funkcja zadeklarowana w zakresie pliku, funkcja zadeklarowana lokalnie ukrywa funkcje należącą do zakresu pliku, zamiast powodować przeciążenie. Na przykład:  
   
@@ -526,7 +575,10 @@ double Account::Deposit( double dAmount, char *szPassword )
    else  
       return 0.0;  
 }  
-```  
+```
+
+
+
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje (C++)](../cpp/functions-cpp.md)

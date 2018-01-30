@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - attributed programming [C++]
 - attributes [C++]
 - programming [C++], attributed programming
 ms.assetid: 563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2e5477d91d50ab239732adf3521a2bf07d92a1c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6498659865ae3cad536cdc8e446c04cdd731a67e
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="attributed-programming-concepts"></a>Pojęcia związane z programowaniem opartym na atrybutach
 Visual C++ zawiera różne informacje pomocne użyć atrybutów w programach. Atrybuty, nowa funkcja w programie Visual C++ są przeznaczone do uproszczenia programowania COM i rozwoju środowiska uruchomieniowego języka wspólnego .NET Framework. Po dołączeniu atrybutów plików źródłowych, kompilator współpracuje z dostawcy biblioteki dołączanej dynamicznie (DLL), aby wstawić kod lub zmodyfikować kod w plikach wygenerowanego obiektu. Brak atrybutów, które pomocy w przypadku tworzenia plików .idl, interfejsów, biblioteki typów i inne elementy modelu COM. W zintegrowane środowisko programistyczne (IDE) atrybutów są obsługiwane za pomocą kreatorów i okna właściwości.  
@@ -57,5 +59,3 @@ Visual C++ zawiera różne informacje pomocne użyć atrybutów w programach. At
  [__super](../cpp/super.md)i [__interface](../cpp/interface.md)  
  Łącza do związanych z Programowanie oparte na atrybutach nowych słów kluczowych języka C++.  
   
- [(NOTINBUILD) Metodologie programowania w języku Visual C++](http://msdn.microsoft.com/en-us/0822f806-fa81-4b65-bf0f-1e2921f30c95)  
- Oferuje łącza do tematów, które opisują informacje o pojęciach dotyczących bibliotek Visual C++, oraz tematów, które omawiają różne technologie i techniki kodowania.

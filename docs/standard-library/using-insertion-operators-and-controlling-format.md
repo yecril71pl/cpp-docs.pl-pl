@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: insertion operators
+dev_langs:
+- C++
+helpviewer_keywords:
+- insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Korzystanie z operatorów wstawiania i formatu kontrolującego
 W tym temacie przedstawia sposób kontrolowania format oraz sposobu tworzenia operatorów wstawiania własnych klas. Wstawiania (**<<**) operatora, który jest wcześniej zaplanowane dla wszystkie standardowe typy danych języka C++, wysyła bajtów do obiektu strumienia wyjściowego. Operatory wstawienia współpracować z wstępnie zdefiniowanych "manipulatory,", które są elementami, które zmienić domyślny format liczby całkowitej argumentów.  
@@ -32,7 +36,7 @@ W tym temacie przedstawia sposób kontrolowania format oraz sposobu tworzenia op
   
 - [Dokładność](#vclrfprecisionanchor5)  
   
-- [Podstawa](#vclrfradixanchor6)  
+- [Radix](#vclrfradixanchor6)  
   
 ##  <a name="vclrfoutputwidthanchor3"></a>Szerokość danych wyjściowych  
  Aby wyrównać dane wyjściowe, określ szerokość danych wyjściowych dla każdego elementu przez umieszczenie `setw` manipulatora w strumieniu, przez wywołanie **szerokość** funkcję elementu członkowskiego. W tym przykładzie prawej wyrównuje wartości w kolumnie co najmniej 10 znaków:  
@@ -192,7 +196,7 @@ Stan    4.4e+003
   
  Ponownie program drukuje jednej cyfry po przecinku. Jeśli dowolny **ios::fixed** lub **ios::scientific** jest ustawiona wartość dokładności określa liczbę cyfr po punkcie dziesiętnym. Jeśli żadna flaga jest ustawiona, wartość precyzji określa całkowitą liczbę cyfr znaczących. `resetiosflags` Manipulatora usuwa te flagi.  
   
-##  <a name="vclrfradixanchor6"></a>Podstawa  
+##  <a name="vclrfradixanchor6"></a> Radix  
  **Gru**, **oct**, i **szesnastkowych** manipulatory ustawić podstawy domyślny dla danych wejściowych i wyjściowych. Na przykład po wstawieniu **szesnastkowych** manipulatora do strumienia wyjściowego obiektu poprawnie tłumaczy reprezentacji wewnętrznej danych liczb całkowitych w formacie szesnastkowym danych wyjściowych. Liczby są wyświetlany cyfr poprzez f liter [wielkich](../standard-library/ios-functions.md#uppercase) flaga jest Wyczyść (ustawienie domyślne); w przeciwnym razie są wyświetlane wielkimi literami. Podstawa domyślny jest **gru** (dziesiętne).  
   
 ## <a name="quoted-strings-c14"></a>Ciągi cudzysłowie (C ++ 14)  
@@ -213,11 +217,11 @@ std::cout <<extracted;   //   This
   
  Można ręcznie rozwiązać ten problem, ale aby dwustronną komunikację ciąg wygodniejsze, C ++ 14 dodaje `std::quoted` strumienia manipulatora w `<iomanip>`. Podczas wstawiania `quoted()` otaczający ciąg ogranicznikiem (podwójny cudzysłów "" "domyślnie) i podczas wyodrębniania manipuluje strumienia można wyodrębnić wszystkie znaki, dopóki nie napotkano końcowy ogranicznik. Wszystkie osadzone cudzysłowy są anulowane się od znaku ucieczki ("\\\\" domyślnie).  
   
- Ograniczniki znajdują się tylko w obiekcie strumienia; nie istnieją w ciągu wyodrębnić, ale są obecne w ciągu zwróconego przez [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)().  
+ Ograniczniki znajdują się tylko w obiekcie strumienia; nie istnieją w ciągu wyodrębnić, ale są obecne w ciągu zwróconego przez [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str).  
   
  Zachowanie spacji operacji wstawiania i wyodrębniania jest niezależna od jak ciąg są reprezentowane w kodzie, więc ujętego w cudzysłów operator przydaje się niezależnie od tego, czy ciąg wejściowy jest nieprzetworzonego literału ciągu lub ciągu regularne. Ciąg wejściowy, niezależnie od jego format można osadzania oferty, podziały wiersza, kart i tak dalej i wszystkie one będą zachowane manipulatora quoted().  
   
- Aby uzyskać dodatkowe informacje i przykłady pełny kod, zobacz [cytowaną] — brokenlink — (.. / Topic/%3Cios%3E%20functions.md#quoted).  
+ Aby uzyskać dodatkowe informacje i przykłady pełny kod, zobacz [cytowaną](../standard-library/iomanip-functions.md#quoted).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Strumienie wyjściowe](../standard-library/output-streams.md)   

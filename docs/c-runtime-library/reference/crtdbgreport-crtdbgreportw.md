@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,7 +28,8 @@ f1_keywords:
 - CrtDbgReportW
 - _CrtDbgReportW
 - _CrtDbgReport
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - debug reporting
 - _CrtDbgReport function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a2f148b031312db10449c6f33c67b94f6e171c5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4720053f96972c6ff0d846b9641d9ddc2d256f20
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 Generuje raport z komunikatem debugowania i wysyła raport do trzech miejsc docelowych możliwe (tylko wersja do debugowania).  
@@ -119,8 +122,8 @@ int _CrtDbgReportW(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_CrtDbgReport`|\<crtdbg.h >|  
-|`_CrtDbgReportW`|\<crtdbg.h >|  
+|`_CrtDbgReport`|\<crtdbg.h>|  
+|`_CrtDbgReportW`|\<crtdbg.h>|  
   
  `_CrtDbgReport`i `_CrtDbgReportW` są rozszerzenia Microsoft. Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -140,11 +143,11 @@ int main(int argc, char *argv[]) {
 }  
 ```  
   
- Zobacz [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167) przykład sposobu zmiany funkcji raportu.  
+ Zobacz [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2) przykład sposobu zmiany funkcji raportu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
- [_Crtsetreportmode —](../../c-runtime-library/reference/crtsetreportmode.md)   
- [_Crtsetreportfile —](../../c-runtime-library/reference/crtsetreportfile.md)   
- [printf, _printf_l —, wprintf, _wprintf_l —](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)   
+ [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [_DEBUG](../../c-runtime-library/debug.md)

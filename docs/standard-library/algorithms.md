@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5bc9d57f93b5d3ee537330ab16c2c9a02b6beead
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="algorithms"></a>Algorytmy
 Algorytmy są integralną częścią standardowej biblioteki C++. Algorytmy nie działają z kontenerami samodzielnie, ale raczej z Iteratory. W związku z tym samym algorytm może służyć przez większość, jeśli nie dla wszystkich kontenerów standardowa biblioteka C++. W tej sekcji omówiono konwencje i terminologię algorytmów standardowa biblioteka C++.  
@@ -56,7 +59,7 @@ Algorytmy są integralną częścią standardowej biblioteki C++. Algorytmy nie 
   
  Sekwencję elementów wskazywany przez Iteratory z zakresu [`First`, `Last`) jest sekwencją uporządkowanych według operator **<**  if, dla każdego *N* w zakresie [0, `Last`  -  `First`) i dla każdego *M* w zakresie (N, `Last`  -  `First`) predykat! () \*(`First` + *M*) < \*(*pierwszy* + *N*)) ma wartość true. (Należy pamiętać, że elementy będą sortowane w kolejności rosnącej). Funkcja predykatu **operatora <**, lub zastąpieniem, nie mogą zmieniać jeden z argumentów. One musi dostarczyć takie same `bool` powoduje za każdym razem będzie oceniana, i musi uzyskanie takiego samego wyniku, jeśli argument zastępuje kopię którykolwiek argument operacji. Ponadto należy nałożyć strict słabe porządkowanie dla argumentów operacji, który porównuje.  
   
- Sekwencję elementów wskazywany przez Iteratory w zakresie [`First`, `Last`) jest sterty uporządkowanych według **operatora <** if, dla każdego *N* z zakresu [1, `Last`  -  `First`) predykat! (\*`First` < \*(`First` + *N*)) ma wartość true. (Pierwszy element to największa). Jego struktury wewnętrznej jest znany tylko na funkcje szablonu [make_heap —](http://msdn.microsoft.com/Library/b09f795c-f368-4aa8-b57e-61ee6100ddc2), pop_heap — brokenlink — [—] (.. / Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#pop_heap), a [push_heap —] - brokenlink--(.. / Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#push_heap). W przypadku uporządkowanej kolejności, funkcja predykatu **operatora <**, zastępuje go, nie mogą zmieniać jeden z argumentów i musi nakłada strict słabe kolejności w wypadku argumentów operacji porównywania. One musi dostarczyć takie same `bool` powoduje za każdym razem będzie oceniana, i musi uzyskanie takiego samego wyniku, jeśli argument zastępuje kopię którykolwiek argument operacji.  
+ Sekwencję elementów wskazywany przez Iteratory w zakresie [`First`, `Last`) jest sterty uporządkowanych według **operatora <** if, dla każdego *N* z zakresu [1, `Last`  -  `First`) predykat! (\*`First` < \*(`First` + *N*)) ma wartość true. (Pierwszy element to największa). Jego struktury wewnętrznej jest znany tylko na funkcje szablonu [make_heap —](../standard-library/algorithm-functions.md#make_heap), [pop_heap —](../standard-library/algorithm-functions.md#pop_heap), i [push_heap —](../standard-library/algorithm-functions.md#push_heap). W przypadku uporządkowanej kolejności, funkcja predykatu **operatora <**, zastępuje go, nie mogą zmieniać jeden z argumentów i musi nakłada strict słabe kolejności w wypadku argumentów operacji porównywania. One musi dostarczyć takie same `bool` powoduje za każdym razem będzie oceniana, i musi uzyskanie takiego samego wyniku, jeśli argument zastępuje kopię którykolwiek argument operacji.  
   
  Algorytmy standardowa biblioteka C++ znajdują się w [ \<algorytm >](../standard-library/algorithm.md) i [ \<liczbowych >](../standard-library/numeric.md) pliki nagłówków.  
   
