@@ -7,16 +7,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3e19f72dac00d18af62e91b1466bc40f2148518e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e63945dc51fe55d81963790e7373a3d4dc9b0efe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Uaktualnienie kodu do Universal CRT
 
@@ -42,7 +43,7 @@ Kiedy aktualizować projektów Visual C++, jeśli ustawiono projektu **konsolida
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Wdrażanie i rozpowszechnianie Universal CRT
   
-Ponieważ biblioteka UCRT teraz jest składnikiem systemu operacyjnego Microsoft Windows, jest dołączane jako część systemu operacyjnego do systemu Windows 10 i jest dostępna za pośrednictwem usługi Windows Update dla starszych systemów operacyjnych Windows Vista za pośrednictwem Windows 8.1. Pakiet redystrybucyjny wersja jest dostępna dla systemu Windows XP. Jako składnik systemu operacyjnego Biblioteka UCRT aktualizacje i obsługa są zarządzane przez usługę Windows Update niezależnie od wersji kompilatora Visual C++ i Visual Studio. Ponieważ biblioteka UCRT to składnik systemu Windows, zwiększając bezpieczeństwo i ułatwiając, aktualizacji i mniejszy rozmiar obrazu, zdecydowanie zaleca się wdrożenie centralnej Biblioteka UCRT dla aplikacji.  
+Ponieważ biblioteka UCRT teraz jest składnikiem systemu operacyjnego Microsoft Windows, jest dołączane jako część systemu operacyjnego do systemu Windows 10 i jest dostępna za pośrednictwem usługi Windows Update dla starszych systemów operacyjnych Windows Vista za pośrednictwem Windows 8.1. Pakiet redystrybucyjny wersja jest dostępna dla systemu Windows XP. Jako składnik systemu operacyjnego Biblioteka UCRT aktualizacje i obsługa są zarządzane przez usługę Windows Update niezależnie od programu Visual Studio i Microsoft C++ wersja kompilatora. Ponieważ biblioteka UCRT to składnik systemu Windows, zwiększając bezpieczeństwo i ułatwiając, aktualizacji i mniejszy rozmiar obrazu, zdecydowanie zaleca się wdrożenie centralnej Biblioteka UCRT dla aplikacji.  
   
 Biblioteka UCRT można użyć w dowolnej wersji systemu Windows obsługiwane przez Visual Studio 2015 lub Visual Studio 2017 r. Można rozpowszechniać za pomocą pakietu programu vcredist obsługiwane wersje systemu Windows, innym niż Windows 10. Pakiety programu vcredist zawiera składniki Biblioteka UCRT i zainstalować je automatycznie w systemach operacyjnych Windows, które nie mają ich instalowane domyślnie. Aby uzyskać więcej informacji, zobacz [redystrybuowanie pliki Visual C++](../ide/redistributing-visual-cpp-files.md).  
   

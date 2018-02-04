@@ -9,18 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c401aa7a063ab7e76353a5781f008243204bc35
-ms.sourcegitcommit: b5ff17bcd5e5e02bc21717859165a6b819a0ab84
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ Co &#39; s nowe 2003 za pośrednictwem 2015
 
@@ -1485,7 +1487,7 @@ W programie Visual Studio 2015 lub nowszego oraz bieżące ulepszenia kompilator
 
 #### <a name="compiler"></a>Kompilatora
 
-Kompilator Microsoft C++ obsługuje te ISO języka C ++ 11 funkcje języka:
+Kompilator Microsoft Visual C++ obsługuje te ISO języka C ++ 11 funkcje języka:
 
 - Argumenty szablonu domyślnego dla szablonów funkcji.
 - Delegowanie konstruktorów
@@ -1502,8 +1504,8 @@ Kompilator Microsoft C++ obsługuje te ISO języka C ++ 11 funkcje języka:
 - Literały złożone.
 - Inicjatory wyznaczonych.
 - Mieszanie deklaracji z kodem.
-- Konwersja literału ciągu można modyfikować wartości można niedozwolone przy użyciu nowej opcji kompilatora/Zc: strictstrings. W języku C ++ 98 konwersji literałów ciągów na char\* (i wielu ciągów literałów na wchar_t\*) została uznana za przestarzałą. W języku C ++ 11 konwersja usunięto całkowicie. Mimo że kompilator ściśle może odpowiadać standardowego, zamiast tego zapewnia opcję/Zc: strictstrings, dzięki czemu można kontrolować konwersji. Domyślnie opcja jest wyłączona. Należy pamiętać, że jeśli używasz tej opcji w trybie debugowania, STL nie zostanie skompilowany.
-- r-wartości/l-wartością rzutowania odwołania. Z odwołaniami do r-wartości C ++ 11 mogą umożliwić łatwe rozróżnienie dwóch lvalues i rvalues. Wcześniej kompilatora Visual C++ nie dostarczył to w scenariuszach określonych rzutowania. Nową opcję kompilatora/Zc: rvaluecast, dodano dokonanie zgodność kompilatora z Paper(see section 5.4, [expr.cast]/1) pracy języka C++. Domyślne zachowanie, gdy ta opcja nie jest określona, jest taka sama, jak w programie Visual Studio 2012.
+- Ciąg literału konwersji wartości można modyfikować można niedozwolone przy użyciu nowej opcji kompilatora **/Zc: strictstrings**. W języku C ++ 98 konwersji literałów ciągów na char\* (i wielu ciągów literałów na wchar_t\*) została uznana za przestarzałą. W języku C ++ 11 konwersja usunięto całkowicie. Mimo że kompilator ściśle może odpowiadać standardowego, zamiast tego zapewnia **/Zc: strictstrings** opcję, dzięki czemu można kontrolować konwersji. Domyślnie opcja jest wyłączona. Należy pamiętać, że jeśli używasz tej opcji w trybie debugowania, STL nie zostanie skompilowany.
+- r-wartości/l-wartością rzutowania odwołania. Z odwołaniami do r-wartości C ++ 11 mogą umożliwić łatwe rozróżnienie dwóch lvalues i rvalues. Wcześniej kompilator nie dostarczył to w scenariuszach określonych rzutowania. Nową opcję kompilatora, **/Zc: rvaluecast**, dodano dokonanie zgodność kompilatora z Paper(see section 5.4, [expr.cast]/1) pracy języka C++. Domyślne zachowanie, gdy ta opcja nie jest określona, jest taka sama, jak w programie Visual Studio 2012.
   - Uwaga: Aby funkcje domyślne przy użyciu = domyślnie do żądania konstruktorów przenoszenia memberwise i Przenieś operatory przypisania nie jest obsługiwane.
 
 ### <a name="c99-libraries"></a>Biblioteki C99

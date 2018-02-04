@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 09/01/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: UNIX [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 06e4b772288f2e7374bb10f1298da33fbc6dcac0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 258f08db457761a37822a872415633d6359b7b47
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Wprowadzenie do programu Visual C++ dla użytkowników systemu UNIX
 
-Ten temat zawiera informacje dla użytkowników systemu UNIX, które są nowe w programie Visual C++ i chcesz stać się wykorzystują Visual C++ i Visual Studio programowanie środowiska IDE (Integrated).  
+Ten temat zawiera informacje dla użytkowników systemu UNIX, które są nowe w programie Visual Studio i chcesz stać się wykorzystują C++ i Visual Studio programowanie środowiska IDE (Integrated).
   
 ## <a name="getting-started-on-the-command-line"></a>Wprowadzenie do korzystania z wiersza polecenia  
 
-W podobny sposób, że używasz środowiska wiersza polecenia systemu UNIX, można użyć programu Visual C++ w wierszu polecenia. Kompiluj z wiersza polecenia przy użyciu wiersza polecenia kompilatora C i C++ (CL. Wywołanie pliku EXE), konsolidatora (łącze. EXE) i innych narzędzi, takich jak NMAKE. EXE, wersja Microsoft UNIX należy narzędzie.  
+Kompilator języka C++ w wierszu polecenia można użyć w podobny sposób, że używasz środowiska wiersza polecenia systemu UNIX. Kompiluj z wiersza polecenia przy użyciu wiersza polecenia kompilatora C i C++ (CL. Wywołanie pliku EXE), konsolidatora (łącze. EXE) i innych narzędzi, takich jak NMAKE. EXE, wersja Microsoft UNIX należy narzędzie.  
   
-W systemie UNIX polecenia są instalowane w folderze wspólne, takie jak katalogu/usr. W programie Visual C++ narzędzia wiersza polecenia są zainstalowane w katalogu instalacji programu Visual Studio w podkatalogu VC\bin i jego podkatalogach. W przeciwieństwie do systemu UNIX te narzędzia nie są dostępne w oknie wiersza polecenia zwykły. Aby użyć narzędzia wiersza polecenia, użyj skrótu wiersza polecenia dewelopera lub uruchom plik takich jak vcvarsall.bat poleceń dewelopera. To ustawienie ścieżkę i inne zmienne środowiskowe, które są niezbędne do skompilowania programy Visual C++ w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md) i [wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
+W systemie UNIX polecenia są instalowane w folderze wspólne, takie jak katalogu/usr. W programie Visual Studio narzędzia wiersza polecenia są zainstalowane w katalogu instalacji programu Visual Studio w podkatalogu VC\bin i jego podkatalogach. W przeciwieństwie do systemu UNIX te narzędzia nie są dostępne w oknie wiersza polecenia zwykły. Aby użyć narzędzia wiersza polecenia, użyj skrótu wiersza polecenia dewelopera lub uruchom plik takich jak vcvarsall.bat poleceń dewelopera. To ustawienie ścieżkę i inne zmienne środowiskowe, które są niezbędne do kompilacji C++ programów z poziomu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md) i [wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
 Aby otworzyć skrót do wiersza polecenia dewelopera, wprowadź *wiersza polecenia dewelopera* na pulpicie wyszukiwania sterowania i wybierz polecenie **wiersz polecenia dla deweloperów** wynik dla używanej wersji programu Visual Studio. Aby wybrać developer wiersza polecenia, który jest wstępnie skonfigurowany do określonego hosta i Architektura docelowa, otwórz **Start** menu (ikona Windows rogu pulpitu), a następnie przewiń do folderu dla używanej wersji programu Visual Studio , takich jak **programu Visual Studio 2017**. Otwórz folder, a następnie wybierz skrót do wiersza polecenia dla architektury preferowanych źródłowa i docelowa.
   
@@ -47,11 +51,11 @@ Aplikacja, która składa się z wielu bibliotek i plików wykonywalnych, każdy
   
 ## <a name="importing-your-existing-code"></a>Importowanie istniejącego kodu 
  
-Visual C++ służy do tworzenia istniejący kod, który jest skonfigurowany do kompilacji z lub bez pliku reguł programu make i umieszcza je w [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] projektu. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+Kompilator języka C++ można użyć do tworzenia istniejący kod, który jest skonfigurowany do kompilacji z lub bez pliku reguł programu make i umieszcza je w [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] projektu. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
 ## <a name="creating-a-new-project"></a>Tworzenie nowego projektu  
 
-Można tworzyć nowe projekty w środowisku programistycznym. Visual C++ udostępnia wiele szablonów, które zapewniają standardowego kodu dla różnych popularnych projektów. Kreatorzy aplikacji służy do generowania projektów z opisanych kodu dla różnych typów aplikacji.  
+Można tworzyć nowe projekty w środowisku programistycznym. Program Visual Studio udostępnia wiele szablonów, które zapewniają standardowego kodu dla różnych popularnych projektów. Kreatorzy aplikacji służy do generowania projektów z opisanych kodu dla różnych typów aplikacji.  
   
 Pusty projekt można rozpoczynać przy użyciu **Kreatora aplikacji konsoli (Win32)**. Wybierz **pusty projekt** pole wyboru. Nowe i istniejące pliki można następnie dodać do projektu później.  
   
@@ -59,9 +63,9 @@ Podczas tworzenia projektu, nazwę projektu. Domyślnie nazwa projektu jest rów
   
 ## <a name="microsoft-specific-modifiers"></a>Modyfikatory specyficzne dla firmy Microsoft  
 
-Visual C++ zawiera kilka rozszerzeń standardu C++ język programowania obsługę programowania w języku systemu operacyjnego. Te rozszerzenia są używane, aby określić atrybuty klasy magazynu, funkcja Konwencje wywoływania i adresowanie, między innymi na podstawie. Aby uzyskać pełną listę wszystkich rozszerzeń języka Visual C++, zobacz [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md).  
+Kompilator Microsoft Visual C++ implementuje wiele rozszerzeń standardu C++ język programowania obsługę programowania w języku systemu operacyjnego. Te rozszerzenia są używane, aby określić atrybuty klasy magazynu, funkcja Konwencje wywoływania i adresowanie, między innymi na podstawie. Aby uzyskać pełną listę wszystkich obsługiwanych rozszerzeń języka C++, zobacz [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
-Wszystkie rozszerzenia języka C++ specyficzne dla firmy Microsoft można wyłączyć za pomocą **/Za** — opcja kompilatora. Ta opcja jest zalecana, jeśli chcesz napisać kod do uruchamiania na wielu platformach. Aby uzyskać więcej informacji na temat **/Za** — opcja kompilatora, zobacz [/Za, /Ze (Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md). Aby uzyskać więcej informacji na temat zgodności Visual C++, zobacz [niestandardowe zachowanie](../cpp/nonstandard-behavior.md).  
+Wszystkie rozszerzenia języka C++ specyficzne dla firmy Microsoft można wyłączyć za pomocą **/Za** — opcja kompilatora. Ta opcja jest zalecana, jeśli chcesz napisać kod do uruchamiania na wielu platformach. Aby uzyskać więcej informacji na temat **/Za** — opcja kompilatora, zobacz [/Za, /Ze (Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md). Aby uzyskać więcej informacji na temat zgodności kompilatora C++, zobacz [Visual zgodność języka C++](../visual-cpp-language-conformance.md) i [niestandardowe zachowanie](../cpp/nonstandard-behavior.md).  
   
 ## <a name="precompiled-headers"></a>Prekompilowane nagłówki  
 

@@ -1,22 +1,24 @@
 ---
 title: "Nowości w języku Visual C++ w programie Visual Studio | Dokumentacja firmy Microsoft"
 ms.date: 11/15/2017
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f266e17e88118e41550da68e77434f52b3456261
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Nowości w języku Visual C++ w[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]udostępnia wiele aktualizacji i poprawki dla środowiska Visual C++. Wprowadzeniu stałej ponad 250 usterek i zgłoszone problemy w narzędzi i kompilatora, wiele przesyłanych przez klientów za pośrednictwem [zgłosić Problem](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) i [Podaj sugestię](https://visualstudio.uservoice.com/) opcje w obszarze **Prześlij opinię** . Dziękujemy za zgłaszanie usterek! Aby uzyskać więcej informacji dotyczących nowości we wszystkich programu Visual Studio, odwiedź [nowości [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] ](https://go.microsoft.com/fwlink/p/?linkid=834481).
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] udostępnia wiele aktualizacji i poprawki dla środowiska Visual C++. Wprowadzeniu stałej ponad 250 usterek i zgłoszone problemy w narzędzi i kompilatora, wiele przesyłanych przez klientów za pośrednictwem [zgłosić Problem](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) i [Podaj sugestię](https://visualstudio.uservoice.com/) opcje w obszarze **Prześlij opinię** . Dziękujemy za zgłaszanie usterek! Aby uzyskać więcej informacji dotyczących nowości we wszystkich programu Visual Studio, odwiedź [nowości [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] ](https://go.microsoft.com/fwlink/p/?linkid=834481).
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
@@ -32,11 +34,11 @@ W tej wersji zaktualizowaliśmy standardową bibliotekę i kompilator języka C+
 
    **Visual Studio 2017 wersji 15 ustęp 3**:
 
-   **/Std:c ++ 17** opcji udostępnia zestaw funkcji C ++ 17 implementowane przez kompilator języka Visual C++. Ta opcja powoduje wyłączenie kompilator i biblioteki standardowej obsługi dla funkcji, które zostały zmienione lub nowego w wersji aktualizacji pracy roboczą i usterką standardu C++ po C ++ 17. Aby włączyć te funkcje, należy użyć **/std:c ++ najnowsze**.
+   **/Std:c ++ 17** opcji udostępnia zestaw funkcji C ++ 17 implementowane przez kompilator. Ta opcja powoduje wyłączenie kompilator i biblioteki standardowej obsługi dla funkcji, które zostały zmienione lub nowego w wersji aktualizacji pracy roboczą i usterką standardu C++ po C ++ 17. Aby włączyć te funkcje, należy użyć **/std:c ++ najnowsze**.
 
    **Visual Studio 2017 wersji 15,5 cala**:
 
-   Kompilator Visual C++ obsługuje około 75% funkcje, które są nowością w programie C ++ 17, strukturalnych powiązań, w tym `constexpr` wyrażeń lambda, `if constexpr`, fold wbudowane zmienne, wyrażenia i dodawanie `noexcept` do typu systemu. Są one dostępne w obszarze **/std:c ++ 17** opcji. Aby uzyskać więcej informacji, zobacz [ulepszenia zgodność języka C++ w programie Visual Studio 2017 r.](cpp-conformance-improvements-2017.md)
+   Kompilator obsługuje około 75% funkcje, które są nowością w programie C ++ 17, tym strukturalnych powiązania `constexpr` wyrażeń lambda, `if constexpr`, wbudowane zmienne, fold wyrażeń i dodawanie `noexcept` do typu systemu. Są one dostępne w obszarze **/std:c ++ 17** opcji. Aby uzyskać więcej informacji, zobacz [ulepszenia zgodność języka C++ w programie Visual Studio 2017 r.](cpp-conformance-improvements-2017.md)
 
 - [/ ograniczająca-](build/reference/permissive-standards-conformance.md): Włącz wszystkie standardy strict zgodność-opcje kompilatora i wyłączyć większości rozszerzenia kompilatora specyficzne dla firmy Microsoft (ale nie `__declspec(dllimport)`, na przykład). Ta opcja jest domyślnie wyłączona, ale będzie na domyślnie w pewnym momencie w przyszłości.
 
@@ -48,7 +50,7 @@ W tej wersji zaktualizowaliśmy standardową bibliotekę i kompilator języka C+
 
 - [/Debug:fastlink](build/reference/debug-generate-debug-info.md): Włącz do 30% szybciej konsolidowania przyrostowego razy (vs. Visual Studio 2015) przed kopiowaniem wszystkie informacje w pliku PDB debugowania. Zamiast tego pliku PDB wskazuje informacji debugowania dla obiekt i biblioteki plików używany do tworzenia pliku wykonywalnego. Zobacz [cykl w programie VS "15" z /Debug:fastlink kompilacji C++ szybciej](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/) i [zalecenia dotyczące szybkości kompilacji C++ w programie Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/).
 
-- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]Umożliwia korzystanie z [/SDL](build/reference/sdl-enable-additional-security-checks.md) z [/ await](build/reference/await-enable-coroutine-support.md). Firma Microsoft usunęła [/RTC](build/reference/rtc-run-time-error-checks.md) ograniczenia z procedury wspólnej.
+- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] Umożliwia korzystanie z [/SDL](build/reference/sdl-enable-additional-security-checks.md) z [/ await](build/reference/await-enable-coroutine-support.md). Firma Microsoft usunęła [/RTC](build/reference/rtc-run-time-error-checks.md) ograniczenia z procedury wspólnej.
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>CODEGEN, zabezpieczeń, diagnostyki i kontroli wersji
 

@@ -1,23 +1,26 @@
 ---
 title: "Jak zgłosić Problem z zestawu narzędzi programu Visual C++ | Dokumentacja firmy Microsoft"
 ms.date: 1/11/2018
-ms.technology: cpp
+ms.technology:
+- cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Jak zgłosić Problem z zestawu narzędzi programu Visual C++
 
-Jeśli wystąpią problemy z kompilatora Visual C++, konsolidatora, lub inne narzędzia i biblioteki chcemy się dowiedzieć się o nich.
+Jeśli wystąpią problemy z kompilator Microsoft Visual C++, konsolidatora, lub inne narzędzia i biblioteki chcemy się dowiedzieć się o nich.
 
 Najlepszy sposób, aby poinformować nas o problemie jest aby wysłać nam raport zawierający opis problemu został napotkany szczegółowe informacje o, jak w przypadku tworzenia programu, a *reprodukcja*, pełną przypadek testowy, możemy użyć do odtworzenia problem na własnych maszynach. Te informacje ułatwiają szybko sprawdzić, czy problem istnieje w naszym kodzie i nie jest lokalny dla danego środowiska, aby ustalić, czy ma to wpływ na inne wersje kompilatora i zdiagnozować jego przyczyna.
 

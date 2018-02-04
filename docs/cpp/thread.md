@@ -4,38 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: thread_cpp
-dev_langs: C++
+f1_keywords:
+- thread_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - thread local storage (TLS)
 - thread __declspec keyword
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8c514879368b8ea3d676635f2b922a2e1c07224
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="thread"></a>wątek
 
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**
+
 **Wątku** modyfikator klasy magazynu rozszerzonego służy do deklarowania zmiennej lokalnej wątku. Komputer przenośny równoważne w języku C ++ 11 i nowszych można użyć [element thread_local](../cpp/storage-classes-cpp.md#thread_local) Specyfikator klasy magazynu dla przenośnego kodu. W systemie Windows **element thread_local** jest realizowana za pomocą **__declspec(thread)**.
 
 ## <a name="syntax"></a>Składnia
 
-```
-__declspec( thread ) declarator
-```
+> **__declspec (wątek)** *deklarator*  
 
 ## <a name="remarks"></a>Uwagi
 
@@ -44,17 +47,16 @@ Pamięć lokalna wątku (TLS) to mechanizm, za pomocą którego każdy wątek w 
 Deklaracje zmiennych lokalnych wątku należy użyć [rozszerzona Składnia atrybutu](../cpp/declspec.md) i `__declspec` — słowo kluczowe z **wątku** — słowo kluczowe. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:
 
 ```cpp
-__declspec( thread ) int tls_i = 1;  
+__declspec( thread ) int tls_i = 1;
 ```
 
 Używając zmiennych thread-local w bibliotekach ładowane dynamicznie, należy zwrócić uwagę czynników, które mogą spowodować zmiennej lokalnej wątku nie można poprawnie zainicjować:
 
-1) Jeśli zmienna jest inicjowany z wywołania funkcji (łącznie z konstruktorów), ta funkcja będzie można wywołać tylko dla wątku, który spowodował binary/DLL załadować w procesie, a dla tych wątków, które są uruchomione, gdy załadowano danych binarnych/DLL. Funkcje inicjowania nie są nazywane do innego wątku, który jest już uruchomiona, gdy biblioteka DLL została załadowana. Dynamiczna Inicjalizacja występuje na wywołanie funkcji DllMain dla DLL_THREAD_ATTACH, ale plik DLL, który nigdy nie pobiera, które komunikatów, jeśli plik DLL, który nie jest w procesie uruchomienia wątku. 
+1. Jeśli zmienna jest inicjowany z wywołania funkcji (łącznie z konstruktorów), ta funkcja będzie można wywołać tylko dla wątku, który spowodował binary/DLL załadować w procesie, a dla tych wątków, które są uruchomione, gdy załadowano danych binarnych/DLL. Funkcje inicjowania nie są nazywane do innego wątku, który jest już uruchomiona, gdy biblioteka DLL została załadowana. Dynamiczna Inicjalizacja występuje na wywołanie funkcji DllMain dla DLL_THREAD_ATTACH, ale plik DLL, który nigdy nie pobiera, które komunikatów, jeśli plik DLL, który nie jest w procesie uruchomienia wątku.
 
-2) Zmienne lokalne wątków, zawierającymi statycznie o stałej wartości zwykle są poprawnie zainicjowane na wszystkie wątki. Począwszy od grudnia 2017 istnieje jednak problem znane zgodność kompilatora C++ firmy Microsoft zgodnie z którymi odbierania constexpr zmienne dynamiczne zamiast statycznego inicjowania.  
-  
+1. Zmienne lokalne wątków, zawierającymi statycznie o stałej wartości zwykle są poprawnie zainicjowane na wszystkie wątki. Począwszy od grudnia 2017 istnieje jednak problem zgodność znane w kompilatorze języka Microsoft Visual C++ zgodnie z którymi odbierania constexpr zmienne dynamiczne zamiast statycznego inicjowania.
+
    Uwaga: Oba te problemy mogą naprawiony w przyszłych aktualizacji kompilatora.
-
 
 Ponadto narzucają wytyczne podczas deklarowania zmiennych i obiektów lokalnej wątku:
 
@@ -85,20 +87,20 @@ Ponadto narzucają wytyczne podczas deklarowania zmiennych i obiektów lokalnej 
 
 - Standardowy język C umożliwia inicjowanie obiektu lub zmiennej za pomocą wyrażenia zawierającego odwołanie do samego siebie, ale tylko dla obiektów o zakresie niestatycznym. Mimo że język C++ normalnie dopuszcza dynamiczną inicjalizację obiektu za pomocą wyrażenia zawierającego odwołanie do samego siebie, to ten typ inicjalizacji jest niedozwolony dla obiektów lokalnych wątku. Na przykład:
 
-    ```cpp
-    // declspec_thread_3.cpp
-    // compile with: /LD
-    #define Thread __declspec( thread )
-    int j = j;   // Okay in C++; C error
-    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
-    ```
+   ```cpp
+   // declspec_thread_3.cpp
+   // compile with: /LD
+   #define Thread __declspec( thread )
+   int j = j;   // Okay in C++; C error
+   Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
+   ```
 
-     Należy pamiętać, że **sizeof** wyrażenia, która zawiera obiekt inicjowany w C i C++ jest dozwolone i nie stanowi odwołanie do samej siebie.
+   Należy pamiętać, że **sizeof** wyrażenia, która zawiera obiekt inicjowany w C i C++ jest dozwolone i nie stanowi odwołanie do samej siebie.
 
 **KOŃCOWY określonych firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__declspec](../cpp/declspec.md)  
 [Słowa kluczowe](../cpp/keywords-cpp.md)  
-[Lokalny magazyn wątków (TLS)](../parallel/thread-local-storage-tls.md)
+[Lokalny magazyn wątków (TLS)](../parallel/thread-local-storage-tls.md)  

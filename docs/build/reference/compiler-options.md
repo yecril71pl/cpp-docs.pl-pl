@@ -1,68 +1,72 @@
 ---
 title: Opcje kompilatora | Dokumentacja firmy Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/29/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cl.exe compiler
-- IPF Visual C++ compiler
-- Itanium Visual C++ compiler
+- x86 Visual C++ compiler
+- ARM Visual C++ compiler
 - compiler options, C++
 - x64 Visual C++ compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c433abea04ff81c69fe1b73569ea7e043e6e81ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4addd9f5dce819f554e6ab04707929a32f7b7d9d
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="compiler-options"></a>Opcje kompilatora
-Cl.exe to narzędzie, które kontroluje Kompilatory języka Microsoft C i C++ i konsolidatora. Cl.exe można uruchomić tylko w systemach operacyjnych, które obsługuje program Microsoft Visual Studio.  
-  
-> [!NOTE]
->  Można uruchomić to narzędzie tylko z [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] wiersza polecenia. Nie można uruchomić go z wiersza polecenia systemu lub z Eksploratora plików.  
-  
- Kompilatory tworzenia plików obiektu (.obj) Format wspólnej pliku obiektu (COFF). Konsolidator tworzy pliki wykonywalne (.exe) lub biblioteki dołączanej (dynamicznie dll).  
-  
- Należy pamiętać, że wszystkie opcje kompilatora jest uwzględniana wielkość liter.  
-  
- Aby skompilować bez konsolidacji, należy użyć [/c](../../build/reference/c-compile-without-linking.md).  
-  
-## <a name="finding-an-option"></a>Znajdowanie opcję  
- Aby znaleźć opcję kompilatora określonego, zobacz jedną z następujących list:  
-  
--   [Opcje kompilatora w porządku alfabetycznym](../../build/reference/compiler-options-listed-alphabetically.md)  
-  
--   [Opcje kompilatora w rozbiciu na kategorie](../../build/reference/compiler-options-listed-by-category.md)  
-  
-## <a name="specifying-options"></a>Określenie opcji  
- Temat dla każdej opcji kompilatora opisano, jak można ją ustawić w środowisku programistycznym. Informacje dotyczące określania opcji poza Środowisko deweloperskie zobacz:  
-  
--   [Składnia wiersza polecenia kompilatora](../../build/reference/compiler-command-line-syntax.md)  
-  
--   [Pliki poleceń CL](../../build/reference/cl-command-files.md)  
-  
--   [Zmienne środowiskowe CL](../../build/reference/cl-environment-variables.md)  
-  
-## <a name="related-build-tools"></a>Narzędzia kompilacji pokrewne  
- Użyj [NMAKE](../../build/nmake-reference.md) do tworzenia pliku wyjściowego.  
-  
- Użyj [BSCMAKE](../../build/reference/bscmake-reference.md) do obsługi przeglądanie klasy.  
-  
- [Opcje konsolidatora](../../build/reference/linker-options.md) wpłynąć na sposób składa się z programem.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie kompilacji C/C++](../../build/reference/c-cpp-building-reference.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
- [Szybka kompilacja](../../build/reference/fast-compilation.md)   
- [CL wywołuje konsolidator](../../build/reference/cl-invokes-the-linker.md)
+
+Cl.exe to narzędzie, które kontroluje Microsoft Visual C++ (MSVC) C i C++ kompilatory i konsolidatora. Cl.exe można uruchomić tylko w systemach operacyjnych, które obsługuje program Microsoft Visual Studio dla systemu Windows.
+
+> [!NOTE]  
+> To narzędzie można uruchomić tylko z wiersza polecenia programu Visual Studio developer. Nie można uruchomić go z wiersza polecenia systemu lub z Eksploratora plików. Aby uzyskać więcej informacji, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../building-on-the-command-line.md).
+
+Kompilatory tworzenia plików obiektu (.obj) Format wspólnej pliku obiektu (COFF). Konsolidator tworzy pliki wykonywalne (.exe) lub biblioteki dołączanej (dynamicznie dll).
+
+Należy pamiętać, że wszystkie opcje kompilatora jest uwzględniana wielkość liter. Możesz użyć kreski ułamkowej (`/`) lub kreska (`-`) można określić opcję kompilatora.
+
+Aby skompilować bez konsolidacji, należy użyć [/c](../../build/reference/c-compile-without-linking.md) opcji.
+
+## <a name="find-a-compiler-option"></a>Znajdź opcję kompilatora
+
+Aby znaleźć opcję kompilatora określonego, zobacz jedną z następujących list:
+
+- [Opcje kompilatora w porządku alfabetycznym](../../build/reference/compiler-options-listed-alphabetically.md)
+
+- [Opcje kompilatora w rozbiciu na kategorie](../../build/reference/compiler-options-listed-by-category.md)
+
+## <a name="specify-compiler-options"></a>Określ opcje kompilatora
+
+Temat dla każdej opcji kompilatora opisano, jak można ją ustawić w środowisku programistycznym. Informacje dotyczące określania opcji poza Środowisko deweloperskie zobacz:
+
+- [Składnia wiersza polecenia kompilatora](../../build/reference/compiler-command-line-syntax.md)
+
+- [Pliki poleceń CL](../../build/reference/cl-command-files.md)
+
+- [Zmienne środowiskowe CL](../../build/reference/cl-environment-variables.md)
+
+## <a name="related-build-tools"></a>Narzędzia kompilacji pokrewne
+
+[Opcje konsolidatora](../../build/reference/linker-options.md) wpłynąć na sposób składa się z programem.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja kompilacji w języku C/C++](../../build/reference/c-cpp-building-reference.md)  
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)  
+[Szybka kompilacja](../../build/reference/fast-compilation.md)  
+[CL wywołuje konsolidator](../../build/reference/cl-invokes-the-linker.md)  

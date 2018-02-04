@@ -1,14 +1,17 @@
 ---
 title: "-Yi (Wstaw Odnośnik PCH dla bibliotek debugowania) | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 12/04/2017
+ms.date: 01/29/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /yl
-dev_langs: C++
+f1_keywords:
+- /yl
+dev_langs:
+- C++
 helpviewer_keywords:
 - -Yl compiler option [C++]
 - Yl compiler option [C++]
@@ -17,16 +20,17 @@ ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6e777977f6d869d2bbc28d980f6445851e54396b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 43e960906c504e5378a77d047c8eb1ab4d4594fe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Wprowadź odnośnik PCH dla bibliotek debugowania)
 
-**/Yl** opcja tworzy wspólny symbol dla prekompilowanego pliku nagłówkowego i injects odwołania do tego symbolu we wszystkich plikach, które używają prekompilowanego nagłówka. Dzięki temu pełne informacje dotyczące symboli prekompilowanego nagłówka dostępne do debugera we wszystkich plikach, które używają prekompilowanego nagłówka. Ta opcja jest domyślnie włączona. Użycie tej opcji może uniemożliwić błędy konsolidatora ze względu na Brak informacji o debugowaniu w bibliotekach połączone, które używają prekompilowanych nagłówków.
+**/Yl** opcja generuje unikatowego symbolu w pliku prekompilowanego nagłówka, a odwołania do tego symbolu jest wprowadzonym we wszystkich plikach obiektu, które używają prekompilowanego nagłówka.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,24 +41,26 @@ ms.lasthandoff: 12/21/2017
 ### <a name="arguments"></a>Argumenty
 
 *Nazwa*  
-Opcjonalna nazwa używane do definiowania symboli jako pliki przechowywane i zawartymi w obiekcie zdefiniuj lub użyj prekompilowanego nagłówka.
+Opcjonalna nazwa używana jako część unikatowego symbolu.
 
 *\-*  
 Łączniki (-) jawnie wyłącza **/Yl** — opcja kompilatora.
 
 ## <a name="remarks"></a>Uwagi
 
-**/Yl** opcja umożliwia włączenie debugera uzyskać pełne informacje na temat typów w prekompilowanego nagłówka w każdym pliku, który zawiera prekompilowanego nagłówka. Ta opcja tworzy nazwę symbolu wewnętrznego, injects definicji symbolu w pliku obiektu użyty do utworzenia prekompilowanego nagłówka przez [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opcji i injects odwołanie do symbolu we wszystkich plikach zawierających wstępnie skompilowanych Nagłówek przy użyciu [/Yu](../../build/reference/yu-use-precompiled-header-file.md) — opcja kompilatora. Ponieważ wszystkich plików źródłowych, które używają prekompilowany nagłówek odwoływać się do nazwanych symbolu, konsolidator zawsze łączy plik obiektu, w którym zdefiniowano symbolu i skojarzone prekompilowanego nagłówka, informacje o debugowaniu. Ta opcja jest domyślnie włączona.
+**/Yl** — opcja kompilatora tworzy definicję unikatowego symbolu w pliku prekompilowanego nagłówka, utworzony przy użyciu [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opcji. Odwołania do tego symbolu są automatycznie dodane w wszystkie pliki, które obejmują prekompilowanego nagłówka przy użyciu [/Yu](../../build/reference/yu-use-precompiled-header-file.md) — opcja kompilatora. **/Yl** opcja jest domyślnie włączona po **/Yc** służy do tworzenia prekompilowanego pliku nagłówkowego.
 
-**/Yl**_nazwa_ jest używana opcja można jawnie utworzyć identyfikujące symbol dla prekompilowanego pliku nagłówkowego. Kompilator używa *nazwa* argument tworzenie podobny do symbolu \_ \_ @@ \_PchSym\_@00@... @*nazwy* , gdzie ciąg znaków oznacza generowanych przez konsolidator wielokropek (...). Jeśli argument zostanie pominięty, kompilator automatycznie generuje nazwę symbolu.
+**/Yl**_nazwa_ opcja służy do tworzenia do zidentyfikowania symbol w prekompilowanego pliku nagłówkowego. Kompilator używa *nazwa* argument jako część nazwy symbolu ozdobione tworzy, podobnie jak \_ \_ @@ \_PchSym\_@00@... @ *nazwa*, jeżeli ciąg znaków oznacza wielokropek (...) unikatowego generowane przez kompilator. Jeśli *nazwa* argument zostanie pominięty, kompilator automatycznie generuje nazwę symbolu. Zwykle nie trzeba znać nazwę symbolu. Jednak gdy projektu używa więcej niż jeden plik prekompilowanego nagłówka, **/Yl**_nazwa_ opcja może być przydatne do określenia, który obiekt pliki użycia, które prekompilowanego nagłówka. Można użyć *nazwa* jako ciąg wyszukiwania, aby znaleźć odwołania symboli w pliku zrzutu.
 
-**/Yl-** wyłącza domyślne zachowanie i przesyłają identyfikujące odwołania symboli w plikach obiektu, które obejmują prekompilowanego nagłówka. Ta opcja może być wymagane dla plików skompilowany bez prekompilowanego pliku nagłówkowego obecny.
+**/Yl-** wyłącza domyślne zachowanie i nie stanowi symbol identyfikujący prekompilowanego pliku nagłówkowego. Skompilowane pliki, które obejmują prekompilowanego nagłówka nie są typowe odwołania symboli.
 
-Jeśli używasz **/Yl-**, **/Yc** i [/z7](../../build/reference/z7-zi-zi-debug-information-format.md) opcje do tworzenia biblioteki, kompilator tworzy plik prekompilowanego nagłówka, który zawiera informacje o debugowaniu, który jest przechowywany w Plik obiektu zamiast pliku PDB. [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) błędy lub [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) ostrzeżenia mogą występować w kompilacji korzystających z tej biblioteki i prekompilowanego nagłówka, jeśli plik źródłowy użyty do utworzenia prekompilowanego nagłówka nie definiuje żadnych symboli. Konsolidator mogą wyłączyć ten plik obiekt bibliotece z łącza, oraz informacje o debugowaniu skojarzone prekompilowanego nagłówka, gdy nic w pliku obiektu odwołuje się do klienta biblioteki. Aby rozwiązać ten problem, określ **/Yl** korzystając **/Yc** do utworzenia prekompilowanego pliku nagłówkowego i **/Yu** z niego korzystać. Daje to pewność, że plik obiektu, który zawiera informacje o debugowaniu jest uwzględniony w kompilacji.
+Gdy **/Yc** nie zostanie określony, wszelkie **/Yl** opcja nie ma znaczenia, ale jeśli określone, musi ona zgodna z żadną **/Yl** opcji przekazywany, gdy **/Yc** jest określona.
+
+Jeśli używasz **/Yl-**, **/Yc** i [/z7](../../build/reference/z7-zi-zi-debug-information-format.md) opcje tworzenia pliku prekompilowanego nagłówka, informacje o debugowaniu są przechowywane w pliku obiektu źródłowego użyty do utworzenia pliku prekompilowanego nagłówka, zamiast pliku .pdb oddzielne. Jeśli ten plik obiektu jest przeprowadzane część biblioteki, [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) błędy lub [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) ostrzeżenia mogą występować w kompilacji korzystających z tej biblioteki i prekompilowanego pliku nagłówkowego, jeśli plik źródłowy użyty do utworzenia prekompilowany plik nagłówka nie definiuje żadnych symboli samej siebie. Konsolidator może wyłączyć pliku obiektu z łącza, oraz skojarzone informacje debugowania, gdy nic w pliku obiektu odwołuje się do klienta biblioteki. Aby rozwiązać ten problem, określ **/Yl** (lub usuń **/Yl-** opcji) korzystając **/Yc** do utworzenia prekompilowanego pliku nagłówkowego. Daje to pewność, że plik obiektu z biblioteki, który zawiera informacje o debugowaniu pobiera połączone w kompilacji.
 
 Aby uzyskać więcej informacji o prekompilowanych nagłówków zobacz:
 
-- [/Y (prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)
+- [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)
 
 - [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
 
@@ -62,7 +68,7 @@ Aby uzyskać więcej informacji o prekompilowanych nagłówków zobacz:
 
 1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **wiersza polecenia** stronę właściwości w **C/C++** folderu.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
 
 1. Dodaj **/Yl**_nazwa_ w — opcja kompilatora **dodatkowe opcje** pole. Wybierz **OK** Aby zapisać zmiany.
 

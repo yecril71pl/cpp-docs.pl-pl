@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6445f07c8adff13a65bde46cc9e1cefd789b97ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88be2baf2c2ce11be4594501ef12c2e339dec4dd
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="porting-guide-mfc-scribble"></a>Przewodnik przenoszenia: Aplikacja Scribble MFC
 Ten temat jest pierwszy kilka tematów, które przedstawiono procedurę uaktualniania dla projektów Visual C++, które zostały utworzone w starszej wersji programu Visual Studio do programu Visual Studio 2017 r. W tych tematach przedstawiono proces uaktualniania przykładzie, rozpoczynając od projektu bardzo proste i przechodzenia do nich nieco bardziej skomplikowane. W tym temacie pracujemy przez proces uaktualniania dla konkretnego projektu, Bazgroły MFC. Jest on odpowiedni jako podstawowe wprowadzenie do procesu uaktualniania dla projektów C++.  
@@ -85,7 +88,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
  Brak nie zestawu testów, możemy właśnie uruchomiono aplikację, przetestować jego funkcje ręcznie za pośrednictwem interfejsu użytkownika. Zaobserwowano żadnych problemów.  
   
 ### <a name="step-4-improve-the-code"></a>Krok 4. Poprawić kod  
- Teraz, po migracji do programu Visual Studio 2017 można wprowadzić kilka zmian, aby móc korzystać z nowych funkcji języka C++. Bieżąca wersja kompilatora Visual C++ jest znacznie więcej zgodność C++ wersji standard, a następnie poprzedniej, jeśli masz zdanie dokonanie kodu zmienia się na wprowadzić kod bardziej bezpiecznej i przenośną inne kompilatory i systemy operacyjne, należy rozważyć Niektóre z ulepszeń.  
+ Teraz, po migracji do programu Visual Studio 2017 można wprowadzić kilka zmian, aby móc korzystać z nowych funkcji języka C++. Bieżąca wersja kompilatora C++ jest znacznie więcej zgodność C++ wersji standard, a następnie poprzedniej, jeśli masz zdanie dokonanie kodu zmienia się na wprowadzić kod bardziej bezpiecznej i przenośną inne kompilatory i systemy operacyjne, należy rozważyć niektóre ulepszenia.  
   
 ## <a name="next-steps"></a>Następne kroki  
  Bazgrołów był aplikacji pulpitu systemu Windows small i proste, a nie był trudny do konwersji. Wiele aplikacji małych, prostych równie łatwo przekonwertować do nowej wersji.  Wiele projektów i bibliotek, niestandardowe kroki procesu kompilacji bardziej złożonych aplikacji o wiele więcej wierszy kodu, starsze starszego kodu, który może nie być aktualne nowoczesnych standardów engineering, lub dla złożonych skryptową kompilacjach zautomatyzowanych potrwa więcej czasu na uaktualnienie. Kontynuuj [następnym przykładzie](../porting/porting-guide-com-spy.md), aplikacji ATL i COM o nazwie Spy modelu COM.  
