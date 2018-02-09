@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -37,19 +38,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs: C++
-helpviewer_keywords: CSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csecuritydesc-class"></a>Klasa CSecurityDesc
 Ta klasa jest otoki dla **SECURITY_DESCRIPTOR** struktury.  
@@ -163,7 +167,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>Uwagi  
  Ciąg można tworzyć przy użyciu [CSecurityDesc::ToString](#tostring). Konwersja deskryptora zabezpieczeń na ciąg ułatwia do przechowywania i transmisji.  
   
- Ta metoda jest dostępna tylko w systemie Windows 2000 lub nowszy ponieważ wywołuje [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Ta metoda wywołuje [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
 ##  <a name="getcontrol"></a>CSecurityDesc::GetControl  
  Pobiera kontrolować informacji z deskryptora zabezpieczeń.  
@@ -180,7 +184,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  Zwraca wartość PRAWDA, jeśli metoda zakończy się powodzeniem, wartość false w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest tylko przydatne w przypadku korzystania z systemu Windows 2000 lub nowszym, ponieważ wywołuje [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
+ Ta metoda wywołuje [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
   
 ##  <a name="getdacl"></a>CSecurityDesc::GetDacl  
  Pobiera DACL kontroli dostępu (DACL) listy informacji z deskryptora zabezpieczeń.  
@@ -243,7 +247,7 @@ bool GetOwner(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość PRAWDA, jeśli metoda zakończy się powodzeniem, wartość false w przypadku niepowodzenia.  
   
-##  <a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR  
+##  <a name="getpsecurity_descriptor"></a>  CSecurityDesc::GetPSECURITY_DESCRIPTOR  
  Zwraca wskaźnik do **SECURITY_DESCRIPTOR** struktury.  
   
 ```
@@ -336,7 +340,7 @@ bool IsDaclProtected() const throw();
 ### <a name="remarks"></a>Uwagi  
  Aby ustawić tę flagę, użyj [CSecurityDesc::SetDacl](#setdacl) metody.  
   
- Ta metoda jest znaczący tylko w systemie Windows 2000 lub nowszym, automatyczne propagacji dziedziczne ACE obsługuje tylko system Windows 2000.  
+ Ta metoda obsługuje automatyczne propagacji dziedziczne wpisy kontroli dostępu.  
   
 ##  <a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted  
  Określa, czy identyfikator zabezpieczeń grupy deskryptora zabezpieczeń (SID) została ustawiona domyślnie.  
@@ -418,7 +422,7 @@ bool IsSaclProtected() const throw();
 ### <a name="remarks"></a>Uwagi  
  Aby ustawić tę flagę, użyj [CSecurityDesc::SetSacl](#setsacl) metody.  
   
- Ta metoda jest znaczący tylko w systemie Windows 2000 lub nowszym, automatyczne propagacji dziedziczne ACE obsługuje tylko system Windows 2000.  
+ Ta metoda obsługuje automatyczne propagacji dziedziczne wpisy kontroli dostępu.  
   
 ##  <a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative  
  Określa, czy deskryptor zabezpieczeń jest w formacie autorelacyjnym.  
@@ -498,7 +502,7 @@ bool SetControl(
  Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest dostępna tylko w systemie Windows 2000 lub nowszym, ponieważ wywołuje [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Ta metoda wywołuje [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
 ##  <a name="setdacl"></a>CSecurityDesc::SetDacl  
  Ustawia informacje o liście DACL kontroli dostępu (DACL). Jeśli lista DACL dotycząca jest już obecny w deskryptorze zabezpieczeń, zostanie zastąpiony.  
@@ -616,7 +620,7 @@ bool ToString(
   
  Jeśli nie ustawiono bitu kontroli SE_DACL_PRESENT w deskryptorze zabezpieczeń listy DACL ma wartość NULL, wynikowego ciągu deskryptora zabezpieczeń nie ma składnika D:. Zobacz [Format ciągu deskryptora zabezpieczeń](http://msdn.microsoft.com/library/windows/desktop/aa379570) więcej szczegółów.  
   
- Ta metoda jest dostępna tylko w systemie Windows 2000 lub nowszego oraz jak wywołuje [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Ta metoda wywołuje [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia — przykład](../../visual-cpp-samples.md)   

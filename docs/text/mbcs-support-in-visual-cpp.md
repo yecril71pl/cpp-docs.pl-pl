@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - tools [C++], MBCS support
 - Asian languages [C++]
@@ -28,19 +31,20 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdc00509d8660d8111ff1b966b7a881a153cb6c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Obsługa MBCS w programie Visual C++
-Uruchamianych na włączone MBCS wersja systemu operacyjnego Windows 2000 lub Windows XP, system programowania Visual C++ (w tym Edytor kodu źródłowego zintegrowanego, debugera i narzędzi wiersza polecenia) jest MBCS włączone, z wyjątkiem okno pamięci.  
+Uruchamianych w wersji systemu Windows z obsługą MBCS systemu programowania Visual C++ (w tym kod zintegrowanej źródła narzędzi edytora, debugera i wiersza polecenia) jest MBCS włączone, z wyjątkiem okna pamięci.  
   
  Okno pamięci nie ma możliwości interpretowania bajtów danych jako znaki MBCS, mimo że może go zinterpretować je jako znaków ANSI lub Unicode. Znaków ANSI są zawsze 1 bajt rozmiaru i znaki Unicode są 2 bajty rozmiaru. MBCS znaki mogą być 1 lub 2 wyrażona w bajtach rozmiar i ich interpretacji zależy od stronę kodową, która jest używana. W związku z tym jest trudniejsze dla okna pamięci, aby wyświetlić niezawodnie MBCS znaków. Okno pamięci nie wiesz, które bajtów jest rozpoczęciem znaku. Deweloper wyświetlać wartości bajtów w oknie pamięci i wartość tabele, aby określić reprezentacji znaków. Jest to możliwe, ponieważ dewelopera zna adres początkowy ciąg w zależności od kodu źródłowego.  
   

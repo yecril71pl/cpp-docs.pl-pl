@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
-dev_langs: C++
-helpviewer_keywords: CPrivateObjectSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ef8836dec60eca6a7dac13af21c81adf72b5b319
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4845d652d2b1dceb8ffc0f2772f88565eb81e29
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Klasa CPrivateObjectSecurityDesc
 Ta klasa reprezentuje obiekt deskryptora zabezpieczeń obiektu prywatnego.  
@@ -45,7 +49,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|Konstruktor.|  
-|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|Destruktor.|  
+|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -177,7 +181,7 @@ bool Create(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wywołuje [CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405) lub [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581).  
   
- Drugi metodę, która zezwala na określanie typu obiektu identyfikator GUID nowego obiektu lub kontrolowanie sposobu ACE są dziedziczone, jest tylko dostępne na komputerach z systemem Windows 2000 lub nowszym.  
+ Druga metoda zezwala na określanie typu obiektu identyfikator GUID nowego obiektu lub kontrolowanie sposobu ACE są dziedziczone.  
   
 > [!NOTE]
 >  Deskryptor zabezpieczeń autorelacyjnym jest deskryptora zabezpieczeń, która przechowuje wszystkie jej informacje o zabezpieczeniach w ciągłego bloku pamięci.  
@@ -256,7 +260,7 @@ bool Set(
  Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Drugi metodę, która zezwala na określanie typu obiektu identyfikator GUID obiektu lub kontrolowanie sposobu ACE są dziedziczone, jest tylko dostępne na komputerach z systemem Windows 2000 lub nowszym.  
+ Druga metoda zezwala na określanie typu obiektu identyfikator GUID obiektu lub kontrolowanie sposobu ACE są dziedziczone.  
   
 ## <a name="see-also"></a>Zobacz też  
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   

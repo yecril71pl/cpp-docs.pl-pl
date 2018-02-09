@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation Manager
 - Automation servers, Automation Manager
@@ -16,19 +18,20 @@ helpviewer_keywords:
 - Automation clients, Automation Manager
 - AUTMGR32.exe
 ms.assetid: 6bf3429e-1946-41c5-86d0-ad7f5b8585b8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 338b619580ef7967d871ff3f960fc467555ab72a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8773bc60d970f66616c35db84b9f161ea12754d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automation-manager-mfc"></a>Menedżer automatyzacji (MFC)
-AUTMGR32. EXE powinien zostać skopiowany do katalogu każdej z nich mają zostać zawierają obiekty automatyzacji zdalnej systemu Windows. W przypadku systemu Windows 95 i Windows 98 ten katalog jest zwykle C:\WINDOWS\SYSTEM. Dla systemu Windows NT i Windows 2000 jest zazwyczaj C:\WINNT\SYSTEM32.  
+AUTMGR32. EXE powinien zostać skopiowany do katalogu każdej z nich mają zostać zawierają obiekty automatyzacji zdalnej systemu Windows. Jest zazwyczaj C:\WINDOWS\SYSTEM32.  
   
  Jeśli chcesz włączyć wywołań zwrotnych z serwera do klienta, ten plik wykonywalny również powinien zostać skopiowany do katalogu systemowego każdego komputera klienta.  
   

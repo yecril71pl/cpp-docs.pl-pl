@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], Unicode
 - MFC [C++], character sets
@@ -19,26 +22,24 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8e64edebc511445973a7fbb79f8fb8ccfd3f607b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a841fc97715782c303065e37cbaeb8137cf0bc3
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unicode-and-mbcs"></a>Unicode i MBCS
 Biblioteka Microsoft Foundation Classes (MFC), biblioteki wykonawczej języka C w języku Visual C++ i środowisko projektowe Visual C++ są włączone do pomocy programu programowanie międzynarodowe. Udostępniają one:  
   
--   Obsługa standardu Unicode w systemie Windows 2000 (dawniej systemu Windows NT). Unicode jest obecnie standardowym i powinna być używana, jeśli to możliwe.  
+-   Obsługa standardu Unicode w systemie Windows. Unicode jest obecnie standardowym i powinna być używana, jeśli to możliwe.  
   
      Unicode jest znakiem 16-bitowego kodowania, zapewniając za mało kodowania dla wszystkich języków. Wszystkie znaki ASCII są uwzględniane w Unicode jako poszerzył znaków.  
-  
-    > [!NOTE]
-    >  Standardu Unicode nie jest obsługiwana w systemie Windows 95, Windows 98 lub Windows Millennium Edition.  
   
 -   Obsługa formularza zestawu znaków wielobajtowych (MBCS) o nazwie zestaw znaków dwubajtowych (DBCS) na wszystkich platformach.  
   

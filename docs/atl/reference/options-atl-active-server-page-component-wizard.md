@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: vc.codewiz.class.atl.asp.options
-dev_langs: C++
-helpviewer_keywords: ATL Active Server Page Component Wizard, options
+f1_keywords:
+- vc.codewiz.class.atl.asp.options
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6564b340458ae7e9a8e137d2338ba68b3e729a0f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 199092acf4d26303a0d83d4885c3c7e3999bf0c4
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Opcje, Kreator składników stron ASP ATL
 Ta strona ATL Active Server strona kreatora składników służy do projektowania dla zwiększenia wydajności i obsługa błędów dla obiekt.  
@@ -38,7 +43,7 @@ Ta strona ATL Active Server strona kreatora składników służy do projektowani
 |**Apartamentu**|Określa, że obiekt używa wątkowości typu apartment. Komórka odpowiednikiem pojedynczego wątku. Każdy obiekt składnika typu apartment przypisano apartamentu jego wątku przez cały okres istnienia obiektu. Jednak wiele wątków może służyć do wielu obiektów. Każdą jest związana z konkretnym wątkiem i ma przekazywanie komunikatów systemu Windows (ustawienie domyślne).<br /><br /> Zobacz [Apartamentach Single-Threaded](http://msdn.microsoft.com/library/windows/desktop/ms680112) Aby uzyskać więcej informacji.|  
 |**Zarówno**|Określa, czy obiekt może używać typu apartment lub wolnych wątków w zależności od jakiego rodzaju wątku jest tworzony.|  
 |**W warstwie bezpłatna**|Określa, że obiekt ma być używany wolnych wątków. Wolnych wątków jest równoważna z modelem typu apartment wielowątkowe. Zobacz [Apartamentach wielowątkowe](http://msdn.microsoft.com/library/windows/desktop/ms693421) Aby uzyskać więcej informacji.|  
-|**Neutralna** (tylko system Windows 2000)|Określa, że obiekt następuje wytyczne dotyczące apartamentach wielowątkowe, ale można wykonywać na dowolny rodzaj wątku.|  
+|**Neutralna**|Określa, że obiekt następuje wytyczne dotyczące apartamentach wielowątkowe, ale można wykonywać na dowolny rodzaj wątku.|  
   
  **Agregacja**  
  Wskazuje, czy obiekt używa [agregacji](http://msdn.microsoft.com/library/windows/desktop/ms686558). Obiektu agregacji wybiera, które interfejsy dla klientów i interfejsy są widoczne tak, jakby obiektu agregacji zaimplementowana je. Klienci obiektu agregacji komunikować się tylko z obiektem agregacji.  
@@ -47,7 +52,7 @@ Ta strona ATL Active Server strona kreatora składników służy do projektowani
 |------------|-----------------|  
 |**Tak**|Określa, czy obiekt może agregować. Domyślnie.|  
 |**Brak**|Określa, że obiekt nie jest agregowany.|  
-|**Tylko**|Określa, czy obiekt musi być agregowana.|  
+|**Only**|Określa, czy obiekt musi być agregowana.|  
   
  **Obsługa**  
  (Opis elementu do dodania)  

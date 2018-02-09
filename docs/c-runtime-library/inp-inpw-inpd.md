@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -25,7 +26,8 @@ f1_keywords:
 - _inp
 - _inpw
 - _inpd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - inp function
 - inpw function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 15fa7169f46e84cf60e1b869e5eb68a392b16a3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7b73d8287954a401b8b966fb1220cfcecfc416eb
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 Dane wejściowe z portu, byte (`_inp`), wyraz (`_inpw`), lub word o podwójnej precyzji (`_inpd`).  
@@ -80,15 +83,15 @@ unsigned long _inpd(
 ## <a name="remarks"></a>Uwagi  
  `_inp`, `_inpw`, I `_inpd` funkcje odczytywać bajt, word i word o podwójnej precyzji, odpowiednio, określony port wejściowy. Wartość wejściowa można żadnych krótkich liczbę całkowitą bez znaku z zakresu 0 – 65 535.  
   
- Ponieważ te funkcje odczytu bezpośrednio z portem We/Wy, ich nie mogą być używane w kodzie użytkownika w systemie Windows NT, Windows 2000, Windows XP i Windows Server 2003.  
+ Ponieważ te funkcje odczytu bezpośrednio z portem We/Wy, nie można użyć w kodzie użytkownika.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_inp`|\<conio.h >|  
-|`_inpw`|\<conio.h >|  
-|`_inpd`|\<conio.h >|  
+|`_inp`|\<conio.h>|  
+|`_inpw`|\<conio.h>|  
+|`_inpd`|\<conio.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).  
   

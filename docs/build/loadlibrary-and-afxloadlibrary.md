@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: LoadLibrary
-dev_langs: C++
+f1_keywords:
+- LoadLibrary
+dev_langs:
+- C++
 helpviewer_keywords:
 - DLLs [C++], AfxLoadLibrary
 - DLLs [C++], LoadLibrary
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary i AfxLoadLibrary
 Przetwarza wywołanie [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (lub [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) jawnie powiązać biblioteki DLL. Jeśli funkcja zakończy się powodzeniem, mapy określonej biblioteki DLL do przestrzeni adresowej procesu wywołującego i zwraca dojście do pliku DLL, które mogą być używane z innych funkcji w Konsolidacja jawna — na przykład `GetProcAddress` i `FreeLibrary`.  
@@ -39,7 +43,7 @@ Przetwarza wywołanie [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259
  Jeśli system Windows nie może załadować biblioteki DLL, proces może próbować odzyskać sprawność po błędzie. Na przykład proces może powiadamia użytkownika o błędzie i poprosić użytkownika, aby określić inną ścieżkę do pliku DLL.  
   
 > [!IMPORTANT]
->  Jeśli kod jest uruchamiana 4 systemu Windows NT, Windows 2000 lub Windows XP (przed dodatkiem SP1), upewnij się określić pełną ścieżkę żadnych bibliotek DLL. W tych systemach operacyjnych bieżący katalog jest przeszukiwany w pierwszej kolejności po załadowaniu plików. Jeśli nie kwalifikujesz ścieżkę pliku, może załadować pliku, który nie jest to zamierzone.  
+>  Upewnij się określić pełną ścieżkę żadnych bibliotek DLL. Bieżący katalog jest najpierw przeszukiwane, gdy pliki są ładowane. Jeśli nie kwalifikujesz ścieżkę pliku, może załadować pliku, który nie jest to zamierzone.  
   
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?  
   

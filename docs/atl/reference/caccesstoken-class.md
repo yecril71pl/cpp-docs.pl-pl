@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -55,19 +56,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CAccessToken::SetDefaultDacl
 - ATLSECURITY/ATL::CAccessToken::SetOwner
 - ATLSECURITY/ATL::CAccessToken::SetPrimaryGroup
-dev_langs: C++
-helpviewer_keywords: CAccessToken class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3df4c5ac46c159cd3ed955621af914c677182a57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8d2a314ea7697ef4379b899ee6845cd4ceca707
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="caccesstoken-class"></a>Klasa CAccessToken
 Ta klasa jest otoki dla tokenu dostępu.  
@@ -87,7 +91,7 @@ class CAccessToken
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CAccessToken:: ~ CAccessToken](#dtor)|Destruktor.|  
+|[CAccessToken::~CAccessToken](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -140,7 +144,7 @@ class CAccessToken
 |[CAccessToken::SetPrimaryGroup](#setprimarygroup)|Wywołanie tej metody, aby ustawić grupą podstawową `CAccessToken` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- [Token dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374909) jest obiekt, który opisuje kontekst zabezpieczeń proces lub Wątek i jest przydzielana każdy użytkownik zalogowany do systemu Windows NT lub Windows 2000.  
+ [Token dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374909) jest obiekt, który opisuje kontekst zabezpieczeń proces lub Wątek i jest przydzielana każdy użytkownik zalogowany do systemu Windows.  
   
  Aby obejrzeć wprowadzenie do modelu kontroli dostępu w systemie Windows, temacie [kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374860) w zestawie Windows SDK.  
   
@@ -332,9 +336,6 @@ bool CreateRestrictedToken(
 ### <a name="remarks"></a>Uwagi  
  `CreateRestrictedToken`używa [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) funkcji Win32, aby utworzyć nową `CAccessToken` obiektu z ograniczeniami.  
   
-> [!NOTE]
->  Ta metoda jest tylko dostępna w systemie Windows 2000 lub nowszym.  
-  
 > [!IMPORTANT]
 >  Korzystając z `CreateRestrictedToken`, upewnij się, że: istniejący token jest prawidłowy (i nie wprowadzone przez użytkownika) i `SidsToDisable` i `PrivilegesToDelete` są prawidłowe (i nie wprowadzone przez użytkownika). Jeśli metoda zwraca wartość false, odmowy funkcji.  
   
@@ -441,7 +442,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość PRAWDA, jeśli domyślne listy DACL ma zostały odzyskane, wartość false w przeciwnym razie wartość.  
   
-##  <a name="geteffectivetoken"></a>CAccessToken::GetEffectiveToken  
+##  <a name="geteffectivetoken"></a>  CAccessToken::GetEffectiveToken  
  Wywołanie tej metody, aby uzyskać `CAccessToken` obiektu równa tokenu dostępu dla bieżącego wątku.  
   
 ```
@@ -545,7 +546,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>Uwagi  
  Właściciel jest ustawiona domyślnie na wszystkie obiekty utworzone ten token dostępu w czasie działania.  
   
-##  <a name="getprimarygroup"></a>CAccessToken::GetPrimaryGroup  
+##  <a name="getprimarygroup"></a>  CAccessToken::GetPrimaryGroup  
  Wywołaj tę metodę, aby pobrać skojarzone z grupą podstawową `CAccessToken` obiektu.  
   
 ```
@@ -634,7 +635,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.  
   
-##  <a name="getterminalservicessessionid"></a>CAccessToken::GetTerminalServicesSessionId  
+##  <a name="getterminalservicessessionid"></a>  CAccessToken::GetTerminalServicesSessionId  
  Wywołanie tej metody można uzyskać Identyfikatora sesji usług terminalowych skojarzone z `CAccessToken` obiektu.  
   
 ```
@@ -1018,7 +1019,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 ### <a name="remarks"></a>Uwagi  
  Właściciel jest domyślnego właściciela, który służy do nowych obiektów tworzonych ten token dostępu w czasie działania.  
   
-##  <a name="setprimarygroup"></a>CAccessToken::SetPrimaryGroup  
+##  <a name="setprimarygroup"></a>  CAccessToken::SetPrimaryGroup  
  Wywołanie tej metody, aby ustawić grupą podstawową `CAccessToken` obiektu.  
   
 ```

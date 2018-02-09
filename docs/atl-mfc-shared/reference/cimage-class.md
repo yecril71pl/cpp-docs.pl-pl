@@ -1,10 +1,11 @@
 ---
 title: "CImage — klasa | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/01/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -50,7 +51,8 @@ f1_keywords:
 - ATLIMAGE/ATL::CImage::SetTransparentColor
 - ATLIMAGE/ATL::CImage::StretchBlt
 - ATLIMAGE/ATL::CImage::TransparentBlt
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - jpeg files
 - bitmaps [C++], ATL and MFC support for
@@ -61,16 +63,17 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2720fb2b1e558b564615e1589735fe84688374b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cimage-class"></a>CImage — klasa
 `CImage`zapewnia obsługę rozszerzonych mapy bitowej, łącznie z możliwością przy ładowaniu i zapisywaniu obrazów w formacie JPEG, GIF, BMP i Portable Network Graphics (PNG).  
@@ -120,7 +123,7 @@ class CImage
 |[CImage::IsDIBSection](#isdibsection)|Określa, czy dołączone mapy bitowej jest sekcji DIB.|  
 |[CImage::IsIndexed](#isindexed)|Wskazuje, że kolorów mapy bitowej są mapowane na indeksowanego palety.|  
 |[CImage::IsNull](#isnull)|Wskazuje, czy źródła mapy bitowej jest aktualnie załadowany.|  
-|[CImage::IsTransparencySupported](#istransparencysupported)|Wskazuje, czy aplikacja obsługuje bitmapy przezroczyste i został skompilowany dla systemu Windows 2000 lub nowszego.|  
+|[CImage::IsTransparencySupported](#istransparencysupported)|Wskazuje, czy aplikacja obsługuje przezroczysty map bitowych.|  
 |[CImage::Load](#load)|Ładuje obraz z określonego pliku.|  
 |[CImage::LoadFromResource](#loadfromresource)|Ładuje obraz z określonego zasobu.|  
 |[CImage::MaskBlt](#maskblt)|Łączy dane kolorów mapy bitowe źródłowych i docelowych przy użyciu określona maska i rastrowe operacji.|  
@@ -198,17 +201,6 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 
   
  Za pomocą `CImage`, musisz mieć dostęp do rzeczywistej bitów sekcji DIB. Można użyć `CImage` obiekt dowolnym korzystał Win32 HBITMAP lub DIB sekcji.  
-  
-> [!NOTE]
->  Następujące `CImage` metody mają ograniczenia ich użycia:  
-  
-|Metoda|Ograniczenia|  
-|------------|----------------|  
-|[PlgBlt](#plgblt)|Działa tylko system Windows NT 4.0 lub nowszy. Nie będzie działać na aplikacje działające w systemie Windows 95/98 lub nowszym.|  
-|[MaskBlt](#maskblt)|Działa tylko system Windows NT 4.0 lub nowszy. Nie będzie działać na aplikacje działające w systemie Windows 95/98 lub nowszym.|  
-|[AlphaBlend](#alphablend)|Sprawdza się w systemie Windows 2000, Windows 98 lub nowszym.|  
-|[TransparentBlt](#transparentblt)|Sprawdza się w systemie Windows 2000, Windows 98 lub nowszym.|  
-|[Rysuj](#draw)|Obsługuje przezroczystość z systemu Windows 2000, Windows 98 lub nowszym.|  
   
  Można użyć `CImage` z MFC lub ATL.  
   
@@ -332,7 +324,7 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 ### <a name="remarks"></a>Uwagi  
  Mapa bitowa może być mapy bitowej sekcji z systemem innym niż DIB lub mapy bitowej sekcji DIB. Zobacz [IsDIBSection](#isdibsection) listę metod, które można używać tylko z DIB sekcji map bitowych.  
   
-##  <a name="bitblt"></a>CImage::BitBlt  
+##  <a name="bitblt"></a>  CImage::BitBlt  
  Kopiuje mapę bitową z kontekstu urządzenia źródłowego dla tego bieżącego kontekstu urządzenia.  
   
 ```
@@ -967,7 +959,7 @@ bool IsIndexed() const throw();
 > [!NOTE]
 >  Ta metoda obsługuje tylko DIB sekcji bitmapy.  
   
-##  <a name="isnull"></a>CImage::IsNull  
+##  <a name="isnull"></a>  CImage::IsNull  
  Określa, czy mapy bitowej jest aktualnie załadowany.  
   
 ```
@@ -978,7 +970,7 @@ bool IsNull() const throw();
  Ta metoda zwraca **True** Jeśli bitmapy nie jest aktualnie załadowany; w przeciwnym razie **False**.  
   
 ##  <a name="istransparencysupported"></a>CImage::IsTransparencySupported  
- Wskazuje, czy aplikacja obsługuje bitmapy przezroczyste i został skompilowany dla systemu Windows 2000 lub nowszego.  
+ Wskazuje, czy aplikacja obsługuje przezroczysty map bitowych.  
   
 ```
 static BOOL IsTransparencySupported() throw();
@@ -989,8 +981,6 @@ static BOOL IsTransparencySupported() throw();
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli wartość zwracana jest niezerowa i przezroczystość jest obsługiwana, wywołanie [AlphaBlend](#alphablend), [TransparentBlt](#transparentblt), lub [rysowania](#draw) obsłuży kolory przezroczyste.  
-  
- Jeśli aplikacja została skompilowana do użytku w systemach operacyjnych Windows 2000 lub Windows 98, ta metoda zawsze zwraca 0, nawet na nowszych systemów operacyjnych.  
   
 
 ##  <a name="load"></a>CImage::Load  
@@ -1136,7 +1126,7 @@ BOOL MaskBlt(
 ##  <a name="operator_hbitmap"></a>HBITMAP CImage::operator  
  Użyj tego operatora, aby uzyskać dojście Windows GDI dołączonych `CImage` obiektu. Ten operator jest operatora rzutowania obsługuje bezpośredniego użycia `HBITMAP` obiektu.  
   
-##  <a name="plgblt"></a>CImage::PlgBlt  
+##  <a name="plgblt"></a>  CImage::PlgBlt  
  Wykonuje przesunięcia bitowego bloku z prostokąt w kontekście urządzenia źródłowego do równoległobok kontekstu urządzenia docelowego.  
   
 ```
@@ -1206,7 +1196,7 @@ BOOL PlgBlt(
   
  Ta metoda ma zastosowanie do systemu Windows NT w wersji 4.0 i późniejsze. Zobacz [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) w zestawie SDK systemu Windows, aby uzyskać szczegółowe informacje.  
   
-##  <a name="releasedc"></a>CImage::ReleaseDC  
+##  <a name="releasedc"></a>  CImage::ReleaseDC  
  Udostępnia kontekst urządzenia.  
   
 ```
@@ -1287,7 +1277,7 @@ void SetColorTable(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda obsługuje tylko DIB sekcji bitmapy.  
   
-##  <a name="setpixel"></a>CImage::SetPixel  
+##  <a name="setpixel"></a>  CImage::SetPixel  
  Ustawia kolor piksel w danej lokalizacji w pliku mapy bitowej.  
   
 ```
@@ -1346,7 +1336,7 @@ void SetPixelRGB(
  *r*  
  Intensywność kolor czerwony.  
   
- *k*  
+ *g*  
  Intensywność kolor zielony.  
   
  *b*  
@@ -1369,7 +1359,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks koloru wcześniej ustawić jako przezroczysty.  
   
-##  <a name="stretchblt"></a>CImage::StretchBlt  
+##  <a name="stretchblt"></a>  CImage::StretchBlt  
  Kopiuje mapę bitową z kontekstu urządzenia źródłowego dla tego bieżącego kontekstu urządzenia.  
   
 ```

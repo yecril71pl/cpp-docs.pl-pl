@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, creating programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, creating programs
 ms.assetid: 8eb31320-1037-4029-b1f3-fdc9406dbaf1
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: deb832e0baed30507ef3f9929fb5f12805b7a807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>Tworzenie programów korzystających z automatyzacji zdalnej
 Dowolny obiekt automatyzacji i dowolny kontroler automatyzacji jest można używać bez zmian do kodu źródłowego, bez konieczności ponownej kompilacji i bez konieczności ponowne łączenie automatyzacji zdalnej. Po instalacji, który działa lokalnie (to znaczy, że na tym samym komputerze), należy przeprowadzić tylko kilka czynności, aby ją wykonać zdalnie.  
@@ -46,7 +50,7 @@ Dowolny obiekt automatyzacji i dowolny kontroler automatyzacji jest można używ
   
  Krok 3 obejmuje prawidłowo Instalowanie i rejestrowanie aplikacji serwera na komputerze wybranego serwera lub maszyny. Ponownie, gdy aplikacja jest self rejestrowanie, po jej wykonanie Ponadto zarejestruje go.  
   
- Krok 4 wymagane jest skonfigurowanie serwera, aby umożliwić zdalne wykonywanie kodu. Uruchom Menedżera RAC na komputerze z serwerem i upewnij się, że **dostępu klienta** karta ma fokus. Wybierz model aktywacji, który ma (zazwyczaj **Zezwalaj tworzy zdalnego przez klucz**. Jeśli wybierzesz tę opcję, należy również kliknij **Zezwalaj na aktywację zdalną** pole wyboru, aby ustawić wartości wpisu rejestru do "Y"). Jeśli korzystasz z systemu Windows NT lub Windows 2000 i wybierz opcję Zezwalaj na zdalny tworzy (ACL), masz również opcję, aby edytować listy ACL przez wypychanie **edycję listy ACL** przycisku.  
+ Krok 4 wymagane jest skonfigurowanie serwera, aby umożliwić zdalne wykonywanie kodu. Uruchom Menedżera RAC na komputerze z serwerem i upewnij się, że **dostępu klienta** karta ma fokus. Wybierz model aktywacji, który ma (zazwyczaj **Zezwalaj tworzy zdalnego przez klucz**. Jeśli wybierzesz tę opcję, należy również kliknij **Zezwalaj na aktywację zdalną** pole wyboru, aby ustawić wartości wpisu rejestru do "Y"). Jeśli wybierzesz opcję Zezwalaj na zdalny tworzy (ACL), masz również opcję, aby edytować listy ACL przez wypchnięcie **edycję listy ACL** przycisku.  
   
  Aby umożliwić automatyzacji zdalnej do pracy, należy następnie upewnij się, że Menedżer automatyzacji jest zainstalowana i uruchomiona na komputerze serwera lub maszyny. Jeśli nie jest zainstalowany, należy skopiować AUTMGR32. EXE w katalogu systemu Windows. Aby uzyskać informacje, jak to zrobić, zobacz [instalacja automatyzacji zdalnej](../mfc/remote-automation-installation.md). Aby uruchomić automatyzacji zdalnej, należy wykonać Menedżer automatyzacji. Będzie ono okno stanu mała, w którym będzie wyświetlana liczba komunikatów. Po rozpoczęciu, spowoduje to zminimalizowanie samej siebie. Jeśli chcesz kontynuować wyświetlić informacje o stanie, możesz kliknąć **Menedżer automatyzacji** karty na pasku zadań, aby przywrócić okna.  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,19 +25,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs: C++
-helpviewer_keywords: CSid class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csid-class"></a>Klasa CSid
 Ta klasa jest otoki dla `SID` struktury (identyfikator zabezpieczeń).  
@@ -63,7 +67,7 @@ class CSid
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|Konstruktor.|  
-|[CSid:: ~ CSid](#dtor)|Destruktor.|  
+|[CSid::~CSid](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -487,7 +491,7 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `SID` struktury jako ciąg w formacie odpowiednie do wyświetlania, gromadzenia i przekazywania. Odpowiednikiem [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399), mimo że ta funkcja jest tylko dostępna w systemie Windows 2000 lub nowszym w związku z czym jest emulowane starszych wersji systemu operacyjnego.  
+ Zwraca `SID` struktury jako ciąg w formacie odpowiednie do wyświetlania, gromadzenia i przekazywania. Odpowiednikiem [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399).  
   
 ##  <a name="sidnameuse"></a>CSid::SidNameUse  
  Zwraca opis stanu `CSid` obiektu.  

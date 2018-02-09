@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -25,7 +26,8 @@ f1_keywords:
 - _outpd
 - _outp
 - outpd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - outpw function
 - words
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: edcb3f8da6252705fe494acaa64c623b8a22ed3b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8f2b32b17ed65120aa98b19ed3b2cf599364fee0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
 Dane wyjściowe w porcie bajt (`_outp`), wyraz (`_outpw`), lub word o podwójnej precyzji (`_outpd`).  
@@ -79,7 +82,7 @@ unsigned long dataword
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Port*  
+ *port*  
  Numer portu.  
   
  *databyte, dataword*  
@@ -91,15 +94,15 @@ unsigned long dataword
 ## <a name="remarks"></a>Uwagi  
  `_outp`, `_outpw`, I `_outpd` funkcje zapisu bajt, word i word o podwójnej precyzji, odpowiednio do portu określonym produktem wyjściowym. *Portu* argument może być liczbą całkowitą bez znaku z zakresu 0 – 65 535; *databyte* może być liczbą całkowitą z zakresu 0 – 255; i *dataword* może mieć dowolną wartość z zakresu całkowitą, krótki całkowitą bez znaku i bez znaku długich liczb całkowitych, odpowiednio.  
   
- Ponieważ te funkcje zapisu bezpośrednio z portem We/Wy, nie można użyć w kodzie użytkownika w systemie Windows NT, Windows 2000, Windows XP i Windows Server 2003. Aby uzyskać informacje dotyczące korzystania z portów We/Wy w tych systemach operacyjnych Wyszukaj "Szeregowej komunikacji w Win32" w witrynie MSDN.  
+ Ponieważ te funkcje zapisu bezpośrednio z portem We/Wy, nie można użyć w kodzie użytkownika. Aby uzyskać informacje dotyczące korzystania z portów We/Wy w tych systemach operacyjnych Wyszukaj "Szeregowej komunikacji w Win32" w witrynie MSDN.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_outp`|\<conio.h >|  
-|`_outpw`|\<conio.h >|  
-|`_outpd`|\<conio.h >|  
+|`_outp`|\<conio.h>|  
+|`_outpw`|\<conio.h>|  
+|`_outpd`|\<conio.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).  
   

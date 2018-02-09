@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.HeapCommitSize
 - /heap
 - VC.Project.VCLinkerTool.HeapReserveSize
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - -HEAP linker option
 - heap allocation, setting heap size
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1ddbbeb373a5c1c9a7b5a14d124900782048fbeb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5dd4ba44a76fa7881ebee2ec2f472dad8675e2c8
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Ustaw rozmiar sterty)
 ```  
@@ -39,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  *Zarezerwować* argument określa alokacji sterty całkowitej pamięci wirtualnej. Domyślny rozmiar sterty to 1 MB. Konsolidator Zaokrągla wartość w górę określonej wartości najbliższej 4 bajty.  
   
- Opcjonalny `commit` argument podlega interpretacji przez system operacyjny. W systemie Windows NT/Windows 2000 określa ilość pamięci fizycznej do przydzielenia naraz. Zadeklarowanej pamięci wirtualnej spowoduje, że miejsca, które mają zostać zarezerwowane w pliku stronicowania. Wyższy `commit` wartość zaoszczędzić czas podczas aplikacji wymaga więcej miejsca na stercie, ale zwiększa wymagania dotyczące pamięci i być może czas uruchamiania.  
+ Opcjonalny `commit` argument określa ilość pamięci fizycznej do przydzielenia naraz. Zadeklarowanej pamięci wirtualnej spowoduje, że miejsca, które mają zostać zarezerwowane w pliku stronicowania. Wyższy `commit` wartość zaoszczędzić czas podczas aplikacji wymaga więcej miejsca na stercie, ale zwiększa wymagania dotyczące pamięci i być może czas uruchamiania.  
   
  Określ *zarezerwować* i `commit` wartości dziesiętne lub notacji języka C.  
   

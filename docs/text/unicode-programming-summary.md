@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2d08fcc502ac7daf97955741d044ebf1e50afab3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 03ee8a4032b054eb670de160aea9ec54dcf80f4d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unicode-programming-summary"></a>Podsumowanie programowania Unicode
 Aby móc korzystać z obsługi czasu wykonywania MFC i C Unicode, musisz:  
@@ -91,7 +94,7 @@ Aby móc korzystać z obsługi czasu wykonywania MFC i C Unicode, musisz:
   
 -   Użyj [fopen_s —, _wfopen_s —](../c-runtime-library/reference/fopen-s-wfopen-s.md) do otwierania plików Unicode.  
   
- Podsumowując, MFC i biblioteki wykonawczej zapewniają następujące obsługę standardu Unicode programowania w systemie Windows 2000:  
+ Podsumowując, MFC i biblioteki wykonawczej zapewniają obsługę programowania Unicode:  
   
 -   Z wyjątkiem funkcji Członkowskich klasy bazy danych, wszystkie funkcje MFC obsługują Unicode, łącznie z `CString`. `CString`udostępnia funkcje konwersji Unicode/ANSI.  
   

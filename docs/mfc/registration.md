@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - servers [MFC], initializing
 - initializing servers [MFC]
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registration"></a>Rejestracja
 Gdy użytkownik chce, aby wstawić element OLE do aplikacji, OLE wyświetla listę typów obiektów do wyboru. OLE pobiera tej listy z systemu bazie danych rejestracji, który zawiera informacje o wszystkich aplikacji serwera. Gdy serwer rejestruje się, wpisów, które następnie są umieszczane w bazie danych rejestracji systemu (rejestr) opis każdego typu obiektu, który dostarcza mu, rozszerzenia i ścieżki do samej siebie, między innymi informacje o pliku.  
@@ -44,12 +47,12 @@ Gdy użytkownik chce, aby wstawić element OLE do aplikacji, OLE wyświetla list
 > [!NOTE]
 >  Aplikacje MFC automatycznie generowane przez Kreatora aplikacji rejestrują się uruchomienie jako aplikacji autonomicznych.  
   
- Jeśli chcesz zarejestrować aplikację podczas instalacji, należy użyć programu RegEdit.exe. (W systemie Windows 95, Windows 98 i Windows ME, RegEdit znajduje się w katalogu systemu Windows. W systemie Windows NT lub Windows 2000 RegEdit jest w katalogu Windows System32). Jeśli program instalacyjny z aplikacją, uruchom program instalacyjny ma "RegEdit /S *appname*reg". (Flaga /S wskazuje operację w trybie dyskretnym, oznacza to, że nie są wyświetlane okno dialogowe raportowania pomyślne zakończenie polecenia). W przeciwnym razie Poinstruuj użytkowników, aby ręcznie uruchomić program RegEdit.  
+ Jeśli chcesz zarejestrować aplikację podczas instalacji, należy użyć programu RegEdit.exe. Jeśli program instalacyjny z aplikacją, uruchom program instalacyjny ma "RegEdit /S *appname*reg". (Flaga /S wskazuje operację w trybie dyskretnym, oznacza to, że nie są wyświetlane okno dialogowe raportowania pomyślne zakończenie polecenia). W przeciwnym razie Poinstruuj użytkowników, aby ręcznie uruchomić program RegEdit.  
   
 > [!NOTE]
 >  Plik reg utworzonego przez Kreatora aplikacji nie zawiera pełną ścieżkę do pliku wykonywalnego. Program instalacyjny albo zmodyfikować pliku reg zawierać pełną ścieżkę do pliku wykonywalnego lub zmodyfikować zmiennej środowiskowej PATH, aby uwzględnić katalogu instalacyjnego.  
   
- RegEdit Scala zawartość pliku tekstowego reg w bazie danych rejestracji. Aby sprawdzić bazy danych lub w celu jego naprawy Edytor rejestru. Należy zadbać, aby uniknąć usunięcia niezbędne zapisów OLE. (W systemie Windows 95, Windows 98 i Windows ME, Edytor rejestru jest RegEdit.exe. W systemach Windows NT i system Windows 2000 jest RegEdit32.exe).  
+ RegEdit Scala zawartość pliku tekstowego reg w bazie danych rejestracji. Aby sprawdzić bazy danych lub w celu jego naprawy Edytor rejestru. Należy zadbać, aby uniknąć usunięcia niezbędne zapisów OLE.  
   
 ##  <a name="_core_server_initialization"></a>Inicjowanie serwera  
  Po utworzeniu aplikacji serwera za pomocą Kreatora aplikacji, Kreator zakończy pracę wszystkich zadań inicjowania dla Ciebie automatycznie. W tej sekcji opisano, co należy zrobić ręcznie podczas pisania aplikacji serwera.  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,19 +22,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CTokenPrivileges::GetNamesAndAttributes
 - ATLSECURITY/ATL::CTokenPrivileges::GetPTOKEN_PRIVILEGES
 - ATLSECURITY/ATL::CTokenPrivileges::LookupPrivilege
-dev_langs: C++
-helpviewer_keywords: CTokenPrivileges class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc0fb58d1b92fac1462b355b9afb353554f3f23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ctokenprivileges-class"></a>Klasa CTokenPrivileges
 Ta klasa jest otoki dla **TOKEN_PRIVILEGES** struktury.  
@@ -79,7 +83,7 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|Operator przypisania.|  
   
 ## <a name="remarks"></a>Uwagi  
- [Token dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374909) jest obiekt, który opisuje kontekst zabezpieczeń proces lub Wątek i jest przydzielana każdy użytkownik zalogowany do systemu Windows NT lub Windows 2000.  
+ [Token dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374909) jest obiekt, który opisuje kontekst zabezpieczeń proces lub Wątek i jest przydzielana każdy użytkownik zalogowany do systemu Windows.  
   
  Token dostępu jest używany do opisania różnych zabezpieczeń przyznane następujące uprawnienia do poszczególnych użytkowników. Uprawnienie składa się z liczbą 64-bitowe o nazwie lokalnie unikatowy identyfikator ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) i ciągu deskryptora.  
   
@@ -155,7 +159,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
  Zwraca wartość PRAWDA, jeśli uprawnienie zostało pomyślnie usunięte, wartość false w przeciwnym razie wartość.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest przydatna jako narzędzie do tworzenia tokenów ograniczone przez system Windows 2000.  
+ Ta metoda jest przydatna jako narzędzie do tworzenia tokenów ograniczone.  
   
 ##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
  Usuwa wszystkie uprawnienia z `CTokenPrivileges` obiektu tokenu dostępu.  

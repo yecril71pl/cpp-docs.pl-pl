@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CSacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csacl-class"></a>Klasa CSacl
 Ta klasa jest otoki dla struktury SACL (systemowa lista kontroli dostępu).  
@@ -129,7 +133,7 @@ bool AddAuditAce(
  Zwraca **true** Jeśli wpisu ACE jest dodawany do `CSacl` obiektu **false** w przypadku awarii.  
   
 ### <a name="remarks"></a>Uwagi  
- A `CSacl` obiekt zawiera wpisy kontroli dostępu (ACE), określających typy prób dostępu, które generują rekordów inspekcji w dzienniku zdarzeń zabezpieczeń. Ta metoda dodaje ACE, aby `CSacl` obiektu. Drugiej formy `AddAuditAce` jest tylko dostępne w systemie Windows 2000 lub nowszej.  
+ A `CSacl` obiekt zawiera wpisy kontroli dostępu (ACE), określających typy prób dostępu, które generują rekordów inspekcji w dzienniku zdarzeń zabezpieczeń. Ta metoda dodaje ACE, aby `CSacl` obiektu.  
   
  Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flagi, które można ustawić w `AceFlags` parametru.  
   

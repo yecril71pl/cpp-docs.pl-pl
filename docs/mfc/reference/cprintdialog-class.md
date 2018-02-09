@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,7 +28,8 @@ f1_keywords:
 - AFXDLGS/CPrintDialog::PrintRange
 - AFXDLGS/CPrintDialog::PrintSelection
 - AFXDLGS/CPrintDialog::m_pd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPrintDialog [MFC], CPrintDialog
 - CPrintDialog [MFC], CreatePrinterDC
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 653cdc4580862288d98600603c1b45526ea38675
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprintdialog-class"></a>Klasa CPrintDialog
 Hermetyzuje usług świadczonych przez okno dialogowe wspólne systemu Windows do drukowania.  
@@ -105,7 +108,7 @@ class CPrintDialog : public CCommonDialog
  Wspólnych okien dialogowych wydruku umożliwiają łatwe do zaimplementowania wydruku i ustawienia wydruku okien dialogowych w sposób zgodny ze standardami systemu Windows.  
   
 > [!NOTE]
->  `CPrintDialogEx` Klasa hermetyzuje usług świadczonych przez arkusz właściwości systemu Windows 2000 drukowania. Aby uzyskać więcej informacji, zobacz [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) omówienie.  
+>  `CPrintDialogEx` Klasa hermetyzuje usług świadczonych przez arkusz właściwości wydruku systemu Windows. Aby uzyskać więcej informacji, zobacz [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) omówienie.  
   
  `CPrintDialog`w funkcji jest zastąpiona z [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), który zaprojektowano w celu zapewnienia wspólnego okna dialogowego dla obu wydruku ustawienia i ustawienia strony.  
   
@@ -136,11 +139,11 @@ class CPrintDialog : public CCommonDialog
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cdialog —](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
  [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
   
@@ -287,7 +290,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPrintDialog::PrintCollate](#printcollate).  
   
-##  <a name="getdrivername"></a>CPrintDialog::GetDriverName  
+##  <a name="getdrivername"></a>  CPrintDialog::GetDriverName  
  Pobiera nazwę aktualnie wybranego sterownika.  
   
 ```  
@@ -335,7 +338,7 @@ CString GetPortName() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPrintDialog::GetDeviceName](#getdevicename).  
   
-##  <a name="getprinterdc"></a>CPrintDialog::GetPrinterDC  
+##  <a name="getprinterdc"></a>  CPrintDialog::GetPrinterDC  
  Pobiera dojścia do kontekstu urządzenia drukarki.  
   
 ```  
@@ -367,7 +370,7 @@ int GetToPage() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="m_pd"></a>CPrintDialog::m_pd  
+##  <a name="m_pd"></a>  CPrintDialog::m_pd  
  Struktura, której członkowie przechowywania właściwości obiektu okna dialogowego.  
   
 ```  

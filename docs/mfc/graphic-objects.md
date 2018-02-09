@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - HRGN
 - HFONT
 - HBITMAP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRgn class [MFC], HRGN handle type
 - HPEN [MFC]
@@ -48,22 +50,23 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fabeeae17b5bc81fdf592ed452a088b75bae544
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6dfdba311ed13b1ffbd5e1f830d6fa87cfce915d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="graphic-objects"></a>Obiekty graficzne
 System Windows udostępnia wiele narzędzi do użycia w kontekstach urządzenia do rysowania. Zapewnia on pióra do rysowania linii, pędzle wnętrza wypełnienia i czcionek do rysowania tekstu. MFC udostępnia klasy obiektów grafiki odpowiednikiem narzędzi do rysowania w systemie Windows. Poniższej tabeli przedstawiono dostępne klasy i równoważne grafiki Windows typ dojścia urządzenia interfejsu (GDI).  
   
 > [!NOTE]
->  GDI + jest dołączony do systemu Windows XP i jest dostępny jako pakiet redystrybucyjny systemu Windows NT 4.0 z dodatkiem SP6, Windows 2000, Windows 98 i systemu Windows. Aby pobrać najnowszy pakiet redystrybucyjny programu, zobacz [http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm). Aby uzyskać więcej informacji, zobacz dokumentację interfejsu GDI + SDK w: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
+>  Aby uzyskać więcej informacji, zobacz dokumentację interfejsu GDI + SDK w: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
  W tym artykule opisano korzystanie z tych klas obiektów grafiki:  
   
@@ -71,12 +74,12 @@ System Windows udostępnia wiele narzędzi do użycia w kontekstach urządzenia 
   
 |Class|Typ dojścia systemu Windows|  
 |-----------|-------------------------|  
-|[Cpen —](../mfc/reference/cpen-class.md)|`HPEN`|  
-|[Cbrush —](../mfc/reference/cbrush-class.md)|`HBRUSH`|  
-|[Cfont —](../mfc/reference/cfont-class.md)|**HFONT**|  
-|[Cbitmap —](../mfc/reference/cbitmap-class.md)|`HBITMAP`|  
-|[Cpalette —](../mfc/reference/cpalette-class.md)|`HPALETTE`|  
-|[CRgn](../mfc/reference/crgn-class.md)|**HRGN —**|  
+|[CPen](../mfc/reference/cpen-class.md)|`HPEN`|  
+|[CBrush](../mfc/reference/cbrush-class.md)|`HBRUSH`|  
+|[CFont](../mfc/reference/cfont-class.md)|**HFONT**|  
+|[CBitmap](../mfc/reference/cbitmap-class.md)|`HBITMAP`|  
+|[CPalette](../mfc/reference/cpalette-class.md)|`HPALETTE`|  
+|[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|  
   
 > [!NOTE]
 >  Klasa [CImage](../atl-mfc-shared/reference/cimage-class.md) zapewnia obsługę rozszerzonych mapy bitowej.  
@@ -111,8 +114,6 @@ System Windows udostępnia wiele narzędzi do użycia w kontekstach urządzenia 
 -   [Wybieranie obiektu graficznego do kontekstu urządzenia](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   
 -   [Konteksty urządzenia](../mfc/device-contexts.md)  
-  
--   [Ograniczenia funkcji CImage w starszych systemach operacyjnych](../mfc/cimage-limitations-with-earlier-operating-systems.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obiekty okna](../mfc/window-objects.md)

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - dialog classes [MFC]
 - dialog boxes [MFC], Windows common dialogs
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fcbed7cec501257f03ab13447d54e081c1d46c76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d76c387c9aa9f53f8503d3606b2b47cdb5c6be6d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="common-dialog-classes"></a>Klasy wspólnych okien dialogowych
 Oprócz klasy [cdialog —](../mfc/reference/cdialog-class.md), MFC udostępnia kilka klas pochodnych `CDialog` które hermetyzują często używane okien dialogowych, jak pokazano w poniższej tabeli. Okna dialogowe hermetyzowany są nazywane "wspólnych okien dialogowych" i są częścią Biblioteka okna dialogowego wspólne systemu Windows (pliku COMMDLG. BIBLIOTEKI DLL). Zasoby szablonu okna dialogowego i kod dla tych klas są udostępniane w oknach wspólnych okien dialogowych, które są częścią systemu Windows w wersji 3.1 lub nowszej.  
@@ -41,7 +44,7 @@ Oprócz klasy [cdialog —](../mfc/reference/cdialog-class.md), MFC udostępnia 
 |[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|Umożliwia użytkownikowi zainicjować Znajdź lub zamienianie operacji w pliku tekstowym.|  
 |[CFontDialog](../mfc/reference/cfontdialog-class.md)|Umożliwia użytkownikowi określenie czcionki.|  
 |[CPrintDialog](../mfc/reference/cprintdialog-class.md)|Umożliwia użytkownikowi określenie informacje dotyczące zadania drukowania.|  
-|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Arkusz właściwości wydruku systemu Windows 2000.|  
+|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Arkusz właściwości wydruku systemu Windows.|  
   
  Aby uzyskać więcej informacji na temat klasy wspólnych okien dialogowych, zobacz nazwy poszczególnych klas *odwołania MFC*. MFC udostępnia również liczbę standardowe okno dialogowe klasy służące do OLE. Klasa podstawowa dla informacji o tych klas, [COleDialog](../mfc/reference/coledialog-class.md)w *odwołania MFC*.  
   

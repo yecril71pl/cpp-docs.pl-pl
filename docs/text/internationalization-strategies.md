@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - globalization [C++], character sets
 - language-portable code [C++]
@@ -18,21 +20,22 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6b7ab27bb7a6458efde84451febaeb6f3ef37115
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ead6470bbbeacd43326f4373877eb991e5899116
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="internationalization-strategies"></a>Strategie internacjonalizacji
 W zależności od systemów operacyjnych i rynkach masz kilka strategie internacjonalizacji:  
   
--   Aplikacja używa standardu Unicode i dlatego jest uruchamiana w systemie Windows 2000 i Windows NT, ale nie w systemie Windows 95 lub Windows 98.  
+-   Aplikacja używa Unicode.  
   
      Korzystać z funkcji specyficznych dla Unicode i wszystkie znaki są 16 bitów dwubajtowe (mimo że można użyć znaków ANSI w niektórych części programu do celów specjalnych). Biblioteki wykonawcze języka C udostępnia funkcje, makra i typy danych dla programowania tylko Unicode. MFC jest całkowicie włączone Unicode.  
   
@@ -41,8 +44,6 @@ W zależności od systemów operacyjnych i rynkach masz kilka strategie internac
      Możesz użyć funkcji MBCS. Ciągi mogą zawierać znaki jednobajtowe i znaki dwubajtowe. Biblioteki wykonawcze języka C udostępnia funkcje, makra i typy danych dla programowania MBCS — tylko do. MFC jest całkowicie włączone MBCS.  
   
 -   Kod źródłowy aplikacji jest zapisywany przenośności pełną — kompilując symbolem **_unicode —** lub symbol **_MBCS** zdefiniowane, można utworzyć wersji, które należy użyć jednego. Aby uzyskać więcej informacji, zobacz [mapowania zwykłego tekstu w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
-  
--   Aplikacja używa biblioteki otoki dla brakujących funkcje Unicode w systemie Windows 95, Windows 98 i Windows ME, tak jak to opisano w [projektowania tylko jednej aplikacji Unicode działa zarówno Windows 98 i Windows 2000](http://go.microsoft.com/fwlink/p/?LinkId=250770). Otoki biblioteki są również dostępne w rynku.  
   
      Można użyć pełni dostosowane C czasu wykonywania funkcji, makra i danych typów. Elastyczność MFC obsługuje jedną z następujących strategii.  
   

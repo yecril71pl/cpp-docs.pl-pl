@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,7 +27,8 @@ f1_keywords:
 - AFXDLGS/CPrintDialogEx::PrintRange
 - AFXDLGS/CPrintDialogEx::PrintSelection
 - AFXDLGS/CPrintDialogEx::m_pdex
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPrintDialogEx [MFC], CPrintDialogEx
 - CPrintDialogEx [MFC], CreatePrinterDC
@@ -45,19 +47,20 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 147a3d638f76f291a9732b340335331730f5b74d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprintdialogex-class"></a>Klasa CPrintDialogEx
-Hermetyzuje usług świadczonych przez arkusz właściwości systemu Windows 2000 drukowania.  
+Hermetyzuje usług świadczonych przez arkusz właściwości wydruku systemu Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -120,11 +123,11 @@ class CPrintDialogEx : public CCommonDialog
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cdialog —](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
  `IObjectWithSite`  
   
@@ -138,7 +141,7 @@ class CPrintDialogEx : public CCommonDialog
  **Nagłówek:** afxdlgs.h  
   
 ##  <a name="cprintdialogex"></a>CPrintDialogEx::CPrintDialogEx  
- Tworzy arkusz właściwości systemu Windows 2000 drukowania.  
+ Tworzy arkusz właściwości wydruku systemu Windows.  
   
 ```  
 CPrintDialogEx(
@@ -172,7 +175,7 @@ HDC CreatePrinterDC();
  Ten kontroler domeny zakłada, że bieżąca drukarka kontrolera domeny, a inne uzyskany wcześniej drukarki, kontrolery domeny muszą zostać usunięte. Ta funkcja może zostać wywołana, a wynikowy kontrolera domeny używane, bez kiedykolwiek wyświetlania okna dialogowego drukowania.  
   
 ##  <a name="domodal"></a>CPrintDialogEx::DoModal  
- Wywołanie tej funkcji, aby wyświetlić arkusz właściwości wspólne wydruku systemu Windows 2000 i Zezwalaj użytkownikowi na wybranie różnych opcji drukowania, takie jak liczba kopii, zakres stron oraz czy mają być sortowane kopie.  
+ Wywołanie tej funkcji, aby wyświetlić arkusz właściwości wydruku systemu Windows i Zezwalaj użytkownikowi na wybranie różnych opcji drukowania, takie jak liczba kopii, zakres stron, oraz czy mają być sortowane kopie.  
   
 ```  
 virtual INT_PTR DoModal();
@@ -238,7 +241,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>Wartość zwracana  
  [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktury danych, który zawiera informacje dotyczące inicjowania urządzenia i środowiska sterownika drukarki. Musisz odblokować pamięć podjęte przez tę strukturę z systemu Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) funkcji, która jest opisany w zestawie SDK systemu Windows.  
   
-##  <a name="getdrivername"></a>CPrintDialogEx::GetDriverName  
+##  <a name="getdrivername"></a>  CPrintDialogEx::GetDriverName  
  Wywołanie tej funkcji po wywołaniu [DoModal](#domodal) lub [GetDefaults](#getdefaults) pobrać nazwy sterownika drukarki zdefiniowane przez system.  
   
 ```  
@@ -261,7 +264,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Nazwa portu aktualnie wybrane drukarki.  
   
-##  <a name="getprinterdc"></a>CPrintDialogEx::GetPrinterDC  
+##  <a name="getprinterdc"></a>  CPrintDialogEx::GetPrinterDC  
  Zwraca dojście do kontekstu urządzenia drukarki.  
   
 ```  
@@ -274,7 +277,7 @@ HDC GetPrinterDC() const;
 ### <a name="remarks"></a>Uwagi  
  Należy wywołać systemu Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) funkcji, aby usunąć kontekst urządzenia, po zakończeniu korzystania z niego.  
   
-##  <a name="m_pdex"></a>CPrintDialogEx::m_pdex  
+##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex  
  Struktura PRINTDLGEX, której członkowie przechowywania właściwości obiektu okna dialogowego.  
   
 ```  

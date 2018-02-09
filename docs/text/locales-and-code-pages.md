@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - locales [C++], about locales
 - locale IDs [C++]
@@ -22,16 +24,17 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locales-and-code-pages"></a>Ustawienia regionalne i strony kodowe
 Identyfikator ustawień regionalnych odzwierciedla konwencje lokalnych i język dla określonego regionu geograficznego. Danego języka może być używany w więcej niż jeden kraj/region; na przykład portugalski jest używany w Brazylia także jak Portugalii. Z drugiej strony kraj/region może mieć więcej niż jednym języku. Na przykład Kanada ma dwa języki: angielski i francuski. W związku z tym Kanada ma dwa różne ustawienia regionalne: kanadyjskich w języku angielskim i francuskim kanadyjskich. Niektóre kategorie zależne od ustawień regionalnych obejmują formatowanie dat i format wyświetlania wartości pieniężnych.  
@@ -44,7 +47,7 @@ Identyfikator ustawień regionalnych odzwierciedla konwencje lokalnych i język 
   
  Aby uzyskać więcej informacji na temat stron kodowych, zobacz [stron kodowych](../c-runtime-library/code-pages.md).  
   
- Biblioteki wykonawcze języka C występują dwa typy stron kodowych wewnętrzny: ustawienia regionalne i wielobajtowe. Bieżąca strona kodowa można zmienić podczas wykonywania programu (zobacz dokumentację [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) i [_setmbcp —](../c-runtime-library/reference/setmbcp.md) funkcji). Biblioteki wykonawczej mogą również uzyskać i użyj wartości strony kodowej systemu operacyjnego. W systemie Windows 2000 strona kodowa systemu operacyjnego jest strona kodowa "ANSI domyślne systemu". Ta strona kodowa jest stały czas wykonywania programu.  
+ Biblioteki wykonawcze języka C występują dwa typy stron kodowych wewnętrzny: ustawienia regionalne i wielobajtowe. Bieżąca strona kodowa można zmienić podczas wykonywania programu (zobacz dokumentację [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) i [_setmbcp —](../c-runtime-library/reference/setmbcp.md) funkcji). Biblioteki wykonawczej mogą również uzyskać i użyj wartości strony kodowej systemu operacyjnego, który jest stały czas wykonywania programu.  
   
  Strona kodowa ustawień lokalnych zmiany, zachowanie zestawu zależnego od ustawień regionalnych zmiany funkcji w tym definiowane za pomocą stron kodowych wybrany. Domyślnie wszystkie funkcje zależne od ustawień regionalnych rozpocząć wykonywanie strona kodowa ustawień lokalnych unikatowe dla ustawień regionalnych "C". Strona kodowa ustawień regionalnych wewnętrzny (a także inne właściwości specyficzne dla ustawień regionalnych) można zmienić wywołując `setlocale` funkcji. Wywołanie `setlocale`(lc_all —, "") ustawia ustawienia regionalne do wskazanej przez użytkownika ustawień regionalnych systemu operacyjnego.  
   

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.classes.dialog
-dev_langs: C++
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
 helpviewer_keywords:
 - property sheet classes
 - dialog box classes
@@ -16,24 +19,25 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3095dfbbfa33f4c3110afb96c741a508611521cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dialog-box-classes"></a>Klasy okien dialogowych
 Klasa `CDialog` i pochodne Hermetyzowanie funkcji okno dialogowe. Ponieważ jest specjalnym rodzajem okna, okno dialogowe `CDialog` jest pochodną `CWnd`. Pochodzi z klasy okien dialogowych z `CDialog` lub użyj jednego z klasy wspólnych okien dialogowych dla standardowych oknach dialogowych, takich jak otwieranie lub zapisywanie pliku, drukowania, wybierając czcionek i kolorów, Inicjowanie operacji wyszukiwania i zamieniania lub przy użyciu różnych związane z mechanizmem OLE operacje.  
   
- [Cdialog —](../mfc/reference/cdialog-class.md)  
+ [CDialog](../mfc/reference/cdialog-class.md)  
  Klasa podstawowa dla wszystkich okien dialogowych, zarówno modalne i niemodalne.  
   
- [Cdataexchange —](../mfc/reference/cdataexchange-class.md)  
+ [CDataExchange](../mfc/reference/cdataexchange-class.md)  
  Udostępnia informacje o wymiana i Walidacja danych w oknach dialogowych.  
   
 ## <a name="common-dialogs"></a>Wspólne okna dialogowe  
@@ -58,7 +62,7 @@ Klasa `CDialog` i pochodne Hermetyzowanie funkcji okno dialogowe. Ponieważ jest
  Zawiera standardowe okno dialogowe drukowania pliku.  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- Udostępnia arkusza właściwości systemu Windows 2000 drukowania.  
+ Udostępnia arkusz właściwości wydruku systemu Windows.  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
  Hermetyzuje usług świadczonych przez okno dialogowe Ustawienia strony wspólne systemu Windows z obsługą dodatkowych ustawień i modyfikowania marginesów.  
@@ -99,10 +103,10 @@ Klasa `CDialog` i pochodne Hermetyzowanie funkcji okno dialogowe. Ponieważ jest
 ## <a name="property-sheet-classes"></a>Klasy arkuszy właściwości  
  Klasy arkuszy właściwości Zezwalaj aplikacjom Użyj arkuszy właściwości, nazywane również z kartami okien dialogowych. Arkusze właściwości są wydajny sposób organizowania wielu formantów w oknie dialogowym pojedynczego.  
   
- [Cpropertypage —](../mfc/reference/cpropertypage-class.md)  
+ [CPropertyPage](../mfc/reference/cpropertypage-class.md)  
  Udostępnia poszczególnych stron w arkuszu właściwości. Klasa wyprowadzona z `CPropertyPage` dla poszczególnych stron, które mają zostać dodane do Twojej arkusza właściwości.  
   
- [Cpropertysheet —](../mfc/reference/cpropertysheet-class.md)  
+ [CPropertySheet](../mfc/reference/cpropertysheet-class.md)  
  Zawiera wiele stron właściwości ramki. Pochodzi z klasy arkusza właściwości `CPropertySheet` można szybko wdrożyć arkuszy właściwości.  
   
  [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
@@ -118,19 +122,19 @@ Klasa `CDialog` i pochodne Hermetyzowanie funkcji okno dialogowe. Ponieważ jest
 ## <a name="related-classes"></a>Klasy pokrewne  
  Te klasy nie są okien dialogowych per se, ale korzystają z szablonów — okno dialogowe i mają podobne zachowania okien dialogowych.  
   
- [Cdialogbar —](../mfc/reference/cdialogbar-class.md)  
+ [CDialogBar](../mfc/reference/cdialogbar-class.md)  
  Pasek sterowania, który jest oparty na szablonie — okno dialogowe.  
   
  [CFormView](../mfc/reference/cformview-class.md)  
  Widok przewijania, którego układ jest zdefiniowany w szablonie — okno dialogowe. Klasa wyprowadzona z `CFormView` do zaimplementowania interfejsu użytkownika na podstawie szablonu — okno dialogowe.  
   
- [Cdaorecordview —](../mfc/reference/cdaorecordview-class.md)  
+ [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
  Formularz zawiera widok podłączone bezpośrednio do obiektu zestawu rekordów obiekt DAO (Data Access). Wszystkie widoki formularzy, takich jak `CDaoRecordView` jest oparty na szablonie — okno dialogowe.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
  Formularz zawiera widok podłączone bezpośrednio do obiektu zestawu rekordów otwórz połączenie bazy danych (ODBC). Wszystkie widoki formularzy, takich jak `CRecordView` jest oparty na szablonie — okno dialogowe.  
   
- [Cprintinfo —](../mfc/reference/cprintinfo-structure.md)  
+ [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
  Struktura zawierający informacje o zadaniu drukowania lub podglądu drukowania. Używane przez Architektura drukowania [CView](../mfc/reference/cview-class.md).  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /openmp
 - VC.Project.VCCLCompilerTool.OpenMP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8d3aaeb5d3e71dfced4bf78384a62898d99a5ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c8217a901f071f50dbd2d7dfcbffccf4014a9444
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (Włącz obsługę OpenMP 2.0)
 Powoduje, że kompilator przetworzyć `#pragma` [omp](../../preprocessor/omp.md).  
@@ -37,8 +40,6 @@ Powoduje, że kompilator przetworzyć `#pragma` [omp](../../preprocessor/omp.md)
   
 ## <a name="remarks"></a>Uwagi  
  `#pragma omp`Służy do określania [dyrektywy](../../parallel/openmp/reference/openmp-directives.md) i [klauzule](../../parallel/openmp/reference/openmp-clauses.md). Jeśli **/OpenMP** nie została określona w kompilacji, kompilator ignoruje klauzule OpenMP i dyrektywy. [OpenMP — funkcja](../../parallel/openmp/reference/openmp-functions.md) wywołania są przetwarzane przez kompilator, nawet jeśli **/OpenMP** nie jest określona.  
-  
- Aplikacja jest skompilowana przy użyciu **/OpenMP** i przy użyciu [biblioteki](../../parallel/openmp/reference/openmp-libraries.md) można uruchomić tylko w systemie Windows 2000 lub nowszych systemów operacyjnych.  
   
  Aplikacje skompilowane z **/OpenMP** i **/CLR** może być uruchamiany tylko w procesie domeny pojedynczej aplikacji; wielu domen aplikacji nie są obsługiwane. Oznacza to, gdy Konstruktor modułów (.cctor) jest uruchamiana, wykryje on proces jest skompilowana przy użyciu **/OpenMP** i jeśli aplikacja jest ładowany do obsługi innych niż domyślne. Aby uzyskać więcej informacji, zobacz [elementu appdomain](../../cpp/appdomain.md), [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md), i [inicjowanie zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md).  
   
