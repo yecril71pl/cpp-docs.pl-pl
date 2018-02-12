@@ -1,44 +1,50 @@
 ---
 title: noalias | Dokumentacja firmy Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: noalias_cpp
-dev_langs: C++
+f1_keywords:
+- noalias_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92e96ce931ea5bc44e03a5803865daa66f960e92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fd57b10aba4298ff7facd725ab3ce1934ccf1ab
+ms.sourcegitcommit: f3c398b1c7dbf36ab71b5ca89d365b1913afa307
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="noalias"></a>noalias
 
-**Dotyczące firmy Microsoft**
+**Microsoft Specific**
 
 `noalias`oznacza, że wywołanie funkcji nie Modyfikuj lub odwołać widoczny stan globalny i tylko modyfikuje pamięci wskazywał *bezpośrednio* przez parametry wskaźnika (pierwszego poziomu elementów pośrednich).
 
 Jeśli funkcja jest oznaczony jako `noalias`, optymalizator może przyjmować, że oprócz parametrów się elementów pośrednich tylko pierwszy poziom parametrów wskaźnika są odwołuje się do lub zmodyfikować wewnątrz funkcji. Zbiór wszystkich danych, które nie jest zdefiniowana lub do których odwołuje się poza zasięgiem kompilacji jest widoczny stan globalny, a ich adres nie jest brana. Zakres kompilacji jest wszystkich plików źródłowych ([opcję/LTCG (Generowanie kodu w czasie Link)](../build/reference/ltcg-link-time-code-generation.md) kompilacje) lub jednym pliku źródłowym (z systemem innym niż**opcję/LTCG** kompilacji).
 
+`noalias` Adnotacja ma zastosowanie tylko w treści funkcji adnotacjami. Funkcja jako oznaczenie `__declspec(noalias)` nie ma wpływu na aliasów wskaźników zwracane przez funkcję.
+
+Dla innej adnotacji może wpłynąć na aliasów, zobacz [słowo kluczowe __declspec(restrict)](../cpp/restrict.md).
+
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, za pomocą `__declspec(restrict)` i `__declspec(noalias)`. Zwykle pamięci zwrócony z `malloc` jest `restrict` ponieważ nagłówki CRT są odpowiednio oznaczone.
+W poniższym przykładzie pokazano użycie `__declspec(noalias)`.
 
-Jednak w tym przykładzie wskaźniki `mempool` i `memptr` są globalne, więc kompilator nie ma gwarancji, że pamięć nie podlega aliasów. Funkcje, które zwracają wskaźników za pomocą dekoracji `__declspec(restrict)` informuje kompilator pamięć wskazywana przez wartości zwracanej nie jest używane z aliasem.
-
-Funkcja w przykładzie, który uzyskuje dostęp do pamięci z dekoracji `__declspec(noalias)` informuje kompilator, że ta funkcja nie zakłóca stan globalny z wyjątkiem za pośrednictwem wskaźniki na swojej liście parametrów.
+Gdy funkcja `multiply` odnoszący się uzyskuje dostęp do pamięci `__declspec(noalias)`, informuje kompilator tej funkcji nie modyfikuje stan globalny z wyjątkiem za pośrednictwem wskaźniki w jego listy parametrów.
 
 ```C
 // declspec_noalias.c
@@ -51,7 +57,7 @@ Funkcja w przykładzie, który uzyskuje dostęp do pamięci z dekoracji `__decls
 
 float * mempool, * memptr;
 
-__declspec(restrict) float * ma(int size)
+float * ma(int size)
 {
     float * retval;
     retval = memptr;
@@ -59,7 +65,7 @@ __declspec(restrict) float * ma(int size)
     return retval;
 }
 
-__declspec(restrict) float * init(int m, int n)
+float * init(int m, int n)
 {
     float * a;
     int i, j;
@@ -101,7 +107,7 @@ int main()
     a = init(M, N);
     b = init(N, P);
     c = init(M, P);
-
+ 
     multiply(a, b, c);
 }
 ```
@@ -109,4 +115,5 @@ int main()
 ## <a name="see-also"></a>Zobacz też
 
 [__declspec](../cpp/declspec.md)  
-[Słowa kluczowe](../cpp/keywords-cpp.md)
+[Słowa kluczowe](../cpp/keywords-cpp.md)  
+[__declspec(restrict)](../cpp/restrict.md)  
