@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: abort
+ms.topic: reference
+apiname:
+- abort
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: Abort
-dev_langs: C++
+f1_keywords:
+- Abort
+dev_langs:
+- C++
 helpviewer_keywords:
 - aborting current process
 - abort function
@@ -30,19 +34,20 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6577ca7927d42e12aa62ed100b9572b7270208f
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 02e8c81ef539dc2f078a3b120ca673a0ef612779
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="abort"></a>przerwij
 
 Przerywa proces bieżącego i zwraca kod błędu.
 
 > [!NOTE]
-> Nie używaj tej metody w celu zamknięcia aplikacji Microsoft Store lub [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji, z wyjątkiem testowania i debugowania scenariuszy. Programowe lub interfejsu użytkownika sposobów Zamknij aplikację sklepu nie są dozwolone zgodnie z [zasady Microsoft Store](/legal/windows/agreements/store-policies). Aby uzyskać więcej informacji, zobacz [cykl życia aplikacji platformy uniwersalnej systemu Windows](/windows/uwp/launch-resume/app-lifecycle).
+> Nie należy używać tej metody można zamknąć aplikacji Microsoft Store lub Windows platformy Uniwersalnej aplikacji, z wyjątkiem w testowania i debugowania scenariuszy. Programowe lub interfejsu użytkownika sposobów Zamknij aplikację sklepu nie są dozwolone zgodnie z [zasady Microsoft Store](/legal/windows/agreements/store-policies). Aby uzyskać więcej informacji, zobacz [cykl życia aplikacji platformy uniwersalnej systemu Windows](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,11 +57,11 @@ void abort( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`abort`Formant nie powróci do procesu wywołującego. Domyślnie sprawdza obsługi sygnał przerwania i zgłasza `SIGABRT` Jeśli jest on ustawiony. Następnie `abort` przerywa proces bieżącego i zwraca kod zakończenia procesu nadrzędnego.
+`abort` Formant nie powróci do procesu wywołującego. Domyślnie sprawdza obsługi sygnał przerwania i zgłasza `SIGABRT` Jeśli jest on ustawiony. Następnie `abort` przerywa proces bieżącego i zwraca kod zakończenia procesu nadrzędnego.
 
 ## <a name="remarks"></a>Uwagi
 
-**Dotyczące firmy Microsoft**
+**Microsoft Specific**
 
 Domyślnie po utworzeniu aplikacji z bibliotek środowiska uruchomieniowego debugowania `abort` procedury wyświetla komunikat o błędzie przed `SIGABRT` jest wywoływane. W przypadku aplikacji konsoli w trybie konsoli, komunikat jest wysyłany do `STDERR`. Windows aplikacji klasycznych i aplikacji konsoli działających w trybie okna wyświetlania komunikatu w oknie komunikatu. Aby Pomiń komunikat, należy użyć [_set_abort_behavior —](../../c-runtime-library/reference/set-abort-behavior.md) wyczyść `_WRITE_ABORT_MSG` flagi. Komunikat wyświetlany jest zależna od wersji środowiska uruchomieniowego używane. Komunikat podobny dla aplikacji tworzonych przy użyciu najnowszej wersji programu Visual C++, to:
 
@@ -72,7 +77,7 @@ W kompilacjach zarówno handlowych i debugowania `abort` sprawdza, czy program o
 
 Domyślnie w kompilacjach bez debugowania aplikacji pulpitu lub konsoli `abort` następnie wywołuje mechanizmu usługi raportowania błędów systemu Windows (wcześniej znane jako odzyskiwania po awarii. Watson) do raportu błędów do firmy Microsoft. To zachowanie może być włączona lub wyłączona przez wywołanie metody `_set_abort_behavior` i ustawienie lub maskowania `_CALL_REPORTFAULT` flagi. Gdy flaga jest ustawiona, system Windows wyświetli okno komunikatu zawierający tekst coś, takich jak "Problem spowodowany program przestał działać poprawnie." Użytkownik może wywołać debugera z **debugowania** przycisk lub wybierz **Zamknij program** przycisk, aby zakończyć aplikację z kodu błędu, który jest zdefiniowany przez system operacyjny.
 
-Jeśli program obsługi raportowania błędów systemu Windows nie jest wywoływany, następnie `abort` wywołania [_exit —](../../c-runtime-library/reference/exit-exit-exit.md) zakończenie procesu z zakończenia kontroli 3 i zwraca kodu do procesu nadrzędnego lub systemu operacyjnego. `_exit`Opróżnienia buforów strumienia lub do `atexit` / `_onexit` przetwarzania.
+Jeśli program obsługi raportowania błędów systemu Windows nie jest wywoływany, następnie `abort` wywołania [_exit —](../../c-runtime-library/reference/exit-exit-exit.md) zakończenie procesu z zakończenia kontroli 3 i zwraca kodu do procesu nadrzędnego lub systemu operacyjnego. `_exit` Opróżnienia buforów strumienia lub do `atexit` / `_onexit` przetwarzania.
 
 Aby uzyskać więcej informacji na temat debugowania CRT, zobacz [techniki testowania CRT](/visualstudio/debugger/crt-debugging-techniques).
 
@@ -132,3 +137,4 @@ File could not be opened: No such file or directory
 [_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)  
 [_DEBUG](../../c-runtime-library/debug.md)  
 [_set_abort_behavior](../../c-runtime-library/reference/set-abort-behavior.md)  
+

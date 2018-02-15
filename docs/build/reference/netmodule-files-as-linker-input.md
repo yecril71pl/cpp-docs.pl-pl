@@ -4,39 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: adafad3532b17573278e7afd82bc33f2c3c50b67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1c30c56012dc14392ecdc6a089dcd88a217d6d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="netmodule-files-as-linker-input"></a>Pliki .netmodule — Wejście konsolidatora
 Link.exe akceptuje teraz MSIL .obj i modułów .netmodule jako dane wejściowe. Utworzony przez konsolidator plik wyjściowy będzie zestawu lub modułu .netmodule z zależności nie czasu wykonywania na każdym .obj lub modułów .netmodule, że dane wejściowe do konsolidatora.  
   
  modułów .netmodule są tworzone przez kompilator języka Visual C++ z [/LN (Utwórz moduł MSIL)](../../build/reference/ln-create-msil-module.md) lub przez narzędzie konsolidacji z [/noassembly (Utwórz moduł MSIL)](../../build/reference/noassembly-create-a-msil-module.md). .objs zawsze są tworzone w kompilacji Visual C++. Inne kompilatory Visual Studio, można użyć **/target: module** — opcja kompilatora.  
   
- W większości przypadków należy przekazać do konsolidator pliku obj. z kompilacji Visual C++, utworzony modułu .netmodule, jeśli nie utworzono modułu .netmodule [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md). Modułów .netmodule MSIL używane jako dane wejściowe konsolidatora musi być czysty MSIL, które mogą być utworzone za pomocą kompilatora Visual C++ **/CLR: Safe**. **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015. Kompilatory programu Visual Studio .NET utworzyć czystego modułów MSIL domyślnie.  
+  Należy przekazać do konsolidatora plik .obj z kompilacji Visual C++, utworzony modułu .netmodule. Przekazywanie modułu .netmodule nie jest obsługiwana, ponieważ **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015 i zostanie usunięta w przyszłej wersji kompilatora.   
   
  Aby uzyskać informacje na temat sposobu wywoływanie konsolidatora z wiersza polecenia, zobacz [składnia wiersza polecenia konsolidatora](../../build/reference/linker-command-line-syntax.md), [kodu kompilacji C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md), i [Ustawianie ścieżki i zmiennych środowiskowych Kompilacji z wiersza polecenia](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
   
- Przekazywanie pliku modułu .netmodule lub dll konsolidator, który został skompilowany przez kompilator języka Visual C++ z **/CLR** lub **/CLR: pure** może spowodować błąd konsolidatora. Aby uzyskać więcej informacji, zobacz [Wybieranie formatu pliki danych wejściowych modułu .netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
+ Przekazywanie pliku modułu .netmodule lub dll konsolidator, który został skompilowany przez kompilator języka Visual C++ z **/CLR** może spowodować błąd konsolidatora. Aby uzyskać więcej informacji, zobacz [Wybieranie formatu pliki danych wejściowych modułu .netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
   
- Konsolidator akceptuje pliki .obj natywnego, a także pliki .obj MSIL skompilowane z **/CLR**, **/CLR: pure**, lub **/CLR: Safe**. Podczas przekazywania mieszane .objs w tej samej kompilacji, możliwość weryfikacji wynikowego pliku wyjściowego domyślnie będzie równa najniższa możliwość wprowadzania modułów weryfikacji. Na przykład jeśli .obj bezpieczne i czysty są przekazywane do konsolidatora, plik wyjściowy będzie czysty. [/ CLRIMAGETYPE (określenie typu z obrazu CLR)](../../build/reference/clrimagetype-specify-type-of-clr-image.md) umożliwia określenie niższego poziomu możliwość weryfikacji, jeżeli jest to, co jest potrzebne.  
+ Konsolidator akceptuje pliki .obj natywnego, a także pliki .obj MSIL skompilowane z **/CLR**. Podczas przekazywania mieszane .objs w tej samej kompilacji, możliwość weryfikacji wynikowego pliku wyjściowego domyślnie będzie równa najniższa możliwość wprowadzania modułów weryfikacji. 
   
  Jeśli chcesz aplikacji, które mają zostać zawarte w jednym zestawie aktualnie zainstalowana jest aplikacja, która składa się z dwóch lub więcej zestawów, musi Skompiluj ponownie zestawy, a następnie połącz .objs lub modułów .netmodule do produkcji w jednym zestawie.  
   
