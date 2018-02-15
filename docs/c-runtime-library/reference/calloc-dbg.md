@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _calloc_dbg
+ms.topic: reference
+apiname:
+- _calloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - _calloc_dbg
 - calloc_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4295dd84e8066de0906a6fcd7b154c94875f7f5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 634838c5a29b0a356ea8c7c3d3a49ea86263f45e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="callocdbg"></a>_calloc_dbg
 Przydziela liczba bloków pamięci sterty z dodatkowym miejscem dla nagłówka debugowania i zastąpić buforów (tylko wersja do debugowania).  
@@ -78,17 +82,17 @@ void *_calloc_dbg(
  Po pomyślnym ukończeniu ta funkcja zwraca wskaźnik do części użytkownika ostatniego bloku alokacji pamięci, nowych funkcji programu obsługi lub zwraca `NULL`. Pełny opis zwracany zachowanie znajduje się w sekcji uwag. Aby uzyskać więcej informacji o sposobie korzystania z nowych funkcji programu obsługi, zobacz [calloc —](../../c-runtime-library/reference/calloc.md) funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `_calloc_dbg`jest to wersja debugowania [calloc —](../../c-runtime-library/reference/calloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_calloc_dbg` zostanie zmniejszona do wywołania `calloc`. Zarówno `calloc` i `_calloc_dbg` przydzielić `num` bloki pamięci w stosie podstawowej, ale `_calloc_dbg` oferuje kilka funkcji debugowania:  
+ `_calloc_dbg` jest to wersja debugowania [calloc —](../../c-runtime-library/reference/calloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_calloc_dbg` zostanie zmniejszona do wywołania `calloc`. Zarówno `calloc` i `_calloc_dbg` przydzielić `num` bloki pamięci w stosie podstawowej, ale `_calloc_dbg` oferuje kilka funkcji debugowania:  
   
 -   Bufory po obu stronach użytkownika część bloku do testowania przecieki.  
   
 -   Parametr typu bloku do śledzenia alokacji określonych typów.  
   
--   `filename`/`linenumber`informacji do ustalenia źródła żądań alokacji.  
+-   `filename`/`linenumber` informacji do ustalenia źródła żądań alokacji.  
   
- `_calloc_dbg`Każdy blok pamięci z nieco więcej miejsca niż żądany przydziela `size`. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Gdy blok zostanie przydzielony, część użytkownika bloku jest wypełniania wartościami 0xCD a każdy bufor zastąpienia jest wypełniany wartościami 0xFD.  
+ `_calloc_dbg` Każdy blok pamięci z nieco więcej miejsca niż żądany przydziela `size`. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Gdy blok zostanie przydzielony, część użytkownika bloku jest wypełniania wartościami 0xCD a każdy bufor zastąpienia jest wypełniany wartościami 0xFD.  
   
- `_calloc_dbg`Ustawia `errno` do `ENOMEM` Jeśli alokacja pamięci nie powiodło się; `EINVAL` jest zwracany, jeśli ilość pamięci potrzebnej (łącznie z czynności wymienionych wcześniej) przekracza `_HEAP_MAXREQ`. Aby uzyskać informacji dotyczących tego i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `_calloc_dbg` Ustawia `errno` do `ENOMEM` Jeśli alokacja pamięci nie powiodło się; `EINVAL` jest zwracany, jeśli ilość pamięci potrzebnej (łącznie z czynności wymienionych wcześniej) przekracza `_HEAP_MAXREQ`. Aby uzyskać informacji dotyczących tego i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywołanie funkcji standardowego stosu lub jego wersja do debugowania kompilacji debugowanej aplikacji, zobacz [debugowania wersji z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
@@ -96,7 +100,7 @@ void *_calloc_dbg(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_calloc_dbg`|\<crtdbg.h >|  
+|`_calloc_dbg`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -142,6 +146,6 @@ Allocated memory successfully
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
- [calloc —](../../c-runtime-library/reference/calloc.md)   
- [_malloc_dbg —](../../c-runtime-library/reference/malloc-dbg.md)   
+ [calloc](../../c-runtime-library/reference/calloc.md)   
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)   
  [_DEBUG](../../c-runtime-library/debug.md)

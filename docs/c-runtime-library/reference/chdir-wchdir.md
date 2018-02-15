@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wchdir
 - _chdir
@@ -29,7 +30,8 @@ f1_keywords:
 - _wchdir
 - _tchdir
 - wchdir
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tchdir function
 - _chdir function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6025a7a4f17d1dd461981db255340d3fe9d6c3d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 37cb327b13fafafdb357a6a53f624c494ee317b6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 Zmienia bieżący katalog roboczy.  
@@ -80,7 +83,7 @@ _chdir("c:\\temp");
   
  Jeśli używasz opcjonalne ukośnika odwrotnego (`\`) w ścieżkach, należy umieścić dwa razy (`\\`) ciągu C do reprezentowania pojedynczego ukośnika odwrotnego (`\`).  
   
- `_wchdir`jest to wersja znaków dwubajtowych `_chdir`; `dirname` argument `_wchdir` jest ciągiem znaków dwubajtowych`. _wchdir` i `_chdir` zachowują się tak samo w przeciwnym razie wartość.  
+ `_wchdir` jest to wersja znaków dwubajtowych `_chdir`; `dirname` argument `_wchdir` jest ciągiem znaków dwubajtowych`. _wchdir` i `_chdir` zachowują się tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mapping"></a>Rutynowe mapowanie — zwykły tekst:  
   
@@ -92,8 +95,8 @@ _chdir("c:\\temp");
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_chdir`|\<Direct.h >|\<errno.h >|  
-|`_wchdir`|\<Direct.h > lub \<wchar.h >|\<errno.h >|  
+|`_chdir`|\<direct.h>|\<errno.h>|  
+|`_wchdir`|\<Direct.h > lub \<wchar.h >|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -158,6 +161,6 @@ Volume in drive C has no label.
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrola katalogu](../../c-runtime-library/directory-control.md)   
- [_mkdir —, _wmkdir —](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [_rmdir —, _wrmdir —](../../c-runtime-library/reference/rmdir-wrmdir.md)   
+ [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
+ [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)   
  [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

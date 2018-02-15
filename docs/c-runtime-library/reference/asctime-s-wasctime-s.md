@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wasctime_s
 - asctime_s
@@ -27,7 +28,8 @@ f1_keywords:
 - asctime_s
 - _wasctime_s
 - _tasctime_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tasctime_s function
 - _tasctime_s function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 30a48101ea2db80f7c8a37434c1fd73c9c535286
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6914dd9c305a1313cde43e69f012786462f1d4a6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 Konwertuj `tm` czasu struktury do ciągu znaków. Te funkcje są wersje [asctime —, _wasctime —](../../c-runtime-library/reference/asctime-wasctime.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -91,13 +94,13 @@ errno_t _wasctime_s(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|`buffer`|`numberOfElements`|`tm`|Zwraca|Wartość w`buffer`|  
+|`buffer`|`numberOfElements`|`tm`|Zwraca|Wartość w `buffer`|  
 |--------------|------------------------|----------|------------|-----------------------|  
 |`NULL`|wszystkie|wszystkie|`EINVAL`|Nie zmodyfikowano|  
 |nie `NULL` (wskazuje prawidłowy pamięci)|0|wszystkie|`EINVAL`|Nie zmodyfikowano|  
-|nie`NULL`|0 < < 26 rozmiaru|wszystkie|`EINVAL`|Pusty ciąg|  
-|nie`NULL`|>= 26|`NULL`|`EINVAL`|Pusty ciąg|  
-|nie`NULL`|>= 26|Struktura nieprawidłową wartość czas lub wartości spoza zakresu dla składników czasu|`EINVAL`|Pusty ciąg|  
+|nie `NULL`|0 < < 26 rozmiaru|wszystkie|`EINVAL`|Pusty ciąg|  
+|nie `NULL`|>= 26|`NULL`|`EINVAL`|Pusty ciąg|  
+|nie `NULL`|>= 26|Struktura nieprawidłową wartość czas lub wartości spoza zakresu dla składników czasu|`EINVAL`|Pusty ciąg|  
   
 > [!NOTE]
 >  Błąd warunki dotyczące `wasctime_s` są podobne do `asctime_s` z wyjątkiem, że limit rozmiaru jest mierzony w wyrazy.  
@@ -121,7 +124,7 @@ errno_t _wasctime_s(
   
  Wynik ciąg utworzony przez `asctime_s` zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0`. 24-godzinnym jest używany. Wszystkie pola mają stałej szerokości. Znaku nowego wiersza i znaku null zajmują ostatnich dwóch pozycji w ciągu. Wartość przekazany jako drugi parametr należy co najmniej tym duży. Jeśli jest mniejsza ilość kodu błędu, `EINVAL`, zostaną zwrócone.  
   
- `_wasctime_s`jest to wersja znaków dwubajtowych `asctime_s`. `_wasctime_s`i `asctime_s` zachowują się tak samo w przeciwnym razie wartość.  
+ `_wasctime_s` jest to wersja znaków dwubajtowych `asctime_s`. `_wasctime_s` i `asctime_s` zachowują się tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mapping"></a>Rutynowe mapowanie — zwykły tekst  
   
@@ -135,7 +138,7 @@ errno_t _wasctime_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`asctime_s`|\<Time.h >|  
+|`asctime_s`|\<time.h>|  
 |`_wasctime_s`|\<Time.h > lub \<wchar.h >|  
   
 ## <a name="security"></a>Zabezpieczenia  
@@ -180,9 +183,9 @@ Current date and time: Wed May 14 15:30:17 2003
   
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
- [ctime_s —, _ctime32_s —, _ctime64_s —, _wctime_s — _wctime32_s —, _wctime64_s —](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
- [_ftime —, _ftime32 —, _ftime64 —](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime_s —, _gmtime32_s —, _gmtime64_s —](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
  [localtime_s —, _localtime32_s —, _localtime64_s —](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [czas, _time32 —, _time64 —](../../c-runtime-library/reference/time-time32-time64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [_tzset](../../c-runtime-library/reference/tzset.md)

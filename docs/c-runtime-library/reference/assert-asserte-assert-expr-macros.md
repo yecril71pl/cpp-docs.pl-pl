@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +25,8 @@ f1_keywords:
 - ASSERTE
 - _ASSERT
 - _ASSERT_EXPR
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _ASSERTE macro
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 07be60643ad77e1138c3c23a1dd358a1d4177f25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b5dae684d922287c1301338ed3a59844ff6313ac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT, _asserte —, _ASSERT_EXPR makra
 Oceń wyrażenia i Generowanie raportu debugowania, gdy wynik jest `False` (tylko wersja do debugowania).  
@@ -75,7 +78,7 @@ _ASSERTE(
   
  `_ASSERT_EXPR`, `_ASSERT` i `_ASSERTE` oceny ich `booleanExpression` argument, a wynik jest `false` (0), drukowania komunikatów diagnostycznych i wywołanie [_crtdbgreportw —](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) do wygenerowania raportu debugowania. `_ASSERT` Makro drukuje wiadomość diagnostycznych proste `_ASSERTE` obejmuje reprezentację ciągu wyrażenia nie powiodło się w komunikacie, i `_ASSERT_EXPR` obejmuje `message` ciągu w komunikacie diagnostycznych. Nic nie rób tych makr podczas `booleanExpression` jest różna od zera.  
   
- `_ASSERT_EXPR`, `_ASSERT` i `_ASSERTE` wywołania `_CrtDbgReportW`, co powoduje, że wszystkie dane wyjściowe w znaki dwubajtowe. `_ASSERTE`Wyświetla prawidłowe znaki Unicode w `booleanExpression` i `_ASSERT_EXPR` drukuje znaki Unicode w `message`.  
+ `_ASSERT_EXPR`, `_ASSERT` i `_ASSERTE` wywołania `_CrtDbgReportW`, co powoduje, że wszystkie dane wyjściowe w znaki dwubajtowe. `_ASSERTE` Wyświetla prawidłowe znaki Unicode w `booleanExpression` i `_ASSERT_EXPR` drukuje znaki Unicode w `message`.  
   
  Ponieważ `_ASSERTE` makro określa wyrażenie nie powiodło się i `_ASSERT_EXPR` pozwala określić komunikat w generowanym raporcie, pozwalają użytkownikom na identyfikację problem bez odwołujących się do kodu źródłowego aplikacji. Jednak wadą istnieje w tym co `message` drukowanymi przez `_ASSERT_EXPR` i co wyrażenia obliczonego przy `_ASSERTE` znajduje się w pliku wyjściowym (wersja do debugowania) aplikacji jako stałą typu string. W związku z tym jeśli dużej liczby wywołań do `_ASSERT_EXPR` lub `_ASSERTE`, wyrażenia te mogą znacznie zwiększyć rozmiar pliku wyjściowego.  
   
@@ -83,7 +86,7 @@ _ASSERTE(
   
 `_CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);`  
   
- `_CrtDbgReportW`generuje raport debugowania i określa jego przeznaczenia lub miejsc docelowych, na podstawie bieżący tryb raportu lub tryby i zdefiniowana dla pliku `_CRT_ASSERT` typ raportu. Domyślnie błędy potwierdzenia i błędów są przekierowywane do okna komunikatu debugowania. [_Crtsetreportmode —](../../c-runtime-library/reference/crtsetreportmode.md) i [_crtsetreportfile —](../../c-runtime-library/reference/crtsetreportfile.md) funkcje są używane do definiowania miejsc docelowych dla każdego typu raportu.  
+ `_CrtDbgReportW` generuje raport debugowania i określa jego przeznaczenia lub miejsc docelowych, na podstawie bieżący tryb raportu lub tryby i zdefiniowana dla pliku `_CRT_ASSERT` typ raportu. Domyślnie błędy potwierdzenia i błędów są przekierowywane do okna komunikatu debugowania. [_Crtsetreportmode —](../../c-runtime-library/reference/crtsetreportmode.md) i [_crtsetreportfile —](../../c-runtime-library/reference/crtsetreportfile.md) funkcje są używane do definiowania miejsc docelowych dla każdego typu raportu.  
   
  Jeśli obiektem docelowym jest użytkownika i debugowania okna komunikatu kliknie **ponów** przycisku, `_CrtDbgReportW` zwraca wartość 1, powoduje `_ASSERT_EXPR`, `_ASSERT` i `_ASSERTE` makra można uruchomić debugera, pod warunkiem, że włączone jest debugowanie just-in-time (JIT).  
   
@@ -95,9 +98,9 @@ _ASSERTE(
   
 ## <a name="requirements"></a>Wymagania  
   
-|Makra|Wymagany nagłówek|  
+|Macro|Wymagany nagłówek|  
 |-----------|---------------------|  
-|`_ASSERT_EXPR`,                  `_ASSERT`, `_ASSERTE`|\<crtdbg.h >|  
+|`_ASSERT_EXPR`,                  `_ASSERT`, `_ASSERTE`|\<crtdbg.h>|  
   
 ## <a name="example"></a>Przykład  
  W tym programie wywołań do `_ASSERT` i `_ASSERTE` makra testować warunek `string1 == string2`. Jeśli warunek nie powiedzie się, te makra drukowania diagnostycznych wiadomości. `_RPTn` i `_RPTFn` grupy makr również jest wykonywane w tym programie zamiast `printf` funkcji.  
@@ -176,5 +179,5 @@ crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
- [Assert — makro, _assert, _wassert](../../c-runtime-library/reference/assert-macro-assert-wassert.md)   
+ [assert Macro, _assert, _wassert](../../c-runtime-library/reference/assert-macro-assert-wassert.md)   
  [_RPT, _RPTF, _RPTW, _RPTFW Macros](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)

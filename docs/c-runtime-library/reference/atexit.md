@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: atexit
+ms.topic: reference
+apiname:
+- atexit
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,22 +22,25 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords: atexit
-dev_langs: C++
+f1_keywords:
+- atexit
+dev_langs:
+- C++
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8e812f39041287d17ee87766f6971d299654f0f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bf87637fee2040bb5d1db05dd76e7e73728e375c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atexit"></a>atexit
 Przetwarza określona funkcja na wyjściu.  
@@ -53,10 +58,10 @@ int atexit(
  Funkcja wywoływana.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `atexit`Zwraca wartość 0 w przypadku powodzenia lub wartość różną od zera, jeśli wystąpi błąd.  
+ `atexit` Zwraca wartość 0 w przypadku powodzenia lub wartość różną od zera, jeśli wystąpi błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- `atexit` Funkcji została przekazana adresu funkcji (`func`) wywoływana, gdy program zakończy się normalnie. Kolejne wywołania `atexit` tworzenia rejestru funkcje, które są wykonywane w ostatniej, w kolejności wytworzenia. Funkcje przekazany do `atexit` nie może mieć parametrów. `atexit`i `_onexit` użyć sterty do przechowywania rejestru funkcji. W związku z tym liczbę funkcji, które można zarejestrować jest ograniczona tylko przez pamięci sterty.  
+ `atexit` Funkcji została przekazana adresu funkcji (`func`) wywoływana, gdy program zakończy się normalnie. Kolejne wywołania `atexit` tworzenia rejestru funkcje, które są wykonywane w ostatniej, w kolejności wytworzenia. Funkcje przekazany do `atexit` nie może mieć parametrów. `atexit` i `_onexit` użyć sterty do przechowywania rejestru funkcji. W związku z tym liczbę funkcji, które można zarejestrować jest ograniczona tylko przez pamięci sterty.  
   
  Kod w `atexit` funkcja nie może zawierać żadnych zależności od każdej biblioteki DLL, która może już zostać usunięty z pamięci podczas `atexit` funkcja jest wywoływana.  
   
@@ -66,7 +71,7 @@ int atexit(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`atexit`|\<stdlib.h >|  
+|`atexit`|\<stdlib.h>|  
   
 ## <a name="example"></a>Przykład  
  Ten program wypchnięć czterech funkcji na stosie funkcji ma być wykonywana po `atexit` jest wywoływana. Gdy program jest kończona, te programy są wykonywane na ostatnich, najpierw się.  
@@ -115,6 +120,6 @@ This is executed next.
   
 ## <a name="see-also"></a>Zobacz też  
  [Proces i kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)   
- [przerwania](../../c-runtime-library/reference/abort.md)   
- [exit, _exit — _exit —](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [Przerwania](../../c-runtime-library/reference/abort.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
  [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)

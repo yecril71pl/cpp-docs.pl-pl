@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -23,7 +24,8 @@ f1_keywords:
 - cgetws
 - _cgetws
 - _cgets
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _cgetws function
 - strings [C++], getting from console
@@ -32,16 +34,17 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9315791023b94fe7a2cdc97f1cec632c05ddbd2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 81ce9e8144fc280cc8192696178648776c78f033
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 Pobiera ciąg znaków z konsoli. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_cgets_s —, _cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
@@ -50,7 +53,7 @@ Pobiera ciąg znaków z konsoli. Bezpieczniejsza wersje te funkcje są dostępne
 >  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, ich nie są dostępne w CRT. Bezpieczne wersje tych funkcji, _cgets_s — i _cgetws_s —, są nadal dostępne. Informacje na temat tych funkcji alternatywnych, zobacz [_cgets_s —, _cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -76,7 +79,7 @@ wchar_t *_cgetws(
  Lokalizacja magazynu danych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_cgets`i `_cgetws` zwraca wskaźnik do początku ciągu znaków na `buffer[2]`. Jeśli `buffer` jest `NULL`, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają `NULL` i ustaw `errno` do `EINVAL`.  
+ `_cgets` i `_cgetws` zwraca wskaźnik do początku ciągu znaków na `buffer[2]`. Jeśli `buffer` jest `NULL`, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają `NULL` i ustaw `errno` do `EINVAL`.  
   
 ## <a name="remarks"></a>Uwagi  
  Tych funkcji odczytu ciąg znaków z konsoli i przechowywane w lokalizacji wskazywanej przez ciąg, a jej długość `buffer`. `buffer` Parametr musi być wskaźnik do tablicy znaków. Pierwszy element tablicy, `buffer[0]`, musi zawierać maksymalną długość (w znakach) ciągu do odczytu. Tablica musi zawierać za mało elementów, aby pomieścić ciąg, znak końcowy null ('\0') i 2 bajty dodatkowe. Funkcja odczytuje znaków, aż do powrotu karetki-wiersza źródła kombinacja (CR LF) lub określoną liczbę znaków jest do odczytu. Ciąg jest przechowywana, zaczynając od `buffer[2]`. Jeśli funkcja CR LF, są przechowywane znak null ('\0'). Funkcja następnie przechowuje rzeczywista długość ciągu drugiego elementu tablicy `buffer[1]`.  
@@ -95,7 +98,7 @@ wchar_t *_cgetws(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_cgets`|\<conio.h >|  
+|`_cgets`|\<conio.h>|  
 |`_cgetws`|\<conio.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).  

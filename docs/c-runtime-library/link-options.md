@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - nothrownew.obj
 - newmode.obj
@@ -36,21 +38,22 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ece67a7c2b50423ea9ff4610e638dcdc2b979e14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d0108ecd9d0b9caaa2df3d450c185d5937a96463
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="link-options"></a>Opcje łącz
 Katalogu lib CRT zawiera wiele plików małego obiektu, które umożliwiają określonych funkcji CRT bez zmiany kodu. Są one nazywane "Opcje łącza", ponieważ należy je dodać do wiersza polecenia konsolidatora z nich korzystać.  
   
- Wersje Pure tryb czysty istnieje, ale nie są używane w programie Visual Studio 2015. Regularne wersji dla kodu natywnego i/CLR, należy użyć wersji czysty (prefiksem p) do/CLR: pure tryb. **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
+ Pure tryb czysty wersje są przestarzałe, począwszy od programu Visual Studio 2015. Za pomocą regularnego wersji dla kodu natywnego i/CLR.  
   
 |Natywne i/CLR|Pure tryb czysty|Opis|  
 |----------------------|---------------|-----------------|  

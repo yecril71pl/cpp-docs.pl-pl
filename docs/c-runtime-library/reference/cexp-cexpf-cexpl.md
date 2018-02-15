@@ -1,5 +1,5 @@
 ---
-title: cexp cexpf, cexpl | Dokumentacja firmy Microsoft
+title: cexp, cexpf, cexpl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - cexp
 - cexpf
@@ -33,24 +33,26 @@ f1_keywords:
 - complex/cepx
 - complex/cexpf
 - complex/cexpl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cexp function
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0f7138d3853faad1268148ef7517291a849525df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ce5f42c8a13db45e3f75345b873bc6ec76885052
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="cexp-cexpf-cexpl"></a>cexp cexpf, cexpl
+# <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 Obliczenia bazy danych base e wykładniczej z liczbą.  
   
 ## <a name="syntax"></a>Składnia  
@@ -87,7 +89,7 @@ _Lcomplex cexpl(
   
 |Procedura|Nagłówek C|Nagłówek C++|  
 |-------------|--------------|------------------|  
-|`cexp`,               `cexpf`, `cexpl`|\<COMPLEX.h >|\<COMPLEX.h >|  
+|`cexp`,               `cexpf`, `cexpl`|\<complex.h>|\<complex.h>|  
   
  Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

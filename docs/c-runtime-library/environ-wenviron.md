@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -12,7 +13,8 @@ f1_keywords:
 - wenviron
 - _wenviron
 - _environ
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - environ function
 - _environ function
@@ -20,22 +22,23 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f89c777a25da5288709683750c907114dac1e5c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 277f8a853a5262d524016630f52bfcbfc8a8b18b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
-`_environ` Zmienna jest wskaźnik do tablicy wskaźników do ciągów znaków wielobajtowych, które stanowi środowisko procesu. Tę zmienną globalną jest przestarzała bezpieczniejsze funkcjonalne wersje [getenv_s —, _wgetenv_s —](../c-runtime-library/reference/getenv-s-wgetenv-s.md) i [_putenv_s —, _wputenv_s —](../c-runtime-library/reference/putenv-s-wputenv-s.md), którego należy użyć zamiast zmiennej globalnej. `_environ`jest zadeklarowana w Stdlib.h.  
+`_environ` Zmienna jest wskaźnik do tablicy wskaźników do ciągów znaków wielobajtowych, które stanowi środowisko procesu. Tę zmienną globalną jest przestarzała bezpieczniejsze funkcjonalne wersje [getenv_s —, _wgetenv_s —](../c-runtime-library/reference/getenv-s-wgetenv-s.md) i [_putenv_s —, _wputenv_s —](../c-runtime-library/reference/putenv-s-wputenv-s.md), którego należy użyć zamiast zmiennej globalnej. `_environ` jest zadeklarowana w Stdlib.h.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,7 +51,7 @@ extern char **_environ;
   
  `ENVVARNAME``=string`  
   
- `getenv_s`i `putenv_s` użyj `_environ` zmiennej tabeli środowiska modyfikacji i dostępu. Gdy `_putenv` jest wywoływana w celu dodawania lub usuwania ustawień środowiska tabeli środowiska zmienia rozmiar. Jego lokalizacji w pamięci mogą ulec zmianie w zależności od ilości pamięci programu. Wartość `_environ` jest automatycznie dostosowana.  
+ `getenv_s` i `putenv_s` użyj `_environ` zmiennej tabeli środowiska modyfikacji i dostępu. Gdy `_putenv` jest wywoływana w celu dodawania lub usuwania ustawień środowiska tabeli środowiska zmienia rozmiar. Jego lokalizacji w pamięci mogą ulec zmianie w zależności od ilości pamięci programu. Wartość `_environ` jest automatycznie dostosowana.  
   
  `_wenviron` Zadeklarowana zmienna, w Stdlib.h jako:  
   
@@ -86,6 +89,6 @@ j = _wputenv( "env_var_y=string2" );  // also results in implicit call:
 ## <a name="see-also"></a>Zobacz też  
  [Zmienne globalne](../c-runtime-library/global-variables.md)   
  [getenv —, _wgetenv —](../c-runtime-library/reference/getenv-wgetenv.md)   
- [getenv_s —, _wgetenv_s —](../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
+ [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
  [_putenv —, _wputenv —](../c-runtime-library/reference/putenv-wputenv.md)   
  [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - abs
 - _abs64
@@ -35,7 +36,8 @@ f1_keywords:
 - llabs
 - math/llabs
 - cmath/abs
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - absolute values
 - abs function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 64c09dc8c8ce1ce5493ac4b2515c6b0be2910627
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1dc1e7532c715a045c2b76c3be2ef915f82693a1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="abs-labs-llabs-abs64"></a>ABS, laboratoria, llabs — _abs64 —
 Oblicza wartość bezwzględna argumentu.  
@@ -99,7 +102,7 @@ __int64 _abs64(
 ## <a name="remarks"></a>Uwagi  
  Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia `abs` który przyjmować i zwracać `long`, `long long`, `float`, `double`, i `long double` wartości. Te przeciążenia są zdefiniowane w \<cmath > nagłówka. W programie C `abs` zawsze przyjmuje i zwraca int.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Ponieważ zakres liczb całkowitych ujemna, które może być reprezentowany przez przy użyciu dowolnego typu całkowitego jest większy niż zakres dodatnie liczby całkowite, które może być reprezentowany przez przy użyciu tego typu, jest możliwe do tych funkcji, których nie można przekonwertować argumentu. Jeśli wartość bezwzględna argumentu nie może być reprezentowany przez typ zwracany `abs` zwracają wartość argumentu bez zmian. W szczególności `abs(INT_MIN)` zwraca `INT_MIN`, `labs(LONG_MIN)` zwraca `LONG_MIN`, `llabs(LLONG_MIN)` zwraca `LLONG_MIN`, i `_abs64(_I64_MIN)` zwraca `_I64_MIN`. Oznacza to, że `abs` funkcji nie może służyć do zagwarantowania wartość dodatnią.  
   
@@ -110,7 +113,7 @@ __int64 _abs64(
 |Procedura|Wymagany nagłówek C|Wymagany nagłówek C++|  
 |-------------|-----------------------|---------------------------|  
 |`abs`, `labs`, `llabs`|\<Math.h > lub \<stdlib.h >|\<cmath >, \<cstdlib — >, \<stdlib.h > lub \<math.h >|  
-|`_abs64`|\<stdlib.h >|\<cstdlib — > lub \<stdlib.h >|  
+|`_abs64`|\<stdlib.h>|\<cstdlib — > lub \<stdlib.h >|  
   
  Przeciążone wersjach programu `abs` w języku C++ musi zawierać \<cmath > nagłówka.  
   
@@ -174,6 +177,6 @@ Microsoft implementation-specific results:
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [_cabs —](../../c-runtime-library/reference/cabs.md)   
+ [_cabs](../../c-runtime-library/reference/cabs.md)   
  [fabs —, fabsf —, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
  [imaxabs](../../c-runtime-library/reference/imaxabs.md)

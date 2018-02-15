@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CrtGetReportHook
 apilocation:
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b92ee2bc6f30df99db23cb1417f1e490d24fa5
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 07902a92fea767a4f57f44dbb9bb6692d12611c1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtgetreporthook"></a>_CrtGetReportHook
 Pobiera zdefiniowane przez klienta funkcji raportowania dla Przechwytywanie go do C wykonawczego do debugowania raportowania procesu (tylko wersja do debugowania).  
@@ -56,7 +56,7 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
  Zwraca bieżącą funkcję raportowania zdefiniowane przez klienta.  
   
 ## <a name="remarks"></a>Uwagi  
- `_CrtGetReportHook`umożliwia aplikacji można pobrać bieżącą funkcję raportowania dla biblioteki wykonawcze debugowania C raportowania procesu.  
+ `_CrtGetReportHook` umożliwia aplikacji można pobrać bieżącą funkcję raportowania dla biblioteki wykonawcze debugowania C raportowania procesu.  
   
  Aby uzyskać więcej informacji na temat korzystania innych obsługą punktu zaczepienia funkcji środowiska wykonawczego i pisanie własnych klienta zdefiniowane przez funkcje punktów zaczepienia, zobacz [debugowania pisanie funkcji punktów zaczepienia](/visualstudio/debugger/debug-hook-function-writing).  
   

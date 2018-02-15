@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _alloca
+ms.topic: reference
+apiname:
+- _alloca
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a48b0ab3e9717416736acf4187a27df2c737089b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 104c3df4e6f69d31c5090a87c8029351accd1e1e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alloca"></a>_alloca
 Przydziela pamięć na stosie. Ta funkcja jest przestarzały, ponieważ bezpieczniejsza wersja jest dostępna; zobacz [_malloca —](../../c-runtime-library/reference/malloca.md).  
@@ -52,7 +56,7 @@ void *_alloca(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`size`  
+ [in] `size`  
  Liczba bajtów do przydzielenia ze stosu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -61,7 +65,7 @@ void *_alloca(
  Wyjątek przepełnienia stosu jest generowany, gdy nie można przydzielić miejsce. Wyjątek przepełnienia stosu nie jest wyjątku C++; jest wyjątków strukturalnych. Zamiast używać C++, obsługa wyjątków, należy użyć [obsługi wyjątków strukturalnych](../../cpp/structured-exception-handling-c-cpp.md) (SEH).  
   
 ## <a name="remarks"></a>Uwagi  
- `_alloca`przydziela `size` bajtów ze stosu program. Ilość miejsca przydzielonego zwalnia się automatycznie, gdy funkcji wywołującej jest kończona (nie w przypadku Alokacja jedynie przekazuje poza zakresem). W związku z tym nie przekazuj zwrócony przez wartość wskaźnika `_alloca` jako argument [wolnego](../../c-runtime-library/reference/free.md).  
+ `_alloca` przydziela `size` bajtów ze stosu program. Ilość miejsca przydzielonego zwalnia się automatycznie, gdy funkcji wywołującej jest kończona (nie w przypadku Alokacja jedynie przekazuje poza zakresem). W związku z tym nie przekazuj zwrócony przez wartość wskaźnika `_alloca` jako argument [wolnego](../../c-runtime-library/reference/free.md).  
   
  Ma ograniczeń do wywoływania jawnie `_alloca` w obsłudze wyjątków (EH). Procedury EH, działające na procesorów klasy x86 działać w swojej ramce pamięci: wykonywanie zadań miejsca w pamięci nie jest oparty na bieżącej lokalizacji wskaźnik stosu funkcji otaczającej. Najczęściej występujące implementacje to obsługa (SEH) systemu Windows NT strukturę wyjątków i wyrażeń klauzuli catch C++. W związku z tym jawnie podczas wywoływania `_alloca` w żadnym następujące scenariusze powoduje błąd programu podczas powrotu do wywoływania procedury EH:  
   
@@ -82,7 +86,7 @@ void *_alloca(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_alloca`|\<malloc.h >|  
+|`_alloca`|\<malloc.h>|  
   
 ## <a name="example"></a>Przykład  
   
@@ -144,8 +148,8 @@ Allocated 1000 bytes of stack at 0x0012FB50
   
 ## <a name="see-also"></a>Zobacz też  
  [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)   
- [calloc —](../../c-runtime-library/reference/calloc.md)   
- [— funkcja malloc](../../c-runtime-library/reference/malloc.md)   
+ [calloc](../../c-runtime-library/reference/calloc.md)   
+ [malloc](../../c-runtime-library/reference/malloc.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
  [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)   
  [_malloca](../../c-runtime-library/reference/malloca.md)
