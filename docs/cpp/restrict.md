@@ -1,54 +1,132 @@
 ---
 title: Ogranicz | Dokumentacja firmy Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: restrict_cpp
-dev_langs: C++
+f1_keywords:
+- restrict_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - __declspec keyword [C++], restrict
 - restrict __declspec keyword
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 24fa0dae15fb0d4dfab8d481c6626c7611295572
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ec1a54e9c4f235de4aad796586cd7be3e7ee592e
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="restrict"></a>ograniczenie
-**Dotyczące firmy Microsoft**  
+
+**Microsoft Specific**
+
+Gdy jest stosowany do deklaracji lub definicji funkcji zwracającej typ wskaźnika `restrict` informuje kompilator, że funkcja zwraca obiekt, który nie jest *aliasem*, czyli odwołuje się innych wskaźników. Dzięki temu przeprowadzać dodatkowe optymalizacje kompilatora.
+
+## <a name="syntax"></a>Składnia
+
+> **__declspec(restrict)** *pointer_return_type* *function*();  
   
- Stosowane do deklaracji lub definicji funkcji zwracające typ wskaźnika i informuje kompilator, że funkcja zwraca obiekt, który nie będą używane z aliasem z innych wskaźników.  
+## <a name="remarks"></a>Uwagi
+
+Propaguje kompilator `__declspec(restrict)`. Na przykład CRT `malloc` funkcja ma `__declspec(restrict)` decoration, dlatego kompilator zakłada zainicjowanej do lokalizacji pamięci przez wskaźniki `malloc` również nie są używane z aliasem uprzednio istniejące wskaźniki.
+
+Kompilator nie sprawdza, czy zwrócony wskaźnik nie jest rzeczywiście aliasu. Odpowiada dewelopera upewnij się, program nie alias jest oznaczony atrybutem wskaźnik `restrict __declspec` modyfikator.  
   
-## <a name="syntax"></a>Składnia  
+Dla podobnych semantyki na zmiennych, zobacz [__restrict](../cpp/extension-restrict.md).
+ 
+Dla innej adnotacji dotyczy aliasów w funkcji, zobacz [__declspec(noalias)](../cpp/noalias.md).
   
-```  
-__declspec(restrict) return_type f();  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Kompilator rozpropaguje `__declspec(restrict)`. Na przykład CRT `malloc` zostanie nadany funkcja `__declspec(restrict)` i w związku z tym zainicjować wskaźników do lokalizacji pamięci `malloc` są również niejawnego nie mieć aliasy.  
-  
- Kompilator nie sprawdza, czy wskaźnik faktycznie nie jest używane z aliasem. Odpowiada dewelopera upewnij się, program nie alias jest oznaczony atrybutem wskaźnik `restrict __declspec` modyfikator.  
-  
- Dla podobnych semantyki na zmiennych, zobacz [__restrict](../cpp/extension-restrict.md).  
-  
+Aby uzyskać informacje o **ograniczyć** Zobacz — słowo kluczowe, który jest częścią C++ AMP [ograniczenie (C++ AMP)](../cpp/restrict-cpp-amp.md).  
+ 
 ## <a name="example"></a>Przykład  
- Zobacz [noalias](../cpp/noalias.md) na przykład za pomocą `restrict`.  
-  
- Aby uzyskać informacje o Ogranicz — słowo kluczowe, który jest częścią C++ AMP, zobacz [Ogranicz (C++ AMP)](../cpp/restrict-cpp-amp.md).  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [__declspec](../cpp/declspec.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+
+W poniższym przykładzie pokazano użycie `__declspec(restrict)`.
+
+Gdy `__declspec(restrict)` jest stosowane do funkcji czy zwraca wskaźnik, to informuje kompilator, że pamięć wskazywana przez wartości zwracanej nie jest aliasem. W tym przykładzie wskaźniki `mempool` i `memptr` są globalne, dlatego kompilator nie może być się upewnić, że odnoszą się do pamięci nie jest używane z aliasem. Jednak są używane w ramach `ma` i swojego obiektu wywołującego `init` w taki sposób, który zwraca pamięci, która nie jest w przeciwnym razie odwołuje się programu, więc `__decslpec(restrict)` służy do optymalizacji. To jest podobny do sposobu nagłówki CRT dekoracji alokacji funkcje takie jak `malloc` przy użyciu `__declspec(restrict)` wskazująca zawsze zwracają pamięci, która nie może mieć aliasu przez istniejące wskaźniki.
+
+```C
+// declspec_restrict.c
+// Compile with: cl /W4 declspec_restrict.c
+#include <stdio.h>
+#include <stdlib.h>
+
+#define M 800
+#define N 600
+#define P 700
+
+float * mempool, * memptr;
+
+__declspec(restrict) float * ma(int size)
+{
+    float * retval;
+    retval = memptr;
+    memptr += size;
+    return retval;
+}
+
+__declspec(restrict) float * init(int m, int n)
+{
+    float * a;
+    int i, j;
+    int k=1;
+
+    a = ma(m * n);
+    if (!a) exit(1);
+    for (i=0; i<m; i++)
+        for (j=0; j<n; j++)
+            a[i*n+j] = 0.1f/k++;
+    return a;
+}
+
+void multiply(float * a, float * b, float * c)
+{
+    int i, j, k;
+
+    for (j=0; j<P; j++)
+        for (i=0; i<M; i++)
+            for (k=0; k<N; k++)
+                c[i * P + j] =
+                          a[i * N + k] *
+                          b[k * P + j];
+}
+
+int main()
+{
+    float * a, * b, * c;
+
+    mempool = (float *) malloc(sizeof(float) * (M*N + N*P + M*P));
+
+    if (!mempool)
+    {
+        puts("ERROR: Malloc returned null");
+        exit(1);
+    }
+
+    memptr = mempool;
+    a = init(M, N);
+    b = init(N, P);
+    c = init(M, P);
+
+    multiply(a, b, c);
+}
+```
+
+**KOŃCOWY określonych firmy Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Słowa kluczowe](../cpp/keywords-cpp.md)  
+[__declspec](../cpp/declspec.md)  
+[__declspec(noalias)](../cpp/noalias.md)  

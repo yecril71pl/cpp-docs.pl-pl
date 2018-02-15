@@ -2,7 +2,7 @@
 # [Omówienie środowiska uruchomieniowego współbieżności](overview-of-the-concurrency-runtime.md)
 # [Obsługa wyjątków w środowisku uruchomieniowym współbieżności](exception-handling-in-the-concurrency-runtime.md)
 # [Równoległe narzędzia diagnostyczne (środowisko uruchomieniowe współbieżności)](parallel-diagnostic-tools-concurrency-runtime.md)
-# [Tworzenie operacji asynchronicznych w języku C++ dla aplikacji sklepu Windows Store](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
+# [Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
 # [Porównywanie środowiska uruchomieniowego współbieżności z innymi modelami współbieżności](comparing-the-concurrency-runtime-to-other-concurrency-models.md)
 ## [Migrowanie z OpenMP do środowiska uruchomieniowego współbieżności](migrating-from-openmp-to-the-concurrency-runtime.md)
 ### [Instrukcje: konwertowanie paraleli OpenMP dla pętli do korzystania ze środowiska uruchomieniowego współbieżności](how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)

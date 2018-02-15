@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Remote Automation [MFC], installation
 - installing Remote Automation [MFC]
 ms.assetid: 9a02c9f6-dfc6-4489-b240-a1afe25fa0c5
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: acd8ee55261dfa03c68aef506dc90188d8d27d37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remote-automation-installation"></a>Instalacja automatyzacji zdalnej
 Automatyzacja zdalna ma względnie mało składniki:  
@@ -36,7 +39,7 @@ Automatyzacja zdalna ma względnie mało składniki:
   
  Po skopiowaniu składniki automatyzacji zdalnej na komputerze, na wersję Visual C++ w wersji Enterprise nie jest zainstalowany, upewnij się, że REGSRV32. EXE znajduje się w ścieżce komputera i zarejestruj RACREG32. Biblioteki DLL przy użyciu następującego polecenia:  
   
- REGSRVR32 RACREG32. BIBLIOTEKI DLL  
+ REGSRVR32 RACREG32.DLL  
   
 > [!NOTE]
 >  Wersje Menedżera RAC przed Visual C++ 5.0 wymagane GUAGE32. OCX i TABCTL32. OCX. Oba te jest wymagany dla używanej wersji programu RAC Manager, która jest dostarczany z programu Visual C++ Enterprise Edition w wersji 5.0 lub nowszej.  

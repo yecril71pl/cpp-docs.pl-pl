@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ee78c1fb5c66974c946d0571db981d899f405fe3
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remote-automation-connection-manager"></a>Menedżer połączeń automatyzacji zdalnej
 Aby skonfigurować klienta i na serwerze, należy wprowadzić zmiany w rejestrze. Zamiast ręcznie w ten sposób, znacznie łatwiej jest narzędzie Menedżer połączeń automatyzacji zdalnej (RAC). To narzędzie RACMGR32. EXE, wraz z RACREG32. Biblioteki DLL, musi ma zostać skopiowany do dowolnego katalogu, którą wybierzesz. Umieszczenie go w ŚCIEŻCE, można wykonać z poziomu paska zadań za pomocą polecenia Uruchom. Alternatywnie można utworzyć skrótu do niego, albo umieść odwołanie do niej w Start menu.  

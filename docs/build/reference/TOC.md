@@ -182,7 +182,7 @@
 ### [/ALIGN (Wyrównanie sekcji)](align-section-alignment.md)
 ### [/ALLOWBIND (Zapobiegaj powiązaniu biblioteki DLL)](allowbind-prevent-dll-binding.md)
 ### [/ALLOWISOLATION (Przeszukiwanie manifestu)](allowisolation-manifest-lookup.md)
-### [/APPCONTAINER (Aplikacja do Sklepu Windows)](appcontainer-windows-store-app.md)
+### [/APPCONTAINER (Aplikacja do Sklepu Windows/platformy uniwersalnej systemu Windows)](appcontainer-windows-store-app.md)
 ### [/ASSEMBLYDEBUG (Dodaj DebuggableAttribute)](assemblydebug-add-debuggableattribute.md)
 ### [/ASSEMBLYLINKRESOURCE (Link do Zasobów .NET Framework)](assemblylinkresource-link-to-dotnet-framework-resource.md)
 ### [/ASSEMBLYMODULE (Dodaj moduł MSIL do zestawu)](assemblymodule-add-a-msil-module-to-the-assembly.md)

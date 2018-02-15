@@ -1,7 +1,7 @@
 # [Dokumentacja biblioteki środowiska uruchomieniowego języka C](c-run-time-library-reference.md)
 # [Biblioteka CRT, funkcje](crt-library-features.md)
 ## [Zgodność](compatibility.md)
-### [Aplikacje sklepu Windows Store, środowisko uruchomieniowe systemu Windows i środowisko wykonawcze języka C](windows-store-apps-the-windows-runtime-and-the-c-run-time.md)
+### [Aplikacje platformy uniwersalnej systemu Windows, środowisko uruchomieniowe systemu Windows i środowisko wykonawcze języka C](windows-store-apps-the-windows-runtime-and-the-c-run-time.md)
 ### [Zgodność ANSI-C](ansi-c-compliance.md)
 ### [UNIX](unix.md)
 ### [Platformy systemu Windows (CRT)](windows-platforms-crt.md)
