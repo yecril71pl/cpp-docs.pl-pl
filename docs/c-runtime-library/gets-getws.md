@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -23,7 +24,8 @@ f1_keywords:
 - _getts
 - gets
 - _getws
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - getws function
 - getts function
@@ -34,16 +36,17 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6193445dace47b62cf8793d69ad45e0f73a2f10d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 01f26f8b9dbe75d37927c4d4f3055f04378ef4a1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="gets-getws"></a>gets, _getws
 Pobiera wiersza ze `stdin` strumienia. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [gets_s —, _getws_s —](../c-runtime-library/reference/gets-s-getws-s.md).  
@@ -52,7 +55,7 @@ Pobiera wiersza ze `stdin` strumienia. Bezpieczniejsza wersje te funkcje są dos
 >  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, ich nie są dostępne w CRT. Bezpieczne wersje tych funkcji, gets_s — i _getws_s —, są nadal dostępne. Informacje na temat tych funkcji alternatywnych, zobacz [gets_s —, _getws_s —](../c-runtime-library/reference/gets-s-getws-s.md).  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -81,7 +84,7 @@ wchar_t *_getws(
  Jeśli to się powiedzie, zwraca jej argument. A `NULL` wskaźnik wskazuje błąd lub końca pliku. Użyj [ferror —](../c-runtime-library/reference/ferror.md) lub [feof —](../c-runtime-library/reference/feof.md) ustalenie, który wystąpił. Jeśli `buffer` jest `NULL`, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają `NULL` ustawiono errno `EINVAL`.  
   
 ## <a name="remarks"></a>Uwagi  
- `gets` Funkcja odczytuje wiersz z Standardowy strumień wejściowy `stdin` i przechowuje ją w `buffer`. Wiersz składa się z wszystkich znaków, w tym pierwszym znakiem nowego wiersza ("\n"). `gets`następnie zastępuje znaku nowego wiersza znak null ('\0') przed powrotem z wiersza. Z kolei `fgets` funkcja zachowuje znaku nowego wiersza. `_getws`jest to wersja znaków dwubajtowych `gets`; jego argumentów i wartości zwracanej są ciągami znaków dwubajtowych.  
+ `gets` Funkcja odczytuje wiersz z Standardowy strumień wejściowy `stdin` i przechowuje ją w `buffer`. Wiersz składa się z wszystkich znaków, w tym pierwszym znakiem nowego wiersza ("\n"). `gets` następnie zastępuje znaku nowego wiersza znak null ('\0') przed powrotem z wiersza. Z kolei `fgets` funkcja zachowuje znaku nowego wiersza. `_getws` jest to wersja znaków dwubajtowych `gets`; jego argumentów i wartości zwracanej są ciągami znaków dwubajtowych.  
   
 > [!IMPORTANT]
 >  Ponieważ nie istnieje żaden sposób, aby ograniczyć liczbę znaków do odczytu przez pobiera, niezaufanych danych wejściowych łatwo może powodować przepełnienia buforu. Zamiast nich należy używać słów kluczowych `fgets`.  
@@ -98,7 +101,7 @@ wchar_t *_getws(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`gets`|\<stdio.h >|  
+|`gets`|\<stdio.h>|  
 |`_getws`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _popen
 - _wpopen
@@ -30,7 +31,8 @@ f1_keywords:
 - _popen
 - _wpopen
 - _tpopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tpopen function
 - pipes, creating
@@ -40,22 +42,23 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0e5cf1fc935bbee75eb8acc31cfd7ae0e8d92c3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16e779a514cc68722eca79540929d41e34155174
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 Tworzy potoku i wykonuje polecenie.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -71,7 +74,7 @@ const wchar_t *mode
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *polecenie*  
+ polecenie  
  Polecenie do wykonania.  
   
  *Tryb*  
@@ -98,9 +101,9 @@ const wchar_t *mode
  Otwórz w trybie tekstowym.  
   
 > [!NOTE]
->  Jeśli używane w programie Windows `_popen` funkcja zwraca wskaźnik nieprawidłowy plik, który powoduje, że program przestanie odpowiadać nieskończoność. `_popen`działa prawidłowo w aplikacji konsoli. Do tworzenia aplikacji systemu Windows, który przekierowuje dane wejściowe i wyjściowe, zobacz [tworzenie procesu podrzędnego z Przekierowanie wejściowe i wyjściowe](http://msdn.microsoft.com/library/windows/desktop/ms682499) w zestawie Windows SDK.  
+>  Jeśli używane w programie Windows `_popen` funkcja zwraca wskaźnik nieprawidłowy plik, który powoduje, że program przestanie odpowiadać nieskończoność. `_popen` działa prawidłowo w aplikacji konsoli. Do tworzenia aplikacji systemu Windows, który przekierowuje dane wejściowe i wyjściowe, zobacz [tworzenie procesu podrzędnego z Przekierowanie wejściowe i wyjściowe](http://msdn.microsoft.com/library/windows/desktop/ms682499) w zestawie Windows SDK.  
   
- `_wpopen`jest to wersja znaków dwubajtowych `_popen`; *ścieżki* argument `_wpopen` jest ciągiem znaków dwubajtowych. `_wpopen`i `_popen` zachowują się tak samo w przeciwnym razie wartość.  
+ `_wpopen` jest to wersja znaków dwubajtowych `_popen`; *ścieżki* argument `_wpopen` jest ciągiem znaków dwubajtowych. `_wpopen` i `_popen` zachowują się tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -112,7 +115,7 @@ const wchar_t *mode
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_popen`|\<stdio.h >|  
+|`_popen`|\<stdio.h>|  
 |`_wpopen`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -182,5 +185,5 @@ Process returned 0
   
 ## <a name="see-also"></a>Zobacz też  
  [Proces i kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)   
- [_pclose —](../../c-runtime-library/reference/pclose.md)   
+ [_pclose](../../c-runtime-library/reference/pclose.md)   
  [_pipe](../../c-runtime-library/reference/pipe.md)

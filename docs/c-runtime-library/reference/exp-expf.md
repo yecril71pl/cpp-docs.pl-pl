@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - expf
 - expl
@@ -29,7 +30,8 @@ f1_keywords:
 - expf
 - expl
 - exp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - exponential calculations
 - expf function
@@ -37,18 +39,19 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0702b99990728bdb732654fdd1eacbefa373dda6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 95d84c81b8f6cc5ea99cd6153da73ea0e96167b8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="exp-expf-expl"></a>EXP, expf —, expl
+# <a name="exp-expf-expl"></a>exp, expf, expl
 Oblicza wykładniczej.  
   
 ## <a name="syntax"></a>Składnia  
@@ -80,10 +83,10 @@ long double expl(
   
 |Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|  
 |-----------|-------------------|-----------------------|  
-|Quiet NaN granicach, nieokreślone|Brak|_DOMAIN —|  
-|Infinity granicach|NIEPRAWIDŁOWY|_DOMAIN —|  
-|x ≥ 7.097827e + 002|NIEDOKŁADNY + PRZEPEŁNIENIA|PRZEPEŁNIENIE|  
-|X ≤-7.083964e + 002|NIEDOPEŁNIENIE NIEDOKŁADNYMI +|NIEDOPEŁNIENIE|  
+|Quiet NaN granicach, nieokreślone|Brak|_DOMAIN|  
+|Infinity granicach|NIEPRAWIDŁOWY|_DOMAIN|  
+|x ≥ 7.097827e+002|NIEDOKŁADNY + PRZEPEŁNIENIA|PRZEPEŁNIENIE|  
+|X ≤ -7.083964e+002|NIEDOPEŁNIENIE NIEDOKŁADNYMI +|NIEDOPEŁNIENIE|  
   
  `exp` Funkcja ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_sse2_enable —](../../c-runtime-library/reference/set-sse2-enable.md) informacje i ograniczenia dotyczące używania implementacji SSE2.  
   
@@ -94,7 +97,7 @@ long double expl(
   
 |Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|  
 |--------------|---------------------|---|  
-|`exp`, `expf`|\<Math.h >|\<cmath > lub \<math.h >|  
+|`exp`, `expf`|\<math.h>|\<cmath > lub \<math.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -121,5 +124,5 @@ exp( 2.302585 ) = 10.000000
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [logf —, log10, log10f — w Dzienniku](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
+ [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
  [_CIexp](../../c-runtime-library/ciexp.md)

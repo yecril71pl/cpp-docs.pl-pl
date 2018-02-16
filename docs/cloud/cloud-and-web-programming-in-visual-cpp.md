@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-azure
+ms.technology:
+- cpp-azure
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3aaf02f645ae61c75fb4ede3f5bc8e820039d1cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8c04939aea508afed60b32ae51d627a1f5d902fd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programowanie chmury i sieci Web w programie Visual C++
 W języku C++ masz kilka opcji łączenia się z sieci web i chmury.  
   
  [Windows Azure Mobile Services](http://www.windowsazure.com/develop/mobile/)  
- Udostępnia macierzystych interfejsów API, pomocne w aplikacji ze Sklepu Windows lub aplikacji klasycznych systemu Windows do nawiązania połączenia usług mobilnych Microsoft Azure. Chociaż większość przykładów w witrynie sieci Web w języku C#, można również użyć C++. Aby uzyskać więcej informacji, zobacz [Szybki Start: Dodawanie usługi mobilnej przy użyciu języka C++](http://msdn.microsoft.com/library/windows/apps/dn263181.aspx).  
+ Udostępnia macierzystych interfejsów API, pomocne w aplikacji uniwersalnych platformy systemu Windows (UWP) lub aplikacji klasycznych systemu Windows do nawiązania połączenia usług mobilnych Microsoft Azure. Chociaż większość przykładów w witrynie sieci Web w języku C#, można również użyć C++. Aby uzyskać więcej informacji, zobacz [Szybki Start: Dodawanie usługi mobilnej przy użyciu języka C++](http://msdn.microsoft.com/library/windows/apps/dn263181.aspx).  
 
  [Biblioteka klienta usługi Microsoft Azure Storage dla języka C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)  
  Biblioteka klienta magazynu Azure dla języka C++ zapewnia kompleksowe interfejsu API do pracy z usługą Azure storage, w tym między innymi następujące możliwości:
@@ -49,14 +52,14 @@ Udostępnia nowoczesnych, między platformami, asynchronicznego interfejsu API d
 Obsługuje pulpitu systemu Windows (7 +), Windows Server (2012 +), platformy uniwersalnej systemu Windows, Linux, OS x, Android i iOS. 
   
 [Windows::Web::http::HttpClient](https://msdn.microsoft.com/en-us/library/windows/apps/windows.web.http.httpclient.aspx)  
- Klasa klienta HTTP środowiska wykonawczego systemu Windows w modelu o tej samej nazwie w przestrzeni nazw System.Web klasy .NET Framework. `HttpClient`pełni asynchroniczne obsługuje przekazywanie i pobieranie za pośrednictwem protokołu HTTP i filtry potoku, umożliwiające dodanie niestandardowe programy obsługi HTTP z potokiem. Zestaw Windows SDK zawiera przykładowe filtry dla naliczane sieci, uwierzytelnianie OAuth i inne. Dla aplikacji, które są przeznaczone tylko platformy uniwersalnej systemu Windows, firma Microsoft zaleca się używanie `Windows::Web:HttpClient` klasy. 
+ Klasa klienta HTTP środowiska wykonawczego systemu Windows w modelu o tej samej nazwie w przestrzeni nazw System.Web klasy .NET Framework. `HttpClient` pełni asynchroniczne obsługuje przekazywanie i pobieranie za pośrednictwem protokołu HTTP i filtry potoku, umożliwiające dodanie niestandardowe programy obsługi HTTP z potokiem. Zestaw Windows SDK zawiera przykładowe filtry dla naliczane sieci, uwierzytelnianie OAuth i inne. Dla aplikacji, które są przeznaczone tylko platformy uniwersalnej systemu Windows, firma Microsoft zaleca się używanie `Windows::Web:HttpClient` klasy. 
   
 [IXMLHTTPRequest2 — interfejs](http://msdn.microsoft.com/library/windows/apps/hh831151.aspx)  
- Udostępnia natywnego interfejsu COM, że w aplikacji ze Sklepu Windows lub aplikacji klasycznych systemu Windows umożliwiają połączenie z Internetem za pośrednictwem protokołu HTTP i UZYSKAĆ problem, PUT i innych poleceń HTTP. Aby uzyskać więcej informacji, zobacz [wskazówki: łączenie za pomocą zadań i żądań XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).  
+ Udostępnia natywnego interfejsu COM w aplikacjach środowiska wykonawczego systemu Windows lub aplikacji klasycznych systemu Windows umożliwiają połączenie z Internetem za pośrednictwem protokołu HTTP, a UZYSKAĆ problem, PUT i innych poleceń HTTP. Aby uzyskać więcej informacji, zobacz [wskazówki: łączenie za pomocą zadań i żądań XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).  
   
 [Windows Internet (WinInet)](http://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)  
  Interfejs API systemu Windows, który można użyć w aplikacji klasycznych systemu Windows, aby nawiązać połączenie z Internetem.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Visual C++](../visual-cpp-in-visual-studio.md)   
- [Łączenie z sieciami i usług sieci web (aplikacje ze Sklepu Windows przy użyciu języka C# / VB/C++ i XAML)](http://msdn.microsoft.com/library/windows/apps/br229573.aspx)
+ [Sieci i usług sieci web](/windows/uwp/networking/)

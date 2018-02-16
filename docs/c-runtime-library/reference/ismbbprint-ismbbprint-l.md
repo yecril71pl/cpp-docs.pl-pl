@@ -1,12 +1,13 @@
 ---
-title: "_ismbbprint —, _ismbbprint_l — | Dokumentacja firmy Microsoft"
+title: _ismbbprint, _ismbbprint_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ismbbprint_l
 - _ismbbprint
@@ -28,23 +29,25 @@ f1_keywords:
 - _ismbbprint
 - ismbbprint
 - ismbbprint_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ismbbprint_l function
 - ismbbprint function
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2af7888be70a95aed35190b942e55a8a8247abba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2499e48ffd87171df50d46bd58327dc8c7cac47a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
 Określa, czy określony znaków wielobajtowych jest znak wydruku.  
@@ -69,20 +72,20 @@ int _ismbbprint_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_ismbbprint`Zwraca wartość niezerową, jeśli wyrażenie:  
+ `_ismbbprint` Zwraca wartość niezerową, jeśli wyrażenie:  
   
 ```  
 isprint || _ismbbkprint  
 ```  
   
- jest różna od zera dla `c`, lub wartość 0, jeśli nie jest. `_ismbbprint`używa bieżące ustawienia regionalne dla dowolnego zachowanie zależnych od ustawień regionalnych. `_ismbbprint_l`jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ jest różna od zera dla `c`, lub wartość 0, jeśli nie jest. `_ismbbprint` używa bieżące ustawienia regionalne dla dowolnego zachowanie zależnych od ustawień regionalnych. `_ismbbprint_l` jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_ismbbprint`|\<mbctype.h >|  
-|`_ismbbprint_l`|\<mbctype.h >|  
+|`_ismbbprint`|\<mbctype.h>|  
+|`_ismbbprint_l`|\<mbctype.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

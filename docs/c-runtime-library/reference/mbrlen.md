@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: mbrlen
+ms.topic: reference
+apiname:
+- mbrlen
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,20 +23,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: mbrlen
-dev_langs: C++
-helpviewer_keywords: mbrlen function
+f1_keywords:
+- mbrlen
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 58f94a79bb5304ed1ebfe9b7c2241b28497c8c4f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c5c110c1fc5917614514b4e4fd7e474569026207
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbrlen"></a>mbrlen
 Określ liczbę bajtów, które są wymagane do przeprowadzenia znaków wielobajtowych w bieżących ustawień regionalnych, z możliwością ponownego uruchomienia w środku znaków wielobajtowych.  
@@ -68,10 +74,10 @@ size_t mbrlen(
  od 1 do `count`włącznie  
  Następne `count` lub nieprawidłowy znaków wielobajtowych wykonania mniejszej liczby bajtów. Wartość zwracana jest liczba bajtów, które ukończyć znaków wielobajtowych.  
   
- (size_t) -(2)  
+ (size_t)(-2)  
  Następne `count` bajtów współtworzyć niekompletne, ale potencjalnie prawidłowy znaków wielobajtowych i wszystkie `count` bajty zostały przetworzone.  
   
- (size_t) (-1)  
+ (size_t)(-1)  
  Wystąpił błąd kodowania. Następne `count` lub mniej bajtów nie wspierają znaków wielobajtowych pełne i prawidłowe. W takim przypadku `errno` ma ustawioną wartość eilseq — i stan konwersji w `mbstate` jest nieokreślony.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -79,7 +85,7 @@ size_t mbrlen(
   
  `mbrlen` Funkcja zapisuje i używa stanu shift niekompletne znaków wielobajtowych w `mbstate` parametru. Dzięki temu `mbrlen` możliwość ponownego uruchomienia środku znaków wielobajtowych, jeśli muszą być co najwyżej badanie `count` bajtów. Jeśli `mbstate` wskaźnika o wartości null, jest `mbrlen` używa wewnętrznego, statycznej `mbstate_t` obiektu do przechowywania stanu shift. Ponieważ wewnętrznej `mbstate_t` obiekt nie jest bezpieczne wątkowo, zalecamy zawsze przydzielić i przekazać swoje własne `mbstate` parametru.  
   
- `mbrlen` Funkcja różni się od [_mbclen —, mblen —, _mblen_l —](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md) przez jego restartability. Stan shift jest przechowywany w `mbstate` dla kolejnych wywołań w tej samej lub innych funkcji ponownego uruchamiania. Wyniki są niezdefiniowane, gdy mieszanie korzystanie z funkcji ponownego uruchamiania i nonrestartable.  Na przykład, aplikacja, należy użyć `wcsrlen` zamiast `wcslen` Jeśli kolejne wywołanie `wcsrtombs` jest używany zamiast`wcstombs.`  
+ `mbrlen` Funkcja różni się od [_mbclen —, mblen —, _mblen_l —](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md) przez jego restartability. Stan shift jest przechowywany w `mbstate` dla kolejnych wywołań w tej samej lub innych funkcji ponownego uruchamiania. Wyniki są niezdefiniowane, gdy mieszanie korzystanie z funkcji ponownego uruchamiania i nonrestartable.  Na przykład, aplikacja, należy użyć `wcsrlen` zamiast `wcslen` Jeśli kolejne wywołanie `wcsrtombs` jest używany zamiast `wcstombs.`  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -91,7 +97,7 @@ size_t mbrlen(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`mbrlen`|\<WChar.h >|  
+|`mbrlen`|\<wchar.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - vsscanf
 - vswscanf
@@ -26,21 +27,23 @@ f1_keywords:
 - _vstscanf
 - vsscanf
 - vswscanf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6b0da3f3578e1ee2176ffca8358d5f5276732cf4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e44deb1faee27ea571151c45945b44dac647c2d3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 Odczyty sformatowane dane z ciągu. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
@@ -83,7 +86,7 @@ int vswscanf(
 > [!IMPORTANT]
 >  Jeśli używasz `vsscanf` odczytać ciągu, należy zawsze określić szerokości dla `%s` format (na przykład `"%32s"` zamiast `"%s"`); w przeciwnym razie niepoprawnie sformatowany danych wejściowych może spowodować przepełnienie buforu.  
   
- `vswscanf`jest to wersja znaków dwubajtowych `vsscanf`; argumenty `vswscanf` są ciągami znaków dwubajtowych. `vsscanf`nie obsługuje wielobajtowe znaków szesnastkowych. `vswscanf`nie obsługuje szesnastkowych pełnej szerokości Unicode lub znaków "strefy zgodności". W przeciwnym razie `vswscanf` i `vsscanf` zachowują się tak samo.  
+ `vswscanf` jest to wersja znaków dwubajtowych `vsscanf`; argumenty `vswscanf` są ciągami znaków dwubajtowych. `vsscanf` nie obsługuje wielobajtowe znaków szesnastkowych. `vswscanf` nie obsługuje szesnastkowych pełnej szerokości Unicode lub znaków "strefy zgodności". W przeciwnym razie `vswscanf` i `vsscanf` zachowują się tak samo.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -95,7 +98,7 @@ int vswscanf(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`vsscanf`|\<stdio.h >|  
+|`vsscanf`|\<stdio.h>|  
 |`vswscanf`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -155,5 +158,5 @@ Real:     = 15.000000
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [sscanf —, _sscanf_l —, swscanf — _swscanf_l —](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)

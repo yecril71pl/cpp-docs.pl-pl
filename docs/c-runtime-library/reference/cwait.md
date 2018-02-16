@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _cwait
+ms.topic: reference
+apiname:
+- _cwait
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,28 +23,31 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _cwait
-dev_langs: C++
+f1_keywords:
+- _cwait
+dev_langs:
+- C++
 helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 817b8ef39758a47fe28a3a2e2320ae7384a2bc86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 483b98f005a77ff41d2a319a9d07ccc88ad32721
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cwait"></a>_cwait
 Oczekuje, aż inny proces zakończy się.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -75,9 +80,9 @@ intptr_t _cwait(
  Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `_cwait` Funkcja czeka na zakończenie procesu identyfikator określony proces zapewnianej przez `procHandle`. Wartość `procHandle` przekazywany do `_cwait` powinna być wartością zwracaną przez wywołanie [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) funkcja, która utworzyła określony proces. Jeśli identyfikator procesu kończy się przed `_cwait` jest nazywany `_cwait` natychmiast kończy pracę. `_cwait`Umożliwia przez żaden proces, poczekaj, aż inny proces znany dla którego prawidłowego dojścia (`procHandle`) istnieje.  
+ `_cwait` Funkcja czeka na zakończenie procesu identyfikator określony proces zapewnianej przez `procHandle`. Wartość `procHandle` przekazywany do `_cwait` powinna być wartością zwracaną przez wywołanie [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) funkcja, która utworzyła określony proces. Jeśli identyfikator procesu kończy się przed `_cwait` jest nazywany `_cwait` natychmiast kończy pracę. `_cwait` Umożliwia przez żaden proces, poczekaj, aż inny proces znany dla którego prawidłowego dojścia (`procHandle`) istnieje.  
   
- `termstat`Wskazuje buforu, na którym będzie przechowywany kod powrotny określony proces. Wartość `termstat` wskazuje, czy określony proces został przerwany zwykle przez wywołanie systemu Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) interfejsu API. `ExitProcess`jest wywoływana wewnętrznie, gdy określony proces wywołuje `exit` lub `_exit`, zwraca z `main`, lub dociera do końca `main`. Aby uzyskać więcej informacji o wartość, która jest przekazywany z powrotem przy użyciu `termstat`, zobacz [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Jeśli `_cwait` jest wywoływana przy użyciu wartości NULL dla `termstat`, nie znajduje się kod powrotny określonego procesu.  
+ `termstat` Wskazuje buforu, na którym będzie przechowywany kod powrotny określony proces. Wartość `termstat` wskazuje, czy określony proces został przerwany zwykle przez wywołanie systemu Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) interfejsu API. `ExitProcess` jest wywoływana wewnętrznie, gdy określony proces wywołuje `exit` lub `_exit`, zwraca z `main`, lub dociera do końca `main`. Aby uzyskać więcej informacji o wartość, która jest przekazywany z powrotem przy użyciu `termstat`, zobacz [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Jeśli `_cwait` jest wywoływana przy użyciu wartości NULL dla `termstat`, nie znajduje się kod powrotny określonego procesu.  
   
  `action` Parametru jest ignorowana przez system operacyjny Windows, ponieważ relacji nadrzędny podrzędny nie są zaimplementowane w tych środowiskach.  
   
@@ -87,7 +92,7 @@ intptr_t _cwait(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_cwait`|\<process.h >|\<errno.h >|  
+|`_cwait`|\<process.h >|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

@@ -4,43 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: BLOB_NAME_LENGTH_STATUS
-dev_langs: C++
-helpviewer_keywords: BLOB_NAME_LENGTH_STATUS macro
+f1_keywords:
+- BLOB_NAME_LENGTH_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB_NAME_LENGTH_STATUS macro
 ms.assetid: 3cc3ec8d-80a5-4522-848a-123fcaee58cb
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b0f385d0727fa0f66c414aef7e9e612b21624c02
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7075eb198301f53f67808a5127403d207781d1a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="blobnamelengthstatus"></a>BLOB_NAME_LENGTH_STATUS
 Używane z `BEGIN_COLUMN_MAP` i `END_COLUMN_MAP` powiązać dużego obiektu binarnego ([obiektu BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), ale to makro zapewnia również długość i stan kolumny danych obiektów BLOB.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-BLOB_NAME_LENGTH_STATUS(  
-pszName  
-,   
-IID  
-,   
-flags  
-,   
-data  
-,   
-length  
+```cpp
+BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length  
 , status )  
 ```  
   
@@ -48,7 +42,7 @@ length
  `pszName`  
  [in] Wskaźnik do nazwy kolumny. Nazwa musi być ciągiem Unicode. Można to zrobić przez umieszczenie "L" przed nazwą, na przykład: `L"MyColumn"`.  
   
- *IDENTYFIKATOR IID*  
+ *IID*  
  [in] Interfejs identyfikatora GUID, takich jak **IDD_ISequentialStream**, używana do pobrania obiektu BLOB.  
   
  `flags`  
@@ -57,10 +51,10 @@ length
  `data`  
  [in] Odpowiedni element członkowski danych w rekordzie użytkownika.  
   
- *długość*  
+ *length*  
  [out] Długość (rzeczywiste) w bajtach kolumny obiektu BLOB.  
   
- *Stan*  
+ *status*  
  [out] Stan pola obiektu BLOB.  
   
 ## <a name="requirements"></a>Wymagania  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fwprintf
 - fprintf
@@ -28,7 +29,8 @@ f1_keywords:
 - fprintf
 - fwprintf
 - _ftprintf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fwprintf_l function
 - fprintf function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 13f358548b7155b281ffd77821b9a413e1e6fb43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ed0a1d2d2368e99b6e920e5236de989afb97981
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 Drukowanie sformatowanych danych do strumienia. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [fprintf_s —, _fprintf_s_l —, fwprintf_s —, _fwprintf_s_l —](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
@@ -97,14 +100,14 @@ int _fwprintf_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `fprintf`Zwraca liczbę zapisanych bajtów. `fwprintf`Zwraca liczbę znaki dwubajtowe są zapisywane. Każda z tych funkcji zwraca wartość ujemną zamiast tego po wystąpieniu błędu w danych wyjściowych. Jeśli `stream` lub `format` jest `NULL`, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw `errno` do `EINVAL`. Ciąg formatu nie jest zaznaczone występowanie prawidłowych znaków formatowania, ponieważ jest on przy użyciu `fprintf_s` lub `fwprintf_s`.  
+ `fprintf` Zwraca liczbę zapisanych bajtów. `fwprintf` Zwraca liczbę znaki dwubajtowe są zapisywane. Każda z tych funkcji zwraca wartość ujemną zamiast tego po wystąpieniu błędu w danych wyjściowych. Jeśli `stream` lub `format` jest `NULL`, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw `errno` do `EINVAL`. Ciąg formatu nie jest zaznaczone występowanie prawidłowych znaków formatowania, ponieważ jest on przy użyciu `fprintf_s` lub `fwprintf_s`.  
   
  Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.  
   
 ## <a name="remarks"></a>Uwagi  
- `fprintf`Formatuje i wyświetla serii znaków i wartościami danych wyjściowych `stream`. Każda funkcja `argument` (jeśli istnieje) jest konwertowana i dane wyjściowe według specyfikacji formatu w `format`. Aby uzyskać `fprintf`, `format` argument ma tej samej składni i użycia, które ma w `printf`.  
+ `fprintf` Formatuje i wyświetla serii znaków i wartościami danych wyjściowych `stream`. Każda funkcja `argument` (jeśli istnieje) jest konwertowana i dane wyjściowe według specyfikacji formatu w `format`. Aby uzyskać `fprintf`, `format` argument ma tej samej składni i użycia, które ma w `printf`.  
   
- `fwprintf`jest to wersja znaków dwubajtowych `fprintf`; na liście `fwprintf`, `format` jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `fprintf`aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
+ `fwprintf` jest to wersja znaków dwubajtowych `fprintf`; na liście `fwprintf`, `format` jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `fprintf` aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
   
  Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.  
   
@@ -124,7 +127,7 @@ int _fwprintf_l(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`fprintf`, `_fprintf_l`|\<stdio.h >|  
+|`fprintf`, `_fprintf_l`|\<stdio.h>|  
 |`fwprintf`, `_fwprintf_l`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -168,7 +171,7 @@ this is a string
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [_cprintf —, _cprintf_l —, _cwprintf — _cwprintf_l —](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf —, _fscanf_l —, fwscanf — _fwscanf_l —](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [Składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)

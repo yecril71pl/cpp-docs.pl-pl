@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _commit
+ms.topic: reference
+apiname:
+- _commit
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - _commit
 - commit
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - files [C++], flushing
 - flushing files to disk
@@ -32,16 +35,17 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9e4a195566479f9e7e9f5b68a46069701462bb2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ed5a3f1e8d1f4a122ecf5a66393fa5c1f5c65f1b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="commit"></a>_commit
 Liczba opróżnień pliku bezpośrednio na dysku.  
@@ -59,7 +63,7 @@ int _commit(
  Plik deskryptora odwołujących się do otwartego pliku.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_commit`Zwraca wartość 0, jeśli plik został pomyślnie wyczyszczone na dysku. Zwracana wartość -1 wskazuje błąd.  
+ `_commit` Zwraca wartość 0, jeśli plik został pomyślnie wyczyszczone na dysku. Zwracana wartość -1 wskazuje błąd.  
   
 ## <a name="remarks"></a>Uwagi  
  `_commit` Funkcja wymusza systemu operacyjnego można zapisać pliku skojarzone z `fd` na dysku. To wywołanie gwarantuje, że określony plik jest opróżniany natychmiast, nie uznania systemu operacyjnego.  
@@ -70,13 +74,13 @@ int _commit(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|----------------------|  
-|`_commit`|\<IO.h >|\<errno.h >|  
+|`_commit`|\<io.h>|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)   
- [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_przeczytaj](../../c-runtime-library/reference/read.md)   
  [_write](../../c-runtime-library/reference/write.md)

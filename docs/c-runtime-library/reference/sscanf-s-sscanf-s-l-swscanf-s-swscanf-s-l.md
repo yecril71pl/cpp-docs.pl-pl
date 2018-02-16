@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sscanf_s_l
 - sscanf_s
@@ -31,7 +32,8 @@ f1_keywords:
 - _swscanf_s_l
 - _stscanf_s_l
 - _sscanf_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stscanf_s_l function
 - stscanf_s function
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa4dffb59cd086b4c1693a9c7c4cd0eb24a17bb0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 151950de2326f4e517016d0337a1abfe2cc0cc06
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 Odczyty sformatowane dane z ciągu. Te wersje programu [sscanf —, _sscanf_l —, swscanf —, _swscanf_l —](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -104,7 +107,7 @@ int _swscanf_s_l(
 ## <a name="return-value"></a>Wartość zwracana  
  Każda z tych funkcji zwraca liczbę pól, które pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane. Wartość zwracana jest `EOF` błędu lub po osiągnięciu końca ciągu przed pierwszym konwersji.  
   
- Jeśli `buffer` lub `format` jest `NULL` wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw `errno` do`EINVAL`  
+ Jeśli `buffer` lub `format` jest `NULL` wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw `errno` do `EINVAL`  
   
  Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -136,7 +139,7 @@ int _swscanf_s_l(
   
  `format` Formanty argument interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako `format` argument `scanf_s` funkcji. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.  
   
- `swscanf_s`jest to wersja znaków dwubajtowych `sscanf_s;` argumenty `swscanf_s` są ciągami znaków dwubajtowych. `sscanf_s`nie obsługuje wielobajtowe znaków szesnastkowych. `swscanf_s`nie obsługuje szesnastkowych pełnej szerokości Unicode lub znaków "strefy zgodności". W przeciwnym razie `swscanf_s` i `sscanf_s` zachowują się tak samo.  
+ `swscanf_s` jest to wersja znaków dwubajtowych `sscanf_s;` argumenty `swscanf_s` są ciągami znaków dwubajtowych. `sscanf_s` nie obsługuje wielobajtowe znaków szesnastkowych. `swscanf_s` nie obsługuje szesnastkowych pełnej szerokości Unicode lub znaków "strefy zgodności". W przeciwnym razie `swscanf_s` i `sscanf_s` zachowują się tak samo.  
   
  Wersje tych funkcji, które mają `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych, który jest przekazywany w zamiast bieżącego ustawienia regionalne wątku.  
   
@@ -151,7 +154,7 @@ int _swscanf_s_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`sscanf_s`, `_sscanf_s_l`|\<stdio.h >|  
+|`sscanf_s`, `_sscanf_s_l`|\<stdio.h>|  
 |`swscanf_s`, `_swscanf_s_l`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -198,7 +201,7 @@ Real:     = 15.000000
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [fscanf —, _fscanf_l —, fwscanf — _fwscanf_l —](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)

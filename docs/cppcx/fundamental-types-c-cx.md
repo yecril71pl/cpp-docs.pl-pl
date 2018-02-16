@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a41a5a97e94bdf9476d8345a7f9e103b81466f6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 885b996e94c1c3a3d55e48e0f37c5690ba084cf6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fundamental-types-ccx"></a>Podstawowe typy (C + +/ CX)
 Oprócz standardowych C++ wbudowanych typów, C + +/ CX obsługuje system typu, który jest definiowana za pomocą architektury środowiska wykonawczego systemu Windows, zapewniając definicje typów dla podstawowych środowiska wykonawczego systemu Windows typy, które odpowiadają typom standard C++. C + +/ CX implementuje wartość logiczna, znaków i typy podstawowe liczbowe. Te definicje typów zdefiniowanych w `default` przestrzeni nazw, które nigdy nie musi być jawnie określona. Ponadto C + +/ CX udostępnia konkretnych implementacji i otoki dla niektórych typów środowiska wykonawczego systemu Windows i interfejsów.  
@@ -27,7 +28,7 @@ Oprócz standardowych C++ wbudowanych typów, C + +/ CX obsługuje system typu, 
   
 |Przestrzeń nazw|C + +/ CX nazwy|Definicja|Standardowa nazwa C++|Wartości zakresu|  
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
-|Platforma|Boolean|8-bitową wartość logiczna.|bool|`true`(niezerowej) i `false` (zero).|  
+|Platforma|Boolean|8-bitową wartość logiczna.|bool|`true` (niezerowej) i `false` (zero).|  
 |default|char16|Wartość nieliczbowy 16-bitowego, która reprezentuje punkt kodu Unicode (UTF-16).|wchar_t<br /><br /> —lub—<br /><br /> L'c "|(Określony w standardzie Unicode)|  
   
 ## <a name="numeric-types"></a>Typy liczbowe  
@@ -37,12 +38,12 @@ Oprócz standardowych C++ wbudowanych typów, C + +/ CX obsługuje system typu, 
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |int8|8-bitową podpisem wartość liczbowa.|char podpisem|-128 do 127|  
 |uint8|8-bitowych unsigned wartość liczbowa.|unsigned char|0 do 255|  
-|Int16|16-bitową liczbę całkowitą ze znakiem.|short|-32 768 do 32 767|  
+|int16|16-bitową liczbę całkowitą ze znakiem.|short|-32 768 do 32 767|  
 |UInt16|16-bitową liczbę całkowitą bez znaku.|unsigned short|od 0 do 65 535|  
-|Int32|Całkowita 32-bitowych.|int|-2,147,483,648 do 2 147 483 647|  
-|UInt32|32-bitowa liczba całkowita bez znaku.|unsigned int|od 0 do 4 294 967 295|  
-|Int64|Całkowita 64-bitowych.|długie long - lub - __int64|-9,223,372,036,854, 775,808 za pośrednictwem 9,223,372,036,854,775,807|  
-|UInt64 —|64-bitowa liczba całkowita bez znaku.|niepodpisane __int64 długo długo - lub - bez znaku|od 0 do 18,446,744,073,709,551,615|  
+|int32|Całkowita 32-bitowych.|int|-2,147,483,648 do 2 147 483 647|  
+|uint32|32-bitowa liczba całkowita bez znaku.|unsigned int|od 0 do 4 294 967 295|  
+|int64|Całkowita 64-bitowych.|długie long - lub - __int64|-9,223,372,036,854, 775,808 za pośrednictwem 9,223,372,036,854,775,807|  
+|uint64|64-bitowa liczba całkowita bez znaku.|niepodpisane __int64 długo długo - lub - bez znaku|od 0 do 18,446,744,073,709,551,615|  
 |Float32|Liczba zmiennoprzecinkowa IEEE-754 32-bitowa.|float|3.4e +/-38 (7 cyfr)|  
 |Float64|Liczby zmiennoprzecinkowej IEEE-754 64-bitowe.|double|1.7e +/-308 (15 cyfr)|  
   

@@ -6,21 +6,22 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18963860b1f9398343370378140ebee7314690b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="casting-ccx"></a>Rzutowanie (C + +/ CX)
-Cztery operatory rzutowania różnych dotyczą typów środowiska wykonawczego systemu Windows: [static_cast Operator](../cpp/static-cast-operator.md), [dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **operatora safe_cast**, i [ reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md). `safe_cast`i `static_cast` zgłosić wyjątek, gdy nie można wykonać konwersji; [static_cast Operator](../cpp/static-cast-operator.md) oraz wykonuje sprawdzanie typów w czasie kompilacji. `dynamic_cast`Zwraca `nullptr` Jeżeli nie Konwertuj typu. Mimo że `reinterpret_cast` zwraca wartość inną niż null, może być nieprawidłowy. Z tego powodu zaleca się, że nie używasz `reinterpret_cast` chyba że rzutowanie powiedzie się. Ponadto zaleca się nie używać rzutowania w stylu języka C w języku C + +/ CX kodu, ponieważ są one takie same jak `reinterpret_cast`.  
+Cztery operatory rzutowania różnych dotyczą typów środowiska wykonawczego systemu Windows: [static_cast Operator](../cpp/static-cast-operator.md), [dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **operatora safe_cast**, i [ reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md). `safe_cast` i `static_cast` zgłosić wyjątek, gdy nie można wykonać konwersji; [static_cast Operator](../cpp/static-cast-operator.md) oraz wykonuje sprawdzanie typów w czasie kompilacji. `dynamic_cast` Zwraca `nullptr` Jeżeli nie Konwertuj typu. Mimo że `reinterpret_cast` zwraca wartość inną niż null, może być nieprawidłowy. Z tego powodu zaleca się, że nie używasz `reinterpret_cast` chyba że rzutowanie powiedzie się. Ponadto zaleca się nie używać rzutowania w stylu języka C w języku C + +/ CX kodu, ponieważ są one takie same jak `reinterpret_cast`.  
   
  Kompilator i środowiska uruchomieniowego również wykonywać niejawnego rzutowania — na przykład w konwersja boxing operacji, gdy typ wartości lub typ wbudowany są przekazywane jako argumenty do metody którego parametr typu jest `Object^`. Teoretycznie niejawne rzutowanie nigdy nie powinno powodować Wystąpił wyjątek w czasie wykonywania. Jeśli kompilator nie można wykonać niejawnej konwersji, zgłasza błąd w czasie kompilacji.  
   
@@ -61,7 +62,7 @@ Cztery operatory rzutowania różnych dotyczą typów środowiska wykonawczego s
 ```  
   
 ## <a name="dynamiccast"></a>dynamic_cast  
- Użyj `dynamic_cast` przypadku rzutowania obiektu (w szczególności hat `^`) do typu bardziej pochodnego przypuszczasz, że element docelowy obiekt czasami może być `nullptr` lub Rzutowanie może zakończyć się niepowodzeniem, którą chcesz obsługiwać tego warunku jako regularne kodu Ścieżka zamiast Wystąpił wyjątek. Na przykład w **puste aplikacji ze Sklepu Windows** szablonu projektu `OnLaunched` metody w `app.xamp.cpp` używa `dynamic_cast` Aby sprawdzić, czy okno aplikacji ma zawartość. Nie jest błąd, jeśli nie ma zawartości; jest oczekiwany warunek. `Windows::Current::Content`jest `Windows::UI::XAML::UIElement` i konwersji `Windows::UI.XAML::Controls::Frame`, który jest bardziej pochodny typ w hierarchii dziedziczenia.  
+ Użyj `dynamic_cast` przypadku rzutowania obiektu (w szczególności hat `^`) do typu bardziej pochodnego przypuszczasz, że element docelowy obiekt czasami może być `nullptr` lub Rzutowanie może zakończyć się niepowodzeniem, którą chcesz obsługiwać tego warunku jako regularne kodu Ścieżka zamiast Wystąpił wyjątek. Na przykład w **pusta aplikacja (uniwersalna systemu Windows)** szablonu projektu `OnLaunched` metody w `app.xamp.cpp` używa `dynamic_cast` Aby sprawdzić, czy okno aplikacji ma zawartość. Nie jest błąd, jeśli nie ma zawartości; jest oczekiwany warunek. `Windows::Current::Content` jest `Windows::UI::XAML::UIElement` i konwersji `Windows::UI.XAML::Controls::Frame`, który jest bardziej pochodny typ w hierarchii dziedziczenia.  
 ```
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)  
 {  
@@ -111,14 +112,14 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
   
 |||  
 |-|-|  
-|HSTRING|String ^|  
-|HSTRING *|String ^ *|  
+|HSTRING|String^|  
+|HSTRING *|String^*|  
 |IInspectable *|Obiekt ^|  
-|IInspectable **|Obiekt ^ *|  
-|IInspectable-pochodnych — typ *|tym samym — interfejs od winmd ^|  
-|IInspectable-pochodnych — typ **|tym samym — interfejs od winmd ^ *|  
-|IDefault-interfejs-elementu-runtimeclass — *|tym samym RefClass od winmd ^|  
-|IDefault-interfejs-elementu-runtimeclass — **|tym samym RefClass od winmd ^ *|  
+|IInspectable**|Obiekt ^ *|  
+|IInspectable-pochodnych — typ *|same-interface-from-winmd^|  
+|IInspectable-derived-type**|same-interface-from-winmd^*|  
+|IDefault-interface-of-RuntimeClass*|same-RefClass-from-winmd^|  
+|IDefault-interface-of-RuntimeClass**|same-RefClass-from-winmd^*|  
   
 ## <a name="see-also"></a>Zobacz też  
  [System typów](../cppcx/type-system-c-cx.md)   

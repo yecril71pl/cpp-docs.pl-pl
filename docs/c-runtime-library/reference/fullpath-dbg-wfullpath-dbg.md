@@ -1,12 +1,13 @@
 ---
-title: "_fullpath_dbg —, _wfullpath_dbg — | Dokumentacja firmy Microsoft"
+title: _fullpath_dbg, _wfullpath_dbg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wfullpath_dbg
 - _fullpath_dbg
@@ -27,7 +28,8 @@ f1_keywords:
 - _wfullpath_dbg
 - _fullpath_dbg
 - fullpath_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fullpath_dbg function
 - relative file paths
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6ca0d3229f539c05817fd9dddc4e8cd30ec5abdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 96ba8f7d9784bd4f6361159feaef3d855ebee1e3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 Wersje [_fullpath —, _wfullpath —](../../c-runtime-library/reference/fullpath-wfullpath.md) korzystające z wersji do debugowania `malloc` można przydzielić pamięci.  
@@ -108,12 +111,12 @@ wchar_t *_wfullpath_dbg(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`_fullpath_dbg`|\<crtdbg.h >|  
-|`_wfullpath_dbg`|\<crtdbg.h >|  
+|`_fullpath_dbg`|\<crtdbg.h>|  
+|`_wfullpath_dbg`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_fullpath —, _wfullpath —](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
  [Wersja debugowania funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)

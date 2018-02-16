@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _access
 - _waccess
@@ -29,7 +30,8 @@ f1_keywords:
 - taccess
 - waccess
 - _taccess
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - access function
 - _taccess function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c4d8c6d8caae8b36f372ce75b4fc91638f9e78e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1eb9cae711044ccc98bf297ad41f40d5c6d0e068
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="access-waccess"></a>_access, _waccess
 Określa, czy plik jest tylko do odczytu lub nie. Bezpieczniejsza wersje są dostępne; zobacz [_access_s —, _waccess_s —](../../c-runtime-library/reference/access-s-waccess-s.md).  
@@ -89,7 +92,7 @@ int _waccess(
 ## <a name="remarks"></a>Uwagi  
  W przypadku użycia z plików, `_access` funkcji określa, czy określony plik lub katalog istnieje i ma atrybuty określone przez wartość `mode`. W przypadku użycia z katalogów, `_access` tylko określa, czy istnieje określony katalog; w [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] i później w systemie operacyjnym, wszystkie katalogi ma uprawnienia odczytu i zapisu.  
   
-|`mode`wartość|Sprawdzanie pliku|  
+|`mode` Wartość|Sprawdzanie pliku|  
 |------------------|---------------------|  
 |00|Istnienie tylko|  
 |02|Tylko do zapisu|  
@@ -98,7 +101,7 @@ int _waccess(
   
  Ta funkcja tylko sprawdza, czy plików i katalogów są tylko do odczytu lub nie, nie sprawdza ustawienia zabezpieczeń systemu plików. W tym należy tokenu dostępu. Aby uzyskać więcej informacji dotyczących zabezpieczeń systemu plików, zobacz [tokenów dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374909). Klasy ATL istnieje w celu zapewnienia tej funkcji; zobacz [CAccessToken klasy](../../atl/reference/caccesstoken-class.md).  
   
- `_waccess`jest to wersja znaków dwubajtowych `_access`; `path` argument `_waccess` jest ciągiem znaków dwubajtowych. `_waccess`i `_access` zachowują się tak samo w przeciwnym razie wartość.  
+ `_waccess` jest to wersja znaków dwubajtowych `_access`; `path` argument `_waccess` jest ciągiem znaków dwubajtowych. `_waccess` i `_access` zachowują się tak samo w przeciwnym razie wartość.  
   
  Ta funkcja weryfikuje jego parametrów. Jeśli `path` jest `NULL` lub `mode` nie określa prawidłowego trybu, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, funkcja ustawia `errno` do `EINVAL` i zwraca wartość -1.  
   
@@ -112,8 +115,8 @@ int _waccess(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|----------------------|  
-|`_access`|\<IO.h >|\<errno.h >|  
-|`_waccess`|\<WChar.h > lub \<io.h >|\<errno.h >|  
+|`_access`|\<io.h>|\<errno.h>|  
+|`_waccess`|\<WChar.h > lub \<io.h >|\<errno.h>|  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `_access` sprawdzić plik o nazwie crt_ACCESS. C, aby sprawdzić, czy istnieje i czy jest dozwolone zapisu.  
@@ -150,7 +153,7 @@ File crt_ACCESS.C does not have write permission.
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_chmod —, _wchmod —](../../c-runtime-library/reference/chmod-wchmod.md)   
- [_fstat —, _fstat32 —, _fstat64 —, _fstati64 — _fstat32i64 —, _fstat64i32 —](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_stat, _wstat — funkcje](../../c-runtime-library/reference/stat-functions.md)

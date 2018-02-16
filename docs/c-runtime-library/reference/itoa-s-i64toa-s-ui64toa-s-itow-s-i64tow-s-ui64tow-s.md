@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ui64tow_s
 - _itoa_s
@@ -45,7 +46,8 @@ f1_keywords:
 - _ui64tot_s
 - i64tow_s
 - itot_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ui64toa_s function
 - _itow_s function
@@ -65,16 +67,17 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1499f3feb76219ac03362fef70e4c3b516a8f060
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2d349627bfe5f6c5049de128937215301411b86e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
 Konwertuje liczbę całkowitą na ciąg. Są to wersje [_itoa —, _i64toa —, _ui64toa —, _itow —, _i64tow —, _ui64tow —](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -133,16 +136,16 @@ errno_t _itow_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`value`  
+ [in] `value`  
  Numer do skonwertowania.  
   
- [out]`buffer`  
+ [out] `buffer`  
  Wypełniony wynik konwersji.  
   
- [in]`sizeInCharacters`  
+ [in] `sizeInCharacters`  
  Rozmiar buforu w znaki jednobajtowe lub znaki dwubajtowe.  
   
- [in]`radix`  
+ [in] `radix`  
  Podstawa `value`; którego musi należeć do zakresu 2 36.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -150,12 +153,12 @@ errno_t _itow_s(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|value|Bufor|sizeInCharacters|Podstawa|Zwraca|  
+|value|Bufor|sizeInCharacters|radix|Zwraca|  
 |-----------|------------|----------------------|-----------|------------|  
 |wszystkie|`NULL`|wszystkie|wszystkie|`EINVAL`|  
 |wszystkie|wszystkie|<=0|wszystkie|`EINVAL`|  
 |wszystkie|wszystkie|< = długość ciągu wynik wymagane|wszystkie|`EINVAL`|  
-|wszystkie|wszystkie|wszystkie|`radix`< 2 lub `radix` > 36|`EINVAL`|  
+|wszystkie|wszystkie|wszystkie|`radix` < 2 lub `radix` > 36|`EINVAL`|  
   
  **Problemy dotyczące zabezpieczeń**  
   
@@ -180,9 +183,9 @@ errno_t _itow_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_itoa_s`|\<stdlib.h >|  
-|`_i64toa_s`|\<stdlib.h >|  
-|`_ui64toa_s`|\<stdlib.h >|  
+|`_itoa_s`|\<stdlib.h>|  
+|`_i64toa_s`|\<stdlib.h>|  
+|`_ui64toa_s`|\<stdlib.h>|  
 |`_itow_s`|\<stdlib.h > lub \<wchar.h >|  
 |`_i64tow_s`|\<stdlib.h > lub \<wchar.h >|  
 |`_ui64tow_s`|\<stdlib.h > lub \<wchar.h >|  

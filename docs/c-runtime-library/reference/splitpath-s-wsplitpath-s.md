@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wsplitpath_s
 - _splitpath_s
@@ -28,7 +29,8 @@ f1_keywords:
 - splitpath_s
 - _splitpath_s
 - wsplitpath_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - splitpath_s function
 - pathnames
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6cfb2d72b728b64aeb00c3b8437f9c47e02fb813
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9baa71ca1a3d624c08df8ff1cbd14a9386e1b83d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 Dzieli nazwa ścieżki na składniki. Są to wersje [_splitpath —, _wsplitpath —](../../c-runtime-library/reference/splitpath-wsplitpath.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -95,31 +98,31 @@ errno_t _wsplitpath_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`path`  
+ [in] `path`  
  Pełna ścieżka.  
   
- [out]`drive`  
+ [out] `drive`  
  Dysk litery z dwukropkiem (`:`). Można przekazać `NULL` dla tego parametru, jeśli nie ma potrzeby literę dysku.  
   
- [in]`driveNumberOfElements`  
+ [in] `driveNumberOfElements`  
  Rozmiar `drive` buforu w znaki jednobajtowe lub szerokości. Jeśli `drive` jest `NULL`, ta wartość musi wynosić 0.  
   
- [out]`dir`  
+ [out] `dir`  
  Ścieżka katalogu, w tym ukośnika. Przekazuj ukośniki ( `/` ), ukośników odwrotnych ( `\` ), lub mogą być używane. Można przekazać `NULL` dla tego parametru, jeśli nie ma potrzeby ścieżki katalogu.  
   
- [in]`dirNumberOfElements`  
+ [in] `dirNumberOfElements`  
  Rozmiar `dir` buforu w znaki jednobajtowe lub szerokości. Jeśli `dir` jest `NULL`, ta wartość musi wynosić 0.  
   
- [out]`fname`  
+ [out] `fname`  
  Nazwa podstawowego pliku (bez rozszerzenia). Można przekazać `NULL` dla tego parametru, jeśli nazwa pliku nie ma potrzeby.  
   
- [in]`nameNumberOfElements`  
+ [in] `nameNumberOfElements`  
  Rozmiar `fname` buforu w znaki jednobajtowe lub szerokości. Jeśli `fname` jest `NULL`, ta wartość musi wynosić 0.  
   
- [out]`ext`  
+ [out] `ext`  
  Rozszerzenie nazwy pliku, w tym wiodące okres (**.**). Można przekazać `NULL` dla tego parametru, jeśli nie ma potrzeby rozszerzenie nazwy pliku.  
   
- [in]`extNumberOfElements`  
+ [in] `extNumberOfElements`  
  Rozmiar `ext` buforu w znaki jednobajtowe lub szerokości. Jeśli `ext` jest `NULL`, ta wartość musi wynosić 0.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -129,22 +132,22 @@ errno_t _wsplitpath_s(
   
 |Warunek|Wartość zwracana|  
 |---------------|------------------|  
-|`path`jest`NULL`|`EINVAL`|  
-|`drive`jest `NULL`, `driveNumberOfElements` jest różna od zera|`EINVAL`|  
-|`drive`ma wartość inną niż`NULL`, `driveNumberOfElements` wynosi zero|`EINVAL`|  
-|`dir`jest `NULL`, `dirNumberOfElements` jest różna od zera|`EINVAL`|  
-|`dir`ma wartość inną niż`NULL`, `dirNumberOfElements` wynosi zero|`EINVAL`|  
-|`fname`jest `NULL`, `nameNumberOfElements` jest różna od zera|`EINVAL`|  
-|`fname`ma wartość inną niż`NULL`, `nameNumberOfElements` wynosi zero|`EINVAL`|  
-|`ext`jest `NULL`, `extNumberOfElements` jest różna od zera|`EINVAL`|  
-|`ext`ma wartość inną niż`NULL`, `extNumberOfElements` wynosi zero|`EINVAL`|  
+|`path` jest `NULL`|`EINVAL`|  
+|`drive` jest `NULL`, `driveNumberOfElements` jest różna od zera|`EINVAL`|  
+|`drive` ma wartość inną niż`NULL`, `driveNumberOfElements` wynosi zero|`EINVAL`|  
+|`dir` jest `NULL`, `dirNumberOfElements` jest różna od zera|`EINVAL`|  
+|`dir` ma wartość inną niż`NULL`, `dirNumberOfElements` wynosi zero|`EINVAL`|  
+|`fname` jest `NULL`, `nameNumberOfElements` jest różna od zera|`EINVAL`|  
+|`fname` ma wartość inną niż`NULL`, `nameNumberOfElements` wynosi zero|`EINVAL`|  
+|`ext` jest `NULL`, `extNumberOfElements` jest różna od zera|`EINVAL`|  
+|`ext` ma wartość inną niż`NULL`, `extNumberOfElements` wynosi zero|`EINVAL`|  
   
  Jeśli występuje którykolwiek z powyższych warunków, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwracać `EINVAL`.  
   
  Jeśli dowolny z bufor jest zbyt krótki, aby pomieścić wynik, te funkcje, wyczyść wszystkie bufory puste ciągi, ustaw `errno` do `ERANGE`i zwróć `ERANGE`.  
   
 ## <a name="remarks"></a>Uwagi  
- `_splitpath_s` Funkcja dzieli ścieżki do jego czterech składników. `_splitpath_s`automatycznie obsługuje argumentów ciągów znaków wielobajtowych zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie ze strony kodowe wielobajtowe obecnie w użyciu. `_wsplitpath_s`jest to wersja znaków dwubajtowych `_splitpath_s`; argumenty `_wsplitpath_s` są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie  
+ `_splitpath_s` Funkcja dzieli ścieżki do jego czterech składników. `_splitpath_s` automatycznie obsługuje argumentów ciągów znaków wielobajtowych zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie ze strony kodowe wielobajtowe obecnie w użyciu. `_wsplitpath_s` jest to wersja znaków dwubajtowych `_splitpath_s`; argumenty `_wsplitpath_s` są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -158,10 +161,10 @@ errno_t _wsplitpath_s(
   
 |Nazwa|Wartość|  
 |----------|-----------|  
-|_MAX_DRIVE —|3|  
-|_MAX_DIR —|256|  
-|_MAX_FNAME —|256|  
-|_MAX_EXT —|256|  
+|_MAX_DRIVE|3|  
+|_MAX_DIR|256|  
+|_MAX_FNAME|256|  
+|_MAX_EXT|256|  
   
  Jeśli pełna ścieżka nie zawiera składników (na przykład nazwy pliku), `_splitpath_s` przypisuje pustego ciągu do odpowiedniego buforu.  
   
@@ -173,7 +176,7 @@ errno_t _wsplitpath_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_splitpath_s`|\<stdlib.h >|  
+|`_splitpath_s`|\<stdlib.h>|  
 |`_wsplitpath_s`|\<stdlib.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -183,8 +186,8 @@ errno_t _wsplitpath_s(
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_splitpath —, _wsplitpath —](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
- [_fullpath —, _wfullpath —](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_getmbcp —](../../c-runtime-library/reference/getmbcp.md)   
+ [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
  [_makepath —, _wmakepath —](../../c-runtime-library/reference/makepath-wmakepath.md)   
  [_setmbcp](../../c-runtime-library/reference/setmbcp.md)

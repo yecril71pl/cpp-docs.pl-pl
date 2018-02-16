@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -37,7 +38,8 @@ f1_keywords:
 - wcstok_s
 - _mbstok_s
 - _strtok_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtok_s_l function
 - _mbstok_s_l function
@@ -54,23 +56,24 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e5d5b92497bedcfd766975e62c886dd64676fc71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 868d9d3fc206931b20858ee360c2380cc5f03d61
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
 Znajduje następny token w ciągu, używając bieżących ustawień regionalnych lub ustawień regionalnych, który jest przekazywany w. Te wersje programu [strtok —, _strtok_l —, wcstok —, _wcstok_l —, _mbstok —, _mbstok_l —](../../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbstok_s`i `_mbstok_s_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbstok_s` i `_mbstok_s_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -120,10 +123,10 @@ unsigned char* _mbstok_s(
 *str*  
 Ciąg zawierający token lub tokeny do znalezienia.  
   
-*ograniczniki*  
+*delimiters*  
 Zestaw znaków ogranicznika do użycia.  
   
-*kontekst*  
+*context*  
 Używany do przechowywania informacji o położeniu między wywołania funkcji.  
   
 *Ustawienia regionalne*  
@@ -135,7 +138,7 @@ Zwraca wskaźnik do następnego tokenu w *str*. Zwraca `NULL` gdy znajdują się
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|*str*|*ograniczniki*|*kontekst*|Wartość zwracana|`errno`|  
+|*str*|*delimiters*|*context*|Wartość zwracana|`errno`|  
 |----------------|------------------|---------------|------------------|-------------|  
 |`NULL`|wszystkie|wskaźnik do wskaźnika o wartości null|`NULL`|`EINVAL`|  
 |wszystkie|`NULL`|wszystkie|`NULL`|`EINVAL`|  
@@ -145,7 +148,7 @@ Jeśli *str* jest `NULL` , ale *kontekstu* wskaźnik do wskaźnika prawidłowego
   
 ## <a name="remarks"></a>Uwagi  
 
-`strtok_s` Rodziny funkcji znajduje następny token w *str*. Zestaw znaków *ograniczniki* określa możliwe ograniczniki tokenu, który ma zostać odnaleziona w *str* w bieżącym wywołaniu. `wcstok_s`i `_mbstok_s` znaków dwubajtowych i znaków wielobajtowych wersji `strtok_s`. Argumentów i wartości zwracanych z `wcstok_s` i `_wcstok_s_l` są znaków dwubajtowych ciągi; tych `_mbstok_s` i `_mbstok_s_l` są ciągami znaków wielobajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
+`strtok_s` Rodziny funkcji znajduje następny token w *str*. Zestaw znaków *ograniczniki* określa możliwe ograniczniki tokenu, który ma zostać odnaleziona w *str* w bieżącym wywołaniu. `wcstok_s` i `_mbstok_s` znaków dwubajtowych i znaków wielobajtowych wersji `strtok_s`. Argumentów i wartości zwracanych z `wcstok_s` i `_wcstok_s_l` są znaków dwubajtowych ciągi; tych `_mbstok_s` i `_mbstok_s_l` są ciągami znaków wielobajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
 
 Ta funkcja weryfikuje jego parametrów. Jeśli wystąpi błąd, tak jak w tabeli błędów program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwracać `NULL`.
 
@@ -159,10 +162,10 @@ Wartość wyjściowa jest zagrożony ustawienie `LC_CTYPE` ustawienie kategorii 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`strtok_s`|\<String.h >|
-|`_strtok_s_l`|\<String.h >|
+|`strtok_s`|\<string.h>|
+|`_strtok_s_l`|\<string.h>|
 |`wcstok_s`,<br />`_wcstok_s_l`|\<String.h > lub \<wchar.h >|
-|`_mbstok_s`,<br />`_mbstok_s_l`|\<mbstring.h >|
+|`_mbstok_s`,<br />`_mbstok_s_l`|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
 

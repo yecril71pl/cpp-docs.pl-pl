@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - nearbyint
 - nearbyintf
@@ -46,11 +46,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d981df622450ef0b52a9b0d81427497a3e180bc
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: f6c4cce9fb5d95da5e65a064d622da22e4d0f0a8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 Zaokrągla określona wartość zmiennoprzecinkowa na liczbę całkowitą i zwraca tę wartość w formacie liczb zmiennoprzecinkowych.  
@@ -81,7 +81,7 @@ long double nearbyintl(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`x`  
+ [in] `x`  
  wartość do zaokrąglenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -89,7 +89,7 @@ long double nearbyintl(
   
 |Problem|Zwraca|  
 |-----------|------------|  
-|`x`= ±INFINITY|±INFINITY nie mają być modyfikowane|  
+|`x` = ±INFINITY|±INFINITY nie mają być modyfikowane|  
 |`x` = ±0|±0, nie mają być modyfikowane|  
 |`x` = NaN|NaN|  
   

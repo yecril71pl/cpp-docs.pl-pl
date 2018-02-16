@@ -1,12 +1,13 @@
 ---
-title: "vsnprintf_s —, _vsnprintf_s —, _vsnprintf_s_l —, _vsnwprintf_s —, _vsnwprintf_s_l — | Dokumentacja firmy Microsoft"
+title: vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _vsnwprintf_s
 - _vsnwprintf_s_l
@@ -30,7 +31,8 @@ f1_keywords:
 - _vsnprintf_s
 - _vsntprintf_s
 - _vsnwprintf_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - vsnwprintf_s function
 - _vsntprintf_s function
@@ -46,16 +48,17 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8df40232ae7a6a92343e86fc00db5f4f0e571ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6e908750b54778d4aad7affeb6bd748a84ab39bc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 Zapisywanie sformatowanego danych wyjściowych przy użyciu wskaźnika do listy argumentów. Są to wersje [vsnprintf —, _vsnprintf —, _vsnprintf_l —, _vsnwprintf —, _vsnwprintf_l —](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -138,7 +141,7 @@ int _vsnwprintf_s(
  Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `vsnprintf_s`,`_vsnprintf_s` i `_vsnwprintf_s` zwraca liczbę znaków zapisane, nie tym zakończenia wartość null lub wartość ujemną, jeśli wystąpi błąd wyjścia. `vsnprintf_s`jest taka sama jak `_vsnprintf_s`. `vsnprintf_s`jest on dołączony do zgodności ze standardem ANSI. `_vnsprintf`została zachowana na potrzeby zgodności z poprzednimi wersjami.  
+ `vsnprintf_s`,`_vsnprintf_s` i `_vsnwprintf_s` zwraca liczbę znaków zapisane, nie tym zakończenia wartość null lub wartość ujemną, jeśli wystąpi błąd wyjścia. `vsnprintf_s` jest taka sama jak `_vsnprintf_s`. `vsnprintf_s` jest on dołączony do zgodności ze standardem ANSI. `_vnsprintf` została zachowana na potrzeby zgodności z poprzednimi wersjami.  
   
  Jeśli przekracza magazynu wymaganego do przechowywania danych i zakończenia null `sizeOfBuffer`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md), chyba że `count` jest [_truncate —](../../c-runtime-library/truncate.md), w którym to przypadku tyle ciągu jako zmieści się `buffer` są zapisywane i zwrócił wartość -1. Jeśli program obsługi nieprawidłowych parametrów wykonywania odtwarzanie jest kontynuowane, te funkcje ustawić `buffer` na pusty ciąg, ustaw `errno` do `ERANGE`i zwróć -1.  
   
@@ -148,10 +151,10 @@ int _vsnwprintf_s(
   
 |`Condition`|Zwraca|`errno`|  
 |-----------------|------------|-------------|  
-|`buffer`jest`NULL`|-1|`EINVAL`|  
-|`format`jest`NULL`|-1|`EINVAL`|  
+|`buffer` jest `NULL`|-1|`EINVAL`|  
+|`format` jest `NULL`|-1|`EINVAL`|  
 |`count` <= 0|-1|`EINVAL`|  
-|`sizeOfBuffer`za mały (i `count` ! = `_TRUNCATE`)|-1 (i `buffer` ustawiony na pusty ciąg)|`ERANGE`|  
+|`sizeOfBuffer` za mały (i `count` ! = `_TRUNCATE`)|-1 (i `buffer` ustawiony na pusty ciąg)|`ERANGE`|  
   
 ## <a name="remarks"></a>Uwagi  
  Każda z tych funkcji przyjmuje wskaźnik do listy argumentów, a następnie formatuje i zapisuje do `count` znaki określone dane do pamięci wskazywanej przez `buffer` i dołącza zakończenia wartości null.  
@@ -179,11 +182,11 @@ int _vsnwprintf_s(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|----------------------|  
-|`vsnprintf_s`|\<stdio.h > i \<stdarg.h >|\<VarArgs.h > *|  
-|`_vsnprintf_s`, `_vsnprintf_s_l`|\<stdio.h > i \<stdarg.h >|\<VarArgs.h > *|  
-|`_vsnwprintf_s`, `_vsnwprintf_s_l`|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<VarArgs.h > *|  
+|`vsnprintf_s`|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|  
+|`_vsnprintf_s`, `_vsnprintf_s_l`|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|  
+|`_vsnwprintf_s`, `_vsnwprintf_s_l`|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|  
   
- \*Wymagany w przypadku zgodności UNIX V.  
+ \* Wymagany w przypadku zgodności UNIX V.  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -222,7 +225,7 @@ nSize: -1, buff: Hi there!
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [vprintf — funkcje](../../c-runtime-library/vprintf-functions.md)   
- [fprintf —, _fprintf_l —, fwprintf — _fwprintf_l —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l —, wprintf, _wprintf_l —](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

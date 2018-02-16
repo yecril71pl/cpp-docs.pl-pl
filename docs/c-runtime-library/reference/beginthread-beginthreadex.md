@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _beginthread
 - _beginthreadex
@@ -28,7 +29,8 @@ f1_keywords:
 - _beginthread
 - beginthreadex
 - _beginthreadex
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _beginthread function
 - threading [C++], creating threads
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71d47e67d56da59093db99b5da28daa6f1c18db2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f39ca2a386e605911f01ffe40cf23032d7ca7cb0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 Tworzy wątku.  
@@ -112,13 +115,13 @@ uintptr_t _beginthreadex( // MANAGED CODE
 ## <a name="remarks"></a>Uwagi  
  `_beginthread` Funkcja tworzy wątku, który rozpoczyna się wykonanie procedury na `start_address`. Procedury w `start_address` należy użyć `__cdecl` (dla natywnego kodu) lub `__clrcall` (dla kodu zarządzanego) konwencji wywoływania i powinna mieć Brak wartości zwracanej. Po powrocie z tej procedury wątku zostanie automatycznie zakończony. Aby uzyskać więcej informacji na temat wątków, zobacz [Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
- `_beginthreadex`podobny Win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) API więcej ściśle niż `_beginthread` jest. `_beginthreadex`różni się od `_beginthread` w następujący sposób:  
+ `_beginthreadex` podobny Win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) API więcej ściśle niż `_beginthread` jest. `_beginthreadex` różni się od `_beginthread` w następujący sposób:  
   
--   `_beginthreadex`ma trzy dodatkowe parametry: `initflag`, `security`, i `threadaddr`. Nowego wątku w stanie wstrzymanym, z określonym zabezpieczeń, można tworzyć i jest możliwy za pomocą `thrdaddr`, który jest identyfikatorem wątku.  
+-   `_beginthreadex` ma trzy dodatkowe parametry: `initflag`, `security`, i `threadaddr`. Nowego wątku w stanie wstrzymanym, z określonym zabezpieczeń, można tworzyć i jest możliwy za pomocą `thrdaddr`, który jest identyfikatorem wątku.  
   
 -   Procedury w `start_address` przekazywany do `_beginthreadex` należy użyć `__stdcall` (dla natywnego kodu) lub `__clrcall` (dla kodu zarządzanego) konwencji wywoływania i musi zwracać kod zakończenia wątku.  
   
--   `_beginthreadex`Zwraca wartość 0, niepowodzenia zamiast L-1.  
+-   `_beginthreadex` Zwraca wartość 0, niepowodzenia zamiast L-1.  
   
 -   Wątek, który jest tworzony przy użyciu `_beginthreadex` zostało zakończone przez wywołanie do [_endthreadex —](../../c-runtime-library/reference/endthread-endthreadex.md).  
   
@@ -128,14 +131,14 @@ uintptr_t _beginthreadex( // MANAGED CODE
   
  Możesz wywołać [_endthread —](../../c-runtime-library/reference/endthread-endthreadex.md) lub `_endthreadex` jawnie na zakończenie wątku; jednak `_endthread` lub `_endthreadex` automatycznie jest wywoływane, gdy wątek zwraca z procedury, która została przekazana jako parametr. Przerywanie wątków w wyniku wywołania `_endthread` lub `_endthreadex` pomaga zapewnić poprawne odzyskiwania zasobów przydzielonych dla wątku.  
   
- `_endthread`konieczne jest automatycznie zamykany dojście wątku `_endthreadex` nie. W związku z tym, kiedy należy używać `_beginthread` i `_endthread`, nie zamykaj jawnie dojście wątku przez wywołanie Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) interfejsu API. To zachowanie różni się od środowiska Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) interfejsu API.  
+ `_endthread` konieczne jest automatycznie zamykany dojście wątku `_endthreadex` nie. W związku z tym, kiedy należy używać `_beginthread` i `_endthread`, nie zamykaj jawnie dojście wątku przez wywołanie Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) interfejsu API. To zachowanie różni się od środowiska Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) interfejsu API.  
   
 > [!NOTE]
->  Dla pliku wykonywalnego połączone z Libcmt.lib, nie należy wywoływać Win32 `ExitThread` interfejsu API, aby nie uniemożliwiają odzyskiwanie przez system środowiska wykonawczego przydzielone zasoby. `_endthread`i `_endthreadex` odzyskać wątku przydzielone zasoby, a następnie wywołać `ExitThread`.  
+>  Dla pliku wykonywalnego połączone z Libcmt.lib, nie należy wywoływać Win32 `ExitThread` interfejsu API, aby nie uniemożliwiają odzyskiwanie przez system środowiska wykonawczego przydzielone zasoby. `_endthread` i `_endthreadex` odzyskać wątku przydzielone zasoby, a następnie wywołać `ExitThread`.  
   
  Alokacja stosu obsługi systemu operacyjnego podczas albo `_beginthread` lub `_beginthreadex` nazywa się; nie trzeba przekazać adres stosu wątku do jednej z tych funkcji. Ponadto `stack_size` argument może być 0, w którym w przypadku systemu operacyjnego korzysta z tej samej wartości jako stosu, który jest określony wątku głównego.  
   
- `arglist`jest to parametr do przekazania do nowo utworzonej wątku. Zazwyczaj jest to adres elementu danych, takiego jak ciąg znaków. `arglist`może mieć wartość NULL, jeśli nie jest wymagana, ale `_beginthread` i `_beginthreadex` należy podać niektóre wartości do przekazania do nowego wątku. Wszystkie wątki są zakończone, jeśli żadnego wątku wywołania `abort`, `exit`, `_exit`, lub `ExitProcess`.  
+ `arglist` jest to parametr do przekazania do nowo utworzonej wątku. Zazwyczaj jest to adres elementu danych, takiego jak ciąg znaków. `arglist` może mieć wartość NULL, jeśli nie jest wymagana, ale `_beginthread` i `_beginthreadex` należy podać niektóre wartości do przekazania do nowego wątku. Wszystkie wątki są zakończone, jeśli żadnego wątku wywołania `abort`, `exit`, `_exit`, lub `ExitProcess`.  
   
  Ustawienia regionalne nowego wątku jest dziedziczona z wątku jej nadrzędnej. Jeśli ustawienia regionalne dla każdego wątku jest włączona przez wywołanie do [_configthreadlocale —](../../c-runtime-library/reference/configthreadlocale.md) (globalnie lub dla nowych wątków), Wątek można zmieniać tylko jego ustawienia regionalne niezależnie od jego elementu nadrzędnego, wywołując `setlocale` lub `_wsetlocale`. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -326,6 +329,6 @@ Counter should be 1000000; it is-> 1000000
 ## <a name="see-also"></a>Zobacz też  
  [Proces i kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)   
  [_endthread —, _endthreadex —](../../c-runtime-library/reference/endthread-endthreadex.md)   
- [przerwania](../../c-runtime-library/reference/abort.md)   
- [exit, _exit — _exit —](../../c-runtime-library/reference/exit-exit-exit.md)   
- [Funkcja GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
+ [Przerwania](../../c-runtime-library/reference/abort.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)

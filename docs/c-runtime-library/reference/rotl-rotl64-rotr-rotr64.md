@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _rotr64
 - _rotl
@@ -55,11 +55,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4524e2323c3e97b70ef5f3bd1778ebda11ac519e
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 34a291417c1179df9645d8a76ab117eaac80d35f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 Obracanie bitów w lewo (`_rotl`) lub w prawo (`_rotr`).  
@@ -97,7 +97,7 @@ unsigned __int64 _rotr64(
  Obrócony wartość. Nie ma żadnych zwracany błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- `_rotl` i `_rotr` funkcje Obróć niepodpisane *wartość* przez `shift` usługi bits. `_rotl`Obraca wartość w lewo. `_rotr`Obraca prawej wartości. Funkcjami zawijać bitów obracać wyłączyć jeden z końców *wartość* w innym celu.  
+ `_rotl` i `_rotr` funkcje Obróć niepodpisane *wartość* przez `shift` usługi bits. `_rotl` Obraca wartość w lewo. `_rotr` Obraca prawej wartości. Funkcjami zawijać bitów obracać wyłączyć jeden z końców *wartość* w innym celu.  
   
 ## <a name="requirements"></a>Wymagania  
   

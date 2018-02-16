@@ -1,12 +1,13 @@
 ---
-title: "vprintf_s —, _vprintf_s_l —, vwprintf_s —, _vwprintf_s_l — | Dokumentacja firmy Microsoft"
+title: vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _vwprintf_s_l
 - vwprintf_s
@@ -28,7 +29,8 @@ f1_keywords:
 - vprintf_s
 - vwprintf_s
 - _vtprintf_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - vwprintf_s_l function
 - _vwprintf_s_l function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - formatted text [C++]
 - vprintf_s function
 ms.assetid: cf864996-a530-4b40-9c30-54c4cef439c8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 90a559e7fb9569289d45dcc92a9b6eb66633f4ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9293954a4b1f6748ff9b4845baf2d56c1621015f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vprintfs-vprintfsl-vwprintfs-vwprintfsl"></a>vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l
 Zapisuje dane wyjściowe w formacie za pomocą wskaźnika do listy argumentów. Te wersje programu [vprintf —, _vprintf_l —, vwprintf —, _vwprintf_l —](../../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -92,7 +95,7 @@ int _vwprintf_s_l(
  Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `vprintf_s`i `vwprintf_s` zwraca liczbę znaków zapisane, nie włączając znak końcowy null lub wartość ujemną, jeśli wystąpi błąd wyjścia. Jeśli `format` jest wskaźnika o wartości null, lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw `errno` do `EINVAL`.  
+ `vprintf_s` i `vwprintf_s` zwraca liczbę znaków zapisane, nie włączając znak końcowy null lub wartość ujemną, jeśli wystąpi błąd wyjścia. Jeśli `format` jest wskaźnika o wartości null, lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw `errno` do `EINVAL`.  
   
  Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -101,7 +104,7 @@ int _vwprintf_s_l(
   
  Bezpieczne wersje tych funkcji różnią się od `vprintf` i `vwprintf` tylko w tej wersji bezpiecznego Sprawdź, czy ciąg formatu zawiera prawidłowe znaki formatowania.  
   
- `vwprintf_s`jest to wersja znaków dwubajtowych `vprintf_s`; dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `vprintf_s`obecnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
+ `vwprintf_s` jest to wersja znaków dwubajtowych `vprintf_s`; dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `vprintf_s` obecnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
   
  Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.  
   
@@ -119,17 +122,17 @@ int _vwprintf_s_l(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|----------------------|  
-|`vprintf_s`, `_vprintf_s_l`|\<stdio.h > i \<stdarg.h >|\<VarArgs.h > *|  
-|`vwprintf_s`, `_vwprintf_s_l`|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<VarArgs.h > *|  
+|`vprintf_s`, `_vprintf_s_l`|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|  
+|`vwprintf_s`, `_vwprintf_s_l`|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|  
   
- \*Wymagany w przypadku zgodności UNIX V.  
+ \* Wymagany w przypadku zgodności UNIX V.  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu `stdin`, `stdout`, i `stderr`, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [vprintf — funkcje](../../c-runtime-library/vprintf-functions.md)   
- [fprintf —, _fprintf_l —, fwprintf — _fwprintf_l —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l —, wprintf, _wprintf_l —](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

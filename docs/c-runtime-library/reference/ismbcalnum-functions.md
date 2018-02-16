@@ -1,12 +1,13 @@
 ---
-title: "_ismbcalnum —, _ismbcalnum_l —, _ismbcalpha —, _ismbcalpha_l —, _ismbcdigit —, _ismbcdigit_l — | Dokumentacja firmy Microsoft"
+title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ismbcalpha
 - _ismbcalnum
@@ -38,7 +39,8 @@ f1_keywords:
 - _ismbcalnum_l
 - _ismbcalnum
 - ismbcdigit_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ismbcalpha function
 - _ismbcalnum function
@@ -53,22 +55,23 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 40566a3f4f6855da3a7ee7d122357f392d234ff0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 02214850013233c616d2bd23970b8921f0ff5e86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 Sprawdza, czy jest alfanumeryczne znaków wielobajtowych, alfa lub cyfra.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -127,14 +130,14 @@ int _ismbcdigit_l
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_ismbcalnum,_ismbcalnum_l`|\<mbstring.h >|  
-|`_ismbcalpha,_ismbcalpha_l`|\<mbstring.h >|  
-|`_ismbcdigit,_ismbcdigit_l`|\<mbstring.h >|  
+|`_ismbcalnum,_ismbcalnum_l`|\<mbstring.h>|  
+|`_ismbcalpha,_ismbcalpha_l`|\<mbstring.h>|  
+|`_ismbcdigit,_ismbcdigit_l`|\<mbstring.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)   
- [_ismbc — procedury](../../c-runtime-library/ismbc-routines.md)   
+ [_ismbc Routines](../../c-runtime-library/ismbc-routines.md)   
  [jest isw — procedury](../../c-runtime-library/is-isw-routines.md)   
  [_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)

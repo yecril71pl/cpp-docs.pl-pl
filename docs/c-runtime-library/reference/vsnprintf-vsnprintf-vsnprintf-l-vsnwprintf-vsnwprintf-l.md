@@ -1,12 +1,13 @@
 ---
-title: "vsnprintf —, _vsnprintf —, _vsnprintf_l —, _vsnwprintf —, _vsnwprintf_l — | Dokumentacja firmy Microsoft"
+title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _vsnprintf
 - _vsnprintf_l
@@ -43,7 +44,8 @@ f1_keywords:
 - stdio/_vsnwprintf_l
 - _vsnprintf_l
 - _vsnwprintf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - vsntprintf function
 - _vsnwprintf_l function
@@ -59,16 +61,17 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 710f4119ef943be5b58e4b617c1da1bc75e01c3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f5af34f038d9464b771bff4d982836c3b62d09db
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 Zapisywanie sformatowanego danych wyjściowych przy użyciu wskaźnika do listy argumentów. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [vsnprintf_s —, _vsnprintf_s —, _vsnprintf_s_l —, _vsnwprintf_s —, _vsnwprintf_s_l —](../../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).  
@@ -202,7 +205,7 @@ int _vsnwprintf_l(
   
 |Procedura|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|  
 |-------------|---------------------------|-------------------------------|  
-|`vsnprintf`, `_vsnprintf`, `_vsnprintf_l`|\<stdio.h >|\<stdio.h > lub \<cstdio — >|  
+|`vsnprintf`, `_vsnprintf`, `_vsnprintf_l`|\<stdio.h>|\<stdio.h > lub \<cstdio — >|  
 |`_vsnwprintf`, `_vsnwprintf_l`|\<stdio.h > lub \<wchar.h >|\<stdio.h >, \<wchar.h >, \<cstdio — >, lub \<cwchar — >|  
   
  `_vsnprintf`, `_vsnprintf_l`, `_vsnwprintf` i `_vsnwprintf_l` funkcje są określone firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -289,7 +292,7 @@ nSize: 10, buff: Hi there!
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [vprintf — funkcje](../../c-runtime-library/vprintf-functions.md)   
  [Składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
- [fprintf —, _fprintf_l —, fwprintf — _fwprintf_l —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l —, wprintf, _wprintf_l —](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

@@ -1,12 +1,13 @@
 ---
-title: vfscanf_s, vfwscanf_s | Dokumentacja firmy Microsoft
+title: vfscanf_s, vfwscanf_s | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - vfscanf_s
 - vfwscanf_s
@@ -26,18 +27,20 @@ f1_keywords:
 - vfscanf_s
 - vfwscanf_s
 - _vftscanf_s
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c1012a87cd2f5b73818000877216839f881c309c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8883f1a7869b650076642bfbe4b5e56e4cfbe59b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vfscanfs-vfwscanfs"></a>vfscanf_s, vfwscanf_s
 Odczyty sformatowanych danych ze strumienia. Te wersje vfscanf vfwscanf zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -74,7 +77,7 @@ int vfwscanf_s(
  Te funkcje walidację ich parametrów. Jeśli `stream` wskaźnika nieprawidłowy plik lub `format` jest wskaźnika o wartości null, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają `EOF` i ustaw `errno` do `EINVAL`.  
   
 ## <a name="remarks"></a>Uwagi  
- `vfscanf_s` Funkcja odczytuje dane z bieżącej pozycji `stream` w lokalizacjach, które są podane przez `arglist` listy argumentów (jeśli istnieje). Każdy argument na liście musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w `format`. `format`Formanty interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako `format` argument `scanf_s`; zobacz [pola specyfikacji formatu: funkcji wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) opis `format`. `vfwscanf_s`jest to wersja znaków dwubajtowych `vfscanf_s`; argument formatu `vfwscanf_s` jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `vfscanf_s`obecnie nie obsługuje dane wejściowe ze strumienia UNICODE.  
+ `vfscanf_s` Funkcja odczytuje dane z bieżącej pozycji `stream` w lokalizacjach, które są podane przez `arglist` listy argumentów (jeśli istnieje). Każdy argument na liście musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w `format`. `format` Formanty interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako `format` argument `scanf_s`; zobacz [pola specyfikacji formatu: funkcji wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) opis `format` . `vfwscanf_s` jest to wersja znaków dwubajtowych `vfscanf_s`; argument formatu `vfwscanf_s` jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `vfscanf_s` obecnie nie obsługuje dane wejściowe ze strumienia UNICODE.  
   
  Główną różnicą między bardziej bezpieczne funkcje (które mają `_s` sufiks) i innych wersji jest, że bezpieczniejsze funkcji wymaga rozmiar w znakach każdego `c`, `C`, `s`, `S`, i `[` pola typu przekazywany jako argument bezpośrednio po zmiennej. Aby uzyskać więcej informacji, zobacz [scanf_s —, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) i [scanf — specyfikacje szerokości](../../c-runtime-library/scanf-width-specification.md).  
   
@@ -91,7 +94,7 @@ int vfwscanf_s(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`vfscanf_s`|\<stdio.h >|  
+|`vfscanf_s`|\<stdio.h>|  
 |`vfwscanf_s`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -167,9 +170,9 @@ x
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [_cscanf_s —, _cscanf_s_l —, _cwscanf_s — _cwscanf_s_l —](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)   
- [fprintf_s —, _fprintf_s_l —, fwprintf_s — _fwprintf_s_l —](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
+ [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)   
+ [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
  [scanf_s —, _scanf_s_l —, wscanf_s — _wscanf_s_l —](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [sscanf_s —, _sscanf_s_l —, swscanf_s — _swscanf_s_l —](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
- [fscanf —, _fscanf_l —, fwscanf — _fwscanf_l —](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
  [vfscanf, vfwscanf](../../c-runtime-library/reference/vfscanf-vfwscanf.md)

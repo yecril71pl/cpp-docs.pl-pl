@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ismbbtrail
 - _ismbbtrail_l
@@ -28,23 +29,25 @@ f1_keywords:
 - ismbbtrail
 - _ismbbtrail_l
 - ismbbtrail_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ismbbtrail_l function
 - _ismbbtrail function
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1e5c20e436e7b51b1c4e5463fb56165ae24c264d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc0a56d64a44f9c2fc0c72ec7019cc56420c7dda
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
 Określa, czy bajt końcowego bajtu znaków wielobajtowych.  
@@ -69,19 +72,19 @@ int _ismbbtrail_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_ismbbtrail`Zwraca wartość niezerową, jeśli liczba całkowita `c` jest drugi bajt znaków wielobajtowych. Na przykład w kodzie strony 932 tylko, prawidłowe zakresy są 0x40 do 0x7E i 0x80 do 0xFC.  
+ `_ismbbtrail` Zwraca wartość niezerową, jeśli liczba całkowita `c` jest drugi bajt znaków wielobajtowych. Na przykład w kodzie strony 932 tylko, prawidłowe zakresy są 0x40 do 0x7E i 0x80 do 0xFC.  
   
 ## <a name="remarks"></a>Uwagi  
- `_ismbbtrail`używa bieżące ustawienia regionalne dla zachowania zależnych od ustawień regionalnych. `_ismbbtrail_l`jest identyczny z tą różnicą, że używa ustawień regionalnych, który jest przekazywany w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ `_ismbbtrail` używa bieżące ustawienia regionalne dla zachowania zależnych od ustawień regionalnych. `_ismbbtrail_l` jest identyczny z tą różnicą, że używa ustawień regionalnych, który jest przekazywany w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_ismbbtrail`|\<mbctype.h > lub \<mbstring.h >|\<CType.h >, * \<Limits.h — >, \<stdlib.h >|  
-|`_ismbbtrail_l`|\<mbctype.h > lub \<mbstring.h >|\<CType.h >, * \<Limits.h — >, \<stdlib.h >|  
+|`_ismbbtrail`|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbbtrail_l`|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
   
- \*Dla manifestu stałe warunki testu.  
+ \* Dla manifestu stałe warunki testu.  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fclose_nolock
+ms.topic: reference
+apiname:
+- _fclose_nolock
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - fclose_nolock
 - _fclose_nolock
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - streams, closing
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a993376f1174a86506f5c61d3b403953bedec3f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ba6e5a0955088a7acdbef5ecb7b9c746c0b37674
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fclosenolock"></a>_fclose_nolock
 Zamyka strumienia bez blokowania wątku.  
@@ -57,7 +61,7 @@ int _fclose_nolock(
  Wskaźnik do `FILE` struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `fclose`Zwraca wartość 0, jeśli strumień jest zamknięty pomyślnie. Zwraca `EOF` wystąpił błąd.  
+ `fclose` Zwraca wartość 0, jeśli strumień jest zamknięty pomyślnie. Zwraca `EOF` wystąpił błąd.  
   
 ## <a name="remarks"></a>Uwagi  
  Tej funkcji jest wersja — blokowanie `fclose`. Jest on identyczny z tą różnicą, że nie jest chroniony przez inne wątki od zakłóceń. Może to oznaczać szybsze nie wpływa negatywnie obciążenie zablokowania inne wątki. Ta funkcja służy tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.  
@@ -66,7 +70,7 @@ int _fclose_nolock(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`_fclose_nolock`|\<stdio.h >|  
+|`_fclose_nolock`|\<stdio.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -74,6 +78,6 @@ int _fclose_nolock(
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [_zamknij](../../c-runtime-library/reference/close.md)   
  [_fdopen —, _wfdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fflush —](../../c-runtime-library/reference/fflush.md)   
+ [fflush](../../c-runtime-library/reference/fflush.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
  [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)

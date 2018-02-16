@@ -1,32 +1,33 @@
 ---
 title: Biblioteki dll (C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: 
-ms.date: 02/03/2017
+ms.date: 02/06/2018
 ms.prod: windows-client-threshold
 ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 97d6bf2de580e5975be990115c5eb42fab3c3b2e
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f483494d981a03816a8b2717b9ad5098a8a714c9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dlls-ccx"></a>Biblioteki dll (C + +/ CX)
 
-Visual Studio umożliwia utworzenie standardowego DLL Win32 lub składnik środowiska wykonawczego systemu Windows biblioteki DLL, które mogą być używane przez aplikacje platformy uniwersalnej systemu Windows. Standardowe biblioteki DLL, który został utworzony przy użyciu wersji programu Visual Studio lub kompilatora Visual C++, starsza niż programu Visual Studio 2012 nie może załadować prawidłowo w aplikacji platformy uniwersalnej systemu Windows i nie mogą przechodzić test weryfikacji aplikacji w [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)].
+Visual Studio umożliwia utworzenie standardowego DLL Win32 lub składnik środowiska wykonawczego systemu Windows biblioteki DLL, które mogą być używane przez aplikacje systemu Windows platformy Uniwersalnej. Standardowe biblioteki DLL, który został utworzony przy użyciu wersji programu Visual Studio lub kompilator języka Visual C++, która jest starsza niż programu Visual Studio 2012 nie można prawidłowo załadować w aplikacji platformy uniwersalnej systemu Windows i nie mogą przechodzić test weryfikacji aplikacji w Microsoft Store.
 
 ## <a name="windows-runtime-component-dlls"></a>Biblioteki DLL składnika środowiska wykonawczego systemu Windows
 
-W większości przypadków Utwórz bibliotekę DLL do użycia w aplikacji platformy uniwersalnej systemu Windows, należy utworzyć jako składnik środowiska wykonawczego systemu Windows za pomocą szablonu projektu o tej nazwie. Projekt składnika środowiska wykonawczego systemu Windows można utworzyć dla bibliotek DLL, które mają publicznych lub prywatnych typów środowiska wykonawczego systemu Windows. Składnik środowiska wykonawczego systemu Windows są dostępne z aplikacji, które są zapisywane w dowolnym języku zgodnym środowiska wykonawczego systemu Windows. Domyślnie ustawienia kompilatora dla składnika środowiska wykonawczego systemu Windows projektu użyj **/ZW** przełącznika. Plik winmd musi mieć takiej samej nazwie, który ma głównej przestrzeni nazw. Na przykład klasy o nazwie A.B.C.MyClass można wdrożyć tylko wtedy, gdy jest on zdefiniowany w pliku metadanych o nazwie A.winmd lub A.B.winmd lub A.B.C.winmd. Nazwę biblioteki DLL nie musi być zgodna z nazwą pliku winmd.
+W większości przypadków gdy chcesz utworzyć biblioteki DLL dla używanie w aplikacji platformy uniwersalnej systemu Windows, utwórz go jako składnik środowiska wykonawczego systemu Windows za pomocą szablonu projektu o tej nazwie. Projekt składnika środowiska wykonawczego systemu Windows można utworzyć dla bibliotek DLL, które mają publicznych lub prywatnych typów środowiska wykonawczego systemu Windows. Składnik środowiska wykonawczego systemu Windows są dostępne z aplikacji, które są zapisywane w dowolnym języku zgodnym środowiska wykonawczego systemu Windows. Domyślnie ustawienia kompilatora dla składnika środowiska wykonawczego systemu Windows projektu użyj **/ZW** przełącznika. Plik winmd musi mieć takiej samej nazwie, który ma głównej przestrzeni nazw. Na przykład klasy o nazwie A.B.C.MyClass można wdrożyć tylko wtedy, gdy jest on zdefiniowany w pliku metadanych o nazwie A.winmd lub A.B.winmd lub A.B.C.winmd. Nazwę biblioteki DLL nie musi być zgodna z nazwą pliku winmd.
 
 Aby uzyskać więcej informacji, zobacz [tworzenia składników środowiska wykonawczego systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
@@ -38,15 +39,15 @@ Aby uzyskać więcej informacji, zobacz [tworzenia składników środowiska wyko
 
 ## <a name="standard-dlls"></a>Standardowych bibliotek DLL
 
-Możesz utworzyć standardowe biblioteki DLL dla kodu C++, który nie używać lub utworzyć typy publiczne środowiska wykonawczego systemu Windows i pobrać go z aplikacji platformy uniwersalnej systemu Windows. Użyj typu projektu Biblioteka DLL platformy uniwersalnej systemu Windows, gdy chcesz migrować istniejące biblioteki DLL do kompilacji w tej wersji programu Visual Studio, ale nie Konwertuj kod na projekt składnika środowiska wykonawczego systemu Windows. Podczas korzystania z następujących kroków, plik DLL, który zostanie wdrożony obok pliku wykonywalnego w pakiecie appx aplikacji.
+Możesz utworzyć standardowe biblioteki DLL dla kodu C++, który nie używać lub utworzyć typy publiczne środowiska wykonawczego systemu Windows i pobrać go z aplikacji platformy uniwersalnej systemu Windows. Należy używać typu projektu biblioteki dołączanej dynamicznie (DLL), gdy chcesz migrować istniejące biblioteki DLL do kompilacji w tej wersji programu Visual Studio, ale nie Konwertuj kod na projekt składnika środowiska wykonawczego systemu Windows. Podczas korzystania z następujących kroków, plik DLL, który zostanie wdrożony obok pliku wykonywalnego w pakiecie appx aplikacji.
 
 ### <a name="to-create-a-standard-dll-in-visual-studio"></a>Aby utworzyć standardowe biblioteki DLL w programie Visual Studio
 
-1. Na pasku menu wybierz **pliku**, **nowy**, **projektu**, a następnie wybierz szablon Biblioteka DLL platformy uniwersalnej systemu Windows.
+1. Na pasku menu wybierz **pliku**, **nowy**, **projektu**, a następnie wybierz **dynamiczne łącze Biblioteka (DLL)** szablonu.
 
 1. Wprowadź nazwę dla projektu, a następnie wybierz pozycję **OK** przycisku.
 
-1. Dodaj kod. Należy użyć `__declspec(dllexport)` dla funkcji, które chcesz wyeksportować — na przykład`__declspec(dllexport) Add(int I, in j);`
+1. Dodaj kod. Należy użyć `__declspec(dllexport)` dla funkcji, które chcesz wyeksportować — na przykład `__declspec(dllexport) Add(int I, in j);`
 
 1. Dodaj `#include winapifamily.h` dołączyć ten plik nagłówka z zestawu Windows SDK dla aplikacji platformy uniwersalnej systemu Windows i ustaw `WINAPI_FAMILY=WINAPI_PARTITION_APP`.
 
@@ -66,9 +67,9 @@ Możesz utworzyć standardowe biblioteki DLL dla kodu C++, który nie używać l
 
 1. W plikach kodu źródłowego, Dodaj `#include` instrukcji dla nagłówka pliku DLL, zgodnie z potrzebami.
 
-### <a name="to-migrate-an-existing-win32-dll-for-universal-windows-platform-app-compatibility"></a>Aby przeprowadzić migrację istniejącej biblioteki DLL Win32 dla zgodności aplikacji platformy uniwersalnej systemu Windows
+### <a name="to-migrate-an-existing-win32-dll-for-uwp-app-compatibility"></a>Aby przeprowadzić migrację istniejącej biblioteki DLL Win32 dla zgodności aplikacji platformy uniwersalnej systemu Windows
 
-1. Utwórz projekt typu Biblioteka DLL platformy uniwersalnej systemu Windows i Dodaj do niej istniejącego kodu źródłowego.
+1. Tworzenie projektu typu DLL (uniwersalna systemu Windows) i Dodaj do niej istniejącego kodu źródłowego.
 
 1. Dodaj `#include winapifamily.h` dołączyć ten plik nagłówka z zestawu Windows SDK dla aplikacji platformy uniwersalnej systemu Windows i ustaw `WINAPI_FAMILY=WINAPI_PARTITION_APP`.
 

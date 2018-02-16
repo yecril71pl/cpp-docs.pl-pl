@@ -1,12 +1,13 @@
 ---
-title: "_memicmp —, _memicmp_l — | Dokumentacja firmy Microsoft"
+title: _memicmp, _memicmp_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _memicmp_l
 - _memicmp
@@ -27,23 +28,25 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: adfbab425e5765ce23522612c628b5b83da444b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b79c36bc665d1d7a32ef50984a75b48811985d1e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 Porównanie znaków w dwóch buforów (bez uwzględniania wielkości liter).  
@@ -82,9 +85,9 @@ int _memicmp_l(
   
 |Wartość zwracana|Relacja pierwszych bajtów Liczba buf1 i buf2|  
 |------------------|--------------------------------------------------------|  
-|< 0|`buf1`mniej niż `buf2`.|  
-|0|`buf1`taki sam jak `buf2`.|  
-|> 0|`buf1`większa niż `buf2`.|  
+|< 0|`buf1` mniej niż `buf2`.|  
+|0|`buf1` taki sam jak `buf2`.|  
+|> 0|`buf1` większa niż `buf2`.|  
 |`_NLSCMPERROR`|Wystąpił błąd.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -92,7 +95,7 @@ int _memicmp_l(
   
  Jeśli dowolny `buf1` lub `buf2` jest wskaźnika o wartości null, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca `_NLSCMPERROR` i ustawia `errno` do `EINVAL`.  
   
- `_memicmp`używa bieżące ustawienia regionalne dla zachowań zależnych od ustawień regionalnych. `_memicmp_l` jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ `_memicmp` używa bieżące ustawienia regionalne dla zachowań zależnych od ustawień regionalnych. `_memicmp_l` jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Wymagania  
   
@@ -140,10 +143,10 @@ First is equal to second.
   
 ## <a name="see-also"></a>Zobacz też  
  [Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)   
- [_memccpy —](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memchr, wmemchr —](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [funkcji memcmp, wmemcmp —](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memcpy, wmemcpy —](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset —, wmemset —](../../c-runtime-library/reference/memset-wmemset.md)   
- [_stricmp —, _wcsicmp —, _mbsicmp —, _stricmp_l — _wcsicmp_l —, _mbsicmp_l —](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
  [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)

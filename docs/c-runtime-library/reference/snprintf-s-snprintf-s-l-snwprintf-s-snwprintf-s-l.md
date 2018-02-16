@@ -1,12 +1,13 @@
 ---
-title: "_snprintf_s —, _snprintf_s_l —, _snwprintf_s —, _snwprintf_s_l — | Dokumentacja firmy Microsoft"
+title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _snprintf_s
 - _snprintf_s_l
@@ -37,7 +38,8 @@ f1_keywords:
 - snwprintf_s
 - sntprintf_s
 - sntprintf_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _snprintf_s_l function
 - _snwprintf_s_l function
@@ -53,16 +55,17 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b0af77da88c86cdd42dabd10dd3228a5da405aae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f164afa6a4eef0544482192ec69a47c56164d68
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 Zapisuje sformatowane dane do ciągu. Są to wersje [snprintf —, _snprintf —, _snprintf_l —, _snwprintf —, _snwprintf_l —](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -136,7 +139,7 @@ int _snwprintf_s(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_snprintf_s`Zwraca liczbę znaków przechowywanych w `buffer`, nie licząc znak końcowy null. `_snwprintf_s`Zwraca liczbę znaki dwubajtowe są przechowywane w `buffer`, nie licząc zakończenia null znaków dwubajtowych.  
+ `_snprintf_s` Zwraca liczbę znaków przechowywanych w `buffer`, nie licząc znak końcowy null. `_snwprintf_s` Zwraca liczbę znaki dwubajtowe są przechowywane w `buffer`, nie licząc zakończenia null znaków dwubajtowych.  
   
  Jeśli przekracza magazynu wymaganego do przechowywania danych i zakończenia null `sizeOfBuffer`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli program obsługi nieprawidłowych parametrów wykonywania odtwarzanie jest kontynuowane, te funkcje ustawić `buffer` na pusty ciąg, ustaw `errno` do `ERANGE`i zwróć -1.  
   
@@ -152,7 +155,7 @@ int _snwprintf_s(
 > [!IMPORTANT]
 >  Upewnij się, że `format` nie jest ciągiem zdefiniowane przez użytkownika.  
   
- `_snwprintf_s`jest to wersja znaków dwubajtowych `_snprintf_s`; argumenty wskaźnika `_snwprintf_s` są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania `_snwprintf_s` może się różnić od w `_snprintf_s`. `_snwprintf_s`, takich jak `swprintf_s`, zapisuje dane wyjściowe z ciągiem, a nie do miejsca docelowego typu `FILE`.  
+ `_snwprintf_s` jest to wersja znaków dwubajtowych `_snprintf_s`; argumenty wskaźnika `_snwprintf_s` są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania `_snwprintf_s` może się różnić od w `_snprintf_s`. `_snwprintf_s`, takich jak `swprintf_s`, zapisuje dane wyjściowe z ciągiem, a nie do miejsca docelowego typu `FILE`.  
   
  Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.  
   
@@ -169,7 +172,7 @@ int _snwprintf_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_snprintf_s`, `_snprintf_s_l`|\<stdio.h >|  
+|`_snprintf_s`, `_snprintf_s_l`|\<stdio.h>|  
 |`_snwprintf_s`, `_snwprintf_s_l`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -304,9 +307,9 @@ Invalid parameter handler invoked: ("Buffer too small", 0)
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [fprintf —, _fprintf_l —, fwprintf — _fwprintf_l —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l —, wprintf, _wprintf_l —](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [sscanf —, _sscanf_l —, swscanf — _swscanf_l —](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
  [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)

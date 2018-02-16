@@ -1,12 +1,13 @@
 ---
-title: "_cscanf_s —, _cscanf_s_l —, _cwscanf_s —, _cwscanf_s_l — | Dokumentacja firmy Microsoft"
+title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _cwscanf_s_l
 - _cwscanf_s
@@ -37,7 +38,8 @@ f1_keywords:
 - _tcscanf_s_l
 - tcscanf_s
 - tcscanf_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cscanf_s function
 - _cwscanf_s_l function
@@ -55,22 +57,23 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8fa7fd0f387b74396f57b511aaaa6a042d78f945
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f3244d2f8328faa4b4babb2eb03be85803699878
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 Odczyty sformatowanych danych z konsoli. Wersje tych bezpieczniejsze [_cscanf —, _cscanf_l —, _cwscanf —, _cwscanf_l —](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -131,7 +134,7 @@ int _cwscanf_s_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_cscanf_s`,`_cscanf_s_l`|\<conio.h >|  
+|`_cscanf_s`,`_cscanf_s_l`|\<conio.h>|  
 |`_cwscanf_s`, `_cwscanf_s_l`|\<conio.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -180,7 +183,7 @@ You entered 1 2 3
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)   
- [_cprintf —, _cprintf_l —, _cwprintf — _cwprintf_l —](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf_s —, _fscanf_s_l —, fwscanf_s — _fwscanf_s_l —](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
  [scanf_s —, _scanf_s_l —, wscanf_s — _wscanf_s_l —](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
  [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)

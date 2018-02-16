@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wsearchenv_s
 - _searchenv_s
@@ -28,7 +29,8 @@ f1_keywords:
 - _wsearchenv_s
 - wsearchenv_s
 - searchenv_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tsearchenv_s function
 - files [C++], finding
@@ -43,22 +45,23 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6f1089aa1f772832417168a2262fa72069b3ede7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a92a7b0d76f2f6d3fd1cb4027e17ecbf014baec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 Wyszukiwanie plików przy użyciu ścieżki środowiska. Te wersje programu [_searchenv —, _wsearchenv —](../../c-runtime-library/reference/searchenv-wsearchenv.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -90,16 +93,16 @@ errno_t _wsearchenv_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`filename`  
+ [in] `filename`  
  Nazwa pliku do wyszukania.  
   
- [in]`varname`  
+ [in] `varname`  
  Środowisko wyszukiwania.  
   
- [out]`pathname`  
+ [out] `pathname`  
  Bufor do przechowywania pełną ścieżkę.  
   
- [in]`numberOfElements`  
+ [in] `numberOfElements`  
  Rozmiar `pathname` buforu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -109,7 +112,7 @@ errno_t _wsearchenv_s(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|`filename`|`varname`|`pathname`|`numberOfElements`|Wartość zwracana|Zawartość`pathname`|  
+|`filename`|`varname`|`pathname`|`numberOfElements`|Wartość zwracana|Zawartość `pathname`|  
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|  
 |wszystkie|wszystkie|`NULL`|wszystkie|`EINVAL`|n/d|  
 |`NULL`|wszystkie|wszystkie|wszystkie|`EINVAL`|nie został zmieniony|  
@@ -124,7 +127,7 @@ errno_t _wsearchenv_s(
   
  `pathname` Buforu powinien być co najmniej `_MAX_PATH` znaków, aby pomieścić długie nazwy ścieżki skonstruowane. W przeciwnym razie `_searchenv_s` może przepełnienie `pathname` buforu spowodować nieoczekiwane zachowanie.  
   
- `_wsearchenv_s`jest to wersja znaków dwubajtowych `_searchenv_s`; argumenty `_wsearchenv_s` są ciągami znaków dwubajtowych. `_wsearchenv_s`i `_searchenv_s` zachowują się tak samo w przeciwnym razie wartość.  
+ `_wsearchenv_s` jest to wersja znaków dwubajtowych `_searchenv_s`; argumenty `_wsearchenv_s` są ciągami znaków dwubajtowych. `_wsearchenv_s` i `_searchenv_s` zachowują się tak samo w przeciwnym razie wartość.  
   
  W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -138,7 +141,7 @@ errno_t _wsearchenv_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_searchenv_s`|\<stdlib.h >|  
+|`_searchenv_s`|\<stdlib.h>|  
 |`_wsearchenv_s`|\<stdlib.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

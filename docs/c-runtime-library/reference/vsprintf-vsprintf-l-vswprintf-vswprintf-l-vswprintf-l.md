@@ -1,12 +1,13 @@
 ---
-title: "vsprintf —, _vsprintf_l —, vswprintf —, _vswprintf_l —, __vswprintf_l — | Dokumentacja firmy Microsoft"
+title: vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _vswprintf_l
 - _vsprintf_l
@@ -34,7 +35,8 @@ f1_keywords:
 - _vsprintf_l
 - _vswprintf_l
 - vswprintf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - __vswprintf_l function
 - _vstprintf_l function
@@ -52,16 +54,17 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 10f318d1b6c43f6666030ff3ea90811c2e13f97f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a96bcc3de4b59601e18043bb18fb82802abd4c8f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 Zapisywanie sformatowanego danych wyjściowych przy użyciu wskaźnika do listy argumentów. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [vsprintf_s —, _vsprintf_s_l —, vswprintf_s —, _vswprintf_s_l —](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).  
@@ -144,7 +147,7 @@ int _vswprintf_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `vsprintf`i `vswprintf` zwraca liczbę znaków zapisane, nie włączając znak końcowy null lub wartość ujemną, jeśli wystąpi błąd wyjścia. Jeśli `buffer` lub `format` jest wskaźnika o wartości null, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw `errno` do `EINVAL`.  
+ `vsprintf` i `vswprintf` zwraca liczbę znaków zapisane, nie włączając znak końcowy null lub wartość ujemną, jeśli wystąpi błąd wyjścia. Jeśli `buffer` lub `format` jest wskaźnika o wartości null, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw `errno` do `EINVAL`.  
   
  Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -156,7 +159,7 @@ int _vswprintf_l(
 > [!IMPORTANT]
 >  Przy użyciu `vsprintf`, w tym miejscu można ograniczyć liczbę znaków napisano, co oznacza, że kodu za pomocą tej funkcji jest podatny na przepełnienia buforu. Użyj [_vsnprintf —](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) , lub zadzwoń [_vscprintf —](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) Aby określić rozmiar, jaki jest potrzebny buforu. Ponadto upewnij się, że `format` nie jest ciągiem zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- `vswprintf`zgodne ze standardem C ISO, co wymaga drugiego parametru, `count`, typu `size_t`. Aby wymusić starego niestandardowe zachowanie, należy zdefiniować `_CRT_NON_CONFORMING_SWPRINTFS.` stare zachowanie nie będzie w przyszłej wersji, więc należy zmienić kod do użycia nowego zachowania zgodność.  
+ `vswprintf` zgodne ze standardem C ISO, co wymaga drugiego parametru, `count`, typu `size_t`. Aby wymusić starego niestandardowe zachowanie, należy zdefiniować `_CRT_NON_CONFORMING_SWPRINTFS.` stare zachowanie nie będzie w przyszłej wersji, więc należy zmienić kod do użycia nowego zachowania zgodność.  
   
  W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -171,10 +174,10 @@ int _vswprintf_l(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|----------------------|  
-|`vsprintf`, `_vsprintf_l`|\<stdio.h > i \<stdarg.h >|\<VarArgs.h > *|  
-|`vswprintf`, `_vswprintf_l`|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<VarArgs.h > *|  
+|`vsprintf`, `_vsprintf_l`|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|  
+|`vswprintf`, `_vswprintf_l`|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|  
   
- \*Wymagany w przypadku zgodności UNIX V.  
+ \* Wymagany w przypadku zgodności UNIX V.  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -228,7 +231,7 @@ This is a string
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [vprintf — funkcje](../../c-runtime-library/vprintf-functions.md)   
  [Składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
- [fprintf —, _fprintf_l —, fwprintf — _fwprintf_l —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l —, wprintf, _wprintf_l —](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

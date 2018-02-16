@@ -1,13 +1,15 @@
 ---
-title: "_malloca — | Dokumentacja firmy Microsoft"
+title: _malloca | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _malloca
+ms.topic: reference
+apiname:
+- _malloca
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - malloca
 - _malloca
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory allocation, stack
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fcdeab9e61eda17164be06498e9ce42695faf8ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d61874320712e6cef7f783bb1c4fb03f53ac40e9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="malloca"></a>_malloca
 Przydziela pamięć na stosie. To jest wersja [_alloca](../../c-runtime-library/reference/alloca.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -61,7 +65,7 @@ void *_malloca(
  Wyjątek przepełnienia stosu jest generowany, gdy nie można przydzielić miejsce. Wyjątek przepełnienia stosu nie jest wyjątku C++; jest wyjątków strukturalnych. Zamiast używać C++, obsługa wyjątków, należy użyć [obsługi wyjątków strukturalnych](../../cpp/structured-exception-handling-c-cpp.md) (SEH).  
   
 ## <a name="remarks"></a>Uwagi  
- `_malloca`przydziela `size` bajtów ze stosu program lub sterty, jeśli żądanie przekracza określony rozmiar w bajtach przez `_ALLOCA_S_THRESHOLD`. Różnica między `_malloca` i `_alloca` jest to, że `_alloca` zawsze przydziela na stosie, niezależnie od rozmiaru. W odróżnieniu od `_alloca`, które nie wymagają ani nie zezwala na wywołania `free` aby zwolnić pamięć, więc przydzielone, `_malloca` wymaga użycia [_freea —](../../c-runtime-library/reference/freea.md) zwolnienia pamięci. W trybie debugowania `_malloca` zawsze przydziela pamięć sterty.  
+ `_malloca` przydziela `size` bajtów ze stosu program lub sterty, jeśli żądanie przekracza określony rozmiar w bajtach przez `_ALLOCA_S_THRESHOLD`. Różnica między `_malloca` i `_alloca` jest to, że `_alloca` zawsze przydziela na stosie, niezależnie od rozmiaru. W odróżnieniu od `_alloca`, które nie wymagają ani nie zezwala na wywołania `free` aby zwolnić pamięć, więc przydzielone, `_malloca` wymaga użycia [_freea —](../../c-runtime-library/reference/freea.md) zwolnienia pamięci. W trybie debugowania `_malloca` zawsze przydziela pamięć sterty.  
   
  Ma ograniczeń do wywoływania jawnie `_malloca` w obsłudze wyjątków (EH). Procedury EH, działające na procesorów klasy x86 działać w swojej ramce pamięci: wykonywanie zadań miejsca w pamięci nie jest oparty na bieżącej lokalizacji wskaźnik stosu funkcji otaczającej. Najczęściej występujące implementacje to obsługa (SEH) systemu Windows NT strukturę wyjątków i wyrażeń klauzuli catch C++. W związku z tym jawnie podczas wywoływania `_malloca` w żadnym następujące scenariusze powoduje błąd programu podczas powrotu do wywoływania procedury EH:  
   
@@ -82,7 +86,7 @@ void *_malloca(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_malloca`|\<malloc.h >|  
+|`_malloca`|\<malloc.h>|  
   
 ## <a name="example"></a>Przykład  
   
@@ -178,7 +182,7 @@ Enter the number of bytes to allocate using _malloca: 1000
   
 ## <a name="see-also"></a>Zobacz też  
  [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)   
- [calloc —](../../c-runtime-library/reference/calloc.md)   
- [— funkcja malloc](../../c-runtime-library/reference/malloc.md)   
+ [calloc](../../c-runtime-library/reference/calloc.md)   
+ [malloc](../../c-runtime-library/reference/malloc.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
  [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _open
 - _wopen
@@ -27,7 +28,8 @@ f1_keywords:
 - _wopen
 - _topen
 - _open
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - opening files, for file I/O
 - topen function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c53394391c34dc86e3516c54806c9bbd2b62ca7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e8abb4d652c993f3cf45f1840c820261ac989c9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="open-wopen"></a>_open, _wopen
 Otwiera plik. Te funkcje są przestarzałe, ponieważ bardziej bezpiecznych wersje są dostępne; zobacz [_sopen_s —, _wsopen_s —](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
@@ -84,7 +87,7 @@ int _wopen(
  Podjęto próbę otwarcia pliku tylko do odczytu w celu zapisywania pliku trybie współdzielenia nie zezwala na określonej operacji lub podana ścieżka jest katalogiem.  
   
  `EEXIST`  
- `_O_CREAT`i `_O_EXCL` flag określonych, ale `filename` już istnieje.  
+ `_O_CREAT` i `_O_EXCL` flag określonych, ale `filename` już istnieje.  
   
  `EINVAL`  
  Nieprawidłowy `oflag` lub `pmode` argumentu.  
@@ -98,7 +101,7 @@ int _wopen(
  Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `_open` Funkcja otwiera plik określony przez `filename` i przygotowuje je do odczytu lub zapisu, określony przez `oflag`. `_wopen`jest to wersja znaków dwubajtowych `_open`; `filename` argument `_wopen` jest ciągiem znaków dwubajtowych. `_wopen`i `_open` zachowują się tak samo w przeciwnym razie wartość.  
+ `_open` Funkcja otwiera plik określony przez `filename` i przygotowuje je do odczytu lub zapisu, określony przez `oflag`. `_wopen` jest to wersja znaków dwubajtowych `_open`; `filename` argument `_wopen` jest ciągiem znaków dwubajtowych. `_wopen` i `_open` zachowują się tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -106,7 +109,7 @@ int _wopen(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_topen`|`_open`|`_open`|`_wopen`|  
   
- `oflag`powstaje wyrażeniem liczby całkowitej z jedną lub więcej następujących stałych manifestu lub kombinacji stałej, które są zdefiniowane w \<fcntl.h >.  
+ `oflag` powstaje wyrażeniem liczby całkowitej z jedną lub więcej następujących stałych manifestu lub kombinacji stałej, które są zdefiniowane w \<fcntl.h >.  
   
  `_O_APPEND`  
  Przenosi wskaźnika pliku koniec pliku przed każdej operacji zapisu.  
@@ -145,7 +148,7 @@ int _wopen(
  Otwiera plik w trybie tekstowym (translacji). (Aby uzyskać więcej informacji, zobacz [tekstu i we/wy binarne trybu pliku](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [fopen —](../../c-runtime-library/reference/fopen-wfopen.md).)  
   
  `_O_TRUNC`  
- Otwiera plik i obcina go do zera length; Plik musi mieć uprawnienia do zapisu. Nie można określić za pomocą `_O_RDONLY`. `_O_TRUNC`używane z `_O_CREAT` otwiera istniejący plik lub tworzy plik.  
+ Otwiera plik i obcina go do zera length; Plik musi mieć uprawnienia do zapisu. Nie można określić za pomocą `_O_RDONLY`. `_O_TRUNC` używane z `_O_CREAT` otwiera istniejący plik lub tworzy plik.  
   
 > [!NOTE]
 >  `_O_TRUNC` Flagi niszczy zawartość określonego pliku.  
@@ -172,7 +175,7 @@ int _wopen(
   
  Gdy dwa lub więcej manifestu stałe są używane do formularza `oflag` argumentu, stałe są łączone z operator Alternatywy ( `|` ). Omówienie trybów pliku binarnego i tekstu, zobacz [tekstu i we/wy binarne trybu pliku](../../c-runtime-library/text-and-binary-mode-file-i-o.md).  
   
- `pmode` Argumentu jest wymagany tylko wtedy, gdy `_O_CREAT` jest określona. Jeśli plik już istnieje, `pmode` jest ignorowana. W przeciwnym razie `pmode` określa ustawienia uprawnień plików, które są ustawione, gdy nowy plik jest zamknięte po raz pierwszy. `_open`stosuje bieżący maskę pliku uprawnień do `pmode` przed uprawnienia zostały ustawione. (Aby uzyskać więcej informacji, zobacz [_umask —](../../c-runtime-library/reference/umask.md).) `pmode` jest wyrażeniem liczby całkowitej, który zawiera co najmniej jednej z następujących stałych manifestu, które są zdefiniowane w \<sys\stat.h >.  
+ `pmode` Argumentu jest wymagany tylko wtedy, gdy `_O_CREAT` jest określona. Jeśli plik już istnieje, `pmode` jest ignorowana. W przeciwnym razie `pmode` określa ustawienia uprawnień plików, które są ustawione, gdy nowy plik jest zamknięte po raz pierwszy. `_open` stosuje bieżący maskę pliku uprawnień do `pmode` przed uprawnienia zostały ustawione. (Aby uzyskać więcej informacji, zobacz [_umask —](../../c-runtime-library/reference/umask.md).) `pmode` jest wyrażeniem liczby całkowitej, który zawiera co najmniej jednej z następujących stałych manifestu, które są zdefiniowane w \<sys\stat.h >.  
   
  `_S_IREAD`  
  Dozwolone tylko odczyt.  
@@ -191,10 +194,10 @@ int _wopen(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_open`|\<IO.h >|\<fcntl.h >, \<sys\types.h >, \<sys\stat.h >|  
-|`_wopen`|\<IO.h > lub \<wchar.h >|\<fcntl.h >, \<sys\types.h >, \<sys\stat.h >|  
+|`_open`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|  
+|`_wopen`|\<IO.h > lub \<wchar.h >|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|  
   
- `_open`i `_wopen` są rozszerzenia Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+ `_open` i `_wopen` są rozszerzenia Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Biblioteki  
  Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  
@@ -249,9 +252,9 @@ Open succeeded on output file
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)   
- [_chmod —, _wchmod —](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_zamknij](../../c-runtime-library/reference/close.md)   
- [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
- [_dup —, _dup2 —](../../c-runtime-library/reference/dup-dup2.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)

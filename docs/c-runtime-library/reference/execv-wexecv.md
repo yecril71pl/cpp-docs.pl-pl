@@ -1,12 +1,13 @@
 ---
-title: "_execv —, _wexecv — | Dokumentacja firmy Microsoft"
+title: _execv, _wexecv | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wexecv
 - _execv
@@ -27,29 +28,31 @@ f1_keywords:
 - _execv
 - _wexecv
 - wexecv
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wexecv function
 - _execv function
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b37db33afddbf8b6bc0954f67f41189ca05b20a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9520c8975d342b423bf61a1f5973a4bdabfcc37
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="execv-wexecv"></a>_execv, _wexecv
 Ładuje i wykonuje nowych procesów podrzędnych.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -74,7 +77,7 @@ intptr_t _wexecv(
 ## <a name="return-value"></a>Wartość zwracana  
  W przypadku powodzenia tych funkcji nie powróci do procesu wywołującego. Zwracana wartość -1 wskazuje błąd, w którym to przypadku `errno` ustawiono zmiennej globalnej.  
   
-|`errno`wartość|Opis|  
+|`errno` Wartość|Opis|  
 |-------------------|-----------------|  
 |`E2BIG`|Miejsce wymagane do argumentów i ustawienia środowiska przekracza 32 KB.|  
 |`EACCES`|Określony plik ma blokowania lub udostępniania naruszenie.|  
@@ -95,8 +98,8 @@ intptr_t _wexecv(
   
 |Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|  
 |--------------|---------------------|---------------------|  
-|`_execv`|\<process.h >|\<errno.h >|  
-|`_wexecv`|\<process.h > lub \<wchar.h >|\<errno.h >|  
+|`_execv`|\<process.h >|\<errno.h>|  
+|`_wexecv`|\<process.h > lub \<wchar.h >|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -106,9 +109,9 @@ intptr_t _wexecv(
 ## <a name="see-also"></a>Zobacz też  
  [Proces i kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)   
  [_execwexec — funkcje](../../c-runtime-library/exec-wexec-functions.md)   
- [przerwania](../../c-runtime-library/reference/abort.md)   
+ [Przerwania](../../c-runtime-library/reference/abort.md)   
  [atexit —](../../c-runtime-library/reference/atexit.md)   
- [exit, _exit — _exit —](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit —, _onexit_m —](../../c-runtime-library/reference/onexit-onexit-m.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
  [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md)   
  [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

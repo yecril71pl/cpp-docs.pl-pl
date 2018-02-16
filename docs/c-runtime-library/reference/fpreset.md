@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fpreset
+ms.topic: reference
+apiname:
+- _fpreset
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - _fpreset
 - fpreset
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fpreset function
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5d4381d45adc2e6b1330bfbacd960b2dac8d51d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d6868978b27428dc6f2290fea69ec2f2527e28e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fpreset"></a>_fpreset
 Resetuje zmiennoprzecinkowe pakietu.  
@@ -51,7 +55,7 @@ void _fpreset( void );
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `_fpreset` Funkcja ponownie inicjuje zmiennoprzecinkowej matematyczny pakietu. `_fpreset`zwykle jest używana z `signal`, `system`, lub `_exec` lub `_spawn` funkcji. Jeśli program traps sygnały błąd liczb zmiennoprzecinkowych (`SIGFPE`) z `signal`, bezpiecznie można odzyskać z błędów zmiennoprzecinkowych wywołując `_fpreset` i przy użyciu `longjmp`.  
+ `_fpreset` Funkcja ponownie inicjuje zmiennoprzecinkowej matematyczny pakietu. `_fpreset` zwykle jest używana z `signal`, `system`, lub `_exec` lub `_spawn` funkcji. Jeśli program traps sygnały błąd liczb zmiennoprzecinkowych (`SIGFPE`) z `signal`, bezpiecznie można odzyskać z błędów zmiennoprzecinkowych wywołując `_fpreset` i przy użyciu `longjmp`.  
   
  Ta funkcja jest przestarzała podczas kompilowania za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) ponieważ środowisko uruchomieniowe języka wspólnego obsługuje tylko domyślna dokładność zmiennoprzecinkowych.  
   
@@ -59,7 +63,7 @@ void _fpreset( void );
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`_fpreset`|\<float.h — >|  
+|`_fpreset`|\<float.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -180,6 +184,6 @@ Error 131: Divide by zero
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [_execwexec — funkcje](../../c-runtime-library/exec-wexec-functions.md)   
- [sygnał](../../c-runtime-library/reference/signal.md)   
+ [signal](../../c-runtime-library/reference/signal.md)   
  [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md)   
  [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

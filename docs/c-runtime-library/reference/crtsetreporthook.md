@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtSetReportHook
+ms.topic: reference
+apiname:
+- _CrtSetReportHook
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetReportHook
 - CrtSetReportHook
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CrtSetReportHook function
 - _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4c1fb85ab41c02bb9f604f024f86ebb42706eeda
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8c7b3a8954c39e8157834297ab5ac3a747420af8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetreporthook"></a>_CrtSetReportHook
 Instaluje zdefiniowane przez klienta funkcji raportowania przez Przechwytywanie go do procesu raportowania debugowania środowiska wykonawczego C (tylko wersja do debugowania).  
@@ -58,7 +62,7 @@ _CRT_REPORT_HOOK _CrtSetReportHook(
  Zwraca poprzedni klienta zdefiniowanych funkcji raportowania.  
   
 ## <a name="remarks"></a>Uwagi  
- `_CrtSetReportHook`zezwala aplikacji na używanie własnej funkcji raportowania do biblioteki wykonawcze debugowania C raportowania procesu. W związku z tym, gdy [_crtdbgreport —](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) jest nazywany aby wygenerować raport debugowania, raportowanie do aplikacji, funkcja jest wywoływana, najpierw. Ta funkcja umożliwia wykonywanie operacji takich jak filtrowania raportów debugowania można skupić się na typy alokacji określonych lub wysłać raport do miejsc docelowych nie jest dostępny za pomocą aplikacji `_CrtDbgReport`. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań `_CrtSetReportHook` są usuwane podczas przetwarzania wstępnego.  
+ `_CrtSetReportHook` zezwala aplikacji na używanie własnej funkcji raportowania do biblioteki wykonawcze debugowania C raportowania procesu. W związku z tym, gdy [_crtdbgreport —](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) jest nazywany aby wygenerować raport debugowania, raportowanie do aplikacji, funkcja jest wywoływana, najpierw. Ta funkcja umożliwia wykonywanie operacji takich jak filtrowania raportów debugowania można skupić się na typy alokacji określonych lub wysłać raport do miejsc docelowych nie jest dostępny za pomocą aplikacji `_CrtDbgReport`. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań `_CrtSetReportHook` są usuwane podczas przetwarzania wstępnego.  
   
  Bardziej niezawodna w wersji `_CrtSetReportHook`, zobacz [_crtsetreporthook2 —](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md).  
   
@@ -81,7 +85,7 @@ int YourReportHook( int reportType, char *message, int *returnValue );
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_CrtSetReportHook`|\<crtdbg.h >|  
+|`_CrtSetReportHook`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

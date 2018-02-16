@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wfreopen_s
 - freopen_s
@@ -27,7 +28,8 @@ f1_keywords:
 - freopen_s
 - _tfreopen_s
 - _wfreopen_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tfreopen_s function
 - _wfreopen_s function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2276de6c4539dffe4456c18fdeff88f852a44c2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a62165fee7ed54a7eeadf5f381945936bb441908
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
 Ponownie przypisuje wskaźnika pliku. Te wersje programu [freopen —, _wfreopen —](../../c-runtime-library/reference/freopen-wfreopen.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -68,23 +71,23 @@ errno_t _wfreopen(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pFile`  
+ [out] `pFile`  
  Wskaźnik do wskaźnika pliku dostarczanych przez wywołanie.  
   
- [in]`path`  
+ [in] `path`  
  Ścieżka do nowego pliku.  
   
- [in]`mode`  
+ [in] `mode`  
  Dozwolonego typu dostępu.  
   
- [in]`stream`  
+ [in] `stream`  
  Wskaźnik do `FILE` struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Każda z tych funkcji zwraca kod błędu. Jeśli wystąpi błąd, oryginalny plik jest zamknięty.  
   
 ## <a name="remarks"></a>Uwagi  
- `freopen_s` Funkcji spowoduje zamknięcie pliku, w obecnie skojarzony z `stream` i następuje zmiana przypisania `stream` do pliku określonego przez `path.` `_wfreopen_s` jest wersja znaków dwubajtowych `_freopen_s`; `path` i `mode` argumenty `_wfreopen_s` są ciągami znaków dwubajtowych. `_wfreopen_s`i `_freopen_s` zachowują się tak samo w przeciwnym razie wartość.  
+ `freopen_s` Funkcji spowoduje zamknięcie pliku, w obecnie skojarzony z `stream` i następuje zmiana przypisania `stream` do pliku określonego przez `path.` `_wfreopen_s` jest wersja znaków dwubajtowych `_freopen_s`; `path` i `mode` argumenty `_wfreopen_s` są ciągami znaków dwubajtowych. `_wfreopen_s` i `_freopen_s` zachowują się tak samo w przeciwnym razie wartość.  
   
  Jeśli dowolny z `pFile`, `path`, `mode`, lub `stream` są `NULL`, lub jeśli `path` jest pustym ciągiem, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwracać `EINVAL`.  
   
@@ -94,7 +97,7 @@ errno_t _wfreopen(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tfreopen_s`|`freopen_s`|`freopen_s`|`_wfreopen_s`|  
   
- `freopen_s`zwykle jest używana do przekierowania wstępnie otwarte pliki `stdin`, `stdout`, i `stderr` do plików określone przez użytkownika. Nowy plik skojarzony z `stream` jest otwierany z `mode`, która jest ciąg znaków określający typ dostępu do żądanego pliku, w następujący sposób:  
+ `freopen_s` zwykle jest używana do przekierowania wstępnie otwarte pliki `stdin`, `stdout`, i `stderr` do plików określone przez użytkownika. Nowy plik skojarzony z `stream` jest otwierany z `mode`, która jest ciąg znaków określający typ dostępu do żądanego pliku, w następujący sposób:  
   
  `"r"`  
  Zostanie otwarty do odczytu. Jeśli plik nie istnieje lub nie można znaleźć, `freopen_s` wywołać kończy się niepowodzeniem.  
@@ -136,10 +139,10 @@ errno_t _wfreopen(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`freopen_s`|\<stdio.h >|  
+|`freopen_s`|\<stdio.h>|  
 |`_wfreopen_s`|\<stdio.h > lub \<wchar.h >|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+ Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -181,7 +184,7 @@ This will go to the file 'freopen.out'
  [freopen —, _wfreopen —](../../c-runtime-library/reference/freopen-wfreopen.md)   
  [fclose —, _fcloseall —](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [_fdopen —, _wfdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [_fileno —](../../c-runtime-library/reference/fileno.md)   
+ [_fileno](../../c-runtime-library/reference/fileno.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_setmode](../../c-runtime-library/reference/setmode.md)

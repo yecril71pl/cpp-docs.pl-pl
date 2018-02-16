@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fwrite
+ms.topic: reference
+apiname:
+- fwrite
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,22 +23,25 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: fwrite
-dev_langs: C++
+f1_keywords:
+- fwrite
+dev_langs:
+- C++
 helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7b830dfd7b0a9dace46336f8f02da14fc268daf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 73b5328ce6851ceb61ad3260760e95cd329ee064
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fwrite"></a>fwrite
 Zapisuje dane do strumienia.  
@@ -66,7 +71,7 @@ size_t fwrite(
  Wskaźnik do `FILE` struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `fwrite`Zwraca liczbę pełnych elementów zapisana, co może być mniejsza niż `count` w przypadku wystąpienia błędu. Ponadto jeśli wystąpi błąd, nie można ustalić wskaźnika położenia pliku. Jeśli dowolny `stream` lub `buffer` jest wskaźnika o wartości null, lub jeśli nieparzystą liczbę bajtów do zapisania określono w trybie Unicode, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia `errno` do `EINVAL` i zwraca wartość 0.  
+ `fwrite` Zwraca liczbę pełnych elementów zapisana, co może być mniejsza niż `count` w przypadku wystąpienia błędu. Ponadto jeśli wystąpi błąd, nie można ustalić wskaźnika położenia pliku. Jeśli dowolny `stream` lub `buffer` jest wskaźnika o wartości null, lub jeśli nieparzystą liczbę bajtów do zapisania określono w trybie Unicode, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia `errno` do `EINVAL` i zwraca wartość 0.  
   
 ## <a name="remarks"></a>Uwagi  
  `fwrite` Funkcja zapisuje do `count` elementów, z `size` długość, z `buffer` z danymi wyjściowymi `stream`. Wskaźnika pliku skojarzone z `stream` (jeśli istnieje) jest zwiększany o liczba bajtów zapisanych w rzeczywistości. Jeśli `stream` jest otwarty w trybie tekstowym każdego wysuwu wiersza jest zastępowany znak powrotu karetki - pary wysuwu wiersza. Zastąpienie nie ma wpływu na wartość zwracaną.  
@@ -79,7 +84,7 @@ size_t fwrite(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`fwrite`|\<stdio.h >|  
+|`fwrite`|\<stdio.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -90,5 +95,5 @@ size_t fwrite(
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [_setmode —](../../c-runtime-library/reference/setmode.md)   
  [fread —](../../c-runtime-library/reference/fread.md)   
- [_fwrite_nolock —](../../c-runtime-library/reference/fwrite-nolock.md)   
+ [_fwrite_nolock](../../c-runtime-library/reference/fwrite-nolock.md)   
  [_write](../../c-runtime-library/reference/write.md)

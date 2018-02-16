@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _statusfp2
 - _statusfp
@@ -31,7 +32,8 @@ f1_keywords:
 - _status87
 - status87
 - statusfp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - floating-point functions, getting status word
 - floating-point numbers, status word
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - floating-point functions
 - status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f7124b8236550f9e86e04ac56460426a080f137b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13fb4af11e17dbd0303b435090661c1b73456479
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
 Pobiera słowa stanu zmiennoprzecinkowych.  
@@ -80,7 +83,7 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
 ## <a name="remarks"></a>Uwagi  
  `_statusfp` Funkcja pobiera słowa stanu zmiennoprzecinkowych. Pobieranie słowa stanu jest kombinacją stanu procesora zmiennoprzecinkowych i innych warunków wykrytych przez program obsługi wyjątku zmiennoprzecinkowe — na przykład przepełnienie stosu zmiennoprzecinkowych i niedopełnienie. Zamaskowana wyjątki są sprawdzane pod kątem przed zawartość słowa stanu są zwracane. Oznacza to, wywołujący informowanie o oczekujących wyjątków. Na x86 platform, `_statusfp` zwraca kombinację x87 i stan zmiennoprzecinkowy SSE2. Na x64 platform, stan, który jest zwracany jest na podstawie SSE MXCSR stanu. Na platformach ARM `_statusfp` zwraca stan z rejestru FPSCR.  
   
- `_statusfp`jest niezależne od platformy, przenośne wersja `_status87`. Jest on identyczny `_status87` na platformach firmy Intel (x86) i jest również obsługiwana przez platformy ARM i x64. W celu zapewnienia przenośne do wszystkich architektury zmiennoprzecinkowe kodu, użyj `_statusfp`. Jeśli przeznaczonych tylko x86 platform, możesz użyć dowolnej `_status87` lub `_statusfp`.  
+ `_statusfp` jest niezależne od platformy, przenośne wersja `_status87`. Jest on identyczny `_status87` na platformach firmy Intel (x86) i jest również obsługiwana przez platformy ARM i x64. W celu zapewnienia przenośne do wszystkich architektury zmiennoprzecinkowe kodu, użyj `_statusfp`. Jeśli przeznaczonych tylko x86 platform, możesz użyć dowolnej `_status87` lub `_statusfp`.  
   
  Firma Microsoft zaleca `_statusfp2` dla mikroukłady (na przykład Pentium IV), które x87 i SSE2 procesora zmiennoprzecinkowych. Aby uzyskać `_statusfp2`, adresy są wypełniane przy użyciu słowa stanu zmiennoprzecinkowe x87 lub procesor zmiennoprzecinkowe SSE2. Mikroukładu obsługującego x87 i procesorów zmiennoprzecinkowe SSE2, EM_AMBIGUOUS jest ustawiona na 1, gdy `_statusfp` lub `_controlfp` jest używany i akcji został niejednoznaczne, ponieważ jego można odwoływać się do x87 lub słowa stanu zmiennoprzecinkowe SSE2. `_statusfp2` Funkcja jest obsługiwana tylko na x86 platform.  
   
@@ -90,7 +93,7 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_status87`, `_statusfp`, `_statusfp2`|\<float.h — >|  
+|`_status87`, `_statusfp`, `_statusfp2`|\<float.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -143,4 +146,4 @@ Status = 0x00080003 - inexact, underflow, denormal
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [_clear87 —, _clearfp —](../../c-runtime-library/reference/clear87-clearfp.md)   
- [_control87 —, _controlfp —, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)
+ [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)

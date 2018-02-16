@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _locking
+ms.topic: reference
+apiname:
+- _locking
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _locking
-dev_langs: C++
+f1_keywords:
+- _locking
+dev_langs:
+- C++
 helpviewer_keywords:
 - locking function
 - bytes [C++], locking file
@@ -30,16 +34,17 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 29211f494c905f3d82ebe3238706b2528dadce0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0acd33e3f33077dafee9bd6c4892a17b42e7afe0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="locking"></a>_locking
 Umożliwia zablokowanie lub odblokowanie pliku w bajtach.  
@@ -66,7 +71,7 @@ Umożliwia zablokowanie lub odblokowanie pliku w bajtach.
  Liczba bajtów do zablokowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_locking`Zwraca wartość 0 w przypadku powodzenia. Zwracana wartość -1 wskazuje błąd, w którym to przypadku [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ustawiono na jedną z następujących wartości.  
+ `_locking` Zwraca wartość 0 w przypadku powodzenia. Zwracana wartość -1 wskazuje błąd, w którym to przypadku [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ustawiono na jedną z następujących wartości.  
   
  `EACCES`  
  Blokowanie naruszenie (plik już zablokowana, czy odblokowana).  
@@ -102,13 +107,13 @@ Umożliwia zablokowanie lub odblokowanie pliku w bajtach.
  `_LK_UNLCK`  
  Umożliwia odblokowanie określonych bajtów, które należy wcześniej zablokowane.  
   
- Można zablokować pliku wielu regionach, które nie nakładają się. Trwa odblokowywanie region musi zostały wcześniej zablokowane. `_locking`Scala sąsiadujących ze sobą regionów; Jeśli sąsiadujących ze sobą dwóch regionach zablokowanym każdego regionu, musi być odblokowany oddzielnie. Regiony ma zostać zablokowana krótko i powinien zostać odblokowany przed zamknięciem pliku lub zakończenia programu.  
+ Można zablokować pliku wielu regionach, które nie nakładają się. Trwa odblokowywanie region musi zostały wcześniej zablokowane. `_locking` Scala sąsiadujących ze sobą regionów; Jeśli sąsiadujących ze sobą dwóch regionach zablokowanym każdego regionu, musi być odblokowany oddzielnie. Regiony ma zostać zablokowana krótko i powinien zostać odblokowany przed zamknięciem pliku lub zakończenia programu.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_locking`|\<IO.h > i \<sys/locking.h >|\<errno.h >|  
+|`_locking`|\<IO.h > i \<sys/locking.h >|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -182,5 +187,5 @@ Now I'm done. Do what you will with them
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

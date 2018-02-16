@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strerror
 - _strerror
@@ -35,7 +36,8 @@ f1_keywords:
 - _tcserror
 - _wcserror
 - tcserror
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strerror function
 - _strerror function
@@ -50,16 +52,17 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a268830c14025f3a9581a4ad28481a54fa9f4f71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 85fee7ce2b3c4264e8593082640489aae01cb9e0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strerror-strerror-wcserror-wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 Pobiera ciąg z komunikatem o system (`strerror`, `_wcserror`) lub Formatuje ciąg z komunikatem o dostarczone przez użytkownika (`_strerror`, `__wcserror`). Bezpieczniejsza wersje te funkcje są dostępne; zobacz [strerror_s —, _strerror_s —, _wcserror_s —, \__wcserror_s —](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md).  
@@ -103,7 +106,7 @@ if (( _access( "datafile",2 )) == -1 )
   
  Numer błędu `_strerror` jest przechowywana w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Aby uzyskać dokładne wyniki, należy wywołać `_strerror` natychmiast po procedury biblioteki zwraca błąd. W przeciwnym razie kolejne wywołania `strerror` lub `_strerror` mogą zastąpić `errno` wartość.  
   
- `_wcserror`i `__wcserror` wersji znaków dwubajtowych `strerror` i `_strerror`odpowiednio.  
+ `_wcserror` i `__wcserror` wersji znaków dwubajtowych `strerror` i `_strerror`odpowiednio.  
   
  `_strerror`, `_wcserror`, i `__wcserror` nie są częścią definicji ANSI; są one rozszerzenia Microsoft i firma Microsoft zaleca, aby używać ich miejscu kod przenośny. Zgodność ANSI, użyj `strerror` zamiast tego.  
   
@@ -119,9 +122,9 @@ if (( _access( "datafile",2 )) == -1 )
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strerror`|\<String.h >|  
-|`_strerror`|\<String.h >|  
-|`_wcserror`, `__wcserror`|\<String.h >|  
+|`strerror`|\<string.h>|  
+|`_strerror`|\<string.h>|  
+|`_wcserror`, `__wcserror`|\<string.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

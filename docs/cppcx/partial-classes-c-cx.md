@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e122f84bff2b815a00e50950b90230a9d50907a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7d6cd93a8f4d82bb5ecdc94c701d346f1331558c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="partial-classes-ccx"></a>Klasy częściowe (C + +/ CX)
 Klasy częściowej jest konstrukcję obsługuje scenariusze, w których modyfikujesz jednej części definicji klasy i automatyczne generowanie kodu oprogramowania — na przykład projektanta XAML — jest również modyfikowanie kodu w tej samej klasy. Za pomocą klasy częściowej, można zapobiec zastępowaniu kodu projektanta. W projekcie programu Visual Studio `partial` modyfikator jest automatycznie stosowane do wygenerowanego pliku.  
@@ -25,15 +26,15 @@ Klasy częściowej jest konstrukcję obsługuje scenariusze, w których modyfiku
 ## <a name="syntax"></a>Składnia  
  Aby zdefiniować klasy częściowej, użyj `partial` — słowo kluczowe bezpośrednio przed klucz klasy z definicji klasy normalne co byłoby. Słowo kluczowe, takie jak `partial ref class` jest kontekstowe słowo kluczowe znaków odstępu. Definicje częściowe są obsługiwane w następujących konstrukcji.  
   
--   `class`lub`struct`  
+-   `class` lub `struct`  
   
--   `ref class`lub`ref struct`  
+-   `ref class` lub `ref struct`  
   
--   `value class`lub`value struct`  
+-   `value class` lub `value struct`  
   
--   `enum`lub`enum class`  
+-   `enum` lub `enum class`  
   
--   `ref interface`, `interface class`, `interface struct`, lub`__interface`  
+-   `ref interface`, `interface class`, `interface struct`, lub `__interface`  
   
 -   `union`  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: __max
+ms.topic: reference
+apiname:
+- __max
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - max
 - __max
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - max macro
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 585d2a295bedb8b0ba49a893d5089bc682a1debd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1868106e4224e05d661aba5bfb0ed4dca31f508a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="max"></a>__max
 Zwraca większy z dwóch wartości.  
@@ -60,7 +64,7 @@ type __max(
  Wartości typu liczbowego do porównania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `__max`Zwraca większy z jego argumentów.  
+ `__max` Zwraca większy z jego argumentów.  
   
 ## <a name="remarks"></a>Uwagi  
  `__max` Makro porównuje dwie wartości i zwraca wartość typu, który większy. Argumenty mogą być dowolnego liczbowego typu danych, podpisu lub bez znaku. Zarówno argumentów i zwracana wartość musi być tego samego typu danych.  
@@ -69,7 +73,7 @@ type __max(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`__max`|\<stdlib.h >|  
+|`__max`|\<stdlib.h>|  
   
 ## <a name="example"></a>Przykład  
  Aby uzyskać więcej informacji, zobacz przykład [__min —](../../c-runtime-library/reference/min.md).  

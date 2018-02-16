@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fputs
 - fputws
@@ -27,7 +28,8 @@ f1_keywords:
 - fputs
 - fputws
 - _fputts
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - streams, writing strings to
 - fputws function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e4fcfe29abceb102534cd376c563917f3804d6df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 31c559e49712fa74d5cd457b528266c4eaeaa17a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 Zapisuje ciąg w strumieniu.  
@@ -75,9 +78,9 @@ int fputws(
  Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.  
   
 ## <a name="remarks"></a>Uwagi  
- Każdy z tych funkcji kopie `str` z danymi wyjściowymi `stream` w bieżącym położeniu. `fputws`kopiuje argument znaków dwubajtowych `str` do `stream` jako ciąg znaków wielobajtowych lub ciągiem znaków dwubajtowych zgodnie z czy `stream` odpowiednio jest otwarty w trybie tekstu lub w trybie binarnym. Żadna funkcja kopiuje znak końcowy null.  
+ Każdy z tych funkcji kopie `str` z danymi wyjściowymi `stream` w bieżącym położeniu. `fputws` kopiuje argument znaków dwubajtowych `str` do `stream` jako ciąg znaków wielobajtowych lub ciągiem znaków dwubajtowych zgodnie z czy `stream` odpowiednio jest otwarty w trybie tekstu lub w trybie binarnym. Żadna funkcja kopiuje znak końcowy null.  
   
- Dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `fputs`aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
+ Dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `fputs` aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -89,10 +92,10 @@ int fputws(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`fputs`|\<stdio.h >|  
+|`fputs`|\<stdio.h>|  
 |`fputws`|\<stdio.h > lub \<wchar.h >|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+ Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -116,5 +119,5 @@ Hello world from fputs.
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [fgets —, fgetws —](../../c-runtime-library/reference/fgets-fgetws.md)   
- [pobiera _getws —](../../c-runtime-library/gets-getws.md)   
+ [gets, _getws](../../c-runtime-library/gets-getws.md)   
  [puts, _putws](../../c-runtime-library/reference/puts-putws.md)

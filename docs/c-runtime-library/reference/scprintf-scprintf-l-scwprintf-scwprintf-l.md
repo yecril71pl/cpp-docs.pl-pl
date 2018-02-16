@@ -1,12 +1,13 @@
 ---
-title: "_scprintf —, _scprintf_l —, _scwprintf —, _scwprintf_l — | Dokumentacja firmy Microsoft"
+title: _scprintf, _scprintf_l, _scwprintf, _scwprintf_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _scprintf_l
 - _scwprintf
@@ -35,7 +36,8 @@ f1_keywords:
 - _sctprintf_l
 - scwprintf_l
 - _sctprintf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - scprintf function
 - sctprintf_l function
@@ -51,16 +53,17 @@ helpviewer_keywords:
 - _scprintf function
 - scwprintf function
 ms.assetid: ecbb0ba6-5f4c-4ce6-a64b-144ad8b5fe92
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d0746dcd985bc5d7a9b0e42708778f4021961874
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ca80ba6c14e0e8c34ea744362354e51f61407589
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 Zwraca liczbę znaków ciągu w formacie.  
@@ -101,7 +104,7 @@ int _scwprintf_l(
  Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca liczbę znaków, które będą generowane, jeśli był do wydrukowania lub wysyłane do pliku lub buforu przy użyciu określonego kody formatowania. Wartość zwracana nie zawiera znak końcowy null. `_scwprintf`taką samą funkcję wykonuje dla znaki dwubajtowe.  
+ Zwraca liczbę znaków, które będą generowane, jeśli był do wydrukowania lub wysyłane do pliku lub buforu przy użyciu określonego kody formatowania. Wartość zwracana nie zawiera znak końcowy null. `_scwprintf` taką samą funkcję wykonuje dla znaki dwubajtowe.  
   
  Jeśli `format` jest `NULL` wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw `errno` do `EINVAL`.  
   
@@ -126,7 +129,7 @@ int _scwprintf_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_scprintf`, `_scprintf_l`|\<stdio.h >|  
+|`_scprintf`, `_scprintf_l`|\<stdio.h>|  
 |`_scwprintf`, `_scwprintf_l`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -168,8 +171,8 @@ The value of Pi is calculated to be 3.141593.
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [fprintf —, _fprintf_l —, fwprintf — _fwprintf_l —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l —, wprintf, _wprintf_l —](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [sscanf —, _sscanf_l —, swscanf — _swscanf_l —](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
  [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)

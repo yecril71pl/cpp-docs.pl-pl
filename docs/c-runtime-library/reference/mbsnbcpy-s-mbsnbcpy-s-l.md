@@ -1,12 +1,13 @@
 ---
-title: "_mbsnbcpy_s —, _mbsnbcpy_s_l — | Dokumentacja firmy Microsoft"
+title: _mbsnbcpy_s, _mbsnbcpy_s_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
@@ -28,7 +29,8 @@ f1_keywords:
 - _mbsnbcpy_s
 - mbsnbcpy_s
 - _mbsnbcpy_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbsnbcpy_s function
 - tcsncpy_s function
@@ -39,22 +41,23 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 07fe25beabd14ab767c517a8f32786be3e6c53e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f36b2623133e5fcd7d1352713e8eb4ef207eba8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 Kopie `n` bajtów ciągu do ciągu docelowego. Te wersje programu [_mbsnbcpy —, _mbsnbcpy_l —](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -129,14 +132,14 @@ errno_t _mbsnbcpy_s_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_mbsnbcpy_s`|\<mbstring.h >|  
-|`_mbsnbcpy_s_l`|\<mbstring.h >|  
+|`_mbsnbcpy_s`|\<mbstring.h>|  
+|`_mbsnbcpy_s_l`|\<mbstring.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat —, _mbsnbcat_l —](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
  [_mbsnbcmp —, _mbsnbcmp_l —](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
  [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](../../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)   
  [_mbsnbicmp —, _mbsnbicmp_l —](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - swscanf
 - sscanf
@@ -31,7 +32,8 @@ f1_keywords:
 - _stscanf_l
 - sscanf
 - _swscanf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - swscanf function
 - _stscanf function
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2143605464eafb569fae003a6e574c51be4e2453
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 486b9be37f52210ae77eb5cef17dce3304d8adde
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 Odczyt sformatowane dane z ciągu. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [sscanf_s —, _sscanf_s_l —, swscanf_s —, _swscanf_s_l —](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).  
@@ -114,7 +117,7 @@ int _swscanf_l(
 > [!IMPORTANT]
 >  Podczas odczytywania ciągu z `sscanf`, zawsze określić szerokość `%s` format (na przykład `"%32s"` zamiast `"%s"`); w przeciwnym razie niewłaściwie sformatowany wprowadzania łatwo może spowodować przepełnienie buforu.  
   
- `swscanf`jest to wersja znaków dwubajtowych `sscanf`; argumenty `swscanf` są ciągami znaków dwubajtowych. `sscanf`nie obsługuje wielobajtowe znaków szesnastkowych. `swscanf`nie obsługuje szesnastkowych pełnej szerokości Unicode lub znaków "strefy zgodności". W przeciwnym razie `swscanf` i `sscanf` zachowują się tak samo.  
+ `swscanf` jest to wersja znaków dwubajtowych `sscanf`; argumenty `swscanf` są ciągami znaków dwubajtowych. `sscanf` nie obsługuje wielobajtowe znaków szesnastkowych. `swscanf` nie obsługuje szesnastkowych pełnej szerokości Unicode lub znaków "strefy zgodności". W przeciwnym razie `swscanf` i `sscanf` zachowują się tak samo.  
   
  Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.  
   
@@ -129,7 +132,7 @@ int _swscanf_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`sscanf`, `_sscanf_l`|\<stdio.h >|  
+|`sscanf`, `_sscanf_l`|\<stdio.h>|  
 |`swscanf`, `_swscanf_l`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -177,7 +180,7 @@ Real:     = 15.000000
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [fscanf —, _fscanf_l —, fwscanf — _fwscanf_l —](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)

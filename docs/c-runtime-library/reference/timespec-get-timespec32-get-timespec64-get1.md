@@ -1,5 +1,5 @@
 ---
-title: timespec_get _timespec32_get, _timespec64_get1 | Dokumentacja firmy Microsoft
+title: timespec_get, _timespec32_get, _timespec64_get1 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - timespec_get
 - _timespec32_get
@@ -36,24 +36,26 @@ f1_keywords:
 - timespec
 - _timespec32
 - _timespec64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - timespec_get function
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 681f9d125a7f45dae2a8e604df655facdd246067
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13b85eef72ed1a2180af1b41bf93eefe499967bd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="timespecget-timespec32get-timespec64get"></a>timespec_get _timespec32_get, _timespec64_get
+# <a name="timespecget-timespec32get-timespec64get"></a>timespec_get, _timespec32_get, _timespec64_get
 Ustawia interwał wskazywana przez pierwszy argument bieżący czas kalendarza na podstawie określonego czasu podstawowej.  
   
 ## <a name="syntax"></a>Składnia  
@@ -87,7 +89,7 @@ int _timespec64_get(
 ## <a name="remarks"></a>Uwagi  
  `timespec_get` Funkcje ustawiać bieżący czas w strukturze wskazywana przez `time_spec` argumentu. Wszystkie wersje tej struktury mają dwa elementy członkowskie, `tv_sec` i `tv_nsec`. `tv_sec` Ma wartość całkowitą liczbę sekund i `tv_nsec` z całkowitą liczbą nanosekundach zaokrąglona do rozdzielczość zegara systemowego od chwili uruchomienia epoki określony przez `base`.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Te funkcje obsługuje tylko `TIME_UTC` jako `base` wartość. To ustawienie `time_spec` wartość liczby sekund i nanosekundach, od momentu uruchomienia epoka północy, 1 stycznia 1970 r. uniwersalnego czasu koordynowanego (UTC). W `struct _timespec32`, `tv_sec` jest `__time32_t` wartość. W `struct _timespec64`, `tv_sec` jest `__time64_t` wartość. W `struct timespec`, `tv_sec` jest `time_t` typu, który jest 32-bitowy lub 64-bitowy długości w zależności od tego, czy _USE_32BIT_TIME_T makro preprocesora jest zdefiniowane. `timespec_get` Funkcji jest wbudowaną funkcją wywołującą `_timespec32_get` Jeśli zdefiniowano _USE_32BIT_TIME_T; w przeciwnym razie wywołuje `_timespec64_get`.  
   
@@ -104,11 +106,11 @@ int _timespec64_get(
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
  [asctime —, _wasctime —](../../c-runtime-library/reference/asctime-wasctime.md)   
- [asctime_s —, _wasctime_s —](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [_ftime —, _ftime32 —, _ftime64 —](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime —, _gmtime32 —, _gmtime64 —](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [gmtime_s —, _gmtime32_s —, _gmtime64_s —](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
  [czas lokalny, _localtime32 —, _localtime64 —](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [localtime_s —, _localtime32_s —, _localtime64_s —](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [czas, _time32 —, _time64 —](../../c-runtime-library/reference/time-time32-time64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)

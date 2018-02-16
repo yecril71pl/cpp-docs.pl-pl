@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _heapwalk
+ms.topic: reference
+apiname:
+- _heapwalk
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,28 +26,30 @@ apitype: DLLExport
 f1_keywords:
 - heapwalk
 - _heapwalk
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 87ff27007734f84b93d0ecb36f637ae22f72098b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 82b2a69fba87d86b01c4f4e3b8ad140e2bcde3ef
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="heapwalk"></a>_heapwalk
 Przechodzi przez stos i zwraca informacje o następnej pozycji.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows z wyjątkiem w kompilacjach debugowania. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows z wyjątkiem w kompilacjach debugowania. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -60,7 +64,7 @@ int _heapwalk(
  Bufor zawiera informacje o stercie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_heapwalk`Zwraca jedną z następujących manifestu stałe całkowite zdefiniowane w Malloc.h.  
+ `_heapwalk` Zwraca jedną z następujących manifestu stałe całkowite zdefiniowane w Malloc.h.  
   
  `_HEAPBADBEGIN`  
  Informacje o nagłówku początkowej nieprawidłowy lub nie została znaleziona.  
@@ -69,7 +73,7 @@ int _heapwalk(
  Stercie odnaleziono uszkodzony lub nieprawidłowy węzeł.  
   
  `_HEAPBADPTR`  
- `_pentry`pole `_HEAPINFO` struktura nie zawiera prawidłowego wskaźnika w stercie lub `entryinfo` jest wskaźnika o wartości null.  
+ `_pentry` pole `_HEAPINFO` struktura nie zawiera prawidłowego wskaźnika w stercie lub `entryinfo` jest wskaźnika o wartości null.  
   
  `_HEAPEND`  
  Osiągnięto koniec sterty pomyślnie się.  
@@ -102,7 +106,7 @@ int _heapwalk(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_heapwalk`|\<malloc.h >|\<errno.h >|  
+|`_heapwalk`|\<malloc.h>|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -192,6 +196,6 @@ OK - end of heap
 ## <a name="see-also"></a>Zobacz też  
  [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)   
  [_heapadd —](../../c-runtime-library/heapadd.md)   
- [_heapchk —](../../c-runtime-library/reference/heapchk.md)   
+ [_heapchk](../../c-runtime-library/reference/heapchk.md)   
  [_heapmin —](../../c-runtime-library/reference/heapmin.md)   
  [_heapset](../../c-runtime-library/heapset.md)

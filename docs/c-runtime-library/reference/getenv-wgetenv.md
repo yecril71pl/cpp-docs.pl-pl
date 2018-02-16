@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - getenv
 - _wgetenv
@@ -27,7 +28,8 @@ f1_keywords:
 - _wgetenv
 - getenv
 - _tgetenv
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - getenv function
 - tgetenv function
@@ -37,22 +39,23 @@ helpviewer_keywords:
 - _tgetenv function
 - _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e0d010e7b04093446792eb122a67227880b7a395
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 99d9104959dccf4a6879c4e929a1cdc281317171
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getenv-wgetenv"></a>getenv, _wgetenv
 Pobiera wartość po bieżącym środowisku. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [getenv_s —, _wgetenv_s —](../../c-runtime-library/reference/getenv-s-wgetenv-s.md).  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -73,11 +76,11 @@ wchar_t *_wgetenv(
  Zwraca wskaźnik do środowiska tabeli wpis zawierający `varname`. Nie jest bezpieczne zmodyfikować wartość zmiennej środowiskowej przy użyciu wskaźnika zwrócony. Użyj `_putenv` funkcji, aby zmodyfikować wartość zmiennej środowiskowej. Wartość zwracana jest `NULL` Jeśli `varname` nie można odnaleźć tabeli środowiska.  
   
 ## <a name="remarks"></a>Uwagi  
- `getenv` Funkcja wyszukuje listę zmiennych środowiskowych dla `varname`. `getenv`nie jest uwzględniana wielkość liter w systemie operacyjnym Windows. `getenv`i `_putenv` użyj kopii środowiska wskazywanej przez zmienną globalne `_environ` można uzyskiwać dostęp do środowiska. `getenv`działa tylko na dostęp do biblioteki wykonawczej struktury danych, a nie na środowisko "segmentu" tworzone przez system operacyjny dla procesu. W związku z tym programy używające `envp` argument [głównego](../../cpp/main-program-startup.md) lub [wmain](../../cpp/main-program-startup.md) może pobrać nieprawidłowe informacje.  
+ `getenv` Funkcja wyszukuje listę zmiennych środowiskowych dla `varname`. `getenv` nie jest uwzględniana wielkość liter w systemie operacyjnym Windows. `getenv` i `_putenv` użyj kopii środowiska wskazywanej przez zmienną globalne `_environ` można uzyskiwać dostęp do środowiska. `getenv` działa tylko na dostęp do biblioteki wykonawczej struktury danych, a nie na środowisko "segmentu" tworzone przez system operacyjny dla procesu. W związku z tym programy używające `envp` argument [głównego](../../cpp/main-program-startup.md) lub [wmain](../../cpp/main-program-startup.md) może pobrać nieprawidłowe informacje.  
   
  Jeśli `varname` jest `NULL`, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia `errno` do `EINVAL` i zwraca `NULL`.  
   
- `_wgetenv`jest to wersja znaków dwubajtowych `getenv`; argumentów i wartości `_wgetenv` są ciągami znaków dwubajtowych. `_wenviron` — Zmienna globalna jest wersja znaków dwubajtowych `_environ`.  
+ `_wgetenv` jest to wersja znaków dwubajtowych `getenv`; argumentów i wartości `_wgetenv` są ciągami znaków dwubajtowych. `_wenviron` — Zmienna globalna jest wersja znaków dwubajtowych `_environ`.  
   
  W programie MBCS (na przykład w programie SBCS ASCII) `_wenviron` jest początkowo `NULL` ponieważ środowisko składa się z ciągów znaków wielobajtowych. Następnie w pierwszym wywołaniu `_wputenv`, lub w pierwszym wywołaniu `_wgetenv` po środowisko (MBCS) już istnieje, odpowiednie środowisko ciąg znaków dwubajtowych tworzy, a następnie jest wskazywana przez `_wenviron`.  
   
@@ -89,7 +92,7 @@ wchar_t *_wgetenv(
 >  W rzadkich przypadkach gdy system czasu wykonywania jest obsługę zarówno wersji Unicode, jak i wielobajtowe wersji środowiska, tych wersji środowiska dwóch mogą nie odpowiadać dokładnie. To dlatego, chociaż dowolny unikatowy ciąg znaków wielobajtowych mapuje z unikatowym ciągiem Unicode, mapowanie unikatowy ciąg Unicode na ciąg znaków wielobajtowych nie jest zawsze unikatowa. Aby uzyskać więcej informacji, zobacz [_environ —, _wenviron —](../../c-runtime-library/environ-wenviron.md).  
   
 > [!NOTE]
->  `_putenv` i `_getenv` rodzin funkcje nie są wątkowo. `_getenv`można zwracać wskaźnik ciągu podczas `_putenv` modyfikuje ciągu znaków powoduje losowe awarie. Upewnij się, że wywołania te funkcje są zsynchronizowane.  
+>  `_putenv` i `_getenv` rodzin funkcje nie są wątkowo. `_getenv` można zwracać wskaźnik ciągu podczas `_putenv` modyfikuje ciągu znaków powoduje losowe awarie. Upewnij się, że wywołania te funkcje są zsynchronizowane.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -103,7 +106,7 @@ wchar_t *_wgetenv(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`getenv`|\<stdlib.h >|  
+|`getenv`|\<stdlib.h>|  
 |`_wgetenv`|\<stdlib.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

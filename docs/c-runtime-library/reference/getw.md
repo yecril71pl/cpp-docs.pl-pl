@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _getw
+ms.topic: reference
+apiname:
+- _getw
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,23 +23,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _getw
-dev_langs: C++
+f1_keywords:
+- _getw
+dev_langs:
+- C++
 helpviewer_keywords:
 - _getw function
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8850bd13d8aa1ed0412ae93843784cb560be4a0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dbfba71c98b347cec3ef56143cce34b1550e4149
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getw"></a>_getw
 Pobiera liczbę całkowitą ze strumienia.  
@@ -55,16 +60,16 @@ int _getw(
  Wskaźnik do `FILE` struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_getw`Zwraca wartość liczby całkowitej do odczytu. Zwracana wartość `EOF` wskazuje błąd lub koniec pliku. Jednak ponieważ `EOF` wartości jest również wartością całkowitą uzasadnione, użyj `feof` lub `ferror` można zweryfikować warunek plik końcowy lub błędu. Jeśli `stream` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i funkcja zwraca `EOF`.  
+ `_getw` Zwraca wartość liczby całkowitej do odczytu. Zwracana wartość `EOF` wskazuje błąd lub koniec pliku. Jednak ponieważ `EOF` wartości jest również wartością całkowitą uzasadnione, użyj `feof` lub `ferror` można zweryfikować warunek plik końcowy lub błędu. Jeśli `stream` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i funkcja zwraca `EOF`.  
   
 ## <a name="remarks"></a>Uwagi  
- `_getw` Funkcja odczytuje następny wartości binarnej typu `int` z pliku skojarzone z `stream` i zwiększa wskaźnik skojarzony plik (jeśli istnieje) aby wskazywały na następny znak nieprzeczytana. `_getw`nie przyjmuje żadnych specjalnych wyrównania elementów w strumieniu. Może wystąpić problemy z eksportowanie `_getw` ponieważ rozmiar `int` typu i kolejności bajtów w ramach `int` typu różnią się w różnych systemach.  
+ `_getw` Funkcja odczytuje następny wartości binarnej typu `int` z pliku skojarzone z `stream` i zwiększa wskaźnik skojarzony plik (jeśli istnieje) aby wskazywały na następny znak nieprzeczytana. `_getw` nie przyjmuje żadnych specjalnych wyrównania elementów w strumieniu. Może wystąpić problemy z eksportowanie `_getw` ponieważ rozmiar `int` typu i kolejności bajtów w ramach `int` typu różnią się w różnych systemach.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_getw`|\<stdio.h >|  
+|`_getw`|\<stdio.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

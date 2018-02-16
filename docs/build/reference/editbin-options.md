@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: editbin
-dev_langs: C++
-helpviewer_keywords: EDITBIN program, options
+f1_keywords:
+- editbin
+dev_langs:
+- C++
+helpviewer_keywords:
+- EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2658b2ca23ef34b63e0788791f3fb528107e1efd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="editbin-options"></a>Opcje EDITBIN
 Aby zmodyfikować plików obiektów, plików wykonywalnych i bibliotek dołączanych dynamicznie (dll), można użyć polecenia EDITBIN. Opcje określ zmiany, które wprowadza polecenia EDITBIN.  
@@ -33,15 +38,15 @@ Aby zmodyfikować plików obiektów, plików wykonywalnych i bibliotek dołącza
 |------------|-------------|  
 |[/ALLOWBIND](../../build/reference/allowbind.md)|Określa, czy biblioteka DLL może być powiązana.|  
 |[/ALLOWISOLATION](../../build/reference/allowisolation.md)|Określa plik DLL lub pliku wykonywalnego przeszukiwanie manifestu zachowanie.|  
-|[/APPCONTAINER](../../build/reference/appcontainer.md)|Określa, czy uruchomić aplikację w kontenerze AppContainer — na przykład [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji.|  
+|[/APPCONTAINER](../../build/reference/appcontainer.md)|Określa, czy uruchomić aplikację w kontenerze AppContainer — na przykład aplikacji platformy uniwersalnej systemu Windows.|  
 |[/BIND](../../build/reference/bind.md)|Ustawia adres punktów wejścia w określonych obiektów do czasu ładowania szybkości.|  
 |[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Określa, czy plik DLL lub wykonywalnego obrazu może być losowo przebazowanych w trakcie ładowania przy użyciu randomizacji układu przestrzeni adresowej (ASLR).|  
-|[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Raporty wewnętrzne błędy do firmy Microsoft.|  
+|[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Raporty wewnętrzne błędy do firmy Microsoft.|  
 |[/HEAP](../../build/reference/heap.md)|Ustawia rozmiar sterty obrazu wykonywalnego w bajtach.|  
 |[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Określa, czy plik DLL lub obrazu wykonywalnego obsługuje wysokiej entropii randomizacji układu przestrzeni adresowej (64-bitowy) (ASLR).|  
 |[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Określa, czy do sprawdzenia podpisu cyfrowego w czasie ładowania.|  
 |[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Określa, czy obiekt obsługuje adresy, które są większe niż dwa gigabajty.|  
-|[/ NOLOGO](../../build/reference/nologo-editbin.md)|Pomijaj transparent startowy polecenia EDITBIN.|  
+|[/NOLOGO](../../build/reference/nologo-editbin.md)|Pomijaj transparent startowy polecenia EDITBIN.|  
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|Określa, czy obraz wykonywalny jest zgodny z zapobieganiem wykonywaniu danych systemu Windows.|  
 |[/REBASE](../../build/reference/rebase.md)|Ustawia adres podstawowy dla określonych obiektów.|  
 |[/RELEASE](../../build/reference/release.md)|Ustawia sumę kontrolną w nagłówku.|  

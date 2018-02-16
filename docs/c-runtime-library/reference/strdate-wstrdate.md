@@ -1,12 +1,13 @@
 ---
-title: "_strdate —, _wstrdate — | Dokumentacja firmy Microsoft"
+title: _strdate, _wstrdate | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strdate
 - _wstrdate
@@ -29,7 +30,8 @@ f1_keywords:
 - _wstrdate
 - _strdate
 - strdate
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strdate function
 - dates, copying
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 54c7aa7fda123e811f23c2cc4b9e8d81f76966df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d81daed9666825446ab3a4a42ca0a9806531e2c2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 Skopiuj bieżącą datę systemową w buforze. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_strdate_s —, _wstrdate_s —](../../c-runtime-library/reference/strdate-s-wstrdate-s.md).  
@@ -87,7 +90,7 @@ wchar_t *_wstrdate(
   
  Jeśli `datestr` jest `NULL` wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw `errno` do `EINVAL`.  
   
- `_wstrdate`jest to wersja znaków dwubajtowych `_strdate`; argumentów i wartości `_wstrdate` są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
+ `_wstrdate` jest to wersja znaków dwubajtowych `_strdate`; argumentów i wartości `_wstrdate` są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
   
  W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -101,7 +104,7 @@ wchar_t *_wstrdate(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_strdate`|\<Time.h >|  
+|`_strdate`|\<time.h>|  
 |`_wstrdate`|\<Time.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -135,9 +138,9 @@ OS date: 04/25/03
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
  [asctime —, _wasctime —](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime —, _ctime32 —, _ctime64 —, _wctime — _wctime32 —, _wctime64 —](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime —, _gmtime32 —, _gmtime64 —](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
  [czas lokalny, _localtime32 —, _localtime64 —](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [mktime —, _mktime32 —, _mktime64 —](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
- [czas, _time32 —, _time64 —](../../c-runtime-library/reference/time-time32-time64.md)   
+ [mktime, _mktime32, _mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [_tzset](../../c-runtime-library/reference/tzset.md)

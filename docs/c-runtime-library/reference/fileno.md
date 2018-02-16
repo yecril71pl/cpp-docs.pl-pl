@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fileno
+ms.topic: reference
+apiname:
+- _fileno
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,24 +23,27 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _fileno
-dev_langs: C++
+f1_keywords:
+- _fileno
+dev_langs:
+- C++
 helpviewer_keywords:
 - file handles [C++], getting from streams
 - fileno function
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fab2792c46579ef702dfd16cdd248de3d4b7076c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d0ce17b75ea74154121549209aed94b0a3affea
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fileno"></a>_fileno
 Pobiera deskryptor pliku skojarzone z strumienia.  
@@ -56,7 +61,7 @@ int _fileno(
  Wskaźnik do `FILE` struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_fileno`zwraca deskryptor pliku. Nie ma żadnych zwracany błąd. Wynik jest niezdefiniowana, jeśli `stream` nie określa plik. W przypadku strumienia `NULL`, `_fileno` wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca wartość -1 i zestawy `errno` do `EINVAL`.  
+ `_fileno` zwraca deskryptor pliku. Nie ma żadnych zwracany błąd. Wynik jest niezdefiniowana, jeśli `stream` nie określa plik. W przypadku strumienia `NULL`, `_fileno` wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca wartość -1 i zestawy `errno` do `EINVAL`.  
   
  Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -70,7 +75,7 @@ int _fileno(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`_fileno`|\<stdio.h >|  
+|`_fileno`|\<stdio.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

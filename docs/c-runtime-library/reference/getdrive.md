@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _getdrive
+ms.topic: reference
+apiname:
+- _getdrive
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,29 +26,31 @@ apitype: DLLExport
 f1_keywords:
 - _getdrive
 - getdrive
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - current disk drive
 - getdrive function
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 05862a7506b58b7038b3e079cbc48d72175a4ba5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e41f98c6dbf270092a3064f064945a125fce1d62
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getdrive"></a>_getdrive
 Pobiera bieżącego dysku.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -61,7 +65,7 @@ int _getdrive( void );
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_getdrive`|\<Direct.h >|  
+|`_getdrive`|\<direct.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -117,6 +121,6 @@ G: (Current directory is G:\)
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrola katalogu](../../c-runtime-library/directory-control.md)   
- [_chdrive —](../../c-runtime-library/reference/chdrive.md)   
- [_getcwd —, _wgetcwd —](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
+ [_chdrive](../../c-runtime-library/reference/chdrive.md)   
+ [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
  [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)

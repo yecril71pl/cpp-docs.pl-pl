@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _lsearch_s
+ms.topic: reference
+apiname:
+- _lsearch_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch_s
 - lsearch_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - linear searching
 - values, searching for
@@ -34,16 +37,17 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a54af825a9b9b0f0ca36c2f733d5df85d808a13a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a680c990ec91edf225057ea729fd3343a57610d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lsearchs"></a>_lsearch_s
 Wykonuje wyszukiwanie liniowe dla wartości. Wersja [_lsearch —](../../c-runtime-library/reference/lsearch.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -92,12 +96,12 @@ void *_lsearch_s(
 |`NULL`|wszystkie|wszystkie|wszystkie|wszystkie|`EINVAL`|  
 |wszystkie|`NULL`|wszystkie|!= 0|wszystkie|`EINVAL`|  
 |wszystkie|wszystkie|wszystkie|wszystkie|zero|`EINVAL`|  
-|wszystkie|wszystkie|`NULL`|Wystąpił|wszystkie|`EINVAL`|  
+|wszystkie|wszystkie|`NULL`|an|wszystkie|`EINVAL`|  
   
 ## <a name="remarks"></a>Uwagi  
  `_lsearch_s` Funkcja wykonuje wyszukiwanie liniowe dla wartości `key` w tablicy `num` z elementów `width` bajtów. W odróżnieniu od `bsearch_s`, `_lsearch_s` nie wymaga tablicy ma zostać posortowana. Jeśli `key` nie zostanie znaleziony, następnie `_lsearch_s` dodaje go do końca tablicy i zwiększa `num`.  
   
- `compare` Funkcji jest wskaźnikiem do procedury dostarczone przez użytkownika, który porównuje dwa elementy tablicy i zwraca wartość określającą ich relacji. `compare` Funkcja przyjmuje również wskaźnik do kontekstu jako pierwszego argumentu. `_lsearch_s`wywołania `compare` jeden lub więcej razy podczas wyszukiwania przekazywanie wskaźników do dwóch elementów tablicy przy każdym wywołaniu. `compare`należy porównać elementy, a następnie wróć albo różną od zera (to znaczy elementy są inne) lub wartość 0 (tzn. elementy są identyczne).  
+ `compare` Funkcji jest wskaźnikiem do procedury dostarczone przez użytkownika, który porównuje dwa elementy tablicy i zwraca wartość określającą ich relacji. `compare` Funkcja przyjmuje również wskaźnik do kontekstu jako pierwszego argumentu. `_lsearch_s` wywołania `compare` jeden lub więcej razy podczas wyszukiwania przekazywanie wskaźników do dwóch elementów tablicy przy każdym wywołaniu. `compare` należy porównać elementy, a następnie wróć albo różną od zera (to znaczy elementy są inne) lub wartość 0 (tzn. elementy są identyczne).  
   
  `context` Wskaźnika może być przydatna, jeśli struktura przeszukane danych jest częścią obiektu i `compare` funkcji ma dostęp do elementów członkowskich obiektu. Na przykład kodu w `compare` funkcji można rzutować wskaźnika void do odpowiedniego obiektu członków typu i dostępu do tego obiektu. Dodanie `context` sprawia, że wskaźnik `_lsearch_s` bardziej bezpieczne, ponieważ dodatkowy kontekst mogą zostać użyte w celu uniknięcia ponownego rozpoczęcia błędów związanych z użyciem zmienne statyczne, aby udostępnić dane `compare` funkcji.  
   
@@ -105,12 +109,12 @@ void *_lsearch_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_lsearch_s`|\<Search.h >|  
+|`_lsearch_s`|\<search.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch_s —](../../c-runtime-library/reference/bsearch-s.md)   
- [_lfind_s —](../../c-runtime-library/reference/lfind-s.md)   
+ [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
  [_lsearch](../../c-runtime-library/reference/lsearch.md)

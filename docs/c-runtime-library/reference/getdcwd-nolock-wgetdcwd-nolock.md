@@ -1,12 +1,13 @@
 ---
-title: "_getdcwd_nolock —, _wgetdcwd_nolock — | Dokumentacja firmy Microsoft"
+title: _getdcwd_nolock, _wgetdcwd_nolock | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
@@ -29,7 +30,8 @@ f1_keywords:
 - _getdcwd_nolock
 - _tgetdcwd_nolock
 - getdcwd_nolock
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - getdcwd_nolock function
 - _tgetdcwd_nolock function
@@ -41,22 +43,23 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9f7af4e5f70af65990cde399eadd3e6481240395
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7c1d9f4c57ef942f11f5e5dee79356a3e2d7f47a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 Pobiera pełną ścieżkę bieżącego katalogu roboczego na określonym dysku.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -87,7 +90,7 @@ wchar_t *_wgetdcwd_nolock(
  Zobacz [_getdcwd —, _wgetdcwd —](../../c-runtime-library/reference/getdcwd-wgetdcwd.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `_getdcwd_nolock`i `_wgetdcwd_nolock` są takie same jak `_getdcwd` i `_wgetdcwd`odpowiednio z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.  
+ `_getdcwd_nolock` i `_wgetdcwd_nolock` są takie same jak `_getdcwd` i `_wgetdcwd`odpowiednio z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -99,15 +102,15 @@ wchar_t *_wgetdcwd_nolock(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_getdcwd_nolock`|\<Direct.h >|  
+|`_getdcwd_nolock`|\<direct.h>|  
 |`_wgetdcwd_nolock`|\<Direct.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrola katalogu](../../c-runtime-library/directory-control.md)   
- [_chdir —, _wchdir —](../../c-runtime-library/reference/chdir-wchdir.md)   
- [_getcwd —, _wgetcwd —](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [_getdrive —](../../c-runtime-library/reference/getdrive.md)   
- [_mkdir —, _wmkdir —](../../c-runtime-library/reference/mkdir-wmkdir.md)   
+ [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
+ [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
+ [_getdrive](../../c-runtime-library/reference/getdrive.md)   
+ [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
  [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)

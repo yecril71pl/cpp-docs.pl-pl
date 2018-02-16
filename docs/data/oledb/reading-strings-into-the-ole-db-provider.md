@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: OLE DB providers, reading strings into
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e798b3e85bbb5d6b362900c25d4c3414458ea63d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b57c9e9a71e8a0b603207a095e2bede333ed6ed6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Wczytywanie ciągów do dostawcy OLE DB
-`RMyProviderRowset::Execute` Funkcji otwiera plik i odczytuje ciągów. Konsument przekazuje nazwę pliku do dostawcy przez wywołanie metody [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Dostawca otrzymuje nazwę pliku i zapisuje go w zmiennej członkowskiej `m_szCommandText`. `Execute`odczytuje nazwę pliku z `m_szCommandText`. Jeśli nazwa pliku jest nieprawidłowa lub plik jest niedostępny, `Execute` zwraca błąd. W przeciwnym razie zostanie otwarty plik i wywołania `fgets` można pobrać ciągów. Dla każdego zestawu ciągów go odczytów, `Execute` tworzy wystąpienie rekord użytkownika (`CAgentMan`) i umieszcza je w tablicy.  
+`RMyProviderRowset::Execute` Funkcji otwiera plik i odczytuje ciągów. Konsument przekazuje nazwę pliku do dostawcy przez wywołanie metody [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Dostawca otrzymuje nazwę pliku i zapisuje go w zmiennej członkowskiej `m_szCommandText`. `Execute` odczytuje nazwę pliku z `m_szCommandText`. Jeśli nazwa pliku jest nieprawidłowa lub plik jest niedostępny, `Execute` zwraca błąd. W przeciwnym razie zostanie otwarty plik i wywołania `fgets` można pobrać ciągów. Dla każdego zestawu ciągów go odczytów, `Execute` tworzy wystąpienie rekord użytkownika (`CAgentMan`) i umieszcza je w tablicy.  
   
  Jeśli nie można otworzyć pliku, `Execute` musi zwracać **DB_E_NOTABLE**. Jeśli zmienna zwraca **E_FAIL** zamiast tego dostawcy nie będą działać z wielu konsumentów i nie przejdą OLE DB [testów zgodności z](../../data/oledb/testing-your-provider.md).  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
 class RMyProviderRowset : public CRowsetImpl< RMyProviderRowset, CAgentMan, CRMyProviderCommand>  

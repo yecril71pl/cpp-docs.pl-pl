@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mkgmtime32
 - _mkgmtime64
@@ -31,7 +32,8 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0f99e367d263d3ba49837b269fd04159a70cf549
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7eec9b123c47b13c73836fd41a2c490951e4fecd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 Konwertuje godzinę UTC reprezentowany przez `tm struct` czas UTC reprezentowany przez `time_t` typu.  
@@ -82,7 +85,7 @@ __time64_t _mkgmtime64(
 ## <a name="remarks"></a>Uwagi  
  `_mkgmtime32` i `_mkgmtime64` funkcji Konwertuje czas UTC `__time32_t` lub `__time64_t` typu reprezentującą godzinę w formacie UTC. Aby przekonwertować czasu lokalnego do czasu UTC, użyj `mktime`, `_mktime32`, i `_mktime64` zamiast tego.  
   
- `_mkgmtime`jest wbudowaną funkcją, która daje w wyniku `_mkgmtime64`, i `time_t` jest odpowiednikiem `__time64_t`. Aby wymusić kompilatora, aby zinterpretować `time_t` jako starego 32-bitowych `time_t`, można zdefiniować `_USE_32BIT_TIME_T`. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 (maksymalną wielkość zakresu 32-bitowa `time_t`), i jest niedozwolona w ogóle na platformach 64-bitowych.  
+ `_mkgmtime` jest wbudowaną funkcją, która daje w wyniku `_mkgmtime64`, i `time_t` jest odpowiednikiem `__time64_t`. Aby wymusić kompilatora, aby zinterpretować `time_t` jako starego 32-bitowych `time_t`, można zdefiniować `_USE_32BIT_TIME_T`. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 (maksymalną wielkość zakresu 32-bitowa `time_t`), i jest niedozwolona w ogóle na platformach 64-bitowych.  
   
  Czas struktury przekazano zostanie zmieniona, w taki sam sposób jak zostały zmienione z `_mktime` funkcji: `tm_wday` i `tm_yday` pola są ustawione na nowe wartości na podstawie wartości z `tm_mday` i `tm_year`. Podczas określania `tm` struktury czasu, należy ustawić `tm_isdst` pole do:  
   
@@ -92,7 +95,7 @@ __time64_t _mkgmtime64(
   
 -   Wartość mniejszą niż zero, aby kod biblioteki wykonawczej języka C obliczeniowe, czy (czas standardowy) lub czas letni jest włączona.  
   
- Biblioteki wykonawcze języka C używa zmiennej środowiskowej TZ w celu określenia czasu letniego poprawne. Jeśli TZ nie jest ustawiona, system operacyjny jest poddawany kwerendzie uzyskać poprawny letniego regionalnych zachowania w czasie. `tm_isdst`pole jest wymagane. Jeśli nie jest ustawiona, jej wartości są niezdefiniowane i wartość zwrotną z elementu `mktime` będzie nieprzewidywalny.  
+ Biblioteki wykonawcze języka C używa zmiennej środowiskowej TZ w celu określenia czasu letniego poprawne. Jeśli TZ nie jest ustawiona, system operacyjny jest poddawany kwerendzie uzyskać poprawny letniego regionalnych zachowania w czasie. `tm_isdst` pole jest wymagane. Jeśli nie jest ustawiona, jej wartości są niezdefiniowane i wartość zwrotną z elementu `mktime` będzie nieprzewidywalny.  
   
  Zakres `_mkgmtime32` funkcji jest od północy, 1 stycznia 1970 UTC do 23:59:59 18 stycznia 2038 r., UTC. Zakres `_mkgmtime64` się od północy, 1 stycznia 1970 UTC na 23:59:59 31 grudnia 3000 UTC. Zwracana wartość -1 powoduje Data out-of-range. Zakres `_mkgmtime` zależy od tego, czy `_USE_32BIT_TIME_T` jest zdefiniowany. Jeśli nie zdefiniowano (ustawienie domyślne) zakres jest `_mkgmtime64`; w przeciwnym razie zakres jest ograniczona do zakresu 32-bitowych `_mkgmtime32`.  
   
@@ -196,9 +199,9 @@ After calling _mkgmtime, t1 = Wed Feb 12 00:00:00 2003
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
  [asctime —, _wasctime —](../../c-runtime-library/reference/asctime-wasctime.md)   
- [asctime_s —, _wasctime_s —](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [gmtime —, _gmtime32 —, _gmtime64 —](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [gmtime_s —, _gmtime32_s —, _gmtime64_s —](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
  [localtime_s —, _localtime32_s —, _localtime64_s —](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [mktime —, _mktime32 —, _mktime64 —](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
+ [mktime, _mktime32, _mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
  [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

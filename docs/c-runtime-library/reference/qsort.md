@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: qsort
+ms.topic: reference
+apiname:
+- qsort
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,24 +24,27 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: qsort
-dev_langs: C++
+f1_keywords:
+- qsort
+dev_langs:
+- C++
 helpviewer_keywords:
 - qsort function
 - quick-sort algorithm
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0e3f6d964f4cf4debefa3044a458704554233447
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6a39f6edf9dfdf2130bfe9d00cc2a9453f48ad9f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="qsort"></a>qsort
 Wykonuje szybkie sortowanie. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [qsort_s —](../../c-runtime-library/reference/qsort-s.md).  
@@ -69,9 +74,9 @@ void qsort(
  Wskaźnik do procedury dostarczone przez użytkownika, który porównuje dwa elementy tablicy i zwraca wartość określającą ich relacji.  
   
 ## <a name="remarks"></a>Uwagi  
- `qsort` Funkcja implementuje algorytm szybkiego sortowania, aby posortować tablicę `num` z elementów `width` bajtów. Argument `base` wskaźnik do podstawy tablicy ma zostać posortowana. `qsort`zastąpienie tej tablicy przy użyciu posortowanych elementów.  
+ `qsort` Funkcja implementuje algorytm szybkiego sortowania, aby posortować tablicę `num` z elementów `width` bajtów. Argument `base` wskaźnik do podstawy tablicy ma zostać posortowana. `qsort` zastąpienie tej tablicy przy użyciu posortowanych elementów.  
   
- `qsort`wywołania `compare` rutynowych co najmniej jeden razy podczas sortowania i przekazuje wskaźników do dwóch elementów tablicy przy każdym wywołaniu.  
+ `qsort` wywołania `compare` rutynowych co najmniej jeden razy podczas sortowania i przekazuje wskaźników do dwóch elementów tablicy przy każdym wywołaniu.  
   
 ```  
 compare( (void *) & elem1, (void *) & elem2 );  
@@ -81,9 +86,9 @@ compare( (void *) & elem1, (void *) & elem2 );
   
 |Porównaj wartości zwracanej — funkcja|Opis|  
 |-----------------------------------|-----------------|  
-|< 0|`elem1`mniej niż`elem2`|  
-|0|`elem1`wartość równoważna wartości`elem2`|  
-|> 0|`elem1`większa niż`elem2`|  
+|< 0|`elem1` Mniej niż `elem2`|  
+|0|`elem1` Wartość równoważna wartości `elem2`|  
+|> 0|`elem1` Większa niż `elem2`|  
   
  Tablicy jest sortowany w kolejności rosnącej, zgodnie z definicją przez funkcję porównania. Sortowanie tablicy w kolejności malejącej, należy wycofać rozumieniu "większe niż" i "poniżej" w funkcji porównania.  
   

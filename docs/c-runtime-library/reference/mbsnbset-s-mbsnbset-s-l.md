@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbset_s_l
 - _mbsnbset_s
@@ -28,7 +29,8 @@ f1_keywords:
 - _mbsnbset_s_l
 - _mbsnbset_s
 - mbsnbset_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcsnset_s function
 - mbsnbset_s function
@@ -39,22 +41,23 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dbda0fd8e7a3957d072bcaa95e510903fb84cb5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0fb1219bbe7343ad3644f64f8f3d017b45d1b51
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
 Ustawia pierwszy `n` bajtów ciąg znaków wielobajtowych określony znak. Te wersje programu [_mbsnbset —, _mbsnbset_l —](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -107,9 +110,9 @@ errno_t _mbsnbset_s_l(
  Zero w przypadku powodzenia; w przeciwnym razie kod błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- `_mbsnbset_s` i `_mbsnbset_s_l` funkcje ustawiać co najwyżej pierwszy `count` bajtów `str` do `c`. Jeśli `count` jest większa niż długość `str`, długość `str` jest używany zamiast `count`. Jeśli `c` jest znaków wielobajtowych i nie można ustawić wyłącznie do ostatniego bajtu, który jest określony przez `count`, ostatniego bajtu jest uzupełniana znakiem puste. `_mbsnbset_s`i `_mbsnbset_s_l` nie umieszczaj kończącym wartości null na końcu `str`.  
+ `_mbsnbset_s` i `_mbsnbset_s_l` funkcje ustawiać co najwyżej pierwszy `count` bajtów `str` do `c`. Jeśli `count` jest większa niż długość `str`, długość `str` jest używany zamiast `count`. Jeśli `c` jest znaków wielobajtowych i nie można ustawić wyłącznie do ostatniego bajtu, który jest określony przez `count`, ostatniego bajtu jest uzupełniana znakiem puste. `_mbsnbset_s` i `_mbsnbset_s_l` nie umieszczaj kończącym wartości null na końcu `str`.  
   
- `_mbsnbset_s`i `_mbsnbset_s_l` przypominać `_mbsnset`, z wyjątkiem tego, że ich wartość `count` bajtów zamiast `count` znaków `c`.  
+ `_mbsnbset_s` i `_mbsnbset_s_l` przypominać `_mbsnset`, z wyjątkiem tego, że ich wartość `count` bajtów zamiast `count` znaków `c`.  
   
  Jeśli `str` jest `NULL` lub `count` wynosi zero, ta funkcja generuje wyjątek nieprawidłowy parametr zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i funkcja zwraca `NULL`. Ponadto jeśli `c` nie jest prawidłową znaków wielobajtowych `errno` ustawiono `EINVAL` i spacji zamiast niego jest używana.  
   
@@ -130,8 +133,8 @@ errno_t _mbsnbset_s_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_mbsnbset_s`|\<mbstring.h >|  
-|`_mbsnbset_s_l`|\<mbstring.h >|  
+|`_mbsnbset_s`|\<mbstring.h>|  
+|`_mbsnbset_s_l`|\<mbstring.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -161,6 +164,6 @@ After:  **** is a test
   
 ## <a name="see-also"></a>Zobacz też  
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat —, _mbsnbcat_l —](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
  [_strnset —, _strnset_l —, _wcsnset —, _wcsnset_l — _mbsnset —, _mbsnset_l —](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)   
  [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)

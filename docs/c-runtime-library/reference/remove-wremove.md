@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wremove
 - remove
@@ -27,7 +28,8 @@ f1_keywords:
 - remove
 - _wremove
 - _tremove
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tremove function
 - _wremove function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 11050e3f168f390fa7a80aa6febf08a4be695c3e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3bfccec10c08563f647b10fd9ad9dff70930668b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 Usuń plik.  
@@ -73,7 +76,7 @@ int _wremove(
  Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych.  
   
 ## <a name="remarks"></a>Uwagi  
- **Usuń** funkcja usuwa plik określony przez *ścieżki.* `_wremove`jest to wersja znaków dwubajtowych **_Usuń**; *ścieżki* argument `_wremove` jest ciągiem znaków dwubajtowych. `_wremove`i **_Usuń** zachowują się tak samo w przeciwnym razie wartość. Należy zamknąć wszystkie dojścia do pliku, aby można było usunąć.  
+ **Usuń** funkcja usuwa plik określony przez *ścieżki.* `_wremove` jest to wersja znaków dwubajtowych **_Usuń**; *ścieżki* argument `_wremove` jest ciągiem znaków dwubajtowych. `_wremove` i **_Usuń** zachowują się tak samo w przeciwnym razie wartość. Należy zamknąć wszystkie dojścia do pliku, aby można było usunąć.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   

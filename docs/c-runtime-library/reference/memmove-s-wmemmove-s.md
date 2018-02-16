@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -26,21 +27,23 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8194acf1a8a0708d2584745a7a49449ca7f554c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 48d63ebfc9e59872f48384f2c84a8dab6df52182
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 Przenosi buforu na inny. Są to wersje [memmove —, wmemmove —](../../c-runtime-library/reference/memmove-wmemmove.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -81,7 +84,7 @@ errno_t wmemmove_s(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|`dest`|`numberOfElements`|`src`|Wartość zwracana|Zawartość`dest`|  
+|`dest`|`numberOfElements`|`src`|Wartość zwracana|Zawartość `dest`|  
 |------------|------------------------|-----------|------------------|------------------------|  
 |`NULL`|wszystkie|wszystkie|`EINVAL`|Nie zmodyfikowano|  
 |wszystkie|wszystkie|`NULL`|`EINVAL`|Nie zmodyfikowano|  
@@ -96,8 +99,8 @@ errno_t wmemmove_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`memmove_s`|\<String.h >|  
-|`wmemmove_s`|\<WChar.h >|  
+|`memmove_s`|\<string.h>|  
+|`wmemmove_s`|\<wchar.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -139,9 +142,9 @@ Before: 0123456789
   
 ## <a name="see-also"></a>Zobacz też  
  [Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)   
- [_memccpy —](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memcpy, wmemcpy —](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [strcpy_s —, wcscpy_s —, _mbscpy_s —](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
- [strcpy wcscpy —, _mbscpy —](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncpy_s — _strncpy_s_l —, wcsncpy_s —, _wcsncpy_s_l —, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
+ [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
  [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)

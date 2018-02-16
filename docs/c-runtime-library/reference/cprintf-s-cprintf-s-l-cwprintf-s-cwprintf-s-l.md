@@ -1,12 +1,13 @@
 ---
-title: "_cprintf_s —, _cprintf_s_l —, _cwprintf_s —, _cwprintf_s_l — | Dokumentacja firmy Microsoft"
+title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _cwprintf_s_l
 - _cprintf_s_l
@@ -35,7 +36,8 @@ f1_keywords:
 - cprintf_s
 - _cwprintf_s
 - tcprintf_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcprintf_s_l function
 - _cprintf_s_l function
@@ -50,22 +52,23 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69edd654eac52de75de9b928e19f50def894d5e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5481a27f525cd09f84286e0c38ec33ad09b099e5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 Formatuje i drukowanie do konsoli. Te wersje programu [_cprintf —, _cprintf_l —, _cwprintf —, _cwprintf_l —](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -126,8 +129,8 @@ int _cwprintf_s_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_cprintf_s`,`_cprintf_s_l`|\<conio.h >|  
-|`_cwprintf_s`, `_cwprintf_s_l`|\<conio.h >|  
+|`_cprintf_s`,`_cprintf_s_l`|\<conio.h>|  
+|`_cwprintf_s`, `_cwprintf_s_l`|\<conio.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -165,9 +168,9 @@ int main( void )
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)   
- [_cscanf —, _cscanf_l —, _cwscanf — _cwscanf_l —](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [fprintf_s —, _fprintf_s_l —, fwprintf_s — _fwprintf_s_l —](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
- [printf_s —, _printf_s_l —, wprintf_s — _wprintf_s_l —](../../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
- [sprintf_s —, _sprintf_s_l —, swprintf_s — _swprintf_s_l —](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)   
- [vfprintf_s —, _vfprintf_s_l —, vfwprintf_s — _vfwprintf_s_l —](../../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)   
+ [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
+ [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
+ [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)   
+ [vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l](../../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)   
  [Składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)

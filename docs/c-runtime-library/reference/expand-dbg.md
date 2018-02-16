@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _expand_dbg
+ms.topic: reference
+apiname:
+- _expand_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - expand_dbg
 - _expand_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e2df087072d7f34123b00acafe52c130598592a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 41f3d59cec6ec4a064143e0211ebd956f30e16e5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="expanddbg"></a>_expand_dbg
 Zmienia rozmiar określony blok pamięci w stercie przez rozszerzanie lub zawierania bloku (tylko wersja do debugowania).  
@@ -79,7 +83,7 @@ void *_expand_dbg(
 ## <a name="remarks"></a>Uwagi  
  `_expand_dbg` Funkcji jest wersja debugowania-[rozwiń](../../c-runtime-library/reference/expand.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_expand_dbg` zostanie zmniejszona do wywołania `_expand`. Zarówno `_expand` i `_expand_dbg` zmienić rozmiar bloku pamięci w stercie podstawowy, ale `_expand_dbg` bierze pod uwagę kilka funkcji debugowania: buforów po obu stronach części bloku do testowania przecieki, parametr typu bloku do śledzenia alokacji określonego użytkownika typy i `filename` / `linenumber` informacji do ustalenia źródła żądań alokacji.  
   
- `_expand_dbg`Zmienia rozmiar bloku pamięci określony nieco więcej miejsca niż żądany `newSize`. `newSize`może być większa lub mniejsza niż rozmiar bloku pierwotnie alokacji pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Rozmiar odbywa się przez rozszerzanie lub instytucje oryginalnego bloku pamięci. `_expand_dbg`nie powoduje przeniesienia blok pamięci, tak jak w przypadku [_realloc_dbg —](../../c-runtime-library/reference/realloc-dbg.md) funkcji.  
+ `_expand_dbg` Zmienia rozmiar bloku pamięci określony nieco więcej miejsca niż żądany `newSize`. `newSize` może być większa lub mniejsza niż rozmiar bloku pierwotnie alokacji pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Rozmiar odbywa się przez rozszerzanie lub instytucje oryginalnego bloku pamięci. `_expand_dbg` nie powoduje przeniesienia blok pamięci, tak jak w przypadku [_realloc_dbg —](../../c-runtime-library/reference/realloc-dbg.md) funkcji.  
   
  Gdy `newSize` jest większa niż oryginalnego bloku rozmiar bloku pamięci jest rozwinięta. Podczas rozszerzania, jeśli blok pamięci nie można rozszerzyć, aby pomieścić żądany rozmiar `NULL` jest zwracany. Gdy `newSize` jest mniejszy od oryginalnego bloku rozmiar bloku pamięci jest umową aż do uzyskania nowego rozmiaru.  
   
@@ -91,7 +95,7 @@ void *_expand_dbg(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_expand_dbg`|\<crtdbg.h >|  
+|`_expand_dbg`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

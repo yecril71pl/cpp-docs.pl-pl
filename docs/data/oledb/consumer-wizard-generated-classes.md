@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - attribute-injected classes and methods
 - wizard-generated classes and methods
@@ -17,18 +19,18 @@ helpviewer_keywords:
 - consumer wizard-generated classes and methods
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8ebd53b8b39fb94e4275f5052a74f77bf71bd790
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca753008e1a976daf2cda187c05607b718966c31
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-classes"></a>Klasy konsumentów generowane przez kreatora
 Gdy używasz OLE DB Kreator konsumenta ATL do wygenerowania z klientem, użytkownik może przy użyciu atrybutów szablony OLE DB lub OLE DB. W obu przypadkach kreator generuje klasę polecenie i klasy rekordu użytkownika. Klasa polecenia zawiera kod, aby otworzyć źródła danych i zestawu wierszy określone w kreatorze. Klasa rekordu użytkownika zawiera mapy kolumny dla wybranej tabeli bazy danych. Jednak wygenerowany kod różni się w każdym przypadku:  
@@ -149,7 +151,7 @@ SELECT \
  Ponadto Kreator generuje deklaracji klasy polecenia, takie jak następujące:  
   
 ```  
-class CProducts : public CCommand<CAccessor<CProductsAccessor> >  
+class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
 ## <a name="attribute-injected-user-record-classes"></a>Klasy rekordów użytkowników z wprowadzonym atrybutem  
@@ -182,7 +184,7 @@ public:
  Deklaracja klasy wprowadzonego polecenia wygląda następująco:  
   
 ```  
-class CProducts : public CCommand<CAccessor<_CProductsAccessor> >  
+class CProducts : public CCommand<CAccessor<_CProductsAccessor>>  
 ```  
   
  Większość wprowadzony kod jest taka sama jak lub podobne do wersji szablonem. Główne różnice są wprowadzony metod, które zostały opisane w [metody Consumer Wizard-Generated](../../data/oledb/consumer-wizard-generated-methods.md).  

@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::ATL_DRAWINFO
 - ATL_DRAWINFO
 - ATL.ATL_DRAWINFO
-dev_langs: C++
-helpviewer_keywords: ATL_DRAWINFO structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70ea9b2532b8ab63bc9c840e7e08790b3af57342
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7a10932fd43e89af6d98d3d931d43810c710000
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atldrawinfo-structure"></a>Struktura ATL_DRAWINFO
 Zawiera informacje używane do renderowania do różnych celów, takich jak drukarki, metaplik lub formantu ActiveX.  
@@ -55,10 +59,10 @@ struct ATL_DRAWINFO {
  **dwDrawAspect**  
  Określa, jak element docelowy ma być reprezentowane. Oświadczenia mogą zawierać zawartość, ikona, miniaturę lub wydrukować dokument. Aby uzyskać listę możliwych wartości, zobacz [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) i [DVASPECT2](http://msdn.microsoft.com/library/windows/desktop/ms688644).  
   
- **wartość lindex.**  
+ **lindex**  
  Część docelowego, który ma znaczenie dla operacji rysowania. Interpretacji może być różna w zależności od wartości w **dwDrawAspect** elementu członkowskiego.  
   
- **PTD**  
+ **ptd**  
  Wskaźnik do [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) strukturę, która włącza optymalizacje rysowania w zależności od aspekt określony. Należy zauważyć, że nowszej obiektów i kontenerów, które obsługuje zoptymalizowanego rysowania interfejsów obsługuje również tego elementu członkowskiego. Określ starszych obiektów i kontenerów, które nie obsługują zoptymalizowanego rysowania interfejsy zawsze **NULL** dla tego elementu członkowskiego.  
   
  **hicTargetDev**  

@@ -8,8 +8,9 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fegetexceptflag
+ms.topic: reference
+apiname:
+- fegetexceptflag
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,19 +27,22 @@ apitype: DLLExport
 f1_keywords:
 - fegetexceptflag
 - fenv/fegetexceptflag
-dev_langs: C++
-helpviewer_keywords: fegetexceptflag function
+dev_langs:
+- C++
+helpviewer_keywords:
+- fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c55016a8d22b577197818f89a0ee71b4ca14367d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1b1180db74e0000f24e12b6d411460e6a4efc9de
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 Zapisuje bieżący stan flagi określony wyjątek zmiennoprzecinkowy.  
@@ -64,7 +68,7 @@ int fegetexceptflag(
  W przypadku powodzenia zwraca wartość 0. W przeciwnym razie zwraca wartość inną niż zero.  
   
 ## <a name="remarks"></a>Uwagi  
- `fegetexceptflag` Funkcja przechowuje bieżący stan flagi stanu zmiennoprzecinkowych wyjątków, określony przez `excepts` w `fexcept_t` obiekt wskazywany przez `pstatus`.  `pstatus`musi wskazywać prawidłowe `fexcept_t` obiektu lub kolejnych zachowanie jest niezdefiniowana. `fegetexceptflag` Funkcja obsługuje makrach wyjątków zdefiniowane w \<fenv.h >:  
+ `fegetexceptflag` Funkcja przechowuje bieżący stan flagi stanu zmiennoprzecinkowych wyjątków, określony przez `excepts` w `fexcept_t` obiekt wskazywany przez `pstatus`.  `pstatus` musi wskazywać prawidłowe `fexcept_t` obiektu lub kolejnych zachowanie jest niezdefiniowana. `fegetexceptflag` Funkcja obsługuje makrach wyjątków zdefiniowane w \<fenv.h >:  
   
 |Makra wyjątków|Opis|  
 |---------------------|-----------------|  
@@ -83,7 +87,7 @@ int fegetexceptflag(
   
 |Funkcja|Nagłówek C|Nagłówek C++|  
 |--------------|--------------|------------------|  
-|`fegetexceptflag`|\<fenv.h >|\<cfenv >|  
+|`fegetexceptflag`|\<fenv.h>|\<cfenv>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

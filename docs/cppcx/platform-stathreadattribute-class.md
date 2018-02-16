@@ -6,26 +6,29 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Platform
 - COLLECTION/Platform::Platform::STAThreadAttribute constructor 1
 - COLLECTION/Platform::Platform::STAThreadAttribute::Equals
 - COLLECTION/Platform::Platform::STAThreadAttribute::GetHashCode
 - COLLECTION/Platform::Platform::STAThreadAttribute::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::STAThreadAttribute Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b1c2b8c38d672b6bd3ecd0fcafb54a9b6e723202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: db66ba0775ad3b38be1b43fd5781be611ca2f333
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstathreadattribute-class"></a>Klasa platform::STAThreadAttribute
 Wskazuje, że model wątkowy dla aplikacji jest jednowątkowego apartamentu (STA).  
@@ -63,7 +66,7 @@ public ref class STAThreadAttribute sealed : Attribute
 
 
 
-## <a name="ctor"></a>Konstruktor elementu STAThreadAttribute
+## <a name="ctor"></a> Konstruktor elementu STAThreadAttribute
 Inicjuje nowe wystąpienie klasy STAThreadAttribute.  
   
 ### <a name="syntax"></a>Składnia  
@@ -74,7 +77,7 @@ public:STAThreadAttribute()
   
 
 
-## <a name="equals"></a>STAThreadAttribute::Equals
+## <a name="equals"></a> STAThreadAttribute::Equals
 Określa, czy określony obiekt jest równy bieżącemu obiektowi.  
   
 ### <a name="syntax"></a>Składnia  
@@ -84,15 +87,15 @@ public:virtual override bool Equals(  Object^ obj)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Obj  
+ obj  
  Obiekt do porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli obiekty są równe; w przeciwnym razie `false`.  
+ `true` Jeśli obiekty są równe; w przeciwnym razie `false`.  
   
 
 
-## <a name="gethashcode"></a>STAThreadAttribute::GetHashCode
+## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
 Zwraca kod skrótu dla tego wystąpienia.  
   
 ### <a name="syntax"></a>Składnia  
@@ -106,7 +109,7 @@ public:int GetHashCode()
   
 
 
-## <a name="tostring"></a>STAThreadAttribute::ToString
+## <a name="tostring"></a> STAThreadAttribute::ToString
 Zwraca ciąg, który reprezentuje bieżący obiekt.  
   
 ### <a name="syntax"></a>Składnia  

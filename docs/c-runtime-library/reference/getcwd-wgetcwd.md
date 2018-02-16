@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wgetcwd
 - _getcwd
@@ -30,7 +31,8 @@ f1_keywords:
 - _wgetcwd
 - tgetcwd
 - _tgetcwd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - getcwd function
 - working directory
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 14047c8143d982bc6b26bef6e46679341d9abd36
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 91e660f548fdb8814e521f9c63c58e1b965949d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 Pobiera bieżący katalog roboczy.  
@@ -82,9 +85,9 @@ wchar_t *_wgetcwd(
 ## <a name="remarks"></a>Uwagi  
  `_getcwd` Funkcja pobiera pełną ścieżkę bieżącego katalogu roboczego na domyślnym dysku i zapisuje go w `buffer`. Argument całkowitą `maxlen` określa maksymalną długość ścieżki. Błąd występuje, gdy przekracza długość ścieżki (w tym znak końcowy null) `maxlen`. `buffer` Argument może być `NULL`; bufor o rozmiarze co najmniej `maxlen` (więcej tylko wtedy, gdy jest to konieczne) jest automatycznie przydzielone, przy użyciu `malloc`, aby przechowywać ścieżkę. Bufor później może zostać zwolniony przez wywołanie metody `free` i przekazanie jej `_getcwd` zwrócić wartość (wskaźnik do przydzielonego buforu).  
   
- `_getcwd`Zwraca ciąg reprezentujący ścieżkę bieżącego katalogu roboczego. Jeśli bieżący katalog roboczy jest katalogiem głównym, ciąg kończy się znakiem kreski ułamkowej odwróconej ( `\` ). Jeśli bieżący katalog roboczy jest katalogiem innego niż root, ciąg kończy się nazwą katalogu i nie kreski ułamkowej odwróconej.  
+ `_getcwd` Zwraca ciąg reprezentujący ścieżkę bieżącego katalogu roboczego. Jeśli bieżący katalog roboczy jest katalogiem głównym, ciąg kończy się znakiem kreski ułamkowej odwróconej ( `\` ). Jeśli bieżący katalog roboczy jest katalogiem innego niż root, ciąg kończy się nazwą katalogu i nie kreski ułamkowej odwróconej.  
   
- `_wgetcwd`jest to wersja znaków dwubajtowych `_getcwd`; `buffer` argumentów i wartości `_wgetcwd` są ciągami znaków dwubajtowych. `_wgetcwd`i `_getcwd` zachowują się tak samo w przeciwnym razie wartość.  
+ `_wgetcwd` jest to wersja znaków dwubajtowych `_getcwd`; `buffer` argumentów i wartości `_wgetcwd` są ciągami znaków dwubajtowych. `_wgetcwd` i `_getcwd` zachowują się tak samo w przeciwnym razie wartość.  
   
  Gdy `_DEBUG` i `_CRTDBG_MAP_ALLOC` są zdefiniowane, wywołań `_getcwd` i `_wgetcwd` zastępuje wywołań `_getcwd_dbg` i `_wgetcwd_dbg` umożliwiające profilowanie przydziału pamięci. Aby uzyskać więcej informacji, zobacz [_getcwd_dbg —, _wgetcwd_dbg —](../../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md).  
   
@@ -98,7 +101,7 @@ wchar_t *_wgetcwd(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_getcwd`|\<Direct.h >|  
+|`_getcwd`|\<direct.h>|  
 |`_wgetcwd`|\<Direct.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -138,6 +141,6 @@ C:\Code
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrola katalogu](../../c-runtime-library/directory-control.md)   
- [_chdir —, _wchdir —](../../c-runtime-library/reference/chdir-wchdir.md)   
- [_mkdir —, _wmkdir —](../../c-runtime-library/reference/mkdir-wmkdir.md)   
+ [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
+ [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
  [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fpieee_flt
+ms.topic: reference
+apiname:
+- _fpieee_flt
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - fpieee_flt
 - _fpieee_flt
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fpieee_flt function
 - exception handling, floating-point
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63472ad24a981a39a20e6c0cabb82f7c96d1e59e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88d05d4d8c7f403cc2702c5a0ec3b2af840bd320
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 Wywołuje program obsługi pułapki zdefiniowane przez użytkownika wyjątki zmiennoprzecinkowe IEEE.  
@@ -77,8 +81,8 @@ int _fpieee_flt(
 |----------------------------|-----------------|  
 |`unsigned int RoundingMode`, `unsigned int Precision`|Te pola zawierają informacje o środowisku liczb zmiennoprzecinkowych w czasie Wystąpił wyjątek.|  
 |`unsigned int Operation`|Wskazuje typ operacji, który spowodował pułapki. Jeśli typ znajduje się porównanie (`_FpCodeCompare`), możesz podać jeden specjalną `_FPIEEE_COMPARE_RESULT` wartości (zgodnie z definicją w Fpieee.h) w `Result.Value` pola. Typ konwersji (`_FpCodeConvert`) wskazuje, że pułapki wystąpił podczas operacji Konwersja typów zmiennoprzecinkowych. Można przyjrzeć się `Operand1` i `Result` typy, można określić typu próby konwersji.|  
-|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|Te struktury wskazuje typy oraz wartości proponowanych wynik i argumentów operacji:<br /><br /> `OperandValid`Flaga wskazująca, czy wartość odpowiada jest prawidłowa.<br /><br /> `Format`Typ danych w odpowiadającej jej wartości. Może być zwrócony typ formatu, nawet jeśli odpowiadającej jej wartości nie jest prawidłowy.<br /><br /> `Value`Wynik lub argument wartości danych.|  
-|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS zawiera pole o jeden bit na typ wyjątku punktu zmiennoprzecinkowych.<br /><br /> Brak zgodności między tych pól i argumenty używane do maskować wyjątki dostarczony do [_controlfp —](../../c-runtime-library/reference/control87-controlfp-control87-2.md).<br /><br /> Dokładne znaczenie każdy bit jest zależna od kontekstu:<br /><br /> `Cause`Każdy zestaw bit wskazuje określonego wyjątku, który został zgłoszony.<br /><br /> `Enable`Każdy zestaw bit wskazuje, że określonego wyjątku jest obecnie zaznaczona.<br /><br /> `Status`Każdy zestaw bit wskazuje, że określonego wyjątku jest aktualnie oczekujący. Dotyczy to również wyjątki, które nie mają został zgłoszony, ponieważ zostały one zamaskować `_controlfp`.|  
+|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|Te struktury wskazuje typy oraz wartości proponowanych wynik i argumentów operacji:<br /><br /> `OperandValid` Flaga wskazująca, czy wartość odpowiada jest prawidłowa.<br /><br /> `Format` Typ danych w odpowiadającej jej wartości. Może być zwrócony typ formatu, nawet jeśli odpowiadającej jej wartości nie jest prawidłowy.<br /><br /> `Value` Wynik lub argument wartości danych.|  
+|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS zawiera pole o jeden bit na typ wyjątku punktu zmiennoprzecinkowych.<br /><br /> Brak zgodności między tych pól i argumenty używane do maskować wyjątki dostarczony do [_controlfp —](../../c-runtime-library/reference/control87-controlfp-control87-2.md).<br /><br /> Dokładne znaczenie każdy bit jest zależna od kontekstu:<br /><br /> `Cause` Każdy zestaw bit wskazuje określonego wyjątku, który został zgłoszony.<br /><br /> `Enable` Każdy zestaw bit wskazuje, że określonego wyjątku jest obecnie zaznaczona.<br /><br /> `Status` Każdy zestaw bit wskazuje, że określonego wyjątku jest aktualnie oczekujący. Dotyczy to również wyjątki, które nie mają został zgłoszony, ponieważ zostały one zamaskować `_controlfp`.|  
   
  Oczekujące wyjątki, które są wyłączone są wywoływane, gdy zostanie włączona. Może to spowodować niezdefiniowane zachowanie przy użyciu `_fpieee_flt` jako filtru wyjątków. Wywoływanie zawsze [_clearfp —](../../c-runtime-library/reference/clear87-clearfp.md) przed włączeniem wyjątki zmiennoprzecinkowe.  
   
@@ -86,7 +90,7 @@ int _fpieee_flt(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`_fpieee_flt`|\<fpieee.h >|  
+|`_fpieee_flt`|\<fpieee.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -159,5 +163,5 @@ int main( void )
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [_control87 —, _controlfp —, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
+ [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
  [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)

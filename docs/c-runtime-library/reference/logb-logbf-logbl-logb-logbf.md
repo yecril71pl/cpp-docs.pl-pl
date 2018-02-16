@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - logb
 - _logb
@@ -32,7 +33,8 @@ f1_keywords:
 - _logb
 - _logbf
 - logbf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _logbf function
 - mantissas, floating-point variables
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4042e5f7b67db8e29d167f96457a91a6d47c4bfa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8f2c1ad71f5f81b7e21e788e8cdbeb9edce60944
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
 Wyodrębnianie wartości wykładnika liczb zmiennoprzecinkowych argumentu.  
@@ -90,7 +93,7 @@ float _logbf(
  Wartość zmiennoprzecinkowa.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `logb`Zwraca wartość nieobciążonej wykładnika `x` jako liczbę całkowitą ze znakiem reprezentowane jako wartości zmiennoprzecinkowej.  
+ `logb` Zwraca wartość nieobciążonej wykładnika `x` jako liczbę całkowitą ze znakiem reprezentowane jako wartości zmiennoprzecinkowej.  
   
 ## <a name="remarks"></a>Uwagi  
  `logb` Funkcje wyodrębnienie wykładniczej wartości argumentu zmiennoprzecinkowego `x`, tak jakby `x` były reprezentowane z zakresem nieskończoną. Jeśli argument `x` jest nieznormalizowane, jest traktowana tak, jakby był on znormalizowany.  
@@ -99,15 +102,15 @@ float _logbf(
   
 |Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|  
 |-----------|-------------------|-----------------------|  
-|GRANICACH QNAN, IND|Brak|_DOMAIN —|  
+|GRANICACH QNAN, IND|Brak|_DOMAIN|  
 |± 0|ZERODIVIDE|—|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_logb`|\<float.h — >|  
-|`logb`, `logbf`, `logbl`, `_logbf`|\<Math.h >|  
+|`_logb`|\<float.h>|  
+|`logb`, `logbf`, `logbl`, `_logbf`|\<math.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - time
 - _time64
@@ -31,7 +32,8 @@ f1_keywords:
 - time/_time32
 - time/_time64
 - _time32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - time32 function
 - _time32 function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f0e4cd78c6e4da47b7999e6a9dd6c95be93f557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3490c7ac1425e2ea2e76943709dbeb5d43a4e151
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
 Pobierz czas systemowy.  
@@ -78,7 +81,7 @@ __time64_t _time64(
 ## <a name="remarks"></a>Uwagi  
  `time` Funkcja zwraca liczbę sekund, jaka upłynęła od północy (00: 00:00), 1 stycznia 1970, uniwersalny czas koordynowany (UTC), zgodnie z zegarem systemowym. Wartość zwracana jest przechowywany w lokalizacji określonej przez `timer`. Ten parametr może mieć `NULL`, w którym to przypadku wartości zwracanej nie są przechowywane.  
   
- `time`Otoka dla jest `_time64` i `time_t` jest domyślnie odpowiednikiem `__time64_t`. Aby wymusić kompilatora, aby zinterpretować `time_t` jako starego 32-bitowych `time_t`, można zdefiniować `_USE_32BIT_TIME_T`. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038; Użycie tego makra jest niedozwolone na platformach 64-bitowych.  
+ `time` Otoka dla jest `_time64` i `time_t` jest domyślnie odpowiednikiem `__time64_t`. Aby wymusić kompilatora, aby zinterpretować `time_t` jako starego 32-bitowych `time_t`, można zdefiniować `_USE_32BIT_TIME_T`. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038; Użycie tego makra jest niedozwolone na platformach 64-bitowych.  
   
 ## <a name="requirements"></a>Wymagania  
   
@@ -243,10 +246,10 @@ Today is Friday, day 25 of April in the year 2003.
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
  [asctime —, _wasctime —](../../c-runtime-library/reference/asctime-wasctime.md)   
- [asctime_s —, _wasctime_s —](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [_ftime —, _ftime32 —, _ftime64 —](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime —, _gmtime32 —, _gmtime64 —](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [gmtime_s —, _gmtime32_s —, _gmtime64_s —](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
  [czas lokalny, _localtime32 —, _localtime64 —](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [localtime_s —, _localtime32_s —, _localtime64_s —](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
  [_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)

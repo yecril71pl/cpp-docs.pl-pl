@@ -1,13 +1,15 @@
 ---
-title: "_Crtsetdbgflag — | Dokumentacja firmy Microsoft"
+title: _CrtSetDbgFlag | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtSetDbgFlag
+ms.topic: reference
+apiname:
+- _CrtSetDbgFlag
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -33,7 +35,8 @@ f1_keywords:
 - _CRTDBG_CHECK_EVERY_1024_DF
 - _CrtSetDbgFlag
 - CRTDBG_REPORT_FLAG
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CRTDBG_CHECK_EVERY_16_DF macro
 - CRTDBG_CHECK_EVERY_16_DF macro
@@ -56,16 +59,17 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c76630a6b55b85ae636e69da69d60947b4db50b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fb2af7756db37e3c5021894936d801d11705f0c6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 Pobiera lub modyfikuje stan **_crtdbgflag —** flagę w celu kontrolowania zachowania alokacji sterty debugowania Menedżera (tylko wersja do debugowania).  
@@ -93,24 +97,24 @@ Pobiera lub modyfikuje stan **_crtdbgflag —** flagę w celu kontrolowania zach
   
 |Pole bitowe|Domyślny|Opis|  
 |---------------|-------------|-----------------|  
-|**_CRTDBG_ALLOC_MEM_DF —**|ON|Włączony: Włącz Alokacje sterty debugowania i Użyj identyfikatorów typu bloku pamięci, takich jak `_CLIENT_BLOCK`. OFF: Dodaj nowe przydziały do stosu w połączonej listy, ale ustawiony typ, aby zablokować **_ignore_block —**.<br /><br /> Mogą być również połączone ze wszystkimi częstotliwości stercie makra wyboru.|  
-|**_CRTDBG_CHECK_ALWAYS_DF —**|WYŁĄCZANIE|Włączony: Wywołanie [_crtcheckmemory —](../../c-runtime-library/reference/crtcheckmemory.md) na każde żądanie alokacji i cofania alokacji. OFF: `_CrtCheckMemory` musi być jawnie wywołana.<br /><br /> Makra wyboru częstotliwości stercie nie obowiązują, gdy ta flaga jest ustawiona.|  
+|**_CRTDBG_ALLOC_MEM_DF**|ON|Włączony: Włącz Alokacje sterty debugowania i Użyj identyfikatorów typu bloku pamięci, takich jak `_CLIENT_BLOCK`. OFF: Dodaj nowe przydziały do stosu w połączonej listy, ale ustawiony typ, aby zablokować **_ignore_block —**.<br /><br /> Mogą być również połączone ze wszystkimi częstotliwości stercie makra wyboru.|  
+|**_CRTDBG_CHECK_ALWAYS_DF**|WYŁĄCZANIE|Włączony: Wywołanie [_crtcheckmemory —](../../c-runtime-library/reference/crtcheckmemory.md) na każde żądanie alokacji i cofania alokacji. OFF: `_CrtCheckMemory` musi być jawnie wywołana.<br /><br /> Makra wyboru częstotliwości stercie nie obowiązują, gdy ta flaga jest ustawiona.|  
 |`_CRTDBG_CHECK_CRT_DF`|WYŁĄCZANIE|Włączony: Obejmują `_CRT_BLOCK` typów w stanie wykrywania i pamięci przeciek różnica operacji. WYŁĄCZONE: Pamięć używana wewnętrznie przez biblioteki wykonawczej jest ignorowana przez te operacje.<br /><br /> Mogą być również połączone ze wszystkimi częstotliwości stercie makra wyboru.|  
-|**_CRTDBG_DELAY_FREE_MEM_DF —**|WYŁĄCZANIE|Włączony: Zachowaj zwolnienie pamięci bloków w stercie na połączone listy, przypisz im **_free_block —** wpisz i wypełnienie bajt 0xDD. WYŁĄCZONE: Nie przechowuj zwolnionych bloków w stercie listy połączonej.<br /><br /> Mogą być również połączone ze wszystkimi częstotliwości stercie makra wyboru.|  
+|**_CRTDBG_DELAY_FREE_MEM_DF**|WYŁĄCZANIE|Włączony: Zachowaj zwolnienie pamięci bloków w stercie na połączone listy, przypisz im **_free_block —** wpisz i wypełnienie bajt 0xDD. WYŁĄCZONE: Nie przechowuj zwolnionych bloków w stercie listy połączonej.<br /><br /> Mogą być również połączone ze wszystkimi częstotliwości stercie makra wyboru.|  
 |`_CRTDBG_LEAK_CHECK_DF`|WYŁĄCZANIE|Włączony: Wykonaj przeciek automatyczne sprawdzanie przy zamykaniu program poprzez wywołanie [_crtdumpmemoryleaks —](../../c-runtime-library/reference/crtdumpmemoryleaks.md) i generowanie raportów o błędach w przypadku aplikacji nie można zwolnić wszystkie pamięć ona przydzielone. OFF: Nie należy automatycznie wykonywać przeciek sprawdzanie przy zamykaniu program.<br /><br /> Mogą być również połączone ze wszystkimi częstotliwości stercie makra wyboru.|  
   
  **Sprawdzanie sterty częstotliwość makra**  
   
  Można określić, jak często biblioteki wykonawczej języka C sprawdza poprawność sterty debugowania (`_CrtCheckMemory`) na podstawie liczby wywołań `malloc`, `realloc`, **wolnego**, i `_msize`.  
   
- `_CrtSetDbgFlag`następnie bada górny 16 bitów `newFlag` parametru wartości. Określona wartość jest liczbą `malloc`, `realloc`, **wolnego**, i `_msize` wywołuje między `_CrtCheckMemory` wywołania. Cztery wstępnie zdefiniowane makra znajdują się w tym celu.  
+ `_CrtSetDbgFlag` następnie bada górny 16 bitów `newFlag` parametru wartości. Określona wartość jest liczbą `malloc`, `realloc`, **wolnego**, i `_msize` wywołuje między `_CrtCheckMemory` wywołania. Cztery wstępnie zdefiniowane makra znajdują się w tym celu.  
   
-|Makra|Liczba wywołań — funkcja malloc, realloc wolny i _msize — między wywołań _crtcheckmemory —|  
+|Macro|Liczba wywołań — funkcja malloc, realloc wolny i _msize — między wywołań _crtcheckmemory —|  
 |-----------|------------------------------------------------------------------------------------------|  
-|_CRTDBG_CHECK_EVERY_16_DF —|16|  
-|_CRTDBG_CHECK_EVERY_128_DF —|128|  
-|_CRTDBG_CHECK_EVERY_1024_DF —|1024|  
-|_CRTDBG_CHECK_DEFAULT_DF —|0 (domyślnie nie są sprawdzane stosu)|  
+|_CRTDBG_CHECK_EVERY_16_DF|16|  
+|_CRTDBG_CHECK_EVERY_128_DF|128|  
+|_CRTDBG_CHECK_EVERY_1024_DF|1024|  
+|_CRTDBG_CHECK_DEFAULT_DF|0 (domyślnie nie są sprawdzane stosu)|  
   
  Domyślnie `_CrtCheckMemory` jest wywoływana po każdym 1024 razy wywołać `malloc`, `realloc`, **wolnego**, i `_msize`.  
   
@@ -135,7 +139,7 @@ _CrtSetDbgFlag(tmp);
   
  Górny 16 bitów `newFlag` parametru są ignorowane, jeśli określono _crtdbg_check_always_df —. W takim przypadku `_CrtCheckMemory` jest wywoływana za każdym razem, należy wywołać `malloc`, `realloc`, **wolnego**, i `_msize`.  
   
- `newFlag`jest to nowy stan do zastosowania do **_crtdbgflag —** i jest kombinacją wartości dla poszczególnych pól bitowych.  
+ `newFlag` jest to nowy stan do zastosowania do **_crtdbgflag —** i jest kombinacją wartości dla poszczególnych pól bitowych.  
   
 ### <a name="to-change-one-or-more-of-these-bit-fields-and-create-a-new-state-for-the-flag"></a>Aby zmienić co najmniej jeden z tych pól bitowych i utworzyć nowy stan flagi  
   
@@ -176,7 +180,7 @@ _CrtSetDbgFlag( tmpFlag );
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_CrtSetDbgFlag`|\<crtdbg.h >|  
+|`_CrtSetDbgFlag`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -263,5 +267,5 @@ int main( )
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
- [_crtdbgflag —](../../c-runtime-library/crtdbgflag.md)   
+ [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
  [_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md)

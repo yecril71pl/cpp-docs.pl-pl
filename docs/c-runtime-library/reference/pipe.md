@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _pipe
+ms.topic: reference
+apiname:
+- _pipe
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,29 +26,31 @@ apitype: DLLExport
 f1_keywords:
 - pipe
 - _pipe
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pipes, creating
 - _pipe function
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a14fa401b2a46bbfb3d5aafcda4d05c0167b3d9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 95169aa5070493be76db6306f4d5863d6a2e654f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="pipe"></a>_pipe
 Tworzy potoku do odczytu i zapisu.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -82,7 +86,7 @@ int _pipe(
 ## <a name="remarks"></a>Uwagi  
  `_pipe` Funkcja tworzy *potoku*, która jest sztuczne kanał We/Wy, która jest używana do przekazywania informacji do innych programów. Potok podobny pliku, ponieważ ma ona wskaźnika pliku i/lub deskryptorów plików, a można odczytywane lub zapisywane przy użyciu biblioteki standardowej wejściowe i wyjściowe funkcji. Jednak potoku nie reprezentuje określonego pliku lub urządzenia. Zamiast tego reprezentuje tymczasowego przechowywania w pamięci, która jest niezależna od pamięci tego programu i jest kontrolowany wyłącznie przez system operacyjny.  
   
- `_pipe`podobny `_open` , ale otwiera potoku do odczytywania i zapisywania i zwraca deskryptorów zamiast jedną dwóch plików. Program można użyć obu stronach potoku lub ten, który nie należy go zamknąć. Na przykład procesora poleceń w systemie Windows tworzy potoku podczas wykonywania polecenia takie jak `PROGRAM1 | PROGRAM2`.  
+ `_pipe` podobny `_open` , ale otwiera potoku do odczytywania i zapisywania i zwraca deskryptorów zamiast jedną dwóch plików. Program można użyć obu stronach potoku lub ten, który nie należy go zamknąć. Na przykład procesora poleceń w systemie Windows tworzy potoku podczas wykonywania polecenia takie jak `PROGRAM1 | PROGRAM2`.  
   
  Standardowe dane wyjściowe deskryptor `PROGRAM1` jest dołączony do potoku zapisu deskryptora. Standardowa wejściowy deskryptor `PROGRAM2` jest dołączony do deskryptora odczytu z potoku. Eliminuje to konieczności tworzenia plików tymczasowych do przekazywania informacji do innych programów.  
   
@@ -100,7 +104,7 @@ int _pipe(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_pipe`|\<IO.h >|\<fcntl.h >, 1 \<errno.h > 2|  
+|`_pipe`|\<io.h>|\<fcntl.h>,1 \<errno.h>2|  
   
  1 dla `_O_BINARY` i `_O_TEXT` definicje.  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _chsize
+ms.topic: reference
+apiname:
+- _chsize
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _chsize
-dev_langs: C++
+f1_keywords:
+- _chsize
+dev_langs:
+- C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -30,16 +34,17 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c48c9978650dc88ff2579a2838faf9bcb02cefa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2b975f4a1191acc2a02d1edcae861c033d280d98
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="chsize"></a>_chsize
 Zmienia rozmiar pliku. Bezpieczniejsza wersja jest dostępna; zobacz [_chsize_s —](../../c-runtime-library/reference/chsize-s.md).  
@@ -61,7 +66,7 @@ int _chsize(
  Długość nowego pliku w bajtach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_chsize`Zwraca wartość 0, jeśli rozmiar pliku zostało pomyślnie zmienione. Zwracana wartość -1 oznacza błąd: `errno` ustawiono `EACCES` Jeśli określony plik jest chroniony przed dostępu, do `EBADF` , jeśli określony plik jest tylko do odczytu lub deskryptor jest nieprawidłowa, `ENOSPC` , jeśli nie ma jest wolnego miejsca na urządzeniu lub `EINVAL` Jeśli `size` jest mniejsza od zera.  
+ `_chsize` Zwraca wartość 0, jeśli rozmiar pliku zostało pomyślnie zmienione. Zwracana wartość -1 oznacza błąd: `errno` ustawiono `EACCES` Jeśli określony plik jest chroniony przed dostępu, do `EBADF` , jeśli określony plik jest tylko do odczytu lub deskryptor jest nieprawidłowa, `ENOSPC` , jeśli nie ma jest wolnego miejsca na urządzeniu lub `EINVAL` Jeśli `size` jest mniejsza od zera.  
   
  Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.  
   
@@ -74,7 +79,7 @@ int _chsize(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_chsize`|\<IO.h >|\<errno.h >|  
+|`_chsize`|\<io.h>|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

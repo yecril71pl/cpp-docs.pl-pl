@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtIsMemoryBlock
+ms.topic: reference
+apiname:
+- _CrtIsMemoryBlock
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ec6bea115ba509c7275a2d220cf4b10c6faecae9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 58faccd95e831dd264910abf063529db12701bf6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 Sprawdza, czy blok pamięci określony w lokalnej sterty i ma identyfikator typu bloku sterty debugowania prawidłowe (tylko wersja do debugowania).  
@@ -55,23 +59,23 @@ int _CrtIsMemoryBlock(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`userData`  
+ [in] `userData`  
  Wskaźnik na początku bloku pamięci, aby sprawdzić.  
   
- [in]`size`  
+ [in] `size`  
  Rozmiar określonego bloku (w bajtach).  
   
- [out]`requestNumber`  
+ [out] `requestNumber`  
  Wskaźnik do numer alokacji bloku lub `NULL`.  
   
- [out]`filename`  
+ [out] `filename`  
  Wskaźnik do nazwy pliku źródłowego, który żądanego bloku lub `NULL`.  
   
- [out]`linenumber`  
+ [out] `linenumber`  
  Wskaźnik do numeru wiersza w pliku źródłowym lub `NULL`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_CrtIsMemoryBlock`Zwraca `TRUE` Jeśli blok pamięci określony znajduje się w lokalnej sterty i ma identyfikator typu bloku sterty debugowania prawidłowe; w przeciwnym razie funkcja zwraca `FALSE`.  
+ `_CrtIsMemoryBlock` Zwraca `TRUE` Jeśli blok pamięci określony znajduje się w lokalnej sterty i ma identyfikator typu bloku sterty debugowania prawidłowe; w przeciwnym razie funkcja zwraca `FALSE`.  
   
 ## <a name="remarks"></a>Uwagi  
  `_CrtIsMemoryBlock` Funkcja weryfikuje, czy blok pamięci określony znajduje się w lokalnej pamięci oraz ma identyfikator typu bloku prawidłowe. Tej funkcji można również uzyskać numer zamówienia obiekt alokacji i numer Nazwa/wiersza pliku źródłowego których alokacji blok pamięci był pierwotnie żądany. Przekazywanie wartości innej niż NULL dla `requestNumber`, `filename`, lub `linenumber` powoduje, że parametry `_CrtIsMemoryBlock` można ustawić parametry te wartości w nagłówku debugowania blok pamięci, w przypadku odnalezienia bloku w lokalnej sterty. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań `_CrtIsMemoryBlock` są usuwane podczas przetwarzania wstępnego.  
@@ -91,7 +95,7 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_CrtIsMemoryBlock`|\<crtdbg.h >|  
+|`_CrtIsMemoryBlock`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtSetReportMode
+ms.topic: reference
+apiname:
+- _CrtSetReportMode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetReportMode
 - CrtSetReportMode
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtSetReportMode function
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 75d71ae4df727df1dd82ff88a793dc4e9c462b76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 45319f7584d0c18533433d01b3467ccfeecac8df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 Określa docelowy lub miejsc docelowych dla typu określonego raportu generowane przez `_CrtDbgReport` i makr, które wywołują [_crtdbgreport —, _crtdbgreportw —](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md), takich jak [_ASSERT, _asserte —, makra _ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [_ASSERT, _asserte —, makra _ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [_RPT, _RPTF, _RPTW, _rptfw — makra](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md), i [_RPT, _RPTF, _RPTW, _rptfw — makra](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) (tylko wersja do debugowania).  
@@ -104,7 +108,7 @@ _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_CrtSetReportMode`|\<crtdbg.h >|\<errno.h >|  
+|`_CrtSetReportMode`|\<crtdbg.h>|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

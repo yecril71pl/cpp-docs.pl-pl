@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - nanf
 - nan
@@ -28,22 +29,24 @@ f1_keywords:
 - nan
 - nanl
 - nanf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - nan function
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 88060e9acb361731aa2454e91bd08b0a2de9b591
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8c3ba2620b43199788cfbcc237bc09a2cd112035
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 Zwraca wartość quiet NaN.  
@@ -76,10 +79,10 @@ long double nanl(
   
 |Funkcja|Nagłówek C|Nagłówek C++|  
 |--------------|--------------|------------------|  
-|`nan`, `nanf`, `nanl`|\<Math.h >|\<cmath >|  
+|`nan`, `nanf`, `nanl`|\<math.h>|\<cmath>|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [_finite —, _finitef](../../c-runtime-library/reference/finite-finitef.md)   
+ [_finite, _finitef](../../c-runtime-library/reference/finite-finitef.md)   
  [_fpclass, _fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)   
  [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)

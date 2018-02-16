@@ -6,25 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
 - VCCORLIB/Platform::StringReference::Data
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstringreference-class"></a>Klasa platform::StringReference
 Typem optymalizacji, który służy do przekazywania danych ciąg z `Platform::String^` parametrów do innych metod z co najmniej operacje kopiowania wejściowych.  
@@ -70,7 +72,7 @@ class StringReference
   
  **Nagłówek:** vccorlib.h  
 
-## <a name="data"></a>StringReference::Data — metoda
+## <a name="data"></a>  StringReference::Data — metoda
 Zwraca zawartość to `StringReference` jako tablica wartości char16.  
   
 ### <a name="syntax"></a>Składnia  
@@ -84,7 +86,7 @@ const ::default::char16 * Data() const
   
 
 
-## <a name="gethstring"></a>StringReference::GetHSTRING — metoda
+## <a name="gethstring"></a>  StringReference::GetHSTRING — metoda
 Zwraca zawartość jako ciąg `__abi_HSTRING`.  
   
 ### <a name="syntax"></a>Składnia  
@@ -101,7 +103,7 @@ __abi_HSTRING GetHSTRING() const
   
 
 
-## <a name="getstring"></a>StringReference::GetString — metoda
+## <a name="getstring"></a>  StringReference::GetString — metoda
 Zwraca zawartość jako ciąg `Platform::String^`.  
   
 ### <a name="syntax"></a>Składnia  
@@ -114,7 +116,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>Wartość zwracana  
  A `Platform::String^` zawierający danych ciągu.  
 
-## <a name="length"></a>StringReference::Length — metoda
+## <a name="length"></a>  StringReference::Length — metoda
 Zwraca liczbę znaków w ciągu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -130,7 +132,7 @@ unsigned int Length() const
   
 
 
-## <a name="operator-assign"></a>StringReference::operator = — Operator
+## <a name="operator-assign"></a>  StringReference::operator = — Operator
 Przypisuje określony obiekt do bieżącego `StringReference` obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -155,7 +157,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>StringReference::operator() Operator
+## <a name="operator-call"></a>  StringReference::operator() Operator
 Konwertuje `StringReference` do obiektu `Platform::String^` obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -170,7 +172,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do typu obiektu `Platform::String`.  
 
-## <a name="ctor"></a>Konstruktor StringReference::StringReference
+## <a name="ctor"></a>  Konstruktor StringReference::StringReference
 Inicjuje nowe wystąpienie klasy `StringReference` klasy.  
   
 ### <a name="syntax"></a>Składnia  

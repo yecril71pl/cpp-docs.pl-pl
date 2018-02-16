@@ -1,13 +1,15 @@
 ---
-title: "_get_errno — | Dokumentacja firmy Microsoft"
+title: _get_errno | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _get_errno
+ms.topic: reference
+apiname:
+- _get_errno
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,23 +23,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _get_errno
-dev_langs: C++
+f1_keywords:
+- _get_errno
+dev_langs:
+- C++
 helpviewer_keywords:
 - get_errno function
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 53adc2ce18b5442320511391f4848682520e3a26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8acf119565b0b318887c547c6610652a2530e4f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="geterrno"></a>_get_errno
 Pobiera bieżącą wartość zmiennej globalnej numer błędu.  
@@ -51,7 +56,7 @@ errno_t _get_errno(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pValue`  
+ [out] `pValue`  
  Wskaźnik do wartości całkowitej, należy podać bieżącą wartość `errno` zmiennej.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -90,10 +95,10 @@ fyi, ENOENT = 2
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_get_errno`|\<stdlib.h >|\<errno.h >|  
+|`_get_errno`|\<stdlib.h>|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [_set_errno —](../../c-runtime-library/reference/set-errno.md)   
+ [_set_errno](../../c-runtime-library/reference/set-errno.md)   
  [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)

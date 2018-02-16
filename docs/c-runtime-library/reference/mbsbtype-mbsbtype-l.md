@@ -1,12 +1,13 @@
 ---
-title: "_mbsbtype —, _mbsbtype_l — | Dokumentacja firmy Microsoft"
+title: _mbsbtype, _mbsbtype_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsbtype_l
 - _mbsbtype
@@ -28,29 +29,31 @@ f1_keywords:
 - mbsbtype_l
 - _mbsbtype_l
 - _mbsbtype
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbsbtype function
 - mbsbtype function
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 05c106136c36d09b06e5b168a0c582b87c306d93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e25372291d4069e2fda5130a7166b1b4da8eb525
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 Zwraca typ bajtów ciągu.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -77,14 +80,14 @@ int _mbsbtype_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_mbsbtype`i `_mbsbtype_l` zwraca wartość wskazująca wynik testu w określonym bajcie. Stałe manifestu w poniższej tabeli są definiowane w Mbctype.h.  
+ `_mbsbtype` i `_mbsbtype_l` zwraca wartość wskazująca wynik testu w określonym bajcie. Stałe manifestu w poniższej tabeli są definiowane w Mbctype.h.  
   
 |Wartość zwracana|Byte — typ|  
 |------------------|---------------|  
 |`_MBC_SINGLE` (0)|Znaki jednobajtowe. Na przykład w strona kodowa 932 `_mbsbtype` zwraca wartość 0, jeśli w określonym bajcie znajduje się w zakresie wartości 0x20-0x7E lub 0xA1 - 0xDF.|  
 |`_MBC_LEAD` (1)|Prowadzić bajtów znaków wielobajtowych. Na przykład w strona kodowa 932 `_mbsbtype` zwraca wartość 1, jeśli w określonym bajcie znajduje się w zakresie 0x81-0x9F lub wartość 0xE0 - 0xFC.|  
 |`_MBC_TRAIL` (2)|Końcowy bajtów znaków wielobajtowych. Na przykład w strona kodowa 932 `_mbsbtype` zwraca 2, jeśli w określonym bajcie znajduje się w zakresie 0x40-0x7E lub 0x80 - 0xFC.|  
-|`_MBC_ILLEGAL` (-1)|`NULL`ciąg, nieprawidłowy znak lub `NULL` bajtów znaleziono przed bajtów przy przesunięciu `count` w `mbstr`.|  
+|`_MBC_ILLEGAL` (-1)|`NULL` ciąg, nieprawidłowy znak lub `NULL` bajtów znaleziono przed bajtów przy przesunięciu `count` w `mbstr`.|  
   
 ## <a name="remarks"></a>Uwagi  
  `_mbsbtype` Funkcja określa typ bajtów w ciąg znaków wielobajtowych. Funkcja sprawdza, czy tylko bajtów przy przesunięciu `count` w `mbstr`, ignorowanie nieprawidłowe znaki, przed określonym bajcie.  
@@ -97,10 +100,10 @@ int _mbsbtype_l(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_mbsbtype`|\<mbstring.h >|\<mbctype.h > *|  
-|`_mbsbtype_l`|\<mbstring.h >|\<mbctype.h > *|  
+|`_mbsbtype`|\<mbstring.h>|\<mbctype.h>*|  
+|`_mbsbtype_l`|\<mbstring.h>|\<mbctype.h>*|  
   
- \*Dla manifest stałe używane jako wartości zwracanych.  
+ \* Dla manifest stałe używane jako wartości zwracanych.  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

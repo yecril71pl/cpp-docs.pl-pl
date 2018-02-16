@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/16/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -74,7 +75,8 @@ f1_keywords:
 - _WIN64
 - _WINRT_DLL
 - __func__
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - timestamps, preprocessor macro
 - cl.exe compiler, version number
@@ -149,16 +151,17 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 86905a879abe9b81302a8f196e200c1d0c227bb7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 53acac18902e261eede565987d6b9c053a8f1707
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="predefined-macros"></a>Wstępnie zdefiniowane makra
 
@@ -286,7 +289,7 @@ Microsoft Visual C++ obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95; CPPRTTI** zdefiniowany jako 1, gdy [/GR (Włącz Run-Time informacji o typie)](../build/reference/gr-enable-run-time-type-information.md) ustawiono opcję kompilatora. W przeciwnym razie jest niezdefiniowana.
 
-- **&#95; CPPUNWIND** zdefiniowany jako 1, jeśli co najmniej jeden z [/GX (Włącz obsługę wyjątków)](../build/reference/gx-enable-exception-handling.md), [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md), lub [/EH (Model obsługi wyjątku) ](../build/reference/eh-exception-handling-model.md) — opcje kompilatora są ustawione. W przeciwnym razie jest niezdefiniowana.
+- **&#95; CPPUNWIND** zdefiniowany jako 1, jeśli co najmniej jeden z [/GX (Włącz obsługę wyjątków)](../build/reference/gx-enable-exception-handling.md), [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md), lub [/EH (wyjątek obsługi modelu)](../build/reference/eh-exception-handling-model.md) są ustawione opcje kompilatora. W przeciwnym razie jest niezdefiniowana.
 
 - **&#95; debugowania** zdefiniowany jako 1 w przypadku [/LDd](../build/reference/md-mt-ld-use-run-time-library.md), [/mdd](../build/reference/md-mt-ld-use-run-time-library.md), lub [/MTd](../build/reference/md-mt-ld-use-run-time-library.md) ustawiono opcję kompilatora. W przeciwnym razie jest niezdefiniowana.
 
@@ -372,7 +375,7 @@ Microsoft Visual C++ obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95; MSC &#95; VER** zdefiniowany jako literał całkowity, który koduje główne i pomocnicze liczba elementów numer wersji kompilatora. Główny numer jest pierwszym elementem numer wersji rozdzielonym i numer pomocnicza jest drugiego elementu. Na przykład, jeśli numer wersji kompilatora Visual C++ jest 17.00.51106.1 **&#95; MSC &#95; VER** makro daje w wyniku 1700. Wprowadź **cl /?** w wierszu polecenia, aby wyświetlić numer wersji kompilatora. To makro zawsze jest definiowany.
 
-- **&#95; MSVC &#95; JĘZYK** zdefiniowany jako literał całkowity, który określa standard języka C++ docelowe przez kompilator. Skompilowany, ponieważ C++, makro jest liczbą całkowitą wartość literału 201402 Jeśli [/std:c ++ 14](../build/reference/std-specify-language-standard-version.md) — opcja kompilatora jest ustawiona lub domyślnie jest ustawiana na 201703 Jeżeli [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md) ustawiono opcję kompilatora; i ma ustawioną wartość wyższy, nieokreślone wartość przy [/std:c ++ najnowsze](../build/reference/std-specify-language-standard-version.md). W przeciwnym razie makro jest niezdefiniowane. **&#95; MSVC &#95; JĘZYK** makro i [/std (Określ wersję Standard języka)](../build/reference/std-specify-language-standard-version.md) — opcje kompilatora są dostępne począwszy od wersji programu Visual Studio 2015 Update 3.
+- **&#95; MSVC &#95; JĘZYK** zdefiniowany jako literał całkowity, który określa standard języka C++ docelowe przez kompilator. Skompilowany, ponieważ C++, makro jest liczbą całkowitą wartość literału 201402L Jeśli [/std:c ++ 14](../build/reference/std-specify-language-standard-version.md) — opcja kompilatora jest ustawiona lub domyślnie jest ustawiana na 201703 L Jeżeli [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md) ustawiono opcję kompilatora; i ma ustawioną wartość wyższy, nieokreślone wartość przy [/std:c ++ najnowsze](../build/reference/std-specify-language-standard-version.md). W przeciwnym razie makro jest niezdefiniowane. **&#95; MSVC &#95; JĘZYK** makro i [/std (Określ wersję Standard języka)](../build/reference/std-specify-language-standard-version.md) — opcje kompilatora są dostępne począwszy od wersji programu Visual Studio 2015 Update 3.
 
 - **&#95; &#95; MSVC &#95; Środowisko URUCHOMIENIOWE &#95; SPRAWDZA** zdefiniowany jako 1, gdy dla jednego z [/RTC](../build/reference/rtc-run-time-error-checks.md) ustawiono opcje kompilatora. W przeciwnym razie jest niezdefiniowana.
 

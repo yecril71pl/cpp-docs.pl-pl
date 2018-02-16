@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wfsopen
 - _fsopen
@@ -30,7 +31,8 @@ f1_keywords:
 - _tfsopen
 - _wfsopen
 - _fsopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - opening files, streams
 - fsopen function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0233734a829aa091615bb7feff0970e6912d7199
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 29ace593ec55a74db72a9bfd9d8f155055923a83
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
 Zostanie otwarta strumienia z udostępniania plików.  
@@ -87,7 +90,7 @@ FILE *_wfsopen(
  Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `_fsopen` Funkcja otwiera plik określony przez `filename` jako strumienia i przygotowuje plik kolejnych udostępnionego odczytu lub zapisu, zgodnie z definicją w trybie i `shflag` argumentów. `_wfsopen`jest to wersja znaków dwubajtowych `_fsopen`; `filename` i `mode` argumenty `_wfsopen` są ciągami znaków dwubajtowych. `_wfsopen`i `_fsopen` zachowują się tak samo w przeciwnym razie wartość.  
+ `_fsopen` Funkcja otwiera plik określony przez `filename` jako strumienia i przygotowuje plik kolejnych udostępnionego odczytu lub zapisu, zgodnie z definicją w trybie i `shflag` argumentów. `_wfsopen` jest to wersja znaków dwubajtowych `_fsopen`; `filename` i `mode` argumenty `_wfsopen` są ciągami znaków dwubajtowych. `_wfsopen` i `_fsopen` zachowują się tak samo w przeciwnym razie wartość.  
   
  Ciąg znaków `mode` Określa typ dostępu do żądanego pliku, jak pokazano w poniższej tabeli.  
   
@@ -135,8 +138,8 @@ FILE *_wfsopen(
   
 |Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|  
 |--------------|---------------------|----------------------|  
-|`_fsopen`|\<stdio.h >|\<Share.h ><br /><br /> Dla manifest stałą dla `shflag` parametru.|  
-|`_wfsopen`|\<stdio.h > lub \<wchar.h >|\<Share.h ><br /><br /> Dla manifest stałą dla `shflag` parametru.|  
+|`_fsopen`|\<stdio.h>|\<share.h><br /><br /> Dla manifest stałą dla `shflag` parametru.|  
+|`_wfsopen`|\<stdio.h > lub \<wchar.h >|\<share.h><br /><br /> Dla manifest stałą dla `shflag` parametru.|  
   
 ## <a name="example"></a>Przykład  
   
@@ -175,7 +178,7 @@ No one else in the network can write to this file until we are done.
  [fclose —, _fcloseall —](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [_fdopen —, _wfdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md)   
  [ferror —](../../c-runtime-library/reference/ferror.md)   
- [_fileno —](../../c-runtime-library/reference/fileno.md)   
+ [_fileno](../../c-runtime-library/reference/fileno.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
  [freopen —, _wfreopen —](../../c-runtime-library/reference/freopen-wfreopen.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   

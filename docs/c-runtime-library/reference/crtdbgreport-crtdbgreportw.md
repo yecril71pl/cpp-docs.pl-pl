@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CrtDbgReport
 - _CrtDbgReportW
@@ -43,11 +43,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4720053f96972c6ff0d846b9641d9ddc2d256f20
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 45cd908519fbacb42e017676a245451a5966891e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 Generuje raport z komunikatem debugowania i wysyła raport do trzech miejsc docelowych możliwe (tylko wersja do debugowania).  
@@ -98,11 +98,11 @@ int _CrtDbgReportW(
  [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) debugowania wywołanie makra `_CrtDbgReport` do ich debugowania generowania raportów. Wersje znaków dwubajtowych tych makr oraz [_ASSERT &#91; W &#93; ](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW n` i `_RPTFW n`, użyj `_CrtDbgReportW` do ich debugowania generowania raportów. Gdy `_CrtDbgReport` lub `_CrtDbgReportW` zwraca 1, te makra uruchomienia debugera, pod warunkiem, że włączone jest debugowanie just-in-time (JIT).  
   
 ## <a name="remarks"></a>Uwagi  
- `_CrtDbgReport`i `_CrtDbgReportW` wysłać raport debugowania do trzech różnych miejsc docelowych: plik raportu debugowania, monitor debugowania ( [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] debugera), lub w oknie komunikatu debugowania. Dwie funkcje konfiguracji, [_crtsetreportmode —](../../c-runtime-library/reference/crtsetreportmode.md) i [_crtsetreportfile —](../../c-runtime-library/reference/crtsetreportfile.md), są używane do określenia przeznaczenia lub miejsc docelowych dla każdego typu raportu. Te funkcje umożliwiają raportowania docelowego lub miejsc docelowych dla każdego typu raportu można sterować oddzielnie. Na przykład użytkownik może określić, że `reportType` z `_CRT_WARN` tylko wysyłane do monitora debugowania, podczas gdy `reportType` z `_CRT_ASSERT` wysłane do pliku raportu zdefiniowane przez użytkownika i debugowania okna komunikatu.  
+ `_CrtDbgReport` i `_CrtDbgReportW` wysłać raport debugowania do trzech różnych miejsc docelowych: plik raportu debugowania, monitor debugowania ( [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] debugera), lub w oknie komunikatu debugowania. Dwie funkcje konfiguracji, [_crtsetreportmode —](../../c-runtime-library/reference/crtsetreportmode.md) i [_crtsetreportfile —](../../c-runtime-library/reference/crtsetreportfile.md), są używane do określenia przeznaczenia lub miejsc docelowych dla każdego typu raportu. Te funkcje umożliwiają raportowania docelowego lub miejsc docelowych dla każdego typu raportu można sterować oddzielnie. Na przykład użytkownik może określić, że `reportType` z `_CRT_WARN` tylko wysyłane do monitora debugowania, podczas gdy `reportType` z `_CRT_ASSERT` wysłane do pliku raportu zdefiniowane przez użytkownika i debugowania okna komunikatu.  
   
- `_CrtDbgReportW`jest to wersja znaków dwubajtowych `_CrtDbgReport`. Wszystkie jej dane wyjściowe i ciąg parametry są w ciągach znaków dwubajtowych; w przeciwnym razie jest taka sama jak wersja znaków.  
+ `_CrtDbgReportW` jest to wersja znaków dwubajtowych `_CrtDbgReport`. Wszystkie jej dane wyjściowe i ciąg parametry są w ciągach znaków dwubajtowych; w przeciwnym razie jest taka sama jak wersja znaków.  
   
- `_CrtDbgReport`i `_CrtDbgReportW` utworzyć komunikat raportu debugowania podstawiając `argument`[`n`] argumenty do `format` ciąg znaków, według reguł zdefiniowanych przez `printf` lub `wprintf` funkcji. Te funkcje następnie wygeneruj raport debugowania i określenia przeznaczenia lub miejsc docelowych, które są oparte na trybie Bieżące raportu i pliku zdefiniowane dla `reportType`. Gdy raport jest wysyłany do okna komunikatu debugowania, `filename`, `lineNumber`, i `moduleName` znajdują się informacje wyświetlane w oknie.  
+ `_CrtDbgReport` i `_CrtDbgReportW` utworzyć komunikat raportu debugowania podstawiając `argument`[`n`] argumenty do `format` ciąg znaków, według reguł zdefiniowanych przez `printf` lub `wprintf` funkcji. Te funkcje następnie wygeneruj raport debugowania i określenia przeznaczenia lub miejsc docelowych, które są oparte na trybie Bieżące raportu i pliku zdefiniowane dla `reportType`. Gdy raport jest wysyłany do okna komunikatu debugowania, `filename`, `lineNumber`, i `moduleName` znajdują się informacje wyświetlane w oknie.  
   
  W poniższej tabeli wymieniono dostępne opcje dla trybie raportu lub trybów plików i zachowanie wynikowy `_CrtDbgReport` i `_CrtDbgReportW`. Te opcje są zdefiniowane jako flagi bitów w \<crtdbg.h >.  
   
@@ -125,7 +125,7 @@ int _CrtDbgReportW(
 |`_CrtDbgReport`|\<crtdbg.h>|  
 |`_CrtDbgReportW`|\<crtdbg.h>|  
   
- `_CrtDbgReport`i `_CrtDbgReportW` są rozszerzenia Microsoft. Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+ `_CrtDbgReport` i `_CrtDbgReportW` są rozszerzenia Microsoft. Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Biblioteki  
  Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.  

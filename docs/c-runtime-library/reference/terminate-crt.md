@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: terminate
+ms.topic: reference
+apiname:
+- terminate
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,22 +23,25 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: terminate
-dev_langs: C++
+f1_keywords:
+- terminate
+dev_langs:
+- C++
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b04cd56f2239bcee291a0de37f23f7eb2e699f1a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0be18926e565604e2985b0e3afed571b752465b7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="terminate-crt"></a>zakończenie (CRT)
 Wywołania `abort` lub funkcję należy ją określić za pomocą `set_terminate`.  
@@ -56,13 +61,13 @@ void terminate( void );
   
 -   Stos jest uszkodzony po zgłoszeniu wyjątku.  
   
- `terminate`wywołania `abort` domyślnie. To ustawienie domyślne można zmienić, pisanie funkcji zakończenia i wywołanie `set_terminate` z nazwą funkcji jako jej argument. `terminate`wywołuje ostatniej podany jako argument do funkcji `set_terminate`. Aby uzyskać więcej informacji, zobacz [nieobsługiwanych wyjątków C++](../../cpp/unhandled-cpp-exceptions.md).  
+ `terminate` wywołania `abort` domyślnie. To ustawienie domyślne można zmienić, pisanie funkcji zakończenia i wywołanie `set_terminate` z nazwą funkcji jako jej argument. `terminate` wywołuje ostatniej podany jako argument do funkcji `set_terminate`. Aby uzyskać więcej informacji, zobacz [nieobsługiwanych wyjątków C++](../../cpp/unhandled-cpp-exceptions.md).  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`terminate`|\<EH.h >|  
+|`terminate`|\<eh.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -114,8 +119,8 @@ term_func() was called by terminate().
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa wyjątków — procedury](../../c-runtime-library/exception-handling-routines.md)   
- [przerwania](../../c-runtime-library/reference/abort.md)   
- [_set_se_translator —](../../c-runtime-library/reference/set-se-translator.md)   
+ [Przerwania](../../c-runtime-library/reference/abort.md)   
+ [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)   
  [set_terminate —](../../c-runtime-library/reference/set-terminate-crt.md)   
- [set_unexpected —](../../c-runtime-library/reference/set-unexpected-crt.md)   
+ [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
  [Nieoczekiwany](../../c-runtime-library/reference/unexpected-crt.md)

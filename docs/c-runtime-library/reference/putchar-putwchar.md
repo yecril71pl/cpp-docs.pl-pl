@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - putchar
 - putwchar
@@ -27,7 +28,8 @@ f1_keywords:
 - putchar
 - putwchar
 - _puttchar
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - putchar function
 - _puttchar function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f3320f40f822c9559b411144ecc621824eedbd3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 687cacfbf59f2d905de8f14bcebb6e7bbf68fb53
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 Zapisuje znaku **stdout**.  
@@ -71,7 +74,7 @@ wint_t putwchar(
  Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.  
   
 ## <a name="remarks"></a>Uwagi  
- `putc` Procedury zapisuje pojedynczy znak `c` z danymi wyjściowymi `stream` w bieżącym położeniu. Dowolna liczba całkowita mogą zostać przekazane do `putc`, ale są zapisywane tylko pierwszych 8 bitów. `putchar` Procedura jest identyczna jak **putc — (** `c` **, stdout)**. Dla każdej procedury Jeśli wystąpi błąd, ustaw wskaźnik błędów dla tego strumienia. `putc`i `putchar` są podobne do `fputc` i `_fputchar`odpowiednio, ale są implementowane zarówno jako funkcje, jak i jako makra (zobacz [wybierania pomiędzy funkcjami i makrami](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc`i `putwchar` wersji znaków dwubajtowych `putc` i `putchar`odpowiednio.  
+ `putc` Procedury zapisuje pojedynczy znak `c` z danymi wyjściowymi `stream` w bieżącym położeniu. Dowolna liczba całkowita mogą zostać przekazane do `putc`, ale są zapisywane tylko pierwszych 8 bitów. `putchar` Procedura jest identyczna jak **putc — (** `c` **, stdout)**. Dla każdej procedury Jeśli wystąpi błąd, ustaw wskaźnik błędów dla tego strumienia. `putc` i `putchar` są podobne do `fputc` i `_fputchar`odpowiednio, ale są implementowane zarówno jako funkcje, jak i jako makra (zobacz [wybierania pomiędzy funkcjami i makrami](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc` i `putwchar` wersji znaków dwubajtowych `putc` i `putchar`odpowiednio.  
   
  Wersje z **_nolock —** sufiks są identyczne z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.  
   
@@ -79,16 +82,16 @@ wint_t putwchar(
   
 |Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_puttchar`|`putchar`|`putchar`|**putwchar —**|  
+|`_puttchar`|`putchar`|`putchar`|**putwchar**|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`putchar`|\<stdio.h >|  
+|`putchar`|\<stdio.h>|  
 |`putwchar`|\<stdio.h > lub \<wchar.h >|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu `stdin`, `stdout`, i `stderr`, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
   
 ## <a name="libraries"></a>Biblioteki  
  Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  

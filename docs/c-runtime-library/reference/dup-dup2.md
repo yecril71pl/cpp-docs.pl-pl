@@ -1,12 +1,13 @@
 ---
-title: "_dup —, _dup2 — | Dokumentacja firmy Microsoft"
+title: _dup, _dup2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _dup
 - _dup2
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - _dup2
 - _dup
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _dup2 function
 - dup function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c3f4ce550bd0d0d25d73284c87c33b6fa71647a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 687c8e0d2f9f8f860e78a1c8e44cab6886e3cf04
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
 Tworzy drugi deskryptorów plików, dla której plik otwarty (`_dup`), lub ponownie przypisuje deskryptorów plików (`_dup2`).  
@@ -69,12 +72,12 @@ int _dup2(
  Wszelkie deskryptorów plików.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_dup`Zwraca nowy deskryptorów plików. `_dup2`Zwraca wartość 0, informując o powodzeniu. Jeśli wystąpi błąd, każda funkcja zwraca wartość -1 i zestawy `errno` do `EBADF` deskryptorów plików jest nieprawidłowy lub do `EMFILE` Jeśli nie więcej deskryptorów plików są dostępne. W przypadku deskryptora nieprawidłowy plik funkcji również wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).  
+ `_dup` Zwraca nowy deskryptorów plików. `_dup2` Zwraca wartość 0, informując o powodzeniu. Jeśli wystąpi błąd, każda funkcja zwraca wartość -1 i zestawy `errno` do `EBADF` deskryptorów plików jest nieprawidłowy lub do `EMFILE` Jeśli nie więcej deskryptorów plików są dostępne. W przypadku deskryptora nieprawidłowy plik funkcji również wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).  
   
  Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `_dup` i `_dup2` funkcje skojarzyć drugi deskryptorów plików z aktualnie otwarty plik. Funkcje te można można użyć do skojarzenia deskryptor wstępnie zdefiniowanych plików, takim jak dla `stdout`, przy użyciu innego pliku. Przy użyciu albo deskryptorów plików można wykonywać operacji na pliku. Typ dostępu dozwolone dla pliku nie mają wpływu tworzenia nowego deskryptora. `_dup`zwraca deskryptor dalej dostępnych plików dla danego pliku. `_dup2`Wymusza `fd2` do odwoływania się do tego samego pliku jako `fd1`. Jeśli `fd2` jest skojarzony z otwartego pliku w momencie wywołania, czy plik jest zamknięty.  
+ `_dup` i `_dup2` funkcje skojarzyć drugi deskryptorów plików z aktualnie otwarty plik. Funkcje te można można użyć do skojarzenia deskryptor wstępnie zdefiniowanych plików, takim jak dla `stdout`, przy użyciu innego pliku. Przy użyciu albo deskryptorów plików można wykonywać operacji na pliku. Typ dostępu dozwolone dla pliku nie mają wpływu tworzenia nowego deskryptora. `_dup` zwraca deskryptor dalej dostępnych plików dla danego pliku. `_dup2` Wymusza `fd2` do odwoływania się do tego samego pliku jako `fd1`. Jeśli `fd2` jest skojarzony z otwartego pliku w momencie wywołania, czy plik jest zamknięty.  
   
  Zarówno `_dup` i `_dup2` zaakceptować deskryptorów plików jako parametry. Aby przekazać strumienia `(FILE *)` jednej z tych funkcji, należy użyć [_fileno —](../../c-runtime-library/reference/fileno.md). `fileno` Procedury zwraca deskryptorów plików, w obecnie skojarzony z danego strumienia. Poniższy przykład przedstawia sposób skojarzenia `stderr` (zdefiniowany jako `FILE` `*` w Stdio.h) z deskryptorów plików:  
   
@@ -86,10 +89,10 @@ int cstderr = _dup( _fileno( stderr ));
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_dup`|\<IO.h >|  
-|`_dup2`|\<IO.h >|  
+|`_dup`|\<io.h>|  
+|`_dup2`|\<io.h>|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+ Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [! INCLUDEUWP aplikacji. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -156,5 +159,5 @@ This goes to file 'data'
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)   
  [_zamknij](../../c-runtime-library/reference/close.md)   
- [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

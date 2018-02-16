@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CrtDumpMemoryLeaks
 apilocation:
@@ -45,11 +45,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 859f1918afc69054b13cab161f2d7b4801bcbd78
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 8f71e37da509d4e8dd05c5a41afa9fe539294347
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
 Zrzuty całą pamięć blokuje w stercie debugowania gdy wystąpił wyciek pamięci (tylko wersja do debugowania).  
@@ -62,14 +62,14 @@ int _CrtDumpMemoryLeaks( void );
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_CrtDumpMemoryLeaks`Zwraca wartość PRAWDA, jeśli zostanie znaleziony przeciek pamięci. W przeciwnym razie funkcja zwraca wartość FALSE.  
+ `_CrtDumpMemoryLeaks` Zwraca wartość PRAWDA, jeśli zostanie znaleziony przeciek pamięci. W przeciwnym razie funkcja zwraca wartość FALSE.  
   
 ## <a name="remarks"></a>Uwagi  
  `_CrtDumpMemoryLeaks` Funkcja określa, czy od czasu rozpoczęcia wykonywania programu wystąpił wyciek pamięci. W przypadku odnalezienia przeciek informacje o nagłówku debugowania dla wszystkich obiektów na stercie jest utworzyć zrzutu w postaci czytelny dla użytkownika. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań `_CrtDumpMemoryLeaks` są usuwane podczas przetwarzania wstępnego.  
   
- `_CrtDumpMemoryLeaks`często jest wywoływana po zakończeniu wykonywania programu, aby sprawdzić, czy wszystkie pamięci przydzielonej przez aplikację został zwolniony. Funkcję można wywołać automatycznie Kończenie działania programu włączając `_CRTDBG_LEAK_CHECK_DF` pola bitowego ze [_crtdbgflag —](../../c-runtime-library/crtdbgflag.md) Flaga przy użyciu [_crtsetdbgflag —](../../c-runtime-library/reference/crtsetdbgflag.md) funkcji.  
+ `_CrtDumpMemoryLeaks` często jest wywoływana po zakończeniu wykonywania programu, aby sprawdzić, czy wszystkie pamięci przydzielonej przez aplikację został zwolniony. Funkcję można wywołać automatycznie Kończenie działania programu włączając `_CRTDBG_LEAK_CHECK_DF` pola bitowego ze [_crtdbgflag —](../../c-runtime-library/crtdbgflag.md) Flaga przy użyciu [_crtsetdbgflag —](../../c-runtime-library/reference/crtsetdbgflag.md) funkcji.  
   
- `_CrtDumpMemoryLeaks`wywołania [_crtmemcheckpoint —](../../c-runtime-library/reference/crtmemcheckpoint.md) można uzyskać bieżącego stanu sterty, a następnie skanuje stanu dla bloków, które nie został zwolniony. W przypadku bloku niezwolnionych `_CrtDumpMemoryLeaks` wywołania [_crtmemdumpallobjectssince —](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) zrzutu informacji dla wszystkich obiektów przydzielić w stercie od początku wykonywania programu.  
+ `_CrtDumpMemoryLeaks` wywołania [_crtmemcheckpoint —](../../c-runtime-library/reference/crtmemcheckpoint.md) można uzyskać bieżącego stanu sterty, a następnie skanuje stanu dla bloków, które nie został zwolniony. W przypadku bloku niezwolnionych `_CrtDumpMemoryLeaks` wywołania [_crtmemdumpallobjectssince —](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) zrzutu informacji dla wszystkich obiektów przydzielić w stercie od początku wykonywania programu.  
   
  Domyślnie wewnętrzny bloki wykonawcze języka C (`_CRT_BLOCK`) nie są uwzględnione w operacji zrzutu pamięci. [_Crtsetdbgflag —](../../c-runtime-library/reference/crtsetdbgflag.md) funkcji można włączyć `_CRTDBG_CHECK_CRT_DF` bit z `_crtDbgFlag` do uwzględnienia w procesie wykrywania przeciek te bloki.  
   

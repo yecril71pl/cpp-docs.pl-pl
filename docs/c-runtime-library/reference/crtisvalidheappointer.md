@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtIsValidHeapPointer
+ms.topic: reference
+apiname:
+- _CrtIsValidHeapPointer
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0af543a4462c5cc9dec32c279750be744efa7303
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4f888466e0b1625f93c4e1cf66fab0bb85678094
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 Sprawdza, czy określony wskaźnik jest w stercie przydzielone przez niektóre biblioteki wykonawczej języka C, ale niekoniecznie Biblioteka CRT obiektu wywołującego. W wersjach CRT przed Visual Studio 2010 sprawdza, czy określony wskaźnik znajduje się w lokalnej sterty (tylko wersja do debugowania).  
@@ -56,7 +60,7 @@ Sprawdza, czy określony wskaźnik jest w stercie przydzielone przez niektóre b
  Wskaźnik do początku blok pamięci przydzielony.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_CrtIsValidHeapPointer`Zwraca wartość PRAWDA, jeśli określony wskaźnik jest w stercie współużytkowane przez wszystkie wystąpienia biblioteki CRT. W wersjach CRT przed Visual Studio 2010 to zwraca wartość TRUE, jeśli określony wskaźnik znajduje się w lokalnej sterty. W przeciwnym razie funkcja zwraca wartość FALSE.  
+ `_CrtIsValidHeapPointer` Zwraca wartość PRAWDA, jeśli określony wskaźnik jest w stercie współużytkowane przez wszystkie wystąpienia biblioteki CRT. W wersjach CRT przed Visual Studio 2010 to zwraca wartość TRUE, jeśli określony wskaźnik znajduje się w lokalnej sterty. W przeciwnym razie funkcja zwraca wartość FALSE.  
   
 ## <a name="remarks"></a>Uwagi  
  Nie zaleca się użycie tej funkcji. Począwszy od programu Visual Studio 2010 CRT biblioteki wszystkich bibliotek CRT udostępniania jednego sterty systemu operacyjnego, *sterty procesu*. `_CrtIsValidHeapPointer` Funkcji raportów, czy wskaźnik została przydzielona w stosie CRT, ale nie alokowanej Biblioteka CRT obiektu wywołującego. Rozważmy na przykład przydzielony przy użyciu programu Visual Studio 2010 biblioteki CRT bloku. Jeśli `_CrtIsValidHeapPointer` funkcji wyeksportowanej przez wersję programu Visual Studio 2012 biblioteki CRT testy wskaźnika, zwraca wartość TRUE. To nie jest już przydatne testu. W wersjach biblioteki CRT przed Visual Studio 2010 funkcja służy do upewnij się, że adres pamięci mieści się w lokalnej sterty. Lokalnej sterty odwołuje się do stosu tworzony i zarządzany przez konkretnego wystąpienia biblioteki wykonawczej języka C. Jeśli biblioteki dołączanej (dynamicznie DLL) zawiera statyczne łącze do biblioteki wykonawczej, ma własne wystąpienie sterty środowiska wykonawczego i dlatego jego własnej sterty, niezależnie od lokalnego stosu aplikacji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań `_CrtIsValidHeapPointer` są usuwane podczas przetwarzania wstępnego.  
@@ -73,7 +77,7 @@ _ASSERTE( _CrtIsValidHeapPointer( userData ) );
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_CrtIsValidHeapPointer`|\<crtdbg.h >|  
+|`_CrtIsValidHeapPointer`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

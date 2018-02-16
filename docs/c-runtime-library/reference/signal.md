@@ -1,13 +1,15 @@
 ---
 title: "sygnał | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 1/02/2018
+ms.date: 02/12/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: signal
+ms.topic: reference
+apiname:
+- signal
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,18 +23,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: signal
-dev_langs: C++
-helpviewer_keywords: signal function
+f1_keywords:
+- signal
+dev_langs:
+- C++
+helpviewer_keywords:
+- signal function
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 337bc5e222ee7fcb313d0b7ea0722dbb5cacea75
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23eae404bf5f8e2227d68189938defb2308f5e6b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="signal"></a>sygnał
 
@@ -44,21 +50,19 @@ Ustawia przerwań Obsługa sygnału.
 ## <a name="syntax"></a>Składnia
 
 ```C
-void (__cdecl *signal(
-   int sig,
-   void (__cdecl *func ) (int [, int ] )))(int);
+void __cdecl *signal(int sig, int (*func)(int, int));
 ```
 
 ### <a name="parameters"></a>Parametry
-_SIG_  
+_sig_  
 Wartość sygnału.
 
-_FUNC_  
-Funkcja do wykonania. Pierwszy parametr jest wartością sygnału, a drugi parametr jest podrzędnego kod, który może być używana podczas sigfpe — jest pierwszym parametrem.
+_func_  
+Drugi parametr jest wskaźnikiem do funkcji, które mają zostać wykonane. Pierwszy parametr jest wartością sygnału, a drugi parametr jest podrzędnego kod, który może być używana podczas sigfpe — jest pierwszym parametrem.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`signal`Zwraca poprzednią wartość _func_ który skojarzone z danym sygnału. Na przykład jeśli poprzednią wartość _func_ został `SIG_IGN`, wartość zwracana jest również `SIG_IGN`. Zwracana wartość `SIG_ERR` wskazuje błąd; w takim przypadku `errno` ma ustawioną wartość `EINVAL`.
+`signal` Zwraca poprzednią wartość func, który został skojarzony z danym sygnału. Na przykład jeśli poprzednią wartość _func_ został `SIG_IGN`, wartość zwracana jest również `SIG_IGN`. Zwracana wartość `SIG_ERR` wskazuje błąd; w takim przypadku `errno` ma ustawioną wartość `EINVAL`.
 
 Zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat kodów powrotnych.
 
@@ -80,7 +84,7 @@ Jeśli _sig_ nie jest jednym z powyższych wartości zostanie wywołany program 
 Domyślnie `signal` kończy program wywołujący z kodem zakończenia 3, niezależnie od wartości _sig_.
 
 > [!NOTE]
-> `SIGINT`nie jest obsługiwane dla żadnej aplikacji Win32. W przypadku przerwania klawisze CTRL + C systemów operacyjnych Win32 Generowanie nowego wątku, w szczególności obsługi tego przerwania. Może to spowodować aplikacji jednym wątku, na przykład jeden w systemie UNIX wielowątkowe i spowodować nieoczekiwane zachowanie.
+> `SIGINT` nie jest obsługiwane dla żadnej aplikacji Win32. W przypadku przerwania klawisze CTRL + C systemów operacyjnych Win32 Generowanie nowego wątku, w szczególności obsługi tego przerwania. Może to spowodować aplikacji jednym wątku, na przykład jeden w systemie UNIX wielowątkowe i spowodować nieoczekiwane zachowanie.
 
 _Func_ argument jest adresem do obsługi sygnał, który można zapisać lub do jednego ze wstępnie zdefiniowanych stałych `SIG_DFL` lub `SIG_IGN`, które także są definiowane w sygnału. H. Jeśli _func_ jest funkcją, jest zainstalowana jako program obsługi sygnału dla danego sygnału. Prototyp obsługi sygnałów wymaga jednego argumentu formalne, _sig_, typu `int`. System operacyjny udostępnia rzeczywisty argument za pośrednictwem _sig_ po wystąpieniu przerwania; argument jest sygnał, który wygenerował przerwania. W związku z tym służy sześć stałe manifestu (wymienione w powyższej tabeli) programu obsługi sygnału ustalenie, które przerwań wystąpił i podejmij odpowiednią akcję. Na przykład można wywołać `signal` dwa razy, aby przypisać tej procedury obsługi do dwóch różnych sygnałów, a następnie sprawdź _sig_ argument w obsłudze wykonać różne operacje oparte na Odebrano sygnał.
 
@@ -116,7 +120,7 @@ Sygnał ustawienia nie są zachowywane w uruchomionego procesu, które zostały 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`signal`|\<Signal.h >|
+|`signal`|\<signal.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

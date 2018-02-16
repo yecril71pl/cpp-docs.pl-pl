@@ -1,13 +1,15 @@
 ---
-title: "_set_se_translator — | Dokumentacja firmy Microsoft"
+title: _set_se_translator | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _set_se_translator
+ms.topic: reference
+apiname:
+- _set_se_translator
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - _set_se_translator
 - set_se_translator
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - set_se_translator function
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f7ce46b8db587337b7a9c98279efd4b89ffa8f9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 35ceedca9d26b92d96a3796a3deadee5e62f7f02
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 Uchwyty Win32 wyjątków (C strukturalnych wyjątkami) jako C++ wpisana wyjątków.  
@@ -67,7 +71,7 @@ _se_translator_function _set_se_translator(
   
  Funkcja translator należy wykonać, nie więcej niż throw C++ typu wyjątku. Jeśli tak, aby nic oprócz zgłaszanie (na przykład zapisywania do pliku dziennika, na przykład) program może nie działać zgodnie z oczekiwaniami, ponieważ liczba translator funkcja jest wywoływana jest zależny od platformy.  
   
- W środowisku wielowątkowym translator funkcje są obsługiwane osobno dla każdego wątku. Każdym nowym wątku, należy zainstalować ma własną funkcję translatora. W związku z tym każdy wątek jest odpowiedzialny za obchodzenie tłumaczenia. `_set_se_translator`jest przeznaczony dla jednego wątku; innej bibliotece DLL można zainstalować funkcję różnych tłumaczenia.  
+ W środowisku wielowątkowym translator funkcje są obsługiwane osobno dla każdego wątku. Każdym nowym wątku, należy zainstalować ma własną funkcję translatora. W związku z tym każdy wątek jest odpowiedzialny za obchodzenie tłumaczenia. `_set_se_translator` jest przeznaczony dla jednego wątku; innej bibliotece DLL można zainstalować funkcję różnych tłumaczenia.  
   
  `seTransFunction` Funkcji, który można zapisać musi być funkcją natywnie skompilowanego (nie kompilowanych z/CLR). Należy wykonać całkowitą bez znaku i wskaźnika do systemu Win32 `_EXCEPTION_POINTERS` struktury jako argumenty. Argumenty są zwracane wartości z wywołania funkcji API Win32 `GetExceptionCode` i `GetExceptionInformation` funkcje odpowiednio.  
   
@@ -83,7 +87,7 @@ typedef void (*_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_set_se_translator`|\<EH.h >|  
+|`_set_se_translator`|\<eh.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -206,6 +210,6 @@ Caught CMyException.
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa wyjątków — procedury](../../c-runtime-library/exception-handling-routines.md)   
  [set_terminate —](../../c-runtime-library/reference/set-terminate-crt.md)   
- [set_unexpected —](../../c-runtime-library/reference/set-unexpected-crt.md)   
+ [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
  [Zakończenie](../../c-runtime-library/reference/terminate-crt.md)   
  [Nieoczekiwany](../../c-runtime-library/reference/unexpected-crt.md)

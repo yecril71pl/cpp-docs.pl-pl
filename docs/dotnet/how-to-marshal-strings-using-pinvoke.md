@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - interop [C++], strings
 - marshaling [C++], strings
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 86f51c31cb329b05f58452818b7a9292d7699273
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1887a88bcfcdec9daf2661eca56a0adcf59ba08
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>Porady: przeprowadzanie marshalingu ciągów za pomocą funkcji PInvoke
 W tym temacie opisano sposób natywny funkcje, których ciągów w stylu języka C można wywołać przy użyciu ciągu CLR typu System::String przy użyciu wywołania platformy Framework .NET pomocy technicznej. Visual C++ programistów są zachęcani do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe), ponieważ zapewnia P/Invoke małego błąd kompilacji raportowania, nie jest bezpieczne i może być niewygodne wdrożenia. Jeśli niezarządzanego API jest dostarczana jako biblioteki DLL i kod źródłowy jest niedostępny, następnie P/Invoke jest jedyną opcją, ale w przeciwnym razie zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
@@ -36,8 +38,6 @@ W tym temacie opisano sposób natywny funkcje, których ciągów w stylu języka
   
 ## <a name="example"></a>Przykład  
  Poniższy kod składa się z modułu zarządzanych i niezarządzanych. Moduł niezarządzanym jest bibliotekę DLL, która definiuje funkcji o nazwie TakesAString, który akceptuje ANSI C-style ciąg w formie char *. Moduł zarządzany jest aplikacją wiersza polecenia, która importuje funkcja TakesAString, ale definiuje ją jako biorąc zarządzanego typu System.String zamiast znaków\*. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atrybut używany do określenia, jak należy zorganizować zarządzanych ciąg wywołanego TakesAString.  
-  
- Moduł zarządzany została skompilowana z/CLR, ale/CLR: pure działa również.  
   
 ```  
 // TraditionalDll2.cpp  

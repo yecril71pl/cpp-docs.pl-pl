@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fgetwc
 - fgetc
@@ -27,7 +28,8 @@ f1_keywords:
 - _fgettc
 - fgetwc
 - fgetc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fgettc function
 - characters, reading
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: de0b211c15077f62ecd3af0f774125e91f53017a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 39149a3963e6950e708499d64efe3c412df96fb5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 Znak odczytu ze strumienia.  
@@ -67,14 +70,14 @@ wint_t fgetwc(
  Wskaźnik do `FILE` struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `fgetc`Zwraca znak odczytany jako `int` lub zwraca `EOF` wskazująca błąd lub koniec pliku. `fgetwc`Zwraca, jako [wint_t —](../../c-runtime-library/standard-types.md), znaków dwubajtowych, który odpowiada znaków do odczytu lub zwraca `WEOF` wskazująca błąd lub koniec pliku. Dla obu tych funkcji, należy użyć `feof` lub `ferror` odróżnić błąd warunku końcowego pliku. Jeśli wystąpi błąd odczytu, ustawiono Wskaźnik błędów dla tego strumienia. Jeśli `stream` jest `NULL`, `fgetc` i `fgetwc` Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwracać `EOF`.  
+ `fgetc` Zwraca znak odczytany jako `int` lub zwraca `EOF` wskazująca błąd lub koniec pliku. `fgetwc` Zwraca, jako [wint_t —](../../c-runtime-library/standard-types.md), znaków dwubajtowych, który odpowiada znaków do odczytu lub zwraca `WEOF` wskazująca błąd lub koniec pliku. Dla obu tych funkcji, należy użyć `feof` lub `ferror` odróżnić błąd warunku końcowego pliku. Jeśli wystąpi błąd odczytu, ustawiono Wskaźnik błędów dla tego strumienia. Jeśli `stream` jest `NULL`, `fgetc` i `fgetwc` Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwracać `EOF`.  
   
 ## <a name="remarks"></a>Uwagi  
  Każda z tych funkcji odczytuje od bieżącego położenia pliku skojarzone z pojedynczym znakiem `stream`. Funkcja zwiększa następnie kursor skojarzony plik (jeśli jest zdefiniowana), aby wskazywały na następny znak. Jeśli strumień jest na końcu pliku, jest ustawiony dla tego strumienia wskaźnika końca pliku.  
   
- `fgetc`jest odpowiednikiem `getc`, ale jest zaimplementowana tylko jako funkcję, a nie jako funkcję i makr.  
+ `fgetc` jest odpowiednikiem `getc`, ale jest zaimplementowana tylko jako funkcję, a nie jako funkcję i makr.  
   
- `fgetwc`jest to wersja znaków dwubajtowych `fgetc`; odczytuje `c` jako znaków wielobajtowych lub znaków dwubajtowych zgodnie z czy `stream` jest otwarty w trybie tekst lub binarny.  
+ `fgetwc` jest to wersja znaków dwubajtowych `fgetc`; odczytuje `c` jako znaków wielobajtowych lub znaków dwubajtowych zgodnie z czy `stream` jest otwarty w trybie tekst lub binarny.  
   
  Wersje z `_nolock` sufiks są identyczne z tą różnicą, że nie są chronione przez inne wątki od zakłóceń.  
   
@@ -90,7 +93,7 @@ wint_t fgetwc(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`fgetc`|\<stdio.h >|  
+|`fgetc`|\<stdio.h>|  
 |`fgetwc`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  

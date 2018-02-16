@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtSetDumpClient
+ms.topic: reference
+apiname:
+- _CrtSetDumpClient
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDumpClient
 - CrtSetDumpClient
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bf64ca280998ac25adbb380ff8245a0b8eecf797
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bb8a62dc903b7bb0684d3fffcde8a677200d665d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetdumpclient"></a>_CrtSetDumpClient
 Instaluje funkcji zdefiniowanych przez aplikację do zrzutu `_CLIENT_BLOCK` wpisz bloki pamięci (tylko wersja do debugowania).  
@@ -59,7 +63,7 @@ Instaluje funkcji zdefiniowanych przez aplikację do zrzutu `_CLIENT_BLOCK` wpis
  Zwraca bloku klienta wcześniej zdefiniowanego zrzutu funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `_CrtSetDumpClient` Funkcja umożliwia utworzenie punktu zaczepienia ma własną funkcję zrzutu obiektów przechowywanych w aplikacji `_CLIENT_BLOCK` bloki pamięci w czasie wykonywania C debugowania procesu zrzutu pamięci. W związku z tym, co razem, kiedy debugowania zrzutu funkcji takich jak [_crtmemdumpallobjectssince —](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) lub [_crtdumpmemoryleaks —](../../c-runtime-library/reference/crtdumpmemoryleaks.md) zrzuty `_CLIENT_BLOCK` blok pamięci aplikacji zrzutu funkcja jest wywoływana, jak również. `_CrtSetDumpClient`dostarcza aplikację łatwa metoda wykrywanie przecieków pamięci i sprawdzania poprawności lub reporting zawartości danych przechowywanych w `_CLIENT_BLOCK` bloków. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań `_CrtSetDumpClient` są usuwane podczas przetwarzania wstępnego.  
+ `_CrtSetDumpClient` Funkcja umożliwia utworzenie punktu zaczepienia ma własną funkcję zrzutu obiektów przechowywanych w aplikacji `_CLIENT_BLOCK` bloki pamięci w czasie wykonywania C debugowania procesu zrzutu pamięci. W związku z tym, co razem, kiedy debugowania zrzutu funkcji takich jak [_crtmemdumpallobjectssince —](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) lub [_crtdumpmemoryleaks —](../../c-runtime-library/reference/crtdumpmemoryleaks.md) zrzuty `_CLIENT_BLOCK` blok pamięci aplikacji zrzutu funkcja jest wywoływana, jak również. `_CrtSetDumpClient` dostarcza aplikację łatwa metoda wykrywanie przecieków pamięci i sprawdzania poprawności lub reporting zawartości danych przechowywanych w `_CLIENT_BLOCK` bloków. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań `_CrtSetDumpClient` są usuwane podczas przetwarzania wstępnego.  
   
  `_CrtSetDumpClient` Funkcja instaluje nowej funkcji zdefiniowanych przez aplikację zrzutu określone w `dumpClient` i zwraca funkcję wcześniej zdefiniowanego zrzutu. Przykładem funkcji zrzutu bloku klienta jest następujący:  
   
@@ -79,7 +83,7 @@ typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_CrtSetDumpClient`|\<crtdbg.h >|  
+|`_CrtSetDumpClient`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -88,5 +92,5 @@ typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
- [_Crtreportblocktype —](../../c-runtime-library/reference/crtreportblocktype.md)   
+ [_CrtReportBlockType](../../c-runtime-library/reference/crtreportblocktype.md)   
  [_CrtGetDumpClient](../../c-runtime-library/reference/crtgetdumpclient.md)

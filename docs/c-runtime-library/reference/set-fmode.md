@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _set_fmode
+ms.topic: reference
+apiname:
+- _set_fmode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - _set_fmode
 - set_fmode
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - file translation [C++], default mode
 - _set_fmode function
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d13ee80a8a3d9848841b7fa3b5463e0b5302ffeb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 89917dc107971a5b58d46eb8676f094f7d7e70cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setfmode"></a>_set_fmode
 Ustawia domyślny tryb tłumaczenia pliku dla operacji We/Wy pliku.  
@@ -54,7 +58,7 @@ errno_t _set_fmode(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`mode`  
+ [in] `mode`  
  Tryb tłumaczenia pliku żądanego: `_O_TEXT` lub `_O_BINARY`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -63,13 +67,13 @@ errno_t _set_fmode(
 ## <a name="remarks"></a>Uwagi  
  Zestawy funkcji [_fmode —](../../c-runtime-library/fmode.md) zmiennej globalnej. Ta zmienna Określa domyślny tryb tłumaczenia pliku dla operacji We/Wy pliku `_open` i `_pipe`.  
   
- `_O_TEXT`i `_O_BINARY` są zdefiniowane w Fcntl.h. `EINVAL`jest zdefiniowany w Errno.h.  
+ `_O_TEXT` i `_O_BINARY` są zdefiniowane w Fcntl.h. `EINVAL` jest zdefiniowany w Errno.h.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_set_fmode`|\<stdlib.h >|\<fcntl.h >, \<errno.h >|  
+|`_set_fmode`|\<stdlib.h>|\<fcntl.h>, \<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -138,6 +142,6 @@ A   B   C   D   E   F   G   H   I   J   K   L
   
 ## <a name="see-also"></a>Zobacz też  
  [_fmode —](../../c-runtime-library/fmode.md)   
- [_get_fmode —](../../c-runtime-library/reference/get-fmode.md)   
+ [_get_fmode](../../c-runtime-library/reference/get-fmode.md)   
  [_setmode —](../../c-runtime-library/reference/setmode.md)   
  [We/Wy pliku w trybie binarnym i tekstowym](../../c-runtime-library/text-and-binary-mode-file-i-o.md)

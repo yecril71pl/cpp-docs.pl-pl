@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wspawnl
 - _spawnl
@@ -28,7 +29,8 @@ f1_keywords:
 - wspawnl
 - _wspawnl
 - _spawnl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - spawnl function
 - processes, creating
@@ -38,22 +40,23 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 50c1dc9f064b5920a136766ffa17628501d732be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 24dff1d93952db30f641e5a4d105c88450715231
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 Tworzy i wykonuje nowego procesu.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -93,7 +96,7 @@ intptr_t _wspawnl(
  Lista argumentów przekracza 1024 bajty.  
   
  `EINVAL`  
- `mode`argument jest nieprawidłowy.  
+ `mode` argument jest nieprawidłowy.  
   
  `ENOENT`  
  Nie znaleziono pliku lub ścieżki.  
@@ -126,12 +129,12 @@ intptr_t _wspawnl(
 ## <a name="see-also"></a>Zobacz też  
  [Proces i kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)   
  [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md)   
- [przerwania](../../c-runtime-library/reference/abort.md)   
+ [Przerwania](../../c-runtime-library/reference/abort.md)   
  [atexit —](../../c-runtime-library/reference/atexit.md)   
  [_execwexec — funkcje](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, _exit — _exit —](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_flushall —](../../c-runtime-library/reference/flushall.md)   
- [_getmbcp —](../../c-runtime-library/reference/getmbcp.md)   
- [_onexit —, _onexit_m —](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [_setmbcp —](../../c-runtime-library/reference/setmbcp.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_flushall](../../c-runtime-library/reference/flushall.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
  [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

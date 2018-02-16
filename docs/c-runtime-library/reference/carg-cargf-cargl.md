@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - carg
 - cargf
@@ -33,22 +33,24 @@ f1_keywords:
 - complex/carg
 - complex/cargf
 - complex/cargl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - carg function
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0b5b76543067b3df52e51b28ae4fc77cfa007860
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9341fd3e480fd27f91ccd1ebb1158a7a300f0ead
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="carg-cargf-cargl"></a>carg cargf, cargl
 Pobiera argument liczbą, oddział Wytnij rzeczywistych osi ujemna.  
@@ -87,7 +89,7 @@ long double cargl(
   
 |Procedura|Nagłówek C|Nagłówek C++|  
 |-------------|--------------|------------------|  
-|`carg`,               `cargf`, `cargl`|\<COMPLEX.h >|\<ccomplex >|  
+|`carg`,               `cargf`, `cargl`|\<complex.h>|\<ccomplex >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -95,7 +97,7 @@ long double cargl(
  [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [normy normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
  [creal crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [conj conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
+ [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
+ [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
+ [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
  [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)

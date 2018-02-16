@@ -1,12 +1,13 @@
 ---
-title: "_Crtsetreporthook2 —, _crtsetreporthookw2 — | Dokumentacja firmy Microsoft"
+title: _CrtSetReportHook2, _CrtSetReportHookW2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
@@ -27,23 +28,25 @@ f1_keywords:
 - CrtSetReportHook2
 - _CrtSetReportHookW2
 - _CrtSetReportHook2
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CrtSetReportHook2 function
 - _CrtSetReportHook2 function
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ed7c12cfc0755360c8512a60ba89b924518b5a1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ec98ae83793d2f72026bd71ea1c625069df23b7d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 Instaluje lub odinstalowuje zdefiniowane przez klienta funkcji raportowania przez Przechwytywanie go do procesu raportowania debugowania środowiska wykonawczego C (tylko wersja do debugowania).  
@@ -76,9 +79,9 @@ int _CrtSetReportHookW2(
  -1, jeśli wystąpił błąd z `EINVAL` lub `ENOMEM` ustawić; w przeciwnym razie zwraca wartość liczebności referencyjnej równej `pfnNewHook` po wywołaniu.  
   
 ## <a name="remarks"></a>Uwagi  
- `_CrtSetReportHook2`i `_CrtSetReportHookW2` umożliwiają utworzenie punktu zaczepienia lub odpięcie funkcja, podczas gdy [_crtsetreporthook —](../../c-runtime-library/reference/crtsetreporthook.md) tylko umożliwia utworzenie punktu zaczepienia funkcji.  
+ `_CrtSetReportHook2` i `_CrtSetReportHookW2` umożliwiają utworzenie punktu zaczepienia lub odpięcie funkcja, podczas gdy [_crtsetreporthook —](../../c-runtime-library/reference/crtsetreporthook.md) tylko umożliwia utworzenie punktu zaczepienia funkcji.  
   
- `_CrtSetReportHook2`lub `_CrtSetReportHookW2` powinien być używany zamiast `_CrtSetReportHook` nawiązaniem połączenia punktu zaczepienia w biblioteki DLL i kiedy może zostać załadowany wiele bibliotek DLL i ustawienie własnych funkcje punktów zaczepienia. W takiej sytuacji bibliotek DLL może zostać zwolniona w innym porządku niż zostały załadowane i funkcji punktów zaczepienia może pozostać wskazując zwolnić biblioteki DLL. Żadnych danych wyjściowych debugowania awarii procesu Jeśli dodano funkcji punktów zaczepienia z `_CrtSetReportHook`.  
+ `_CrtSetReportHook2` lub `_CrtSetReportHookW2` powinien być używany zamiast `_CrtSetReportHook` nawiązaniem połączenia punktu zaczepienia w biblioteki DLL i kiedy może zostać załadowany wiele bibliotek DLL i ustawienie własnych funkcje punktów zaczepienia. W takiej sytuacji bibliotek DLL może zostać zwolniona w innym porządku niż zostały załadowane i funkcji punktów zaczepienia może pozostać wskazując zwolnić biblioteki DLL. Żadnych danych wyjściowych debugowania awarii procesu Jeśli dodano funkcji punktów zaczepienia z `_CrtSetReportHook`.  
   
  Dowolne funkcje dodane w utworzenie punktu zaczepienia `_CrtSetReportHook` są nazywane, jeśli nie ma żadnych punktów zaczepienia funkcje dodane w `_CrtSetReportHook2` lub `_CrtSetReportHookW2` lub jeśli wszystkie funkcje dodane w utworzenie punktu zaczepienia `_CrtSetReportHook2` i `_CrtSetReportHookW2` zwracać `FALSE`.  
   
@@ -103,8 +106,8 @@ int YourReportHook( int reportType, char *message, int *returnValue );
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_CrtSetReportHook2`|\<crtdbg.h >|\<errno.h >|  
-|`_CrtSetReportHookW2`|\<crtdbg.h >|\<errno.h >|  
+|`_CrtSetReportHook2`|\<crtdbg.h>|\<errno.h>|  
+|`_CrtSetReportHookW2`|\<crtdbg.h>|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

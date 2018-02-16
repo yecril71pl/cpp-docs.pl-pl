@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _pclose
+ms.topic: reference
+apiname:
+- _pclose
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,28 +26,30 @@ apitype: DLLExport
 f1_keywords:
 - _pclose
 - pclose
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _pclose function
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b8edad860ffcfb03043f03299d0d722c1b435b6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 694d18208def98492173a21c125c21cd2020f1da
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="pclose"></a>_pclose
 Czeka na nowe procesora poleceń i zamknięcie strumienia skojarzone potoku.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -72,7 +76,7 @@ FILE *stream
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_pclose`|\<stdio.h >|  
+|`_pclose`|\<stdio.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

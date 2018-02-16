@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ltoa
 - _ltow
@@ -27,7 +28,8 @@ f1_keywords:
 - _ltot
 - _ltoa
 - _ltow
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - converting integers
 - _ltoa function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - long integer conversion to string
 - converting numbers, to strings
 ms.assetid: 14036104-2c25-4759-87c0-918ed8521e47
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7e7ae79ed3505e4570b453e7fd56b68730010388
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 25dc7c06f2e5eadacb568a096fda30f81a16570b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltoa-ltow"></a>_ltoa, _ltow
 Konwertuje długich liczb całkowitych na ciąg. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_ltoa_s —, _ltow_s —](../../c-runtime-library/reference/ltoa-s-ltow-s.md).  
@@ -92,7 +95,7 @@ wchar_t *_ltow(
  Każda z tych funkcji, zwraca wskaźnik do `str`. Nie ma żadnych zwracany błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- `_ltoa` Funkcja konwertuje cyfry `value` na ciąg znaków zakończony znakiem null i zapisuje wynik (w bajtach do 33) w `str`. `radix` Argument określa podstawą `value`, które muszą być w zakresie od 2 36. Jeśli `radix` równa 10 i `value` jest ujemna, pierwszego znaku ciągu przechowywanych jest znak minus (-). `_ltow`jest to wersja znaków dwubajtowych `_ltoa`; druga argumentów i wartość `_ltow` są ciągami znaków dwubajtowych. Każda z tych funkcji jest specyficzne dla firmy Microsoft.  
+ `_ltoa` Funkcja konwertuje cyfry `value` na ciąg znaków zakończony znakiem null i zapisuje wynik (w bajtach do 33) w `str`. `radix` Argument określa podstawą `value`, które muszą być w zakresie od 2 36. Jeśli `radix` równa 10 i `value` jest ujemna, pierwszego znaku ciągu przechowywanych jest znak minus (-). `_ltow` jest to wersja znaków dwubajtowych `_ltoa`; druga argumentów i wartość `_ltow` są ciągami znaków dwubajtowych. Każda z tych funkcji jest specyficzne dla firmy Microsoft.  
   
 > [!IMPORTANT]
 >  Aby uniknąć przepełnienia buforu, upewnij się, że `str` bufor jest wystarczająco duży, aby pomieścić przekonwertowanego cyfr oraz końcowego znaku null i znak.  
@@ -109,8 +112,8 @@ wchar_t *_ltow(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_ltoa`|\<stdlib.h >|  
-|`_ltow`|\<stdlib.h >|  
+|`_ltoa`|\<stdlib.h>|  
+|`_ltow`|\<stdlib.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strdup
 - _mbsdup
@@ -32,7 +33,8 @@ f1_keywords:
 - _strdup
 - _ftcsdup
 - _wcsdup
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcsdup function
 - ftcsdup function
@@ -49,22 +51,23 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: da8d1341e9ce46e2ab2040812622a78d3bd3830d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 476ffad002353cf2c4048e5138e6972c5c304983
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
 Ciągi duplikaty.  
   
 > [!IMPORTANT]
->  `_mbsdup`Nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsdup` Nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -90,7 +93,7 @@ unsigned char *_mbsdup(
 ## <a name="remarks"></a>Uwagi  
  `_strdup` Wywołania funkcji [— funkcja malloc](../../c-runtime-library/reference/malloc.md) przydzielić miejsca do magazynowania dla kopię `strSource` , a następnie kopiuje `strSource` do przydzielonego miejsca.  
   
- `_wcsdup`i `_mbsdup` znaków dwubajtowych i znaków wielobajtowych wersji `_strdup`. Argumenty i zwracana wartość `_wcsdup` są znaków dwubajtowych ciągi; tych `_mbsdup` są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
+ `_wcsdup` i `_mbsdup` znaków dwubajtowych i znaków wielobajtowych wersji `_strdup`. Argumenty i zwracana wartość `_wcsdup` są znaków dwubajtowych ciągi; tych `_mbsdup` są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -106,9 +109,9 @@ unsigned char *_mbsdup(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_strdup`|\<String.h >|  
+|`_strdup`|\<string.h>|  
 |`_wcsdup`|\<String.h > lub \<wchar.h >|  
-|`_mbsdup`|\<mbstring.h >|  
+|`_mbsdup`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -143,7 +146,7 @@ Copy:     This is the buffer text
  [strcmp —, wcscmp —, _mbscmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strncat —, _strncat_l, wcsncat —, _wcsncat_l _mbsncat —, _mbsncat_l —](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
  [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy —, _strncpy_l —, wcsncpy —, _wcsncpy_l — _mbsncpy —, _mbsncpy_l —](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

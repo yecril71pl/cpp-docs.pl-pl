@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fscanf
 - _fwscanf_l
@@ -31,7 +32,8 @@ f1_keywords:
 - _fwscanf_l
 - _ftscanf
 - _fscanf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fscanf function
 - fwscanf function
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - _ftscanf function
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fc40f4ebf4c50a5495490a83469d1b495bcd4a29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa3ccb3cc8a528847b39ad16d5e90d17e24b1da0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 Odczyt sformatowanych danych ze strumienia. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [fscanf_s —, _fscanf_s_l —, fwscanf_s —, _fwscanf_s_l —](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).  
@@ -107,9 +110,9 @@ int _fwscanf_l(
  Te funkcje walidację ich parametrów. Jeśli `stream` lub `format` wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają `EOF` i ustaw `errno` do `EINVAL`.  
   
 ## <a name="remarks"></a>Uwagi  
- `fscanf` Funkcja odczytuje dane z bieżącej pozycji `stream` do lokalizacji podanej przez `argument` (jeśli istnieje). Każdy `argument` musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w `format`. `format`Formanty interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako `format` argument `scanf`; zobacz [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) opis `format`.  
+ `fscanf` Funkcja odczytuje dane z bieżącej pozycji `stream` do lokalizacji podanej przez `argument` (jeśli istnieje). Każdy `argument` musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w `format`. `format` Formanty interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako `format` argument `scanf`; zobacz [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) opis `format`.  
   
- `fwscanf`jest to wersja znaków dwubajtowych `fscanf`; argument formatu `fwscanf` jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo tak samo, jakby strumień jest otwarty w trybie ANSI. `fscanf`obecnie nie obsługuje dane wejściowe ze strumienia UNICODE.  
+ `fwscanf` jest to wersja znaków dwubajtowych `fscanf`; argument formatu `fwscanf` jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo tak samo, jakby strumień jest otwarty w trybie ANSI. `fscanf` obecnie nie obsługuje dane wejściowe ze strumienia UNICODE.  
   
  Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.  
   
@@ -126,7 +129,7 @@ int _fwscanf_l(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`fscanf`, `_fscanf_l`|\<stdio.h >|  
+|`fscanf`, `_fscanf_l`|\<stdio.h>|  
 |`fwscanf`, `_fwscanf_l`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -192,8 +195,8 @@ x
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [_cscanf —, _cscanf_l —, _cwscanf — _cwscanf_l —](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [fprintf —, _fprintf_l —, fwprintf — _fwprintf_l —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [sscanf —, _sscanf_l —, swscanf — _swscanf_l —](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
  [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)

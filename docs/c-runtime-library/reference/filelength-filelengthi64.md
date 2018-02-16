@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _filelengthi64
 - _filelength
@@ -27,7 +28,8 @@ f1_keywords:
 - _filelength
 - _filelengthi64
 - filelengthi64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - filelengthi64 function
 - lengths, file
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 635338ed1cc314fda94be55c2802d9ec666b42f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bcf35d33958157a424bf78950c3b4cf23f33708e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
 Pobiera długość pliku.  
@@ -72,8 +75,8 @@ __int64 _filelengthi64(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`_filelength`|\<IO.h >|  
-|`_filelengthi64`|\<IO.h >|  
+|`_filelength`|\<io.h>|  
+|`_filelengthi64`|\<io.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -83,8 +86,8 @@ __int64 _filelengthi64(
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
  [_chsize —](../../c-runtime-library/reference/chsize.md)   
- [_fileno —](../../c-runtime-library/reference/fileno.md)   
- [_fstat —, _fstat32 —, _fstat64 —, _fstati64 — _fstat32i64 —, _fstat64i32 —](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [_fstat —, _fstat32 —, _fstat64 —, _fstati64 — _fstat32i64 —, _fstat64i32 —](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_fileno](../../c-runtime-library/reference/fileno.md)   
+ [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
  [_stat, _wstat — funkcje](../../c-runtime-library/reference/stat-functions.md)   
  [_stat, _wstat — funkcje](../../c-runtime-library/reference/stat-functions.md)

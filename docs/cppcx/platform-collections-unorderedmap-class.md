@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMap
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b2266e43f3168fca823147f4c2c7e2c33513343
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap — Klasa
 
@@ -102,7 +104,7 @@ Aby uzyskać więcej informacji, zobacz [kolekcji](../cppcx/collections-c-cx.md)
 
 **Namespace:** Platform::Collections
 
-## <a name="clear"></a>UnorderedMap::Clear — metoda
+## <a name="clear"></a>  UnorderedMap::Clear — metoda
 
 Usuwa wszystkie pary klucz wartość z bieżącego obiektu UnorderedMap.
 
@@ -112,7 +114,7 @@ Usuwa wszystkie pary klucz wartość z bieżącego obiektu UnorderedMap.
 virtual void Clear();
 ```
 
-## <a name="first"></a>UnorderedMap::First — metoda
+## <a name="first"></a>  UnorderedMap::First — metoda
 
 Zwraca iteratora określająca pierwszy [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) element nieuporządkowaną mapy.
 
@@ -132,7 +134,7 @@ Iteratora określająca pierwszy element na mapie.
 
 Jest to wygodny sposób przechowywania iteratora zwrócony przez First() można przypisać do zmiennej, która jest zadeklarowana z wartością zwracaną **automatycznie** wpisz wnioskowanie — słowo kluczowe. Na przykład `auto x = myUnorderedMap->First();`.
 
-## <a name="getview"></a>UnorderedMap::GetView — metoda
+## <a name="getview"></a>  UnorderedMap::GetView — metoda
 
 Zwraca bieżący UnorderedMap; widok tylko do odczytu oznacza to [platform::Collections:: unorderedmapview — klasa](../cppcx/platform-collections-unorderedmapview-class.md) implementującej [Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interfejsu.
 
@@ -146,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 `UnorderedMapView` Obiektu.
 
-## <a name="haskey"></a>UnorderedMap::HasKey — metoda
+## <a name="haskey"></a>  UnorderedMap::HasKey — metoda
 
 Określa, czy bieżący UnorderedMap zawiera określony klucz.
 
@@ -160,14 +162,14 @@ bool HasKey(
 
 ### <a name="parameters"></a>Parametry
 
-*klucz*  
+*Klucz*  
 Klucz używana do lokalizowania elementu UnorderedMap. Typ *klucza* jest typename *K*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true`Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.
+`true` Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.
 
-## <a name="insert"></a>UnorderedMap::Insert — metoda
+## <a name="insert"></a>  UnorderedMap::Insert — metoda
 
 Dodaje określoną parę klucz wartość, jak bieżący obiekt UnorderedMap.
 
@@ -182,7 +184,7 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>Parametry
 
-*klucz*  
+*Klucz*  
 Część klucza pary klucz wartość. Typ *klucza* jest typename *K*.
 
 *value*  
@@ -190,9 +192,9 @@ Część wartości pary klucz wartość. Typ *wartość* jest typename *V*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true`Jeśli klucz istniejącego elementu na bieżącej mapy odpowiada *klucza* i ma ustawioną wartość część elementu *wartość*. `false`Jeśli nie istniejący element w bieżącej mapy nie jest zgodny *klucza* i *klucza* i *wartość* parametry są wprowadzane na parę klucz wartość, a następnie dodać do bieżącej UnorderedMap.
+`true` Jeśli klucz istniejącego elementu na bieżącej mapy odpowiada *klucza* i ma ustawioną wartość część elementu *wartość*. `false` Jeśli nie istniejący element w bieżącej mapy nie jest zgodny *klucza* i *klucza* i *wartość* parametry są wprowadzane na parę klucz wartość, a następnie dodać do bieżącej UnorderedMap.
 
-## <a name="lookup"></a>UnorderedMap::Lookup — metoda
+## <a name="lookup"></a>  UnorderedMap::Lookup — metoda
 
 Pobiera wartość typu V skojarzony z określonym kluczem typu K.
 
@@ -206,14 +208,14 @@ V Lookup(
 
 ### <a name="parameters"></a>Parametry
 
-*klucz*  
+*Klucz*  
 Klucz używana do lokalizowania elementu w UnorderedMap. Typ *klucza* jest typename *K*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Wartość, która jest łączyć się z *klucza*. Typ zwracanej wartości to typename *V*.
 
-## <a name="mapchanged"></a>UnorderedMap::MapChanged
+## <a name="mapchanged"></a>  UnorderedMap::MapChanged
 
 Wywoływane, gdy element zostanie wstawiony do lub usunięty z mapy.
 
@@ -229,9 +231,9 @@ A [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/app
 
 ## <a name="net-framework-equivalent"></a>Odpowiednik w programie .NET Framework
 
-Aplikacje ze Sklepu Windows czy nam C# lub Visual Basic projektu IMap\<K, V > jako IDictionary\<K, V >.
+Aplikacje środowiska wykonawczego systemu Windows, że nam C# lub Visual Basic projektu IMap\<K, V > jako IDictionary\<K, V >.
 
-## <a name="remove"></a>UnorderedMap::Remove — Metoda
+## <a name="remove"></a>  UnorderedMap::Remove — Metoda
 
 Usuwa określoną parę klucz wartość z obiektu UnorderedMap.
 
@@ -244,10 +246,10 @@ virtual void Remove(
 
 ### <a name="parameters"></a>Parametry
 
-*klucz*  
+*Klucz*  
 Część klucza pary klucz wartość. Typ *klucza* jest typename *K*.
 
-## <a name="size"></a>UnorderedMap::Size — metoda
+## <a name="size"></a>  UnorderedMap::Size — metoda
 
 Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementów w UnorderedMap.
 
@@ -261,7 +263,7 @@ virtual property unsigned int Size;
 
 Liczba elementów w nieuporządkowaną mapy.
 
-## <a name="ctor"></a>Unorderedmap::unorderedmap — Konstruktor
+## <a name="ctor"></a>  Unorderedmap::unorderedmap — Konstruktor
 
 Inicjuje nowe wystąpienie klasy UnorderedMap.
 

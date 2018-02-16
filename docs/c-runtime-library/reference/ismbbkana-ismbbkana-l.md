@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ismbbkana_l
 - _ismbbkana
@@ -28,23 +29,25 @@ f1_keywords:
 - ismbbkana_l
 - ismbbkana
 - _ismbbkana
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ismbbkana_l function
 - _ismbbkana function
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f904d5f03d4c9e74123bc5be43f02178cb2e3d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 34b79df529aacc0e1e4c4a0dcedfceb09912a8ed
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
 Sprawdza, czy katakana symbol i jest specyficzna dla strona kodowa 932.  
@@ -69,14 +72,14 @@ int _ismbbkana_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_ismbbkana`Zwraca wartość niezerową, jeśli liczba całkowita `c` jest katakana symbol lub 0, jeśli nie jest. `_ismbbkana`używa bieżące ustawienia regionalne informacji znak zależnych od ustawień regionalnych. `_ismbbkana_l`jest identyczny z tą różnicą, że używa przekazano obiekt ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ `_ismbbkana` Zwraca wartość niezerową, jeśli liczba całkowita `c` jest katakana symbol lub 0, jeśli nie jest. `_ismbbkana` używa bieżące ustawienia regionalne informacji znak zależnych od ustawień regionalnych. `_ismbbkana_l` jest identyczny z tą różnicą, że używa przekazano obiekt ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_ismbbkana`|\<mbctype.h >|  
-|`_ismbbkana_l`|\<mbctype.h >|  
+|`_ismbbkana`|\<mbctype.h>|  
+|`_ismbbkana_l`|\<mbctype.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

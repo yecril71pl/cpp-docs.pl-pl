@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _close
+ms.topic: reference
+apiname:
+- _close
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,23 +23,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _close
-dev_langs: C++
+f1_keywords:
+- _close
+dev_langs:
+- C++
 helpviewer_keywords:
 - _close function
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2cb1cace610479113c3a4be00daf634b0da75e2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9532d8fb98786f35dfa888b5bf8bef5e3e8b2583
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="close"></a>_close
 Zamyka plik.  
@@ -55,7 +60,7 @@ int _close(
  Plik deskryptora odwołujących się do otwartego pliku.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_close`Zwraca wartość 0, jeśli plik został zamknięty pomyślnie. Zwracana wartość -1 wskazuje błąd.  
+ `_close` Zwraca wartość 0, jeśli plik został zamknięty pomyślnie. Zwracana wartość -1 wskazuje błąd.  
   
 ## <a name="remarks"></a>Uwagi  
  `_close` Funkcja zamyka plik skojarzony z `fd`.  
@@ -68,7 +73,7 @@ int _close(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_close`|\<IO.h >|\<errno.h >|  
+|`_close`|\<io.h>|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -78,7 +83,7 @@ int _close(
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)   
  [_chsize —](../../c-runtime-library/reference/chsize.md)   
- [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
- [_dup —, _dup2 —](../../c-runtime-library/reference/dup-dup2.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_unlink, _wunlink](../../c-runtime-library/reference/unlink-wunlink.md)

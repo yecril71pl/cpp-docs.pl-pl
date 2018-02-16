@@ -4,34 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: appdomain_cpp
-dev_langs: C++
+f1_keywords:
+- appdomain_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - appdomain __declspec keyword
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 677206e37cb4761112f66dc59dc44b2eccbabaf5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36df0066d3e460efceb130d257a1b6f87231dd4a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="appdomain"></a>appdomain
 Określa, że w każdej domenie aplikacji zarządzanych aplikacji powinny mieć własną kopię zmiennej określonej globalne zmienna lub statyczny element członkowski. Zobacz [i domen aplikacji Visual C++](../dotnet/application-domains-and-visual-cpp.md) Aby uzyskać więcej informacji.  
   
  Wszystkich domen aplikacji ma własną kopię zmienną domeny appdomain. Konstruktor zmiennej elementu appdomain jest wykonywany, gdy zestaw jest ładowany do domeny aplikacji, a destruktor jest wykonywane, gdy domena aplikacji jest zwolniony.  
   
- Wszystkich domen aplikacji w ramach procesu w środowisku uruchomieniowym języka Aby udostępnić zmiennej globalnej, należy użyć `__declspec(process)` modyfikator. `__declspec(process)`jest włączona domyślnie w obszarze [/CLR](../build/reference/clr-common-language-runtime-compilation.md) i `__declspec(appdomain)` jest włączona domyślnie w obszarze **/CLR: pure**. `__declspec(appdomain)`jest wymuszana w obszarze **/CLR: Safe**. **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
+ Wszystkich domen aplikacji w ramach procesu w środowisku uruchomieniowym języka Aby udostępnić zmiennej globalnej, należy użyć `__declspec(process)` modyfikator. `__declspec(process)` jest włączona domyślnie w obszarze [/CLR](../build/reference/clr-common-language-runtime-compilation.md). **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
   
- `__declspec(appdomain)`jest prawidłowa tylko gdy jeden z **/CLR** — opcje kompilatora jest używany. Tylko zmiennej globalnej, statycznym elementem członkowskim zmiennej lub statyczna zmienna lokalna może być oznaczony przez `__declspec(appdomain)`. Błąd, aby zastosować `__declspec(appdomain)` do statyczne elementy członkowskie typy zarządzane, ponieważ mają one zawsze to zachowanie.  
+ `__declspec(appdomain)` jest prawidłowa tylko gdy jeden z **/CLR** — opcje kompilatora jest używany. Tylko zmiennej globalnej, statycznym elementem członkowskim zmiennej lub statyczna zmienna lokalna może być oznaczony przez `__declspec(appdomain)`. Błąd, aby zastosować `__declspec(appdomain)` do statyczne elementy członkowskie typy zarządzane, ponieważ mają one zawsze to zachowanie.  
   
  Przy użyciu `__declspec(appdomain)` jest podobny do sposobu używania [wątku lokalnego magazynu (TLS)](../parallel/thread-local-storage-tls.md). Wątki mają własne magazynu, tak jak domen aplikacji. Przy użyciu `__declspec(appdomain)` zapewnia zmiennej globalnej ma własny magazyn w każdej domenie aplikacji utworzonych dla tej aplikacji.  
   

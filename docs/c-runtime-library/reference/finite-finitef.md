@@ -1,12 +1,13 @@
 ---
-title: "_finite —, _finitef | Dokumentacja firmy Microsoft"
+title: _finite, _finitef | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _finite
 - _finitef
@@ -30,24 +31,26 @@ f1_keywords:
 - math/_finite
 - math/_finitef
 - float/_finite
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - finite function
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b39fbd53baaf861ae7330e03a1b10d71362035ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb904e04e8a99bff242d520f6c0ca3d404a74e89
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="finite-finitef"></a>_finite —, _finitef
+# <a name="finite-finitef"></a>_finite, _finitef
 Określa, czy wartość zmiennoprzecinkowa jest jednak ograniczona.  
   
 ## <a name="syntax"></a>Składnia  
@@ -77,11 +80,11 @@ int _finitef(
 |Funkcja|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|  
 |--------------|---------------------------|-------------------------------|  
 |`_finite`|\<float.h — > lub \<math.h >|\<float.h — >, \<math.h >, \<cfloat — >, lub \<cmath >|  
-|`_finitef`|\<Math.h >|\<Math.h > lub \<cmath >|  
+|`_finitef`|\<math.h>|\<Math.h > lub \<cmath >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [isNaN _isnan —, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)   
+ [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)   
  [_fpclass, _fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)

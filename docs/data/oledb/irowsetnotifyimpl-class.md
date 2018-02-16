@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL.IRowsetNotifyImpl
 - ATL::IRowsetNotifyImpl
 - IRowsetNotifyImpl
-dev_langs: C++
-helpviewer_keywords: IRowsetNotifyImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetNotifyImpl class
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ddc410a22318b471fd59c1b29ff09fc9d771c767
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e23103cf4505ffb2bc683c69d22628fa15b861d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl — Klasa
 Implementuje i rejestruje [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) na konsumenta (znanej także jako "sink"), aby mogły obsługiwać powiadomień.  
   
-## <a name="syntax"></a>Składnia  
-  
-```  
+## <a name="syntax"></a>Składnia
+
+```cpp
 class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify  
 ```  
   
@@ -49,7 +52,7 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 ## <a name="remarks"></a>Uwagi  
  Zobacz [odbieranie powiadomień](../../data/oledb/receiving-notifications.md) o implementacji interfejsu punktu połączenia dla konsumenta.  
   
- `IRowsetNotifyImpl`udostępnia implementację fikcyjny dla `IRowsetNotify`, pusty funkcje dla `IRowsetNotify` metody [OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx), [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx), i [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx). Jeśli pochodne względem tej klasy w przypadku implementowania `IRowsetNotify` interfejsu, można wdrożyć tylko te metody, które są potrzebne. Należy również samodzielnie pusty implementacji dla innych metod.  
+ `IRowsetNotifyImpl` udostępnia implementację fikcyjny dla `IRowsetNotify`, pusty funkcje dla `IRowsetNotify` metody [OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx), [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx), i [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx). Jeśli pochodne względem tej klasy w przypadku implementowania `IRowsetNotify` interfejsu, można wdrożyć tylko te metody, które są potrzebne. Należy również samodzielnie pusty implementacji dla innych metod.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atldbcli.h  

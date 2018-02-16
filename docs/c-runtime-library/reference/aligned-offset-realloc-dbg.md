@@ -1,13 +1,15 @@
 ---
-title: "_aligned_offset_realloc_dbg — | Dokumentacja firmy Microsoft"
+title: _aligned_offset_realloc_dbg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _aligned_offset_realloc_dbg
+ms.topic: reference
+apiname:
+- _aligned_offset_realloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - aligned_offset_realloc_dbg
 - _aligned_offset_realloc_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - aligned_offset_realloc_dbg function
 - _aligned_offset_realloc_dbg function
 ms.assetid: 64e30a12-887e-453b-aea8-aed793fca9d8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3dc1530e52b7aebf74f538bf7d2b8499b82e5a5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9baff0719e2a65be40bf0a12ad8904845827d525
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 Zmienia rozmiar blok pamięci przydzielony przy [_aligned_malloc —](../../c-runtime-library/reference/aligned-malloc.md) lub [_aligned_offset_malloc —](../../c-runtime-library/reference/aligned-offset-malloc.md) (tylko wersja do debugowania).  
@@ -56,33 +60,33 @@ void * _aligned_offset_realloc_dbg(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`memblock`  
+ [in] `memblock`  
  Bieżący wskaźnik bloku pamięci.  
   
- [in]`size`  
+ [in] `size`  
  Rozmiar alokacji pamięci.  
   
- [in]`alignment`  
+ [in] `alignment`  
  Wartość wyrównania, która musi być całkowitą potęgą liczby 2.  
   
- [in]`offset`  
+ [in] `offset`  
  Przesunięcie alokacji pamięci, aby wymusić wyrównanie.  
   
- [in]`filename`  
+ [in] `filename`  
  Wskaźnik do nazwy pliku źródłowego, który zażądał `aligned_offset_realloc` operacji ani mieć wartości NULL.  
   
- [in]`linenumber`  
+ [in] `linenumber`  
  Numer wiersza na plik źródłowy gdzie `aligned_offset_realloc` operacja była żądana ani mieć wartości NULL.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_aligned_offset_realloc_dbg`Zwraca typ void wskaźnik do bloku pamięci przydzielić (i prawdopodobnie przenoszenia). Wartość zwracana jest `NULL` rozmiar wynosi zero, jeśli argument bufor nie jest `NULL`, lub jeśli nie ma dostatecznej ilości dostępnej pamięci, aby rozwinąć blok na dany rozmiar. W pierwszym przypadku oryginalnego bloku zostanie zwolniona. W drugim przypadku oryginalnego bloku jest bez zmian. Wartości zwracanej wskazuje miejsce do magazynowania, które na pewno jest odpowiednio dopasowany do przechowywania obiekty dowolnego typu. Aby uzyskać wskaźnik do typu innego niż void, użyj typu rzutowania wartości zwracanej.  
+ `_aligned_offset_realloc_dbg` Zwraca typ void wskaźnik do bloku pamięci przydzielić (i prawdopodobnie przenoszenia). Wartość zwracana jest `NULL` rozmiar wynosi zero, jeśli argument bufor nie jest `NULL`, lub jeśli nie ma dostatecznej ilości dostępnej pamięci, aby rozwinąć blok na dany rozmiar. W pierwszym przypadku oryginalnego bloku zostanie zwolniona. W drugim przypadku oryginalnego bloku jest bez zmian. Wartości zwracanej wskazuje miejsce do magazynowania, które na pewno jest odpowiednio dopasowany do przechowywania obiekty dowolnego typu. Aby uzyskać wskaźnik do typu innego niż void, użyj typu rzutowania wartości zwracanej.  
   
 ## <a name="remarks"></a>Uwagi  
- `_aligned_offset_realloc_dbg`jest to wersja debugowania [_aligned_offset_realloc —](../../c-runtime-library/reference/aligned-offset-realloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_aligned_offset_realloc_dbg` zostanie zmniejszona do wywołania `_aligned_offset_realloc`. Zarówno `_aligned_offset_realloc` i `_aligned_offset_realloc_dbg` ponownie przydzielić bloku pamięci w stercie podstawowy, ale `_aligned_offset_realloc_dbg` bierze pod uwagę kilka funkcji debugowania: buforów po obu stronach części bloku do testowania przecieki, parametr typu bloku do śledzenia określonego użytkownika typy alokacji i `filename` / `linenumber` informacji do ustalenia źródła żądań alokacji.  
+ `_aligned_offset_realloc_dbg` jest to wersja debugowania [_aligned_offset_realloc —](../../c-runtime-library/reference/aligned-offset-realloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_aligned_offset_realloc_dbg` zostanie zmniejszona do wywołania `_aligned_offset_realloc`. Zarówno `_aligned_offset_realloc` i `_aligned_offset_realloc_dbg` ponownie przydzielić bloku pamięci w stercie podstawowy, ale `_aligned_offset_realloc_dbg` bierze pod uwagę kilka funkcji debugowania: buforów po obu stronach części bloku do testowania przecieki, parametr typu bloku do śledzenia określonego użytkownika typy alokacji i `filename` / `linenumber` informacji do ustalenia źródła żądań alokacji.  
   
  Podobnie jak [_aligned_offset_malloc —](../../c-runtime-library/reference/aligned-offset-malloc.md), `_aligned_offset_realloc_dbg` umożliwia struktury wyrównania przy przesunięciu w strukturze.  
   
- `_realloc_dbg`przydziela ponownie bloku pamięci określony nieco więcej miejsca niż żądany `newSize`. `newSize`może być większa lub mniejsza niż rozmiar bloku pierwotnie alokacji pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Ponowne przydzielenie może spowodować przeniesienie do innej lokalizacji w stercie oryginalnego bloku pamięci, jak również zmiana rozmiaru bloku pamięci. Jeśli blok pamięci jest przenoszony, zawartość oryginalnego bloku zostaną zastąpione.  
+ `_realloc_dbg` przydziela ponownie bloku pamięci określony nieco więcej miejsca niż żądany `newSize`. `newSize` może być większa lub mniejsza niż rozmiar bloku pierwotnie alokacji pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Ponowne przydzielenie może spowodować przeniesienie do innej lokalizacji w stercie oryginalnego bloku pamięci, jak również zmiana rozmiaru bloku pamięci. Jeśli blok pamięci jest przenoszony, zawartość oryginalnego bloku zostaną zastąpione.  
   
  Ta funkcja ustawia `errno` na `ENOMEM` jeśli alokacja pamięci nie powiodła się lub jeśli żądany rozmiar był większy niż `_HEAP_MAXREQ`. Aby uzyskać więcej informacji na temat `errno`, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). `_aligned_offset_realloc_dbg` również sprawdza poprawność parametrów. Jeśli `alignment` nie jest potęgą liczby 2 lub, jeśli `offset` jest większa niż lub równa `size` i różną od zera, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca `NULL` i ustawia `errno` do `EINVAL`.  
   
@@ -92,7 +96,7 @@ void * _aligned_offset_realloc_dbg(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_aligned_offset_realloc_dbg`|\<crtdbg.h >|  
+|`_aligned_offset_realloc_dbg`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

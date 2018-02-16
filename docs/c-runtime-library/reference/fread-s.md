@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fread_s
+ms.topic: reference
+apiname:
+- fread_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,18 +26,20 @@ apitype: DLLExport
 f1_keywords:
 - fread_s
 - stdio/fread_s
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d77f0f7eb0c9eabf8626a920e04534c79048bd90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5fedb1419b3558fc773933619de247cfd3685e06
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freads"></a>fread_s
 Odczytuje dane ze strumienia. Ta wersja [fread —](../../c-runtime-library/reference/fread.md) zawiera ulepszenia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -69,7 +73,7 @@ size_t fread_s(
  Wskaźnik do `FILE` struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `fread_s`Zwraca numer (pełne), elementy, które zostały odczytane w buforze, który może być mniejsza niż `count` jeśli napotka błąd odczytu lub koniec pliku przed `count` zostanie osiągnięty. Użyj `feof` lub `ferror` funkcja odróżnienia błąd warunku końcowego pliku. Jeśli `size` lub `count` ma wartość 0, `fread_s` zwraca 0 i zawartości buforu nie uległy zmianie. Jeśli `stream` lub `buffer` wskaźnika o wartości null, jest `fread_s` wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia `errno` do `EINVAL` i zwraca wartość 0.  
+ `fread_s` Zwraca numer (pełne), elementy, które zostały odczytane w buforze, który może być mniejsza niż `count` jeśli napotka błąd odczytu lub koniec pliku przed `count` zostanie osiągnięty. Użyj `feof` lub `ferror` funkcja odróżnienia błąd warunku końcowego pliku. Jeśli `size` lub `count` ma wartość 0, `fread_s` zwraca 0 i zawartości buforu nie uległy zmianie. Jeśli `stream` lub `buffer` wskaźnika o wartości null, jest `fread_s` wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia `errno` do `EINVAL` i zwraca wartość 0.  
   
  Aby uzyskać więcej informacji o kodach błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -82,7 +86,7 @@ size_t fread_s(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`fread_s`|\<stdio.h >|  
+|`fread_s`|\<stdio.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -155,5 +159,5 @@ Contents of buffer after write/read:
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [fwrite —](../../c-runtime-library/reference/fwrite.md)   
+ [fwrite](../../c-runtime-library/reference/fwrite.md)   
  [_read](../../c-runtime-library/reference/read.md)

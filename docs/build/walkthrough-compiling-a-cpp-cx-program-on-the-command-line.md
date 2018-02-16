@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 677779aa8550869fe0859974b2aa4bbbb1c23d83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13e1b220123d3215e1c9150d00ee092ea4200ca8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Wskazówki: kompilowanie programu w języku C++/CX w wierszu polecenia
-Można utworzyć programy Visual C++, które docelowego środowiska uruchomieniowego systemu Windows, a następnie utworzyć je w wierszu polecenia. Visual C++ obsługuje rozszerzenia składników dla programu Visual C++ (C + +/ CX), który ma dodatkowe typy i operatory pod kątem modelu programowania środowiska wykonawczego systemu Windows. Można użyć C + +/ CX umożliwia tworzenie aplikacji dla systemu Windows Phone 8.1, Sklep Windows i Windows desktop. Aby uzyskać więcej informacji, zobacz [A samouczek c + +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) i [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md).  
+Można utworzyć programy Visual C++, które docelowego środowiska uruchomieniowego systemu Windows, a następnie utworzyć je w wierszu polecenia. Visual C++ obsługuje rozszerzenia składników dla programu Visual C++ (C + +/ CX), który ma dodatkowe typy i operatory pod kątem modelu programowania środowiska wykonawczego systemu Windows. Można użyć C + +/ CX umożliwia tworzenie aplikacji dla systemu Windows platformy Uniwersalnej systemu Windows Phone 8.1 i Windows desktop. Aby uzyskać więcej informacji, zobacz [A samouczek c + +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) i [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md).  
   
  W tym przewodniku, użyj edytora tekstów do utworzenia podstawowego C + +/ CX programów i skompiluj go w wierszu polecenia. (Można użyć własnych C + +/ CX program zamiast wpisywać ten, który jest wyświetlany, lub użyć C + +/ CX przykładowy kod z innego artykułu pomocy. Ta metoda jest przydatna do tworzenia i testowania małych modułów, które zawierają żadnych elementów interfejsu użytkownika).  
   
 > [!NOTE]
->  Umożliwia także programu Visual Studio IDE do kompilacji C + +/ CX programy. Ponieważ IDE obejmuje projektowanie, debugowanie, emulacji i obsługa wdrożeń, które nie są dostępne w wierszu polecenia, zalecane jest użycie IDE do kompilacji aplikacji ze Sklepu Windows. Aby uzyskać więcej informacji, zobacz [utworzona Podstawowa aplikacja magazynu C++](http://msdn.microsoft.com/library/windows/apps/dn263168).  
+>  Umożliwia także programu Visual Studio IDE do kompilacji C + +/ CX programy. Ponieważ IDE obejmuje projektowanie, debugowanie, emulacji i obsługa wdrożeń, które nie są dostępne w wierszu polecenia, zalecane jest użycie IDE do tworzenia aplikacji uniwersalnych platformy systemu Windows (UWP). Aby uzyskać więcej informacji, zobacz [tworzenie aplikacji platformy uniwersalnej systemu Windows w języku C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Należy zrozumieć podstawowe informacje na temat języka C++.  

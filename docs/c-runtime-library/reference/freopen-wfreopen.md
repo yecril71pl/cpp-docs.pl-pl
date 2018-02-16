@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - freopen
 - _wfreopen
@@ -27,7 +28,8 @@ f1_keywords:
 - _wfreopen
 - _tfreopen
 - freopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wfreopen function
 - file pointers [C++], reassigning
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d3eb18b70ea672b095dc6d24dfd45e1bdda8f88b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 49f1e2cd11606d2ebe53281a9d2f1d27533b4068
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 Ponownie przypisuje wskaźnika pliku. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [freopen_s —, _wfreopen_s —](../../c-runtime-library/reference/freopen-s-wfreopen-s.md).  
@@ -83,7 +86,7 @@ FILE *_wfreopen(
 ## <a name="remarks"></a>Uwagi  
  Bezpieczniejsza wersje tych funkcji istnieje, zobacz [freopen_s —, _wfreopen_s —](../../c-runtime-library/reference/freopen-s-wfreopen-s.md).  
   
- `freopen` Funkcji spowoduje zamknięcie pliku, w obecnie skojarzony z `stream` i następuje zmiana przypisania `stream` do pliku określonego przez `path`. `_wfreopen`jest to wersja znaków dwubajtowych `_freopen`; `path` i `mode` argumenty `_wfreopen` są ciągami znaków dwubajtowych. `_wfreopen`i `_freopen` zachowują się tak samo w przeciwnym razie wartość.  
+ `freopen` Funkcji spowoduje zamknięcie pliku, w obecnie skojarzony z `stream` i następuje zmiana przypisania `stream` do pliku określonego przez `path`. `_wfreopen` jest to wersja znaków dwubajtowych `_freopen`; `path` i `mode` argumenty `_wfreopen` są ciągami znaków dwubajtowych. `_wfreopen` i `_freopen` zachowują się tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -91,7 +94,7 @@ FILE *_wfreopen(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tfreopen`|`freopen`|`freopen`|`_wfreopen`|  
   
- `freopen`zwykle jest używana do przekierowania wstępnie otwarte pliki `stdin`, `stdout`, i `stderr` do plików określone przez użytkownika. Nowy plik skojarzony z `stream` jest otwierany z `mode`, która jest ciąg znaków określający typ dostępu do żądanego pliku, w następujący sposób:  
+ `freopen` zwykle jest używana do przekierowania wstępnie otwarte pliki `stdin`, `stdout`, i `stderr` do plików określone przez użytkownika. Nowy plik skojarzony z `stream` jest otwierany z `mode`, która jest ciąg znaków określający typ dostępu do żądanego pliku, w następujący sposób:  
   
  `"r"`  
  Zostanie otwarty do odczytu. Jeśli plik nie istnieje lub nie można znaleźć, `freopen` wywołać kończy się niepowodzeniem.  
@@ -133,10 +136,10 @@ FILE *_wfreopen(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`freopen`|\<stdio.h >|  
+|`freopen`|\<stdio.h>|  
 |`_wfreopen`|\<stdio.h > lub \<wchar.h >|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+ Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -177,7 +180,7 @@ This will go to the file 'freopen.out'
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [fclose —, _fcloseall —](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [_fdopen —, _wfdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [_fileno —](../../c-runtime-library/reference/fileno.md)   
+ [_fileno](../../c-runtime-library/reference/fileno.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_setmode](../../c-runtime-library/reference/setmode.md)

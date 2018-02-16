@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CrtMemDumpAllObjectsSince
 apilocation:
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1c04d21b1c4009bd93e608d1c243d5b459e2422
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 17a8f1cd518c0864006d836f551d99554d3cdf24
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 Zrzuty informacje dotyczące obiektów na stercie od początku wykonania programu, lub ze stanu sterty określony (tylko wersja do debugowania).  
@@ -62,7 +62,7 @@ Zrzuty informacje dotyczące obiektów na stercie od początku wykonania program
 ## <a name="remarks"></a>Uwagi  
  `_CrtMemDumpAllObjectsSince` Funkcja zrzuty informacji debugowania w nagłówku obiekty przydzielone na stercie w postaci czytelny dla użytkownika. Można informacji zrzutu przez aplikację do śledzenia alokacji i wykrywać problemy z pamięcią. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań `_CrtMemDumpAllObjectsSince` są usuwane podczas przetwarzania wstępnego.  
   
- `_CrtMemDumpAllObjectsSince`używa wartości `state` parametr, aby ustalić, gdzie można zainicjować operacji zrzutu. Aby rozpocząć zrzucanie ze stanu sterty określony `state` parametru musi być wskaźnikiem do **_crtmemstate —** strukturę, która ma zostać wypełnione podczas [_crtmemcheckpoint —](../../c-runtime-library/reference/crtmemcheckpoint.md) przed `_CrtMemDumpAllObjectsSince` został wywołuje się. Gdy `state` jest **NULL**, funkcja rozpoczyna zrzutu od początku wykonywania programu.  
+ `_CrtMemDumpAllObjectsSince` używa wartości `state` parametr, aby ustalić, gdzie można zainicjować operacji zrzutu. Aby rozpocząć zrzucanie ze stanu sterty określony `state` parametru musi być wskaźnikiem do **_crtmemstate —** strukturę, która ma zostać wypełnione podczas [_crtmemcheckpoint —](../../c-runtime-library/reference/crtmemcheckpoint.md) przed `_CrtMemDumpAllObjectsSince` został wywołuje się. Gdy `state` jest **NULL**, funkcja rozpoczyna zrzutu od początku wykonywania programu.  
   
  Jeśli aplikacja została zainstalowana funkcji punktów zaczepienia zrzutu przez wywołanie metody [_crtsetdumpclient —](../../c-runtime-library/reference/crtsetdumpclient.md), a następnie za każdym razem, gdy `_CrtMemDumpAllObjectsSince` zrzuty informacji o `_CLIENT_BLOCK` typu bloku, wywołuje również funkcję zrzutu dostarczone przez aplikację. Domyślnie wewnętrzny bloki wykonawcze języka C (`_CRT_BLOCK`) nie są uwzględnione w operacji zrzutu pamięci. [_Crtsetdbgflag —](../../c-runtime-library/reference/crtsetdbgflag.md) funkcji można włączyć `_CRTDBG_CHECK_CRT_DF` bit z **_crtdbgflag —** aby uwzględnić te bloki. Ponadto bloki oznaczony jako zwolniony, lub zignorować (**_free_block —**, **_ignore_block —**) nie są uwzględniane w zrzut pamięci.  
   

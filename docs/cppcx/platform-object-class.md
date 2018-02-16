@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
 - VCCORLIB/Platform::Object::Equals
@@ -14,22 +14,25 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs: C++
-helpviewer_keywords: Object class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformobject-class"></a>Klasa platform::Object
-Zapewnia zachowanie typowych ref klas i struktur ref w aplikacjach w Sklepie Windows. Wszystkie klasy referencyjnej i ref struct wystąpienia są umożliwiają niejawnej konwersji na Platform::Object ^, można zmienić jego metody ToString wirtualnej.  
+Zapewnia zachowanie typowych ref klas i struktur ref w aplikacjach środowiska wykonawczego systemu Windows. Wszystkie klasy referencyjnej i ref struct wystąpienia są umożliwiają niejawnej konwersji na Platform::Object ^, można zmienić jego metody ToString wirtualnej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -66,7 +69,7 @@ public ref class Object : Object
  **Namespace:** platformy  
 
   
-## <a name="equals"></a>Object::Equals — metoda
+## <a name="equals"></a> Object::Equals — metoda
 Określa, czy określony obiekt jest równy bieżącemu obiektowi.  
   
 ### <a name="syntax"></a>Składnia  
@@ -79,15 +82,15 @@ bool Equals(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Obj  
+ obj  
  Obiekt do porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli obiekty są takie same, w przeciwnym razie `false`.  
+ `true` Jeśli obiekty są takie same, w przeciwnym razie `false`.  
   
 
 
-## <a name="gethashcode"></a>Object::GetHashCode — metoda
+## <a name="gethashcode"></a>  Object::GetHashCode — metoda
 Zwraca `IUnknown`* wartości tożsamości dla tego wystąpienia, jeśli jest to obiekt COM lub jeśli nie jest obiektem COM. wartość obliczoną wartość mieszania.  
   
 ### <a name="syntax"></a>Składnia  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="gettype"></a>Object::gettype — metoda
+## <a name="gettype"></a>  Object::gettype — metoda
 Zwraca [Platform::Type](../cppcx/platform-type-class.md) obiektu, który opisuje typ obiektu środowiska wykonawczego.  
   
 ### <a name="syntax"></a>Składnia  
@@ -133,7 +136,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
  [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)   
  [Systemu typów] (.. /cppcx/Type-System-c-CX.MD
   
-## <a name="ctor"></a>Konstruktor Object::Object
+## <a name="ctor"></a>  Konstruktor Object::Object
 Inicjuje nowe wystąpienie klasy obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -142,7 +145,7 @@ Inicjuje nowe wystąpienie klasy obiektu.
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>Object::ReferenceEquals — metoda
+## <a name="referenceequals"></a>  Object::ReferenceEquals — metoda
 Określa, czy określone wystąpienia obiektów są tego samego wystąpienia.  
   
 ### <a name="syntax"></a>Składnia  
@@ -159,9 +162,9 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
  Drugi obiekt, który będzie porównywany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli dwa obiekty są takie same; w przeciwnym razie `false`.  
+ `true` Jeśli dwa obiekty są takie same; w przeciwnym razie `false`.  
  
-## <a name="tostring"></a>Metoda Object::toString (C + +/ CX)
+## <a name="tostring"></a>  Metoda Object::toString (C + +/ CX)
 Zwraca ciąg, który reprezentuje bieżący obiekt.  
   
 ### <a name="syntax"></a>Składnia  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _cgetws_s
 - _cgets_s
@@ -28,7 +29,8 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -37,22 +39,23 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 28e35d5f2eb2f07cd1b02fa8b1edc3f41b2c2174
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b72022fe28be410592ca9da24be11e7dfc649e70
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 Pobiera ciąg znaków z konsoli. Te wersje programu [_cgets — i _cgetws —](../../c-runtime-library/cgets-cgetws.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -80,13 +83,13 @@ errno_t _cgetws_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`buffer`  
+ [out] `buffer`  
  Lokalizacja magazynu danych.  
   
- [in]`numberOfElements`  
+ [in] `numberOfElements`  
  Rozmiar buforu w znaki jednobajtowe lub szerokie, która jest również maksymalną liczbę znaków do odczytania.  
   
- [in]`pSizeRead`  
+ [in] `pSizeRead`  
  Liczba znaków faktycznie odczytu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -94,14 +97,14 @@ errno_t _cgetws_s(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|`buffer`|`numberOfElements`|`pSizeRead`|Zwraca|Zawartość`buffer`|  
+|`buffer`|`numberOfElements`|`pSizeRead`|Zwraca|Zawartość `buffer`|  
 |--------------|------------------------|-----------------|------------|--------------------------|  
 |`NULL`|wszystkie|wszystkie|`EINVAL`|n/d|  
-|nie`NULL`|zero|wszystkie|`EINVAL`|Nie zmodyfikowano|  
-|nie`NULL`|wszystkie|`NULL`|`EINVAL`|Ciąg o zerowej długości|  
+|nie `NULL`|zero|wszystkie|`EINVAL`|Nie zmodyfikowano|  
+|nie `NULL`|wszystkie|`NULL`|`EINVAL`|Ciąg o zerowej długości|  
   
 ## <a name="remarks"></a>Uwagi  
- `_cgets_s`i `_cgetws_s` odczytać ciągu z konsoli i skopiuj ciąg (z terminatorem null) do `buffer`. `_cgetws_s`jest to wersja znaków dwubajtowych w funkcji; inne niż rozmiar znaków zachowanie tych dwóch funkcji jest identyczne. Maksymalny rozmiar ciągu do odczytu jest przekazywany jako `numberOfElements` parametru. Ten rozmiar powinna zawierać nadmiarowe znaki do zakończenia wartości null. Rzeczywista liczba znaków do odczytu jest umieszczany w `pSizeRead`.  
+ `_cgets_s` i `_cgetws_s` odczytać ciągu z konsoli i skopiuj ciąg (z terminatorem null) do `buffer`. `_cgetws_s` jest to wersja znaków dwubajtowych w funkcji; inne niż rozmiar znaków zachowanie tych dwóch funkcji jest identyczne. Maksymalny rozmiar ciągu do odczytu jest przekazywany jako `numberOfElements` parametru. Ten rozmiar powinna zawierać nadmiarowe znaki do zakończenia wartości null. Rzeczywista liczba znaków do odczytu jest umieszczany w `pSizeRead`.  
   
  Jeśli wystąpi błąd podczas operacji lub podczas sprawdzania poprawności parametrów, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i `EINVAL` jest zwracany.  
   
@@ -117,7 +120,7 @@ errno_t _cgetws_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_cgets_s`|\<conio.h >|  
+|`_cgets_s`|\<conio.h>|  
 |`_cgetws_s`|\<conio.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

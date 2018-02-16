@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - __wcserror_s
 - _strerror_s
@@ -33,7 +34,8 @@ f1_keywords:
 - tcserror_s
 - strerror_s
 - _strerror_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - __wcserror_s function
 - error messages, printing
@@ -46,16 +48,17 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2733adb5cfc2328fdc0fb39650f6013c11960b3e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 791f9b7408fded070fe61206d4303c26c8926d3e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 Komunikat o błędzie systemu (`strerror_s`, `_wcserror_s`) lub drukować komunikat dostarczone przez użytkownika (`_strerror_s`, `__wcserror_s`). Są to wersje [strerror —, _strerror —, _wcserror —, \__wcserror —](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -123,13 +126,13 @@ errno_t __wcserror_s(
   
 ### <a name="error-condtions"></a>Błąd Condtions  
   
-|`buffer`|`numberOfElements`|`strErrMsg`|Zawartość`buffer`|  
+|`buffer`|`numberOfElements`|`strErrMsg`|Zawartość `buffer`|  
 |--------------|------------------------|-----------------|--------------------------|  
 |`NULL`|wszystkie|wszystkie|n/d|  
 |wszystkie|0|wszystkie|Nie zmodyfikowano|  
   
 ## <a name="remarks"></a>Uwagi  
- `strerror_s` Funkcji mapy `errnum` na ciąg komunikat o błędzie zwraca ciąg w `buffer`. `_strerror_s`nie przyjmuje kod błędu; używa bieżącej wartości `errno` Aby określić odpowiedni komunikat. Ani `strerror_s` ani `_strerror_s` faktycznie drukuje wiadomości: W tym należy wywołać funkcję dane wyjściowe takich jak [fprintf —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md):  
+ `strerror_s` Funkcji mapy `errnum` na ciąg komunikat o błędzie zwraca ciąg w `buffer`. `_strerror_s` nie przyjmuje kod błędu; używa bieżącej wartości `errno` Aby określić odpowiedni komunikat. Ani `strerror_s` ani `_strerror_s` faktycznie drukuje wiadomości: W tym należy wywołać funkcję dane wyjściowe takich jak [fprintf —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md):  
   
 ```  
 if (( _access( "datafile",2 )) == -1 )  
@@ -143,9 +146,9 @@ if (( _access( "datafile",2 )) == -1 )
   
  Te funkcje obcięcia komunikat o błędzie, jeśli jego długość przekracza `numberOfElements` -1. Wynikowy ciąg w `buffer` jest zawsze zerem.  
   
- Numer błędu `_strerror_s` jest przechowywana w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Komunikaty o błędach systemu są dostępne za pośrednictwem zmiennej [_sys_errlist —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), która jest tablicę komunikatów uporządkowanych według numer błędu. `_strerror_s`uzyskuje dostęp do odpowiedniej komunikat przy użyciu `errno` wartość jako indeks do zmiennej `_sys_errlist`. Wartość zmiennej [_sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest zdefiniowany jako maksymalną liczbę elementów w `_sys_errlist` tablicy. Aby uzyskać dokładne wyniki, należy wywołać `_strerror_s` natychmiast po procedury biblioteki zwraca błąd. W przeciwnym razie kolejne wywołania `strerror_s` lub `_strerror_s` mogą zastąpić `errno` wartość.  
+ Numer błędu `_strerror_s` jest przechowywana w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Komunikaty o błędach systemu są dostępne za pośrednictwem zmiennej [_sys_errlist —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), która jest tablicę komunikatów uporządkowanych według numer błędu. `_strerror_s` uzyskuje dostęp do odpowiedniej komunikat przy użyciu `errno` wartość jako indeks do zmiennej `_sys_errlist`. Wartość zmiennej [_sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest zdefiniowany jako maksymalną liczbę elementów w `_sys_errlist` tablicy. Aby uzyskać dokładne wyniki, należy wywołać `_strerror_s` natychmiast po procedury biblioteki zwraca błąd. W przeciwnym razie kolejne wywołania `strerror_s` lub `_strerror_s` mogą zastąpić `errno` wartość.  
   
- `_wcserror_s`i `__wcserror_s` wersji znaków dwubajtowych `strerror_s` i `_strerror_s`odpowiednio.  
+ `_wcserror_s` i `__wcserror_s` wersji znaków dwubajtowych `strerror_s` i `_strerror_s`odpowiednio.  
   
  Te funkcje walidację ich parametrów. Jeśli bufor jest `NULL` lub jeśli parametr rozmiaru jest równa 0, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcje zwracają `EINVAL` i ustaw `errno` do `EINVAL`.  
   
@@ -165,7 +168,7 @@ if (( _access( "datafile",2 )) == -1 )
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strerror_s`, `_strerror_s`|\<String.h >|  
+|`strerror_s`, `_strerror_s`|\<string.h>|  
 |`_wcserror_s`, `__wcserror_s`|\<String.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  

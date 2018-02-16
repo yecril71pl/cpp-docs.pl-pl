@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _makepath
 - _wmakepath
@@ -30,7 +31,8 @@ f1_keywords:
 - tmakepath
 - wmakepath
 - _makepath
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _makepath function
 - wmakepath function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b811d4c851ae3c4949378512f5117d0809e8f1e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bbbaa2f4191d36fb92af5e157990fde6f053df55
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 Utwórz nazwę ścieżki ze składników. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_makepath_s —, _wmakepath_s —](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
@@ -78,7 +81,7 @@ void _wmakepath(
  Pełna ścieżka buforu.  
   
  `drive`  
- Zawiera litery (A, B i tak dalej) odpowiadający żądany dysk i opcjonalny dwukropek końcowe. `_makepath`automatycznie wstawia dwukropkiem w ścieżce złożonego, jeśli jest on niedostępny. Jeśli `drive` jest `NULL` lub punktów na pusty ciąg, litera nie występuje w złożone `path` ciągu.  
+ Zawiera litery (A, B i tak dalej) odpowiadający żądany dysk i opcjonalny dwukropek końcowe. `_makepath` automatycznie wstawia dwukropkiem w ścieżce złożonego, jeśli jest on niedostępny. Jeśli `drive` jest `NULL` lub punktów na pusty ciąg, litera nie występuje w złożone `path` ciągu.  
   
  `dir`  
  Zawiera ścieżkę katalogi nie łącznie z określeniem dysku lub rzeczywiste nazwy plików. Wiodący ukośnik jest opcjonalne, a albo ukośnika (/) ani ukośnika odwrotnego (\\) lub może być używany zarówno w jednej `dir` argumentu. Jeśli nie ma ukośników (/ lub \\) jest określona, zostanie on włożony automatycznie. Jeśli `dir` jest `NULL` lub wskazuje na pusty ciąg, nie ma ścieżki katalogu jest wstawiana złożone `path` ciągu.  
@@ -87,12 +90,12 @@ void _wmakepath(
  Zawiera nazwę pliku podstawowego bez żadnych rozszerzeń nazw plików. Jeśli `fname` jest `NULL` lub wskazuje na pusty ciąg, nazwa pliku nie jest wkładana złożone `path` ciągu.  
   
  `ext`  
- Zawiera rozszerzenie nazwy pliku, z lub bez poprzedzającej go kropki (.). `_makepath`Wstawia okresu automatycznie, jeśli nie ma w `ext`. Jeśli `ext` jest `NULL` lub wskazuje na pusty ciąg, bez rozszerzenia jest wstawiana złożone `path` ciągu.  
+ Zawiera rozszerzenie nazwy pliku, z lub bez poprzedzającej go kropki (.). `_makepath` Wstawia okresu automatycznie, jeśli nie ma w `ext`. Jeśli `ext` jest `NULL` lub wskazuje na pusty ciąg, bez rozszerzenia jest wstawiana złożone `path` ciągu.  
   
 ## <a name="remarks"></a>Uwagi  
- `_makepath` Funkcja tworzy ciąg ścieżki złożone z poszczególnych składników zapisywania wyniku w `path`. `path` Może zawierać litery dysku, ścieżki katalogu, nazwę pliku i rozszerzenie nazwy pliku. `_wmakepath`jest to wersja znaków dwubajtowych `_makepath`; argumenty `_wmakepath` są ciągami znaków dwubajtowych. `_wmakepath`i `_makepath` zachowują się tak samo w przeciwnym razie wartość.  
+ `_makepath` Funkcja tworzy ciąg ścieżki złożone z poszczególnych składników zapisywania wyniku w `path`. `path` Może zawierać litery dysku, ścieżki katalogu, nazwę pliku i rozszerzenie nazwy pliku. `_wmakepath` jest to wersja znaków dwubajtowych `_makepath`; argumenty `_wmakepath` są ciągami znaków dwubajtowych. `_wmakepath` i `_makepath` zachowują się tak samo w przeciwnym razie wartość.  
   
- **Uwaga dotycząca zabezpieczeń** użyć ciągu zakończonego wartością null. Aby uniknąć przepełnienia buforu, zerem ciągu nie może przekraczać wielkości `path` buforu. `_makepath`zapewnienia, że długość ciągu złożony ścieżki przekracza `_MAX_PATH`. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+ **Uwaga dotycząca zabezpieczeń** użyć ciągu zakończonego wartością null. Aby uniknąć przepełnienia buforu, zerem ciągu nie może przekraczać wielkości `path` buforu. `_makepath` zapewnienia, że długość ciągu złożony ścieżki przekracza `_MAX_PATH`. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -102,13 +105,13 @@ void _wmakepath(
   
  `path` Argumentu musi wskazywać na pusty buforu wystarczająco duży, aby pomieścić pełną ścieżkę. Złożone `path` nie może być większa niż `_MAX_PATH` stałą, zdefiniowane w Stdlib.h.  
   
- Jeśli ścieżka jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Ponadto `errno` ma ustawioną wartość `EINVAL`. `NULL`wartości są dozwolone dla wszystkich innych parametrów.  
+ Jeśli ścieżka jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Ponadto `errno` ma ustawioną wartość `EINVAL`. `NULL` wartości są dozwolone dla wszystkich innych parametrów.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_makepath`|\<stdlib.h >|  
+|`_makepath`|\<stdlib.h>|  
 |`_wmakepath`|\<stdlib.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -153,6 +156,6 @@ Path extracted with _splitpath:
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_fullpath —, _wfullpath —](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_splitpath —, _wsplitpath —](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
  [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md)

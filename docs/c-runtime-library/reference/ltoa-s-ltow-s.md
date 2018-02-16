@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ltoa_s
 - _ltow_s
@@ -27,7 +28,8 @@ f1_keywords:
 - _ltoa_s
 - ltoa_s
 - ltow_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - converting integers
 - _ltoa_s function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - ltoa_s function
 - _ltow_s function
 ms.assetid: d7dc61ea-1ccd-412d-b262-555a58647386
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: de078e5ad6d2488b852e14247d2d72ca751a9635
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 181f03752a16f64329eb94ae0cd8fac091fa2987
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltoas-ltows"></a>_ltoa_s, _ltow_s
 Konwertuje długich liczb całkowitych na ciąg. Są to wersje [_ltoa —, _ltow —](../../c-runtime-library/reference/ltoa-ltow.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -97,7 +100,7 @@ errno_t _ltow_s(
  Zero, jeśli funkcja zakończyło się pomyślnie lub kod błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- `_ltoa_s` Funkcja konwertuje cyfry `value` na ciąg znaków zakończony znakiem null i zapisuje wynik (w bajtach do 33) w `str`. `radix` Argument określa podstawą `value`, które muszą być w zakresie od 2 36. Jeśli `radix` równa 10 i `value` jest ujemna, pierwszego znaku ciągu przechowywanych jest znak minus (-). `_ltow_s`jest to wersja znaków typu wide `_ltoa_s`; drugi argument funkcji `_ltow_s` jest ciągów znaków dwubajtowych.  
+ `_ltoa_s` Funkcja konwertuje cyfry `value` na ciąg znaków zakończony znakiem null i zapisuje wynik (w bajtach do 33) w `str`. `radix` Argument określa podstawą `value`, które muszą być w zakresie od 2 36. Jeśli `radix` równa 10 i `value` jest ujemna, pierwszego znaku ciągu przechowywanych jest znak minus (-). `_ltow_s` jest to wersja znaków typu wide `_ltoa_s`; drugi argument funkcji `_ltow_s` jest ciągów znaków dwubajtowych.  
   
  Jeśli `str` jest `NULL` wskaźnika lub `sizeOfstr` jest mniejsza lub równa zero, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw `errno` do `EINVAL` lub, jeśli `value` lub `str` poza zakresem długich liczb całkowitych, zwróć -1, te funkcje i ustaw `errno` do `ERANGE`.  
   
@@ -113,13 +116,13 @@ errno_t _ltow_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_ltoa_s`|\<stdlib.h >|  
-|`_ltow_s`|\<stdlib.h >|  
+|`_ltoa_s`|\<stdlib.h>|  
+|`_ltow_s`|\<stdlib.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [_itoa —, _i64toa —, _ui64toa —, _itow — _i64tow —, _ui64tow —](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)   
- [_ultoa —, _ultow —](../../c-runtime-library/reference/ultoa-ultow.md)   
+ [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)   
  [_ultoa_s, _ultow_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md)

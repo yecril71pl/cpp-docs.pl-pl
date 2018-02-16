@@ -1,12 +1,13 @@
 ---
-title: "ftell —, _ftelli64 — | Dokumentacja firmy Microsoft"
+title: ftell, _ftelli64 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ftelli64
 - ftell
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - _ftelli64
 - ftell
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ftell function
 - ftelli64 function
@@ -34,16 +36,17 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: df0feee9beb2b2fc5144974f1fc06ff2b8d02b80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b7bb0c1954d79261298cccccec980fa446d0cf00
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ftell-ftelli64"></a>ftell, _ftelli64
 Pobiera bieżącą pozycję wskaźnika pliku.  
@@ -64,7 +67,7 @@ __int64 _ftelli64(
  Docelowy `FILE` struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `ftell`i `_ftelli64` Zwraca bieżące położenie pliku. Wartość zwrócona przez `ftell` i `_ftelli64` mogą nie uwzględniać Przesunięcie bajtów fizycznego dla strumieni otwarty w trybie tekstowym, ponieważ tryb tekstu powoduje tłumaczenie wysuwu wiersza powrotu karetki. Użyj `ftell` z `fseek` lub `_ftelli64` z `_fseeki64` aby powrócić do lokalizacji plików poprawnie. W przypadku błędu `ftell` i `_ftelli64` Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracane L-1 i zestaw `errno` do jednej z dwóch stałe, zdefiniowane w numer błędu. H. `EBADF` Oznacza stała `stream` argument nie jest wartością wskaźnika prawidłowego pliku lub nie odwołuje się do otwartego pliku. `EINVAL`oznacza nieprawidłową `stream` argument został przekazany do funkcji. Na urządzeniach niezdolne do znalezienia (na przykład terminale i drukarki) lub gdy `stream` nie odwołuje się do otwartego pliku, zwracana wartość jest niezdefiniowana.  
+ `ftell` i `_ftelli64` Zwraca bieżące położenie pliku. Wartość zwrócona przez `ftell` i `_ftelli64` mogą nie uwzględniać Przesunięcie bajtów fizycznego dla strumieni otwarty w trybie tekstowym, ponieważ tryb tekstu powoduje tłumaczenie wysuwu wiersza powrotu karetki. Użyj `ftell` z `fseek` lub `_ftelli64` z `_fseeki64` aby powrócić do lokalizacji plików poprawnie. W przypadku błędu `ftell` i `_ftelli64` Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracane L-1 i zestaw `errno` do jednej z dwóch stałe, zdefiniowane w numer błędu. H. `EBADF` Oznacza stała `stream` argument nie jest wartością wskaźnika prawidłowego pliku lub nie odwołuje się do otwartego pliku. `EINVAL` oznacza nieprawidłową `stream` argument został przekazany do funkcji. Na urządzeniach niezdolne do znalezienia (na przykład terminale i drukarki) lub gdy `stream` nie odwołuje się do otwartego pliku, zwracana wartość jest niezdefiniowana.  
   
  Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.  
   
@@ -81,8 +84,8 @@ __int64 _ftelli64(
   
 |Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|  
 |--------------|---------------------|----------------------|  
-|`ftell`|\<stdio.h >|\<errno.h >|  
-|`_ftelli64`|\<stdio.h >|\<errno.h >|  
+|`ftell`|\<stdio.h>|\<errno.h>|  
+|`_ftelli64`|\<stdio.h>|\<errno.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -124,5 +127,5 @@ Position after trying to read 100 bytes: 100
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
  [fgetpos —](../../c-runtime-library/reference/fgetpos.md)   
- [fseek, _fseeki64 —](../../c-runtime-library/reference/fseek-fseeki64.md)   
+ [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
  [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)

@@ -1,12 +1,13 @@
 ---
-title: "snprintf —, _snprintf —, _snprintf_l —, _snwprintf —, _snwprintf_l — | Dokumentacja firmy Microsoft"
+title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _snwprintf
 - _snprintf
@@ -38,7 +39,8 @@ f1_keywords:
 - _snprintf_l
 - _snwprintf
 - _snwprintf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - snwprintf_l function
 - sntprintf_l function
@@ -54,18 +56,19 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0441f2debf2e030702727c92a6e27bea63cb0564
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d235f1034d8e916ddcd9e268e72aadacaf90911
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf — _snprintf —, _snprintf_l —, _snwprintf —, _snwprintf_l —
+# <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 Zapisuje sformatowane dane do ciągu. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_snprintf_s —, _snprintf_s_l —, _snwprintf_s —, _snwprintf_s_l —](../../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).  
   
 ## <a name="syntax"></a>Składnia  
@@ -176,7 +179,7 @@ int _snwprintf_l(
   
  Począwszy od Biblioteka UCRT w programie Visual Studio 2015 i Windows 10 `snprintf` nie jest już takie same jak `_snprintf`. `snprintf` Zachowanie funkcji jest teraz zgodne standard C99.  
   
- `_snwprintf`jest to wersja znaków dwubajtowych `_snprintf`; argumenty wskaźnika `_snwprintf` są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania `_snwprintf` może się różnić od w `_snprintf`. `_snwprintf`, podobnie jak `swprintf`, zapisuje dane wyjściowe do ciągu zamiast docelowego typu `FILE`.  
+ `_snwprintf` jest to wersja znaków dwubajtowych `_snprintf`; argumenty wskaźnika `_snwprintf` są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania `_snwprintf` może się różnić od w `_snprintf`. `_snwprintf`, podobnie jak `swprintf`, zapisuje dane wyjściowe do ciągu zamiast docelowego typu `FILE`.  
   
  Wersje tych funkcji, które mają `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.  
   
@@ -193,7 +196,7 @@ int _snwprintf_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`snprintf`, `_snprintf`,  `_snprintf_l`|\<stdio.h >|  
+|`snprintf`, `_snprintf`,  `_snprintf_l`|\<stdio.h>|  
 |`_snwprintf`, `_snwprintf_l`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -313,9 +316,9 @@ character count = 69
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [fprintf —, _fprintf_l —, fwprintf — _fwprintf_l —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l —, wprintf, _wprintf_l —](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [sscanf —, _sscanf_l —, swscanf — _swscanf_l —](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
  [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)

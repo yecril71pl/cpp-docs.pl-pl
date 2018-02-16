@@ -7,35 +7,34 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a68475447ed520298b0eab7949386c2e8d078ac6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7a64e1f35350968f16a24a46b8611820d68bf785
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="static-libraries-ccx"></a>Biblioteki statyczne (C + +/ CX)
-Biblioteka statyczna, który jest używany w aplikacji platformy uniwersalnej systemu Windows może zawierać kod ISO standard C++, w tym typy STL i wywołania funkcji Win32 API, które nie są wykluczone z platformy aplikacji platformy uniwersalnej systemu Windows. Biblioteka statyczna zużywa składników środowiska wykonawczego systemu Windows i może utworzyć składników środowiska wykonawczego systemu Windows z pewnymi ograniczeniami.  
+Biblioteka statyczna, który jest używany w aplikacji Windows platformy Uniwersalnej mogą zawierać kod normy ISO C++, w tym typy STL i wywołania funkcji Win32 API, które nie są wykluczone z platformy aplikacji środowiska wykonawczego systemu Windows. Biblioteka statyczna zużywa składników środowiska wykonawczego systemu Windows i może utworzyć składników środowiska wykonawczego systemu Windows z pewnymi ograniczeniami.  
   
 ## <a name="creating-static-libraries"></a>Tworzenie biblioteki statyczne  
   
-#### <a name="to-create-a-static-library-for-use-in-a-universal-windows-platform-app"></a>Do tworzenia biblioteki statycznej do użycia w aplikacji platformy uniwersalnej systemu Windows  
+#### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>Do tworzenia biblioteki statycznej do użycia w aplikacji platformy uniwersalnej systemu Windows  
   
-1.  Na pasku menu wybierz **pliku** > **nowy** > **projektu** > **puste biblioteki statycznej** dla uniwersalnych systemu Windows platformy aplikacji.  
+1.  Na pasku menu wybierz **pliku** > **nowy** > **projektu**. W obszarze **Visual C++** > **uniwersalnych systemu Windows** wybierz **biblioteka statyczna (uniwersalna systemu Windows)**.  
   
-2.  W **Eksploratora rozwiązań**, otwórz menu skrótów projektu, a następnie wybierz pozycję **właściwości**. W **właściwości** na okna dialogowego **właściwości konfiguracji** > **ogólne** Ustaw obsługę aplikacji platformy uniwersalnej systemu Windows  **Tak**.  
+2.  W **Eksploratora rozwiązań**, otwórz menu skrótów projektu, a następnie wybierz pozycję **właściwości**. W **właściwości** na okna dialogowego **właściwości konfiguracji** > **C/C++** ustaw **korzystać rozszerzenie środowiska uruchomieniowego systemu Windows** do **tak (/ZW)**.  
   
-3.  Na **właściwości konfiguracji** > **C/C++** ustaw **Consume** środowiska wykonawczego systemu Windows **rozszerzenia** do **Tak (/ZW)**.  
+ Podczas kompilowania nowej biblioteki statyczne, jeśli wywołanie interfejsu API Win32, które jest wyłączone dla aplikacji platformy uniwersalnej systemu Windows, kompilator zgłosi błąd C3861, "Nie odnaleziono identyfikatora". Aby wyszukać alternatywną metodą jest obsługiwana w przypadku środowiska uruchomieniowego systemu Windows, temacie [alternatywy dla interfejsów API systemu Windows w aplikacjach platformy uniwersalnej systemu Windows](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  
   
- Podczas kompilowania nowej biblioteki statyczne, jeśli wywołanie interfejsu API Win32, które jest wyłączone dla aplikacji platformy uniwersalnej systemu Windows, kompilator zgłosi błąd C3861, "Nie odnaleziono identyfikatora". Aby wyszukać alternatywną metodą jest obsługiwana w przypadku środowiska uruchomieniowego systemu Windows, temacie [alternatywy dla interfejsów API systemu Windows w aplikacjach w Sklepie Windows](http://msdn.microsoft.com/en-us/75568012-61e0-41cc-a4df-c698f54f21ec).  
-  
- Jeśli dodasz projektu biblioteki statycznej C++ do rozwiązania aplikacji platformy uniwersalnej systemu Windows, może być konieczne zaktualizowanie ustawień właściwości projektu biblioteki, tak aby właściwość pomocy technicznej platformy uniwersalnej systemu Windows jest ustawiona na **tak**. Bez tego ustawienia kompilacji kodu i linki, ale wystąpił błąd występuje, gdy użytkownik podejmie próbę Sprawdź aplikacji dla [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. Statycznej lib powinna być skompilowana z tymi samymi ustawieniami kompilatora jako projekt, który wykorzystuje go.  
+ Po dodaniu projektu biblioteki statycznej C++ do rozwiązania aplikacji platformy uniwersalnej systemu Windows może być konieczne zaktualizowanie ustawień właściwości projektu biblioteki, tak aby właściwość pomocy technicznej platformy uniwersalnej systemu Windows jest ustawiona na **tak**. Bez tego ustawienia kompilacji kodu i linki, ale wystąpił błąd występuje, gdy użytkownik podejmie próbę sprawdzić, czy aplikacja Microsoft Store. Statycznej lib powinna być skompilowana z tymi samymi ustawieniami kompilatora jako projekt, który wykorzystuje go.  
   
  Jeśli korzystać bibliotekę statyczną, która tworzy publiczny `ref` klasy, klasy interfejs publiczny lub klasy wartość publicznego konsolidator zgłasza to ostrzeżenie:  
   

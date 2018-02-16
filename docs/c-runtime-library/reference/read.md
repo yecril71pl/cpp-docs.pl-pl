@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _read
+ms.topic: reference
+apiname:
+- _read
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _read
-dev_langs: C++
+f1_keywords:
+- _read
+dev_langs:
+- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -31,16 +35,17 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c55e2607a706648c818fc94e73197756470110c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ad5b18300ec36cc55a6eb02476b454829193cd8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="read"></a>_read
 
@@ -61,7 +66,7 @@ int _read(
 *FD*  
 Plik deskryptora odwołujących się do otwartego pliku.  
   
-*Bufor*  
+*buffer*  
 Lokalizacja magazynu danych.  
   
 *Liczba*  
@@ -69,7 +74,7 @@ Maksymalna liczba bajtów.
   
 ## <a name="return-value"></a>Wartość zwracana  
 
-`_read`Zwraca liczbę bajtów odczytanych, który może być mniejsza niż *liczba* Jeśli jest dostępnych mniej niż *liczba* pozostałych bajtów w pliku lub jeśli plik został otwarty w trybie tekstowym, w którym to przypadku wierszami powrotu karetki źródła pary `\r\n` jest zastępowany znak pojedynczego wysuwu wiersza `\n`. Tylko znak pojedynczego wysuwu wiersza jest liczony w wartości zwracanej. Zastąpienie nie ma wpływu na wskaźnika pliku.  
+`_read` Zwraca liczbę bajtów odczytanych, który może być mniejsza niż *liczba* Jeśli jest dostępnych mniej niż *liczba* pozostałych bajtów w pliku lub jeśli plik został otwarty w trybie tekstowym, w którym to przypadku wierszami powrotu karetki źródła pary `\r\n` jest zastępowany znak pojedynczego wysuwu wiersza `\n`. Tylko znak pojedynczego wysuwu wiersza jest liczony w wartości zwracanej. Zastąpienie nie ma wpływu na wskaźnika pliku.  
   
 Jeśli funkcja próbuje odczytać na końcu pliku, zwraca wartość 0. Jeśli *fd* jest nieprawidłowy, plik nie jest otwarty do odczytu, lub plik jest zablokowany, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca wartość -1 i zestawy `errno` do `EBADF`.  
   
@@ -87,7 +92,7 @@ Jeśli plik został otwarty w trybie tekstowym, Odczyt kończy kiedy `_read` nap
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_read`|\<IO.h >|  
+|`_read`|\<io.h>|  
   
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -151,7 +156,7 @@ Read 19 bytes from file
 ## <a name="see-also"></a>Zobacz też  
 
 [We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)   
-[_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
+[_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
 [fread —](../../c-runtime-library/reference/fread.md)   
 [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
 [_write](../../c-runtime-library/reference/write.md)

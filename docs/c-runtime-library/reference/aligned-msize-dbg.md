@@ -1,13 +1,15 @@
 ---
-title: _aligned_msize_dbg | Dokumentacja firmy Microsoft
+title: _aligned_msize_dbg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _aligned_msize_dbg
+ms.topic: reference
+apiname:
+- _aligned_msize_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,20 +22,24 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords: _aligned_msize_dbg
-dev_langs: C++
-helpviewer_keywords: _aligned_msize_dbg
+f1_keywords:
+- _aligned_msize_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7f09b6429b8ffd4ecb34af1213ebb62100238af8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0c26a876f6ef4f77d4f9c649a3993fe666cb6f3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 Zwraca rozmiar bloku pamięci przydzielić w stercie (tylko wersja do debugowania).  
@@ -49,13 +55,13 @@ size_t _aligned_msize_dbg(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`memblock`  
+ [in] `memblock`  
  Wskaźnik do bloku pamięci.  
   
- [in]`alignment`  
+ [in] `alignment`  
  Wartość wyrównania, która musi być całkowitą potęgą liczby 2.  
   
- [in]`offset`  
+ [in] `offset`  
  Przesunięcie alokacji pamięci, aby wymusić wyrównanie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -64,7 +70,7 @@ size_t _aligned_msize_dbg(
 ## <a name="remarks"></a>Uwagi  
  `alignment` i `offset` wartości musi być taka sama jak wartości przekazane do funkcji, która przydzielony blok.  
   
- `_aligned_msize_dbg`jest to wersja debugowania [_aligned_msize —](../../c-runtime-library/reference/aligned-msize.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_aligned_msize_dbg` zostanie zmniejszona do wywołania `_aligned_msize`. Zarówno `_aligned_msize` i `_aligned_msize_dbg` Oblicz rozmiar bloku pamięci w stercie podstawowy, ale `_aligned_msize_dbg` dodaje funkcję debugowania: rozmiar zwróconego zawiera buforów po obu stronach użytkownika część bloku pamięci.  
+ `_aligned_msize_dbg` jest to wersja debugowania [_aligned_msize —](../../c-runtime-library/reference/aligned-msize.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_aligned_msize_dbg` zostanie zmniejszona do wywołania `_aligned_msize`. Zarówno `_aligned_msize` i `_aligned_msize_dbg` Oblicz rozmiar bloku pamięci w stercie podstawowy, ale `_aligned_msize_dbg` dodaje funkcję debugowania: rozmiar zwróconego zawiera buforów po obu stronach użytkownika część bloku pamięci.  
   
  Ta funkcja weryfikuje jej parametr. Jeśli `memblock` jest wskaźnika o wartości null lub `alignment` nie jest potęgą liczby 2, `_msize` wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli ten błąd jest obsługiwane, funkcja ustawia `errno` do `EINVAL` i zwraca wartość -1.  
   
@@ -74,7 +80,7 @@ size_t _aligned_msize_dbg(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_aligned_msize_dbg`|\<crtdbg.h >|  
+|`_aligned_msize_dbg`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

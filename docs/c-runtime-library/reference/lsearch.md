@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _lsearch
+ms.topic: reference
+apiname:
+- _lsearch
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch
 - lsearch
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _lsearch function
 - values, searching for
@@ -34,16 +37,17 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ffb2c0ec3547278f048855bb72a2e4ae1bb00287
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb4cb64b9287de11a894a8ca7c7cdd4490fcc446
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lsearch"></a>_lsearch
 Wykonuje wyszukiwanie liniowe dla wartości; dodaje do końca listy, jeśli nie można odnaleźć. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [_lsearch_s —](../../c-runtime-library/reference/lsearch-s.md).  
@@ -82,7 +86,7 @@ void *_lsearch(
 ## <a name="remarks"></a>Uwagi  
  `_lsearch` Funkcja wykonuje wyszukiwanie liniowe dla wartości `key` w tablicy `num` z elementów `width` bajtów. W odróżnieniu od `bsearch`, `_lsearch` nie wymaga tablicy ma zostać posortowana. Jeśli `key` nie zostanie znaleziony, `_lsearch` dodaje go do końca tablicy i zwiększa `num`.  
   
- `compare` Argument jest wskaźnik do procedury dostarczone przez użytkownika, który porównuje dwa elementy tablicy i zwraca wartość określającą ich relacji. `_lsearch`wywołania `compare` rutynowych jeden lub więcej razy podczas wyszukiwania przekazywanie wskaźników do dwóch elementów tablicy przy każdym wywołaniu. `compare`należy porównać elementy i zwracać różną od zera (to znaczy elementy są inne) lub wartość 0 (tzn. elementy są identyczne).  
+ `compare` Argument jest wskaźnik do procedury dostarczone przez użytkownika, który porównuje dwa elementy tablicy i zwraca wartość określającą ich relacji. `_lsearch` wywołania `compare` rutynowych jeden lub więcej razy podczas wyszukiwania przekazywanie wskaźników do dwóch elementów tablicy przy każdym wywołaniu. `compare` należy porównać elementy i zwracać różną od zera (to znaczy elementy są inne) lub wartość 0 (tzn. elementy są identyczne).  
   
  Ta funkcja weryfikuje jego parametrów. Jeśli `compare`, `key` lub `num` jest `NULL`, lub jeśli `base` ma wartość NULL i *`num` jest różna od zera, lub jeśli `width` jest mniejsza od zera, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [ Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i funkcja zwraca `NULL`.  
   
@@ -90,7 +94,7 @@ void *_lsearch(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_lsearch`|\<Search.h >|  
+|`_lsearch`|\<search.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - memcmp
 - wmemcmp
@@ -26,21 +27,23 @@ apitype: DLLExport
 f1_keywords:
 - memcmp
 - wmemcmp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 05869e1497ab173bc0f847482225ff215f3690af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1ab6e5371dfe6080ab970cc142891f2e4bd7c3c3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 Porównanie znaków w dwóch buforów.  
@@ -75,9 +78,9 @@ int wmemcmp(
   
 |Wartość zwracana|Relacja pierwszy `count` znaków buf1 i buf2|  
 |------------------|---------------------------------------------------------------|  
-|< 0|`buf1`mniej niż`buf2`|  
-|0|`buf1`taki sam jak`buf2`|  
-|> 0|`buf1`większa niż`buf2`|  
+|< 0|`buf1` Mniej niż `buf2`|  
+|0|`buf1` taki sam jak `buf2`|  
+|> 0|`buf1` Większa niż `buf2`|  
   
 ## <a name="remarks"></a>Uwagi  
  Porównuje pierwszy `count` znaków `buf1` i `buf2` i zwraca wartość wskazującą, ich relacji. Wartość jest znak różnicy między pierwszym pary różne wartości w buforów zwrotu logowania z systemem innym niż zero. Wartości są interpretowane jako `unsigned char` dla `memcmp`, a jako `wchar_t` dla `wmemcmp`.  
@@ -87,7 +90,7 @@ int wmemcmp(
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
 |`memcmp`|\<Memory.h > lub \<string.h >|  
-|`wmemcmp`|\<WChar.h >|  
+|`wmemcmp`|\<wchar.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -144,7 +147,7 @@ int_arr1 is equal to int_arr2.
   
 ## <a name="see-also"></a>Zobacz też  
  [Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)   
- [_memccpy —](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memchr, wmemchr —](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcpy, wmemcpy —](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset —, wmemset —](../../c-runtime-library/reference/memset-wmemset.md)   

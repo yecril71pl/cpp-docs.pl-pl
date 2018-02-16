@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _putchar_nolock
 - _putwchar_nolock
@@ -28,7 +29,8 @@ f1_keywords:
 - _putchar_nolock
 - _putwchar_nolock
 - putchar_nolock
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _puttchar_nolock function
 - putchar_nolock function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c4183b9ab4b15e4e39ec685934a9c2c591303f78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0442c17464fc83e5f74a9a4683d00e89d743011e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock, _putwchar_nolock
 Zapisuje znaku **stdout** bez blokowania wątku.  
@@ -86,10 +89,10 @@ wint_t _putwchar_nolock(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_putchar_nolock`|\<stdio.h >|  
+|`_putchar_nolock`|\<stdio.h>|  
 |`_putwchar_nolock`|\<stdio.h > lub \<wchar.h >|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu `stdin`, `stdout`, i `stderr`, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
   
 ## <a name="libraries"></a>Biblioteki  
  Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  

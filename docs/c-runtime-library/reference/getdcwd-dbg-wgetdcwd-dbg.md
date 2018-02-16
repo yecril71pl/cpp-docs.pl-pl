@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _getdcwd_dbg
 - _wgetdcwd_dbg
@@ -27,7 +28,8 @@ f1_keywords:
 - getdcwd_dbg
 - _wgetdcwd_dbg
 - wgetdcwd_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - working directory
 - _getdcwd_dbg function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2009a88f522b60305c6f910a155faa8e675e2147
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 788ef0f0b745132c4b8d270129d8a182a2774361
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 Wersja debugowania [_getdcwd —, _wgetdcwd —](../../c-runtime-library/reference/getdcwd-wgetdcwd.md) funkcje (Ta funkcja jest dostępna tylko podczas debugowania).  
@@ -109,12 +112,12 @@ wchar_t *_wgetdcwd_dbg(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_getdcwd_dbg`|\<crtdbg.h >|  
-|`_wgetdcwd_dbg`|\<crtdbg.h >|  
+|`_getdcwd_dbg`|\<crtdbg.h>|  
+|`_wgetdcwd_dbg`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [_getdcwd —, _wgetdcwd —](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
+ [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
  [Kontrola katalogu](../../c-runtime-library/directory-control.md)   
  [Wersja debugowania funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)

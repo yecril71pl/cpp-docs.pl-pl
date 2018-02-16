@@ -1,12 +1,13 @@
 ---
-title: "_putch —, _putwch — | Dokumentacja firmy Microsoft"
+title: _putch, _putwch | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _putwch
 - _putch
@@ -27,7 +28,8 @@ f1_keywords:
 - _putch
 - putwch
 - _putwch
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _putch function
 - characters, writing
@@ -36,22 +38,23 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fb34c83aede8b97ab1c3fae1afb33a16258daff7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 75094625553a5e080c9e1b4ec6a1f96a7a76d9b7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putch-putwch"></a>_putch, _putwch
 Zapisuje znak do konsoli.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -81,14 +84,14 @@ wint_t _putwch(
   
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
-|**_puttch**|`_putch`|`_putch`|**_putwch —**|  
+|**_puttch**|`_putch`|`_putch`|**_putwch**|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_putch`|\<conio.h >|  
-|**_putwch —**|\<conio.h >|  
+|`_putch`|\<conio.h>|  
+|**_putwch**|\<conio.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -100,5 +103,5 @@ wint_t _putwch(
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)   
- [_cprintf —, _cprintf_l —, _cwprintf — _cwprintf_l —](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
  [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)

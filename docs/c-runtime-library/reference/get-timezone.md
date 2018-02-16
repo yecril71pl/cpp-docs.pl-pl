@@ -1,13 +1,15 @@
 ---
-title: "_get_timezone — | Dokumentacja firmy Microsoft"
+title: _get_timezone | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _get_timezone
+ms.topic: reference
+apiname:
+- _get_timezone
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - _get_timezone
 - get_timezone
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - time zones
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c83765da12b7e29d3e90037508a3cba4aa6d1ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3ee251c147fd0f3f34d229cafbbef28caf1cebd9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="gettimezone"></a>_get_timezone
 Pobiera różnica w sekundach między uniwersalny czas koordynowany (UTC) i czasem lokalnym.  
@@ -69,13 +73,13 @@ Pobiera różnica w sekundach między uniwersalny czas koordynowany (UTC) i czas
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_get_timezone`|\<Time.h >|  
+|`_get_timezone`|\<time.h>|  
   
  Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
  [errno, _doserrno — _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
- [_get_daylight —](../../c-runtime-library/reference/get-daylight.md)   
- [_get_dstbias —](../../c-runtime-library/reference/get-dstbias.md)   
+ [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
+ [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
  [_get_tzname](../../c-runtime-library/reference/get-tzname.md)

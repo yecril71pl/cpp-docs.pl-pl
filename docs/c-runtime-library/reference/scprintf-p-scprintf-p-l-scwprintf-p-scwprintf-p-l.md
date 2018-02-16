@@ -1,12 +1,13 @@
 ---
-title: "_scprintf_p —, _scprintf_p_l —, _scwprintf_p —, _scwprintf_p_l — | Dokumentacja firmy Microsoft"
+title: _scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _scwprintf_p
 - _scprintf_p_l
@@ -35,7 +36,8 @@ f1_keywords:
 - scwprintf_p_l
 - _scprintf_p
 - _scwprintf_p
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sctprintf_p_l function
 - _scwprintf_p_l function
@@ -50,16 +52,17 @@ helpviewer_keywords:
 - scwprintf_p_l function
 - _sctprintf_p_l function
 ms.assetid: 8390d1e1-2826-47a4-851f-6635a88087cc
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 84e0cae612e1ee27b841089176ce1e2dfa368d29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 732b299eabffcea2b505921cf55fb23916063058
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 Zwraca liczbę znaków w ciągu sformatowaną umożliwia określenie kolejności, w którym są używane parametry w ciągu formatu.  
@@ -98,7 +101,7 @@ int _scwprintf_p _l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca liczbę znaków, które będą generowane, jeśli był do wydrukowania lub wysyłane do pliku lub buforu przy użyciu określonego kody formatowania. Wartość zwracana nie zawiera znak końcowy null. `_scwprintf_p`taką samą funkcję wykonuje dla znaki dwubajtowe.  
+ Zwraca liczbę znaków, które będą generowane, jeśli był do wydrukowania lub wysyłane do pliku lub buforu przy użyciu określonego kody formatowania. Wartość zwracana nie zawiera znak końcowy null. `_scwprintf_p` taką samą funkcję wykonuje dla znaki dwubajtowe.  
   
  Różnica między `_scprintf_p` i `_scprintf` jest to, że `_scprintf_p` parametrów pozycyjnych obsługuje, które umożliwiają określenie kolejności, w którym argumenty są używane w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).  
   
@@ -125,12 +128,12 @@ int _scwprintf_p _l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_scprintf_p`, `_scprintf_p_l`|\<stdio.h >|  
+|`_scprintf_p`, `_scprintf_p_l`|\<stdio.h>|  
 |`_scwprintf_p`, `_scwprintf_p_l`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [_scprintf —, _scprintf_l —, _scwprintf — _scwprintf_l —](../../c-runtime-library/reference/scprintf-scprintf-l-scwprintf-scwprintf-l.md)   
+ [_scprintf, _scprintf_l, _scwprintf, _scwprintf_l](../../c-runtime-library/reference/scprintf-scprintf-l-scwprintf-scwprintf-l.md)   
  [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)

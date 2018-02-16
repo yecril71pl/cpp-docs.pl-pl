@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _clearfp
 - _clear87
@@ -28,7 +29,8 @@ f1_keywords:
 - _clearfp
 - _clear87
 - clear87
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - clearing floating point status word
 - clearfp function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6fb487a2db1938c173a8b926319adcfb57fc7e80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e1afc7bd1b5921a7ac24e8df2ed0adf0a807616
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clear87-clearfp"></a>_clear87, _clearfp
 Pobiera i czyści słowa stanu zmiennoprzecinkowych.  
@@ -63,7 +66,7 @@ unsigned int _clearfp( void );
 ## <a name="remarks"></a>Uwagi  
  `_clear87` Funkcja czyści flagi wyjątek w programie word zmiennoprzecinkowy stan, ustawia bit zajęty 0 i zwraca słowa stanu. Słowa stanu zmiennoprzecinkowej jest kombinacją słowa stanu 8087/80287 i innych warunków wykrytych przez program obsługi wyjątku 8087/80287, takie jak przepełnienie stosu zmiennoprzecinkowych i niedopełnienie.  
   
- `_clearfp`to wersja niezależne od platformy, przenośne `_clear87` procedury. Jest on identyczny `_clear87` na platformach firmy Intel (x86) i jest również obsługiwana przez platformy ARM i x64. Zapewnienie zmiennoprzecinkowe kodu przenośnego x64 i ARM, użyj `_clearfp`. Jeśli przeznaczonych tylko x86 platform, możesz użyć dowolnej `_clear87` lub `_clearfp`.  
+ `_clearfp` to wersja niezależne od platformy, przenośne `_clear87` procedury. Jest on identyczny `_clear87` na platformach firmy Intel (x86) i jest również obsługiwana przez platformy ARM i x64. Zapewnienie zmiennoprzecinkowe kodu przenośnego x64 i ARM, użyj `_clearfp`. Jeśli przeznaczonych tylko x86 platform, możesz użyć dowolnej `_clear87` lub `_clearfp`.  
   
  Te funkcje są przestarzałe podczas kompilowania za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) ponieważ środowisko uruchomieniowe języka wspólnego obsługuje tylko domyślna dokładność zmiennoprzecinkowych.  
   
@@ -71,8 +74,8 @@ unsigned int _clearfp( void );
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_clear87`|\<float.h — >|  
-|`_clearfp`|\<float.h — >|  
+|`_clear87`|\<float.h>|  
+|`_clearfp`|\<float.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -117,5 +120,5 @@ Status: 80000 - denormal
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [_control87 —, _controlfp —, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
+ [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
  [_status87, _statusfp, _statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)

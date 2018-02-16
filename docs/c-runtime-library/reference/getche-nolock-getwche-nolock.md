@@ -1,12 +1,13 @@
 ---
-title: "_getche_nolock —, _getwche_nolock — | Dokumentacja firmy Microsoft"
+title: _getche_nolock, _getwche_nolock | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _getche_nolock
 - _getwche_nolock
@@ -29,7 +30,8 @@ f1_keywords:
 - getche_nolock
 - getwche_nolock
 - gettche_nolock
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - characters, getting from console
 - _gettche_nolock function
@@ -40,22 +42,23 @@ helpviewer_keywords:
 - _getwche_nolock function
 - gettche_nolock function
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fa9406f88ef7cc0a4b1e3079946f3ea05372eddb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8e03f66143b6bb0c23fbb35bb95a0b88a30c6540
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getchenolock-getwchenolock"></a>_getche_nolock, _getwche_nolock
 Pobiera znak z poziomu konsoli z echa i bez blokowania wątku.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -68,7 +71,7 @@ wint_t _getwche_nolock( void );
  Zwraca znak do odczytu. Nie ma żadnych zwracany błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- `_getche_nolock`i `_getwche_nolock` są takie same jak `_getche` i `_getwche` z tą różnicą, że ich nie chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.  
+ `_getche_nolock` i `_getwche_nolock` są takie same jak `_getche` i `_getwche` z tą różnicą, że ich nie chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -80,7 +83,7 @@ wint_t _getwche_nolock( void );
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_getche_nolock`|\<conio.h >|  
+|`_getche_nolock`|\<conio.h>|  
 |`_getwche_nolock`|\<conio.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -123,6 +126,6 @@ Type 'Y' when finished typing keys: abcdefyY
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)   
- [_cgets —, _cgetws —](../../c-runtime-library/cgets-cgetws.md)   
+ [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)   
  [getc —, getwc —](../../c-runtime-library/reference/getc-getwc.md)   
  [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)

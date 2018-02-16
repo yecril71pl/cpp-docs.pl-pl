@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Obszary nazw i typ widoczności (C + +/ CX)
 Przestrzeń nazw jest standardowa konstrukcja C++ do grupowania typów, które ma funkcje związane z a zapobiegania konflikty nazw w bibliotekach. System typów środowiska wykonawczego systemu Windows wymaga, aby wszystkich publicznych typów środowiska wykonawczego systemu Windows, włącznie z zawartymi w swoim własnym kodem musi być zadeklarowana w przestrzeni nazw w zakresie przestrzeni nazw. Typy publiczne, które są zadeklarowane w zakresie globalnym lub zagnieżdżona w innej klasy spowoduje błąd w czasie kompilacji.  
@@ -41,9 +42,9 @@ Przestrzeń nazw jest standardowa konstrukcja C++ do grupowania typów, które m
 |private|Dostępność domyślne. Takie samo znaczenie jak standardu C++.|Nie|  
 |protected|Takie samo znaczenie jak standardu C++ w obrębie aplikacji lub składnika i w metadanych.|Tak|  
 |public|Takie samo znaczenie jak standardu C++.|Tak|  
-|`public protected`- lub -`protected public`|Chronione ułatwień dostępu w metadanych publicznych w ramach aplikacji lub składnika.|Tak|  
-|`protected private`lub`private protected`|Nie są widoczne w metadanych; chronione ułatwień dostępu w aplikacji lub składnika.||  
-|`internal`lub`private public`|Element członkowski nie jest publiczny w aplikacji lub składnik, ale nie jest widoczny w metadanych.|Nie|  
+|`public protected` - lub - `protected public`|Chronione ułatwień dostępu w metadanych publicznych w ramach aplikacji lub składnika.|Tak|  
+|`protected private` lub `private protected`|Nie są widoczne w metadanych; chronione ułatwień dostępu w aplikacji lub składnika.||  
+|`internal` lub `private public`|Element członkowski nie jest publiczny w aplikacji lub składnik, ale nie jest widoczny w metadanych.|Nie|  
   
 ## <a name="windows-runtime-namespaces"></a>Przestrzenie nazw środowiska wykonawczego systemu Windows  
  Interfejs API systemu Windows, który składa się z typów, które są zadeklarowane w oknach::\* przestrzeni nazw. Te obszary nazw są zarezerwowane dla systemu Windows i typów nie można dodać do nich. W **przeglądarki obiektów**, można wyświetlić te przestrzenie nazw w pliku plik windows.winmd. Dokumentacja tych obszarów nazw, zobacz [interfejsu API systemu Windows](http://msdn.microsoft.com/library/windows/apps/br211377).  

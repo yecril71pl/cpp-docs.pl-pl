@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fputc
 - fputwc
@@ -27,7 +28,8 @@ f1_keywords:
 - fputc
 - fputwc
 - _fputtc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - streams, writing characters to
 - fputtc function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 06f9fb737ac57ad04a661eb0e8438b3d557c0e3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: af95e4b11048ebda50ac4d73fc87b6b67903494b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 Zapisuje znak w strumieniu.  
@@ -77,7 +80,7 @@ wint_t fputwc(
 ## <a name="remarks"></a>Uwagi  
  Każda z tych funkcji zapisuje pojedynczy znak `c` do pliku w pozycji wskazywana przez wskaźnik położenia skojarzony plik (jeśli jest zdefiniowana) i przesuwa wskaźnik zależnie od potrzeb. W przypadku liczby `fputc` i `fputwc`, plik jest skojarzony z `stream`. Jeśli plik nie może obsłużyć żądań pozycjonowania lub został otwarty w trybie append, znak jest dołączany do końca strumienia.  
   
- Dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `fputc`aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
+ Dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `fputc` aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
   
  Wersje z `_nolock` sufiks są identyczne z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Aby uzyskać więcej informacji, zobacz[_fputc_nolock —, _fputwc_nolock —](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md).  
   
@@ -98,10 +101,10 @@ wint_t fputwc(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`fputc`|\<stdio.h >|  
+|`fputc`|\<stdio.h>|  
 |`fputwc`|\<stdio.h > lub \<wchar.h >|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+ Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Przykład  
   

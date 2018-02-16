@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcscmp
 - _mbscmp
@@ -32,7 +33,8 @@ f1_keywords:
 - strcmp
 - _tcscmp
 - _ftcscmp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcscmp function
 - strcmp function
@@ -45,22 +47,23 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f133027b2f1e7dfef494baeed9df6e9e56447889
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ced77db630f0cffede96192dbb9fc69ec0061db
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strcmp-wcscmp-mbscmp"></a>strcmp, wcscmp, _mbscmp
 Porównywanie ciągów.  
   
 > [!IMPORTANT]
->  `_mbscmp`Nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbscmp` Nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -88,14 +91,14 @@ int _mbscmp(
   
 |Wartość|Relacja ciąg1 do ciąg2|  
 |-----------|----------------------------------------|  
-|< 0|`string1`jest mniejsza niż`string2`|  
-|0|`string1`jest taka sama jak`string2`|  
-|> 0|`string1`jest większa niż`string2`|  
+|< 0|`string1` Jest mniejsza niż `string2`|  
+|0|`string1` jest taka sama jak `string2`|  
+|> 0|`string1` Jest większa niż `string2`|  
   
  Parametr błędu sprawdzania poprawności `_mbscmp` zwraca `_NLSCMPERROR`, która jest zdefiniowana w \<string.h > i \<mbstring.h >.  
   
 ## <a name="remarks"></a>Uwagi  
- `strcmp` Funkcja przeprowadza porównanie liczby porządkowej `string1` i `string2` i zwraca wartość wskazującą, ich relacji. `wcscmp`i `_mbscmp` są odpowiednio znaków dwubajtowych i znaków wielobajtowych wersje `strcmp`. `_mbscmp`rozpoznaje wielobajtowych sekwencji znaków zgodnie z bieżącej strony kodowe wielobajtowe i zwraca `_NLSCMPERROR` w przypadku wystąpienia błędu. Aby uzyskać więcej informacji, zobacz [stron kodowych](../../c-runtime-library/code-pages.md). Ponadto jeśli `string1` lub `string2` wskaźnika o wartości null, jest `_mbscmp` wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `_mbscmp` zwraca `_NLSCMPERROR` i ustawia `errno` do `EINVAL`. `strcmp`i `wcscmp` nie weryfikują ich parametrów. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
+ `strcmp` Funkcja przeprowadza porównanie liczby porządkowej `string1` i `string2` i zwraca wartość wskazującą, ich relacji. `wcscmp` i `_mbscmp` są odpowiednio znaków dwubajtowych i znaków wielobajtowych wersje `strcmp`. `_mbscmp` rozpoznaje wielobajtowych sekwencji znaków zgodnie z bieżącej strony kodowe wielobajtowe i zwraca `_NLSCMPERROR` w przypadku wystąpienia błędu. Aby uzyskać więcej informacji, zobacz [stron kodowych](../../c-runtime-library/code-pages.md). Ponadto jeśli `string1` lub `string2` wskaźnika o wartości null, jest `_mbscmp` wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `_mbscmp` zwraca `_NLSCMPERROR` i ustawia `errno` do `EINVAL`. `strcmp` i `wcscmp` nie weryfikują ich parametrów. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -103,7 +106,7 @@ int _mbscmp(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscmp`|`strcmp`|`_mbscmp`|`wcscmp`|  
   
- `strcmp` Funkcji różnią się od `strcoll` funkcje, w tym `strcmp` porównania są porządkowej i są niezależne od ustawień regionalnych. `strcoll`Porównanie ciągów lexicographically przy użyciu `LC_COLLATE` kategorii bieżące ustawienia regionalne. Aby uzyskać więcej informacji na temat `LC_COLLATE` kategorii, zobacz [setlocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md).  
+ `strcmp` Funkcji różnią się od `strcoll` funkcje, w tym `strcmp` porównania są porządkowej i są niezależne od ustawień regionalnych. `strcoll` Porównanie ciągów lexicographically przy użyciu `LC_COLLATE` kategorii bieżące ustawienia regionalne. Aby uzyskać więcej informacji na temat `LC_COLLATE` kategorii, zobacz [setlocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md).  
   
  Zgodnie z ustawieniami regionalnymi "C" kolejność znaków w zestawie znaków (zestaw znaków ASCII) jest taka sama jak kolejność lexicographic znaków. Jednak w innych lokalizacjach kolejność znaków w zestawie znaków mogą się różnić od lexicographic kolejności. Na przykład w niektórych lokalizacjach Europejskich, znak "" (wartość 0x61) znajduje się przed znak "ź" (wartość 0xE4) w zestawie znaków, ale przed znakiem "ź" zawiera znak "" lexicographically.  
   
@@ -115,9 +118,9 @@ int _mbscmp(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strcmp`|< string.h >|  
+|`strcmp`|<string.h>|  
 |`wcscmp`|< string.h > lub < wchar.h >|  
-|`_mbscmp`|\<mbstring.h >|  
+|`_mbscmp`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -176,11 +179,11 @@ Compare strings:
 ## <a name="see-also"></a>Zobacz też  
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
  [funkcji memcmp, wmemcmp —](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [_memicmp —, _memicmp_l —](../../c-runtime-library/reference/memicmp-memicmp-l.md)   
+ [_memicmp, _memicmp_l](../../c-runtime-library/reference/memicmp-memicmp-l.md)   
  [strcoll — funkcje](../../c-runtime-library/strcoll-functions.md)   
- [_stricmp —, _wcsicmp —, _mbsicmp —, _stricmp_l — _wcsicmp_l —, _mbsicmp_l —](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
  [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
  [strspn —, wcsspn —, _mbsspn — _mbsspn_l —](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
  [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

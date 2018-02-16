@@ -1,12 +1,13 @@
 ---
-title: vsscanf_s, vswscanf_s | Dokumentacja firmy Microsoft
+title: vsscanf_s, vswscanf_s | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - vswscanf_s
 - vsscanf_s
@@ -26,18 +27,20 @@ f1_keywords:
 - vsscanf_s
 - vswscanf_s
 - _vstscanf_s
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b041da3df2b745f1764440ed5afafa2cd7690b68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f956e20ecfd694666cacd1eae2071526cf71ec50
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
 Odczyty sformatowane dane z ciągu. Te wersje programu [vsscanf —, vswscanf —](../../c-runtime-library/reference/vsscanf-vswscanf.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -70,7 +73,7 @@ int vswscanf_s(
 ## <a name="return-value"></a>Wartość zwracana  
  Każda z tych funkcji zwraca liczbę pól, które pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane. Wartość zwracana jest `EOF` błędu lub po osiągnięciu końca ciągu przed pierwszym konwersji.  
   
- Jeśli `buffer` lub `format` jest `NULL` wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw `errno` do`EINVAL`  
+ Jeśli `buffer` lub `format` jest `NULL` wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw `errno` do `EINVAL`  
   
  Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -86,7 +89,7 @@ int vswscanf_s(
   
  `format` Formanty argument interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako `format` argument `scanf_s` funkcji. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.  
   
- `vswscanf_s`jest to wersja znaków dwubajtowych `vsscanf_s`; argumenty `vswscanf_s` są ciągami znaków dwubajtowych. `vsscanf_s`nie obsługuje wielobajtowe znaków szesnastkowych. `vswscanf_s`nie obsługuje szesnastkowych pełnej szerokości Unicode lub znaków "strefy zgodności". W przeciwnym razie `vswscanf_s` i `vsscanf_s` zachowują się tak samo.  
+ `vswscanf_s` jest to wersja znaków dwubajtowych `vsscanf_s`; argumenty `vswscanf_s` są ciągami znaków dwubajtowych. `vsscanf_s` nie obsługuje wielobajtowe znaków szesnastkowych. `vswscanf_s` nie obsługuje szesnastkowych pełnej szerokości Unicode lub znaków "strefy zgodności". W przeciwnym razie `vswscanf_s` i `vsscanf_s` zachowują się tak samo.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -98,7 +101,7 @@ int vswscanf_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`vsscanf_s`|\<stdio.h >|  
+|`vsscanf_s`|\<stdio.h>|  
 |`vswscanf_s`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -159,6 +162,6 @@ Real:     = 15.000000
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [sscanf —, _sscanf_l —, swscanf — _swscanf_l —](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sscanf_s —, _sscanf_s_l —, swscanf_s — _swscanf_s_l —](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vsscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md)

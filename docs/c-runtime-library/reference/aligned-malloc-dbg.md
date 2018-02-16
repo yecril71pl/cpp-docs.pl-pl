@@ -1,13 +1,15 @@
 ---
-title: "_aligned_malloc_dbg — | Dokumentacja firmy Microsoft"
+title: _aligned_malloc_dbg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _aligned_malloc_dbg
+ms.topic: reference
+apiname:
+- _aligned_malloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_malloc_dbg
 - aligned_malloc_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e90adb11a95f9256ffe1fe0ba4a0bd6a393a9440
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b035189a9ae07bc637a8ed92c0fd4a0d2847fa1e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 Przydziela pamięć na określonej granicy wyrównania z dodatkowym miejscem dla nagłówka debugowania i zastąpić buforów (tylko wersja do debugowania).  
@@ -54,27 +58,27 @@ void * _aligned_malloc_dbg(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`size`  
+ [in] `size`  
  Rozmiar żądanej alokacji pamięci.  
   
- [in]`alignment`  
+ [in] `alignment`  
  Wartość wyrównania, która musi być całkowitą potęgą liczby 2.  
   
- [in]`filename`  
+ [in] `filename`  
  Wskaźnik na nazwę pliku źródłowego, który zażądał operacji alokacji lub NULL.  
   
- [in]`linenumber`  
+ [in] `linenumber`  
  Numer wiersza w pliku źródłowym, gdzie zażądano operacji alokacji lub NULL.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do bloku pamięci, która została przydzielona lub `NULL` Jeśli działanie nie powiodło się.  
   
 ## <a name="remarks"></a>Uwagi  
- `_aligned_malloc_dbg`jest to wersja debugowania [_aligned_malloc —](../../c-runtime-library/reference/aligned-malloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_aligned_malloc_dbg` zostanie zmniejszona do wywołania `_aligned_malloc`. Zarówno `_aligned_malloc` i `_aligned_malloc_dbg` przydzielić bloku pamięci w stosie podstawowej, ale `_aligned_malloc_dbg` oferuje kilka funkcji debugowania: buforów po obu stronach użytkownika część bloku do testowania przecieki, i `filename` / `linenumber` informacji do ustalenia źródła żądań alokacji.  
+ `_aligned_malloc_dbg` jest to wersja debugowania [_aligned_malloc —](../../c-runtime-library/reference/aligned-malloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_aligned_malloc_dbg` zostanie zmniejszona do wywołania `_aligned_malloc`. Zarówno `_aligned_malloc` i `_aligned_malloc_dbg` przydzielić bloku pamięci w stosie podstawowej, ale `_aligned_malloc_dbg` oferuje kilka funkcji debugowania: buforów po obu stronach użytkownika część bloku do testowania przecieki, i `filename` / `linenumber` informacji do ustalenia źródła żądań alokacji.  
   
  `_aligned_malloc_dbg` alokuje blok pamięci z nieco większą ilością miejsca niż żądane `size`. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Gdy blok zostanie przydzielony, część użytkownika bloku jest wypełniania wartościami 0xCD a każdy bufor zastąpienia jest wypełniany wartościami 0xFD.  
   
- `_aligned_malloc_dbg`Ustawia `errno` do `ENOMEM` Jeśli alokacja pamięci nie powiedzie się lub jeśli przekracza ilość pamięci potrzebnej (łącznie z czynności wymienionych wcześniej) `_HEAP_MAXREQ`. Aby uzyskać informacji dotyczących tego i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). `_aligned_malloc_dbg` również sprawdza poprawność parametrów. Jeśli `alignment` nie jest potęgą liczby 2 lub `size` wynosi zero, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca `NULL` i ustawia `errno` do `EINVAL`.  
+ `_aligned_malloc_dbg` Ustawia `errno` do `ENOMEM` Jeśli alokacja pamięci nie powiedzie się lub jeśli przekracza ilość pamięci potrzebnej (łącznie z czynności wymienionych wcześniej) `_HEAP_MAXREQ`. Aby uzyskać informacji dotyczących tego i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). `_aligned_malloc_dbg` również sprawdza poprawność parametrów. Jeśli `alignment` nie jest potęgą liczby 2 lub `size` wynosi zero, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca `NULL` i ustawia `errno` do `EINVAL`.  
   
  Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Informacje o typach bloku alokacji i sposobu ich używania, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywoływanie funkcji sterty standardowe i jego wersji do debugowania w kompilację debugowania aplikacji, zobacz [debugowania wersji z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
@@ -82,7 +86,7 @@ void * _aligned_malloc_dbg(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_aligned_malloc_dbg`|\<crtdbg.h >|  
+|`_aligned_malloc_dbg`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

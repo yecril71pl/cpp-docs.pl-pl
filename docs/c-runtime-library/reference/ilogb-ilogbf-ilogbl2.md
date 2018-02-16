@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - ilogb
 - ilogbf
@@ -38,16 +38,17 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3ecf7f9bb38cdd844514001126a98bced67617e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8da5ba71b59f64c38a051fd8f31fa7bf58a4556d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 Pobiera liczbę całkowitą reprezentującą nieobciążonej wykładnik base-2 określonej wartości.  
@@ -78,7 +79,7 @@ int ilogbl(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`x`  
+ [in] `x`  
  Określona wartość.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -102,7 +103,7 @@ int ilogbl(
   
 |Procedura|Nagłówek C|Nagłówek C++|  
 |-------------|--------------|------------------|  
-|`ilogb`,                `ilogbf`,  `ilogbl`|\<Math.h >|\<cmath >|  
+|`ilogb`,                `ilogbf`,  `ilogbl`|\<math.h>|\<cmath>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

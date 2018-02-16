@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - ungetwc
 - ungetc
@@ -27,7 +28,8 @@ f1_keywords:
 - _ungettc
 - ungetwc
 - ungetc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ungetwc function
 - ungettc function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d266ea3d4be06994efcd7ceb8a155f8530b30ed5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d65453f1254e4c42658ef6f27d7c90d2ad0022b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 Wypycha znak wstecz do strumienia.  
@@ -81,7 +84,7 @@ wint_t ungetwc(
   
  Wyniki są nieprzewidywalne Jeśli `ungetc` jest wywoływana dwukrotnie bez położenia pliku operacji między dwoma wywołania odczytu lub. Po wywołaniu `fscanf`, wywołanie `ungetc` może zakończyć się niepowodzeniem, chyba że innej operacji odczytu (takie jak `getc`) ma zostać wykonane. Jest to spowodowane `fscanf` sam wywołuje `ungetc`.  
   
- `ungetwc`jest to wersja znaków dwubajtowych `ungetc`. Jednak na każdym pomyślnym `ungetwc` wywołanie przed tekstowe lub binarne strumienia wartości wskaźnika położenia pliku jest nieokreślony dopóki wszystkie znaki przesunięta zwroty są odczytywane lub odrzucone.  
+ `ungetwc` jest to wersja znaków dwubajtowych `ungetc`. Jednak na każdym pomyślnym `ungetwc` wywołanie przed tekstowe lub binarne strumienia wartości wskaźnika położenia pliku jest nieokreślony dopóki wszystkie znaki przesunięta zwroty są odczytywane lub odrzucone.  
   
  Te funkcje są wątkowo i Zablokuj poufne dane podczas wykonywania. Wersja — blokowanie dla [_ungetc_nolock —, _ungetwc_nolock —](../../c-runtime-library/reference/ungetc-nolock-ungetwc-nolock.md).  
   
@@ -95,10 +98,10 @@ wint_t ungetwc(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`ungetc`|\<stdio.h >|  
+|`ungetc`|\<stdio.h>|  
 |`ungetwc`|\<stdio.h > lub \<wchar.h >|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu `stdin`, `stdout`, i `stderr`, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Przykład  
   

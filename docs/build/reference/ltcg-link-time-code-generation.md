@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +14,25 @@ f1_keywords:
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 - /ltcg
 - VC.Project.VCCLCompilerTool.WholeProgramOptimization
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - link-time code generation in C++ linker
 - /LTCG linker option
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8f1abc58f0c36f37307e1d8053e4dd8a4cac06a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 69e67755ce5015cdd63ad36625e71380a303d2d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Generowanie łączonych kodów czasowych)
 ```  
@@ -61,29 +64,29 @@ ms.lasthandoff: 12/21/2017
   
  Z następującymi wyjątkami nie można dodać opcji konsolidatora do PGO kombinację opcję/LTCG i /USEPROFILE, które nie zostały określone w poprzedniej PGO inicjowania kombinacja opcji opcję/LTCG i opcji/genprofile:  
   
--   [/ BASE](../../build/reference/base-base-address.md)  
+-   [/BASE](../../build/reference/base-base-address.md)  
   
--   [/ FIXED](../../build/reference/fixed-fixed-base-address.md)  
+-   [/FIXED](../../build/reference/fixed-fixed-base-address.md)  
   
--   / LTCG  
+-   /LTCG  
   
--   [/ MAP](../../build/reference/map-generate-mapfile.md)  
+-   [/MAP](../../build/reference/map-generate-mapfile.md)  
   
--   [/ MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)  
+-   [/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)  
   
--   [/ NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)  
+-   [/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)  
   
 -   [/ OUT](../../build/reference/out-output-file-name.md)  
   
 -   [/ PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)  
   
--   [/ PDB](../../build/reference/pdb-use-program-database.md)  
+-   [/PDB](../../build/reference/pdb-use-program-database.md)  
   
--   [/ PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)  
+-   [/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)  
   
--   [/ STUB](../../build/reference/stub-ms-dos-stub-file-name.md)  
+-   [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)  
   
--   [/ VERBOSE](../../build/reference/verbose-print-progress-messages.md)  
+-   [/VERBOSE](../../build/reference/verbose-print-progress-messages.md)  
   
  Wszelkie opcje konsolidatora, które zostały określone razem z opcję/LTCG i opcje opcji/genprofile zainicjować PGO nie trzeba określać podczas budowania przy użyciu opcję/LTCG i /USEPROFILE; są one niejawnego.  
   
@@ -134,11 +137,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="ltcg-and-msil-modules"></a>/ LTCG i modułów MSIL  
  Moduły, które są kompilowane przy użyciu [/GL](../../build/reference/gl-whole-program-optimization.md) i [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) mogą być używane jako dane wejściowe konsolidatora podczas **opcję/LTCG** jest określona.  
   
--   **/ LTCG** je zaakceptować, obiekt natywny, mieszanym plików natywną/zarządzaną obiektów (skompilowana przy użyciu **/CLR**) i pliki czysty obiektów (skompilowana przy użyciu **/CLR: pure**), i bezpieczne obiektu plików ( skompilowane przy użyciu **/CLR: Safe**). **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
+-   **/ LTCG** je zaakceptować, obiekt natywny, a mieszane natywną/zarządzaną obiekt plików (skompilowana przy użyciu **/CLR**). **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
   
--   **/ LTCG** może akceptować bezpiecznych modułów .netmodule, można utworzyć za pomocą **/CLR: Safe /LN** w programie Visual C++ i **/target: module** w dowolnym kompilatora .NET Visual Studio. . Netmodules utworzone za pomocą **/CLR** lub **/CLR: pure** nie są akceptowane przez **opcję/LTCG**.  
-  
--   /LTCG:PGI nie akceptuje skompilowana przy użyciu modułów macierzystych **/GL** i **/CLR**, lub czystej modułów (utworzone za pomocą **/CLR: pure**)  
+-   /LTCG:PGI nie akceptuje skompilowana przy użyciu modułów macierzystych **/GL** i   **/CLR**  
   
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   

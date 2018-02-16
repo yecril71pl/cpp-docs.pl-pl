@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtSetBreakAlloc
+ms.topic: reference
+apiname:
+- _CrtSetBreakAlloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70262673935e67fc6ee868a400fd57358a31547a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ed018b75c9feb7b06cf572d9e60d0a92248b6e47
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 Ustawia określony obiekt numer zamówienia alokacji (tylko wersja do debugowania) punkt przerwania.  
@@ -59,7 +63,7 @@ Ustawia określony obiekt numer zamówienia alokacji (tylko wersja do debugowani
  Zwraca obiekt alokacji kolejności poprzednich mająca ustawić punkt przerwania.  
   
 ## <a name="remarks"></a>Uwagi  
- `_CrtSetBreakAlloc`umożliwia aplikacji przeprowadzenie wykrywanie przecieków pamięci podziału w określonym punkcie przydziału pamięci i śledzenia powrót do początku żądania. Funkcja używa o liczbie porządkowej alokacji obiektu sekwencyjne przypisane do blok pamięci, gdy została przydzielona w stosie. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań `_CrtSetBreakAlloc` są usuwane podczas przetwarzania wstępnego.  
+ `_CrtSetBreakAlloc` umożliwia aplikacji przeprowadzenie wykrywanie przecieków pamięci podziału w określonym punkcie przydziału pamięci i śledzenia powrót do początku żądania. Funkcja używa o liczbie porządkowej alokacji obiektu sekwencyjne przypisane do blok pamięci, gdy została przydzielona w stosie. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań `_CrtSetBreakAlloc` są usuwane podczas przetwarzania wstępnego.  
   
  Numer zamówienia alokacji obiekt jest przechowywany w *lRequest* pole **_crtmemblockheader —** struktury zdefiniowane w Crtdbg.h. Gdy informacje o blok pamięci został zgłoszony przez jedną z funkcji zrzutu debugowania, ta liczba jest ujęta w nawiasy klamrowe, takich jak {36}.  
   
@@ -69,7 +73,7 @@ Ustawia określony obiekt numer zamówienia alokacji (tylko wersja do debugowani
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_CrtSetBreakAlloc`|\<crtdbg.h >|  
+|`_CrtSetBreakAlloc`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

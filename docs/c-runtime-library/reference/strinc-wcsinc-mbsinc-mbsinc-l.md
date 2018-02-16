@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsinc
 - _wcsinc
@@ -34,7 +35,8 @@ f1_keywords:
 - wcsinc
 - mbsinc
 - _mbsinc_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbsinc function
 - wcsinc function
@@ -47,22 +49,23 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4fcda1d1c288e6fe8d6a3dfafea287e79ab6738f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 08e8d0e25b7d685856ccf4af068408bf0ac495cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 Przesuwa wskaźnik ciągu o jeden znak.  
   
 > [!IMPORTANT]
->  `_mbsinc`i `_mbsinc_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsinc` i `_mbsinc_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -96,9 +99,9 @@ unsigned char *_mbsinc_l(
  Każdy z tych procedur zwraca wskaźnik do znaku poniższą `current`.  
   
 ## <a name="remarks"></a>Uwagi  
- `_mbsinc` Funkcja zwraca wskaźnik do pierwszego bajtu znaków wielobajtowych, poniższą `current`. `_mbsinc`rozpoznaje wielobajtowych sekwencji znaków zgodnie z [strony kodowe wielobajtowe](../../c-runtime-library/code-pages.md) który jest aktualnie w użyciu; `_mbsinc_l` jest identyczny z tą różnicą, że parametr ustawień regionalnych, który jest przekazywany w zamian używa. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ `_mbsinc` Funkcja zwraca wskaźnik do pierwszego bajtu znaków wielobajtowych, poniższą `current`. `_mbsinc` rozpoznaje wielobajtowych sekwencji znaków zgodnie z [strony kodowe wielobajtowe](../../c-runtime-library/code-pages.md) który jest aktualnie w użyciu; `_mbsinc_l` jest identyczny z tą różnicą, że parametr ustawień regionalnych, który jest przekazywany w zamian używa. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
- Funkcja zwykłego tekstu `_tcsinc`, zdefiniowanych w pliku Tchar.h, mapy `_mbsinc` Jeśli `_MBCS` została zdefiniowana, lub do `_wcsinc` Jeśli `_UNICODE` została zdefiniowana. W przeciwnym razie `_tcsinc` mapuje `_strinc`. `_strinc`i `_wcsinc` pojedynczych bajtów znaków i znaków dwubajtowych wersji `_mbsinc`. `_strinc`i `_wcsinc` są dostępne tylko dla tego mapowania i nie powinna być używana w inny sposób. Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania zwykłego tekstu](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania zwykłego tekstu](../../c-runtime-library/generic-text-mappings.md).  
+ Funkcja zwykłego tekstu `_tcsinc`, zdefiniowanych w pliku Tchar.h, mapy `_mbsinc` Jeśli `_MBCS` została zdefiniowana, lub do `_wcsinc` Jeśli `_UNICODE` została zdefiniowana. W przeciwnym razie `_tcsinc` mapuje `_strinc`. `_strinc` i `_wcsinc` pojedynczych bajtów znaków i znaków dwubajtowych wersji `_mbsinc`. `_strinc` i `_wcsinc` są dostępne tylko dla tego mapowania i nie powinna być używana w inny sposób. Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania zwykłego tekstu](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania zwykłego tekstu](../../c-runtime-library/generic-text-mappings.md).  
   
  Jeśli `current` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca `EINVAL` i ustawia `errno` do `EINVAL`.  
   
@@ -109,10 +112,10 @@ unsigned char *_mbsinc_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_mbsinc`|\<mbstring.h >|  
-|`_mbsinc_l`|\<mbstring.h >|  
-|`_strinc`|\<tchar.h >|  
-|`_wcsinc`|\<tchar.h >|  
+|`_mbsinc`|\<mbstring.h>|  
+|`_mbsinc_l`|\<mbstring.h>|  
+|`_strinc`|\<tchar.h>|  
+|`_wcsinc`|\<tchar.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

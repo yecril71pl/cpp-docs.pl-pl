@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _futime64
 - _futime32
@@ -29,7 +30,8 @@ f1_keywords:
 - _futime
 - futime64
 - _futime64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _futime function
 - futime32 function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 204e87183a8df076da8443ee4547825948fb5a2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8caa47cd82f61c46ee10f03987bac9735ce506cc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
 Ustawia czas modyfikacji otwartego pliku.  
@@ -81,7 +84,7 @@ int _futime64(
  Zwraca 0 w przypadku powodzenia. Jeśli wystąpi błąd, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, funkcja zwraca wartość -1 i `errno` ma ustawioną wartość `EBADF`, wskazującą deskryptora nieprawidłowy plik lub `EINVAL`, wskazującą nieprawidłowy parametr.  
   
 ## <a name="remarks"></a>Uwagi  
- `_futime` Procedury ustawia datę modyfikacji i czas dostępu dla otwartego pliku skojarzone z `fd`. `_futime`jest taka sama jak [_utime —](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md), ale jej argument jest deskryptorów plików otwartego pliku, a nie nazwę pliku lub ścieżkę do pliku. `_utimbuf` Struktura zawiera pola, Nowa data modyfikacji i czas dostępu. Oba pola musi zawierać prawidłowe wartości. `_utimbuf32`i `_utimbuf64` są takie same jak `_utimbuf` odpowiednio z wyjątkiem użycie typów czasu 32-bitowe i 64-bitowych. `_futime`i `_utimbuf` Użyj typu czasu 64-bitowe i `_futime` jest identyczna w zachowaniu do `_futime64`. Aby wymusić stare zachowanie należy zdefiniować `_USE_32BIT_TIME_T`. Powoduje to wykonanie tej `_futime` być identyczne w zachowaniu do `_futime32` i powoduje, że `_utimbuf` struktury w celu używania typu czasu 32-bitowy, dzięki czemu odpowiadające `__utimbuf32`.  
+ `_futime` Procedury ustawia datę modyfikacji i czas dostępu dla otwartego pliku skojarzone z `fd`. `_futime` jest taka sama jak [_utime —](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md), ale jej argument jest deskryptorów plików otwartego pliku, a nie nazwę pliku lub ścieżkę do pliku. `_utimbuf` Struktura zawiera pola, Nowa data modyfikacji i czas dostępu. Oba pola musi zawierać prawidłowe wartości. `_utimbuf32` i `_utimbuf64` są takie same jak `_utimbuf` odpowiednio z wyjątkiem użycie typów czasu 32-bitowe i 64-bitowych. `_futime` i `_utimbuf` Użyj typu czasu 64-bitowe i `_futime` jest identyczna w zachowaniu do `_futime64`. Aby wymusić stare zachowanie należy zdefiniować `_USE_32BIT_TIME_T`. Powoduje to wykonanie tej `_futime` być identyczne w zachowaniu do `_futime32` i powoduje, że `_utimbuf` struktury w celu używania typu czasu 32-bitowy, dzięki czemu odpowiadające `__utimbuf32`.  
   
  `_futime64`, który korzysta z `__utimbuf64` struktury, można odczytywać i modyfikować daty pliku za pośrednictwem 23:59:59 31 grudnia 3000 UTC; podczas gdy wywołanie `_futime32` zakończy się niepowodzeniem, jeśli data w pliku jest późniejsza niż 23:59:59 18 stycznia 2038 r., UTC. Północy, 1 stycznia 1970 jest dolna granica zakresu dat dla tych funkcji.  
   
@@ -89,9 +92,9 @@ int _futime64(
   
 |Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|  
 |--------------|---------------------|---------------------|  
-|`_futime`|\<sys/utime.h >|\<errno.h >|  
-|`_futime32`|\<sys/utime.h >|\<errno.h >|  
-|`_futime64`|\<sys/utime.h >|\<errno.h >|  
+|`_futime`|\<sys/utime.h>|\<errno.h>|  
+|`_futime32`|\<sys/utime.h>|\<errno.h>|  
+|`_futime64`|\<sys/utime.h>|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

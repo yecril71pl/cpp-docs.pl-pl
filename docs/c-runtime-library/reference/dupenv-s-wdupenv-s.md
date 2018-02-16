@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _dupenv_s
 - _wdupenv_s
@@ -30,7 +31,8 @@ f1_keywords:
 - dupenv_s
 - _tdupenv_s
 - _wdupenv_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _dupenv_s function
 - _tdupenv_s function
@@ -40,22 +42,23 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e17ff0c468f3b99a1c97114c93ea64ecfa9499e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ec5e7b80d7d3ff2c7f67ec66e4e3e454ea3f5aa
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
 Pobiera wartość po bieżącym środowisku.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -99,11 +102,11 @@ errno_t _wdupenv_s(
   
  Jeśli nie jesteś zainteresowany rozmiar buforu można przekazać `NULL` dla `numberOfElements`.  
   
- `_dupenv_s`nie jest uwzględniana wielkość liter w systemie operacyjnym Windows. `_dupenv_s`używa kopii środowiska wskazywanej przez zmienną globalne `_environ` można uzyskiwać dostęp do środowiska. Zobacz uwagi w [getenv_s —, _wgetenv_s —](../../c-runtime-library/reference/getenv-s-wgetenv-s.md) omówienie `_environ`.  
+ `_dupenv_s` nie jest uwzględniana wielkość liter w systemie operacyjnym Windows. `_dupenv_s` używa kopii środowiska wskazywanej przez zmienną globalne `_environ` można uzyskiwać dostęp do środowiska. Zobacz uwagi w [getenv_s —, _wgetenv_s —](../../c-runtime-library/reference/getenv-s-wgetenv-s.md) omówienie `_environ`.  
   
  Wartość w `buffer` jest kopią wartości zmiennej środowiskowej; modyfikowania jej nie ma wpływu na środowisko. Użyj [_putenv_s —, _wputenv_s —](../../c-runtime-library/reference/putenv-s-wputenv-s.md) funkcji, aby zmodyfikować wartość zmiennej środowiskowej.  
   
- `_wdupenv_s`jest to wersja znaków dwubajtowych `_dupenv_s`; argumentów `_wdupenv_s` są ciągami znaków dwubajtowych. `_wenviron` — Zmienna globalna jest wersja znaków dwubajtowych `_environ`. Zobacz uwagi w [getenv_s —, _wgetenv_s —](../../c-runtime-library/reference/getenv-s-wgetenv-s.md) Aby uzyskać więcej informacji na temat `_wenviron`.  
+ `_wdupenv_s` jest to wersja znaków dwubajtowych `_dupenv_s`; argumentów `_wdupenv_s` są ciągami znaków dwubajtowych. `_wenviron` — Zmienna globalna jest wersja znaków dwubajtowych `_environ`. Zobacz uwagi w [getenv_s —, _wgetenv_s —](../../c-runtime-library/reference/getenv-s-wgetenv-s.md) Aby uzyskać więcej informacji na temat `_wenviron`.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -115,7 +118,7 @@ errno_t _wdupenv_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_dupenv_s`|\<stdlib.h >|  
+|`_dupenv_s`|\<stdlib.h>|  
 |`_wdupenv_s`|\<stdlib.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -151,6 +154,6 @@ nonexistentvariable = (null)
 ## <a name="see-also"></a>Zobacz też  
  [Proces i kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)   
  [Stałe środowiska](../../c-runtime-library/environmental-constants.md)   
- [_dupenv_s_dbg —, _wdupenv_s_dbg —](../../c-runtime-library/reference/dupenv-s-dbg-wdupenv-s-dbg.md)   
- [getenv_s —, _wgetenv_s —](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
+ [_dupenv_s_dbg, _wdupenv_s_dbg](../../c-runtime-library/reference/dupenv-s-dbg-wdupenv-s-dbg.md)   
+ [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
  [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)

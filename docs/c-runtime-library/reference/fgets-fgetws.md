@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fgets
 - fgetws
@@ -27,7 +28,8 @@ f1_keywords:
 - _fgetts
 - fgetws
 - fgets
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fgetts function
 - streams, getting strings from
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70cccdc8dea6abb032fbf6170ca84ad866ddd491
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9b09d22df6da016ed2cc751082d17ee7e2f68786
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 Pobierz ciąg ze strumienia.  
@@ -76,16 +79,16 @@ wchar_t *fgetws(
  Wskaźnik do `FILE` struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Każdy z tych funkcji zwraca `str`. `NULL`zwracany jest błąd lub warunek końca pliku. Użyj `feof` lub `ferror` do określenia, czy wystąpił błąd. Jeśli `str` lub `stream` jest wskaźnika o wartości null, lub `n` jest mniejsza lub równa zero, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i funkcja zwraca `NULL`.  
+ Każdy z tych funkcji zwraca `str`. `NULL` zwracany jest błąd lub warunek końca pliku. Użyj `feof` lub `ferror` do określenia, czy wystąpił błąd. Jeśli `str` lub `stream` jest wskaźnika o wartości null, lub `n` jest mniejsza lub równa zero, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i funkcja zwraca `NULL`.  
   
  Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.  
   
 ## <a name="remarks"></a>Uwagi  
- `fgets` Funkcja odczytuje ciągu wejściowego `stream` argumentu i przechowuje ją w `str`. `fgets`odczytuje znaków z bieżącego położenia strumienia, w tym pierwszym znakiem nowego wiersza, w celu strumienia lub dopóki liczba znaków do odczytu jest równa `n` - 1, zależnie od zostanie osiągnięty jako pierwszy. Wynik przechowywany w `str` jest dołączany znakiem null. Znak nowego wiersza, jeśli do odczytu, jest uwzględniona w parametrach.  
+ `fgets` Funkcja odczytuje ciągu wejściowego `stream` argumentu i przechowuje ją w `str`. `fgets` odczytuje znaków z bieżącego położenia strumienia, w tym pierwszym znakiem nowego wiersza, w celu strumienia lub dopóki liczba znaków do odczytu jest równa `n` - 1, zależnie od zostanie osiągnięty jako pierwszy. Wynik przechowywany w `str` jest dołączany znakiem null. Znak nowego wiersza, jeśli do odczytu, jest uwzględniona w parametrach.  
   
- `fgetws`jest to wersja znaków dwubajtowych `fgets`.  
+ `fgetws` jest to wersja znaków dwubajtowych `fgets`.  
   
- `fgetws`odczytuje argument znaków dwubajtowych `str` jako ciąg znaków wielobajtowych lub ciągiem znaków dwubajtowych zgodnie z czy `stream` odpowiednio jest otwarty w trybie tekstu lub w trybie binarnym. Aby uzyskać więcej informacji na temat używania trybach tekstowym i binarnym Unicode i wielobajtowe strumienia I/O zobacz [tekstu i we/wy binarne trybu pliku](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [we/wy strumienia w Unicode w trybach tekstowym i binarnym](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
+ `fgetws` odczytuje argument znaków dwubajtowych `str` jako ciąg znaków wielobajtowych lub ciągiem znaków dwubajtowych zgodnie z czy `stream` odpowiednio jest otwarty w trybie tekstu lub w trybie binarnym. Aby uzyskać więcej informacji na temat używania trybach tekstowym i binarnym Unicode i wielobajtowe strumienia I/O zobacz [tekstu i we/wy binarne trybu pliku](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [we/wy strumienia w Unicode w trybach tekstowym i binarnym](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -97,7 +100,7 @@ wchar_t *fgetws(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`fgets`|\<stdio.h >|  
+|`fgets`|\<stdio.h>|  
 |`fgetws`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -144,5 +147,5 @@ Line one.
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [fputs —, fputws —](../../c-runtime-library/reference/fputs-fputws.md)   
- [pobiera _getws —](../../c-runtime-library/gets-getws.md)   
+ [gets, _getws](../../c-runtime-library/gets-getws.md)   
  [puts, _putws](../../c-runtime-library/reference/puts-putws.md)

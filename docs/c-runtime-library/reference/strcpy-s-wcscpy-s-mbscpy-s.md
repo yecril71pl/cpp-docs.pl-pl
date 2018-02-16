@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcscpy_s
 - _mbscpy_s
@@ -30,7 +31,8 @@ f1_keywords:
 - _mbscpy_s
 - _tcscpy_s
 - wcscpy_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
@@ -40,22 +42,23 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7a07af46cda1e3ce9c567b12bd83e2d3fd055a38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cdb37fe985340d2126cfc6f8db90cc236a2d5870
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 Kopiuje ciąg. Te wersje programu [strcpy wcscpy —, _mbscpy —](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbscpy_s`Nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbscpy_s` Nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -107,7 +110,7 @@ errno_t _mbscpy_s(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|`strDestination`|`numberOfElements`|`strSource`|Wartość zwracana|Zawartość`strDestination`|  
+|`strDestination`|`numberOfElements`|`strSource`|Wartość zwracana|Zawartość `strDestination`|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
 |`NULL`|wszystkie|wszystkie|`EINVAL`|Nie zmodyfikowano|  
 |wszystkie|wszystkie|`NULL`|`EINVAL`|`strDestination`zestawu [0] 0|  
@@ -116,7 +119,7 @@ errno_t _mbscpy_s(
 ## <a name="remarks"></a>Uwagi  
  `strcpy_s` Funkcja kopiuje zawartość adresu `strSource`, w tym znak końcowy null do lokalizacji określonej przez `strDestination`. Ciąg docelowego musi być wystarczająco duży, aby pomieścić ciąg źródłowy i jej znak końcowy null. Zachowanie `strcpy_s` zdefiniowano nakładania się ciągów źródłowych i docelowych.  
   
- `wcscpy_s`jest to wersja znaków dwubajtowych `strcpy_s`, i `_mbscpy_s` jest wersja znaków wielobajtowych. Argumenty i zwracana wartość `wcscpy_s` są znaków dwubajtowych ciągi; tych `_mbscpy_s` są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
+ `wcscpy_s` jest to wersja znaków dwubajtowych `strcpy_s`, i `_mbscpy_s` jest wersja znaków wielobajtowych. Argumenty i zwracana wartość `wcscpy_s` są znaków dwubajtowych ciągi; tych `_mbscpy_s` są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
   
  Jeśli `strDestination` lub `strSource` jest wskaźnika o wartości null, lub jeśli ciągu docelowego jest zbyt mały, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają `EINVAL` i ustaw `errno` do `EINVAL` podczas `strDestination` lub `strSource` jest wskaźnika o wartości null i zwracają `ERANGE` i ustaw `errno` do `ERANGE` po ciągu docelowego jest za mały.  
   
@@ -136,9 +139,9 @@ errno_t _mbscpy_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strcpy_s`|\<String.h >|  
+|`strcpy_s`|\<string.h>|  
 |`wcscpy_s`|\<String.h > lub \<wchar.h >|  
-|`_mbscpy_s`|\<mbstring.h >|  
+|`_mbscpy_s`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -179,7 +182,7 @@ String = Hello world from strcpy_s and strcat_s!
  [strcmp —, wcscmp —, _mbscmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strncat_s —, _strncat_s_l, wcsncat_s —, _wcsncat_s_l _mbsncat_s —, _mbsncat_s_l —](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)   
  [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy_s — _strncpy_s_l —, wcsncpy_s —, _wcsncpy_s_l —, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
- [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

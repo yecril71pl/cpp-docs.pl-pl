@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - lrint
 - lrintl
@@ -42,7 +42,8 @@ f1_keywords:
 - math/llrint
 - math/llrintf
 - math/llrintl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lrint function
 - lrintf function
@@ -51,16 +52,17 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2774b22f0b108349d90abc113430f1a573d2cbb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 80a331618df913040ea145346299ebd30509ce8e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 Zaokrągla określona wartość zmiennoprzecinkowa do najbliższej wartości całkowite, przy użyciu bieżącego trybu zaokrąglania i kierunku.  
@@ -111,7 +113,7 @@ long long int llrintl(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`x`  
+ [in] `x`  
  wartość do zaokrąglenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -119,7 +121,7 @@ long long int llrintl(
   
 |Problem|Zwraca|  
 |-----------|------------|  
-|`x`znajduje się poza zakresem typu zwracanego<br /><br /> `x` = ±∞<br /><br /> `x`= NaN|Podnosi FE_INVALID i zwraca wartość zero (0).|  
+|`x` znajduje się poza zakresem typu zwracanego<br /><br /> `x` = ±∞<br /><br /> `x` = NaN|Podnosi FE_INVALID i zwraca wartość zero (0).|  
   
 ## <a name="remarks"></a>Uwagi  
  Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia `lrint` i `llrint` , które wymagają zmiennoprzecinkowych i podwójnej długości. W programie C `lrint` i `llrint` zawsze pobierają wartość o podwójnej precyzji.  
@@ -132,7 +134,7 @@ long long int llrintl(
   
 |Funkcja|Nagłówek C|Nagłówek C++|  
 |--------------|--------------|------------------|  
-|`lrint`,                `lrintf`, `lrintl`, `llrint`, `llrintf`, `llrintl`|\<Math.h >|\<cmath >|  
+|`lrint`,                `lrintf`, `lrintl`, `llrint`, `llrintf`, `llrintl`|\<math.h>|\<cmath>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

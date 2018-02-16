@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtSetDebugFillThreshold
+ms.topic: reference
+apiname:
+- _CrtSetDebugFillThreshold
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,7 +25,8 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - debug, buffer-filling behavior
 - CrtSetDebugFillThreshold function
@@ -31,16 +34,17 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0d8fcbf7f354def49056c1e519e910edccde56cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: afe5be250e573bfc7995c88ee2a9bb3de6ee9ff4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 Pobiera lub modyfikuje próg kontrolowanie zachowania wypełnianiem buforów w funkcje debugowania.  
@@ -93,7 +97,7 @@ size_t _CrtSetDebugFillThreshold(
   
 -   [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)  
   
--   [strerror_s —, _strerror_s —, _wcserror_s —, \__wcserror_s —](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)  
+-   [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)  
   
 -   [_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md)  
   
@@ -107,7 +111,7 @@ size_t _CrtSetDebugFillThreshold(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_CrtSetDebugFillThreshold`|\<crtdbg.h >|  
+|`_CrtSetDebugFillThreshold`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

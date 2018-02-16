@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9f613c20e0cab45a8eaa802c4c7ba0c6ac391357
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Kompilowania kodu C/C++ w wierszu polecenia
 
@@ -82,7 +85,7 @@ Pliki dodatkowe polecenia są dostępne do konfigurowania architektury określon
 >   
 > Plik vcvarsall.bat również różni się od poprzedniej wersji. Jeśli bieżącą wersję programu Visual C++ jest zainstalowany na komputerze, który ma także starszej wersji programu Visual C++, nie należy uruchamiać vcvarsall.bat lub innego pliku poleceń z różnych wersji w oknie wiersza polecenia.  
  
-Najprostszym sposobem, aby określić architektury określonej kompilacji w istniejących okno polecenia jest używany plik vcvarsall.bat. Vcvarsall.bat umożliwia ustawianie zmiennych środowiskowych, aby skonfigurować wiersz polecenia dla natywnej kompilacji 32-bitowy lub 64-bitowej lub cross kompilacji x86, x64 lub procesorów ARM; objęcie Sklepu Windows, platforma uniwersalna systemu Windows lub platformy Windows Desktop; Aby określić, które zestaw Windows SDK użyty. i określ wersję zestawu narzędzi platformy. Jeśli podano w nim żadnych argumentów vcvarsall.bat konfiguruje zmiennych środowiskowych dla przy użyciu bieżącego macierzystego kompilatora 32-bitowego dla x86 cele pulpitu systemu Windows. Jednak można go skonfigurować dowolne natywnego lub między narzędzia kompilatora. Jeśli określisz konfiguracji kompilatora, która nie jest zainstalowany lub nie jest dostępna w kompilacji architektury komputera, zostanie wyświetlony komunikat o błędzie. W poniższej tabeli zamieszczono obsługiwana architektura argumentów:  
+Najprostszym sposobem, aby określić architektury określonej kompilacji w istniejących okno polecenia jest używany plik vcvarsall.bat. Vcvarsall.bat umożliwia ustawianie zmiennych środowiskowych, aby skonfigurować wiersz polecenia dla natywnej kompilacji 32-bitowy lub 64-bitowej lub cross kompilacji x86, x64 lub procesorów ARM; objęcie Microsoft Store, platformy uniwersalnej systemu Windows lub platformy Windows Desktop; Aby określić, które zestaw Windows SDK użyty. i określ wersję zestawu narzędzi platformy. Jeśli podano w nim żadnych argumentów vcvarsall.bat konfiguruje zmiennych środowiskowych dla przy użyciu bieżącego macierzystego kompilatora 32-bitowego dla x86 cele pulpitu systemu Windows. Jednak można go skonfigurować dowolne natywnego lub między narzędzia kompilatora. Jeśli określisz konfiguracji kompilatora, która nie jest zainstalowany lub nie jest dostępna w kompilacji architektury komputera, zostanie wyświetlony komunikat o błędzie. W poniższej tabeli zamieszczono obsługiwana architektura argumentów:  
   
 |Argument architektura Vcvarsall.bat|Kompilatora|Architektura komputera hosta|Architektura danych wyjściowych kompilacji|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  

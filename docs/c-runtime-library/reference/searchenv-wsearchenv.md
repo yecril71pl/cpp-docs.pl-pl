@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _searchenv
 - _wsearchenv
@@ -29,7 +30,8 @@ f1_keywords:
 - wsearchenv
 - _searchenv
 - searchenv
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wsearchenv function
 - files [C++], finding
@@ -41,22 +43,23 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9996c9aad085beaef46d2a3188503eba582602d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6968d77e118b78b4b61f990e37047b9be7ee03c0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 Używa środowiska ścieżek, aby wyszukać plik. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_searchenv_s —, _wsearchenv_s —](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md).  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -102,7 +105,7 @@ void _wsearchenv(
   
  `pathname` Buforu powinien być co najmniej `_MAX_PATH` znaków, aby pomieścić długie nazwy ścieżki skonstruowane. W przeciwnym razie `_searchenv` może przepełnienie `pathname` buforu i spowodować nieoczekiwane zachowanie.  
   
- `_wsearchenv`jest to wersja znaków dwubajtowych `_searchenv`i argumenty `_wsearchenv` są ciągami znaków dwubajtowych. `_wsearchenv`i `_searchenv` zachowują się tak samo w przeciwnym razie wartość.  
+ `_wsearchenv` jest to wersja znaków dwubajtowych `_searchenv`i argumenty `_wsearchenv` są ciągami znaków dwubajtowych. `_wsearchenv` i `_searchenv` zachowują się tak samo w przeciwnym razie wartość.  
   
  Jeśli `filename` jest pustym ciągiem, te funkcje zwracają `ENOENT`.  
   
@@ -122,7 +125,7 @@ void _wsearchenv(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_searchenv`|\<stdlib.h >|  
+|`_searchenv`|\<stdlib.h>|  
 |`_wsearchenv`|\<stdlib.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

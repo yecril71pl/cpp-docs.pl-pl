@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wtempnam
 - _wtmpnam
@@ -32,7 +33,8 @@ f1_keywords:
 - tmpnam
 - _wtempnam
 - _tempnam
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wtempnam function
 - file names [C++], creating temporary
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9708c23fc76095a591a2eceafcb875ce173383ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 29b0f7f645bd23c04e9d9f31dc914e29f7a048cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 Generowania nazw, który służy do tworzenia plików tymczasowych. Niektóre z tych funkcji bezpieczniejsze wersje są dostępne; zobacz [tmpnam_s —, _wtmpnam_s —](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md).  
@@ -94,14 +97,14 @@ wchar_t *_wtmpnam(
  Każda z tych funkcji zwraca wskaźnik do Nazwa wygenerowana lub `NULL` w przypadku awarii. Błąd może wystąpić przy próbie więcej niż `TMP_MAX` (zobacz stdio —. H) wywołania z `tmpnam` lub jeśli używasz `_tempnam` i ma nieprawidłową nazwę katalogu określonym w zmiennej środowiskowej TMP i w `dir` parametru.  
   
 > [!NOTE]
->  Wskaźniki zwrócony przez `tmpnam` i `_wtmpnam` wskaż bufory statyczne wewnętrzne. [bezpłatne](../../c-runtime-library/reference/free.md) powinna być wywoływana nie można cofnąć alokacji tych wskaźników. `free`musi być wywoływany dla wskaźników przydzielonej przez `_tempnam` i `_wtempnam`.  
+>  Wskaźniki zwrócony przez `tmpnam` i `_wtmpnam` wskaż bufory statyczne wewnętrzne. [bezpłatne](../../c-runtime-library/reference/free.md) powinna być wywoływana nie można cofnąć alokacji tych wskaźników. `free` musi być wywoływany dla wskaźników przydzielonej przez `_tempnam` i `_wtempnam`.  
   
 ## <a name="remarks"></a>Uwagi  
- Każda z tych funkcji zwraca nazwę pliku, który obecnie nie istnieje. `tmpnam`Zwraca nazwę unikatową w bieżącym katalogu roboczym i `_tempnam` można wygenerować unikatowej nazwy w katalogu innym niż bieżący. Należy zauważyć, że jeśli nazwa pliku jest pre oczekującego ukośnika odwrotnego i nie informacji ścieżki, takich jak \fname21, oznacza to, że nazwa jest nieprawidłowa dla bieżącego katalogu roboczego.  
+ Każda z tych funkcji zwraca nazwę pliku, który obecnie nie istnieje. `tmpnam` Zwraca nazwę unikatową w bieżącym katalogu roboczym i `_tempnam` można wygenerować unikatowej nazwy w katalogu innym niż bieżący. Należy zauważyć, że jeśli nazwa pliku jest pre oczekującego ukośnika odwrotnego i nie informacji ścieżki, takich jak \fname21, oznacza to, że nazwa jest nieprawidłowa dla bieżącego katalogu roboczego.  
   
  Aby uzyskać `tmpnam`, można przechowywać tej nazwy pliku wygenerowanego w `str`. Jeśli `str` jest `NULL`, następnie `tmpnam` pozostawia wynik w statycznej buforu wewnętrznego. W związku z tym kolejnych wywołań zniszczyć tej wartości. Nazwa wygenerowana przez `tmpnam` składa się nazwy pliku generowanych przez program i po pierwszym wywołaniu `tmpnam`, rozszerzenie pliku numerów sekwencyjnych w podstawowej 32 (.1 .vvu, gdy `TMP_MAX` w stdio —. H jest 32 767 znaków).  
   
- `_tempnam`generuje unikatową nazwę pliku dla katalogu wybierany przez następujące reguły:  
+ `_tempnam` generuje unikatową nazwę pliku dla katalogu wybierany przez następujące reguły:  
   
 -   Jeśli zmienna środowiskowa TMP jest zdefiniowane i ustawić prawidłową nazwę katalogu, zostanie wygenerowany unikatowe nazwy plików dla katalogu określonego przez TMP.  
   
@@ -109,9 +112,9 @@ wchar_t *_wtmpnam(
   
 -   Jeśli nie zdefiniowano zmiennej środowiskowej TMP lub jeśli jest ustawiona na nazwę katalogu, który nie istnieje, a `dir` jest `NULL` lub ustaw nazwę katalogu, który nie istnieje, `_tempnam` będzie używany bieżący katalog roboczy gen szybkość unikatowe nazwy. Obecnie Jeśli obie TMP i `dir` określ nazwy katalogów, które nie istnieją, `_tempnam` wywołanie funkcji zakończy się niepowodzeniem.  
   
- Nazwa zwrócony przez `_tempnam` jest złączeniem `prefix` i numerem sekwencyjnym zostaną połączone, aby utworzyć unikatową nazwę pliku dla określonego katalogu. `_tempnam`generuje nazwy plików, które mają bez rozszerzenia. `_tempnam`używa [— funkcja malloc](../../c-runtime-library/reference/malloc.md) Aby przydzielić miejsce dla nazwy pliku; program jest odpowiedzialny za zwalnianie to miejsce, gdy nie jest już potrzebne.  
+ Nazwa zwrócony przez `_tempnam` jest złączeniem `prefix` i numerem sekwencyjnym zostaną połączone, aby utworzyć unikatową nazwę pliku dla określonego katalogu. `_tempnam` generuje nazwy plików, które mają bez rozszerzenia. `_tempnam` używa [— funkcja malloc](../../c-runtime-library/reference/malloc.md) Aby przydzielić miejsce dla nazwy pliku; program jest odpowiedzialny za zwalnianie to miejsce, gdy nie jest już potrzebne.  
   
- `_tempnam`i `tmpnam` dojście znaków wielobajtowych argumenty ciągu zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie ze strony kodowej OEM uzyskane automatycznie z systemu operacyjnego. `_wtempnam`jest to wersja znaków dwubajtowych `_tempnam`; argumentów i wartości zwracanej przez `_wtempnam` są ciągami znaków dwubajtowych. `_wtempnam`i `_tempnam` zachowują się tak samo, z wyjątkiem `_wtempnam` nie obsługuje ciągów znaków wielobajtowych. `_wtmpnam`jest to wersja znaków dwubajtowych `tmpnam`; argumentów i wartości `_wtmpnam` są ciągami znaków dwubajtowych. `_wtmpnam`i `tmpnam` zachowują się tak samo, z wyjątkiem `_wtmpnam` nie obsługuje ciągów znaków wielobajtowych.  
+ `_tempnam` i `tmpnam` dojście znaków wielobajtowych argumenty ciągu zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie ze strony kodowej OEM uzyskane automatycznie z systemu operacyjnego. `_wtempnam` jest to wersja znaków dwubajtowych `_tempnam`; argumentów i wartości zwracanej przez `_wtempnam` są ciągami znaków dwubajtowych. `_wtempnam` i `_tempnam` zachowują się tak samo, z wyjątkiem `_wtempnam` nie obsługuje ciągów znaków wielobajtowych. `_wtmpnam` jest to wersja znaków dwubajtowych `tmpnam`; argumentów i wartości `_wtmpnam` są ciągami znaków dwubajtowych. `_wtmpnam` i `tmpnam` zachowują się tak samo, z wyjątkiem `_wtmpnam` nie obsługuje ciągów znaków wielobajtowych.  
   
  Jeśli `_DEBUG` i `_CRTDBG_MAP_ALLOC` są zdefiniowane `_tempnam` i `_wtempnam` zastępuje wywołań [_tempnam_dbg — i _wtempnam_dbg —](../../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md).  
   
@@ -126,9 +129,9 @@ wchar_t *_wtmpnam(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_tempnam`|\<stdio.h >|  
+|`_tempnam`|\<stdio.h>|  
 |`_wtempnam`, `_wtmpnam`|\<stdio.h > lub \<wchar.h >|  
-|`tmpnam`|\<stdio.h >|  
+|`tmpnam`|\<stdio.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -180,8 +183,8 @@ C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [_getmbcp —](../../c-runtime-library/reference/getmbcp.md)   
- [— funkcja malloc](../../c-runtime-library/reference/malloc.md)   
- [_setmbcp —](../../c-runtime-library/reference/setmbcp.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [malloc](../../c-runtime-library/reference/malloc.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
  [tmpfile —](../../c-runtime-library/reference/tmpfile.md)   
  [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)

@@ -1,13 +1,15 @@
 ---
-title: "_gcvt — | Dokumentacja firmy Microsoft"
+title: _gcvt | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _gcvt
+ms.topic: reference
+apiname:
+- _gcvt
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _gcvt
-dev_langs: C++
+f1_keywords:
+- _gcvt
+dev_langs:
+- C++
 helpviewer_keywords:
 - _gcvt function
 - _CVTBUFSIZE
@@ -33,16 +37,17 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 22561495a972c7561f827c4b7f445bb3fa5c256f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 97f1487b770ac761a2555985a69069155e51cf74
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="gcvt"></a>_gcvt
 Konwertuje wartość zmiennoprzecinkowa ciągu, są przechowywane w buforze. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [_gcvt_s —](../../c-runtime-library/reference/gcvt-s.md).  
@@ -68,10 +73,10 @@ char *_gcvt(
  Lokalizacja magazynu dla wyniku.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_gcvt`Zwraca wskaźnik na ciąg cyfr.  
+ `_gcvt` Zwraca wskaźnik na ciąg cyfr.  
   
 ## <a name="remarks"></a>Uwagi  
- `_gcvt` Funkcja konwertuje zmiennoprzecinkowe `value` na ciąg znaków (w tym punktem dziesiętnym i bajtów możliwości logowania) i zapisuje ciąg w `buffer`. `buffer` Powinien być wystarczająco duży, aby pomieścić skonwertowana wartość plus znak końcowy null, które są automatycznie dołączane. Jeśli rozmiar buforu `digits` + 1 jest używany, funkcja zastępuje koniec buforu. Jest to spowodowane skonwertowany ciąg zawiera punktu dziesiętnego i może zawierać znaku i wykładnika. Przewidują przepełnienie nie istnieje. `_gcvt`próbuje utworzyć `digits` cyfr w formacie dziesiętnym. Jeśli nie, tworzy `digits` cyfr w notacji wykładniczej. Końcowe zera może pominąć w konwersji.  
+ `_gcvt` Funkcja konwertuje zmiennoprzecinkowe `value` na ciąg znaków (w tym punktem dziesiętnym i bajtów możliwości logowania) i zapisuje ciąg w `buffer`. `buffer` Powinien być wystarczająco duży, aby pomieścić skonwertowana wartość plus znak końcowy null, które są automatycznie dołączane. Jeśli rozmiar buforu `digits` + 1 jest używany, funkcja zastępuje koniec buforu. Jest to spowodowane skonwertowany ciąg zawiera punktu dziesiętnego i może zawierać znaku i wykładnika. Przewidują przepełnienie nie istnieje. `_gcvt` próbuje utworzyć `digits` cyfr w formacie dziesiętnym. Jeśli nie, tworzy `digits` cyfr w notacji wykładniczej. Końcowe zera może pominąć w konwersji.  
   
  A `buffer` o długości `_CVTBUFSIZE` jest wystarczająca dla dowolnej liczby zmiennoprzecinkowe wartości.  
   
@@ -81,7 +86,7 @@ char *_gcvt(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_gcvt`|\<stdlib.h >|  
+|`_gcvt`|\<stdlib.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -144,6 +149,6 @@ buffer: '-1.23456789012e-002' (19 chars)
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [atof —, _atof_l —, _wtof — _wtof_l —](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_ecvt —](../../c-runtime-library/reference/ecvt.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
  [_fcvt](../../c-runtime-library/reference/fcvt.md)

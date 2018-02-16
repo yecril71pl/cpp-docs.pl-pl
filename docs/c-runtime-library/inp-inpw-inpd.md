@@ -44,11 +44,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b73d8287954a401b8b966fb1220cfcecfc416eb
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: b5a950496c1148b62e248b9d5d5a4d03f40fea45
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 Dane wejściowe z portu, byte (`_inp`), wyraz (`_inpw`), lub word o podwójnej precyzji (`_inpd`).  
@@ -57,7 +57,7 @@ Dane wejściowe z portu, byte (`_inp`), wyraz (`_inpw`), lub word o podwójnej p
 >  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, ich nie są dostępne w CRT.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   

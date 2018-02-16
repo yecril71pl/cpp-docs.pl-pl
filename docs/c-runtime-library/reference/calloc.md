@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: calloc
+ms.topic: reference
+apiname:
+- calloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,22 +23,25 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: calloc
-dev_langs: C++
+f1_keywords:
+- calloc
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e660413b3d3a95748432d411e92ef03a8e262409
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f106ec1cd879282d557c492e4f19cdd01480575
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="calloc"></a>calloc
 Przydziela tablicy w pamięci z elementami równe 0.  
@@ -58,14 +63,14 @@ void *calloc(
  Długość w bajtach każdego elementu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `calloc`Zwraca wskaźnik do przydzielonego miejsca. Miejsca do magazynowania wskazywanej przez wartość zwracana jest gwarantowana odpowiednio dopasowany do przechowywania obiekty dowolnego typu. Aby otrzymywać wskaźnik do typu innego niż `void`, użyj typu rzutowania wartości zwracanej.  
+ `calloc` Zwraca wskaźnik do przydzielonego miejsca. Miejsca do magazynowania wskazywanej przez wartość zwracana jest gwarantowana odpowiednio dopasowany do przechowywania obiekty dowolnego typu. Aby otrzymywać wskaźnik do typu innego niż `void`, użyj typu rzutowania wartości zwracanej.  
   
 ## <a name="remarks"></a>Uwagi  
  `calloc` Funkcja przydziela miejsce do magazynowania dla tablicy `num` o długości elementów `size` bajtów. Każdy element jest ustawiana na 0.  
   
- `calloc`Ustawia `errno` do `ENOMEM` czy alokacja pamięci nie powiedzie się, czy ilość pamięci żądana przekracza `_HEAP_MAXREQ`. Aby uzyskać informacje na ten temat oraz innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `calloc` Ustawia `errno` do `ENOMEM` czy alokacja pamięci nie powiedzie się, czy ilość pamięci żądana przekracza `_HEAP_MAXREQ`. Aby uzyskać informacje na ten temat oraz innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `calloc`wywołania `malloc` do użycia dla języka C++ [_set_new_mode —](../../c-runtime-library/reference/set-new-mode.md) funkcji, aby ustawić nowy tryb obsługi. Nowy tryb obsługi wskazuje, czy w przypadku awarii, `malloc` jest wywołanie nowe procedury obsługi zgodnie z ustawieniami [_set_new_handler —](../../c-runtime-library/reference/set-new-handler.md). Domyślnie `malloc` nie wywołuje nowe procedury obsługi nie można przydzielić pamięci. Można zastąpić to zachowanie domyślne, aby, gdy `calloc` nie może przydzielić pamięci, `malloc` wywołuje nowe procedury obsługi tak samo jak robi `new` operator nie w przypadku niepowodzenia tego samego powodu. Aby zastąpić domyślną, należy wywołać  
+ `calloc` wywołania `malloc` do użycia dla języka C++ [_set_new_mode —](../../c-runtime-library/reference/set-new-mode.md) funkcji, aby ustawić nowy tryb obsługi. Nowy tryb obsługi wskazuje, czy w przypadku awarii, `malloc` jest wywołanie nowe procedury obsługi zgodnie z ustawieniami [_set_new_handler —](../../c-runtime-library/reference/set-new-handler.md). Domyślnie `malloc` nie wywołuje nowe procedury obsługi nie można przydzielić pamięci. Można zastąpić to zachowanie domyślne, aby, gdy `calloc` nie może przydzielić pamięci, `malloc` wywołuje nowe procedury obsługi tak samo jak robi `new` operator nie w przypadku niepowodzenia tego samego powodu. Aby zastąpić domyślną, należy wywołać  
   
 ```  
 _set_new_mode(1)  
@@ -75,7 +80,7 @@ _set_new_mode(1)
   
  Gdy aplikacja jest połączony z wersją debugowania biblioteki wykonawcze języka C, `calloc` jest rozpoznawana jako [_calloc_dbg —](../../c-runtime-library/reference/calloc-dbg.md). Aby uzyskać więcej informacji dotyczących sposobu zarządzania infrastrukturą sterty podczas debugowania procesu, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- `calloc`jest oznaczony jako `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja jest gwarantowana nie do modyfikowania zmiennych globalnych i czy zwrócony wskaźnik nie jest używane z aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).  
+ `calloc` jest oznaczony jako `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja jest gwarantowana nie do modyfikowania zmiennych globalnych i czy zwrócony wskaźnik nie jest używane z aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).  
   
 ## <a name="requirements"></a>Wymagania  
   
@@ -114,6 +119,6 @@ Allocated 40 long integers
   
 ## <a name="see-also"></a>Zobacz też  
  [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)   
- [w warstwie bezpłatna](../../c-runtime-library/reference/free.md)   
- [— funkcja malloc](../../c-runtime-library/reference/malloc.md)   
+ [W warstwie bezpłatna](../../c-runtime-library/reference/free.md)   
+ [malloc](../../c-runtime-library/reference/malloc.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)

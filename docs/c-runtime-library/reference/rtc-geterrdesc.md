@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _RTC_GetErrDesc
+ms.topic: reference
+apiname:
+- _RTC_GetErrDesc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - RTC_GetErrDesc
 - _RTC_GetErrDesc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - run-time errors
 - _RTC_GetErrDesc function
 - RTC_GetErrDesc function
 ms.assetid: 7994ec2b-5488-4fd4-806d-a166c9a9f927
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3149c1be671566785f67963368a50cdf2eee3809
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ba19cb678ab92f45f65aee4c22c28ef0908b32e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
 Zwraca krótki opis typu (RTC) sprawdzanie błędów czasu wykonywania.  
@@ -63,7 +67,7 @@ Zwraca krótki opis typu (RTC) sprawdzanie błędów czasu wykonywania.
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_RTC_GetErrDesc`|\<rtcapi.h >|  
+|`_RTC_GetErrDesc`|\<rtcapi.h>|  
   
  Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -71,5 +75,5 @@ Zwraca krótki opis typu (RTC) sprawdzanie błędów czasu wykonywania.
  Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [_Rtc_numerrors —](../../c-runtime-library/reference/rtc-numerrors.md)   
+ [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md)   
  [Sprawdzanie błędów czasu wykonywania](../../c-runtime-library/run-time-error-checking.md)

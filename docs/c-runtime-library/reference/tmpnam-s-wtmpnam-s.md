@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - tmpnam_s
 - _wtmpnam_s
@@ -27,7 +28,8 @@ f1_keywords:
 - tmpnam_s
 - _wtmpnam_s
 - L_tmpnam_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tmpnam_s function
 - file names [C++], creating temporary
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e7846d9169db45f4176ad97dfc3c0b9d5a3c346c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 844da11b981b99d5fe69861c3198d0508857a1a5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
 Generowania nazw, który służy do tworzenia plików tymczasowych. Są to wersje [tmpnam — i _wtmpnam —](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -73,10 +76,10 @@ errno_t _wtmpnam_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`str`  
+ [out] `str`  
  Wskaźnik, w którym będą przechowywane wygenerowana nazwa.  
   
- [in]`sizeInChars`  
+ [in] `sizeInChars`  
  Rozmiar buforu w znakach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -93,11 +96,11 @@ errno_t _wtmpnam_s(
  Jeśli `str` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwracać `EINVAL`.  
   
 ## <a name="remarks"></a>Uwagi  
- Każda z tych funkcji zwraca nazwę pliku, który obecnie nie istnieje. `tmpnam_s`Zwraca nazwę unikatową w bieżącym katalogu roboczym. Należy zauważyć, że jeśli nazwa pliku jest pre oczekującego ukośnika odwrotnego i nie informacji ścieżki, takich jak \fname21, oznacza to, że nazwa jest nieprawidłowa dla bieżącego katalogu roboczego.  
+ Każda z tych funkcji zwraca nazwę pliku, który obecnie nie istnieje. `tmpnam_s` Zwraca nazwę unikatową w bieżącym katalogu roboczym. Należy zauważyć, że jeśli nazwa pliku jest pre oczekującego ukośnika odwrotnego i nie informacji ścieżki, takich jak \fname21, oznacza to, że nazwa jest nieprawidłowa dla bieżącego katalogu roboczego.  
   
  Aby uzyskać `tmpnam_s`, można przechowywać tej nazwy pliku wygenerowanego w `str`. Maksymalna długość ciągu zwróconego przez `tmpnam_s` jest `L_tmpnam_s`zdefiniowanej w stdio —. H. Jeśli `str` jest `NULL`, następnie `tmpnam_s` pozostawia wynik w statycznej buforu wewnętrznego. W związku z tym kolejnych wywołań zniszczyć tej wartości. Nazwa wygenerowana przez `tmpnam_s` składa się nazwy pliku generowanych przez program i po pierwszym wywołaniu `tmpnam_s`, rozszerzenie pliku numerów sekwencyjnych w podstawowej 32 (.1 .1vvvvvu, gdy `TMP_MAX_S` w stdio —. Int_max — jest H).  
   
- `tmpnam_s`automatycznie obsługuje argumentów ciągów znaków wielobajtowych zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie ze strony kodowej OEM uzyskane z systemu operacyjnego. `_wtmpnam_s`jest to wersja znaków dwubajtowych `tmpnam_s`; argumentów i wartości `_wtmpnam_s` są ciągami znaków dwubajtowych. `_wtmpnam_s`i `tmpnam_s` zachowują się tak samo, z wyjątkiem `_wtmpnam_s` nie obsługuje ciągów znaków wielobajtowych.  
+ `tmpnam_s` automatycznie obsługuje argumentów ciągów znaków wielobajtowych zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie ze strony kodowej OEM uzyskane z systemu operacyjnego. `_wtmpnam_s` jest to wersja znaków dwubajtowych `tmpnam_s`; argumentów i wartości `_wtmpnam_s` są ciągami znaków dwubajtowych. `_wtmpnam_s` i `tmpnam_s` zachowują się tak samo, z wyjątkiem `_wtmpnam_s` nie obsługuje ciągów znaków wielobajtowych.  
   
  W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można wnioskować o długości buforu automatycznie, co eliminuje konieczność określić argument rozmiar. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -111,7 +114,7 @@ errno_t _wtmpnam_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`tmpnam_s`|\<stdio.h >|  
+|`tmpnam_s`|\<stdio.h>|  
 |`_wtmpnam_s`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -151,7 +154,7 @@ int main( void )
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [_getmbcp —](../../c-runtime-library/reference/getmbcp.md)   
- [— funkcja malloc](../../c-runtime-library/reference/malloc.md)   
- [_setmbcp —](../../c-runtime-library/reference/setmbcp.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [malloc](../../c-runtime-library/reference/malloc.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
  [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)

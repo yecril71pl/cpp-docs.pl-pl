@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _ecvt_s
+ms.topic: reference
+apiname:
+- _ecvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - ecvt_s
 - _ecvt_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ecvt_s function
 - ecvt_s function
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: af4b49b0fd0e4de74a3f454a544c07f08c89b81d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 536f9f70547727f2a7a0a4231b1031a67203b1e1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ecvts"></a>_ecvt_s
 Konwertuje `double` numer na ciąg. To jest wersja [_ecvt —](../../c-runtime-library/reference/ecvt.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -67,22 +71,22 @@ errno_t _ecvt_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`_Buffer`  
+ [out] `_Buffer`  
  Wypełniony wskaźnika na ciąg cyfr, wynik konwersji.  
   
- [in]`_SizeInBytes`  
+ [in] `_SizeInBytes`  
  Rozmiar buforu w bajtach.  
   
- [in]`_Value`  
+ [in] `_Value`  
  Numer do skonwertowania.  
   
- [in]`_Count`  
+ [in] `_Count`  
  Liczba cyfr przechowywane.  
   
- [out]`_Dec`  
+ [out] `_Dec`  
  Przechowywane położenie punktu dziesiętnego.  
   
- [out]`_Sign`  
+ [out] `_Sign`  
  Znak przekonwertowany numer.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -92,7 +96,7 @@ errno_t _ecvt_s(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Zaloguj|Wartość zwracana|Wartość w`buffer`|  
+|`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Zaloguj|Wartość zwracana|Wartość w `buffer`|  
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|  
 |`NULL`|wszystkie|wszystkie|wszystkie|wszystkie|wszystkie|`EINVAL`|Nie modyfikować.|  
 |nie `NULL` (wskazuje prawidłowy pamięci)|<=0|wszystkie|wszystkie|wszystkie|wszystkie|`EINVAL`|Nie modyfikować.|  
@@ -101,7 +105,7 @@ errno_t _ecvt_s(
   
  **Problemy dotyczące zabezpieczeń**  
   
- `_ecvt_s`może generować naruszenia zasad dostępu, jeśli `buffer` nie wskazuje na prawidłową pamięci i nie jest `NULL`.  
+ `_ecvt_s` może generować naruszenia zasad dostępu, jeśli `buffer` nie wskazuje na prawidłową pamięci i nie jest `NULL`.  
   
 ## <a name="remarks"></a>Uwagi  
  `_ecvt_s` Funkcja konwertuje liczba zmiennoprzecinkowa na ciąg znaków. `_Value` Parametr jest liczbie zmiennoprzecinkowej do skonwertowania. Ta funkcja przechowuje do `count` cyfr `_Value` jako ciąg i dołącza znak null ('\0'). Jeśli liczba cyfr w `_Value` przekracza `_Count`, cyfrę znaczącymi bitami jest zaokrąglana. Jeśli jest dostępnych mniej niż `count` cyfr, ten ciąg jest uzupełniana zerami z.  
@@ -110,7 +114,7 @@ errno_t _ecvt_s(
   
  Bufor o długości `_CVTBUFSIZE` jest wystarczająca dla wartości zmiennoprzecinkowych.  
   
- Różnica między `_ecvt_s` i `_fcvt_s` jest interpretacji `_Count` parametru. `_ecvt_s`interpretuje `_Count` jako liczba cyfr w ciągu wyjściowego, podczas gdy `_fcvt_s` interpretuje `_Count` jako liczbę cyfr po punkcie dziesiętnym.  
+ Różnica między `_ecvt_s` i `_fcvt_s` jest interpretacji `_Count` parametru. `_ecvt_s` interpretuje `_Count` jako liczba cyfr w ciągu wyjściowego, podczas gdy `_fcvt_s` interpretuje `_Count` jako liczbę cyfr po punkcie dziesiętnym.  
   
  W języku C++ za pomocą tej funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążenie można wnioskować o długości buforu automatycznie, eliminując konieczność określić argument rozmiar. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -120,7 +124,7 @@ errno_t _ecvt_s(
   
 |Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|  
 |--------------|---------------------|---------------------|  
-|`_ecvt_s`|\<stdlib.h >|\<errno.h >|  
+|`_ecvt_s`|\<stdlib.h>|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -160,7 +164,7 @@ Converted value: 12000
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [atof —, _atof_l —, _wtof — _wtof_l —](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_ecvt —](../../c-runtime-library/reference/ecvt.md)   
- [_fcvt_s —](../../c-runtime-library/reference/fcvt-s.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   
  [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ismbblead_l
 - _ismbblead
@@ -30,7 +31,8 @@ f1_keywords:
 - _ismbblead_l
 - ismbblead
 - _istlead
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ismbblead_l function
 - ismbblead function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: acba6047239ee9c63e05666a4bdc685cf40527c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4979e40aedc763ff9a058277a4c549fa76bdec0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
 Testy znaku do określenia, czy jest bajtu znaków wielobajtowych.  
@@ -78,7 +81,7 @@ int _ismbblead_l(
 ## <a name="remarks"></a>Uwagi  
  Znaki wielobajtowe składają się z bajtu następuje końcowego bajtu. Będąc w zakresie określonego zestawu znaków danego różnią się prowadzić bajtów. Na przykład w bajtach tylko, prowadzić strona 932 kodu należeć do zakresu od 0x81-0x9F i wartość 0xE0 - 0xFC.  
   
- `_ismbblead`używa bieżące ustawienia regionalne dla zachowania zależnych od ustawień regionalnych. `_ismbblead_l`jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ `_ismbblead` używa bieżące ustawienia regionalne dla zachowania zależnych od ustawień regionalnych. `_ismbblead_l` jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -90,10 +93,10 @@ int _ismbblead_l(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_ismbblead`|\<mbctype.h > lub \<mbstring.h >|\<CType.h >, * \<Limits.h — >, \<stdlib.h >|  
-|`_ismbblead_l`|\<mbctype.h > lub \<mbstring.h >|\<CType.h >, * \<Limits.h — >, \<stdlib.h >|  
+|`_ismbblead`|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
+|`_ismbblead_l`|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
   
- \*Dla manifestu stałe warunki testu.  
+ \* Dla manifestu stałe warunki testu.  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

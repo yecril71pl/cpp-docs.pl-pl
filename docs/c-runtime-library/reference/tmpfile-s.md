@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: tmpfile_s
+ms.topic: reference
+apiname:
+- tmpfile_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,23 +23,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: tmpfile_s
-dev_langs: C++
+f1_keywords:
+- tmpfile_s
+dev_langs:
+- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 13d8f3c25a739b212c5977ee44620d8f5966c2f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d9ac079ce833f65a4a2add57bbc0be93c97902e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 Tworzy plik tymczasowy. Jest to wersja z [tmpfile —](../../c-runtime-library/reference/tmpfile.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -51,7 +56,7 @@ errno_t tmpfile_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pFilePtr`  
+ [out] `pFilePtr`  
  Adres wskaźnika do przechowywania adres wygenerowanego wskaźnika do strumienia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -70,13 +75,13 @@ errno_t tmpfile_s(
   
  Jeśli nie można otworzyć pliku, `tmpfile_s` zapisuje `NULL` do `pFilePtr` parametru. Plik tymczasowy jest automatycznie usuwana, gdy plik jest zamknięty, gdy program zakończenie zwykle lub `_rmtmp` jest wywoływana przy założeniu, że bieżący katalog roboczy nie ulega zmianie. Plik tymczasowy jest otwarty w `w+b` trybu (binarne odczytu/zapisu).  
   
- Błąd może wystąpić przy próbie więcej niż `TMP_MAX_S` (zobacz stdio —. H) z rozmów`tmpfile_s.`  
+ Błąd może wystąpić przy próbie więcej niż `TMP_MAX_S` (zobacz stdio —. H) z rozmów `tmpfile_s.`  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`tmpfile_s`|\<stdio.h >|  
+|`tmpfile_s`|\<stdio.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -124,5 +129,5 @@ Temporary file 3 was created
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [_rmtmp —](../../c-runtime-library/reference/rmtmp.md)   
+ [_rmtmp](../../c-runtime-library/reference/rmtmp.md)   
  [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)

@@ -1,13 +1,15 @@
 ---
-title: "_msize_dbg — | Dokumentacja firmy Microsoft"
+title: _msize_dbg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _msize_dbg
+ms.topic: reference
+apiname:
+- _msize_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - _msize_dbg
 - msize_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory blocks
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 018fb7fdce1aeb2a69ac2e6381df1c0da24036a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4c4168f6652e00d91fc1013c7acad04798b0bf03
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="msizedbg"></a>_msize_dbg
 Oblicza rozmiar bloku pamięci sterty (tylko wersja do debugowania).  
@@ -64,7 +68,7 @@ Oblicza rozmiar bloku pamięci sterty (tylko wersja do debugowania).
  Po pomyślnym ukończeniu `_msize_dbg` zwraca rozmiar (w bajtach) pamięci określonego bloku; w przeciwnym razie zwraca wartość NULL.  
   
 ## <a name="remarks"></a>Uwagi  
- `_msize_dbg`jest to wersja debugowania _[msize —](../../c-runtime-library/reference/msize.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_msize_dbg` zostanie zmniejszona do wywołania `_msize`. Zarówno `_msize` i `_msize_dbg` Oblicz rozmiar bloku pamięci w stercie podstawowy, ale `_msize_dbg` dodaje dwie funkcje debugowania: rozmiar zwróconego zawiera buforów po obu stronach użytkownika część bloku pamięci i umożliwia rozmiar obliczenia bloku określonego typu.  
+ `_msize_dbg` jest to wersja debugowania _[msize —](../../c-runtime-library/reference/msize.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_msize_dbg` zostanie zmniejszona do wywołania `_msize`. Zarówno `_msize` i `_msize_dbg` Oblicz rozmiar bloku pamięci w stercie podstawowy, ale `_msize_dbg` dodaje dwie funkcje debugowania: rozmiar zwróconego zawiera buforów po obu stronach użytkownika część bloku pamięci i umożliwia rozmiar obliczenia bloku określonego typu.  
   
  Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Informacje o typach bloku alokacji i sposobu ich używania, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywoływanie funkcji sterty standardowe i jego wersji do debugowania w kompilację debugowania aplikacji, zobacz [debugowania wersji z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
@@ -74,7 +78,7 @@ Oblicza rozmiar bloku pamięci sterty (tylko wersja do debugowania).
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_msize_dbg`|\<crtdbg.h >|  
+|`_msize_dbg`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

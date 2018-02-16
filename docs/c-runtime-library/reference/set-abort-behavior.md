@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _set_abort_behavior
+ms.topic: reference
+apiname:
+- _set_abort_behavior
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - _set_abort_behavior
 - set_abort_behavior
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
@@ -32,12 +35,13 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 965ff160fd8098c60f53f639cb95aedf890edd86
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d26f8339772854ab053c08deae3372ac567f9249
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
@@ -69,13 +73,13 @@ Stara wartość flagi.
 
 ## <a name="remarks"></a>Uwagi
 
-Istnieją dwa `abort` flagi: `_WRITE_ABORT_MSG` i `_CALL_REPORTFAULT`. `_WRITE_ABORT_MSG`Określa, czy wiadomość SMS pomocne jest drukowane, gdy program jest nieprawidłowo zakończone. Komunikat, że aplikacja została wywołana `abort` funkcji. Domyślnym zachowaniem jest wydrukowanie wiadomości. `_CALL_REPORTFAULT`, jeśli ustawiona, określa, że zrzutu awaryjnego Watson jest generowana i zgłaszane, gdy `abort` jest wywoływana. Domyślnie zgłoszenie zrzutu awaryjnego jest włączone w kompilacjach bez debugowania.
+Istnieją dwa `abort` flagi: `_WRITE_ABORT_MSG` i `_CALL_REPORTFAULT`. `_WRITE_ABORT_MSG` Określa, czy wiadomość SMS pomocne jest drukowane, gdy program jest nieprawidłowo zakończone. Komunikat, że aplikacja została wywołana `abort` funkcji. Domyślnym zachowaniem jest wydrukowanie wiadomości. `_CALL_REPORTFAULT`, jeśli ustawiona, określa, że zrzutu awaryjnego Watson jest generowana i zgłaszane, gdy `abort` jest wywoływana. Domyślnie zgłoszenie zrzutu awaryjnego jest włączone w kompilacjach bez debugowania.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`_set_abort_behavior`|\<stdlib.h >|
+|`_set_abort_behavior`|\<stdlib.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

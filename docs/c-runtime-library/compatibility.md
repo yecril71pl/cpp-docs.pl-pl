@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bed3ebc3723bfe6af8e3d12fc3702ecb0dda7b4f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compatibility"></a>Zgodność
 Uniwersalny biblioteki Biblioteka (C Run-Time UCRT) obsługuje większość biblioteki standardowe C wymaganej do zgodność języka C++. Implementuje C99 biblioteki (ISO/IEC 9899:1999), z wyjątkiem makra ogólny typ zdefiniowany w \<tgmath.h >, a ścisłe zasady zgodności w \<complex.h >. Biblioteka UCRT też implementuje podzbiór dużych POSIX.1 (ISO/IEC 9945-1:1996, interfejs aplikacji systemu POSIX) biblioteki C, ale nie jest w pełni zgodność na dowolnym określonym standard POSIX.  Ponadto biblioteka UCRT implementuje kilka funkcje specyficzne dla firmy Microsoft i makra, które nie są częścią standardowej.  
@@ -44,7 +44,7 @@ Uniwersalny biblioteki Biblioteka (C Run-Time UCRT) obsługuje większość bibl
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Aplikacje sklepu Windows Store, środowisko uruchomieniowe systemu Windows i środowisko wykonawcze języka C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Opisuje, gdy biblioteka UCRT procedury nie są zgodne z uniwersalnych aplikacji systemu Windows lub Sklepu Windows.|  
+|[Aplikacje platformy uniwersalnej systemu Windows, środowisko uruchomieniowe systemu Windows i środowisko wykonawcze języka C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|W tym artykule opisano, gdy biblioteka UCRT procedury nie są zgodne z uniwersalnych aplikacji systemu Windows lub aplikacji Microsoft Store.|  
 |[Zgodność ANSI-C](../c-runtime-library/ansi-c-compliance.md)|Opisuje zgodne standard nazewnictwa w Biblioteka UCRT.|  
 |[UNIX](../c-runtime-library/unix.md)|Zawiera wskazówki dotyczące przenoszenia programów dla systemu UNIX.|  
 |[Platformy systemu Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Zawiera listę systemów operacyjnych, które są obsługuje CRT.|  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fstat32
 - _fstat64
@@ -40,7 +41,8 @@ f1_keywords:
 - _fstat
 - fstat32
 - _fstat64i32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fstat64 function
 - fstati64 function
@@ -56,16 +58,17 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2993016e9c6b3a4ea7d47ba8071fab1267e483f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c9518a0ea841a252717c225df7f07deba3a1ffbf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 Pobiera informacje o otwartego pliku.  
@@ -122,7 +125,7 @@ int _fstat64i32(
  Jeśli urządzenie, `fd`; w przeciwnym razie wartość 0.  
   
  `st_mode`  
- Maska bitowa dla informacji o trybie pliku. `_S_IFCHR` Jeśli ustawiono bit `fd` odwołuje się do urządzenia. `_S_IFREG` Jeśli ustawiono bit `fd` odwołuje się do zwykłego pliku. Bity odczytu/zapisu są ustawione zgodnie z trybu uprawnienia pliku. `_S_IFCHR`i inne stałe są zdefiniowane w SYS\Stat.h.  
+ Maska bitowa dla informacji o trybie pliku. `_S_IFCHR` Jeśli ustawiono bit `fd` odwołuje się do urządzenia. `_S_IFREG` Jeśli ustawiono bit `fd` odwołuje się do zwykłego pliku. Bity odczytu/zapisu są ustawione zgodnie z trybu uprawnienia pliku. `_S_IFCHR` i inne stałe są zdefiniowane w SYS\Stat.h.  
   
  `st_mtime`  
  Czas ostatniej modyfikacji pliku.  
@@ -144,7 +147,7 @@ int _fstat64i32(
   
  Zmiany tych funkcji obsługuje typy czasu 32-bitowy lub 64-bitowe i 32-bitowy lub 64-bitowego pliku długości. Pierwszy liczbowego sufiksu (`32` lub `64`) wskazuje rozmiar czasu używany typ; druga sufiks jest `i32` lub `i64`, wskazujące Określa, czy rozmiar pliku jest reprezentowany jako 32-bitowy lub 64-bitowej liczby całkowitej.  
   
- `_fstat`jest odpowiednikiem `_fstat64i32`, i `struct _stat` zawiera czas 64-bitowych. Jest to wartość true, chyba że `_USE_32BIT_TIME_T` jest zdefiniowany w takim przypadku stare zachowanie jest włączona; `_fstat` używany czas 32-bitowych, i `struct _stat` zawiera czas 32-bitowych. Dotyczy to także `_fstati64`.  
+ `_fstat` jest odpowiednikiem `_fstat64i32`, i `struct _stat` zawiera czas 64-bitowych. Jest to wartość true, chyba że `_USE_32BIT_TIME_T` jest zdefiniowany w takim przypadku stare zachowanie jest włączona; `_fstat` używany czas 32-bitowych, i `struct _stat` zawiera czas 32-bitowych. Dotyczy to także `_fstati64`.  
   
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Typ czasu i zmian typu długość pliku _stat  
   
@@ -239,7 +242,7 @@ Time modified : Wed May 07 15:25:11 2003
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_access —, _waccess —](../../c-runtime-library/reference/access-waccess.md)   
- [_chmod —, _wchmod —](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_filelength —, _filelengthi64 —](../../c-runtime-library/reference/filelength-filelengthi64.md)   
  [_stat, _wstat — funkcje](../../c-runtime-library/reference/stat-functions.md)

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _flushall
+ms.topic: reference
+apiname:
+- _flushall
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,24 +23,27 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _flushall
-dev_langs: C++
+f1_keywords:
+- _flushall
+dev_langs:
+- C++
 helpviewer_keywords:
 - flushall function
 - flushing streams
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 76a99cbdd3376579bac0126704a4df496905446e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 25e8a0045758d22a9b519cd1ffe4cc675a7674c2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="flushall"></a>_flushall
 Czyści wszystkie strumienie; Czyści wszystkie bufory.  
@@ -50,7 +55,7 @@ int _flushall( void );
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_flushall`Zwraca liczbę otwartych strumieni (dane wejściowe i wyjściowe). Nie ma żadnych zwracany błąd.  
+ `_flushall` Zwraca liczbę otwartych strumieni (dane wejściowe i wyjściowe). Nie ma żadnych zwracany błąd.  
   
 ## <a name="remarks"></a>Uwagi  
  Domyślnie `_flushall` funkcja zapisuje odpowiednią zawartość buforów wszystkie skojarzone z strumienie wyjściowe otwarte pliki. Wszystkie bufory skojarzone z otwartych strumienie wejściowe są usuwane z ich bieżącej zawartości. (Bufory są zazwyczaj obsługiwane przez system operacyjny, który określa czas optymalnego automatycznie zapisać danych na dysku: gdy bufor jest pełny, gdy strumień jest zamknięty lub gdy program kończy się zwykle bez zamykania strumieni.)  
@@ -65,7 +70,7 @@ int _flushall( void );
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`_flushall`|\<stdio.h >|  
+|`_flushall`|\<stdio.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -95,5 +100,5 @@ There were 3 streams flushed
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [_commit —](../../c-runtime-library/reference/commit.md)   
  [fclose —, _fcloseall —](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [fflush —](../../c-runtime-library/reference/fflush.md)   
+ [fflush](../../c-runtime-library/reference/fflush.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

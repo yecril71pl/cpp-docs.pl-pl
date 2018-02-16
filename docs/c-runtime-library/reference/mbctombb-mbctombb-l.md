@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbctombb_l
 - _mbctombb
@@ -28,29 +29,31 @@ f1_keywords:
 - _mbctombb
 - mbctombb_l
 - mbctombb
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbctombb function
 - mbctombb_l function
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 327c55d92b9d23644807ecd52dbecf0fd0b62375
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b360eaf014747cec2359efbf3792d45323178f57
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
 Konwertuje odpowiednich znaków wielobajtowych jednobajtowe znaków wielobajtowych znaków dwubajtowych.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -85,14 +88,14 @@ unsigned int _mbctombb_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_mbctombb`|\<mbstring.h >|  
-|`_mbctombb_l`|\<mbstring.h >|  
+|`_mbctombb`|\<mbstring.h>|  
+|`_mbctombb_l`|\<mbstring.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
- [_mbbtombc —, _mbbtombc_l —](../../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
- [_mbcjistojms —, _mbcjistojms_l —, _mbcjmstojis — _mbcjmstojis_l —](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
+ [_mbbtombc, _mbbtombc_l](../../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
+ [_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
  [_mbctohira —, _mbctohira_l —, _mbctokata — _mbctokata_l —](../../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)   
  [_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l](../../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)

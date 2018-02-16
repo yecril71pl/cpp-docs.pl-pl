@@ -1,12 +1,13 @@
 ---
-title: "_findfirst —, _findfirst32 —, _findfirst32i64 —, _findfirst64 —, _findfirst64i32 —, _findfirsti64 —, _wfindfirst —, _wfindfirst32 —, _wfindfirst32i64 —, _wfindfirst64 —, _wfindfirst64i32 —, _wfindfirsti64 — | Dokumentacja firmy Microsoft"
+title: _findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _findfirst
 - _wfindfirst
@@ -58,7 +59,8 @@ f1_keywords:
 - tfindfirst32i64
 - _findfirst
 - _wfindfirst64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tfindfirst64 function
 - _wfindfirst64i32 function
@@ -97,18 +99,19 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9f95b4097f2e0ddd399df9b65ed178c1423edaaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 73e513cf4e1d63888f9ad6ef12ed6532b7e158ef
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst — _findfirst32 —, _findfirst32i64 —, _findfirst64 —, _findfirst64i32 —, _findfirsti64 —, _wfindfirst —, _wfindfirst32 —, _wfindfirst32i64 —, _wfindfirst64 —, _wfindfirst64i32 —, _wfindfirsti64 —
+# <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 Zawierają informacje dotyczące pierwszego wystąpienia nazwy pliku, który pasuje do pliku określonego w `filespec` argumentu.  
   
 ## <a name="syntax"></a>Składnia  
@@ -205,7 +208,7 @@ intptr_t _wfindfirst64i32(
   
 ### <a name="time-type-and-file-length-type-variations-of-findfirst"></a>Typ czasu i zmian typu długość pliku _findfirst —  
   
-|Funkcje|`_USE_32BIT_TIME_T`Definicja?|Typu czasu|Typ długość pliku|  
+|Funkcje|`_USE_32BIT_TIME_T` Definicja?|Typu czasu|Typ długość pliku|  
 |---------------|----------------------------------|---------------|----------------------|  
 |`_findfirst`, `_wfindfirst`|Nie zdefiniowano|64-bitowy|32-bitowa|  
 |`_findfirst`, `_wfindfirst`|Definicja|32-bitowa|32-bitowa|  
@@ -231,12 +234,12 @@ intptr_t _wfindfirst64i32(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`_findfirst`|\<IO.h >|  
-|`_findfirst32`|\<IO.h >|  
-|`_findfirst64`|\<IO.h >|  
-|`_findfirsti64`|\<IO.h >|  
-|`_findfirst32i64`|\<IO.h >|  
-|`_findfirst64i32`|\<IO.h >|  
+|`_findfirst`|\<io.h>|  
+|`_findfirst32`|\<io.h>|  
+|`_findfirst64`|\<io.h>|  
+|`_findfirsti64`|\<io.h>|  
+|`_findfirst32i64`|\<io.h>|  
+|`_findfirst64i32`|\<io.h>|  
 |`_wfindfirst`|\<IO.h > lub \<wchar.h >|  
 |`_wfindfirst32`|\<IO.h > lub \<wchar.h >|  
 |`_wfindfirst64`|\<IO.h > lub \<wchar.h >|  

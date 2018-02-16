@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _stricmp_l
 - _mbsicmp
@@ -41,7 +42,8 @@ f1_keywords:
 - _fstricmp
 - mbsicmp_l
 - mbsicmp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wcsicmp function
 - _stricmp_l function
@@ -63,22 +65,23 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 15b581d0d47da824f1faaade1214d1320e29bb03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a716e229aa5ca7bb45fdcbd6cba9e3a85301df96
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 Wykonuje bez uwzględniania wielkości liter porównania ciągów.  
   
 > [!IMPORTANT]
->  `_mbsicmp`i `_mbsicmp_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsicmp` i `_mbsicmp_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -124,17 +127,17 @@ int _mbsicmp_l(
   
 |Wartość zwracana|Opis|  
 |------------------|-----------------|  
-|< 0|`string1`mniej niż`string2`|  
-|0|`string1`taki sam jak`string2`|  
-|> 0|`string1`większa niż`string2`|  
+|< 0|`string1` Mniej niż `string2`|  
+|0|`string1` taki sam jak `string2`|  
+|> 0|`string1` Większa niż `string2`|  
   
  W przypadku wystąpienia błędu `_mbsicmp` zwraca `_NLSCMPERROR`, która jest zdefiniowana w \<string.h > i \<mbstring.h >.  
   
 ## <a name="remarks"></a>Uwagi  
- `_stricmp` Ordinally funkcji porównuje `string1` i `string2` po przekonwertowaniu każdego znaku małe i zwraca wartość wskazującą, ich relacji. `_stricmp`różni się od `_stricoll` w tym `_stricmp` tylko dotyczy porównanie `LC_CTYPE`, która określa, które znaki są wielkich i małych. `_stricoll` Funkcja porównuje ciągi zgodnie z obu `LC_CTYPE` i `LC_COLLATE` kategorii ustawienia regionalne, które zawiera zarówno w przypadku, jak i w kolejności sortowania. Aby uzyskać więcej informacji na temat `LC_COLLATE` kategorii, zobacz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) i [kategorie regionalne](../../c-runtime-library/locale-categories.md). Wersje tych funkcji bez `_l` sufiks Użyj bieżących ustawień regionalnych dla zachowania zależnych od ustawień regionalnych. Wersje wraz z sufiksem są identyczne, z wyjątkiem tego, aby używały przekazano zamiast ustawień regionalnych. Jeśli ustawienia regionalne nie została ustawiona, ustawienia regionalne C jest używany. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ `_stricmp` Ordinally funkcji porównuje `string1` i `string2` po przekonwertowaniu każdego znaku małe i zwraca wartość wskazującą, ich relacji. `_stricmp` różni się od `_stricoll` w tym `_stricmp` tylko dotyczy porównanie `LC_CTYPE`, która określa, które znaki są wielkich i małych. `_stricoll` Funkcja porównuje ciągi zgodnie z obu `LC_CTYPE` i `LC_COLLATE` kategorii ustawienia regionalne, które zawiera zarówno w przypadku, jak i w kolejności sortowania. Aby uzyskać więcej informacji na temat `LC_COLLATE` kategorii, zobacz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) i [kategorie regionalne](../../c-runtime-library/locale-categories.md). Wersje tych funkcji bez `_l` sufiks Użyj bieżących ustawień regionalnych dla zachowania zależnych od ustawień regionalnych. Wersje wraz z sufiksem są identyczne, z wyjątkiem tego, aby używały przekazano zamiast ustawień regionalnych. Jeśli ustawienia regionalne nie została ustawiona, ustawienia regionalne C jest używany. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
 > [!NOTE]
->  `_stricmp`jest odpowiednikiem `_strcmpi`. Mogą być używane zamiennie, ale `_stricmp` jest preferowanym standard.  
+>  `_stricmp` jest odpowiednikiem `_strcmpi`. Mogą być używane zamiennie, ale `_stricmp` jest preferowanym standard.  
   
  `_strcmpi` Funkcji jest odpowiednikiem `_stricmp` i jest dostępne tylko w przypadku zgodności z poprzednimi wersjami.  
   
@@ -144,9 +147,9 @@ int _mbsicmp_l(
   
  Jeśli [strcmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md) funkcja jest używana zamiast `_stricmp`, JOHN_HENRY będą większe niż JOHNSTON.  
   
- `_wcsicmp`i `_mbsicmp` znaków dwubajtowych i znaków wielobajtowych wersji `_stricmp`. Argumenty i zwracana wartość `_wcsicmp` są znaków dwubajtowych ciągi; tych `_mbsicmp` są ciągami znaków wielobajtowych. `_mbsicmp`rozpoznaje wielobajtowych sekwencji znaków zgodnie z bieżącej strony kodowe wielobajtowe i zwraca `_NLSCMPERROR` w przypadku wystąpienia błędu. Aby uzyskać więcej informacji, zobacz [stron kodowych](../../c-runtime-library/code-pages.md). Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
+ `_wcsicmp` i `_mbsicmp` znaków dwubajtowych i znaków wielobajtowych wersji `_stricmp`. Argumenty i zwracana wartość `_wcsicmp` są znaków dwubajtowych ciągi; tych `_mbsicmp` są ciągami znaków wielobajtowych. `_mbsicmp` rozpoznaje wielobajtowych sekwencji znaków zgodnie z bieżącej strony kodowe wielobajtowe i zwraca `_NLSCMPERROR` w przypadku wystąpienia błędu. Aby uzyskać więcej informacji, zobacz [stron kodowych](../../c-runtime-library/code-pages.md). Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
   
- `_wcsicmp`i `wcscmp` zachowują się tak samo, z wyjątkiem `wcscmp` nie konwertuje argumenty na małe litery przed ich porównaniem. `_mbsicmp`i `_mbscmp` zachowują się tak samo, z wyjątkiem `_mbscmp` nie konwertuje argumenty na małe litery przed ich porównaniem.  
+ `_wcsicmp` i `wcscmp` zachowują się tak samo, z wyjątkiem `wcscmp` nie konwertuje argumenty na małe litery przed ich porównaniem. `_mbsicmp` i `_mbscmp` zachowują się tak samo, z wyjątkiem `_mbscmp` nie konwertuje argumenty na małe litery przed ich porównaniem.  
   
  Należy wywołać [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) dla `_wcsicmp` do pracy z znaki alfabetu łacińskiego 1. Ustawienia regionalne C jest obowiązująca domyślnie tak, na przykład ä nie zostanie porównany równa Ä. Wywołanie `setlocale` z dowolnych ustawień regionalnych innych niż ustawień regionalnych C przed wywołaniem do `_wcsicmp`. W poniższym przykładzie pokazano sposób `_wcsicmp` jest wrażliwe na ustawienia regionalne:  
   
@@ -178,9 +181,9 @@ int main() {
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_stricmp`, `_stricmp_l`|\<String.h >|  
+|`_stricmp`, `_stricmp_l`|\<string.h>|  
 |`_wcsicmp`, `_wcsicmp_l`|\<String.h > lub \<wchar.h >|  
-|`_mbsicmp`, `_mbsicmp_l`|\<mbstring.h >|  
+|`_mbsicmp`, `_mbsicmp_l`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -236,11 +239,11 @@ Compare strings:
 ## <a name="see-also"></a>Zobacz też  
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
  [funkcji memcmp, wmemcmp —](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [_memicmp —, _memicmp_l —](../../c-runtime-library/reference/memicmp-memicmp-l.md)   
+ [_memicmp, _memicmp_l](../../c-runtime-library/reference/memicmp-memicmp-l.md)   
  [strcmp —, wcscmp —, _mbscmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strcoll — funkcje](../../c-runtime-library/strcoll-functions.md)   
  [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset —, _strset_l —, _wcsset —, _wcsset_l — _mbsset —, _mbsset_l —](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

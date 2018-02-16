@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fclose
 - _fcloseall
@@ -26,22 +27,24 @@ apitype: DLLExport
 f1_keywords:
 - fclose
 - _fcloseall
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fclose function
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2d670ead8214f54323cf9f6b284eaaef9a582757
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9399aa2848ff3f5179b711674fa524ef7543fc0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fclose-fcloseall"></a>fclose, _fcloseall
 Zamyka strumienia (`fclose`) lub zamyka wszystkie otwarte strumieni (`_fcloseall`).  
@@ -60,7 +63,7 @@ int _fcloseall( void );
  Wskaźnik do `FILE` struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `fclose`Zwraca wartość 0, jeśli strumień jest zamknięty pomyślnie. `_fcloseall`Zwraca łączną liczbę strumieni, zamknięty. Obie funkcje zwracają `EOF` wystąpił błąd.  
+ `fclose` Zwraca wartość 0, jeśli strumień jest zamknięty pomyślnie. `_fcloseall` Zwraca łączną liczbę strumieni, zamknięty. Obie funkcje zwracają `EOF` wystąpił błąd.  
   
 ## <a name="remarks"></a>Uwagi  
  `fclose` Funkcji zamknięciu `stream`. Jeśli `stream` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `fclose` ustawia `errno` do `EINVAL` i zwraca `EOF`. Zalecane jest `stream` wskaźnika zawsze można sprawdzić przed wywołaniem tej funkcji.  
@@ -71,14 +74,14 @@ int _fcloseall( void );
   
  **Uwaga:** w przypadku używania tych funkcji można zamknąć strumienia deskryptorów plików i systemu operacyjnego dojście do pliku (lub podstawowej gniazda) są zamknięte, a także strumień. W związku z tym jeśli pierwotnie został otwarty plik jako plik obsługi lub pliku deskryptora i są zamknięte `fclose`, czy nie również wywołania `_close` do zamknąć deskryptorów plików; nie należy wywoływać funkcji Win32 `CloseHandle` zamknąć dojście do pliku.  
   
- `fclose`i `_fcloseall` zawiera kod, aby zapewnić ochronę przed zakłóceniami z innych wątków. Dla wersji — blokowanie z `fclose`, zobacz `_fclose_nolock`.  
+ `fclose` i `_fcloseall` zawiera kod, aby zapewnić ochronę przed zakłóceniami z innych wątków. Dla wersji — blokowanie z `fclose`, zobacz `_fclose_nolock`.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`fclose`|\<stdio.h >|  
-|`_fcloseall`|\<stdio.h >|  
+|`fclose`|\<stdio.h>|  
+|`_fcloseall`|\<stdio.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -89,6 +92,6 @@ int _fcloseall( void );
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [_zamknij](../../c-runtime-library/reference/close.md)   
  [_fdopen —, _wfdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fflush —](../../c-runtime-library/reference/fflush.md)   
+ [fflush](../../c-runtime-library/reference/fflush.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
  [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)

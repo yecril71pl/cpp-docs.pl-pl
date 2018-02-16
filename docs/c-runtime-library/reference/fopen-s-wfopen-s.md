@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wfopen_s
 - fopen_s
@@ -27,7 +28,8 @@ f1_keywords:
 - fopen_s
 - _tfopen_s
 - _wfopen_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wfopen_s function
 - opening files, for file I/O
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3205577627967fa58c3fbc0d1318a48fc5525561
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 97221d04dcd93fbaa32a3562320d0c098fa001ae
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 Otwiera plik. Te wersje programu [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -70,13 +73,13 @@ errno_t _wfopen_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pFile`  
+ [out] `pFile`  
  Wskaźnik do wskaźnika pliku, który zostanie wyświetlony wskaźnik do otwartego pliku.  
   
- [in]`filename`  
+ [in] `filename`  
  Nazwa pliku.  
   
- [in]`mode`  
+ [in] `mode`  
  Dozwolonego typu dostępu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -84,7 +87,7 @@ errno_t _wfopen_s(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|`pFile`|`filename`|`mode`|Wartość zwracana|Zawartość`pFile`|  
+|`pFile`|`filename`|`mode`|Wartość zwracana|Zawartość `pFile`|  
 |-------------|----------------|------------|------------------|------------------------|  
 |`NULL`|wszystkie|wszystkie|`EINVAL`|Bez zmian|  
 |wszystkie|`NULL`|wszystkie|`EINVAL`|Bez zmian|  
@@ -93,18 +96,18 @@ errno_t _wfopen_s(
 ## <a name="remarks"></a>Uwagi  
  Pliki, które są otwarte przez `fopen_s` i `_wfopen_s` nie są zabezpieczać. Jeśli potrzebujesz, że plik można zabezpieczać, użyj [_fsopen —, _wfsopen —](../../c-runtime-library/reference/fsopen-wfsopen.md) z odpowiedniego udostępniania stałą tryb — na przykład `_SH_DENYNO` udostępniania odczytu/zapisu.  
   
- `fopen_s` Funkcja otwiera plik, który jest określony przez `filename`. `_wfopen_s`jest to wersja znaków dwubajtowych `fopen_s`; argumenty `_wfopen_s` są ciągami znaków dwubajtowych. `_wfopen_s`i `fopen_s` zachowują się tak samo w przeciwnym razie wartość.  
+ `fopen_s` Funkcja otwiera plik, który jest określony przez `filename`. `_wfopen_s` jest to wersja znaków dwubajtowych `fopen_s`; argumenty `_wfopen_s` są ciągami znaków dwubajtowych. `_wfopen_s` i `fopen_s` zachowują się tak samo w przeciwnym razie wartość.  
   
- `fopen_s`akceptuje ścieżek, które są prawidłowe w systemie plików w punkcie wykonywania; Ścieżki UNC ani ścieżki, obejmujących zamapowane dyski sieciowe są akceptowane przez `fopen_s` tak długo, jak system, który jest wykonywany kod ma dostęp do udziału lub mapowany dysk sieciowy w czasie wykonywania. Podczas konstruowania ścieżki `fopen_s`, nie są przenoszone założeń dotyczących dostępności dysków, ścieżek lub udziały sieciowe w środowisku wykonywania. Możesz użyć ukośnikami (/) lub ukośników odwrotnych (\\) jako separatorów katalog w ścieżce.  
+ `fopen_s` akceptuje ścieżek, które są prawidłowe w systemie plików w punkcie wykonywania; Ścieżki UNC ani ścieżki, obejmujących zamapowane dyski sieciowe są akceptowane przez `fopen_s` tak długo, jak system, który jest wykonywany kod ma dostęp do udziału lub mapowany dysk sieciowy w czasie wykonywania. Podczas konstruowania ścieżki `fopen_s`, nie są przenoszone założeń dotyczących dostępności dysków, ścieżek lub udziały sieciowe w środowisku wykonywania. Możesz użyć ukośnikami (/) lub ukośników odwrotnych (\\) jako separatorów katalog w ścieżce.  
   
  Te funkcje walidację ich parametrów. Jeśli `pFile`, `filename`, lub `mode` jest wskaźnika o wartości null, te funkcje wygeneruje wyjątek nieprawidłowy parametr, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).  
   
  Zawsze sprawdzić wartość zwrotną, aby zobaczyć, czy funkcja zakończyła się pomyślnie, przed wykonaniem jakichkolwiek dalszych działań na plik. Jeśli wystąpi błąd, zostanie zwrócony kod błędu i zmiennej globalnej `errno` jest ustawiona. Aby uzyskać więcej informacji, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="unicode-support"></a>Obsługa formatu Unicode  
- `fopen_s`obsługuje strumienie pliku Unicode. Aby otworzyć nowy lub istniejący plik Unicode, należy przekazać `ccs` Flaga, która określa żądaną kodowanie `fopen_s`:  
+ `fopen_s` obsługuje strumienie pliku Unicode. Aby otworzyć nowy lub istniejący plik Unicode, należy przekazać `ccs` Flaga, która określa żądaną kodowanie `fopen_s`:  
   
- `fopen_s(&fp, "newfile.txt", "rw, ccs=`*kodowanie*`");`  
+ `fopen_s(&fp, "newfile.txt", "rw, ccs=`*encoding*`");`  
   
  Dozwolone wartości *kodowanie* są `UNICODE`, `UTF-8`, i `UTF-16LE`. Jeśli istnieje nie określono wartości dla *kodowanie*, `fopen_s` używa kodowania ANSI.  
   
@@ -117,7 +120,7 @@ errno_t _wfopen_s(
   
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Na podstawie używane kodowanie ccs flagę i BOM  
   
-|`ccs`Flaga|Nie BOM (lub nowy plik)|BOM: UTF-8|BOM: UTF-16|  
+|`ccs` Flaga|Nie BOM (lub nowy plik)|BOM: UTF-8|BOM: UTF-16|  
 |----------------|----------------------------|-----------------|------------------|  
 |`UNICODE`|`UTF-16LE`|`UTF-8`|`UTF-16LE`|  
 |`UTF-8`|`UTF-8`|`UTF-8`|`UTF-16LE`|  
@@ -199,14 +202,14 @@ errno_t _wfopen_s(
   
  Prawidłowe znaki `mode` parametry używane w `fopen_s` i `_fdopen` odpowiadają `oflag` argumenty użyte w [_otwórz](../../c-runtime-library/reference/open-wopen.md) i [_sopen —](../../c-runtime-library/reference/sopen-wsopen.md), wykonując następujące czynności.  
   
-|Znaki w ciągu tryb|Odpowiednik `oflag` wartość`_open`/`_sopen`|  
+|Znaki w ciągu tryb|Odpowiednik `oflag` wartość `_open`/`_sopen`|  
 |-------------------------------|----------------------------------------------------|  
-|`a`|`_O_WRONLY &#124; _O_APPEND`(zazwyczaj `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
-|`a+`|`_O_RDWR &#124; _O_APPEND`(zazwyczaj `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
+|`a`|`_O_WRONLY &#124; _O_APPEND` (zazwyczaj `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
+|`a+`|`_O_RDWR &#124; _O_APPEND` (zazwyczaj `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`(zazwyczaj `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
-|`w+`|`_O_RDWR`(zazwyczaj `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w`|`_O_WRONLY` (zazwyczaj `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w+`|`_O_RDWR` (zazwyczaj `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|Brak|  
@@ -225,7 +228,7 @@ errno_t _wfopen_s(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`fopen_s`|\<stdio.h >|  
+|`fopen_s`|\<stdio.h>|  
 |`_wfopen_s`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -304,7 +307,7 @@ Number of files closed by _fcloseall: 1
  [fclose —, _fcloseall —](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [_fdopen —, _wfdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md)   
  [ferror —](../../c-runtime-library/reference/ferror.md)   
- [_fileno —](../../c-runtime-library/reference/fileno.md)   
+ [_fileno](../../c-runtime-library/reference/fileno.md)   
  [freopen —, _wfreopen —](../../c-runtime-library/reference/freopen-wfreopen.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_setmode](../../c-runtime-library/reference/setmode.md)

@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _free_dbg
 apilocation:
@@ -39,11 +39,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 575c683ed1726d9bcaf5e4a1eb850f4b589b4492
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: fa3df169a968313d2a29fbf9c08643748d3196d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freedbg"></a>_free_dbg
 Zwalnia blok pamięci sterty (tylko wersja do debugowania).  
@@ -67,7 +67,7 @@ void _free_dbg(
 ## <a name="remarks"></a>Uwagi  
  `_free_dbg` Funkcji jest wersja debugowania [wolnego](../../c-runtime-library/reference/free.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_free_dbg` zostanie zmniejszona do wywołania `free`. Zarówno `free` i `_free_dbg` wolne blok pamięci w stosie podstawowy, ale `_free_dbg` bierze pod uwagę dwie funkcje debugowania: blokuje możliwość przechowywania zwolnionych w połączonej listy sterty symulacji niedobór pamięci i parametr typu bloku, aby zwolnić typy alokacji określone.  
   
- `_free_dbg`wykonuje sprawdzanie poprawności dla wszystkich określonych plików i lokalizacje bloku przed wykonaniem operacji wolne. Aplikacja nie powinien zapewniać te informacje. Gdy zostanie zwolniona blok pamięci, menedżera sterty debugowania automatycznie sprawdza spójność buforów po obu stronach części użytkownika i wystawia raportu o błędach, jeśli przeprowadzono zastępowanie. Jeśli `_CRTDBG_DELAY_FREE_MEM_DF` pola bitowego ze [_crtdbgflag —](../../c-runtime-library/crtdbgflag.md) flaga jest ustawiona, zwolnionych bloku jest wypełniony przypisanej wartości 0xDD, `_FREE_BLOCK` blokować typu i przechowywane w stercie połączonej listy bloków pamięci.  
+ `_free_dbg` wykonuje sprawdzanie poprawności dla wszystkich określonych plików i lokalizacje bloku przed wykonaniem operacji wolne. Aplikacja nie powinien zapewniać te informacje. Gdy zostanie zwolniona blok pamięci, menedżera sterty debugowania automatycznie sprawdza spójność buforów po obu stronach części użytkownika i wystawia raportu o błędach, jeśli przeprowadzono zastępowanie. Jeśli `_CRTDBG_DELAY_FREE_MEM_DF` pola bitowego ze [_crtdbgflag —](../../c-runtime-library/crtdbgflag.md) flaga jest ustawiona, zwolnionych bloku jest wypełniony przypisanej wartości 0xDD, `_FREE_BLOCK` blokować typu i przechowywane w stercie połączonej listy bloków pamięci.  
   
  W przypadku wystąpienia błędu w zwolnić pamięć, `errno` ustawiono informacje z systemu operacyjnego od charakteru błędu. Aby uzyskać więcej informacji, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   

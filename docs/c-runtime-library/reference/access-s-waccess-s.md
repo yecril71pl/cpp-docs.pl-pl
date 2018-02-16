@@ -1,12 +1,13 @@
 ---
-title: "_access_s —, _waccess_s — | Dokumentacja firmy Microsoft"
+title: _access_s, _waccess_s | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _access_s
 - _waccess_s
@@ -28,7 +29,8 @@ f1_keywords:
 - access_s
 - _waccess_s
 - _access_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - access_s function
 - taccess_s function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f562d62f3edb1f09fe6d7ebe7b509411ad2dc8c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fca577dee68bef8da30a8e6fe64aa3478ceeffe8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="accesss-waccesss"></a>_access_s, _waccess_s
 Określa uprawnienia odczytu/zapisu do pliku. To jest wersja [_access —, _waccess —](../../c-runtime-library/reference/access-waccess.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -97,7 +100,7 @@ errno_t _waccess_s(
   
  Uprawnienia do odczytu lub zapisu pliku nie jest wystarczająco, aby zapewnić możliwość otwarcia pliku. Na przykład, jeśli plik jest zablokowany przez inny proces, może nie być on dostępny nawet jeśli `_access_s` zwraca wartość 0.  
   
- `_waccess_s`jest to wersja znaków dwubajtowych `_access_s`, gdzie `path` argument `_waccess_s` jest ciągiem znaków dwubajtowych. W przeciwnym razie `_waccess_s` i `_access_s` zachowują się tak samo.  
+ `_waccess_s` jest to wersja znaków dwubajtowych `_access_s`, gdzie `path` argument `_waccess_s` jest ciągiem znaków dwubajtowych. W przeciwnym razie `_waccess_s` i `_access_s` zachowują się tak samo.  
   
  Te funkcje walidację ich parametrów. Jeśli `path` jest `NULL` lub `mode` nie określa prawidłowego trybu, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwracać `EINVAL`.  
   
@@ -111,8 +114,8 @@ errno_t _waccess_s(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_access_s`|\<IO.h >|\<errno.h >|  
-|`_waccess_s`|\<WChar.h > lub \<io.h >|\<errno.h >|  
+|`_access_s`|\<io.h>|\<errno.h>|  
+|`_waccess_s`|\<WChar.h > lub \<io.h >|\<errno.h>|  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie użyto `_access_s` sprawdzić plik o nazwie crt_access_s.c, aby sprawdzić, czy istnieje i czy jest dozwolone zapisu.  
@@ -159,8 +162,8 @@ File crt_access_s.c does not have write permission.
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_access —, _waccess —](../../c-runtime-library/reference/access-waccess.md)   
- [_chmod —, _wchmod —](../../c-runtime-library/reference/chmod-wchmod.md)   
- [_fstat —, _fstat32 —, _fstat64 —, _fstati64 — _fstat32i64 —, _fstat64i32 —](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_stat, _wstat — funkcje](../../c-runtime-library/reference/stat-functions.md)

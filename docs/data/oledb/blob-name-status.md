@@ -4,41 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: BLOB_NAME_STATUS
-dev_langs: C++
-helpviewer_keywords: BLOB_NAME_STATUS macro
+f1_keywords:
+- BLOB_NAME_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB_NAME_STATUS macro
 ms.assetid: 4564e4a0-8e5e-436a-bd1e-012d2a1b8642
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 35cbd313bce1e0bc22a4ee0fe70d18f577d901f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea0afe904df6f645d5f7ab8ed122d4cde56bf299
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="blobnamestatus"></a>BLOB_NAME_STATUS
 Używane z `BEGIN_COLUMN_MAP` i `END_COLUMN_MAP` powiązać dużego obiektu binarnego ([obiektu BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), ale to makro również pobiera stan kolumny danych obiektów BLOB.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-BLOB_NAME_STATUS(  
-pszName  
-,   
-IID  
-,   
-flags  
-,   
-data  
+```cpp
+BLOB_NAME_STATUS(pszName, IID, flags, data  
 , status )  
 ```  
   
@@ -46,7 +42,7 @@ data
  `pszName`  
  [in] Wskaźnik do nazwy kolumny. Nazwa musi być ciągiem Unicode. Można to zrobić przez umieszczenie "L" przed nazwą, na przykład: `L"MyColumn"`.  
   
- *IDENTYFIKATOR IID*  
+ *IID*  
  [in] Interfejs identyfikatora GUID, takich jak **IDD_ISequentialStream**, używana do pobrania obiektu BLOB.  
   
  `flags`  
@@ -55,7 +51,7 @@ data
  `data`  
  [in] Odpowiedni element członkowski danych w rekordzie użytkownika.  
   
- *Stan*  
+ *status*  
  [out] Stan pola obiektu BLOB.  
   
 ## <a name="requirements"></a>Wymagania  

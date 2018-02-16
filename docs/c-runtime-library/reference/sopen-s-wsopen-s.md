@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sopen_s
 - _wsopen_s
@@ -28,7 +29,8 @@ f1_keywords:
 - wsopen_s
 - _wsopen_s
 - sopen_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sopen_s function
 - _wsopen_s function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 403fc7f285aeebf5fc7b6d4ebb39d1e922d8edc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 67bc88f047806e21245389837b9f712d3491033a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sopens-wsopens"></a>_sopen_s, _wsopen_s
 Otwiera plik do udostępniania. Te wersje programu [_sopen — i _wsopen —](../../c-runtime-library/reference/sopen-wsopen.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -72,19 +75,19 @@ errno_t _wsopen_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pfh`  
+ [out] `pfh`  
  Dojście do pliku, lub wartość -1 w przypadku błędu.  
   
- [in]`filename`  
+ [in] `filename`  
  Nazwa pliku.  
   
- [in]`oflag`  
+ [in] `oflag`  
  Rodzaj operacji dozwolone.  
   
- [in]`shflag`  
+ [in] `shflag`  
  Rodzaj udostępnianie dozwolone.  
   
- [in]`pmode`  
+ [in] `pmode`  
  Ustawienie uprawnień.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -94,7 +97,7 @@ errno_t _wsopen_s(
  Podana ścieżka jest katalogiem, lub plik jest tylko do odczytu, ale próbowano otwarty do zapisu.  
   
  `EEXIST`  
- `_O_CREAT`i `_O_EXCL` flagi zostały określone, ale `filename` już istnieje.  
+ `_O_CREAT` i `_O_EXCL` flagi zostały określone, ale `filename` już istnieje.  
   
  `EINVAL`  
  Nieprawidłowy `oflag`, `shflag`, lub `pmode` argumentu, lub `pfh` lub `filename` został wskaźnika o wartości null.  
@@ -112,7 +115,7 @@ errno_t _wsopen_s(
  W przypadku błędu -1, jest zwracany za pomocą `pfh` (chyba że `pfh` wskaźnik null).  
   
 ## <a name="remarks"></a>Uwagi  
- `_sopen_s` Funkcja otwiera plik określony przez `filename` i przygotowuje plik do udostępnionego odczytu lub zapisu, zgodnie z definicją w `oflag` i `shflag`. `_wsopen_s`jest to wersja znaków dwubajtowych `_sopen_s`; `filename` argument `_wsopen_s` jest ciągiem znaków dwubajtowych. `_wsopen_s`i `_sopen_s` zachowują się tak samo w przeciwnym razie wartość.  
+ `_sopen_s` Funkcja otwiera plik określony przez `filename` i przygotowuje plik do udostępnionego odczytu lub zapisu, zgodnie z definicją w `oflag` i `shflag`. `_wsopen_s` jest to wersja znaków dwubajtowych `_sopen_s`; `filename` argument `_wsopen_s` jest ciągiem znaków dwubajtowych. `_wsopen_s` i `_sopen_s` zachowują się tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -159,7 +162,7 @@ errno_t _wsopen_s(
  Otwiera plik w trybie tekstowym (translacji). (Aby uzyskać więcej informacji, zobacz [tekstu i we/wy binarne trybu pliku](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [fopen —](../../c-runtime-library/reference/fopen-wfopen.md).)  
   
  `_O_TRUNC`  
- Otwiera plik i obcina go do zera length; Plik musi mieć uprawnienia do zapisu. Nie można określić za pomocą `_O_RDONLY`. `_O_TRUNC`używane z `_O_CREAT` otwiera istniejący plik lub tworzy plik.  
+ Otwiera plik i obcina go do zera length; Plik musi mieć uprawnienia do zapisu. Nie można określić za pomocą `_O_RDONLY`. `_O_TRUNC` używane z `_O_CREAT` otwiera istniejący plik lub tworzy plik.  
   
 > [!NOTE]
 >  `_O_TRUNC` Flagi niszczy zawartość określonego pliku.  
@@ -196,7 +199,7 @@ errno_t _wsopen_s(
  `_SH_DENYNO`  
  Zezwoleń do odczytu i zapisu.  
   
- `pmode` Zawsze jest wymagany, w odróżnieniu od w `_sopen`. Po określeniu `_O_CREAT`, jeśli plik nie istnieje, `pmode` określa ustawienia uprawnień pliku, które są ustawione, gdy nowy plik jest zamknięte po raz pierwszy. W przeciwnym razie `pmode` jest ignorowana. `pmode`jest wyrażeniem liczby całkowitej, która zawiera jedną lub obie z manifestu stałe `_S_IWRITE` i `_S_IREAD`, które są zdefiniowane w \<sys\stat.h >. Zarówno stałe są podane, są połączone z operator Alternatywy. Znaczenie `pmode` ma następującą składnię.  
+ `pmode` Zawsze jest wymagany, w odróżnieniu od w `_sopen`. Po określeniu `_O_CREAT`, jeśli plik nie istnieje, `pmode` określa ustawienia uprawnień pliku, które są ustawione, gdy nowy plik jest zamknięte po raz pierwszy. W przeciwnym razie `pmode` jest ignorowana. `pmode` jest wyrażeniem liczby całkowitej, która zawiera jedną lub obie z manifestu stałe `_S_IWRITE` i `_S_IREAD`, które są zdefiniowane w \<sys\stat.h >. Zarówno stałe są podane, są połączone z operator Alternatywy. Znaczenie `pmode` ma następującą składnię.  
   
  `_S_IWRITE`  
  Zapisywanie dozwolone.  
@@ -209,16 +212,16 @@ errno_t _wsopen_s(
   
  Jeśli uprawnienia do zapisu nie zostanie podany, plik jest tylko do odczytu. W systemie operacyjnym Windows wszystkie pliki są do odczytu; nie jest możliwe nadaj uprawnienia tylko do zapisu. W związku z tym tryby `_S_IWRITE` i `_S_IREAD | _S_IWRITE` są równoważne.  
   
- `_sopen_s`stosuje bieżący maskę pliku uprawnień do `pmode` przed uprawnienia zostały ustawione. (Zobacz [_umask —](../../c-runtime-library/reference/umask.md).)  
+ `_sopen_s` stosuje bieżący maskę pliku uprawnień do `pmode` przed uprawnienia zostały ustawione. (Zobacz [_umask —](../../c-runtime-library/reference/umask.md).)  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_sopen_s`|\<IO.h >|\<fcntl.h >, \<sys\types.h >, \<sys\stat.h >, \<share.h >|  
-|`_wsopen_s`|\<IO.h > lub \<wchar.h >|\<fcntl.h >, \<sys/types.h >, \<sys/stat.h >, \<share.h >|  
+|`_sopen_s`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
+|`_wsopen_s`|\<IO.h > lub \<wchar.h >|\<fcntl.h>, \<sys/types.h>, \<sys/stat.h>, \<share.h>|  
   
- `_sopen_s`i `_wsopen_s` są rozszerzenia Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+ `_sopen_s` i `_wsopen_s` są rozszerzenia Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Przykład  
  Zobacz przykład [_locking —](../../c-runtime-library/reference/locking.md).  
@@ -226,7 +229,7 @@ errno_t _wsopen_s(
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)   
  [_zamknij](../../c-runtime-library/reference/close.md)   
- [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_fsopen —, _wfsopen —](../../c-runtime-library/reference/fsopen-wfsopen.md)   
+ [_fsopen, _wfsopen](../../c-runtime-library/reference/fsopen-wfsopen.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

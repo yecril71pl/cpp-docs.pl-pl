@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - va_arg
 - va_end
@@ -32,7 +33,8 @@ f1_keywords:
 - va_dcl
 - va_copy
 - va_end
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - variable argument lists, accessing
 - va_start macro
@@ -44,16 +46,17 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d131a02caf931a7696076094372678741c7a897e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 91d3b2037e131f071feb2f22dfe25c21d3af2562
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 Uzyskuje dostęp do listy zmiennych argumentów.  
@@ -89,7 +92,7 @@ void va_start(
  Wskaźnik do listy argumentów.  
   
  `dest`  
- Wskaźnik do listę argumentów, aby można było zainicjować z`src`  
+ Wskaźnik do listę argumentów, aby można było zainicjować z `src`  
   
  `src`  
  Wskaźnik do zainicjowane listę argumentów, aby skopiować do `dest`.  
@@ -98,7 +101,7 @@ void va_start(
  Parametr poprzedzający pierwszy argument opcjonalny.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `va_arg`Zwraca bieżący argumentu. `va_copy`, `va_start` i `va_end` nie zwracają wartości.  
+ `va_arg` Zwraca bieżący argumentu. `va_copy`, `va_start` i `va_end` nie zwracają wartości.  
   
 ## <a name="remarks"></a>Uwagi  
  `va_arg`, `va_copy`, `va_end`, I `va_start` makra umożliwiają przenośnych uzyskać dostęp do argumentów do funkcji, gdy funkcja przyjmuje zmienną liczbę argumentów. Istnieją dwie wersje makr: makra zdefiniowane w STDARG. H odpowiadają C99 ISO standard. makra zdefiniowane w VARARGS. H są przestarzałe, ale zostaną zachowane dla zgodności z poprzednimi wersjami z kodu napisanego przed standardowe C89 ANSI.  
@@ -107,13 +110,13 @@ void va_start(
   
  C standard makra, zdefiniowane w STDARG. H, są używane w następujący sposób:  
   
--   `va_start`Ustawia `arg_ptr` do pierwszego argumentu opcjonalna lista argumentów została przekazana do funkcji. Argument `arg_ptr` musi mieć `va_list` typu. Argument `prev_param` jest nazwą wymaganym parametrem, który bezpośrednio przed pierwszym opcjonalny argument w liście argumentów. Jeśli `prev_param` jest zadeklarowana w klasie magazynu rejestru zachowanie makro jest niezdefiniowane. `va_start`musi być używany przed `va_arg` służy po raz pierwszy.  
+-   `va_start` Ustawia `arg_ptr` do pierwszego argumentu opcjonalna lista argumentów została przekazana do funkcji. Argument `arg_ptr` musi mieć `va_list` typu. Argument `prev_param` jest nazwą wymaganym parametrem, który bezpośrednio przed pierwszym opcjonalny argument w liście argumentów. Jeśli `prev_param` jest zadeklarowana w klasie magazynu rejestru zachowanie makro jest niezdefiniowane. `va_start` musi być używany przed `va_arg` służy po raz pierwszy.  
   
--   `va_arg`pobiera wartość `type` z lokalizacji, która jest określany przez `arg_ptr`i zwiększa `arg_ptr` wskaż dalej argumentu na liście przy użyciu rozmiaru `type` ustalenie, gdzie argument dalej uruchamiana. `va_arg`może być używana dowolna liczba razy w funkcji do pobrania z listy argumentów.  
+-   `va_arg` pobiera wartość `type` z lokalizacji, która jest określany przez `arg_ptr`i zwiększa `arg_ptr` wskaż dalej argumentu na liście przy użyciu rozmiaru `type` ustalenie, gdzie argument dalej uruchamiana. `va_arg` może być używana dowolna liczba razy w funkcji do pobrania z listy argumentów.  
   
--   `va_copy`Tworzy kopię listy argumentów w jego bieżącym stanie. `src` Parametru już musi zostać zainicjowany z `va_start`; zostały zaktualizowane z `va_arg` wywołuje, ale nie musi być zresetowana z zastosowaniem `va_end`. Argument dalej, które są pobierane przez `va_arg` z `dest` jest taki sam jak argument dalej, które są pobierane z `src`.  
+-   `va_copy` Tworzy kopię listy argumentów w jego bieżącym stanie. `src` Parametru już musi zostać zainicjowany z `va_start`; zostały zaktualizowane z `va_arg` wywołuje, ale nie musi być zresetowana z zastosowaniem `va_end`. Argument dalej, które są pobierane przez `va_arg` z `dest` jest taki sam jak argument dalej, które są pobierane z `src`.  
   
--   Po pobraniu wszystkich argumentów `va_end` resetuje wskaźnik do **NULL**. `va_end`musi zostać wywołana w każdym listy argumentów, który został zainicjowany przy `va_start` lub `va_copy` przed funkcja zwraca wartość.  
+-   Po pobraniu wszystkich argumentów `va_end` resetuje wskaźnik do **NULL**. `va_end` musi zostać wywołana w każdym listy argumentów, który został zainicjowany przy `va_start` lub `va_copy` przed funkcja zwraca wartość.  
   
 > [!NOTE]
 >  Makra w VARARGS. H są przestarzałe i są przechowywane tylko dla zapewnienia zgodności z kodu napisanego przed standardu ANSI C89. We wszystkich innych przypadkach użyj makra w STDARGS. H.  

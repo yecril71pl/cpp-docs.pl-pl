@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wrmdir
 - _rmdir
@@ -29,7 +30,8 @@ f1_keywords:
 - wrmdir
 - _rmdir
 - _wrmdir
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _rmdir function
 - directories [C++], deleting
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d926158275e56c6d845d73fe2d8b4092a84c096c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 527b9baa6da22ae33ef0bd14ded46780aecaa0d2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 Usuwa katalog.  
@@ -79,7 +82,7 @@ int _wrmdir(
  `ENOENT`  
  Ścieżka jest nieprawidłowa.  
   
- **EACCES —**  
+ **EACCES**  
  Program ma otwarte dojście do katalogu.  
   
  Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
@@ -87,7 +90,7 @@ int _wrmdir(
 ## <a name="remarks"></a>Uwagi  
  `_rmdir` Funkcja usuwa katalogu określonego przez `dirname`. Katalog może być pusta i nie może być bieżący katalog roboczy lub katalogu głównego.  
   
- `_wrmdir`jest to wersja znaków dwubajtowych `_rmdir`; `dirname` argument `_wrmdir` jest ciągiem znaków dwubajtowych. `_wrmdir`i `_rmdir` zachowują się tak samo w przeciwnym razie wartość.  
+ `_wrmdir` jest to wersja znaków dwubajtowych `_rmdir`; `dirname` argument `_wrmdir` jest ciągiem znaków dwubajtowych. `_wrmdir` i `_rmdir` zachowują się tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -99,7 +102,7 @@ int _wrmdir(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_rmdir`|\<Direct.h >|  
+|`_rmdir`|\<direct.h>|  
 |`_wrmdir`|\<Direct.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -112,5 +115,5 @@ int _wrmdir(
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrola katalogu](../../c-runtime-library/directory-control.md)   
- [_chdir —, _wchdir —](../../c-runtime-library/reference/chdir-wchdir.md)   
+ [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
  [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)

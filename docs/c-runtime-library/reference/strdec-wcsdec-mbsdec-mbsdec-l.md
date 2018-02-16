@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcsdec
 - _strdec
@@ -34,7 +35,8 @@ f1_keywords:
 - mbsdec
 - wcsdec
 - _wcsdec
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - mbsdec_l function
 - mbsdec function
@@ -47,22 +49,23 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 46e905408faed138b1509362a1ec56e727742ce9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 824e7a8c18d53438cdf77fba9449d8139217543e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 Przenosi ciąg wskaźnik wstecz o jeden znak.  
   
 > [!IMPORTANT]
->  `mbsdec`i `mbsdec_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `mbsdec` i `mbsdec_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -97,12 +100,12 @@ unsigned char *_mbsdec_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_mbsdec`, `_mbsdec_l`, `_strdec`, i `_wcsdec` znak, który bezpośrednio przed każdym zwraca wskaźnik `current`; `_mbsdec` zwraca `NULL` Jeśli wartość `start` jest większa lub równa tej właściwości `current`. `_tcsdec`mapy do jednej z tych funkcji i zwracanych wartości zależy od mapowania.  
+ `_mbsdec`, `_mbsdec_l`, `_strdec`, i `_wcsdec` znak, który bezpośrednio przed każdym zwraca wskaźnik `current`; `_mbsdec` zwraca `NULL` Jeśli wartość `start` jest większa lub równa tej właściwości `current`. `_tcsdec` mapy do jednej z tych funkcji i zwracanych wartości zależy od mapowania.  
   
 ## <a name="remarks"></a>Uwagi  
  `_mbsdec` i `_mbsdec_l` funkcje zwraca wskaźnik do pierwszego bajtu znaków wielobajtowych, znajdującego się bezpośrednio przed `current` w ciągu, który zawiera `start`.  
   
- Wartość wyjściowa jest zagrożony ustawienie `LC_CTYPE` ustawienie kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji.  `_mbsdec`rozpoznaje wielobajtowych sekwencji znaków zgodnie z ustawień regionalnych, który jest obecnie używany, gdy `_mbsdec_l` jest identyczny z tą różnicą, że parametr ustawień regionalnych, który jest przekazywany w zamian używa. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ Wartość wyjściowa jest zagrożony ustawienie `LC_CTYPE` ustawienie kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji.  `_mbsdec` rozpoznaje wielobajtowych sekwencji znaków zgodnie z ustawień regionalnych, który jest obecnie używany, gdy `_mbsdec_l` jest identyczny z tą różnicą, że parametr ustawień regionalnych, który jest przekazywany w zamian używa. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
  Jeśli `start` lub `current` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca `EINVAL` i ustawia `errno` do `EINVAL`.  
   
@@ -115,7 +118,7 @@ unsigned char *_mbsdec_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsdec`|`_strdec`|`_mbsdec`|`_wcsdec`|  
   
- `_strdec`i `_wcsdec` pojedynczych bajtów znaków i znaków dwubajtowych wersji `_mbsdec` i `_mbsdec_l`. `_strdec`i `_wcsdec` są dostępne tylko dla tego mapowania i nie powinna być używana w inny sposób.  
+ `_strdec` i `_wcsdec` pojedynczych bajtów znaków i znaków dwubajtowych wersji `_mbsdec` i `_mbsdec_l`. `_strdec` i `_wcsdec` są dostępne tylko dla tego mapowania i nie powinna być używana w inny sposób.  
   
  Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania zwykłego tekstu](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania zwykłego tekstu](../../c-runtime-library/generic-text-mappings.md).  
   
@@ -123,10 +126,10 @@ unsigned char *_mbsdec_l(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_mbsdec`|\<mbstring.h >|\<mbctype.h >|  
-|`_mbsdec_l`|\<mbstring.h >|\<mbctype.h >|  
-|`_strdec`|\<tchar.h >||  
-|`_wcsdec`|\<tchar.h >||  
+|`_mbsdec`|\<mbstring.h>|\<mbctype.h>|  
+|`_mbsdec_l`|\<mbstring.h>|\<mbctype.h>|  
+|`_strdec`|\<tchar.h>||  
+|`_wcsdec`|\<tchar.h>||  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

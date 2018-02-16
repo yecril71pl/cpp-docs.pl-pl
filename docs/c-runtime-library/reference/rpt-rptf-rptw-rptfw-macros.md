@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -39,7 +40,8 @@ f1_keywords:
 - _RPTF3
 - RPT2
 - _RPTF1
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _RPTW3 macro
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - RPTFW1 macro
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 453b04174325a7c112105bdef1147e1b7909ccdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 51668f9b286a6b438d7f7b686114b2fcf70c25ed
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW — Makra
 Śledzi postęp aplikacji przez Generowanie raportu debugowania (tylko wersja do debugowania). Należy pamiętać, że  *n*  określa liczbę argumentów `args` i może być 0, 1, 2, 3, 4 i 5.  
@@ -154,7 +157,7 @@ _RPTFWn(
   
  `_RPT` Wywołanie makra [_crtdbgreport —](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) funkcji, aby wygenerować raport debugowania z następującym komunikatem użytkownika. `_RPTW` Wywołanie makra `_CrtDbgReportW` funkcji do generowania jednym raporcie z znaki dwubajtowe. `_RPTF` i `_RPTFW` makra utworzyć raport debugowania z liczbą plików i wierszy źródła gdzie makro raportu została wywołana, oprócz komunikat użytkownika. Zostanie utworzony komunikat użytkownika, zastępując `arg`[*n*] argumenty do `format` ciąg znaków, według reguł zdefiniowanych przez [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) funkcji.  
   
- `_CrtDbgReport`lub `_CrtDbgReportW` generuje raport debugowania i określa jej miejsc docelowych oparte na trybie Bieżące raportu i plik zdefiniowane dla `reportType`. [_Crtsetreportmode —](../../c-runtime-library/reference/crtsetreportmode.md) i [_crtsetreportfile —](../../c-runtime-library/reference/crtsetreportfile.md) funkcje są używane do definiowania miejsc docelowych dla każdego typu raportu.  
+ `_CrtDbgReport` lub `_CrtDbgReportW` generuje raport debugowania i określa jej miejsc docelowych oparte na trybie Bieżące raportu i plik zdefiniowane dla `reportType`. [_Crtsetreportmode —](../../c-runtime-library/reference/crtsetreportmode.md) i [_crtsetreportfile —](../../c-runtime-library/reference/crtsetreportfile.md) funkcje są używane do definiowania miejsc docelowych dla każdego typu raportu.  
   
  Jeśli `_RPT` nosi nazwę makra i ani `_CrtSetReportMode` ani `_CrtSetReportFile` została wywołana, komunikaty są wyświetlane w następujący sposób.  
   
@@ -170,12 +173,12 @@ _RPTFWn(
   
 ## <a name="requirements"></a>Wymagania  
   
-|Makra|Wymagany nagłówek|  
+|Macro|Wymagany nagłówek|  
 |-----------|---------------------|  
-|`_RPT`makra|\<crtdbg.h >|  
-|`_RPTF`makra|\<crtdbg.h >|  
-|`_RPTW`makra|\<crtdbg.h >|  
-|`_RPTFW`makra|\<crtdbg.h >|  
+|`_RPT` Makra|\<crtdbg.h>|  
+|`_RPTF` Makra|\<crtdbg.h>|  
+|`_RPTW` Makra|\<crtdbg.h>|  
+|`_RPTFW` Makra|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

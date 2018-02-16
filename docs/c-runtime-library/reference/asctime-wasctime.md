@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wasctime
 - asctime
@@ -27,7 +28,8 @@ f1_keywords:
 - _tasctime
 - asctime
 - _wasctime
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - asctime function
 - tasctime function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 377b785b2803dc7cce09e55baeb31323bf83b4b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c89b43613e1eb82eb35876ea733e13c5d2995352
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="asctime-wasctime"></a>asctime, _wasctime
 Konwertuj `tm` czasu struktury do ciągu znaków. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [asctime_s —, _wasctime_s —](../../c-runtime-library/reference/asctime-s-wasctime-s.md).  
@@ -67,7 +70,7 @@ wchar_t *_wasctime(
  Godzina i Data struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `asctime`Zwraca wskaźnik do wyniku ciąg znaków; `_wasctime` zwraca wskaźnik do wyniku ciąg znaków dwubajtowych. Nie istnieje wartość zwracany błąd.  
+ `asctime` Zwraca wskaźnik do wyniku ciąg znaków; `_wasctime` zwraca wskaźnik do wyniku ciąg znaków dwubajtowych. Nie istnieje wartość zwracany błąd.  
   
 ## <a name="remarks"></a>Uwagi  
  Bezpieczniejsza wersje te funkcje są dostępne; zobacz [asctime_s —, _wasctime_s —](../../c-runtime-library/reference/asctime-s-wasctime-s.md).  
@@ -88,9 +91,9 @@ wchar_t *_wasctime(
   
  Ciąg przekonwertowany znaków jest również dostosowywana zgodnie z ustawieniami strefy czasu lokalnego. Informacje o konfigurowaniu czasu lokalnego, zobacz [czasu](../../c-runtime-library/reference/time-time32-time64.md), [_ftime —](../../c-runtime-library/reference/ftime-ftime32-ftime64.md), i [konwersję](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) funkcje i [_tzset —](../../c-runtime-library/reference/tzset.md) — funkcja Aby uzyskać informacji na temat definiowania strefy czasowej środowiska i zmiennych globalnych.  
   
- Wynik ciąg utworzony przez `asctime` zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0`. 24-godzinnym jest używany. Wszystkie pola mają stałej szerokości. Znak nowego wiersza i znaku null zajmują ostatnich dwóch pozycji w ciągu. `asctime`używa buforu jednej, statycznie przydzielonego do przechowywania zwracany ciąg. Każde wywołanie tej funkcji niszczy wynik poprzedniego wywołania.  
+ Wynik ciąg utworzony przez `asctime` zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0`. 24-godzinnym jest używany. Wszystkie pola mają stałej szerokości. Znak nowego wiersza i znaku null zajmują ostatnich dwóch pozycji w ciągu. `asctime` używa buforu jednej, statycznie przydzielonego do przechowywania zwracany ciąg. Każde wywołanie tej funkcji niszczy wynik poprzedniego wywołania.  
   
- `_wasctime`jest to wersja znaków dwubajtowych `asctime`. `_wasctime`i `asctime` zachowują się tak samo w przeciwnym razie wartość.  
+ `_wasctime` jest to wersja znaków dwubajtowych `asctime`. `_wasctime` i `asctime` zachowują się tak samo w przeciwnym razie wartość.  
   
  Te funkcje walidację ich parametrów. Jeśli `timeptr` jest wskaźnika o wartości null lub zawiera wartości spoza zakresu, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca `NULL` i ustawia `errno` do `EINVAL`.  
   
@@ -104,7 +107,7 @@ wchar_t *_wasctime(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`asctime`|\<Time.h >|  
+|`asctime`|\<time.h>|  
 |`_wasctime`|\<Time.h > lub \<wchar.h >|  
   
 ## <a name="example"></a>Przykład  
@@ -140,10 +143,10 @@ Current date and time: Sun Feb 03 11:38:58 2002
   
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
- [ctime —, _ctime32 —, _ctime64 —, _wctime — _wctime32 —, _wctime64 —](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [_ftime —, _ftime32 —, _ftime64 —](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime —, _gmtime32 —, _gmtime64 —](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
  [czas lokalny, _localtime32 —, _localtime64 —](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [czas, _time32 —, _time64 —](../../c-runtime-library/reference/time-time32-time64.md)   
- [_tzset —](../../c-runtime-library/reference/tzset.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
+ [_tzset](../../c-runtime-library/reference/tzset.md)   
  [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)

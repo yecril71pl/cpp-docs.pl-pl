@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ftelli64_nolock
 - _ftell_nolock
@@ -28,7 +29,8 @@ f1_keywords:
 - ftelli64_nolock
 - ftell_nolock
 - _ftell_nolock
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ftelli64_nolock function
 - _ftelli64_nolock function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 24d5ad81bb19f5a33eb70f6dc40ef41cc5d761d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 56f40af318ce2c1684ded8fe03ddc98ba1b219f8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
 Pobiera bieżącą pozycję wskaźnika pliku, bez blokowania wątku.  
@@ -75,14 +78,14 @@ __int64 _ftelli64_nolock(
   
 |Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|  
 |--------------|---------------------|---------------------|  
-|`ftell_nolock`|\<stdio.h >|\<errno.h >|  
-|`_ftelli64_nolock`|\<stdio.h >|\<errno.h >|  
+|`ftell_nolock`|\<stdio.h>|\<errno.h>|  
+|`_ftelli64_nolock`|\<stdio.h>|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [fgetpos —](../../c-runtime-library/reference/fgetpos.md)   
- [fseek, _fseeki64 —](../../c-runtime-library/reference/fseek-fseeki64.md)   
+ [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
  [_lseek —, _lseeki64 —](../../c-runtime-library/reference/lseek-lseeki64.md)   
  [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)

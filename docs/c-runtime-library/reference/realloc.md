@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: realloc
+ms.topic: reference
+apiname:
+- realloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,7 +28,8 @@ f1_keywords:
 - _nrealloc
 - realloc
 - _frealloc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _brealloc function
 - realloc function
@@ -38,16 +41,17 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 525b0f0877471b5bfd6d9fa16551b21908f229a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e378f907c864f534173f746404f853ffa415c70c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="realloc"></a>realloc
 Ponowne przydzielenie bloków pamięci.  
@@ -69,7 +73,7 @@ void *realloc(
  Nowy rozmiar w bajtach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `realloc`Zwraca `void` wskaźnik do bloku pamięci przydzielić (i prawdopodobnie przenoszenia).  
+ `realloc` Zwraca `void` wskaźnik do bloku pamięci przydzielić (i prawdopodobnie przenoszenia).  
   
  Jeśli nie jest za mało dostępnej pamięci, aby rozwinąć blok na dany rozmiar, oryginalnego bloku pozostanie niezmieniona, i `NULL` jest zwracany.  
   
@@ -80,11 +84,11 @@ void *realloc(
 ## <a name="remarks"></a>Uwagi  
  `realloc` Funkcja zmienia rozmiar bloku alokacji pamięci. `memblock` Argument wskazuje na początku bloku pamięci. Jeśli `memblock` jest `NULL`, `realloc` działa tak samo jak `malloc` i przydziela nowy blok `size` bajtów. Jeśli `memblock` nie jest `NULL`, należy go wskaźnik zwrócony przez poprzednie wywołanie `calloc`, `malloc`, lub `realloc`.  
   
- `size` Argument zapewnia nowy rozmiar bloku, w bajtach. Treść bloku nie uległy zmianie do krótszej z nowym i starym rozmiary, chociaż nowego bloku może być w innej lokalizacji. Ponieważ nowy blok może znajdować się w nowej lokalizacji pamięci, wskaźnik zwrócony przez `realloc` nie musi być wskaźnikiem przekazywane `memblock` argumentu. `realloc`nie zero nowoprzydzielonych pamięci w przypadku wzrostu buforu.  
+ `size` Argument zapewnia nowy rozmiar bloku, w bajtach. Treść bloku nie uległy zmianie do krótszej z nowym i starym rozmiary, chociaż nowego bloku może być w innej lokalizacji. Ponieważ nowy blok może znajdować się w nowej lokalizacji pamięci, wskaźnik zwrócony przez `realloc` nie musi być wskaźnikiem przekazywane `memblock` argumentu. `realloc` nie zero nowoprzydzielonych pamięci w przypadku wzrostu buforu.  
   
- `realloc`Ustawia `errno` do `ENOMEM` czy alokacja pamięci nie powiedzie się, czy ilość pamięci żądana przekracza `_HEAP_MAXREQ`. Aby uzyskać informacje na ten temat oraz innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `realloc` Ustawia `errno` do `ENOMEM` czy alokacja pamięci nie powiedzie się, czy ilość pamięci żądana przekracza `_HEAP_MAXREQ`. Aby uzyskać informacje na ten temat oraz innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `realloc`wywołania `malloc` aby można było używać języka C++ [_set_new_mode —](../../c-runtime-library/reference/set-new-mode.md) funkcji, aby ustawić nowy tryb obsługi. Nowy tryb obsługi wskazuje, czy w przypadku awarii, `malloc` jest wywołanie nowe procedury obsługi zgodnie z ustawieniami [_set_new_handler —](../../c-runtime-library/reference/set-new-handler.md). Domyślnie `malloc` nie wywołuje nowe procedury obsługi nie można przydzielić pamięci. Można zastąpić to zachowanie domyślne, aby, gdy `realloc` nie może przydzielić pamięci, `malloc` wywołuje nowe procedury obsługi tak samo jak robi `new` operator nie w przypadku niepowodzenia tego samego powodu. Aby zastąpić domyślną, należy wywołać  
+ `realloc` wywołania `malloc` aby można było używać języka C++ [_set_new_mode —](../../c-runtime-library/reference/set-new-mode.md) funkcji, aby ustawić nowy tryb obsługi. Nowy tryb obsługi wskazuje, czy w przypadku awarii, `malloc` jest wywołanie nowe procedury obsługi zgodnie z ustawieniami [_set_new_handler —](../../c-runtime-library/reference/set-new-handler.md). Domyślnie `malloc` nie wywołuje nowe procedury obsługi nie można przydzielić pamięci. Można zastąpić to zachowanie domyślne, aby, gdy `realloc` nie może przydzielić pamięci, `malloc` wywołuje nowe procedury obsługi tak samo jak robi `new` operator nie w przypadku niepowodzenia tego samego powodu. Aby zastąpić domyślną, należy wywołać  
   
 ```  
 _set_new_mode(1)  
@@ -94,7 +98,7 @@ _set_new_mode(1)
   
  Gdy aplikacja jest połączony z wersją debugowania biblioteki wykonawcze języka C, `realloc` jest rozpoznawana jako [_realloc_dbg —](../../c-runtime-library/reference/realloc-dbg.md). Aby uzyskać więcej informacji dotyczących sposobu zarządzania infrastrukturą sterty podczas debugowania procesu, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- `realloc`jest oznaczony jako `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja jest gwarantowana nie do modyfikowania zmiennych globalnych i czy zwrócony wskaźnik nie jest używane z aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).  
+ `realloc` jest oznaczony jako `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja jest gwarantowana nie do modyfikowania zmiennych globalnych i czy zwrócony wskaźnik nie jest używane z aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).  
   
 ## <a name="requirements"></a>Wymagania  
   
@@ -153,6 +157,6 @@ Size of block after realloc of 1000 more longs: 8000
   
 ## <a name="see-also"></a>Zobacz też  
  [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)   
- [calloc —](../../c-runtime-library/reference/calloc.md)   
- [w warstwie bezpłatna](../../c-runtime-library/reference/free.md)   
+ [calloc](../../c-runtime-library/reference/calloc.md)   
+ [W warstwie bezpłatna](../../c-runtime-library/reference/free.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)

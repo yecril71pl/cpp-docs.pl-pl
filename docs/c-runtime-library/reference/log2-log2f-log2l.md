@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - log2
 - log2l
@@ -26,18 +26,20 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e96e572070471d59e91c8f10a382c2770dcc6385
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cd35b9298cec4e56da1fb9d255cc012d0f525623
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="log2-log2f-log2l"></a>log2 log2f —, log2l
 Określa binarne logarytmu (base-2) w określonej wartości.  
@@ -68,7 +70,7 @@ long double log2l(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`x`  
+ [in] `x`  
  Wartość, aby określić logarytmu base-2.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -95,11 +97,11 @@ long double log2l(
   
 |Funkcja|Nagłówek C|Nagłówek C++|  
 |--------------|--------------|------------------|  
-|`log2`,                `log2f`,  `log2l`|\<Math.h >|\<cmath >|  
+|`log2`,                `log2f`,  `log2l`|\<math.h>|\<cmath>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [exp2 —, exp2f —, exp2l](../../c-runtime-library/reference/exp2-exp2f-exp2l.md)   
+ [exp2, exp2f, exp2l](../../c-runtime-library/reference/exp2-exp2f-exp2l.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)

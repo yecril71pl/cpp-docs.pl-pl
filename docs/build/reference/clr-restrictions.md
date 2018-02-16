@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: /clr compiler option [C++], restrictions
+dev_langs:
+- C++
+helpviewer_keywords:
+- /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3552fda0ce6dc80c253809cfd464555d32604534
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-restrictions"></a>/clr Ograniczenia
 Należy zwrócić uwagę następujące ograniczenia dotyczące stosowania **/CLR**:  
@@ -52,19 +56,15 @@ Należy zwrócić uwagę następujące ograniczenia dotyczące stosowania **/CLR
   
     -   [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)  
   
-    -   [/GM ponowną](../../build/reference/gm-enable-minimal-rebuild.md)  
+    -   [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)  
   
-    -   [/ MT](../../build/reference/md-mt-ld-use-run-time-library.md)  
+    -   [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)  
   
-    -   [/ RTC](../../build/reference/rtc-run-time-error-checks.md)  
+    -   [/RTC](../../build/reference/rtc-run-time-error-checks.md)  
   
-    -   **/ ZI**  
+    -   **/ZI**  
   
--   Kombinacja `_STATIC_CPPLIB` definicja preprocesora (`/D_STATIC_CPPLIB`) i **/CLR** lub **/CLR: pure** — opcja kompilatora nie jest obsługiwana. Dzieje się tak dlatego definicji może spowodować, że aplikacja do łączenia z statycznych wielowątkowe standardowa biblioteka C++, która nie jest obsługiwana. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Użyj biblioteki wykonawczej)](../../build/reference/md-mt-ld-use-run-time-library.md) tematu.  
-  
--   [/J](../../build/reference/j-default-char-type-is-unsigned.md) nie jest obsługiwany z **/CLR: Safe** lub **/CLR: pure**. **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
-  
--   Biblioteki ATL i MFC nie są obsługiwane przez pure tryb kompilacji (**/CLR: pure**). Można użyć **/CLR: pure** standardowa biblioteka C++ i CRT, jeśli również kompilacji z **/ / MD** lub **/mdd**.  
+-   Kombinacja `_STATIC_CPPLIB` definicja preprocesora (`/D_STATIC_CPPLIB`) i **/CLR** — opcja kompilatora nie jest obsługiwana. Dzieje się tak dlatego definicji może spowodować, że aplikacja do łączenia z statycznych wielowątkowe standardowa biblioteka C++, która nie jest obsługiwana. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Użyj biblioteki wykonawczej)](../../build/reference/md-mt-ld-use-run-time-library.md) tematu.  
   
 -   Korzystając z **/zi** z **/CLR**, jest wpływ na wydajność. Aby uzyskać więcej informacji, zobacz [/zi](../../build/reference/z7-zi-zi-debug-information-format.md).  
   
@@ -75,7 +75,7 @@ Należy zwrócić uwagę następujące ograniczenia dotyczące stosowania **/CLR
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   [/ GS](../../build/reference/gs-buffer-security-check.md) jest ignorowany podczas kompilowania za pomocą **/CLR**, chyba że funkcja podlega `#pragma` [niezarządzane](../../preprocessor/managed-unmanaged.md) lub jeśli funkcji muszą być skompilowane na natywny, w którym to przypadku kompilator będzie wygenerowanie ostrzeżenia C4793, który jest domyślnie wyłączone.  
+-   [/ GS](../../build/reference/gs-buffer-security-check.md) jest ignorowany podczas kompilowania za pomocą **/CLR**, chyba że funkcja podlega `#pragma` [niezarządzane](../../preprocessor/managed-unmanaged.md) lub jeśli funkcji muszą być skompilowane na natywny, w którym to przypadku kompilator generuje Ostrzeżenie C4793, który jest domyślnie wyłączone.  
   
 -   Zobacz [/Entry](../../build/reference/entry-entry-point-symbol.md) wymagania podpisu funkcji zarządzanych aplikacji.  
   
@@ -84,8 +84,6 @@ Należy zwrócić uwagę następujące ograniczenia dotyczące stosowania **/CLR
 -   Funkcje, których zmienną liczbę argumentów (VARARG) zostaną wygenerowane jako funkcje natywne. Wszystkie typy zarządzanych danych na pozycji zmiennych argumentów będzie można zorganizować natywnych typów. Należy pamiętać, że <xref:System.String?displayProperty=fullName> typy są faktycznie znaków dwubajtowych ciągów, ale są one przekazywane do ciągów znaków. Więc jeśli specyfikator printf %S (wchar_t *), go będzie kierować na ciąg %s zamiast tego.  
   
 -   Korzystając z makra va_arg, mogą wystąpić nieoczekiwane wyniki podczas kompilowania za pomocą **/CLR: pure**.  Aby uzyskać więcej informacji, zobacz [va_arg, va_copy, va_end, va_start —](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md).  
-  
--   Jeśli aplikacja przekazuje argumentu typu [va_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) funkcji zadeklarowana, aby wykonać zmienna liczba argumentów, a aplikacja jest skompilowana przy użyciu **/CLR: pure**, zgłasza wyjątek, aparat CLR <xref:System.NotSupportedException>. Jeśli **/CLR** jest używany zamiast tego dotyczy funkcji są kompilowane do kodu natywnego i uruchomiony. Jeśli **/CLR: Safe** jest używana, jest emitowany błąd diagnostyki.  
   
 -   Należy nie wywołać, z kodu zarządzanego, wszystkie funkcje, które opisano stos, aby uzyskać informacje o parametrach (argumenty funkcji); Warstwa P/Invoke powoduje, że te informacje będzie dalej w dół stosu.  Na przykład nie skompilować proxy/stub z **/CLR**.  
   
@@ -100,8 +98,6 @@ Należy zwrócić uwagę następujące ograniczenia dotyczące stosowania **/CLR
     -   Funkcje poniżej `#pragma unmanaged` dyrektywy. (Należy pamiętać, że odwrotność, `#pragma managed`, jest również obsługiwany.)  
   
     -   Funkcja, która zawiera odwołania do wyrównane typy, oznacza to, że typy zadeklarowane za pomocą `__declspec(align(...))`.  
-  
--   Nie można użyć [obsługa kompilatora COM](../../cpp/compiler-com-support.md) klas z **/CLR: pure** lub **/CLR: Safe**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)

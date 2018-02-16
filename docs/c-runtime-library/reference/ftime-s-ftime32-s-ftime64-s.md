@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ftime_s
 - _ftime64_s
@@ -31,7 +32,8 @@ f1_keywords:
 - _ftime32_s
 - ftime32_s
 - ftime64_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ftime32_s function
 - ftime_s function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: eb90c8f9ed18355821e3a067b0f2b9b92562b08c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: baf4371e90dfe06a4896c33937f578a2483475d3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
 Pobiera bieżący czas. Są to wersje [_ftime —, _ftime32 —, _ftime64 —](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -94,9 +97,9 @@ errno_t _ftime64_s(
   
  `_ftime64_s`, który korzysta z `__timeb64` struktury, umożliwia tworzenie plików daty wyrażane się za pośrednictwem 23:59:59 31 grudnia 3000 UTC; natomiast `_ftime32_s` tylko reprezentuje dat za pośrednictwem 23:59:59 18 stycznia 2038 r., UTC. Północy, 1 stycznia 1970 jest dolna granica zakresu dat dla tych funkcji.  
   
- `_ftime_s`jest odpowiednikiem `_ftime64_s` i `_timeb` zawiera czas 64-bitowych. Jest to wartość true, chyba że `_USE_32BIT_TIME_T` jest zdefiniowany w takim przypadku stare zachowanie jest włączona; `_ftime_s` używany czas 32-bitowe i `_timeb` zawiera czas 32-bitowych.  
+ `_ftime_s` jest odpowiednikiem `_ftime64_s` i `_timeb` zawiera czas 64-bitowych. Jest to wartość true, chyba że `_USE_32BIT_TIME_T` jest zdefiniowany w takim przypadku stare zachowanie jest włączona; `_ftime_s` używany czas 32-bitowe i `_timeb` zawiera czas 32-bitowych.  
   
- `_ftime_s`sprawdza poprawność parametrów. Jeśli przekazany wskaźnika o wartości null jako `timeptr`, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, funkcja ustawia `errno` do `EINVAL`.  
+ `_ftime_s` sprawdza poprawność parametrów. Jeśli przekazany wskaźnika o wartości null jako `timeptr`, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, funkcja ustawia `errno` do `EINVAL`.  
   
 ## <a name="requirements"></a>Wymagania  
   
@@ -167,7 +170,7 @@ The time is Mon Apr 28 11:08:54.230 2003
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
  [asctime —, _wasctime —](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime —, _ctime32 —, _ctime64 —, _wctime — _wctime32 —, _wctime64 —](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime —, _gmtime32 —, _gmtime64 —](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
  [czas lokalny, _localtime32 —, _localtime64 —](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

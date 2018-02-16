@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _putws
 - puts
@@ -45,11 +45,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b57f785ac43866aedfe4bf9dbca59353ca3b51
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 06f90cf85d19fab3dd08b8b0c3d789d263c55fbf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="puts-putws"></a>puts, _putws
 Zapisuje ciąg **stdout**.  
@@ -78,7 +78,7 @@ int _putws(
 ## <a name="remarks"></a>Uwagi  
  `puts` Funkcji zapisy `str` do standardowego strumienia wyjściowego **stdout**, zastępując ciąg do zakończenia znak null ('\0') ze znakiem nowego wiersza (\n) do strumienia wyjściowego.  
   
- `_putws`jest to wersja znaków dwubajtowych `puts`; dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `puts`obecnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
+ `_putws` jest to wersja znaków dwubajtowych `puts`; dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `puts` obecnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
   
   **_putwch —** zapisuje znaków Unicode przy użyciu bieżących ustawień regionalnych konsoli.  
   
@@ -95,7 +95,7 @@ int _putws(
 |`puts`|\<stdio.h>|  
 |`_putws`|\<stdio.h>|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu `stdin`, `stdout`, i `stderr`, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
   
 ## <a name="libraries"></a>Biblioteki  
  Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  

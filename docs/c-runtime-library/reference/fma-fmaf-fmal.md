@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -33,22 +33,24 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 21eab7d0adc6cf1952f6f26cdda23c885c63a3b3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 Mnoży dwie wartości ze sobą, dodaje trzecia wartość, a następnie zaokrągla wyniku bez utraty żadnych precyzji z powodu pośredniczące zaokrąglania.  
@@ -89,13 +91,13 @@ long double fmal(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`x`  
+ [in] `x`  
  Pierwsza wartość wielokrotnie.  
   
- [in]`y`  
+ [in] `y`  
  Druga wartość używana w wielokrotnie.  
   
- [in]`z`  
+ [in] `z`  
  Wartość do dodania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -105,9 +107,9 @@ long double fmal(
   
 |Problem|Zwraca|  
 |-----------|------------|  
-|`x`= NIESKOŃCZONOŚCI, `y` = 0 lub<br /><br /> `x`= 0, `y` = INFINITY|NaN|  
-|`x`lub `y` mniej dokładne więcej NIESKOŃCZONOŚCI, `z` = NIESKOŃCZONOŚCI symbol przeciwnego|NaN|  
-|`x`lub `y` = NaN|NaN|  
+|`x` = NIESKOŃCZONOŚCI, `y` = 0 lub<br /><br /> `x` = 0, `y` = INFINITY|NaN|  
+|`x` lub `y` mniej dokładne więcej NIESKOŃCZONOŚCI, `z` = NIESKOŃCZONOŚCI symbol przeciwnego|NaN|  
+|`x` lub `y` = NaN|NaN|  
 |nie (`x` = 0, `y`= nieograniczonego) i `z` = NaN<br /><br /> nie (`x`= nieokreślony, `y`= 0) i `z` = NaN|NaN|  
 |Błąd przepełnienia zakresu|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|  
 |Błąd zakresu niedopełnienie|prawidłowa wartość zaokrągloną.|  
@@ -123,7 +125,7 @@ long double fmal(
   
 |Funkcja|Nagłówek C|Nagłówek C++|  
 |--------------|--------------|------------------|  
-|`fma`, `fmaf`, `fmal`|\<Math.h >|\<cmath >|  
+|`fma`, `fmaf`, `fmal`|\<math.h>|\<cmath>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

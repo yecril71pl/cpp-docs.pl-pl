@@ -1,12 +1,13 @@
 ---
-title: "_onexit —, _onexit_m — | Dokumentacja firmy Microsoft"
+title: _onexit, _onexit_m | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _onexit
 - _onexit_m
@@ -27,7 +28,8 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 476df668657739c9f67ca1323c2c0ce630260110
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: caa4c732449864c4803a25f3bb123c43495f5fc1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
 Rejestruje procedura ma być wywoływana w momencie zakończenia.  
@@ -67,20 +70,20 @@ _onexit_t_m _onexit_m(
  Wskaźnik do funkcję, która ma zostać wywołana w chwili zakończenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_onexit`Jeśli to się powiedzie, zwraca wskaźnik do funkcji lub `NULL` Jeśli brakuje miejsca do przechowywania wskaźnik funkcji.  
+ `_onexit` Jeśli to się powiedzie, zwraca wskaźnik do funkcji lub `NULL` Jeśli brakuje miejsca do przechowywania wskaźnik funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
  `_onexit` Funkcji została przekazana adresu funkcji (`function`) wywoływana, gdy program zakończy się normalnie. Kolejne wywołania `_onexit` tworzenia rejestru funkcje, które są wykonywane w kolejności LIFO (ostatnie — w pierwszej — ruch wychodzący). Funkcje przekazany do `_onexit` nie może mieć parametrów.  
   
  W przypadku gdy `_onexit` jest wywołana z poziomu biblioteki DLL, procedury zarejestrowana w usłudze `_onexit` Uruchom na bibliotekę DLL na zwalnianie po `DllMain` jest wywoływana z komunikat DLL_PROCESS_DETACH.  
   
- `_onexit`to rozszerzenie firmy Microsoft. Przenośności ANSI, użyj [atexit —](../../c-runtime-library/reference/atexit.md). `_onexit_m` Wersji funkcji jest przeznaczona do użytku w trybie mieszanym.  
+ `_onexit` to rozszerzenie firmy Microsoft. Przenośności ANSI, użyj [atexit —](../../c-runtime-library/reference/atexit.md). `_onexit_m` Wersji funkcji jest przeznaczona do użytku w trybie mieszanym.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_onexit`|\<stdlib.h >|  
+|`_onexit`|\<stdlib.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -139,5 +142,5 @@ This is executed next.
 ## <a name="see-also"></a>Zobacz też  
  [Proces i kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)   
  [atexit —](../../c-runtime-library/reference/atexit.md)   
- [exit, _exit — _exit —](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
  [__dllonexit](../../c-runtime-library/dllonexit.md)

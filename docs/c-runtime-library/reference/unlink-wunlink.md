@@ -1,12 +1,13 @@
 ---
-title: "_unlink —, _wunlink — | Dokumentacja firmy Microsoft"
+title: _unlink, _wunlink | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _unlink
 - _wunlink
@@ -28,7 +29,8 @@ f1_keywords:
 - _unlink
 - wunlink
 - _wunlink
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - files [C++], deleting
 - _wunlink function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8494b4a379f0e484ed98f6240dd76ccd4ef15bbd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 394638d8e8115bb5b3dc9629669067f5f9158c77
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 Usuń plik.  
@@ -74,7 +77,7 @@ int _wunlink(
  Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.  
   
 ## <a name="remarks"></a>Uwagi  
- `_unlink` Funkcja usuwa plik określony przez `filename`. `_wunlink`jest to wersja znaków dwubajtowych `_unlink`; `filename` argument `_wunlink` jest ciągiem znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
+ `_unlink` Funkcja usuwa plik określony przez `filename`. `_wunlink` jest to wersja znaków dwubajtowych `_unlink`; `filename` argument `_wunlink` jest ciągiem znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -108,7 +111,7 @@ int main( void )
 }  
 ```  
   
-### <a name="input-crtunlinktxt"></a>Dane wejściowe: crt_unlink.txt  
+### <a name="input-crtunlinktxt"></a>Input: crt_unlink.txt  
   
 ```  
 This file will be deleted.  

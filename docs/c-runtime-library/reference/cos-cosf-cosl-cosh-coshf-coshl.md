@@ -1,12 +1,13 @@
 ---
-title: "COS, cosf —, cosl —, cosh, coshf — coshl — | Dokumentacja firmy Microsoft"
+title: cos, cosf, cosl, cosh, coshf, coshl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - coshl
 - cosh
@@ -34,7 +35,8 @@ f1_keywords:
 - cosh
 - cosl
 - coshf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -48,16 +50,17 @@ helpviewer_keywords:
 - coshl function
 - hyperbolic functions
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e06a929148da03e59edff6f0630cd60841e912e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b9ef8330842f090c5a63cfea65886e6b7c25cee3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cos-cosf-cosl-cosh-coshf-coshl"></a>cos, cosf, cosl, cosh, coshf, coshl
 Oblicza cosinus (`cos`, `cosf`, lub `cosl`), lub cosinus hiperboliczny (`cosh`, `coshf`, lub `coshl`).  
@@ -110,7 +113,7 @@ long double coshl(
 |-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|brak|`_DOMAIN`|  
 |± ∞  (`cosf`, `cos`, `cosl`)|`INVALID`|`_DOMAIN`|  
-|x ≥ 7.104760e + 002 (`cosh`, `coshf`, `coshl`)|`INEXACT`+`OVERFLOW`|`OVERFLOW`|  
+|x ≥ 7.104760e+002  (`cosh`, `coshf`, `coshl`)|`INEXACT`+`OVERFLOW`|`OVERFLOW`|  
   
 ## <a name="remarks"></a>Uwagi  
  Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia `cos` i `cosh` który przyjmować i zwracać `float` lub `long double` wartości. W programie C `cos` i `cosh` zawsze przyjmować i zwracać `double`.  
@@ -119,7 +122,7 @@ long double coshl(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`cos`, `cosh`, `cosf`, `coshf`, `cosl`, `coshl`|\<Math.h >|  
+|`cos`, `cosh`, `cosf`, `coshf`, `cosl`, `coshl`|\<math.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -131,7 +134,7 @@ long double coshl(
  [ACOS acosf —, acosl —](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [ASIN asinf —, asinl —](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [ATAN, atanf —, atanl —, atan2 atan2f —, atan2l —](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
- [_matherr —](../../c-runtime-library/reference/matherr.md)   
- [SIN, sinf —, sinl —, sinh sinhf —, sinhl —](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
+ [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [TAN, tanf —, tanl —, tanh tanhf —, tanhl —](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
  [_CIcos](../../c-runtime-library/cicos.md)

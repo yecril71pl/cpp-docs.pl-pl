@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strcat_s
 - _mbscat_s
@@ -29,7 +30,8 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
@@ -38,22 +40,23 @@ helpviewer_keywords:
 - _mbscat_s function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a66bafa2fa032b069a0e34cf6831ac2e6f6ed13d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c0dba645ab6caf7399bf4e1120c8c4a5a7139300
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 Dołącza ciąg. Te wersje programu [strcat —, wcscat —, _mbscat —](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbscat_s`Nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbscat_s` Nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -105,9 +108,9 @@ errno_t _mbscat_s(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|`strDestination`|`numberOfElements`|`strSource`|Wartość zwracana|Zawartość`strDestination`|  
+|`strDestination`|`numberOfElements`|`strSource`|Wartość zwracana|Zawartość `strDestination`|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL`lub niezakończony|wszystkie|wszystkie|`EINVAL`|Nie zmodyfikowano|  
+|`NULL` lub niezakończony|wszystkie|wszystkie|`EINVAL`|Nie zmodyfikowano|  
 |wszystkie|wszystkie|`NULL`|`EINVAL`|`strDestination`zestawu [0] 0|  
 |wszystkie|0 lub za mały|wszystkie|`ERANGE`|`strDestination`zestawu [0] 0|  
   
@@ -123,7 +126,7 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect  
 ```  
   
- `wcscat_s`i `_mbscat_s` znaków dwubajtowych i znaków wielobajtowych wersji `strcat_s`. Argumenty i zwracana wartość `wcscat_s` są znaków dwubajtowych ciągi; tych `_mbscat_s` są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
+ `wcscat_s` i `_mbscat_s` znaków dwubajtowych i znaków wielobajtowych wersji `strcat_s`. Argumenty i zwracana wartość `wcscat_s` są znaków dwubajtowych ciągi; tych `_mbscat_s` są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
   
  Jeśli `strDestination` jest wskaźnika o wartości null lub nie jest zerem, lub jeśli `strSource` jest `NULL` wskaźnika, lub czy ciągu docelowego jest za mały, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają `EINVAL` i ustaw `errno` do `EINVAL`.  
   
@@ -141,9 +144,9 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strcat_s`|\<String.h >|  
+|`strcat_s`|\<string.h>|  
 |`wcscat_s`|\<String.h > lub \<wchar.h >|  
-|`_mbscat_s`|\<mbstring.h >|  
+|`_mbscat_s`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -154,7 +157,7 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
  [strncat —, _strncat_l, wcsncat —, _wcsncat_l _mbsncat —, _mbsncat_l —](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
  [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy —, _strncpy_l —, wcsncpy —, _wcsncpy_l — _mbsncpy —, _mbsncpy_l —](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

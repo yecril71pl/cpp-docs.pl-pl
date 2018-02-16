@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
@@ -27,23 +28,25 @@ f1_keywords:
 - set_invalid_parameter_handler
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - invalid parameter handler
 - set_invalid_parameter_handler function
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 336a2f362ac9a67cb8bb176948fbb7b5c83329a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7827b8c538a90c39c0dc32320aaab01ada7e2318
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler —, _set_thread_local_invalid_parameter_handler
 Ustawia funkcja wywoływana, gdy CRT wykrywa nieprawidłowy argument.  
@@ -60,7 +63,7 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`pNew`  
+ [in] `pNew`  
  Wskaźnik funkcji do nowy program obsługi nieprawidłowych parametrów.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -89,7 +92,7 @@ void _invalid_parameter(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_set_invalid_parameter_handler`, `_set_thread_local_invalid_parameter_handler`|C: \<stdlib.h ><br /><br /> C++: \<cstdlib — > lub \<stdlib.h >|  
+|`_set_invalid_parameter_handler`, `_set_thread_local_invalid_parameter_handler`|C: \<stdlib.h><br /><br /> C++: \<cstdlib — > lub \<stdlib.h >|  
   
  `_set_invalid_parameter_handler` i `_set_thread_local_invalid_parameter_handler` funkcje są określone firmy Microsoft. Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

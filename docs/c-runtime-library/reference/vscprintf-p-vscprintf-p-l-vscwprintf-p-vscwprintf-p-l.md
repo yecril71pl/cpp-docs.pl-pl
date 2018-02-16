@@ -1,12 +1,13 @@
 ---
-title: "_vscprintf_p —, _vscprintf_p_l —, _vscwprintf_p —, _vscwprintf_p_l — | Dokumentacja firmy Microsoft"
+title: _vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _vscprintf_p_l
 - _vscprintf_p
@@ -33,7 +34,8 @@ f1_keywords:
 - _vscwprintf_p_l
 - vscprintf_p_l
 - _vscwprintf_p
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - vscprintf_p function
 - _vsctprintf_p_l function
@@ -48,16 +50,17 @@ helpviewer_keywords:
 - _vsctprintf_p function
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b920931cf524ef44d1c09814576dbf22e54a640b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 50db038122dde42d8707f46be7f16f876e1807f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 Zwraca liczbę znaków w ciągu sformatowany za pomocą wskaźnika do listy argumentów, z możliwością określić kolejność, w którym są używane argumentów.  
@@ -98,7 +101,7 @@ int _vscwprintf_p _l(
  Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_vscprintf_p`Zwraca liczbę znaków, które może być generowane, jeśli ciąg wskazywał przez listę argumentów została drukowaniu i wysyłane do pliku lub buforu przy użyciu określonego kody formatowania. Wartość zwracana nie zawiera znak końcowy null. `_vscwprintf_p`taką samą funkcję wykonuje dla znaki dwubajtowe.  
+ `_vscprintf_p` Zwraca liczbę znaków, które może być generowane, jeśli ciąg wskazywał przez listę argumentów została drukowaniu i wysyłane do pliku lub buforu przy użyciu określonego kody formatowania. Wartość zwracana nie zawiera znak końcowy null. `_vscwprintf_p` taką samą funkcję wykonuje dla znaki dwubajtowe.  
   
 ## <a name="remarks"></a>Uwagi  
  Funkcje te różnią się od `_vscprintf` i `_vscwprintf` tylko w tym obsługują umożliwia określenie kolejności, w którym są używane argumentów. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).  
@@ -121,7 +124,7 @@ int _vscwprintf_p _l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_vscprintf_p`, `_vscprintf_p_l`|\<stdio.h >|  
+|`_vscprintf_p`, `_vscprintf_p_l`|\<stdio.h>|  
 |`_vscwprintf_p`, `_vscwprintf_p_l`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -131,5 +134,5 @@ int _vscwprintf_p _l(
   
 ## <a name="see-also"></a>Zobacz też  
  [vprintf — funkcje](../../c-runtime-library/vprintf-functions.md)   
- [_scprintf_p —, _scprintf_p_l —, _scwprintf_p — _scwprintf_p_l —](../../c-runtime-library/reference/scprintf-p-scprintf-p-l-scwprintf-p-scwprintf-p-l.md)   
+ [_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l](../../c-runtime-library/reference/scprintf-p-scprintf-p-l-scwprintf-p-scwprintf-p-l.md)   
  [_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)

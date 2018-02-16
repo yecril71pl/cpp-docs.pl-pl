@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - atan2f
 - atan2l
@@ -34,7 +35,8 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36e90d781c4cc4512f4869247c296b69b19c1f9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5da2b1bcc38c1b41a35de30e589f9660f19f78da
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 Oblicza tangens `x` (`atan`, `atanf`, i `atanl`) lub arcus tangens `y` / `x` (`atan2`, `atan2f`, i `atan2l`).  
@@ -104,18 +107,18 @@ long double atan2l(
  Dowolne liczby.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `atan`Zwraca arcus tangens `x` w zakresie - π/2 na radiany π/2. `atan2`Zwraca arcus tangens `y/x` w zakresie - π na radiany π. Jeśli `x` ma wartość 0, `atan` zwraca wartość 0. Jeśli oba parametry `atan2` 0, funkcja zwraca wartość 0. Wszystkie wyniki są wyświetlane w radianach.  
+ `atan` Zwraca arcus tangens `x` w zakresie - π/2 na radiany π/2. `atan2` Zwraca arcus tangens `y/x` w zakresie - π na radiany π. Jeśli `x` ma wartość 0, `atan` zwraca wartość 0. Jeśli oba parametry `atan2` 0, funkcja zwraca wartość 0. Wszystkie wyniki są wyświetlane w radianach.  
   
- `atan2`używa oznaki oba parametry w celu określenia wiązania kwadrantu zwracanej wartości.  
+ `atan2` używa oznaki oba parametry w celu określenia wiązania kwadrantu zwracanej wartości.  
   
 |Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|  
 |-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|brak|`_DOMAIN`|  
   
 ## <a name="remarks"></a>Uwagi  
- `atan` Funkcja oblicza tangens (odwrotna funkcja tangens) `x`. `atan2`Oblicza tangens `y` / `x` (Jeśli `x` jest równe 0, `atan2` zwraca π/2, jeśli `y` jest dodatnia, jeśli - π/2 `y` jest wartość ujemną lub 0, jeśli `y` to 0.)  
+ `atan` Funkcja oblicza tangens (odwrotna funkcja tangens) `x`. `atan2` Oblicza tangens `y` / `x` (Jeśli `x` jest równe 0, `atan2` zwraca π/2, jeśli `y` jest dodatnia, jeśli - π/2 `y` jest wartość ujemną lub 0, jeśli `y` to 0.)  
   
- `atan`zawiera implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_sse2_enable —](../../c-runtime-library/reference/set-sse2-enable.md).  
+ `atan` zawiera implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_sse2_enable —](../../c-runtime-library/reference/set-sse2-enable.md).  
   
  Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia `atan` i `atan2`. W programie C `atan` i `atan2` zawsze przyjmować i zwracać symulacyjnych.  
   
@@ -123,7 +126,7 @@ long double atan2l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<Math.h >|  
+|`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h>|  
   
 ## <a name="example"></a>Przykład  
   
@@ -160,9 +163,9 @@ Arctangent of 0.500000 / 5.000000: 0.099669
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [ACOS acosf —, acosl —](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [ASIN asinf —, asinl —](../../c-runtime-library/reference/asin-asinf-asinl.md)   
- [COS, cosf —, cosl —, cosh, coshf — coshl —](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [_matherr —](../../c-runtime-library/reference/matherr.md)   
- [SIN, sinf —, sinl —, sinh sinhf —, sinhl —](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
+ [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
+ [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [TAN, tanf —, tanl —, tanh tanhf —, tanhl —](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
  [_CIatan](../../c-runtime-library/ciatan.md)   
  [_CIatan2](../../c-runtime-library/ciatan2.md)

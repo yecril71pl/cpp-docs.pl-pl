@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _controlfp_s
+ms.topic: reference
+apiname:
+- _controlfp_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - controlfp_s
 - _controlfp_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - floating-point numbers, control word
 - controlfp_s function
@@ -32,16 +35,17 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8c8f651e04a1d68cd27f8321d6a30250c0e6ce1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ed5896a723ec44d460b0d9588878b431ff7ef14
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="controlfps"></a>_controlfp_s
 Pobiera i ustawia słowa formantu zmiennoprzecinkowych. Ta wersja [_control87 —, _controlfp —, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) zawiera ulepszenia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -79,9 +83,9 @@ errno_t _controlfp_s(
 > [!NOTE]
 >  Domyślnie biblioteki wykonawczej maski wszystkie wyjątki zmiennoprzecinkowe.  
   
- `_controlfp_s`jest niemal identyczna z `_control87` funkcja na Intel (x86), [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]i platformy ARM. Jeśli aplikacja jest przeznaczona dla x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], albo użyć platformy ARM `_control87` lub `_controlfp_s`.  
+ `_controlfp_s` jest niemal identyczna z `_control87` funkcja na Intel (x86), [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]i platformy ARM. Jeśli aplikacja jest przeznaczona dla x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], albo użyć platformy ARM `_control87` lub `_controlfp_s`.  
   
- Różnica między `_control87` i `_controlfp_s` znajduje się w sposób Traktuj `DENORMAL` wartości. Dla komputerów Intel (x86) [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], platformy ARM i `_control87` można ustawić i wyczyść maska wyjątek Brak reprezentacji ZMIENNOPRZECINKOWEJ argumentu operacji. `_controlfp_s`nie modyfikować maska wyjątek Brak reprezentacji ZMIENNOPRZECINKOWEJ argumentu operacji. W tym przykładzie przedstawiono różnice:  
+ Różnica między `_control87` i `_controlfp_s` znajduje się w sposób Traktuj `DENORMAL` wartości. Dla komputerów Intel (x86) [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], platformy ARM i `_control87` można ustawić i wyczyść maska wyjątek Brak reprezentacji ZMIENNOPRZECINKOWEJ argumentu operacji. `_controlfp_s` nie modyfikować maska wyjątek Brak reprezentacji ZMIENNOPRZECINKOWEJ argumentu operacji. W tym przykładzie przedstawiono różnice:  
   
 ```C  
 _control87( _EM_INVALID, _MCW_EM );   
@@ -119,17 +123,17 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
 |Maska|Wartość szesnastkowa|Stała|Wartość szesnastkowa|  
 |----------|---------------|--------------|---------------|  
-|`_MCW_DN`(Brak reprezentacji zmiennoprzecinkowej sterowania)|0x03000000|`_DN_SAVE`<br /><br /> `_DN_FLUSH`|0x00000000<br /><br /> 0x01000000|  
-|`_MCW_EM`(Wyjątek maska przerwań)|0x0008001F|`_EM_INVALID`<br /><br /> `_EM_DENORMAL`<br /><br /> `_EM_ZERODIVIDE`<br /><br /> `_EM_OVERFLOW`<br /><br /> `_EM_UNDERFLOW`<br /><br /> `_EM_INEXACT`|0x00000010<br /><br /> 0X00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|  
-|`_MCW_IC`(Kontrola nieskończoności)<br /><br /> (Nieobsługiwane w ARM lub [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] platformy.)|0X00040000|`_IC_AFFINE`<br /><br /> `_IC_PROJECTIVE`|0X00040000<br /><br /> 0x00000000|  
-|`_MCW_RC`(Kontrola zaokrąglania)|0x00000300|`_RC_CHOP`<br /><br /> `_RC_UP`<br /><br /> `_RC_DOWN`<br /><br /> `_RC_NEAR`|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|  
-|`_MCW_PC`(Kontrola dokładności)<br /><br /> (Nieobsługiwane w ARM lub [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] platformy.)|0x00030000|`_PC_24`(24-bitowy)<br /><br /> `_PC_53`(53-bitowy)<br /><br /> `_PC_64`(64-bitowy)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|  
+|`_MCW_DN` (Brak reprezentacji zmiennoprzecinkowej sterowania)|0x03000000|`_DN_SAVE`<br /><br /> `_DN_FLUSH`|0x00000000<br /><br /> 0x01000000|  
+|`_MCW_EM` (Wyjątek maska przerwań)|0x0008001F|`_EM_INVALID`<br /><br /> `_EM_DENORMAL`<br /><br /> `_EM_ZERODIVIDE`<br /><br /> `_EM_OVERFLOW`<br /><br /> `_EM_UNDERFLOW`<br /><br /> `_EM_INEXACT`|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|  
+|`_MCW_IC` (Kontrola nieskończoności)<br /><br /> (Nieobsługiwane w ARM lub [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] platformy.)|0x00040000|`_IC_AFFINE`<br /><br /> `_IC_PROJECTIVE`|0x00040000<br /><br /> 0x00000000|  
+|`_MCW_RC` (Kontrola zaokrąglania)|0x00000300|`_RC_CHOP`<br /><br /> `_RC_UP`<br /><br /> `_RC_DOWN`<br /><br /> `_RC_NEAR`|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|  
+|`_MCW_PC` (Kontrola dokładności)<br /><br /> (Nieobsługiwane w ARM lub [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] platformy.)|0x00030000|`_PC_24` (24-bitowy)<br /><br /> `_PC_53` (53-bitowy)<br /><br /> `_PC_64` (64-bitowy)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_controlfp_s`|\<float.h — >|  
+|`_controlfp_s`|\<float.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -187,5 +191,5 @@ Default:  0x9001f
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [_clear87 —, _clearfp —](../../c-runtime-library/reference/clear87-clearfp.md)   
- [_status87 —, _statusfp —, _statusfp2 —](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)   
- [_control87 —, _controlfp —, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)
+ [_status87, _statusfp, _statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)   
+ [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)

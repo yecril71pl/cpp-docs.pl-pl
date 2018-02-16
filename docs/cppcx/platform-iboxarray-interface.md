@@ -6,26 +6,29 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
 - VCCORLIB/Namespace not found::Platform::Value
-dev_langs: C++
-helpviewer_keywords: Platform::IBoxArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 421f8517b8a96c40bb44dd959eba90b1bf903113
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f52f8c95851ec80df41fe9f0838345cf46876227
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformiboxarray-interface"></a>Interfejs platform::IBoxArray
-`IBoxArray`Otoka dla tablic typów wartości, które są przekazywane przez interfejs binarne aplikacji (ABI) lub przechowywane w kolekcji jest `Platform::Object^` elementów, takich jak te w formantach XAML.  
+`IBoxArray` Otoka dla tablic typów wartości, które są przekazywane przez interfejs binarne aplikacji (ABI) lub przechowywane w kolekcji jest `Platform::Object^` elementów, takich jak te w formantach XAML.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,16 +42,16 @@ interface class IBoxArray
  Typ wartości spakowanej w każdym elemencie tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
- `IBoxArray`jest C + +/ CX nazwę `Windows::Foundation::IReferenceArray`.  
+ `IBoxArray` jest C + +/ CX nazwę `Windows::Foundation::IReferenceArray`.  
   
 ### <a name="members"></a>Elementy członkowskie  
- `IBoxArray` Dziedziczy interfejs `IValueType` interfejsu. `IBoxArray`ma również te elementy członkowskie:  
+ `IBoxArray` Dziedziczy interfejs `IValueType` interfejsu. `IBoxArray` ma również te elementy członkowskie:  
   
 |Metoda|Opis|  
 |------------|-----------------|  
 |[Wartość](#value)|Zwraca tablicę rozpakowany, które wcześniej były przechowywane w tym `IBoxArray` wystąpienia.|  
 
-## <a name="value"></a>Właściwość IBoxArray::Value
+## <a name="value"></a> Właściwość IBoxArray::Value
 Zwraca wartość, która pierwotnie była przechowywana w tym obiekcie.  
   
 ### <a name="syntax"></a>Składnia  

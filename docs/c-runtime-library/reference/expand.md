@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _expand
+ms.topic: reference
+apiname:
+- _expand
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -30,22 +32,24 @@ f1_keywords:
 - _nexpand
 - bexpand
 - _expand
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 103ff4077bdc68b8886c5181ce317b5c0d0d2b79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b6b2bf8ba3e30165f11e3392e04519a3d49cfd4a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="expand"></a>_expand
 Zmienia rozmiar bloku pamięci.  
@@ -67,16 +71,16 @@ void *_expand(
  Nowy rozmiar w bajtach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_expand`Zwraca typ void wskaźnik do bloku przydzielić pamięci. `_expand`, w odróżnieniu od `realloc`, nie można przenieść bloku, aby zmienić jego rozmiaru. W związku z tym, jeśli istnieje wystarczająca ilość pamięci rozwinąć blok bez przenoszenia go, `memblock` parametr `_expand` jest taka sama jak wartość zwracaną.  
+ `_expand` Zwraca typ void wskaźnik do bloku przydzielić pamięci. `_expand`, w odróżnieniu od `realloc`, nie można przenieść bloku, aby zmienić jego rozmiaru. W związku z tym, jeśli istnieje wystarczająca ilość pamięci rozwinąć blok bez przenoszenia go, `memblock` parametr `_expand` jest taka sama jak wartość zwracaną.  
   
- `_expand`Zwraca `NULL` gdy zostaje wykryty błąd podczas jego działania. Na przykład jeśli `_expand` jest używany do zmniejszania blok pamięci, go może wykrywać uszkodzenia w stercie niewielki blok lub bloku nieprawidłowy wskaźnik i zwracać `NULL`.  
+ `_expand` Zwraca `NULL` gdy zostaje wykryty błąd podczas jego działania. Na przykład jeśli `_expand` jest używany do zmniejszania blok pamięci, go może wykrywać uszkodzenia w stercie niewielki blok lub bloku nieprawidłowy wskaźnik i zwracać `NULL`.  
   
- Jeśli jest za mało pamięci rozwinąć blok na dany rozmiar bez przenoszenia go, funkcja zwraca `NULL`. `_expand`nigdy nie zwraca blok rozszerzony do rozmiaru mniej niż żądana. Jeśli wystąpi błąd, `errno` wskazuje naturę niepowodzenia. Aby uzyskać więcej informacji na temat `errno`, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Jeśli jest za mało pamięci rozwinąć blok na dany rozmiar bez przenoszenia go, funkcja zwraca `NULL`. `_expand` nigdy nie zwraca blok rozszerzony do rozmiaru mniej niż żądana. Jeśli wystąpi błąd, `errno` wskazuje naturę niepowodzenia. Aby uzyskać więcej informacji na temat `errno`, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Wartości zwracanej wskazuje miejsce do magazynowania, które na pewno jest odpowiednio dopasowany do przechowywania obiekty dowolnego typu. Aby sprawdzić nowy rozmiar elementu, użyj `_msize`. Aby otrzymywać wskaźnik do typu innego niż `void`, użyj typu rzutowania wartości zwracanej.  
   
 ## <a name="remarks"></a>Uwagi  
- `_expand` Funkcja zmienia rozmiar bloku wcześniej alokacji pamięci próbując rozwiń lub Zwiń bloku bez przenoszenia jego lokalizacji w stosie. `memblock` Parametr wskazuje na początku bloku. `size` Parametru zapewnia nowy rozmiar bloku, w bajtach. Treść bloku nie uległy zmianie do krótszej z nowym i starym rozmiary. `memblock`nie może być blokiem został zwolniony.  
+ `_expand` Funkcja zmienia rozmiar bloku wcześniej alokacji pamięci próbując rozwiń lub Zwiń bloku bez przenoszenia jego lokalizacji w stosie. `memblock` Parametr wskazuje na początku bloku. `size` Parametru zapewnia nowy rozmiar bloku, w bajtach. Treść bloku nie uległy zmianie do krótszej z nowym i starym rozmiary. `memblock` nie może być blokiem został zwolniony.  
   
 > [!NOTE]
 >  Na platformach 64-bitowych `_expand` nie może być kontraktu bloku, jeśli nowy rozmiar jest mniejszy niż bieżący rozmiar; w szczególności, jeśli blok był mniejszy niż 16 KB, rozmiar i w związku z tym przydzielić w stercie fragmentacji małej `_expand` opuszcza blok bez zmian i Zwraca `memblock`.  
@@ -89,7 +93,7 @@ void *_expand(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`_expand`|\<malloc.h >|  
+|`_expand`|\<malloc.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -129,8 +133,8 @@ Expanded block to 1024 bytes at 002C12BC
   
 ## <a name="see-also"></a>Zobacz też  
  [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)   
- [calloc —](../../c-runtime-library/reference/calloc.md)   
- [w warstwie bezpłatna](../../c-runtime-library/reference/free.md)   
- [— funkcja malloc](../../c-runtime-library/reference/malloc.md)   
- [_msize —](../../c-runtime-library/reference/msize.md)   
+ [calloc](../../c-runtime-library/reference/calloc.md)   
+ [W warstwie bezpłatna](../../c-runtime-library/reference/free.md)   
+ [malloc](../../c-runtime-library/reference/malloc.md)   
+ [_msize](../../c-runtime-library/reference/msize.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)

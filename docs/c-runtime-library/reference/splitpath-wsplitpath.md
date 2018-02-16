@@ -1,12 +1,13 @@
 ---
-title: "_splitpath —, _wsplitpath — | Dokumentacja firmy Microsoft"
+title: _splitpath, _wsplitpath | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wsplitpath
 - _splitpath
@@ -29,7 +30,8 @@ f1_keywords:
 - splitpath
 - _wsplitpath
 - _tsplitpath
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _splitpath function
 - pathnames
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ad76dd59e0119e46030eb19223d678927b3fd077
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 75a44cc1bf0bdd48a01e6bd2da58367451486049
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 Podziel nazwa ścieżki na składniki. Dostępne są bardziej bezpieczne wersje tych funkcji, zobacz [_splitpath_s —, _wsplitpath_s —](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
@@ -90,7 +93,7 @@ void _wsplitpath(
  Rozszerzenie nazwy pliku, w tym wiodące okres (`.`). Można przekazać `NULL` dla tego parametru, jeśli nie ma potrzeby rozszerzenie nazwy pliku.  
   
 ## <a name="remarks"></a>Uwagi  
- `_splitpath` Funkcja dzieli ścieżki do jego czterech składników. `_splitpath`automatycznie obsługuje argumentów ciągów znaków wielobajtowych zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie ze strony kodowe wielobajtowe obecnie w użyciu. `_wsplitpath`jest to wersja znaków dwubajtowych `_splitpath`; argumenty `_wsplitpath` są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
+ `_splitpath` Funkcja dzieli ścieżki do jego czterech składników. `_splitpath` automatycznie obsługuje argumentów ciągów znaków wielobajtowych zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie ze strony kodowe wielobajtowe obecnie w użyciu. `_wsplitpath` jest to wersja znaków dwubajtowych `_splitpath`; argumenty `_wsplitpath` są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
   
  **Uwaga dotycząca zabezpieczeń** tych funkcji pociągnąć za sobą potencjalne zagrożenie wynikające z problem przepełnienie buforu. Przepełnienie buforu problemy używanej metody ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795). Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_splitpath_s —, _wsplitpath_s —](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
   
@@ -108,10 +111,10 @@ void _wsplitpath(
   
 |Nazwa|Wartość|  
 |----------|-----------|  
-|_MAX_DRIVE —|3|  
-|_MAX_DIR —|256|  
-|_MAX_FNAME —|256|  
-|_MAX_EXT —|256|  
+|_MAX_DRIVE|3|  
+|_MAX_DIR|256|  
+|_MAX_FNAME|256|  
+|_MAX_EXT|256|  
   
  Jeśli pełna ścieżka nie zawiera składników (na przykład nazwy pliku), `_splitpath` przypisuje puste ciągi do odpowiedniego buforów.  
   
@@ -123,7 +126,7 @@ void _wsplitpath(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_splitpath`|\<stdlib.h >|  
+|`_splitpath`|\<stdlib.h>|  
 |`_wsplitpath`|\<stdlib.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -133,8 +136,8 @@ void _wsplitpath(
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_fullpath —, _wfullpath —](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_getmbcp —](../../c-runtime-library/reference/getmbcp.md)   
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
  [_makepath —, _wmakepath —](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [_setmbcp —](../../c-runtime-library/reference/setmbcp.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
  [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sopen
 - _wsopen
@@ -28,7 +29,8 @@ f1_keywords:
 - wsopen
 - _sopen
 - _tsopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sopen function
 - sharing files
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bce1d0aac8b6b4d835b956a9ac05eece4e2e6428
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6429eefe8c79337086fb8ec94215f171ae4b0bb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 Otwiera plik do udostępniania. Dostępne są bardziej bezpiecznych wersje tych funkcji, zobacz [_sopen_s —, _wsopen_s —](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
@@ -92,7 +95,7 @@ int _wsopen(
  Podana ścieżka jest katalogiem, lub plik jest tylko do odczytu, ale próbowano otwarty do zapisu.  
   
  `EEXIST`  
- `_O_CREAT`i `_O_EXCL` flagi zostały określone, ale `filename` już istnieje.  
+ `_O_CREAT` i `_O_EXCL` flagi zostały określone, ale `filename` już istnieje.  
   
  `EINVAL`  
  Nieprawidłowy `oflag` lub `shflag` argumentu.  
@@ -106,7 +109,7 @@ int _wsopen(
  Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `_sopen` Funkcja otwiera plik określony przez `filename` i przygotowuje plik do udostępnionego odczytu lub zapisu, zgodnie z definicją w `oflag` i `shflag`. `_wsopen`jest to wersja znaków dwubajtowych `_sopen`; `filename` argument `_wsopen` jest ciągiem znaków dwubajtowych. `_wsopen`i `_sopen` zachowują się tak samo w przeciwnym razie wartość.  
+ `_sopen` Funkcja otwiera plik określony przez `filename` i przygotowuje plik do udostępnionego odczytu lub zapisu, zgodnie z definicją w `oflag` i `shflag`. `_wsopen` jest to wersja znaków dwubajtowych `_sopen`; `filename` argument `_wsopen` jest ciągiem znaków dwubajtowych. `_wsopen` i `_sopen` zachowują się tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -153,7 +156,7 @@ int _wsopen(
  Otwiera plik w trybie tekstowym (translacji). (Aby uzyskać więcej informacji, zobacz [tekstu i we/wy binarne trybu pliku](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [fopen —](../../c-runtime-library/reference/fopen-wfopen.md).)  
   
  `_O_TRUNC`  
- Otwiera plik i obcina go do zera length; Plik musi mieć uprawnienia do zapisu. Nie można określić za pomocą `_O_RDONLY`. `_O_TRUNC`używane z `_O_CREAT` otwiera istniejący plik lub tworzy plik.  
+ Otwiera plik i obcina go do zera length; Plik musi mieć uprawnienia do zapisu. Nie można określić za pomocą `_O_RDONLY`. `_O_TRUNC` używane z `_O_CREAT` otwiera istniejący plik lub tworzy plik.  
   
 > [!NOTE]
 >  `_O_TRUNC` Flagi niszczy zawartość określonego pliku.  
@@ -190,7 +193,7 @@ int _wsopen(
  `_SH_DENYNO`  
  Zezwoleń do odczytu i zapisu.  
   
- `pmode` Argumentu jest wymagany tylko wtedy, gdy `_O_CREAT` jest określona. Jeśli plik nie istnieje, `pmode` określa ustawienia uprawnień pliku, które są ustawione, gdy nowy plik jest zamknięte po raz pierwszy. W przeciwnym razie `pmode` jest ignorowana. `pmode`jest wyrażeniem liczby całkowitej, która zawiera jedną lub obie z manifestu stałe `_S_IWRITE` i `_S_IREAD`, które są zdefiniowane w \<sys\stat.h >. Zarówno stałe są podane, są połączone z operator Alternatywy. Znaczenie `pmode` ma następującą składnię.  
+ `pmode` Argumentu jest wymagany tylko wtedy, gdy `_O_CREAT` jest określona. Jeśli plik nie istnieje, `pmode` określa ustawienia uprawnień pliku, które są ustawione, gdy nowy plik jest zamknięte po raz pierwszy. W przeciwnym razie `pmode` jest ignorowana. `pmode` jest wyrażeniem liczby całkowitej, która zawiera jedną lub obie z manifestu stałe `_S_IWRITE` i `_S_IREAD`, które są zdefiniowane w \<sys\stat.h >. Zarówno stałe są podane, są połączone z operator Alternatywy. Znaczenie `pmode` ma następującą składnię.  
   
  `_S_IWRITE`  
  Zapisywanie dozwolone.  
@@ -203,14 +206,14 @@ int _wsopen(
   
  Jeśli uprawnienia do zapisu nie zostanie podany, plik jest tylko do odczytu. W systemie operacyjnym Windows wszystkie pliki są do odczytu; nie jest możliwe nadaj uprawnienia tylko do zapisu. W związku z tym tryby `_S_IWRITE` i `_S_IREAD | _S_IWRITE` są równoważne.  
   
- `_sopen`stosuje bieżący maskę pliku uprawnień do `pmode` przed uprawnienia zostały ustawione. (Zobacz [_umask —](../../c-runtime-library/reference/umask.md).)  
+ `_sopen` stosuje bieżący maskę pliku uprawnień do `pmode` przed uprawnienia zostały ustawione. (Zobacz [_umask —](../../c-runtime-library/reference/umask.md).)  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_sopen`|\<IO.h >|\<fcntl.h >, \<sys\types.h >, \<sys\stat.h >, \<share.h >|  
-|`_wsopen`|\<IO.h > lub \<wchar.h >|\<fcntl.h >, \<sys\types.h >, \<sys\stat.h >, \<share.h >|  
+|`_sopen`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
+|`_wsopen`|\<IO.h > lub \<wchar.h >|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -220,7 +223,7 @@ int _wsopen(
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)   
  [_zamknij](../../c-runtime-library/reference/close.md)   
- [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_fsopen —, _wfsopen —](../../c-runtime-library/reference/fsopen-wfsopen.md)   
+ [_fsopen, _wfsopen](../../c-runtime-library/reference/fsopen-wfsopen.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

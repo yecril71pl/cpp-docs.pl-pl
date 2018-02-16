@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _chmod
 - _wchmod
@@ -27,7 +28,8 @@ f1_keywords:
 - _chmod
 - _wchmod
 - wchmod
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _chmod function
 - wchmod function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5abc8e8952f19f3314608085af42ddfdfef87936
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d6df97d52e084b56ca9f0e3e749ce933994a8dd2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 Zmienia ustawienia pliku uprawnień.  
@@ -88,7 +91,7 @@ int _wchmod(
   
  Gdy zarówno stałe są podane, są połączone z bitowego `OR` — operator ( `|` ). Jeśli uprawnienia do zapisu nie zostanie podany, plik jest tylko do odczytu. Należy pamiętać, że wszystkie pliki są zawsze do odczytu; nie jest możliwe nadaj uprawnienia tylko do zapisu. W związku z tym tryby `_S_IWRITE` i `_S_IREAD | _S_IWRITE` są równoważne.  
   
- `_wchmod`jest to wersja znaków dwubajtowych `_chmod`; `filename` argument `_wchmod` jest ciągiem znaków dwubajtowych. `_wchmod`i `_chmod` zachowują się tak samo w przeciwnym razie wartość.  
+ `_wchmod` jest to wersja znaków dwubajtowych `_chmod`; `filename` argument `_wchmod` jest ciągiem znaków dwubajtowych. `_wchmod` i `_chmod` zachowują się tak samo w przeciwnym razie wartość.  
   
  Ta funkcja weryfikuje jego parametrów. Jeśli `pmode` nie jest kombinacją jednego z manifestu stałe lub zawiera inny zestaw stałych, funkcja po prostu ignoruje te. Jeśli `filename` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i funkcja zwraca wartość -1.  
   
@@ -102,8 +105,8 @@ int _wchmod(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_chmod`|\<IO.h >|\<sys/types.h >, \<sys/stat.h >, \<errno.h >|  
-|`_wchmod`|\<IO.h > lub \<wchar.h >|\<sys/types.h >, \<sys/stat.h >, \<errno.h >|  
+|`_chmod`|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
+|`_wchmod`|\<IO.h > lub \<wchar.h >|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -186,8 +189,8 @@ Mode set to read/write
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_access —, _waccess —](../../c-runtime-library/reference/access-waccess.md)   
- [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
- [_fstat —, _fstat32 —, _fstat64 —, _fstati64 — _fstat32i64 —, _fstat64i32 —](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_stat, _wstat — funkcje](../../c-runtime-library/reference/stat-functions.md)

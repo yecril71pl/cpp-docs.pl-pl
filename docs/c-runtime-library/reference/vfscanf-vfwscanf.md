@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - vfwscanf
 - vfscanf
@@ -26,18 +27,20 @@ f1_keywords:
 - vfwscanf
 - _vftscanf
 - vfscanf
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8abe9916aa7b64663edcf05a400dd5cb0107c482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8e3cbf345f686a08fbcd7e3ead6ebcd24d9cd803
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 Odczyty sformatowanych danych ze strumienia. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [vfscanf_s, vfwscanf_s](../../c-runtime-library/reference/vfscanf-s-vfwscanf-s.md).  
@@ -73,9 +76,9 @@ int vfwscanf(
  Te funkcje walidację ich parametrów. Jeśli `stream` lub `format` wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają `EOF` i ustaw `errno` do `EINVAL`.  
   
 ## <a name="remarks"></a>Uwagi  
- `vfscanf` Funkcja odczytuje dane z bieżącej pozycji `stream` w lokalizacjach, które są podane przez `arglist` listy argumentów. Każdy argument na liście musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w `format`. `format`Formanty interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako `format` argument `scanf`; zobacz [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) opis `format`.  
+ `vfscanf` Funkcja odczytuje dane z bieżącej pozycji `stream` w lokalizacjach, które są podane przez `arglist` listy argumentów. Każdy argument na liście musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w `format`. `format` Formanty interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako `format` argument `scanf`; zobacz [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) opis `format`.  
   
- `vfwscanf`jest to wersja znaków dwubajtowych `vfscanf`; argument formatu `vfwscanf` jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo tak samo, jakby strumień jest otwarty w trybie ANSI. `vfscanf`nie obsługuje dane wejściowe ze strumienia UNICODE.  
+ `vfwscanf` jest to wersja znaków dwubajtowych `vfscanf`; argument formatu `vfwscanf` jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo tak samo, jakby strumień jest otwarty w trybie ANSI. `vfscanf` nie obsługuje dane wejściowe ze strumienia UNICODE.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -89,7 +92,7 @@ int vfwscanf(
   
 |Funkcja|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`vfscanf`|\<stdio.h >|  
+|`vfscanf`|\<stdio.h>|  
 |`vfwscanf`|\<stdio.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -164,9 +167,9 @@ x
   
 ## <a name="see-also"></a>Zobacz też  
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [_cscanf —, _cscanf_l —, _cwscanf — _cwscanf_l —](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [fprintf —, _fprintf_l —, fwprintf — _fwprintf_l —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [sscanf —, _sscanf_l —, swscanf — _swscanf_l —](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [fscanf_s —, _fscanf_s_l —, fwscanf_s — _fwscanf_s_l —](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
+ [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
  [vfscanf_s, vfwscanf_s](../../c-runtime-library/reference/vfscanf-s-vfwscanf-s.md)

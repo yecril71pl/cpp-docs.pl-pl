@@ -7,19 +7,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: VCCORLIB/Platform::Object::Equals
-dev_langs: C++
+f1_keywords:
+- VCCORLIB/Platform::Object::Equals
+dev_langs:
+- C++
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd5fcdbb71c1555d06e094f5e08f9da795f0d5a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8318e3dd7fe4702d83c0b16b19d67f156a9c2cd3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="defaulttypenameequals-method"></a>domyślne:: (type_name):: Equals — metoda
 Określa, czy określony obiekt jest równy bieżącemu obiektowi.  
@@ -34,11 +37,11 @@ bool Equals(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Obj  
+ obj  
  Obiekt do porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli obiekty są takie same, w przeciwnym razie `false`.  
+ `true` Jeśli obiekty są takie same, w przeciwnym razie `false`.  
   
 ### <a name="requirements"></a>Wymagania  
  **Minimalna obsługiwana klienta:** systemu Windows 8  

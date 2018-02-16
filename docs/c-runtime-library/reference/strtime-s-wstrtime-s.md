@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wstrtime_s
 - _strtime_s
@@ -28,7 +29,8 @@ f1_keywords:
 - strtime_s
 - wstrtime_s
 - _strtime_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wstrtime_s function
 - copying time to buffers
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3f7a2d8baac49543f09d3d2fa35764ae127f5507
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c93a98d7be13b19357b1308183519650411ec775
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 Skopiuj bieżącą godzinę w buforze. Są to wersje [_strtime —, _wstrtime —](../../c-runtime-library/reference/strtime-wstrtime.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -73,10 +76,10 @@ errno_t _wstrtime_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`buffer`  
+ [out] `buffer`  
  Bufor, co najmniej 10 bajtów, którym zostanie zapisany czas.  
   
- [in]`numberOfElements`  
+ [in] `numberOfElements`  
  Rozmiar buforu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -86,7 +89,7 @@ errno_t _wstrtime_s(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|`buffer`|`numberOfElements`|Zwraca|Zawartość`buffer`|  
+|`buffer`|`numberOfElements`|Zwraca|Zawartość `buffer`|  
 |--------------|------------------------|------------|--------------------------|  
 |`NULL`|(wszystkie)|`EINVAL`|Nie zmodyfikowano|  
 |Nie `NULL` (prawidłowego buforu wskazująca)|0|`EINVAL`|Nie zmodyfikowano|  
@@ -101,7 +104,7 @@ errno_t _wstrtime_s(
 ## <a name="remarks"></a>Uwagi  
  Funkcje te zapewniają bardziej bezpieczne wersje `_strtime` i `_wstrtime`. `_strtime_s` Funkcja bieżącym czasem lokalnym są kopiowane do bufor wskazywany przez `timestr`. Czas jest w formacie `hh:mm:ss` gdzie `hh` to dwie cyfry reprezentującą godzinę w 24-godzinnego `mm` to dwie cyfry reprezentujący minut po pełnej godzinie, i `ss` to dwie cyfry reprezentujący sekund. Na przykład ciąg `18:23:44` reprezentuje 23 minut i 44 sekund po pełnej godzinie 6 Rozmiar buforu musi być co najmniej 9 bajtów; Rzeczywisty rozmiar określono za pomocą drugiego parametru.  
   
- `_wstrtime`jest to wersja znaków dwubajtowych `_strtime`; argumentów i wartości `_wstrtime` są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
+ `_wstrtime` jest to wersja znaków dwubajtowych `_strtime`; argumentów i wartości `_wstrtime` są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
   
  W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -115,7 +118,7 @@ errno_t _wstrtime_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_strtime_s`|\<Time.h >|  
+|`_strtime_s`|\<time.h>|  
 |`_wstrtime_s`|\<Time.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -165,10 +168,10 @@ OS date:            04/25/03
   
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
- [asctime_s —, _wasctime_s —](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [ctime_s —, _ctime32_s —, _ctime64_s —, _wctime_s — _wctime32_s —, _wctime64_s —](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
- [gmtime_s —, _gmtime32_s —, _gmtime64_s —](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
  [localtime_s —, _localtime32_s —, _localtime64_s —](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [mktime —, _mktime32 —, _mktime64 —](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
- [czas, _time32 —, _time64 —](../../c-runtime-library/reference/time-time32-time64.md)   
+ [mktime, _mktime32, _mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [_tzset](../../c-runtime-library/reference/tzset.md)

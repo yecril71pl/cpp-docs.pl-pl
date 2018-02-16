@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _unlock_file
+ms.topic: reference
+apiname:
+- _unlock_file
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - _unlock_file
 - unlock_file
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - files [C++], unlocking
 - unlock_file function
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6b7bd3b8a9b455ebb01af7140830446847145b77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5d7bcfc3cf3bba84bf50933be9fa4137954e84a2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="unlockfile"></a>_unlock_file
 Umożliwia odblokowanie pliku, dzięki czemu inne procesy dostępu do tego pliku.  
@@ -64,12 +68,12 @@ void _unlock_file(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_unlock_file`|\<stdio.h >|  
+|`_unlock_file`|\<stdio.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_creat —, _wcreat —](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
  [_lock_file](../../c-runtime-library/reference/lock-file.md)

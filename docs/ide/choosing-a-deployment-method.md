@@ -27,11 +27,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Wybieranie metody wdrażania
 Jeśli aplikacji Visual C++ nie jest niezależna i można wdrożyć przy użyciu polecenia kopiowania, zalecane jest użycie Instalatora systemu Windows dla wdrożenia. Instalator Windows obsługuje instalację, naprawę oraz dezinstalację, a także obsługuje atomowe aktualizowanie plików aplikacji, zależności i wpisów rejestru.  
@@ -45,7 +45,7 @@ Jeśli aplikacji Visual C++ nie jest niezależna i można wdrożyć przy użyciu
 ## <a name="redistributing-visual-c-libraries"></a>Redystrybucja bibliotek Visual C++  
  We wdrożeniach można redystrybuować dowolną wersję biblioteki Visual C++, której licencja na to pozwala. Poniżej przedstawiono trzy sposoby ich wdrożenia:  
   
--   Centralnej wdrożenie przy użyciu pakietu redystrybucyjnego pakiety, w którym bibliotek języka Visual C++ jest instalowany jako pliki dll w %windir%\system32\\. (Instalacja w tym folderze wymaga uprawnień administratora). Można utworzyć program Instalatora lub skrypt, który uruchamia pakiet redystrybucyjny przed zainstalowaniem aplikacji na komputerze docelowym. Pakiety redystrybucyjne są dostępne dla platform x86, x64 i ARM (VCRedist_x86.exe, VCRedist_x64.exe lub VCRedist_arm.exe). Visual Studio zawiera te pakiety w % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Można również pobrać je z [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (W Centrum pobierania, wyszukaj "Pakiet redystrybucyjny Visual C++ *wersji programu Visual Studio i aktualizacji*", które odpowiadają aplikacji. Na przykład, jeśli użyłeś Visual Studio 2012 update 4 do stworzenia aplikacji, wyszukaj „Visual C++ Redistributable Package 2012 update 4”.) Aby uzyskać informacje o sposobie używania pakiet redystrybucyjny, zobacz [wskazówki: Wdrażanie Visual C++ aplikacji za pomocą pakietu redystrybucyjnego Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
+-   Centralnej wdrożenie przy użyciu pakietu redystrybucyjnego pakiety, w którym bibliotek języka Visual C++ jest instalowany jako pliki dll w %windir%\system32\\. (Instalacja w tym folderze wymaga uprawnień administratora). Można utworzyć program Instalatora lub skrypt, który uruchamia pakiet redystrybucyjny przed zainstalowaniem aplikacji na komputerze docelowym. Pakiety redystrybucyjne są dostępne dla platform x86, x64 i ARM (VCRedist_x86.exe, VCRedist_x64.exe lub VCRedist_arm.exe). Visual Studio zawiera te pakiety w % ProgramFiles (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Można również pobrać je z [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Użyj pola wyszukiwania w Centrum pobierania, aby wyszukać "Pakiet redystrybucyjny Visual C++ *wersji programu Visual Studio i aktualizacji*", które odpowiadają aplikacji. For example, jeśli używasz programu Visual Studio 2015 update 3 do tworzenia aplikacji, następnie wyszukaj "Visual C++ Redistributable pakietu 2015 update 3".) Aby uzyskać informacje o sposobie używania pakiet redystrybucyjny, zobacz [wskazówki: Wdrażanie Visual C++ aplikacji za pomocą pakietu redystrybucyjnego Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
   
 -   Wdrożenie centralnej za pomocą modułów scalania, z których każdy jest instalowany jako udostępnionej biblioteki DLL w %windir%\system32 określonej biblioteki Visual C++\\. (Instalacja w tym folderze wymaga uprawnień administratora.) Moduły scalania stają się częścią pliku .msi Instalatora aplikacji. Visual C++ redistributable scalania modułów znajdują się w programie Visual Studio w \Common Files\Merge pliki (x86) \Program modułów\\. Aby uzyskać więcej informacji, zobacz [redystrybuowanie przez za pomocą scalania modułów](../ide/redistributing-components-by-using-merge-modules.md).  
   

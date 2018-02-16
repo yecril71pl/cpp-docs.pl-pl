@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wmktemp
 - _mktemp
@@ -29,7 +30,8 @@ f1_keywords:
 - tmktemp
 - _wmktemp
 - _mktemp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wmktemp function
 - _mktemp function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ac2fd19254cce03b7cd7efc4324f5dc03c608b7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f87321b24e96ff00f54ecefbf67b5bd211595d71
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 Tworzy unikatową nazwę pliku. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_mktemp_s —, _wmktemp_s —](../../c-runtime-library/reference/mktemp-s-wmktemp-s.md).  
@@ -81,7 +84,7 @@ wchar_t *_wmktemp(
  Każda z tych funkcji zwraca wskaźnik do modyfikacji szablonu. Funkcja zwraca `NULL` Jeśli `template` jest nieprawidłowo sformatowany lub unikatowych nazw nie mogą być tworzone z danego szablonu.  
   
 ## <a name="remarks"></a>Uwagi  
- `_mktemp` Funkcja tworzy unikatową nazwę pliku, modyfikując `template` argumentu. `_mktemp`automatycznie obsługuje argumentów ciągów znaków wielobajtowych zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie z aktualnie używanej strony kodowe wielobajtowe przez system czasu wykonywania. `_wmktemp`jest to wersja znaków dwubajtowych `_mktemp`; argumentów i wartości `_wmktemp` są ciągami znaków dwubajtowych. `_wmktemp`i `_mktemp` zachowują się tak samo w przeciwnym razie wartość, z wyjątkiem `_wmktemp` nie obsługuje ciągów znaków wielobajtowych.  
+ `_mktemp` Funkcja tworzy unikatową nazwę pliku, modyfikując `template` argumentu. `_mktemp` automatycznie obsługuje argumentów ciągów znaków wielobajtowych zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie z aktualnie używanej strony kodowe wielobajtowe przez system czasu wykonywania. `_wmktemp` jest to wersja znaków dwubajtowych `_mktemp`; argumentów i wartości `_wmktemp` są ciągami znaków dwubajtowych. `_wmktemp` i `_mktemp` zachowują się tak samo w przeciwnym razie wartość, z wyjątkiem `_wmktemp` nie obsługuje ciągów znaków wielobajtowych.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -89,7 +92,7 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tmktemp`|`_mktemp`|`_mktemp`|`_wmktemp`|  
   
- `template` Argument ma postać `base` *XXXXXX*, gdzie `base` jest częścią nową nazwę pliku, który znasz i każdego X jest symbolem zastępczym dla znaku dostarczonych przez `_mktemp`. Dla każdego znaku zastępczego `template` musi być wielkie X. `_mktemp` zachowuje `base` i zamienia pierwszy X końcowe znakiem alfabetycznym. `_mktemp`zastępuje następujące kończyć znakiem x o wartości 5 cyfrowy; Ta wartość jest unikatowy numer identyfikujący wywołania proces, lub w programów wielowątkowych wątek wywołujący.  
+ `template` Argument ma postać `base` *XXXXXX*, gdzie `base` jest częścią nową nazwę pliku, który znasz i każdego X jest symbolem zastępczym dla znaku dostarczonych przez `_mktemp`. Dla każdego znaku zastępczego `template` musi być wielkie X. `_mktemp` zachowuje `base` i zamienia pierwszy X końcowe znakiem alfabetycznym. `_mktemp` zastępuje następujące kończyć znakiem x o wartości 5 cyfrowy; Ta wartość jest unikatowy numer identyfikujący wywołania proces, lub w programów wielowątkowych wątek wywołujący.  
   
  Każde wywołanie pomyślnie `_mktemp` modyfikuje `template`. W każdym wywołaniu kolejne z tej samej proces lub wątek o takim samym `template` argumentu, `_mktemp` sprawdza, czy nazwy plików, które odpowiadają nazwom zwrócony przez `_mktemp` w poprzednich wywołań. Jeśli plik nie istnieje dla podanej nazwy, `_mktemp` zwraca tę nazwę. Jeśli pliki znajdują się na wcześniej zostały zwrócone wszystkie nazwy, `_mktemp` tworzy nową nazwę, zastępując alfabetu on w nazwie poprzednio zwróconych z na kolejne dostępne małe litery, w kolejności od "" do "z". Na przykład jeśli `base` jest:  
   
@@ -115,7 +118,7 @@ fnb12345
 fna12345  
 ```  
   
- `_mktemp`można utworzyć maksymalnie 26 unikatowe nazwy plików dla dowolnej kombinacji danej wartości typu podstawowego i szablonu. W związku z tym FNZ12345 jest unikatowy plik nazwisko `_mktemp` można tworzyć dla `base` i `template` wartości używane w tym przykładzie.  
+ `_mktemp` można utworzyć maksymalnie 26 unikatowe nazwy plików dla dowolnej kombinacji danej wartości typu podstawowego i szablonu. W związku z tym FNZ12345 jest unikatowy plik nazwisko `_mktemp` można tworzyć dla `base` i `template` wartości używane w tym przykładzie.  
   
  W przypadku awarii `errno` jest ustawiona. Jeśli `template` ma nieprawidłowy format (na przykład mniej niż 6 x), `errno` ma ustawioną wartość `EINVAL`. Jeśli `_mktemp` nie może utworzyć unikatową nazwę, ponieważ istnieją już wszystkie 26 nazwy pliku to możliwe, `_mktemp` ustawia ciąg pusty szablon i zwraca `EEXIST`.  
   
@@ -125,7 +128,7 @@ fna12345
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_mktemp`|\<IO.h >|  
+|`_mktemp`|\<io.h>|  
 |`_wmktemp`|\<IO.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -219,9 +222,9 @@ Out of unique filenames.
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa plików](../../c-runtime-library/file-handling.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_getmbcp —](../../c-runtime-library/reference/getmbcp.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
  [_getpid —](../../c-runtime-library/reference/getpid.md)   
  [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
- [_setmbcp —](../../c-runtime-library/reference/setmbcp.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
  [_tempnam —, _wtempnam —, tmpnam — _wtmpnam —](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   
  [tmpfile](../../c-runtime-library/reference/tmpfile.md)

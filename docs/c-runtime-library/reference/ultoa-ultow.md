@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ultoa
 - _ultow
@@ -29,7 +30,8 @@ f1_keywords:
 - _ultoa
 - _ultow
 - _ultot
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ultot function
 - converting integers
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _ultoa function
 - converting numbers, to strings
 ms.assetid: 7a472dc4-5652-4513-93c3-3358522c23be
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e555275f4516d92318ec5cfffbca3472c2a5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 94073b947848199bdc093f959ddceadcb1835f16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ultoa-ultow"></a>_ultoa, _ultow
 Konwertuj niepodpisane długich liczb całkowitych na ciąg. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_ultoa_s —, _ultow_s —](../../c-runtime-library/reference/ultoa-s-ultow-s.md).  
@@ -95,7 +98,7 @@ wchar_t *_ultow(
  Każda z tych funkcji, zwraca wskaźnik do `str`. Nie ma żadnych zwracany błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- `_ultoa` Funkcji konwertuje `value` na ciąg znaków zakończony znakiem null i zapisuje wynik (w bajtach do 33) w `str`. Sprawdzanie przepełnienia nie jest wykonywane. `radix`Określa podstawą `value`; `radix` musi należeć do zakresu 2 36. `_ultow`jest to wersja znaków dwubajtowych `_ultoa`.  
+ `_ultoa` Funkcji konwertuje `value` na ciąg znaków zakończony znakiem null i zapisuje wynik (w bajtach do 33) w `str`. Sprawdzanie przepełnienia nie jest wykonywane. `radix` Określa podstawą `value`; `radix` musi należeć do zakresu 2 36. `_ultow` jest to wersja znaków dwubajtowych `_ultoa`.  
   
 > [!IMPORTANT]
 >  Aby uniknąć przepełnienia buforu, upewnij się, że `str` bufor jest wystarczająco duży, aby pomieścić przekonwertowanego cyfry oraz końcowego znaku null.  
@@ -112,7 +115,7 @@ wchar_t *_ultow(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_ultoa`|\<stdlib.h >|  
+|`_ultoa`|\<stdlib.h>|  
 |`_ultow`|\<stdlib.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  

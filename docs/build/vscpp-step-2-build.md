@@ -4,19 +4,22 @@ description: "Zainstaluj obsługę programu Visual Studio dla programu Visual C+
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Skompilować i uruchomić projekt aplikacji konsoli języka C++
 
@@ -83,6 +86,8 @@ Jeśli red zygzaki są wyświetlane w obszarze wszystko w edytorze kodu źródł
 ### <a name="run-your-code-in-a-command-window-issues"></a>Uruchamianie kodu w oknie polecenia problemów
 
 Można także przechodzić do folderu rozwiązania debugowania w wierszu polecenia do uruchomienia aplikacji. Nie można uruchomić aplikacji z innych katalogów, bez określenia ścieżki do aplikacji. Można jednak skopiować do innego katalogu aplikacji i uruchomić go z.
+
+Jeśli nie widzisz **Kopiuj jako ścieżka** w menu skrótów zamknąć menu, a następnie naciśnij i przytrzymaj klawisz Shift podczas ponownego otwarcia. To jest tylko dla wygody. Można również skopiować ścieżkę do folderu na pasku wyszukiwania w Eksploratorze plików i wklej ją do **Uruchom** okna dialogowego, a następnie wprowadź nazwę pliku wykonywalnego na końcu. Jest niewiele więcej wpisywania, ale ma ten sam rezultat.
 
 [Przejdź wstecz.](#run-your-code-in-a-command-window)
 

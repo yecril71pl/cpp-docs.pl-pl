@@ -1,13 +1,15 @@
 ---
-title: "_get_tzname — | Dokumentacja firmy Microsoft"
+title: _get_tzname | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _get_tzname
+ms.topic: reference
+apiname:
+- _get_tzname
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - _get_tzname
 - get_tzname
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _get_tzname function
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3f70e928c3877bf5d660231cbe2646f6cf72575e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0a44accc317bf387fcdd3ab7879020b13fba6858
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="gettzname"></a>_get_tzname
 Pobiera reprezentacji ciągu znaków nazwy strefy czasowej lub nazwa strefy (czas standardowy) czasu letniego (DST).  
@@ -56,16 +60,16 @@ errno_t _get_tzname(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pReturnValue`  
+ [out] `pReturnValue`  
  Długość ciągu `timeZoneName` włącznie z terminatorem NULL.  
   
- [out]`timeZoneName`  
+ [out] `timeZoneName`  
  Adres ciąg znaków reprezentację Nazwa strefy czasowej lub nazwa strefy (czas standardowy) czasu letniego (DST), w zależności od `index`.  
   
- [in]`sizeInBytes`  
+ [in] `sizeInBytes`  
  Rozmiar `timeZoneName` znaków ciągu w bajtach.  
   
- [in]`index`  
+ [in] `index`  
  Indeks jednej nazwy dwie strefy czasowej do pobrania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -75,7 +79,7 @@ errno_t _get_tzname(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|`pReturnValue`|`timeZoneName`|`sizeInBytes`|`index`|Wartość zwracana|Zawartość`timeZoneName`|  
+|`pReturnValue`|`timeZoneName`|`sizeInBytes`|`index`|Wartość zwracana|Zawartość `timeZoneName`|  
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|  
 |rozmiar TZ nazwy|`NULL`|0|0 lub 1|0|Nie zmodyfikowano|  
 |rozmiar TZ nazwy|wszystkie|> 0|0 lub 1|0|Nazwa TZ|  
@@ -88,11 +92,11 @@ errno_t _get_tzname(
   
 ### <a name="index-values"></a>Wartości indeksu  
   
-|`index`|Zawartość`timeZoneName`|`timeZoneName`Wartość domyślna|  
+|`index`|Zawartość `timeZoneName`|`timeZoneName` Wartość domyślna|  
 |-------------|--------------------------------|----------------------------------|  
 |0|Nazwa strefy czasowej|"PST"|  
 |1|Nazwa strefy czasu letniego (czas standardowy)|"PDT"|  
-|> 1 lub < 0|`errno`wartość`EINVAL`|Nie zmodyfikowano|  
+|> 1 lub < 0|`errno` wartość `EINVAL`|Nie zmodyfikowano|  
   
  Jeśli wartości są zmieniane jawnie w czasie wykonywania, wartości domyślne to "PST" i "PDT" odpowiednio.  Rozmiary te tablice znaków są regulowane przez `TZNAME_MAX` wartość.  
   
@@ -100,14 +104,14 @@ errno_t _get_tzname(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_get_tzname`|\<Time.h >|  
+|`_get_tzname`|\<time.h>|  
   
  Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
  [errno, _doserrno — _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
- [_get_daylight —](../../c-runtime-library/reference/get-daylight.md)   
- [_get_dstbias —](../../c-runtime-library/reference/get-dstbias.md)   
- [_get_timezone —](../../c-runtime-library/reference/get-timezone.md)   
+ [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
+ [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
+ [_get_timezone](../../c-runtime-library/reference/get-timezone.md)   
  [TZNAME_MAX](../../c-runtime-library/tzname-max.md)

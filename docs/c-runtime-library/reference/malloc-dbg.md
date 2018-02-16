@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _malloc_dbg
 apilocation:
@@ -38,11 +38,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6693b362bcc69b6ca8e8b97dc350eb57b802436f
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 616fd3b71cd97e6abffb7c8a06d30a0f69146408
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 Przydziela blok pamięci sterty z dodatkowym miejscem dla nagłówka debugowania i zastąpić buforów (tylko wersja do debugowania).  
@@ -77,11 +77,11 @@ void *_malloc_dbg(
  Po pomyślnym ukończeniu ta funkcja zwraca wskaźnik do użytkownika części blok pamięci przydzielony, nowych funkcji programu obsługi lub zwraca wartość NULL. Pełny opis zwracany zachowania zobacz sekcję poniżej uwagi. Aby uzyskać więcej informacji o sposobie korzystania z nowych funkcji programu obsługi, zobacz [— funkcja malloc](../../c-runtime-library/reference/malloc.md) funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `_malloc_dbg`jest to wersja debugowania [— funkcja malloc](../../c-runtime-library/reference/malloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_malloc_dbg` zostanie zmniejszona do wywołania `malloc`. Zarówno `malloc` i `_malloc_dbg` przydzielić bloku pamięci w stercie podstawowy, ale `_malloc_dbg` oferuje kilka funkcji debugowania: buforów po obu stronach części bloku do testowania przecieki, parametr typu bloku do śledzenia alokacji określonego użytkownika typy i `filename` / `linenumber` informacji do ustalenia źródła żądań alokacji.  
+ `_malloc_dbg` jest to wersja debugowania [— funkcja malloc](../../c-runtime-library/reference/malloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_malloc_dbg` zostanie zmniejszona do wywołania `malloc`. Zarówno `malloc` i `_malloc_dbg` przydzielić bloku pamięci w stercie podstawowy, ale `_malloc_dbg` oferuje kilka funkcji debugowania: buforów po obu stronach części bloku do testowania przecieki, parametr typu bloku do śledzenia alokacji określonego użytkownika typy i `filename` / `linenumber` informacji do ustalenia źródła żądań alokacji.  
   
  `_malloc_dbg` alokuje blok pamięci z nieco większą ilością miejsca niż żądane `size`. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Gdy blok zostanie przydzielony, część użytkownika bloku jest wypełniania wartościami 0xCD a każdy bufor zastąpienia jest wypełniany wartościami 0xFD.  
   
- `_malloc_dbg`Ustawia `errno` do `ENOMEM` Jeśli alokacja pamięci nie powiedzie się lub jeśli przekracza ilość pamięci potrzebnej (łącznie z czynności wymienionych wcześniej) `_HEAP_MAXREQ`. Aby uzyskać informacji dotyczących tego i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `_malloc_dbg` Ustawia `errno` do `ENOMEM` Jeśli alokacja pamięci nie powiedzie się lub jeśli przekracza ilość pamięci potrzebnej (łącznie z czynności wymienionych wcześniej) `_HEAP_MAXREQ`. Aby uzyskać informacji dotyczących tego i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Informacje o typach bloku alokacji i sposobu ich używania, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywoływanie funkcji sterty standardowe i jego wersji do debugowania w kompilację debugowania aplikacji, zobacz [debugowania wersji z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   

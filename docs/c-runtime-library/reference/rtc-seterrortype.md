@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _RTC_SetErrorType
+ms.topic: reference
+apiname:
+- _RTC_SetErrorType
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - run-time errors
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2c89c5adba9224c11f8d5ec77e13b06a8cea4d0c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9f6aaeaabe07f84a10167057ff94b45f91af0c93
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 Kojarzy błąd, który jest wykrywany przez sprawdzanie błędów czasu wykonywania (RTCs) z typem. Twoje obsługi błędu przetwarza jak dane wyjściowe błędów określonego typu.  
@@ -74,7 +78,7 @@ Kojarzy błąd, który jest wykrywany przez sprawdzanie błędów czasu wykonywa
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_RTC_SetErrorType`|\<rtcapi.h >|  
+|`_RTC_SetErrorType`|\<rtcapi.h>|  
   
  Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -82,5 +86,5 @@ Kojarzy błąd, który jest wykrywany przez sprawdzanie błędów czasu wykonywa
  Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [_Rtc_geterrdesc —](../../c-runtime-library/reference/rtc-geterrdesc.md)   
+ [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   
  [Sprawdzanie błędów czasu wykonywania](../../c-runtime-library/run-time-error-checking.md)

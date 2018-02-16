@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fegetround
 - fesetround
@@ -30,21 +30,23 @@ f1_keywords:
 - fesetround
 - fenv/fegetround
 - fenv/fesetround
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 544a9e43f029ba03b2ccd40e7ab6fe4fdb1d8127
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bf50371c781a5ade76f3f35de8fc760331d72a20
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 Pobiera lub ustawia bieżący tryb zaokrąglania liczb zmiennoprzecinkowych.  
@@ -71,7 +73,7 @@ int fesetround(
 ## <a name="remarks"></a>Uwagi  
  Zmiennoprzecinkowe operacje można użyć jednego z kilku trybów zaokrąglania. Te kontrolować kierunek, w którym są zaokrąglane wyniki operacji zmiennoprzecinkowej kierunku, gdy wyniki są przechowywane. Są to nazwy i zachowania zmiennoprzecinkowego zaokrąglania makra zdefiniowane w \<fenv.h >:  
   
-|Makra|Opis|  
+|Macro|Opis|  
 |-----------|-----------------|  
 |FE_DOWNWARD|Zaokrąglij do nieskończoności ujemnej.|  
 |FE_TONEAREST|Zaokrąglij do najbliższej.|  
@@ -104,12 +106,12 @@ int fesetround(
   
 |Funkcja|Nagłówek C|Nagłówek C++|  
 |--------------|--------------|------------------|  
-|`fegetround`,                `fesetround`|\<fenv.h >|\<cfenv >|  
+|`fegetround`,                `fesetround`|\<fenv.h>|\<cfenv>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [nearbyint —, nearbyintf —, nearbyintl](../../c-runtime-library/reference/nearbyint-nearbyintf-nearbyintl1.md)   
- [Drukowanie, rintf, rintl](../../c-runtime-library/reference/rint-rintf-rintl.md)   
+ [rint, rintf, rintl](../../c-runtime-library/reference/rint-rintf-rintl.md)   
  [lrint, lrintf, lrintl, llrint, llrintf, llrintl](../../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)

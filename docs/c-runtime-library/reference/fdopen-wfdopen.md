@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fdopen
 - _wfdopen
@@ -28,7 +29,8 @@ f1_keywords:
 - _wfdopen
 - wfdopen
 - tfdopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wfdopen function
 - _fdopen function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7108fdedb2698e6065c22ebe6905d897ee389ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2474c25d30415d48252a2621ae5f7e69e5fed4d3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -82,7 +85,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz 
 
 ## <a name="remarks"></a>Uwagi
 
-`_fdopen` Funkcja kojarzy strumień we/wy z pliku, który jest identyfikowany przez *fd*i w związku z tym umożliwia pliku, który jest otwarty dla niskiego poziomu we/wy mają być buforowane i sformatowany. `_wfdopen`jest to wersja znaków dwubajtowych `_fdopen`; *tryb* argument `_wfdopen` jest ciągiem znaków dwubajtowych. `_wfdopen`i `_fdopen` w przeciwnym razie zachowują się tak samo.
+`_fdopen` Funkcja kojarzy strumień we/wy z pliku, który jest identyfikowany przez *fd*i w związku z tym umożliwia pliku, który jest otwarty dla niskiego poziomu we/wy mają być buforowane i sformatowany. `_wfdopen` jest to wersja znaków dwubajtowych `_fdopen`; *tryb* argument `_wfdopen` jest ciągiem znaków dwubajtowych. `_wfdopen` i `_fdopen` w przeciwnym razie zachowują się tak samo.
 
 Przekazany deskryptorów plików `_fdopen` należą do firmy przez zwróconego `FILE *` strumienia. Jeśli `_fdopen` zakończy się pomyślnie, nie należy wywoływać [ \_zamknąć](../../c-runtime-library/reference/close.md) na deskryptorów plików. Wywoływanie [fclose —](../../c-runtime-library/reference/fclose-fcloseall.md) w zwróconym `FILE *` również zamyka deskryptorów plików.
 
@@ -134,7 +137,7 @@ Jeśli `t` lub `b` nie została podana w *tryb*, domyślny tryb tłumaczenia jes
 
 Prawidłowe znaki *tryb* parametry używane w `fopen` i `_fdopen` odpowiadają *oflag* argumenty użyte w [ \_Otwórz](../../c-runtime-library/reference/open-wopen.md) i [ \_sopen —](../../c-runtime-library/reference/sopen-wsopen.md), jak pokazano w poniższej tabeli:
 
-|Znaki w *tryb* ciągu|Odpowiednik *oflag* wartość `_open` i`_sopen`|
+|Znaki w *tryb* ciągu|Odpowiednik *oflag* wartość `_open` i `_sopen`|
 |---------------------------------|---------------------------------------------------|
 |`a`|**\_O\_WRONLY &#124; \_O\_APPEND** (zazwyczaj  **\_O\_WRONLY &#124; \_O\_tworzenie &#124; \_O\_APPEND**)|
 |`a+`|**\_O\_RDWR &#124; \_O\_APPEND** (zazwyczaj  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_tworzenie** )|
@@ -142,8 +145,8 @@ Prawidłowe znaki *tryb* parametry używane w `fopen` i `_fdopen` odpowiadają *
 |`r+`|**\_O\_RDWR**|
 |`w`|**\_O\_WRONLY** (zazwyczaj  **\_O\_WRONLY &#124; \_O\_tworzenie &#124; \_O\_TRUNC**)|
 |`w+`|**\_O\_RDWR** (zazwyczaj  **\_O\_RDWR &#124; \_O\_tworzenie &#124; \_O\_TRUNC**)|
-|`b`|**\_O\_BINARNE**|
-|`t`|**\_O\_TEKSTU**|
+|`b`|**\_O\_BINARY**|
+|`t`|**\_O\_TEXT**|
 |`c`|Brak|
 |`n`|Brak|
 
@@ -151,7 +154,7 @@ Prawidłowe znaki *tryb* parametry używane w `fopen` i `_fdopen` odpowiadają *
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|`_fdopen`|\<stdio.h >|
+|`_fdopen`|\<stdio.h>|
 |`_wfdopen`|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

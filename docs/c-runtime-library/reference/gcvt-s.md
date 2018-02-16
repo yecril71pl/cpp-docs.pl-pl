@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _gcvt_s
+ms.topic: reference
+apiname:
+- _gcvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - _gcvt_s
 - gcvt_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _gcvt_s function
 - _CVTBUFSIZE
@@ -35,16 +38,17 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a028431bb324fe634ee30ae81eec6c2d3371441
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 567738b488ae648dbd67ea1d2b5cdf34b649170c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="gcvts"></a>_gcvt_s
 Konwertuje wartość zmiennoprzecinkowa na ciąg. To jest wersja [_gcvt —](../../c-runtime-library/reference/gcvt.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -67,16 +71,16 @@ errno_t _gcvt_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`buffer`  
+ [out] `buffer`  
  Bufor do przechowywania wynik konwersji.  
   
- [in]`sizeInBytes`  
+ [in] `sizeInBytes`  
  Rozmiar buforu.  
   
- [in]`value`  
+ [in] `value`  
  Wartość do skonwertowania.  
   
- [in]`digits`  
+ [in] `digits`  
  Liczba cyfr znaczących przechowywane.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -84,7 +88,7 @@ errno_t _gcvt_s(
   
 ### <a name="error-conditions"></a>Warunki błędów  
   
-|`buffer`|`sizeInBytes`|`value`|`digits`|Zwraca|Wartość w`buffer`|  
+|`buffer`|`sizeInBytes`|`value`|`digits`|Zwraca|Wartość w `buffer`|  
 |--------------|-------------------|-------------|--------------|------------|-----------------------|  
 |`NULL`|wszystkie|wszystkie|wszystkie|`EINVAL`|Nie modyfikować.|  
 |nie `NULL` (wskazuje prawidłowy pamięci)|zero|wszystkie|wszystkie|`EINVAL`|Nie modyfikować.|  
@@ -92,10 +96,10 @@ errno_t _gcvt_s(
   
  **Problemy dotyczące zabezpieczeń**  
   
- `_gcvt_s`można wygenerować naruszenia zasad dostępu, jeśli `buffer` nie wskazuje na prawidłową pamięci i nie jest `NULL`.  
+ `_gcvt_s` można wygenerować naruszenia zasad dostępu, jeśli `buffer` nie wskazuje na prawidłową pamięci i nie jest `NULL`.  
   
 ## <a name="remarks"></a>Uwagi  
- `_gcvt_s` Funkcja konwertuje zmiennoprzecinkowe `value` na ciąg znaków (w tym punktem dziesiętnym i bajtów możliwości logowania) i zapisuje ciąg w `buffer`. `buffer`powinien być wystarczająco duży, aby pomieścić skonwertowana wartość plus znak końcowy null, które są automatycznie dołączane. Bufor o długości `_CVTBUFSIZE` jest wystarczająca dla dowolnej liczby zmiennoprzecinkowe wartości. Jeśli rozmiar buforu `digits` + 1 jest używany, funkcja nie zastąpi końcu buforu, dlatego należy podać wystarczające buforu dla tej operacji. `_gcvt_s`próbuje utworzyć `digits` cyfr w formacie dziesiętnym. Jeśli nie, tworzy `digits` cyfr w notacji wykładniczej. Końcowe zera można pominąć w konwersji.  
+ `_gcvt_s` Funkcja konwertuje zmiennoprzecinkowe `value` na ciąg znaków (w tym punktem dziesiętnym i bajtów możliwości logowania) i zapisuje ciąg w `buffer`. `buffer` powinien być wystarczająco duży, aby pomieścić skonwertowana wartość plus znak końcowy null, które są automatycznie dołączane. Bufor o długości `_CVTBUFSIZE` jest wystarczająca dla dowolnej liczby zmiennoprzecinkowe wartości. Jeśli rozmiar buforu `digits` + 1 jest używany, funkcja nie zastąpi końcu buforu, dlatego należy podać wystarczające buforu dla tej operacji. `_gcvt_s` próbuje utworzyć `digits` cyfr w formacie dziesiętnym. Jeśli nie, tworzy `digits` cyfr w notacji wykładniczej. Końcowe zera można pominąć w konwersji.  
   
  W języku C++ za pomocą tej funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążenie można wnioskować o długości buforu automatycznie, eliminując konieczność określić argument rozmiar. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -105,7 +109,7 @@ errno_t _gcvt_s(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_gcvt_s`|\<stdlib.h >|\<Error.h >|  
+|`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -144,7 +148,7 @@ Converted value: 1.2
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [atof —, _atof_l —, _wtof — _wtof_l —](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_ecvt_s —](../../c-runtime-library/reference/ecvt-s.md)   
- [_fcvt_s —](../../c-runtime-library/reference/fcvt-s.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
+ [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   
  [_gcvt](../../c-runtime-library/reference/gcvt.md)

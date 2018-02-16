@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _recalloc_dbg
+ms.topic: reference
+apiname:
+- _recalloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - recalloc_dbg
 - _recalloc_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _recalloc_dbg function
 - recalloc_dbg function
 ms.assetid: 43c3e9b2-be6d-4508-9b0f-3220c8a47ca3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dfd6489945ee4eb5ede32f010d474a2cb428ff97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fabb666b72d175c3b08d9161749997c7648840e0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="recallocdbg"></a>_recalloc_dbg
 Przydziela ponownie tablicy i inicjuje jej elementy 0 (tylko wersja do debugowania).  
@@ -82,11 +86,11 @@ void *_recalloc_dbg(
  Po pomyślnym ukończeniu ta funkcja zwraca wskaźnik do użytkownika części bloku przydzielić pamięci, nowych funkcji programu obsługi albo zwraca wartość NULL. Pełny opis zwracany zachowania zobacz sekcję poniżej uwagi. Aby uzyskać więcej informacji o sposobie korzystania z nowych funkcji programu obsługi, zobacz [_recalloc —](../../c-runtime-library/reference/recalloc.md) funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `_recalloc_dbg`jest to wersja debugowania [_recalloc —](../../c-runtime-library/reference/recalloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_recalloc_dbg` zostanie zmniejszona do wywołania `_recalloc`. Zarówno `_recalloc` i `_recalloc_dbg` ponownie przydzielić bloku pamięci w stercie podstawowy, ale `_recalloc_dbg` bierze pod uwagę kilka funkcji debugowania: buforów po obu stronach części bloku do testowania przecieki, parametr typu bloku do śledzenia określonego użytkownika typy alokacji i `filename` / `linenumber` informacji do ustalenia źródła żądań alokacji.  
+ `_recalloc_dbg` jest to wersja debugowania [_recalloc —](../../c-runtime-library/reference/recalloc.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie `_recalloc_dbg` zostanie zmniejszona do wywołania `_recalloc`. Zarówno `_recalloc` i `_recalloc_dbg` ponownie przydzielić bloku pamięci w stercie podstawowy, ale `_recalloc_dbg` bierze pod uwagę kilka funkcji debugowania: buforów po obu stronach części bloku do testowania przecieki, parametr typu bloku do śledzenia określonego użytkownika typy alokacji i `filename` / `linenumber` informacji do ustalenia źródła żądań alokacji.  
   
- `_recalloc_dbg`przydziela ponownie bloku nieco więcej miejsca niż żądany rozmiar pamięci określony (`num` * `size`) co może być większa lub mniejsza niż rozmiar bloku pierwotnie alokacji pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Ponowne przydzielenie może spowodować przeniesienie do innej lokalizacji w stercie oryginalnego bloku pamięci, jak również zmiana rozmiaru bloku pamięci. Użytkownik część bloku jest wypełnione wartością 0xCD i każdego buforów Zastąp wypełniane 0xFD.  
+ `_recalloc_dbg` przydziela ponownie bloku nieco więcej miejsca niż żądany rozmiar pamięci określony (`num` * `size`) co może być większa lub mniejsza niż rozmiar bloku pierwotnie alokacji pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Ponowne przydzielenie może spowodować przeniesienie do innej lokalizacji w stercie oryginalnego bloku pamięci, jak również zmiana rozmiaru bloku pamięci. Użytkownik część bloku jest wypełnione wartością 0xCD i każdego buforów Zastąp wypełniane 0xFD.  
   
- `_recalloc_dbg`Ustawia `errno` do `ENOMEM` Jeśli alokacja pamięci nie powiodło się; `EINVAL` jest zwracany, jeśli ilość pamięci potrzebnej (łącznie z czynności wymienionych wcześniej) przekracza `_HEAP_MAXREQ`. Aby uzyskać informacji dotyczących tego i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `_recalloc_dbg` Ustawia `errno` do `ENOMEM` Jeśli alokacja pamięci nie powiodło się; `EINVAL` jest zwracany, jeśli ilość pamięci potrzebnej (łącznie z czynności wymienionych wcześniej) przekracza `_HEAP_MAXREQ`. Aby uzyskać informacji dotyczących tego i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywoływanie funkcji sterty standardowe i jego wersji do debugowania w kompilację debugowania aplikacji, zobacz [debugowania wersji z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
@@ -94,7 +98,7 @@ void *_recalloc_dbg(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_recalloc_dbg`|\<crtdbg.h >|  
+|`_recalloc_dbg`|\<crtdbg.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
