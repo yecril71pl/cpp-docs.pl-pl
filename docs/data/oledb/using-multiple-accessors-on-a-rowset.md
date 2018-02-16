@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - BEGIN_ACCESSOR macro
 - BEGIN_ACCESSOR macro, multiple accessors
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eda994a3b1312c4721a185c3f4a39938df1272a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06a9e668ecf2a16a933a9accd727284fa0f4bab6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Używanie wielu metod dostępu w zestawie wierszy
 Istnieją trzy podstawowe scenariusze, w których należy użyć wielu metod dostępu:  
@@ -36,7 +38,7 @@ Istnieją trzy podstawowe scenariusze, w których należy użyć wielu metod dos
   
     -   Metoda dostępu 1 zawiera wszystkie kolumny z wyjątkiem klucza podstawowego.  
   
--   **Wydajność.** W tym scenariuszu jeden lub więcej kolumn zawierają dużą ilość danych, na przykład grafiki, plików audio i wideo. Za każdym razem, gdy zostanie przeniesiony do wiersza, prawdopodobnie nie chcesz pobrać kolumny z plikiem dużej ilości danych, ponieważ spowoduje to może spowolnić wydajności aplikacji.  
+-   Wydajność. W tym scenariuszu jeden lub więcej kolumn zawierają dużą ilość danych, na przykład grafiki, plików audio i wideo. Za każdym razem, gdy zostanie przeniesiony do wiersza, prawdopodobnie nie chcesz pobrać kolumny z plikiem dużej ilości danych, ponieważ spowoduje to może spowolnić wydajności aplikacji.  
   
      Możesz skonfigurować oddzielne metod dostępu, w których pierwszego dostępu zawiera wszystkich kolumn, oprócz jednego z dużej ilości danych, a jego pobiera dane z tych kolumn automatycznie; jest to akcesor automatycznie. Druga metoda dostępu pobiera tylko kolumnę zawierającą dużej ilości danych, ale go nie pobiera dane z tej kolumny automatycznie. Może mieć inne metody aktualizacji lub pobrać dużej ilości danych na żądanie.  
   
@@ -117,7 +119,7 @@ int main(int argc, char* argv[])
         if (hr == S_OK)  
         {  
             // Ready to fetch/access data  
-            CTable<CAccessor<CJobs> > jobs;  
+            CTable<CAccessor<CJobs>> jobs;  
   
             // Set properties for making the rowset a read/write cursor  
             CDBPropSet dbRowset(DBPROPSET_ROWSET);  

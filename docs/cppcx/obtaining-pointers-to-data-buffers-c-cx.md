@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c914241682aa53735d27138da2864b0db124c8d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 07e04a1adabab004ef64ed308d1222400192f235
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Uzyskiwanie wskaźniki do buforów danych (C + +/ CX)
 W środowisku wykonawczym systemu Windows [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) interfejs umożliwia niezależny od języka, na podstawie strumienia dostępu buforów danych. W języku C++ raw wskaźnika do podstawowej tablicy typu byte można uzyskać za pomocą interfejsu IBufferByteAccess biblioteki środowiska uruchomieniowego systemu Windows, który jest zdefiniowany w robuffer.h. Za pomocą tej metody można zmodyfikować bajtów tablicy w miejscu bez wprowadzania żadnych niepotrzebnych kopie danych.  
@@ -78,7 +79,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
             </Grid>  
         ```  
   
-3.  W MainPage.xaml.cs  
+3.  In MainPage.xaml.cs  
   
     1.  Dodaj następujące deklaracje przestrzeni nazw:  
   

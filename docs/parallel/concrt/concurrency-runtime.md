@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e3adff365269ad9dae2d6b850470a869250e3dd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-runtime"></a>Współbieżność środowiska wykonawczego
 Współbieżność środowiska wykonawczego dla języka C++ pomaga zapisu niezawodnych, skalowalnych i reakcji aplikacji równoległych. Uruchamia poziomie abstrakcji, dzięki czemu nie trzeba zarządzać szczegóły infrastruktury, które są związane z współbieżności. Można również użyć do określenia planowania zasad, które spełniają jakości usługi wymagań aplikacji. Dzięki tym zasobom ułatwiające rozpoczęcie pracy z współbieżności środowiska wykonawczego.  
@@ -67,13 +70,13 @@ Współbieżność środowiska wykonawczego dla języka C++ pomaga zapisu niezaw
 |[Anulowanie w PPL](cancellation-in-the-ppl.md)|Opisuje rolę anulowanie w PPL, łącznie ze sposobem inicjowania i odpowiadać na żądania anulowania.|  
 |[Instrukcje: używanie anulowania, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [Instrukcje: używanie obsługi wyjątków, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Pokazuje można anulować pracy równoległe danych na dwa sposoby.|  
   
-## <a name="windows-store-apps"></a>Aplikacje Windows Store  
+## <a name="universal-windows-platform-apps"></a>Windows uniwersalnych aplikacji platformy  
   
 |||  
 |-|-|  
-|[Tworzenie operacji asynchronicznych w języku C++ dla aplikacji sklepu Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|W tym artykule opisano niektóre z najważniejszych należy wziąć pod uwagę korzystania ze współbieżności środowiska wykonawczego wygenerowało operacji asynchronicznych w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji.|  
-|[Przewodnik: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Pokazuje, jak łączyć zadania PPL z `IXMLHTTPRequest2` i `IXMLHTTPRequest2Callback` interfejsy do wysyłania żądań HTTP GET i POST do usługi sieci web w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji.|  
-|[Przykłady aplikacji do Sklepu Windows](http://code.msdn.microsoft.com/windowsapps)|Zawiera przykłady kodu do pobrania i pokaz aplikacji dla [!INCLUDE[win8](../../build/reference/includes/win8_md.md)]. Przykłady dla języka C++ Użyj współbieżność środowiska wykonawczego funkcje, takie jak PPL zadań do przetwarzania danych w tle do zachowania reakcji środowiska użytkownika.|  
+|[Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Opisano niektóre z najważniejszych należy wziąć pod uwagę w przypadku utworzenia asynchronicznych operacji w aplikacji platformy uniwersalnej systemu Windows za pomocą współbieżności środowiska wykonawczego.|  
+|[Przewodnik: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Pokazuje, jak łączyć zadania PPL z `IXMLHTTPRequest2` i `IXMLHTTPRequest2Callback` interfejsy do wysyłania żądań HTTP GET i POST do usługi sieci web w aplikacji platformy uniwersalnej systemu Windows.|  
+|[Przykłady aplikacji do środowiska wykonawczego systemu Windows](http://code.msdn.microsoft.com/windowsapps)|Zawiera przykłady kodu do pobrania i pokaz aplikacji dla systemu Windows 8.x. Przykłady dla języka C++ Użyj współbieżność środowiska wykonawczego funkcje, takie jak PPL zadań do przetwarzania danych w tle do zachowania reakcji środowiska użytkownika.|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programowanie przepływu danych w bibliotece agentów asynchronicznych  
   
@@ -108,7 +111,7 @@ Współbieżność środowiska wykonawczego dla języka C++ pomaga zapisu niezaw
   
 |||  
 |-|-|  
-|[Programowanie asynchroniczne wzorce i porad w Hilo (aplikacje ze Sklepu Windows przy użyciu języka C++ i XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Dowiedz się, jak użyliśmy współbieżności środowiska wykonawczego do wykonania operacji asynchronicznych w Hilo, [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji przy użyciu języka C++ i języka XAML.|  
+|[Programowanie asynchroniczne wzorce i porad w Hilo (aplikacje ze Sklepu Windows przy użyciu języka C++ i XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Dowiedz się, jak użyliśmy współbieżności środowiska wykonawczego do wykonania operacji asynchronicznych w Hilo, aplikacji środowiska wykonawczego systemu Windows, przy użyciu języka C++ i języka XAML.|  
 |[Przykłady kodu dla współbieżność środowiska wykonawczego i Biblioteka równoległych wzorcem w Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Zawiera przykładowe aplikacje i narzędzia, które przedstawiają współbieżności środowiska wykonawczego.|  
 |[Programowanie równoległe w blogu kodu natywnego](http://go.microsoft.com/fwlink/p/?linkid=183873)|Udostępnia dodatkowe szczegółowe blogu artykułów na temat Programowanie równoległe w współbieżności środowiska wykonawczego.|  
 |[Równoległe Computing forum C++ i kod natywny](http://go.microsoft.com/fwlink/p/?linkid=183874)|Umożliwia udział w dyskusjach społeczności o współbieżności środowiska wykonawczego.|  

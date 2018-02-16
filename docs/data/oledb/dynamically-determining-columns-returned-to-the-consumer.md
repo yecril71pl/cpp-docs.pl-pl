@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2827747d91bd1c26e173b6f0bdb44d54c3d0f8e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed7ad9ab7b28758419c2b7c848852678f69bc3e2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamicznie określanie kolumn zwracanych do konsumenta
 Makra PROVIDER_COLUMN_ENTRY zwykle obsługi **IColumnsInfo::GetColumnsInfo** wywołania. Jednak ponieważ konsumenta, można użyć zakładki, dostawca musi być można zmienić kolumny zwracane w zależności od tego, czy klient pyta o zakładki.  
   
  Do obsługi **IColumnsInfo::GetColumnsInfo** wywołanie, Usuń PROVIDER_COLUMN_MAP, który definiuje funkcję `GetColumnInfo`, z `CAgentMan` użytkownika zarejestrowania w MyProviderRS.h i zastąp go definicji własne `GetColumnInfo` funkcji:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
 class CAgentMan  
@@ -53,11 +55,11 @@ public:
   
  Następnie należy zaimplementować `GetColumnInfo` działać w MyProviderRS.cpp, jak pokazano w poniższym kodzie.  
   
- `GetColumnInfo`najpierw sprawdza, czy właściwość OLE DB **DBPROP_BOOKMARKS** jest ustawiona. Aby pobrać właściwość, `GetColumnInfo` używa wskaźnika (`pRowset`) do obiektu zestawu wierszy. `pThis` Wskaźnika reprezentuje klasa, która utworzyła zestawu wierszy, które jest klasą przechowywania mapy właściwości. `GetColumnInfo`typecasts `pThis` wskaźnik do `RMyProviderRowset` wskaźnika.  
+ `GetColumnInfo` najpierw sprawdza, czy właściwość OLE DB **DBPROP_BOOKMARKS** jest ustawiona. Aby pobrać właściwość, `GetColumnInfo` używa wskaźnika (`pRowset`) do obiektu zestawu wierszy. `pThis` Wskaźnika reprezentuje klasa, która utworzyła zestawu wierszy, które jest klasą przechowywania mapy właściwości. `GetColumnInfo` typecasts `pThis` wskaźnik do `RMyProviderRowset` wskaźnika.  
   
  Aby sprawdzić **DBPROP_BOOKMARKS** właściwości, `GetColumnInfo` używa `IRowsetInfo` interfejsu, który można uzyskać przez wywołanie metody `QueryInterface` na `pRowset` interfejsu. Alternatywnie, można użyć ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metody zamiast tego.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////  
 // MyProviderRS.cpp  
 ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)  
@@ -118,12 +120,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
   
  W tym przykładzie używane statyczne tablica zawiera informacji o kolumnie. Aby klient nie kolumny zakładki, jeden wpis w tablicy jest nieużywany. Aby obsłużyć informacje, należy utworzyć makra macierzy dwa: ADD_COLUMN_ENTRY i ADD_COLUMN_ENTRY_EX. Dodatkowy parametr przyjmuje ADD_COLUMN_ENTRY_EX `flags`, która jest niezbędny w przypadku wyznaczyć kolumnę zakładki.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision,   
-scale, guid, dataClass, member) \  
+#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
    _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
    _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  
@@ -134,8 +135,7 @@ scale, guid, dataClass, member) \
    _rgColumns[ulCols].bScale = (BYTE)scale; \  
    _rgColumns[ulCols].cbOffset = offsetof(dataClass, member);  
   
-#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type,   
-precision, scale, guid, dataClass, member, flags) \  
+#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member, flags) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
    _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
    _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  

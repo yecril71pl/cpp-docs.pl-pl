@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6dd42eae54f61d03d4d490a17cf1282e2d2e51f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Przenoszenie na platformę uniwersalną systemu Windows (C++)
 Informacje na temat portu istniejącego kodu C++ do platformy aplikacji systemu Windows 10, platformy uniwersalnej systemu Windows można znaleźć w tym temacie. Co oznacza termin *uniwersalnych* kodu mogą działać na dowolnym z urządzeń z systemem Windows 10, łącznie z pulpitu, telefonów, tabletów i przyszłości urządzenia z systemem Windows 10. Możesz utworzyć pojedynczego projektu i jeden interfejs użytkownika XAML base, który działa poprawnie na dowolnym urządzeniu z systemem Windows 10. Układ dynamiczny funkcji w języku XAML służy do zezwalania Interfejsie użytkownika aplikacji do dostosowania do rozmiarów ekranów.  
@@ -33,7 +36,7 @@ Informacje na temat portu istniejącego kodu C++ do platformy aplikacji systemu 
   
  Jeśli masz klasycznego pulpitu DLL Win32 i chcesz wywołać go z aplikacji platformy uniwersalnej systemu Windows, możesz to zrobić również. Korzystanie z tych procedur, można utworzyć warstwę interfejsu użytkownika platformy uniwersalnej systemu Windows dla istniejącego pulpitu systemu Windows klasycznej aplikacji C++ lub standardowego kodu C++ i platform. Zobacz [porady: używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej systemu Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).  
   
-##  <a name="BK_81StoreApp"></a>Eksportowanie aplikacji ze Sklepu Windows 8.1 do platformy uniwersalnej systemu Windows  
+##  <a name="BK_81StoreApp">Eksportowanie aplikacji ze Sklepu Windows 8.1 do platformy uniwersalnej systemu Windows</a>  
  Jeśli masz aplikację ze Sklepu Windows 8.1 można Użyj tej procedury, aby przygotować go do pracy na platformy uniwersalnej systemu Windows i dowolne urządzenie z systemem Windows 10.  Jako projekt Windows 8.1, aby najpierw wyeliminować problemy, które wynikają z zmiany kompilatora i bibliotek jest dobrym pomysłem jest pierwszej kompilacji projektu z programu Visual Studio 2017 r. Po wykonaniu tego istnieją dwa sposoby Skonwertuj je do projektu platformy uniwersalnej systemu Windows do systemu Windows 10. Najprostszym sposobem (zgodnie z opisem w poniższej procedurze) jest utworzenie projektu uniwersalnej systemu Windows i skopiuj istniejący kod do niego. Jeśli uniwersalnych projektów były używane dla pulpitu Windows 8.1 i Windows 8.1 Phone, projekt zostanie uruchomiona z dwóch różnych układów w języku XAML, ale zakończenia z pojedynczy układ dynamiczne, które można dostosować do rozmiaru ekranu.  
   
 #### <a name="to-port-a-windows-81-store-app-to-the-uwp"></a>Do portu aplikacji Sklepu Windows 8.1, aby platformy uniwersalnej systemu Windows  
@@ -73,11 +76,11 @@ Informacje na temat portu istniejącego kodu C++ do platformy aplikacji systemu 
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
     ```  
   
-     Te instrukcje odpowiednio mają zastosowanie do aplikacji ze Sklepu Windows, Sklep Windows Phone aplikacje, zarówno lub żadna (klasycznej Win32 tylko wersja desktop). Makra te są dostępne tylko w systemie Windows 8.1 SDK i nowszych, jeśli kod wymaga kompilacji z wcześniejszych wersji zestawu Windows SDK lub dla innych platform, oprócz systemu Windows, należy również rozważyć przypadku że żaden z nich, a następnie są zdefiniowane.  
+     Te instrukcje odpowiednio mają zastosowanie do aplikacji platformy uniwersalnej systemu Windows, Sklep Windows Phone aplikacje, zarówno lub żadna (klasycznej Win32 tylko wersja desktop). Makra te są dostępne tylko w systemie Windows 8.1 SDK i nowszych, jeśli kod wymaga kompilacji z wcześniejszych wersji zestawu Windows SDK lub dla innych platform, oprócz systemu Windows, należy również rozważyć przypadku że żaden z nich, a następnie są zdefiniowane.  
   
 11. Uruchom i debugowanie aplikacji na emulator lub urządzenie fizyczne, dla każdego typu urządzenia, które obsługuje aplikację. Aby uruchomić emulatora, musisz uruchomić program Visual Studio na komputerze fizycznym, a nie maszyny wirtualnej.  
   
-##  <a name="BK_81Component"></a>Eksportowanie składnika środowiska wykonawczego platformy uniwersalnej systemu Windows, Windows 8.1  
+##  <a name="BK_81Component">Eksportowanie składnika środowiska wykonawczego platformy uniwersalnej systemu Windows, Windows 8.1</a>  
  Jeśli masz biblioteki DLL lub składnika środowiska uruchomieniowego systemu Windows, który już działa z aplikacji ze Sklepu Windows 8.1 można Użyj tej procedury, można pobrać składnika lub DLL, Praca z platformy uniwersalnej systemu Windows i Windows 10. Podstawowa procedura polega na utworzenie nowego projektu i skopiuj do niego kodu.  
   
 #### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Port składnika środowiska uruchomieniowego Windows 8.1, platformy uniwersalnej systemu Windows  
@@ -91,7 +94,7 @@ Informacje na temat portu istniejącego kodu C++ do platformy aplikacji systemu 
 4.  Skompiluj i usuń wszelkie błędy ze względu na istotne zmiany między różnymi wersjami zestawu Windows SDK.  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
- Mogą wystąpić różne błędy w trakcie procesu Eksportowanie kodu dla platformy uniwersalnej systemu Windows. Poniżej przedstawiono niektóre możliwe problemy, które mogą wystąpić.  
+ Mogą wystąpić różne błędy w trakcie przenoszenia kodu platformy uniwersalnej systemu Windows. Poniżej przedstawiono niektóre możliwe problemy, które mogą wystąpić.  
   
  **Problemy z konfiguracją projektu**  
   

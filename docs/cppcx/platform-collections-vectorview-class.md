@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::VectorView
 - COLLECTION/Platform::Collections::VectorView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::GetMany
 - COLLECTION/Platform::Collections::VectorView::IndexOf
 - COLLECTION/Platform::Collections::VectorView::Size
-dev_langs: C++
-helpviewer_keywords: VectorView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f196a1f58e5c480ef09d13a72f1c8ac3a0a50db
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Klasa platform::Collections::VectorView
 Reprezentuje widok tylko do odczytu sekwencyjną kolekcją obiektów, których można indywidualnie uzyskać dostęp przez indeks. Typ każdego obiektu w kolekcji jest określony przez parametr szablonu.  
@@ -74,7 +77,7 @@ template <typename T, typename E>
   
  **Namespace:** Platform::Collections  
 
-## <a name="first"></a>VectorView::First — metoda
+## <a name="first"></a>  VectorView::First — metoda
 Zwraca określający pierwszego elementu w VectorView iteratora.  
   
 ### <a name="syntax"></a>Składnia  
@@ -93,7 +96,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
   
 
 
-## <a name="getat"></a>VectorView::GetAt — metoda
+## <a name="getat"></a>  VectorView::GetAt — metoda
 Pobiera element VectorView bieżącej, wskazaną przez określonego indeksu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -114,7 +117,7 @@ T GetAt(
   
 
 
-## <a name="getmany"></a>VectorView::GetMany — metoda
+## <a name="getmany"></a>  VectorView::GetMany — metoda
 Pobiera sekwencję elementów z bieżącym VectorView, zaczynając od określonego indeksu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -139,7 +142,7 @@ virtual unsigned int GetMany(
   
 
 
-## <a name="indexof"></a>VectorView::IndexOf — metoda
+## <a name="indexof"></a>  VectorView::IndexOf — metoda
 Wyszukuje określony element w bieżącym VectorView i w razie znaleziona, zwraca indeks elementu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -162,11 +165,11 @@ virtual bool IndexOf(
  `index` Parametru jest 0, jeśli element jest pierwszym elementem VectorView lub element nie został znaleziony. Jeśli wartość zwracana jest `true`, element został odnaleziony i jest pierwszym elementem; w przeciwnym razie nie odnaleziono elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli określony element zostanie odnaleziony; w przeciwnym razie `false`.  
+ `true` Jeśli określony element zostanie odnaleziony; w przeciwnym razie `false`.  
   
 
 
-## <a name="size"></a>VectorView::Size — metoda
+## <a name="size"></a>  VectorView::Size — metoda
 Zwraca liczbę elementów w bieżącym obiekcie VectorView.  
   
 ### <a name="syntax"></a>Składnia  
@@ -181,7 +184,7 @@ virtual property unsigned int Size;
   
 
 
-## <a name="ctor"></a>Konstruktor VectorView::VectorView
+## <a name="ctor"></a>  Konstruktor VectorView::VectorView
 Inicjuje nowe wystąpienie klasy VectorView.  
   
 ### <a name="syntax"></a>Składnia  

@@ -7,23 +7,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: C4451
+ms.topic: language-reference
+f1_keywords:
+- C4451
 helpviewer_keywords:
 - threading issues, C++/CX
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 74a00ece1e1853346b88c0340b32911618a9ff24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d62da6fafccecc8099e3f9611946d1c89a40389
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="threading-and-marshaling-ccx"></a>Wątkowość i organizowanie (C + +/ CX)
 W większość przypadków wystąpienia klas środowiska wykonawczego systemu Windows, takich jak standardowymi obiektami C++ są dostępne z dowolnego wątku. Takich klas są określane jako "agile". Jednak niewielkiej liczby klas środowiska wykonawczego systemu Windows, które są dostarczane z systemem Windows są z systemem innym niż agile i muszą być przetworzone więcej takich jak obiekty COM niż standardowymi obiektami C++. Nie trzeba być ekspert COM, używać klas agile, ale należy wziąć pod uwagę model wątkowości klasy i jego zachowanie marshalingu. Ten artykuł zawiera wskazówki dotyczące rzadkich scenariuszach, w których należy używać wystąpienia klasy agile i tła.  
@@ -31,9 +33,9 @@ W większość przypadków wystąpienia klas środowiska wykonawczego systemu Wi
 ## <a name="threading-model-and-marshaling-behavior"></a>Model wątkowości i zachowanie marshalingu  
  Klasa środowiska uruchomieniowego systemu Windows może obsługiwać dostępu współbieżnych wątków na różne sposoby, wskazywany przez dwa atrybuty, które są stosowane do niej:  
   
--   `ThreadingModel`atrybut może mieć jedną z wartości — STA, MTA, lub obie, zgodnie z definicją `ThreadingModel` wyliczenia.  
+-   `ThreadingModel` atrybut może mieć jedną z wartości — STA, MTA, lub obie, zgodnie z definicją `ThreadingModel` wyliczenia.  
   
--   `MarshallingBehavior`atrybut może mieć jedną z wartości — Agile, None lub Standard, zgodnie z definicją w `MarshallingType` wyliczenia.  
+-   `MarshallingBehavior` atrybut może mieć jedną z wartości — Agile, None lub Standard, zgodnie z definicją w `MarshallingType` wyliczenia.  
   
  `ThreadingModel` Atrybut określa, gdzie jest ładowany klasy, po uaktywnieniu: tylko w kontekście wątku (STA) interfejsu użytkownika, tylko w kontekście wątku (MTA) tło lub w kontekście wątku tworzącą obiektu (oba). `MarshallingBehavior` Wartości atrybutu odnoszą się do zachowania obiektu w różnych kontekstach wątkowości; w większości przypadków, nie trzeba poznać te wartości szczegółowo.  Klasy, które są udostępniane przez interfejs API systemu Windows, mieć około 90 procent `ThreadingModel`= zarówno i `MarshallingType`= Agile. Oznacza to, że można obsługują szczegółów niskiego poziomu wątkowości przezroczyste i wydajne.   Jeśli używasz `ref new` można utworzyć klasy "agile", można wywoływać metod w nim z z wątku głównego aplikacji lub z jednego lub więcej wątków roboczych.  Innymi słowy, można użyć zwinne klasy — niezależnie od tego, czy są dostarczane przez system Windows ani przez inną firmę — z dowolnego miejsca w kodzie. Nie trzeba zajmować się klasy model wątkowości lub zachowanie marshalingu  
   

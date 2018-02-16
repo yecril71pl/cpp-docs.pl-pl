@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271831fb4dd946739414fb40b00fadf83b5e0ed1
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c1541029a8164e1c70e5599f20512dbecde543dc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historia 2003 2015 zmian Visual C++
 
@@ -51,15 +51,15 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
   
 4.  [Współbieżność środowiska wykonawczego podziału zmiany](#BK_ConcRT)  
   
-## <a name="VC_2015"></a>Visual C++ 2015 zgodność zmiany  
+## <a name="VC_2015"></a> Visual C++ 2015 zgodność zmiany  
   
-###  <a name="BK_CRT"></a>Biblioteka środowiska wykonawczego języka C (CRT)  
+###  <a name="BK_CRT"></a> Biblioteka środowiska wykonawczego języka C (CRT)  
   
 #### <a name="general-changes"></a>Ogólne zmiany  
   
 -   **Pliki binarne refaktoryzowane** Biblioteka CRT ma został zrefaktoryzowany do dwóch różnych plików binarnych, uniwersalne środowisko CRT (ucrtbase), który zawiera większość standardowych funkcji, a biblioteka środowiska uruchomieniowego VC (vcruntime), który zawiera powiązane kompilatora Funkcje, takie jak obsługa wyjątków i funkcje wewnętrzne. Jeśli korzystasz z domyślnych ustawień projektu, następnie ta zmiana nie ma wpływu możesz ponieważ konsolidator będzie automatycznie używać nowej biblioteki domyślne. Jeśli ustawisz projekt **konsolidatora** właściwości **Ignoruj wszystkie domyślne biblioteki** do **tak** lub w przypadku używania opcji konsolidatora/nodefaultlib w wierszu polecenia, a następnie należy lista bibliotek (w **dodatkowe zależności** właściwości) do uwzględnienia bibliotek nowy, refaktoryzowane. Zastąp równoważnych bibliotek refactored starego biblioteki CRT (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib). Dla każdego z dwóch bibliotek refactored są statyczna (lib) i wersji dynamicznie (dll) i wersji (nie sufiksem) i wersji debugowania (wraz z sufiksem "d"). Dynamiczne wersje mają biblioteki importu, który należy połączyć z. Dwie biblioteki refactored są uniwersalne środowisko CRT, w szczególności ucrtbase.dll lub lib, plik ucrtbased.dll lub .lib, a biblioteka środowiska uruchomieniowego VC, libvcruntime.lib, vcruntime*wersji*dll, libvcruntimed.lib i vcruntimed*wersji*dll. *Wersji* w Visual Studio 2015 i Visual Studio 2017 jest 140. Zobacz [funkcje bibliotek CRT](../c-runtime-library/crt-library-features.md).  
   
-#### <a name="localeh"></a>\<Locale.h >  
+#### <a name="localeh"></a>\<locale.h>  
   
 -   **localeconv —** [localeconv —](../c-runtime-library/reference/localeconv.md) funkcja zadeklarowana w locale.h teraz działa prawidłowo po [ustawienia regionalne dla każdego wątku](../parallel/multithreading-and-locales.md) jest włączona. W poprzednich wersjach biblioteki ta funkcja zwróci dane lconv — globalnych ustawień regionalnych nie ustawienia regionalne wątku.  
   
@@ -97,13 +97,13 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
   
 -   **nowe i usunąć** w poprzednich wersjach biblioteki nowy operator zdefiniowane w implementacji i usuwania funkcji zostały wyeksportowane z biblioteki środowiska uruchomieniowego DLL (na przykład msvcr120.dll). Te funkcje operatorów są teraz zawsze połączone statycznie do Twojej plików binarnych, nawet w przypadku używania biblioteki środowiska uruchomieniowego bibliotek DLL.  
   
-     Nie jest to istotne zmiany kodu natywnego lub mieszane (/ clr), jednak kod skompilowany jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), może to spowodować niepowodzenie skompilować kod. Jeśli Skompiluj kod jako/CLR: pure, należy dodać #include \<nowych > lub #include \<new.h > Aby uniknąć błędów kompilacji z powodu tej zmiany. Należy pamiętać, że/CLR: pure jest przestarzała w programie Visual Studio 2015 i może zostać usunięta w przyszłych wersjach.  
+     Nie jest to istotne zmiany kodu natywnego lub mieszane (/ clr), jednak kod skompilowany jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), może to spowodować niepowodzenie skompilować kod. Jeśli Skompiluj kod jako/CLR: pure, należy dodać #include \<nowych > lub #include \<new.h > Aby uniknąć błędów kompilacji z powodu tej zmiany. Należy pamiętać, że/CLR: pure jest przestarzała w programie Visual Studio 2015 i może zostać usunięta w przyszłych wersjach. Kod, który musi być "czysty" powinny być przenoszone do języka C#.  
   
 #### <a name="processh"></a>\<process.h >  
   
 -   **_beginthread — i _beginthreadex —** [_beginthread —](../c-runtime-library/reference/beginthread-beginthreadex.md) i [_beginthreadex —](../c-runtime-library/reference/beginthread-beginthreadex.md) funkcji teraz przechowuje odwołania do modułu, w którym określono procedury wątku na czas trwania Wątek. Pomaga to zapewnić, że moduły nie są zwalniane, dopóki wątku ma działać do zakończenia.  
   
-#### <a name="stdargh"></a>\<stdarg.h >  
+#### <a name="stdargh"></a>\<stdarg.h>  
   
 -   **Dokumentacja i va_start — typy** podczas kompilowania kodu C++ [va_start —](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) teraz weryfikuje w czasie kompilacji, która argumentu przekazanego do niego nie jest typu referencyjnego. Argumenty typu odwołania są zabronione przez C++ Standard.  
   
@@ -131,7 +131,7 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
   
     -   Infinity: 1. #INF  
   
-    -   NaN cichy: 1. #QNAN  
+    -   Quiet NaN: 1.#QNAN  
   
     -   NaN sygnalizowania: 1. #SNAN  
   
@@ -214,7 +214,7 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
   
 -   **smallheap** opcja łącze smalheap została usunięta. Zobacz [opcje łącza](../c-runtime-library/link-options.md).  
   
-#### <a name="stringh"></a>\<String.h >  
+#### <a name="stringh"></a>\<string.h>  
   
 -   **wcstok —** podpis wcstok — funkcja został zmieniony do dopasowania, co jest wymagane przez C Standard. W poprzednich wersjach biblioteki podpis tej funkcji to:  
   
@@ -226,7 +226,7 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
   
      Nowa funkcja _wcstok został dodany podpisem stare do jej obsługi ułatwiają przenoszenie. Podczas kompilowania kodu C++, dostępna jest również przeciążenia wbudowanego wcstok —, który ma podpis stary. To przeciążenie jest zadeklarowany jako przestarzały. W kodzie C możesz define_CRT_NON_CONFORMING_WCSTOK spowodować _wcstok do użycia zamiast wcstok —.  
   
-#### <a name="timeh"></a>\<Time.h >  
+#### <a name="timeh"></a>\<time.h>  
   
 -   **zegar** w poprzednich wersjach [zegara](../c-runtime-library/reference/clock.md) funkcja został wdrożony przy użyciu interfejsu API systemu Windows [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). Z tą implementacją funkcji zegara było wrażliwe na czas systemowy i nie był w związku z tym niekoniecznie monotoniczna. Funkcja zegara ma zostały reimplemented w postaci liczby [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) i jest teraz monotoniczna.  
   
@@ -244,7 +244,7 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
   
 -   **CLOCKS_PER_SEC** CLOCKS_PER_SEC makro rozszerza się teraz na liczbę całkowitą clock_t — typ, co jest wymagane przez języka C.  
   
-####  <a name="BK_STL"></a>Standardowa biblioteka C++  
+####  <a name="BK_STL"></a> Standardowa biblioteka C++  
  Aby włączyć nowe optymalizacje i kontrole debugowania, implementacja standardowej biblioteki C++ w Visual Studio celowo łamie zgodność binarną między wersjami. W związku z tym gdy używana jest standardowa biblioteka C++, pliki obiektowe i biblioteki statyczne, które są kompilowane przy użyciu różnych wersji, nie mogą być mieszane w jednym pliku binarnym (EXE lub DLL), a obiekty standardowej biblioteki C++ nie mogą być przekazywane między plikami binarnymi, które są kompilowane przy użyciu różnych wersji. Takie mieszanie powoduje błędy konsolidatora dotyczące niezgodności _MSC_VER. (Elemencie _MSC_VER jest makrem, zawierający głównej wersji kompilatora — na przykład 1800 dla programu Visual Studio 2013.) Tego wyboru nie może wykryć mieszanie biblioteki DLL i nie może wykryć mieszanie, który wymaga programu Visual Studio 2008 lub starszej.  
   
 -   **Pliki nagłówkowe standardowej biblioteki C++** niektóre zmiany zostały wprowadzone w strukturze include w nagłówkach standardowa biblioteka C++. Nagłówki standardowa biblioteka C++ mogą zawierać siebie nawzajem w sposób nieokreślony. Ogólnie rzecz biorąc należy zapisać swój kod, aby dokładnie zawiera wszystkie nagłówki, które wymaga zgodnie z C++ standard i nie zależą od tego, która standardowa biblioteka C++ nagłówki obejmują które nagłówki standardowa biblioteka C++. Dzięki temu kod przenośny między wersjami i platform. Co najmniej dwie zmiany nagłówka w programie Visual Studio 2015 mają wpływ na kod użytkownika. Najpierw \<ciąg > nie zawiera już \<iteratora >. Drugi, \<krotki > teraz deklaruje std::array bez wraz ze wszystkimi \<tablicy >, które mogą być dzielone kodu za pomocą następujących kombinacji konstrukcji kodu: kod zawiera zmienną o nazwie "array", a masz dyrektywy using "przy użyciu przestrzeń nazw std; ", i Dołącz nagłówek standardowa biblioteka C++ (takich jak \<funkcjonalności >) zawierającej \<spójnej kolekcji >, które teraz deklaruje std::array.  
@@ -289,31 +289,31 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
     |has_default_constructor|is_default_constructible|  
     |has_copy_constructor|is_copy_constructible|  
     |has_move_constructor|is_move_constructible|  
-    |has_nothrow_constructor —|is_nothrow_default_constructible —|  
-    |has_nothrow_default_constructor|is_nothrow_default_constructible —|  
-    |has_nothrow_copy —|is_nothrow_copy_constructible —|  
-    |has_nothrow_copy_constructor|is_nothrow_copy_constructible —|  
-    |has_nothrow_move_constructor|is_nothrow_move_constructible —|  
-    |has_nothrow_assign —|is_nothrow_copy_assignable —|  
-    |has_nothrow_copy_assign|is_nothrow_copy_assignable —|  
+    |has_nothrow_constructor|is_nothrow_default_constructible|  
+    |has_nothrow_default_constructor|is_nothrow_default_constructible|  
+    |has_nothrow_copy|is_nothrow_copy_constructible|  
+    |has_nothrow_copy_constructor|is_nothrow_copy_constructible|  
+    |has_nothrow_move_constructor|is_nothrow_move_constructible|  
+    |has_nothrow_assign|is_nothrow_copy_assignable|  
+    |has_nothrow_copy_assign|is_nothrow_copy_assignable|  
     |has_nothrow_move_assign|is_nothrow_move_assignable|  
-    |has_trivial_constructor|is_trivially_default_constructible —|  
-    |has_trivial_default_constructor —|is_trivially_default_constructible —|  
-    |has_trivial_copy —|is_trivially_copy_constructible —|  
+    |has_trivial_constructor|is_trivially_default_constructible|  
+    |has_trivial_default_constructor|is_trivially_default_constructible|  
+    |has_trivial_copy|is_trivially_copy_constructible|  
     |has_trivial_move_constructor|is_trivially_move_constructible|  
-    |has_trivial_assign —|is_trivially_copy_assignable|  
+    |has_trivial_assign|is_trivially_copy_assignable|  
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
 -   **zasady Launch::any i launch::sync** niestandardowe zasady launch::any i launch::sync zostały usunięte. Dla launch::any, użyj uruchamiania: asynchroniczne &#124; uruchamianie: opóźnieniem. W przypadku launch::sync Użyj launch::deferred. Zobacz [launch — wyliczenie](../standard-library/future-enums.md#launch).  
   
-####  <a name="BK_MFC"></a>MFC i ATL  
+####  <a name="BK_MFC"></a> MFC i ATL  
   
 -   **Microsoft Foundation Classes (MFC)** znajduje się już w "Typowych" Instalacja programu Visual Studio z powodu jego duży rozmiar. Aby zainstalować MFC, wybierz opcję instalacji niestandardowej w Instalatorze programu Visual Studio 2015. Jeśli masz już zainstalowany program Visual Studio 2015, należy zainstalować MFC, uruchom ponownie Instalator programu Visual Studio, wybierając opcję instalacji niestandardowej i wybierając pozycję Microsoft Foundation Classes. Można ponownie uruchomić Instalatora programu Visual Studio z apletu Programy i funkcje, lub z nośnika instalacyjnego.  
   
      Pakiet redystrybucyjny Visual C++ wciąż zawiera tę bibliotekę.  
   
-####  <a name="BK_ConcRT"></a>Współbieżność środowiska wykonawczego  
+####  <a name="BK_ConcRT"></a> Współbieżność środowiska wykonawczego  
   
 -   **YIELD — makro z Windows.h powoduje konflikt z concurrency::Context::Yield** współbieżność środowiska wykonawczego wcześniej umożliwia #undef Usuń makro Yield zapobiegania konfliktom występującym między makro wydajności zdefiniowanych w Windows.h h i concurrency::Context: : Uzyskanie funkcji. #Undef ten został usunięty, a następnie wywołać nowy niekolidujących równoważne interfejs API [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) został dodany. Aby uniknąć konfliktów z wydajnością, można zaktualizować swój kod, aby zamiast tego wywołaj funkcję YieldExecution lub przestrzenny nazwą funkcji Yield nawiasów w lokacjach wywołanie, jak w poniższym przykładzie:  
   
@@ -338,7 +338,7 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
   
 -   [Ulepszenia zgodność aktualizacji 3](#VS_Update3)  
   
-###  <a name="VS_RTM"></a>Ulepszenia zgodność programu Visual Studio 2015  
+###  <a name="VS_RTM">Ulepszenia zgodność programu Visual Studio 2015</a>  
   
 -   Opcja /Zc:forScope-  
   
@@ -1435,7 +1435,7 @@ struct S {
     A(); // error
 };
 ```
-Aby rozwiązać problem, zmień pierwszego wiersza do`#define A();`
+Aby rozwiązać problem, zmień pierwszego wiersza do `#define A();`
 
 Poniższy kod tworzy błąd C2059: błąd składniowy: ")"
 ```cpp
@@ -1599,7 +1599,7 @@ C c;
 
 
   
-###  <a name="VS_Update1"></a>Ulepszenia zgodność aktualizacji 1  
+###  <a name="VS_Update1"></a> Ulepszenia zgodność aktualizacji 1  
   
 -   **Prywatne wirtualne klasy podstawowe i pośredniego dziedziczenia**  
   
@@ -2144,7 +2144,7 @@ C c;
     }  
     ```  
   
-###  <a name="VS_Update2"></a>Ulepszenia zgodność aktualizacji 2  
+###  <a name="VS_Update2"></a> Ulepszenia zgodność aktualizacji 2  
   
 -   **Dodatkowych ostrzeżeń i błędów może zostać utworzony w wyniku częściowej obsługi techniki SFINAE wyrażeń**  
   
@@ -2243,7 +2243,7 @@ C c;
   
     ```  
   
--   `volatile`**zmienne Członkowskie zapobiec niejawnie zdefiniowanych konstruktorów i operatory przypisania**  
+-   `volatile` **zmienne Członkowskie zapobiec niejawnie zdefiniowanych konstruktorów i operatory przypisania**  
   
      Poprzednie wersje kompilatora dozwolone klasy, która ma `volatile` skopiowania/przeniesienia konstruktorów zmienne Członkowskie mają domyślne i domyślne operatory przypisania kopiowania/przenoszenia generowane automatycznie. To zachowanie starego było nieprawidłowe i nie jest zgodny ze standardem C++. Kompilator uwzględnia teraz klasę, która ma zmiennych Członkowskich volatile nieuproszczony konstrukcji i operatory przypisania co zapobiega domyślnej implementacji tych operatorów są generowane automatycznie.  Jeśli taka klasa jest elementem członkowskim Unii (lub anonimowego związku wewnątrz klasy), konstruktorach kopiowania/przenoszenia i operatory przypisania skopiowania/przeniesienia Unii (lub klasy zawierającej Unii unonymous) będzie można niejawnie zdefiniowany jako usunięty. Podjęto próbę utworzenia lub skopiuj Unii (lub klasa zawierająca anonimowa Unia) bez jawnie definiując je w związku z tym jest błąd i błąd kompilatora problemów kompilatora C2280.  
   
@@ -2429,7 +2429,7 @@ C c;
   
      Ustalenie kodu, który jest zapisany w ten sposób mogą wymagać czy definicje operatora można przenieść pliku nagłówka i do odpowiadający mu plik źródłowy.  
   
-###  <a name="VS_Update3"></a>Ulepszenia zgodność aktualizacji 3  
+###  <a name="VS_Update3"></a> Ulepszenia zgodność aktualizacji 3  
   
 -   **STD::is_convertable teraz wykrywane jest przypisanie własne** (standardowa biblioteka)  
   
@@ -2688,7 +2688,7 @@ C c;
   
     ```  
   
-## <a name="visual-studio-2013-conformance-changes"></a>Visual Studio 2013 zgodność zmiany  
+## <a name="visual-studio-2013-conformance-changes"></a>Visual Studio 2013 Conformance Changes  
   
 ### <a name="compiler"></a>Kompilatora  
   
@@ -3106,7 +3106,7 @@ C c;
   
 -   Usunięto AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea. Wywołanie Windows API bezpośrednio w systemie Windows Vista, Windows 7 i Windows 8.  
   
--   Usunięto AFX_GLOBAL_DATA::DwmDefWindowProc. Wywołanie Windows API bezpośrednio w systemie Windows Vista, Windows 7 i Windows 8.  
+-   Removed AFX_GLOBAL_DATA::DwmDefWindowProc. Wywołanie Windows API bezpośrednio w systemie Windows Vista, Windows 7 i Windows 8.  
   
 -   Zmieniona AFX_GLOBAL_DATA::DwmIsCompositionEnabled na IsDwmCompositionEnabled, aby wyeliminować kolizję nazw.  
   
@@ -3136,7 +3136,7 @@ C c;
   
     -   CMFCHeaderCtrl  
   
-    -   Cmfcproperysheetlistbox —  
+    -   CMFCProperySheetListBox  
   
     -   CMFCRibbonBar  
   
@@ -3324,7 +3324,7 @@ C c;
   
     -   perf_object  
   
-    -   Monitora wydajności  
+    -   perfmon  
   
     -   request_handler  
   
@@ -3477,7 +3477,7 @@ C c;
   
 -   Iteratory debugowania: Aplikacje utworzone za pomocą debugowania wersji biblioteki środowiska uruchomieniowego C i które Iteratory użycia niepoprawnie może zacząć Zobacz potwierdzeń w czasie wykonywania. Aby wyłączyć te potwierdzeń, należy zdefiniować _HAS_ITERATOR_DEBUGGING (zastąpiona [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po Visual Studio 2010) na 0. Aby uzyskać więcej informacji, zobacz [Obsługa iteratora debugowania](../standard-library/debug-iterator-support.md)  
   
-## <a name="visual-c-net-2003-breaking-changes"></a>Visual C++ .NET 2003 najważniejszych zmian  
+## <a name="visual-c-net-2003-breaking-changes"></a>Visual C++ .NET 2003 Breaking Changes  
   
 ### <a name="compiler"></a>Kompilatora  
   

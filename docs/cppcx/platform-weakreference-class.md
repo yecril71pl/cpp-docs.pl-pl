@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: Platform::WeakReference
+ms.topic: reference
+f1_keywords:
+- Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8666896b0e3414dca8f4cd1f8c4e2f34e9b98050
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 59d87d2e00ef567c0273e71410ad58ebf0a5c061
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformweakreference-class"></a>Klasa platform::WeakReference
 Reprezentuje słabe odwołanie do wystąpienia klasy ref.  
@@ -55,7 +57,7 @@ class WeakReference
 ### <a name="remarks"></a>Uwagi  
  Weakreference — klasa nie jest klasa ref i dlatego nie dziedziczy on Platform::Object ^ i nie można używać w podpisie metody publicznej.  
 
-## <a name="operator-assign"></a>WeakReference::operator =
+## <a name="operator-assign">WeakReference::operator =</a>
 Przypisuje wartość do weakreference —.  
   
 ### <a name="syntax"></a>Składnia  
@@ -70,7 +72,7 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ### <a name="remarks"></a>Uwagi  
  Ostatni przeciążenia na powyższej liście umożliwia przypisanie klasy ref ze zmienną weakreference —. W takim przypadku klasa ref jest przypisanie elementu podrzędnego do [Platform::Object](../cppcx/platform-object-class.md)^. Później przywrócić oryginalny typ określając jako argumentu dla parametru typu w [WeakReference::Resolve\<T >](#resolve) funkcję elementu członkowskiego.  
   
-## <a name="booltype"></a>WeakReference::operator BoolType
+## <a name="booltype">WeakReference::operator BoolType</a>
 Implementuje wzorzec bezpieczne bool weakreference — klasa. Nie można wywoływać bezpośrednio w kodzie.  
   
 ### <a name="syntax"></a>Składnia  
@@ -79,7 +81,7 @@ Implementuje wzorzec bezpieczne bool weakreference — klasa. Nie można wywoły
 BoolType BoolType()  
 ```  
 
-## <a name="resolve"></a>WeakReference::Resolve — metoda (przestrzeń nazw platformy)
+## <a name="resolve"></a> WeakReference::Resolve — metoda (przestrzeń nazw platformy)
 Zwraca dojście do oryginalnej klasy ref lub `nullptr` Jeśli ten obiekt już istnieje.  
   
 ### <a name="syntax"></a>Składnia  
@@ -113,7 +115,7 @@ if (bar != nullptr)
  Należy pamiętać, że parametr typu T, T nie ^.  
   
  
-## <a name="ctor"></a>Weakreference::weakreference — Konstruktor
+## <a name="ctor"></a> Weakreference::weakreference — Konstruktor
 Udostępnia różne sposoby tworzenia weakreference —.  
   
 ### <a name="syntax"></a>Składnia  

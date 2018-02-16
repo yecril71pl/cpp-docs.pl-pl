@@ -4,39 +4,39 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL.AtlTraceErrorRecords
 - ATL::AtlTraceErrorRecords
 - AtlTraceErrorRecords
-dev_langs: C++
-helpviewer_keywords: AtlTraceErrorRecords function
+dev_langs:
+- C++
+helpviewer_keywords:
+- AtlTraceErrorRecords function
 ms.assetid: b83970b3-dc2a-445c-9142-f52218719905
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a3f8542f2c897f45916ac62fbac147259b2362d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95b743d9785d083b670be28e274b6f46acdea2ce
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atltraceerrorrecords"></a>AtlTraceErrorRecords
 Zrzuty danych OLE DB Błąd rekordu do urządzenia zrzutu, jeśli zostanie zwrócony błąd.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-      inline void AtlTraceErrorRecords(   
-   HRESULT hrErr = S_OK    
-);  
+```cpp
+      inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -44,7 +44,7 @@ Zrzuty danych OLE DB Błąd rekordu do urządzenia zrzutu, jeśli zostanie zwró
  [in] `HRESULT` Zwracane przez funkcję elementu członkowskiego OLE DB szablon konsumenta.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `hErr` nie jest `S_OK`, `AtlTraceErrorRecords` zrzuty danych OLE DB Błąd rekordu do urządzenia zrzutu ( **debugowania** karty w oknie danych wyjściowych lub pliku). Rekord błędu informacje, które są uzyskiwane od dostawcy, obejmuje numer wiersza, źródło, opis, plik pomocy, kontekstu i identyfikator GUID dla każdego wpisu rekordów błąd. `AtlTraceErrorRecords`zrzuty te informacje tylko w kompilacjach debugowania. W kompilacjach wydania jest pusty stub zoptymalizowanego wychodzących.  
+ Jeśli `hErr` nie jest `S_OK`, `AtlTraceErrorRecords` zrzuty danych OLE DB Błąd rekordu do urządzenia zrzutu ( **debugowania** karty w oknie danych wyjściowych lub pliku). Rekord błędu informacje, które są uzyskiwane od dostawcy, obejmuje numer wiersza, źródło, opis, plik pomocy, kontekstu i identyfikator GUID dla każdego wpisu rekordów błąd. `AtlTraceErrorRecords` zrzuty te informacje tylko w kompilacjach debugowania. W kompilacjach wydania jest pusty stub zoptymalizowanego wychodzących.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atldbcli.h  

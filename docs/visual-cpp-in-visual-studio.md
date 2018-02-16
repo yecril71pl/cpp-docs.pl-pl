@@ -21,11 +21,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a1cfde0baec56931f7b3a5603d8166df6067eb5
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ w programie Visual Studio
 
@@ -75,7 +75,7 @@ Dowiedz się, jak uzyskać pomoc, zgłaszać błędy i sugestie dotyczące Visua
 ## <a name="writing-applications-in-c"></a>Pisanie aplikacji w języku C++
 
 [Aplikacje uniwersalne systemu Windows](windows/universal-windows-apps-cpp.md)  
-Znajdź przewodniki i treści referencyjne w Centrum deweloperów systemu Windows. Informacje dotyczące opracowywania aplikacji ze Sklepu Windows, temacie [deweloperów Sklepu Windows przy użyciu programu Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=248364) i [plan dla Sklepu Windows za pomocą języka C++](http://go.microsoft.com/fwlink/p/?LinkId=244654).
+Znajdź przewodniki i treści referencyjne w Centrum deweloperów systemu Windows. Informacje dotyczące opracowywania aplikacji platformy uniwersalnej systemu Windows, temacie [wprowadzenie do platformy uniwersalnej systemu Windows](/windows/uwp/get-started/universal-application-platform-guide) i [tworzenie pierwszej aplikacji platformy uniwersalnej systemu Windows w języku C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 [Aplikacje klasyczne (C++)](windows/desktop-applications-visual-cpp.md)  
 Dowiedz się o sposobie tworzenia aplikacji pulpitu, które mają pętle komunikatów i wywołania zwrotne.
@@ -131,7 +131,7 @@ Algorytmy asynchroniczne i równoległe, wykonywane przez CPU.
 Duże równoległe algorytmy, wykonywane przez GPU.
 
 [Biblioteka szablonów środowiska wykonawczego systemu Windows (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] aplikacje i składniki.
+Uniwersalnych aplikacji platformy systemu Windows (UWP) i składniki.
 
 [.NET programowania w języku C + +/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 Programowanie dla wspólnego środowiska czasu wykonywania (common language runtime — CLR).

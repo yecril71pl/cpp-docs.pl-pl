@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - versions [C++]
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48c1adadb674f8dac2c5e8d6422a6594cd4fa695
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2656b7e1901104b29300f5adb6647e7f3ac1db57
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Narzędzia Visual C++ i funkcji w wersjach programu Visual Studio
 W poniższej tabeli przedstawiono funkcje programu Visual C++, które są dostępne w programie Visual Studio. X w komórce oznacza, że funkcja jest dostępna; pusta komórka wskazuje, że funkcja nie jest dostępna. Uwagi w nawiasach wskazują, że funkcja jest dostępne, ale ograniczone.  
@@ -34,7 +37,7 @@ W poniższej tabeli przedstawiono funkcje programu Visual C++, które są dostę
 |Platforma|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|  
 |System Windows Desktop||X|X|X|  
 |Platforma uniwersalna systemu Windows ((telefonów, tabletu PC, Xbox, IoT i HoloLens))|X||X|X|  
-|Sklep Windows 8.1|||X|X|  
+|Microsoft Store 8.1|||X|X|  
 |Windows Phone 8.0|||X|X|  
 |Android|||X|X|  
 |iOS|||X|X|  
@@ -66,10 +69,10 @@ W poniższej tabeli przedstawiono funkcje programu Visual C++, które są dostę
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
 |Szablony XAML dla platformy uniwersalnej systemu Windows, Windows 8.1, Windows Phone 8.0|X||X|X|  
 |Aplikacja Direct3D|X||X|X|  
-|DLL (aplikacje do Sklepu Windows)|X||X|X|  
-|Biblioteka statyczna (aplikacje do Sklepu Windows)|X||X|X|  
+|Biblioteki DLL (uniwersalna systemu Windows)|X||X|X|  
+|Biblioteka statyczna (uniwersalna systemu Windows)|X||X|X|  
 |Składnik środowiska wykonawczego systemu Windows|X||X|X|  
-|Biblioteka testów jednostki (aplikacje do Sklepu Windows)|X||X|X|  
+|Aplikacji testów jednostkowych (uniwersalna systemu Windows)|X||X|X|  
 |Projekt ATL|||X|X|  
 |Biblioteka klas (CLR)||X|X|X|  
 |Aplikacja konsoli środowiska CLR||X|X|X|  

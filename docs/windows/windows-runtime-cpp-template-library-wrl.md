@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest Biblioteka szablonów, które niskiego poziomu umożliwia tworzenie i używanie składnika środowiska wykonawczego systemu Windows.  
@@ -45,7 +47,7 @@ Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest B
  Poniżej przedstawiono niektóre zasoby, które ułatwiają uzyskiwanie od razu Praca z Biblioteka szablonów C++ środowiska wykonawczego systemu Windows.  
   
  [Biblioteka środowiska uruchomieniowego systemu Windows (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
- To wideo z witryny Channel 9 Dowiedz się więcej o tym, jak Biblioteka szablonów C++ środowiska wykonawczego systemu Windows pomaga pisania aplikacji platformy uniwersalnej systemu Windows oraz jak tworzyć i zużywać składników środowiska wykonawczego systemu Windows.  
+ To wideo z witryny Channel 9 Dowiedz się więcej o tym, jak Biblioteka szablonów C++ środowiska wykonawczego systemu Windows pomaga pisania aplikacji uniwersalnych platformy systemu Windows (UWP) i jak tworzyć i zużywać składników środowiska wykonawczego systemu Windows.  
   
  [Porady: uaktywnianie składnika środowiska wykonawczego systemu Windows i korzystanie](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
  Przedstawia sposób użycia Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, aby zainicjować środowiska uruchomieniowego systemu Windows i aktywować i używają składnika środowiska wykonawczego systemu Windows.  
@@ -59,7 +61,7 @@ Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest B
  [Wskazówki: Tworzenie składnika środowiska wykonawczego podstawowa systemu Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
  Przedstawia sposób umożliwia tworzenie podstawowego składnika środowiska wykonawczego systemu Windows, która dodaje dwie liczby Biblioteka szablonów C++ środowiska wykonawczego systemu Windows. Także przedstawiono sposób wywołania zdarzeń składnika i korzystanie z aplikacji platformy uniwersalnej systemu Windows, który używa języka JavaScript.  
   
- [Przewodnik: tworzenie aplikacji sklepu Windows Store z użyciem biblioteki WRL i platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ [Przewodnik: tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  Informacje o sposobie tworzenia aplikacji platformy uniwersalnej systemu Windows, który używa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Porady: tworzenie klasycznego składnika COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
@@ -91,7 +93,7 @@ Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest B
   
  Biblioteka szablonów C++ środowiska wykonawczego systemu Windows obsługuje funkcje COM, które są wymagane dla aplikacji platformy uniwersalnej systemu Windows. W związku z tym różni się od ATL ponieważ pominięto bezpośrednią obsługę COM funkcje takie jak:  
   
--   Agregacji  
+-   aggregation  
   
 -   implementacje standardowych  
   
@@ -113,7 +115,7 @@ Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest B
  Biblioteka szablonów C++ środowiska wykonawczego systemu Windows zawiera typy, które reprezentują kilka podstawowych pojęć. W poniższych sekcjach opisano tych typów.  
   
 ### <a name="comptr"></a>ComPtr  
- [Comptr —](../windows/comptr-class.md) jest *wskaźnika inteligentnego* typu, który reprezentuje interfejs, który jest określony przez parametr szablonu. Użyj `ComPtr` Aby zadeklarować zmienną, które mogą uzyskiwać dostęp do elementów członkowskich obiektu, który jest pochodną interfejsu. `ComPtr`automatycznie przechowuje licznika odwołań do podstawowej wskaźnika interfejsu i zwalnia interfejsu, gdy liczba odwołań do zera.  
+ [Comptr —](../windows/comptr-class.md) jest *wskaźnika inteligentnego* typu, który reprezentuje interfejs, który jest określony przez parametr szablonu. Użyj `ComPtr` Aby zadeklarować zmienną, które mogą uzyskiwać dostęp do elementów członkowskich obiektu, który jest pochodną interfejsu. `ComPtr` automatycznie przechowuje licznika odwołań do podstawowej wskaźnika interfejsu i zwalnia interfejsu, gdy liczba odwołań do zera.  
   
 ### <a name="runtimeclass"></a>RuntimeClass  
  [Runtimeclass —](../windows/runtimeclass-class.md) reprezentuje wystąpień klasy, która dziedziczy zestaw określonych interfejsów. A `RuntimeClass` obiektu zapewniają kombinację obsługę jeden lub więcej interfejsów COM środowiska wykonawczego systemu Windows lub słabe odwołanie do składnika.  
@@ -131,7 +133,7 @@ Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest B
  [Asyncbase —](../windows/asyncbase-class.md) udostępnia metody wirtualne, które reprezentują model programowania asynchronicznego środowiska wykonawczego systemu Windows. Zastąpienie członkowie w tej klasie do utworzenia niestandardowej klasy, które można uruchomić, zatrzymać lub sprawdzić postęp operacji asynchronicznej.  
   
 ### <a name="ftmbase"></a>FtmBase  
- [Ftmbase —](../windows/ftmbase-class.md) reprezentuje obiekt opcja. `FtmBase`tworzy tabelę interfejsu globalnego (GIT) i ułatwia zarządzanie obiektami organizowanie i serwera proxy.  
+ [Ftmbase —](../windows/ftmbase-class.md) reprezentuje obiekt opcja. `FtmBase` tworzy tabelę interfejsu globalnego (GIT) i ułatwia zarządzanie obiektami organizowanie i serwera proxy.  
   
 ### <a name="weakref"></a>WeakRef  
  [Weakref —](../windows/weakref-class.md) jest typem wskaźnika inteligentnych, który reprezentuje *słabe odwołanie*, który odwołuje się do obiektu, który może lub nie mogą być niedostępne. A `WeakRef` obiekt może służyć za środowiska uruchomieniowego systemu Windows, a nie klasycznego modelu COM.  

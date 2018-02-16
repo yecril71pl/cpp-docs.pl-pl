@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
 - COLLECTION/Platform::Collections::MapView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::MapView::Lookup
 - COLLECTION/Platform::Collections::MapView::Size
 - COLLECTION/Platform::Collections::MapView::Split
-dev_langs: C++
-helpviewer_keywords: MapView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: db25b79476490ccc6bfc3f68370f30b7e8f2afac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Klasa platform::Collections::MapView
 Reprezentuje widok tylko do odczytu do *mapy*, która jest kolekcją par klucz wartość.  
@@ -81,7 +84,7 @@ ref class MapView sealed;
  **Namespace:** Platform::Collections  
 
 
-## <a name="first"></a>MapView::First — metoda
+## <a name="first"></a> MapView::First — metoda
 Zwraca iteratora określający pierwszego elementu w widoku mapy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -99,7 +102,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>MapView::HasKey — metoda
+## <a name="haskey"></a>  MapView::HasKey — metoda
 Określa, czy bieżący MapView zawiera określony klucz.  
   
 ### <a name="syntax"></a>Składnia  
@@ -114,11 +117,11 @@ bool HasKey(K key);
  Klucz używana do lokalizowania elementu MapView. Typ `key` jest typename *K*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.  
+ `true` Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.  
   
 
 
-##  <a name="lookup"></a>MapView::Lookup — metoda
+##  <a name="lookup"></a> MapView::Lookup — metoda
 Pobiera wartość typu V skojarzony z określonym kluczem typu K.  
   
 ### <a name="syntax"></a>Składnia  
@@ -136,7 +139,7 @@ V Lookup(K key);
   
 
 
-##  <a name="ctor"></a>Konstruktor MapView::MapView
+##  <a name="ctor"></a> Konstruktor MapView::MapView
 Inicjuje nowe wystąpienie klasy MapView.  
   
 ### <a name="syntax"></a>Składnia  
@@ -174,12 +177,12 @@ MapView(
  `last`  
  Wejściowy iteratora pierwszego elementu po zakresu elementów używaną do inicjalizacji MapView bieżącej.  
   
- Il  
+ il  
  A [std::initializer_list < std::pair\<K, V >>](../standard-library/initializer-list-class.md) której elementy zostaną wstawione do MapView.  
 
 
 
-##  <a name="size"></a>MapView::Size — metoda
+##  <a name="size"></a> MapView::Size — metoda
 Zwraca liczbę elementów w bieżącym obiekcie MapView.  
   
 ### <a name="syntax"></a>Składnia  
@@ -194,7 +197,7 @@ virtual property unsigned int Size;
   
 
 
-##  <a name="split"></a>MapView::Split — metoda
+##  <a name="split"></a> MapView::Split — metoda
 Bieżący obiekt MapView jest podzielony na dwa obiekty MapView. Ta metoda jest nie działa.  
   
 ### <a name="syntax"></a>Składnia  

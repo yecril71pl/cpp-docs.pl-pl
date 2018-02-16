@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Obsługa zestawów wierszy schematu
 Zestawy wierszy schematu umożliwiają konsumentów uzyskać informacje o magazynie danych bez uprzedniego uzyskania informacji o jego struktury lub schematu. Na przykład magazynu danych może być tabel zorganizowane w hierarchii zdefiniowanej przez użytkownika, więc nie byłoby żaden sposób zapewnić wiedzę na temat schematu z wyjątkiem odczytując go. (Inny przykład należy pamiętać, że kreatorów Visual C++ zestawów wierszy schematu do generowania metody dostępu dla użytkownika.) Aby zezwolić na odbiorców to zrobić, obiekt sesji dostawcy udostępnia metody na [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interfejsu. W aplikacji Visual C++, możesz użyć [idbschemarowsetimpl —](../../data/oledb/idbschemarowsetimpl-class.md) klasy do zaimplementowania **IDBSchemaRowset**.  
   
- `IDBSchemaRowsetImpl`obsługuje następujące metody:  
+ `IDBSchemaRowsetImpl` obsługuje następujące metody:  
   
 -   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) sprawdza poprawność ograniczeń dla zestawu wierszy schematu.  
   
@@ -57,11 +59,11 @@ Zestawy wierszy schematu umożliwiają konsumentów uzyskać informacje o magazy
   
 -   **C** *nazwa_skrócona* **SessionColSchemaRowset** obsługuje żądania, aby uzyskać informacje dotyczące kolumn ( **DBSCHEMA_COLUMNS** zestaw wierszy schematu). Kreator udostępnia przykładowy implementacji dla tych klas, które zwrócić informacje o schemacie dla dostawcy systemu DOS.  
   
--   **C** *nazwa_skrócona* **SessionPTSchemaRowset** obsługuje żądania informacji schematu o typ dostawcy ( **DBSCHEMA_PROVIDER_TYPES** zestaw wierszy schematu). Domyślna implementacja kreatora zwraca `S_OK`.  
+-   **C** *nazwa_skrócona* **SessionPTSchemaRowset** obsługuje żądania informacji schematu o typ dostawcy ( **DBSCHEMA_PROVIDER_TYPES** schematu zestaw wierszy). Domyślna implementacja kreatora zwraca `S_OK`.  
   
  Można dostosować te klasy do obsługi informacji o schemacie właściwe dla dostawcy usługi:  
   
--   W **C***nazwa_skrócona***SessionTRSchemaRowset**, musisz wypełnić pola katalogu, tabeli i opis (**trData.m_szType**, **trData.m_szTable**, i **trData.m_szDesc**). Przykład generowane przez Kreatora używa tylko jeden wiersz (tabeli). Inni dostawcy mogą zwracać więcej niż jedna tabela.  
+-   W **C***nazwa_skrócona***SessionTRSchemaRowset**, musisz wypełnić pola katalogu, tabeli i opis (**trData.m_szType**, **trData.m_szTable** , i **trData.m_szDesc**). Przykład generowane przez Kreatora używa tylko jeden wiersz (tabeli). Inni dostawcy mogą zwracać więcej niż jedna tabela.  
   
 -   W **C***nazwa_skrócona***SessionColSchemaRowset**, przekaż nazwę tabeli jako **DBID**.  
   
@@ -105,7 +107,7 @@ class CUpdateSessionTRSchemaRowset :
 |-------------------------------|-----------------------|  
 |**TABLE_CATALOG**|0x1 (1 binarny)|  
 |**TABLE_SCHEMA**|0x2 (binarne 10)|  
-|**NAZWA_TABELI**|0x4 (binarne 100)|  
+|**TABLE_NAME**|0x4 (binarne 100)|  
 |**TABLE_TYPE**|0x8 (binarne 1000)|  
   
  Następnie należy pamiętać, że jeden bit dla każdego ograniczenia. Aby można było obsługiwać **nazwa_tabeli** , zwróci 0x4 w `rgRestrictions` elementu. Jeśli użytkownik obsługiwane **TABLE_CATALOG** i **nazwa_tabeli**, zwróci 0x5 (101 binarny).  
@@ -216,7 +218,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 ```  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
+
 wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);  
+
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   

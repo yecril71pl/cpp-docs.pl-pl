@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRT/concurrency::event::wait
 - CONCRT/concurrency::event::wait_for_multiple
 - CONCRT/concurrency::event::timeout_infinite
-dev_langs: C++
-helpviewer_keywords: event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 550cbdda0468db969ffe3c7d3412789c1f0e5976
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8c14cce1f34e4957b8c22bdbb8eab82fb4c0c58
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="event-class"></a>event — Klasa
 Zdarzenie resetowania ręcznego, która jawnie rozpoznaje współbieżności środowiska wykonawczego.  
@@ -50,7 +54,7 @@ class event;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Resetowanie](#reset)|Resetuje zdarzenia do stanu sygnalizowane.|  
+|[reset](#reset)|Resetuje zdarzenia do stanu sygnalizowane.|  
 |[set](#set)|Sygnalizuje zdarzenia.|  
 |[oczekiwania](#wait)|Czeka na zdarzenie sygnalizuje stają się.|  
 |[wait_for_multiple](#wait_for_multiple)|Czeka na wiele zdarzeń stać się sygnalizowane.|  
@@ -72,7 +76,7 @@ class event;
   
  **Namespace:** współbieżności  
   
-##  <a name="ctor"></a>zdarzenia 
+##  <a name="ctor"></a> Zdarzenia 
 
  Tworzy nowe zdarzenie.  
   
@@ -82,7 +86,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="dtor"></a>~ zdarzeń 
+##  <a name="dtor"></a> ~ zdarzeń 
 
  Niszczy zdarzenia.  
   
@@ -93,7 +97,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>Uwagi  
  Oczekuje się, że nie istnieją nie wątków oczekujących na zdarzenie, gdy działa destruktor. Stosowanie zdarzenia destruct z wątków, które nadal oczekuje na nim powoduje niezdefiniowane zachowanie.  
   
-##  <a name="reset"></a>Resetowanie 
+##  <a name="reset"></a> Resetowanie 
 
  Resetuje zdarzenia do stanu sygnalizowane.  
   
@@ -101,7 +105,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="set"></a>zestaw 
+##  <a name="set"></a> zestaw 
 
  Sygnalizuje zdarzenia.  
   
@@ -112,7 +116,7 @@ void set();
 ### <a name="remarks"></a>Uwagi  
  Sygnalizowanie zdarzenie może spowodować dowolnej liczby kontekstów oczekiwanie na zdarzenia stają się do uruchomienia.  
   
-##  <a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a> timeout_infinite 
 
  Wartość wskazująca, której oczekiwania nigdy nie ma limitu czasu.  
   
@@ -120,7 +124,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait"></a>oczekiwania 
+##  <a name="wait">oczekiwania</a> 
 
  Czeka na zdarzenie sygnalizuje stają się.  
   
@@ -136,9 +140,9 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
  Jeśli czas oczekiwania zostały spełnione, wartość `0` zwrócony, a w przeciwnym razie wartość `COOPERATIVE_WAIT_TIMEOUT` wskazująca, że czas oczekiwania upłynął limit czasu bez zdarzenia sygnalizuje staje się.  
   
 > [!IMPORTANT]
->  W [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] aplikacji, nie należy wywoływać `wait` na ASTA wątku, ponieważ to wywołanie można zablokować bieżącego wątku i może spowodować, że aplikacja przestanie odpowiadać.  
+>  Nie należy wywoływać w aplikacji Windows platformy Uniwersalnej `wait` na ASTA wątku, ponieważ to wywołanie można zablokować bieżącego wątku i może spowodować, że aplikacja przestanie odpowiadać.  
   
-##  <a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a> wait_for_multiple 
 
  Czeka na wiele zdarzeń stać się sygnalizowane.  
   
@@ -170,7 +174,7 @@ static size_t __cdecl wait_for_multiple(
  Jeśli parametr `_FWaitAll` jest ustawiona na wartość `true` wskaż, czy wszystkie zdarzenia musi stają się informowany spełniają oczekiwania, indeks zwracane przez funkcję niesie nie specjalne znaczenie niż fakt, że nie jest wartością `COOPERATIVE_WAIT_TIMEOUT`.  
   
 > [!IMPORTANT]
->  W [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] aplikacji, nie należy wywoływać `wait_for_multiple` na ASTA wątku, ponieważ to wywołanie można zablokować bieżącego wątku i może spowodować, że aplikacja przestanie odpowiadać.  
+>  Nie należy wywoływać w aplikacji Windows platformy Uniwersalnej `wait_for_multiple` na ASTA wątku, ponieważ to wywołanie można zablokować bieżącego wątku i może spowodować, że aplikacja przestanie odpowiadać.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

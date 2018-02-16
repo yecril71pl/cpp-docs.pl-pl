@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OpenAll method
 - attribute-injected classes and methods
@@ -21,38 +23,39 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d41ae6c6ca32819faa498d5a9b37ce4b4008a05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody konsumenta generowane przez kreatora
 Generowanie niektórych funkcji, które należy zwrócić uwagę, OLE DB Kreator konsumenta ATL i Kreator aplikacji MFC. Należy pamiętać, że niektóre metody są implementowane inaczej w przypisanych projektów, więc istnieje kilka ostrzeżenia; każdej sprawy zostało opisane poniżej. Aby uzyskać informacje o wyświetlaniu wprowadzony kod, zobacz [debugowania wstrzyknięcie kodu](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll`Otwiera ze źródłem danych, zestawy wierszy i włącza zakładki, jeśli są dostępne.  
+-   `OpenAll` Otwiera ze źródłem danych, zestawy wierszy i włącza zakładki, jeśli są dostępne.  
   
--   `CloseAll`powoduje zamknięcie wszystkich otwartych zestawów wierszy i zwalnia wszystkie wykonania polecenia.  
+-   `CloseAll` powoduje zamknięcie wszystkich otwartych zestawów wierszy i zwalnia wszystkie wykonania polecenia.  
   
--   `OpenRowset`wywołuje OpenAll, aby otworzyć konsumenta lub zbiory wierszy.  
+-   `OpenRowset` wywołuje OpenAll, aby otworzyć konsumenta lub zbiory wierszy.  
   
--   `GetRowsetProperties`pobiera wskaźnik do ustawiony za pomocą właściwości, które można ustawić właściwość zestawu wierszy.  
+-   `GetRowsetProperties` pobiera wskaźnik do ustawiony za pomocą właściwości, które można ustawić właściwość zestawu wierszy.  
   
--   `OpenDataSource`Otwiera źródła danych, używając określonego w ciągu inicjowania **właściwości Linku danych** okno dialogowe.  
+-   `OpenDataSource` Otwiera źródła danych, używając określonego w ciągu inicjowania **właściwości Linku danych** okno dialogowe.  
   
--   `CloseDataSource`Zamyka źródła danych w odpowiedni sposób.  
+-   `CloseDataSource` Zamyka źródła danych w odpowiedni sposób.  
   
 ## <a name="openall-and-closeall"></a>OpenAll i CloseAll  
   
 ```  
 HRESULT OpenAll();   
+
 void CloseAll();  
 ```  
   
@@ -101,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** wywołuje tę metodę, aby otworzyć wierszy lub zestawy wierszy w konsumenta. Zazwyczaj nie trzeba wywołać `OpenRowset` chyba że chcesz pracować z wieloma danych źródeł/sesje/zestawów wierszy. `OpenRowset`jest zadeklarowany w pliku nagłówka klasy poleceń lub tabeli:  
+ **OpenAll** wywołuje tę metodę, aby otworzyć wierszy lub zestawy wierszy w konsumenta. Zazwyczaj nie trzeba wywołać `OpenRowset` chyba że chcesz pracować z wieloma danych źródeł/sesje/zestawów wierszy. `OpenRowset` jest zadeklarowany w pliku nagłówka klasy poleceń lub tabeli:  
   
 ```  
 // OLE DB Template version:  
@@ -141,7 +144,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Ta metoda pobiera wskaźnik do zestawu właściwości zestawu wierszy; this, wskaźnik służy do ustawiania właściwości, takie jak DBPROP_IRowsetChange. `GetRowsetProperties`jest używany w następujący sposób w klasie rekordu użytkownika. Można zmodyfikować ten kod, aby ustawić właściwości dodatkowych wierszy:  
+ Ta metoda pobiera wskaźnik do zestawu właściwości zestawu wierszy; this, wskaźnik służy do ustawiania właściwości, takie jak DBPROP_IRowsetChange. `GetRowsetProperties` jest używany w następujący sposób w klasie rekordu użytkownika. Można zmodyfikować ten kod, aby ustawić właściwości dodatkowych wierszy:  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -160,6 +163,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
   
 ```  
 HRESULT OpenDataSource();   
+
 void CloseDataSource();  
 ```  
   

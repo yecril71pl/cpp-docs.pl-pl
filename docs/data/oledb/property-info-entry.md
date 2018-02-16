@@ -4,36 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: PROPERTY_INFO_ENTRY
-dev_langs: C++
-helpviewer_keywords: PROPERTY_INFO_ENTRY macro
+f1_keywords:
+- PROPERTY_INFO_ENTRY
+dev_langs:
+- C++
+helpviewer_keywords:
+- PROPERTY_INFO_ENTRY macro
 ms.assetid: f7bd23d6-52b4-4d6a-aa9a-1fca9834c8dc
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b5193748f7a4f59abb8806e3d09bf0c77274b89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d660a969937e3e75784516e3b50fbfe2690f9d3c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="propertyinfoentry"></a>PROPERTY_INFO_ENTRY
 Reprezentuje określoną właściwość w zestawie właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-PROPERTY_INFO_ENTRY(  
-dwPropID   
-)  
+```cpp
+PROPERTY_INFO_ENTRY(dwPropID)  
   
 ```  
   
@@ -45,7 +46,7 @@ dwPropID
  To makro ustawia wartości właściwości typu `DWORD` do wartości domyślnej zdefiniowanej w ATLDB. H. Aby ustawić właściwość na wartość wybrane, użyj [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Aby ustawić [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) i [DBPROPFLAGS](https://msdn.microsoft.com/en-us/library/ms724342.aspx) dla właściwości w tym samym czasie, należy użyć [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 ## <a name="example"></a>Przykład  
- Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+ See [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atldb.h  

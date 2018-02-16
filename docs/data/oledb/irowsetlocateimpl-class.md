@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IRowsetLocateImpl
-dev_langs: C++
+f1_keywords:
+- IRowsetLocateImpl
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, bookmarks
 - IRowsetLocateImpl class
 - bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: da010f02ec29b4882ffeb1bdf1c5fa7fd67c8615
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e2a43df3d8732734ed79aae4c56a891bd20bbebe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl — Klasa
 Implementuje OLE DB [irowsetlocate —](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfejs, który pobiera dowolne wiersze z zestawu wierszy.  
   
-## <a name="syntax"></a>Składnia  
-  
-```  
+## <a name="syntax"></a>Składnia
+
+```cpp
 template <  
    class T,   
    class RowsetInterface,   
@@ -40,14 +43,12 @@ template <
    class MapClass = CAtlMap < RowClass::KeyType, RowClass* >,   
    class BookmarkKeyType = LONG,   
    class BookmarkType = LONG,   
-   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >  
->  
+   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >>  
 class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<  
-   T,   
-   RowsetInterface,   
-   RowClass,   
-   MapClass  
->  
+       T,   
+       RowsetInterface,   
+       RowClass,   
+       MapClass>  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -90,9 +91,9 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Tablica zakładki.|  
   
 ## <a name="remarks"></a>Uwagi  
- `IRowsetLocateImpl`jest to implementacja szablony OLE DB [irowsetlocate —](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfejsu. `IRowsetLocate`Służy do pobierania wierszy dowolnego z zestawu wierszy. Zestaw wierszy, który nie implementuje ten interfejs jest `sequential` zestawu wierszy. Gdy `IRowsetLocate` jest obecny w zestawie wierszy, kolumny 0 jest zakładki dla wierszy; odczytu w tej kolumnie uzyska wartość zakładki, która może służyć do zmiany położenia na tym samym wierszu.  
+ `IRowsetLocateImpl` jest to implementacja szablony OLE DB [irowsetlocate —](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfejsu. `IRowsetLocate` Służy do pobierania wierszy dowolnego z zestawu wierszy. Zestaw wierszy, który nie implementuje ten interfejs jest `sequential` zestawu wierszy. Gdy `IRowsetLocate` jest obecny w zestawie wierszy, kolumny 0 jest zakładki dla wierszy; odczytu w tej kolumnie uzyska wartość zakładki, która może służyć do zmiany położenia na tym samym wierszu.  
   
- `IRowsetLocateImpl`Służy do zaimplementowania Obsługa zakładek w dostawcy. Zakładki symboli zastępczych (indeksy w zestawie wierszy) umożliwiające konsumenta szybko powrócić do wiersza, dzięki czemu szybki dostęp do danych. Określa dostawcę, co zakładki może jednoznacznie zidentyfikować wiersza. Za pomocą `IRowsetLocateImpl` metod, możesz porównać zakładki, pobierania wierszy przez przesunięcie pobierania wierszy zakładką i zwracać wartości skrótów dla zakładek.  
+ `IRowsetLocateImpl` Służy do zaimplementowania Obsługa zakładek w dostawcy. Zakładki symboli zastępczych (indeksy w zestawie wierszy) umożliwiające konsumenta szybko powrócić do wiersza, dzięki czemu szybki dostęp do danych. Określa dostawcę, co zakładki może jednoznacznie zidentyfikować wiersza. Za pomocą `IRowsetLocateImpl` metod, możesz porównać zakładki, pobierania wierszy przez przesunięcie pobierania wierszy zakładką i zwracać wartości skrótów dla zakładek.  
   
  Obsługuje OLE DB zakładek w zestawie wierszy, aby wierszy pochodne względem tej klasy.  
   

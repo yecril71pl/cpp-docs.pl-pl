@@ -6,25 +6,28 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
 - VCCORLIB/Platform::Exception::CreateException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::Exception Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70d497275a0af7cfec12123f169240ced47fa958
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformexception-class"></a>Klasa platform::Exception
 Reprezentuje błędów występujących podczas wykonywania aplikacji. Klasy wyjątków niestandardowych nie mogą pochodzić od `Platform::Exception`. Jeśli potrzebujesz niestandardowych wyjątku, można użyć `Platform::COMException` i określić HRESULT specyficzny dla aplikacji.  
@@ -70,7 +73,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
  **Metadane:** platform.winmd  
 
-## <a name="createexception"></a>Exception::CreateException — metoda
+## <a name="createexception"></a> Exception::CreateException — metoda
 Tworzy Platform::Exception ^ z określoną wartość HRESULT.  
   
 ### <a name="syntax"></a>Składnia  
@@ -97,7 +100,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 
 
-## <a name="ctor"></a>Konstruktor Exception::Exception
+## <a name="ctor"></a>  Konstruktor Exception::Exception
 Intializes nowe wystąpienie klasy wyjątku.  
   
 ### <a name="syntax"></a>Składnia  
@@ -117,7 +120,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>Właściwość Exception::HResult
+## <a name="hresult"></a>  Właściwość Exception::HResult
 HRESULT, który odpowiada wyjątek.  
   
 ### <a name="syntax"></a>Składnia  
@@ -134,7 +137,7 @@ public:property int HResult {    int get();}
   
 
 
-## <a name="message"></a>Właściwość Exception::Message
+## <a name="message"></a> Właściwość Exception::Message
 Komunikat opisujący błąd.  
   
 ### <a name="syntax"></a>Składnia  

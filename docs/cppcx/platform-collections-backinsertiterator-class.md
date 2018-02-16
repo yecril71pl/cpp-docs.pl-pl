@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
-dev_langs: C++
-helpviewer_keywords: BackInsertIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 057aebfcba1936bc2a59fbb8b9fb51bff3197b6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23c8b657a6cafb720cf0be07e2e67b5af0d7767d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Klasa platform::Collections::BackInsertIterator
 Reprezentuje iterację, która wstawia, a nie zastępuje elementy do tyłu końca sekwencyjną kolekcją.  
@@ -52,9 +56,9 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[BackInsertIterator::operator * — Operator](#operator-dereference)|Pobiera odwołanie do bieżącego BackInsertIterator.|  
+|[BackInsertIterator::operator* Operator](#operator-dereference)|Pobiera odwołanie do bieżącego BackInsertIterator.|  
 |[BackInsertIterator::operator ++ — Operator](#operator-increment)|Zwraca odwołanie do bieżącego BackInsertIterator. Iterator pozostaje niezmieniona.|  
-|[BackInsertIterator::operator = — Operator](#operator-assign)|Dołącza określony obiekt na koniec bieżącego sekwencyjną kolekcją.|  
+|[BackInsertIterator::operator= Operator](#operator-assign)|Dołącza określony obiekt na koniec bieżącego sekwencyjną kolekcją.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `BackInsertIterator`  
@@ -65,7 +69,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
  **Namespace:** Platform::Collections  
   
 ---
-## <a name="ctor"></a>Konstruktor BackInsertIterator::BackInsertIterator
+## <a name="ctor"></a>  Konstruktor BackInsertIterator::BackInsertIterator
 Inicjuje nowe wystąpienie klasy `BackInsertIterator` klasy.  
   
 ## <a name="syntax"></a>Składnia  
@@ -83,7 +87,7 @@ explicit BackInsertIterator(
 ### <a name="remarks"></a>Uwagi  
  A `BackInsertIterator` Wstawia elementy po ostatnim elemencie obiektu określony przez parametr `v`.  
  
-## <a name="operator-assign"></a>BackInsertIterator::operator = — Operator
+## <a name="operator-assign"></a>  BackInsertIterator::operator = — Operator
 Dołącza określony obiekt na koniec bieżącego sekwencyjną kolekcją.  
   
 ## <a name="syntax"></a>Składnia  
@@ -99,7 +103,7 @@ BackInsertIterator& operator=( const T& t);
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do bieżącego BackInsertIterator.  
 
-## <a name="operator-dereference"></a>BackInsertIterator::operator * — Operator
+## <a name="operator-dereference"></a>  BackInsertIterator::operator * — Operator
 Pobiera odwołanie do bieżącego BackInsertIterator.  
   
 ## <a name="syntax"></a>Składnia  
@@ -114,7 +118,7 @@ BackInsertIterator& operator*();
 ### <a name="remarks"></a>Uwagi  
  Ten operator zwraca odwołanie do bieżącego BackInsertIterator; Nie można dowolny element w bieżącej kolekcji.  
  
-## <a name="operator-increment"></a>BackInsertIterator::operator ++ — Operator
+## <a name="operator-increment">BackInsertIterator::operator ++ — Operator</a>
 Zwraca odwołanie do bieżącego BackInsertIterator. Iterator pozostaje niezmieniona.  
   
 ## <a name="syntax"></a>Składnia  

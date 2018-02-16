@@ -1,29 +1,31 @@
 ---
-title: "Wskazówki: Tworzenie aplikacji ze Sklepu Windows za pomocą biblioteki WRL i platformy Media Foundation | Dokumentacja firmy Microsoft"
+title: "Wskazówki: Tworzenie aplikacji platformy uniwersalnej systemu Windows za pomocą biblioteki WRL i platformy Media Foundation | Dokumentacja firmy Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25cc08c22ac0d33945a73744a0be6045971d9330
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation"></a>Wskazówki: tworzenie aplikacji sklepu Windows Store z użyciem biblioteki WRL i platformy Media Foundation
-Dowiedz się, jak używać systemu Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) do tworzenia aplikacji platformy uniwersalnej systemu Windows, który używa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+# <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Wskazówki: Tworzenie aplikacji platformy uniwersalnej systemu Windows za pomocą biblioteki WRL i platformy Media Foundation
+Dowiedz się, jak używać systemu Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) do tworzenia aplikacji uniwersalnych platformy systemu Windows (UWP), który używa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  W tym przykładzie tworzy niestandardowe transformację Media Foundation ma zastosowanie efektu skali szarości obrazów, które są przechwytywane z kamery internetowej. Aplikacja używa C++ do definiowania przekształcenie niestandardowe i C#, aby użyć składnika do przekształcania przechwyconych obrazów.  
   
@@ -43,7 +45,7 @@ Dowiedz się, jak używać systemu Windows środowiska uruchomieniowego C++ szab
   
 -   Środowisko z modelu COM.  
   
--   Kamera internetowa.  
+-   A webcam.  
   
 ## <a name="key-points"></a>Kwestie kluczowe  
   
@@ -65,7 +67,7 @@ Dowiedz się, jak używać systemu Windows środowiska uruchomieniowego C++ szab
   
 1.  W programie Visual Studio Utwórz **puste rozwiązanie** projektu. Nazwa projektu, na przykład `MediaCapture`.  
   
-2.  Dodaj **DLL (aplikacje ze Sklepu Windows)** projektu do rozwiązania. Nazwa projektu, na przykład `GrayscaleTransform`.  
+2.  Dodaj **DLL (uniwersalna systemu Windows)** projektu do rozwiązania. Nazwa projektu, na przykład `GrayscaleTransform`.  
   
 3.  Dodaj **pliku Midl (.idl)** plik do projektu. Nazwa pliku, na przykład `GrayscaleTransform.idl`.  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,38 +14,36 @@ f1_keywords:
 - ATL::CDBErrorInfo::GetAllErrorInfo
 - GetAllErrorInfo
 - CDBErrorInfo.GetAllErrorInfo
-dev_langs: C++
-helpviewer_keywords: GetAllErrorInfo method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetAllErrorInfo method
 ms.assetid: 630049fa-d296-497a-bbf6-f5d3d71d271d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 46e233800f814b39e4e14f0b357c381a3e71311e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90086d0760e477ef41c4d6b59505ff90115f964b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdberrorinfogetallerrorinfo"></a>CDBErrorInfo::GetAllErrorInfo
 Zwraca wszystkie typy w rekordach błędu informacje o błędzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-      HRESULT GetAllErrorInfo(  
-   ULONG ulRecordNum,  
-   LCID lcid,  
-   BSTR* pbstrDescription,  
+```
+HRESULT GetAllErrorInfo(ULONG ulRecordNum,  
+   LCID lcid,  BSTR* pbstrDescription,  
    BSTR* pbstrSource = NULL,  
    GUID* pguid = NULL,  
    DWORD* pdwHelpContext = NULL,  
-   BSTR* pbstrHelpFile = NULL  
-) const throw( );  
+   BSTR* pbstrHelpFile = NULL) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -70,7 +69,7 @@ Zwraca wszystkie typy w rekordach błędu informacje o błędzie.
  [out] Wskaźnik do ciąg zawierający ścieżkę do pliku pomocy, który opisuje błąd.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK`w przypadku powodzenia. Zobacz [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/en-us/library/ms711230.aspx) w *OLE DB Podręcznik programisty* dla innych wartości zwracanych.  
+ `S_OK` w przypadku powodzenia. Zobacz [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/en-us/library/ms711230.aspx) w *OLE DB Podręcznik programisty* dla innych wartości zwracanych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atldbcli.h  

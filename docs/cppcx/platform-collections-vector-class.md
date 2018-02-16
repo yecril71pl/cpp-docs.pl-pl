@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
 - COLLECTION/Platform::Collections::Vector::Append
@@ -23,19 +23,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Vector::SetAt
 - COLLECTION/Platform::Collections::Vector::Size
 - COLLECTION/Platform::Collections::Vector::VectorChanged
-dev_langs: C++
-helpviewer_keywords: Vector Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f77962a6ba1eeb86abf4d91b3a308b4fb0d65ef
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Klasa platform::Collections::Vector
 
@@ -117,7 +120,7 @@ Jeśli próba użycia **wektor** typu publicznego zwracana wartość lub paramet
 
 **Namespace:** Platform::Collections
 
-## <a name="append"></a>Vector::append — metoda
+## <a name="append"></a>  Vector::append — metoda
 
 Wstawia określony element za ostatnim elementem w bieżącym wektora.
 
@@ -132,7 +135,7 @@ virtual void Append(T item);
 *index*  
 Element do wstawienia do wektora. Typ *elementu* jest definiowana za pomocą *T* typename.
 
-## <a name="clear"></a>Vector::Clear — metoda
+## <a name="clear"></a>  Vector::Clear — metoda
 
 Usuwa wszystkie elementy w bieżącym wektora.
 
@@ -142,7 +145,7 @@ Usuwa wszystkie elementy w bieżącym wektora.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Vector::First — metoda
+## <a name="first"></a>  Vector::First — metoda
 
 Zwraca iteratora tego do pierwszego elementu w wektorze.
 
@@ -162,7 +165,7 @@ Jest to wygodny sposób przechowywania iteratora zwrócony przez First() można 
 
 Para Iteratory do przekazania do funkcji STL, użyj funkcji wolnego [Windows::Foundation::Collections:: rozpocząć](../cppcx/begin-function.md) i [Windows::Foundation::Collections::end](../cppcx/end-function.md)
 
-## <a name="getat"></a>Vector::GetAt — metoda
+## <a name="getat"></a>  Vector::GetAt — metoda
 
 Pobiera element bieżącej wektora, którego jest identyfikować przy określonym indeksie.
 
@@ -181,7 +184,7 @@ Liczony od zera, bez znaku liczba całkowita określająca dany element w obiekt
 
 Określony przez element *indeksu* parametru. Typ elementu jest określany przez *T* typename.
 
-## <a name="getmany"></a>Vector::GetMany — metoda
+## <a name="getmany"></a>  Vector::GetMany — metoda
 
 Pobiera sekwencję elementów z bieżącym wektora, zaczynając od określonego indeksu i kopiuje je do tablicy przydzielone przez obiekt wywołujący.
 
@@ -209,7 +212,7 @@ Liczba elementów pobranych.
 
 Ta funkcja nie jest przeznaczony do użycia bezpośrednio przez kod klienta. Jest używana wewnętrznie w [to_vector funkcja](../cppcx/to-vector-function.md) umożliwia wydajne konwersja Platform::Vector intances std::vector wystąpień.
 
-## <a name="getview"></a>Vector::GetView — metoda
+## <a name="getview"></a>  Vector::GetView — metoda
 
 Zwraca wektor; widok tylko do odczytu oznacza to, IVectorView.
 
@@ -223,7 +226,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 Obiekt IVectorView.
 
-## <a name="indexof"></a>Vector::IndexOf — metoda
+## <a name="indexof"></a>  Vector::IndexOf — metoda
 
 Wyszukuje określony element w zakresie bieżącego ataku i jeśli znaleziona, zwraca indeks elementu.
 
@@ -245,13 +248,13 @@ Liczony od zera indeks elementu Jeśli parametr *wartość* zostanie odnaleziony
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true`Jeśli określony element zostanie odnaleziony; w przeciwnym razie `false`.
+`true` Jeśli określony element zostanie odnaleziony; w przeciwnym razie `false`.
 
 ### <a name="remarks"></a>Uwagi
 
 IndexOf używa std::find_if, aby znaleźć element. Typy elementu niestandardowego, w związku z tym powinien przeciążać == i! = — operator w celu umożliwienia równości wymaga tego find_if porównania.
 
-##  <a name="insertat"></a>Vector::InsertAt — metoda
+##  <a name="insertat"></a>  Vector::InsertAt — metoda
 
 Wstawia określony element do bieżącego wektora po elemencie identyfikowana na podstawie określonego indeksu.
 
@@ -269,7 +272,7 @@ Liczony od zera, bez znaku liczba całkowita określająca dany element w obiekt
 *item*  
 Element do wstawienia do wektora po określony przez element *indeksu*. Typ *elementu* jest definiowana za pomocą *T* typename.
 
-## <a name="removeat"></a>Vector::RemoveAt — metoda
+## <a name="removeat"></a>  Vector::RemoveAt — metoda
 
 Usuwa element identyfikowane przez określony indeks z bieżącym wektora.
 
@@ -284,7 +287,7 @@ virtual void RemoveAt(unsigned int index);
 *index*  
 Liczony od zera, bez znaku liczba całkowita określająca dany element w obiekt wektora.
 
-## <a name="removeatend"></a>Vector::RemoveAtEnd — metoda
+## <a name="removeatend"></a>  Vector::RemoveAtEnd — metoda
 
 Usuwa element na koniec bieżącego wektora.
 
@@ -294,7 +297,7 @@ Usuwa element na koniec bieżącego wektora.
 virtual void RemoveAtEnd();
 ```
 
-## <a name="replaceall"></a>Vector::ReplaceAll — metoda
+## <a name="replaceall"></a>  Vector::ReplaceAll — metoda
 
 Usuwa elementy w zakresie bieżącego ataku i wstawia elementy z określonej tablicy.
 
@@ -309,7 +312,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 *Moduł ARR*  
 Tablica obiektów, którego typ jest zdefiniowany przez *T* typename.
 
-## <a name="setat"></a>Vector::SetAt — metoda
+## <a name="setat"></a>  Vector::SetAt — metoda
 
 Przypisuje wartość określonego elementu w bieżącym wektora, identyfikowany przez określony indeks.
 
@@ -327,7 +330,7 @@ Liczony od zera, bez znaku liczba całkowita określająca dany element w obiekt
 *item*  
 Wartość do przypisania do określonego elementu. Typ *elementu* jest definiowana za pomocą *T* typename.
 
-## <a name="size"></a>Vector::size — metoda
+## <a name="size"></a>  Vector::size — metoda
 
 Zwraca liczbę elementów w bieżącym obiekcie wektora.
 
@@ -341,7 +344,7 @@ virtual property unsigned int Size;
 
 Liczba elementów w wektorze bieżącej.
 
-## <a name="ctor"></a>Vector::Vector — Konstruktor
+## <a name="ctor"></a>  Vector::Vector — Konstruktor
 
 Inicjuje nowe wystąpienie klasy wektora.
 
@@ -381,7 +384,7 @@ A [std::initializer_list](../standard-library/initializer-list-class.md) obiekt�
 *N*  
 Liczba elementów w kolekcji obiektów, które służy do bieżącego wektor inicjowania.
 
-*rozmiar*  
+*Rozmiar*  
 Liczba elementów w wektorze.
 
 *value*  

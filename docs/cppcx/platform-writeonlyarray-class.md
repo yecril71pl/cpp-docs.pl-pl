@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 s.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::WriteOnlyArray::begin
 - VCCORLIB/Platform::WriteOnlyArray::Data
@@ -14,19 +14,22 @@ f1_keywords:
 - VCCORLIB/Platform::WriteOnlyArray::FastPass
 - VCCORLIB/Platform::WriteOnlyArray::Length
 - VCCORLIB/Platform::WriteOnlyArray::set
-dev_langs: C++
-helpviewer_keywords: Platform::WriteOnlyArray Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d63072e3190929f5191f3d515b73dbd6a6a75040
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 694da2015788e402983c2e2144582d9461749a11
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformwriteonlyarray-class"></a>Klasa platform::WriteOnlyArray
 Reprezentuje Jednowymiarowa tablica, która jest używana jako parametr wejściowy, gdy obiekt wywołujący tablicy dla metody do wypełnienia.  
@@ -65,7 +68,7 @@ private ref class WriteOnlyArray<T, 1>
   
  **Namespace:** platformy  
 
-## <a name="begin"></a>WriteOnlyArray::begin — metoda
+## <a name="begin"></a>  WriteOnlyArray::begin — metoda
 Zwraca wskaźnik do pierwszego elementu w tablicy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -82,7 +85,7 @@ T* begin() const;
   
 
 
-## <a name="data"></a>Właściwość WriteOnlyArray::Data
+## <a name="data"></a>  Właściwość WriteOnlyArray::Data
 Wskaźnik do buforu danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -98,7 +101,7 @@ property T* Data{
   
 
 
-## <a name="end"></a>WriteOnlyArray::end — metoda
+## <a name="end"></a>  WriteOnlyArray::end — metoda
 Zwraca wskaźnik do jednego po ostatnim elemencie tablicy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -115,7 +118,7 @@ T* end() const;
   
 
 
-## <a name="fastpass"></a>Właściwość WriteOnlyArray::FastPass
+## <a name="fastpass"></a>  Właściwość WriteOnlyArray::FastPass
 Wskazuje, czy należy przeprowadzić wewnętrzny optymalizacji FastPass. Nie przeznaczone do użytku przez kod użytkownika.  
   
 ### <a name="syntax"></a>Składnia  
@@ -131,7 +134,7 @@ property bool FastPass{
   
 
 
-## <a name="get"></a>WriteOnlyArray::get — metoda
+## <a name="get"></a>  WriteOnlyArray::get — metoda
 Zwraca element pod określonym indeksem.  
   
 ### <a name="syntax"></a>Składnia  
@@ -148,7 +151,7 @@ T& get(
   
 
 
-## <a name="length"></a>Właściwość WriteOnlyArray::Length
+## <a name="length"></a>  Właściwość WriteOnlyArray::Length
 Zwraca liczbę elementów w tablicy przydzielone przez obiekt wywołujący.  
   
 ### <a name="syntax"></a>Składnia  
@@ -164,7 +167,7 @@ property unsigned int Length{
   
 
 
-## <a name="set"></a>Funkcja WriteOnlyArray::set
+## <a name="set"></a>  Funkcja WriteOnlyArray::set
 Ustawia określoną wartość od określonego indeksu tablicy.  
   
 ### <a name="syntax"></a>Składnia  

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - IRowsetLocate class, provider support for bookmarks
 - OLE DB provider templates, bookmarks
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb3c0d60c4b339d7ed2ae8bc4eee503036ac9097
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e69f0cd9b77f4d492e5011a6c8e653515ea784e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="provider-support-for-bookmarks"></a>Obsługa dostawców dla zakładek
 Dodaje na przykład w tym temacie `IRowsetLocate` interfejsu do `CMyProviderRowset` klasy. W większości przypadków możesz uruchomić Dodawanie interfejsu do istniejącego obiektu COM. Można następnie testować przez dodanie kolejnych wywołań z szablonami konsumentów. W przykładzie pokazano, jak:  
@@ -41,7 +43,7 @@ Dodaje na przykład w tym temacie `IRowsetLocate` interfejsu do `CMyProviderRows
   
  Dodawanie `IRowsetLocate` interfejs jest nieco inne niż większość interfejsów. Dzięki czemu wiersz tablic metod wirtualnych zapasowej OLE DB szablony dostawców ma parametr szablonu w celu obsługi interfejsu pochodnego. Poniższy kod przedstawia nową listę dziedziczenia:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -49,18 +51,18 @@ Dodaje na przykład w tym temacie `IRowsetLocate` interfejsu do `CMyProviderRows
 class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,   
       CTextData, CMyProviderCommand, CAtlArray<CTextData>,   
       CSimpleRow,   
-          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> >  
+          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>>  
 ```  
   
- Czwarta piątego i szóstego parametry wszystkie dodane. W tym przykładzie używane wartości domyślne dla czwartego i piątego parametrów i określić `IRowsetLocateImpl` jako szóstego parametru. `IRowsetLocateImpl`jest to klasa szablonu OLE DB, który przyjmuje dwa parametry szablonu: te Podłączanie `IRowsetLocate` interfejsu do `CMyProviderRowset` klasy. Aby dodać większość interfejsów, można pominąć ten krok i przejść do kolejnego. Tylko `IRowsetLocate` i `IRowsetScroll` interfejsy muszą być obsługiwani w ten sposób.  
+ Czwarta piątego i szóstego parametry wszystkie dodane. W tym przykładzie używane wartości domyślne dla czwartego i piątego parametrów i określić `IRowsetLocateImpl` jako szóstego parametru. `IRowsetLocateImpl` jest to klasa szablonu OLE DB, który przyjmuje dwa parametry szablonu: te Podłączanie `IRowsetLocate` interfejsu do `CMyProviderRowset` klasy. Aby dodać większość interfejsów, można pominąć ten krok i przejść do kolejnego. Tylko `IRowsetLocate` i `IRowsetScroll` interfejsy muszą być obsługiwani w ten sposób.  
   
  Następnie należy przekazać do `CMyProviderRowset` do wywołania `QueryInterface` dla `IRowsetLocate` interfejsu. Dodaj wiersz `COM_INTERFACE_ENTRY(IRowsetLocate)` do mapy. Mapa interfejs dla `CMyProviderRowset` powinna być taka jak pokazano w poniższym kodzie:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> > _RowsetBaseClass;  
+typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>> _RowsetBaseClass;  
   
 BEGIN_COM_MAP(CMyProviderRowset)  
    COM_INTERFACE_ENTRY(IRowsetLocate)  
@@ -74,7 +76,7 @@ END_COM_MAP()
   
  Do obsługi **IColumnsInfo::GetColumnsInfo** wywołanie, Usuń **PROVIDER_COLUMN** mapy w `CTextData` klasy. Makro PROVIDER_COLUMN_MAP definiuje funkcję `GetColumnInfo`. Musisz zdefiniować własny `GetColumnInfo` funkcji. Deklaracja funkcji powinna wyglądać następująco:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -92,7 +94,7 @@ class CTextData
   
  Następnie należy zaimplementować `GetColumnInfo` działają w pliku MyProviderRS.cpp w następujący sposób:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////  
 // MyProviderRS.cpp  
   
@@ -161,13 +163,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo`pierwszy sprawdza, czy właściwość o nazwie **DBPROP_IRowsetLocate** jest ustawiona. OLE DB ma właściwości dla poszczególnych interfejsów opcjonalne poza obiektu zestawu wierszy. Jeśli użytkownik chce użyć jednej z tych interfejsów opcjonalne, ustawia właściwość na wartość true. Dostawcę można sprawdzić tę właściwość i podjąć akcję specjalną na ich podstawie.  
+ `GetColumnInfo` pierwszy sprawdza, czy właściwość o nazwie **DBPROP_IRowsetLocate** jest ustawiona. OLE DB ma właściwości dla poszczególnych interfejsów opcjonalne poza obiektu zestawu wierszy. Jeśli użytkownik chce użyć jednej z tych interfejsów opcjonalne, ustawia właściwość na wartość true. Dostawcę można sprawdzić tę właściwość i podjąć akcję specjalną na ich podstawie.  
   
  W implementacji można pobrać właściwości przy użyciu wskaźnika do obiektu command. `pThis` Wskaźnika reprezentuje klasy zestawu wierszy lub polecenie. Ponieważ w tym miejscu użyć szablonów, trzeba przekazać go jako `void` wskaźnika lub kod nie kompiluje się.  
   
  Określanie statycznego tablica zawiera informacji o kolumnie. Aby klient nie kolumny zakładki, wpis w tablicy jest niewykorzystana. Można dynamicznie przydzielić tej tablicy, ale trzeba upewnij się, że poprawnie zniszczenia. W tym przykładzie definiuje i korzysta z makra ADD_COLUMN_ENTRY i ADD_COLUMN_ENTRY_EX do wstawiania informacji do tablicy. Makra można dodać do plików MyProviderRS.H, jak pokazano w poniższym kodzie:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -198,13 +200,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
   
  Do testowania kodu w konsumenta, które należy podjąć kilka zmian do `OnRun` obsługi. Pierwsza zmiana funkcji jest, że Dodaj kod, aby dodać właściwość do zestawu właściwości. Ustawia kod **DBPROP_IRowsetLocate** właściwości na wartość true, w związku z tym poleceniem dostawcy czy chcesz kolumnę zakładki. `OnRun` Kod obsługi powinna wyglądać następująco:  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // TestProv Consumer Application in TestProvDlg.cpp  
   
 void CTestProvDlg::OnRun()   
 {  
-   CCommand<CAccessor<CProvider> > table;  
+   CCommand<CAccessor<CProvider>> table;  
    CDataSource source;  
    CSession   session;  
   
@@ -229,7 +231,8 @@ void CTestProvDlg::OnRun()
       DBCOMPARE compare;  
       if (ulCount == 2)  
          tempBookmark = table.bookmark;  
-      HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
+
+HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
                  &compare);  
       if (FAILED(hr))  
          ATLTRACE(_T("Compare failed: 0x%X\n"), hr);  
@@ -251,7 +254,7 @@ void CTestProvDlg::OnRun()
   
  Należy również zaktualizować rekord użytkownika w konsumenta. Dodaj wpis w klasie obsługi zakładki i wpis w **COLUMN_MAP**:  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////  
 // TestProvDlg.cpp  
   

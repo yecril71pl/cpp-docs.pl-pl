@@ -4,42 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_TYPE_STATUS
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_TYPE_STATUS macro
+f1_keywords:
+- COLUMN_NAME_TYPE_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_TYPE_STATUS macro
 ms.assetid: 72ad3728-5b3e-4131-9f38-835d776529d9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b59516be279c36167a42c514dabd8c3a05eac96d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 40a0456955fb81810d12a2b9bd7ca2e4dd8605f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnametypestatus"></a>COLUMN_NAME_TYPE_STATUS
 Reprezentuje powiązanie w zestawie wierszy w kolumnie określonej w zestawie wierszy. Podobnie jak [COLUMN_NAME](../../data/oledb/column-name.md), ale to makro również ma stan typu i kolumny danych.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-COLUMN_NAME_TYPE_STATUS(  
-pszName  
-,   
-wType  
-,   
-status  
-,   
-data  
- )  
+```cpp
+COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)  
   
 ```  
   
@@ -50,7 +45,7 @@ data
  `wType`  
  [in] Typ danych.  
   
- *Stan*  
+ *status*  
  [in] Zmienna może być powiązane z stan kolumny.  
   
  `data`  
@@ -64,8 +59,8 @@ data
   
 ## <a name="see-also"></a>Zobacz też  
  [Makra i funkcje globalne dla szablonów konsumentów OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN_ACCESSOR —](../../data/oledb/begin-accessor.md)   
- [BEGIN_ACCESSOR_MAP —](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
  [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
  [COLUMN_NAME](../../data/oledb/column-name.md)   
  [COLUMN_NAME_EX](../../data/oledb/column-name-ex.md)   

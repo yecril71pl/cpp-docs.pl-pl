@@ -1,30 +1,33 @@
 ---
-title: Korzystanie z C++ AMP w aplikacjach Sklepu Windows | Dokumentacja firmy Microsoft
+title: Korzystanie z C++ AMP w aplikacjach platformy uniwersalnej systemu Windows | Dokumentacja firmy Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 39414e5b74dec15cade249bce1fb4ffe2f22edd0
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="using-c-amp-in-windows-store-apps"></a>Korzystanie z C++ AMP w aplikacjach sklepu Windows Store
-C++ AMP (C++ Accelerated Massive Parallelism) można używać w sieci [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji do wykonywania obliczeń w procesora GPU (przetwarzania graficzny) lub innych akceleratorów obliczeniową. Jednak C++ AMP nie udostępnia interfejsy API do pracy bezpośrednio z typów środowiska wykonawczego systemu Windows i środowiska wykonawczego systemu Windows nie udostępnia otokę dla C++ AMP. Jeśli używasz typów środowiska wykonawczego systemu Windows w kodzie — łącznie z tymi, które zostały utworzone samodzielnie — muszą być konwertowane na typy, które są zgodne z C++ AMP.  
+# <a name="using-c-amp-in-uwp-apps"></a>Korzystanie z C++ AMP w aplikacjach platformy uniwersalnej systemu Windows
+C++ AMP (C++ Accelerated Massive Parallelism) w aplikacji Windows platformy Uniwersalnej służy do wykonywania obliczeń w procesora GPU (przetwarzania graficzny) lub innych akceleratorów obliczeniową. Jednak C++ AMP nie udostępnia interfejsy API do pracy bezpośrednio z typów środowiska wykonawczego systemu Windows i środowiska wykonawczego systemu Windows nie udostępnia otokę dla C++ AMP. Jeśli używasz typów środowiska wykonawczego systemu Windows w kodzie — łącznie z tymi, które zostały utworzone samodzielnie — muszą być konwertowane na typy, które są zgodne z C++ AMP.  
   
 ## <a name="performance-considerations"></a>Zagadnienia dotyczące wydajności  
- Jeśli używasz [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) do utworzenia sieci [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji, firma Microsoft zaleca się używanie typów zwykły stare dane (POD) oraz ciągłe magazynu — na przykład `std::vector` lub tablic w stylu języka C — dla danych, które będą używane z C++ AMP. To może pomóc osiągnąć większą wydajność niż przy użyciu typów innych niż POD lub Windows RT kontenerów, ponieważ nie organizowanie nie ma wystąpić.  
+ Jeśli używasz [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) do tworzenia aplikacji systemu Windows platformy Uniwersalnej, zalecane jest użycie typów zwykły stare dane (POD) oraz ciągłe magazynu — na przykład `std::vector` lub tablic w stylu języka C — danych, który będzie używany z C++ AMP. To może pomóc osiągnąć większą wydajność niż przy użyciu typów innych niż POD lub Windows RT kontenerów, ponieważ nie organizowanie nie ma wystąpić.  
   
  Jądra C++ AMP, dostęp do danych przechowywanych w ten sposób tylko zawijać `std::vector` lub macierz pamięci masowej w `concurrency::array_view` , a następnie użyć widoku tablicy w `concurrency::parallel_for_each` Pętla:  
   
@@ -120,6 +123,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie pierwszej aplikacji Sklepu Windows w języku C++](http://go.microsoft.com/fwlink/p/linkid=249073)   
+ [Tworzenie pierwszej aplikacji platformy uniwersalnej systemu Windows w języku C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
  [Tworzenie składników środowiska wykonawczego systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
 

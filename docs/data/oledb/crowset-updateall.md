@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,34 +18,33 @@ f1_keywords:
 - ATL::CRowset<TAccessor>::UpdateAll
 - CRowset<TAccessor>::UpdateAll
 - ATL::CRowset::UpdateAll
-dev_langs: C++
-helpviewer_keywords: UpdateAll method
+dev_langs:
+- C++
+helpviewer_keywords:
+- UpdateAll method
 ms.assetid: e5b26c0a-40fc-4c91-a293-5084951788e6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 048db34bd08ab3db5769fbcb096578a7a6ae8073
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7dc38544641043f95d24cf9a8f9cf40ccca1dbf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetupdateall"></a>CRowset::UpdateAll
 Wysyła wszystkie oczekujące zmiany do wszystkich wierszy od czasu ostatniego pobrania lub **aktualizacji** wywoływać w nim.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-      HRESULT UpdateAll(   
-   DBCOUNTITEM* pcRows = NULL,   
+```cpp
+HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,   
    HROW** pphRow = NULL,   
-   DBROWSTATUS** ppStatus = NULL    
-) throw( );  
+   DBROWSTATUS** ppStatus = NULL) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -58,7 +58,7 @@ Wysyła wszystkie oczekujące zmiany do wszystkich wierszy od czasu ostatniego p
  [out] Wskaźnik do lokalizacji, gdzie **aktualizacji** zwraca wartość stanu wiersza. Brak stanu jest zwracany, gdy `ppStatus` ma wartość null.  
   
 ## <a name="remarks"></a>Uwagi  
- Wysyła wszystkie oczekujące zmiany do wszystkich wierszy, ponieważ te wiersze zostały ostatniego pobrania lub zaktualizować za pomocą [aktualizacji](../../data/oledb/crowset-update.md) lub `UpdateAll`. `UpdateAll`zaktualizuje każdego wiersza, który został zmodyfikowany, niezależnie od tego, czy nadal masz dojście dla nich (zobacz `pphRow`) czy nie.  
+ Wysyła wszystkie oczekujące zmiany do wszystkich wierszy, ponieważ te wiersze zostały ostatniego pobrania lub zaktualizować za pomocą [aktualizacji](../../data/oledb/crowset-update.md) lub `UpdateAll`. `UpdateAll` zaktualizuje każdego wiersza, który został zmodyfikowany, niezależnie od tego, czy nadal masz dojście dla nich (zobacz `pphRow`) czy nie.  
   
  Na przykład jeśli użyto **Wstaw** Aby wstawić pięć wierszy w zestawie wierszy, można albo wywołanie **aktualizacji** pięć razy lub wywołanie `UpdateAll` raz, aby zaktualizować je wszystkie.  
   

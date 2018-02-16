@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9179b701506da7a714569a940543a95634439583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Porady: uaktywnianie składnika środowiska wykonawczego systemu Windows za pomocą biblioteki WRL i korzystanie z niego
 Ten dokument zawiera zainicjować środowiska uruchomieniowego systemu Windows przy użyciu systemu Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) oraz sposobu uaktywnianie składnika środowiska wykonawczego systemu Windows i korzystanie.  
@@ -39,7 +41,7 @@ Ten dokument zawiera zainicjować środowiska uruchomieniowego systemu Windows p
  Następujące kroki użyj `Windows::Foundation::IUriRuntimeClass` interfejsu pokazują, jak utworzyć fabryki aktywacji dla składnika środowiska wykonawczego systemu Windows, Utwórz wystąpienie tego składnika i pobrać wartości właściwości. Pokazują one również, jak zainicjować środowiska uruchomieniowego systemu Windows. Pełny przykład jest zgodna.  
   
 > [!IMPORTANT]
->  Mimo że używasz zazwyczaj Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, w aplikacji platformy uniwersalnej systemu Windows, w tym przykładzie użyto aplikacji konsoli ilustracyjną. Funkcje, takie jak `wprintf_s` nie są dostępne w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji na temat typów i funkcje, których można użyć w aplikacji platformy uniwersalnej systemu Windows, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) i [Win32 i COM dla Sklepu Windows apps](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Mimo że używasz zazwyczaj Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, w aplikacji Windows platformy Uniwersalnej, w tym przykładzie użyto aplikacji konsoli ilustracyjną. Funkcje, takie jak `wprintf_s` nie są dostępne w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji na temat typów i funkcje, których można użyć w aplikacji platformy uniwersalnej systemu Windows, zobacz [nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows w funkcji CRT](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) i [Win32 i COM dla aplikacji platformy UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>Aby uaktywnianie składnika środowiska wykonawczego systemu Windows i korzystanie  
   

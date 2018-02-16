@@ -4,43 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_PS_STATUS
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_PS_STATUS macro
+f1_keywords:
+- COLUMN_NAME_PS_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_PS_STATUS macro
 ms.assetid: 134e1bfe-abfa-4b64-9159-e492f31de44b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a773891e7a3a0a623d10e8eb55069bf46fc10f21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e28307fbc42dbee793fdbb60f2c466d863ac6b2b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnamepsstatus"></a>COLUMN_NAME_PS_STATUS
 Reprezentuje powiązanie w zestawie wierszy w kolumnie określonej w zestawie wierszy. Podobnie jak [COLUMN_NAME](../../data/oledb/column-name.md), ale to makro również ma stan precyzja, skala i kolumny.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-COLUMN_NAME_PS_STATUS(  
-pszName  
-,   
-nPrecision  
-,   
-nScale  
-,   
-data  
-,   
-status )  
+```cpp
+COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -56,7 +50,7 @@ status )
  `data`  
  [in] Odpowiedni element członkowski danych w rekordzie użytkownika.  
   
- *Stan*  
+ *status*  
  [in] Zmienna może być powiązane z stan kolumny.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -67,8 +61,8 @@ status )
   
 ## <a name="see-also"></a>Zobacz też  
  [Makra i funkcje globalne dla szablonów konsumentów OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN_ACCESSOR —](../../data/oledb/begin-accessor.md)   
- [BEGIN_ACCESSOR_MAP —](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
  [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
  [COLUMN_NAME](../../data/oledb/column-name.md)   
  [COLUMN_NAME_EX](../../data/oledb/column-name-ex.md)   

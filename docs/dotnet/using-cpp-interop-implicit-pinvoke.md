@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -27,18 +29,18 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3a5f6b6cd68906753bc4f9a5fbc1d9e00bad02f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)
 W przeciwieństwie do innych języków .NET, Visual C++ obsługuje współdziałania umożliwiający zarządzane i niezarządzane kod, mogą znajdować się w tej samej aplikacji, a nawet w tym samym pliku (z [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) pragm). Dzięki temu Visual C++ deweloperom zintegrowanie funkcji .NET do istniejących aplikacji Visual C++, bez zakłócania pozostałej części aplikacji.  
@@ -54,7 +56,7 @@ W przeciwieństwie do innych języków .NET, Visual C++ obsługuje współdział
  Jawnej funkcji PInvoke jest obsługiwane przez program .NET Framework i jest dostępna w większości języków .NET. Jednak jak jego nazwa wskazuje, międzyoperacyjności języka C++ jest specyficzne dla Visual C++.  
   
 ## <a name="c-interop"></a>międzyoperacyjność C++  
- Międzyoperacyjność C++ jest zalecane w jawnej funkcji PInvoke, ponieważ zapewnia lepsze bezpieczeństwo typów, jest zazwyczaj mniej złożone wdrożenia, jest bardziej forgiving, jeśli niezarządzanego API zostanie zmodyfikowana, a sprawia, że możliwe ulepszenia wydajności, które nie są możliwe za pomocą jawnego PInvoke. Jednak międzyoperacyjności języka C++ nie jest możliwe kodu niezarządzanego źródła nie jest dostępna lub w przypadku kompilowania przy użyciu **/CLR: Safe**. **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015. Aby uzyskać informacje, zobacz [czystej i weryfikowalny kod (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
+ Międzyoperacyjność C++ jest zalecane w jawnej funkcji PInvoke, ponieważ zapewnia lepsze bezpieczeństwo typów, jest zazwyczaj mniej złożone wdrożenia, jest bardziej forgiving, jeśli niezarządzanego API zostanie zmodyfikowana, a sprawia, że możliwe ulepszenia wydajności, które nie są możliwe za pomocą jawnego PInvoke. Jednak międzyoperacyjności języka C++ nie jest możliwe, jeśli kod niezarządzany źródłowy jest niedostępny.  
   
 ## <a name="c-com-interop"></a>współdziałanie języka C++ z modelem COM  
  Współdziałanie funkcje obsługiwane przez Visual C++ oferują danego zaletą za pośrednictwem innych języków .NET, jeśli chodzi o współdziałanie z COM — składniki. W przeciwieństwie do ograniczeń programu .NET Framework [Tlbimp.exe (Importer biblioteki typów)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), takich jak ograniczoną obsługę typy danych i obowiązkowe narażenie każdy element członkowski każdego interfejsu COM, międzyoperacyjności języka C++ pozwala COM składniki do jest dostępny pod adresem będzie i nie wymaga oddzielne zestawy międzyoperacyjne. Aby uzyskać więcej informacji, zobacz [za pomocą modelu COM z .NET](http://msdn.microsoft.com/en-us/03976661-6278-4227-a6c1-3b3315502c15).  

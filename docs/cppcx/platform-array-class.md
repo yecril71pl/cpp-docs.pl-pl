@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
 - VCCORLIB/Namespace not found::Platform::Array Constructors
 - VCCORLIB/Namespace not found::Platform::Array::Value
-dev_langs: C++
-helpviewer_keywords: Platform::Array Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7aa3a29615f6c744a3c790dd7b223225bc31f87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8e3d2964e1488e74e7a07f20c38ee4fbbcf6e387
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformarray-class"></a>Klasa platform::Array
 Reprezentuje tablicę jednowymiarowa, można modyfikować, który jest odbierany i przekazywane przez interfejs binarne aplikacji (ABI).  
@@ -70,7 +73,7 @@ private ref class Array<TArg, 1> :
  — Opcja kompilatora: **/ZW**  
 
  
-## <a name="ctor"></a>Konstruktory tablicy
+## <a name="ctor">Konstruktory tablicy</a>
 Inicjuje tablicą jednowymiarową, można modyfikować typów określonej przez parametr szablonu klasy *T*.  
   
 ## <a name="syntax"></a>Składnia  
@@ -93,7 +96,7 @@ Array(T* data, unsigned int size);
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji na temat tworzenia wystąpień Platform::Array, zobacz [tablicy i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-## <a name="get"></a>Array::Get — metoda
+## <a name="get"></a>  Array::Get — metoda
 Pobiera odwołanie do elementu tablicy w określonej lokalizacji indeksu.  
   
 ## <a name="syntax"></a>Składnia  
@@ -109,7 +112,7 @@ T& get(unsigned int index)  const;
 ### <a name="return-value"></a>Wartość zwracana  
  Określony przez element tablicy `index` parametru.  
   
-## <a name="value"></a>Właściwość Array::Value
+## <a name="value"></a>  Właściwość Array::Value
 Pobiera dojścia do bieżącej tablicy.  
   
 ## <a name="syntax"></a>Składnia  

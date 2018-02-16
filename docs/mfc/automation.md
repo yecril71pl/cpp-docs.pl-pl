@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation servers, about Automation servers
 - clients, Automation
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce34abd10b4681ba378cf4fbd777c96277f4db4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b0204ab105b48350ea7fe934c28c5d5f95bea71f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation"></a>Automatyzacja
 Automatyzacja (wcześniej znane jako automatyzacji OLE) umożliwia jednej aplikacji do modyfikowania obiektów w innej aplikacji lub na uwidocznienie obiektów, więc można manipulować.  
@@ -47,7 +50,7 @@ Automatyzacja (wcześniej znane jako automatyzacji OLE) umożliwia jednej aplika
   
 -   Automatyzacja (lokalne).  
   
--   [Automatyzacja zdalna](../mfc/remote-automation.md) (za pośrednictwem sieci przy użyciu rozproszonego modelu COM lub DCOM).  
+-   Automatyzacja zdalna (za pośrednictwem sieci przy użyciu rozproszonego modelu COM lub DCOM).  
   
  Udostępnianie obiektów jest przydatne, gdy aplikacje zapewniać funkcje przydatne do innych aplikacji. Na przykład formant ActiveX jest typem serwera automatyzacji. hosting kontrolki ActiveX aplikacji jest klient automatyzacji tego formantu.  
   
@@ -57,7 +60,7 @@ Automatyzacja (wcześniej znane jako automatyzacji OLE) umożliwia jednej aplika
   
  Wiele aplikacji komercyjnych, takich jak program Microsoft Excel i Microsoft Visual C++ pozwalają automatycznie wykonuje sporą część ich funkcji. Na przykład w programie Visual C++, możesz zapisać, makra skrypt VBScript w celu zautomatyzowania kompilacje aspektów kodu, edytowanie i debugowanie zadań.  
   
-##  <a name="_core_passing_parameters_in_automation"></a>Przekazywanie parametrów w automatyzacji  
+##  <a name="_core_passing_parameters_in_automation"></a> Przekazywanie parametrów w automatyzacji  
  Kłopotliwe w tworzeniu metod automatyzacji pomaga mechanizm uniform "bezpiecznej" do przekazywania danych między serwerami automatyzacji i klientami. Używa automatyzacji **VARIANT** typu do przekazywania danych. **VARIANT** typ jest oznakowany union. Ma element członkowski danych dla wartości (jest to anonimowa Unia C++) i wskazujący typ informacji przechowywanych w Unii elementu członkowskiego danych. **VARIANT** typu obsługuje wiele typów danych standardowe: 2 i 4-bajtowych liczb całkowitych, 4 i 8-bajtowych liczb zmiennoprzecinkowych, ciągi i wartościami logicznymi. Ponadto obsługuje `HRESULT` (kody błędów OLE), **waluty** (stałoprzecinkowe typ liczbowy), i **data** typy (bezwzględne datę i godzinę), oraz wskaźniki do **IUnknown**  i `IDispatch` interfejsów.  
   
  **VARIANT** typu jest hermetyzowany w [COleVariant](../mfc/reference/colevariant-class.md) klasy. Obsługa **waluty** i **data** klasy znajdują się w [COleCurrency](../mfc/reference/colecurrency-class.md) i [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) klasy.  
@@ -81,8 +84,6 @@ Automatyzacja (wcześniej znane jako automatyzacji OLE) umożliwia jednej aplika
 -   [Klienci automatyzacji](../mfc/automation-clients.md)  
   
 -   [Serwery automatyzacji](../mfc/automation-servers.md)  
-  
--   [Automatyzacja zdalna](../mfc/remote-automation.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   

@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
 - COLLECTION/Platform::Collections::Map::Clear
@@ -17,19 +17,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Map::Lookup
 - COLLECTION/Platform::Collections::Map::Remove
 - COLLECTION/Platform::Collections::Map::Size
-dev_langs: C++
-helpviewer_keywords: Map Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b58ba1d4407f719bc2f9f1e08715d7e53a11fb58
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Klasa platform::Collections::map
 
@@ -103,7 +106,7 @@ Aby uzyskać więcej informacji, zobacz [kolekcji](../cppcx/collections-c-cx.md)
 |||
 |-|-|
 |Nazwa|Opis|
-|[Map::mapchanged —](#mapchanged-event.md)`event`|Występuje, gdy mapy.|
+|[Map::mapchanged —](#mapchanged-event.md) `event`|Występuje, gdy mapy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -115,7 +118,7 @@ Aby uzyskać więcej informacji, zobacz [kolekcji](../cppcx/collections-c-cx.md)
 
 **Namespace:** Platform::Collections
 
-## <a name="clear"></a>Map::Clear — metoda
+## <a name="clear"></a>  Map::Clear — metoda
 
 Usuwa wszystkie pary klucz wartość z bieżącego obiektu mapy.
 
@@ -125,7 +128,7 @@ Usuwa wszystkie pary klucz wartość z bieżącego obiektu mapy.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Map::First — metoda
+## <a name="first"></a>  Map::First — metoda
 
 Zwraca iteratora określająca pierwszy element na mapie lub `nullptr` Jeśli mapy jest pusta.
 
@@ -144,7 +147,7 @@ Iteratora określająca pierwszy element na mapie.
 
 Jest to wygodny sposób przechowywania iteratora zwrócony przez First() można przypisać do zmiennej, która jest zadeklarowana z wartością zwracaną **automatycznie** wpisz wnioskowanie — słowo kluczowe. Na przykład `auto x = myMap->First();`.
 
-## <a name="getview"></a>Map::GetView — metoda
+## <a name="getview"></a>  Map::GetView — metoda
 
 Zwraca widok tylko do odczytu w bieżącym mapy; oznacza to [klasy Platform::Collections::MapView](../cppcx/platform-collections-mapview-class.md), który implementuje [Windows::Foundation::Collections::IMapView\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interfejsu.
 
@@ -158,7 +161,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 A `MapView` obiektu.
 
-## <a name="haskey"></a>Map::HasKey — metoda
+## <a name="haskey"></a>  Map::HasKey — metoda
 
 Określa, czy bieżąca mapa zawiera określony klucz.
 
@@ -170,14 +173,14 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz*  
+*Klucz*  
 Klucz używana do lokalizowania elementu mapy. Typ *klucza* jest typename *K*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true`Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.
+`true` Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.
 
-## <a name="insert"></a>Map::INSERT — metoda
+## <a name="insert"></a>  Map::INSERT — metoda
 
 Dodaje określoną parę klucz wartość, jak bieżący obiekt mapy.
 
@@ -189,7 +192,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz*  
+*Klucz*  
 Część klucza pary klucz wartość. Typ *klucza* jest typename *K*.
 
 *value*  
@@ -197,9 +200,9 @@ Część wartości pary klucz wartość. Typ *wartość* jest typename *V*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true`Jeśli klucz istniejącego elementu na bieżącej mapy odpowiada *klucza* i ma ustawioną wartość część elementu *wartość*. `false`Jeśli nie istniejący element w bieżącej mapy nie jest zgodny *klucza* i *klucza* i *wartość* parametry są wprowadzane na parę klucz wartość, a następnie dodać do bieżącej mapy.
+`true` Jeśli klucz istniejącego elementu na bieżącej mapy odpowiada *klucza* i ma ustawioną wartość część elementu *wartość*. `false` Jeśli nie istniejący element w bieżącej mapy nie jest zgodny *klucza* i *klucza* i *wartość* parametry są wprowadzane na parę klucz wartość, a następnie dodać do bieżącej mapy.
 
-## <a name="lookup"></a>Map::LOOKUP — metoda
+## <a name="lookup"></a>  Map::LOOKUP — metoda
 
 Pobiera wartość typu V, który jest skojarzony z określonym kluczem typu K, jeśli ten klucz istnieje.
 
@@ -211,7 +214,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz*  
+*Klucz*  
 Klucz używana do lokalizowania elementu w planie. Typ *klucza* jest typename *K*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -222,7 +225,7 @@ Wartość, która jest łączyć się z *klucza*. Typ zwracanej wartości to typ
 
 Jeśli klucz nie istnieje, a następnie [Platform::OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) jest generowany.
 
-## <a name="ctor"></a>Map::map — Konstruktor
+## <a name="ctor"></a>  Map::map — Konstruktor
 
 Inicjuje nowe wystąpienie klasy mapy.
 
@@ -256,7 +259,7 @@ Wejściowy iteratora pierwszego elementu w zakresie elementów używaną do inic
 *last*  
 Wejściowy iteratora pierwszego elementu po zakresu elementów używaną do inicjalizacji bieżącej mapy.
 
-## <a name="mapchanged"></a>Map::mapchanged — zdarzenie
+## <a name="mapchanged"></a>  Map::mapchanged — zdarzenie
 
 Wywoływane, gdy element zostanie wstawiony do lub usunięty z mapy.
 
@@ -272,9 +275,9 @@ A [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/app
 
 ## <a name="net-framework-equivalent"></a>Odpowiednik w programie .NET Framework
 
-Aplikacje ze Sklepu Windows korzystających z języka C# lub Visual Basic projektu IMap\<K, V > jako IDictionary\<K, V >.
+IMap projektu aplikacji środowiska wykonawczego systemu Windows, które używają C# lub Visual Basic\<K, V > jako IDictionary\<K, V >.
 
-## <a name="remove"></a>Map::Remove — Metoda
+## <a name="remove"></a>  Map::Remove — Metoda
 
 Usuwa określoną parę klucz wartość z bieżącego obiektu mapy.
 
@@ -286,10 +289,10 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz*  
+*Klucz*  
 Część klucza pary klucz wartość. Typ *klucza* jest typename *K*.
 
-## <a name="size"></a>Map::size — metoda
+## <a name="size"></a>  Map::size — metoda
 
 Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementy na mapie.
 

@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], callbacks and delegates
 - interop [C++], callbacks and delegates
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38854e3debbaf34c9068ed9fbc22e34274512687
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Porady: przeprowadzanie marshalingu wskaźników funkcji za pomocą funkcji PInvoke
 W tym temacie opisano sposób zarządzanych obiektów delegowanych podczas współpracy z niezarządzanych funkcji przy użyciu funkcji .NET Framework P/Invoke można użyć zamiast wskaźników funkcji. Jednak programistów Visual C++ są zachęcani do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe), ponieważ P/Invoke zapewnia małego błąd kompilacji raportowania, nie jest bezpieczne i może być niewygodne wdrożenia. Jeśli niezarządzanego API jest dostarczana jako biblioteki DLL i kod źródłowy jest niedostępny, P/Invoke jest jedyną opcją. W przeciwnym razie zobacz następujące tematy:  
@@ -42,8 +44,6 @@ W tym temacie opisano sposób zarządzanych obiektów delegowanych podczas wspó
  Moduł zarządzany definiuje delegata, który jest przekazywane do kodu macierzystego jako wskaźnik funkcji i używa <xref:System.Runtime.InteropServices.DllImportAttribute> atrybut do udostępnienia funkcji macierzystej TakesCallback do kodu zarządzanego. W funkcji main wystąpienia delegata jest utworzony i przekazany do funkcji TakesCallback. Dane wyjściowe programu pokazuje, że ta funkcja jest wykonywany przez funkcję TakesCallback macierzystego.  
   
  Funkcja zarządzanych pomija wyrzucanie elementów bezużytecznych do zarządzanego pełnomocnika, aby zapobiec .NET Framework wyrzucanie elementów bezużytecznych z przemieszczanie delegata, podczas gdy wykonuje funkcji macierzystej.  
-  
- Moduł zarządzany została skompilowana z/CLR, ale/CLR: pure działa również. **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
   
 ```cpp  
 // TraditionalDll5.cpp  

@@ -4,32 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: cmyproviderwindowsfile
-dev_langs: C++
+f1_keywords:
+- cmyproviderwindowsfile
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0ac247c418efa7800eeef469ecf54da75f5b15c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
-Kreator utworzy klasę, aby zawierać jeden wiersz danych. w tym przypadku jest to `CMyProviderWindowsFile`. Poniższy kod dla `CMyProviderWindowsFile` jest generowany kreatora i listę wszystkich plików w katalogu za pomocą **WIN32_FIND_DATA** struktury. `CMyProviderWindowsFile`dziedziczy **WIN32_FIND_DATA** struktury:  
+Kreator utworzy klasę, aby zawierać jeden wiersz danych. w tym przypadku jest to `CMyProviderWindowsFile`. Poniższy kod dla `CMyProviderWindowsFile` jest generowany kreatora i listę wszystkich plików w katalogu za pomocą **WIN32_FIND_DATA** struktury. `CMyProviderWindowsFile` dziedziczy **WIN32_FIND_DATA** struktury:  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -47,11 +50,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile`jest nazywana [klasy rekordów użytkowników](../../data/oledb/user-record.md) ponieważ zawiera ona również mapy zawierająca opis kolumn w zestawie wierszy dostawcy. Mapowania kolumn dostawcy zawiera jeden wpis dla każdego pola w zestawie wierszy za pomocą makra PROVIDER_COLUMN_ENTRY. Makra Określ nazwę kolumny, numer porządkowy i przesunięcia wpisu struktury. Dostawca wpisów kolumn w powyższym kodzie zawierają przesunięcia do **WIN32_FIND_DATA** struktury. Kiedy klient wywołuje **IRowset::GetData**, dane są przesyłane w ciągłego buforu. Zamiast co możesz zrobić arytmetyka wskaźnika, mapy służy do określenia członka danych.  
+ `CMyProviderWindowsFile` jest nazywana [klasy rekordów użytkowników](../../data/oledb/user-record.md) ponieważ zawiera ona również mapy zawierająca opis kolumn w zestawie wierszy dostawcy. Mapowania kolumn dostawcy zawiera jeden wpis dla każdego pola w zestawie wierszy za pomocą makra PROVIDER_COLUMN_ENTRY. Makra Określ nazwę kolumny, numer porządkowy i przesunięcia wpisu struktury. Dostawca wpisów kolumn w powyższym kodzie zawierają przesunięcia do **WIN32_FIND_DATA** struktury. Kiedy klient wywołuje **IRowset::GetData**, dane są przesyłane w ciągłego buforu. Zamiast co możesz zrobić arytmetyka wskaźnika, mapy służy do określenia członka danych.  
   
- `CMyProviderRowset` Klasa zawiera także `Execute` metody. `Execute`to, co faktycznie odczytuje dane w z natywnego źródła. Poniższy kod przedstawia generowane przez kreatora `Execute` metody. Funkcja używa Win32 **FindFirstFile** i `FindNextFile` interfejsów API, aby pobrać informacje o plikach w katalogu i umieścić je w wystąpieniach `CMyProviderWindowsFile` klasy.  
+ `CMyProviderRowset` Klasa zawiera także `Execute` metody. `Execute` to, co faktycznie odczytuje dane w z natywnego źródła. Poniższy kod przedstawia generowane przez kreatora `Execute` metody. Funkcja używa Win32 **FindFirstFile** i `FindNextFile` interfejsów API, aby pobrać informacje o plikach w katalogu i umieścić je w wystąpieniach `CMyProviderWindowsFile` klasy.  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -15,23 +17,24 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-amp-overview"></a>Przegląd C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) przyspiesza wykonywanie kodu C++ dzięki wykorzystaniu danych równoległe sprzętu, takie jak procesor graficzny (GPU) na karcie odrębne grafika. Przy użyciu C++ AMP, można kodu algorytmy danych wielowymiarowych, dzięki czemu wykonanie może przyspieszyć przy użyciu równoległości w heterogenicznych sprzętu. Model programowania C++ AMP zawiera tablice wielowymiarowe, indeksowania, transfer pamięci, kafelków i bibliotekę matematyczna funkcji. Aby kontrolować sposób przenoszenia danych z Procesora GPU i na odwrót, dzięki czemu można zwiększyć wydajność, można użyć rozszerzenia języka C++ AMP.  
   
 ## <a name="system-requirements"></a>Wymagania systemowe  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], lub[!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], lub [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   DirectX 11 funkcji poziom 11.0 lub nowszy sprzętu  
   
@@ -236,7 +239,7 @@ for (int i = 0; i < 5; i++)
 ### <a name="shared-memory-with-array-and-arrayview"></a>Pamięci współużytkowanej tablicy i array_view —  
  Pamięci współużytkowanej jest pamięci dostępnej dla procesora CPU i akceleratora. Użycie pamięci współużytkowanej eliminuje lub znacznie zmniejsza obciążenie związane z kopiowanie danych między procesora CPU i akceleratora. Choć jest udostępniana pamięć, jest niedostępny jednocześnie przez procesor CPU i akceleratora i powoduje to niezdefiniowane zachowanie.  
   
- `array`obiekty może służyć do określenia precyzyjną kontrolę nad użycie pamięci współużytkowanej, jeśli skojarzone akceleratora obsługuje. Czy akceleratora obsługuje pamięci współużytkowanej jest określany przez akceleratora [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) właściwość, która zwraca `true` po pamięci współużytkowanej jest obsługiwana. Jeśli jest obsługiwany pamięci współużytkowanej, domyślnie [access_type — wyliczenie](reference/concurrency-namespace-enums-amp.md#access_type) pamięci alokacje na akceleratora jest określany przez `default_cpu_access_type` właściwości. Domyślnie `array` i `array_view` zająć obiekty na tym samym `access_type` jako podstawowy skojarzony `accelerator`.  
+ `array` obiekty może służyć do określenia precyzyjną kontrolę nad użycie pamięci współużytkowanej, jeśli skojarzone akceleratora obsługuje. Czy akceleratora obsługuje pamięci współużytkowanej jest określany przez akceleratora [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) właściwość, która zwraca `true` po pamięci współużytkowanej jest obsługiwana. Jeśli jest obsługiwany pamięci współużytkowanej, domyślnie [access_type — wyliczenie](reference/concurrency-namespace-enums-amp.md#access_type) pamięci alokacje na akceleratora jest określany przez `default_cpu_access_type` właściwości. Domyślnie `array` i `array_view` zająć obiekty na tym samym `access_type` jako podstawowy skojarzony `accelerator`.  
   
  Przez ustawienie [Array::cpu_access_type — członek danych](reference/array-class.md#cpu_access_type) właściwość `array` jawnie, możesz wykonywania szczegółowych sterować za pośrednictwem udostępnionych pamięć jest używana, tak, aby zoptymalizować aplikacji wydajności sprzętu właściwości, na podstawie wzorców dostępu do pamięci jądra jego obliczeń. `array_view` Odzwierciedla takie same `cpu_access_type` jako `array` skojarzonego z; lub, jeśli array_view — został skonstruowany bez źródła danych, jej `access_type` odzwierciedla środowiska, która najpierw go przydzielić magazyn. Oznacza to, jeśli jest on dostępny najpierw przez hosta (CPU), następnie działa tak, jakby zostały utworzone przez procesor CPU źródła danych i udziałów `access_type` z `accelerator_view` skojarzona przez przechwytywania; jednak jeśli jest to pierwszy dostępu `accelerator_view`, a następnie zachowuje się tak, jakby była utworzone przez `array` utworzone na tej `accelerator_view` i udostępnia `array`w `access_type`.  
   
@@ -465,10 +468,10 @@ void MathExample() {
   
 - [Krótka biblioteki wektor](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f): definiuje zestaw typów krótkich wektor o długości 2, 3 i 4, które są oparte na `int`, `uint`, `float`, `double`, [normy](../../parallel/amp/reference/norm-class.md), lub [unorm —](../../parallel/amp/reference/unorm-class.md).  
   
-## <a name="includewin8appnamelongbuildincludeswin8appnamelongmdmd-apps"></a>[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]Aplikacje  
- Podobnie jak inne biblioteki języka C++, można użyć C++ AMP w Twojej [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Te artykuły zawierają opis uwzględnienie kodu C++ AMP w aplikacjach, która jest tworzona przy użyciu języka C++, C#, Visual Basic lub JavaScript:  
+## <a name="universal-windows-platform-uwp-apps"></a>Aplikacji platformy Uniwersalnej uniwersalnych systemu Windows  
+ Podobnie jak inne biblioteki języka C++ można użyć C++ AMP w aplikacjach platformy uniwersalnej systemu Windows. Te artykuły zawierają opis uwzględnienie kodu C++ AMP w aplikacjach, która jest tworzona przy użyciu języka C++, C#, Visual Basic lub JavaScript:  
   
-- [Korzystanie z C++ AMP w aplikacjach sklepu Windows Store](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [Korzystanie z C++ AMP w aplikacjach platformy uniwersalnej systemu Windows](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
 - [Wskazówki: Tworzenie podstawowego składnika środowiska wykonawczego systemu Windows w języku C++ i wywoływania go z poziomu języka JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   

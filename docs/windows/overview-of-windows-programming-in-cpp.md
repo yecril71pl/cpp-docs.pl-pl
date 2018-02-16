@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/27/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: b204783e3b2c418e5e719ca5c6efcf9c2d31c6df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
@@ -28,7 +30,7 @@ Możesz używać Visual C++ do pisania szerokiej gamy programów, które działa
 
 Istnieje kilka kategorii szerokie aplikacji systemu Windows, które można programować za pomocą programu Visual C++. Kategorie te mają różne modele programowania i modeli aplikacji, co oznacza, że używają one różne biblioteki i interfejsów API, które umożliwiają dostęp do platformy i udostępniają interfejs użytkownika.
 
-- [Uniwersalnych aplikacji systemu Windows](#BK_WindowsUniversal). Trzeci kategorii aplikacji systemu Windows wprowadzono w systemie Windows 8 i kontynuuje obsługę tej kategorii aplikacji w systemie Windows 10. Te aplikacje są często określane jako "aplikacji systemu Windows" i zawierają wersje desktop i mobile apps, przeznaczonych do szerokiej gamy urządzeń. Można zapisać tych aplikacji w języku C + +/ CX, dialekt C++ z obsługą rozwoju środowiska wykonawczego systemu Windows lub w standardu C++ w modelu COM za pomocą biblioteki środowiska uruchomieniowego systemu Windows (WRL). Te aplikacje pierwotnie są przeznaczone do uruchamiania pełnego ekranu, mimo że w systemie Windows 10 użytkownicy mają możliwość uruchamiania ich w oknie pulpitu. Te aplikacje są ukierunkowane touch, ale ułatwia działać, jeśli preferowane użytkowników lub nie ma ekranu dotykowego za pomocą myszy. Te aplikacje są dystrybuowane w Sklepie Windows, faktów, które doprowadziło do nich wywoływana "Aplikacje ze Sklepu Windows."
+- [Uniwersalnych aplikacji systemu Windows](#BK_WindowsUniversal). Trzeci kategorii aplikacji systemu Windows wprowadzono w systemie Windows 8 i kontynuuje obsługę tej kategorii aplikacji w systemie Windows 10. Te aplikacje są często określane jako "aplikacji systemu Windows" i zawierają wersje desktop i mobile apps, przeznaczonych do szerokiej gamy urządzeń. Można zapisać tych aplikacji w języku C + +/ CX, dialekt C++ z obsługą rozwoju środowiska wykonawczego systemu Windows lub w standardu C++ w modelu COM za pomocą biblioteki środowiska uruchomieniowego systemu Windows (WRL). Te aplikacje pierwotnie są przeznaczone do uruchamiania pełnego ekranu, mimo że w systemie Windows 10 użytkownicy mają możliwość uruchamiania ich w oknie pulpitu. Te aplikacje są ukierunkowane touch, ale ułatwia działać, jeśli preferowane użytkowników lub nie ma ekranu dotykowego za pomocą myszy. Te aplikacje są dystrybuowane za pomocą Microsoft Store faktów, które doprowadziło do nich wywoływana aplikacji "Store".
 
 - [Pulpitu, serwera i aplikacji w chmurze i gry](#BK_Native). Ta kategoria zawiera aplikacje pulpitu systemu Windows, czasami nazywane aplikacji Win32, ponieważ te aplikacje były przy użyciu interfejsu API Win32 na starszych niż Windows 8, wszystkie aplikacje systemu Windows były w tej kategorii. Aplikacje w tej kategorii można użyć MFC dla interfejsu użytkownika i ATL do interakcji z składniki systemu Windows, które są zazwyczaj obiektów COM.
 
@@ -38,12 +40,12 @@ Istnieje kilka kategorii szerokie aplikacji systemu Windows, które można progr
 
 - **Aplikacji programu .NET framework**. Większość aplikacji .NET Framework są napisane w języku C# lub Visual Basic, ale można też C + +/ CLI (/ CLR — opcja kompilatora języka Visual C++). Firma Microsoft zaleca używanie języka C + +/ CLI dla minimalnego warstwa międzyoperacyjności w większej aplikacji, która zawiera kodu zarządzanego i natywnego.
 
-##  <a name="BK_WindowsUniversal"></a>Uniwersalnych aplikacji systemu Windows
+##  <a name="BK_WindowsUniversal"></a> Uniwersalnych aplikacji systemu Windows
 
 Z systemem Windows 10 aplikacje są można uruchamiać na wszystkich urządzeniach z systemem Windows 10, takich jak tablety i telefony komórkowe, a także na pulpicie. Na pulpicie, są w stanie uruchomić okna pulpitu, zamiast zawsze uruchomiona w trybie pełnoekranowym. Te aplikacje można również uruchomić na konsoli Xbox i na urządzeniach w przyszłości.  Model programowania do dwa typy aplikacji różni się od aplikacji klasycznych systemu Win32. Te aplikacje systemu Windows uruchomić środowiska uruchomieniowego systemu Windows, który zawiera elementy interfejsu użytkownika, najważniejsze usługi te aplikacje i zapewnia, i interfejs do różnych urządzeń, które są obsługiwane. Te aplikacje skompiluj do kodu natywnego i masz interfejsu użytkownika XAML lub użyj programu DirectX. Można również napisać składników środowiska wykonawczego systemu Windows w kodzie natywnym, które mogą korzystać z innych aplikacji systemu Windows — te obejmują aplikacje, które są napisane w języku C#, Visual Basic lub JavaScript. Aby uzyskać więcej informacji, zobacz [tworzenie aplikacji platformy uniwersalnej systemu Windows "Hello world" w języku C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp), [Tworzenie prostego gry platformy uniwersalnej systemu Windows z DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game), i [składniki tworzenia środowiska wykonawczego systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 > [!TIP]
-> Dla systemu Windows 10 można konwertera aplikacji pulpitu pakietu istniejącej aplikacji klasycznych dla wdrożenia za pomocą portalu Sklepu Windows. Aby uzyskać więcej informacji, zobacz [przy użyciu środowiska uruchomieniowego Visual C++ w projekcie Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) i [przełączyć aplikację pulpitu do systemu Windows platformy Uniwersalnej z Mostek pulpitu](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+> Dla systemu Windows 10 można konwertera aplikacji pulpitu pakietu istniejącej aplikacji klasycznych dla wdrożenia za pomocą Microsoft Store. Aby uzyskać więcej informacji, zobacz [przy użyciu środowiska uruchomieniowego Visual C++ w projekcie Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) i [przełączyć aplikację pulpitu do systemu Windows platformy Uniwersalnej z Mostek pulpitu](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
 
 Dla przykładów dla platformy uniwersalnej systemu Windows, temacie [próbki uniwersalnych systemu Windows w witrynie GitHub](https://github.com/Microsoft/Windows-universal-samples)
 
@@ -59,7 +61,7 @@ Nowe pojęcie wprowadzone w systemie Windows 10 w nazwie Umowy interfejsu API za
 
 Aby uzyskać więcej informacji na temat wszystkich tych pojęć, zobacz [przewodnik uniwersalnych aplikacji systemu Windows](http://go.microsoft.com/fwlink/p/?linkid=534605).
 
-##  <a name="BK_Native"></a>Pulpitu, serwera i aplikacji w chmurze i gry
+##  <a name="BK_Native"></a> Pulpitu, serwera i aplikacji w chmurze i gry
 
 W chmurze można zapisywać zestawów Azure natywnego kodu w języku C++ i wywołują je z ról sieci Web, które są tworzone w języku C#. Aby uzyskać więcej informacji, zobacz [zestawu Azure SDK](http://go.microsoft.com/fwlink/p/?LinkId=256416).
 

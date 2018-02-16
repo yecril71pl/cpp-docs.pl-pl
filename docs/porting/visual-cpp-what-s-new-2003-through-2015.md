@@ -18,11 +18,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ Co &#39; s nowe 2003 za pośrednictwem 2015
 
@@ -46,7 +46,7 @@ W programie Visual Studio 2015 lub nowszego oraz bieżące ulepszenia kompilator
 
 - [Ulepszenia zgodność w programie Visual Studio 2015 Update 3](#VS_Update3)
 
-### <a name="VS_RTM"></a>Ulepszenia zgodność programu Visual Studio 2015
+### <a name="VS_RTM">Ulepszenia zgodność programu Visual Studio 2015</a>
 
 - **Opcja /Zc:forScope-** — opcja kompilatora **/Zc:forScope-** jest przestarzała i zostanie usunięta w przyszłej wersji.
 
@@ -503,7 +503,7 @@ W programie Visual Studio 2015 lub nowszego oraz bieżące ulepszenia kompilator
 
 - **Kopiowanie konstruktorów** zarówno [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] i programu Visual Studio 2015, kompilator generuje Konstruktor kopiujący dla klasy, jeśli tej klasy ma Konstruktor przenoszący zdefiniowane przez użytkownika, ale nie Konstruktor kopiujący zdefiniowane przez użytkownika. W Dev14 ten Konstruktor kopiujący niejawnie wygenerowany jest również oznaczone jako "= delete".
 
-### <a name="VS_Update1"></a>Ulepszenia zgodność w programie Visual Studio 2015 Update 1
+### <a name="VS_Update1">Ulepszenia zgodność w programie Visual Studio 2015 Update 1</a>
 
 - **Prywatne wirtualne klasy podstawowe i pośredniego dziedziczenia** poprzednie wersje kompilatora dozwolone klasy pochodnej w celu wywołania funkcji Członkowskich jego *pośrednio pochodzi* `private virtual` klasy podstawowej. To zachowanie starego było nieprawidłowe i nie jest zgodny ze standardem C++. Kompilator nie akceptuje kod napisany w ten sposób i w związku z tym problemów błąd kompilatora C2280.
 
@@ -577,7 +577,7 @@ W programie Visual Studio 2015 lub nowszego oraz bieżące ulepszenia kompilator
 
       Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
 
-- **Wywołanie "operator *typu*()" (konwersja zdefiniowana przez użytkownika) dla typów innych niż klasa** poprzednie wersje kompilatora dozwolone "operator *typu*()" ma być wywoływana dla typów innych niż klasa podczas dyskretnie zostanie on zignorowany. To zachowanie starego utworzony ryzyko generowania kodu zły dyskretnej spowodować nieprzewidywalne zachowanie. Kompilator nie akceptuje kod napisany w ten sposób i generuje błąd kompilatora C2228 zamiast tego.
+- **Wywołanie "operator *typu*()" (konwersja zdefiniowana przez użytkownika) dla typów innych niż klasa** poprzednie wersje kompilatora dozwolone "operator *typu*()" ma być wywoływana dla typów innych niż klasa podczas w trybie dyskretnym zostanie on zignorowany. To zachowanie starego utworzony ryzyko generowania kodu zły dyskretnej spowodować nieprzewidywalne zachowanie. Kompilator nie akceptuje kod napisany w ten sposób i generuje błąd kompilatora C2228 zamiast tego.
 
    ```Output
     error C2228: left of '.operator type' must have class/struct/union
@@ -996,7 +996,7 @@ W programie Visual Studio 2015 lub nowszego oraz bieżące ulepszenia kompilator
     }
    ```
 
-### <a name="VS_Update2"></a>Ulepszenia zgodność w programie Visual Studio 2015 Update 2
+### <a name="VS_Update2">Ulepszenia zgodność w programie Visual Studio 2015 Update 2</a>
 
 - **Dodatkowych ostrzeżeń i błędów może zostać utworzony w wyniku częściowej obsługi techniki SFINAE wyrażeń** poprzednie wersje kompilatora nie jest przetwarzany niektóre rodzaje wyrażeń wewnątrz `decltype` specyfikatory z powodu braku obsługi w wyrażeniu TECHNIKI SFINAE. To zachowanie starego było nieprawidłowe i nie jest zgodny ze standardem C++. Kompilator teraz analizuje tych wyrażeń i ma częściowej obsługi techniki SFINAE wyrażeń, z powodu trwającej zgodność ulepszenia. W związku z tym kompilator generuje teraz ostrzeżenia i błędy znalezione w wyrażeniach, że poprzednie wersje kompilatora nie jest przetwarzany.
 
@@ -1085,7 +1085,7 @@ W programie Visual Studio 2015 lub nowszego oraz bieżące ulepszenia kompilator
     };
    ```
 
-- `volatile`**zmienne Członkowskie zapobiec niejawnie zdefiniowanych konstruktorów i operatory przypisania** poprzednie wersje kompilatora dozwolone klasy, która ma `volatile` zmienne Członkowskie mają domyślne skopiowania/przeniesienia konstruktory i domyślne Kopiuj/Przenieś operatory przypisania generowane automatycznie. To zachowanie starego było nieprawidłowe i nie jest zgodny ze standardem C++. Kompilator uwzględnia teraz klasę, która ma zmiennych Członkowskich volatile nieuproszczony konstrukcji i operatory przypisania co zapobiega domyślnej implementacji tych operatorów są generowane automatycznie.  Jeśli taka klasa jest elementem członkowskim Unii (lub anonimowego związku wewnątrz klasy), konstruktorach kopiowania/przenoszenia i operatory przypisania skopiowania/przeniesienia Unii (lub klasy zawierającej Unii unonymous) będzie można niejawnie zdefiniowany jako usunięty. Podjęto próbę utworzenia lub skopiuj Unii (lub klasa zawierająca anonimowa Unia) bez jawnie definiując je w związku z tym jest błąd i błąd kompilatora problemów kompilatora C2280.
+- `volatile` **zmienne Członkowskie zapobiec niejawnie zdefiniowanych konstruktorów i operatory przypisania** poprzednie wersje kompilatora dozwolone klasy, która ma `volatile` skopiowania/przeniesienia konstruktorów zmienne Członkowskie mają domyślne i domyślne Kopiuj/Przenieś Operatory przypisania generowane automatycznie. To zachowanie starego było nieprawidłowe i nie jest zgodny ze standardem C++. Kompilator uwzględnia teraz klasę, która ma zmiennych Członkowskich volatile nieuproszczony konstrukcji i operatory przypisania co zapobiega domyślnej implementacji tych operatorów są generowane automatycznie.  Jeśli taka klasa jest elementem członkowskim Unii (lub anonimowego związku wewnątrz klasy), konstruktorach kopiowania/przenoszenia i operatory przypisania skopiowania/przeniesienia Unii (lub klasy zawierającej Unii unonymous) będzie można niejawnie zdefiniowany jako usunięty. Podjęto próbę utworzenia lub skopiuj Unii (lub klasa zawierająca anonimowa Unia) bez jawnie definiując je w związku z tym jest błąd i błąd kompilatora problemów kompilatora C2280.
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1251,7 +1251,7 @@ W programie Visual Studio 2015 lub nowszego oraz bieżące ulepszenia kompilator
 
    Ustalenie kodu, który jest zapisany w ten sposób mogą wymagać czy definicje operatora można przenieść pliku nagłówka i do odpowiadający mu plik źródłowy.
 
-### <a name="VS_Update3"></a>Ulepszenia zgodność w programie Visual Studio 2015 Update 3
+### <a name="VS_Update3">Ulepszenia zgodność w programie Visual Studio 2015 Update 3</a>
 
 - **STD::is_convertable teraz wykrywane jest przypisanie własne** (standardowa biblioteka) poprzednie wersje `std::is_convertable` typu cechy nie poprawnie wykrył przypisanie własne typu klasy, po usunięciu jej Konstruktor kopiujący lub prywatnej. Teraz `std::is_convertable<>::value` jest ustawiana poprawnie `false` po zastosowaniu do typu klasy z konstruktorami kopiowania usunięte lub prywatnej.
 
@@ -1545,16 +1545,16 @@ To lepszą obsługę normy ISO C/C++ może wymagać zmiany istniejącego kodu, k
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>Profil rozszerzenia profilowana Optymalizacja (PGO)
 
 - Zwiększona wydajność ze zmniejszenia w zestawie roboczym aplikacji, które są zoptymalizowane przy użyciu PGO.
-- Tworzenie nowej aplikacji PGO dla Sklepu Windows.
+- Nowych wdrożeń aplikacji PGO za dla środowiska wykonawczego systemu Windows.
 
-### <a name="windows-store-app-development-support"></a>Obsługę programowania aplikacji ze Sklepu Windows
+### <a name="windows-runtime-app-development-support"></a>Obsługa tworzenia aplikacji środowiska wykonawczego systemu Windows
 
-- **Struktury obsługi dla opakowany typów w wartości.** Teraz można zdefiniować typów wartości za pomocą pola, które mogą mieć wartości null — na przykład IBox<int>^ przeciwieństwie int. Oznacza to, że pola może mieć wartość lub równa nullptr.
+- **Struktury obsługi dla opakowany typów w wartości.** Teraz można zdefiniować typów wartości za pomocą pola, które mogą mieć wartości null — na przykład IBox\<int > ^ przeciwieństwie int. Oznacza to, że pola może mieć wartość lub równa nullptr.
 - **Bardziej rozbudowane informacje o wyjątku.** C + +/ CX obsługuje nowy model błąd systemu Windows, który umożliwia przechwytywanie i propagowania informacji o wyjątkach sformatowanego między interfejsu binarne aplikacji (ABI); obejmuje to stosy wywołań i ciągi niestandardowych komunikatów.
 - **Obiekt:: ToString() jest teraz wirtualnego.** Teraz można zastąpić ToString w zdefiniowanych przez użytkownika typów ref środowiska wykonawczego systemu Windows.
 - **Obsługa przestarzałe interfejsy API.** Publiczne interfejsy API środowiska wykonawczego systemu Windows można teraz oznaczony jako przestarzały i podany niestandardowy komunikat, który jest wyświetlany jako ostrzeżenie kompilacji i zapewniają wskazówki dotyczące migracji.
-- **Debuger ulepszenia.** Obsługa debugowania międzyoperacyjnego native/JavaScript, diagnozowanie wyjątków środowiska wykonawczego systemu Windows i kod async debugowania (środowisko wykonawcze systemu Windows i PLL).
-  - Uwaga: Oprócz specyficzne dla języka C++ funkcji i ulepszeń, które zostały opisane w tej sekcji, inne rozszerzenia w programie Visual Studio również pomocnych lepsze aplikacje ze Sklepu Windows.
+- Debuger ulepszenia. Obsługa debugowania międzyoperacyjnego native/JavaScript, diagnozowanie wyjątków środowiska wykonawczego systemu Windows i kod async debugowania (środowisko wykonawcze systemu Windows i PLL).
+  - Uwaga: Oprócz specyficzne dla języka C++ funkcji i ulepszeń, które zostały opisane w tej sekcji, inne rozszerzenia w programie Visual Studio również pomocnych lepsze aplikacje środowiska wykonawczego systemu Windows.
 
 ### <a name="diagnostics-enhancements"></a>Ulepszenia diagnostyki
 
@@ -1632,12 +1632,12 @@ func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
 func1(Element::Helium); // OK
    ```
 
-### <a name="windows-store-app-development-support"></a>Obsługę programowania aplikacji ze Sklepu Windows
+### <a name="windows-runtime-app-development-support"></a>Obsługa tworzenia aplikacji środowiska wykonawczego systemu Windows
 
-- **Natywnego modelu opartych na języku XAML interfejsu użytkownika**. Dla aplikacji ze Sklepu Windows można użyć nowego modelu natywnego opartych na języku XAML interfejsu użytkownika.
-- **Visual C++ Component Extensions**. Te rozszerzenia uprościć zużycie obiektów środowiska wykonawczego systemu Windows, które są niezbędne część aplikacji ze Sklepu Windows. Aby uzyskać więcej informacji, zobacz plan dla Sklepu Windows przy użyciu języka C++ i dokumentacja języka języka Visual C++ (C + +/ CX)
-- **Gry DirectX**. Można tworzyć atrakcyjne gry przy użyciu nowa funkcja obsługi DirectX dla aplikacji ze Sklepu Windows.
-- **Współdziałanie XAML/DirectX**. Aplikacje Sklepu Windows, które teraz używać języka XAML i DirectX współdziałać wydajnie.
+- **Natywnego modelu opartych na języku XAML interfejsu użytkownika**. Dla aplikacji środowiska wykonawczego systemu Windows można użyć nowego modelu natywnego opartych na języku XAML interfejsu użytkownika.
+- **Visual C++ Component Extensions**. Te rozszerzenia uprościć zużycie obiektów środowiska wykonawczego systemu Windows, które są niezbędne część aplikacji środowiska wykonawczego systemu Windows. Aby uzyskać więcej informacji, zobacz [aplikacji plan za dla środowiska wykonawczego systemu Windows przy użyciu języka C++](../windows/universal-windows-apps-cpp.md) i [dokumentacja języka Visual C++ (C + +/ CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Gry DirectX**. Można tworzyć atrakcyjne gier za pomocą programu DirectX nowa funkcja obsługi środowiska wykonawczego systemu Windows.
+- **Współdziałanie XAML/DirectX**. Aplikacje środowiska wykonawczego systemu Windows, które teraz używać języka XAML i DirectX współdziałać wydajnie.
 - **Programowanie biblioteki DLL składnika środowiska wykonawczego systemu Windows**. Programowanie biblioteki DLL składnika sprawia, że środowisko wykonawcze systemu Windows rozszerzonego.
 
 ### <a name="compiler-and-linker"></a>Kompilatorze i Konsolidatorze
@@ -1684,7 +1684,7 @@ Oprócz tych okno zadań równoległych i okna stosów równoległych programu V
 
 **Zautomatyzowane wdrażanie na potrzeby debugowania zdalnego.** Wdrażanie plików do zdalnego debugowania w programie Visual C++ zostały uproszczone. Opcja wdrażania w menu kontekstowym projektu automatycznie kopiuje z komputerem zdalnym pliki, które są określone we właściwościach konfiguracji debugowania. Ręczne kopiowanie plików do komputera zdalnego nie jest już wymagane.
 
-**C + +/ CLI IntelliSense.** C + +/ CLI ma teraz pełną obsługę funkcji IntelliSense. Funkcje IntelliSense, takich jak szybka podpowiedź, parametr pomocy lista składników i automatycznego uzupełniania teraz pracy C + +/ CLI. Ponadto inne IntelliSense i IDE ulepszenia wymienione w niniejszym dokumencie są również działać dla języka C + +/ CLI.
+**C++/CLI IntelliSense.** C + +/ CLI ma teraz pełną obsługę funkcji IntelliSense. Funkcje IntelliSense, takich jak szybka podpowiedź, parametr pomocy lista składników i automatycznego uzupełniania teraz pracy C + +/ CLI. Ponadto inne IntelliSense i IDE ulepszenia wymienione w niniejszym dokumencie są również działać dla języka C + +/ CLI.
 
 **Bardziej zaawansowane funkcje IntelliSense etykietek narzędzi.** C++ IntelliSense szybka podpowiedź Pokaż bardziej rozbudowane komentarze dokumentacji XML informacji o stylu. Jeśli używasz interfejsu API z biblioteki — na przykład C++ AMP — mający komentarze dokumentacji XML, a następnie IntelliSense tooltip Wyświetla informacje o więcej niż tylko deklaracji. Ponadto jeśli kod ma komentarze dokumentacji XML, IntelliSense etykietki narzędzi Pokaż bardziej rozbudowane informacje.
 
@@ -1730,11 +1730,11 @@ Pokrycie kodu został zaktualizowany do dynamicznie dokumentu binarnych w czasie
 
 ### <a name="c-compiler-and-linker"></a>Kompilator języka C++ i konsolidatora
 
-**Auto — słowo kluczowe.** Auto — słowo kluczowe ma nowy cel. Auto — słowo kluczowe znaczenie domyślne umożliwiają zadeklarować zmiennej o typie jest ustalane z wyrażenia inicjowania w deklaracji zmiennej. Opcja kompilatora/Zc: Auto wywołuje nowy lub poprzednich znaczenie auto — słowo kluczowe.
+**auto Keyword.** Auto — słowo kluczowe ma nowy cel. Auto — słowo kluczowe znaczenie domyślne umożliwiają zadeklarować zmiennej o typie jest ustalane z wyrażenia inicjowania w deklaracji zmiennej. Opcja kompilatora/Zc: Auto wywołuje nowy lub poprzednich znaczenie auto — słowo kluczowe.
 
 **decltype specyfikatora typu.** Specyfikator typu decltype zwraca typ określonego wyrażenia. Użycie specyfikatora typu decltype w połączeniu z auto — słowo kluczowe w celu zadeklarowania typu złożonego lub znanych tylko do kompilatora. Na przykład użyć kombinacji do zadeklarowania funkcji szablonu, którego typ zwracany zależy od typów argumentów szablonu. Lub zadeklarowania funkcji szablonu, który wywołuje innej funkcji, a następnie zwraca typ zwracany wywoływana funkcja.
 
-**Wyrażenia lambda.** Funkcje lambda mieć treści funkcji, ale bez nazwy. Funkcje lambda łączą najlepsze cechy wskaźników funkcji i funkcji obiektów.
+**Lambda Expressions.** Funkcje lambda mieć treści funkcji, ale bez nazwy. Funkcje lambda łączą najlepsze cechy wskaźników funkcji i funkcji obiektów.
 Użyj funkcji lambda przez siebie, jako parametr funkcji szablonu zamiast obiektem funkcji lub wraz z automatycznie — słowo kluczowe w celu zadeklarowania zmiennej o typie jest wyrażenie lambda.
 
 **Odwołanie do r-wartości.** Deklarator odwołania do r-wartości (& &) deklaruje odwołanie do r-wartości. Umożliwia odwołanie do r-wartości korzystanie z przenieść semantykę i doskonałego przekazywania dalej do zapisania konstruktorów bardziej wydajne, funkcje i szablony.
@@ -1941,7 +1941,7 @@ Kompilator ma fundamentalne zmiany w tej wersji.
 - natywne "64-bitowe i między kompilatory.
 - / analyze (analiza kodu Enterprise) dodano opcję kompilatora.
 - / bigobj — opcja kompilatora został dodany.
-- / CLR: pure, / CLR: Safe i: oldsyntax zostały dodane.
+- / CLR: pure, / CLR: Safe i: oldsyntax zostały dodane. (Później używane w programie Visual Studio 2015.)
 - Przestarzałe — opcje kompilatora: wiele opcji kompilatora są przestarzałe w tej wersji; Aby uzyskać więcej informacji, zobacz przestarzałe — opcje kompilatora.
 - Podwójna konwersja bitowa adresów w kodzie/CLR, zostanie zmniejszona; Aby uzyskać więcej informacji, zobacz podwójna konwersja bitowa adresów (C++).
 - /EH (Model obsługi wyjątku) lub/EHS nie będzie można przechwytywać wyjątku, który jest uruchamiany z inną niż throw; Użyj/eha.
@@ -2170,7 +2170,7 @@ Kompilator ma fundamentalne zmiany w tej wersji.
 
 ### <a name="attributes"></a>Atrybuty
 
-- `implements`atrybut jest udokumentowany.
+- `implements` atrybut jest udokumentowany.
 
 ### <a name="linker-features"></a>Funkcje konsolidatora
 
@@ -2179,9 +2179,9 @@ Dodano następujące przełączniki linker:
 - / ASSEMBLYDEBUG
 - / ASSEMBLYLINKRESOURCE
 - DELAYSIGN
-- / KEYFILE
+- /KEYFILE
 - / KEYCONTAINER.
-- / SAFESEH
+- /SAFESEH
 
 ### <a name="masm"></a>MASM
 

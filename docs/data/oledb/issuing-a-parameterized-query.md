@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: parameter queries, running using CCommand class
+dev_langs:
+- C++
+helpviewer_keywords:
+- parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e016b6bb8c37fe24d9f1929f19904f17592e6f3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c844ba0da7dfef9457b896bb3c7150671cecd43
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="issuing-a-parameterized-query"></a>Uruchamianie zapytania parametrycznego
 Poniższy przykład problemy z prostego zapytania parametrycznego pobierający rekordy z pola wiek (która jest większa niż 30) z tabeli w bazie danych programu Microsoft Access. Aby obsługiwać parametr, rekord użytkownika musi mieć dodatkowe mapy. Następujący kod w Projekt ATL używa `CCommand` klasy zamiast `CTable` klasa używana w poprzednim przykładzie [przechodzenie przez prosty zestaw wierszy](../../data/oledb/traversing-a-simple-rowset.md).  
@@ -31,13 +34,13 @@ Poniższy przykład problemy z prostego zapytania parametrycznego pobierający r
   
 CDataSource connection;  
 CSession session;  
-CCommand<CAccessor<CArtists> > artists;  
+CCommand<CAccessor<CArtists>> artists;  
   
 // Open the connection, session, and table, specifying authentication   
 // using Windows NT integrated security. Hard-coding a password is a major   
 // security weakness.  
-connection.Open(CLSID_MSDASQL, "NWind", NULL, NULL,   
-DBPROP_AUTH_INTEGRATED);  
+connection.Open(CLSID_MSDASQL, "NWind", NULL, NULL, DBPROP_AUTH_INTEGRATED);  
+
 session.Open(connection);  
   
 // Set the parameter for the query  

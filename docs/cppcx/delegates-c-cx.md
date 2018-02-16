@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3612421c9089fbb97c0bf256040c8082cad01afc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aca49513c52c5eff9c10461281bb4235fa39349f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="delegates-ccx"></a>Delegaty (C + +/ CX)
 `delegate` — Słowo kluczowe służy do deklarowania typu odwołania, który jest odpowiednikiem obiektem funkcji w standardu C++ środowiska wykonawczego systemu Windows. Deklaracji obiektu delegowanego podobne do podpisu funkcji. Określa typ zwracany i typy parametrów, które muszą mieć jego opakowana funkcja. Jest to deklaracji obiektu delegowanego zdefiniowane przez użytkownika:  
@@ -40,7 +41,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 > [!TIP]
 >  Program Visual Studio jest dużo pracy podczas tworzenia program obsługi zdarzeń. Na przykład jeśli określisz program obsługi zdarzeń w kodzie XAML, pojawi się etykietka narzędzia. Jeśli wybierzesz etykietka narzędzia Visual Studio automatycznie tworzy metoda obsługi zdarzeń i kojarzy ją z zdarzenia w klasie publikowania.  
   
- W poniższym przykładzie przedstawiono podstawowe wzorca. `Windows::Foundation::TypedEventHandler`jest to typ delegata. Funkcja obsługi jest tworzony przy użyciu funkcji o nazwie.  
+ W poniższym przykładzie przedstawiono podstawowe wzorca. `Windows::Foundation::TypedEventHandler` jest to typ delegata. Funkcja obsługi jest tworzony przy użyciu funkcji o nazwie.  
   
  W app.h:  
   
@@ -102,7 +103,7 @@ event PrimeFoundHandler^ primeFoundEvent;
   
 -   Funkcja statyczna  
   
--   wskaźnik do elementu członkowskiego  
+-   pointer-to-member  
   
 -   STD::Function  
   

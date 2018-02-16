@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e36360279adf22857cfdb5b2f79ffdd7486ca008
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7e54d98ac4e1398753746dcac074de53ee2e7a0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="exceptions-ccx"></a>Wyjątki (C + +/ CX)
 
@@ -27,7 +28,7 @@ Obsługa błędów w języku C + +/ CX jest oparta na wyjątki. Na najbardziej p
 
 W programie C++ throw i catch wyjątek pochodzi z działania środowiska wykonawczego systemu Windows, wyjątek pochodzi z `std::exception`, lub typ zdefiniowany przez użytkownika. Należy zgłosić wyjątek środowiska uruchomieniowego systemu Windows tylko wtedy, gdy go będzie cross granic binarny interfejsu (ABI) aplikacji, na przykład, gdy kod, który przechwytuje wyjątku jest napisany w języku JavaScript. Gdy wyjątków C++ środowiska wykonawczego z systemem innym niż Windows osiągnie granic ABI, wyjątek jest przekształcana na `Platform::FailureException` wyjątek, który reprezentuje E_FAIL HRESULT. Aby uzyskać więcej informacji na temat ABI zobacz [tworzenia składników środowiska wykonawczego systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-Można zadeklarować [Platform::Exception](platform-exception-class.md) przy użyciu jednej z dwóch konstruktorów parametrem HRESULT lub parametrem HRESULT i [Platform::String](platform-string-class.md)^ parametrów, które mogą być przekazywane przez ABI do wszystkich aplikacji Sklepu Windows, która je obsługuje. Lub wyjątek można zadeklarować przy użyciu jednej z dwóch [metody Exception::CreateException](platform-exception-class.md#createexception) przeciążeń, które przyjmują parametr HRESULT lub parametrem HRESULT i `Platform::String^` parametru.
+Można zadeklarować [Platform::Exception](platform-exception-class.md) przy użyciu jednej z dwóch konstruktorów parametrem HRESULT lub parametrem HRESULT i [Platform::String](platform-string-class.md)^ parametrów, które mogą być przekazywane przez ABI do wszystkich aplikacji środowiska wykonawczego systemu Windows, która je obsługuje. Lub wyjątek można zadeklarować przy użyciu jednej z dwóch [metody Exception::CreateException](platform-exception-class.md#createexception) przeciążeń, które przyjmują parametr HRESULT lub parametrem HRESULT i `Platform::String^` parametru.
 
 ## <a name="standard-exceptions"></a>Standardowa wyjątków
 

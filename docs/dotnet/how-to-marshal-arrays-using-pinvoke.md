@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - marshaling [C++], arrays
 - platform invoke [C++], arrays
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3694d6628005c49cc824e52d710e64e060822f96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50ff0e0a6e61b3c2c691296f92f6ad471a3007e9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>Porady: przeprowadzanie marshalingu tablic za pomocą funkcji PInvoke
 W tym temacie opisano sposób natywny funkcje, których ciągów w stylu języka C można wywołać przy użyciu typu ciąg CLR <xref:System.String> przy użyciu wywołania platformy Framework .NET pomocy technicznej. Visual C++ programistów są zachęcani do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe), ponieważ zapewnia P/Invoke małego błąd kompilacji raportowania, nie jest bezpieczne i może być niewygodne wdrożenia. Jeśli niezarządzanego API jest dostarczana jako biblioteki DLL i kod źródłowy jest niedostępny, P/Invoke jest jedyną opcją (w przeciwnym razie zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  
@@ -37,7 +39,7 @@ W tym temacie opisano sposób natywny funkcje, których ciągów w stylu języka
   
  Poniższy kod składa się z modułu zarządzanych i niezarządzanych. Niezarządzane modułu jest bibliotekę DLL, która definiuje funkcję, która akceptuje tablica liczb całkowitych. Drugi moduł jest zarządzanej aplikacji wiersza polecenia, który importuje tej funkcji, ale definiuje ją w postaci tablicy i używa <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu, aby określić, że tablica powinny być konwertowane do tablicy natywnej po wywołaniu.  
   
- Moduł zarządzany została skompilowana z/CLR, ale/CLR: pure działa również. **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
+ Moduł zarządzany została skompilowana z/CLR.  
   
 ```cpp  
 // TraditionalDll4.cpp  

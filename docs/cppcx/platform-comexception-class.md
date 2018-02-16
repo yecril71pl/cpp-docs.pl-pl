@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::COMException Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: de0f7546019096e5126938d47443f6584bf4edb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d06133d89ff2d6a6c96fa0c139f255ce39d401b1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcomexception-class"></a>Klasa platform::COMException
 Reprezentuje COM o błędach podczas wykonywania aplikacji. COMException jest klasą bazową dla zestawu wstępnie zdefiniowanych, standard wyjątków.  
@@ -73,7 +76,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 |Invalidcastexception —|E_NOINTERFACE|Element zgłaszany, gdy nie można rzutować typu do innego typu.|  
 |Notimplementedexception —|E_NOTIMPL|Element zgłaszany, gdy metoda interfejsu nie została zaimplementowana w klasie.|  
 |NullReferenceException|E_POINTER|Element zgłaszany, gdy jest próba wyłuskania odwołanie do obiektu o wartości null.|  
-|Operationcanceledexception —|E_ABORT|Element zgłaszany, gdy operacja została przerwana.|  
+|OperationCanceledException|E_ABORT|Element zgłaszany, gdy operacja została przerwana.|  
 |OutOfBoundsException|E_BOUNDS|Element zgłaszany, gdy operacja próbuje uzyskać dostęp do danych poza prawidłowym zakresem.|  
 |OutOfMemoryException|E_OUTOFMEMORY|Element zgłaszany, gdy jest za mało pamięci do ukończenia tej operacji.|  
   
@@ -86,7 +89,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **Metadane:** platform.winmd  
 
-## <a name="ctor"></a>Konstruktor COMException::COMException
+## <a name="ctor"></a> Konstruktor COMException::COMException
 Intializes nowe wystąpienie klasy COMException.  
   
 ### <a name="syntax"></a>Składnia  
@@ -101,7 +104,7 @@ COMException( int hresult )
   
 
 
-## <a name="hresult"></a>Właściwość COMException::HResult
+## <a name="hresult"></a> Właściwość COMException::HResult
 HRESULT, który odpowiada wyjątek.  
   
 ### <a name="syntax"></a>Składnia  
@@ -116,7 +119,7 @@ public:property int HResult {    int get();}
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji dotyczących sposobu interpretowania wartość HRESULT, zobacz [struktury COM kody błędów](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
 
-## <a name="message"></a>Właściwość COMException::Message
+## <a name="message"></a> Właściwość COMException::Message
 Komunikat opisujący wyjątek.  
   
 ### <a name="syntax"></a>Składnia  

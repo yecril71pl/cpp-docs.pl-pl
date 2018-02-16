@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d4898b2d67de4b23d31227e572c0f270aa6f37
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 0c0ae9514736b66be104198c95c3764772a87ef8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE i narzędzia do programowania w języku Visual C++
 
@@ -115,7 +115,7 @@ Program można debugować przez naciśnięcie przycisku **F5** podczas konfigura
 
 ## <a name="deploy-completed-applications"></a>Wdrażanie aplikacji ukończone
 
-Wdrażanie aplikacji platformy uniwersalnej systemu Windows dla klientów do Sklepu Windows za pośrednictwem **projektu** > **magazynu** opcji menu. Wdrożenie CRT odbywa się automatycznie w tle. Aby uzyskać więcej informacji, zobacz [sprzedaży aplikacji](http://go.microsoft.com/fwlink/p/?LinkId=262280).
+Wdrażanie aplikacji platformy uniwersalnej systemu Windows dla klientów za pośrednictwem Microsoft Store za pomocą **projektu** > **magazynu** opcji menu. Wdrożenie CRT odbywa się automatycznie w tle. Aby uzyskać więcej informacji, zobacz [sprzedaży aplikacji](http://go.microsoft.com/fwlink/p/?LinkId=262280).
 
 Podczas wdrażania aplikacji natywnej C++ pulpitu na inny komputer, należy zainstalować aplikacji oraz wszelkie pliki biblioteki, które zależy od aplikacji. Istnieją trzy sposoby wdrażania uniwersalnego środowiska uruchomieniowego C++ (Biblioteka UCRT) przy użyciu aplikacji: centralnej wdrożenia, wdrożenia lokalnego lub statycznego łączenia. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji pulpitu](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

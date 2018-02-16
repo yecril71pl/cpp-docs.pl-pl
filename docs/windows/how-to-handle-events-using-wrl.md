@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3341992ce2b10897fca165a787e568b5e0bc660
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f79d35267750c42466a0b2448f9b10c37fe81f05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Porady: obsługa zdarzeń z użyciem biblioteki WRL
 Ten dokument przedstawia sposób użycia systemu Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) subskrybować i obsługi zdarzeń obiektu środowiska wykonawczego systemu Windows.  
@@ -31,7 +33,7 @@ Ten dokument przedstawia sposób użycia systemu Windows środowiska uruchomieni
  Następujące kroki start `ABI::Windows::System::Threading::IDeviceWatcher` obiektu i użyj procedury obsługi zdarzeń, aby monitorować postęp. `IDeviceWatcher` Interfejs umożliwia wyliczania urządzeń asynchronicznie lub w tle i otrzymywać powiadomienia, gdy urządzenia są dodane, usunięte lub zmodyfikowane. [Wywołania zwrotnego](../windows/callback-function-windows-runtime-cpp-template-library.md) funkcja jest ważnym elementem tego przykładu, ponieważ umożliwia on do określania obsługi zdarzenia, które przetwarzają wyników operacji w tle. Pełny przykład jest zgodna.  
   
 > [!WARNING]
->  Mimo że używasz zazwyczaj Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, w aplikacji platformy uniwersalnej systemu Windows, w tym przykładzie użyto aplikacji konsoli ilustracyjną. Funkcje, takie jak `wprintf_s` nie są dostępne w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji na temat typów i funkcje, których można użyć w aplikacji platformy uniwersalnej systemu Windows, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) i [Win32 i COM dla Sklepu Windows apps](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Mimo że używasz zazwyczaj Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, w aplikacji platformy uniwersalnej systemu Windows, w tym przykładzie użyto aplikacji konsoli ilustracyjną. Funkcje, takie jak `wprintf_s` nie są dostępne w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji na temat typów i funkcje, których można użyć w aplikacji platformy uniwersalnej systemu Windows, zobacz [nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows w funkcji CRT](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) i [Win32 i COM dla aplikacji platformy UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 1.  Obejmują (`#include`) wymagane środowisko wykonawcze systemu Windows, Biblioteka szablonów C++ środowiska wykonawczego systemu Windows lub nagłówków standardowej biblioteki C++.  
   
@@ -94,7 +96,7 @@ Ten dokument przedstawia sposób użycia systemu Windows środowiska uruchomieni
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Aby skompilować kod, skopiuj go i następnie wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `wrl-consume-events.cpp` , a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
   
- **Cl.exe wrl korzystać events.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-events.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

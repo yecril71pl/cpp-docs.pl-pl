@@ -4,40 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_TYPE
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_TYPE macro
+f1_keywords:
+- COLUMN_NAME_TYPE
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_TYPE macro
 ms.assetid: 815ace8f-8ec3-4ad7-a7a0-37fa8e4bc68c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18c68dd379a562a4f62ac678b6ceb2bbe5344656
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3cd281afe3569b1caba3f21e8f4971a4824feee5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnametype"></a>COLUMN_NAME_TYPE
 Reprezentuje powiązanie w zestawie wierszy w kolumnie określonej w zestawie wierszy. Podobnie jak [COLUMN_NAME](../../data/oledb/column-name.md), ale to makro również ma typ danych.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-COLUMN_NAME_TYPE(  
-pszName  
-,   
-wType  
-,   
-data  
- )  
+```cpp
+COLUMN_NAME_TYPE(pszName, wType, data)  
   
 ```  
   
@@ -59,8 +56,8 @@ data
   
 ## <a name="see-also"></a>Zobacz też  
  [Makra i funkcje globalne dla szablonów konsumentów OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN_ACCESSOR —](../../data/oledb/begin-accessor.md)   
- [BEGIN_ACCESSOR_MAP —](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
  [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
  [COLUMN_NAME](../../data/oledb/column-name.md)   
  [COLUMN_NAME_EX](../../data/oledb/column-name-ex.md)   

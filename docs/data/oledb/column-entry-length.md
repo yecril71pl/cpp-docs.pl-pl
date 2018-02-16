@@ -4,40 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_ENTRY_LENGTH
-dev_langs: C++
-helpviewer_keywords: COLUMN_ENTRY_LENGTH macro
+f1_keywords:
+- COLUMN_ENTRY_LENGTH
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_ENTRY_LENGTH macro
 ms.assetid: 1758babf-204c-4d1d-b82a-f9a607072e9a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8e24c3e97efed6fb2d338e9b33910fd1aab1a893
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e83571b6194fa37a51f5c437c82e67f10d695f53
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnentrylength"></a>COLUMN_ENTRY_LENGTH
 Reprezentuje powiązanie w zestawie wierszy do określonej kolumny w bazie danych.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-COLUMN_ENTRY_LENGTH(  
-nOrdinal  
-,   
-data  
-,   
-length  
- )  
+```cpp
+COLUMN_ENTRY_LENGTH(nOrdinal, data, length)  
   
 ```  
   
@@ -50,7 +47,7 @@ length
  `data`  
  [in] Odpowiedni element członkowski danych w rekordzie użytkownika.  
   
- *długość*  
+ *length*  
  [in] Zmienna może być powiązane z długość kolumny.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -67,8 +64,8 @@ length
   
 ## <a name="see-also"></a>Zobacz też  
  [Makra i funkcje globalne dla szablonów konsumentów OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN_ACCESSOR —](../../data/oledb/begin-accessor.md)   
- [BEGIN_ACCESSOR_MAP —](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
  [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
  [COLUMN_ENTRY —](../../data/oledb/column-entry.md)   
  [COLUMN_ENTRY_EX](../../data/oledb/column-entry-ex.md)   

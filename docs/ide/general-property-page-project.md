@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,7 +28,8 @@ f1_keywords:
 - VC.Project.VCConfiguration.AppSupport
 - VC.Project.VCConfiguration.ToolFiles
 - VC.Project.VCConfiguration.useOfATL
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
@@ -35,12 +37,13 @@ helpviewer_keywords:
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bbe19414dbbe664f15ea2bbbc35a26827ac5b831
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 772192a4b367760e85bb1631f1ef7b50650af0c1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="general-property-page-project"></a>Ogólna strona właściwości (projekt)
 
@@ -56,7 +59,7 @@ Dla projektów z systemem innym niż Windows, temacie [odwołania do strony wła
 
 Właściwości w sekcji Ogólne wpływ na lokalizację plików, które są tworzone w procesie kompilacji i plików, których można usunąć, kiedy **wyczyść** opcji (**kompilacji** menu) jest zaznaczone.
 
-**Platforma docelowa**  
+Platforma docelowa  
 Określa platformę uruchamianego projektu. Na przykład Windows, Android lub iOS. Wartość **systemu Windows 10** oznacza, że elementy docelowe projektu platformy uniwersalnej systemu Windows. Jeśli ma być przeznaczona dla wcześniejszych wersji systemu Windows, nie ma wersji i wartość w tym polu jest wyświetlana jako tylko **Windows**. To pole tylko do odczytu, który jest ustawiana podczas tworzenia projektu.
 
 **Wersja zestawu SDK systemu Windows**  
@@ -71,12 +74,12 @@ Określa Najniższa wersja platformy, które projektu może być uruchamiane. Ta
 
 Należy pamiętać, że Visual C++ nie obsługuje wymuszania tej opcji. Jest on uwzględniony w spójności z innymi językami, takich jak C# i JavaScript, a jako przewodnik dla każdego, kto korzysta z projektu. Visual C++ nie generuje błąd w przypadku należy użyć funkcji, która nie jest dostępna w minimalnej wersji.
 
-**Katalog wyjściowy**  
+Katalog wyjściowy  
 Określa katalog, w którym narzędzi, takich jak konsolidator umieści wszystkie pliki ostateczne dane wyjściowe, które są tworzone podczas procesu kompilacji. Zazwyczaj zawiera dane wyjściowe narzędzia, takie jak łączenie, bibliotekarza lub BSCMake. Domyślnie ta właściwość jest katalogu określonego przez makra $(solutiondir —) $(Konfiguracja) \.
 
 Do uzyskania programowego dostępu do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.OutputDirectory%2A>.
 
-**Katalog pośredni**  
+Katalog pośredni  
 Określa katalog, w którym narzędzi, takich jak kompilator spowoduje umieszczenie wszystkich plików pośrednich utworzony podczas procesu kompilacji. Zazwyczaj zawiera dane wyjściowe narzędzia, takie jak kompilatora C/C++, MIDL i kompilator zasobów. Domyślnie ta właściwość jest katalogu określonego przez makra $(Konfiguracja) \.
 
 Do uzyskania programowego dostępu do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>.
@@ -84,20 +87,20 @@ Do uzyskania programowego dostępu do tej właściwości, zobacz <xref:Microsoft
 **Nazwa docelowa**  
 Określa nazwę pliku, który generuje tego projektu. Domyślnie ta właściwość jest nazwa pliku określona przez makra $(ProjectName).
 
-**Rozszerzenie docelowego**  
+Rozszerzenie docelowego  
 Określa rozszerzenie nazwy pliku, który generuje ten projekt; na przykład .exe lub .dll.
 
-**Rozszerzenia do usunięcia podczas oczyszczania**  
+Rozszerzenia do usunięcia podczas oczyszczania  
 **Wyczyść** opcji (**kompilacji** menu) usunie pliki z katalogu pośrednim, gdzie jest wbudowana konfigurację projektu. Pliki z rozszerzeniami określony za pomocą tej właściwości zostaną usunięte, gdy **wyczyść** zostanie uruchomione lub po wykonaniu odbudowie. Oprócz plików te rozszerzenia w katalogu pośrednim system kompilacji spowoduje również usunięcie żadnych znanych danych wyjściowych kompilacji niezależnie od tego, gdzie jest zlokalizowany (w tym pośredniego wyjścia, takich jak pliki .obj). Należy pamiętać, że można określić symboli wieloznacznych.
 
 Do uzyskania programowego dostępu do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>.
 
-**Tworzenie pliku dziennika**  
+Tworzenie pliku dziennika  
 Służy do określenia innej niż domyślna lokalizację pliku dziennika, który jest tworzony, gdy w przypadku kompilowania projektu. Domyślna lokalizacja jest określana przez log (MSBuildProjectName) $ $(intdir —) makra.
 
 Aby zmienić lokalizację katalogu, można użyć makra projektu. Zobacz [wspólnej makra dla poleceń kompilacji oraz właściwości](../ide/common-macros-for-build-commands-and-properties.md).
 
-**Zestaw narzędzi platformy**  
+Zestaw narzędzi platformy  
 Umożliwia projekt pod kątem innej wersji kompilatora i bibliotek języka Visual C++. Projekty Visual C++ celem może być albo domyślny zestaw narzędzi instalowanych przez program Visual Studio lub jeden z procesami zainstalowane przez kilka poprzednie wersje programu Visual Studio, w tym procesami, które tworzenia plików wykonywalnych, które można uruchomić w systemie Windowx XP. Informacje na temat zmieniania zestaw narzędzi platformy, zobacz [porady: modyfikowanie platformy docelowej i zestawu narzędzi platformy](../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 **Włącz zarządzane kompilacje wzrostowe**  
@@ -107,7 +110,7 @@ W przypadku projektów zarządzanych umożliwia wykrywania widoczności zewnętr
 
 Właściwości w sekcji projektu domyślnego reprezentują właściwości domyślnych, które można modyfikować. Definicji tych właściwości można znaleźć w plikach .props w *katalog instalacyjny*\VC\VCProjectDefaults.
 
-**Typ konfiguracji**  
+Typ konfiguracji  
 Istnieją różne typy konfiguracji do wyboru:
 
 - **Aplikacji (.exe)**, wyświetla narzędzi konsolidatora (kompilator C/C++, MIDL, kompilator zasobów, konsolidatora, BSCMake, Generator Proxy usługi sieci Web XML, niestandardowej kompilacji, prebuild, prelink, postbuild zdarzeń).
@@ -149,7 +152,7 @@ W projektach zarządzanych określa wersji programu .NET framework do obiektu do
 Określa [/GL](../build/reference/gl-whole-program-optimization.md) — opcja kompilatora i [opcję/LTCG](../build/reference/ltcg-link-time-code-generation.md) — opcja konsolidatora. Domyślnie to jest wyłączone dla konfiguracji debugowania i włączony w przypadku konfiguracji sieci sprzedaży.
 
 **Obsługa aplikacji ze Sklepu Windows**  
-Określa, czy ten projekt obsługuje aplikacje ze Sklepu Windows. Aby uzyskać więcej informacji, zobacz [/ZW (kompilacja środowiska uruchomieniowego systemu Windows)](../build/reference/zw-windows-runtime-compilation.md)i Centrum deweloperów systemu Windows.
+Określa, czy ten projekt obsługuje środowiska wykonawczego systemu Windows (platformy uniwersalnej systemu Windows). Aby uzyskać więcej informacji, zobacz [/ZW (kompilacja środowiska uruchomieniowego systemu Windows)](../build/reference/zw-windows-runtime-compilation.md)i Centrum deweloperów systemu Windows.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,24 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 859a25f4fc9698899f1139038e161d28da06220e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 234141df693f67b97bf2ec83bd9063f69addeb0f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wrl-integration-ccx"></a>Integracja WRL (C + +/ CX)
 
 Za darmo można mieszać kodu za pomocą biblioteki WRL [!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) kodu. W tej samej jednostce tłumaczenia, można użyć obiektów zadeklarowanych za pomocą biblioteki WRL uchwyt do obiektu (`^`) notacji i [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] wskaźnika inteligentnego (`ComPtr<T>`) notacji. Jednak ręcznie musi obsługiwać zwracanych wartości i [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] HRESULT wyjątki biblioteki WRL i kody błędów.
   
-## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]Programowanie
+## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] Programowanie
 
 Aby uzyskać więcej informacji na temat tworzenia i używania [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] , zobacz [Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
@@ -31,7 +32,7 @@ Aby uzyskać więcej informacji na temat tworzenia i używania [!INCLUDE[cppwrl_
 
 Poniższy fragment kodu przedstawia za pomocą biblioteki WRL i [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] użycie [!INCLUDE[wrt](includes/wrt-md.md)] klas i sprawdź, czy plik metadanych.
 
-Przykład pochodzi z fragment kodu w [forum aplikacje Sklepu Windows budynku](http://social.msdn.microsoft.com/Forums/winappswithnativecode/thread/211ef583-db11-4e55-926b-6d9ab53dbdb4). Autor następujący fragment kodu oferuje następujące zastrzeżenia i przekazanie:
+Przykład pochodzi z wstawek kodu na forum aplikacji magazyn Microsoft budynku. Autor następujący fragment kodu oferuje następujące zastrzeżenia i przekazanie:
 
 1. C++ nie zapewnia poszczególnych interfejsów API w celu odzwierciedlenia w systemie [!INCLUDE[wrt](includes/wrt-md.md)] typów, ale pliki metadanych systemu Windows (.winmd) dla typu są w pełni zgodne z plikami metadanych CLR. System Windows udostępnia nowe metadane odnajdywania interfejsów API (RoGetMetaDataFile), aby uzyskać dostęp do pliku winmd dla danego typu. Jednak te interfejsy API są ograniczone użytkowania dla deweloperów języka C++, ponieważ nie można utworzyć wystąpienia klasy.
 
