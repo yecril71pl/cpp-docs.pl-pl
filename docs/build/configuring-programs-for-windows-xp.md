@@ -17,18 +17,17 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ddf1d602fa88caa3ab069e6f2304ccb066621a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurowanie programów dla systemu Windows XP
 
 Ponieważ program Visual Studio obsługuje wiele platform procesami, można kierować systemów operacyjnych i bibliotek środowiska uruchomieniowego, które nie są obsługiwane przez zestaw domyślny. Na przykład, przełączając zestaw narzędzi platformy służy C ++ 11, języka C ++ 14 i C ++ 17 języka ulepszenia obsługiwane przez kompilator języka Visual C++ w programie Visual Studio do tworzenia aplikacji przeznaczonych [!INCLUDE[winxp](../build/includes/winxp_md.md)] i [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Można również obsługa zgodnych binarnie starszego kodu za pomocą starszej procesami platformy i nadal korzystać z najnowszych funkcji środowiska IDE programu Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Instalacja zestawu narzędzi platformy systemu Windows XP
-
 Zestaw narzędzi platformy i składniki do docelowego [!INCLUDE[winxp](../build/includes/winxp_md.md)] i [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] w programie Visual Studio 2017 r, uruchom Instalator programu Visual Studio. Podczas pierwszej instalacji programu Visual Studio lub po wybraniu **Modyfikuj** zmodyfikować istniejącą instalację, upewnij się, że **tworzenia klasycznych aplikacji w języku C++** obciążenie jest zaznaczone. Na liście dodatkowych składników dla tego obciążenia wybierz **obsługę systemu Windows XP dla języka C++**, a następnie wybierz pozycję **zainstalować** lub **Modyfikuj**.
 
 ## <a name="windows-xp-targeting-experience"></a>Windows XP przeznaczonych dla środowiska
@@ -65,7 +64,7 @@ Z powodu różnic w pomocy technicznej platformy i biblioteki środowisko progra
 
 - **Funkcje języka C++**
 
-   Obsługiwane są tylko takie funkcje języka C++, zaimplementowany w programie Visual Studio 2012 w aplikacji, które używają v110\_xp zestaw narzędzi platformy. Tylko język C++ funkcji w programie Visual Studio 2013 są obsługiwane w aplikacjach, które używają v120\_xp zestaw narzędzi platformy. Obsługiwane są tylko takie funkcje języka C++, zaimplementowany w programie Visual Studio 2012 w aplikacjach korzystających z wersji 140\_xp zestaw narzędzi platformy. Visual Studio będzie korzystać odpowiedniego kompilatora podczas tworzenia przy użyciu starszej procesami platformy. Użyj najnowszych zestaw narzędzi platformy systemu Windows XP, aby korzystać z dodatkowych funkcji języka C++ zaimplementowana w tej wersji kompilator.
+   Obsługiwane są tylko takie funkcje języka C++, zaimplementowany w programie Visual Studio 2012 w aplikacji, które używają v110\_xp zestaw narzędzi platformy. Tylko język C++ funkcji w programie Visual Studio 2013 są obsługiwane w aplikacjach, które używają v120\_xp zestaw narzędzi platformy. Tylko język C++ funkcji w programie Visual Studio 2015 są obsługiwane w aplikacjach korzystających z wersji 140\_xp zestaw narzędzi platformy. Visual Studio będzie korzystać odpowiedniego kompilatora podczas tworzenia przy użyciu starszej procesami platformy. Użyj najnowszych zestaw narzędzi platformy systemu Windows XP, aby korzystać z dodatkowych funkcji języka C++ zaimplementowana w tej wersji kompilator.
 
 - **Debugowanie zdalne**
 
