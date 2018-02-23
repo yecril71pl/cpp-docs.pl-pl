@@ -96,7 +96,6 @@
 ### [Importowanie i eksportowanie funkcji śródwierszowych](importing-and-exporting-inline-functions.md)
 ## [Technologia Active i biblioteki DLL](active-technology-and-dlls.md)
 ## [Automatyzacja w bibliotece DLL](automation-in-a-dll.md)
-## [Konwencje nazewnictwa bibliotek MFC DLL](naming-conventions-for-mfc-dlls.md)
 ## [Wywoływanie funkcji DLL z aplikacji języka Visual Basic](calling-dll-functions-from-visual-basic-applications.md)
 # [Funkcje wewnętrzne kompilatora i język asemblera](../intrinsics/TOC.md)
 # [Kompilowanie kodu C/C++ w wierszu polecenia](building-on-the-command-line.md)
