@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 35c0947d51b4caf239838a38a31df39226f7da50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f56b4060f6b83aca11121ad6c40c22de64a24b8f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 Określa, czy liczba całkowita reprezentuje znaków kontrolnych.  
@@ -83,7 +86,7 @@ int _iswcntrl_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego znaku kontrolnego. `iscntrl`Zwraca wartość niezerową, jeśli `c` jest znak kontrolny (0x00-0x1F lub 0x7F). `iswcntrl`Zwraca wartość niezerową, jeśli `c` jest formantem szerokość znaku. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
+ Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego znaku kontrolnego. `iscntrl` Zwraca wartość niezerową, jeśli `c` jest znak kontrolny (0x00-0x1F lub 0x7F). `iswcntrl` Zwraca wartość niezerową, jeśli `c` jest formantem szerokość znaku. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
   
  Wersje tych funkcji, które mają `_l` sufiks Użyj parametr ustawień regionalnych, który jest przekazywany w zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -100,9 +103,9 @@ int _iswcntrl_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`iscntrl`|\<CType.h >|  
+|`iscntrl`|\<ctype.h>|  
 |`iswcntrl`|\<CType.h > lub \<wchar.h >|  
-|`_iscntrl_l`|\<CType.h >|  
+|`_iscntrl_l`|\<ctype.h>|  
 |`_iswcntrl_l`|\<CType.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

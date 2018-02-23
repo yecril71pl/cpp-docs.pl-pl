@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcsset_s
 - _wcsset_s_l
@@ -43,7 +44,8 @@ f1_keywords:
 - _strset_s_l
 - _tcsset_s_l
 - _tcsset_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - mbsset_s_l function
 - wcsset_s function
@@ -64,22 +66,23 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 422d5c8b5e192824283e0d2e05c826f0a343d528
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 882fef9e6a1cb8e0b0c411efdf10e3d04c0921dc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 Zestawy znaków ciągu na znak. Te wersje programu [_strset —, _strset_l —, _wcsset —, _wcsset_l —, _mbsset —, _mbsset_l —](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbsset_s`i `_mbsset_s_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsset_s` i `_mbsset_s_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -138,7 +141,7 @@ errno_t _mbsset_s_l(
  Te funkcje zweryfikować swoje argumenty. Jeśli `str` jest wskaźnika o wartości null, lub `numberOfElements` argument jest mniejsza niż lub równa 0, lub bloku przekazano nie jest zerem, a następnie program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają `EINVAL` i ustaw `errno` do `EINVAL`.  
   
 ## <a name="remarks"></a>Uwagi  
- `_strset_s` Funkcja ustawia wszystkich znaków `str` do `c` (przekonwertować `char`), z wyjątkiem znak końcowy null. `_wcsset_s`i `_mbsset_s` znaków dwubajtowych i znaków wielobajtowych wersji `_strset_s`. Typy danych argumentów i zwracanych wartości różni odpowiednio. Funkcje te działają tak samo w przeciwnym razie wartość.  
+ `_strset_s` Funkcja ustawia wszystkich znaków `str` do `c` (przekonwertować `char`), z wyjątkiem znak końcowy null. `_wcsset_s` i `_mbsset_s` znaków dwubajtowych i znaków wielobajtowych wersji `_strset_s`. Typy danych argumentów i zwracanych wartości różni odpowiednio. Funkcje te działają tak samo w przeciwnym razie wartość.  
   
  Wartość wyjściowa jest zagrożony ustawienie `LC_CTYPE` ustawienie kategorii ustawień regionalnych; zobacz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez `_l` Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane zamiast przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -155,11 +158,11 @@ errno_t _mbsset_s_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_strset_s`|\<String.h >|  
-|`_strset_s_l`|\<tchar.h >|  
+|`_strset_s`|\<string.h>|  
+|`_strset_s_l`|\<tchar.h>|  
 |`_wcsset_s`|\<String.h > lub \<wchar.h >|  
-|`_wcsset_s_l`|\<tchar.h >|  
-|`_mbsset_s`, `_mbsset_s_l`|\<mbstring.h >|  
+|`_wcsset_s_l`|\<tchar.h>|  
+|`_mbsset_s`, `_mbsset_s_l`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -193,5 +196,5 @@ After:  *******************************
  [memset —, wmemset —](../../c-runtime-library/reference/memset-wmemset.md)   
  [strcat —, wcscat —, _mbscat —](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
  [strcmp —, wcscmp —, _mbscmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy wcscpy —, _mbscpy —](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
  [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)

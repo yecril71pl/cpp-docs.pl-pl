@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -29,7 +30,8 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 242646319193e070e59256c71c53a25268e10e64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 333e772c2716b87b43cb71ac1797e714af709b3e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 Określa, czy liczba całkowita reprezentuje wielką literę.  
@@ -81,7 +84,7 @@ int _iwsupper_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu wielką literę. `isupper`Zwraca wartość niezerową, jeśli `c` jest wielką literę (- Z). `iswupper`Zwraca wartość niezerową, jeśli `c` jest znaków dwubajtowych, umożliwiająca wielką literę, lub jeśli `c` jest jednym z zdefiniowane w implementacji zbiór znaki dwubajtowe, dla których żadna z `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
+ Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu wielką literę. `isupper` Zwraca wartość niezerową, jeśli `c` jest wielką literę (- Z). `iswupper` Zwraca wartość niezerową, jeśli `c` jest znaków dwubajtowych, umożliwiająca wielką literę, lub jeśli `c` jest jednym z zdefiniowane w implementacji zbiór znaki dwubajtowe, dla których żadna z `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
   
  Wersje tych funkcji, które mają `_l` sufiks Użyj ustawień regionalnych, który jest przekazywany w zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -91,17 +94,17 @@ int _iwsupper_l(
   
 |Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istupper`|`isupper`|[_ismbcupper —](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswupper`|  
+|`_istupper`|`isupper`|[_ismbcupper](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswupper`|  
 |`_istupper_l`|`_isupper_l`|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_iswupper_l`|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`isupper`|\<CType.h >|  
-|`_isupper_l`|\<CType.h >|  
+|`isupper`|\<ctype.h>|  
+|`_isupper_l`|\<ctype.h>|  
 |`iswupper`|\<CType.h > lub \<wchar.h >|  
-|`_iswupper_l`|\<CType.h >|  
+|`_iswupper_l`|\<ctype.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsspnp
 - _wcsspnp
@@ -36,7 +37,8 @@ f1_keywords:
 - _wcsspnp
 - _strspnp
 - mbsspnp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strspnp function
 - _wcsspnp function
@@ -49,22 +51,23 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 314adc5ad7011d715f0c49887761390994ebc45f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7379218425c640b9730d9b7d743163a5799f5b60
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 Zwraca wskaźnik do pierwszego znaku w ciągu, która została nie w innym ciągu.  
   
 > [!IMPORTANT]
->  `_mbsspnp`i `_mbsspnp_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsspnp` i `_mbsspnp_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -103,7 +106,7 @@ unsigned char *_mbsspnp_l(
  `_strspnp`, `_wcsspnp`, i `_mbsspnp` zwraca wskaźnik do pierwszego znaku w `str` nienależącym do zestawu znaków `charset`. Każdy z tych funkcji zwraca `NULL` Jeśli `str` zawiera tylko znaki z `charset`. Dla każdego z tych procedur Brak wartości zwracanej jest zarezerwowana wystąpił błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- `_mbsspnp` Funkcja zwraca wskaźnik do znaków wielobajtowych, który jest pierwszy znak w `str` nienależącym do zestawu znaków `charset`. `_mbsspnp`rozpoznaje wielobajtowych sekwencji znaków zgodnie z [strony kodowe wielobajtowe](../../c-runtime-library/code-pages.md) obecnie w użyciu. Wyszukiwanie nie obejmuje Kończenie znaki null.  
+ `_mbsspnp` Funkcja zwraca wskaźnik do znaków wielobajtowych, który jest pierwszy znak w `str` nienależącym do zestawu znaków `charset`. `_mbsspnp` rozpoznaje wielobajtowych sekwencji znaków zgodnie z [strony kodowe wielobajtowe](../../c-runtime-library/code-pages.md) obecnie w użyciu. Wyszukiwanie nie obejmuje Kończenie znaki null.  
   
  Jeśli dowolny `str` lub `charset` jest wskaźnika o wartości null, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca `NULL` i ustawia `errno` do `EINVAL`.  
   
@@ -113,17 +116,17 @@ unsigned char *_mbsspnp_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsspnp`|`_strspnp`|`_mbsspnp`|`_wcsspnp`|  
   
- `_strspnp`i `_wcsspnp` znaków i wersji znaków dwubajtowych `_mbsspnp`. `_strspnp`i `_wcsspnp` zachowują się tak samo do `_mbsspnp` przeciwnym są dostępne tylko dla tego mapowania i nie powinna być używana z innego powodu. Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania zwykłego tekstu](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania zwykłego tekstu](../../c-runtime-library/generic-text-mappings.md).  
+ `_strspnp` i `_wcsspnp` znaków i wersji znaków dwubajtowych `_mbsspnp`. `_strspnp` i `_wcsspnp` zachowują się tak samo do `_mbsspnp` przeciwnym są dostępne tylko dla tego mapowania i nie powinna być używana z innego powodu. Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania zwykłego tekstu](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania zwykłego tekstu](../../c-runtime-library/generic-text-mappings.md).  
   
- `_mbsspnp_l`jest identyczny z tą różnicą, że zamiast przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ `_mbsspnp_l` jest identyczny z tą różnicą, że zamiast przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_mbsspnp`|\<mbstring.h >|  
-|`_strspnp`|\<tchar.h >|  
-|`_wcsspnp`|\<tchar.h >|  
+|`_mbsspnp`|\<mbstring.h>|  
+|`_strspnp`|\<tchar.h>|  
+|`_wcsspnp`|\<tchar.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -156,6 +159,6 @@ abbage
  [strspn —, wcsspn —, _mbsspn — _mbsspn_l —](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
  [strncat_s —, _strncat_s_l, wcsncat_s —, _wcsncat_s_l _mbsncat_s —, _mbsncat_s_l —](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)   
  [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy_s — _strncpy_s_l —, wcsncpy_s —, _wcsncpy_s_l —, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
- [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)

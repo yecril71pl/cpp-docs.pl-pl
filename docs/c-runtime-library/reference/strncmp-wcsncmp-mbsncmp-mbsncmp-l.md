@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strncmp
 - _mbsncmp
@@ -35,7 +36,8 @@ f1_keywords:
 - strncmp
 - _mbsncmp
 - wcsncmp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tcsnccmp function
 - ftcsncmp function
@@ -55,22 +57,23 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1871879a1a2b3c5737fd44946c4b95c8b0777f41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 92ec6c3c6a28258ffc953fc9c7f5a344e1f3d0f9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 Porównano do określonej liczby znaków dwóch ciągów.  
   
 > [!IMPORTANT]
->  `_mbsncmp`i `_mbsncmp_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsncmp` i `_mbsncmp_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -117,18 +120,18 @@ int _mbsncmp_l(
   
 |Wartość zwracana|Opis|  
 |------------------|-----------------|  
-|< 0|`string1`substring mniej niż `string2` podciągu|  
-|0|`string1`taki sam jak podciąg `string2` podciągu|  
-|> 0|`string1`substring większe `string2` podciągu|  
+|< 0|`string1` substring mniej niż `string2` podciągu|  
+|0|`string1` taki sam jak podciąg `string2` podciągu|  
+|> 0|`string1` substring większe `string2` podciągu|  
   
  Parametr błędu sprawdzania poprawności `_mbsncmp` i `_mbsncmp_l` zwracać `_NLSCMPERROR`, która jest zdefiniowana w \<string.h > i \<mbstring.h >.  
   
 ## <a name="remarks"></a>Uwagi  
- `strncmp` Funkcja przeprowadza porównanie liczby porządkowej co najwyżej pierwszego `count` znaków `string1` i `string2` i zwraca wartość wskazującą relacji między podciągów. `strncmp`jest rozróżniana wielkość liter wersja `_strnicmp`. `wcsncmp`i `_mbsncmp` z uwzględnieniem wielkości liter wersji `_wcsnicmp` i `_mbsnicmp`.  
+ `strncmp` Funkcja przeprowadza porównanie liczby porządkowej co najwyżej pierwszego `count` znaków `string1` i `string2` i zwraca wartość wskazującą relacji między podciągów. `strncmp` jest rozróżniana wielkość liter wersja `_strnicmp`. `wcsncmp` i `_mbsncmp` z uwzględnieniem wielkości liter wersji `_wcsnicmp` i `_mbsnicmp`.  
   
- `wcsncmp`i `_mbsncmp` znaków dwubajtowych i znaków wielobajtowych wersji `strncmp`. Argumenty `wcsncmp` są znaków dwubajtowych ciągi; tych `_mbsncmp` są ciągami znaków wielobajtowych. `_mbsncmp`rozpoznaje wielobajtowych sekwencji znaków zgodnie ze strony kodowe wielobajtowe i zwraca `_NLSCMPERROR` w przypadku wystąpienia błędu.  
+ `wcsncmp` i `_mbsncmp` znaków dwubajtowych i znaków wielobajtowych wersji `strncmp`. Argumenty `wcsncmp` są znaków dwubajtowych ciągi; tych `_mbsncmp` są ciągami znaków wielobajtowych. `_mbsncmp` rozpoznaje wielobajtowych sekwencji znaków zgodnie ze strony kodowe wielobajtowe i zwraca `_NLSCMPERROR` w przypadku wystąpienia błędu.  
   
- Ponadto `_mbsncmp` i `_mbsncmp_l` sprawdza poprawność parametrów. Jeśli `string1` lub `string2` wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `_mbsncmp` i `_mbsncmp_l` zwracać `_NLSCMPERROR` i ustaw `errno` do `EINVAL`. `strncmp`i `wcsncmp` nie weryfikują ich parametrów. Funkcje te działają tak samo w przeciwnym razie wartość.  
+ Ponadto `_mbsncmp` i `_mbsncmp_l` sprawdza poprawność parametrów. Jeśli `string1` lub `string2` wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `_mbsncmp` i `_mbsncmp_l` zwracać `_NLSCMPERROR` i ustaw `errno` do `EINVAL`. `strncmp` i `wcsncmp` nie weryfikują ich parametrów. Funkcje te działają tak samo w przeciwnym razie wartość.  
   
  Zachowanie porównanie `_mbsncmp` i `_mbsncmp_l` zależy od ustawienia `LC_CTYPE` ustawienie kategorii ustawień regionalnych. Kontroluje do wykrywania bajty wiodące i końcowe znaki wielobajtowe. Aby uzyskać więcej informacji, zobacz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `_mbsncmp` Funkcja używa bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych. `_mbsncmp_l` Funkcji jest identyczny z tą różnicą, że używa `locale` parametru zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md). Jeśli ustawienia regionalne są jednobajtowe ustawień regionalnych, działanie tych funkcji jest taki sam jak `strncmp`.  
   
@@ -139,15 +142,15 @@ int _mbsncmp_l(
 |`_tcsnccmp`|`strncmp`|`_mbsncmp`|`wcsncmp`|  
 |`_tcsncmp`|`strncmp`|`_mbsnbcmp`|`wcsncmp`|  
 |`_tccmp`|Map — makro lub wewnętrznej funkcji|`_mbsncmp`|Map — makro lub wewnętrznej funkcji|  
-|**nie dotyczy**|**nie dotyczy**|`_mbsncmp_l`|**nie dotyczy**|  
+|Nie dotyczy|Nie dotyczy|`_mbsncmp_l`|Nie dotyczy|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strncmp`|\<String.h >|  
+|`strncmp`|\<string.h>|  
 |`wcsncmp`|\<String.h > lub \<wchar.h >|  
-|`_mbsncmp`, `_mbsncmp_l`|\<mbstring.h >|  
+|`_mbsncmp`, `_mbsncmp_l`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -208,7 +211,7 @@ Result:      String 1 is equal to string 2
  [_mbsnbicmp —, _mbsnbicmp_l —](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
  [strcmp —, wcscmp —, _mbscmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strcoll — funkcje](../../c-runtime-library/strcoll-functions.md)   
- [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset —, _strset_l —, _wcsset —, _wcsset_l — _mbsset —, _mbsset_l —](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

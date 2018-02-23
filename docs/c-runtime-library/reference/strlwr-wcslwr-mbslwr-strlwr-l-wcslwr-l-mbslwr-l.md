@@ -1,12 +1,13 @@
 ---
-title: "_strlwr —, _wcslwr —, _mbslwr —, _strlwr_l —, _wcslwr_l —, _mbslwr_l — | Dokumentacja firmy Microsoft"
+title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strlwr_l
 - _strlwr
@@ -37,7 +38,8 @@ f1_keywords:
 - strlwr_l
 - _tcslwr
 - mbslwr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcslwr function
 - _strlwr function
@@ -62,22 +64,23 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6fa8c7582333b11defc87167b51eca86e4fbeabf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 85a45861344efdef243321df43abce07c4562fd2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 Konwertuje ciąg na małe litery. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_strlwr_s —, _strlwr_s_l —, _mbslwr_s —, _mbslwr_s_l —, _wcslwr_s —, _wcslwr_s_l —](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbslwr`i `_mbslwr_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbslwr` i `_mbslwr_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -162,9 +165,9 @@ unsigned char *_mbslwr_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_strlwr`, `_strlwr_l`|\<String.h >|  
+|`_strlwr`, `_strlwr_l`|\<string.h>|  
 |`_wcslwr`, `_wcslwr_l`|\<String.h > lub \<wchar.h >|  
-|`_mbslwr`, `_mbslwr_l`|\<mbstring.h >|  
+|`_mbslwr`, `_mbslwr_l`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

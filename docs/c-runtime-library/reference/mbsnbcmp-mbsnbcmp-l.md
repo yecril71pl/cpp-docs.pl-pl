@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbcmp
 - _mbsnbcmp_l
@@ -29,7 +30,8 @@ f1_keywords:
 - _mbsnbcmp_l
 - mbsnbcmp_l
 - _mbsnbcmp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - mbsnbcmp_l function
 - mbsnbcmp function
@@ -38,22 +40,23 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 614091f3e1a36bdc907bbdb1b299a53f4bb6d13c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 77c93655f393db07c4051c0917ea4022f7c5a8e5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 Porównuje pierwszy `n` bajtów dwa ciągi znaków wielobajtowych.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -86,16 +89,16 @@ int _mbsnbcmp_l(
   
 |Wartość zwracana|Opis|  
 |------------------|-----------------|  
-|< 0|`string1`substring jest mniejsza niż `string2` podciąg.|  
-|0|`string1`substring jest taki sam jak `string2` podciąg.|  
-|> 0|`string1`substring jest większa niż `string2` podciąg.|  
+|< 0|`string1` substring jest mniejsza niż `string2` podciąg.|  
+|0|`string1` substring jest taki sam jak `string2` podciąg.|  
+|> 0|`string1` substring jest większa niż `string2` podciąg.|  
   
  Parametr błędu sprawdzania poprawności `_mbsnbcmp` i `_mbsnbcmp_l` zwracać `_NLSCMPERROR`, która jest zdefiniowana w \<string.h > i \<mbstring.h >.  
   
 ## <a name="remarks"></a>Uwagi  
- `_mbsnbcmp` Funkcje co najwyżej porównania pierwszy `count` bajtów w `string1` i `string2` i zwraca wartość wskazującą relacji między podciągów. `_mbsnbcmp`jest rozróżniana wielkość liter wersja `_mbsnbicmp`. W odróżnieniu od `_mbsnbcoll`, `_mbsnbcmp` nie ma wpływu na kolejność sortowania ustawień regionalnych. `_mbsnbcmp`rozpoznaje wielobajtowych sekwencji znaków zgodnie z bieżącym wielobajtowe [strona kodowa](../../c-runtime-library/code-pages.md).  
+ `_mbsnbcmp` Funkcje co najwyżej porównania pierwszy `count` bajtów w `string1` i `string2` i zwraca wartość wskazującą relacji między podciągów. `_mbsnbcmp` jest rozróżniana wielkość liter wersja `_mbsnbicmp`. W odróżnieniu od `_mbsnbcoll`, `_mbsnbcmp` nie ma wpływu na kolejność sortowania ustawień regionalnych. `_mbsnbcmp` rozpoznaje wielobajtowych sekwencji znaków zgodnie z bieżącym wielobajtowe [strona kodowa](../../c-runtime-library/code-pages.md).  
   
- `_mbsnbcmp`podobny `_mbsncmp`, ale `_mbsncmp` porównuje ciągi znaków, a nie w bajtach.  
+ `_mbsnbcmp` podobny `_mbsncmp`, ale `_mbsncmp` porównuje ciągi znaków, a nie w bajtach.  
   
  Wartość wyjściowa jest zagrożony `LC_CTYPE` kategorii ustawienie ustawień regionalnych, który określa bajtów realizacji i końcowe bajtów znaki wielobajtowe. Aby uzyskać więcej informacji, zobacz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `_mbsnbcmp` Funkcja używa bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych. `_mbsnbcmp_l` Funkcji jest identyczny z tą różnicą, że używa `locale` parametru zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -112,8 +115,8 @@ int _mbsnbcmp_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_mbsnbcmp`|\<mbstring.h >|  
-|`_mbsnbcmp_l`|\<mbstring.h >|  
+|`_mbsnbcmp`|\<mbstring.h>|  
+|`_mbsnbcmp_l`|\<mbstring.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -170,9 +173,9 @@ Result:   String 1 is equal to string 2
   
 ## <a name="see-also"></a>Zobacz też  
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat —, _mbsnbcat_l —](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
  [_mbsnbicmp —, _mbsnbicmp_l —](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
  [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

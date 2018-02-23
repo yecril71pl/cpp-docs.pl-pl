@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strncoll
 - _mbsncoll_l
@@ -42,7 +43,8 @@ f1_keywords:
 - _strncoll
 - _tcsncoll
 - mbsncoll
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strncoll_l function
 - code pages, using for string comparisons
@@ -67,22 +69,23 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 51777605e24d9bb3ddf6fa7e6b9ad9c332165881
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c9feab13206ea39379ff41ead2bca4bcaab5d71f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 Porównanie ciągów za pomocą informacje specyficzne dla ustawień regionalnych.  
   
 > [!IMPORTANT]
->  `_mbsncoll`i `_mbsncoll_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsncoll` i `_mbsncoll_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -137,11 +140,11 @@ int _mbsncoll_l(
   
 |Wartość zwracana|Relacja ciąg1 do ciąg2|  
 |------------------|----------------------------------------|  
-|< 0|`string1`jest mniejsza niż `string2`.|  
-|0|`string1`jest taka sama jak `string2`.|  
-|> 0|`string1`jest większa niż `string2`.|  
+|< 0|`string1` jest mniejsza niż `string2`.|  
+|0|`string1` jest taka sama jak `string2`.|  
+|> 0|`string1` jest większa niż `string2`.|  
   
- Każdy z tych funkcji zwraca `_NLSCMPERROR`. Aby użyć `_NLSCMPERROR`, to STRING.h lub MBSTRING.h. `_wcsncoll`może się nie powieść, jeśli dowolny `string1` lub `string2` zawiera kody znaków dwubajtowych, znajdujących się poza domeną sekwencję sortowania. Po wystąpieniu błędu `_wcsncoll` mogą ustawiać `errno` do `EINVAL`. Aby sprawdzić, czy błąd w wywołaniu `_wcsncoll`ustaw `errno` 0, a następnie sprawdź `errno` po wywołaniu metody `_wcsncoll`.  
+ Każdy z tych funkcji zwraca `_NLSCMPERROR`. Aby użyć `_NLSCMPERROR`, to STRING.h lub MBSTRING.h. `_wcsncoll` może się nie powieść, jeśli dowolny `string1` lub `string2` zawiera kody znaków dwubajtowych, znajdujących się poza domeną sekwencję sortowania. Po wystąpieniu błędu `_wcsncoll` mogą ustawiać `errno` do `EINVAL`. Aby sprawdzić, czy błąd w wywołaniu `_wcsncoll`ustaw `errno` 0, a następnie sprawdź `errno` po wywołaniu metody `_wcsncoll`.  
   
 ## <a name="remarks"></a>Uwagi  
  Każda z tych funkcji przeprowadza porównanie z uwzględnieniem wielkości liter pierwszego `count` znaków `string1` i `string2`, zgodnie z stronę kodową, która jest aktualnie używany. Ich używać tylko wtedy, gdy ma różnicy między kolejność zestaw znaków i kolejność lexicographic znaków w stronie kodowej, a ta różnica polega na istotnych dla porównania ciągów. Kolejność zestaw znaków jest zależny od ustawień regionalnych. Wersje tych funkcji, które nie mają `_l` Użyj sufiksu bieżące ustawienia regionalne, ale wersje, które mają `_l` ustawień regionalnych, który jest przekazywany w używać sufiksu. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
@@ -153,15 +156,15 @@ int _mbsncoll_l(
 |Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsnccoll`|`_strncoll`|`_mbsncoll`|`_wcsncoll`|  
-|`_tcsncoll`|`_strncoll`|[_mbsnbcoll —](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsncoll`|  
+|`_tcsncoll`|`_strncoll`|[_mbsnbcoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsncoll`|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_strncoll`, `_strncoll_l`|\<String.h >|  
+|`_strncoll`, `_strncoll_l`|\<string.h>|  
 |`_wcsncoll`, `_wcsncoll_l`|\<WChar.h > lub \<string.h >|  
-|`_mbsncoll`, `_mbsncoll_l`|\<mbstring.h >|  
+|`_mbsncoll`, `_mbsncoll_l`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -169,11 +172,11 @@ int _mbsncoll_l(
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
  [strcoll — funkcje](../../c-runtime-library/strcoll-functions.md)   
- [localeconv —](../../c-runtime-library/reference/localeconv.md)   
+ [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [_mbsnbcoll —, _mbsnbcoll_l —, _mbsnbicoll — _mbsnbicoll_l —](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
  [setLocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [strcmp —, wcscmp —, _mbscmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [_stricmp —, _wcsicmp —, _mbsicmp —, _stricmp_l — _wcsicmp_l —, _mbsicmp_l —](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
  [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

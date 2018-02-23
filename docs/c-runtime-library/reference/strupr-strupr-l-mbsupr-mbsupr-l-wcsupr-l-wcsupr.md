@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsupr_l
 - _mbsupr
@@ -39,7 +40,8 @@ f1_keywords:
 - _strupr
 - mbsupr_l
 - _wcsupr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcsupr_l function
 - mbsupr function
@@ -67,22 +69,23 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f211a64dca335433c8da779f6d3674f47ba33ce9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 904f897a36c3db24ce78983e3c02cc0f019bf16e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 Konwertuje ciąg na wielkie litery. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_strupr_s —, _strupr_s_l —, _mbsupr_s —, _mbsupr_s_l —, _wcsupr_s —, _wcsupr_s_l —](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbsupr`i `_mbsupr_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsupr` i `_mbsupr_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -150,7 +153,7 @@ unsigned char *_mbsupr_l(
 ## <a name="remarks"></a>Uwagi  
  `_strupr` Funkcji konwertuje w miejscu, każdy małej litery w `str` na wielkie litery. Konwersja jest określany przez `LC_CTYPE` ustawienie kategorii ustawień regionalnych. Nie dotyczy innych znaków. Aby uzyskać więcej informacji na temat `LC_CTYPE`, zobacz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Wersje tych funkcji bez `_l` sufiks Użyj bieżących ustawień regionalnych; wersji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały przekazano zamiast tego ustawienia regionalne. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
- `_wcsupr`i `_mbsupr` znaków dwubajtowych i znaków wielobajtowych wersji `_strupr`. Wartość argumentów i `_wcsupr` są znaków dwubajtowych ciągi; tych `_mbsupr` są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
+ `_wcsupr` i `_mbsupr` znaków dwubajtowych i znaków wielobajtowych wersji `_strupr`. Wartość argumentów i `_wcsupr` są znaków dwubajtowych ciągi; tych `_mbsupr` są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
   
  Jeśli `str` wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracane oryginalnego ciągu i zestaw `errno` do `EINVAL`.  
   
@@ -167,9 +170,9 @@ unsigned char *_mbsupr_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_strupr`, `_strupr_l`|\<String.h >|  
+|`_strupr`, `_strupr_l`|\<string.h>|  
 |`_wcsupr`, `_wcsupr_l`|\<String.h > lub \<wchar.h >|  
-|`_mbsupr`, `_mbsupr_l`|\<mbstring.h >|  
+|`_mbsupr`, `_mbsupr_l`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

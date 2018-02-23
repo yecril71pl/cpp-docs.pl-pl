@@ -1,12 +1,13 @@
 ---
-title: "printf_s —, _printf_s_l —, wprintf_s —, _wprintf_s_l — | Dokumentacja firmy Microsoft"
+title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _printf_s_l
 - wprintf_s
@@ -27,7 +28,8 @@ apitype: DLLExport
 f1_keywords:
 - wprintf_s
 - printf_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wprintf_s function
 - tprintf_s function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 26db1617206393b8a3756987233d1e38e8ea79c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2929c79c9ab5cfa5e4455e8a75c76988a1f7cf86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 Drukowanie sformatowanych dane wyjściowe do standardowego strumienia wyjściowego. Te wersje programu [printf, _printf_l —, wprintf, _wprintf_l —](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -100,9 +103,9 @@ int _wprintf_s_l(
   
  Aby uzyskać informacje dotyczące `errno` i kody błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `printf_s`i `fprintf_s` zachowują się tak samo, z wyjątkiem `printf_s` zapisuje dane wyjściowe do `stdout` , a nie do miejsca docelowego typu `FILE`. Aby uzyskać więcej informacji, zobacz [fprintf_s —, _fprintf_s_l —, fwprintf_s —, _fwprintf_s_l —](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
+ `printf_s` i `fprintf_s` zachowują się tak samo, z wyjątkiem `printf_s` zapisuje dane wyjściowe do `stdout` , a nie do miejsca docelowego typu `FILE`. Aby uzyskać więcej informacji, zobacz [fprintf_s —, _fprintf_s_l —, fwprintf_s —, _fwprintf_s_l —](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
   
- `wprintf_s`jest to wersja znaków dwubajtowych `printf_s`; `format` jest ciągiem znaków dwubajtowych. `wprintf_s`i `printf_s` zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `printf_s`obecnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
+ `wprintf_s` jest to wersja znaków dwubajtowych `printf_s`; `format` jest ciągiem znaków dwubajtowych. `wprintf_s` i `printf_s` zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `printf_s` obecnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
   
  Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.  
   
@@ -135,10 +138,10 @@ Line one
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`printf_s`, `_printf_s_l`|\<stdio.h >|  
+|`printf_s`, `_printf_s_l`|\<stdio.h>|  
 |`wprintf_s`, `_wprintf_s_l`|\<stdio.h > lub \<wchar.h >|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu `stdin`, `stdout`, i `stderr`, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Przykład  
   
@@ -223,7 +226,7 @@ Address as:   0012FF78
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
- [fprintf —, _fprintf_l —, fwprintf — _fwprintf_l —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)

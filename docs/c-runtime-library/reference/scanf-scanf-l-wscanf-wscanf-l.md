@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wscanf_l
 - scanf
@@ -31,7 +32,8 @@ f1_keywords:
 - _wscanf_l
 - scanf
 - _tscanf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tscanf_l function
 - _tscanf_l function
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36b82950361a236d8c2a5dc9db955aa108cf78b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 56b4c46c5b13ed5e1ca20c604fbc95168af1dfe5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
 Odczyty sformatowanych danych z Standardowy strumień wejściowy. Bezpieczniejsza wersje tych funkcji są dostępne; zobacz [scanf_s —, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).  
@@ -107,7 +110,7 @@ int _wscanf_l(
 > [!IMPORTANT]
 >  Podczas odczytywania ciągu z `scanf`, zawsze określić szerokość `%s` format (na przykład `"%32s"` zamiast `"%s"`); w przeciwnym razie niewłaściwie sformatowany wprowadzania łatwo może spowodować przepełnienie buforu. Alternatywnie, należy rozważyć użycie [scanf_s —, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) lub [fgets —](../../c-runtime-library/reference/fgets-fgetws.md).  
   
- `wscanf`jest to wersja znaków dwubajtowych `scanf`; `format` argument `wscanf` jest ciągiem znaków dwubajtowych. `wscanf`i `scanf` zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `scanf`obecnie nie obsługuje dane wejściowe ze strumienia UNICODE.  
+ `wscanf` jest to wersja znaków dwubajtowych `scanf`; `format` argument `wscanf` jest ciągiem znaków dwubajtowych. `wscanf` i `scanf` zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `scanf` obecnie nie obsługuje dane wejściowe ze strumienia UNICODE.  
   
  Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.  
   
@@ -124,10 +127,10 @@ int _wscanf_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`scanf`, `_scanf_l`|\<stdio.h >|  
+|`scanf`, `_scanf_l`|\<stdio.h>|  
 |`wscanf`, `_wscanf_l`|\<stdio.h > lub \<wchar.h >|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu `stdin`, `stdout`, i `stderr`, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Przykład  
   
@@ -169,7 +172,7 @@ The contents are: 36 92.300003 y n Wide characters
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [fscanf —, _fscanf_l —, fwscanf — _fwscanf_l —](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [printf, _printf_l —, wprintf, _wprintf_l —](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)

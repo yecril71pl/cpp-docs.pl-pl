@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: wcsrtombs
+ms.topic: reference
+apiname:
+- wcsrtombs
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,23 +23,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: wcsrtombs
-dev_langs: C++
+f1_keywords:
+- wcsrtombs
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcsrtombs function
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7fb18e5f66f431afb86e86815f50217782902b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 45dd47ed3c6136c4aff860efd51de18e120803ec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 Konwertowanie ciągu znaków typu wide reprezentacji ciągu znaków wielobajtowych. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [wcsrtombs_s —](../../c-runtime-library/reference/wcsrtombs-s.md).  
@@ -61,16 +66,16 @@ size_t wcsrtombs(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`mbstr`  
+ [out] `mbstr`  
  Powstałe w ten sposób przekonwertować ciągu znaków wielobajtowych adresu.  
   
- [in]`wcstr`  
+ [in] `wcstr`  
  Pośrednio wskazuje lokalizację ciąg znaków typu wide do skonwertowania.  
   
- [in]`count`  
+ [in] `count`  
  Liczba znaków, które ma zostać przekonwertowany.  
   
- [in]`mbstate`  
+ [in] `mbstate`  
  Wskaźnik do `mbstate_t` konwersji stanu obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -79,7 +84,7 @@ size_t wcsrtombs(
 ## <a name="remarks"></a>Uwagi  
  `wcsrtombs` Funkcja konwertuje ciąg znaki dwubajtowe, począwszy od określonej konwersji stanie zawartymi w `mbstate`, pośrednie wartości wskazywana w `wcstr`, do adresu `mbstr`. Konwersja będzie dla każdego znaku do: po napotkano wartość null, przerywanie znaków dwubajtowych po napotkaniu z systemem innym niż odpowiedni znak lub gdy następny znak przekroczyłby limit zawarte w `count`. Jeśli `wcsrtombs` napotka znak null znaków dwubajtowych (L '\0'), przed lub po `count` występuje i konwertuje ją na 8-bitowej 0 i powoduje zatrzymanie.  
   
- W związku z tym ciąg znaków wielobajtowych `mbstr` jest zakończony wartością null tylko wtedy, gdy `wcsrtombs` napotka znak null znaków typu wide podczas konwersji. Jeśli sekwencje wskazywana przez `wcstr` i `mbstr` nakładają się zachowanie `wcsrtombs` jest niezdefiniowana. `wcsrtombs`ma to wpływ na poszczególnych kategorii LC_TYPE bieżące ustawienia regionalne.  
+ W związku z tym ciąg znaków wielobajtowych `mbstr` jest zakończony wartością null tylko wtedy, gdy `wcsrtombs` napotka znak null znaków typu wide podczas konwersji. Jeśli sekwencje wskazywana przez `wcstr` i `mbstr` nakładają się zachowanie `wcsrtombs` jest niezdefiniowana. `wcsrtombs` ma to wpływ na poszczególnych kategorii LC_TYPE bieżące ustawienia regionalne.  
   
  `wcsrtombs` Funkcja różni się od [wcstombs —, _wcstombs_l —](../../c-runtime-library/reference/wcstombs-wcstombs-l.md) przez jego restartability. Stan konwersji jest przechowywany w `mbstate` dla kolejnych wywołań w tej samej lub innych funkcji ponownego uruchamiania. Wyniki są niezdefiniowane, gdy mieszanie korzystanie z funkcji ponownego uruchamiania i nonrestartable.  Na przykład aplikacja może użyć `wcsrlen` zamiast `wcsnlen`, jeśli kolejne wywołanie `wcsrtombs` użyto zamiast `wcstombs`.  
   
@@ -140,7 +145,7 @@ The string was successfuly converted.
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`wcsrtombs`|\<WChar.h >|  
+|`wcsrtombs`|\<wchar.h>|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   

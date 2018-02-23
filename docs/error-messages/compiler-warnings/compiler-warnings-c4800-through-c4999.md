@@ -94,7 +94,6 @@ f1_keywords:
 - C5035
 - C5036
 - C5037
-- C5038
 - C5039
 - C5040
 - C5041
@@ -103,17 +102,16 @@ f1_keywords:
 - C5044
 dev_langs:
 - C++
-ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f31846158e8e1899c600ae7bf765d6594a8abca
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 ostrzeżenia kompilatora za pośrednictwem C5999
 
@@ -245,6 +243,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |Ostrzeżenie C5035 kompilatora|Użyj funkcji "*funkcji*" powoduje, że funkcja *funkcja* ma zostać skompilowana jako gość kodu|
 |Ostrzeżenie kompilatora (poziom 1) C5036|varargs funkcji konwersja wskaźnika podczas kompilowania przy użyciu /hybrid:x86arm64 "*type1*"do"*type2*"|
 |Ostrzeżenie kompilatora (błąd) C5037|"*funkcji członkowskiej*": definicja wiersza elementu członkowskiego szablonu klasy nie może mieć argumentów domyślnych|
+|[Ostrzeżenie C5038 kompilatora](c5038.md)|element członkowski danych "*Członek1*"zostanie zainicjowana po elemencie członkowskim danych"*member2*"|
 |Ostrzeżenie C5039 kompilatora|"*funkcja*": wskaźnik lub odwołanie do potencjalnie zgłaszanie funkcji została przekazana do funkcji extern C w obszarze - EHc. Niezdefiniowane zachowanie może wystąpić, jeśli ta funkcja zwraca wyjątek.|
 |Ostrzeżenie C5040 kompilatora|specyfikacje wyjątków dynamicznych są prawidłowe tylko w języku C ++ 14 i starszych wersji; traktowanie jako noexcept(false)|
 |Ostrzeżenie C5041 kompilatora|"*definicji*": definicja wiersza dla elementu członkowskiego danych statycznych constexpr nie jest wymagana i jest przestarzała w języku C ++ 17|

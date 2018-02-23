@@ -1,12 +1,13 @@
 ---
-title: "strftime —, wcsftime —, _strftime_l —, _wcsftime_l — | Dokumentacja firmy Microsoft"
+title: strftime, wcsftime, _strftime_l, _wcsftime_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strftime
 - _wcsftime_l
@@ -29,7 +30,8 @@ f1_keywords:
 - _tcsftime
 - strftime
 - wcsftime
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strftime_l function
 - strftime function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785ad16e8f86f74252c4391044d2def96091fe61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 990dab2b4cedbdb464a2e546a4c83758cb46c89a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 Format ciągu czasu.  
@@ -95,20 +98,20 @@ size_t _wcsftime_l(
  Ciąg kontroli formatu.  
   
  `timeptr`  
- `tm`Struktura danych.  
+ `tm` Struktura danych.  
   
  `locale`  
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `strftime`Zwraca liczbę znaków, umieszczone w `strDest` i `wcsftime` zwraca odpowiednia liczba znaki dwubajtowe.  
+ `strftime` Zwraca liczbę znaków, umieszczone w `strDest` i `wcsftime` zwraca odpowiednia liczba znaki dwubajtowe.  
   
  Jeśli całkowita liczba znaków, w tym zakończenia wartość null, jest więcej niż `maxsize`, oba `strftime` i `wcsftime` zwrócić 0 i zawartość `strDest` jest nieokreślony.  
   
  Liczba znaków w `strDest` jest równa liczbie znaków literału `format` oraz znaków, które mogą być dodawane do `format` za pośrednictwem kody formatowania. Trwa przerywanie działania null ciągu nie jest liczony w wartości zwracanej.  
   
 ## <a name="remarks"></a>Uwagi  
- `strftime` i `wcsftime` funkcji format `tm` wartości w czasie `timeptr` zgodnie z podane `format` argumentu i zapisać wynik w buforze `strDest`. Co najwyżej `maxsize` znaki są umieszczane w ciągu. Opis pól w `timeptr` struktury, zobacz [asctime —](../../c-runtime-library/reference/asctime-wasctime.md). `wcsftime`jest to równoważne znaków dwubajtowych `strftime`; jej argument ciągu wskaźnik wskazuje ciąg znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
+ `strftime` i `wcsftime` funkcji format `tm` wartości w czasie `timeptr` zgodnie z podane `format` argumentu i zapisać wynik w buforze `strDest`. Co najwyżej `maxsize` znaki są umieszczane w ciągu. Opis pól w `timeptr` struktury, zobacz [asctime —](../../c-runtime-library/reference/asctime-wasctime.md). `wcsftime` jest to równoważne znaków dwubajtowych `strftime`; jej argument ciągu wskaźnik wskazuje ciąg znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
   
 > [!NOTE]
 >  W wersjach przed Visual C++ 2005, opisane dokumentacji `format` parametr `wcsftime` jako mający typ danych `const wchar_t *`, ale rzeczywistego wykonania `format` — typ danych został `const char *`. Implementacja `format` — typ danych została zaktualizowana w celu uwzględnienia w poprzednim i bieżącym dokumentacji, oznacza to, `const wchar_t *`.  
@@ -195,7 +198,7 @@ size_t _wcsftime_l(
   
 |Formatowanie kodu|Znaczenie|  
 |-----------------|-------------|  
-|`%#a, %#A, %#b, %#B, %#p, %#X, %#z, %#Z, %#%`|`#`Flaga jest ignorowana.|  
+|`%#a, %#A, %#b, %#B, %#p, %#X, %#z, %#Z, %#%`|`#` Flaga jest ignorowana.|  
 |`%#c`|Long Data i godzina reprezentacji odpowiednie dla bieżących ustawień regionalnych. Na przykład: "Wtorek, marca 14, 1995 r., 12:41:29".|  
 |`%#x`|Reprezentacja daty długiej odpowiednie do bieżących ustawień regionalnych. Na przykład: "Wtorek, 14 marca 1995".|  
 |`%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y, %#Y`|Usuń zer (jeśli istnieje).|  
@@ -204,9 +207,9 @@ size_t _wcsftime_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strftime`|\<Time.h >|  
+|`strftime`|\<time.h>|  
 |`wcsftime`|\<Time.h > lub \<wchar.h >|  
-|`_strftime_l`|\<Time.h >|  
+|`_strftime_l`|\<time.h>|  
 |`_wcsftime_l`|\<Time.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -218,7 +221,7 @@ size_t _wcsftime_l(
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
- [localeconv —](../../c-runtime-library/reference/localeconv.md)   
+ [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setLocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [strcoll — funkcje](../../c-runtime-library/strcoll-functions.md)   
  [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strupr_s
 - _strupr_s_l
@@ -43,7 +44,8 @@ f1_keywords:
 - _wcsupr_s_l
 - _strupr_s
 - _strupr_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - mbsupr_s_l function
 - strupr_s_l function
@@ -67,22 +69,23 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 671c4fc5f477cf322b4ab032beddb336df8532a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 754360403b1462681ff518372eb22c3f679a793b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 Konwertuje ciąg na wielkie litery, używając bieżących ustawień regionalnych lub określone ustawienia regionalne, który jest przekazywany w. Te wersje programu [_strupr —, _strupr_l —, _mbsupr —, _mbsupr_l —, _wcsupr_l —, _wcsupr —](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbsupr_s`i `_mbsupr_s_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsupr_s` i `_mbsupr_s_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -159,7 +162,7 @@ errno_t _mbsupr_s_l(
  Te funkcje walidację ich parametrów. Jeśli `str` jest `NULL` wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcje zwracają `EINVAL` i ustaw `errno` do `EINVAL`. Jeśli `numberOfElements` jest mniejsza niż długość ciągu zwracają `ERANGE` i ustaw `errno` do `ERANGE`.  
   
 ## <a name="remarks"></a>Uwagi  
- `_strupr_s` Funkcji konwertuje w miejscu, każdy małej litery w `str` na wielkie litery. `_wcsupr_s`jest to wersja znaków dwubajtowych `_strupr_s`. `_mbsupr_s`jest to wersja wielu znaków `_strupr_s`.  
+ `_strupr_s` Funkcji konwertuje w miejscu, każdy małej litery w `str` na wielkie litery. `_wcsupr_s` jest to wersja znaków dwubajtowych `_strupr_s`. `_mbsupr_s` jest to wersja wielu znaków `_strupr_s`.  
   
  Konwersja jest określany przez `LC_CTYPE` ustawienie kategorii ustawień regionalnych. Nie dotyczy innych znaków. Aby uzyskać więcej informacji na temat `LC_CTYPE`, zobacz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Wersje tych funkcji bez `_l` sufiks Użyj bieżących ustawień regionalnych; wizji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały przekazano zamiast ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -178,7 +181,7 @@ errno_t _mbsupr_s_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_strupr_s`, `_strupr_s_l`|\<String.h >|  
+|`_strupr_s`, `_strupr_s_l`|\<string.h>|  
 |`_wcsupr_s`, `_wcsupr_s_l`, `_mbsupr_s`, `_mbsupr_s_l`|\<String.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

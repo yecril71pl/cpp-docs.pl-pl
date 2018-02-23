@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - isblank
 - _isblank_l
@@ -32,18 +33,20 @@ f1_keywords:
 - _istblank
 - _isblank_l
 - iswblank
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5185820e3b8bcb2b5fab1adfaee247743f2e464f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c3dff4f409fe57c67e00afe24f10cbb69c6f83b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
 Określa, czy liczba całkowita reprezentuje pusty znak.  
@@ -75,9 +78,9 @@ int _iswblank_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu spację lub tabulator poziomy lub jednego z ustawień regionalnych zestaw znaków, które są używane do oddzielania słów w wierszu tekstu. `isblank`Zwraca wartość niezerową, jeśli `c` jest znak spacji (0x20) lub tabulator poziomy znaków (0x09). Wynik testu warunku `isblank` zależy od funkcji `LC_CTYPE` kategorii ustawienie ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają `_l` sufiks użyciem bieżących ustawień regionalnych wszystkie działania zależne od ustawień regionalnych; wersje, które mają `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne, który jest przekazywany w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu spację lub tabulator poziomy lub jednego z ustawień regionalnych zestaw znaków, które są używane do oddzielania słów w wierszu tekstu. `isblank` Zwraca wartość niezerową, jeśli `c` jest znak spacji (0x20) lub tabulator poziomy znaków (0x09). Wynik testu warunku `isblank` zależy od funkcji `LC_CTYPE` kategorii ustawienie ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają `_l` sufiks użyciem bieżących ustawień regionalnych wszystkie działania zależne od ustawień regionalnych; wersje, które mają `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne, który jest przekazywany w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
- `iswblank`Zwraca wartość niezerową, jeśli `c` znaków dwubajtowych, umożliwiająca miejsce na standardowej lub tabulator poziomy.  
+ `iswblank` Zwraca wartość niezerową, jeśli `c` znaków dwubajtowych, umożliwiająca miejsce na standardowej lub tabulator poziomy.  
   
  Zachowanie `isblank` i `_isblank_l` jest niezdefiniowana, jeśli `c` nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i `c` nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.  
   
@@ -92,9 +95,9 @@ int _iswblank_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`isblank`|\<CType.h >|  
+|`isblank`|\<ctype.h>|  
 |`iswblank`|\<CType.h > lub \<wchar.h >|  
-|`_isblank_l`|\<CType.h >|  
+|`_isblank_l`|\<ctype.h>|  
 |`_iswblank_l`|\<CType.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

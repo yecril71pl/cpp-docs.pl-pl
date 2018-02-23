@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 10/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstod
 - _wcstod_l
@@ -35,7 +36,8 @@ f1_keywords:
 - corecrt_wstdlib/wcstod
 - stdlib/_strtod_l
 - corecrt_wstdlib/_wcstod_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstod_l function
 - tcstod_l function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1d46e6402efe69a9099d53d9d93b5b367f6dd18c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fe18737b52ba2b04e3ee09813c6b48b6ebdf0363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -100,13 +103,13 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`strtod`Zwraca wartość liczby zmiennoprzecinkowej, z wyjątkiem przypadków, gdy reprezentacja mogłoby spowodować przepełnienie, w którego przypadku funkcja zwraca +/-`HUGE_VAL`. Znak `HUGE_VAL` znak wartość, która nie może być przedstawiony jest zgodna. `strtod`Zwraca wartość 0, jeśli konwersja nie można wykonać lub niedopełnienie występuje.
+`strtod` Zwraca wartość liczby zmiennoprzecinkowej, z wyjątkiem przypadków, gdy reprezentacja mogłoby spowodować przepełnienie, w którego przypadku funkcja zwraca +/-`HUGE_VAL`. Znak `HUGE_VAL` znak wartość, która nie może być przedstawiony jest zgodna. `strtod` Zwraca wartość 0, jeśli konwersja nie można wykonać lub niedopełnienie występuje.
 
-`wcstod`Zwraca wartości analogously do `strtod`. Dla obu tych funkcji `errno` ustawiono `ERANGE` Jeśli występuje przepełnienie lub niedomiar i program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na ten temat oraz inne kody powrotu.
+`wcstod` Zwraca wartości analogously do `strtod`. Dla obu tych funkcji `errno` ustawiono `ERANGE` Jeśli występuje przepełnienie lub niedomiar i program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na ten temat oraz inne kody powrotu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja każdego konwertuje ciąg wejściowy *nptr* do `double`. `strtod` Funkcji konwertuje *nptr* wartość podwójnej precyzji. `strtod`Zatrzymuje czytanie ciąg *nptr* pierwszego znaku nie jest rozpoznawana jako część liczby. Może to być znak końcowy null. `wcstod`jest to wersja znaków dwubajtowych `strtod`; *nptr* argument jest ciąg znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.
+Funkcja każdego konwertuje ciąg wejściowy *nptr* do `double`. `strtod` Funkcji konwertuje *nptr* wartość podwójnej precyzji. `strtod` Zatrzymuje czytanie ciąg *nptr* pierwszego znaku nie jest rozpoznawana jako część liczby. Może to być znak końcowy null. `wcstod` jest to wersja znaków dwubajtowych `strtod`; *nptr* argument jest ciąg znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -119,7 +122,7 @@ Funkcja każdego konwertuje ciąg wejściowy *nptr* do `double`. `strtod` Funkcj
 
 Jeśli *endptr* nie jest `NULL`, wskaźnik do znaku zatrzymania skanowania są przechowywane w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie można wykonać (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłowy atrybut podstawowy), wartość *nptr* są przechowywane w lokalizacji wskazywanej przez *endptr*.
 
-`strtod`oczekuje *nptr* wskaż ciąg jednego z następujących formatów:
+`strtod` oczekuje *nptr* wskaż ciąg jednego z następujących formatów:
 
 [*odstępem*] [*znak*] {*cyfr* [*radix* *cyfr*] &#124; *radix* *cyfr*} [{**e** &#124; **E**} [*znak*] *cyfr*]  
 [*odstępem*] [*znak*] {**0 x** &#124; **0 X**} {*hexdigits* [*radix* *hexdigits*] &#124; *radix* *hexdigits*} [{**p** &#124; **P**} [*znak*] *hexdigits*]  
@@ -211,9 +214,9 @@ string = 10110134932
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
 [Ustawienia regionalne](../../c-runtime-library/locale.md)   
 [Ciąg na wartość liczbową funkcje](../../c-runtime-library/string-to-numeric-value-functions.md)   
-[strtol —, wcstol —, _strtol_l — _wcstol_l —](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
+[strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
 [strtoul —, _strtoul_l —, wcstoul — _wcstoul_l —](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
-[atof —, _atof_l —, _wtof — _wtof_l —](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
-[localeconv —](../../c-runtime-library/reference/localeconv.md)   
+[atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+[localeconv](../../c-runtime-library/reference/localeconv.md)   
 [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
 [_free_locale](../../c-runtime-library/reference/free-locale.md)

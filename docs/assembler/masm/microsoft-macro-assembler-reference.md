@@ -22,11 +22,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3cb156d4fb8f50c12c2fce172c65dc2b313a24e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4fa951c5386847f216eea8581865ff3ba03a9e05
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler — odwołanie
 Asemblera makr firmy Microsoft (MASM) zawiera kilka zalet w porównaniu z zestawu wbudowanego. MASM zawiera języka makra, którego funkcje, takie jak przetwarzania ciągu zapętlenie, arytmetyczne i tekstu. MASM również zapewnia większą kontrolę nad sprzętu, ponieważ obsługuje on zbiór instrukcji 386, 486 i procesory Pentium. Za pomocą MASM, możesz również zmniejszyć obciążenie pamięci i czasu.  
@@ -54,7 +54,7 @@ Asemblera makr firmy Microsoft (MASM) zawiera kilka zalet w porównaniu z zestaw
  Informacje o sposobie tworzenia dane wyjściowe pliki [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Visual C++](../../top/visual-cpp-in-visual-studio.md)  
+ [Visual C++](../../visual-cpp-in-visual-studio.md)  
  Zawiera łącza do różnych obszarów dokumentacji Visual C++ i Visual Studio.  
   
 ## <a name="see-also"></a>Zobacz też  

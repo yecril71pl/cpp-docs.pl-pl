@@ -1,12 +1,13 @@
 ---
-title: "_strtoi64 —, _wcstoi64 —, _strtoi64_l —, _wcstoi64_l — | Dokumentacja firmy Microsoft"
+title: _strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strtoi64
 - _strtoi64_l
@@ -34,7 +35,8 @@ f1_keywords:
 - _wcstoi64
 - wcstoi64
 - strtoi64_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtoi64 function
 - _wcstoi64 function
@@ -46,16 +48,17 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 316bab1fe4023189ef206fb04fd26d6406a2123e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5a383d53c762f4bd15d7a45288bb2ef4e7e452ee
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 Konwertowanie ciągu do `__int64` wartości.  
@@ -101,16 +104,16 @@ __int64 _wcstoi64_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_strtoi64`Zwraca wartość w ciągu `nptr`, z wyjątkiem gdy reprezentacja mogłoby spowodować przepełnienie, w takim przypadku go zwraca `_I64_MAX` lub `_I64_MIN`. Funkcja zwróci 0, jeśli konwersja nie jest możliwe. `_wcstoi64`Zwraca wartości analogously do `strtoi64`.  
+ `_strtoi64` Zwraca wartość w ciągu `nptr`, z wyjątkiem gdy reprezentacja mogłoby spowodować przepełnienie, w takim przypadku go zwraca `_I64_MAX` lub `_I64_MIN`. Funkcja zwróci 0, jeśli konwersja nie jest możliwe. `_wcstoi64` Zwraca wartości analogously do `strtoi64`.  
   
- `_I64_MAX`i `_I64_MIN` są definiowane w granicach. H.  
+ `_I64_MAX` i `_I64_MIN` są definiowane w granicach. H.  
   
  Jeśli `nptr` jest `NULL` lub `base` jest różna od zera i mniejszym niż 2 lub większą niż 36 `errno` ma ustawioną wartość `EINVAL`.  
   
  Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.  
   
 ## <a name="remarks"></a>Uwagi  
- `_strtoi64` Funkcji konwertuje `nptr` do `__int64`. Zatrzymaj funkcjami odczytywania ciąg `nptr` pierwszego znaku, ich nie jest rozpoznawana jako część liczby. Może to być znak końcowy null lub może być pierwszym znaku numerycznego większa niż lub równa `base`. `_wcstoi64`jest to wersja znaków dwubajtowych `_strtoi64`; `nptr` argument jest ciąg znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
+ `_strtoi64` Funkcji konwertuje `nptr` do `__int64`. Zatrzymaj funkcjami odczytywania ciąg `nptr` pierwszego znaku, ich nie jest rozpoznawana jako część liczby. Może to być znak końcowy null lub może być pierwszym znaku numerycznego większa niż lub równa `base`. `_wcstoi64` jest to wersja znaków dwubajtowych `_strtoi64`; `nptr` argument jest ciąg znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -123,7 +126,7 @@ __int64 _wcstoi64_l(
   
  Jeśli `endptr` nie jest `NULL`, wskaźnik do znaku zatrzymania skanowania są przechowywane w lokalizacji wskazywanej przez `endptr`. Jeśli konwersja nie można wykonać (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłowy atrybut podstawowy), wartość `nptr` są przechowywane w lokalizacji wskazywanej przez `endptr`.  
   
- `_strtoi64`oczekuje `nptr` wskaż ciąg następującą postać:  
+ `_strtoi64` oczekuje `nptr` wskaż ciąg następującą postać:  
   
  [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits`]  
   
@@ -133,7 +136,7 @@ __int64 _wcstoi64_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_strtoi64`, `_strtoi64_l`|\<stdlib.h >|  
+|`_strtoi64`, `_strtoi64_l`|\<stdlib.h>|  
 |`_wcstoi64`, `_wcstoi64_l`|\<stdlib.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
@@ -141,7 +144,7 @@ __int64 _wcstoi64_l(
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [localeconv —](../../c-runtime-library/reference/localeconv.md)   
+ [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setLocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Ciąg na wartość liczbową funkcje](../../c-runtime-library/string-to-numeric-value-functions.md)   
  [strtod —, _strtod_l —, wcstod — _wcstod_l —](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: mbsrtowcs_s
+ms.topic: reference
+apiname:
+- mbsrtowcs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,20 +23,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: mbsrtowcs_s
-dev_langs: C++
-helpviewer_keywords: mbsrtowcs_s function
+f1_keywords:
+- mbsrtowcs_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b701362fd8ed19575f5de34f998bc8fd4f7e6de1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ef0b422fdc809d979fa64cf49e96e8991c4df0f6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 Konwertowanie ciągu znaków wielobajtowych w bieżących ustawień regionalnych reprezentacji ciągu znaków dwubajtowych. Wersja [mbsrtowcs —](../../c-runtime-library/reference/mbsrtowcs.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -61,31 +67,31 @@ errno_t mbsrtowcs_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pReturnValue`  
+ [out] `pReturnValue`  
  Liczba znaków konwersji.  
   
- [out]`wcstr`  
+ [out] `wcstr`  
  Adres buforu do przechowywania powstałe w ten sposób konwersji ciągu znaków dwubajtowych.  
   
- [out]`sizeInWords`  
+ [out] `sizeInWords`  
  Rozmiar `wcstr` słownie (znaki dwubajtowe).  
   
- [w, out]`mbstr`  
+ [w, out] `mbstr`  
  Pośredni wskaźnik do lokalizacji ciąg znaków wielobajtowych do skonwertowania.  
   
- [in]`count`  
+ [in] `count`  
  Maksymalna liczba znaki dwubajtowe, które mają być przechowywane w `wcstr` buforu Trwa przerywanie działania wartość null, z wyłączeniem lub [_truncate —](../../c-runtime-library/truncate.md).  
   
- [w, out]`mbstate`  
+ [w, out] `mbstate`  
  Wskaźnik do `mbstate_t` konwersji stanu obiektu. Jeśli ta wartość jest wskaźnika o wartości null, jest używany obiekt stanu statyczne wewnętrzne konwersji. Ponieważ wewnętrznej `mbstate_t` obiekt nie jest bezpieczne wątkowo, zaleca się, że należy zawsze przekazuj własne `mbstate` parametru.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zero, jeśli konwersja zakończy się pomyślnie, lub błąd o kodzie błędu.  
   
-|Warunek błędu|Wartość zwracana i`errno`|  
+|Warunek błędu|Wartość zwracana i `errno`|  
 |---------------------|------------------------------|  
-|`wcstr`wskaźnik null i `sizeInWords` > 0.|`EINVAL`|  
-|`mbstr`wskaźnik null|`EINVAL`|  
+|`wcstr` wskaźnik null i `sizeInWords` > 0.|`EINVAL`|  
+|`mbstr` wskaźnik null|`EINVAL`|  
 |Ciąg pośrednio wskazywana przez `mbstr` zawiera sekwencję wielobajtowe, która jest nieprawidłowa dla bieżącego ustawienia regionalne.|`EILSEQ`|  
 |Bufor docelowy jest zbyt mały, aby pomieścił skonwertowany ciąg (chyba że `count` jest `_TRUNCATE`; Aby uzyskać więcej informacji, zobacz Uwagi)|`ERANGE`|  
   
@@ -112,12 +118,12 @@ errno_t mbsrtowcs_s(
   
  Jeśli `mbsrtowcs_s` napotka znaków wielobajtowych, który nie jest prawidłowa w bieżących ustawień regionalnych, umieszcza -1 w `*pReturnValue`, ustawia bufor docelowy `wcstr` na pusty ciąg, ustawia `errno` do `EILSEQ`i zwraca `EILSEQ`.  
   
- Jeśli sekwencje wskazywana przez `mbstr` i `wcstr` nakładają się zachowanie `mbsrtowcs_s` jest niezdefiniowana. `mbsrtowcs_s`ma to wpływ na poszczególnych kategorii LC_TYPE bieżące ustawienia regionalne.  
+ Jeśli sekwencje wskazywana przez `mbstr` i `wcstr` nakładają się zachowanie `mbsrtowcs_s` jest niezdefiniowana. `mbsrtowcs_s` ma to wpływ na poszczególnych kategorii LC_TYPE bieżące ustawienia regionalne.  
   
 > [!IMPORTANT]
 >  Upewnij się, że `wcstr` i `mbstr` nie pokrywają oraz że `count` poprawnie odzwierciedla liczbę znaków wielobajtowych do konwersji.  
   
- `mbsrtowcs_s` Funkcja różni się od [mbstowcs_s —, _mbstowcs_s_l —](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md) przez jego restartability. Stan konwersji jest przechowywany w `mbstate` dla kolejnych wywołań w tej samej lub innych funkcji ponownego uruchamiania. Wyniki są niezdefiniowane, gdy mieszanie korzystanie z funkcji ponownego uruchamiania i nonrestartable. Na przykład, aplikacja, należy użyć `mbsrlen` zamiast `mbslen`, jeśli kolejne wywołanie `mbsrtowcs_s` jest używany zamiast`mbstowcs_s.`  
+ `mbsrtowcs_s` Funkcja różni się od [mbstowcs_s —, _mbstowcs_s_l —](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md) przez jego restartability. Stan konwersji jest przechowywany w `mbstate` dla kolejnych wywołań w tej samej lub innych funkcji ponownego uruchamiania. Wyniki są niezdefiniowane, gdy mieszanie korzystanie z funkcji ponownego uruchamiania i nonrestartable. Na przykład, aplikacja, należy użyć `mbsrlen` zamiast `mbslen`, jeśli kolejne wywołanie `mbsrtowcs_s` jest używany zamiast `mbstowcs_s.`  
   
  W języku C++ za pomocą tej funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (eliminując konieczność określić argument rozmiar) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje za pomocą ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -128,13 +134,13 @@ errno_t mbsrtowcs_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`mbsrtowcs_s`|\<WChar.h >|  
+|`mbsrtowcs_s`|\<wchar.h>|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [mbrtowc —](../../c-runtime-library/reference/mbrtowc.md)   
- [mbtowc —, _mbtowc_l —](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [mbstowcs_s —, _mbstowcs_s_l —](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
+ [mbrtowc](../../c-runtime-library/reference/mbrtowc.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [mbstowcs_s, _mbstowcs_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
  [mbsinit](../../c-runtime-library/reference/mbsinit.md)

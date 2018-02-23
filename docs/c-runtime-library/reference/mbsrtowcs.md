@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: mbsrtowcs
+ms.topic: reference
+apiname:
+- mbsrtowcs
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,20 +23,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: mbsrtowcs
-dev_langs: C++
-helpviewer_keywords: mbsrtowcs function
+f1_keywords:
+- mbsrtowcs
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6b51f8ccbac43e30202598499613d3b1c7c6e0a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ff120fea2ec3f1ea659233ccee3f66514d0fd76b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 Konwertuje ciąg znaków wielobajtowych w bieżących ustawień regionalnych na odpowiedni ciąg znaków typu wide, z możliwością ponownego uruchomienia w środku znaków wielobajtowych. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [mbsrtowcs_s —](../../c-runtime-library/reference/mbsrtowcs-s.md).  
@@ -58,16 +64,16 @@ size_t mbsrtowcs(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`wcstr`  
+ [out] `wcstr`  
  Adres do przechowywania powstałe w ten sposób konwersji ciągu znaków dwubajtowych.  
   
- [w, out]`mbstr`  
+ [w, out] `mbstr`  
  Pośredni wskaźnik do lokalizacji ciąg znaków wielobajtowych do przekonwertowania.  
   
- [in]`count`  
+ [in] `count`  
  Maksymalną liczbę znaków (nie w bajtach), aby przekonwertować i przechowywać w `wcstr`.  
   
- [w, out]`mbstate`  
+ [w, out] `mbstate`  
  Wskaźnik do `mbstate_t` konwersji stanu obiektu. Jeśli ta wartość jest wskaźnika o wartości null, jest używany obiekt stanu statyczne wewnętrzne konwersji. Ponieważ wewnętrznej `mbstate_t` obiekt nie jest bezpieczne wątkowo, zaleca się, że należy zawsze przekazuj własne `mbstate` parametru.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -76,9 +82,9 @@ size_t mbsrtowcs(
 ## <a name="remarks"></a>Uwagi  
  `mbsrtowcs` Funkcja konwertuje ciąg znaków wielobajtowych pośrednio wskazywana przez `mbstr`, w znaki dwubajtowe są przechowywane w buforze wskazywana przez `wcstr`, za pomocą konwersji stanie zawartymi w `mbstate`. Konwersja będzie wykonywany dla każdego znaku do momentu napotkano albo Trwa przerywanie działania null znaków wielobajtowych napotkano wielobajtowych sekwencji, która nie odpowiada nieprawidłowy znak w bieżących ustawień regionalnych, lub do czasu `count` zostały znaków przekonwertowany. Jeśli `mbsrtowcs` napotka znaków wielobajtowych null ('\0'), przed lub po `count` występuje i konwertuje ją na znak końcowy null 16-bitowych i kończy działanie.  
   
- W związku z tym ciągu znaków typu wide `wcstr` jest zakończony wartością null tylko wtedy, gdy `mbsrtowcs` napotka znaków wielobajtowych wartości null podczas konwersji. Jeśli sekwencje wskazywana przez `mbstr` i `wcstr` nakładają się zachowanie `mbsrtowcs` jest niezdefiniowana. `mbsrtowcs`ma to wpływ na poszczególnych kategorii LC_TYPE bieżące ustawienia regionalne.  
+ W związku z tym ciągu znaków typu wide `wcstr` jest zakończony wartością null tylko wtedy, gdy `mbsrtowcs` napotka znaków wielobajtowych wartości null podczas konwersji. Jeśli sekwencje wskazywana przez `mbstr` i `wcstr` nakładają się zachowanie `mbsrtowcs` jest niezdefiniowana. `mbsrtowcs` ma to wpływ na poszczególnych kategorii LC_TYPE bieżące ustawienia regionalne.  
   
- `mbsrtowcs` Funkcja różni się od [mbstowcs —, _mbstowcs_l —](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) przez jego restartability. Stan konwersji jest przechowywany w `mbstate` dla kolejnych wywołań w tej samej lub innych funkcji ponownego uruchamiania. Wyniki są niezdefiniowane, gdy mieszanie korzystanie z funkcji ponownego uruchamiania i nonrestartable.  Na przykład, aplikacja, należy użyć `mbsrlen` zamiast `mbslen`, jeśli kolejne wywołanie `mbsrtowcs` jest używany zamiast`mbstowcs.`  
+ `mbsrtowcs` Funkcja różni się od [mbstowcs —, _mbstowcs_l —](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) przez jego restartability. Stan konwersji jest przechowywany w `mbstate` dla kolejnych wywołań w tej samej lub innych funkcji ponownego uruchamiania. Wyniki są niezdefiniowane, gdy mieszanie korzystanie z funkcji ponownego uruchamiania i nonrestartable.  Na przykład, aplikacja, należy użyć `mbsrlen` zamiast `mbslen`, jeśli kolejne wywołanie `mbsrtowcs` jest używany zamiast `mbstowcs.`  
   
  Jeśli `wcstr` wskaźnika o wartości null, nie jest obiekt wskaźnika wskazywana przez `mbstr` jest przypisany wskaźnika o wartości null, jeśli konwersja została zatrzymana, ponieważ osiągnięto znak końcowy null. W przeciwnym razie wartość przypisano adres przeszłości tylko ostatnich znaków wielobajtowych przekonwertowany, jeśli istnieje. Umożliwia wywołanie funkcji kolejne ponowne uruchomienie konwersji, gdzie to wywołanie jest zatrzymana.  
   
@@ -95,13 +101,13 @@ size_t mbsrtowcs(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`mbsrtowcs`|\<WChar.h >|  
+|`mbsrtowcs`|\<wchar.h>|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [mbrtowc —](../../c-runtime-library/reference/mbrtowc.md)   
- [mbtowc —, _mbtowc_l —](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [mbstowcs —, _mbstowcs_l —](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbrtowc](../../c-runtime-library/reference/mbrtowc.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
  [mbsinit](../../c-runtime-library/reference/mbsinit.md)

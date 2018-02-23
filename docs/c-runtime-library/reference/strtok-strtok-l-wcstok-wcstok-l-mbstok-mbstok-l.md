@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbstok_l
 - _mbstok
@@ -33,7 +34,8 @@ f1_keywords:
 - strtok
 - _tcstok
 - wcstok
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - mbstok_l function
 - strings [C++], searching
@@ -52,22 +54,23 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa20ca680481ffce009a362bf0f4b21923ef572d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7c56b69d9b4a8dedede82207976f742d3768f65d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 Znajduje następny token w ciągu, używając bieżących ustawień regionalnych lub określone ustawienia regionalne, który jest przekazywany w. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [strtok_s —, _strtok_s_l —, wcstok_s —, _wcstok_s_l —, _mbstok_s —, _mbstok_s_l —](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbstok`i `_mbstok_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbstok` i `_mbstok_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -105,7 +108,7 @@ unsigned char *_mbstok(
  Zwraca wskaźnik do następnego tokenu w `strToken`. Zwracają `NULL` gdy znajdują się żadnych kolejnych tokenów. Każde wywołanie modyfikuje `strToken` podstawiając `NULL` znaku dla pierwszego ogranicznika występujący po zwrócony tokenu.  
   
 ## <a name="remarks"></a>Uwagi  
- `strtok` Funkcja znajduje następny token w `strToken`. Zestaw znaków `strDelimit` określa możliwe ograniczniki tokenu, który ma zostać odnaleziona w `strToken` w bieżącym wywołaniu. `wcstok`i `_mbstok` znaków dwubajtowych i znaków wielobajtowych wersji `strtok`. Argumenty i zwracana wartość `wcstok` są znaków dwubajtowych ciągi; tych `_mbstok` są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
+ `strtok` Funkcja znajduje następny token w `strToken`. Zestaw znaków `strDelimit` określa możliwe ograniczniki tokenu, który ma zostać odnaleziona w `strToken` w bieżącym wywołaniu. `wcstok` i `_mbstok` znaków dwubajtowych i znaków wielobajtowych wersji `strtok`. Argumenty i zwracana wartość `wcstok` są znaków dwubajtowych ciągi; tych `_mbstok` są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
   
 > [!IMPORTANT]
 >  Te funkcje pociągnąć za sobą potencjalne zagrożenie wynikające z problem przepełnienie buforu. Przepełnienie buforu problemy używanej metody ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -128,9 +131,9 @@ unsigned char *_mbstok(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strtok`|\<String.h >|  
+|`strtok`|\<string.h>|  
 |`wcstok`|\<String.h > lub \<wchar.h >|  
-|`_mbstok`, `_mbstok_l`|\<mbstring.h >|  
+|`_mbstok`, `_mbstok_l`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -184,5 +187,5 @@ Tokens:
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn —, wcscspn —, _mbscspn — _mbscspn_l —](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

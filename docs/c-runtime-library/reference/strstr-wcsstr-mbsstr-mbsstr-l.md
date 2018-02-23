@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsstr
 - wcsstr
@@ -33,7 +34,8 @@ f1_keywords:
 - wcsstr
 - _mbsstr
 - _tcsstr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strings [C++], searching
 - mbsstr function
@@ -50,22 +52,23 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2d67a57a698fdc4069c2de15520e014c7c3491e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f085af36f08d3b2c0b27fa581089b478463d0e7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 Zwraca wskaźnik do pierwszego wystąpienia ciągu wyszukiwania w ciągu.  
   
 > [!IMPORTANT]
->  `_mbsstr`i `_mbsstr_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsstr` i `_mbsstr_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -137,7 +140,7 @@ const unsigned char *_mbsstr_l(
  Zwraca wskaźnik do pierwszego wystąpienia `strSearch` w `str`, lub `NULL` Jeśli `strSearch` nie ma `str`. Jeśli `strSearch` wskazuje ciąg o zerowej długości, funkcja zwraca `str`.  
   
 ## <a name="remarks"></a>Uwagi  
- `strstr` Funkcja zwraca wskaźnik do pierwszego wystąpienia `strSearch` w `str`. Wyszukiwanie nie obejmuje Kończenie znaki null. `wcsstr`jest to wersja znaków dwubajtowych `strstr` i `_mbsstr` jest wersja znaków wielobajtowych. Argumenty i zwracana wartość `wcsstr` są znaków dwubajtowych ciągi; tych `_mbsstr` są ciągami znaków wielobajtowych. `_mbsstr`sprawdza poprawność parametrów. Jeśli `str` lub `strSearch` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, `_mbsstr` ustawia `errno` do `EINVAL` i zwraca wartość 0. `strstr`i `wcsstr` nie weryfikują ich parametrów. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
+ `strstr` Funkcja zwraca wskaźnik do pierwszego wystąpienia `strSearch` w `str`. Wyszukiwanie nie obejmuje Kończenie znaki null. `wcsstr` jest to wersja znaków dwubajtowych `strstr` i `_mbsstr` jest wersja znaków wielobajtowych. Argumenty i zwracana wartość `wcsstr` są znaków dwubajtowych ciągi; tych `_mbsstr` są ciągami znaków wielobajtowych. `_mbsstr` sprawdza poprawność parametrów. Jeśli `str` lub `strSearch` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, `_mbsstr` ustawia `errno` do `EINVAL` i zwraca wartość 0. `strstr` i `wcsstr` nie weryfikują ich parametrów. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
   
 > [!IMPORTANT]
 >  Funkcje te może pociągnąć za sobą ryzyko ze strony problem przepełnienie buforu. Problemy przepełnienie buforu może służyć do atakowania systemu, ponieważ umożliwiają one wykonywanie dowolnego kodu, co może spowodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -157,9 +160,9 @@ const unsigned char *_mbsstr_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strstr`|\<String.h >|  
+|`strstr`|\<string.h>|  
 |`wcsstr`|\<String.h > lub \<wchar.h >|  
-|`_mbsstr`, `_mbsstr_l`|\<mbstring.h >|  
+|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|  
   
  Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -204,9 +207,9 @@ lazy found at position 36
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn —, wcscspn —, _mbscspn — _mbscspn_l —](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
  [strcmp —, wcscmp —, _mbscmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strpbrk —, wcspbrk —, _mbspbrk — _mbspbrk_l —](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
  [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
  [strspn —, wcsspn —, _mbsspn — _mbsspn_l —](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [basic_string::Find](../../standard-library/basic-string-class.md#find)  
+ [basic_string::find](../../standard-library/basic-string-class.md#find)  

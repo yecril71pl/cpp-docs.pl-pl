@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strlwr_s_l
 - _mbslwr_s_l
@@ -43,7 +44,8 @@ f1_keywords:
 - _mbslwr_s_l
 - wcslwr_s
 - _mbslwr_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tcslwr_s function
 - wcslwr_s function
@@ -67,22 +69,23 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3c1fd0cd3d6841891d04e280ca0b771bb1932ee4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 91b0564d108144c9fc75f54c93313e0d4740a18d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 Konwertuje ciąg na małe litery, używając bieżących ustawień regionalnych lub obiekt ustawień regionalnych, który jest przekazywany w. Te wersje programu [_strlwr —, _wcslwr —, _mbslwr —, _strlwr_l —, _wcslwr_l —, _mbslwr_l —](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbslwr_s`i `_mbslwr_s_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbslwr_s` i `_mbslwr_s_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -159,7 +162,7 @@ errno_t _wcslwr_s_l(
  Te funkcje walidację ich parametrów. Jeśli `str` nie jest prawidłowym ciągiem zerem, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcje zwracają `EINVAL` i ustaw `errno` do `EINVAL`. Jeśli `numberOfElements` jest mniejsza niż długość ciągu, również w zwracają `EINVAL` i ustaw `errno` do `EINVAL`.  
   
 ## <a name="remarks"></a>Uwagi  
- `_strlwr_s` Konwertuje funkcji, w miejscu, wszelkie wielkie litery w `str` na małe litery. `_mbslwr_s`jest to wersja wielu znaków `_strlwr_s`.`_wcslwr_s` jest to wersja znaków dwubajtowych `_strlwr_s`.  
+ `_strlwr_s` Konwertuje funkcji, w miejscu, wszelkie wielkie litery w `str` na małe litery. `_mbslwr_s` jest to wersja wielu znaków `_strlwr_s`.`_wcslwr_s` jest to wersja znaków dwubajtowych `_strlwr_s`.  
   
  Wartość wyjściowa jest zagrożony ustawienie `LC_CTYPE` ustawienie kategorii ustawień regionalnych; zobacz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez `_l` Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane zamiast przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -178,8 +181,8 @@ errno_t _wcslwr_s_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_strlwr_s`, `_strlwr_s_l`|\<String.h >|  
-|`_mbslwr_s`, `_mbslwr_s_l`|\<mbstring.h >|  
+|`_strlwr_s`, `_strlwr_s_l`|\<string.h>|  
+|`_mbslwr_s`, `_mbslwr_s_l`|\<mbstring.h>|  
 |`_wcslwr_s`, `_wcslwr_s_l`|\<String.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

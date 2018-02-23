@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strtoll
 - wcstoll
@@ -32,7 +33,8 @@ f1_keywords:
 - _wcstoll_l
 - strtoll
 - wcstoll
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tcstoll_l function
 - _wcstoll_l function
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - _tcstoll function
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f449cd73a8536fb7dbdf46b7c7d1d45ad449cb10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 954b529b894b61f2f4d8566f70145460656a702c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 Konwertuje ciąg na `long long` wartość.  
@@ -96,16 +99,16 @@ long long _wcstoll_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `strtoll`Zwraca wartość, która jest reprezentowana w ciągu `nptr`, z wyjątkiem przypadków, gdy reprezentacja mogłoby spowodować przepełnienie — w takim przypadku zwraca `LLONG_MAX` lub `LLONG_MIN`. Funkcja zwraca wartość 0, jeśli konwersja nie jest możliwe. `wcstoll`Zwraca wartości analogously do `strtoll`.  
+ `strtoll` Zwraca wartość, która jest reprezentowana w ciągu `nptr`, z wyjątkiem przypadków, gdy reprezentacja mogłoby spowodować przepełnienie — w takim przypadku zwraca `LLONG_MAX` lub `LLONG_MIN`. Funkcja zwraca wartość 0, jeśli konwersja nie jest możliwe. `wcstoll` Zwraca wartości analogously do `strtoll`.  
   
- `LLONG_MAX`i `LLONG_MIN` są definiowane w granicach. H.  
+ `LLONG_MAX` i `LLONG_MIN` są definiowane w granicach. H.  
   
  Jeśli `nptr` jest `NULL` lub `base` jest różna od zera i mniejszym niż 2 lub większą niż 36 `errno` ma ustawioną wartość `EINVAL`.  
   
  Aby uzyskać więcej informacji na temat kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `strtoll` Funkcji konwertuje `nptr` do `long long`. Zatrzymaj funkcjami odczytywania ciąg `nptr` pierwszego znaku, ich nie jest rozpoznawana jako część liczby. Może to być znak końcowy null lub być może jest ona pierwszego znaku liczbowego, który jest większa niż lub równa `base`. `wcstoll`jest to wersja znaków dwubajtowych `strtoll`; `nptr` argument jest ciąg znaków dwubajtowych. W przeciwnym razie funkcje te działają tak samo.  
+ `strtoll` Funkcji konwertuje `nptr` do `long long`. Zatrzymaj funkcjami odczytywania ciąg `nptr` pierwszego znaku, ich nie jest rozpoznawana jako część liczby. Może to być znak końcowy null lub być może jest ona pierwszego znaku liczbowego, który jest większa niż lub równa `base`. `wcstoll` jest to wersja znaków dwubajtowych `strtoll`; `nptr` argument jest ciąg znaków dwubajtowych. W przeciwnym razie funkcje te działają tak samo.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -118,7 +121,7 @@ long long _wcstoll_l(
   
  Jeśli `endptr` nie jest `NULL`, wskaźnik do znaku zatrzymania skanowania są przechowywane w lokalizacji, która jest wskazywana przez `endptr`. Jeśli konwersja nie można wykonać (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłowy atrybut podstawowy), wartość `nptr` są przechowywane w lokalizacji, która jest wskazywana przez `endptr`.  
   
- `strtoll`oczekuje `nptr` wskaż ciąg następującą postać:  
+ `strtoll` oczekuje `nptr` wskaż ciąg następującą postać:  
   
  [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits` &#124; `letters`]  
   
@@ -128,7 +131,7 @@ long long _wcstoll_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strtoll`, `_strtoll_l`|\<stdlib.h >|  
+|`strtoll`, `_strtoll_l`|\<stdlib.h>|  
 |`wcstoll`, `_wcstoll_l`|\<stdlib.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -136,10 +139,10 @@ long long _wcstoll_l(
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [localeconv —](../../c-runtime-library/reference/localeconv.md)   
+ [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setLocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Ciąg na wartość liczbową funkcje](../../c-runtime-library/string-to-numeric-value-functions.md)   
  [strtod —, _strtod_l —, wcstod — _wcstod_l —](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
- [strtol —, wcstol —, _strtol_l — _wcstol_l —](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
+ [strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
  [strtoul —, _strtoul_l —, wcstoul — _wcstoul_l —](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
  [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

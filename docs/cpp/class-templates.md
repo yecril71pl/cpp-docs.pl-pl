@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], operating on type
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a53ed733bc710aa66061c40587e79f41e553b260
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0b14b45752559c80f4aafb60aa4ba23cb0d51b91
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="class-templates"></a>Szablony klas
 W tym temacie opisano reguły, które są specyficzne dla szablonów klas C++.  
@@ -203,7 +206,7 @@ X<T>::Y<U>::~Y()
  Klas lokalnych nie mogą posiadać szablonów elementu członkowskiego.  
   
 ## <a name="template-friends"></a>Zaprzyjaźnione szablony  
- Szablony klas może mieć [znajomych](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). Klasa, szablon klasy, funkcja lub szablon funkcji może być elementem zaprzyjaźnionym dla klasy szablonu. Elementy zaprzyjaźnione mogą być także specjalizacjami szablonu klasy lub szablonu funkcji, ale nie specjalizacjami częściowymi.  
+ Szablony klas może mieć [znajomych](friend-cpp.md). Klasa, szablon klasy, funkcja lub szablon funkcji może być elementem zaprzyjaźnionym dla klasy szablonu. Elementy zaprzyjaźnione mogą być także specjalizacjami szablonu klasy lub szablonu funkcji, ale nie specjalizacjami częściowymi.  
   
  W poniższym przykładzie, funkcja zaprzyjaźniona jest zdefiniowana jako szablon funkcji w ramach szablonu klasy. Ten kod tworzy wersję funkcji zaprzyjaźnionej dla każdego wystąpienia szablonu. Ta konstrukcja jest przydatna, gdy funkcja zaprzyjaźniona zależy od tych samych parametrów szablonu, co klasa.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - mbstowcs
 - _mbstowcs_l
@@ -23,23 +24,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: mbstowcs
-dev_langs: C++
+f1_keywords:
+- mbstowcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbstowcs_l function
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63036262536adea68a4c44bde735a48b2f896b5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b422dbcb1d2fc07ff3fb1f00302b62da0500ebdc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
 Konwertuje sekwencji znaków wielobajtowych sekwencji odpowiednie znaki dwubajtowe. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [mbstowcs_s —, _mbstowcs_s_l —](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md).  
@@ -74,16 +78,16 @@ size_t _mbstowcs_l(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`wcstr`  
+ [out] `wcstr`  
  Adres sekwencję znaki dwubajtowe.  
   
- [in]`mbstr`  
+ [in] `mbstr`  
  Adres sekwencji null zakończone znaki wielobajtowe.  
   
- [in]`count`  
+ [in] `count`  
  Maksymalna liczba znaków wielobajtowych do konwersji.  
   
- [in]`locale`  
+ [in] `locale`  
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -99,7 +103,7 @@ size_t _mbstowcs_l(
   
  Jeśli `mbstr` argument jest `NULL`, lub jeśli `count` jest > `INT_MAX`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może kontynuować, numer błędu jest ustawiony na `EINVAL` i funkcja zwraca wartość -1.  
   
- `mbstowcs`używa bieżące ustawienia regionalne dla dowolnego zachowań zależnych od ustawień regionalnych. `_mbstowcs_l` jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ `mbstowcs` używa bieżące ustawienia regionalne dla dowolnego zachowań zależnych od ustawień regionalnych. `_mbstowcs_l` jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
  W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -107,8 +111,8 @@ size_t _mbstowcs_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`mbstowcs`|\<stdlib.h >|  
-|`_mbstowcs_l`|\<stdlib.h >|  
+|`mbstowcs`|\<stdlib.h>|  
+|`_mbstowcs_l`|\<stdlib.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -211,8 +215,8 @@ Convert back to wide-character string:
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbclen —, mblen —, _mblen_l —](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbtowc —, _mbtowc_l —](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
  [wcstombs —, _wcstombs_l —](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [wctomb —, _wctomb_l —](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)

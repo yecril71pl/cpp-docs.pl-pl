@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcsrev
 - _mbsrev
@@ -34,7 +35,8 @@ f1_keywords:
 - mbsrev_l
 - _wcsrev_fstrrev
 - _mbsrev
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbsrev_l function
 - characters [C++], switching
@@ -53,22 +55,23 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b40acaa02a4907f0bcc49741312b55ea41224601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1a0c70634dc0942004eb1045a72e0354e59526ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 Odwraca znaków ciągu.  
   
 > [!IMPORTANT]
->  `_mbsrev`i `_mbsrev_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsrev` i `_mbsrev_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -99,9 +102,9 @@ unsigned char *_mbsrev_l(
  Zwraca wskaźnik do ciągu zmieniony. Brak wartości zwracanej jest zarezerwowana wystąpił błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- `_strrev` Funkcja Odwraca kolejność znaków w `string`. Znak końcowy null jest uwzględniany. `_wcsrev`i `_mbsrev` znaków dwubajtowych i znaków wielobajtowych wersji `_strrev`. Argumenty i zwracana wartość `_wcsrev` są znaków dwubajtowych ciągi; tych `_mbsrev` są ciągami znaków wielobajtowych. Aby uzyskać `_mbsrev`, kolejność bajtów w każdym znaków wielobajtowych w `string` nie ulega zmianie. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
+ `_strrev` Funkcja Odwraca kolejność znaków w `string`. Znak końcowy null jest uwzględniany. `_wcsrev` i `_mbsrev` znaków dwubajtowych i znaków wielobajtowych wersji `_strrev`. Argumenty i zwracana wartość `_wcsrev` są znaków dwubajtowych ciągi; tych `_mbsrev` są ciągami znaków wielobajtowych. Aby uzyskać `_mbsrev`, kolejność bajtów w każdym znaków wielobajtowych w `string` nie ulega zmianie. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
   
- `_mbsrev`sprawdza poprawność parametrów. Jeśli dowolny `string1` lub `string2` wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `_mbsrev` zwraca `NULL` i ustawia `errno` do `EINVAL`. `_strrev`i `_wcsrev` nie weryfikują ich parametrów.  
+ `_mbsrev` sprawdza poprawność parametrów. Jeśli dowolny `string1` lub `string2` wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `_mbsrev` zwraca `NULL` i ustawia `errno` do `EINVAL`. `_strrev` i `_wcsrev` nie weryfikują ich parametrów.  
   
  Wartość wyjściowa jest zagrożony ustawienie `LC_CTYPE` ustawienie kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje te funkcje są identyczne, z tą różnicą, że te nie mają `_l` używać sufiksu bieżące ustawienia regionalne i te, które `_l` sufiks zamiast tego użyć parametr ustawień regionalnych, który jest przekazywany w. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -119,9 +122,9 @@ unsigned char *_mbsrev_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_strrev`|\<String.h >|  
+|`_strrev`|\<string.h>|  
 |`_wcsrev`|\<String.h > lub \<wchar.h >|  
-|`_mbsrev`, `_mbsrev_l`|\<mbstring.h >|  
+|`_mbsrev`, `_mbsrev_l`|\<mbstring.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -159,5 +162,5 @@ The string "Able was I ere I saw Elba" is a palindrome
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcpy wcscpy —, _mbscpy —](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
  [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)

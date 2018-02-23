@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isdigit_l
 - iswdigit
@@ -32,7 +33,8 @@ f1_keywords:
 - isdigit
 - _istdigit
 - _istdigit_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iswdigit function
 - iswdigit_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 84b2293114acd31d0baf1f3a595deba9247d6120
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 004186bc7ea74cb6ab2c39d25a9b3d3efeb556fe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 Określa, czy liczba całkowita reprezentuje cyfra dziesiętna.  
@@ -86,7 +89,7 @@ int _iswdigit_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego znaku cyfr dziesiętnych. `isdigit`Zwraca wartość niezerową, jeśli `c` jest dziesiętną wartością cyfrową (0 - 9). `iswdigit`Zwraca wartość niezerową, jeśli `c` jest znaków dwubajtowych, który odpowiada cyfra dziesiętna. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
+ Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego znaku cyfr dziesiętnych. `isdigit` Zwraca wartość niezerową, jeśli `c` jest dziesiętną wartością cyfrową (0 - 9). `iswdigit` Zwraca wartość niezerową, jeśli `c` jest znaków dwubajtowych, który odpowiada cyfra dziesiętna. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
   
  Wersje tych funkcji, które mają `_l` sufiks Użyj ustawień regionalnych, który jest przekazywany w zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -96,16 +99,16 @@ int _iswdigit_l(
   
 |Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istdigit`|`isdigit`|[_ismbcdigit —](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswdigit`|  
-|`_istdigit_l`|`_isdigit_l`|[_ismbcdigit_l —](../../c-runtime-library/reference/ismbcalnum-functions.md)|`_iswdigit_l`|  
+|`_istdigit`|`isdigit`|[_ismbcdigit](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswdigit`|  
+|`_istdigit_l`|`_isdigit_l`|[_ismbcdigit_l](../../c-runtime-library/reference/ismbcalnum-functions.md)|`_iswdigit_l`|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`isdigit`|\<CType.h >|  
+|`isdigit`|\<ctype.h>|  
 |`iswdigit`|\<CType.h > lub \<wchar.h >|  
-|`_isdigit_l`|\<CType.h >|  
+|`_isdigit_l`|\<ctype.h>|  
 |`_iswdigit_l`|\<CType.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

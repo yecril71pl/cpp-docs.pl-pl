@@ -1,7 +1,8 @@
 ---
 title: "C4400 ostrzeżenia kompilatora za pośrednictwem C4599 | Dokumentacja firmy Microsoft"
 ms.date: 11/17/2017
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -36,6 +37,10 @@ f1_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -43,6 +48,10 @@ f1_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -98,6 +107,10 @@ helpviewer_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -105,6 +118,10 @@ helpviewer_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -127,17 +144,19 @@ helpviewer_keywords:
 - C4593
 - C4594
 - C4595
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44b0c76c6aba144229923a969cf3da026de54201
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 ostrzeżenia kompilatora za pośrednictwem C4599
 
@@ -165,7 +184,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |[Ostrzeżenie kompilatora (poziom 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|"*funkcja*": sygnatura funkcji zawiera typ "*typu*'; Obiektami C++ są bezpieczne między czystym kodzie i mieszanego lub macierzystego.|
 |Ostrzeżenie C4413 kompilatora|"classname::member": element członkowski odwołania jest zainicjowany jako tymczasowy, który nie jest zachowany po zakończeniu działania konstruktora|
 |[Ostrzeżenie kompilatora (poziom 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|"*funkcja*": krótki przeskok do funkcji konwertowanej do umieszczonej blisko|
-|Ostrzeżenie kompilatora (poziom 1) C4415|zduplikowane __declspec (code_seg ("*nazwa*"))|
+|Ostrzeżenie kompilatora (poziom 1) C4415|duplicate __declspec(code_seg('*name*'))|
 |Ostrzeżenie kompilatora (poziom 1) C4416|__declspec(code_seg(...)) zawiera pusty ciąg: ignorowane|
 |Ostrzeżenie kompilatora (poziom 1) C4417|utworzenie wystąpienia jawnego szablonu nie może mieć __declspec(code_seg(...)): ignorowane|
 |Ostrzeżenie kompilatora (poziom 1) C4418|__declspec(code_seg(...)) został zignorowany w wyliczeniu|
@@ -214,7 +233,13 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |[Ostrzeżenie kompilatora (poziom 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|Formant zmiennoprzecinkowych pragm zignorowane z opcją/CLR|
 |[Ostrzeżenie kompilatora (poziom 4) C4471](compiler-warning-level-4-c4471.md)|"*wyliczenie*": deklaracja przekazująca dalej wyliczenie niebędące w zakresie musi być typu podstawowego (założono typ int)|
 |Ostrzeżenie kompilatora (poziom 1) C4472|"*identyfikator*" jest natywnym wyliczeniem: Dodaj specyfikator dostępu (private/public), aby zadeklarować "WinRT &#124; zarządzanych" wyliczenia|
-|Ostrzeżenie C4480 kompilatora|użyto niestandardowego rozszerzenia: Określanie typu podstawowego dla wyliczenia "*wyliczenie*"|
+|[Ostrzeżenie kompilatora (poziom 1) C4473](c4473.md)|"*funkcja*": przekazano niewystarczającą liczbę argumentów dla ciągu formatowania|
+|Ostrzeżenie kompilatora (poziom 3) C4474|"*funkcja*": przekazano za dużo argumentów dla ciągu formatowania|
+|Ostrzeżenie kompilatora (poziom 3) C4475|"*funkcja*": modyfikator długości "*modyfikator*"nie może być stosowany ze znakiem pola typu"*znak*" w specyfikatorze formatu|
+|Ostrzeżenie kompilatora (poziom 3) C4476|"*funkcja*': nieznany znak pola typu"*znak*"w specyfikatorze formatu|
+|[Ostrzeżenie kompilatora (poziom 1) C4477](c4477.md)|"*funkcji*": ciąg formatu "*ciąg*"wymaga argumentu typu"*typu*", ale argument ze zmienną liczbą argumentów *numer* ma typ "*typu*"|
+|Ostrzeżenie kompilatora (poziom 1) C4478|"*funkcja*": nie można łączyć pozycyjnych i niepozycyjnych symbole zastępcze w tym samym ciągu formatu|
+|Kompilator/ostrzeżenie C4480 (błąd)|użyto niestandardowego rozszerzenia: Określanie typu podstawowego dla wyliczenia "*wyliczenie*"|
 |[Ostrzeżenie kompilatora (poziom 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|użyto niestandardowego rozszerzenia: specyfikator przesłonięcia "*— słowo kluczowe*"|
 |Ostrzeżenie C4482 kompilatora|użyto niestandardowego rozszerzenia: enum "*wyliczenie*" użyte w nazwie kwalifikowanej|
 |Ostrzeżenie kompilatora (poziom 1, błąd) C4483|Błąd składniowy: Oczekiwano słowa kluczowego języka C++|
@@ -229,6 +254,10 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |Ostrzeżenie kompilatora (poziom 1, błąd) C4492|"*function1*": pasuje metody podstawowej klasy referencyjnej "*function2*", ale nie jest oznaczony jako "override"|
 |Ostrzeżenie kompilatora (poziom 3, błąd) C4493|wyrażenie usunięcia nie obowiązuje jako destruktor "*typu*" nie ma dostępności "public"|
 |Ostrzeżenie kompilatora (poziom 1) C4494|"*funkcja*": Ignorowanie funkcji __declspec(allocator), ponieważ typ zwracany funkcji nie jest wskaźnikiem lub odwołaniem|
+|Ostrzeżenie C4495 kompilatora|użyto niestandardowego rozszerzenia "__super": Zamień jawną nazwę klasy podstawowej|
+|Ostrzeżenie C4496 kompilatora|użyto niestandardowego rozszerzenia "for each": Zamień na instrukcję ranged-for|
+|Ostrzeżenie C4497 kompilatora|użyto niestandardowego rozszerzenia "sealed": Zamień "final"|
+|Ostrzeżenie C4498 kompilatora|użyto niestandardowego rozszerzenia: "*rozszerzenia*"|
 |Ostrzeżenie kompilatora (poziom 4) C4499|"*funkcja*": jawna specjalizacja nie może mieć klasy magazynu (zignorowano) "|
 |[Ostrzeżenie kompilatora (poziom 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|"*Specyfikacja powiązania*" wymaga użycia słowa kluczowego "extern" i musi poprzedzać wszystkie inne specyfikatory|
 |[Ostrzeżenie kompilatora (poziom 1) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|"*identyfikator*": przekroczona długość nazwy, dekorowanej nazwa została obcięta|
@@ -255,7 +284,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |[Ostrzeżenie kompilatora (poziom 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|"continue": skok poza bloku "__finally/finally" ma niezdefiniowane zachowanie podczas obsługi zakończenia|
 |[Ostrzeżenie kompilatora (poziom 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|Inicjowanie "*zmiennej*"jest pomijana przy"*etykieta goto*"|
 |[Ostrzeżenie kompilatora (poziom 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|"*Konstruktor*"nie będzie domyślnego konstruktora dla "w klasie/strukturze" "*identyfikator*" z powodu argumentu domyślnego|
-|[Ostrzeżenie kompilatora (poziom 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|Wywołanie _set_se_translator() wymaga/eha|
+|[Ostrzeżenie kompilatora (poziom 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|calling _set_se_translator() requires /EHa|
 |[Ostrzeżenie kompilatora (poziom 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|"*typename*": Nazwa typu przekracza limit meta-data "*character_limit*' znaków|
 |[Ostrzeżenie kompilatora (poziom 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|"*obiektu*": "." zastosowany do typu z systemem innym niż UDT|
 |[Ostrzeżenie kompilatora (poziom 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|"*typu*": kwalifikatory const/volatile dla tego typu nie są obsługiwane.|

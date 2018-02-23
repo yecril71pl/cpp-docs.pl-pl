@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: afxdll
-dev_langs: C++
+f1_keywords:
+- afxdll
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -21,16 +24,17 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 45e94997dbeb2c6413ffcdc1272a3a46a7e220ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36a57d47d32b4526ca6d383b67ca415f705dc982
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="mfc-extension-dlls"></a>Biblioteki DLL rozszerzeń MFC
 Rozszerzenia MFC DLL jest bibliotekę DLL, która zwykle implementuje klasy wielokrotnego użytku, pochodnych istniejące klasy Microsoft Foundation Class Library.  
@@ -61,7 +65,7 @@ Rozszerzenia MFC DLL jest bibliotekę DLL, która zwykle implementuje klasy wiel
   
  Przed wersja 4.0 MFC DLL tego typu została wywołana AFXDLL. AFXDLL odwołuje się do `_AFXDLL` symbol preprocesora, który jest definiowany podczas tworzenia biblioteki DLL.  
   
- Biblioteki importu dla udostępnionych wersja MFC są nazywane zgodnie z Konwencją opisanego w [konwencje nazewnictwa bibliotek MFC dll](../build/naming-conventions-for-mfc-dlls.md). Visual C++ udostępnia wbudowane wersje biblioteki MFC dll, a także numer z innych niż biblioteki DLL MFC, który można użyć i rozpowszechniać w aplikacjach. Te są udokumentowane w artykule Redist.txt, który jest instalowany w folderze Program Files\Microsoft Visual Studio.  
+ Biblioteki importu dla udostępnionych wersja MFC są nazywane zgodnie z Konwencją opisanego w [konwencje nazewnictwa bibliotek MFC dll](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual C++ udostępnia wbudowane wersje biblioteki MFC dll, a także numer z innych niż biblioteki DLL MFC, który można użyć i rozpowszechniać w aplikacjach. Te są udokumentowane w artykule Redist.txt, który jest instalowany w folderze Program Files\Microsoft Visual Studio.  
   
  Jeśli eksportujesz przy użyciu pliku .def następujący kod należy umieścić na początku i na końcu pliku nagłówka:  
   
@@ -89,7 +93,7 @@ Rozszerzenia MFC DLL jest bibliotekę DLL, która zwykle implementuje klasy wiel
 ## <a name="sharing-resources-and-classes"></a>Udostępnianie zasobów i klasy  
  Eksportowanie zasobów odbywa się za pośrednictwem listy zasobów. Każda aplikacja zawiera listę pojedynczo połączonego **CDynLinkLibrary** obiektów. Podczas wyszukiwania dla zasobu, większość standardowych implementacji MFC, które ładują zasobów przyjrzeć bieżącego modułu zasobów (`AfxGetResourceHandle`), a jeśli nie znaleziono zasobu zawiera listę **CDynLinkLibrary** obiektów Próba załadowania żądanego zasobu.  
   
- Przejście na liście ma wady jest wolniejsze i wymaga zarządzania zakresami identyfikator zasobu. Ma ona zaletą aplikacji klienta, który stanowi łącze do kilku bibliotek DLL rozszerzeń MFC można użyć dowolnego dostarczane do biblioteki DLL zasobu bez konieczności określania dojście wystąpienia biblioteki DLL. `AfxFindResourceHandle`Interfejs API służy do przejście listę zasobów do wyszukiwania dla danego dopasowania. Pobiera nazwę i typ zasobu, a zwraca dojście do zasobu którym najpierw zostało znalezione (lub wartość NULL).  
+ Przejście na liście ma wady jest wolniejsze i wymaga zarządzania zakresami identyfikator zasobu. Ma ona zaletą aplikacji klienta, który stanowi łącze do kilku bibliotek DLL rozszerzeń MFC można użyć dowolnego dostarczane do biblioteki DLL zasobu bez konieczności określania dojście wystąpienia biblioteki DLL. `AfxFindResourceHandle` Interfejs API służy do przejście listę zasobów do wyszukiwania dla danego dopasowania. Pobiera nazwę i typ zasobu, a zwraca dojście do zasobu którym najpierw zostało znalezione (lub wartość NULL).  
   
  Jeśli nie chcesz przeprowadzić liście i ładować tylko zasoby z określonym miejscu, należy użyć funkcji `AfxGetResourceHandle` i `AfxSetResourceHandle` zapisać dojście stary i ustawić nowy uchwyt. Pamiętaj przywrócić stary dojście do zasobu przed zwróceniem do aplikacji klienckiej. Na przykład w sposób jawny załadować menu przy użyciu tej metody, zobacz .cpp Testdll2 w przykładowym MFC [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk).  
   

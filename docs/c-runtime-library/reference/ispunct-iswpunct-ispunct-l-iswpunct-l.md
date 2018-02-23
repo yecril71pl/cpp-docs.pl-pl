@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - ispunct
 - _iswpunct_l
@@ -29,7 +30,8 @@ f1_keywords:
 - iswpunct
 - _istpunct
 - ispunct
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _istpunct function
 - _ispunct_l function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9856ed0cb5f4ea9a346f07c4ad98a8cf7c534f61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fc86de73132dcefc57602586b679b95333c99c2e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 Określa, czy liczba całkowita reprezentuje znak interpunkcyjny.  
@@ -81,7 +84,7 @@ int _iswpunct_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu znak interpunkcyjny. `ispunct`Zwraca wartość niezerową dowolny znak drukowania, który nie jest znak spacji ani znaków, dla którego `isalnum` jest różna od zera. `iswpunct`Zwraca wartość niezerową drukowalnych znaków dwubajtowych, który nie jest znaku dwubajtowe spacji ani znaków dwubajtowych, dla którego `iswalnum` jest różna od zera. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
+ Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu znak interpunkcyjny. `ispunct` Zwraca wartość niezerową dowolny znak drukowania, który nie jest znak spacji ani znaków, dla którego `isalnum` jest różna od zera. `iswpunct` Zwraca wartość niezerową drukowalnych znaków dwubajtowych, który nie jest znaku dwubajtowe spacji ani znaków dwubajtowych, dla którego `iswalnum` jest różna od zera. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
   
  Wynik testu warunku `ispunct` zależy od funkcji `LC_CTYPE` ustawienie kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, które nie mają `_l` sufiks użyciem bieżących ustawień regionalnych wszystkie działania zależne od ustawień regionalnych; wersje, które mają `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne, który jest przekazywany w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -91,15 +94,15 @@ int _iswpunct_l(
   
 |Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|**_** `istpunct`|`ispunct`|[_ismbcpunct —](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswpunct`|  
+|**_** `istpunct`|`ispunct`|[_ismbcpunct](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswpunct`|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`ispunct`|\<CType.h >|  
+|`ispunct`|\<ctype.h>|  
 |`iswpunct`|\<CType.h > lub \<wchar.h >|  
-|`_ispunct_l`|\<CType.h >|  
+|`_ispunct_l`|\<ctype.h>|  
 |`_iswpunct_l`|\<CType.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

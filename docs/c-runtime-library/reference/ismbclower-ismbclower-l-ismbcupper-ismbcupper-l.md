@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ismbclower
 - _ismbclower_l
@@ -28,7 +29,8 @@ apitype: DLLExport
 f1_keywords:
 - _ismbcupper
 - _ismbclower
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ismbcupper function
 - ismbclower function
@@ -39,22 +41,23 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d5dc706f59672f60874a5f525bb37067c1b13ff1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 865c2280ab395b5c8172ee978da16a2bcc26f7b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 Sprawdza, czy znaków wielobajtowych małe lub wielkie litery.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -101,16 +104,16 @@ int _ismbcupper_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_ismbclower`|\<mbstring.h >|  
-|`_ismbclower_l`|\<mbstring.h >|  
-|`_ismbcupper`|\<mbstring.h >|  
-|`_ismbcupper_l`|\<mbstring.h >|  
+|`_ismbclower`|\<mbstring.h>|  
+|`_ismbclower_l`|\<mbstring.h>|  
+|`_ismbcupper`|\<mbstring.h>|  
+|`_ismbcupper_l`|\<mbstring.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)   
- [_ismbc — procedury](../../c-runtime-library/ismbc-routines.md)   
+ [_ismbc Routines](../../c-runtime-library/ismbc-routines.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [jest isw — procedury](../../c-runtime-library/is-isw-routines.md)   

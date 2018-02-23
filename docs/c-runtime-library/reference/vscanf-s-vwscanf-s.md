@@ -1,12 +1,13 @@
 ---
-title: vscanf_s, vwscanf_s | Dokumentacja firmy Microsoft
+title: vscanf_s, vwscanf_s | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - vscanf_s
 - vwscanf_s
@@ -26,18 +27,20 @@ f1_keywords:
 - _vtscanf_s
 - vscanf_s
 - vwscanf_s
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 320d08add01fa6ee277c6f1d676b076ded65f377
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2cc430ec34cd294de0cbabc8553ddda4fedce9e2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vscanfs-vwscanfs"></a>vscanf_s, vwscanf_s
 Odczyty sformatowanych danych z Standardowy strumień wejściowy. Te wersje programu [vscanf, vwscanf](../../c-runtime-library/reference/vscanf-vwscanf.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -70,7 +73,7 @@ int vwscanf_s(
 ## <a name="remarks"></a>Uwagi  
  `vscanf_s` Funkcja odczytuje dane z Standardowy strumień wejściowy `stdin` i zapisuje dane do lokalizacji, które są podane przez `arglist` listy argumentów. Każdy argument na liście musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w `format`. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.  
   
- `vwscanf_s`jest to wersja znaków dwubajtowych `vscanf_s`; `format` argument `vwscanf_s` jest ciągiem znaków dwubajtowych. `vwscanf_s`i `vscanf_s` zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `vscanf_s`nie obsługuje dane wejściowe ze strumienia UNICODE.  
+ `vwscanf_s` jest to wersja znaków dwubajtowych `vscanf_s`; `format` argument `vwscanf_s` jest ciągiem znaków dwubajtowych. `vwscanf_s` i `vscanf_s` zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `vscanf_s` nie obsługuje dane wejściowe ze strumienia UNICODE.  
   
  W odróżnieniu od `vscanf` i `vwscanf`, `vscanf_s` i `vwscanf_s` wymagają określenia wszystkich parametrów typu wejściowych rozmiar buforu `c`, `C`, `s`, `S`, lub string zestawów formantów, które są ujęta w `[]`. Rozmiar buforu w znakach jest przekazywany jako dodatkowy parametr natychmiast po wskaźnik do buforu lub zmiennej. Rozmiar buforu w znakach `wchar_t` ciąg nie jest taka sama jak rozmiar w bajtach.  
   
@@ -93,10 +96,10 @@ int vwscanf_s(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`vscanf_s`|\<stdio.h >|  
+|`vscanf_s`|\<stdio.h>|  
 |`wscanf_s`|\<stdio.h > lub \<wchar.h >|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu `stdin`, `stdout`, i `stderr`, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Przykład  
   
@@ -165,7 +168,7 @@ The contents are: 36 92.300003 y n Wide characters
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [printf, _printf_l —, wprintf, _wprintf_l —](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [scanf_s —, _scanf_s_l —, wscanf_s — _wscanf_s_l —](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
  [vscanf, vwscanf](../../c-runtime-library/reference/vscanf-vwscanf.md)

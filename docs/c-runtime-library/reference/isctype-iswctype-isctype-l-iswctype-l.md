@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isctype_l
 - iswctype
@@ -34,7 +35,8 @@ f1_keywords:
 - iswctype_l
 - isctype_l
 - _iswctype_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - isctype_l function
 - iswctype_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1413430e9a5936a2339ccb9e8376e4134cfbdf04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fe43830894be3c004fb21598b0324b864fe5b9b0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 Testy `c` dla określona przez właściwość `desc` argumentu. Dla każdego prawidłowa wartość `desc`, brak procedury klasyfikacji znaków dwubajtowych równoważne.  
@@ -93,7 +96,7 @@ int _iswctype_l(
  Ustawienia regionalne dla żadnych testów zależnych od ustawień regionalnych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_isctype`i `iswctype` zwrócić wartość niezerową, jeśli `c` została określona przez właściwość `desc` w bieżących ustawień regionalnych lub 0, jeśli nie ma. Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ `_isctype` i `iswctype` zwrócić wartość niezerową, jeśli `c` została określona przez właściwość `desc` w bieżących ustawień regionalnych lub 0, jeśli nie ma. Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
  Zachowanie `_isctype` i `_isctype_l` jest niezdefiniowana, jeśli `c` nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i `c` nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.  
   
@@ -108,9 +111,9 @@ int _iswctype_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_isctype`|\<CType.h >|  
+|`_isctype`|\<ctype.h>|  
 |`iswctype`|\<CType.h > lub \<wchar.h >|  
-|`_isctype_l`|\<CType.h >|  
+|`_isctype_l`|\<ctype.h>|  
 |`_iswctype_l`|\<CType.h > lub \<wchar.h >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  

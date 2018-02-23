@@ -1,12 +1,13 @@
 ---
-title: "atoi —, _atoi_l —, _wtoi —, _wtoi_l — | Dokumentacja firmy Microsoft"
+title: atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wtoi
 - _wtoi_l
@@ -32,7 +33,8 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1f3430389002b4b68d132b1b524b98cb1f7dea1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1482bbb10604b78874112b72f99b7ae18bab206e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 Konwertowanie ciągu na liczbę całkowitą.  
@@ -90,7 +93,7 @@ int _wtoi_l(
 ## <a name="return-value"></a>Wartość zwracana  
  Każda funkcja zwraca `int` wartość utworzonego przez interpretowanie znaków wejściowy jako liczby. Wartość zwracana jest 0 dla `atoi` i `_wtoi`, jeśli dane wejściowe nie można przekonwertować wartości tego typu.  
   
- W przypadku przepełnienia o dużych wartościach całkowitych ujemnych `LONG_MIN` jest zwracany. `atoi`i `_wtoi` zwracać `INT_MAX` i `INT_MIN` tych warunków. We wszystkich przypadkach out-of-range `errno` ma ustawioną wartość `ERANGE`. Jeśli parametr przekazano `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwraca 0.  
+ W przypadku przepełnienia o dużych wartościach całkowitych ujemnych `LONG_MIN` jest zwracany. `atoi` i `_wtoi` zwracać `INT_MAX` i `INT_MIN` tych warunków. We wszystkich przypadkach out-of-range `errno` ma ustawioną wartość `ERANGE`. Jeśli parametr przekazano `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwraca 0.  
   
 ## <a name="remarks"></a>Uwagi  
  Te funkcje przekonwertować ciągu znaków na wartość całkowitą (`atoi` i `_wtoi`). Ciąg wejściowy jest sekwencji znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja zatrzymuje odczytywania ciąg wejściowy pierwszego znaku, który nie jest rozpoznawana jako część liczby. Ten znak może być znak null ('\0' lub L '\0') zakończenie ciągu.  
@@ -114,7 +117,7 @@ int _wtoi_l(
   
 |Procedury|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`atoi`|\<stdlib.h >|  
+|`atoi`|\<stdlib.h>|  
 |`_atoi_l`, `_wtoi`, `_wtoi_l`|\<stdlib.h > lub \<wchar.h >|  
   
 ## <a name="example"></a>Przykład  
@@ -168,8 +171,8 @@ Overflow condition occurred.
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [_ecvt —](../../c-runtime-library/reference/ecvt.md)   
- [_fcvt —](../../c-runtime-library/reference/fcvt.md)   
- [_gcvt —](../../c-runtime-library/reference/gcvt.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
  [setLocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

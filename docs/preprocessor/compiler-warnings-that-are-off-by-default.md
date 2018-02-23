@@ -15,24 +15,29 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
-ms.translationtype: MT
+ms.openlocfilehash: ca1fdff6f5be88d7562f1735ea31323ca5a70360
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>Domyślnie wyłączone ostrzeżenia kompilatora
+# <a name="compiler-warnings-that-are-off-by-default"></a>Są domyślnie wyłączone ostrzeżenia kompilatora
 
-Kompilator zawiera ostrzeżenia, które są domyślnie wyłączone ponieważ większość deweloperów nie chcesz je wyświetlić. Możesz jednak włączyć te ostrzeżenia przy użyciu jednej z następujących opcji.
+Kompilator zawiera ostrzeżenia, które są domyślnie wyłączona, ponieważ większość deweloperów nie chcesz je wyświetlić. W niektórych przypadkach one reprezentują stylistycznych wyboru, są typowe idioms starszego kodu lub skorzystać z rozszerzenia Microsoft do języka. W pozostałych przypadkach wskazują one obszaru, w którym programistów często mieć nieprawidłowe wartości domyślne, co może prowadzić do nieoczekiwanych lub niezdefiniowane zachowanie. Niektóre ostrzeżenia mogą być bardzo zakłócenia w nagłówkach biblioteki.
 
-**Ostrzeżenie #pragma (domyślne:** *warning_number* **)**  
-Ostrzeżenie określony (*warning_number*) jest włączona na poziomie domyślnej. Dokumentacja dla ostrzeżenia zawiera domyślny poziom ostrzeżeń.
+Te ostrzeżenia dotyczące można włączyć za pomocą jednej z następujących opcji:
 
-**Ostrzeżenie #pragma (** *warning_level* **:** *warning_number* **)**  
-Ostrzeżenie określony (*warning_number*) jest włączona na określonym poziomie (*warning_level*).
+- **Ostrzeżenie #pragma (domyślne:** *warning_number* **)**  
+   Ostrzeżenie określony (*warning_number*) jest włączona na poziomie domyślnej. Dokumentacja dla ostrzeżenia zawiera domyślny poziom ostrzeżeń.
 
-[/Wall](../build/reference/compiler-option-warning-level.md)  
-**/ Ścian** włącza wszystkie ostrzeżenia, które są domyślnie wyłączone.
+- **Ostrzeżenie #pragma (** *warning_level* **:** *warning_number* **)**  
+   Ostrzeżenie określony (*warning_number*) jest włączona na określonym poziomie (*warning_level*).
+
+- [/Wall](../build/reference/compiler-option-warning-level.md)  
+   **/ Ścian** włącza wszystkie ostrzeżenia, które są domyślnie wyłączone. Jeśli używasz tej opcji, można wyłączyć ostrzeżeń indywidualnych przy użyciu [/wd](../build/reference/compiler-option-warning-level.md) opcji.
+
+- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
+   Umożliwia to ostrzeżenie  *nnnn*  na poziomie *l*.
 
 Następujące ostrzeżenia są domyślnie wyłączone.
 
@@ -131,6 +136,7 @@ Następujące ostrzeżenia są domyślnie wyłączone.
 |C5032 (poziom 4)|Wykryto #pragma warning(push) nie odpowiedniego #pragma warning(pop)|
 |C5035|Użyj funkcji "*funkcji*" powoduje, że funkcja *funkcja* ma zostać skompilowana jako gość kodu|
 |C5036 (poziom 1)|varargs funkcji konwersja wskaźnika podczas kompilowania przy użyciu /hybrid:x86arm64 "*type1*"do"*type2*"|
+|[C5038](../error-messages/compiler-warnings/c5038.md)|element członkowski danych "*Członek1*"zostanie zainicjowana po elemencie członkowskim danych"*member2*"|
 
 Tych ostrzeżeń są wyłączone, chyba że [/ ograniczająca-](../build/reference/permissive-standards-conformance.md) ustawiono opcję kompilatora:
 

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -40,7 +41,8 @@ f1_keywords:
 - mbsnccnt
 - _strncnt
 - _wcsncnt
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strncnt function
 - _mbsnbcnt function
@@ -57,22 +59,23 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 27c2d107da6c937705cacac770a50d912cadda84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bcc69e67058e782bd3ce43b835497dab756347a0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 Zwraca liczbę znaków lub bajtów w ciągu określonej liczby.  
   
 > [!IMPORTANT]
->  `_mbsnbcnt`, `_mbsnbcnt_l`, `_mbsnccnt`, i `_mbsnccnt_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsnbcnt`, `_mbsnbcnt_l`, `_mbsnccnt`, i `_mbsnccnt_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -117,14 +120,14 @@ size_t _mbsnccnt_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_mbsnbcnt`i `_mbsnbcnt_l` zwraca liczbę bajtów znaleziono w pierwszym `count` znaków wielobajtowych `str`. `_mbsnccnt`i `_mbsnccnt_l` zwraca liczbę znaków znaleziono w pierwszym `count` bajtów `str`. Jeśli przed analizy napotkano znak NULL `str` ma ukończone, zwróć liczbę bajtów lub znaków znaleziono przed znakiem NULL. Jeśli `str` składa się z mniej niż `count` znaków lub bajtów zwracają liczba znaków lub bajtów w ciągu. Jeśli `count` jest mniejsza od zera, zwracają 0. W poprzednich wersjach, funkcje te były zwracanej wartości typu `int` zamiast `size_t`.  
+ `_mbsnbcnt` i `_mbsnbcnt_l` zwraca liczbę bajtów znaleziono w pierwszym `count` znaków wielobajtowych `str`. `_mbsnccnt` i `_mbsnccnt_l` zwraca liczbę znaków znaleziono w pierwszym `count` bajtów `str`. Jeśli przed analizy napotkano znak NULL `str` ma ukończone, zwróć liczbę bajtów lub znaków znaleziono przed znakiem NULL. Jeśli `str` składa się z mniej niż `count` znaków lub bajtów zwracają liczba znaków lub bajtów w ciągu. Jeśli `count` jest mniejsza od zera, zwracają 0. W poprzednich wersjach, funkcje te były zwracanej wartości typu `int` zamiast `size_t`.  
   
- `_strncnt`Zwraca liczbę znaków w pierwszym `count` bajtów ciągu jednobajtowe `str`. `_wcsncnt`Zwraca liczbę znaków w pierwszym `count` znaki dwubajtowe ciągu znaków dwubajtowych `str`.  
+ `_strncnt` Zwraca liczbę znaków w pierwszym `count` bajtów ciągu jednobajtowe `str`. `_wcsncnt` Zwraca liczbę znaków w pierwszym `count` znaki dwubajtowe ciągu znaków dwubajtowych `str`.  
   
 ## <a name="remarks"></a>Uwagi  
- `_mbsnbcnt`i `_mbsnbcnt_l` liczbę bajtów znaleziono w pierwszym `count` znaków wielobajtowych `str`. `_mbsnbcnt`i `_mbsnbcnt_l` Zastąp `mtob` i powinna być używana zamiast `mtob`.  
+ `_mbsnbcnt` i `_mbsnbcnt_l` liczbę bajtów znaleziono w pierwszym `count` znaków wielobajtowych `str`. `_mbsnbcnt` i `_mbsnbcnt_l` Zastąp `mtob` i powinna być używana zamiast `mtob`.  
   
- `_mbsnccnt`i `_mbsnccnt_l` liczbę znaleziono znaki w pierwszym `count` bajtów `str`. Jeśli `_mbsnccnt` i `_mbsnccnt_l` napotkasz wartość NULL w drugim bajtem znaków dwubajtowych, pierwszego bajtu również jest traktowany jako wartość NULL, a nie jest uwzględniony w liczba zwracanych wartości. `_mbsnccnt`i `_mbsnccnt_l` Zastąp `btom` i powinna być używana zamiast `btom`.  
+ `_mbsnccnt` i `_mbsnccnt_l` liczbę znaleziono znaki w pierwszym `count` bajtów `str`. Jeśli `_mbsnccnt` i `_mbsnccnt_l` napotkasz wartość NULL w drugim bajtem znaków dwubajtowych, pierwszego bajtu również jest traktowany jako wartość NULL, a nie jest uwzględniony w liczba zwracanych wartości. `_mbsnccnt` i `_mbsnccnt_l` Zastąp `btom` i powinna być używana zamiast `btom`.  
   
  Jeśli `str` jest wskaźnika o wartości null lub jest `count` ma wartość 0, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md), `errno` ma ustawioną wartość `EINVAL`, a funkcja zwraca wartość 0.  
   
@@ -144,12 +147,12 @@ size_t _mbsnccnt_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_mbsnbcnt`|\<mbstring.h >|  
-|`_mbsnbcnt_l`|\<mbstring.h >|  
-|`_mbsnccnt`|\<mbstring.h >|  
-|`_mbsnccnt_l`|\<mbstring.h >|  
-|`_strncnt`|\<tchar.h >|  
-|`_wcsncnt`|\<tchar.h >|  
+|`_mbsnbcnt`|\<mbstring.h>|  
+|`_mbsnbcnt_l`|\<mbstring.h>|  
+|`_mbsnccnt`|\<mbstring.h>|  
+|`_mbsnccnt_l`|\<mbstring.h>|  
+|`_strncnt`|\<tchar.h>|  
+|`_wcsncnt`|\<tchar.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

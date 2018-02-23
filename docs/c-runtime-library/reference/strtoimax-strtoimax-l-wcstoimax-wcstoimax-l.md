@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstoimax
 - _wcstoimax_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _wcstoimax_l
 - _strtoimax_l
 - _tcstoimax_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strtoimax funciton
 - conversion functions
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _wcstoimax_l function
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 14bbcfcdb96db3b64bd1cb06df999e0c64796773
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4125ebf922ed3525d5efd6a92b1273ca18d0fd7d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 Konwertuje ciąg na wartość całkowitą typu największy obsługiwanych liczbę całkowitą ze znakiem.  
@@ -95,9 +98,9 @@ intmax_t _wcstoimax_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `strtoimax`Zwraca wartość, która jest reprezentowana w ciągu `nptr`, z wyjątkiem przypadków, gdy reprezentacja mogłoby spowodować przepełnienie — w takim przypadku zwraca `INTMAX_MAX` lub `INTMAX_MIN`, i `errno` ma ustawioną wartość `ERANGE`. Funkcja zwraca wartość 0, jeśli konwersja nie jest możliwe. `wcstoimax`Zwraca wartości analogously do `strtoimax`.  
+ `strtoimax` Zwraca wartość, która jest reprezentowana w ciągu `nptr`, z wyjątkiem przypadków, gdy reprezentacja mogłoby spowodować przepełnienie — w takim przypadku zwraca `INTMAX_MAX` lub `INTMAX_MIN`, i `errno` ma ustawioną wartość `ERANGE`. Funkcja zwraca wartość 0, jeśli konwersja nie jest możliwe. `wcstoimax` Zwraca wartości analogously do `strtoimax`.  
   
- `INTMAX_MAX`i `INTMAX_MIN` są zdefiniowane w stdint.h.  
+ `INTMAX_MAX` i `INTMAX_MIN` są zdefiniowane w stdint.h.  
   
  Jeśli `nptr` jest `NULL` lub `base` jest różna od zera i mniejszym niż 2 lub większą niż 36 `errno` ma ustawioną wartość `EINVAL`.  
   
@@ -117,7 +120,7 @@ intmax_t _wcstoimax_l(
 |`_tcstoimax`|`strtoimax`|`strtoimax`|`wcstoimax`|  
 |`_tcstoimax_l`|`strtoimax_l`|`_strtoimax_l`|`_wcstoimax_l`|  
   
- `strtoimax`oczekuje `nptr` wskaż ciąg następującą postać:  
+ `strtoimax` oczekuje `nptr` wskaż ciąg następującą postać:  
   
  [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits` &#124; `letters`]  
   
@@ -127,18 +130,18 @@ intmax_t _wcstoimax_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strtoimax`, `_strtoimax_l`, `wcstoimax`, `_wcstoimax_l`|\<inttypes.h >|  
+|`strtoimax`, `_strtoimax_l`, `wcstoimax`, `_wcstoimax_l`|\<inttypes.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [localeconv —](../../c-runtime-library/reference/localeconv.md)   
+ [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setLocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Ciąg na wartość liczbową funkcje](../../c-runtime-library/string-to-numeric-value-functions.md)   
  [strtod —, _strtod_l —, wcstod — _wcstod_l —](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
- [strtol —, wcstol —, _strtol_l — _wcstol_l —](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
+ [strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
  [strtoul —, _strtoul_l —, wcstoul — _wcstoul_l —](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
  [strtoumax —, _strtoumax_l —, wcstoumax — _wcstoumax_l —](../../c-runtime-library/reference/strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)   
  [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

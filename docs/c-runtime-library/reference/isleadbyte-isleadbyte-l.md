@@ -1,12 +1,13 @@
 ---
-title: "isleadbyte —, _isleadbyte_l — | Dokumentacja firmy Microsoft"
+title: isleadbyte, _isleadbyte_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -27,7 +28,8 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -35,22 +37,23 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e783413e207ff63f2b93b31af53b0b0a44ff68f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 82c8f6eb81e96527c0955d9b19fd8ce931e8d7fe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
 Określa, czy znak jest bajtu znaków wielobajtowych.  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -68,10 +71,10 @@ int _isleadbyte_l(
  Liczba całkowita do testowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `isleadbyte`Zwraca wartość niezerową, jeśli argument spełnia warunek testu lub 0, jeśli jej nie ma. Zgodnie z ustawieniami regionalnymi "C" i jednobajtowych (SBCS), ustawienia regionalne, zestaw znaków `isleadbyte` zawsze zwraca wartość 0.  
+ `isleadbyte` Zwraca wartość niezerową, jeśli argument spełnia warunek testu lub 0, jeśli jej nie ma. Zgodnie z ustawieniami regionalnymi "C" i jednobajtowych (SBCS), ustawienia regionalne, zestaw znaków `isleadbyte` zawsze zwraca wartość 0.  
   
 ## <a name="remarks"></a>Uwagi  
- `isleadbyte` Makro zwraca wartość niezerową, jeśli jej argument pierwszy bajt znaków wielobajtowych. `isleadbyte`zapewnia łatwy do rozpoznania wynik argumentu liczba całkowita od -1 (`EOF`) do `UCHAR_MAX` (0xFF) włącznie.  
+ `isleadbyte` Makro zwraca wartość niezerową, jeśli jej argument pierwszy bajt znaków wielobajtowych. `isleadbyte` zapewnia łatwy do rozpoznania wynik argumentu liczba całkowita od -1 (`EOF`) do `UCHAR_MAX` (0xFF) włącznie.  
   
  Oczekiwano argumentu rodzaju `isleadbyte` jest `int`; Jeśli podpisem znak zostanie przekazany, kompilator może ją przekonwertować na liczbę całkowitą przez rozszerzenie logowania, którego można nieprzewidywalne skutki.  
   
@@ -87,8 +90,8 @@ int _isleadbyte_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`isleadbyte`|\<CType.h >|  
-|`_isleadbyte_l`|\<CType.h >|  
+|`isleadbyte`|\<ctype.h>|  
+|`_isleadbyte_l`|\<ctype.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   

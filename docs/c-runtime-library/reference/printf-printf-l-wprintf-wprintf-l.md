@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _printf_l
 - wprintf
@@ -28,7 +29,8 @@ f1_keywords:
 - printf
 - _tprintf
 - wprintf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - printf function
 - printf_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 60ac5a99e307e73569fe165d675e90c5da2af3a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f2ebdd4061b50646f9450bfdfaf2ea4db90b5774
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
 Drukowanie sformatowanych dane wyjściowe do standardowego strumienia wyjściowego. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [printf_s —, _printf_s_l —, wprintf_s —, _wprintf_s_l —](../../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md).  
@@ -98,9 +101,9 @@ int _wprintf_l(
  Aby uzyskać informacje dotyczące `errno` i kody błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `printf` Funkcji formatuje i wyświetla serii znaków i wartości do standardowego strumienia wyjściowego, `stdout`. Jeśli argumenty `format` ciągu `format` ciąg musi zawierać specyfikacji, które określają format wyjściowy dla argumentów. `printf`i [fprintf —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) zachowują się tak samo, z wyjątkiem `printf` zapisuje dane wyjściowe do `stdout` , a nie do miejsca docelowego typu `FILE`.  
+ `printf` Funkcji formatuje i wyświetla serii znaków i wartości do standardowego strumienia wyjściowego, `stdout`. Jeśli argumenty `format` ciągu `format` ciąg musi zawierać specyfikacji, które określają format wyjściowy dla argumentów. `printf` i [fprintf —](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) zachowują się tak samo, z wyjątkiem `printf` zapisuje dane wyjściowe do `stdout` , a nie do miejsca docelowego typu `FILE`.  
   
- `wprintf`jest to wersja znaków dwubajtowych `printf`; `format` jest ciągiem znaków dwubajtowych. `wprintf`i `printf` zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `printf`aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
+ `wprintf` jest to wersja znaków dwubajtowych `printf`; `format` jest ciągiem znaków dwubajtowych. `wprintf` i `printf` zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `printf` aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
   
  Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.  
   
@@ -139,10 +142,10 @@ Line one
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`printf`, `_printf_l`|\<stdio.h >|  
+|`printf`, `_printf_l`|\<stdio.h>|  
 |`wprintf`, `_wprintf_l`|\<stdio.h > lub \<wchar.h >|  
   
- Konsola nie jest obsługiwana w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu `stdin`, `stdout`, i `stderr`, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Przykład  
   
@@ -235,8 +238,8 @@ Address as:   0012FF3C
  [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_fprintf_p —, _fprintf_p_l —, _fwprintf_p — _fwprintf_p_l —](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
+ [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
  [scanf, _scanf_l —, wscanf — _wscanf_l —](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf, _sprintf_l —, swprintf —, _swprintf_l —, \__swprintf_l —](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vprintf — funkcje](../../c-runtime-library/vprintf-functions.md)   
  [_set_output_format](../../c-runtime-library/set-output-format.md)

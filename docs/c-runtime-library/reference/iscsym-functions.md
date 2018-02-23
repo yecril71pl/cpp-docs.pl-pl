@@ -1,12 +1,13 @@
 ---
-title: "iscsym —, iscsymf —, __iscsym —, __iswcsym —, __iscsymf —, __iswcsymf —, _iscsym_l —, _iswcsym_l —, _iscsymf_l —, _iswcsymf_l — | Dokumentacja firmy Microsoft"
+title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _iswcsym_l
 - __iswcsym
@@ -52,7 +53,8 @@ f1_keywords:
 - ctype/__iswcsymf
 - ctype/__iswcsym_l
 - ctype/__iswcsymf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iscsymf_l function
 - iswsym_l function
@@ -69,18 +71,19 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3567e6843fc3350d92c6575d320885298140ed50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 85c650efa09bb093da65be874c890c77282d3fa3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym — iscsymf —, __iscsym —, __iswcsym —, __iscsymf —, __iswcsymf —, _iscsym_l —, _iswcsym_l —, _iscsymf_l —, _iswcsymf_l —
+# <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
 Określanie, czy całkowitą reprezentuje znak, który może być używany w identyfikatorze.
 
@@ -141,7 +144,7 @@ W celu zapewnienia zgodności z poprzednimi wersjami `iscsym` i `iscsymf` są zd
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l`, `_iswcsymf_l`|C: \<ctype.h ><br /><br /> C++: \<cctype — > lub \<ctype.h >|
+|`iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l`, `_iswcsymf_l`|C: \<ctype.h><br /><br /> C++: \<cctype — > lub \<ctype.h >|
 
 `iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l`, I `_iswcsymf_l` procedury są określone firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

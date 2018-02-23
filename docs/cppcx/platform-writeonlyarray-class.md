@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.reviewer: 
-s.suite: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -25,11 +24,11 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 694da2015788e402983c2e2144582d9461749a11
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 081dc6489b6cd16ef9065ce8ec332c7593105617
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="platformwriteonlyarray-class"></a>Klasa platform::WriteOnlyArray
 Reprezentuje Jednowymiarowa tablica, która jest używana jako parametr wejściowy, gdy obiekt wywołujący tablicy dla metody do wypełnienia.  

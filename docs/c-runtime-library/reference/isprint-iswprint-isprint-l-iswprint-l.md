@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswprint
 - isprint
@@ -29,7 +30,8 @@ f1_keywords:
 - iswprint
 - _istprint
 - isprint
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _istprint function
 - iswprint function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6ab79ddcf6232e8c3d4345cc1bc3cda7c7deb1dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36d4c6fcc699392f32a45dfff6131a3b7b7e66ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
 Określa, czy liczba całkowita reprezentuje znaków drukowalnych.  
@@ -81,7 +84,7 @@ int _iswprint_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu znaków drukowalnych. `isprint`Zwraca wartość niezerową, jeśli `c` jest znaków drukowalnych — dotyczy to również znak spacji (0x20 - 0x7E). `iswprint`Zwraca wartość niezerową, jeśli `c` jest drukowalnych znaków dwubajtowych — dotyczy to również miejsce szerokość znaku. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
+ Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu znaków drukowalnych. `isprint` Zwraca wartość niezerową, jeśli `c` jest znaków drukowalnych — dotyczy to również znak spacji (0x20 - 0x7E). `iswprint` Zwraca wartość niezerową, jeśli `c` jest drukowalnych znaków dwubajtowych — dotyczy to również miejsce szerokość znaku. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
   
  Wynik warunku dla tych funkcji zależy od `LC_CTYPE` ustawienie kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, które nie mają `_l` sufiks użyciem bieżących ustawień regionalnych wszystkie działania zależne od ustawień regionalnych; wersje, które mają `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne, który jest przekazywany w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -91,15 +94,15 @@ int _iswprint_l(
   
 |Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_unicode — definicja|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|**_** `istprint`|`isprint`|[_ismbcprint —](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswprint`|  
+|**_** `istprint`|`isprint`|[_ismbcprint](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswprint`|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`isprint`|\<CType.h >|  
+|`isprint`|\<ctype.h>|  
 |`iswprint`|\<CType.h > lub \<wchar.h >|  
-|`_isprint_l`|\<CType.h >|  
+|`_isprint_l`|\<ctype.h>|  
 |`_iswprint_l`|\<CType.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wctomb_l
 - wctomb
@@ -23,8 +24,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: wctomb
-dev_langs: C++
+f1_keywords:
+- wctomb
+dev_langs:
+- C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, converting
@@ -34,16 +37,17 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 462fecfcd9400d10dbc943fded0d04fb7a0cf010
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: adb05340bee89ff86c4ab30a61f32ca53c71519b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 Przekonwertować odpowiednich znaków wielobajtowych znaków dwubajtowych. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [wctomb_s —, _wctomb_s_l —](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md).  
@@ -73,15 +77,15 @@ int _wctomb_l(
  Jeśli `wctomb` konwertuje znaków dwubajtowych do znaków wielobajtowych, zwraca liczbę bajtów (który nigdy nie jest większa niż `MB_CUR_MAX`) w znaków dwubajtowych. Jeśli `wchar` jest znakiem pustym znaków dwubajtowych (L '\0'), `wctomb` zwraca wartość 1. Jeśli wskaźnika docelowej `mbchar` ma wartość NULL, `wctomb` zwraca wartość 0. Jeśli konwersja nie jest możliwe w bieżących ustawień regionalnych, `wctomb` zwraca wartość -1 i `errno` ma ustawioną wartość `EILSEQ`.  
   
 ## <a name="remarks"></a>Uwagi  
- `wctomb` Funkcji konwertuje jego `wchar` argument odpowiednich znaków wielobajtowych i zapisuje wynik w `mbchar`. Funkcję można wywołać z dowolnego punktu w programach. `wctomb`używa bieżące ustawienia regionalne dla dowolnego zachowań zależnych od ustawień regionalnych. `_wctomb_l` jest taka sama jak `wctomb` z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ `wctomb` Funkcji konwertuje jego `wchar` argument odpowiednich znaków wielobajtowych i zapisuje wynik w `mbchar`. Funkcję można wywołać z dowolnego punktu w programach. `wctomb` używa bieżące ustawienia regionalne dla dowolnego zachowań zależnych od ustawień regionalnych. `_wctomb_l` jest taka sama jak `wctomb` z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
- `wctomb`sprawdza poprawność parametrów. Jeśli `mbchar` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i funkcja zwraca wartość -1.  
+ `wctomb` sprawdza poprawność parametrów. Jeśli `mbchar` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i funkcja zwraca wartość -1.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`wctomb`|\<stdlib.h >|  
+|`wctomb`|\<stdlib.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -117,8 +121,8 @@ Convert a wide character:
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [_mbclen —, mblen —, _mblen_l —](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs —, _mbstowcs_l —](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc —, _mbtowc_l —](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
  [wcstombs —, _wcstombs_l —](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [Procedura WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
+ [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

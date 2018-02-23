@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: wcsrtombs_s
+ms.topic: reference
+apiname:
+- wcsrtombs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,23 +23,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: wcsrtombs_s
-dev_langs: C++
+f1_keywords:
+- wcsrtombs_s
+dev_langs:
+- C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 025acdf18d0e5322ef43de800e3577233a93cb86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0bb43cf628abfabe7b5900579ec6995c95c980b2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 Konwertowanie ciągu znaków typu wide reprezentacji ciągu znaków wielobajtowych. Wersja [wcsrtombs —](../../c-runtime-library/reference/wcsrtombs.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -64,31 +69,31 @@ errno_t wcsrtombs_s(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`pReturnValue`  
+ [out] `pReturnValue`  
  Liczba znaków konwersji.  
   
- [out]`mbstr`  
+ [out] `mbstr`  
  Adres buforu dla wynikowy ciąg znaków wielobajtowych przekonwertowany.  
   
- [out]`sizeInBytes`  
+ [out] `sizeInBytes`  
  Wyrażony w bajtach rozmiar `mbstr` buforu.  
   
- [in]`wcstr`  
+ [in] `wcstr`  
  Wskazuje ciąg znaków typu wide do skonwertowania.  
   
- [in]`count`  
+ [in] `count`  
  Maksymalna liczba bajtów do zapisania w `mbstr` buforu, lub [_truncate —](../../c-runtime-library/truncate.md).  
   
- [in]`mbstate`  
+ [in] `mbstate`  
  Wskaźnik do `mbstate_t` konwersji stanu obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zero, jeśli to się powiedzie, kod błędu w przypadku awarii.  
   
-|Warunek błędu|Wartość zwracana i`errno`|  
+|Warunek błędu|Wartość zwracana i `errno`|  
 |---------------------|------------------------------|  
-|`mbstr`jest `NULL` i `sizeInBytes` > 0.|`EINVAL`|  
-|`wcstr`jest`NULL`|`EINVAL`|  
+|`mbstr` jest `NULL` i `sizeInBytes` > 0.|`EINVAL`|  
+|`wcstr` jest `NULL`|`EINVAL`|  
 |Bufor docelowy jest zbyt mały, aby pomieścił skonwertowany ciąg (chyba że `count` jest `_TRUNCATE`; zobacz uwagi poniżej)|`ERANGE`|  
   
  Jeśli występuje którykolwiek z tych warunków, zgodnie z opisem w wywołaniu wyjątek nieprawidłowy parametr [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może kontynuować, funkcja zwraca błąd o kodzie i ustawia `errno` wymienione w tabeli.  
@@ -110,12 +115,12 @@ errno_t wcsrtombs_s(
   
  Jeśli `wcsrtombs_s` napotka znaków dwubajtowych nie można przekonwertować znaków wielobajtowych, umieszcza -1 w `*pReturnValue`, ustawia bufor docelowy na pusty ciąg, ustawia `errno` do `EILSEQ`i zwraca `EILSEQ`.  
   
- Jeśli sekwencje wskazywana przez `wcstr` i `mbstr` nakładają się zachowanie `wcsrtombs_s` jest niezdefiniowana. `wcsrtombs_s`ma to wpływ na poszczególnych kategorii LC_TYPE bieżące ustawienia regionalne.  
+ Jeśli sekwencje wskazywana przez `wcstr` i `mbstr` nakładają się zachowanie `wcsrtombs_s` jest niezdefiniowana. `wcsrtombs_s` ma to wpływ na poszczególnych kategorii LC_TYPE bieżące ustawienia regionalne.  
   
 > [!IMPORTANT]
 >  Upewnij się, że `wcstr` i `mbstr` nie nakładają oraz że `count` poprawnie odzwierciedla liczbę znaki dwubajtowe do konwersji.  
   
- `wcsrtombs_s` Funkcja różni się od [wcstombs_s —, _wcstombs_s_l —](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md) przez jego restartability. Stan konwersji jest przechowywany w `mbstate` dla kolejnych wywołań w tej samej lub innych funkcji ponownego uruchamiania. Wyniki są niezdefiniowane, gdy mieszanie korzystanie z funkcji ponownego uruchamiania i nonrestartable. Na przykład aplikacja może użyć `wcsrlen` zamiast `wcslen`, jeśli kolejne wywołanie `wcsrtombs_s` użyto zamiast`wcstombs_s.`  
+ `wcsrtombs_s` Funkcja różni się od [wcstombs_s —, _wcstombs_s_l —](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md) przez jego restartability. Stan konwersji jest przechowywany w `mbstate` dla kolejnych wywołań w tej samej lub innych funkcji ponownego uruchamiania. Wyniki są niezdefiniowane, gdy mieszanie korzystanie z funkcji ponownego uruchamiania i nonrestartable. Na przykład aplikacja może użyć `wcsrlen` zamiast `wcslen`, jeśli kolejne wywołanie `wcsrtombs_s` użyto zamiast `wcstombs_s.`  
   
  W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -173,7 +178,7 @@ The string was successfully converted.
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`wcsrtombs_s`|\<WChar.h >|  
+|`wcsrtombs_s`|\<wchar.h>|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   

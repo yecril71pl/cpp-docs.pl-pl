@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -35,7 +36,8 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -48,16 +50,17 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6aa6f584db325694b081f367f8b78146776764ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 649e723fc56fd27e816b05963aef88eec3c37a02
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
 Określa, czy liczba całkowita reprezentuje małą literę.  
@@ -89,7 +92,7 @@ int _iswlower_l(
  Ustawienia regionalne do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu małą literę. `islower`Zwraca wartość niezerową, jeśli `c` jest małą literę (- z). `iswlower`Zwraca wartość niezerową, jeśli `c` jest znaków dwubajtowych, umożliwiająca małe litery, lub jeśli `c` jest jednym z zdefiniowane w implementacji zbiór znaki dwubajtowe, dla których żadna z `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
+ Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu małą literę. `islower` Zwraca wartość niezerową, jeśli `c` jest małą literę (- z). `iswlower` Zwraca wartość niezerową, jeśli `c` jest znaków dwubajtowych, umożliwiająca małe litery, lub jeśli `c` jest jednym z zdefiniowane w implementacji zbiór znaki dwubajtowe, dla których żadna z `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
   
  Wersje tych funkcji, które mają `_l` sufiks Użyj ustawień regionalnych, który jest przekazywany w zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -99,16 +102,16 @@ int _iswlower_l(
   
 |Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istlower`|`islower`|[_ismbclower —](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswlower`|  
-|`_istlower_l`|`_islower _l`|[_ismbclower_l —](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_liswlower_l`|  
+|`_istlower`|`islower`|[_ismbclower](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswlower`|  
+|`_istlower_l`|`_islower _l`|[_ismbclower_l](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_liswlower_l`|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`islower`|\<CType.h >|  
+|`islower`|\<ctype.h>|  
 |`iswlower`|\<CType.h > lub \<wchar.h >|  
-|`_islower_l`|\<CType.h >|  
+|`_islower_l`|\<ctype.h>|  
 |`_swlower_l`|\<CType.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

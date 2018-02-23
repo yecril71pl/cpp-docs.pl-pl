@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 077acea5-0d0f-4b33-916d-1211797e5e28
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-robots: noindex,nofollow
-ms.workload: cplusplus
-ms.openlocfilehash: a02dfeb83096281bf189eda0150b7a559a25f416
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eba3a938389c9110a1b0490dd9c274db453cdcda
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="template-friends"></a>Zaprzyjaźnione szablony
 
-Szablony klas może mieć [znajomych](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). Klasa, szablon klasy, funkcja lub szablon funkcji może być elementem zaprzyjaźnionym dla klasy szablonu. Elementy zaprzyjaźnione mogą być także specjalizacjami szablonu klasy lub szablonu funkcji, ale nie specjalizacjami częściowymi.  
+Szablony klas może mieć [znajomych](friend-cpp.md). Klasa, szablon klasy, funkcja lub szablon funkcji może być elementem zaprzyjaźnionym dla klasy szablonu. Elementy zaprzyjaźnione mogą być także specjalizacjami szablonu klasy lub szablonu funkcji, ale nie specjalizacjami częściowymi.  
   
 **C++ 11**: parametr typu mogą być deklarowane jako element zaprzyjaźniony za pomocą formularza `friend T;`.  
   

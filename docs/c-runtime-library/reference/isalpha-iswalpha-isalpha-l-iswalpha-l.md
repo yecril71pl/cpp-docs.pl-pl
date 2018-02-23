@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -33,7 +34,8 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7ef7443a37d8d68b40f47f3eacfee8bac2626a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 04f3d1720420ce7b32e9386ccd384de25c78ac79
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 Określa, czy liczba całkowita reprezentuje znakiem alfabetycznym.  
@@ -86,7 +89,7 @@ int _iswalpha_l(
  Ustawienia regionalne do użycia zamiast bieżących ustawień regionalnych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu znakiem alfabetycznym. `isalpha`Zwraca wartość niezerową, jeśli `c` jest z zakresu A - Z lub a - z. `iswalpha`Zwraca wartość różną od zera tylko znaki dwubajtowe, dla którego `iswupper` lub `iswlower` jest różna od zera; oznacza to, że dla dowolnego całej znak oznacza to jeden zestaw zdefiniowane w implementacji dla których żaden z `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
+ Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego obiektu znakiem alfabetycznym. `isalpha` Zwraca wartość niezerową, jeśli `c` jest z zakresu A - Z lub a - z. `iswalpha` Zwraca wartość różną od zera tylko znaki dwubajtowe, dla którego `iswupper` lub `iswlower` jest różna od zera; oznacza to, że dla dowolnego całej znak oznacza to jeden zestaw zdefiniowane w implementacji dla których żaden z `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace`jest różna od zera. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
   
  Wersje tych funkcji, które mają `_l` sufiks Użyj parametr ustawień regionalnych, który jest przekazywany w zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -103,9 +106,9 @@ int _iswalpha_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`isalpha`|\<CType.h >|  
+|`isalpha`|\<ctype.h>|  
 |`iswalpha`|\<CType.h > lub \<wchar.h >|  
-|`_isalpha_l`|\<CType.h >|  
+|`_isalpha_l`|\<ctype.h>|  
 |`_iswalpha_l`|\<CType.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  

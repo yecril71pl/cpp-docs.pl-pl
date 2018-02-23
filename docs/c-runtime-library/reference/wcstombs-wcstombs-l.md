@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstombs
 - _wcstombs_l
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - wcstombs
 - _wcstombs_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wcstombs_l function
 - wcstombs function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4ee05d4e8c8b36d92794293679992cb2c5ad5c36
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a7d0a5fa1fd7eb869602d8428a7cc087174739a1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 Konwertuje odpowiedniej sekwencji znaków wielobajtowych sekwencji znaki dwubajtowe. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [wcstombs_s —, _wcstombs_s_l —](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md).  
@@ -102,9 +105,9 @@ size_t _wcstombs_l(
   
  Jeśli `mbstr` argument jest `NULL`, `wcstombs` zwraca wymagany rozmiar w bajtach ciągu docelowego.  
   
- `wcstombs`sprawdza poprawność parametrów. Jeśli `wcstr` jest `NULL`, lub jeśli `count` jest większa niż `INT_MAX`, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może kontynuować, funkcja ustawia `errno` do `EINVAL` i zwraca wartość -1.  
+ `wcstombs` sprawdza poprawność parametrów. Jeśli `wcstr` jest `NULL`, lub jeśli `count` jest większa niż `INT_MAX`, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może kontynuować, funkcja ustawia `errno` do `EINVAL` i zwraca wartość -1.  
   
- `wcstombs`używa bieżące ustawienia regionalne dla dowolnego zachowań zależnych od ustawień regionalnych. `_wcstombs_l` jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
+ `wcstombs` używa bieżące ustawienia regionalne dla dowolnego zachowań zależnych od ustawień regionalnych. `_wcstombs_l` jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
  W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -112,8 +115,8 @@ size_t _wcstombs_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`wcstombs`|\<stdlib.h >|  
-|`_wcstombs_l`|\<stdlib.h >|  
+|`wcstombs`|\<stdlib.h>|  
+|`_wcstombs_l`|\<stdlib.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -161,8 +164,8 @@ Convert wide-character string:
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../../c-runtime-library/data-conversion.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [_mbclen —, mblen —, _mblen_l —](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs —, _mbstowcs_l —](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc —, _mbtowc_l —](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
  [wctomb —, _wctomb_l —](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [Procedura WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
+ [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

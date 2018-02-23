@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbslen
 - _mbslen_l
@@ -35,7 +36,8 @@ f1_keywords:
 - _ftcslen
 - strlen
 - _mbslen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcslen function
 - string length, getting
@@ -55,22 +57,23 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c7277a52dfbc77bb41fe0603129813ee682b4bb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 40f3689c11eea367a2c8bf268713c0fad6e434c8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen —, wcslen —, _mbslen —, _mbslen_l — _mbstrlen —, _mbstrlen_l —
 Pobiera długość ciągu, używając bieżących ustawień regionalnych lub określone ustawienia regionalne. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [strnlen —, strnlen_s —, wcsnlen —, wcsnlen_s —, _mbsnlen —, _mbsnlen_l —, _mbstrnlen —, _mbstrnlen_l —](../../c-runtime-library/reference/strnlen-strnlen-s.md)  
   
 > [!IMPORTANT]
->  `_mbslen`, `_mbslen_l`, `_mbstrlen`, i `_mbstrlen_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbslen`, `_mbslen_l`, `_mbstrlen`, i `_mbstrlen_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -108,7 +111,7 @@ size_t _mbstrlen_l(
  Każda z tych funkcji zwraca liczbę znaków w `str`, z wyłączeniem terminal `NULL`. Brak wartości zwracanej jest zarezerwowany do wskazania błędu, z wyjątkiem `_mbstrlen` i `_mbstrlen_l`, które powrotu `((size_t)(-1))` Jeśli ciąg zawiera nieprawidłowy znak wielobajtowe.  
   
 ## <a name="remarks"></a>Uwagi  
- `strlen`interpretuje ciągu jako ciąg znaków jednobajtowych tak, aby jego wartości zwracanej zawsze liczba bajtów, nawet jeśli ciąg zawiera znaki wielobajtowe. `wcslen`jest to wersja znaków dwubajtowych `strlen`; argument `wcslen` jest ciągiem znaków dwubajtowych liczba znaków w całej (dwubajtowego) znaków. `wcslen`i `strlen` zachowują się tak samo w przeciwnym razie wartość.  
+ `strlen` interpretuje ciągu jako ciąg znaków jednobajtowych tak, aby jego wartości zwracanej zawsze liczba bajtów, nawet jeśli ciąg zawiera znaki wielobajtowe. `wcslen` jest to wersja znaków dwubajtowych `strlen`; argument `wcslen` jest ciągiem znaków dwubajtowych liczba znaków w całej (dwubajtowego) znaków. `wcslen` i `strlen` zachowują się tak samo w przeciwnym razie wartość.  
   
  **Uwaga dotycząca zabezpieczeń** tych funkcji pociągnąć za sobą potencjalne zagrożenie wynikające z problem przepełnienie buforu. Przepełnienie buforu problemy używanej metody ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
@@ -120,7 +123,7 @@ size_t _mbstrlen_l(
 |`_tcsclen`|`strlen`|`_mbslen`|`wcslen`|  
 |`_tcsclen_l`|`strlen`|`_mbslen_l`|`wcslen`|  
   
- `_mbslen`i `_mbslen_l` zwraca liczbę znaków wielobajtowych w ciągu znaków wielobajtowych, ale nie Testuj znaków wielobajtowych ważności. `_mbstrlen`i `_mbstrlen_l` testu poprawności znaków wielobajtowych i rozpoznaje wielobajtowych sekwencji znaków. Jeśli ciąg przekazany do `_mbstrlen` lub `_mbstrlen_l` zawiera nieprawidłowy znak wielobajtowe stronę kodową, funkcja zwraca wartość -1 i zestawy `errno` do `EILSEQ`.  
+ `_mbslen` i `_mbslen_l` zwraca liczbę znaków wielobajtowych w ciągu znaków wielobajtowych, ale nie Testuj znaków wielobajtowych ważności. `_mbstrlen` i `_mbstrlen_l` testu poprawności znaków wielobajtowych i rozpoznaje wielobajtowych sekwencji znaków. Jeśli ciąg przekazany do `_mbstrlen` lub `_mbstrlen_l` zawiera nieprawidłowy znak wielobajtowe stronę kodową, funkcja zwraca wartość -1 i zestawy `errno` do `EILSEQ`.  
   
  Wartość wyjściowa jest zagrożony ustawienie `LC_CTYPE` ustawienie kategorii ustawień regionalnych; zobacz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez `_l` Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane zamiast przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -128,10 +131,10 @@ size_t _mbstrlen_l(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strlen`|\<String.h >|  
+|`strlen`|\<string.h>|  
 |`wcslen`|\<String.h > lub \<wchar.h >|  
-|`_mbslen`, `_mbslen_l`|\<mbstring.h >|  
-|`_mbstrlen`, `_mbstrlen_l`|\<stdlib.h >|  
+|`_mbslen`, `_mbslen_l`|\<mbstring.h>|  
+|`_mbstrlen`, `_mbstrlen_l`|\<stdlib.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -206,7 +209,7 @@ Bytes in 'ABCァD' : 6
  [strcat —, wcscat —, _mbscat —](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
  [strcmp —, wcscmp —, _mbscmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
  [strcoll — funkcje](../../c-runtime-library/strcoll-functions.md)   
- [strcpy wcscpy —, _mbscpy —](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
  [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset —, _strset_l —, _wcsset —, _wcsset_l — _mbsset —, _mbsset_l —](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
