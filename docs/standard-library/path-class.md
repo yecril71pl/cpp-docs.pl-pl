@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: filesystem/std::experimental::filesystem::path
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- filesystem/std::experimental::filesystem::path
+dev_langs:
+- C++
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 05acbc14af8daec265cf705ac4605e9606cb0696
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9e91ee287b1403b49f7a70ab3d96686650d6b2f0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="path-class"></a>path — klasa
 **Ścieżki** klasy przechowuje obiekt typu String\_typu o nazwie mójużytkownik tutaj na potrzeby specyfikacji odpowiednie do użycia jako nazwa ścieżki. ciąg\_typu jest synonimem basic\_ciąg\<value_type >, gdzie wartość\_typu jest synonimem znak w systemie Windows lub wchar_t w obszarze Posix.  
@@ -56,7 +60,7 @@ path& assign(InIt first, InIt last);
   
  Funkcje Członkowskie Zamień mypath sekwencji określony, przekonwertować zgodnie z potrzebami.  
   
-## <a name="pathbegin"></a>path::BEGIN  
+## <a name="pathbegin"></a>path::begin  
   
 ```cpp  
 iterator begin() const;
@@ -214,7 +218,7 @@ bool has_filename() const;
 bool has_parent_path() const;
 ```  
   
- Zwraca! parent_path().empty().  
+ Returns !parent_path().empty().  
   
 ## <a name="pathhasrelativepath"></a>path::has_relative_path  
   
@@ -222,7 +226,7 @@ bool has_parent_path() const;
 bool has_relative_path() const;
 ```  
   
- Zwraca! relative_path().empty().  
+ Returns !relative_path().empty().  
   
 ## <a name="pathhasrootdirectory"></a>path::has_root_directory  
   
@@ -246,7 +250,7 @@ bool has_root_name() const;
 bool has_root_path() const;
 ```  
   
- Zwraca! root_path().empty().  
+ Returns !root_path().empty().  
   
 ## <a name="pathhasstem"></a>path::has_stem  
   
@@ -325,7 +329,7 @@ const string_type& native() const noexcept;
   
  Zwraca mójużytkownik.  
   
-## <a name="pathoperator"></a>path::operator =  
+## <a name="pathoperator"></a>path::operator=  
   
 ```cpp  
 path& operator=(const path& right);
@@ -337,7 +341,7 @@ path& operator=(const Source& source);
   
  Pierwszy operator członkowski kopiuje right.myname mójużytkownik. Drugi operator członkowski przenosi right.myname mójużytkownik. Trzeci operator członkowski działa tak samo jak * to = path(source).  
   
-## <a name="pathoperator"></a>path::operator +=  
+## <a name="pathoperator"></a>path::operator+=  
   
 ```cpp  
 path& operator+=(const path& right);
@@ -354,15 +358,15 @@ path& operator+=(Elem elem);
   
  Funkcje Członkowskie zachowują się taka sama jak następujących odpowiednich wyrażeń:  
   
-1.  concat(Right);  
+1.  concat(right);  
   
-2.  concat(Path(str));  
+2.  concat(path(str));  
   
-3.  concat(PTR);  
+3.  concat(ptr);  
   
 4.  concat (string_type (element 1));  
   
-5.  concat(Source);  
+5.  concat(source);  
   
 6.  concat (ścieżka (basic_string —\<elementu >(1, elem)));  
   
@@ -397,7 +401,7 @@ path parent_path() const;
   
  Zwraca element nadrzędny składnika ścieżki mójużytkownik, w szczególności prefiks mójużytkownik po usunięciu filename().native() i wszystkie bezpośrednio poprzednie separatorów katalogu. (Jednakowo, jeśli begin()! = end(), jest łączenie wszystkich elementów z zakresu [begin(),--end()), stosując kolejno operator / =.) Składnik może być pusta.  
   
-## <a name="pathpath"></a>path::Path —  
+## <a name="pathpath"></a>path::path  
   
 ```cpp  
 path();
@@ -535,7 +539,7 @@ string string() const;
   
  Drugi funkcji członkowskiej konwertuje sekwencji przechowywane w mypath kodowanie ich drużyna jest faworytem systemu hosta sekwencji znaku i zwraca wartość ona przechowywana w obiekcie typu String.  
   
-## <a name="pathstringtype"></a>path::STRING_TYPE  
+## <a name="pathstringtype"></a>path::string_type  
   
 ```cpp  
 typedef basic_string<value_type> string_type;  

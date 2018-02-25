@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: _mm_cvtsi64x_ss
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- _mm_cvtsi64x_ss
+dev_langs:
+- C++
 helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a567b33e55092e7e8e0361faa0ce54b2498827a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e29a914b2cfbc807ac3a0dae8cadc3459d3de23a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Generuje [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] rozszerzona wersja przekonwertować 64-bitową liczbę całkowitą wartość skalarną pojedynczej precyzji Floating-Point (`cvtsi2ss`) instrukcji.  
   
@@ -39,10 +43,10 @@ __m128 _mm_cvtsi64x_ss(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`a`  
+ [in] `a`  
  `__m128` Struktury zawierającej cztery wartości zmiennoprzecinkowych pojedynczej precyzji.  
   
- [in]`b`  
+ [in] `b`  
  64-bitową liczbę całkowitą można przekonwertować na wartość zmiennoprzecinkową.  
   
 ## <a name="return-value"></a>Wartość zwracana  

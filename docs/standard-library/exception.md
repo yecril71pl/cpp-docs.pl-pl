@@ -4,25 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <exception>
-dev_langs: C++
-helpviewer_keywords: exception header
+ms.topic: reference
+f1_keywords:
+- <exception>
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e152b51a5c33bc6e33622af2a08cb40886af67b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c6b9f264a00ed57a343c3ede8690b061d8bff43
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltexceptiongt"></a>&lt;wyjątek&gt;
+# <a name="ltexceptiongt"></a>&lt;Wyjątek&gt;
 Definiuje kilka typów i funkcji związanych z obsługą wyjątków. Obsługa wyjątków jest używana w sytuacjach, w których system może odzyskać sprawność po błędzie. Zapewnia środek kontroli, który ma być zwracany z funkcji do programu. Celem włączenia obsługi wyjątków jest zwiększenie niezawodności programu przy jednoczesnym zapewnieniu sposobu odzyskania sprawności po błędzie w sposób uporządkowany.  
   
 ## <a name="syntax"></a>Składnia  
@@ -45,12 +50,12 @@ Definiuje kilka typów i funkcji związanych z obsługą wyjątków. Obsługa wy
 |||  
 |-|-|  
 |[current_exception](../standard-library/exception-functions.md#current_exception)|Uzyskuje wskaźnik do bieżącego wyjątku.|  
-|[get_terminate —](../standard-library/exception-functions.md#get_terminate)|Pobiera bieżący `terminate_handler` funkcji.|  
-|[get_unexpected —](../standard-library/exception-functions.md#get_unexpected)|Pobiera bieżący `unexpected_handler` funkcji.|  
+|[get_terminate](../standard-library/exception-functions.md#get_terminate)|Pobiera bieżący `terminate_handler` funkcji.|  
+|[get_unexpected](../standard-library/exception-functions.md#get_unexpected)|Pobiera bieżący `unexpected_handler` funkcji.|  
 |[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)|Tworzy `exception_ptr` obiekt przechowujący kopię Wystąpił wyjątek.|  
 |[rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)|Zgłasza wyjątek przekazany jako parametr.|  
-|[set_terminate —](../standard-library/exception-functions.md#set_terminate)|Określa nową `terminate_handler` ma być wywoływana po zakończeniu programu.|  
-|[set_unexpected —](../standard-library/exception-functions.md#set_unexpected)|Określa nową `unexpected_handler` się po wystąpił nieoczekiwany wyjątek napotkano.|  
+|[set_terminate](../standard-library/exception-functions.md#set_terminate)|Określa nową `terminate_handler` ma być wywoływana po zakończeniu programu.|  
+|[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|Określa nową `unexpected_handler` się po wystąpił nieoczekiwany wyjątek napotkano.|  
 |[Zakończenie](../standard-library/exception-functions.md#terminate)|Wywołuje terminate_handler.|  
 |[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|Zwraca **true** tylko wtedy, gdy zwrócony wyjątek jest obecnie przetwarzana w.|  
 |[Nieoczekiwany](../standard-library/exception-functions.md#unexpected)|Wywołuje program obsługi nieoczekiwanych wyjątków.|  

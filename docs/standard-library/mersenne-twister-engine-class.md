@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: random/std::mersenne_twister_engine
-dev_langs: C++
-helpviewer_keywords: mersenne_twister_engine class
+ms.topic: reference
+f1_keywords:
+- random/std::mersenne_twister_engine
+dev_langs:
+- C++
+helpviewer_keywords:
+- mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9db5fd19c480ac7dfa6f647a1e1bf4beec5609d1
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 15294f0372a21c3ce8efe1626c30d1a3d6db23be
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine — Klasa
 Generuje losowe sekwencji liczb całkowitych na podstawie algorytmu — trąba powietrzna w ramach projektu Mersenne wysokiej jakości.  
@@ -40,28 +45,28 @@ class mersenne_twister_engine;
  Typ wyniku liczbę całkowitą bez znaku. Dla typów możliwych [ \<losowe >](../standard-library/random.md).  
   
  `W`  
- **Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**:`2u < W ≤ numeric_limits<UIntType>::digits`  
+ **Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**: `2u < W ≤ numeric_limits<UIntType>::digits`  
   
  `N`  
  **Stan: rozmiar**. Liczba elementów (wartości) w sekwencji stanu.  
   
  `M`  
- **Wielkość przesunięcia**. Liczba elementów, aby pominąć podczas każdego dołączony. **Warunek wstępny**:`0 < M ≤ N`  
+ **Wielkość przesunięcia**. Liczba elementów, aby pominąć podczas każdego dołączony. **Warunek wstępny**: `0 < M ≤ N`  
   
  `R`  
- **Bity maski**. **Warunek wstępny**:`R ≤ W`  
+ **Bity maski**. **Warunek wstępny**: `R ≤ W`  
   
  `A`  
- **Maska XOR**. **Warunek wstępny**:`A ≤ (1u<<W) - 1u`  
+ **Maska XOR**. **Warunek wstępny**: `A ≤ (1u<<W) - 1u`  
   
  `U`, `S`, `T`, `L`  
- **Parametry przesunięcia jej**. Używane jako wartości shift podczas zaszyfrowanie (jej). Warunek wstępny:`U,S,T,L ≤ W`  
+ **Parametry przesunięcia jej**. Używane jako wartości shift podczas zaszyfrowanie (jej). Warunek wstępny: `U,S,T,L ≤ W`  
   
  `D`, `B`, `C`  
- **Jej bit maski parametry**. Używane jako wartości maski bitowej podczas zaszyfrowanie (jej). Warunek wstępny:`D,B,C ≤ (1u<<W) - 1u`  
+ **Jej bit maski parametry**. Używane jako wartości maski bitowej podczas zaszyfrowanie (jej). Warunek wstępny: `D,B,C ≤ (1u<<W) - 1u`  
   
  `F`  
- **Mnożnik inicjowania**. Używane z inicjalizacją sekwencji. Warunek wstępny:`F ≤ (1u<<W) - 1u`  
+ **Mnożnik inicjowania**. Używane z inicjalizacją sekwencji. Warunek wstępny: `F ≤ (1u<<W) - 1u`  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -70,7 +75,7 @@ class mersenne_twister_engine;
 |`mersenne_twister_engine::mersenne_twister_engine`|`mersenne_twister_engine::min`|`mersenne_twister_engine::discard`|  
 |`mersenne_twister_engine::operator()`|`mersenne_twister_engine::max`|`mersenne_twister_engine::seed`|  
   
- `default_seed`jest elementem członkowskim stałej, zdefiniowanej jako `5489u`, używana jako domyślna wartość parametru `mersenne_twister_engine::seed` i Konstruktor pojedynczej wartości.  
+ `default_seed` jest elementem członkowskim stałej, zdefiniowanej jako `5489u`, używana jako domyślna wartość parametru `mersenne_twister_engine::seed` i Konstruktor pojedynczej wartości.  
   
  Aby uzyskać więcej informacji na temat aparatu członków zobacz [ \<losowe >](../standard-library/random.md).  
   

@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IUMSCompletionList
 - CONCRTRM/concurrency::IUMSCompletionList
 - CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
-dev_langs: C++
-helpviewer_keywords: IUMSCompletionList structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 50fd2381174e947e243ad6aa40516be5fd728902
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 378eccbc0e29a9356ffd89699039b9877c76c751
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList — Struktura
 Reprezentuje listę uzupełniania UMS. Podczas planowania wyznaczony harmonogramu UMS wątku bloków, aby podjąć decyzję dotyczącą tego, jaki można zaplanować na komputerze podstawowym głównego procesora wirtualnego podczas oryginalnego wątek jest zablokowany wywoływane jest kontekstu. Gdy odblokowuje oryginalnego wątku, system operacyjny kolejek do listy zakończenia, która jest dostępna za pośrednictwem tego interfejsu. Harmonogram można badać listy uzupełniania na wyznaczonych kontekstu planowania lub w innym miejscu przeszukiwanych do pracy.  
@@ -53,7 +57,7 @@ struct IUMSCompletionList;
   
  **Namespace:** współbieżności  
   
-##  <a name="getunblocknotifications"></a>IUMSCompletionList::GetUnblockNotifications — metoda  
+##  <a name="getunblocknotifications"></a>  IUMSCompletionList::GetUnblockNotifications — metoda  
  Pobiera łańcuch `IUMSUnblockNotification` interfejsy reprezentujący kontekstów wykonywania, których skojarzone wątku proxy ma odblokowany od czasu ostatniego ta metoda została wywołana.  
   
 ```

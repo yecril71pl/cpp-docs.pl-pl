@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::subtract_with_carry_engine
 - random/std::subtract_with_carry_engine::default_seed
@@ -14,7 +15,8 @@ f1_keywords:
 - random/std::subtract_with_carry_engine::min
 - random/std::subtract_with_carry_engine::max
 - random/std::subtract_with_carry_engine::seed
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::subtract_with_carry_engine [C++]
 - std::subtract_with_carry_engine [C++], default_seed
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8de1c19ac793dd78ee55a15bc1156408936174bc
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 32dbf113691960dc9f9d6e77d0448a587486481a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine — Klasa
 Generuje losowe sekwencji przez algorytm subtract z przenoszące (połączenie z otuliną Fibonacci).  
@@ -49,10 +52,10 @@ class subtract_with_carry_engine;
  Typ wyniku liczbę całkowitą bez znaku. Dla typów możliwych [ \<losowe >](../standard-library/random.md).  
   
  `W`  
- **Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**:`0 < W ≤ numeric_limits<UIntType>::digits`  
+ **Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**: `0 < W ≤ numeric_limits<UIntType>::digits`  
   
  `S`  
- **Krótkie opóźnienie**. Liczba wartości będące liczbami całkowitymi. **Warunek wstępny**:`0 < S < R`  
+ **Krótkie opóźnienie**. Liczba wartości będące liczbami całkowitymi. **Warunek wstępny**: `0 < S < R`  
   
  `R`  
  **Long lag**. Określa cyklu w serii wygenerowany.  
@@ -63,7 +66,7 @@ class subtract_with_carry_engine;
 |-|-|-|  
 |`subtract_with_carry_engine::subtract_with_carry_engine`|`subtract_with_carry_engine::min`|`subtract_with_carry_engine::discard`|  
 |`subtract_with_carry_engine::operator()`|`subtract_with_carry_engine::max`|`subtract_with_carry_engine::seed`|  
-|`default_seed`jest elementem członkowskim stałej, zdefiniowanej jako `19780503u`, używana jako domyślna wartość parametru `subtract_with_carry_engine::seed` i Konstruktor pojedynczej wartości.|||  
+|`default_seed` jest elementem członkowskim stałej, zdefiniowanej jako `19780503u`, używana jako domyślna wartość parametru `subtract_with_carry_engine::seed` i Konstruktor pojedynczej wartości.|||  
   
  Aby uzyskać więcej informacji na temat aparatu członków zobacz [ \<losowe >](../standard-library/random.md).  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - condition_variable/std::condition_variable_any
 - condition_variable/std::condition_variable_any::condition_variable_any
@@ -15,9 +16,10 @@ f1_keywords:
 - condition_variable/std::condition_variable_any::wait
 - condition_variable/std::condition_variable_any::wait_for
 - condition_variable/std::condition_variable_any::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: d8afe5db-1561-4ec2-8e85-21ea03ee4321
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c3acad50f9dec8e3384d0b811045f95843f40b92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 26572eed562150baff68f124fea7255283d0c133
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any — Klasa
 Klasa `condition_variable_any` oczekiwania na zdarzenie, które ma jakiekolwiek `mutex` typu.  
@@ -51,7 +54,7 @@ class condition_variable_any;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[condition_variable_any —](#condition_variable_any)|Konstruuje `condition_variable_any` obiektu.|  
+|[condition_variable_any](#condition_variable_any)|Konstruuje `condition_variable_any` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -68,7 +71,7 @@ class condition_variable_any;
   
  **Namespace:** Standard  
   
-##  <a name="condition_variable_any"></a>condition_variable_any::condition_variable_any — Konstruktor  
+##  <a name="condition_variable_any"></a>  condition_variable_any::condition_variable_any — Konstruktor  
  Konstruuje `condition_variable_any` obiektu.  
   
 ```
@@ -78,21 +81,21 @@ condition_variable_any();
 ### <a name="remarks"></a>Uwagi  
  Jeśli nie ma wystarczającej ilości pamięci jest dostępny, zgłasza konstruktora [system_error —](../standard-library/system-error-class.md) obiektu, który ma `not_enough_memory` kod błędu. Jeśli nie można utworzyć obiektu, ponieważ innego zasobu nie jest dostępna, zgłasza konstruktora `system_error` obiektu, który ma `resource_unavailable_try_again` kod błędu.  
   
-##  <a name="notify_all"></a>condition_variable_any::notify_all  
+##  <a name="notify_all"></a>  condition_variable_any::notify_all  
  Odblokowuje wszystkie wątki, które oczekują na `condition_variable_any` obiektu.  
   
 ```
 void notify_all() noexcept;
 ```  
   
-##  <a name="notify_one"></a>condition_variable_any::notify_one  
+##  <a name="notify_one"></a>  condition_variable_any::notify_one  
  Jeden z wątków, które oczekują na odblokowuje `condition_variable_any` obiektu.  
   
 ```
 void notify_one() noexcept;
 ```  
   
-##  <a name="wait"></a>condition_variable_any::wait  
+##  <a name="wait"></a>  condition_variable_any::wait  
  Blokuje wątku.  
   
 ```
@@ -120,7 +123,7 @@ while (!Pred())
     wait(Lck);
 ```    
   
-##  <a name="wait_for"></a>condition_variable_any::wait_for  
+##  <a name="wait_for"></a>  condition_variable_any::wait_for  
  Blokuje wątku i ustawia przedział czasu, po którym odblokowuje wątku.  
   
 ```
@@ -159,7 +162,7 @@ while(!Pred())
 return true;
 ```  
   
-##  <a name="wait_until"></a>condition_variable_any::wait_until  
+##  <a name="wait_until"></a>  condition_variable_any::wait_until  
  Blokuje wątku i ustawia maksymalną punktu w czasie, w którym odblokowuje wątku.  
   
 ```

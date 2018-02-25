@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CurrentScheduler
 - CONCRT/concurrency::CurrentScheduler
@@ -20,19 +21,22 @@ f1_keywords:
 - CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
 - CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
 - CONCRT/concurrency::CurrentScheduler::ScheduleTask
-dev_langs: C++
-helpviewer_keywords: CurrentScheduler class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 936904f19687463a9b5c51262c8e6f7a8b9fe5a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler — Klasa
 Reprezentuje abstrakcję dla bieżącego harmonogramu, skojarzone z kontekstem wywołującego.  
@@ -52,10 +56,10 @@ class CurrentScheduler;
 |[Utwórz](#create)|Tworzy nowy harmonogram, w których zachowanie jest opisane przez `_Policy` parametru i dołącza go do kontekstu wywołania. Nowo utworzony harmonogram będzie bieżącego harmonogramu dla kontekstu wywołania.|  
 |[CreateScheduleGroup](#createschedulegroup)|Przeciążone. Tworzy nową grupę harmonogramu w ramach harmonogramu, skojarzone z kontekstem wywołującego. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w grupie nowo utworzonego harmonogramu, aby być ukierunkowane pod kątem wykonywania w lokalizacji określonej w tym parametrze.|  
 |[Detach](#detach)|Odłącza bieżącego harmonogramu z kontekstu wywołania i przywraca wcześniej dołączone harmonogram jako bieżącego harmonogramu, jeśli taka istnieje. Po powrocie z tej metody, kontekst wywołania jest wtedy zarządzana przez harmonogram, który wcześniej był dołączony do kontekstu za pomocą `CurrentScheduler::Create` lub `Scheduler::Attach` metody.|  
-|[Pobierz](#get)|Zwraca wskaźnik do harmonogramu, skojarzone z wywołania kontekstem, nazywane również bieżącego harmonogramu.|  
+|[Get](#get)|Zwraca wskaźnik do harmonogramu, skojarzone z wywołania kontekstem, nazywane również bieżącego harmonogramu.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Zwraca bieżącą liczbę procesorów wirtualnych harmonogramu, skojarzone z kontekstem wywołującego.|  
 |[GetPolicy](#getpolicy)|Zwraca kopię bieżącego harmonogramu utworzony za pomocą zasad.|  
-|[Identyfikator](#id)|Zwraca unikatowy identyfikator dla bieżącego harmonogramu.|  
+|[Id](#id)|Zwraca unikatowy identyfikator dla bieżącego harmonogramu.|  
 |[IsAvailableLocation](#isavailablelocation)|Określa, czy w danej lokalizacji jest dostępny w bieżącego harmonogramu.|  
 |[RegisterShutdownEvent](#registershutdownevent)|Powoduje, że obsługi zdarzeń systemu Windows przekazany `_ShutdownEvent` parametr, aby zostać zgłoszony, gdy harmonogramu, skojarzone z bieżącym kontekście zamyka i niszczy samej siebie. W czasie, które zdarzenie jest sygnalizowane wszystkie pracy, który miał zostało zaplanowane do harmonogramu zostanie zakończona. Za pomocą tej metody można zarejestrować wiele zdarzeń zamknięcia systemu.|  
 |[ScheduleTask](#scheduletask)|Przeciążone. Planuje lekki zadania w ramach harmonogramu, skojarzone z kontekstem wywołującego. Zadanie lekki zostaną umieszczone w grupie harmonogram określone przez środowisko uruchomieniowe. Wersja, która przyjmuje parametr `_Placement` powoduje zadania można ukierunkowane pod kątem wykonywania w określonej lokalizacji.|  
@@ -71,7 +75,7 @@ class CurrentScheduler;
   
  **Namespace:** współbieżności  
   
-##  <a name="create"></a>Utwórz 
+##  <a name="create">Utwórz</a> 
 
  Tworzy nowy harmonogram, w których zachowanie jest opisane przez `_Policy` parametru i dołącza go do kontekstu wywołania. Nowo utworzony harmonogram będzie bieżącego harmonogramu dla kontekstu wywołania.  
   
@@ -92,7 +96,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
   
  Ta metoda może zgłosić różne wyjątki, w tym [scheduler_resource_allocation_error —](scheduler-resource-allocation-error-class.md) i [invalid_scheduler_policy_value —](invalid-scheduler-policy-value-class.md).  
   
-##  <a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a> CreateScheduleGroup 
 
  Tworzy nową grupę harmonogramu w ramach harmonogramu, skojarzone z kontekstem wywołującego. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w grupie nowo utworzonego harmonogramu, aby być ukierunkowane pod kątem wykonywania w lokalizacji określonej w tym parametrze.  
   
@@ -116,7 +120,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
   
  Należy pamiętać, że jeśli utworzono jawnie tego harmonogramu, trzeba zwolnić wszystkie odwołania można zaplanować grup, to przed zwolnieniem użytkownikowi w harmonogramie, przez odłączenie bieżącego kontekstu z niego.  
   
-##  <a name="detach"></a>Odłączanie 
+##  <a name="detach"></a> Odłączanie 
 
  Odłącza bieżącego harmonogramu z kontekstu wywołania i przywraca wcześniej dołączone harmonogram jako bieżącego harmonogramu, jeśli taka istnieje. Po powrocie z tej metody, kontekst wywołania jest wtedy zarządzana przez harmonogram, który wcześniej był dołączony do kontekstu za pomocą `CurrentScheduler::Create` lub `Scheduler::Attach` metody.  
   
@@ -131,7 +135,7 @@ static void __cdecl Detach();
   
  Wywołanie tej metody z kontekstu jest wewnętrzny i zarządzane przez harmonogramu lub kontekst dołączonego przy użyciu metody inne niż [Scheduler::Attach](scheduler-class.md#attach) lub [CurrentScheduler::Create](#create) metod wynikiem będzie [improper_scheduler_detach —](improper-scheduler-detach-class.md) zgłaszanego wyjątku.  
   
-##  <a name="get"></a>Pobierz 
+##  <a name="get"></a> Pobierz 
 
  Zwraca wskaźnik do harmonogramu, skojarzone z wywołania kontekstem, nazywane również bieżącego harmonogramu.  
   
@@ -145,7 +149,7 @@ static Scheduler* __cdecl Get();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda spowoduje procesu domyślnego harmonogramu są tworzone i/lub dołączyć do wywoływania kontekstu, jeśli nie harmonogramu aktualnie skojarzony z kontekstem wywoływania. Żadne dodatkowe odwołanie jest umieszczona na `Scheduler` obiektu zwróconego przez tę metodę.  
   
-##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors">GetNumberOfVirtualProcessors</a> 
 
  Zwraca bieżącą liczbę procesorów wirtualnych harmonogramu, skojarzone z kontekstem wywołującego.  
   
@@ -161,7 +165,7 @@ static unsigned int __cdecl GetNumberOfVirtualProcessors();
   
  Wartość zwrócona przez tę metodę jest natychmiastowe próbkowania liczba procesorów wirtualnych harmonogramu, skojarzone z kontekstem wywołującego. Ta wartość może być nieodświeżona moment, który jest zwracany.  
   
-##  <a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a> GetPolicy 
 
  Zwraca kopię bieżącego harmonogramu utworzony za pomocą zasad.  
   
@@ -175,7 +179,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda spowoduje procesu domyślnego harmonogramu są tworzone i/lub dołączyć do wywoływania kontekstu, jeśli nie harmonogramu aktualnie skojarzony z kontekstem wywoływania.  
   
-##  <a name="id"></a>Identyfikator 
+##  <a name="id"></a> Id 
 
  Zwraca unikatowy identyfikator dla bieżącego harmonogramu.  
   
@@ -189,7 +193,7 @@ static unsigned int __cdecl Id();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda nie spowoduje załącznika harmonogramu, jeśli kontekst wywołania nie jest już skojarzony z harmonogramu.  
   
-##  <a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a> IsAvailableLocation 
 
  Określa, czy w danej lokalizacji jest dostępny w bieżącego harmonogramu.  
   
@@ -209,7 +213,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
   
  Należy pamiętać, że wartość zwracana natychmiastowe próbkowania czy dostępny jest danej lokalizacji. Obecności wielu planiści dynamiczne zarządzanie zasobami można dodawać lub odebranie zasobów z planiści w dowolnym momencie. Powinno się to zdarzyć, danej lokalizacji można zmienić dostępności.  
   
-##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a> RegisterShutdownEvent 
 
  Powoduje, że obsługi zdarzeń systemu Windows przekazany `_ShutdownEvent` parametr, aby zostać zgłoszony, gdy harmonogramu, skojarzone z bieżącym kontekście zamyka i niszczy samej siebie. W czasie, które zdarzenie jest sygnalizowane wszystkie pracy, który miał zostało zaplanowane do harmonogramu zostanie zakończona. Za pomocą tej metody można zarejestrować wiele zdarzeń zamknięcia systemu.  
   
@@ -224,7 +228,7 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ### <a name="remarks"></a>Uwagi  
  Jeśli nie ma żadnych harmonogramu dołączyć do kontekstu wywołania, wywołanie tej metody spowoduje [scheduler_not_attached —](scheduler-not-attached-class.md) zgłaszanego wyjątku.  
   
-##  <a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  Planuje lekki zadania w ramach harmonogramu, skojarzone z kontekstem wywołującego. Zadanie lekki zostaną umieszczone w grupie harmonogram określone przez środowisko uruchomieniowe. Wersja, która przyjmuje parametr `_Placement` powoduje zadania można ukierunkowane pod kątem wykonywania w określonej lokalizacji.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::grab
 - amp_short_vectors/Concurrency::graphics::norm_4::agrb
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::get_wzy
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3fd224633ae41fcdfdae09f4fe2f7de97e0b3836
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e15af7601483fd1d69462291c9c45dc62b5aded4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="norm4-class"></a>norm_4 — Klasa
 Reprezentuje krótki wektor czterech liczb normalnego.  
@@ -459,8 +462,8 @@ class norm_4;
 |norm_4::operator * =||  
 |norm_4::operator / =||  
 |norm_4::operator ++||  
-|norm_4::operator +=||  
-|norm_4::operator =||  
+|norm_4::operator+=||  
+|norm_4::operator=||  
 |norm_4::operator-=||  
   
 ### <a name="public-constants"></a>Publiczny — stałe  
@@ -490,12 +493,12 @@ class norm_4;
 |norm_4::ARG||  
 |norm_4::ARGB||  
 |norm_4::b||  
-|norm_4::BA||  
+|norm_4::ba||  
 |norm_4::bag||  
 |norm_4::bagr||  
 |norm_4::bar||  
 |norm_4::barg||  
-|norm_4::BG||  
+|norm_4::bg||  
 |norm_4::bga||  
 |norm_4::bgar||  
 |norm_4::BGR||  
@@ -507,15 +510,15 @@ class norm_4;
 |norm_4::brga||  
 |norm_4::g||  
 |norm_4::ga||  
-|norm_4::GAB||  
+|norm_4::gab||  
 |norm_4::gabr||  
 |norm_4::gar||  
 |norm_4::garb||  
-|norm_4::GB||  
-|norm_4::GBA||  
+|norm_4::gb||  
+|norm_4::gba||  
 |norm_4::gbar||  
 |norm_4::GBR||  
-|norm_4::GBRA||  
+|norm_4::gbra||  
 |norm_4::GR||  
 |norm_4::gra||  
 |norm_4::grab||  
@@ -527,15 +530,15 @@ class norm_4;
 |norm_4::rabg||  
 |norm_4::rag||  
 |norm_4::ragb||  
-|norm_4::RB||  
+|norm_4::rb||  
 |norm_4::rba||  
 |norm_4::rbag||  
-|norm_4::RBG||  
+|norm_4::rbg||  
 |norm_4::rbga||  
-|norm_4::RG||  
+|norm_4::rg||  
 |norm_4::rga||  
 |norm_4::rgab||  
-|norm_4::RGB||  
+|norm_4::rgb||  
 |norm_4::rgba||  
 |norm_4::w||  
 |norm_4::wx||  
@@ -546,9 +549,9 @@ class norm_4;
 |norm_4::Wy||  
 |norm_4::wyx||  
 |norm_4::wyxz||  
-|norm_4::WYZ||  
+|norm_4::wyz||  
 |norm_4::wyzx||  
-|norm_4::wZ||  
+|norm_4::wz||  
 |norm_4::wzx||  
 |norm_4::wzxy||  
 |norm_4::wzy||  
@@ -591,7 +594,7 @@ class norm_4;
 |norm_4::zwxy||  
 |norm_4::zwy||  
 |norm_4::zwyx||  
-|norm_4::ZX||  
+|norm_4::zx||  
 |norm_4::zxw||  
 |norm_4::zxwy||  
 |norm_4::zxy||  
@@ -610,7 +613,7 @@ class norm_4;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>norm_4 — 
+##  <a name="ctor"></a> norm_4 — 
 
  Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
   
@@ -702,7 +705,7 @@ explicit inline norm_4(
  `_Other`  
  Obiekt używany do inicjowania.  
   
-##  <a name="norm_4__size"></a>rozmiar 
+##  <a name="norm_4__size"></a> Rozmiar 
 
 ```  
 static const int size = 4;  

@@ -5,29 +5,31 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7338e634c7ce10b06e7b599494ed934942febe42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d360a322cdc4ae82ebded5a441152a075e8a5fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Funkcje przestrzeń nazw CONCURRENCY::Graphics
 |||  
 |-|-|  
-|[Kopiuj](#copy)|[copy_async —](#copy_async)|  
+|[copy](#copy)|[copy_async](#copy_async)|  
   
-##  <a name="copy"></a>copy — funkcja (Namespace Concurrency::graphics)  
+##  <a name="copy"></a>  copy — funkcja (Namespace Concurrency::graphics)  
  Kopiuje tekstury źródła do buforu docelowego lub kopiuje bufor źródłowy do bufor docelowy. Formularz ogólny tej funkcji jest `copy(src, dest)`.  
   
 ```  
@@ -173,7 +175,7 @@ void copy (
  `last`  
  Końcowy iteratora w kontenerze źródła.  
   
-##  <a name="copy_async"></a>copy_async — funkcja (Namespace Concurrency::graphics)  
+##  <a name="copy_async"></a>  copy_async — funkcja (Namespace Concurrency::graphics)  
  Asynchronicznie kopiuje tekstury źródła do bufor docelowy, lub kopiuje bufor źródłowy do bufor docelowy, a następnie zwraca [completion_future](completion-future-class.md) obiekt, który może być obsługiwane. Nie można skopiować danych, gdy kod działa z akceleratora. Formularz ogólny tej funkcji jest `copy(src, dest)`.  
   
 ```  

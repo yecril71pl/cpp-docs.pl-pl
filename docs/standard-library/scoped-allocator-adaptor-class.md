@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor
 - scoped_allocator/std::scoped_allocator_adaptor::rebind Struct
@@ -18,7 +19,8 @@ f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor::max_size
 - scoped_allocator/std::scoped_allocator_adaptor::outer_allocator
 - scoped_allocator/std::scoped_allocator_adaptor::select_on_container_copy_construction
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::scoped_allocator_adaptor
 - std::scoped_allocator_adaptor::allocate
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 66c188c490861e0b632791755b2d9914a7919865
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fcfc9d5ca7b988be2dad0451aa2f58aacd15c789
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor — klasa
 Reprezentuje gniazdo allocators —.  
@@ -52,7 +55,7 @@ class scoped_allocator_adaptor;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Klasy szablonów hermetyzuje gniazdo allocators — jeden lub więcej. Każda takie klasa ma peryferyjnych alokatora typu `outer_allocator_type`, synonimem `Outer`, który jest publiczny podstawą `scoped_allocator_adaptor` obiektu. `Outer`Służy do przydzielenia pamięci, który będzie używany przez kontener. Odwołanie do tego obiektu podstawowego alokatora można uzyskać przez wywołanie metody `outer_allocator`.  
+ Klasy szablonów hermetyzuje gniazdo allocators — jeden lub więcej. Każda takie klasa ma peryferyjnych alokatora typu `outer_allocator_type`, synonimem `Outer`, który jest publiczny podstawą `scoped_allocator_adaptor` obiektu. `Outer` Służy do przydzielenia pamięci, który będzie używany przez kontener. Odwołanie do tego obiektu podstawowego alokatora można uzyskać przez wywołanie metody `outer_allocator`.  
   
  W pozostałej części zestawu ma typ `inner_allocator_type`. Wewnętrzny program przydzielania służy można przydzielić pamięci dla elementów w kontenerze. Odwołanie do składowanej obiektu tego typu można uzyskać przez wywołanie metody `inner_allocator`. Jeśli `Inner...` nie jest pusta, `inner_allocator_type` ma typ `scoped_allocator_adaptor<Inner...>`, i `inner_allocator` wyznacza obiektu elementu członkowskiego. W przeciwnym razie `inner_allocator_type` ma typ `scoped_allocator_adaptor<Outer>`, i `inner_allocator` wyznacza całego obiektu.  
   
@@ -76,7 +79,7 @@ class scoped_allocator_adaptor;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor —](#scoped_allocator_adaptor)|Konstruuje `scoped_allocator_adaptor` obiektu.|  
+|[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Konstruuje `scoped_allocator_adaptor` obiektu.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -99,16 +102,16 @@ class scoped_allocator_adaptor;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor::rebind — struktura](#rebind_struct)|Definiuje typ `Outer::rebind\<Other>::other` jako synonimem `scoped_allocator_adaptor\<Other, Inner...>`.|  
+|[scoped_allocator_adaptor::rebind Struct](#rebind_struct)|Definiuje typ `Outer::rebind\<Other>::other` jako synonimem `scoped_allocator_adaptor\<Other, Inner...>`.|  
   
 ### <a name="methods"></a>Metody  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[allocate](#allocate)|Przydziela pamięć przy użyciu `Outer` przydzielania.|  
-|[konstrukcja](#construct)|Tworzy obiekt.|  
-|[cofnięcie przydziału](#deallocate)|Cofa alokację obiektów, używając programu przydzielania zewnętrzne.|  
-|[Destroy](#destroy)|Niszczy określonego obiektu.|  
+|[construct](#construct)|Tworzy obiekt.|  
+|[Cofnięcie przydziału](#deallocate)|Cofa alokację obiektów, używając programu przydzielania zewnętrzne.|  
+|[destroy](#destroy)|Niszczy określonego obiektu.|  
 |[inner_allocator](#inner_allocator)|Pobiera odwołanie do obiektu przechowywanych typu `inner_allocator_type`.|  
 |[max_size](#max_size)|Określa maksymalną liczbę obiektów, które mogą zostać przydzieleni przez zewnętrzne przydzielania.|  
 |[outer_allocator](#outer_allocator)|Pobiera odwołanie do obiektu przechowywanych typu `outer_allocator_type`.|  
@@ -119,7 +122,7 @@ class scoped_allocator_adaptor;
   
  **Namespace:** Standard  
   
-##  <a name="allocate"></a>scoped_allocator_adaptor::allocate
+##  <a name="allocate"></a>  scoped_allocator_adaptor::allocate
  Przydziela pamięć przy użyciu `Outer` przydzielania.  
   
 ```cpp  
@@ -136,7 +139,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwszy funkcji członkowskiej `Outer_traits::allocate(outer_allocator(), count)`. Zwraca drugie funkcji członkowskiej `Outer_traits::allocate(outer_allocator(), count, hint)`.  
   
-##  <a name="construct"></a>scoped_allocator_adaptor::Construct
+##  <a name="construct"></a>  scoped_allocator_adaptor::Construct
  Tworzy obiekt.  
   
 ```cpp  
@@ -197,7 +200,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
   
  Szóstego metody działa tak samo jak `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`.  
   
-##  <a name="deallocate"></a>scoped_allocator_adaptor::deallocate
+##  <a name="deallocate"></a>  scoped_allocator_adaptor::deallocate
  Cofa alokację obiektów, używając programu przydzielania zewnętrzne.  
   
 ```cpp  
@@ -211,7 +214,7 @@ void deallocate(pointer ptr, size_type count);
  `count`  
  Liczba obiektów można cofnąć alokacji.  
   
-##  <a name="destroy"></a>scoped_allocator_adaptor::Destroy
+##  <a name="destroy"></a>  scoped_allocator_adaptor::Destroy
  Niszczy określonego obiektu.  
   
 ```cpp  
@@ -226,7 +229,7 @@ void destroy(Ty* ptr)
 ### <a name="return-value"></a>Wartość zwracana  
  `Outermost_traits::destroy(OUTERMOST(*this), ptr)`  
   
-##  <a name="inner_allocator"></a>scoped_allocator_adaptor::inner_allocator
+##  <a name="inner_allocator"></a>  scoped_allocator_adaptor::inner_allocator
  Pobiera odwołanie do obiektu przechowywanych typu `inner_allocator_type`.  
   
 ```cpp  
@@ -237,7 +240,7 @@ const inner_allocator_type& inner_allocator() const noexcept;
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do obiektu przechowywanych typu `inner_allocator_type`.  
   
-##  <a name="max_size"></a>scoped_allocator_adaptor::max_size
+##  <a name="max_size"></a>  scoped_allocator_adaptor::max_size
  Określa maksymalną liczbę obiektów, które mogą zostać przydzieleni przez zewnętrzne przydzielania.  
   
 ```cpp  
@@ -247,7 +250,7 @@ size_type max_size();
 ### <a name="return-value"></a>Wartość zwracana  
  `Outer_traits::max_size(outer_allocator())`  
   
-##  <a name="outer_allocator"></a>scoped_allocator_adaptor::outer_allocator
+##  <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator
  Pobiera odwołanie do obiektu przechowywanych typu `outer_allocator_type`.  
   
 ```cpp  
@@ -258,7 +261,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do obiektu przechowywanych typu `outer_allocator_type`.  
   
-##  <a name="rebind_struct"></a>scoped_allocator_adaptor::rebind — struktura  
+##  <a name="rebind_struct"></a>  scoped_allocator_adaptor::rebind — struktura  
  Definiuje typ `Outer::rebind\<Other>::other` jako synonimem `scoped_allocator_adaptor\<Other, Inner...>`.  
   
 {ponowne wiązanie — struktura  
@@ -267,7 +270,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
    scoped_allocator_adaptor — TypeDef\<Other_alloc, wewnętrzny... > innych;  
    };  
   
-##  <a name="scoped_allocator_adaptor"></a>scoped_allocator_adaptor::scoped_allocator_adaptor — Konstruktor  
+##  <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor — Konstruktor  
  Konstruuje `scoped_allocator_adaptor` obiektu.  
   
 ```cpp  
@@ -298,7 +301,7 @@ scoped_allocator_adaptor(Outer2&& al,
 ### <a name="remarks"></a>Uwagi  
  Pierwszy domyślnego konstruktora tworzy alokatora przechowywanych przez nią obiektów. Konstruuje każdego z trzech kolejnych konstruktorów jego obiektów przechowywanych alokatora z odpowiednimi obiektami w `right`. Ostatni konstruktora tworzy jej obiektów przechowywanych alokatora z odpowiedniego argumentów listy argumentów.  
   
-##  <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor::select_on_container_copy_construction
+##  <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction
  Tworzy nowy `scoped_allocator_adaptor` obiektu z każdego obiektu przechowywanych alokatora inicjowany przez wywołanie `select_on_container_copy_construction` dla każdego odpowiedniego przydzielania.  
   
 ```cpp  

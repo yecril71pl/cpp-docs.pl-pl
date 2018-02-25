@@ -4,29 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __movsd
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __movsd
+dev_langs:
+- C++
 helpviewer_keywords:
 - rep movsd instruction
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 95b5b3f729a6fe9b039b33b5a2c0169dd7e34c43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8d78551e7423609e435670a28af802335d2fee4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="movsd"></a>__movsd
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Generuje ciąg Przenieś (`rep movsd`) instrukcji.  
   
@@ -41,20 +45,20 @@ void __movsd(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`Dest`  
+ [out] `Dest`  
  Miejsce docelowe operacji.  
   
- [in]`Source`  
+ [in] `Source`  
  Źródło operacji.  
   
- [in]`Count`  
+ [in] `Count`  
  Liczba doublewords do skopiowania.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |— Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__movsd`|x86,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **Plik nagłówka** \<intrin.h >  
   

@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-object-model"></a>Model obiektów OLE DB
 Model obiektów OLE DB obejmuje następujące składniki lub obiektów. Pierwsze cztery obiektów lub wymienione składniki (źródeł danych, sesji, poleceń i zestawy wierszy) umożliwiają połączenie ze źródłem danych i go wyświetlać. Rest, począwszy od metody dostępu, odnoszą się do pracy z danymi, gdy jest on wyświetlany.  
@@ -55,7 +57,7 @@ Model obiektów OLE DB obejmuje następujące składniki lub obiektów. Pierwsze
 ## <a name="accessors"></a>Metody dostępu  
  Tylko OLE DB korzysta z koncepcji metody dostępu. Metody dostępu opisano, jak dane są przechowywane w konsumenta. Zawiera zestaw powiązania (nazywane mapowania kolumn) między polami wierszy (kolumny) i deklaracji w konsumencie elementy członkowskie danych.  
   
-##  <a name="vcconoledbcomponents_transactions"></a>Transakcje  
+##  <a name="vcconoledbcomponents_transactions"></a> Transakcje  
  Obiekty transakcji są używane, gdy zatwierdzanie lub przerywanie transakcji zagnieżdżonych w innych niż względem najniższego poziomu. Transakcja jest jednostka pracy niepodzielnych, zdefiniowany przez test kwasu. KWAS to:  
   
 -   Niepodzielność: nie można podzielić na mniejsze jednostki pracy.  

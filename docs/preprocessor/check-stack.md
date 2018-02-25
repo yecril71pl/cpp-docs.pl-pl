@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.check_stack
 - check_stack_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - check_stack pragma
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e48952788e7bbef86ade1177ce243da503ec8b9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 70f88d1eabb58f384d754803674b35f0bd9dbeda
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="checkstack"></a>check_stack
 Instruuje kompilator, aby wyłączyć sondy stosu **poza** (lub  **-** ) jest określona, lub Włącz sondy stosu, jeśli **na** (lub  **+** ) został określony.  
@@ -47,8 +50,8 @@ Instruuje kompilator, aby wyłączyć sondy stosu **poza** (lub  **-** ) jest ok
   
 |Składnia|Skompilowane z<br /><br /> Opcja/GS?|Akcja|  
 |------------|------------------------------------|------------|  
-|**(#pragma check_stack —)** lub<br /><br /> **check_stack — #pragma**|Tak|Wyłącza funkcje, które należy wykonać sprawdzanie stosu|  
-|**(#pragma check_stack —)** lub<br /><br /> **check_stack — #pragma**|Nie|Włącza sprawdzanie stosu dla funkcji, które należy wykonać|  
+|**(#pragma check_stack —)** lub<br /><br /> **#pragma check_stack**|Tak|Wyłącza funkcje, które należy wykonać sprawdzanie stosu|  
+|**(#pragma check_stack —)** lub<br /><br /> **#pragma check_stack**|Nie|Włącza sprawdzanie stosu dla funkcji, które należy wykonać|  
 |**#pragma check_stack(on)**<br /><br /> lub **check_stack — #pragma +**|Tak lub nie|Włącza sprawdzanie stosu dla funkcji, które należy wykonać|  
 |**#pragma check_stack(off)**<br /><br /> lub **check_stack — #pragma -**|Tak lub nie|Wyłącza funkcje, które należy wykonać sprawdzanie stosu|  
   

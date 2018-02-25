@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
 - amp_math/Concurrency::precise_math::acosh
@@ -94,69 +94,71 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::tgamma
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 02a792717690215c572089f11525f1f92c0e90e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>CONCURRENCY::precise_math — przestrzeń nazw funkcji
 ||||  
 |-|-|-|  
-|[ACOS](#acos)|[acosf —](#acosf)|[ACOSH](#acosh)|  
-|[acoshf —](#acoshf)|[ASIN](#asin)|[asinf —](#asinf)|  
-|[ASINH](#asinh)|[asinhf —](#asinhf)|[ATAN](#atan)|  
-|[ATAN2](#atan2)|[atan2f —](#atan2f)|[atanf —](#atanf)|  
-|[ATANH](#atanh)|[atanhf —](#atanhf)|[cbrt —](#cbrt)|  
-|[cbrtf —](#cbrtf)|[ceil](#ceil)|[ceilf —](#ceilf)|  
-|[copysign —](#copysign)|[copysignf —](#copysignf)|[COS](#cos)|  
-|[cosf —](#cosf)|[COSH](#cosh)|[coshf —](#coshf)|  
-|[cospi —](#cospi)|[cospif —](#cospif)|[ERF](#erf)|  
-|[ERFC](#erfc)|[erfcf —](#erfcf)|[erfcinv —](#erfcinv)|  
-|[erfcinvf —](#erfcinvf)|[erff —](#erff)|[erfinv —](#erfinv)|  
-|[erfinvf —](#erfinvf)|[EXP](#exp)|[exp10 —](#exp10)|  
-|[exp10f —](#exp10f)|[exp2 —](#exp2)|[exp2f —](#exp2f)|  
-|[expf —](#expf)|[expm1 —](#expm1)|[expm1f —](#expm1f)|  
+|[ACOS](#acos)|[acosf](#acosf)|[ACOSH](#acosh)|  
+|[acoshf](#acoshf)|[ASIN](#asin)|[asinf —](#asinf)|  
+|[ASINH](#asinh)|[asinhf](#asinhf)|[atan](#atan)|  
+|[atan2](#atan2)|[atan2f](#atan2f)|[atanf](#atanf)|  
+|[atanh](#atanh)|[atanhf](#atanhf)|[cbrt](#cbrt)|  
+|[cbrtf](#cbrtf)|[ceil](#ceil)|[ceilf](#ceilf)|  
+|[copysign —](#copysign)|[copysignf](#copysignf)|[COS](#cos)|  
+|[cosf](#cosf)|[COSH](#cosh)|[coshf](#coshf)|  
+|[cospi](#cospi)|[cospif](#cospif)|[erf](#erf)|  
+|[erfc](#erfc)|[erfcf](#erfcf)|[erfcinv](#erfcinv)|  
+|[erfcinvf](#erfcinvf)|[erff](#erff)|[erfinv —](#erfinv)|  
+|[erfinvf](#erfinvf)|[EXP](#exp)|[exp10](#exp10)|  
+|[exp10f](#exp10f)|[exp2](#exp2)|[exp2f](#exp2f)|  
+|[expf](#expf)|[expm1 —](#expm1)|[expm1f](#expm1f)|  
 |[fabs —](#fabs)|[fabsf —](#fabsf)|[FLOOR](#floor)| 
-|[fdim —](#fdim)|[fdimf —](#fdimf)|| 
-|[floorf —](#floorf)|[FMA](#fma)|[fmaf —](#fmaf)|
-[Fmax](#fmax)|[fmaxf —](#fmaxf)|| 
-|[Fmin —](#fmin)|[fminf —](#fminf)|[fmod —](#fmod)|  
-|[fmodf —](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|  
-|[frexpf —](#frexpf)|[hypot —](#hypot)|[hypotf —](#hypotf)|  
-|[ilogb —](#ilogb)|[ilogbf —](#ilogbf)|[isfinite](#isfinite)|  
-|[isinf —](#isinf)|[isNaN](#isnan)|[isnormal —](#isnormal)|  
-|[ldexp](#ldexp)|[ldexpf —](#ldexpf)|[lgamma —](#lgamma)|  
-|[lgammaf —](#lgammaf)|[Dziennik](#log)|[LOG10](#log10)|  
-|[log10f —](#log10f)|[log1p —](#log1p)|[log1pf —](#log1pf)|  
-|[log2](#log2)|[log2f —](#log2f)|[logb —](#logb)|  
-|[logbf —](#logbf)|[logf —](#logf)|[modf —](#modf)|  
-|[modff —](#modff)|[NaN](#nan)|[nanf —](#nanf)|  
-|[nearbyint —](#nearbyint)|[nearbyintf —](#nearbyintf)|[nextafter —](#nextafter)|  
-|[nextafterf —](#nextafterf)|[Fi](#phi)|[phif —](#phif)|  
-|[Pow](#pow)|[powf —](#powf)|[probit —](#probit)|  
-|[probitf —](#probitf)|[rcbrt —](#rcbrt)|[rcbrtf —](#rcbrtf)|  
-|[pozostałe](#remainder)|[remainderf —](#remainderf)|[remquo —](#remquo)|  
-|[remquof —](#remquof)|[ROUND](#round)|[roundf —](#roundf)|  
-|[rsqrt —](#rsqrt)|[rsqrtf —](#rsqrtf)|[scalb —](#scalb)|  
-|[scalbf —](#scalbf)|[scalbn —](#scalbn)|[scalbnf —](#scalbnf)|  
-|[signbit —](#signbit)|[signbitf —](#signbitf)|[SIN](#sin)|  
-|[sincos —](#sincos)|[sincosf —](#sincosf)|[sinf —](#sinf)|  
-|[SINH](#sinh)|[sinhf —](#sinhf)|[sinpi —](#sinpi)|  
-|[sinpif —](#sinpif)|[SQRT](#sqrt)|[sqrtf —](#sqrtf)|  
+|[fdim](#fdim)|[fdimf](#fdimf)|| 
+|[floorf](#floorf)|[fma](#fma)|[fmaf](#fmaf)|
+[fmax](#fmax)|[fmaxf](#fmaxf)|| 
+|[fmin](#fmin)|[fminf](#fminf)|[fmod —](#fmod)|  
+|[fmodf](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|  
+|[frexpf](#frexpf)|[hypot](#hypot)|[hypotf](#hypotf)|  
+|[ilogb](#ilogb)|[ilogbf](#ilogbf)|[isfinite](#isfinite)|  
+|[isinf](#isinf)|[isnan](#isnan)|[isnormal —](#isnormal)|  
+|[ldexp](#ldexp)|[ldexpf](#ldexpf)|[lgamma](#lgamma)|  
+|[lgammaf](#lgammaf)|[log](#log)|[log10](#log10)|  
+|[log10f](#log10f)|[log1p](#log1p)|[log1pf](#log1pf)|  
+|[log2](#log2)|[log2f](#log2f)|[logb](#logb)|  
+|[logbf](#logbf)|[logf](#logf)|[modf](#modf)|  
+|[modff](#modff)|[nan](#nan)|[nanf](#nanf)|  
+|[nearbyint](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter](#nextafter)|  
+|[nextafterf](#nextafterf)|[Fi](#phi)|[phif](#phif)|  
+|[Pow](#pow)|[powf](#powf)|[probit —](#probit)|  
+|[probitf](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|  
+|[remainder](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|  
+|[remquof](#remquof)|[ROUND](#round)|[roundf](#roundf)|  
+|[rsqrt](#rsqrt)|[rsqrtf](#rsqrtf)|[scalb](#scalb)|  
+|[scalbf](#scalbf)|[scalbn](#scalbn)|[scalbnf](#scalbnf)|  
+|[signbit](#signbit)|[signbitf](#signbitf)|[sin](#sin)|  
+|[sincos —](#sincos)|[sincosf](#sincosf)|[sinf](#sinf)|  
+|[SINH](#sinh)|[sinhf](#sinhf)|[sinpi —](#sinpi)|  
+|[sinpif](#sinpif)|[sqrt](#sqrt)|[sqrtf](#sqrtf)|  
 |[tan](#tan)|[tanf —](#tanf)|[TANH](#tanh)|  
-|[tanhf —](#tanhf)|[tanpi —](#tanpi)|[tanpif —](#tanpif)|  
-|[tgamma —](#tgamma)|[tgammaf —](#tgammaf)|[TRUNC —](#trunc)|  
-|[truncf —](#truncf)|  
+|[tanhf](#tanhf)|[tanpi —](#tanpi)|[tanpif —](#tanpif)|  
+|[tgamma](#tgamma)|[tgammaf](#tgammaf)|[TRUNC —](#trunc)|  
+|[truncf](#truncf)|  
   
-##  <a name="acos"></a>ACOS  
+##  <a name="acos">ACOS</a>  
  Oblicza cosinus argumentu  
   
 ```  
@@ -173,7 +175,7 @@ inline double acos(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus cosinus wartość argumentu  
   
-##  <a name="acosf"></a>acosf —  
+##  <a name="acosf"></a>  acosf —  
  Oblicza cosinus argumentu  
   
 ```  
@@ -187,7 +189,7 @@ inline float acosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus cosinus wartość argumentu  
   
-##  <a name="acosh"></a>ACOSH  
+##  <a name="acosh">ACOSH</a>  
  Oblicza cosinus hiperboliczny argumentu  
   
 ```  
@@ -204,7 +206,7 @@ inline double acosh(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotny cosinus hiperboliczny wartość argumentu  
   
-##  <a name="acoshf"></a>acoshf —  
+##  <a name="acoshf"></a>  acoshf —  
  Oblicza cosinus hiperboliczny argumentu  
   
 ```  
@@ -218,7 +220,7 @@ inline float acoshf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotny cosinus hiperboliczny wartość argumentu  
   
-##  <a name="asin"></a>ASIN  
+##  <a name="asin">ASIN</a>  
  Oblicza sinus argumentu  
   
 ```  
@@ -235,7 +237,7 @@ inline double asin(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus sinus wartość argumentu  
   
-##  <a name="asinf"></a>asinf —  
+##  <a name="asinf">asinf —</a>  
  Oblicza sinus argumentu  
   
 ```  
@@ -249,7 +251,7 @@ inline float asinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus sinus wartość argumentu  
   
-##  <a name="asinh"></a>ASINH  
+##  <a name="asinh">ASINH</a>  
  Oblicza sinus hiperboliczny argumentu  
   
 ```  
@@ -266,7 +268,7 @@ inline double asinh(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotny sinus hiperboliczny wartość argumentu  
   
-##  <a name="asinhf"></a>asinhf —  
+##  <a name="asinhf"></a>  asinhf —  
  Oblicza sinus hiperboliczny argumentu  
   
 ```  
@@ -280,7 +282,7 @@ inline float asinhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotny sinus hiperboliczny wartość argumentu  
   
-##  <a name="atan"></a>ATAN  
+##  <a name="atan"></a>  ATAN  
  Oblicza tangens argumentu  
   
 ```  
@@ -297,7 +299,7 @@ inline double atan(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus tangens wartość argumentu  
   
-##  <a name="atan2"></a>ATAN2  
+##  <a name="atan2"></a>  ATAN2  
  Oblicza tangens _Y/_X  
   
 ```  
@@ -321,7 +323,7 @@ inline double atan2(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus tangens wartość _Y/_X  
   
-##  <a name="atan2f"></a>atan2f —  
+##  <a name="atan2f"></a>  atan2f —  
  Oblicza tangens _Y/_X  
   
 ```  
@@ -340,7 +342,7 @@ inline float atan2f(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus tangens wartość _Y/_X  
   
-##  <a name="atanf"></a>atanf —  
+##  <a name="atanf"></a>  atanf —  
  Oblicza tangens argumentu  
   
 ```  
@@ -354,7 +356,7 @@ inline float atanf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus tangens wartość argumentu  
   
-##  <a name="atanh"></a>ATANH  
+##  <a name="atanh"></a>  ATANH  
  Oblicza tangens hiperboliczny argumentu  
   
 ```  
@@ -371,7 +373,7 @@ inline double atanh(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotny wartość tangens hiperboliczny argumentu  
   
-##  <a name="atanhf"></a>atanhf —  
+##  <a name="atanhf"></a>  atanhf —  
  Oblicza tangens hiperboliczny argumentu  
   
 ```  
@@ -385,7 +387,7 @@ inline float atanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotny wartość tangens hiperboliczny argumentu  
   
-##  <a name="cbrt"></a>cbrt —  
+##  <a name="cbrt"></a>  cbrt —  
  Oblicza pierwiastek modułu rzeczywistego argumentu  
   
 ```  
@@ -402,7 +404,7 @@ inline double cbrt(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwiastek modułu rzeczywistego argumentu  
   
-##  <a name="cbrtf"></a>cbrtf —  
+##  <a name="cbrtf"></a>  cbrtf —  
  Oblicza pierwiastek modułu rzeczywistego argumentu  
   
 ```  
@@ -416,7 +418,7 @@ inline float cbrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwiastek modułu rzeczywistego argumentu  
   
-##  <a name="ceil"></a>ceil  
+##  <a name="ceil"></a>  ceil  
  Oblicza Zaokrąglenie w górę argument  
   
 ```  
@@ -433,7 +435,7 @@ inline double ceil(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca limitu argumentu  
   
-##  <a name="ceilf"></a>ceilf —  
+##  <a name="ceilf"></a>  ceilf —  
  Oblicza Zaokrąglenie w górę argument  
   
 ```  
@@ -447,7 +449,7 @@ inline float ceilf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca limitu argumentu  
   
-##  <a name="copysign"></a>copysign —  
+##  <a name="copysign">copysign —</a>  
  Tworzy wartość o wielkości _X oraz znak _Y  
   
 ```  
@@ -471,7 +473,7 @@ inline double copysign(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość o wielkości _X oraz znak _Y  
   
-##  <a name="copysignf"></a>copysignf —  
+##  <a name="copysignf"></a>  copysignf —  
  Tworzy wartość o wielkości _X oraz znak _Y  
   
 ```  
@@ -490,7 +492,7 @@ inline float copysignf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość o wielkości _X oraz znak _Y  
   
-##  <a name="cos"></a>COS  
+##  <a name="cos">COS</a>  
  Oblicza cosinus argumentu  
   
 ```  
@@ -507,7 +509,7 @@ inline double cos(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca cosinus wartość argumentu  
   
-##  <a name="cosf"></a>cosf —  
+##  <a name="cosf"></a>  cosf —  
  Oblicza cosinus argumentu  
   
 ```  
@@ -521,7 +523,7 @@ inline float cosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca cosinus wartość argumentu  
   
-##  <a name="cosh"></a>COSH  
+##  <a name="cosh">COSH</a>  
  Oblicza cosinus hiperboliczny wartość argumentu  
   
 ```  
@@ -538,7 +540,7 @@ inline double cosh(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca cosinus hiperboliczny wartość argumentu  
   
-##  <a name="coshf"></a>coshf —  
+##  <a name="coshf"></a>  coshf —  
  Oblicza cosinus hiperboliczny wartość argumentu  
   
 ```  
@@ -552,7 +554,7 @@ inline float coshf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca cosinus hiperboliczny wartość argumentu  
   
-##  <a name="cospi"></a>cospi —  
+##  <a name="cospi"></a>  cospi —  
  Oblicza cosinus wartość liczby pi * _X  
   
 ```  
@@ -569,7 +571,7 @@ inline double cospi(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca cosinus wartość liczby pi * _X  
   
-##  <a name="cospif"></a>cospif —  
+##  <a name="cospif"></a>  cospif —  
  Oblicza cosinus wartość liczby pi * _X  
   
 ```  
@@ -583,7 +585,7 @@ inline float cospif(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca cosinus wartość liczby pi * _X  
   
-##  <a name="erf"></a>ERF  
+##  <a name="erf"></a>  ERF  
  Oblicza funkcji błąd _X  
   
 ```  
@@ -600,7 +602,7 @@ inline double erf(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca błąd funkcji _X  
   
-##  <a name="erfc"></a>ERFC  
+##  <a name="erfc"></a>  ERFC  
  Oblicza funkcji uzupełniające błąd _X  
   
 ```  
@@ -617,7 +619,7 @@ inline double erfc(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca błąd uzupełniające funkcję _X  
   
-##  <a name="erfcf"></a>erfcf —  
+##  <a name="erfcf"></a>  erfcf —  
  Oblicza funkcji uzupełniające błąd _X  
   
 ```  
@@ -631,7 +633,7 @@ inline float erfcf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca błąd uzupełniające funkcję _X  
   
-##  <a name="erfcinv"></a>erfcinv —  
+##  <a name="erfcinv"></a>  erfcinv —  
  Oblicza odwrotność błąd uzupełniające funkcję _X  
   
 ```  
@@ -648,7 +650,7 @@ inline double erfcinv(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotny błąd uzupełniające funkcję _X  
   
-##  <a name="erfcinvf"></a>erfcinvf —  
+##  <a name="erfcinvf"></a>  erfcinvf —  
  Oblicza odwrotność błąd uzupełniające funkcję _X  
   
 ```  
@@ -662,7 +664,7 @@ inline float erfcinvf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotny błąd uzupełniające funkcję _X  
   
-##  <a name="erff"></a>erff —  
+##  <a name="erff"></a>  erff —  
  Oblicza funkcji błąd _X  
   
 ```  
@@ -676,7 +678,7 @@ inline float erff(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca błąd funkcji _X  
   
-##  <a name="erfinv"></a>erfinv —  
+##  <a name="erfinv">erfinv —</a>  
  Oblicza błąd odwrotność funkcji _X  
   
 ```  
@@ -693,7 +695,7 @@ inline double erfinv(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotny błąd funkcji _X  
   
-##  <a name="erfinvf"></a>erfinvf —  
+##  <a name="erfinvf"></a>  erfinvf —  
  Oblicza błąd odwrotność funkcji _X  
   
 ```  
@@ -707,7 +709,7 @@ inline float erfinvf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotny błąd funkcji _X  
   
-##  <a name="exp10"></a>exp10 —  
+##  <a name="exp10"></a>  exp10 —  
  Oblicza base 10 wykładniczej argumentu  
   
 ```  
@@ -724,7 +726,7 @@ inline double exp10(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość base 10 wykładniczej argumentu  
   
-##  <a name="exp10f"></a>exp10f —  
+##  <a name="exp10f"></a>  exp10f —  
  Oblicza base 10 wykładniczej argumentu  
   
 ```  
@@ -738,7 +740,7 @@ inline float exp10f(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość base 10 wykładniczej argumentu  
   
-##  <a name="expm1"></a>expm1 —  
+##  <a name="expm1">expm1 —</a>  
  Oblicza wartość wykładniczą (podstawa e) argumentu, minus 1  
   
 ```  
@@ -755,7 +757,7 @@ inline double expm1(double exponent) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość wykładniczą (podstawa e) argumentu, minus 1  
   
-##  <a name="expm1f"></a>expm1f —  
+##  <a name="expm1f"></a>  expm1f —  
  Oblicza wartość wykładniczą (podstawa e) argumentu, minus 1  
   
 ```  
@@ -769,7 +771,7 @@ inline float expm1f(float exponent) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość wykładniczą (podstawa e) argumentu, minus 1  
   
-##  <a name="exp"></a>EXP  
+##  <a name="exp">EXP</a>  
  Oblicza base e wykładniczej argumentu  
   
 ```  
@@ -786,7 +788,7 @@ inline double exp(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wykładniczej argumentu base-e  
   
-##  <a name="expf"></a>expf —  
+##  <a name="expf"></a>  expf —  
  Oblicza base e wykładniczej argumentu  
   
 ```  
@@ -800,7 +802,7 @@ inline float expf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wykładniczej argumentu base-e  
   
-##  <a name="exp2"></a>exp2 —  
+##  <a name="exp2"></a>  exp2 —  
  Oblicza base 2 wykładniczej argumentu  
   
 ```  
@@ -817,7 +819,7 @@ inline double exp2(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wykładniczej argumentu base-2  
   
-##  <a name="exp2f"></a>exp2f —  
+##  <a name="exp2f"></a>  exp2f —  
  Oblicza base 2 wykładniczej argumentu  
   
 ```  
@@ -831,7 +833,7 @@ inline float exp2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wykładniczej argumentu base-2  
   
-##  <a name="fabs"></a>fabs —  
+##  <a name="fabs">fabs —</a>  
  Zwraca wartość bezwzględną argumentu  
   
 ```  
@@ -848,7 +850,7 @@ inline double fabs(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość bezwzględną argumentu  
   
-##  <a name="fabsf"></a>fabsf —  
+##  <a name="fabsf">fabsf —</a>  
  Zwraca wartość bezwzględną argumentu  
   
 ```  
@@ -862,7 +864,7 @@ inline float fabsf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość bezwzględną argumentu  
 
-## <a name="fdim"></a>fdim —  
+## <a name="fdim"></a> fdim —  
 Oblicza dodatnią różnicę między argumentów.
 ```  
 inline float fdim(
@@ -875,13 +877,13 @@ inline double fdim(
 ) restrict(amp);
 ``` 
 ### <a name="parameters"></a>Parametry
-`_X`Wartość zmiennoprzecinkowa `_Y` wartości zmiennoprzecinkowych
+`_X` Wartość zmiennoprzecinkowa `_Y` wartości zmiennoprzecinkowych
 
 
 ### <a name="return-value"></a>Wartość zwracana
 Różnica między _X i _Y Jeśli _X jest większa niż _Y; w przeciwnym razie, + 0.
  
-## <a name="fdimf"></a>fdimf —  
+## <a name="fdimf"></a> fdimf —  
 Oblicza dodatnią różnicę między argumentów.
 ```
 inline float fdimf(
@@ -890,12 +892,12 @@ inline float fdimf(
 ) restrict(amp);
 ```
 ### <a name="parameters"></a>Parametry
-`_X`Wartość zmiennoprzecinkowa `_Y` wartości zmiennoprzecinkowych
+`_X` Wartość zmiennoprzecinkowa `_Y` wartości zmiennoprzecinkowych
 
 ### <a name="return-value"></a>Wartość zwracana
 Różnica między _X i _Y Jeśli _X jest większa niż _Y; w przeciwnym razie, + 0. 
   
-##  <a name="floor"></a>FLOOR  
+##  <a name="floor">FLOOR</a>  
  Oblicza Zaokrąglenie w dół argumentu  
   
 ```  
@@ -912,7 +914,7 @@ inline double floor(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca floor argumentu  
   
-##  <a name="floorf"></a>floorf —  
+##  <a name="floorf"></a>  floorf —  
  Oblicza Zaokrąglenie w dół argumentu  
   
 ```  
@@ -926,7 +928,7 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca floor argumentu  
 
-## <a name="a-namefma-fma"></a><a name="fma">FMA  
+## <a name="a-namefma-fma"></a><a name="fma"> fma  
 Oblicza iloczyn pierwszego i drugiego określone argumenty, a następnie dodaje trzeci argument określony dla wyniku; obliczenia całego odbywa się jako jedna operacja.
 ```
 inline float fma(
@@ -942,14 +944,14 @@ inline double fma(
 ) restrict(amp);
 ```
 ### <a name="parameters"></a>Parametry
-`_X`Pierwszy argument zmiennoprzecinkowy.
-`_Y`Drugi argument zmiennoprzecinkowy.
-`_Z`Trzeci argument zmiennoprzecinkowy.
+`_X` Pierwszy argument zmiennoprzecinkowy.
+`_Y` Drugi argument zmiennoprzecinkowy.
+`_Z` Trzeci argument zmiennoprzecinkowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 Wynik wyrażenia (_X * _Y) + _Z —. Cały obliczenia jest wykonywane jednej operacji. oznacza to obliczania wyrażeń podrzędnych nieskończone dokładnością i wynik końcowy jest zaokrąglana. 
 
-## <a name="fmaf"></a>fmaf —  
+## <a name="fmaf"></a> fmaf —  
 Oblicza iloczyn pierwszego i drugiego określone argumenty, a następnie dodaje trzeci argument określony dla wyniku; obliczenia całego odbywa się jako jedna operacja.
 ```
 inline float fmaf(
@@ -959,14 +961,14 @@ inline float fmaf(
 ) restrict(amp);
 ```  
 ### <a name="parameters"></a>Parametry
-`_X`Pierwszy argument zmiennoprzecinkowy.
-`_Y`Drugi argument zmiennoprzecinkowy.
-`_Z`Trzeci argument zmiennoprzecinkowy.
+`_X` Pierwszy argument zmiennoprzecinkowy.
+`_Y` Drugi argument zmiennoprzecinkowy.
+`_Z` Trzeci argument zmiennoprzecinkowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 Wynik wyrażenia (_X * _Y) + _Z —. Cały obliczenia jest wykonywane jednej operacji. oznacza to obliczania wyrażeń podrzędnych nieskończone dokładnością i wynik końcowy jest zaokrąglana.
   
-##  <a name="fmax"></a>Fmax  
+##  <a name="fmax"></a>  Fmax  
  Określić maksymalną wartość liczbową argumentów  
   
 ```  
@@ -990,7 +992,7 @@ inline double fmax(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca maksymalną wartość liczbową argumentów  
   
-##  <a name="fmaxf"></a>fmaxf —  
+##  <a name="fmaxf"></a>  fmaxf —  
  Określić maksymalną wartość liczbową argumentów  
   
 ```  
@@ -1009,7 +1011,7 @@ inline float fmaxf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca maksymalną wartość liczbową argumentów  
   
-##  <a name="fmin"></a>Fmin —  
+##  <a name="fmin"></a>  Fmin —  
  Określić minimalną wartość liczbową argumentów  
   
 ```  
@@ -1033,7 +1035,7 @@ inline double fmin(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca minimalną wartość liczbowa argumentów  
   
-##  <a name="fminf"></a>fminf —  
+##  <a name="fminf"></a>  fminf —  
  Określić minimalną wartość liczbową argumentów  
   
 ```  
@@ -1052,7 +1054,7 @@ inline float fminf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca minimalną wartość liczbowa argumentów  
   
-##  <a name="fmod"></a>fmod — funkcja (C++ AMP)  
+##  <a name="fmod"></a>  fmod — funkcja (C++ AMP)  
  Oblicza w pozostałej części pierwszy argument określony przez określony drugi argument.  
   
 ```  
@@ -1076,7 +1078,7 @@ inline double fmod(
 ### <a name="return-value"></a>Wartość zwracana  
  W pozostałej części `_X` rozdzielonych `_Y`; oznacza to, że wartość `_X`  -  `_Y`  *n* , gdzie  *n*  jest całkowitą tak, aby wielkość `_X`  -  `_Y`  *n*  jest mniejsza od wielkości `_Y`.  
   
-##  <a name="fmodf"></a>fmodf —  
+##  <a name="fmodf"></a>  fmodf —  
  Oblicza w pozostałej części pierwszy argument określony przez określony drugi argument.  
   
 ```  
@@ -1095,7 +1097,7 @@ inline float fmodf(
 ### <a name="return-value"></a>Wartość zwracana  
  W pozostałej części `_X` rozdzielonych `_Y`; oznacza to, że wartość `_X`  -  `_Y`  *n* , gdzie  *n*  jest całkowitą tak, aby wielkość `_X`  -  `_Y`  *n*  jest mniejsza od wielkości `_Y`.  
   
-##  <a name="fpclassify"></a>fpclassify —  
+##  <a name="fpclassify"></a>  fpclassify —  
  Klasyfikuje wartość argumentu, ponieważ NaN, nieskończone, normalny, subnormal, zero  
   
 ```  
@@ -1112,7 +1114,7 @@ inline int fpclassify(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość numeru makra klasyfikacji odpowiednią wartość argumentu.  
   
-##  <a name="frexp"></a>frexp —  
+##  <a name="frexp"></a>  frexp —  
  Pobiera mantysa i wykładnik _X  
   
 ```  
@@ -1136,7 +1138,7 @@ inline double frexp(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X mantysy  
   
-##  <a name="frexpf"></a>frexpf —  
+##  <a name="frexpf"></a>  frexpf —  
  Pobiera mantysa i wykładnik _X  
   
 ```  
@@ -1155,7 +1157,7 @@ inline float frexpf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X mantysy  
   
-##  <a name="hypot"></a>hypot —  
+##  <a name="hypot"></a>  hypot —  
  Oblicza pierwiastek kwadratowy liczby sumę kwadratów _X i _Y  
   
 ```  
@@ -1179,7 +1181,7 @@ inline double hypot(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwiastek kwadratowy liczby sumę kwadratów _X i _Y  
   
-##  <a name="hypotf"></a>hypotf —  
+##  <a name="hypotf"></a>  hypotf —  
  Oblicza pierwiastek kwadratowy liczby sumę kwadratów _X i _Y  
   
 ```  
@@ -1198,7 +1200,7 @@ inline float hypotf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwiastek kwadratowy liczby sumę kwadratów _X i _Y  
   
-##  <a name="ilogb"></a>ilogb —  
+##  <a name="ilogb"></a>  ilogb —  
  Wyodrębnij wykładnik _X jako wartość podpisanego elementu int  
   
 ```  
@@ -1215,7 +1217,7 @@ inline int ilogb(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wykładnik _X jako wartość podpisanego elementu int  
   
-##  <a name="ilogbf"></a>ilogbf —  
+##  <a name="ilogbf"></a>  ilogbf —  
  Wyodrębnij wykładnik _X jako wartość podpisanego elementu int  
   
 ```  
@@ -1229,7 +1231,7 @@ inline int ilogbf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wykładnik _X jako wartość podpisanego elementu int  
   
-##  <a name="isfinite"></a>isfinite  
+##  <a name="isfinite"></a>  isfinite  
  Określa, czy argument ma wartością skończoną  
   
 ```  
@@ -1246,7 +1248,7 @@ inline int isfinite(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość niezerową tylko wtedy, gdy argument jest wartością skończoną  
   
-##  <a name="isinf"></a>isinf —  
+##  <a name="isinf"></a>  isinf —  
  Określa, czy argument jest nieskończoność.  
   
 ```  
@@ -1263,7 +1265,7 @@ inline int isinf(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość niezerową tylko wtedy, gdy argument ma wartość nieskończona  
   
-##  <a name="isnan"></a>isNaN  
+##  <a name="isnan"></a>  isNaN  
  Określa, czy argument jest wartością typu NaN  
   
 ```  
@@ -1280,7 +1282,7 @@ inline int isnan(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość niezerową tylko wtedy, gdy argument ma wartość NaN  
   
-##  <a name="isnormal"></a>isnormal —  
+##  <a name="isnormal"></a>  isnormal —  
  Określa, czy argument jest zwykłym  
   
 ```  
@@ -1297,7 +1299,7 @@ inline int isnormal(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość niezerową tylko wtedy, gdy argument ma wartość normalna  
   
-##  <a name="ldexp"></a>ldexp —  
+##  <a name="ldexp"></a>  ldexp —  
  Oblicza liczba rzeczywista z określonym mantysa i wykładnik.  
   
 ```  
@@ -1321,7 +1323,7 @@ inline double ldexp(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X * 2 ^ _Exp  
   
-##  <a name="ldexpf"></a>ldexpf —  
+##  <a name="ldexpf"></a>  ldexpf —  
  Oblicza liczba rzeczywista z określonym mantysa i wykładnik.  
   
 ```  
@@ -1340,7 +1342,7 @@ inline float ldexpf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X * 2 ^ _Exp  
   
-##  <a name="lgamma"></a>lgamma —  
+##  <a name="lgamma"></a>  lgamma —  
  Oblicza logarytm naturalny wartość bezwzględną liczby gamma argumentu  
   
 ```  
@@ -1364,7 +1366,7 @@ inline double lgamma(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm naturalny wartość bezwzględną liczby gamma argumentu  
   
-##  <a name="lgammaf"></a>lgammaf —  
+##  <a name="lgammaf"></a>  lgammaf —  
  Oblicza logarytm naturalny wartość bezwzględną liczby gamma argumentu  
   
 ```  
@@ -1383,7 +1385,7 @@ inline float lgammaf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm naturalny wartość bezwzględną liczby gamma argumentu  
   
-##  <a name="log"></a>Dziennik  
+##  <a name="log"></a>  Dziennik  
  Oblicza logarytm naturalny argumentu  
   
 ```  
@@ -1400,7 +1402,7 @@ inline double log(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm naturalny argumentu  
   
-##  <a name="log10"></a>LOG10  
+##  <a name="log10"></a>  LOG10  
  Oblicza logarytm base 10 argumentu  
   
 ```  
@@ -1417,7 +1419,7 @@ inline double log10(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm o podstawie base 10 argumentu  
   
-##  <a name="log10f"></a>log10f —  
+##  <a name="log10f"></a>  log10f —  
  Oblicza logarytm base 10 argumentu  
   
 ```  
@@ -1431,7 +1433,7 @@ inline float log10f(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm o podstawie base 10 argumentu  
   
-##  <a name="log1p"></a>log1p —  
+##  <a name="log1p"></a>  log1p —  
  Oblicza logarytm naturalny 1 oraz argument  
   
 ```  
@@ -1448,7 +1450,7 @@ inline double log1p(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm naturalny 1 oraz argument  
   
-##  <a name="log1pf"></a>log1pf —  
+##  <a name="log1pf"></a>  log1pf —  
  Oblicza logarytm naturalny 1 oraz argument  
   
 ```  
@@ -1462,7 +1464,7 @@ inline float log1pf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm naturalny 1 oraz argument  
   
-##  <a name="log2"></a>log2  
+##  <a name="log2"></a>  log2  
  Oblicza logarytm base-2 argumentu  
   
 ```  
@@ -1479,7 +1481,7 @@ inline double log2(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm o podstawie base 10 argumentu  
   
-##  <a name="log2f"></a>log2f —  
+##  <a name="log2f"></a>  log2f —  
  Oblicza logarytm base-2 argumentu  
   
 ```  
@@ -1493,7 +1495,7 @@ inline float log2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm o podstawie base 10 argumentu  
   
-##  <a name="logb"></a>logb —  
+##  <a name="logb"></a>  logb —  
  Wyodrębnia wykładnik _X, jako wartość całkowita format liczb zmiennoprzecinkowych  
   
 ```  
@@ -1510,7 +1512,7 @@ inline double logb(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wykładnik podpisem _X  
   
-##  <a name="logbf"></a>logbf —  
+##  <a name="logbf"></a>  logbf —  
  Wyodrębnia wykładnik _X, jako wartość całkowita format liczb zmiennoprzecinkowych  
   
 ```  
@@ -1524,7 +1526,7 @@ inline float logbf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wykładnik podpisem _X  
   
-##  <a name="logf"></a>logf —  
+##  <a name="logf"></a>  logf —  
  Oblicza logarytm naturalny argumentu  
   
 ```  
@@ -1538,7 +1540,7 @@ inline float logf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm naturalny argumentu  
   
-##  <a name="modf"></a>modf —  
+##  <a name="modf"></a>  modf —  
  Dzieli określony argument do ułamkowa i części liczby całkowitej.  
   
 ```  
@@ -1556,13 +1558,13 @@ inline double modf(
  `_X`  
  Wartość zmiennoprzecinkowa  
   
- `_Iptr`(out parametru)  
+ `_Iptr` (out parametru)  
  Część całkowitą `_X`, jako wartość zmiennoprzecinkową.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Podpisana ułamkową część `_X`.  
   
-##  <a name="modff"></a>modff —  
+##  <a name="modff"></a>  modff —  
  Dzieli określony argument do ułamkowa i części liczby całkowitej.  
   
 ```  
@@ -1581,7 +1583,7 @@ inline float modff(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca podpisem ułamkową część `_X`.  
   
-##  <a name="nan"></a>NaN  
+##  <a name="nan"></a>  NaN  
  Zwraca quiet NaN  
   
 ```  
@@ -1595,7 +1597,7 @@ inline double nan(int _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca quiet NaN, jeżeli dostępne z zawartością w _X  
   
-##  <a name="nanf"></a>nanf —  
+##  <a name="nanf"></a>  nanf —  
  Zwraca quiet NaN  
   
 ```  
@@ -1609,7 +1611,7 @@ inline float nanf(int _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca quiet NaN, jeżeli dostępne z zawartością w _X  
   
-##  <a name="nearbyint"></a>nearbyint —  
+##  <a name="nearbyint"></a>  nearbyint —  
  Zaokrągla wartość argumentu na wartość całkowitą w formacie liczb zmiennoprzecinkowych, przy użyciu bieżącego kierunek zaokrąglania.  
   
 ```  
@@ -1626,7 +1628,7 @@ inline double nearbyint(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość całkowita zaokrąglone.  
   
-##  <a name="nearbyintf"></a>nearbyintf —  
+##  <a name="nearbyintf"></a>  nearbyintf —  
  Zaokrągla wartość argumentu na wartość całkowitą w formacie liczb zmiennoprzecinkowych, przy użyciu bieżącego kierunek zaokrąglania.  
   
 ```  
@@ -1640,7 +1642,7 @@ inline float nearbyintf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość całkowita zaokrąglone.  
   
-##  <a name="nextafter"></a>nextafter —  
+##  <a name="nextafter"></a>  nextafter —  
  Określić następnej wartości można przedstawić w typie funkcji, po _X w kierunku _Y  
   
 ```  
@@ -1664,7 +1666,7 @@ inline double nextafter(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość następnego można przedstawić w typie funkcji, po _X w kierunku _Y  
   
-##  <a name="nextafterf"></a>nextafterf —  
+##  <a name="nextafterf"></a>  nextafterf —  
  Określić następnej wartości można przedstawić w typie funkcji, po _X w kierunku _Y  
   
 ```  
@@ -1683,7 +1685,7 @@ inline float nextafterf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość następnego można przedstawić w typie funkcji, po _X w kierunku _Y  
   
-##  <a name="phi"></a>Fi  
+##  <a name="phi"></a>  Fi  
  Zwraca funkcję rozkładu skumulowanego argumentu  
   
 ```  
@@ -1700,7 +1702,7 @@ inline double phi(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca funkcję rozkładu skumulowanego argumentu  
   
-##  <a name="phif"></a>phif —  
+##  <a name="phif"></a>  phif —  
  Zwraca funkcję rozkładu skumulowanego argumentu  
   
 ```  
@@ -1714,7 +1716,7 @@ inline float phif(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca funkcję rozkładu skumulowanego argumentu  
   
-##  <a name="pow"></a>Pow  
+##  <a name="pow"></a>  Pow  
  Oblicza _X podniesionej do potęgi _Y  
   
 ```  
@@ -1737,7 +1739,7 @@ inline double pow(
   
 ### <a name="return-value"></a>Wartość zwracana  
   
-##  <a name="powf"></a>powf —  
+##  <a name="powf"></a>  powf —  
  Oblicza _X podniesionej do potęgi _Y  
   
 ```  
@@ -1755,7 +1757,7 @@ inline float powf(
   
 ### <a name="return-value"></a>Wartość zwracana  
   
-##  <a name="probit"></a>probit —  
+##  <a name="probit"></a>  probit —  
  Zwraca funkcję rozkładu skumulowanego odwrotny argumentu  
   
 ```  
@@ -1772,7 +1774,7 @@ inline double probit(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca funkcję rozkładu skumulowanego odwrotny argumentu  
   
-##  <a name="probitf"></a>probitf —  
+##  <a name="probitf"></a>  probitf —  
  Zwraca funkcję rozkładu skumulowanego odwrotny argumentu  
   
 ```  
@@ -1786,7 +1788,7 @@ inline float probitf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca funkcję rozkładu skumulowanego odwrotny argumentu  
   
-##  <a name="rcbrt"></a>rcbrt —  
+##  <a name="rcbrt"></a>  rcbrt —  
  Zwraca odwrotność głównego modułu argumentu  
   
 ```  
@@ -1803,7 +1805,7 @@ inline double rcbrt(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotność głównego modułu argumentu  
   
-##  <a name="rcbrtf"></a>rcbrtf —  
+##  <a name="rcbrtf"></a>  rcbrtf —  
  Zwraca odwrotność głównego modułu argumentu  
   
 ```  
@@ -1817,7 +1819,7 @@ inline float rcbrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotność głównego modułu argumentu  
   
-##  <a name="remainder"></a>pozostałe  
+##  <a name="remainder"></a>  pozostałe  
  Oblicza resztę: _X REM _Y  
   
 ```  
@@ -1841,7 +1843,7 @@ inline double remainder(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X REM _Y  
   
-##  <a name="remainderf"></a>remainderf —  
+##  <a name="remainderf"></a>  remainderf —  
  Oblicza resztę: _X REM _Y  
   
 ```  
@@ -1860,7 +1862,7 @@ inline float remainderf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X REM _Y  
   
-##  <a name="remquo"></a>remquo —  
+##  <a name="remquo"></a>  remquo  
  Oblicza w pozostałej części pierwszy argument określony przez określony drugi argument. Również oblicza iloraz mantysy pierwszy argument określony przez mantysy drugi argument określony i Zwraca iloraz przy użyciu lokalizacji określonej w trzeci argument.  
   
 ```  
@@ -1883,13 +1885,13 @@ inline double remquo(
  `_Y`  
  Drugi argument zmiennoprzecinkowy.  
   
- `_Quo`(out parametru)  
+ `_Quo` (out parametru)  
  Adres liczba całkowita, która służy do zwracania iloraz ułamkowych bity `_X` rozdzielonych ułamkowych bity `_Y`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca resztę z `_X` rozdzielonych `_Y`.  
   
-##  <a name="remquof"></a>remquof —  
+##  <a name="remquof"></a>  remquof —  
  Oblicza w pozostałej części pierwszy argument określony przez określony drugi argument. Również oblicza iloraz mantysy pierwszy argument określony przez mantysy drugi argument określony i Zwraca iloraz przy użyciu lokalizacji określonej w trzeci argument.  
   
 ```  
@@ -1906,13 +1908,13 @@ inline float remquof(
  `_Y`  
  Drugi argument zmiennoprzecinkowy.  
   
- `_Quo`(out parametru)  
+ `_Quo` (out parametru)  
  Adres liczba całkowita, która służy do zwracania iloraz ułamkowych bity `_X` rozdzielonych ułamkowych bity `_Y`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca resztę z `_X` rozdzielonych `_Y`.  
   
-##  <a name="round"></a>ROUND  
+##  <a name="round"></a>  ROUND  
  Zaokrągla _X do najbliższej liczby całkowitej.  
   
 ```  
@@ -1929,7 +1931,7 @@ inline double round(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca najbliższej liczby całkowitej z _X  
   
-##  <a name="roundf"></a>roundf —  
+##  <a name="roundf"></a>  roundf —  
  Zaokrągla _X do najbliższej liczby całkowitej.  
   
 ```  
@@ -1943,7 +1945,7 @@ inline float roundf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca najbliższej liczby całkowitej z _X  
   
-##  <a name="rsqrt"></a>rsqrt —  
+##  <a name="rsqrt"></a>  rsqrt —  
  Zwraca odwrotność pierwiastek kwadratowy argumentu  
   
 ```  
@@ -1960,7 +1962,7 @@ inline double rsqrt(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotność pierwiastek kwadratowy argumentu  
   
-##  <a name="rsqrtf"></a>rsqrtf —  
+##  <a name="rsqrtf"></a>  rsqrtf —  
  Zwraca odwrotność pierwiastek kwadratowy argumentu  
   
 ```  
@@ -1974,7 +1976,7 @@ inline float rsqrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotność pierwiastek kwadratowy argumentu  
   
-##  <a name="scalb"></a>scalb —  
+##  <a name="scalb"></a>  scalb —  
  Mnoży _X przez flt_radix — aby _Y zasilania  
   
 ```  
@@ -1998,7 +2000,7 @@ inline double scalb(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X * (flt_radix — ^ _Y)  
   
-##  <a name="scalbf"></a>scalbf —  
+##  <a name="scalbf"></a>  scalbf —  
  Mnoży _X przez flt_radix — aby _Y zasilania  
   
 ```  
@@ -2017,7 +2019,7 @@ inline float scalbf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X * (flt_radix — ^ _Y)  
   
-##  <a name="scalbn"></a>scalbn —  
+##  <a name="scalbn"></a>  scalbn —  
  Mnoży _X przez flt_radix — aby _Y zasilania  
   
 ```  
@@ -2041,7 +2043,7 @@ inline double scalbn(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X * (flt_radix — ^ _Y)  
   
-##  <a name="scalbnf"></a>scalbnf —  
+##  <a name="scalbnf"></a>  scalbnf —  
  Mnoży _X przez flt_radix — aby _Y zasilania  
   
 ```  
@@ -2060,7 +2062,7 @@ inline float scalbnf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X * (flt_radix — ^ _Y)  
   
-##  <a name="signbit"></a>signbit —  
+##  <a name="signbit"></a>  signbit —  
  Określa, czy znak _X jest ujemna  
   
 ```  
@@ -2077,7 +2079,7 @@ inline int signbit(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość niezerową tylko wtedy, gdy znak _X jest ujemna.  
   
-##  <a name="signbitf"></a>signbitf —  
+##  <a name="signbitf"></a>  signbitf —  
  Określa, czy znak _X jest ujemna  
   
 ```  
@@ -2091,7 +2093,7 @@ inline int signbitf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość niezerową tylko wtedy, gdy znak _X jest ujemna.  
   
-##  <a name="sin"></a>SIN  
+##  <a name="sin"></a>  SIN  
  Oblicza sinus wartość argumentu  
   
 ```  
@@ -2108,7 +2110,7 @@ inline double sin(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca sinus wartość argumentu  
   
-##  <a name="sinf"></a>sinf —  
+##  <a name="sinf"></a>  sinf —  
  Oblicza sinus wartość argumentu  
   
 ```  
@@ -2122,7 +2124,7 @@ inline float sinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca sinus wartość argumentu  
   
-##  <a name="sincos"></a>sincos —  
+##  <a name="sincos"></a>  sincos —  
  Oblicza sinus i cosinus wartość _X  
   
 ```  
@@ -2148,7 +2150,7 @@ inline void sincos(
  `_C`  
  Zwraca cosinus wartość _X  
   
-##  <a name="sincosf"></a>sincosf —  
+##  <a name="sincosf"></a>  sincosf —  
  Oblicza sinus i cosinus wartość _X  
   
 ```  
@@ -2168,7 +2170,7 @@ inline void sincosf(
  `_C`  
  Zwraca cosinus wartość _X  
   
-##  <a name="sinh"></a>SINH  
+##  <a name="sinh"></a>  SINH  
  Oblicza sinus hiperboliczny wartość argumentu  
   
 ```  
@@ -2185,7 +2187,7 @@ inline double sinh(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca sinus hiperboliczny wartość argumentu  
   
-##  <a name="sinhf"></a>sinhf —  
+##  <a name="sinhf"></a>  sinhf —  
  Oblicza sinus hiperboliczny wartość argumentu  
   
 ```  
@@ -2199,7 +2201,7 @@ inline float sinhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca sinus hiperboliczny wartość argumentu  
   
-##  <a name="sinpi"></a>sinpi —  
+##  <a name="sinpi"></a>  sinpi —  
  Oblicza sinus wartość liczby pi * _X  
   
 ```  
@@ -2216,7 +2218,7 @@ inline double sinpi(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca sinus wartość liczby pi * _X  
   
-##  <a name="sinpif"></a>sinpif —  
+##  <a name="sinpif"></a>  sinpif —  
  Oblicza sinus wartość liczby pi * _X  
   
 ```  
@@ -2230,7 +2232,7 @@ inline float sinpif(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca sinus wartość liczby pi * _X  
   
-##  <a name="sqrt"></a>SQRT  
+##  <a name="sqrt"></a>  SQRT  
  Oblicza pierwiastek squre argumentu  
   
 ```  
@@ -2247,7 +2249,7 @@ inline double sqrt(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwiastek squre argumentu  
   
-##  <a name="sqrtf"></a>sqrtf —  
+##  <a name="sqrtf"></a>  sqrtf —  
  Oblicza pierwiastek squre argumentu  
   
 ```  
@@ -2261,7 +2263,7 @@ inline float sqrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwiastek squre argumentu  
   
-##  <a name="tan"></a>tan  
+##  <a name="tan"></a>  tan  
  Oblicza tangens wartość argumentu  
   
 ```  
@@ -2278,7 +2280,7 @@ inline double tan(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca tangens wartość argumentu  
   
-##  <a name="tanf"></a>tanf —  
+##  <a name="tanf"></a>  tanf —  
  Oblicza tangens wartość argumentu  
   
 ```  
@@ -2292,7 +2294,7 @@ inline float tanf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca tangens wartość argumentu  
   
-##  <a name="tanh"></a>TANH  
+##  <a name="tanh"></a>  TANH  
  Oblicza tangens hiperboliczny wartość argumentu  
   
 ```  
@@ -2309,7 +2311,7 @@ inline double tanh(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca tangens hiperboliczny wartość argumentu  
   
-##  <a name="tanhf"></a>tanhf —  
+##  <a name="tanhf"></a>  tanhf —  
  Oblicza tangens hiperboliczny wartość argumentu  
   
 ```  
@@ -2323,7 +2325,7 @@ inline float tanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca tangens hiperboliczny wartość argumentu  
   
-##  <a name="tanpi"></a>tanpi —  
+##  <a name="tanpi"></a>  tanpi —  
  Oblicza tangens wartość liczby pi * _X  
   
 ```  
@@ -2340,7 +2342,7 @@ inline double tanpi(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca tangens wartość liczby pi * _X  
   
-##  <a name="tanpif"></a>tanpif —  
+##  <a name="tanpif"></a>  tanpif —  
  Oblicza tangens wartość liczby pi * _X  
   
 ```  
@@ -2354,7 +2356,7 @@ inline float tanpif(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca tangens wartość liczby pi * _X  
   
-##  <a name="tgamma"></a>tgamma —  
+##  <a name="tgamma"></a>  tgamma —  
  Oblicza funkcji gamma _X  
   
 ```  
@@ -2371,7 +2373,7 @@ inline double tgamma(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wynik funkcji gamma _X  
   
-##  <a name="tgammaf"></a>tgammaf —  
+##  <a name="tgammaf"></a>  tgammaf —  
  Oblicza funkcji gamma _X  
   
 ```  
@@ -2385,7 +2387,7 @@ inline float tgammaf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wynik funkcji gamma _X  
   
-##  <a name="trunc"></a>TRUNC —  
+##  <a name="trunc"></a>  TRUNC —  
  Obcina argument składnika liczba całkowita  
   
 ```  
@@ -2402,7 +2404,7 @@ inline double trunc(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca liczbę całkowitą argumentu  
   
-##  <a name="truncf"></a>truncf —  
+##  <a name="truncf"></a>  truncf —  
  Obcina argument składnika liczba całkowita  
   
 ```  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - fstream/std::basic_ifstream
 - fstream/std::basic_ifstream::close
@@ -14,7 +15,8 @@ f1_keywords:
 - fstream/std::basic_ifstream::open
 - fstream/std::basic_ifstream::rdbuf
 - fstream/std::basic_ifstream::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_ifstream [C++]
 - std::basic_ifstream [C++], close
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], rdbuf
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d300abc29a88c8beaa5e5992b4bca073732b0233
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9c923d4c3de5410ac65f9706d875300b0d07cbb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicifstream-class"></a>basic_ifstream — Klasa
 Zawiera opis obiektu, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, elementami typu `Elem`, którego znak cechy są określane przez klasę `Tr`.  
@@ -94,7 +97,7 @@ This is the contents of basic_ifstream_class.txt.
   
 |||  
 |-|-|  
-|[basic_ifstream —](#basic_ifstream)|Inicjuje nowe wystąpienie klasy `basic_ifstream` obiektu.|  
+|[basic_ifstream](#basic_ifstream)|Inicjuje nowe wystąpienie klasy `basic_ifstream` obiektu.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
@@ -110,14 +113,14 @@ This is the contents of basic_ifstream_class.txt.
   
 |||  
 |-|-|  
-|[operator =](#op_eq)|Przypisuje zawartości tego obiektu strumienia. Jest to dotyczące przypisania przenoszenia `rvalue` który nie pozostawione kopii.|  
+|[operator=](#op_eq)|Przypisuje zawartości tego obiektu strumienia. Jest to dotyczące przypisania przenoszenia `rvalue` który nie pozostawione kopii.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<fstream — >  
   
  **Namespace:** Standard  
   
-##  <a name="basic_ifstream"></a>basic_ifstream::basic_ifstream  
+##  <a name="basic_ifstream"></a>  basic_ifstream::basic_ifstream  
  Tworzy obiekt typu `basic_ifstream`.  
   
 ```  
@@ -177,7 +180,7 @@ int main(int argc, char **argv)
 }  
 ```  
   
-##  <a name="close"></a>basic_ifstream::Close  
+##  <a name="close"></a>  basic_ifstream::Close  
  Zamyka plik.  
   
 ```  
@@ -190,7 +193,7 @@ void close();
 ### <a name="example"></a>Przykład  
   Zobacz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) na przykład, który używa **zamknąć**.  
   
-##  <a name="is_open"></a>basic_ifstream::is_open  
+##  <a name="is_open"></a>  basic_ifstream::is_open  
  Określa, czy plik jest otwarty.  
   
 ```  
@@ -206,7 +209,7 @@ bool is_open() const;
 ### <a name="example"></a>Przykład  
   Zobacz [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open) na przykład, który używa `is_open`.  
   
-##  <a name="open"></a>basic_ifstream::Open  
+##  <a name="open"></a>  basic_ifstream::Open  
  Otwiera plik.  
   
 ```  
@@ -245,7 +248,7 @@ void open(
 ### <a name="example"></a>Przykład  
   Zobacz [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) na przykład, który używa **Otwórz**.  
   
-##  <a name="op_eq"></a>basic_ifstream::operator =  
+##  <a name="op_eq"></a>  basic_ifstream::operator =  
  Przypisuje zawartości tego obiektu strumienia. Jest to przypisania przenoszenia, obejmujące r-wartości nie pozostawione kopii.  
   
 ```  
@@ -262,7 +265,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 ### <a name="remarks"></a>Uwagi  
  Operator członkowski zastępuje zawartość obiektu przy użyciu zawartości `right`, traktowane jako odwołanie do r-wartości. Aby uzyskać więcej informacji, zobacz [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md).  
   
-##  <a name="rdbuf"></a>basic_ifstream::rdbuf  
+##  <a name="rdbuf"></a>  basic_ifstream::rdbuf  
  Zwraca adres buforu przechowywanych strumienia.  
   
 ```  
@@ -275,7 +278,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 ### <a name="example"></a>Przykład  
   Zobacz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) na przykład, który używa `rdbuf`.  
   
-##  <a name="swap"></a>basic_ifstream::swap  
+##  <a name="swap"></a>  basic_ifstream::swap  
  Zamienia zawartość dwóch `basic_ifstream` obiektów.  
   
 ```  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cancellation_token
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token
@@ -16,19 +17,22 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
-dev_langs: C++
-helpviewer_keywords: cancellation_token class
+dev_langs:
+- C++
+helpviewer_keywords:
+- cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a27bb4221e1a8db19f0dd7be37bb6ca3966635de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1e95bfb264b1c6fbc4230cf38fc26b7b6a2c12a1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token — Klasa
 `cancellation_token` Klasa reprezentuje możliwość określenia, czy zażądano operacji do anulowania. Skojarzono danego tokenu `task_group`, `structured_task_group`, lub `task` zapewnienie niejawne anulowania. Można go również sondowany anulowania lub wywołania zwrotnego zarejestrowany dla przypadku, gdy skojarzony `cancellation_token_source` zostało anulowane.  
@@ -45,8 +49,8 @@ class cancellation_token;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[cancellation_token —](#ctor)||  
-|[~ cancellation_token — destruktor](#dtor)||  
+|[cancellation_token](#ctor)||  
+|[~cancellation_token Destructor](#dtor)||  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -63,8 +67,8 @@ class cancellation_token;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)||  
-|[operator =](#operator_eq)||  
-|[operator ==](#operator_eq_eq)||  
+|[operator=](#operator_eq)||  
+|[operator==](#operator_eq_eq)||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `cancellation_token`  
@@ -74,13 +78,13 @@ class cancellation_token;
   
  **Namespace:** współbieżności  
   
-##  <a name="dtor"></a>~ cancellation_token — 
+##  <a name="dtor"></a> ~ cancellation_token — 
 
 ```
 ~cancellation_token();
 ```  
   
-##  <a name="ctor"></a>cancellation_token — 
+##  <a name="ctor"></a> cancellation_token — 
 
 ```
 cancellation_token(const cancellation_token& _Src);
@@ -91,7 +95,7 @@ cancellation_token(cancellation_token&& _Src);
 ### <a name="parameters"></a>Parametry  
  `_Src`  
   
-##  <a name="deregister_callback"></a>deregister_callback 
+##  <a name="deregister_callback"></a> deregister_callback 
 
  Usuwa wywołanie zwrotne zarejestrowane wcześniej za pośrednictwem `register` na podstawie metody `cancellation_token_registration` obiekt jest zwracany w chwili rejestracji.  
   
@@ -103,7 +107,7 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
  `_Registration`  
  `cancellation_token_registration` Obiektu odpowiadającego wywołanie zwrotne, aby być wyrejestrowany. Ten token musi zostały wcześniej zwrócone w wyniku wywołania `register` metody.  
   
-##  <a name="is_cancelable"></a>is_cancelable 
+##  <a name="is_cancelable"></a> is_cancelable 
 
  Zwraca wskazaniem, czy ten token mogą zostać anulowane lub nie.  
   
@@ -114,7 +118,7 @@ bool is_cancelable() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Wskazanie, czy ten token mogą zostać anulowane lub nie.  
   
-##  <a name="is_canceled"></a>is_canceled 
+##  <a name="is_canceled"></a> is_canceled 
 
  Zwraca `true` czy token został anulowany.  
   
@@ -125,7 +129,7 @@ bool is_canceled() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość `true` Jeśli token została anulowana, a w przeciwnym razie wartość `false`.  
   
-##  <a name="none"></a>Brak 
+##  <a name="none">Brak</a> 
 
  Zwraca token anulowania, który nigdy nie mogą podlegać anulowania.  
   
@@ -136,7 +140,7 @@ static cancellation_token none();
 ### <a name="return-value"></a>Wartość zwracana  
  Token anulowania, którego nie można anulować.  
   
-##  <a name="operator_neq"></a>operator! = 
+##  <a name="operator_neq"></a> operator! = 
 
 ```
 bool operator!= (const cancellation_token& _Src) const;
@@ -147,7 +151,7 @@ bool operator!= (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Wartość zwracana  
   
-##  <a name="operator_eq"></a>operator = 
+##  <a name="operator_eq"></a> operator = 
 
 ```
 cancellation_token& operator= (const cancellation_token& _Src);
@@ -160,7 +164,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
   
 ### <a name="return-value"></a>Wartość zwracana  
   
-##  <a name="operator_eq_eq"></a>operator == 
+##  <a name="operator_eq_eq"></a> operator == 
 
 ```
 bool operator== (const cancellation_token& _Src) const;
@@ -171,7 +175,7 @@ bool operator== (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Wartość zwracana  
   
-##  <a name="register_callback"></a>register_callback 
+##  <a name="register_callback"></a> register_callback 
 
  Rejestruje funkcję wywołania zwrotnego z tokenem. Jeśli token jest anulowane, nastąpi wywołania zwrotnego. Należy pamiętać, że jeśli token jest już anulowane w momencie, gdy ta metoda jest wywoływana, wywołania zwrotnego będą natychmiast.  
   

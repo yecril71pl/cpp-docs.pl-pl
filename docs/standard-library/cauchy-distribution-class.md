@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::cauchy_distribution
 - random/std::cauchy_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::cauchy_distribution::param_type::b
 - random/std::cauchy_distribution::param_type::operator==
 - random/std::cauchy_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::cauchy_distribution [C++]
 - std::cauchy_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 53ecdd04ebb24c6380e61f8bc5536d24df4dc21b
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 432f8ea360f80b85d34d423b41fe0bf9f4d2b5af
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution — Klasa
 Generuje dystrybucji Cauchy.  
@@ -89,7 +92,7 @@ Klasa szablonu opisuje dystrybucji tworzącego wartości określony użytkownik 
   
 ||||  
 |-|-|-|  
-|[cauchy_distribution —](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|  
+|[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|  
 |`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|  
   
 Funkcje właściwości `a()` i `b()` zwracać odpowiadających im wartości dla parametrów przechowywanych dystrybucji `a` i `b`.  
@@ -246,7 +249,7 @@ Distribution for 10 samples:
   
 **Namespace:** Standard  
   
-##  <a name="cauchy_distribution"></a>cauchy_distribution::cauchy_distribution  
+##  <a name="cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution  
 Tworzy dystrybucji.  
   
 ```  
@@ -261,17 +264,17 @@ explicit cauchy_distribution(const param_type& parm);
 *b*  
 `b` Parametr dystrybucji.  
   
-*Parametr*  
+*parm*  
 `param_type` Struktury użyta do skonstruowania dystrybucji.  
   
 ### <a name="remarks"></a>Uwagi  
-**Warunek wstępny:**`0.0 < b`  
+**Warunek wstępny:** `0.0 < b`  
   
 Pierwszy Konstruktor konstrukcji obiektu których przechowywane `a` wartość przechowuje wartość *a* i których przechowywane `b` wartość zawiera wartość *b*.  
   
 Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.  
   
-##  <a name="param_type"></a>cauchy_distribution::param_type  
+##  <a name="param_type"></a>  cauchy_distribution::param_type  
 Przechowuje wszystkie parametry dystrybucji.  
   
 ```cpp    
@@ -293,11 +296,11 @@ struct param_type {
 *b*  
 `b` Parametr dystrybucji.  
   
-*prawo*  
+*right*  
 `param_type` Obiekt do porównania z tym.  
   
 ### <a name="remarks"></a>Uwagi  
-**Warunek wstępny:**`0.0 < b`  
+**Warunek wstępny:** `0.0 < b`  
   
 Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.  
   

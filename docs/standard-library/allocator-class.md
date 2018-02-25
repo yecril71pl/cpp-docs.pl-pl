@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::allocator
 - memory/std::allocator::const_pointer
@@ -23,7 +24,8 @@ f1_keywords:
 - memory/std::allocator::destroy
 - memory/std::allocator::max_size
 - memory/std::allocator::rebind
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::allocator [C++]
 - std::allocator [C++], const_pointer
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 32e63292ffcb02fa41ea5b8d9e95f7b4cd3f776b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 05a0ac72a689c0f82db1bb4d18169542c0df4bc9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="allocator-class"></a>allocator — Klasa
 Klasa szablonu opisuje obiekt, który zarządza Alokacja magazynu i zwalnianie dla tablic obiektów typu **typu**. Obiekt klasy **alokatora** jest domyślnego obiektu alokatora określony w konstruktorach kilka klas szablonu kontenera w standardowej bibliotece C++.  
@@ -63,7 +66,7 @@ class allocator
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Typ*  
+ Typ  
  Typ obiektu, dla którego ma zostać magazynu przydzielone lub alokację.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -93,7 +96,7 @@ class allocator
   
 |||  
 |-|-|  
-|[Program przydzielania](#allocator)|Konstruktory użyty do utworzenia `allocator` obiektów.|  
+|[allocator](#allocator)|Konstruktory użyty do utworzenia `allocator` obiektów.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -102,7 +105,7 @@ class allocator
 |[const_pointer](#const_pointer)|Typ, który udostępnia stałej wskaźnika do typu obiektu zarządzanego przez program przydzielania.|  
 |[const_reference](#const_reference)|Typ, który zapewnia stałą odwołanie do typu obiektu zarządzanego przez program przydzielania.|  
 |[difference_type](#difference_type)|Podpisany typ całkowity może reprezentować różnica między wartościami wskaźniki do typu obiektu zarządzanego przez program przydzielania.|  
-|[wskaźnik](#pointer)|Typ, który dostarcza wskaźnik do typu obiektu zarządzanego przez program przydzielania.|  
+|[pointer](#pointer)|Typ, który dostarcza wskaźnik do typu obiektu zarządzanego przez program przydzielania.|  
 |[Odwołanie](#reference)|Typ, który zawiera odwołanie do typu obiektu zarządzanego przez program przydzielania.|  
 |[size_type](#size_type)|Sekwencja typem całkowitym bez znaku, mogącej reprezentować długość każdego obiektu klasy szablonu `allocator` można przydzielić.|  
 |[value_type](#value_type)|Typ, który jest zarządzany przez program przydzielania.|  
@@ -111,11 +114,11 @@ class allocator
   
 |||  
 |-|-|  
-|[adres](#address)|Umożliwia znalezienie adresu obiektu, którego wartość jest określona.|  
+|[Adres](#address)|Umożliwia znalezienie adresu obiektu, którego wartość jest określona.|  
 |[allocate](#allocate)|Przydziela bloku pamięci wystarczająco duże, aby przechowywać przynajmniej określoną liczbę elementów.|  
-|[konstrukcja](#construct)|Tworzy określonego typu obiektu na określony adres, który został zainicjowany z określoną wartością.|  
-|[cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|  
-|[Destroy](#destroy)|Wywołanie destruktora obiektów bez cofanie przydziału pamięci przechowywania obiektu.|  
+|[construct](#construct)|Tworzy określonego typu obiektu na określony adres, który został zainicjowany z określoną wartością.|  
+|[Cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|  
+|[destroy](#destroy)|Wywołanie destruktora obiektów bez cofanie przydziału pamięci przechowywania obiektu.|  
 |[max_size](#max_size)|Zwraca liczbę elementów typu `Type` może zostać przydzielone przez obiekt klasy `allocator` przed wolnej pamięci jest używany w.|  
 |[ponowne wiązanie](#rebind)|Struktura, która umożliwia alokatora dla obiektów typu jeden przydzielić magazyn dla obiektów typu.|  
   
@@ -123,14 +126,14 @@ class allocator
   
 |||  
 |-|-|  
-|[operator =](#op_eq)|Przypisuje jedną `allocator` obiektu do innego `allocator` obiektu.|  
+|[operator=](#op_eq)|Przypisuje jedną `allocator` obiektu do innego `allocator` obiektu.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<pamięci >  
   
  **Namespace:** Standard  
   
-##  <a name="address"></a>Allocator::Address  
+##  <a name="address"></a>  Allocator::Address  
  Umożliwia znalezienie adresu obiektu, którego wartość jest określona.  
   
 ```  
@@ -192,7 +195,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.  
 ```  
   
-##  <a name="allocate"></a>Allocator::allocate  
+##  <a name="allocate"></a>  Allocator::allocate  
  Przydziela bloku pamięci wystarczająco duże, aby przechowywać przynajmniej określoną liczbę elementów.  
   
 ```  
@@ -248,7 +251,7 @@ int main( )
 0 1 2 3 4 5 6 7 8 9   
 ```  
   
-##  <a name="allocator"></a>Allocator::Allocator  
+##  <a name="allocator"></a>  Allocator::Allocator  
  Konstruktory używany do tworzenia obiektów przydzielania.  
   
 ```  
@@ -328,7 +331,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.  
 ```  
   
-##  <a name="const_pointer"></a>Allocator::const_pointer  
+##  <a name="const_pointer"></a>  Allocator::const_pointer  
  Typ, który udostępnia stałej wskaźnika do typu obiektu zarządzanego przez program przydzielania.  
   
 ```  
@@ -381,7 +384,7 @@ The original vector v1 is:
 The integer's address found has a value of: 10.  
 ```  
   
-##  <a name="const_reference"></a>Allocator::const_reference  
+##  <a name="const_reference"></a>  Allocator::const_reference  
  Typ, który zapewnia stałą odwołanie do typu obiektu zarządzanego przez program przydzielania.  
   
 ```  
@@ -445,7 +448,7 @@ The value of the element referred to by vcref,
  after nofication through its nonconst iterator, is: 175.  
 ```  
   
-##  <a name="construct"></a>Allocator::Construct  
+##  <a name="construct"></a>  Allocator::Construct  
  Tworzy określonego typu obiektu na określony adres, który został zainicjowany z określoną wartością.  
   
 ```  
@@ -514,7 +517,7 @@ The modified vector v1 is:
  ( 3 7 9 12 15 18 21 ).  
 ```  
   
-##  <a name="deallocate"></a>Allocator::deallocate  
+##  <a name="deallocate"></a>  Allocator::deallocate  
  Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.  
   
 ```  
@@ -529,12 +532,12 @@ void deallocate(pointer ptr, size_type count);
  Liczba obiektów do cofnięcia alokacji z magazynu.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwalnia magazynu dla macierzy liczba obiektów typu **typu** począwszy od `ptr`, wywołując `operator delete(ptr)`. Wskaźnik `ptr` musi zostały zwrócone wcześniej przez wywołanie do [przydzielić](#allocate) dla obiekt przydzielania, który porównuje równa  **\*to**, przydzielania tablicy obiektów o tym samym rozmiarze i Typ. `deallocate`nigdy nie zgłasza wyjątek.  
+ Funkcja członkowska zwalnia magazynu dla macierzy liczba obiektów typu **typu** począwszy od `ptr`, wywołując `operator delete(ptr)`. Wskaźnik `ptr` musi zostały zwrócone wcześniej przez wywołanie do [przydzielić](#allocate) dla obiekt przydzielania, który porównuje równa  **\*to**, przydzielania tablicy obiektów o tym samym rozmiarze i Typ. `deallocate` nigdy nie zgłasza wyjątek.  
   
 ### <a name="example"></a>Przykład  
   Na przykład za pomocą funkcji członkowskiej, zobacz [allocator::allocate](#allocate).  
   
-##  <a name="destroy"></a>Allocator::Destroy  
+##  <a name="destroy"></a>  Allocator::Destroy  
  Wywołanie destruktora obiektów bez cofanie przydziału pamięci przechowywania obiektu.  
   
 ```  
@@ -597,7 +600,7 @@ The modified vector v1 is:
  ( 2 4 6 8 10 -99 14 ).  
 ```  
   
-##  <a name="difference_type"></a>Allocator::difference_type  
+##  <a name="difference_type"></a>  Allocator::difference_type  
  Podpisany typ całkowity może reprezentować różnica między wartościami wskaźniki do typu obiektu zarządzanego przez program przydzielania.  
   
 ```  
@@ -656,7 +659,7 @@ Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.  
 ```  
   
-##  <a name="max_size"></a>Allocator::max_size  
+##  <a name="max_size"></a>  Allocator::max_size  
  Zwraca liczbę elementów typu **typu** który może zostać przydzielony przez obiekt klasy alokatora przed wolnej pamięci jest używany w.  
   
 ```  
@@ -723,7 +726,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_eq"></a>Allocator::operator =  
+##  <a name="op_eq"></a>  Allocator::operator =  
  Przypisuje jednego obiektu programu przydzielania do innego obiektu przydzielania.  
   
 ```  
@@ -782,7 +785,7 @@ int main( )
 }  
 ```  
   
-##  <a name="pointer"></a>Allocator::Pointer  
+##  <a name="pointer"></a>  Allocator::Pointer  
  Typ, który dostarcza wskaźnik do typu obiektu zarządzanego przez program przydzielania.  
   
 ```  
@@ -835,13 +838,13 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.  
 ```  
   
-##  <a name="rebind"></a>Allocator::rebind  
+##  <a name="rebind"></a>  Allocator::rebind  
  Struktura, która umożliwia alokatora dla obiektów typu jeden przydzielić magazyn dla obiektów typu.  
 ```  
 struct rebind {    typedef allocator<_Other> other ;    };  
 ```  
 ### <a name="parameters"></a>Parametry  
- *inne*  
+ *other*  
  Typ elementu, dla którego przydzielenia pamięci.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -886,7 +889,7 @@ int main( )
 }  
 ```  
   
-##  <a name="reference"></a>Allocator::Reference  
+##  <a name="reference"></a>  Allocator::Reference  
  Typ, który zawiera odwołanie do typu obiektu zarządzanego przez program przydzielania.  
   
 ```  
@@ -944,7 +947,7 @@ The value of the element referred to by vref is: 100,
 The element referred to by vref after being modified is: 150.  
 ```  
   
-##  <a name="size_type"></a>Allocator::size_type  
+##  <a name="size_type"></a>  Allocator::size_type  
  Niepodpisane typem całkowitym reprezentujące długości żadnych sekwencji można przydzielić obiektu alokatora klasy szablonu.  
   
 ```  
@@ -988,7 +991,7 @@ int main( )
 }  
 ```  
   
-##  <a name="value_type"></a>Allocator::value_type  
+##  <a name="value_type"></a>  Allocator::value_type  
  Typ, który jest zarządzany przez program przydzielania.  
   
 ```  

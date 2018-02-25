@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - regex/std::regex_token_iterator
 - regex/std::regex_token_iterator::regex_type
@@ -20,7 +21,8 @@ f1_keywords:
 - regex/std::regex_token_iterator::operator*
 - regex/std::regex_token_iterator::operator->
 - regex/std::regex_token_iterator::operator++
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::regex_token_iterator [C++]
 - std::regex_token_iterator [C++], regex_type
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e2410da63f4e9db44243d2586b29aa70c114dc6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 29d8186911b51865de06b24e675a9570e3ea04cc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator — Klasa
 Klasa iteratora submatches.  
@@ -103,7 +106,7 @@ private:
   
  **Namespace:** Standard  
   
-##  <a name="difference_type"></a>regex_token_iterator::difference_type  
+##  <a name="difference_type"></a>  regex_token_iterator::difference_type  
  Typ iteratora różnicy.  
   
 ```  
@@ -209,7 +212,7 @@ match == aa
 match == z  
 ```  
   
-##  <a name="iterator_category"></a>regex_token_iterator::iterator_category  
+##  <a name="iterator_category"></a>  regex_token_iterator::iterator_category  
  Typ iteratora kategorii.  
   
 ```  
@@ -319,7 +322,7 @@ match == z
   
 ```  
   
-##  <a name="op_neq"></a>regex_token_iterator::operator! =  
+##  <a name="op_neq"></a>  regex_token_iterator::operator! =  
  Porównuje Iteratory pod kątem nierówności.  
   
 ```  
@@ -433,7 +436,7 @@ match == z
   
 ```  
   
-##  <a name="op_star"></a>regex_token_iterator::operator *  
+##  <a name="op_star"></a>  regex_token_iterator::operator *  
  Uzyskuje dostęp do wyznaczonych submatch.  
   
 ```  
@@ -543,7 +546,7 @@ match == z
   
 ```  
   
-##  <a name="op_add_add"></a>regex_token_iterator::operator ++  
+##  <a name="op_add_add"></a>  regex_token_iterator::operator ++  
  Zwiększa iteratora.  
   
 ```  
@@ -657,7 +660,7 @@ match == z
   
 ```  
   
-##  <a name="op_eq_eq"></a>regex_token_iterator::operator ==  
+##  <a name="op_eq_eq"></a>  regex_token_iterator::operator ==  
  Porównuje Iteratory pod kątem równości.  
   
 ```  
@@ -771,7 +774,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator-_gt"></a>regex_token_iterator::operator-&gt;  
+##  <a name="regex_token_iterator__operator-_gt"></a>  regex_token_iterator::operator-&gt;  
  Uzyskuje dostęp do wyznaczonych submatch.  
   
 ```  
@@ -881,7 +884,7 @@ match == z
   
 ```  
   
-##  <a name="pointer"></a>regex_token_iterator::Pointer  
+##  <a name="pointer"></a>  regex_token_iterator::Pointer  
  Typ wskaźnika do dopasowania.  
   
 ```  
@@ -991,7 +994,7 @@ match == z
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem `sub_match<BidIt>*`, gdzie `BidIt` jest parametr szablonu.  
   
-##  <a name="reference"></a>regex_token_iterator::Reference  
+##  <a name="reference"></a>  regex_token_iterator::Reference  
  Typ odwołania do submatch.  
   
 ```  
@@ -1101,7 +1104,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator"></a>regex_token_iterator::regex_token_iterator  
+##  <a name="regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator  
  Tworzy iteratora.  
   
 ```  
@@ -1243,7 +1246,7 @@ match == z
   
 ```  
   
-##  <a name="regex_type"></a>regex_token_iterator::regex_type  
+##  <a name="regex_type"></a>  regex_token_iterator::regex_type  
  Typ wyrażenia regularnego do dopasowania.  
   
 ```  
@@ -1353,7 +1356,7 @@ match == z
   
 ```  
   
-##  <a name="value_type"></a>regex_token_iterator::value_type  
+##  <a name="value_type"></a>  regex_token_iterator::value_type  
  Typ submatch.  
   
 ```  
@@ -1464,7 +1467,7 @@ match == z
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
-[\<wyrażenie regularne >](../standard-library/regex.md)  
+[\<regex>](../standard-library/regex.md)  
 [regex_constants, klasa](../standard-library/regex-constants-class.md)  
 [regex_error, klasa](../standard-library/regex-error-class.md)  
 [\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)  

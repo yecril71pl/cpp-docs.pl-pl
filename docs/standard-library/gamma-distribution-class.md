@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::gamma_distribution
 - random/std::gamma_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::gamma_distribution::param_type::beta
 - random/std::gamma_distribution::param_type::operator==
 - random/std::gamma_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::gamma_distribution [C++]
 - std::gamma_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cfbaa595c16f6ac3b58d92ff45b7b0335a985a8b
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d3cb7f844a579dced503186f8d786aef0fb6cd2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution — Klasa
 Generuje rozkład gamma.  
@@ -87,7 +90,7 @@ Klasa szablonu opisuje dystrybucji tworzącego wartości określony użytkownik 
   
 ||||  
 |-|-|-|  
-|[gamma_distribution —](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|  
+|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|  
 |`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|  
   
 Funkcje właściwości `alpha()` i `beta()` zwracać odpowiadających im wartości dla parametrów przechowywanych dystrybucji *alfa* i *beta*.  
@@ -192,7 +195,7 @@ Distribution for 10 samples:
   
 **Namespace:** Standard  
   
-##  <a name="gamma_distribution"></a>gamma_distribution::gamma_distribution  
+##  <a name="gamma_distribution"></a>  gamma_distribution::gamma_distribution  
 Tworzy dystrybucji.  
   
 ```  
@@ -201,23 +204,23 @@ explicit gamma_distribution(const param_type& parm);
 ```  
   
 ### <a name="parameters"></a>Parametry  
-*Alpha*  
+*alpha*  
 `alpha` Parametr dystrybucji.  
   
-*Beta*  
+*beta*  
 `beta` Parametr dystrybucji.  
   
-*Parametr*  
+*parm*  
 Struktura parametr używany do budowy dystrybucji.  
   
 ### <a name="remarks"></a>Uwagi  
-**Warunek wstępny:** `0.0 < alpha` i`0.0 < beta`  
+**Warunek wstępny:** `0.0 < alpha` i `0.0 < beta`  
   
 Pierwszy Konstruktor konstrukcji obiektu których przechowywane `alpha` wartość przechowuje wartość *alfa* i których przechowywane `beta` wartość zawiera wartość *beta*.  
   
 Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.  
   
-##  <a name="param_type"></a>gamma_distribution::param_type  
+##  <a name="param_type"></a>  gamma_distribution::param_type  
 Przechowuje parametry dystrybucji.  
   
 ```cpp   
@@ -232,17 +235,17 @@ struct param_type {
    };  
 ```  
 ### <a name="parameters"></a>Parametry  
-*Alpha*  
+*alpha*  
 `alpha` Parametr dystrybucji.  
   
-*Beta*  
+*beta*  
 `beta` Parametr dystrybucji.  
   
-*prawo*  
+*right*  
 `param_type` Wystąpienia, aby porównać.  
   
 ### <a name="remarks"></a>Uwagi  
-**Warunek wstępny:** `0.0 < alpha` i`0.0 < beta`  
+**Warunek wstępny:** `0.0 < alpha` i `0.0 < beta`  
   
 Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::allocator_traits
 - memory/std::allocator_traits::propagate_on_container_move_assignment
@@ -26,9 +27,10 @@ f1_keywords:
 - memory/std::allocator_traits::destroy
 - memory/std::allocator_traits::max_size
 - memory/std::allocator_traits::select_on_container_copy_construction
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 612974b8-b5d4-4668-82fb-824bff6821d6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -51,12 +53,13 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.workload: cplusplus
-ms.openlocfilehash: 7d96b4a03085a2a6486fa2f2fe0d7050323682c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d732b91a1c7a288cf22fea61e9565a794bb3380d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="allocatortraits-class"></a>allocator_traits — klasa
 Obiekt, który uzupełnia opisano klasy szablonu *typu alokatora*. Typ alokatora jest dowolnego typu, który opisuje alokatora obiektu, który jest używany do zarządzania przydzielone magazynu. W szczególności dla dowolnego typu alokatora `Alloc`, można użyć `allocator_traits<Alloc>` ustalenie, wszystkie informacje, które są wymagane przez kontener włączone przydzielania. Aby uzyskać więcej informacji, zobacz domyślne [Allocator — klasa](../standard-library/allocator-class.md).  
@@ -90,9 +93,9 @@ class allocator_traits;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[allocate](#allocate)|Metoda statyczna przydziela pamięć przy użyciu parametru danego przydzielania.|  
-|[konstrukcja](#construct)|Metoda statyczna używa określonego programu przydzielania do utworzenia obiektu.|  
-|[cofnięcie przydziału](#deallocate)|Metoda statyczna używa określonego alokatora można cofnąć alokacji określoną liczbę obiektów.|  
-|[Destroy](#destroy)|Metoda statyczna używa określonego alokatora aby wywołać destruktor dla obiekt bez cofanie przydziału pamięci.|  
+|[construct](#construct)|Metoda statyczna używa określonego programu przydzielania do utworzenia obiektu.|  
+|[Cofnięcie przydziału](#deallocate)|Metoda statyczna używa określonego alokatora można cofnąć alokacji określoną liczbę obiektów.|  
+|[destroy](#destroy)|Metoda statyczna używa określonego alokatora aby wywołać destruktor dla obiekt bez cofanie przydziału pamięci.|  
 |[max_size](#max_size)|Metoda statyczna używa określonego alokatora Aby określić maksymalną liczbę obiektów, które mogą być przydzielone.|  
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Statyczna metoda, która wywołuje `select_on_container_copy_construction` na określony program przydzielania.|  
   
@@ -101,7 +104,7 @@ class allocator_traits;
   
  **Namespace:** Standard  
   
-##  <a name="allocate"></a>allocator_traits::allocate
+##  <a name="allocate"></a>  allocator_traits::allocate
  Metoda statyczna przydziela pamięć przy użyciu parametru danego przydzielania.  
   
 ```cpp  
@@ -128,7 +131,7 @@ static pointer allocate(Alloc& al, size_type count,
   
  Druga metoda zwraca `al.allocate(count, hint)`, jeśli wyrażenie jest być dobrze uformowany; w przeciwnym razie zwraca `al.allocate(count)`.  
   
-##  <a name="construct"></a>allocator_traits::Construct
+##  <a name="construct"></a>  allocator_traits::Construct
  Metoda statyczna używa określonego programu przydzielania do utworzenia obiektu.  
   
 ```cpp  
@@ -149,7 +152,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ### <a name="remarks"></a>Uwagi  
  Wywołania funkcji statyczny element członkowski `al.construct(ptr, args...)`, jeśli wyrażenie jest być dobrze uformowany; w przeciwnym razie oblicza `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.  
   
-##  <a name="deallocate"></a>allocator_traits::deallocate
+##  <a name="deallocate"></a>  allocator_traits::deallocate
  Metoda statyczna używa określonego alokatora można cofnąć alokacji określoną liczbę obiektów.  
   
 ```cpp  
@@ -173,7 +176,7 @@ static void deallocate(Alloc al,
   
  Ta metoda zgłasza nothing.  
   
-##  <a name="destroy"></a>allocator_traits::Destroy
+##  <a name="destroy"></a>  allocator_traits::Destroy
  Metoda statyczna używa określonego alokatora aby wywołać destruktor dla obiekt bez cofanie przydziału pamięci.  
   
 ```cpp  
@@ -191,7 +194,7 @@ static void destroy(Alloc& al, Uty* ptr);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wywołuje `al.destroy(ptr)`, jeśli wyrażenie jest być dobrze uformowany; w przeciwnym razie oblicza `ptr->~Uty()`.  
   
-##  <a name="max_size"></a>allocator_traits::max_size
+##  <a name="max_size"></a>  allocator_traits::max_size
  Metoda statyczna używa określonego alokatora Aby określić maksymalną liczbę obiektów, które mogą być przydzielone.  
   
 ```cpp  
@@ -205,7 +208,7 @@ static size_type max_size(const Alloc& al);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zwraca `al.max_size()`, jeśli wyrażenie jest być dobrze uformowany; w przeciwnym razie zwraca `numeric_limits<size_type>::max()`.  
   
-##  <a name="select_on_container_copy_construction"></a>allocator_traits::select_on_container_copy_construction
+##  <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
  Statyczna metoda, która wywołuje `select_on_container_copy_construction` na określony program przydzielania.  
   
 ```cpp  
@@ -223,6 +226,6 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
  Ta metoda służy do określania przydzielania, gdy skojarzone kontenera jest tworzony kopii.  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<pamięci >](../standard-library/memory.md)   
+ [\<memory>](../standard-library/memory.md)   
  [pointer_traits — struktura](../standard-library/pointer-traits-struct.md)   
  [scoped_allocator_adaptor, klasa](../standard-library/scoped-allocator-adaptor-class.md)

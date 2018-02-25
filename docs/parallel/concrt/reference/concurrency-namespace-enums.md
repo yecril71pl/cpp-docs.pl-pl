@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
 - CONCRT/concurrency::Concrt_TraceFlags
@@ -16,29 +16,31 @@ f1_keywords:
 - CONCRT/concurrency::WinRTInitializationType
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5092c61860b4d7308ef6d1762363ee905b56b10b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-enums"></a>Typy wyliczeniowe przestrzeń nazw współbieżności
 ||||  
 |-|-|-|  
-|[Agents_eventtype —](#agents_eventtype)|[Concrt_eventtype —](#concrt_eventtype)|[Concrt_traceflags —](#concrt_traceflags)|  
-|[Criticalregiontype —](#criticalregiontype)|[Dynamicprogressfeedbacktype —](#dynamicprogressfeedbacktype)|[Policyelementkey —](#policyelementkey)|  
-|[Schedulertype —](#schedulertype)|[Schedulingprotocoltype —](#schedulingprotocoltype)|[Switchingproxystate —](#switchingproxystate)|  
-|[Winrtinitializationtype —](#winrtinitializationtype)|[agent_status —](#agent_status)|[join_type —](#join_type)|  
-|[message_status —](#message_status)|[task_group_status —](#task_group_status)|  
+|[Agents_eventtype —](#agents_eventtype)|[ConcRT_EventType](#concrt_eventtype)|[Concrt_TraceFlags](#concrt_traceflags)|  
+|[CriticalRegionType](#criticalregiontype)|[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)|[PolicyElementKey](#policyelementkey)|  
+|[SchedulerType](#schedulertype)|[SchedulingProtocolType](#schedulingprotocoltype)|[SwitchingProxyState](#switchingproxystate)|  
+|[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
+|[message_status](#message_status)|[task_group_status](#task_group_status)|  
   
-##  <a name="agent_status"></a>agent_status — wyliczenie  
+##  <a name="agent_status"></a>  agent_status — wyliczenie  
  Nieprawidłowy stan dla `agent`.  
   
 ```
@@ -60,7 +62,7 @@ enum agent_status;
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** concrt.h
 
-##  <a name="agents_eventtype"></a>Agents_eventtype — wyliczenie  
+##  <a name="agents_eventtype"></a>  Agents_eventtype — wyliczenie  
  Typy zdarzeń, które mogą być śledzone korzystanie z funkcji śledzenia biblioteki agentów  
   
 ```
@@ -83,7 +85,7 @@ enum Agents_EventType;
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** concrt.h
 
-##  <a name="concrt_eventtype"></a>Concrt_eventtype — wyliczenie  
+##  <a name="concrt_eventtype"></a>  Concrt_eventtype — wyliczenie  
  Typy zdarzeń, które mogą być śledzone korzystanie z funkcji śledzenia współbieżności środowiska wykonawczego.  
   
 ```
@@ -106,7 +108,7 @@ enum ConcRT_EventType;
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** concrt.h **Namespace:** współbieżności
 
-##  <a name="concrt_traceflags"></a>Concrt_traceflags — wyliczenie  
+##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration  
  Flagi śledzenia dla typów zdarzeń  
   
 ```
@@ -127,7 +129,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** concrt.h
 
-##  <a name="criticalregiontype"></a>Criticalregiontype — wyliczenie  
+##  <a name="criticalregiontype"></a>  Criticalregiontype — wyliczenie  
  Typ krytyczne regionie, w którym znajduje się w kontekście.  
   
 ```
@@ -144,7 +146,7 @@ enum CriticalRegionType;
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** concrtrm.h 
 
-##  <a name="dynamicprogressfeedbacktype"></a>Dynamicprogressfeedbacktype — wyliczenie  
+##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType Enumeration  
  Używane przez `DynamicProgressFeedback` na podstawie zasad do opisywania, czy zasoby harmonogramu zostanie rebalanced zgodnie z informacje statystyczne zebrane z harmonogramu lub tylko na przechodzenie do i stanu bezczynności za pośrednictwem wywołania procesorówwirtualnych`Activate` i `Deactivate` metody `IVirtualProcessorRoot` interfejsu. Aby uzyskać więcej informacji o zasadach dostępne harmonogramu, zobacz [policyelementkey —](concurrency-namespace-enums.md).  
   
 ```
@@ -156,7 +158,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|Planista nie zbierać informacje o postępie. Ponowne równoważenie odbywa się na podstawie wyłącznie na poziomie subskrypcji źródłowej wątku sprzętu. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Ta wartość jest zarezerwowany do użytku przez środowisko uruchomieniowe.|  
 |`ProgressFeedbackEnabled`|Planista gromadzi informacje o postępie i przekazuje je do Menedżera zasobów. Menedżer zasobów będzie korzystać z tej informacji statystycznych równoważenie zasobów w imieniu harmonogramu oprócz poziom subskrypcji źródłowej wątku sprzętu. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).|  
-##  <a name="join_type"></a>join_type — wyliczenie  
+##  <a name="join_type"></a>  join_type — wyliczenie  
  Typ `join` bloku obsługi wiadomości.  
   
 ```
@@ -172,7 +174,7 @@ enum join_type;
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** agents.h  
 
-##  <a name="message_status"></a>message_status — wyliczenie  
+##  <a name="message_status"></a>  message_status — wyliczenie  
  Nieprawidłowa odpowiedzi dla oferty `message` obiektu do bloku.  
   
 ```
@@ -190,7 +192,7 @@ enum message_status;
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** agents.h  
 
-##  <a name="policyelementkey"></a>Policyelementkey — wyliczenie  
+##  <a name="policyelementkey"></a>  Policyelementkey — wyliczenie  
  Klucze zasad opisujące aspekty zachowania harmonogramu. Każdy element zasad jest opisane przez pary klucz wartość. Aby uzyskać więcej informacji na temat zasad harmonogramu i ich wpływ na planiści zobacz [harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ```
@@ -200,22 +202,22 @@ enum PolicyElementKey;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`ContextPriority`|Priorytet wątku systemu operacyjnego każdy kontekst w harmonogramie. Jeśli ten klucz jest ustawiona na wartość `INHERIT_THREAD_PRIORITY` kontekstów w harmonogramie będzie dziedziczyć priorytet wątek, który utworzył harmonogramu.<br /><br /> Prawidłowe wartości: dowolne prawidłowe wartości dla systemu Windows `SetThreadPriority` funkcji i specjalna wartość`INHERIT_THREAD_PRIORITY`<br /><br /> Wartość domyślna:`THREAD_PRIORITY_NORMAL`|  
+|`ContextPriority`|Priorytet wątku systemu operacyjnego każdy kontekst w harmonogramie. Jeśli ten klucz jest ustawiona na wartość `INHERIT_THREAD_PRIORITY` kontekstów w harmonogramie będzie dziedziczyć priorytet wątek, który utworzył harmonogramu.<br /><br /> Prawidłowe wartości: dowolne prawidłowe wartości dla systemu Windows `SetThreadPriority` funkcji i specjalna wartość `INHERIT_THREAD_PRIORITY`<br /><br /> Wartość domyślna: `THREAD_PRIORITY_NORMAL`|  
 |`ContextStackSize`|Rozmiar stosu zastrzeżone każdy kontekst w harmonogramie w kilobajtach.<br /><br /> Prawidłowe wartości: dodatnie liczby całkowite<br /><br /> Wartość domyślna: `0`, wskazujący, że można użyć wartości domyślnych procesu dla rozmiaru stosu.|  
-|`DynamicProgressFeedback`|Określa, czy zasoby harmonogram zostanie rebalanced zgodnie z informacje statystyczne zebrane z harmonogramu lub oparty wyłącznie na poziomie subskrypcji źródłowej wątków sprzętu. Aby uzyskać więcej informacji, zobacz [dynamicprogressfeedbacktype —](#dynamicprogressfeedbacktype).<br /><br /> Prawidłowe wartości: członek `DynamicProgressFeedbackType` wyliczenia, albo `ProgressFeedbackEnabled` lub`ProgressFeedbackDisabled`<br /><br /> Wartość domyślna:`ProgressFeedbackEnabled`|  
-|`LocalContextCacheSize`|Gdy `SchedulingProtocol` zasad jest ustawiona na wartość `EnhanceScheduleGroupLocality`, określa maksymalną liczbę do uruchomienia kontekstach, które mogą być buforowane w na lokalne kolejki procesora wirtualnego. Takie kontekstów zwykle będą uruchamiane w kolejności (LIFO) ostatnich w pierwszym poza na procesora wirtualnego, który spowodował je, aby stać się do uruchomienia. Należy zauważyć że tego klucza zasad nie ma żadnych oznacza, kiedy `SchedulingProtocol` jest ustawiona na wartość `EnhanceForwardProgress`.<br /><br /> Prawidłowe wartości: — nieujemne liczby całkowite<br /><br /> Wartość domyślna:`8`|  
-|`MaxConcurrency`|Współbieżność maksymalny poziom wymaganą przez harmonogram. Menedżer zasobów spróbuje początkowo przydzielić następująca liczba procesorów wirtualnych. Specjalna wartość [maxexecutionresources —](concurrency-namespace-constants1.md#maxexecutionresources) wskazuje, że poziom żądaną współbieżności jest taka sama jak liczba wątków sprzętu na komputerze. Jeśli wartość określona dla `MinConcurrency` jest większa niż liczba wątków sprzętu na komputerze i `MaxConcurrency` jest określony jako `MaxExecutionResources`, wartość `MaxConcurrency` jest zgłaszane do dopasowania, co jest ustawiony dla `MinConcurrency`.<br /><br /> Prawidłowe wartości: dodatnie liczby całkowite i specjalna wartość`MaxExecutionResources`<br /><br /> Wartość domyślna:`MaxExecutionResources`|  
+|`DynamicProgressFeedback`|Określa, czy zasoby harmonogram zostanie rebalanced zgodnie z informacje statystyczne zebrane z harmonogramu lub oparty wyłącznie na poziomie subskrypcji źródłowej wątków sprzętu. Aby uzyskać więcej informacji, zobacz [dynamicprogressfeedbacktype —](#dynamicprogressfeedbacktype).<br /><br /> Prawidłowe wartości: członek `DynamicProgressFeedbackType` wyliczenia, albo `ProgressFeedbackEnabled` lub `ProgressFeedbackDisabled`<br /><br /> Wartość domyślna: `ProgressFeedbackEnabled`|  
+|`LocalContextCacheSize`|Gdy `SchedulingProtocol` zasad jest ustawiona na wartość `EnhanceScheduleGroupLocality`, określa maksymalną liczbę do uruchomienia kontekstach, które mogą być buforowane w na lokalne kolejki procesora wirtualnego. Takie kontekstów zwykle będą uruchamiane w kolejności (LIFO) ostatnich w pierwszym poza na procesora wirtualnego, który spowodował je, aby stać się do uruchomienia. Należy zauważyć że tego klucza zasad nie ma żadnych oznacza, kiedy `SchedulingProtocol` jest ustawiona na wartość `EnhanceForwardProgress`.<br /><br /> Prawidłowe wartości: — nieujemne liczby całkowite<br /><br /> Wartość domyślna: `8`|  
+|`MaxConcurrency`|Współbieżność maksymalny poziom wymaganą przez harmonogram. Menedżer zasobów spróbuje początkowo przydzielić następująca liczba procesorów wirtualnych. Specjalna wartość [maxexecutionresources —](concurrency-namespace-constants1.md#maxexecutionresources) wskazuje, że poziom żądaną współbieżności jest taka sama jak liczba wątków sprzętu na komputerze. Jeśli wartość określona dla `MinConcurrency` jest większa niż liczba wątków sprzętu na komputerze i `MaxConcurrency` jest określony jako `MaxExecutionResources`, wartość `MaxConcurrency` jest zgłaszane do dopasowania, co jest ustawiony dla `MinConcurrency`.<br /><br /> Prawidłowe wartości: dodatnie liczby całkowite i specjalna wartość `MaxExecutionResources`<br /><br /> Wartość domyślna: `MaxExecutionResources`|  
 |`MaxPolicyElementKey`|Klucz elementu maksymalną zasad. Nie klucz prawidłowego elementu.|  
-|`MinConcurrency`|Współbieżność minimalny poziom musi być dostarczona do harmonogramu przez Menedżera zasobów. Liczba procesorów wirtualnych przypisanych do harmonogramu nigdy nie przejdzie poniżej wartości minimalnej. Specjalna wartość [maxexecutionresources —](concurrency-namespace-constants1.md#maxexecutionresources) wskazuje, że poziom współbieżności minimalna jest taka sama jak liczba wątków sprzętu na komputerze. Jeśli wartość określona dla `MaxConcurrency` jest mniejsza niż liczba wątków sprzętu na komputerze i `MinConcurrency` jest określony jako `MaxExecutionResources`, wartość `MinConcurrency` jest obniżona do dopasowania, co jest ustawiony dla `MaxConcurrency`.<br /><br /> Prawidłowe wartości: nieujemnymi liczbami całkowitymi i specjalna wartość `MaxExecutionResources`. Należy pamiętać, że zasady harmonogram używany do budowy planiści współbieżność środowiska wykonawczego, wartość `0` jest nieprawidłowa.<br /><br /> Wartość domyślna:`1`|  
-|`SchedulerKind`|Typ wątków wykorzystujące harmonogramu dla podstawowej kontekstów wykonywania. Aby uzyskać więcej informacji, zobacz [schedulertype —](#schedulertype).<br /><br /> Prawidłowe wartości: członek `SchedulerType` wyliczenia, na przykład`ThreadScheduler`<br /><br /> Wartość domyślna: `ThreadScheduler`. Umożliwia to Win32 wątki we wszystkich systemach operacyjnych.|  
-|`SchedulingProtocol`|W tym artykule opisano, w których planowania algorytm ma zostać użyty przez harmonogram. Aby uzyskać więcej informacji, zobacz [schedulingprotocoltype —](#schedulingprotocoltype).<br /><br /> Prawidłowe wartości: członek `SchedulingProtocolType` wyliczenia, albo `EnhanceScheduleGroupLocality` lub`EnhanceForwardProgress`<br /><br /> Wartość domyślna:`EnhanceScheduleGroupLocality`|  
-|`TargetOversubscriptionFactor`|Wstępne liczba procesorów wirtualnych przypadających na wątku sprzętu. Współczynnik nadsubskrypcji docelowych można zwiększyć przez Menedżera zasobów w razie potrzeby można zrealizować `MaxConcurrency` z wątkami sprzętu na komputerze.<br /><br /> Prawidłowe wartości: dodatnie liczby całkowite<br /><br /> Wartość domyślna:`1`|  
+|`MinConcurrency`|Współbieżność minimalny poziom musi być dostarczona do harmonogramu przez Menedżera zasobów. Liczba procesorów wirtualnych przypisanych do harmonogramu nigdy nie przejdzie poniżej wartości minimalnej. Specjalna wartość [maxexecutionresources —](concurrency-namespace-constants1.md#maxexecutionresources) wskazuje, że poziom współbieżności minimalna jest taka sama jak liczba wątków sprzętu na komputerze. Jeśli wartość określona dla `MaxConcurrency` jest mniejsza niż liczba wątków sprzętu na komputerze i `MinConcurrency` jest określony jako `MaxExecutionResources`, wartość `MinConcurrency` jest obniżona do dopasowania, co jest ustawiony dla `MaxConcurrency`.<br /><br /> Prawidłowe wartości: nieujemnymi liczbami całkowitymi i specjalna wartość `MaxExecutionResources`. Należy pamiętać, że zasady harmonogram używany do budowy planiści współbieżność środowiska wykonawczego, wartość `0` jest nieprawidłowa.<br /><br /> Wartość domyślna: `1`|  
+|`SchedulerKind`|Typ wątków wykorzystujące harmonogramu dla podstawowej kontekstów wykonywania. Aby uzyskać więcej informacji, zobacz [schedulertype —](#schedulertype).<br /><br /> Prawidłowe wartości: członek `SchedulerType` wyliczenia, na przykład `ThreadScheduler`<br /><br /> Wartość domyślna: `ThreadScheduler`. Umożliwia to Win32 wątki we wszystkich systemach operacyjnych.|  
+|`SchedulingProtocol`|W tym artykule opisano, w których planowania algorytm ma zostać użyty przez harmonogram. Aby uzyskać więcej informacji, zobacz [schedulingprotocoltype —](#schedulingprotocoltype).<br /><br /> Prawidłowe wartości: członek `SchedulingProtocolType` wyliczenia, albo `EnhanceScheduleGroupLocality` lub `EnhanceForwardProgress`<br /><br /> Wartość domyślna: `EnhanceScheduleGroupLocality`|  
+|`TargetOversubscriptionFactor`|Wstępne liczba procesorów wirtualnych przypadających na wątku sprzętu. Współczynnik nadsubskrypcji docelowych można zwiększyć przez Menedżera zasobów w razie potrzeby można zrealizować `MaxConcurrency` z wątkami sprzętu na komputerze.<br /><br /> Prawidłowe wartości: dodatnie liczby całkowite<br /><br /> Wartość domyślna: `1`|  
 |`WinRTInitialization`||  
   
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** concrt.h  
 
-##  <a name="schedulertype"></a>Schedulertype — wyliczenie  
+##  <a name="schedulertype"></a>  Schedulertype — wyliczenie  
  Używane przez `SchedulerKind` zasad do opisu typu wątków powinien wykorzystujące dla podstawowej kontekstów wykonywania dla harmonogramu. Aby uzyskać więcej informacji o zasadach dostępne harmonogramu, zobacz [policyelementkey —](concurrency-namespace-enums.md).  
   
 ```
@@ -232,7 +234,7 @@ enum SchedulerType;
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** concrt.h  
   
-##  <a name="schedulingprotocoltype"></a>Schedulingprotocoltype — wyliczenie  
+##  <a name="schedulingprotocoltype"></a>  Schedulingprotocoltype — wyliczenie  
  Używane przez `SchedulingProtocol` zasad do opisywania, który algorytm planowania, które zostaną użyte dla harmonogramu. Aby uzyskać więcej informacji o zasadach dostępne harmonogramu, zobacz [policyelementkey —](concurrency-namespace-enums.md).  
   
 ```
@@ -248,7 +250,7 @@ enum SchedulingProtocolType;
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** concrt.h  
  
-##  <a name="switchingproxystate"></a>Switchingproxystate — wyliczenie  
+##  <a name="switchingproxystate"></a>  Switchingproxystate — wyliczenie  
  Używany do określenia stanu, w którym jest serwer proxy wątku, podczas jej wykonywania przełączanie kontekstu wspólnych do serwera proxy w innym wątku.  
   
 ```
@@ -267,7 +269,7 @@ enum SwitchingProxyState;
   
  Aby uzyskać więcej informacji dotyczących korzystania z tego typu, zobacz [IThreadProxy::SwitchTo](ithreadproxy-structure.md#switchto).  
   
-##  <a name="task_group_status"></a>task_group_status — wyliczenie  
+##  <a name="task_group_status"></a>  task_group_status — wyliczenie  
  Opisuje stan wykonywania `task_group` lub `structured_task_group` obiektu. Wartość tego typu jest zwracany przez wiele metod, które oczekiwanie na zadania zaplanowane do grupy zadań do wykonania.  
   
 ```
@@ -284,7 +286,7 @@ enum task_group_status;
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** pplinterface.h  
 
-##  <a name="winrtinitializationtype"></a>Winrtinitializationtype — wyliczenie  
+##  <a name="winrtinitializationtype"></a>  Winrtinitializationtype — wyliczenie  
  Używane przez `WinRTInitialization` zasad do opisywania, czy i jak środowiska uruchomieniowego systemu Windows zostanie zainicjowana na harmonogram wątków dla aplikacji, która działa w systemach operacyjnych z wersją systemu Windows 8 lub nowszy. Aby uzyskać więcej informacji o zasadach dostępne harmonogramu, zobacz [policyelementkey —](concurrency-namespace-enums.md).  
   
 ```

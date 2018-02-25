@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - queue/std::queue::container_type
 - queue/std::queue::size_type
@@ -17,7 +18,8 @@ f1_keywords:
 - queue/std::queue::pop
 - queue/std::queue::push
 - queue/std::queue::size
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::queue [C++], container_type
 - std::queue [C++], size_type
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9161a04f9007f660df7ea7293426e9a90ada20c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e7f8fe2594dcfe3d0535bf02470e76e8356ab20e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="queue-class"></a>queue — Klasa
 Klasa karty kontenera szablonu, która umożliwia ograniczenie funkcjonalności dla niektórych odpowiedni typ kontenera, ograniczanie dostępu do elementów front i back. Elementy można dodać na tylnej lub wiodących i elementy mogą być kontrolowane na końcu kolejki.  
@@ -51,7 +54,7 @@ class queue
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Typ*  
+ Typ  
  Typ danych elementu mają być przechowywane w kolejce  
   
  `Container`  
@@ -76,7 +79,7 @@ class queue
   
 |||  
 |-|-|  
-|[kolejki](#queue)|Konstruuje `queue` pusta lub jest kopię obiektu podstawowego kontenera.|  
+|[Kolejki](#queue)|Konstruuje `queue` pusta lub jest kopię obiektu podstawowego kontenera.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -90,19 +93,19 @@ class queue
   
 |||  
 |-|-|  
-|[Wstecz](#back)|Zwraca odwołanie do ostatniego i ostatnio dodany element na tworzenie kopii `queue`.|  
-|[pusty](#empty)|Sprawdza, czy `queue` jest pusta.|  
+|[back](#back)|Zwraca odwołanie do ostatniego i ostatnio dodany element na tworzenie kopii `queue`.|  
+|[empty](#empty)|Sprawdza, czy `queue` jest pusta.|  
 |[Front](#front)|Zwraca odwołanie do pierwszego elementu z przodu `queue`.|  
 |[POP](#pop)|Usuwa element z przodu `queue`.|  
 |[push](#push)|Dodaje element do tyłu `queue`.|  
-|[rozmiar](#size)|Zwraca liczbę elementów w `queue`.|  
+|[Rozmiar](#size)|Zwraca liczbę elementów w `queue`.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<kolejki >  
   
  **Namespace:** Standard  
   
-##  <a name="back"></a>Queue::back  
+##  <a name="back"></a>  Queue::back  
  Zwraca odwołanie do ostatniego i ostatnio dodane element w końcu kolejki.  
   
 ```  
@@ -145,7 +148,7 @@ int main( )
 }  
 ```  
   
-##  <a name="container_type"></a>Queue::container_type  
+##  <a name="container_type"></a>  Queue::container_type  
  Typ, który zapewnia podstawową kontener dostosowania.  
   
 ```  
@@ -160,7 +163,7 @@ typedef Container container_type;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [kolejki](#queue) przykład sposobu deklarowanie i użycie `container_type`.  
   
-##  <a name="empty"></a>Queue::Empty  
+##  <a name="empty"></a>  Queue::Empty  
  Testy, jeśli kolejka jest pusta.  
   
 ```  
@@ -204,7 +207,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="front"></a>Queue::front  
+##  <a name="front"></a>  Queue::front  
  Zwraca odwołanie do pierwszego elementu z przodu kolejki.  
   
 ```  
@@ -253,7 +256,7 @@ int main() {
 }  
 ```  
   
-##  <a name="pop"></a>Queue::POP  
+##  <a name="pop"></a>  Queue::POP  
  Usuwa element z przodu kolejki.  
   
 ```  
@@ -307,7 +310,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="push"></a>Queue::push  
+##  <a name="push"></a>  Queue::push  
  Dodaje element do tyłu kolejki.  
   
 ```  
@@ -353,7 +356,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="queue"></a>Queue::Queue  
+##  <a name="queue"></a>  Queue::Queue  
  Tworzy kolejka jest pusta lub kopię obiektu podstawowego kontenera.  
   
 ```  
@@ -417,7 +420,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="size"></a>Queue::size  
+##  <a name="size"></a>  Queue::size  
  Zwraca liczbę elementów w kolejce.  
   
 ```  
@@ -456,7 +459,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="size_type"></a>Queue::size_type  
+##  <a name="size_type"></a>  Queue::size_type  
  Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w kolejce.  
   
 ```  
@@ -469,7 +472,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [queue::front](#front) przykład sposobu deklarowanie i użycie `size_type`.  
   
-##  <a name="value_type"></a>Queue::value_type  
+##  <a name="value_type"></a>  Queue::value_type  
  Typ, który reprezentuje typ obiektu przechowywane jako element w kolejce.  
   
 ```  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_queue
 - CONCURRENT_QUEUE/concurrency::concurrent_queue
@@ -19,19 +20,22 @@ f1_keywords:
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_begin
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_end
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_size
-dev_langs: C++
-helpviewer_keywords: concurrent_queue class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6e2e572574bfd8313106dbdda64b63077d5d2e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6b577b0f652070fa2a80d06e2f44ccad0a421af5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue — Klasa
 `concurrent_queue` Klasa jest sekwencji kontenera klasy, która umożliwia w pierwszej, FIFO dostęp do swoich elementów. Umożliwia ona ograniczony zestaw operacji bezpieczne współbieżności, takich jak `push` i `try_pop`.  
@@ -69,15 +73,15 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[concurrent_queue —](#ctor)|Przeciążone. Tworzy kolejkę współbieżnych.|  
-|[~ concurrent_queue — destruktor](#dtor)|Niszczy równoczesnych kolejki.|  
+|[concurrent_queue](#ctor)|Przeciążone. Tworzy kolejkę współbieżnych.|  
+|[~concurrent_queue Destructor](#dtor)|Niszczy równoczesnych kolejki.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[Wyczyść](#clear)|Czyści równoczesnych kolejki niszczenie żadnego obecnie elementów umieszczonych w kolejce. Ta metoda nie jest bezpieczne współbieżności.|  
-|[pusty](#empty)|Testy, jeśli równoczesnych kolejka jest pusta w tej chwili ta metoda jest wywoływana. Ta metoda jest bezpieczne współbieżności.|  
+|[empty](#empty)|Testy, jeśli równoczesnych kolejka jest pusta w tej chwili ta metoda jest wywoływana. Ta metoda jest bezpieczne współbieżności.|  
 |[get_allocator](#get_allocator)|Zwraca kopię alokatora użyta do skonstruowania równoczesnych kolejki. Ta metoda jest bezpieczne współbieżności.|  
 |[push](#push)|Przeciążone. Enqueues element na końcu tail równoczesnych kolejki. Ta metoda jest bezpieczne współbieżności.|  
 |[try_pop](#try_pop)|Dequeues element z kolejki, jeśli jest dostępny. Ta metoda jest bezpieczne współbieżności.|  
@@ -96,7 +100,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
  **Namespace:** współbieżności  
   
-##  <a name="clear"></a>Wyczyść 
+##  <a name="clear">Wyczyść</a> 
 
  Czyści równoczesnych kolejki niszczenie żadnego obecnie elementów umieszczonych w kolejce. Ta metoda nie jest bezpieczne współbieżności.  
   
@@ -104,7 +108,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 void clear();
 ```  
   
-##  <a name="ctor"></a>concurrent_queue — 
+##  <a name="ctor"></a> concurrent_queue — 
 
  Tworzy kolejkę współbieżnych.  
   
@@ -152,7 +156,7 @@ concurrent_queue(_InputIterator _Begin,
   
  Konstruktor czwarty określa wartości dostarczone przez zakres iteratora [ `_Begin`, `_End`).  
   
-##  <a name="dtor"></a>~ concurrent_queue — 
+##  <a name="dtor"></a> ~ concurrent_queue — 
 
  Niszczy równoczesnych kolejki.  
   
@@ -160,7 +164,7 @@ concurrent_queue(_InputIterator _Begin,
 ~concurrent_queue();
 ```  
   
-##  <a name="empty"></a>pusty 
+##  <a name="empty"></a> pusty 
 
  Testy, jeśli równoczesnych kolejka jest pusta w tej chwili ta metoda jest wywoływana. Ta metoda jest bezpieczne współbieżności.  
   
@@ -169,12 +173,12 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli równoczesnych kolejka jest pusta w tej chwili analizujemy, `false` inaczej.  
+ `true` Jeśli równoczesnych kolejka jest pusta w tej chwili analizujemy, `false` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy ta metoda jest bezpieczne współbieżności względem wywołaniami metod `push`, `try_pop`, i `empty`, do czasu jej jest kontrolowane przez wątek wywołujący wartość zwracana może być nieprawidłowy.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Zwraca kopię alokatora użyta do skonstruowania równoczesnych kolejki. Ta metoda jest bezpieczne współbieżności.  
   
@@ -185,7 +189,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Kopia alokatora użyta do skonstruowania równoczesnych kolejki.  
   
-##  <a name="push"></a>wypychania 
+##  <a name="push"></a> Push 
 
  Enqueues element na końcu tail równoczesnych kolejki. Ta metoda jest bezpieczne współbieżności.  
   
@@ -200,9 +204,9 @@ void push(T&& _Src);
  Element, który ma zostać dodana do kolejki.  
   
 ### <a name="remarks"></a>Uwagi  
- `push`Współbieżność palety względem wywołaniami metod `push`, `try_pop`, i `empty`.  
+ `push` Współbieżność palety względem wywołaniami metod `push`, `try_pop`, i `empty`.  
   
-##  <a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a> try_pop 
 
  Dequeues element z kolejki, jeśli jest dostępny. Ta metoda jest bezpieczne współbieżności.  
   
@@ -215,14 +219,14 @@ bool try_pop(T& _Dest);
  Odwołanie do lokalizację do przechowywania dequeued elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli element został pomyślnie dequeued `false` inaczej.  
+ `true` Jeśli element został pomyślnie dequeued `false` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli element został pomyślnie dequeued parametr `_Dest` otrzymuje wartość dequeued zostanie zniszczony oryginalnej wartości przechowywane w kolejce, a ta funkcja zwraca `true`. Jeśli nie było żadnych elementów do usuwania z kolejki, funkcja zwraca `false` bez blokowania i zawartość `_Dest` parametru jest nieokreślona.  
   
- `try_pop`Współbieżność palety względem wywołaniami metod `push`, `try_pop`, i `empty`.  
+ `try_pop` Współbieżność palety względem wywołaniami metod `push`, `try_pop`, i `empty`.  
   
-##  <a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a> unsafe_begin 
 
  Zwraca iteratora typu `iterator` lub `const_iterator` na początek kolejki współbieżnych. Ta metoda nie jest bezpieczne współbieżności.  
   
@@ -238,7 +242,7 @@ const_iterator unsafe_begin() const;
 ### <a name="remarks"></a>Uwagi  
  Iteratory dla `concurrent_queue` klasy są przeznaczone głównie dla debugowania, jak są one powolne i iteracji nie jest bezpieczną współbieżność w odniesieniu do innych operacji kolejki.  
   
-##  <a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a> unsafe_end 
 
  Zwraca iteratora typu `iterator` lub `const_iterator` na końcu równoczesnych kolejki. Ta metoda nie jest bezpieczne współbieżności.  
   
@@ -254,7 +258,7 @@ const_iterator unsafe_end() const;
 ### <a name="remarks"></a>Uwagi  
  Iteratory dla `concurrent_queue` klasy są przeznaczone głównie dla debugowania, jak są one powolne i iteracji nie jest bezpieczną współbieżność w odniesieniu do innych operacji kolejki.  
   
-##  <a name="unsafe_size"></a>unsafe_size 
+##  <a name="unsafe_size"></a> unsafe_size 
 
  Zwraca liczbę elementów w kolejce. Ta metoda nie jest bezpieczne współbieżności.  
   
@@ -266,7 +270,7 @@ size_type unsafe_size() const;
  Rozmiar kolejki współbieżnych.  
   
 ### <a name="remarks"></a>Uwagi  
- `unsafe_size`nie jest bezpieczne współbieżności i może prowadzić do niepoprawnych wyników przypadku równocześnie z wywołaniami metod `push`, `try_pop`, i `empty`.  
+ `unsafe_size` nie jest bezpieczne współbieżności i może prowadzić do niepoprawnych wyników przypadku równocześnie z wywołaniami metod `push`, `try_pop`, i `empty`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

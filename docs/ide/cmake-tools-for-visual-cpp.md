@@ -4,21 +4,25 @@ ms.custom:
 ms.date: 08/08/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: CMake in Visual C++
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33c768d419215d6bee6d5d8acff707ec129b7cd5
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
+ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake projekty w programie Visual C++
 
@@ -161,7 +165,7 @@ Bezpośrednio po zapisaniu pliku krok konfiguracji jest uruchamiana ponownie i a
 
    ![Błędy w pliku CMakeLists.txt](media/cmake-cmakelists-error.png "CMakeLists.txt błędy w pliku")
 
-## <a name="cmake_settings"></a>CMake ustawienia i konfiguracje niestandardowe
+## <a name="cmake_settings"></a> CMake ustawienia i konfiguracje niestandardowe
 
 Domyślnie program Visual Studio oferuje sześć domyślne konfiguracje CMake ("x86-Debug", "x86 wersja", "x64-Debug", "x64-wersja", "Linux-Debug" i "Linux wersja"). Te konfiguracje zdefiniuj, jak CMake.exe jest wywoływane w celu utworzenia pamięci podręcznej CMake dla danego projektu. Aby zmodyfikować te konfiguracje lub Utwórz nową konfigurację niestandardowe, wybierz **CMake | Zmień ustawienia CMake**, a następnie wybierz plik CMakeLists.txt, które ustawienia dotyczą. **Zmień ustawienia CMake** polecenia jest również dostępny w menu kontekstowym pliku w **Eksploratora rozwiązań**. To polecenie tworzy plik CMakeSettings.json w folderze projektu. Ten plik służy do ponownego utworzenia pliku pamięci podręcznej CMake, na przykład po **wyczyść** operacji. 
 
@@ -215,13 +219,13 @@ Aby określić generator Visual Studio, otwórz CMakeSettings.json z poziomu men
 CMakeSettings.json obsługuje również odbierającą zmienne środowiskowe w dowolnej właściwości wymienionych powyżej. Składnia jest `${env.FOO}` aby rozwinąć zmiennej środowiskowej % FOO %.
 Masz również dostęp do wbudowanych makr wewnątrz tego pliku:
 
-- `${workspaceRoot}`— zapewnia pełną ścieżkę folderu roboczego
-- `${workspaceHash}`— Skrót lokalizacji obszaru roboczego. przydatne w przypadku tworzenia Unikatowy identyfikator dla bieżącego obszaru roboczego (na przykład do użycia w ścieżkach folderów)
-- `${projectFile}`— Pełna ścieżka pliku CMakeLists.txt głównego
-- `${projectDir}`— Pełna ścieżka do folderu głównego pliku CMakeLists.txt
-- `${thisFile}`— Pełna ścieżka pliku CMakeSettings.json
-- `${name}`— Nazwa konfiguracji
-- `${generator}`— Nazwa generatora CMake używany w tej konfiguracji
+- `${workspaceRoot}` — zapewnia pełną ścieżkę folderu roboczego
+- `${workspaceHash}` — Skrót lokalizacji obszaru roboczego. przydatne w przypadku tworzenia Unikatowy identyfikator dla bieżącego obszaru roboczego (na przykład do użycia w ścieżkach folderów)
+- `${projectFile}` — Pełna ścieżka pliku CMakeLists.txt głównego
+- `${projectDir}` — Pełna ścieżka do folderu głównego pliku CMakeLists.txt
+- `${thisFile}` — Pełna ścieżka pliku CMakeSettings.json
+- `${name}` — Nazwa konfiguracji
+- `${generator}` — Nazwa generatora CMake używany w tej konfiguracji
 
 ### <a name="ninja-command-line-arguments"></a>Argumenty wiersza polecenia nindżą
 
@@ -248,8 +252,7 @@ usage: ninja [options] [targets...]
 |   -w flagi  | Dostosuj ostrzeżenia (Użyj -w listy do ostrzeżenia)|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>Dziedziczony środowisk (Visual Studio 2017 wersji 15,5 cala)
-
-CmakeSettings.json obsługuje teraz dziedziczone środowiska. Ta funkcja umożliwia (1) dziedziczyć domyślnego środowiska i (2) Utwórz zmienne środowiskowe niestandardowych, które są przekazywane do CMake.exe, gdy jest uruchamiany.
+CMakeSettings.json obsługuje teraz dziedziczone środowiska. Ta funkcja umożliwia (1) dziedziczyć domyślnego środowiska i (2) Utwórz zmienne środowiskowe niestandardowych, które są przekazywane do CMake.exe, gdy jest uruchamiany.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -271,7 +274,7 @@ W poniższej tabeli przedstawiono domyślne wartości i ich odpowiedniki wiersza
 |msvc_arm64_x64|Kompilacji dla ARM64 przy użyciu narzędzia 64-bitowy|
 
 ### <a name="custom-environment-variables"></a>Zmienne środowiskowe niestandardowych
-W CmakeSettings.json, można zdefiniować zmienne niestandardowe środowiska globalnie lub na konfigurację w **środowisk** właściwości. W poniższym przykładzie zdefiniowano jednej zmiennej globalnej, **BuildDir**, dziedziczoną w konfiguracjach x86 debugowania i x64 debugowania. Każdej konfiguracji użyto zmiennej do określenia wartości **buildRoot** właściwości dla tej konfiguracji. Należy też zauważyć, jak każdej konfiguracji używa **inheritEnvironments** właściwości w celu określenia zmiennej, która ma zastosowanie tylko do tej konfiguracji.
+W CMakeSettings.json, można zdefiniować zmienne niestandardowe środowiska globalnie lub na konfigurację w **środowisk** właściwości. W poniższym przykładzie zdefiniowano jednej zmiennej globalnej, **BuildDir**, dziedziczoną w konfiguracjach x86 debugowania i x64 debugowania. Każdej konfiguracji użyto zmiennej do określenia wartości **buildRoot** właściwości dla tej konfiguracji. Należy też zauważyć, jak każdej konfiguracji używa **inheritEnvironments** właściwości w celu określenia zmiennej, która ma zastosowanie tylko do tej konfiguracji.
 
 ```json
 {
@@ -290,8 +293,7 @@ W CmakeSettings.json, można zdefiniować zmienne niestandardowe środowiska glo
       "configurationType": "Debug",
       // Inherit the defaults for using the MSVC x86 compiler.
       "inheritEnvironments": [ "msvc_x86" ],
-      "buildRoot": "${env.BuildDir}\\${name}"
-    },
+      "buildRoot": "${env.BuildDir}\\${name}"    },
     {
       "name": "x64-Debug",
       "generator": "Ninja",
@@ -346,7 +348,7 @@ W następnym przykładzie z konfiguracji debugowania x86 definiuje wartość dla
 }
 ```
 
-## <a name="cmake-configure-step"></a>Cmake skonfigurować kroku
+## <a name="cmake-configure-step"></a>CMake skonfigurować kroku
 
 W przypadku istotnych zmian do CMakeSettings.json lub CMakeLists.txt pliki, Visual Studio automatycznie ponownie uruchamia CMake skonfigurować kroku. Jeśli krok Konfiguruj zakończy działanie bez błędów, zbieranych informacji jest dostępnych w usługach języka i IntelliSense dla C++ i również w kompilacji i debugowania operacji.
 

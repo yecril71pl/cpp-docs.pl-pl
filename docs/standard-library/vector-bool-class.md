@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vector<bool>
 - vector/std::vector::const_pointer
@@ -14,7 +15,8 @@ f1_keywords:
 - vector/std::vector::pointer
 - vector/std::vector::flip
 - vector/std::vector::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::vector [C++], const_pointer
 - std::vector [C++], const_reference
@@ -22,16 +24,17 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f8117c3ac56305637164886c6c27f7f20528d64a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eff3076c144bbd10a7c1a93315ab26ebb97bc0e3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="vectorltboolgt-class"></a>Wektor&lt;bool&gt; — klasa
 `vector<bool>` Klasy jest częściowa specjalizacja [wektor](../standard-library/vector-class.md) dla elementów typu `bool`. Ma ona alokatora dla typu podstawowego, który jest używany przez specjalizacji, co zapewnia optymalizacji miejsca dzięki przechowywaniu jedną `bool` wartość w każdej z bitowego.  
@@ -46,7 +49,7 @@ class vector<bool, Allocator>
 ## <a name="remarks"></a>Uwagi  
  Ta klasa specjalizacja szablonu zachowuje się jak wektora, z wyjątkiem różnice opisane w tym artykule.  
   
- Operacje, które zajmują się `bool` typu odpowiadają wartościom w magazynie kontenera. `allocator_traits::construct`nie jest używany do tworzenia tych wartości.  
+ Operacje, które zajmują się `bool` typu odpowiadają wartościom w magazynie kontenera. `allocator_traits::construct` nie jest używany do tworzenia tych wartości.  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -54,15 +57,15 @@ class vector<bool, Allocator>
 |-|-|  
 |[const_pointer](#const_pointer)|Element typedef do `const_iterator` który może służyć jako stałej wskaźnika do elementu logiczna `vector<bool>`.|  
 |[const_reference](#const_reference)|Element typedef dla `bool`. Po zainicjowaniu nie zwraca uwagi na aktualizacje do wartości pierwotnej.|  
-|[wskaźnik](#pointer)|Element typedef do `iterator` który może służyć jako wskaźnik do elementu Boolean elementu `vector<bool>`.|  
+|[pointer](#pointer)|Element typedef do `iterator` który może służyć jako wskaźnik do elementu Boolean elementu `vector<bool>`.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
 |||  
 |-|-|  
-|[Przerzuć](#flip)|Odwraca wszystkie bity w `vector<bool>`.|  
+|[flip](#flip)|Odwraca wszystkie bity w `vector<bool>`.|  
 |[swap](#swap)|Zamienia elementy dwóch `vector<bool>`s.|  
-|[Operator &#91; &#93;](#op_at)|Zwraca symulowane odwołanie do `vector<bool>` elementu w określonej pozycji.|  
+|[operator&#91;&#93;](#op_at)|Zwraca symulowane odwołanie do `vector<bool>` elementu w określonej pozycji.|  
 |`at`|Odpowiada to klasy niespecjalizowanej [wektor](../standard-library/vector-class.md):: w funkcji, z wyjątkiem, że używa klasy serwera proxy [wektor\<bool >:: odwołanie](#reference_class). Zobacz też [operatora &#91; &#93;](#op_at).|  
 |`front`|Odpowiada to klasy niespecjalizowanej [wektor](../standard-library/vector-class.md):: FrontPage funkcji, z wyjątkiem tego, że używa klasy serwera proxy [wektor\<bool >:: odwołanie](#reference_class). Zobacz też [operatora &#91; &#93;](#op_at).|  
 |`back`|Odpowiada to klasy niespecjalizowanej [wektor](../standard-library/vector-class.md):: kopii funkcji, z wyjątkiem tego, że używa klasy serwera proxy [wektor\<bool >:: odwołanie](#reference_class). Zobacz też [operatora &#91; &#93;](#op_at).|  
@@ -78,14 +81,14 @@ class vector<bool, Allocator>
   
  **Namespace:** Standard  
   
-##  <a name="const_pointer"></a>Wektor\<bool >:: const_pointer  
+##  <a name="const_pointer"></a>  Wektor\<bool >:: const_pointer  
  Typ, który opisuje obiekt, który może służyć jako stałej wskaźnika do elementu logiczna sekwencji zawarty w `vector<bool>` obiektu.  
   
 ```  
 typedef const_iterator const_pointer;  
 ```  
   
-##  <a name="const_reference"></a>Wektor\<bool >:: const_reference  
+##  <a name="const_reference"></a>  Wektor\<bool >:: const_reference  
  Typ, który opisuje obiekt, który może służyć jako odwołanie stałej dla elementu logiczna sekwencji zawarty w `vector<bool>` obiektu.  
   
 ```  
@@ -95,7 +98,7 @@ typedef bool const_reference;
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji oraz przykłady kodu, zobacz [wektor&lt;bool&gt;:: reference::operator =](#reference_operator_eq).  
   
-##  <a name="flip"></a>Wektor\<bool >:: Przerzuć  
+##  <a name="flip"></a>  Wektor\<bool >:: Przerzuć  
  Odwraca wszystkie bity w `vector<bool>`.  
   
 ```  
@@ -133,7 +136,7 @@ int main()
   
 ```  
   
-##  <a name="op_at"></a>Wektor\<bool >:: — operator]  
+##  <a name="op_at"></a>  Wektor\<bool >:: — operator]  
  Zwraca symulowane odwołanie do `vector<bool>` elementu w określonej pozycji.  
   
 ```  
@@ -187,18 +190,18 @@ int main()
 }  
 ```  
   
-##  <a name="pointer"></a>Wektor\<bool >:: wskaźnika  
+##  <a name="pointer"></a>  Wektor\<bool >:: wskaźnika  
  Typ, który opisuje obiekt, który może służyć jako wskaźnik do elementu logiczna zawarty w sekwencji `vector<bool>` obiektu.  
   
 ```  
 typedef iterator pointer;  
 ```  
   
-##  <a name="reference_class"></a>Wektor\<bool >:: klasę referencyjną  
+##  <a name="reference_class"></a>  Wektor\<bool >:: klasę referencyjną  
  `vector<bool>::reference` Klasa jest klasą proxy dostarczonych przez [wektor\<bool > klasy](../standard-library/vector-bool-class.md) do symulowania `bool&`.  
   
 ### <a name="remarks"></a>Uwagi  
- Symulowane odwołanie jest wymagane, ponieważ C++ nie zezwala natywnie na bezpośrednie odwołania do bitów. `vector<bool>`używa tylko jeden bit na element, który można odwoływać się za pomocą tej klasy serwera proxy. Jednakże symulacja odwołania nie jest kompletna, ponieważ niektóre przypisania nie są prawidłowe. Na przykład ponieważ adres `vector<bool>::reference` obiektu nie można wykonywać, następujący kod, który używa [wektor\<bool >:: — operator &#91; &#93;](#op_at) jest nieprawidłowy:  
+ Symulowane odwołanie jest wymagane, ponieważ C++ nie zezwala natywnie na bezpośrednie odwołania do bitów. `vector<bool>` używa tylko jeden bit na element, który można odwoływać się za pomocą tej klasy serwera proxy. Jednakże symulacja odwołania nie jest kompletna, ponieważ niektóre przypisania nie są prawidłowe. Na przykład ponieważ adres `vector<bool>::reference` obiektu nie można wykonywać, następujący kod, który używa [wektor\<bool >:: — operator &#91; &#93;](#op_at) jest nieprawidłowy:  
   
 ```cpp  
 vector<bool> vb;  
@@ -207,7 +210,7 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use  
 ```  
   
-###  <a name="reference_flip"></a>Wektor\<bool >:: reference::flip  
+###  <a name="reference_flip"></a>  Wektor\<bool >:: reference::flip  
  Odwraca wartość logiczną odwoływany [wektor\<bool >](../standard-library/vector-bool-class.md) elementu.  
   
 ```  
@@ -253,7 +256,7 @@ The vector with first element flipped is:
     false false false true true  
 ```  
   
-###  <a name="reference_operator_bool"></a>Wektor\<bool >:: reference::operator bool  
+###  <a name="reference_operator_bool"></a>  Wektor\<bool >:: reference::operator bool  
  Udostępnia niejawna konwersja z `vector<bool>::reference` do `bool`.  
   
 ```  
@@ -266,7 +269,7 @@ operator bool() const;
 #### <a name="remarks"></a>Uwagi  
  `vector<bool>` Obiektu nie może modyfikować tego operatora.  
   
-###  <a name="reference_operator_eq"></a>Wektor\<bool >:: reference::operator =  
+###  <a name="reference_operator_eq"></a>  Wektor\<bool >:: reference::operator =  
  Przypisuje do bitu wartość logiczną lub wartość przechowywaną przez odnośny element.  
   
 ```  
@@ -352,7 +355,7 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false  
 ```  
   
-##  <a name="swap"></a>Wektor\<bool >:: wymiany  
+##  <a name="swap"></a>  Wektor\<bool >:: wymiany  
  Funkcja statycznego elementu członkowskiego, który wymienia dwa elementy wektorów logiczna ( `vector<bool>`) przy użyciu klasy serwera proxy [wektor\<bool >:: odwołanie](#reference_class).  
   
 ```  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocmes/std::messages
 - xlocmes/std::messages::char_type
@@ -17,7 +18,8 @@ f1_keywords:
 - xlocmes/std::messages::do_open
 - xlocmes/std::messages::get
 - xlocmes/std::messages::open
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::messages [C++]
 - std::messages [C++], char_type
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1bf1320e138224b36e0d73e1d2702b9cf85fb8c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 809a5fc0a74408c484948309a62096c2e89b7af5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="messages-class"></a>messages — Klasa
 Klasa szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawień regionalnych w celu pobrania zlokalizowanych komunikatów z katalogu międzynarodowych wiadomości dla danego ustawienia regionalnego.  
@@ -65,14 +68,14 @@ class messages : public messages_base;
   
 |||  
 |-|-|  
-|[komunikaty](#messages)|Funkcja konstruktora zestawu reguł komunikatów.|  
+|[Komunikaty](#messages)|Funkcja konstruktora zestawu reguł komunikatów.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
 |[char_type](#char_type)|Typ znaku, który jest używany do wyświetlania komunikatów.|  
-|[STRING_TYPE](#string_type)|Typ, który opisuje ciąg typu `basic_string` zawierające znaki typu `CharType`.|  
+|[string_type](#string_type)|Typ, który opisuje ciąg typu `basic_string` zawierające znaki typu `CharType`.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
@@ -90,7 +93,7 @@ class messages : public messages_base;
   
  **Namespace:** Standard  
   
-##  <a name="char_type"></a>messages::char_type  
+##  <a name="char_type"></a>  messages::char_type  
  Typ znaku, który jest używany do wyświetlania komunikatów.  
   
 ```
@@ -100,7 +103,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu **CharType**.  
   
-##  <a name="close"></a>messages::Close  
+##  <a name="close"></a>  messages::Close  
  Zamyka katalog komunikatów.  
   
 ```
@@ -114,7 +117,7 @@ void close(catalog _Catval) const;
 ### <a name="remarks"></a>Uwagi  
  Wywołania funkcji Członkowskich [do_close](#do_close)(_ *Catval*).  
   
-##  <a name="do_close"></a>messages::do_close  
+##  <a name="do_close"></a>  messages::do_close  
  Funkcja wirtualna wywoływana, aby zamknąć katalog komunikatów.  
   
 ```
@@ -133,7 +136,7 @@ virtual void do_close(catalog _Catval) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [zamknąć](#close), które wywołuje `do_close`.  
   
-##  <a name="do_get"></a>messages::do_get  
+##  <a name="do_get"></a>  messages::do_get  
  Funkcja wirtualna wywoływana, aby pobrać katalog komunikatów.  
   
 ```
@@ -166,7 +169,7 @@ virtual string_type do_get(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [uzyskać](#get), które wywołuje `do_get`.  
   
-##  <a name="do_open"></a>messages::do_open  
+##  <a name="do_open"></a>  messages::do_open  
  Funkcja wirtualna wywoływana, aby otworzyć katalog komunikatów.  
   
 ```
@@ -193,7 +196,7 @@ virtual catalog do_open(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [Otwórz](#open), które wywołuje `do_open`.  
   
-##  <a name="get"></a>messages::Get  
+##  <a name="get"></a>  messages::Get  
  Pobiera katalog komunikatów.  
   
 ```
@@ -223,7 +226,7 @@ string_type get(
 ### <a name="remarks"></a>Uwagi  
  Funkcja członkowska zwraca [do_get](#do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`).  
   
-##  <a name="messages"></a>messages::messages  
+##  <a name="messages"></a>  messages::messages  
  Funkcja konstruktora zestawu reguł komunikatów.  
   
 ```
@@ -249,13 +252,13 @@ protected: messages(
   
 -   1: okres istnienia obiektu musi być zarządzane ręcznie.  
   
--   \>1: te wartości są niezdefiniowane.  
+-   \> 1: te wartości są niezdefiniowane.  
   
  Nie bezpośredniego przykładów to możliwe, ponieważ destruktor jest chroniony.  
   
  Konstruktor inicjuje jego obiektu podstawowego z **locale::**[aspektu](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-##  <a name="open"></a>messages::Open  
+##  <a name="open"></a>  messages::Open  
  Otwiera katalog komunikatów.  
   
 ```
@@ -277,7 +280,7 @@ catalog open(
 ### <a name="remarks"></a>Uwagi  
  Funkcja członkowska zwraca [do_open](#do_open)( `_Catname`, `_Loc`).  
   
-##  <a name="string_type"></a>messages::STRING_TYPE  
+##  <a name="string_type"></a>  messages::STRING_TYPE  
  Typ, który opisuje ciąg typu `basic_string` zawierające znaki typu **CharType**.  
   
 ```
@@ -288,7 +291,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
  Typ w tym artykule opisano specjalizacji szablonu klasy [basic_string —](../standard-library/basic-string-class.md) których obiekty można przechowywać kopie sekwencji komunikatów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Ustawienia regionalne >](../standard-library/locale.md)   
+ [\<locale>](../standard-library/locale.md)   
  [messages_base — klasa](../standard-library/messages-base-class.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

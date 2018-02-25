@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - valarray/std::abs
 - valarray/std::acos
@@ -25,7 +25,7 @@ f1_keywords:
 - valarray/std::tan
 - valarray/std::tanh
 ms.assetid: 109778fc-440e-4239-b23e-bafda2b165c2
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::abs [C++]
@@ -45,23 +45,23 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: b15c90c9346ae490e51f6b28cc508164ead395b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 0c6734e0c776a27057ef9f3bbe8c5be1ae0c7990
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray —&gt; funkcji
 ||||  
 |-|-|-|  
 |[ABS](#abs)|[ACOS](#acos)|[ASIN](#asin)|  
-|[ATAN](#atan)|[ATAN2](#atan2)|[COS](#cos)|  
-|[COSH](#cosh)|[EXP](#exp)|[Dziennik](#log)|  
-|[LOG10](#log10)|[Pow](#pow)|[SIN](#sin)|  
-|[SINH](#sinh)|[SQRT](#sqrt)|[swap](#swap)|  
+|[atan](#atan)|[atan2](#atan2)|[COS](#cos)|  
+|[COSH](#cosh)|[EXP](#exp)|[log](#log)|  
+|[log10](#log10)|[Pow](#pow)|[sin](#sin)|  
+|[SINH](#sinh)|[sqrt](#sqrt)|[swap](#swap)|  
 |[tan](#tan)|[TANH](#tanh)|  
   
-##  <a name="abs"></a>ABS  
+##  <a name="abs">ABS</a>  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe wartość bezwzględną liczby elementów wejściowych valarray —.  
   
 ```  
@@ -113,7 +113,7 @@ The initial valarray is: 0 -1 -2 -3 4 5 6 7 8 .
 The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .  
 ```  
   
-##  <a name="acos"></a>ACOS  
+##  <a name="acos">ACOS</a>  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe arcus cosinus liczby elementów wejściowych valarray —.  
   
 ```  
@@ -182,7 +182,7 @@ The arccosine of the initial valarray is:
          0  radians, which is            0  degrees  
 ```  
   
-##  <a name="asin"></a>ASIN  
+##  <a name="asin">ASIN</a>  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe arcus sinus elementów wejściowych valarray —.  
   
 ```  
@@ -251,7 +251,7 @@ The arcsine of the initial valarray is:
     1.5708  radians, which is           90  degrees  
 ```  
   
-##  <a name="atan"></a>ATAN  
+##  <a name="atan"></a>  ATAN  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe wartość główną arcus tangens elementów wejściowych valarray —.  
   
 ```  
@@ -323,7 +323,7 @@ The arcsine of the initial valarray is:
     1.5608  radians, which is      89.4271  degrees  
 ```  
   
-##  <a name="atan2"></a>ATAN2  
+##  <a name="atan2"></a>  ATAN2  
  Zwraca valarray —, której elementy są równe arcus tangens kartezjańskimi określone przez kombinację stałych i elementy valarrays składników.  
   
 ```  
@@ -347,11 +347,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 ### <a name="return-value"></a>Wartość zwracana  
  Valarray — której elementy `I` są równe arcus tangens:  
   
-- `left`[ *I* ] / *_Righ*t [ *I* ] pierwszej funkcji szablonu.  
+- `left` [ *I* ] / *_Righ*t [ *I* ] pierwszej funkcji szablonu.  
   
-- `left`[ *I* ] / `right` drugi funkcji szablonu.  
+- `left` [ *I* ] / `right` drugi funkcji szablonu.  
   
-- `left` / `right`[ *I* ] trzeci funkcji szablonu.  
+- `left` / `right` [ *I* ] trzeci funkcji szablonu.  
   
 ### <a name="remarks"></a>Uwagi  
  Jednostki zwracane elementy znajdują się w radianach.  
@@ -413,7 +413,7 @@ The atan2 ( y / x ) of the initial valarrays is:
  -0.785398  radians, which is          -45degrees  
 ```  
   
-##  <a name="cos"></a>COS  
+##  <a name="cos">COS</a>  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe cosinus elementów wejściowych valarray —.  
   
 ```  
@@ -487,7 +487,7 @@ The cosine of the initial valarray is:
 -1  
 ```  
   
-##  <a name="cosh"></a>COSH  
+##  <a name="cosh">COSH</a>  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe cosinus hiperboliczny elementów wejściowych valarray —.  
   
 ```  
@@ -566,7 +566,7 @@ The hyperbolic cosine of the initial valarray is:
 11.592  
 ```  
   
-##  <a name="exp"></a>EXP  
+##  <a name="exp">EXP</a>  
  Działa na elementy wejściowe valarray zwracanie valarray —, której elementy są równe wykładniczej elementów wejściowych valarray — naturalnego —.  
   
 ```  
@@ -626,7 +626,7 @@ The natural exponential of the initial valarray is:
 22026.5  
 ```  
   
-##  <a name="log"></a>Dziennik  
+##  <a name="log"></a>  Dziennik  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe logarytm naturalny elementów wejściowych valarray —.  
   
 ```  
@@ -686,7 +686,7 @@ The natural logarithm of the initial valarray is:
 4.38203  
 ```  
   
-##  <a name="log10"></a>LOG10  
+##  <a name="log10"></a>  LOG10  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są takie same na podstawie 10 lub logarytmu elementów wejściowych valarray —.  
   
 ```  
@@ -748,7 +748,7 @@ The common logarithm of the initial valarray is:
 2  
 ```  
   
-##  <a name="pow"></a>Pow  
+##  <a name="pow">Pow</a>  
  Działa w przypadku elementów wejściowych valarrays i stałe, zwracając valarray —, której elementy są równe podstawowej określone przez elementy wejściowe valarray — lub stałą podniesionej do potęgi określonej przez elementy wejściowe valarray — lub stała.  
   
 ```  
@@ -781,11 +781,11 @@ pow(
 ### <a name="return-value"></a>Wartość zwracana  
  Valarray — której elementy `I` są równe:  
   
-- `left`[ *I* ] podniesionej do potęgi `right` [ *I* ] pierwszej funkcji szablonu.  
+- `left` [ *I* ] podniesionej do potęgi `right` [ *I* ] pierwszej funkcji szablonu.  
   
-- `left`[ *I* ] podniesionej do potęgi `right` drugi funkcji szablonu.  
+- `left` [ *I* ] podniesionej do potęgi `right` drugi funkcji szablonu.  
   
-- `left`podniesionej do potęgi `right` [ *I* ] trzeci funkcji szablonu.  
+- `left` podniesionej do potęgi `right` [ *I* ] trzeci funkcji szablonu.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli `left` i `right` mają różne liczby elementów, wynikiem jest niezdefiniowany.  
@@ -841,7 +841,7 @@ n = 4   gives 256
 n = 5   gives 1024  
 ```  
   
-##  <a name="sin"></a>SIN  
+##  <a name="sin"></a>  SIN  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe sinus elementów wejściowych valarray —.  
   
 ```  
@@ -915,7 +915,7 @@ The sine of the initial valarray is:
 -2.06823e-013  
 ```  
   
-##  <a name="sinh"></a>SINH  
+##  <a name="sinh">SINH</a>  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe sinus hiperboliczny liczby elementów wejściowych valarray —.  
   
 ```  
@@ -994,7 +994,7 @@ The hyperbolic sine of the initial valarray is:
 11.5487  
 ```  
   
-##  <a name="sqrt"></a>SQRT  
+##  <a name="sqrt"></a>  SQRT  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe pierwiastek kwadratowy liczby elementów wejściowych valarray —.  
   
 ```  
@@ -1045,7 +1045,7 @@ The initial valarray is: ( 0 1 4 9 16 ).
 The square root of the initial valarray is: ( 0 1 2 3 4 ).  
 ```  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  Swap  
  Zamienia valarrays dwa elementy.  
   
 ```  
@@ -1065,7 +1065,7 @@ void swap(
 ### <a name="remarks"></a>Uwagi  
  Funkcja szablonu wykonuje ` left.swap( right)`.  
   
-##  <a name="tan"></a>tan  
+##  <a name="tan">tan</a>  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe tangens elementów wejściowych valarray —.  
   
 ```  
@@ -1139,7 +1139,7 @@ The tangent of the initial valarray is:
 -9.6701e+012  
 ```  
   
-##  <a name="tanh"></a>TANH  
+##  <a name="tanh">TANH</a>  
  Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe tangens hiperboliczny liczby elementów wejściowych valarray —.  
   
 ```  
@@ -1219,5 +1219,5 @@ The hyperbolic tangent of the initial valarray is:
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<valarray — >](../standard-library/valarray.md)
+ [\<valarray>](../standard-library/valarray.md)
 

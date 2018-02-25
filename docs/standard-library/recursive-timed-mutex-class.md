@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - mutex/std::recursive_timed_mutex
 - mutex/std::recursive_timed_mutex::recursive_timed_mutex
@@ -15,9 +16,10 @@ f1_keywords:
 - mutex/std::recursive_timed_mutex::try_lock_for
 - mutex/std::recursive_timed_mutex::try_lock_until
 - mutex/std::recursive_timed_mutex::unlock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 59cc2d5c-ed80-45f3-a0a8-05652a8ead7e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.workload: cplusplus
-ms.openlocfilehash: 9ed5930eca492d6793ab08c39b6af8b45a9124c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ec98e8c357bf1f40fdc608873dbbb18f0f5f18f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex — Klasa
 Reprezentuje *upłynął typu obiektu mutex*. Obiekty tego typu są używane do wymuszania wykluczanie wzajemne przy użyciu czas blokowania w programie. W przeciwieństwie do obiektów typu [timed_mutex](../standard-library/timed-mutex-class.md), efekt podczas wywoływania metody blokowania `recursive_timed_mutex` obiektów jest dobrze zdefiniowany.  
@@ -52,7 +55,7 @@ class recursive_timed_mutex;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[recursive_timed_mutex](#recursive_timed_mutex)|Konstruuje `recursive_timed_mutex` obiekt, który nie jest zablokowany.|  
-|[~ recursive_timed_mutex — destruktor](#dtorrecursive_timed_mutex_destructor)|Zwalnia wszystkie zasoby, które są używane przez `recursive_timed_mutex` obiektu.|  
+|[~recursive_timed_mutex Destructor](#dtorrecursive_timed_mutex_destructor)|Zwalnia wszystkie zasoby, które są używane przez `recursive_timed_mutex` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -62,14 +65,14 @@ class recursive_timed_mutex;
 |[try_lock](#try_lock)|Próbuje uzyskać prawo własności `mutex` bez blokowania.|  
 |[try_lock_for](#try_lock_for)|Próbuje uzyskać prawo własności `mutex` określony interwał czasu.|  
 |[try_lock_until](#try_lock_until)|Próbuje uzyskać prawo własności `mutex` dopiero po określonym czasie.|  
-|[odblokowywanie](#unlock)|Zwalnia własność `mutex`.|  
+|[unlock](#unlock)|Zwalnia własność `mutex`.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<obiektu mutex >  
   
  **Namespace:** Standard  
   
-##  <a name="lock"></a>blokady  
+##  <a name="lock"></a>  blokady  
  Wątek wywołujący blokuje, dopóki wątek uzyskuje prawo własności do `mutex`.  
   
 ```cpp  
@@ -79,14 +82,14 @@ void lock();
 ### <a name="remarks"></a>Uwagi  
  Jeśli wątek wywołujący już właścicielem `mutex`, metoda zwraca natychmiast i poprzednia blokada będzie obowiązywać.  
   
-##  <a name="recursive_timed_mutex"></a>recursive_timed_mutex — Konstruktor  
+##  <a name="recursive_timed_mutex"></a>  recursive_timed_mutex — Konstruktor  
  Konstruuje `recursive_timed_mutex` obiekt, który nie jest zablokowany.  
   
 ```cpp  
 recursive_timed_mutex();
 ```  
   
-##  <a name="dtorrecursive_timed_mutex_destructor"></a>~ recursive_timed_mutex — destruktor  
+##  <a name="dtorrecursive_timed_mutex_destructor"></a>  ~ recursive_timed_mutex — destruktor  
  Zwalnia wszystkie zasoby, które są używane przez `recursive_timed_mutex` obiektu.  
   
 ```cpp  
@@ -96,7 +99,7 @@ recursive_timed_mutex();
 ### <a name="remarks"></a>Uwagi  
  Jeśli obiekt jest zablokowany, po uruchomieniu destruktor, zachowanie jest niezdefiniowany.  
   
-##  <a name="try_lock"></a>try_lock  
+##  <a name="try_lock"></a>  try_lock  
  Próbuje uzyskać prawo własności `mutex` bez blokowania.  
   
 ```cpp  
@@ -104,12 +107,12 @@ bool try_lock() noexcept;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli metoda pomyślnie uzyskał własność `mutex` lub jeśli wątek wywołujący już właścicielem `mutex`; w przeciwnym razie `false`.  
+ `true` Jeśli metoda pomyślnie uzyskał własność `mutex` lub jeśli wątek wywołujący już właścicielem `mutex`; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli wątek wywołujący już właścicielem `mutex`, funkcja natychmiast zwraca `true`, i obowiązuje poprzedniej blokady.  
   
-##  <a name="try_lock_for"></a>try_lock_for  
+##  <a name="try_lock_for"></a>  try_lock_for  
  Próbuje uzyskać prawo własności `mutex` bez blokowania.  
   
 ```cpp  
@@ -122,12 +125,12 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
  A [chrono::duration](../standard-library/duration-class.md) obiekt, który określa maksymalną ilość czasu, który próbuje uzyskać prawo własności do metody `mutex`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli metoda pomyślnie uzyskuje prawo własności `mutex` lub jeśli wątek wywołujący już właścicielem `mutex`; w przeciwnym razie `false`.  
+ `true` Jeśli metoda pomyślnie uzyskuje prawo własności `mutex` lub jeśli wątek wywołujący już właścicielem `mutex`; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli wątek wywołujący już właścicielem `mutex`, metoda natychmiast zwraca `true`, i obowiązuje poprzedniej blokady.  
   
-##  <a name="try_lock_until"></a>try_lock_until  
+##  <a name="try_lock_until"></a>  try_lock_until  
  Próbuje uzyskać prawo własności `mutex` bez blokowania.  
   
 ```cpp  
@@ -142,12 +145,12 @@ bool try_lock_until(const xtime* Abs_time);
  Punktu w czasie, który określa próg, po upływie którego metoda nie jest już próbuje uzyskać prawo własności do `mutex`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli metoda pomyślnie uzyskuje prawo własności `mutex` lub jeśli wątek wywołujący już właścicielem `mutex`; w przeciwnym razie `false`.  
+ `true` Jeśli metoda pomyślnie uzyskuje prawo własności `mutex` lub jeśli wątek wywołujący już właścicielem `mutex`; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli wątek wywołujący już właścicielem `mutex`, metoda natychmiast zwraca `true`, i obowiązuje poprzedniej blokady.  
   
-##  <a name="unlock"></a>odblokowywanie  
+##  <a name="unlock"></a>  odblokowywanie  
  Zwalnia własność `mutex`.  
   
 ```cpp  
@@ -161,7 +164,7 @@ void unlock();
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex >](../standard-library/mutex.md)
+ [\<mutex>](../standard-library/mutex.md)
 
 
 

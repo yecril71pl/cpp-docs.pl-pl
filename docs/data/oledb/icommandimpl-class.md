@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ICommandImpl
 dev_langs:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 80cc82023131a23ebfea33c5264cf83fdafb1b36
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ec1c9bb3a430b30350ca3940fc7c90e6758d7c40
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl — Klasa
 Udostępnia implementację dla [ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx) interfejsu.  
@@ -52,7 +52,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |||  
 |-|-|  
 |[CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)|Anuluje bieżący wykonywania polecenia.|  
-|[Cancel](../../data/oledb/icommandimpl-cancel.md)|Anuluje bieżący wykonywania polecenia.|  
+|[Anulowanie](../../data/oledb/icommandimpl-cancel.md)|Anuluje bieżący wykonywania polecenia.|  
 |[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)|Tworzy obiekt zestawu wierszy.|  
 |[Execute](../../data/oledb/icommandimpl-execute.md)|Wykonuje polecenia.|  
 |[GetDBSession](../../data/oledb/icommandimpl-getdbsession.md)|Zwraca wskaźnik interfejsu do sesji, który utworzony polecenia.|  

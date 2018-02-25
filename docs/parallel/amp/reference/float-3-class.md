@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3::get_zyx
 - amp_short_vectors/Concurrency::graphics::float_3::set_y
@@ -77,19 +78,22 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3::gbr
 - amp_short_vectors/Concurrency::graphics::float_3::operator*=
 - amp_short_vectors/Concurrency::graphics::float_3::get_xy
-dev_langs: C++
-helpviewer_keywords: amp_short_vectors/Concurrency::graphics::float_3
+dev_langs:
+- C++
+helpviewer_keywords:
+- amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 28a26910aae471d237e0f4324f7f837eff0f6240
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dda70c9e19e4b446ac0e3cec8f3358732f4c57f7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="float3-class"></a>float_3 — Klasa
 Reprezentuje krótki Wektor trzech elementów przestawnych.  
@@ -179,7 +183,7 @@ class float_3;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |float_3::b||  
-|float_3::BG||  
+|float_3::bg||  
 |float_3::BGR||  
 |float_3::br||  
 |float_3::brg||  
@@ -189,10 +193,10 @@ class float_3;
 |float_3::GR||  
 |float_3::grb||  
 |float_3::r||  
-|float_3::RB||  
-|float_3::RBG||  
-|float_3::RG||  
-|float_3::RGB||  
+|float_3::rb||  
+|float_3::rbg||  
+|float_3::rg||  
+|float_3::rgb||  
 |float_3::x||  
 |float_3::xy||  
 |float_3::xyz||  
@@ -204,7 +208,7 @@ class float_3;
 |float_3::yz||  
 |float_3::yzx||  
 |float_3::z||  
-|float_3::ZX||  
+|float_3::zx||  
 |float_3::zxy||  
 |float_3::zy||  
 |float_3::zyx||  
@@ -217,7 +221,7 @@ class float_3;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>float_3 — 
+##  <a name="ctor"></a> float_3 — 
 
  Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
   
@@ -284,7 +288,7 @@ explicit inline float_3(
  `_Other`  
  Obiekt używany do inicjowania.  
   
-##  <a name="float_3__size"></a>rozmiar 
+##  <a name="float_3__size"></a> Rozmiar 
 
 ```  
 static const int size = 3;  

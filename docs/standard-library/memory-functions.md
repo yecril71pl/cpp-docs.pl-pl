@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -32,9 +32,10 @@ f1_keywords:
 - memory/std::uninitialized_fill_n
 - memory/std::get_temporary_buffer
 - memory/std::return_temporary_buffer
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -84,26 +85,27 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.workload: cplusplus
-ms.openlocfilehash: c8b8b3f311861fe8a98d66cef02e3d1c2c11d787
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 070b6c9e532f1148484a3b7381c7ae13015b0a67
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmemorygt-functions"></a>&lt;Pamięć&gt; funkcji
 ||||  
 |-|-|-|  
-|[AddressOf](#addressof)|[Dopasuj](#align)|[allocate_shared](#allocate_shared)|  
+|[addressof](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|  
 |[const_pointer_cast](#const_pointer_cast)|[declare_no_pointers](#declare_no_pointers)|[declare_reachable](#declare_reachable)|  
-|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter —](#get_deleter)|  
+|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter](#get_deleter)|  
 |[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared —](#make_shared)|  
 |[make_unique](#make_unique)|[owner_less —](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|  
 |[static_pointer_cast](#static_pointer_cast)|[swap (standardowa biblioteka C++)](#swap)|[undeclare_no_pointers](#undeclare_no_pointers)|  
 |[undeclare_reachable](#undeclare_reachable)|[uninitialized_copy](#uninitialized_copy)|[uninitialized_copy_n](#uninitialized_copy_n)|  
 |[uninitialized_fill](#uninitialized_fill)|[uninitialized_fill_n](#uninitialized_fill_n)|  
   
-##  <a name="addressof"></a>AddressOf  
+##  <a name="addressof"></a>  AddressOf  
  Pobiera prawdziwy adres obiektu.  
   
 ```  
@@ -120,7 +122,7 @@ T* addressof(T& Val);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="align"></a>Dopasuj  
+##  <a name="align"></a>  Dopasuj  
  Pasuje do pamięci o danym rozmiarze — wyrównany przez daną specyfikację wyrównania — do pierwszego możliwego adresu danej pamięci.  
   
 ```  
@@ -179,7 +181,7 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.   
 ```  
   
-##  <a name="allocate_shared"></a>allocate_shared  
+##  <a name="allocate_shared">allocate_shared</a>  
  Tworzy `shared_ptr` do obiektów, które są przydzielone i zbudowany dla danego typu przy użyciu określonego programu przydzielania. Zwraca `shared_ptr`.  
   
 ```  
@@ -198,7 +200,7 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 ### <a name="remarks"></a>Uwagi  
  Funkcja tworzy obiekt `shared_ptr<Type>`, wskaźnik do `Type(Args...)` jako przydzielone i utworzone przez `Alloc`.  
   
-##  <a name="const_pointer_cast"></a>const_pointer_cast  
+##  <a name="const_pointer_cast"></a>  const_pointer_cast  
  Const Rzutowanie na shared_ptr.  
   
 ```  
@@ -245,7 +247,7 @@ int main()
 sp1 == 3  
 ```  
   
-##  <a name="declare_no_pointers"></a>declare_no_pointers  
+##  <a name="declare_no_pointers"></a>  declare_no_pointers  
  Informuje o modułu zbierającego elementy bezużyteczne, zdefiniowanego przez wskaźnik adres podstawowy znaków w bloku pamięci i rozmiar bloku zawiera nie zidentyfikowanie wykonującej wskaźników.  
   
 ```  
@@ -264,7 +266,7 @@ void declare_no_pointers(
 ### <a name="remarks"></a>Uwagi  
  Funkcja informuje o dowolnym modułu zbierającego elementy bezużyteczne który zakres adresów `[ ptr, ptr + _Size)` nie zawiera już zidentyfikowanie wykonującej wskaźników. (Wszystkie wskaźniki do Magazyn przydzielony musi nie można usunąć odwołania o ile dostępny.)  
   
-##  <a name="declare_reachable"></a>declare_reachable  
+##  <a name="declare_reachable"></a>  declare_reachable  
  Informuje moduł odśmiecania pamięci, że wskazany adres prowadzi do przydzielonej pamięci i jest osiągalny.  
   
 ```  
@@ -278,7 +280,7 @@ void declare_reachable(void* ptr);
 ### <a name="remarks"></a>Uwagi  
  Jeśli `ptr` nie ma wartości null, funkcja informuje o dowolnym modułu zbierającego elementy bezużyteczne który `ptr` poniżej jest osiągalny (wskazuje prawidłowy Magazyn przydzielony).  
   
-##  <a name="default_delete"></a>default_delete  
+##  <a name="default_delete"></a>  default_delete  
 
 Usuwa obiekty przydzielone za pomocą `operator new`. Nadaje się do użytku z `unique_ptr`.  
 
@@ -300,7 +302,7 @@ struct default_delete {
 ### <a name="remarks"></a>Uwagi  
  W tym artykule opisano klasy szablonu `deleter` który usuwa skalarne obiektów przydzielonych za pomocą `operator new`, odpowiednie do użycia z klasy szablonu `unique_ptr`. Jawna specjalizacja ma również `default_delete<Type[]>`.  
   
-##  <a name="dynamic_pointer_cast"></a>dynamic_pointer_cast  
+##  <a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast  
  Rzutowania dynamicznego do shared_ptr.  
   
 ```  
@@ -358,7 +360,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="get_deleter"></a>get_deleter —
+##  <a name="get_deleter"></a>  get_deleter —
  Pobierz deleter z shared_ptr.  
   
 ```  
@@ -424,7 +426,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true  
 ```  
   
-##  <a name="get_pointer_safety"></a>get_pointer_safety  
+##  <a name="get_pointer_safety"></a>  get_pointer_safety  
  Zwraca typ bezpieczeństwa wskaźnika założony przez dowolny moduł odśmiecania pamięci.  
   
 ```  
@@ -434,7 +436,7 @@ pointer_safety get_pointer_safety();
 ### <a name="remarks"></a>Uwagi  
  Funkcja zwraca typ wskaźnika bezpieczeństwa przyjmowana przez wszystkie automatyczne modułu zbierającego elementy bezużyteczne.  
   
-##  <a name="get_temporary_buffer"></a>get_temporary_buffer  
+##  <a name="get_temporary_buffer"></a>  get_temporary_buffer  
  Przydziela tymczasową pamięć dla sekwencji elementów, która nie przekracza określonej liczby elementów.  
   
 ```  
@@ -487,7 +489,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.  
 ```  
   
-##  <a name="make_shared"></a>make_shared —  
+##  <a name="make_shared">make_shared —</a>  
  Tworzy i zwraca `shared_ptr` wskazującego przydzielone obiekty, które są tworzone na podstawie zero lub więcej argumentów używając programu przydzielania domyślne. Przydziela i tworzy zarówno obiektu określonego typu i `shared_ptr` do zarządzania wspólnej własności obiektu i zwraca `shared_ptr`.  
   
 ```  
@@ -580,7 +582,7 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3  
 ```  
   
-##  <a name="make_unique"></a>make_unique  
+##  <a name="make_unique"></a>  make_unique  
  Tworzy i zwraca [unique_ptr](../standard-library/unique-ptr-class.md) do obiektu określonego typu, który jest tworzony przy użyciu określonych argumentów.  
   
 ```  
@@ -633,7 +635,7 @@ make_unique(Types&&...) = delete;
   
   Po wyświetleniu błędu C2280 w połączeniu z `unique_ptr`, jest prawie na pewno ponieważ podjęto próbę wywołania konstruktora kopiującego, który jest to usunięta funkcja.  
   
-##  <a name="owner_less"></a>owner_less —  
+##  <a name="owner_less">owner_less —</a>  
  Pozwala na mieszane porównania oparte na własności współdzielonych i słabych wskaźników. Zwraca `true` Jeśli lewy parametr jest umieszczane przed odpowiednich parametrów w funkcji członkowskiej `owner_before`.  
   
 ```  
@@ -681,7 +683,7 @@ struct owner_less<weak_ptr<Type>>
 ### <a name="remarks"></a>Uwagi  
  Klasy szablonów zdefiniować ich operatorów Członkowskich jako zwracanie `left.owner_before(right)`.  
   
-##  <a name="return_temporary_buffer"></a>return_temporary_buffer  
+##  <a name="return_temporary_buffer"></a>  return_temporary_buffer  
  Cofa alokację pamięci tymczasowej, który został przydzielony przy użyciu `get_temporary_buffer` funkcji szablonu.  
   
 ```  
@@ -734,7 +736,7 @@ The number of elements that the allocated memory
  could store is given by: resultPair.second = 7.  
 ```  
   
-##  <a name="static_pointer_cast"></a>static_pointer_cast  
+##  <a name="static_pointer_cast"></a>  static_pointer_cast  
  Rzutowania statycznego do shared_ptr.  
   
 ```  
@@ -791,7 +793,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="swap"></a>swap (standardowa biblioteka C++)  
+##  <a name="swap">swap (standardowa biblioteka C++)</a>  
  Zamień dwa obiekty shared_ptr lub weak_ptr.  
   
 ```  
@@ -871,7 +873,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="undeclare_no_pointers"></a>undeclare_no_pointers  
+##  <a name="undeclare_no_pointers"></a>  undeclare_no_pointers  
  Informuje moduł odśmiecający pamięci, że znaki w bloku pamięci zdefiniowane przez wskaźnik adresu podstawowego i rozmiar bloku mogą teraz zawierać wskaźniki mogące podlegać śledzeniu.  
   
 ```  
@@ -883,7 +885,7 @@ void undeclare_no_pointers(
 ### <a name="remarks"></a>Uwagi  
  Funkcja informuje o dowolnym modułu zbierającego elementy bezużyteczne który zakres adresów `[ptr, ptr + _Size)` teraz mogą zawierać zidentyfikowanie wykonującej wskaźników.  
   
-##  <a name="undeclare_reachable"></a>undeclare_reachable  
+##  <a name="undeclare_reachable"></a>  undeclare_reachable  
  Wycofanie deklaracji uzyskiwanie lokalizacji określonej pamięci.  
   
 ```  
@@ -900,7 +902,7 @@ Type *undeclare_reachable(Type* ptr);
 ### <a name="remarks"></a>Uwagi  
  Jeśli `ptr` nie jest `nullptr`, funkcja informuje o dowolnym modułu zbierającego elementy bezużyteczne który `ptr` nie jest już dostępny. Zwraca wskaźnik bezpiecznie pochodnych, który porównuje w równa `ptr`.  
   
-##  <a name="uninitialized_copy"></a>uninitialized_copy  
+##  <a name="uninitialized_copy"></a>  uninitialized_copy  
  Kopiuje obiekty z określonego zakresu źródłowego do niezainicjowanego zakresu docelowego.  
   
 ```  
@@ -1001,7 +1003,7 @@ int main()
 }
 ```  
   
-##  <a name="uninitialized_copy_n"></a>uninitialized_copy_n  
+##  <a name="uninitialized_copy_n"></a>  uninitialized_copy_n  
  Tworzy kopię określonej liczby elementów z iteratora danych wejściowych. Kopie są wprowadzane do iteratora do przodu.  
   
 ```  
@@ -1037,7 +1039,7 @@ ForwardIterator uninitialized_copy_n(
   
  chyba że kod zgłasza wyjątek. W takim przypadku wszystkie skonstruowane obiekty są niszczone, a wyjątek jest zgłaszany ponownie.  
   
-##  <a name="uninitialized_fill"></a>uninitialized_fill  
+##  <a name="uninitialized_fill"></a>  uninitialized_fill  
  Kopiuje obiekty z określoną wartością do niezainicjowanego zakresu docelowego.  
   
 ```  
@@ -1106,7 +1108,7 @@ int main( )
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25   
 ```  
   
-##  <a name="uninitialized_fill_n"></a>uninitialized_fill_n  
+##  <a name="uninitialized_fill_n"></a>  uninitialized_fill_n  
  Kopiuje obiekty z określoną wartością do określonej liczby elementów w niezainicjowanym zakresie docelowym.  
   
 ```  
@@ -1168,4 +1170,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<pamięci >](../standard-library/memory.md)
+ [\<memory>](../standard-library/memory.md)

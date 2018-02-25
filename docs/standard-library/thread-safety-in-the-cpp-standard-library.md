@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - thread safety
 - C++ Standard Library, thread safety
 - thread safety, C++ Standard Library
 ms.assetid: 9351c8fb-4539-4728-b0e9-226e2ac4284b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1fa4c69e79a918d7b8cf77e03f76c81e846d5a5b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 406fd1a2c376b7be67badb02b25dc33070fccbc5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>Bezpieczeństwo wątku w standardowej bibliotece C++
 Mają zastosowanie następujące reguły bezpieczeństwa wątków wszystkie klasy w standardowej bibliotece C++ — dotyczy to również `shared_ptr`, zgodnie z poniższym opisem.  Czasami podano większą — na przykład standardowe iostream obiekty, zgodnie z poniższym opisem i typy przeznaczony specjalnie dla wielowątkowości, jak w [ \<atomic >](../standard-library/atomic.md).  

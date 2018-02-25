@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -17,7 +18,8 @@ f1_keywords:
 - xlocale/std::locale::operator( )
 - xlocale/std::locale::facet
 - xlocale/std::locale::id
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::locale [C++]
 - std::locale [C++], category
@@ -28,16 +30,17 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0227c6bd088337a4ad3024faebed2c72d870d360
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 770a8715cc6f5cfb17530ac8cf7cc7a00cb88730
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="locale-class"></a>locale — Klasa
 Klasa opisująca obiekt ustawień regionalnych, który hermetyzuje informacje specyficzne dla kultury jako zbiór zestawu reguł, które wspólnie definiują specyficzne środowisko zlokalizowane.  
@@ -157,7 +160,7 @@ cout.imbue(loc);
   
 |||  
 |-|-|  
-|[Kategoria](#category)|Typ całkowitoliczbowy, który zawiera wartości masek bitowych dla oznaczenia standardowych rodzin zestawów reguł.|  
+|[category](#category)|Typ całkowitoliczbowy, który zawiera wartości masek bitowych dla oznaczenia standardowych rodzin zestawów reguł.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
@@ -178,8 +181,8 @@ cout.imbue(loc);
 |||  
 |-|-|  
 |[operator!=](#op_neq)|Testuje dwa ustawienia lokalne pod kątem nierówności.|  
-|[operator)](#op_call)|Porównuje dwa `basic_string` obiektów.|  
-|[operator ==](#op_eq_eq)|Testuje dwa ustawienia lokalne pod kątem równości.|  
+|[operator( )](#op_call)|Porównuje dwa `basic_string` obiektów.|  
+|[operator==](#op_eq_eq)|Testuje dwa ustawienia lokalne pod kątem równości.|  
   
 ### <a name="classes"></a>Klasy  
   
@@ -193,7 +196,7 @@ cout.imbue(loc);
   
  **Namespace:** Standard  
   
-##  <a name="category"></a>Locale::category  
+##  <a name="category"></a>  Locale::category  
  Typ całkowitoliczbowy, który zawiera wartości masek bitowych dla oznaczenia standardowych rodzin zestawów reguł.  
   
 ```  
@@ -231,7 +234,7 @@ static const int none = 0;
   
  Użytkownik poświadcza dowolnego grupy kategorii, za pomocą `OR` za pomocą tych stałych jako w **pieniężnego** &#124; **czas**.  
   
-##  <a name="classic"></a>Locale::Classic  
+##  <a name="classic"></a>  Locale::Classic  
  Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.  
   
 ```  
@@ -283,7 +286,7 @@ The previous locale was classic.
 The current locale is not classic.  
 ```  
   
-##  <a name="combine"></a>Locale::Combine  
+##  <a name="combine"></a>  Locale::Combine  
  Wstawia zestaw reguł z określonych ustawień regionalnych do docelowych ustawień regionalnych.  
   
 ```  
@@ -328,7 +331,7 @@ int main() {
 }  
 ```  
   
-##  <a name="facet_class"></a>facet — klasa  
+##  <a name="facet_class"></a>  facet — klasa  
  Klasa, która służy jako klasa bazowa dla wszystkich zestawów reguł ustawień regionalnych.  
 
 ```    
@@ -347,7 +350,7 @@ private:
   
  W takich przypadkach konstruktora dla klasy podstawowej aspekt powinien mieć wartość zero `_Refs` argumentu. Obiekt nie jest już potrzebne, jest usuwane. W związku z tym podać niezerowe _ *Refs* argument tylko w tych rzadkich przypadkach, gdy użytkownik odpowiada za okres istnienia obiektu.  
   
-##  <a name="global"></a>Locale::Global  
+##  <a name="global"></a>  Locale::Global  
  Przywraca domyślne ustawienia regionalne dla programu. Ma to wpływ na globalne ustawienia regionalne dla C i C++.  
   
 ```  
@@ -392,7 +395,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C  
 ```  
   
-##  <a name="id_class"></a>ID — klasa  
+##  <a name="id_class"></a>  ID — klasa  
  Klasa składowej zapewnia unikatową identyfikację zestawu reguł używaną jako indeks do wyszukiwania zestawów reguł w ustawieniach regionalnych.  
   
 Identyfikator klasy {chronione: id(); private: id(const id&) / / nie zdefiniowano void operator =(const id&) / / nie zdefiniowano};  
@@ -400,7 +403,7 @@ Identyfikator klasy {chronione: id(); private: id(const id&) / / nie zdefiniowan
 ### <a name="remarks"></a>Uwagi  
  Klasy członkowskiej opis obiektu statycznego elementu członkowskiego wymagane przez każdego aspektu unikatowy ustawień regionalnych. Należy pamiętać, że nie można skopiować lub przypisać obiekt klasy **identyfikator**.  
   
-##  <a name="locale"></a>Locale::Locale  
+##  <a name="locale"></a>  Locale::Locale  
  Tworzy ustawienia regionalne lub kopię ustawień regionalnych, lub kopię ustawień regionalnych, w której zestaw reguł lub kategoria zostały zastąpione przez zestaw reguł lub kategorię z innych ustawień regionalnych.  
   
 ```  
@@ -491,7 +494,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="name"></a>Locale::Name  
+##  <a name="name"></a>  Locale::Name  
  Zwraca przechowywaną nazwę ustawień regionalnych.  
   
 ```  
@@ -528,7 +531,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.  
 ```  
   
-##  <a name="op_neq"></a>Locale::operator! =  
+##  <a name="op_neq"></a>  Locale::operator! =  
  Testuje dwa ustawienia lokalne pod kątem nierówności.  
   
 ```  
@@ -585,7 +588,7 @@ locales loc1 (German_Germany.1252) and
  loc3 (English_United States.1252) are not equal.  
 ```  
   
-##  <a name="op_call"></a>Locale:: operator()  
+##  <a name="op_call"></a>  Locale:: operator()  
  Porównuje dwa `basic_string` obiektów.  
   
 ```  
@@ -653,7 +656,7 @@ int main( )
 0  
 ```  
   
-##  <a name="op_eq_eq"></a>Locale::operator ==  
+##  <a name="op_eq_eq"></a>  Locale::operator ==  
  Testuje dwa ustawienia lokalne pod kątem równości.  
   
 ```  

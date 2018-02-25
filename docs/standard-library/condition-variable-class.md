@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - condition_variable/std::condition
 - condition_variable/std::condition_variable::condition_variable
@@ -16,9 +17,10 @@ f1_keywords:
 - condition_variable/std::condition_variable::wait
 - condition_variable/std::condition_variable::wait_for
 - condition_variable/std::condition_variable::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 80b1295c-b73d-4d46-b664-6e183f2eec1b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: 3b51ec2810ddb982d53c3073bdf860b26100859d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d3d4f917bd9057eed6dfcd2b480bbb8afb2f7ccf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="conditionvariable-class"></a>condition_variable — Klasa
 Użyj `condition_variable` klasy oczekiwania na zdarzenie, gdy masz `mutex` typu `unique_lock<mutex>`. Obiekty tego typu może mieć lepszą wydajność niż obiekty typu [condition_variable_any — < unique_lock\<obiektu mutex >>](../standard-library/condition-variable-any-class.md).  
@@ -53,7 +56,7 @@ class condition_variable;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[condition_variable —](#condition_variable)|Konstruuje `condition_variable` obiektu.|  
+|[condition_variable](#condition_variable)|Konstruuje `condition_variable` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -71,7 +74,7 @@ class condition_variable;
   
  **Namespace:** Standard  
   
-##  <a name="condition_variable"></a>condition_variable::condition_variable — Konstruktor  
+##  <a name="condition_variable"></a>  condition_variable::condition_variable — Konstruktor  
  Konstruuje `condition_variable` obiektu.  
   
 ```
@@ -81,7 +84,7 @@ condition_variable();
 ### <a name="remarks"></a>Uwagi  
  Jeśli nie ma wystarczającej ilości pamięci jest dostępny, zgłasza konstruktora [system_error —](../standard-library/system-error-class.md) obiektu, który ma `not_enough_memory` kod błędu. Jeśli nie można utworzyć obiektu, ponieważ innego zasobu nie jest dostępna, zgłasza konstruktora `system_error` obiektu, który ma `resource_unavailable_try_again` kod błędu.  
   
-##  <a name="native_handle"></a>condition_variable::native_handle  
+##  <a name="native_handle"></a>  condition_variable::native_handle  
  Zwraca typ konkretnej implementacji, który reprezentuje dojście condition_variable —.  
   
 ```
@@ -89,23 +92,23 @@ native_handle_type native_handle();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `native_handle_type`nie zdefiniowano jako wskaźnik do struktur danych wewnętrznych współbieżność środowiska wykonawczego.  
+ `native_handle_type` nie zdefiniowano jako wskaźnik do struktur danych wewnętrznych współbieżność środowiska wykonawczego.  
   
-##  <a name="notify_all"></a>condition_variable::notify_all  
+##  <a name="notify_all"></a>  condition_variable::notify_all  
  Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiektu.  
   
 ```
 void notify_all() noexcept;
 ```  
   
-##  <a name="notify_one"></a>condition_variable::notify_one  
+##  <a name="notify_one"></a>  condition_variable::notify_one  
  Jeden z wątków, które oczekują na odblokowuje `condition_variable` obiektu.  
   
 ```
 void notify_one() noexcept;
 ```  
   
-##  <a name="wait"></a>condition_variable::wait  
+##  <a name="wait"></a>  condition_variable::wait  
  Blokuje wątku.  
   
 ```
@@ -132,7 +135,7 @@ while(!Pred())
     wait(Lck);
 ```    
   
-##  <a name="wait_for"></a>condition_variable::wait_for  
+##  <a name="wait_for"></a>  condition_variable::wait_for  
  Blokuje wątku i ustawia przedział czasu, po którym odblokowuje wątku.  
   
 ```
@@ -176,7 +179,7 @@ while(!Pred())
 return true;
 ```  
   
-##  <a name="wait_until"></a>condition_variable::wait_until  
+##  <a name="wait_until"></a>  condition_variable::wait_until  
  Blokuje wątku i ustawia maksymalną punktu w czasie, w którym odblokowuje wątku.  
   
 ```

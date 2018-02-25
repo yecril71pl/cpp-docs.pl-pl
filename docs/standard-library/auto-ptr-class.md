@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::auto_ptr
 - memory/std::auto_ptr::element_type
 - memory/std::auto_ptr::get
 - memory/std::auto_ptr::release
 - memory/std::auto_ptr::reset
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::auto_ptr [C++]
 - std::auto_ptr [C++], element_type
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 960da86c5ae3efa0cb50077becfb526000f71b4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a59ea3561c5e9e2b972421bbba0ecf6fc666ed46
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="autoptr-class"></a>auto_ptr — Klasa
 Zawija się wokół zasobów, które zapewnia, że zasób zostanie zniszczony automatycznie, gdy formant opuszcza blok wskaźnika inteligentnego.  
@@ -86,21 +89,21 @@ public:
   
 |||  
 |-|-|  
-|[ELEMENT_TYPE](#element_type)|Typ jest synonimem parametru szablonu `Type`.|  
+|[element_type](#element_type)|Typ jest synonimem parametru szablonu `Type`.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
 |||  
 |-|-|  
 |[get](#get)|Funkcja członkowska zwraca wskaźnik przechowywanych `myptr`.|  
-|[zlecenia](#release)|Element członkowski zastępuje przechowywanych wskaźnika `myptr` za pomocą wskaźnika null i zwraca wskaźnik zapisanych wcześniej.|  
-|[Resetowanie](#reset)|Funkcja członkowska oblicza wyrażenie `delete myptr`, ale tylko wtedy, gdy wartość wskaźnika przechowywanych `myptr` zmiany w wyniku wywołania funkcji. Następnie zastępuje przechowywanych wskaźnik z `ptr`.|  
+|[Zlecenia](#release)|Element członkowski zastępuje przechowywanych wskaźnika `myptr` za pomocą wskaźnika null i zwraca wskaźnik zapisanych wcześniej.|  
+|[reset](#reset)|Funkcja członkowska oblicza wyrażenie `delete myptr`, ale tylko wtedy, gdy wartość wskaźnika przechowywanych `myptr` zmiany w wyniku wywołania funkcji. Następnie zastępuje przechowywanych wskaźnik z `ptr`.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
-|[operator =](#op_eq)|Operator przypisania przeniesienia własności z jedną `auto_ptr` obiektu do innego.|  
+|[operator=](#op_eq)|Operator przypisania przeniesienia własności z jedną `auto_ptr` obiektu do innego.|  
 |[operator *](#op_star)|Operator usuwania odwołań dla obiektów typu `auto_ptr`.|  
 |[operator ->](#operator-_gt)|Operator umożliwiający dostęp do elementu członkowskiego.|  
 |[auto_ptr operatora\<innych >](#op_auto_ptr_lt_other_gt)|Rzutuje z jednego rodzaju `auto_ptr` do innego rodzaju z `auto_ptr`.|  
@@ -111,7 +114,7 @@ public:
   
  **Namespace:** Standard  
   
-##  <a name="auto_ptr"></a>auto_ptr::auto_ptr  
+##  <a name="auto_ptr"></a>  auto_ptr::auto_ptr  
  Konstruktor dla obiektów typu `auto_ptr`.  
   
 ```   
@@ -198,7 +201,7 @@ Constructing 00311AF8
 Destructing 00311AF8  
 ```  
   
-##  <a name="element_type"></a>auto_ptr::ELEMENT_TYPE  
+##  <a name="element_type"></a>  auto_ptr::ELEMENT_TYPE  
  Typ jest synonimem parametru szablonu **typu**.  
   
 ```  
@@ -206,7 +209,7 @@ Destructing 00311AF8
 typedef Type element  _type;  
 ```  
   
-##  <a name="get"></a>auto_ptr::Get  
+##  <a name="get"></a>  auto_ptr::Get  
  Funkcja członkowska zwraca wskaźnik przechowywanych **myptr**.  
   
 ```   
@@ -263,7 +266,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6  
 ```  
   
-##  <a name="op_eq"></a>auto_ptr::operator =  
+##  <a name="op_eq"></a>  auto_ptr::operator=  
  Operator przypisania przeniesienia własności z jedną `auto_ptr` obiektu do innego.  
   
 ```  
@@ -286,7 +289,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 ### <a name="example"></a>Przykład  
   Na przykład użycie operator członkowski zobacz [auto_ptr::auto_ptr](#auto_ptr).  
   
-##  <a name="op_star"></a>auto_ptr::operator *  
+##  <a name="op_star"></a>  auto_ptr::operator *  
  Operator usuwania odwołań dla obiektów typu `auto_ptr`.  
   
 ```   
@@ -302,7 +305,7 @@ Type& operator*() const throw();
 ### <a name="example"></a>Przykład  
   Na przykład dotyczące używania funkcji członkowskiej zobacz [auto_ptr::auto_ptr](#auto_ptr).  
   
-##  <a name="auto_ptr__operator-_gt"></a>auto_ptr::operator-&gt;  
+##  <a name="auto_ptr__operator-_gt"></a>  auto_ptr::operator-&gt;  
  Operator umożliwiający dostęp do elementu członkowskiego.  
   
 ```   
@@ -318,7 +321,7 @@ Type * operator->() const throw();
 ### <a name="example"></a>Przykład  
   Na przykład dotyczące używania funkcji członkowskiej zobacz [auto_ptr::auto_ptr](#auto_ptr).  
   
-##  <a name="op_auto_ptr_lt_other_gt"></a>auto_ptr::operator auto_ptr&lt;innych&gt;  
+##  <a name="op_auto_ptr_lt_other_gt"></a>  auto_ptr::operator auto_ptr&lt;innych&gt;  
  Rzutuje z jednego rodzaju `auto_ptr` do innego rodzaju z `auto_ptr`.  
   
 ```   
@@ -346,7 +349,7 @@ int main()
 }  
 ```  
   
-##  <a name="op_auto_ptr_ref_lt_other_gt"></a>auto_ptr::operator auto_ptr_ref&lt;innych&gt;  
+##  <a name="op_auto_ptr_ref_lt_other_gt"></a>  auto_ptr::operator auto_ptr_ref&lt;innych&gt;  
  Rzutuje z `auto_ptr` do **auto_ptr_ref**.  
   
 ```   
@@ -405,7 +408,7 @@ main exiting
 ~C:  1  
 ```  
   
-##  <a name="release"></a>auto_ptr::Release  
+##  <a name="release"></a>  auto_ptr::Release  
  Element członkowski zastępuje przechowywanych wskaźnika **myptr** za pomocą wskaźnika null i zwraca wskaźnik zapisanych wcześniej.  
   
 ```   
@@ -464,7 +467,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6  
 ```  
   
-##  <a name="reset"></a>auto_ptr::reset  
+##  <a name="reset"></a>  auto_ptr::reset  
  Funkcji członkowskiej oblicza wyrażenie **usunąć** **myptr**, ale tylko wtedy, gdy wartość wskaźnika przechowywanych **myptr** zmiany w wyniku wywołania funkcji. Następnie zastępuje przechowywanych wskaźnik z **ptr**.  
   
 ```   

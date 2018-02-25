@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 60e7e32c79965e50255c5728cad3e9d399ea2df1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 489274f4391fb6fd2bdf27c30778dd4eb22853c0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="file-system-navigation"></a>Nawigacja w systemie plików
 \<Filesystem > nagłówka implementuje 18822:2015 C++ pliku System technicznych specyfikacji ISO/IEC usług terminalowych (ostatecznego projektu: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) i zawiera typy i funkcje, które pozwalają na zapis Kod niezależny od platformy do nawigowania do systemu plików. Ponieważ między platformami, zawiera interfejsy API, które nie są istotne dla systemów Windows. Oznacza to, że na przykład `is_fifo(const path&)` zawsze zwraca `false` w systemie Windows.   

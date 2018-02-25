@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::ywx
 - amp_short_vectors/Concurrency::graphics::uint_4::get_yxw
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::set_xywz
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4de759866580cce03dae40c5fe2fe5cb9482013b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d70672b5d862164607afefde3de758fdd269d60
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uint4-class"></a>uint_4 — Klasa
 Reprezentuje krótki wektor czterech liczb całkowitych bez znaku.  
@@ -307,7 +310,7 @@ class uint_4;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[uint_4 — Konstruktor](#uint_4__ctor) |Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[uint_4 Constructor](#uint_4__ctor) |Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
 
   
 ### <a name="public-methods"></a>Metody publiczne  
@@ -457,11 +460,11 @@ class uint_4;
 |----------|-----------------|  
 |uint_4::operator-||  
 |uint_4::operator--||  
-|uint_4::operator * =||  
+|uint_4::operator*=||  
 |uint_4::operator / =||  
 |uint_4::operator ++||  
-|uint_4::operator +=||  
-|uint_4::operator =||  
+|uint_4::operator+=||  
+|uint_4::operator=||  
 |uint_4::operator-=||  
   
 ### <a name="public-constants"></a>Publiczny — stałe  
@@ -476,12 +479,12 @@ class uint_4;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |uint_4::a||  
-|uint_4::AB||  
+|uint_4::ab||  
 |uint_4::abg||  
 |uint_4::abgr||  
-|uint_4::ABR||  
+|uint_4::abr||  
 |uint_4::abrg||  
-|uint_4::AG||  
+|uint_4::ag||  
 |uint_4::agb||  
 |uint_4::agbr||  
 |uint_4::AGR||  
@@ -490,17 +493,17 @@ class uint_4;
 |uint_4::arb||  
 |uint_4::arbg||  
 |uint_4::ARG||  
-|uint_4::ARGB||  
+|uint_4::argb||  
 |uint_4::b||  
-|uint_4::BA||  
+|uint_4::ba||  
 |uint_4::bag||  
 |uint_4::bagr||  
 |uint_4::bar||  
 |uint_4::barg||  
-|uint_4::BG||  
+|uint_4::bg||  
 |uint_4::bga||  
 |uint_4::bgar||  
-|uint_4::BGR||  
+|uint_4::bgr||  
 |uint_4::bgra||  
 |uint_4::br||  
 |uint_4::bra||  
@@ -509,16 +512,16 @@ class uint_4;
 |uint_4::brga||  
 |uint_4::g||  
 |uint_4::ga||  
-|uint_4::GAB||  
+|uint_4::gab||  
 |uint_4::gabr||  
 |uint_4::gar||  
 |uint_4::garb||  
-|uint_4::GB||  
-|uint_4::GBA||  
+|uint_4::gb||  
+|uint_4::gba||  
 |uint_4::gbar||  
-|uint_4::GBR||  
-|uint_4::GBRA||  
-|uint_4::GR||  
+|uint_4::gbr||  
+|uint_4::gbra||  
+|uint_4::gr||  
 |uint_4::gra||  
 |uint_4::grab||  
 |uint_4::grb||  
@@ -529,15 +532,15 @@ class uint_4;
 |uint_4::rabg||  
 |uint_4::rag||  
 |uint_4::ragb||  
-|uint_4::RB||  
+|uint_4::rb||  
 |uint_4::rba||  
 |uint_4::rbag||  
-|uint_4::RBG||  
+|uint_4::rbg||  
 |uint_4::rbga||  
-|uint_4::RG||  
+|uint_4::rg||  
 |uint_4::rga||  
 |uint_4::rgab||  
-|uint_4::RGB||  
+|uint_4::rgb||  
 |uint_4::rgba||  
 |uint_4::w||  
 |uint_4::wx||  
@@ -545,12 +548,12 @@ class uint_4;
 |uint_4::wxyz||  
 |uint_4::wxz||  
 |uint_4::wxzy||  
-|uint_4::Wy||  
+|uint_4::wy||  
 |uint_4::wyx||  
 |uint_4::wyxz||  
-|uint_4::WYZ||  
+|uint_4::wyz||  
 |uint_4::wyzx||  
-|uint_4::wZ||  
+|uint_4::wz||  
 |uint_4::wzx||  
 |uint_4::wzxy||  
 |uint_4::wzy||  
@@ -593,7 +596,7 @@ class uint_4;
 |uint_4::zwxy||  
 |uint_4::zwy||  
 |uint_4::zwyx||  
-|uint_4::ZX||  
+|uint_4::zx||  
 |uint_4::zxw||  
 |uint_4::zxwy||  
 |uint_4::zxy||  
@@ -612,7 +615,7 @@ class uint_4;
   
  **Namespace:** Concurrency::graphics  
   
-## <a name="uint_4__ctor"></a>uint_4 — 
+## <a name="uint_4__ctor"></a> uint_4 
 
 Domyślny konstruktor, inicjuje wszystkie elementy z 0.
   
@@ -668,7 +671,7 @@ explicit inline uint_4(
  `_Other`  
  Obiekt używany do inicjowania.  
   
-## <a name=""></a>rozmiar 
+## <a name=""></a> Rozmiar 
 
 ## <a name="syntax"></a>Składnia  
   

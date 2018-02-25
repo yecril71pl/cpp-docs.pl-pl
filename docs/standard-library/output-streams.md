@@ -4,33 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: output streams
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f8fee8ecffda86f306b44f0d5b873d5192d4d181
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ae5179ee14534ed0982f4b996c8f88f1cfc560a8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="output-streams"></a>Strumienie wyjściowe
 Obiekt strumień wyjściowy jest docelowy dla bajtów. Są trzy najważniejsze klasy strumienia wyjściowego `ostream`, `ofstream`, i `ostringstream`.  
   
  `ostream` Klasy za pomocą klasy pochodnej `basic_ostream`, obsługuje obiekty wstępnie zdefiniowanych strumienia:  
   
--   `cout`standardowe dane wyjściowe  
+-   `cout` Standardowe dane wyjściowe  
   
--   `cerr`Błąd standardowy z ograniczoną buforowania  
+-   `cerr` Błąd standardowy z ograniczoną buforowania  
   
--   `clog`Podobnie jak `cerr` , ale pełne buforowanie  
+-   `clog` Podobnie jak `cerr` , ale pełne buforowanie  
   
  Obiekty rzadko są tworzone na podstawie `ostream`; wstępnie zdefiniowanych obiektów są zazwyczaj używane. W niektórych przypadkach można ponownie przypisać wstępnie zdefiniowanych obiektów po uruchomieniu programu. `ostream` Klasy, która może być skonfigurowana dla operacji buforowane lub Niebuforowane, najlepiej nadaje się do wyjścia sekwencyjnych tekstowej. Wszystkie funkcje klasy podstawowej, `ios`, znajduje się w `ostream`. W przypadku utworzenia obiektu klasy `ostream`, należy określić `streambuf` obiekt do konstruktora.  
   

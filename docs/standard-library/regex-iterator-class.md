@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - regex/std::regex_iterator
 - regex/std::regex_iterator::operator==
@@ -14,7 +15,8 @@ f1_keywords:
 - regex/std::regex_iterator::operator*
 - regex/std::regex_iterator::operator->
 - regex/std::regex_iterator::operator++
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::regex_iterator
 - std::regex_iterator::operator==
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 13744086b9e25c5f3be880885fae624822fd5f73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: de39838066c8271e35cc4732fd4f0f3c853f19f2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="regexiterator-class"></a>regex_iterator — Klasa
 Klasa iteratora dopasowań.  
@@ -88,11 +91,11 @@ private:
 ## <a name="examples"></a>Przykłady  
  Zobacz poniższe tematy zawierają przykłady dotyczące wyrażeń regularnych:  
   
-- [regex_match —](../standard-library/regex-functions.md#regex_match)  
+- [regex_match](../standard-library/regex-functions.md#regex_match)  
   
-- [regex_replace —](../standard-library/regex-functions.md#regex_replace)  
+- [regex_replace](../standard-library/regex-functions.md#regex_replace)  
   
-- [regex_search —](../standard-library/regex-functions.md#regex_search)  
+- [regex_search](../standard-library/regex-functions.md#regex_search)  
   
 - [swap](../standard-library/regex-functions.md#swap)  
   
@@ -101,7 +104,7 @@ private:
   
  **Namespace:** Standard  
   
-##  <a name="difference_type"></a>regex_iterator::difference_type  
+##  <a name="difference_type"></a>  regex_iterator::difference_type  
  Typ iteratora różnicy.  
   
 ```  
@@ -154,7 +157,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="iterator_category"></a>regex_iterator::iterator_category  
+##  <a name="iterator_category"></a>  regex_iterator::iterator_category  
  Typ iteratora kategorii.  
   
 ```  
@@ -207,7 +210,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="op_neq"></a>regex_iterator::operator! =  
+##  <a name="op_neq"></a>  regex_iterator::operator! =  
  Porównuje Iteratory pod kątem nierówności.  
   
 ```  
@@ -264,7 +267,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="op_star"></a>regex_iterator::operator *  
+##  <a name="op_star"></a>  regex_iterator::operator *  
  Uzyskuje dostęp do wyznaczonych dopasowania.  
   
 ```  
@@ -317,7 +320,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="op_add_add"></a>regex_iterator::operator ++  
+##  <a name="op_add_add"></a>  regex_iterator::operator ++  
  Zwiększa iteratora.  
   
 ```  
@@ -373,7 +376,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="op_eq"></a>regex_iterator::operator =  
+##  <a name="op_eq"></a>  regex_iterator::operator =  
  Porównuje Iteratory pod kątem równości.  
   
 ```  
@@ -430,7 +433,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="regex_iterator__operator-_gt"></a>regex_iterator::operator-&gt;  
+##  <a name="regex_iterator__operator-_gt"></a>  regex_iterator::operator-&gt;  
  Uzyskuje dostęp do wyznaczonych dopasowania.  
   
 ```  
@@ -483,7 +486,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="pointer"></a>regex_iterator::Pointer  
+##  <a name="pointer"></a>  regex_iterator::Pointer  
  Typ wskaźnika do dopasowania.  
   
 ```  
@@ -536,7 +539,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="reference"></a>regex_iterator::Reference  
+##  <a name="reference"></a>  regex_iterator::Reference  
  Typ odwołania do dopasowania.  
   
 ```  
@@ -590,7 +593,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="regex_iterator"></a>regex_iterator::regex_iterator  
+##  <a name="regex_iterator"></a>  regex_iterator::regex_iterator  
  Tworzy iteratora.  
   
 ```  
@@ -662,7 +665,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="regex_type"></a>regex_iterator::regex_type  
+##  <a name="regex_type"></a>  regex_iterator::regex_type  
  Typ wyrażenia regularnego do dopasowania.  
   
 ```  
@@ -716,7 +719,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="value_type"></a>regex_iterator::value_type  
+##  <a name="value_type"></a>  regex_iterator::value_type  
  Rodzaj dopasowania.  
   
 ```  
@@ -771,7 +774,7 @@ match == a
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
-[\<wyrażenie regularne >](../standard-library/regex.md)  
+[\<regex>](../standard-library/regex.md)  
 [regex_constants, klasa](../standard-library/regex-constants-class.md)  
 [regex_error, klasa](../standard-library/regex-error-class.md)  
 [\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)  

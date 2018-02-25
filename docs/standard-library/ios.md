@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <ios>
 - ios/std::<ios>
-dev_langs: C++
-helpviewer_keywords: ios header
+dev_langs:
+- C++
+helpviewer_keywords:
+- ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 23fbac008c6954830fb016099fdf7ebc45ba685f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 76a5d6bf305e221f17b6059be3f3d770dc687000
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiosgt"></a>&lt;dla systemu IOS&gt;
 Definiuje kilka typy i funkcje podstawowe działania iostream. Ten nagłówek znajduje się zwykle dla Ciebie przez inny nagłówki iostream; rzadko uwzględniania go bezpośrednio.  
@@ -62,11 +66,11 @@ istr>> noskipws;
 |-|-|  
 |[boolalpha](../standard-library/ios-functions.md#boolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako **true** lub **false** w strumieniu.|  
 |[DEC](../standard-library/ios-functions.md#dec)|Określa, czy liczba całkowita zmienne są widoczne w podstawowej notacji 10.|  
-|[defaultfloat —](../standard-library/ios-functions.md#ios_defaultfloat)|Konfiguruje flagi z `ios_base` obiekt, aby użyć domyślnego formatu wyświetlania dla wartości typu float.|  
-|[stałe](../standard-library/ios-functions.md#fixed)|Określa, że liczba zmiennoprzecinkowa jest wyświetlana w notacji stałej dziesiętnej.|  
-|[Hex](../standard-library/ios-functions.md#hex)|Określa, czy liczba całkowita zmienne są widoczne w podstawowej notacji 16.|  
+|[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Konfiguruje flagi z `ios_base` obiekt, aby użyć domyślnego formatu wyświetlania dla wartości typu float.|  
+|[Stałe](../standard-library/ios-functions.md#fixed)|Określa, że liczba zmiennoprzecinkowa jest wyświetlana w notacji stałej dziesiętnej.|  
+|[hex](../standard-library/ios-functions.md#hex)|Określa, czy liczba całkowita zmienne są widoczne w podstawowej notacji 16.|  
 |[internal](../standard-library/ios-functions.md#internal)|Powoduje, że liczba Zaloguj, aby być wyrównane do lewej oraz numer do prawej.|  
-|[po lewej](../standard-library/ios-functions.md#left)|Powoduje, że tekst, który nie jest szerokie, jak szerokość dane wyjściowe mają być widoczne w opróżnienia strumienia do lewego marginesu.|  
+|[left](../standard-library/ios-functions.md#left)|Powoduje, że tekst, który nie jest szerokie, jak szerokość dane wyjściowe mają być widoczne w opróżnienia strumienia do lewego marginesu.|  
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako 1 lub 0 w strumieniu.|  
 |[noshowbase](../standard-library/ios-functions.md#noshowbase)|Wyłącza wskazujący base notational, w którym jest wyświetlany numer.|  
 |[noshowpoint](../standard-library/ios-functions.md#noshowpoint)|Wyświetla tylko część liczby całkowitej liczby zmiennoprzecinkowe, których część ułamkowa wynosi zero.|  
@@ -74,9 +78,9 @@ istr>> noskipws;
 |[noskipws](../standard-library/ios-functions.md#noskipws)|Spowodować spacje odczytywane przez strumień wejściowy.|  
 |[nounitbuf](../standard-library/ios-functions.md#nounitbuf)|Powoduje, że dane wyjściowe buforowane i przetwarzane, gdy bufor jest pełna.|  
 |[nouppercase](../standard-library/ios-functions.md#nouppercase)|Określa, że cyfr szesnastkowych i wykładnik w notacji naukowej są pisane małymi literami.|  
-|[OCT](../standard-library/ios-functions.md#oct)|Określa, czy liczba całkowita zmienne są widoczne w podstawowej notacji 8.|  
-|[prawo](../standard-library/ios-functions.md#right)|Powoduje, że tekst, który nie jest szerokie, jak szerokość dane wyjściowe mają być widoczne w opróżnienia strumienia do prawego marginesu.|  
-|[naukowe](../standard-library/ios-functions.md#scientific)|Przyczyny zmiennoprzecinkową liczby będzie wyświetlana w notacji wykładniczej.|  
+|[oct](../standard-library/ios-functions.md#oct)|Określa, czy liczba całkowita zmienne są widoczne w podstawowej notacji 8.|  
+|[right](../standard-library/ios-functions.md#right)|Powoduje, że tekst, który nie jest szerokie, jak szerokość dane wyjściowe mają być widoczne w opróżnienia strumienia do prawego marginesu.|  
+|[scientific](../standard-library/ios-functions.md#scientific)|Przyczyny zmiennoprzecinkową liczby będzie wyświetlana w notacji wykładniczej.|  
 |[showbase](../standard-library/ios-functions.md#showbase)|Wskazuje podstawowy notational, w którym jest wyświetlany numer.|  
 |[showpoint](../standard-library/ios-functions.md#showpoint)|Wyświetla część liczby całkowitej liczbie zmiennoprzecinkowej i cyfr z prawej strony punktu dziesiętnego nawet wtedy, gdy część ułamkowa wynosi zero.|  
 |[showpos](../standard-library/ios-functions.md#showpos)|Powoduje, że dodatnie jawnie były podpisane.|  
@@ -90,7 +94,7 @@ istr>> noskipws;
 |-|-|  
 |[basic_ios —](../standard-library/basic-ios-class.md)|Klasy szablonów w tym artykule opisano funkcje magazynu i element członkowski wspólne dla obu strumienie wejściowe (szablonu klasy [basic_istream —](../standard-library/basic-istream-class.md)) i strumienie wyjściowe (szablonu klasy [basic_ostream —](../standard-library/basic-ostream-class.md)) zależnych od Parametry szablonu.|  
 |[fpos —](../standard-library/fpos-class.md)|Klasa szablonu opisuje obiekt, który może przechowywać wszystkie informacje niezbędne do przywrócenia wskaźnik dowolnego położenie pliku w jakimkolwiek strumieniu.|  
-|[ios_base —](../standard-library/ios-base-class.md)|Klasa opisuje magazyn i funkcje Członkowskie wspólne dla wejścia i wyjścia strumieni, które nie są zależne od parametrów szablonu.|  
+|[ios_base](../standard-library/ios-base-class.md)|Klasa opisuje magazyn i funkcje Członkowskie wspólne dla wejścia i wyjścia strumieni, które nie są zależne od parametrów szablonu.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   

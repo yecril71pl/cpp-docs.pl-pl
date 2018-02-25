@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - string/std::getline
 - string/std::stod
@@ -20,7 +20,7 @@ f1_keywords:
 - string/std::to_string
 - string/std::to_wstring
 ms.assetid: 1a4ffd11-dce5-4cc6-a043-b95de034c7c4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -37,22 +37,23 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.workload: cplusplus
-ms.openlocfilehash: 9b1d77b464ea9e9ab4ca6e9511836c490c1c622a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5e40a0fb4c46a9be68893f16490e23ac4d5e5a7e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltstringgt-functions"></a>&lt;ciąg&gt; funkcji
 ||||  
 |-|-|-|  
-|[getline](#getline)|[stod —](#stod)|[stof —](#stof)|  
-|[stoi —](#stoi)|[stol —](#stol)|[stold —](#stold)|  
-|[stoll —](#stoll)|[stoul —](#stoul)|[stoull —](#stoull)|  
-|[swap](#swap)|[to_string](#to_string)|[to_wstring —](#to_wstring)|  
+|[getline](#getline)|[stod —](#stod)|[stof](#stof)|  
+|[stoi](#stoi)|[stol](#stol)|[stold](#stold)|  
+|[stoll](#stoll)|[stoul](#stoul)|[stoull](#stoull)|  
+|[swap](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|  
   
-##  <a name="getline"></a>getline  
+##  <a name="getline"></a>  getline  
  Wyodrębnij ciągi ze strumienia wejściowego wiersz po wierszu.  
   
 ```  
@@ -112,7 +113,7 @@ basic_istream<Allocator, Traits>& getline(
   
 -   Po wyodrębnia funkcji `str.` [max_size](../standard-library/basic-string-class.md#max_size) elementów, w którym to przypadku Flaga stan wewnętrzny `is` ma ustawioną wartość `ios_base::failbit`.  
   
--   Inny błąd inny niż wymienionego powyżej, w którym to przypadku flagę stan wewnętrzny `is` ma ustawioną wartość`ios_base::badbit`  
+-   Inny błąd inny niż wymienionego powyżej, w którym to przypadku flagę stan wewnętrzny `is` ma ustawioną wartość `ios_base::badbit`  
   
  Uzyskać informacji o flagach stan wewnętrzny, zobacz [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
@@ -163,7 +164,7 @@ int main()
   
 ```  
   
-##  <a name="stod"></a>stod —  
+##  <a name="stod">stod —</a>  
  Konwertuje sekwencję znaków `double`.  
   
 ```  
@@ -190,7 +191,7 @@ double stod(
 ### <a name="remarks"></a>Uwagi  
  Funkcja konwertuje sekwencję elementów w `str` wartość `val` typu `double` tak, jakby przez wywołanie `strtod( str.c_str(), _Eptr)`, gdzie `_Eptr` jest obiektem funkcji wewnętrznej. Jeśli ` str.c_str() == *_Eptr` zgłasza typu obiektu `invalid_argument`. Jeśli takie połączenie ustawiał `errno`, zgłasza typu obiektu `out_of_range`. W przeciwnym razie, jeśli `idx` wskaźnika o wartości null, funkcja magazynów nie jest `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.  
   
-##  <a name="stof"></a>stof —  
+##  <a name="stof"></a>  stof —  
  Konwertuje sekwencja znaków na typ float.  
   
 ```  
@@ -216,7 +217,7 @@ float stof(
 ### <a name="remarks"></a>Uwagi  
  Funkcja konwertuje sekwencję elementów w `str` wartość `val` typu `float` tak, jakby przez wywołanie `strtof( str.c_str(), _Eptr)`, gdzie `_Eptr` jest obiektem funkcji wewnętrznej. Jeśli ` str.c_str() == *_Eptr` zgłasza typu obiektu `invalid_argument`. Jeśli takie połączenie ustawiał `errno`, zgłasza typu obiektu `out_of_range`. W przeciwnym razie, jeśli `idx` wskaźnika o wartości null, funkcja magazynów nie jest `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.  
   
-##  <a name="stoi"></a>stoi —  
+##  <a name="stoi"></a>  stoi —  
  Konwertuje sekwencja znaków na liczbę całkowitą.  
   
 ```  
@@ -245,11 +246,11 @@ int stoi(
 ### <a name="remarks"></a>Uwagi  
  Funkcja `stoi` konwertuje sekwencja znaków w `str` wartość typu `int` i zwraca wartość. Na przykład po upływie sekwencja znaków "10" zwróciła wartość przez `stoi` jest liczbą całkowitą 10.  
   
- `stoi`działa podobnie do funkcji `strtol` znaki jednobajtowe, gdy jest wywoływana w ten sposób `strtol( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem wewnętrznej funkcji; lub `wcstol` dla znaki dwubajtowe, gdy jest wywoływana w podobny sposób `wcstol(Str.c_str(), _Eptr, idx)`. Aby uzyskać więcej informacji, zobacz [strtol —, wcstol —, _strtol_l —, _wcstol_l —](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md).  
+ `stoi` działa podobnie do funkcji `strtol` znaki jednobajtowe, gdy jest wywoływana w ten sposób `strtol( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem wewnętrznej funkcji; lub `wcstol` dla znaki dwubajtowe, gdy jest wywoływana w podobny sposób `wcstol(Str.c_str(), _Eptr, idx)`. Aby uzyskać więcej informacji, zobacz [strtol —, wcstol —, _strtol_l —, _wcstol_l —](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md).  
   
  Jeśli `str.c_str() == *_Eptr`, `stoi` zgłasza wyjątek typu obiektu `invalid_argument`. Jeśli takie połączenie ustawiał `errno`, lub jeśli zwrócona wartość nie może być reprezentowany jako obiekt typu `int`, zgłasza typu obiektu `out_of_range`. W przeciwnym razie, jeśli `idx` wskaźnika o wartości null, funkcja magazynów nie jest `*_Eptr - str.c_str()` w `*idx`.  
   
-##  <a name="stol"></a>stol —  
+##  <a name="stol"></a>  stol —  
  Konwertuje sekwencję znaków `long`.  
   
 ```  
@@ -278,7 +279,7 @@ long stol(
 ### <a name="remarks"></a>Uwagi  
  Funkcja konwertuje sekwencję elementów w `str` wartość `val` typu `long` tak, jakby przez wywołanie `strtol( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem funkcji wewnętrznej. Jeśli ` str.c_str() == *_Eptr` zgłasza typu obiektu `invalid_argument`. Jeśli takie połączenie ustawiał `errno`, zgłasza typu obiektu `out_of_range`. W przeciwnym razie, jeśli `idx` wskaźnika o wartości null, funkcja magazynów nie jest `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.  
   
-##  <a name="stold"></a>stold —  
+##  <a name="stold"></a>  stold —  
  Konwertuje sekwencję znaków `long double`.  
   
 ```  
@@ -304,7 +305,7 @@ double stold(
 ### <a name="remarks"></a>Uwagi  
  Funkcja konwertuje sekwencję elementów w `str` wartość `val` typu `long double` tak, jakby przez wywołanie `strtold( str.c_str(), _Eptr)`, gdzie `_Eptr` jest obiektem funkcji wewnętrznej. Jeśli ` str.c_str() == *_Eptr` zgłasza typu obiektu `invalid_argument`. Jeśli takie połączenie ustawiał `errno`, zgłasza typu obiektu `out_of_range`. W przeciwnym razie, jeśli `idx` wskaźnika o wartości null, funkcja magazynów nie jest `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.  
   
-##  <a name="stoll"></a>stoll —  
+##  <a name="stoll"></a>  stoll —  
  Konwertuje sekwencję znaków `long long`.  
   
 ```  
@@ -333,7 +334,7 @@ long long stoll(
 ### <a name="remarks"></a>Uwagi  
  Funkcja konwertuje sekwencję elementów w `str` wartość `val` typu `long long` tak, jakby przez wywołanie `strtoll( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem funkcji wewnętrznej. Jeśli ` str.c_str() == *_Eptr` zgłasza typu obiektu `invalid_argument`. Jeśli takie połączenie ustawiał `errno`, zgłasza typu obiektu `out_of_range`. W przeciwnym razie, jeśli `idx` wskaźnika o wartości null, funkcja magazynów nie jest `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.  
   
-##  <a name="stoul"></a>stoul —  
+##  <a name="stoul"></a>  stoul —  
  Konwertuje niepodpisany sekwencja znaków długie.  
   
 ```  
@@ -362,7 +363,7 @@ unsigned long stoul(
 ### <a name="remarks"></a>Uwagi  
  Funkcja konwertuje sekwencję elementów w `str` wartość `val` typu `unsigned long` tak, jakby przez wywołanie `strtoul( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem funkcji wewnętrznej. Jeśli ` str.c_str() == *_Eptr` zgłasza typu obiektu `invalid_argument`. Jeśli takie połączenie ustawiał `errno`, zgłasza typu obiektu `out_of_range`. W przeciwnym razie, jeśli `idx` wskaźnika o wartości null, funkcja magazynów nie jest `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.  
   
-##  <a name="stoull"></a>stoull —  
+##  <a name="stoull"></a>  stoull —  
  Konwertuje sekwencję znaków `unsigned long long`.  
   
 ```  
@@ -391,7 +392,7 @@ unsigned long long stoull(
 ### <a name="remarks"></a>Uwagi  
  Funkcja konwertuje sekwencję elementów w `str` wartość `val` typu `unsigned long long` tak, jakby przez wywołanie `strtoull( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem funkcji wewnętrznej. Jeśli ` str.c_str() == *_Eptr` zgłasza typu obiektu `invalid_argument`. Jeśli takie połączenie ustawiał `errno`, zgłasza typu obiektu `out_of_range`. W przeciwnym razie, jeśli `idx` wskaźnika o wartości null, funkcja magazynów nie jest `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  Swap  
  Zamienia tablic znaki z dwóch ciągów.  
   
 ```  
@@ -444,7 +445,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.  
 ```  
   
-##  <a name="to_string"></a>to_string  
+##  <a name="to_string"></a>  to_string  
  Konwertuje wartość na `string`.  
   
 ```  
@@ -471,25 +472,25 @@ string to_string(long double Val);
 ### <a name="remarks"></a>Uwagi  
  Konwertuje funkcję `Val` sekwencję elementy przechowywane w tablicy obiektów `Buf` wewnętrznej funkcji tak, jakby przez wywołanie `sprintf(Buf, Fmt, Val)`, gdzie `Fmt` jest  
   
-- `"%d"`Jeśli `Val` ma typ`int`  
+- `"%d"` Jeśli `Val` ma typ `int`  
   
-- `"%u"`Jeśli `Val` ma typ`unsigned int`  
+- `"%u"` Jeśli `Val` ma typ `unsigned int`  
   
-- `"%ld"`Jeśli `Val` ma typ`long`  
+- `"%ld"` Jeśli `Val` ma typ `long`  
   
-- `"%lu"`Jeśli `Val` ma typ`unsigned long`  
+- `"%lu"` Jeśli `Val` ma typ `unsigned long`  
   
-- `"%lld"`Jeśli `Val` ma typ`long long`  
+- `"%lld"` Jeśli `Val` ma typ `long long`  
   
-- `"%llu"`Jeśli `Val` ma typ`unsigned long long`  
+- `"%llu"` Jeśli `Val` ma typ `unsigned long long`  
   
-- `"%f"`Jeśli `Val` ma typ `float` lub`double`  
+- `"%f"` Jeśli `Val` ma typ `float` lub `double`  
   
-- `"%Lf"`Jeśli `Val` ma typ`long double`  
+- `"%Lf"` Jeśli `Val` ma typ `long double`  
   
  Funkcja zwraca `string(Buf)`.  
   
-##  <a name="to_wstring"></a>to_wstring —  
+##  <a name="to_wstring"></a>  to_wstring —  
  Konwertuje wartość na ciąg znaków dwubajtowych.  
   
 ```  
@@ -516,24 +517,24 @@ wstring to_wstring(long double Val);
 ### <a name="remarks"></a>Uwagi  
  Konwertuje funkcję `Val` sekwencję elementy przechowywane w tablicy obiektów `Buf` wewnętrznej funkcji tak, jakby przez wywołanie `swprintf(Buf, Len, Fmt, Val)`, gdzie `Fmt` jest  
   
-- `L"%d"`Jeśli `Val` ma typ`int`  
+- `L"%d"` Jeśli `Val` ma typ `int`  
   
-- `L"%u"`Jeśli `Val` ma typ`unsigned int`  
+- `L"%u"` Jeśli `Val` ma typ `unsigned int`  
   
-- `L"%ld"`Jeśli `Val` ma typ`long`  
+- `L"%ld"` Jeśli `Val` ma typ `long`  
   
-- `L"%lu"`Jeśli `Val` ma typ`unsigned long`  
+- `L"%lu"` Jeśli `Val` ma typ `unsigned long`  
   
-- `L"%lld"`Jeśli `Val` ma typ`long long`  
+- `L"%lld"` Jeśli `Val` ma typ `long long`  
   
-- `L"%llu"`Jeśli `Val` ma typ`unsigned long long`  
+- `L"%llu"` Jeśli `Val` ma typ `unsigned long long`  
   
-- `L"%f"`Jeśli `Val` ma typ `float` lub`double`  
+- `L"%f"` Jeśli `Val` ma typ `float` lub `double`  
   
-- `L"%Lf"`Jeśli `Val` ma typ`long double`  
+- `L"%Lf"` Jeśli `Val` ma typ `long double`  
   
  Funkcja zwraca `wstring(Buf)`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<ciąg >](../standard-library/string.md)
+ [\<string>](../standard-library/string.md)
 

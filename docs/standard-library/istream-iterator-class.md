@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iterator/std::istream_iterator
 - iterator/std::istream_iterator::char_type
 - iterator/std::istream_iterator::istream_type
 - iterator/std::istream_iterator::traits_type
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::istream_iterator [C++]
 - std::istream_iterator [C++], char_type
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ef5ba7c445325131ad620efcbb6061a0fa49039a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f8e2e368adae0d4a995521da65021a4193ec28a1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="istreamiterator-class"></a>istream_iterator — Klasa
 Opisuje obiekt iteratora wejściowego. Wyodrębnia on obiektów klasy `Type` ze strumienia wejściowego, które it uzyskuje dostęp do za pośrednictwem obiektu go magazyny typu `pointer` do `basic_istream` <  `CharType`, `Traits`>.  
@@ -63,7 +66,7 @@ class istream_iterator
   
 |||  
 |-|-|  
-|[istream_iterator —](#istream_iterator)|Konstruuje albo iteratora zakończenia z strumienia domyślnie `istream_iterator` lub `istream_iterator` zainicjowany z typem stream iteratora, z którego jest odczytywana.|  
+|[istream_iterator](#istream_iterator)|Konstruuje albo iteratora zakończenia z strumienia domyślnie `istream_iterator` lub `istream_iterator` zainicjowany z typem stream iteratora, z którego jest odczytywana.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -79,14 +82,14 @@ class istream_iterator
 |-|-|  
 |[operator *](#op_star)|Operator usuwania odwołań zwraca przechowywanych obiektu typu `Type` dotyczy `istream_iterator`.|  
 |[operator ->](#operator-_gt)|Zwraca wartość elementu członkowskiego, jeśli istnieje.|  
-|[operator ++](#op_add_add)|Albo wyodrębnia inkrementowany obiekt ze strumienia wejściowego, albo kopiuje obiekt przed jego inkrementacją i zwraca kopię.|  
+|[operator++](#op_add_add)|Albo wyodrębnia inkrementowany obiekt ze strumienia wejściowego, albo kopiuje obiekt przed jego inkrementacją i zwraca kopię.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<iteratora >  
   
  **Namespace:** Standard  
   
-##  <a name="char_type"></a>istream_iterator::char_type  
+##  <a name="char_type"></a>  istream_iterator::char_type  
  Typ, który zawiera znak typu `istream_iterator`.  
   
 ```
@@ -132,7 +135,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator"></a>istream_iterator::istream_iterator  
+##  <a name="istream_iterator"></a>  istream_iterator::istream_iterator  
  Konstruuje albo iteratora zakończenia z strumienia domyślnie `istream_iterator` lub `istream_iterator` zainicjowany z typem stream iteratora, z którego jest odczytywana.  
   
 ```
@@ -184,7 +187,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_type"></a>istream_iterator::istream_type  
+##  <a name="istream_type"></a>  istream_iterator::istream_type  
  Typ, który udostępnia dla typu strumienia `istream_iterator`.  
   
 ```
@@ -197,7 +200,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 ### <a name="example"></a>Przykład  
   Zobacz [istream_iterator —](#istream_iterator) przykład sposobu deklarowanie i użycie `istream_type`.  
   
-##  <a name="op_star"></a>istream_iterator::operator *  
+##  <a name="op_star"></a>  istream_iterator::operator *  
  Operator usuwania odwołań zwraca przechowywanych obiektu typu **typu** dotyczy `istream_iterator`.  
   
 ```
@@ -239,7 +242,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__operator-_gt"></a>istream_iterator::operator-&gt;  
+##  <a name="istream_iterator__operator-_gt"></a>  istream_iterator::operator-&gt;  
  Zwraca wartość elementu członkowskiego, jeśli istnieje.  
   
 ```
@@ -286,7 +289,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_add_add"></a>istream_iterator::operator ++  
+##  <a name="op_add_add"></a>  istream_iterator::operator ++  
  Albo wyodrębnia inkrementowany obiekt ze strumienia wejściowego, albo kopiuje obiekt przed jego inkrementacją i zwraca kopię.  
   
 ```
@@ -330,7 +333,7 @@ int main( )
 }  
 ```  
   
-##  <a name="traits_type"></a>istream_iterator::traits_type  
+##  <a name="traits_type"></a>  istream_iterator::traits_type  
  Typ, który zawiera typ cech znaków `istream_iterator`.  
   
 ```
@@ -378,7 +381,7 @@ int main( )
 ## <a name="see-also"></a>Zobacz też  
  [input_iterator_tag — struktura](../standard-library/input-iterator-tag-struct.md)   
  [Iterator — struktura](../standard-library/iterator-struct.md)   
- [\<Iterator >](../standard-library/iterator.md)   
+ [\<iterator>](../standard-library/iterator.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

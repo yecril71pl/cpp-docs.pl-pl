@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::bernoulli_distribution
 - random/std::bernoulli_distribution::reset
@@ -19,7 +20,8 @@ f1_keywords:
 - random/std::bernoulli_distribution::param_type::p
 - random/std::bernoulli_distribution::param_type::operator==
 - random/std::bernoulli_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::bernoulli_distribution [C++]
 - std::bernoulli_distribution [C++], reset
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 19212e7b594b21a08d6f1fb174a3385e9c46d159
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e00574b13b09393f663eac31f9a3379e8897b775
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution — Klasa
 Generuje dystrybucji Bernoulliego.  
@@ -83,7 +86,7 @@ Klasa opisuje dystrybucji, który spowoduje utworzenie wartości typu `bool`rozp
   
 ||||  
 |-|-|-|  
-|[bernoulli_distribution —](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|  
+|[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|  
 |`bernoulli_distribution::operator()`||[param_type](#param_type)|  
   
 Element członkowski właściwości `p()` zwraca wartość parametru aktualnie przechowywana dystrybucji `p`.  
@@ -165,7 +168,7 @@ false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   
 **Namespace:** Standard  
   
-##  <a name="bernoulli_distribution"></a>bernoulli_distribution::bernoulli_distribution  
+##  <a name="bernoulli_distribution"></a>  bernoulli_distribution::bernoulli_distribution  
 Tworzy dystrybucji.  
   
 ```  
@@ -177,17 +180,17 @@ explicit bernoulli_distribution(const param_type& parm);
 *p*  
  Zapisana `p` parametru dystrybucji.  
   
-*Parametr*  
+*parm*  
  `param_type` Struktury użyta do skonstruowania dystrybucji.  
   
 ### <a name="remarks"></a>Uwagi  
- **Warunek wstępny:**`0.0 ≤ p ≤ 1.0`  
+ **Warunek wstępny:** `0.0 ≤ p ≤ 1.0`  
   
 Pierwszy Konstruktor konstrukcji obiektu których przechowywane `p` wartość przechowuje wartość *p*.  
   
 Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.  
   
-##  <a name="param_type"></a>bernoulli_distribution::param_type  
+##  <a name="param_type"></a>  bernoulli_distribution::param_type  
 Zawiera parametry dystrybucji.  
   
 {param_type — struktura  
@@ -201,7 +204,7 @@ Zawiera parametry dystrybucji.
 Zapisana `p` parametru dystrybucji.  
   
 ### <a name="remarks"></a>Uwagi  
-**Warunek wstępny:**`0.0 ≤ p ≤ 1.0`  
+**Warunek wstępny:** `0.0 ≤ p ≤ 1.0`  
   
 Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.  
   

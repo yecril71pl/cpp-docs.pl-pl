@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - streambuf/std::istreambuf_iterator
 - iterator/std::istreambuf_iterator::char_type
@@ -15,7 +16,8 @@ f1_keywords:
 - iterator/std::istreambuf_iterator::streambuf_type
 - iterator/std::istreambuf_iterator::traits_type
 - iterator/std::istreambuf_iterator::equal
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::istreambuf_iterator [C++]
 - std::istreambuf_iterator [C++], char_type
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2334ebd75d3a941c453950a6a99adfd99e6b1555
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc69f36b5dae84775025b2e7e8086321dfe55fd5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator — Klasa
 Istreambuf_iterator — klasa szablonu opisuje wyodrębniające elementy znak z bufora strumienia wejściowego, który uzyskuje dostęp do za pośrednictwem obiektu przechowuje, typ wskaźnika do obiektu wejściowego iteratora `basic_streambuf` \< **CharType** , **Cech**>.  
@@ -63,7 +66,7 @@ class istreambuf_iterator
   
 |||  
 |-|-|  
-|[istreambuf_iterator —](#istreambuf_iterator)|Konstruuje `istreambuf_iterator` który jest ustawiana na odczytywanie znaków ze strumienia wejściowego.|  
+|[istreambuf_iterator](#istreambuf_iterator)|Konstruuje `istreambuf_iterator` który jest ustawiana na odczytywanie znaków ze strumienia wejściowego.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -79,14 +82,14 @@ class istreambuf_iterator
   
 |||  
 |-|-|  
-|[takie same](#equal)|Sprawdza pod kątem równości dwóch iteratorów bufora strumienia wejściowego.|  
+|[equal](#equal)|Sprawdza pod kątem równości dwóch iteratorów bufora strumienia wejściowego.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
 |[operator *](#op_star)|Operator dereferencji zwraca następny znak w strumieniu.|  
-|[operator ++](#op_add_add)|Zwraca następny znak ze strumienia wejściowego lub kopiuje obiekt przed jego inkrementacją i zwraca kopię.|  
+|[operator++](#op_add_add)|Zwraca następny znak ze strumienia wejściowego lub kopiuje obiekt przed jego inkrementacją i zwraca kopię.|  
 |[operator ->](#operator-_gt)|Zwraca wartość elementu członkowskiego, jeśli istnieje.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -94,7 +97,7 @@ class istreambuf_iterator
   
  **Namespace:** Standard  
   
-##  <a name="char_type"></a>istreambuf_iterator::char_type  
+##  <a name="char_type"></a>  istreambuf_iterator::char_type  
  Typ, który zawiera znak typu `ostreambuf_iterator`.  
   
 ```
@@ -137,7 +140,7 @@ int main( )
 }  
 ```  
   
-##  <a name="equal"></a>istreambuf_iterator::EQUAL  
+##  <a name="equal"></a>  istreambuf_iterator::equal  
  Testy do pełnienia roli równoważnika między dwoma Iteratory buforu strumienia wejściowego.  
   
 ```
@@ -182,7 +185,7 @@ int main( )
 }  
 ```  
   
-##  <a name="int_type"></a>istreambuf_iterator::int_type  
+##  <a name="int_type"></a>  istreambuf_iterator::int_type  
  Typ, który zapewnia całkowitą dla `istreambuf_iterator`.  
   
 ```
@@ -211,7 +214,7 @@ The inttype1 = 100.
 *\  
 ```  
   
-##  <a name="istream_type"></a>istreambuf_iterator::istream_type  
+##  <a name="istream_type"></a>  istreambuf_iterator::istream_type  
  Typ, który udostępnia dla typu strumienia `istreambuf_iterator`.  
   
 ```
@@ -224,7 +227,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 ### <a name="example"></a>Przykład  
   Zobacz [istreambuf_iterator —](#istreambuf_iterator) przykład sposobu deklarowanie i użycie `istream_type`.  
   
-##  <a name="istreambuf_iterator"></a>istreambuf_iterator::istreambuf_iterator  
+##  <a name="istreambuf_iterator"></a>  istreambuf_iterator::istreambuf_iterator  
  Tworzy istreambuf_iterator —, która jest ustawiana na odczytywanie znaków ze strumienia wejściowego.  
   
 ```
@@ -274,7 +277,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_star"></a>istreambuf_iterator::operator *  
+##  <a name="op_star"></a>  istreambuf_iterator::operator *  
  Operator dereferencji zwraca następny znak w strumieniu.  
   
 ```
@@ -312,7 +315,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_add_add"></a>istreambuf_iterator::operator ++  
+##  <a name="op_add_add"></a>  istreambuf_iterator::operator ++  
  Zwraca następny znak ze strumienia wejściowego lub kopiuje obiekt przed jego inkrementacją i zwraca kopię.  
   
 ```
@@ -354,7 +357,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__operator-_gt"></a>istreambuf_iterator::operator-&gt;  
+##  <a name="istreambuf_iterator__operator-_gt"></a>  istreambuf_iterator::operator-&gt;  
  Zwraca wartość elementu członkowskiego, jeśli istnieje.  
   
 ```
@@ -364,7 +367,7 @@ const Elem* operator->() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Operator zwraca  **& \* \*to**.  
   
-##  <a name="streambuf_type"></a>istreambuf_iterator::streambuf_type  
+##  <a name="streambuf_type"></a>  istreambuf_iterator::streambuf_type  
  Typ, który udostępnia dla typu strumienia istreambuf_iterator —.  
   
 ```
@@ -377,7 +380,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 ### <a name="example"></a>Przykład  
   Zobacz [istreambuf_iterator —](#istreambuf_iterator) przykład sposobu deklarowanie i użycie **istreambuf_type**.  
   
-##  <a name="traits_type"></a>istreambuf_iterator::traits_type  
+##  <a name="traits_type"></a>  istreambuf_iterator::traits_type  
  Typ, który zawiera typ cech znaków `istream_iterator`.  
   
 ```
@@ -422,7 +425,7 @@ int main( )
   
 ## <a name="see-also"></a>Zobacz też  
  [Iterator — struktura](../standard-library/iterator-struct.md)   
- [\<Iterator >](../standard-library/iterator.md)   
+ [\<iterator>](../standard-library/iterator.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

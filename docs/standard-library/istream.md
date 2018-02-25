@@ -1,31 +1,35 @@
 ---
-title: '&lt;IStream&gt; | Dokumentacja firmy Microsoft'
+title: '&lt;istream&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - istream/std::<istream>
 - <istream>
 - std::<istream>
-dev_langs: C++
-helpviewer_keywords: istream header
+dev_langs:
+- C++
+helpviewer_keywords:
+- istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 570a23dff65c6c4838d85083b25507bbf0f68e44
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 83ad1cd6a07e4b8b6ce71e6803170ce3cc1c0342
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltistreamgt"></a>&lt;IStream&gt;
+# <a name="ltistreamgt"></a>&lt;istream&gt;
 Definiuje basic_istream szablonu klasy —, które przekazuje ekstrakcje dla iostream, i basic_iostream szablonu klasy —, które przekazuje zarówno wstawienia i ekstrakcje. Nagłówek definiuje również manipulatora pokrewne. Ten plik nagłówka jest zwykle dołączone dla Ciebie przez inny nagłówek iostream; rzadko musi zawierać go bezpośrednio.  
   
 ## <a name="syntax"></a>Składnia  
@@ -40,7 +44,7 @@ Definiuje basic_istream szablonu klasy —, które przekazuje ekstrakcje dla ios
 |||  
 |-|-|  
 |[iostream](../standard-library/istream-typedefs.md#iostream)|Typ `basic_iostream` specjalne na `char`.|  
-|[IStream](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` specjalne na `char`.|  
+|[istream](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` specjalne na `char`.|  
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|Typ `basic_iostream` specjalne na **wchar**.|  
 |[wistream](../standard-library/istream-typedefs.md#wistream)|Typ `basic_istream` specjalne na **wchar**.|  
   
@@ -55,14 +59,14 @@ Definiuje basic_istream szablonu klasy —, które przekazuje ekstrakcje dla ios
   
 |||  
 |-|-|  
-|[operator >>](../standard-library/istream-operators.md#op_gt_gt)|Wyodrębnia znaki i ciągi ze strumienia.|  
+|[operator>>](../standard-library/istream-operators.md#op_gt_gt)|Wyodrębnia znaki i ciągi ze strumienia.|  
   
 ### <a name="classes"></a>Klasy  
   
 |||  
 |-|-|  
-|[basic_iostream —](../standard-library/basic-iostream-class.md)|Klasy strumienia, który można wykonać obie czynności danych wejściowych i wyjściowych.|  
-|[basic_istream —](../standard-library/basic-istream-class.md)|Klasy szablonu opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia elementami typu **elementu**, znanej także jako [char_type](../standard-library/basic-ios-class.md#char_type), są którego cech znaków Określona klasa **Tr**, znanej także jako [traits_type](../standard-library/basic-ios-class.md#traits_type).|  
+|[basic_iostream](../standard-library/basic-iostream-class.md)|Klasy strumienia, który można wykonać obie czynności danych wejściowych i wyjściowych.|  
+|[basic_istream](../standard-library/basic-istream-class.md)|Klasy szablonu opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia elementami typu **elementu**, znanej także jako [char_type](../standard-library/basic-ios-class.md#char_type), są którego cech znaków Określona klasa **Tr**, znanej także jako [traits_type](../standard-library/basic-ios-class.md#traits_type).|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

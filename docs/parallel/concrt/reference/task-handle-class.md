@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
 - PPL/concurrency::task_handle::task_handle
-dev_langs: C++
-helpviewer_keywords: task_handle class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 38da8f97dfd689037f52f5e7c67bb51f4577a05a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 42fcc201007a26a111f50036b273cab2850b28a3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="taskhandle-class"></a>task_handle — Klasa
 `task_handle` Klasa reprezentuje element indywidualnej pracy równoległych. Hermetyzuje zgodnie z instrukcjami i dane wymagane do wykonywania pracy.  
@@ -47,21 +51,21 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[task_handle —](#ctor)|Tworzy nową `task_handle` obiektu. Pracy zadanie jest wykonywane przez wywoływanie funkcji określonej jako parametr do konstruktora.|  
+|[task_handle](#ctor)|Tworzy nową `task_handle` obiektu. Pracy zadanie jest wykonywane przez wywoływanie funkcji określonej jako parametr do konstruktora.|  
 |[~ task_handle — destruktor](#dtor)|Niszczy `task_handle` obiektu.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Operator()](#task_handle__operator_call)|Operator wywołania funkcji środowiska uruchomieniowego wywołuje do wykonywania pracy dojścia zadań.|  
+|[operator()](#task_handle__operator_call)|Operator wywołania funkcji środowiska uruchomieniowego wywołuje do wykonywania pracy dojścia zadań.|  
   
 ## <a name="remarks"></a>Uwagi  
- `task_handle`obiekty mogą być używane w połączeniu z `structured_task_group` lub więcej ogólny `task_group` obiektu próba dekompozycji pracy do zadań równoległych. Aby uzyskać więcej informacji, zobacz [równoległość zadań](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ `task_handle` obiekty mogą być używane w połączeniu z `structured_task_group` lub więcej ogólny `task_group` obiektu próba dekompozycji pracy do zadań równoległych. Aby uzyskać więcej informacji, zobacz [równoległość zadań](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
  Należy pamiętać, że twórca `task_handle` obiektu jest odpowiedzialny za konserwację okres istnienia utworzony `task_handle` obiektu, dopóki nie jest wymagany przez współbieżności środowiska wykonawczego. Zazwyczaj oznacza to, że `task_handle` obiekt nie należy destruct aż do otrzymania `wait` lub `run_and_wait` metody `task_group` lub `structured_task_group` , do którego jest Zakolejkowane została wywołana.  
   
- `task_handle`obiekty są zazwyczaj używane w połączeniu z wyrażenia lambda w języku C++. Ponieważ nie znasz true typu lambda, [make_task —](concurrency-namespace-functions.md#make_task) funkcji jest zwykle używane do tworzenia `task_handle` obiektu.  
+ `task_handle` obiekty są zazwyczaj używane w połączeniu z wyrażenia lambda w języku C++. Ponieważ nie znasz true typu lambda, [make_task —](concurrency-namespace-functions.md#make_task) funkcji jest zwykle używane do tworzenia `task_handle` obiektu.  
   
  Środowisko uruchomieniowe tworzy kopię funkcja pracy, który jest przekazywany do `task_handle` obiektu. W związku z tym wszelkie zmiany stanu, które występują w funkcji obiekt przekazywany do `task_handle` obiektu nie będą widoczne w kopii tego obiektu funkcji.  
   
@@ -73,7 +77,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
  **Namespace:** współbieżności  
   
-##  <a name="task_handle__operator_call"></a>Operator() 
+##  <a name="task_handle__operator_call"></a> Operator() 
 
  Operator wywołania funkcji środowiska uruchomieniowego wywołuje do wykonywania pracy dojścia zadań.  
   
@@ -83,7 +87,7 @@ void operator()() const;
  
 ```  
   
-##  <a name="task_handle__ctor"></a>task_handle — 
+##  <a name="task_handle__ctor"></a> task_handle — 
 
  Tworzy nową `task_handle` obiektu. Pracy zadanie jest wykonywane przez wywoływanie funkcji określonej jako parametr do konstruktora.  
   
@@ -98,7 +102,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>Uwagi  
  Środowisko uruchomieniowe tworzy kopię funkcja pracy, który jest przekazywany do konstruktora. W związku z tym wszelkie zmiany stanu, które występują w funkcji obiekt przekazywany do `task_handle` obiektu nie będą widoczne w kopii tego obiektu funkcji.  
   
-##  <a name="dtor"></a>~ task_handle — 
+##  <a name="dtor"></a> ~task_handle 
 
  Niszczy `task_handle` obiektu.  
   

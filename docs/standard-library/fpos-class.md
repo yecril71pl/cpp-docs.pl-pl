@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iosfwd/std::fpos
 - iosfwd/std::fpos::seekpos
 - iosfwd/std::fpos::state
 - iosfwd/std::fpos::operator streamoff
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::fpos [C++]
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0647a5d4a9720b5628d5d540f055013bd40b8b30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d65ede65d1cd1b0d8cadb39ec18af42a007c023c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="fpos-class"></a>fpos — Klasa
 Klasa szablonu opisuje obiekt, który może przechowywać wszystkie informacje niezbędne do przywrócenia wskaźnik dowolnego położenie pliku w jakimkolwiek strumieniu. Obiekt fpos — klasa\< **St**> skutecznie przechowuje co najmniej dwa obiekty członek:  
@@ -60,18 +63,18 @@ class fpos
 |||  
 |-|-|  
 |[seekpos](#seekpos)|Używane przez standardowa biblioteka C++ tylko wewnętrznie. Nie wywołuj tej metody w kodzie.|  
-|[Stan](#state)|Ustawia lub zwraca stan konwersji.|  
+|[state](#state)|Ustawia lub zwraca stan konwersji.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
 |[operator!=](#op_neq)|Testy wskaźników położenia pliku pod kątem nierówności.|  
-|[operator +](#op_add)|Zwiększa wskaźnika położenia pliku.|  
-|[+= — operator](#op_add_eq)|Zwiększa wskaźnika położenia pliku.|  
+|[operator+](#op_add)|Zwiększa wskaźnika położenia pliku.|  
+|[operator+=](#op_add_eq)|Zwiększa wskaźnika położenia pliku.|  
 |[operator-](#operator-)|Wskaźnik zmniejsza położenie pliku.|  
 |[operator-=](#operator-_eq)|Wskaźnik zmniejsza położenie pliku.|  
-|[operator ==](#op_eq_eq)|Testy wskaźników położenia pliku pod kątem równości.|  
+|[operator==](#op_eq_eq)|Testy wskaźników położenia pliku pod kątem równości.|  
 |[streamoff — operator](#op_streamoff)|Typ obiektu rzutowania `fpos` na obiekt typu `streamoff`.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -79,7 +82,7 @@ class fpos
   
  **Namespace:** Standard  
   
-##  <a name="fpos"></a>fpos::fpos  
+##  <a name="fpos"></a>  fpos::fpos  
  Utwórz obiekt, który zawiera informacje o stanie (przesunięcie) w strumieniu.  
   
 ```  
@@ -103,7 +106,7 @@ fpos(Statetype _State, fpos_t _Filepos);
   
  Drugi Konstruktor przechowuje przesunięcia o wartości zero i obiekt `_State`.  
   
-##  <a name="op_neq"></a>fpos::operator! =  
+##  <a name="op_neq"></a>  fpos::operator! =  
  Testy wskaźników położenia pliku pod kątem nierówności.  
   
 ```  
@@ -172,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_add"></a>fpos::operator +  
+##  <a name="op_add"></a>  fpos::operator +  
  Zwiększa wskaźnika położenia pliku.  
   
 ```  
@@ -192,7 +195,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 ### <a name="example"></a>Przykład  
   Zobacz [operator! =](#op_neq) przykładowe przy użyciu `operator+`.  
   
-##  <a name="op_add_eq"></a>fpos::operator +=  
+##  <a name="op_add_eq"></a>  fpos::operator +=  
  Zwiększa wskaźnika położenia pliku.  
   
 ```  
@@ -212,7 +215,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 ### <a name="example"></a>Przykład  
   Zobacz [operator! =](#op_neq) przykładowe przy użyciu `operator+=`.  
   
-##  <a name="fpos__operator-"></a>fpos::operator-  
+##  <a name="fpos__operator-"></a>  fpos::operator-  
  Wskaźnik zmniejsza położenie pliku.  
   
 ```  
@@ -234,7 +237,7 @@ fpos<Statetype> operator-(streamoff _Off) const;
 ### <a name="example"></a>Przykład  
   Zobacz [operator! =](#op_neq) przykładowe przy użyciu `operator-`.  
   
-##  <a name="fpos__operator-_eq"></a>fpos::operator-=  
+##  <a name="fpos__operator-_eq"></a>  fpos::operator-=  
  Wskaźnik zmniejsza położenie pliku.  
   
 ```  
@@ -254,7 +257,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 ### <a name="example"></a>Przykład  
   Zobacz [operator! =](#op_neq) przykładowe przy użyciu `operator-=`.  
   
-##  <a name="op_eq_eq"></a>fpos::operator ==  
+##  <a name="op_eq_eq"></a>  fpos::operator ==  
  Testy wskaźników położenia pliku pod kątem równości.  
   
 ```  
@@ -274,7 +277,7 @@ bool operator==(const fpos<Statetype>& right) const;
 ### <a name="example"></a>Przykład  
   Zobacz [operator! =](#op_neq) przykładowe przy użyciu `operator+=`.  
   
-##  <a name="op_streamoff"></a>fpos::operator streamoff  
+##  <a name="op_streamoff"></a>  fpos::operator streamoff  
  Rzutowanie obiektu typu `fpos` na obiekt typu `streamoff`.  
   
 ```  
@@ -311,14 +314,14 @@ int main( )
 0  
 ```  
   
-##  <a name="seekpos"></a>fpos::seekpos  
+##  <a name="seekpos"></a>  fpos::seekpos  
  Ta metoda jest używana wewnętrznie przez standardowa biblioteka C++ tylko. Nie wywołuj tej metody w kodzie.  
   
 ```  
 fpos_t seekpos() const;
 ```  
   
-##  <a name="state"></a>fpos::State  
+##  <a name="state"></a>  fpos::State  
  Ustawia lub zwraca stan konwersji.  
   
 ```  

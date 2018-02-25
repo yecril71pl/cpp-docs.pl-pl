@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - fstream/std::basic_fstream
 - fstream/std::basic_fstream::close
@@ -14,7 +15,8 @@ f1_keywords:
 - fstream/std::basic_fstream::open
 - fstream/std::basic_fstream::rdbuf
 - fstream/std::basic_fstream::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_fstream [C++]
 - std::basic_fstream [C++], close
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::basic_fstream [C++], rdbuf
 - std::basic_fstream [C++], swap
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fc53ce776dd494c4af312c16d751f883afecc69d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a518b3c39b2f61563a4f16079fb803815ee62793
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicfstream-class"></a>basic_fstream — Klasa
 Zawiera opis obiektu, który kontroluje wstawiania i wyodrębniania elementów i obiektów zakodowany przy użyciu buforu strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, elementami typu `Elem`, których cech znaków są określane przez klasę `Tr`.  
@@ -94,7 +97,7 @@ Writing to a basic_fstream object...
   
 |||  
 |-|-|  
-|[basic_fstream —](#basic_fstream)|Tworzy obiekt typu `basic_fstream`.|  
+|[basic_fstream](#basic_fstream)|Tworzy obiekt typu `basic_fstream`.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
@@ -111,7 +114,7 @@ Writing to a basic_fstream object...
   
  **Namespace:** Standard  
   
-##  <a name="basic_fstream"></a>basic_fstream::basic_fstream  
+##  <a name="basic_fstream"></a>  basic_fstream::basic_fstream  
  Tworzy obiekt typu `basic_fstream`.  
   
 ```  
@@ -150,7 +153,7 @@ basic_fstream(basic_fstream&& right);
 ### <a name="example"></a>Przykład  
   Zobacz [streampos](../standard-library/ios-typedefs.md#streampos) na przykład, który używa `basic_fstream`.  
   
-##  <a name="close"></a>basic_fstream::Close  
+##  <a name="close"></a>  basic_fstream::Close  
  Zamyka plik.  
   
 ```  
@@ -163,7 +166,7 @@ void close();
 ### <a name="example"></a>Przykład  
   Zobacz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) przykład sposobu użycia **zamknąć**.  
   
-##  <a name="is_open"></a>basic_fstream::is_open  
+##  <a name="is_open"></a>  basic_fstream::is_open  
  Określa, czy plik jest otwarty.  
   
 ```  
@@ -179,7 +182,7 @@ bool is_open() const;
 ### <a name="example"></a>Przykład  
   Zobacz [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open) przykład sposobu użycia `is_open`.  
   
-##  <a name="open"></a>basic_fstream::Open  
+##  <a name="open"></a>  basic_fstream::Open  
  Otwiera plik.  
   
 ```  
@@ -218,7 +221,7 @@ void open(
 ### <a name="example"></a>Przykład  
   Zobacz [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) przykład sposobu użycia **Otwórz**.  
   
-##  <a name="op_eq"></a>basic_fstream::operator =  
+##  <a name="op_eq"></a>  basic_fstream::operator =  
  Przypisuje do tego obiektu zawartości z obiektu określonego strumienia. Jest to przypisania przenoszenia, która obejmuje r-wartości nie pozostawione kopii.  
   
 ```  
@@ -235,7 +238,7 @@ basic_fstream& operator=(basic_fstream&& right);
 ### <a name="remarks"></a>Uwagi  
  Operator członkowski zastępuje zawartość obiektu przy użyciu zawartości `right`, traktowane jako odwołanie do r-wartości.  
   
-##  <a name="rdbuf"></a>basic_fstream::rdbuf  
+##  <a name="rdbuf"></a>  basic_fstream::rdbuf  
  Zwraca adres buforu przechowywanych strumienia, typu wskaźnika do [basic_filebuf —](../standard-library/basic-filebuf-class.md) \< **elementu**, **Tr**>.  
   
 ```  
@@ -248,7 +251,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 ### <a name="example"></a>Przykład  
   Zobacz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) przykład sposobu użycia `rdbuf`.  
   
-##  <a name="swap"></a>basic_fstream::swap  
+##  <a name="swap"></a>  basic_fstream::swap  
  Zamienia zawartość dwóch `basic_fstream` obiektów.  
   
 ```  

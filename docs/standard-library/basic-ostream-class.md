@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -16,7 +17,8 @@ f1_keywords:
 - ostream/std::basic_ostream::swap
 - ostream/std::basic_ostream::tellp
 - ostream/std::basic_ostream::write
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_ostream [C++]
 - std::basic_ostream [C++], flush
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d08410c68a2cff5a1c85733c4a2a2ed1775754b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c9890fcbcebb86357d344b13c346a849cad4bcb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicostream-class"></a>basic_ostream — Klasa
 Ta klasa szablonu opisuje obiekt, który kontroluje wstawiania elementów i obiektów zakodowanych w buforze strumienia, elementami typu **elementu**, znanej także jako [char_type](../standard-library/basic-ios-class.md#char_type), są którego cech znaków Określona klasa **Tr**, znanej także jako [traits_type](../standard-library/basic-ios-class.md#traits_type).  
@@ -119,14 +122,14 @@ return (*this);
   
 |||  
 |-|-|  
-|[basic_ostream —](#basic_ostream)|Konstruuje `basic_ostream` obiektu.|  
+|[basic_ostream](#basic_ostream)|Konstruuje `basic_ostream` obiektu.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
 |||  
 |-|-|  
-|[Flush](#flush)|Opróżnia bufor.|  
-|[Umieść](#put)|Umieszcza znak w strumieniu.|  
+|[flush](#flush)|Opróżnia bufor.|  
+|[put](#put)|Umieszcza znak w strumieniu.|  
 |[seekp](#seekp)|Resetuje pozycja w strumieniu wyjściowym.|  
 |[Sentry](#sentry)|Zagnieżdżona klasa opisuje obiekt, którego deklaracji struktury sformatowane dane wyjściowe funkcji i funkcji niesformatowanych danych wyjściowych.|  
 |[swap](#op_eq)|Zamienia wartości to `basic_ostream` obiektu dla osób z dostarczonych `basic_ostream` obiektu.|  
@@ -137,7 +140,7 @@ return (*this);
   
 |||  
 |-|-|  
-|[operator =](#basic_ostream_operator_eq)|Przypisuje wartość dostarczonych `basic_ostream` obiekt parametru do tego obiektu.|  
+|[operator=](#basic_ostream_operator_eq)|Przypisuje wartość dostarczonych `basic_ostream` obiekt parametru do tego obiektu.|  
 |[Operator <<](#basic_ostream_operator_lt_lt)|Zapisuje w strumieniu.|  
 
 ## <a name="requirements"></a>Wymagania  
@@ -145,7 +148,7 @@ return (*this);
   
  **Namespace:** Standard  
   
-##  <a name="basic_ostream"></a>basic_ostream::basic_ostream  
+##  <a name="basic_ostream"></a>  basic_ostream::basic_ostream  
  Konstruuje `basic_ostream` obiektu.  
   
 ```  
@@ -161,7 +164,7 @@ basic_ostream(basic_ostream&& right);
  Obiekt typu [basic_streambuf —](../standard-library/basic-streambuf-class.md).  
   
  `_Isstd`  
- `true`Jeśli jest to Standardowy strumień; w przeciwnym razie `false`.  
+ `true` Jeśli jest to Standardowy strumień; w przeciwnym razie `false`.  
   
  `right`  
  Odwołania do r-wartości do obiektu typu `basic_ostream`.  
@@ -172,7 +175,7 @@ basic_ostream(basic_ostream&& right);
 ### <a name="example"></a>Przykład  
   Zobacz przykład [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) Aby dowiedzieć się więcej na temat strumienie wyjściowe.  
   
-##  <a name="flush"></a>basic_ostream::Flush  
+##  <a name="flush"></a>  basic_ostream::Flush  
  Opróżnia bufor.  
   
 ```  
@@ -204,7 +207,7 @@ int main( )
 test  
 ```  
   
-##  <a name="basic_ostream_operator_lt_lt"></a>basic_ostream::operator&lt;&lt;  
+##  <a name="basic_ostream_operator_lt_lt"></a>  basic_ostream::operator&lt;&lt;  
  Zapisuje w strumieniu.  
   
 ```  
@@ -343,7 +346,7 @@ int main()
 }
 ```  
   
-##  <a name="op_eq"></a>basic_ostream::operator =  
+##  <a name="op_eq"></a>  basic_ostream::operator =  
  Przypisuje wartości dla udostępnionych `basic_ostream` obiekt parametru do tego obiektu.  
   
 ```  
@@ -357,7 +360,7 @@ basic_ostream& operator=(basic_ostream&& right);
 ### <a name="remarks"></a>Uwagi  
  Operator członkowski wywołuje wymiany `(right)`.  
   
-##  <a name="put"></a>basic_ostream::Put  
+##  <a name="put"></a>  basic_ostream::Put  
  Umieszcza znak w strumieniu.  
   
 ```  
@@ -395,7 +398,7 @@ v
 l  
 ```  
   
-##  <a name="seekp"></a>basic_ostream::seekp  
+##  <a name="seekp"></a>  basic_ostream::seekp  
  Zresetuj pozycję w strumieniu wyjściowym.  
   
 ```  
@@ -450,7 +453,7 @@ int main()
 7  
 ```  
   
-##  <a name="sentry"></a>basic_ostream::Sentry  
+##  <a name="sentry"></a>  basic_ostream::Sentry  
  Zagnieżdżona klasa opisuje obiekt, którego deklaracji struktury sformatowane dane wyjściowe funkcji i funkcji niesformatowanych danych wyjściowych.  
   
 {sentry — klasa  
@@ -462,7 +465,7 @@ int main()
   
  Jeśli `uncaught_exception` zwraca **false** i [flagi](../standard-library/ios-base-class.md#flags)  **&**  [unitbuf](../standard-library/ios-functions.md#unitbuf) jest różna od zera, wywołania destruktora [opróżnić](#flush).  
   
-##  <a name="swap"></a>basic_ostream::swap  
+##  <a name="swap"></a>  basic_ostream::swap  
  Zamienia wartości to `basic_ostream` obiektu dla udostępnionych wartości `basic_ostream`.  
   
 ```  
@@ -476,7 +479,7 @@ void swap(basic_ostream& right);
 ### <a name="remarks"></a>Uwagi  
  Wywołania funkcji Członkowskich [basic_ios::swap](../standard-library/basic-ios-class.md#swap) `(right)` do wymiany zawartości obiektu zawartość `right`.  
   
-##  <a name="tellp"></a>basic_ostream::tellp  
+##  <a name="tellp"></a>  basic_ostream::tellp  
  Raport pozycja w strumieniu wyjściowym.  
   
 ```  
@@ -492,7 +495,7 @@ pos_type tellp();
 ### <a name="example"></a>Przykład  
   Zobacz [seekp](#seekp) na przykład za pomocą `tellp`.  
   
-##  <a name="write"></a>basic_ostream::Write  
+##  <a name="write"></a>  basic_ostream::Write  
  Umieść znaków w strumieniu.  
   
 ```  

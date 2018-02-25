@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - sstream/std::basic_istringstream
 - sstream/std::basic_istringstream::allocator_type
 - sstream/std::basic_istringstream::rdbuf
 - sstream/std::basic_istringstream::str
 - sstream/std::basic_istringstream::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_istringstream [C++]
 - std::basic_istringstream [C++], allocator_type
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bc439bd64327ad48f98de8eef380a792e54b8c4f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6956b4708061c5eb18ec2adf1570920980dd17e1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream — Klasa
 Zawiera opis obiektu, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia klasy [basic_stringbuf —](../standard-library/basic-stringbuf-class.md)< **elementu**, **Tr**, `Alloc`>.  
@@ -59,7 +62,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
   
 |||  
 |-|-|  
-|[basic_istringstream —](#basic_istringstream)|Tworzy obiekt typu `basic_istringstream`.|  
+|[basic_istringstream](#basic_istringstream)|Tworzy obiekt typu `basic_istringstream`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -79,21 +82,21 @@ class basic_istringstream : public basic_istream<Elem, Tr>
   
 |||  
 |-|-|  
-|[operator =](#op_eq)|Przypisuje wartości do tego `basic_istringstream` obiektu z parametrem obiektu.|  
+|[operator=](#op_eq)|Przypisuje wartości do tego `basic_istringstream` obiektu z parametrem obiektu.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<sstream — >  
   
  **Namespace:** Standard  
   
-##  <a name="allocator_type"></a>basic_istringstream::allocator_type  
+##  <a name="allocator_type"></a>  basic_istringstream::allocator_type  
  Typ jest synonimem parametru szablonu `Alloc`.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-##  <a name="basic_istringstream"></a>basic_istringstream::basic_istringstream  
+##  <a name="basic_istringstream"></a>  basic_istringstream::basic_istringstream  
  Tworzy obiekt typu `basic_istringstream`.  
   
 ```  
@@ -125,7 +128,7 @@ basic_istringstream(
   
  Trzeci Konstruktor inicjuje obiekt z zawartością `right`, traktowane jako odwołanie do r-wartości.  
   
-##  <a name="op_eq"></a>basic_istringstream::operator =  
+##  <a name="op_eq"></a>  basic_istringstream::operator =  
  Przypisuje wartości do tego `basic_istringstream` obiektu z parametrem obiektu.  
   
 ```  
@@ -139,7 +142,7 @@ basic_istringstream& operator=(basic_istringstream&& right);
 ### <a name="remarks"></a>Uwagi  
  Operator członkowski zastępuje zawartość obiektu zawartość `right`, poddanego jako odwołanie do r-wartości Przenieś przypisania.  
   
-##  <a name="rdbuf"></a>basic_istringstream::rdbuf  
+##  <a name="rdbuf"></a>  basic_istringstream::rdbuf  
  Zwraca adres buforu strumienia przechowywanych typu **wskaźnika** do [basic_stringbuf —](../standard-library/basic-stringbuf-class.md)< **elementu**, **Tr**, `Alloc`>.  
   
 ```  
@@ -152,7 +155,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 ### <a name="example"></a>Przykład  
   Zobacz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) na przykład, który używa `rdbuf`.  
   
-##  <a name="str"></a>basic_istringstream::str  
+##  <a name="str"></a>  basic_istringstream::str  
  Ustawia lub pobiera tekst w buforze ciągu bez zmiany pozycji zapisu.  
   
 ```  
@@ -176,7 +179,7 @@ void str(
 ### <a name="example"></a>Przykład  
   Zobacz [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) na przykład, który używa **str**.  
   
-##  <a name="swap"></a>basic_istringstream::swap  
+##  <a name="swap"></a>  basic_istringstream::swap  
  Zamienia wartości dwu `basic_istringstream` obiektów.  
   
 ```  

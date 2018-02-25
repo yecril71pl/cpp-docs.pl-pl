@@ -4,25 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <sstream>
-dev_langs: C++
-helpviewer_keywords: sstream header
+ms.topic: reference
+f1_keywords:
+- <sstream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3a8fb1e1ee10cb42a2fd75f6eb7f16a7bb359321
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 319c9cc1b61565eaeffb442b2f4e280aab9b720c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltsstreamgt"></a>&lt;sstream —&gt;
+# <a name="ltsstreamgt"></a>&lt;sstream&gt;
 Definiuje kilka klas szablonu, które obsługują operacje iostream sekwencji przechowywane w tablicy przydzielone obiektów. Takie sekwencje łatwo są konwertowane do i z obiektów klasy szablonu [basic_string —](../standard-library/basic-string-class.md).  
   
 ## <a name="syntax"></a>Składnia  
@@ -109,10 +114,10 @@ void swap (
   
 |||  
 |-|-|  
-|[basic_stringbuf —](../standard-library/basic-stringbuf-class.md)|W tym artykule opisano buforu strumienia, który kontroluje przekazywania elementów typu **elementu**, którego cech znaków są określane przez klasę **Tr**, do i z sekwencję elementy przechowywane w tablicy obiektów.|  
-|[basic_istringstream —](../standard-library/basic-istringstream-class.md)|Zawiera opis obiektu, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia klasy [basic_stringbuf —](../standard-library/basic-stringbuf-class.md)<**elementu**, **Tr**, `Alloc`>, elementami typu **elementu**, którego cech znaków są określane przez klasę **Tr**, a której elementy są przydzielane przez program przydzielania klasy `Alloc`.|  
-|[basic_ostringstream —](../standard-library/basic-ostringstream-class.md)|Opis obiektu, który kontroluje wstawiania elementów i obiektów zakodowanych do buforu strumienia klasy [basic_stringbuf —](../standard-library/basic-stringbuf-class.md)<**elementu**, **Tr**, `Alloc`>, elementami typu **elementu**, którego cech znaków są określane przez klasę **Tr**, a której elementy są przydzielane przez program przydzielania klasy `Alloc`.|  
-|[basic_stringstream —](../standard-library/basic-stringstream-class.md)|Zawiera opis obiektu, który kontroluje wstawiania i wyodrębniania elementów i obiektów zakodowany przy użyciu buforu strumienia klasy [basic_stringbuf —](../standard-library/basic-stringbuf-class.md)<**elementu**, **Tr**, `Alloc`>, elementami typu **elementu**, którego cech znaków są określane przez klasę **Tr**, a której elementy są przydzielane przez program przydzielania klasy `Alloc`.|  
+|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|W tym artykule opisano buforu strumienia, który kontroluje przekazywania elementów typu **elementu**, którego cech znaków są określane przez klasę **Tr**, do i z sekwencję elementy przechowywane w tablicy obiektów.|  
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Zawiera opis obiektu, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia klasy [basic_stringbuf —](../standard-library/basic-stringbuf-class.md)<**elementu**, **Tr**, `Alloc`>, elementami typu **elementu**, którego cech znaków są określane przez klasę **Tr**, a której elementy są przydzielane przez program przydzielania klasy `Alloc`.|  
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Opis obiektu, który kontroluje wstawiania elementów i obiektów zakodowanych do buforu strumienia klasy [basic_stringbuf —](../standard-library/basic-stringbuf-class.md)<**elementu**, **Tr**, `Alloc`>, elementami typu **elementu**, którego cech znaków są określane przez klasę **Tr**, a której elementy są przydzielane przez program przydzielania klasy `Alloc`.|  
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Zawiera opis obiektu, który kontroluje wstawiania i wyodrębniania elementów i obiektów zakodowany przy użyciu buforu strumienia klasy [basic_stringbuf —](../standard-library/basic-stringbuf-class.md)<**elementu**, **Tr**, `Alloc`>, elementami typu **elementu**, którego cech znaków są określane przez klasę **Tr**, a której elementy są przydzielane przez program przydzielania klasy `Alloc`.|  
   
 ## <a name="requirements"></a>Wymagania  
   

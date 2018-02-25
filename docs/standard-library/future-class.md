@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::future
 - future/std::future::future
@@ -16,9 +17,10 @@ f1_keywords:
 - future/std::future::wait
 - future/std::future::wait_for
 - future/std::future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: 1de870da42504494e672cff4272fd230d1346114
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f54b265e98d8375b20ca5b7cf484290083d1d59c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="future-class"></a>future — Klasa
 W tym artykule opisano *asynchronicznego obiektu zwracanego*.  
@@ -57,7 +60,7 @@ class future;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[przyszłe](#future)|Konstruuje `future` obiektu.|  
+|[Przyszłe](#future)|Konstruuje `future` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -81,7 +84,7 @@ class future;
   
  **Namespace:** Standard  
   
-##  <a name="future"></a>Future::Future — Konstruktor  
+##  <a name="future"></a>  Future::Future — Konstruktor  
  Konstruuje `future` obiektu.  
   
 ```
@@ -96,9 +99,9 @@ future(future&& Other) noexcept;
 ### <a name="remarks"></a>Uwagi  
  Pierwszy konstrukcje konstruktora `future` obiekt, który nie ma skojarzonego stan asynchronicznego.  
   
- Drugi konstrukcje konstruktora `future` obiektu i przenosi skojarzony stan asynchroniczne z `Other`. `Other`nie ma już skojarzony stan asynchronicznego.  
+ Drugi konstrukcje konstruktora `future` obiektu i przenosi skojarzony stan asynchroniczne z `Other`. `Other` nie ma już skojarzony stan asynchronicznego.  
   
-##  <a name="get"></a>Future::Get  
+##  <a name="get"></a>  Future::Get  
  Pobiera wynik, który jest przechowywany w skojarzony stan asynchronicznego.  
   
 ```
@@ -117,7 +120,7 @@ Ty get();
   
  W innych specjalizacje metody przenosi jego wartość zwrotna z wartością przechowywaną. W związku z tym tylko raz wywołać tę metodę.  
   
-##  <a name="op_eq"></a>Future::operator =  
+##  <a name="op_eq">Future::operator =</a>  
  Przenosi skojarzony stan asynchronicznego od określonego obiektu.  
   
 ```
@@ -134,7 +137,7 @@ future& operator=(future&& Right) noexcept;
 ### <a name="remarks"></a>Uwagi  
  Po przesłaniu `Right` nie ma już skojarzony stan asynchronicznego.  
   
-##  <a name="share"></a>Future::share  
+##  <a name="share"></a>  Future::share  
  Konwertuje obiekt na [shared_future —](../standard-library/shared-future-class.md) obiektu.  
   
 ```
@@ -144,7 +147,7 @@ shared_future<Ty> share();
 ### <a name="return-value"></a>Wartość zwracana  
  `shared_future(move(*this))`  
   
-##  <a name="valid"></a>Future::valid  
+##  <a name="valid"></a>  Future::valid  
  Określa, czy obiekt jest skojarzony stan asynchronicznego.  
   
 ```
@@ -152,9 +155,9 @@ bool valid() noexcept;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli obiekt ma skojarzony stan asynchronicznego; w przeciwnym razie `false`.  
+ `true` Jeśli obiekt ma skojarzony stan asynchronicznego; w przeciwnym razie `false`.  
   
-##  <a name="wait"></a>Future::wait  
+##  <a name="wait"></a>  Future::wait  
  Blokuje bieżącego wątku, dopóki nie zostanie skojarzony stan asynchronicznego *gotowe*.  
   
 ```cpp  
@@ -164,7 +167,7 @@ void wait() const;
 ### <a name="remarks"></a>Uwagi  
  Jest skojarzony stan asynchronicznego *gotowe* tylko wtedy, gdy jego dostawcą asynchroniczne przechowywanego wartości zwracanej albo przechowywane Wystąpił wyjątek.  
   
-##  <a name="wait_for"></a>Future::wait_for  
+##  <a name="wait_for"></a>  Future::wait_for  
  Blokuje bieżącego wątku, dopóki nie zostanie skojarzony stan asynchronicznego *gotowe* lub dopóki nie upłynie określony interwał.  
   
 ```
@@ -182,7 +185,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 ### <a name="remarks"></a>Uwagi  
  Skojarzony stan asynchroniczne jest gotowy, tylko wtedy, gdy jego dostawcą asynchroniczne przechowywanego wartości zwracanej albo przechowywane Wystąpił wyjątek.  
   
-##  <a name="wait_until"></a>Future::wait_until  
+##  <a name="wait_until"></a>  Future::wait_until  
  Blokuje bieżącego wątku, dopóki nie zostanie skojarzony stan asynchronicznego *gotowe* lub po określonym momencie.  
   
 ```cpp  
@@ -202,7 +205,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
- [\<przyszłe >](../standard-library/future.md)
+ [\<future>](../standard-library/future.md)
 
 
 

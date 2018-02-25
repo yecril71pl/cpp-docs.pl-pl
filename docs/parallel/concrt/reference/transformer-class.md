@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - transformer
 - AGENTS/concurrency::transformer
@@ -21,19 +22,22 @@ f1_keywords:
 - AGENTS/concurrency::transformer::resume_propagation
 - AGENTS/concurrency::transformer::send_message
 - AGENTS/concurrency::transformer::supports_anonymous_source
-dev_langs: C++
-helpviewer_keywords: transformer class
+dev_langs:
+- C++
+helpviewer_keywords:
+- transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 87f4dd90328a647502c50f973d402f7964eaf5f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d53ec38ee10ca4d7997095fe8acddd957564c822
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transformer-class"></a>Klasa transformatora
 A `transformer` Blok obsługi wiadomości jest element docelowy jednym wielu źródłach, uporządkowanych `propagator_block` co mogą akceptować wiadomości danego typu i jest w stanie przechowywania niepowiązany liczba wiadomości jest innego typu.  
@@ -59,8 +63,8 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[transformatora](#ctor)|Przeciążone. Konstruuje `transformer` bloku obsługi wiadomości.|  
-|[~ transformer — destruktor](#dtor)|Niszczy `transformer` bloku obsługi wiadomości.|  
+|[transformer](#ctor)|Przeciążone. Konstruuje `transformer` bloku obsługi wiadomości.|  
+|[~transformer Destructor](#dtor)|Niszczy `transformer` bloku obsługi wiadomości.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
@@ -85,9 +89,9 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
  [Itarget —](itarget-class.md)  
   
- [source_block —](source-block-class.md)  
+ [source_block](source-block-class.md)  
   
- [propagator_block —](propagator-block-class.md)  
+ [propagator_block](propagator-block-class.md)  
   
  `transformer`  
   
@@ -96,7 +100,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
  **Namespace:** współbieżności  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  Akceptuje wiadomość została przyjęta przez to `transformer` bloku obsługi wiadomości, przeniesieniem własności do obiektu wywołującego.  
   
@@ -111,7 +115,7 @@ virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do `message` obiekt, aby wywołującego ma teraz własności.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  Wykorzystuje komunikat wcześniej oferowane przez `transformer` i zastrzeżone przez element docelowy przeniesieniem własności do obiektu wywołującego.  
   
@@ -129,7 +133,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Uwagi  
  Podobnie jak `accept`, ale zawsze jest poprzedzony przez wywołanie `reserve`.  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  Wywołanie zwrotne, które informuje, że nowy element docelowy został powiązany to `transformer` bloku obsługi wiadomości.  
   
@@ -137,7 +141,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `transformer` bloku obsługi wiadomości. Jest ono wywoływane przez `propagate` metody wywołanego bloku źródłowego.  
   
@@ -157,7 +161,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Wartość zwracana  
  A [message_status —](concurrency-namespace-enums.md) wskazanie docelowy korzystam z komunikatu.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  Wykonuje funkcję transformatora na komunikaty wejściowe.  
   
@@ -165,7 +169,7 @@ virtual message_status propagate_message(
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  Zwalnia Poprzednia rezerwacja wiadomości.  
   
@@ -177,7 +181,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity` z `message` obiekt został wydany.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  Rezerwuje komunikat wcześniej oferowane przez to `transformer` bloku obsługi wiadomości.  
   
@@ -190,12 +194,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  `runtime_object_identity` z `message` obiektu pozostaje zarezerwowane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej.  
+ `true` Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
  Po `reserve` jest wywoływana, jeśli zwróci ona `true`, albo `consume` lub `release` musi zostać wywołana albo lub zwolnij własność wiadomości.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Wznawia propagacji po zastrzeżenie został zwolniony.  
   
@@ -203,7 +207,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  Synchronicznie przekazuje komunikat z `ISource` bloku do tego `transformer` bloku obsługi wiadomości. Jest ono wywoływane przez `send` metody wywołanego bloku źródłowego.  
   
@@ -223,7 +227,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Wartość zwracana  
  A [message_status —](concurrency-namespace-enums.md) wskazanie docelowy korzystam z komunikatu.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
  Zastępuje `supports_anonymous_source` metody, aby wskazać, że ten blok może akceptować komunikaty oferowane przez źródło, który nie jest połączony.  
   
@@ -232,9 +236,9 @@ virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`ponieważ bloku nie odłożyć oferowane wiadomości.  
+ `true` ponieważ bloku nie odłożyć oferowane wiadomości.  
   
-##  <a name="ctor"></a>transformatora 
+##  <a name="ctor"></a> transformatora 
 
  Konstruuje `transformer` bloku obsługi wiadomości.  
   
@@ -294,7 +298,7 @@ transformer(
   
  Typ `filter_method` jest obiekt podpisem `bool (_Input const &)` który jest wywoływany przez to `transformer` obsługi komunikatów bloku, aby ustalić, czy powinna obsługiwać komunikatu oferowany.  
   
-##  <a name="dtor"></a>~ transformer 
+##  <a name="dtor"></a> ~ transformer 
 
  Niszczy `transformer` bloku obsługi wiadomości.  
   

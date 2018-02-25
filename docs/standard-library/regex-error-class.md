@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - regex/std::regex_error
 - regex/std::regex_error::code
-dev_langs: C++
-helpviewer_keywords: regex_error class
+dev_langs:
+- C++
+helpviewer_keywords:
+- regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dce4b42d5e9ec05544ceb7e8c885ba93634579a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1cc2861da5e133754459d6721c3ce528eaab5897
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="regexerror-class"></a>regex_error — Klasa
 Raporty obiektu basic_regex — zła.  
@@ -49,7 +53,7 @@ public:
   
  **Namespace:** Standard  
   
-##  <a name="code"></a>regex_error::Code  
+##  <a name="code"></a>  regex_error::Code  
  Zwraca kod błędu.  
   
 ```  
@@ -96,7 +100,7 @@ int main()
 regex error: unbalanced parentheses  
 ```  
   
-##  <a name="regex_error"></a>regex_error::regex_error  
+##  <a name="regex_error"></a>  regex_error::regex_error  
  Tworzy obiekt.  
   
 ```  
@@ -148,7 +152,7 @@ regex error: unbalanced parentheses
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
-[\<wyrażenie regularne >](../standard-library/regex.md)  
+[\<regex>](../standard-library/regex.md)  
 [regex_constants, klasa](../standard-library/regex-constants-class.md)  
 [\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)  
 [regex_iterator, klasa](../standard-library/regex-iterator-class.md)  

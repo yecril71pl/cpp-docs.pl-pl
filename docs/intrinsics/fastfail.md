@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: efdd067376d8e1430ed8636c0a77afe950858e9a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3669170bf888cc41fa7706aac6af3a9c3fb08bcb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="fastfail"></a>__fastfail
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Natychmiast kończy proces wywoływania co najmniej obciążenie.  
   
@@ -32,7 +35,7 @@ void __fastfail(unsigned int code);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`code`  
+ [in] `code`  
  A `FAST_FAIL_<description>` stała symboliczne z pliku winnt.h lub wdm.h wskazujący przyczynę Kończenie procesu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -45,7 +48,7 @@ void __fastfail(unsigned int code);
   
 |Architektura|Instrukcja|Lokalizacja kodu argumentu|  
 |------------------|-----------------|-------------------------------|  
-|x86|int 0x29|ECx|  
+|x86|int 0x29|ecx|  
 |[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|rcx|  
 |ARM|Kod operacji 0xDEFB|r0|  
   
@@ -57,7 +60,7 @@ void __fastfail(unsigned int code);
   
  Obsługa mechanizmu natywnego niepowodzenie szybkiego zostało uruchomione w systemie Windows 8. Systemów operacyjnych Windows, które nie obsługują natywnie instrukcji szybkiego niepowodzenie zazwyczaj traktują żądanie szybkiego niepowodzenie naruszenia zasad dostępu lub jako `UNEXPECTED_KERNEL_MODE_TRAP` wyniki operacji. W takich przypadkach program jest nadal zakończone, ale niekoniecznie tak szybko.  
   
- `__fastfail`jest dostępna jako funkcja wewnętrzna tylko.  
+ `__fastfail` jest dostępna jako funkcja wewnętrzna tylko.  
   
 ## <a name="requirements"></a>Wymagania  
   

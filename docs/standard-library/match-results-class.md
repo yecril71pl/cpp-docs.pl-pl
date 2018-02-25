@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: regex/std::match_results
-dev_langs: C++
-helpviewer_keywords: match_results class
+ms.topic: reference
+f1_keywords:
+- regex/std::match_results
+dev_langs:
+- C++
+helpviewer_keywords:
+- match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f0fa4ea48a9947492ee4ce53f33450d1944d6d3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1174b4d3536fcb5abb42c98a680b5172abfa68db
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="matchresults-class"></a>match_results — Klasa
 Zawiera sekwencję submatches.  
@@ -78,7 +83,7 @@ class match_results {
   
  **Namespace:** Standard  
   
-##  <a name="allocator_type"></a>match_results::allocator_type  
+##  <a name="allocator_type"></a>  match_results::allocator_type  
  Typ alokatora do zarządzania pamięcią.  
   
 ```  
@@ -197,7 +202,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="begin"></a>match_results::BEGIN  
+##  <a name="begin"></a>  match_results::BEGIN  
  Określa początek submatch sekwencji.  
   
 ```  
@@ -316,7 +321,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="char_type"></a>match_results::char_type  
+##  <a name="char_type"></a>  match_results::char_type  
  Typ elementu.  
   
 ```  
@@ -435,7 +440,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="const_iterator"></a>match_results::const_iterator  
+##  <a name="const_iterator"></a>  match_results::const_iterator  
  Stała typu iteratora submatches.  
   
 ```  
@@ -554,7 +559,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="const_reference"></a>match_results::const_reference  
+##  <a name="const_reference"></a>  match_results::const_reference  
  Typ stałej odwołania do elementu.  
   
 ```  
@@ -673,7 +678,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="difference_type"></a>match_results::difference_type  
+##  <a name="difference_type"></a>  match_results::difference_type  
  Typ iteratora różnicy.  
   
 ```  
@@ -792,7 +797,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="empty"></a>match_results::Empty  
+##  <a name="empty"></a>  match_results::Empty  
  Testy nie submatches.  
   
 ```  
@@ -911,7 +916,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="end"></a>match_results::end  
+##  <a name="end"></a>  match_results::end  
  Określa koniec sekwencji submatch.  
   
 ```  
@@ -1030,7 +1035,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="format"></a>match_results::format  
+##  <a name="format"></a>  match_results::format  
  Poddopasowania formatów.  
   
 ```  
@@ -1169,7 +1174,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="get_allocator"></a>match_results::get_allocator  
+##  <a name="get_allocator"></a>  match_results::get_allocator  
  Zwraca alokatora przechowywane.  
   
 ```  
@@ -1288,7 +1293,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="iterator"></a>match_results::iterator  
+##  <a name="iterator"></a>  match_results::iterator  
  Typ iteratora submatches.  
   
 ```  
@@ -1407,7 +1412,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="length"></a>match_results::length  
+##  <a name="length"></a>  match_results::length  
  Zwraca długość submatch.  
   
 ```  
@@ -1530,7 +1535,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results"></a>match_results::match_results  
+##  <a name="match_results"></a>  match_results::match_results  
  Tworzy obiekt.  
   
 ```  
@@ -1658,7 +1663,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="max_size"></a>match_results::max_size  
+##  <a name="max_size"></a>  match_results::max_size  
  Pobiera największą liczbę submatches.  
   
 ```  
@@ -1777,7 +1782,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="op_eq"></a>match_results::operator =  
+##  <a name="op_eq"></a>  match_results::operator =  
  Kopiowanie obiektu match_results —.  
   
 ```  
@@ -1900,7 +1905,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="op_at"></a>[match_results::operator]  
+##  <a name="op_at"></a>  [match_results::operator]  
  Dostęp do podobiektów.  
   
 ```  
@@ -2023,7 +2028,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="position"></a>match_results::Position  
+##  <a name="position"></a>  match_results::Position  
  Pobierz początkowe przesunięcie podgrupy.  
   
 ```  
@@ -2146,7 +2151,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="prefix"></a>match_results::prefix  
+##  <a name="prefix"></a>  match_results::prefix  
  Pobiera sekwencję przed pierwszym submatch.  
   
 ```  
@@ -2265,7 +2270,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="reference"></a>match_results::Reference  
+##  <a name="reference"></a>  match_results::Reference  
  Typ odwołania do elementu.  
   
 ```  
@@ -2384,7 +2389,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="size"></a>match_results::size  
+##  <a name="size"></a>  match_results::size  
  Zlicza submatches.  
   
 ```  
@@ -2503,7 +2508,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="size_type"></a>match_results::size_type  
+##  <a name="size_type"></a>  match_results::size_type  
  Typ liczby submatch.  
   
 ```  
@@ -2622,7 +2627,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="str"></a>match_results::str  
+##  <a name="str"></a>  match_results::str  
  Zwraca submatch.  
   
 ```  
@@ -2745,7 +2750,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="string_type"></a>match_results::STRING_TYPE  
+##  <a name="string_type"></a>  match_results::STRING_TYPE  
  Typ ciągu.  
   
 ```  
@@ -2864,7 +2869,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="suffix"></a>match_results::suffix  
+##  <a name="suffix"></a>  match_results::suffix  
  Pobiera sekwencję po ostatnim submatch.  
   
 ```  
@@ -2983,7 +2988,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="swap"></a>match_results::swap  
+##  <a name="swap"></a>  match_results::swap  
  Zamienia dwa obiekty match_results —.  
   
 ```  
@@ -3106,7 +3111,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="value_type"></a>match_results::value_type  
+##  <a name="value_type"></a>  match_results::value_type  
  Typ submatch.  
   
 ```  
@@ -3226,6 +3231,6 @@ empty == false
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<wyrażenie regularne >](../standard-library/regex.md)
+ [\<regex>](../standard-library/regex.md)
 
 

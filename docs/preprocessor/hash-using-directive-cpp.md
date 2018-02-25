@@ -1,34 +1,37 @@
 ---
-title: "#<a name=\"using-directive-cclr--microsoft-docs\"></a>Using — Dyrektywa (C + +/ CLR) | Dokumentacja firmy Microsoft"
+title: "#Using — Dyrektywa (C + +/ CLR) | Dokumentacja firmy Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - friend_as_cpp
 - '#using'
 - friend_as
 - '#using_cpp'
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - using directive (#using)
 - '#using directive'
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8a73eb8e9b5c3f3ba67e4466a6e7138010fd430
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a1c43acde6e4f755c6757fc933c80091ba05927c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-directive-cclr"></a>#using — dyrektywa (C + +/ CLR)
 Importuje metadane do programu skompilowane z [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
@@ -41,7 +44,7 @@ Importuje metadane do programu skompilowane z [/CLR](../build/reference/clr-comm
   
 #### <a name="parameters"></a>Parametry  
  `file`  
- DLL MSIL, .exe, modułu .netmodule, lub. obiektu Na przykład  
+ An MSIL .dll, .exe, .netmodule, or .obj. Na przykład  
   
  `#using <MyComponent.dll>`  
   
@@ -49,7 +52,7 @@ Importuje metadane do programu skompilowane z [/CLR](../build/reference/clr-comm
  Określa, że wszystkie typy w `file` są dostępne.  Aby uzyskać więcej informacji, zobacz [przyjazne zestawy (C++)](../dotnet/friend-assemblies-cpp.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `file`może być importowany plik języka pośredniego (MSIL) firmy Microsoft danych zarządzanych i zarządzanych konstrukcji. Jeśli plik dll zawiera manifest zestawu, a następnie są importowane wszystkie biblioteki, do której odwołuje się do manifestu i wyświetla zestaw jest konstruowany *pliku* w metadanych jako odwołanie do zestawu.  
+ `file` może być importowany plik języka pośredniego (MSIL) firmy Microsoft danych zarządzanych i zarządzanych konstrukcji. Jeśli plik dll zawiera manifest zestawu, a następnie są importowane wszystkie biblioteki, do której odwołuje się do manifestu i wyświetla zestaw jest konstruowany *pliku* w metadanych jako odwołanie do zestawu.  
   
  Jeśli `file` nie zawiera zestawu (Jeśli `file` jest modułem) i jeśli nie zamierzasz użyć informacji o typie z modułu w bieżącej aplikacji (assembly), masz możliwość tylko wskazującą, czy moduł jest częścią zestawu; użyj [/Assemblymodule](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Typy w module będzie wówczas dostępne dla dowolnej aplikacji, która odwołuje się do zestawu.  
   

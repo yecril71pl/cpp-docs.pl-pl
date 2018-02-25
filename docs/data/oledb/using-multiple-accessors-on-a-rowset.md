@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 06a9e668ecf2a16a933a9accd727284fa0f4bab6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 41f5ae4381dd2505b2136e796c1b8832eaa75246
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Używanie wielu metod dostępu w zestawie wierszy
 Istnieją trzy podstawowe scenariusze, w których należy użyć wielu metod dostępu:  
@@ -38,7 +38,7 @@ Istnieją trzy podstawowe scenariusze, w których należy użyć wielu metod dos
   
     -   Metoda dostępu 1 zawiera wszystkie kolumny z wyjątkiem klucza podstawowego.  
   
--   Wydajność. W tym scenariuszu jeden lub więcej kolumn zawierają dużą ilość danych, na przykład grafiki, plików audio i wideo. Za każdym razem, gdy zostanie przeniesiony do wiersza, prawdopodobnie nie chcesz pobrać kolumny z plikiem dużej ilości danych, ponieważ spowoduje to może spowolnić wydajności aplikacji.  
+-   **Wydajność.** W tym scenariuszu jeden lub więcej kolumn zawierają dużą ilość danych, na przykład grafiki, plików audio i wideo. Za każdym razem, gdy zostanie przeniesiony do wiersza, prawdopodobnie nie chcesz pobrać kolumny z plikiem dużej ilości danych, ponieważ spowoduje to może spowolnić wydajności aplikacji.  
   
      Możesz skonfigurować oddzielne metod dostępu, w których pierwszego dostępu zawiera wszystkich kolumn, oprócz jednego z dużej ilości danych, a jego pobiera dane z tych kolumn automatycznie; jest to akcesor automatycznie. Druga metoda dostępu pobiera tylko kolumnę zawierającą dużej ilości danych, ale go nie pobiera dane z tej kolumny automatycznie. Może mieć inne metody aktualizacji lub pobrać dużej ilości danych na żądanie.  
   

@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a69230b190671fe768cdf4473b24d0c942743943
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="c-standard-library-containers"></a>Kontenery biblioteki C++ Standard
 Standardowa biblioteka zawiera różne kontenery bezpieczny do przechowywania kolekcji powiązanych obiektów. Kontenery są szablony klas; Deklaracja zmiennej kontenera, musisz wybrać typ elementów, które będą przechowywane w kontenerze. Kontenery może być skonstruowany z listy inicjatorów. Mają one funkcje Członkowskie Dodawanie i usuwanie elementów oraz wykonywania innych operacji.  
@@ -30,7 +33,7 @@ Standardowa biblioteka zawiera różne kontenery bezpieczny do przechowywania ko
   
  Kontenery mogą być podzielone na trzy kategorie: sekwencji kontenerów, asocjacyjnej kontenery i kart kontenera.  
   
-##  <a name="sequence_containers"></a>Kontenery sekwencji  
+##  <a name="sequence_containers"></a> Kontenery sekwencji  
  Kontenery sekwencji Obsługa kolejności wstawionych elementów należy określić.  
   
  A `vector` kontenera zachowuje się jak tablicy, ale może zwiększyć się automatycznie zgodnie z wymaganiami. Jest dostęp losowy i przechowywane ciągłym, a długość jest bardzo elastyczny. Z tego względu i więcej `vector` kontener preferowaną kolejność dla większości aplikacji. W przypadku wątpliwości jakiego rodzaju sekwencji kontener do użycia, uruchomić za pomocą wektora! Aby uzyskać więcej informacji, zobacz [vector — klasa](../standard-library/vector-class.md).  

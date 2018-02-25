@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IScheduler
 - CONCRTRM/concurrency::IScheduler
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyIdle
 - CONCRTRM/concurrency::IScheduler::IScheduler::RemoveVirtualProcessors
 - CONCRTRM/concurrency::IScheduler::IScheduler::Statistics
-dev_langs: C++
-helpviewer_keywords: IScheduler structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c639bd760b837923f3011e9209d923fef31f8aee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ischeduler-structure"></a>Struktura IScheduler
 Interfejs abstrakcję harmonogram pracy. Współbieżność środowiska wykonawczego Resource Manager używa tego interfejsu do komunikowania się z planiści pracy.  
@@ -65,7 +69,7 @@ struct IScheduler;
   
  **Namespace:** współbieżności  
   
-##  <a name="addvirtualprocessors"></a>IScheduler::AddVirtualProcessors — metoda  
+##  <a name="addvirtualprocessors"></a>  IScheduler::AddVirtualProcessors — metoda  
  Udostępnia harmonogramu z zestawem procesorów wirtualnych katalogów głównych do jej użycia. Każdy `IVirtualProcessorRoot` interfejsu reprezentuje z prawem wykonywania pojedynczego wątku, który można wykonać pracę w imieniu harmonogramu.  
   
 ```
@@ -84,7 +88,7 @@ virtual void AddVirtualProcessors(
 ### <a name="remarks"></a>Uwagi  
  Menedżer zasobów wywołuje `AddVirtualProcessor` metody, aby udzielić początkowego zestawu procesorów wirtualnych katalogów głównych harmonogramu. On również może wywołać metody w celu dodania procesorów wirtualnych katalogów głównych do harmonogramu, podczas jej rebalances zasobów między transfery danych.  
   
-##  <a name="getid"></a>IScheduler::GetId — metoda  
+##  <a name="getid"></a>  IScheduler::GetId — metoda  
  Zwraca unikatowy identyfikator dla harmonogramu.  
   
 ```
@@ -99,7 +103,7 @@ virtual unsigned int GetId() const = 0;
   
  Identyfikator pochodzi z innego źródła może spowodować niezdefiniowane zachowanie.  
   
-##  <a name="getpolicy"></a>IScheduler::GetPolicy — metoda  
+##  <a name="getpolicy"></a>  IScheduler::GetPolicy — metoda  
  Zwraca kopię zasad harmonogramu. Aby uzyskać więcej informacji dotyczących zasad harmonogramu, zobacz [schedulerpolicy —](schedulerpolicy-class.md).  
   
 ```
@@ -109,7 +113,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Wartość zwracana  
  Kopia zasad harmonogramu.  
   
-##  <a name="notifyresourcesexternallybusy"></a>IScheduler::NotifyResourcesExternallyBusy — metoda  
+##  <a name="notifyresourcesexternallybusy"></a>  IScheduler::NotifyResourcesExternallyBusy — metoda  
  Powiadamia ten harmonogram, który wątków sprzętu reprezentowany przez zestaw głównych procesora wirtualnego w tablicy `ppVirtualProcessorRoots` są obecnie używane przez inne transfery danych.  
   
 ```
@@ -134,7 +138,7 @@ virtual void NotifyResourcesExternallyBusy(
   
  Harmonogram, które kwalifikują się do powiadomienia pobiera zestaw powiadomień początkowej podczas jego tworzenia, powiadomienia go, czy zasoby, które właśnie została przypisana zewnętrznie zajęta lub bezczynności.  
   
-##  <a name="notifyresourcesexternallyidle"></a>IScheduler::NotifyResourcesExternallyIdle — metoda  
+##  <a name="notifyresourcesexternallyidle"></a>  IScheduler::NotifyResourcesExternallyIdle — metoda  
  Powiadamia ten harmonogram, który wątków sprzętu reprezentowany przez zestaw głównych procesora wirtualnego w tablicy `ppVirtualProcessorRoots` nie są używane przez inne transfery danych.  
   
 ```
@@ -159,7 +163,7 @@ virtual void NotifyResourcesExternallyIdle(
   
  Harmonogram, które kwalifikują się do powiadomienia pobiera zestaw powiadomień początkowej podczas jego tworzenia, powiadomienia go, czy zasoby, które właśnie została przypisana zewnętrznie zajęta lub bezczynności.  
   
-##  <a name="removevirtualprocessors"></a>IScheduler::RemoveVirtualProcessors — metoda  
+##  <a name="removevirtualprocessors"></a>  IScheduler::RemoveVirtualProcessors — metoda  
  Powoduje zainicjowanie usuwania głównych procesorów wirtualnych, które wcześniej zostały przydzielone do tego harmonogramu.  
   
 ```
@@ -180,7 +184,7 @@ virtual void RemoveVirtualProcessors(
   
  Parametr `ppVirtualProcessorRoots` odwołuje się do tablicy interfejsów. Do zbioru głównych procesora wirtualnego do usunięcia korzenie nigdy nie został aktywowany może być zwracany natychmiast przy użyciu `Remove` metody. Elementy główne, które uaktywnieniu i są albo wykonywania pracy lub zostało zdezaktywowane i oczekiwania na odebranie, pracy powinny być zwracane asynchronicznie. Planista musi być każda próba możliwie jak najszybciej usunąć głównego procesora wirtualnego. Opóźnienie usunięcia głównych procesorów wirtualnych może spowodować przypadkowe nadsubskrypcji w ramach harmonogramu zadań.  
   
-##  <a name="statistics"></a>IScheduler::Statistics — metoda  
+##  <a name="statistics"></a>  IScheduler::Statistics — metoda  
  Zawiera informacje dotyczące szybkości odbioru i ukończenia zadania i zmiana długości kolejki harmonogramu.  
   
 ```
@@ -211,7 +215,7 @@ virtual void Statistics(
  [Współbieżność Namespace](concurrency-namespace.md)   
  [Policyelementkey —](concurrency-namespace-enums.md)   
  [Schedulerpolicy — klasa](schedulerpolicy-class.md)   
- [Iexecutioncontext — struktura](iexecutioncontext-structure.md)   
+ [IExecutionContext Structure](iexecutioncontext-structure.md)   
  [Ithreadproxy — struktura](ithreadproxy-structure.md)   
  [Ivirtualprocessorroot — struktura](ivirtualprocessorroot-structure.md)   
  [IResourceManager, struktura](iresourcemanager-structure.md)

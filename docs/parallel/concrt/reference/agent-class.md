@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - agent
 - AGENTS/concurrency::agent
@@ -20,19 +21,22 @@ f1_keywords:
 - AGENTS/concurrency::agent::wait_for_one
 - AGENTS/concurrency::agent::done
 - AGENTS/concurrency::agent::run
-dev_langs: C++
-helpviewer_keywords: agent class
+dev_langs:
+- C++
+helpviewer_keywords:
+- agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cc83001328f346aa33d15b0ea6fcfb26eb444ec4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a4617007525fdd924dce7b09f1d351c7c18cc96
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="agent-class"></a>agent — Klasa
 Klasa przeznaczona do użycia jako klasę podstawową dla wszystkich agentów niezależne. Służy do ukrycia stanu z innych agentów i interakcji, przy użyciu przekazywania wiadomości.  
@@ -49,16 +53,16 @@ class agent;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Agent](#ctor)|Przeciążone. Tworzy agenta.|  
+|[agent](#ctor)|Przeciążone. Tworzy agenta.|  
 |[~ agent — destruktor](#dtor)|Niszczy agenta.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Anuluj](#cancel)|Przenosi agenta z albo `agent_created` lub `agent_runnable` stany do `agent_canceled` stanu.|  
-|[Początek](#start)|Przenosi agenta z `agent_created` stan `agent_runnable` stanu i harmonogramy wykonywania.|  
-|[Stan](#status)|Synchroniczne źródło informacji o stanie od agenta.|  
+|[cancel](#cancel)|Przenosi agenta z albo `agent_created` lub `agent_runnable` stany do `agent_canceled` stanu.|  
+|[start](#start)|Przenosi agenta z `agent_created` stan `agent_runnable` stanu i harmonogramy wykonywania.|  
+|[status](#status)|Synchroniczne źródło informacji o stanie od agenta.|  
 |[status_port](#status_port)|Asynchroniczne źródło informacji o stanie od agenta.|  
 |[oczekiwania](#wait)|Czeka na agenta zakończy się.|  
 |[wait_for_all](#wait_for_all)|Czeka na wszystkich agentów określony do wykonywania swoich zadań.|  
@@ -68,8 +72,8 @@ class agent;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[gotowe](#done)|Przenosi agenta do `agent_done` stan wskazujący, że agenta zostało ukończone.|  
-|[Uruchom](#run)|Reprezentuje głównym zadaniem agenta. `run`powinna zostać zastąpiona w klasie pochodnej i określa, jakie działanie ma wykonać agenta po jego uruchomieniu.|  
+|[Gotowe](#done)|Przenosi agenta do `agent_done` stan wskazujący, że agenta zostało ukończone.|  
+|[run](#run)|Reprezentuje głównym zadaniem agenta. `run` powinna zostać zastąpiona w klasie pochodnej i określa, jakie działanie ma wykonać agenta po jego uruchomieniu.|  
   
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [agentów asynchronicznych](../../../parallel/concrt/asynchronous-agents.md).  
@@ -82,7 +86,7 @@ class agent;
   
  **Namespace:** współbieżności  
   
-##  <a name="ctor"></a>Agent 
+##  <a name="ctor"></a> Agent 
 
  Tworzy agenta.  
   
@@ -104,7 +108,7 @@ agent(ScheduleGroup& _PGroup);
 ### <a name="remarks"></a>Uwagi  
  Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określisz `_PScheduler` lub `_PGroup` parametrów.  
   
-##  <a name="dtor"></a>~ agenta 
+##  <a name="dtor"></a> ~ agenta 
 
  Niszczy agenta.  
   
@@ -115,7 +119,7 @@ virtual ~agent();
 ### <a name="remarks"></a>Uwagi  
  Występuje błąd do zniszczenia agenta, który nie jest w stanie terminali (albo `agent_done` lub `agent_canceled`). Można tego uniknąć przez oczekiwanie na agenta do przejścia terminali w destruktor klasy, która dziedziczy `agent` klasy.  
   
-##  <a name="cancel"></a>Anuluj 
+##  <a name="cancel"></a> Anuluj 
 
  Przenosi agenta z albo `agent_created` lub `agent_runnable` stany do `agent_canceled` stanu.  
   
@@ -124,9 +128,9 @@ bool cancel();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli agent został anulowany, `false` inaczej. Nie można anulować agenta, jeśli rozpoczął już uruchomione lub zostało już zakończone.  
+ `true` Jeśli agent został anulowany, `false` inaczej. Nie można anulować agenta, jeśli rozpoczął już uruchomione lub zostało już zakończone.  
   
-##  <a name="done"></a>gotowe 
+##  <a name="done">Gotowe</a> 
 
  Przenosi agenta do `agent_done` stan wskazujący, że agenta zostało ukończone.  
   
@@ -135,14 +139,14 @@ bool done();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli agent jest przenoszony do `agent_done` stanu, `false` inaczej. Agent został anulowany, nie można przenieść do `agent_done` stanu.  
+ `true` Jeśli agent jest przenoszony do `agent_done` stanu, `false` inaczej. Agent został anulowany, nie można przenieść do `agent_done` stanu.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda powinna być wywoływana na końcu `run` metody, gdy wiesz, wykonywania agenta zostało ukończone.  
   
-##  <a name="run"></a>Uruchom 
+##  <a name="run"></a> Uruchom 
 
- Reprezentuje głównym zadaniem agenta. `run`powinna zostać zastąpiona w klasie pochodnej i określa, jakie działanie ma wykonać agenta po jego uruchomieniu.  
+ Reprezentuje głównym zadaniem agenta. `run` powinna zostać zastąpiona w klasie pochodnej i określa, jakie działanie ma wykonać agenta po jego uruchomieniu.  
   
 ```
 virtual void run() = 0;
@@ -151,7 +155,7 @@ virtual void run() = 0;
 ### <a name="remarks"></a>Uwagi  
  Stan agenta jest zmieniana na `agent_started` prawym przyciskiem myszy, aby ta metoda jest wywoływana. Należy wywołać metodę `done` agenta ze stanem odpowiednie przed zwróceniem i nie może zgłaszać wyjątki.  
   
-##  <a name="start"></a>Początek 
+##  <a name="start"></a> Początek 
 
  Przenosi agenta z `agent_created` stan `agent_runnable` stanu i harmonogramy wykonywania.  
   
@@ -160,9 +164,9 @@ bool start();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli agent został uruchomiony poprawnie, `false` inaczej. Nie można uruchomić agenta, który został anulowany.  
+ `true` Jeśli agent został uruchomiony poprawnie, `false` inaczej. Nie można uruchomić agenta, który został anulowany.  
   
-##  <a name="status"></a>Stan 
+##  <a name="status"></a> Stan 
 
  Synchroniczne źródło informacji o stanie od agenta.  
   
@@ -173,7 +177,7 @@ agent_status status();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca bieżący stan agenta. Należy pamiętać, że ten stan zwrócony można zmienić bezpośrednio po zostały zwrócone.  
   
-##  <a name="status_port"></a>status_port 
+##  <a name="status_port"></a> status_port 
 
  Asynchroniczne źródło informacji o stanie od agenta.  
   
@@ -184,7 +188,7 @@ ISource<agent_status>* status_port();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca źródła komunikat, który może wysyłać komunikaty o bieżący stan agenta.  
   
-##  <a name="wait"></a>oczekiwania 
+##  <a name="wait">oczekiwania</a> 
 
  Czeka na agenta zakończy się.  
   
@@ -209,7 +213,7 @@ static agent_status __cdecl wait(
   
  Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE`, wyjątek [operation_timed_out —](operation-timed-out-class.md) jest generowany po przekroczeniu określoną ilość czasu, zanim agent ukończył zadanie.  
   
-##  <a name="wait_for_all"></a>wait_for_all 
+##  <a name="wait_for_all"></a> wait_for_all 
 
  Czeka na wszystkich agentów określony do wykonywania swoich zadań.  
   
@@ -239,7 +243,7 @@ static void __cdecl wait_for_all(
   
  Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE`, wyjątek [operation_timed_out —](operation-timed-out-class.md) jest generowany po przekroczeniu określoną ilość czasu, zanim agent ukończył zadanie.  
   
-##  <a name="wait_for_one"></a>wait_for_one 
+##  <a name="wait_for_one"></a> wait_for_one 
 
  Czeka na jeden z określonych agentów zakończy się.  
   

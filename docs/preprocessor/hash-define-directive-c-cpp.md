@@ -1,14 +1,17 @@
 ---
-title: "#<a name=\"define-directive-cc--microsoft-docs\"></a>#define — dyrektywa (C/C++) | Dokumentacja firmy Microsoft"
+title: "##define — dyrektywa (C/C++) | Dokumentacja firmy Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#define'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#define'
+dev_langs:
+- C++
 helpviewer_keywords:
 - define directive (#define), syntax
 - preprocessor, directives
@@ -16,24 +19,25 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a42b1b823ac69ba9a92535076ba8ec45f6c9710d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d06a24d969f0ae7545f1b9ec0401e098a2bcf54
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="define-directive-cc"></a>#define — dyrektywa (C/C++)
 `#define` Tworzy *makro*, który jest skojarzenie identyfikatora lub identyfikatora sparametryzowane zawierające ciąg tokenu. Po zdefiniowaniu makro, kompilator może zastąpić ciąg tokenu dla każdego wystąpienia identyfikatora w pliku źródłowym.  
   
 ## <a name="syntax"></a>Składnia  
- `#define`*identyfikator* *ciąg tokenu*opcjonalnych  
+ `#define` *Identyfikator* *ciąg tokenu*opcjonalnych  
   
- `#define`*identyfikator* `(` *identyfikator*opt`,`*...*  `,` *identyfikator*opt`)`*ciąg tokenu*opcjonalnych  
+ `#define` *Identyfikator* `(` *identyfikator*opt`,`*...*  `,` *identyfikator*opt`)`*ciąg tokenu*opcjonalnych  
   
 ## <a name="remarks"></a>Uwagi  
  `#define` Dyrektywy powoduje, że kompilator zastępuje *ciąg tokenu* dla każdego wystąpienia *identyfikator* w pliku źródłowym. *Identyfikator* zastępuje tylko wtedy, gdy wchodzi w skład tokenu. Oznacza to *identyfikator* nie zostanie zastąpiony, jeśli występuje on w komentarza, w ciągu lub jako część identyfikatora dłużej. Aby uzyskać więcej informacji, zobacz [tokenów](../cpp/tokens-cpp.md).  
@@ -69,11 +73,11 @@ ms.lasthandoff: 12/21/2017
   
  Drugi `#define` dla makra o takiej samej nazwie generuje ostrzeżenie, jeśli drugi sekwencja tokenów jest taka sama jak pierwsza.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Microsoft C/C++ pozwala ponownie zdefiniować makro, jeśli nowa definicja jest składniowo identyczny oryginalnej definicji. Innymi słowy dwie definicje może mieć różne nazwy parametrów. To zachowanie różni się od [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C, które wymaga, aby dwie definicje lexically identyczne.  
   
- Na przykład dwa następujące makra są identyczne z wyjątkiem nazwy parametrów. [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]C nie zezwala na takie zmiana definicji, ale Microsoft C/C++ kompiluje go bez błędów.  
+ Na przykład dwa następujące makra są identyczne z wyjątkiem nazwy parametrów. [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C nie zezwala na takie zmiana definicji, ale Microsoft C/C++ kompiluje go bez błędów.  
   
 ```  
 #define multiply( f1, f2 ) ( f1 * f2 )  
@@ -116,7 +120,7 @@ var = 80 + 10 * 20;
   
  która daje w wyniku 280.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Definiowanie makr i stałe z [/D](../build/reference/d-preprocessor-definitions.md) — opcja kompilatora działa tak samo jak przy użyciu `#define` dyrektywy przetwarzania wstępnego na początku pliku. Przy użyciu opcji /D można zdefiniować maksymalnie 30 makra.  
   

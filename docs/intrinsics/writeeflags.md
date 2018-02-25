@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __writeeflags
-dev_langs: C++
-helpviewer_keywords: __writeeflags intrinsics
+ms.topic: reference
+f1_keywords:
+- __writeeflags
+dev_langs:
+- C++
+helpviewer_keywords:
+- __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c614ce90f7e579263769d379ed0078eb7b79dd17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 01ed93b956c4b4dc0864b43089cc183fb01ff97d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="writeeflags"></a>__writeeflags
 Zapisuje określoną wartość do programu zarejestrować stanu i kontroli (EFLAGS).  
@@ -36,7 +41,7 @@ void __writeeflags(unsigned __int64 Value);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`Value`|Wartość do zapisu do rejestru EFLAGS. `Value` Parametr jest 32-bitowy na platformę 32-bitowe i 64-bitowy dla platformy 64-bitowej.|  
+|[in] `Value`|Wartość do zapisu do rejestru EFLAGS. `Value` Parametr jest 32-bitowy na platformę 32-bitowe i 64-bitowy dla platformy 64-bitowej.|  
   
 ## <a name="remarks"></a>Uwagi  
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
@@ -45,7 +50,7 @@ void __writeeflags(unsigned __int64 Value);
   
 |— Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__writeeflags`|x86,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writeeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **Plik nagłówka** \<intrin.h >  
   

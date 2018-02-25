@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Context
 - CONCRT/concurrency::Context
@@ -23,19 +24,22 @@ f1_keywords:
 - CONCRT/concurrency::Context::Unblock
 - CONCRT/concurrency::Context::VirtualProcessorId
 - CONCRT/concurrency::Context::Yield
-dev_langs: C++
-helpviewer_keywords: Context class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7a15b041f638312081417daae8c800647fbfb7d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="context-class"></a>Context — Klasa
 Reprezentuje abstrakcję do kontekstu wykonywania.  
@@ -63,14 +67,14 @@ class Context;
 |[GetId](#getid)|Zwraca identyfikator kontekstu, która jest unikatowa w ramach harmonogramu, do którego należy kontekst.|  
 |[GetScheduleGroupId](#getschedulegroupid)|Zwraca identyfikator grupy harmonogram, który aktualnie pracuje kontekstu.|  
 |[GetVirtualProcessorId](#getvirtualprocessorid)|Zwraca identyfikator procesora wirtualnego, który kontekstu jest aktualnie wykonywany.|  
-|[Identyfikator](#id)|Zwraca identyfikator bieżącego kontekstu, która jest unikatowa w ramach harmonogramu, do którego należy bieżący kontekst.|  
+|[Id](#id)|Zwraca identyfikator bieżącego kontekstu, która jest unikatowa w ramach harmonogramu, do którego należy bieżący kontekst.|  
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Zwraca moduł wskazanie, czy kolekcję zadań, która jest aktualnie wykonywany wbudowany w bieżącym kontekście jest pośrodku active anulowania (lub zostanie wkrótce).|  
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Określa, czy kontekst synchronicznie jest zablokowany. Kontekst jest uważana za synchronicznie zablokowane, jeśli jawnie wykonać akcji, które doprowadziło do blokowania.|  
 |[Oversubscribe](#oversubscribe)|Injects dodatkowych procesorów wirtualnych do harmonogramu, czas trwania bloku kodu, gdy została wywołana w kontekście wykonywanych na jeden z procesorów wirtualnych w tym harmonogramu.|  
 |[ScheduleGroupId](#schedulegroupid)|Zwraca identyfikator grupy harmonogram, który pracuje bieżącego kontekstu.|  
 |[Odblokowywanie](#unblock)|Odblokowuje kontekstu i powoduje, że usługa będzie do uruchomienia.|  
 |[VirtualProcessorId](#virtualprocessorid)|Zwraca identyfikator procesora wirtualnego, który jest wykonywany bieżący kontekst.|  
-|[YIELD](#yield)|Przekazuje wykonywanie, dzięki czemu możliwe wykonanie innego kontekstu. Jeśli kontekst nie jest dostępny umożliwiające uzyskanie do, harmonogram umożliwia uzyskanie do innego wątku systemu operacyjnego.|  
+|[Yield](#yield)|Przekazuje wykonywanie, dzięki czemu możliwe wykonanie innego kontekstu. Jeśli kontekst nie jest dostępny umożliwiające uzyskanie do, harmonogram umożliwia uzyskanie do innego wątku systemu operacyjnego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Harmonogram współbieżność środowiska wykonawczego (zobacz [harmonogramu](scheduler-class.md)) kontekstów wykonywania używana do wykonywania pracy w kolejce do niej przez aplikację. Wątek Win32 jest przykładem kontekstu wykonywania w systemie operacyjnym Windows.  
@@ -87,7 +91,7 @@ class Context;
   
  **Namespace:** współbieżności  
   
-##  <a name="block"></a>Blok 
+##  <a name="block"></a> Blok 
 
  Blokuje bieżącego kontekstu.  
   
@@ -104,13 +108,13 @@ static void __cdecl Block();
   
  Ta metoda może zgłosić różne wyjątki, w tym [scheduler_resource_allocation_error —](scheduler-resource-allocation-error-class.md).  
   
-##  <a name="dtor"></a>~ Kontekst 
+##  <a name="dtor"></a> ~ Kontekst 
 
 ```
 virtual ~Context();
 ```  
   
-##  <a name="currentcontext"></a>CurrentContext 
+##  <a name="currentcontext"></a> CurrentContext 
 
  Zwraca wskaźnik do bieżącego kontekstu.  
   
@@ -124,7 +128,7 @@ static Context* __cdecl CurrentContext();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda spowoduje procesu domyślnego harmonogramu są tworzone i/lub dołączyć do wywoływania kontekstu, jeśli nie harmonogramu aktualnie skojarzony z kontekstem wywoływania.  
   
-##  <a name="getid"></a>GetId 
+##  <a name="getid"></a> GetId 
 
  Zwraca identyfikator kontekstu, która jest unikatowa w ramach harmonogramu, do którego należy kontekst.  
   
@@ -135,7 +139,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator kontekstu, która jest unikatowa w ramach harmonogramu, do którego należy kontekst.  
   
-##  <a name="getschedulegroupid"></a>GetScheduleGroupId 
+##  <a name="getschedulegroupid"></a> GetScheduleGroupId 
 
  Zwraca identyfikator grupy harmonogram, który aktualnie pracuje kontekstu.  
   
@@ -149,7 +153,7 @@ virtual unsigned int GetScheduleGroupId() const = 0;
 ### <a name="remarks"></a>Uwagi  
  Wartość zwrócona przez tę metodę jest natychmiastowe próbkowania grupy harmonogram wykonywany w kontekście. Jeśli ta metoda jest wywoływana w kontekście innym niż bieżący kontekst, możliwe wartości starych obecnie jest zwracany i nie może być stosowane. Zwykle ta metoda jest używana do debugowania i śledzenia tylko do celów.  
   
-##  <a name="getvirtualprocessorid"></a>GetVirtualProcessorId 
+##  <a name="getvirtualprocessorid"></a> GetVirtualProcessorId 
 
  Zwraca identyfikator procesora wirtualnego, który kontekstu jest aktualnie wykonywany.  
   
@@ -163,7 +167,7 @@ virtual unsigned int GetVirtualProcessorId() const = 0;
 ### <a name="remarks"></a>Uwagi  
  Wartość zwrócona przez tę metodę jest natychmiastowe próbkowania procesora wirtualnego, wykonywany w kontekście. Ta wartość może być nieodświeżona obecnie jest zwracany i nie może opierać się. Zwykle ta metoda jest używana do debugowania i śledzenia tylko do celów.  
   
-##  <a name="id"></a>Identyfikator 
+##  <a name="id"></a> Id 
 
  Zwraca identyfikator bieżącego kontekstu, która jest unikatowa w ramach harmonogramu, do którego należy bieżący kontekst.  
   
@@ -174,7 +178,7 @@ static unsigned int __cdecl Id();
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli bieżący kontekst jest dołączony do harmonogramu, identyfikator dla bieżącego kontekstu, która jest unikatowa w ramach harmonogramu, do którego należy bieżący kontekst; w przeciwnym razie wartość `-1`.  
   
-##  <a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling 
+##  <a name="iscurrenttaskcollectioncanceling"></a> IsCurrentTaskCollectionCanceling 
 
  Zwraca moduł wskazanie, czy kolekcję zadań, która jest aktualnie wykonywany wbudowany w bieżącym kontekście jest pośrodku active anulowania (lub zostanie wkrótce).  
   
@@ -185,7 +189,7 @@ static bool __cdecl IsCurrentTaskCollectionCanceling();
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli harmonogramu jest dołączony do wywoływania kontekstu i grupy zadań jest wykonywany wbudowanego zadania w tym kontekście, wskazanie czy tej grupy zadań jest pośrodku active anulowania (lub będzie wkrótce); w przeciwnym razie wartość `false`.  
   
-##  <a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked 
+##  <a name="issynchronouslyblocked"></a> IsSynchronouslyBlocked 
 
  Określa, czy kontekst synchronicznie jest zablokowany. Kontekst jest uważana za synchronicznie zablokowane, jeśli jawnie wykonać akcji, które doprowadziło do blokowania.  
   
@@ -201,7 +205,7 @@ virtual bool IsSynchronouslyBlocked() const = 0;
   
  Wartość zwrócona przez tę metodę jest natychmiastowe przykład tego, czy kontekst synchronicznie jest zablokowany. Ta wartość może być przestarzały obecnie jest zwracany i można używać tylko w bardzo określonych warunkach.  
   
-##  <a name="operator_delete"></a>Usuwanie operatora 
+##  <a name="operator_delete"></a> Usuwanie operatora 
 
  A `Context` obiekt zostanie zniszczony wewnętrznie przez środowisko uruchomieniowe. Go może nie zostać jawnie usunięte.  
   
@@ -213,7 +217,7 @@ void operator delete(void* _PObject);
  `_PObject`  
  Wskaźnik do obiektu, który ma zostać usunięty.  
   
-##  <a name="oversubscribe"></a>Oversubscribe 
+##  <a name="oversubscribe"></a> Oversubscribe 
 
  Injects dodatkowych procesorów wirtualnych do harmonogramu, czas trwania bloku kodu, gdy została wywołana w kontekście wykonywanych na jeden z procesorów wirtualnych w tym harmonogramu.  
   
@@ -225,7 +229,7 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
  `_BeginOversubscription`  
  Jeśli `true`, wskazanie, że procesor bardzo wirtualnego należy dodać w czasie trwania nadsubskrypcji. Jeśli `false`, wskazanie, że nadsubskrypcji należy zakończyć i uprzednio dodanych procesorów wirtualnych powinna zostać usunięta.  
   
-##  <a name="schedulegroupid"></a>ScheduleGroupId 
+##  <a name="schedulegroupid"></a> ScheduleGroupId 
 
  Zwraca identyfikator grupy harmonogram, który pracuje bieżącego kontekstu.  
   
@@ -236,7 +240,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli bieżący kontekst jest dołączona do harmonogramu i pracy w grupie harmonogramu, identyfikator harmonogramu grupy, która bieżącego kontekstu pracuje nad; w przeciwnym razie wartość `-1`.  
   
-##  <a name="unblock"></a>Odblokowywanie 
+##  <a name="unblock">Odblokowywanie</a> 
 
  Odblokowuje kontekstu i powoduje, że usługa będzie do uruchomienia.  
   
@@ -251,7 +255,7 @@ virtual void Unblock() = 0;
   
  Należy pamiętać, że między punktem, w którym kod publikuje jego kontekstu na inny wątek można było wywołać okresie krytycznym `Unblock` — metoda i punkt gdzie wywołanie metody rzeczywiste `Block` staje się. W tym okresie nie należy wywołać dowolnej metody, która z kolei można blokować i odblokowywać własną przyczyn (na przykład uzyskiwanie blokady). Wywołuje się `Block` i `Unblock` metody żądania nie Śledź przyczynę zablokowania i odblokowania. Tylko jeden obiekt powinien mieć prawo własności `Block` i `Unblock` pary.  
   
-##  <a name="virtualprocessorid"></a>VirtualProcessorId 
+##  <a name="virtualprocessorid"></a> VirtualProcessorId 
 
  Zwraca identyfikator procesora wirtualnego, który jest wykonywany bieżący kontekst.  
   
@@ -265,7 +269,7 @@ static unsigned int __cdecl VirtualProcessorId();
 ### <a name="remarks"></a>Uwagi  
  Wartość zwrócona przez tę metodę jest natychmiastowe próbkowania procesora wirtualnego, który jest wykonywany bieżący kontekst. Ta wartość może być nieodświeżona obecnie jest zwracany i nie może opierać się. Zwykle ta metoda jest używana do debugowania i śledzenia tylko do celów.  
   
-##  <a name="yield"></a>YIELD 
+##  <a name="yield"></a> YIELD 
 
  Przekazuje wykonywanie, dzięki czemu możliwe wykonanie innego kontekstu. Jeśli kontekst nie jest dostępny umożliwiające uzyskanie do, harmonogram umożliwia uzyskanie do innego wątku systemu operacyjnego.  
   
@@ -276,7 +280,7 @@ static void __cdecl Yield();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda spowoduje procesu domyślnego harmonogramu są tworzone i/lub dołączyć do wywoływania kontekstu, jeśli nie harmonogramu aktualnie skojarzony z kontekstem wywoływania.  
   
-##  <a name="yieldexecution"></a>YieldExecution 
+##  <a name="yieldexecution"></a> YieldExecution 
 
  Przekazuje wykonywanie, dzięki czemu możliwe wykonanie innego kontekstu. Jeśli kontekst nie jest dostępny umożliwiające uzyskanie do, harmonogram umożliwia uzyskanie do innego wątku systemu operacyjnego.  
   

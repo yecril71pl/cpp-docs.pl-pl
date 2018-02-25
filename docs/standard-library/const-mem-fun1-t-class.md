@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: xfunctional/std::const_mem_fun1_t
-dev_langs: C++
-helpviewer_keywords: const_mem_fun1_t class
+ms.topic: reference
+f1_keywords:
+- xfunctional/std::const_mem_fun1_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 788f49d3aa4cefd46e5ea97517a02a35a9747403
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 187d564f83e63f712ad2aed88679607c212deafe
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t — Klasa
 Klasa karty, który umożliwia **const** funkcji członkowskiej, która pobiera jeden argument ma być wywoływana jako obiektu binarnego funkcja po zainicjowaniu z argumentem wskaźnika.  
@@ -51,7 +56,7 @@ class const_mem_fun1_t
  Dostosowywalne funkcja binarnej.  
   
 ## <a name="remarks"></a>Uwagi  
- Klasy szablonów przechowuje kopię `_Pm`, która musi być wskaźnikiem do funkcji członkowskiej klasy **typu**, w obiekcie prywatnego elementu członkowskiego. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie ( **_Pleft** -> \* *Pm) (***prawej**) **const**.  
+ Klasy szablonów przechowuje kopię `_Pm`, która musi być wskaźnikiem do funkcji członkowskiej klasy **typu**, w obiekcie prywatnego elementu członkowskiego. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie ( **_Pleft** -> \* * Pm) (***prawej**) **const**.  
   
 ## <a name="example"></a>Przykład  
  Konstruktor obiektu `const_mem_fun1_t` nie jest zwykle używana bezpośrednio; funkcja Pomocnika `mem_fun` umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fun —](../standard-library/functional-functions.md#mem_fun) przykład sposobu użycia karty funkcja elementu członkowskiego.  

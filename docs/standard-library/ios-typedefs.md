@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iosfwd/std::ios
 - iosfwd/std::streamoff
@@ -14,13 +14,13 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 493850d78e72e6b95408964a5e28d090a1dc58f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 6c94f157a28c606db6e7523b9af18e972f870c46
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;IOS&gt; definicje typów
 ||||  
@@ -28,7 +28,7 @@ ms.lasthandoff: 10/24/2017
 |[dla systemu IOS](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|  
 |[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|  
   
-##  <a name="ios"></a>dla systemu IOS  
+##  <a name="ios">dla systemu IOS</a>  
  Obsługuje klasy systemu ios z biblioteki iostream stary.  
   
 ```  
@@ -38,7 +38,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem dla szablonu klasy [basic_ios —](../standard-library/basic-ios-class.md), wyspecjalizowany dla elementów typu `char` z domyślnego cech znaków.  
   
-##  <a name="streamoff"></a>streamoff  
+##  <a name="streamoff"></a>  streamoff  
  Obsługuje operacje wewnętrzne.  
   
 ```  
@@ -52,7 +52,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 ### <a name="remarks"></a>Uwagi  
  Typ jest całkowita opisujący obiekt, który może przechowywać Przesunięcie bajtów, zaangażowane w strumieniu różnych operacji rozmieszczania. Reprezentacja ma przynajmniej 32 bity wartość. Nie jest zawsze wystarczająco duże, aby reprezentować pozycję dowolnego typu byte w strumieniu. Wartość **streamoff(-1)** zwykle wskazuje błędne przesunięcia.  
   
-##  <a name="streampos"></a>streampos  
+##  <a name="streampos"></a>  streampos  
  Przechowuje bieżącą pozycję wskaźnika buforu lub wskaźnika pliku.  
   
 ```  
@@ -85,7 +85,7 @@ int main( )
 7  
 ```  
   
-##  <a name="streamsize"></a>streamsize  
+##  <a name="streamsize"></a>  streamsize  
  Określa rozmiar strumienia.  
   
 ```  
@@ -118,7 +118,7 @@ int main( )
 }  
 ```  
   
-##  <a name="wios"></a>wios  
+##  <a name="wios">wios</a>  
  Obsługuje wios klasy z biblioteki iostream stary.  
   
 ```  
@@ -128,7 +128,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem dla szablonu klasy [basic_ios —](../standard-library/basic-ios-class.md), wyspecjalizowany dla elementów typu `wchar_t` z domyślnego cech znaków.  
   
-##  <a name="wstreampos"></a>wstreampos  
+##  <a name="wstreampos">wstreampos</a>  
  Przechowuje bieżącą pozycję wskaźnika buforu lub wskaźnika pliku.  
   
 ```  

@@ -5,14 +5,15 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tuple/std::get
 - tuple/std::make_tuple
 - tuple/std::tie
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: bc6be38f-5258-4c14-b81b-63caa335fd44
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::get [C++]
@@ -21,18 +22,18 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: a81820c920339bb3e006af6df11bda855d4d33ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: ecc544c1f18e31a71d11a212fc9618a6b085f461
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lttuplegt-functions"></a>&lt;Tuple&gt; funkcji
 ||||  
 |-|-|-|  
-|[Pobierz](#get)|[make_tuple —](#make_tuple)|[Powiązanie](#tie)|  
+|[get](#get)|[make_tuple](#make_tuple)|[Powiązanie](#tie)|  
   
-##  <a name="get"></a>Pobierz
+##  <a name="get"></a>  Pobierz
  Pobiera element na podstawie `tuple` obiekt przez indeks lub (w języku C ++ 14) według typu.  
   
 ```  
@@ -110,7 +111,7 @@ int main() {
 0 1.42 Call me Tuple  
 ```  
   
-##  <a name="make_tuple"></a>make_tuple —
+##  <a name="make_tuple"></a>  make_tuple —
  Sprawia, że `tuple` od wartości elementu.  
   
 ```  
@@ -167,7 +168,7 @@ int main() {
  4 5 6 7  
 ```  
   
-##  <a name="tie"></a>Powiązanie
+##  <a name="tie">Powiązanie</a>
  Sprawia, że `tuple` z odwołania do elementu.  
   
 ```  
@@ -224,5 +225,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Tuple >](../standard-library/tuple.md)
+ [\<tuple>](../standard-library/tuple.md)
 

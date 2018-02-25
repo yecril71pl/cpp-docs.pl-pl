@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - message_processor
 - AGENTS/concurrency::message_processor
@@ -14,19 +15,22 @@ f1_keywords:
 - AGENTS/concurrency::message_processor::sync_send
 - AGENTS/concurrency::message_processor::wait
 - AGENTS/concurrency::message_processor::process_incoming_message
-dev_langs: C++
-helpviewer_keywords: message_processor class
+dev_langs:
+- C++
+helpviewer_keywords:
+- message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b8c2f30bbab85760020c19a25b098b31eb0a8893
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a7646020bd30b817957cea87dad8ec5c7f3aa8ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="messageprocessor-class"></a>message_processor — Klasa
 `message_processor` Klasa jest abstrakcyjna klasa podstawowa dla przetwarzania `message` obiektów. Nie ma żadnej gwarancji z kolejnością wiadomości.  
@@ -72,7 +76,7 @@ class message_processor;
   
  **Namespace:** współbieżności  
   
-##  <a name="async_send"></a>async_send 
+##  <a name="async_send"></a> async_send 
 
  W przypadku przesłonięcia w klasie pochodnej, umieszcza wiadomości w bloku asynchronicznie.  
   
@@ -87,7 +91,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Uwagi  
  Procesor implementacje powinny przesłaniać tę metodę.  
   
-##  <a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a> process_incoming_message 
 
  W przypadku przesłonięcia w klasie pochodnej, przetwarza przekazywania wiadomości w bloku. Wywoływana raz za każdym razem zostanie dodany nowy komunikat i można odnaleźć kolejki muszą być puste.  
   
@@ -98,7 +102,7 @@ virtual void process_incoming_message() = 0;
 ### <a name="remarks"></a>Uwagi  
  Komunikat bloku implementacje powinny przesłaniać tę metodę.  
   
-##  <a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a> sync_send 
 
  W przypadku przesłonięcia w klasie pochodnej, umieszcza wiadomości w bloku synchronicznie.  
   
@@ -113,7 +117,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Uwagi  
  Procesor implementacje powinny przesłaniać tę metodę.  
   
-##  <a name="wait"></a>oczekiwania 
+##  <a name="wait">oczekiwania</a> 
 
  W przypadku przesłonięcia w klasie pochodnej, czeka na zakończenie wszystkich operacji asynchronicznych.  
   

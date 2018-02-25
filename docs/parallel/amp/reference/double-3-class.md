@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_xzy
 - amp_short_vectors/Concurrency::graphics::double_3
@@ -77,18 +78,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_yx
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1779b92140fe9057a96ab8bd062b6540ed2d9c59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d13862855b0377efe481cde68c349f1ba3d11e45
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="double3-class"></a>double_3 — Klasa
 Reprezentuje krótki wektor symulacyjnych trzy.  
@@ -111,7 +114,7 @@ class double_3;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[double_3 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[double_3 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -178,20 +181,20 @@ class double_3;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |double_3::b||  
-|double_3::BG||  
-|double_3::BGR||  
+|double_3::bg||  
+|double_3::bgr||  
 |double_3::br||  
 |double_3::brg||  
 |double_3::g||  
-|double_3::GB||  
-|double_3::GBR||  
-|double_3::GR||  
+|double_3::gb||  
+|double_3::gbr||  
+|double_3::gr||  
 |double_3::grb||  
 |double_3::r||  
-|double_3::RB||  
-|double_3::RBG||  
-|double_3::RG||  
-|double_3::RGB||  
+|double_3::rb||  
+|double_3::rbg||  
+|double_3::rg||  
+|double_3::rgb||  
 |double_3::x||  
 |double_3::xy||  
 |double_3::xyz||  
@@ -203,7 +206,7 @@ class double_3;
 |double_3::yz||  
 |double_3::yzx||  
 |double_3::z||  
-|double_3::ZX||  
+|double_3::zx||  
 |double_3::zxy||  
 |double_3::zy||  
 |double_3::zyx||  
@@ -216,7 +219,7 @@ class double_3;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>double_3 — 
+##  <a name="ctor"></a> double_3 — 
 
  Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
   
@@ -283,7 +286,7 @@ explicit inline double_3(
  `_Other`  
  Obiekt używany do inicjowania.  
   
-##  <a name="double_3__size"></a>rozmiar 
+##  <a name="double_3__size"></a> Rozmiar 
 
 ```  
 static const int size = 3;  

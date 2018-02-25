@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,11 +19,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 6049d92ab2ca1f7f724f3e27037c5df5c4304ea6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Korzystanie z operatorów wstawiania i formatu kontrolującego
 W tym temacie przedstawia sposób kontrolowania format oraz sposobu tworzenia operatorów wstawiania własnych klas. Wstawiania (**<<**) operatora, który jest wcześniej zaplanowane dla wszystkie standardowe typy danych języka C++, wysyła bajtów do obiektu strumienia wyjściowego. Operatory wstawienia współpracować z wstępnie zdefiniowanych "manipulatory,", które są elementami, które zmienić domyślny format liczby całkowitej argumentów.  
@@ -34,11 +34,11 @@ W tym temacie przedstawia sposób kontrolowania format oraz sposobu tworzenia op
   
 - [Wyrównanie](#vclrfalignmentanchor4)  
   
-- [Dokładność](#vclrfprecisionanchor5)  
+- [dokładność](#vclrfprecisionanchor5)  
   
 - [Radix](#vclrfradixanchor6)  
   
-##  <a name="vclrfoutputwidthanchor3"></a>Szerokość danych wyjściowych  
+##  <a name="vclrfoutputwidthanchor3">Szerokość danych wyjściowych</a>  
  Aby wyrównać dane wyjściowe, określ szerokość danych wyjściowych dla każdego elementu przez umieszczenie `setw` manipulatora w strumieniu, przez wywołanie **szerokość** funkcję elementu członkowskiego. W tym przykładzie prawej wyrównuje wartości w kolumnie co najmniej 10 znaków:  
   
 ```  
@@ -122,7 +122,7 @@ Jimmy     35.36
   
  Ani `setw` ani **szerokość** obcina wartości. Jeśli dane wyjściowe w formacie przekracza szerokość Wyświetla całą wartość, mogą ulec precyzję strumienia. Zarówno `setw` i **szerokość** mają wpływ na następujące pole. Szerokość pola zostanie przywrócony do jego domyślne zachowanie (szerokość niezbędne) po wydrukowaniu jedno pole. Jednak inne opcje format strumienia obowiązują do momentu zmiany.  
   
-##  <a name="vclrfalignmentanchor4"></a>Wyrównanie  
+##  <a name="vclrfalignmentanchor4">Wyrównanie</a>  
  Dane wyjściowe strumieni domyślny tekst wyrównany do prawej. Do lewej align nazwy w poprzednim przykładzie i wyrównanie do prawej liczb, Zastąp **dla** pętli w następujący sposób:  
   
 ```  
@@ -144,7 +144,7 @@ Stan     4358.24
   
  Ustawiono flagi left-align przy użyciu [setiosflags](../standard-library/iomanip-functions.md#setiosflags) manipulatora z `left` modułu wyliczającego. Ten moduł wyliczający jest zdefiniowany w [ios](../standard-library/basic-ios-class.md) klasy, więc musi zawierać odwołanie **ios::** prefiks. [Resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) manipulatora wyłącza flagi left-align. W odróżnieniu od **szerokość** i `setw`, efekt `setiosflags` i `resetiosflags` jest trwały.  
   
-##  <a name="vclrfprecisionanchor5"></a>Dokładność  
+##  <a name="vclrfprecisionanchor5">dokładność</a>  
  Wartość domyślna dla liczb zmiennoprzecinkowych dokładność jest sześć. Na przykład numer 3466.9768 drukuje jako 3466.98. Aby zmienić sposób drukuje tę wartość, należy użyć [setprecision](../standard-library/iomanip-functions.md#setprecision) manipulatora. Manipulatora ma dwie flagi: [stałej](../standard-library/ios-functions.md#fixed) i [naukowych](../standard-library/ios-functions.md#scientific). Jeśli [stałej](../standard-library/ios-functions.md#fixed) ustawiono numer odbitek jako 3466.976800. Jeśli **naukowych** jest ustawiona, wyświetla jako 3.4669773 + 003.  
   
  Do wyświetlania liczb zmiennoprzecinkowych pokazano [wyrównanie](#vclrfalignmentanchor4) z jedną cyfrę znaczące, Zastąp **dla** pętli w następujący sposób:  

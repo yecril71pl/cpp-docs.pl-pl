@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::piecewise_constant_distribution
 - random/std::piecewise_constant_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::piecewise_constant_distribution::param_type::densities
 - random/std::piecewise_constant_distribution::param_type::operator==
 - random/std::piecewise_constant_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::piecewise_constant_distribution [C++]
 - std::piecewise_constant_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d6a0fd48843b097de0c6181eda49d6e3879084f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 923398932307845bffb95e8ef3fd7ef83e38530f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution — Klasa
 Generuje piecewise stałej dystrybucji, którą ma szerokość zróżnicowanie odstępach czasu prawdopodobieństwo uniform w każdym interwale.  
@@ -98,7 +101,7 @@ Poniższe łącza tabeli do artykułów na temat poszczególnych członków:
   
 ||||  
 |-|-|-|  
-|[piecewise_constant_distribution —](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|  
+|[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|  
 |`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|  
   
 Funkcja właściwości `intervals()` zwraca `vector<result_type>` przy użyciu zestawu interwałów przechowywanych dystrybucji.  
@@ -225,7 +228,7 @@ Distribution for 100 samples:
   
  **Namespace:** Standard  
   
-##  <a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::piecewise_constant_distribution  
+##  <a name="piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution  
 Tworzy dystrybucji.  
   
 ```  
@@ -309,7 +312,7 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```  
   
-Tworzy obiekt dystrybucji z `count` interwałów jednolicie ponad rozproszone [ `xmin,xmax`], przypisanie każdego interwału przeprowadzi zgodnie z funkcji `weightfunc`, i `weightfunc` musi zaakceptować jeden parametr i mieć zwracanego wartość oba z którego są konwertowane na `double`. **Warunek wstępny:**`xmin < xmax`  
+Tworzy obiekt dystrybucji z `count` interwałów jednolicie ponad rozproszone [ `xmin,xmax`], przypisanie każdego interwału przeprowadzi zgodnie z funkcji `weightfunc`, i `weightfunc` musi zaakceptować jeden parametr i mieć zwracanego wartość oba z którego są konwertowane na `double`. **Warunek wstępny:** `xmin < xmax`  
   
 Konstruktor zdefiniowany jako  
 ```  
@@ -318,7 +321,7 @@ explicit piecewise_constant_distribution(const param_type& parm);
   
 Tworzy obiekt dystrybucji przy użyciu `parm` jako struktura przechowywanego parametru.  
   
-##  <a name="param_type"></a>piecewise_constant_distribution::param_type  
+##  <a name="param_type"></a>  piecewise_constant_distribution::param_type  
 Przechowuje wszystkie parametry dystrybucji.  
   
 ```    
@@ -341,12 +344,12 @@ struct param_type {
 Zobacz Parametry Konstruktora [piecewise_constant_distribution —](#piecewise_constant_distribution).  
   
 ### <a name="remarks"></a>Uwagi  
- **Warunek wstępny:**`xmin < xmax`  
+ **Warunek wstępny:** `xmin < xmax`  
   
 Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.  
   
 ## <a name="see-also"></a>Zobacz też  
-[\<losowe >](../standard-library/random.md)   
-[piecewise_linear_distribution —](../standard-library/piecewise-linear-distribution-class.md)
+[\<random>](../standard-library/random.md)   
+[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)
 
 

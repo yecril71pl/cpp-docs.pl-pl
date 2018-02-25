@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: type_traits/std::aligned_storage
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- type_traits/std::aligned_storage
+dev_langs:
+- C++
 helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 10fdc0726ee4c20b9c2e4f6058ef4a5010f0229c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3a0f9a2ae6ad1a9fa2e2d3e46981b593737faa23
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="alignedstorage-class"></a>aligned_storage — Klasa
 Tworzy odpowiednio wyrównany typ.  
@@ -45,7 +49,7 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
  Wyrównanie obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Element typedef elementu członkowskiego szablonu `type` jest synonimem typu POD wyrównanie `Align` i rozmiar `Len`. `Align`musi być równa `alignment_of<T>::value` dla niektórych typu `T`, lub domyślne wyrównanie.  
+ Element typedef elementu członkowskiego szablonu `type` jest synonimem typu POD wyrównanie `Align` i rozmiar `Len`. `Align` musi być równa `alignment_of<T>::value` dla niektórych typu `T`, lub domyślne wyrównanie.  
   
 ## <a name="example"></a>Przykład  
   

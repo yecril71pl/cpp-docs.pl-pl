@@ -4,33 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _BitScanReverse64
 - _BitScanReverse_cpp
 - _BitScanReverse
 - _BitScanReverse64_cpp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - bsr instruction
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 038c0e30078287f968cd744a9bfe53f65a70bb22
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1eff59da3ee52c560cdb56f0519aef5576a05946
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Wyszukiwanie danych maski z najbardziej znaczącego bitu (BITEM) do najmniej znaczącego bitu (najmniej znaczący BAJT) dla zestawu bit (1).  
   
@@ -48,10 +51,10 @@ unsigned char _BitScanReverse64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`Index`  
+ [out] `Index`  
  Pozycja bitu pierwszego ustawiony bit [1], znaleziono załadowana.  
   
- [in]`Mask`  
+ [in] `Mask`  
  32-bitowa czy 64-bitowa wartość do wyszukiwania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -61,8 +64,8 @@ unsigned char _BitScanReverse64(
   
 |— Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_BitScanReverse`|x86, ARM,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
-|`_BitScanReverse64`|ARM,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]||  
+|`_BitScanReverse`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_BitScanReverse64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]||  
   
 ## <a name="example"></a>Przykład  
   

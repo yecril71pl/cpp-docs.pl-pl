@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - AMP_MATH/Concurrency::acos
 - AMP_MATH/Concurrency::acosf
@@ -138,18 +139,20 @@ f1_keywords:
 - AMP_MATH/Concurrency::tgammaf
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7016b2b9ff925164510644b743e0459a3011b5dc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math — Przestrzeń nazw
 Funkcje w `precise_math` zgodnych C99 są przestrzeni nazw. Zarówno pojedynczy dokładność i Podwójna precyzja wersje każdej funkcji są uwzględniane. Na przykład `acos` jest wersja podwójnej precyzji i `acosf` jest wersja pojedynczej precyzji. Te funkcje, w tym funkcji pojedynczej precyzji wymagają rozszerzoną obsługę podwójnej precyzji na akceleratora. Można użyć [Accelerator::supports_double_precision —](accelerator-class.md#supports_double_precision) ustalenie, jeśli te funkcje można uruchamiać na określonych akceleratora. 
@@ -170,136 +173,136 @@ namespace precise_math;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[ACOS](concurrency-precise-math-namespace-functions.md#acos)|Przeciążone. Oblicza cosinus argumentu|  
-|[acosf —](concurrency-precise-math-namespace-functions.md#acosf)|Oblicza cosinus argumentu|  
+|[acosf](concurrency-precise-math-namespace-functions.md#acosf)|Oblicza cosinus argumentu|  
 |[ACOSH](concurrency-precise-math-namespace-functions.md#acosh)|Przeciążone. Oblicza cosinus hiperboliczny argumentu|  
-|[acoshf —](concurrency-precise-math-namespace-functions.md#acoshf)|Oblicza cosinus hiperboliczny argumentu|  
+|[acoshf](concurrency-precise-math-namespace-functions.md#acoshf)|Oblicza cosinus hiperboliczny argumentu|  
 |[ASIN](concurrency-precise-math-namespace-functions.md#asin)|Przeciążone. Oblicza sinus argumentu|  
 |[asinf —](concurrency-precise-math-namespace-functions.md#asinf)|Oblicza sinus argumentu|  
 |[ASINH](concurrency-precise-math-namespace-functions.md#asinh)|Przeciążone. Oblicza sinus hiperboliczny argumentu|  
-|[asinhf —](concurrency-precise-math-namespace-functions.md#asinhf)|Oblicza sinus hiperboliczny argumentu|  
-|[ATAN](concurrency-precise-math-namespace-functions.md#atan)|Przeciążone. Oblicza tangens argumentu|  
-|[ATAN2](concurrency-precise-math-namespace-functions.md#atan2)|Przeciążone. Oblicza tangens _Y/_X|  
-|[atan2f —](concurrency-precise-math-namespace-functions.md#atan2f)|Oblicza tangens _Y/_X|  
-|[atanf —](concurrency-precise-math-namespace-functions.md#atanf)|Oblicza tangens argumentu|  
-|[ATANH](concurrency-precise-math-namespace-functions.md#atanh)|Przeciążone. Oblicza tangens hiperboliczny argumentu|  
-|[atanhf —](concurrency-precise-math-namespace-functions.md#atanhf)|Oblicza tangens hiperboliczny argumentu|  
-|[cbrt —](concurrency-precise-math-namespace-functions.md#cbrt)|Przeciążone. Oblicza pierwiastek modułu rzeczywistego argumentu|  
-|[cbrtf —](concurrency-precise-math-namespace-functions.md#cbrtf)|Oblicza pierwiastek modułu rzeczywistego argumentu|  
+|[asinhf](concurrency-precise-math-namespace-functions.md#asinhf)|Oblicza sinus hiperboliczny argumentu|  
+|[atan](concurrency-precise-math-namespace-functions.md#atan)|Przeciążone. Oblicza tangens argumentu|  
+|[atan2](concurrency-precise-math-namespace-functions.md#atan2)|Przeciążone. Oblicza tangens _Y/_X|  
+|[atan2f](concurrency-precise-math-namespace-functions.md#atan2f)|Oblicza tangens _Y/_X|  
+|[atanf](concurrency-precise-math-namespace-functions.md#atanf)|Oblicza tangens argumentu|  
+|[atanh](concurrency-precise-math-namespace-functions.md#atanh)|Przeciążone. Oblicza tangens hiperboliczny argumentu|  
+|[atanhf](concurrency-precise-math-namespace-functions.md#atanhf)|Oblicza tangens hiperboliczny argumentu|  
+|[cbrt](concurrency-precise-math-namespace-functions.md#cbrt)|Przeciążone. Oblicza pierwiastek modułu rzeczywistego argumentu|  
+|[cbrtf](concurrency-precise-math-namespace-functions.md#cbrtf)|Oblicza pierwiastek modułu rzeczywistego argumentu|  
 |[ceil](concurrency-precise-math-namespace-functions.md#ceil)|Przeciążone. Oblicza Zaokrąglenie w górę argument|  
-|[ceilf —](concurrency-precise-math-namespace-functions.md#ceilf)|Oblicza Zaokrąglenie w górę argument|  
+|[ceilf](concurrency-precise-math-namespace-functions.md#ceilf)|Oblicza Zaokrąglenie w górę argument|  
 |[copysign —](concurrency-precise-math-namespace-functions.md#copysign)|Przeciążone. Tworzy wartość o wielkości _X oraz znak _Y|  
-|[copysignf —](concurrency-precise-math-namespace-functions.md#copysignf)|Tworzy wartość o wielkości _X oraz znak _Y|  
+|[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|Tworzy wartość o wielkości _X oraz znak _Y|  
 |[COS](concurrency-precise-math-namespace-functions.md#cos)|Przeciążone. Oblicza cosinus argumentu|  
-|[cosf —](concurrency-precise-math-namespace-functions.md#cosf)|Oblicza cosinus argumentu|  
+|[cosf](concurrency-precise-math-namespace-functions.md#cosf)|Oblicza cosinus argumentu|  
 |[COSH](concurrency-precise-math-namespace-functions.md#cosh)|Przeciążone. Oblicza cosinus hiperboliczny wartość argumentu|  
-|[coshf —](concurrency-precise-math-namespace-functions.md#coshf)|Oblicza cosinus hiperboliczny wartość argumentu|  
-|[cospi —](concurrency-precise-math-namespace-functions.md#cospi)|Przeciążone. Oblicza cosinus wartość liczby pi * _X|  
-|[cospif —](concurrency-precise-math-namespace-functions.md#cospif)|Oblicza cosinus wartość liczby pi * _X|  
-|[ERF](concurrency-precise-math-namespace-functions.md#erf)|Przeciążone. Oblicza funkcji błąd _X|  
-|[ERFC](concurrency-precise-math-namespace-functions.md#erfc)|Przeciążone. Oblicza funkcji uzupełniające błąd _X|  
-|[erfcf —](concurrency-precise-math-namespace-functions.md#erfcf)|Oblicza funkcji uzupełniające błąd _X|  
-|[erfcinv —](concurrency-precise-math-namespace-functions.md#erfcinv)|Przeciążone. Oblicza odwrotność błąd uzupełniające funkcję _X|  
-|[erfcinvf —](concurrency-precise-math-namespace-functions.md#erfcinvf)|Oblicza odwrotność błąd uzupełniające funkcję _X|  
-|[erff —](concurrency-precise-math-namespace-functions.md#erff)|Oblicza funkcji błąd _X|  
+|[coshf](concurrency-precise-math-namespace-functions.md#coshf)|Oblicza cosinus hiperboliczny wartość argumentu|  
+|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|Przeciążone. Oblicza cosinus wartość liczby pi * _X|  
+|[cospif](concurrency-precise-math-namespace-functions.md#cospif)|Oblicza cosinus wartość liczby pi * _X|  
+|[erf](concurrency-precise-math-namespace-functions.md#erf)|Przeciążone. Oblicza funkcji błąd _X|  
+|[erfc](concurrency-precise-math-namespace-functions.md#erfc)|Przeciążone. Oblicza funkcji uzupełniające błąd _X|  
+|[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|Oblicza funkcji uzupełniające błąd _X|  
+|[erfcinv](concurrency-precise-math-namespace-functions.md#erfcinv)|Przeciążone. Oblicza odwrotność błąd uzupełniające funkcję _X|  
+|[erfcinvf](concurrency-precise-math-namespace-functions.md#erfcinvf)|Oblicza odwrotność błąd uzupełniające funkcję _X|  
+|[erff](concurrency-precise-math-namespace-functions.md#erff)|Oblicza funkcji błąd _X|  
 |[erfinv —](concurrency-precise-math-namespace-functions.md#erfinv)|Przeciążone. Oblicza błąd odwrotność funkcji _X|  
-|[erfinvf —](concurrency-precise-math-namespace-functions.md#erfinvf)|Oblicza błąd odwrotność funkcji _X|  
+|[erfinvf](concurrency-precise-math-namespace-functions.md#erfinvf)|Oblicza błąd odwrotność funkcji _X|  
 |[EXP](concurrency-precise-math-namespace-functions.md#exp)|Przeciążone. Oblicza base e wykładniczej argumentu|  
-|[exp10 —](concurrency-precise-math-namespace-functions.md#exp10)|Przeciążone. Oblicza base 10 wykładniczej argumentu|  
-|[exp10f —](concurrency-precise-math-namespace-functions.md#exp10f)|Oblicza base 10 wykładniczej argumentu|  
-|[exp2 —](concurrency-precise-math-namespace-functions.md#exp2)|Przeciążone. Oblicza base 2 wykładniczej argumentu|  
-|[exp2f —](concurrency-precise-math-namespace-functions.md#exp2f)|Oblicza base 2 wykładniczej argumentu|  
-|[expf —](concurrency-precise-math-namespace-functions.md#expf)|Oblicza base e wykładniczej argumentu|  
+|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Przeciążone. Oblicza base 10 wykładniczej argumentu|  
+|[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|Oblicza base 10 wykładniczej argumentu|  
+|[exp2](concurrency-precise-math-namespace-functions.md#exp2)|Przeciążone. Oblicza base 2 wykładniczej argumentu|  
+|[exp2f](concurrency-precise-math-namespace-functions.md#exp2f)|Oblicza base 2 wykładniczej argumentu|  
+|[expf](concurrency-precise-math-namespace-functions.md#expf)|Oblicza base e wykładniczej argumentu|  
 |[expm1 —](concurrency-precise-math-namespace-functions.md#expm1)|Przeciążone. Oblicza wartość wykładniczą (podstawa e) argumentu, minus 1|  
-|[expm1f —](concurrency-precise-math-namespace-functions.md#expm1f)|Oblicza wartość wykładniczą (podstawa e) argumentu, minus 1|  
+|[expm1f](concurrency-precise-math-namespace-functions.md#expm1f)|Oblicza wartość wykładniczą (podstawa e) argumentu, minus 1|  
 |[fabs —](concurrency-precise-math-namespace-functions.md#fabs)|Przeciążone. Zwraca wartość bezwzględną argumentu|  
 |[fabsf —](concurrency-precise-math-namespace-functions.md#fabsf)|Zwraca wartość bezwzględną argumentu|  
-|[fdim —](concurrency-precise-math-namespace-functions.md#fdim)|Przeciążone. Określa dodatnią różnicę między argumentów|  
-|[fdimf —](concurrency-precise-math-namespace-functions.md#fdimf)|Określa dodatnią różnicę między argumentów|  
+|[fdim](concurrency-precise-math-namespace-functions.md#fdim)|Przeciążone. Określa dodatnią różnicę między argumentów|  
+|[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|Określa dodatnią różnicę między argumentów|  
 |[FLOOR](concurrency-precise-math-namespace-functions.md#floor)|Przeciążone. Oblicza Zaokrąglenie w dół argumentu|  
-|[floorf —](concurrency-precise-math-namespace-functions.md#floorf)|Oblicza Zaokrąglenie w dół argumentu|  
-|[FMA](concurrency-precise-math-namespace-functions.md#fma)|Przeciążone. Obliczenia bazy danych (_X * _Y) + _Z —, zaokrąglona jako jedna operacja trzyargumentowe|  
-|[fmaf —](concurrency-precise-math-namespace-functions.md#fmaf)|Obliczenia bazy danych (_X * _Y) + _Z —, zaokrąglona jako jedna operacja trzyargumentowe|  
-|[Fmax](concurrency-precise-math-namespace-functions.md#fmax)|Przeciążone. Określić maksymalną wartość liczbową argumentów|  
-|[fmaxf —](concurrency-precise-math-namespace-functions.md#fmaxf)|Określić maksymalną wartość liczbową argumentów|  
-|[Fmin —](concurrency-precise-math-namespace-functions.md#fmin)|Przeciążone. Określić minimalną wartość liczbową argumentów|  
-|[fminf —](concurrency-precise-math-namespace-functions.md#fminf)|Określić minimalną wartość liczbową argumentów|  
+|[floorf](concurrency-precise-math-namespace-functions.md#floorf)|Oblicza Zaokrąglenie w dół argumentu|  
+|[fma](concurrency-precise-math-namespace-functions.md#fma)|Przeciążone. Obliczenia bazy danych (_X * _Y) + _Z —, zaokrąglona jako jedna operacja trzyargumentowe|  
+|[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|Obliczenia bazy danych (_X * _Y) + _Z —, zaokrąglona jako jedna operacja trzyargumentowe|  
+|[fmax](concurrency-precise-math-namespace-functions.md#fmax)|Przeciążone. Określić maksymalną wartość liczbową argumentów|  
+|[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|Określić maksymalną wartość liczbową argumentów|  
+|[fmin](concurrency-precise-math-namespace-functions.md#fmin)|Przeciążone. Określić minimalną wartość liczbową argumentów|  
+|[fminf](concurrency-precise-math-namespace-functions.md#fminf)|Określić minimalną wartość liczbową argumentów|  
 |[fmod — funkcja (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Przeciążone. Oblicza resztę zmiennoprzecinkowe z _X/_Y|  
-|[fmodf —](concurrency-precise-math-namespace-functions.md#fmodf)|Oblicza resztę zmiennoprzecinkowe z _X/_Y|  
+|[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|Oblicza resztę zmiennoprzecinkowe z _X/_Y|  
 |[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Przeciążone. Klasyfikuje wartość argumentu, ponieważ NaN, nieskończone, normalny, subnormal, zero|  
 |[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Przeciążone. Pobiera mantysa i wykładnik _X|  
-|[frexpf —](concurrency-precise-math-namespace-functions.md#frexpf)|Pobiera mantysa i wykładnik _X|  
-|[hypot —](concurrency-precise-math-namespace-functions.md#hypot)|Przeciążone. Oblicza pierwiastek kwadratowy liczby sumę kwadratów _X i _Y|  
-|[hypotf —](concurrency-precise-math-namespace-functions.md#hypotf)|Oblicza pierwiastek kwadratowy liczby sumę kwadratów _X i _Y|  
-|[ilogb —](concurrency-precise-math-namespace-functions.md#ilogb)|Przeciążone. Wyodrębnij wykładnik _X jako wartość podpisanego elementu int|  
-|[ilogbf —](concurrency-precise-math-namespace-functions.md#ilogbf)|Wyodrębnij wykładnik _X jako wartość podpisanego elementu int|  
+|[frexpf](concurrency-precise-math-namespace-functions.md#frexpf)|Pobiera mantysa i wykładnik _X|  
+|[hypot](concurrency-precise-math-namespace-functions.md#hypot)|Przeciążone. Oblicza pierwiastek kwadratowy liczby sumę kwadratów _X i _Y|  
+|[hypotf](concurrency-precise-math-namespace-functions.md#hypotf)|Oblicza pierwiastek kwadratowy liczby sumę kwadratów _X i _Y|  
+|[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|Przeciążone. Wyodrębnij wykładnik _X jako wartość podpisanego elementu int|  
+|[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Wyodrębnij wykładnik _X jako wartość podpisanego elementu int|  
 |[isfinite](concurrency-precise-math-namespace-functions.md#isfinite)|Przeciążone. Określa, czy argument ma wartością skończoną|  
-|[isinf —](concurrency-precise-math-namespace-functions.md#isinf)|Przeciążone. Określa, czy argument jest nieskończoność.|  
-|[isNaN](concurrency-precise-math-namespace-functions.md#isnan)|Przeciążone. Określa, czy argument jest wartością typu NaN|  
+|[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Przeciążone. Określa, czy argument jest nieskończoność.|  
+|[isnan](concurrency-precise-math-namespace-functions.md#isnan)|Przeciążone. Określa, czy argument jest wartością typu NaN|  
 |[isnormal —](concurrency-precise-math-namespace-functions.md#isnormal)|Przeciążone. Określa, czy argument jest zwykłym|  
 |[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Przeciążone. Oblicza liczba rzeczywista z mantysa i wykładnik|  
-|[ldexpf —](concurrency-precise-math-namespace-functions.md#ldexpf)|Oblicza liczba rzeczywista z mantysa i wykładnik|  
-|[lgamma —](concurrency-precise-math-namespace-functions.md#lgamma)|Przeciążone. Oblicza logarytm naturalny wartość bezwzględną liczby gamma argumentu|  
-|[lgammaf —](concurrency-precise-math-namespace-functions.md#lgammaf)|Oblicza logarytm naturalny wartość bezwzględną liczby gamma argumentu|  
-|[Dziennik](concurrency-precise-math-namespace-functions.md#log)|Przeciążone. Oblicza logarytm naturalny argumentu|  
-|[LOG10](concurrency-precise-math-namespace-functions.md#log10)|Przeciążone. Oblicza logarytm base 10 argumentu|  
-|[log10f —](concurrency-precise-math-namespace-functions.md#log10f)|Oblicza logarytm base 10 argumentu|  
-|[log1p —](concurrency-precise-math-namespace-functions.md#log1p)|Przeciążone. Oblicza logarytm naturalny 1 oraz argument|  
-|[log1pf —](concurrency-precise-math-namespace-functions.md#log1pf)|Oblicza logarytm naturalny 1 oraz argument|  
+|[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|Oblicza liczba rzeczywista z mantysa i wykładnik|  
+|[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|Przeciążone. Oblicza logarytm naturalny wartość bezwzględną liczby gamma argumentu|  
+|[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|Oblicza logarytm naturalny wartość bezwzględną liczby gamma argumentu|  
+|[log](concurrency-precise-math-namespace-functions.md#log)|Przeciążone. Oblicza logarytm naturalny argumentu|  
+|[log10](concurrency-precise-math-namespace-functions.md#log10)|Przeciążone. Oblicza logarytm base 10 argumentu|  
+|[log10f](concurrency-precise-math-namespace-functions.md#log10f)|Oblicza logarytm base 10 argumentu|  
+|[log1p](concurrency-precise-math-namespace-functions.md#log1p)|Przeciążone. Oblicza logarytm naturalny 1 oraz argument|  
+|[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|Oblicza logarytm naturalny 1 oraz argument|  
 |[log2](concurrency-precise-math-namespace-functions.md#log2)|Przeciążone. Oblicza logarytm base-2 argumentu|  
-|[log2f —](concurrency-precise-math-namespace-functions.md#log2f)|Oblicza logarytm base-2 argumentu|  
-|[logb —](concurrency-precise-math-namespace-functions.md#logb)|Przeciążone. Wyodrębnia wykładnik _X, jako wartość całkowita format liczb zmiennoprzecinkowych|  
-|[logbf —](concurrency-precise-math-namespace-functions.md#logbf)|Wyodrębnia wykładnik _X, jako wartość całkowita format liczb zmiennoprzecinkowych|  
-|[logf —](concurrency-precise-math-namespace-functions.md#logf)|Oblicza logarytm naturalny argumentu|  
-|[modf —](concurrency-precise-math-namespace-functions.md#modf)|Przeciążone. Dzieli _X do ułamkowa i części liczby całkowitej.|  
-|[modff —](concurrency-precise-math-namespace-functions.md#modff)|Dzieli _X do ułamkowa i części liczby całkowitej.|  
-|[NaN](concurrency-precise-math-namespace-functions.md#nan)|Zwraca quiet NaN|  
-|[nanf —](concurrency-precise-math-namespace-functions.md#nanf)|Zwraca quiet NaN|  
-|[nearbyint —](concurrency-precise-math-namespace-functions.md#nearbyint)|Przeciążone. Zaokrągla wartość argumentu na wartość całkowitą w formacie liczb zmiennoprzecinkowych, przy użyciu bieżącego kierunek zaokrąglania.|  
-|[nearbyintf —](concurrency-precise-math-namespace-functions.md#nearbyintf)|Zaokrągla wartość argumentu na wartość całkowitą w formacie liczb zmiennoprzecinkowych, przy użyciu bieżącego kierunek zaokrąglania.|  
-|[nextafter —](concurrency-precise-math-namespace-functions.md#nextafter)|Przeciążone. Określić następnej wartości można przedstawić w typie funkcji, po _X w kierunku _Y|  
-|[nextafterf —](concurrency-precise-math-namespace-functions.md#nextafterf)|Określić następnej wartości można przedstawić w typie funkcji, po _X w kierunku _Y|  
+|[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Oblicza logarytm base-2 argumentu|  
+|[logb](concurrency-precise-math-namespace-functions.md#logb)|Przeciążone. Wyodrębnia wykładnik _X, jako wartość całkowita format liczb zmiennoprzecinkowych|  
+|[logbf](concurrency-precise-math-namespace-functions.md#logbf)|Wyodrębnia wykładnik _X, jako wartość całkowita format liczb zmiennoprzecinkowych|  
+|[logf](concurrency-precise-math-namespace-functions.md#logf)|Oblicza logarytm naturalny argumentu|  
+|[modf](concurrency-precise-math-namespace-functions.md#modf)|Przeciążone. Dzieli _X do ułamkowa i części liczby całkowitej.|  
+|[modff](concurrency-precise-math-namespace-functions.md#modff)|Dzieli _X do ułamkowa i części liczby całkowitej.|  
+|[nan](concurrency-precise-math-namespace-functions.md#nan)|Zwraca quiet NaN|  
+|[nanf](concurrency-precise-math-namespace-functions.md#nanf)|Zwraca quiet NaN|  
+|[nearbyint](concurrency-precise-math-namespace-functions.md#nearbyint)|Przeciążone. Zaokrągla wartość argumentu na wartość całkowitą w formacie liczb zmiennoprzecinkowych, przy użyciu bieżącego kierunek zaokrąglania.|  
+|[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Zaokrągla wartość argumentu na wartość całkowitą w formacie liczb zmiennoprzecinkowych, przy użyciu bieżącego kierunek zaokrąglania.|  
+|[nextafter](concurrency-precise-math-namespace-functions.md#nextafter)|Przeciążone. Określić następnej wartości można przedstawić w typie funkcji, po _X w kierunku _Y|  
+|[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Określić następnej wartości można przedstawić w typie funkcji, po _X w kierunku _Y|  
 |[Fi](concurrency-precise-math-namespace-functions.md#phi)|Przeciążone. Zwraca funkcję rozkładu skumulowanego argumentu|  
-|[phif —](concurrency-precise-math-namespace-functions.md#phif)|Zwraca funkcję rozkładu skumulowanego argumentu|  
+|[phif](concurrency-precise-math-namespace-functions.md#phif)|Zwraca funkcję rozkładu skumulowanego argumentu|  
 |[Pow](concurrency-precise-math-namespace-functions.md#pow)|Przeciążone. Oblicza _X podniesionej do potęgi _Y|  
-|[powf —](concurrency-precise-math-namespace-functions.md#powf)|Oblicza _X podniesionej do potęgi _Y|  
+|[powf](concurrency-precise-math-namespace-functions.md#powf)|Oblicza _X podniesionej do potęgi _Y|  
 |[probit —](concurrency-precise-math-namespace-functions.md#probit)|Przeciążone. Zwraca funkcję rozkładu skumulowanego odwrotny argumentu|  
-|[probitf —](concurrency-precise-math-namespace-functions.md#probitf)|Zwraca funkcję rozkładu skumulowanego odwrotny argumentu|  
-|[rcbrt —](concurrency-precise-math-namespace-functions.md#rcbrt)|Przeciążone. Zwraca odwrotność głównego modułu argumentu|  
-|[rcbrtf —](concurrency-precise-math-namespace-functions.md#rcbrtf)|Zwraca odwrotność głównego modułu argumentu|  
-|[pozostałe](concurrency-precise-math-namespace-functions.md#remainder)|Przeciążone. Oblicza resztę: _X REM _Y|  
-|[remainderf —](concurrency-precise-math-namespace-functions.md#remainderf)|Oblicza resztę: _X REM _Y|  
-|[remquo —](concurrency-precise-math-namespace-functions.md#remquo)|Przeciążone. Oblicza resztę tej samej jako _X REM _Y. Również oblicza niższe 23 bity integralną iloraz _X/_Y i zawiera ten sam znak co _X/_Y tej wartości. Ta wartość podpisem przechowuje w wskazywana przez _Quo liczb całkowitych.|  
-|[remquof —](concurrency-precise-math-namespace-functions.md#remquof)|Oblicza resztę tej samej jako _X REM _Y. Również oblicza niższe 23 bity integralną iloraz _X/_Y i zawiera ten sam znak co _X/_Y tej wartości. Ta wartość podpisem przechowuje w wskazywana przez _Quo liczb całkowitych.|  
+|[probitf](concurrency-precise-math-namespace-functions.md#probitf)|Zwraca funkcję rozkładu skumulowanego odwrotny argumentu|  
+|[rcbrt](concurrency-precise-math-namespace-functions.md#rcbrt)|Przeciążone. Zwraca odwrotność głównego modułu argumentu|  
+|[rcbrtf](concurrency-precise-math-namespace-functions.md#rcbrtf)|Zwraca odwrotność głównego modułu argumentu|  
+|[remainder](concurrency-precise-math-namespace-functions.md#remainder)|Przeciążone. Oblicza resztę: _X REM _Y|  
+|[remainderf](concurrency-precise-math-namespace-functions.md#remainderf)|Oblicza resztę: _X REM _Y|  
+|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|Przeciążone. Oblicza resztę tej samej jako _X REM _Y. Również oblicza niższe 23 bity integralną iloraz _X/_Y i zawiera ten sam znak co _X/_Y tej wartości. Ta wartość podpisem przechowuje w wskazywana przez _Quo liczb całkowitych.|  
+|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|Oblicza resztę tej samej jako _X REM _Y. Również oblicza niższe 23 bity integralną iloraz _X/_Y i zawiera ten sam znak co _X/_Y tej wartości. Ta wartość podpisem przechowuje w wskazywana przez _Quo liczb całkowitych.|  
 |[ROUND](concurrency-precise-math-namespace-functions.md#round)|Przeciążone. Zaokrągla _X do najbliższej liczby całkowitej.|  
-|[roundf —](concurrency-precise-math-namespace-functions.md#roundf)|Zaokrągla _X do najbliższej liczby całkowitej.|  
-|[rsqrt —](concurrency-precise-math-namespace-functions.md#rsqrt)|Przeciążone. Zwraca odwrotność pierwiastek kwadratowy argumentu|  
-|[rsqrtf —](concurrency-precise-math-namespace-functions.md#rsqrtf)|Zwraca odwrotność pierwiastek kwadratowy argumentu|  
-|[scalb —](concurrency-precise-math-namespace-functions.md#scalb)|Przeciążone. Mnoży _X przez flt_radix — aby _Y zasilania|  
-|[scalbf —](concurrency-precise-math-namespace-functions.md#scalbf)|Mnoży _X przez flt_radix — aby _Y zasilania|  
-|[scalbn —](concurrency-precise-math-namespace-functions.md#scalbn)|Przeciążone. Mnoży _X przez flt_radix — aby _Y zasilania|  
-|[scalbnf —](concurrency-precise-math-namespace-functions.md#scalbnf)|Mnoży _X przez flt_radix — aby _Y zasilania|  
-|[signbit —](concurrency-precise-math-namespace-functions.md#signbit)|Przeciążone. Określa, czy znak _X jest ujemna|  
-|[signbitf —](concurrency-precise-math-namespace-functions.md#signbitf)|Określa, czy znak _X jest ujemna|  
-|[SIN](concurrency-precise-math-namespace-functions.md#sin)|Przeciążone. Oblicza sinus wartość argumentu|  
+|[roundf](concurrency-precise-math-namespace-functions.md#roundf)|Zaokrągla _X do najbliższej liczby całkowitej.|  
+|[rsqrt](concurrency-precise-math-namespace-functions.md#rsqrt)|Przeciążone. Zwraca odwrotność pierwiastek kwadratowy argumentu|  
+|[rsqrtf](concurrency-precise-math-namespace-functions.md#rsqrtf)|Zwraca odwrotność pierwiastek kwadratowy argumentu|  
+|[scalb](concurrency-precise-math-namespace-functions.md#scalb)|Przeciążone. Mnoży _X przez flt_radix — aby _Y zasilania|  
+|[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Mnoży _X przez flt_radix — aby _Y zasilania|  
+|[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|Przeciążone. Mnoży _X przez flt_radix — aby _Y zasilania|  
+|[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Mnoży _X przez flt_radix — aby _Y zasilania|  
+|[signbit](concurrency-precise-math-namespace-functions.md#signbit)|Przeciążone. Określa, czy znak _X jest ujemna|  
+|[signbitf](concurrency-precise-math-namespace-functions.md#signbitf)|Określa, czy znak _X jest ujemna|  
+|[sin](concurrency-precise-math-namespace-functions.md#sin)|Przeciążone. Oblicza sinus wartość argumentu|  
 |[sincos —](concurrency-precise-math-namespace-functions.md#sincos)|Przeciążone. Oblicza sinus i cosinus wartość _X|  
-|[sincosf —](concurrency-precise-math-namespace-functions.md#sincosf)|Oblicza sinus i cosinus wartość _X|  
-|[sinf —](concurrency-precise-math-namespace-functions.md#sinf)|Oblicza sinus wartość argumentu|  
+|[sincosf](concurrency-precise-math-namespace-functions.md#sincosf)|Oblicza sinus i cosinus wartość _X|  
+|[sinf](concurrency-precise-math-namespace-functions.md#sinf)|Oblicza sinus wartość argumentu|  
 |[SINH](concurrency-precise-math-namespace-functions.md#sinh)|Przeciążone. Oblicza sinus hiperboliczny wartość argumentu|  
-|[sinhf —](concurrency-precise-math-namespace-functions.md#sinhf)|Oblicza sinus hiperboliczny wartość argumentu|  
+|[sinhf](concurrency-precise-math-namespace-functions.md#sinhf)|Oblicza sinus hiperboliczny wartość argumentu|  
 |[sinpi —](concurrency-precise-math-namespace-functions.md#sinpi)|Przeciążone. Oblicza sinus wartość liczby pi * _X|  
-|[sinpif —](concurrency-precise-math-namespace-functions.md#sinpif)|Oblicza sinus wartość liczby pi * _X|  
-|[SQRT](concurrency-precise-math-namespace-functions.md#sqrt)|Przeciążone. Oblicza pierwiastek squre argumentu|  
-|[sqrtf —](concurrency-precise-math-namespace-functions.md#sqrtf)|Oblicza pierwiastek squre argumentu|  
+|[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|Oblicza sinus wartość liczby pi * _X|  
+|[sqrt](concurrency-precise-math-namespace-functions.md#sqrt)|Przeciążone. Oblicza pierwiastek squre argumentu|  
+|[sqrtf](concurrency-precise-math-namespace-functions.md#sqrtf)|Oblicza pierwiastek squre argumentu|  
 |[tan](concurrency-precise-math-namespace-functions.md#tan)|Przeciążone. Oblicza tangens wartość argumentu|  
 |[tanf —](concurrency-precise-math-namespace-functions.md#tanf)|Oblicza tangens wartość argumentu|  
 |[TANH](concurrency-precise-math-namespace-functions.md#tanh)|Przeciążone. Oblicza tangens hiperboliczny wartość argumentu|  
-|[tanhf —](concurrency-precise-math-namespace-functions.md#tanhf)|Oblicza tangens hiperboliczny wartość argumentu|  
+|[tanhf](concurrency-precise-math-namespace-functions.md#tanhf)|Oblicza tangens hiperboliczny wartość argumentu|  
 |[tanpi —](concurrency-precise-math-namespace-functions.md#tanpi)|Przeciążone. Oblicza tangens wartość liczby pi * _X|  
 |[tanpif —](concurrency-precise-math-namespace-functions.md#tanpif)|Oblicza tangens wartość liczby pi * _X|  
-|[tgamma —](concurrency-precise-math-namespace-functions.md#tgamma)|Przeciążone. Oblicza funkcji gamma _X|  
-|[tgammaf —](concurrency-precise-math-namespace-functions.md#tgammaf)|Oblicza funkcji gamma _X|  
+|[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|Przeciążone. Oblicza funkcji gamma _X|  
+|[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|Oblicza funkcji gamma _X|  
 |[TRUNC —](concurrency-precise-math-namespace-functions.md#trunc)|Przeciążone. Obcina argument składnika liczba całkowita|  
-|[truncf —](concurrency-precise-math-namespace-functions.md#truncf)|Obcina argument składnika liczba całkowita|  
+|[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Obcina argument składnika liczba całkowita|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** amp_math.h  

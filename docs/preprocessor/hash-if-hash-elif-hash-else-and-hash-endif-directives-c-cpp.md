@@ -1,12 +1,13 @@
 ---
-title: "#<a name=\"if-elif-else-and-endif-directives-cc--microsoft-docs\"></a>Jeśli, #elif, #else i #endif — dyrektywy (C/C++) | Dokumentacja firmy Microsoft"
+title: "#Jeśli, #elif, #else i #endif — dyrektywy (C/C++) | Dokumentacja firmy Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - '#else'
 - '#endif'
@@ -14,7 +15,8 @@ f1_keywords:
 - '#elif'
 - defined
 - __has_include
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - '#elif directive'
 - conditional compilation, directives
@@ -28,16 +30,17 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8acd8444295175e6aa9fe329e7851456fcd5f7c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else i #endif — dyrektywy (C/C++)
 `#if` Dyrektywy z `#elif`, `#else`, i `#endif` dyrektywy, kompilacja formanty części pliku źródłowego. Jeśli wyrażenie (po `#if`) ma wartość różną od zera, grupa wiersza od razu po `#if` dyrektywy są przechowywane w jednostce tłumaczenia.  
@@ -50,7 +53,7 @@ ms.lasthandoff: 12/21/2017
  *Jeśli wiersz tekstu*  
   
  *Jeśli wiersz* :  
- **#if***wyrażenie stałej*   
+ **#if**  *constant-expression*  
   
  **#ifdef***identyfikator*   
   
@@ -62,7 +65,7 @@ ms.lasthandoff: 12/21/2017
  *elif części elif wiersza tekstu*  
   
  *elif — wiersz* :  
- **#elif***wyrażenie stałej*   
+ **#elif**  *constant-expression*  
   
  *część else* :  
  *else wiersza tekstu*  
@@ -108,7 +111,7 @@ ms.lasthandoff: 12/21/2017
   
  Definicja ( `identifier` )  
   
- Definicja`identifier`  
+ Definicja `identifier`  
   
  To wyrażenie stałej jest traktowane jako wartość true (różną od zera), jeśli *identyfikator* jest obecnie zdefiniowana; w przeciwnym razie wynikiem warunku jest FAŁSZ (0). Identyfikator zdefiniowany jako pusty tekst jest uznawane za zdefiniowane. **Zdefiniowane** dyrektywy mogą być używane w `#if` i `#elif` dyrektywa, ale nigdzie else.  
   

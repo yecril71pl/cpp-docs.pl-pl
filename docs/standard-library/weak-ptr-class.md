@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::weak_ptr
 - memory/std::weak_ptr::element_type
@@ -17,7 +18,8 @@ f1_keywords:
 - memory/std::weak_ptr::swap
 - memory/std::weak_ptr::use_count
 - memory/std::weak_ptr::operator=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::weak_ptr [C++]
 - std::weak_ptr [C++], element_type
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 821992a6a0684e965f804729b470075038310ef1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a4d7989038ecb83575a8c9c2137df8965db6dc3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="weakptr-class"></a>weak_ptr — Klasa
 Otacza słabo połączony wskaźnik.  
@@ -92,17 +95,17 @@ public:
   
 |||  
 |-|-|  
-|[weak_ptr —](#weak_ptr)|Konstruuje `weak_ptr`.|  
+|[weak_ptr](#weak_ptr)|Konstruuje `weak_ptr`.|  
   
 ### <a name="methods"></a>Metody  
   
 |||  
 |-|-|  
-|[ELEMENT_TYPE](#element_type)|Typ elementu.|  
-|[ważność](#expired)|Testy, jeśli prawo własności wygasło.|  
+|[element_type](#element_type)|Typ elementu.|  
+|[Ważność](#expired)|Testy, jeśli prawo własności wygasło.|  
 |[lock](#lock)|Uzyskuje wyłącznego prawa własności do zasobu.|  
 |[owner_before](#owner_before)|Zwraca `true` Jeśli `weak_ptr` jest umieszczane przed (lub mniej niż) podany wskaźnik.|  
-|[Resetowanie](#reset)|Wersje właściciela zasobów.|  
+|[reset](#reset)|Wersje właściciela zasobów.|  
 |[swap](#swap)|Zamienia dwa `weak_ptr` obiektów.|  
 |[use_count](#use_count)|Wyznaczony numer liczby `shared_ptr` obiektów.|  
   
@@ -110,14 +113,14 @@ public:
   
 |||  
 |-|-|  
-|[operator =](#op_eq)|Zamienia właściciela zasobów.|  
+|[operator=](#op_eq)|Zamienia właściciela zasobów.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<pamięci >  
   
  **Namespace:** Standard  
   
-##  <a name="element_type"></a>ELEMENT_TYPE  
+##  <a name="element_type"></a>  ELEMENT_TYPE  
  Typ elementu.  
   
 ```  
@@ -152,7 +155,7 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="expired"></a>ważność  
+##  <a name="expired">Ważność</a>  
  Testy, jeśli prawo własności wygasło.  
   
 ```  
@@ -208,7 +211,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="lock"></a>blokady  
+##  <a name="lock"></a>  blokady  
  Uzyskuje wyłącznego prawa własności do zasobu.  
   
 ```  
@@ -264,7 +267,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="op_eq"></a>operator =  
+##  <a name="op_eq"></a>  operator =  
  Zamienia właściciela zasobów.  
   
 ```  
@@ -323,7 +326,7 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="owner_before"></a>owner_before  
+##  <a name="owner_before"></a>  owner_before  
  Zwraca `true` Jeśli `weak_ptr` jest umieszczane przed (lub mniej niż) podany wskaźnik.  
   
 ```  
@@ -341,7 +344,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Uwagi  
  Zwraca funkcję elementu członkowskiego szablonu `true` Jeśli `*this` jest `ordered before` `ptr`.  
   
-##  <a name="reset"></a>Resetowanie  
+##  <a name="reset"></a>  Resetowanie  
  Wersje właściciela zasobów.  
   
 ```  
@@ -382,7 +385,7 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  Swap  
  Zamienia dwa `weak_ptr` obiektów.  
   
 ```  
@@ -450,7 +453,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="use_count"></a>use_count  
+##  <a name="use_count"></a>  use_count  
  Wyznaczony numer liczby `shared_ptr` obiektów.  
   
 ```  
@@ -489,7 +492,7 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="weak_ptr"></a>weak_ptr —  
+##  <a name="weak_ptr"></a>  weak_ptr —  
  Konstruuje `weak_ptr`.  
   
 ```  

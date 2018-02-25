@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::uniform_real_distribution
 - random/std::uniform_real_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::uniform_real_distribution::param_type::b
 - random/std::uniform_real_distribution::param_type::operator==
 - random/std::uniform_real_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::uniform_real_distribution [C++]
 - std::uniform_real_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 484997806cadb75b0322e9d194fe37ab30dae3b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: be2205fc4795320c3d3998de7ff5324a23af00d1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution — Klasa
 Generuje jednolity (każda wartość jest równie prawdopodobne) zmiennoprzecinkowe dystrybucji w ramach danych wyjściowych zakresu, który jest wyłącznie włącznie.  
@@ -86,7 +89,7 @@ Klasa szablonu opisuje dystrybucji wyłącznie z wartościami granicznymi tworz�
   
 ||||  
 |-|-|-|  
-|[uniform_real_distribution —](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|  
+|[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|  
 |`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|  
   
 Element członkowski właściwości `a()` zwraca aktualnie przechowywana minimalna granica dystrybucji, podczas `b()` zwraca aktualnie przechowywana granica maksymalna. Dla tej klasy dystrybucji tych minimalne i maksymalne wartości są takie same jak zwracany przez typowych funkcji właściwości `min()` i `max()` opisanego w [ \<losowe >](../standard-library/random.md) tematu.  
@@ -184,7 +187,7 @@ Distribution for 10 samples:
   
  **Namespace:** Standard  
   
-##  <a name="uniform_real_distribution"></a>uniform_real_distribution::uniform_real_distribution  
+##  <a name="uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution  
 Tworzy dystrybucji.  
   
 ```  
@@ -199,17 +202,17 @@ Dolna granica wartości losowych włącznie.
 *b*  
 Górna granica wartości losowych wyłącznego.  
   
-*Parametr*  
+*parm*  
 `param_type` Struktury użyta do skonstruowania dystrybucji.  
   
 ### <a name="remarks"></a>Uwagi  
- **Warunek wstępny:**`a < b`  
+ **Warunek wstępny:** `a < b`  
   
 Pierwszy Konstruktor konstrukcji obiektu których przechowywane `a` wartość przechowuje wartość *a* i których przechowywane `b` wartość zawiera wartość *b*.  
   
 Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.  
   
-##  <a name="param_type"></a>uniform_real_distribution::param_type  
+##  <a name="param_type"></a>  uniform_real_distribution::param_type  
  Przechowuje wszystkie parametry dystrybucji.  
   
 ```  
@@ -230,11 +233,11 @@ Dolna granica wartości losowych włącznie.
 *b*  
 Górna granica wartości losowych wyłącznego.  
   
-*prawo*  
+*right*  
 `param_type` Obiekt do porównania z tym.  
   
 ### <a name="remarks"></a>Uwagi  
- **Warunek wstępny:**`a < b`  
+ **Warunek wstępny:** `a < b`  
   
 Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.  
   

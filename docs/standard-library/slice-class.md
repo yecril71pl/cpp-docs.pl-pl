@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - valarray/std::slice
 - valarray/std::slice::size
 - valarray/std::slice::start
 - valarray/std::slice::stride
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::slice [C++]
 - std::slice [C++], size
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c49abb87a3a1b9c480c9267f21f6fc9d3de55b9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e770372fa2c38f0f0e24104dd3313d227c1252af
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="slice-class"></a>slice — Klasa
 Klasa narzędzia valarray —, który służy do definiowania jednowymiarowa podzbiór nadrzędnej valarray —. Jeśli valarray — jest traktowany jako macierz dwuwymiarowa z wszystkich elementów w tablicy, wycinka wyodrębnia wektor w jednym wymiarze poza tablicą dwuwymiarową.  
@@ -50,22 +53,22 @@ Klasa narzędzia valarray —, który służy do definiowania jednowymiarowa pod
   
 |||  
 |-|-|  
-|[wycinek](#slice)|Definiuje ona podzestaw `valarray` składający się z liczbą elementów, które są takie same odległości i który rozpoczęli określonego elementu.|  
+|[slice](#slice)|Definiuje ona podzestaw `valarray` składający się z liczbą elementów, które są takie same odległości i który rozpoczęli określonego elementu.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
 |||  
 |-|-|  
-|[rozmiar](#size)|Wyszukuje liczbę elementów w wycinek `valarray`.|  
-|[Początek](#start)|Znajduje indeks początkowy wycinek `valarray`.|  
-|[STRIDE](#stride)|Odległość między elementami w wycinek `valarray`.|  
+|[Rozmiar](#size)|Wyszukuje liczbę elementów w wycinek `valarray`.|  
+|[start](#start)|Znajduje indeks początkowy wycinek `valarray`.|  
+|[stride](#stride)|Odległość między elementami w wycinek `valarray`.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<valarray — >  
   
  **Namespace:** Standard  
   
-##  <a name="size"></a>Slice::size  
+##  <a name="size"></a>  Slice::size  
  Odnajduje liczba elementów w wycinek valarray —.  
   
 ```  
@@ -127,7 +130,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The size of slice vaSlice is: 6.  
 ```  
   
-##  <a name="slice"></a>Slice::Slice  
+##  <a name="slice"></a>  Slice::Slice  
  Definiuje ona podzestaw valarray —, która składa się z liczbą elementów, które są takie same odległości i który rozpoczęli określonego elementu.  
   
 ```  
@@ -196,7 +199,7 @@ The slice of valarray va is vaResult:
 va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).  
 ```  
   
-##  <a name="start"></a>Slice::Start  
+##  <a name="start"></a>  Slice::Start  
  Znajduje indeks początkowy wycinek valarray —.  
   
 ```  
@@ -252,7 +255,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The start index of slice vaSlice is: 3.  
 ```  
   
-##  <a name="stride"></a>Slice::STRIDE  
+##  <a name="stride"></a>  Slice::STRIDE  
  Umożliwia znalezienie odległość między elementami w wycinek valarray —.  
   
 ```  

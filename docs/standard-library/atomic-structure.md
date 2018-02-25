@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: atomic/std::atomic
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- atomic/std::atomic
+dev_langs:
+- C++
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b5525953e5f4ba68fdf1b84b02046d9ab4679abe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e5e7de7a5098aec10618c961444eb73b4597d0fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="atomic-structure"></a>atomic — Struktura
 Zawiera opis obiektu, który wykonuje niepodzielne operacje na przechowywana wartość typu `Ty`.  
@@ -50,7 +54,7 @@ struct atomic;
 |[Atomic::operator — Operator](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|Zmniejsza przechowywanej wartości. Używany tylko przez specjalizacje całkowite i wskaźnika.|  
 |[Atomic::operator-= — Operator](http://msdn.microsoft.com/Library/902d0d9f-88fd-4500-aa2d-1e50f443e77c)|Odejmuje określoną wartość z wartością przechowywaną. Używany tylko przez specjalizacje całkowite i wskaźnika.|  
 |[Atomic::operator & = — Operator](http://msdn.microsoft.com/Library/90e730ac-12e1-4abb-98f5-4eadd6861a89)|Wykonuje bitowej `and` na określoną wartość i przechowywana wartość. Używany tylko przez specjalizacje wartości całkowitych.|  
-|[Atomic::operator &#124; = — Operator](http://msdn.microsoft.com/Library/f105eacc-31a6-4906-abba-f1cf013599b2)|Wykonuje bitowej `or` na określoną wartość i przechowywana wartość. Używany tylko przez specjalizacje wartości całkowitych.|  
+|[atomic::operator&#124;= Operator](http://msdn.microsoft.com/Library/f105eacc-31a6-4906-abba-f1cf013599b2)|Wykonuje bitowej `or` na określoną wartość i przechowywana wartość. Używany tylko przez specjalizacje wartości całkowitych.|  
 |[Atomic::operator ^ = — Operator](http://msdn.microsoft.com/Library/f2a4da9d-67e8-4249-9161-9998e72a33c2)|Wykonuje bitowej `exclusive or` na określoną wartość i przechowywana wartość. Używany tylko przez specjalizacje wartości całkowitych.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
@@ -65,7 +69,7 @@ struct atomic;
 |[fetch_sub](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|Odejmuje określoną wartość z wartością przechowywaną.|  
 |[fetch_xor](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|Wykonuje bitowej `exclusive or` na określoną wartość i przechowywana wartość.|  
 |[is_lock_free](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|Określa, czy niepodzielne operacje na `this` są *nieblokującą*. Jest typem niepodzielnym *nieblokującą* blokad użycie żadne niepodzielne operacje tego typu.|  
-|[obciążenia](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Odczytuje i zwraca wartość przechowywana.|  
+|[Obciążenia](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Odczytuje i zwraca wartość przechowywana.|  
 |[Magazyn](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|Używa określonej wartości w celu zastąpienia przechowywanej wartości.|  
   
 ## <a name="remarks"></a>Uwagi  

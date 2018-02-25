@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - task_completion_event
 - PPLTASKS/concurrency::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::set
 - PPLTASKS/concurrency::task_completion_event::set_exception
-dev_langs: C++
-helpviewer_keywords: task_completion_event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48bf640d75a02b9033102b1c8fc7b824dc4a5be0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ec810fdb897a9a80dc803cdcc3f229bab186f09
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event — Klasa
 `task_completion_event` Klasa umożliwia opóźnienie wykonania zadania, dopóki spełniony jest warunek lub uruchomić zadanie w odpowiedzi na zdarzenie zewnętrzne.  
@@ -52,7 +56,7 @@ class task_completion_event<void>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[task_completion_event —](#ctor)|Konstruuje `task_completion_event` obiektu.|  
+|[task_completion_event](#ctor)|Konstruuje `task_completion_event` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -66,7 +70,7 @@ class task_completion_event<void>;
   
  Jeśli nigdy nie zostanie zasygnalizowane zdarzenie ukończenia zadania, gdy jest on niszczone zostaną anulowane wszystkie zadania utworzone na podstawie jego.  
   
- `task_completion_event`zachowuje się jak wskaźnika inteligentnego i powinien zostać przekazany przez wartość.  
+ `task_completion_event` zachowuje się jak wskaźnika inteligentnego i powinien zostać przekazany przez wartość.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `task_completion_event`  
@@ -76,7 +80,7 @@ class task_completion_event<void>;
   
  **Namespace:** współbieżności  
   
-##  <a name="set"></a>zestaw 
+##  <a name="set"></a> zestaw 
 
  Ustawia zdarzenie ukończenia zadania.  
   
@@ -96,7 +100,7 @@ bool set() const ;
 ### <a name="remarks"></a>Uwagi  
  Obecności wielu lub równoczesnych wywołań `set`, pierwsze wywołanie powiedzie się i jego wynik (jeśli istnieje), które będą przechowywane w zdarzenie ukończenia zadania. Pozostałe zestawy są ignorowane, a metoda zwróci wartość false. Jeśli zdarzenie ukończenia zadania, wszystkie zadania utworzone na podstawie zdarzeń natychmiast zostanie ukończona, czy jego kontynuacje, jeśli istnieje, zostanie zaplanowane. Zadanie ukończenia obiektów, które mają `_ResultType` innych niż `void` przekazuje wartość do ich kontynuacje.  
   
-##  <a name="set_exception"></a>set_exception 
+##  <a name="set_exception">set_exception</a> 
 
  Propaguje wyjątek, aby wszystkie zadania skojarzone z tym zdarzeniem.  
   
@@ -114,7 +118,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
   
 ### <a name="return-value"></a>Wartość zwracana  
   
-##  <a name="ctor"></a>task_completion_event — 
+##  <a name="ctor"></a> task_completion_event — 
 
  Konstruuje `task_completion_event` obiektu.  
   

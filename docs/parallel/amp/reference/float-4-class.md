@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
 - amp_short_vectors/Concurrency::graphics::float_4::zxw
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_x
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 049099c5a6b2a08d1482f4074b8b316ccb14562d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6f4e168215270cca2112efa43b7faa225b972c34
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="float4-class"></a>float_4 — Klasa
 Reprezentuje krótki wektor cztery elementów przestawnych.  
@@ -490,12 +493,12 @@ class float_4;
 |float_4::ARG||  
 |float_4::ARGB||  
 |float_4::b||  
-|float_4::BA||  
+|float_4::ba||  
 |float_4::bag||  
 |float_4::bagr||  
 |float_4::bar||  
 |float_4::barg||  
-|float_4::BG||  
+|float_4::bg||  
 |float_4::bga||  
 |float_4::bgar||  
 |float_4::BGR||  
@@ -527,15 +530,15 @@ class float_4;
 |float_4::rabg||  
 |float_4::rag||  
 |float_4::ragb||  
-|float_4::RB||  
+|float_4::rb||  
 |float_4::rba||  
 |float_4::rbag||  
-|float_4::RBG||  
+|float_4::rbg||  
 |float_4::rbga||  
-|float_4::RG||  
+|float_4::rg||  
 |float_4::rga||  
 |float_4::rgab||  
-|float_4::RGB||  
+|float_4::rgb||  
 |float_4::rgba||  
 |float_4::w||  
 |float_4::wx||  
@@ -546,7 +549,7 @@ class float_4;
 |float_4::Wy||  
 |float_4::wyx||  
 |float_4::wyxz||  
-|float_4::WYZ||  
+|float_4::wyz||  
 |float_4::wyzx||  
 |float_4::wZ||  
 |float_4::wzx||  
@@ -591,7 +594,7 @@ class float_4;
 |float_4::zwxy||  
 |float_4::zwy||  
 |float_4::zwyx||  
-|float_4::ZX||  
+|float_4::zx||  
 |float_4::zxw||  
 |float_4::zxwy||  
 |float_4::zxy||  
@@ -610,7 +613,7 @@ class float_4;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>float_4 — 
+##  <a name="ctor"></a> float_4 — 
 
  Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
   
@@ -681,7 +684,7 @@ explicit inline float_4(
  `_Other`  
  Obiekt używany do inicjowania.  
   
-##  <a name="float_4__size"></a>rozmiar 
+##  <a name="float_4__size"></a> Rozmiar 
 
 ```  
 static const int size = 4;  

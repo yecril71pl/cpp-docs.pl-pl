@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::piecewise_linear_distribution
 - random/std::piecewise_linear_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::piecewise_linear_distribution::param_type::densities
 - random/std::piecewise_linear_distribution::param_type::operator==
 - random/std::piecewise_linear_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::piecewise_linear_distribution [C++]
 - std::piecewise_linear_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7764537c09b9e1d226e1a5d847f94d4825e50870
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bc1019aee3246051d90c9b493592d86289af9cb8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution — Klasa
 Generuje piecewise liniowej dystrybucji, którą ma szerokość zróżnicowanie odstępach czasu prawdopodobieństwo liniowo różnych w każdym interwale.  
@@ -97,7 +100,7 @@ public:
   
 ||||  
 |-|-|-|  
-|[piecewise_linear_distribution —](#piecewise_linear_distribution)|`piecewise_linear_distribution::intervals`|`piecewise_linear_distribution::param`|  
+|[piecewise_linear_distribution](#piecewise_linear_distribution)|`piecewise_linear_distribution::intervals`|`piecewise_linear_distribution::param`|  
 |`piecewise_linear_distribution::operator()`|`piecewise_linear_distribution::densities`|[param_type](#param_type)|  
   
 Funkcja właściwości `intervals()` zwraca `vector<result_type>` przy użyciu zestawu interwałów przechowywanych dystrybucji.  
@@ -224,7 +227,7 @@ Distribution for 100 samples:
   
  **Namespace:** Standard  
   
-##  <a name="piecewise_linear_distribution"></a>piecewise_linear_distribution::piecewise_linear_distribution  
+##  <a name="piecewise_linear_distribution"></a>  piecewise_linear_distribution::piecewise_linear_distribution  
  Tworzy dystrybucji.  
   
 ```  
@@ -266,22 +269,22 @@ Wejściowy iteratora ostatniego elementu w zakresie dystrybucji.
 *firstW*  
 Wejściowy iteratora pierwszego elementu w zakresie wag.  
   
-*interwały*  
+*intervals*  
 [Initializer_list](../cpp/initializers.md) z interwałów dystrybucji.  
   
 *Liczba*  
 Liczba elementów w zakresie dystrybucji.  
   
-*Wartości xMin*  
+*xmin*  
 Najniższa wartość w zakresie dystrybucji.  
   
-*xMax*  
+*xmax*  
 Najwyższą wartość z zakresu dystrybucji. Musi być większa niż *wartości xmin*.  
   
 *weightfunc*  
 Obiekt reprezentujący prawdopodobieństwa rozkładu. Zarówno parametr i zwracana wartość musi być możliwe do przekonwertowania na `double`.  
   
-*Parametr*  
+*parm*  
 Struktura parametr używany do budowy dystrybucji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -329,7 +332,7 @@ explicit piecewise_linear_distribution(const param_type& parm);
 ```  
 Tworzy obiekt dystrybucji przy użyciu `parm` jako struktura przechowywanego parametru.  
   
-##  <a name="param_type"></a>piecewise_linear_distribution::param_type  
+##  <a name="param_type"></a>  piecewise_linear_distribution::param_type  
 Przechowuje wszystkie parametry dystrybucji.  
   
 ```  
@@ -354,7 +357,7 @@ struct param_type {
 Zobacz parametrów konstruktora [piecewise_linear_distribution —](#piecewise_linear_distribution).  
   
 ### <a name="remarks"></a>Uwagi  
- **Warunek wstępny:**`xmin < xmax`  
+ **Warunek wstępny:** `xmin < xmax`  
   
 Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.  
   

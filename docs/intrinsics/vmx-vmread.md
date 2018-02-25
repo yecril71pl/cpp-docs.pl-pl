@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __vmx_vmread
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __vmx_vmread
+dev_langs:
+- C++
 helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f4bc649f35eb2e3d3ce203529bf4010a3d4f53fe
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 351ef951a57a4f100861dbd12b8a77d11fc41df8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Odczytuje określone pole z bieżącej struktury sterowania maszyny wirtualnej (VMCS) i umieszcza je w określonej lokalizacji.  
   
@@ -42,8 +46,8 @@ unsigned char __vmx_vmread(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`Field`|Pole VMCS do odczytu.|  
-|[in]`FieldValue`|Wskaźnik do lokalizację do przechowywania wartości odczytywać określone przez pole VMCS `Field` parametru.|  
+|[in] `Field`|Pole VMCS do odczytu.|  
+|[in] `FieldValue`|Wskaźnik do lokalizację do przechowywania wartości odczytywać określone przez pole VMCS `Field` parametru.|  
   
 ## <a name="return-value"></a>Wartość zwracana  
   

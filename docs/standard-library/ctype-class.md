@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocale/std::ctype
 - xlocale/std::ctype::char_type
@@ -24,7 +25,8 @@ f1_keywords:
 - xlocale/std::ctype::tolower
 - xlocale/std::ctype::toupper
 - xlocale/std::ctype::widen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::ctype [C++]
 - std::ctype [C++], char_type
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - std::ctype [C++], toupper
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 866ec8b37852f6c4fea6fdeeefa5eb9fdf21d819
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d0403dd297d726f0d0ef1ab7794d37b05c46967b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ctype-class"></a>ctype — Klasa
 Klasa zawierająca zestaw reguł, który służy do klasyfikowania znaków, konwersji z wielkich i małych liter i konwersji między macierzystym zestawem znaków i zestawem używanym przez ustawienia regionalne.  
@@ -89,7 +92,7 @@ class ctype : public ctype_base;
   
 |||  
 |-|-|  
-|[CType —](#ctype)|Konstruktor dla obiektów klasy `ctype` obsługujących jako aspekty ustawień regionalnych dla znaków.|  
+|[ctype](#ctype)|Konstruktor dla obiektów klasy `ctype` obsługujących jako aspekty ustawień regionalnych dla znaków.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -109,19 +112,19 @@ class ctype : public ctype_base;
 |[do_toupper](#do_toupper)|Funkcja wirtualna wywoływana w celu konwersji znaku lub zakresu znaków na ich wielkie litery.|  
 |[do_widen](#do_widen)|Wywołuje się, by funkcję wirtualną konwertuje znak typu `char` zestawu do odpowiedniego znaku typu natywnego znaków `CharType` używane przez ustawień regionalnych.|  
 |[is](#is)|Sprawdza, czy pojedynczy znak ma określony atrybut, lub klasyfikuje atrybuty każdego znaku w zakresie i przechowuje je w tablicy.|  
-|[zawęzić](#narrow)|Konwertuje znak typu `CharType` używane przez ustawień regionalnych na odpowiedni znak Typ char w zestawie znaków macierzystego.|  
+|[narrow](#narrow)|Konwertuje znak typu `CharType` używane przez ustawień regionalnych na odpowiedni znak Typ char w zestawie znaków macierzystego.|  
 |[scan_is](#scan_is)|Lokalizuje pierwszy znak w zakresie, który pasuje do określonej maski.|  
 |[scan_not](#scan_not)|Lokalizuje pierwszy znak w zakresie, który nie pasuje do określonej maski.|  
 |[tolower](#tolower)|Konwertuje znak lub zakres znaków na małe litery.|  
 |[toupper](#toupper)|Konwertuje znak lub zakres znaków na wielkie litery.|  
-|[rozszerzenia](#widen)|Konwertuje znak typu `char` zestawu do odpowiedniego znaku typu natywnego znaków `CharType` używane przez ustawień regionalnych.|  
+|[widen](#widen)|Konwertuje znak typu `char` zestawu do odpowiedniego znaku typu natywnego znaków `CharType` używane przez ustawień regionalnych.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<ustawień regionalnych >  
   
  **Namespace:** Standard  
   
-##  <a name="char_type"></a>CType::char_type  
+##  <a name="char_type"></a>  CType::char_type  
  Typ, który opisuje znak używany przez ustawienie regionalne.  
   
 ```  
@@ -134,7 +137,7 @@ typedef CharType char_type;
 ### <a name="example"></a>Przykład  
   Zobacz opis funkcji Członkowskich [poszerzyć](#widen) na przykład, który używa `char_type` jako do wartości zwracanej.  
   
-##  <a name="ctype"></a>CType::CType  
+##  <a name="ctype"></a>  CType::CType  
  Konstruktor dla obiektów klasy ctype służyć jako aspekty ustawień regionalnych dla znaków.  
   
 ```  
@@ -152,13 +155,13 @@ explicit ctype(size_t _Refs = 0);
   
 -   1: okres istnienia obiektu musi być zarządzane ręcznie.  
   
--   \>1: te wartości są niezdefiniowane.  
+-   \> 1: te wartości są niezdefiniowane.  
   
  Nie bezpośredniego przykładów to możliwe, ponieważ destruktor jest chroniony.  
   
  Konstruktor inicjuje jego `locale::facet` obiektu podstawowego z **locale::**[aspektu](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-##  <a name="do_is"></a>CType::do_is  
+##  <a name="do_is"></a>  CType::do_is  
  Funkcja wirtualna wywoływana w celu sprawdzenia, czy pojedynczy znak ma określony atrybut, lub sklasyfikowania atrybutów każdego znaku w zakresie i przechowywania ich w tablicy.  
   
 ```  
@@ -200,7 +203,7 @@ virtual const CharType *do_is(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [jest](#is), które wywołuje `do_is`.  
   
-##  <a name="do_narrow"></a>CType::do_narrow  
+##  <a name="do_narrow"></a>  CType::do_narrow  
  Wywołuje funkcję wirtualną do konwersji znaków typu `CharType` używane przez ustawienia regionalne do odpowiedniego znaku typu `char` zestawu w macierzystym znaków.  
   
 ```  
@@ -243,7 +246,7 @@ virtual const CharType* do_narrow(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [zawęzić](#narrow), które wywołuje `do_narrow`.  
   
-##  <a name="do_scan_is"></a>CType::do_scan_is  
+##  <a name="do_scan_is"></a>  CType::do_scan_is  
  Wirtualna funkcja wywoływana w celu zlokalizowania pierwszego znaku w zakresie, który pasuje do określonej maski.  
   
 ```  
@@ -264,7 +267,7 @@ virtual const CharType *do_scan_is(
  Wskaźnik do znaku bezpośrednio po ostatnim znakiem w zakresie do skanowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do pierwszego znaku w zakresie, który jest zgodny z określonym maski. Jeśli takie wartość nie istnieje, funkcja zwraca`last.`  
+ Wskaźnik do pierwszego znaku w zakresie, który jest zgodny z określonym maski. Jeśli takie wartość nie istnieje, funkcja zwraca `last.`  
   
 ### <a name="remarks"></a>Uwagi  
  Funkcja chroniony element członkowski zwraca najmniejszą wskaźnika `ptr` z zakresu [ `first`, `last`) dla której [do_is](#do_is)( `maskVal`, * `ptr`) ma wartość true.  
@@ -272,7 +275,7 @@ virtual const CharType *do_scan_is(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [scan_is](#scan_is), które wywołuje `do_scan_is`.  
   
-##  <a name="do_scan_not"></a>CType::do_scan_not  
+##  <a name="do_scan_not"></a>  CType::do_scan_not  
  Funkcja wirtualna wywoływana w celu zlokalizowania pierwszego znaku w zakresie, który nie pasuje do określonej maski.  
   
 ```  
@@ -301,7 +304,7 @@ virtual const CharType *do_scan_not(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [scan_not](#scan_not), które wywołuje `do_scan_not`.  
   
-##  <a name="do_tolower"></a>CType::do_tolower  
+##  <a name="do_tolower"></a>  CType::do_tolower  
  Funkcję wirtualną o nazwie konwertowanie znak lub zakres znaków na małe litery.  
   
 ```  
@@ -332,7 +335,7 @@ virtual const CharType *do_tolower(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [tolower](#tolower), które wywołuje `do_tolower`.  
   
-##  <a name="do_toupper"></a>CType::do_toupper  
+##  <a name="do_toupper"></a>  CType::do_toupper  
  Funkcja wirtualna wywoływana w celu konwersji znaku lub zakresu znaków na ich wielkie litery.  
   
 ```  
@@ -363,7 +366,7 @@ virtual const CharType *do_toupper(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [toupper](#toupper), które wywołuje `do_toupper`.  
   
-##  <a name="do_widen"></a>CType::do_widen  
+##  <a name="do_widen"></a>  CType::do_widen  
  Wywołuje się, by funkcję wirtualną konwertuje znak typu `char` zestawu do odpowiedniego znaku typu natywnego znaków `CharType` używane przez ustawień regionalnych.  
   
 ```  
@@ -400,7 +403,7 @@ virtual const char *do_widen(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [poszerzyć](#widen), które wywołuje `do_widen`.  
   
-##  <a name="is"></a>CType::is  
+##  <a name="is"></a>  CType::is  
  Sprawdza, czy pojedynczy znak lub ma określonego atrybutu klasyfikuje atrybuty dla każdego znaku zakresu i przechowuje je w tablicy.  
   
 ```  
@@ -476,7 +479,7 @@ int main() {
 }  
 ```  
   
-##  <a name="narrow"></a>CType::Narrow  
+##  <a name="narrow"></a>  CType::Narrow  
  Konwertuje znaki typu `CharType` używane przez ustawienia regionalne odpowiadające im znaki typu `char` zestawu w macierzystym znaków.  
   
 ```  
@@ -540,7 +543,7 @@ int main( )
 Xhello everyone  
 ```  
   
-##  <a name="scan_is"></a>CType::scan_is  
+##  <a name="scan_is"></a>  CType::scan_is  
  Lokalizuje pierwszy znak w zakresie, który pasuje do określonej maski.  
   
 ```  
@@ -561,7 +564,7 @@ const CharType *scan_is(
  Wskaźnik do znaku bezpośrednio po ostatnim znakiem w zakresie do skanowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do pierwszego znaku w zakresie, który jest zgodny z określonym maski. Jeśli takie wartość nie istnieje, funkcja zwraca`last.`  
+ Wskaźnik do pierwszego znaku w zakresie, który jest zgodny z określonym maski. Jeśli takie wartość nie istnieje, funkcja zwraca `last.`  
   
 ### <a name="remarks"></a>Uwagi  
  Funkcja członkowska zwraca [do_scan_is](#do_scan_is)( `maskVal`, `first`, `last`).  
@@ -592,7 +595,7 @@ int main( )
 The first punctuation is "," at position: 5  
 ```  
   
-##  <a name="scan_not"></a>CType::scan_not  
+##  <a name="scan_not"></a>  CType::scan_not  
  Lokalizuje pierwszy znak w zakresie, który nie pasuje do określonej maski.  
   
 ```  
@@ -644,7 +647,7 @@ int main( )
 First nonalpha character is "," at position: 5  
 ```  
   
-##  <a name="tolower"></a>CType::tolower  
+##  <a name="tolower"></a>  CType::tolower  
  Konwertuje znak lub zakres znaków na małe litery.  
   
 ```  
@@ -697,7 +700,7 @@ int main( )
 The lowercase string is: hello, my name is john  
 ```  
   
-##  <a name="toupper"></a>CType::toupper  
+##  <a name="toupper"></a>  CType::toupper  
  Konwertuje znak lub zakres znaków na wielkie litery.  
   
 ```  
@@ -748,7 +751,7 @@ int main( )
 The uppercase string is: HELLO, MY NAME IS JOHN  
 ```  
   
-##  <a name="widen"></a>CType::widen  
+##  <a name="widen"></a>  CType::widen  
  Konwertuje znak typu `char` zestawu do odpowiedniego znaku typu natywnego znaków `CharType` używane przez ustawień regionalnych.  
   
 ```  
@@ -808,6 +811,6 @@ Hello everyone!
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Ustawienia regionalne >](../standard-library/locale.md)   
+ [\<locale>](../standard-library/locale.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

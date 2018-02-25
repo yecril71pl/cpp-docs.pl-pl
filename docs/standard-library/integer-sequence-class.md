@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - type_traits/std::index_sequence
 - type_traits/std::make_index_sequence
 - type_traits/std::integer_sequence
 - type_traits/std::make_integer_sequence
 - type_traits/std::index_sequence_for
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::index_sequence
 - std::make_index_sequence
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1765d6852248727e808cd9d8a98b56427abd6273
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 90fe4e380072d85e19cf2c4ecb1d9e3e4b913842
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="integersequence-class"></a>integer_sequence — klasa
 Reprezentuje sekwencji liczby całkowitej. Można wywnioskować i rozwiń listę pakietów parametrów w typach ze zmienną liczbą argumentów, takich jak std::tuple\<T... > przekazywane jako argumenty do funkcji.  
@@ -62,7 +65,7 @@ struct integer_sequence
 ## <a name="example"></a>Przykład  
  Poniższy przykład jest oparty na oryginalnym propozycji [N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html). Przedstawiono użycie `integer_sequence` utworzyć `std::tuple` z `std::array<T,N>`i sposobu użycia `integer_sequence` można uzyskać w spójnej kolekcji elementów członkowskich.  
   
- W `a2t` funkcji `index_sequence` jest aliasem `integer_sequence` na podstawie `size_t` typ całkowity. `make_index_sequence`jest to w czasie kompilacji tworzy liczony od zera `index_sequence` z taką samą liczbę elementów co tablica, która jest przekazany przez wywołującego. `a2t`przekazuje `index_sequence` przez wartość `a2t_` , gdzie wyrażenie `a[I]...` wypakowuje `I`, a następnie elementy są zasilana do `make_tuple` co zużywa je jako oddzielne argumenty. Na przykład, jeśli sekwencja zawiera trzy elementy, następnie `make_tuple` nosi nazwę jako make_tuple — ([0], [1], a[2]). Elementy tablicy, same oczywiście mogą być dowolnego typu.  
+ W `a2t` funkcji `index_sequence` jest aliasem `integer_sequence` na podstawie `size_t` typ całkowity. `make_index_sequence` jest to w czasie kompilacji tworzy liczony od zera `index_sequence` z taką samą liczbę elementów co tablica, która jest przekazany przez wywołującego. `a2t` przekazuje `index_sequence` przez wartość `a2t_` , gdzie wyrażenie `a[I]...` wypakowuje `I`, a następnie elementy są zasilana do `make_tuple` co zużywa je jako oddzielne argumenty. Na przykład, jeśli sekwencja zawiera trzy elementy, następnie `make_tuple` nosi nazwę jako make_tuple — ([0], [1], a[2]). Elementy tablicy, same oczywiście mogą być dowolnego typu.  
   
  Funkcja Zastosuj akceptuje [std::tuple](../standard-library/tuple-class.md)i tworzy integer_sequence — za pomocą `tuple_size` Klasa pomocy. Należy pamiętać, że [std::decay_t](../standard-library/decay-class.md)_is niezbędne ponieważ [tuple_size —](../standard-library/tuple-size-class-tuple.md) nie działa z typy referencyjne. `apply_` Funkcji wypakowuje spójnej kolekcji elementów członkowskich i przekazuje je jako osobne argumentów dla wywołania funkcji. W tym przykładzie funkcja jest drukowany wartości wyrażenia lambda proste.  
   

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - exception/std::current_exception
 - exception/std::get_terminate
@@ -18,7 +18,7 @@ f1_keywords:
 - exception/std::uncaught_exception
 - exception/std::unexpected
 ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::current_exception [C++]
@@ -31,21 +31,21 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 616c8d4dd0982f0cd96a3678f6f8595b074f291f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: ea24d26ed840d1c7222abbbf9fce2bc18c2a7a5f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;wyjątek&gt; funkcji
 ||||  
 |-|-|-|  
-|[current_exception](#current_exception)|[get_terminate —](#get_terminate)|[get_unexpected —](#get_unexpected)|  
-|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate —](#set_terminate)|  
-|[set_unexpected —](#set_unexpected)|[Zakończenie](#terminate)|[uncaught_exception](#uncaught_exception)|  
+|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|  
+|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|  
+|[set_unexpected](#set_unexpected)|[Zakończenie](#terminate)|[uncaught_exception](#uncaught_exception)|  
 |[Nieoczekiwany](#unexpected)|  
   
-##  <a name="current_exception"></a>current_exception  
+##  <a name="current_exception"></a>  current_exception  
  Uzyskuje inteligentny wskaźnik na bieżący wyjątek.  
   
 ```cpp  
@@ -64,7 +64,7 @@ exception_ptr current_exception();
   
  Kolejne wywołania `current_exception` funkcji powrotu `exception_ptr` obiekty, które odwołują się do różnych kopii bieżącego wyjątku. W związku z tym obiekty są porównane jako nierówne, ponieważ odnoszą się one do poszczególnych kopii, mimo że kopie mają tę samą wartość binarną.  
   
-##  <a name="make_exception_ptr"></a>make_exception_ptr  
+##  <a name="make_exception_ptr"></a>  make_exception_ptr  
  Tworzy [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) obiekt przechowujący kopię Wystąpił wyjątek.  
   
 ```cpp  
@@ -84,7 +84,7 @@ exception_ptr make_exception_ptr(E Except);
   
  Zwykle nie wymaga aplikacji `make_exception_ptr` funkcji i firma Microsoft zniechęcić jej użycia.  
   
-##  <a name="rethrow_exception"></a>rethrow_exception  
+##  <a name="rethrow_exception">rethrow_exception</a>  
  Zgłasza wyjątek przekazany jako parametr.  
   
 ```cpp  
@@ -98,14 +98,14 @@ void rethrow_exception(exception_ptr P);
 ### <a name="remarks"></a>Uwagi  
  Po przechowywania zgłoszony wyjątek w `exception_ptr` obiekt podstawowy wątku można przetworzyć obiektu. W sieci podstawowej wątku wywołać `rethrow_exception` działają razem z `exception_ptr` obiektu jako jej argument. `rethrow_exception` Funkcja wyodrębnia wyjątku z `exception_ptr` obiekt, a następnie zgłasza wyjątek w kontekście podstawowy wątku.  
   
-##  <a name="get_terminate"></a>get_terminate —  
+##  <a name="get_terminate"></a>  get_terminate —  
  Pobiera bieżący `terminate_handler` funkcji.  
   
 ```cpp  
 terminate_handler get_terminate();
 ```  
   
-##  <a name="set_terminate"></a>set_terminate —  
+##  <a name="set_terminate"></a>  set_terminate —  
  Określa nową `terminate_handler` ma być wywoływana po zakończeniu programu.  
   
 ```  
@@ -151,14 +151,14 @@ int main()
   
 ```  
   
-##  <a name="get_unexpected"></a>get_unexpected —  
+##  <a name="get_unexpected"></a>  get_unexpected —  
  Pobiera bieżący `unexpected_handler` funkcji.  
   
 ```cpp  
 unexpected_handler get_unexpected();
 ```  
   
-##  <a name="set_unexpected"></a>set_unexpected —  
+##  <a name="set_unexpected"></a>  set_unexpected —  
  Określa nową `unexpected_handler` się po wystąpił nieoczekiwany wyjątek napotkano.  
   
 ```  
@@ -173,7 +173,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
  Adres poprzedniego `unexpected_handler`.  
   
 ### <a name="remarks"></a>Uwagi  
- `fnew`nie może mieć pustego wskaźnika.  
+ `fnew` nie może mieć pustego wskaźnika.  
   
  C++ Standard wymaga, aby `unexpected` jest wywoływane, gdy funkcja zwraca wyjątek, który nie znajduje się na liście throw. Bieżąca implementacja nie obsługuje to. Następujące przykładowe wywołania `unexpected` bezpośrednio, które następnie wywołuje `unexpected_handler`.  
   
@@ -203,7 +203,7 @@ int main()
   
 ```  
   
-##  <a name="terminate"></a>Zakończenie  
+##  <a name="terminate">Zakończenie</a>  
  Wywołuje terminate_handler.  
   
 ```  
@@ -218,7 +218,7 @@ void terminate();
 ### <a name="example"></a>Przykład  
   Zobacz [set_unexpected —](../standard-library/exception-functions.md#set_unexpected) na przykład użycie **przerwanie**.  
   
-##  <a name="uncaught_exception"></a>uncaught_exception  
+##  <a name="uncaught_exception"></a>  uncaught_exception  
  Zwraca `true` tylko wtedy, gdy zwrócony wyjątek jest obecnie przetwarzana w.  
   
 ```  
@@ -281,7 +281,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0  
 ```  
   
-##  <a name="unexpected"></a>Nieoczekiwany  
+##  <a name="unexpected">Nieoczekiwany</a>  
  Wywołuje program obsługi nieoczekiwany.  
   
 ```  

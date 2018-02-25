@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xcomplex/std::abs
 - xcomplex/std::acos
@@ -28,7 +28,7 @@ f1_keywords:
 - xcomplex/std::tan
 - xcomplex/std::tanh
 ms.assetid: 58b14e94-0e0c-493e-8237-8b4d685904a2
-caps.latest.revision: "14"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::abs [C++]
@@ -49,23 +49,23 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 14fed0ac2d0714989e78459a74b48fd8173c7632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: aee4e410bae6ea3fc3726ac29c250e2339e0fcb0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;złożone&gt; funkcji
 ||||  
 |-|-|-|  
 |[ABS](#abs)|[ARG](#arg)|[conj](#conj)|
 |[COS](#cos)|[COSH](#cosh)|[EXP](#exp)|
-|[imag](#imag)|[Dziennik](#log)|[LOG10](#log10)|
+|[imag](#imag)|[log](#log)|[log10](#log10)|
 |[norm —](#norm)|[polar](#polar)|[Pow](#pow)|
-|[rzeczywiste](#real)|[SIN](#sin)|[SINH](#sinh)|
-|[SQRT](#sqrt)|[tan](#tan)|[TANH](#tanh)|  
+|[real](#real)|[sin](#sin)|[SINH](#sinh)|
+|[sqrt](#sqrt)|[tan](#tan)|[TANH](#tanh)|  
   
-##  <a name="abs"></a>ABS  
+##  <a name="abs">ABS</a>  
  Oblicza resztę z liczbą.  
   
 ```  
@@ -148,7 +148,7 @@ Argument of c2 is recovered from c2 using:
 The complex numbers c2 & c3 have the same principal arguments.  
 ```  
   
-##  <a name="arg"></a>ARG  
+##  <a name="arg">ARG</a>  
  Wyodrębnia argument z liczbą.  
   
 ```  
@@ -231,7 +231,7 @@ Argument of c2 is recovered from c2 using:
 The complex numbers c2 & c3 have the same principal arguments.  
 ```  
   
-##  <a name="conj"></a>conj  
+##  <a name="conj">conj</a>  
  Zwraca zespolonej liczbą.  
   
 ```  
@@ -302,7 +302,7 @@ The imaginary part of c2 is imag ( c2 ) = -3.
 The norm of (c1 * conj (c1) ) is c1 * c2 = 25  
 ```  
   
-##  <a name="cos"></a>COS  
+##  <a name="cos">COS</a>  
  Zwraca cosinus liczby złożonej.  
   
 ```  
@@ -389,7 +389,7 @@ The complex components cos (vci), where abs (vci) = 1
 (0.540302,-1.74036e-013)  
 ```  
   
-##  <a name="cosh"></a>COSH  
+##  <a name="cosh">COSH</a>  
  Zwraca cosinus hiperboliczny dla liczby złożonej.  
   
 ```  
@@ -476,7 +476,7 @@ The complex components cosh (vci), where abs (vci) = 1
 (1.54308,2.43059e-013)  
 ```  
   
-##  <a name="exp"></a>EXP  
+##  <a name="exp">EXP</a>  
  Zwraca funkcja wykładnicza z liczbą.  
   
 ```  
@@ -544,7 +544,7 @@ int main() {
 }  
 ```  
   
-##  <a name="imag"></a>imag  
+##  <a name="imag"></a>  imag  
  Wyodrębnia urojony składnik liczbą.  
   
 ```  
@@ -592,7 +592,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.  
 ```  
   
-##  <a name="log"></a>Dziennik  
+##  <a name="log"></a>  Dziennik  
  Zwraca logarytm naturalny liczby złożonej.  
   
 ```  
@@ -658,7 +658,7 @@ int main() {
 }  
 ```  
   
-##  <a name="log10"></a>LOG10  
+##  <a name="log10"></a>  LOG10  
  Zwraca logarytm 10 liczbą.  
   
 ```  
@@ -724,7 +724,7 @@ int main() {
 }  
 ```  
   
-##  <a name="norm"></a>norm —  
+##  <a name="norm">norm —</a>  
  Wyodrębnia normy liczbą.  
   
 ```  
@@ -803,7 +803,7 @@ The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.  
 ```  
   
-##  <a name="polar"></a>polar  
+##  <a name="polar"></a>  polar  
  Zwraca liczby złożonej, co odpowiada określonym modulo i argumentu, w postaci kartezjańskimi.  
   
 ```  
@@ -876,7 +876,7 @@ Argument of c2 is recovered from c2 using:
  arg ( c2 ) = 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="pow"></a>Pow  
+##  <a name="pow">Pow</a>  
  Oblicza liczby złożonej uzyskany przez zwiększenie base, która jest liczbą do potęgi równej innej liczbie złożone.  
   
 ```  
@@ -1017,7 +1017,7 @@ The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.  
 ```  
   
-##  <a name="real"></a>rzeczywiste  
+##  <a name="real"></a>  rzeczywiste  
  Wyodrębnia rzeczywistych składnik liczbą.  
   
 ```  
@@ -1065,7 +1065,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.  
 ```  
   
-##  <a name="sin"></a>SIN  
+##  <a name="sin"></a>  SIN  
  Zwraca sinus liczby złożonej.  
   
 ```  
@@ -1152,7 +1152,7 @@ The complex components sin (vci), where abs (vci) = 1
 (-0.841471,-1.11747e-013)  
 ```  
   
-##  <a name="sinh"></a>SINH  
+##  <a name="sinh">SINH</a>  
  Zwraca sinus hiperboliczny liczby złożonej.  
   
 ```  
@@ -1239,7 +1239,7 @@ The complex components sinh (vci), where abs (vci) = 1
 (-1.1752,-3.19145e-013)  
 ```  
   
-##  <a name="sqrt"></a>SQRT  
+##  <a name="sqrt"></a>  SQRT  
  Oblicza pierwiastek kwadratowy z liczby złożonej.  
   
 ```  
@@ -1312,7 +1312,7 @@ The argument of c2 = ( 1 / 2 ) * arg ( c1 ) =0.785398 radians,
  which is 45 degrees.  
 ```  
   
-##  <a name="tan"></a>tan  
+##  <a name="tan">tan</a>  
  Zwraca tangens liczby złożonej.  
   
 ```  
@@ -1397,7 +1397,7 @@ The complex components tan (vci), where abs (vci) = 1
 (-1.55741,-7.08476e-013)  
 ```  
   
-##  <a name="tanh"></a>TANH  
+##  <a name="tanh">TANH</a>  
  Zwraca tangens hiperboliczny dla liczby złożonej.  
   
 ```  

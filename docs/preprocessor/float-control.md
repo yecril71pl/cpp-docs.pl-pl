@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.float_control
 - float_control_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 821890c7fdb719b5ab320588476bd1ebb73793ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1525b92b43a688cdec970c646613aa4474d44cc3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="floatcontrol"></a>float_control
 Określa zachowania zmiennoprzecinkowego dla funkcji.  
@@ -37,7 +40,7 @@ float_control( value,setting [push] | push | pop )
   
 ## <a name="flags"></a>Flagi  
  `value`, `setting` **[wypychania]**  
- Określa zachowanie zmiennoprzecinkowych. `value`może być **dokładne** lub **z wyjątkiem**. Aby uzyskać więcej informacji, zobacz [/fp (określenie zachowania Floating-Point)](../build/reference/fp-specify-floating-point-behavior.md). `setting`można albo być **na** lub **poza**.  
+ Określa zachowanie zmiennoprzecinkowych. `value` może być **dokładne** lub **z wyjątkiem**. Aby uzyskać więcej informacji, zobacz [/fp (określenie zachowania Floating-Point)](../build/reference/fp-specify-floating-point-behavior.md). `setting` można albo być **na** lub **poza**.  
   
  Jeśli `value` jest **dokładne**, ustawienia **dokładne** i **z wyjątkiem** określania. **z wyjątkiem** można ustawić tylko na **na** podczas **dokładne** również ustawiono **na**.  
   

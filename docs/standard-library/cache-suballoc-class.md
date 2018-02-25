@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - allocators/stdext::cache_suballoc
 - allocators/stdext::cache_suballoc::allocate
 - allocators/stdext::cache_suballoc::deallocate
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::cache_suballoc
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d53e0438d73aa73a32f26d417ea60c4540162125
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 08124225ae5ee0bf7e2575e0eb8cf97a5e683620
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc — Klasa
 Definiuje [zablokować alokatora](../standard-library/allocators-header.md) przydziela i zwalnia bloki pamięci o rozmiarze pojedynczego.  
@@ -53,21 +56,21 @@ class cache_suballoc
   
 |||  
 |-|-|  
-|[cache_suballoc —](#cache_suballoc)|Tworzy obiekt typu `cache_suballoc`.|  
+|[cache_suballoc](#cache_suballoc)|Tworzy obiekt typu `cache_suballoc`.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
 |||  
 |-|-|  
 |[allocate](#allocate)|Przydziela bloku pamięci.|  
-|[cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|  
+|[Cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<allocators — >  
   
  **Namespace:** stdext —  
   
-##  <a name="allocate"></a>cache_suballoc::allocate  
+##  <a name="allocate"></a>  cache_suballoc::allocate  
  Przydziela bloku pamięci.  
   
 ```
@@ -85,7 +88,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="cache_suballoc"></a>cache_suballoc::cache_suballoc  
+##  <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc  
  Tworzy obiekt typu `cache_suballoc`.  
   
 ```
@@ -94,7 +97,7 @@ cache_suballoc();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="deallocate"></a>cache_suballoc::deallocate  
+##  <a name="deallocate"></a>  cache_suballoc::deallocate  
  Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.  
   
 ```
@@ -111,7 +114,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Uwagi  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<allocators — >](../standard-library/allocators-header.md)
+ [\<allocators>](../standard-library/allocators-header.md)
 
 
 

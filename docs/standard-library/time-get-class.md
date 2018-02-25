@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xloctime/std::time_get
 - locale/std::time_get::char_type
@@ -25,7 +26,8 @@ f1_keywords:
 - locale/std::time_get::get_time
 - locale/std::time_get::get_weekday
 - locale/std::time_get::get_year
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::time_get [C++]
 - std::time_get [C++], char_type
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - std::time_get [C++], get_weekday
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2bc6d855b1ff1776cdbb1777a4250317accac68a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b1c682110c032150c8406d93c83b89efbc5bc802
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timeget-class"></a>time_get — Klasa
 Klasa szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do sterowania konwersje sekwencji typu `CharType` do wartości typu time.  
@@ -81,7 +84,7 @@ class time_get : public time_base;
   
 |||  
 |-|-|  
-|[time_get —](#time_get)|Konstruktor dla obiektów typu `time_get`.|  
+|[time_get](#time_get)|Konstruktor dla obiektów typu `time_get`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -114,7 +117,7 @@ class time_get : public time_base;
   
  **Namespace:** Standard  
   
-##  <a name="char_type"></a>time_get::char_type  
+##  <a name="char_type"></a>  time_get::char_type  
  Typ opisujący znak używany przez ustawienie regionalne.  
   
 ```  
@@ -124,7 +127,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu **CharType**.  
   
-##  <a name="date_order"></a>time_get::date_order  
+##  <a name="date_order"></a>  time_get::date_order  
  Zwraca kolejność dat używaną przez zestaw reguł.  
   
 ```  
@@ -181,7 +184,7 @@ German_Germany.1252(day, month, year)
 English_United Kingdom.1252(day, month, year)  
 ```  
   
-##  <a name="do_date_order"></a>time_get::do_date_order  
+##  <a name="do_date_order"></a>  time_get::do_date_order  
  Chroniona funkcja wirtualna elementu członkowskiego, wywoływana, aby zwrócić kolejność dat używaną przez zestaw reguł.  
   
 ```  
@@ -197,7 +200,7 @@ virtual dateorder do_date_order() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [date_order](#date_order), które wywołuje `do_date_order`.  
   
-##  <a name="do_get"></a>time_get::do_get  
+##  <a name="do_get"></a>  time_get::do_get  
  Odczytuje i konwertuje dane znakowe na wartość czasu. Akceptuje konwersji jeden specyfikator i modyfikator.  
   
 ```  
@@ -242,55 +245,55 @@ virtual iter_type
   
  Specyfikatory konwersji są:  
   
- `'a'`lub `'A'` — działa tak samo jak [time_get::get_weekday](#get_weekday).  
+ `'a'` lub `'A'` — działa tak samo jak [time_get::get_weekday](#get_weekday).  
   
  `'b'`, `'B'`, lub `'h'` — działa tak samo jak [time_get::get_monthname](#get_monthname).  
   
- `'c'`--działa tak samo jak `"%b %d %H : %M : %S %Y"`.  
+ `'c'` --działa tak samo jak `"%b %d %H : %M : %S %Y"`.  
   
- `'C'`--Konwertuje wartość dziesiętną pola wejściowego w zakresie [0, 99] `val` i przechowuje `val * 100 - 1900` w `pt-&tm_year`.  
+ `'C'` --Konwertuje wartość dziesiętną pola wejściowego w zakresie [0, 99] `val` i przechowuje `val * 100 - 1900` w `pt-&tm_year`.  
   
- `'d'`lub `'e'` — Konwertuje dziesiętną pola wejściowego z zakresu [1, 31] i przechowuje wartości `pt-&tm_mday`.  
+ `'d'` lub `'e'` — Konwertuje dziesiętną pola wejściowego z zakresu [1, 31] i przechowuje wartości `pt-&tm_mday`.  
   
- `'D'`--działa tak samo jak `"%m / %d / %y"`.  
+ `'D'` --działa tak samo jak `"%m / %d / %y"`.  
   
- `'H'`--Konwertuje dziesiętną pola wejściowego w zakresie [0, 23] i przechowuje wartości `pt-&tm_hour`.  
+ `'H'` --Konwertuje dziesiętną pola wejściowego w zakresie [0, 23] i przechowuje wartości `pt-&tm_hour`.  
   
- `'I'`--Konwertuje dziesiętną pola wejściowego w zakresie [0, 11] i przechowuje wartości `pt-&tm_hour`.  
+ `'I'` --Konwertuje dziesiętną pola wejściowego w zakresie [0, 11] i przechowuje wartości `pt-&tm_hour`.  
   
- `'j'`--Konwertuje dziesiętną pola wejściowego z zakresu [1, 366] i przechowuje wartości `pt-&tm_yday`.  
+ `'j'` --Konwertuje dziesiętną pola wejściowego z zakresu [1, 366] i przechowuje wartości `pt-&tm_yday`.  
   
- `'m'`--Konwertuje wartość dziesiętną pola wejściowego z zakresu [1, 12] `val` i przechowuje `val - 1` w i przechowuje wartości `pt-&tm_mon`.  
+ `'m'` --Konwertuje wartość dziesiętną pola wejściowego z zakresu [1, 12] `val` i przechowuje `val - 1` w i przechowuje wartości `pt-&tm_mon`.  
   
- `'M'`--Konwertuje dziesiętną pola wejściowego w zakresie [0, 59] i przechowuje wartości `pt-&tm_min`.  
+ `'M'` --Konwertuje dziesiętną pola wejściowego w zakresie [0, 59] i przechowuje wartości `pt-&tm_min`.  
   
- `'n'`lub `'t'` — działa tak samo jak `" "`.  
+ `'n'` lub `'t'` — działa tak samo jak `" "`.  
   
- `'p'`--Konwertuje "M" lub "m" zero "PM" i "PM" 12 i dodaje tę wartość na `pt-&tm_hour`.  
+ `'p'` --Konwertuje "M" lub "m" zero "PM" i "PM" 12 i dodaje tę wartość na `pt-&tm_hour`.  
   
- `'r'`--działa tak samo jak `"%I : %M : %S %p"`.  
+ `'r'` --działa tak samo jak `"%I : %M : %S %p"`.  
   
- `'R'`--działa tak samo jak `"%H %M"`.  
+ `'R'` --działa tak samo jak `"%H %M"`.  
   
- `'S'`--Konwertuje dziesiętną pola wejściowego w zakresie [0, 59] i przechowuje wartości `pt-&tm_sec`.  
+ `'S'` --Konwertuje dziesiętną pola wejściowego w zakresie [0, 59] i przechowuje wartości `pt-&tm_sec`.  
   
- `'T'`lub `'X'` — działa tak samo jak `"%H : %M : S"`.  
+ `'T'` lub `'X'` — działa tak samo jak `"%H : %M : S"`.  
   
- `'U'`--Konwertuje dziesiętną pola wejściowego w zakresie [0, 53] i przechowuje wartości `pt-&tm_yday`.  
+ `'U'` --Konwertuje dziesiętną pola wejściowego w zakresie [0, 53] i przechowuje wartości `pt-&tm_yday`.  
   
- `'w'`--Konwertuje dziesiętną pola wejściowego w zakresie [0, 6] i przechowuje wartości `pt-&tm_wday`.  
+ `'w'` --Konwertuje dziesiętną pola wejściowego w zakresie [0, 6] i przechowuje wartości `pt-&tm_wday`.  
   
- `'W'`--Konwertuje dziesiętną pola wejściowego w zakresie [0, 53] i przechowuje wartości `pt-&tm_yday`.  
+ `'W'` --Konwertuje dziesiętną pola wejściowego w zakresie [0, 53] i przechowuje wartości `pt-&tm_yday`.  
   
- `'x'`--działa tak samo jak `"%d / %m / %y"`.  
+ `'x'` --działa tak samo jak `"%d / %m / %y"`.  
   
- `'y'`--Konwertuje wartość dziesiętną pola wejściowego w zakresie [0, 99] `val` i przechowuje `val < 69  val + 100 : val` w `pt-&tm_year`.  
+ `'y'` --Konwertuje wartość dziesiętną pola wejściowego w zakresie [0, 99] `val` i przechowuje `val < 69  val + 100 : val` w `pt-&tm_year`.  
   
- `'Y'`--działa tak samo jak [time_get::get_year](#get_year).  
+ `'Y'` --działa tak samo jak [time_get::get_year](#get_year).  
   
  Inne zestawy specyfikatora konwersji `ios_base::failbit` w `state` i zwraca. W tej implementacji wszelkich modyfikator nie ma znaczenia.  
   
-##  <a name="do_get_date"></a>time_get::do_get_date  
+##  <a name="do_get_date"></a>  time_get::do_get_date  
  A chronione wirtualnej funkcji członkowskiej wywoływaną, można przeanalizować ciągu jako data utworzonego przez *x* specyfikatora `strftime`.  
   
 ```  
@@ -336,7 +339,7 @@ virtual iter_type do_get_date(iter_type first,
 ### <a name="example"></a>Przykład  
   Zobacz przykład [get_date](#get_date), które wywołuje `do_get_date`.  
   
-##  <a name="do_get_monthname"></a>time_get::do_get_monthname  
+##  <a name="do_get_monthname"></a>  time_get::do_get_monthname  
  Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana, aby przeanalizować ciąg jako nazwę miesiąca.  
   
 ```  
@@ -374,7 +377,7 @@ virtual iter_type do_get_monthname(iter_type first,
 ### <a name="example"></a>Przykład  
   Zobacz przykład [get_monthname](#get_monthname), które wywołuje `do_get_monthname`.  
   
-##  <a name="do_get_time"></a>time_get::do_get_time  
+##  <a name="do_get_time"></a>  time_get::do_get_time  
  A chronione wirtualnej funkcji członkowskiej wywoływaną, można przeanalizować ciągu jako data utworzonego przez *X* specyfikatora `strftime`.  
   
 ```  
@@ -420,7 +423,7 @@ virtual iter_type do_get_time(iter_type first,
 ### <a name="example"></a>Przykład  
   Zobacz przykład [get_time](#get_time), które wywołuje `do_get_time`.  
   
-##  <a name="do_get_weekday"></a>time_get::do_get_weekday  
+##  <a name="do_get_weekday"></a>  time_get::do_get_weekday  
  Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana, aby przeanalizować ciąg jako nazwę dnia tygodnia.  
   
 ```  
@@ -458,7 +461,7 @@ virtual iter_type do_get_weekday(iter_type first,
 ### <a name="example"></a>Przykład  
   Zobacz przykład [get_weekday](#get_weekday), które wywołuje `do_get_weekday`.  
   
-##  <a name="do_get_year"></a>time_get::do_get_year  
+##  <a name="do_get_year"></a>  time_get::do_get_year  
  Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana, aby przeanalizować ciąg jako nazwę roku.  
   
 ```  
@@ -496,7 +499,7 @@ virtual iter_type do_get_year(iter_type first,
 ### <a name="example"></a>Przykład  
   Zobacz przykład [get_year](#get_year), które wywołuje `do_get_year`.  
   
-##  <a name="get"></a>time_get::Get  
+##  <a name="get"></a>  time_get::Get  
  Odczytuje ze źródła danych znakowych i konwertuje te dane na czas, który jest przechowywany w strukturze czasu. Akceptuje pierwszej funkcji konwersji jeden specyfikator i modyfikator, drugi akceptuje kilku.  
   
 ```  
@@ -561,7 +564,7 @@ iter_type get(
   
  Element format musi być zgodna następny element wejściowy jest pomijana. Niepowodzenie dopasowania ustawia `ios_base::failbit` w `state` i zwraca.  
   
-##  <a name="get_date"></a>time_get::get_date  
+##  <a name="get_date"></a>  time_get::get_date  
  Analizuje ciąg jako data utworzonego przez *x* specyfikatora `strftime`.  
   
 ```  
@@ -651,7 +654,7 @@ tm_yday: 0
 tm_isdst: 0  
 ```  
   
-##  <a name="get_monthname"></a>time_get::get_monthname  
+##  <a name="get_monthname"></a>  time_get::get_monthname  
  Analizuje ciąg jako nazwę miesiąca.  
   
 ```  
@@ -739,7 +742,7 @@ tm_yday: 0
 tm_isdst: 0  
 ```  
   
-##  <a name="get_time"></a>time_get::get_time  
+##  <a name="get_time"></a>  time_get::get_time  
  Analizuje ciąg jako data utworzonego przez *X* specyfikatora `strftime`.  
   
 ```  
@@ -816,7 +819,7 @@ tm_min: 13
 tm_hour: 11  
 ```  
   
-##  <a name="get_weekday"></a>time_get::get_weekday  
+##  <a name="get_weekday"></a>  time_get::get_weekday  
  Analizuje ciąg jako nazwę dnia tygodnia.  
   
 ```  
@@ -889,7 +892,7 @@ time_get::get_time(mercredi) =
 tm_wday: 3  
 ```  
   
-##  <a name="get_year"></a>time_get::get_year  
+##  <a name="get_year"></a>  time_get::get_year  
  Analizuje ciąg jako nazwę roku.  
   
 ```  
@@ -963,7 +966,7 @@ time_get::get_year(1928) =
 tm_year: 28  
 ```  
   
-##  <a name="iter_type"></a>time_get::iter_type  
+##  <a name="iter_type"></a>  time_get::iter_type  
  Typ, który opisuje iterator danych wejściowych.  
   
 ```  
@@ -973,7 +976,7 @@ typedef InputIterator iter_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu **InputIterator**.  
   
-##  <a name="time_get"></a>time_get::time_get  
+##  <a name="time_get"></a>  time_get::time_get  
  Konstruktor dla obiektów typu `time_get`.  
   
 ```  
@@ -991,14 +994,14 @@ explicit time_get(size_t refs = 0);
   
 -   1: okres istnienia obiektu musi być zarządzane ręcznie.  
   
--   \>1: te wartości są niezdefiniowane.  
+-   \> 1: te wartości są niezdefiniowane.  
   
  Nie bezpośredniego przykładów to możliwe, ponieważ destruktor jest chroniony.  
   
  Konstruktor inicjuje jego obiektu podstawowego z **locale::**[aspektu](../standard-library/locale-class.md#facet_class)( `refs`).  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Ustawienia regionalne >](../standard-library/locale.md)   
+ [\<locale>](../standard-library/locale.md)   
  [time_base — klasa](../standard-library/time-base-class.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

@@ -1,30 +1,34 @@
 ---
-title: "#<a name=\"import-attributes-c--microsoft-docs\"></a>Importowanie atrybutów (C++) | Dokumentacja firmy Microsoft"
+title: "#Importowanie atrybutów (C++) | Dokumentacja firmy Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: '#import directive, attributes'
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d5c2da30fd2b92ea302c40dc7dbef71499fdecdf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 76507ef9d840b9d3544442af2881810d715bd4ca
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-attributes-c"></a>Atrybuty #import (C++)
 Zawiera łącza do atrybuty używane dyrektywy #import.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Następujące atrybuty są dostępne dla dyrektywy #import.  
   
@@ -33,7 +37,7 @@ Zawiera łącza do atrybuty używane dyrektywy #import.
 |[auto_rename](../preprocessor/auto-rename.md)|Zmienia nazwę słowa zastrzeżone w języku C++ przez dołączenie do nazwy zmiennej, aby rozwiązać potencjalne konflikty nazw dwa znaki podkreślenia (_).|  
 |[auto_search](../preprocessor/auto-search.md)|Określa, że z #import odwołuje się do biblioteki typów, a sama odwołuje się do innego biblioteki typów, kompilator można wykonać niejawnej #import biblioteki typów.|  
 |[embedded_idl](../preprocessor/embedded-idl.md)|Określa, czy biblioteki typów są zapisywane do pliku danych .tlh — kod wygenerowany przez atrybut zachowane.|  
-|[Wyklucz](../preprocessor/exclude-hash-import.md)|Wyklucza elementów z generowaną pliki nagłówków biblioteki typu.|  
+|[exclude](../preprocessor/exclude-hash-import.md)|Wyklucza elementów z generowaną pliki nagłówków biblioteki typu.|  
 |[high_method_prefix](../preprocessor/high-method-prefix.md)|Określa prefiks do użycia w nazewnictwa ogólne właściwości i metody.|  
 |[high_property_prefixes](../preprocessor/high-property-prefixes.md)|Określa alternatywny prefiksów dla trzech metod właściwości.|  
 |[implementation_only](../preprocessor/implementation-only.md)|Pomija generację .tlh — plik nagłówka (plik nagłówka głównej).|  

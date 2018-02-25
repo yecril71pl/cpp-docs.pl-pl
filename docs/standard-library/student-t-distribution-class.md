@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::student_t_distribution
 - random/std::student_t_distribution::result_type
@@ -17,7 +18,8 @@ f1_keywords:
 - random/std::student_t_distribution::min
 - random/std::student_t_distribution::max
 - random/std::student_t_distribution::param_type
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::student_t_distribution [C++]
 - std::student_t_distribution [C++], result_type
@@ -28,16 +30,17 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f611d9c7093006a5212c68096aecd4b723086e4c
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 744f5294830bdf19d4ace2b1c2925380684f3c92
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution — Klasa
 Generuje studenta *t*-dystrybucji.  
@@ -79,7 +82,7 @@ public:
   
 ||||  
 |-|-|-|  
-|[student_t_distribution —](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|  
+|[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|  
 |`student_t_distribution::operator()`||[param_type](#param_type)|  
   
  Funkcja właściwości `n()` zwraca wartość parametru przechowywanych dystrybucji `n`.  
@@ -168,7 +171,7 @@ Distribution for 10 samples:
   
  **Namespace:** Standard  
   
-##  <a name="student_t_distribution"></a>student_t_distribution::student_t_distribution  
+##  <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution  
  Tworzy dystrybucji.  
   
 ```  
@@ -180,17 +183,17 @@ explicit student_t_distribution(const param_type& parm);
 *n*  
  `n` Parametr dystrybucji.  
   
-*Parametr*  
+*parm*  
  Pakiet parametrów użyta do skonstruowania dystrybucji.  
   
 ### <a name="remarks"></a>Uwagi  
- **Warunek wstępny:**`0.0 < n`  
+ **Warunek wstępny:** `0.0 < n`  
   
  Pierwszy Konstruktor konstrukcji obiektu których przechowywane `n` wartość przechowuje wartość  *n* .  
   
  Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.  
   
-##  <a name="param_type"></a>student_t_distribution::param_type  
+##  <a name="param_type"></a>  student_t_distribution::param_type  
  Przechowuje wszystkie parametry dystrybucji.  
 ```cpp    
 struct param_type {  
@@ -207,11 +210,11 @@ struct param_type {
 *n*  
 `n` Parametr dystrybucji.  
   
-*prawo*  
+*right*  
 `param_type` Obiekt do porównania z tym.  
   
 ### <a name="remarks"></a>Uwagi  
- **Warunek wstępny:**`0.0 < n`  
+ **Warunek wstępny:** `0.0 < n`  
   
  Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.  
   

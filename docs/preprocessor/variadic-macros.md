@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bf4d669f1a716751d02e06c2c52de5df5128b1a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0e3832ab334d31b50edbe0cc1fd5dccbffb61bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="variadic-macros"></a>Makra wariadyczne
 Makra Wariadyczne są makra przypominającej funkcji, które zawiera zmienną liczbę argumentów.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby korzystać ze zmienną liczbą argumentów makra, wielokropka mogą być określone jako ostatni argument formalny w definicji makra i identyfikator zastępczy `__VA_ARGS__` może służyć do definicji Aby wstawić dodatkowe argumenty.  `__VA_ARGS__`zastępuje wszystkie argumenty, które odpowiada wielokropka umieszczaniu między nimi.  
+ Aby korzystać ze zmienną liczbą argumentów makra, wielokropka mogą być określone jako ostatni argument formalny w definicji makra i identyfikator zastępczy `__VA_ARGS__` może służyć do definicji Aby wstawić dodatkowe argumenty.  `__VA_ARGS__` zastępuje wszystkie argumenty, które odpowiada wielokropka umieszczaniu między nimi.  
   
  C Standard określa, że co najmniej jednego argumentu muszą być przekazywane do wielokropka, aby upewnić się, że makro nie odpowiada wyrażeniu zawierającym przecinek końcowy.  Implementacja Visual C++ spowoduje wyłączenie przecinek końcowy, jeżeli nie przekazano argumentów do wielokropka.  
   

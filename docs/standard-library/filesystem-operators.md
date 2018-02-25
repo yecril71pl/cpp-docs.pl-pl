@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::operator==
 - FILESYSTEM/std::experimental::filesystem::operator!=
@@ -17,18 +18,20 @@ f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::operator/
 - FILESYSTEM/std::experimental::filesystem::operator<<
 - FILESYSTEM/std::experimental::filesystem::operator>>
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 102c4833-aa3b-41a8-8998-f5003c546bfd
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 815ff0025372e8b085f7c6f6ea38299bb15c8305
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2fea2837179018e703547a6a66d712404b19a28a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfilesystemgt-operators"></a>&lt;System plików&gt; operatory
 Operatory wykonać leksykalne porównanie dwóch ścieżek jako ciągi. Użyj **równoważne** funkcji, aby określić, czy dwie ścieżki (na przykład ścieżka względna i ścieżką bezwzględną) odnoszą się do tego samego pliku lub katalogu na dysku.  
@@ -73,7 +76,7 @@ bool operator<=(const path& left, const path& right) noexcept;
   
  Funkcja zwraca! (prawo \< po lewej stronie).  
   
-## <a name="operator"></a>operator >  
+## <a name="operator"></a>operator>  
   
 ```  
 bool operator>(const path& left, const path& right) noexcept;  
@@ -81,7 +84,7 @@ bool operator>(const path& left, const path& right) noexcept;
   
  Funkcja zwraca prawo \< po lewej stronie.  
   
-## <a name="operator"></a>operator > =  
+## <a name="operator"></a>operator>=  
   
 ```  
 bool operator>=(const path& left, const path& right) noexcept;  
@@ -112,7 +115,7 @@ basic_ostream<Elem, Traits>& operator<<(basic_ostream<Elem, Traits>& os, const p
   
  Funkcja zwraca os << pval.string\<elementu, cech > ().  
   
-## <a name="operator"></a>operator >>  
+## <a name="operator"></a>operator>>  
   
 ```  
 template <class Elem, class Traits>  

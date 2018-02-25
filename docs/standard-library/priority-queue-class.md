@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - queue/std::priority_queue::container_type
 - queue/std::priority_queue::size_type
@@ -16,7 +17,8 @@ f1_keywords:
 - queue/std::priority_queue::push
 - queue/std::priority_queue::size
 - queue/std::priority_queue::top
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::priority_queue [C++], container_type
 - std::priority_queue [C++], size_type
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2d3c103673029f33d1d7eb36cce431c9b46d0270
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="priorityqueue-class"></a>priority_queue — Klasa
 Klasa karty kontenera szablonu, która umożliwia ograniczenie funkcjonalności ograniczanie dostępu do elementu górnego niektórych odpowiedni typ kontenera, która jest zawsze największej lub o najwyższym priorytecie. Nowe elementy mogą zostać dodane do priority_queue — i górnego elementu priority_queue — mogą być kontrolowane lub usunięty.  
@@ -49,14 +52,14 @@ class priority_queue
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Typ*  
+ Typ  
  Typ danych elementu mają być przechowywane w priority_queue —.  
   
  `Container`  
  Typ podstawowy kontenera używaną do zaimplementowania priority_queue —.  
   
  *Porównaj*  
- Typ, który udostępnia obiekt funkcji, które można porównać dwóch wartości elementu jako klucze sortowania, aby określić ich kolejność względne w priority_queue —. Ten argument jest opcjonalny i binarne predykatu **mniej***\<***typename** *kontenera***:: value_type**  *>*  jest wartością domyślną.  
+ Typ, który udostępnia obiekt funkcji, które można porównać dwóch wartości elementu jako klucze sortowania, aby określić ich kolejność względne w priority_queue —. Ten argument jest opcjonalny i binarne predykatu **mniej***\<***typename** *kontenera***:: value_type*** >* jest wartością domyślną.  
   
 ## <a name="remarks"></a>Uwagi  
  Elementy klasy **typu** określone w szablonie pierwszy parametr obiekt kolejki jest tożsame z [value_type](#value_type) i musi odpowiadać typowi element w klasie podstawowej kontenera **Kontenera** określone przez drugi parametr szablonu. **Typu** musi być możliwa do przypisania, dzięki czemu możliwe jest do kopii obiektów tego typu i można przypisać wartości do zmiennych typu.  
@@ -79,7 +82,7 @@ class priority_queue
   
 |||  
 |-|-|  
-|[priority_queue —](#priority_queue)|Konstruuje `priority_queue` pusta lub jest kopię zakresu obiektu kontenera podstawowej lub innych `priority_queue`.|  
+|[priority_queue](#priority_queue)|Konstruuje `priority_queue` pusta lub jest kopię zakresu obiektu kontenera podstawowej lub innych `priority_queue`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -93,10 +96,10 @@ class priority_queue
   
 |||  
 |-|-|  
-|[pusty](#empty)|Sprawdza, czy `priority_queue` jest pusta.|  
+|[empty](#empty)|Sprawdza, czy `priority_queue` jest pusta.|  
 |[POP](#pop)|Usuwa element największą `priority_queue` z górnej pozycji.|  
 |[push](#push)|Dodaje element do kolejki priorytetu na podstawie priorytetu elementu od operatora <.|  
-|[rozmiar](#size)|Zwraca liczbę elementów w `priority_queue`.|  
+|[Rozmiar](#size)|Zwraca liczbę elementów w `priority_queue`.|  
 |[Do góry](#top)|Zwraca wartość typu const odwołanie do największy element na początku `priority_queue`.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -104,7 +107,7 @@ class priority_queue
   
  **Namespace:** Standard  
   
-##  <a name="container_type"></a>priority_queue::container_type  
+##  <a name="container_type"></a>  priority_queue::container_type  
  Typ, który zapewnia podstawową kontener dostosowania.  
   
 ```  
@@ -119,7 +122,7 @@ typedef Container container_type;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [priority_queue —](#priority_queue) przykład sposobu deklarowanie i użycie `container_type`.  
   
-##  <a name="empty"></a>priority_queue::Empty  
+##  <a name="empty"></a>  priority_queue::Empty  
  Testy, jeśli priority_queue — jest pusta.  
   
 ```  
@@ -163,7 +166,7 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.  
 ```  
   
-##  <a name="pop"></a>priority_queue::POP  
+##  <a name="pop"></a>  priority_queue::POP  
  Usuwa największy element priority_queue — z górnej pozycji.  
   
 ```  
@@ -217,7 +220,7 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.  
 ```  
   
-##  <a name="priority_queue"></a>priority_queue::priority_queue  
+##  <a name="priority_queue"></a>  priority_queue::priority_queue  
  Tworzy priority_queue —, który jest pusta lub który jest kopią zakresu obiektu kontenera podstawowej lub innego priority_queue —.  
   
 ```  
@@ -373,7 +376,7 @@ int main( )
 }  
 ```  
   
-##  <a name="push"></a>priority_queue::push  
+##  <a name="push"></a>  priority_queue::push  
  Dodaje element do kolejki priorytetu na podstawie priorytetu elementu od operatora <.  
   
 ```  
@@ -419,7 +422,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="size"></a>priority_queue::size  
+##  <a name="size"></a>  priority_queue::size  
  Zwraca liczbę elementów w priority_queue —.  
   
 ```  
@@ -458,7 +461,7 @@ The priority_queue length is 1.
 The priority_queue length is now 2.  
 ```  
   
-##  <a name="size_type"></a>priority_queue::size_type  
+##  <a name="size_type"></a>  priority_queue::size_type  
  Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w priority_queue —.  
   
 ```  
@@ -471,7 +474,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [rozmiar](#size) przykład sposobu deklarowanie i użycie `size_type`.  
   
-##  <a name="top"></a>priority_queue::Top  
+##  <a name="top"></a>  priority_queue::Top  
  Zwraca const odwołanie do największy element w górnej części priority_queue —.  
   
 ```  
@@ -516,7 +519,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="value_type"></a>priority_queue::value_type  
+##  <a name="value_type"></a>  priority_queue::value_type  
  Typ, który reprezentuje typ obiektu przechowywane jako element priority_queue —.  
   
 ```  

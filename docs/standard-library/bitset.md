@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <bitset>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <bitset>
+dev_langs:
+- C++
 helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fe8d012c0034354328e5a10f1fa977002639506b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c374c14fa875717d702a92d7188728badb273ce2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset —&gt;
 Definiuje bitset — klasa szablonu i dwa obsługi funkcji szablonu dla reprezentujący i operowanie nimi sekwencji stałym rozmiarze bitów.  
@@ -41,9 +45,9 @@ Definiuje bitset — klasa szablonu i dwa obsługi funkcji szablonu dla reprezen
 |-|-|  
 |[Operator &](../standard-library/bitset-operators.md#op_amp)|Wykonuje iloczynu bitowego AND między dwoma bitsets.|  
 |[Operator <\<](../standard-library/bitset-operators.md#op_lt_lt)|Wstawia tekst reprezentację sekwencji bit do standardowego strumienia wyjściowego.|  
-|[operator >>](../standard-library/bitset-operators.md#op_gt_gt)|Wstawia tekst reprezentację sekwencji bit do Standardowy strumień wejściowy.|  
-|[operator ^](../standard-library/bitset-operators.md#op_xor)|Wykonuje bitowej OR wyłączne między dwoma bitsets.|  
-|[Operator &#124;](../standard-library/bitset-operators.md#op_or)|Wykonuje logiczną lub między dwoma bitsets.|  
+|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Wstawia tekst reprezentację sekwencji bit do Standardowy strumień wejściowy.|  
+|[operator^](../standard-library/bitset-operators.md#op_xor)|Wykonuje bitowej OR wyłączne między dwoma bitsets.|  
+|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Wykonuje logiczną lub między dwoma bitsets.|  
   
 ### <a name="classes"></a>Klasy  
   

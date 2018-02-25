@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - sstream/std::basic_stringbuf
 - sstream/std::basic_stringbuf::allocator_type
@@ -21,7 +22,8 @@ f1_keywords:
 - sstream/std::basic_stringbuf::seekpos
 - sstream/std::basic_stringbuf::str
 - sstream/std::basic_stringbuf::underflow
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_stringbuf [C++]
 - std::basic_stringbuf [C++], allocator_type
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7b1b41f1a12f6b9e97db6ad3014b047bbc0f4b72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 472d63a58c9a44682e942a5ebb6ebdcc7c7b1d2f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf — Klasa
 W tym artykule opisano buforu strumienia, który kontroluje przekazywania elementów typu `Elem`, którego cech znaków są określane przez klasę `Tr`, do i z sekwencję elementy przechowywane w tablicy obiektów.  
@@ -82,7 +85,7 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
   
 |||  
 |-|-|  
-|[basic_stringbuf —](#basic_stringbuf)|Tworzy obiekt typu `basic_stringbuf`.|  
+|[basic_stringbuf](#basic_stringbuf)|Tworzy obiekt typu `basic_stringbuf`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -99,27 +102,27 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
   
 |||  
 |-|-|  
-|[przepełnienie](#overflow)|Funkcja chroniony, wirtualny, który można wywołać po wstawieniu nowego znaku w buforze pełna.|  
+|[overflow](#overflow)|Funkcja chroniony, wirtualny, który można wywołać po wstawieniu nowego znaku w buforze pełna.|  
 |[pbackfail](#pbackfail)|Chroniony element członkowski wirtualnego funkcja próbuje ponownie poddane element buforu wejściowego, następnie ułatwia bieżącego elementu (wskazywana przez wskaźnik następnej).|  
 |[seekoff](#seekoff)|Funkcja chronionego członka wirtualnego próbuje zmienić bieżącego położenia dla strumieni kontrolowane.|  
 |[seekpos](#seekpos)|Funkcja chronionego członka wirtualnego próbuje zmienić bieżącego położenia dla strumieni kontrolowane.|  
 |[str](#str)|Ustawia lub pobiera tekst w buforze ciągu bez zmiany pozycji zapisu.|  
 |swap||  
-|[niedopełnienie](#underflow)|Funkcja chroniony element członkowski wirtualnego można wyodrębnić bieżącego elementu ze strumienia wejściowego.|  
+|[underflow](#underflow)|Funkcja chroniony element członkowski wirtualnego można wyodrębnić bieżącego elementu ze strumienia wejściowego.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<sstream — >  
   
  **Namespace:** Standard  
   
-##  <a name="allocator_type"></a>basic_stringbuf::allocator_type  
+##  <a name="allocator_type"></a>  basic_stringbuf::allocator_type  
  Typ jest synonimem parametru szablonu `Alloc`.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-##  <a name="basic_stringbuf"></a>basic_stringbuf::basic_stringbuf  
+##  <a name="basic_stringbuf"></a>  basic_stringbuf::basic_stringbuf  
  Tworzy obiekt typu `basic_stringbuf`.  
   
 ```  
@@ -143,28 +146,28 @@ basic_stringbuf(
   
  Drugi Konstruktor przydziela kopię sekwencji kontrolowane przez obiekt ciągu `str`. Jeśli `_Mode & ios_base::in` jest różna od zera, ustawia bufor wejściowy należy rozpocząć odczyt na początku sekwencji. Jeśli `_Mode & ios_base::out` jest różna od zera, ustawia bufor wyjściowy ma rozpocząć się zapis na początku sekwencji. Przechowuje także `_Mode` jako tryb stringbuf. Aby uzyskać więcej informacji, zobacz sekcję uwag [basic_stringbuf — klasa](../standard-library/basic-stringbuf-class.md).  
   
-##  <a name="char_type"></a>basic_stringbuf::char_type  
+##  <a name="char_type"></a>  basic_stringbuf::char_type  
  Kojarzy nazwę typu z **elementu** parametru szablonu.  
   
 ```  
 typedef Elem char_type;  
 ```  
   
-##  <a name="int_type"></a>basic_stringbuf::int_type  
+##  <a name="int_type"></a>  basic_stringbuf::int_type  
  Sprawia, że ten typ w zakresie basic_filebuf — jego odpowiednikiem typu o takiej samej nazwie w **Tr** zakresu.  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
-##  <a name="off_type"></a>basic_stringbuf::off_type  
+##  <a name="off_type"></a>  basic_stringbuf::off_type  
  Sprawia, że ten typ w zakresie basic_filebuf — jego odpowiednikiem typu o takiej samej nazwie w **Tr** zakresu.  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
-##  <a name="overflow"></a>basic_stringbuf::Overflow  
+##  <a name="overflow"></a>  basic_stringbuf::Overflow  
  Chronione funkcji wirtualnej można wywołać po wstawieniu nowego znaku w buforze pełna.  
   
 ```  
@@ -185,7 +188,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
   
 -   Go można udostępnić pozycję zapisu przydzielając nowej lub dodatkowej pamięci masowej dla buforu danych wyjściowych. Rozszerzanie buforu wyjściowego w ten sposób rozszerzają wszystkie skojarzone buforu wejściowego.  
   
-##  <a name="pbackfail"></a>basic_stringbuf::pbackfail  
+##  <a name="pbackfail"></a>  basic_stringbuf::pbackfail  
  Funkcja chroniony element członkowski wirtualnego próbuje ponownie poddane element buforze wejściowym, a następnie wprowadź go bieżącego elementu (wskazywana przez wskaźnik następnej).  
   
 ```  
@@ -206,14 +209,14 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
   
 -   Pozycja putback jest dostępny, a sekwencji należy zmienić zezwala na tryb stringbuf ( **trybu & ios_base::out** jest różna od zera), można przechowywać bajtów w pozycji putback i zmniejszyć wskaźnik następnej dla buforu wejściowego.  
   
-##  <a name="pos_type"></a>basic_stringbuf::pos_type  
+##  <a name="pos_type"></a>  basic_stringbuf::pos_type  
  Sprawia, że ten typ w zakresie basic_filebuf — jego odpowiednikiem typu o takiej samej nazwie w **Tr** zakresu.  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
-##  <a name="seekoff"></a>basic_stringbuf::seekoff  
+##  <a name="seekoff"></a>  basic_stringbuf::seekoff  
  Funkcja chronionego członka wirtualnego próbuje zmienić bieżącego położenia dla strumieni kontrolowane.  
   
 ```  
@@ -251,7 +254,7 @@ virtual pos_type seekoff(
   
  Jeśli funkcja pomyślnie Zmienianie jednego lub obu pozycji strumienia, zwraca pozycji w strumieniu wynikowe. W przeciwnym razie nie powiedzie się i zwraca pozycję nieprawidłowy strumień.  
   
-##  <a name="seekpos"></a>basic_stringbuf::seekpos  
+##  <a name="seekpos"></a>  basic_stringbuf::seekpos  
  Funkcja chronionego członka wirtualnego próbuje zmienić bieżącego położenia dla strumieni kontrolowane.  
   
 ```  
@@ -273,7 +276,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
   
  Jeśli **trybu & ios_base::in** jest różna od zera, funkcja zmienia pozycję dalej do odczytu w buforze wejściowym. Jeśli **trybu & ios_base::out** jest różna od zera, funkcja zmienia dalej pozycji do zapisania w buforze danych wyjściowych. Dla strumienia, których to dotyczy musi istnieć buforu. Pozycjonowania operacja się powiodła wynikowy pozycji strumienia musi znajdować się w kontrolowanej sekwencji. W przeciwnym razie (lub jeśli żadna pozycja ma to wpływ na) pozycjonowania kończy się niepowodzeniem.  
   
-##  <a name="str"></a>basic_stringbuf::str  
+##  <a name="str"></a>  basic_stringbuf::str  
  Ustawia lub pobiera tekst w buforze ciągu bez zmiany pozycji zapisu.  
   
 ```  
@@ -332,7 +335,7 @@ zest
 be  
 ```  
   
-##  <a name="traits_type"></a>basic_stringbuf::traits_type  
+##  <a name="traits_type"></a>  basic_stringbuf::traits_type  
  Kojarzy nazwę typu z **Tr** parametru szablonu.  
   
 ```  
@@ -342,7 +345,7 @@ typedef Tr traits_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu **Tr**.  
   
-##  <a name="underflow"></a>basic_stringbuf::underflow  
+##  <a name="underflow"></a>  basic_stringbuf::underflow  
  Chronione funkcji wirtualnych można wyodrębnić bieżącego elementu ze strumienia wejściowego.  
   
 ```  
@@ -355,7 +358,7 @@ virtual int_type underflow();
 ### <a name="remarks"></a>Uwagi  
  Funkcja chroniony element członkowski wirtualnego próbuje wyodrębnić bieżącego elementu **bajtów** z buforu wejściowego wcześniejszego bieżącej pozycji strumienia i zwracać element jako **traits_type::**[do _int_type](../standard-library/char-traits-struct.md#to_int_type)( **bajtów**). Go to zrobić w jednym ze sposobów: Jeśli pozycja odczytu jest dostępny, przyjmuje **bajtów** jako element przechowywane w pozycji odczytu i przesuwa wskaźnik następnej dla buforu wejściowego.  
   
-##  <a name="swap"></a>basic_streambuf::swap  
+##  <a name="swap"></a>  basic_streambuf::swap  
  Zamienia zawartość tego buforu ciągu z innego ciągu buforu.  
   
 ```  
@@ -368,7 +371,7 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="op_eq"></a>basic_stringbuf::operator =  
+##  <a name="op_eq"></a>  basic_stringbuf::operator =  
  Przypisuje zawartość basic_stringbuf — po prawej stronie operatora basic_stringbuf — po lewej stronie.  
   
 ```  

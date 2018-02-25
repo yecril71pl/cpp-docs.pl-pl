@@ -5,26 +5,27 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: ed01a5abeb54f5071968555b563849e2cd4ac1af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 84cac348fcc2c9577b3a0e1f72ac56a4bbabf90f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error —&gt; operatory
 ||||  
 |-|-|-|  
-|[operator! =](#op_neq)|[operator&lt;](#op_lt)|[operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operator&lt;](#op_lt)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Testy, jeśli obiekt po lewej stronie operatora jest taki sam jak obiekt po prawej stronie.  
   
 ```
@@ -48,7 +49,7 @@ bool operator==(const error_condition& left,
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja zwraca `left.category() == right.category() && left.value() == right.value()`.  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Testy, jeśli obiekt po lewej stronie operatora nie jest taki sam jak obiekt po prawej stronie.  
   
 ```
@@ -72,7 +73,7 @@ bool operator!=(const error_condition& left,
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja zwraca `!(left == right)`.  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt">Operator</a>&lt;  
  Sprawdza, czy obiekt jest mniejszy niż obiekt przekazany do porównania.  
   
 ```
@@ -113,7 +114,7 @@ inline bool operator<(
  Ta funkcja sprawdza kolejność błędów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [< system_error — >](../standard-library/system-error.md)
+ [<system_error>](../standard-library/system-error.md)
 
 
 

@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
 - AMPRT/Concurrency::runtime_exception
 - AMPRT/Concurrency::runtime_exception::get_error_code
-dev_langs: C++
-helpviewer_keywords: runtime_exception class
+dev_langs:
+- C++
+helpviewer_keywords:
+- runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 705949f118e85b6dfef2beeccb55fecd63a64882
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 678f0a93577a6e30afbc5e0c6d83aca6b6a7bedc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="runtimeexception-class"></a>runtime_exception — Klasa
 Typ podstawowy dla wyjątków w bibliotece C++ Accelerated ogromną równoległości (AMP).  
@@ -55,7 +59,7 @@ class runtime_exception : public std::exception;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator =](#operator_eq)|Kopiuje zawartość określonego `runtime_exception` obiektu do tego.|  
+|[operator=](#operator_eq)|Kopiuje zawartość określonego `runtime_exception` obiektu do tego.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `exception`  
@@ -67,7 +71,7 @@ class runtime_exception : public std::exception;
   
  **Namespace:** współbieżności  
 
-## <a name="runtime_exception__ctor"></a>runtime_exception — Konstruktor  
+## <a name="runtime_exception__ctor">runtime_exception — Konstruktor</a>  
 Inicjuje nowe wystąpienie klasy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -97,7 +101,7 @@ runtime_exception(
 ### <a name="return-value"></a>Wartość zwracana  
  `runtime_exception` Obiektu.  
 
-## <a name="dtor"></a>~ runtime_exception — destruktor  
+## <a name="dtor">~ runtime_exception — destruktor</a>  
 Niszczy obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -106,7 +110,7 @@ Niszczy obiektu.
 virtual ~runtime_exception() throw();  
 ```  
   
-## <a name="runtime_exception__get_error_code"></a>get_error_code   
+## <a name="runtime_exception__get_error_code"></a>  get_error_code   
 Zwraca kod błędu, który spowodował wyjątek.  
   
 ### <a name="syntax"></a>Składnia  
@@ -118,7 +122,7 @@ HRESULT get_error_code() const throw();
 ### <a name="return-value"></a>Wartość zwracana  
  HRESULT błędu, który spowodował wyjątek.  
   
-## <a name="runtime_exception__operator_eq"></a>operator =   
+## <a name="runtime_exception__operator_eq"></a>  operator =   
   Kopiuje zawartość określonego `runtime_exception` obiektu do tego.  
   
 ### <a name="syntax"></a>Składnia  

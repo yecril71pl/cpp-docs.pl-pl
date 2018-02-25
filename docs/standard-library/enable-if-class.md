@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: type_traits/std::enable_if
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- type_traits/std::enable_if
+dev_langs:
+- C++
 helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 627fd8fa2050141c570f6448bb3cf98142bb6ffc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enableif-class"></a>enable_if — Klasa
 Warunkowo sprawia, że wystąpienie typu techniki SFINAE przeciążenia. Zagnieżdżony element typedef `enable_if<Condition,Type>::type` istnieje, i jest synonimem `Type`— tylko wtedy, gdy `Condition` jest `true`.  
@@ -114,7 +118,7 @@ yourfunction(args, typename enable_if<your_condition, void **>::type = nullptr) 
   
  Scenariusz 4 działa w konstruktorach, które nie mają zwracanych typów, a tym samym rozwiązuje ograniczenia zawijania scenariusz 1.  Jednak Scenariusz 4 jest ograniczona do argumentów bez szablonu funkcji, które nie są zawsze dostępne.  (Używanie Scenariusz 4 na parametr szablonu funkcji uniemożliwia Wnioskowanie argumentu szablonu z pracy).  
   
- `enable_if`są wydajne, ale również niebezpieczne jest niewłaściwego użycia.  Ponieważ jego celem jest zapewnienie kandydatów znikają przed wiązaniem, gdy jest niewłaściwego użycia, jego skutków może być bardzo trudne.  Poniżej przedstawiono kilka zaleceń:  
+ `enable_if` są wydajne, ale również niebezpieczne jest niewłaściwego użycia.  Ponieważ jego celem jest zapewnienie kandydatów znikają przed wiązaniem, gdy jest niewłaściwego użycia, jego skutków może być bardzo trudne.  Poniżej przedstawiono kilka zaleceń:  
   
 -   Nie używaj `enable_if` wybrać między implementacji w czasie kompilacji. Nigdy nie zapisu jedną `enable_if` dla `CONDITION` i drugi dla `!CONDITION`.  Zamiast tego należy użyć *tagu wysyłania* wzorzec — na przykład z algorytmu, który wybiera implementacji w zależności od możliwości Iteratory one otrzymuje.  
   
@@ -133,7 +137,7 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```  
   
-  W tym przykładzie `make_pair("foo", "bar")` zwraca `pair<const char *, const char *>`. Rozpoznanie przeciążenia musi ustalić, które `func()` ma. `pair<A, B>`ma niejawnie konwertowania konstruktora z `pair<X, Y>`.  Nie jest to nowy — w języku C ++ 98. Jednak w języku C ++ 98/03, sygnatury konstruktora niejawnie konwertowania istnieje zawsze, nawet jeśli jest ona `pair<int, int>(const pair<const char *, const char *>&)`.  Rozpoznanie przeciążenia nie szczególną uwagę, że próba uruchomienia tego konstruktora horribly rozkłada ponieważ `const char *` nie umożliwiają niejawnej konwersji na `int`; tylko wyszukiwania podpisów, przed funkcją tworzone są definicje.  W związku z tym przykładowy kod jest niejednoznaczny, ponieważ istnieje podpisów można przekonwertować `pair<const char *, const char *>` zarówno `pair<int, int>` i `pair<string, string>`.  
+  W tym przykładzie `make_pair("foo", "bar")` zwraca `pair<const char *, const char *>`. Rozpoznanie przeciążenia musi ustalić, które `func()` ma. `pair<A, B>` ma niejawnie konwertowania konstruktora z `pair<X, Y>`.  Nie jest to nowy — w języku C ++ 98. Jednak w języku C ++ 98/03, sygnatury konstruktora niejawnie konwertowania istnieje zawsze, nawet jeśli jest ona `pair<int, int>(const pair<const char *, const char *>&)`.  Rozpoznanie przeciążenia nie szczególną uwagę, że próba uruchomienia tego konstruktora horribly rozkłada ponieważ `const char *` nie umożliwiają niejawnej konwersji na `int`; tylko wyszukiwania podpisów, przed funkcją tworzone są definicje.  W związku z tym przykładowy kod jest niejednoznaczny, ponieważ istnieje podpisów można przekonwertować `pair<const char *, const char *>` zarówno `pair<int, int>` i `pair<string, string>`.  
   
  C ++ 11 rozwiązać tę niejednoznaczność za pomocą `enable_if` do upewnij się, że `pair<A, B>(const pair<X, Y>&)` istnieje **tylko** podczas `const X&` niejawnie przekonwertować `A` i `const Y&` niejawnie przekonwertować `B`.  Dzięki temu Rozpoznanie przeciążenia określić, że `pair<const char *, const char *>` nie jest możliwe do przekonwertowania na `pair<int, int>` i że przeciążenie pobierającej `pair<string, string>` jest działało.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::get_x
 - amp_short_vectors/Concurrency::graphics::int_3::operator-=
@@ -77,18 +78,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::get_zyx
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 395d548e322ffcaed91536a781c7d5d821b6a446
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d66a71701fb0806dbd93490587a9e0d8b3af46fe
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="int3-class"></a>int_3 — Klasa
 Reprezentuje krótki wektorem liczb całkowitych trzy.  
@@ -111,7 +114,7 @@ class int_3;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[int_3 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[int_3 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -161,18 +164,18 @@ class int_3;
 |int_3::operator-||  
 |int_3::operator--||  
 |int_3::operator % =||  
-|int_3::operator & =||  
+|int_3::operator&=||  
 |int_3::operator * =||  
 |int_3::operator / =||  
-|int_3::operator ^ =||  
-|int_3::operator &#124; =||  
+|int_3::operator^=||  
+|int_3::operator&#124;=||  
 |int_3::operator ~||  
 |int_3::operator ++||  
-|int_3::operator +=||  
+|int_3::operator+=||  
 |int_3::operator <\<=||  
-|int_3::operator =||  
+|int_3::operator=||  
 |int_3::operator-=||  
-|int_3::operator >> =||  
+|int_3::operator>>=||  
   
 ### <a name="public-constants"></a>Publiczny — stałe  
   
@@ -185,20 +188,20 @@ class int_3;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |int_3::b||  
-|int_3::BG||  
-|int_3::BGR||  
+|int_3::bg||  
+|int_3::bgr||  
 |int_3::br||  
 |int_3::brg||  
 |int_3::g||  
-|int_3::GB||  
-|int_3::GBR||  
-|int_3::GR||  
+|int_3::gb||  
+|int_3::gbr||  
+|int_3::gr||  
 |int_3::grb||  
 |int_3::r||  
-|int_3::RB||  
-|int_3::RBG||  
-|int_3::RG||  
-|int_3::RGB||  
+|int_3::rb||  
+|int_3::rbg||  
+|int_3::rg||  
+|int_3::rgb||  
 |int_3::x||  
 |int_3::xy||  
 |int_3::xyz||  
@@ -210,7 +213,7 @@ class int_3;
 |int_3::yz||  
 |int_3::yzx||  
 |int_3::z||  
-|int_3::ZX||  
+|int_3::zx||  
 |int_3::zxy||  
 |int_3::zy||  
 |int_3::zyx||  
@@ -223,7 +226,7 @@ class int_3;
   
  **Namespace:** Concurrency::graphics  
 
-## <a name="ctor"></a>int_3 — 
+## <a name="ctor"></a> int_3 
 
 Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
   
@@ -275,7 +278,7 @@ explicit inline int_3(
  `_Other`  
  Obiekt używany do inicjowania.  
   
-## <a name="size"></a>rozmiar 
+## <a name="size"></a> Rozmiar 
 
 ## <a name="syntax"></a>Składnia  
   

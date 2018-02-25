@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.comment
 - comment_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - annotations [C++]
 - comments [C++], compiled files
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4dc4c9036565c2571371c172f61de4948c188f83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1062923f50470a2238af21676c4137fac241905
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="comment-cc"></a>komentarz (C/C++)
 Umieszcza rekord komentarz w pliku obiektu lub plik wykonywalny.  
@@ -41,20 +44,20 @@ Umieszcza rekord komentarz w pliku obiektu lub plik wykonywalny.
 ## <a name="remarks"></a>Uwagi  
  *Typ komentarza* jest jednym z wstępnie zdefiniowane identyfikatory, opisane poniżej, określający typ rekordu komentarza. Opcjonalny `commentstring` jest literałem ciągu zawierający dodatkowe informacje dla niektórych typów komentarza. Ponieważ `commentstring` jest ciągiem literału, jego przestrzega wszystkie reguły dla literałów ciągów względem znaki specjalne, osadzone cudzysłowy (**"**) i łączenia.  
   
- **kompilatora**  
+ **compiler**  
  Umieszcza nazwę i numer wersji kompilatora w pliku obiektu. Rekord ten komentarz jest ignorowana przez konsolidator. Jeśli podasz `commentstring` parametru dla tego typu rekordu, kompilator generuje ostrzeżenie.  
   
  **exestr**  
  Miejsca `commentstring` w pliku obiektu. W czasie link ten ciąg jest umieszczany w pliku wykonywalnego. Ciąg nie jest ładowany do pamięci podczas ładowania pliku wykonywalnego; jednak można je znaleźć w programie znajduje drukowalnych ciągów w plikach. Jedno użycie dla tego typu rekordu komentarz jest do osadzenia w pliku wykonywalnym numer wersji lub podobne informacje.  
   
- `exestr`jest przestarzałe i zostanie usunięta w przyszłej wersji; konsolidator nie przetwarza rekordów komentarza.  
+ `exestr` jest przestarzałe i zostanie usunięta w przyszłej wersji; konsolidator nie przetwarza rekordów komentarza.  
   
  **lib**  
  Umieszcza rekordu wyszukiwania biblioteki w pliku obiektu. Ten typ komentarza musi towarzyszyć `commentstring` parametr zawierający nazwę (i prawdopodobnie ścieżki) biblioteki, która ma konsolidatora do wyszukiwania. Biblioteka wyszukiwania domyślne rekordy w pliku obiektu; następuje nazwa biblioteki konsolidator wyszukiwania dla tej biblioteki, tak jakby było nazwane go w wierszu polecenia pod warunkiem, że biblioteka nie zostanie określony z [/nodefaultlib](../build/reference/nodefaultlib-ignore-libraries.md). Wiele rekordów wyszukiwania biblioteki można umieścić w tym samym pliku źródłowego; Każdy rekord występuje w pliku obiektu w tej samej kolejności napotkano w pliku źródłowym.  
   
  Jeśli kolejność domyślnej biblioteki i Biblioteka dodano odgrywa ważną rolę, kompilowania przy użyciu [/Zl](../build/reference/zl-omit-default-library-name.md) przełącznika uniemożliwi umieszczany w module obiektu domyślną nazwę biblioteki. Drugi pragma komentarz można następnie używany do Wstaw nazwę domyślnej biblioteki po dodanych biblioteki. Bibliotek na liście z tych pragm pojawi się w module obiektu w tej samej kolejności, które zostały znalezione w kodzie źródłowym.  
   
- **konsolidatora**  
+ **linker**  
  Miejsca [— opcja konsolidatora](../build/reference/linker-options.md) w pliku obiektu. Typ komentarza umożliwia określanie opcji konsolidatora zamiast przekazanie jej do wiersza polecenia lub określając go w środowisku programistycznym. Na przykład można określić / include — opcja, wymuszenie włączenia symbolu:  
   
 ```  
@@ -63,19 +66,19 @@ Umieszcza rekord komentarz w pliku obiektu lub plik wykonywalny.
   
  Tylko następujące (*typ komentarza*) mają być przekazane do identyfikatora konsolidatora dostępnych opcji konsolidatora:  
   
--   [/ DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)  
+-   [/DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)  
   
--   [/ EXPORT](../build/reference/export-exports-a-function.md)  
+-   [/EXPORT](../build/reference/export-exports-a-function.md)  
   
--   [/ INCLUDE](../build/reference/include-force-symbol-references.md)  
+-   [/INCLUDE](../build/reference/include-force-symbol-references.md)  
   
 -   [/ MANIFESTDEPENDENCY](../build/reference/manifestdependency-specify-manifest-dependencies.md)  
   
--   [/ MERGE](../build/reference/merge-combine-sections.md)  
+-   [/MERGE](../build/reference/merge-combine-sections.md)  
   
 -   [/ SECTION](../build/reference/section-specify-section-attributes.md)  
   
- **użytkownika**  
+ **Użytkownika**  
  Umieszcza ogólne komentarze w pliku obiektu. `commentstring` Parametr zawiera tekst komentarza. Rekord ten komentarz jest ignorowana przez konsolidator.  
   
  Następujące pragma powoduje, że konsolidator, aby wyszukać EMAPI. Biblioteki LIB podczas konsolidacji. Konsolidator przeszukuje najpierw w bieżącym katalogu roboczym, a następnie w ścieżce określonej w zmiennej środowiskowej LIB.  

@@ -4,26 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __mulh
-dev_langs: C++
-helpviewer_keywords: __mulh intrinsic
+ms.topic: reference
+f1_keywords:
+- __mulh
+dev_langs:
+- C++
+helpviewer_keywords:
+- __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2e8d2b8f9b6a697bedeccef46c37a27bfd3559c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 92dabc2c3172d16a0b165b8560554d2151318ee4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mulh"></a>__mulh
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Zwraca wysokiej 64-bitowy iloczyn dwóch 64-bitowych liczb całkowitych ze znakiem.  
   
@@ -37,10 +42,10 @@ __int64 __mulh(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`a`  
+ [in] `a`  
  Pierwszy liczbę Aby pomnożyć.  
   
- [in]`b`  
+ [in] `b`  
  Druga liczba do wielokrotnie.  
   
 ## <a name="return-value"></a>Wartość zwracana  

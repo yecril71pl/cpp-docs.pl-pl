@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::discrete_distribution
 - random/std::discrete_distribution::reset
@@ -19,7 +20,8 @@ f1_keywords:
 - random/std::discrete_distribution::param_type::probabilities
 - random/std::discrete_distribution::param_type::operator==
 - random/std::discrete_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::discrete_distribution [C++]
 - std::discrete_distribution [C++], reset
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dbd82957b213a88792d7dba8a7e7dc17b8b28bb6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8cadc9a0dafcf4c97cd7c8381c5f4ee76fee915
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution — Klasa
 Generuje dystrybucji odrębny liczba całkowita, którą ma szerokość uniform odstępach czasu uniform prawdopodobieństwo w każdym interwale.  
@@ -90,7 +93,7 @@ public:
   
 |||  
 |-|-|  
-|[discrete_distribution —](#discrete_distribution)|`discrete_distribution::param`|  
+|[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|  
 |`discrete_distribution::operator()`|[param_type](#param_type)|  
   
  Funkcja właściwości `vector<double> probabilities()` zwraca poszczególnych prawdopodobieństwa dla każdego całkowitą wygenerowany.  
@@ -181,7 +184,7 @@ Distribution for 100 samples:
   
  **Namespace:** Standard  
   
-##  <a name="discrete_distribution"></a>discrete_distribution::discrete_distribution  
+##  <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution  
  Tworzy dystrybucji.  
   
 ```  
@@ -216,16 +219,16 @@ explicit discrete_distribution(const param_type& parm);
 *Liczba*  
  Liczba elementów w zakresie dystrybucji. Jeśli `count==0`, równoważne konstruktora domyślnego (zawsze generuje zero).  
   
-*niski*  
+*Niski*  
  Najniższa wartość w zakresie dystrybucji.  
   
-*Wysoka*  
+*high*  
  Najwyższą wartość z zakresu dystrybucji.  
   
 *weightfunc*  
  Obiekt reprezentujący prawdopodobieństwa rozkładu. Zarówno parametr i zwracana wartość musi być możliwe do przekonwertowania na `double`.  
   
-*Parametr*  
+*parm*  
  `param_type` Struktury użyta do skonstruowania dystrybucji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -241,7 +244,7 @@ Konstruktor, który ma *liczba*, *niski*, *wysokiej*, i *weightfunc* na podstawi
   
 Konstruktor, który ma `param_type` parametru *parametrów* tworzy obiekt dystrybucji przy użyciu *parametr* jako struktura przechowywanego parametru.  
   
-##  <a name="param_type"></a>discrete_distribution::param_type  
+##  <a name="param_type"></a>  discrete_distribution::param_type  
  Przechowuje wszystkie parametry dystrybucji.  
   
 ```  
@@ -279,16 +282,16 @@ struct param_type {
 *Liczba*  
  Liczba elementów w zakresie dystrybucji. Jeśli *liczba* wynosi 0, co jest równoważne konstruktora domyślnego (zawsze generuje zero).  
   
-*niski*  
+*Niski*  
  Najniższa wartość w zakresie dystrybucji.  
   
-*Wysoka*  
+*high*  
  Najwyższą wartość z zakresu dystrybucji.  
   
 *weightfunc*  
  Obiekt reprezentujący prawdopodobieństwa rozkładu. Zarówno parametr i zwracana wartość musi być możliwe do przekonwertowania na `double`.  
   
-*prawo*  
+*right*  
  `param_type` Obiekt do porównania z tym.  
   
 ### <a name="remarks"></a>Uwagi  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::poisson_distribution
 - random/std::poisson_distribution::reset
@@ -19,7 +20,8 @@ f1_keywords:
 - random/std::poisson_distribution::param_type::mean
 - random/std::poisson_distribution::param_type::operator==
 - random/std::poisson_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::poisson_distribution [C++]
 - std::poisson_distribution [C++], reset
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e9ebeb453aefee8310e45779f1fd60c7bd207771
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c75f25652ff71b6466dfc259318c20bdc3352ec1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution — Klasa
 Generuje rozkład Poissona.  
@@ -84,7 +87,7 @@ Klasa szablonu opisuje dystrybucji, który spowoduje utworzenie wartości okreś
   
 ||||  
 |-|-|-|  
-|[poisson_distribution —](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|  
+|[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|  
 |`poisson_distribution::operator()`||[param_type](#param_type)|  
   
 Funkcja właściwości `mean()` zwraca wartość parametru dystrybucji przechowywanych *oznacza*.  
@@ -204,7 +207,7 @@ Distribution for 100 samples:
   
  **Namespace:** Standard  
   
-##  <a name="poisson_distribution"></a>poisson_distribution::poisson_distribution  
+##  <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution  
 Tworzy dystrybucji.  
   
 ```  
@@ -213,20 +216,20 @@ explicit binomial_distribution(const param_type& parm);
 ```  
   
 ### <a name="parameters"></a>Parametry  
-*Średnia*  
+*mean*  
 `mean` Parametr dystrybucji.  
   
-*Parametr*  
+*parm*  
 Struktura parametr używany do budowy dystrybucji.  
   
 ### <a name="remarks"></a>Uwagi  
- **Warunek wstępny:**`0.0 < mean`  
+ **Warunek wstępny:** `0.0 < mean`  
   
 Pierwszy Konstruktor konstrukcji obiektu których przechowywane `mean` wartość przechowuje wartość *oznacza*.  
   
 Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.  
   
-##  <a name="param_type"></a>poisson_distribution::param_type  
+##  <a name="param_type"></a>  poisson_distribution::param_type  
 Przechowuje parametry dystrybucji.  
   
 ```    
@@ -244,7 +247,7 @@ struct param_type {
 Zobacz parametrów konstruktora [poisson_distribution —](#poisson_distribution).  
   
 ### <a name="remarks"></a>Uwagi  
- **Warunek wstępny:**`0.0 < mean`  
+ **Warunek wstępny:** `0.0 < mean`  
   
 Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.  
   

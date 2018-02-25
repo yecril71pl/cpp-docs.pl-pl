@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - stack/std::stack::container_type
 - stack/std::stack::size_type
@@ -16,7 +17,8 @@ f1_keywords:
 - stack/std::stack::push
 - stack/std::stack::size
 - stack/std::stack::top
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::stack [C++], container_type
 - std::stack [C++], size_type
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 824ca5e9726146323639974f9506d4efbf454d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 876b4614438e92b3f90482a91f13f33b78e8266a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="stack-class"></a>stack — Klasa
 Klasa karty kontenera szablonu, która umożliwia ograniczenie funkcjonalności ograniczanie dostępu do elementu ostatnio dodane do niektórych podstawowy typ kontenera. Klasa stosu jest używana, jeśli ważne jest, aby być jasne, czy tylko stosu operacje są wykonywane w kontenerze.  
@@ -49,7 +52,7 @@ class stack
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Typ*  
+ Typ  
  Typ danych elementu mają być przechowywane w stosie.  
   
  `Container`  
@@ -72,7 +75,7 @@ class stack
   
 |||  
 |-|-|  
-|[stos](#stack)|Konstruuje `stack` pusta lub jest kopię obiektu podstawowego kontenera.|  
+|[stack](#stack)|Konstruuje `stack` pusta lub jest kopię obiektu podstawowego kontenera.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -86,10 +89,10 @@ class stack
   
 |||  
 |-|-|  
-|[pusty](#empty)|Sprawdza, czy `stack` jest pusta.|  
+|[empty](#empty)|Sprawdza, czy `stack` jest pusta.|  
 |[POP](#pop)|Usuwa element z góry `stack`.|  
 |[push](#push)|Dodaje element do góry `stack`.|  
-|[rozmiar](#size)|Zwraca liczbę elementów w `stack`.|  
+|[Rozmiar](#size)|Zwraca liczbę elementów w `stack`.|  
 |[Do góry](#top)|Zwraca odwołanie do elementu w górnej części `stack`.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -97,7 +100,7 @@ class stack
   
  **Namespace:** Standard  
   
-##  <a name="container_type"></a>Stack::container_type  
+##  <a name="container_type"></a>  Stack::container_type  
  Typ, który zapewnia podstawową kontener dostosowania.  
   
 ```  
@@ -112,7 +115,7 @@ typedef Container container_type;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [stack::stack](#stack) przykład sposobu deklarowanie i użycie `container_type`.  
   
-##  <a name="empty"></a>Stack::Empty  
+##  <a name="empty"></a>  Stack::Empty  
  Testy, jeśli stos jest pusty.  
   
 ```  
@@ -155,7 +158,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="pop"></a>Stack::POP  
+##  <a name="pop"></a>  Stack::POP  
  Usuwa element z góry stosu.  
   
 ```  
@@ -209,7 +212,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="push"></a>Stack::push  
+##  <a name="push"></a>  Stack::push  
  Dodaje element do górny koniec stosu.  
   
 ```  
@@ -255,7 +258,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="size"></a>Stack::size  
+##  <a name="size"></a>  Stack::size  
  Zwraca liczbę elementów w stosie.  
   
 ```  
@@ -294,7 +297,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="size_type"></a>Stack::size_type  
+##  <a name="size_type"></a>  Stack::size_type  
  Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w stosie.  
   
 ```  
@@ -307,7 +310,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [rozmiar](#size) przykład sposobu deklarowanie i użycie `size_type`.  
   
-##  <a name="stack"></a>Stack::Stack  
+##  <a name="stack"></a>  Stack::Stack  
  Tworzy stos jest pusty lub który jest kopią klasy podstawowej kontenera.  
   
 ```  
@@ -359,7 +362,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="top"></a>Stack::Top  
+##  <a name="top"></a>  Stack::Top  
  Zwraca odwołanie do elementu w górnej części stosu.  
   
 ```  
@@ -407,7 +410,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="value_type"></a>Stack::value_type  
+##  <a name="value_type"></a>  Stack::value_type  
  Typ, który reprezentuje typ obiektu przechowywane jako element na stosie.  
   
 ```  

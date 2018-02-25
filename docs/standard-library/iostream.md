@@ -1,12 +1,13 @@
 ---
-title: "&lt;iostream —&gt; | Dokumentacja firmy Microsoft"
+title: '&lt;iostream&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 09/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <iostream>
 - iostream/std::cerr
@@ -17,19 +18,22 @@ f1_keywords:
 - iostream/std::wcin
 - iostream/std::wclog
 - iostream/std::wcout
-dev_langs: C++
-helpviewer_keywords: iostream header
+dev_langs:
+- C++
+helpviewer_keywords:
+- iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 430981da5ec304bf832e759d40870ee88f3e6557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 774e99f99e01c9eb0fbdcad0100d12212e19831e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 Deklaruje kontrolować odczytywanie z oraz zapisywanie do standardowych strumieni. Często jest tylko nagłówek potrzebne do dołączenia do wykonania programu C++ danych wejściowych i wyjściowych.  
@@ -59,7 +63,7 @@ Deklaruje kontrolować odczytywanie z oraz zapisywanie do standardowych strumien
 |||  
 |-|-|  
 |[cerr](#cerr)|Określa `cerr` globalnego strumienia.|  
-|[CIN](#cin)|Określa `cin` globalnego strumienia.|  
+|[cin](#cin)|Określa `cin` globalnego strumienia.|  
 |[clog](#clog)|Określa `clog` globalnego strumienia.|  
 |[Cout](#cout)|Określa `cout` globalnego strumienia.|  
 |[wcerr](#wcerr)|Określa `wcerr` globalnego strumienia.|  
@@ -67,7 +71,7 @@ Deklaruje kontrolować odczytywanie z oraz zapisywanie do standardowych strumien
 |[wclog](#wclog)|Określa `wclog` globalnego strumienia.|  
 |[wcout](#wcout)|Określa `wcout` globalnego strumienia.|  
   
-###  <a name="cerr"></a>cerr  
+###  <a name="cerr">cerr</a>  
  Obiekt `cerr` Określa dane wyjściowe do strumienia buforu skojarzony z obiektem `stderr`, zadeklarowanych w \<cstdio — >.  
   
 ```  
@@ -110,7 +114,7 @@ int main( )
 }  
 ```  
   
-###  <a name="cin"></a>CIN  
+###  <a name="cin"></a>  CIN  
  Określa `cin` globalnego strumienia.  
   
 ```  
@@ -159,7 +163,7 @@ int main()
   
 ```  
   
-###  <a name="clog"></a>clog  
+###  <a name="clog"></a>  clog  
  Określa `clog` globalnego strumienia.  
   
 ```  
@@ -175,7 +179,7 @@ extern ostream clog;
 #### <a name="example"></a>Przykład  
   Zobacz [cerr](#cerr) przykład przy użyciu `clog`.  
   
-###  <a name="cout"></a>Cout  
+###  <a name="cout">Cout</a>  
  Określa `cout` globalnego strumienia.  
   
 ```  
@@ -191,7 +195,7 @@ extern ostream cout;
 #### <a name="example"></a>Przykład  
   Zobacz [cerr](#cerr) przykład przy użyciu `cout`.  
   
-###  <a name="wcerr"></a>wcerr  
+###  <a name="wcerr">wcerr</a>  
  Określa `wcerr` globalnego strumienia.  
   
 ```  
@@ -207,7 +211,7 @@ extern wostream wcerr;
 #### <a name="example"></a>Przykład  
   Zobacz [cerr](#cerr) przykład przy użyciu `wcerr`.  
   
-###  <a name="wcin"></a>wcin  
+###  <a name="wcin">wcin</a>  
  Określa `wcin` globalnego strumienia.  
   
 ```  
@@ -223,7 +227,7 @@ extern wistream wcin;
 #### <a name="example"></a>Przykład  
   Zobacz [cerr](#cerr) przykład przy użyciu `wcin`.  
   
-###  <a name="wclog"></a>wclog  
+###  <a name="wclog">wclog</a>  
  Określa `wclog` globalnego strumienia.  
   
 ```  
@@ -239,7 +243,7 @@ extern wostream wclog;
 #### <a name="example"></a>Przykład  
   Zobacz [cerr](#cerr) przykład przy użyciu `wclog`.  
   
-###  <a name="wcout"></a>wcout  
+###  <a name="wcout">wcout</a>  
  Określa `wcout` globalnego strumienia.  
   
 ```  
@@ -255,7 +259,7 @@ extern wostream wcout;
 #### <a name="example"></a>Przykład  
   Zobacz [cerr](#cerr) przykład przy użyciu `wcout`.  
   
- `CString`wystąpienia w `wcout` instrukcji musi być rzutowane na `const wchar_t*`, jak pokazano w poniższym przykładzie.  
+ `CString` wystąpienia w `wcout` instrukcji musi być rzutowane na `const wchar_t*`, jak pokazano w poniższym przykładzie.  
   
 ```  
  

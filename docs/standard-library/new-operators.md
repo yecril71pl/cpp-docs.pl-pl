@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-caps.latest.revision: "8"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 32707847948c32f671e7ebd7def23165b59a63a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: a5bd2224f65db9ac376d04beed52217c1a0c4ec1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltnewgt-operators"></a>&lt;nowe&gt; operatory
 ||||  
@@ -24,7 +24,7 @@ ms.lasthandoff: 10/24/2017
 |[Usuwanie operatora](#op_delete)|[Usuwanie operatora]](#op_delete_arr)|[nowy operator](#op_new)|  
 |[nowy operator]](#op_new_arr)|  
   
-##  <a name="op_delete"></a>Usuwanie operatora  
+##  <a name="op_delete">Usuwanie operatora</a>  
  Funkcja wywoływana przez wyrażenie usunięcia, należy cofnąć magazynu dla poszczególnych obiektów.  
   
 ```
@@ -53,7 +53,7 @@ void operator delete(void* ptr,
 ### <a name="example"></a>Przykład  
   Zobacz [nowy operator](../standard-library/new-operators.md#op_new) przykład używanego `operator delete`.  
   
-##  <a name="op_delete_arr"></a>Usuwanie operatora]  
+##  <a name="op_delete_arr">Usuwanie operatora]</a>  
  Funkcja wywoływana przez wyrażenie usuwania można cofnąć alokacji pamięci masowej dla tablicy obiektów.  
   
 ```
@@ -80,7 +80,7 @@ void operator delete[](void* ptr,
 ### <a name="example"></a>Przykład  
   Zobacz [nowy operator &#91; &#93;](../standard-library/new-operators.md#op_new_arr) przykłady stosowania `operator delete[]`.  
   
-##  <a name="op_new"></a>nowy operator  
+##  <a name="op_new">nowy operator</a>  
  Funkcja wywoływana przez nowe wyrażenie można przydzielić magazynu dla poszczególnych obiektów.  
   
 ```
@@ -101,7 +101,7 @@ void* operator new(std::size_t count,
  Wskaźnik do zwrócenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do najniższym adresem bajtów pamięci nowo przydzielone. Lub`ptr.`  
+ Wskaźnik do najniższym adresem bajtów pamięci nowo przydzielone. Or `ptr.`  
   
 ### <a name="remarks"></a>Uwagi  
  Pierwsza funkcja jest wywoływana przez nowe wyrażenie przydzielić `count` bajtów pamięci odpowiednio wyrównane do reprezentowania dowolnego obiektu tego rozmiaru. Program można zdefiniować alternatywny funkcja podpisem tej funkcji, który zastępuje domyślnej wersji zdefiniowany przez standardowa biblioteka C++ i dlatego jest wymienne.  
@@ -175,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_new_arr"></a>nowy operator]  
+##  <a name="op_new_arr">nowy operator]</a>  
  Funkcja alokacji, wywoływana przez nowe wyrażenie, aby przydzielić magazyn na tablicę obiektów.  
   
 ```
@@ -196,7 +196,7 @@ void* operator new[](std::size_t count,
  Wskaźnik do zwrócenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do najniższym adresem bajtów pamięci nowo przydzielone. Lub`ptr.`  
+ Wskaźnik do najniższym adresem bajtów pamięci nowo przydzielone. Or `ptr.`  
   
 ### <a name="remarks"></a>Uwagi  
  Pierwsza funkcja jest wywoływana przez `new[]` wyrażenie przydzielić `count` bajtów pamięci odpowiednio wyrównany do reprezentowania dowolnego obiektu tego rozmiaru tablicy lub mniejszy. Program można zdefiniować funkcję podpisem tej funkcji, który zastępuje domyślnej wersji zdefiniowany przez standardowa biblioteka C++. Wymagane zachowanie jest takie samo, jak w przypadku [nowy operator](../standard-library/new-operators.md#op_new)( **size_t**). Domyślnym zachowaniem jest zwracany `operator new`( `count`).  
@@ -251,7 +251,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Nowy >](../standard-library/new.md)
+ [\<new>](../standard-library/new.md)
 
 
 

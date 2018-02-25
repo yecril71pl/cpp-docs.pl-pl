@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - intrinsics, compiler
 - compiler intrinsics
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4ffbe20fb6c2b35cef46f975e99191bf96fdc6b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 20b1416eacc6fa31c5e41b4a0539ce9ccbd99f88
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="compiler-intrinsics"></a>Funkcje wewnętrzne kompilatora
 Większość funkcji są zawarte w bibliotekach, ale niektóre funkcje są wbudowane w (to znaczy wewnętrzna) do kompilatora. Te są określane jako funkcje wewnętrzne lub funkcje wewnętrzne.  
@@ -56,5 +59,5 @@ Większość funkcji są zawarte w bibliotekach, ale niektóre funkcje są wbudo
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do asemblera ARM](../assembler/arm/arm-assembler-reference.md)   
  [Microsoft Macro Assembler — odwołanie](../assembler/masm/microsoft-macro-assembler-reference.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
  [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)

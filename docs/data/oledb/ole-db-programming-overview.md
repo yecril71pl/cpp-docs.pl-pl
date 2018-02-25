@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17e80f5a1fbe94a1d2bd4c7fc3b77525a77bbd4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 338f6f3d83e6df67e151e0fd85019fb14c8b4087
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-programming-overview"></a>Omówienie programowania OLE DB
 OLE DB to technologia wysokiej wydajności, oparte na modelu COM bazy danych. Zapewnia to często stosowana metoda dostępu do danych niezależnie od tego formularza, w której jest przechowywany. W przypadku typowych godzin pracy ogromnych ilości informacji znajduje się poza baz danych firmowych. Te informacje znajdują się w systemie plików (np. FAT lub NTFS), pliki indeksowane sekwencji, osobiste bazy danych (takich jak dostęp) arkuszy kalkulacyjnych (takich jak program Excel), aplikacje planowania projektu (na przykład projekt) i wiadomości e-mail (np. Outlook). OLE DB umożliwia dostęp do dowolnego rodzaju magazynu danych w taki sam sposób, dopóki magazyn danych ma dostawcy OLE DB.

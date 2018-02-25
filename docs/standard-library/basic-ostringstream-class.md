@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - sstream/std::basic_ostringstream
 - sstream/std::basic_ostringstream::allocator_type
 - sstream/std::basic_ostringstream::rdbuf
 - sstream/std::basic_ostringstream::str
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_ostringstream [C++]
 - std::basic_ostringstream [C++], allocator_type
 - std::basic_ostringstream [C++], rdbuf
 - std::basic_ostringstream [C++], str
 ms.assetid: aea699f7-350f-432a-acca-adbae7b483fb
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6338ed2bbaa7d16dc2723f4bdcaa93ea0a3f3e31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bc793d723498149e714221beafb94f661cd09020
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicostringstream-class"></a>basic_ostringstream — Klasa
 Opis obiektu, który kontroluje wstawiania elementów i obiektów zakodowanych do buforu strumienia klasy [basic_stringbuf —](../standard-library/basic-stringbuf-class.md)< **elementu**, **Tr**, `Alloc`>.  
@@ -57,7 +60,7 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
   
 |||  
 |-|-|  
-|[basic_ostringstream —](#basic_ostringstream)|Tworzy obiekt typu `basic_ostringstream`.|  
+|[basic_ostringstream](#basic_ostringstream)|Tworzy obiekt typu `basic_ostringstream`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -77,14 +80,14 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
   
  **Namespace:** Standard  
   
-##  <a name="allocator_type"></a>basic_ostringstream::allocator_type  
+##  <a name="allocator_type"></a>  basic_ostringstream::allocator_type  
  Typ jest synonimem parametru szablonu `Alloc`.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-##  <a name="basic_ostringstream"></a>basic_ostringstream::basic_ostringstream  
+##  <a name="basic_ostringstream"></a>  basic_ostringstream::basic_ostringstream  
  Tworzy obiekt basic_ostringstream — typu.  
   
 ```  
@@ -105,7 +108,7 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
   
  Drugi Konstruktor inicjuje klasy podstawowej, przez wywołanie basic_ostream — ( **sb**). Inicjuje również **sb** przez wywołanie basic_stringbuf — < **elementu**, **Tr**, `Alloc`> (_ *Str*, `_Mode` &#124; `ios_base::out`).  
   
-##  <a name="rdbuf"></a>basic_ostringstream::rdbuf  
+##  <a name="rdbuf"></a>  basic_ostringstream::rdbuf  
  Zwraca adres buforu strumienia przechowywanych typu **wskaźnika** do [basic_stringbuf —](../standard-library/basic-stringbuf-class.md)< **elementu**, **Tr**, `Alloc`>.  
   
 ```  
@@ -121,7 +124,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 ### <a name="example"></a>Przykład  
   Zobacz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) na przykład, który używa `rdbuf`.  
   
-##  <a name="str"></a>basic_ostringstream::str  
+##  <a name="str"></a>  basic_ostringstream::str  
  Ustawia lub pobiera tekst w buforze ciągu bez zmiany pozycji zapisu.  
   
 ```  

@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - __cpuid_cpp
 - __cpuid
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - __cpuid intrinsic
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cc20732fa9a79765f4cd56e53ddd990a4d1ea1a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d7e63f8259d9fb01729252a7d33342296fa1d6c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Generuje `cpuid` instrukcji, które są dostępne w x86 i [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Ta instrukcja odpytuje procesora informacji o obsługiwanych funkcjach i typ Procesora.  
   
@@ -48,21 +51,21 @@ void __cpuidex(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out]`cpuInfo`  
+ [out] `cpuInfo`  
  Tablica czterech liczb całkowitych zawiera informacje dotyczące obsługiwane funkcje procesora zwrócone w EAX, element EBX ECX i EDX.  
   
- [in]`function_id`  
+ [in] `function_id`  
  Kod, który określa informacje, aby pobrać, przekazano EAX.  
   
- [in]`subfunction_id`  
+ [in] `subfunction_id`  
  Dodatkowy kod, który określa informacje do pobrania, przekazano ECX.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |— Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__cpuid`|x86,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__cpuidex`|x86,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__cpuid`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__cpuidex`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **Plik nagłówka** \<intrin.h >  
   

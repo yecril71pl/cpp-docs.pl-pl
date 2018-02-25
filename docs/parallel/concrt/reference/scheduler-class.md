@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Scheduler
 - CONCRT/concurrency::Scheduler
@@ -24,19 +25,22 @@ f1_keywords:
 - CONCRT/concurrency::Scheduler::ResetDefaultSchedulerPolicy
 - CONCRT/concurrency::Scheduler::ScheduleTask
 - CONCRT/concurrency::Scheduler::SetDefaultSchedulerPolicy
-dev_langs: C++
-helpviewer_keywords: Scheduler class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2f59b48022cc448b8b06502febdaf1634998ac9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scheduler-class"></a>Klasa harmonogramu
 Reprezentuje abstrakcję harmonogramu współbieżność środowiska wykonawczego.  
@@ -65,7 +69,7 @@ class Scheduler;
 |[CreateScheduleGroup](#createschedulegroup)|Przeciążone. Tworzy nową grupę harmonogramu w ramach harmonogramu zadań. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w grupie nowo utworzonego harmonogramu, aby być ukierunkowane pod kątem wykonywania w lokalizacji określonej w tym parametrze.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu.|  
 |[GetPolicy](#getpolicy)|Zwraca kopię planista utworzony za pomocą zasad.|  
-|[Identyfikator](#id)|Zwraca unikatowy identyfikator dla harmonogramu.|  
+|[Id](#id)|Zwraca unikatowy identyfikator dla harmonogramu.|  
 |[IsAvailableLocation](#isavailablelocation)|Określa, czy danej lokalizacji jest dostępny w ramach harmonogramu zadań.|  
 |[Dokumentacja](#reference)|Zwiększa liczbę odwołanie harmonogramu.|  
 |[RegisterShutdownEvent](#registershutdownevent)|Powoduje, że obsługi zdarzeń systemu Windows przekazany `_Event` parametr, aby zostać zgłoszony, gdy harmonogram zamyka i niszczy się. W czasie, które zdarzenie jest sygnalizowane wszystkie pracy, który miał zostało zaplanowane do harmonogramu zostanie zakończona. Za pomocą tej metody można zarejestrować wiele zdarzeń zamknięcia systemu.|  
@@ -87,7 +91,7 @@ class Scheduler;
   
  **Namespace:** współbieżności  
   
-##  <a name="attach"></a>Dołącz 
+##  <a name="attach"></a> Dołącz 
 
  Dołącza planista Kontekst wywołania. Po powrocie z tej metody, wywołujący kontekstu jest zarządzany przez harmonogram i planista staje się bieżącego harmonogramu.  
   
@@ -104,7 +108,7 @@ virtual void Attach() = 0;
   
  Ta metoda zgłosi [improper_scheduler_attach —](improper-scheduler-attach-class.md) wyjątek, jeśli ten harmonogram jest bieżącego harmonogramu Kontekst wywołania.  
   
-##  <a name="create"></a>Utwórz 
+##  <a name="create">Utwórz</a> 
 
  Tworzy nowy harmonogram, w których zachowanie jest opisane przez `_Policy` parametr, umieszcza początkowej odwołania na harmonogram i zwraca wskaźnik do niego.  
   
@@ -126,7 +130,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
   
  Ta metoda może zgłosić różne wyjątki, w tym [scheduler_resource_allocation_error —](scheduler-resource-allocation-error-class.md) i [invalid_scheduler_policy_value —](invalid-scheduler-policy-value-class.md).  
   
-##  <a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a> CreateScheduleGroup 
 
  Tworzy nową grupę harmonogramu w ramach harmonogramu zadań. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w grupie nowo utworzonego harmonogramu, aby być ukierunkowane pod kątem wykonywania w lokalizacji określonej w tym parametrze.  
   
@@ -148,7 +152,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
   
  Należy pamiętać, że jeśli utworzono jawnie tego harmonogramu, trzeba zwolnić wszystkie odwołania można zaplanować grup, to przed zwolnieniem referencje w harmonogramie.  
   
-##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors">GetNumberOfVirtualProcessors</a> 
 
  Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu.  
   
@@ -159,7 +163,7 @@ virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ### <a name="return-value"></a>Wartość zwracana  
  Bieżąca liczba procesorów wirtualnych dla harmonogramu.  
   
-##  <a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a> GetPolicy 
 
  Zwraca kopię planista utworzony za pomocą zasad.  
   
@@ -170,7 +174,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Wartość zwracana  
  Kopia planista utworzony za pomocą zasad.  
   
-##  <a name="id"></a>Identyfikator 
+##  <a name="id"></a> Id 
 
  Zwraca unikatowy identyfikator dla harmonogramu.  
   
@@ -181,7 +185,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Wartość zwracana  
  Unikatowy identyfikator dla harmonogramu.  
   
-##  <a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a> IsAvailableLocation 
 
  Określa, czy danej lokalizacji jest dostępny w ramach harmonogramu zadań.  
   
@@ -199,7 +203,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 ### <a name="remarks"></a>Uwagi  
  Należy pamiętać, że wartość zwracana natychmiastowe próbkowania czy dostępny jest danej lokalizacji. Obecności wielu planiści dynamiczne zarządzanie zasobami można dodawać lub odebranie zasobów z planiści w dowolnym momencie. Powinno się to zdarzyć, danej lokalizacji można zmienić dostępności.  
   
-##  <a name="reference"></a>Odwołanie 
+##  <a name="reference"></a> Odwołanie 
 
  Zwiększa liczbę odwołanie harmonogramu.  
   
@@ -215,7 +219,7 @@ virtual unsigned int Reference() = 0 ;
   
  Metoda zgłosi [improper_scheduler_reference —](improper-scheduler-reference-class.md) wyjątek, jeśli liczba odwołanie przed wywołaniem `Reference` metody wynosi zero i połączenie jest nawiązywane z kontekstu, która nie jest właścicielem przez harmonogram.  
   
-##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a> RegisterShutdownEvent 
 
  Powoduje, że obsługi zdarzeń systemu Windows przekazany `_Event` parametr, aby zostać zgłoszony, gdy harmonogram zamyka i niszczy się. W czasie, które zdarzenie jest sygnalizowane wszystkie pracy, który miał zostało zaplanowane do harmonogramu zostanie zakończona. Za pomocą tej metody można zarejestrować wiele zdarzeń zamknięcia systemu.  
   
@@ -227,7 +231,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
  `_Event`  
  Dojście do obiektu zdarzeń systemu Windows, która sygnalizuje przez środowisko uruchomieniowe przy planista zamyka i niszczy sam.  
   
-##  <a name="release"></a>Zlecenia 
+##  <a name="release"></a> Zlecenia 
 
  Zmniejsza liczba odwołanie harmonogramu.  
   
@@ -241,7 +245,7 @@ virtual unsigned int Release() = 0;
 ### <a name="remarks"></a>Uwagi  
  Służy to zwykle zarządzać okres istnienia planista kompozycji. Gdy liczebności referencyjnej harmonogramu spadnie do zera, harmonogram zostanie zamknięty i destruct się po pracy w ramach harmonogramu zadań została ukończona.  
   
-##  <a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy 
+##  <a name="resetdefaultschedulerpolicy"></a> ResetDefaultSchedulerPolicy 
 
  Przywraca domyślne zasady harmonogramu domyślnej środowiska uruchomieniowego. Przy następnym harmonogram domyślny jest tworzony, zostanie użyty domyślne ustawienia zasad środowiska uruchomieniowego.  
   
@@ -252,7 +256,7 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 ### <a name="remarks"></a>Uwagi  
  Tę metodę można wywołać podczas harmonogram domyślny istnieje w ramach procesu. Nie zostaną zastosowane zasady istniejący harmonogram domyślny. Jednak jeśli domyślny harmonogram zamknięcia, i zostały nowym domyślnym ma zostać utworzony w późniejszym czasie, nowy harmonogram użyje domyślne ustawienia zasad środowiska uruchomieniowego.  
   
-##  <a name="ctor"></a>Harmonogram 
+##  <a name="ctor">Harmonogram</a> 
 
  Obiekt `Scheduler` klasy można tylko utworzone za pomocą metody fabryki, albo niejawnie.  
   
@@ -265,7 +269,7 @@ Scheduler();
   
  Można także utworzyć harmonogram jawnie przy użyciu jednej `CurrentScheduler::Create` metody lub `Scheduler::Create` metody.  
   
-##  <a name="dtor"></a>~ Harmonogramu 
+##  <a name="dtor"></a> ~ Harmonogramu 
 
  Obiekt `Scheduler` klasy niejawnie zostanie zniszczony, gdy wszystkie zewnętrzne odwołania do niego przestaną istnieć.  
   
@@ -273,7 +277,7 @@ Scheduler();
 virtual ~Scheduler();
 ```  
   
-##  <a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  Zaplanowane zadania lekki w ramach harmonogramu zadań. Zadanie lekki zostaną umieszczone w grupie harmonogram określone przez środowisko uruchomieniowe. Wersja, która przyjmuje parametr `_Placement` powoduje zadania można ukierunkowane pod kątem wykonywania w określonej lokalizacji.  
   
@@ -298,7 +302,7 @@ virtual void ScheduleTask(
  `_Placement`  
  Odwołanie do lokalizacji, w którym zadanie lekki będzie można ukierunkowane pod kątem wykonywania w.  
   
-##  <a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy 
+##  <a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy 
 
  Umożliwia ma być używany do tworzenia harmonogramu domyślne zasady zdefiniowane przez użytkownika. Tę metodę można wywołać tylko wtedy, gdy nie domyślnego harmonogramu istnieje w ramach procesu. Po ustawieniu domyślne zasady obowiązujące pozostaje aż do następnego wywołania nieprawidłowy albo `SetDefaultSchedulerPolicy` lub [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) metody.  
   

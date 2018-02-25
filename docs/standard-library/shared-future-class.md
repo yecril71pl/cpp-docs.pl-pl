@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::shared_future
 - future/std::shared_future::shared_future
@@ -15,9 +16,10 @@ f1_keywords:
 - future/std::shared_future::wait
 - future/std::shared_future::wait_for
 - future/std::shared_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 454ebedd-f42b-405f-99a5-a25cc9ad7c90
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c6d7946de6440ad33c844e140ca7cbcc2199a0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d008142b78bc7901ef67f66f4327ad9229688bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sharedfuture-class"></a>shared_future — Klasa
 W tym artykule opisano *asynchronicznego obiektu zwracanego*. Contrast z [przyszłych](../standard-library/future-class.md) obiektu *asynchroniczne dostawcy* można skojarzyć z dowolną liczbę `shared_future` obiektów.  
@@ -49,7 +52,7 @@ class shared_future;
 ## <a name="remarks"></a>Uwagi  
  Nie wymagają żadnych metod innych niż `valid`, `operator=`, a destruktor na `shared_future` obiektu to jest *pusty*.  
   
- `shared_future`obiekty nie są zsynchronizowane. Wywoływanie metody dla tego samego obiektu z wielu wątków wprowadza wyścigu danych, która ma nieprzewidywalne skutki.  
+ `shared_future` obiekty nie są zsynchronizowane. Wywoływanie metody dla tego samego obiektu z wielu wątków wprowadza wyścigu danych, która ma nieprzewidywalne skutki.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -57,7 +60,7 @@ class shared_future;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[shared_future —](#shared_future)|Konstruuje `shared_future` obiektu.|  
+|[shared_future](#shared_future)|Konstruuje `shared_future` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -80,7 +83,7 @@ class shared_future;
   
  **Namespace:** Standard  
   
-##  <a name="get"></a>shared_future::Get
+##  <a name="get"></a>  shared_future::Get
  Pobiera wynik, który jest przechowywany w *skojarzony stan asynchronicznego*.  
   
 ```
@@ -100,7 +103,7 @@ void get() const;
   
  Ponieważ przechowywanych wartość nie istnieje dla specjalizacji `shared_future<void>`, metoda zwraca `void`.  
   
-##  <a name="op_eq"></a>shared_future::operator =  
+##  <a name="op_eq">shared_future::operator =</a>  
  Transfery *skojarzony stan asynchronicznego* od określonego obiektu.  
   
 ```
@@ -120,7 +123,7 @@ shared_future& operator=(const shared_future& Right);
   
  W przypadku drugiego metody `Right` zachowuje jego skojarzony stan asynchronicznego.  
   
-##  <a name="shared_future"></a>shared_future::shared_future — Konstruktor  
+##  <a name="shared_future"></a>  shared_future::shared_future — Konstruktor  
  Konstruuje `shared_future` obiektu.  
   
 ```
@@ -137,11 +140,11 @@ shared_future(const shared_future& Right);
 ### <a name="remarks"></a>Uwagi  
  Pierwszy konstrukcje konstruktora `shared_future` obiektu, którego nie zdefiniowano *skojarzony stan asynchronicznego*.  
   
- Utworzyć drugi i trzeci konstruktorów `shared_future` obiektu i transfer skojarzony stan asynchroniczne z `Right`. `Right`nie ma już skojarzony stan asynchronicznego.  
+ Utworzyć drugi i trzeci konstruktorów `shared_future` obiektu i transfer skojarzony stan asynchroniczne z `Right`. `Right` nie ma już skojarzony stan asynchronicznego.  
   
  Czwarty konstrukcje konstruktora `shared_future` obiektu, który ma taką samą skojarzony stan asynchronicznych jako `Right`.  
   
-##  <a name="valid"></a>shared_future::valid
+##  <a name="valid"></a>  shared_future::valid
  Określa, czy obiekt ma *skojarzony stan asynchronicznego*.  
   
 ```
@@ -149,9 +152,9 @@ bool valid() noexcept;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli obiekt ma skojarzony stan asynchronicznego; w przeciwnym razie `false`.  
+ `true` Jeśli obiekt ma skojarzony stan asynchronicznego; w przeciwnym razie `false`.  
   
-##  <a name="wait"></a>shared_future::wait
+##  <a name="wait"></a>  shared_future::wait
  Blokuje bieżącego wątku do *skojarzony stan asynchronicznego* jest *gotowe*.  
   
 ```
@@ -161,7 +164,7 @@ void wait() const;
 ### <a name="remarks"></a>Uwagi  
  Skojarzony stan asynchroniczne jest gotowy, tylko wtedy, gdy jego dostawcą asynchroniczne przechowywanego wartości zwracanej albo przechowywane Wystąpił wyjątek.  
   
-##  <a name="wait_for"></a>shared_future::wait_for
+##  <a name="wait_for"></a>  shared_future::wait_for
  Blokuje bieżącego wątku, dopóki nie zostanie skojarzony stan asynchronicznego *gotowe* lub przed upływem określonego czasu.  
   
 ```
@@ -180,7 +183,7 @@ future_status wait_for(
 ### <a name="remarks"></a>Uwagi  
  Jest skojarzony stan asynchronicznego *gotowe* tylko wtedy, gdy jego dostawcą asynchroniczne przechowywanego wartości zwracanej albo przechowywane Wystąpił wyjątek.  
   
-##  <a name="wait_until"></a>shared_future::wait_until
+##  <a name="wait_until"></a>  shared_future::wait_until
  Blokuje bieżącego wątku, dopóki nie zostanie skojarzony stan asynchronicznego *gotowe* lub po określonym momencie.  
   
 ```
@@ -201,7 +204,7 @@ future_status wait_until(
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
- [\<przyszłe >](../standard-library/future.md)
+ [\<future>](../standard-library/future.md)
 
 
 

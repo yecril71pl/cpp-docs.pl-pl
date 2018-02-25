@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#include'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#include'
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor, directives
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f724d566703300d0f929df680b659b7adbfa9577
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cee268b68d9be823c6919780f8f4f25e78e1eb74
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="include-directive-cc"></a>#include — dyrektywa (C/C++)
 Określa, że na traktowanie zawartość określonego pliku, tak jakby pojawią się one w programie źródłowym w momencie, w którym pojawi się dyrektywy preprocesora.  
@@ -78,7 +82,7 @@ Określa, że na traktowanie zawartość określonego pliku, tak jakby pojawią 
   
  Zagnieżdżanie plików dołączanych, można nadal maksymalnie 10 poziomów. Gdy zagnieżdżony `#include` jest przetwarzane, preprocesora w dalszym ciągu wstawić otaczającego pliku dołączanego do oryginalnego pliku źródłowego.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Aby zlokalizować pliki źródłowe includable, preprocesora najpierw przeszukuje katalogi, które są określone przez /I — opcja kompilatora. Jeśli opcja nie istnieje lub nie powiedzie się, preprocesora użycie zmiennej środowiskowej INCLUDE można znaleźć żadnych plików dołączanych w nawiasy. Dołącz środowiska zmienną i /I — opcja kompilatora może zawierać wiele ścieżek rozdzielonych średnikami (;). Jeśli więcej niż jeden katalog jest wyświetlany jako część opcji /I lub w zmiennej środowiskowej INCLUDE, preprocesora przeszukuje je w kolejności ich występowania.  
   

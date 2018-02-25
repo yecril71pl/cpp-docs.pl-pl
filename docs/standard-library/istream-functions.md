@@ -5,28 +5,29 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 30bf6fb6bba318d2ab4d150fb242a28e4148083d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 049f039f54194e7a1d4c4d1958a1e4cbd50cd76e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltistreamgt-functions"></a>&lt;IStream&gt; funkcji
 |||  
 |-|-|  
 |[swap](#istream_swap)|[ws](#ws)|  
   
-##  <a name="istream_swap"></a>swap  
+##  <a name="istream_swap"></a>  Swap  
  Zamienia elementy dwa obiekty stream.  
   
 ```  
@@ -48,7 +49,7 @@ void swap(
  `right`  
  Strumień.  
   
-##  <a name="ws"></a>ws  
+##  <a name="ws">ws</a>  
  Pomija biały znak w strumieniu.  
   
 ```  
@@ -71,5 +72,5 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
   Zobacz [operator >>](../standard-library/istream-operators.md#op_gt_gt) przykład przy użyciu `ws`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<IStream >](../standard-library/istream.md)
+ [\<istream>](../standard-library/istream.md)
 

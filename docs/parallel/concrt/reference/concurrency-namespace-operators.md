@@ -5,31 +5,33 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9305f860fb393d2f5d3149300d8df4cfa9f6e5a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ad453a764a87d0d7e54b914b935fd46f56cd4cac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-operators"></a>Współbieżność — przestrzeń nazwy podmiotów
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|  
-|[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
-|[operator ==](#operator_eq_eq)|[— operator||](#operator_lor)|  
+|[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[Operator&gt;](#operator_gt)|  
+|[operator&gt;=](#operator_gt_eq)|[Operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
+|[operator==](#operator_eq_eq)|[— operator||](#operator_lor)|  
   
-##  <a name="operator_lor"></a>Operator &#124; &#124; Operator  
+##  <a name="operator_lor"></a>  Operator &#124; &#124; Operator  
  Tworzy zadanie, które zostanie zakończony pomyślnie, jeśli jedno z zadań dostarczony jako argumenty zakończy się pomyślnie.  
   
 ```  
@@ -72,7 +74,7 @@ inline task<void> operator||(
 ### <a name="remarks"></a>Uwagi  
  Jeśli oba zadania zostały anulowane lub zgłaszają wyjątki zwrócony zadań zakończy się w stanie anulowane i jeden z wyjątków, jeśli żadnego nie zostaną napotkane, będą zgłaszane po wywołaniu `get()` lub `wait()` dla tego zadania.  
   
-##  <a name="operator_amp_amp"></a>operator&amp; &amp; — Operator  
+##  <a name="operator_amp_amp"></a>  operator&amp; &amp; — Operator  
  Tworzy zadanie, które zostanie zakończony pomyślnie, gdy oba zadania podana jako argumenty pomyślnie ukończona.  
   
 ```  
@@ -121,7 +123,7 @@ inline task<void>  operator&&(
 ### <a name="remarks"></a>Uwagi  
  Jeśli jedno z zadań została anulowana lub zgłasza wyjątek, zadanie zwrócone ukończy wcześnie w stanie anulowane i, jeśli jest encoutered, zostanie wygenerowany wyjątek, jeśli wywołujesz `get()` lub `wait()` dla tego zadania.  
   
-##  <a name="operator_eq_eq"></a>operator == — Operator  
+##  <a name="operator_eq_eq"></a>  operator == — Operator  
  Sprawdza, czy `concurrent_vector` obiektu po lewej stronie operatora jest równa `concurrent_vector` obiektu po prawej stronie.  
   
 ```  
@@ -148,14 +150,14 @@ inline bool operator== (
  Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli równoczesnych wektora po lewej stronie operatora jest równa równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
+ `true` Jeśli równoczesnych wektora po lewej stronie operatora jest równa równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Dwa wektory równoczesnych są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.  
   
  Ta metoda nie jest bezpieczną współbieżność w odniesieniu do innych metod, które można modyfikować albo wektorów równoczesnych `_A` lub `_B`.  
   
-##  <a name="operator_neq"></a>operator! = — Operator  
+##  <a name="operator_neq"></a>  operator! = — Operator  
  Sprawdza, czy `concurrent_vector` obiektu po lewej stronie operatora nie jest równa `concurrent_vector` obiektu po prawej stronie.  
   
 ```  
@@ -182,14 +184,14 @@ inline bool operator!= (
  Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli wektory współbieżnych nie są równe; `false` równoczesnych wektory są równe.  
+ `true` Jeśli wektory współbieżnych nie są równe; `false` równoczesnych wektory są równe.  
   
 ### <a name="remarks"></a>Uwagi  
  Dwa wektory równoczesnych są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.  
   
  Ta metoda nie jest bezpieczną współbieżność w odniesieniu do innych metod, które można modyfikować albo wektorów równoczesnych `_A` lub `_B`.  
   
-##  <a name="operator_lt"></a>operator&lt; — Operator  
+##  <a name="operator_lt"></a>  operator&lt; — Operator  
  Sprawdza, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejsza niż `concurrent_vector` obiektu po prawej stronie.  
   
 ```  
@@ -216,14 +218,14 @@ inline bool operator<(
  Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli równoczesnych wektora po lewej stronie operatora jest mniejsza niż równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
+ `true` Jeśli równoczesnych wektora po lewej stronie operatora jest mniejsza niż równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Zachowanie tego operatora jest taki sam jak równoważne operator `vector` klasy w `std` przestrzeni nazw.  
   
  Ta metoda nie jest bezpieczną współbieżność w odniesieniu do innych metod, które można modyfikować albo wektorów równoczesnych `_A` lub `_B`.  
   
-##  <a name="operator_lt_eq"></a>operator&lt;= — Operator  
+##  <a name="operator_lt_eq"></a>  operator&lt;= — Operator  
  Sprawdza, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejsze niż lub równe `concurrent_vector` obiektu po prawej stronie.  
   
 ```  
@@ -250,14 +252,14 @@ inline bool operator<= (
  Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli równoczesnych wektora po lewej stronie operatora jest mniejsza niż lub równe równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
+ `true` Jeśli równoczesnych wektora po lewej stronie operatora jest mniejsza niż lub równe równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Zachowanie tego operatora jest taki sam jak równoważne operator `vector` klasy w `std` przestrzeni nazw.  
   
  Ta metoda nie jest bezpieczną współbieżność w odniesieniu do innych metod, które można modyfikować albo wektorów równoczesnych `_A` lub `_B`.  
   
-##  <a name="operator_gt"></a>operator&gt; — Operator  
+##  <a name="operator_gt"></a>  operator&gt; — Operator  
  Sprawdza, czy `concurrent_vector` obiektu po lewej stronie operatora jest większa niż `concurrent_vector` obiektu po prawej stronie.  
   
 ```  
@@ -284,14 +286,14 @@ inline bool operator>(
  Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli równoczesnych wektora po lewej stronie operatora jest większa niż równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
+ `true` Jeśli równoczesnych wektora po lewej stronie operatora jest większa niż równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Zachowanie tego operatora jest taki sam jak równoważne operator `vector` klasy w `std` przestrzeni nazw.  
   
  Ta metoda nie jest bezpieczną współbieżność w odniesieniu do innych metod, które można modyfikować albo wektorów równoczesnych `_A` lub `_B`.  
   
-##  <a name="operator_gt_eq"></a>operator&gt;= — Operator  
+##  <a name="operator_gt_eq"></a>  operator&gt;= — Operator  
  Sprawdza, czy `concurrent_vector` obiekt po lewej stronie operatora jest większa niż lub równa `concurrent_vector` obiektu po prawej stronie.  
   
 ```  
@@ -318,7 +320,7 @@ inline bool operator>= (
  Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli równoczesnych wektor po lewej stronie operatora jest większa niż lub równa równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
+ `true` Jeśli równoczesnych wektor po lewej stronie operatora jest większa niż lub równa równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Zachowanie tego operatora jest taki sam jak równoważne operator `vector` klasy w `std` przestrzeni nazw.  

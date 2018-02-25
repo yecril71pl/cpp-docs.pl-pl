@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: xfunctional/std::binder1st
-dev_langs: C++
-helpviewer_keywords: binder1st class
+ms.topic: reference
+f1_keywords:
+- xfunctional/std::binder1st
+dev_langs:
+- C++
+helpviewer_keywords:
+- binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ed005f1e8d87841eb0d78d5f7283baff2039897a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e3764a4ef76425ef1b92b7eef2f46803d291a91a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="binder1st-class"></a>binder1st — Klasa
 Klasy szablonów dostarczanie konstruktora, który konwertuje obiektu binarnego funkcja na obiekt funkcja jednoargumentowy przez powiązanie pierwszy argument funkcji binarnego do określonej wartości.  
@@ -60,7 +65,7 @@ protected:
  Wartość argumentu, który porównuje dostosowane obiektu binarnego stała wartość drugiego argumentu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Obiekt funkcji jednoargumentowy będącą wynikiem powiązanie pierwszy argument obiektu, funkcja binarnej na wartość`left.`  
+ Obiekt funkcji jednoargumentowy będącą wynikiem powiązanie pierwszy argument obiektu, funkcja binarnej na wartość `left.`  
   
 ## <a name="remarks"></a>Uwagi  
  Klasy szablonu przechowuje kopię obiektu binarnego funkcja `Func` w **op**, a kopia `left` w **wartość**. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie **op**( **wartość**, `right`).  

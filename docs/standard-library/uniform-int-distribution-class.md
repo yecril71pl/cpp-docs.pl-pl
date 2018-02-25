@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::uniform_int_distribution
 - random/std::uniform_int_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::uniform_int_distribution::param_type::b
 - random/std::uniform_int_distribution::param_type::operator==
 - random/std::uniform_int_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::uniform_int_distribution [C++]
 - std::uniform_int_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 172686fbd7f6717bda8fe102745696031936dea1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1f44926c91b0e0ee9d576d62870b5118d1f34e70
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution — Klasa
 Generuje jednolity (każda wartość jest równie prawdopodobne) dystrybucji całkowitą zakresu danych wyjściowych z wartościami granicznymi włącznie.  
@@ -86,7 +89,7 @@ Klasa szablonu opisuje wraz z wartościami granicznymi włącznie dystrybucji tw
   
 ||||  
 |-|-|-|  
-|[uniform_int_distribution —](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
+|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
 |`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|  
   
 Element członkowski właściwości `a()` zwraca aktualnie przechowywana minimalna granica dystrybucji, podczas `b()` zwraca aktualnie przechowywana granica maksymalna. Dla tej klasy dystrybucji tych minimalne i maksymalne wartości są takie same jak zwracany przez typowych funkcji właściwości `min()` i `max()`.  
@@ -184,7 +187,7 @@ Distribution for 200 samples:
   
  **Namespace:** Standard  
   
-##  <a name="uniform_int_distribution"></a>uniform_int_distribution::uniform_int_distribution  
+##  <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
 Tworzy dystrybucji.  
   
 ```  
@@ -200,17 +203,17 @@ Dolna granica wartości losowych włącznie.
 *b*  
 Górna granica wartości losowych włącznie.  
   
-*Parametr*  
+*parm*  
 `param_type` Struktury użyta do skonstruowania dystrybucji.  
   
 ### <a name="remarks"></a>Uwagi  
-**Warunek wstępny:**`a ≤ b`  
+**Warunek wstępny:** `a ≤ b`  
   
 Pierwszy Konstruktor konstrukcji obiektu których przechowywane `a` wartość przechowuje wartość *a* i których przechowywane `b` wartość zawiera wartość *b*.  
   
 Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.  
   
-##  <a name="param_type"></a>uniform_int_distribution::param_type  
+##  <a name="param_type"></a>  uniform_int_distribution::param_type  
  Przechowuje parametry dystrybucji.  
 ```cpp  
 struct param_type {  
@@ -232,11 +235,11 @@ Dolna granica wartości losowych włącznie.
 *b*  
 Górna granica wartości losowych włącznie.  
   
-*prawo*  
+*right*  
 `param_type` Obiekt do porównania z tym.  
   
 ### <a name="remarks"></a>Uwagi  
-**Warunek wstępny:**`a ≤ b`  
+**Warunek wstępny:** `a ≤ b`  
   
 Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.  
   

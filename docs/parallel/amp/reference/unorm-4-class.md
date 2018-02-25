@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::set_yxzw
 - amp_short_vectors/Concurrency::graphics::unorm_4::gbra
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::wyx
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 204e33b14c48dee7ad52af65fa55c650b74de5d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e8c22389a739f5beafe1ff1a38799c9d1848ba9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorm4-class"></a>unorm_4 — Klasa
 Reprezentuje krótki wektor czterech liczb normalne bez znaku.  
@@ -456,11 +459,11 @@ class unorm_4;
 |----------|-----------------|  
 |unorm_4::operator-||  
 |unorm_4::operator--||  
-|unorm_4::operator * =||  
+|unorm_4::operator*=||  
 |unorm_4::operator / =||  
-|unorm_4::operator ++||  
-|unorm_4::operator +=||  
-|unorm_4::operator =||  
+|unorm_4::operator++||  
+|unorm_4::operator+=||  
+|unorm_4::operator=||  
 |unorm_4::operator-=||  
   
 ### <a name="public-constants"></a>Publiczny — stałe  
@@ -490,12 +493,12 @@ class unorm_4;
 |unorm_4::ARG||  
 |unorm_4::ARGB||  
 |unorm_4::b||  
-|unorm_4::BA||  
+|unorm_4::ba||  
 |unorm_4::bag||  
 |unorm_4::bagr||  
 |unorm_4::bar||  
 |unorm_4::barg||  
-|unorm_4::BG||  
+|unorm_4::bg||  
 |unorm_4::bga||  
 |unorm_4::bgar||  
 |unorm_4::BGR||  
@@ -507,15 +510,15 @@ class unorm_4;
 |unorm_4::brga||  
 |unorm_4::g||  
 |unorm_4::ga||  
-|unorm_4::GAB||  
+|unorm_4::gab||  
 |unorm_4::gabr||  
 |unorm_4::gar||  
 |unorm_4::garb||  
-|unorm_4::GB||  
-|unorm_4::GBA||  
+|unorm_4::gb||  
+|unorm_4::gba||  
 |unorm_4::gbar||  
 |unorm_4::GBR||  
-|unorm_4::GBRA||  
+|unorm_4::gbra||  
 |unorm_4::GR||  
 |unorm_4::gra||  
 |unorm_4::grab||  
@@ -527,15 +530,15 @@ class unorm_4;
 |unorm_4::rabg||  
 |unorm_4::rag||  
 |unorm_4::ragb||  
-|unorm_4::RB||  
+|unorm_4::rb||  
 |unorm_4::rba||  
 |unorm_4::rbag||  
-|unorm_4::RBG||  
+|unorm_4::rbg||  
 |unorm_4::rbga||  
-|unorm_4::RG||  
+|unorm_4::rg||  
 |unorm_4::rga||  
 |unorm_4::rgab||  
-|unorm_4::RGB||  
+|unorm_4::rgb||  
 |unorm_4::rgba||  
 |unorm_4::w||  
 |unorm_4::wx||  
@@ -546,9 +549,9 @@ class unorm_4;
 |unorm_4::Wy||  
 |unorm_4::wyx||  
 |unorm_4::wyxz||  
-|unorm_4::WYZ||  
+|unorm_4::wyz||  
 |unorm_4::wyzx||  
-|unorm_4::wZ||  
+|unorm_4::wz||  
 |unorm_4::wzx||  
 |unorm_4::wzxy||  
 |unorm_4::wzy||  
@@ -591,7 +594,7 @@ class unorm_4;
 |unorm_4::zwxy||  
 |unorm_4::zwy||  
 |unorm_4::zwyx||  
-|unorm_4::ZX||  
+|unorm_4::zx||  
 |unorm_4::zxw||  
 |unorm_4::zxwy||  
 |unorm_4::zxy||  
@@ -610,7 +613,7 @@ class unorm_4;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>unorm_4 — 
+##  <a name="ctor"></a> unorm_4 — 
 
  Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
   
@@ -694,7 +697,7 @@ explicit inline unorm_4(
  `_Other`  
  Obiekt używany do inicjowania.  
   
-##  <a name="unorm_4__size"></a>rozmiar 
+##  <a name="unorm_4__size"></a> Rozmiar 
 
 ```  
 static const int size = 4;  

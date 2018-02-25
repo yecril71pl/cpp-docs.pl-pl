@@ -5,24 +5,27 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: istream/std::operator&gt;&gt;
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- istream/std::operator&gt;&gt;
+dev_langs:
+- C++
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a33a333cc9e70ee57cd1d5612e6de008d49b1d72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc68ed6c0122fbe1176bfda1d446421677902e6c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltistreamgt-operators"></a>&lt;IStream&gt; operatory
  
-##  <a name="op_gt_gt"></a>operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  Operator&gt;&gt;  
  Wyodrębnia znaki i ciągi ze strumienia.  
   
 ```  
@@ -89,7 +92,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```  
   
- wyodrębnia do *N* - 1 elementów i zapisuje je w tablicy, zaczynając od _ *Str*. Jeśli `Istr`. [szerokość](../standard-library/ios-base-class.md#width) jest większa od zera, *N* jest `Istr`. **szerokość**; w przeciwnym razie jest rozmiar największego tablica **elementu** mogą być deklarowane. Funkcja zawsze przechowuje wartość **Elem()** po wyodrębnieniu dowolne elementy są przechowywane. Wyodrębnianie wczesne zatrzymuje się na końcu pliku, na znak o wartości **elementu**(0) (który jest nie wyodrębnić), lub w dowolnym elemencie (który nie jest wyodrębniany), który będzie odrzucany przez [ws](../standard-library/istream-functions.md#ws). Jeśli funkcja wyodrębnia żadnych elementów, wywołuje metodę `Istr`. [Metoda setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). W każdym przypadku wywołuje `Istr`. **szerokość**(0) i zwraca `Istr`.  
+ wyodrębnia do *N* - 1 elementów i zapisuje je w tablicy, zaczynając od _ *Str*. If `Istr`. [szerokość](../standard-library/ios-base-class.md#width) jest większa od zera, *N* jest `Istr`. **szerokość**; w przeciwnym razie jest rozmiar największego tablica **elementu** mogą być deklarowane. Funkcja zawsze przechowuje wartość **Elem()** po wyodrębnieniu dowolne elementy są przechowywane. Wyodrębnianie wczesne zatrzymuje się na końcu pliku, na znak o wartości **elementu**(0) (który jest nie wyodrębnić), lub w dowolnym elemencie (który nie jest wyodrębniany), który będzie odrzucany przez [ws](../standard-library/istream-functions.md#ws). Jeśli funkcja wyodrębnia żadnych elementów, wywołuje metodę `Istr`. [Metoda setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). W każdym przypadku wywołuje `Istr`. **szerokość**(0) i zwraca `Istr`.  
   
  **Uwaga dotycząca zabezpieczeń** ciąg znaków zakończony znakiem null, wyodrębniania ze strumienia wejściowego nie może przekraczać rozmiar buforu docelowego `str`. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
@@ -174,5 +177,5 @@ int main( )
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<IStream >](../standard-library/istream.md)
+ [\<istream>](../standard-library/istream.md)
 

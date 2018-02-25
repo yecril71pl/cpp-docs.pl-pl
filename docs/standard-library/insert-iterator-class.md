@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iterator/std::insert_iterator
 - iterator/std::insert_iterator::container_type
 - iterator/std::insert_iterator::reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::insert_iterator [C++]
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5b893e3c1d30d457d479f5c2dcf42fb97bb978f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ef28da4fbfaccd49f5d74978e9898caa2532d9e5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="insertiterator-class"></a>insert_iterator — Klasa
 Opisuje adapter iteratora, który spełnia wymagania iteratora danych wyjściowych. Wstawia (a nie zastępuje) elementy do sekwencji i w ten sposób zapewnia semantykę, która różni się od semantyki zastępowania, dostarczanej przez iteratory kontenerów asocjacyjnych i sekwencji C++. `insert_iterator` Klasy jest którego ma zastosowany szablon na typ kontenera dostosowuje się.  
@@ -49,7 +52,7 @@ class insert_iterator;
   
 |||  
 |-|-|  
-|[insert_iterator —](#insert_iterator)|Konstruuje `insert_iterator` która wstawia element do określonej pozycji w kontenerze.|  
+|[insert_iterator](#insert_iterator)|Konstruuje `insert_iterator` która wstawia element do określonej pozycji w kontenerze.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -63,15 +66,15 @@ class insert_iterator;
 |||  
 |-|-|  
 |[operator *](#op_star)|Operator usuwania odwołań używaną do zaimplementowania wyrażenia iteratora dane wyjściowe * `i`  =  `x` dla ogólnych wstawiania.|  
-|[operator ++](#op_add_add)|Zwiększa `insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.|  
-|[operator =](#op_eq)|Operator przypisania używaną do zaimplementowania wyrażenia iteratora dane wyjściowe * `i`  =  `x` dla ogólnych wstawiania.|  
+|[operator++](#op_add_add)|Zwiększa `insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.|  
+|[operator=](#op_eq)|Operator przypisania używaną do zaimplementowania wyrażenia iteratora dane wyjściowe * `i`  =  `x` dla ogólnych wstawiania.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek**: \<iteratora >  
   
  **Namespace:** Standard  
   
-##  <a name="container_type"></a>insert_iterator::container_type  
+##  <a name="container_type"></a>  insert_iterator::container_type  
  Typ, który reprezentuje kontener, w którym ma być przeprowadzone ogólne wstawienie.  
   
 ```
@@ -111,7 +114,7 @@ The list L2 is: ( 40 20 10 ).
 *\  
 ```  
   
-##  <a name="insert_iterator"></a>insert_iterator::insert_iterator  
+##  <a name="insert_iterator"></a>  insert_iterator::insert_iterator  
  Konstruuje `insert_iterator` która wstawia element do określonej pozycji w kontenerze.  
   
 ```
@@ -174,7 +177,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="op_star"></a>insert_iterator::operator *  
+##  <a name="op_star"></a>  insert_iterator::operator *  
  Wyłuskań iteratora insert, zwracając się, że element jest adresów.  
   
 ```
@@ -231,7 +234,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="op_add_add"></a>insert_iterator::operator ++  
+##  <a name="op_add_add"></a>  insert_iterator::operator ++  
  Zwiększa **insert_iterator —** do następnej lokalizacji, w której może być przechowywana wartość.  
   
 ```
@@ -292,7 +295,7 @@ After the insertions, the vector vec becomes:
 *\  
 ```  
   
-##  <a name="op_eq"></a>insert_iterator::operator =  
+##  <a name="op_eq"></a>  insert_iterator::operator =  
  Wstawia wartości w kontenerze i zwraca iteratora zaktualizowane, aby wskazywały nowy element.  
   
 ```
@@ -371,7 +374,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="reference"></a>insert_iterator::Reference  
+##  <a name="reference"></a>  insert_iterator::Reference  
  Typ, który zawiera odwołanie do elementu w sekwencji kontrolowanej przez skojarzony kontener.  
   
 ```
@@ -418,7 +421,7 @@ The first element in the list L is: 10.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Iterator >](../standard-library/iterator.md)   
+ [\<iterator>](../standard-library/iterator.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

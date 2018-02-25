@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocnum/std::num_get
 - locale/std::num_get::char_type
 - locale/std::num_get::iter_type
 - locale/std::num_get::do_get
 - locale/std::num_get::get
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::num_get [C++]
 - std::num_get [C++], char_type
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7437bfe26f95b57584f294a7280540014e4a1b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 205bd19d1c051f00a90b45d42997a5d8a1d5eb0f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="numget-class"></a>num_get — Klasa
 Szablon klasy, która opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do sterowania konwersje sekwencji typu `CharType` do wartości liczbowych.  
@@ -56,7 +59,7 @@ class num_get : public locale::facet;
   
 |||  
 |-|-|  
-|[num_get —](#num_get)|Konstruktor dla obiektów typu `num_get` służące do wyodrębniania wartości liczbowe sekwencji.|  
+|[num_get](#num_get)|Konstruktor dla obiektów typu `num_get` służące do wyodrębniania wartości liczbowe sekwencji.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -77,7 +80,7 @@ class num_get : public locale::facet;
   
  **Namespace:** Standard  
   
-##  <a name="char_type"></a>num_get::char_type  
+##  <a name="char_type"></a>  num_get::char_type  
  Typ opisujący znak używany przez ustawienie regionalne.  
   
 ```
@@ -87,7 +90,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu **CharType**.  
   
-##  <a name="do_get"></a>num_get::do_get  
+##  <a name="do_get"></a>  num_get::do_get  
  Funkcja wirtualna wywoływana w celu wyodrębniania wartości liczbowej lub logicznej z sekwencji znaków.  
   
 ```
@@ -214,9 +217,9 @@ virtual iter_type do_get(
   
  Format liczby całkowitej pola wejściowego dalsze jest określany przez [aspektu ustawień regionalnych](../standard-library/locale-class.md#facet_class) `fac` zwrócony przez wywołanie [use_facet](../standard-library/locale-functions.md#use_facet) `<` [numpunct —](../standard-library/numpunct-class.md) `<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())`. W szczególności:  
   
- `fac.`[numpunct::grouping](../standard-library/numpunct-class.md#grouping) `()` określa sposób grupowania cyfr na lewo od dowolnego punktu dziesiętnego  
+ `fac.` [numpunct::GROUPING](../standard-library/numpunct-class.md#grouping) `()` określa sposób grupowania cyfr na lewo od dowolnego punktu dziesiętnego  
   
- `fac.`[numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` określa sekwencji, która oddziela grup cyfr w lewą stronę dowolnego punktu dziesiętnego.  
+ `fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` określa sekwencji, która oddziela grup cyfr w lewą stronę dowolnego punktu dziesiętnego.  
   
  Jeśli nie wystąpienia `fac.thousands_sep()` występują w numeryczne pole wejściowe, jest nałożone nie ograniczenia grupowania. W przeciwnym razie żadnych ograniczeń grupowania powodowanego przez `fac.grouping()` są wymuszane, a separatorów są usuwane, zanim nastąpi konwersji skanowania.  
   
@@ -329,7 +332,7 @@ virtual iter_type do_get(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [uzyskać](#get), w którym funkcja wirtualny element członkowski jest wywoływana przez `do_get`.  
   
-##  <a name="get"></a>num_get::Get  
+##  <a name="get"></a>  num_get::Get  
  Wyodrębnia wartość liczbową lub logiczną z sekwencji znaków.  
   
 ```
@@ -451,7 +454,7 @@ iter_type get(
   
 - **FAC**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) określa sekwencji, która oddziela grup cyfr w lewą stronę dowolnego punktu dziesiętnego.  
   
- Jeśli nie wystąpienia **fac**. `thousands_sep`występuje w numeryczne pole wejściowe, jest nałożone nie ograniczenia grupowania. W przeciwnym razie żadnych ograniczeń grupowania powodowanego przez **fac**. **Grupowanie** są wymuszane, a separatorów są usuwane, zanim nastąpi konwersji skanowania.  
+ Jeśli nie wystąpienia **fac**. `thousands_sep` występuje w numeryczne pole wejściowe, jest nałożone nie ograniczenia grupowania. W przeciwnym razie żadnych ograniczeń grupowania powodowanego przez **fac**. **Grupowanie** są wymuszane, a separatorów są usuwane, zanim nastąpi konwersji skanowania.  
   
  Drugi funkcji wirtualnych chroniony element członkowski:  
   
@@ -513,7 +516,7 @@ virtual iter_type do_get(iter_type first,
   
  zachowuje się taka sama jak pierwsza strona, z tą różnicą, że go próbuje dopasować pełną, niepustym wejściowych polem. Jeśli pomyślnie konwertuje logiczna pola wejściowego na wartość typu `bool` i zapisuje tę wartość w `val`.  
   
- Wartość logiczna pole wejściowe przyjmuje jeden z dwóch formach. Jeśli **iosbase**. **flagi** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) jest **false**, jest taka sama jak liczba całkowita pola wejściowego, z wyjątkiem tego, że skonwertowana wartość musi być albo 0 (dla  **FALSE**) lub 1 (dla **true**). W przeciwnym razie sekwencja musi odpowiadać albo **fac**. [falsename](../standard-library/numpunct-class.md#falsename) (dla **false**), lub **fac**. [truename](../standard-library/numpunct-class.md#truename) (dla **true**).  
+ Wartość logiczna pole wejściowe przyjmuje jeden z dwóch formach. Jeśli **iosbase**. **flagi** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) jest **false**, jest taka sama jak liczba całkowita pola wejściowego, z wyjątkiem tego, że skonwertowana wartość musi być albo 0 (dla **false** ) lub 1 (dla **true**). W przeciwnym razie sekwencja musi odpowiadać albo **fac**. [falsename](../standard-library/numpunct-class.md#falsename) (dla **false**), lub **fac**. [truename](../standard-library/numpunct-class.md#truename) (dla **true**).  
   
 ### <a name="example"></a>Przykład  
   
@@ -547,7 +550,7 @@ int main( )
 }  
 ```  
   
-##  <a name="iter_type"></a>num_get::iter_type  
+##  <a name="iter_type"></a>  num_get::iter_type  
  Typ, który opisuje iterator danych wejściowych.  
   
 ```
@@ -557,7 +560,7 @@ typedef InputIterator iter_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu **InputIterator**.  
   
-##  <a name="num_get"></a>num_get::num_get  
+##  <a name="num_get"></a>  num_get::num_get  
  Konstruktor dla obiektów typu `num_get` służące do wyodrębniania wartości liczbowe sekwencji.  
   
 ```
@@ -575,14 +578,14 @@ explicit num_get(size_t _Refs = 0);
   
 -   1: okres istnienia obiektu musi być zarządzane ręcznie.  
   
--   \>1: te wartości są niezdefiniowane.  
+-   \> 1: te wartości są niezdefiniowane.  
   
  Nie bezpośredniego przykładów to możliwe, ponieważ destruktor jest chroniony.  
   
  Konstruktor inicjuje jego obiektu podstawowego z **locale::**[aspektu](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Ustawienia regionalne >](../standard-library/locale.md)   
+ [\<locale>](../standard-library/locale.md)   
  [facet — klasa](../standard-library/locale-class.md#facet_class)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++, regular expressions
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 81eb92a93b60259abdb90020bb6e89cb0664eea5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="regular-expressions-c"></a>Wyrażenia regularne (C++)
 Standardowa biblioteka C++ obsługuje wiele gramatyk wyrażenia regularnego. W tym temacie omówiono warianty gramatyki, gdy za pomocą wyrażeń regularnych.  
   
-##  <a name="regexgrammar"></a>Gramatyka wyrażeń regularnych  
+##  <a name="regexgrammar"></a> Gramatyka wyrażeń regularnych  
 Gramatyka wyrażenie regularne do użycia przez określono przy użyciu jednego z `std::regex_constants::syntax_option_type` wartości wyliczenia. Te gramatyki wyrażenia regularnego są zdefiniowane w std::regex_constants:
 
 -   `ECMAScript`: To jest najbliżej gramatyki używane przez JavaScript i języków .NET.
@@ -174,7 +177,7 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
 ### <a name="subexpression"></a>Wyrażenie cząstkowe  
  W `basic` i `grep`, Podwyrażenie jest złączeniem. W innych gramatykach wyrażeń regularnych wyrażenie cząstkowe jest alternatywą.  
   
-##  <a name="grammarsummary"></a>Krótki opis gramatyki  
+##  <a name="grammarsummary"></a> Krótki opis gramatyki  
  W następującej tabeli podsumowano funkcje, które są dostępne w różnych gramatykach wyrażeń regularnych:  
   
 |Element|Podstawowe|rozszerzone|ECMAScript|grep|egrep|awk|  
@@ -206,7 +209,7 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
 |symbol wieloznaczny|+|+|+|+|+|+|  
 |asercja granicy słowa|||+||||  
   
-##  <a name="semanticdetails"></a>Szczegóły semantycznego  
+##  <a name="semanticdetails"></a> Szczegóły semantycznego  
   
 ### <a name="anchor"></a>Kotwica  
  Kotwica pasuje do pozycji w ciągu docelowym, a nie do znaku. Kotwica '^' pasuje do początku ciągu docelowego, a kotwica '$' pasuje do końca ciągu docelowego.  
@@ -323,7 +326,7 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
 |-------------|----------------------------------------|  
 |`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '\*', '^', '$' }|  
 |`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '\*', '^', '$', '+', '?', '&#124;' }|  
-|`awk`|`extended`plus {""', '/'}|  
+|`awk`|`extended` plus {""', '/'}|  
 |`ECMAScript`|Wszystkie znaki z wyjątkiem tych, które mogą być częścią identyfikatora. Zwykle obejmuje to litery, cyfry, '$', '\_", a sekwencje specjalne unicode. Aby uzyskać więcej informacji, zobacz temat specyfikacji języka ECMAScript.|  
   
 ### <a name="individual-character"></a>Pojedynczy znak  
@@ -423,7 +426,7 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
 ### <a name="word-boundary"></a>Granica słowa  
  Granica słowa występuje w następujących sytuacjach:  
   
--   Bieżący znak na początku sekwencji docelowy i jest jeden ze znaków programu word`A-Za-z0-9_.`  
+-   Bieżący znak na początku sekwencji docelowy i jest jeden ze znaków programu word `A-Za-z0-9_.`  
   
 -   Bieżąca pozycja znaku jest poza końcem sekwencji docelowej, a ostatni znak w sekwencji docelowej jest jednym ze znaków słowa.  
   
@@ -434,7 +437,7 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
 ### <a name="word-boundary-assert"></a>Asercja granicy słowa  
  Assert granic word odpowiada podczas bieżącej pozycji w ciągu docelowego jest natychmiast po *granicy słowa*.  
   
-##  <a name="matchingandsearching"></a>Dopasowywanie i wyszukiwania  
+##  <a name="matchingandsearching"></a> Dopasowywanie i wyszukiwania  
  Aby wyrażenie regularne pasowało do sekwencji docelowej, całe wyrażenie regularne musi pasować do całej sekwencji docelowej. Na przykład, wyrażenie regularne „bcd” pasuje do sekwencji docelowej „bcd”, ale nie pasuje do sekwencji docelowej „abcd” ani sekwencji docelowej „bcde”.  
   
  Aby wyszukiwanie wyrażenia regularnego zostało wykonane pomyślnie, gdzieś w sekwencji docelowej musi istnieć podsekwencja, która odpowiada wyrażeniu regularnemu. Wyszukiwanie znajduje zazwyczaj pasującą podsekwencję najbliżej lewej strony.  
@@ -449,7 +452,7 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
   
  Częściowe wystąpienie powiedzie się, jeśli dopasowanie osiąga koniec sekwencji docelowej bez niepowodzenia, nawet jeśli nie osiągnęło końca wyrażenia regularnego. W związku z tym, po pomyślnym częściowym wystąpieniu, dodanie znaków do sekwencji docelowej mogłoby spowodować niepowodzenie późniejszego częściowego wystąpienia. Jednakże, po niepowodzeniu częściowego wystąpienia, dodanie znaków do sekwencji docelowej nie może spowodować powodzenia późniejszego częściowego wystąpienia. Na przykład, przy częściowym wystąpieniu, „ab” pasuje do sekwencji docelowej „a”, ale nie „ac”.  
   
-##  <a name="formatflags"></a>Flag formatu  
+##  <a name="formatflags"></a> Flag formatu  
   
 |Reguły formatu ECMAScript|Reguły formatu sed|Tekst zastępczy|  
 |-----------------------------|----------------------|----------------------|  

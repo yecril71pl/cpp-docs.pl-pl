@@ -5,15 +5,16 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - regex/std::regex_match
 - regex/std::regex_replace
 - regex/std::regex_search
 - regex/std::swap
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::regex_match [C++]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: f9ac58b6022d1497f0f06ff08edd29f2e012000f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 66ad573f2025301a9ab05e798ba69c2e75a9830a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltregexgt-functions"></a>&lt;wyrażenie regularne&gt; funkcji
 ||||  
 |-|-|-|  
-|[regex_match —](#regex_match)|[regex_replace —](#regex_replace)|[regex_search —](#regex_search)|  
+|[regex_match](#regex_match)|[regex_replace](#regex_replace)|[regex_search](#regex_search)|  
 |[swap](#swap)|  
   
-##  <a name="regex_match"></a>regex_match —
+##  <a name="regex_match"></a>  regex_match —
  Sprawdza, czy wyrażenie regularne dopasowuje ciąg całego docelowego.  
   
 ```  
@@ -193,7 +194,7 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ```  
   
-##  <a name="regex_replace"></a>regex_replace —
+##  <a name="regex_replace"></a>  regex_replace —
  Zamienia dopasowaniu wyrażenia regularne.  
   
 ```  
@@ -299,7 +300,7 @@ replacement == AdAeAf
 replacement == Adaeaf  
 ```  
   
-##  <a name="regex_search"></a>regex_search —
+##  <a name="regex_search"></a>  regex_search —
  Wyszukuje wyrażenie regularne zgodne.  
   
 ```  
@@ -448,7 +449,7 @@ search(string, "abc") == true
   matched: "abc"  
 ```  
   
-##  <a name="swap"></a>swap
+##  <a name="swap"></a>  Swap
  Zamienia dwa obiekty basic_regex — lub match_results —.  
   
 ```  
@@ -510,12 +511,12 @@ string == aaa
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
-[\<wyrażenie regularne >](../standard-library/regex.md)  
-[regex_constants — klasa](../standard-library/regex-constants-class.md)  
-[regex_error — klasa](../standard-library/regex-error-class.md)  
-[regex_iterator — klasa](../standard-library/regex-iterator-class.md)  
+[\<regex>](../standard-library/regex.md)  
+[regex_constants, klasa](../standard-library/regex-constants-class.md)  
+[regex_error, klasa](../standard-library/regex-error-class.md)  
+[regex_iterator, klasa](../standard-library/regex-iterator-class.md)  
 [\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)  
-[regex_token_iterator — klasa](../standard-library/regex-token-iterator-class.md)  
-[regex_traits — klasa](../standard-library/regex-traits-class.md)  
+[regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)  
+[regex_traits, klasa](../standard-library/regex-traits-class.md)  
 [\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)  
 

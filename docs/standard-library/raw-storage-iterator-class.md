@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::raw_storage_iterator
 - memory/std::raw_storage_iterator::element_type
 - memory/std::raw_storage_iterator::iter_type
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::raw_storage_iterator [C++]
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fd68bfc788231ddc954b1f6e8a70d63dbcf02592
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ad14448e9ff8928a2ce2807e302b13086199d11e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator — Klasa
 Klasa adaptera, która jest dostarczana, aby umożliwić algorytmom zapisywanie ich wyników do pamięci niezainicjowanej.  
@@ -42,7 +45,7 @@ class raw_storage_iterator
  `OutputIterator`  
  Określa iteratora danych wyjściowych dla obiekt jest przechowywany.  
   
- *Typ*  
+ Typ  
  Typ obiektu, dla którego jest przydzielane magazynu.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -56,13 +59,13 @@ class raw_storage_iterator
   
 |||  
 |-|-|  
-|[raw_storage_iterator —](#raw_storage_iterator)|Tworzy iteratora czystego magazynu, z określonego źródłowego iteratora danych wyjściowych.|  
+|[raw_storage_iterator](#raw_storage_iterator)|Tworzy iteratora czystego magazynu, z określonego źródłowego iteratora danych wyjściowych.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[ELEMENT_TYPE](#element_type)|Zawiera typ, który opisuje element ma być przechowywany iteratora pojemności.|  
+|[element_type](#element_type)|Zawiera typ, który opisuje element ma być przechowywany iteratora pojemności.|  
 |[iter_type](#iter_type)|Zawiera typ, który opisuje iteratora źródłową iteratora pojemności.|  
   
 ### <a name="operators"></a>Operatory  
@@ -70,15 +73,15 @@ class raw_storage_iterator
 |||  
 |-|-|  
 |[operator *](#op_star)|Operator usuwania odwołań, używaną do zaimplementowania wyrażenia iteratora dane wyjściowe * `ii`  =  `x`.|  
-|[operator =](#op_eq)|Operator przypisania używaną do zaimplementowania wyrażenia iteratora pojemności * `i`  =  `x` do przechowywania w pamięci.|  
-|[operator ++](#op_add_add)|Operatory preincrement i postincrement dla Iteratory pojemności.|  
+|[operator=](#op_eq)|Operator przypisania używaną do zaimplementowania wyrażenia iteratora pojemności * `i`  =  `x` do przechowywania w pamięci.|  
+|[operator++](#op_add_add)|Operatory preincrement i postincrement dla Iteratory pojemności.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<pamięci >  
   
  **Namespace:** Standard  
   
-##  <a name="element_type"></a>raw_storage_iterator::ELEMENT_TYPE  
+##  <a name="element_type"></a>  raw_storage_iterator::ELEMENT_TYPE  
  Zawiera typ, który opisuje element ma być przechowywany iteratora pojemności.  
   
 ```
@@ -88,7 +91,7 @@ typedef Type element_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu raw_storage_iterator — klasa **typu**.  
   
-##  <a name="iter_type"></a>raw_storage_iterator::iter_type  
+##  <a name="iter_type"></a>  raw_storage_iterator::iter_type  
  Zawiera typ, który opisuje iteratora źródłową iteratora pojemności.  
   
 ```
@@ -98,7 +101,7 @@ typedef ForwardIterator iter_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu **ForwardIterator**.  
   
-##  <a name="op_star"></a>raw_storage_iterator::operator *  
+##  <a name="op_star"></a>  raw_storage_iterator::operator *  
  Operator usuwania odwołań, używaną do zaimplementowania wyrażenia iteratora pojemności \* *ii* = *x*.  
   
 ```
@@ -162,7 +165,7 @@ Constructing 5
 *\  
 ```  
   
-##  <a name="op_eq"></a>raw_storage_iterator::operator =  
+##  <a name="op_eq"></a>  raw_storage_iterator::operator =  
  Operator przypisania używaną do zaimplementowania wyrażenia iteratora pojemności \* *i* = *x* do przechowywania w pamięci.  
   
 ```
@@ -231,7 +234,7 @@ Constructing 5
 *\  
 ```  
   
-##  <a name="op_add_add"></a>raw_storage_iterator::operator ++  
+##  <a name="op_add_add"></a>  raw_storage_iterator::operator ++  
  Operatory preincrement i postincrement dla Iteratory pojemności.  
   
 ```
@@ -284,7 +287,7 @@ array 4 = 8
 *\  
 ```  
   
-##  <a name="raw_storage_iterator"></a>raw_storage_iterator::raw_storage_iterator  
+##  <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator  
  Tworzy iteratora czystego magazynu, z określonego źródłowego iteratora danych wyjściowych.  
   
 ```

@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - allocators/stdext::cache_freelist
 - allocators/stdext::cache_freelist::allocate
 - allocators/stdext::cache_freelist::deallocate
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::cache_freelist
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c971a4aebcd0f0a7c0baa59a445059f681f7e8af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 429b1f60fae11e8ed3fd91fd33ff2e5b9ab131bc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cachefreelist-class"></a>cache_freelist — Klasa
 Definiuje [zablokować alokatora](../standard-library/allocators-header.md) przydziela i zwalnia bloki pamięci o rozmiarze pojedynczego.  
@@ -54,21 +57,21 @@ class cache_freelist
   
 |||  
 |-|-|  
-|[cache_freelist —](#cache_freelist)|Tworzy obiekt typu `cache_freelist`.|  
+|[cache_freelist](#cache_freelist)|Tworzy obiekt typu `cache_freelist`.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
 |||  
 |-|-|  
 |[allocate](#allocate)|Przydziela bloku pamięci.|  
-|[cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|  
+|[Cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<allocators — >  
   
  **Namespace:** stdext —  
   
-##  <a name="allocate"></a>cache_freelist::allocate  
+##  <a name="allocate"></a>  cache_freelist::allocate  
  Przydziela bloku pamięci.  
   
 ```
@@ -86,7 +89,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="cache_freelist"></a>cache_freelist::cache_freelist  
+##  <a name="cache_freelist"></a>  cache_freelist::cache_freelist  
  Tworzy obiekt typu `cache_freelist`.  
   
 ```
@@ -95,7 +98,7 @@ cache_freelist();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="deallocate"></a>cache_freelist::deallocate  
+##  <a name="deallocate"></a>  cache_freelist::deallocate  
  Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.  
   
 ```
@@ -112,7 +115,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Uwagi  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<allocators — >](../standard-library/allocators-header.md)
+ [\<allocators>](../standard-library/allocators-header.md)
 
 
 

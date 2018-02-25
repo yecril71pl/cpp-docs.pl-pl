@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concrt/concurrency::AgentEventGuid
 - concrt/concurrency::COOPERATIVE_TIMEOUT_INFINITE
@@ -19,37 +19,39 @@ f1_keywords:
 - concrt/concurrency::ResourceManagerEventGuid
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ae7ceb640e7b92829e4134350a6e6c97747bfd77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 83c9629feed07cee5bd13138f3def89251c081cb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-constants"></a>stałe przestrzeń nazw współbieżności
 ||||  
 |-|-|-|  
-|[Agenteventguid —](#agenteventguid)|[CONCRT_RM_VERSION_1 —](#concrt_rm_version_1)|[COOPERATIVE_TIMEOUT_INFINITE —](#cooperative_timeout_infinite)|  
-|[COOPERATIVE_WAIT_TIMEOUT —](#cooperative_wait_timeout)|[Choreeventguid —](#choreeventguid)|[Concrteventguid —](#concrteventguid)|  
-|[Concrt_providerguid —](#concrt_providerguid)|[Contexteventguid —](#contexteventguid)|[INHERIT_THREAD_PRIORITY —](#inherit_thread_priority)|  
-|[Lockeventguid —](#lockeventguid)|[Maxexecutionresources —](#maxexecutionresources)|[Pplparallelforeventguid —](#pplparallelforeventguid)|  
-|[Pplparallelforeacheventguid —](#pplparallelforeacheventguid)|[Pplparallelinvokeeventguid —](#pplparallelinvokeeventguid)|[Resourcemanagereventguid —](#resourcemanagereventguid)|  
-|[Schedulegroupeventguid —](#schedulegroupeventguid)|[Schedulereventguid —](#schedulereventguid)|[Virtualprocessoreventguid —](#virtualprocessoreventguid)|  
+|[AgentEventGuid](#agenteventguid)|[CONCRT_RM_VERSION_1](#concrt_rm_version_1)|[COOPERATIVE_TIMEOUT_INFINITE —](#cooperative_timeout_infinite)|  
+|[COOPERATIVE_WAIT_TIMEOUT](#cooperative_wait_timeout)|[Choreeventguid —](#choreeventguid)|[ConcRTEventGuid](#concrteventguid)|  
+|[ConcRT_ProviderGuid](#concrt_providerguid)|[ContextEventGuid](#contexteventguid)|[INHERIT_THREAD_PRIORITY —](#inherit_thread_priority)|  
+|[Lockeventguid —](#lockeventguid)|[MaxExecutionResources](#maxexecutionresources)|[PPLParallelForEventGuid](#pplparallelforeventguid)|  
+|[PPLParallelForeachEventGuid](#pplparallelforeacheventguid)|[PPLParallelInvokeEventGuid](#pplparallelinvokeeventguid)|[ResourceManagerEventGuid](#resourcemanagereventguid)|  
+|[ScheduleGroupEventGuid](#schedulegroupeventguid)|[SchedulerEventGuid](#schedulereventguid)|[VirtualProcessorEventGuid](#virtualprocessoreventguid)|  
   
-##  <a name="agenteventguid"></a>Agenteventguid —  
+##  <a name="agenteventguid"></a>  Agenteventguid —  
  Kategoria zdarzenia ETW opisujący wywoływane przez biblioteki agentów współbieżność środowiska wykonawczego identyfikatora GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07}).  
   
 ```
 const __declspec(selectany) GUID AgentEventGuid = {0xb9b5b78c, 0x713, 0x4898, { 0xa2, 0x1a, 0xc6, 0x79, 0x49, 0xdc, 0xed, 0x7 } };
 ```  
   
-##  <a name="choreeventguid"></a>Choreeventguid —  
+##  <a name="choreeventguid">Choreeventguid —</a>  
  Kategoria GUID opisujące zdarzenia ETW wywoływane przez współbieżność środowiska wykonawczego, które są bezpośrednio związane z zadań i zadań.  
   
 ```
@@ -60,7 +62,7 @@ const __declspec(selectany) GUID ChoreEventGuid =
 ### <a name="remarks"></a>Uwagi  
  Ta kategoria zdarzenia nie jest obecnie uruchamiany przez współbieżności środowiska wykonawczego.  
   
-##  <a name="concrt_providerguid"></a>Concrt_providerguid —  
+##  <a name="concrt_providerguid"></a>  Concrt_providerguid —  
  Dostawca ETW identyfikatora GUID dla współbieżności środowiska wykonawczego.  
   
 ```
@@ -68,14 +70,14 @@ const __declspec(selectany) GUID ConcRT_ProviderGuid =
     { 0xF7B697A3, 0x4DB5, 0x4d3b, { 0xBE, 0x71, 0xC4, 0xD2, 0x84, 0xE6, 0x59, 0x2F } };
 ```  
   
-##  <a name="concrt_rm_version_1"></a>CONCRT_RM_VERSION_1 —  
+##  <a name="concrt_rm_version_1"></a>  CONCRT_RM_VERSION_1 —  
  Wskazuje obsługi interfejsu Menedżera zasobów zdefiniowane w programie Visual Studio 2010.  
   
 ```
 const unsigned int CONCRT_RM_VERSION_1 = 0x00010000;
 ```  
   
-##  <a name="concrteventguid"></a>Concrteventguid —  
+##  <a name="concrteventguid"></a>  Concrteventguid —  
  Kategorię GUID opisujące zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które nie zostały opisane bardziej szczegółowo w innej kategorii.  
   
 ```
@@ -86,21 +88,21 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 ### <a name="remarks"></a>Uwagi  
  Ta kategoria zdarzenia nie jest obecnie uruchamiany przez współbieżności środowiska wykonawczego.  
   
-##  <a name="cooperative_timeout_infinite"></a>COOPERATIVE_TIMEOUT_INFINITE —  
+##  <a name="cooperative_timeout_infinite">COOPERATIVE_TIMEOUT_INFINITE —</a>  
  Wartość wskazująca, której oczekiwania nigdy nie ma limitu czasu.  
   
 ```
 const unsigned int COOPERATIVE_TIMEOUT_INFINITE = (unsigned int)-1;
 ```  
   
-##  <a name="cooperative_wait_timeout"></a>COOPERATIVE_WAIT_TIMEOUT —  
+##  <a name="cooperative_wait_timeout"></a>  COOPERATIVE_WAIT_TIMEOUT —  
  Wartość wskazująca, że oczekiwania upłynął limit czasu.  
   
 ```
 const size_t COOPERATIVE_WAIT_TIMEOUT = SIZE_MAX;
 ```  
   
-##  <a name="contexteventguid"></a>Contexteventguid —  
+##  <a name="contexteventguid"></a>  Contexteventguid —  
  Kategorię GUID opisujące zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z kontekstami.  
   
 ```
@@ -108,14 +110,14 @@ const __declspec(selectany) GUID ContextEventGuid =
     { 0x5727A00F, 0x50BE, 0x4519, { 0x82, 0x56, 0xF7, 0x69, 0x98, 0x71, 0xFE, 0xCB } };
 ```  
   
-##  <a name="inherit_thread_priority"></a>INHERIT_THREAD_PRIORITY —  
+##  <a name="inherit_thread_priority">INHERIT_THREAD_PRIORITY —</a>  
  Specjalna wartość dla klucza zasad `ContextPriority` wskazującą, czy priorytet wątku wszystkie konteksty w harmonogramie powinna być taka sama jak w wątku, w której został utworzony harmonogram.  
   
 ```
 const unsigned int INHERIT_THREAD_PRIORITY = 0x0000F000;
 ```  
   
-##  <a name="lockeventguid"></a>Lockeventguid —  
+##  <a name="lockeventguid">Lockeventguid —</a>  
  Kategoria GUID opisujące zdarzenia ETW wywoływane przez współbieżność środowiska wykonawczego, które są bezpośrednio związane z blokad.  
   
 ```
@@ -126,14 +128,14 @@ const __declspec(selectany) GUID LockEventGuid =
 ### <a name="remarks"></a>Uwagi  
  Ta kategoria zdarzenia nie jest obecnie uruchamiany przez współbieżności środowiska wykonawczego.  
   
-##  <a name="maxexecutionresources"></a>Maxexecutionresources —  
+##  <a name="maxexecutionresources"></a>  Maxexecutionresources —  
  Specjalna wartość kluczy zasad `MinConcurrency` i `MaxConcurrency`. Wartość domyślna to liczba wątków sprzętu na komputerze w przypadku braku inne ograniczenia.  
   
 ```
 const unsigned int MaxExecutionResources = 0xFFFFFFFF;
 ```  
   
-##  <a name="pplparallelforeventguid"></a>Pplparallelforeventguid —  
+##  <a name="pplparallelforeventguid"></a>  Pplparallelforeventguid —  
  Kategorię GUID opisujące zdarzenia ETW wywoływane przez współbieżność środowiska wykonawczego, które są bezpośrednio związane z użycie `parallel_for` funkcji.  
   
 ```
@@ -141,7 +143,7 @@ const __declspec(selectany) GUID PPLParallelForEventGuid =
     { 0x31c8da6b, 0x6165, 0x4042, { 0x8b, 0x92, 0x94, 0x9e, 0x31, 0x5f, 0x4d, 0x84 } };
 ```  
   
-##  <a name="pplparallelforeacheventguid"></a>Pplparallelforeacheventguid —  
+##  <a name="pplparallelforeacheventguid"></a>  Pplparallelforeacheventguid —  
  Kategorię GUID opisujące zdarzenia ETW wywoływane przez współbieżność środowiska wykonawczego, które są bezpośrednio związane z użycie `parallel_for_each` funkcji.  
   
 ```
@@ -149,7 +151,7 @@ const __declspec(selectany) GUID PPLParallelForeachEventGuid =
     { 0x5cb7d785, 0x9d66, 0x465d, { 0xba, 0xe1, 0x46, 0x11, 0x6, 0x1b, 0x54, 0x34 } };
 ```  
   
-##  <a name="pplparallelinvokeeventguid"></a>Pplparallelinvokeeventguid —  
+##  <a name="pplparallelinvokeeventguid"></a>  Pplparallelinvokeeventguid —  
  Kategorię GUID opisujące zdarzenia ETW wywoływane przez współbieżność środowiska wykonawczego, które są bezpośrednio związane z użycie `parallel_invoke` funkcji.  
   
 ```
@@ -157,7 +159,7 @@ const __declspec(selectany) GUID PPLParallelInvokeEventGuid =
     { 0xd1b5b133, 0xec3d, 0x49f4, { 0x98, 0xa3, 0x46, 0x4d, 0x1a, 0x9e, 0x46, 0x82 } };
 ```  
   
-##  <a name="resourcemanagereventguid"></a>Resourcemanagereventguid —  
+##  <a name="resourcemanagereventguid"></a>  ResourceManagerEventGuid  
  Kategorię GUID opisujące zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z Menedżera zasobów.  
   
 ```
@@ -168,7 +170,7 @@ const __declspec(selectany) GUID ResourceManagerEventGuid =
 ### <a name="remarks"></a>Uwagi  
  Ta kategoria zdarzenia nie jest obecnie uruchamiany przez współbieżności środowiska wykonawczego.  
   
-##  <a name="schedulegroupeventguid"></a>Schedulegroupeventguid —  
+##  <a name="schedulegroupeventguid"></a>  ScheduleGroupEventGuid  
  Kategorię GUID opisujące zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z grupy harmonogramu.  
   
 ```
@@ -179,7 +181,7 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
 ### <a name="remarks"></a>Uwagi  
  Ta kategoria zdarzenia nie jest obecnie uruchamiany przez współbieżności środowiska wykonawczego.  
   
-##  <a name="schedulereventguid"></a>Schedulereventguid —  
+##  <a name="schedulereventguid"></a>  Schedulereventguid —  
  Kategoria GUID opisujące zdarzenia ETW wywoływane przez współbieżność środowiska wykonawczego, które są bezpośrednio związane z działania harmonogramu.  
   
 ```
@@ -187,7 +189,7 @@ const __declspec(selectany) GUID SchedulerEventGuid =
     { 0xE2091F8A, 0x1E0A, 0x4731, { 0x84, 0xA2, 0x0D, 0xD5, 0x7C, 0x8A, 0x52, 0x61 } };
 ```  
   
-##  <a name="virtualprocessoreventguid"></a>Virtualprocessoreventguid —  
+##  <a name="virtualprocessoreventguid"></a>  Virtualprocessoreventguid —  
  Kategoria GUID opisujące zdarzenia ETW wywoływane przez współbieżność środowiska wykonawczego, które są bezpośrednio związane z procesorów wirtualnych.  
   
 ```

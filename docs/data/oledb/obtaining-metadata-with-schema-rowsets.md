@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets, getting OLE DB provider metadata
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0035606b02a1281b09287f19ffe087c9e6b36f7f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1509bb4bd083331c36c3b699b4716945e4573d1d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Uzyskiwanie metadanych za pomocą zestawów wierszy schematu
 Czasami trzeba uzyskać informacje o dostawcy, zestaw wierszy, tabeli, kolumny lub inne informacje z bazy danych bez konieczności otwierania w zestawie wierszy. Dane dotyczące struktury bazy danych jest nazywana metadanych i mogą być pobierane przez wiele różnych sposobów. Co metoda polega na użyciu zestawów wierszy schematu.  
@@ -52,7 +54,7 @@ Czasami trzeba uzyskać informacje o dostawcy, zestaw wierszy, tabeli, kolumny l
 SELECT * FROM authors where l_name = 'pivo'  
 ```  
   
- `l_name`jest to ograniczenie. To jest bardzo prosty przykład z tylko jednego ograniczenia; klasy zestawów wierszy schematu obsługuje kilka ograniczeń.  
+ `l_name` jest to ograniczenie. To jest bardzo prosty przykład z tylko jednego ograniczenia; klasy zestawów wierszy schematu obsługuje kilka ograniczeń.  
   
  [Klasy typedef zestawów wierszy schematu](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Hermetyzowanie wszystkie zestawy wierszy schematu OLE DB, aby uzyskać dostęp do zestawu wierszy schematu, podobnie jak inne zestawu wierszy, tworzenie wystąpień i otwarcie go. Na przykład klasa typedef [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md) jest zdefiniowany jako:  
   

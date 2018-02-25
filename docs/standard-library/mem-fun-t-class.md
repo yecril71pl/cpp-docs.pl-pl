@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: xfunctional/std::mem_fun_t
-dev_langs: C++
-helpviewer_keywords: mem_fun_t class
+ms.topic: reference
+f1_keywords:
+- xfunctional/std::mem_fun_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d78a39fb29ac983c69bf792c4d567c850e697c53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a92960a84d90df39b20bd300e72d9a9602ea1e1d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="memfunt-class"></a>mem_fun_t — Klasa
 Klasa karty, który umożliwia **non_const** funkcji członkowskiej, która nie przyjmuje żadnych argumentów do wywołania jako obiekt funkcja jednoargumentowy po zainicjowaniu z argumentem wskaźnika.  
@@ -59,7 +64,7 @@ class mem_fun_t : public unary_function<Type *, Result> {
  **Namespace:** Standard  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<funkcjonalności >](../standard-library/functional.md)   
+ [\<functional>](../standard-library/functional.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

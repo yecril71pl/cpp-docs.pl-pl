@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: _HAS_ITERATOR_DEBUGGING
-dev_langs: C++
-helpviewer_keywords: _HAS_ITERATOR_DEBUGGING
+ms.topic: reference
+f1_keywords:
+- _HAS_ITERATOR_DEBUGGING
+dev_langs:
+- C++
+helpviewer_keywords:
+- _HAS_ITERATOR_DEBUGGING
 ms.assetid: 90077dbb-8a76-4963-83a6-29f4854007a8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7c680338fa84fa0f00e01ea4612d07c851570a36
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 39b82fbe2a7c3afa0d731185b2e9578d48c89b23
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hasiteratordebugging"></a>_HAS_ITERATOR_DEBUGGING  
   
@@ -36,7 +41,7 @@ Aby włączyć debugowanie w kompilacjach debugowania iteratora, ustaw `_ITERATO
 #define _ITERATOR_DEBUG_LEVEL 2  
 ```  
   
-`_ITERATOR_DEBUG_LEVEL`Nie można ustawić 2 (i `_HAS_ITERATOR_DEBUGGING` nie może być ustawiona na 1) w sprzedaży detalicznej kompilacji.  
+`_ITERATOR_DEBUG_LEVEL` Nie można ustawić 2 (i `_HAS_ITERATOR_DEBUGGING` nie może być ustawiona na 1) w sprzedaży detalicznej kompilacji.  
   
 Aby wyłączyć Iteratory debugowania w kompilacjach debugowania, ustaw `_ITERATOR_DEBUG_LEVEL` 0 lub 1. Jest to równoważne `_HAS_ITERATOR_DEBUGGING` ustawienie 0 lub wyłączone:  
   

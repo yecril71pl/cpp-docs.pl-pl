@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - strstream/std::strstream::freeze
 - strstream/std::strstream::pcount
 - strstream/std::strstream::rdbuf
 - strstream/std::strstream::str
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::strstream [C++], freeze
 - std::strstream [C++], pcount
 - std::strstream [C++], rdbuf
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2e11fade0bf5bf6f816f273250217be24c8bc87c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b6b8bef6b9ae2f4000adf620e2f898113b565f2a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="strstream-class"></a>strstream — Klasa
 Zawiera opis obiektu, który kontroluje wstawiania i wyodrębniania elementów i obiektów zakodowany przy użyciu buforu strumienia klasy [strstreambuf —](../standard-library/strstreambuf-class.md).  
@@ -49,13 +52,13 @@ class strstream : public iostream
   
 |||  
 |-|-|  
-|[strstream —](#strstream)|Tworzy obiekt typu `strstream`.|  
+|[strstream](#strstream)|Tworzy obiekt typu `strstream`.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
 |||  
 |-|-|  
-|[blokowanie](#freeze)|Powoduje, że jest niedostępna za pośrednictwem operacji buforu strumienia buforu strumienia.|  
+|[Blokowanie](#freeze)|Powoduje, że jest niedostępna za pośrednictwem operacji buforu strumienia buforu strumienia.|  
 |[pcount](#pcount)|Zwraca liczbę z liczbą elementów zapisywane w kontrolowanej sekwencji.|  
 |[rdbuf](#rdbuf)|Zwraca wskaźnik do strumienia powiązanych `strstreambuf` obiektu.|  
 |[str](#str)|Wywołania [Zablokuj](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.|  
@@ -65,7 +68,7 @@ class strstream : public iostream
   
  **Namespace:** Standard  
   
-##  <a name="freeze"></a>strstream::FREEZE  
+##  <a name="freeze"></a>  strstream::FREEZE  
  Powoduje, że jest niedostępna za pośrednictwem operacji buforu strumienia buforu strumienia.  
   
 ```
@@ -82,7 +85,7 @@ void freeze(bool _Freezeit = true);
 ### <a name="example"></a>Przykład  
   Zobacz [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze) na przykład, który używa **Zablokuj**.  
   
-##  <a name="pcount"></a>strstream::pcount  
+##  <a name="pcount"></a>  strstream::pcount  
  Zwraca liczbę z liczbą elementów zapisywane w kontrolowanej sekwencji.  
   
 ```
@@ -98,7 +101,7 @@ streamsize pcount() const;
 ### <a name="example"></a>Przykład  
   Zobacz [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) przykładowe przy użyciu pcount.  
   
-##  <a name="rdbuf"></a>strstream::rdbuf  
+##  <a name="rdbuf"></a>  strstream::rdbuf  
  Zwraca wskaźnik do obiektu skojarzone strstreambuf — strumienia.  
   
 ```
@@ -114,7 +117,7 @@ strstreambuf *rdbuf() const
 ### <a name="example"></a>Przykład  
   Zobacz [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) dla przykładu korzystającego z `rdbuf`.  
   
-##  <a name="str"></a>strstream::str  
+##  <a name="str"></a>  strstream::str  
  Wywołania [Zablokuj](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.  
   
 ```
@@ -130,7 +133,7 @@ char *str();
 ### <a name="example"></a>Przykład  
   Zobacz [strstreambuf::str](../standard-library/strstreambuf-class.md#str) dla przykładu korzystającego z **str**.  
   
-##  <a name="strstream"></a>strstream::strstream  
+##  <a name="strstream"></a>  strstream::strstream  
  Tworzy obiekt typu `strstream`.  
   
 ```

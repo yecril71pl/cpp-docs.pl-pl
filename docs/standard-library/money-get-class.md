@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocmon/std::money_get
 - xlocmon/std::money_get::char_type
@@ -14,7 +15,8 @@ f1_keywords:
 - xlocmon/std::money_get::string_type
 - xlocmon/std::money_get::do_get
 - xlocmon/std::money_get::get
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::money_get [C++]
 - std::money_get [C++], char_type
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c823f6ddc688a697d82835995b2fda86a2feb44
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c4566a9b640a73687b3bf48c1346af711d450b73
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="moneyget-class"></a>money_get — Klasa
 Klasa szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do sterowania konwersje sekwencji typu `CharType` do wartości monetarnych.  
@@ -58,7 +61,7 @@ class money_get : public locale::facet;
   
 |||  
 |-|-|  
-|[money_get —](#money_get)|Konstruktor dla obiektów typu `money_get` służące do wyodrębniania wartości liczbowe sekwencji reprezentujący wartości monetarnych.|  
+|[money_get](#money_get)|Konstruktor dla obiektów typu `money_get` służące do wyodrębniania wartości liczbowe sekwencji reprezentujący wartości monetarnych.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -66,7 +69,7 @@ class money_get : public locale::facet;
 |-|-|  
 |[char_type](#char_type)|Typ opisujący znak używany przez ustawienie regionalne.|  
 |[iter_type](#iter_type)|Typ, który opisuje iterator danych wejściowych.|  
-|[STRING_TYPE](#string_type)|Typ, który opisuje ciąg zawierający znaki typu `CharType`.|  
+|[string_type](#string_type)|Typ, który opisuje ciąg zawierający znaki typu `CharType`.|  
   
 ### <a name="member-functions"></a>Funkcje elementów członkowskich  
   
@@ -80,7 +83,7 @@ class money_get : public locale::facet;
   
  **Namespace:** Standard  
   
-##  <a name="char_type"></a>money_get::char_type  
+##  <a name="char_type"></a>  money_get::char_type  
  Typ opisujący znak używany przez ustawienie regionalne.  
   
 ```
@@ -90,7 +93,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu **CharType**.  
   
-##  <a name="do_get"></a>money_get::do_get  
+##  <a name="do_get"></a>  money_get::do_get  
  Wywołuje się, by funkcji wirtualnej wyodrębnia wartość liczbową z sekwencja znaków, który reprezentuje wartość pieniężną.  
   
 ```
@@ -154,18 +157,18 @@ virtual iter_type do_get(iter_type first,
   
 - **FAC**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) określa liczbę cyfr znaczących ułamek na prawo od dowolnego punktu dziesiętnego. Podczas analizowania kwotę pieniężną więcej cyfr ułamek nie są wymagane przez `frac_digits`, `do_get` zatrzymuje analizowania po użyciu najwyżej `frac_digits` znaków.  
   
- Jeśli parametry logowania ( **fac**. `negative_sign`lub **fac**. `positive_sign`) ma więcej niż jeden element, tylko pierwszy element dopasowaniu gdzie element równa **money_base::sign** pojawia się we wzorcu formatu ( **fac**. `neg_format`). Wszystkie pozostałe elementy są dopasowywane w końcu pieniężnego pola wejściowego. Jeśli żaden ciąg ma pierwszy element, który odpowiada następnego elementu w polu wejściowym pieniężnego, parametry logowania są podejmowane jako pusta, i znak jest dodatnia.  
+ Jeśli parametry logowania ( **fac**. `negative_sign` lub **fac**. `positive_sign`) ma więcej niż jeden element, tylko pierwszy element dopasowaniu gdzie element równa **money_base::sign** pojawia się we wzorcu formatu ( **fac**. `neg_format`). Wszystkie pozostałe elementy są dopasowywane w końcu pieniężnego pola wejściowego. Jeśli żaden ciąg ma pierwszy element, który odpowiada następnego elementu w polu wejściowym pieniężnego, parametry logowania są podejmowane jako pusta, i znak jest dodatnia.  
   
- Jeśli **iosbase**. [flagi](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) jest różna od zera, ciąg **fac**. `curr_symbol`musi odpowiadać, gdy element równa **money_base::symbol** jest wyświetlana w formacie wzorca. W przeciwnym razie, jeśli **money_base::symbol** występuje na końcu wzorca format, a jeśli pozostają żadnych elementów parametry logowania do dopasowania, symbol waluty nie jest zgodny. W przeciwnym razie opcjonalnie jest takie samo symbol waluty.  
+ Jeśli **iosbase**. [flagi](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) jest różna od zera, ciąg **fac**. `curr_symbol` musi odpowiadać, gdy element równa **money_base::symbol** jest wyświetlana w formacie wzorca. W przeciwnym razie, jeśli **money_base::symbol** występuje na końcu wzorca format, a jeśli pozostają żadnych elementów parametry logowania do dopasowania, symbol waluty nie jest zgodny. W przeciwnym razie opcjonalnie jest takie samo symbol waluty.  
   
- Jeśli nie wystąpienia **fac**. `thousands_sep`występują we fragmencie wartości walutowej pole wejściowe (gdzie element równa **money_base::value** pojawia się we wzorcu format), jest nałożone nie ograniczenia grupowania. W przeciwnym razie żadnych ograniczeń grupowania powodowanego przez **fac**. **Grupowanie** jest wymuszana. Należy pamiętać, że wynikowa sekwencja cyfr reprezentuje całkowitą którego znaczącymi **fac**. `frac_digits`cyfr dziesiętnych są traktowane jako z prawej strony punktu dziesiętnego.  
+ Jeśli nie wystąpienia **fac**. `thousands_sep` występują we fragmencie wartości walutowej pole wejściowe (gdzie element równa **money_base::value** pojawia się we wzorcu format), jest nałożone nie ograniczenia grupowania. W przeciwnym razie żadnych ograniczeń grupowania powodowanego przez **fac**. **Grupowanie** jest wymuszana. Należy pamiętać, że wynikowa sekwencja cyfr reprezentuje całkowitą którego znaczącymi **fac**. `frac_digits` cyfr dziesiętnych są traktowane jako z prawej strony punktu dziesiętnego.  
   
  Dowolny biały znak jest dopasowywany gdzie element równa **money_base::space** jest dostępna we wzorcu format, w przypadku innych niż wydaje się na końcu wzorca format. W przeciwnym razie nie odpowiada nie wewnętrzny biały znak. Element *ch* jest uznawany za biały znak, jeśli [use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md) \< **CharType**>> () **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). [jest](../standard-library/ctype-class.md#is)( **ctype_base::space**, *ch*) jest **true**.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [uzyskać](#get), które wywołuje `do_get`.  
   
-##  <a name="get"></a>money_get::Get  
+##  <a name="get"></a>  money_get::Get  
  Wyodrębnia wartość liczbową z sekwencji znaków, która reprezentuje wartość pieniężną.  
   
 ```
@@ -258,7 +261,7 @@ int main( )
 };  
 ```  
   
-##  <a name="iter_type"></a>money_get::iter_type  
+##  <a name="iter_type"></a>  money_get::iter_type  
  Typ, który opisuje iterator danych wejściowych.  
   
 ```
@@ -268,7 +271,7 @@ typedef InputIterator iter_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu **InputIterator**.  
   
-##  <a name="money_get"></a>money_get::money_get  
+##  <a name="money_get"></a>  money_get::money_get  
  Konstruktor dla obiektów typu `money_get` służące do wyodrębniania wartości liczbowe sekwencji reprezentujący wartości monetarnych.  
   
 ```
@@ -286,13 +289,13 @@ explicit money_get(size_t _Refs = 0);
   
 -   1: okres istnienia obiektu musi być zarządzane ręcznie.  
   
--   \>1: te wartości są niezdefiniowane.  
+-   \> 1: te wartości są niezdefiniowane.  
   
  Nie bezpośredniego przykładów to możliwe, ponieważ destruktor jest chroniony.  
   
- Konstruktor inicjuje jego obiektu podstawowego z **locale::**[aspektu](../standard-library/locale-class.md#facet_class)( **_***system plików Refs*).  
+ Konstruktor inicjuje jego obiektu podstawowego z **locale::**[aspektu](../standard-library/locale-class.md#facet_class)(**_ *** system plików Refs*).  
   
-##  <a name="string_type"></a>money_get::STRING_TYPE  
+##  <a name="string_type"></a>  money_get::STRING_TYPE  
  Typ, który opisuje ciąg zawierający znaki typu **CharType**.  
   
 ```
@@ -303,7 +306,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
  Typ w tym artykule opisano specjalizacji szablonu klasy [basic_string —](../standard-library/basic-string-class.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Ustawienia regionalne >](../standard-library/locale.md)   
+ [\<locale>](../standard-library/locale.md)   
  [facet — klasa](../standard-library/locale-class.md#facet_class)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

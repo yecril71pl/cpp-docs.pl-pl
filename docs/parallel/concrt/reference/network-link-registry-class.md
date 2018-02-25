@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - network_link_registry
 - AGENTS/concurrency::network_link_registry
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs: C++
-helpviewer_keywords: network_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry — Klasa
 `network_link_registry` Abstrakcyjna klasa podstawowa zarządza łącza między bloki źródłowe i docelowe.  
@@ -59,7 +63,7 @@ class network_link_registry;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[add](#add)|W przypadku przesłonięcia w klasie pochodnej, dodaje łącze do `network_link_registry` obiektu.|  
-|[Rozpocznij](#begin)|W przypadku przesłonięcia w klasie pochodnej zwraca iteratora do pierwszego elementu w `network_link_registry` obiektu.|  
+|[begin](#begin)|W przypadku przesłonięcia w klasie pochodnej zwraca iteratora do pierwszego elementu w `network_link_registry` obiektu.|  
 |[zawiera](#contains)|W przypadku przesłonięcia w klasie pochodnej, wyszukuje `network_link_registry` obiektu dla określonego bloku.|  
 |[Liczba](#count)|W przypadku przesłonięcia w klasie pochodnej zwraca liczbę elementów w `network_link_registry` obiektu.|  
 |[remove](#remove)|W przypadku przesłonięcia w klasie pochodnej usuwa określony blok z `network_link_registry` obiektu.|  
@@ -75,7 +79,7 @@ class network_link_registry;
   
  **Namespace:** współbieżności  
   
-##  <a name="add"></a>Dodaj 
+##  <a name="add"></a> Dodaj 
 
  W przypadku przesłonięcia w klasie pochodnej, dodaje łącze do `network_link_registry` obiektu.  
   
@@ -87,7 +91,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  Wskaźnik do bloku do dodania.  
   
-##  <a name="begin"></a>Rozpocznij 
+##  <a name="begin"></a> Rozpocznij 
 
  W przypadku przesłonięcia w klasie pochodnej zwraca iteratora do pierwszego elementu w `network_link_registry` obiektu.  
   
@@ -101,7 +105,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>Uwagi  
  Wskazuje stan końcowy iteratora `NULL` łącza.  
   
-##  <a name="contains"></a>zawiera 
+##  <a name="contains">zawiera</a> 
 
  W przypadku przesłonięcia w klasie pochodnej, wyszukuje `network_link_registry` obiektu dla określonego bloku.  
   
@@ -114,9 +118,9 @@ virtual bool contains(_EType _Link) = 0;
  Wskaźnik do bloku, który jest przeszukiwany dla w `network_link_registry` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli znaleziono bloku, `false` inaczej.  
+ `true` Jeśli znaleziono bloku, `false` inaczej.  
   
-##  <a name="count"></a>Liczba 
+##  <a name="count">Liczba</a> 
 
  W przypadku przesłonięcia w klasie pochodnej zwraca liczbę elementów w `network_link_registry` obiektu.  
   
@@ -127,7 +131,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba elementów w `network_link_registry` obiektu.  
   
-##  <a name="remove"></a>Usuń 
+##  <a name="remove"></a> Usuń 
 
  W przypadku przesłonięcia w klasie pochodnej usuwa określony blok z `network_link_registry` obiektu.  
   
@@ -140,9 +144,9 @@ virtual bool remove(_EType _Link) = 0;
  Wskaźnik do bloku, który ma zostać usunięty, jeśli znaleziono.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli łącze zostało odnalezione i usunięte, `false` inaczej.  
+ `true` Jeśli łącze zostało odnalezione i usunięte, `false` inaczej.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [single_link_registry — klasa](single-link-registry-class.md)   
+ [single_link_registry Class](single-link-registry-class.md)   
  [multi_link_registry, klasa](multi-link-registry-class.md)

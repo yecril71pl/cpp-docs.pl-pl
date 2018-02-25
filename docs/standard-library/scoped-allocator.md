@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <scoped_allocator>
-dev_langs: C++
-helpviewer_keywords: scoped_allocator Header
+ms.topic: reference
+f1_keywords:
+- <scoped_allocator>
+dev_langs:
+- C++
+helpviewer_keywords:
+- scoped_allocator Header
 ms.assetid: d20175b8-96be-4896-8141-3faba45e0005
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3cd4174aa01ae531ae5588c329fdff8379aba652
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fb5a0c7258579e6126cc2770e6b6bd81ffc84b5c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
 Definiuje scoped_allocator klasy szablonu kontenera.  
@@ -36,7 +41,7 @@ Definiuje scoped_allocator klasy szablonu kontenera.
 |||  
 |-|-|  
 |[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|Testy, jeśli obiekt scoped_allocator po lewej stronie operatora nie jest taki sam jak obiekt listy po prawej stronie.|  
-|[operator ==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Testy, jeśli obiekt scoped_allocator po lewej stronie operatora jest taki sam jak obiekt listy po prawej stronie.|  
+|[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Testy, jeśli obiekt scoped_allocator po lewej stronie operatora jest taki sam jak obiekt listy po prawej stronie.|  
   
 ### <a name="classes"></a>Klasy  
   

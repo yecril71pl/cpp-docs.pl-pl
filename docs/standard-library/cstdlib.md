@@ -1,28 +1,33 @@
 ---
-title: "&lt;cstdlib —&gt; | Dokumentacja firmy Microsoft"
+title: '&lt;cstdlib&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <cstdlib>
-dev_langs: C++
-helpviewer_keywords: cstdlib header
+ms.topic: reference
+f1_keywords:
+- <cstdlib>
+dev_langs:
+- C++
+helpviewer_keywords:
+- cstdlib header
 ms.assetid: 0a6aaebf-84e9-4b60-ae90-17e11981cf54
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d36ba969a5af7a52b8547ece70ff5757f72cedd7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ecfa776fcccdfaa182357dfc102a5360b9300934
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltcstdlibgt"></a>&lt;cstdlib —&gt;
+# <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
 Zawiera nagłówek biblioteki standardowe C \<stdlib.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.  
   
 ## <a name="syntax"></a>Składnia  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - multitype_join
 - AGENTS/concurrency::multitype_join
@@ -20,19 +21,22 @@ f1_keywords:
 - AGENTS/concurrency::multitype_join::reserve
 - AGENTS/concurrency::multitype_join::unlink_target
 - AGENTS/concurrency::multitype_join::unlink_targets
-dev_langs: C++
-helpviewer_keywords: multitype_join class
+dev_langs:
+- C++
+helpviewer_keywords:
+- multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b87dda35c2ea031424af3ab2aa8ebdccdb3750fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 62d91f878a8330b6e4fe60f7e24ad25c779b868d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multitypejoin-class"></a>multitype_join — Klasa
 A `multitype_join` bloku komunikatów to wielu źródłach, jednego docelowego blok komunikatów łączy ze sobą wiadomości o różnych typach z każdego z jego źródła i oferuje krotka Scalonej wiadomości do jego elementów docelowych.  
@@ -52,7 +56,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
  `tuple` Typ ładunku komunikatów przyłączone i propagowane przez bloku.  
   
  `_Jtype`  
- Rodzaj elementu `join` bloku jest, albo `greedy` lub`non_greedy`  
+ Rodzaj elementu `join` bloku jest, albo `greedy` lub `non_greedy`  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -66,7 +70,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[multitype_join —](#ctor)|Przeciążone. Konstruuje `multitype_join` bloku obsługi wiadomości.|  
+|[multitype_join](#ctor)|Przeciążone. Konstruuje `multitype_join` bloku obsługi wiadomości.|  
 |[~ multitype_join — destruktor](#dtor)|Niszczy `multitype_join` bloku obsługi wiadomości.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
@@ -75,11 +79,11 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 |----------|-----------------|  
 |[Zaakceptuj](#accept)|Akceptuje wiadomość została przyjęta przez to `multitype_join` bloku przeniesieniem własności do obiektu wywołującego.|  
 |[acquire_ref](#acquire_ref)|Uzyskuje liczebności referencyjnej na tym `multitype_join` bloku obsługi wiadomości, aby zapobiec usunięciu.|  
-|[korzystać z](#consume)|Wykorzystuje komunikat wcześniej oferowane przez `multitype_join` wiadomości bloku oraz pomyślnie zastrzeżone przez element docelowy przeniesieniem własności do obiektu wywołującego.|  
+|[Korzystać z](#consume)|Wykorzystuje komunikat wcześniej oferowane przez `multitype_join` wiadomości bloku oraz pomyślnie zastrzeżone przez element docelowy przeniesieniem własności do obiektu wywołującego.|  
 |[link_target](#link_target)|Łącza do tego bloku docelowego `multitype_join` bloku obsługi wiadomości.|  
-|[zlecenia](#release)|Zwalnia Poprzednia rezerwacja wiadomości powiodło się.|  
+|[Zlecenia](#release)|Zwalnia Poprzednia rezerwacja wiadomości powiodło się.|  
 |[release_ref](#release_ref)|Zwalnia liczebności referencyjnej na tym `multiple_join` bloku obsługi wiadomości.|  
-|[rezerwowa](#reserve)|Rezerwuje komunikat wcześniej oferowane przez to `multitype_join` bloku obsługi wiadomości.|  
+|[reserve](#reserve)|Rezerwuje komunikat wcześniej oferowane przez to `multitype_join` bloku obsługi wiadomości.|  
 |[unlink_target](#unlink_target)|Odłączenie od tego bloku docelowego `multitype_join` bloku obsługi wiadomości.|  
 |[unlink_targets](#unlink_targets)|Wstrzymuje wszystkie elementy docelowe tego `multitype_join` bloku obsługi wiadomości. (Przesłania [ISource::unlink_targets](isource-class.md#unlink_targets).)|  
   
@@ -96,7 +100,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
  **Namespace:** współbieżności  
   
-##  <a name="accept"></a>Zaakceptuj 
+##  <a name="accept">Zaakceptuj</a> 
 
  Akceptuje wiadomość została przyjęta przez to `multitype_join` bloku przeniesieniem własności do obiektu wywołującego.  
   
@@ -116,7 +120,7 @@ virtual message<_Destination_type>* accept(
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do wywołującego ma teraz własność komunikat.  
   
-##  <a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a> acquire_ref 
 
  Uzyskuje liczebności referencyjnej na tym `multitype_join` bloku obsługi wiadomości, aby zapobiec usunięciu.  
   
@@ -131,7 +135,7 @@ virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez `ITarget` obiekt, który jest połączone z tym źródłem podczas `link_target` metody.  
   
-##  <a name="consume"></a>korzystać z 
+##  <a name="consume">Korzystać z</a> 
 
  Wykorzystuje komunikat wcześniej oferowane przez `multitype_join` wiadomości bloku oraz pomyślnie zastrzeżone przez element docelowy przeniesieniem własności do obiektu wywołującego.  
   
@@ -154,7 +158,7 @@ virtual message<_Destination_type>* consume(
 ### <a name="remarks"></a>Uwagi  
  `consume` Metoda jest podobna do `accept`, ale zawsze musi być poprzedzony przez wywołanie do `reserve` zwróconą `true`.  
   
-##  <a name="link_target"></a>link_target 
+##  <a name="link_target"></a> link_target 
 
  Łącza do tego bloku docelowego `multitype_join` bloku obsługi wiadomości.  
   
@@ -166,7 +170,7 @@ virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
  `_PTarget`  
  Wskaźnik do `ITarget` bloku, aby połączyć się z: `multitype_join` bloku obsługi wiadomości.  
   
-##  <a name="ctor"></a>multitype_join — 
+##  <a name="ctor"></a> multitype_join — 
 
  Konstruuje `multitype_join` bloku obsługi wiadomości.  
   
@@ -207,7 +211,7 @@ multitype_join(
   
  Konstrukcja przenoszenia nie jest wykonywane w obszarze blokady, co oznacza, że zależy użytkownika, aby transmitowane w czasie przenoszenia nie ma żadnych zadań lekki. W przeciwnym razie wiele szczepy mogą wystąpić, co może prowadzić do wyjątków lub niespójny stan.  
   
-##  <a name="dtor"></a>~ multitype_join — 
+##  <a name="dtor"></a> ~multitype_join 
 
  Niszczy `multitype_join` bloku obsługi wiadomości.  
   
@@ -215,7 +219,7 @@ multitype_join(
 ~multitype_join();
 ```  
   
-##  <a name="release"></a>zlecenia 
+##  <a name="release">Zlecenia</a> 
 
  Zwalnia Poprzednia rezerwacja wiadomości powiodło się.  
   
@@ -232,7 +236,7 @@ virtual void release(
  `_PTarget`  
  Wskaźnik do bloku docelowego, który wywołuje `release` metody.  
   
-##  <a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a> release_ref 
 
  Zwalnia liczebności referencyjnej na tym `multiple_join` bloku obsługi wiadomości.  
   
@@ -247,7 +251,7 @@ virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez `ITarget` obiekt, który jest jest rozłączony z tego źródła. Blok źródła może zwolnić wszystkie zasoby zarezerwowane dla blok docelowy.  
   
-##  <a name="reserve"></a>rezerwowa 
+##  <a name="reserve"></a> rezerwowa 
 
  Rezerwuje komunikat wcześniej oferowane przez to `multitype_join` bloku obsługi wiadomości.  
   
@@ -265,12 +269,12 @@ virtual bool reserve(
  Wskaźnik do bloku docelowego, który wywołuje `reserve` metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej. Zastrzeżenia może zakończyć się niepowodzeniem dla wielu powodów, takich jak: wiadomość już została zastrzeżone lub zaakceptowane przez inny element docelowy, źródła można odmówić zastrzeżenia i tak dalej.  
+ `true` Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej. Zastrzeżenia może zakończyć się niepowodzeniem dla wielu powodów, takich jak: wiadomość już została zastrzeżone lub zaakceptowane przez inny element docelowy, źródła można odmówić zastrzeżenia i tak dalej.  
   
 ### <a name="remarks"></a>Uwagi  
  Po wywołaniu metody `reserve`, jeśli próba powiedzie się, należy wywołać albo `consume` lub `release` Aby przejąć lub zrezygnować posiadania wiadomości, odpowiednio.  
   
-##  <a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a> unlink_target 
 
  Odłączenie od tego bloku docelowego `multitype_join` bloku obsługi wiadomości.  
   
@@ -282,7 +286,7 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
  `_PTarget`  
  Wskaźnik do `ITarget` bloku, aby odłączyć od tego `multitype_join` bloku obsługi wiadomości.  
   
-##  <a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a> unlink_targets 
 
  Wstrzymuje wszystkie elementy docelowe tego `multitype_join` bloku obsługi wiadomości.  
   

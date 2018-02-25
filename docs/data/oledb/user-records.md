@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_MAP
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_MAP
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], accessors
 - COLUMN_ENTRY macro
@@ -21,23 +24,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8db24d5162aba3ba5f0f1e01b3b1da9c8d6ab99f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="user-records"></a>Rekordy użytkownika
 Aby użyć statycznej metody dostępu (czyli metody dostępu pochodzi od **CAccessor)**, Twoje konsumenta muszą mieć rekord użytkownika. Rekord użytkownika jest klasę C++, która zawiera elementy danych do obsługi danych wejściowych lub wyjściowych. OLE DB Kreator konsumenta ATL generuje rekord użytkownika dla użytkownika konsumenta. Metody można dodać do rekordu użytkownika, która ma być opcjonalne zadania, takie jak obsługa poleceń.  
   
- Poniższy kod przedstawia przykładowy rekord, który obsługuje poleceń. W rekordzie użytkownika `BEGIN_COLUMN_MAP` reprezentuje zestawu wierszy danych przekazany do użytkownika od dostawcy. `BEGIN_PARAM_MAP`reprezentuje zestaw parametrów polecenia. W tym przykładzie użyto [CCommand](../../data/oledb/ccommand-class.md) klasę, aby obsłużyć parametry polecenia. Elementy członkowskie danych w wpisy mapy reprezentują przesunięcia do jednego ciągłego bloku pamięci dla każdego wystąpienia klasy. `COLUMN_ENTRY` Makra odpowiadają `PROVIDER_COLUMN_ENTRY` makra po stronie dostawcy.  
+ Poniższy kod przedstawia przykładowy rekord, który obsługuje poleceń. W rekordzie użytkownika `BEGIN_COLUMN_MAP` reprezentuje zestawu wierszy danych przekazany do użytkownika od dostawcy. `BEGIN_PARAM_MAP` reprezentuje zestaw parametrów polecenia. W tym przykładzie użyto [CCommand](../../data/oledb/ccommand-class.md) klasę, aby obsłużyć parametry polecenia. Elementy członkowskie danych w wpisy mapy reprezentują przesunięcia do jednego ciągłego bloku pamięci dla każdego wystąpienia klasy. `COLUMN_ENTRY` Makra odpowiadają `PROVIDER_COLUMN_ENTRY` makra po stronie dostawcy.  
   
  Aby uzyskać więcej informacji na temat **COLUMN_MAP** i **atrybut PARAM_MAP** makra, zobacz [makra dla OLE DB szablonów konsumentów](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   

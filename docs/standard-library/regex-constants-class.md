@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - regex/std::regex_constants
 - regex/std::regex_constants::error_collate
@@ -47,7 +48,8 @@ f1_keywords:
 - regex/std::regex_constants::nosubs
 - regex/std::regex_constants::optimize
 - regex/std::regex_constants::collate
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::regex_constants [C++]
 - std::regex_constants [C++], error_collate
@@ -89,16 +91,17 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: df0e2b795b7ba19b4981ae3caecd1d14f36e11e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4b14c219f755e50e1ede0e8fd58d9a5158283235
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="regexconstants-class"></a>regex_constants — Klasa
 Przestrzeń nazw dla flag wyrażenia regularnego.  
@@ -121,7 +124,7 @@ namespace regex_constants {
   
  **Namespace:** Standard  
   
-##  <a name="error_type"></a>regex_constants::error_type  
+##  <a name="error_type"></a>  regex_constants::error_type  
  Flagi dla raportowania błędów składni wyrażeń regularnych.  
   
 ```  
@@ -148,39 +151,39 @@ enum error_type
 ### <a name="remarks"></a>Uwagi  
  Typ jest Typ wyliczany opisujący obiekt, który może zawierać flag błędów. Flaga różne wartości są następujące:  
   
- `error_backref`--wyrażenie zawiera nieprawidłowe odwołanie do tyłu  
+ `error_backref` --wyrażenie zawiera nieprawidłowe odwołanie do tyłu  
   
- `error_badbrace`--wyrażenie zawiera nieprawidłową liczbę w wyrażeniu {}  
+ `error_badbrace` --wyrażenie zawiera nieprawidłową liczbę w wyrażeniu {}  
   
- `error_badrepeat`--powtarzania wyrażenia (jedną z "*", ","+"," {"w kontekstach większości) nie był poprzedzony przez wyrażenie  
+ `error_badrepeat` --powtarzania wyrażenia (jedną z "*", ","+"," {"w kontekstach większości) nie był poprzedzony przez wyrażenie  
   
- `error_brace`--wyrażenie zawiera niedopasowane "{" lub "}"  
+ `error_brace` --wyrażenie zawiera niedopasowane "{" lub "}"  
   
- `error_brack`--wyrażenie zawiera niedopasowane "[" lub "]"  
+ `error_brack` --wyrażenie zawiera niedopasowane "[" lub "]"  
   
- `error_collate`--wyrażenie zawiera nieprawidłową nazwę sortowania elementu  
+ `error_collate` --wyrażenie zawiera nieprawidłową nazwę sortowania elementu  
   
- `error_complexity`--próbę dopasowania nie powiodło się, ponieważ był zbyt złożony  
+ `error_complexity` --próbę dopasowania nie powiodło się, ponieważ był zbyt złożony  
   
- `error_ctype`--wyrażenie zawiera nieprawidłowy znak nazwy klasy  
+ `error_ctype` --wyrażenie zawiera nieprawidłowy znak nazwy klasy  
   
- `error_escape`--wyrażenie zawiera nieprawidłową sekwencję ucieczki  
+ `error_escape` --wyrażenie zawiera nieprawidłową sekwencję ucieczki  
   
- `error_paren`--wyrażenie zawiera niedopasowane "(" lub")"  
+ `error_paren` --wyrażenie zawiera niedopasowane "(" lub")"  
   
- `error_parse`--Nie można przeanalizować wyrażenia  
+ `error_parse` --Nie można przeanalizować wyrażenia  
   
- `error_range`--wyrażenie zawiera nieprawidłowy znak specyfikator zakresu  
+ `error_range` --wyrażenie zawiera nieprawidłowy znak specyfikator zakresu  
   
- `error_space`— podczas analizowania wyrażenia regularnego nie powiodło się, ponieważ nie były dostępne za mało zasobów  
+ `error_space` — podczas analizowania wyrażenia regularnego nie powiodło się, ponieważ nie były dostępne za mało zasobów  
   
- `error_stack`— dopasowanie próba nie powiodła się, ponieważ nie był dostępny za mało pamięci  
+ `error_stack` — dopasowanie próba nie powiodła się, ponieważ nie był dostępny za mało pamięci  
   
- `error_syntax`--Wystąpił błąd podczas analizowania składni błędu  
+ `error_syntax` --Wystąpił błąd podczas analizowania składni błędu  
   
- `error_backref`--wyrażenie zawiera nieprawidłowe odwołanie do tyłu  
+ `error_backref` --wyrażenie zawiera nieprawidłowe odwołanie do tyłu  
   
-##  <a name="match_flag_type"></a>regex_constants::match_flag_type  
+##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
  Flagi dla wyrażenia regularnego dopasowanie opcje.  
   
 ```  
@@ -210,33 +213,33 @@ enum match_flag_type
   
  `match_default`  
   
- `match_not_bol`--nie Traktuj pierwszą pozycję w sekwencji docelowy jako początek wiersza  
+ `match_not_bol` --nie Traktuj pierwszą pozycję w sekwencji docelowy jako początek wiersza  
   
- `match_not_eol`--nie Traktuj przeszłości end pozycji w sekwencji docelowy jako koniec wiersza  
+ `match_not_eol` --nie Traktuj przeszłości end pozycji w sekwencji docelowy jako koniec wiersza  
   
- `match_not_bow`--nie Traktuj pierwszą pozycję w sekwencji docelowy jako początku słowa  
+ `match_not_bow` --nie Traktuj pierwszą pozycję w sekwencji docelowy jako początku słowa  
   
- `match_not_eow`--nie Traktuj przeszłości end pozycji w sekwencji docelowy jako koniec słowa  
+ `match_not_eow` --nie Traktuj przeszłości end pozycji w sekwencji docelowy jako koniec słowa  
   
- `match_any`— Jeśli możliwe jest więcej niż jedno dopasowanie dopuszczalny jest żadnego dopasowania  
+ `match_any` — Jeśli możliwe jest więcej niż jedno dopasowanie dopuszczalny jest żadnego dopasowania  
   
- `match_not_null`--nie Traktuj puste podsekwencji jako dopasowanie  
+ `match_not_null` --nie Traktuj puste podsekwencji jako dopasowanie  
   
- `match_continuous`--Nie wyszukuj dopasowań innych niż na początku sekwencji docelowego  
+ `match_continuous` --Nie wyszukuj dopasowań innych niż na początku sekwencji docelowego  
   
- `match_prev_avail` -- `--first`jest prawidłowy iteratora; Ignoruj `match_not_bol` i `match_not_bow` Jeśli ustawiona  
+ `match_prev_avail` -- `--first` jest prawidłowy iteratora; Ignoruj `match_not_bol` i `match_not_bow` Jeśli ustawiona  
   
  Flagi format to:  
   
- `format_default`— Użyj reguł format języka ECMAScript  
+ `format_default` — Użyj reguł format języka ECMAScript  
   
- `format_sed`— Użyj reguł format mniejszyć  
+ `format_sed` — Użyj reguł format mniejszyć  
   
- `format_no_copy`--nie Kopiuj tekst, który nie pasuje do wyrażenia regularnego  
+ `format_no_copy` --nie Kopiuj tekst, który nie pasuje do wyrażenia regularnego  
   
- `format_first_only`--nie wyszukiwania po pierwszego dopasowania  
+ `format_first_only` --nie wyszukiwania po pierwszego dopasowania  
   
-##  <a name="syntax_option_type"></a>regex_constants::syntax_option_type  
+##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
  Flagi do wybierania opcji składni.  
   
 ```  
@@ -262,30 +265,30 @@ enum syntax_option_type
   
  Specyfikatory języka są:  
   
- `ECMAScript`--Skompiluj jako ECMAScript  
+ `ECMAScript` --Skompiluj jako ECMAScript  
   
- `basic`--Skompiluj jako BRE  
+ `basic` --Skompiluj jako BRE  
   
- `extended`--Skompiluj jako ERE  
+ `extended` --Skompiluj jako ERE  
   
- `awk`--Skompiluj jako awk  
+ `awk` --Skompiluj jako awk  
   
- `grep`--Skompiluj jako grep  
+ `grep` --Skompiluj jako grep  
   
- `egrep`--Skompiluj jako egrep  
+ `egrep` --Skompiluj jako egrep  
   
  Modyfikatory składnia to:  
   
- `icase`— upewnić zgodna bez uwzględniania wielkości liter  
+ `icase` — upewnić zgodna bez uwzględniania wielkości liter  
   
- `nosubs`--przewidujące muszą nie zachować informacje o zawartości grupy przechwytywania  
+ `nosubs` --przewidujące muszą nie zachować informacje o zawartości grupy przechwytywania  
   
- `optimize`--wdrożenia należy wyróżnić szybkości zgodnych, a nie szybkość kompilacji wyrażeń regularnych  
+ `optimize` --wdrożenia należy wyróżnić szybkości zgodnych, a nie szybkość kompilacji wyrażeń regularnych  
   
- `collate`— Utwórz odpowiada zależne od ustawień regionalnych  
+ `collate` — Utwórz odpowiada zależne od ustawień regionalnych  
   
 ## <a name="see-also"></a>Zobacz też  
-[\<wyrażenie regularne >](../standard-library/regex.md)  
+[\<regex>](../standard-library/regex.md)  
 [regex_error, klasa](../standard-library/regex-error-class.md)  
 [\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)  
 [regex_iterator, klasa](../standard-library/regex-iterator-class.md)  

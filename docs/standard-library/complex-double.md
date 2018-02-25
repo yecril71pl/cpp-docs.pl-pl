@@ -4,26 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: complex/std::complex<double>
-dev_langs: C++
-helpviewer_keywords: complex<double> function
+ms.topic: reference
+f1_keywords:
+- complex/std::complex<double>
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b279b78c309dd9fff87954d9b50b255b7f0d9f25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d82fccaa98dd0591cf8d7b3a9fcabb9e78f7d88
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="complexltdoublegt"></a>złożone&lt;podwójne&gt;
-Opisuje obiekt, który przechowuje uporządkowanej parę obiektów zarówno typu **podwójne***,* najpierw reprezentujący część liczby złożonej, a drugi rzeczywista reprezentujący urojony części.  
+# <a name="complexltdoublegt"></a>complex&lt;double&gt;
+Opisuje obiekt, który przechowuje uporządkowanej parę obiektów zarówno typu **o podwójnej precyzji **** najpierw reprezentujący część liczby złożonej, a drugi rzeczywista reprezentujący urojony części.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -56,7 +61,7 @@ constexpr explicit complex(const complex<long double>& complexNum);
  Liczba złożonych typu **podwójne**.  
   
 ## <a name="remarks"></a>Uwagi  
- Jawna specjalizacja szablonu klasy złożone, aby złożonych klasy typu **podwójne** różni się od klasy szablonu tylko w przypadku konstruktorów definiuje. Konwersja z **float** do **podwójne** może być pośrednie, ale konwersja z `long double` do **podwójne** musi być **jawne** . Korzystanie z **jawne** wyklucza rozpoczęciu konwersji typu przy użyciu składni przypisania.  
+ Jawna specjalizacja szablonu klasy złożone, aby złożonych klasy typu **podwójne** różni się od klasy szablonu tylko w przypadku konstruktorów definiuje. Konwersja z **float** do **podwójne** może być pośrednie, ale konwersja z `long double` do **podwójne** musi być **jawne **. Korzystanie z **jawne** wyklucza rozpoczęciu konwersji typu przy użyciu składni przypisania.  
   
  Aby uzyskać więcej informacji na klasy szablonu `complex`, zobacz [klasy złożone](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich klasy szablonu `complex`, zobacz.  
   

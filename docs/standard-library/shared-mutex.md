@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -50,20 +51,22 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_for
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2cdfa90b137da2e1a4c7460dfa54663ddb9a3581
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7d657a95822d66d34a6173cc775f99c80411f12
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltsharedmutex"></a>&lt;shared_mutex >
+# <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
 &lt;Shared_mutex > Nagłówek zawiera elementy podstawowe synchronizacji do ochrony danych udostępnionych, którego mogą uzyskać dostęp przez wiele wątków. Oprócz formantu wyłącznego dostępu podany przez klasy obiektu mutex klas udostępnionego obiektu mutex Zezwalaj własność udostępnionego przez wiele wątków z systemem innym niż wyłącznego dostępu. Udostępniony muteksy może służyć do kontrolowania zasobów, które mogą być odczytywane przez kilka wątków bez powodowania wyścigu, ale muszą być zapisane wyłącznie przez pojedynczy wątek.
 
@@ -119,7 +122,7 @@ Typ udostępnionego obiektu mutex czasu obsługuje dodatkowe metody `try_lock_sh
 
 ## <a name="classes"></a>Klasy
 
-###  <a name="class_shared_mutex"></a>shared_mutex — klasa
+###  <a name="class_shared_mutex">shared_mutex — klasa</a>
 
 Klasa `shared_mutex` implementuje obiektu mutex niecykliczne z semantyki wspólnej własności.
 
@@ -146,7 +149,7 @@ public:
    };
 ```
 
-###  <a name="class_shared_timed_mutex"></a>shared_timed_mutex — klasa
+###  <a name="class_shared_timed_mutex">shared_timed_mutex — klasa</a>
 
 Klasa `shared_timed_mutex` implementuje obiektu mutex niecykliczne z semantyki własność udostępnionego, który spełnia wymagania typu czasu obiektu mutex.
 
@@ -178,7 +181,7 @@ public:
    };
 ```
 
-###  <a name="&lt;shared"></a>shared_lock — klasa
+###  <a name="&lt;shared">shared_lock — klasa</a>
 
 Szablon klasy `shared_lock` steruje udostępnionego własności obiektu mutex udostępnionych w ramach zakresu. Parametr szablonu musi być typem udostępnionego obiektu mutex.
 
@@ -226,7 +229,7 @@ private:
 
 ## <a name="functions"></a>Funkcje
 
-###  <a name="function_swap"></a>swap
+###  <a name="function_swap"></a> Swap
 
 Zamienia `shared_lock` obiektów.
 
@@ -246,4 +249,4 @@ Zamienia zawartości dwóch `shared_lock` obiektów. Efektywne taki sam, jak `x.
 ## <a name="see-also"></a>Zobacz też
 
 [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)  
-[&lt;mutex >](../standard-library/mutex.md)
+[&lt;mutex>](../standard-library/mutex.md)

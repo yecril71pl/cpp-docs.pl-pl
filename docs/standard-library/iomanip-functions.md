@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iomanip/std::get_money
 - iomanip/std::get_time
@@ -19,7 +19,7 @@ f1_keywords:
 - iomanip/std::setprecision
 - iomanip/std::setw
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
-caps.latest.revision: "10"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::get_money [C++]
@@ -33,21 +33,21 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 8ea88bd5f1400eab0fe3cdbf09321e152412e1e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 6d36261e237d2a9c4ee7afddd0cb57d60cb5e12c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip —&gt; funkcji
 ||||  
 |-|-|-|  
-|[get_money —](#iomanip_get_money)|[get_time](#iomanip_get_time)|[put_money —](#iomanip_put_money)|  
-|[put_time —](#iomanip_put_time)|[w cudzysłowach](#quoted)|[resetiosflags](#resetiosflags)|  
+|[get_money](#iomanip_get_money)|[get_time](#iomanip_get_time)|[put_money](#iomanip_put_money)|  
+|[put_time](#iomanip_put_time)|[w cudzysłowach](#quoted)|[resetiosflags](#resetiosflags)|  
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|  
 |[setprecision](#setprecision)|[setw](#setw)|  
   
-##  <a name="iomanip_get_money"></a>get_money —  
+##  <a name="iomanip_get_money"></a>  get_money —  
  Wyodrębnia ze strumienia w formacie żądaną wartość pieniężną i zwraca wartość w parametrze.  
   
 ```  
@@ -65,9 +65,9 @@ T7 get_money(Money& _Amount, bool _Intl);
 ### <a name="remarks"></a>Uwagi  
  Manipulatora zwraca obiekt, gdy wyodrębnione ze strumienia `str`, zachowuje się jak `formatted input function` , który odwołuje się funkcja członkowska `get` dla ustawień regionalnych aspekt `money_get` skojarzone z `str`za pomocą `_Intl` do Wskazuje format międzynarodowe. Jeśli się powiedzie, wywołania są przechowywane w `_Amount` wartość pieniężną wyodrębnione. Zwraca manipulatora `str`.  
   
- `Money`musi być typu `long double` lub instancją typu `basic_string` z takimi samymi parametrami elementu i cech jako `str`.  
+ `Money` musi być typu `long double` lub instancją typu `basic_string` z takimi samymi parametrami elementu i cech jako `str`.  
   
-##  <a name="iomanip_get_time"></a>get_time  
+##  <a name="iomanip_get_time"></a>  get_time  
  Wyodrębnianie wartości typu time ze strumienia żądane formacie. Zwraca wartość w parametrze jako struktura czasu.  
   
 ```  
@@ -85,7 +85,7 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 ### <a name="remarks"></a>Uwagi  
  Manipulatora zwraca obiekt, gdy wyodrębnione ze strumienia `str`, zachowuje się jak `formatted input function` , który odwołuje się funkcja członkowska `get` dla ustawień regionalnych aspekt `time_get` skojarzone z `str`za pomocą `tptr` do wskazuje strukturę czasu i `fmt` wskazująca na początku ciąg formatu zerem. W przypadku powodzenia wywołanie przechowuje w strukturze czasu wartości skojarzone z żadnych pól wyodrębnionego czasu. Zwraca manipulatora `str`.  
   
-##  <a name="iomanip_put_money"></a>put_money —  
+##  <a name="iomanip_put_money"></a>  put_money —  
  Wstawia kwotę pieniężną w formacie odpowiednie do strumienia.  
   
 ```  
@@ -106,9 +106,9 @@ T8 put_money(const Money& _Amount, bool _Intl);
 ### <a name="remarks"></a>Uwagi  
  Manipulatora zwraca obiekt, który po wstawieniu do strumienia `str`, działa jak funkcja sformatowane dane wyjściowe, która wywołuje funkcję elementu członkowskiego `put` dla ustawień regionalnych aspekt `money_put` skojarzone z `str`. Jeśli się powiedzie, wywołanie wstawia `amount` odpowiednio sformatowane, za pomocą `_Intl` wskazująca formacie międzynarodowej i `str.fill()`, jako element wypełnienia. Zwraca manipulatora `str`.  
   
- `Money`musi być typu `long double` lub instancją typu `basic_string` z takimi samymi parametrami elementu i cech jako `str`.  
+ `Money` musi być typu `long double` lub instancją typu `basic_string` z takimi samymi parametrami elementu i cech jako `str`.  
   
-##  <a name="iomanip_put_time"></a>put_time —  
+##  <a name="iomanip_put_time"></a>  put_time —  
  Zapisuje wartość godziny z struktura czasowego do strumienia przy użyciu określonego formatu.  
   
 ```  
@@ -126,7 +126,7 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 ### <a name="remarks"></a>Uwagi  
  Manipulatora zwraca obiekt, który po wstawieniu do strumienia `str`, zachowuje się jak `formatted output function`. Funkcja dane wyjściowe wywołuje funkcję elementu członkowskiego `put` dla ustawień regionalnych aspekt `time_put` skojarzone z `str`. Funkcja dane wyjściowe używa `_Tptr` wskazująca czas struktury i `_Fmt` wskazująca na początku ciąg formatu zakończone NUL. W przypadku powodzenia wywołanie wstawia tekst literału ciągu formatu i przekonwertowane wartości ze struktury czasu. Zwraca manipulatora `str`.  
   
-##  <a name="quoted"></a>w cudzysłowach  
+##  <a name="quoted">w cudzysłowach</a>  
  **(Nowość w języku C ++ 14)**  Manipulatora iostream, która umożliwia wygodne dwustronną komunikację ciągi do i z strumieni przy użyciu >> i << operatorów.  
   
 ```  
@@ -289,7 +289,7 @@ Press Enter to exit
   
 ```  
   
-##  <a name="resetiosflags"></a>resetiosflags  
+##  <a name="resetiosflags"></a>  resetiosflags  
  Usuwa określone flagi.  
   
 ```  
@@ -306,7 +306,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 ### <a name="example"></a>Przykład  
   Zobacz [setw](../standard-library/iomanip-functions.md#setw) przykład przy użyciu `resetiosflags`.  
   
-##  <a name="setbase"></a>setbase  
+##  <a name="setbase">setbase</a>  
  Ustaw podstawowej liczb całkowitych.  
   
 ```  
@@ -331,7 +331,7 @@ T3 setbase(int _Base);
 ### <a name="example"></a>Przykład  
   Zobacz [setw](../standard-library/iomanip-functions.md#setw) przykład przy użyciu `setbase`.  
   
-##  <a name="setfill"></a>setfill  
+##  <a name="setfill"></a>  setfill  
  Ustawia znak używany do wypełniania miejsc w prawej strony ekranu.  
   
 ```  
@@ -349,7 +349,7 @@ T4 setfill(Elem Ch);
 ### <a name="example"></a>Przykład  
   Zobacz [setw](../standard-library/iomanip-functions.md#setw) przykład przy użyciu `setfill`.  
   
-##  <a name="setiosflags"></a>setiosflags  
+##  <a name="setiosflags"></a>  setiosflags  
  Ustawia określone flagi.  
   
 ```  
@@ -366,7 +366,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
 ### <a name="example"></a>Przykład  
   Zobacz [setw](../standard-library/iomanip-functions.md#setw) przykład przy użyciu `setiosflags`.  
   
-##  <a name="setprecision"></a>setprecision  
+##  <a name="setprecision">setprecision</a>  
  Ustawia dokładność wartości zmiennoprzecinkowych.  
   
 ```  
@@ -383,7 +383,7 @@ T5 setprecision(streamsize Prec);
 ### <a name="example"></a>Przykład  
   Zobacz [setw](../standard-library/iomanip-functions.md#setw) przykład przy użyciu `setprecision`.  
   
-##  <a name="setw"></a>setw  
+##  <a name="setw">setw</a>  
  Określa szerokość pola wyświetlania dla następnego elementu w strumieniu.  
   
 ```  
@@ -616,5 +616,5 @@ l5 = 65536
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<iomanip — >](../standard-library/iomanip.md)
+ [\<iomanip>](../standard-library/iomanip.md)
 

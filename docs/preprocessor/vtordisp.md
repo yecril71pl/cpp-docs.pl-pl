@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.vtordisp
 - vtordisp_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2b06584862e7aa09b7a271f1c999787eed84d7af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3cdb90de659dfe0f366d6501bc18c18e0cf39fff
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="vtordisp"></a>vtordisp
 **Określonego języka C++**  
@@ -63,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
  Określenie `1` lub `on`, domyślnie, włącza ukryte elementy członkowskie `vtordisp`, gdy jest to niezbędne.  
   
- Określanie `2` umożliwia ukrytego `vtordisp` członków dla wszystkich wirtualnych typów podstawowych z funkcji wirtualnych.  `vtordisp(2)`może być konieczne zapewnić prawidłowe działanie `dynamic_cast` na częściowo skonstruowanym obiektem. Aby uzyskać więcej informacji, zobacz [C4436 ostrzeżenie kompilatora (poziom 1)](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).  
+ Określanie `2` umożliwia ukrytego `vtordisp` członków dla wszystkich wirtualnych typów podstawowych z funkcji wirtualnych.  `vtordisp(2)` może być konieczne zapewnić prawidłowe działanie `dynamic_cast` na częściowo skonstruowanym obiektem. Aby uzyskać więcej informacji, zobacz [C4436 ostrzeżenie kompilatora (poziom 1)](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).  
   
  `#pragma vtordisp()` bez argumentów przywraca ustawienie vtordisp do ustawienia początkowego.  
   
@@ -73,7 +76,7 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)  
 ```  
   
- **KOŃCOWY określonego języka C++**  
+ KOŃCOWY określonego języka C++  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -5,25 +5,25 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-caps.latest.revision: "10"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 6ce4e11a41f199d4ec82a593b53c2f0b7f1c47e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: b22177cf641fca8de8d6f6e59b5e7e25caea8b32
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltnewgt-functions"></a>&lt;nowe&gt; funkcje
 |||  
 |-|-|  
-|[nothrow](#nothrow)|[set_new_handler —](#set_new_handler)|  
+|[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|  
   
-##  <a name="nothrow"></a>nothrow  
+##  <a name="nothrow"></a>  nothrow  
  Udostępnia obiekt ma być używany jako argument `nothrow` wersji **nowe** i **usunąć**.  
   
 ```  
@@ -36,7 +36,7 @@ extern const std::nothrow_t nothrow;
 ### <a name="example"></a>Przykład  
   Zobacz [nowy operator](../standard-library/new-operators.md#op_new) i [nowy operator &#91; &#93;](../standard-library/new-operators.md#op_new_arr) przykłady `std::nothrow_t` jest używany jako parametr funkcji.  
   
-##  <a name="set_new_handler"></a>set_new_handler —  
+##  <a name="set_new_handler"></a>  set_new_handler —  
  Instaluje funkcji użytkownika, który ma być wywoływana, gdy `operator new` nie powiedzie się może przydzielić pamięci.  
   
 ```  
@@ -117,5 +117,5 @@ bad allocation
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Nowy >](../standard-library/new.md)
+ [\<new>](../standard-library/new.md)
 

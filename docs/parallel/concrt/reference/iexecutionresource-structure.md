@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IExecutionResource
 - CONCRTRM/concurrency::IExecutionResource
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
-dev_langs: C++
-helpviewer_keywords: IExecutionResource structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd22fdb38b1828e1fa86ca79b9967a546ccb9456
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb4ad0b6f9038d78ae94b5ab1dcb148ebd628edc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource — Struktura
 Abstrakcja wątku sprzętu.  
@@ -59,7 +63,7 @@ struct IExecutionResource;
   
  **Namespace:** współbieżności  
   
-##  <a name="currentsubscriptionlevel"></a>IExecutionResource::CurrentSubscriptionLevel — metoda  
+##  <a name="currentsubscriptionlevel"></a>  IExecutionResource::CurrentSubscriptionLevel — metoda  
  Zwraca liczbę aktywowanego procesorów wirtualnych katalogów głównych i subskrybowane zewnętrznych wątków aktualnie skojarzony z podstawowej wątku sprzętu, którą reprezentuje ten zasób wykonywania.  
   
 ```
@@ -78,7 +82,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  Menedżer zasobów używa poziomu informacji o subskrypcji jako jedną z metod, w którym do określenia, kiedy przenoszenie zasobów między transfery danych.  
   
-##  <a name="getexecutionresourceid"></a>IExecutionResource::GetExecutionResourceId — metoda  
+##  <a name="getexecutionresourceid"></a>  IExecutionResource::GetExecutionResourceId — metoda  
  Zwraca unikatowy identyfikator wątku sprzętu, który reprezentuje tego zasobu wykonywania.  
   
 ```
@@ -91,7 +95,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>Uwagi  
  Każdy wątek sprzętu przypisuje unikatowy identyfikator ze współbieżności środowiska wykonawczego. W przypadku wielu zasobów wykonanie skojarzonego sprzętu wątku, wszystkie mają ten sam identyfikator zasobu wykonywania.  
   
-##  <a name="getnodeid"></a>IExecutionResource::GetNodeId — metoda  
+##  <a name="getnodeid"></a>  IExecutionResource::GetNodeId — metoda  
  Zwraca unikatowy identyfikator węzła procesora, należącego do tego zasobu wykonywania.  
   
 ```
@@ -106,7 +110,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  Liczba węzłów, można je uzyskać z funkcji [getprocessornodecount —](concurrency-namespace-functions.md).  
   
-##  <a name="remove"></a>IExecutionResource::Remove — Metoda  
+##  <a name="remove"></a>  IExecutionResource::Remove — Metoda  
  Zwraca ten zasób wykonywania Menedżera zasobów.  
   
 ```
@@ -124,9 +128,9 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
   
  Procesorów wirtualnych katalogów głównych, zbyt, może być zwracany Menedżera zasobów za pomocą `Remove` metody, ponieważ interfejs `IVirtualProcessorRoot` dziedziczy `IExecutionResource` interfejsu. Konieczne może być zwracany procesora wirtualnego katalogu głównego, albo w odpowiedzi na wywołanie [IScheduler::RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors) metody, lub po zakończeniu oversubscribed procesora wirtualnego katalogu głównego, pochodzi z [ ISchedulerProxy::CreateOversubscriber](ischedulerproxy-structure.md#createoversubscriber) metody. Dla katalogów głównych procesora wirtualnego, nie ma żadnych ograniczeń w wątku, który można wywołać `Remove` metody.  
   
- `invalid_argument`wygenerowany, jeśli parametr `pScheduler` ma ustawioną wartość `NULL`.  
+ `invalid_argument` wygenerowany, jeśli parametr `pScheduler` ma ustawioną wartość `NULL`.  
   
- `invalid_operation`wygenerowany, jeśli parametr `pScheduler` różni się od harmonogramu, że ten zasób wykonanie został utworzony na lub z zasobem autonomicznego realizacji, jeśli bieżący wątek jest inny niż wątek, który utworzył subskrypcji wątku.  
+ `invalid_operation` wygenerowany, jeśli parametr `pScheduler` różni się od harmonogramu, że ten zasób wykonanie został utworzony na lub z zasobem autonomicznego realizacji, jeśli bieżący wątek jest inny niż wątek, który utworzył subskrypcji wątku.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

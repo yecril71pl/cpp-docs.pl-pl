@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#pragma'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#pragma'
+dev_langs:
+- C++
 helpviewer_keywords:
 - '#pragma directives, C/C++'
 - __pragma keyword
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 845c2fab98d246ccee51aff721b1ceb011e3803c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ccc6ab8fe90b8b97dee213d65e19eb903249da6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Dyrektywy pragma i słowo kluczowe __Pragma
 Pragma — dyrektywy Określ maszyny lub operacyjnego-funkcji specyficznych dla kompilatora. `__pragma` — Słowo kluczowe, która jest specyficzna dla kompilatora firmy Microsoft, umożliwia kod dyrektywy pragma w definicjach makr.  
@@ -55,14 +59,14 @@ __pragma(token-string)
 ||||  
 |-|-|-|  
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|  
-|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[komentarz](../preprocessor/comment-c-cpp.md)|  
+|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[Komentarz](../preprocessor/comment-c-cpp.md)|  
 |[składnik](../preprocessor/component.md)|[jest zgodna z](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|  
-|[data_seg](../preprocessor/data-seg.md)|[przestarzałe](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|  
+|[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|  
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|  
 |[Funkcja](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|  
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|  
 |[intrinsic](../preprocessor/intrinsic.md)|[pętla](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|  
-|[zarządzane](../preprocessor/managed-unmanaged.md)|[komunikat](../preprocessor/message.md)||  
+|[Zarządzane](../preprocessor/managed-unmanaged.md)|[komunikat](../preprocessor/message.md)||  
 |[omp](../preprocessor/omp.md)|[once](../preprocessor/once.md)||  
 |[optymalizuj](../preprocessor/optimize.md)|[pakiet](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|  
 |[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|  
@@ -87,7 +91,7 @@ cl /Zp8 ...
 ```  
   
 ## <a name="the-pragma-keyword"></a>__Pragma() — słowo kluczowe  
- **Określone firmy Microsoft**  
+ **Microsoft specific**  
   
  Kompilator obsługuje również `__pragma` — słowo kluczowe, który ma te same funkcje jako `#pragma` dyrektywy, ale mogą być używane wbudowane w definicji makra. `#pragma` Nie można użyć dyrektywy w definicji makra, ponieważ kompilator interpretuje numer znak (#) w dyrektywie jako [operator tworzenia ciągów (#)](../preprocessor/stringizing-operator-hash.md).  
   

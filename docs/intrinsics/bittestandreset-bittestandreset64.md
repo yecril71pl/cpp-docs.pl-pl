@@ -4,33 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _bittestandreset64_cpp
 - _bittestandreset
 - _bittestandreset_cpp
 - _bittestandreset64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - btr instruction
 - _bittestandreset intrinsic
 - _bittestandreset64 intrinsic
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 738ac3b667d284b8bb051cb98d7d5e31278656f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 60179f768579f21f542286db4b392f3c8b105f20
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Generowanie instrukcji, która sprawdza, czy bit `b` adresu `a`, zwraca bieżącą wartość i resetuje bit do 0.  
   
@@ -48,10 +51,10 @@ unsigned char _bittestandreset64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out]`a`  
+ [w, out] `a`  
  Wskaźnik do pamięci do sprawdzenia.  
   
- [in]`b`  
+ [in] `b`  
  Pozycja bit do testowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -61,7 +64,7 @@ unsigned char _bittestandreset64(
   
 |— Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_bittestandreset`|x86, ARM,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandreset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_bittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **Plik nagłówka** \<intrin.h >  

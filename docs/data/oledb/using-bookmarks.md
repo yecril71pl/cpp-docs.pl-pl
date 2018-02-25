@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27c6b4a98eeaf3ffcae07d8277e823375176eed2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 18c3f8cfb77e9bcd0719fd7130441f628df6eb58
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-bookmarks"></a>Korzystanie z zakładek
 Przed otwarciem zestawu wierszy, należy wskazać dostawcy chcesz używać zakładek. Aby to zrobić, ustaw **DBPROP_BOOKMARKS** właściwości **true** w Twojej właściwości zestawu. Dostawca pobiera zakładki jako kolumny wartości zero, trzeba używać makra specjalnego `BOOKMARK_ENTRY` i `CBookmark` klasy, jeśli używane są statyczne metody dostępu. `CBookmark` to klasa szablonu, gdy argument jest długość w bajtach buforu zakładki. Długość buforu wymagane do zakładki zależy od dostawcy. Jeśli używasz Dostawca ODBC OLE DB, jak pokazano w poniższym przykładzie buforu musi być 4 bajty.  

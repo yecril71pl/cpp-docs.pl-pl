@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#import'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#import'
+dev_langs:
+- C++
 helpviewer_keywords:
 - .tlh files
 - '#import directive'
@@ -18,16 +21,17 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-directive-c"></a>#import — dyrektywa (C++)
 **Określonego języka C++**  
@@ -43,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="parameters"></a>Parametry  
  *Nazwa pliku*  
- Określa bibliotekę typów, aby zaimportować. `filename`może to być jedna z następujących czynności:  
+ Określa bibliotekę typów, aby zaimportować. `filename` Może to być jedna z następujących czynności:  
   
 -   Nazwa pliku, który zawiera bibliotekę typów, takich jak plik .olb, .tlb lub dll. Słowo kluczowe **plik:**, mogą występować przed nazw plików.  
   
@@ -88,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>Uwagi  
   
-##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>Kolejność wyszukiwania dla nazwy pliku  
+##  <a name="_predir_the_23import_directive_searchorderforfilename"></a> Kolejność wyszukiwania dla nazwy pliku  
  *Nazwa pliku* opcjonalnie jest poprzedzony specyfikacji katalogu. Nazwa pliku nazwę istniejącego pliku. Różnica między dwie formy składni jest kolejność wyszukiwania preprocesora typu plików bibliotek, gdy nie w pełni określono ścieżkę.  
   
 |Składnia formularza|Akcja|  
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |Formularz cudzysłowie|Powoduje, że preprocesora do wyszukiwania plików bibliotek typu najpierw w katalogu pliku, który zawiera `#import` instrukcji, a następnie w katalogach niezależnie od plików, które zawierają (`#include`) tego pliku. Preprocesora wyszukuje wzdłuż ścieżki pokazano poniżej.|  
 |Formularz nawiasu ostrego|Powoduje, że preprocesora do wyszukiwania plików bibliotek typu wzdłuż następujące ścieżki:<br /><br /> 1.  **Ścieżki** listy ścieżek zmiennej środowiskowej<br />2.  **LIB** listy ścieżek zmiennej środowiskowej<br />3.  Ścieżka określona przez /I (dodatkowe katalogi dołączenia) — opcja kompilatora, ale kompilator szuka biblioteki typów, której odwoływało się z inną biblioteką typów z [no_registry](../preprocessor/no-registry.md) atrybutu.|  
   
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Określenie Identyfikatora lokalizacji i numer wersji  
+##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> Określenie Identyfikatora lokalizacji i numer wersji  
  Po określeniu identyfikatora progid, można również określić lokalizacja identyfikator i numer wersji programu. Na przykład:  
   
 ```  
@@ -113,8 +117,8 @@ ms.lasthandoff: 12/21/2017
   
 -   Jeśli nie określisz numeru wersji, jest używana najnowsza wersja.  
   
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>Utworzone przez Import pliki nagłówka  
- `#import`tworzy dwa pliki nagłówkowe, które rekonstrukcji zawartości biblioteki typu kodu źródłowego języka C++. Plik nagłówka podstawowy jest podobny do wytworzonego przez kompilator Microsoft interfejsu Definition Language (MIDL), ale dodatkowy kod wygenerowany przez kompilator i danych. [Pliku nagłówka głównej](#_predir_the_primary_type_library_header_file) ma taką samą nazwę podstawową jak biblioteki typów plus. Tlh — rozszerzenie. Plik nagłówka dodatkowej ma taką samą nazwę podstawową jak biblioteki typów z. Rozszerzenie TLI. Zawiera implementacji dla funkcji Członkowskich generowane przez kompilator i jest dołączany (`#include`) w pliku nagłówka podstawowego.  
+##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> Utworzone przez Import pliki nagłówka  
+ `#import` tworzy dwa pliki nagłówkowe, które rekonstrukcji zawartości biblioteki typu kodu źródłowego języka C++. Plik nagłówka podstawowy jest podobny do wytworzonego przez kompilator Microsoft interfejsu Definition Language (MIDL), ale dodatkowy kod wygenerowany przez kompilator i danych. [Pliku nagłówka głównej](#_predir_the_primary_type_library_header_file) ma taką samą nazwę podstawową jak biblioteki typów plus. Tlh — rozszerzenie. Plik nagłówka dodatkowej ma taką samą nazwę podstawową jak biblioteki typów z. Rozszerzenie TLI. Zawiera implementacji dla funkcji Członkowskich generowane przez kompilator i jest dołączany (`#include`) w pliku nagłówka podstawowego.  
   
  W przypadku importowania dispinterface właściwości, która korzysta z parametrami byref #import nie będą generowane __declspec ([właściwości](../cpp/property-cpp.md)) instrukcji dla funkcji.  
   
@@ -128,7 +132,7 @@ ms.lasthandoff: 12/21/2017
   
  `#import` Dyrektywy również uczestniczy w minimalna ponowna kompilacja i można umieścić w pliku prekompilowanego nagłówka. Zobacz [tworzenie prekompilowanych plików nagłówka](../build/reference/creating-precompiled-header-files.md) Aby uzyskać więcej informacji.  
   
-###  <a name="_predir_the_primary_type_library_header_file"></a>Plik nagłówka biblioteki typu podstawowego  
+###  <a name="_predir_the_primary_type_library_header_file"></a> Plik nagłówka biblioteki typu podstawowego  
  Plik nagłówka biblioteki typu podstawowego składa się z siedmiu sekcji:  
   
 -   Standardowy nagłówek: składa się z komentarzami, `#include` instrukcji dla COMDEF. H (który definiuje niektóre standardowe makra używane w nagłówku) oraz inne informacje różne ustawienia.  
@@ -153,7 +157,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Opcjonalne określanie identyfikatora GUID w starym stylu: zawiera inicjowanie stałe nazwane identyfikatora GUID. Są to nazwy w postaci **CLSID_CoClass** i **IID_Interface**, podobnie jak wygenerowanymi przez kompilator MIDL.  
   
--   `#include`Instrukcja dla nagłówka typu dodatkowej biblioteki.  
+-   `#include` Instrukcja dla nagłówka typu dodatkowej biblioteki.  
   
 -   Standardowa stopka: obecnie `#pragma pack(pop)`.  
   
@@ -185,8 +189,8 @@ using namespace MyLib;
   
  Aby uzyskać więcej informacji, zobacz artykuł bazy wiedzy Knowledge Base "#import otoki metody może spowodować naruszenie zasad dostępu" (Q242527) lub "błędy kompilatora, korzystając z #import XML" (Q269194). Artykuły bazy wiedzy można znaleźć na nośniku w bibliotece MSDN lub na [Microsoft Support](https://support.microsoft.com/).  
   
-##  <a name="_predir_the_23import_directive_import_attributes"></a>atrybuty #import  
- `#import`Opcjonalnie można dodać jeden lub więcej atrybutów. Te atrybuty Poinformuj kompilator, aby zmodyfikować zawartość z nagłówków biblioteki typów. Ukośnik odwrotny (**\\**) symbol można uwzględnić dodatkowe wiersze w jednej `#import` instrukcji. Na przykład:  
+##  <a name="_predir_the_23import_directive_import_attributes"></a> atrybuty #import  
+ `#import` Opcjonalnie można dodać jeden lub więcej atrybutów. Te atrybuty Poinformuj kompilator, aby zmodyfikować zawartość z nagłówków biblioteki typów. Ukośnik odwrotny (**\\**) symbol można uwzględnić dodatkowe wiersze w jednej `#import` instrukcji. Na przykład:  
   
 ```  
 #import "test.lib" no_namespace \  
@@ -195,7 +199,7 @@ using namespace MyLib;
   
  Aby uzyskać więcej informacji, zobacz [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md).  
   
- **KOŃCOWY określonego języka C++**  
+ KOŃCOWY określonego języka C++  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)   

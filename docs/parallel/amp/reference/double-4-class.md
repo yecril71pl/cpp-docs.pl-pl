@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::get_xw
 - amp_short_vectors/Concurrency::graphics::double_4::wxz
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::set_xwyz
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9a5e0df270914eb469ced57936df2d5bfe617948
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1762d985bacb5dc35f7b8e61633bd53c6e08c03a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="double4-class"></a>double_4 — Klasa
 Reprezentuje krótki wektor cztery symulacyjnych.  
@@ -460,7 +463,7 @@ class double_4;
 |double_4::operator / =||  
 |double_4::operator ++||  
 |double_4::operator +=||  
-|double_4::operator =||  
+|double_4::operator=||  
 |double_4::operator-=||  
   
 ### <a name="public-constants"></a>Publiczny — stałe  
@@ -474,12 +477,12 @@ class double_4;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |double_4::a||  
-|double_4::AB||  
+|double_4::ab||  
 |double_4::abg||  
 |double_4::abgr||  
 |double_4::ABR||  
 |double_4::abrg||  
-|double_4::AG||  
+|double_4::ag||  
 |double_4::agb||  
 |double_4::agbr||  
 |double_4::AGR||  
@@ -488,17 +491,17 @@ class double_4;
 |double_4::arb||  
 |double_4::arbg||  
 |double_4::ARG||  
-|double_4::ARGB||  
+|double_4::argb||  
 |double_4::b||  
-|double_4::BA||  
+|double_4::ba||  
 |double_4::bag||  
 |double_4::bagr||  
 |double_4::bar||  
 |double_4::barg||  
-|double_4::BG||  
+|double_4::bg||  
 |double_4::bga||  
 |double_4::bgar||  
-|double_4::BGR||  
+|double_4::bgr||  
 |double_4::bgra||  
 |double_4::br||  
 |double_4::bra||  
@@ -507,16 +510,16 @@ class double_4;
 |double_4::brga||  
 |double_4::g||  
 |double_4::ga||  
-|double_4::GAB||  
+|double_4::gab||  
 |double_4::gabr||  
 |double_4::gar||  
 |double_4::garb||  
-|double_4::GB||  
-|double_4::GBA||  
+|double_4::gb||  
+|double_4::gba||  
 |double_4::gbar||  
-|double_4::GBR||  
-|double_4::GBRA||  
-|double_4::GR||  
+|double_4::gbr||  
+|double_4::gbra||  
+|double_4::gr||  
 |double_4::gra||  
 |double_4::grab||  
 |double_4::grb||  
@@ -527,15 +530,15 @@ class double_4;
 |double_4::rabg||  
 |double_4::rag||  
 |double_4::ragb||  
-|double_4::RB||  
+|double_4::rb||  
 |double_4::rba||  
 |double_4::rbag||  
-|double_4::RBG||  
+|double_4::rbg||  
 |double_4::rbga||  
-|double_4::RG||  
+|double_4::rg||  
 |double_4::rga||  
 |double_4::rgab||  
-|double_4::RGB||  
+|double_4::rgb||  
 |double_4::rgba||  
 |double_4::w||  
 |double_4::wx||  
@@ -543,12 +546,12 @@ class double_4;
 |double_4::wxyz||  
 |double_4::wxz||  
 |double_4::wxzy||  
-|double_4::Wy||  
+|double_4::wy||  
 |double_4::wyx||  
 |double_4::wyxz||  
-|double_4::WYZ||  
+|double_4::wyz||  
 |double_4::wyzx||  
-|double_4::wZ||  
+|double_4::wz||  
 |double_4::wzx||  
 |double_4::wzxy||  
 |double_4::wzy||  
@@ -591,7 +594,7 @@ class double_4;
 |double_4::zwxy||  
 |double_4::zwy||  
 |double_4::zwyx||  
-|double_4::ZX||  
+|double_4::zx||  
 |double_4::zxw||  
 |double_4::zxwy||  
 |double_4::zxy||  
@@ -610,7 +613,7 @@ class double_4;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>double_4 — 
+##  <a name="ctor"></a> double_4 — 
 
  Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
   
@@ -681,7 +684,7 @@ explicit inline double_4(
  `_Other`  
  Obiekt używany do inicjowania.  
   
-##  <a name="double_4__size"></a>rozmiar 
+##  <a name="double_4__size"></a> Rozmiar 
 
 ```  
 static const int size = 4;  

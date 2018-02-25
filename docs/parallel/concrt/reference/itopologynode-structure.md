@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ITopologyNode
 - CONCRTRM/concurrency::ITopologyNode
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetId
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNext
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNumaNode
-dev_langs: C++
-helpviewer_keywords: ITopologyNode structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c2e989dca783e90d975bd46a6f5f44cdfa469ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fcab5f66af46989e0487657e018531423fd5f48
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode — Struktura
 Interfejs do węzła topologii, zgodnie z definicją przez Menedżera zasobów. Węzeł zawiera jeden lub więcej zasobów do wykonania.  
@@ -61,7 +65,7 @@ struct ITopologyNode;
   
  **Namespace:** współbieżności  
   
-##  <a name="getexecutionresourcecount"></a>ITopologyNode::GetExecutionResourceCount — metoda  
+##  <a name="getexecutionresourcecount"></a>  ITopologyNode::GetExecutionResourceCount — metoda  
  Zwraca liczbę zasobów wykonanie zgrupowane w tym węźle.  
   
 ```
@@ -71,7 +75,7 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba zasobów wykonanie zgrupowane w tym węźle.  
   
-##  <a name="getfirstexecutionresource"></a>ITopologyNode::GetFirstExecutionResource — metoda  
+##  <a name="getfirstexecutionresource"></a>  ITopologyNode::GetFirstExecutionResource — metoda  
  Zwraca pierwszy zasób wykonywania zgrupowane w tym węźle, w kolejności wyliczenia.  
   
 ```
@@ -81,7 +85,7 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ### <a name="return-value"></a>Wartość zwracana  
  Pierwszy zasób wykonywania zgrupowane w tym węźle, w kolejności wyliczenia.  
   
-##  <a name="getid"></a>ITopologyNode::GetId — metoda  
+##  <a name="getid"></a>  ITopologyNode::GetId — metoda  
  Zwraca unikatowy identyfikator menedżera zasobów dla tego węzła.  
   
 ```
@@ -96,7 +100,7 @@ virtual unsigned int GetId() const = 0;
   
  Liczba węzłów, można je uzyskać z funkcji [getprocessornodecount —](concurrency-namespace-functions.md).  
   
-##  <a name="getnext"></a>ITopologyNode::GetNext — metoda  
+##  <a name="getnext"></a>  ITopologyNode::GetNext — metoda  
  Zwraca interfejs do następnego węzła topologii w kolejności wyliczenia.  
   
 ```
@@ -106,7 +110,7 @@ virtual ITopologyNode *GetNext() const = 0;
 ### <a name="return-value"></a>Wartość zwracana  
  Interfejs do następnego węzła w kolejności wyliczenia. Jeśli nie ma żadnych więcej węzłów w kolejności wyliczenia topologii systemu, ta metoda zwróci wartość `NULL`.  
   
-##  <a name="getnumanode"></a>ITopologyNode::GetNumaNode — metoda  
+##  <a name="getnumanode"></a>  ITopologyNode::GetNumaNode — metoda  
  Zwraca systemu Windows przypisany numer węzła NUMA, do której należy ten węzeł Maanger zasobów.  
   
 ```

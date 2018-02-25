@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - __assume
 - __assume_cpp
-dev_langs: C++
-helpviewer_keywords: __assume keyword [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 890b46f044c018f68226f3698c65603f931f01fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ff952e40110c3f56465b0d897fdd5410c0189f1f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="assume"></a>__assume
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Przekazuje Optymalizator wskazówkę.  
   
@@ -49,7 +53,7 @@ __assume(
 > [!WARNING]
 >  Program nie może zawierać nieprawidłową `__assume` instrukcji w ścieżce dostępny. Jeśli kompilator może dotrzeć nieprawidłową `__assume` instrukcji, program może spowodować nieprzewidywalne i potencjalnie niebezpiecznych zachowanie.  
   
- `__assume`nie jest oryginalne wewnętrznej. Nie musi być zadeklarowana jako funkcja i nie można używać w `#pragma intrinsic` dyrektywy. Chociaż nie jest wygenerowano kodu, jest wpływ na kod wygenerowany przez optymalizator.  
+ `__assume` nie jest oryginalne wewnętrznej. Nie musi być zadeklarowana jako funkcja i nie można używać w `#pragma intrinsic` dyrektywy. Chociaż nie jest wygenerowano kodu, jest wpływ na kod wygenerowany przez optymalizator.  
   
  Użyj `__assume` w [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) tylko wtedy, gdy assert nie jest możliwe do odzyskania. Nie używaj `__assume` w assert, dla którego masz kod odzyskiwania kolejny błąd ponieważ kompilator może zoptymalizować optymalizacji kodu obsługi błędu.  
   
@@ -59,7 +63,7 @@ __assume(
   
 |— Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__assume`|x86, ARM,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__assume`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
 ## <a name="example"></a>Przykład  
   

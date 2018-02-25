@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <mutex>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <mutex>
+dev_langs:
+- C++
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9da491492437f5bf8ed245c84a33f44174ac44ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 50fb9ab17a82703f34dab0744499e2afdbdd61eb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 Dołącz nagłówek standardowy \<obiektu mutex > do definiowania klas `mutex`, `recursive_mutex`, `timed_mutex`, i `recursive_timed_mutex`; szablony `lock_guard` i `unique_lock`; i pomocnicze typy i funkcje, które definiują regiony wzajemne wykluczenie kodu.  
@@ -71,7 +75,7 @@ Dołącz nagłówek standardowy \<obiektu mutex > do definiowania klas `mutex`, 
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[call_once —](../standard-library/mutex-functions.md#call_once)|Udostępnia mechanizm wywoływania dokładnie raz określony obiekt można wywołać podczas wykonywania.|  
+|[call_once](../standard-library/mutex-functions.md#call_once)|Udostępnia mechanizm wywoływania dokładnie raz określony obiekt można wywołać podczas wykonywania.|  
 |[lock](../standard-library/mutex-functions.md#lock)|Próbuje zablokować wszystkie argumenty bez zakleszczenia.|  
   
 ### <a name="structs"></a>Struktury  
@@ -87,9 +91,9 @@ Dołącz nagłówek standardowy \<obiektu mutex > do definiowania klas `mutex`, 
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[adopt_lock —](../standard-library/mutex-functions.md#adopt_lock)|Reprezentuje obiekt, który może być przekazane do konstruktorów dla `lock_guard` i `unique_lock` aby wskazać, że obiektu mutex, który również jest przekazywany do konstruktora jest zablokowany.|  
-|[defer_lock —](../standard-library/mutex-functions.md#defer_lock)|Reprezentuje obiekt, który może zostać przekazany do konstruktora dla `unique_lock`, aby wskazać, że konstruktora nie powinna zablokować obiektu mutex, który również jest przekazywany do niego.|  
-|[try_to_lock —](../standard-library/mutex-functions.md#try_to_lock)|Reprezentuje obiekt, który może zostać przekazany do konstruktora dla `unique_lock` wskazująca, czy konstruktora należy dążyć do odblokowania `mutex` który jest również przekazywany do niego bez blokowania.|  
+|[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Reprezentuje obiekt, który może być przekazane do konstruktorów dla `lock_guard` i `unique_lock` aby wskazać, że obiektu mutex, który również jest przekazywany do konstruktora jest zablokowany.|  
+|[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Reprezentuje obiekt, który może zostać przekazany do konstruktora dla `unique_lock`, aby wskazać, że konstruktora nie powinna zablokować obiektu mutex, który również jest przekazywany do niego.|  
+|[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Reprezentuje obiekt, który może zostać przekazany do konstruktora dla `unique_lock` wskazująca, czy konstruktora należy dążyć do odblokowania `mutex` który jest również przekazywany do niego bez blokowania.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,11 +20,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66461f2721cae60edbaca80409a3a91cefe6e4ec
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 6d5af379d224a4967978c2d17f607f4332376859
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cc-preprocessor-reference"></a>Odwołania preprocesora języka C/C++
 *Odwołania preprocesora języka C/C++* wyjaśniono preprocesora zaimplementowanego w Microsoft C/C++. Preprocesora przeprowadza wstępne operacje na plikach C i C++, zanim zostaną one przekazane do kompilatora. Preprocesora umożliwia warunkowo skompilować kod, Wstaw pliki, określ komunikaty o błędzie kompilacji i stosowania reguł dotyczących komputera do fragmentów kodu.  

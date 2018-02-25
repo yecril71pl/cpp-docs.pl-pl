@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocnum/std::num_put
 - locale/std::num_put::char_type
 - locale/std::num_put::iter_type
 - locale/std::num_put::do_put
 - locale/std::num_put::put
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::num_put [C++]
 - std::num_put [C++], char_type
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f93a5536b73c5d62a95ff076e40304204071d83f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f25ebb3cc763947ca0ee88d95d0b7a1d284d157f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="numput-class"></a>num_put — Klasa
 Szablon klasy, która opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do sterowania konwersji wartości liczbowych sekwencji typu `CharType`.  
@@ -57,7 +60,7 @@ class num_put : public locale::facet;
   
 |||  
 |-|-|  
-|[num_put —](#num_put)|Konstruktor dla obiektów typu `num_put`.|  
+|[num_put](#num_put)|Konstruktor dla obiektów typu `num_put`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -71,14 +74,14 @@ class num_put : public locale::facet;
 |||  
 |-|-|  
 |[do_put](#do_put)|Wirtualny funkcję wywoływaną w taki sposób, aby przekonwertować numeru sekwencji `CharType`s, który reprezentuje liczbę sformatowany dla danego ustawień regionalnych.|  
-|[Umieść](#put)|Konwertuje liczbę do sekwencji `CharType`s, co oznacza liczbę sformatowany dla danego ustawień regionalnych.|  
+|[put](#put)|Konwertuje liczbę do sekwencji `CharType`s, co oznacza liczbę sformatowany dla danego ustawień regionalnych.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<ustawień regionalnych >  
   
  **Namespace:** Standard  
   
-##  <a name="char_type"></a>num_put::char_type  
+##  <a name="char_type"></a>  num_put::char_type  
  Typ opisujący znak używany przez ustawienie regionalne.  
   
 ```  
@@ -88,7 +91,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu **CharType**.  
   
-##  <a name="do_put"></a>num_put::do_put  
+##  <a name="do_put"></a>  num_put::do_put  
  Wirtualny funkcję wywoływaną w taki sposób, aby przekonwertować numeru sekwencji **CharType**s, który reprezentuje liczbę sformatowany dla danego ustawień regionalnych.  
   
 ```  
@@ -196,7 +199,7 @@ virtual iter_type do_put(
   
 - **FAC**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) określa sekwencji, która oddziela grup cyfr w lewą stronę dowolnego punktu dziesiętnego  
   
- Jeśli żadne ograniczenia grupowania są narzucone przez **fac**. **Grupowanie** (pierwszego elementu ma wartość char_max —), następnie żadnych wystąpień **fac**. `thousands_sep`w polu dane wyjściowe będą generowane. W przeciwnym razie wartość separatorów są wstawiane po konwersji wydruku.  
+ Jeśli żadne ograniczenia grupowania są narzucone przez **fac**. **Grupowanie** (pierwszego elementu ma wartość char_max —), następnie żadnych wystąpień **fac**. `thousands_sep` w polu dane wyjściowe będą generowane. W przeciwnym razie wartość separatorów są wstawiane po konwersji wydruku.  
   
  Drugi funkcji wirtualnych chroniony element członkowski:  
   
@@ -292,7 +295,7 @@ virtual iter_type do_put(iter_type next,
 ### <a name="example"></a>Przykład  
   Zobacz przykład [put](#put), które wywołuje `do_put`.  
   
-##  <a name="iter_type"></a>num_put::iter_type  
+##  <a name="iter_type"></a>  num_put::iter_type  
  Typ, który opisuje iterator danych wyjściowych.  
   
 ```  
@@ -302,7 +305,7 @@ typedef OutputIterator iter_type;
 ### <a name="remarks"></a>Uwagi  
  Typ jest synonimem parametru szablonu **OutputIterator.**  
   
-##  <a name="num_put"></a>num_put::num_put  
+##  <a name="num_put"></a>  num_put::num_put  
  Konstruktor dla obiektów typu `num_put`.  
   
 ```  
@@ -320,13 +323,13 @@ explicit num_put(size_t _Refs = 0);
   
 -   1: okres istnienia obiektu musi być zarządzane ręcznie.  
   
--   \>1: te wartości są niezdefiniowane.  
+-   \> 1: te wartości są niezdefiniowane.  
   
  Nie bezpośredniego przykładów to możliwe, ponieważ destruktor jest chroniony.  
   
  Konstruktor inicjuje jego obiektu podstawowego z **locale::**[aspektu](../standard-library/locale-class.md#facet_class)(_ *system plików Refs*).  
   
-##  <a name="put"></a>num_put::Put  
+##  <a name="put"></a>  num_put::Put  
  Konwertuje liczbę do sekwencji **CharType**s, który reprezentuje liczbę sformatowany dla danego ustawień regionalnych.  
   
 ```  
@@ -443,7 +446,7 @@ num_put( ) = 1.000,67
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Ustawienia regionalne >](../standard-library/locale.md)   
+ [\<locale>](../standard-library/locale.md)   
  [facet — klasa](../standard-library/locale-class.md#facet_class)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

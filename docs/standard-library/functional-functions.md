@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - functional/std::bind
 - xfunctional/std::bind1st
@@ -24,7 +25,8 @@ f1_keywords:
 - xfunctional/std::ptr_fun
 - functional/std::ref
 - functional/std::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::bind [C++]
 - std::bind1st
@@ -35,28 +37,29 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cce36b764002232f89c5cbcf09e7a6a8e8a8107f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0401f97cbaa30cd0489227008195568748d24b80
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;funkcjonalności&gt; funkcji
 ||||  
 |-|-|-|  
-|[BIND](#bind)|[bind1st —](#bind1st)|[bind2nd —](#bind2nd)|  
-|[bit_and —](#bit_and)|[bit_not —](#bit_not)|[bit_or —](#bit_or)|  
-|[bit_xor —](#bit_xor)|[cref](#cref)|[mem_fn —](#mem_fn)|  
-|[mem_fun —](#mem_fun)|[mem_fun_ref —](#mem_fun_ref)|[not1 —](#not1)|  
-|[not2 —](#not2)|[ptr_fun —](#ptr_fun)|[ref](#ref)|  
+|[BIND](#bind)|[bind1st](#bind1st)|[bind2nd](#bind2nd)|  
+|[bit_and](#bit_and)|[bit_not](#bit_not)|[bit_or](#bit_or)|  
+|[bit_xor](#bit_xor)|[cref](#cref)|[mem_fn](#mem_fn)|  
+|[mem_fun](#mem_fun)|[mem_fun_ref](#mem_fun_ref)|[not1](#not1)|  
+|[not2](#not2)|[ptr_fun](#ptr_fun)|[ref](#ref)|  
 |[swap](#swap)|  
   
-##  <a name="bind"></a>BIND  
+##  <a name="bind">BIND</a>  
  Wiąże argumentów można wywołać obiektu.  
   
 ```  
@@ -155,7 +158,7 @@ int main()
 3^2 == 9  
 ```  
   
-##  <a name="bind1st"></a>bind1st —  
+##  <a name="bind1st"></a>  bind1st —  
  Funkcja szablonu pomocnika, która tworzy adaptera, aby przekonwertować obiektu binarnego funkcja obiektem funkcji jednoargumentowy przez powiązanie pierwszy argument funkcji binarnego do określonej wartości.  
   
 ```  
@@ -245,7 +248,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="bind2nd"></a>bind2nd —  
+##  <a name="bind2nd"></a>  bind2nd —  
  Funkcja szablonu pomocnika, która tworzy adaptera, aby przekonwertować obiektu binarnego funkcja obiektem funkcji jednoargumentowy przez powiązanie drugi argument funkcji binarnego do określonej wartości.  
   
 ```  
@@ -335,7 +338,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="bit_and"></a>bit_and —  
+##  <a name="bit_and"></a>  bit_and —  
  Obiekt wstępnie zdefiniowanych funkcji, który wykonuje operacji i (binarne `operator&`) na jego argumenty.  
   
 ```  
@@ -372,7 +375,7 @@ struct bit_and<void>
 ### <a name="remarks"></a>Uwagi  
  `bit_and` Obiekt jest ograniczony do typów całkowitych dla danych podstawowych lub do zdefiniowanych przez użytkownika typów danych binarnych tej implementacji `operator&`.  
   
-##  <a name="bit_not"></a>bit_not —  
+##  <a name="bit_not"></a>  bit_not  
  Obiekt wstępnie zdefiniowanych funkcji, który wykonuje dopełnienia bitowego (nie) operacji (jednoargumentowy `operator~`) na jej argument.  
   
 ```  
@@ -404,7 +407,7 @@ struct bit_not<void>
 ### <a name="remarks"></a>Uwagi  
  `bit_not` Obiekt jest ograniczony do typów całkowitych dla danych podstawowych lub do zdefiniowanych przez użytkownika typów danych binarnych tej implementacji `operator~`.  
   
-##  <a name="bit_or"></a>bit_or —  
+##  <a name="bit_or"></a>  bit_or —  
  Obiekt wstępnie zdefiniowanych funkcji, który wykonuje operację lub bitowe ( `operator|`) na jego argumenty.  
   
 ```  
@@ -441,7 +444,7 @@ struct bit_or<void>
 ### <a name="remarks"></a>Uwagi  
  `bit_or` Obiekt jest ograniczony do typów całkowitych dla danych podstawowych lub do zdefiniowanych przez użytkownika typów, które implementują `operator|`.  
   
-##  <a name="bit_xor"></a>bit_xor —  
+##  <a name="bit_xor"></a>  bit_xor —  
  Obiekt wstępnie zdefiniowanych funkcji, który wykonuje operację bitowego XOR (binarne `operator^`) na jego argumenty.  
   
 ```  
@@ -478,7 +481,7 @@ struct bit_xor<void>
 ### <a name="remarks"></a>Uwagi  
  `bit_xor` Obiekt jest ograniczony do typów całkowitych dla danych podstawowych lub do zdefiniowanych przez użytkownika typów danych binarnych tej implementacji `operator^`.  
   
-##  <a name="cref"></a>cref  
+##  <a name="cref">cref</a>  
  Konstrukcje typu const `reference_wrapper` z argumentem.  
   
 ```  
@@ -532,7 +535,7 @@ cref(i) = 1
 cref(neg)(i) = -1  
 ```  
   
-##  <a name="mem_fn"></a>mem_fn —  
+##  <a name="mem_fn"></a>  mem_fn —  
  Generuje otoki proste wywołania.  
   
 ```  
@@ -593,7 +596,7 @@ int main()
 3*2 == 6  
 ```  
   
-##  <a name="mem_fun"></a>mem_fun —  
+##  <a name="mem_fun"></a>  mem_fun —  
  Funkcje pomocy szablonu, użyty do utworzenia karty obiektu funkcji dla funkcji Członkowskich po zainicjowaniu z argumentami wskaźnika.  
   
 ```  
@@ -677,7 +680,7 @@ int main( )
 }  
 ```  
   
-##  <a name="mem_fun_ref"></a>mem_fun_ref —  
+##  <a name="mem_fun_ref"></a>  mem_fun_ref  
  Funkcje pomocy szablonu, użyty do utworzenia karty obiektu funkcji dla funkcji Członkowskich podczas inicjowania przy użyciu argumenty odwołania.  
   
 ```  
@@ -779,7 +782,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13   
 ```  
   
-##  <a name="not1"></a>not1 —  
+##  <a name="not1"></a>  not1 —  
  Zwraca dopełnienia predykatu jednoargumentowy.  
   
 ```  
@@ -847,7 +850,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.  
 ```  
   
-##  <a name="not2"></a>not2 —  
+##  <a name="not2"></a>  not2 —  
  Zwraca dopełnienia predykatu binarnego.  
   
 ```  
@@ -919,7 +922,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )  
 ```  
   
-##  <a name="ptr_fun"></a>ptr_fun —  
+##  <a name="ptr_fun"></a>  ptr_fun —  
  Funkcje szablonów pomocnika służący do konwertowania jednoargumentowy i wskaźniki funkcji binarnego, odpowiednio na funkcje dostosowywalne jednoargumentowy i danych binarnych.  
   
 ```  
@@ -945,7 +948,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 ### <a name="example"></a>Przykład  
  [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]  
   
-##  <a name="ref"></a>REF  
+##  <a name="ref"></a>  REF  
  Tworzy `reference_wrapper` z argumentem.  
   
 ```  
@@ -1034,7 +1037,7 @@ tiger lion cougar
 tiger cougar  
 ```  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  Swap  
  Zamienia dwa `function` obiektów.  
   
 ```  
@@ -1099,5 +1102,5 @@ val == -3
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<funkcjonalności >](../standard-library/functional.md)
+ [\<functional>](../standard-library/functional.md)
 

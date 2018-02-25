@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _AddressOfReturnAddress_cpp
 - _AddressOfReturnAddress
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _AddressOfReturnAddress intrinsic
 - AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 670a9f5786fbe8f8855e9b88e179d005ba8603de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 05f6632b21d0534ea81ef285333f9665bbb25b9a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Zawiera adres lokalizacji pamięci, który zawiera adres zwrotny bieżącej funkcji. Ten adres nie można uzyskać dostępu do innych lokalizacji pamięci (na przykład argumentów funkcji).  
   
@@ -41,7 +44,7 @@ void * _AddressOfReturnAddress();
   
 |— Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_AddressOfReturnAddress`|x86,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **Plik nagłówka** \<intrin.h >  
   

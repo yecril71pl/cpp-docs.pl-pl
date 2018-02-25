@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: container classes [C++]
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3666bf4ee03149a9c00ec93d9fc1dc536ce2d080
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d528f53747979da7b95d8d3298a43ea717007a5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sample-container-class"></a>Sample Container — Klasa
 > [!NOTE]
@@ -33,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Jeśli wyrażenie **~ Ty** zwraca wyjątek, Wynikowy stan obiektu kontenera jest niezdefiniowany.  
   
--   Jeśli kontener przechowuje obiekt alokatora *al*, i *al* zgłasza wyjątek innych niż w wyniku wywołania *al***.allocate**, Wynikowy stan obiektu kontenera jest niezdefiniowany.  
+-   Jeśli kontener przechowuje obiekt alokatora *al*, i *al* zgłasza wyjątek innych niż w wyniku wywołania * al ***.allocate**, Wynikowy stan kontenera obiekt jest niezdefiniowany.  
   
 -   Jeśli kontener przechowuje obiekt funkcji *kompozycji*, aby określić sposób sortowania kontrolowanej sekwencji i *kompozycji* zwraca wyjątek dowolnego rodzaju, Wynikowy stan obiektu kontenera jest niezdefiniowany.  
   

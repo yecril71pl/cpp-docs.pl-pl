@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tiled_extent
 - AMP/tiled_extent
@@ -18,18 +19,20 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim1
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent — Klasa
 A `tiled_extent` obiekt jest `extent` obiektu wymiarów jednej do trzech dzielący miejsca zakresu w jednej, dwóch lub trójwymiarowy Kafelki.  
@@ -87,23 +90,23 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator =](#operator_eq)|Kopiuje zawartość określonego `tiled_index` obiektu do tego.|  
+|[operator=](#operator_eq)|Kopiuje zawartość określonego `tiled_index` obiektu do tego.|  
 
   
 ### <a name="public-constants"></a>Publiczny — stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Stała tile_dim0](#tile_dim0)|Przechowuje długość najważniejszych wymiaru.|  
+|[tile_dim0 Constant](#tile_dim0)|Przechowuje długość najważniejszych wymiaru.|  
 |[Stała tile_dim1](#tile_dim1)|Przechowuje długość dalej do najbardziej znaczących wymiaru.|  
-|[Stała tile_dim2](#tile_dim2)|Przechowuje długość najmniej znaczący wymiaru.|  
+|[tile_dim2 Constant](#tile_dim2)|Przechowuje długość najmniej znaczący wymiaru.|  
 
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[tile_extent —](#tile_extent)|Pobiera `extent` obiekt, który przechwytuje wartości `tiled_extent` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.|  
+|[tile_extent](#tile_extent)|Pobiera `extent` obiekt, który przechwytuje wartości `tiled_extent` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `extent`  
@@ -115,7 +118,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  **Namespace:** współbieżności  
 
-## <a name="ctor"></a> tiled_extent — Konstruktor  
+## <a name="ctor">tiled_extent — Konstruktor</a>  
 Inicjuje nowe wystąpienie klasy `tiled_extent` klasy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -137,7 +140,7 @@ tiled_extent(
 
   
 
-## <a name="get_tile_extent"></a> get_tile_extent   
+## <a name="get_tile_extent"> </a>  get_tile_extent   
 Zwraca `extent` obiekt, który przechwytuje wartości `tiled_extent` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.  
   
 ### <a name="syntax"></a>Składnia  
@@ -150,7 +153,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  `extent` Obiekt, który przechwytuje wymiary to `tiled_extent` wystąpienia.  
   
 
-## <a name="pad"></a> konsoli   
+## <a name="pad">Konsola</a>   
 Zwraca nowy `tiled_extent` obiektu z zakresów dostosowana się być podzielna przez wymiary kafelka.  
   
 ### <a name="syntax"></a>Składnia  
@@ -161,7 +164,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Wartość zwracana  
  Nowe `tiled_extent` obiektu przez wartość. 
-## <a name="truncate"></a> obcięcia   
+## <a name="truncate">TRUNCATE</a>   
 Zwraca nowy `tiled_extent` obiektu z zakresów dostosowana w dół do być podzielna przez wymiary kafelka.  
   
 ### <a name="syntax"></a>Składnia  
@@ -173,7 +176,7 @@ tiled_extent truncate() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca nowy `tiled_extent` obiektu z zakresów dostosowana w dół do być podzielna przez wymiary kafelka.  
 
-## <a name="operator_eq"></a> operatora =   
+## <a name="operator_eq"> </a>  operator =   
 Kopiuje zawartość określonego `tiled_index` obiektu do tego.  
   
 ### <a name="syntax"></a>Składnia  
@@ -190,7 +193,7 @@ tiled_extent&  operator= (
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do tego `tiled_index` wystąpienia.  
 
-## <a name="tile_dim0"></a> tile_dim0   
+## <a name="tile_dim0"> </a>  tile_dim0   
 Przechowuje długość najważniejszych wymiaru.  
   
 ### <a name="syntax"></a>Składnia  
@@ -199,7 +202,7 @@ Przechowuje długość najważniejszych wymiaru.
 static const int tile_dim0 = _Dim0;  
 ```  
   
-## <a name="tile_dim1"></a> tile_dim1   
+## <a name="tile_dim1"> </a>  tile_dim1   
 Przechowuje długość dalej do najbardziej znaczących wymiaru.  
   
 ### <a name="syntax"></a>Składnia  
@@ -207,7 +210,7 @@ Przechowuje długość dalej do najbardziej znaczących wymiaru.
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tile_dim2"></a> tile_dim2   
+## <a name="tile_dim2"> </a>  tile_dim2   
 Przechowuje długość najmniej znaczący wymiaru.  
   
 ### <a name="syntax"></a>Składnia  
@@ -215,7 +218,7 @@ Przechowuje długość najmniej znaczący wymiaru.
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tile_extent"></a> tile_extent —   
+## <a name="tile_extent"> </a>  tile_extent —   
   Pobiera `extent` obiekt, który przechwytuje wartości `tiled_extent` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.  
   
 ### <a name="syntax"></a>Składnia  

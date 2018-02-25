@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _interlockedbittestandreset_rel
 - _interlockedbittestandreset64
@@ -19,25 +20,27 @@ f1_keywords:
 - _interlockedbittestandreset64_cpp
 - _interlockedbittestandreset64_HLEAcquire
 - _interlockedbittestandreset
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lock_btr instruction
 - _interlockedbittestandreset64 intrinsic
 - _interlockedbittestandreset intrinsic
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 143f067dda7558bf51085d4cb8b873b9e593c706
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 12ade2e7eb61c996300dc4208e45f571a5108a46
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedbittestandreset
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Generuje instrukcja, która ustawia bit `b` adresu `a` od zera i zwraca oryginalną wartość.  
   
@@ -83,10 +86,10 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`a`  
+ [in] `a`  
  Wskaźnik do pamięci do sprawdzenia.  
   
- [in]`b`  
+ [in] `b`  
  Pozycja bit do testowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -96,11 +99,11 @@ unsigned char _interlockedbittestandreset64_HLERelease(
   
 |— Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandreset`|x86, ARM,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
-|`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h >|  
-|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
-|`_interlockedbittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_interlockedbittestandreset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|  
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_interlockedbittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Uwagi  
  Na x86 i [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] procesorów, te funkcje wewnętrzne użyj `lock btr` instrukcji, która odczytuje i ustawia określony bit zero w niepodzielną operację.  

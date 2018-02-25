@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::promise
 - future/std::promise::promise
@@ -16,9 +17,10 @@ f1_keywords:
 - future/std::promise::set_value
 - future/std::promise::set_value_at_thread_exit
 - future/std::promise::swap
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 2931558c-d94a-4ba1-ac4f-20bf7b6e23f9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.workload: cplusplus
-ms.openlocfilehash: 12941d9fcfc1aa7123bcd68291b86c9ec3e046e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6673483beb2552ba1b3a11b76d65e9be484c2a39
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="promise-class"></a>promise — Klasa
 W tym artykule opisano *asynchroniczne dostawcy*.  
@@ -81,7 +84,7 @@ class promise;
   
  **Namespace:** Standard  
   
-##  <a name="get_future"></a>Promise::get_future  
+##  <a name="get_future"></a>  Promise::get_future  
  Zwraca [przyszłych](../standard-library/future-class.md) obiektu, który ma taką samą *skojarzony stan asynchronicznego* jako tego promise.  
   
 ```
@@ -93,7 +96,7 @@ future<Ty> get_future();
   
  Jeśli ta metoda została już wywołana dla obiekt promise, który ma tego samego skojarzony stan asynchroniczne, metoda wygeneruje `future_error` mający `error_code` z `future_already_retrieved`.  
   
-##  <a name="op_eq"></a>Promise::operator =  
+##  <a name="op_eq">Promise::operator =</a>  
  Transfery *skojarzony stan asynchronicznego* z określonej `promise` obiektu.  
   
 ```
@@ -110,7 +113,7 @@ promise& operator=(promise&& Other) noexcept;
 ### <a name="remarks"></a>Uwagi  
  Ten operator przenosi skojarzony stan asynchroniczne z `Other`. Po przesłaniu `Other` jest *pusty*.  
   
-##  <a name="promise"></a>Promise::Promise — Konstruktor  
+##  <a name="promise"></a>  Promise::Promise — Konstruktor  
  Konstruuje `promise` obiektu.  
   
 ```
@@ -134,7 +137,7 @@ promise(promise&& Other) noexcept;
   
  Trzeci konstrukcje konstruktora `promise` obiektu i przenosi skojarzony stan asynchroniczne z `Other`i pozostawienie `Other` puste.  
   
-##  <a name="set_exception"></a>Promise::set_exception  
+##  <a name="set_exception"></a>  Promise::set_exception  
  Automatycznie przechowuje Wystąpił wyjątek w wyniku tego `promise` obiektu i zestawy *skojarzony stan asynchronicznego* do *gotowe*.  
   
 ```
@@ -152,7 +155,7 @@ void set_exception(exception_ptr Exc);
   
  W wyniku tej metody wszelkie wątków, które są zablokowane na skojarzony stan asynchronicznego stają się odblokowany.  
   
-##  <a name="set_exception_at_thread_exit"></a>Promise::set_exception_at_thread_exit  
+##  <a name="set_exception_at_thread_exit"></a>  Promise::set_exception_at_thread_exit  
  Automatycznie ustawia wynik `promise` wskaż wyjątek, dostarczanie powiadomienia tylko po wszystkich wątków lokalnych obiektów w bieżącym wątku został zlikwidowany (zazwyczaj w chwili zakończenia wątku).  
   
 ```
@@ -170,7 +173,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
   
  Contrast do [set_exception](#set_exception), ta metoda nie ustawia skojarzony stan asynchronicznego Aby przygotować aż po wszystkich wątków lokalnych obiektów w bieżącym wątku zostały zniszczone. Zazwyczaj wątków, które są zablokowane na skojarzony stan asynchroniczne nie są odblokowane, dopóki opuszcza bieżącego wątku.  
   
-##  <a name="set_value"></a>Promise::set_value  
+##  <a name="set_value"></a>  Promise::set_value  
  Automatycznie zapisuje wartość jako wynik `promise` obiektu i zestawy *skojarzony stan asynchronicznego* do *gotowe*.  
   
 ```
@@ -199,7 +202,7 @@ void promise<void>::set_value();
   
  Dla specjalizacji `promise<void>`, nie ma żadnej przechowywanej wartości.  
   
-##  <a name="set_value_at_thread_exit"></a>Promise::set_value_at_thread_exit  
+##  <a name="set_value_at_thread_exit"></a>  Promise::set_value_at_thread_exit  
  Automatycznie zapisuje wartość jako wynik `promise` obiektu.  
   
 ```
@@ -228,7 +231,7 @@ void promise<void>::set_value_at_thread_exit();
   
  Dla specjalizacji `promise<void>`, nie ma żadnej przechowywanej wartości.  
   
-##  <a name="swap"></a>Promise::swap  
+##  <a name="swap"></a>  Promise::swap  
  Wymiana *skojarzony stan asynchronicznego* tego obiektu promise określony obiekt.  
   
 ```

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::shared_ptr
 - memory/std::shared_ptr::element_type
@@ -20,7 +21,8 @@ f1_keywords:
 - memory/std::shared_ptr::operator*
 - memory/std::shared_ptr::operator=
 - memory/std::shared_ptr::operator->
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::shared_ptr [C++]
 - std::shared_ptr [C++], element_type
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03876821780ec2f4e2258b9553e936bfdda13c17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ef826862d49b5661b57faf3db1322cd91b273f9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sharedptr-class"></a>shared_ptr — Klasa
 Otacza inteligentny wskaźnik zliczonych odwołań wokół obiektu przydzielanego dynamicznie.  
@@ -115,17 +118,17 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
  bez argumentów — wynikowy obiekt jest pusta `shared_ptr` obiektu lub pusta `weak_ptr` obiektu.  
   
- `ptr`--wskaźnika typu `Other*` do zasobu, które mają być zarządzane. `T`musi być typem ukończone. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania) daje wynik wyrażenia `delete ptr`.  
+ `ptr` --wskaźnika typu `Other*` do zasobu, które mają być zarządzane. `T` musi być typem ukończone. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania) daje wynik wyrażenia `delete ptr`.  
   
- `ptr, dtor`--wskaźnika typu `Other*` zasobów, które mają być zarządzane i deleter dla tego zasobu. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania), wywołuje metodę `dtor(ptr)`, które muszą być jasno określone.  
+ `ptr, dtor` --wskaźnika typu `Other*` zasobów, które mają być zarządzane i deleter dla tego zasobu. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania), wywołuje metodę `dtor(ptr)`, które muszą być jasno określone.  
   
- `ptr, dtor, alloc`--wskaźnika typu `Other*` zasobów, które mają być zarządzane, deleter dla tego zasobu i przydzielania do zarządzania dowolny magazyn, który musi być przydzielona i zwolniony. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania) wywołuje `dtor(ptr)`, które muszą być jasno określone.  
+ `ptr, dtor, alloc` --wskaźnika typu `Other*` zasobów, które mają być zarządzane, deleter dla tego zasobu i przydzielania do zarządzania dowolny magazyn, który musi być przydzielona i zwolniony. Jeśli funkcja nie powiedzie się (ponieważ nie można przydzielić bloku sterowania) wywołuje `dtor(ptr)`, które muszą być jasno określone.  
   
- `sp`-- `shared_ptr<Other>` obiektu, który jest właścicielem zasobu, które mają być zarządzane.  
+ `sp` -- `shared_ptr<Other>` obiektu, który jest właścicielem zasobu, które mają być zarządzane.  
   
- `wp`-- `weak_ptr<Other>` obiekt, który wskazuje zasobów, które mają być zarządzane.  
+ `wp` -- `weak_ptr<Other>` obiekt, który wskazuje zasobów, które mają być zarządzane.  
   
- `ap`-- `auto_ptr<Other>` obiekt przechowujący wskaźnik do zasobów, które mają być zarządzane. Jeśli funkcja pomyślnie wywołania `ap.release()`; w przeciwnym razie pozostawia `ap` bez zmian.  
+ `ap` -- `auto_ptr<Other>` obiekt przechowujący wskaźnik do zasobów, które mają być zarządzane. Jeśli funkcja pomyślnie wywołania `ap.release()`; w przeciwnym razie pozostawia `ap` bez zmian.  
   
  We wszystkich przypadkach, typ wskaźnika `Other*` musi być możliwe do przekonwertowania na `T*`.  
   
@@ -138,19 +141,19 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 |||  
 |-|-|  
-|[shared_ptr —](#shared_ptr)|Konstruuje `shared_ptr`.|  
-|[shared_ptr —:: ~ shared_ptr](#dtorshared_ptr)|Niszczy `shared_ptr`.|  
+|[shared_ptr](#shared_ptr)|Konstruuje `shared_ptr`.|  
+|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Niszczy `shared_ptr`.|  
   
 ### <a name="methods"></a>Metody  
   
 |||  
 |-|-|  
-|[ELEMENT_TYPE](#element_type)|Typ elementu.|  
+|[element_type](#element_type)|Typ elementu.|  
 |[get](#get)|Pobiera adres należących do zasobu.|  
 |[owner_before](#owner_before)|Zwraca wartość PRAWDA, jeśli `shared_ptr` jest umieszczane przed (lub mniej niż) podany wskaźnik.|  
-|[Resetowanie](#reset)|Zastąp należących do zasobu.|  
+|[reset](#reset)|Zastąp należących do zasobu.|  
 |[swap](#swap)|Zamienia dwa `shared_ptr` obiektów.|  
-|[unikatowe](#unique)|Testy, jeśli należących do zasobu jest unikatowe.|  
+|[unique](#unique)|Testy, jeśli należących do zasobu jest unikatowe.|  
 |[use_count](#use_count)|Zlicza liczby właścicieli zasobów.|  
   
 ### <a name="operators"></a>Operatory  
@@ -158,8 +161,8 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 |||  
 |-|-|  
 |[shared_ptr::operator boolean — typ](#op_boolean-type)|Testy, jeśli istnieje zasób należące do firmy.|  
-|[shared_ptr::operator *](#op_star)|Pobiera wartość wyznaczonych.|  
-|[shared_ptr::operator =](#op_eq)|Zastępuje należących do zasobu.|  
+|[shared_ptr::operator*](#op_star)|Pobiera wartość wyznaczonych.|  
+|[shared_ptr::operator=](#op_eq)|Zastępuje należących do zasobu.|  
 |[shared_ptr::operator-&gt;](#operator-_gt)|Pobiera wskaźnik do wyznaczonej wartości.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -167,7 +170,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
  **Namespace:** Standard  
   
-##  <a name="element_type"></a>shared_ptr::ELEMENT_TYPE  
+##  <a name="element_type"></a>  shared_ptr::ELEMENT_TYPE  
  Typ elementu.  
   
 ```  
@@ -201,7 +204,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="get"></a>shared_ptr::Get  
+##  <a name="get"></a>  shared_ptr::Get  
  Pobiera adres należących do zasobu.  
   
 ```  
@@ -238,7 +241,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5  
 ```  
   
-##  <a name="shared_ptr__operator_boolean-type"></a>shared_ptr::operator boolean — typ  
+##  <a name="shared_ptr__operator_boolean-type">shared_ptr::operator boolean — typ</a>  
  Testy, jeśli istnieje zasób należące do firmy.  
   
 ```  
@@ -276,7 +279,7 @@ int main()
 (bool)sp1 == true  
 ```  
   
-##  <a name="op_star"></a>shared_ptr::operator *  
+##  <a name="op_star"></a>  shared_ptr::operator *  
  Pobiera wartość wyznaczonych.  
   
 ```  
@@ -309,7 +312,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="op_eq"></a>shared_ptr::operator =  
+##  <a name="op_eq"></a>  shared_ptr::operator =  
  Zastępuje należących do zasobu.  
   
 ```  
@@ -371,7 +374,7 @@ int main()
 *sp0 == 10  
 ```  
   
-##  <a name="shared_ptr__operator-_gt"></a>shared_ptr::operator-&gt;  
+##  <a name="shared_ptr__operator-_gt">shared_ptr::operator-</a>&gt;  
  Pobiera wskaźnik do wyznaczonej wartości.  
   
 ```  
@@ -407,7 +410,7 @@ sp0->first == 1
 sp0->second == 2  
 ```  
   
-##  <a name="owner_before"></a>shared_ptr::owner_before  
+##  <a name="owner_before"></a>  shared_ptr::owner_before  
  Zwraca wartość PRAWDA, jeśli `shared_ptr` jest umieszczane przed (lub mniej niż) podany wskaźnik.  
   
 ```  
@@ -425,7 +428,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Uwagi  
  Funkcja członkowska szablonu zwraca wartość PRAWDA, jeśli `*this` jest `ordered before` `ptr`.  
   
-##  <a name="reset"></a>shared_ptr::reset  
+##  <a name="reset"></a>  shared_ptr::reset  
  Zastąp należących do zasobu.  
   
 ```  
@@ -510,7 +513,7 @@ int main()
 *sp == 15  
 ```  
   
-##  <a name="shared_ptr"></a>shared_ptr::shared_ptr  
+##  <a name="shared_ptr"></a>  shared_ptr::shared_ptr  
  Konstruuje `shared_ptr`.  
   
 ```  
@@ -643,7 +646,7 @@ int main()
 *sp5 == 15  
 ```  
   
-##  <a name="dtorshared_ptr"></a>shared_ptr —:: ~ shared_ptr  
+##  <a name="dtorshared_ptr"></a>  shared_ptr —:: ~ shared_ptr  
  Niszczy `shared_ptr`.  
   
 ```  
@@ -697,7 +700,7 @@ use count == 2
 use count == 1  
 ```  
   
-##  <a name="swap"></a>shared_ptr::swap  
+##  <a name="swap"></a>  shared_ptr::swap  
  Zamienia dwa `shared_ptr` obiektów.  
   
 ```  
@@ -765,7 +768,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="unique"></a>shared_ptr::UNIQUE  
+##  <a name="unique"></a>  shared_ptr::UNIQUE  
  Testy, jeśli należących do zasobu jest unikatowe.  
   
 ```  
@@ -811,7 +814,7 @@ sp1.unique() == true
 sp1.unique() == false  
 ```  
   
-##  <a name="use_count"></a>shared_ptr::use_count  
+##  <a name="use_count"></a>  shared_ptr::use_count  
  Zlicza liczby właścicieli zasobów.  
   
 ```  

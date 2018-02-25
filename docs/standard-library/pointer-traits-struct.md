@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::pointer_traits::element_type
 - memory/std::pointer_traits::pointer
@@ -19,18 +20,20 @@ f1_keywords:
 - xmemory0/std::pointer_traits::difference_type
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b82970336c11e8060b01b9c78b48b21accdc67db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e419d8789e9dd6f3ed98e36a05a96d2e5f985082
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="pointertraits-struct"></a>pointer_traits — struktura
 Dostarcza informacje, które są wymagane przez obiekt klasy szablonu `allocator_traits` do opisywania alokatora z typu wskaźnika `Ptr`.  
@@ -81,7 +84,7 @@ struct Ptr
   
  **Namespace:** Standard  
   
-##  <a name="pointer_to"></a>pointer_to  
+##  <a name="pointer_to"></a>  pointer_to  
  Statyczna metoda, która zwraca `Ptr::pointer_to(obj)`, jeśli istnieje tej funkcji. W przeciwnym razie nie jest możliwe do przekonwertowania dowolną odwołaniem do obiektu klasy `Ptr`. Jeśli `Ptr` jest wskaźnik raw, ta metoda zwraca `addressof(obj)`.  
   
 ```cpp  
@@ -89,6 +92,6 @@ static pointer pointer_to(element_type& obj);
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<pamięci >](../standard-library/memory.md)   
+ [\<memory>](../standard-library/memory.md)   
  [allocator_traits, klasa](../standard-library/allocator-traits-class.md)
 

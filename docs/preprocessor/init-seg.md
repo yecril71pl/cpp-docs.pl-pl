@@ -1,31 +1,34 @@
 ---
-title: init_seg | Dokumentacja firmy Microsoft
+title: init_seg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, init_seg
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69036ffba2143d166c9ac5c55a5b3ec9008b75bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a092ed554af1b078772d53fd0cc663e250a6ea3c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="initseg"></a>init_seg
 **Określonego języka C++**  
@@ -46,13 +49,13 @@ ms.lasthandoff: 12/21/2017
   
  Opcje **init_seg** pragma są:  
   
- **kompilatora**  
+ **compiler**  
  Zarezerwowane do inicjowania biblioteki wykonawczej języka Microsoft C. Obiekty w tej grupie są najpierw wykonane.  
   
  **lib**  
  Dostępny do inicjalizacji dostawców biblioteki klas innych firm. Obiekty w tej grupie są wykonane po oznaczona jako **kompilatora** , ale przed innych.  
   
- **użytkownika**  
+ **Użytkownika**  
  Dostępny dla każdego użytkownika. Obiekty w tej grupie są ostatnio wykonane.  
   
  *Nazwa sekcji*  
@@ -62,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  Aby uzyskać listę nazw nie należy używać podczas tworzenia sekcji, zobacz [/SECTION](../build/reference/section-specify-section-attributes.md).  
   
- *FUNC — nazwa*  
+ *func-name*  
  Określa funkcję, która ma być wywoływana zamiast `atexit` po zamknięciu programu. Tej funkcji pomocnika wymaga także [atexit —](../c-runtime-library/reference/atexit.md) za pomocą wskaźnika do destruktora dla obiekt globalny. Jeśli określisz identyfikator funkcji pragma w postaci  
   
 ```  

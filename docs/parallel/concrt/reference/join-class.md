@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - join
 - AGENTS/concurrency::join
@@ -19,19 +20,22 @@ f1_keywords:
 - AGENTS/concurrency::join::release_message
 - AGENTS/concurrency::join::reserve_message
 - AGENTS/concurrency::join::resume_propagation
-dev_langs: C++
-helpviewer_keywords: join class
+dev_langs:
+- C++
+helpviewer_keywords:
+- join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5166dd4d8c57d3d64fb9d794319b7f2b0398e3d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ee69daa9ec5570d89d407c980e4ff20deca6360
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="join-class"></a>join — Klasa
 A `join` Blok obsługi wiadomości jest element docelowy jednym wielu źródłach, uporządkowanych `propagator_block` które łączy ze sobą komunikaty typu `T` każdego z jego źródła.  
@@ -50,7 +54,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
  Rodzaj ładunku komunikaty przyłączone i propagowane przez bloku.  
   
  `_Jtype`  
- Rodzaj elementu `join` bloku jest, albo `greedy` lub`non_greedy`  
+ Rodzaj elementu `join` bloku jest, albo `greedy` lub `non_greedy`  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -58,7 +62,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[sprzężenia](#ctor)|Przeciążone. Konstruuje `join` bloku obsługi wiadomości.|  
+|[join](#ctor)|Przeciążone. Konstruuje `join` bloku obsługi wiadomości.|  
 |[~ join — destruktor](#dtor)|Niszczy `join` bloku.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
@@ -82,9 +86,9 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
  [Itarget —](itarget-class.md)  
   
- [source_block —](source-block-class.md)  
+ [source_block](source-block-class.md)  
   
- [propagator_block —](propagator-block-class.md)  
+ [propagator_block](propagator-block-class.md)  
   
  `join`  
   
@@ -93,7 +97,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
  **Namespace:** współbieżności  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  Akceptuje wiadomość została przyjęta przez to `join` bloku obsługi wiadomości, przeniesieniem własności do obiektu wywołującego.  
   
@@ -108,7 +112,7 @@ virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do `message` obiekt, aby wywołującego ma teraz własności.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  Wykorzystuje komunikat wcześniej oferowane przez `join` wiadomości bloku oraz zastrzeżone przez element docelowy przeniesieniem własności do obiektu wywołującego.  
   
@@ -126,7 +130,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Uwagi  
  Podobnie jak `accept`, ale zawsze jest poprzedzony przez wywołanie `reserve`.  
   
-##  <a name="ctor"></a>sprzężenia 
+##  <a name="ctor"></a> Dołącz 
 
  Konstruuje `join` bloku obsługi wiadomości.  
   
@@ -175,7 +179,7 @@ join(
   
  Typ `filter_method` jest obiekt podpisem `bool (T const &)` który jest wywoływany przez to `join` obsługi komunikatów bloku, aby ustalić, czy powinna obsługiwać komunikatu oferowany.  
   
-##  <a name="dtor"></a>~ join 
+##  <a name="dtor"></a> ~join 
 
  Niszczy `join` bloku.  
   
@@ -183,7 +187,7 @@ join(
 ~join();
 ```  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  Wywołanie zwrotne, które informuje, że nowy element docelowy został powiązany to `join` bloku obsługi wiadomości.  
   
@@ -191,7 +195,7 @@ join(
 virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
 ```  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `join` bloku obsługi wiadomości. Jest ono wywoływane przez `propagate` metody wywołanego bloku źródłowego.  
   
@@ -211,7 +215,7 @@ message_status propagate_message(
 ### <a name="return-value"></a>Wartość zwracana  
  A [message_status —](concurrency-namespace-enums.md) wskazanie docelowy korzystam z komunikatu.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  Tworzy dane wyjściowe wiadomość komunikat wejściowy z każdego źródła przy ich ma wszystkie propagacji wiadomości. Wysyła tę wiadomość dane wyjściowe do każdego z jego elementów docelowych.  
   
@@ -219,7 +223,7 @@ message_status propagate_message(
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
 ```  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  Zwalnia Poprzednia rezerwacja wiadomości.  
   
@@ -231,7 +235,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity` z `message` obiekt został wydany.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  Rezerwuje komunikat wcześniej oferowane przez to `join` bloku obsługi wiadomości.  
   
@@ -244,12 +248,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  `runtime_object_identity` z oferowany `message` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej.  
+ `true` Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
  Po `reserve` jest wywoływana, jeśli zwróci ona `true`, albo `consume` lub `release` musi zostać wywołana albo lub zwolnij własność wiadomości.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Wznawia propagacji po zastrzeżenie został zwolniony.  
   

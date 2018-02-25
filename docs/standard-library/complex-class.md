@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - complex/std::complex::value_type
 - complex/std::complex::imag
 - complex/std::complex::real
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::complex [C++], value_type
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a4fe9411d306e08f16df138786d6d55e4ea1647c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc697726709f0c5dd7640af0b52b3f8176538267
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="complex-class"></a>complex — Klasa
 Klasa szablonu opisuje obiekt, który przechowuje dwa obiekty typu **typu**, jedna reprezentuje rzeczywistą część liczbą i taki, który reprezentuje część urojony.  
@@ -57,7 +60,7 @@ class complex
   
 |||  
 |-|-|  
-|[złożone](#complex)|Tworzy liczbą z określonej części rzeczywistych i urojony lub kopię inny numer złożone.|  
+|[complex](#complex)|Tworzy liczbą z określonej części rzeczywistych i urojony lub kopię inny numer złożone.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -70,24 +73,24 @@ class complex
 |||  
 |-|-|  
 |[imag](#imag)|Wyodrębnia urojony składnik liczbą.|  
-|[rzeczywiste](#real)|Wyodrębnia rzeczywistych składnik liczbą.|  
+|[real](#real)|Wyodrębnia rzeczywistych składnik liczbą.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
-|[operator * =](#op_star_eq)|Mnoży liczbą docelowego przez współczynnik, który może być skomplikowane lub być tego samego typu są prawdziwe i urojony część liczby złożonej.|  
-|[+= — operator](#op_add_eq)|Dodaje numer liczbą docelowej, w przypadku, gdy liczba dodana może być złożony lub tego samego typu co są części rzeczywistych i urojony liczby złożonej, do którego jest dodawany.|  
+|[operator*=](#op_star_eq)|Mnoży liczbą docelowego przez współczynnik, który może być skomplikowane lub być tego samego typu są prawdziwe i urojony część liczby złożonej.|  
+|[operator+=](#op_add_eq)|Dodaje numer liczbą docelowej, w przypadku, gdy liczba dodana może być złożony lub tego samego typu co są części rzeczywistych i urojony liczby złożonej, do którego jest dodawany.|  
 |[operator-=](#operator-_eq)|Odejmuje liczbę z zakresu od liczby złożonej docelowej, w przypadku, gdy liczba odejmować może być złożony lub tego samego typu co są części rzeczywistych i urojony liczby złożonej, do którego jest dodawany.|  
-|[/ = — operator](#op_div_eq)|Dzieli liczbą docelowego przez dzielnik, która może być skomplikowane lub być tego samego typu są prawdziwe i urojony część liczby złożonej.|  
-|[operator =](#op_eq)|Przypisuje liczbę docelowych liczbą, gdzie numer przypisany może być skomplikowane lub tego samego typu co są prawdziwe i urojony część liczby złożonej, do której jest ona obecnie przypisywana.|  
+|[operator/=](#op_div_eq)|Dzieli liczbą docelowego przez dzielnik, która może być skomplikowane lub być tego samego typu są prawdziwe i urojony część liczby złożonej.|  
+|[operator=](#op_eq)|Przypisuje liczbę docelowych liczbą, gdzie numer przypisany może być skomplikowane lub tego samego typu co są prawdziwe i urojony część liczby złożonej, do której jest ona obecnie przypisywana.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek**: \<złożonych >  
   
  **Namespace:** Standard  
   
-##  <a name="complex"></a>COMPLEX::Complex  
+##  <a name="complex"></a>  COMPLEX::Complex  
  Tworzy liczbą z określonej części rzeczywistych i urojony lub kopię inny numer złożone.  
   
 ```  
@@ -172,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="imag"></a>COMPLEX::imag  
+##  <a name="imag"></a>  COMPLEX::imag  
  Wyodrębnia urojony składnik liczbą.  
   
 ```  
@@ -223,7 +226,7 @@ The real part of c1 is c1.real ( ) = 4.
 The imaginary part of c1 is c1.imag ( ) = 3.  
 ```  
   
-##  <a name="op_star_eq"></a>COMPLEX::operator * =  
+##  <a name="op_star_eq"></a>  COMPLEX::operator * =  
  Mnoży liczbą docelowego przez współczynnik, który może być skomplikowane lub być tego samego typu są prawdziwe i urojony część liczby złożonej.  
   
 ```  
@@ -303,7 +306,7 @@ int main() {
 }  
 ```  
   
-##  <a name="op_add_eq"></a>COMPLEX::operator +=  
+##  <a name="op_add_eq"></a>  COMPLEX::operator +=  
  Dodaje numer liczbą docelowej, w przypadku, gdy liczba dodana może być złożony lub tego samego typu co są części rzeczywistych i urojony liczby złożonej, do którego jest dodawany.  
   
 ```  
@@ -402,7 +405,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.  
 ```  
   
-##  <a name="complex__operator-_eq"></a>COMPLEX::operator-=  
+##  <a name="complex__operator-_eq"></a>  COMPLEX::operator-=  
  Odejmuje liczbę z zakresu od liczby złożonej docelowej, w przypadku, gdy liczba odejmować może być złożony lub tego samego typu co są części rzeczywistych i urojony liczby złożonej, do którego jest dodawany.  
   
 ```  
@@ -506,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.  
 ```  
   
-##  <a name="op_div_eq"></a>COMPLEX::operator / =  
+##  <a name="op_div_eq"></a>  COMPLEX::operator / =  
  Dzieli liczbą docelowego przez dzielnik, która może być skomplikowane lub być tego samego typu są prawdziwe i urojony część liczby złożonej.  
   
 ```  
@@ -606,7 +609,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="op_eq"></a>COMPLEX::operator =  
+##  <a name="op_eq"></a>  COMPLEX::operator =  
  Przypisuje liczbę docelowych liczbą, gdzie numer przypisany może być skomplikowane lub tego samego typu co są prawdziwe i urojony część liczby złożonej, do której jest ona obecnie przypisywana.  
   
 ```  
@@ -680,7 +683,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
  cl2 = (3,4)  
 ```  
   
-##  <a name="real"></a>COMPLEX::Real  
+##  <a name="real"></a>  COMPLEX::Real  
  Pobiera lub ustawia składnik rzeczywistych liczbą.  
   
 ```  
@@ -731,7 +734,7 @@ The real part of c1 is c1.real ( ) = 4.
 The imaginary part of c1 is c1.imag ( ) = 3.  
 ```  
   
-##  <a name="value_type"></a>COMPLEX::value_type  
+##  <a name="value_type"></a>  COMPLEX::value_type  
  Typ, który reprezentuje typ danych używany do reprezentowania rzeczywistą i urojony części liczbą.  
   
 ```  
@@ -740,7 +743,7 @@ typedef Type value_type;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `value_type`jest synonimem klasy złożone **typu** parametru szablonu.  
+ `value_type` jest synonimem klasy złożone **typu** parametru szablonu.  
   
 ### <a name="example"></a>Przykład  
   

@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: AMP/Concurrency
-dev_langs: C++
-helpviewer_keywords: Concurrency namespace
+ms.topic: reference
+f1_keywords:
+- AMP/Concurrency
+dev_langs:
+- C++
+helpviewer_keywords:
+- Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4c4dd1773e74334f342ebb7e3cd64b68e6bab2b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Przestrzeń nazw współbieżności (C++ AMP)
 Zawiera klasy i funkcje, które przyspieszenie wykonywania kodu C++ na sprzęcie równoległe danych. Aby uzyskać więcej informacji, zobacz [Przegląd C++ AMP](../cpp-amp-overview.md)  
@@ -86,27 +91,27 @@ namespace Concurrency;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[all_memory_fence —](concurrency-namespace-functions-amp.md#all_memory_fence)|Wykonanie bloki wszystkie wątki na kafelku ukończenie wszystkich uzyskuje dostęp do pamięci.|  
+|[all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|Wykonanie bloki wszystkie wątki na kafelku ukończenie wszystkich uzyskuje dostęp do pamięci.|  
 |[amp_uninitialize —](concurrency-namespace-functions-amp.md#amp_uninitialize)|Uninitializes środowiska uruchomieniowego C++ AMP.|  
-|[atomic_compare_exchange —](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|Przeciążone. Jeśli wartość przechowywana we wskazanej lokalizacji porównuje pierwszy określonej wartości, drugi określona wartość jest przechowywane w tej samej lokalizacji co niepodzielną operację.|  
+|[atomic_compare_exchange](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|Przeciążone. Jeśli wartość przechowywana we wskazanej lokalizacji porównuje pierwszy określonej wartości, drugi określona wartość jest przechowywane w tej samej lokalizacji co niepodzielną operację.|  
 |[atomic_exchange](concurrency-namespace-functions-amp.md#atomic_exchange)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji do określonej wartości jako operacją niepodzielną.|  
 |[atomic_fetch_add](concurrency-namespace-functions-amp.md#atomic_fetch_add)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji do sumę tę wartość i określoną wartość jako operacją niepodzielną.|  
 |[atomic_fetch_and](concurrency-namespace-functions-amp.md#atomic_fetch_and)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji wartości bitowych `and` tę wartość i określoną wartość jako operacją niepodzielną.|  
-|[atomic_fetch_dec —](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|Przeciążone. Zmniejsza wartości przechowywane w określonej lokalizacji i zapisuje wynik w tej samej lokalizacji co niepodzielną operację.|  
-|[atomic_fetch_inc —](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|Przeciążone. Zwiększa wartość przechowywana we wskazanej lokalizacji i zapisuje wynik w tej samej lokalizacji co niepodzielną operację.|  
-|[atomic_fetch_max —](concurrency-namespace-functions-amp.md#atomic_fetch_max)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji do większy tę wartość i określoną wartość jako operacją niepodzielną.|  
-|[atomic_fetch_min —](concurrency-namespace-functions-amp.md#atomic_fetch_min)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji do mniejszego tę wartość i określoną wartość jako operacją niepodzielną.|  
+|[atomic_fetch_dec](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|Przeciążone. Zmniejsza wartości przechowywane w określonej lokalizacji i zapisuje wynik w tej samej lokalizacji co niepodzielną operację.|  
+|[atomic_fetch_inc](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|Przeciążone. Zwiększa wartość przechowywana we wskazanej lokalizacji i zapisuje wynik w tej samej lokalizacji co niepodzielną operację.|  
+|[atomic_fetch_max](concurrency-namespace-functions-amp.md#atomic_fetch_max)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji do większy tę wartość i określoną wartość jako operacją niepodzielną.|  
+|[atomic_fetch_min](concurrency-namespace-functions-amp.md#atomic_fetch_min)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji do mniejszego tę wartość i określoną wartość jako operacją niepodzielną.|  
 |[atomic_fetch_or](concurrency-namespace-functions-amp.md#atomic_fetch_or)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji wartości bitowych `or` tę wartość i określoną wartość jako operacją niepodzielną.|  
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji różnicy tę wartość i określoną wartość jako operacją niepodzielną.|  
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji wartości bitowych `xor` tę wartość i określoną wartość jako operacją niepodzielną.|  
-|[Kopiuj](concurrency-namespace-functions-amp.md#copy)|Kopiuje obiekt C++ AMP. Spełniono wszystkie wymagania transferu danych synchroniczne. Nie można skopiować danych, gdy kod działa kod z akceleratora. Formularz ogólny tej funkcji jest `copy(src, dest)`.|  
-|[copy_async —](concurrency-namespace-functions-amp.md#copy_async)|Kopiuje obiekt C++ AMP i zwraca [completion_future](completion-future-class.md) który mogą być obsługiwane. Nie można skopiować danych, gdy kod działa z akceleratora. Formularz ogólny tej funkcji jest `copy(src, dest)`.|  
-|[direct3d_abort —](concurrency-namespace-functions-amp.md#direct3d_abort)|Przerywa wykonywanie funkcji, która ma `restrict(amp)` Klauzula ograniczenia.|  
-|[direct3d_errorf —](concurrency-namespace-functions-amp.md#direct3d_errorf)|Wyświetla ciąg formatowania do programu Visual Studio **dane wyjściowe** okno i zgłasza [runtime_exception —](runtime-exception-class.md) wyjątek, który ma tego samego formatowania ciągu.|  
-|[direct3d_printf —](concurrency-namespace-functions-amp.md#direct3d_printf)|Wyświetla ciąg formatowania do programu Visual Studio **dane wyjściowe** okna. Jest ona wywoływana z funkcji, która ma `restrict(amp)` Klauzula ograniczenia.|  
-|[global_memory_fence —](concurrency-namespace-functions-amp.md#global_memory_fence)|Bloki wykonywanie wszystkich wątków na kafelku, dopóki wszystkie pamięci globalnej uzyskuje dostęp do zostały zakończone.|  
+|[copy](concurrency-namespace-functions-amp.md#copy)|Kopiuje obiekt C++ AMP. Spełniono wszystkie wymagania transferu danych synchroniczne. Nie można skopiować danych, gdy kod działa kod z akceleratora. Formularz ogólny tej funkcji jest `copy(src, dest)`.|  
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Kopiuje obiekt C++ AMP i zwraca [completion_future](completion-future-class.md) który mogą być obsługiwane. Nie można skopiować danych, gdy kod działa z akceleratora. Formularz ogólny tej funkcji jest `copy(src, dest)`.|  
+|[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Przerywa wykonywanie funkcji, która ma `restrict(amp)` Klauzula ograniczenia.|  
+|[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Wyświetla ciąg formatowania do programu Visual Studio **dane wyjściowe** okno i zgłasza [runtime_exception —](runtime-exception-class.md) wyjątek, który ma tego samego formatowania ciągu.|  
+|[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Wyświetla ciąg formatowania do programu Visual Studio **dane wyjściowe** okna. Jest ona wywoływana z funkcji, która ma `restrict(amp)` Klauzula ograniczenia.|  
+|[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|Bloki wykonywanie wszystkich wątków na kafelku, dopóki wszystkie pamięci globalnej uzyskuje dostęp do zostały zakończone.|  
 |[parallel_for_each — funkcja (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Funkcja znajduje się w domenie obliczeniowej.|  
-|[tile_static_memory_fence —](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Blokuje wykonywanie wszystkich wątków na kafelku do `tile_static` uzyskuje dostęp do pamięci zostały ukończone.|  
+|[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Blokuje wykonywanie wszystkich wątków na kafelku do `tile_static` uzyskuje dostęp do pamięci zostały ukończone.|  
   
 ## <a name="constants"></a>Stałe  
   

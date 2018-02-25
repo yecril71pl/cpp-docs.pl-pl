@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - locale/std::has_facet
 - locale/std::isalnum
@@ -23,7 +23,7 @@ f1_keywords:
 - locale/std::toupper
 - locale/std::use_facet
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
-caps.latest.revision: "15"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::has_facet [C++]
@@ -41,22 +41,22 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 28274279da6422edf7e92e4aca9a6425cd21a9e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 8f038a52d996fb33564e073b07beba501cc053cb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlocalegt-functions"></a>&lt;Ustawienia regionalne&gt; funkcji
 ||||  
 |-|-|-|  
-|[has_facet](#has_facet)|[isalnum —](#isalnum)|[isalpha —](#isalpha)|  
-|[iscntrl —](#iscntrl)|[isdigit —](#isdigit)|[isgraph —](#isgraph)|  
-|[islower —](#islower)|[isprint —](#isprint)|[ispunct —](#ispunct)|  
-|[isspace —](#isspace)|[isupper —](#isupper)|[isxdigit —](#isxdigit)|  
+|[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|  
+|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph —](#isgraph)|  
+|[islower](#islower)|[isprint —](#isprint)|[ispunct —](#ispunct)|  
+|[isspace](#isspace)|[isupper —](#isupper)|[isxdigit](#isxdigit)|  
 |[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|  
   
-##  <a name="has_facet"></a>has_facet  
+##  <a name="has_facet"></a>  has_facet  
  Sprawdza, czy określony zestaw reguł jest przechowywany w określonych ustawieniach regionalnych.  
   
 ```  
@@ -95,7 +95,7 @@ int main( )
 1  
 ```  
   
-##  <a name="isalnum"></a>isalnum —  
+##  <a name="isalnum"></a>  isalnum —  
  Sprawdza, czy element w ustawieniach regionalnych jest znakiem alfabetycznym czy liczbowym.  
   
 ```  
@@ -159,7 +159,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.  
 ```  
   
-##  <a name="isalpha"></a>isalpha —  
+##  <a name="isalpha"></a>  isalpha —  
  Sprawdza, czy element ustawień regionalnych jest znakiem alfabetycznym.  
   
 ```  
@@ -220,7 +220,7 @@ int main( )
 }  
 ```  
   
-##  <a name="iscntrl"></a>iscntrl —  
+##  <a name="iscntrl"></a>  iscntrl —  
  Sprawdza, czy element w ustawieniach regionalnych jest znakiem kontrolnym.  
   
 ```  
@@ -281,7 +281,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isdigit"></a>isdigit —  
+##  <a name="isdigit"></a>  isdigit —  
  Sprawdza, czy element w ustawieniach regionalnych jest znakiem liczbowym.  
   
 ```  
@@ -342,7 +342,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isgraph"></a>isgraph —  
+##  <a name="isgraph">isgraph —</a>  
  Sprawdza, czy element w ustawieniach regionalnych jest znakiem alfanumerycznym lub interpunkcyjnym.  
   
 ```  
@@ -403,7 +403,7 @@ int main( )
 }  
 ```  
   
-##  <a name="islower"></a>islower —  
+##  <a name="islower"></a>  islower —  
  Sprawdza, czy element w ustawieniach regionalnych jest pisany małymi literami.  
   
 ```  
@@ -464,7 +464,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isprint"></a>isprint —  
+##  <a name="isprint">isprint —</a>  
  Sprawdza, czy element w ustawieniach regionalnych jest znakiem drukowalnym.  
   
 ```  
@@ -524,7 +524,7 @@ int main( )
 }  
 ```  
   
-##  <a name="ispunct"></a>ispunct —  
+##  <a name="ispunct">ispunct —</a>  
  Sprawdza, czy element w ustawieniach regionalnych jest znakiem interpunkcyjnym.  
   
 ```  
@@ -585,7 +585,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isspace"></a>isspace —  
+##  <a name="isspace"></a>  isspace —  
  Sprawdza, czy element w ustawieniach regionalnych jest znakiem białym.  
   
 ```  
@@ -646,7 +646,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isupper"></a>isupper —  
+##  <a name="isupper">isupper —</a>  
  Sprawdza, czy element ustawień regionalnych jest wielkimi literami.  
   
 ```  
@@ -707,7 +707,7 @@ int main( )
 }  
 ```  
   
-##  <a name="isxdigit"></a>isxdigit —  
+##  <a name="isxdigit"></a>  isxdigit —  
  Sprawdza, czy element w ustawieniach regionalnych jest znakiem używanym do reprezentowania liczby w postaci szesnastkowej.  
   
 ```  
@@ -770,7 +770,7 @@ int main( )
 }  
 ```  
   
-##  <a name="tolower"></a>tolower  
+##  <a name="tolower"></a>  tolower  
  Konwertuje znak do małej litery.  
   
 ```  
@@ -815,7 +815,7 @@ int main( )
 }  
 ```  
   
-##  <a name="toupper"></a>toupper  
+##  <a name="toupper">toupper</a>  
  Konwertuje znak do wielkiej litery.  
   
 ```  
@@ -860,7 +860,7 @@ int main( )
 }  
 ```  
   
-##  <a name="use_facet"></a>use_facet  
+##  <a name="use_facet"></a>  use_facet  
  Zwraca odwołanie do zestawu reguł określonego typu przechowywanego w ustawieniach regionalnych.  
   
 ```  
@@ -918,5 +918,5 @@ The character '!' in locale loc2 is not alphabetic.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Ustawienia regionalne >](../standard-library/locale.md)
+ [\<locale>](../standard-library/locale.md)
 

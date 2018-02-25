@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 582afec1c2d6401aee107a2e20cc04ef943254ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a63dacb8da2b7c4b1c7264cfccc6d2839db1b8b1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="openmp-clauses"></a>Klauzule OpenMP
 Zawiera łącza do klauzule używany w interfejsie API OpenMP.  
@@ -31,7 +34,7 @@ Zawiera łącza do klauzule używany w interfejsie API OpenMP.
 |[copyprivate](../../../parallel/openmp/reference/copyprivate.md)|Określa, że co najmniej jedną zmienną powinna być współużytkowane przez wszystkie wątki.|  
 |[default](../../../parallel/openmp/reference/default-openmp.md)|Określa zachowanie niewystępującego w zakresie zmiennych równoległego regionu.|  
 |[firstprivate](../../../parallel/openmp/reference/firstprivate.md)|Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej i czy zmienna powinien być inicjowany przez wartość zmiennej, ponieważ istnieje przed równoległych konstrukcji.|  
-|[Jeśli](../../../parallel/openmp/reference/if-openmp.md)|Określa, czy pętlę powinny być wykonywane równolegle lub kolei.|  
+|[if](../../../parallel/openmp/reference/if-openmp.md)|Określa, czy pętlę powinny być wykonywane równolegle lub kolei.|  
 |[lastprivate](../../../parallel/openmp/reference/lastprivate.md)|Określa, że wersja otaczającym kontekście zmiennej jest taki sam, niezależnie od wątku wykonuje końcowego iteracji (konstrukcji pętli for) lub ostatniej sekcji (#pragma sekcje) wersji prywatnej.|  
 |[nowait](../../../parallel/openmp/reference/nowait.md)|Zastępuje bariery niejawne w dyrektywie.|  
 |[num_threads](../../../parallel/openmp/reference/num-threads.md)|Ustawia liczbę wątków w zespole wątku.|  

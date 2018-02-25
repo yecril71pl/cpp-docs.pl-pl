@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::chi_squared_distribution
 - random/std::chi_squared_distribution::reset
@@ -19,7 +20,8 @@ f1_keywords:
 - random/std::chi_squared_distribution::param_type::n
 - random/std::chi_squared_distribution::param_type::operator==
 - random/std::chi_squared_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::chi_squared_distribution [C++]
 - std::chi_squared_distribution [C++], reset
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d5ca4de3cd7192fa4847bf6090a02b156458340
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 34c474df717b255a5b8774602cd775c236dfb892
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="chisquareddistribution-class"></a>chi_squared_distribution — Klasa
 Generuje rozkład chi kwadrat.  
@@ -84,7 +87,7 @@ Klasa szablonu opisuje dystrybucji tworzącego wartości określony użytkownik 
   
 ||||  
 |-|-|-|  
-|[chi_squared_distribution —](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|  
+|[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|  
 |`chi_squared_distribution::operator()`||[param_type](#param_type)|  
   
 Funkcja właściwości `n()` zwraca wartość parametru przechowywanych dystrybucji `n`.  
@@ -229,7 +232,7 @@ Distribution for 10 samples:
   
 **Namespace:** Standard  
   
-##  <a name="chi_squared_distribution"></a>chi_squared_distribution::chi_squared_distribution  
+##  <a name="chi_squared_distribution"></a>  chi_squared_distribution::chi_squared_distribution  
 Tworzy dystrybucji.  
   
 ```  
@@ -241,17 +244,17 @@ explicit chi_squared_distribution(const param_type& parm);
 *n*  
 `n` Parametr dystrybucji.  
   
-*Parametr*  
+*parm*  
  Struktura parametr używany do budowy dystrybucji.  
   
 ### <a name="remarks"></a>Uwagi  
-**Warunek wstępny:**`0.0 < n`  
+**Warunek wstępny:** `0.0 < n`  
   
 Pierwszy Konstruktor konstrukcji obiektu których przechowywane `n` wartość przechowuje wartość  *n* .  
   
 Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.  
   
-##  <a name="param_type"></a>chi_squared_distribution::param_type  
+##  <a name="param_type"></a>  chi_squared_distribution::param_type  
 Przechowuje parametry dystrybucji.  
   
 ```cpp    
@@ -269,11 +272,11 @@ struct param_type {
 *n*  
 `n` Parametr dystrybucji.  
   
-*prawo*  
+*right*  
 `param_type` Obiekt do porównania z tym.  
   
 ### <a name="remarks"></a>Uwagi  
-**Warunek wstępny:**`0.0 < n`  
+**Warunek wstępny:** `0.0 < n`  
   
 Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.  
   
