@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CBulkRowset::AddRefRows
 - AddRefRows
@@ -29,11 +29,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 249add0576afc0562260a50585745cfefa44ed55
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8a5378e3a719320e475cb64666d8f992d3072841
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cbulkrowsetaddrefrows"></a>CBulkRowset::AddRefRows
 Wywołania [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) należy zwiększyć wartość odwołania do wszystkich wierszy, które obecnie są pobierane z zestawu wierszy bulk.  

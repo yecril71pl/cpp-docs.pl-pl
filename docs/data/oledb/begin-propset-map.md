@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - BEGIN_PROPSET_MAP
 dev_langs:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41a19fb9104c5756693e8120f38d36ec882e43d4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ec9dc0b1481a3443c769c81d051d370747f3813d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="beginpropsetmap"></a>BEGIN_PROPSET_MAP
 Znaki na początku właściwości ustaw wpisów map.  
@@ -39,7 +39,7 @@ BEGIN_PROPSET_MAP(Class)
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Klasy*  
+ Klasy  
  [in] Określono klasy, w którym ta właściwość jest ustawiona. Zestaw właściwości można określić w następujących obiektów OLE DB:  
   
 -   [Obiekty źródła danych](https://msdn.microsoft.com/en-us/library/ms721278.aspx)  
