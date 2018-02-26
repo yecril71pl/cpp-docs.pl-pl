@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scheduler_worker_creation_error
 - CONCRT/concurrency::scheduler_worker_creation_error
 - CONCRT/concurrency::scheduler_worker_creation_error::scheduler_worker_creation_error
-dev_langs: C++
-helpviewer_keywords: scheduler_worker_creation_error class
+dev_langs:
+- C++
+helpviewer_keywords:
+- scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 93652274432e5ae84bc7336f233f1cdfd278dc00
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c04a6b3c55920739a8c9bce70a147951edbf935a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error — Klasa
 Ta klasa opisuje wyjątek z powodu błędu tworzenia kontekstu wykonywania procesu roboczego współbieżność środowiska wykonawczego.  
@@ -40,7 +44,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[scheduler_worker_creation_error —](#ctor)|Przeciążone. Konstruuje `scheduler_worker_creation_error` obiektu.|  
+|[scheduler_worker_creation_error](#ctor)|Przeciążone. Konstruuje `scheduler_worker_creation_error` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
  Zwykle zgłoszenia tego wyjątku, gdy wywołanie systemu operacyjnego do tworzenia kontekstów wykonywania z wewnątrz współbieżności środowiska wykonawczego nie powiodło się. Kontekst wykonywania są wątków, które wykonywać zadania współbieżność środowiska wykonawczego. Kod błędu, który zazwyczaj będzie zwracany po wywołaniu metody Win32 `GetLastError` jest konwertowana na wartość typu `HRESULT` i może być pobierane przy użyciu metody klasy podstawowej `get_error_code`.  
@@ -48,7 +52,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `exception`  
   
- [scheduler_resource_allocation_error —](scheduler-resource-allocation-error-class.md)  
+ [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)  
   
  `scheduler_worker_creation_error`  
   
@@ -57,7 +61,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
  **Namespace:** współbieżności  
   
-##  <a name="ctor"></a>scheduler_worker_creation_error — 
+##  <a name="ctor"></a> scheduler_worker_creation_error — 
 
  Konstruuje `scheduler_worker_creation_error` obiektu.  
   
