@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
 - CDataConnection
-dev_langs: C++
-helpviewer_keywords: CDataConnection class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDataConnection class
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 65e147366ecb7120a9dd2a98cde0c812d02582da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c8e405b95543d170a4e94e39626e9b9793791c7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdataconnection-class"></a>CDataConnection — Klasa
 Zarządza połączenia ze źródłem danych.  
   
-## <a name="syntax"></a>Składnia  
-  
-```  
+## <a name="syntax"></a>Składnia
+
+```cpp
 class CDataConnection  
 ```  
   
@@ -42,7 +45,7 @@ class CDataConnection
   
 |||  
 |-|-|  
-|[Cdataconnection —](../../data/oledb/cdataconnection-cdataconnection.md)|Konstruktor. Tworzy i inicjuje `CDataConnection` obiektu.|  
+|[CDataConnection](../../data/oledb/cdataconnection-cdataconnection.md)|Konstruktor. Tworzy i inicjuje `CDataConnection` obiektu.|  
 |[Kopiuj](../../data/oledb/cdataconnection-copy.md)|Tworzy kopię istniejącego połączenia danych.|  
 |[Otwórz](../../data/oledb/cdataconnection-open.md)|Otwiera połączenie ze źródłem danych przy użyciu ciągu inicjowania.|  
 |[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)|Otwiera nową sesję w bieżącym połączeniu.|  
@@ -59,7 +62,7 @@ class CDataConnection
 |[Operator CSession *](../../data/oledb/cdataconnection-operator-csession-star.md)|Zwraca wskaźnik do zamkniętego `CSession` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CDataConnection`jest klasą przydatne do tworzenia klientów, ponieważ hermetyzuje niezbędnych obiektów (źródła danych i sesji), a niektóre czynności, które należy wykonać podczas nawiązywania połączenia ze źródłem danych  
+ `CDataConnection` jest klasą przydatne do tworzenia klientów, ponieważ hermetyzuje niezbędnych obiektów (źródła danych i sesji), a niektóre czynności, które należy wykonać podczas nawiązywania połączenia ze źródłem danych  
   
  Bez `CDataConnection`, należy utworzyć `CDataSource` obiekt, należy wywołać jej [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) metody, następnie utwórz wystąpienie [CSession](../../data/oledb/csession-class.md) obiekt, należy wywołać jej [ Otwórz](../../data/oledb/csession-open.md) metody, następnie utwórz [CCommand](../../data/oledb/ccommand-class.md) obiekt i wywołanie jego **Otwórz*** metody.  
   
