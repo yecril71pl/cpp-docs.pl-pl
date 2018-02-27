@@ -1,5 +1,5 @@
 ---
-title: ccosh ccoshf, ccoshl | Dokumentacja firmy Microsoft
+title: ccosh, ccoshf, ccoshl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - ccosh
 - ccoshf
@@ -33,24 +33,26 @@ f1_keywords:
 - complex/ccosh
 - complex/ccoshf
 - complex/ccoshl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ccosh function
 - ccoshf function
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: adf6fc31ad3c0a7ab52db35373b94b751cce0be5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7e15a8d6dbc065bb88b630e201093ba256521371
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="ccosh-ccoshf-ccoshl"></a>ccosh ccoshf, ccoshl
+# <a name="ccosh-ccoshf-ccoshl"></a>ccosh, ccoshf, ccoshl
 Pobiera cosinus hiperboliczny dla liczby złożonej.  
   
 ## <a name="syntax"></a>Składnia  
@@ -87,21 +89,21 @@ _Lcomplex ccoshl(
   
 |Procedura|Nagłówek C|Nagłówek C++|  
 |-------------|--------------|------------------|  
-|`ccosh`,               `ccoshf`, `ccoshl`|\<COMPLEX.h >|\<ccomplex >|  
+|`ccosh`,               `ccoshf`, `ccoshl`|\<complex.h>|\<ccomplex >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [catanh catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [ctanh ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
+ [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
+ [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [catan catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [cacosh cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
+ [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
+ [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
+ [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
+ [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
  [ctan ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
  [csin csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
  [casin casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
+ [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
  [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)

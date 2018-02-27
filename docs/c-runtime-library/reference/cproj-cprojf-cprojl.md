@@ -1,5 +1,5 @@
 ---
-title: cproj cprojf, cprojl | Dokumentacja firmy Microsoft
+title: cproj, cprojf, cprojl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - cproj
 - cprojf
@@ -33,24 +33,26 @@ f1_keywords:
 - complex/cproj
 - complex/cprojf
 - complex/cprojl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cproj function
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 086abc1446302145eb2749cec10fb07c9d81014a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6afc69e136f6b84b5c6c60681e7670584e32f2d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="cproj-cprojf-cprojl"></a>cproj cprojf, cprojl
+# <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 Pobiera projekcji liczbą sfery Reimann.  
   
 ## <a name="syntax"></a>Składnia  
@@ -87,7 +89,7 @@ _Lcomplex cprojl(
   
 |Procedura|Nagłówek C|Nagłówek C++|  
 |-------------|--------------|------------------|  
-|`cproj`,               `cprojf`, `cprojl`|\<COMPLEX.h >|\<ccomplex >|  
+|`cproj`,               `cprojf`, `cprojl`|\<complex.h>|\<ccomplex >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -95,7 +97,7 @@ _Lcomplex cprojl(
  [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [normy normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
  [creal crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [conj conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
+ [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
+ [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
  [carg cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
  [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)

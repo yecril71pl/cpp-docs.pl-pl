@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2a177f30829719022afdedd810ecc265c94130d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e4b96228ac867781b00be7ca92a9debcad3f9eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Równoległość zadania (współbieżność środowiska wykonawczego)
 Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, który wykonuje określone zadanie i zwykle uruchamia się równolegle z innymi zadaniami. Zadanie może być rozłożone na dodatkowych, bardziej szczegółowych zadań, które są podzielone na *grupy zadań*.  
@@ -81,7 +84,7 @@ Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, któr
   
 - [Skuteczne programowanie](#robust)  
   
-##  <a name="lambdas"></a>Za pomocą wyrażenia Lambda  
+##  <a name="lambdas"></a> Za pomocą wyrażenia Lambda  
  Ze względu na ich zwięzły składnię wyrażenia lambda są typowe sposób definiowania pracy wykonywanego przez zadania i grupy zadań. Poniżej przedstawiono kilka wskazówek użycia:  
   
 -   Ponieważ zadania są zazwyczaj uruchamiane na wątki w tle, należy pamiętać o okres istnienia obiektu podczas przechwytywania zmienne w wyrażeniach lambda. Po przechwyceniu zmiennej przez wartość kopię tej zmiennej jest przeprowadzane w treści lambda. Podczas przechwytywania przez odwołanie, nie jest możliwe kopii. W związku z tym upewnij się, że który okres istnienia żadnych zmiennej przechwytywanie przez odwołanie outlives zadanie, które korzysta z niego.  
@@ -98,10 +101,10 @@ Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, któr
   
  Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażenia Lambda](../../cpp/lambda-expressions-in-cpp.md).  
   
-##  <a name="task-class"></a>Zadanie — klasa  
+##  <a name="task-class"></a> Zadanie — klasa  
  Można użyć [concurrency::task](../../parallel/concrt/reference/task-class.md) klasy utworzenie zadania do zestawu działań zależnych. Ten model kompozycji jest obsługiwana przez pojęcie *kontynuacje*. Kod umożliwia kontynuacji ma być wykonywana po poprzedniej, lub *antecedent*, zadanie zostanie ukończone. Wynik zadania poprzedzających jest przekazywany jako dane wejściowe do jednego lub więcej zadań kontynuacji. Po zakończeniu poprzedzających zadań kontynuacji zadań, które oczekują na nim są zaplanowane do uruchomienia. Każde zadanie kontynuacji wysyłana kopia wyniku poprzedzających zadań. Z kolei tych zadań kontynuacji mogą być również poprzedzających zadania dla innych kontynuacje, tworząc łańcuch zadań. Kontynuacje ułatwiają tworzenie łańcuchów o dowolnej długości zadań, które mają określone zależności między nimi. Ponadto zadania mogą uczestniczyć w anulowania przed zadań uruchamia lub w sposób współpracy, jest uruchomiona. Aby uzyskać więcej informacji na temat tego modelu anulowania, zobacz [anulowanie w PPL](cancellation-in-the-ppl.md).  
   
- `task`to klasa szablonu. Parametr typu `T` jest typem wyniku, który jest generowany przez zadanie. Tego typu może być `void` Jeśli zadanie nie zwraca wartości. `T`Nie można użyć `const` modyfikator.  
+ `task` to klasa szablonu. Parametr typu `T` jest typem wyniku, który jest generowany przez zadanie. Tego typu może być `void` Jeśli zadanie nie zwraca wartości. `T` Nie można użyć `const` modyfikator.  
   
  Podczas tworzenia zadania, należy podać *funkcja pracy* wykonująca treść zadania. Funkcja pracy jest dostarczany w formie funkcja lambda, wskaźnik funkcji lub obiekt funkcji. Aby czekać na zakończenie bez uzyskania wynik zadania, należy wywołać [concurrency::task::wait](reference/task-class.md#wait) metody. `task::wait` Metoda zwraca [concurrency::task_status](reference/concurrency-namespace-enums.md#task_group_status) wartość, która opisuje czy zadanie zostało zakończone lub anulowane. Aby uzyskać wynik zadania, należy wywołać [concurrency::task::get](reference/task-class.md#get) metody. Ta metoda wywołuje `task::wait` do poczekaj na zakończenie, a zatem wykonanie bloki bieżącego wątku zadania wynik jest dostępna.  
   
@@ -124,9 +127,9 @@ Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, któr
  Na przykład, który używa `task`, [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), anulowania, zobacz [wskazówki: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). ( `task_completion_event` Klasy opisanego w dalszej części tego dokumentu.)  
   
 > [!TIP]
->  Aby uzyskać szczegółowe informacje, które są specyficzne dla zadania w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji, zobacz [asynchronicznego programowania w języku C++](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31) i [tworzenie operacji asynchronicznych w języku C++ dla aplikacji ze Sklepu Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+>  Aby uzyskać szczegółowe informacje, które są specyficzne dla zadania w aplikacji platformy uniwersalnej systemu Windows, zobacz [asynchronicznego programowania w języku C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) i [tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
   
-##  <a name="continuations"></a>Zadań kontynuacji  
+##  <a name="continuations"></a> Zadań kontynuacji  
  W programowanie asynchroniczne jest często stosowane w jednej operacji asynchronicznej, po zakończeniu, aby wywołać operację drugi i przekazywania danych do niej. Zazwyczaj jest to zrobić za pomocą metody wywołania zwrotnego. Współbieżność środowiska wykonawczego, te same funkcje odbywa się przy *zadań kontynuacji*. Zadania kontynuacji (nazywanego także po prostu utrzymania) jest zadanie asynchroniczne, które jest wywoływane przez inne zadanie, znany jako *antecedent*, po zakończeniu antecedent. Przy użyciu kontynuacje, można:  
   
 -   Przekazywanie danych z antecedent do kontynuacji.  
@@ -135,7 +138,7 @@ Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, któr
   
 -   Anuluj utrzymania przed rozpoczęciem lub wspólnie jest uruchomiona.  
   
--   Zawierają wskazówki dotyczące sposobu powinny zostać zaplanowane kontynuacji. (Dotyczy to [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] tylko aplikacje. Aby uzyskać więcej informacji, zobacz [tworzenie operacji asynchronicznych w języku C++ dla aplikacji ze Sklepu Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)  
+-   Zawierają wskazówki dotyczące sposobu powinny zostać zaplanowane kontynuacji. (Dotyczy tylko systemu Windows platformy Uniwersalnej aplikacji. Aby uzyskać więcej informacji, zobacz [tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)  
   
 -   Wywołanie wielu kontynuacje z tym samym antecedent.  
   
@@ -159,21 +162,21 @@ Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, któr
   
  [!code-cpp[concrt-continuation-chain#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_6.cpp)]  
   
- Kontynuacja może zwrócić również inne zadanie. Jeśli nie ma żadnych anulowania, to zadanie jest wykonywane przed kolejnych kontynuacji. Ta technika jest nazywany *odkodowywania asynchroniczne*. Asynchroniczne odkodowywania jest przydatne, gdy chcesz wykonać dodatkowe czynności w tle, ale nie ma bieżącego zadania, aby zablokować bieżącego wątku. (To jest typowe w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji, w którym kontynuacje można uruchomić w wątku interfejsu użytkownika). W poniższym przykładzie przedstawiono trzy zadania. Pierwszym zadaniem zwraca innego zadania, który jest uruchamiany przed zadania kontynuacji.  
+ Kontynuacja może zwrócić również inne zadanie. Jeśli nie ma żadnych anulowania, to zadanie jest wykonywane przed kolejnych kontynuacji. Ta technika jest nazywany *odkodowywania asynchroniczne*. Asynchroniczne odkodowywania jest przydatne, gdy chcesz wykonać dodatkowe czynności w tle, ale nie ma bieżącego zadania, aby zablokować bieżącego wątku. (To jest typowe w aplikacjach platformy uniwersalnej systemu Windows, gdy kontynuacje można uruchomić w wątku interfejsu użytkownika). W poniższym przykładzie przedstawiono trzy zadania. Pierwszym zadaniem zwraca innego zadania, który jest uruchamiany przed zadania kontynuacji.  
   
  [!code-cpp[concrt-async-unwrapping#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_7.cpp)]  
   
 > [!IMPORTANT]
 >  Podczas kontynuacji zadania zwraca zadania zagnieżdżonego typu `N`, wynikowy zadanie ma typ `N`, a nie `task<N>`, a działanie jest kończone po zakończeniu zadania zagnieżdżonego. Innymi słowy kontynuacji wykonuje odkodowywania zadania zagnieżdżonego.  
   
-##  <a name="value-versus-task"></a>Na podstawie wartości i Kontynuacje opartego na zadaniach  
+##  <a name="value-versus-task"></a> Na podstawie wartości i Kontynuacje opartego na zadaniach  
  Podane `task` obiektu, którego typ zwracany jest `T`, można podać wartości typu `T` lub `task<T>` do swoich zadań kontynuacji. Kontynuacja, który przyjmuje typ `T` nosi nazwę *na podstawie wartości kontynuacji*. Kontynuacja na podstawie wartości jest zaplanowane do uruchomienia, gdy poprzedzających zadanie zakończy pracę bez błędów i nie została anulowana. Kontynuacja, który przyjmuje typ `task<T>` jako jego parametr nosi nazwę *opartego na zadaniach kontynuacji*. Kontynuacja opartego na zadaniach zawsze jest zaplanowane do uruchomienia po zakończeniu poprzedzających zadań, nawet gdy poprzedzających zadanie zostało anulowane lub zgłasza wyjątek. Następnie można wywołać `task::get` można pobrać wyniku zadania poprzedzających. Jeśli poprzedzających zadanie zostało anulowane, `task::get` zgłasza [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md). Jeśli zadanie poprzedzających zwrócił wyjątek, `task::get` ponownie zgłasza ten wyjątek. Kontynuacja opartego na zadaniach nie jest oznaczony jako anulowane podczas jego poprzedzających zadanie zostało anulowane.  
   
-##  <a name="composing-tasks"></a>Tworzenie zadań  
+##  <a name="composing-tasks"></a> Tworzenie zadań  
  W tej sekcji opisano [concurrency::when_all](reference/concurrency-namespace-functions.md#when_all) i [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) funkcje, które mogą pomóc utworzenie wielu zadań, aby zaimplementować typowe wzorce.  
 
   
-###  <a name="when-all"></a>When_all — funkcja  
+###  <a name="when-all"></a> When_all — funkcja  
  `when_all` Funkcja tworzy zadania kończonego po zakończeniu zestaw zadań. Ta funkcja zwraca wartość odchylenia::[wektor](../../standard-library/vector-class.md) obiekt zawierający wynik każdego zadania w zestawie. W poniższym przykładzie podstawowe `when_all` można utworzyć zadanie reprezentujące zakończenie trzy innych zadań.  
   
  [!code-cpp[concrt-join-tasks#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_8.cpp)]  
@@ -197,7 +200,7 @@ Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, któr
   
  [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]  
   
- Należy wziąć pod uwagę [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikację, która używa C++ i języka XAML i zapisuje zestawu plików na dysku. Poniższy przykład przedstawia użycie `when_all` i `observe_all_exceptions` aby upewnić się, że program przestrzega wszystkie wyjątki.  
+ Należy wziąć pod uwagę aplikacji platformy uniwersalnej systemu Windows, która korzysta z C++ i języka XAML i zapisuje zestawu plików na dysku. Poniższy przykład przedstawia użycie `when_all` i `observe_all_exceptions` aby upewnić się, że program przestrzega wszystkie wyjątki.  
   
  [!code-cpp[concrt-eh-when_all#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_11.cpp)]  
   
@@ -219,10 +222,10 @@ Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, któr
   
 > [!TIP]
 
-> `when_all`to nieblokujące funkcja, która tworzy `task` wyniku. W odróżnieniu od [task::wait](reference/task-class.md#wait), można bezpiecznie wywołanie tej funkcji [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji w wątku ASTA (STA aplikacji).  
+> `when_all` to nieblokujące funkcja, która tworzy `task` wyniku. W odróżnieniu od [task::wait](reference/task-class.md#wait), można bezpiecznie wywołanie tej funkcji w aplikacji platformy uniwersalnej systemu Windows w wątku ASTA (STA aplikacji).  
 
   
-###  <a name="when-any"></a>When_any — funkcja  
+###  <a name="when-any"></a> When_any — funkcja  
  `when_any` Funkcja tworzy zadania kończonego po zakończeniu pierwszego zadania w zestawie zadania. Ta funkcja zwraca [std::pair](../../standard-library/pair-structure.md) obiekt zawierający wynik ukończonego zadania i indeks tego zadania w zestawie.  
   
  `when_any` Funkcja jest szczególnie przydatne w następujących scenariuszach:  
@@ -249,18 +252,18 @@ Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, któr
  `auto t = t1 || t2; // same as when_any`  
   
 > [!TIP]
->  Jak `when_all`, `when_any` jest nieblokujące i bezpiecznie wywołać w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji w wątku ASTA.  
+>  Jak `when_all`, `when_any` jest nieblokujące i bezpiecznie wywołać w aplikacji platformy uniwersalnej systemu Windows w wątku ASTA.  
   
-##  <a name="delayed-tasks"></a>Wykonywanie zadań opóźnione  
+##  <a name="delayed-tasks"></a> Wykonywanie zadań opóźnione  
  Czasami jest to konieczne, umożliwia opóźnienie wykonania zadania, dopóki spełniony jest warunek lub uruchomić zadanie w odpowiedzi na zdarzenie zewnętrzne. Na przykład w programowanie asynchroniczne, trzeba będzie uruchomić zadanie w odpowiedzi na zdarzenia zakończenia We/Wy.  
   
  To zrobić na dwa sposoby powinny używać utrzymania lub uruchomić zadanie i zaczekać na zdarzenie wewnątrz funkcji pracy zadania. Istnieją jednak przypadki, gdy go nie jest możliwe do korzystania z jednego z poniższych metod. Na przykład aby utworzyć kontynuację, musi mieć poprzedzających zadań. Jednak jeśli nie masz poprzedzających zadań, można utworzyć *zdarzenie ukończenia zadania* i później łańcucha zdarzenie ukończenia poprzedzających zadania po ich udostępnieniu. Ponadto ponieważ zadanie oczekiwania blokuje również wątku, można użyć zdarzenia zakończenia zadań do wykonywania pracy po zakończeniu operacji asynchronicznej i wolny w tym samym wątku.  
   
- [Concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) klasa upraszcza kompozycji takich zadań. Podobnie jak `task` klasy parametr typu `T` jest typem wyniku, który jest generowany przez zadanie. Tego typu może być `void` Jeśli zadanie nie zwraca wartości. `T`Nie można użyć `const` modyfikator. Zazwyczaj `task_completion_event` dostarczonego do wątku lub zadanie, które sygnalizowana go po udostępnieniu wartość dla tego obiektu. W tym samym czasie co najmniej jednego zadania są ustawiane jako odbiorników tego zdarzenia. Gdy zdarzenie jest ustawiona, wykonaj zadania odbiornika, a ich kontynuacje są zaplanowane do uruchomienia.  
+ [Concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) klasa upraszcza kompozycji takich zadań. Podobnie jak `task` klasy parametr typu `T` jest typem wyniku, który jest generowany przez zadanie. Tego typu może być `void` Jeśli zadanie nie zwraca wartości. `T` Nie można użyć `const` modyfikator. Zazwyczaj `task_completion_event` dostarczonego do wątku lub zadanie, które sygnalizowana go po udostępnieniu wartość dla tego obiektu. W tym samym czasie co najmniej jednego zadania są ustawiane jako odbiorników tego zdarzenia. Gdy zdarzenie jest ustawiona, wykonaj zadania odbiornika, a ich kontynuacje są zaplanowane do uruchomienia.  
   
  Na przykład, który używa `task_completion_event` do wykonania zadania kończonego po opóźnieniu, zobacz [porady: Tworzenie zadania takie zakończeniu po opóźnienie](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).  
   
-##  <a name="task-groups"></a>Grupy zadań  
+##  <a name="task-groups"></a> Grupy zadań  
  A *grupy zadań* organizuje kolekcji zadań. Grupy zadań wypychanie zadań do kolejki kradzież pracy. Planista usuwa zadania z tej kolejki i je wykonuje zasobów obliczeniowych dostępnych na. Dodanie zadania do grupy zadań, można poczekać dla wszystkich zadań zakończyć lub anulować zadania, które nie zostały jeszcze uruchomione.  
   
  Używa PPL [concurrency::task_group](reference/task-group-class.md) i [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) klasy do reprezentowania grupy zadań i [concurrency::task_handle](../../parallel/concrt/reference/task-handle-class.md) — klasa do reprezentowania zadania, które będą uruchamiane w tych grupach. `task_handle` Klasa hermetyzuje kod, który wykonuje pracę. Podobnie jak `task` klasy, funkcja pracy jest dostarczany w formie funkcja lambda, wskaźnik funkcji lub obiekt funkcji. Zwykle nie należy do pracy z `task_handle` obiekty bezpośrednio. Zamiast tego przechodzą funkcji pracy do grupy zadań, a grupy zadań tworzy i którymi zarządza `task_handle` obiektów.  
@@ -277,7 +280,7 @@ Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, któr
   
  Środowisko uruchomieniowe udostępnia model obsługi wyjątków, który umożliwia Zgłoś wyjątek z zadania i obsługiwać ten wyjątek podczas oczekiwania dla grupy zadań skojarzony zakończyć. Aby uzyskać więcej informacji na temat ten model obsługi wyjątków, zobacz [obsługi wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
-##  <a name="comparing-groups"></a>Porównywanie task_group do structured_task_group —  
+##  <a name="comparing-groups"></a> Porównywanie task_group do structured_task_group —  
  Mimo że firma Microsoft zaleca użycie `task_group` lub `parallel_invoke` zamiast `structured_task_group` klasy, istnieją przypadki, w której chcesz użyć `structured_task_group`, na przykład podczas zapisu równoległych algorytmu, który wykonuje zmienną liczbę zadań lub wymaga Obsługa anulowania. W tej sekcji wyjaśniono różnice między `task_group` i `structured_task_group` klasy.  
   
  `task_group` Klasa jest bezpieczne wątkowo. W związku z tym można dodać zadania do `task_group` obiektów z wielu wątków i poczekaj lub Anuluj `task_group` obiektu wiele wątków. Konstrukcja i niszczenie `structured_task_group` obiektu musi występować w tym samym zakresie leksykalne. Ponadto wszystkie operacje na `structured_task_group` obiektu muszą odbywać się na tym samym wątku. Wyjątkiem od tej reguły jest [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) i [concurrency::structured_task_group::is_canceling](reference/structured-task-group-class.md#is_canceling) metody. Zadania podrzędnego można wywołać tych metod, aby anulować nadrzędnej grupy zadań lub Wyszukaj anulowania w dowolnym momencie.  
@@ -296,7 +299,7 @@ Współbieżność środowiska wykonawczego *zadań* jest jednostka pracy, któr
   
  Zarówno `task_group` i `structured_task_group` obsługuje anulowania. Aby uzyskać więcej informacji na temat anulowania, zobacz [anulowanie w PPL](cancellation-in-the-ppl.md).  
   
-##  <a name="example"></a>Przykład  
+##  <a name="example"></a> Przykład  
  Poniższy przykład podstawowa pokazuje, jak pracować z grupy zadań. W tym przykładzie użyto `parallel_invoke` algorytmu do wykonania dwóch zadań jednocześnie. Każde zadanie dodaje podzadania `task_group` obiektu. Należy pamiętać, że `task_group` klasa umożliwia dla wielu zadań jednocześnie dodać zadania do niego.  
   
  [!code-cpp[concrt-using-task-groups#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_17.cpp)]  
@@ -313,7 +316,7 @@ Message from task: 42
   
  Pełne przykłady, które pokazują, jak używać `parallel_invoke` algorytmu, zobacz [porady: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) i [porady: Korzystanie z parallel_invoke do przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Pełny przykład, który używa `task_group` klasy Implementowanie przyszłych operacji asynchronicznej, zobacz [wskazówki: Wdrażanie przyszłych operacji](../../parallel/concrt/walkthrough-implementing-futures.md).  
   
-##  <a name="robust"></a>Skuteczne programowanie  
+##  <a name="robust"></a> Skuteczne programowanie  
  Upewnij się, że rozumiesz roli anulowania i obsługi wyjątków, korzystając z zadania, grup zadań i algorytmy równoległe. Na przykład drzewa pracy równoległej, zadania, które zostało anulowane zapobiega zadania podrzędne uruchomiona. Może to powodować problemy, jeśli jedno z zadań podrzędnych wykonuje operację, która jest istotne dla aplikacji, takich jak zwalnianie zasobu. Ponadto jeśli zadania podrzędnego zgłasza wyjątek, ten wyjątek może propagację za pośrednictwem destruktor obiektu i spowodować niezdefiniowane zachowanie aplikacji. Na przykład ilustrujący punkty, zobacz [opis sposobu anulowania i wyjątek obsługi wpływają na zniszczeniem obiektu](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) części dokumentu Biblioteka wzorów równoległych — najlepsze praktyki. Aby uzyskać więcej informacji na temat anulowania i modele obsługi wyjątków w PPL, zobacz [anulowania](../../parallel/concrt/cancellation-in-the-ppl.md) i [obsługi wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
 ## <a name="related-topics"></a>Tematy pokrewne  

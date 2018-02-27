@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - section
 - SECTIONS
-dev_langs: C++
-helpviewer_keywords: sections OpenMP directive
+dev_langs:
+- C++
+helpviewer_keywords:
+- sections OpenMP directive
 ms.assetid: 4cd1d776-e198-470e-930a-01fb0ab0a0bd
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 458d62bf17ce7f8778e40a4e90592aa59ba09e4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9cdc8a79f95f2a2a4dee3c43c067177f0924b46f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sections-openmp"></a>sekcje (OpenMP)
 Identyfikuje sekcji kodu do podzielony wszystkie wątki.  
@@ -42,7 +46,7 @@ Identyfikuje sekcji kodu do podzielony wszystkie wątki.
 ## <a name="remarks"></a>Uwagi  
  w przypadku gdy  
   
- `clause`(opcjonalnie)  
+ `clause` (opcjonalnie)  
  Klauzule zero lub więcej. Zobacz sekcję uwag listę klauzule obsługiwane przez **sekcje**.  
   
 ## <a name="remarks"></a>Uwagi  

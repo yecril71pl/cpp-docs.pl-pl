@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strchr
 - wcschr
@@ -32,7 +33,8 @@ f1_keywords:
 - wcschr
 - _tcschr
 - _mbschr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strings [C++], searching
 - mbschr function
@@ -47,22 +49,23 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 593b4ab918a40f5388d6d0de2eb8d52e0995a476
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a1cea5b46c48f0660062736f4ffb8bd8999b8c70
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
 Przy użyciu bieżących ustawień regionalnych lub określona kategoria Stan konwersji lc_ctype — umożliwia znalezienie znak w ciągu.  
   
 > [!IMPORTANT]
->  `_mbschr`i `_mbschr_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbschr` i `_mbschr_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -136,7 +139,7 @@ const unsigned char *_mbschr_l(
 ## <a name="remarks"></a>Uwagi  
  `strchr` Funkcja znajduje pierwsze wystąpienie `c` w `str`, lub zwraca `NULL` Jeśli `c` nie znaleziono. Wartość null znaku zakończenia jest uwzględniany w wyszukiwaniu.  
   
- `wcschr`, `_mbschr` i `_mbschr_l` znaków dwubajtowych i znaków wielobajtowych wersji `strchr`. Argumenty i zwracana wartość `wcschr` są znaków dwubajtowych ciągi; tych `_mbschr` są ciągami znaków wielobajtowych. `_mbschr`rozpoznaje wielobajtowych sekwencji znaków. Ponadto, jeśli ciąg jest pusty wskaźnik `_mbschr` wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `_mbschr` zwraca `NULL` i ustawia `errno` do `EINVAL`. `strchr`i `wcschr` nie weryfikują ich parametrów. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
+ `wcschr`, `_mbschr` i `_mbschr_l` znaków dwubajtowych i znaków wielobajtowych wersji `strchr`. Argumenty i zwracana wartość `wcschr` są znaków dwubajtowych ciągi; tych `_mbschr` są ciągami znaków wielobajtowych. `_mbschr` rozpoznaje wielobajtowych sekwencji znaków. Ponadto, jeśli ciąg jest pusty wskaźnik `_mbschr` wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `_mbschr` zwraca `NULL` i ustawia `errno` do `EINVAL`. `strchr` i `wcschr` nie weryfikują ich parametrów. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
   
  Wartość wyjściowa jest zagrożony ustawienie `LC_CTYPE` kategorii ustawienie ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Wersje tych funkcji bez `_l` Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane zamiast przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -147,15 +150,15 @@ const unsigned char *_mbschr_l(
 |Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcschr`|`strchr`|`_mbschr`|`wcschr`|  
-|**_ n/d**|**n/d**|`_mbschr_l`|**n/d**|  
+|**_n/a**|**n/d**|`_mbschr_l`|**n/d**|  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strchr`|\<String.h >|  
+|`strchr`|\<string.h>|  
 |`wcschr`|\<String.h > lub \<wchar.h >|  
-|`_mbschr`, `_mbschr_l`|\<mbstring.h >|  
+|`_mbschr`, `_mbschr_l`|\<mbstring.h>|  
   
  Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -220,11 +223,11 @@ Result:   last r found at position 30
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn —, wcscspn —, _mbscspn — _mbscspn_l —](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
  [strncat —, _strncat_l, wcsncat —, _wcsncat_l _mbsncat —, _mbsncat_l —](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
  [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy —, _strncpy_l —, wcsncpy —, _wcsncpy_l — _mbsncpy —, _mbsncpy_l —](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strpbrk —, wcspbrk —, _mbspbrk — _mbspbrk_l —](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
  [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
  [strstr, wcsstr, _mbsstr, _mbsstr_l](../../c-runtime-library/reference/strstr-wcsstr-mbsstr-mbsstr-l.md)

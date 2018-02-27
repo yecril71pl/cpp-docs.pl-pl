@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ab3e57cc5ccaedb5ad75ffa601f1d6c679c0ea6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-classes"></a>ATL — klasy
 Active Template Library (ATL) zawiera następujące klasy. Aby znaleźć określonej klasy według kategorii, zobacz [Przegląd klasy ATL](../../atl/atl-class-overview.md).  
@@ -76,7 +79,7 @@ Active Template Library (ATL) zawiera następujące klasy. Aby znaleźć określ
 |[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|Ta klasa implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interfejsu.|atlcom.h|  
 |[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|Ta klasa implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfejsu i umożliwia tworzenie w apartamentach wiele obiektów.|atlcom.h|  
 |[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)|Ta klasa pochodzi od [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) do konstruowania pojedynczego obiektu.|atlcom.h|  
-|[Klasy CComCoClass](../../atl/reference/ccomcoclass-class.md)|Ta klasa dostarcza metody do tworzenia wystąpień klasy i uzyskiwania jego właściwości.|atlcom.h|  
+|[CComCoClass](../../atl/reference/ccomcoclass-class.md)|Ta klasa dostarcza metody do tworzenia wystąpień klasy i uzyskiwania jego właściwości.|atlcom.h|  
 |[CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)|Ta klasa udostępnia metody wymagane do wykonania formantu złożonego.|atlctl.h|  
 |[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|Ta klasa implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) przez delegowanie do obiektu właściciela **IUnknown**.|atlcom.h|  
 |[CComControl](../../atl/reference/ccomcontrol-class.md)|Ta klasa dostarcza metody do tworzenia i zarządzania kontrolek ALT.|atlctl.h|  
@@ -92,10 +95,10 @@ Active Template Library (ATL) zawiera następujące klasy. Aby znaleźć określ
 |[CComGITPtr](../../atl/reference/ccomgitptr-class.md)|Ta klasa dostarcza metody zajmujących się wskaźniki interfejsu i tabela interfejsu globalnego (GIT).|atlbase.h|  
 |[CComHeap](../../atl/reference/ccomheap-class.md)|Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji alokacji pamięci COM.|ATLComMem.h|  
 |[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)|Klasa wskaźnika inteligentnego wskaźniki stosu zarządzania.|atlbase.h|  
-|[Ccommodule —](../../atl/reference/ccommodule-class.md)|Począwszy od ATL 7.0 `CComModule` jest przestarzała: zobacz [modułów ATL](../../atl/atl-module-classes.md) więcej szczegółów.|atlbase.h|  
+|[CComModule](../../atl/reference/ccommodule-class.md)|Począwszy od ATL 7.0 `CComModule` jest przestarzała: zobacz [modułów ATL](../../atl/atl-module-classes.md) więcej szczegółów.|atlbase.h|  
 |[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)|Ta klasa dostarcza metody wątkowo, zwiększanie oraz zmniejszanie wartości zmiennej.|atlbase.h|  
 |[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)|Ta klasa dostarcza metody wątkowo zwiększanie oraz zmniejszanie wartości zmiennej, bez sekcja krytyczna blokowanie lub odblokowywanie funkcji.|atlbase.h|  
-|[Element CComObject](../../atl/reference/ccomobject-class.md)|Ta klasa implementuje **IUnknown** dla obiekt nieagregowane.|atlcom.h|  
+|[CComObject](../../atl/reference/ccomobject-class.md)|Ta klasa implementuje **IUnknown** dla obiekt nieagregowane.|atlcom.h|  
 |[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)|Ta klasa zarządza liczebności referencyjnej na moduł zawierający Twoje `Base` obiektu.|atlcom.h|  
 |[CComObjectNoLock](../../atl/reference/ccomobjectnolock-class.md)|Ta klasa implementuje **IUnknown** dla obiekt nieagregowane, ale nie nie przyrostu liczbę blokad modułu w konstruktorze.|atlcom.h|  
 |[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)|Ten element typedef z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) którego jest ma zastosowany szablon domyślny model serwera wątków.|atlcom.h|  
@@ -189,7 +192,7 @@ Active Template Library (ATL) zawiera następujące klasy. Aby znaleźć określ
 |[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)|Ta klasa implementuje kontener punktu połączenia, aby zarządzanie kolekcją [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) obiektów.|atlcom.h|  
 |[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)|Ta klasa implementuje punkt połączenia.|atlcom.h|  
 |[IDataObjectImpl](../../atl/reference/idataobjectimpl-class.md)|Ta klasa zawiera metody pomocnicze Uniform transferu danych i zarządzanie połączeniami.|atlctl.h|  
-|[Elementem IDispatchImpl](../../atl/reference/idispatchimpl-class.md)|Ta klasa udostępnia domyślną implementację dla `IDispatch` część podwójną interfejsu.|atlcom.h|  
+|[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)|Ta klasa udostępnia domyślną implementację dla `IDispatch` część podwójną interfejsu.|atlcom.h|  
 |[IDispEventImpl](../../atl/reference/idispeventimpl-class.md)|Ta klasa zawiera implementacje `IDispatch` metody.|atlcom.h|  
 |[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)|Ta klasa zawiera implementacje `IDispatch` metody bez uzyskiwania informacji o typie z biblioteki typów.|atlcom.h|  
 |[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)|Interfejs do analizowania Microsoft HTML i aparatu renderowania.|atlbase.h, ATLIFace.h|  
@@ -216,7 +219,7 @@ Active Template Library (ATL) zawiera następujące klasy. Aby znaleźć określ
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|Ta klasa udostępnia domyślną implementację `ISupportErrorInfo Interface` interfejsu i mogą być używane, gdy tylko jeden interfejs generuje błędy w obiekcie.|atlcom.h|  
 |[Interfejs IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)|Ten interfejs umożliwia stosowanie metod konfigurowania puli wątków.|atlutil.h|  
 |[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|Ta klasa implementuje **IUnknown** i zawiera domyślne implementacje [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), i [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)interfejsów.|atlctl.h|  
-|[Interfejs IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient`interfejs implementowany przez klientów [CWorkerThread](../../atl/reference/cworkerthread-class.md) klasy.|atlutil.h|  
+|[Interfejs IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` interfejs implementowany przez klientów [CWorkerThread](../../atl/reference/cworkerthread-class.md) klasy.|atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|Ta klasa udostępnia otoki **właściwości CreateWindow** i **CreateWindowEx**.|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|Ta klasa karta argument umożliwia albo `RECT` wskaźniki lub odwołania do przekazania do funkcji, która jest zaimplementowana w postaci wskaźników.|atlwin.h|  
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|Ta klasa karta argument umożliwia albo nazw zasobów (`LPCTSTR`s) lub identyfikatory zasobów (**UINT**s) mają być przekazane do funkcji bez konieczności obiekt wywołujący, aby przekonwertować ciąg za pomocą Identyfikatora **MAKEINTRESOURCE** makra.|atlwin.h|  

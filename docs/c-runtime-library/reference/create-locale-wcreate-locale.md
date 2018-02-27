@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _create_locale
 - __create_locale
@@ -28,23 +29,25 @@ f1_keywords:
 - create_locale
 - _create_locale
 - __create_locale
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - locales, creating
 - _create_locale function
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 73e89121dda53300b276b76f49625ad274df4519
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ff6254ecd33dfc844108b76fc1644eff2a373aed
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 Tworzy obiekt ustawień regionalnych.  
@@ -75,7 +78,7 @@ _locale_t _wcreate_locale(
 ## <a name="remarks"></a>Uwagi  
  `_create_locale` Funkcja służy do tworzenia obiektu, który reprezentuje niektóre ustawienia specyficzne dla regionu, do użycia w wersji ustawień regionalnych wielu funkcji CRT (działa z `_l` sufiks). Zachowanie jest podobne do `setlocale`, ale zamiast stosować ustawienia regionalne określonego w bieżącym środowisku, ustawienia są zapisywane w `_locale_t` struktury, która jest zwracana. `_locale_t` Struktury powinny zostać zwolniony za pomocą [_free_locale —](../../c-runtime-library/reference/free-locale.md) po jest już potrzebne.  
   
- `_wcreate_locale`jest to wersja znaków dwubajtowych `_create_locale`; `locale` argument `_wcreate_locale` jest ciągiem znaków dwubajtowych. `_wcreate_locale`i `_create_locale` zachowują się tak samo w przeciwnym razie wartość.  
+ `_wcreate_locale` jest to wersja znaków dwubajtowych `_create_locale`; `locale` argument `_wcreate_locale` jest ciągiem znaków dwubajtowych. `_wcreate_locale` i `_create_locale` zachowują się tak samo w przeciwnym razie wartość.  
   
  `category` Argument określa części zachowanie specyficzne dla ustawień regionalnych, których dotyczy problem. Flagi używany do `category` i części programu wpływają na są opisane w poniższej tabeli.  
   
@@ -111,7 +114,7 @@ _locale_t _wcreate_locale(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_create_locale`|\<Locale.h >|  
+|`_create_locale`|\<locale.h>|  
 |`_wcreate_locale`|\<Locale.h > lub \<wchar.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
@@ -182,19 +185,19 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
  [Nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
  [Ciągi języka](../../c-runtime-library/language-strings.md)   
  [Ciągi Kraj/Region](../../c-runtime-library/country-region-strings.md)   
- [_free_locale —](../../c-runtime-library/reference/free-locale.md)   
- [_configthreadlocale —](../../c-runtime-library/reference/configthreadlocale.md)   
+ [_free_locale](../../c-runtime-library/reference/free-locale.md)   
+ [_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md)   
  [setLocale](../../preprocessor/setlocale.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [localeconv —](../../c-runtime-library/reference/localeconv.md)   
- [_mbclen —, mblen —, _mblen_l —](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [localeconv](../../c-runtime-library/reference/localeconv.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
  [strlen —, wcslen —, _mbslen —, _mbslen_l — _mbstrlen —, _mbstrlen_l —](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)   
- [mbstowcs —, _mbstowcs_l —](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc —, _mbtowc_l —](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [_setmbcp —](../../c-runtime-library/reference/setmbcp.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
  [setLocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [strcoll — funkcje](../../c-runtime-library/strcoll-functions.md)   
- [strftime —, wcsftime —, _strftime_l — _wcsftime_l —](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
- [strxfrm —, wcsxfrm —, _strxfrm_l — _wcsxfrm_l —](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
+ [strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
  [wcstombs —, _wcstombs_l —](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)

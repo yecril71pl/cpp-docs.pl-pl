@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: preprocessor
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 596e17d0574f9f4935cf31ec71eb74cb2587d312
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 75caab67343e7806e1dd97fb673114949c68a94c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="preprocessor"></a>Preprocesor
 Preprocesora jest procesora tekstu, który operuje tekst pliku źródłowego w ramach pierwszej fazy tłumaczenia. Preprocesora nie analizuje tekst źródłowy, ale go Podziel je na tokeny na potrzeby lokalizowanie makro wywołania. Mimo że kompilator wywołuje zwykle preprocesora w jego pierwszym przebiegu, preprocesora również można wywołać oddzielnie przetwarzania tekstu bez kompilowania.  
@@ -34,13 +38,13 @@ Preprocesora jest procesora tekstu, który operuje tekst pliku źródłowego w r
   
 -   [Pragmy](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Możesz uzyskać dostęp do listy kodu źródłowego po przetwarzania wstępnego za pomocą [/E](../build/reference/e-preprocess-to-stdout.md) lub [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) — opcja kompilatora. Obie te opcje preprocesora wywołania i wyjściowych tekst wynikowy na urządzeniu standardowe dane wyjściowe, które w większości przypadków jest konsola. Jest to różnica między dwie opcje /E uwzględnia `#line` dyrektywy i /EP usuwa te dyrektywy wychodzących.  
   
  **KOŃCOWY określonych firmy Microsoft**  
   
-##  <a name="_predir_special_terminology"></a>Terminologię  
+##  <a name="_predir_special_terminology"></a> Terminologię  
  W dokumentacji preprocesora termin "argument" odnosi się do jednostki, która została przekazana do funkcji. W niektórych przypadkach jest modyfikowany przez "rzeczywiste" lub "formalnych" opisującą wyrażenie argumentu określonych w wywołaniu funkcji i deklaracji argument odpowiednio określone w definicji funkcji.  
   
  Termin "zmiennej" oznacza prosty obiekt danych typu C. Termin "obiektu" odnosi się do obiektów C++ i zmiennych; to pojęcie włącznie.  

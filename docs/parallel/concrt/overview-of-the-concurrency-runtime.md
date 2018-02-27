@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce1967b04770f53c2e1acbd49342f9080a7e3c12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Omówienie współbieżności środowiska wykonawczego
 Ten dokument zawiera omówienie współbieżności środowiska wykonawczego. Opisuje korzyści ze współbieżności środowiska wykonawczego, kiedy należy używać go i interakcje jego składniki ze sobą i z systemu operacyjnego i aplikacji.  
@@ -31,7 +34,7 @@ Ten dokument zawiera omówienie współbieżności środowiska wykonawczego. Opi
 > [!IMPORTANT]
 >  W programie Visual Studio 2015 lub nowszego oraz harmonogram zadań współbieżności środowiska wykonawczego nie jest już harmonogram dla zadania klasy i powiązanych typów z ppltasks.h. Te typy teraz używać pozostawiło Windows lepszą wydajność i współdziałanie z elementów podstawowych synchronizacji systemu Windows. Algorytmy równoległe, takich jak parallel_for w dalszym ciągu korzystać z harmonogramu zadań współbieżności środowiska wykonawczego.  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  Ten dokument zawiera następujące sekcje:  
   
 -   [Dlaczego jest ważne w środowisku uruchomieniowym na potrzeby współbieżności](#runtime)  
@@ -42,7 +45,7 @@ Ten dokument zawiera omówienie współbieżności środowiska wykonawczego. Opi
   
 -   [Wymagania](#requirements)  
   
-##  <a name="runtime"></a>Dlaczego jest ważne w środowisku uruchomieniowym na potrzeby współbieżności  
+##  <a name="runtime"></a> Dlaczego jest ważne w środowisku uruchomieniowym na potrzeby współbieżności  
  Środowisko uruchomieniowe dla współbieżności zapewnia jednolitość i przewidywalności do aplikacji i składników aplikacji, które są uruchamiane jednocześnie. Są dwa przykłady korzyści ze współbieżności środowiska wykonawczego *Planowanie zadań współpracy* i *współpracy blokuje*.  
   
  Współbieżność środowiska wykonawczego używa harmonogramu zadań współpracy implementujący algorytmu kradzież pracy umożliwiająca efektywną dystrybucję pracy między zasobów obliczeniowych. Rozważmy na przykład aplikacja, która ma dwa wątki zarządzanych zarówno przez tego samego środowiska wykonawczego. Jeśli jeden wątek zakończy działanie jego zaplanowanego zadania, jego odciążania pracy z innego wątku. Ten mechanizm równoważy obciążenie ogólną aplikacji.  
@@ -51,7 +54,7 @@ Ten dokument zawiera omówienie współbieżności środowiska wykonawczego. Opi
   
  [[Górnej](#top)]  
   
-##  <a name="architecture"></a>Architektura  
+##  <a name="architecture"></a> Architektura  
  Współbieżność środowiska wykonawczego jest podzielony na cztery składniki: Biblioteka równoległych wzorców (PLL), biblioteki agentów asynchronicznych harmonogramu zadań i Menedżera zasobów. Te składniki znajdują się między systemu operacyjnego i aplikacji. Na poniższej ilustracji przedstawiono składniki współbieżność środowiska wykonawczego interakcje między systemu operacyjnego i aplikacji:  
   
  **Architektura wykonywania równoczesnego**  
@@ -59,7 +62,7 @@ Ten dokument zawiera omówienie współbieżności środowiska wykonawczego. Opi
  ![Architektura wykonywania równoczesnego](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")  
   
 > [!IMPORTANT]
->  Składniki harmonogramu zadań i Menedżera zasobów nie są dostępne z [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji lub jeśli używasz klasy zadania lub innych typów w ppltasks.h.  
+>  Składniki harmonogramu zadań i Menedżera zasobów nie są dostępne z poziomu aplikacji uniwersalnych platformy systemu Windows (UWP) lub użyj klasy zadania lub innych typów w ppltasks.h.  
   
  Współbieżność środowiska wykonawczego jest wysoce *zezwala na składanie*, oznacza to, można połączyć istniejące funkcje do innych. Współbieżność środowiska wykonawczego Redaguj wiele funkcji, takich jak algorytmy równoległe z składniki niższego poziomu.  
   
@@ -95,7 +98,7 @@ Ten dokument zawiera omówienie współbieżności środowiska wykonawczego. Opi
   
  [[Górnej](#top)]  
   
-##  <a name="lambda"></a>Wyrażenia Lambda w języku C++  
+##  <a name="lambda"></a> Wyrażenia Lambda w języku C++  
  Wiele typów i algorytmy, które są zdefiniowane przez współbieżności środowiska wykonawczego są zaimplementowane jako szablonów języka C++. Wykonać niektóre z tych typów i algorytmy jako parametr procedury, która wykonuje pracę. Ten parametr może być funkcją lambda, obiekt funkcji lub wskaźnik funkcji. Te jednostki są również nazywane *funkcji pracy* lub *pracy procedury*.  
   
  Wyrażenia lambda są ważne nowej funkcji języka Visual C++, ponieważ udostępniają one zwięzły sposób definiowania funkcji pracy w celu równoległego przetwarzania. Obiekty funkcji i wskaźniki funkcji umożliwiają korzystanie ze współbieżności środowiska wykonawczego z istniejącego kodu. Jednak zaleca się użycie wyrażeń lambda, gdy pisanie nowego kodu ze względu na bezpieczeństwo i wydajność korzyści, które zapewniają.  
@@ -118,13 +121,13 @@ Ten dokument zawiera omówienie współbieżności środowiska wykonawczego. Opi
   
  [[Górnej](#top)]  
   
-##  <a name="requirements"></a>Wymagania  
+##  <a name="requirements"></a> Wymagania  
  W poniższej tabeli przedstawiono pliki nagłówkowe, które są skojarzone z każdego składnika współbieżności środowiska wykonawczego:  
   
 |Składnik|Pliki nagłówkowe|  
 |---------------|------------------|  
 |Biblioteka równoległych wzorców (PLL)|ppl.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|  
-|Biblioteki agentów asynchronicznych|Agents.h|  
+|Biblioteki agentów asynchronicznych|agents.h|  
 |Harmonogram zadań|concrt.h|  
 |Menedżer zasobów|concrtrm.h|  
   

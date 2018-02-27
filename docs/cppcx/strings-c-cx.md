@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 66a08038825b2ca76a8d18e5103b5569feb51cb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e70f5fc5478d0950a7287da690822046621e517b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strings-ccx"></a>Ciągi (C + +/ CX)
 Tekst w środowisku wykonawczym systemu Windows jest reprezentowana w języku C + +/ CX przez [Platform::String klasy](../cppcx/platform-string-class.md). Użyj `Platform::String Class` Jeśli ciągi i z powrotem do metod w klasach środowiska wykonawczego systemu Windows lub gdy użytkownik korzysta z innymi składnikami środowiska wykonawczego systemu Windows granicy binarny interfejsu (ABI) aplikacji. `Platform::String Class` Udostępnia metody dla kilku typowe operacje na ciągach, ale nie są zaprojektowane jako klasa kompletne ciągu. W module języka C++ Użyj standardowych typów ciąg C++ takiego jak [wstring](../standard-library/basic-string-class.md) przetwarzania znaczący tekst i następnie Konwertuj ostatecznych spowodować [Platform::String ^](../cppcx/platform-string-class.md) przed przekazać do lub z publiczną interfejs. Jest łatwe i skuteczne konwersję między `wstring` lub `wchar_t*` i `Platform::String`.  

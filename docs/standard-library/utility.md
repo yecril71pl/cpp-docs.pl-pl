@@ -4,25 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <utility>
-dev_langs: C++
-helpviewer_keywords: utility header
+ms.topic: reference
+f1_keywords:
+- <utility>
+dev_langs:
+- C++
+helpviewer_keywords:
+- utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4cbb348ec11c9c4f832c993ad1e4799c8a39aad2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 278ffaf44fa65d8a3545463ac64c22cb6994cca7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltutilitygt"></a>&lt;Narzędzie&gt;
+# <a name="ltutilitygt"></a>&lt;utility&gt;
 Określa typy, funkcje i operatory, które pomogą utworzyć i zarządzać nimi pary obiektów, które są przydatne, gdy dwa obiekty muszą być traktowane jakby były one standardowa biblioteka C++.  
   
 ## <a name="syntax"></a>Składnia  
@@ -39,8 +44,8 @@ Określa typy, funkcje i operatory, które pomogą utworzyć i zarządzać nimi 
   
 |||  
 |-|-|  
-|[tuple_element —](../standard-library/tuple-element-class-tuple.md)|Klasa, która opakowuje typ `pair` elementu.|  
-|[tuple_size —](../standard-library/tuple-size-class-tuple.md)|Klasa, która opakowuje `pair` elementu count.|  
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Klasa, która opakowuje typ `pair` elementu.|  
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Klasa, która opakowuje `pair` elementu count.|  
   
 ### <a name="functions"></a>Funkcje  
   
@@ -48,7 +53,7 @@ Określa typy, funkcje i operatory, które pomogą utworzyć i zarządzać nimi 
 |-|-|  
 |[Prześlij dalej](../standard-library/utility-functions.md#forward)|Zachowuje typu odwołania (albo `lvalue` lub `rvalue`) argumentu z trwa zasłonięty przez doskonałego przekazywania dalej.|  
 |[get](../standard-library/utility-functions.md#get)|Funkcja, która pobiera element na podstawie `pair` obiektu.|  
-|[make_pair —](../standard-library/utility-functions.md#make_pair)|Funkcja pomocnika szablonu, użyty do utworzenia obiektów typu `pair`, gdzie typów składników są oparte na typach danych przekazywane jako parametry.|  
+|[make_pair](../standard-library/utility-functions.md#make_pair)|Funkcja pomocnika szablonu, użyty do utworzenia obiektów typu `pair`, gdzie typów składników są oparte na typach danych przekazywane jako parametry.|  
 |[Przenieś](../standard-library/utility-functions.md#move)|Zwraca przekazany argument jako `rvalue` odwołania.|  
 |[swap](../standard-library/utility-functions.md#swap)|Zamienia elementy dwóch `pair` obiektów.|  
   
@@ -57,17 +62,17 @@ Określa typy, funkcje i operatory, które pomogą utworzyć i zarządzać nimi 
 |||  
 |-|-|  
 |[operator!=](../standard-library/utility-operators.md#op_neq)|Testy, jeśli obiekt pary po lewej stronie operatora nie jest taki sam jak obiekt pary po prawej stronie.|  
-|[operator ==](../standard-library/utility-operators.md#op_eq_eq)|Testy, jeśli obiekt pary po lewej stronie operatora jest taki sam jak obiekt pary po prawej stronie.|  
+|[operator==](../standard-library/utility-operators.md#op_eq_eq)|Testy, jeśli obiekt pary po lewej stronie operatora jest taki sam jak obiekt pary po prawej stronie.|  
 |[Operator <](../standard-library/utility-operators.md#op_lt)|Testy, jeśli obiekt pary po lewej stronie operatora jest mniejsza niż obiekt pary po prawej stronie.|  
 |[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Testy, jeśli obiekt pary po lewej stronie operatora jest mniejsza niż lub równe obiekt pary po prawej stronie.|  
-|[operator >](../standard-library/utility-operators.md#op_gt)|Testy, jeśli obiekt pary po lewej stronie operatora jest większy niż obiekt pary po prawej stronie.|  
+|[operator>](../standard-library/utility-operators.md#op_gt)|Testy, jeśli obiekt pary po lewej stronie operatora jest większy niż obiekt pary po prawej stronie.|  
 |[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Testy, jeśli obiekt pary po lewej stronie operatora jest większa niż lub równa obiekt pary po prawej stronie.|  
   
 ### <a name="structs"></a>Struktury  
   
 |||  
 |-|-|  
-|[tożsamości](../standard-library/identity-structure.md)||  
+|[Tożsamości](../standard-library/identity-structure.md)||  
 |[para](../standard-library/pair-structure.md)|Typ, który pozwala na traktowanie dwa obiekty jako pojedynczego obiektu.|  
   
 ## <a name="see-also"></a>Zobacz też  

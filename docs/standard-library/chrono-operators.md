@@ -5,26 +5,27 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: chrono/std::operator modulo
+ms.topic: reference
+f1_keywords:
+- chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-caps.latest.revision: "8"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: bcd1813ec127b7b5243d61e015bb8bec444cf9cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 27e47127369c78c331cc052d934f4d62d6d00707
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; operatory
 ||||  
 |-|-|-|  
-|[Operator modulo](#op_modulo)|[operator! =](#op_neq)|[operator&gt;](#op_gt)|  
-|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|  
-|[operator *](#op_star)|[operator +](#op_add)|[operator-](#operator-)|  
-|[operator /](#op_div)|[operator ==](#op_eq_eq)|  
+|[Operator modulo](#op_modulo)|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|  
+|[operator&gt;=](#op_gt_eq)|[Operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator *](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
+|[operator /](#op_div)|[operator==](#op_eq_eq)|  
   
-##  <a name="operator-"></a>operator-  
+##  <a name="operator-"></a>  operator-  
  Operator odejmowania lub Negacja [czas trwania](../standard-library/duration-class.md) i [time_point —](../standard-library/time-point-class.md) obiektów.  
   
 ```  
@@ -68,7 +69,7 @@ constexpr typename common_type<Duration1, Duration2>::type
   
  Zwraca funkcję trzeci `duration` obiekt, który reprezentuje odstęp czasu między `Left` i `Right`.  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Operator nierówności [czas trwania](../standard-library/duration-class.md) lub [time_point —](../standard-library/time-point-class.md) obiektów.  
   
 ```  
@@ -94,7 +95,7 @@ constexpr bool operator!=(
 ### <a name="return-value"></a>Wartość zwracana  
  Każda funkcja zwraca `!(Left == Right)`.  
   
-##  <a name="op_star"></a>operator *  
+##  <a name="op_star"></a>  operator *  
  Operator mnożenia dla [czas trwania](../standard-library/chrono-operators.md#op_star) obiektów.  
   
 ```  
@@ -127,7 +128,7 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
   
  O ile `is_convertible<Rep1, common_type<Rep1, Rep2>>` *jest spełniony*, funkcji second nie uczestniczy w Rozpoznanie przeciążenia. Aby uzyskać więcej informacji, zobacz [< type_traits >](../standard-library/type-traits.md).  
   
-##  <a name="op_div"></a>operator /  
+##  <a name="op_div"></a>  operator /  
  Operator dzielenia dla [czas trwania](../standard-library/chrono-operators.md#op_star) obiektów.  
   
 ```  
@@ -165,7 +166,7 @@ constexpr typename common_type<Rep1, Rep2>::type
   
  O ile `is_convertible<Rep2, common_type<Rep1, Rep2>>` *jest spełniony*, i `Rep2` nie jest instancją typu `duration`, pierwszy operator nie uczestniczy w Rozpoznanie przeciążenia. Aby uzyskać więcej informacji, zobacz [< type_traits >](../standard-library/type-traits.md).  
   
-##  <a name="op_add"></a>operator +  
+##  <a name="op_add"></a>  operator +  
  Dodaje [czas trwania](../standard-library/duration-class.md) i [time_point —](../standard-library/time-point-class.md) obiektów.  
   
 ```  
@@ -208,7 +209,7 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
   
  Drugi i trzeci zwracają `time_point` obiekt, który reprezentuje punkt w czasie, który jest przesuwane, za pomocą interwał `Dur`, od punktu w czasie `Time`.  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt"></a>  Operator&lt;  
  Określa, czy co najmniej [czas trwania](../standard-library/duration-class.md) lub [time_point —](../standard-library/time-point-class.md) obiekt jest mniejszy niż innego `duration` lub `time_point` obiektu.  
   
 ```  
@@ -236,7 +237,7 @@ constexpr bool operator<(
   
  Zwraca funkcję drugi `true` Jeśli `Left` poprzedza `Right`. W przeciwnym razie funkcja zwraca `false`.  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  Operator&lt;=  
  Określa, czy co najmniej [czas trwania](../standard-library/duration-class.md) lub [time_point —](../standard-library/time-point-class.md) obiekt jest mniejszy niż lub równy do innego `duration` lub `time_point` obiektu.  
   
 ```  
@@ -261,7 +262,7 @@ constexpr bool operator<=(
 ### <a name="return-value"></a>Wartość zwracana  
  Każda funkcja zwraca `!(Right < Left)`.  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Określa, czy dwa `duration` reprezentować przedziały czasu, które mają taką samą długość lub czy dwa `time_point` obiekty reprezentują tego samego punktu w czasie.  
   
 ```  
@@ -288,7 +289,7 @@ constexpr bool operator==(
   
  Zwraca funkcję drugi `true` Jeśli `Left` i `Right` reprezentują tego samego punktu w czasie. W przeciwnym razie funkcja zwraca `false`.  
   
-##  <a name="op_gt"></a>operator&gt;  
+##  <a name="op_gt"></a>  Operator&gt;  
  Określa, czy co najmniej [czas trwania](../standard-library/duration-class.md) lub [time_point —](../standard-library/time-point-class.md) obiekt jest większy niż innego `duration` lub `time_point` obiektu.  
   
 ```  
@@ -313,7 +314,7 @@ constexpr bool operator>(
 ### <a name="return-value"></a>Wartość zwracana  
  Każda funkcja zwraca `Right < Left`.  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  Operator&gt;=  
  Określa, czy co najmniej [czas trwania](../standard-library/duration-class.md) lub [time_point —](../standard-library/time-point-class.md) obiektu jest większa lub równa innej `duration` lub `time_point` obiektu.  
   
 ```  
@@ -338,7 +339,7 @@ constexpr bool operator>=(
 ### <a name="return-value"></a>Wartość zwracana  
  Każda funkcja zwraca `!(Left < Right)`.  
   
-##  <a name="op_modulo"></a>Operator modulo  
+##  <a name="op_modulo"></a>  Operator modulo  
  Operator modulo operacje na [czas trwania](../standard-library/duration-class.md) obiektów.  
   
 ```  
@@ -374,5 +375,5 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
  Druga funkcja zwraca wartość, która reprezentuje `Left` modulo `Right`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<chrono >](../standard-library/chrono.md)
+ [\<chrono>](../standard-library/chrono.md)
 

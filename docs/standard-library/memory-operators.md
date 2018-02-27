@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::operator!=
 - memory/std::operator>
@@ -14,27 +14,29 @@ f1_keywords:
 - memory/std::operator<=
 - memory/std::operator<<
 - memory/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 957be55cd6f38f6ff1ea271b09dcdaa1a241c945
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd02495ab42fd758cca28cfc5670ea1a1e7a2a83
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmemorygt-operators"></a>&lt;Pamięć&gt; operatory
 ||||  
 |-|-|-|  
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
-|[operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[Operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Testy pod kątem nierówności między obiektami.  
   
 ```  
@@ -132,7 +134,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true  
 ```  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Testy równości między obiektami.  
   
 ```  
@@ -166,7 +168,7 @@ bool operator==(
  Typ kontrolowane przez prawo wskaźnika udostępnionego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli obiekty są takie same, `false` obiekty nie są równe.  
+ `true` Jeśli obiekty są takie same, `false` obiekty nie są równe.  
   
 ### <a name="remarks"></a>Uwagi  
  Pierwszy operator szablonu zwraca wartość true. (Wszystkie domyślne allocators — są takie same).  
@@ -241,7 +243,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  Operator&gt;=  
  Testy dla jednego obiektu jest większa niż lub równa drugiego obiektu.  
   
 ```  
@@ -272,7 +274,7 @@ bool operator>=(
 ### <a name="remarks"></a>Uwagi  
  Operatory szablonu zwracać `left.get() >= right.get()`.  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt"></a>  Operator&lt;  
  Testy dla jednego trwa obiektu za mniej niż drugi obiekt.  
   
 ```  
@@ -300,7 +302,7 @@ bool operator<(
  `Ty2`  
  Typ kontrolowane przez prawo wskaźnika.  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  Operator&lt;=  
  Testy dla jednego obiektu jest większa niż drugi obiekt.  
   
 ```  
@@ -329,9 +331,9 @@ bool operator<=(
  Typ kontrolowane przez prawo wskaźnika udostępnionego.  
   
 ### <a name="remarks"></a>Uwagi  
- Zwraca operatory szablonu`left.get() <= right.get()`  
+ Zwraca operatory szablonu `left.get() <= right.get()`  
   
-##  <a name="op_gt"></a>operator&gt;  
+##  <a name="op_gt"></a>  Operator&gt;  
  Testy dla jednego obiektu, jest większy niż drugi obiekt.  
   
 ```  
@@ -359,7 +361,7 @@ bool operator>(
  `Ty2`  
  Typ kontrolowane przez prawo wskaźnika udostępnionego.  
   
-##  <a name="op_lt_lt"></a>operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  Operator&lt;&lt;  
 Zapisuje udostępnionego wskaźnika do strumienia.  
   
 ```  
@@ -411,5 +413,5 @@ sp0 == 3f3040 (varies)
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<pamięci >](../standard-library/memory.md)
+ [\<memory>](../standard-library/memory.md)
 

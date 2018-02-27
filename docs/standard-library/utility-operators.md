@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - utility/std::operator!=
 - utility/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - utility/std::operator&lt;
 - utility/std::operator&lt;=
 - utility/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a6617109-2cec-4a69-948f-6c87116eda5f
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (utility)
@@ -24,19 +25,19 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 9f9290b171a74098af5186c17f027fcf6e34c78f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 407e08934c4469776feb34d0f18b20b457d208d9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltutilitygt-operators"></a>&lt;Narzędzie&gt; operatory
 ||||  
 |-|-|-|  
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[Operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Testy, jeśli obiekt pary po lewej stronie operatora nie jest taki sam jak obiekt pary po prawej stronie.  
   
 ```  
@@ -107,7 +108,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.  
 ```  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Testy, jeśli obiekt pary po lewej stronie operatora jest taki sam jak obiekt pary po prawej stronie.  
   
 ```  
@@ -166,7 +167,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt"></a>  Operator&lt;  
  Testy, jeśli obiekt pary po lewej stronie operatora jest mniejsza niż obiekt pary po prawej stronie.  
   
 ```  
@@ -236,7 +237,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  Operator&lt;=  
  Testy, jeśli obiekt pary po lewej stronie operatora jest mniejsza niż lub równe obiekt pary po prawej stronie.  
   
 ```  
@@ -317,7 +318,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.  
 ```  
   
-##  <a name="op_gt"></a>operator&gt;  
+##  <a name="op_gt"></a>  Operator&gt;  
  Testy, jeśli obiekt pary po lewej stronie operatora jest większy niż obiekt pary po prawej stronie.  
   
 ```  
@@ -400,7 +401,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  Operator&gt;=  
  Testy, jeśli obiekt pary po lewej stronie operatora jest większa niż lub równa obiekt pary po prawej stronie.  
   
 ```  
@@ -482,5 +483,5 @@ Pair p1 is greater than or equal to pair p4.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<narzędzie >](../standard-library/utility.md)
+ [\<utility>](../standard-library/utility.md)
 

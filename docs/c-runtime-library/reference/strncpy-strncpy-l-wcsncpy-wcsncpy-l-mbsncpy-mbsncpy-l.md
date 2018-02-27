@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - strncpy
 - _strncpy_l
@@ -40,7 +41,8 @@ f1_keywords:
 - _strncpy_l
 - _mbsncpy_l
 - _wcsncpy_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcsncpy_l function
 - characters [C++], copying
@@ -68,22 +70,23 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dd0bd262dea70d7d78e90b4b0433166a763e4290
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f881508cfa72686a791dae61af44c615e72cbfdc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 Kopiowanie znaków jednego ciągu na inny. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [strncpy_s —, _strncpy_s_l —, wcsncpy_s —, _wcsncpy_s_l —, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbsncpy`i `_mbsncpy_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane z parametrem /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsncpy` i `_mbsncpy_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -182,11 +185,11 @@ unsigned char *_mbsncpy_l(
  `strncpy` Funkcja kopiuje początkowej `count` znaków `strSource` do `strDest` i zwraca `strDest`. Jeśli `count` jest mniejsza niż długość `strSource`, znak null nie jest automatycznie dołączane do skopiowanych ciągu. Jeśli `count` jest większa niż długość `strSource`, ciągu docelowego jest wypełniane znaki null do długości `count`. Zachowanie `strncpy` zdefiniowano nakładania się ciągów źródłowych i docelowych.  
   
 > [!IMPORTANT]
->  `strncpy`nie sprawdza wystarczającą ilość miejsca w `strDest`; dzięki temu potencjalną przyczyną przepełnienia buforu. `count` Argument ogranicza liczbę znaków skopiowane, a nie limit rozmiaru `strDest`. Zobacz poniższy przykład. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  `strncpy` nie sprawdza wystarczającą ilość miejsca w `strDest`; dzięki temu potencjalną przyczyną przepełnienia buforu. `count` Argument ogranicza liczbę znaków skopiowane, a nie limit rozmiaru `strDest`. Zobacz poniższy przykład. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- Jeśli `strDest` lub `strSource` jest `NULL` wskaźnika, lub jeśli `count` jest mniejsza lub równa zero, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw `errno` do`EINVAL`  
+ Jeśli `strDest` lub `strSource` jest `NULL` wskaźnika, lub jeśli `count` jest mniejsza lub równa zero, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw `errno` do `EINVAL`  
   
- `wcsncpy`i `_mbsncpy` znaków dwubajtowych i znaków wielobajtowych wersji `strncpy`. Argumenty i zwracana wartość `wcsncpy` i `_mbsncpy` odpowiednio różnią się. Funkcje te sześć zachowują się tak samo w przeciwnym razie wartość.  
+ `wcsncpy` i `_mbsncpy` znaków dwubajtowych i znaków wielobajtowych wersji `strncpy`. Argumenty i zwracana wartość `wcsncpy` i `_mbsncpy` odpowiednio różnią się. Funkcje te sześć zachowują się tak samo w przeciwnym razie wartość.  
   
  Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
   
@@ -200,15 +203,15 @@ unsigned char *_mbsncpy_l(
 |`_tcsncpy_l`|`_strncpy_l`|`_mbsnbcpy_l`|`_wcsncpy_l`|  
   
 > [!NOTE]
->  `_strncpy_l`i `_wcsncpy_l` mieć nie zależność od ustawień regionalnych, są udostępniane tylko dla `_tcsncpy_l` i nie są przeznaczone do bezpośredniego wywoływania.  
+>  `_strncpy_l` i `_wcsncpy_l` mieć nie zależność od ustawień regionalnych, są udostępniane tylko dla `_tcsncpy_l` i nie są przeznaczone do bezpośredniego wywoływania.  
   
 ## <a name="requirements"></a>Wymagania  
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`strncpy`|\<String.h >|  
+|`strncpy`|\<string.h>|  
 |`wcsncpy`|\<String.h > lub \<wchar.h >|  
-|`_mbsncpy`, `_mbsncpy_l`|\<mbstring.h >|  
+|`_mbsncpy`, `_mbsncpy_l`|\<mbstring.h>|  
   
  Dla platformy dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -284,15 +287,15 @@ Buffer overrun: s = 'ars.' (should be 'test')
  [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbcpy —, _mbsnbcpy_l —](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
+ [_mbsnbcpy, _mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
  [strcat —, wcscat —, _mbscat —](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
  [strcmp —, wcscmp —, _mbscmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy wcscpy —, _mbscpy —](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
  [strncat —, _strncat_l, wcsncat —, _wcsncat_l _mbsncat —, _mbsncat_l —](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
  [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp —, _wcsnicmp —, _mbsnicmp —, _strnicmp_l — _wcsnicmp_l —, _mbsnicmp_l —](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset —, _strset_l —, _wcsset —, _wcsset_l — _mbsset —, _mbsset_l —](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
  [strspn —, wcsspn —, _mbsspn — _mbsspn_l —](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [strncpy_s — _strncpy_s_l —, wcsncpy_s —, _wcsncpy_s_l —, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
  [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)

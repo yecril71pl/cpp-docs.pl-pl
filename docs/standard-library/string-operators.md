@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - string/std::operator!=
 - string/std::operator&gt;
@@ -16,9 +16,10 @@ f1_keywords:
 - string/std::operator&lt;=
 - string/std::operator+
 - string/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 33ce8f05-06c7-45d3-a0cb-bcd27cf93910
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (string)
@@ -28,20 +29,20 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: caa6cad7f0801b5459bd2999ae38a3da52c00469
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: e3aa2d80c41ebf7efe1bab42219cdbbb281c0122
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltstringgt-operators"></a>&lt;ciąg&gt; operatory
 ||||  
 |-|-|-|  
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|  
-|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|  
-|[operator&lt;=](#op_lt_eq)|[operator +](#op_add)|[operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|  
+|[operator&gt;=](#op_gt_eq)|[Operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_add"></a>operator +  
+##  <a name="op_add"></a>  operator +  
  Łączy dwa obiekty ciągu.  
   
 ```  
@@ -171,7 +172,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!  
 ```  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Testy, jeśli obiekt ciągu po lewej stronie operatora nie równa się z obiektem ciągu po prawej stronie.  
   
 ```  
@@ -258,7 +259,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.  
 ```  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Testy, jeśli obiekt ciągu po lewej stronie operatora jest taki sam jak obiekt ciągu po prawej stronie.  
   
 ```  
@@ -345,7 +346,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.  
 ```  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt"></a>  Operator&lt;  
  Sprawdza, czy z obiektem ciągu po lewej stronie operatora jest mniejsza niż z obiektem ciągu po prawej stronie.  
   
 ```  
@@ -437,7 +438,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  Operator&lt;=  
  Testy, jeśli ciąg obiekt po lewej stronie operatora jest mniejsza niż lub równe z obiektem ciągu po prawej stronie.  
   
 ```  
@@ -536,7 +537,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.  
 ```  
   
-##  <a name="op_lt_lt"></a>operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  Operator&lt;&lt;  
  Funkcja szablonu, która zapisuje ciąg do strumienia wyjściowego.  
   
 ```  
@@ -559,7 +560,7 @@ basic_ostream<CharType, Traits>& operator<<(
 ### <a name="remarks"></a>Uwagi  
  Przeciążenia funkcji szablonu **operator <<** do wstawienia _ obiektu *Str* szablonu klasy [basic_string —](../standard-library/basic-string-class.md) do strumienia \_  *OSTR.* Funkcja skutecznie zwraca \_ *Ostr*. **zapis**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [rozmiar](../standard-library/basic-string-class.md#size)).  
   
-##  <a name="op_gt"></a>operator&gt;  
+##  <a name="op_gt"></a>  Operator&gt;  
  Testy, jeśli obiekt ciągu po lewej stronie operatora jest większa niż z obiektem ciągu po prawej stronie.  
   
 ```  
@@ -658,7 +659,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  Operator&gt;=  
  Testy, jeśli obiekt ciągu po lewej stronie operatora jest większa niż lub równa z obiektem ciągu po prawej stronie.  
   
 ```  
@@ -757,7 +758,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.  
 ```  
   
-##  <a name="op_gt_gt"></a>operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  Operator&gt;&gt;  
  Funkcja szablonu, która odczytuje ciąg ze strumienia wejściowego.  
   
 ```  
@@ -788,7 +789,7 @@ basic_istream<CharType, Traits>& operator>>(
   
  Po wyodrębnia funkcji `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) elementów.  
   
--   Po funkcji wyodrębnia element *ch* dla którego [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **CharType**> > ( `getloc`). **jest**( **ctype** \< **CharType**>:: **miejsca**, *ch*) ma wartość true, w którym to przypadku znak jest umieszczany Wstecz.  
+-   Po funkcji wyodrębnia element *ch* dla którego [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **CharType**> > ( `getloc`). **jest**( **ctype** \< **CharType**>:: **miejsca**, *ch*) ma wartość true, w którym to przypadku odłożyć znak .  
   
  Jeśli funkcja wyodrębnia żadnych elementów, wywołuje metodę [metoda setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`). W każdym przypadku wywołuje **istr**. **szerokość**(0) i zwraca \* **to**.  
   
@@ -812,4 +813,4 @@ int main( )
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<ciąg >](../standard-library/string.md)
+ [\<string>](../standard-library/string.md)

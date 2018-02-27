@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - queue/std::operator!=
 - queue/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - queue/std::operator&lt;
 - queue/std::operator&lt;=
 - queue/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 7c435b48-175c-45b0-88eb-24561044019c
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (queue)
@@ -24,19 +25,19 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: c3d30f04ad3b8f330c70b75ca21bdab44913f336
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 3590d1421364179a57fc72bee93939e4871ae24c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltqueuegt-operators"></a>&lt;kolejka&gt; operatory
 ||||  
 |-|-|-|  
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[Operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Testy, jeśli obiekt kolejki po lewej stronie operatora nie jest taki sam jak obiekt kolejki po prawej stronie.  
   
 ```  
@@ -99,7 +100,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt"></a>  Operator&lt;  
  Testy, jeśli obiekt kolejki po lewej stronie operatora jest mniejsza niż obiekt kolejki po prawej stronie.  
   
 ```  
@@ -158,7 +159,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  Operator&lt;=  
  Testy, jeśli obiekt kolejki po lewej stronie operatora jest mniejsza niż lub równe obiekt kolejki po prawej stronie.  
   
 ```  
@@ -219,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.  
 ```  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Testy, jeśli obiekt kolejki po lewej stronie operatora jest taki sam obiekt kolejki po prawej stronie.  
   
 ```  
@@ -281,7 +282,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="op_gt"></a>operator&gt;  
+##  <a name="op_gt"></a>  Operator&gt;  
  Testy, jeśli obiekt kolejki po lewej stronie operatora jest większa niż obiekt kolejki po prawej stronie.  
   
 ```  
@@ -343,7 +344,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  Operator&gt;=  
  Testy, jeśli obiekt kolejki po lewej stronie operatora jest większa niż lub równa obiekt kolejki po prawej stronie.  
   
 ```  
@@ -405,5 +406,5 @@ The queue q1 is greater than or equal to the queue q3.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<kolejki >](../standard-library/queue.md)
+ [\<queue>](../standard-library/queue.md)
 

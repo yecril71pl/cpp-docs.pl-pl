@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - system_error/std::error_condition
 - system_error/std::error_condition::value_type
@@ -15,7 +16,8 @@ f1_keywords:
 - system_error/std::error_condition::clear
 - system_error/std::error_condition::message
 - system_error/std::error_condition::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::error_condition
 - std::error_condition::value_type
@@ -24,16 +26,17 @@ helpviewer_keywords:
 - std::error_condition::clear
 - std::error_condition::message
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: eaf36a6f078fd41eee75788a2adbbb5efed7f5d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0af9f7fe79cd9e7db76b42a287c25f5a1b45d80c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="errorcondition-class"></a>error_condition — Klasa
 Reprezentuje kody błędów zdefiniowanych przez użytkownika.  
@@ -64,7 +67,7 @@ class error_condition;
 |||  
 |-|-|  
 |[Przypisz](#assign)|Przypisuje wartość kodu błędu i kategorii warunek błędu.|  
-|[Kategoria](#category)|Zwraca błąd kategorii.|  
+|[category](#category)|Zwraca błąd kategorii.|  
 |[Wyczyść](#clear)|Czyści wartość kodu błędu i kategorii.|  
 |[komunikat](#message)|Zwraca nazwę kod błędu.|  
   
@@ -72,10 +75,10 @@ class error_condition;
   
 |||  
 |-|-|  
-|[operator ==](#op_eq_eq)|Testy równości między `error_condition` obiektów.|  
+|[operator==](#op_eq_eq)|Testy równości między `error_condition` obiektów.|  
 |[operator!=](#op_neq)|Testy pod kątem nierówności między `error_condition` obiektów.|  
 |[Operator <](#op_lt)|Sprawdza, czy `error_condition` obiekt jest mniejsza niż `error_code` przekazano obiekt do porównania.|  
-|[operator =](#op_eq)|Przypisuje nową wartość wyliczenia do `error_condition` obiektu.|  
+|[operator=](#op_eq)|Przypisuje nową wartość wyliczenia do `error_condition` obiektu.|  
 |[bool — operator](#op_bool)|Rzutuje zmiennej typu `error_condition`.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -83,7 +86,7 @@ class error_condition;
   
  **Namespace:** Standard  
   
-##  <a name="assign"></a>error_condition::ASSIGN  
+##  <a name="assign"></a>  error_condition::ASSIGN  
  Przypisuje wartość kodu błędu i kategorii warunek błędu.  
   
 ```
@@ -100,7 +103,7 @@ void assign(value_type val, const error_category& _Cat);
 ### <a name="remarks"></a>Uwagi  
  Magazyny funkcji Członkowskich `val` jako wartość kodu błędu i wskaźnika do `_Cat`.  
   
-##  <a name="category"></a>error_condition::category  
+##  <a name="category"></a>  error_condition::category  
  Zwraca błąd kategorii.  
   
 ```
@@ -112,7 +115,7 @@ const error_category& category() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="clear"></a>error_condition::Clear  
+##  <a name="clear"></a>  error_condition::Clear  
  Czyści wartość kodu błędu i kategorii.  
   
 ```
@@ -122,7 +125,7 @@ clear();
 ### <a name="remarks"></a>Uwagi  
  Funkcja członkowska przechowuje błąd kodu wartość zerową i wskaźnika do [generic_category](../standard-library/system-error-functions.md#generic_category) obiektu.  
   
-##  <a name="error_condition"></a>error_condition::error_condition  
+##  <a name="error_condition"></a>  error_condition::error_condition  
  Tworzy obiekt typu `error_condition`.  
   
 ```
@@ -151,7 +154,7 @@ error_condition(_Enum _Errcode,
   
  Trzeci magazynów konstruktora `(value_type)_Errcode` jako wartość kodu błędu i wskaźnika do [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
-##  <a name="message"></a>error_condition::Message  
+##  <a name="message"></a>  error_condition::Message  
  Zwraca nazwę kod błędu.  
   
 ```
@@ -164,7 +167,7 @@ string message() const;
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja elementu członkowskiego zwraca `category().message(value())`.  
   
-##  <a name="op_eq_eq"></a>error_condition::operator ==  
+##  <a name="op_eq_eq"></a>  error_condition::operator ==  
  Testy równości między `error_condition` obiektów.  
   
 ```
@@ -183,7 +186,7 @@ bool operator==(const error_condition& right) const;
 ### <a name="remarks"></a>Uwagi  
  Zwraca element członkowski operatora `category() == right.category() && value == right.value()`.  
   
-##  <a name="op_neq"></a>error_condition::operator! =  
+##  <a name="op_neq"></a>  error_condition::operator! =  
  Testy pod kątem nierówności między `error_condition` obiektów.  
   
 ```
@@ -202,7 +205,7 @@ bool operator!=(const error_condition& right) const;
 ### <a name="remarks"></a>Uwagi  
  Zwraca element członkowski operatora `!(*this == right)`.  
   
-##  <a name="op_lt"></a>error_condition::operator&lt;  
+##  <a name="op_lt"></a>  error_condition::operator&lt;  
  Sprawdza, czy `error_condition` obiekt jest mniejsza niż `error_code` przekazano obiekt do porównania.  
   
 ```
@@ -221,7 +224,7 @@ bool operator<(const error_condition& right) const;
 ### <a name="remarks"></a>Uwagi  
  Zwraca element członkowski operatora `category() < right.category() || category() == right.category() && value < right.value()`.  
   
-##  <a name="op_eq"></a>error_condition::operator =  
+##  <a name="op_eq"></a>  error_condition::operator =  
  Przypisuje nową wartość wyliczenia do `error_condition` obiektu.  
   
 ```
@@ -244,7 +247,7 @@ error_condition(_Enum error,
 ### <a name="remarks"></a>Uwagi  
  Element członkowski operatora magazynów `(value_type)error` jako wartość kodu błędu i wskaźnika do [generic_category](../standard-library/system-error-functions.md#generic_category). Zwraca `*this`.  
   
-##  <a name="op_bool"></a>error_condition::operator bool  
+##  <a name="op_bool"></a>  error_condition::operator bool  
  Rzutuje zmiennej typu `error_condition`.  
   
 ```
@@ -257,7 +260,7 @@ explicit operator bool() const;
 ### <a name="remarks"></a>Uwagi  
  Zwraca wartość możliwe do przekonwertowania na `true` tylko wtedy, gdy [wartość](#value) nie jest równa zero. Typ zwracany jest tylko do przekonwertowania `bool`, aby nie były `void *` lub innych znanych typów skalarnych.  
   
-##  <a name="value"></a>error_condition::Value  
+##  <a name="value"></a>  error_condition::Value  
  Zwraca wartość kodu błędu przechowywane.  
   
 ```
@@ -269,7 +272,7 @@ value_type value() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="value_type"></a>error_condition::value_type  
+##  <a name="value_type"></a>  error_condition::value_type  
  Typ reprezentujący wartość kodu błędu przechowywane.  
   
 ```

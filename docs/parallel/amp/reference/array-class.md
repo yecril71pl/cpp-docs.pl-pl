@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array
 - AMP/array
@@ -25,19 +26,22 @@ f1_keywords:
 - AMP/Concurrency::array::associated_accelerator_view
 - AMP/Concurrency::array::cpu_access_type
 - AMP/Concurrency::array::extent
-dev_langs: C++
-helpviewer_keywords: array class
+dev_langs:
+- C++
+helpviewer_keywords:
+- array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5b76fcb181d955fc051ade5183b67b9d55b823ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6a8b7fa960fab118f527d12553725af794db3f0d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="array-class"></a>array — Klasa
 Reprezentuje kontener danych używane do przenoszenia danych do akceleratora.  
@@ -69,7 +73,7 @@ friend class array;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|Kopiuje zawartość tablicy do innej tablicy.|  
-|[dane](#data)|Zwraca wskaźnik do danych pierwotnych w tablicy.|  
+|[Dane](#data)|Zwraca wskaźnik do danych pierwotnych w tablicy.|  
 |[get_accelerator_view](#get_accelerator_view)|Zwraca [accelerator_view](accelerator-view-class.md) obiekt, który reprezentuje lokalizację, w której został przydzielony tablicy. Ta właściwość jest dostępna tylko na Procesor.|  
 |[get_associated_accelerator_view](#get_associated_accelerator_view)|Pobiera drugi [accelerator_view](accelerator-view-class.md) obiekt, który jest przekazywany jako parametru wywołanego przemieszczania Konstruktor do tworzenia wystąpienia `array` obiektu.|  
 |[get_cpu_access_type](#get_cpu_access_type)|Zwraca [access_type](concurrency-namespace-enums-amp.md#access_type) tablicy. Ta metoda jest dostępna tylko na Procesor.|  
@@ -83,9 +87,9 @@ friend class array;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[Operator std::vector&lt;value_type&gt;](#operator_vec)|Używa `copy(*this, vector)` można niejawnie przekonwertować tablicy na std::[wektor](../../../standard-library/vector-class.md) obiektu.|  
-|[Operator()](#operator_call)|Zwraca wartość elementu określoną przez parametry.|  
+|[operator()](#operator_call)|Zwraca wartość elementu określoną przez parametry.|  
 |[Operator]](#operator_at)|Zwraca element pod określonym indeksem.|  
-|[operator =](#operator_eq)|Kopiuje zawartość określonego `array` obiektu do tego.|  
+|[operator=](#operator_eq)|Kopiuje zawartość określonego `array` obiektu do tego.|  
   
 ### <a name="public-constants"></a>Publiczny — stałe  
   
@@ -98,9 +102,9 @@ friend class array;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[accelerator_view](#accelerator_view)|Pobiera [accelerator_view](accelerator-view-class.md) obiekt, który reprezentuje lokalizację, w której został przydzielony tablicy. Ta właściwość jest dostępna tylko na Procesor.|  
-|[associated_accelerator_view —](#associated_accelerator_view)|Pobiera drugi [accelerator_view](accelerator-view-class.md) obiekt, który jest przekazywany jako parametru wywołanego przemieszczania Konstruktor do tworzenia wystąpienia `array` obiektu.|  
+|[associated_accelerator_view](#associated_accelerator_view)|Pobiera drugi [accelerator_view](accelerator-view-class.md) obiekt, który jest przekazywany jako parametru wywołanego przemieszczania Konstruktor do tworzenia wystąpienia `array` obiektu.|  
 |[cpu_access_type](#cpu_access_type)|Pobiera [access_type](concurrency-namespace-enums-amp.md#access_type) reprezentujący jak Procesora można uzyskać dostęp do tablicy magazynu.|  
-|[zakres](#extent)|Pobiera zakres, która definiuje kształt tablicy.|  
+|[extent](#extent)|Pobiera zakres, która definiuje kształt tablicy.|  
   
 ## <a name="remarks"></a>Uwagi  
  Typ `array<T,N>` reprezentuje dense i regularne (nie nieregularne) *N*-wymiarową tablicą, który znajduje się w określonej lokalizacji, takich jak akceleratora lub Procesora. Typ danych elementów w tablicy jest `T`, która musi być typu, który jest zgodny z akceleratora docelowej. Mimo że rangę, `N`, (dla tablicy jest określana statycznie i jest częścią typu, zakresu tablicy jest określana przez środowisko uruchomieniowe i jest wyrażona za pomocą klasy `extent<N>`.  
@@ -127,7 +131,7 @@ friend class array;
   
  **Namespace:** współbieżności  
   
-##  <a name="dtor"></a>~ tablicy 
+##  <a name="dtor"></a> ~ tablicy 
 
  Niszczy `array` obiektu.  
   
@@ -135,7 +139,7 @@ friend class array;
 ~array() restrict(cpu);
 ```  
   
-##  <a name="accelerator_view"></a>accelerator_view 
+##  <a name="accelerator_view"></a> accelerator_view 
 
  Pobiera [accelerator_view](accelerator-view-class.md) obiekt, który reprezentuje lokalizację, w której został przydzielony tablicy. Ta właściwość jest dostępna tylko na Procesor.  
   
@@ -143,7 +147,7 @@ friend class array;
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;  
 ```  
   
-##  <a name="ctor"></a>Tablica 
+##  <a name="ctor"></a> Tablica 
 
  Inicjuje nowe wystąpienie klasy [array — klasa](array-class.md). Nie istnieje ma domyślnego konstruktora dla `array<T,N>`. Wszystkie konstruktory są uruchamiane tylko procesora. Ich nie można wykonać w celu Direct3D.  
   
@@ -446,7 +450,7 @@ array(array&& _Other) restrict(cpu);
  `value_type`  
  Typ danych elementów, które są kopiowane.  
   
-##  <a name="associated_accelerator_view"></a>associated_accelerator_view — 
+##  <a name="associated_accelerator_view"></a> associated_accelerator_view — 
 
  Pobiera drugi [accelerator_view](accelerator-view-class.md) obiekt, który jest przekazywany jako parametru wywołanego przemieszczania Konstruktor do tworzenia wystąpienia `array` obiektu.  
   
@@ -454,7 +458,7 @@ array(array&& _Other) restrict(cpu);
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a> copy_to 
 
  Kopiuje zawartość `array` do innego `array`.  
   
@@ -470,7 +474,7 @@ void copy_to(
  `_Dest`  
  [Array_view —](array-view-class.md) obiektu można skopiować do.  
   
-##  <a name="cpu_access_type"></a>cpu_access_type 
+##  <a name="cpu_access_type"></a> cpu_access_type 
 
  Pobiera access_type Procesora dozwolone dla tej tablicy.  
   
@@ -478,7 +482,7 @@ void copy_to(
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;  
 ```  
   
-##  <a name="data"></a>dane 
+##  <a name="data"></a> Dane 
 
  Zwraca wskaźnik do dane pierwotne `array`.  
   
@@ -491,7 +495,7 @@ const value_type* data() const restrict(amp, cpu);
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do danych pierwotnych w tablicy.  
   
-##  <a name="extent"></a>zakres 
+##  <a name="extent"></a> zakres 
 
  Pobiera [zakres](extent-class.md) obiektu, który definiuje kształt `array`.  
   
@@ -499,7 +503,7 @@ const value_type* data() const restrict(amp, cpu);
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="get_accelerator_view"></a>get_accelerator_view 
+##  <a name="get_accelerator_view"></a> get_accelerator_view 
 
  Zwraca [accelerator_view](accelerator-view-class.md) obiekt, który reprezentuje lokalizację gdzie `array` obiekt został przydzielony. Ta właściwość jest dostępna tylko na Procesor.  
   
@@ -510,7 +514,7 @@ Concurrency::accelerator_view get_accelerator_view() const;
 ### <a name="return-value"></a>Wartość zwracana  
  `accelerator_view` Obiekt, który reprezentuje lokalizację gdzie `array` obiekt został przydzielony.  
   
-##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view 
 
  Pobiera drugi [accelerator_view](accelerator-view-class.md) obiekt, który jest przekazywany jako parametru wywołanego przemieszczania Konstruktor do tworzenia wystąpienia `array` obiektu.  
   
@@ -521,7 +525,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const ;
 ### <a name="return-value"></a>Wartość zwracana  
  Drugi [accelerator_view](accelerator-view-class.md) obiekt przekazany do konstruktora tymczasowej.  
   
-##  <a name="get_cpu_access_type"></a>get_cpu_access_type 
+##  <a name="get_cpu_access_type"></a> get_cpu_access_type 
 
  Zwraca access_type Procesora, jaki jest dozwolony dla tej tablicy.  
   
@@ -531,7 +535,7 @@ access_type get_cpu_access_type() const restrict(cpu);
   
 ### <a name="return-value"></a>Wartość zwracana  
   
-##  <a name="get_extent"></a>get_extent 
+##  <a name="get_extent"></a> get_extent 
 
  Zwraca [zakres](extent-class.md) obiektu `array`.  
   
@@ -542,7 +546,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 ### <a name="return-value"></a>Wartość zwracana  
  `extent` Obiektu `array`.  
   
-##  <a name="operator_vec"></a>Operator std::vector&lt;value_type&gt; 
+##  <a name="operator_vec"></a> Operator std::vector&lt;value_type&gt; 
 
  Używa `copy(*this, vector)` niejawnie przekonwertować na obiekt std::vector tablicy.  
   
@@ -557,7 +561,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ### <a name="return-value"></a>Wartość zwracana  
  Obiekt typu `vector<T>` zawierający kopię danych, który jest zawarty w tablicy.  
   
-##  <a name="operator_call"></a>Operator() 
+##  <a name="operator_call"></a> Operator() 
 
  Zwraca wartość elementu określoną przez parametry.  
   
@@ -598,7 +602,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość elementu określoną przez parametry.  
   
-##  <a name="operator_at"></a>Operator] 
+##  <a name="operator_at"></a> Operator] 
 
  Zwraca element pod określonym indeksem.  
   
@@ -623,7 +627,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Wartość zwracana  
  Element pod określonym indeksem.  
   
-##  <a name="operator_eq"></a>operator = 
+##  <a name="operator_eq"></a> operator = 
 
  Kopiuje zawartość określonego `array` obiektu.  
   
@@ -646,14 +650,14 @@ array& operator= (
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do tego `array` obiektu.  
   
-##  <a name="rank"></a>Ranga 
+##  <a name="rank"></a> Ranga 
 
  Przechowuje rangę `array`.  
   
 ```  
 static const int rank = _Rank;  
 ```  
-## <a name="reinterpret_as"></a>reinterpret_as 
+## <a name="reinterpret_as"></a> reinterpret_as 
 
 Reinterprets tablicy za pomocą jednowymiarowa array_view —, który opcjonalnie może mieć typu wartość inną niż źródłowa tablica.
 
@@ -667,7 +671,7 @@ array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
 ``` 
   
 ### <a name="parameters"></a>Parametry  
-`_Value_type2`Typ danych zwracanych danych.
+`_Value_type2` Typ danych zwracanych danych.
 
 ### <a name="return-value"></a>Wartość zwracana
 Array_view — lub obiekt const array_view — jest oparta na tablicy o typie elementu reinterpreted z T ElementType i rangę zmniejszona od N do 1.
@@ -687,7 +691,7 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);
 ```  
   
-##  <a name="section"></a>sekcja 
+##  <a name="section"></a> Sekcja 
 
  Zwraca podsekcją `array` obiektu, który znajduje się w określonym pochodzenia i, opcjonalnie, który ma określony zakres.  
   
@@ -789,7 +793,7 @@ array_view<const value_type,3> section(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca podsekcją `array` obiektu, który znajduje się w określonym pochodzenia i, opcjonalnie, który ma określony zakres. Gdy tylko `index` obiektu jest określony, podsekcja zawiera wszystkie elementy w siatce skojarzone indeksy, które są większe niż indeksów elementów w `index` obiektu.  
   
-##  <a name="view_as"></a>view_as 
+##  <a name="view_as"></a> view_as 
 
  Reinterprets tej tablicy jako [array_view —](array-view-class.md) różnych rangi.  
   

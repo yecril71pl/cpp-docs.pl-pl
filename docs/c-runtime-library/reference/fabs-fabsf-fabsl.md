@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fabsf
 - fabs
@@ -31,7 +32,8 @@ f1_keywords:
 - "math\fabs"
 - "math\fabsf"
 - "math\fabsl"
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - absolute values
 - fabsf function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: acf1c5f64251c97091cef00d4fa6345e1f46de53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 707e75f1036421d5392d2e7ecb2273760088e22c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs —, fabsf —, fabsl
 Oblicza wartość bezwzględną liczby zmiennoprzecinkowej argumentu.  
@@ -82,7 +85,7 @@ long double fabsl(
   
 |Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|  
 |-----------|-------------------|-----------------------|  
-|GRANICACH QNAN, IND|brak|_DOMAIN —|  
+|GRANICACH QNAN, IND|brak|_DOMAIN|  
   
 ## <a name="remarks"></a>Uwagi  
  C++ pozwala przeładowanie, dlatego można wywoływać przeciążenia `fabs` Jeśli dołączysz \<cmath > nagłówka. W programie C `fabs` zawsze przyjmuje i zwraca wartość o podwójnej precyzji.  
@@ -91,7 +94,7 @@ long double fabsl(
   
 |Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|  
 |--------------|-----------------------|---------------------------|  
-|`fabs`, `fabsf`, `fabsl`|\<Math.h >|\<cmath > lub \<math.h >|  
+|`fabs`, `fabsf`, `fabsl`|\<math.h>|\<cmath > lub \<math.h >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   

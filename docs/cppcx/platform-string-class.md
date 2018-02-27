@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
 - VCCORLIB/Platform::String::Begin
@@ -21,19 +21,22 @@ f1_keywords:
 - VCCORLIB/Platform::String::IsFastPass
 - VCCORLIB/Platform::String::Length
 - VCCORLIB/Platform::String::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::String
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstring-class"></a>Klasa platform::String
 Reprezentuje kolekcję sekwencyjnych znaków Unicode, który jest używany do reprezentowania tekstu. Aby uzyskać dodatkowe informacje i przykłady, zobacz [ciągów](../cppcx/strings-c-cx.md).  
@@ -73,7 +76,7 @@ public ref class String sealed : Object,
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[String::BEGIN](#begin)|Zwraca wskaźnik do początku bieżącego ciągu.|  
+|[String::Begin](#begin)|Zwraca wskaźnik do początku bieżącego ciągu.|  
 |[String::CompareOrdinal](#compareordinal)|Porównuje dwa `String` obiektów w wyniku obliczenia wartości liczbowe odpowiadające im znaki w ciągu dwóch wartości reprezentowane przez obiekty.|  
 |[String::concat](#concat)|Łączy dwa obiekty ciągu wartości.|  
 |[String::Data](#data)|Zwraca wskaźnik do początku bieżącego ciągu.|  
@@ -83,8 +86,8 @@ public ref class String sealed : Object,
 |[String::GetHashCode](#gethashcode)|Zwraca kod skrótu dla tego wystąpienia.|  
 |[String::IsEmpty](#isempty)|Wskazuje, czy bieżący obiekt ciąg jest pusty.|  
 |[String::IsFastPass](#isfastpass)|Wskazuje, czy bieżący obiekt jest ciąg uczestniczy w *szybko przekazywany* operacji. Szybkie dokonują operacji, liczenie odwołań jest wstrzymana.|  
-|[String::length](#length)|Pobiera długość ciągu bieżącego obiektu.|  
-|[String::toString](#tostring)|Zwraca obiekt ciągu, którego wartość jest taka sama jak bieżący ciąg.|  
+|[String::Length](#length)|Pobiera długość ciągu bieżącego obiektu.|  
+|[String::ToString](#tostring)|Zwraca obiekt ciągu, którego wartość jest taka sama jak bieżący ciąg.|  
   
  **Operatory**  
   
@@ -109,7 +112,7 @@ public ref class String sealed : Object,
  **Nagłówek** vccorlib.h (domyślnie włączone)  
 
  
-## <a name="begin"></a>String::BEGIN — metoda
+## <a name="begin"></a>  String::BEGIN — metoda
 Zwraca wskaźnik do początku bieżącego ciągu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -122,7 +125,7 @@ char16* Begin()
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do początku bieżącego ciągu.  
   
-## <a name="compareordinal"></a>String::CompareOrdinal — metoda
+## <a name="compareordinal"></a>  String::CompareOrdinal — metoda
 Porównuje dwa `String` obiektów w wyniku obliczenia wartości liczbowe odpowiadające im znaki w ciągu dwóch wartości reprezentowane przez obiekty.  
   
 ### <a name="syntax"></a>Składnia  
@@ -147,13 +150,13 @@ int CompareOrdinal(
   
 |Wartość|Warunek|  
 |-----------|---------------|  
-|-1|`str1`jest mniejsza niż `str2`.|  
-|0|`str1`jest to `str2`.|  
-|1|`str1`jest większa niż `str2`.|  
+|-1|`str1` jest mniejsza niż `str2`.|  
+|0|`str1` jest to `str2`.|  
+|1|`str1` jest większa niż `str2`.|  
   
 
 
-## <a name="concat"></a>String::concat — metoda
+## <a name="concat"></a>  String::concat — metoda
 Łączy dwa obiekty ciągu wartości.  
   
 ### <a name="syntax"></a>Składnia  
@@ -176,7 +179,7 @@ String^ Concat( String^ str1, String^ str2)
   
 
 
-## <a name="data"></a>String::Data — metoda
+## <a name="data"></a>  String::Data — metoda
 Zwraca wskaźnik do początku buforu danych obiektu jako tablica stylu języka C `char16` (`wchar_t`) elementów.  
   
 ### <a name="syntax"></a>Składnia  
@@ -193,7 +196,7 @@ const char16* Data()
   
 
 
-## <a name="dispose"></a>String::Dispose — metoda
+## <a name="dispose"></a>  String::Dispose — metoda
 Zwalnia lub zwalnia zasoby.  
   
 ### <a name="syntax"></a>Składnia  
@@ -203,7 +206,7 @@ Zwalnia lub zwalnia zasoby.
 virtual override void Dispose()  
 ```  
 
-## <a name="end"></a>String::end — metoda
+## <a name="end"></a>  String::end — metoda
 Zwraca wskaźnik poza koniec bieżących parametrów.  
   
 ### <a name="syntax"></a>Składnia  
@@ -221,7 +224,7 @@ char16* End()
   
 
 
-## <a name="equals"></a>String::Equals — metoda
+## <a name="equals"></a>  String::Equals — metoda
 Wskazuje, czy podany ciąg ma taką samą wartość jak bieżący obiekt.  
   
 ### <a name="syntax"></a>Składnia  
@@ -239,14 +242,14 @@ bool String::Equals(String^ str);
  Obiekt do porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli `str` jest taki sam jak bieżący obiekt, a w przeciwnym razie `false`.  
+ `true` Jeśli `str` jest taki sam jak bieżący obiekt, a w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest odpowiednikiem [String::CompareOrdinal](#compareordinal). W pierwszym przeciążenia oczekuje `str` parametru mogą być rzutowane na ciąg ^ obiektu.  
   
 
 
-## <a name="gethashcode"></a>String::GetHashCode — metoda
+## <a name="gethashcode"></a>  String::GetHashCode — metoda
 Zwraca kod skrótu dla tego wystąpienia.  
   
 ### <a name="syntax"></a>Składnia  
@@ -261,7 +264,7 @@ virtual override int GetHashCode()
   
 
 
-## <a name="isempty"></a>String::IsEmpty — metoda
+## <a name="isempty"></a>  String::IsEmpty — metoda
 Wskazuje, czy bieżący obiekt ciąg jest pusty.  
   
 ### <a name="syntax"></a>Składnia  
@@ -271,11 +274,11 @@ bool IsEmpty()
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli bieżący obiekt ciągu jest `null` lub ciąg pusty (L""); w przeciwnym razie `false`.  
+ `true` Jeśli bieżący obiekt ciągu jest `null` lub ciąg pusty (L""); w przeciwnym razie `false`.  
   
 
 
-## <a name="isfastpass"></a>String::IsFastPass — metoda
+## <a name="isfastpass"></a>  String::IsFastPass — metoda
 Wskazuje, czy bieżący obiekt jest ciąg uczestniczy w *szybko przekazywany* operacji. Szybkie dokonują operacji, liczenie odwołań jest wstrzymana.  
   
 ### <a name="syntax"></a>Składnia  
@@ -285,14 +288,14 @@ bool IsFastPass();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli bieżący obiekt ciągu jest przeszłości fast; w przeciwnym razie `false`.  
+ `true` Jeśli bieżący obiekt ciągu jest przeszłości fast; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  W wywołaniu funkcji, której obiekt zliczane odwołania jest parametrem i wywołana funkcja odczytuje tylko ten obiekt kompilator można bezpiecznie zawiesić liczenie odwołań w i poprawianie wydajności wywołania. Nie ma nic przydatne, że kod można wykonać za pomocą tej właściwości. System obsługuje wszystkie szczegóły.  
   
 
 
-## <a name="length"></a>String::length — metoda
+## <a name="length"></a>  String::length — metoda
 Pobiera liczbę znaków w ciągu bieżącego obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -316,7 +319,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>String::operator + — Operator
+## <a name="operator-plus"></a>  String::operator + — Operator
 Łączy dwa [ciąg](../cppcx/platform-string-class.md) obiektów w nowym [ciąg](../cppcx/platform-string-class.md) obiektu.
   
 ### <a name="syntax"></a>Składnia  
@@ -334,12 +337,12 @@ bool String::operator+( String^ str1, String^ str2)
  Drugi `String` obiektu, którego zawartość zostanie dołączona do `str1`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli `str1` jest równa `str2`; w przeciwnym razie `false`.  
+ `true` Jeśli `str1` jest równa `str2`; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ten operator tworzy `String^` obiekt, który zawiera dane z dwóch argumentów operacji. Użyć go jako udogodnienie najwyższej wydajności nie jest krytyczna. Kilka wywołania "`+`" w funkcji prawdopodobnie nie będą widoczne, ale jeśli modyfikujesz dużych obiektów lub dane tekstowe w pętli ścisłej Użyj standard C++ mechanizmów i typów.  
   
-##  <a name="operator-equality"></a>String::operator == — Operator
+##  <a name="operator-equality"></a> String::operator == — Operator
 Wskazuje, czy dwa obiekty określonego ciągu mieć taką samą wartość tekstu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -356,14 +359,14 @@ bool String::operator==( String^ str1, String^ str2)
  Drugi ciąg obiekt do porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli zawartość `str1` są równe `str2`; w przeciwnym razie `false`.  
+ `true` Jeśli zawartość `str1` są równe `str2`; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ten operator jest odpowiednikiem [String::CompareOrdinal](#compareordinal).  
   
 
 
-##  <a name="operator-greater-than"></a>String::operator&gt; 
+##  <a name="operator-greater-than"></a>  String::operator&gt; 
 Wskazuje, czy wartość jednego ciągu obiektu jest większa niż wartość drugiej obiektem ciągu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -380,14 +383,14 @@ bool String::operator>( String^ str1, String^ str2)
  Drugi obiekt String.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli wartość `str1` jest większa niż wartość `str2`; w przeciwnym razie `false`.  
+ `true` Jeśli wartość `str1` jest większa niż wartość `str2`; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ten operator jest odpowiednikiem jawnie podczas wywoływania [String::CompareOrdinal](#compareordinal) i pobierania wynik jest większa od zera.  
   
 
 
-## <a name="operator-greater-than-or-equals"></a>String::operator&gt;= 
+## <a name="operator-greater-than-or-equals"></a> String::operator&gt;= 
 Wskazuje, czy wartość jednego ciągu obiektu jest większa lub równa wartości drugi obiekt String.  
   
 ### <a name="syntax"></a>Składnia  
@@ -404,11 +407,11 @@ bool String::operator>=( String^ str1, String^ str2)
  Drugi obiekt String.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli wartość `str1` jest większa lub równa wartości `str2`; w przeciwnym razie `false`.  
+ `true` Jeśli wartość `str1` jest większa lub równa wartości `str2`; w przeciwnym razie `false`.  
   
 
 
-## <a name="operator-inequality"></a>String::operator! = 
+## <a name="operator-inequality"></a> String::operator! = 
 Wskazuje, czy dwa obiekty ciągu określonego mają różne wartości.  
   
 ### <a name="syntax"></a>Składnia  
@@ -425,10 +428,10 @@ bool String::operator!=( String^ str1, String^ str2)
  Drugi ciąg obiekt do porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli `str1` nie jest równa `str2`; w przeciwnym razie `false`.   
+ `true` Jeśli `str1` nie jest równa `str2`; w przeciwnym razie `false`.   
 
 
-## <a name="operator-less-than"></a>String::operator&lt; 
+## <a name="operator-less-than"></a> String::operator&lt; 
 Wskazuje, czy wartość jednego ciągu obiektu jest mniejsza niż wartość drugiej obiektem ciągu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -445,9 +448,9 @@ bool String::operator<( String^ str1, String^ str2)
  Drugi obiekt String.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli wartość `str1` jest mniejsza niż wartość `str2`; w przeciwnym razie `false`.  
+ `true` Jeśli wartość `str1` jest mniejsza niż wartość `str2`; w przeciwnym razie `false`.  
   
-## <a name="ctor"></a>Konstruktor String::String
+## <a name="ctor"></a> Konstruktor String::String
 Inicjuje nowe wystąpienie klasy String kopię danych ciągu wejściowego.  
   
 ### <a name="syntax"></a>Składnia  
@@ -473,7 +476,7 @@ String(char16* s, unsigned int n)
 String^ s = L"Hello!";  
 ```  
   
-## <a name="tostring"></a>String::toString
+## <a name="tostring"></a> String::toString
 Zwraca obiekt ciągu, którego wartość jest taka sama jak bieżący ciąg.  
   
 ### <a name="syntax"></a>Składnia  

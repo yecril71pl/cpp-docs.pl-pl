@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -53,18 +54,20 @@ f1_keywords:
 - atomic/std::atomic_int8_t
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2c7eb0c56b34232725cdb7268ed09477063b1a1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd543003e7edba4e1766efc11670fd6e505820bb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 Definiuje klasy i klasy szablonu na potrzeby tworzenia typów, które obsługują operacjach niepodzielnych.  
@@ -106,7 +109,7 @@ Definiuje klasy i klasy szablonu na potrzeby tworzenia typów, które obsługuj�
   
  Dla każdego z typów całkowitych istnieje odpowiedni typ atomic nazwany zarządzanego obiektu typu całkowitego. Każdy `atomic_integral` typ ma ten sam zestaw funkcji Członkowskich jako odpowiednie tworzenia wystąpienia elementu `atomic<T>` i mogą zostać przekazane do żadnej funkcji atomic niebędący elementem członkowskim.  
   
-|`atomic_integral`Typ|Typ całkowity|`atomic_is_lock_free`Makra|  
+|`atomic_integral` Typ|Typ całkowity|`atomic_is_lock_free` Makra|  
 |----------------------------|-------------------|---------------------------------|  
 |`atomic_char`|`char`|`ATOMIC_CHAR_LOCK_FREE`|  
 |`atomic_schar`|`signed char`|`ATOMIC_CHAR_LOCK_FREE`|  
@@ -169,42 +172,42 @@ Definiuje klasy i klasy szablonu na potrzeby tworzenia typów, które obsługuj�
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[memory_order wyliczenia](../standard-library/atomic-enums.md#memory_order_enum)|Dostarcza nazw symbolicznych dla operacji synchronizacji w lokalizacji pamięci. Te operacje mają wpływ na sposób przydziały w jeden wątek stają się widoczne w innym.|  
+|[memory_order Enum](../standard-library/atomic-enums.md#memory_order_enum)|Dostarcza nazw symbolicznych dla operacji synchronizacji w lokalizacji pamięci. Te operacje mają wpływ na sposób przydziały w jeden wątek stają się widoczne w innym.|  
   
 ## <a name="functions"></a>Funkcje  
  Na poniższej liście, funkcje, które nie kończą się `_explicit` ma semantykę odpowiadającego `_explicit`, z wyjątkiem tego, że mają one niejawne [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumenty `memory_order_seq_cst`.  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[atomic_compare_exchange_strong —](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Wykonuje *atomic porównania i exchange* operacji.|  
-|[atomic_compare_exchange_strong_explicit —](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Wykonuje *atomic porównania i exchange* operacji.|  
-|[atomic_compare_exchange_weak —](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Wykonuje *weak atomic porównania i exchange* operacji.|  
-|[atomic_compare_exchange_weak_explicit —](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Wykonuje *weak atomic porównania i exchange* operacji.|  
+|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Wykonuje *atomic porównania i exchange* operacji.|  
+|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Wykonuje *atomic porównania i exchange* operacji.|  
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Wykonuje *weak atomic porównania i exchange* operacji.|  
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Wykonuje *weak atomic porównania i exchange* operacji.|  
 |[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|Zastępuje przechowywanej wartości.|  
-|[atomic_exchange_explicit —](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Zastępuje przechowywanej wartości.|  
+|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Zastępuje przechowywanej wartości.|  
 |[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|Dodaje określoną wartość do istniejącej przechowywanej wartości.|  
-|[atomic_fetch_add_explicit —](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Dodaje określoną wartość do istniejącej przechowywanej wartości.|  
+|[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Dodaje określoną wartość do istniejącej przechowywanej wartości.|  
 |[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|Wykonuje bitowej `and` na określoną wartość i istniejąca przechowywana wartość.|  
-|[atomic_fetch_and_explicit —](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Wykonuje bitowej `and` na określoną wartość i istniejąca przechowywana wartość.|  
+|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Wykonuje bitowej `and` na określoną wartość i istniejąca przechowywana wartość.|  
 |[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|Wykonuje bitowej `or` na określoną wartość i istniejąca przechowywana wartość.|  
-|[atomic_fetch_or_explicit —](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Wykonuje bitowej `or` na określoną wartość i istniejąca przechowywana wartość.|  
+|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Wykonuje bitowej `or` na określoną wartość i istniejąca przechowywana wartość.|  
 |[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|Odejmuje określoną wartość z istniejąca przechowywana wartość.|  
-|[atomic_fetch_sub_explicit —](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Odejmuje określoną wartość z istniejąca przechowywana wartość.|  
+|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Odejmuje określoną wartość z istniejąca przechowywana wartość.|  
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Wykonuje bitowej `exclusive or` na określoną wartość i istniejąca przechowywana wartość.|  
-|[atomic_fetch_xor_explicit —](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Wykonuje bitowej `exclusive or` na określoną wartość i istniejąca przechowywana wartość.|  
-|[atomic_flag_clear —](../standard-library/atomic-functions.md#atomic_flag_clear)|Ustawia flagę `atomic_flag` do obiektu `false`.|  
-|[atomic_flag_clear_explicit —](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Ustawia flagę `atomic_flag` do obiektu `false`.|  
-|[atomic_flag_test_and_set —](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Ustawia flagę `atomic_flag` do obiektu `true`.|  
-|[atomic_flag_test_and_set_explicit —](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Ustawia flagę `atomic_flag` do obiektu `true`.|  
-|[atomic_init —](../standard-library/atomic-functions.md#atomic_init)|Ustawia wartość przechowywana w `atomic` obiektu.|  
+|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Wykonuje bitowej `exclusive or` na określoną wartość i istniejąca przechowywana wartość.|  
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Ustawia flagę `atomic_flag` do obiektu `false`.|  
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Ustawia flagę `atomic_flag` do obiektu `false`.|  
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Ustawia flagę `atomic_flag` do obiektu `true`.|  
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Ustawia flagę `atomic_flag` do obiektu `true`.|  
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Ustawia wartość przechowywana w `atomic` obiektu.|  
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Określa, czy są niepodzielne operacje na określony obiekt bez blokady.|  
-|[atomic_load —](../standard-library/atomic-functions.md#atomic_load)|Automatycznie pobiera wartość.|  
-|[atomic_load_explicit —](../standard-library/atomic-functions.md#atomic_load_explicit)|Automatycznie pobiera wartość.|  
-|[atomic_signal_fence —](../standard-library/atomic-functions.md#atomic_signal_fence)|Zachowuje się jak *ogrodzenia* który ustanawia pamięci kolejności, wymagania dotyczące ogrodzenia w wywołaniu wątku, który ma obsługę sygnału wykonywanych w tym samym wątku.|  
-|[atomic_store —](../standard-library/atomic-functions.md#atomic_store)|Automatycznie zapisuje wartość.|  
-|[atomic_store_explicit —](../standard-library/atomic-functions.md#atomic_store_explicit)|Automatycznie zapisuje wartość.|  
-|[atomic_thread_fence —](../standard-library/atomic-functions.md#atomic_thread_fence)|Zachowuje się jak *ogrodzenia* który określa kolejność wymagania względem innych ogrodzenia pamięci.|  
-|[kill_dependency —](../standard-library/atomic-functions.md#kill_dependency)|Dzieli łańcuch zależności możliwe.|  
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Automatycznie pobiera wartość.|  
+|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Automatycznie pobiera wartość.|  
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Zachowuje się jak *ogrodzenia* który ustanawia pamięci kolejności, wymagania dotyczące ogrodzenia w wywołaniu wątku, który ma obsługę sygnału wykonywanych w tym samym wątku.|  
+|[atomic_store](../standard-library/atomic-functions.md#atomic_store)|Automatycznie zapisuje wartość.|  
+|[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|Automatycznie zapisuje wartość.|  
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|Zachowuje się jak *ogrodzenia* który określa kolejność wymagania względem innych ogrodzenia pamięci.|  
+|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|Dzieli łańcuch zależności możliwe.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, OLE and
 - OLE items
@@ -17,16 +19,17 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 38b2f6c936ff314f56e4b1868837729ad00efce4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d13baf7960b329e56cfce24011f4c15599cdda8b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ole-in-mfc"></a>OLE w MFC
 Artykuły te wyjaśniają zasady podstawy programowania OLE za pomocą MFC. MFC zapewnia Najprostszym sposobem pisania programów, które używają OLE:  
@@ -41,7 +44,7 @@ Artykuły te wyjaśniają zasady podstawy programowania OLE za pomocą MFC. MFC 
   
 -   Zarządzanie danymi stanu MFC moduły, w tym wyeksportowane punkty wejścia funkcji DLL, punkty wejścia interfejsu OLE/COM i punkty wejścia procedury okna.  
   
- Można również użyć [automatyzacji](../mfc/automation.md) lub [automatyzacji zdalnej](../mfc/remote-automation.md) do działania innego programu z programu.  
+ Można również użyć [automatyzacji](../mfc/automation.md).  
   
 > [!NOTE]
 >  Termin OLE oznacza technologii skojarzone z łączenie i osadzanie, takich jak kontenery OLE, serwerów OLE, elementy OLE, aktywacja w miejscu (lub edycja wizualna), trackerów, przeciągnij i upuść, a scalaniem menu. Termin aktywny dotyczy składnika modelu COM (Object) i obiekty oparte na modelu COM, takie jak kontrolki ActiveX. Automatyzacja OLE nosi teraz automatyzacji.  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
 - concrt/concurrency::DisableTracing
@@ -46,11 +46,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db8dd57c912c62dab895d613c5d7bbe0d5c3cd9a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-functions"></a>Funkcje przestrzeń nazw współbieżności
 ||||  
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/14/2018
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[oczekiwania](#wait)|  
 |[when_all —](#when_all)|[when_any —](#when_any)|  
   
-##  <a name="alloc">Alokacji</a>  
+##  <a name="alloc"></a>  Alokacji  
  Przydziela bloku pamięci o wielkości określone z Suballocator buforowanie współbieżności środowiska wykonawczego.  
   
 ```
@@ -88,7 +88,7 @@ void* __cdecl Alloc(size_t _NumBytes);
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji o tym, które scenariuszy w aplikacji można korzystać z Suballocator buforowania, zobacz [harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
-##  <a name="asend">asend —</a>  
+##  <a name="asend"></a>  asend —  
  Operacja asynchronicznego wysyłania, która planuje zadania propagację danych blok docelowy.  
   
 ```
@@ -128,7 +128,7 @@ bool asend(
 inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```  
   
-##  <a name="clear">Wyczyść</a>  
+##  <a name="clear"></a>  Wyczyść  
  Czyści równoczesnych kolejki niszczenie żadnego obecnie elementów umieszczonych w kolejce. Ta metoda nie jest bezpieczne współbieżności.  
   
 ```
@@ -222,7 +222,7 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
   
  W aplikacji platformy uniwersalnej systemu Windows Jeśli `_Param` jest typu Windows::Foundation::IAsyncOperation\<T > ^ lub Windows::Foundation::IAsyncOperationWithProgress\<T, P > ^, lub obiekt, który zwraca jedną z tych typów, z zostaną utworzone zadanie Typ `task<T>`. Jeśli `_Param` jest typu Windows::Foundation::IAsyncAction ^ lub Windows::Foundation::IAsyncActionWithProgress\<P > ^, lub obiekt, który zwraca jedną z tych typów, będzie mieć typ utworzonego zadania `task<void>`.  
   
-##  <a name="disabletracing">Disabletracing —</a>  
+##  <a name="disabletracing"></a>  Disabletracing —  
  Wyłącza śledzenie współbieżność środowiska wykonawczego. Ta funkcja jest przestarzały, ponieważ śledzenie zdarzeń systemu Windows jest niezarejestrowany domyślnie.  
   
 ```
@@ -232,7 +232,7 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
 ### <a name="return-value"></a>Wartość zwracana  
  Wyłączenie śledzenia został poprawnie `S_OK` jest zwracany. Jeśli śledzenie nie zostały wcześniej zainicjowane, `E_NOT_STARTED` jest zwracana  
   
-##  <a name="enabletracing">Enabletracing —</a>  
+##  <a name="enabletracing"></a>  Enabletracing —  
  Umożliwia śledzenie współbieżność środowiska wykonawczego. Ta funkcja jest przestarzały, ponieważ śledzenie zdarzeń systemu Windows jest teraz włączona domyślnie.  
   
 ```
@@ -277,7 +277,7 @@ unsigned int __cdecl GetExecutionContextId();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda służy do uzyskania identyfikatora kontekstu wykonywania przed przekazujesz `IExecutionContext` interfejsu jako parametr do dowolnej z metod oferowane przez Menedżera zasobów.  
   
-##  <a name="getosversion">Getosversion —</a>  
+##  <a name="getosversion"></a>  Getosversion —  
  Zwraca informacje o wersji systemu operacyjnego.  
   
 ```
@@ -1024,7 +1024,7 @@ inline void parallel_radixsort(
   
  Algorytm zakres wejściowy jest podzielony na dwie fragmentów i kolejno dzieli dwie fragmentów podrzędne wykonywanie równoległe każdego fragmentu. Opcjonalny argument `_Chunk_size` może służyć do wskazywania algorytm powinien obsługi fragmenty rozmiaru < `_Chunk_size` pojedynczo.  
   
-##  <a name="parallel_reduce">parallel_reduce —</a>  
+##  <a name="parallel_reduce"></a>  parallel_reduce —  
  Oblicza sumę wszystkich elementów w określonym zakresie przez obliczanie sum częściowych kolejnych lub oblicza wynik kolejne wyniki częściowe podobnie uzyskany przy użyciu określonej operacji binarnych sumą, równolegle. `parallel_reduce` przypomina semantycznie `std::accumulate`, ale wymaga operację binarną być asocjacyjnej i wymaga wartości tożsamości, zamiast wartości początkowej.  
   
 ```
@@ -1330,7 +1330,7 @@ void run_with_cancellation_token(
 ### <a name="remarks"></a>Uwagi  
  Wszystkie punkty przerwania w obiekcie funkcja będzie wyzwalane, gdy `cancellation_token` została anulowana. Jawne token `_Ct` będzie izolować to `_Func` z anulowania nadrzędnego, jeśli element nadrzędny ma inny token lub nie tokenu.  
   
-##  <a name="send">Wyślij</a>  
+##  <a name="send"></a>  Wyślij  
  Operacja synchroniczna wysyłania, która czeka, aż docelowy albo zaakceptuje lub odrzuci komunikat.  
   
 ```
@@ -1427,7 +1427,7 @@ inline void swap(
   
  Ta metoda nie jest bezpieczne współbieżności. Należy się upewnić, że nie ma innych wątków są wykonywanie operacji na albo wektorów równoczesnych podczas wywoływania tej metody.  
   
-##  <a name="task_from_exception">task_from_exception —</a>  
+##  <a name="task_from_exception"></a>  task_from_exception —  
   
 ```
 template<typename _TaskType, typename _ExType>

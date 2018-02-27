@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::operator!=
 - map/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - map/std::operator&lt;
 - map/std::operator&lt;=
 - map/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 7df02b9f-701c-44ed-834a-a819badc5bd0
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (map)
@@ -24,21 +25,21 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 6b2eb6b5ab3a8b08af5375b7767328289c68a744
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: d98e67ea5a65279a5bb618552bec4358bc48a445
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmapgt-operators"></a>&lt;Mapa&gt; operatory
 ||||  
 |-|-|-|  
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator ==](#op_eq_eq)|  
-|[Operator! = (multimap)](#op_neq_multimap)|[operator&gt;](#op_gt_multimap)|[operator&gt;=](#op_gt_eq_multimap)|  
-|[operator&lt;](#op_lt_multimap)|[operator&lt;=](#op_lt_eq_multimap)|[operator ==](#op_eq_eq_multimap)|  
+|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[Operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
+|[operator!= (multimap)](#op_neq_multimap)|[Operator&gt;](#op_gt_multimap)|[operator&gt;=](#op_gt_eq_multimap)|  
+|[Operator&lt;](#op_lt_multimap)|[operator&lt;=](#op_lt_eq_multimap)|[operator==](#op_eq_eq_multimap)|  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Testy, jeśli obiekt mapy po lewej stronie operatora nie jest taki sam jak obiekt mapy po prawej stronie.  
   
 ```
@@ -98,7 +99,7 @@ The maps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt"></a>  Operator&lt;  
  Testy, jeśli obiekt mapy po lewej stronie operatora jest mniejsza niż obiektu mapy po prawej stronie.  
   
 ```
@@ -158,7 +159,7 @@ The map m1 is not less than the map m3.
 *\  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  Operator&lt;=  
  Testy, jeśli obiekt mapy po lewej stronie operatora jest mniejsza niż lub równe obiektu mapy po prawej stronie.  
   
 ```
@@ -222,7 +223,7 @@ The map m1 is less than or equal to the map m4.
 *\  
 ```  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Testy, jeśli obiekt mapy po lewej stronie operatora jest taki sam jak obiekt mapy po prawej stronie.  
   
 ```
@@ -282,7 +283,7 @@ The maps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="op_gt"></a>operator&gt;  
+##  <a name="op_gt"></a>  Operator&gt;  
  Testy, jeśli obiekt mapy po lewej stronie operatora jest większy niż obiekt mapy po prawej stronie.  
   
 ```
@@ -342,7 +343,7 @@ The map m1 is greater than the map m3.
 *\  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  Operator&gt;=  
  Testy, jeśli obiekt mapy po lewej stronie operatora jest większa niż lub równa obiektu mapy po prawej stronie.  
   
 ```
@@ -406,7 +407,7 @@ Map m1 is greater than or equal to map m4.
 *\  
 ```  
   
-##  <a name="op_neq_multimap"></a>Operator! = (multimap)  
+##  <a name="op_neq_multimap"></a>  Operator! = (multimap)  
  Testy, jeśli obiekt multimap — po lewej stronie operatora nie jest taki sam jak obiekt multimap — po prawej stronie.  
   
 ```
@@ -466,7 +467,7 @@ The multimaps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="op_lt_multimap"></a>operator&lt;  
+##  <a name="op_lt_multimap"></a>  Operator&lt;  
  Testy, jeśli obiekt multimap — po lewej stronie operatora jest mniejsza niż obiekt multimap — po prawej stronie.  
   
 ```
@@ -526,7 +527,7 @@ The multimap m1 is not less than the multimap m3.
 *\  
 ```  
   
-##  <a name="eq_multimap"></a>operator&lt;=  
+##  <a name="eq_multimap"></a>  Operator&lt;=  
  Testy, jeśli obiekt multimap po lewej stronie operatora jest mniejsza niż lub równe multimap — obiektu po prawej stronie.  
   
 ```
@@ -590,7 +591,7 @@ m1 is less than or equal to m4
 *\  
 ```  
   
-##  <a name="op_eq_eq_multimap"></a>operator ==  
+##  <a name="op_eq_eq_multimap"></a>  operator ==  
  Testy, jeśli obiekt multimap — po lewej stronie operatora jest taki sam jak obiekt multimap — po prawej stronie.  
   
 ```
@@ -650,7 +651,7 @@ m1 and m3 are equal
 *\  
 ```  
   
-##  <a name="op_gt_multimap"></a>operator&gt;  
+##  <a name="op_gt_multimap"></a>  Operator&gt;  
  Testy, jeśli obiekt multimap — po lewej stronie operatora jest większy niż obiekt multimap — po prawej stronie.  
   
 ```
@@ -710,7 +711,7 @@ The multimap m1 is greater than the multimap m3.
 *\  
 ```  
   
-##  <a name="op_gt_eq_multimap"></a>operator&gt;=  
+##  <a name="op_gt_eq_multimap"></a>  Operator&gt;=  
  Testy, jeśli obiekt multimap — po lewej stronie operatora jest większa niż lub równa multimap — obiektu po prawej stronie.  
   
 ```

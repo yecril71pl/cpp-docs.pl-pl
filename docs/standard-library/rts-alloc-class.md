@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - allocators/stdext::rts_alloc
 - allocators/stdext::rts_alloc::allocate
 - allocators/stdext::rts_alloc::deallocate
 - allocators/stdext::rts_alloc::equals
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::rts_alloc
 - stdext::rts_alloc [C++], allocate
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2e4870edc0b54a92307ddf88d58dd96ca3fd331e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c5f20215050a5488402cc17c849e20fe2c51608c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="rtsalloc-class"></a>rts_alloc — Klasa
 Rts_alloc — klasa szablonu opisuje [filtru](../standard-library/allocators-header.md) zawierający tablicę pamięci podręcznej wystąpienia i określa, które wystąpienie na potrzeby alokacji i dezalokacji w czasie wykonywania, a nie w czasie kompilacji.  
@@ -54,7 +57,7 @@ class rts_alloc
 |||  
 |-|-|  
 |[allocate](#allocate)|Przydziela bloku pamięci.|  
-|[cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|  
+|[Cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|  
 |[equals](#equals)|Porównuje dwa pamięci podręcznych pod kątem równości.|  
   
 ## <a name="requirements"></a>Wymagania  
@@ -62,7 +65,7 @@ class rts_alloc
   
  **Namespace:** stdext —  
   
-##  <a name="allocate"></a>rts_alloc::allocate  
+##  <a name="allocate"></a>  rts_alloc::allocate  
  Przydziela bloku pamięci.  
   
 ```
@@ -81,7 +84,7 @@ void *allocate(std::size_t count);
 ### <a name="remarks"></a>Uwagi  
  Funkcja członkowska zwraca `caches[_IDX].allocate(count)`, gdzie indeks `_IDX` jest zależny od rozmiaru żądanego bloku `count`, lub jeśli `count` jest zbyt duży, zwraca `operator new(count)`. `cache`, która reprezentuje buforowany obiekt.  
   
-##  <a name="deallocate"></a>rts_alloc::deallocate  
+##  <a name="deallocate"></a>  rts_alloc::deallocate  
  Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.  
   
 ```
@@ -98,7 +101,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Uwagi  
  Wywołania funkcji Członkowskich `caches[_IDX].deallocate(ptr, count)`, gdzie indeks `_IDX` jest zależny od rozmiaru żądanego bloku `count`, lub jeśli `count` jest zbyt duży, zwraca `operator delete(ptr)`.  
   
-##  <a name="equals"></a>rts_alloc::Equals  
+##  <a name="equals"></a>  rts_alloc::Equals  
  Porównuje dwa pamięci podręcznych pod kątem równości.  
   
 ```
@@ -113,11 +116,11 @@ bool equals(const sync<_Cache>& _Other) const;
 |`_Other`|Buforowany obiekt do porównania równości.|  
   
 ### <a name="remarks"></a>Uwagi  
- `true`Jeśli wynik `caches[0].equals(other.caches[0])`; w przeciwnym razie `false`. `caches`reprezentuje tablicę obiektów w pamięci podręcznej.  
+ `true` Jeśli wynik `caches[0].equals(other.caches[0])`; w przeciwnym razie `false`. `caches` reprezentuje tablicę obiektów w pamięci podręcznej.  
   
 ## <a name="see-also"></a>Zobacz też  
- [ALLOCATOR_DECL —](../standard-library/allocators-functions.md#allocator_decl)   
- [\<allocators — >](../standard-library/allocators-header.md)
+ [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)   
+ [\<allocators>](../standard-library/allocators-header.md)
 
 
 

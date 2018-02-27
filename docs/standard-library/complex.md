@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <complex>
 - std::<complex>
-dev_langs: C++
-helpviewer_keywords: complex header
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 178318ba212665e9157d1c49289d3167056b0e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e23707a342e666e49a15c47e0dc82c4e882176cd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltcomplexgt"></a>&lt;złożone&gt;
+# <a name="ltcomplexgt"></a>&lt;complex&gt;
 Definiuje klasę szablonu kontenera **złożonych** i jego obsługi szablonów.  
   
 ## <a name="syntax"></a>Składnia  
@@ -91,15 +95,15 @@ Definiuje klasę szablonu kontenera **złożonych** i jego obsługi szablonów.
 |[COSH](../standard-library/complex-functions.md#cosh)|Zwraca cosinus hiperboliczny dla liczby złożonej.|  
 |[EXP](../standard-library/complex-functions.md#exp)|Zwraca funkcja wykładnicza z liczbą.|  
 |[imag](../standard-library/complex-functions.md#imag)|Wyodrębnia urojony składnik liczbą.|  
-|[Dziennik](../standard-library/complex-functions.md#log)|Zwraca logarytm naturalny liczby złożonej.|  
-|[LOG10](../standard-library/complex-functions.md#log10)|Zwraca logarytm 10 liczbą.|  
+|[log](../standard-library/complex-functions.md#log)|Zwraca logarytm naturalny liczby złożonej.|  
+|[log10](../standard-library/complex-functions.md#log10)|Zwraca logarytm 10 liczbą.|  
 |[norm —](../standard-library/complex-functions.md#norm)|Wyodrębnia normy liczbą.|  
 |[polar](../standard-library/complex-functions.md#polar)|Zwraca liczby złożonej, co odpowiada określonym modulo i argumentu, w postaci kartezjańskimi.|  
 |[Pow](../standard-library/complex-functions.md#pow)|Oblicza liczby złożonej uzyskany przez zwiększenie base, która jest liczbą do potęgi równej innej liczbie złożone.|  
-|[rzeczywiste](../standard-library/complex-functions.md#real)|Wyodrębnia rzeczywistych składnik liczbą.|  
-|[SIN](../standard-library/complex-functions.md#sin)|Zwraca sinus liczby złożonej.|  
+|[real](../standard-library/complex-functions.md#real)|Wyodrębnia rzeczywistych składnik liczbą.|  
+|[sin](../standard-library/complex-functions.md#sin)|Zwraca sinus liczby złożonej.|  
 |[SINH](../standard-library/complex-functions.md#sinh)|Zwraca sinus hiperboliczny liczby złożonej.|  
-|[SQRT](../standard-library/complex-functions.md#sqrt)|Zwraca pierwiastek kwadratowy z liczby złożonej.|  
+|[sqrt](../standard-library/complex-functions.md#sqrt)|Zwraca pierwiastek kwadratowy z liczby złożonej.|  
 |[tan](../standard-library/complex-functions.md#tan)|Zwraca tangens liczby złożonej.|  
 |[TANH](../standard-library/complex-functions.md#tanh)|Zwraca tangens hiperboliczny dla liczby złożonej.|  
   
@@ -109,28 +113,28 @@ Definiuje klasę szablonu kontenera **złożonych** i jego obsługi szablonów.
 |-|-|  
 |[operator!=](../standard-library/complex-operators.md#op_neq)|Testy pod kątem nierówności między dwie liczb zespolonych, jeden lub oba mogą należeć do podzbioru typ części rzeczywistych i urojony.|  
 |[operator *](../standard-library/complex-operators.md#op_star)|Mnoży dwie liczby złożone, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|  
-|[operator +](../standard-library/complex-operators.md#op_add)|Dodaje dwie liczb zespolonych, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|  
+|[operator+](../standard-library/complex-operators.md#op_add)|Dodaje dwie liczb zespolonych, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|  
 |[operator-](../standard-library/complex-operators.md#operator-)|Odejmuje dwie liczby złożone, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|  
 |[operator /](../standard-library/complex-operators.md#op_div)|Dzieli dwie liczby złożone, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|  
 |[Operator <\<](../standard-library/complex-operators.md#op_lt_lt)|Funkcja szablonu, która wstawia liczby złożonej do strumienia wyjściowego.|  
-|[operator ==](../standard-library/complex-operators.md#op_eq_eq)|Testy równości między dwie liczb zespolonych, jeden lub oba mogą należeć do podzbioru typ części rzeczywistych i urojony.|  
-|[operator >>](../standard-library/complex-operators.md#op_gt_gt)|Funkcja szablonu, który wyodrębnia złożona wartość ze strumienia wejściowego.|  
+|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Testy równości między dwie liczb zespolonych, jeden lub oba mogą należeć do podzbioru typ części rzeczywistych i urojony.|  
+|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|Funkcja szablonu, który wyodrębnia złożona wartość ze strumienia wejściowego.|  
   
 ### <a name="classes"></a>Klasy  
   
 |||  
 |-|-|  
-|[złożone\<podwójne >](../standard-library/complex-double.md)|Klasa jawnie specjalne szablonu opisuje obiekt, który przechowuje uporządkowanej parę obiektów, zarówno typu **podwójne**, gdzie część rzeczywista liczbą reprezentuje pierwszy i drugi reprezentuje wyrażenie Liczba_zespolona część.|  
+|[complex\<double>](../standard-library/complex-double.md)|Klasa jawnie specjalne szablonu opisuje obiekt, który przechowuje uporządkowanej parę obiektów, zarówno typu **podwójne**, gdzie część rzeczywista liczbą reprezentuje pierwszy i drugi reprezentuje wyrażenie Liczba_zespolona część.|  
 |[złożone\<float >](../standard-library/complex-float.md)|Klasa jawnie specjalne szablonu opisuje obiekt, który przechowuje uporządkowanej parę obiektów, zarówno typu **float**, gdzie część rzeczywista liczbą reprezentuje pierwszy i drugi reprezentuje wyrażenie Liczba_zespolona część.|  
 |[złożone\<podwójnej długości >](../standard-library/complex-long-double.md)|Klasa jawnie specjalne szablonu opisuje obiekt, który przechowuje uporządkowanej parę obiektów, zarówno typu **podwójnej długości**, gdzie część rzeczywista liczbą reprezentuje pierwszy i drugi reprezentuje wyrażenie Liczba_zespolona część.|  
-|[złożone](../standard-library/complex-class.md)|Klasa szablonu opisuje obiekt, który reprezentuje system liczby złożonej i wykonywanie operacji arytmetycznych złożonych.|  
+|[complex](../standard-library/complex-class.md)|Klasa szablonu opisuje obiekt, który reprezentuje system liczby złożonej i wykonywanie operacji arytmetycznych złożonych.|  
   
 ### <a name="literals"></a>Literały  
  \<Złożonych > nagłówka definiuje następujące [literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md) którego Utwórz wiele złożone z rzeczywistego trwa zero i urojony część jest wartość parametru wejściowego.  
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Zwraca:`complex<long double>{0.0L, static_cast<long double>(d)}`|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Zwraca: `complex<long double>{0.0L, static_cast<long double>(d)}`|  
 |`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Zwraca: `complex<double>{0.0, static_cast<double>(d)}`.|  
 |`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Zwraca: `complex<float>{0.0f, static_cast<float>(d)}`.|  
   

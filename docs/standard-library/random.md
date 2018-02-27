@@ -4,25 +4,30 @@ ms.custom:
 ms.date: 08/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <random>
-dev_langs: C++
-helpviewer_keywords: random header
+ms.topic: reference
+f1_keywords:
+- <random>
+dev_langs:
+- C++
+helpviewer_keywords:
+- random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5bef9205fd583dd66a0f3cfe791ff95a861435c0
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: af48357ff276df90333d066cf6585a031b572914
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltrandomgt"></a>&lt;losowe&gt;
+# <a name="ltrandomgt"></a>&lt;Losowe&gt;
 Definiuje urządzeń Generowanie liczby losowej umożliwia utworzenie jednolicie rozproszonej liczb losowych.  
   
 ## <a name="syntax"></a>Składnia  
@@ -57,7 +62,7 @@ Definiuje urządzeń Generowanie liczby losowej umożliwia utworzenie jednolicie
   
  Istnieje wiele opcji do wyboru w `<random>` nagłówka i z nich jest preferowane nieaktualne funkcji C Runtime `rand()`. Aby uzyskać informacje o problem z `rand()` i w jaki sposób `<random>` dotyczy tych nieprawidłowości, zobacz [ten film](http://go.microsoft.com/fwlink/p/?linkid=397615).  
   
-##  <a name="code"></a>Przykłady  
+##  <a name="code"></a> Przykłady  
  Poniższy przykład kodu pokazuje sposób generowania niektórych liczb losowych w takim przypadku pięć ich przy użyciu generator utworzone za pomocą inicjatora deterministyczna.  
   
 ```cpp  
@@ -211,9 +216,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
 Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem liczb całkowitych i losowo tablicę danych indeksowanego — przy użyciu funkcji szablonu testu. Pierwsze wywołanie funkcji test używa bezpiecznych kryptograficznego, deterministyczna, nie seedable, powtarzalne URNG `random_device`. Drugi testu używa `mersenne_twister_engine` jako URNG, z deterministyczne inicjatora stałej 32-bitowa, co oznacza są powtarzalne wyniki. Trzeci testu ziarna `mersenne_twister_engine` z wynikiem deterministyczna 32-bitowych z `random_device`. Uruchomienie testu czwarty rozszerza na tym za pomocą [inicjatora sekwencji](../standard-library/seed-seq-class.md) wypełnione `random_device` wyników, które skutecznie zawiera więcej niż 32-bitowych losowości deterministyczna (ale nadal nie crypto-secure). Aby uzyskać więcej informacji Przeczytaj na.  
   
-##  <a name="listing"></a>Lista kategorii  
+##  <a name="listing"></a> Lista kategorii  
   
-###  <a name="urngs"></a>Uniform generatory liczb losowych  
+###  <a name="urngs"></a> Uniform generatory liczb losowych  
  URNGs często są opisane w tych właściwości:  
   
 1. **Długość okresu**: liczby iteracji trwa powtórzenie sekwencji liczb wygenerowany. Im dłuższy tym lepiej.  
@@ -224,46 +229,46 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
  W poniższych sekcjach wymieniono uniform losowych liczb generatory (URNGs) w `<random>` nagłówka.  
   
-####  <a name="rd"></a>Generator deterministyczna  
+####  <a name="rd"></a> Generator deterministyczna  
   
 |||  
 |-|-|  
 |[random_device, klasa](../standard-library/random-device-class.md)|Generuje deterministyczna, bezpieczne kryptograficznie losowe sekwencji za pomocą zewnętrznego urządzenia. Zazwyczaj używany do generowania aparatu. Niska wydajność bardzo wysokiej jakości. Aby uzyskać więcej informacji, zobacz [uwagi](#comments).|  
   
-####  <a name="typedefs"></a>Definicje typów aparat wstępnie zdefiniowanych parametrów  
+####  <a name="typedefs"></a> Definicje typów aparat wstępnie zdefiniowanych parametrów  
  Tworzenie wystąpień aparaty i adapterów aparatu. Aby uzyskać więcej informacji, zobacz [aparaty i dystrybucji](#engdist).  
   
-- `default_random_engine`Domyślny aparat.   
+- `default_random_engine` Domyślny aparat.   
  `typedef mt19937 default_random_engine;`  
   
-- `knuth_b`Aparat Knuth.   
+- `knuth_b` Aparat Knuth.   
  `typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;`  
   
-- `minstd_rand0`1988 minimalnego standardowe aparat (Nowak, Goodman i Tomaszewski, 1969).   
+- `minstd_rand0` 1988 minimalnego standardowe aparat (Nowak, Goodman i Tomaszewski, 1969).   
  `typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;`  
   
-- `minstd_rand`Zaktualizowany aparat standardowe minimalnego `minstd_rand0` (wstrzymywanie Tomaszewski i Stockmeyer, 1993).   
+- `minstd_rand` Zaktualizowany aparat standardowe minimalnego `minstd_rand0` (wstrzymywanie Tomaszewski i Stockmeyer, 1993).   
  `typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;`  
   
-- `mt19937`32-bitowe ramach projektu Mersenne — trąba powietrzna aparat (Matsumoto i Nishimura, 1998).   
+- `mt19937` 32-bitowe ramach projektu Mersenne — trąba powietrzna aparat (Matsumoto i Nishimura, 1998).   
  `typedef mersenne_twister_engine<unsigned int, 32, 624, 397,      31, 0x9908b0df,      11, 0xffffffff,      7, 0x9d2c5680,      15, 0xefc60000,      18, 1812433253> mt19937;`  
   
-- `mt19937_64`64-bitowych ramach projektu Mersenne — trąba powietrzna aparat (Matsumoto i Nishimura, 2000).   
+- `mt19937_64` 64-bitowych ramach projektu Mersenne — trąba powietrzna aparat (Matsumoto i Nishimura, 2000).   
  `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`  
   
-- `ranlux24`Aparat RANLUX 24-bitowego (Lüscher pole i Krzysztof uprawnionego 1994 r.).   
+- `ranlux24` Aparat RANLUX 24-bitowego (Lüscher pole i Krzysztof uprawnionego 1994 r.).   
  `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`  
   
-- `ranlux24_base`Użyty jako podstawa dla `ranlux24`.   
+- `ranlux24_base` Użyty jako podstawa dla `ranlux24`.   
  `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`  
   
-- `ranlux48`Aparat RANLUX 48-bitowe (Lüscher pole i Krzysztof uprawnionego 1994 r.).   
+- `ranlux48` Aparat RANLUX 48-bitowe (Lüscher pole i Krzysztof uprawnionego 1994 r.).   
  `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`  
   
-- `ranlux48_base`Użyty jako podstawa dla `ranlux48`.   
+- `ranlux48_base` Użyty jako podstawa dla `ranlux48`.   
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
-####  <a name="eng"></a>Aparat szablonów  
+####  <a name="eng"></a> Aparat szablonów  
  Aparat szablony są używane jako autonomiczny URNGs lub aparaty podstawowej przekazane do [aparat adapterów](#engadapt). Zazwyczaj są tworzone z [wstępnie zdefiniowane typedef aparat](#typedefs) i przekazywane do [dystrybucji](#distributions). Aby uzyskać więcej informacji, zobacz [aparaty i dystrybucji](#engdist) sekcji.  
   
 |||  
@@ -272,7 +277,7 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
 |[mersenne_twister_engine, klasa](../standard-library/mersenne-twister-engine-class.md)|Generuje losowe sekwencji za pomocą algorytmu — trąba powietrzna w ramach projektu Mersenne. Najbardziej złożonych i jest najwyższej jakości, z wyjątkiem random_device — klasa. Bardzo duża wydajność.|  
 |[subtract_with_carry_engine, klasa](../standard-library/subtract-with-carry-engine-class.md)|Generuje losowe sekwencji za pomocą algorytmu subtract z przenoszące. Udoskonalenia w `linear_congruential_engine`, ale znacznie mniejszą jakości i wydajność niż `mersenne_twister_engine`.|  
   
-####  <a name="engadapt"></a>Aparat szablonów karty  
+####  <a name="engadapt"></a> Aparat szablonów karty  
  Aparat adapterów są szablony, które dostosowania innych aparatów (podstawowy). Zazwyczaj są tworzone z [wstępnie zdefiniowane typedef aparat](#typedefs) i przekazywane do [dystrybucji](#distributions). Aby uzyskać więcej informacji, zobacz [aparaty i dystrybucji](#engdist) sekcji.  
   
 |||  
@@ -283,7 +288,7 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
  [[Aparat szablonów](#eng)]  
   
-###  <a name="distributions"></a>Dystrybucje liczb losowych  
+###  <a name="distributions"></a> Dystrybucje liczb losowych  
  W poniższych sekcjach wymieniono dystrybucje w `<random>` nagłówka. Dystrybucje są mechanizm przetwarzania końcowego, zwykle za pomocą URNG dane wyjściowe jako dane wejściowe i dystrybucji danych wyjściowych przez funkcję zdefiniowanych statystyczne gęstości prawdopodobieństwa. Aby uzyskać więcej informacji, zobacz [aparaty i dystrybucji](#engdist) sekcji.  
   
 #### <a name="uniform-distributions"></a>Jednolite dystrybucji  
@@ -359,14 +364,14 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
 |`operator<<`|Zapisuje informacje o stanie do strumienia.|  
 |`operator>>`|Wyodrębnia informacje o stanie ze strumienia.|  
   
-##  <a name="engdist"></a>Aparaty i dystrybucji  
+##  <a name="engdist"></a> Aparaty i dystrybucji  
  Zobacz następujące sekcje zawierają informacje o każdej z tych kategorii klasy szablonu zdefiniowany w `<random>`. Obu tych kategorii klasy szablonu pobranie typu jako argumentu i użyj nazwy parametru szablonu współużytkowanego opisujących właściwości typu, które są dozwolone jako typu rzeczywistego argumentu w następujący sposób:  
   
-- `IntType`Wskazuje `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long`, lub `unsigned long long`.  
+- `IntType` Wskazuje `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long`, lub `unsigned long long`.  
   
-- `UIntType`Wskazuje `unsigned short`, `unsigned int`, `unsigned long`, lub `unsigned long long`.  
+- `UIntType` Wskazuje `unsigned short`, `unsigned int`, `unsigned long`, lub `unsigned long long`.  
   
-- `RealType`Wskazuje `float`, `double`, lub `long double`.  
+- `RealType` Wskazuje `float`, `double`, lub `long double`.  
   
 ### <a name="engines"></a>Aparaty  
  [Aparat szablonów](#eng) i [szablony karty aparatu](#engadapt) szablonów, w której parametry dostosowywać generator utworzony.  
@@ -375,23 +380,23 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
  Każdy aparat i aparat karty ma następujące elementy:  
   
-- `typedef``numeric-type` `result_type` jest typ zwracany przez generator `operator()`. `numeric-type` Jest przekazywana jako parametr szablonu podczas tworzenia wystąpienia.  
+- `typedef` `numeric-type` `result_type` jest to typ zwracany przez generator `operator()`. `numeric-type` Jest przekazywana jako parametr szablonu podczas tworzenia wystąpienia.  
   
-- `result_type operator()`Zwraca wartości, które są równomiernie między `min()` i `max()`.  
+- `result_type operator()` Zwraca wartości, które są równomiernie między `min()` i `max()`.  
   
-- `result_type min()`Zwraca minimalną wartość zwracaną przez generator `operator()`. Aparat adapterów Użyj podstawowego aparatu `min()` wynik.  
+- `result_type min()` Zwraca minimalną wartość zwracaną przez generator `operator()`. Aparat adapterów Użyj podstawowego aparatu `min()` wynik.  
   
-- `result_type max()`Zwraca maksymalną wartość zwracaną przez generator `operator()`. Gdy `result_type` jest typ całkowity (wartości całkowitych) `max()` maksymalna wartość, która faktycznie można zwrócić (włącznie); podczas `result_type` jest typ zmiennoprzecinkowy (przechowywanymi w rzeczywistym) `max()` jest większa niż wszystkie wartości najmniejszej wartości który może być zwracany (z systemem innym niż — włącznie). Aparat adapterów Użyj podstawowego aparatu `max()` wynik.  
+- `result_type max()` Zwraca maksymalną wartość zwracaną przez generator `operator()`. Gdy `result_type` jest typ całkowity (wartości całkowitych) `max()` maksymalna wartość, która faktycznie można zwrócić (włącznie); podczas `result_type` jest typ zmiennoprzecinkowy (przechowywanymi w rzeczywistym) `max()` jest większa niż wszystkie wartości najmniejszej wartości który może być zwracany (z systemem innym niż — włącznie). Aparat adapterów Użyj podstawowego aparatu `max()` wynik.  
   
-- `void seed(result_type s)`nasiona generator o wartości początkowej `s`. Aparaty, podpis jest `void seed(result_type s = default_seed)` dla Obsługa parametrów domyślnych (aparat adapterów zdefiniuj oddzielnej `void seed()`, zobacz podsekcji).  
+- `void seed(result_type s)` nasiona generator o wartości początkowej `s`. Aparaty, podpis jest `void seed(result_type s = default_seed)` dla Obsługa parametrów domyślnych (aparat adapterów zdefiniuj oddzielnej `void seed()`, zobacz podsekcji).  
   
-- `template <class Seq> void seed(Seq& q)`nasiona generatora przy użyciu [seed_seq —](../standard-library/seed-seq-class.md)`Seq`.  
+- `template <class Seq> void seed(Seq& q)` nasiona generatora przy użyciu [seed_seq —](../standard-library/seed-seq-class.md)`Seq`.  
   
 -   Jawne konstruktora z argumentem `result_type x` tworzącą generator rozpoczęta tak, jakby przez wywołanie `seed(x)`.  
   
 -   Jawne konstruktora z argumentem `seed_seq& seq` tworzącą generator rozpoczęta tak, jakby przez wywołanie `seed(seq)`.  
   
-- `void discard(unsigned long long count)`wywołuje `operator()` `count` czasu i odrzuca każdej wartości.  
+- `void discard(unsigned long long count)` wywołuje `operator()` `count` czasu i odrzuca każdej wartości.  
   
  **Aparat adapterów** dodatkowo obsługuje tych elementów członkowskich (`Engine` jest pierwszy parametr szablonu adaptera aparat wyznaczenie typ podstawowy aparat):  
   
@@ -401,38 +406,38 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
 -   Jawne konstruktora z argumentem `Engine&& eng`. To obsługuje konstrukcji przenoszenia przy użyciu aparatu podstawowej.  
   
-- `void seed()`który inicjuje generator o wartości początkowej domyślny aparat podstawowej.  
+- `void seed()` który inicjuje generator o wartości początkowej domyślny aparat podstawowej.  
   
-- `const Engine& base()`Funkcja właściwość, która zwraca podstawowej aparatem, który został użyty do utworzenia generatora.  
+- `const Engine& base()` Funkcja właściwość, która zwraca podstawowej aparatem, który został użyty do utworzenia generatora.  
   
  Każdy silnik utrzymuje *stanu* , który określa kolejność wartości, które będą generowane przez kolejne wywołania `operator()`. Stany dwóch generatory utworzonych na podstawie aparaty tego samego typu można porównać przy użyciu `operator==` i `operator!=`. Jeśli porównać dwa stany jako równe, wygeneruje taką samą sekwencję wartości. Stan obiektu, który można zapisać do strumienia jako sekwencję 32-bitowej wartości bez znaku przy użyciu `operator<<` generatora. Stan nie zostanie zmieniona przez zapisanie go. Zapisany stan może zostać odczytany do generatora utworzone z tego samego typu aparatu przy użyciu `operator>>`.  
   
 ### <a name="distributions"></a>Dystrybucje  
  A [losowe dystrybucje numer](#distributions) jest klasa lub klasy szablonu, którego wystąpienia przekształcenie strumienia jednolicie rozproszonej liczb losowych uzyskane z aparatu do strumienia losowych liczb, które mają dystrybucji określonego. Każdy dystrybucji ma następujące elementy:  
   
-- `typedef``numeric-type` `result_type` jest typ zwracany przez dystrybucji `operator()`. `numeric-type` Jest przekazywana jako parametr szablonu podczas tworzenia wystąpienia.  
+- `typedef` `numeric-type` `result_type` jest to typ zwracany przez dystrybucji `operator()`. `numeric-type` Jest przekazywana jako parametr szablonu podczas tworzenia wystąpienia.  
   
-- `template <class URNG> result_type operator()(URNG& gen)`Zwraca wartości, które są dystrybuowane zgodnie z definicją dystrybucji przy użyciu `gen` jako źródło jednolicie rozproszonej losowych wartości i zapisana *parametry dystrybucji*.  
+- `template <class URNG> result_type operator()(URNG& gen)` Zwraca wartości, które są dystrybuowane zgodnie z definicją dystrybucji przy użyciu `gen` jako źródło jednolicie rozproszonej losowych wartości i zapisana *parametry dystrybucji*.  
   
-- `template <class URNG> result_type operator()(URNG& gen, param_type p)`Zwraca rozkład zgodnie z definicją dystrybucji wartości przy użyciu `gen` jako źródło jednolicie rozproszonej losowych wartości i struktura parametrów `p`.  
+- `template <class URNG> result_type operator()(URNG& gen, param_type p)` Zwraca rozkład zgodnie z definicją dystrybucji wartości przy użyciu `gen` jako źródło jednolicie rozproszonej losowych wartości i struktura parametrów `p`.  
   
-- `typedef``unspecified-type` `param_type` pakietu parametrów opcjonalnie przekazywany do `operator()` i jest używany zamiast przechowywane parametry do generowania jego wartości zwracanej.  
+- `typedef` `unspecified-type` `param_type` Pakiet parametrów opcjonalnie przekazywany do `operator()` i jest używany zamiast przechowywane parametry do generowania jego wartości zwracanej.  
   
 -   A `const param&` Konstruktor inicjuje przechowywane parametry z jej argument.  
   
-- `param_type param() const`pobiera parametry przechowywane.  
+- `param_type param() const` pobiera parametry przechowywane.  
   
-- `void param(const param_type&)`Ustawia parametry przechowywane z jej argument.  
+- `void param(const param_type&)` Ustawia parametry przechowywane z jej argument.  
   
-- `result_type min()`Zwraca minimalną wartość zwracaną przez dystrybucji `operator()`.  
+- `result_type min()` Zwraca minimalną wartość zwracaną przez dystrybucji `operator()`.  
   
-- `result_type max()`Zwraca maksymalną wartość zwracaną przez dystrybucji `operator()`. Gdy `result_type` jest typ całkowity (wartości całkowitych) `max()` maksymalna wartość, która faktycznie można zwrócić (włącznie); podczas `result_type` jest typ zmiennoprzecinkowy (przechowywanymi w rzeczywistym) `max()` jest większa niż wszystkie wartości najmniejszej wartości który może być zwracany (z systemem innym niż — włącznie).  
+- `result_type max()` Zwraca maksymalną wartość zwracaną przez dystrybucji `operator()`. Gdy `result_type` jest typ całkowity (wartości całkowitych) `max()` maksymalna wartość, która faktycznie można zwrócić (włącznie); podczas `result_type` jest typ zmiennoprzecinkowy (przechowywanymi w rzeczywistym) `max()` jest większa niż wszystkie wartości najmniejszej wartości który może być zwracany (z systemem innym niż — włącznie).  
   
-- `void reset()`odrzuca wszystkie buforowane wartości, tak aby wynik następne wywołanie `operator()` nie zależy od wartości uzyskane z aparatu przed wywołaniem.  
+- `void reset()` odrzuca wszystkie buforowane wartości, tak aby wynik następne wywołanie `operator()` nie zależy od wartości uzyskane z aparatu przed wywołaniem.  
   
  Struktura parametru jest obiekt, który przechowuje wszystkie parametry potrzebne do dystrybucji. Ten przewodnik zawiera:  
   
-- `typedef``distribution-type` `distribution_type`, który jest typem jego dystrybucji.  
+- `typedef` `distribution-type` `distribution_type`, który jest typem jego dystrybucji.  
   
 -   Zawiera co najmniej jeden konstruktorów przyjmujących tego samego parametru jako podjęcia konstruktorów dystrybucji.  
   
@@ -442,7 +447,7 @@ Ten kod ilustruje dwóch różnych randomizations — Ustaw losowy wektorem licz
   
  Aby uzyskać więcej informacji zobacz tematy podrzędne odwołanie poniżej tego, połączone wcześniej w tym artykule.  
   
-##  <a name="comments"></a>Uwagi  
+##  <a name="comments"></a> Uwagi  
  Istnieją dwa URNGs bardzo przydatne w programie Visual Studio —`mt19937` i `random_device`, jak pokazano w poniższej tabeli porównania:  
   
 |URNG|Szybkie|Zabezpieczanie kryptograficznego|Seedable|Deterministyczna|  

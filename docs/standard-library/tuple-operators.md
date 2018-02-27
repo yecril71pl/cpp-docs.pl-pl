@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tuple/std::operator!=
 - tuple/std::operator>
@@ -13,23 +13,24 @@ f1_keywords:
 - tuple/std::operator<
 - tuple/std::operator<=
 - tuple/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: c336ed5e11a7db00475da735c827c23dadfa56c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: b397aa72bff4c2f1f46b7faf32030c21683f1e51
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lttuplegt-operators"></a>&lt;Tuple&gt; operatory
 ||||  
 |-|-|-|  
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[Operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Porównaj `tuple` obiekty pod kątem nierówności.  
   
 ```  
@@ -91,7 +92,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt"></a>  Operator&lt;  
  Porównaj `tuple` mniej obiektów.  
   
 ```  
@@ -153,7 +154,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  Operator&lt;=  
  Porównaj `tuple` obiektów mniejsze lub równe.  
   
 ```  
@@ -215,7 +216,7 @@ true
 false  
 ```  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Porównaj `tuple` obiekty pod kątem równości.  
   
 ```  
@@ -277,7 +278,7 @@ true
 false  
 ```  
   
-##  <a name="op_gt"></a>operator&gt;  
+##  <a name="op_gt"></a>  Operator&gt;  
  Porównaj `tuple` obiektów na większy.  
   
 ```  
@@ -339,7 +340,7 @@ false
 true  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  Operator&gt;=  
  Porównaj `tuple` obiekty większy lub równy.  
   
 ```  
@@ -402,5 +403,5 @@ false
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Tuple >](../standard-library/tuple.md)
+ [\<tuple>](../standard-library/tuple.md)
 

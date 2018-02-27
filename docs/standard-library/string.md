@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - string/std::<string>
 - <string>
-dev_langs: C++
-helpviewer_keywords: string header
+dev_langs:
+- C++
+helpviewer_keywords:
+- string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 14442f2de89c055b35614951a277366616e00250
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 20447d439f0db2d49fe0d9c168a01ee1ca613c79
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 Definiuje klasę szablonu kontenera `basic_string` i różne szablony pomocniczych.  
@@ -55,30 +59,30 @@ Definiuje klasę szablonu kontenera `basic_string` i różne szablony pomocniczy
   
 |||  
 |-|-|  
-|[operator +](../standard-library/string-operators.md#op_add)|Łączy dwa obiekty ciągu.|  
+|[operator+](../standard-library/string-operators.md#op_add)|Łączy dwa obiekty ciągu.|  
 |[operator!=](../standard-library/string-operators.md#op_neq)|Testy, jeśli obiekt ciągu po lewej stronie operatora nie równa się z obiektem ciągu po prawej stronie.|  
-|[operator ==](../standard-library/string-operators.md#op_eq_eq)|Testy, jeśli obiekt ciągu po lewej stronie operatora jest taki sam jak obiekt ciągu po prawej stronie.|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Testy, jeśli obiekt ciągu po lewej stronie operatora jest taki sam jak obiekt ciągu po prawej stronie.|  
 |[Operator <](../standard-library/string-operators.md#op_lt)|Sprawdza, czy z obiektem ciągu po lewej stronie operatora jest mniejsza niż z obiektem ciągu po prawej stronie.|  
 |[Operator < =](../standard-library/string-operators.md#op_lt_eq)|Testy, jeśli ciąg obiekt po lewej stronie operatora jest mniejsza niż lub równe z obiektem ciągu po prawej stronie.|  
 |[Operator <\<](../standard-library/string-operators.md#op_lt_lt)|Funkcja szablonu, która wstawia ciąg do strumienia wyjściowego.|  
-|[operator >](../standard-library/string-operators.md#op_gt)|Testy, jeśli obiekt ciągu po lewej stronie operatora jest większa niż z obiektem ciągu po prawej stronie.|  
+|[operator>](../standard-library/string-operators.md#op_gt)|Testy, jeśli obiekt ciągu po lewej stronie operatora jest większa niż z obiektem ciągu po prawej stronie.|  
 |[operator>=](../standard-library/string-operators.md#op_gt_eq)|Testy, jeśli obiekt ciągu po lewej stronie operatora jest większa niż lub równa z obiektem ciągu po prawej stronie.|  
-|[operator >>](../standard-library/string-operators.md#op_gt_gt)|Funkcja szablonu, który wyodrębnia ciąg ze strumienia wejściowego.|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|Funkcja szablonu, który wyodrębnia ciąg ze strumienia wejściowego.|  
   
 ### <a name="specialized-template-functions"></a>Specialized Template — Funkcje  
   
 |||  
 |-|-|  
 |[swap](../standard-library/string-functions.md#swap)|Zamienia tablic znaki z dwóch ciągów.|  
-|[stod —](../standard-library/string-functions.md#stod)|Konwertuje sekwencję znaków`double.`|  
-|[stof —](../standard-library/string-functions.md#stof)|Konwertuje sekwencję znaków `float`.|  
-|[stoi —](../standard-library/string-functions.md#stoi)|Konwertuje sekwencja znaków na liczbę całkowitą.|  
-|[stold —](../standard-library/string-functions.md#stold)|Konwertuje sekwencję znaków `long double`.|  
-|[stoll —](../standard-library/string-functions.md#stoll)|Konwertuje sekwencję znaków `long long`.|  
-|[stoul —](../standard-library/string-functions.md#stoul)|Konwertuje sekwencję znaków `unsigned long`.|  
-|[stoull —](../standard-library/string-functions.md#stoull)|Konwertuje sekwencję znaków `unsigned long long`.|  
+|[stod —](../standard-library/string-functions.md#stod)|Konwertuje sekwencję znaków `double.`|  
+|[stof](../standard-library/string-functions.md#stof)|Konwertuje sekwencję znaków `float`.|  
+|[stoi](../standard-library/string-functions.md#stoi)|Konwertuje sekwencja znaków na liczbę całkowitą.|  
+|[stold](../standard-library/string-functions.md#stold)|Konwertuje sekwencję znaków `long double`.|  
+|[stoll](../standard-library/string-functions.md#stoll)|Konwertuje sekwencję znaków `long long`.|  
+|[stoul](../standard-library/string-functions.md#stoul)|Konwertuje sekwencję znaków `unsigned long`.|  
+|[stoull](../standard-library/string-functions.md#stoull)|Konwertuje sekwencję znaków `unsigned long long`.|  
 |[to_string](../standard-library/string-functions.md#to_string)|Konwertuje wartość na `string`.|  
-|[to_wstring —](../standard-library/string-functions.md#to_wstring)|Konwertuje wartość na całej `string`.|  
+|[to_wstring](../standard-library/string-functions.md#to_wstring)|Konwertuje wartość na całej `string`.|  
   
 ### <a name="functions"></a>Funkcje  
   

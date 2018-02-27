@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f4a6dc351d0184d43a1cf79f1cec9e9bae33aecf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 15625977ab5dd0c20238f52e84f4ecea443d01ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="pack"></a>pakiet
 Określa sposób wyrównania pakowania struktury, Unii i elementów członkowskich klasy.  
@@ -37,7 +40,7 @@ Określa sposób wyrównania pakowania struktury, Unii i elementów członkowski
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Do klasy pakietu jest umieszczenie jej elementów członkowskich bezpośrednio po sobie nawzajem w pamięci, co może oznaczać, że niektóre lub wszystkie elementy Członkowskie może być wyrównany na granicy mniejszą niż domyślne wyrównanie architektury docelowej. `pack`Umożliwia sterowanie na poziomie deklaracja danych. Ta różni się od — opcja kompilatora [/Zp](../build/reference/zp-struct-member-alignment.md), który tylko można kontrolować poziom modułu. `pack`działa na pierwszym `struct`, `union`, lub `class` deklaracji po pragma jest widoczna. `pack`nie ma wpływu na definicje. Wywoływanie `pack` z zestawami nie argumentów `n` jest wartość określona w opcji kompilatora **/Zp**. Jeśli nie ustawiono opcję kompilatora, wartość domyślna to 8.  
+ Do klasy pakietu jest umieszczenie jej elementów członkowskich bezpośrednio po sobie nawzajem w pamięci, co może oznaczać, że niektóre lub wszystkie elementy Członkowskie może być wyrównany na granicy mniejszą niż domyślne wyrównanie architektury docelowej. `pack` Umożliwia sterowanie na poziomie deklaracja danych. Ta różni się od — opcja kompilatora [/Zp](../build/reference/zp-struct-member-alignment.md), który tylko można kontrolować poziom modułu. `pack` działa na pierwszym `struct`, `union`, lub `class` deklaracji po pragma jest widoczna. `pack` nie ma wpływu na definicje. Wywoływanie `pack` z zestawami nie argumentów `n` jest wartość określona w opcji kompilatora **/Zp**. Jeśli nie ustawiono opcję kompilatora, wartość domyślna to 8.  
   
  Jeśli zmienisz wyrównania struktury, nie można używać jak dużo miejsca w pamięci, ale może wyświetlić spadek wydajności lub nawet uzyskać wyjątek wygenerowany sprzętu dla niewyrównany dostęp.  To zachowanie wyjątek można zmienić za pomocą [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  
   
@@ -50,19 +53,19 @@ Określa sposób wyrównania pakowania struktury, Unii i elementów członkowski
  **POP** (opcjonalnie)  
  Usuwa rekord z góry stosu wewnętrznego kompilatora. Jeśli `n` nie zostanie określony z **pop**, wartość pakowania skojarzony z rekordem wynikowy wierzchołku stosu jest nowa wartość wyrównania pakowania. Jeśli `n` jest określony, na przykład `#pragma pack(pop, 16)`, `n` staje się nowa wartość wyrównania pakowania. Jeśli pop z `identifier`, na przykład `#pragma pack(pop, r1)`, a następnie wszystkie rekordy na stosie są zdjęte ze stosu do rekordu, który ma `identifier` został znaleziony. Czy zdjęte ze stosu rekordu i wartość pakowania skojarzony z rekordem wynikowy na wierzchu z jest stos nowe pakowania wartość wyrównania. Jeśli pop z `identifier` nie znaleziono żadnych rekordów na stosie, a następnie **pop** jest ignorowana.  
   
- `identifier`(opcjonalnie)  
+ `identifier` (opcjonalnie)  
  W przypadku użycia z **wypychania**, przypisuje nazwę w rekordzie na stosie wewnętrznych kompilatora. W przypadku użycia z **pop**, POP rejestruje wewnętrzny stosu do `identifier` zostanie usunięta; Jeśli `identifier` nie znaleziono na stosie wewnętrznego, nic nie jest zdjęte ze stosu.  
   
- `n`(opcjonalnie)  
+ `n` (opcjonalnie)  
  Określa wartość, w bajtach, służący do dokumentu. Jeśli opcja kompilatora [/Zp](../build/reference/zp-struct-member-alignment.md) nie jest ustawiony dla modułu, wartością domyślną dla `n` jest 8. Prawidłowe wartości to 1, 2, 4, 8 do 16. Wyrównanie elementu członkowskiego będzie w granicach jest wielokrotnością liczby `n` lub wielokrotnością rozmiaru elementu członkowskiego, w zależności od jest mniejsza.  
   
- `#pragma pack(pop, identifier, n)`nie jest zdefiniowana.  
+ `#pragma pack(pop, identifier, n)` nie jest zdefiniowana.  
   
  Aby uzyskać więcej informacji na temat sposobu modyfikowania wyrównania zobacz następujące tematy:  
   
 -   [__alignof](../cpp/alignof-operator.md)  
   
--   [Dopasuj](../cpp/align-cpp.md)  
+-   [align](../cpp/align-cpp.md)  
   
 -   [__unaligned](../cpp/unaligned.md)  
   

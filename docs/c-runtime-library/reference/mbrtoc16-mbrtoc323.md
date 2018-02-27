@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - mbrtoc16
 - mbrtoc32
@@ -30,21 +30,23 @@ f1_keywords:
 - mbrtoc32
 - uchar/mbrtoc16
 - uchar/mbrtoc32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c24a7426c788ac7ecfc98f3e649397912960505a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7e686a39266587fdc214ddbb0757672a57b94314
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 Tłumaczy wielobajtowe pierwszego znaku w ciągu typu narrow na równoważne znaku UTF-16 lub UTF-32.  
@@ -86,11 +88,11 @@ size_t mbrtoc32(
   
 |Wartość|Warunek|  
 |-----------|---------------|  
-|0|Następne `max_bytes` lub mniej znaków skonwertowane z `source` odpowiadają null znaków dwubajtowych jest to wartość, jeśli `destination` nie jest zerowa.<br /><br /> `state`zawiera stan początkowy shift.|  
+|0|Następne `max_bytes` lub mniej znaków skonwertowane z `source` odpowiadają null znaków dwubajtowych jest to wartość, jeśli `destination` nie jest zerowa.<br /><br /> `state` zawiera stan początkowy shift.|  
 |Między 1 a `max_bytes`włącznie|Wartość zwracana jest liczba bajtów `source` który ukończyć prawidłowy znaków wielobajtowych. Przekonwertowana znaków dwubajtowych są przechowywane, jeśli `destination` nie jest zerowa.|  
 |-3|Następny znak szeroki wynikające z poprzedniego wywołania funkcji przechowywanych w `destination` Jeśli `destination` nie jest zerowa. Brak bajtów z `source` są używane przez wywołanie tej funkcji.<br /><br /> Gdy `source` wskazuje znaków wielobajtowych, która wymaga więcej niż jednego znaku dwubajtowe do reprezentowania (na przykład para zastępcza), a następnie `state` wartość jest aktualizowana, aby następnym wywołaniu funkcji zapisuje się dodatkowych znaków.|  
 |-2|Następne `max_bytes` bajty reprezentują ukończona, ale potencjalnie prawidłowy, wielobajtowe znaków. Wartość nie jest przechowywana w `destination`. Wynik ten może wystąpić, jeśli `max_bytes` wynosi zero.|  
-|-1|Wystąpił błąd kodowania. Następne `max_bytes` lub mniej bajtów nie wspierają znaków wielobajtowych pełne i prawidłowe. Wartość nie jest przechowywana w `destination`.<br /><br /> `EILSEQ`znajduje się w `errno` i stan konwersji `state` jest nieokreślony.|  
+|-1|Wystąpił błąd kodowania. Następne `max_bytes` lub mniej bajtów nie wspierają znaków wielobajtowych pełne i prawidłowe. Wartość nie jest przechowywana w `destination`.<br /><br /> `EILSEQ` znajduje się w `errno` i stan konwersji `state` jest nieokreślony.|  
   
 ## <a name="remarks"></a>Uwagi  
  `mbrtoc16` Funkcja odczytuje do `max_bytes` bajtów z `source` można znaleźć pierwszego znaków wielobajtowych pełną, prawidłowy, a następnie magazynów równoważne UTF-16 znaków w `destination`. Źródło, z jaką bajty są interpretowane zgodnie z bieżącym wielobajtowe ustawienia regionalne wątku. Jeśli znaków wielobajtowych wymaga więcej niż jednego znaku danych wyjściowych UTF-16, takie jak para zastępcza, a następnie `state` ma wartość przechowywania po następnym znaku UTF-16 `destination` na następne wywołanie `mbrtoc16`. `mbrtoc32` Funkcji jest taki sam, ale dane wyjściowe są przechowywane w postaci znaku UTF-32.  
@@ -103,7 +105,7 @@ size_t mbrtoc32(
   
 |Funkcja|Nagłówek C|Nagłówek C++|  
 |--------------|--------------|------------------|  
-|`mbrtoc16`,                `mbrtoc32`|\<uchar.h >|\<cuchar >|  
+|`mbrtoc16`,                `mbrtoc32`|\<uchar.h>|\<cuchar >|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -112,6 +114,6 @@ size_t mbrtoc32(
  [Ustawienia regionalne](../../c-runtime-library/locale.md)   
  [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [c16rtomb, c32rtomb](../../c-runtime-library/reference/c16rtomb-c32rtomb1.md)   
- [mbrtowc —](../../c-runtime-library/reference/mbrtowc.md)   
+ [mbrtowc](../../c-runtime-library/reference/mbrtowc.md)   
  [mbsrtowcs —](../../c-runtime-library/reference/mbsrtowcs.md)   
  [mbsrtowcs_s](../../c-runtime-library/reference/mbsrtowcs-s.md)

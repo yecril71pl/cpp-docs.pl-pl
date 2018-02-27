@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::system_clock
 - chrono/std::chrono::system_clock::from_time_t
@@ -14,18 +15,20 @@ f1_keywords:
 - chrono/std::chrono::system_clock::to_time_t
 - chrono/std::chrono::system_clock::is_monotonic Constant
 - chrono/std::chrono::system_clock::is_steady Constant
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 603415b438578258e982f0934161d2de436e2a3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 757094f61d7f58de4f51da46b28dc90105968a99
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="systemclock-structure"></a>system_clock — Struktura
 Reprezentuje *typ zegara* opartego na zegarze w czasie rzeczywistym systemu.  
@@ -61,7 +64,7 @@ struct system_clock;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[from_time_t](#from_time_t)|Statyczna. Zwraca `time_point` która najbardziej podobny przez określony czas.|  
-|[teraz](#now)|Statyczna. Zwraca bieżącą godzinę.|  
+|[Teraz](#now)|Statyczna. Zwraca bieżącą godzinę.|  
 |[to_time_t](#to_time_t)|Statyczna. Zwraca `time_t` obiekt, który najlepiej oblicza przybliżoną określonej `time_point`.|  
   
 ### <a name="public-constants"></a>Publiczny — stałe  
@@ -69,14 +72,14 @@ struct system_clock;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[system_clock::is_monotonic — stała](#is_monotonic_constant)|Określa, czy typ zegara monotoniczna.|  
-|[system_clock::is_steady — stała](#is_steady_constant)|Określa, czy typ zegara jest stałą.|  
+|[system_clock::is_steady Constant](#is_steady_constant)|Określa, czy typ zegara jest stałą.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<chrono >  
   
  **Namespace:** std::chrono  
   
-##  <a name="from_time_t"></a>system_clock::from_time_t
+##  <a name="from_time_t"></a>  system_clock::from_time_t
  Statyczna metoda, która zwraca [time_point —](../standard-library/time-point-class.md) najlepiej odpowiadającej zbliżonego czas reprezentowany przez `Tm`.  
   
 ```  
@@ -87,7 +90,7 @@ static time_point from_time_t(time_t Tm) noexcept;
  `Tm`  
  A [time_t —](../c-runtime-library/standard-types.md) obiektu.  
   
-##  <a name="is_monotonic_constant"></a>system_clock::is_monotonic — stała  
+##  <a name="is_monotonic_constant"></a>  system_clock::is_monotonic — stała  
  Wartość statyczną, który określa, czy typ zegara monotoniczna.  
   
 ```  
@@ -100,7 +103,7 @@ static const bool is_monotonic = false;
 ### <a name="remarks"></a>Uwagi  
  Zegar jest *monotoniczna* Jeśli wartość, która jest zwracana przez pierwsze wywołanie w celu `now()` zawsze jest mniejsza niż wartość zwracaną przez kolejne wywołanie `now()`.  
   
-##  <a name="is_steady_constant"></a>system_clock::is_steady — stała  
+##  <a name="is_steady_constant"></a>  system_clock::is_steady — stała  
  Wartość statyczną, który określa, czy typ zegara *stałej*.  
   
 ```  
@@ -113,7 +116,7 @@ static const bool is_steady = false;
 ### <a name="remarks"></a>Uwagi  
  Zegar jest *stałej* przypadku [monotoniczna](#is_monotonic_constant) i jeśli czas między zegarowych jest stałą.  
   
-##  <a name="now"></a>system_clock::Now
+##  <a name="now"></a>  system_clock::Now
  Metoda statyczna zwraca bieżącą godzinę.  
   
 ```  
@@ -123,7 +126,7 @@ static time_point now() noexcept;
 ### <a name="return-value"></a>Wartość zwracana  
  A [time_point —](../standard-library/time-point-class.md) obiekt, który reprezentuje bieżący czas.  
   
-##  <a name="to_time_t"></a>system_clock::to_time_t
+##  <a name="to_time_t"></a>  system_clock::to_time_t
  Statyczna metoda, która zwraca [time_t —](../c-runtime-library/standard-types.md) najlepiej odpowiadającej zbliżonego czas reprezentowany przez `Time`.  
   
 ```  
@@ -136,5 +139,5 @@ static time_t to_time_t(const time_point& Time) noexcept;
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
- [\<chrono >](../standard-library/chrono.md)   
+ [\<chrono>](../standard-library/chrono.md)   
  [steady_clock, struktura](../standard-library/steady-clock-struct.md)

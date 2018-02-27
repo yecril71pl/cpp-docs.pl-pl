@@ -4,40 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
-- connecting to web services, Windows Store apps [C++]
+- connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5fef2e682f8e2036eb2919c20879c60e879ec845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e778c03368a634c349ec7c3ef241a29314cac4ea
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Wskazówki: Łączenie za pomocą zadań i żądań XML HTTP
-Ten przykład przedstawia sposób użycia [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) i [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfejsy wraz z zadań do wysyłania żądań HTTP GET i POST do usługi sieci web w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji. Połączenie interfejsu `IXMLHTTPRequest2` z zadaniami pozwala pisać kod, który komponuje się z innymi zadaniami. Na przykład zadanie pobierania można umieścić w łańcuchu zadań. Zadanie pobierania może być również inicjowane w odpowiedzi na anulowanie pracy.  
+Ten przykład przedstawia sposób użycia [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) i [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfejsy wraz z zadań do wysyłania żądań HTTP GET i POST do usługi sieci web w Universal Windows Platform (platformy uniwersalnej systemu Windows ) aplikacji. Połączenie interfejsu `IXMLHTTPRequest2` z zadaniami pozwala pisać kod, który komponuje się z innymi zadaniami. Na przykład zadanie pobierania można umieścić w łańcuchu zadań. Zadanie pobierania może być również inicjowane w odpowiedzi na anulowanie pracy.  
   
 > [!TIP]
->  Można także za pomocą zestawu SDK REST języka C++ wykonywać żądania HTTP z aplikacji języka C++ do sklepu [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] oraz z klasycznych aplikacji języka C++. Aby uzyskać więcej informacji, zobacz [C++ REST SDK (nazwa kodowa "Casablanca")](https://github.com/Microsoft/cpprestsdk).  
+>  C++ REST SDK służy również do wykonywania żądań HTTP z aplikacji platformy uniwersalnej systemu Windows przy użyciu aplikacji C++ lub z pulpitu aplikacji C++. Aby uzyskać więcej informacji, zobacz [C++ REST SDK (nazwa kodowa "Casablanca")](https://github.com/Microsoft/cpprestsdk).  
   
- Aby uzyskać więcej informacji o zadaniach, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Aby uzyskać więcej informacji o sposobie używania zadań w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji, zobacz [asynchronicznego programowania w języku C++](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31) i [tworzenie operacji asynchronicznych w języku C++ dla aplikacji ze Sklepu Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+ Aby uzyskać więcej informacji o zadaniach, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Aby uzyskać więcej informacji o sposobie używania zadania w aplikacji platformy uniwersalnej systemu Windows, zobacz [asynchronicznego programowania w języku C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) i [tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
   
- W tym dokumencie najpierw pokazano, jak utworzyć klasę `HttpRequest` i jej klasy pomocnicze. Następnie pokazano sposób użycia tej klasy z aplikacji do sklepu [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] wykorzystującej języki C++ i XAML.  
+ W tym dokumencie najpierw pokazano, jak utworzyć klasę `HttpRequest` i jej klasy pomocnicze. Następnie pokaże sposobu korzystania z tej klasy z aplikacji platformy uniwersalnej systemu Windows, który używa C++ i XAML.  
   
  Na przykład bardziej szczegółowy, która używa `HttpReader` klasy opisanych w tym dokumencie, zobacz [tworzenie Bing Maps podróży optymalizatora aplikacji ze Sklepu Windows w JavaScript i C++](http://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30). Innym przykładem, który używa `IXMLHTTPRequest2` , ale nie korzystać z zadań, zobacz [Szybki Start: łączenie za pomocą XML (IXMLHTTPRequest2) żądania HTTP](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35).  
   
 > [!TIP]
->  `IXMLHTTPRequest2` i `IXMLHTTPRequest2Callback` to interfejsy, które polecamy do stosowania w aplikacjach do sklepu [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Niniejszy przykład można również przystosować do aplikacji klasycznej.  
+>  `IXMLHTTPRequest2` i `IXMLHTTPRequest2Callback` interfejsów, które są zalecane do użycia w aplikacji platformy uniwersalnej systemu Windows. Niniejszy przykład można również przystosować do aplikacji klasycznej.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
   
@@ -68,8 +71,8 @@ Ten przykład przedstawia sposób użycia [IXMLHTTPRequest2](http://msdn.microso
   
      [!code-cpp[concrt-using-ixhr2#3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_3.cpp)]  
   
-## <a name="using-the-httprequest-class-in-a-includewin8appnamelongbuildincludeswin8appnamelongmdmd-app"></a>Za pomocą klasy HttpRequest w [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplikacji  
- W tej sekcji przedstawiono wykorzystanie klasy `HttpRequest` w aplikacji do sklepu [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Aplikacja zawiera pole wprowadzania danych definiujące zasób adresu URL, polecenia przycisków wykonujące operacje GET i POST oraz polecenie przycisku, które anuluje bieżącą operację.  
+## <a name="using-the-httprequest-class-in-a-uwp-app"></a>Za pomocą klasy HttpRequest w aplikacji platformy uniwersalnej systemu Windows  
+ W tej sekcji przedstawiono sposób użycia `HttpRequest` klasy w aplikacji platformy uniwersalnej systemu Windows. Aplikacja zawiera pole wprowadzania danych definiujące zasób adresu URL, polecenia przycisków wykonujące operacje GET i POST oraz polecenie przycisku, które anuluje bieżącą operację.  
   
 #### <a name="to-use-the-httprequest-class"></a>Aby użyć klasy HttpRequest  
   
@@ -112,7 +115,7 @@ Ten przykład przedstawia sposób użycia [IXMLHTTPRequest2](http://msdn.microso
   
  Oto działająca aplikacja:  
   
- ![Uruchomionej aplikacji ze Sklepu Windows](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
+ ![Uruchomionej aplikacji środowiska wykonawczego systemu Windows](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
   
 ## <a name="next-steps"></a>Następne kroki  
  [Środowisko uruchomieniowe współbieżności — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
@@ -120,8 +123,8 @@ Ten przykład przedstawia sposób użycia [IXMLHTTPRequest2](http://msdn.microso
 ## <a name="see-also"></a>Zobacz też  
  [Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [Anulowanie w PPL](cancellation-in-the-ppl.md)   
- [Programowanie asynchroniczne w języku C++](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31)   
- [Tworzenie operacji asynchronicznych w języku C++ dla aplikacji ze Sklepu Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
+ [Programowanie asynchroniczne w języku C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   
+ [Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
  [Szybki Start: Łączenie się za pomocą XML (IXMLHTTPRequest2) żądania HTTP](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
  [Task — klasa (współbieżność środowiska wykonawczego)](../../parallel/concrt/reference/task-class.md)   
  [task_completion_event, klasa](../../parallel/concrt/reference/task-completion-event-class.md)

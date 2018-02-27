@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - regex/std::operator!=
 - regex/std::operator>
@@ -14,24 +14,25 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 7c37cc1a2708346ed8af0fd8b5df9a91a625feb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 40dd9bb9a674542d216ced2bb53b65efeb5d34a0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltregexgt-operators"></a>&lt;wyrażenie regularne&gt; operatory
 ||||  
 |-|-|-|  
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
-|[operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[Operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Nie równa się porównania dla różnych obiektów.  
   
 ```  
@@ -148,7 +149,7 @@ sub != "aab" == true
 sub != 'a' == true  
 ```  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt"></a>  Operator&lt;  
  Mniej niż porównania dla różnych obiektów.  
   
 ```  
@@ -256,7 +257,7 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="op_lt_lt"></a>operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  Operator&lt;&lt;  
  Wstawia sub_match — w strumieniu.  
   
 ```  
@@ -314,7 +315,7 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  Operator&lt;=  
  Mniejsze niż lub równa porównania dla różnych obiektów.  
   
 ```  
@@ -422,7 +423,7 @@ sub <= "aab" == true
 sub <= 'a' == false  
 ```  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Taki sam porównania dla różnych obiektów.  
   
 ```  
@@ -547,7 +548,7 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="op_gt"></a>operator&gt;  
+##  <a name="op_gt"></a>  Operator&gt;  
  Większa niż porównania dla różnych obiektów.  
   
 ```  
@@ -655,7 +656,7 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  Operator&gt;=  
  Większe lub równe porównania dla różnych obiektów.  
   
 ```  
@@ -763,13 +764,13 @@ sub >= 'a' == true
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
-[\<wyrażenie regularne >](../standard-library/regex.md)  
-[regex_constants — klasa](../standard-library/regex-constants-class.md)  
-[regex_error — klasa](../standard-library/regex-error-class.md)  
+[\<regex>](../standard-library/regex.md)  
+[regex_constants, klasa](../standard-library/regex-constants-class.md)  
+[regex_error, klasa](../standard-library/regex-error-class.md)  
 [\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)  
-[regex_iterator — klasa](../standard-library/regex-iterator-class.md)  
-[regex_token_iterator — klasa](../standard-library/regex-token-iterator-class.md)  
-[regex_traits — klasa](../standard-library/regex-traits-class.md)  
+[regex_iterator, klasa](../standard-library/regex-iterator-class.md)  
+[regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)  
+[regex_traits, klasa](../standard-library/regex-traits-class.md)  
 [\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)  
 
 

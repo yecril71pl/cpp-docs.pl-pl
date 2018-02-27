@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array/std::array::operator!=
 - array/std::array::operator<
@@ -13,25 +13,26 @@ f1_keywords:
 - array/std::array::operator>
 - array/std::array::operator>=
 - array/std::array::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: e4854303bc80603ccbdf908aefc31f304487fb1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 4a42ddf39044e97ca6297cfbc5a55810981f7778
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltarraygt-operators"></a>&lt;Tablica&gt; operatory
 \<Tablicy > Nagłówek zawiera te `array` porównania niebędący elementem członkowskim szablonu funkcji.  
   
 ||||  
 |-|-|-|  
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[Operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Porównanie tablicy nie jest równa.  
   
 ```  
@@ -101,7 +102,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt"></a>  Operator&lt;  
  Tablica porównania, poniżej.  
   
 ```  
@@ -172,7 +173,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  Operator&lt;=  
  Porównanie tablicy mniejsza lub równa.  
   
 ```  
@@ -243,7 +244,7 @@ true
 false  
 ```  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Porównanie tablicy takie same.  
   
 ```  
@@ -314,7 +315,7 @@ true
 false  
 ```  
   
-##  <a name="op_gt"></a>operator&gt;  
+##  <a name="op_gt"></a>  Operator&gt;  
  Porównanie tablicy przekracza.  
   
 ```  
@@ -385,7 +386,7 @@ false
 true  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  Operator&gt;=  
  Większe lub równe porównanie tablicy.  
   
 ```  
@@ -457,5 +458,5 @@ false
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Tablica >](../standard-library/array.md)
+ [\<array>](../standard-library/array.md)
 

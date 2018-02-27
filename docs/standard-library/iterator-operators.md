@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xutility/std::operator!=
 - xutility/std::operator&gt;
@@ -15,9 +15,10 @@ f1_keywords:
 - xutility/std::operator+
 - xutility/std::operator-
 - xutility/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
-caps.latest.revision: "10"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (iterator)
@@ -25,20 +26,20 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: a6e5d30b970c3887c9ac7641ec39275acd9cd79d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 8d045aa1f32d3613eb4ed11af63a29e80e37b738
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;Iterator&gt; operatory
 ||||  
 |-|-|-|  
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator +](#op_add)|  
-|[operator-](#operator-)|[operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[Operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|  
+|[operator-](#operator-)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Testuje, czy obiekt iteratora po lewej stronie operatora nie jest równy obiektowi iteratora po prawej stronie.  
   
 ```  
@@ -127,7 +128,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Testuje, czy obiekt iteratora po lewej stronie operatora jest równy obiektowi iteratora po prawej stronie.  
   
 ```  
@@ -160,7 +161,7 @@ bool operator==(
  Obiekt typu iteratora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli iteratora obiekty są równe; `false` obiekty iterator nie są równe.  
+ `true` Jeśli iteratora obiekty są równe; `false` obiekty iterator nie są równe.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeden z obiektów iteratora jest równa innej, jeśli odnoszą się do tych samych elementów w kontenerze. Jeśli punkt Iteratory dwóch różnych elementów w kontenerze, następnie nie są takie same.  
@@ -229,7 +230,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt"></a>  Operator&lt;  
  Testuje, czy obiekt iteratora po lewej stronie operatora jest mniejszy niż obiekt iteratora po prawej stronie.  
   
 ```  
@@ -316,7 +317,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than the iterator rVPOS2.  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  Operator&lt;=  
  Testuje, czy obiekt iteratora po lewej stronie operatora jest mniejszy niż lub równy obiektowi iteratora po prawej stronie.  
   
 ```  
@@ -407,7 +408,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="op_gt"></a>operator&gt;  
+##  <a name="op_gt"></a>  Operator&gt;  
  Testuje, czy obiekt iteratora po lewej stronie operatora jest większy niż obiekt iteratora po prawej stronie.  
   
 ```  
@@ -492,7 +493,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than the iterator rVPOS2.  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  Operator&gt;=  
  Testuje, czy obiekt iteratora po lewej stronie operatora jest większy niż lub równy obiektowi iteratora po prawej stronie.  
   
 ```  
@@ -583,7 +584,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="op_add"></a>operator +  
+##  <a name="op_add"></a>  operator +  
  Dodaje przesunięcia do iteratora i zwraca `move_iterator` lub `reverse_iterator` adresowania wstawiony element w nowe położenie przesunięcia.  
   
 ```  
@@ -659,7 +660,7 @@ The iterator rVPOS1 now points to the fifth element
  in the reversed sequence: 2.  
 ```  
   
-##  <a name="operator-"></a>operator-  
+##  <a name="operator-"></a>  operator-  
  Odejmuje jeden iterator od innego i zwraca różnicę.  
   
 ```  
@@ -682,14 +683,14 @@ Tdiff operator-(
  Iteratora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różnica między dwoma Iteratory`.`  
+ Różnica między dwoma Iteratory `.`  
   
 ### <a name="remarks"></a>Uwagi  
  Zwraca pierwszy operator szablonu `left.base() - right.base()`.  
   
  Drugi operator szablonu zwraca `right.current - left.current`.  
   
- `Tdiff`jest określana przez typ zwracane wyrażenie. W przeciwnym razie jest `RandomIterator1::difference_type`.  
+ `Tdiff` jest określana przez typ zwracane wyrażenie. W przeciwnym razie jest `RandomIterator1::difference_type`.  
   
 ### <a name="example"></a>Przykład  
   
@@ -749,5 +750,5 @@ The difference: rVPOS2 - rVPOS1= 4.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Iterator >](../standard-library/iterator.md)
+ [\<iterator>](../standard-library/iterator.md)
 

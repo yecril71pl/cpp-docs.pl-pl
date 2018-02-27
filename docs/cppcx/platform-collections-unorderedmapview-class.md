@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMapView
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c172246bc0e8fd7acb1661a9547fee3bf6c24421
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView — Klasa
 Reprezentuje widok tylko do odczytu do *mapy*, która jest kolekcją par klucz wartość.  
@@ -52,7 +54,7 @@ ref class UnorderedMapView sealed;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Unorderedmapview::unorderedmapview —](#ctor)|Inicjuje nowe wystąpienie klasy UnorderedMapView.|  
+|[UnorderedMapView::UnorderedMapView](#ctor)|Inicjuje nowe wystąpienie klasy UnorderedMapView.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -72,7 +74,7 @@ ref class UnorderedMapView sealed;
   
  **Namespace:** Platform::Collections  
 
-## <a name="first"></a>UnorderedMapView::First — metoda
+## <a name="first"></a>  UnorderedMapView::First — metoda
 Zwraca iteratora określająca pierwszy [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) element nieuporządkowaną mapy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -91,7 +93,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>UnorderedMapView::HasKey — metoda
+## <a name="haskey"></a>  UnorderedMapView::HasKey — metoda
 Określa, czy bieżący UnorderedMap zawiera określony klucz.  
   
 ### <a name="syntax"></a>Składnia  
@@ -105,11 +107,11 @@ bool HasKey(K key);
  Klucz używana do lokalizowania elementu. Typ `key` jest typename *K*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.  
+ `true` Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.  
   
 
 
-## <a name="lookup"></a>UnorderedMapView::Lookup — metoda
+## <a name="lookup"></a>  UnorderedMapView::Lookup — metoda
 Pobiera wartość typu V skojarzony z określonym kluczem typu K.  
   
 ### <a name="syntax"></a>Składnia  
@@ -127,7 +129,7 @@ V Lookup(K key);
   
 
 
-## <a name="size"></a>UnorderedMapView::Size — metoda
+## <a name="size"></a>  UnorderedMapView::Size — metoda
 Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementów w UnorderedMapView.  
   
 ### <a name="syntax"></a>Składnia  
@@ -141,7 +143,7 @@ virtual property unsigned int Size;
   
 
 
-## <a name="split"></a>UnorderedMapView::Split — metoda
+## <a name="split"></a>  UnorderedMapView::Split — metoda
 Bieżący obiekt UnorderedMapView jest podzielony na dwa obiekty UnorderedMapView. Ta metoda jest nie działa.  
   
 ### <a name="syntax"></a>Składnia  
@@ -166,7 +168,7 @@ void Split(
   
 
 
-## <a name="ctor"></a>Unorderedmapview::unorderedmapview — Konstruktor
+## <a name="ctor"></a>  Unorderedmapview::unorderedmapview — Konstruktor
 Inicjuje nowe wystąpienie klasy UnorderedMapView.  
   
 ### <a name="syntax"></a>Składnia  

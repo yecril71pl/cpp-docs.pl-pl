@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - asinh
 - asinhf
@@ -28,22 +29,24 @@ f1_keywords:
 - asinhf
 - asinhl
 - asinh
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - asinh function
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd9e19a9729f53aae9f3a4fd32787a9ae02eae7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 563e8a87adc07707aa6eb9baaacb634321bd768e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 Oblicza sinus hiperboliczny.  
@@ -75,9 +78,9 @@ long double asinhl(
 ## <a name="return-value"></a>Wartość zwracana  
  `asinh` Hyberbolic odwrotny sinus (arcus sinus hiperboliczny) zwracają `x`. Ta funkcja jest prawidłowa w zmiennoprzecinkowe domenie. Jeśli `x` jest NaN quiet — nieokreślony, lub nieskończoności, jest zwracana przez tę samą wartość.  
   
-|Dane wejściowe|Wyjątek SEH|`_matherr`Wyjątek|  
+|Dane wejściowe|Wyjątek SEH|`_matherr` Wyjątek|  
 |-----------|-------------------|--------------------------|  
-|INF QNAN, IND GRANICACH|brak|brak|  
+|± QNAN, IND, INF|brak|brak|  
   
 ## <a name="remarks"></a>Uwagi  
  Korzystając z języka C++, można wywoływać przeciążenia `asinh` który przyjmować i zwracać `float` lub `long double` wartości. W programie C `asinh` zawsze przyjmuje i zwraca `double`.  
@@ -86,7 +89,7 @@ long double asinhl(
   
 |Funkcja|Nagłówek C|Nagłówek C++|  
 |--------------|--------------|------------------|  
-|`asinh`, `asinhf`, `asinhl`|\<Math.h >|\<cmath >|  
+|`asinh`, `asinhf`, `asinhl`|\<math.h>|\<cmath>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -120,9 +123,9 @@ asinh( 0.868671 ) = 0.785398
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [COS, cosf —, cosl —, cosh, coshf — coshl —](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
+ [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
  [ACOSH acoshf —, acoshl](../../c-runtime-library/reference/acosh-acoshf-acoshl.md)   
- [SIN, sinf —, sinl —, sinh sinhf —, sinhl —](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
+ [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [TAN, tanf —, tanl —, tanh tanhf —, tanhl —](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [ATANH atanhf —, atanhl —](../../c-runtime-library/reference/atanh-atanhf-atanhl.md)   
+ [atanh, atanhf, atanhl](../../c-runtime-library/reference/atanh-atanhf-atanhl.md)   
  [_CItan](../../c-runtime-library/citan.md)

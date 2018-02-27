@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: VCCORLIB/Platform::Guid
-dev_langs: C++
-helpviewer_keywords: Platform::Guid Struct
+ms.topic: reference
+f1_keywords:
+- VCCORLIB/Platform::Guid
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e65f4d046f35656cb91374c085ef2a6e4a507302
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5323c934efb7d9416d1016f355390288885cb0c9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformguid-value-class"></a>Klasa wartości Platform::Guid
 Reprezentuje [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) typu w systemie typów środowiska wykonawczego systemu Windows.  
@@ -37,9 +41,9 @@ public value struct Guid
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |[Identyfikator GUID](#ctor)|Inicjuje nowe wystąpienie struktury identyfikatora Guid.|  
-|[operator ==](#operator-equality)|Operator równości.|  
+|[operator==](#operator-equality)|Operator równości.|  
 |[operator!=](#operator-not-equal)|Nie równa się operatora.|  
-|[Operator()](#operator-call)|Konwertuje identyfikator Guid na identyfikator GUID.|  
+|[operator()](#operator-call)|Konwertuje identyfikator Guid na identyfikator GUID.|  
   
 ### <a name="remarks"></a>Uwagi  
  Na przykład sposób generowania nowego Platform::Guid, za pomocą funkcji Windows [funkcji CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx), zobacz [składnika WinRT: sposób generowania identyfikatora GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
@@ -54,7 +58,7 @@ public value struct Guid
  **Metadane:** platform.winmd  
 
  
-## <a name="ctor"></a>Konstruktory GUID::GUID
+## <a name="ctor"></a> Konstruktory GUID::GUID
 Inicjuje nowe wystąpienie struktury identyfikatora Guid.  
   
 ### <a name="syntax"></a>Składnia  
@@ -124,7 +128,7 @@ Inicjuje nowe wystąpienie struktury identyfikatora Guid.
  Pozostała liczba 8 bajtów identyfikatora GUID.  
   
 
-## <a name="operator-equality"></a>GUID::operator == — Operator
+## <a name="operator-equality"></a> GUID::operator == — Operator
 Porównuje dwa identyfikatory GUID.  
   
 ### <a name="syntax"></a>Składnia  
@@ -136,7 +140,7 @@ Platform::Guid::operator==
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość true, jeśli dwa identyfikatory GUID są takie same.
 
-## <a name="operator-inequality"></a>GUID::operator! = — Operator
+## <a name="operator-inequality"></a> GUID::operator! = — Operator
 Porównuje dwa identyfikatory GUID.  
   
 ### <a name="syntax"></a>Składnia  
@@ -150,7 +154,7 @@ Platform::Guid::operator!=
 
 
 
-## <a name="operator-call"></a>GUID::operator() Operator
+## <a name="operator-call"></a> GUID::operator() Operator
 Konwertuje niejawnie [struktury GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)identyfikator GUID na Platform::Guid.  
   
 ### <a name="syntax"></a>Składnia  

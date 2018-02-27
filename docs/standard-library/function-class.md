@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - functional/std::function
 - functional/std::function::result_type
@@ -16,7 +17,8 @@ f1_keywords:
 - functional/std::function::target_type
 - functional/std::function::operator unspecified
 - functional/std::function::operator()
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::function [C++]
 - std::function [C++], result_type
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a07538c7f3ddd58e45fc23a4fc2c9c13850f08a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4dfc5366adece188fa80786ddee2dfb926ae5e3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="function-class"></a>function — Klasa
 Otoka dla obiekt można wywołać.  
@@ -99,13 +102,13 @@ public:
   
  Niektóre funkcje Członkowskie zająć argument, który określa obiekt docelowy. Argument operacji można określić na kilka sposobów:  
   
- `fn`— można wywołać obiektu `fn`; po wywołaniu metody `function` obiektu przechowuje kopię`fn`  
+ `fn` — można wywołać obiektu `fn`; po wywołaniu metody `function` obiektu przechowuje kopię `fn`  
   
- `fnref`— można wywołać obiektu o nazwie `fnref.get()`; po wywołaniu metody `function` obiektu zawiera odwołanie do`fnref.get()`  
+ `fnref` — można wywołać obiektu o nazwie `fnref.get()`; po wywołaniu metody `function` obiektu zawiera odwołanie do `fnref.get()`  
   
- `right`— można wywołać obiektu, jeśli taki występuje, posiadaniu `function` obiektu`right`  
+ `right` — można wywołać obiektu, jeśli taki występuje, posiadaniu `function` obiektu `right`  
   
- `npc`--wskaźnika o wartości null; Po wywołaniu metody `function` obiektu jest pusty  
+ `npc` --wskaźnika o wartości null; Po wywołaniu metody `function` obiektu jest pusty  
   
  We wszystkich przypadkach `INVOKE(f, t1, t2, ..., tN)`, gdzie `f` można wywołać obiektu i `t1, t2, ..., tN` są lvalues typów `T1, T2, ..., TN` odpowiednio, musi być poprawnie sformułowany i, jeżeli `Ret` nie jest void, można przekonwertować na typ `Ret`.  
   
@@ -145,7 +148,7 @@ public:
   
  **Namespace:** Standard  
   
-##  <a name="assign"></a>Function::ASSIGN  
+##  <a name="assign"></a>  Function::ASSIGN  
  Przypisuje można wywołać obiektu do obiektu tej funkcji.  
   
 ```  
@@ -173,7 +176,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>Uwagi  
  Funkcje Członkowskie każdego Zamień `callable object` posiadaniu `*this` można wywołać obiektu przekazany jako `operand`. Oba przydzielić magazyn z obiektem alokatora `Ax`.  
   
-##  <a name="function"></a>Function::Function  
+##  <a name="function"></a>  Function::Function  
  Tworzy otoki, która jest pusta lub przechowuje dowolnego typu za pomocą stałych podpisu można wywołać obiektu.  
   
 ```  
@@ -287,7 +290,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="op_unspecified"></a>Function::operator nieokreślone  
+##  <a name="op_unspecified"></a>  Function::operator nieokreślone  
  Testy, jeśli istnieje przechowywanej można wywołać obiektu.  
   
 ```  
@@ -327,7 +330,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="op_call"></a>Funkcja:: operator()  
+##  <a name="op_call"></a>  Funkcja:: operator()  
  Wywołuje można wywołać obiektu.  
   
 ```  
@@ -375,7 +378,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="op_eq"></a>Function::operator =  
+##  <a name="op_eq"></a>  Function::operator =  
  Zastępuje przechowywanej można wywołać obiektu.  
   
 ```  
@@ -454,7 +457,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="result_type"></a>Function::result_type  
+##  <a name="result_type"></a>  Function::result_type  
  Typ zwracany przechowywanej można wywołać obiektu.  
   
 ```  
@@ -494,7 +497,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="swap"></a>Function::swap  
+##  <a name="swap"></a>  Function::swap  
  Zamień dwa obiekty można wywołać.  
   
 ```  
@@ -550,7 +553,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="target"></a>Function::target  
+##  <a name="target"></a>  Function::target  
  Testy, jeśli można wywołać obiektu przechowywana jest można wywołać określone.  
   
 ```  
@@ -609,7 +612,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="target_type"></a>Function::target_type  
+##  <a name="target_type"></a>  Function::target_type  
  Pobiera informacji o typie można wywołać obiektu.  
   
 ```  
@@ -654,5 +657,5 @@ type == void
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [mem_fn —](../standard-library/functional-functions.md#mem_fn)   
+ [mem_fn](../standard-library/functional-functions.md#mem_fn)   
  [reference_wrapper, klasa](../standard-library/reference-wrapper-class.md)

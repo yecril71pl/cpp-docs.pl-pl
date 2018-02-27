@@ -5,17 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-ms.workload: cplusplus
-ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88bae92c568285e44965d6bfaca399709105d323
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-http-utility-functions"></a>Funkcje pomocnicze HTTP ATL
 
@@ -35,7 +36,7 @@ Te funkcje obsługuje manipulowania adresów URL.
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlutil.h  
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 Wywołaj tę funkcję, aby nadać postać kanoniczną adresowi URL, co obejmuje konwersję niebezpiecznych znaków i spacji na sekwencje unikowe.  
   
 ```    
@@ -59,13 +60,13 @@ inline BOOL AtlCanonicalizeUrl(
  `dwFlags`  
  ATL_URL flagi sterujące zachowaniem tej funkcji. 
 
-- `ATL_URL_BROWSER_MODE`Nie kodowania i dekodowania znaków po "#" lub "?", a nie powoduje usunięcia końcu spację po "?". Jeśli ta wartość nie jest określona, cały adres URL jest zakodowany i usunięciu wiodących znaków odstępu.
-- `ATL_URL_DECODE`Konwertuje wszystkie sekwencje XX % znaków, w tym sekwencji unikowych przed analizowania adresu URL.
-- `ATL_URL_ENCODE_PERCENT`Koduje wszelkie znaki procentu napotkano. Domyślnie nie są kodowane procentu.
-- `ATL_URL_ENCODE_SPACES_ONLY`Koduje tylko spacje.
-- `ATL_URL_ESCAPE`Konwertuje wszystkie sekwencje unikowe (% XX) do ich odpowiednich znaków.
-- `ATL_URL_NO_ENCODE`Nie konwertuje sekwencje specjalne znaków niebezpieczne.
-- `ATL_URL_NO_META`Nie powoduje usunięcia meta sekwencje (takich jak "."i"..") z adresu URL. 
+- `ATL_URL_BROWSER_MODE` Nie kodowania i dekodowania znaków po "#" lub "?", a nie powoduje usunięcia końcu spację po "?". Jeśli ta wartość nie jest określona, cały adres URL jest zakodowany i usunięciu wiodących znaków odstępu.
+- `ATL_URL_DECODE` Konwertuje wszystkie sekwencje XX % znaków, w tym sekwencji unikowych przed analizowania adresu URL.
+- `ATL_URL_ENCODE_PERCENT` Koduje wszelkie znaki procentu napotkano. Domyślnie nie są kodowane procentu.
+- `ATL_URL_ENCODE_SPACES_ONLY` Koduje tylko spacje.
+- `ATL_URL_ESCAPE` Konwertuje wszystkie sekwencje unikowe (% XX) do ich odpowiednich znaków.
+- `ATL_URL_NO_ENCODE` Nie konwertuje sekwencje specjalne znaków niebezpieczne.
+- `ATL_URL_NO_META` Nie powoduje usunięcia meta sekwencje (takich jak "."i"..") z adresu URL. 
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **TRUE** w przypadku powodzenia **FALSE** w przypadku awarii.  
@@ -76,7 +77,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="see-also"></a>Zobacz też  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
- ## <a name="atlcombineurl"></a>AtlCombineUrl
+ ## <a name="atlcombineurl"></a> AtlCombineUrl
  Wywołaj tę funkcję, aby połączyć podstawowy adres URL i względny adres URL w jeden kanoniczny adres URL.  
   
 ```    
@@ -110,7 +111,7 @@ inline BOOL AtlCombineUrl(
 ### <a name="remarks"></a>Uwagi  
  Zachowuje się jak bieżąca wersja [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) , ale nie wymaga WinInet lub program Internet Explorer do zainstalowania.  
   
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a> AtlEscapeUrl
  Wywołaj tę funkcję, aby skonwertować wszystkie niebezpieczne znaki na sekwencje ucieczki.  
   
 ```    
@@ -162,7 +163,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  [ATL_URL_PORT](atl-typedefs.md#atl_url_port) skojarzonych z określony schemat lub ATL_URL_INVALID_PORT_NUMBER, jeśli schemat nie został rozpoznany.  
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  Wywołaj tę funkcję, aby się dowiedzieć, czy użycie danego znaku w adresie URL jest bezpieczne.  
   
 ```  
@@ -179,7 +180,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="remarks"></a>Uwagi  
  Znaki, które nie powinny być używane w adresach URL można przetestować przy użyciu tej funkcji i konwertowane przy użyciu [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  Wywołaj tę funkcję, aby skonwertować znaki przetworzone przez sekwencje ucieczki z powrotem do ich oryginalnych wartości.  
   
 ```    
@@ -215,7 +216,7 @@ inline BOOL AtlUnescapeUrl(
 ### <a name="remarks"></a>Uwagi  
  Odwraca proces konwersji stosowane przez [AtlEscapeUrl](#atlescapeurl).  
   
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a> RGBToHtml
 Konwertuje [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość odpowiadającą tej wartości koloru tekstu w formacie HTML.  
   
 ```  
@@ -241,7 +242,7 @@ bool inline RGBToHtml(
 ### <a name="remarks"></a>Uwagi  
  Wartość koloru HTML jest znakiem, następuje 6-cyfrowy wartość szesnastkowa cyfry 2 dla każdego składnika czerwony, zielonemu i niebieskiemu koloru (na przykład #FFFFFF jest białe).  
   
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 Wywołaj tę funkcję, aby skonwertować czas systemowy na ciąg znaków w formacie odpowiednim do używania nagłówków HTTP.  
   
 ```  
@@ -254,7 +255,7 @@ inline void SystemTimeToHttpDate(
  `st`  
  Czas systemowy, które mają zostać uzyskane w postaci ciągu formatu HTTP.  
   
- *strtime —*  
+ *strTime*  
  Odwołanie do zmiennej ciągu otrzymywać HTTP Data i godzina, zgodnie z definicją w dokumencie RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) i RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).  
   
 ## <a name="see-also"></a>Zobacz też  

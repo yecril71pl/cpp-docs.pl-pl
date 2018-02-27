@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: MFC COM (MFC)
-dev_langs: C++
+f1_keywords:
+- MFC COM (MFC)
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, COM support
 - MFC ActiveX controls [MFC], COM support in MFC
@@ -17,16 +20,17 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd9035c7b80b36e8124c827c0b3d1b76c59deb52
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mfc-com"></a>MFC COM
 Podzbiór MFC zaprojektowano w celu obsługi modelu COM, podczas gdy większość Active biblioteki szablonu (ATL) jest przeznaczony dla modelu COM programowania. Tematy w tej części opisano Obsługa MFC dla modelu COM.  
@@ -53,7 +57,7 @@ Podzbiór MFC zaprojektowano w celu obsługi modelu COM, podczas gdy większoś�
   
 -   [Automatyzacja](../mfc/automation.md) (wcześniej znane jako automatyzacji OLE) umożliwia jednej aplikacji do modyfikowania obiektów w innej aplikacji lub "prezentować" obiekty co może manipulować.  
   
-     Automatyczne obiektu może być lokalne lub [zdalnego](../mfc/remote-automation.md) (na innej maszynie jest dostępny w sieci). Automatyzacja jest dostępna dla obiektów COM i OLE.  
+     Automatyczne obiektu może być lokalnym lub zdalnym (na innej maszynie jest dostępny w sieci). Automatyzacja jest dostępna dla obiektów COM i OLE.  
   
 -   Ta sekcja zawiera również informacje dotyczące programowania składników COM za pomocą MFC, na przykład w [punkty połączenia](../mfc/connection-points.md).  
   
@@ -65,8 +69,6 @@ Podzbiór MFC zaprojektowano w celu obsługi modelu COM, podczas gdy większoś�
  [Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md)  
   
  [Automatyzacja](../mfc/automation.md)  
-  
- [Automatyzacja zdalna](../mfc/remote-automation.md)  
   
  [Punkty połączenia](../mfc/connection-points.md)  
   

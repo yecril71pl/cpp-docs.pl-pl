@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
@@ -15,23 +16,25 @@ f1_keywords:
 - chrono/std::chrono::hours
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 46500f4f1658c613ee8422791e46015b0e129532
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 255c70eeb29e8bedaeec43d9844ca41b42fb470a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 Dołącz nagłówek standardowy \<chrono > Aby zdefiniować klasy i funkcje, które reprezentują i modyfikowania okresach czasu i czasie czasu.  
   
- Począwszy od programu Visual Studio 2015, implementacja `steady_clock` został zmieniony w celu spełnienia wymagań C++ Standard opanowanie i monotonicity. `steady_clock`teraz jest oparta na QueryPerformanceCounter() i `high_resolution_clock` jest teraz typedef dla `steady_clock`. W związku z tym w programie Visual C++ `steady_clock::time_point` jest teraz typedef dla `chrono::time_point<steady_clock>`, jednak nie jest w przypadku innych implementacji.  
+ Począwszy od programu Visual Studio 2015, implementacja `steady_clock` został zmieniony w celu spełnienia wymagań C++ Standard opanowanie i monotonicity. `steady_clock` teraz jest oparta na QueryPerformanceCounter() i `high_resolution_clock` jest teraz typedef dla `steady_clock`. W związku z tym w programie Visual C++ `steady_clock::time_point` jest teraz typedef dla `chrono::time_point<steady_clock>`, jednak nie jest w przypadku innych implementacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -60,8 +63,8 @@ Dołącz nagłówek standardowy \<chrono > Aby zdefiniować klasy i funkcje, kt�
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[duration_cast —](../standard-library/chrono-functions.md#duration_cast)|Rzutowania `duration` obiektu określonego typu.|  
-|[time_point_cast —](../standard-library/chrono-functions.md#time_point_cast)|Rzutowania `time_point` obiektu określonego typu.|  
+|[duration_cast](../standard-library/chrono-functions.md#duration_cast)|Rzutowania `duration` obiektu określonego typu.|  
+|[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|Rzutowania `time_point` obiektu określonego typu.|  
   
 ### <a name="operators"></a>Operatory  
   
@@ -72,11 +75,11 @@ Dołącz nagłówek standardowy \<chrono > Aby zdefiniować klasy i funkcje, kt�
 |[Operator modulo](../standard-library/chrono-operators.md#op_modulo)|Operator modulo operacje na `duration` obiektów.|  
 |[operator *](../standard-library/chrono-operators.md#op_star)|Operator mnożenia dla `duration` obiektów.|  
 |[operator /](../standard-library/chrono-operators.md#op_div)|Operator dzielenia dla `duration` obiektów.|  
-|[operator +](../standard-library/chrono-operators.md#op_add)|Dodaje `duration` i `time_point` obiektów.|  
-|[operator&lt;](../standard-library/chrono-operators.md#op_lt)|Określa, czy co najmniej `duration` lub `time_point` obiekt jest mniejszy niż innego `duration` lub `time_point` obiektu.|  
+|[operator+](../standard-library/chrono-operators.md#op_add)|Dodaje `duration` i `time_point` obiektów.|  
+|[Operator&lt;](../standard-library/chrono-operators.md#op_lt)|Określa, czy co najmniej `duration` lub `time_point` obiekt jest mniejszy niż innego `duration` lub `time_point` obiektu.|  
 |[operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Określa, czy co najmniej `duration` lub `time_point` obiekt jest mniejszy niż lub równy do innego `duration` lub `time_point` obiektu.|  
-|[operator ==](../standard-library/chrono-operators.md#op_eq_eq)|Określa, czy dwa `duration` reprezentować przedziały czasu, które mają taką samą długość lub czy dwa `time_point` obiekty reprezentują tego samego punktu w czasie.|  
-|[operator&gt;](../standard-library/chrono-operators.md#op_gt)|Określa, czy co najmniej `duration` lub `time_point` obiekt jest większy niż innego `duration` lub `time_point` obiektu.|  
+|[operator==](../standard-library/chrono-operators.md#op_eq_eq)|Określa, czy dwa `duration` reprezentować przedziały czasu, które mają taką samą długość lub czy dwa `time_point` obiekty reprezentują tego samego punktu w czasie.|  
+|[Operator&gt;](../standard-library/chrono-operators.md#op_gt)|Określa, czy co najmniej `duration` lub `time_point` obiekt jest większy niż innego `duration` lub `time_point` obiektu.|  
 |[operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Określa, czy co najmniej `duration` lub `time_point` obiektu jest większa lub równa innej `duration` lub `time_point` obiektu.|  
   
 ### <a name="predefined-duration-types"></a>Typy wstępnie zdefiniowanego czasu trwania  

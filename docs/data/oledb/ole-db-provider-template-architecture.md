@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB [C++], object model
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c1baa921f4a12aae40a01995cfd0b638cf614d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 122da4031eff1cacfaf3242000cbd36eb7b75356
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektura szablonu dostawcy OLE DB
 ## <a name="data-sources-and-sessions"></a>Źródła i sesje danych  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Zestaw wierszy](../../data/oledb/rowset-object-interfaces.md)  
   
--   [Polecenie](../../data/oledb/command-object-interfaces.md)  
+-   [polecenie](../../data/oledb/command-object-interfaces.md)  
   
 -   [Transakcja](../../data/oledb/transaction-object-interfaces.md)  
   
@@ -53,10 +55,10 @@ ms.lasthandoff: 12/21/2017
   
 |Składnik|Interface|Komentarz|  
 |---------------|---------------|-------------|  
-|[Źródło danych](../../data/oledb/data-source-object-interfaces.md) ([CDataSource](../../data/oledb/cdatasource-class.md))|[wymagane] **IDBCreateSession**<br /><br /> [wymagane] **IDBInitialize**<br /><br /> [wymagane]`IDBProperties`<br /><br /> [wymagane]`IPersist`<br /><br /> [opcjonalnie] **IConnectionPointContainer**<br /><br /> [opcjonalnie] **IDBAsynchStatus**<br /><br /> [opcjonalnie] **IDBDataSourceAdmin**<br /><br /> [opcjonalnie] **Elementu IDBInfo**<br /><br /> [opcjonalnie]`IPersistFile`<br /><br /> [opcjonalnie] **ISupportErrorInfo**|Połączenie z klienta do dostawcy. Obiekt jest używany do określania właściwości połączenia, takie jak nazwa źródła identyfikator, hasło i danych użytkownika. Obiekt mogą służyć do administrowania źródła danych (Tworzenie, aktualizowanie, usuwanie tabel i tak dalej).|  
-|[Sesja](../../data/oledb/session-object-interfaces.md) ([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[wymagane] **IGetDataSource**<br /><br /> [wymagane]`IOpenRowset`<br /><br /> [wymagane] **ISessionProperties**<br /><br /> [opcjonalnie] **IAlterIndex**<br /><br /> [opcjonalnie] **IAlterTable**<br /><br /> [opcjonalnie] **IBindResource**<br /><br /> [opcjonalnie] **ICreateRow**<br /><br /> [opcjonalnie] **IDBCreateCommand**<br /><br /> [opcjonalnie] **IDBSchemaRowset**<br /><br /> [opcjonalnie] **IIndexDefinition**<br /><br /> [opcjonalnie] **ISupportErrorInfo**<br /><br /> [opcjonalnie] **ITableCreation**<br /><br /> [opcjonalnie] **ITableDefinition**<br /><br /> [opcjonalnie] **ITableDefinitionWithConstraints**<br /><br /> [opcjonalnie] **ITransaction**<br /><br /> [opcjonalnie] **ITransactionJoin**<br /><br /> [opcjonalnie] **ITransactionLocal**<br /><br /> [opcjonalnie] **ITransactionObject**|Obiekt sesji reprezentuje pojedynczy rozmowę między klienta oraz dostawcy. Przypomina trochę ODBC **HSTMT** , może istnieć wiele równoczesnych sesji aktywnych.<br /><br /> Obiekt sesji jest łącze podstawowe na uzyskanie dostępu do funkcji OLE DB. Aby przejść do polecenia, transakcji lub obiektu zestawu wierszy, można przejść przez obiekt sesji.|  
-|[Zestaw wierszy](../../data/oledb/rowset-object-interfaces.md) ([CRowset](../../data/oledb/crowset-class.md))|[wymagane]`IAccessor`<br /><br /> [wymagane]`IColumnsInfo`<br /><br /> [wymagane] **IConvertType**<br /><br /> [wymagane]`IRowset`<br /><br /> [wymagane]`IRowsetInfo`<br /><br /> [opcjonalnie] **IChapteredRowset**<br /><br /> [opcjonalnie] **IColumnsInfo2**<br /><br /> [opcjonalnie] **IColumnsRowset**<br /><br /> [opcjonalnie] **IConnectionPointContainer**<br /><br /> [opcjonalnie] **IDBAsynchStatus**<br /><br /> [opcjonalnie] **IGetRow**<br /><br /> [opcjonalnie]`IRowsetChange`<br /><br /> [opcjonalnie] **IRowsetChapterMember**<br /><br /> [opcjonalnie] **IRowsetCurrentIndex**<br /><br /> [opcjonalnie] **IRowsetFind**<br /><br /> [opcjonalnie] **IRowsetIdentity**<br /><br /> [opcjonalnie] **IRowsetIndex**<br /><br /> [opcjonalnie]`IRowsetLocate`<br /><br /> [opcjonalnie] **IRowsetRefresh**<br /><br /> [opcjonalnie]`IRowsetScroll`<br /><br /> [opcjonalnie]`IRowsetUpdate`<br /><br /> [opcjonalnie] **IRowsetView**<br /><br /> [opcjonalnie] **ISupportErrorInfo**<br /><br /> [opcjonalnie] **IRowsetBookmark**|Obiektu zestawu wierszy reprezentuje dane ze źródła danych. Obiekt jest odpowiedzialny za powiązania danych i wszystkie podstawowe operacje, (aktualizacji, pobieranie, przenoszenie i inne) na danych. Zawsze masz obiektu zestawu wierszy do przechowywania i obsługi danych.|  
-|[Polecenie](../../data/oledb/command-object-interfaces.md) ([CCommand](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409))|[wymagane]`IAccessor`<br /><br /> [wymagane]`IColumnsInfo`<br /><br /> [wymagane]`ICommand`<br /><br /> [wymagane] **ICommandProperties**<br /><br /> [wymagane]`ICommandText`<br /><br /> [wymagane] **IConvertType**<br /><br /> [opcjonalnie] **IColumnsRowset**<br /><br /> [opcjonalnie] **ICommandPersist**<br /><br /> [opcjonalnie] **ICommandPrepare**<br /><br /> [opcjonalnie]`ICommandWithParameters`<br /><br /> [opcjonalnie] **ISupportErrorInfo**<br /><br /> [opcjonalnie] **ICommandStream**|Obiekt polecenia obsługuje operacje na danych, takich jak zapytania. Może obsługiwać instrukcji sparametryzowanych lub bez parametrów.<br /><br /> Obiekt polecenia również jest odpowiedzialny za obsługę wiązania parametrów, a kolumny danych wyjściowych. Powiązanie jest strukturą, który zawiera informacje dotyczące sposobu kolumnę w zestawie wierszy, powinny zostać pobrane. Zawiera informacje, takie jak numer, typ danych, długość i stanu.|  
+|[Źródło danych](../../data/oledb/data-source-object-interfaces.md) ([CDataSource](../../data/oledb/cdatasource-class.md))|[wymagane] **IDBCreateSession**<br /><br /> [wymagane] **IDBInitialize**<br /><br /> [wymagane] `IDBProperties`<br /><br /> [wymagane] `IPersist`<br /><br /> [opcjonalnie] **IConnectionPointContainer**<br /><br /> [opcjonalnie] **IDBAsynchStatus**<br /><br /> [opcjonalnie] **IDBDataSourceAdmin**<br /><br /> [opcjonalnie] **Elementu IDBInfo**<br /><br /> [opcjonalnie] `IPersistFile`<br /><br /> [opcjonalnie] **ISupportErrorInfo**|Połączenie z klienta do dostawcy. Obiekt jest używany do określania właściwości połączenia, takie jak nazwa źródła identyfikator, hasło i danych użytkownika. Obiekt mogą służyć do administrowania źródła danych (Tworzenie, aktualizowanie, usuwanie tabel i tak dalej).|  
+|[Sesja](../../data/oledb/session-object-interfaces.md) ([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[wymagane] **IGetDataSource**<br /><br /> [wymagane] `IOpenRowset`<br /><br /> [wymagane] **ISessionProperties**<br /><br /> [opcjonalnie] **IAlterIndex**<br /><br /> [opcjonalnie] **IAlterTable**<br /><br /> [opcjonalnie] **IBindResource**<br /><br /> [opcjonalnie] **ICreateRow**<br /><br /> [opcjonalnie] **IDBCreateCommand**<br /><br /> [opcjonalnie] **IDBSchemaRowset**<br /><br /> [opcjonalnie] **IIndexDefinition**<br /><br /> [opcjonalnie] **ISupportErrorInfo**<br /><br /> [opcjonalnie] **ITableCreation**<br /><br /> [opcjonalnie] **ITableDefinition**<br /><br /> [opcjonalnie] **ITableDefinitionWithConstraints**<br /><br /> [opcjonalnie] **ITransaction**<br /><br /> [opcjonalnie] **ITransactionJoin**<br /><br /> [opcjonalnie] **ITransactionLocal**<br /><br /> [opcjonalnie] **ITransactionObject**|Obiekt sesji reprezentuje pojedynczy rozmowę między klienta oraz dostawcy. Przypomina trochę ODBC **HSTMT** , może istnieć wiele równoczesnych sesji aktywnych.<br /><br /> Obiekt sesji jest łącze podstawowe na uzyskanie dostępu do funkcji OLE DB. Aby przejść do polecenia, transakcji lub obiektu zestawu wierszy, można przejść przez obiekt sesji.|  
+|[Zestaw wierszy](../../data/oledb/rowset-object-interfaces.md) ([CRowset](../../data/oledb/crowset-class.md))|[wymagane] `IAccessor`<br /><br /> [wymagane] `IColumnsInfo`<br /><br /> [wymagane] **IConvertType**<br /><br /> [wymagane] `IRowset`<br /><br /> [wymagane] `IRowsetInfo`<br /><br /> [opcjonalnie] **IChapteredRowset**<br /><br /> [opcjonalnie] **IColumnsInfo2**<br /><br /> [opcjonalnie] **IColumnsRowset**<br /><br /> [opcjonalnie] **IConnectionPointContainer**<br /><br /> [opcjonalnie] **IDBAsynchStatus**<br /><br /> [opcjonalnie] **IGetRow**<br /><br /> [opcjonalnie] `IRowsetChange`<br /><br /> [opcjonalnie] **IRowsetChapterMember**<br /><br /> [opcjonalnie] **IRowsetCurrentIndex**<br /><br /> [opcjonalnie] **IRowsetFind**<br /><br /> [opcjonalnie] **IRowsetIdentity**<br /><br /> [opcjonalnie] **IRowsetIndex**<br /><br /> [opcjonalnie] `IRowsetLocate`<br /><br /> [opcjonalnie] **IRowsetRefresh**<br /><br /> [opcjonalnie] `IRowsetScroll`<br /><br /> [opcjonalnie] `IRowsetUpdate`<br /><br /> [opcjonalnie] **IRowsetView**<br /><br /> [opcjonalnie] **ISupportErrorInfo**<br /><br /> [opcjonalnie] **IRowsetBookmark**|Obiektu zestawu wierszy reprezentuje dane ze źródła danych. Obiekt jest odpowiedzialny za powiązania danych i wszystkie podstawowe operacje, (aktualizacji, pobieranie, przenoszenie i inne) na danych. Zawsze masz obiektu zestawu wierszy do przechowywania i obsługi danych.|  
+|[Polecenie](../../data/oledb/command-object-interfaces.md) ([CCommand](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409))|[wymagane] `IAccessor`<br /><br /> [wymagane] `IColumnsInfo`<br /><br /> [wymagane] `ICommand`<br /><br /> [wymagane] **ICommandProperties**<br /><br /> [wymagane] `ICommandText`<br /><br /> [wymagane] **IConvertType**<br /><br /> [opcjonalnie] **IColumnsRowset**<br /><br /> [opcjonalnie] **ICommandPersist**<br /><br /> [opcjonalnie] **ICommandPrepare**<br /><br /> [opcjonalnie] `ICommandWithParameters`<br /><br /> [opcjonalnie] **ISupportErrorInfo**<br /><br /> [opcjonalnie] **ICommandStream**|Obiekt polecenia obsługuje operacje na danych, takich jak zapytania. Może obsługiwać instrukcji sparametryzowanych lub bez parametrów.<br /><br /> Obiekt polecenia również jest odpowiedzialny za obsługę wiązania parametrów, a kolumny danych wyjściowych. Powiązanie jest strukturą, który zawiera informacje dotyczące sposobu kolumnę w zestawie wierszy, powinny zostać pobrane. Zawiera informacje, takie jak numer, typ danych, długość i stanu.|  
 |[Transakcja](../../data/oledb/transaction-object-interfaces.md) (opcjonalnie)|[wymagane] **IConnectionPointContainer**<br /><br /> [wymagane] **ITransaction**<br /><br /> [opcjonalnie] **ISupportErrorInfo**|Obiekt transaction definiuje Atomowej jednostki pracy w źródle danych i określa, jak te jednostki pracy odnoszą się do siebie. Ten obiekt nie jest bezpośrednio obsługiwana przez Szablony dostawców OLE DB (to znaczy tworzenia własnego obiektu).|  
   
  Więcej informacji znajduje się w następujących tematach:  

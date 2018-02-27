@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - tanhf
 - tanh
@@ -36,7 +37,8 @@ f1_keywords:
 - tanf
 - tanhf
 - tanhl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tanl function
 - tanhl function
@@ -51,16 +53,17 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a418683e23525d6e3c46853312b217788c0969e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0c3391d07e78ba177a3ce31abb26bd5b6ef0449c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>TAN, tanf —, tanl —, tanh tanhf —, tanhl —
 Oblicza tangens (`tan`, `tanf`, lub `tanl`), lub tangens hiperboliczny (`tanh`, `tanhf`, lub `tanhl`).  
@@ -109,10 +112,10 @@ long double tanhl(
   
  `tanh` Zwracają tangens hiperboliczny liczby `x`. Nie ma żadnych zwracany błąd.  
   
-|Dane wejściowe|Wyjątek SEH|`Matherr`Wyjątek|  
+|Dane wejściowe|Wyjątek SEH|`Matherr` Wyjątek|  
 |-----------|-------------------|-------------------------|  
-|GRANICACH QNAN, IND|brak|_DOMAIN —|  
-|± ∞  (`tan`, `tanf`)|`INVALID`|_DOMAIN —|  
+|GRANICACH QNAN, IND|brak|_DOMAIN|  
+|± ∞  (`tan`, `tanf`)|`INVALID`|_DOMAIN|  
   
 ## <a name="remarks"></a>Uwagi  
  Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia `tan` i `tanh` który przyjmować i zwracać `float` lub `long double` wartości. W programie C `tan` i `tanh` zawsze przyjmować i zwracać `double`.  
@@ -121,7 +124,7 @@ long double tanhl(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`tan`, `tanf`, `tanl`, `tanh`, `tanhf`, `tanhl`|\<Math.h >|  
+|`tan`, `tanf`, `tanl`, `tanh`, `tanhf`, `tanhl`|\<math.h>|  
   
  Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
   
@@ -158,6 +161,6 @@ tanh( 1.000000 ) = 0.761594
  [ACOS acosf —, acosl —](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [ASIN asinf —, asinl —](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [ATAN, atanf —, atanl —, atan2 atan2f —, atan2l —](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
- [COS, cosf —, cosl —, cosh, coshf — coshl —](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [SIN, sinf —, sinl —, sinh sinhf —, sinhl —](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
+ [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
+ [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [_CItan](../../c-runtime-library/citan.md)

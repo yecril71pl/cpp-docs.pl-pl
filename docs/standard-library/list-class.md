@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - list/std::list
 - list/std::list::allocator_type
@@ -55,7 +56,8 @@ f1_keywords:
 - list/std::list::splice
 - list/std::list::swap
 - list/std::list::unique
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::list [C++]
 - std::list [C++], allocator_type
@@ -105,16 +107,17 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ca9848ba0ad3f5be1584e299a8a2d2b69f472425
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bd49b0ce1ca80c1a006975df085c332f0ef99ad2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="list-class"></a>list — Klasa
 Klasy list standardowa biblioteka C++ jest klasą szablonu sekwencji kontenerów, które utrzymują ich elementów w układzie liniowej i umożliwia efektywne wstawienia i usunięcia w dowolnym miejscu w sekwencji. Sekwencja jest przechowywany jako dwukierunkowy połączonej listy elementów, każda z nich zawiera członka typu *typu*.  
@@ -158,8 +161,8 @@ class list
 |[const_reference](#const_reference)|Typ, który zawiera odwołanie do `const` element przechowywane na liście do odczytu i wykonywania `const` operacji.|  
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, który udostępnia iteratora dwukierunkowego, który może odczytać `const` element na liście.|  
 |[difference_type](#difference_type)|Typ, który zawiera różnicę między dwoma Iteratory, które odwołują się do elementów w obrębie tej samej listy.|  
-|[iteratora](#iterator)|Typ, który udostępnia iteratora dwukierunkowego, które mogą odczytywać lub modyfikować dowolny element na liście.|  
-|[wskaźnik](#pointer)|Typ, który dostarcza wskaźnik do elementu na liście.|  
+|[iterator](#iterator)|Typ, który udostępnia iteratora dwukierunkowego, które mogą odczytywać lub modyfikować dowolny element na liście.|  
+|[pointer](#pointer)|Typ, który dostarcza wskaźnik do elementu na liście.|  
 |[Odwołanie](#reference)|Typ, który zawiera odwołanie do `const` element przechowywane na liście do odczytu i wykonywania `const` operacji.|  
 |[reverse_iterator](#reverse_iterator)|Typ, który udostępnia iteratora dwukierunkowego, które mogą odczytywać lub modyfikować elementu na liście odwróconej.|  
 |[size_type](#size_type)|Typ, który oblicza liczbę elementów listy.|  
@@ -170,8 +173,8 @@ class list
 |||  
 |-|-|  
 |[Przypisz](#assign)|Powoduje usunięcie elementów z listy, a następnie kopiuje nowy zbiór elementów na listę docelową.|  
-|[Wstecz](#back)|Zwraca odwołanie do ostatniego elementu listy.|  
-|[Rozpocznij](#begin)|Zwraca iteratora adresowania pierwszy element na liście.|  
+|[back](#back)|Zwraca odwołanie do ostatniego elementu listy.|  
+|[begin](#begin)|Zwraca iteratora adresowania pierwszy element na liście.|  
 |[cbegin](#cbegin)|Zwraca const iteratora adresowania pierwszy element na liście.|  
 |[cend](#cend)|Zwraca iteratora const, który dotyczy lokalizacji pomyślne wykonanie ostatniego elementu na liście.|  
 |[Wyczyść](#clear)|Usuwa wszystkie elementy listy.|  
@@ -180,14 +183,14 @@ class list
 |[emplace](#emplace)|Wstawia element zbudowane w miejscu do listy na określonej pozycji.|  
 |[emplace_back](#emplace_back)|Dodaje element skonstruowane w miejscu na końcu listy.|  
 |[emplace_front](#emplace_front)|Dodaje element skonstruowane w miejscu na początku listy.|  
-|[pusty](#empty)|Testy, jeśli lista jest pusta.|  
-|[koniec](#end)|Zwraca iteratora, którego dotyczy lokalizacji pomyślne wykonanie ostatniego elementu na liście.|  
+|[empty](#empty)|Testy, jeśli lista jest pusta.|  
+|[Koniec](#end)|Zwraca iteratora, którego dotyczy lokalizacji pomyślne wykonanie ostatniego elementu na liście.|  
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów na liście z określonych pozycji.|  
 |[Front](#front)|Zwraca odwołanie do pierwszego elementu listy.|  
 |[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiekt używany do utworzenia listy.|  
-|[Wstaw](#insert)|Wstawia element lub liczba elementów lub zakres elementów do listy na określonej pozycji.|  
+|[insert](#insert)|Wstawia element lub liczba elementów lub zakres elementów do listy na określonej pozycji.|  
 |[max_size](#max_size)|Zwraca maksymalną długość elementu listy.|  
-|[scalania](#merge)|Usuwa elementy z listy argumentów, wstawia je do listy docelowej oraz zamówienia nowe, łączny zbiór elementów w kolejności rosnącej lub w określonej kolejności.|  
+|[merge](#merge)|Usuwa elementy z listy argumentów, wstawia je do listy docelowej oraz zamówienia nowe, łączny zbiór elementów w kolejności rosnącej lub w określonej kolejności.|  
 |[pop_back](#pop_back)|Usuwa element na końcu listy.|  
 |[pop_front](#pop_front)|Usuwa element na początku listy.|  
 |[push_back](#push_back)|Dodaje element na końcu listy.|  
@@ -197,23 +200,23 @@ class list
 |[remove_if](#remove_if)|Usuwa elementy na liście, dla których jest spełniony określony predykat.|  
 |[rend](#rend)|Zwraca iteratora, którego dotyczy lokalizacji pomyślne wykonanie ostatniego elementu na liście odwróconej.|  
 |[Zmiana rozmiaru](#resize)|Określa nowy rozmiar listy.|  
-|[wstecznego](#reverse)|Odwraca kolejność, w którym elementy występuje na liście.|  
-|[rozmiar](#size)|Zwraca liczbę elementów na liście.|  
-|[Sortowanie](#sort)|Rozmieszcza elementy listy w kolejności rosnącej lub względem innych relacji kolejności.|  
+|[Reverse](#reverse)|Odwraca kolejność, w którym elementy występuje na liście.|  
+|[Rozmiar](#size)|Zwraca liczbę elementów na liście.|  
+|[sort](#sort)|Rozmieszcza elementy listy w kolejności rosnącej lub względem innych relacji kolejności.|  
 |[splice](#splice)|Usuwa elementy z listy argumentów i wstawia je do listy docelowej.|  
 |[swap](#swap)|Zamienia elementów listy.|  
-|[unikatowe](#unique)|Usuwa zduplikowane elementy sąsiednie lub sąsiadujących elementów, które spełniają niektóre binarne predykat z listy.|  
+|[unique](#unique)|Usuwa zduplikowane elementy sąsiednie lub sąsiadujących elementów, które spełniają niektóre binarne predykat z listy.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
-|[list::operator =](#op_eq)|Zastępuje kopię innej listy elementów listy.|  
+|[list::operator=](#op_eq)|Zastępuje kopię innej listy elementów listy.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek**: \<listy >  
   
-##  <a name="allocator_type"></a>list::allocator_type  
+##  <a name="allocator_type"></a>  list::allocator_type  
  Typ, który reprezentuje klasę alokatora dla obiekt listy.  
   
 ```  
@@ -221,12 +224,12 @@ typedef Allocator allocator_type;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `allocator_type`synonim parametru szablonu jest **przydzielania.**  
+ `allocator_type` synonim parametru szablonu jest **przydzielania.**  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [get_allocator](#get_allocator).  
   
-##  <a name="assign"></a>list::ASSIGN  
+##  <a name="assign"></a>  list::ASSIGN  
  Powoduje usunięcie elementów z listy, a następnie kopiuje nowy zbiór elementów na listę docelową.  
   
 ```  
@@ -312,7 +315,7 @@ int main()
 c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40  
 ```  
   
-##  <a name="back"></a>list::back  
+##  <a name="back"></a>  list::back  
  Zwraca odwołanie do ostatniego elementu listy.  
   
 ```  
@@ -359,7 +362,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10  
 ```  
   
-##  <a name="begin"></a>list::BEGIN  
+##  <a name="begin"></a>  list::BEGIN  
  Zwraca iteratora adresowania pierwszy element na liście.  
   
 ```  
@@ -409,7 +412,7 @@ The first element of c1 is 1
 The first element of c1 is now 20  
 ```  
   
-##  <a name="cbegin"></a>list::cbegin  
+##  <a name="cbegin"></a>  list::cbegin  
  Zwraca `const` iteratora, którego dotyczy pierwszy element w zakresie.  
   
 ```  
@@ -432,7 +435,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="cend"></a>list::cend  
+##  <a name="cend"></a>  list::cend  
  Zwraca `const` iteratora, którego dotyczy lokalizacji bezpośrednio po ostatnim elementem w zakresie.  
   
 ```  
@@ -443,7 +446,7 @@ const_iterator cend() const;
  A `const` iteratora dwukierunkowego dostępu, który wskazuje poza koniec zakresu.  
   
 ### <a name="remarks"></a>Uwagi  
- `cend`Służy do sprawdzenia, czy iteratora osiągnęła koniec zakresu.  
+ `cend` Służy do sprawdzenia, czy iteratora osiągnęła koniec zakresu.  
   
  Można użyć funkcji członkowskiej zamiast `end()` funkcji członkowskiej, aby zagwarantować, że jest zwracana wartość `const_iterator`. Zazwyczaj jest używany w połączeniu z [automatycznie](../cpp/auto-cpp.md) wpisz słowo kluczowe wnioskowanie, jak pokazano w poniższym przykładzie. W tym przykładzie należy wziąć pod uwagę `Container` do można modyfikować (z systemem innym niż `const`) kontenera dowolnego rodzaju, który obsługuje `end()` i `cend()`.  
   
@@ -457,7 +460,7 @@ auto i2 = Container.cend();
   
  Wartość zwrócona przez `cend` nie powinny być wyłuskiwany.  
   
-##  <a name="clear"></a>list::Clear  
+##  <a name="clear"></a>  list::Clear  
  Usuwa wszystkie elementy listy.  
   
 ```  
@@ -491,7 +494,7 @@ The size of the list is initially 3
 The size of list after clearing is 0  
 ```  
   
-##  <a name="const_iterator"></a>list::const_iterator  
+##  <a name="const_iterator"></a>  list::const_iterator  
  Typ, który udostępnia iteratora dwukierunkowego, który może odczytać **const** element na liście.  
   
 ```  
@@ -504,7 +507,7 @@ typedef implementation-defined const_iterator;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [ponownie](#back).  
   
-##  <a name="const_pointer"></a>list::const_pointer  
+##  <a name="const_pointer"></a>  list::const_pointer  
  Udostępnia wskaźnik do `const` element na liście.  
   
 ``` 
@@ -516,7 +519,7 @@ typedef typename Allocator::const_pointer const_pointer;
   
  W większości przypadków [iterator](#iterator) mają być używane do uzyskania dostępu do elementów w obiekcie listy.  
   
-##  <a name="const_reference"></a>list::const_reference  
+##  <a name="const_reference"></a>  list::const_reference  
  Typ, który zawiera odwołanie do **const** element przechowywane na liście do odczytu i wykonywania **const** operacji.  
   
 ```  
@@ -558,7 +561,7 @@ The first element is 10
 The second element is 20  
 ```  
   
-##  <a name="const_reverse_iterator"></a>list::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  list::const_reverse_iterator  
  Typ, który udostępnia iteratora dwukierunkowego, który może odczytać **const** element na liście.  
   
 ```  
@@ -571,7 +574,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [rbegin](#rbegin).  
   
-##  <a name="crbegin"></a>list::crbegin  
+##  <a name="crbegin"></a>  list::crbegin  
  Zwraca const iteratora adresowania pierwszy element na liście odwróconej.  
   
 ```  
@@ -582,7 +585,7 @@ const_reverse_iterator rbegin() const;
  Stała wstecznego iteratora dwukierunkowego adresowania pierwszy element na liście odwróconej (lub adresowania co była ostatnim elementem w stałe `list`).  
   
 ### <a name="remarks"></a>Uwagi  
- `crbegin`jest używany z listą odwróconej podobnie jak [list::begin](#begin) jest używany z `list`.  
+ `crbegin` jest używany z listą odwróconej podobnie jak [list::begin](#begin) jest używany z `list`.  
   
  Z wartością zwracaną z `crbegin`, nie można zmodyfikować obiektu listy. [list::rbegin](#rbegin) może służyć do iterowania po listę wstecz.  
   
@@ -612,7 +615,7 @@ int main( )
 The last element in the list is 30.  
 ```  
   
-##  <a name="crend"></a>list::crend  
+##  <a name="crend"></a>  list::crend  
  Zwraca iteratora const, którego dotyczy lokalizacji pomyślne wykonanie ostatniego elementu na liście odwróconej.  
   
 ```  
@@ -623,11 +626,11 @@ const_reverse_iterator rend() const;
  Stała wstecznego iteratora dwukierunkowego, który dotyczy lokalizacji pomyślne ostatnim elementem w odwrotnej [listy](../standard-library/list-class.md) (lokalizacji, która ma przed pierwszym elementem w stałe `list`).  
   
 ### <a name="remarks"></a>Uwagi  
- `crend`jest używany z listą odwróconej podobnie jak [list::end](#end) jest używany z `list`.  
+ `crend` jest używany z listą odwróconej podobnie jak [list::end](#end) jest używany z `list`.  
   
  Z wartością zwracaną z `crend`, `list` obiektu nie może być modyfikowany.  
   
- `crend`można sprawdzać, czy odwrotnej iteratora osiągnął koniec jego `list`.  
+ `crend` można sprawdzać, czy odwrotnej iteratora osiągnął koniec jego `list`.  
   
  Wartość zwrócona przez `crend` nie powinny być wyłuskiwany.  
   
@@ -660,7 +663,7 @@ int main( )
 The first element in the list is: 10  
 ```  
   
-##  <a name="difference_type"></a>list::difference_type  
+##  <a name="difference_type"></a>  list::difference_type  
  Typ liczbę całkowitą ze znakiem, który może służyć do reprezentowania liczba elementów na liście w zakresie elementy wskazywana przez Iteratory.  
   
 ```  
@@ -715,7 +718,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.  
 ```  
   
-##  <a name="emplace"></a>list::emplace  
+##  <a name="emplace"></a>  list::emplace  
  Wstawia element zbudowane w miejscu do listy na określonej pozycji.  
   
 ```  
@@ -757,7 +760,7 @@ int main( )
 Moved first element: a  
 ```  
   
-##  <a name="emplace_back"></a>list::emplace_back  
+##  <a name="emplace_back"></a>  list::emplace_back  
  Dodaje element skonstruowane w miejscu na końcu listy.  
   
 ```  
@@ -798,7 +801,7 @@ int main( )
 Moved first element: a  
 ```  
   
-##  <a name="emplace_front"></a>list::emplace_front  
+##  <a name="emplace_front"></a>  list::emplace_front  
  Dodaje element skonstruowane w miejscu na początku listy.  
   
 ```  
@@ -839,7 +842,7 @@ int main( )
 Moved first element: a  
 ```  
   
-##  <a name="empty"></a>list::Empty  
+##  <a name="empty"></a>  list::Empty  
  Testy, jeśli lista jest pusta.  
   
 ```  
@@ -874,7 +877,7 @@ int main( )
 The list is not empty.  
 ```  
   
-##  <a name="end"></a>list::end  
+##  <a name="end"></a>  list::end  
  Zwraca iteratora, którego dotyczy lokalizacji pomyślne wykonanie ostatniego elementu na liście.  
   
 ```  
@@ -931,7 +934,7 @@ The new next-to-last integer of c1 is 400
 The list is now: 10 400 30  
 ```  
   
-##  <a name="erase"></a>list::ERASE  
+##  <a name="erase"></a>  list::ERASE  
  Usuwa element lub zakres elementów na liście z określonych pozycji.  
   
 ```  
@@ -1002,7 +1005,7 @@ After erasing the first element, the list becomes: 20 30 40 50
 After erasing all elements but the first, the list becomes:  20  
 ```  
   
-##  <a name="front"></a>list::front  
+##  <a name="front"></a>  list::front  
  Zwraca odwołanie do pierwszego elementu listy.  
   
 ```  
@@ -1046,7 +1049,7 @@ The first integer of c1 is 10
 The first integer of c1 is 11  
 ```  
   
-##  <a name="get_allocator"></a>list::get_allocator  
+##  <a name="get_allocator"></a>  list::get_allocator  
  Zwraca kopię obiektu alokatora użyty do utworzenia listy.  
   
 ```  
@@ -1083,7 +1086,7 @@ int main( )
 }  
 ```  
   
-##  <a name="insert"></a>list::INSERT  
+##  <a name="insert"></a>  list::INSERT  
  Wstawia element lub liczba elementów lub zakres elementów do listy na określonej pozycji.  
   
 ```  
@@ -1181,7 +1184,7 @@ int main()
 }  
 ```  
   
-##  <a name="iterator"></a>list::iterator  
+##  <a name="iterator"></a>  list::iterator  
  Typ, który udostępnia iteratora dwukierunkowego, które mogą odczytywać lub modyfikować dowolny element na liście.  
   
 ```  
@@ -1194,7 +1197,7 @@ typedef implementation-defined iterator;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [rozpocząć](#begin).  
   
-##  <a name="list"></a>list::list  
+##  <a name="list"></a>  list::list  
  Tworzy listę o określonym rozmiarze lub z elementami określonej wartości lub z określonego programu przydzielania lub kopii całości lub części niektóre inne listy.  
   
 ```  
@@ -1340,7 +1343,7 @@ int main()
 c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4  
 ```  
   
-##  <a name="max_size"></a>list::max_size  
+##  <a name="max_size"></a>  list::max_size  
  Zwraca maksymalną długość elementu listy.  
   
 ```
@@ -1369,7 +1372,7 @@ int main( )
 }  
 ```  
   
-##  <a name="merge"></a>list::merge  
+##  <a name="merge"></a>  list::merge  
  Usuwa elementy z listy argumentów, wstawia je do listy docelowej oraz zamówienia nowe, łączny zbiór elementów w kolejności rosnącej lub w określonej kolejności.  
   
 ```  
@@ -1450,7 +1453,7 @@ c3 = 5 1
 After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1  
 ```  
   
-##  <a name="op_eq"></a>list::operator =  
+##  <a name="op_eq"></a>  list::operator =  
  Zastępuje kopię innej listy elementów listy.  
   
 ```  
@@ -1509,7 +1512,7 @@ int main( )
 }  
 ```  
   
-##  <a name="pointer"></a>list::Pointer  
+##  <a name="pointer"></a>  list::Pointer  
  Udostępnia wskaźnik do elementu na liście.  
   
 ```
@@ -1521,7 +1524,7 @@ typedef typename Allocator::pointer pointer;
   
  W większości przypadków [iterator](#iterator) mają być używane do uzyskania dostępu do elementów w obiekcie listy.  
   
-##  <a name="pop_back"></a>list::pop_back  
+##  <a name="pop_back"></a>  list::pop_back  
  Usuwa element na końcu listy.  
   
 ``` 
@@ -1529,7 +1532,7 @@ void pop_back();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ostatni element nie może być pusta. `pop_back`nigdy nie zgłasza wyjątek.  
+ Ostatni element nie może być pusta. `pop_back` nigdy nie zgłasza wyjątek.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1561,7 +1564,7 @@ The last element is: 2
 After deleting the element at the end of the list, the last element is: 1  
 ```  
   
-##  <a name="pop_front"></a>list::pop_front  
+##  <a name="pop_front"></a>  list::pop_front  
  Usuwa element na początku listy.  
   
 ``` 
@@ -1569,7 +1572,7 @@ void pop_front();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszy element nie może być pusta. `pop_front`nigdy nie zgłasza wyjątek.  
+ Pierwszy element nie może być pusta. `pop_front` nigdy nie zgłasza wyjątek.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1601,7 +1604,7 @@ The second element is: 2
 After deleting the element at the beginning of the list, the first element is: 2  
 ```  
   
-##  <a name="push_back"></a>list::push_back  
+##  <a name="push_back"></a>  list::push_back  
  Dodaje element na końcu listy.  
   
 ```  
@@ -1655,7 +1658,7 @@ New last element: 2
 Moved first element: a  
 ```  
   
-##  <a name="push_front"></a>list::push_front  
+##  <a name="push_front"></a>  list::push_front  
  Dodaje element na początku listy.  
   
 ```  
@@ -1710,7 +1713,7 @@ New first element: 2
 Moved first element: a  
 ```  
   
-##  <a name="rbegin"></a>list::rbegin  
+##  <a name="rbegin"></a>  list::rbegin  
  Zwraca iteratora, którego dotyczy pierwszy element na liście odwróconej.  
   
 ``` 
@@ -1722,11 +1725,11 @@ reverse_iterator rbegin();
  Odwrotnej dwukierunkowego iteratora adresowania pierwszy element na liście odwróconej (lub adresowania co był ostatni element na liście stałe).  
   
 ### <a name="remarks"></a>Uwagi  
- `rbegin`jest używany z listą odwróconej podobnie jak [rozpocząć](#begin) jest używany z listy.  
+ `rbegin` jest używany z listą odwróconej podobnie jak [rozpocząć](#begin) jest używany z listy.  
   
  Jeśli wartość zwracana `rbegin` jest przypisany do `const_reverse_iterator`, nie można zmodyfikować obiektu listy. Jeśli wartość zwracana `rbegin` jest przypisany do `reverse_iterator`, można zmodyfikować obiektu listy.  
   
- `rbegin`może służyć do iterowania po listę wstecz.  
+ `rbegin` może służyć do iterowania po listę wstecz.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1778,7 +1781,7 @@ The reversed list is: 30 20 10
 The last element in the list is now 40.  
 ```  
   
-##  <a name="reference"></a>list::Reference  
+##  <a name="reference"></a>  list::Reference  
  Typ, który zawiera odwołanie do elementu przechowywane na liście.  
   
 ```  
@@ -1813,7 +1816,7 @@ The first element is 10
 The second element is 20  
 ```  
   
-##  <a name="remove"></a>list::Remove  
+##  <a name="remove"></a>  list::Remove  
  Usuwa elementy na liście spełniających określone wymagania.  
   
 ``` 
@@ -1867,7 +1870,7 @@ The initial list is c1 = 5 100 5 200 5 300
 After removing elements with value 5, the list becomes c2 = 100 200 300  
 ```  
   
-##  <a name="remove_if"></a>list::remove_if  
+##  <a name="remove_if"></a>  list::remove_if  
  Usuwa elementy z listy, dla których jest spełniony określony predykat.  
   
 ``` 
@@ -1930,7 +1933,7 @@ The initial list is c1 = 3 4 5 6 7 8
 After removing the odd elements, the list becomes c2 = 4 6 8  
 ```  
   
-##  <a name="rend"></a>list::rend  
+##  <a name="rend"></a>  list::rend  
  Zwraca iteratora, którego dotyczy lokalizacji, w której następuje ostatnim elementem na liście odwróconej.  
   
 ``` 
@@ -1942,11 +1945,11 @@ reverse_iterator rend();
  Iterator odwrotnej dwukierunkowego, którego dotyczy lokalizacji pomyślne wykonanie ostatniego elementu na liście odwróconej (lokalizacja miał przed pierwszym elementem na liście stałe).  
   
 ### <a name="remarks"></a>Uwagi  
- `rend`jest używany z listą odwróconej podobnie jak [zakończenia](#end) jest używany z listy.  
+ `rend` jest używany z listą odwróconej podobnie jak [zakończenia](#end) jest używany z listy.  
   
  Jeśli wartość zwracana `rend` jest przypisany do `const_reverse_iterator`, nie można zmodyfikować obiektu listy. Jeśli wartość zwracana `rend` jest przypisany do `reverse_iterator`, można zmodyfikować obiektu listy.  
   
- `rend`można sprawdzać, czy odwrotnej iteratora osiągnął koniec listy.  
+ `rend` można sprawdzać, czy odwrotnej iteratora osiągnął koniec listy.  
   
  Wartość zwrócona przez `rend` nie powinny być wyłuskiwany.  
   
@@ -2013,7 +2016,7 @@ The reversed list is: 30 20 10
 The modified reversed list is: 30 20 40  
 ```  
   
-##  <a name="resize"></a>list::Resize  
+##  <a name="resize"></a>  list::Resize  
  Określa nowy rozmiar listy.  
   
 ``` 
@@ -2077,7 +2080,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20  
 ```  
   
-##  <a name="reverse"></a>list::reverse  
+##  <a name="reverse"></a>  list::reverse  
  Odwraca kolejność, w którym elementy występuje na liście.  
   
 ``` 
@@ -2120,7 +2123,7 @@ c1 = 10 20 30
 Reversed c1 = 30 20 10  
 ```  
   
-##  <a name="reverse_iterator"></a>list::reverse_iterator  
+##  <a name="reverse_iterator"></a>  list::reverse_iterator  
  Typ, który udostępnia iteratora dwukierunkowego, które mogą odczytywać lub modyfikować elementu na liście odwróconej.  
   
 ```  
@@ -2133,7 +2136,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [rbegin](#rbegin).  
   
-##  <a name="size"></a>list::size  
+##  <a name="size"></a>  list::size  
  Zwraca liczbę elementów na liście.  
   
 ``` 
@@ -2172,7 +2175,7 @@ List length is 1.
 List length is now 2.  
 ```  
   
-##  <a name="size_type"></a>list::size_type  
+##  <a name="size_type"></a>  list::size_type  
  Typ, który oblicza liczbę elementów listy.  
   
 ```  
@@ -2182,7 +2185,7 @@ typedef typename Allocator::size_type size_type;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [rozmiar](#size).  
   
-##  <a name="sort"></a>list::sort  
+##  <a name="sort"></a>  list::sort  
  Rozmieszcza elementy listy w kolejności rosnącej lub względem niektóre określone przez użytkownika kolejności.  
   
 ``` 
@@ -2244,7 +2247,7 @@ After sorting c1 = 10 20 30
 After sorting with 'greater than' operation, c1 = 30 20 10  
 ```  
   
-##  <a name="splice"></a>list::splice  
+##  <a name="splice"></a>  list::splice  
  Usuwa elementy z listy źródeł i wstawia je do listy docelowej.  
   
 ```  
@@ -2365,7 +2368,7 @@ int main()
 Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)  
 ```  
   
-##  <a name="swap"></a>list::swap  
+##  <a name="swap"></a>  list::swap  
  Zamienia elementów listy.  
   
 ``` 
@@ -2428,7 +2431,7 @@ After swapping with c2, list c1 is: 10 20
 After swapping with c3, list c1 is: 100  
 ```  
   
-##  <a name="unique"></a>list::UNIQUE  
+##  <a name="unique"></a>  list::UNIQUE  
  Usuwa zduplikowane elementy sąsiednie lub sąsiadujących elementów, które spełniają niektóre binarne predykat z listy.  
   
 ```  
@@ -2498,7 +2501,7 @@ After removing successive duplicate elements, c2 = -10 10 20 -10
 After removing successive unequal elements, c3 = -10 -10  
 ```  
   
-##  <a name="value_type"></a>list::value_type  
+##  <a name="value_type"></a>  list::value_type  
  Typ, który reprezentuje typ danych przechowywanych na liście.  
   
 ```  
@@ -2506,7 +2509,7 @@ typedef typename Allocator::value_type value_type;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `value_type`synonim parametru szablonu jest **typu**.  
+ `value_type` synonim parametru szablonu jest **typu**.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2530,7 +2533,7 @@ int main( )
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<listy >](../standard-library/list.md)   
+ [\<list>](../standard-library/list.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - thread/std::operator!=
 - thread/std::operator&gt;
@@ -14,9 +14,10 @@ f1_keywords:
 - thread/std::operator&lt;&lt;
 - thread/std::operator&lt;=
 - thread/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (thread)
@@ -26,20 +27,20 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: ff0fa361845c7bf64dd15bfc4e23be7b92b6cc39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: f1a004cca5d43c22b5315c50b61cb0fcafb2cf10
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltthreadgt-operators"></a>&lt;Wątek&gt; operatory
 ||||  
 |-|-|-|  
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
-|[operator ==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[Operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  Operator&gt;=  
  Określa, czy co najmniej `thread::id` obiektu jest większa lub równa innej.  
   
 ```cpp  
@@ -61,7 +62,7 @@ bool operator>= (
 ### <a name="remarks"></a>Uwagi  
  Tej funkcji nie generują żadnych wyjątków.  
   
-##  <a name="op_gt"></a>operator&gt;  
+##  <a name="op_gt"></a>  Operator&gt;  
  Określa, czy co najmniej `thread::id` obiekt jest większy niż innym.  
   
 ```cpp  
@@ -83,7 +84,7 @@ bool operator> (
 ### <a name="remarks"></a>Uwagi  
  Tej funkcji nie generują żadnych wyjątków.  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  Operator&lt;=  
  Określa, czy co najmniej `thread::id` obiekt jest mniejszy niż lub równy do innego.  
   
 ```cpp  
@@ -105,7 +106,7 @@ bool operator<= (
 ### <a name="remarks"></a>Uwagi  
  Tej funkcji nie generują żadnych wyjątków.  
   
-##  <a name="op_lt"></a>operator&lt;  
+##  <a name="op_lt"></a>  Operator&lt;  
  Określa, czy co najmniej `thread::id` obiekt jest mniejszy niż innym.  
   
 ```cpp  
@@ -122,14 +123,14 @@ bool operator<(
  Prawo `thread::id` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli `Left` poprzedza `Right` w kolejności całkowita; w przeciwnym razie `false`.  
+ `true` Jeśli `Left` poprzedza `Right` w kolejności całkowita; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Definiuje operator całkowita kolejności na wszystkich `thread::id` obiektów. Te obiekty może służyć jako klucze w kontenerach asocjacyjnej.  
   
  Tej funkcji nie generują żadnych wyjątków.  
   
-##  <a name="op_neq"></a>operator! =  
+##  <a name="op_neq"></a>  operator! =  
  Porównuje dwa `thread::id` obiekty pod kątem nierówności.  
   
 ```cpp  
@@ -151,7 +152,7 @@ bool operator!= (
 ### <a name="remarks"></a>Uwagi  
  Tej funkcji nie generują żadnych wyjątków.  
   
-##  <a name="op_eq_eq"></a>operator ==  
+##  <a name="op_eq_eq"></a>  operator ==  
  Porównuje dwa `thread::id` obiekty pod kątem równości.  
   
 ```cpp  
@@ -168,12 +169,12 @@ bool operator== (
  Prawo `thread::id` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli dwa obiekty reprezentują tego samego wątku wykonywania lub jeśli żaden obiekt reprezentuje wątku do wykonania; w przeciwnym razie `false`.  
+ `true` Jeśli dwa obiekty reprezentują tego samego wątku wykonywania lub jeśli żaden obiekt reprezentuje wątku do wykonania; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Tej funkcji nie generują żadnych wyjątków.  
   
-##  <a name="op_lt_lt"></a>operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  Operator&lt;&lt;  
  Wstawia tekst reprezentację `thread::id` obiektu do strumienia.  
   
 ```cpp  

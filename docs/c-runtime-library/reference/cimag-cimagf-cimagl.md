@@ -1,5 +1,5 @@
 ---
-title: cimag cimagf, cimagl | Dokumentacja firmy Microsoft
+title: cimag, cimagf, cimagl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - cimag
 - cimagf
@@ -33,24 +33,26 @@ f1_keywords:
 - complex/cimagf
 - complex/cimagl
 - cimag
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cimag function
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b499786cbcb1516fb9746d69c7e124f14d00f011
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9802a682193a0ef805f4a6964bf0aa1682a7619b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="cimag-cimagf-cimagl"></a>cimag cimagf, cimagl
+# <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 Pobiera wyrażenie Liczba_zespolona część liczbą.  
   
 ## <a name="syntax"></a>Składnia  
@@ -87,7 +89,7 @@ long double cimagl(
   
 |Procedura|Nagłówek C|Nagłówek C++|  
 |-------------|--------------|------------------|  
-|`cimag`,               `cimagf`, `cimagl`|\<COMPLEX.h >|\<ccomplex >|  
+|`cimag`,               `cimagf`, `cimagl`|\<complex.h>|\<ccomplex >|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -95,7 +97,7 @@ long double cimagl(
  [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [normy normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
  [creal crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [conj conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
+ [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
+ [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
  [carg cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
  [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
