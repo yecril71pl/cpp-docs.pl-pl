@@ -1,124 +1,150 @@
 ---
 title: "Ostrzeżenia kompilatora w wersji kompilatora | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 01/31/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-cpp
+ms.technology:
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.assetid: 886c5a66-088c-4a4b-908b-aa3ec189e595
-caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 52513b156ee8c86d8358be84a27c28d15eb86641
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="compiler-warnings-by-compiler-version"></a>Ostrzeżenia kompilatora w wersji kompilatora  
-  
-Kompilator można pominąć, ostrzeżeń, które zostały wprowadzone po wersji, można określić za pomocą [/Wv](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora. Jest to przydatne do zarządzania procesu kompilacji podczas wprowadzenie nowej wersji zestawu narzędzi, a chcesz tymczasowo pominąć nowego ostrzeżenia. Ta opcja nie odrzuca nowe komunikaty o błędach. Nie zaleca się Pomiń wszystkie ostrzeżenia nowe trwale! Zaleca się zawsze kompilacji na najwyższym poziomie ostrzeżenie regularne, __/W4__i Usuń __/Wv__ opcja tak szybko, jak to możliwe w kompilacji.  
-  
+# <a name="compiler-warnings-by-compiler-version"></a>Ostrzeżenia kompilatora w wersji kompilatora
+
+Kompilator można pominąć, ostrzeżeń, które zostały wprowadzone po wersji przy użyciu [/Wv](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora. Jest to przydatne do zarządzania procesu kompilacji podczas wprowadzenie nowej wersji zestawu narzędzi, a chcesz tymczasowo pominąć nowego ostrzeżenia. Ta opcja nie odrzuca nowe komunikaty o błędach. Nie zaleca się Pomiń wszystkie ostrzeżenia nowe trwale! Zaleca się zawsze kompilacji na najwyższym poziomie ostrzeżenie regularne, __/W4__i Usuń __/Wv__ opcja tak szybko, jak to możliwe w kompilacji. 
+
 Te wersje kompilatora zostały wprowadzone nowe ostrzeżenia:
 
-| Produkt | Numer wersji kompilatora |  
-|-|-|  
-| Visual C++ 2002 | 13.00.9466 |  
-| Program Visual C++ 2003 | 13.10.3077 |  
-| Visual C++ 2005 | 14.00.50727.762 |  
-| Visual C++ 2008 | 15.00.21022.08 |  
-| Visual C++ 2010 | 16.00.40219.01 |  
-| Visual C++ 2012 | 17.00.51106.1 |  
-| Visual C++ 2013 | 18.00.21005.1 |  
-| Visual C++ 2015 RTM | 19.00.23026.0 |  
-| Visual C++ 2015 Update 1 | 19.00.23506.0 |  
-| Visual C++ 2015 Update 2 | 19.00.23918.0 |  
-| Visual C++ 2015 Update 3 | 19.00.24215.1 |  
-| Visual C++ 2017 RTM | 19.10.24903.0 |  
-| Visual C++ 2017 Update 1 | 19.10.25017.0 |  
-  
-Można określić tylko główny numer, liczby główne i pomocnicze lub głównych i pomocniczych oraz numery do kompilacji __/Wv__ opcja, która wyłącza wszystkie ostrzeżenia dla w wersjach nowszych niż określona liczba. Na przykład, aby pominąć ostrzeżenia wprowadzone w programie Visual C++ 2015 Update 2 lub nowszym, służy __/Wv:19.00.23900__. Aby pominąć wszystkie ostrzeżenia w programie Visual C++ 2013 i nowsze, można użyć __/WV: 18__.  
-  
+| Produkt | Numer wersji kompilatora |
+|-|-|
+| Visual C++ 2002 | 13.00.9466 |
+| Visual C++ 2003 | 13.10.3077 |
+| Visual C++ 2005 | 14.00.50727.762 |
+| Visual C++ 2008 | 15.00.21022.08 |
+| Visual C++ 2010 | 16.00.40219.01 |
+| Visual C++ 2012 | 17.00.51106.1 |
+| Visual C++ 2013 | 18.00.21005.1 |
+| Visual C++ 2015 RTM | 19.00.23026.0 |
+| Visual C++ 2015 Update 1 | 19.00.23506.0 |
+| Visual C++ 2015 Update 2 | 19.00.23918.0 |
+| Visual C++ 2015 Update 3 | 19.00.24215.1 |
+| Visual C++ 2017 RTM | 19.10.24903.0 |
+| Visual C++ 2017 wersji 15.1 | 19.10.25017.0 |
+| Visual C++ 2017 wersji 15 ustęp 3 | 19.11.25506.0 |
+| Visual C++ 2017 wersji 15,5 cala | 19.12.25827.0 |
+
+Można określić tylko główny numer, liczby główne i pomocnicze lub głównych i pomocniczych oraz numery do kompilacji __/Wv__ opcji. Kompilator raporty są wszystkie ostrzeżenia, które odpowiadają wersji, które zaczynają się od określonej liczby i pomija wszystkie ostrzeżenia dla w wersjach nowszych niż określona liczba. Na przykład __/Wv:17__ raporty wszystkie ostrzeżenia wprowadzone w tym miejscu lub przed dowolnej wersji programu Visual Studio 2012 i pomija wszystkie ostrzeżenia wprowadzone za pomocą dowolnego kompilatora z programu Visual Studio 2013 (wersja 18) lub nowszym. Aby pominąć ostrzeżenia wprowadzone w programie Visual Studio 2015 update 2 i później, można użyć __/Wv:19.00.23506__. Użyj __/Wv:19.11__ zgłoszenia wszystkie ostrzeżenia wprowadzone w dowolnej wersji programu Visual Studio przed Visual Studio 2017 wersji 15,5 cala, ale pomija ostrzeżenia wprowadzone w Visual Studio 2017 wersji 15.5 i nowszych.
+
 W poniższych sekcjach wymieniono ostrzeżenia wprowadzone przez każda wersja programu Visual C++, który można pominąć przy użyciu __/Wv__ — opcja kompilatora. __/Wv__ opcja pomija ostrzeżenia, które nie są wyświetlane, które przed powstaniem określona wersji kompilatora.
-  
-## <a name="warnings-introduced-in-visual-c-2017-update-1"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2017 Update 1
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.10.25000__.  
-  
-|||  
-|-|-|  
-C4597|Niezdefiniowane zachowanie: *opis*  
-C4604|"*typu*": przekazywanie argumentów poprzez wartość granicy natywnych i zarządzanych wymaga prawidłowej kopii konstruktora. W przeciwnym razie zachowania w czasie wykonywania jest niezdefiniowana  
-C4749|obsługiwane warunkowo: *opis*  
-C4768|atrybuty __declspec przed Specyfikacja powiązania są ignorowane  
-C4834|Odrzucanie wartości zwracanej przez funkcję z atrybutem "nodiscard"  
+
+## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258270"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 wersji 15,5 cala (wersja kompilatora 19.12.25827.0)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.11__.
+
+|||
+|-|-|
+C5044|Argument opcji wiersza polecenia *opcji* wskazuje na ścieżkę "*ścieżka*" nie istnieje
+
+## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 wersji 15 ustęp 3 (wersja kompilatora 19.11.25506.0)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.10__.
+
+|||
+|-|-|
+C4843|"*type1*": program obsługi wyjątku odwołania do typu tablicy lub funkcji jest niedostępny, użyj "*type2*" zamiast niego
+C4844|"Eksportuj modułu *nazwa_modułu*;" jest teraz preferowanych Składnia deklaracji interfejsu modułu
+C5039|"*funkcja*": wskaźnik lub odwołanie do potencjalnie zgłaszanie funkcji została przekazana do funkcji extern C w obszarze - EHc. Niezdefiniowane zachowanie może wystąpić, jeśli ta funkcja zwraca wyjątek.
+C5040|specyfikacje wyjątków dynamicznych są prawidłowe tylko w języku C ++ 14 i starszych wersji; traktowanie jako noexcept(false)
+C5041|"*definicji*": definicja wiersza dla elementu członkowskiego danych statycznych constexpr nie jest wymagana i jest przestarzała w języku C ++ 17
+C5042|"*deklaracji*": deklaracje funkcji w zakresie bloku nie może być określony wbudowany w standardu C++; Usuń specyfikatora "inline"
+C5043|"*specyfikacji*": specyfikacja wyjątku jest niezgodna z poprzednią deklaracją
+
+## <a name="warnings-introduced-in-visual-c-2017-version-151-compiler-version-1910250170"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 wersji 15.1 (wersja kompilatora 19.10.25017.0)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.10.24903__.
+
+|||
+|-|-|
+C4597|Niezdefiniowane zachowanie: *opis*
+C4604|"*typu*": przekazywanie argumentów poprzez wartość granicy natywnych i zarządzanych wymaga prawidłowej kopii konstruktora. W przeciwnym razie zachowania w czasie wykonywania jest niezdefiniowana
+C4749|obsługiwane warunkowo: *opis*
+C4768|atrybuty __declspec przed Specyfikacja powiązania są ignorowane
+C4834|Odrzucanie wartości zwracanej przez funkcję z atrybutem "nodiscard"
 C4841|użyte rozszerzenie niestandardowe: *rozszerzenia*
-C4842|Aby było spójne między wersjami kompilatora nie jest gwarantowana wynik "makra offsetof" zastosowane do typu przy użyciu dziedziczenie wielokrotne  
-C4869|"nodiscard" można stosować tylko do klasy, wyliczenia i funkcje z typem zwracanym inny niż void  
-C5033|"*klasy magazynowania*" nie jest już klasy obsługiwanej magazynu  
-C5034|Użycie wewnętrznej "*wewnętrzne*" powoduje, że funkcja *funkcja* ma zostać skompilowana jako gość kodu  
-C5035|Użyj funkcji "*funkcji*" powoduje, że funkcja *funkcja* ma zostać skompilowana jako gość kodu  
-C5036|varargs funkcji konwersja wskaźnika podczas kompilowania przy użyciu /hybrid:x86arm64 "*type1*"do"*type2*"  
-C5037|"*funkcji członkowskiej*": definicja wiersza elementu członkowskiego szablonu klasy nie może mieć argumentów domyślnych  
-  
-## <a name="warnings-introduced-in-visual-c-2017-rtm"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2017 RTM  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.10__.  
-  
-|||  
-|-|-|  
+C4842|Aby było spójne między wersjami kompilatora nie jest gwarantowana wynik "makra offsetof" zastosowane do typu przy użyciu dziedziczenie wielokrotne
+C4869|"nodiscard" można stosować tylko do klasy, wyliczenia i funkcje z typem zwracanym inny niż void
+C5033|"*klasy magazynowania*" nie jest już klasy obsługiwanej magazynu
+C5034|Użycie wewnętrznej "*wewnętrzne*" powoduje, że funkcja *funkcja* ma zostać skompilowana jako gość kodu
+C5035|Użyj funkcji "*funkcji*" powoduje, że funkcja *funkcja* ma zostać skompilowana jako gość kodu
+C5036|varargs funkcji konwersja wskaźnika podczas kompilowania przy użyciu /hybrid:x86arm64 "*type1*"do"*type2*"
+C5037|"*funkcji członkowskiej*": definicja wiersza elementu członkowskiego szablonu klasy nie może mieć argumentów domyślnych
+C5038|element członkowski danych "*Członek1*"zostanie zainicjowana po elemencie członkowskim danych"*member2*"
+
+## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 RTM (wersja kompilatora 19.10.24903)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.00__.
+
+|||
+|-|-|
 C4468|"przepuszczająca": atrybut musi następować etykiety case lub etykiety domyślnej
 C4698|"*funkcji*" jest do oceny tylko celów i mogą ulec zmianie lub usuwania w przyszłych aktualizacji.
 C4839|Użycie niestandardowej klasy*klasy*"jako argument do funkcji ze zmienną liczbą argumentów
 C4840|Użycie nieprzenośne klasy*klasy*"jako argument do funkcji ze zmienną liczbą argumentów
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-3"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 Update 3  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.00.24000__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 Update 3 (wersja kompilatora 19.00.24215.1)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.00.23918__.
+
+|||
+|-|-|
 C4467|Korzystanie z atrybutów ATL jest przestarzałe.
 C4596|"*nazwa*": niedozwolona nazwa kwalifikowana w deklaracji elementu członkowskiego
 C4598|"#include \< *nagłówka*\>": numer nagłówka *numer* w *źródła* niezgodny *źródła* w tym stanowisko
 C4599|"*argument*": *źródła* numer argumentu *numer* niezgodny *źródła*
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-2"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 Update 2  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.00.23900__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-2-compiler-version-1900239180"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 Update 2 (wersja kompilatora 19.00.23918.0)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.00.23506__.
+
+|||
+|-|-|
 C4466|Nie można wykonać sterty dla koprocedury
 C4595|"*klasy*": nowy operator niebędący elementem członkowskim ani funkcje delete nie można zadeklarować wbudowany
 C4828|Plik zawiera znak rozpoczynający się od przesunięcia 0 x*wartość* jest niedozwolony w bieżącym zestawie znaków źródła (strona kodowa *numer*).
 C4868|Kompilator może nie wymusić kolejności oceny od lewej do prawej na liście inicjatora w nawiasach klamrowych
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-1"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 Update 1  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.00.23500__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-1-compiler-version-1900235060"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 Update 1 (wersja kompilatora 19.00.23506.0)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.00.23026__.
+
+|||
+|-|-|
 C4426|flagi optymalizacji zmieniły się po dołączeniu nagłówka, może #pragma Optimize()
 C4654|Kod umieszczony przed obejmują prekompilowanego nagłówka wiersza zostanie zignorowany. Dodaj kod do wstępnie skompilowanego nagłówka.
 C5031|#pragma warning(pop): prawdopodobnie niezgodność, stan ostrzeżenia wypychany w innym pliku o wyświetlaniu
 C5032|Wykryto #pragma warning(push) nie odpowiedniego #pragma warning(pop)
-  
-## <a name="warnings-introduced-in-visual-c-2015-rtm"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 RTM  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-rtm-compiler-version-1900230260"></a>Ostrzeżenia wprowadzone w Visual C++ 2015 RTM (wersja kompilatora 19.00.23026.0)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/WV: 18__.
+
+|||
+|-|-|
 C4427|"*błąd*": przepełnienie w czasie dzielenia stałej, niezdefiniowane zachowanie
 C4438|"*typu*": nie można bezpiecznie wywołać / await: clrcompat tryb. Jeśli "*typu*" wywołania do środowiska CLR może spowodować uszkodzenie nagłówka środowiska CLR
 C4455|"operator *nazwa*": identyfikatory sufiksu literału, które nie rozpoczynają się od znaku podkreślenia są zarezerwowane
@@ -128,12 +154,12 @@ C4458|Deklaracja "*nazwa*" powoduje ukrycie elementu członkowskiego klasy
 C4459|Deklaracja "*nazwa*" powoduje ukrycie deklaracji globalnej
 C4462|"*typu*": nie można określić GUID typu. Program może ulec awarii w czasie wykonywania.
 C4463|przepełnienie; Przypisywanie *wartość* do pola bitowego, która może zawierać wartości z *wartość* do *wartości*
-C4473|"*opis*": przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
-C4474|"*opis*": przekazano za dużo argumentów dla ciągu formatowania
-C4475|"*opis*": modyfikator długości "*modyfikator*"nie może być stosowany ze znakiem pola typu"*znak*" w specyfikatorze formatu
-C4476|"*opis*': nieznany znak pola typu"*znak*"w specyfikatorze formatu
-C4477|"*opis*": ciąg formatu "*ciąg*"wymaga argumentu typu"*typu*", ale argument ze zmienną liczbą argumentów *numer* ma typ "*typu*"
-C4478|"*opis*": nie można łączyć pozycyjnych i niepozycyjnych symbole zastępcze w tym samym ciągu formatu
+C4473|"*funkcja*": przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+C4474|"*funkcja*": przekazano za dużo argumentów dla ciągu formatowania
+C4475|"*funkcja*": modyfikator długości "*modyfikator*"nie może być stosowany ze znakiem pola typu"*znak*" w specyfikatorze formatu
+C4476|"*funkcja*': nieznany znak pola typu"*znak*"w specyfikatorze formatu
+C4477|"*funkcji*": ciąg formatu "*ciąg*"wymaga argumentu typu"*typu*", ale argument ze zmienną liczbą argumentów *numer* ma typ "*typu*"
+C4478|"*funkcja*": nie można łączyć pozycyjnych i niepozycyjnych symbole zastępcze w tym samym ciągu formatu
 C4494|"*typu*": Ignorowanie funkcji __declspec(allocator), ponieważ typ zwracany funkcji nie jest wskaźnikiem lub odwołaniem
 C4495|użyto niestandardowego rozszerzenia "__super": Zamień jawną nazwę klasy podstawowej
 C4496|użyto niestandardowego rozszerzenia "for each": Zamień na instrukcję ranged-for
@@ -171,13 +197,13 @@ C5027|"*typu*": Przenieś operator przypisania został niejawnie zdefiniowany ja
 C5028|"*nazwa*": wyrównanie określone we wcześniejszej deklaracji (*numer*) nie jest określona w definicji
 C5029|użyto niestandardowego rozszerzenia: atrybuty wyrównania w języku C++ dotyczą zmiennych, elementów członkowskich danych i typów tagów tylko
 C5030|atrybut "*atrybutu*" nie został rozpoznany
-  
-## <a name="warnings-introduced-in-visual-c-2013"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2013  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/WV: 18__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2013-compiler-version-1800210051"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2013 (wersja kompilatora 18.00.21005.1)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:17__.
+
+|||
+|-|-|
 C4301|"*typu*": przesłanianie wirtualnej funkcji różni się tylko z "*deklaracji*" kwalifikatorem const/volatile
 C4316|"*typu*": obiekt przydzielony na stosie nie może być wyrównane *numer*
 C4380|"*typu*": Konstruktor nie może być przestarzały
@@ -200,15 +226,15 @@ C4981|Warbird: funkcja "*deklaracji*" oznaczona jako __forceinline nie została 
 C4990|Warbird: *wiadomości*
 C4991|Warbird: funkcja "*deklaracji*" oznaczona jako __forceinline nie została wbudowana ponieważ poziom ochrony przed wstawianiem do treści jest większy niż element nadrzędny
 C4992|Warbird: funkcja "*deklaracji*" oznaczona jako __forceinline nie została wbudowana ponieważ zawiera wstawiony zestaw, który nie może być chroniony
-  
-## <a name="warnings-introduced-in-visual-c-2012"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2012  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:17__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2012-compiler-version-1700511061"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2012 (wersja kompilatora 17.00.51106.1)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:16__.
+
+|||
+|-|-|
 C4330|atrybut "*atrybutu*"dla sekcji"*sekcji*" ignorowane
-C4415|zduplikowane __declspec (code_seg ("*nazwa*"))
+C4415|duplicate __declspec(code_seg('*name*'))
 C4416|__declspec(code_seg(...)) zawiera pusty ciąg: ignorowane
 C4417|utworzenie wystąpienia jawnego szablonu nie może mieć __declspec(code_seg(...)): ignorowane
 C4418|__declspec(code_seg(...)) został zignorowany w wyliczeniu
@@ -236,20 +262,20 @@ C4695|#pragma execution_character_set: "*argument*" nie jest nieobsługiwanym ar
 C4703|Użycie potencjalnie niezainicjowanej lokalnej zmiennej wskaźnikowej "*nazwa*" używane
 C4728|/ Opcja Yl-zignorowany, ponieważ wymagane jest odwołanie PCH
 C4745|nietrwały dostęp "*nazwa*" nie można go uznać z powodu jego rozmiaru
-C4746|nietrwały dostęp "*nazwa*" podlega/volatile:\<iso\|MS > ustawienie; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/store
+C4746|nietrwały dostęp "*nazwa*" podlega/volatile:\<iso\|ms > ustawienie; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/store
 C4872|dzielenie liczby zmiennoprzecinkowej przez zero wykryta podczas kompilacji wykresu wywołań dla concurrency::parallel_for_each w:: "*opis*"
 C4880|Rzutowanie z "*typu*"do"*typu*": odrzucenie stałości ze wskaźnika lub odwołania może spowodować niezdefiniowane zachowanie w zastrzeżonej funkcji amp
 C4881|Konstruktor i/lub destruktor nie zostaną wywołane dla zmiennej tile_static "*typu*"
 C4966|"*opis*" ma adnotację __code_seg z nieobsługiwaną nazwą segmentu, adnotacja została zignorowana
 C4988|"*typu*": Zmienna zadeklarowana poza zakresem klasy/funkcji
 C4989|"*opis*": Typ ma definicje powodujące konflikt.
-  
-## <a name="warnings-introduced-in-visual-c-2010"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2010  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:16__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2010-compiler-version-16004021901"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2010 (wersja kompilatora 16.00.40219.01)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:15__.
+
+|||
+|-|-|
 C4352|"*nazwa*": wewnętrzna funkcja już zdefiniowana
 C4573|użycie "*typu*" wymaga przechwytywania "this" ale kompilator nie zezwala na to bieżący domyślny tryb przechwytywania
 C4574|"*nazwa*'jest zdefiniowany jako ' 0': czy zamierzałeś użyć ' #if *nazwa*"?
@@ -259,13 +285,13 @@ C4752|Znaleziono Intel(R) Advanced Vector Extensions; należy rozważyć użycie
 C4837|Wykryto — trigram: "? *znak*"zastąpione przez"*znak*"
 C4986|"*deklaracji*": specyfikacja wyjątku jest niezgodna z poprzednią deklaracją
 C4987|użyto rozszerzenia niestandardowego: 'throw (...)'
-  
-## <a name="warnings-introduced-in-visual-c-2008"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2008  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:15__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2008-compiler-version-15002102208"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2008 (wersja kompilatora 15.00.21022.08)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:14__.
+
+|||
+|-|-|
 C4396|"*typu*": wbudowany specyfikator nie można użyć, gdy zaprzyjaźniona deklaracja odnosi się do specjalizacji szablonu funkcji
 C4413|"*deklaracji*": element członkowski odwołania jest zainicjowany jako tymczasowy, który nie jest zachowany po zakończeniu działania konstruktora
 C4491|"*opis*": ma niedozwolony format wersji języka IDL
@@ -274,13 +300,13 @@ C4627|"*opis*": pominięto podczas wyszukiwania użycia prekompilowanego nagłó
 C4750|"*opis*": funkcja zawierająca _alloca() została wbudowana w pętlę
 C4910|"*typu*": deklaracje "__declspec(dllexport)" i "extern" są niezgodne z jawnym wystąpieniem
 C4985|"*deklaracji*": Brak atrybutów w poprzedniej deklaracji.
-  
-## <a name="warnings-introduced-in-visual-c-2005"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2005  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:14__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2005 (wersja kompilatora 14.00.50727.762)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:13__.
+
+|||
+|-|-|
 C4000|Nieznane Ostrzeżenie Wybierz polecenie Pomoc techniczna w menu Pomoc programu Visual C++ lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji
 C4272|"*typu*": jest oznaczony jako __declspec(dllimport); należy określić natywną Konwencję wywoływania podczas importu funkcji.
 C4333|"*wyrażenie*": przesunięcie w prawo o zbyt dużą liczbę, utrata danych
@@ -363,7 +389,7 @@ C4678|Klasa podstawowa*deklaracji*"jest mniej dostępny niż"*nazwa*"
 C4679|"*opis*": nie można zaimportować elementu członkowskiego
 C4687|"*typu*": zapieczętowana klasa abstrakcyjna nie może implementować interfejsu "*typu*"
 C4688|"*nazwa*": Lista ograniczeń zawiera prywatny typ zestawu "*deklaracji*"
-C4690|[ emitidl( pop ) ]: więcej zdejmowań niż włożeń
+C4690|[ emitidl ( pop ) ]: więcej zdejmowań niż włożeń
 C4691|"*typu*": oczekiwano typu odwołania w których nie ma odwołań *modułu* "*opis*", typ zdefiniowany w bieżącej jednostce tłumaczenia, zamiast tego użyć
 C4692|"*nazwa*": podpis elementu z systemem innym niż nieprywatnego elementu członkowskiego zawiera prywatny typ macierzysty zestawu "*deklaracji*"
 C4693|"*typu*": zapieczętowana klasa abstrakcyjna nie może mieć żadnych członków wystąpienia*nazwa*"
@@ -417,13 +443,13 @@ C4965|niejawne rzutowanie liczby całkowitej 0; Użyj nullptr lub jawnego rzutow
 C4970|Konstruktor delegata: obiekt docelowy ignorowane od "*deklaracji*" jest statyczny
 C4971|Kolejność argumentów: \<obiektu docelowego >, \<docelowa funkcja > dla konstruktora delegaty jest przestarzały, użyj \<docelowa funkcja >, \<obiekt docelowy >
 C4972|Nie jest bezpośrednia modyfikacja lub traktowanie wyniku operacji odpakowywania wartościowanego lewostronnie
-  
-## <a name="warnings-introduced-in-visual-c-2003"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2003  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:13.10__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2003-compiler-version-13103077"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2003 (wersja kompilatora 13.10.3077)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:13.00.9466__.
+
+|||
+|-|-|
 C4343|Optymalizacja #pragma (*opis*, off) przesłania opcję /Og
 C4344|Zmiana zachowania: użycie wyników argumentów niejawnego szablonu w wywołaniu elementu "*deklaracji*"
 C4346|"*typu*": zależna nazwa nie jest typem
@@ -453,13 +479,13 @@ C4951|"*opis*" został wyedytowany od czasu zebrania danych profilu dane profilu
 C4952|"*opis*": nie znaleziono danych profilowych w bazie danych programu "*opis*"
 C4953|Element Wbudowywany "*opis*" został zmodyfikowany od czasu zebrania danych profilu dane nie zostały użyte
 C4954|"*opis*": nieprofilowany (zawiera wyrażenie przełącznika __int64)
-  
-## <a name="warnings-introduced-in-visual-c-2002"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2002  
-  
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:13__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2002-compiler-version-13009466"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2002 (wersja kompilatora 13.00.9466)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:12__.
+
+|||
+|-|-|
 C4096|"*typu*": interfejs nie jest interfejsem COM; nie będzie emitowany do IDL
 C4097|Oczekiwano wartości parametru pragma "Restore" lub "off"
 C4165|"HRESULT" jest konwertowany na "bool"; Czy na pewno jest to, co chcesz zrobić?
@@ -507,7 +533,7 @@ C4338|#pragma *opis*: standardowa sekcja "*sekcji*" jest używana
 C4339|"*typu*": użycie niezdefiniowanego typu wykryte w CLR i WinRT meta-data - użycie tego typu może spowodować wyjątek czasu wykonywania
 C4353|użyto niestandardowego rozszerzenia: stała 0 jako wyrażenie funkcyjne.  Zamiast tego użyj funkcji "__noop" — wewnętrzne
 C4370|"*deklaracji*": układ klasy zmienił się od poprzedniej wersji kompilatora, ze względu na lepsze pakowanie
-C4371|"*deklaracji*": układ klasy mógł ulec zmianie z poprzedniej wersji kompilatora, ze względu na lepsze pakowanie elementu członkowskiego "*typu*"
+C4371|"*deklaracji*": układ klasy mógł ulec zmianie z poprzedniej wersji kompilatora, ze względu na lepsze pakowanie elementu członkowskiego "*elementu członkowskiego*"
 C4373|"*typu*": przesłonięcia funkcji wirtualnych*deklaracji*", poprzednie wersje kompilatora nie przesłaniały, gdy parametry różniły się tylko przez kwalifikatory const/volatile
 C4387|"*opis*": został uznany za
 C4389|"*wyrażenie*": niezgodność podpisany niepodpisane
@@ -523,7 +549,7 @@ C4531|C++, obsługa wyjątków nie jest dostępna w systemie Windows CE. Użyj O
 C4532|"*opis*": przejście z *koniec* bloku ma niezdefiniowane zachowanie podczas obsługi zakończenia
 C4533|Inicjowanie "*deklaracji*" jest pomijana przy "goto *deklaracji*"
 C4534|"*deklaracji*" nie będzie konstruktorem domyślnym dla *klasy* "*typu*" z powodu argumentu domyślnego
-C4535|Wywołanie _set_se_translator() wymaga/eha
+C4535|calling _set_se_translator() requires /EHa
 C4536|"*opis*": Nazwa typu przekracza limit meta-data "*numer*' znaków
 C4537|"*deklaracji*": "." zastosowany do typu z systemem innym niż UDT
 C4542|Pomijanie generowania scalonego wstrzykniętego pliku tekstowego, nie można zapisać *typu* pliku: "*filename*": *błąd*
@@ -602,8 +628,8 @@ C4995|"*nazwa*": nazwa została oznaczona jako przestarzała #pragma
 C4996|"*problem*": *opis*
 C4997|"*typu*": klasa coclass nie implementuje interfejsu COM lub pseudointerfejsu
 C4998|Nie można zrealizować oczekiwania: *opis*(*numer*)
-  
-## <a name="see-also"></a>Zobacz też  
-[/WV — opcja kompilatora](../../build/reference/compiler-option-warning-level.md)  
-[Są domyślnie wyłączone ostrzeżenia kompilatora](../../preprocessor/compiler-warnings-that-are-off-by-default.md)  
-[ostrzeżenie](../../preprocessor/warning.md)  
+
+## <a name="see-also"></a>Zobacz też
+[Opcja kompilatora /WV](../../build/reference/compiler-option-warning-level.md)
+[kompilatora ostrzeżeń, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
+[ostrzeżenie](../../preprocessor/warning.md)
