@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - set/std::set
 - set/std::set::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - set/std::set::swap
 - set/std::set::upper_bound
 - set/std::set::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::set [C++]
 - std::set [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7e9ec4f9c4b4f97b3a55102cb41d83e088d55e03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c2eba982b48181dee284bed63d3bab978d624fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-class"></a>set — Klasa
 Zestaw klas kontenera standardowa biblioteka C++ jest używany do przechowywania i pobierania danych z kolekcji, w której wartości elementy zawarte są unikatowe i służyć jako wartości klucza, zgodnie z którymi automatycznie porządkowania danych. Nie można bezpośrednio zmienić wartości elementu w zestawie. Zamiast tego musisz usunąć stare wartości i wstawić elementy z nowymi wartościami.  
@@ -126,7 +129,7 @@ class set
  W języku C ++ 14 można włączyć heterogenicznych wyszukiwania, określając `std::less<>` lub `std::greater<>` predykatu, który nie ma typu parametrów. Aby uzyskać więcej informacji, zobacz [heterogenicznych wyszukiwanie w kontenerach asocjacyjnej](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
- Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji zestawu i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to **alokatora***\<klucza >.*  
+ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji zestawu i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to **alokatora ***\<klucza >.*  
   
 ## <a name="remarks"></a>Uwagi  
  Standardowa biblioteka C++ zestaw jest:  
@@ -167,10 +170,10 @@ class set
 |[const_reference](#const_reference)|Typ, który zawiera odwołanie do `const` element przechowywane w zestawie do odczytu i wykonywania `const` operacji.|  
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, który udostępnia iteratora dwukierunkowego, który może odczytać `const` element w zestawie.|  
 |[difference_type](#difference_type)|Typ liczby całkowitej ze znakiem, który może służyć do reprezentowania liczby elementów zestawu w zakresie pomiędzy elementami wskazywanymi przez iteratory.|  
-|[iteratora](#iterator)|Typ, który dostarcza iterator dwukierunkowy do odczytu i modyfikacji dowolnego elementu w zestawie.|  
+|[iterator](#iterator)|Typ, który dostarcza iterator dwukierunkowy do odczytu i modyfikacji dowolnego elementu w zestawie.|  
 |[key_compare](#key_compare)|Typ, który dostarcza obiekt funkcji, która może porównać dwa klucze sortowania, aby określić względną kolejność dwóch elementów w zestawie.|  
 |[key_type](#key_type)|Typ opisuje obiekt zapisany jako element zestawu w charakterze klucza sortowania.|  
-|[wskaźnik](#pointer)|Typ, który dostarcza wskaźnik do elementu w zestawie.|  
+|[pointer](#pointer)|Typ, który dostarcza wskaźnik do elementu w zestawie.|  
 |[Odwołanie](#reference)|Typ, który zawiera odwołanie do elementu przechowywanego w zestawie.|  
 |[reverse_iterator](#reverse_iterator)|Typ, który dostarcza iterator dwukierunkowy do odczytu i modyfikacji elementu w odwróconym zestawie.|  
 |[size_type](#size_type)|Typ całkowitoliczbowy bez znaku, który może reprezentować liczbę elementów w zestawie.|  
@@ -181,7 +184,7 @@ class set
   
 |||  
 |-|-|  
-|[Rozpocznij](#begin)|Zwraca iterator, który dotyczy pierwszego elementu w zestawie.|  
+|[begin](#begin)|Zwraca iterator, który dotyczy pierwszego elementu w zestawie.|  
 |[cbegin](#cbegin)|Zwraca iterator const, który dotyczy pierwszego elementu w zestawie.|  
 |[cend](#cend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w zestawie.|  
 |[Wyczyść](#clear)|Usuwa wszystkie elementy zestawu.|  
@@ -190,19 +193,19 @@ class set
 |[crend](#rend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.|  
 |[emplace](#emplace)|Wstawia element skonstruowany w miejscu do zestawu.|  
 |[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do zestawu, ze wskazówką położenia.|  
-|[pusty](#empty)|Sprawdza, czy zestaw jest pusty.|  
-|[koniec](#end)|Zwraca iterator odnoszący się do lokalizacji następującej po ostatnim elemencie w zestawie.|  
+|[empty](#empty)|Sprawdza, czy zestaw jest pusty.|  
+|[Koniec](#end)|Zwraca iterator odnoszący się do lokalizacji następującej po ostatnim elemencie w zestawie.|  
 |[equal_range](#equal_range)|Zwraca parę iteratorów odpowiednio do pierwszego elementu w zestawie przy użyciu klucza, który jest większy niż określony klucz, i do pierwszego elementu w zestawie przy użyciu klucza, który jest równy lub większy niż ten klucz.|  
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów w zestawie z określonych pozycji lub usuwa elementy, które odpowiadają określonemu kluczowi.|  
 |[Znajdź](#find)|Zwraca iterator odnoszący się do pierwszej lokalizacji elementu w zestawie, który ma klucz równoważny z określonym kluczem.|  
 |[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiekt używany do utworzenia zestawu.|  
-|[Wstaw](#insert)|Wstawia element lub zakres elementów do zestawu.|  
+|[insert](#insert)|Wstawia element lub zakres elementów do zestawu.|  
 |[key_comp](#key_comp)|Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w zestawie.|  
-|[lower_bound —](#lower_bound)|Zwraca iterator do pierwszego elementu w zestawie, z kluczem, który jest równy lub większy od określonego klucza.|  
+|[lower_bound](#lower_bound)|Zwraca iterator do pierwszego elementu w zestawie, z kluczem, który jest równy lub większy od określonego klucza.|  
 |[max_size](#max_size)|Zwraca maksymalną długość zestawu.|  
 |[rbegin](#rbegin)|Zwraca iterator odnoszący się do pierwszego elementu w odwróconym zestawie.|  
 |[rend](#rend)|Zwraca iterator odnoszący się do lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.|  
-|[rozmiar](#size)|Zwraca liczbę elementów w zestawie.|  
+|[Rozmiar](#size)|Zwraca liczbę elementów w zestawie.|  
 |[swap](#swap)|Zamienia elementy z dwóch zestawów.|  
 |[upper_bound](#upper_bound)|Zwraca iterator do pierwszego elementu w zestawie z kluczem, który jest większy od określonego klucza.|  
 |[value_comp](#value_comp)|Pobiera kopię obiektu porównania, użytego do uporządkowania wartości elementów w zestawie.|  
@@ -211,14 +214,14 @@ class set
   
 |||  
 |-|-|  
-|[operator =](#op_eq)|Zastępuje elementy zestawu kopią innego zestawu.|  
+|[operator=](#op_eq)|Zastępuje elementy zestawu kopią innego zestawu.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<ustawić >  
   
  **Namespace:** Standard  
   
-##  <a name="allocator_type"></a>set::allocator_type  
+##  <a name="allocator_type"></a>  set::allocator_type  
  Typ, który reprezentuje klasę alokatora dla obiekt zestawu.  
   
 ```  
@@ -235,7 +238,7 @@ typedef Allocator allocator_type;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [get_allocator](#get_allocator) na przykład, który używa `allocator_type`.  
   
-##  <a name="begin"></a>set::BEGIN  
+##  <a name="begin"></a>  set::BEGIN  
  Zwraca iterator, który dotyczy pierwszego elementu w zestawie.  
   
 ```  
@@ -289,7 +292,7 @@ The first element of s1 is 1
 The first element of s1 is now 2  
 ```  
   
-##  <a name="cbegin"></a>set::cbegin  
+##  <a name="cbegin"></a>  set::cbegin  
  Zwraca `const` iteratora, którego dotyczy pierwszy element w zakresie.  
   
 ```  
@@ -312,7 +315,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="cend"></a>set::cend  
+##  <a name="cend"></a>  set::cend  
  Zwraca `const` iteratora, którego dotyczy lokalizacji bezpośrednio po ostatnim elementem w zakresie.  
   
 ```  
@@ -323,7 +326,7 @@ const_iterator cend() const;
  A `const` iteratora dwukierunkowego dostępu, który wskazuje poza koniec zakresu.  
   
 ### <a name="remarks"></a>Uwagi  
- `cend`Służy do sprawdzenia, czy iteratora osiągnęła koniec zakresu.  
+ `cend` Służy do sprawdzenia, czy iteratora osiągnęła koniec zakresu.  
   
  Można użyć funkcji członkowskiej zamiast `end()` funkcji członkowskiej, aby zagwarantować, że jest zwracana wartość `const_iterator`. Zazwyczaj jest używany w połączeniu z [automatycznie](../cpp/auto-cpp.md) wpisz słowo kluczowe wnioskowanie, jak pokazano w poniższym przykładzie. W tym przykładzie należy wziąć pod uwagę `Container` do można modyfikować (z systemem innym niż `const`) kontenera dowolnego rodzaju, który obsługuje `end()` i `cend()`.  
   
@@ -337,7 +340,7 @@ auto i2 = Container.cend();
   
  Wartość zwrócona przez `cend` nie powinny być wyłuskiwany.  
   
-##  <a name="clear"></a>set::Clear  
+##  <a name="clear"></a>  set::Clear  
  Usuwa wszystkie elementy zestawu.  
   
 ```  
@@ -374,7 +377,7 @@ The size of the set is initially 2.
 The size of the set after clearing is 0.  
 ```  
   
-##  <a name="const_iterator"></a>set::const_iterator  
+##  <a name="const_iterator"></a>  set::const_iterator  
  Typ, który udostępnia iteratora dwukierunkowego, który może odczytać **const** element w zestawie.  
   
 ```  
@@ -387,7 +390,7 @@ typedef implementation-defined const_iterator;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [rozpocząć](#begin) na przykład, który używa `const_iterator`.  
   
-##  <a name="const_pointer"></a>set::const_pointer  
+##  <a name="const_pointer"></a>  set::const_pointer  
  Typ, który dostarcza wskaźnik do **const** element w zestawie.  
   
 ```  
@@ -399,7 +402,7 @@ typedef typename allocator_type::const_pointer const_pointer;
   
  W większości przypadków [const_iterator](#const_iterator) mają być używane do uzyskania dostępu do elementów w obiektu stałego zestawu.  
   
-##  <a name="const_reference"></a>set::const_reference  
+##  <a name="const_reference"></a>  set::const_reference  
  Typ, który zawiera odwołanie do **const** element przechowywane w zestawie do odczytu i wykonywania **const** operacji.  
   
 ```  
@@ -439,7 +442,7 @@ int main( )
 The first element in the set is 10.  
 ```  
   
-##  <a name="const_reverse_iterator"></a>set::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  set::const_reverse_iterator  
  Typ, który udostępnia iteratora dwukierunkowego, który może odczytać **const** element w zestawie.  
   
 ```  
@@ -452,7 +455,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [rend](#rend) przykład sposobu deklarowanie i użycie `const_reverse_iterator`.  
   
-##  <a name="count"></a>set::Count  
+##  <a name="count"></a>  set::Count  
  Zwraca liczbę elementów w zestawie, których klucz pasuje do klucza określonego jako parametr.  
   
 ```  
@@ -505,7 +508,7 @@ The number of elements in s1 with a sort key of 1 is: 1.
 The number of elements in s1 with a sort key of 2 is: 0.  
 ```  
   
-##  <a name="crbegin"></a>set::crbegin  
+##  <a name="crbegin"></a>  set::crbegin  
  Zwraca iterator const, który dotyczy pierwszego elementu w odwróconym zestawie.  
   
 ```  
@@ -516,7 +519,7 @@ const_reverse_iterator crbegin() const;
  Stała wstecznego iteratora dwukierunkowego adresowania pierwszym elementem w zestawie odwróconej lub adresowania, jaki był ostatni element w zestawie stałe.  
   
 ### <a name="remarks"></a>Uwagi  
- `crbegin`jest używany z zestawem odwróconej podobnie jak [rozpocząć](#begin) jest używany z zestawem.  
+ `crbegin` jest używany z zestawem odwróconej podobnie jak [rozpocząć](#begin) jest używany z zestawem.  
   
  Z wartością zwracaną z `crbegin`, nie można zmodyfikować obiektu zestawu.  
   
@@ -548,7 +551,7 @@ int main( )
 The first element in the reversed set is 30.  
 ```  
   
-##  <a name="crend"></a>set::crend  
+##  <a name="crend"></a>  set::crend  
  Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.  
   
 ```  
@@ -559,11 +562,11 @@ const_reverse_iterator crend() const;
  Stała wstecznego iteratora dwukierunkowego, którego dotyczy lokalizacji pomyślne ostatnim elementem w zestawie odwróconej (lokalizacja miał przed pierwszym elementem w zestawie stałe).  
   
 ### <a name="remarks"></a>Uwagi  
- `crend`jest używany z zestawem odwróconej podobnie jak [zakończenia](#end) jest używany z zestawem.  
+ `crend` jest używany z zestawem odwróconej podobnie jak [zakończenia](#end) jest używany z zestawem.  
   
  Z wartością zwracaną z `crend`, nie można zmodyfikować obiektu zestawu. Wartość zwrócona przez `crend` nie powinny być wyłuskiwany.  
   
- `crend`można sprawdzać, czy odwrotnej iteratora osiągnął koniec jej zestawu.  
+ `crend` można sprawdzać, czy odwrotnej iteratora osiągnął koniec jej zestawu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -589,7 +592,7 @@ int main() {
 }  
 ```  
   
-##  <a name="difference_type"></a>set::difference_type  
+##  <a name="difference_type"></a>  set::difference_type  
  Typ liczby całkowitej ze znakiem, który może służyć do reprezentowania liczby elementów zestawu w zakresie pomiędzy elementami wskazywanymi przez iteratory.  
   
 ```  
@@ -660,7 +663,7 @@ The number '20' occurs 1 times in set s1.
 The number of elements in the set s1 is: 2.  
 ```  
   
-##  <a name="emplace"></a>set::emplace  
+##  <a name="emplace"></a>  set::emplace  
  Wstawia element skonstruowane w miejscu (nie ma operacji kopiowania lub przenoszenia są wykonywane).  
   
 ```  
@@ -740,7 +743,7 @@ int main()
   
 ```  
   
-##  <a name="emplace_hint"></a>set::emplace_hint  
+##  <a name="emplace_hint"></a>  set::emplace_hint  
  Wstawia element skonstruowane w miejscu (nie ma operacji kopiowania lub przenoszenia są wykonywane), ze wskazówką umieszczania.  
   
 ```  
@@ -813,7 +816,7 @@ int main()
   
 ```  
   
-##  <a name="empty"></a>set::Empty  
+##  <a name="empty"></a>  set::Empty  
  Sprawdza, czy zestaw jest pusty.  
   
 ```  
@@ -854,7 +857,7 @@ The set s1 is not empty.
 The set s2 is empty.  
 ```  
   
-##  <a name="end"></a>set::end  
+##  <a name="end"></a>  set::end  
  Zwraca iterator poza końcem.  
   
 ```  
@@ -875,7 +878,7 @@ iterator end();
   
  Na przykład kod, zobacz [set::find](#find).  
   
-##  <a name="equal_range"></a>set::equal_range  
+##  <a name="equal_range"></a>  set::equal_range  
  Zwraca parę Iteratory odpowiednio do pierwszego elementu w zestawie przy użyciu klucza, która jest mniejsza niż określony klucz i pierwszym elementem w zestawie za pomocą klucza, która jest większa niż klucz.  
   
 ```  
@@ -951,7 +954,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The set s1 doesn't have an element with a key less than 40.  
 ```  
   
-##  <a name="erase"></a>set::ERASE  
+##  <a name="erase"></a>  set::ERASE  
  Usuwa element lub zakres elementów w zestawie z określonych pozycji lub usuwa elementy, które odpowiadają określonemu kluczowi.  
   
 ```  
@@ -1065,7 +1068,7 @@ int main()
   
 ```  
   
-##  <a name="find"></a>set::Find  
+##  <a name="find"></a>  set::Find  
  Zwraca iteratora odnoszący się do lokalizacji elementu w zestawie, który ma klucz równoważne z określonym kluczem.  
   
 ```  
@@ -1149,7 +1152,7 @@ int main()
   
 ```  
   
-##  <a name="get_allocator"></a>set::get_allocator  
+##  <a name="get_allocator"></a>  set::get_allocator  
  Zwraca kopię obiektu alokatora użyty do utworzenia zestawu.  
   
 ```  
@@ -1220,7 +1223,7 @@ int main( )
 }  
 ```  
   
-##  <a name="insert"></a>set::INSERT  
+##  <a name="insert"></a>  set::INSERT  
  Wstawia element lub zakres elementów do zestawu.  
   
 ```  
@@ -1394,7 +1397,7 @@ int main()
   
 ```  
   
-##  <a name="iterator"></a>set::iterator  
+##  <a name="iterator"></a>  set::iterator  
  Typ, który zapewnia stałą [iteratora dwukierunkowego](../standard-library/bidirectional-iterator-tag-struct.md) który może odczytywać dowolny element w zestawie.  
   
 ```  
@@ -1404,7 +1407,7 @@ typedef implementation-defined iterator;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [rozpocząć](#begin) przykład sposobu deklarowanie i użycie **iterator**.  
   
-##  <a name="key_comp"></a>set::key_comp  
+##  <a name="key_comp"></a>  set::key_comp  
  Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w zestawie.  
   
 ```  
@@ -1476,7 +1479,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of s2.  
 ```  
   
-##  <a name="key_compare"></a>set::key_compare  
+##  <a name="key_compare"></a>  set::key_compare  
  Typ, który dostarcza obiekt funkcji, która może porównać dwa klucze sortowania, aby określić względną kolejność dwóch elementów w zestawie.  
   
 ```  
@@ -1484,7 +1487,7 @@ typedef Traits key_compare;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `key_compare`synonim parametru szablonu jest `Traits`.  
+ `key_compare` synonim parametru szablonu jest `Traits`.  
   
  Aby uzyskać więcej informacji na temat `Traits` zobacz [Ustaw klasy](../standard-library/set-class.md) tematu.  
   
@@ -1493,7 +1496,7 @@ typedef Traits key_compare;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [key_comp](#key_comp) przykład sposobu deklarowanie i użycie `key_compare`.  
   
-##  <a name="key_type"></a>set::key_type  
+##  <a name="key_type"></a>  set::key_type  
  Typ, który opisuje obiekt zapisany jako elementu zestawu w charakterze klucza sortowania.  
   
 ```  
@@ -1501,7 +1504,7 @@ typedef Key key_type;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `key_type`synonim parametru szablonu jest `Key`.  
+ `key_type` synonim parametru szablonu jest `Key`.  
   
  Aby uzyskać więcej informacji na temat `Key`, zobacz sekcję uwag [Ustaw klasy](../standard-library/set-class.md) tematu.  
   
@@ -1510,7 +1513,7 @@ typedef Key key_type;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [value_type](#value_type) przykład sposobu deklarowanie i użycie `key_type`.  
   
-##  <a name="lower_bound"></a>set::lower_bound  
+##  <a name="lower_bound"></a>  set::lower_bound  
  Zwraca iterator do pierwszego elementu w zestawie, z kluczem, który jest równy lub większy od określonego klucza.  
   
 ```  
@@ -1575,7 +1578,7 @@ The set s1 doesn't have an element with a key of 40.
 The element of s1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="max_size"></a>set::max_size  
+##  <a name="max_size"></a>  set::max_size  
  Zwraca maksymalną długość zestawu.  
   
 ```  
@@ -1605,7 +1608,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_eq"></a>set::operator =  
+##  <a name="op_eq"></a>  set::operator =  
  Zastępuje elementy to `set` za pomocą elementów z innej `set`.  
   
 ```  
@@ -1665,7 +1668,7 @@ int main( )
    }  
 ```  
   
-##  <a name="pointer"></a>set::Pointer  
+##  <a name="pointer"></a>  set::Pointer  
  Typ, który dostarcza wskaźnik do elementu w zestawie.  
   
 ```  
@@ -1677,7 +1680,7 @@ typedef typename allocator_type::pointer pointer;
   
  W większości przypadków [iterator](#iterator) mają być używane do uzyskania dostępu do elementów w obiekcie zestawu.  
   
-##  <a name="rbegin"></a>set::rbegin  
+##  <a name="rbegin"></a>  set::rbegin  
  Zwraca iterator odnoszący się do pierwszego elementu w odwróconym zestawie.  
   
 ```  
@@ -1690,11 +1693,11 @@ reverse_iterator rbegin();
  Iterator odwrotnej dwukierunkowego adresowania pierwszym elementem w zestawie odwróconej lub adresowania, jaki był ostatni element w zestawie stałe.  
   
 ### <a name="remarks"></a>Uwagi  
- `rbegin`jest używany z zestawem odwróconej podobnie jak [rozpocząć](#begin) jest używany z zestawem.  
+ `rbegin` jest używany z zestawem odwróconej podobnie jak [rozpocząć](#begin) jest używany z zestawem.  
   
  Jeśli wartość zwracana `rbegin` jest przypisany do `const_reverse_iterator`, a następnie obiektu zestawu nie może być modyfikowany. Jeśli wartość zwracana `rbegin` jest przypisany do `reverse_iterator`, a następnie można zmodyfikować obiektu zestawu.  
   
- `rbegin`może służyć do zapewnienia iteracji w zestawie.  
+ `rbegin` może służyć do zapewnienia iteracji w zestawie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1750,7 +1753,7 @@ The reversed set is: 30 20 10
 After the erasure, the first element in the reversed set is 20.  
 ```  
   
-##  <a name="reference"></a>set::Reference  
+##  <a name="reference"></a>  set::Reference  
  Typ, który zawiera odwołanie do elementu przechowywanego w zestawie.  
   
 ```  
@@ -1785,7 +1788,7 @@ int main( )
 The first element in the set is 10.  
 ```  
   
-##  <a name="rend"></a>set::rend  
+##  <a name="rend"></a>  set::rend  
  Zwraca iterator odnoszący się do lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.  
   
 ```  
@@ -1798,11 +1801,11 @@ reverse_iterator rend();
  Iterator odwrotnej dwukierunkowego, którego dotyczy lokalizacji pomyślne ostatnim elementem w zestawie odwróconej (lokalizacja miał przed pierwszym elementem w zestawie stałe).  
   
 ### <a name="remarks"></a>Uwagi  
- `rend`jest używany z zestawem odwróconej podobnie jak [zakończenia](#end) jest używany z zestawem.  
+ `rend` jest używany z zestawem odwróconej podobnie jak [zakończenia](#end) jest używany z zestawem.  
   
  Jeśli wartość zwracana `rend` jest przypisany do `const_reverse_iterator`, a następnie obiektu zestawu nie może być modyfikowany. Jeśli wartość zwracana `rend` jest przypisany do `reverse_iterator`, a następnie można zmodyfikować obiektu zestawu. Wartość zwrócona przez `rend` nie powinny być wyłuskiwany.  
   
- `rend`można sprawdzać, czy odwrotnej iteratora osiągnął koniec jej zestawu.  
+ `rend` można sprawdzać, czy odwrotnej iteratora osiągnął koniec jej zestawu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1853,7 +1856,7 @@ int main() {
 }  
 ```  
   
-##  <a name="reverse_iterator"></a>set::reverse_iterator  
+##  <a name="reverse_iterator"></a>  set::reverse_iterator  
  Typ, który dostarcza iterator dwukierunkowy do odczytu i modyfikacji elementu w odwróconym zestawie.  
   
 ```  
@@ -1866,7 +1869,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [rbegin](#rbegin) przykład sposobu deklarowanie i użycie `reverse_iterator`.  
   
-##  <a name="set"></a>set::set  
+##  <a name="set"></a>  set::set  
  Konstruuje zestaw, który jest pusty lub jest kopią całości lub części innego zestawu.  
   
 ```  
@@ -2059,7 +2062,7 @@ int main()
 s1 = 10 20 30 40s2 = 10 20s3 = 30s4 = 10 20 30 40s5 = 10 20s6 = 10s7 = 10 20s8 = 1 2 3 4s9 = 5 6 7 8s10 = 10 20 30 40  
 ```  
   
-##  <a name="size"></a>set::size  
+##  <a name="size"></a>  set::size  
  Zwraca liczbę elementów w zestawie.  
   
 ```  
@@ -2098,7 +2101,7 @@ The set length is 1.
 The set length is now 2.  
 ```  
   
-##  <a name="size_type"></a>set::size_type  
+##  <a name="size_type"></a>  set::size_type  
  Typ całkowitoliczbowy bez znaku, który może reprezentować liczbę elementów w zestawie.  
   
 ```  
@@ -2106,9 +2109,9 @@ typedef typename allocator_type::size_type size_type;
 ```  
   
 ### <a name="example"></a>Przykład  
-  Zobacz przykład [rozmiar](#size) przykład sposobu deklarowanie i użycie`size_type`  
+  Zobacz przykład [rozmiar](#size) przykład sposobu deklarowanie i użycie `size_type`  
   
-##  <a name="swap"></a>set::swap  
+##  <a name="swap"></a>  set::swap  
  Zamienia elementy z dwóch zestawów.  
   
 ```  
@@ -2173,7 +2176,7 @@ After swapping with s2, list s1 is: 100 200.
 After swapping with s3, list s1 is: 300.  
 ```  
   
-##  <a name="upper_bound"></a>set::upper_bound  
+##  <a name="upper_bound"></a>  set::upper_bound  
  Zwraca iteratora pierwszy element w zestawie który za pomocą klucza, który jest większy niż określony klucz.  
   
 ```  
@@ -2238,7 +2241,7 @@ The first element of s1 with a key greater than
 that of the initial element of s1 is: 20.  
 ```  
   
-##  <a name="value_comp"></a>set::value_comp  
+##  <a name="value_comp"></a>  set::value_comp  
  Pobiera kopię obiektu porównania, użytego do uporządkowania wartości elementów w zestawie.  
   
 ```  
@@ -2310,7 +2313,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of s1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of s2.  
 ```  
   
-##  <a name="value_compare"></a>set::value_compare  
+##  <a name="value_compare"></a>  set::value_compare  
  Typ, który udostępnia obiekt funkcji, które można porównać dwóch wartości elementu, aby ustalić ich względne kolejności w zestawie.  
   
 ```  
@@ -2318,7 +2321,7 @@ typedef key_compare value_compare;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `value_compare`synonim parametru szablonu jest `Traits`.  
+ `value_compare` synonim parametru szablonu jest `Traits`.  
   
  Aby uzyskać więcej informacji na temat `Traits` zobacz [Ustaw klasy](../standard-library/set-class.md) tematu.  
   
@@ -2327,7 +2330,7 @@ typedef key_compare value_compare;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [value_comp](#value_comp) przykład sposobu deklarowanie i użycie `value_compare`.  
   
-##  <a name="value_type"></a>set::value_type  
+##  <a name="value_type"></a>  set::value_type  
  Typ, który opisuje obiekt zapisany jako elementu zestawu jako wartość.  
   
 ```  
@@ -2335,7 +2338,7 @@ typedef Key value_type;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `value_type`synonim parametru szablonu jest `Key`.  
+ `value_type` synonim parametru szablonu jest `Key`.  
   
  Aby uzyskać więcej informacji na temat `Key`, zobacz sekcję uwag [Ustaw klasy](../standard-library/set-class.md) tematu.  
   
