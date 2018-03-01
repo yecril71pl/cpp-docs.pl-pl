@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_set/std::unordered_set
 - unordered_set/std::unordered_set::allocator_type
@@ -53,7 +54,8 @@ f1_keywords:
 - unordered_set/std::unordered_set::unordered_set
 - unordered_set/std::unordered_set::operator=
 - unordered_set/std::unordered_set::hash_function
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::unordered_set
 - std::unordered_set::allocator_type
@@ -141,16 +143,17 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ed62216483b23c75133759f0df39697e74e463a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 70b9f8541601cc2d91cf2e43fbb66110302488be
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorderedset-class"></a>unordered_set — Klasa
 Klasa szablonu opisuje obiekt, który kontroluje sekwencji zróżnicowanych długość elementów typu `const Key`. Sekwencja jest słabo uporządkowana według funkcji mieszania, która dzieli sekwencję na uporządkowany zestaw podsekwencji, zwanych przedziałami, segmentami lub pakietami. W ramach każdego przedziału funkcja porównania określa, czy jakaś para elementów ma równoważną kolejność. Każdy element służy jako zarówno klucz sortowania, jak i wartość. Sekwencja jest reprezentowana w sposób, który pozwala na wyszukiwanie, wstawianie i usuwanie dowolnego elementu z wielu operacji, które mogą być niezależne od liczby elementów w sekwencji (stały czas), co najmniej kiedy wszystkie przedziały są w przybliżeniu jednakowej długości. W najgorszym przypadku, gdy wszystkie elementy znajdują się w jednym przedziale, liczba operacji jest proporcjonalna do liczby elementów w sekwencji (liniowy czas). Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.  
@@ -188,11 +191,11 @@ class unordered_set;
 |[const_reference](#const_reference)|Typ stałego odwołania do elementu.|  
 |[difference_type](#difference_type)|Typ odległości ze znakiem między dwoma elementami.|  
 |[hasher](#hasher)|Typ funkcji mieszania.|  
-|[iteratora](#iterator)|Typ iteratora dla kontrolowanej sekwencji.|  
+|[iterator](#iterator)|Typ iteratora dla kontrolowanej sekwencji.|  
 |[key_equal](#key_equal)|Typ funkcji porównywania.|  
 |[key_type](#key_type)|Typ klucza sortowania.|  
 |[local_iterator](#local_iterator)|Typ iteratora przedziału dla kontrolowanej sekwencji.|  
-|[wskaźnik](#pointer)|Typ wskaźnika do elementu.|  
+|[pointer](#pointer)|Typ wskaźnika do elementu.|  
 |[Odwołanie](#reference)|Typ odwołania do elementu.|  
 |[size_type](#size_type)|Typ odległości bez znaku między dwoma elementami.|  
 |[value_type](#value_type)|Typ elementu.|  
@@ -200,8 +203,8 @@ class unordered_set;
 |||  
 |-|-|  
 |Funkcja elementów członkowskich|Opis|  
-|[Rozpocznij](#begin)|Określa początek kontrolowanej sekwencji.|  
-|[Zasobnik](#bucket)|Pobiera numer przedziału dla wartości klucza.|  
+|[begin](#begin)|Określa początek kontrolowanej sekwencji.|  
+|[bucket](#bucket)|Pobiera numer przedziału dla wartości klucza.|  
 |[bucket_count](#bucket_count)|Pobiera liczbę przedziałów.|  
 |[bucket_size](#bucket_size)|Pobiera rozmiar przedziału.|  
 |[cbegin](#cbegin)|Określa początek kontrolowanej sekwencji.|  
@@ -210,28 +213,28 @@ class unordered_set;
 |[Liczba](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|  
 |[emplace](#emplace)|Dodaje element skonstruowany na miejscu.|  
 |[emplace_hint](#emplace_hint)|Dodaje element skonstruowany na miejscu, z podpowiedzią.|  
-|[pusty](#empty)|Sprawdza, czy nie ma żadnych elementów.|  
-|[koniec](#end)|Określa koniec kontrolowanej sekwencji.|  
+|[empty](#empty)|Sprawdza, czy nie ma żadnych elementów.|  
+|[Koniec](#end)|Określa koniec kontrolowanej sekwencji.|  
 |[equal_range](#equal_range)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|  
 |[wymazywanie](#erase)|Usuwa elementy z określonych pozycji.|  
 |[Znajdź](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
 |[get_allocator](#get_allocator)|Pobiera przechowywany obiekt alokatora.|  
 |[hash_function](#hash)|Pobiera przechowywany obiekt funkcji mieszania.|  
-|[Wstaw](#insert)|Dodaje elementy.|  
+|[insert](#insert)|Dodaje elementy.|  
 |[key_eq](#key_eq)|Pobiera przechowywany obiekt funkcji porównywania.|  
-|[load_factor —](#load_factor)|Oblicza średnią liczbę elementów na przedział.|  
+|[load_factor](#load_factor)|Oblicza średnią liczbę elementów na przedział.|  
 |[max_bucket_count](#max_bucket_count)|Pobiera maksymalną liczbę przedziałów.|  
-|[max_load_factor —](#max_load_factor)|Pobiera lub ustawia maksymalną liczbę elementów na przedział.|  
+|[max_load_factor](#max_load_factor)|Pobiera lub ustawia maksymalną liczbę elementów na przedział.|  
 |[max_size](#max_size)|Pobiera maksymalny rozmiar kontrolowanej sekwencji.|  
 |[rehash](#rehash)|Przebudowuje tabelę mieszania.|  
-|[rozmiar](#size)|Liczy liczbę elementów.|  
+|[Rozmiar](#size)|Liczy liczbę elementów.|  
 |[swap](#swap)|Zamienia zawartości dwóch kontenerów.|  
-|[unordered_set —](#unordered_set)|Konstruuje obiekt kontenera.|  
+|[unordered_set](#unordered_set)|Konstruuje obiekt kontenera.|  
   
 |||  
 |-|-|  
 |Operatory|Opis|  
-|[unordered_set::operator =](#op_eq)|Kopiuje tabelę mieszania.|  
+|[unordered_set::operator=](#op_eq)|Kopiuje tabelę mieszania.|  
   
 ## <a name="remarks"></a>Uwagi  
  Obiekt porządkuje sekwencji kontroluje wywołując dwa obiekty przechowywane obiektem porównanie funkcji typu[unordered_set::key_equal](#key_equal) i obiektu typu funkcji skrótu[unordered_set::hasher](#hasher). Dostęp do pierwszego obiektu przechowywanych przez wywołanie funkcji Członkowskich[unordered_set::key_eq](#key_eq)`()`; i dostępu do drugiego obiektu przechowywanych przez wywołanie funkcji Członkowskich[unordered_set::hash_function](#hash) `()`. W szczególności dla wszystkich wartości `X` i `Y` typu `Key`, wywołanie `key_eq()(X, Y)` zwraca wartość true tylko wtedy, gdy wartości dwóch argumentów równoważne kolejności; wywołanie `hash_function()(keyval)` daje rozkład wartości typu `size_t`. W odróżnieniu od klasy szablonu[unordered_multiset — klasa](../standard-library/unordered-multiset-class.md), obiekt klasy szablonu `unordered_set` upewnia się, że `key_eq()(X, Y)` zawsze ma wartość false dla dowolnego dwa elementy kontrolowanej sekwencji. (Klucze są unikatowe).  
@@ -247,7 +250,7 @@ class unordered_set;
   
  **Namespace:** Standard  
   
-##  <a name="allocator_type"></a>unordered_set::allocator_type  
+##  <a name="allocator_type"></a>  unordered_set::allocator_type  
  Typ alokatora do zarządzania pamięcią.  
   
 ```  
@@ -283,7 +286,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="begin"></a>unordered_set::BEGIN  
+##  <a name="begin"></a>  unordered_set::BEGIN  
  Określa początek kontrolowanej sekwencji lub zasobnika.  
   
 ```  
@@ -362,7 +365,7 @@ int main()
  [a]  
 ```  
   
-##  <a name="bucket"></a>unordered_set::Bucket  
+##  <a name="bucket"></a>  unordered_set::Bucket  
  Pobiera numer przedziału dla wartości klucza.  
   
 ```  
@@ -414,7 +417,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="bucket_count"></a>unordered_set::bucket_count  
+##  <a name="bucket_count"></a>  unordered_set::bucket_count  
  Pobiera liczbę przedziałów.  
   
 ```  
@@ -497,7 +500,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1  
 ```  
   
-##  <a name="bucket_size"></a>unordered_set::bucket_size  
+##  <a name="bucket_size"></a>  unordered_set::bucket_size  
  Pobiera rozmiar zasobnika  
   
 ```  
@@ -549,7 +552,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="cbegin"></a>unordered_set::cbegin  
+##  <a name="cbegin"></a>  unordered_set::cbegin  
  Zwraca `const` iteratora, którego dotyczy pierwszy element w zakresie.  
   
 ```  
@@ -572,7 +575,7 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator  
 ```  
   
-##  <a name="cend"></a>unordered_set::cend  
+##  <a name="cend"></a>  unordered_set::cend  
  Zwraca `const` iteratora, którego dotyczy lokalizacji bezpośrednio po ostatnim elementem w zakresie.  
   
 ```  
@@ -583,7 +586,7 @@ const_iterator cend() const;
  A `const` iteratora dostępu do przodu, który wskazuje poza koniec zakresu.  
   
 ### <a name="remarks"></a>Uwagi  
- `cend`Służy do sprawdzenia, czy iteratora osiągnęła koniec zakresu.  
+ `cend` Służy do sprawdzenia, czy iteratora osiągnęła koniec zakresu.  
   
  Można użyć funkcji członkowskiej zamiast `end()` funkcji członkowskiej, aby zagwarantować, że jest zwracana wartość `const_iterator`. Zazwyczaj jest używany w połączeniu z[automatycznie](../cpp/auto-cpp.md) wpisz słowo kluczowe wnioskowanie, jak pokazano w poniższym przykładzie. W tym przykładzie należy wziąć pod uwagę `Container` do można modyfikować (z systemem innym niż `const`) kontenera dowolnego rodzaju, który obsługuje `end()` i `cend()`.  
   
@@ -597,7 +600,7 @@ auto i2 = Container.cend();
   
  Wartość zwrócona przez `cend` nie powinny być wyłuskiwany.  
   
-##  <a name="clear"></a>unordered_set::Clear  
+##  <a name="clear"></a>  unordered_set::Clear  
  Usuwa wszystkie elementy.  
   
 ```  
@@ -659,7 +662,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="const_iterator"></a>unordered_set::const_iterator  
+##  <a name="const_iterator"></a>  unordered_set::const_iterator  
  Typ iteratora stałego dla kontrolowanej sekwencji.  
   
 ```  
@@ -699,7 +702,7 @@ int main()
  [c] [b] [a]  
 ```  
   
-##  <a name="const_local_iterator"></a>unordered_set::const_local_iterator  
+##  <a name="const_local_iterator"></a>  unordered_set::const_local_iterator  
  Typ iteratora stałego przedziału dla kontrolowanej sekwencji.  
   
 ```  
@@ -744,7 +747,7 @@ int main()
  [a]  
 ```  
   
-##  <a name="const_pointer"></a>unordered_set::const_pointer  
+##  <a name="const_pointer"></a>  unordered_set::const_pointer  
  Typ stałego wskaźnika do elementu.  
   
 ```  
@@ -787,7 +790,7 @@ int main()
  [c] [b] [a]  
 ```  
   
-##  <a name="const_reference"></a>unordered_set::const_reference  
+##  <a name="const_reference"></a>  unordered_set::const_reference  
  Typ stałego odwołania do elementu.  
   
 ```  
@@ -830,7 +833,7 @@ int main()
  [c] [b] [a]  
 ```  
   
-##  <a name="count"></a>unordered_set::Count  
+##  <a name="count"></a>  unordered_set::Count  
  Wyszukuje liczbę elementów pasujących do określonego klucza.  
   
 ```  
@@ -881,7 +884,7 @@ count('b') == 1
 count('C') == 0  
 ```  
   
-##  <a name="difference_type"></a>unordered_set::difference_type  
+##  <a name="difference_type"></a>  unordered_set::difference_type  
  Typ odległości ze znakiem między dwoma elementami.  
   
 ```  
@@ -935,7 +938,7 @@ end()-begin() == 3
 begin()-end() == -3  
 ```  
   
-##  <a name="emplace"></a>unordered_set::emplace  
+##  <a name="emplace"></a>  unordered_set::emplace  
  Wstawia element skonstruowane w miejscu (nie ma operacji kopiowania lub przenoszenia są wykonywane).  
   
 ```  
@@ -964,7 +967,7 @@ Args&&... args);
   
  Na przykład kod, zobacz[set::emplace](../standard-library/set-class.md#emplace).  
   
-##  <a name="emplace_hint"></a>unordered_set::emplace_hint  
+##  <a name="emplace_hint"></a>  unordered_set::emplace_hint  
  Wstawia element skonstruowane w miejscu (nie ma operacji kopiowania lub przenoszenia są wykonywane), ze wskazówką umieszczania.  
   
 ```  
@@ -994,7 +997,7 @@ Args&&... args);
   
  Na przykład kod, zobacz[set::emplace_hint](../standard-library/set-class.md#emplace_hint).  
   
-##  <a name="empty"></a>unordered_set::Empty  
+##  <a name="empty"></a>  unordered_set::Empty  
  Sprawdza, czy nie ma żadnych elementów.  
   
 ```  
@@ -1056,7 +1059,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="end"></a>unordered_set::end  
+##  <a name="end"></a>  unordered_set::end  
  Określa koniec kontrolowanej sekwencji.  
   
 ```  
@@ -1124,7 +1127,7 @@ int main()
  [a]  
 ```  
   
-##  <a name="equal_range"></a>unordered_set::equal_range  
+##  <a name="equal_range"></a>  unordered_set::equal_range  
  Wyszukuje zakres, który odpowiada określonemu kluczowi.  
   
 ```  
@@ -1189,7 +1192,7 @@ equal_range('x'):
 equal_range('b'): [b]  
 ```  
   
-##  <a name="erase"></a>unordered_set::ERASE  
+##  <a name="erase"></a>  unordered_set::ERASE  
  Usuwa element lub zakres elementów w unordered_set z określonych pozycji lub usuwa elementy zgodne z określonym kluczem.  
   
 ```  
@@ -1221,7 +1224,7 @@ size_type erase(const key_type& Key);
 ### <a name="remarks"></a>Uwagi  
  Na przykład kod, zobacz[set::erase](../standard-library/set-class.md#erase).  
   
-##  <a name="find"></a>unordered_set::Find  
+##  <a name="find"></a>  unordered_set::Find  
  Wyszukuje element, który odpowiada określonemu kluczowi.  
   
 ```  
@@ -1277,7 +1280,7 @@ find('A') == false
 find('b') == true: [b]  
 ```  
   
-##  <a name="get_allocator"></a>unordered_set::get_allocator  
+##  <a name="get_allocator"></a>  unordered_set::get_allocator  
  Pobiera przechowywany obiekt alokatora.  
   
 ```  
@@ -1313,7 +1316,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="hash"></a>unordered_set::hash_function  
+##  <a name="hash"></a>  unordered_set::hash_function  
  Pobiera przechowywany obiekt funkcji mieszania.  
   
 ```  
@@ -1349,7 +1352,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="hasher"></a>unordered_set::hasher  
+##  <a name="hasher"></a>  unordered_set::hasher  
  Typ funkcji mieszania.  
   
 ```  
@@ -1385,7 +1388,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="insert"></a>unordered_set::INSERT  
+##  <a name="insert"></a>  unordered_set::INSERT  
  Wstawia element lub zakres elementów do unordered_set.  
   
 ```  
@@ -1446,7 +1449,7 @@ void insert(initializer_list<value_type> IList);
   
  Na przykład kod, zobacz[set::insert](../standard-library/set-class.md#insert).  
   
-##  <a name="iterator"></a>unordered_set::iterator  
+##  <a name="iterator"></a>  unordered_set::iterator  
  Typ, który zapewnia stałą[do przodu iteratora](../standard-library/forward-iterator-tag-struct.md) który może odczytywać elementów w unordered_set.  
   
 ```  
@@ -1456,7 +1459,7 @@ typedef implementation-defined iterator;
 ### <a name="example"></a>Przykład  
   Zobacz przykład[rozpocząć](../standard-library/set-class.md#begin) przykład sposobu deklarowanie i użycie**iterator**.  
   
-##  <a name="key_eq"></a>unordered_set::key_eq  
+##  <a name="key_eq"></a>  unordered_set::key_eq  
  Pobiera przechowywany obiekt funkcji porównywania.  
   
 ```  
@@ -1494,7 +1497,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="key_equal"></a>unordered_set::key_equal  
+##  <a name="key_equal"></a>  unordered_set::key_equal  
  Typ funkcji porównywania.  
   
 ```  
@@ -1532,7 +1535,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="key_type"></a>unordered_set::key_type  
+##  <a name="key_type"></a>  unordered_set::key_type  
  Typ klucza sortowania.  
   
 ```  
@@ -1582,7 +1585,7 @@ int main()
  [d] [c] [b] [a]  
 ```  
   
-##  <a name="load_factor"></a>unordered_set::load_factor  
+##  <a name="load_factor"></a>  unordered_set::load_factor  
  Oblicza średnią liczbę elementów na przedział.  
   
 ```  
@@ -1665,7 +1668,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1  
 ```  
   
-##  <a name="local_iterator"></a>unordered_set::local_iterator  
+##  <a name="local_iterator"></a>  unordered_set::local_iterator  
  Typ iteratora zasobnika.  
   
 ```  
@@ -1710,7 +1713,7 @@ int main()
  [a]  
 ```  
   
-##  <a name="max_bucket_count"></a>unordered_set::max_bucket_count  
+##  <a name="max_bucket_count"></a>  unordered_set::max_bucket_count  
  Pobiera maksymalną liczbę przedziałów.  
   
 ```  
@@ -1793,7 +1796,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1  
 ```  
   
-##  <a name="max_load_factor"></a>unordered_set::max_load_factor  
+##  <a name="max_load_factor"></a>  unordered_set::max_load_factor  
  Pobiera lub ustawia maksymalną liczbę elementów na przedział.  
   
 ```  
@@ -1882,7 +1885,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1  
 ```  
   
-##  <a name="max_size"></a>unordered_set::max_size  
+##  <a name="max_size"></a>  unordered_set::max_size  
  Pobiera maksymalny rozmiar kontrolowanej sekwencji.  
   
 ```  
@@ -1915,7 +1918,7 @@ int main()
 max_size() == 4294967295  
 ```  
   
-##  <a name="op_eq"></a>unordered_set::operator =  
+##  <a name="op_eq"></a>  unordered_set::operator =  
  Kopiuje tabelę mieszania.  
   
 ```  
@@ -1971,7 +1974,7 @@ int main( )
 }  
 ```  
   
-##  <a name="pointer"></a>unordered_set::Pointer  
+##  <a name="pointer"></a>  unordered_set::Pointer  
  Typ wskaźnika do elementu.  
   
 ```  
@@ -2015,7 +2018,7 @@ int main()
  [c] [b] [a]  
 ```  
   
-##  <a name="reference"></a>unordered_set::Reference  
+##  <a name="reference"></a>  unordered_set::Reference  
  Typ odwołania do elementu.  
   
 ```  
@@ -2059,7 +2062,7 @@ int main()
  [c] [b] [a]  
 ```  
   
-##  <a name="rehash"></a>unordered_set::rehash  
+##  <a name="rehash"></a>  unordered_set::rehash  
  Przebudowuje tabelę mieszania.  
   
 ```  
@@ -2133,7 +2136,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1  
 ```  
   
-##  <a name="size"></a>unordered_set::size  
+##  <a name="size"></a>  unordered_set::size  
  Liczy liczbę elementów.  
   
 ```  
@@ -2196,7 +2199,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="size_type"></a>unordered_set::size_type  
+##  <a name="size_type"></a>  unordered_set::size_type  
  Typ odległości bez znaku między dwoma elementami.  
   
 ```  
@@ -2230,7 +2233,7 @@ int main()
 size == 0  
 ```  
   
-##  <a name="swap"></a>unordered_set::swap  
+##  <a name="swap"></a>  unordered_set::swap  
  Zamienia zawartości dwóch kontenerów.  
   
 ```  
@@ -2296,7 +2299,7 @@ int main()
  [c] [b] [a]  
 ```  
   
-##  <a name="unordered_set"></a>unordered_set::unordered_set  
+##  <a name="unordered_set"></a>  unordered_set::unordered_set  
  Konstruuje obiekt kontenera.  
   
 ```  
@@ -2368,7 +2371,7 @@ unordered_set(
   
  Obiekt alokatora jest argument `Al`, jeśli występuje; w przeciwnym razie jest `Alloc()`.  
   
-##  <a name="value_type"></a>unordered_set::value_type  
+##  <a name="value_type"></a>  unordered_set::value_type  
  Typ elementu.  
   
 ```  
@@ -2419,7 +2422,7 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [< unordered_set >](../standard-library/unordered-set.md)   
+ [<unordered_set>](../standard-library/unordered-set.md)   
  [Kontenery](../cpp/containers-modern-cpp.md)   
  [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
