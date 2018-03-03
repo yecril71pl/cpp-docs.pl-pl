@@ -1,10 +1,13 @@
 ---
 title: /Zc:ternary (wymuszanie zasad operator warunkowy) | Dokumentacja firmy Microsoft
 ms.date: 1/12/2018
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: article
-f1_keywords: /Zc:ternary
-dev_langs: C++
+f1_keywords:
+- /Zc:ternary
+dev_langs:
+- C++
 helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
