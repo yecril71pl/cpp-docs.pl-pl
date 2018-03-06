@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
+- using_CPP
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,11 +26,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 801bd8ee8e81c0126ae88c1fb9213b25b9f103dd
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="namespaces-c"></a>Przestrzenie nazw (C++)
 Przestrzeń nazw jest deklaratywne region, który zawiera zakres identyfikatorów (nazwy typów, funkcji, zmienne, itp.) w nim. Przestrzenie nazw są używane do organizowania kodu w logiczne grupy i aby uniknąć konfliktów nazw, które mogą wystąpić, szczególnie w przypadku, gdy kodzie zawiera wiele bibliotek. Wszystkie identyfikatory w zakresie przestrzeni nazw są widoczne dla siebie bez kwalifikacji. Identyfikatory poza obszar nazw mogą uzyskiwać dostęp do elementów członkowskich przy użyciu w pełni kwalifikowanej nazwy dla każdego identyfikatora, na przykład `std::vector<std::string> vec;`, w przeciwnym razie przez [za pomocą deklaracji](../cpp/using-declaration.md) dla jednego identyfikatora (`using std::string`), lub [dyrektywa using](../cpp/namespaces-cpp.md#using_directives) dla wszystkich identyfikatorów w przestrzeni nazw (`using namespace std;`). Kod w nagłówku plików zawsze należy używać przestrzeni nazw w pełni kwalifikowanej nazwy.  
@@ -76,7 +77,7 @@ Func(mgr);
   
 ```  
   
-## <a id="using_directives"></a>przy użyciu dyrektyw  
+## <a id="using_directives"></a> przy użyciu dyrektyw  
  `using` Dyrektywy umożliwia wszystkich nazw w **przestrzeni nazw** ma być używany bez *nazwę przestrzeni nazw* jako jawne kwalifikatora. Użyj using dyrektywy w pliku z implementacją (tj. *.cpp), jeśli używasz kilku różnych identyfikatorów, w obszarze nazw; Jeśli używane są tylko jeden lub dwa identyfikatory, należy rozważyć użycie deklaracji tylko wprowadzenia tych identyfikatorów w zakresie, a nie wszystkie identyfikatory w przestrzeni nazw. Jeśli zmienna lokalna ma taką samą nazwę jak zmienna przestrzeni nazw, zmienna przestrzeni nazw jest ukryty. Jest błąd, aby mieć zmienna o takiej samej nazwie jako zmiennej globalnej przestrzeni nazw.  
   
 > [!NOTE]
@@ -258,7 +259,7 @@ namespace Contoso
   
 ```  
   
-## <a id="namespace_aliases"></a>Aliasy Namespace  
+## <a id="namespace_aliases"></a> Aliasy Namespace  
  Namespace nazw musi być unikatowa, co oznacza, że często nie powinny być zbyt krótki. Jeśli długość nazwy powoduje, że kod jest trudne do odczytu, lub jest niewygodne typu w pliku nagłówka, której nie można użyć dyrektyw using, a następnie możesz wprowadzić alias przestrzeni nazw, który stanowi skrót od rzeczywistej nazwy. Na przykład:  
   
 ```cpp  
