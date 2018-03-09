@@ -60,11 +60,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96bcc3de4b59601e18043bb18fb82802abd4c8f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c9e236d7b880b2bcc5a66f8f2494990c6b420193
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 Zapisywanie sformatowanego danych wyjściowych przy użyciu wskaźnika do listy argumentów. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [vsprintf_s —, _vsprintf_s_l —, vswprintf_s —, _vswprintf_s_l —](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).  
@@ -157,7 +157,7 @@ int _vswprintf_l(
  Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.  
   
 > [!IMPORTANT]
->  Przy użyciu `vsprintf`, w tym miejscu można ograniczyć liczbę znaków napisano, co oznacza, że kodu za pomocą tej funkcji jest podatny na przepełnienia buforu. Użyj [_vsnprintf —](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) , lub zadzwoń [_vscprintf —](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) Aby określić rozmiar, jaki jest potrzebny buforu. Ponadto upewnij się, że `format` nie jest ciągiem zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Przy użyciu `vsprintf`, można ograniczyć liczbę znaków napisano, co oznacza, że kodu za pomocą tej funkcji jest podatny na przepełnienia buforu. Użyj [_vsnprintf —](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) , lub zadzwoń [_vscprintf —](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) Aby określić rozmiar, jaki jest potrzebny buforu. Ponadto upewnij się, że `format` nie jest ciągiem zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
  `vswprintf` zgodne ze standardem C ISO, co wymaga drugiego parametru, `count`, typu `size_t`. Aby wymusić starego niestandardowe zachowanie, należy zdefiniować `_CRT_NON_CONFORMING_SWPRINTFS.` stare zachowanie nie będzie w przyszłej wersji, więc należy zmienić kod do użycia nowego zachowania zgodność.  
   

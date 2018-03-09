@@ -19,14 +19,14 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74ee1bbcf1a39171b18c09274543c72e0b844748
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="aggregates-and-unions"></a>Agregacje i unie
-Innych typów, takich jak tablice, struktur i Unii mieć bardziej rygorystyczne wymagania dotyczące wyrównywania, zapewniając spójne Unii i agregacji magazynu i danych pobierania. Poniżej przedstawiono definicje dla tablic, struktury i Unii:  
+Innych typów, takich jak tablice, struktur i Unii, mieć bardziej rygorystyczne wymagania dotyczące wyrównywania, zapewniając spójne Unii i agregacji magazynu i danych pobierania. Poniżej przedstawiono definicje dla tablic, struktury i Unii:  
   
  Tablica  
  Zawiera grupę uporządkowanych danych sąsiadujących ze sobą obiektów. Każdy obiekt nosi nazwę elementu. Wszystkie elementy w tablicy ma ten sam typ danych i rozmiar.  

@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d527a4e0647fe0e8471e168841a93512f4d1a9e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f534432fbf7ff723cac1448bc3a26474f3b323bb
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Dane binarne C++ zgodność programu Visual Studio 2015 i Visual Studio 2017
 
@@ -34,7 +34,8 @@ Istnieją dwa wyjątki od tej reguły. Zgodność binarną nie jest gwarantowana
 
 1) Gdy biblioteki statyczne lub obiektu pliki są kompilowane przy użyciu przełącznika kompilatora /GL.  
 
-2) Gdy aplikacja zużyje pakietu redystrybucyjnego bibliotek, których numer wersji jest mniejsza niż zestaw narzędzi, która jest używana do kompilowania aplikacji. Innymi słowy Jeśli kompilacja programu przy użyciu v141 zestaw narzędzi platformy dowolnego pakietu redystrybucyjnego bibliotek, które korzysta z aplikacji musi być skompilowany z v141 lub nowszej.  
+2) Podczas używania bibliotek skompilowanej za pomocą narzędzi, których wersja jest nowsza niż zestaw narzędzi używanych do kompilowania i łączenie aplikacji. Na przykład program, który jest skompilowany i połączone z zestawu narzędzi 19.12 mogą używać biblioteki, w których są kompilowane przy użyciu 19.0 się za pośrednictwem 19.12. Łączenie 19.x programy z bibliotekami utworzonego przez Visual Studio 2013 lub wcześniej nie jest obsługiwane.
+
 
 ## <a name="see-also"></a>Zobacz też  
 

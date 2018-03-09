@@ -1,12 +1,13 @@
 ---
 layout: HubPage
+ms.topic: hub-page
 title: "Dokumentacja języka Visual C++ | Dokumentacja firmy Microsoft"
 description: "Dowiedz się, jak używać C++ do opracowywania aplikacji, usług i narzędzi, platform i urządzeń."
-ms.openlocfilehash: d74ee013980d77131f6513063ad3d16ee55cc891
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 7a0b3bb00f43157b6f1d3a7a64999beb59f9a06f
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/08/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -211,7 +212,7 @@ ms.lasthandoff: 10/24/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Tworzenie</h3>
+                                                    <h3>Programowanie</h3>
                                                     <p>Zapis, Refaktoryzuj Eksploruj i zrozumienie kodu za pomocą edytora kodu.</p>
                                                 </div>
                                             </div>
@@ -325,7 +326,7 @@ ms.lasthandoff: 10/24/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Przenoszenie i uaktualnianie</h3>
+                                                    <h3>Eksportowanie i uaktualnianie</h3>
                                                     <p>Uaktualnij do najnowszej wersji programu Visual Studio i Migrowanie starszych aplikacji na platformach nowoczesnych.</p>
                                                 </div>
                                             </div>

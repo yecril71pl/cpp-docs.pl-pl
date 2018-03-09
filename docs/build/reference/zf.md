@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8817b72e5e6eb7ba808455113104e8fb5000505
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/ZF (Generowanie szybciej PDB)
 
@@ -32,7 +32,7 @@ Włącz szybsze generowania plików PDB w kompilacjach równoległych minimalizu
 
 **/Zf** opcja umożliwia Obsługa szybsze generowania plików PDB, korzystając z [/MP (kompilacja z wieloma procesami)](mp-build-with-multiple-processes.md) opcji, lub gdy system kompilacji (na przykład [MSBuild ](/visualstudio/msbuild/msbuild-reference) lub [CMake](../../ide/cmake-tools-for-visual-cpp.md)) może działać wiele cl.exe kompilatora procesy w tym samym czasie. Ta opcja powoduje, że kompilator frontonu opóźnienia generowania indeksów typu dla każdego typu rekordu w pliku PDB aż do zakończenia kompilacji, a następnie ich żądań w jednym wywołania RPC mspdbsrv.exe zamiast wysłał żądanie RPC dla każdego rekordu. To znacznie zwiększyć przepływność kompilacji przez zmniejszenie obciążenia RPC w procesie mspdbsrv.exe w środowisku, w której wiele procesów kompilatora cl.exe działać jednocześnie.
 
-Ponieważ **/Zf** opcja ma zastosowanie tylko do generowania plików PDF, wymaga [/zi](z7-zi-zi-debug-information-format.md) lub [/zi](z7-zi-zi-debug-information-format.md) opcji.
+Ponieważ **/Zf** opcja ma zastosowanie tylko do generowania plików PDB, wymaga [/zi](z7-zi-zi-debug-information-format.md) lub [/zi](z7-zi-zi-debug-information-format.md) opcji.
 
 **/Zf** opcja jest dostępne począwszy od wersji programu Visual Studio 2017 wersji 15.1 i jest domyślnie wyłączone.
 
