@@ -1,7 +1,7 @@
 ---
 title: "Strona właściwości katalogów VC ++ | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 11/28/2017
+ms.date: 03/09/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,11 +28,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c92a97ccd28a1bc7d1fae518cf499b45d339dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1608bc5e78da98feb39be14d779677839f664058
+ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="vc-directories-property-page-windows"></a>VC ++ strona właściwości katalogów (system Windows)
 
@@ -42,23 +42,25 @@ Dla wersji systemu Linux na tej stronie, zobacz [katalogi VC ++ (Linux C++)](../
 
 Aby uzyskać dostęp do **katalogi VC ++** strony właściwości:
 
-1. w menu głównym wybierz **widok | Eksplorator rozwiązań**
-1. Kliknij prawym przyciskiem myszy węzeł projektu (nie rozwiązanie najwyższego poziomu) i wybierz polecenie **właściwości**
-1. w lewym okienku **strony właściwości** okna dialogowego rozwiń **właściwości konfiguracji** i wybierz **katalogi VC ++**.  
+1. Jeśli **Eksploratora rozwiązań** okna nie jest widoczne, następnie w menu głównym wybierz **widoku** > **Eksploratora rozwiązań**.
+1. Kliknij prawym przyciskiem myszy węzeł projektu (nie rozwiązanie najwyższego poziomu) i wybierz polecenie **właściwości**.
+1. W lewym okienku **strony właściwości** okno dialogowe, wybierz opcję **właściwości konfiguracji** > **katalogi VC ++**.  
 
-Właściwości katalogi VC ++ odnoszą się do projektu, nie węzła najwyższego poziomu rozwiązania:
+Katalogi VC ++ właściwości stosowane do projektu, nie węzła rozwiązania najwyższego poziomu. Jeśli nie widzisz **katalogi VC ++** w obszarze **właściwości konfiguracji**, wybierz węzeł projektu C++ w **Eksploratora rozwiązań** okno: 
 
 ![Wybierz węzeł projektu](media/vcppdir.png "wybierz węzeł projektu, aby wyświetlić właściwości katalogów VC ++")
 
-Jeśli widzisz stronę właściwości, upewnij się, masz węzła projektu wybrany w **Eksploratora rozwiązań**. Należy pamiętać, że **katalogi VC ++** strony właściwości dla projektów i platform wygląda inaczej. Dla projektów z systemem innym niż Windows, temacie [katalogi VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md) lub. 
+Należy pamiętać, że **katalogi VC ++** strony właściwości dla projektów i platform wygląda inaczej. Aby uzyskać informacje specyficzne dla projektów Linux C++, zobacz [katalogi VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md). 
  
 Jeśli nie masz doświadczenia z *właściwości projektu* w programie Visual Studio, może być przydatne do odczytu pierwszego [Praca z właściwościami projektu](working-with-project-properties.md). 
  
-Ustawienia domyślne katalogi VC ++ są zależne od typu projektu. Dla projektów pulpitu obejmują one lokalizacje narzędzi VC ++ dla określonego zestawu narzędzi platformy i lokalizacji zestawu Windows SDK. Możesz zmienić **zestaw narzędzi platformy** i **wersji zestawu Windows SDK** na **właściwości konfiguracji — ogólne** strony. Aby wyświetlić wartości na żadnym z katalogów:
+Domyślne ustawienia **katalogi VC ++** właściwości są zależne od typu projektu. Dla projektów pulpitu obejmują one lokalizacje narzędzi C++ dla określonego zestawu narzędzi platformy i lokalizacji zestawu Windows SDK. Możesz zmienić **zestaw narzędzi platformy** i **wersji zestawu Windows SDK** na **właściwości konfiguracji** > **ogólne** Strona. 
 
-1. w prawym okienku **katalogi VC ++** wybierz wiersz. Na przykład **katalogi bibliotek**
-1. Kliknij przycisk strzałki w dół na prawo
-1. Wybierz **Edytuj**.
+Aby wyświetlić wartości na żadnym z katalogów:
+
+1. Wybierz jedną z właściwości w **katalogi VC ++** strony. Na przykład wybrać **katalogi bibliotek**.
+1. Wybierz przycisk strzałki w dół na końcu pola wartości właściwości.
+1. Z menu rozwijanego wybierz **Edytuj**.
 
 ![Edytuj katalogi bibliotek](media/vcppdir_libdir_edit.png "okna dialogowego, aby edytować ścieżki biblioteki")
 
@@ -74,7 +76,7 @@ Można wyszukiwać dopasowania częściowej lub pełnej w polu edycji. Na poniż
 
 ![Zobacz wartości makra](media/vcppdir_libdir_macros.png "okna dialogowego, aby edytować makra")
 
-Uwaga: Listy są powielane podczas pisania. Nie naciśnij **Enter**.
+Uwaga: Lista jest wypełniana podczas pisania. Nie naciśnij **Enter**.
 
 Aby uzyskać więcej informacji na temat makr i dlaczego należy ich używać zamiast ustalony ścieżek, jeśli to możliwe, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros). 
 
@@ -90,22 +92,25 @@ Aby uzyskać więcej informacji, zobacz wpisy na blogu: [katalogi VC ++](http://
 
 Można również określić inne katalogi, jak poniżej.  
   
-**Katalogi plików wykonywalnych**  
+**Katalogi plików wykonywalnych**<br/>
 Katalogi, w których należy szukać plików wykonywalnych. Odpowiada **ścieżki** zmiennej środowiskowej.
 
-**Dołącz katalogi**  
+**Dołącz katalogi**<br/>
 Katalogi, w których należy szukać dołączanych plików, do których istnieją odwołania w kodzie źródłowym. Odpowiada **INCLUDE** zmiennej środowiskowej.
 
-**Odwołanie do katalogów**  
+**Odwołanie do katalogów**<br/>
  Katalogi wyszukiwania zestawów i modułów (metadanymi) pliki, których istnieją odwołania w kodzie źródłowym przez [#using](../preprocessor/hash-using-directive-cpp.md) dyrektywy. Odpowiada **LIBPATH** zmiennej środowiskowej.
 
-**Katalogi bibliotek**  
-Katalogi, w których należy szukać plików biblioteki (.lib); obejmują biblioteki wykonywalne. Odpowiada **LIB** zmiennej środowiskowej. To ustawienie nie ma zastosowania do plików .obj; Aby utworzyć łącze do pliku .obj na [konsolidatora](../ide/linker-property-pages.md)**ogólne** strony właściwości, wybierz opcję **dodatkowe zależności biblioteki** , a następnie określ ścieżkę względną pliku.
+**Katalogi bibliotek**<br/>
+Katalogi, w których należy szukać plików biblioteki (.lib); obejmują biblioteki wykonywalne. Odpowiada **LIB** zmiennej środowiskowej. To ustawienie nie ma zastosowania do plików .obj; Aby utworzyć łącze do pliku .obj na **właściwości konfiguracji** > **konsolidatora** > **ogólne** strony właściwości, wybierz  **Dodatkowe zależności biblioteki** , a następnie określ ścieżkę względną pliku. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](../ide/linker-property-pages.md).
 
-**Katalogi źródłowe**  
+**Katalogi bibliotek WinRT**<br/>
+Katalogi wyszukiwania plików bibliotek WinRT do użycia w aplikacjach systemu Windows platformy Uniwersalnej. 
+
+**Katalogi źródłowe**<br/>
 Katalogi, w których należy szukać plików źródłowych dla technologii IntelliSense.
 
-**Wyklucz katalogi**  
+**Wyklucz katalogi**<br/>
 Katalogi, których nie należy przeszukiwać podczas sprawdzania zależności kompilacji.
 
 ## <a name="sharing-the-settings"></a>Współdzielenie ustawień
