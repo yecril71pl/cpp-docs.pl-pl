@@ -1,12 +1,9 @@
 ---
 title: "/Zc:externConstexpr (Włącz extern constexpr zmienne) | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 9/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 02/28/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /Zc:externConstexpr
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84037e5e8a942d51175d97957d0c05bd6f4aa29d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6597bc96609ab051df56886ccc580516986f97ed
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc:externConstexpr (Włącz extern constexpr zmienne)
 
@@ -34,11 +30,11 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="syntax"></a>Składnia
 
-> /Zc:externConstexpr [-]
+> **/Zc:externConstexpr**[**-**]
 
 ## <a name="remarks"></a>Uwagi
 
-**/Zc:externConstexpr** — opcja kompilatora powoduje, że kompilator dotyczą połączenie zewnętrzne zmiennych zadeklarowano za pomocą `extern constexpr`. **/Zc:externConstexpr** opcja jest dostępna w programie Visual Studio 2017 aktualizacji 15,5 cala. We wcześniejszych wersjach programu Visual Studio i domyślnie lub, jeśli **/Zc:externConstexpr-** jest określony, program Visual Studio stosuje zewnętrzne do `constexpr` zmienne, nawet jeśli `extern` słowo kluczowe jest używane.
+**/Zc:externConstexpr** — opcja kompilatora powoduje, że kompilator dotyczą połączenie zewnętrzne zmiennych zadeklarowano za pomocą `extern constexpr`. We wcześniejszych wersjach programu Visual Studio i domyślnie lub, jeśli **/Zc:externConstexpr-** jest określony, program Visual Studio stosuje zewnętrzne do `constexpr` zmienne, nawet jeśli `extern` słowo kluczowe jest używane. **/Zc:externConstexpr** opcja jest dostępna w programie Visual Studio 2017 aktualizacji 15,6. i jest domyślnie wyłączone. [/ Ograniczająca-](permissive-standards-conformance.md) nie obsługuje opcji **/Zc:externConstexpr**.
 
 Jeśli plik nagłówka zawiera Zmienna zadeklarowana `extern constexpr`, muszą być oznaczone jako [__declspec(selectany)](../../cpp/selectany.md) Aby scalić zduplikowane deklaracje pojedynczego wystąpienia w połączonych danych binarnych. W przeciwnym razie mogą zostać wyświetlone błędy konsolidatora, na przykład LNK2005 dla naruszenia reguły jednej definicji.
 
@@ -46,11 +42,11 @@ Jeśli plik nagłówka zawiera Zmienna zadeklarowana `extern constexpr`, muszą 
 
 1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. W obszarze **właściwości konfiguracji**, rozwiń węzeł **C/C++** , a następnie wybierz **wiersza polecenia**.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
 
 1. Dodaj **/Zc:externConstexpr** lub **/Zc:externConstexpr-** do **dodatkowe opcje:** okienka.
 
 ## <a name="see-also"></a>Zobacz też
 
-[/Zc (zgodność)](../../build/reference/zc-conformance.md)  
+[/Zc (Zgodność)](../../build/reference/zc-conformance.md)  
 [Auto, słowo kluczowe](../../cpp/auto-keyword.md)

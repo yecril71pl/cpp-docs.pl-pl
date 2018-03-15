@@ -1,12 +1,9 @@
 ---
-title: "-Zc-(zgodność) | Dokumentacja firmy Microsoft"
+title: "/Zc (zgodność) | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 9/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /zc
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zc-conformance"></a>/Zc (Zgodność)
 
@@ -36,11 +32,11 @@ Można użyć **/Zc** opcji kompilatora, aby określić zachowanie kompilatora s
 
 ## <a name="syntax"></a>Składnia
 
-> / Zc:_opcji_{,_opcji_}
+> **/ Zc:**_opcji_{,_opcji_}
 
 ## <a name="remarks"></a>Uwagi
 
-Po zaimplementowaniu rozszerzenia do C lub C++, która nie jest zgodna ze standardem Visual Studio można używać `/Zc` zgodność opcję, aby określić zachowanie zgodnych standard lub specyficzne dla firmy Microsoft. W przypadku niektórych opcji zachowanie specyficzne dla firmy Microsoft jest domyślne, aby uniemożliwić podziału na dużą skalę zmiany istniejącego kodu. W pozostałych przypadkach wartość domyślna to standardowe zachowanie, w których ulepszenia zabezpieczeń, wydajności i zgodności mają większe niż koszty fundamentalne zmiany. Ustawieniem domyślnym każdej opcji zgodności mogą ulec zmianie w nowszych wersjach programu Visual Studio. Aby uzyskać więcej informacji na temat poszczególnych opcji zgodności zobacz temat dla określonych opcji.
+Po zaimplementowaniu rozszerzenia do C lub C++, która nie jest zgodna ze standardem Visual Studio można używać `/Zc` zgodność opcję, aby określić zachowanie zgodnych standard lub specyficzne dla firmy Microsoft. W przypadku niektórych opcji zachowanie specyficzne dla firmy Microsoft jest domyślne, aby uniemożliwić podziału na dużą skalę zmiany istniejącego kodu. W pozostałych przypadkach wartość domyślna to standardowe zachowanie, w których ulepszenia zabezpieczeń, wydajności i zgodności mają większe niż koszty fundamentalne zmiany. Ustawieniem domyślnym każdej opcji zgodności mogą ulec zmianie w nowszych wersjach programu Visual Studio. Aby uzyskać więcej informacji na temat poszczególnych opcji zgodności zobacz temat dla określonych opcji. [/ Ograniczająca-](permissive-standards-conformance.md) — opcja kompilatora niejawnie ustawia opcje zgodności, które nie są wybrane domyślnie ustawienia ich zgodność.
 
 Są to `/Zc` — opcje kompilatora:
 
@@ -61,7 +57,8 @@ Są to `/Zc` — opcje kompilatora:
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Włącz wątkowo lokalnego Inicjowanie statyczne (w domyślnym).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Załóżmy `operator new` zgłoszenie błędu (domyślnie wyłączone).|
 |[trigramów\[-\]](zc-trigraphs-trigraphs-substitution.md)|Włącz trigramów (przestarzałe, wyłącz domyślnie).|
-|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t`jest typem natywnym, a nie typem typedef (na domyślnie).|
+|[twoPhase-](zc-twophase.md)|Szablon niezgodnych analizowania zachowanie (zgodne domyślnie).|
+|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` jest typem natywnym, a nie typem typedef (na domyślnie).|
 
 Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 

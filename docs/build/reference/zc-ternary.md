@@ -1,6 +1,6 @@
 ---
 title: /Zc:ternary (wymuszanie zasad operator warunkowy) | Dokumentacja firmy Microsoft
-ms.date: 1/12/2018
+ms.date: 3/06/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c4f4e17d3cf72284ec68cf10e75824722d5440
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 198da679e9d0d7bd58e034ca9c04c3102748af20
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (wymuszanie zasad operator warunkowy)
 
@@ -33,7 +33,7 @@ Włącz wymuszania reguł C++ Standard dla typów i const lub volatile kwalifika
 
 Visual Studio w wersji 15 ustęp 3 umożliwia obsługę kompilatora C++ standardowy operator warunkowy (lub trójargumentowy) (**?:**) zachowanie. C++ Standard wymaga operandy tego samego typu i cv kwalifikacji lub tylko jeden operand być jednoznacznie do przekonwertowania na tym samym typie i cv kwalifikacji co inne lub jeden lub obydwa argumenty operacji jako wyrażenie throw. W wersjach przed Visual Studio wersja 15,5 cala kompilator może konwersje, które są traktowane jako niejednoznaczne przez standard. Gdy **/Zc:ternary** zostanie określona opcja, kompilator jest zgodny ze standardem i odrzuca kod, który nie spełnia warunków reguły pasujących typów i cv kwalifikacji drugiego i trzeciego argumentu operacji.
 
-**/Zc:ternary** opcja jest domyślnie wyłączona. Użyj **/Zc:ternary** umożliwia zachowanie zgodnych lub **/Zc:ternary-** Aby jawnie określić poprzedniej zachowanie kompilatora niezgodnych. [/ Ograniczająca-](permissive-standards-conformance.md) powoduje włączenie **/Zc:ternary**. 
+**/Zc:ternary** opcja jest domyślnie wyłączona. Użyj **/Zc:ternary** umożliwia zachowanie zgodnych lub **/Zc:ternary-** Aby jawnie określić poprzedniej zachowanie kompilatora niezgodnych. [/ Ograniczająca-](permissive-standards-conformance.md) opcja niejawnie umożliwia włączenie tej opcji, ale może być zastąpiona przy użyciu **/Zc:ternary-**.
 
 ### <a name="examples"></a>Przykłady
 

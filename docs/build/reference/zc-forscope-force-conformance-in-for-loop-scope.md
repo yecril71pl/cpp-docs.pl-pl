@@ -1,12 +1,9 @@
 ---
-title: "-Zc: forScope (Wymuszaj zgodność w zakresie pętli for) | Dokumentacja firmy Microsoft"
+title: "/ Zc: forscope (Wymuszaj zgodność w zakresie pętli for) | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ForceConformanceInForLoopScope
@@ -20,69 +17,71 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243966ae5e8c7d0792f40206adc9d0ae3b2fb673
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47cdc45b63e5e5c7b48627b13040e95fc64c8a2d
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Wymuszaj zgodność w zakresie pętli For)
-Używane do implementowania standardowego zachowania C++ dla [dla](../../cpp/for-statement-cpp.md) pętle z rozszerzeniami firmy Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  **/ Zc: forscope** jest domyślnie włączone.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/Zc:forScope[-]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- **/Zc:forScope-** opcja jest przestarzała i zostanie usunięta w przyszłej wersji. Użycie **/Zc:forScope-** generuje ostrzeżenie D9035 wycofywanie.  
-  
- Standardowe zachowanie jest umożliwienie **dla** inicjatora pętli się znaleźć poza zakresem po **dla** pętli. W obszarze **/Zc:forScope-** i [/Ze](../../build/reference/za-ze-disable-language-extensions.md), **dla** inicjatora pętli pozostaje w zakresie do czasu zakończenia zakresu lokalnego.  
-  
- Kompiluje następujący kod pod **/Ze** , ale nie w obszarze **/Za**:  
-  
-```cpp  
-// zc_forScope.cpp  
-// compile by using: cl /Zc:forScope- /Za zc_forScope.cpp  
+
+Używane do implementowania standardowego zachowania C++ dla [dla](../../cpp/for-statement-cpp.md) pętle z rozszerzeniami firmy Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+
+## <a name="syntax"></a>Składnia
+
+> **/Zc:forScope**[**-**]
+
+## <a name="remarks"></a>Uwagi
+
+Standardowe zachowanie jest umożliwienie **dla** inicjatora pętli się znaleźć poza zakresem po **dla** pętli. W obszarze **/Zc:forScope-** i [/Ze](../../build/reference/za-ze-disable-language-extensions.md), **dla** inicjatora pętli pozostaje w zakresie do czasu zakończenia zakresu lokalnego.
+
+**/Zc: forscope** opcja jest domyślnie włączona. **/ Zc: forscope** nie występuje podczas [/ ograniczająca-](permissive-standards-conformance.md) określono opcję.
+
+**/Zc:forScope-** opcja jest przestarzała i zostanie usunięta w przyszłej wersji. Użycie **/Zc:forScope-** generuje ostrzeżenie D9035 wycofywanie.
+
+Kompiluje następujący kod pod **/Ze** , ale nie w obszarze **/Za**:
+
+```cpp
+// zc_forScope.cpp
+// compile by using: cl /Zc:forScope- /Za zc_forScope.cpp
 // C2065, D9035 expected  
-int main() {  
-    // Compile by using cl /Zc:forScope- zc_forScope.cpp  
-    // to compile this non-standard code as-is.  
-    // Uncomment the following line to resolve C2065 for /Za.  
-    // int i;  
-    for (int i = 0; i < 1; i++)  
-        ;  
-    i = 20;   // i has already gone out of scope under /Za  
-}  
-```  
-  
- Jeśli używasz **/Zc:forScope-**, ostrzeżenie C4288 (domyślnie wyłączone) jest generowany, gdy zmienna znajduje się w zakresie z powodu deklaracji, która została wprowadzona w poprzednim zakresu. Aby to wykazać, Usuń `//` znaków w przykładowym kodzie Aby zadeklarować `int i`.  
-  
- Można zmodyfikować zachowanie środowiska wykonawczego **/Zc: forscope** za pomocą [jest zgodna z](../../preprocessor/conform.md) pragma.  
-  
- Jeśli używasz **/Zc:forScope-** w projekcie ma istniejącego pliku .pch, ostrzeżenie jest generowany, **/Zc:forScope-** jest ignorowany i kompilacji będzie kontynuowane przy użyciu istniejących .pch — pliki. Jeśli chcesz wygenerować nowy plik .pch użyj [/Yc (Utwórz prekompilowany plik nagłówka)](../../build/reference/yc-create-precompiled-header-file.md).  
-  
- Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  W okienku nawigacji otwórz **właściwości konfiguracji**, **C/C++**, **języka** strony właściwości.  
-  
-3.  Modyfikowanie **Wymuszaj zgodność w dla zakresu pętli** właściwości.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [/Zc (zgodność)](../../build/reference/zc-conformance.md)   
- [/ Za, /Ze (Wyłącz rozszerzenia językowe)](../../build/reference/za-ze-disable-language-extensions.md)
+int main() {
+    // Compile by using cl /Zc:forScope- zc_forScope.cpp
+    // to compile this non-standard code as-is.
+    // Uncomment the following line to resolve C2065 for /Za.
+    // int i;
+    for (int i = 0; i < 1; i++)
+        ;
+    i = 20;   // i has already gone out of scope under /Za
+}
+```
+
+Jeśli używasz **/Zc:forScope-**, ostrzeżenie C4288 (domyślnie wyłączone) jest generowany, gdy zmienna znajduje się w zakresie z powodu deklaracji, która została wprowadzona w poprzednim zakresu. Aby to wykazać, Usuń `//` znaków w przykładowym kodzie Aby zadeklarować `int i`.
+
+Można zmodyfikować zachowanie środowiska wykonawczego **/Zc: forscope** za pomocą [jest zgodna z](../../preprocessor/conform.md) pragma.
+
+Jeśli używasz **/Zc:forScope-** w projekcie ma istniejącego pliku .pch, ostrzeżenie jest generowany, **/Zc:forScope-** jest ignorowany i kompilacji będzie kontynuowane przy użyciu istniejących .pch — pliki. Jeśli chcesz wygenerować nowy plik .pch użyj [/Yc (Utwórz prekompilowany plik nagłówka)](../../build/reference/yc-create-precompiled-header-file.md).
+
+Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **języka** strony właściwości.
+
+1. Modyfikowanie **Wymuszaj zgodność w dla zakresu pętli** właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope%2A>.
+
+## <a name="see-also"></a>Zobacz także
+
+[/Zc (Zgodność)](../../build/reference/zc-conformance.md)<br/>
+[/Za, /Ze (Wyłącz rozszerzenia językowe)](../../build/reference/za-ze-disable-language-extensions.md)<br/>

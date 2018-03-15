@@ -18,11 +18,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1b0e209462295f907f5e518299d34fb18aade4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af455b9a781295f3e6f446b7dc5c3d253fe2f4c5
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (c ++ 17 noexcept zasad)
 
@@ -34,7 +34,7 @@ Sprawia, że standardzie C ++ 17 `throw()` jako alias `noexcept`, usuwa `throw(<
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy **/Zc:noexceptTypes** zostanie określona opcja, kompilator odpowiada w standardzie C ++ 17 i traktuje [throw()](../../cpp/exception-specifications-throw-cpp.md) jako alias [noexcept](../../cpp/noexcept-cpp.md), usuwa `throw(<type list>)`i `throw(...)`i umożliwia pewnych typów uwzględnić `noexcept`. **/Zc:noexceptTypes** opcja jest dostępna tylko podczas [/std:c ++ 17](std-specify-language-standard-version.md) lub [/std:latest](std-specify-language-standard-version.md) jest włączona. **/Zc:noexceptTypes** jest domyślnie włączone są zgodne z normą ISO w standardzie C ++ 17. Wyłącz tę opcję, określając **/Zc:noexceptTypes-** powraca do języka C ++ 14 zachowanie `noexcept` podczas **/std::C ++ 17** lub **/std::latest** jest określona.
+Gdy **/Zc:noexceptTypes** zostanie określona opcja, kompilator odpowiada w standardzie C ++ 17 i traktuje [throw()](../../cpp/exception-specifications-throw-cpp.md) jako alias [noexcept](../../cpp/noexcept-cpp.md), usuwa `throw(<type list>)`i `throw(...)`i umożliwia pewnych typów uwzględnić `noexcept`. **/Zc:noexceptTypes** opcja jest dostępna tylko podczas [/std:c ++ 17](std-specify-language-standard-version.md) lub [/std:latest](std-specify-language-standard-version.md) jest włączona. **/Zc:noexceptTypes** jest domyślnie włączone są zgodne z normą ISO w standardzie C ++ 17. [/ Ograniczająca-](permissive-standards-conformance.md) opcji nie ma wpływu na **/Zc:noexceptTypes**. Wyłącz tę opcję, określając **/Zc:noexceptTypes-** powraca do języka C ++ 14 zachowanie `noexcept` podczas **/std::C ++ 17** lub **/std::latest** jest określona.
 
 Począwszy od programu Visual Studio 2017 15,5 cala wersji kompilatora języka C++ diagnozuje więcej specyfikacje wyjątków niedopasowanych w deklaracjach trybu C ++ 17 lub gdy [/ ograniczająca-](permissive-standards-conformance.md) określono opcję.
 
@@ -84,7 +84,7 @@ Aby uzyskać więcej informacji na temat problemów zgodności w programie Visua
 
 1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **wiersza polecenia** stronę właściwości w **C/C++** folderu.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
 
 1. Modyfikowanie **dodatkowe opcje** właściwości, aby uwzględnić **/Zc:noexceptTypes** lub **/Zc:noexceptTypes-** , a następnie wybierz **OK**.
 

@@ -1,6 +1,6 @@
 ---
 title: "/Zc:alignedNew (c ++ 17 nadmiernie wyrównany alokacji) | Dokumentacja firmy Microsoft"
-ms.date: 12/14/2017
+ms.date: 02/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a4d6e801b258697154a4b11c7b5e468c090cc94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d645534c398628afa533770d44094d23ca0325a5
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (c ++ 17 nadmiernie wyrównany alokacji)
 
@@ -33,7 +33,7 @@ Włączenie obsługi języka C ++ 17 nadmiernie wyrównane **nowe**, dynamicznej
 
 Program Visual Studio wersja 15,5 cala pozwala kompilator i biblioteki obsługę języka C ++ 17 standardowe nadmiernie wyrównany dynamicznej alokacji pamięci. Gdy **/Zc:alignedNew** określono opcję dynamicznego przydziału `new Example;` szanuje wyrównanie *przykład* nawet jeśli jest większa niż `max_align_t`, największy wyrównania wymagany dla wszystkich typów podstawowych. Gdy wyrównanie przydzielonego typu jest nie więcej niż gwarantowane przez operator oryginalnego **nowe**, dostępne jako wartość wstępnie zdefiniowanego makra  **\_ \_STDCPP\_domyślne \_Nowy\_WYRÓWNANIE\_\_**, instrukcja `new Example;` powoduje wywołanie `::operator new(size_t)` tak jak w języku C ++ 14. Jeśli wyrównanie jest większa niż  **\_ \_STDCPP\_domyślne\_nowy\_WYRÓWNANIE\_\_**, implementacja zamian uzyskuje pamięć przy użyciu `::operator new(size_t, align_val_t)`. Podobnie, wywołuje usunięcia nadmiernie wyrównane typy `::operator delete(void*, align_val_t)` lub rozmiarze usunąć podpisu `::operator delete(void*, size_t, align_val_t)`.
 
-**/Zc:alignedNew** opcja jest dostępna tylko podczas [/std:c ++ 17](std-specify-language-standard-version.md) lub [/std:c ++ najnowsze](std-specify-language-standard-version.md) jest włączona. W obszarze **/std:c ++ 17** lub **/std:c ++ najnowsze**, **/Zc:alignedNew** jest domyślnie włączone są zgodne z normą ISO w standardzie C ++ 17. Jeśli tylko przyczyny zaimplementować operator **nowe** i **usunąć** służy do obsługi nadmiernego wyrównany alokacji nie należy tego kodu w trybie C ++ 17. Aby wyłączyć tę opcję i przywrócić C ++ 14 zachowania **nowe** i **usunąć** podczas **/std::c ++ 17** lub **/std:c ++ najnowsze** jest określony, Określ **/Zc:alignedNew-**. W przypadku zastosowania operatora **nowe** i **usunąć** , ale nie jest jeszcze gotowa do zaimplementowania nadmiernie wyrównany operator **nowe** i **usunąć** przeciążenia, które mają `align_val_t` parametru, użyj **/Zc:alignedNew-** opcję, aby uniemożliwić generowania kompilator i biblioteki standardowej wywołań nadmiernie wyrównany przeciążenia.
+**/Zc:alignedNew** opcja jest dostępna tylko podczas [/std:c ++ 17](std-specify-language-standard-version.md) lub [/std:c ++ najnowsze](std-specify-language-standard-version.md) jest włączona. W obszarze **/std:c ++ 17** lub **/std:c ++ najnowsze**, **/Zc:alignedNew** jest domyślnie włączone są zgodne z normą ISO w standardzie C ++ 17. Jeśli tylko przyczyny zaimplementować operator **nowe** i **usunąć** służy do obsługi nadmiernego wyrównany alokacji nie należy tego kodu w trybie C ++ 17. Aby wyłączyć tę opcję i przywrócić C ++ 14 zachowania **nowe** i **usunąć** podczas **/std::c ++ 17** lub **/std:c ++ najnowsze** jest określony, Określ **/Zc:alignedNew-**. W przypadku zastosowania operatora **nowe** i **usunąć** , ale nie jest jeszcze gotowa do zaimplementowania nadmiernie wyrównany operator **nowe** i **usunąć** przeciążenia, które mają `align_val_t` parametru, użyj **/Zc:alignedNew-** opcję, aby uniemożliwić generowania kompilator i biblioteki standardowej wywołań nadmiernie wyrównany przeciążenia. [/ Ograniczająca-](permissive-standards-conformance.md) opcji nie zmienia domyślne ustawienie **/Zc:alignedNew**.
 
 ## <a name="example"></a>Przykład
 
@@ -106,7 +106,7 @@ Aby uzyskać informacje o problemach zgodność w programie Visual C++, zobacz [
 
 1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **wiersza polecenia** stronę właściwości w **C/C++** folderu.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
 
 1. Modyfikowanie **dodatkowe opcje** właściwości, aby uwzględnić **/Zc:alignedNew** lub **/Zc:alignedNew-** , a następnie wybierz **OK**.
 

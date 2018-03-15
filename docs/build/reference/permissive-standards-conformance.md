@@ -21,11 +21,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ ograniczająca-(standardów zgodność)
 
@@ -37,7 +37,7 @@ Określ tryb zgodności standardów do kompilatora. Użyj tej opcji, aby zidenty
 
 ## <a name="remarks"></a>Uwagi
 
-Można użyć **/ ograniczająca-** opcję kompilatora, aby określić zachowanie kompilatora zgodnych standardów. Ta opcja powoduje wyłączenie ograniczająca zachowania i ustawia [/Zc](../../build/reference/zc-conformance.md) opcje kompilatora, aby uzyskać pełną zgodność. W środowisku IDE ta opcja powoduje aparat podkreślenie niezgodnych kodu IntelliSense. 
+Można użyć **/ ograniczająca-** opcję kompilatora, aby określić zachowanie kompilatora zgodnych standardów. Ta opcja powoduje wyłączenie ograniczająca zachowania i ustawia [/Zc](../../build/reference/zc-conformance.md) opcje kompilatora, aby uzyskać pełną zgodność. W środowisku IDE ta opcja powoduje aparat podkreślenie niezgodnych kodu IntelliSense.
 
 Domyślnie **/ ograniczająca-** opcja jest ustawiona w nowych projektach utworzone przez wersji programu Visual Studio 2017 15,5 cala i nowszych wersji. Nie jest ustawiona domyślnie we wcześniejszych wersjach. Gdy ustawiono opcję, kompilator generuje diagnostycznych błędy lub ostrzeżenia, gdy język niestandardowej konstrukcje zostaną wykryte w kodzie, w tym niektórych typowych błędów w wersji pre-C ++ 11 kodu.
 
@@ -416,7 +416,7 @@ W wersjach przed Visual Studio 2017 wersji 15,5 cala wykonaj następującą proc
 
 1. Otwórz projekt w **strony właściwości** okno dialogowe.
 
-1. W obszarze **właściwości konfiguracji**, rozwiń węzeł **C/C++** folder i wybierz polecenie **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
 
 1. Wprowadź **/ ograniczająca-** w — opcja kompilatora **dodatkowe opcje** pole. Wybierz **OK** lub **Zastosuj** Aby zapisać zmiany.
 
