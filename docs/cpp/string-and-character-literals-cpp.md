@@ -32,10 +32,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Literały ciągów i znakowe (C++)
 C++ obsługuje różne typy ciągów i znakowe i zapewnia sposobów express wartości literałów dla każdego z tych typów. W kodzie źródłowym express jest zawartość z literały znaków i ciąg, przy użyciu zestawu znaków. Uniwersalne nazwy znaków i znaki specjalne umożliwia express dowolny ciąg przy użyciu zestawu znaków podstawowego źródła. Nieprzetworzonego literału ciągu pozwala uniknąć przy użyciu znaki specjalne i może służyć do express wszystkie typy literałów ciągów. Można również utworzyć literałów std::string bez konieczności wykonać kroki konwersji lub dodatkowe konstrukcji.  
@@ -88,15 +88,15 @@ int main()
 ## <a name="character-literals"></a>Literały znaków  
  A *literał znaku* składa się z stałej znaków. Odpowiada on ujęta w cudzysłów pojedynczy znak. Istnieje pięć rodzajów literały znaków:  
   
--   Literały znaków zwykłej typu `char`, na przykład`'a'`  
+-   Literały znaków zwykłej typu `char`, na przykład `'a'`  
   
--   Literały znaków UTF-8 typu `char`, na przykład`u8'a'`  
+-   Literały znaków UTF-8 typu `char`, na przykład `u8'a'`  
   
--   Literały znaków dwubajtowych typu `wchar_t`, na przykład`L'a'`  
+-   Literały znaków dwubajtowych typu `wchar_t`, na przykład `L'a'`  
   
--   Literały znaków UTF-16 typu `char16_t`, na przykład`u'a'`  
+-   Literały znaków UTF-16 typu `char16_t`, na przykład `u'a'`  
   
--   Literały znaków UTF-32 typu `char32_t`, na przykład`U'a'`  
+-   Literały znaków UTF-32 typu `char32_t`, na przykład `U'a'`  
   
  Znak używany dla literał znakowy może być dowolny znak, z wyjątkiem ukośnik odwrotny zarezerwowanych znaków ("\\"), apostrofu (') lub znakami nowego wiersza. Zarezerwowanych znaków można określić przy użyciu sekwencji ucieczki. Znaki można określić za pomocą uniwersalne nazwy znaków, tak długo, jak typ jest wystarczająco duży, aby pomieścić znak.  
   
@@ -113,15 +113,15 @@ int main()
   
 -   Literał znaku, który rozpoczyna się od prefiksu U jest literału znaku UTF-32. Wartość literału znaku UTF-32 zawierający pojedynczy znak sekwencji specjalnej lub Uniwersalna nazwa znaku ma wartość równą jej wartość punktu kodu ISO 10646. Zawierających więcej niż jeden znak, sekwencja unikowa lub Uniwersalna nazwa znaku literału znaku UTF-8 jest źle sformułowany.  
   
-###  <a name="bkmk_Escape"></a>Sekwencje unikowe  
+###  <a name="bkmk_Escape"></a> Sekwencje unikowe  
  Istnieją trzy rodzaje sekwencji unikowych: prosty, ósemkowe i szesnastkowe. Sekwencje unikowe może być jedną z następujących czynności:  
   
 |Wartość|Sekwencja specjalna|Wartość|Sekwencja specjalna|  
 |-----------|---------------------|-----------|---------------------|  
-|nowy wiersz|\n|ukośnik odwrotny|\\\|  
+|nowy wiersz|\n|backslash|\\\|  
 |Tabulator poziomy|\t|znak zapytania|? lub \\?|  
 |Tabulator pionowy|\v|pojedynczy cudzysłów|\\'|  
-|BACKSPACE|\b|podwójnego cudzysłowu|\\"|  
+|backspace|\b|podwójnego cudzysłowu|\\"|  
 |powrót karetki|\r|znak null|\0|  
 |Wysuw strony|\f|ósemkowy|\ooo|  
 |Alert (dzwonka)|\a|szesnastkowo|\xhhh|  
@@ -148,7 +148,7 @@ int main() {
 }  
 ```  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Aby utworzyć wartość ze zwykłej literał znakowy (tych bez prefiksu), kompilator konwertuje znak lub sekwencja znaków między apostrofy do wartości 8-bitową w 32-bitową liczbę całkowitą. Wielu znaków w literale wypełnienia odpowiednich bajtów odpowiednio z znaczących znaczącymi bitami. Aby utworzyć `char` wartość, kompilator zajmuje mniej znaczącego bajtu. Aby utworzyć `wchar_t` lub `char16_t` wartość, kompilator przyjmuje word znaczącymi bitami. Kompilator ostrzega, że wynik został obcięty, jeśli wszystkie bity zostały ustawione powyżej przydzielonych bajtów lub word.  
   
@@ -195,7 +195,7 @@ wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
   
  Znak ukośnika odwrotnego (\\) jest znak kontynuacji wiersza, gdy znajduje się na końcu linii. Jeśli chcesz, aby były wyświetlane jako literał znakowy ukośnikiem odwrotnym, należy wpisać dwa razy w wierszu (`\\`). Aby uzyskać więcej informacji na temat znak kontynuacji wiersza, zobacz [fazy tłumaczenia](../preprocessor/phases-of-translation.md).  
   
-###  <a name="bkmk_UCN"></a>Uniwersalne nazwy znaków  
+###  <a name="bkmk_UCN"></a> Uniwersalne nazwy znaków  
  Literały znaków i literały macierzystego (z systemem innym niż — raw) ciągu znaków mogą być reprezentowane przez nazwa zawierająca znaki uniwersalne.  Uniwersalne nazwy znaków są utworzone przez prefiks, który \U po której następują, 8 cyfrowy kod znaku Unicode, lub \u prefiks następuje punkt kodu Unicode czterocyfrowej. Wszystkie osiem lub cztery cyfry, odpowiednio, musi występować aby nazwa zawierająca znaki uniwersalne poprawnie sformułowany.  
   
 ```cpp  
@@ -321,7 +321,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 ### <a name="modifying-string-literals"></a>Modyfikowanie literałów ciągów  
  Ponieważ literałów ciągu (nie w tym literały std:string) są stałe, w trakcie modyfikowania ich — na przykład str [2] = "A" — powoduje błąd kompilatora.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  W programie Visual C++ można użyć literału ciągu do zainicjowania wskaźnika do elementu niebędącego stałą `char` lub `wchar_t`. To jest dozwolona w kodzie C99, ale jest przestarzała w języku C ++ 98 i usunąć w języku C ++ 11. Próba zmodyfikować ciąg spowoduje naruszenie zasad dostępu, jak w poniższym przykładzie:  
   

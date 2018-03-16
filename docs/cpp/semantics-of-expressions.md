@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="semantics-of-expressions"></a>Semantyka wyrażeń
 Wyrażenia są oceniane według priorytetu i grupowanie ich operatorów. ([Priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md) w [konwencje leksykalne](../cpp/lexical-conventions.md), przedstawiono relacje C++ operatory nakładają się na wyrażenia.)  
@@ -80,10 +80,10 @@ Kolejność obliczania wyrażenia w nawiasach
   
 |Oczekiwano typu|Dozwolone typy|  
 |-------------------|-------------------|  
-|*Typ*|`const`*typu*<br /> `volatile`*typu*<br /> *Typ*&<br /> `const`*typu*&<br /> `volatile`*typu*&<br /> `volatile const`*typu*<br /> `volatile const`*typu*&|  
-|*Typ*\*|*Typ*\*<br /> `const`*typu*\*<br /> `volatile`*typu*\*<br /> `volatile const`*typu*\*|  
-|`const`*typu*|*Typ*<br /> `const`*typu*<br />`const`*typu*&|  
-|`volatile`*typu*|*Typ*<br /> `volatile`*typu*<br /> `volatile`*typu*&|  
+|*Typ*|`const` *Typ*<br /> `volatile` *Typ*<br /> *Typ*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|  
+|*Typ*\*|*Typ*\*<br /> `const` *Typ*\*<br /> `volatile` *Typ*\*<br /> `volatile const` *Typ*\*|  
+|`const` *Typ*|*Typ*<br /> `const` *Typ*<br />`const` *Typ*&|  
+|`volatile` *Typ*|*Typ*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|  
   
  Ponieważ poprzednie reguł zawsze można używać w połączeniu, stała wskaźnika do obiektu volatile należy podać gdy oczekiwano wskaźnika.  
   
@@ -105,7 +105,7 @@ func( i, ++i );
   
 -   Lewy operand logicznego operatora AND (&&). Lewy operand logicznego operatora AND jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed kontynuowaniem. Nie ma gwarancji, że prawy operand logicznego operatora AND zostanie obliczony.  
   
--   Lewy argument operacji operator logiczny OR (&#124; &#124;). Lewy operand logicznego operatora OR jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed kontynuowaniem. Nie ma gwarancji, że prawy operand logicznego operatora OR zostanie obliczony.  
+-   Lewej strony operatora logicznego OR (&#124;&#124;). Lewy operand logicznego operatora OR jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed kontynuowaniem. Nie ma gwarancji, że prawy operand logicznego operatora OR zostanie obliczony.  
   
 -   Lewy operand operatora przecinka. Lewy operand logicznego operatora przecinka jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed kontynuowaniem. Oba operandy operatora przecinka są obliczane zawsze.  
   

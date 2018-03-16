@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6fb26b4488f6c75c0d9d7b70afb68c3c1b5e3178
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="l-value-and-r-value-expressions"></a>Wyrażenia wartości L i R
 Wyrażenia, które odwołują się do lokalizacji pamięci są nazywane wyrażeniami „l-wartości”. L wartość reprezentuje obszar magazynowania "lokalizatora" wartość lub wartość "lewo", co oznacza, że może występować na lewo od znaku równości (**=**). L-wartości są często identyfikatorami.  
@@ -51,7 +51,7 @@ Wyrażenia, które odwołują się do lokalizacji pamięci są nazywane wyrażen
   
  „R-wartość” jest czasami używana do opisywania wartości wyrażenia i odróżniania jej od l-wartości. Wszystkie l-wartości są r-wartościami, ale nie wszystkie r-wartości są l-wartościami.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Język Microsoft C zawiera rozszerzenie standardu ANSI C, które umożliwia rzutowanie l-wartości, aby móc używać ich jako l-wartości, tak długo, jak rozmiar obiektu nie jest zwiększany poprzez rzutowanie. (Zobacz [konwersje rzutowania typów](../c-language/type-cast-conversions.md) Aby uzyskać więcej informacji.) Poniższy przykład ilustruje tę cechę:  
   

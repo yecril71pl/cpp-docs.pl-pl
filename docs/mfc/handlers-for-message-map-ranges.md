@@ -38,10 +38,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>Programy obsługi dla zakresów map komunikatów
 W tym artykule opisano sposób mapowania zakresu komunikatów do funkcji obsługi wiadomości (zamiast mapowanie jeden komunikat do tylko jednej funkcji).  
@@ -66,7 +66,7 @@ W tym artykule opisano sposób mapowania zakresu komunikatów do funkcji obsług
   
 -   [Przykład dla zakresu formantu identyfikatorów](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a>Pisanie wpisu mapy komunikatów  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> Pisanie wpisu mapy komunikatów  
  W. CPP plików, Dodaj wpis mapy komunikatów, jak pokazano w poniższym przykładzie:  
   
  [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
@@ -75,11 +75,11 @@ W tym artykule opisano sposób mapowania zakresu komunikatów do funkcji obsług
   
 -   Makra mapy komunikatów zakresu:  
   
-    -   [ON_COMMAND_RANGE —](reference/message-map-macros-mfc.md#on_command_range)  
+    -   [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)  
   
-    -   [ON_UPDATE_COMMAND_UI_RANGE —](reference/message-map-macros-mfc.md#on_update_command_ui_range)  
+    -   [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)  
   
-    -   [ON_CONTROL_RANGE —](reference/message-map-macros-mfc.md#on_control_range)  
+    -   [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)  
   
 -   Parametry do makra:  
   
@@ -95,7 +95,7 @@ W tym artykule opisano sposób mapowania zakresu komunikatów do funkcji obsług
   
      Trzeci makra `ON_CONTROL_RANGE`, zajmuje dodatkowy parametr pierwszy: komunikatów powiadomień dotyczących formantu, takich jak **EN_CHANGE**.  
   
-##  <a name="_core_declaring_the_handler_function"></a>Deklarowanie funkcji obsługi  
+##  <a name="_core_declaring_the_handler_function"></a> Deklarowanie funkcji obsługi  
  Dodawanie deklaracji funkcji programu obsługi w. Plik godz. Poniższy kod przedstawia, jak to wygląda, jak pokazano poniżej:  
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
@@ -104,7 +104,7 @@ W tym artykule opisano sposób mapowania zakresu komunikatów do funkcji obsług
   
  Aby uzyskać więcej informacji o wymaganiach dotyczących parametrów dla funkcji programu obsługi aktualizacji, zobacz [przykład dla zakres polecenia identyfikatorów](#_core_example_for_a_range_of_command_ids).  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a>Przykład dla identyfikatorów zakresu polecenia  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> Przykład dla identyfikatorów zakresu polecenia  
  Może używając zakresów przykładem jest podczas obsługi poleceń, takich jak polecenia Powiększenie w przykładowym MFC [HIERSVR](../visual-cpp-samples.md). To polecenie zmienia Powiększenie widoku skalowanie go od 25% do 300% normalnego rozmiaru. Klasy widoku dla HIERSVR używa zakresu do obsługi poleceń powiększenia do wpisu mapy komunikatów przypominające to:  
   
  [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
@@ -127,7 +127,7 @@ W tym artykule opisano sposób mapowania zakresu komunikatów do funkcji obsług
   
  Zaktualizuj funkcje programu obsługi dla pojedynczego polecenia zwykle mają jeden parametr `pCmdUI`, typu **CCmdUI\***. W przeciwieństwie do funkcji programu obsługi aktualizacji funkcji programu obsługi dla zakresów map komunikatów nie wymagają dodatkowy parametr `nID`, typu **UINT**. Identyfikator polecenia, który jest wymagany do określenia, które polecenia faktycznie wybranym przez użytkownika, znajduje się w `CCmdUI` obiektu.  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a>Przykład dla identyfikatorów kontrolki zakresu  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> Przykład dla identyfikatorów kontrolki zakresu  
  Innym przypadku interesujące jest mapowanie komunikatów powiadomień dotyczących formantu zakresu kontroli identyfikatorów do pojedynczego programu obsługi. Załóżmy, że użytkownik może kliknąć jeden z przycisków 10. Aby mapować wszystkie przyciski 10 jednej procedury obsługi, wpis mapy wiadomości będzie wyglądać następująco:  
   
  [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  

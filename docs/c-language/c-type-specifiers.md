@@ -21,10 +21,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 00d91c2f790b93e70f21557d85f2cbb8216c8ed3
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-type-specifiers"></a>Specyfikatory typu C
 
@@ -33,15 +33,15 @@ Specyfikatory typów w deklaracjach typ deklaracji zmiennej lub funkcji.
 ## <a name="syntax"></a>Składnia
 
 *Specyfikator typu*:  
-&nbsp;&nbsp;**void**  
+&nbsp;&nbsp;**Void**  
 &nbsp;&nbsp;**char**  
 &nbsp;&nbsp;**krótki**  
 &nbsp;&nbsp;**int**  
 &nbsp;&nbsp;**długa**  
-&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;**podwójne**  
-&nbsp;&nbsp;**podpisany**  
-&nbsp;&nbsp;**bez znaku**  
+&nbsp;&nbsp;**Float**  
+&nbsp;&nbsp;**O podwójnej precyzji**  
+&nbsp;&nbsp;**Podpisany**  
+&nbsp;&nbsp;**Bez znaku**  
 &nbsp;&nbsp;*struct-or-union-specifier*  
 &nbsp;&nbsp;*enum-specifier*  
 &nbsp;&nbsp;*Nazwa typu TypeDef*  

@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-overloading"></a>Przeładowywanie funkcji
 C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Są one nazywane *przeciążony* funkcji. Funkcje przeciążone umożliwiają podać semantykę różną dla funkcji, w zależności od typów i liczby argumentów. 
@@ -44,7 +44,7 @@ Można przeciążać zarówno funkcji Członkowskich i funkcji z systemem innym 
 |Obecność lub brak wielokropka|Tak|  
 |Korzystanie z nazw `typedef`|Nie|  
 |Nieokreślone granice tablic|Nie|  
-|**Const** lub`volatile`|Tak, gdy jest stosowany do całej funkcji|
+|**Const** lub `volatile`|Tak, gdy jest stosowany do całej funkcji|
 |[ref-qualifier](#ref-qualifier)|Tak|  
   
 ## <a name="example"></a>Przykład  
@@ -188,7 +188,7 @@ F1 = Add( 3, 6 );
   
  Należy pamiętać, że przecięcia między dwoma zestawami jest pusty. W związku z tym kompilator generuje komunikat o błędzie.  
   
- Dla argumentu dopasowania, funkcja z  *n*  argumenty domyślne są traktowane jako  *n* funkcji oddzielne + 1, każda z różną liczbą argumentów.  
+ Dla argumentu dopasowania, funkcja z *n* argumenty domyślne są traktowane jako *n*funkcji oddzielne + 1, każda z różną liczbą argumentów.  
   
  Działa wielokropek (...) jako symbolu wieloznacznego, jest on zgodny z dowolnym rzeczywisty argument. Może to prowadzić do wielu zestawów niejednoznaczny, nie projektowania sieci przeciążona funkcja zestawów z rozwagą.  
   
@@ -261,14 +261,14 @@ volatile Over&
   
 |Konwersja z typu|Konwertuj na typ|  
 |-----------------------|---------------------|  
-|*Nazwa typu*|*Nazwa typu***&**|  
-|*Nazwa typu***&**|*Nazwa typu*|  
+|*Nazwa typu*|*Nazwa typu* **&**|  
+|*Nazwa typu* **&**|*Nazwa typu*|  
 |*Nazwa typu* **]**|*Nazwa typu\**|  
 |*Nazwa typu* **(** *listy argumentów* **)**|**(**  *\*nazwy typu* **) (** *listy argumentów* **)**|  
 |*Nazwa typu*|**Const** *nazwy typu*|  
-|*Nazwa typu*|`volatile`*nazwy typu*|  
+|*Nazwa typu*|`volatile` *Nazwa typu*|  
 |*Nazwa typu\**|**Const** *nazwy typu\**|  
-|*Nazwa typu\**|`volatile`*nazwy typu\**|  
+|*Nazwa typu\**|`volatile` *Nazwa typu\**|  
   
  Kolejność, w którym są próby konwersji wygląda następująco:  
   
@@ -301,7 +301,7 @@ Wykres pokazujący preferowanych konwersje
   
  Poprzedni reguła ma zastosowanie tylko wraz z danej ścieżce pochodnym. Należy wziąć pod uwagę wykres pokazano na poniższej ilustracji.  
   
- ![Obsługa wielu &#45; dziedziczenia, pokazujący preferowanych konwersje](../cpp/media/vc391t2.gif "vc391T2")  
+ ![Obsługa wielu&#45;dziedziczenia, pokazujący preferowanych konwersje](../cpp/media/vc391t2.gif "vc391T2")  
 Wykres dziedziczenia wielokrotnego pokazujący preferowanych konwersje  
   
  Konwersja z typu `C*` na typ `B*` lepiej jest konwersja z typu `C*` na typ `A*`. Przyczyną jest to, że znajdują się w tej samej ścieżki i `B*` zbliżonej. Jednak konwersja z typu `C*` na typ `D*` nieodpowiednim do konwersji na typ `A*`; jest Brak preferencji, ponieważ konwersje należy wykonać różne ścieżki.  
@@ -407,7 +407,7 @@ obj.name
   
  Lewy argument operacji `->*` i `.*` operatory (wskaźnik do elementu członkowskiego) są traktowane w taki sam sposób jak `.` i `->` operatory (wyboru elementu członkowskiego) względem dopasowania argumentów.  
 
-## <a name="ref-qualifiers"></a>Kwalifikatory ref w funkcjach Członkowskich  
+## <a name="ref-qualifiers"></a> Kwalifikatory ref w funkcjach Członkowskich  
 Kwalifikatory REF umożliwiają przeciążyć funkcji członkowskiej na podstawie tego, czy obiekt wskazywany przez `this` r-wartości lub l-wartością.  Tej funkcji można uniknąć operacje kopiowania niepotrzebnych w scenariuszach, w których użytkownik chce nie wskaźnika dostęp do danych. Załóżmy na przykład, klasa **C** niektóre dane w jego Konstruktor inicjuje i zwraca kopię danych w funkcji członkowskiej **get_data()**. Jeśli obiekt typu **C** jest r-wartości jest zniszczony, a następnie wybierze kompilator **get_data() & &** przeciążenia, które przenosi dane, a nie skopiować go. 
 
 ```cpp
@@ -461,7 +461,7 @@ int main()
   
 -   Funkcje elementów członkowskich nie może zostać przeciążony wyłącznie na podstawie jednego podpisu statyczne i innych nonstatic.  
   
--   `typedef`deklaracje nie definiują nowe typy; synonimy dla istniejących typów ich wprowadzenie. Nie ma wpływu na przeciążania mechanizmu. Rozważmy następujący kod:  
+-   `typedef` deklaracje nie definiują nowe typy; synonimy dla istniejących typów ich wprowadzenie. Nie ma wpływu na przeciążania mechanizmu. Rozważmy następujący kod:  
   
     ```  
     typedef char * PSTR;  
@@ -470,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Poprzednie dwie funkcje mają identyczne argumentu listy. `PSTR`jest synonimem typu **char \*** . Ten kod generuje błąd, w zakresie elementu członkowskiego.  
+     Poprzednie dwie funkcje mają identyczne argumentu listy. `PSTR` jest synonimem typu **char \*** . Ten kod generuje błąd, w zakresie elementu członkowskiego.  
   
 -   Typy wyliczane są różne typy i służy do rozróżnienia przeciążonej funkcji.  
   

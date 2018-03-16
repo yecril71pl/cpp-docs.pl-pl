@@ -26,10 +26,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a4385515becbb32b256b2bf6562af941371ef47e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="storage-class"></a>Klasa magazynu
 Specyfikator klasy magazynu w definicji funkcji zapewnia funkcję albo `extern` lub **statycznej** klasy magazynu.  
@@ -38,7 +38,7 @@ Specyfikator klasy magazynu w definicji funkcji zapewnia funkcję albo `extern` 
  *Definicja funkcji*:  
  *Specyfikatory deklaracji* opt*seq atrybutu* opt*lista deklaracji deklarator* opt*złożonej instrukcji*  
   
- /\**seq atrybutu* jest Specific Microsoft * /  
+ /\* *Atrybut seq* jest Specific Microsoft * /  
   
  *Specyfikatory deklaracji*:  
  *Specyfikatory deklaracji Specyfikator klasy magazynu* opcjonalnych  
@@ -47,7 +47,7 @@ Specyfikator klasy magazynu w definicji funkcji zapewnia funkcję albo `extern` 
   
  *Specyfikatory deklaracji kwalifikator typu* opcjonalnych  
   
- *Specyfikator klasy magazynu*: /\* definicje funkcji\*/  
+ *Specyfikator klasy magazynu*: /\* definicje funkcji \*/  
  **extern**  
   
  **static**  
@@ -60,7 +60,7 @@ Specyfikator klasy magazynu w definicji funkcji zapewnia funkcję albo `extern` 
   
  Funkcja z **statycznych** Klasa magazynu jest widoczna tylko w pliku źródłowym, w którym jest zdefiniowany. Wszystkie inne funkcje, niezależnie od tego, czy posiadają klasę magazynu `extern` jawnie lub niejawnie, są widoczne we wszystkich plikach z kodem źródłowym w programie. Jeśli **statycznych** Klasa magazynu jest pożądane, może być deklarowana na pierwsze wystąpienie deklaracji funkcji (jeśli istnieje), a w definicji funkcji.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Po włączeniu rozszerzenia Microsoft funkcji pierwotnie zadeklarowana bez klasy magazynu (lub `extern` klasy magazynu) podano **statycznych** klasy magazynu, jeśli z definicji funkcji znajduje się w tym samym pliku źródłowego i Definicja jawnie określa **statycznej** klasy magazynu.  
   

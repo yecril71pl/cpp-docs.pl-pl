@@ -4,19 +4,21 @@ ms.custom:
 ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea9b4719-34a3-474a-b4ec-05b1859f80f1
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: f311c2e5832754bfd785084b9aa930b5dbe43845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="implement-pure-virtuals"></a>Zaimplementuj czyste elementy wirtualne
 **Co:** pozwala natychmiast wygenerować kod wymagany do zaimplementowania w klasie czystych metod wirtualnych. 
@@ -32,10 +34,10 @@ ms.lasthandoff: 12/21/2017
    ![Wyróżniony kod](images/virtuals_highlight.png)
 
 1. Następnie wykonaj jedną z następujących czynności:
-   * **Klawiatury**
-     * Naciśnij klawisz **Ctrl +.** do wyzwalania **szybkie akcje i Refaktoryzacje** menu i wybierz  **zaimplementować wszystkie czyste elementy wirtualne dla klasy*ClassName*"** z menu kontekstowego, gdzie  *ClassName* to nazwa wybranej klasy.
+   * **Keyboard**
+     * Naciśnij klawisz **Ctrl +.** do wyzwalania **szybkie akcje i Refaktoryzacje** menu i wybierz **zaimplementować wszystkie czyste elementy wirtualne dla klasy*ClassName*"** z menu kontekstowego, gdzie  *ClassName* to nazwa wybranej klasy.
    * **Myszy**
-     * Kliknij prawym przyciskiem myszy i wybierz **szybkie akcje i Refaktoryzacje** menu i wybierz  **zaimplementować wszystkie czyste elementy wirtualne dla klasy*ClassName*"** z menu kontekstowego, gdzie  *ClassName* to nazwa wybranej klasy.
+     * Kliknij prawym przyciskiem myszy i wybierz **szybkie akcje i Refaktoryzacje** menu i wybierz **zaimplementować wszystkie czyste elementy wirtualne dla klasy*ClassName*"** z menu kontekstowego, gdzie  *ClassName* to nazwa wybranej klasy.
 
 1. Podpisy czystej metody wirtualnej zostanie automatycznie utworzone, gotowy do zaimplementowania.
 

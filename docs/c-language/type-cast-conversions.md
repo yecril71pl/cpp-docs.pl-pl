@@ -25,15 +25,15 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f402eb49e86c8d6d3ce6c332172375125f577a2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="type-cast-conversions"></a>Konwersje rzutowania typów
 Rzutowania typów umożliwia jawnej konwersji typów.  
   
- **Składnia**  
+ **Syntax**  
   
  *wyrażenie CAST*:  
  *wyrażenie jednoargumentowe*  
@@ -60,7 +60,7 @@ Rzutowania typów umożliwia jawnej konwersji typów.
   
  Należy pamiętać, że **void \***  wyrażenie zawiera typ wskaźnika do `void`, nie jest typu `void`. Jeśli obiekt jest rzutowane na `void` typu, wynikowe wyrażenie nie można przypisać do dowolnego elementu. Podobnie obiekt rzutowanie typu nie jest dopuszczalne wartości l, więc nie przypisanie nie jest możliwe do obiektu rzutowanie typu.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Rzutowanie typu może być wyrażenia wartości l, dopóki nie zmienia rozmiar identyfikatora. Aby uzyskać informacje na wyrażenia wartości l, zobacz [wartości L i r wyrażenia](../c-language/l-value-and-r-value-expressions.md).  
   

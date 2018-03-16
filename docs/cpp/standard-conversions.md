@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
 Język C++ definiuje konwersji między typami podstawowymi. Definiuje również konwersji dla wskaźnika, odwołanie, i typów pochodnych wskaźnika do elementu członkowskiego. Konwersje te są nazywane "konwersje standardowe." (Aby uzyskać więcej informacji na temat typów, standardowych typów i typów pochodnych, zobacz [typy](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  Zachowujące wartość promocje i promocje, które zachowują znak zazwyczaj generują te same wyniki. Jednakże, mogą wygenerować różne wyniki, jeśli promowany obiekt jest jednym z poniższych:  
   
--   Argument operacji  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , lub**>=**  
+-   Argument operacji  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , lub **>=**  
   
      Operatory te opierają się na znaku w celu określenia wyniku. W związku z tym, zachowujące wartość i znak promocje generują różne wyniki w razie zastosowania do tych operandów.  
   
--   Lewy argument operacji  **>>**  lub**>>=**  
+-   Lewy argument operacji  **>>**  lub **>>=**  
   
      Podczas wykonywania operacji przesunięcia, operatory inaczej traktują ilości oznaczone i nieznaczone. W przypadku ilości oznaczonych, przesunięcie liczby w prawo powoduje propagację bitu znaku na pozycje opuszczonych bitów. W przypadku ilości nieznaczonych, opuszczone pozycje bitowe są wypełniane zerami.  
   
@@ -199,7 +199,7 @@ int main() {
   
  Określa, czy klasa podstawowa jest niedostępna, zależy od rodzaju dziedziczenia używany podczas wyprowadzania. Należy wziąć pod uwagę dziedziczenia pokazano na poniższej ilustracji.  
   
- ![Dziedziczenie wykres przedstawiający base &#45; klasa dostępność](../cpp/media/vc38xa1.gif "vc38XA1")  
+ ![Wykres dziedziczenia przedstawiający podstawowej&#45;klasy ułatwień dostępu](../cpp/media/vc38xa1.gif "vc38XA1")  
 Wykres dziedziczenia do celów informacyjnych dostępności klasy podstawowej  
   
  W poniższej tabeli przedstawiono dostępność klasy podstawowej dla sytuacji przedstawione na rysunku.  

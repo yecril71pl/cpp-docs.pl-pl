@@ -18,16 +18,16 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 61dae4cf26f881014f0d98bbf30ebd10a360b10f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="summary-of-declarations"></a>Podsumowanie deklaracji
 `declaration`:  
  *Specyfikatory deklaracji atrybutu seq* <sub>opt</sub> *init deklarator listy*<sub>opt</sub>**;**  
   
- /\**seq atrybutu* jest Specific Microsoft * /  
+ /\* *Atrybut seq* jest Specific Microsoft * /  
   
  *Specyfikatory deklaracji*:  
  *Specyfikatory deklaracji Specyfikator klasy magazynu*<sub>opcjonalnych</sub>  
@@ -36,30 +36,30 @@ ms.lasthandoff: 12/21/2017
   
  *Specyfikatory deklaracji kwalifikator typu*<sub>opcjonalnych</sub>  
   
- *Atrybut seq* : /\* *seq atrybutu* jest Specific firmy Microsoft\*/  
+ *Atrybut seq* : /\* *seq atrybutu* jest Specific firmy Microsoft \*/  
  *Atrybut seq atrybutu* <sub>opcjonalnych</sub>  
   
- *atrybut* : jeden z / * Specific firmy Microsoft\*/  
+ *atrybut* : jeden z / * Specific firmy Microsoft \*/  
  ||||  
 |-|-|-|  
 |[__asm](../assembler/inline/asm.md)|[__clrcall](../cpp/clrcall.md)|[__stdcall](../cpp/stdcall.md)|  
 |[__based](../cpp/based-grammar.md)|[__fastcall](../cpp/fastcall.md)|[__thiscall](../cpp/thiscall.md)|  
 |[__cdecl](../cpp/cdecl.md)|[__inline](../cpp/inline-functions-cpp.md)|[__vectorcall](../cpp/vectorcall.md)|  
   
- *init — deklarator — lista*:  
- *init — deklarator*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
  *init — deklarator — lista***,***init deklarator*   
   
- *init — deklarator*:  
- *deklarator*  
+ *init-declarator*:  
+ *declarator*  
   
- *deklarator***=***inicjatora* / * dla inicjowania skalarne    \*/  
+ *deklarator***=***inicjatora* / * dla inicjowania skalarne     \*/  
   
- *Specyfikator klasy magazynu*:  
- **Automatycznie**  
+ *storage-class-specifier*:  
+ **auto**  
   
- **Rejestr**  
+ **register**  
   
  **static**  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/21/2017
   
  **Element TypeDef**  
   
- **__declspec (***rozszerzony decl — modyfikator seq***)** / * Specific firmy Microsoft    \*/  
+ **__declspec (***rozszerzony decl — modyfikator seq***)** / * Specific firmy Microsoft     \*/  
   
  *Specyfikator typu*:  
  **void**  
@@ -78,13 +78,13 @@ ms.lasthandoff: 12/21/2017
   
  **int**  
   
- `__int8`/ * Określonych firmy Microsoft\*/  
+ `__int8` / * Określonych firmy Microsoft \*/  
   
- `__int16`/ * Określonych firmy Microsoft\*/  
+ `__int16` / * Określonych firmy Microsoft \*/  
   
- `__int32`/ * Określonych firmy Microsoft\*/  
+ `__int32` / * Określonych firmy Microsoft \*/  
   
- `__int64`/ * Określonych firmy Microsoft\*/  
+ `__int64` / * Określonych firmy Microsoft \*/  
   
  **long**  
   
@@ -92,13 +92,13 @@ ms.lasthandoff: 12/21/2017
   
  **double**  
   
- **podpisany**  
+ **Podpisany**  
   
- **bez znaku**  
+ **Bez znaku**  
   
- *Specyfikator Struct lub union*  
+ *struct-or-union-specifier*  
   
- *Enum — Specyfikator*  
+ *enum-specifier*  
   
  *Nazwa typu TypeDef*  
   
@@ -110,44 +110,44 @@ ms.lasthandoff: 12/21/2017
  `declarator`:  
  `pointer`<sub>OPT</sub> *bezpośrednio deklarator*  
   
- *deklarator bezpośrednio*:  
- *Identyfikator*  
+ *direct-declarator*:  
+ *identifier*  
   
  **(***deklarator***)**   
   
  *deklarator bezpośrednio***[***wyrażenia* <sub>opt</sub>**]**   
   
- *deklarator bezpośrednio***(***listy parametrów typu***)** / * nowy styl deklarator      \*/  
+ *deklarator bezpośrednio***(***listy parametrów typu***)** / * nowy styl deklarator       \*/  
   
- *deklarator bezpośrednio***(***listy identyfikatorów*<sub>opt</sub>**)** / * przestarzały styl deklarator    \*/  
+ *deklarator bezpośrednio***(***listy identyfikatorów*<sub>opt</sub>**)** / * przestarzały styl deklarator     \*/  
   
  `pointer`:  
- **\****typu kwalifikator listy*<sub>opcjonalnych</sub>  
+ **\*** *Lista typów kwalifikator*<sub>opcjonalnych</sub>  
   
- **\****typu kwalifikator listy*<sub>opcjonalnych</sub>`pointer`  
+ **\*** *Lista typów kwalifikator*<sub>opcjonalnych</sub>`pointer`  
   
- *listy parametrów typu*: /\* listy parametrów\*/  
- *listy parametrów*  
+ *listy parametrów typu*: /\* listy parametrów \*/  
+ *parameter-list*  
   
- *Lista parametrów* **,...**  
+ *parameter-list* **, ...**  
   
  *Lista parametrów*:  
  *Deklaracja parametru*  
   
  *Lista parametrów***,***deklaracji parametru*   
   
- *Lista typów kwalifikator*:  
- *Kwalifikator typu*  
+ *type-qualifier-list*:  
+ *type-qualifier*  
   
  *Kwalifikator typu listy kwalifikator — typ*  
   
- *Specyfikator wyliczenia*:  
+ *enum-specifier*:  
  **wyliczenia***identyfikator*<sub>opt</sub>**{** *listy modułu wyliczającego* **}**   
   
  **wyliczenia***identyfikator*   
   
- *Moduł wyliczający listy*:  
- *Moduł wyliczający*  
+ *enumerator-list*:  
+ *enumerator*  
   
  *Moduł wyliczający listy***,**   `enumerator`  
   
@@ -157,88 +157,88 @@ ms.lasthandoff: 12/21/2017
  *Stała wyliczenia***=***wyrażenie stałej*   
   
  *Stała wyliczenia*:  
- *Identyfikator*  
+ *identifier*  
   
- *Specyfikator Struct lub union*:  
- *Identyfikator struktury lub Unii*<sub>opt</sub>**{** *struktury deklaracji listy* **}**  *Identyfikator struktury lub związku*  
+ *struct-or-union-specifier*:  
+ *Identyfikator struktury lub Unii*<sub>opt</sub>**{** *struktury deklaracji listy* **}** *struktury lub związku Identyfikator*  
   
- *Struktura lub Unia*:  
+ *struct-or-union*:  
  **struct**  
   
  **Unii**  
   
- *Struktura deklaracji listy*:  
- *Deklaracja — struktura*  
+ *struct-declaration-list*:  
+ *struct-declaration*  
   
  *Deklaracja struktury deklaracjach — struktura*  
   
- *Deklaracja struktury*:  
+ *struct-declaration*:  
  *Specyfikator kwalifikator listy w strukturze listy deklarator***;**   
   
- *Specyfikator kwalifikator listy*:  
+ *specifier-qualifier-list*:  
  *Specyfikator typu w specyfikatorze listy kwalifikator*<sub>opcjonalnych</sub>  
   
  *Kwalifikator typu w specyfikatorze listy kwalifikator*<sub>opcjonalnych</sub>  
   
- *Struktura deklarator listy*:  
+ *struct-declarator-list*:  
  *deklarator struktury w strukturze listy deklarator***,***deklarator — struktura*   
   
- *Struktura deklarator*:  
- *deklarator*  
+ *struct-declarator*:  
+ *declarator*  
   
  *Specyfikator typu deklarator*<sub>opt</sub>**:** *wyrażenie stałej*  
   
  *Deklaracja parametru*:  
- *Specyfikatory deklaracji deklarator* / * nazwa deklarator\*/  
+ *Specyfikatory deklaracji deklarator* / * nazwa deklarator \*/  
   
- *Specyfikatory deklaracji abstrakcyjny — deklarator*<sub>opt</sub>  **/ \***  deklarator anonimowe**\*/**  
+ *Specyfikatory deklaracji abstrakcyjny — deklarator*<sub>opt</sub>  **/ \***  deklarator anonimowe **\*/**  
   
- *Lista identyfikatorów*:  **/ \***  dla deklaratora w starym stylu**\* /**  
- *Identyfikator*  
+ *Lista identyfikatorów*:  **/ \***  dla deklaratora w starym stylu **\* /**  
+ *identifier*  
   
  *Lista identyfikatorów***,***identyfikator*   
   
- *deklarator abstrakcyjny*:  **/ \***  używane z anonimowego deklaratorów**\*/**  
- *wskaźnik*  
+ *deklarator abstrakcyjny*:  **/ \***  używane z anonimowego deklaratorów **\*/**  
+ *pointer*  
   
- `pointer`<sub>OPT</sub>*bezpośrednio abstrakcyjny — deklarator*  
+ `pointer`<sub>opt</sub>*direct-abstract-declarator*  
   
- *bezpośrednie abstrakcyjny — deklarator*:  
+ *direct-abstract-declarator*:  
  **(***deklarator abstrakcyjny***)**   
   
- *bezpośrednie abstrakcyjny — deklarator*<sub>opt</sub>**[** *wyrażenia*<sub>opt</sub>**]**  
+ *direct-abstract-declarator*<sub>opt</sub>**[** *constant-expression*<sub>opt</sub>**]**  
   
  *bezpośrednie abstrakcyjny — deklarator*<sub>opt</sub>**(** *listy parametrów typu* <sub>opt</sub>**)**  
   
  *Inicjator*:  
- *wyrażenia przypisania*  
+ *assignment-expression*  
   
- **{***listy inicjatorów***}** / * dla inicjowania agregacji    \*/  
+ **{***listy inicjatorów***}** / * dla inicjowania agregacji     \*/  
   
- **{***listy inicjatorów***,}**   
+ **{**  *initializer-list*  **, }**  
   
- *listy inicjatorów*:  
- *Inicjator*  
+ *initializer-list*:  
+ *initializer*  
   
  *Lista inicjalizatora***,***inicjatora*   
   
  *Nazwa typu*:  
- *Specyfikator kwalifikator listy abstrakcyjny — deklarator*<sub>opcjonalnych</sub>  
+ *specifier-qualifier-list abstract-declarator*<sub>opt</sub>  
   
  *Nazwa typu TypeDef*:  
- *Identyfikator*  
+ *identifier*  
   
- *rozszerzony decl — modyfikator seq*:/\* Specific firmy Microsoft\*/  
+ *rozszerzony decl — modyfikator seq*:/\* Specific firmy Microsoft \*/  
  *rozszerzony decl — modyfikator*<sub>opcjonalnych</sub>  
   
  *rozszerzony rozszerzony decl — modyfikator seq — decl — modyfikator*  
   
- *rozszerzony decl — modyfikator*: /\* Specific firmy Microsoft\*/  
+ *rozszerzony decl — modyfikator*: /\* Specific firmy Microsoft \*/  
  **wątek**  
   
  **naked**  
   
- **DllImport**  
+ **dllimport**  
   
  `dllexport`  
   

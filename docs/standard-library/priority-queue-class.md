@@ -36,10 +36,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d3c103673029f33d1d7eb36cce431c9b46d0270
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="priorityqueue-class"></a>priority_queue — Klasa
 Klasa karty kontenera szablonu, która umożliwia ograniczenie funkcjonalności ograniczanie dostępu do elementu górnego niektórych odpowiedni typ kontenera, która jest zawsze największej lub o najwyższym priorytecie. Nowe elementy mogą zostać dodane do priority_queue — i górnego elementu priority_queue — mogą być kontrolowane lub usunięty.  
@@ -52,7 +52,7 @@ class priority_queue
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Typ  
+ *Typ*  
  Typ danych elementu mają być przechowywane w priority_queue —.  
   
  `Container`  

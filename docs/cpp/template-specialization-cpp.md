@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 572ef5ca7199fab5b9ffda686425cdd53547a60a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="template-specialization-c"></a>Specjalizacja szablonu (C++)
 
@@ -84,7 +84,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Przykład
 
- Jeśli masz pobierającej dowolnego typu klasy kolekcji szablonu **T**, można utworzyć częściowej specjalizacji pobierającej dowolnego typu wskaźnika **T***. Poniższy kod przedstawia szablonu klasy kolekcji `Bag` i częściowa specjalizacja dla typów wskaźnika, w których kolekcji wyłuskań typów wskaźnika przed skopiowaniem ich do tablicy. Następnie kolekcji przechowuje wartości, które są wskazywał. Z oryginalnym szablonie tylko wskaźniki się czy były przechowywane w kolekcji, pozostawiając dane są narażone na usuwanie lub zmiana. W tej wersji specjalne wskaźnika kolekcji kodu do sprawdzenia wartości null wskaźnika w `add` metoda jest dodawana.  
+ Jeśli masz pobierającej dowolnego typu klasy kolekcji szablonu **T**, można utworzyć częściowej specjalizacji pobierającej dowolnego typu wskaźnika ** T ***. Poniższy kod przedstawia szablonu klasy kolekcji `Bag` i częściowa specjalizacja dla typów wskaźnika, w których kolekcji wyłuskań typów wskaźnika przed skopiowaniem ich do tablicy. Następnie kolekcji przechowuje wartości, które są wskazywał. Z oryginalnym szablonie tylko wskaźniki się czy były przechowywane w kolekcji, pozostawiając dane są narażone na usuwanie lub zmiana. W tej wersji specjalne wskaźnika kolekcji kodu do sprawdzenia wartości null wskaźnika w `add` metoda jest dodawana.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  

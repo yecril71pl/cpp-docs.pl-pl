@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-prototypes"></a>Prototypy funkcji
 Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany Klasa magazynu i inne atrybuty funkcji. Jako prototyp deklaracji funkcji należy również określić typy i identyfikatory dla argumentów funkcji.  
@@ -36,7 +36,7 @@ Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany K
  `declaration`:  
  *Specyfikatory deklaracji atrybutu seq* opt*init deklarator listy* opt**;**  
   
- /\**seq atrybutu* opt jest Specific Microsoft * /  
+ /\* *Atrybut seq* opt jest Specific Microsoft * /  
   
  *Specyfikatory deklaracji*:  
  *Specyfikatory deklaracji Specyfikator klasy magazynu* opcjonalnych  
@@ -45,23 +45,23 @@ Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany K
   
  *Specyfikatory deklaracji kwalifikator typu* opcjonalnych  
   
- *init — deklarator — lista*:  
- *init — deklarator*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
  *init — deklarator — lista***,***init deklarator*   
   
- *init — deklarator*:  
- *deklarator*  
+ *init-declarator*:  
+ *declarator*  
   
  *deklarator = inicjatora*  
   
  `declarator`:  
  *wskaźnik* opt*bezpośrednio deklarator*  
   
- *deklarator bezpośrednio*: /\* deklarator funkcji\*/  
- *deklarator bezpośrednio***(***listy parametrów typu***)** / * nowy styl deklarator      \*/  
+ *deklarator bezpośrednio*: /\* deklarator funkcji \*/  
+ *deklarator bezpośrednio***(***listy parametrów typu***)** / * nowy styl deklarator       \*/  
   
- *deklarator bezpośrednio***(***listy identyfikatorów* opt**)** / * przestarzały styl deklarator    \*/  
+ *deklarator bezpośrednio***(***listy identyfikatorów* opt**)** / * przestarzały styl deklarator     \*/  
   
  Prototyp ma tego samego formularza jako definicji funkcji, z wyjątkiem, że jest zakończona średnikiem bezpośrednio po nawiasie zamykającym i w związku z tym ma treść nie. W obu przypadkach zwracany typ należy uzgodnić z zwracany typ określony w definicji funkcji.  
   

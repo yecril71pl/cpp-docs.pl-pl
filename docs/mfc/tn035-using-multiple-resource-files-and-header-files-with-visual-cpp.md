@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: używanie wielu plików zasobów i plików nagłówków z programem Visual C++
 > [!NOTE]
@@ -104,7 +104,7 @@ RESOURCE.H     AFXRES.H
   
  Można je wyświetlić, wielu plików za pomocą polecenia programu Visual C++ pliku/zestaw zawiera.  
   
- MOJA_APLIKACJA. RC  
+ MYAPP.RC  
  Plik zasobów aplikacji można edytować przy użyciu programu Visual C++.  
   
  ZASÓB. H jest plik nagłówka specyficzne dla aplikacji. Jest zawsze o nazwie zasobów. H przez kreatorami AppWizard zgodne z domyślnego języka Visual C++ nazewnictwa pliku nagłówka. #Include dla tego pliku nagłówka jest pierwszą instrukcją w pliku zasobów (MOJA_APLIKACJA. RC):  
@@ -115,7 +115,7 @@ RESOURCE.H     AFXRES.H
 #include "resource.h"  
 ```  
   
- RES\MYAPP. RC2  
+ RES\MYAPP.RC2  
  Zawiera zasoby, które nie będą edytowane przez Visual C++, ale zostaną uwzględnione w ostatecznym skompilowany. Plik EXE. Kreatorami AppWizard tworzy żadnych takich zasobów domyślnie, ponieważ Visual C++ można edytować wszystkie standardowe zasoby, w tym wersja zasobów (Nowa funkcja w tej wersji). Pusty plik jest generowany przez kreatorami AppWizard w przypadku, gdy chcesz dodać własne niestandardowe zasoby sformatowany do tego pliku.  
   
  Jeśli używasz niestandardowych zasobów sformatowane, można dodać je do RES\MYAPP. RC2 i edytować za pomocą edytora tekstu Visual C++.  
@@ -124,7 +124,7 @@ RESOURCE.H     AFXRES.H
   
  AFXRES. H definiuje symbole standardowe, takie jak `ID_FILE_NEW`, używane przez platformę i używane wyłącznie w AFXRES. RC. AFXRES. H również #include w WINRES. H, zawierającą podzbiór systemu WINDOWS. H, które są wymagane przez wygenerowany Visual C++. RC — pliki, jak również AFXRES. RC. Symbole zdefiniowane w AFXRES. H są dostępne podczas edytowania pliku zasobu aplikacji (MOJA_APLIKACJA. RC). Na przykład `ID_FILE_NEW` jest używany nowy plik elementu menu w MOJA_APLIKACJA. RC dla zasobów menu. Nie można zmienić ani usunąć te symbole zdefiniowane w ramach.  
   
-## <a name="_mfcnotes_tn035_including"></a>W tym pliki nagłówkowe dodatkowe  
+## <a name="_mfcnotes_tn035_including"></a> W tym pliki nagłówkowe dodatkowe  
   
  Aplikacja utworzone z kreatorami AppWizard zawiera tylko dwa pliki nagłówkowe: zasobów. H i AFXRES. H. Tylko zasób. H jest specyficzne dla aplikacji. Konieczne może zawierać pliki dodatkowych nagłówków tylko do odczytu w następujących przypadkach:  
   
@@ -303,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ zawsze dodaje //{{NO_DEPENDENCIES}} komentarz wiersz. Plik RC podczas zapisywania pliku. W niektórych przypadkach obejścia zależności kompilacji dla ZASOBU. H może prowadzić do błędów czasu wykonywania wykryte w czasie łącza. Na przykład, jeśli używasz przeglądarki Symbol Aby zmienić wartość liczbową przypisane do symbolu dla zasobu, zasób zostanie nie poprawnie znaleziono i załadowany Jeśli czasu wykonywania aplikacji. Pliku CPP odwołujących się do zasobu nie jest ponownie kompilowana. W takich przypadkach należy jawnie skompiluj żadnego. Dotyczy plików CPP, które znasz zmiany symbol w ZASOBIE. H lub wybierz **rekompilacji wszystkiego**. Jeśli trzeba często Zmienianie symbolu wartości dla grupy zasobów, prawdopodobnie znajduje się on bardziej wygodne i bezpieczniejsze rozbicie tych symboli w pliku oddzielny nagłówek tylko do odczytu, zgodnie z opisem w powyższej sekcji [włącznie Pliki nagłówkowe dodatkowe](#_mfcnotes_tn035_including).  
   
-## <a name="_mfcnotes_tn035_set_includes"></a>W jaki sposób zarządza Visual C++ zestaw zawiera informacje o **  
+## <a name="_mfcnotes_tn035_set_includes"></a> W jaki sposób zarządza Visual C++ zestaw zawiera informacje o **  
   
  Jak wspomniano powyżej, ustaw zawiera polecenia menu Plik pozwala określić trzy rodzaje informacji:  
   

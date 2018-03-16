@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="segment"></a>SEGMENT
 Określa segment program o nazwie *nazwa* o atrybuty segmentu  
@@ -50,7 +50,7 @@ name ENDS
 |**DWORD**|Następny adres dostępne word o podwójnej precyzji (4 bajty każdego wyrazu o podwójnej precyzji).|  
 |**PARA**|Następny adres dostępne akapitu (16 bajtów na akapitu).|  
 |**PAGE**|Następny adres dostępne strony (256 bajtów na stronie).|  
-|**DOPASUJ**(*n*)|Następny dostępny  *n* th bajtowy adres. Więcej informacji podano w sekcji uwag.|  
+|**Dopasuj**(*n*)|Następny dostępny *n*th bajtowy adres. Więcej informacji podano w sekcji uwag.|  
   
  Jeśli ten parametr nie jest określony, **PARA** jest używany domyślnie.  
   

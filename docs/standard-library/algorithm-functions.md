@@ -214,10 +214,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: eb5b068f30703119d0771725a9cb9980a1ca65ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorytm&gt; funkcji
 ||||  
@@ -4538,7 +4538,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element —  
- Partycje zakresu elementów poprawnie lokalizowanie  *n* element th sekwencji w zakresie tak, aby wszystkie elementy przed nim są mniejsze niż lub równe go i wszystkie elementy, które po nim w sekwencji Ponowna większa lub równa go.  
+ Partycje zakresu elementów poprawnie lokalizowanie *n*element th sekwencji w zakresie tak, aby wszystkie elementy przed nim są mniejsze niż lub równe go i wszystkie elementy, które po nim w sekwencji są większe th usługi lub jej równa.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4565,7 +4565,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 ### <a name="remarks"></a>Uwagi  
  Odwołanie do zakresu musi być prawidłowym; wszystkie wskaźniki musi być dereferenceable i w obrębie sekwencji ostatniej pozycji jest dostępny od pierwszego przez przyrostowo zmieniać.  
   
- `nth_element` Algorytmu nie gwarantuje elementów w zakresy podrzędne albo strony z  *n* th element są sortowane. W związku z tym że gwarancje mniej niż `partial_sort`, który Porządkuje elementy w zakresie poniżej niektórych wybrany element i może być używany jako szybsza do `partial_sort` podczas zamawiania dolna granica nie jest wymagana.  
+ `nth_element` Algorytmu nie gwarantuje elementów w zakresy podrzędne albo strony z *n*th element są sortowane. W związku z tym że gwarancje mniej niż `partial_sort`, który Porządkuje elementy w zakresie poniżej niektórych wybrany element i może być używany jako szybsza do `partial_sort` podczas zamawiania dolna granica nie jest wymagana.  
   
  Elementy są równoważne, ale niekoniecznie równości, jeśli nie jest mniejsza niż innych.  
   

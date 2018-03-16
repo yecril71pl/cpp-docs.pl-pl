@@ -44,10 +44,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1325bcdbf00e217391ac7df4f583750b1fba4090
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="valarray-class"></a>valarray — Klasa
 Klasa szablonu opisuje obiekt, który określa sekwencję elementów typu **typu** który są przechowywane w postaci tablicy, przeznaczony dla szybkich operacji matematycznych i zoptymalizowane pod kątem wydajności obliczeniowej.  
@@ -57,7 +57,7 @@ Klasa szablonu opisuje obiekt, który określa sekwencję elementów typu **typu
   
 -   Definiuje wiele operacji arytmetycznych między elementami odpowiedniego **valarray —\<typu >** obiekty tego samego typu i długości, takich jak *xarr* = cos ( *yarr*) + sin ( *zarr*).  
   
--   Definiuje różne ciekawe sposoby indeks dolny **valarray —\<typu >** obiektu przez przeładowanie [operatora &#91; &#93;](#op_at).  
+-   Definiuje różne ciekawe sposoby indeks dolny **valarray —\<typu >** obiektu przez przeładowanie [operator&#91;&#93;](#op_at).  
   
  Obiekt klasy **typu**:  
   
@@ -1084,7 +1084,7 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
   
  Trzeci operator członkowski zastępuje kopię każdego elementu w kontrolowanej sekwencji `val`.  
   
- Pozostałe operatorów Członkowskich Zastąp te elementy kontrolowanej sekwencji wybranych przez ich argumentów, które są generowane tylko przez [operatora &#91; &#93;](#op_at).  
+ Pozostałe operatorów Członkowskich Zastąp te elementy kontrolowanej sekwencji wybranych przez ich argumentów, które są generowane tylko przez [operator&#91;&#93;](#op_at).  
   
  Jeśli wartość elementu członkowskiego w sekwencji zastępczy kontrolowane zależy od elementu członkowskiego w kontrolowanej sekwencji początkowej, wynikiem jest niezdefiniowany.  
   
@@ -1268,7 +1268,7 @@ The element-by-element result of the bitwise XOR operator^= is the
 *\  
 ```  
   
-##  <a name="op_or_eq"></a>  valarray::operator &#124; =  
+##  <a name="op_or_eq"></a>  valarray::operator&#124;=  
  Uzyskuje operatora testu koniunkcji `OR` elementów w tablicy z odpowiednich elementów w określonym valarray — lub z wartością typu elementu.  
   
 ```  

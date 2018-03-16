@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="new-and-delete-operators"></a>new i delete — operatory
 
@@ -38,7 +38,7 @@ C++ obsługuje dynamicznej alokacji i dezalokacji obiektów przy użyciu [nowe](
   
  Aby uzyskać listę plików bibliotek, które obejmują biblioteki wykonawczej C i standardowa biblioteka C++, zobacz [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md).  
   
-##  <a id="new_operator"></a> New — operator  
+##  <a id="new_operator"> </a> New — operator  
  Po napotkaniu w programie następujących instrukcji, program tłumaczy je na wywołanie funkcji `operator new`:  
   
 ```cpp  
@@ -144,7 +144,7 @@ int main() {
   
  Istnieje inny sposób do obsługi żądań alokacji pamięci nie powiodło się: zapisu procedury odzyskiwania niestandardowego do obsługi tych błędów, a następnie zarejestrować przez wywołanie funkcji [_set_new_handler —](../c-runtime-library/reference/set-new-handler.md) funkcji środowiska wykonawczego.  
   
-##  <a id="delete_operator"></a> Delete — operator  
+##  <a id="delete_operator"> </a> Delete — operator  
  Pamięci przydzielanej dynamicznie za pomocą **nowe** operator może zostać zwolniony za pomocą **usunąć** operatora. Wywołania operatora delete **operatora delete** funkcji, dzięki czemu dostępnej puli pamięci. Przy użyciu **usunąć** operatora powoduje także, że destruktora klasy (jeśli istnieje) do wywołania.  
   
  Istnieją globalne i zakres klasy **operatora delete** funkcji. Tylko jeden **operatora delete** funkcji mogą być definiowane dla danej klasy; Jeśli zdefiniowane, ukrywa globalną klasę **operatora delete** funkcji. Globalny **operatora delete** funkcja zawsze jest wywoływana dla tablic dowolnego typu.  

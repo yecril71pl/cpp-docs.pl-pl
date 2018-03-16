@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: obsługa podwójnego interfejsu w przypadku serwerów automatyzacji OLE
 > [!NOTE]
@@ -262,7 +262,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 ```  
   
 ## <a name="passing-dual-interface-pointers"></a>Przekazywanie wskaźniki podwójnego interfejsu  
- Przekazanie wskaźnika podwójnego interfejsu nie jest proste, zwłaszcza, jeśli należy wywołać `CCmdTarget::FromIDispatch`. `FromIDispatch`działa tylko na MFC `IDispatch` wskaźników. Aby obejść ten problem jest zapytania dla oryginalnej `IDispatch` zestaw wskaźnika Konfigurowanie przez MFC i że wskaźnikiem do funkcji, które go potrzebują. Na przykład:  
+ Przekazanie wskaźnika podwójnego interfejsu nie jest proste, zwłaszcza, jeśli należy wywołać `CCmdTarget::FromIDispatch`. `FromIDispatch` działa tylko na MFC `IDispatch` wskaźników. Aby obejść ten problem jest zapytania dla oryginalnej `IDispatch` zestaw wskaźnika Konfigurowanie przez MFC i że wskaźnikiem do funkcji, które go potrzebują. Na przykład:  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -306,10 +306,10 @@ lpDisp->QueryInterface(IID_IDualAutoClickPoint, (LPVOID*)retval);
 -   W aplikacji `InitInstance` funkcji, Znajdź wywołanie `COleObjectFactory::UpdateRegistryAll`. Po to wywołanie, dodaj wywołanie do `AfxOleRegisterTypeLib`, określania **identyfikatora LIBID** odpowiadającego do biblioteki typów, oraz nazwę biblioteki typów:  
   
  "" * / / Gdy aplikacja serwera jest uruchamiana autonomicznej, dobrym pomysłem jest * / / aby zaktualizować rejestr systemu w przypadku, gdy został uszkodzony.  
-    m_server. UpdateRegistry(OAT_DISPATCH_OBJECT);
+    m_server.UpdateRegistry(OAT_DISPATCH_OBJECT);
 
  COleObjectFactory::UpdateRegistryAll(); * / / DUAL_SUPPORT_START * / / upewnij się, że biblioteka typów jest zarejestrowana lub podwójnym interfejsu nie będzie działać.  
-AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); * / / DUAL_SUPPORT_END  
+AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); *// DUAL_SUPPORT_END  
  ```  
   
 ## Modifying Project Build Settings to Accommodate Type Library Changes  
@@ -355,7 +355,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
     pThis -> m_str = newText;  
     Zwraca brak błędu;  
  }  
-    CATCH_ALL_DUAL}  
+    CATCH_ALL_DUAL }  
 ```  
   
  `CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the **ICreateErrorInfo** interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:  
@@ -365,7 +365,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  ```  
     hr = MAKE_HRESULT(SEVERITY_ERROR,
     FACILITY_ITF,   
- (e -> m_wCode + 0x200));
+ (e->m_wCode + 0x200));
 
  ```  
   
@@ -391,7 +391,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()   
 {  
     Method_prologue — (CAutoClickDoc, SupportErrorInfo)   
-    zwracany pThis -> ExternalAddRef();
+    return pThis->ExternalAddRef();
 
 }   
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::Release()   
@@ -403,7 +403,7 @@ STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::Release()
 CAutoClickDoc::XSupportErrorInfo::QueryInterface STDMETHODIMP (REFIID iid, ppvObj LPVoid — *)   
 {   
     Method_prologue — (CAutoClickDoc, SupportErrorInfo)   
-    zwracany pThis -> ExternalQueryInterface (moszczu & świeżego iid gronowego z, ppvObj);
+    return pThis->ExternalQueryInterface(&iid, ppvObj);
 
 }   
 CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo STDMETHODIMP (REFIID iid)   

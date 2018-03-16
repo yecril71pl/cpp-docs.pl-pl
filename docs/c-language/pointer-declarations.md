@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0ac15c18ce3277e8268b6b4582de4046f5f74d64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="pointer-declarations"></a>Deklaracje wskaźników
 Deklaracji"wskaźnik" nazwy zmiennej wskaźnikowej i określa typ obiektu, na które wskazuje zmiennej. Zmienna zadeklarowana jako wskaźnik przechowuje adres pamięci.  
@@ -35,7 +35,7 @@ Deklaracji"wskaźnik" nazwy zmiennej wskaźnikowej i określa typ obiektu, na kt
  *deklarator*:  
  &nbsp;&nbsp;*wskaźnik*<sub>opt</sub> *bezpośrednio deklarator*  
   
- *deklarator bezpośrednio*:  
+ *direct-declarator*:  
  &nbsp;&nbsp;*Identyfikator*  
   
  &nbsp;&nbsp;**(** *deklarator* **)**  
@@ -47,12 +47,12 @@ Deklaracji"wskaźnik" nazwy zmiennej wskaźnikowej i określa typ obiektu, na kt
  &nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy identyfikatorów*<sub>opt</sub> **)**  
   
  *wskaźnik*:  
- &nbsp;&nbsp;**\****typu kwalifikator listy*<sub>opcjonalnych</sub>  
+ &nbsp;&nbsp;**\*** *Lista typów kwalifikator*<sub>opcjonalnych</sub>  
   
- &nbsp;&nbsp;**\****typu kwalifikator listy*<sub>opt</sub> *wskaźnika*  
+ &nbsp;&nbsp;**\*** *Lista typów kwalifikator*<sub>opt</sub> *wskaźnika*  
   
- *Lista typów kwalifikator*:  
- &nbsp;&nbsp;*Kwalifikator typu*  
+ *type-qualifier-list*:  
+ &nbsp;&nbsp;*type-qualifier*  
   
  &nbsp;&nbsp;*Lista typów kwalifikator* *kwalifikator typu*  
   

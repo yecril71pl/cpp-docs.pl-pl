@@ -41,10 +41,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 27152fc2ebc7944e4b96dce75937ac3c3b04616d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="directoryiterator-class"></a>directory_iterator — klasa
 W tym artykule opisano iterację wejściowych, które sekwencji za pomocą nazwy plików w katalogu. Dla iteratora X, wyrażenie * X ocenia się do obiektu directory_entry — klasa, która opakowuje nazwę pliku i wszystkie znane o jej stanie.  

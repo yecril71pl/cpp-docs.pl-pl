@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ieee-floating-point-representation"></a>Odwzorowanie liczby zmiennoprzecinkowej IEEE
 Microsoft Visual C++ jest zgodne ze standardami liczbowych IEEE. Istnieją trzy wewnętrznego odmian liczb rzeczywistych. Rzeczywiste\*4 i rzeczywistych\*8 są używane w programie Visual C++. Rzeczywiste\*4 jest zadeklarowane za pomocą słowa **float**. Rzeczywiste\*8 jest zadeklarowane za pomocą słowa **podwójne**. W programowaniu Windows 32-bitowych `long double` mapowana na typ danych **podwójne**. Jest jednak obsługa języka zestawu obliczenia przy użyciu rzeczywistego * typ danych 10.  
@@ -67,7 +67,7 @@ Microsoft Visual C++ jest zgodne ze standardami liczbowych IEEE. Istnieją trzy 
 |rzeczywiste * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
 |rzeczywiste * 10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
   
- `S`reprezentuje bitu znaku `X`w wykładnika bitów i `M`w mantysa bitów. Należy pamiętać, że po lewej stronie bit zakłada, że w rzeczywistym * 4 i rzeczywistych\*8 Formatuje, ale są dostępne jako "1" w rzeczywistym 3 BAJTÓW\*10 format.  
+ `S` reprezentuje bitu znaku `X`w wykładnika bitów i `M`w mantysa bitów. Należy pamiętać, że po lewej stronie bit zakłada, że w rzeczywistym * 4 i rzeczywistych\*8 Formatuje, ale są dostępne jako "1" w rzeczywistym 3 BAJTÓW\*10 format.  
   
  Przesunięcie punktu binarne prawidłowo, najpierw unbias wykładnik i następnie przenoszenia binarne punktu z prawej strony lub odpowiedniej liczby bitów w lewo.  
   

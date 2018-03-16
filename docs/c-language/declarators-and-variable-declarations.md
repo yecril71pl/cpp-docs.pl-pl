@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklaratory i deklaracje zmiennych
 Pozostałej części tej sekcji opisano formularza i znaczenie deklaracje zmiennych typów podsumowywane na tej liście. W szczególności pozostałych sekcjach wyjaśniono sposób zadeklarować następujące czynności:  
@@ -41,7 +41,7 @@ Pozostałej części tej sekcji opisano formularza i znaczenie deklaracje zmienn
   
  Deklaratorze jest częścią deklaracji, która określa nazwę, która ma być wprowadzane do programu. Modyfikatory może obejmować takie jak  **\***  (wskaźnik-do) oraz innych słów kluczowych Konwencja wywoływania firmy Microsoft.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  W deklarator  
   
@@ -49,7 +49,7 @@ Pozostałej części tej sekcji opisano formularza i znaczenie deklaracje zmienn
 __declspec(thread) char *var;  
 ```  
   
- `char`Specyfikator typu jest `__declspec(thread)` i `*` są modyfikatory, i `var` jest nazwą identyfikatora.  
+ `char` Specyfikator typu jest `__declspec(thread)` i `*` są modyfikatory, i `var` jest nazwą identyfikatora.  
   
  **KOŃCOWY określonych firmy Microsoft**  
   
@@ -59,7 +59,7 @@ __declspec(thread) char *var;
  *deklarator*:  
  &nbsp;&nbsp;*wskaźnik*<sub>opt</sub> *bezpośrednio deklarator*  
   
- *deklarator bezpośrednio*:  
+ *direct-declarator*:  
  &nbsp;&nbsp;*Identyfikator*  
  &nbsp;&nbsp;**(***deklarator***)**   
  &nbsp;&nbsp;*deklarator bezpośrednio***[***wyrażenia*<sub>opt</sub> **]**   
@@ -67,11 +67,11 @@ __declspec(thread) char *var;
  &nbsp;&nbsp;*deklarator bezpośrednio***(***listy identyfikatorów*<sub>opt</sub> **)**   
   
  *wskaźnik*:  
- &nbsp;&nbsp;**\****typu kwalifikator listy*<sub>opcjonalnych</sub>  
- &nbsp;&nbsp;**\****typu kwalifikator listy*<sub>opt</sub> *wskaźnika*  
+ &nbsp;&nbsp;**\*** *Lista typów kwalifikator*<sub>opcjonalnych</sub>  
+ &nbsp;&nbsp;**\*** *Lista typów kwalifikator*<sub>opt</sub> *wskaźnika*  
   
- *Lista typów kwalifikator*:  
- &nbsp;&nbsp;*Kwalifikator typu*  
+ *type-qualifier-list*:  
+ &nbsp;&nbsp;*type-qualifier*  
  &nbsp;&nbsp;*Kwalifikator typu listy kwalifikator — typ*  
   
 > [!NOTE]
@@ -91,7 +91,7 @@ double func( void ); // Declares a function named func, with no
 int *aptr[10] // Declares an array of 10 pointers  
 ```  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Kompilator Microsoft C nie ogranicza liczby deklaratorów, które można modyfikować arytmetyczne, struktury lub Unii. Liczba jest ograniczona tylko przez ilość dostępnej pamięci.  
   

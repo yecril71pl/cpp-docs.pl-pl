@@ -13,10 +13,10 @@ ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 
 manager: ghogen
 ms.openlocfilehash: a5bd2224f65db9ac376d04beed52217c1a0c4ec1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltnewgt-operators"></a>&lt;nowe&gt; operatory
 ||||  
@@ -24,7 +24,7 @@ ms.lasthandoff: 02/23/2018
 |[Usuwanie operatora](#op_delete)|[Usuwanie operatora]](#op_delete_arr)|[nowy operator](#op_new)|  
 |[nowy operator]](#op_new_arr)|  
   
-##  <a name="op_delete">Usuwanie operatora</a>  
+##  <a name="op_delete"></a>  Usuwanie operatora  
  Funkcja wywoływana przez wyrażenie usunięcia, należy cofnąć magazynu dla poszczególnych obiektów.  
   
 ```
@@ -53,7 +53,7 @@ void operator delete(void* ptr,
 ### <a name="example"></a>Przykład  
   Zobacz [nowy operator](../standard-library/new-operators.md#op_new) przykład używanego `operator delete`.  
   
-##  <a name="op_delete_arr">Usuwanie operatora]</a>  
+##  <a name="op_delete_arr"></a>  Usuwanie operatora]  
  Funkcja wywoływana przez wyrażenie usuwania można cofnąć alokacji pamięci masowej dla tablicy obiektów.  
   
 ```
@@ -71,16 +71,16 @@ void operator delete[](void* ptr,
  Wskaźnik, którego wartość ma być renderowany nieprawidłowy przez usunięcie.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwsza funkcja jest wywoływana przez `delete[]` wyrażenia do renderowania wartości `ptr` nieprawidłowy. Funkcja jest wymienne, ponieważ program można zdefiniować funkcję podpisem tej funkcji, który zastępuje domyślnej wersji zdefiniowany przez standardowa biblioteka C++. Wymagane jest aby zaakceptować wartości `ptr` oznacza to null lub którego został zwrócony przez wywołanie wcześniejszych [nowy operator &#91; &#93;](../standard-library/new-operators.md#op_new_arr) ( **size_t**). Domyślne zachowanie dla wartości równej null `ptr` ma nic nie rób. Każda inna wartość `ptr` musi być wartością wcześniej zwrócony przez wywołanie opisana powyżej. Domyślnym zachowaniem takich wartość inną niż null z `ptr` jest, aby odzyskać miejsce do magazynowania przydzielone przez wywołanie wcześniej. Jest nieokreślony, pod jakimi warunkami części lub całości tych regeneracji magazynu został przydzielony przez kolejne wywołanie [nowy operator](../standard-library/new-operators.md#op_new)( **size_t**), lub dowolnych `calloc`( **size_t**), `malloc`( **size_t**), lub `realloc`( **void\***, **size_t**).  
+ Pierwsza funkcja jest wywoływana przez `delete[]` wyrażenia do renderowania wartości `ptr` nieprawidłowy. Funkcja jest wymienne, ponieważ program można zdefiniować funkcję podpisem tej funkcji, który zastępuje domyślnej wersji zdefiniowany przez standardowa biblioteka C++. Wymagane jest aby zaakceptować wartości `ptr` oznacza to null lub którego został zwrócony przez wywołanie wcześniejszych [nowy operator&#91;&#93;](../standard-library/new-operators.md#op_new_arr)( **size_t**). Domyślne zachowanie dla wartości równej null `ptr` ma nic nie rób. Każda inna wartość `ptr` musi być wartością wcześniej zwrócony przez wywołanie opisana powyżej. Domyślnym zachowaniem takich wartość inną niż null z `ptr` jest, aby odzyskać miejsce do magazynowania przydzielone przez wywołanie wcześniej. Jest nieokreślony, pod jakimi warunkami części lub całości tych regeneracji magazynu został przydzielony przez kolejne wywołanie [nowy operator](../standard-library/new-operators.md#op_new)( **size_t**), lub dowolnych `calloc`( **size_t**), `malloc`( **size_t**), lub `realloc`( **void\***, **size_t**).  
   
  Druga funkcja jest wywoływana przez położenia `delete[]` wyrażenie odpowiadające `new[]` wyrażenie w postaci `new[]`( **std::size_t**). Nie działają.  
   
  Trzeci funkcja jest wywoływana przez umieszczania delete wyrażenie odpowiadające `new[]` wyrażenie w postaci `new[]`( **std::size_t**, **const std::nothrow_t &**). Program można zdefiniować funkcję podpisem tej funkcji, który zastępuje domyślnej wersji zdefiniowany przez standardowa biblioteka C++. Wymagane jest aby zaakceptować wartości `ptr` oznacza to wartość null lub którego został zwrócony przez wywołanie wcześniejszych operator `new[]`( **size_t**). Domyślnym zachowaniem jest ocena `delete[]`( `ptr`).  
   
 ### <a name="example"></a>Przykład  
-  Zobacz [nowy operator &#91; &#93;](../standard-library/new-operators.md#op_new_arr) przykłady stosowania `operator delete[]`.  
+  Zobacz [nowy operator&#91; &#93; ](../standard-library/new-operators.md#op_new_arr) przykłady stosowania `operator delete[]`.  
   
-##  <a name="op_new">nowy operator</a>  
+##  <a name="op_new"></a>  nowy operator  
  Funkcja wywoływana przez nowe wyrażenie można przydzielić magazynu dla poszczególnych obiektów.  
   
 ```
@@ -175,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_new_arr">nowy operator]</a>  
+##  <a name="op_new_arr"></a>  nowy operator]  
  Funkcja alokacji, wywoływana przez nowe wyrażenie, aby przydzielić magazyn na tablicę obiektów.  
   
 ```
@@ -205,7 +205,7 @@ void* operator new[](std::size_t count,
   
  Trzeci funkcja jest wywoływana przez położenia `new[]` wyrażenie w postaci **nowe** ( *argumentów*) **T**[ **N**]. W tym miejscu *argumentów* składa się z wskaźnik pojedynczego obiektu. Funkcja zwraca `ptr`.  
   
- Aby zwolnić miejsce do magazynowania przydzielone przez `operator new[]`, wywołaj [delete — operator &#91; &#93;](../standard-library/new-operators.md#op_delete_arr).  
+ Aby zwolnić miejsce do magazynowania przydzielone przez `operator new[]`, wywołaj [operatora delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr).  
   
  Aby uzyskać informacje o zgłaszaniu lub nonthrowing zachowania nowe, zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md).  
   

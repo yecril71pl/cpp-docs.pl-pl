@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Hierarchia i kolejność ocen
 Priorytet i łączność operatorów C wpłynąć na grupowanie i oceny operandów w wyrażeniach. Kolejność jest znaczący tylko wtedy, gdy istnieją inne operatory o priorytecie większej lub mniejszej. Wyrażenia z operatorami o wyższym priorytecie są sprawdzane jako pierwsze. Pierwszeństwo można również opisać za pomocą słowa "powiązania." Operatory o wyższym priorytecie są określane jako ma większego powiązania.  
@@ -37,7 +37,7 @@ Priorytet i łączność operatorów C wpłynąć na grupowanie i oceny operand�
   
 |Symbol <sup>1</sup>|Typ operacji|Łączność|  
 |-------------|-----------------------|-------------------|  
-|**\[ ] ( ) . ->**<br /><br />**++** **--**  (przyrostka)|Wyrażenie|Od lewej do prawej|  
+|**\[ ] ( ) . ->**<br /><br />**++** **--** (przyrostka)|Wyrażenie|Od lewej do prawej|  
 **sizeof & \* + - ~!**<br /><br />**++ —** (prefiks)|Jednoargumentowe|Od prawej do lewej|  
 |*typecasts*|Jednoargumentowe|Od prawej do lewej|  
 |**\* / %**|Mnożenia|Od lewej do prawej|  
@@ -45,9 +45,9 @@ Priorytet i łączność operatorów C wpłynąć na grupowanie i oceny operand�
 |**\<\< >>**|Operatory przesunięcia bitowego|Od lewej do prawej|  
 |**\< > \<= >=**|Relacyjnych|Od lewej do prawej|  
 |**== !=**|Równość|Od lewej do prawej|  
-|**&**|Operator- i|Od lewej do prawej|  
-|**^**|Bitowe lub na wyłączność|Od lewej do prawej|  
-|**&#124;**|Wraz z wartościami granicznymi Alternatywy|Od lewej do prawej|  
+|**&**|Bitwise-AND|Od lewej do prawej|  
+|**^**|Bitwise-exclusive-OR|Od lewej do prawej|  
+|**&#124;**|Bitwise-inclusive-OR|Od lewej do prawej|  
 |**&&**|Logiczne- i|Od lewej do prawej|  
 |**&#124;&#124;**|Alternatywą logiczną|Od lewej do prawej|  
 |**? :**|Wyrażenia warunkowego|Od prawej do lewej|  
@@ -74,9 +74,9 @@ Priorytet i łączność operatorów C wpłynąć na grupowanie i oceny operand�
 
 |Wyrażenie|Automatyczne powiązania|  
 |----------------|-----------------------|  
-|& b &#124; &#124; c|(& (b) &#124; &#124; c|  
-|= b &#124; &#124; c|= (b &#124; &#124; c)|  
-|q & & r &#124; &#124; s —|(q & & r) &#124; &#124; s —|  
+|& b &#124; &#124; c|(& (b). &#124; &#124; c|  
+|= b &#124; &#124; c|= (b &#124; &#124; c).|  
+|q & & r &#124; &#124; s--|(q & & r) &#124; &#124; s--|  
 
  W pierwszym wyrażeniu operatora testu koniunkcji- i — operator (`&`) mają wyższy priorytet niż operator logiczny OR (`||`), więc `a & b` formularzy pierwszy argument operacji operatora logicznego OR.  
   
@@ -88,7 +88,7 @@ Priorytet i łączność operatorów C wpłynąć na grupowanie i oceny operand�
   
 |Niedozwolone wyrażenie|Domyślne grupowanie|  
 |------------------------|----------------------|  
-|p == 0? p += 1: p += 2|(p == 0? p += 1: p) += 2|  
+|p == 0 ? p += 1: p += 2|(p == 0? p += 1 : p ) += 2|  
   
  W tym wyrażeniu operatora równości (`==`) ma pierwszeństwo, dlatego `p == 0` są grupowane jako argumentu. Operator wyrażenia warunkowego (`? :`) dalej najwyższy priorytet. Jego pierwszy argument operacji jest `p == 0`, a jej drugi argument operacji jest `p += 1`. Jednak ostatni argument operacji operatora wyrażenia warunkowego jest traktowany jako `p` zamiast `p += 2`, od momentu wystąpienia `p` dokładniejsze wiąże operator wyrażenia warunkowego niż operator przypisania złożone. Występuje błąd składni, ponieważ `+= 2` nie ma lewostronny operand. Należy Użyj nawiasów w celu uniknięcia błędów tego rodzaju i tworzy czytelność kodu. Na przykład można użyć nawiasów w sposób przedstawiony poniżej Popraw i wyjaśnić w poprzednim przykładzie:  
   

@@ -21,19 +21,19 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarations"></a>Przegląd deklaracji
 "Deklaracji" Określa interpretacji i atrybuty zestaw identyfikatorów. Deklaracja powodujący magazynu, które mają zostać zarezerwowane dla obiekt lub funkcji o nazwie przez identyfikator jest nazywany "definition". Deklaracje C zmienne, funkcje i typy mają następującej składni:  
   
 ## <a name="syntax"></a>Składnia  
  `declaration`:  
- *Specyfikatory deklaracji* *seq atrybutu*opt*init deklarator listy*opt**;**  
+ *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt**;**  
   
- /\**seq atrybutu*opt dotyczy Microsoft * /  
+ /\* *Atrybut seq*opt dotyczy Microsoft * /  
   
  *Specyfikatory deklaracji*:  
  *Specyfikatory deklaracji Specyfikator klasy magazynu*opcjonalnych  
@@ -42,13 +42,13 @@ ms.lasthandoff: 12/21/2017
   
  *Specyfikatory deklaracji kwalifikator typu*opcjonalnych  
   
- *init — deklarator — lista*:  
- *init — deklarator*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
  *init — deklarator — lista* , *init deklarator*  
   
- *init — deklarator*:  
- *deklarator*  
+ *init-declarator*:  
+ *declarator*  
   
  *deklarator***=***inicjatora*   
   

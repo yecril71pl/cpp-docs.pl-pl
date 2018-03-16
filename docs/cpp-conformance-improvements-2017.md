@@ -15,10 +15,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 45f22597944084ecd2d30fe29bf4e8ab3ef80201
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-and-155improvements155"></a>Ulepszenia zgodność języka C++ w wersji Visual Studio 2017 15.0, [15 ustęp 3](#improvements_153) i [15,5 cala](#improvements_155)
 
@@ -48,7 +48,7 @@ W języku C ++ 17 parametr komunikat static_assert jest opcjonalne. Aby uzyskać
 **Uogólniony na podstawie zakresu dla pętli** (Brak kompilatora wymagane)  
 Oparta na zakresie dla pętli nie wymagają już czy begin() i end() zwracać obiekty tego samego typu. Dzięki temu end() do zwrócenia wartownik jako używane przez zakresów w [v3 zakresu](https://github.com/ericniebler/range-v3) i specyfikacja techniczna zakresy ukończone — ale — nie całkiem — opublikowane. Aby uzyskać więcej informacji, zobacz [uogólnianie opartej na zakresie pętli For](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html).
 
-## <a name="improvements_153"></a>Ulepszenia w programie Visual Studio 2017 wersji 15 ustęp 3
+## <a name="improvements_153"></a> Ulepszenia w programie Visual Studio 2017 wersji 15 ustęp 3
 
 **wyrażenia lambda constexpr**  
 Wyrażenia lambda teraz mogą być używane w wyrażeniach stałej. Aby uzyskać więcej informacji, zobacz [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf).
@@ -75,14 +75,14 @@ Brak teraz niejawne/z systemem innym niż — zawężanie konwersji z typ podsta
 `*this` w wyrażeniu lambda teraz mogą być przechwytywane przez wartość. Dzięki temu scenariusze, w których wyrażenie lambda jest wywoływana podczas operacji równoległych i asynchroniczne, szczególnie w nowszej architektury maszyny. Aby uzyskać więcej informacji, zobacz [przechwytywania Lambda z \*to przez wartość jako [=,\*to]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html).
 
 **Usuwanie operatora ++ na bool**  
-`operator++`nie jest już obsługiwany na `bool` typów. Aby uzyskać więcej informacji, zobacz [Usuń przestarzałe operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
+`operator++` nie jest już obsługiwany na `bool` typów. Aby uzyskać więcej informacji, zobacz [Usuń przestarzałe operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
 
 **Usuwanie przestarzałe słowo kluczowe "register"**  
 `register` — Słowo kluczowe, wcześniej przestarzałe i ignorowane przez kompilator, teraz zostanie usunięta z języka. Aby uzyskać więcej informacji, zobacz [Usuń przestarzałe korzystanie z rejestru — słowo kluczowe](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html).
 
 Aby uzyskać pełną listę ulepszenia zgodność się za pomocą programu Visual Studio 2015 Update 3, zobacz [Visual C++ co przez nowy 2003 za pośrednictwem 2015](https://msdn.microsoft.com/en-us/library/mt723604.aspx).
 
-## <a name="improvements_155"></a>Ulepszenia w programie Visual Studio 2017 wersji 15,5 cala
+## <a name="improvements_155"></a>  Ulepszenia w programie Visual Studio 2017 wersji 15,5 cala
 
 Funkcje oznaczonej jako [14] są dostępne bezwarunkowo nawet w /std:c ++ 14 tryb.
 
@@ -448,7 +448,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-## <a name="update_153"></a>Wprowadzono poprawki błędów w programie Visual Studio 2017 wersji 15 ustęp 3
+## <a name="update_153"></a> Wprowadzono poprawki błędów w programie Visual Studio 2017 wersji 15 ustęp 3
 
 ### <a name="calls-to-deleted-member-templates"></a>Wywołania szablonów usuniętego elementu członkowskiego
 
@@ -642,7 +642,7 @@ constexpr auto off2 = offsetof(A, bar);
 
 Ten kod jest źle sformułowany i może powodować awarie w czasie wykonywania. Aby naprawić błąd, zmianę kodu można już wywołać niezdefiniowane zachowanie. To jest kod nieprzenośne jest zabronione przez C++ standard.
 
-### <a name="declspec"></a>Nowe ostrzeżenie o atrybutach declspec
+### <a name="declspec"></a> Nowe ostrzeżenie o atrybutach declspec
 
 W programie Visual Studio 2017 wersji 15 ustęp 3, kompilator nie jest już ignoruje atrybuty Jeśli `__declspec(...)` zostanie zastosowany przed `extern "C"` Specyfikacja powiązania. Wcześniej kompilator będzie ignorować atrybut, który może mieć wpływ na środowisko uruchomieniowe. Gdy **/ścian** i **wx** opcje są ustawione, poniższy kod tworzy "ostrzeżenie C4768: atrybuty __declspec przed Specyfikacja powiązania są ignorowane":
 
@@ -725,7 +725,7 @@ static_assert(std::is_convertible<Array&, Array>::value, "");
 static_assert(std::is_convertible<Array, Array&>::value, "");
 ```
 
-`std::is_convertible<From, To>`jest obliczana na podstawie sprawdzania, jeśli definicja funkcji urojony jest poprawnie sformułowany:
+`std::is_convertible<From, To>` jest obliczana na podstawie sprawdzania, jeśli definicja funkcji urojony jest poprawnie sformułowany:
 
 ```cpp 
    To test() { return std::declval<From>(); }
@@ -748,7 +748,7 @@ private:
 static_assert(std::is_constructible<PrivateDtor, int>::value);
 ```
 
-Destruktory prywatnej spowodować, że typ nie umożliwia konstrukcji. `std::is_constructible<T, Args...>`jest obliczana tak, jakby zostały zapisane następujące oświadczenie:
+Destruktory prywatnej spowodować, że typ nie umożliwia konstrukcji. `std::is_constructible<T, Args...>` jest obliczana tak, jakby zostały zapisane następujące oświadczenie:
 
 ```cpp
    T obj(std::declval<Args>()...)
@@ -820,7 +820,7 @@ Aby rozwiązać ten problem, Rozmieść na liście inicjatora, poproś go o taki
 
 Warto zauważyć, że ostrzeżenia jest poza domyślnie wpływa tylko na kodu skompilowanego za pomocą **/ścian**.
 
-## <a name="update_155"></a>Poprawki błędów i inne zmiany zachowania w programie Visual Studio 2017 wersji 15,5 cala
+## <a name="update_155"></a> Poprawki błędów i inne zmiany zachowania w programie Visual Studio 2017 wersji 15,5 cala
 
 ### <a name="partial-ordering-change"></a>Częściowe porządkowanie zmiany
 
@@ -1098,7 +1098,7 @@ error C2027: use of undefined type 'S'
 
 ### <a name="stdisconvertible-target-type"></a>Typ docelowy STD::is_convertible
 
-`std::is_convertible`wymaga na nieprawidłowy typ zwracany typ docelowy. We wcześniejszych wersjach programu Visual Studio kompilator może nieprawidłowo typach abstrakcyjnych, które mogą spowodować niepoprawne wiązaniem i niezamierzone zachowanie.  Poniższy kod teraz poprawnie wywołuje C2338:
+`std::is_convertible` wymaga na nieprawidłowy typ zwracany typ docelowy. We wcześniejszych wersjach programu Visual Studio kompilator może nieprawidłowo typach abstrakcyjnych, które mogą spowodować niepoprawne wiązaniem i niezamierzone zachowanie.  Poniższy kod teraz poprawnie wywołuje C2338:
 
 ```cpp
 #include <type_traits>
@@ -1120,7 +1120,7 @@ struct D : public B { virtual ~D(); };
 static_assert(std::is_convertible<D *, B *>::value, "fail");
 ```
 
-### <a name="noexcept_removal"></a>Usunięcie specyfikacji wyjątków dynamicznych i noexcept
+### <a name="noexcept_removal"></a> Usunięcie specyfikacji wyjątków dynamicznych i noexcept
 
 W języku C ++ 17 `throw()` jest aliasem `noexcept`, `throw(<type list>)` i `throw(...)` są usuwane i mogą obejmować niektórych typów `noexcept`. Może to spowodować problemy ze zgodnością źródła z kodem, który odpowiada C ++ 14 lub wcześniej. **/Zc:noexceptTypes-** przełącznika może służyć do przywrócenia C ++ 14 wersja `noexcept` podczas w trybie C ++ 17 ogólnie. Dzięki temu można zaktualizować kodu źródłowego z języków C ++ 17, bez konieczności ponownego zapisania wszystkie Twoje `throw()` kodu w tym samym czasie.
 

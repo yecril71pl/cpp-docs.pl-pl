@@ -132,10 +132,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 895b0921785e29a49bd367c2676995ba9af8e309
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicstring-class"></a>basic_string — Klasa
 Sekwencje kontrolowane przez obiekt klasy szablonu `basic_string` są klasy string Standard C++ i są zwykle nazywane ciągów, ale ich nie należy mylić z stylu języka C zerem ciągów używanych w całym standardowa biblioteka C++. Ciąg Standard C++ jest kontenerem, który umożliwia korzystanie z ciągi jako normalne typów, takich jak operacje porównania i łączenia, Iteratory algorytmów standardowa biblioteka C++ i kopiowanie i przypisywanie za pomocą klasy przydzielania pamięci zarządzanej. Jeśli trzeba przekonwertować ciąg Standard C++ do ciągu zerem stylu języka C, użyj [basic_string::c_str](#c_str) elementu członkowskiego.  
@@ -607,9 +607,9 @@ reference at(size_type _Off);
  Odwołanie do znaku ciągu w miejscu określonym przez indeks parametru.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszym elementem w ciągu ma indeks równy zero i następujące elementy są indeksowane kolejno przez dodatnie liczby całkowite, dzięki czemu ciągu o długości  *n*  ma  *n* th Element indeksowane według numerów *n -* 1.  
+ Pierwszy element ciąg ma indeks równy zero i następujące elementy są indeksowane kolejno przez dodatnie liczby całkowite, dzięki czemu ciągu o długości *n* ma *n*th element indeksowane według numerów *n -* 1.  
   
- Element członkowski [operatora &#91; &#93;](#op_at) jest szybsza niż funkcja członkowska **na** zapewniające odczytu i zapisu do elementów ciąg.  
+ Element członkowski [operator&#91; &#93; ](#op_at) jest szybsza niż funkcja członkowska **w** zapewniające odczytu i zapisu do elementów ciąg.  
   
  Element członkowski `operator[]` nie sprawdza, czy wskaźnik przekazany jako parametr jest prawidłowy, ale funkcja członkowska **na** ma i dlatego należy używać, gdy ważność nie jest określone. Nieprawidłowy indeks, który jest indeks mniejsza od zera lub większa niż lub równe rozmiarowi ciągu przekazany do funkcji Członkowskich **w** zgłasza [out_of_range — klasa](../standard-library/out-of-range-class.md) wyjątku. Nieprawidłowy indeks przekazany do `operator[]` powoduje niezdefiniowane zachowanie, ale indeks równa długości ciągu jest prawidłowy indeks dla ciągów const i operator zwraca znak null, po upływie tego indeksu.  
   
@@ -3432,7 +3432,7 @@ reference operator[](size_type _Off);
  Odwołanie do znaku ciągu w miejscu określonym przez indeks parametru.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszy element ciąg ma indeks równy zero i następujące elementy są indeksowane kolejno przez dodatnie liczby całkowite, dzięki czemu ciągu o długości  *n*  ma  *n*  TH element indeksowane według numerów  *n*  - 1.  
+ Pierwszy element ciąg ma indeks równy zero i następujące elementy są indeksowane kolejno przez dodatnie liczby całkowite, dzięki czemu ciągu o długości *n* ma *n*th element indeksowane według numerów *n* - 1.  
   
  `operator[]` jest szybsze niż funkcja członkowska [na](#at) zapewniające odczytu i zapisu do elementów ciąg.  
   

@@ -22,10 +22,10 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: b0437225718e402ac2c8b9a22af5b4825128cbd6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltnumericgt-functions"></a>&lt;liczbowa&gt; funkcji
 ||||  
@@ -313,13 +313,13 @@ Type inner_product(
 ### <a name="return-value"></a>Wartość zwracana  
  Pierwszy funkcji członkowskiej zwraca sumę element-wise produktów i dodaje do niej określona wartość początkowa. Tak dla zakresów wartości *a*i i *b*i zwraca:  
   
- `val`+ ( *a*1 \* *b*1) + ( *a*2 \* *b*2) +... + ( *a* n  \* *b*n) 
+ `val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
   
  Wielokrotnie powtarzane zastępując `val` z `val` + ( *a*i \* *b*i).  
   
  Zwraca funkcję drugiego elementu członkowskiego:  
   
- `val`*binary_op1* ( *a*1 *binary_op2* *b*1) *binary_op1* ( *a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n)  
+ `val` *binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )  
   
  Wielokrotnie powtarzane zastępując `val` z `val` *binary_op1* ( *a*i *binary_op2* *b*i).  
   

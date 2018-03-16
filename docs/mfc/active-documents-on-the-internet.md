@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="active-documents-on-the-internet"></a>Dokumenty aktywne w Internecie
 Dokumenty aktywne zapewniają rozszerzenie do tradycyjnych osadzonych obiektów. Dokumenty aktywne może być wielostronicowe i są wyświetlane w obszarze klienckim. Czy negocjacji tradycyjnych menu i może być edytowany w miejscu, a także w otwartym oknie w aplikacji serwera. Zamiast jako mały prostokąt otoczone obramowaniem kreskowanym dokumenty aktywne są ramki pełnego i zawsze aktywny w miejscu.  
@@ -57,17 +57,17 @@ Dokumenty aktywne zapewniają rozszerzenie do tradycyjnych osadzonych obiektów.
   
 |Dokument A...|Implementuje te interfejsy|  
 |-------------------------|---------------------------------|  
-|Używa złożone plików jako mechanizm jego magazynu.|`IPersistStorage`.,|  
+|Używa złożone plików jako mechanizm jego magazynu.|`IPersistStorage`.|  
 |Obsługuje podstawowe funkcje osadzania Active dokumentów, w tym Utwórz z pliku.|`IPersistFile`, `IOleObject`, i `IDataObject`.|  
-|Obsługuje Aktywacja w miejscu.|`IOleInPlaceObject`i `IOleInPlaceActiveObject` (przy użyciu kontenera `IOleInPlaceSite` i **IOleInPlaceFrame** interfejsów).|  
+|Obsługuje Aktywacja w miejscu.|`IOleInPlaceObject` i `IOleInPlaceActiveObject` (przy użyciu kontenera `IOleInPlaceSite` i **IOleInPlaceFrame** interfejsów).|  
 |Obsługuje obejmujących te nowe interfejsy rozszerzenia aktywnego dokumentu. Niektóre interfejsy są opcjonalne.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, i `IPrint`.|  
   
  MFC umożliwia rozszerzanie istniejących obsługi serwera osadzonych do dokumentów aktywnych.  
   
 ## <a name="add-active-document-support-to-a-new-application"></a>Dodaj obsługę aktywnego dokumentu do nowej aplikacji  
- Aby utworzyć nową aplikację z obsługą dokumentów aktywnych: W Kreator aplikacji MFC na **obsługuje złożone dokumentu** w obszarze "Obsługa dokumentów złożonych wybierz" wybierz pozycję **pełny serwer** lub ** Kontener/pełny serwer**, a w obszarze "Wybierz dodatkowe opcje" zaznacz pole wyboru **serwer dokumentów aktywnych**.  
+ Aby utworzyć nową aplikację z obsługą dokumentów aktywnych: W Kreator aplikacji MFC na **obsługuje złożone dokumentu** w obszarze "Obsługa dokumentów złożonych wybierz" wybierz pozycję **pełny serwer** lub  **Kontener/pełny serwer**, a w obszarze "Wybierz dodatkowe opcje" zaznacz pole wyboru **serwer dokumentów aktywnych**.  
   
-##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a>Konwertuj istniejącego serwera w trakcie MFC na serwer dokumentów aktywnych  
+##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> Konwertuj istniejącego serwera w trakcie MFC na serwer dokumentów aktywnych  
  Jeśli aplikacja została utworzona z wersją programu Visual C++ poprzedzające wersję 4.2 i jest już w procesie serwera, można dodać obsługę dokumentów aktywnych, wprowadzając zmiany w następujących klas:  
   
 |Typ klasy|Wcześniej pochodną|Zmień, aby dziedziczyć|  

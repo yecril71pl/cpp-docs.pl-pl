@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="mfc-library-versions"></a>Wersje biblioteki MFC
 
@@ -98,7 +98,7 @@ Projekty MFC Użyj symbol preprocesora  **\_UNICODE** wskazująca UTF-16 znaków
 
 Biblioteki statyczne dla MFC Użyj następujących konwencji nazewnictwa. Nazwy bibliotek mają następującą postać
 
-> *u*AFX*c ** d*. LIB
+> *u*AFX*c**d*.LIB
 
 gdzie kursywą małe litery są symbole zastępcze Specyfikatory, których znaczenie przedstawiono w poniższej tabeli:
 
@@ -114,10 +114,10 @@ Uwzględniane są wszystkie biblioteki, wymienione w poniższej tabeli wbudowane
 |-------------|-----------------|
 |NAFXCW.LIB|Biblioteka dołączana statycznie MFC, wersja|
 |NAFXCWD.LIB|Biblioteka dołączana statycznie MFC, wersja do debugowania|
-|UAFXCW. LIB|Biblioteka dołączana statycznie MFC z obsługą Unicode, wersja|
-|UAFXCWD. LIB|Biblioteka dołączana statycznie MFC z obsługą Unicode, wersja do debugowania|
-|AFXNMCD. LIB|Biblioteka dołączana statycznie MFC bez kontrolki okna dialogowego MFC, wersja|
-|AFXNMCDD. LIB|Biblioteka dołączana statycznie MFC bez kontrolki okna dialogowego MFC, wersja do debugowania|
+|UAFXCW.LIB|Biblioteka dołączana statycznie MFC z obsługą Unicode, wersja|
+|UAFXCWD.LIB|Biblioteka dołączana statycznie MFC z obsługą Unicode, wersja do debugowania|
+|AFXNMCD.LIB|Biblioteka dołączana statycznie MFC bez kontrolki okna dialogowego MFC, wersja|
+|AFXNMCDD.LIB|Biblioteka dołączana statycznie MFC bez kontrolki okna dialogowego MFC, wersja do debugowania|
 
 Pliki debugera, które mają taką samą nazwę podstawową i rozszerzenia .pdb są również dostępne dla poszczególnych bibliotek statycznych.
 
@@ -136,7 +136,7 @@ Biblioteki DLL MFC ma *wersji* numery, które wskazuje zgodności plików binarn
 |MFCM*wersji*. BIBLIOTEKI DLL|Biblioteki MFC DLL z formanty formularzy systemu Windows, wersja ANSI lub wersji MBCS|
 |MFCM*wersji*U.DLL|Biblioteki MFC DLL z formanty formularzy systemu Windows, wersja wydana Unicode|
 |MFCM*wersji*D.DLL|Biblioteki MFC DLL z formanty formularzy systemu Windows, wersja ANSI lub debugowania MBCS|
-|MFCM*wersji*UD. BIBLIOTEKI DLL|Biblioteki MFC DLL z formanty formularzy systemu Windows, wersja do debugowania kodu Unicode|
+|MFCM*version*UD.DLL|Biblioteki MFC DLL z formanty formularzy systemu Windows, wersja do debugowania kodu Unicode|
 
 Biblioteki importu niezbędnych do tworzenia aplikacji lub biblioteki dll, korzystających z tych udostępnionej biblioteki DLL rozszerzeń MFC ma taką samą nazwę podstawową jak plik DLL, ale ma rozszerzenie nazwy pliku lib. Korzystając z udostępnionej biblioteki dll, mała biblioteki statycznej nadal musi być połączony z kodu; Ta biblioteka ma nazwę MFCS*wersji*.lib {U} {D}.
 

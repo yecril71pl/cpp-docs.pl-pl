@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7b3b067db3812fbe7e5db1d367635eedc5362527
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="multidimensional-arrays-c"></a>Tablice wielowymiarowe (C)
 Wyrażenie indeksu dolnego może mieć wiele indeksów dolnych, jak pokazano poniżej:  
@@ -40,7 +40,7 @@ expression3
 ]...  
 ```  
   
- Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Po lewej stronie wyrażenia indeksu *wyrażenie1***[***wyrażenie2***]**, jest szacowana jako pierwsza. Adres, który jest wynikiem Dodawanie *wyrażenie1* i *wyrażenie2* formularzy wyrażenia wskaźnika; następnie *expression3* zostanie dodany do tego wyrażenia wskaźnika do utworzenia nowego wyrażenia wskaźnika, i tak dalej, aż ostatniego wyrażenia indeksu został dodany. Operator pośredni (**\***) są stosowane po ostatnim jako wyrażenie jest obliczane, chyba że wpisz adresy wartość końcowego wskaźnika do tablicy (Zobacz przykłady poniżej).  
+ Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Po lewej stronie wyrażenia indeksu * wyrażenie1***[***wyrażenie2 ***]**, jest szacowana jako pierwsza. Adres, który jest wynikiem Dodawanie *wyrażenie1* i *wyrażenie2* formularzy wyrażenia wskaźnika; następnie *expression3* zostanie dodany do tego wyrażenia wskaźnika do utworzenia nowego wyrażenia wskaźnika, i tak dalej, aż ostatniego wyrażenia indeksu został dodany. Operator pośredni (**\***) są stosowane po ostatnim jako wyrażenie jest obliczane, chyba że wpisz adresy wartość końcowego wskaźnika do tablicy (Zobacz przykłady poniżej).  
   
  Wyrażenia zawierające wiele indeksów dolnych odwołują się do elementów „tablic wielowymiarowych”. Tablica wielowymiarowa jest tablicą, której elementy są tablicami. Na przykład, pierwszy element tablicy trójwymiarowej jest tablicą z dwoma wymiarami.  
   

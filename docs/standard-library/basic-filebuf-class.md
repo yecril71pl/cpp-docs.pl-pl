@@ -56,10 +56,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5c9891f67c376d13794778c82b167092237df3f7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf — Klasa
 W tym artykule opisano buforu strumienia, który kontroluje przekazywania elementów typu `Elem`, którego cech znaków są określane przez klasę `Tr`, do i z sekwencję elementy przechowywane w pliku zewnętrznym.  
@@ -411,19 +411,19 @@ basic_filebuf<Elem, Tr> *open(
  Jeśli wskaźnika pliku wskaźnika o wartości null, funkcja zwraca wskaźnika o wartości null. W przeciwnym razie zwraca **to**.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska otwiera plik o nazwie pliku *filename*, wywołując [fopen —](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**). **strmode** jest określana na podstawie **trybu &**~ ( [uj](../standard-library/ios-base-class.md#openmode) & &#124; [binarne](../standard-library/ios-base-class.md#openmode)):  
+ Funkcja członkowska otwiera plik o nazwie pliku *filename*, wywołując [fopen —](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**). **strmode** jest określana na podstawie **trybu &**~ ( [uj](../standard-library/ios-base-class.md#openmode) & &#124; [binary](../standard-library/ios-base-class.md#openmode)):  
   
 - **ios_base::in** staje się **"r"** (Otwórz istniejący plik do odczytu).  
   
 - [ios_base::Out](../standard-library/ios-base-class.md#fmtflags) lub **ios_base::out &#124; ios_base::trunc** staje się **"w"** (obcięcia istniejący plik lub utwórz do zapisu).  
   
-- **ios_base::Out &#124; Aplikacja** staje się **""** (Otwórz istniejący plik dołączania zapisy wszystkie).  
+- **ios_base::Out &#124; aplikacji** staje się **""** (Otwórz istniejący plik dołączania zapisy wszystkie).  
   
-- **ios_base::in &#124; ios_base::Out** staje się **"r +"** (Otwórz istniejący plik do odczytu i zapisu).  
+- **ios_base::in &#124; ios_base::out** staje się **"r +"** (Otwórz istniejący plik do odczytu i zapisu).  
   
-- **ios_base::in &#124; ios_base::Out &#124; ios_base::TRUNC** staje się **"w +"** (obcięcia istniejący plik lub utwórz do odczytywania i zapisywania).  
+- **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** staje się **"w +"** (obcięcia istniejący plik lub utwórz do odczytywania i zapisywania).  
   
-- **ios_base::in &#124; ios_base::Out &#124; ios_base::App** staje się **"+"** (Otwórz istniejący plik do odczytu i dołączania zapisy wszystkie).  
+- **ios_base::in &#124; ios_base::out &#124; ios_base::app** staje się **"+"** (Otwórz istniejący plik do odczytu i dołączania zapisy wszystkie).  
   
  Jeśli **trybu & ios_base::binary** jest różna od zera, dołącza funkcji **b** do **strmode** można otworzyć strumienia binarnego zamiast strumienia tekstu. Następnie zapisuje wartość zwrócona przez `fopen` wskaźnika pliku **fp**. Jeśli **trybu & ios_base::ate** jest różna od zera i wskaźnika pliku nie jest wskaźnika o wartości null, wywołania funkcji `fseek`( **fp**, 0, `SEEK_END`) do pozycji w strumieniu na końcu pliku. Jeśli tej operacji pozycjonowania zakończy się niepowodzeniem, wywołania funkcji [zamknąć](#close)( **fp**) i przechowuje wskaźnika o wartości null wskaźnika pliku.  
   

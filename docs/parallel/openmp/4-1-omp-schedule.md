@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 330e5ea576e3cd779a7c17c21d00b6459f5e7043
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 **OMP_SCHEDULE** dotyczą tylko **dla** i **równoległe w** dyrektywy, które mają typ harmonogramu **środowiska uruchomieniowego**. Rozmiar typu i fragmentu harmonogramu dla wszystkich takich pętli można ustawić w czasie wykonywania przez ustawienie tej zmiennej środowiskowej do dowolnego typu rozpoznanym harmonogram i opcjonalne *chunk_size*.  

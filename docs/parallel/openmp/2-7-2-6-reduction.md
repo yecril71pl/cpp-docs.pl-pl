@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 684067eae668398e71ca4ace0cc136e3210e0dbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="2726-reduction"></a>2.7.2.6 — redukcja
 
@@ -44,17 +44,17 @@ gdzie:
 *x*  
 Jeden z zmienne redukcji określone w `list`.
 
-*Zmienna listy*  
+*variable-list*  
 Rozdzielana przecinkami lista zmienne redukcji skalarne.
 
-*wyrażenie*  
+*expr*  
 Wyrażenie typu skalarne nie odwołuje się *x*.
 
 *OP*  
-Przeciążony operator NOT oprócz jednego +, &#42; -, &amp;, ^, &#124; &amp; &amp;, lub &#124; &#124;.
+Przeciążony operator NOT oprócz jednego +, &#42;, -, &amp;, ^, &#124;, &amp; &amp;, lub &#124; &#124;.
 
 *binop*  
-Przeciążony operator NOT oprócz jednego +, &#42; -, &amp;, ^, lub &#124;.
+Przeciążony operator NOT oprócz jednego +, &#42;, -, &amp;, ^, lub &#124;.
 
 Poniżej przedstawiono przykład `reduction` klauzuli:  
   

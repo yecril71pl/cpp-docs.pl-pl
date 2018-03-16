@@ -30,10 +30,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4dc08bce80d27493a8a13ac24bce7011282d7cd3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="member-access-operators--and--gt"></a>Operatory dostępu do elementów członkowskich:. i -&gt;
 ## <a name="syntax"></a>Składnia  
@@ -50,7 +50,7 @@ postfix-expression -> name
   
 1.  W formularzu pierwszy *wyrażenie przyrostek* reprezentuje wartość struktury, klasy lub typu Unii i *nazwa* nazwy jest członkiem określonej struktury, Unią lub klasy. Wartość operacji jest *nazwa* i jest wartością l-value, jeśli *wyrażenie przyrostek* jest wartością l-value.  
   
-2.  W drugiej formy *wyrażenie przyrostek* reprezentuje wskaźnik do struktury, Unią lub klasa, i *nazwa* nazwy jest członkiem określonej struktury, Unią lub klasy. Wartość jest *nazwę* i jest wartością l-value.  **->**  Operator wyłuskań wskaźnika. W związku z tym wyrażenia *e*  **->**  `member` i **(\****e***)**.`member` (gdzie *e* reprezentuje wskaźnik) uzyskanie identycznych wyników (z wyjątkiem sytuacji, gdy operatory  **->**  lub  **\***  są przeciążone).  
+2.  W drugiej formy *wyrażenie przyrostek* reprezentuje wskaźnik do struktury, Unią lub klasa, i *nazwa* nazwy jest członkiem określonej struktury, Unią lub klasy. Wartość jest *nazwę* i jest wartością l-value.  **->**  Operator wyłuskań wskaźnika. W związku z tym wyrażenia * e * **->**  `member` i **(\****e***)**.`member` (gdzie *e* reprezentuje wskaźnik) uzyskanie identycznych wyników (z wyjątkiem sytuacji, gdy operatory  **->**  lub  **\***  są przeciążone).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano obu rodzajów operatora dostępu do elementu członkowskiego.  

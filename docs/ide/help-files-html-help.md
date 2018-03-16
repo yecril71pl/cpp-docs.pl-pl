@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c96cd6ad904439f556f2baa51602353ea00c5ac7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="help-files-html-help"></a>Pliki pomocy (Pomoc HTML)
 Następujące pliki zostaną utworzone po dodaniu rodzaj pomocy HTML pomoc techniczna do aplikacji przez wybranie **pomocy kontekstowej** pole wyboru, a następnie wybierając **format Pomocy HTML** w [Funkcje zaawansowane](../mfc/reference/advanced-features-mfc-application-wizard.md) Kreatora aplikacji MFC.  
@@ -32,11 +32,11 @@ Następujące pliki zostaną utworzone po dodaniu rodzaj pomocy HTML pomoc techn
 |---------------|------------------------|--------------------------------|-----------------|  
 |*Nazwa_projektu.nazwa_modułu.nazwa_procedury*hhp|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|pliki Pomocy w formacie HTML|Plik projektu pomocy. Zawiera dane wymagane do kompilacji pliki pomocy do pliku .hxs lub plik .chm.|  
 |*Nazwa_projektu.nazwa_modułu.nazwa_procedury*.hhk|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|pliki Pomocy w formacie HTML|Zawiera indeks tematów Pomocy.|  
-|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*.hhc|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|pliki Pomocy w formacie HTML|Zawartość pomocy projektu.|  
-|Makehtmlhelp.bat|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*|Pliki źródłowe|Używane przez system, aby skompilować projekt pomocy w przypadku, gdy kompilowany jest projekt.|  
+|*Projname*.hhc|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|pliki Pomocy w formacie HTML|Zawartość pomocy projektu.|  
+|Makehtmlhelp.bat|*Projname*|Pliki źródłowe|Używane przez system, aby skompilować projekt pomocy w przypadku, gdy kompilowany jest projekt.|  
 |Afxcore.htm|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Tematy Pomocy HTML|Zawiera standardowe tematy pomocy dla standardowych poleceń MFC i obiektów ekranu. Dodaj tematy pomocy do tego pliku.|  
 |Afxprint.htm|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Tematy Pomocy HTML|Zawiera tematy pomocy dla polecenia drukowania.|  
-|*.jpg; \*GIF|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp\Images|Pliki zasobów|Zawiera obrazy do różnych tematów wygenerowanego pliku.|  
+|*.jpg; \*.gif|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp\Images|Pliki zasobów|Zawiera obrazy do różnych tematów wygenerowanego pliku.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

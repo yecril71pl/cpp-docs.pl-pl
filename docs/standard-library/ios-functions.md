@@ -58,10 +58,10 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: 60bb8bac5ca2f961d6d2977dc84d0844dfd54b8c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltiosgt-functions"></a>&lt;IOS&gt; funkcji
 ||||  
@@ -123,7 +123,7 @@ true
 true  
 ```  
   
-##  <a name="dec">DEC</a>  
+##  <a name="dec"></a>  DEC  
  Określa, czy liczba całkowita zmienne są widoczne w podstawowej notacji 10.  
   
 ```  
@@ -186,7 +186,7 @@ ios_base& defaultfloat(ios_base& _Iosbase);
 ### <a name="remarks"></a>Uwagi  
  Manipulatora wywołuje _znam `osbase.` [ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, następnie zwraca _znam `osbase`.  
   
-##  <a name="fixed">Stałe</a>  
+##  <a name="fixed"></a>  Stałe  
  Określa, że liczba zmiennoprzecinkowa jest wyświetlana w notacji stałej dziesiętnej.  
   
 ```  
@@ -357,7 +357,7 @@ ios_base& noboolalpha(ios_base& str);
 ### <a name="example"></a>Przykład  
   Zobacz [boolalpha](../standard-library/ios-functions.md#boolalpha) przykład przy użyciu `noboolalpha`.  
   
-##  <a name="noshowbase">noshowbase</a>  
+##  <a name="noshowbase"></a>  noshowbase  
  Wyłącza wskazujący base notational, w którym jest wyświetlany numer.  
   
 ```  
@@ -444,7 +444,7 @@ ios_base& noshowpos(ios_base& str);
 ### <a name="example"></a>Przykład  
   Zobacz [showpos](../standard-library/ios-functions.md#showpos) przykład przy użyciu `noshowpos`.  
   
-##  <a name="noskipws">noskipws</a>  
+##  <a name="noskipws"></a>  noskipws  
  Spowodować spacje odczytywane przez strumień wejściowy.  
   
 ```  
@@ -501,7 +501,7 @@ ios_base& nounitbuf(ios_base& str);
   
  Wywołuje manipulatora `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`), a następnie zwraca `str`.  
   
-##  <a name="nouppercase">nouppercase</a>  
+##  <a name="nouppercase"></a>  nouppercase  
  Określa, że cyfr szesnastkowych i wykładnik w notacji naukowej są pisane małymi literami.  
   
 ```  
@@ -637,7 +637,7 @@ int main( )
 1.002300e+002  
 ```  
   
-##  <a name="showbase">showbase</a>  
+##  <a name="showbase"></a>  showbase  
  Wskazuje podstawowy notational, w którym jest wyświetlany numer.  
   
 ```  
@@ -750,7 +750,7 @@ int main( )
 +1  
 ```  
   
-##  <a name="skipws">skipws</a>  
+##  <a name="skipws"></a>  skipws  
  Spowodować spacje nie można odczytać strumienia wejściowego.  
   
 ```  
@@ -821,7 +821,7 @@ ios_base& unitbuf(ios_base& str);
   
  Wywołuje manipulatora `str`.[ SETF](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags)), a następnie zwraca `str`.  
   
-##  <a name="uppercase">wielkie litery</a>  
+##  <a name="uppercase"></a>  wielkie litery  
  Określa, że cyfr szesnastkowych i wykładnik w notacji naukowej są pisane wielkimi literami.  
   
 ```  

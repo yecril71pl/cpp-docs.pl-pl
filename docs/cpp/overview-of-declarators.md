@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarators"></a>Przegląd deklaratorów
 Deklaratory są składnikami deklaracji, które określają nazwy obiektów lub funkcji. Deklaratory określają również, czy nazwany obiekt jest obiektem, wskaźnikiem, odwołaniem lub tablicą.  Deklaratory nie określają typu podstawowego, ale modyfikują informacje o typie w obrębie typu podstawowego w celu określenia typów pochodnych, takich jak wskaźniki, odwołania i tablice.  Deklarator w zastosowaniu do funkcji współpracuje ze specyfikatorem typu, aby w pełni określić, że typ zwracany funkcji jest obiektem, wskaźnikiem lub odwołaniem. (Specyfikatory omówione w [deklaracje i definicje](declarations-and-definitions-cpp.md), przedstawienia właściwości, takie jak klasa typu i magazynu. Modyfikatory omówione w tej sekcji, a w [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md), zmodyfikuj deklaratorów.) Na poniższej ilustracji pokazano pełną deklarację `MyFunction` i wywołano składniki deklaracji.  
@@ -31,7 +31,7 @@ Deklaratory są składnikami deklaracji, które określają nazwy obiektów lub 
  ![Modyfikatory Specyfikatory i deklaratorów](../cpp/media/vc38qy1.gif "vc38QY1")  
 Specyfikatory, modyfikatory i deklaratory  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Większość słów kluczowych rozszerzonych przez Microsoft może być użyta jako modyfikatory do tworzenia typów pochodnych; nie są one specyfikatorami ani deklaratorami. (Zobacz [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md).)  
   

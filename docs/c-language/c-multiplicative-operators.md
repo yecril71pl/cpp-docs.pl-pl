@@ -27,24 +27,24 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-multiplicative-operators"></a>Operatory mnożenia języka C
 Operatory mnożenia wykonać mnożenia (**\***), dzielenia (**/**), a reszta (`%`) operacji.  
   
- **Składnia**  
+ **Syntax**  
   
- *wyrażenia mnożenia*:  
- *wyrażenie CAST*  
+ *multiplicative-expression*:  
+ *cast-expression*  
   
- *wyrażenia mnożenia***\****wyrażenie cast*   
+ *multiplicative-expression*  **\***  *cast-expression*  
   
- *wyrażenia mnożenia***/***wyrażenie cast*   
+ *multiplicative-expression*  **/**  *cast-expression*  
   
- *wyrażenia mnożenia***%***wyrażenie cast*   
+ *multiplicative-expression*  **%**  *cast-expression*  
   
  Argumenty operacji operatora pozostałej (`%`) musi być wartością całkowitą. ILOCZYN (**\***) i dzielenia (**/**) operatory może zająć argumentów operacji typu całkowitego lub zmiennoprzecinkową typ -; typy argumenty mogą być różne.  
   
@@ -67,7 +67,7 @@ Operatory mnożenia wykonać mnożenia (**\***), dzielenia (**/**), a reszta (`%
 ||— Jeśli obydwa argumenty operacji są dodatnie lub unsigned, wynik jest dodatnią.|  
 ||— Jeśli którykolwiek argument operacji jest ujemna, wynikiem jest niedokładna wynik jest zdefiniowany implementacji. (Patrz poniższa sekcja Specific firmy Microsoft).|  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  W regionie, w którym którykolwiek argument operacji jest ujemna kierunek obcięcie jest kierunku 0.  
   
@@ -103,7 +103,7 @@ n = i % j;
   
  Ta instrukcja przypisuje `n` Pozostała liczba całkowita, 1, gdy 10 jest dzielona przez 3.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Znak pozostałej jest taka sama, jak znak dzielna. Na przykład:  
   

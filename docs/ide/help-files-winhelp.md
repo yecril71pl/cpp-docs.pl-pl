@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a5698f7001512c5a4f8c45b5c787f35c9ce0ca6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="help-files-winhelp"></a>Pliki pomocy (WinHelp)
 Następujące pliki zostaną utworzone po dodaniu typ WinHelp pomoc techniczna do aplikacji przez wybranie **pomocy kontekstowej** pole wyboru, a następnie wybierając **WinHelp format** w [Funkcje zaawansowane](../mfc/reference/advanced-features-mfc-application-wizard.md) Kreatora aplikacji MFC.  
@@ -31,9 +31,9 @@ Następujące pliki zostaną utworzone po dodaniu typ WinHelp pomoc techniczna d
 |Nazwa pliku|Lokalizacja katalogu|Lokalizacja Eksploratora rozwiązań|Opis|  
 |---------------|------------------------|--------------------------------|-----------------|  
 |*Nazwa_projektu.nazwa_modułu.nazwa_procedury*.hpj|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Pliki źródłowe|Plik projektu pomocy używany przez kompilator pomocy do tworzenia programu lub pliku Pomocy formantu.|  
-|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*RTF|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Pliki pomocy|Zawiera tematy dotyczące szablonu, które można edytować i informacji o dostosowywaniu pliku .hpj.|  
-|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*.cnt|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Pliki pomocy|Udostępnia struktury **zawartość** okna w Pomocy systemu Windows.|  
-|Makehelp.bat|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*|Pliki źródłowe|Używane przez system, aby skompilować projekt pomocy w przypadku, gdy kompilowany jest projekt.|  
+|*Projname*.rtf|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Pliki pomocy|Zawiera tematy dotyczące szablonu, które można edytować i informacji o dostosowywaniu pliku .hpj.|  
+|*Projname*.cnt|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Pliki pomocy|Udostępnia struktury **zawartość** okna w Pomocy systemu Windows.|  
+|Makehelp.bat|*Projname*|Pliki źródłowe|Używane przez system, aby skompilować projekt pomocy w przypadku, gdy kompilowany jest projekt.|  
 |Print.rtf|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Pliki pomocy|Utworzone, jeśli projekt zawiera obsługę drukowania (ustawienie domyślne). Opisuje drukowania poleceń i okien dialogowych.|  
 |*.bmp|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Pliki zasobów|Zawiera obrazy do różnych tematów wygenerowanego pliku.|  
   
@@ -42,9 +42,9 @@ Następujące pliki zostaną utworzone po dodaniu typ WinHelp pomoc techniczna d
 |Nazwa pliku|Lokalizacja katalogu|Lokalizacja Eksploratora rozwiązań|Opis|  
 |---------------|------------------------|--------------------------------|-----------------|  
 |*Nazwa_projektu.nazwa_modułu.nazwa_procedury*.hpj|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Pliki źródłowe|Plik projektu używany przez kompilator pomocy do tworzenia programu lub pliku Pomocy formantu.|  
-|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*RTF|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Projekt|Zawiera tematy dotyczące szablonu, które można edytować i informacji o dostosowywaniu pliku .hpj.|  
-|Makehelp.bat|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*|Pliki źródłowe|Używane przez system, aby skompilować projekt pomocy w przypadku, gdy kompilowany jest projekt.|  
-|Bullet.bmp|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*|Pliki zasobów|Używany przez standardowy plik pomoc do reprezentowania punktowane.|  
+|*Projname*.rtf|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Projekt|Zawiera tematy dotyczące szablonu, które można edytować i informacji o dostosowywaniu pliku .hpj.|  
+|Makehelp.bat|*Projname*|Pliki źródłowe|Używane przez system, aby skompilować projekt pomocy w przypadku, gdy kompilowany jest projekt.|  
+|Bullet.bmp|*Projname*|Pliki zasobów|Używany przez standardowy plik pomoc do reprezentowania punktowane.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

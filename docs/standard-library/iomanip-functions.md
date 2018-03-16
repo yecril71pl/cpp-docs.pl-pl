@@ -34,10 +34,10 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 6d36261e237d2a9c4ee7afddd0cb57d60cb5e12c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip —&gt; funkcji
 ||||  
@@ -126,7 +126,7 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 ### <a name="remarks"></a>Uwagi  
  Manipulatora zwraca obiekt, który po wstawieniu do strumienia `str`, zachowuje się jak `formatted output function`. Funkcja dane wyjściowe wywołuje funkcję elementu członkowskiego `put` dla ustawień regionalnych aspekt `time_put` skojarzone z `str`. Funkcja dane wyjściowe używa `_Tptr` wskazująca czas struktury i `_Fmt` wskazująca na początku ciąg formatu zakończone NUL. W przypadku powodzenia wywołanie wstawia tekst literału ciągu formatu i przekonwertowane wartości ze struktury czasu. Zwraca manipulatora `str`.  
   
-##  <a name="quoted">w cudzysłowach</a>  
+##  <a name="quoted"></a>  w cudzysłowach  
  **(Nowość w języku C ++ 14)**  Manipulatora iostream, która umożliwia wygodne dwustronną komunikację ciągi do i z strumieni przy użyciu >> i << operatorów.  
   
 ```  
@@ -306,7 +306,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 ### <a name="example"></a>Przykład  
   Zobacz [setw](../standard-library/iomanip-functions.md#setw) przykład przy użyciu `resetiosflags`.  
   
-##  <a name="setbase">setbase</a>  
+##  <a name="setbase"></a>  setbase  
  Ustaw podstawowej liczb całkowitych.  
   
 ```  
@@ -366,7 +366,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
 ### <a name="example"></a>Przykład  
   Zobacz [setw](../standard-library/iomanip-functions.md#setw) przykład przy użyciu `setiosflags`.  
   
-##  <a name="setprecision">setprecision</a>  
+##  <a name="setprecision"></a>  setprecision  
  Ustawia dokładność wartości zmiennoprzecinkowych.  
   
 ```  
@@ -383,7 +383,7 @@ T5 setprecision(streamsize Prec);
 ### <a name="example"></a>Przykład  
   Zobacz [setw](../standard-library/iomanip-functions.md#setw) przykład przy użyciu `setprecision`.  
   
-##  <a name="setw">setw</a>  
+##  <a name="setw"></a>  setw  
  Określa szerokość pola wyświetlania dla następnego elementu w strumieniu.  
   
 ```  

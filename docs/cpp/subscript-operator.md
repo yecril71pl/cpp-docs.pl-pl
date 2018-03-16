@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="subscript-operator"></a>Operator indeksu dolnego:
 ## <a name="syntax"></a>Składnia  
@@ -51,9 +51,9 @@ cout << nArray[2] << endl;            // prints "2"
 cout << 2[nArray] << endl;            // prints "2"  
 ```  
   
- W powyższym przykładzie wyrażenie `nArray[2]` jest taka sama jak `2[nArray]`. Przyczyną jest to, że wynik wyrażenia indeksu dolnego *e1***[** *e2* **]** jest określany przez:  
+ W powyższym przykładzie wyrażenie `nArray[2]` jest taka sama jak `2[nArray]`. Przyczyną jest to, że wynik wyrażenia indeksu dolnego *e1 *** [** *e2* **]** jest określany przez:  
   
- **\*((** *e2* **)**  *+*  **(***e1***))**  
+ **\*( (** *e2* **)** *+* **(***e1***) )**  
   
  Adres przekazanej przez wyrażenie, które nie jest *e2* bajtów z adresu *e1*. Zamiast adresu jest skalowana umożliwiające uzyskanie następny obiekt w tablicy *e2*. Na przykład:  
   
@@ -67,7 +67,7 @@ double aDbl[2];
   
  *wyrażenie1* **[***wyrażenie2***] [***expression3***]**...  
   
- Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Po lewej stronie wyrażenia indeksu *wyrażenie1***[***wyrażenie2***]**, jest szacowana jako pierwsza. Adres, który jest wynikiem Dodawanie *wyrażenie1* i *wyrażenie2* formularzy wyrażenia wskaźnika; następnie *expression3* zostanie dodany do tego wyrażenia wskaźnika do utworzenia nowego wyrażenia wskaźnika, i tak dalej, aż ostatniego wyrażenia indeksu został dodany. Operator pośredni (**\***) są stosowane po ostatnim jako wyrażenie jest obliczane, chyba że wartość wskaźnika końcowe adresy typem tablicy.  
+ Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Po lewej stronie wyrażenia indeksu * wyrażenie1***[***wyrażenie2 ***]**, jest szacowana jako pierwsza. Adres, który jest wynikiem Dodawanie *wyrażenie1* i *wyrażenie2* formularzy wyrażenia wskaźnika; następnie *expression3* zostanie dodany do tego wyrażenia wskaźnika do utworzenia nowego wyrażenia wskaźnika, i tak dalej, aż ostatniego wyrażenia indeksu został dodany. Operator pośredni (**\***) są stosowane po ostatnim jako wyrażenie jest obliczane, chyba że wartość wskaźnika końcowe adresy typem tablicy.  
   
  Wyrażenia z wielu indeksów dolnych odwoływać się do elementów tablic wielowymiarowych. Tablica wielowymiarowa jest tablicą, której elementy są tablicami. Na przykład, pierwszy element tablicy trójwymiarowej jest tablicą z dwoma wymiarami. W poniższym przykładzie deklaruje i inicjuje proste tablicą dwuwymiarową znaków:  
   

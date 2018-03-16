@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Wyjątki: zmiany w makrach wyjątków w wersji 3.0
 Jest to zaawansowane tematu.  
@@ -39,7 +39,7 @@ Jest to zaawansowane tematu.
   
 -   [Ponownie zgłaszanie wyjątków](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a>Typy wyjątków i makra CATCH  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> Typy wyjątków i makra CATCH  
  We wcześniejszych wersjach MFC **CATCH** makro umożliwia określenie typu wyjątku informacje typu run-time MFC; określony typ wyjątku, innymi słowy, w obszarze przechwytywania. Wyjątków C++ jednak typ wyjątku jest zawsze określane w lokacji throw przez typ obiektu wyjątek zgłaszany. W rzadkich przypadkach, gdy typ wskaźnika do obiektu zgłoszenia różni się od typu obiektu zgłoszenia spowoduje niezgodności.  
   
  Poniższy przykład przedstawia konsekwencją tej różnicy między MFC w wersji 3.0 i wcześniejszych wersjach:  
@@ -60,7 +60,7 @@ Jest to zaawansowane tematu.
   
  Aby obejść ten problem, Przenieś wyrażenia throw z funkcji do wywołującego kodu i Zgłoś wyjątek typu rzeczywistego nieznany wyjątek w czasie kompilator jest generowany.  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a>Ponownie zgłaszanie wyjątków  
+##  <a name="_core_re.2d.throwing_exceptions"></a> Ponownie zgłaszanie wyjątków  
  Blok catch nie można zgłosić tego samego wskaźnika wyjątek, który go przechwycony.  
   
  Na przykład tego kodu jest prawidłowa w poprzednich wersjach, ale będzie mieć nieoczekiwane wyniki w wersji 3.0:  
