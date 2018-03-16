@@ -35,7 +35,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -105,7 +104,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -152,11 +150,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 ostrzeżenia kompilatora za pośrednictwem C4599
 
@@ -177,7 +175,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |[Ostrzeżenie kompilatora (poziom 1) C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|"*identyfikator*": identyfikator jest zarezerwowanym słowem|
 |[Ostrzeżenie kompilatora (poziom 1) C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|Zignorowano operand na dyrektywę|
 |[Ostrzeżenie kompilatora (poziom 1) C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|Rzutowanie pomiędzy innego wskaźnika do reprezentacji elementu członkowskiego, kompilator może wygenerować niepoprawny kod|
-|[Ostrzeżenie kompilatora (poziom 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonimowe "struct &#124; Unii" nie zadeklarował żadnych elementów członkowskich danych|
+|[Ostrzeżenie kompilatora (poziom 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonimowe "struct&#124;union' nie zadeklarował żadnych elementów członkowskich danych|
 |[Ostrzeżenie kompilatora (poziom 1) C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|Niedozwolona instrukcja rozmiaru|
 |[Ostrzeżenie kompilatora (poziom 1) C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|Niedozwolony rozmiar operandu|
 |[Ostrzeżenie kompilatora (poziom 1) C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|"*identyfikator*": symbol rozpoznawany jako przemieszczenie rejestru|
@@ -210,7 +208,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |Ostrzeżenie kompilatora (poziom 1) C4442|osadzony terminatorem null w argumencie __annotation.  Wartość zostanie obcięta.|
 |Ostrzeżenie kompilatora (poziom 1) C4443|Oczekiwano wartości parametru pragma "0", "1" lub "2"|
 |Ostrzeżenie kompilatora (poziom 3) C4444|"*identyfikator*": element "__unaligned" najwyższego poziomu nie jest zaimplementowana w tym kontekście|
-|[Ostrzeżenie kompilatora (poziom 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|"*funkcja*": w "WinRT &#124; zarządzanych" typ metody wirtualnej nie może być prywatne|
+|[Ostrzeżenie kompilatora (poziom 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|"*funkcja*": w "WinRT&#124;zarządzanych" typ metody wirtualnej nie może być prywatne|
 |Ostrzeżenie kompilatora (poziom 1) C4446|"*typu*": nie można mapować elementu członkowskiego "*Nazwa1*" do tego typu z powodu konfliktu z nazwą typu. Metoda została zmieniona na "*Nazwa2*"|
 |Ostrzeżenie kompilatora (poziom 1) C4447|podpis "main" bez modelu wątków. Rozważ użycie "int main (Platform::Array\<Platform::String ^ > ^ args)".|
 |Ostrzeżenie C4448 kompilatora|"*typu*1" nie ma domyślnego interfejsu określonego w metadanych. Pobrania: "*type2*", która może ulec awarii w czasie wykonywania.|
@@ -225,14 +223,14 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |[Ostrzeżenie kompilatora (poziom 4) C4457](compiler-warning-level-4-c4457.md)|Deklaracja "*identyfikator*" powoduje ukrycie parametru funkcji|
 |[Ostrzeżenie kompilatora (poziom 4) C4458](compiler-warning-level-4-c4458.md)|Deklaracja "*identyfikator*" powoduje ukrycie elementu członkowskiego klasy|
 |[Ostrzeżenie kompilatora (poziom 4) C4459](compiler-warning-level-4-c4459.md)|Deklaracja "*identyfikator*" powoduje ukrycie deklaracji globalnej|
-|[Ostrzeżenie kompilatora (poziom 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|"WinRT &#124; zarządzanych" operator "*operator*", ma parametr przekazywany przez odwołanie. "WinRT &#124; zarządzanych" operator "*operator*"ma semantykę różną od operatora C++"*cpp_operator*", czy zamierzasz przekazanie przez wartość?|
+|[Ostrzeżenie kompilatora (poziom 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|"WinRT&#124;zarządzanych" operator "*operator*", ma parametr przekazywany przez odwołanie. "WinRT&#124;zarządzanych" operator "*operator*"ma semantykę różną od operatora C++"*cpp_operator*", czy zamierzasz przekazanie przez wartość?|
 |[Ostrzeżenie kompilatora (poziom 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|"*classname*": Ta klasa ma finalizator "! *finalizator*", ale nie ma destruktora" ~*dtor*"|
 |[Kompilator ostrzegawcze (poziom 1, błąd) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|"*typu*": nie można określić GUID typu. Program może ulec awarii w czasie wykonywania.|
 |[Ostrzeżenie kompilatora (poziom 4) C4463](compiler-warning-level-4-c4463.md)|przepełnienie; Przypisywanie "*wartość*"do pola bitowego, która może zawierać wartości z"*min_value*"do"*max_value*"|
-|Ostrzeżenie kompilatora (poziom 4) C4464|względna ścieżka dołączania zawiera ".."|
+|[Ostrzeżenie kompilatora (poziom 4) C4464](../../error-messages/compiler-warnings/c4464.md)|względna ścieżka dołączania zawiera ".."|
 |[Ostrzeżenie kompilatora (poziom 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|Formant zmiennoprzecinkowych pragm zignorowane z opcją/CLR|
 |[Ostrzeżenie kompilatora (poziom 4) C4471](compiler-warning-level-4-c4471.md)|"*wyliczenie*": deklaracja przekazująca dalej wyliczenie niebędące w zakresie musi być typu podstawowego (założono typ int)|
-|Ostrzeżenie kompilatora (poziom 1) C4472|"*identyfikator*" jest natywnym wyliczeniem: Dodaj specyfikator dostępu (private/public), aby zadeklarować "WinRT &#124; zarządzanych" wyliczenia|
+|Ostrzeżenie kompilatora (poziom 1) C4472|"*identyfikator*" jest natywnym wyliczeniem: Dodaj specyfikator dostępu (private/public), aby zadeklarować "WinRT&#124;zarządzanych" wyliczenia|
 |[Ostrzeżenie kompilatora (poziom 1) C4473](c4473.md)|"*funkcja*": przekazano niewystarczającą liczbę argumentów dla ciągu formatowania|
 |Ostrzeżenie kompilatora (poziom 3) C4474|"*funkcja*": przekazano za dużo argumentów dla ciągu formatowania|
 |Ostrzeżenie kompilatora (poziom 3) C4475|"*funkcja*": modyfikator długości "*modyfikator*"nie może być stosowany ze znakiem pola typu"*znak*" w specyfikatorze formatu|

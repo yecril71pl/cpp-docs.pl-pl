@@ -13,11 +13,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdd667898cf2043e10137fa301eb42ee3877fc8
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Omówienie potencjalne problemy z uaktualnieniem (Visual C++)
 
@@ -37,9 +37,11 @@ Formaty plików .obj i .lib są dobrze zdefiniowany i rzadko zmiany. Czasami dod
 
 C++ nie ma aplikacji stabilna interfejsu binarne (ABI). Visual Studio zachowuje stabilna interfejsie ABI języka C++ dla wszystkich wersji pomocniczych wersji. Na przykład Visual Studio 2017 i wszystkie jego aktualizacje są zgodne binarnego. Ale ABI nie jest zawsze zgodny przez główne wersje programu Visual Studio (z wyjątkiem 2015 i 2017, które _są_ zgodne dane binarne). Oznacza to, że możemy wprowadzić przełomowe zmiany układu typu C++, nazwij dekorację, obsługa wyjątków i innych części interfejsie ABI języka C++. W związku z tym jeśli plik obiektu, który zawiera symboli zewnętrznych z powiązaniem C++, ten plik obiektu może łączą poprawnie z plikami obiektu utworzonego za pomocą innej wersji głównych zestawu narzędzi. Należy pamiętać, że w tym miejscu "może nie działać" ma wiele możliwych wartości: link może się nie powieść całkowicie (np. zmiana nazwij dekorację), może się powieść, łącze i czynności może nie działać w czasie wykonywania (np. zmiana typu układu), lub rzeczy może mieć miejsce, do pracy w wielu przypadkach i nic nie zostanie umieszczona wro NG. Należy pamiętać, że podczas interfejsie ABI języka C++ nie jest stabilna C ABI i podzbiór interfejsie ABI języka C++ wymagane dla modelu COM są stałe.
 
+Jeśli możesz połączyć się z biblioteki importowanej, można użyć dowolnej późniejszej wersji biblioteki pakietu redystrybucyjnego programu Visual Studio, które zachowania zgodności ABI w czasie wykonywania. Na przykład jeśli aplikacja jest skompilowana i połączone za pomocą narzędzi Visual Studio 2015 Update 3, można dowolnego programu Visual Studio 2017 r do dystrybucji, ponieważ biblioteki 2015 i 2017 zostały zachowane binarne zgodności z poprzednimi wersjami. Sytuacja odwrotna nie jest PRAWDA. Nie można użyć pakiet redystrybucyjny dla starszej wersji zestawu narzędzi nie użyto do kompilacji kodu, nawet jeśli ma niezgodny ABI.
+
 ### <a name="libraries"></a>Biblioteki
 
-Jeśli skompiluj plik źródłowy, za pomocą konkretnej wersji pliki nagłówkowe Visual Studio C++ bibliotek (przez #including nagłówki), plik wynikowy obiekt musi być połączony z tej samej wersji bibliotek. Tak, na przykład, jeśli plik źródłowy jest skompilowana przy użyciu programu Visual Studio 2017 \<immintrin.h >, należy połączyć z biblioteki vcruntime programu Visual Studio 2017 r. Podobnie jeśli plik źródłowy jest skompilowana przy użyciu programu Visual Studio 2017 \<iostream >, należy połączyć z biblioteki programu Visual Studio 2017 Standard C++, msvcprt. Mieszanie i dopasowywania nie jest obsługiwane.
+Jeśli skompiluj plik źródłowy, za pomocą konkretnej wersji pliki nagłówkowe Visual Studio C++ bibliotek (przez #including nagłówki), plik wynikowy obiekt musi być połączony z tej samej wersji bibliotek. Tak, na przykład, jeśli plik źródłowy jest skompilowana przy użyciu programu Visual Studio 2015 Update 3 \<immintrin.h >, należy połączyć z biblioteki vcruntime Visual Studio 2015 Update 3. Podobnie jeśli plik źródłowy jest skompilowana przy użyciu programu Visual Studio 2017 wersji 15,5 cala \<iostream >, należy połączyć z biblioteki Standard C++ 15,5 cala wersji programu Visual Studio 2017 r, msvcprt. Mieszanie i dopasowywania nie jest obsługiwane.
 
 Standardowe biblioteki C++, mieszania i dopasowywania został jawnie zabroniony wykorzystaniem `#pragma detect_mismatch` w standardowych nagłówków od programu Visual Studio 2010. Jeśli użytkownik próbuje połączyć pliki niezgodny obiekt lub próba łączyć się z niewłaściwego biblioteki standardowej łącze zakończy się niepowodzeniem.
 

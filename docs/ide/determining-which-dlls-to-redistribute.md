@@ -1,7 +1,7 @@
 ---
 title: "Określanie, które biblioteki dll do ponownej dystrybucji | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 09/21/2017
+ms.date: 03/13/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cc7b80e16abeecc756e7fa480c7bfe71682382
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a6f942b01dd9379aea0c0ea2ab3751a6f140ef2a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Ustalanie, które biblioteki DLL są przeznaczone do ponownej dystrybucji
 
@@ -53,9 +53,9 @@ W poniższej tabeli opisano niektóre z bibliotek DLL programu Visual C++, aplik
 
 |Biblioteka języka Visual C++|Opis|Informacje zawarte w tym artykule dotyczą|
 |--------------------------|-----------------|----------------|
-|vcruntime*wersji*.dll|Biblioteka środowiska uruchomieniowego dla kodu natywnego.|Aplikacje korzystające z normalnym C i C++ języka uruchamianie i kończenie działania usług.|
-|vccorlib*wersji*.dll|Biblioteka środowiska uruchomieniowego dla kodu zarządzanego.|Aplikacje korzystające z usług języka C++ dla kodu zarządzanego.|
-|msvcp*wersji*.dll|Standardowa biblioteka C++ dla natywnego kodu.|Aplikacje używające [standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md).|
+|vcruntime*version*.dll|Biblioteka środowiska uruchomieniowego dla kodu natywnego.|Aplikacje korzystające z normalnym C i C++ języka uruchamianie i kończenie działania usług.|
+|vccorlib*version*.dll|Biblioteka środowiska uruchomieniowego dla kodu zarządzanego.|Aplikacje korzystające z usług języka C++ dla kodu zarządzanego.|
+|msvcp*wersji*dll i msvcp*wersji*_*dotnumber*.dll|Standardowa biblioteka C++ dla natywnego kodu.|Aplikacje używające [standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md).|
 |concrt*wersji*.dll|Współbieżność środowiska wykonawczego biblioteki dla kodu natywnego.|Aplikacje używające [współbieżność środowiska wykonawczego](../parallel/concrt/concurrency-runtime.md).|
 |MFC*wersji*.dll|Microsoft Foundation Classes (MFC) biblioteki.|Aplikacje używające [biblioteki MFC](../mfc/mfc-desktop-applications.md).|
 |MFC*wersji* *języka*.dll|Microsoft Foundation Classes (MFC) zasobów biblioteki.|Aplikacje korzystające z zasobów w określonym języku dla MFC.|

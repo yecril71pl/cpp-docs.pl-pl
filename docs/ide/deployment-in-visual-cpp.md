@@ -1,12 +1,9 @@
 ---
 title: "Wdrożenia w programie Visual C++ | Dokumentacja firmy Microsoft"
 ms.custom: 
-ms.date: 9/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/13/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - C++
@@ -14,17 +11,16 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eda9c4a1a173087688c1fd3182845d6517f27ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2356e98e911978dcaef9471f2b474c2a2377716d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="deployment-in-visual-c"></a>Wdrożenie w Visual C++
 
@@ -49,6 +45,8 @@ Ponieważ centralne wdrażanie przy użyciu pakietu redystrybucyjnego lub moduł
 ## <a name="local-deployment"></a>Wdrożenie lokalne
 
 W przypadku wdrożenia lokalnego biblioteki pliki są instalowane w folderze aplikacji wraz z pliku wykonywalnego. Różne wersje programu Visual C++ redistributable biblioteki można zainstalować w tym samym folderze, ponieważ nazwa pliku dla każdej wersji zawiera numeru wersji. Na przykład biblioteka środowiska uruchomieniowego języka C++ w wersji 12 jest msvcp120.dll i wersji 14 jest msvcp140.dll.
+
+Biblioteki mogą rozprzestrzeniać się przez wiele dodatkowych bibliotek DLL, znany jako *kropka bibliotek*. Na przykład niektóre funkcje biblioteki standardowej wydane w Visual Studio 2017 wersji 15,6 dodano do msvcp140_1.dll, preverve zgodność ABI msvcp140.dll. Jeśli używasz wersji programu Visual Studio 2017 15,6 (zestawu narzędzi 14.13) lub nowszym zestaw narzędzi z programu Visual Studio 2017, może być konieczne lokalnie wdrożyć te biblioteki kropką, a także głównym biblioteki. Te biblioteki oddzielne kropka są przesyłane do następnej wersji głównej Podstawowa biblioteka po zmianie ABI.
 
 Ponieważ Microsoft nie może automatycznie aktualizacja lokalnie wdrożona bibliotek języka Visual C++, nie zaleca się z lokalnego wdrożenia tych bibliotek. Jeśli zdecydujesz się użyć lokalnego wdrożenia redystrybucyjnych bibliotek, zaleca się zaimplementowanie własnej metody automatycznego aktualizowania lokalnie wdrożonych bibliotek.
 

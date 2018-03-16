@@ -17,16 +17,16 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d318c03f8fb652331830b913dbd0b2824afa37a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75f8fa70cfa787a4f601d3be9d395651a70ba1e8
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="largest-array-size"></a>Największy rozmiar tablicy
 **ANSI 3.3.3.4, 4.1.1** typu Liczba całkowita wymagane do przechowywania maksymalny rozmiar tablicy — to znaczy, że rozmiar **size_t**  
   
- `size_t` Element typedef jest `unsigned int` na x86 32-bitowych platform. Na platformach 64-bitowych `size_t` element typedef jest **__int64 niepodpisane**.  
+ `size_t` Element typedef jest `unsigned int` na x86 32-bitowych platform. Na platformach 64-bitowych `size_t` element typedef jest `unsigned __int64`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tablice i wskaźniki](../c-language/arrays-and-pointers.md)

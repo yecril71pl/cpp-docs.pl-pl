@@ -15,11 +15,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 619e2c517305246937ed7428eadbcf40be31fe5b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Są domyślnie wyłączone ostrzeżenia kompilatora
 
@@ -37,7 +37,7 @@ Te ostrzeżenia dotyczące można włączyć za pomocą jednej z następujących
    **/ Ścian** włącza wszystkie ostrzeżenia, które są domyślnie wyłączone. Jeśli używasz tej opcji, można wyłączyć ostrzeżeń indywidualnych przy użyciu [/wd](../build/reference/compiler-option-warning-level.md) opcji.
 
 - [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   Umożliwia to ostrzeżenie  *nnnn*  na poziomie *l*.
+   Umożliwia to ostrzeżenie *nnnn* na poziomie *l*.
 
 Następujące ostrzeżenia są domyślnie wyłączone.
 
@@ -69,7 +69,7 @@ Następujące ostrzeżenia są domyślnie wyłączone.
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (poziom 4)|"*class1*": układ obiektów w/vd2 zmieni się z powodu bazy wirtualnej "*class2*"|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (poziom 4)|dynamic_cast z bazy wirtualnej "*class1*"do"*class2*" może zakończyć się niepowodzeniem w niektórych kontekstach|
 |C4444 (poziom 3)|'__unaligned' najwyższego poziomu nie jest zaimplementowany w tym kontekście|
-|C4464 (poziom 4)|względna ścieżka dołączania zawiera ".."|
+|[C4464](../error-messages/compiler-warnings/c4464.md) (poziom 4)|względna ścieżka dołączania zawiera ".."|
 |C4472 (poziom 1)|"*identyfikator*" jest natywnym wyliczeniem: Dodaj specyfikator dostępu (private/public), aby zadeklarować zarządzanego wyliczenia|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (poziom 4)|"*funkcja*": nieużywane wbudowana funkcja została usunięta.|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (poziom 4)|"Nazwa typu": Nazwa typu przekracza limit meta-data "*limit*' znaków|
@@ -103,7 +103,7 @@ Następujące ostrzeżenia są domyślnie wyłączone.
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (poziom 1)|"*funkcja*": podpis elementu z systemem innym niż nieprywatnego elementu członkowskiego zawiera prywatny typ macierzysty zestawu "*native_type*"|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (poziom 4)|"*funkcja*": funkcja nie została wbudowana|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (poziom 3)|przechowywanie 32-bitowego wyniku zmiennopozycyjnego w pamięci, możliwa utrata wydajności|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|nietrwały dostęp "*wyrażenie*" podlega/volatile:\<iso &#124; ms > ustawienie; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/store|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|nietrwały dostęp "*wyrażenie*" podlega/volatile:\<iso&#124;ms > ustawienie; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/store|
 |C4749 (poziom 4)|obsługiwane warunkowo: makro offsetof zastosowane do typu non standard układu "*typu*"|
 |C4767 (poziom 4)|Nazwa sekcji '*symbol*"jest dłuższa niż 8 znaków i zostanie obcięta przez konsolidator|
 |C4768 (poziom 3)|atrybuty __declspec przed Specyfikacja powiązania są ignorowane|
