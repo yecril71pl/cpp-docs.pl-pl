@@ -36,7 +36,7 @@ Następujące pliki zostaną utworzone po dodaniu rodzaj pomocy HTML pomoc techn
 |Makehtmlhelp.bat|*Projname*|Pliki źródłowe|Używane przez system, aby skompilować projekt pomocy w przypadku, gdy kompilowany jest projekt.|  
 |Afxcore.htm|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Tematy Pomocy HTML|Zawiera standardowe tematy pomocy dla standardowych poleceń MFC i obiektów ekranu. Dodaj tematy pomocy do tego pliku.|  
 |Afxprint.htm|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp|Tematy Pomocy HTML|Zawiera tematy pomocy dla polecenia drukowania.|  
-|*.jpg; \*.gif|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp\Images|Pliki zasobów|Zawiera obrazy do różnych tematów wygenerowanego pliku.|  
+|\*.jpg; \*.gif|*Nazwa_projektu.nazwa_modułu.nazwa_procedury*\hlp\Images|Pliki zasobów|Zawiera obrazy do różnych tematów wygenerowanego pliku.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)
