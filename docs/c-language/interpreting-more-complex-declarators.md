@@ -20,11 +20,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67d66667d169a95ae4d62ccadd2b56a136cd0a76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82779e423a1958c0392aebb55d29e41bdd132cc1
+ms.sourcegitcommit: 6576d4d8a768279b4d340d036581e0f8a2974ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretowanie deklaratorów bardziej złożonych
 Wszelkie deklarator można ująć w nawiasy, aby określić konkretnego interpretacja "deklaratorów złożonych". Deklarator złożonych jest identyfikatorem kwalifikowana przez więcej niż jeden tablicy, wskaźnika lub modyfikator funkcji. Różne kombinacje tablicy, wskaźnik i Modyfikatory funkcji można zastosować do jednego identyfikatora. Ogólnie rzecz biorąc `typedef` może służyć do uproszczenia deklaracji. Zobacz [deklaracje Typedef](../c-language/typedef-declarations.md).  
@@ -47,7 +47,7 @@ Wszelkie deklarator można ująć w nawiasy, aby określić konkretnego interpre
      7   6  4 2 1   3    5  
     ```  
   
- W tym przykładzie kroki są numerowane kolejno i może zostać zinterpretowany w następujący sposób:  
+W tym przykładzie kroki są numerowane kolejno i może zostać zinterpretowany w następujący sposób:  
   
 1.  Identyfikator `var` jest zadeklarowany jako  
   
@@ -61,7 +61,7 @@ Wszelkie deklarator można ująć w nawiasy, aby określić konkretnego interpre
   
 6.  wskaźniki do  
   
-7.  `char`wartości.  
+7.  `char` wartości.  
   
 ## <a name="examples"></a>Przykłady  
  Poniższe przykłady ilustrują innych złożonych deklaracje i Pokaż wpływ znaczenie deklaracji nawiasów.  
