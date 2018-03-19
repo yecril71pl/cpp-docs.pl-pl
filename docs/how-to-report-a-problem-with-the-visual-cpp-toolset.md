@@ -253,7 +253,7 @@ Po wygenerowaniu wstępnie przetworzonych plików jest dobrym pomysłem jest upe
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Aby upewnić się, że błąd nadal reprodukcje z wstępnie przetworzonych plików
 
-1. W oknie konsoli dewelopera wiersza polecenia, wpisz polecenie **cl** *argumenty* **/TP** *filename *** .i** mówić cl.exe do Skompiluj plik wstępnie przetworzonych jako plik źródłowy języka C++, gdzie *argumenty* znajduje się lista argumentów przechwycić powyżej, ale ze wszystkimi **/D** i **/I** argumentów usunięte (ponieważ są one już zawiera plik wstępnie przetworzonych); miejsce i *filename *** .i** jest nazwą pliku wstępnie przetworzony.
+1. W oknie konsoli dewelopera wiersza polecenia, wpisz polecenie **cl** *argumenty* **/TP** *filename***.i** mówić cl.exe do Skompiluj plik wstępnie przetworzonych jako plik źródłowy języka C++, gdzie *argumenty* znajduje się lista argumentów przechwycić powyżej, ale ze wszystkimi **/D** i **/I** argumentów usunięte (ponieważ są one już zawiera plik wstępnie przetworzonych); miejsce i *filename***.i** jest nazwą pliku wstępnie przetworzony.
 
 1. Upewnij się, że jest odtworzyć problem.
 
