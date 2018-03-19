@@ -30,7 +30,7 @@ ms.lasthandoff: 03/16/2018
 # <a name="compiler-warning-level-1-c4138"></a>Kompilator C4138 ostrzegawcze (poziom 1)
 "* /" znaleziono poza komentarzem  
   
- Ogranicznik zamknięcia komentarza nie jest poprzedzony ogranicznik otwarcia komentarza. Kompilator zakłada odstęp między gwiazdka (**\***) i ukośnika (/).  
+ Ogranicznik zamknięcia komentarza nie jest poprzedzony ogranicznik otwarcia komentarza. Kompilator zakłada odstęp między gwiazdka (**\****) i ukośnika (/).  
   
 ## <a name="example"></a>Przykład  
   

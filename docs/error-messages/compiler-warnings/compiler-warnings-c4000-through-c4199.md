@@ -249,7 +249,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |Ostrzeżenie kompilatora (poziom 1) C4176|'podskładnik': nieznany podskładnik dla składnika przeglądarki #pragma|
 |Ostrzeżenie kompilatora (poziom 1) C4177|#pragma "pragma" należy używać tylko w zakresie globalnym lub zakresie przestrzeni nazw|
 |Ostrzeżenie kompilatora (poziom 1) C4178|Stała przypadku "stała" za duża dla typu wyrażenia switch|
-|Ostrzeżenie kompilatora (poziom 4) C4179|"/ / *": analizowany jako "/" i "/\*": pomyłka ze standardowym "/ /" komentarzy|
+|Ostrzeżenie kompilatora (poziom 4) C4179|"//*": analizowany jako "/" i "/\*": pomyłka ze standardowym "/ /" komentarzy|
 |Ostrzeżenie kompilatora (poziom 1) C4180|Kwalifikator stosowany do typu funkcji nie ma znaczenia; ignorowane|
 |Ostrzeżenie C4181 kompilatora|Kwalifikator stosowany do odwołania typu. ignorowane|
 |Ostrzeżenie kompilatora (poziom 1) C4182|#include poziom zagnieżdżenia jest "nest_count" głębokiego; możliwa nieskończona rekursja|

@@ -28,7 +28,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-error-c2635"></a>C2635 błąd kompilatora
-Nie można przekonwertować "identifier1 *" na "identifier2\*"; technicznego konwersję z wirtualnej klasy podstawowej  
+Nie można przekonwertować "identifier1*" na "identifier2\*"; technicznego konwersję z wirtualnej klasy podstawowej  
   
  Konwersja wymaga rzutowania z `virtual` klasy podstawowej na klasę pochodną, co jest niedozwolone.  
   

@@ -28,6 +28,6 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warning-level-1-c4179"></a>Kompilator C4179 ostrzegawcze (poziom 1)
-"/ / *": analizowany jako "/" i "/\*": pomyłka ze standardowym "/ /" komentarzy  
+"//*": analizowany jako "/" i "/\*": pomyłka ze standardowym "/ /" komentarzy  
   
  **//\*** jest ogranicznik niepoprawny komentarz. Użyj  **//**  lub  **/ \***  zamiast tego.
