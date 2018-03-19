@@ -303,6 +303,7 @@
 ## [Ostrzeżenie kompilatora (poziom 1) C4461](compiler-warning-level-1-c4461.md)
 ## [Ostrzeżenie kompilatora (poziom 1) C4462](compiler-warning-level-1-c4462.md)
 ## [Ostrzeżenie kompilatora (poziom 4) C4463](compiler-warning-level-4-c4463.md)
+## [Ostrzeżenie kompilatora (poziom 4) C4464](c4464.md)
 ## [Ostrzeżenie kompilatora (poziom 1) C4470](compiler-warning-level-1-c4470.md)
 ## [Ostrzeżenie kompilatora (poziom 4) C4471](compiler-warning-level-4-c4471.md)
 ## [Ostrzeżenie kompilatora (poziom 1) C4473](c4473.md)

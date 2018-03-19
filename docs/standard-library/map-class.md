@@ -104,10 +104,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: be1d2ddf9c80c2039608a3cf5f459284796b685d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="map-class"></a>map — Klasa
 Używany do przechowywania i pobierania danych z kolekcji, w której każdy element jest parą, która ma zarówno wartość danych, jak i klucz sortowania. Wartość klucza jest unikatowa i jest używana do automatycznego sortowania danych.  

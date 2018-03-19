@@ -102,10 +102,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a8953fd24b62784e36f12fb96e3005e21a86bc62
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="multiset-class"></a>multiset — Klasa
 Standardowa biblioteka C++ multiset — klasa jest używana do przechowywania i pobierania danych z kolekcji, w której wartości elementów zawartych nie musi być unikatowa i które służą jako wartości klucza, zgodnie z którymi automatycznie porządkowania danych. Nie można bezpośrednio zmienić wartości klucza elementu w zestawie wielokrotnym. Zamiast tego trzeba usunąć stare wartości i wstawić elementy z nowymi wartościami.  
