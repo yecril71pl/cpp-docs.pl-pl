@@ -1,12 +1,12 @@
 ---
 title: implementuje (C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - vc-attr.implements
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0dbe7d829ae31f53a3dbc35df66bee2d50f14f19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bab33955ebeb1473839a1549ca1817f520e1a9fd
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="implements-c"></a>implements (C++)
 Określa wysyłania interfejsów, które muszą być członkami IDL coclass.  
@@ -42,11 +42,11 @@ Określa wysyłania interfejsów, które muszą być członkami IDL coclass.
 ```  
   
 #### <a name="parameters"></a>Parametry  
- **interfejsy**  
+ **interfaces**  
  Rozdzielana przecinkami lista interfejsów, które mają być członkami IDL coclass. Jest skróconą formą służący do określania jednego interfejsu **implementuje (***nazwa_interfejsu***)**.  
   
  **dispinterfaces**  
- Rozdzielana przecinkami lista dispinterface, który będzie członkiem IDL coclass. Jest skróconą formą służący do określania jednego dispinterface **implementuje (dispinterfaces** *= dispinterface_name***)**.  
+ Rozdzielana przecinkami lista dispinterface, który będzie członkiem IDL coclass. Jest skróconą formą służący do określania jednego dispinterface **implementuje (dispinterfaces** * = dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Uwagi  
  Domyślnie tylko COM-interfejsów, które są klasy podstawowe klasy coclass są dodawane w klasie coclass IDL. **implementuje** wymusić inne interfejsy są elementami członkowskimi coclass IDL.  
@@ -57,7 +57,7 @@ Określa wysyłania interfejsów, które muszą być członkami IDL coclass.
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**,`struct`|  
+|**Dotyczy**|**Klasa**, `struct`|  
 |**Powtarzalne**|Tak|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
@@ -486,7 +486,7 @@ public:
       if (pDispParams == 0) {  
          return DISP_E_BADVARTYPE;  
       }  
-      if (pDispParams->cArgs > 0) {  
+      if (pDispParams->cArgs> 0) {  
          return DISP_E_BADPARAMCOUNT;  
       }  
       if (pVarResult != 0) {  

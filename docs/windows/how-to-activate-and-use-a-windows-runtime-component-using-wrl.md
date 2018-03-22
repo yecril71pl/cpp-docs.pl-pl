@@ -1,34 +1,31 @@
 ---
-title: "Porady: uaktywnianie i korzystanie z składnika środowiska wykonawczego systemu Windows za pomocą biblioteki WRL | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: uaktywnianie i korzystanie z składnika środowiska wykonawczego systemu Windows za pomocą biblioteki WRL | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5c430ca0dd63c4cbe46986147617ccbd752597ab
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Porady: uaktywnianie składnika środowiska wykonawczego systemu Windows za pomocą biblioteki WRL i korzystanie z niego
 Ten dokument zawiera zainicjować środowiska uruchomieniowego systemu Windows przy użyciu systemu Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) oraz sposobu uaktywnianie składnika środowiska wykonawczego systemu Windows i korzystanie.  
-  
-> [!NOTE]
->  W tym przykładzie aktywuje wbudowanych składników środowiska wykonawczego systemu Windows. Aby dowiedzieć się, jak utworzyć własne składnika, który można aktywować w podobny sposób, zobacz [wskazówki: Tworzenie podstawowego składnika środowiska wykonawczego systemu Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  
   
  Użycie składnika, należy uzyskać wskaźnika interfejsu do typu, który jest implementowany przez składnik. I podstawową technologią środowiska uruchomieniowego systemu Windows jest składnik modelu COM (Object), dlatego należy wykonać reguły COM do obsługi wystąpienia typu. Na przykład trzeba zachować *odwołania liczba* określający, gdy typ są usuwane z pamięci.  
   

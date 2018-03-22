@@ -1,31 +1,36 @@
 ---
-title: "Biblioteka szablonów C++ środowiska wykonawczego systemu Windows (WRL) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Biblioteka szablonów C++ środowiska wykonawczego systemu Windows (WRL) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
-Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest Biblioteka szablonów, które niskiego poziomu umożliwia tworzenie i używanie składnika środowiska wykonawczego systemu Windows.  
+Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest Biblioteka szablonów, które niskiego poziomu umożliwia tworzenie i używanie składnika środowiska wykonawczego systemu Windows.
+
+> [!NOTE]
+> Biblioteki WRL jest teraz w przypadku C + +/ WinRT, standard języka C ++ 17 języka projekcji dla interfejsów API środowiska wykonawczego systemu Windows. C + +/ WinRT jest dostępna w zestawie Windows 10 SDK z wersji 1803 ponownego udostępnienia. C + +/ WinRT jest zaimplementowana w całości pliki nagłówka i przeznaczone do zapewnia najwyższej jakości dostęp do nowoczesnego interfejsu API systemu Windows.
+
+> Z C + +/ WinRT, można jednocześnie używać i Tworzenie interfejsów API środowiska wykonawczego systemu Windows przy użyciu dowolnego ze standardami C ++ 17 kompilatora. C + +/ WinRT zwykle działa lepiej i tworzy mniejsze pliki binarne niż innych opcji języka środowiska uruchomieniowego systemu Windows. Będziemy nadal obsługuje C + +/ CX i biblioteki WRL, ale zdecydowanie zaleca, aby używać nowej aplikacji C + +/ WinRT. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).   
   
 ## <a name="benefits"></a>Zalety  
  Biblioteka szablonów C++ środowiska wykonawczego systemu Windows pozwala na łatwiejsze wdrożenia i zużywać składniki modelu COM (Component Object). Zapewnia celów technik, takich jak liczenie odwołań do zarządzania okres istnienia obiektów i testowania `HRESULT` wartości, aby ustalić, czy operacja powiodła się, czy nie. Aby pomyślnie korzystać Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, należy wykonać dokładnie te reguły i technik.  
@@ -57,9 +62,6 @@ Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest B
   
  [Porady: Obsługa zdarzeń](../windows/how-to-handle-events-using-wrl.md)  
  Przedstawia sposób użycia Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, aby subskrybować usługę i obsługi zdarzeń obiektu środowiska wykonawczego systemu Windows.  
-  
- [Wskazówki: Tworzenie składnika środowiska wykonawczego podstawowa systemu Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Przedstawia sposób umożliwia tworzenie podstawowego składnika środowiska wykonawczego systemu Windows, która dodaje dwie liczby Biblioteka szablonów C++ środowiska wykonawczego systemu Windows. Także przedstawiono sposób wywołania zdarzeń składnika i korzystanie z aplikacji platformy uniwersalnej systemu Windows, który używa języka JavaScript.  
   
  [Przewodnik: tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  Informacje o sposobie tworzenia aplikacji platformy uniwersalnej systemu Windows, który używa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
@@ -144,7 +146,6 @@ Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest B
   
 |||  
 |-|-|  
-|[Szablon projektu biblioteki klas](../windows/wrl-class-library-project-template.md)|Opisuje sposób uzyskać dostęp do szablonu projektu biblioteki klas WRL. Ten szablon upraszcza zadanie do tworzenia składników środowiska wykonawczego systemu Windows za pomocą programu Visual Studio.|  
 |[Kluczowe interfejsy API według kategorii](../windows/key-wrl-apis-by-category.md)|Omówiono podstawowe typy Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, funkcje i makr.|  
 |[Dokumentacja](../windows/wrl-reference.md)|Zawiera informacje dotyczące Biblioteka szablonów C++ środowiska wykonawczego systemu Windows.|  
 |[Szybkie odwołanie (środowisko wykonawcze systemu Windows i program Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Krótko opisano C + +/ CX funkcje obsługi środowiska uruchomieniowego systemu Windows.|  

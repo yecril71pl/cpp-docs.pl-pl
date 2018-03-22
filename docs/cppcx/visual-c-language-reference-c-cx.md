@@ -1,30 +1,36 @@
 ---
-title: "Dokumentacja języka Visual C++ (C + +/ CX) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Dokumentacja języka Visual C++ (C + +/ CX) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 09/15/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0867cb30f1337ffaf1cb726a0c52977899f02d0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e9cca27f54816c3727762eebba5a9af5246ed173
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="visual-c-language-reference-ccx"></a>Dokumentacja języka Visual C++ (C + +/ CX)
 
 C + +/ CX to zestaw rozszerzeń dla języka C++, które umożliwiają tworzenie aplikacji systemu Windows i składników środowiska wykonawczego systemu Windows w idiom będący jak, jak to możliwe, aby modern C++. Użyj C + +/ CX do pisania aplikacji systemu Windows i składniki kodu natywnego, które łatwo interakcję z Visual C#, Visual Basic i JavaScript i innych języków, które obsługuje środowisko wykonawcze systemu Windows. W tych rzadkich przypadkach, które wymagają bezpośredniego dostępu do nieprzetworzonej interfejsy modelu COM lub innym kodem kodu, można użyć [Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
-Nowy model reprezentuje generacji natywnych języka C++ programowania w systemie Windows. Korzystając z niego, można utworzyć:
+> [!NOTE]
+> C + +/ WinRT jest nowy, standard języka C ++ 17 języka dla interfejsów API środowiska wykonawczego systemu Windows. Jest ona dostępna w najnowszy zestaw Windows 10 SDK z wersji 1803 ponownego udostępnienia. C + +/ WinRT jest zaimplementowana w całości pliki nagłówka i przeznaczone do zapewnia najwyższej jakości dostęp do nowoczesnego interfejsu API systemu Windows.
+
+> Z C + +/ WinRT, można jednocześnie używać i Tworzenie interfejsów API środowiska wykonawczego systemu Windows przy użyciu dowolnego ze standardami C ++ 17 kompilatora. C + +/ WinRT zwykle działa lepiej i tworzy mniejsze pliki binarne niż innych opcji języka środowiska uruchomieniowego systemu Windows. Będziemy nadal obsługuje C + +/ CX i biblioteki WRL, ale zdecydowanie zaleca, aby używać nowej aplikacji C + +/ WinRT. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+
+
+Przy użyciu języka C + +/ CX, można utworzyć:
 
 - C++ Windows platformy Uniwersalnej aplikacji, które umożliwiają definiowanie użytkownika XAML interfejsu i używać natywnego stosu. Aby uzyskać więcej informacji, zobacz [Utwórz aplikację "hello world" w języku C++ (UWP)](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
@@ -44,4 +50,4 @@ Nowy model reprezentuje generacji natywnych języka C++ programowania w systemie
 |[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)|Dokumentacja referencyjna dla domyślnej przestrzeni nazw, przestrzeń nazw platformy, Platform::Collections i pokrewne przestrzeni nazw.|
 |[Funkcje CRT nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Zawiera listę funkcji CRT, które nie są dostępne do użycia w aplikacjach środowiska wykonawczego systemu Windows.|
 |[Jak przewodniki dla aplikacji systemu Windows 10](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Zawiera ogólne wskazówki dotyczące aplikacji systemu Windows 10 i łącza do dodatkowych informacji.|
-|[C + +/ CX część 0 \[ n \]: wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + +/ CX część 1 z \[ n \]: prostą klasę](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + +/ CX część 2 \[ n \]: typy, które nosić Kapelusze](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + +/ CX część 3 \[ n \]: konstruowanego](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + +/ CX część 4 \[ n \]: statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Wstępne cyklu blogów Visual C++ w języku C + +/ CX.|
+|[C + +/ CX część 0 \[n\]: wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + +/ CX część 1 z \[n\]: prostą klasę](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + +/ CX część 2 \[n\]: typy, które nosić Kapelusze](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + +/ CX część 3 \[n\]: konstruowanego](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + +/ CX część 4 \[n\]: statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Wstępne cyklu blogów Visual C++ w języku C + +/ CX.|

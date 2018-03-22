@@ -1,12 +1,12 @@
 ---
-title: "Module::methodreleasenotifier — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Module::methodreleasenotifier — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::MethodReleaseNotifier
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - MethodReleaseNotifier class
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 113ea9179292606461a8fe67ff161f63e58161da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 204fe04b9c4df566ae50dacbe4981d5b902203d5
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier — Klasa
 Wywołuje program obsługi zdarzeń po zwolnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określona przez obiekt i jego elementów członkowskich wskaźnika do metody.  
@@ -34,9 +34,7 @@ Wywołuje program obsługi zdarzeń po zwolnieniu ostatni obiekt w bieżącego m
 ## <a name="syntax"></a>Składnia  
   
 ```  
-template<  
-   typename T  
->  
+template<typename T>  
 class MethodReleaseNotifier : public ReleaseNotifier;  
 ```  
   

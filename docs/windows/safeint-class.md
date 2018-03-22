@@ -1,12 +1,12 @@
 ---
-title: "Safeint — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Safeint — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SafeInt
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea076ea092257fd5bf6acd6d597f79ef42dd96f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61b9ee9ca030d8661ce9c4cabf03e59c55ac88b1
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="safeint-class"></a>SafeInt — Klasa
 Rozszerza podstawowych liczba całkowita, aby uniknąć przepełnienia całkowitą i umożliwia porównanie różnych typów całkowitych.  
@@ -178,9 +178,9 @@ class SafeInt;
   
  W tabeli operatory w tym temacie wymieniono obsługiwane przez operatorów matematycznych i porównanie `SafeInt` klasy. Operatory matematyczne najbardziej zwracać `SafeInt` obiektu typu `T`.  
   
- Operacje porównania między `SafeInt` typem całkowitym można wykonywać w żadnym kierunku. Na przykład zarówno `SafeInt<int>(x) < y` i `y > SafeInt<int>(x)` są prawidłowe i zwraca ten sam rezultat.  
+ Operacje porównania między `SafeInt` typem całkowitym można wykonywać w żadnym kierunku. Na przykład zarówno `SafeInt<int>(x) < y` i `y> SafeInt<int>(x)` są prawidłowe i zwraca ten sam rezultat.  
   
- Za pomocą dwóch różnych nie obsługują wielu operatorów binarnych `SafeInt` typów. Przykładem tego jest `&` operatora. `SafeInt<T, E> & int`jest obsługiwana, ale `SafeInt<T, E> & SafeInt<U, E>` nie jest. W drugim przykładzie kompilator nie wiedzieć, jakiego typu parametru do zwrócenia. Jedno rozwiązanie tego problemu jest rzutowanie drugi parametr do typu podstawowego. Przy użyciu tych samych parametrach, można to zrobić z `SafeInt<T, E> & (U)SafeInt<U, E>`.  
+ Za pomocą dwóch różnych nie obsługują wielu operatorów binarnych `SafeInt` typów. Przykładem tego jest `&` operatora. `SafeInt<T, E> & int` jest obsługiwana, ale `SafeInt<T, E> & SafeInt<U, E>` nie jest. W drugim przykładzie kompilator nie wiedzieć, jakiego typu parametru do zwrócenia. Jedno rozwiązanie tego problemu jest rzutowanie drugi parametr do typu podstawowego. Przy użyciu tych samych parametrach, można to zrobić z `SafeInt<T, E> & (U)SafeInt<U, E>`.  
   
 > [!NOTE]
 >  Dla dowolnego Operacje bitowe dwa różne parametry powinny mieć taki sam rozmiar. Jeśli są różne rozmiary, kompilator zgłosi [ASSERT](../mfc/reference/diagnostic-services.md#assert) wyjątku. Wyniki tej operacji nie można zagwarantować za obowiązujące. Aby rozwiązać ten problem, wykonaj rzutowanie mniejszych parametru dopóki jest taki sam rozmiar jak parametr większy.  
@@ -213,12 +213,12 @@ Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   
- `T`i `U` można przypisać typu Boolean, typ znakowy lub typu Liczba całkowita. Liczba całkowita typy mogą być podpisane lub unsigned i dowolnym rozmiarze z 8 bitów 64-bitowy.  
+ `T` i `U` można przypisać typu Boolean, typ znakowy lub typu Liczba całkowita. Liczba całkowita typy mogą być podpisane lub unsigned i dowolnym rozmiarze z 8 bitów 64-bitowy.  
   
 > [!NOTE]
 >  Mimo że `SafeInt` klasy akceptuje dowolny rodzaj liczba całkowita, wykonuje wydajniej z typów bez znaku.  
   
- `E`błąd mechanizmu obsługi który `SafeInt` używa. Biblioteka SafeInt zostaną udostępnione dwa mechanizmy obsługi błędów. Domyślna zasada `SafeIntErrorPolicy_SafeIntException`, który zgłasza [safeintexception — klasa](../windows/safeintexception-class.md) wyjątek po wystąpieniu błędu. Inne zasady `SafeIntErrorPolicy_InvalidParameter`, który zatrzymuje program, jeśli wystąpi błąd.  
+ `E` błąd mechanizmu obsługi który `SafeInt` używa. Biblioteka SafeInt zostaną udostępnione dwa mechanizmy obsługi błędów. Domyślna zasada `SafeIntErrorPolicy_SafeIntException`, który zgłasza [safeintexception — klasa](../windows/safeintexception-class.md) wyjątek po wystąpieniu błędu. Inne zasady `SafeIntErrorPolicy_InvalidParameter`, który zatrzymuje program, jeśli wystąpi błąd.  
   
  Dostępne są dwie opcje, aby dostosować zasady błędów. Pierwsza opcja ma ustaw dla parametru `E` podczas tworzenia `SafeInt`. Użyj tej opcji, jeśli chcesz zmienić obsługi zasad dla co najmniej jeden błąd `SafeInt`. Inną możliwością jest określenie `_SAFEINT_DEFAULT_ERROR_POLICY` być dostosowane klasy obsługi błędów, przed wprowadzeniem `SafeInt` biblioteki. Użyj tej opcji, jeśli chcesz zmienić obsługi zasad dla wszystkich wystąpień błędów domyślne `SafeInt` klasy w kodzie.  
   

@@ -1,12 +1,12 @@
 ---
-title: "Delegaty ogólne (Visual C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Delegaty ogólne (Visual C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2511034af4399c983b8114ec01a86e3290bd2a8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5e1635afb2c11dbb7835244eae776fabdaea9c0
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="generic-delegates-visual-c"></a>Delegaty ogólne (Visual C++)
 Z obiektów delegowanych można używać parametrów typu ogólnego. Aby uzyskać więcej informacji na delegatów, zobacz [delegata (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md).  
@@ -34,14 +34,14 @@ Z obiektów delegowanych można używać parametrów typu ogólnego. Aby uzyska�
   
 ```  
 [attributes]   
-generic < [class | typename] type-parameter-identifiers >  
+generic < [class | typename] type-parameter-identifiers>  
 [type-parameter-constraints-clauses]  
 [accessibility-modifiers] delegate result-type identifier   
 ([formal-parameters]);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `attributes`(Opcjonalnie)  
+ `attributes` (Opcjonalnie)  
  Dodatkowe informacje deklaratywne. Aby uzyskać więcej informacji na atrybuty i klasy atrybutów Zobacz atrybutów.  
   
  *Typ — parametr-identyfikatory*  
@@ -53,10 +53,10 @@ generic < [class | typename] type-parameter-identifiers >
  *modyfikatory dostępności* (opcjonalnie)  
  Modyfikatory dostępności (np. **publicznego**, `private`).  
   
- *Typ wyniku*  
+ *result-type*  
  Typ zwracany delegata.  
   
- *Identyfikator*  
+ *identifier*  
  Nazwa obiektu delegowanego.  
   
  *parametrów formalnych* (opcjonalnie)  
@@ -68,7 +68,7 @@ generic < [class | typename] type-parameter-identifiers >
 ```  
 // generics_generic_delegate1.cpp  
 // compile with: /clr /c  
-generic < class ItemType>  
+generic <class ItemType>  
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);  
 ```  
   
@@ -84,10 +84,10 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ```  
 // generics_generic_delegate2.cpp  
 // compile with: /clr  
-generic < class ItemType>  
+generic <class ItemType>  
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);  
   
-generic < class ItemType>  
+generic <class ItemType>  
 ref struct MyGenClass {  
    ItemType MyMethod(ItemType i, ItemType % j) {  
       return ItemType();  
@@ -95,7 +95,7 @@ ref struct MyGenClass {
 };  
   
 ref struct MyClass {  
-   generic < class ItemType>  
+   generic <class ItemType>  
    static ItemType MyStaticMethod(ItemType i, ItemType % j) {  
       return ItemType();  
    }  

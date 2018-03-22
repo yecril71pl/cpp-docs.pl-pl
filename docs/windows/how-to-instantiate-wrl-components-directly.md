@@ -1,35 +1,35 @@
 ---
-title: "Porady: utworzenie wystąpienia składników biblioteki WRL bezpośrednio | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: utworzenie wystąpienia składników biblioteki WRL bezpośrednio | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2d307304c103b62ff5ba20e1af25797745bd035
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8069ac8d079a879cb078d9e3e4b759b02817b5f
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Porady: bezpośrednie tworzenie wystąpień składników biblioteki WRL
 Dowiedz się, jak używać systemu Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL)[Microsoft::WRL::Make](../windows/make-function.md) i [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funkcji do utworzenia wystąpienia składnika z modułu który definiuje ją.  
   
  Bezpośrednie utworzenie wystąpienia składników może zmniejszyć obciążenia, jeśli nie ma potrzeby tworzenia fabryk klas lub innych mechanizmów. Można utworzyć wystąpienia składnika bezpośrednio w obu aplikacji platformy uniwersalnej systemu Windows i aplikacji klasycznych.  
   
- Aby dowiedzieć się, jak Biblioteka szablonów C++ środowiska wykonawczego systemu Windows umożliwiają tworzenie podstawowego składnika środowiska wykonawczego systemu Windows i utworzyć z zewnętrznych aplikacji platformy uniwersalnej systemu Windows, zobacz [wskazówki: Tworzenie podstawowego składnika środowiska wykonawczego systemu Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md). Aby dowiedzieć się, jak Biblioteka szablonów C++ środowiska wykonawczego systemu Windows umożliwiają tworzenie klasycznego składnika COM i utworzyć z zewnętrznych aplikacji pulpitu, zobacz [porady: tworzenie klasycznego składnika COM](../windows/how-to-create-a-classic-com-component-using-wrl.md).  
+Aby dowiedzieć się, jak Biblioteka szablonów C++ środowiska wykonawczego systemu Windows umożliwiają tworzenie klasycznego składnika COM i utworzyć z zewnętrznych aplikacji pulpitu, zobacz [porady: tworzenie klasycznego składnika COM](../windows/how-to-create-a-classic-com-component-using-wrl.md).  
   
  Ten dokument zawiera dwa przykłady. W pierwszym przykładzie użyto funkcji `Make` do utworzenia wystąpienia składnika. W drugim przykładzie użyto funkcji `MakeAndInitialize` do utworzenia wystąpienia składnika, które może się nie powieść podczas kompilacji. (Ponieważ COM zwykle korzysta z wartości `HRESULT`, a nie wyjątków do sygnalizowania błędów, typ COM zazwyczaj nie wyrzuca wyjątków z konstruktora. `MakeAndInitialize` umożliwia składnikowi sprawdzenie poprawności argumentów za pomocą metody `RuntimeClassInitialize`). Oba przykłady definiują podstawowy interfejs logowania i implementują ten interfejs za pomocą definicji klasy, która wypisuje komunikaty na konsoli.  
   
@@ -61,4 +61,4 @@ Dowiedz się, jak używać systemu Windows środowiska uruchomieniowego C++ szab
 ## <a name="see-also"></a>Zobacz też  
  [Biblioteka szablonów C++ środowiska wykonawczego systemu Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
  [Microsoft::WRL::Make](../windows/make-function.md)   
- [Microsoft::WRL::details::MakeAndInitialize](../windows/makeandinitialize-function.md)
+ [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)
