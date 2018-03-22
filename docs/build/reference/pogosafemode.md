@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f40dad6feff9e49deeb495e8acbf2584dea3e41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 5cd2e3e51ecc8d9fc0d889555b4bfa193ba1d6a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="pogosafemode"></a>PogoSafeMode
 Określ, czy użyć trybu szybkiego lub w trybie awaryjnym do profilowania aplikacji.  
@@ -37,7 +37,7 @@ PogoSafeMode
 ## <a name="remarks"></a>Uwagi  
  Optymalizacja sterowana profilem — (PGO) ma dwa tryby możliwe podczas fazy profilowania: szybkie trybie i w trybie awaryjnym. Podczas profilowania jest w trybie szybkiego, używa **INC** instrukcji, aby zwiększyć danych liczników. **INC** instrukcji jest szybsze, ale nie jest bezpieczne wątkowo. Podczas profilowania jest w trybie awaryjnym, używa **INC blokady** instrukcji, aby zwiększyć danych liczników. **INC blokady** instrukcji ma te same funkcje co **INC** instrukcji ma i wątkowo, ale jest mniejsza niż **INC** instrukcji.  
   
- Domyślnie profilowania PGO działa w trybie Szybkie. `PogoSafeMode`jest wymagane tylko, jeśli chcesz użyć trybu awaryjnego.  
+ Domyślnie profilowania PGO działa w trybie Szybkie. `PogoSafeMode` jest wymagane tylko, jeśli chcesz użyć trybu awaryjnego.  
   
  Aby uruchomić PGO profilowania w trybie awaryjnym, należy użyć zmiennej środowiskowej `PogoSafeMode` lub przełącznik konsolidatora **- PogoSafeMode**, w zależności od systemu. Jeśli przeprowadzasz profilowanie na x64 komputera, należy użyć przełącznika konsolidatora. Jeśli przeprowadzasz profilowanie na x86 komputera, należy zdefiniować zmienną środowiskową wartości przed rozpoczęciem procesu optymalizacji.  
   
