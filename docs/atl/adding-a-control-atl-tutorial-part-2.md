@@ -1,27 +1,27 @@
 ---
-title: "Dodawanie kontrolki (ALT — samouczek, część 2) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Dodawanie kontrolki (ALT — samouczek, część 2) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed69a5dd421e967e1da33bb3a2f2c41fa80698d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Dodawanie kontrolki (ALT — Samouczek, część 2)
 W tym kroku zostanie Dodawanie formantu do projektu, skompiluj go i przetestować go na stronie sieci Web.  
@@ -32,9 +32,9 @@ W tym kroku zostanie Dodawanie formantu do projektu, skompiluj go i przetestowa�
   
 1.  W widoku klas kliknij prawym przyciskiem myszy projekt wielokąta.  
   
-2.  Wskaż **Dodaj** na pasku menu skrótów, a następnie kliknij **klasy** w podmenu.  
+2.  Wskaż **Dodaj** na pasku menu skrótów, a następnie kliknij **nowy element** w podmenu.  
   
-     **Dodaj klasę** zostanie wyświetlone okno dialogowe. Kategorie różne obiekty są wyświetlane w strukturze drzewa po lewej stronie.  
+     **Dodaj nowy element** zostanie wyświetlone okno dialogowe. Kategorie różne obiekty są wyświetlane w strukturze drzewa po lewej stronie.  
   
 3.  Kliknij przycisk **ATL** folderu.  
   
@@ -51,9 +51,9 @@ W tym kroku zostanie Dodawanie formantu do projektu, skompiluj go i przetestowa�
 |**w pliku .h**|Plik zawiera definicję klasy C++.|  
 |**plik .cpp**|Plik zawiera implementację klasy C++.|  
 |**Klasa coClass**|Nazwa klasy składnika dla tego formantu.|  
-|**Interfejs**|Nazwa interfejsu, na którym formantu zostanie Implementowanie niestandardowych metod i właściwości.|  
+|**Interface**|Nazwa interfejsu, na którym formantu zostanie Implementowanie niestandardowych metod i właściwości.|  
 |**Typ**|Opis dla formantu.|  
-|**Identyfikator programu**|Dla użytkownika nazwę używaną do odszukania CLSID formantu.|  
+|**ProgID**|Dla użytkownika nazwę używaną do odszukania CLSID formantu.|  
   
  Konieczne będzie wprowadzenie kilka dodatkowych ustawień kreatora ATL kontroli.  
   
@@ -113,7 +113,7 @@ W tym kroku zostanie Dodawanie formantu do projektu, skompiluj go i przetestowa�
   
  Następnie dodasz właściwości niestandardowych do formantu.  
   
- [Wróć do kroku 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [Do kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+ [Wróć do kroku 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [do kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Samouczek](../atl/active-template-library-atl-tutorial.md)
