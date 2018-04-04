@@ -1,6 +1,6 @@
 ---
 title: /ZF (Generowanie szybciej PDB) | Dokumentacja firmy Microsoft
-ms.date: 02/22/2018
+ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 7ae27e08e79d19e58c8440a5d7e5161eac9c306f
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/ZF (Generowanie szybciej PDB)
 
@@ -34,7 +34,7 @@ Włącz szybsze generowania plików PDB w kompilacjach równoległych minimalizu
 
 Ponieważ **/Zf** opcja ma zastosowanie tylko do generowania plików PDB, wymaga [/zi](z7-zi-zi-debug-information-format.md) lub [/zi](z7-zi-zi-debug-information-format.md) opcji.
 
-**/Zf** opcja jest dostępne począwszy od wersji programu Visual Studio 2017 wersji 15.1 i jest domyślnie wyłączone.
+**/Zf** opcja jest dostępne począwszy od wersji programu Visual Studio 2017 wersji 15.1, gdzie ona jest domyślnie wyłączone. W programie Visual Studio 2017 15.7 w wersji Preview 3, ta opcja jest domyślnie włączona po **/zi** lub **/zi** opcja jest włączona.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
@@ -46,5 +46,5 @@ Ponieważ **/Zf** opcja ma zastosowanie tylko do generowania plików PDB, wymaga
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora w porządku alfabetycznym](compiler-options-listed-alphabetically.md)  
-[/MP (Kompilacja z wieloma procesami)](mp-build-with-multiple-processes.md)  
+[Opcje kompilatora w porządku alfabetycznym](compiler-options-listed-alphabetically.md)<br/>
+[/MP (Kompilacja z wieloma procesami)](mp-build-with-multiple-processes.md)<br/>

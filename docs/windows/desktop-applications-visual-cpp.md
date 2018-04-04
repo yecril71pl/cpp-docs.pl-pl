@@ -1,28 +1,28 @@
 ---
 title: Aplikacje klasyczne (Visual C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e2da53a234f63bfd4c8a7f84ec5c107426f0e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
 A *aplikacją* w języku C++ jest aplikacji natywnej dostępnej pełny zestaw interfejsów API systemu Windows i albo działa w oknie lub w konsoli systemowej. Aplikacje w języku C++ można uruchomić w systemie Windows XP do systemu Windows 10 (chociaż systemu Windows XP jest już oficjalnie obsługiwana i istnieje wiele interfejsów API systemu Windows, które zostały wprowadzone od tego czasu).   Aplikacja różni się od aplikacji systemu Windows platformy Uniwersalnej, które można uruchomić na komputerach z systemem Windows 10, a także na konsoli XBox, Windows Phone, Surface Hub i innych urządzeniach. Aby uzyskać więcej informacji na temat pulpitu vs. Aplikacji platformy uniwersalnej systemu Windows, zobacz [Wybierz technologię](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
@@ -54,7 +54,7 @@ A *aplikacją* w języku C++ jest aplikacji natywnej dostępnej pełny zestaw in
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Tworzenie aplikacji dla systemu Windows](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Zawiera informacje na temat interfejsu API systemu Windows i modelu COM. (Niektóre interfejsów API systemu Windows i bibliotek DLL innych firm, są zaimplementowane jako obiekty COM.)|  
-|[Hilo: Tworzenie aplikacji C++ dla systemu Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Opisuje sposób tworzenia wzbogaconego klienta Windows aplikacją, która używa do tworzenia interfejsu użytkownika opartego na Karuzela animacji systemu Windows i programem Direct2D.  W tym samouczku nie został zaktualizowany od systemu Windows 7, ale nadal zawiera throough wprowadzenie do programowania Win32.|  
+|[Hilo: Tworzenie aplikacji C++ dla systemu Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Opisuje sposób tworzenia wzbogaconego klienta Windows aplikacją, która używa do tworzenia interfejsu użytkownika opartego na Karuzela animacji systemu Windows i programem Direct2D.  W tym samouczku nie został zaktualizowany od systemu Windows 7, ale nadal zawiera dokładne wprowadzenie do programowania w języku systemu Win32.|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|W tym artykule opisano najważniejsze funkcje programu Visual C++ w Visual Studio i łącza do pozostałej części dokumentacji Visual C++.|  
   
 ## <a name="see-also"></a>Zobacz też  
