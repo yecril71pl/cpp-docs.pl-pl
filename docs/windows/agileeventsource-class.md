@@ -21,47 +21,64 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d025fc2be86fb5b59107d1deee39962c3c6db04
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: c5157fb37dcb0e8388c91b86b65948db79365060
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="agileeventsource-class"></a>Klasa AgileEventSource
-Reprezentuje agile zdarzenia. Dziedziczy [EventSource](eventsource-class.md) i zastępuje `Add` funkcji członkowskiej z parametrem typu dodatkowe służący do określania opcji dotyczących sposobu wywołania agile zdarzeń.
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
+
+Reprezentuje zdarzenie jest wywoływane przez składnik agile, czyli składnik, który można uzyskać z dowolnego wątku. Dziedziczy [EventSource](eventsource-class.md) i zastępuje `Add` funkcji członkowskiej z parametrem typu dodatkowe służący do określania opcji dotyczących sposobu wywołania agile zdarzeń.
+
+## <a name="syntax"></a>Składnia
+
+```
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
 class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
-```  
-  
-#### <a name="parameters"></a>Parametry  
+```
+
+## <a name="parameters"></a>Parametry  
  `TDelegateInterface`  
+
  Interfejs do delegata, który reprezentuje program obsługi zdarzeń.
 
- `TEventSourceOptions` [InvokeModeOptions](invokemodeoptions-structure.md) stucture, których pole invokeMode ma ustawioną wartość `InvokeMode::StopOnFirstError` lub `InvokeMode::FireAll`.
+ `TEventSourceOptions`  
+ [InvokeModeOptions](invokemodeoptions-structure.md) stucture, których pole invokeMode ma ustawioną wartość `InvokeMode::StopOnFirstError` lub `InvokeMode::FireAll`.
 
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[AgileEventSource::Add — metoda](#add)|Dołącza program obsługi zdarzeń agile reprezentowany przez interfejs określonego delegata do zestawu obsługi zdarzeń dla bieżącego obiektu AgileEventSource.|  
+## <a name="remarks"></a>Uwagi
+
+Większość składników środowiska wykonawczego systemu Windows są składnikami elastyczne. Aby uzyskać więcej informacji, zobacz [wątków i przekazywanie (C + +/ CX)](../cppcx/threading-and-marshaling-c-cx.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+ `EventSource``AgileEventSource`
+
+## <a name="requirements"></a>Wymagania
+
+ **Nagłówek:** event.h
+
+ **Namespace:** Microsoft::wrl —
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[AgileEventSource::Add — metoda](#add)|Dołącza program obsługi zdarzeń agile reprezentowany przez interfejs określonego delegata do zestawu obsługi zdarzeń dla bieżącego obiektu AgileEventSource.|
 
 ## <a name="add"></a> AgileEventSource::Add — metoda
 
-Dołącza reprezentowany przez interfejs określonego delegata do zestawu obsługi zdarzeń dla bieżącego obiektu EventSource programu obsługi zdarzeń.
+Dołącza program obsługi zdarzeń reprezentowany przez interfejs określonego delegata do obsługi zdarzeń dla bieżącego zestawu [EventSource](eventsource-class.md) obiektu.
 
 ### <a name="syntax"></a>Składnia
 
 ```cpp
-HRESULT Add(  
-   _In_ TDelegateInterface* delegateInterface,  
-   _Out_ EventRegistrationToken* token  
+HRESULT Add(
+   _In_ TDelegateInterface* delegateInterface,
+   _Out_ EventRegistrationToken* token
 );
 ```
 
@@ -74,16 +91,10 @@ Interfejs do obiektu delegowanego, który reprezentuje program obsługi zdarzeń
 *Token* po zakończeniu tej operacji, uchwyt reprezentuje zdarzenia. Użyj ten token jako parametr do metody Remove() odrzucić programu obsługi zdarzeń.
 
 ### <a name="return-value"></a>Wartość zwracana
+
 S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.
 
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `EventSource`  
- `AgileEventSource`
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** event.h  
-  
- **Namespace:** Microsoft::wrl —  
-  
-## <a name="see-also"></a>Zobacz też  
+
+## <a name="see-also"></a>Zobacz też
+
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

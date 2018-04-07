@@ -1,27 +1,27 @@
 ---
-title: "System typów języka C++ (Modern C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: System typów języka C++ (Modern C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="c-type-system-modern-c"></a>System typów języka C++ (Modern C++)
 Pojęcie *typu* jest bardzo ważna w języku C++. Zwracana wartość każdej zmiennej, argumentu funkcji oraz funkcji musi mieć typ, aby mogła zostać skompilowana. Ponadto, kompilator niejawnie nadaje typ każdemu wyrażeniu (w tym wartości literału), zanim zostanie on oceniony. Oto przykłady typów `int` do przechowywania wartości całkowite `double` do przechowywania wartości zmiennoprzecinkowych (znanej także jako *skalarne* typów danych), lub klasy biblioteki standardowej [std::basic_string](../standard-library/basic-string-class.md) do przechowywania tekstu. Można utworzyć własny typ, definiując `class` lub `struct`. Typ określa wielkość pamięci, która zostanie zaalokowana dla zmiennej (lub wyniku wyrażenia), rodzaje wartości, które mogą być przechowywane w tej zmiennej, sposób interpretacji tych wartości (jako wzorców bajtów) oraz operacje, jakie mogą zostać na nich wykonane. Ten artykuł zawiera nieformalny przegląd głównych funkcji systemu typów C++.  
@@ -44,7 +44,7 @@ Pojęcie *typu* jest bardzo ważna w języku C++. Zwracana wartość każdej zmi
   
  Poniższy przykład pokazuje kilka prostych deklaracji zmiennych z opisami każdej z nich. W przykładzie pokazano również, jak kompilator używa informacji o typie, aby umożliwiać lub uniemożliwiać pewne kolejne operacje na zmiennej.  
   
-```  
+```cpp  
   
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
@@ -70,7 +70,7 @@ int maxValue;                // Not recommended! maxValue contains
   
  Na poniższej ilustracji przedstawiono względne wielkości typów wbudowanych:  
   
- ![Wbudowane wyrażony w bajtach rozmiar &#45; w typach](../cpp/media/built-intypesizes.png "inTYpeSizes wbudowane")  
+ ![Wyrażony w bajtach rozmiar wbudowane&#45;w typach](../cpp/media/built-intypesizes.png "inTYpeSizes wbudowane")  
   
  Poniższa tabela wymienia najczęściej używane typy podstawowe:  
   
@@ -91,7 +91,7 @@ int maxValue;                // Not recommended! maxValue contains
 ## <a name="const-type-qualifier"></a>kwalifikator typu const  
  Dowolny wbudowany lub zdefiniowany przez użytkownika typ może być zakwalifikowany według słowa kluczowego const. Ponadto funkcje Członkowskie mogą być `const`-kwalifikowaną i nawet `const`-przeciążony. Wartość `const` typu nie można modyfikować po jego inicjowania.  
   
-```  
+```cpp  
   
 const double PI = 3.1415;  
 PI = .75 //Error. Cannot modify const variable.  
@@ -119,7 +119,7 @@ PI = .75 //Error. Cannot modify const variable.
   
  Pierwszą rzeczą, którą należy wiedzieć przy deklarowaniu zmiennej surowego wskaźnika, jest to, że zmienna przydzieli tylko pamięć, która jest niezbędna do przechowania adresu lokalizacji pamięci, do którego odwoła się wskaźnik po wyłuskaniu. Alokacja pamięci dla wartości danych sam (nazywane również *magazynu zapasowego*) nie został jeszcze przydzielony. Innymi słowy, przez zadeklarowanie zmiennej surowego wskaźnika tworzysz zmienną adresu pamięci, a nie zmienną rzeczywistych danych. \Wyłuskanie zmiennej wskaźnika przed upewnieniem się, że zawiera ona prawidłowy adres magazynu zapasowego, spowoduje niezdefiniowane zachowanie (zwykle błąd krytyczny) w programie. Poniższy przykład przedstawia ten rodzaj błędu:  
   
-```  
+```cpp  
   
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
@@ -131,7 +131,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  Przykład wyłuskuje typ wskaźnika, bez przydzielania pamięci na przechowywanie rzeczywistych danych całkowitoliczbowych lub prawidłowego przypisanego adresu pamięci. Poniższy kod poprawia te błędy:  
   
-```  
+```cpp  
   
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
@@ -149,9 +149,9 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  Pamięci lokalnej stosu używa przykład poprawiony kod, aby utworzyć zapasowy magazyn `pNumber` wskazuje. Dla uproszczenia używamy podstawowego typu. W praktyce magazynu zapasowego dla wskaźników są większość typów często zdefiniowane przez użytkownika, które są dynamicznie przydzielane to obszar pamięci o nazwie *sterty* (lub *wolnego magazynu*) przy użyciu `new` — słowo kluczowe wyrażenia (w stylu języka C programowaniu starszej `malloc()` użyto funkcji biblioteki C runtime). Po przydzielone, tych zmiennych są zwykle nazywane obiektów, zwłaszcza, jeśli są one oparte na definicji klasy. Pamięci przydzielonej z `new` muszą zostać usunięte przez odpowiadający `delete` instrukcji (lub, jeśli używasz `malloc()` funkcji można przydzielić go funkcji środowiska wykonawczego języka C `free()`).  
   
- Jednak łatwiej Pamiętaj, aby usunąć dynamicznie przydzielane obiektu — szczególnie w przypadku złożonego kodu, co powoduje, że usterki zasobów o nazwie *przeciek pamięci*. Z tego powodu zdecydowanie odradza się stosowanie surowych wskaźników w nowoczesnym języku C++. Warto prawie zawsze Zawijaj raw wskaźnika w [wskaźnika inteligentnego](../cpp/smart-pointers-modern-cpp.md), który automatycznie spowoduje zwolnienie z pamięci po wywołaniu jego — destruktor (jeśli kod wykracza poza zakres wskaźnika inteligentnego); przy użyciu wskaźniki inteligentne można praktycznie Usuń całą klasy błędów w programach języka C++. W poniższym przykładzie założono `MyClass` jest zdefiniowane przez użytkownika typu, który ma publicznego — metoda`DoSomeWork();`  
+ Jednak łatwiej Pamiętaj, aby usunąć dynamicznie przydzielane obiektu — szczególnie w przypadku złożonego kodu, co powoduje, że usterki zasobów o nazwie *przeciek pamięci*. Z tego powodu zdecydowanie odradza się stosowanie surowych wskaźników w nowoczesnym języku C++. Warto prawie zawsze Zawijaj raw wskaźnika w [wskaźnika inteligentnego](../cpp/smart-pointers-modern-cpp.md), który automatycznie spowoduje zwolnienie z pamięci po wywołaniu jego — destruktor (jeśli kod wykracza poza zakres wskaźnika inteligentnego); przy użyciu wskaźniki inteligentne można praktycznie Usuń całą klasy błędów w programach języka C++. W poniższym przykładzie założono `MyClass` jest zdefiniowane przez użytkownika typu, który ma publicznego — metoda `DoSomeWork();`  
   
-```  
+```cpp  
   
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  

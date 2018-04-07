@@ -1,12 +1,12 @@
 ---
 title: 'Operator Address-of: &amp; | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '&'
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 814b21839ac851e942aaee34ed28fd43facb418a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dcc5d08f75839f428b981136e4aed0402cd72868
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="address-of-operator-amp"></a>Operator Address-of:&amp;
+# <a name="address-of-operator-amp"></a>Operator Address-of: &amp;
 ## <a name="syntax"></a>Składnia  
   
 ```  
@@ -37,11 +37,11 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jednoargumentowy operator address-of (**&**) ma adres jej argument. Argument address-of — operator może być oznaczeniem funkcji lub l wartość, która określa obiekt, który nie jest polem bitowym i nie jest zadeklarowany z **zarejestrować** Specyfikator klasy magazynowania.  
+ Jednoargumentowy operator address-of (**&**) ma adres jej argument. Argument operacji operatora adresu można oznaczeniem funkcji lub l wartość, która określa obiekt, który nie jest polem bitowym.  
   
  Operator address-of można stosować tylko do zmiennych z podstawowych, struktury, klasy, lub jako typami Unii, które są zadeklarowane na poziomie zakresu plików lub do odwołań do tablicy. W tych wyrażeń wyrażenie stałe, która nie zawiera operator address-of może być dodania lub odjęcia wyrażenia adresu.  
   
- Po zastosowaniu funkcji lub wartości l, wynikiem wyrażenia jest typem wskaźnika (r) pochodzi od typu argumentu. Na przykład, jeśli argument jest typu `char`, wynikiem wyrażenia jest typ wskaźnika do `char`. Operator address-of, dotyczą **const** lub `volatile` obiektów, daje w wyniku **const** `type`  **\***  lub `volatile` `type`  **\*** , gdzie `type` jest typem obiektu oryginalnego.  
+ Po zastosowaniu funkcji lub wartości l, wynikiem wyrażenia jest typem wskaźnika (r) pochodzi od typu argumentu. Na przykład, jeśli argument jest typu `char`, wynikiem wyrażenia jest typ wskaźnika do `char`. Operator address-of, dotyczą **const** lub `volatile` obiektów, daje w wyniku **const** `type` **\*** lub `volatile` `type` **\***, gdzie `type` jest typem obiektu oryginalnego.  
   
  Gdy operator address-of jest stosowany do [kwalifikowana nazwa](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), wynik jest zależny od tego, czy *nazwa kwalifikowana* określa statycznego elementu członkowskiego. Jeśli tak, wynik ma postać wskaźnika na typ określony w deklaracji elementu członkowskiego. Jeśli element członkowski nie jest statyczny, wynikiem jest wskaźnik do elementu członkowskiego *nazwa* klasy oznaczona *klasy nazwy kwalifikowanej*. (Zobacz [wyrażenia podstawowe](../cpp/primary-expressions.md) więcej informacji o *klasy nazwy kwalifikowanej*.) Poniższy fragment kodu przedstawia, jak wynik różni się w zależności od tego, czy element członkowski jest statyczny:  
   

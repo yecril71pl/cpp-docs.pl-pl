@@ -1,33 +1,33 @@
 ---
-title: "Inteligentne wskaźników (Modern C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Inteligentne wskaźników (Modern C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-caps.latest.revision: 
+caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5883cc7f028c2d64c038a2cdbd9b8365b7e61d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c92a0a6030f8e46fb52beee0bf8fd661b47cdf95
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="smart-pointers-modern-c"></a>Wskaźniki inteligentne (Modern C++)
 W nowoczesnych programowania w języku C++, biblioteki standardowej zawiera *wskaźniki inteligentne*, które są używane do zapewnienia, że programy są wolnej pamięci i przecieków zasobów i są bezpieczne dla wyjątku.  
   
 ## <a name="uses-for-smart-pointers"></a>Zastosowania inteligentnych wskaźników  
- Wskaźniki inteligentne są zdefiniowane w `std` przestrzeni nazw w [ \<pamięci >](../standard-library/memory.md) pliku nagłówka. Są niezwykle istotne w procesie [RAII](../cpp/objects-own-resources-raii.md) lub *Initialialization jest nabywania zasobów* idiom programowania. Głównym celem tego idiomu jest zapewnienie, że pozyskiwanie zasobów występuje w tym samym czasie, co inicjacja obiektu, tak aby wszystkie zasoby dla tego obiektu były tworzone i gotowe w jednym wierszu kodu. W praktyce główną zasadą RAII jest dawanie na własność dowolnego zasobu z przyznaną stertą — na przykład dynamicznie przydzielonej pamięci lub uchwytów obiektu systemowego — obiektowi z przyznanym stosem, którego destruktor zawiera kod w celu usunięcia lub zwolnienia zasobów, a także związany z nim kod porządkujący.  
+ Wskaźniki inteligentne są zdefiniowane w `std` przestrzeni nazw w [ \<pamięci >](../standard-library/memory.md) pliku nagłówka. Są niezwykle istotne w procesie [RAII](../cpp/objects-own-resources-raii.md) lub *inicjowania jest nabywania zasobów* idiom programowania. Głównym celem tego idiomu jest zapewnienie, że pozyskiwanie zasobów występuje w tym samym czasie, co inicjacja obiektu, tak aby wszystkie zasoby dla tego obiektu były tworzone i gotowe w jednym wierszu kodu. W praktyce główną zasadą RAII jest dawanie na własność dowolnego zasobu z przyznaną stertą — na przykład dynamicznie przydzielonej pamięci lub uchwytów obiektu systemowego — obiektowi z przyznanym stosem, którego destruktor zawiera kod w celu usunięcia lub zwolnienia zasobów, a także związany z nim kod porządkujący.  
   
  W większości przypadków, podczas inicjowania surowego wskaźnika lub uchwytu zasobu w celu wskazania rzeczywistego zasobu, należy natychmiast przekazać wskaźnik do inteligentnego wskaźnika. W nowoczesnym C++, surowe wskaźniki są używane tylko w małych blokach kodu o ograniczonym zakresie, pętlach lub funkcjach pomocniczych, gdzie wydajność ma kluczowe znaczenie i nie ma możliwości popełnienia błędu w zakresie własności.  
   
@@ -77,7 +77,7 @@ W nowoczesnych programowania w języku C++, biblioteki standardowej zawiera *wsk
  Używaj tych inteligentnych wskaźników jako pierwszych, w celu hermetyzacji wskaźników jako zwykłych starych obiektów C++ (Plain Old C++ Objects — POCO).  
   
 -   `unique_ptr`   
-     Pozwala na dokładnie jednego właściciela podstawowego wskaźnika. Używanie jako domyślny wybór POCO znając dla niektórych wymaganych `shared_ptr`. Może być przeniesiony do nowego właściciela, ale nie kopiowany lub udostępniony. Zastępuje `auto_ptr`, które jest przestarzałe. Porównaj z `boost::scoped_ptr`. `unique_ptr`jest mała i wydajne; rozmiar jest jeden wskaźnik i obsługuje odwołań do r-wartości do wstawienia szybkiego i pobierania z kolekcji standardowa biblioteka C++. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień unique_ptr i korzystanie](../cpp/how-to-create-and-use-unique-ptr-instances.md) i [unique_ptr — klasa](../standard-library/unique-ptr-class.md).  
+     Pozwala na dokładnie jednego właściciela podstawowego wskaźnika. Używanie jako domyślny wybór POCO znając dla niektórych wymaganych `shared_ptr`. Może być przeniesiony do nowego właściciela, ale nie kopiowany lub udostępniony. Zastępuje `auto_ptr`, które jest przestarzałe. Porównaj z `boost::scoped_ptr`. `unique_ptr` jest mała i wydajne; rozmiar jest jeden wskaźnik i obsługuje odwołań do r-wartości do wstawienia szybkiego i pobierania z kolekcji standardowa biblioteka C++. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień unique_ptr i korzystanie](../cpp/how-to-create-and-use-unique-ptr-instances.md) i [unique_ptr — klasa](../standard-library/unique-ptr-class.md).  
   
 -   `shared_ptr`   
      Inteligentny wskaźnik zliczonych odwołań. Użyj, jeżeli chcesz przypisać jeden surowy wskaźnik wielu właścicielom, na przykład, kiedy zwracasz kopię wskaźnika z kontenera, ale chcesz zatrzymać oryginał. Nieprzetworzone wskaźnika nie są usuwane aż wszystkie `shared_ptr` właścicieli przeszły poza zakresem wartości lub mieć w przeciwnym razie własności. Rozmiar to dwa wskaźniki; jeden dla obiektu i jeden dla współdzielonego bloku kontroli, który zawiera licznik odwołań. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień shared_ptr i korzystanie](../cpp/how-to-create-and-use-shared-ptr-instances.md) i [shared_ptr — klasa](../standard-library/shared-ptr-class.md).  

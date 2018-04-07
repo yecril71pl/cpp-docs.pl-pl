@@ -1,12 +1,12 @@
 ---
-title: "Statyczne elementy członkowskie (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Statyczne elementy członkowskie (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d19985271648e66aa86946c685608f805b1dfe1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 420139a8e7eba02411ef0e1e3cf39cecc5b3e97a
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="static-members-c"></a>Statyczne elementy członkowskie (C++)
 Klasy może zawierać danych statycznych elementów członkowskich i funkcji elementów członkowskich. Gdy element danych jest zadeklarowany jako **statycznych**, tylko jedną kopię danych jest obsługiwane dla wszystkich obiektów klasy.
   
  Statyczne elementy członkowskie danych nie są częścią obiektów typu danej klasy. W związku z tym deklaracji elementu członkowskiego danych statycznych nie jest uważana za definicji. Element członkowski danych jest zadeklarowany w zakresie klasy, ale definicji odbywa się w zakresie pliku. Te statycznych elementów członkowskich mają połączenie zewnętrzne. Poniższy przykład przedstawia to:  
   
-```  
+```cpp  
 // static_data_members.cpp  
 class BufferedOutput  
 {  
@@ -72,13 +72,13 @@ int main()
   
  Statyczne elementy członkowskie danych mogą być przywoływane bez odwołujących się do obiektu typu klasy. Liczba bajtów zapisanych przy użyciu `BufferedOutput` obiektów można uzyskać w następujący sposób:  
   
-```  
+```cpp  
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- Statyczny element członkowski istnieje nie jest konieczne, że istnieją wszystkie obiekty typu klasy. Statyczne elementy Członkowskie mogą również dostęp za pomocą wyboru elementu członkowskiego (**.** i  **->** ) operatorów. Na przykład:  
+ Statyczny element członkowski istnieje nie jest konieczne, że istnieją wszystkie obiekty typu klasy. Statyczne elementy Członkowskie mogą również dostęp za pomocą wyboru elementu członkowskiego (**.** i **->**) operatorów. Na przykład:  
   
-```  
+```cpp  
 BufferedOutput Console;  
   
 long nBytes = Console.bytecount;  
