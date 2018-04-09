@@ -1,10 +1,10 @@
 ---
-title: "vcpkg — Menedżer pakietów C++ dla systemu Windows | Dokumentacja firmy Microsoft"
-description: "vcpkg jest wiersza polecenia Menedżera pakietów, które znacząco upraszcza nabycie i instalację open source biblioteki języka C++ w systemie Windows."
+title: vcpkg — Menedżer pakietów C++ dla systemu Windows | Dokumentacja firmy Microsoft
+description: vcpkg jest wiersza polecenia Menedżera pakietów, które znacząco upraszcza nabycie i instalację open source biblioteki języka C++ w systemie Windows.
 keywords: vcpkg
 author: mikeblome
 ms.author: mblome
-ms.date: 02/01/2018
+ms.date: 04/06/2018
 ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
@@ -15,11 +15,11 @@ dev_langs:
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b7f4b3c5d77c7c31001a656667b7d2602a74b9
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Menedżer pakietów C++ dla systemu Windows
 
@@ -53,7 +53,7 @@ To polecenie wylicza pliki kontroli w podfolderach vcpkg/portów. Wyświetlona z
 
 ```cmd
 ace       6.4.3   The ADAPTIVE Communication Environment
-anax      2.1.0-1 An open source C++ entity system. <https://github...
+anax      2.1.0-1 An open source C++ entity system. \<https://github...
 antlr4    4.6-1   ANother Tool for Language Recognition
 apr       1.5.2   The Apache Portable Runtime (APR) is a C library ...
 asio      1.10.8  Asio is a cross-platform C++ library for network ...
@@ -86,7 +86,6 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>Wyświetlanie bibliotek już zainstalowane
-
 Po zainstalowaniu niektórych bibliotek, można użyć **listy vcpkg** co masz:
 
 ```cmd
@@ -106,9 +105,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 Uruchom **vcpkg integracji instalacji** skonfigurować Visual Studio, aby zlokalizować wszystkie pliki nagłówkowe vcpkg i pliki binarne w poszczególnych użytkowników, bez konieczności ręcznej edycji ścieżek katalogi VC ++. Jeśli masz wiele klony w klonowania, w którym możesz uruchomić tego polecenia staje się do nowej lokalizacji domyślnej.
 
-Teraz możesz #include nagłówki po prostu, wpisując folderu/nagłówka i funkcja automatycznego uzupełniania pomaga. Żadne dodatkowe kroki są wymagane do łączenia z biblioteki lub dodanie odwołania do projektu. Na poniższej ilustracji przedstawiono sposób odnajdowania nagłówki azure magazynu cpp w Visual Studio. vcpkg umieszcza jego nagłówków w podfolderze \installed partycjonowanego platformy docelowej. Na poniższym diagramie przedstawiono listę plików dołączanych w `/was` podfolderze biblioteki:
-
-Teraz możesz #include nagłówki po prostu, wpisując folderu/nagłówka, zostanie automatycznie uzupełniać pomóc. Żadne dodatkowe kroki są wymagane do łączenia z biblioteki lub dodanie odwołania do projektu. Na poniższej ilustracji przedstawiono sposób odnajdowania nagłówki azure magazynu cpp w Visual Studio. vcpkg umieszcza jego nagłówków w podfolderze \installed partycjonowanego platformy docelowej. Na poniższym diagramie przedstawiono listę plików dołączanych w podfolderze \was biblioteki:
+Teraz możesz #include nagłówki po prostu, wpisując folderu/nagłówka i funkcja automatycznego uzupełniania pomaga. Żadne dodatkowe kroki są wymagane do łączenia z biblioteki lub dodanie odwołania do projektu. Na poniższej ilustracji przedstawiono sposób odnajdowania nagłówki azure magazynu cpp w Visual Studio. vcpkg umieszcza jego nagłówków w **/ zainstalowano** podfolder partycjonowanego platformy docelowej. Na poniższym diagramie przedstawiono listę plików dołączanych w **/ was** podfolderze biblioteki:
 
 ![vcpkg integracji Intellisense](media/vcpkg-intellisense.png "vcpkg i Intellisense")
 
@@ -144,6 +141,36 @@ Domyślnie **uaktualnienia** polecenie wyświetla tylko bibliotek, które są ni
 
 ### <a name="upgrade-example"></a>Przykład uaktualnienia
 
+### <a name="per-project"></a>W projekcie
+Jeśli musisz użyć określonej wersji biblioteki, która jest inna niż wersja w wystąpieniu active vcpkg, wykonaj następujące kroki:
+
+1. Wprowadź nowy klon vcpkg 
+1. Modyfikowanie portfile dla biblioteki w celu uzyskania wersji, które są potrzebne
+1. Uruchom **zainstalować vcpkg \<biblioteki >**.
+1. Użyj **vcpkg integracji projektu** do utworzenia pakietu NuGet, który odwołuje się do tej biblioteki, na podstawie na projekt.
+
+
+## <a name="export-compiled-binaries-and-headers"></a>Eksportuj skompilowane pliki binarne i nagłówki
+Wymaganie wszyscy członkowie zespołu, aby pobrać i tworzenie bibliotek może być mało wydajne. Członek zespołu pojedynczego tej pracy, a następnie użyj **eksportu vcpkg** można utworzyć pliku zip, pliki binarne i nagłówki, które można łatwo udostępniać innych członków zespołu. 
+
+## <a name="updateupgrade-installed-libraries"></a>Biblioteki zainstalować aktualizację/uaktualnienie
+Publiczny katalogu jest zawsze na bieżąco najnowsze wersje bibliotek. Aby określić, które biblioteki lokalnych są nieaktualne, użyj **aktualizacji vcpkg**. Jeśli wszystko jest gotowy do aktualizacji do najnowszej wersji katalogu publicznego kolekcji portów, uruchom **uaktualnienia vcpkg** polecenia próbę automatycznego pobrania i Odbuduj wybranych lub wszystkich zainstalowanych bibliotek, które są nieaktualne.
+
+Domyślnie **uaktualnienia** polecenie wyświetla tylko bibliotek, które są nieaktualne; nie uaktualnić ich. Aby przeprowadzić uaktualnienie, użyj **--przebiegu nie próbnego** opcji. 
+
+```cmd
+  vcpkg upgrade --no-dry-run 
+```
+
+### <a name="upgrade-options"></a>Opcje uaktualniania
+
+- **--przebiegu nie próbnego** uaktualnienia; Jeśli nie zostanie określony, polecenie znajduje się tylko nieaktualnych opakowania. 
+- **--Zachowaj będzie** kontynuuj instalowanie pakietów, nawet w przypadku awarii jednego. 
+- **--Trzykolumnowa \<t >** ustawić Trzykolumnowa domyślne niekwalifikowane pakietów. 
+- **główny — vcpkg \<ścieżka >** określ katalog vcpkg używany zamiast bieżącego katalogu lub katalogu narzędzia. 
+
+### <a name="upgrade-example"></a>Przykład uaktualnienia
+
 Poniższy przykład pokazuje, jak uaktualnić tylko określonej biblioteki. Należy zauważyć, że ten vcpgk automatycznie pobiera w zależności w razie potrzeby.
 
 ```cmd
@@ -160,27 +187,21 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>Współtworzenia nowe biblioteki
-
 Może zawierać żadnych bibliotek żądanych w kolekcji prywatnych portów. Sugerowanie nową biblioteką dla publicznych katalogu, należy otworzyć problemu na [GitHub vcpkg problem strony](https://github.com/Microsoft/vcpkg/issues).
 
 ## <a name="remove-a-library"></a>Usuwanie biblioteki
-
 Typ **vcpkg Usuń** Aby usunąć zainstalowane biblioteki. Jeśli inne biblioteki zależą od niej, zostanie wyświetlona prośba o Uruchom ponownie polecenie **--recurse**, co powoduje, że wszystkie podrzędne biblioteki do usunięcia.
 
 ## <a name="customize-vcpkg"></a>Customize vcpkg
-
 Można zmodyfikować z klonu vcpkg w żaden sposób, który chcesz. Można tworzyć wiele klony vcpkg i modyfikować portfiles w każdej z nich uzyskać określonych wersji biblioteki lub określić parametry wiersza polecenia. Na przykład w przedsiębiorstwie, jedna grupa deweloperów może działać na oprogramowanie, które ma jeden zestaw zależności, a inna grupa może mieć inny zestaw. Można skonfigurować dwie klonów vcpkg i zmodyfikować każdą z nich pobrać wersje bibliotek i przełączników kompilacji, itd., zgodnie z potrzebami. 
 
 ## <a name="uninstall-vcpkg"></a>Uninstall vcpkg
-
 Po prostu Usuń katalog. 
 
 ## <a name="send-feedback-about-vcpkg"></a>Wyślij opinię o vcpkg
-
 Użyj **--ankiety** polecenie, aby wysłać opinię do firmy Microsoft o vcpkg, łącznie z raportami usterek i sugestie dotyczące funkcji.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Hierarchia folderów vcpkg
-
 Wszystkie dane i funkcje vcpkg są niezależne w hierarchii jeden katalog o nazwie "instance". Nie ma żadnych ustawień rejestru lub zmiennych środowiskowych. Może mieć dowolną liczbę wystąpień vcpkg na maszynie, a nie przeszkadzają ze sobą. 
 
 Zawartość wystąpienia vcpkg jest: 

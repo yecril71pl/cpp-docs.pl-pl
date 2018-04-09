@@ -14,11 +14,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6799b1b53366d342dc2dacec7bff756c7396d7cb
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 018b4941171dd466cb8230f7e2614fda3b019752
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Ulepszenia zgodność języka C++ w wersji Visual Studio 2017 15.0, [15 ustęp 3](#improvements_153), [15,5 cala](#improvements_155), [15,6](#improvements_156), i [15.7](#improvements_157)
 
@@ -1711,6 +1711,32 @@ int main() {
 }
 
 ```
+
+### <a name="variadic-template-constructor-base-class-initialization-list"></a>Listy inicjowania ze zmienną liczbą argumentów szablonu konstruktora klasy podstawowej
+
+W poprzednich wersjach programu Visual Studio ze zmienną liczbą argumentów szablonu konstruktora klasy podstawowej inicjowania listę, która nie ma argumentów szablonu jest dozwolone przez pomyłkę bez błędów. W programie Visual Studio 2017 wersji 15.7 wystąpi błąd kompilatora jest wywoływane.
+
+Poniższy przykład kodu w zgłasza 15.7 wersji programu Visual Studio 2017 *błąd C2614: D\<int >: niedozwolona Inicjalizacja elementu członkowskiego: "B" nie jest podstawowym lub elementu członkowskiego*
+
+```cpp
+template<typename T>
+struct B {};
+
+template<typename T>
+struct D : B<T>
+{
+
+    template<typename ...C>
+    D() : B() {} // C2614. Missing template arguments to B.
+};
+
+D<int> d;
+
+```
+
+Aby naprawić błąd, należy zmienić wyrażenie B() b\<T > ().
+
+
 
 ## <a name="see-also"></a>Zobacz także
 
