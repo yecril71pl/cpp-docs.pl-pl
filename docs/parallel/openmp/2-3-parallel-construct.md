@@ -1,27 +1,27 @@
 ---
-title: "2.3 konstrukcja równoległa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 2.3 konstrukcja równoległa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 Konstrukcja równoległa
 Następujące dyrektywa definiuje równoległego regionu to region program, który ma być wykonane przez wiele wątków jednocześnie. Jest to konstrukcja podstawowych, która rozpoczyna się wykonywanie równoległe.  
@@ -32,13 +32,13 @@ Następujące dyrektywa definiuje równoległego regionu to region program, któ
   
  *Klauzuli* jest jednym z następujących czynności:  
   
- **Jeśli (** *scalar expression* **)**  
+ **if(** *scalar-expression* **)**  
   
  **prywatne (** *zmiennej listy* **)**  
   
  **firstprivate (** *zmiennej listy* **)**  
   
- **domyślne (udostępnionego &#124; none)**  
+ **default(shared &#124; none)**  
   
  **udostępnione (** *zmiennej listy* **)**  
   
@@ -46,7 +46,7 @@ Następujące dyrektywa definiuje równoległego regionu to region program, któ
   
  **redukcja (** *operator* **:***zmiennej listy* **)**   
   
- **num_threads (** *wyrażenie całkowite* **)**  
+ **num_threads(** *integer-expression* **)**  
   
  Podczas wątek napotka konstrukcję równoległe, zespół wątków jest tworzony, jeśli spełniony jest jeden z następujących przypadków:  
   

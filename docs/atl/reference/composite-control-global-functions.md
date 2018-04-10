@@ -1,12 +1,12 @@
 ---
-title: "Funkcje globalne formantu złożonego | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje globalne formantu złożonego | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +27,17 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="composite-control-global-functions"></a>Funkcje globalne złożonych kontrolek
 Funkcje te zapewniają obsługę tworzenia okna dialogowe, a także do tworzenia, obsługi i licencjonowanie formantów ActiveX.  
@@ -64,7 +64,7 @@ Funkcje te zapewniają obsługę tworzenia okna dialogowe, a także do tworzenia
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlhost.h  
 
-##  <a name="atlaxdialogbox"></a>AtlAxDialogBox  
+##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox  
  Tworzy modalne okno dialogowe z szablonu okna dialogowego dostarczonego przez użytkownika.  
    
 ```
@@ -107,7 +107,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
   
  Więcej informacji o oknach dialogowych ogólnie, można znaleźć w [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) i [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) w zestawie Windows SDK.  
   
-##  <a name="atlaxcreatedialog"></a>AtlAxCreateDialog  
+##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  Tworzy niemodalne okno dialogowe z szablonu okna dialogowego dostarczonego przez użytkownika.  
   
 ```
@@ -143,7 +143,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
   
  Zobacz [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) i [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) w systemie Windows SDK.  
   
-##  <a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
+##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Tworzy formant ActiveX, inicjuje go i umieszcza w określonym oknie.  
   
 
@@ -189,7 +189,7 @@ ATLAPI AtlAxCreateControl(
   
  Aby utworzyć licencjonowanego formantu ActiveX, zobacz [AtlAxCreateControlLic](#atlaxcreatecontrollic).  
   
-##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
+##  <a name="atlaxcreatecontrolex"></a>  AtlAxCreateControlEx  
  Tworzy formant ActiveX, inicjuje go i umieszcza w określonym oknie. Można również utworzyć wskaźnik interfejsu i zbiornik zdarzenia dla nowego formantu.  
   
 ```
@@ -242,11 +242,11 @@ ATLAPI AtlAxCreateControlEx(
  Jeden standardowy wartości HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- `AtlAxCreateControlEx`przypomina [AtlAxCreateControl](#atlaxcreatecontrol) , ale umożliwia również otrzymywać wskaźnik interfejsu do sterowania nowo utworzony i skonfigurowany obiekt sink zdarzenia do odbierania zdarzenia wywoływane przez formant.  
+ `AtlAxCreateControlEx` przypomina [AtlAxCreateControl](#atlaxcreatecontrol) , ale umożliwia również otrzymywać wskaźnik interfejsu do sterowania nowo utworzony i skonfigurowany obiekt sink zdarzenia do odbierania zdarzenia wywoływane przez formant.  
   
  Aby utworzyć licencjonowanego formantu ActiveX, zobacz [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex).  
   
-##  <a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
+##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic  
  Tworzy licencjonowany formant ActiveX, inicjuje go i umieszcza w określonym oknie.  
 
 ```
@@ -293,7 +293,7 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="example"></a>Przykład  
  Zobacz [Hosting AXHost za pomocą biblioteki ATL programu ActiveX formanty](../../atl/hosting-activex-controls-using-atl-axhost.md) przykładowy sposób użycia `AtlAxCreateControlLic`.  
   
-##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
+##  <a name="atlaxcreatecontrollicex"></a>  AtlAxCreateControlLicEx  
  Tworzy licencjonowany formant ActiveX, inicjuje go i umieszcza w określonym oknie. Można również utworzyć wskaźnik interfejsu i zbiornik zdarzenia dla nowego formantu.  
   
 ```
@@ -350,12 +350,12 @@ ATLAPI AtlAxCreateControlLicEx(
  Jeden standardowy wartości HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- `AtlAxCreateControlLicEx`przypomina [AtlAxCreateControlLic](#atlaxcreatecontrollic) , ale umożliwia również otrzymywać wskaźnik interfejsu do sterowania nowo utworzony i skonfigurowany obiekt sink zdarzenia do odbierania zdarzenia wywoływane przez formant.  
+ `AtlAxCreateControlLicEx` przypomina [AtlAxCreateControlLic](#atlaxcreatecontrollic) , ale umożliwia również otrzymywać wskaźnik interfejsu do sterowania nowo utworzony i skonfigurowany obiekt sink zdarzenia do odbierania zdarzenia wywoływane przez formant.  
   
 ### <a name="example"></a>Przykład  
  Zobacz [Hosting AXHost za pomocą biblioteki ATL programu ActiveX formanty](../../atl/hosting-activex-controls-using-atl-axhost.md) przykładowy sposób użycia `AtlAxCreateControlLicEx`.  
   
-##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl  
+##  <a name="atlaxattachcontrol"></a>  AtlAxAttachControl  
  Dołącza wcześniej utworzony formant do określonego okna.  
   
 ```
@@ -384,7 +384,7 @@ ATLAPI AtlAxAttachControl(
 > [!NOTE]
 >  Dołączany obiekt formantu musi być poprawnie zainicjowana przed wywołaniem `AtlAxAttachControl`.  
   
-##  <a name="atlaxgethost"></a>AtlAxGetHost  
+##  <a name="atlaxgethost"></a>  AtlAxGetHost  
  Uzyskuje bezpośredni wskaźnik interfejsu do kontenera dla określonego okna (o ile istnieje), biorąc pod uwagę jego uchwyt.  
   
 ```
@@ -401,7 +401,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Wartość zwracana  
  Jeden standardowy wartości HRESULT.  
   
-##  <a name="atlaxgetcontrol"></a>AtlAxGetControl  
+##  <a name="atlaxgetcontrol"></a>  AtlAxGetControl  
  Uzyskuje bezpośredni wskaźnik interfejsu do formantu zawartego wewnątrz określonego okna, biorąc pod uwagę jego uchwyt.  
   
 ```
@@ -418,7 +418,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Wartość zwracana  
  Jeden standardowy wartości HRESULT.  
   
-##  <a name="atlsetchildsite"></a>AtlSetChildSite  
+##  <a name="atlsetchildsite"></a>  AtlSetChildSite  
  Wywołanie tej funkcji można ustawić lokacji obiekt podrzędny, aby **IUnknown** obiektu nadrzędnego.  
   
 ```
@@ -435,7 +435,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="return-value"></a>Wartość zwracana  
  Standardowa wartość HRESULT.  
   
-##  <a name="atlaxwininit"></a>AtlAxWinInit  
+##  <a name="atlaxwininit"></a>  AtlAxWinInit  
  Ta funkcja inicjuje formantu ATL przez kod hostowania rejestrując **"AtlAxWin80"** i **"AtlAxWinLic80"** klasy okien oraz kilka niestandardowych komunikatów okien.  
   
 ```
@@ -448,7 +448,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja musi zostać wywołana przed za pomocą formantu ATL hosting interfejsu API. Po wywołaniu tej funkcji **"AtlAxWin"** okna klasa może być używana w wywołaniach [właściwości CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) lub [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), zgodnie z opisem w zestawie Windows SDK.  
 
-##  <a name="atlaxwinterm"></a>AtlAxWinTerm  
+##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Ta funkcja uninitializes formantu ATL przez kod hostowania wyrejestrowując **"AtlAxWin80"** i **"AtlAxWinLic80"** klasy okien.  
   
 ```
@@ -463,7 +463,7 @@ inline BOOL AtlAxWinTerm();
   
  Wywołanie tej funkcji, aby wyczyścić po wszystkich istniejących windows hosta zostały zniszczone Jeśli wywołujesz [AtlAxWinInit](#atlaxwininit) i nie będzie konieczne utworzenie hosta z systemem windows. Nie można wywołać tej funkcji, klasę okna zostanie wyrejestrowane automatycznie gdy zakończenie procesu.  
   
-##  <a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
+##  <a name="atlgetobjectsourceinterface"></a>  AtlGetObjectSourceInterface  
  Wywołaj tę funkcję, aby pobrać informacje o domyślnym interfejsie źródła obiektu.  
   
 ```
@@ -495,13 +495,13 @@ ATLAPI AtlGetObjectSourceInterface(
  Standardowa wartość HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- `AtlGetObjectSourceInterface`można podać użytkownik o identyfikatorze interfejsu domyślnego interfejsu źródłowego, wraz z identyfikatora LIBID i główne i pomocnicze numery wersji biblioteki typów opisujący ten interfejs.  
+ `AtlGetObjectSourceInterface` można podać użytkownik o identyfikatorze interfejsu domyślnego interfejsu źródłowego, wraz z identyfikatora LIBID i główne i pomocnicze numery wersji biblioteki typów opisujący ten interfejs.  
   
 > [!NOTE]
 >  Dla tej funkcji można pomyślnie pobrać żądanych informacji obiektu reprezentowanego przez `punkObj` musi implementować `IDispatch` (i zwracają informacje o typie za pośrednictwem **IDispatch::GetTypeInfo**) oraz musi także Implementowanie albo `IProvideClassInfo2` lub `IPersist`. Informacje dotyczące interfejsu źródłowego musi należeć do tej samej biblioteki typów jako informacji o typie `IDispatch`.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak można zdefiniować klasę obiektu sink zdarzenia `CEasySink`, która ogranicza liczbę argumentów szablonu, które można przekazać do `IDispEventImpl` do essentials systemu od zera. `EasyAdvise`i `EasyUnadvise` użyj `AtlGetObjectSourceInterface` zainicjować [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) członków przed wywołaniem [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) lub [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).  
+ W poniższym przykładzie pokazano, jak można zdefiniować klasę obiektu sink zdarzenia `CEasySink`, która ogranicza liczbę argumentów szablonu, które można przekazać do `IDispEventImpl` do essentials systemu od zera. `EasyAdvise` i `EasyUnadvise` użyj `AtlGetObjectSourceInterface` zainicjować [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) członków przed wywołaniem [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) lub [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).  
   
  [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]  
   

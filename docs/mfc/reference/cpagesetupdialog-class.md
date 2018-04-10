@@ -1,12 +1,12 @@
 ---
 title: Klasa CPageSetupDialog | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CPageSetupDialog
@@ -39,19 +39,19 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3ca193c59c5d9c914f5bf8827601f389c546ea85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
-# <a name="cpagesetupdialog-class"></a>Klasa CPageSetupDialog
+# <a name="cpagesetupdialog-class"></a>CPageSetupDialog Class
 Hermetyzuje usług świadczonych przez okno dialogowe Ustawienia strony OLE wspólne systemu Windows z obsługą dodatkowych ustawień i modyfikowania marginesów.  
   
 ## <a name="syntax"></a>Składnia  
@@ -94,7 +94,7 @@ class CPageSetupDialog : public CCommonDialog
   
  Aby użyć `CPageSetupDialog` obiektów, najpierw utwórz obiekt przy użyciu `CPageSetupDialog` konstruktora. Gdy okno dialogowe zostały utworzone, możesz ustawić lub zmodyfikować wartości w `m_psd` element członkowski danych zainicjować wartości formantów okna dialogowego. [M_psd](#m_psd) struktura jest typu **PAGESETUPDLG**.  
   
- Po inicjowanie formantów okna dialogowego, należy wywołać `DoModal` funkcji członkowskiej, aby wyświetlić okno dialogowe i Zezwalaj użytkownikowi na wybranie opcji drukowania. `DoModal`Zwraca czy użytkownik wybrał OK ( **IDOK**), lub Anuluj ( **IDCANCEL**) przycisku.  
+ Po inicjowanie formantów okna dialogowego, należy wywołać `DoModal` funkcji członkowskiej, aby wyświetlić okno dialogowe i Zezwalaj użytkownikowi na wybranie opcji drukowania. `DoModal` Zwraca czy użytkownik wybrał OK ( **IDOK**), lub Anuluj ( **IDCANCEL**) przycisku.  
   
  Jeśli `DoModal` zwraca **IDOK**, można użyć kilku `CPageSetupDialog`dla funkcji Członkowskich lub dostęp `m_psd` element członkowski danych, aby pobrać wprowadzania informacji przez użytkownika.  
   
@@ -104,11 +104,11 @@ class CPageSetupDialog : public CCommonDialog
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cdialog —](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
  [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
   
@@ -117,7 +117,7 @@ class CPageSetupDialog : public CCommonDialog
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdlgs.h  
   
-##  <a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
+##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog  
  Wywołanie tej funkcji w celu utworzenia `CPageSetupDialog` obiektu.  
   
 ```  
@@ -175,7 +175,7 @@ CPageSetupDialog(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
-##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
  Tworzy kontekstu urządzenia drukarki z [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.  
   
 ```  
@@ -185,7 +185,7 @@ HDC CreatePrinterDC();
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do nowo utworzonej drukarki kontekstu urządzenia (DC).  
   
-##  <a name="domodal"></a>CPageSetupDialog::DoModal  
+##  <a name="domodal"></a>  CPageSetupDialog::DoModal  
  Wywołanie tej funkcji, aby wyświetlić okno dialogowe Ustawienia strony OLE wspólne systemu Windows i Zezwalaj użytkownikowi na wybranie różnych opcji Ustawienia wydruku, takich jak marginesy drukowania, rozmiar i orientację papieru i drukarki docelowej.  
   
 ```  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
+##  <a name="getdevicename"></a>  CPageSetupDialog::GetDeviceName  
  Wywołanie tej funkcji po `DoModal` można pobrać nazwę aktualnie wybrane drukarki.  
   
 ```  
@@ -219,7 +219,7 @@ CString GetDeviceName() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Nazwa urządzenia używane przez **CPageSetupDialog** obiektu.  
   
-##  <a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
+##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  Wywołanie tej funkcji po wywołaniu `DoModal` można pobrać informacji o kontekście urządzenia drukarki `CPageSetupDialog` obiektu.  
   
 ```  
@@ -229,7 +229,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>Wartość zwracana  
  [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktury danych, który zawiera informacje dotyczące inicjowania urządzenia i środowiska sterownika drukarki. Musisz odblokować pamięć podjęte przez tę strukturę z systemu Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) funkcji, która jest opisany w zestawie SDK systemu Windows.  
   
-##  <a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
+##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
  Wywołanie tej funkcji po wywołaniu [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) pobrać nazwy sterownika drukarki zdefiniowane przez system.  
   
 ```  
@@ -242,7 +242,7 @@ CString GetDriverName() const;
 ### <a name="remarks"></a>Uwagi  
  Za pomocą wskaźnika do `CString` obiektu zwróconego przez `GetDriverName` jako wartość `lpszDriverName` w wywołaniu [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
-##  <a name="getmargins"></a>CPageSetupDialog::GetMargins  
+##  <a name="getmargins"></a>  CPageSetupDialog::GetMargins  
  Wywołanie tej funkcji po wywołaniu `DoModal` można pobrać marginesy sterownika urządzenia.  
   
 ```  
@@ -258,7 +258,7 @@ void GetMargins(
  *lpRectMinMargins*  
  Wskaźnik do `RECT` struktury lub `CRect` obiektu, który opisuje (w calach 1/1000 lub mm 1/100) minimalna marginesy wydruku dla aktualnie wybranej drukarki. Przekaż **NULL** dla tego parametru, jeśli nie są zainteresowane prostokąta.  
   
-##  <a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
+##  <a name="getpapersize"></a>  CPageSetupDialog::GetPaperSize  
  Wywołanie tej funkcji można pobrać rozmiar papieru wybrane do drukowania.  
   
 ```  
@@ -268,7 +268,7 @@ CSize GetPaperSize() const;
 ### <a name="return-value"></a>Wartość zwracana  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) obiekt zawierający rozmiar papieru (w calach 1/1000 lub mm 1/100) wybrane do drukowania.  
   
-##  <a name="getportname"></a>CPageSetupDialog::GetPortName  
+##  <a name="getportname"></a>  CPageSetupDialog::GetPortName  
  Wywołanie tej funkcji po wywołaniu `DoModal` można pobrać nazwy portu aktualnie wybranej drukarki.  
   
 ```  
@@ -278,7 +278,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Nazwa portu aktualnie wybrane drukarki.  
   
-##  <a name="m_psd"></a>CPageSetupDialog::m_psd  
+##  <a name="m_psd"></a>  CPageSetupDialog::m_psd  
  Struktura typu **PAGESETUPDLG**, której członkowie przechowywania właściwości obiektu okna dialogowego.  
   
 ```  
@@ -294,7 +294,7 @@ PAGESETUPDLG m_psd;
   
  Zobacz przykład [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
+##  <a name="ondrawpage"></a>  CPageSetupDialog::OnDrawPage  
  Wywoływane przez platformę, by narysować obrazu ekranu z wydrukowaną stroną.  
   
 ```  
@@ -338,7 +338,7 @@ virtual UINT OnDrawPage(
   
  Należy pamiętać, że nie należy do obsługi każdego przypadku `nMessage`. Można obsługiwać jeden składnik obrazu kilka składników obrazu lub cały obszar.  
   
-##  <a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
+##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  Wywoływane przez platformę przed narysowaniem obrazu ekranu z wydrukowaną stroną.  
   
 ```  

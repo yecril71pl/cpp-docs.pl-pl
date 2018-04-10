@@ -1,12 +1,12 @@
 ---
-title: "Dane wejściowe Stream Member — funkcje | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Dane wejściowe Stream Member — funkcje | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 96927d7e1a6718f4663ca42248140ac5a7d8fe50
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="input-stream-member-functions"></a>Input Stream Member — Funkcje
 Funkcje elementów członkowskich strumienia wejściowego służą do wprowadzania dysku. Funkcje Członkowskie obejmują:  
@@ -41,10 +41,10 @@ Funkcje elementów członkowskich strumienia wejściowego służą do wprowadzan
   
 - [Zamknij funkcji dla strumieni danych wejściowych](#vclrftheclosefunctionforinputstreamsanchor15)  
   
-##  <a name="vclrftheopenfunctionforinputstreamsanchor11">Otwórz funkcji dla strumieni danych wejściowych</a>  
+##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> Otwórz funkcji dla strumieni danych wejściowych  
  Jeśli używasz strumienia wejściowego (ifstream) należy skojarzyć strumieniu z określonego pliku. Można to zrobić w konstruktorze lub użyć **Otwórz** funkcji. W obu przypadkach argumenty są takie same.  
   
- Zazwyczaj określić [ios_base::openmode](../standard-library/ios-base-class.md#openmode) Flaga podczas otwierania pliku skojarzone z strumień wejściowy (jest to domyślny tryb **ios::in**). Aby uzyskać listę **open_mode** flagi, zobacz [Otwórz](#vclrftheopenfunctionforinputstreamsanchor11). Flagi można łączyć z bitowego OR (&#124;) — operator.  
+ Zazwyczaj określić [ios_base::openmode](../standard-library/ios-base-class.md#openmode) Flaga podczas otwierania pliku skojarzone z strumień wejściowy (jest to domyślny tryb **ios::in**). Aby uzyskać listę **open_mode** flagi, zobacz [Otwórz](#vclrftheopenfunctionforinputstreamsanchor11). Flagi można łączyć z bitowego OR ( &#124; ) operatora.  
   
  Aby odczytać plik, należy najpierw użyć **niepowodzenie** funkcji członkowskiej, aby określić, czy istnieje:  
   
@@ -55,8 +55,8 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12">Get</a>
- Niesformatowany **uzyskać** funkcji członkowskiej działa jak  **>>**  operatora z dwoma wyjątkami. Najpierw **uzyskać** funkcja zawiera białe znaki ekstraktor wyłącza biały znak podczas **skipws** flaga jest ustawiona (ustawienie domyślne). Drugi, **uzyskać** funkcji jest mniej może spowodować strumienia wyjściowego wiązanej (`cout`, na przykład) do opróżnienia.  
+##  <a name="vclrfthegetfunctionanchor12"></a> Get
+ Niesformatowany **uzyskać** funkcji członkowskiej działa jak **>>** operatora z dwoma wyjątkami. Najpierw **uzyskać** funkcja zawiera białe znaki ekstraktor wyłącza biały znak podczas **skipws** flaga jest ustawiona (ustawienie domyślne). Drugi, **uzyskać** funkcji jest mniej może spowodować strumienia wyjściowego wiązanej (`cout`, na przykład) do opróżnienia.  
   
  Odmiana **uzyskać** funkcja określa adres buforu i maksymalną liczbę znaków do odczytania. Jest to przydatne w przypadku ograniczenie liczby znaków wysyłane do określonej zmiennej, jak pokazano na poniższym przykładzie:  
   
@@ -89,7 +89,7 @@ int main()
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13">Getline</a>
+##  <a name="vclrfthegetlinefunctionanchor13"></a> Getline
  **Getline** funkcja członkowska jest podobny do **uzyskać** funkcji. Obie funkcje umożliwiają trzeci argument, który określa znaku zakończenia dla danych wejściowych. Wartość domyślna to znak nowego wiersza. Funkcjami zarezerwować dla wymaganego znaku zakończenia o jeden znak. Jednak **uzyskać** pozostawia znaku zakończenia w strumieniu i **getline** usuwa znaku zakończenia.  
   
  W poniższym przykładzie znaku zakończenia dla strumienia wejściowego:  
@@ -115,7 +115,7 @@ int main( )
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14">Odczyt</a>
+##  <a name="vclrfthereadfunctionanchor14"></a> Odczyt
  **Odczytu** funkcji członkowskiej odczytuje bajtów z pliku do określonego obszaru pamięci. Długość argumentu określa liczbę bajtów do odczytu. Jeśli ten argument nie zostanie uwzględniony, odczytu zatrzymuje po osiągnięciu fizycznych koniec pliku, lub w przypadku pliku tekstowej, gdy osadzonych `EOF` znak jest do odczytu.  
   
  Ten przykład odczytuje binarne rekordu z pliku Lista płac w strukturze:  
@@ -146,7 +146,7 @@ int main()
   
  Program zakłada, czy rekordy są sformatowane dokładnie określone przez strukturę bez przerywania znaków powrotu karetki i wysuwu wiersza.  
   
-##  <a name="vclrftheseekgandtellgfunctionsanchor7">Funkcje seekg i tellg</a>  
+##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> Funkcje seekg i tellg  
  Plik wejściowy strumieni Zachowaj wewnętrznego wskaźnika do pozycji w pliku, w których dane są odczytywane obok. Ustaw ten wskaźnik z `seekg` funkcji, jak pokazano poniżej:  
   
 ```  
@@ -200,7 +200,7 @@ int main( )
 }  
 ```  
   
-##  <a name="vclrftheclosefunctionforinputstreamsanchor15">Zamknij funkcji dla strumieni danych wejściowych</a>  
+##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> Zamknij funkcji dla strumieni danych wejściowych  
  **Zamknąć** funkcji członkowskiej zamyka skojarzone ze strumienia wejściowego pliku dysku i zwalnia dojście do pliku systemu operacyjnego. [Ifstream](../standard-library/basic-ifstream-class.md) destruktora zamyka plik dla Ciebie, ale może użyć **zamknąć** funkcji, aby otworzyć inny plik dla tego samego obiektu strumienia.  
   
 ## <a name="see-also"></a>Zobacz też  

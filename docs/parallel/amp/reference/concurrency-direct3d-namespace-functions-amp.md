@@ -34,28 +34,28 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>CONCURRENCY::Direct3D — przestrzeń nazw funkcji (AMP)
 ||||  
 |-|-|-|  
-|[ABS](#abs)|[ograniczenie](#clamp)|[countbits —](#countbits)|
+|[abs](#abs)|[ograniczenie](#clamp)|[countbits —](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|||
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
-|[firstbithigh —](#firstbithigh)|[firstbitlow —](#firstbitlow)|[get_buffer](#get_buffer)|  
+|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
-|[mad](#mad)|[make_array](#make_array)|[hałasu](#noise)|  
-|[wartość w radianach](#radians)|[rcp](#rcp)|[reversebits —](#reversebits)|  
-|[saturate —](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
-|[Krok](#step)|[umax](#umax)|[umin](#umin)|  
+|[mad —](#mad)|[make_array](#make_array)|[hałasu](#noise)|  
+|[radians](#radians)|[rcp](#rcp)|[reversebits —](#reversebits)|  
+|[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
+|[step](#step)|[umax](#umax)|[umin](#umin)|  
 
 ## <a name="requirements"></a>Wymagania
 **Nagłówek:** amp.h **Namespace:** współbieżności
   
-##  <a name="abs">ABS</a>  
+##  <a name="abs"></a>  ABS  
  Zwraca wartość bezwzględną argumentu  
   
 ```  
@@ -69,7 +69,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość bezwzględną liczby argumentów.  
   
-##  <a name="clamp">ograniczenie</a>  
+##  <a name="clamp"></a>  ograniczenie  
  Oblicza wartość pierwszy argument określony zablokowane za pomocą do zdefiniowanych przez drugi i trzeci argument określonego zakresu.  
   
 ```  
@@ -98,7 +98,7 @@ inline int clamp(
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość clamped `_X`.  
   
-##  <a name="countbits">countbits —</a>  
+##  <a name="countbits"></a>  countbits —  
  Oblicza liczbę bitów zestawu _X  
   
 ```  
@@ -188,7 +188,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
  `_Av`  
  Accelerator_view, dla którego ma zostać zwolnione blokady.  
   
-##  <a name="firstbithigh">firstbithigh —</a>  
+##  <a name="firstbithigh"></a>  firstbithigh —  
  Pobiera lokalizację pierwszy bit zestawu w _X, zaczynając od bitu najwyższego rzędu i kierunku z bitowego najniższy kolejności.  
   
 ```  
@@ -202,7 +202,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Lokalizacja pierwszy bit zestawu  
   
-##  <a name="firstbitlow">firstbitlow —</a>  
+##  <a name="firstbitlow"></a>  firstbitlow —  
  Pobiera lokalizację pierwszy bit zestawu w _X, rozpoczęciem z bitowego najniższy kolejności i pracy bit najwyższej kolejności.  
   
 ```  
@@ -216,7 +216,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca położenie pierwszego ustawiony bit  
   
-##  <a name="get_buffer"></a>  get_buffer  
+##  <a name="get_buffer"></a>  get_buffer —  
  Pobierz interfejs buforu Direct3D bazowy określonej tablicy.  
   
 ```  
@@ -260,7 +260,7 @@ inline int imax(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca maksymalną wartość liczbową argumentów  
   
-##  <a name="imin"></a>  imin —  
+##  <a name="imin"></a>  imin  
  Określić minimalną wartość liczbową argumentów  
   
 ```  
@@ -279,7 +279,7 @@ inline int imin(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca minimalną wartość liczbowa argumentów  
   
-##  <a name="is_timeout_disabled"></a>  is_timeout_disabled —  
+##  <a name="is_timeout_disabled"></a>  is_timeout_disabled  
  Zwraca wartość boolean flagę wskazującą, czy limit czasu jest wyłączona dla określonego accelerator_view. Odpowiada to flaga D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT dla tworzenia urządzenia Direct3D.  
   
 ```  
@@ -367,7 +367,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>Wartość zwracana  
  Tablica utworzone przy użyciu podanego buforu Direct3D.  
   
-##  <a name="noise">hałasu</a>  
+##  <a name="noise"></a>  hałasu  
  Generuje losowe wartości przy użyciu algorytmu szumu Perlin  
   
 ```  
@@ -381,7 +381,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość szumu Perlin do zakresu od -1 do 1  
   
-##  <a name="radians">wartość w radianach</a>  
+##  <a name="radians"></a>  wartość w radianach  
  Konwertuje _X stopnie na radiany  
   
 ```  
@@ -412,7 +412,7 @@ inline double rcp(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Wzajemne określonego argumentu.  
   
-##  <a name="reversebits">reversebits —</a>  
+##  <a name="reversebits"></a>  reversebits —  
  Odwraca kolejność bitów w _X  
   
 ```  
@@ -426,7 +426,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość w kolejności bit wycofana w _X  
   
-##  <a name="saturate">saturate —</a>  
+##  <a name="saturate"></a>  saturate —  
  Zawęża _X liczbą z zakresu od 0 do 1  
   
 ```  
@@ -477,7 +477,7 @@ inline float smoothstep(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość 0, jeśli _X jest mniejsza niż _min —; 1, jeśli _X jest większa niż _maksymalny; w przeciwnym razie wartość z zakresu od 0 do 1, jeśli _X znajduje się w zakresie [_min —, _maksymalny]  
   
-##  <a name="step">Krok</a>  
+##  <a name="step"></a>  Krok  
  Porównuje dwie wartości, zwraca 0 lub 1, w oparciu o wartość, która jest większa  
   
 ```  

@@ -1,12 +1,12 @@
 ---
-title: "tile_barrier — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: tile_barrier — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - tile_barrier
@@ -21,17 +21,17 @@ dev_langs:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-caps.latest.revision: 
+caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e7d868b4bd677d207590de6449e3d5643001e857
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="tilebarrier-class"></a>tile_barrier — Klasa
 Synchronizuje wykonywanie wątków, które są uruchomione w grupie wątku (kafelka) przy użyciu `wait` metody. Tylko środowiska uruchomieniowego można utworzyć wystąpienia tej klasy.  
@@ -81,7 +81,7 @@ tile_barrier(
  `_Other`  
  `tile_barrier` Obiektu do skopiowania.  
 
-## <a name="wait">oczekiwania</a> 
+## <a name="wait"></a>  oczekiwania 
 Powoduje, że wszystkie wątki w grupie wątku (kafelka), można zatrzymać wykonywania, dopóki wszystkie wątki na kafelku zakończyły oczekiwania.  
   
 ### <a name="syntax"></a>Składnia 

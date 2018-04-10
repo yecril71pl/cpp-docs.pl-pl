@@ -1,12 +1,12 @@
 ---
-title: "back_insert_iterator — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: back_insert_iterator Class | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - iterator/std::back_insert_iterator
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7646b26c1651ccf93fcc3bcb6828ae402ea5ca07
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator — Klasa
 Opisuje adapter iteratora, który spełnia wymagania iteratora danych wyjściowych. Wstawia (a nie zastępuje) elementy do tylnego końca sekwencji i w ten sposób zapewnia semantykę, która różni się od semantyki zastępowania, dostarczanej przez iteratory kontenerów sekwencji C++. `back_insert_iterator` Klasy jest którego ma zastosowany szablon na typ kontenera.  
@@ -59,13 +59,13 @@ class back_insert_iterator;
 |||  
 |-|-|  
 |[container_type](#container_type)|Typ, który udostępnia kontener dla `back_insert_iterator`.|  
-|[Odwołanie](#reference)|Typ, który zawiera odwołanie do `back_insert_iterator`.|  
+|[reference](#reference)|Typ, który zawiera odwołanie do `back_insert_iterator`.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
-|[operator *](#op_star)|Operator usuwania odwołań używaną do zaimplementowania wyrażenia iteratora dane wyjściowe * `i`  =  `x` do tyłu wstawiania.|  
+|[operator*](#op_star)|Operator usuwania odwołań używaną do zaimplementowania wyrażenia iteratora dane wyjściowe * `i`  =  `x` do tyłu wstawiania.|  
 |[operator++](#op_add_add)|Zwiększa `back_insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.|  
 |[operator=](#op_eq)|Operator przypisania używaną do zaimplementowania wyrażenia iteratora dane wyjściowe * `i`  =  `x` do tyłu wstawiania.|  
   

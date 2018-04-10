@@ -1,12 +1,12 @@
 ---
-title: "runtime_exception — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: runtime_exception — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - runtime_exception
@@ -18,17 +18,17 @@ dev_langs:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 678f0a93577a6e30afbc5e0c6d83aca6b6a7bedc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="runtimeexception-class"></a>runtime_exception — Klasa
 Typ podstawowy dla wyjątków w bibliotece C++ Accelerated ogromną równoległości (AMP).  
@@ -45,8 +45,8 @@ class runtime_exception : public std::exception;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[runtime_exception — Konstruktor](#ctor)|Inicjuje nowe wystąpienie klasy `runtime_exception` klasy.|  
-|[~ runtime_exception — destruktor](#dtor)|Niszczy `runtime_exception` obiektu.|  
+|[runtime_exception Constructor](#ctor)|Inicjuje nowe wystąpienie klasy `runtime_exception` klasy.|  
+|[~runtime_exception Destructor](#dtor)|Niszczy `runtime_exception` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -71,7 +71,7 @@ class runtime_exception : public std::exception;
   
  **Namespace:** współbieżności  
 
-## <a name="runtime_exception__ctor">runtime_exception — Konstruktor</a>  
+## <a name="runtime_exception__ctor"></a>  runtime_exception — Konstruktor  
 Inicjuje nowe wystąpienie klasy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -101,7 +101,7 @@ runtime_exception(
 ### <a name="return-value"></a>Wartość zwracana  
  `runtime_exception` Obiektu.  
 
-## <a name="dtor">~ runtime_exception — destruktor</a>  
+## <a name="dtor"></a>  ~ runtime_exception — destruktor  
 Niszczy obiektu.  
   
 ### <a name="syntax"></a>Składnia  

@@ -1,12 +1,12 @@
 ---
-title: "tiled_extent — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: tiled_extent — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent — Klasa
 A `tiled_extent` obiekt jest `extent` obiektu wymiarów jednej do trzech dzielący miejsca zakresu w jednej, dwóch lub trójwymiarowy Kafelki.  
@@ -83,7 +83,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|Zwraca `extent` obiekt, który przechwytuje wartości `tiled_extent` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.|  
-|[Konsola](#pad)|Zwraca nowy `tiled_extent` obiektu z zakresów dostosowana się być podzielna przez wymiary kafelka.|  
+|[pad](#pad)|Zwraca nowy `tiled_extent` obiektu z zakresów dostosowana się być podzielna przez wymiary kafelka.|  
 |[TRUNCATE](#truncate)|Zwraca nowy `tiled_extent` obiektu z zakresów dostosowana w dół do być podzielna przez wymiary kafelka.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
@@ -98,7 +98,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[tile_dim0 Constant](#tile_dim0)|Przechowuje długość najważniejszych wymiaru.|  
-|[Stała tile_dim1](#tile_dim1)|Przechowuje długość dalej do najbardziej znaczących wymiaru.|  
+|[tile_dim1 Constant](#tile_dim1)|Przechowuje długość dalej do najbardziej znaczących wymiaru.|  
 |[tile_dim2 Constant](#tile_dim2)|Przechowuje długość najmniej znaczący wymiaru.|  
 
   
@@ -118,7 +118,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  **Namespace:** współbieżności  
 
-## <a name="ctor">tiled_extent — Konstruktor</a>  
+## <a name="ctor"> </a>  tiled_extent — Konstruktor  
 Inicjuje nowe wystąpienie klasy `tiled_extent` klasy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -153,7 +153,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  `extent` Obiekt, który przechwytuje wymiary to `tiled_extent` wystąpienia.  
   
 
-## <a name="pad">Konsola</a>   
+## <a name="pad"> </a>  Konsola   
 Zwraca nowy `tiled_extent` obiektu z zakresów dostosowana się być podzielna przez wymiary kafelka.  
   
 ### <a name="syntax"></a>Składnia  
@@ -164,7 +164,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Wartość zwracana  
  Nowe `tiled_extent` obiektu przez wartość. 
-## <a name="truncate">TRUNCATE</a>   
+## <a name="truncate"> </a>  TRUNCATE   
 Zwraca nowy `tiled_extent` obiektu z zakresów dostosowana w dół do być podzielna przez wymiary kafelka.  
   
 ### <a name="syntax"></a>Składnia  

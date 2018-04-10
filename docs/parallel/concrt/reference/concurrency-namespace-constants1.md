@@ -1,10 +1,10 @@
 ---
-title: "stałe przestrzeń nazw współbieżności | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: stałe przestrzeń nazw współbieżności | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::AgentEventGuid
@@ -22,25 +22,25 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 83c9629feed07cee5bd13138f3def89251c081cb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-constants"></a>stałe przestrzeń nazw współbieżności
 ||||  
 |-|-|-|  
-|[AgentEventGuid](#agenteventguid)|[CONCRT_RM_VERSION_1](#concrt_rm_version_1)|[COOPERATIVE_TIMEOUT_INFINITE —](#cooperative_timeout_infinite)|  
-|[COOPERATIVE_WAIT_TIMEOUT](#cooperative_wait_timeout)|[Choreeventguid —](#choreeventguid)|[ConcRTEventGuid](#concrteventguid)|  
-|[ConcRT_ProviderGuid](#concrt_providerguid)|[ContextEventGuid](#contexteventguid)|[INHERIT_THREAD_PRIORITY —](#inherit_thread_priority)|  
-|[Lockeventguid —](#lockeventguid)|[MaxExecutionResources](#maxexecutionresources)|[PPLParallelForEventGuid](#pplparallelforeventguid)|  
+|[AgentEventGuid](#agenteventguid)|[CONCRT_RM_VERSION_1](#concrt_rm_version_1)|[COOPERATIVE_TIMEOUT_INFINITE](#cooperative_timeout_infinite)|  
+|[COOPERATIVE_WAIT_TIMEOUT](#cooperative_wait_timeout)|[ChoreEventGuid](#choreeventguid)|[ConcRTEventGuid](#concrteventguid)|  
+|[ConcRT_ProviderGuid](#concrt_providerguid)|[Contexteventguid —](#contexteventguid)|[INHERIT_THREAD_PRIORITY](#inherit_thread_priority)|  
+|[LockEventGuid](#lockeventguid)|[MaxExecutionResources](#maxexecutionresources)|[PPLParallelForEventGuid](#pplparallelforeventguid)|  
 |[PPLParallelForeachEventGuid](#pplparallelforeacheventguid)|[PPLParallelInvokeEventGuid](#pplparallelinvokeeventguid)|[ResourceManagerEventGuid](#resourcemanagereventguid)|  
 |[ScheduleGroupEventGuid](#schedulegroupeventguid)|[SchedulerEventGuid](#schedulereventguid)|[VirtualProcessorEventGuid](#virtualprocessoreventguid)|  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/23/2018
 const __declspec(selectany) GUID AgentEventGuid = {0xb9b5b78c, 0x713, 0x4898, { 0xa2, 0x1a, 0xc6, 0x79, 0x49, 0xdc, 0xed, 0x7 } };
 ```  
   
-##  <a name="choreeventguid">Choreeventguid —</a>  
+##  <a name="choreeventguid"></a>  Choreeventguid —  
  Kategoria GUID opisujące zdarzenia ETW wywoływane przez współbieżność środowiska wykonawczego, które są bezpośrednio związane z zadań i zadań.  
   
 ```
@@ -70,7 +70,7 @@ const __declspec(selectany) GUID ConcRT_ProviderGuid =
     { 0xF7B697A3, 0x4DB5, 0x4d3b, { 0xBE, 0x71, 0xC4, 0xD2, 0x84, 0xE6, 0x59, 0x2F } };
 ```  
   
-##  <a name="concrt_rm_version_1"></a>  CONCRT_RM_VERSION_1 —  
+##  <a name="concrt_rm_version_1"></a>  CONCRT_RM_VERSION_1  
  Wskazuje obsługi interfejsu Menedżera zasobów zdefiniowane w programie Visual Studio 2010.  
   
 ```
@@ -88,14 +88,14 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 ### <a name="remarks"></a>Uwagi  
  Ta kategoria zdarzenia nie jest obecnie uruchamiany przez współbieżności środowiska wykonawczego.  
   
-##  <a name="cooperative_timeout_infinite">COOPERATIVE_TIMEOUT_INFINITE —</a>  
+##  <a name="cooperative_timeout_infinite"></a>  COOPERATIVE_TIMEOUT_INFINITE —  
  Wartość wskazująca, której oczekiwania nigdy nie ma limitu czasu.  
   
 ```
 const unsigned int COOPERATIVE_TIMEOUT_INFINITE = (unsigned int)-1;
 ```  
   
-##  <a name="cooperative_wait_timeout"></a>  COOPERATIVE_WAIT_TIMEOUT —  
+##  <a name="cooperative_wait_timeout"></a>  COOPERATIVE_WAIT_TIMEOUT  
  Wartość wskazująca, że oczekiwania upłynął limit czasu.  
   
 ```
@@ -110,14 +110,14 @@ const __declspec(selectany) GUID ContextEventGuid =
     { 0x5727A00F, 0x50BE, 0x4519, { 0x82, 0x56, 0xF7, 0x69, 0x98, 0x71, 0xFE, 0xCB } };
 ```  
   
-##  <a name="inherit_thread_priority">INHERIT_THREAD_PRIORITY —</a>  
+##  <a name="inherit_thread_priority"></a>  INHERIT_THREAD_PRIORITY  
  Specjalna wartość dla klucza zasad `ContextPriority` wskazującą, czy priorytet wątku wszystkie konteksty w harmonogramie powinna być taka sama jak w wątku, w której został utworzony harmonogram.  
   
 ```
 const unsigned int INHERIT_THREAD_PRIORITY = 0x0000F000;
 ```  
   
-##  <a name="lockeventguid">Lockeventguid —</a>  
+##  <a name="lockeventguid"></a>  Lockeventguid —  
  Kategoria GUID opisujące zdarzenia ETW wywoływane przez współbieżność środowiska wykonawczego, które są bezpośrednio związane z blokad.  
   
 ```
@@ -128,7 +128,7 @@ const __declspec(selectany) GUID LockEventGuid =
 ### <a name="remarks"></a>Uwagi  
  Ta kategoria zdarzenia nie jest obecnie uruchamiany przez współbieżności środowiska wykonawczego.  
   
-##  <a name="maxexecutionresources"></a>  Maxexecutionresources —  
+##  <a name="maxexecutionresources"></a>  MaxExecutionResources  
  Specjalna wartość kluczy zasad `MinConcurrency` i `MaxConcurrency`. Wartość domyślna to liczba wątków sprzętu na komputerze w przypadku braku inne ograniczenia.  
   
 ```
@@ -159,7 +159,7 @@ const __declspec(selectany) GUID PPLParallelInvokeEventGuid =
     { 0xd1b5b133, 0xec3d, 0x49f4, { 0x98, 0xa3, 0x46, 0x4d, 0x1a, 0x9e, 0x46, 0x82 } };
 ```  
   
-##  <a name="resourcemanagereventguid"></a>  ResourceManagerEventGuid  
+##  <a name="resourcemanagereventguid"></a>  Resourcemanagereventguid —  
  Kategorię GUID opisujące zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z Menedżera zasobów.  
   
 ```

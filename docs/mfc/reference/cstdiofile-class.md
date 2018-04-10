@@ -1,12 +1,12 @@
 ---
 title: Klasa CStdioFile | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CStdioFile
@@ -27,17 +27,17 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cstdiofile-class"></a>Klasa CStdioFile
 Reprezentuje plik strumienia środowiska wykonawczego C, jak otworzyć za pomocą funkcji środowiska wykonawczego [fopen —](../../c-runtime-library/reference/fopen-wfopen.md).  
@@ -85,14 +85,14 @@ class CStdioFile : public CFile
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [Cfile —](../../mfc/reference/cfile-class.md)  
+ [CFile](../../mfc/reference/cfile-class.md)  
   
  `CStdioFile`  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afx.h  
   
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile  
  Tworzy i inicjuje `CStdioFile` obiektu.  
   
 ```  
@@ -141,7 +141,7 @@ CStdioFile(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>  CStdioFile::m_pStream  
  `m_pStream` Elementu członkowskiego danych jest wskaźnik do otwartego pliku, ponieważ zwracane przez funkcję wykonawcze języka C `fopen`.  
   
 ```  
@@ -151,7 +151,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>Uwagi  
  Jest **NULL** Jeśli plik nie został otwarty lub został zamknięty.  
   
-##  <a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>  CStdioFile::Open  
  Przeciążone. Otwórz jest przeznaczony do użytku z domyślnym `CStdioFile` konstruktora.  
   
 ```  
@@ -173,7 +173,7 @@ virtual BOOL Open(
  Ciąg, który jest ścieżka do żądanego pliku. Ścieżka może być względna lub bezwzględna.  
   
  `nOpenFlags`  
- Tryb dostępu i udostępniania. Określa akcję wykonywaną podczas otwierania pliku. Opcje można łączyć przy użyciu wartości bitowe lub (&#124;) — operator. Opcji jednego udziału i uprawnień dostępu co są wymagane; tryby modeCreate i modeNoInherit są opcjonalne.  
+ Tryb dostępu i udostępniania. Określa akcję wykonywaną podczas otwierania pliku. Opcje można połączyć za pomocą wartości bitowe lub (&#124;) operatora. Opcji jednego udziału i uprawnień dostępu co są wymagane; tryby modeCreate i modeNoInherit są opcjonalne.  
   
  `pError`  
  Wskaźnik do istniejącego obiektu wyjątku plików, który zostanie wyświetlony stan operacji nie powiodło się.  
@@ -182,11 +182,11 @@ virtual BOOL Open(
  Wskaźnik do `CAtlTransactionManager` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`w przypadku powodzenia; w przeciwnym razie `FALSE`.  
+ `TRUE` w przypadku powodzenia; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>  CStdioFile::ReadString  
  Odczytuje dane tekstu w buforze, do limitu `nMax`-1, znaki z pliku skojarzone z `CStdioFile` obiektu.  
   
 ```  
@@ -221,7 +221,7 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>  CStdioFile::Seek  
  Zmienia położenie wskaźnika w wcześniej otwartych plików.  
   
 ```  
@@ -258,7 +258,7 @@ virtual ULONGLONG Seek(
   
  [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>  CStdioFile::WriteString  
  Zapisuje dane z bufora do pliku związanego z `CStdioFile` obiektu.  
   
 ```  

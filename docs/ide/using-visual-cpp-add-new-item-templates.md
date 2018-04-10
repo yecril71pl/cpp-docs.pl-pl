@@ -1,12 +1,12 @@
 ---
-title: "Za pomocą języka Visual C++ szablonów Dodaj nowy element | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Za pomocą języka Visual C++ szablonów Dodaj nowy element | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Używanie szablonów Dodaj nowy element programu Visual C++
 Możesz łatwo dodać elementy, które są wspólne dla projektów Visual C++ przy użyciu **Dodaj nowy element** polecenia. Jeśli używasz **Dodaj nowy element** polecenia `Add New Item` zostanie wyświetlone okno dialogowe z listy szablonów elementów, które dodają odpowiednie pliki do projektu.  
@@ -56,7 +56,7 @@ Możesz łatwo dodać elementy, które są wspólne dla projektów Visual C++ pr
 |Raport (RDLC)|Tworzy plik raportu.|  
 |Plik zasobów (.rc)|Tworzy plik zasobów Win32.|  
 |Plik szablonu zasobów (.rct —)|Tworzy plik szablonu zasobów.|  
-|Wstążka (.mfcribbon ms)|Tworzy plik wstążki.|  
+|Ribbon (.mfcribbon-ms)|Tworzy plik wstążki.|  
 |Plik odpowiedzi serwera (braku)|Tworzy plik odpowiedzi serwera, który jest używany przez serwer ATL.|  
 |Plik skryptu SQL (SQL)|Tworzy plik skryptu SQL. **Uwaga:** ten szablon nie jest funkcją Professional Edition.|  
 |Arkusz stylów (CSS)|Dodaje kaskadowy arkusz stylów używany do definicji wzbogaconych styli HTML.|  

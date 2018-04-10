@@ -1,29 +1,29 @@
 ---
-title: Operatory ATL | Dokumentacja firmy Microsoft
-ms.custom: 
+title: ATL Operators | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-caps.latest.revision: 
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bcbe04fb057ffc8077f422cd784b5d31691df1e3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="atl-operators"></a>Operatory ATL
 Ta sekcja zawiera tematy referencyjne dla operatorów globalnych ATL.  
@@ -40,7 +40,7 @@ Ta sekcja zawiera tematy referencyjne dla operatorów globalnych ATL.
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h.  
   
-##  <a name="operator_eq_eq">operator ==</a>  
+##  <a name="operator_eq_eq"></a>  operator ==  
  Porównuje `CSid` obiektów lub `SID` struktur (identyfikator zabezpieczeń) pod kątem równości.  
   
 ```   
@@ -57,7 +57,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **true** Jeśli obiekty są takie same, **false** nie są równe.  
   
-##  <a name="operator_neq">operator! =</a>  
+##  <a name="operator_neq"></a>  operator! =  
  Porównuje `CSid` obiektów lub `SID` struktur (identyfikator zabezpieczeń) pod kątem nierówności.  
   
 ```   
@@ -74,7 +74,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **true** Jeśli obiekty nie są takie same, **false** czy są równe.  
   
-##  <a name="operator_lt">Operator <</a>  
+##  <a name="operator_lt"></a>  Operator <  
  Sprawdza, czy `CSid` obiektu lub `SID` struktura po lewej stronie operatora jest mniejsza niż `CSid` obiektu lub `SID` struktury po prawej stronie (na potrzeby zgodności standardowa biblioteka C++).  
   
 ```   
@@ -94,7 +94,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Uwagi  
  Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implementowane, aby zapewnić zgodność z klasy kolekcji standardowa biblioteka C++.  
   
-##  <a name="operator_gt">operator ></a>  
+##  <a name="operator_gt"></a>  operator >  
  Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest większa niż `CSid` obiektu lub `SID` struktury po prawej stronie (na potrzeby zgodności standardowa biblioteka C++).  
   
 ```   
@@ -114,7 +114,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Uwagi  
  Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implementowane, aby zapewnić zgodność z klasy kolekcji standardowa biblioteka C++.  
   
-##  <a name="operator_lt__eq">Operator < =</a>  
+##  <a name="operator_lt__eq"></a>  Operator < =  
  Sprawdza, czy `CSid` obiektu lub `SID` struktura po lewej stronie operatora jest mniejsze niż lub równe `CSid` obiektu lub `SID` struktury po prawej stronie (na potrzeby zgodności standardowa biblioteka C++).  
   
 ```   
@@ -134,7 +134,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Uwagi  
  Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implementowane, aby zapewnić zgodność z klasy kolekcji standardowa biblioteka C++.  
   
-##  <a name="operator_gt__eq">operator > =</a>  
+##  <a name="operator_gt__eq"></a>  operator > =  
  Sprawdza, czy `CSid` obiektu lub `SID` struktura po lewej stronie operatora jest większa niż lub równa `CSid` obiektu lub `SID` struktury po prawej stronie (na potrzeby zgodności standardowa biblioteka C++).  
   
 ```   

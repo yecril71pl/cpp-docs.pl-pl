@@ -1,12 +1,12 @@
 ---
-title: "completion_future — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: completion_future — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="completionfuture-class"></a>completion_future — Klasa
 Reprezentuje przyszłych odpowiadający C++ AMP operację asynchroniczną.  
@@ -50,14 +50,14 @@ class completion_future;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[completion_future — Konstruktor](#ctor)|Inicjuje nowe wystąpienie klasy `completion_future` klasy.|  
-|[~completion_future Destructor](#dtor)|Niszczy `completion_future` obiektu.|  
+|[~ completion_future — destruktor](#dtor)|Niszczy `completion_future` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[get](#get)|Czeka, aż do zakończenia skojarzonego operację asynchroniczną.|  
-|[następnie](#then)|Powiązany obiekt funkcja wywołania zwrotnego do `completion_future` obiektu ma być wykonywana w przypadku skojarzone operację asynchroniczną kończy działanie.|  
+|[then](#then)|Powiązany obiekt funkcja wywołania zwrotnego do `completion_future` obiektu ma być wykonywana w przypadku skojarzone operację asynchroniczną kończy działanie.|  
 |[to_task](#to_task)|Zwraca `task` obiektu odpowiadającego skojarzone operację asynchroniczną.|  
 |[Nieprawidłowa](#valid)|Pobiera wartość logiczną wskazującą, czy obiekt jest skojarzony z operacji asynchronicznej.|  
 |[oczekiwania](#wait)|Bloki przed zakończeniem skojarzone operacji asynchronicznej.|  
@@ -156,7 +156,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|Kopiuje zawartość określonego `completion_future` obiekt ten element, za pomocą bezpośrednich kopii.|  
 |`completion_future& operator=(completion_future&& _Other);`|Kopiuje zawartość określonego `completion_future` obiekt ten element, przy użyciu przypisania przenoszenia.|  
   
-## <a name="then">następnie</a> 
+## <a name="then"></a> następnie 
 
 Powiązany obiekt funkcja wywołania zwrotnego do `completion_future` obiektu ma być wykonywana w przypadku skojarzone operację asynchroniczną kończy działanie.  
   
@@ -187,7 +187,7 @@ concurrency::task<void> to_task() const;
 ### <a name="return-value"></a>Wartość zwracana  
  A `task` obiektu odpowiadającego skojarzone operację asynchroniczną.  
   
-## <a name="valid">Nieprawidłowa</a> 
+## <a name="valid"></a> Nieprawidłowa 
 
 Pobiera wartość logiczną wskazującą, czy obiekt jest skojarzony z operacji asynchronicznej.  
   
@@ -200,7 +200,7 @@ bool valid() const;
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli obiekt jest skojarzony z operacji asynchronicznej; w przeciwnym razie `false`.  
   
-## <a name="wait">oczekiwania</a> 
+## <a name="wait"></a> oczekiwania 
 
 Bloki przed zakończeniem skojarzone operacji asynchronicznej.  
   

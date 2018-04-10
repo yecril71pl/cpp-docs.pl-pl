@@ -1,10 +1,10 @@
 ---
-title: "CONCURRENCY::fast_math — przestrzeń nazw funkcji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: CONCURRENCY::fast_math — przestrzeń nazw funkcji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math::acos
@@ -53,45 +53,45 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 537e257ade021f8662d75b9316d60a16a4133831
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>CONCURRENCY::fast_math — przestrzeń nazw funkcji
 ||||  
 |-|-|-|  
-|[ACOS](#acos)|[acosf](#acosf)|[ASIN](#asin)|  
+|[ACOS](#acos)|[acosf](#acosf)|[asin](#asin)|  
 |[asinf —](#asinf)|[atan](#atan)|[atan2](#atan2)|  
 |[atan2f](#atan2f)|[atanf](#atanf)|[ceil](#ceil)|  
 |[ceilf](#ceilf)|[COS](#cos)|[cosf](#cosf)|  
-|[COSH](#cosh)|[coshf](#coshf)|[EXP](#exp)|  
+|[cosh](#cosh)|[coshf](#coshf)|[exp](#exp)|  
 |[exp2](#exp2)|[exp2f](#exp2f)|[expf](#expf)|  
-|[fabs —](#fabs)|[fabsf —](#fabsf)|[FLOOR](#floor)|  
+|[fabs](#fabs)|[fabsf](#fabsf)|[floor](#floor)|  
 |[floorf](#floorf)|[fmax](#fmax)|[fmaxf](#fmaxf)|  
-|[fmin](#fmin)|[fminf](#fminf)|[fmod —](#fmod)|  
+|[fmin](#fmin)|[fminf](#fminf)|[fmod](#fmod)|  
 |[fmodf](#fmodf)|[frexp](#frexp)|[frexpf](#frexpf)|  
 |[isfinite](#isfinite)|[isinf](#isinf)|[isnan](#isnan)|  
 |[ldexp](#ldexp)|[ldexpf](#ldexpf)|[log](#log)|  
 |[log10](#log10)|[log10f](#log10f)|[log2](#log2)|  
 |[log2f](#log2f)|[logf](#logf)|[modf](#modf)|  
-|[modff](#modff)|[Pow](#pow)|[powf](#powf)|  
+|[modff](#modff)|[pow](#pow)|[powf](#powf)|  
 |[ROUND](#round)|[roundf](#roundf)|[rsqrt](#rsqrt)|  
 |[rsqrtf](#rsqrtf)|[signbit](#signbit)|[signbitf](#signbitf)|  
-|[sin](#sin)|[sincos —](#sincos)|[sincosf](#sincosf)|  
-|[sinf](#sinf)|[SINH](#sinh)|[sinhf](#sinhf)|  
+|[sin](#sin)|[sincos](#sincos)|[sincosf](#sincosf)|  
+|[sinf](#sinf)|[sinh](#sinh)|[sinhf](#sinhf)|  
 |[sqrt](#sqrt)|[sqrtf](#sqrtf)|[tan](#tan)|  
-|[tanf —](#tanf)|[TANH](#tanh)|[tanhf](#tanhf)|  
-|[TRUNC —](#trunc)|[truncf](#truncf)|  
+|[tanf —](#tanf)|[tanh](#tanh)|[tanhf](#tanhf)|  
+|[trunc](#trunc)|[truncf](#truncf)|  
   
-##  <a name="acos">ACOS</a>  
+##  <a name="acos"></a>  ACOS  
  Oblicza cosinus argumentu  
   
 ```  
@@ -119,7 +119,7 @@ inline float acosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus cosinus wartość argumentu  
   
-##  <a name="asin">ASIN</a>  
+##  <a name="asin"></a>  ASIN  
  Oblicza sinus argumentu  
   
 ```  
@@ -133,7 +133,7 @@ inline float asin(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus sinus wartość argumentu  
   
-##  <a name="asinf">asinf —</a>  
+##  <a name="asinf"></a>  asinf —  
  Oblicza sinus argumentu  
   
 ```  
@@ -269,7 +269,7 @@ inline float coshf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca cosinus hiperboliczny wartość argumentu  
   
-##  <a name="cos">COS</a>  
+##  <a name="cos"></a>  COS  
  Oblicza cosinus argumentu  
   
 ```  
@@ -283,7 +283,7 @@ inline float cos(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca cosinus wartość argumentu  
   
-##  <a name="cosh">COSH</a>  
+##  <a name="cosh"></a>  COSH  
  Oblicza cosinus hiperboliczny wartość argumentu  
   
 ```  
@@ -297,7 +297,7 @@ inline float cosh(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca cosinus hiperboliczny wartość argumentu  
   
-##  <a name="exp">EXP</a>  
+##  <a name="exp"></a>  EXP  
  Oblicza base e wykładniczej argumentu  
   
 ```  
@@ -353,7 +353,7 @@ inline float expf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wykładniczej argumentu base-e  
   
-##  <a name="fabs">fabs —</a>  
+##  <a name="fabs"></a>  fabs —  
  Zwraca wartość bezwzględną argumentu  
   
 ```  
@@ -367,7 +367,7 @@ inline float fabs(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość bezwzględną argumentu  
   
-##  <a name="fabsf">fabsf —</a>  
+##  <a name="fabsf"></a>  fabsf —  
  Zwraca wartość bezwzględną argumentu  
   
 ```  
@@ -381,7 +381,7 @@ inline float fabsf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość bezwzględną argumentu  
   
-##  <a name="floor">FLOOR</a>  
+##  <a name="floor"></a>  FLOOR  
  Oblicza Zaokrąglenie w dół argumentu  
   
 ```  
@@ -447,7 +447,7 @@ inline float fmaxf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca maksymalną wartość liczbową argumentów  
   
-##  <a name="fmin"></a>  Fmin —  
+##  <a name="fmin"></a>  fmin  
  Określić minimalną wartość liczbową argumentów  
   
 ```  
@@ -485,7 +485,7 @@ inline float fminf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca minimalną wartość liczbowa argumentów  
   
-##  <a name="fmod">fmod —</a>  
+##  <a name="fmod"></a>  fmod —  
  Oblicza resztę zmiennoprzecinkowe z _X/_Y  
   
 ```  
@@ -761,7 +761,7 @@ inline float modff(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca podpisem części ułamkowej _X  
   
-##  <a name="pow">Pow</a>  
+##  <a name="pow"></a>  Pow  
  Oblicza _X podniesionej do potęgi _Y  
   
 ```  
@@ -798,7 +798,7 @@ inline float powf(
   
 ### <a name="return-value"></a>Wartość zwracana  
   
-##  <a name="round">ROUND</a>  
+##  <a name="round"></a>  ROUND  
  Zaokrągla _X do najbliższej liczby całkowitej.  
   
 ```  
@@ -910,7 +910,7 @@ inline float sinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca sinus wartość argumentu  
   
-##  <a name="sincos">sincos —</a>  
+##  <a name="sincos"></a>  sincos —  
  Oblicza sinus i cosinus wartość _X  
   
 ```  
@@ -950,7 +950,7 @@ inline void sincosf(
  `_C`  
  Zwraca cosinus wartość _X  
   
-##  <a name="sinh">SINH</a>  
+##  <a name="sinh"></a>  SINH  
  Oblicza sinus hiperboliczny wartość argumentu  
   
 ```  
@@ -1006,7 +1006,7 @@ inline float sqrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwiastek squre argumentu  
   
-##  <a name="tan">tan</a>  
+##  <a name="tan"></a>  tan  
  Oblicza tangens wartość argumentu  
   
 ```  
@@ -1020,7 +1020,7 @@ inline float tan(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca tangens wartość argumentu  
   
-##  <a name="tanf">tanf —</a>  
+##  <a name="tanf"></a>  tanf —  
  Oblicza tangens wartość argumentu  
   
 ```  
@@ -1034,7 +1034,7 @@ inline float tanf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca tangens wartość argumentu  
   
-##  <a name="tanh">TANH</a>  
+##  <a name="tanh"></a>  TANH  
  Oblicza tangens hiperboliczny wartość argumentu  
   
 ```  
@@ -1062,7 +1062,7 @@ inline float tanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca tangens hiperboliczny wartość argumentu  
   
-##  <a name="trunc">TRUNC —</a>  
+##  <a name="trunc"></a>  TRUNC —  
  Obcina argument składnika liczba całkowita  
   
 ```  

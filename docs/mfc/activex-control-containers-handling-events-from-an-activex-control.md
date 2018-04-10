@@ -1,12 +1,12 @@
 ---
-title: "Kontenery formantów ActiveX: Obsługa zdarzeń z formantu ActiveX | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Kontenery formantów ActiveX: Obsługa zdarzeń z formantu ActiveX | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Kontenery kontrolek ActiveX: obsługa zdarzeń z kontrolki ActiveX
 W tym artykule omówiono korzystanie z okna właściwości instalacji obsługi zdarzeń dla formantów ActiveX w kontenerze formantów ActiveX. Programy obsługi zdarzeń są używane do otrzymywania powiadomień (od formantu) niektórych zdarzeń i wykonanie akcji w odpowiedzi. To powiadomienie jest nazywany "wyzwoleniem" zdarzenia.  
@@ -42,7 +42,7 @@ W tym artykule omówiono korzystanie z okna właściwości instalacji obsługi z
   
  Aby uzyskać więcej informacji dotyczących mapy wychwytywania zdarzeń, zobacz [mapy wychwytywania zdarzeń](../mfc/reference/event-sink-maps.md) w *informacje dotyczące biblioteki klas*.  
   
-##  <a name="_core_event_handler_modifications_to_the_project"></a>Zmiany obsługi zdarzeń do projektu  
+##  <a name="_core_event_handler_modifications_to_the_project"></a> Zmiany obsługi zdarzeń do projektu  
  Korzystając z okna właściwości można dodać obsługi zdarzeń, mapa ujścia zdarzeń został zadeklarowany i zdefiniowane w projekcie. Poniższe instrukcje są dodawane do formantu. Pliku CPP program obsługi zdarzeń jest dodawany po raz pierwszy. Ten kod deklaruje mapy obiekt sink zdarzenia dla klasy okno dialogowe (w tym przypadku `CContainerDlg`):  
   
  [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  

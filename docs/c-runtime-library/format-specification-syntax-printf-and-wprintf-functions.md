@@ -1,12 +1,12 @@
 ---
-title: "Składnia specyfikacji formatu: funkcje printf i wprintf | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Składnia specyfikacji formatu: funkcje printf i wprintf | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
@@ -62,7 +62,7 @@ Argumenty, które należy wykonać ciąg formatu interpretowania zgodnie z odpow
 Liczba całkowita typów, takie jak `short`, `int`, `long`, `long long`i ich `unsigned` wariantów, są określane przy użyciu **d**, **i**, **o**, **u**, **x**, i **X**. Zmiennoprzecinkowe takich jak typy `float`, `double`, i `long double`, są określane przy użyciu **a**, **A**, **e**, **E**, **f**, **F**, **g**, i **G**. Domyślnie chyba że zostaną one zmienione przez *rozmiar* prefiksu, liczba całkowita argumenty są przekształcić `int` typu i argumentów zmiennoprzecinkowe są przekształcone na `double`. W systemach 64-bitowych `int` jest 32-bitową wartość; w związku z tym zostanie obcięta 64-bitowych liczb całkowitych, gdy są one formatowane dla danych wyjściowych, chyba że *rozmiar* prefiks **ll** lub **komputerach 64**jest używany. Typy wskaźnika, które są określone przez **p** Użyj domyślnego rozmiaru wskaźnika dla platformy.
 
 > [!NOTE]
-> **Dotyczące firmy Microsoft**  
+> **Microsoft Specific**  
 > **Z** wpisz znak i zachowanie **c**, **C**, **s**, i **S** typu znaków podczas ich są używane z `printf` i `wprintf` funkcje są rozszerzenia Microsoft. Standard języka ISO C używa **c** i **s** spójnie dla wąskie znaków i ciągi, i **C** i **S** znaki dwubajtowe i ciągi, w wszystkie funkcje formatowania.
 
 ### <a name="type-field-characters"></a>Znaki pola typu
@@ -77,19 +77,19 @@ Liczba całkowita typów, takie jak `short`, `int`, `long`, `long long`i ich `un
 |**u**|Liczba całkowita|Dziesiętną liczbą całkowitą bez znaku.|
 |**x**|Liczba całkowita|Szesnastkową liczby całkowitej bez znaku; używa "abcdef".|
 |**X**|Liczba całkowita|Szesnastkową liczby całkowitej bez znaku; używa "ABCDEF".|
-|**e**|Zmiennoprzecinkowe|Wartość, która ma formę [-] podpisane*d.dddd*__e±__*dd*[*d*] gdzie *d* jest jedną cyfrę, *dddd* jest jeden lub więcej cyfr dziesiętnych, w zależności od określona precyzja lub sześć domyślnie i *dd*[*d*] jest dwóch lub trzech cyfr dziesiętnych, w zależności od [format danych wyjściowych](../c-runtime-library/set-output-format.md) i rozmiar wykładnik.|
-|**E**|Zmiennoprzecinkowe|Taki sam jak **e** formatowania z wyjątkiem **E** zamiast **e** wprowadza wykładnik.|
-|**f**|Zmiennoprzecinkowe|Wartość, która ma formę [-] podpisane*dddd*__.__ *dddd*, gdzie *dddd* jest jeden lub więcej cyfr dziesiętnych. Liczba cyfr przed separatorem dziesiętnym zależy od wielkości numer, a liczba cyfr po dziesiętnego zależy od żądanego dokładność lub sześć domyślnie.|
-|**F**|Zmiennoprzecinkowe|Taki sam jak **f** formatowania z tą różnicą, że Wielka nieskończoności i nan danych wyjściowych.|
-|**k**|Zmiennoprzecinkowe|Podpisem wartości zostają wyświetlone w **f** lub **e** sformatować, nastąpi mniejszych podanej wartości i precyzji. **e** format jest używany tylko wtedy, gdy wykładnik wartość jest mniejsza niż -4 lub większa niż lub równa *dokładności* argumentu. Końcowe zero są obcinane i dziesiętnego jest wyświetlana tylko wtedy, gdy jeden lub więcej cyfr po nim.|
-|**K**|Zmiennoprzecinkowe|Taki sam jak **g** sformatować, z wyjątkiem **E**, a nie **e**, wprowadza wykładnik (o ile jest to możliwe).|
-|**a**|Zmiennoprzecinkowe|Podpisana szesnastkową wartość zmiennoprzecinkowe podwójnej precyzji, która ma formę [-] 0 x*h.hhhh*__p±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu małych liter) mantysa i *dd* są co najmniej jedną cyfrę dla wykładnik. Dokładność określa liczbę cyfr po punkcie.|
-|**A**|Zmiennoprzecinkowe|Podpisana szesnastkową wartość zmiennoprzecinkowe podwójnej precyzji, która ma formę [-] 0 X*h.hhhh*__P±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu wielkimi literami) mantysa i *dd* są co najmniej jedną cyfrę dla wykładnik. Dokładność określa liczbę cyfr po punkcie.|
-|**n**|Wskaźnik do liczby całkowitej.|Liczba znaków, które zostały pomyślnie zapisane do tej pory strumienia lub buforu. Ta wartość jest przechowywana w całkowitą, której adres jest podawana jako argument. Rozmiar całkowitą wskazywał kontrolowana przez prefiks Specyfikacja rozmiaru argumentu.  **n**  Specyfikator jest domyślnie wyłączona; informacji, zobacz uwagę ważny.|
+|**e**|Floating-point|Wartość, która ma formę [-] podpisane*d.dddd*__e±__*dd*[*d*] gdzie *d* jest jedną cyfrę, *dddd* jest jeden lub więcej cyfr dziesiętnych, w zależności od określona precyzja lub sześć domyślnie i *dd*[*d*] jest dwóch lub trzech cyfr dziesiętnych, w zależności od [format danych wyjściowych](../c-runtime-library/set-output-format.md) i rozmiar wykładnik.|
+|**E**|Floating-point|Taki sam jak **e** formatowania z wyjątkiem **E** zamiast **e** wprowadza wykładnik.|
+|**f**|Floating-point|Wartość, która ma formę [-] podpisane*dddd*__.__ *dddd*, gdzie *dddd* jest jeden lub więcej cyfr dziesiętnych. Liczba cyfr przed separatorem dziesiętnym zależy od wielkości numer, a liczba cyfr po dziesiętnego zależy od żądanego dokładność lub sześć domyślnie.|
+|**F**|Floating-point|Taki sam jak **f** formatowania z tą różnicą, że Wielka nieskończoności i nan danych wyjściowych.|
+|**g**|Floating-point|Podpisem wartości zostają wyświetlone w **f** lub **e** sformatować, nastąpi mniejszych podanej wartości i precyzji. **e** format jest używany tylko wtedy, gdy wykładnik wartość jest mniejsza niż -4 lub większa niż lub równa *dokładności* argumentu. Końcowe zero są obcinane i dziesiętnego jest wyświetlana tylko wtedy, gdy jeden lub więcej cyfr po nim.|
+|**G**|Floating-point|Taki sam jak **g** sformatować, z wyjątkiem **E**, a nie **e**, wprowadza wykładnik (o ile jest to możliwe).|
+|**a**|Floating-point|Podpisana szesnastkową wartość zmiennoprzecinkowe podwójnej precyzji, która ma formę [-] 0 x*h.hhhh*__p±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu małych liter) mantysa i *dd* są co najmniej jedną cyfrę dla wykładnik. Dokładność określa liczbę cyfr po punkcie.|
+|**A**|Floating-point|Podpisana szesnastkową wartość zmiennoprzecinkowe podwójnej precyzji, która ma formę [-] 0 X*h.hhhh*__P±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu wielkimi literami) mantysa i *dd* są co najmniej jedną cyfrę dla wykładnik. Dokładność określa liczbę cyfr po punkcie.|
+|**n**|Wskaźnik do liczby całkowitej.|Liczba znaków, które zostały pomyślnie zapisane do tej pory strumienia lub buforu. Ta wartość jest przechowywana w całkowitą, której adres jest podawana jako argument. Rozmiar całkowitą wskazywał kontrolowana przez prefiks Specyfikacja rozmiaru argumentu. **n** specyfikator jest domyślnie wyłączona; informacji, zobacz uwagę ważny.|
 |**p**|Typ wskaźnika|Wyświetla argument jako adresu cyfr szesnastkowych.|
 |**s**|String|W przypadku użycia z `printf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowego; w przypadku użycia z `wprintf` funkcje, określa ciąg znaków dwubajtowych. Znaki są wyświetlane do pierwszego znaku null lub do czasu *dokładności* osiągnięciem wartości.|
 |**S**|String|W przypadku użycia z `printf` funkcje, określa ciąg znaków dwubajtowych; w przypadku użycia z `wprintf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowego. Znaki są wyświetlane do pierwszego znaku null lub do czasu *dokładności* osiągnięciem wartości.|
-|**Z**|`ANSI_STRING`lub `UNICODE_STRING` — struktura|Jeśli adres [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) lub [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) struktury jest przekazywany jako argument, wyświetla ciąg znajdujący się w buforze wskazywana przez `Buffer` pola struktury. Użyj *rozmiar* prefiks modyfikator **w** do określenia `UNICODE_STRING` argument — na przykład `%wZ`. `Length` Pola struktury musi mieć ustawioną w bajtach długość ciągu. `MaximumLength` Pola struktury musi mieć ustawioną w bajtach długość buforu.<br /><br /> Zazwyczaj **Z** znaku typu jest używana tylko debugowanie funkcji używających specyfikacji konwersji, takie jak sterownik `dbgPrint` i `kdPrint`.|
+|**Z**|`ANSI_STRING` lub `UNICODE_STRING` — struktura|Jeśli adres [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) lub [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) struktury jest przekazywany jako argument, wyświetla ciąg znajdujący się w buforze wskazywana przez `Buffer` pola struktury. Użyj *rozmiar* prefiks modyfikator **w** do określenia `UNICODE_STRING` argument — na przykład `%wZ`. `Length` Pola struktury musi mieć ustawioną w bajtach długość ciągu. `MaximumLength` Pola struktury musi mieć ustawioną w bajtach długość buforu.<br /><br /> Zazwyczaj **Z** znaku typu jest używana tylko debugowanie funkcji używających specyfikacji konwersji, takie jak sterownik `dbgPrint` i `kdPrint`.|
 
 W programie Visual Studio 2015, jeśli argument, który odpowiada specyfikatorowi konwersji liczb zmiennoprzecinkowych (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) jest nieskończone nieokreślony, lub NaN, sformatowane wyniki zgodne ze standardem C99. Poniższa tabela zawiera sformatowane dane wyjściowe:
 
@@ -106,8 +106,8 @@ Przed Visual Studio 2015 CRT zastosowania różnych niestandardowym formacie dan
 
 |Wartość|Dane wyjściowe|
 |-----------|------------|
-|+ infinity|`1.#INF`*losowe cyfry*|
-|-infinity|`-1.#INF`*losowe cyfry*|
+|+ infinity|`1.#INF` *losowe cyfry*|
+|-infinity|`-1.#INF` *losowe cyfry*|
 |Nieskończona (tak samo jak quiet NaN)|*cyfra* `.#IND` *losowe cyfry*|
 |NaN|*cyfra* `.#NAN` *losowe cyfry*|
 
@@ -136,9 +136,9 @@ Pierwsze pole opcjonalne w specyfikacji konwersji zawiera *Flaga dyrektywy*, zer
 |**+**|Użyj znaku (+ lub -) jako prefiks wartość wyjściowa, jeśli jest z poziomu typu ze znakiem.|Znak pojawia się tylko w przypadku wartości ujemnych podpisem (-).|
 |**0**|Jeśli *szerokość* jest poprzedzony **0**, początkowego znaku są dodawane zera, aż do osiągnięcia minimalnej szerokości. Jeśli oba **0** i **-** są wyświetlane, **0** jest ignorowana. Jeśli **0** określono format liczby całkowitej (**i**, **u**, **x**, **X**, **o**, **d**), a także znajdują się specyfikacja dokładności — na przykład `%04.d`— **0** jest ignorowana. Jeśli **0** określono **a** lub **A** format liczb zmiennoprzecinkowych zera wiodące jest dołączany na początku mantysa, po `0x` lub `0X` prefiks.|Nie dopełnienie.|
 |**puste** ("")|Użyj pustego jako prefiks wartość wyjściowa, jeśli jest on podpisany i dodatnią. Pusty jest ignorowana, jeśli obie pustym i + flagi pojawiają się.|Pojawi się puste.|
-|**#**|Gdy jest używana z **o**, **x**, lub **X** format  **#**  Flaga używa 0, 0 x, lub 0 X, odpowiednio do prefiksu any różną od zera Wartość wyjściowa.|Pojawi się puste.|
-||Gdy jest używana z **e**, **E**, **f**, **F**, **a** lub **A** Format,  **#**  flaga wymusza wartość wyjściowa zawiera separatorem dziesiętnym.|Dziesiętnego jest wyświetlana tylko wtedy, gdy cyfry po nim.|
-||Gdy jest używana z **g** lub **G** format  **#**  flaga wymusza wartość wyjściowa zawierają punktu dziesiętnego i uniemożliwia obcięcie końcowe zera.<br /><br /> Ignorowane w przypadku użycia z **c**, **d**, **i**, **u**, lub **s**.|Dziesiętnego jest wyświetlana tylko wtedy, gdy cyfry po nim. Końcowe zero są obcinane.|
+|**#**|Gdy jest używana z **o**, **x**, lub **X** format **#** Flaga używa 0, 0 x, lub 0 X, odpowiednio do prefiksu any różną od zera Wartość wyjściowa.|Pojawi się puste.|
+||Gdy jest używana z **e**, **E**, **f**, **F**, **a** lub **A** Format, **#** flaga wymusza wartość wyjściowa zawiera separatorem dziesiętnym.|Dziesiętnego jest wyświetlana tylko wtedy, gdy cyfry po nim.|
+||Gdy jest używana z **g** lub **G** format **#** flaga wymusza wartość wyjściowa zawierają punktu dziesiętnego i uniemożliwia obcięcie końcowe zera.<br /><br /> Ignorowane w przypadku użycia z **c**, **d**, **i**, **u**, lub **s**.|Dziesiętnego jest wyświetlana tylko wtedy, gdy cyfry po nim. Końcowe zero są obcinane.|
 
 <a name="width"></a>
 
@@ -174,7 +174,7 @@ Jeśli specyfikacja dokładności jest znak gwiazdki (\*), `int` argumentu z lis
 
 |Typ|Znaczenie|Domyślny|
 |----------|-------------|-------------|
-|****, **A**|Dokładność określa liczbę cyfr po punkcie.|Domyślna dokładność to 13. Jeśli dokładności ma wartość 0, chyba że drukowania dziesiętnego nie  **#**  flaga jest wykorzystywana.|
+|**a**, **A**|Dokładność określa liczbę cyfr po punkcie.|Domyślna dokładność to 13. Jeśli dokładności ma wartość 0, chyba że drukowania dziesiętnego nie **#** flaga jest wykorzystywana.|
 |**c**, **C**|Dokładność nie ma znaczenia.|Znak jest drukowana.|
 |**d**, **i**, **o**, **u**, **x**, **X**|Dokładność określa minimalną liczbę cyfr ma być drukowana. Jeśli liczba cyfr w argumencie jest mniejsza niż *dokładności*, wartość wyjściowa jest uzupełniana na zerami z lewej strony. Wartość nie zostanie obcięta podczas przekracza liczbę miejsc po przecinku *dokładności*.|Dokładność domyślna to 1.|
 |**e**, **E**|Dokładność określa liczbę miejsc po przecinku do wydrukowania po punkcie dziesiętnym. Ostatnia cyfra drukowanych jest zaokrąglana.|Dokładność domyślna to 6. Jeśli *dokładności* ma wartość 0 lub kropki (.) pojawi się bez numer, drukowania nie separatorem dziesiętnym.|
@@ -197,9 +197,9 @@ Niektóre typy są różne rozmiary w kodzie 32-bitowe i 64-bitowych. Na przykł
 |`char`<br />`unsigned char`|**hh**|**d**, **i**, **o**, **u**, **x**, lub **X**|
 |`short int`<br />`short unsigned int`|**h**|**d**, **i**, **o**, **u**, **x**, lub **X**|
 |`__int32`<br />`unsigned __int32`|**I32**|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|`__int64`<br />`unsigned __int64`|**KOMPUTERACH 64**|**d**, **i**, **o**, **u**, **x**, lub **X**|
+|`__int64`<br />`unsigned __int64`|**I64**|**d**, **i**, **o**, **u**, **x**, lub **X**|
 |`intmax_t`<br />`uintmax_t`|**j** lub **komputerach 64**|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|`long double`|**l** (małe litery L) lub **L**|****, **A**, **e**, **E**, **f**, **F**, **g**, lub **G**|
+|`long double`|**l** (małe litery L) lub **L**|**a**, **A**, **e**, **E**, **f**, **F**, **g**, lub **G**|
 |`long int`<br />`long unsigned int`|**l** (małe litery L)|**d**, **i**, **o**, **u**, **x**, lub **X**|
 |`long long int`<br />`unsigned long long int`|**Wszystki** (małe litery LL)|**d**, **i**, **o**, **u**, **x**, lub **X**|
 |`ptrdiff_t`|**t** lub **I** (wielkie i)|**d**, **i**, **o**, **u**, **x**, lub **X**|
@@ -216,7 +216,7 @@ W programie Visual C++ mimo że `long double` jest typem różne składa się z 
 **Hc** lub **hC** specyfikatora typu jest synonimem **c** w `printf` funkcji i z **C** w `wprintf` funkcji. **Lc**, **lC**, **wc** lub **wC** specyfikatora typu jest synonimem **C** w `printf` Funkcje i **c** w `wprintf` funkcji. **Hs** lub **hS** specyfikatora typu jest synonimem **s** w `printf` funkcji i z **S** w `wprintf` funkcji. **Ls**, **lS**, **ws** lub **wS** specyfikatora typu jest synonimem **S** w `printf` Funkcje i **s** w `wprintf` funkcji.
 
 > [!NOTE]
-> **Dotyczące firmy Microsoft**  
+> **Microsoft Specific**  
 > **I** (wielkie i), **I32**, **komputerach 64**, i **w** argument prefiksy modyfikator Rozmiar są rozszerzenia Microsoft i nie są zgodne z ISO C. **h** prefiksu, gdy jest używany z danymi typu `char` i **l** (małe litery L) prefiksu, gdy jest używany z danymi typu `double` są rozszerzenia Microsoft.
 
 ## <a name="see-also"></a>Zobacz też

@@ -1,12 +1,12 @@
 ---
-title: "Nieobsługiwane wyjątki języka C++ | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Nieobsługiwane wyjątki języka C++ | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6b7410d34b7b9f31c96cf7e991133770099735a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="unhandled-c-exceptions"></a>Nieobsługiwane wyjątki języka C++
 Jeśli pasujące obsługi (lub wielokropek **catch** obsługi) nie można odnaleźć dla bieżącego wyjątku, wstępnie zdefiniowane `terminate` została wywołana funkcja czasu wykonywania. (Można również jawnie wywołać `terminate` w żadnym z programu obsługi.) Domyślną akcję `terminate` jest wywołanie `abort`. Jeśli chcesz `terminate` wywoływanie niektórych innych funkcji w programie przed zakończeniem pracy aplikacji, należy wywołać `set_terminate` funkcji o nazwie funkcja wywoływana, jako jego jeden argument. Możesz wywołać `set_terminate` w dowolnym momencie w programie. `terminate` Procedura zawsze wywołuje ostatniej podany jako argument do funkcji `set_terminate`.  

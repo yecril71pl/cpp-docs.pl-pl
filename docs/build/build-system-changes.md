@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="build-system-changes"></a>Zmiany systemu kompilacji
 MSBuild system jest używany do tworzenia projektów Visual C++. Jednak w programie Visual Studio 2008 i wcześniejszych wersjach systemu program VCBuild została użyta. Niektóre typy plików i założenia, że program VCBuild nie istnieją lub są reprezentowane inaczej w bieżącym systemie. W tym dokumencie omówiono różnice w systemie kompilacji.  
@@ -59,16 +59,16 @@ MSBuild system jest używany do tworzenia projektów Visual C++. Jednak w progra
   
  W bieżącej wersji dziedziczenia jest obsługiwana przez określenie wartości właściwości jako łączenia wartości literałów oraz makra właściwości. **$(Inherit)** i **$(noinherit) —** makr nie są obsługiwane.  
   
- W poniższym przykładzie rozdzielaną średnikami listę jest przypisany do właściwości na stronie właściwości. Lista składa się łączenia  *\<wartość >* literał i wartość `MyProperty` właściwości, który jest dostępny przy użyciu notacji makra, **$(**  *MyProperty***)**.  
+ W poniższym przykładzie rozdzielaną średnikami listę jest przypisany do właściwości na stronie właściwości. Lista składa się łączenia  *\<wartość >* literał i wartość `MyProperty` właściwości, który jest dostępny przy użyciu notacji makra, **$(***MyProperty***)** .  
   
 ```  
 Property=<value>;$(MyProperty)  
 ```  
   
-## <a name="vcxprojuser-files"></a>. vcxproj.user plików  
+## <a name="vcxprojuser-files"></a>.vcxproj.user Files  
  Plik użytkownika (. vcxproj.user) przechowuje właściwości specyficzne dla użytkownika, na przykład, debugowanie i ustawienia wdrażania. Plik vcxproj.user odnosi się do wszystkich projektów dla danego użytkownika.  
   
-## <a name="vcxprojfilters-file"></a>. vcxproj.filters pliku  
+## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
  Podczas **Eksploratora rozwiązań** służy do dodawania pliku do projektu, pliku filtrów (. vcxproj.filters) określa, gdzie w **Eksploratora rozwiązań** drzewa widoku, plik zostanie dodany, na podstawie ich rozszerzenia nazwy pliku.  
   
 ## <a name="vc-directories-settings"></a>Ustawienia katalogi VC ++  

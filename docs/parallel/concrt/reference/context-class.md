@@ -1,12 +1,12 @@
 ---
 title: Klasy kontekstu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - Context
@@ -29,17 +29,17 @@ dev_langs:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="context-class"></a>Context — Klasa
 Reprezentuje abstrakcję do kontekstu wykonywania.  
@@ -56,7 +56,7 @@ class Context;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[~ Context — destruktor](#dtor)||  
+|[~Context Destructor](#dtor)||  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -240,7 +240,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli bieżący kontekst jest dołączona do harmonogramu i pracy w grupie harmonogramu, identyfikator harmonogramu grupy, która bieżącego kontekstu pracuje nad; w przeciwnym razie wartość `-1`.  
   
-##  <a name="unblock">Odblokowywanie</a> 
+##  <a name="unblock"></a> Odblokowywanie 
 
  Odblokowuje kontekstu i powoduje, że usługa będzie do uruchomienia.  
   
@@ -296,7 +296,7 @@ static void __cdecl YieldExecution();
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
  [Klasa harmonogramu](scheduler-class.md)   
- [Harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
+ [Task Scheduler](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 
 
