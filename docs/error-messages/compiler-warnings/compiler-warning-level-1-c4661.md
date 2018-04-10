@@ -1,12 +1,12 @@
 ---
-title: "Kompilatora (poziom 1) ostrzeżenie C4661 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kompilatora (poziom 1) ostrzeżenie C4661 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4661
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C4661
 ms.assetid: 603bb8b7-356d-4eef-924b-64d769bac5bd
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen

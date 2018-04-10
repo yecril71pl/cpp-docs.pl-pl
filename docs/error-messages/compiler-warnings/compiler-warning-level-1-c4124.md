@@ -1,12 +1,12 @@
 ---
-title: "Kompilatora (poziom 1) ostrzeżenie C4124 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kompilatora (poziom 1) ostrzeżenie C4124 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4124
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C4124
 ms.assetid: c08c3a65-9584-47a1-a147-44f00c4b230e
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen

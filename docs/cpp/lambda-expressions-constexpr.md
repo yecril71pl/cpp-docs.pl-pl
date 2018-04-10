@@ -1,19 +1,19 @@
 ---
-title: "Wyrażenia Lambda w języku C++ constexpr | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wyrażenia Lambda w języku C++ constexpr | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 07/19/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-caps.latest.revision: 
+caps.latest.revision: 0
 author: mikeblome
 ms.author: mblome
 manager: ghogen
