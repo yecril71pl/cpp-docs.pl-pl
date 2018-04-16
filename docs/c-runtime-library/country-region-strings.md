@@ -1,12 +1,12 @@
 ---
-title: "Ciągi Kraj Region | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Ciągi Kraj Region | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - c.strings
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -34,14 +34,14 @@ Ciągi kraj lub region można łączyć z ciągiem języka Aby utworzyć specyfi
   
 |Ciąg kraj/region|Skrót|Nazwa ustawień regionalnych równoważne|  
 |----------------------------|------------------|----------------------------|  
-|Ameryka|USA|EN US|  
+|Stany Zjednoczone|USA|EN US|  
 |Brytania|GBR|pl pl.|  
 |Chin|CHN|zh-CN|  
 |Czeski|CZE|cs-CZ|  
 |Anglii|GBR|pl pl.|  
 |Wielka Brytania|GBR|pl pl.|  
 |Holandia|NLD|NL-NL|  
-|Hongkong SAR|HKG|zh-HK|  
+|SRA Hongkong|HKG|zh-HK|  
 |Nowa Zelandia|NZL|EN NZ|  
 |NZ|NZL|EN NZ|  
 |Oczyść Chin|CHN|zh-CN|  
