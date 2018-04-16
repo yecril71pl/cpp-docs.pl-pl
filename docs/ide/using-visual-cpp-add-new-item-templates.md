@@ -44,9 +44,9 @@ Możesz łatwo dodać elementy, które są wspólne dla projektów Visual C++ pr
 |Klasy składników|Dodaje klasę składnika za pomocą funkcji CLR.|  
 |Plik kursora (.cur)|Tworzy plik kursora systemu Win32.|  
 |Plik wykrywania, statyczne (.disco)|Tworzy plik statycznego wykrywania, która jest dokument XML, który zawiera linki do innych zasobów, które opisują usługi XML sieci Web, włącza programowe odnajdywanie usługi XML sieci Web.|  
-|Ramek (*.htm)|Dodaje plik HTML, który zawiera wiele stron HTML.|  
+|Ramek (.htm)|Dodaje plik HTML, który zawiera wiele stron HTML.|  
 |Plik nagłówków (.h)|Tworzy plik nagłówka C++.|  
-|Strony HTML (*.htm)|Tworzy pusty plik HTML.|  
+|Strony HTML (.htm)|Tworzy pusty plik HTML.|  
 |Plik ikony (.ico)|Tworzy plik ikony Win32.|  
 |Instalator — klasa|Dodaje klasę, która dziedziczy [klasy Instalator](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx) przy użyciu funkcji CLR.|  
 |Plik MIDL (.idl)|Tworzy plik języka definicji interfejsu.|  
