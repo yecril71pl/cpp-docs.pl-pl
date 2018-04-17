@@ -1,12 +1,12 @@
 ---
-title: "Wyrażenia regularne (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wyrażenia regularne (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf33b5be2556108f3caa2182bfcc5b5035b3a51e
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="regular-expressions-c"></a>Wyrażenia regularne (C++)
 Standardowa biblioteka C++ obsługuje wiele gramatyk wyrażenia regularnego. W tym temacie omówiono warianty gramatyki, gdy za pomocą wyrażeń regularnych.  
@@ -93,7 +93,7 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
   
  W `ECMAScript`, element również może być jedną z następujących czynności:  
   
--   A *grupy z systemem innym niż przechwytywania* w postaci "(: *Podwyrażenie* )". Pasuje do sekwencji znaków w sekwencji docelowej, do której pasuje wzorzec między ogranicznikami.  
+-   A *grupy z systemem innym niż przechwytywania* w postaci "(?: *Podwyrażenie* )". Pasuje do sekwencji znaków w sekwencji docelowej, do której pasuje wzorzec między ogranicznikami.  
   
 -   Ograniczony *pliku formatu ucieczki* formularza "\f", "\n", "\r", "\t" lub "\v". Pasują one, odpowiednio, do wciągnięcia kartki, nowego wiersza, powrotu karetki, tabulatora poziomego i tabulatora pionowego w sekwencji docelowej.  
   
@@ -115,7 +115,7 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
   
  Przykłady:  
   
--   "(:a)" odpowiada sekwencji docelowego "a", ale "(:a) \1" jest nieprawidłowy, ponieważ nie istnieje żadna grupa przechwytywania 1.  
+-   „(?:a)” pasuje do sekwencji docelowej „a”, ale „(?:a)\1” jest nieprawidłowe, ponieważ nie istnieje żadna grupa przechwytywania 1.  
   
 -   "(=a)" odpowiada sekwencji docelowego "". Asercja pozytywna pasuje do początkowej sekwencji „a” w sekwencji docelowej, a końcowe „a” w wyrażeniu regularnym pasuje do sekwencji początkowej „a” w sekwencji docelowej.  
   
@@ -162,15 +162,15 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
   
 -   „a+” pasuje do sekwencji docelowej „a”, sekwencji docelowej „aa” itd., ale nie do sekwencji docelowej „”.  
   
- W `ECMAScript`, wszystkich formularzy liczby powtórzeń może następować znak ", który wyznacza *niezachłanne powtarzania*.  
+ W `ECMAScript`, wszystkich formularzy liczby powtórzeń może następować znak "?", który wyznacza *niezachłanne powtarzania*.  
   
 ### <a name="concatenation"></a>Połączenie (konkatenacja)  
  Wyrażenie regularne elementy, bez *liczby powtórzeń*, może zostać dołączona do formularza dłużej wyrażeń regularnych. Wyrażenie wynikowe pasuje do sekwencji docelowej będącej połączeniem sekwencji, do których pasują poszczególne elementy. Na przykład, „a{2,3}b” pasuje do sekwencji docelowej „aab” i sekwencji docelowej „aaab”, ale nie pasuje do sekwencji docelowej „ab” ani sekwencji docelowej „aaaab”.  
   
 ### <a name="alternation"></a>Alternatywa  
- W wszystkich gramatykach wyrażenia regularnego z wyjątkiem `basic` i `grep`, połączonych wyrażenia regularnego może następować znak "&#124;" i połączonych innego wyrażenia regularnego. W ten sposób można łączyć dowolną liczbę połączonych wyrażeń regularnych. Wyrażenie wynikowe pasuje do dowolnej sekwencji docelowej, do której pasuje jedno lub więcej z połączonych wyrażeń regularnych.  
+ W wszystkich gramatykach wyrażenia regularnego z wyjątkiem `basic` i `grep`, wyrażenie regularne połączonych może następować znak "&#124;" i połączonych innego wyrażenia regularnego. W ten sposób można łączyć dowolną liczbę połączonych wyrażeń regularnych. Wyrażenie wynikowe pasuje do dowolnej sekwencji docelowej, do której pasuje jedno lub więcej z połączonych wyrażeń regularnych.  
   
- Gdy zgodna z więcej niż jeden z połączonych wyrażeń regularnych sekwencji docelowej `ECMAScript` wybierze pierwszy połączonych wyrażeń regularnych, który odpowiada sekwencji jako dopasowania (*najpierw odpowiada*); innych wyrażenie regularne gramatyki wybierz jedną, która uzyskuje *najdłuższe dopasowanie*. Na przykład, "ab &#124; cd" dopasowań sekwencji docelowego "ab" i sekwencji docelowego "cd", ale nie odpowiada sekwencji docelowego "abd" lub sekwencji docelowego "acd".  
+ Gdy zgodna z więcej niż jeden z połączonych wyrażeń regularnych sekwencji docelowej `ECMAScript` wybierze pierwszy połączonych wyrażeń regularnych, który odpowiada sekwencji jako dopasowania (*najpierw odpowiada*); innych wyrażenie regularne gramatyki wybierz jedną, która uzyskuje *najdłuższe dopasowanie*. Na przykład "ab&#124;cd" pasuje do sekwencji docelowego "ab" i sekwencji docelowego "cd", ale nie zgadza się sekwencji docelowego "abd" lub sekwencji docelowego "acd".  
   
  W `grep` i `egrep`, znaku nowego wiersza (\n) może służyć do rozdzielania alternations.  
   
@@ -365,7 +365,7 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
  Assert granic ujemna word odpowiada Jeśli bieżącą pozycję w ciągu docelowy nie jest od razu po *granicy słowa*.  
   
 ### <a name="non-capture-group"></a>Grupa nieprzechwytująca  
- Grupa nieprzechwytująca oznacza swoją zawartość jako pojedynczą jednostkę w gramatyce wyrażeń regularnych, ale nie nadaje etykiety tekstowi docelowemu. Na przykład "(a)(:b)\*(c)" zgodny z tekstem docelowego "abbc" i kojarzy przechwytywania grupy 1 z podsekwencji ""i przechwytywania grupy 2 z podsekwencji "c".  
+ Grupa nieprzechwytująca oznacza swoją zawartość jako pojedynczą jednostkę w gramatyce wyrażeń regularnych, ale nie nadaje etykiety tekstowi docelowemu. Na przykład "(a)(?:b)\*(c)" zgodny z tekstem docelowego "abbc" i kojarzy przechwytywania grupy 1 z podsekwencji ""i przechwytywania grupy 2 z podsekwencji "c".  
   
 ### <a name="non-greedy-repetition"></a>Powtórzenie niezachłanne  
  Powtórzenie niezachłanne używa najkrótszej podsekwencji sekwencji docelowej, która pasuje do wzorca. Powtórzenie zachłanne używa najdłuższej. Na przykład "(a+) (\*b)" odpowiada sekwencji docelowego "aaab". Gdy używa się powtórzenia niezachłannego, kojarzy ono grupę przechwytywania 1 z podsekwencją „a” na początku sekwencji docelowej, a grupę przechwytywania 2 z podsekwencją „aab” na końcu sekwencji docelowej. Gdy używa się dopasowania zachłannego, kojarzy ono grupę przechwytywania 1 z podsekwencją „aaa”, a grupę przechwytywania 2 z podsekwencją „b”.  
@@ -415,7 +415,7 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
   
 -   "(aa) (\*)" odpowiada sekwencji docelowego "aaaa" i kojarzy przechwytywania grupy 1 z podsekwencji "aa" na początku sekwencji i przechwytywania grupie docelowej 2 z podsekwencji "aa" na końcu sekwencji docelowej.  
   
--   "(=aa)(a) &#124;(a)" odpowiada sekwencji docelowego "" i skojarzone przechwytywania grupy 1 pustą sekwencją (ponieważ pozytywne potwierdzenie nie powiodła się) i przechwytywania grupy 2 z podsekwencji "". Pasuje też do sekwencji docelowej „aa” i kojarzy grupę przechwytywania 1 z podsekwencją „aa”, a grupę przechwytywania 2 z pustą sekwencją.  
+-   "(=aa)(a)&#124;()" odpowiada sekwencji docelowego "" i skojarzone przechwytywania grupy 1 pustą sekwencją (ponieważ pozytywne potwierdzenie nie powiodła się) i przechwytywania grupy 2 z podsekwencji "". Pasuje też do sekwencji docelowej „aa” i kojarzy grupę przechwytywania 1 z podsekwencją „aa”, a grupę przechwytywania 2 z pustą sekwencją.  
   
 ### <a name="unicode-escape-sequence"></a>Sekwencja unikowa unicode  
  Sekwencja unikowa unicode to ukośnik odwrotny, po którym następuje litera 'u' i cztery cyfry szesnastkowe (0-9a-fA-F). Pasuje do znaku w sekwencji docelowej, który ma wartość określoną przez te cztery cyfry. Na przykład, „\u0041” pasuje do sekwencji docelowej „A”, kiedy jest używane kodowanie znaków ASCII.  
@@ -448,7 +448,7 @@ Zero lub więcej flag mogą być łączone z gramatyki, aby określić zachowani
   
 -   Wyszukanie wyrażenia regularnego „bcd” w sekwencji docelowej „bcdbcd” zakończy się pomyślnie i dopasuje pierwsze trzy znaki.  
   
- Jeśli istnieje więcej niż jedna podsekwencja, która pasuje w którymś miejscu w sekwencji docelowej, istnieją dwa sposoby wyboru pasującego wzorca. *Najpierw odpowiada* wybierze podsekwencji, który został znaleziony najpierw po dopasowaniu wyrażenia regularnego. *Najdłuższy zgodny* wybiera najdłuższym podsekwencji z te, które odpowiada w tej lokalizacji. Jeśli istnieje więcej niż jedna podsekwencja, która ma maksymalną długość, najdłuższe wystąpienie wybiera tę, która została znaleziona jako pierwsza. Na przykład, gdy zostanie użyty pierwszego dopasowania, wyszukaj wyrażenie regularne "b &#124; bc" w celu sekwencji "abcd" odpowiada podsekwencji "b", ponieważ lewa obowiązywania alternacyjne jest zgodna z tym podsekwencji; w związku z tym pierwszego dopasowania próbuj czas po prawej stronie wyrażenia warunkowe. Gdy jest używane najdłuższe wystąpienie, to samo wyszukiwanie pasuje do „bc” ponieważ „bc” jest dłuższe niż „b”.  
+ Jeśli istnieje więcej niż jedna podsekwencja, która pasuje w którymś miejscu w sekwencji docelowej, istnieją dwa sposoby wyboru pasującego wzorca. *Najpierw odpowiada* wybierze podsekwencji, który został znaleziony najpierw po dopasowaniu wyrażenia regularnego. *Najdłuższy zgodny* wybiera najdłuższym podsekwencji z te, które odpowiada w tej lokalizacji. Jeśli istnieje więcej niż jedna podsekwencja, która ma maksymalną długość, najdłuższe wystąpienie wybiera tę, która została znaleziona jako pierwsza. Na przykład, gdy zostanie użyty pierwszego dopasowania, wyszukaj wyrażenie regularne "b&#124;bc" w celu sekwencji "abcd" odpowiada podsekwencji "b", ponieważ lewa obowiązywania alternacyjne jest zgodna z tym podsekwencji; w związku z tym pierwszego dopasowania próbuj czas po prawej stronie wyrażenia warunkowe. Gdy jest używane najdłuższe wystąpienie, to samo wyszukiwanie pasuje do „bc” ponieważ „bc” jest dłuższe niż „b”.  
   
  Częściowe wystąpienie powiedzie się, jeśli dopasowanie osiąga koniec sekwencji docelowej bez niepowodzenia, nawet jeśli nie osiągnęło końca wyrażenia regularnego. W związku z tym, po pomyślnym częściowym wystąpieniu, dodanie znaków do sekwencji docelowej mogłoby spowodować niepowodzenie późniejszego częściowego wystąpienia. Jednakże, po niepowodzeniu częściowego wystąpienia, dodanie znaków do sekwencji docelowej nie może spowodować powodzenia późniejszego częściowego wystąpienia. Na przykład, przy częściowym wystąpieniu, „ab” pasuje do sekwencji docelowej „a”, ale nie „ac”.  
   

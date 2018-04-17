@@ -1,12 +1,12 @@
 ---
-title: "Porady: kierowanie struktur za pomocą funkcji PInvoke | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: kierowanie struktur za pomocą funkcji PInvoke | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
@@ -16,25 +16,25 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: 
+caps.latest.revision: 30
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2ebda5f17b94fa28a5eb5222ccc991119ec4f81a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7f08d42946eec22d616e6d964feda78e1358228
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Porady: przeprowadzanie marshalingu struktur za pomocą funkcji PInvoke
-W tym dokumencie opisano sposób natywny funkcje, których można wywołać ciągów w stylu języka C z zarządzanego funkcji, które zapewniają wystąpienia <xref:System.String> przy użyciu metody P/Invoke. Mimo że zalecane jest użycie funkcji międzyoperacyjności języka C++, zamiast P/Invoke ponieważ P/Invoke zapewnia małego błąd kompilacji raportowania, nie jest bezpieczne i może być niewygodne wdrożenia, jeśli niezarządzanego API jest dostarczana jako biblioteki DLL i kod źródłowy jest dostępne, P/Invoke jest jedyną opcją. W przeciwnym razie można znaleźć w następujących dokumentach:  
+W tym dokumencie opisano sposób natywny funkcje, których struktury w stylu języka C może zostać wywołana z funkcji zarządzanych przez przy użyciu metody P/Invoke. Mimo że zalecane jest użycie funkcji międzyoperacyjności języka C++, zamiast P/Invoke ponieważ P/Invoke zapewnia małego błąd kompilacji raportowania, nie jest bezpieczne i może być niewygodne wdrożenia, jeśli niezarządzanego API jest dostarczana jako biblioteki DLL i kod źródłowy jest dostępne, P/Invoke jest jedyną opcją. W przeciwnym razie można znaleźć w następujących dokumentach:  
   
--   [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
   
--   [Instrukcje: przeprowadzanie marshalingu struktur za pomocą funkcji PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
+-   [Instrukcje: przeprowadzanie marshalingu ciągów za pomocą funkcji PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
   
  Domyślnie struktury natywnych i zarządzanych są wyświetlane inaczej w pamięci, dlatego pomyślnie przekazywanie struktur granicy zarządzanych/niezarządzanych wymaga dodatkowych czynności w celu zachowania integralności danych.  
   

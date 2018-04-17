@@ -1,13 +1,13 @@
 ---
-title: "-Źródło-charset (Ustaw zestaw znaków źródła) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -Źródło-charset (Ustaw zestaw znaków źródła) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - source-charset
@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa81ba41587a183aca921177a62a45229810f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba414318f9954df331dd05d0f3e2cc2b85c8ad11
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-charset-set-source-character-set"></a>/ Source-Charset (Ustaw źródło zestawu znaków)
 Pozwala określić źródło zestaw znaków dla pliku wykonywalnego.  
@@ -48,7 +48,7 @@ Pozwala określić źródło zestaw znaków dla pliku wykonywalnego.
 ## <a name="remarks"></a>Uwagi  
  Można użyć **/Source-Charset** opcję, aby określić zestaw znaków źródła rozszerzone do użycia plików źródłowych zawierają znaki, które nie są reprezentowane w zestawie znaków źródła podstawowych. Zestaw znaków źródła jest kodowanie sposób interpretowania tekst źródłowy programu do reprezentacji wewnętrznej używane jako dane wejściowe fazy wstępnego przetwarzania przed kompilacji. Reprezentacji wewnętrznej jest następnie konwertowana na zestaw znaków wykonania do przechowywania wartości ciągów i znakowe w pliku wykonywalnym. Można użyć albo organizację IANA Nazwa zestawu znaków ISO lub kropkę (.), a następnie identyfikator strony kod dziesiętny 3 do 5 cyfr, aby określić zestaw znaków używany. Zobacz listę obsługiwanych identyfikatorów strony kodu i nazwy zestawu znaków, [kodu strony identyfikatory](http://msdn.microsoft.com/library/windows/desktop/dd317756).  
   
- Domyślnie program Visual Studio wykrywa znacznik kolejności bajtów do ustalenia, czy plik źródłowy jest w zakodowanym formacie Unicode, na przykład UTF-16 lub UTF-8. Jeśli brak znacznika kolejności bajtów zostanie znaleziony, zakłada się plik źródłowy jest zakodowany przy użyciu bieżącej strony kodowej użytkownika, chyba że zostanie określony zbiór znaków nazwy lub kodu strony za pomocą **/Source-Charset** opcji. Program Visual Studio umożliwia zapisanie kodu źródłowego języka C++ za pomocą jednej z kilku kodowanie znaków. Aby uzyskać więcej informacji dotyczących źródła i wykonania zestawów znaków, zobacz [zestawy znaków](../../cpp/character-sets2.md) w dokumentacji języka.  
+ Domyślnie program Visual Studio wykrywa znacznik kolejności bajtów do ustalenia, czy plik źródłowy jest w zakodowanym formacie Unicode, na przykład UTF-16 lub UTF-8. Jeśli brak znacznika kolejności bajtów zostanie znaleziony, zakłada się plik źródłowy jest zakodowany przy użyciu bieżącej strony kodowej użytkownika, chyba że zostanie określony zbiór znaków nazwy lub kodu strony za pomocą **/Source-Charset** opcji. Program Visual Studio umożliwia zapisanie kodu źródłowego języka C++ za pomocą jednej z kilku kodowanie znaków. Aby uzyskać więcej informacji dotyczących źródła i wykonania zestawów znaków, zobacz [zestawy znaków](../../cpp/character-sets.md) w dokumentacji języka.  
   
  Zestaw znaków źródła, który podasz zamapuj 7-bitowe znaki ASCII punktom kod w zestawie znaków lub mogą wykonać wiele błędów kompilacji. Twoje zestaw znaków źródła musi być również można zmapować do rozszerzonego zestawu można kodować UTF-8 znaków Unicode. Znaki, które nie są można kodować w formacie UTF-8 są reprezentowane przez substitute konkretnej implementacji. Znak zapytania jest używana przez kompilator Microsoft te znaki.  
   

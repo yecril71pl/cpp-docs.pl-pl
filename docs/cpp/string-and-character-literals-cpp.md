@@ -1,12 +1,12 @@
 ---
-title: "Literały ciągów i znakowe (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Literały ciągów i znakowe (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - R
@@ -25,17 +25,17 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 
+caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8714ff649471b0f84e11a65ae4100c8facb06c52
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Literały ciągów i znakowe (C++)
 C++ obsługuje różne typy ciągów i znakowe i zapewnia sposobów express wartości literałów dla każdego z tych typów. W kodzie źródłowym express jest zawartość z literały znaków i ciąg, przy użyciu zestawu znaków. Uniwersalne nazwy znaków i znaki specjalne umożliwia express dowolny ciąg przy użyciu zestawu znaków podstawowego źródła. Nieprzetworzonego literału ciągu pozwala uniknąć przy użyciu znaki specjalne i może służyć do express wszystkie typy literałów ciągów. Można również utworzyć literałów std::string bez konieczności wykonać kroki konwersji lub dodatkowe konstrukcji.  
@@ -83,7 +83,7 @@ int main()
 }  
 ```  
   
- Literały ciągu nie może mieć bez prefiksu lub `u8`, `L`, `u`, i `U` prefiksów w celu określenia zawęzić odpowiednio znaków (jednobajtowe i wielobajtowe), znaków UTF-8, dwubajtowe (UCS 2 lub UTF-16), UTF-16 i kodowania UTF-32. Może mieć nieprzetworzonego literału ciągu `R`, `u8R`, `LR`, `uR` i `UR` prefiksów dla odpowiedników pierwotnych wersji tych kodowania.  Do tworzenia wartości tymczasowej lub statycznej std::string, można użyć literałów ciągów lub literały nieprzetworzony ciąg z `s` sufiks. Aby uzyskać więcej informacji zobacz sekcję literałów ciągu poniżej. Aby uzyskać więcej informacji na znak źródłowy podstawowego zestawu uniwersalne nazwy znaków i przy użyciu znaków z rozszerzonego strony kodowe w kodzie źródłowym, zobacz [zestawów znaków](../cpp/character-sets2.md).  
+ Literały ciągu nie może mieć bez prefiksu lub `u8`, `L`, `u`, i `U` prefiksów w celu określenia zawęzić odpowiednio znaków (jednobajtowe i wielobajtowe), znaków UTF-8, dwubajtowe (UCS 2 lub UTF-16), UTF-16 i kodowania UTF-32. Może mieć nieprzetworzonego literału ciągu `R`, `u8R`, `LR`, `uR` i `UR` prefiksów dla odpowiedników pierwotnych wersji tych kodowania.  Do tworzenia wartości tymczasowej lub statycznej std::string, można użyć literałów ciągów lub literały nieprzetworzony ciąg z `s` sufiks. Aby uzyskać więcej informacji zobacz sekcję literałów ciągu poniżej. Aby uzyskać więcej informacji na znak źródłowy podstawowego zestawu uniwersalne nazwy znaków i przy użyciu znaków z rozszerzonego strony kodowe w kodzie źródłowym, zobacz [zestawów znaków](../cpp/character-sets.md).  
   
 ## <a name="character-literals"></a>Literały znaków  
  A *literał znaku* składa się z stałej znaków. Odpowiada on ujęta w cudzysłów pojedynczy znak. Istnieje pięć rodzajów literały znaków:  
@@ -118,10 +118,10 @@ int main()
   
 |Wartość|Sekwencja specjalna|Wartość|Sekwencja specjalna|  
 |-----------|---------------------|-----------|---------------------|  
-|nowy wiersz|\n|backslash|\\\|  
+|nowy wiersz|\n|ukośnik odwrotny|\\\|  
 |Tabulator poziomy|\t|znak zapytania|? lub \\?|  
 |Tabulator pionowy|\v|pojedynczy cudzysłów|\\'|  
-|backspace|\b|podwójnego cudzysłowu|\\"|  
+|BACKSPACE|\b|podwójnego cudzysłowu|\\"|  
 |powrót karetki|\r|znak null|\0|  
 |Wysuw strony|\f|ósemkowy|\ooo|  
 |Alert (dzwonka)|\a|szesnastkowo|\xhhh|  
@@ -210,7 +210,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  Uniwersalne nazwy znaków nie można zakodować wartości zakresu punktów kodowych Surogat D800 DFFF. Dla Znaki dwuskładnikowe Unicode, należy określić nazwa zawierająca znaki uniwersalne za pomocą `\UNNNNNNNN`, gdzie NNNNNNNN jest punkt 8 cyfrowy kod znaku. Kompilator generuje para zastępcza, jeśli jest to wymagane.  
   
- W języku C ++ 03 języka tylko dozwolone podzbiór znaków może być reprezentowana przez ich uniwersalne nazwy znaków oraz dozwolone niektóre uniwersalne nazwy znaków, które faktycznie nie reprezentują żadnych prawidłowych znaków Unicode. Problem został rozwiązany w standardem C ++ 11. W języku C ++ 11 zarówno znaków i ciągu literałów i identyfikatory mogą używać uniwersalne nazwy znaków.  Aby uzyskać więcej informacji dotyczących uniwersalne nazwy znaków, zobacz [zestawów znaków](../cpp/character-sets2.md). Aby uzyskać więcej informacji na temat Unicode, zobacz [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Aby uzyskać więcej informacji na temat Znaki dwuskładnikowe, zobacz [Znaki dwuskładnikowe i dodatkowe znaki](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
+ W języku C ++ 03 języka tylko dozwolone podzbiór znaków może być reprezentowana przez ich uniwersalne nazwy znaków oraz dozwolone niektóre uniwersalne nazwy znaków, które faktycznie nie reprezentują żadnych prawidłowych znaków Unicode. Problem został rozwiązany w standardem C ++ 11. W języku C ++ 11 zarówno znaków i ciągu literałów i identyfikatory mogą używać uniwersalne nazwy znaków.  Aby uzyskać więcej informacji dotyczących uniwersalne nazwy znaków, zobacz [zestawów znaków](../cpp/character-sets.md). Aby uzyskać więcej informacji na temat Unicode, zobacz [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Aby uzyskać więcej informacji na temat Znaki dwuskładnikowe, zobacz [Znaki dwuskładnikowe i dodatkowe znaki](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
   
 ## <a name="string-literals"></a>Literały ciągu  
  Literał ciągu reprezentuje sekwencji znaków, które tworzą ciąg znaków zakończony znakiem null. Znaki muszą być ujęte w cudzysłów podwójny. Dostępne są następujące rodzaje literałów ciągu:  
@@ -404,6 +404,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zestawy znaków](../cpp/character-sets2.md)   
+ [Zestawy znaków](../cpp/character-sets.md)   
  [Liczbowe, Boolean i literały wskaźnika](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [Literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md)

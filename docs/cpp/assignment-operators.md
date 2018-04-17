@@ -1,37 +1,35 @@
 ---
 title: Operatory przypisania | Dokumentacja firmy Microsoft
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
-- '>>='
-- xor_eq
-- '&='
-- <<=
-- -=
-- and_eq
-- ^=
-- '|='
+- =
+- '*='
 - /=
 - '%='
-- or_eq
 - +=
-- '*='
+- -=
+- <<=
+- '>>='
+- '&='
+- ^=
+- '|='
+- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
-- or_eq operator
-- '&= operator'
 - operators [C++], assignment
 - assignment operators [C++], C++
-- xor_eq operator
+- '&= operator'
+- '&&= operator'
+- ^= operator
 - += operator
-- and_eq operator
 - '>>= operator'
 - '|= operator'
 - operator>>=
@@ -40,35 +38,39 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cc273b145aebab3c0a413efe74c29c39b3a6b88
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assignment-operators"></a>Operatory przypisania
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      expression assignment-operator expression   
+expression assignment-operator expression   
 assignment-operator : one of  
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
+   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Operatory przypisania przechowują wartość w obiekcie wyznaczonym przez lewy operand. Istnieją dwa rodzaje operacji przypisania: przypisanie proste, w którym wartość drugiego operandu jest przechowywana w obiekcie określonym przez pierwszy operand, a także przypisanie złożone, w którym operacje arytmetyczne, przesunięcia lub operacje na poziomie bitowym są wykonywane przed zachowaniem wyniku. Wszystkie operatory przypisania w tabeli poniżej, z wyjątkiem operatora =, są operatorami przypisania złożonego.  
+ Operatory przypisania przechowują wartość w obiekcie wyznaczonym przez lewy operand. Istnieją trzy rodzaje operacji przypisania: 
+
+1. Przypisanie proste, w której wartość drugiego operandu jest przechowywany w obiekcie określonej przez pierwszy argument operacji. 1. przydział złożony, w którym arytmetyczne, shift lub operacji jest wykonywane przed przechowywania wyniku.
+1. Przenieś przypisania (dla typu klasy) w zasobów, do których są przekazywane bez kopiowania.
+
+
+Wszystkie operatory przypisania w poniższej tabeli, z wyjątkiem = i & & = operatory są złożone operatory przypisania.  
   
 ### <a name="assignment-operators"></a>Operatory przypisania  
   
@@ -84,7 +86,8 @@ assignment-operator : one of
 |**>>=**|Przesuwa wartość pierwszego operandu w prawo o liczbę bitów określoną przez wartość drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|  
 |**&=**|Uzyskuje bitowe AND pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|  
 |`^=`|Uzyskuje bitowe wykluczające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|  
-|`&#124;=`|Uzyskuje bitowe zawierające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|  
+|`&#124;=`|Uzyskuje bitowe zawierające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
+|**&&=**| Operator przypisania przenoszenia (dotyczy tylko typów klasy). Jeśli drugi operand jest r-wartości, Przenieś jej zasobów do pierwszy argument operacji (bez ich kopiowania). Zobacz [konstruktory przenoszenia i operatory przypisania przenoszenia](move-constructors-and-move-assignment-operators-cpp.md) Aby uzyskać więcej informacji.|
   
  **Słowa kluczowe operatora**  
   

@@ -1,12 +1,12 @@
 ---
 title: -OPT (optymalizacje) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
@@ -26,17 +26,17 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86427dbf1ac6c3404daa36d2e02786aa80ed6453
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="opt-optimizations"></a>/OPT (Optymalizacje)
 Kontroluje optymalizacje, które LINK wykonuje podczas kompilacji.  
@@ -50,10 +50,10 @@ Kontroluje optymalizacje, które LINK wykonuje podczas kompilacji.
 ```  
   
 ## <a name="arguments"></a>Argumenty  
- **REF** &#124; **NOREF**  
+ **REF** &AMP;#124; **NOREF**  
  **/OPT:REF** eliminuje funkcji i danych, który nie istnieje odwołanie; **/OPT: noref** przechowuje funkcji i danych, który nie istnieje odwołanie.  
   
- Gdy /OFT:REF jest włączone, LINK usuwa opakowane funkcje i dane, do których nie ma odniesień. Obiekt zawiera spakowanych funkcji i danych (Comdat), jeśli został skompilowany przy użyciu [/Gy](../../build/reference/gy-enable-function-level-linking.md) opcji. Ta optymalizacja jest znana jako eliminacja przechodnia (lub tranzytywna) COMDAT. Domyślnie **/OPT:REF** jest włączona w kompilacjach bez debugowania. Aby zastąpić to ustawienie domyślne i przechowywać nieużywane Comdat w programie, należy określić **/OPT: noref**. Można użyć [/INCLUDE](../../build/reference/include-force-symbol-references.md) opcji powoduje usunięcie określony symbol.  
+ Po włączeniu /OPT:REF łącze usuwa nieużywane spakowanych funkcji i danych. Obiekt zawiera spakowanych funkcji i danych (Comdat), jeśli został skompilowany przy użyciu [/Gy](../../build/reference/gy-enable-function-level-linking.md) opcji. Ta optymalizacja jest znana jako eliminacja przechodnia (lub tranzytywna) COMDAT. Domyślnie **/OPT:REF** jest włączona w kompilacjach bez debugowania. Aby zastąpić to ustawienie domyślne i przechowywać nieużywane Comdat w programie, należy określić **/OPT: noref**. Można użyć [/INCLUDE](../../build/reference/include-force-symbol-references.md) opcji powoduje usunięcie określony symbol.  
   
  Gdy **/OPT:REF** włączono jawnie lub domyślnie ograniczone **/OPT: ICF** jest włączona który tylko złożeń funkcje identyczne. Jeśli chcesz **/OPT:REF** , ale nie **/OPT: ICF**, należy określić **/OPT:REF, NOICF** lub **noicf**.  
   
@@ -63,7 +63,7 @@ Kontroluje optymalizacje, które LINK wykonuje podczas kompilacji.
   
  Określanie **/OPT: ICF** nie obsługuje **/OPT:REF** opcji.  
   
- **ICF [=** `iterations` **] &#124; NOICF**   
+ **ICF [=** `iterations` **] &AMP;#124; NOICF**   
  Użyj **/OPT: ICF [=**`iterations`**]** przeprowadzić identycznych sekcji comdat. Zbędne dane COMDAT mogą być usunięte z danych wyjściowych konsolidatora. Opcjonalny `iterations` parametr określa liczbę razy, aby przechodzić między nimi symbole duplikatów. Domyślna liczba iteracji wynosi dwa. Dodatkowe iteracje mogą zlokalizować więcej duplikatów, które zostaną odkryte przez składanie w poprzedniej iteracji.  
   
  Konsolidator zachowuje się inaczej po **/OPT:REF** określono — i **ICF** jest włączona domyślnie — niż podczas **/OPT:REF, Zapora połączenia internetowego** został jawnie określony. Formę **ICF** z włączoną funkcją **/OPT:REF** samodzielnie nie fold danych tylko do odczytu — dotyczy to również .rdata, .pdata i .xdata. W związku z tym złożone są mniej funkcji, gdy obrazy są tworzone dla [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] ponieważ funkcje w tych modułach zależą więcej danych tylko do odczytu — na przykład .pdata i .xdata. Aby uzyskać pełne **ICF** składania zachowanie, jawnie określ **/OPT: ICF**.  
@@ -75,7 +75,7 @@ Kontroluje optymalizacje, które LINK wykonuje podczas kompilacji.
 > [!NOTE]
 >  Ponieważ **/OPT: ICF** może spowodować, że ten sam adres ma być przypisane do różnych funkcji lub elementy członkowskie danych tylko do odczytu (`const` zmienne skompilowana przy użyciu **/Gy**), mogą być dzielone program, który jest zależny od unikatowe adresy dla funkcji lub elementy członkowskie danych tylko do odczytu. Aby uzyskać więcej informacji, zobacz [/Gy (Włącz funkcję łączenia na poziomie)](../../build/reference/gy-enable-function-level-linking.md).  
   
- **LBR** &#124; **NOLBR**  
+ **LBR** &AMP;#124; **NOLBR**  
  **/OPT:LBR** i **/OPT:NOLBR** opcje są stosowane tylko do plików binarnych ARM. Ponieważ pewne instrukcje gałęzi procesora ARM mają ograniczony zasięg, jeśli konsolidator wykryje skok do adresu spoza zakresu, zastępuje adres docelowy instrukcji gałęzi adresem kodu „wyspy”, który zawiera instrukcję gałęzi, która odnosi się do faktycznego adresu docelowego. Można użyć **/OPT:LBR** w celu zoptymalizowania wykrywania instrukcje gałęzi long i rozmieszczenie Wyspy pośredniego kod aby zminimalizować łącznego rozmiaru kodu. **/OPT:NOLBR** informuje konsolidator, aby wygenerować kod Wyspy instrukcje gałęzi long jako zostaną napotkane, bez optymalizacji.  
   
  Domyślnie **/OPT:LBR** opcja została ustawiona podczas konsolidowania przyrostowego nie jest włączona. -Incremental łącza, ale nie optymalizacje long gałęzi, określić **/OPT:NOLBR**. **/OPT:LBR** opcja powoduje wyłączenie konsolidowania przyrostowego.  

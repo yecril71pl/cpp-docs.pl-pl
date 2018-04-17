@@ -1,19 +1,19 @@
 ---
 title: Atrybuty C++ Standard | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 manager: ghogen
 ms.openlocfilehash: d2dcce6b0e289588c426792a334ee4ec38d1ab5f
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attributes-in-c"></a>Atrybuty w języku C++
 
@@ -39,17 +39,17 @@ W języku C ++ 11 atrybutów umożliwiają standardowych adnotacji konstrukcji j
 void Foo(int);
 ```
 
-Atrybuty reprezentują standardowych alternatywę do specyficznych dla dostawcy rozszerzeń, takich jak dyrektywy #pragma, __declspec() (Visual C++) lub &#95; &#95; atrybut &#95; &#95; (GNU). Jednak nadal musisz użyć konstrukcji specyficznych dla dostawcy, w większości przypadków. Standardowe Określa aktualnie następujące atrybuty, które zgodnych kompilator powinien rozpoznać:
+Atrybuty reprezentują standardowych alternatywę do specyficznych dla dostawcy rozszerzeń, takich jak dyrektywy #pragma, __declspec() (Visual C++) lub &#95; &#95;atrybutu&#95; &#95; (GNU). Jednak nadal musisz użyć konstrukcji specyficznych dla dostawcy, w większości przypadków. Standardowe Określa aktualnie następujące atrybuty, które zgodnych kompilator powinien rozpoznać:
 
-- `[[noreturn]]`Określa, że funkcja nigdy nie zwraca; innymi słowy zawsze zgłasza wyjątek. Kompilator można dostosować zasady jego kompilacja `[[noreturn]]` jednostek.
+- `[[noreturn]]` Określa, że funkcja nigdy nie zwraca; innymi słowy zawsze zgłasza wyjątek. Kompilator można dostosować zasady jego kompilacja `[[noreturn]]` jednostek.
 
-- `[[carries_dependency]]`Określa, że funkcja propaguje zależności danych kolejności względem synchronizacja wątku. Ten atrybut może odnosić się do co najmniej jeden parametr, aby określić, że argument przekazany w niesie zależności w treści funkcji. Ten atrybut może odnosić się do samej funkcji, aby określić, że wartość zwracana niesie zależności poza funkcji. Kompilator można użyć tych informacji do generowania kodu większą wydajność.
+- `[[carries_dependency]]` Określa, że funkcja propaguje zależności danych kolejności względem synchronizacja wątku. Ten atrybut może odnosić się do co najmniej jeden parametr, aby określić, że argument przekazany w niesie zależności w treści funkcji. Ten atrybut może odnosić się do samej funkcji, aby określić, że wartość zwracana niesie zależności poza funkcji. Kompilator można użyć tych informacji do generowania kodu większą wydajność.
 
-- `[[deprecated]]`**Programu visual Studio 2015 lub nowszy:** Określa, czy funkcja nie jest przeznaczony do użycia i może nie istnieć w przyszłych wersjach interfejsu biblioteki. Kompilator może być to komunikat informacyjny generowania kodu klienta próby wywołania funkcji. Można zastosować do deklaracji klasy, nazwa typu typedef, zmienną, elementu członkowskiego danych niestatycznych, funkcji, przestrzeni nazw, wyliczenie, moduł wyliczający lub specjalizacja szablonu.  
+- `[[deprecated]]` **Visual Studio 2015 lub nowszy:** Określa, czy funkcja nie jest przeznaczony do użycia i może nie istnieć w przyszłych wersjach interfejsu biblioteki. Kompilator może być to komunikat informacyjny generowania kodu klienta próby wywołania funkcji. Można zastosować do deklaracji klasy, nazwa typu typedef, zmienną, elementu członkowskiego danych niestatycznych, funkcji, przestrzeni nazw, wyliczenie, moduł wyliczający lub specjalizacja szablonu.  
 
-- `[[fallthrough]]`**Programu visual Studio 2017 lub nowszy:** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atrybut może być używany w kontekście [przełącznika](switch-statement-cpp.md) instrukcje jako wskazówkę Kompilator (lub każdy odczyt kodu) zamierzony zachowanie przepuszczająca. Kompilatora Visual C++ aktualnie nie ostrzega na zachowanie przepuszczająca, więc ten atrybut nie zachowanie kompilatora nie wpływu.
+- `[[fallthrough]]` **Visual Studio 2017 lub nowszy:** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atrybut może być używany w kontekście [przełącznika](switch-statement-cpp.md) instrukcje jako wskazówkę kompilator (lub wszystkich czytelników Kod) zamierzony zachowanie przepuszczająca. Kompilatora Visual C++ aktualnie nie ostrzega na zachowanie przepuszczająca, więc ten atrybut nie zachowanie kompilatora nie wpływu.
 
-- `[[nodiscard]]`**Programu visual Studio 2017 wersji 15.3 i nowszych:** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)) określa, że wartość zwracana przez funkcję nie jest przeznaczony do usunięcia. Generuje ostrzeżenie C4834, jak pokazano w poniższym przykładzie:
+- `[[nodiscard]]` **Visual Studio 2017 wersji 15.3 i nowszych:** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)) określa, że wartość zwracana przez funkcję nie jest przeznaczony do usunięcia. Generuje ostrzeżenie C4834, jak pokazano w poniższym przykładzie:
 
    ```cpp
    [[nodiscard]]
@@ -62,11 +62,11 @@ Atrybuty reprezentują standardowych alternatywę do specyficznych dla dostawcy 
    }
    ```
 
-- `[[maybe_unused]]`**Programu visual Studio 2017 wersji 15.3 i nowszych:** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)) może Określa, że zmienna, funkcji, klasy, element typedef, dane niestatycznego elementu członkowskiego, enum lub szablonu specjalizacji celowo nie można użyć. Kompilator nie Ostrzegaj, gdy jednostka oznaczona jako `[[maybe_unused]]` nie jest używany. Później można ponownie zadeklarować jednostki, która jest zadeklarowana bez atrybutu, przy użyciu atrybutu i na odwrót. Jednostka jest traktowany jako oznaczone po jego pierwszej deklaracji, który jest oznaczony jako są analizowane i pozostałej części tłumaczenia bieżącej jednostce tłumaczenia.
+- `[[maybe_unused]]` **Visual Studio 2017 wersji 15.3 i nowszych:** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)) określa, że zmienna, funkcji, klasy, — typedef, elementu członkowskiego danych niestatycznych, enum lub specjalizacja szablonu celowo nie może być używany. Kompilator nie Ostrzegaj, gdy jednostka oznaczona jako `[[maybe_unused]]` nie jest używany. Później można ponownie zadeklarować jednostki, która jest zadeklarowana bez atrybutu, przy użyciu atrybutu i na odwrót. Jednostka jest traktowany jako oznaczone po jego pierwszej deklaracji, który jest oznaczony jako są analizowane i pozostałej części tłumaczenia bieżącej jednostce tłumaczenia.
 
 ## <a name="microsoft-specific-attributes"></a>Atrybuty specyficzne dla firmy Microsoft
 
-- `[[gsl::suppress(rules)]]`Ten atrybut specyficzne dla firmy Microsoft jest używany do pomijania ostrzeżeń z programy wymusić [wskazówki dotyczące pomocy technicznej biblioteki (GSL)](https://github.com/Microsoft/GSL) reguły w kodzie. Rozważmy na przykład następujący fragment kodu:
+- `[[gsl::suppress(rules)]]` Ten atrybut specyficzne dla firmy Microsoft jest używany do pomijania ostrzeżeń z programy wymusić [wskazówki dotyczące pomocy technicznej biblioteki (GSL)](https://github.com/Microsoft/GSL) reguły w kodzie. Rozważmy na przykład następujący fragment kodu:
 
     ```cpp
     void main()

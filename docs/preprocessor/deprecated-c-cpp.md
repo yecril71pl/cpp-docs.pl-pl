@@ -1,12 +1,12 @@
 ---
-title: "przestarzałe (C/C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: przestarzałe (C/C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vc-pragma.deprecated
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5df80fffb5b9cdeabfe19d5a5de6eb771d35d3d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 65333f72f71ded1338956ab1a3c51c2be980cb1a
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-cc"></a>przestarzałe (C/C++)
 **Przestarzałe** pragma pozwala wskazać, że funkcja, typu lub inny identyfikator może przestanie być obsługiwany w przyszłości wersji lub nie powinny być używane.  
 > [!NOTE]
-> Informacje o C ++ 14 `[[deprecated]]` atrybutu, wskazówki i o tym, kiedy można użyć tego atrybutu vs declspec firmy Microsoft lub pragma, zobacz [atrybuty Standard C++](../cpp/attributes2.md) atrybutu.
+> Informacje o C ++ 14 `[[deprecated]]` atrybutu, wskazówki i o tym, kiedy można użyć tego atrybutu vs declspec firmy Microsoft lub pragma, zobacz [atrybuty Standard C++](../cpp/attributes.md) atrybutu.
   
 ## <a name="syntax"></a>Składnia  
   

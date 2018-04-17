@@ -1,12 +1,12 @@
 ---
-title: "Kompilatora (poziom 3) ostrzeżenie C4996 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kompilatora (poziom 3) ostrzeżenie C4996 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4996
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-caps.latest.revision: 
+caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a4797b4ac5fabc31d747682579c3b3ae6ce900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c41ce646f635e32f6e1e34d0361c738d0bb6b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Kompilator C4996 ostrzegawcze (poziom 3)
 
@@ -37,13 +37,13 @@ Oto niektóre typowe komunikaty C4996 wygenerowane przez biblioteki wykonawczej 
 
 - [Tej funkcji lub zmienna może być niebezpieczne. Należy rozważyć użycie *safe_version* zamiast tego. Aby wyłączyć amortyzacja, należy użyć \_CRT\_bezpiecznego\_nr\_ostrzeżenia.  Zobacz Pomoc online, aby uzyskać szczegółowe informacje.](#unsafe-crt-library-functions)
 
-- ["std::*nazwa_funkcji*::\_niezaznaczone\_Iteratory::\_Deprecate" wywołanie std::*nazwa_funkcji*z parametrami, które mogą być niebezpieczne — wywołanie polega na obiekt wywołujący, aby sprawdzić, czy przekazane wartości są poprawne. Aby wyłączyć to ostrzeżenie, użyj -D_SCL_SECURE_NO_WARNINGS. Dokumentacji na temat korzystania z programu Visual C++ 'Iteratory sprawdzane'](#unsafe-standard-library-functions)
+- ["std::*nazwa_funkcji*::\_niezaznaczone\_Iteratory::\_Deprecate" wywołanie std::*nazwa_funkcji*z parametrami, które mogą być niebezpieczne - zależy od tego wywołania obiekt wywołujący, aby sprawdzić, czy przekazane wartości są poprawne. Aby wyłączyć to ostrzeżenie, użyj -D_SCL_SECURE_NO_WARNINGS. Dokumentacji na temat korzystania z programu Visual C++ 'Iteratory sprawdzane'](#unsafe-standard-library-functions)
 
 - [Tej funkcji lub zmienna została zastąpiona nowszą funkcje biblioteki lub systemu operacyjnego. Należy rozważyć użycie *new_item* zamiast tego. Zobacz Pomoc online, aby uzyskać szczegółowe informacje.](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>Przyczyna
 
-C4996 występuje, gdy kompilator napotka funkcji lub zmienna, która jest oznaczona jako [przestarzałe](../../cpp/deprecated-cpp.md) za pomocą `__declspec(deprecated)` modyfikator, lub usiłujące uzyskać dostęp do funkcji, element członkowski klasy lub element typedef, który ma C ++ 14 [ \[ \[przestarzałe\] \] ](../../cpp/attributes2.md) atrybutu. Można użyć `__declspec(deprecated)` modyfikator lub `[[deprecated]]` atrybutu samodzielnie w bibliotekach lub pliki nagłówkowe, aby ostrzec klientów o przestarzałych funkcji, zmiennych, elementów członkowskich lub definicje typów.
+C4996 występuje, gdy kompilator napotka funkcji lub zmienna, która jest oznaczona jako [przestarzałe](../../cpp/deprecated-cpp.md) za pomocą `__declspec(deprecated)` modyfikator, lub usiłujące uzyskać dostęp do funkcji, element członkowski klasy lub element typedef, który ma C ++ 14 [ \[ \[przestarzałe\] \] ](../../cpp/attributes.md) atrybutu. Można użyć `__declspec(deprecated)` modyfikator lub `[[deprecated]]` atrybutu samodzielnie w bibliotekach lub pliki nagłówkowe, aby ostrzec klientów o przestarzałych funkcji, zmiennych, elementów członkowskich lub definicje typów.
 
 ## <a name="remarks"></a>Uwagi
 

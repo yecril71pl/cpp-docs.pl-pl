@@ -1,32 +1,32 @@
 ---
-title: "Konstruktory przenoszące i przenoszące operatory przypisania (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 'Porady: Definiowanie konstruktory przenoszenia i przenoszące operatory przypisania (C++) | Dokumentacja firmy Microsoft'
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- move constructor
+- move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69280eff199b9c04b51bf9b7aa298a67bf31bd89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bc9ce3d397b96ec45a0dbee5fefdb09d01b3f28
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory przenoszące i przenoszące operatory przypisania (C++)
-W tym temacie opisano sposób zapisania *przenoszenie konstruktora* i operator przypisania przenoszenia, dla klasy C++. Konstruktor przenoszący umożliwia implementuje semantykę przeniesienia, która może znacznie poprawić wydajność aplikacji. Aby uzyskać więcej informacji na temat semantyki przenoszenia zobacz [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+W tym temacie opisano sposób zapisania *przenoszenie konstruktora* i operator przypisania przenoszenia, dla klasy C++. Konstruktor przenoszący umożliwia zasobów należących do r-wartości obiektu do przeniesienia do l-wartością bez kopiowania. Aby uzyskać więcej informacji na temat semantyki przenoszenia zobacz [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
  W tym temacie opisano następujące klasy C++, `MemoryBlock`, która zarządza bufora pamięci.  
   
@@ -135,7 +135,7 @@ private:
     ```  
   
 ### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Aby utworzyć operator przypisania przenoszenia, dla klasy C++  
-  
+
 1.  Definiowanie operatora przypisania pusta, która przyjmuje odwołania do r-wartości na typ klasy, jak jej parametr i zwraca odwołanie do typu klasy, jak pokazano w poniższym przykładzie:  
   
     ```cpp  
@@ -230,7 +230,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak semantyki przenoszenia może poprawić wydajność aplikacji. Przykład dodaje dwa elementy do obiektu vector i wstawia nowy element między dwoma elementami istniejących. W programie Visual C++ 2010 `vector` używa klasy Przenieś semantyki można wykonać operacji wstawiania efektywnie przenosząc elementów wektora zamiast kopiować je.  
+ W poniższym przykładzie pokazano, jak semantyki przenoszenia może poprawić wydajność aplikacji. Przykład dodaje dwa elementy do obiektu vector i wstawia nowy element między dwoma elementami istniejących. `vector` Używa klasy Przenieś semantyki można wykonać operacji wstawiania efektywnie przenosząc elementów wektora zamiast kopiować je.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -275,7 +275,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Przed Visual C++ 2010 w tym przykładzie tworzy następujące dane wyjściowe:  
+ Przed Visual Studio 2010 w tym przykładzie utworzone następujące dane wyjściowe:  
   
 ```  
 In MemoryBlock(size_t). length = 25.  

@@ -1,12 +1,12 @@
 ---
 title: Identyfikatory (C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b2c3899076206d3ce3b0094f3d85426bd321c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 118c18e413640509789d6a6c4a177371c9144c64
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identifiers-c"></a>Identyfikatory (C++)
 Identyfikator jest sekwencji znaków używany do określenia jedną z następujących czynności:  
@@ -59,7 +59,7 @@ A B C D E F G H I J K L M
 N O P Q R S T U V W X Y Z  
 ```  
   
- Określone zakresy uniwersalne nazwy znaków również są dozwolone w identyfikatorze.  Nazwa zawierająca znaki uniwersalne w identyfikatorze nie może wyznaczyć znaku kontrolnego lub znak w zestawie znaków źródła podstawowych. Aby uzyskać więcej informacji, zobacz [zestawów znaków](../cpp/character-sets2.md). Te Unicode kod punktu numer są dozwolone zakresy jako uniwersalny nazwy znaków dowolny znak w identyfikatorze:  
+ Określone zakresy uniwersalne nazwy znaków również są dozwolone w identyfikatorze.  Nazwa zawierająca znaki uniwersalne w identyfikatorze nie może wyznaczyć znaku kontrolnego lub znak w zestawie znaków źródła podstawowych. Aby uzyskać więcej informacji, zobacz [zestawów znaków](../cpp/character-sets.md). Te Unicode kod punktu numer są dozwolone zakresy jako uniwersalny nazwy znaków dowolny znak w identyfikatorze:  
   
 -   00A8, 00AA, 00AD, 00AF, 00B2 00B5, 00B7 00BA, 00BC-00BE 00C 0 00 D 6, 8-00F6 00D, 00F8 00FF, 02FF 0100, 0370 167F, D 1681 180, 180F 1DBF, 1E00 1FFF, 200B - 200D, 202A 202E, 2040 203F, 2054, 206F 2060, 20CF 2070, 218F 2100, 2460-24FF, 2776-2793 00 2C-2DFF, 2E80 2FFF, 3004 3007, 3021 302F, 3031 303F, 3040 D7FF, CSA F900 FD3D, FD40 FDCF, FDF0 FE1F, FE30 FE44, FE47 FFFD 10000 1FFFD, 20000 2FFFD, 30000 3FFFD, 40000 4FFFD, 50000 5FFFD, 60000 6FFFD, 70000 7FFFD, 80000 8FFFD, 9FFFD 90000, A0000 AFFFD, D0000 BFFFD B0000, C0000-CFFFD-DFFFD, E0000 EFFFD  
   
@@ -73,7 +73,7 @@ N O P Q R S T U V W X Y Z
   
 -   0300-036F 1DC0 1DFF, 0 20D-20FF, FE20 FE2F  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Tylko pierwszy 2048 znaków identyfikatory Microsoft C++ są istotne. Nazwy dla typów zdefiniowanych przez użytkownika są "dekorowane" przez kompilator, aby zachować informacje o typie. Nazwa wynikowe, wraz z informacjami typu nie może być dłuższa niż 2048 znaków. (Zobacz [dekorowane nazwy](../build/reference/decorated-names.md) Aby uzyskać więcej informacji.) Czynniki wpływające długość identyfikatora ozdobione są:  
   

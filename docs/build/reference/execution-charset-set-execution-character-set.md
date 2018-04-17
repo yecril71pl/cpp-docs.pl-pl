@@ -24,11 +24,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cfb315c0dece0edc6228f70ed3900be80543cc7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7294270778d0b9351d3e58e8afd285f021bb0066
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-Charset (Ustaw wykonywania zestaw znaków)
 Umożliwia określenie wykonywania zestaw znaków dla pliku wykonywalnego.  
@@ -49,7 +49,7 @@ Umożliwia określenie wykonywania zestaw znaków dla pliku wykonywalnego.
 ## <a name="remarks"></a>Uwagi  
  Można użyć **/Execution-Charset** opcję, aby określić zestaw znaków wykonania. Zestaw znaków wykonania jest kodowanie używane do tekstu programu, który jest wprowadzany do fazy kompilacji po wszystkich przetwarzania wstępnego kroki. Zestaw znaków jest używany dla wewnętrznej reprezentacji żadnych ciąg lub znak literałów w kompilowanym kodzie. Ustaw tę opcję, aby określić zestaw znaków wykonania rozszerzonej, aby użyć plików źródłowych zawierają znaki, które nie są można przedstawić w zestaw znaków wykonania podstawowych. Można użyć albo organizację IANA Nazwa zestawu znaków ISO lub kropkę (.), a następnie identyfikator strony kod dziesiętny 3 do 5 cyfr, aby określić zestaw znaków używany. Zobacz listę obsługiwanych identyfikatorów strony kodu i nazwy zestawu znaków, [kodu strony identyfikatory](http://msdn.microsoft.com/library/windows/desktop/dd317756).  
   
- Domyślnie program Visual Studio wykrywa znacznik kolejności bajtów do ustalenia, czy plik źródłowy jest w zakodowanym formacie Unicode, na przykład UTF-16 lub UTF-8. Jeśli zostanie znaleziony Brak znacznika kolejności bajtów, zakłada się plik źródłowy jest zakodowany przy użyciu bieżącej strony kodowej użytkownika, chyba że został określony zbiór znaków nazwy lub kodu strony za pomocą **/Source-Charset** opcji lub **/UTF-8** opcji. Program Visual Studio umożliwia zapisanie kodu źródłowego języka C++ za pomocą jednej z kilku kodowanie znaków. Uzyskać informacje o zestawach znaków źródła i wykonania, zobacz [zestawy znaków](../../cpp/character-sets2.md) w dokumentacji języka.  
+ Domyślnie program Visual Studio wykrywa znacznik kolejności bajtów do ustalenia, czy plik źródłowy jest w zakodowanym formacie Unicode, na przykład UTF-16 lub UTF-8. Jeśli zostanie znaleziony Brak znacznika kolejności bajtów, zakłada się plik źródłowy jest zakodowany przy użyciu bieżącej strony kodowej użytkownika, chyba że został określony zbiór znaków nazwy lub kodu strony za pomocą **/Source-Charset** opcji lub **/UTF-8** opcji. Program Visual Studio umożliwia zapisanie kodu źródłowego języka C++ za pomocą jednej z kilku kodowanie znaków. Uzyskać informacje o zestawach znaków źródła i wykonania, zobacz [zestawy znaków](../../cpp/character-sets.md) w dokumentacji języka.  
   
  Jeśli chcesz ustawić zestaw znaków źródła i zestaw znaków wykonania na UTF-8, możesz użyć **/UTF-8** — opcja kompilatora jako skrót. Odpowiada to określenie **/source-charset:utf-8 /execution-charset:utf-8** w wierszu polecenia. Żadnego z tych opcji również umożliwia **Charset** opcji domyślnie.  
   
@@ -68,4 +68,4 @@ Umożliwia określenie wykonywania zestaw znaków dla pliku wykonywalnego.
  [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
  [/ Source-Charset (Ustaw źródło zestawu znaków)](../../build/reference/source-charset-set-source-character-set.md)   
  [/ UTF-8 (Ustaw źródło i plik wykonywalny zestawów znaków UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)   
- [Charset (weryfikacji zgodne znaków)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+ [/validate-charset (Zweryfikuj zgodność znaków)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

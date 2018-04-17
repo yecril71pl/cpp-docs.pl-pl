@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf0a4794dd32208b08791d921f6d638873545a1
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -49,6 +49,7 @@ Jeden lub więcej parametrów, które musi być typem literału a sam być wyra�
 
 ## <a name="return-value"></a>Wartość zwracana
 
+
  Zmienna constexpr lub funkcja musi zwracać [literalne](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="constexpr-variables"></a>zmienne constexpr
@@ -70,7 +71,7 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression
 ```
 
-## <a name="constexpr-functions"></a>funkcji constexpr
+## <a name="constexpr_functions"></a> funkcji constexpr
 
 A **constexpr** funkcji jest jednym którego zwracana wartość może być obliczona w kompilacji podczas używania kodu wymaga.  Po jej argumenty są **constexpr** wartości i odbierającą kodu wymaga wartości zwracanej w czasie kompilacji, na przykład w celu zainicjowania **constexpr** zmienna lub argument szablonu bez typu, go Tworzy stałą czasu kompilacji. Po wywołaniu z inną niż**constexpr** argumentów, lub gdy jego wartość nie jest wymagane w czasie kompilacji, tworzy wartość w czasie wykonywania, takie jak normalne działanie.  (To zachowanie podwójną pozwala uniknąć zapisu **constexpr** i nie-**constexpr** wersje tej samej funkcji.)
 
