@@ -1,12 +1,12 @@
 ---
-title: "_fgetchar —, _fgetwchar — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _fgetchar —, _fgetwchar — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fgetchar
@@ -41,92 +41,96 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eabf9bd54764aaa37bd860eb5bdb7d1ac5232ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8b6f6933d8483e3fee792829b0efde8e35ad91a1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
-Odczytuje znak z `stdin`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _fgetchar( void );  
-wint_t _fgetwchar( void );  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_fgetchar` Zwraca znak odczytany jako `int` lub zwróć `EOF` wskazująca błąd lub koniec pliku. **_** `fgetwchar` zwraca, jako [wint_t —](../../c-runtime-library/standard-types.md), znaków dwubajtowych, który odpowiada znaków do odczytu lub zwraca `WEOF` wskazująca błąd lub koniec pliku. Dla obu tych funkcji, należy użyć `feof` lub `ferror` odróżnić błąd warunku końcowego pliku.  
-  
-## <a name="remarks"></a>Uwagi  
- Te funkcje odczytu pojedynczy znak z `stdin`. Funkcja zwiększa następnie kursor skojarzony plik (jeśli jest zdefiniowana), aby wskazywały na następny znak. Jeśli strumień jest na końcu pliku, jest ustawiony dla tego strumienia wskaźnika końca pliku.  
-  
- `_fgetchar` jest odpowiednikiem `fgetc( stdin )`. Również jest odpowiednikiem `getchar`, ale zaimplementowany tylko jako funkcję, a nie jako funkcję i makra. `_fgetwchar` jest to wersja znaków dwubajtowych `_fgetchar`.  
-  
- Te funkcje nie są zgodne ze standardem ANSI.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_fgettchar`|`_fgetchar`|`_fgetchar`|`_fgetwchar`|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|  
-|--------------|---------------------|  
-|`_fgetchar`|\<stdio.h>|  
-|`_fgetwchar`|\<stdio.h > lub \<wchar.h >|  
-  
- Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w [! INCLUDEUWP aplikacji. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_fgetchar.c  
-// This program uses _fgetchar to read the first  
-// 80 input characters (or until the end of input)  
-// and place them into a string named buffer.  
-//  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   char buffer[81];  
-   int  i, ch;  
-  
-   // Read in first 80 characters and place them in "buffer":  
-   ch = _fgetchar();  
-   for( i=0; (i < 80 ) && ( feof( stdin ) == 0 ); i++ )  
-   {  
-      buffer[i] = (char)ch;  
-      ch = _fgetchar();  
-   }  
-  
-   // Add null to end string   
-   buffer[i] = '\0';  
-   printf( "%s\n", buffer );  
-}  
-```  
-  
-```Output  
-  
-      Line one.  
-Line two.Line one.  
-Line two.  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [fputc —, fputwc —](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+Odczytuje znak z **stdin**.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _fgetchar( void );
+wint_t _fgetwchar( void );
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+**_fgetchar —** zwraca znak odczytany jako **int** lub zwróć **EOF** wskazująca błąd lub koniec pliku. **_ *** fgetwchar —** zwraca, jako [wint_t —](../../c-runtime-library/standard-types.md), znaków dwubajtowych, który odpowiada znaków do odczytu lub zwraca **weof —** wskazująca błąd lub koniec pliku. Dla obu tych funkcji, należy użyć **feof —** lub **ferror —** odróżnić błąd warunku końcowego pliku.
+
+## <a name="remarks"></a>Uwagi
+
+Te funkcje odczytu pojedynczy znak z **stdin**. Funkcja zwiększa następnie kursor skojarzony plik (jeśli jest zdefiniowana), aby wskazywały na następny znak. Jeśli strumień jest na końcu pliku, jest ustawiony dla tego strumienia wskaźnika końca pliku.
+
+**_fgetchar —** jest odpowiednikiem `fgetc( stdin )`. Również jest odpowiednikiem **getchar**, ale zaimplementowany tylko jako funkcję, a nie jako funkcję i makra. **_fgetwchar —** jest wersja znaków dwubajtowych **_fgetchar —**.
+
+Te funkcje nie są zgodne ze standardem ANSI.
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_fgettchar —**|**_fgetchar**|**_fgetchar**|**_fgetwchar**|
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|
+|--------------|---------------------|
+|**_fgetchar**|\<stdio.h>|
+|**_fgetwchar**|\<stdio.h > lub \<wchar.h >|
+
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —**stdin**, **stdout**, i **stderr**— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_fgetchar.c
+// This program uses _fgetchar to read the first
+// 80 input characters (or until the end of input)
+// and place them into a string named buffer.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   char buffer[81];
+   int  i, ch;
+
+   // Read in first 80 characters and place them in "buffer":
+   ch = _fgetchar();
+   for( i=0; (i < 80 ) && ( feof( stdin ) == 0 ); i++ )
+   {
+      buffer[i] = (char)ch;
+      ch = _fgetchar();
+   }
+
+   // Add null to end string
+   buffer[i] = '\0';
+   printf( "%s\n", buffer );
+}
+```
+
+```Output
+
+      Line one.
+Line two.Line one.
+Line two.
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>

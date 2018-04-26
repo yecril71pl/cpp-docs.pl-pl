@@ -86,15 +86,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3598724e905c51c68e7f4305f409060eb1f98e41
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 1f4d00b7938c9fce4e96cd900e460721d9ebe662
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
 
-Konwertuje liczbę całkowitą na ciąg. Są to wersje [_itoa —, funkcje _itow —](../../c-runtime-library/reference/itoa-itow.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje liczbę całkowitą na ciąg. Są to wersje [_itoa —, funkcje _itow —](itoa-itow.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -161,22 +161,22 @@ Zero w przypadku powodzenia; błąd o kodzie błędu. Jeśli dowolny z następuj
 
 |value|Bufor|size|radix|Zwraca|
 |-----------|------------|----------------------|-----------|------------|
-|wszystkie|`NULL`|wszystkie|wszystkie|`EINVAL`|
-|wszystkie|wszystkie|<=0|wszystkie|`EINVAL`|
-|wszystkie|wszystkie|< = długość ciągu wynik wymagane|wszystkie|`EINVAL`|
-|wszystkie|wszystkie|wszystkie|*Podstawa* < 2 lub *radix* > 36|`EINVAL`|
+|wszystkie|**NULL**|wszystkie|wszystkie|**EINVAL —**|
+|wszystkie|wszystkie|<=0|wszystkie|**EINVAL —**|
+|wszystkie|wszystkie|< = długość ciągu wynik wymagane|wszystkie|**EINVAL —**|
+|wszystkie|wszystkie|wszystkie|*Podstawa* < 2 lub *radix* > 36|**EINVAL —**|
 
 ### <a name="security-issues"></a>Problemy z zabezpieczeniami
 
-Funkcje te mogą generować naruszenia zasad dostępu, jeśli *buforu* nie wskazuje na prawidłową pamięci i nie jest `NULL`, lub jeśli długość buforu nie jest wystarczająco długi pomieścić ciąg wyniku.
+Funkcje te mogą generować naruszenia zasad dostępu, jeśli *buforu* nie wskazuje na prawidłową pamięci i nie jest **NULL**, lub jeśli długość buforu nie jest wystarczająco długi pomieścić ciąg wyniku.
 
 ## <a name="remarks"></a>Uwagi
 
-Z wyjątkiem tych parametrów i zwracanych wartości `_itoa_s` i `_itow_s` rodziny funkcji ma takie samo zachowanie jako odpowiadającego mniej bezpieczne `_itoa` i `_itow` wersji.
+Z wyjątkiem tych parametrów i zwracanych wartości **_itoa_s —** i **_itow_s —** rodziny funkcji ma takie samo zachowanie jako odpowiadającego mniej bezpieczne **_itoa —** i **_itow —** wersji.
 
 W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje biblioteki debugowania tych funkcji najpierw wprowadzić bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wprowadzić bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
 
 CRT obejmuje wygodny makra, aby zdefiniować rozmiar buforu wymaganych do przekonwertowania najdłuższym możliwa wartość każdego typu Liczba całkowita, włącznie z terminatorem null i zaloguj się znak, dla kilku wspólnej bazy. Aby uzyskać informacje, zobacz [makra Liczba konwersji maksymalnie](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -184,18 +184,18 @@ CRT obejmuje wygodny makra, aby zdefiniować rozmiar buforu wymaganych do przeko
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot_s`|`_itoa_s`|`_itoa_s`|`_itow_s`|
-|`_ltot_s`|`_ltoa_s`|`_ltoa_s`|`_ltow_s`|
-|`_ultot_s`|`_ultoa_s`|`_ultoa_s`|`_ultow_s`|
-|`_i64tot_s`|`_i64toa_s`|`_i64toa_s`|`_i64tow_s`|
-|`_ui64tot_s`|`_ui64toa_s`|`_ui64toa_s`|`_ui64tow_s`|
+|**_itot_s —**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**_ltot_s**|**_ltoa_s —**|**_ltoa_s —**|**_ltow_s**|
+|**_ultot_s**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
+|**_i64tot_s —**|**_i64toa_s —**|**_i64toa_s —**|**_i64tow_s**|
+|**_ui64tot_s —**|**_ui64toa_s —**|**_ui64toa_s —**|**_ui64tow_s**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`_itoa_s`, `_ltoa_s`, `_ultoa_s`, `_i64toa_s`, `_ui64toa_s`|\<stdlib.h>|
-|`_itow_s`, `_ltow_s`, `_ultow_s`, `_i64tow_s`, `_ui64tow_s`|\<stdlib.h > lub \<wchar.h >|
+|**_itoa_s —**, **_ltoa_s —**, **_ultoa_s —**, **_i64toa_s —**, **_ui64toa_s —**|\<stdlib.h>|
+|**_itow_s —**, **_ltow_s —**, **_ultow_s —**, **_i64tow_s —**, **_ui64tow_s —**|\<stdlib.h > lub \<wchar.h >|
 
 Te funkcje są specyficzne dla firmy Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -272,4 +272,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa —, _itow — funkcje](../../c-runtime-library/reference/itoa-itow.md)<br/>
+[_itoa —, _itow — funkcje](itoa-itow.md)<br/>

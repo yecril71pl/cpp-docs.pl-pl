@@ -1,12 +1,12 @@
 ---
-title: "_commit — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _commit — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _commit
@@ -35,52 +35,57 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5a3f1e8d1f4a122ecf5a66393fa5c1f5c65f1b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9396fd502f5137b469c9f92110bfc23c9d2fb246
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="commit"></a>_commit
-Liczba opróżnień pliku bezpośrednio na dysku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _commit(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `fd`  
- Plik deskryptora odwołujących się do otwartego pliku.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_commit` Zwraca wartość 0, jeśli plik został pomyślnie wyczyszczone na dysku. Zwracana wartość -1 wskazuje błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- `_commit` Funkcja wymusza systemu operacyjnego można zapisać pliku skojarzone z `fd` na dysku. To wywołanie gwarantuje, że określony plik jest opróżniany natychmiast, nie uznania systemu operacyjnego.  
-  
- Jeśli `fd` jest deskryptora nieprawidłowy plik wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, funkcja zwraca wartość -1 i `errno` ma ustawioną wartość `EBADF`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
-|-------------|---------------------|----------------------|  
-|`_commit`|\<io.h>|\<errno.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
- [_przeczytaj](../../c-runtime-library/reference/read.md)   
- [_write](../../c-runtime-library/reference/write.md)
+
+Liczba opróżnień pliku bezpośrednio na dysku.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _commit(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*FD*<br/>
+Plik deskryptora odwołujących się do otwartego pliku.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**_commit —** zwraca wartość 0, jeśli plik został pomyślnie wyczyszczone na dysku. Zwracana wartość -1 wskazuje błąd.
+
+## <a name="remarks"></a>Uwagi
+
+**_Commit —** funkcja wymusza systemu operacyjnego można zapisać pliku skojarzone z *fd* na dysku. To wywołanie gwarantuje, że określony plik jest opróżniany natychmiast, nie uznania systemu operacyjnego.
+
+Jeśli *fd* jest deskryptora nieprawidłowy plik wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, funkcja zwraca wartość -1 i **errno** ustawiono **ebadf —**.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|-------------|---------------------|----------------------|
+|**_commit**|\<io.h>|\<errno.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_read](read.md)<br/>
+[_write](write.md)<br/>

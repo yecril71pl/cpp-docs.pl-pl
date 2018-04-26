@@ -35,11 +35,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 82585f9f2c727d7189633091429aef6742cdd00b
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkcje wymiany danych w oknie dialogowym dla formularzy CRecordView i CDaoRecordView
 W tym temacie wymieniono ddx_field — funkcje używane do wymiany danych między [crecordset —](../../mfc/reference/crecordset-class.md) i [CRecordView](../../mfc/reference/crecordview-class.md) formularza lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) i [ Cdaorecordview —](../../mfc/reference/cdaorecordview-class.md) formularza.  
@@ -51,17 +51,17 @@ W tym temacie wymieniono ddx_field — funkcje używane do wymiany danych międz
   
 |||  
 |-|-|  
-|[DDX_FieldCBIndex](#ddx_fieldcbindex)|Transfer danych liczb całkowitych między elementem członkowskim danych pola rekordów i indeks bieżącego zaznaczenia w polu kombi w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|  
-|[DDX_FieldCBString](#ddx_fieldcbstring)|Transfery `CString` danych między elementem członkowskim danych pola rekordów i kontrolki edycji kombi pole `CRecordView` lub `CDaoRecordView`. Podczas przenoszenia danych w zestawie do formantu, funkcja wybiera element w polu kombi, który rozpoczyna się od znaków w ciągu określonej.|  
+|[Ddx_fieldcbindex —](#ddx_fieldcbindex)|Transfer danych liczb całkowitych między elementem członkowskim danych pola rekordów i indeks bieżącego zaznaczenia w polu kombi w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|  
+|[Ddx_fieldcbstring —](#ddx_fieldcbstring)|Transfery `CString` danych między elementem członkowskim danych pola rekordów i kontrolki edycji kombi pole `CRecordView` lub `CDaoRecordView`. Podczas przenoszenia danych w zestawie do formantu, funkcja wybiera element w polu kombi, który rozpoczyna się od znaków w ciągu określonej.|  
 |[Ddx_fieldcbstringexact —](#ddx_fieldcbstringexact)|Transfery `CString` danych między elementem członkowskim danych pola rekordów i kontrolki edycji kombi pole `CRecordView` lub `CDaoRecordView`. Podczas przenoszenia danych w zestawie do formantu, funkcja wybiera element w polu kombi, która dokładnie odpowiada określonego ciągu.|  
-|[DDX_FieldCheck](#ddx_fieldcheck)|Transfery danych logicznych między elementem członkowskim danych pola rekordów i pola wyboru w `CRecordView` lub `CDaoRecordView`.|  
-|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Transfer danych liczb całkowitych między elementem członkowskim danych pola rekordów i indeks bieżącego zaznaczenia w polu listy w `CRecordView` lub `CDaoRecordView`.|  
+|[Ddx_fieldcheck —](#ddx_fieldcheck)|Transfery danych logicznych między elementem członkowskim danych pola rekordów i pola wyboru w `CRecordView` lub `CDaoRecordView`.|  
+|[Ddx_fieldlbindex —](#ddx_fieldlbindex)|Transfer danych liczb całkowitych między elementem członkowskim danych pola rekordów i indeks bieżącego zaznaczenia w polu listy w `CRecordView` lub `CDaoRecordView`.|  
 |[Ddx_fieldlbstring —](#ddx_fieldlbstring)|Zarządza transferem [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) danych między kontrolkę pola listy i elementy członkowskie danych pola zestawu rekordów. Podczas przenoszenia danych w zestawie do formantu, funkcja wybiera element w polu listy, który rozpoczyna się od znaków w ciągu określonej.|  
 |[Ddx_fieldlbstringexact —](#ddx_fieldlbstringexact)|Zarządza transferem `CString` danych między kontrolkę pola listy i elementy członkowskie danych pola zestawu rekordów. Podczas przenoszenia danych w zestawie do formantu, funkcja wybiera pierwszy element, która dokładnie odpowiada określonego ciągu.|  
-|[DDX_FieldRadio](#ddx_fieldradio)|Transfer danych liczb całkowitych między elementem członkowskim danych pola rekordów i Grupa przycisków radiowych w `CRecordView` lub `CDaoRecordView`.|  
+|[Ddx_fieldradio —](#ddx_fieldradio)|Transfer danych liczb całkowitych między elementem członkowskim danych pola rekordów i Grupa przycisków radiowych w `CRecordView` lub `CDaoRecordView`.|  
 |[Ddx_fieldscroll —](#ddx_fieldscroll)|Ustawia lub pobiera jego położenie przewijania formantu paska przewijania w `CRecordView` lub `CDaoRecordView`. Wywoływanie z Twojej [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) funkcji.|  
 |[Ddx_fieldslider —](#ddx_fieldslider)|Synchronizuje pozycji przycisku przewijania suwaka w widoku rekordu i `int` pola danych członkiem zestawu rekordów. |
-|[DDX_FieldText](#ddx_fieldtext)|Przeciążone wersje są dostępne do przesyłania `int`, **UINT**, **długi**, `DWORD`, [cstring —](../../atl-mfc-shared/reference/cstringt-class.md), **float** , **podwójne**, **krótki**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), i [COleCurrency](../../mfc/reference/colecurrency-class.md) danych między elementem członkowskim danych pola rekordów i edytowanie pole `CRecordView` lub `CDaoRecordView`.|  
+|[Ddx_fieldtext —](#ddx_fieldtext)|Przeciążone wersje są dostępne do przesyłania `int`, **UINT**, **długi**, `DWORD`, [cstring —](../../atl-mfc-shared/reference/cstringt-class.md), **float** , **podwójne**, **krótki**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), i [COleCurrency](../../mfc/reference/colecurrency-class.md) danych między elementem członkowskim danych pola rekordów i edytowanie pole `CRecordView` lub `CDaoRecordView`.|  
   
 ##  <a name="ddx_fieldcbindex"></a>  Ddx_fieldcbindex —  
  `DDX_FieldCBIndex` Funkcja synchronizuje indeks wybranego elementu w formancie pola listy z kontrolki pola kombi w widoku rekordu i `int` pola danych członkiem zestawu rekordów skojarzonego z widokiem rekordu.  
@@ -423,7 +423,7 @@ void AFXAPI DDX_FieldScroll(
  `pDX`  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- *nIDC\**  
+ `nIDC`  
  Identyfikator pierwszego w grupie (stylem **ws_group —**) kontrolek przycisków radiowych sąsiadujących ze sobą w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
  *value*  

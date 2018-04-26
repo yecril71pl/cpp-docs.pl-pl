@@ -1,12 +1,12 @@
 ---
-title: kbhit | Microsoft Docs
-ms.custom: 
+title: kbhit — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - kbhit
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - kbhit function
 ms.assetid: 73f1eed7-b3ef-4887-8ec6-755367de1d7d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97549023129eeab80ad383130218102679c25a70
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d432269525393a9677b5a7bec8e55c31fdc5fc8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="kbhit"></a>kbhit
-Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_kbhit —](../../c-runtime-library/reference/kbhit.md) zamiast tego.  
-  
+
+Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_kbhit —](kbhit.md) zamiast tego.
+
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

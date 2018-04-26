@@ -1,12 +1,12 @@
 ---
-title: "frexp — | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: frexp —, frexpf —, frexpl — | Dokumentacja firmy Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - frexp
@@ -36,87 +36,100 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02eab6e7912a69a6189568d9a5530ace88d8430b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ed4f3096b52834b59250226d7857ed0069982749
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="frexp"></a>frexp
-Pobiera mantysa i wykładnik liczby zmiennoprzecinkowej.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-double frexp(  
-   double x,  
-   int *expptr   
-);  
-float frexp(  
-   float x,  
-   int * expptr  
-);  // C++ only  
-long double frexp(  
-   long double x,  
-   int * expptr  
-);  // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `x`  
- Wartość zmiennoprzecinkowa.  
-  
- `expptr`  
- Wskaźnik do wykładnik przechowywane liczby całkowitej.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `frexp` Zwraca mantysa. Jeśli `x` wynosi 0, funkcja zwraca wartość 0 dla mantysa i wykładnik. Jeśli `expptr` jest `NULL`, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia `errno` do `EINVAL` i zwraca wartość 0.  
-  
-## <a name="remarks"></a>Uwagi  
- `frexp` Funkcja dzieli wartości zmiennoprzecinkowych (`x`) do mantysy (`m`) i wykładnik (`n`), w taki sposób, że wartość bezwzględną liczby `m` jest większa niż lub równa 0,5 i mniejszą niż 1,0 i `x`  =  `m`* 2<sup>n</sup>. Wykładnik całkowitą `n` są przechowywane w lokalizacji wskazywanej przez `expptr`.  
-  
- C++ pozwala przeładowanie, dlatego można wywoływać przeciążenia `frexp`. W programie C `frexp` zawsze przyjmuje wartość o podwójnej precyzji i całkowitą i zwraca wartość o podwójnej precyzji.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|  
-|--------------|---------------------|  
-|`frexp`|\<math.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_frexp.c  
-// This program calculates frexp( 16.4, &n )  
-// then displays y and n.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double x, y;  
-   int n;  
-  
-   x = 16.4;  
-   y = frexp( x, &n );  
-   printf( "frexp( %f, &n ) = %f, n = %d\n", x, y, n );  
-}  
-```  
-  
-```Output  
-frexp( 16.400000, &n ) = 0.512500, n = 5  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [ldexp —](../../c-runtime-library/reference/ldexp.md)   
- [modf, modff, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)
+# <a name="frexp-frexpf-frexpl"></a>frexp —, frexpf —, frexpl —
+
+Pobiera mantysa i wykładnik liczby zmiennoprzecinkowej.
+
+## <a name="syntax"></a>Składnia
+
+```C
+double frexp(
+   double x,
+   int *expptr
+);
+float frexpf(
+   float x,
+   int * expptr
+);
+long double frexpl(
+   long double x,
+   int * expptr
+);
+float frexp(
+   float x,
+   int * expptr
+);  // C++ only
+long double frexp(
+   long double x,
+   int * expptr
+);  // C++ only
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Wartość zmiennoprzecinkowa.
+
+*expptr*<br/>
+Wskaźnik do wykładnik przechowywane liczby całkowitej.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**frexp —** zwraca mantysa. Jeśli *x* wynosi 0, funkcja zwraca wartość 0 dla mantysa i wykładnik. Jeśli *expptr* jest **NULL**, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca wartość 0.
+
+## <a name="remarks"></a>Uwagi
+
+**Frexp —** funkcja dzieli wartości zmiennoprzecinkowych (*x*) do mantysy (*m*) i wykładnik (*n*), w taki sposób, że bezwzględne wartość *m* jest większa niż lub równa 0,5 i mniejszą niż 1,0 i *x* = *m* * 2<sup>*n*</sup>. Wykładnik całkowitą *n* są przechowywane w lokalizacji wskazywanej przez *expptr*.
+
+C++ pozwala przeładowanie, dlatego można wywoływać przeciążenia **frexp —**. W programie C **frexp —** zawsze ma **podwójne** i **int** wskaźnik i zwraca **podwójne**.
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|
+|--------------|---------------------|
+|**frexp —**, **frexpf —**, **frexpl —**|\<math.h>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_frexp.c
+// This program calculates frexp( 16.4, &n )
+// then displays y and n.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double x, y;
+   int n;
+
+   x = 16.4;
+   y = frexp( x, &n );
+   printf( "frexp( %f, &n ) = %f, n = %d\n", x, y, n );
+}
+```
+
+```Output
+frexp( 16.400000, &n ) = 0.512500, n = 5
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[ldexp](ldexp.md)<br/>
+[modf, modff, modfl](modf-modff-modfl.md)<br/>
