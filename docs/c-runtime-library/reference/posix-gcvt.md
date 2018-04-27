@@ -1,12 +1,12 @@
 ---
-title: "gcvt — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: gcvt — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - gcvt
@@ -29,17 +29,18 @@ dev_langs:
 helpviewer_keywords:
 - gcvt function
 ms.assetid: 913478fd-ef22-4dee-b558-ff2bd6d72f3d
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 950ff575276678300dcb2d855e14fc0e39c7bfb6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5ff9e22686b8dccfb64922c73ae18ec0c56b5f0e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="gcvt"></a>gcvt
-Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_gcvt —](../../c-runtime-library/reference/gcvt.md) lub zwiększonych zabezpieczeń [_gcvt_s —](../../c-runtime-library/reference/gcvt-s.md) zamiast tego.
+
+Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_gcvt —](gcvt.md) lub zwiększonych zabezpieczeń [_gcvt_s —](gcvt-s.md) zamiast tego.

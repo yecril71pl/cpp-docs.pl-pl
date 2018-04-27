@@ -1,12 +1,12 @@
 ---
-title: "isNaN _isnan —, _isnanf | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: isNaN _isnan —, _isnanf | Dokumentacja firmy Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isnan
@@ -41,68 +41,73 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d0997b1a6b304634c612f0f1615a059fd812b2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6b8552f59bc0d49ebae0d4a534225af5d9f5facb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isnan-isnan-isnanf"></a>isNaN _isnan —, _isnanf
-Testy, jeśli wartość zmiennoprzecinkowa nie jest liczbą (NAN).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int isnan(  
-   /* floating-point */ x   
-); /* C-only macro */  
-  
-int _isnan(  
-   double x   
-);  
-  
-int _isnanf(  
-   float x  
-); /* x64 only */  
-  
-template <class T>  
-bool isnan(  
-   T x  
-) throw(); /* C++ only */  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *x*  
- Wartość zmiennoprzecinkowa do testowania.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- W języku C `isnan` makro i `_isnan` i `_isnanf` funkcje zwracają wartość niezerową, jeśli argument `x` jest wartością typu NAN; w przeciwnym razie zwracają 0.  
-  
- W języku C++ `isnan` szablonu funkcje zwracają `true` Jeśli argument `x` jest wartością typu NAN; w przeciwnym razie zwraca `false`.  
-  
-## <a name="remarks"></a>Uwagi  
- C `isnan` makro i `_isnan` i `_isnanf` funkcji testowania wartość zmiennoprzecinkowa *x*, zwracając wartość niezerową, jeśli *x* nie jest wartość liczbą (NAN). NAN jest generowany, gdy wynik operacji zmiennoprzecinkowej nie może być reprezentowany w formacie zmiennoprzecinkowej IEEE-754 dla określonego typu. Informacje, jak NAN są reprezentowane dla danych wyjściowych, zobacz [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
- Podczas kompilacji jako C++, `isnan` makro nie jest zdefiniowany i `isnan` funkcji szablonu jest zdefiniowany w zamian. Zwraca wartość typu `bool` zamiast liczbą całkowitą.  
-  
- `_isnan` i `_isnanf` funkcje są określone firmy Microsoft. `_isnanf` Funkcja jest dostępna, gdy kompilowany dla x64 tylko.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|  
-|-------------|---------------------------|-------------------------------|  
-|`isnan`, `_isnanf`|\<math.h>|\<Math.h > lub \<cmath >|  
-|`_isnan`|\<float.h>|\<float.h — > lub \<cfloat — >|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [_finite, _finitef](../../c-runtime-library/reference/finite-finitef.md)   
- [_fpclass, _fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)
+
+Testy, jeśli wartość zmiennoprzecinkowa nie jest liczbą (NAN).
+
+## <a name="syntax"></a>Składnia
+
+```C
+int isnan(
+   /* floating-point */ x
+); /* C-only macro */
+
+int _isnan(
+   double x
+);
+
+int _isnanf(
+   float x
+); /* x64 only */
+
+template <class T>
+bool isnan(
+   T x
+) throw(); /* C++ only */
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Wartość zmiennoprzecinkowa do testowania.
+
+## <a name="return-value"></a>Wartość zwracana
+
+W języku C **isnan** makro i **_isnan —** i **_isnanf** funkcje zwracają wartość niezerową, jeśli argument *x* jest wartością typu NAN; w przeciwnym razie ich Zwraca 0.
+
+W języku C++ **isnan** szablonu funkcje zwracają **true** Jeśli argument *x* jest wartością typu NAN; w przeciwnym razie zwraca **false**.
+
+## <a name="remarks"></a>Uwagi
+
+C **isnan** makro i **_isnan —** i **_isnanf** funkcji testowania wartość zmiennoprzecinkowa *x*, zwracając wartość niezerową, jeśli *x* nie jest wartością liczbą (NAN). NAN jest generowany, gdy wynik operacji zmiennoprzecinkowej nie może być reprezentowany w formacie zmiennoprzecinkowej IEEE-754 dla określonego typu. Informacje, jak NAN są reprezentowane dla danych wyjściowych, zobacz [printf](printf-printf-l-wprintf-wprintf-l.md).
+
+Podczas kompilacji jako C++, **isnan** makro nie jest zdefiniowany i **isnan** funkcji szablonu jest zdefiniowany w zamian. Zwraca wartość typu **bool** zamiast liczbą całkowitą.
+
+**_Isnan —** i **_isnanf** funkcje są określone firmy Microsoft. **_Isnanf** funkcja jest dostępna, gdy kompilowany dla x64 tylko.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|-------------|---------------------------|-------------------------------|
+|**isNaN —**, **_isnanf**|\<math.h>|\<Math.h > lub \<cmath >|
+|**_isnan —**|\<float.h>|\<float.h — > lub \<cfloat — >|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[_finite, _finitef](finite-finitef.md)<br/>
+[_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>

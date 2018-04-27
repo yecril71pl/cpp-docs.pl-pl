@@ -1,12 +1,12 @@
 ---
 title: _query_new_mode | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _query_new_mode
@@ -33,50 +33,54 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbbdec8c5a8cd9af5e6a17518cc40bca455b3f98
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 67a7b52bc2a16e5c87e6ba83c3ba9c2710c2ed88
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="querynewmode"></a>_query_new_mode
-Zwraca liczbę całkowitą wskazującą nowy tryb obsługi ustawione przez `_set_new_mode` dla `malloc`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-      int _query_new_mode(  
-   void   
-);  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca bieżący nowy tryb obsługi, a mianowicie 0 lub 1, `malloc`. Zwracana wartość 1 oznacza, że, nie można przydzielić pamięci, `malloc` wywołuje nowe procedury obsługi; wartość zwracana 0 wskazuje, nie ma.  
-  
-## <a name="remarks"></a>Uwagi  
- C++ `_query_new_mode` funkcja zwróci liczbę całkowitą wskazującą nowy tryb obsługi, który jest uporządkowany według języka C++ [_set_new_mode —](../../c-runtime-library/reference/set-new-mode.md) działać w ramach [— funkcja malloc](../../c-runtime-library/reference/malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku awarii można przydzielić pamięci, `malloc` jest wywołanie nowe procedury obsługi zgodnie z ustawieniami [_set_new_handler —](../../c-runtime-library/reference/set-new-handler.md). Domyślnie `malloc` nie wywołuje nowe procedury obsługi w przypadku awarii. Można użyć `_set_new_mode` Aby zmienić to zachowanie, tak że w przypadku niepowodzenia `malloc` wywołuje nowe procedury obsługi, w tym samym jak robi **nowe** operator nie w przypadku niepowodzenia można przydzielić pamięci. Aby uzyskać więcej informacji, zobacz Omówienie [nowy i delete — operatory](../../cpp/new-and-delete-operators.md) w dokumentacja języka C++.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_query_new_mode`|\<new.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="libraries"></a>Biblioteki  
- Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)   
- [calloc](../../c-runtime-library/reference/calloc.md)   
- [W warstwie bezpłatna](../../c-runtime-library/reference/free.md)   
- [realloc](../../c-runtime-library/reference/realloc.md)   
- [_query_new_handler](../../c-runtime-library/reference/query-new-handler.md)
+
+Zwraca liczbę całkowitą wskazującą nowy tryb obsługi ustawione przez **_set_new_mode —** dla **— funkcja malloc**.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _query_new_mode(
+   void
+);
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca bieżący nowy tryb obsługi, a mianowicie 0 lub 1, **— funkcja malloc**. Zwracana wartość 1 oznacza, że, nie można przydzielić pamięci, **— funkcja malloc** wywołuje nowe procedury obsługi; wartość zwracana 0 wskazuje, nie ma.
+
+## <a name="remarks"></a>Uwagi
+
+C++ **_query_new_mode —** funkcja zwróci liczbę całkowitą wskazującą nowy tryb obsługi, który jest uporządkowany według języka C++ [_set_new_mode —](set-new-mode.md) działać w ramach [— funkcja malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku awarii można przydzielić pamięci, **— funkcja malloc** jest wywołanie nowe procedury obsługi zgodnie z ustawieniami [_set_new_handler —](set-new-handler.md). Domyślnie **— funkcja malloc** nie wywołuje nowe procedury obsługi w przypadku awarii. Można użyć **_set_new_mode —** Aby zmienić to zachowanie, tak że w przypadku niepowodzenia **— funkcja malloc** wywołuje nowe procedury obsługi, w tym samym jak robi **nowe** operator nie, gdy nie powiedzie się przydzielić pamięci. Aby uzyskać więcej informacji, zobacz Omówienie [nowy i delete — operatory](../../cpp/new-and-delete-operators.md) w dokumentacja języka C++.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_query_new_mode**|\<new.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Biblioteki
+
+Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
+[calloc](calloc.md)<br/>
+[free](free.md)<br/>
+[realloc](realloc.md)<br/>
+[_query_new_handler](query-new-handler.md)<br/>

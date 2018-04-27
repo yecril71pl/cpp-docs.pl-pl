@@ -42,11 +42,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc43c72c4fcbaf9d24c1a2c4cc7b7923d0c67878
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: a51de64d8dea595041939e8b59638031babe53a2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="creal-crealf-creall"></a>creal crealf, creall
 
@@ -76,23 +76,23 @@ Część rzeczywista *z*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia `creal` które trwają **_Fcomplex** lub **_Lcomplex** wartości i wróć **float** lub **długa Podwójna** wartości. W programie C `creal` zawsze ma **_Dcomplex** wartości i zwraca **podwójne** wartość.
+Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **creal** które trwają **_Fcomplex** lub **_Lcomplex** wartości i wróć **float** lub **podwójnej długości** wartości. W programie C **creal** zawsze ma **_Dcomplex** wartości i zwraca **podwójne** wartość.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Nagłówek C|Nagłówek C++|
 |-------------|--------------|------------------|
-|`creal`, `crealf`, `creall`|\<complex.h>|\<ccomplex >|
+|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex >|
 
 **_Fcomplex**, **_Dcomplex**, i **_Lcomplex** typy są specyficzne dla firmy Microsoft odpowiedniki niezaimplementowana natywnych typów C99 **float _Complex** , **podwójne _Complex**, i **_Complex podwójnej długości**odpowiednio. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Alfabetyczne zestawienie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[_Cbuild, _FCbuild, _LCbuild](../../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)<br/>
-[normy normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)<br/>
-[cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
-[conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
-[cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
-[carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
-[cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>
+[Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
+[_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
+[normy normf, norml](norm-normf-norml1.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

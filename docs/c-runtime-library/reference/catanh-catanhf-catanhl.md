@@ -1,5 +1,5 @@
 ---
-title: catanh, catanhf, catanhl | Microsoft Docs
+title: catanh catanhf, catanhl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -46,64 +46,69 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abce100af16bff2ec7fd2de82d66ec3a7e59604e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5d80800bc5eae41e19f8c74888be21eca272c8ee
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
-Pobiera odwrotny tangens hiperboliczny liczby złożone z części gałąź poza przedział [-1; + 1] na rzeczywistych osi.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-_Dcomplex catanh(   
-   _Dcomplex z   
-);  
-_Fcomplex catanh(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex catanh(   
-   _Lcomplex z   
-);  //  C++ only  
-_Fcomplex catanhf(   
-   _Fcomplex z   
-);  
-_Lcomplex catanhl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `z`  
- Liczba złożonych, która reprezentuje kąt w radianach.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Odwrotny tangens hiperboliczny liczby `z`, w radianach. Wynik jest niepowiązany rzeczywistych osi, a w interwale [-iπ/2; + iπ/2] urojony osi. Błąd domeny wystąpi, jeśli `z` znajduje się poza interwał [-1, + 1]. Błąd bieguna wystąpi, jeśli `z` jest wartość -1 lub + 1.  
-  
-## <a name="remarks"></a>Uwagi  
- Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia `catanh` który przyjmować i zwracać `_Fcomplex` i `_Lcomplex` wartości. W programie C `catanh` zawsze przyjmuje i zwraca `_Dcomplex` wartość.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Nagłówek C|Nagłówek C++|  
-|-------------|--------------|------------------|  
-|`catanh`,               `catanhf`, `catanhl`|\<complex.h>|\<ccomplex >|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [catan catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+Pobiera odwrotny tangens hiperboliczny liczby złożone z części gałąź poza przedział [-1; + 1] na rzeczywistych osi.
+
+## <a name="syntax"></a>Składnia
+
+```C
+_Dcomplex catanh(
+   _Dcomplex z
+);
+_Fcomplex catanh(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex catanh(
+   _Lcomplex z
+);  //  C++ only
+_Fcomplex catanhf(
+   _Fcomplex z
+);
+_Lcomplex catanhl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*z*<br/>
+Liczba złożonych, która reprezentuje kąt w radianach.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Odwrotny tangens hiperboliczny liczby *z*, w radianach. Wynik jest niepowiązany rzeczywistych osi, a w interwale [-iπ/2; + iπ/2] urojony osi. Błąd domeny wystąpi, jeśli *z* znajduje się poza interwał [-1, + 1]. Błąd bieguna wystąpi, jeśli *z* jest wartość -1 lub + 1.
+
+## <a name="remarks"></a>Uwagi
+
+Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **catanh** który przyjmować i zwracać **_Fcomplex** i **_Lcomplex** wartości. W programie C **catanh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Nagłówek C|Nagłówek C++|
+|-------------|--------------|------------------|
+|**catanh**, **catanhf**, **catanhl**|\<complex.h>|\<ccomplex >|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
+[ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[catan, catanf, catanl](catan-catanf-catanl.md)<br/>
+[csinh, csinhf, csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh, casinhf, casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh, ccoshf, ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh, cacoshf, cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos, cacosf, cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan, ctanf, ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin, csinf, csinl](csin-csinf-csinl.md)<br/>
+[casin, casinf, casinl](casin-casinf-casinl.md)<br/>
+[ccos, ccosf, ccosl](ccos-ccosf-ccosl.md)<br/>
+[csqrt, csqrtf, csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "Zgłoś | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zgłoś | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - raise
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a116bfab72222bcf3ee3357c77759960f838cb9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7b4c6bc2668089c4e6b813a03246e0690d1b4af
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="raise"></a>wywołaj
 
@@ -60,7 +60,7 @@ int raise(
 
 ### <a name="parameters"></a>Parametry
 
-*sig*  
+*SIG*<br/>
 Sygnał do wywołania.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -73,14 +73,14 @@ W przypadku powodzenia **podnieść** zwraca wartość 0. W przeciwnym wypadku z
 
 |Sygnał|Znaczenie|Domyślny|
 |------------|-------------|-------------|
-|`SIGABRT`|Przerwania pracy|Kończy program wywołujący z kodem zakończenia 3|
-|`SIGFPE`|Błąd liczb zmiennoprzecinkowych|Kończy program wywołujący|
-|`SIGILL`|Niedozwolona instrukcja|Kończy program wywołujący|
-|`SIGINT`|CTRL + C przerwania|Kończy program wywołujący|
-|`SIGSEGV`|Dostępu do magazynu niedozwolony|Kończy program wywołujący|
-|`SIGTERM`|Zakończenie żądania wysyłane do programu|Ignoruje sygnału|
+|**SIGABRT —**|Przerwania pracy|Kończy program wywołujący z kodem zakończenia 3|
+|**SIGFPE —**|Błąd liczb zmiennoprzecinkowych|Kończy program wywołujący|
+|**SIGILL —**|Niedozwolona instrukcja|Kończy program wywołujący|
+|**SIGINT —**|CTRL + C przerwania|Kończy program wywołujący|
+|**SIGSEGV —**|Dostępu do magazynu niedozwolony|Kończy program wywołujący|
+|**SIGTERM —**|Zakończenie żądania wysyłane do programu|Ignoruje sygnału|
 
-Jeśli argument nie jest prawidłową sygnału określonych powyżej, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli nie jest obsługiwane, funkcja ustawia `errno` do `EINVAL` i zwraca wartość różną od zera.
+Jeśli argument nie jest prawidłową sygnału określonych powyżej, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli nie jest obsługiwane, funkcja ustawia **errno** do **einval —** i zwraca wartość różną od zera.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -92,6 +92,6 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="see-also"></a>Zobacz także
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[signal](../../c-runtime-library/reference/signal.md)  
+[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[signal](signal.md)<br/>

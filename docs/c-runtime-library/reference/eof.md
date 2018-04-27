@@ -1,12 +1,12 @@
 ---
-title: "_eof — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _eof — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _eof
@@ -35,103 +35,108 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 106f673f5058043dfe0443970e9d946315c91d6d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 48b572840dc1901ed7979630c9f413b105a53e72
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="eof"></a>_eof
-Testy do końca pliku (EOF).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _eof(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `fd`  
- Plik deskryptora odwołujących się do otwartego pliku.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_eof` Zwraca wartość 1, jeśli bieżące położenie jest koniec pliku lub wartość 0, jeśli nie jest. Zwracana wartość -1 wskazuje błąd; w takim przypadku program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ma ustawioną wartość `EBADF`, która wskazuje nieprawidłowy plik deskryptora.  
-  
-## <a name="remarks"></a>Uwagi  
- `_eof` Funkcja określa, czy koniec pliku skojarzone z `fd` został osiągnięty.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|  
-|--------------|---------------------|---------------------|  
-|`_eof`|\<io.h>|\<errno.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_eof.c  
-// This program reads data from a file  
-// ten bytes at a time until the end of the  
-// file is reached or an error is encountered.  
-//  
-#include <io.h>  
-#include <fcntl.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <share.h>  
-  
-int main( void )  
-{  
-   int  fh, count, total = 0;  
-   char buf[10];  
-   if( _sopen_s( &fh, "crt_eof.txt", _O_RDONLY, _SH_DENYNO, 0 ) )  
-   {  
-        perror( "Open failed");  
-        exit( 1 );  
-   }  
-   // Cycle until end of file reached:   
-   while( !_eof( fh ) )  
-   {  
-      // Attempt to read in 10 bytes:   
-      if( (count = _read( fh, buf, 10 )) == -1 )  
-      {  
-         perror( "Read error" );  
-         break;  
-      }  
-      // Total actual bytes read   
-      total += count;  
-   }  
-   printf( "Number of bytes read = %d\n", total );  
-   _close( fh );  
-}  
-```  
-  
-## <a name="input-crteoftxt"></a>Dane wejściowe: crt_eof.txt  
-  
-```  
-This file contains some text.  
-```  
-  
-### <a name="output"></a>Dane wyjściowe  
-  
-```  
-Number of bytes read = 29  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)   
- [We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)   
- [clearerr —](../../c-runtime-library/reference/clearerr.md)   
- [feof —](../../c-runtime-library/reference/feof.md)   
- [ferror —](../../c-runtime-library/reference/ferror.md)   
- [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)
+
+Testy do końca pliku (EOF).
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _eof(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*FD*<br/>
+Plik deskryptora odwołujących się do otwartego pliku.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**_eof —** zwraca wartość 1, jeśli bieżące położenie jest koniec pliku lub wartość 0, jeśli nie jest. Zwracana wartość -1 wskazuje błąd; w takim przypadku program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ma ustawioną wartość **ebadf —**, która wskazuje nieprawidłowy plik deskryptora.
+
+## <a name="remarks"></a>Uwagi
+
+**_Eof —** funkcja określa, czy koniec pliku skojarzone z *fd* został osiągnięty.
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|
+|--------------|---------------------|---------------------|
+|**_eof**|\<io.h>|\<errno.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_eof.c
+// This program reads data from a file
+// ten bytes at a time until the end of the
+// file is reached or an error is encountered.
+//
+#include <io.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <share.h>
+
+int main( void )
+{
+   int  fh, count, total = 0;
+   char buf[10];
+   if( _sopen_s( &fh, "crt_eof.txt", _O_RDONLY, _SH_DENYNO, 0 ) )
+   {
+        perror( "Open failed");
+        exit( 1 );
+   }
+   // Cycle until end of file reached:
+   while( !_eof( fh ) )
+   {
+      // Attempt to read in 10 bytes:
+      if( (count = _read( fh, buf, 10 )) == -1 )
+      {
+         perror( "Read error" );
+         break;
+      }
+      // Total actual bytes read
+      total += count;
+   }
+   printf( "Number of bytes read = %d\n", total );
+   _close( fh );
+}
+```
+
+### <a name="input-crteoftxt"></a>Dane wejściowe: crt_eof.txt
+
+```Input
+This file contains some text.
+```
+
+### <a name="output"></a>Dane wyjściowe
+
+```Output
+Number of bytes read = 29
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
+[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[clearerr](clearerr.md)<br/>
+[feof](feof.md)<br/>
+[ferror](ferror.md)<br/>
+[perror, _wperror](perror-wperror.md)<br/>

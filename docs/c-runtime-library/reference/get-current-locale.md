@@ -1,12 +1,12 @@
 ---
-title: "_get_current_locale — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _get_current_locale — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_current_locale
@@ -35,44 +35,48 @@ helpviewer_keywords:
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7199cb6cf4f0451f4607c7b9cd8a670a4d5afe2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c6f20e69ca3ace4214915cd22f00fe2c9e8c9ffd
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getcurrentlocale"></a>_get_current_locale
-Pobiera obiekt ustawień regionalnych reprezentujący bieżące ustawienia regionalne.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-_locale_t _get_current_locale(void);  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Obiekt ustawień regionalnych reprezentujący bieżące ustawienia regionalne.  
-  
-## <a name="remarks"></a>Uwagi  
- `_get_current_locale` Funkcja pobiera aktualnie ustawione ustawień regionalnych dla wątku i zwraca obiekt ustawień regionalnych reprezentujący ustawień regionalnych.  
-  
- Poprzednia nazwa tej funkcji `__get_current_locale` (z dwoma podkreśleniami wiodące) jest przestarzała.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_get_current_locale`|\<locale.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [setLocale, _wsetlocale —](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [_free_locale](../../c-runtime-library/reference/free-locale.md)
+
+Pobiera obiekt ustawień regionalnych reprezentujący bieżące ustawienia regionalne.
+
+## <a name="syntax"></a>Składnia
+
+```C
+_locale_t _get_current_locale(void);
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Obiekt ustawień regionalnych reprezentujący bieżące ustawienia regionalne.
+
+## <a name="remarks"></a>Uwagi
+
+**_Get_current_locale —** funkcja pobiera aktualnie ustawione ustawień regionalnych dla wątku i zwraca obiekt ustawień regionalnych reprezentujący ustawień regionalnych.
+
+Poprzednia nazwa ta funkcja **__get_current_locale —** (z dwoma podkreśleniami wiodące) jest przestarzała.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_get_current_locale**|\<locale.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>
+[_free_locale](free-locale.md)<br/>

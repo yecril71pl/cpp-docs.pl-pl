@@ -1,12 +1,12 @@
 ---
-title: "_freea — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _freea — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _freea
@@ -32,66 +32,72 @@ helpviewer_keywords:
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf2bd2d3dacba307f529798727e7af745bf7cf9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2a64de046f904d4652809f35598f2b4db2b3007f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="freea"></a>_freea
-Cofa alokację lub zwalnia blok pamięci.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void _freea(   
-   void *memblock   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `memblock`  
- Poprzednio przydzielony blok pamięci, które ma zostać zwolniony.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Brak.  
-  
-## <a name="remarks"></a>Uwagi  
- `_freea` Funkcja zwalnia blok pamięci (`memblock`) wcześniej było przydzielone przez wywołanie do [_malloca —](../../c-runtime-library/reference/malloca.md). `_freea` sprawdza, czy pamięć została przydzielona na stercie lub stosu. Jeśli został przydzielony na stosie, `_freea` nie działają. Jeśli został przydzielony na stosie, liczba zwolnionych bajtów jest odpowiednikiem liczbę bajtów, gdy został przydzielony blok. Jeśli `memblock` jest `NULL`, wskaźnik jest ignorowany i `_freea` natychmiast zwraca. Próba zwolnienia nieprawidłowego wskaźnika (wskaźnik do bloku pamięci, który nie został przydzielony przez `_malloca`) może wpłynąć na żądania alokacji kolejnych i spowodować błędy.  
-  
- `_freea` wywołania `free` wewnętrznie, jeśli stwierdzi, że pamięć jest przydzielony na stosie. Stos jest określany przez znacznik czy pamięć jest na stercie umieszczane w pamięci pod adresem poprzedzającego alokacji pamięci.  
-  
- W przypadku wystąpienia błędu w zwolnić pamięć, `errno` ustawiono informacje z systemu operacyjnego od charakteru błędu. Aby uzyskać więcej informacji, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
- Po zwolnieniu blok pamięci, [_heapmin —](../../c-runtime-library/reference/heapmin.md) minimalizuje ilość wolnej pamięci na stercie łączenie nieużywane regionów, a ich zwolnienie do systemu operacyjnego. Zwolnionych pamięci, która nie jest zwalniany do systemu operacyjnego zostanie przywrócony do puli bezpłatnej i jest dostępne do alokacji ponownie.  
-  
- Wywołanie `_freea` musi towarzyszyć wszystkie wywołania `_malloca`. Istnieje również błąd do wywołania `_freea` dwukrotnie dla tej samej pamięci. Gdy aplikacja jest połączony z debugowania wersji biblioteki wykonawcze języka C, zwłaszcza w przypadku [_malloc_dbg —](../../c-runtime-library/reference/malloc-dbg.md) funkcje włączone, definiując `_CRTDBG_MAP_ALLOC`, łatwiej znaleźć brakujące lub zduplikowane wywołania `_freea`. Aby uzyskać więcej informacji dotyczących sposobu zarządzania infrastrukturą sterty podczas debugowania procesu, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).  
-  
- `_freea` jest oznaczony jako `__declspec(noalias)`, co oznacza zagwarantowanie funkcji nie można modyfikować zmienne globalne. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|  
-|--------------|---------------------|  
-|`_freea`|\<stdlib.h > i \<malloc.h >|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
- Zobacz przykład [_malloca —](../../c-runtime-library/reference/malloca.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)   
- [_malloca](../../c-runtime-library/reference/malloca.md)   
- [calloc](../../c-runtime-library/reference/calloc.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)   
- [realloc](../../c-runtime-library/reference/realloc.md)   
- [_free_dbg](../../c-runtime-library/reference/free-dbg.md)   
- [_heapmin](../../c-runtime-library/reference/heapmin.md)
+
+Cofa alokację lub zwalnia blok pamięci.
+
+## <a name="syntax"></a>Składnia
+
+```C
+void _freea(
+   void *memblock
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*memblock*<br/>
+Poprzednio przydzielony blok pamięci, które ma zostać zwolniony.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Brak.
+
+## <a name="remarks"></a>Uwagi
+
+**_Freea —** funkcja zwalnia blok pamięci (*memblock*) wcześniej było przydzielone przez wywołanie do [_malloca —](malloca.md). **_freea —** sprawdza, czy pamięć została przydzielona na stercie lub stosu. Jeśli został przydzielony na stosie, **_freea —** nie działają. Jeśli został przydzielony na stosie, liczba zwolnionych bajtów jest odpowiednikiem liczbę bajtów, gdy został przydzielony blok. Jeśli *memblock* jest **NULL**, wskaźnik jest ignorowany i **_freea —** natychmiast zwraca. Próba zwolnienia nieprawidłowego wskaźnika (wskaźnik do bloku pamięci, który nie został przydzielony przez **_malloca —**) może wpłynąć na żądania alokacji kolejnych i spowodować błędy.
+
+**_freea —** wywołania **wolnego** wewnętrznie, jeśli stwierdzi, że pamięć jest przydzielony na stosie. Stos jest określany przez znacznik czy pamięć jest na stercie umieszczane w pamięci pod adresem poprzedzającego alokacji pamięci.
+
+W przypadku wystąpienia błędu w zwolnić pamięć, **errno** ustawiono informacje z systemu operacyjnego od charakteru błędu. Aby uzyskać więcej informacji, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+Po zwolnieniu blok pamięci, [_heapmin —](heapmin.md) minimalizuje ilość wolnej pamięci na stercie łączenie nieużywane regionów, a ich zwolnienie do systemu operacyjnego. Zwolnionych pamięci, która nie jest zwalniany do systemu operacyjnego zostanie przywrócony do puli bezpłatnej i jest dostępne do alokacji ponownie.
+
+Wywołanie **_freea —** musi towarzyszyć wszystkie wywołania **_malloca —**. Istnieje również błąd do wywołania **_freea —** dwukrotnie dla tej samej pamięci. Gdy aplikacja jest połączony z debugowania wersji biblioteki wykonawcze języka C, zwłaszcza w przypadku [_malloc_dbg —](malloc-dbg.md) funkcje włączone, definiując **_crtdbg_map_alloc —**, możliwe jest łatwiejsze w celu znalezienia brakujących lub Zduplikowany wywołań **_freea —**. Aby uzyskać więcej informacji dotyczących sposobu zarządzania infrastrukturą sterty podczas debugowania procesu, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+
+**_freea —** jest oznaczony jako `__declspec(noalias)`, co oznacza zagwarantowanie funkcji nie można modyfikować zmienne globalne. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|
+|--------------|---------------------|
+|**_freea**|\<stdlib.h > i \<malloc.h >|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz przykład [_malloca —](malloca.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
+[_malloca](malloca.md)<br/>
+[calloc](calloc.md)<br/>
+[malloc](malloc.md)<br/>
+[_malloc_dbg](malloc-dbg.md)<br/>
+[realloc](realloc.md)<br/>
+[_free_dbg](free-dbg.md)<br/>
+[_heapmin](heapmin.md)<br/>

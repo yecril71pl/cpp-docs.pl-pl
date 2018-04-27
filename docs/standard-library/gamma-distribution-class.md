@@ -1,12 +1,12 @@
 ---
-title: "gamma_distribution — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: gamma_distribution — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - random/std::gamma_distribution
@@ -35,41 +35,43 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d3cb7f844a579dced503186f8d786aef0fb6cd2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7aed8db563b92fab4a6cf38d74ca4f16779ed309
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution — Klasa
-Generuje rozkład gamma.  
-  
-## <a name="syntax"></a>Składnia  
-```  
+
+Generuje rozkład gamma.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
 template<class RealType = double>
 class gamma_distribution {
-public:    
-    // types 
-    typedef RealType result_type;    
-    struct param_type;  
+public:
+    // types
+    typedef RealType result_type;
+    struct param_type;
 
-    // constructors and reset functions 
+    // constructors and reset functions
     explicit gamma_distribution(result_type alpha = 1.0, result_type beta = 1.0);
     explicit gamma_distribution(const param_type& parm);
     void reset();
-    
+
     // generating functions
-    template <class URNG>  
+    template <class URNG>
     result_type operator()(URNG& gen);
     template <class URNG>
     result_type operator()(URNG& gen, const param_type& parm);
-    
+
     // property functions
     result_type alpha() const;
     result_type beta() const;
@@ -78,179 +80,181 @@ public:
     result_type min() const;
     result_type max() const;
 };
-```    
-#### <a name="parameters"></a>Parametry  
-*RealType*  
-Wartość domyślna typu wynik zmiennoprzecinkowy to `double`. Dla typów możliwych [ \<losowe >](../standard-library/random.md).  
-  
-*URNG* uniform losowych liczb aparat generatora. Dla typów możliwych [ \<losowe >](../standard-library/random.md).  
-  
-## <a name="remarks"></a>Uwagi  
-Klasa szablonu opisuje dystrybucji tworzącego wartości określony użytkownik liczb zmiennoprzecinkowych typu lub typu `double` Jeśli nie zostanie podana, dystrybuowane zgodnie z rozkładem Gamma. Poniższe łącza tabeli do artykułów na temat poszczególnych członków.  
-  
-||||  
-|-|-|-|  
-|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|  
-|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|  
-  
-Funkcje właściwości `alpha()` i `beta()` zwracać odpowiadających im wartości dla parametrów przechowywanych dystrybucji *alfa* i *beta*.  
-  
-Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` dystrybucji składowanych parametr pakietu.  
+```
 
-`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największa możliwa wynik, odpowiednio.  
-  
-`reset()` Funkcji członkowskiej odrzuca wszystkie buforowane wartości, tak aby wynik następne wywołanie `operator()` nie zależy od wartości uzyskane z aparatu przed wywołaniem.  
-  
+### <a name="parameters"></a>Parametry
+
+*RealType* wartość domyślna typu wynik zmiennoprzecinkowy to `double`. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+
+*URNG* uniform losowych liczb aparat generatora. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+
+## <a name="remarks"></a>Uwagi
+
+Klasa szablonu opisuje dystrybucji tworzącego wartości określony użytkownik liczb zmiennoprzecinkowych typu lub typu `double` Jeśli nie zostanie podana, dystrybuowane zgodnie z rozkładem Gamma. Poniższe łącza tabeli do artykułów na temat poszczególnych członków.
+
+||||
+|-|-|-|
+|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
+|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
+
+Funkcje właściwości `alpha()` i `beta()` zwracać odpowiadających im wartości dla parametrów przechowywanych dystrybucji *alfa* i *beta*.
+
+Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` dystrybucji składowanych parametr pakietu.
+
+`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największa możliwa wynik, odpowiednio.
+
+`reset()` Funkcji członkowskiej odrzuca wszystkie buforowane wartości, tak aby wynik następne wywołanie `operator()` nie zależy od wartości uzyskane z aparatu przed wywołaniem.
+
 `operator()` Elementu członkowskiego zwracają wartość następnego wygenerowanego oparty na aparacie URNG, z bieżącego pakietu parametrów lub pakiet określony parametr.
-  
-Aby uzyskać więcej informacji o dystrybucji klasy i ich elementy członkowskie, zobacz [ \<losowe >](../standard-library/random.md).  
-  
-Aby uzyskać szczegółowe informacje na temat dystrybucji gamma, zobacz artykuł Wolfram MathWorld [rozkład Gamma](http://go.microsoft.com/fwlink/p/?linkid=401111).  
-  
-## <a name="example"></a>Przykład  
-  
-```cpp  
-// compile with: /EHsc /W4  
-#include <random>   
-#include <iostream>  
-#include <iomanip>  
-#include <string>  
-#include <map>  
-  
-void test(const double a, const double b, const int s) {  
-  
-    // uncomment to use a non-deterministic generator  
-    //    std::random_device gen;  
-  
-    std::mt19937 gen(1701);  
-  
-    std::gamma_distribution<> distr(a, b);  
-  
-    std::cout << std::endl;  
-    std::cout << "min() == " << distr.min() << std::endl;  
-    std::cout << "max() == " << distr.max() << std::endl;  
-    std::cout << "alpha() == " << std::fixed << std::setw(11) << std::setprecision(10) << distr.alpha() << std::endl;  
-    std::cout << "beta() == " << std::fixed << std::setw(11) << std::setprecision(10) << distr.beta() << std::endl;  
-  
-    // generate the distribution as a histogram  
-    std::map<double, int> histogram;  
-    for (int i = 0; i < s; ++i) {  
-        ++histogram[distr(gen)];  
-    }  
-  
-    // print results  
-    std::cout << "Distribution for " << s << " samples:" << std::endl;  
-    int counter = 0;  
-    for (const auto& elem : histogram) {  
-        std::cout << std::fixed << std::setw(11) << ++counter << ": "  
-            << std::setw(14) << std::setprecision(10) << elem.first << std::endl;  
-    }  
-    std::cout << std::endl;  
-}  
-  
-int main()  
-{  
-    double a_dist = 0.0;  
-    double b_dist = 1;  
-  
-    int samples = 10;  
-  
-    std::cout << "Use CTRL-Z to bypass data entry and run using default values." << std::endl;  
-    std::cout << "Enter a floating point value for the 'alpha' distribution parameter (must be greater than zero): ";  
-    std::cin >> a_dist;  
-    std::cout << "Enter a floating point value for the 'beta' distribution parameter (must be greater than zero): ";  
-    std::cin >> b_dist;  
-    std::cout << "Enter an integer value for the sample count: ";  
-    std::cin >> samples;  
-  
-    test(a_dist, b_dist, samples);  
-}  
-```  
-  
-```Output  
-Use CTRL-Z to bypass data entry and run using default values.  
-Enter a floating point value for the 'alpha' distribution parameter (must be greater than zero): 1  
-Enter a floating point value for the 'beta' distribution parameter (must be greater than zero): 1  
-Enter an integer value for the sample count: 10  
- 
-min() == 4.94066e-324  
-max() == 1.79769e+308  
-alpha() == 1.0000000000  
-beta() == 1.0000000000  
-Distribution for 10 samples:  
-    1: 0.0936880533  
-    2: 0.1225944894  
-    3: 0.6443593183  
-    4: 0.6551171649  
-    5: 0.7313457551  
-    6: 0.7313557977  
-    7: 0.7590097389  
-    8: 1.4466885214  
-    9: 1.6434088411  
-    10: 2.1201210996  
-```  
-  
-## <a name="requirements"></a>Wymagania  
-**Nagłówek:** \<losowe >  
-  
-**Namespace:** Standard  
-  
-##  <a name="gamma_distribution"></a>  gamma_distribution::gamma_distribution  
-Tworzy dystrybucji.  
-  
-```  
+
+Aby uzyskać więcej informacji o dystrybucji klasy i ich elementy członkowskie, zobacz [ \<losowe >](../standard-library/random.md).
+
+Aby uzyskać szczegółowe informacje na temat dystrybucji gamma, zobacz artykuł Wolfram MathWorld [rozkład Gamma](http://go.microsoft.com/fwlink/p/?linkid=401111).
+
+## <a name="example"></a>Przykład
+
+```cpp
+// compile with: /EHsc /W4
+#include <random>
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <map>
+
+void test(const double a, const double b, const int s) {
+
+    // uncomment to use a non-deterministic generator
+    //    std::random_device gen;
+
+    std::mt19937 gen(1701);
+
+    std::gamma_distribution<> distr(a, b);
+
+    std::cout << std::endl;
+    std::cout << "min() == " << distr.min() << std::endl;
+    std::cout << "max() == " << distr.max() << std::endl;
+    std::cout << "alpha() == " << std::fixed << std::setw(11) << std::setprecision(10) << distr.alpha() << std::endl;
+    std::cout << "beta() == " << std::fixed << std::setw(11) << std::setprecision(10) << distr.beta() << std::endl;
+
+    // generate the distribution as a histogram
+    std::map<double, int> histogram;
+    for (int i = 0; i < s; ++i) {
+        ++histogram[distr(gen)];
+    }
+
+    // print results
+    std::cout << "Distribution for " << s << " samples:" << std::endl;
+    int counter = 0;
+    for (const auto& elem : histogram) {
+        std::cout << std::fixed << std::setw(11) << ++counter << ": "
+            << std::setw(14) << std::setprecision(10) << elem.first << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+int main()
+{
+    double a_dist = 0.0;
+    double b_dist = 1;
+
+    int samples = 10;
+
+    std::cout << "Use CTRL-Z to bypass data entry and run using default values." << std::endl;
+    std::cout << "Enter a floating point value for the 'alpha' distribution parameter (must be greater than zero): ";
+    std::cin >> a_dist;
+    std::cout << "Enter a floating point value for the 'beta' distribution parameter (must be greater than zero): ";
+    std::cin >> b_dist;
+    std::cout << "Enter an integer value for the sample count: ";
+    std::cin >> samples;
+
+    test(a_dist, b_dist, samples);
+}
+```
+
+```Output
+Use CTRL-Z to bypass data entry and run using default values.
+Enter a floating point value for the 'alpha' distribution parameter (must be greater than zero): 1
+Enter a floating point value for the 'beta' distribution parameter (must be greater than zero): 1
+Enter an integer value for the sample count: 10
+
+min() == 4.94066e-324
+max() == 1.79769e+308
+alpha() == 1.0000000000
+beta() == 1.0000000000
+Distribution for 10 samples:
+    1: 0.0936880533
+    2: 0.1225944894
+    3: 0.6443593183
+    4: 0.6551171649
+    5: 0.7313457551
+    6: 0.7313557977
+    7: 0.7590097389
+    8: 1.4466885214
+    9: 1.6434088411
+    10: 2.1201210996
+```
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** \<losowe >
+
+**Namespace:** Standard
+
+## <a name="gamma_distribution"></a>  gamma_distribution::gamma_distribution
+
+Tworzy dystrybucji.
+
+```cpp
 explicit gamma_distribution(result_type alpha = 1.0, result_type beta = 1.0);
 explicit gamma_distribution(const param_type& parm);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*alpha*  
-`alpha` Parametr dystrybucji.  
-  
-*beta*  
-`beta` Parametr dystrybucji.  
-  
-*parm*  
-Struktura parametr używany do budowy dystrybucji.  
-  
-### <a name="remarks"></a>Uwagi  
-**Warunek wstępny:** `0.0 < alpha` i `0.0 < beta`  
-  
-Pierwszy Konstruktor konstrukcji obiektu których przechowywane `alpha` wartość przechowuje wartość *alfa* i których przechowywane `beta` wartość zawiera wartość *beta*.  
-  
-Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.  
-  
-##  <a name="param_type"></a>  gamma_distribution::param_type  
-Przechowuje parametry dystrybucji.  
-  
-```cpp   
-struct param_type {  
-   typedef gamma_distribution<result_type> distribution_type;  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Alpha* `alpha` parametru dystrybucji.
+
+*w wersji beta* `beta` parametru dystrybucji.
+
+*Parametr* struktury parametr używany do budowy dystrybucji.
+
+### <a name="remarks"></a>Uwagi
+
+**Warunek wstępny:** `0.0 < alpha` i `0.0 < beta`
+
+Pierwszy Konstruktor konstrukcji obiektu których przechowywane `alpha` wartość przechowuje wartość *alfa* i których przechowywane `beta` wartość zawiera wartość *beta*.
+
+Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.
+
+## <a name="param_type"></a>  gamma_distribution::param_type
+
+Przechowuje parametry dystrybucji.
+
+```cpp
+struct param_type {
+   typedef gamma_distribution<result_type> distribution_type;
    param_type(result_type alpha = 1.0, result_type beta 1.0);
    result_type alpha() const;
    result_type beta() const;
 
    bool operator==(const param_type& right) const;
    bool operator!=(const param_type& right) const;
-   };  
-```  
-### <a name="parameters"></a>Parametry  
-*alpha*  
-`alpha` Parametr dystrybucji.  
-  
-*beta*  
-`beta` Parametr dystrybucji.  
-  
-*right*  
-`param_type` Wystąpienia, aby porównać.  
-  
-### <a name="remarks"></a>Uwagi  
-**Warunek wstępny:** `0.0 < alpha` i `0.0 < beta`  
-  
-Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.  
-  
-## <a name="see-also"></a>Zobacz też  
-[\<losowe >](../standard-library/random.md)
+   };
+```
 
+### <a name="parameters"></a>Parametry
 
+*Alpha* `alpha` parametru dystrybucji.
 
+*w wersji beta* `beta` parametru dystrybucji.
+
+*prawy* `param_type` wystąpienia, aby porównać.
+
+### <a name="remarks"></a>Uwagi
+
+**Warunek wstępny:** `0.0 < alpha` i `0.0 < beta`
+
+Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.
+
+## <a name="see-also"></a>Zobacz także
+
+[\<losowe >](../standard-library/random.md)<br/>

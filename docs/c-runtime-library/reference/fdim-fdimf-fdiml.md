@@ -1,13 +1,13 @@
 ---
 title: fdim, fdimf, fdiml | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fdim
@@ -40,90 +40,95 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e628f84dcadf7b1e214d526981191036428042
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8cf0036bc35f6e3b87daecf47225e59d2dc8f087
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
-Określa dodatnią różnica między wartościami pierwszego i drugiego.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-double fdim(  
-   double x,   
-   double y  
-);  
-  
-float fdim(  
-   float x,   
-   float y  
-); //C++ only  
-  
-long double fdim(  
-   long double x,   
-   long double y  
-); //C++ only  
-  
-float fdimf(  
-   float x,   
-   float y  
-);  
-  
-long double fdiml(  
-   long double x,   
-   long double y  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- [in] `x`  
- Pierwsza wartość.  
-  
- [in] `y`  
- Druga wartość.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca dodatnią różnicę między `x` i `y`:  
-  
-|Wartość zwracana|Scenariusz|  
-|------------------|--------------|  
-|x i y|if x > y|  
-|0|if x <= y|  
-  
- W przeciwnym razie może zwracać jedną z następujących błędów:  
-  
-|Problem|Zwraca|  
-|-----------|------------|  
-|Błąd przepełnienia zakresu|+ Huge_val — + HUGE_VALF, lub + HUGE_VALL|  
-|Błąd zakresu niedopełnienie|poprawne wartości (zaokrągloną)|  
-|`x` lub `y` jest wartością typu NaN|NaN|  
-  
- Błędy są zgłaszane jak określono w [_matherr —](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Uwagi  
- Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia `fdim` który przyjmować i zwracać zmiennoprzecinkowych i podwójnej długości. W programie C `fdim` zawsze przyjmuje i zwraca wartość o podwójnej precyzji.  
-  
- Z wyjątkiem obsługi NaN funkcja ta jest odpowiednikiem `fmax(x - y, 0)`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Nagłówek C|Nagłówek C++|  
-|--------------|--------------|------------------|  
-|`fdim`, `fdimf`, `fdiml`|\<math.h>|\<cmath>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Fmax fmaxf —, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)   
- [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)
+
+Określa dodatnią różnica między wartościami pierwszego i drugiego.
+
+## <a name="syntax"></a>Składnia
+
+```C
+double fdim(
+   double x,
+   double y
+);
+
+float fdim(
+   float x,
+   float y
+); //C++ only
+
+long double fdim(
+   long double x,
+   long double y
+); //C++ only
+
+float fdimf(
+   float x,
+   float y
+);
+
+long double fdiml(
+   long double x,
+   long double y
+);
+
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Pierwsza wartość.
+
+*y*<br/>
+Druga wartość.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca dodatnią różnicę między *x* i *y*:
+
+|Wartość zwracana|Scenariusz|
+|------------------|--------------|
+|x i y|if x > y|
+|0|Jeśli x < = y|
+
+W przeciwnym razie może zwracać jedną z następujących błędów:
+
+|Problem|Zwraca|
+|-----------|------------|
+|Błąd przepełnienia zakresu|+ Huge_val — + HUGE_VALF, lub + HUGE_VALL|
+|Błąd zakresu niedopełnienie|poprawne wartości (zaokrągloną)|
+|*x* lub *y* jest wartością typu NaN|NaN|
+
+Błędy są zgłaszane jak określono w [_matherr —](matherr.md).
+
+## <a name="remarks"></a>Uwagi
+
+Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **fdim —** który przyjmować i zwracać **float** i **długi** **podwójne** typów. W programie C **fdim —** zawsze przyjmuje i zwraca **podwójne**.
+
+Z wyjątkiem obsługi NaN funkcja ta jest odpowiednikiem `fmax(x - y, 0)`.
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Nagłówek C|Nagłówek C++|
+|--------------|--------------|------------------|
+|**fdim —**, **fdimf —**, **fdiml**|\<math.h>|\<cmath >|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
+[fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>
+[abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

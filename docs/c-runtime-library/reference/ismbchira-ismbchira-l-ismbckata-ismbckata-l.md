@@ -1,12 +1,12 @@
 ---
-title: "_ismbchira —, _ismbchira_l —, _ismbckata —, _ismbckata_l — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _ismbchira —, _ismbchira_l —, _ismbckata —, _ismbckata_l — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbckata
@@ -49,81 +49,86 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38fe65f2b81def4afe08339f38b00cd69702fd83
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8ad3f426e286ffcec6edaa1feb68725552572dcd
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
-**Funkcje właściwe 932 strony kodu**  
-  
+
+**Funkcje właściwe 932 strony kodu**
+
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _ismbchira(  
-   unsigned int c   
-);  
-int _ismbchira_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-int _ismbckata(  
-   unsigned int c   
-);  
-int _ismbckata_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Znak do sprawdzenia.  
-  
- `locale`  
- Ustawienia regionalne do użycia.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Każdy z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli jej nie ma. Jeśli `c` < = 255 i ma odpowiadającego `_ismbb` procedura (na przykład `_ismbcalnum` odpowiada `_ismbbalnum`), wynik jest zwracana wartość odpowiadającego `_ismbb` procedury.  
-  
-## <a name="remarks"></a>Uwagi  
- Każda z tych funkcji testy danego znaków wielobajtowych dla podanego warunku.  
-  
- Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
-  
-|Procedura|Testowanie warunku (strona kodowa 932 tylko)|  
-|-------------|-------------------------------------------|  
-|`_ismbchira`|Hiragana znaków dwubajtowych: 0x829F < =`c`< = 0x82F1.|  
-|`_ismbchira_l`|Hiragana znaków dwubajtowych: 0x829F < =`c`< = 0x82F1.|  
-|`_ismbckata`|Katakana znaków dwubajtowych: 0x8340 < =`c`< = 0x8396.|  
-|`_ismbckata_l`|Katakana znaków dwubajtowych: 0x8340 < =`c`< = 0x8396.|  
-  
- **Strony 932 określonego kodu zakończenia**  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_ismbchira`|\<mbstring.h>|  
-|`_ismbchira_l`|\<mbstring.h>|  
-|`_ismbckata`|\<mbstring.h>|  
-|`_ismbckata_l`|\<mbstring.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)   
- [_ismbc Routines](../../c-runtime-library/ismbc-routines.md)   
- [jest isw — procedury](../../c-runtime-library/is-isw-routines.md)   
- [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _ismbchira(
+   unsigned int c
+);
+int _ismbchira_l(
+   unsigned int c,
+   _locale_t locale
+);
+int _ismbckata(
+   unsigned int c
+);
+int _ismbckata_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Znak do sprawdzenia.
+
+*Ustawienia regionalne*<br/>
+Ustawienia regionalne do użycia.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Każdy z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli jej nie ma. Jeśli *c* < = 255 i ma odpowiadającego **_ismbb —** procedura (na przykład **_ismbcalnum —** odpowiada **_ismbbalnum —**), wynik jest zwracana wartość odpowiadającego **_ismbb —** procedury.
+
+## <a name="remarks"></a>Uwagi
+
+Każda z tych funkcji testy danego znaków wielobajtowych dla podanego warunku.
+
+Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+
+|Procedura|Testowanie warunku (strona kodowa 932 tylko)|
+|-------------|-------------------------------------------|
+|**_ismbchira**|Hiragana znaków dwubajtowych: 0x829F < =*c*< = 0x82F1.|
+|**_ismbchira_l**|Hiragana znaków dwubajtowych: 0x829F < =*c*< = 0x82F1.|
+|**_ismbckata**|Katakana znaków dwubajtowych: 0x8340 < =*c*< = 0x8396.|
+|**_ismbckata_l**|Katakana znaków dwubajtowych: 0x8340 < =*c*< = 0x8396.|
+
+**Strony 932 określonego kodu zakończenia**
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_ismbchira**|\<mbstring.h>|
+|**_ismbchira_l**|\<mbstring.h>|
+|**_ismbckata**|\<mbstring.h>|
+|**_ismbckata_l**|\<mbstring.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
+[_ismbc, procedury](../../c-runtime-library/ismbc-routines.md)<br/>
+[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

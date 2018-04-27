@@ -1,12 +1,12 @@
 ---
-title: _CrtMemCheckpoint | Microsoft Docs
-ms.custom: 
+title: _Crtmemcheckpoint — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtMemCheckpoint
@@ -32,52 +32,55 @@ helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37333b2b4621b9434a9fe1a924162957d5ea824f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 80f9d0b88e5bf1195ca8097e4cfbab5ba97942d7
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
-Pobiera bieżący stan sterty debugowania i zapisuje w dostarczonych aplikacji `_CrtMemState` struktury (tylko wersja do debugowania).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void _CrtMemCheckpoint(  
-   _CrtMemState *state   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `state`  
- Wskaźnik do `_CrtMemState` struktury umożliwia wypełnienie pamięci punktu kontrolnego.  
-  
-## <a name="remarks"></a>Uwagi  
- `_CrtMemCheckpoint` Funkcja tworzy migawkę bieżącego stanu sterty debugowania w danym momencie. Ta migawka mogą być używane przez inne funkcje stanu sterty takich jak [_crtmemdifference —](../../c-runtime-library/reference/crtmemdifference.md) ułatwia wykrywanie przecieków pamięci i innych problemów. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań `_CrtMemState` są usuwane podczas przetwarzania wstępnego.  
-  
- Aplikacja musi przekazać wskaźnik do wcześniej alokowanego wystąpienia elementu `_CrtMemState` struktury zdefiniowane w Crtdbg.h, w `state` parametru. Jeśli `_CrtMemCheckpoint` napotka błąd podczas tworzenia punktu kontrolnego, funkcja generuje `_CRT_WARN` debugowania raport opisujący problem.  
-  
- Aby uzyskać więcej informacji na temat funkcji stanu sterty i `_CrtMemState` struktury, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji dotyczących sposobu bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).  
-  
- Jeśli `state` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ustawiono `EINVAL` i zwraca funkcję.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_CrtMemCheckpoint`|\<crtdbg.h>, \<errno.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
- **Biblioteki:** wersja biblioteka UCRT tylko debugowania.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
- [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md)
+
+Pobiera bieżący stan sterty debugowania i zapisuje w dostarczonych aplikacji **_crtmemstate —** struktury (tylko wersja do debugowania).
+
+## <a name="syntax"></a>Składnia
+
+```C
+void _CrtMemCheckpoint(
+   _CrtMemState *state
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Stan* wskaźnik do **_crtmemstate —** struktury umożliwia wypełnienie pamięci punktu kontrolnego.
+
+## <a name="remarks"></a>Uwagi
+
+**_Crtmemcheckpoint —** funkcja tworzy migawkę bieżącego stanu sterty debugowania w danym momencie. Ta migawka mogą być używane przez inne funkcje stanu sterty takich jak [_crtmemdifference —](crtmemdifference.md) ułatwia wykrywanie przecieków pamięci i innych problemów. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań **_crtmemstate —** są usuwane podczas przetwarzania wstępnego.
+
+Aplikacja musi przekazać wskaźnik do wcześniej alokowanego wystąpienia elementu **_crtmemstate —** struktury zdefiniowane w Crtdbg.h, w *stanu* parametru. Jeśli **_crtmemcheckpoint —** napotka błąd podczas tworzenia punktu kontrolnego, funkcja generuje **_CRT_WARN** debugowania raport opisujący problem.
+
+Aby uzyskać więcej informacji na temat funkcji stanu sterty i **_crtmemstate —** struktury, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji dotyczących sposobu bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+
+Jeśli *stanu* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ustawiono **einval —** i zwraca funkcję.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_CrtMemCheckpoint**|\<crtdbg.h>, \<errno.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+**Biblioteki:** wersja biblioteka UCRT tylko debugowania.
+
+## <a name="see-also"></a>Zobacz także
+
+[Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>
+[_CrtMemDifference](crtmemdifference.md)<br/>

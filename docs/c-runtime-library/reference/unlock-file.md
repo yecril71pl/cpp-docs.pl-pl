@@ -1,12 +1,12 @@
 ---
-title: "_unlock_file — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _unlock_file — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _unlock_file
@@ -34,46 +34,49 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d7bcfc3cf3bba84bf50933be9fa4137954e84a2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 503087d84e65e556fa610efbf0054c66ee774d48
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unlockfile"></a>_unlock_file
-Umożliwia odblokowanie pliku, dzięki czemu inne procesy dostępu do tego pliku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void _unlock_file(  
-   FILE* file  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `file`  
- Dojście do pliku.  
-  
-## <a name="remarks"></a>Uwagi  
- `_unlock_file` Funkcji powoduje odblokowanie pliku określonego przez `file`. Odblokowanie pliku zezwala na dostęp do pliku przez inne procesy. Ta funkcja nie powinna być wywoływana, chyba że `_lock_file` wcześniej została wywołana w `file` wskaźnika. Wywoływanie `_unlock_file` w pliku, który nie jest zablokowany może doprowadzić do zakleszczenia. Na przykład zobacz [_lock_file —](../../c-runtime-library/reference/lock-file.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_unlock_file`|\<stdio.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
- [_lock_file](../../c-runtime-library/reference/lock-file.md)
+
+Umożliwia odblokowanie pliku, dzięki czemu inne procesy dostępu do tego pliku.
+
+## <a name="syntax"></a>Składnia
+
+```C
+void _unlock_file(
+   FILE* file
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*plik* dojście do pliku.
+
+## <a name="remarks"></a>Uwagi
+
+**_Unlock_file —** funkcji powoduje odblokowanie pliku określonego przez *pliku*. Odblokowanie pliku zezwala na dostęp do pliku przez inne procesy. Ta funkcja nie powinna być wywoływana, chyba że **_lock_file —** wcześniej została wywołana w *pliku* wskaźnika. Wywoływanie **_unlock_file —** w pliku, który nie jest zablokowany może doprowadzić do zakleszczenia. Na przykład zobacz [_lock_file —](lock-file.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_unlock_file**|\<stdio.h>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_lock_file](lock-file.md)<br/>

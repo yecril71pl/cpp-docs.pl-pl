@@ -1,12 +1,12 @@
 ---
-title: "_Rtc_numerrors — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _Rtc_numerrors — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _RTC_NumErrors
@@ -32,43 +32,47 @@ helpviewer_keywords:
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2034dd9c1e255196c66c4385e68c51845915ff59
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d7c6c2fd9f804bdbb949e4e2909cd4b9627e0f24
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rtcnumerrors"></a>_RTC_NumErrors
-Zwraca sumę błędów, które mogą być wykryte przez sprawdzanie błędów czasu wykonywania (RTC). Numer ten może posłużyć jako formant w **dla** pętli, w której każda wartość w pętli są przekazywane do [_rtc_geterrdesc —](../../c-runtime-library/reference/rtc-geterrdesc.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-int _RTC_NumErrors( void );  
-  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Liczba całkowita, którego wartość reprezentuje całkowita liczba błędów, które mogą być wykryte przez sprawdzanie błędów czasu wykonywania Visual C++.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_RTC_NumErrors`|\<rtcapi.h>|  
-  
- Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Biblioteki  
- Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   
- [Sprawdzanie błędów czasu wykonywania](../../c-runtime-library/run-time-error-checking.md)
+
+Zwraca sumę błędów, które mogą być wykryte przez sprawdzanie błędów czasu wykonywania (RTC). Numer ten może posłużyć jako formant w **dla** pętli, w której każda wartość w pętli są przekazywane do [_rtc_geterrdesc —](rtc-geterrdesc.md).
+
+## <a name="syntax"></a>Składnia
+
+```C
+
+int _RTC_NumErrors( void );
+
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Liczba całkowita, którego wartość reprezentuje całkowita liczba błędów, które mogą być wykryte przez sprawdzanie błędów czasu wykonywania Visual C++.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_RTC_NumErrors**|\<rtcapi.h>|
+
+Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Biblioteki
+
+Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[_RTC_GetErrDesc](rtc-geterrdesc.md)<br/>
+[Sprawdzanie błędów czasu wykonywania](../../c-runtime-library/run-time-error-checking.md)<br/>

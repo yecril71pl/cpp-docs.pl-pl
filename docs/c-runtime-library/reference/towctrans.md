@@ -1,12 +1,12 @@
 ---
-title: "towctrans — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: towctrans — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - towctrans
@@ -30,53 +30,59 @@ dev_langs:
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79bd4c48b5462d0d7b3cc7145a3044da80869af1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a1e3029fc9d33df93e13e6fd0a8e9e8d8da168b0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="towctrans"></a>towctrans
-Przekształca znak.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-wint_t towctrans(  
-   wint_t c,  
-   wctrans_t category   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Znak, który ma być transformacji.  
-  
- `category`  
- Identyfikator, który zawiera wartość zwracaną [wctrans —](../../c-runtime-library/reference/wctrans.md).  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Znak `c`, po `towctrans` używać reguł przekształcania w `category`.  
-  
-## <a name="remarks"></a>Uwagi  
- Wartość `category` musi zwrócony przez wcześniej pomyślne wywołanie [wctrans —](../../c-runtime-library/reference/wctrans.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`towctrans`|\<wctype.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
- Zobacz `wctrans` dla przykładu korzystającego z `towctrans`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwersja danych](../../c-runtime-library/data-conversion.md)
+
+Przekształca znak.
+
+## <a name="syntax"></a>Składnia
+
+```C
+wint_t towctrans(
+   wint_t c,
+   wctrans_t category
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Znak, który ma być transformacji.
+
+*category*<br/>
+Identyfikator, który zawiera wartość zwracaną [wctrans —](wctrans.md).
+
+## <a name="return-value"></a>Wartość zwracana
+
+Znak *c*, po **towctrans —** używać reguł przekształcania w *kategorii*.
+
+## <a name="remarks"></a>Uwagi
+
+Wartość *kategorii* musi zwrócony przez wcześniej pomyślne wywołanie [wctrans —](wctrans.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**towctrans**|\<wctype.h>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz **wctrans —** dla przykładu korzystającego z **towctrans —**.
+
+## <a name="see-also"></a>Zobacz także
+
+[Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>

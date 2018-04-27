@@ -1,5 +1,5 @@
 ---
-title: Procedury czasu wykonywania według kategorii | Dokumentacja firmy Microsoft
+title: Universal C procedury czasu wykonywania według kategorii | Dokumenty Microsoft
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -20,23 +20,25 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff178238e457d4a9346ba3659509c295bcf3794
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01bdb786c003894b4ab1bf6418aa9c492e909602
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="run-time-routines-by-category"></a>Procedury czasu wykonywania według kategorii
+# <a name="universal-c-runtime-routines-by-category"></a>Universal C procedury czasu wykonywania według kategorii
 
-W tej sekcji wymieniono i opisano procedury biblioteki wykonawczej Microsoft według kategorii. Dla wygody odwołanie niektóre procedury są wyświetlane w więcej niż jedną kategorię. Procedury znaków wielobajtowych i procedury znaków dwubajtowych są zgrupowane z partnerami znaków, jeśli takie istnieją.
+W tej sekcji wymieniono i opisano procedury biblioteki Universal C runtime (Biblioteka UCRT) według kategorii. Dla wygody odwołanie niektóre procedury są wyświetlane w więcej niż jedną kategorię. Procedury znaków wielobajtowych i procedury znaków dwubajtowych są zgrupowane z partnerami znaków, jeśli takie istnieją.
 
-## <a name="routine-categories"></a>Rutynowe kategorii
+## <a name="ucrt-library-routine-categories"></a>Biblioteka UCRT biblioteki rutynowych kategorii
+
+Dostępne są następujące główne kategorie Biblioteka UCRT procedury biblioteki:
 
 |||
 |-|-|
 |[Dostęp do argumentów](../c-runtime-library/argument-access.md)|[Manipulowanie buforem](../c-runtime-library/buffer-manipulation.md)|
 |[Klasyfikacja bajtów](../c-runtime-library/byte-classification.md)|[Klasyfikacja znaków](../c-runtime-library/character-classification.md)|
-|[Obsługa złożonych matematyczne](../c-runtime-library/complex-math-support.md)||
+|[Obsługa złożonych obliczeń](../c-runtime-library/complex-math-support.md)||
 |[Wyrównywanie danych](../c-runtime-library/data-alignment.md)|[Konwersja danych](../c-runtime-library/data-conversion.md)|
 |[Procedury debugowania](../c-runtime-library/debug-routines.md)|[Kontrola katalogu](../c-runtime-library/directory-control.md)|
 |[Obsługa błędów](../c-runtime-library/error-handling-crt.md)|[Obsługa wyjątków — procedury](../c-runtime-library/exception-handling-routines.md)|

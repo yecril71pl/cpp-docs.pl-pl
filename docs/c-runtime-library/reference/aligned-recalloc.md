@@ -1,12 +1,12 @@
 ---
-title: "_aligned_recalloc — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _aligned_recalloc — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _aligned_recalloc
@@ -32,62 +32,67 @@ helpviewer_keywords:
 - aligned_recalloc function
 - _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715c3da97f92007cfda39b8219795ad09d527601
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ae20d71dc3a6e23b29c76166e1a09fab8afaf6f9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alignedrecalloc"></a>_aligned_recalloc
-Zmienia rozmiar blok pamięci przydzielony przy [_aligned_malloc —](../../c-runtime-library/reference/aligned-malloc.md) lub [_aligned_offset_malloc —](../../c-runtime-library/reference/aligned-offset-malloc.md) i inicjuje pamięci na 0.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void * _aligned_recalloc(  
-   void *memblock,   
-   size_t num,  
-   size_t size,   
-   size_t alignment  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- [in] `memblock`  
- Bieżący wskaźnik bloku pamięci.  
-  
- [in] `num`  
- Liczba elementów.  
-  
- [in] `size`  
- Rozmiar w bajtach każdego elementu.  
-  
- [in] `alignment`  
- Wartość wyrównania, która musi być całkowitą potęgą liczby 2.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_aligned_recalloc` Zwraca typ void wskaźnik do bloku pamięci przydzielić (i prawdopodobnie przenoszenia). Wartość zwracana jest `NULL` rozmiar wynosi zero, jeśli argument bufor nie jest `NULL`, lub jeśli nie ma dostatecznej ilości dostępnej pamięci, aby rozwinąć blok na dany rozmiar. W pierwszym przypadku oryginalnego bloku zostanie zwolniona. W drugim przypadku oryginalnego bloku jest bez zmian. Wartości zwracanej wskazuje miejsce do magazynowania, które na pewno jest odpowiednio dopasowany do przechowywania obiekty dowolnego typu. Aby uzyskać wskaźnik do typu innego niż void, użyj typu rzutowania wartości zwracanej.  
-  
- Jest błędem ponowne przydzielenie pamięci i zmienić wyrównania bloku.  
-  
-## <a name="remarks"></a>Uwagi  
- `_aligned_recalloc` jest oparta na `malloc`. Aby uzyskać więcej informacji o korzystaniu z `_aligned_offset_malloc`, zobacz [— funkcja malloc](../../c-runtime-library/reference/malloc.md).  
-  
- Ta funkcja ustawia `errno` na `ENOMEM` jeśli alokacja pamięci nie powiodła się lub jeśli żądany rozmiar był większy niż `_HEAP_MAXREQ`. Aby uzyskać więcej informacji na temat `errno`, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). `_aligned_recalloc` również sprawdza poprawność parametrów. Jeśli `alignment` nie jest potęgą 2, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca `NULL` i ustawia `errno` do `EINVAL`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_aligned_recalloc`|\<malloc.h>|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wyrównywanie danych](../../c-runtime-library/data-alignment.md)   
- [_recalloc](../../c-runtime-library/reference/recalloc.md)   
- [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md)
+
+Zmienia rozmiar blok pamięci przydzielony przy [_aligned_malloc —](aligned-malloc.md) lub [_aligned_offset_malloc —](aligned-offset-malloc.md) i inicjuje pamięci na 0.
+
+## <a name="syntax"></a>Składnia
+
+```C
+void * _aligned_recalloc(
+   void *memblock,
+   size_t num,
+   size_t size,
+   size_t alignment
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*memblock*<br/>
+Bieżący wskaźnik bloku pamięci.
+
+*Numer*<br/>
+Liczba elementów.
+
+*Rozmiar*<br/>
+Rozmiar w bajtach każdego elementu.
+
+*Wyrównanie*<br/>
+Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**_aligned_recalloc —** zwraca typ void wskaźnik do bloku pamięci przydzielić (i prawdopodobnie przenoszenia). Wartość zwracana jest **NULL** Jeśli rozmiar wynosi zero, a argument bufor nie jest **NULL**, lub jeśli nie ma dostatecznej ilości dostępnej pamięci, aby rozwinąć blok na dany rozmiar. W pierwszym przypadku oryginalnego bloku zostanie zwolniona. W drugim przypadku oryginalnego bloku jest bez zmian. Wartości zwracanej wskazuje miejsce do magazynowania, które na pewno jest odpowiednio dopasowany do przechowywania obiekty dowolnego typu. Aby uzyskać wskaźnik do typu innego niż void, użyj typu rzutowania wartości zwracanej.
+
+Jest błędem ponowne przydzielenie pamięci i zmienić wyrównania bloku.
+
+## <a name="remarks"></a>Uwagi
+
+**_aligned_recalloc —** opiera się na **— funkcja malloc**. Aby uzyskać więcej informacji o korzystaniu z **_aligned_offset_malloc —**, zobacz [— funkcja malloc](malloc.md).
+
+Ta funkcja ustawia **errno** do **enomem —** Jeśli alokacja pamięci nie powiodła się lub jeśli była większa niż rozmiar żądanej **_heap_maxreq —**. Aby uzyskać więcej informacji na temat **errno**, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Ponadto **_aligned_recalloc —** sprawdza poprawność parametrów. Jeśli *wyrównanie* nie jest potęgą 2, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca **NULL** i ustawia **errno** do **einval —**.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_aligned_recalloc**|\<malloc.h>|
+
+## <a name="see-also"></a>Zobacz także
+
+[Wyrównywanie danych](../../c-runtime-library/data-alignment.md)<br/>
+[_recalloc](recalloc.md)<br/>
+[_aligned_offset_recalloc](aligned-offset-recalloc.md)<br/>

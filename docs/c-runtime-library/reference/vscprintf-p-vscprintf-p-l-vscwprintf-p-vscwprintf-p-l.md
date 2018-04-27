@@ -1,12 +1,12 @@
 ---
 title: _vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _vscprintf_p_l
@@ -50,89 +50,95 @@ helpviewer_keywords:
 - _vsctprintf_p function
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db038122dde42d8707f46be7f16f876e1807f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a975bd6ef6c0d62b81358c3164ce5c173a3d5932
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
-Zwraca liczbę znaków w ciągu sformatowany za pomocą wskaźnika do listy argumentów, z możliwością określić kolejność, w którym są używane argumentów.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _vscprintf_p(  
-   const char *format,  
-   va_list argptr   
-);  
-int _vscprintf_p _l(  
-   const char *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-int _vscwprintf_p (  
-   const wchar_t *format,  
-   va_list argptr   
-);  
-int _vscwprintf_p _l(  
-   const wchar_t *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `format`  
- Ciąg kontroli formatu.  
-  
- `argptr`  
- Wskaźnik do listy argumentów.  
-  
- `locale`  
- Ustawienia regionalne do użycia.  
-  
- Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_vscprintf_p` Zwraca liczbę znaków, które może być generowane, jeśli ciąg wskazywał przez listę argumentów została drukowaniu i wysyłane do pliku lub buforu przy użyciu określonego kody formatowania. Wartość zwracana nie zawiera znak końcowy null. `_vscwprintf_p` taką samą funkcję wykonuje dla znaki dwubajtowe.  
-  
-## <a name="remarks"></a>Uwagi  
- Funkcje te różnią się od `_vscprintf` i `_vscwprintf` tylko w tym obsługują umożliwia określenie kolejności, w którym są używane argumentów. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).  
-  
- Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.  
-  
- Jeśli `format` wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw `errno` do `EINVAL`.  
-  
+
+Zwraca liczbę znaków w ciągu sformatowany za pomocą wskaźnika do listy argumentów, z możliwością określić kolejność, w którym są używane argumentów.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _vscprintf_p(
+   const char *format,
+   va_list argptr
+);
+int _vscprintf_p _l(
+   const char *format,
+   locale_t locale,
+   va_list argptr
+);
+int _vscwprintf_p (
+   const wchar_t *format,
+   va_list argptr
+);
+int _vscwprintf_p _l(
+   const wchar_t *format,
+   locale_t locale,
+   va_list argptr
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Format*<br/>
+Ciąg kontroli formatu.
+
+*argptr*<br/>
+Wskaźnik do listy argumentów.
+
+*Ustawienia regionalne*<br/>
+Ustawienia regionalne do użycia.
+
+Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+## <a name="return-value"></a>Wartość zwracana
+
+**_vscprintf_p —** zwraca liczbę znaków, które może być generowane, jeśli ciąg wskazywał przez listę argumentów została drukowaniu i wysyłane do pliku lub buforu przy użyciu określonego formatowania kodów. Wartość zwracana nie zawiera znak końcowy null. **_vscwprintf_p —** taką samą funkcję wykonuje dla znaki dwubajtowe.
+
+## <a name="remarks"></a>Uwagi
+
+Funkcje te różnią się od **_vscprintf —** i **_vscwprintf —** tylko w tym obsługują umożliwia określenie kolejności, w którym są używane argumentów. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+
+Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+
+Jeśli *format* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw **errno** do **einval —**.
+
 > [!IMPORTANT]
->  Upewnij się, że jeśli `format` to ciąg zdefiniowany przez użytkownika jest zakończenie wartością null i ma poprawną liczbę i typ parametrów. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_vsctprintf_p`|`_vscprintf_p`|`_vscprintf_p`|`_vscwprintf_p`|  
-|`_vsctprintf_p_l`|`_vscprintf_p_l`|`_vscprintf_p_l`|`_vscwprintf_p_l`|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_vscprintf_p`, `_vscprintf_p_l`|\<stdio.h>|  
-|`_vscwprintf_p`, `_vscwprintf_p_l`|\<stdio.h > lub \<wchar.h >|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
- Zobacz przykład [vsprintf —](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [vprintf — funkcje](../../c-runtime-library/vprintf-functions.md)   
- [_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l](../../c-runtime-library/reference/scprintf-p-scprintf-p-l-scwprintf-p-scwprintf-p-l.md)   
- [_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)
+> Upewnij się, że jeśli *format* to ciąg zdefiniowany przez użytkownika jest zakończenie wartością null i ma poprawną liczbę i typ parametrów. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_vsctprintf_p —**|**_vscprintf_p**|**_vscprintf_p**|**_vscwprintf_p**|
+|**_vsctprintf_p_l —**|**_vscprintf_p_l**|**_vscprintf_p_l**|**_vscwprintf_p_l**|
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_vscprintf_p —**, **_vscprintf_p_l —**|\<stdio.h>|
+|**_vscwprintf_p —**, **_vscwprintf_p_l —**|\<stdio.h > lub \<wchar.h >|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz przykład [vsprintf —](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
+[_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l](scprintf-p-scprintf-p-l-scwprintf-p-scwprintf-p-l.md)<br/>
+[_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)<br/>

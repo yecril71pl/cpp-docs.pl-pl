@@ -1,12 +1,12 @@
 ---
-title: "strncat —, _strncat_l, wcsncat —, _wcsncat_l, _mbsncat —, _mbsncat_l — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: strncat —, _strncat_l, wcsncat —, _wcsncat_l, _mbsncat —, _mbsncat_l — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - strncat
@@ -66,184 +66,189 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-caps.latest.revision: 
+caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411b480acde9a5fad1144a7ebf95cd23ee3b3fd6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e479999c249825a4cde35b33562098030e9493b9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat —, _strncat_l, wcsncat —, _wcsncat_l _mbsncat —, _mbsncat_l —
-Dołącza znaków ciągu. Dostępne są bardziej bezpieczne wersje tych funkcji, zobacz [strncat_s —, _strncat_s_l, wcsncat_s —, _wcsncat_s_l, _mbsncat_s —, _mbsncat_s_l —](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .  
-  
+
+Dołącza znaków ciągu. Dostępne są bardziej bezpieczne wersje tych funkcji, zobacz [strncat_s —, _strncat_s_l, wcsncat_s —, _wcsncat_s_l, _mbsncat_s —, _mbsncat_s_l —](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .
+
 > [!IMPORTANT]
->  `_mbsncat` i `_mbsncat_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-char *strncat(  
-   char *strDest,  
-   const char *strSource,  
-   size_t count   
-);  
-wchar_t *wcsncat(  
-   wchar_t *strDest,  
-   const wchar_t *strSource,  
-   size_t count   
-);  
-unsigned char *_mbsncat(  
-   unsigned char *strDest,  
-   const unsigned char *strSource,  
-   size_t count  
-);  
-unsigned char *_mbsncat_l(  
-   unsigned char *strDest,  
-   const unsigned char *strSource,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-char *strncat(  
-   char (&strDest)[size],  
-   const char *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-wchar_t *wcsncat(  
-   wchar_t (&strDest)[size],  
-   const wchar_t *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsncat(  
-   unsigned char (&strDest)[size],  
-   const unsigned char *strSource,  
-   size_t count  
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsncat_l(  
-   unsigned char (&strDest)[size],  
-   const unsigned char *strSource,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `strDest`  
- Ciąg docelowego zerem.  
-  
- `strSource`  
- Ciąg źródłowy zerem.  
-  
- `count`  
- Liczba znaków do dołączenia.  
-  
- `locale`  
- Ustawienia regionalne do użycia.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do ciągu docelowego. Brak wartości zwracanej jest zarezerwowana wystąpił błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- `strncat` Funkcja dołącza co najwyżej pierwszy `count` znaków `strSource` do `strDest`. Litery `strSource` zastępuje znak końcowy null z `strDest`. Jeśli w pojawi się znak null `strSource` przed `count` znaki są dołączane, `strncat` dołącza wszystkie znaki od `strSource`, maksymalnie znakiem pustym. Jeśli `count` jest większa niż długość `strSource`, długość `strSource` jest używany zamiast `count`. Wszystkich przypadkach, wynikowy ciąg zostanie zakończony znakiem null. Jeśli kopiowanie odbywa się między ciągów, które nakładają się na, zachowanie jest niezdefiniowany.  
-  
+> **_mbsncat —** i **_mbsncat_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Składnia
+
+```C
+char *strncat(
+   char *strDest,
+   const char *strSource,
+   size_t count
+);
+wchar_t *wcsncat(
+   wchar_t *strDest,
+   const wchar_t *strSource,
+   size_t count
+);
+unsigned char *_mbsncat(
+   unsigned char *strDest,
+   const unsigned char *strSource,
+   size_t count
+);
+unsigned char *_mbsncat_l(
+   unsigned char *strDest,
+   const unsigned char *strSource,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+char *strncat(
+   char (&strDest)[size],
+   const char *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+wchar_t *wcsncat(
+   wchar_t (&strDest)[size],
+   const wchar_t *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+unsigned char *_mbsncat(
+   unsigned char (&strDest)[size],
+   const unsigned char *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+unsigned char *_mbsncat_l(
+   unsigned char (&strDest)[size],
+   const unsigned char *strSource,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Parametry
+
+*strDest*<br/>
+Ciąg docelowego zerem.
+
+*strSource*<br/>
+Ciąg źródłowy zerem.
+
+*Liczba*<br/>
+Liczba znaków do dołączenia.
+
+*Ustawienia regionalne*<br/>
+Ustawienia regionalne do użycia.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca wskaźnik do ciągu docelowego. Brak wartości zwracanej jest zarezerwowana wystąpił błąd.
+
+## <a name="remarks"></a>Uwagi
+
+**Strncat —** funkcja dołącza co najwyżej pierwszy *liczba* znaków *strSource* do *strDest*. Litery *strSource* zastępuje znak końcowy null z *strDest*. Jeśli w pojawi się znak null *strSource* przed *liczba* znaki są dołączane, **strncat —** dołącza wszystkie znaki od *strSource*, maksymalnie znakiem pustym. Jeśli *liczba* jest większa niż długość *strSource*, długość *strSource* jest używany zamiast *liczba*. Wszystkich przypadkach, wynikowy ciąg zostanie zakończony znakiem null. Jeśli kopiowanie odbywa się między ciągów, które nakładają się na, zachowanie jest niezdefiniowany.
+
 > [!IMPORTANT]
->  `strncat` nie sprawdza wystarczającą ilość miejsca w `strDest`; w związku z tym jest przyczyną przepełnienia buforu. Należy pamiętać, że `count` ogranicza liczbę znaków dołączany; nie jest limit rozmiaru `strDest`. Zobacz poniższy przykład. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
- `wcsncat` i `_mbsncat` znaków dwubajtowych i znaków wielobajtowych wersji `strncat`. Argumenty typu string i zwracana wartość `wcsncat` są znaków dwubajtowych ciągi; tych `_mbsncat` są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.  
-  
- Wartość wyjściowa jest zagrożony ustawienie `LC_CTYPE` ustawienie kategorii ustawień regionalnych; zobacz [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez `_l` Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane zamiast przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
-  
- W języku C++ te funkcje mają przeciążenia szablonu. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsncat`|`strncat`|`_mbsnbcat`|`wcsncat`|  
-|`_tcsncat_l`|`_strncat_l`|`_mbsnbcat_l`|`_wcsncat_l`|  
-  
+> **strncat —** nie sprawdza wystarczającą ilość miejsca w *strDest*; w związku z tym jest przyczyną przepełnienia buforu. Należy pamiętać, że *liczba* ogranicza liczbę znaków dołączany; nie jest limit rozmiaru *strDest*. Zobacz poniższy przykład. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+**wcsncat —** i **_mbsncat —** znaków dwubajtowych i znaków wielobajtowych wersji **strncat —**. Argumenty typu string i zwracana wartość **wcsncat —** są znaków dwubajtowych ciągi; tych **_mbsncat —** są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+
+Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+
+W języku C++ te funkcje mają przeciążenia szablonu. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsncat —**|**strncat**|**_mbsnbcat**|**wcsncat —**|
+|**_tcsncat_l —**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
+
 > [!NOTE]
->  `_strncat_l` i `_wcsncat_l` nie zależność od ustawień regionalnych, a nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez `_tcsncat_l`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`strncat`|\<string.h>|  
-|`wcsncat`|\<String.h > lub \<wchar.h >|  
-|`_mbsncat`|\<mbstring.h>|  
-|`_mbsncat_l`|\<mbstring.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_strncat.c  
-// Use strcat and strncat to append to a string.  
-#include <stdlib.h>  
-  
-#define MAXSTRINGLEN 39  
-  
-char string[MAXSTRINGLEN+1];  
-// or char *string = malloc(MAXSTRINGLEN+1);  
-  
-void BadAppend( char suffix[], int n )  
-{  
-   strncat( string, suffix, n );  
-}  
-  
-void GoodAppend( char suffix[], size_t n )  
-{  
-   strncat( string, suffix, __min( n, MAXSTRINGLEN-strlen(string)) );  
-}  
-  
-int main( void )  
-{  
-   string[0] = '\0';  
-   printf( "string can hold up to %d characters\n", MAXSTRINGLEN );  
-  
-   strcpy( string, "This is the initial string!" );  
-   // concatenate up to 20 characters...  
-   BadAppend( "Extra text to add to the string...", 20 );  
-   printf( "After BadAppend :  %s (%d chars)\n", string, strlen(string) );  
-  
-   strcpy( string, "This is the initial string!" );  
-   // concatenate up to 20 characters...  
-   GoodAppend( "Extra text to add to the string...", 20 );  
-   printf( "After GoodAppend:  %s (%d chars)\n", string, strlen(string) );  
-}  
-```  
-  
-## <a name="output"></a>Dane wyjściowe  
-  
-```  
-string can hold up to 39 characters  
-After BadAppend :  This is the initial string!Extra text to add to (47 chars)  
-After GoodAppend:  This is the initial string!Extra text t (39 chars)  
-```  
-  
- Należy pamiętać, że `BadAppend` spowodowała przepełnienie buforu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [strcat —, wcscat —, _mbscat —](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp —, wcscmp —, _mbscmp —](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncmp —, wcsncmp —, _mbsncmp — _mbsncmp_l —](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr —, wcsrchr —, _mbsrchr — _mbsrchr_l —](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn —, wcsspn —, _mbsspn — _mbsspn_l —](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+> **_strncat_l** i **_wcsncat_l** nie zależność od ustawień regionalnych, a nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_tcsncat_l —**.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**strncat**|\<string.h>|
+|**wcsncat —**|\<String.h > lub \<wchar.h >|
+|**_mbsncat —**|\<mbstring.h>|
+|**_mbsncat_l**|\<mbstring.h>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_strncat.c
+// Use strcat and strncat to append to a string.
+#include <stdlib.h>
+
+#define MAXSTRINGLEN 39
+
+char string[MAXSTRINGLEN+1];
+// or char *string = malloc(MAXSTRINGLEN+1);
+
+void BadAppend( char suffix[], int n )
+{
+   strncat( string, suffix, n );
+}
+
+void GoodAppend( char suffix[], size_t n )
+{
+   strncat( string, suffix, __min( n, MAXSTRINGLEN-strlen(string)) );
+}
+
+int main( void )
+{
+   string[0] = '\0';
+   printf( "string can hold up to %d characters\n", MAXSTRINGLEN );
+
+   strcpy( string, "This is the initial string!" );
+   // concatenate up to 20 characters...
+   BadAppend( "Extra text to add to the string...", 20 );
+   printf( "After BadAppend :  %s (%d chars)\n", string, strlen(string) );
+
+   strcpy( string, "This is the initial string!" );
+   // concatenate up to 20 characters...
+   GoodAppend( "Extra text to add to the string...", 20 );
+   printf( "After GoodAppend:  %s (%d chars)\n", string, strlen(string) );
+}
+```
+
+### <a name="output"></a>Dane wyjściowe
+
+```Output
+string can hold up to 39 characters
+After BadAppend :  This is the initial string!Extra text to add to (47 chars)
+After GoodAppend:  This is the initial string!Extra text t (39 chars)
+```
+
+Należy pamiętać, że **BadAppend** spowodowała przepełnienie buforu.
+
+## <a name="see-also"></a>Zobacz także
+
+[Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
+[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

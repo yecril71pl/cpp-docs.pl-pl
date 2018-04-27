@@ -24,11 +24,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd40617afecd0c9be03e3676ebe5f2fb8058312a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: a8ac39babea0c36e9d5d120e1f5ca89e3f3dc014
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Generowanie łączonych kodów czasowych)
 
@@ -36,7 +36,7 @@ Użyj **opcję/LTCG** do przeprowadzania optymalizacji całego programu lub do t
 
 ## <a name="syntax"></a>Składnia
 
-> **/LTCG**[**:**{**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]<br/>
+> **/ LTCG**[**:**{**PRZYROSTOWE**|**NOSTATUS**|**STAN** | **OFF**}]<br/>
 
 Te opcje są przestarzałe, począwszy od programu Visual Studio 2015:
 
@@ -51,7 +51,7 @@ Określa, że konsolidator dotyczy tylko całego programu optymalizacji lub w cz
 Określa, czy konsolidator wyświetlany jest wskaźnik postępu, pokazujący, jaki procent konsolidacji została ukończona. Domyślnie te informacje o stanie nie jest wyświetlana.
 
 **Wyłącz** (opcjonalnie)<br/>
-Powoduje wyłączenie generowania kodu w czasie konsolidacji. To zachowanie jest taka sama jak gdy nie określono opcję/LTCG z wiersza polecenia.
+Powoduje wyłączenie generowania kodu w czasie konsolidacji. To zachowanie jest takie samo, jak kiedy **opcję/LTCG** nie jest określona w wierszu polecenia.
 
 **PGINSTRUMENT** (opcjonalnie)<br/>
 Ta opcja jest przestarzały, począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **opcję/LTCG** i [opcji/genprofile lub /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) do generowania instrumentowanej kompilacji dla optymalizacji sterowanych profilem. Dane, które mają być zbierane z Instrumentacją uruchamia służy do utworzenia zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](profile-guided-optimizations.md). Krótka forma ta opcja jest **/LTCG:PGI**.
@@ -68,7 +68,7 @@ Ta opcja jest przestarzały, począwszy od programu Visual Studio 2015. Zamiast 
 
 Opcje konsolidatora z następującymi wyjątkami nie można dodać do PGO kombinację **opcję/LTCG** i **/USEPROFILE** nie zostały określone w poprzedniej PGO inicjowania kombinacja  **/ LTCG** i **opcji/genprofile** opcje:
 
-- [/BASE](../../build/reference/base-base-address.md)
+- [/ BASE](../../build/reference/base-base-address.md)
 
 - [/FIXED](../../build/reference/fixed-fixed-base-address.md)
 
@@ -156,7 +156,7 @@ Moduły, które są kompilowane przy użyciu [/GL](../../build/reference/gl-whol
 
 Można także zastosować **opcję/LTCG** do określonej kompilacji, wybierając **kompilacji** > **profilowana Optymalizacja** paska menu lub przez wybranie jednej profilu Wskazówki optymalizacji opcje menu skrótów dla projektu.
 
-#### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>.
 

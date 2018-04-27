@@ -1,12 +1,12 @@
 ---
-title: _get_timezone | Microsoft Docs
-ms.custom: 
+title: _get_timezone — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_timezone
@@ -33,53 +33,57 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ee251c147fd0f3f34d229cafbbef28caf1cebd9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8d878d97b365fb2f3c5e897fec3989f336a3d67c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="gettimezone"></a>_get_timezone
-Pobiera różnica w sekundach między uniwersalny czas koordynowany (UTC) i czasem lokalnym.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-      error_t _get_timezone(   
-    long* seconds  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `seconds`  
- Różnica w sekundach między czasem UTC i czasem lokalnym.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zera w razie powodzenia lub `errno` wartość, gdy wystąpi błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- `_get_timezone` Funkcja pobiera różnica w sekundach między czasem UTC a lokalnym jako liczba całkowita. Wartością domyślną jest 28 800 sekund dla pacyficznego czasu standardowego (osiem godzin za UTC).  
-  
- Jeśli `seconds` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia `errno` do `EINVAL` i zwraca `EINVAL`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_get_timezone`|\<time.h>|  
-  
- Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
- [errno, _doserrno — _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
- [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
- [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
- [_get_tzname](../../c-runtime-library/reference/get-tzname.md)
+
+Pobiera różnica w sekundach między uniwersalny czas koordynowany (UTC) i czasem lokalnym.
+
+## <a name="syntax"></a>Składnia
+
+```C
+error_t _get_timezone(
+    long* seconds
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Sekund*<br/>
+Różnica w sekundach między czasem UTC i czasem lokalnym.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zera w razie powodzenia lub **errno** wartość, gdy wystąpi błąd.
+
+## <a name="remarks"></a>Uwagi
+
+**_Get_timezone —** funkcja pobiera różnica w sekundach między czasem UTC a lokalnym jako liczba całkowita. Wartością domyślną jest 28 800 sekund dla pacyficznego czasu standardowego (osiem godzin za UTC).
+
+Jeśli *sekund* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **einval —**.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_get_timezone**|\<time.h>|
+
+Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
+[errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[_get_daylight](get-daylight.md)<br/>
+[_get_dstbias](get-dstbias.md)<br/>
+[_get_tzname](get-tzname.md)<br/>

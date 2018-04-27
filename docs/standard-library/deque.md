@@ -1,12 +1,12 @@
 ---
-title: "&lt;deque —&gt; | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: '&lt;deque —&gt; | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <deque>
@@ -15,55 +15,54 @@ dev_langs:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d1fd050b4dc8a91da0e709cb2365ec629fabb0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f0317eda4fce4e81e9b419f817aa045240b714c3
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltdequegt"></a>&lt;deque —&gt;
-Definiuje deque — klasa dla szablonu kontenera i kilku szablonów pomocniczych.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-#include <deque>  
-  
-```  
-  
-### <a name="operators"></a>Operatory  
-  
-|||  
-|-|-|  
-|[operator!=](../standard-library/deque-operators.md#op_neq)|Testy, jeśli obiekt deque — po lewej stronie operatora nie jest taki sam jak obiekt deque — po prawej stronie.|  
-|[Operator <](../standard-library/deque-operators.md#op_lt)|Testy, jeśli obiekt deque — po lewej stronie operatora jest mniejsza niż obiekt deque — po prawej stronie.|  
-|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Testy, jeśli deque — obiekty po lewej stronie operatora jest mniejsza niż lub równe obiektu deque — po prawej stronie.|  
-|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Testy, jeśli obiekt deque — po lewej stronie operatora jest taki sam jak obiekt deque — po prawej stronie.|  
-|[operator>](../standard-library/deque-operators.md#op_gt)|Testy, jeśli obiekt deque — po lewej stronie operatora jest większy niż obiekt deque — po prawej stronie.|  
-|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Testy, jeśli obiekt deque — po lewej stronie operatora jest większa niż lub równa obiektu deque — po prawej stronie.|  
-  
-### <a name="functions"></a>Funkcje  
-  
-|||  
-|-|-|  
-|[swap](../standard-library/deque-functions.md#swap)|Zamienia deques dwa elementy.|  
-  
-### <a name="classes"></a>Klasy  
-  
-|||  
-|-|-|  
-|[deque, klasa](../standard-library/deque-class.md)|Klasy szablonów sekwencji kontenerów, które Rozmieść elementy danego typu w układzie liniowej i, takich jak wektory, dostęp do szybkiego losowego dowolnego elementu i wydajne wstawiania i usuwania tyłu kontenera.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)   
- [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
 
+Definiuje deque — klasa dla szablonu kontenera i kilku szablonów pomocniczych.
 
+## <a name="syntax"></a>Składnia
 
+```cpp
+#include <deque>
+
+```
+
+### <a name="operators"></a>Operatory
+
+|Operator|Opis|
+|-|-|
+|[operator!=](../standard-library/deque-operators.md#op_neq)|Testy, jeśli obiekt deque — po lewej stronie operatora nie jest taki sam jak obiekt deque — po prawej stronie.|
+|[Operator <](../standard-library/deque-operators.md#op_lt)|Testy, jeśli obiekt deque — po lewej stronie operatora jest mniejsza niż obiekt deque — po prawej stronie.|
+|[Operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Testy, jeśli deque — obiekty po lewej stronie operatora jest mniejsza niż lub równe obiektu deque — po prawej stronie.|
+|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Testy, jeśli obiekt deque — po lewej stronie operatora jest taki sam jak obiekt deque — po prawej stronie.|
+|[operator>](../standard-library/deque-operators.md#op_gt)|Testy, jeśli obiekt deque — po lewej stronie operatora jest większy niż obiekt deque — po prawej stronie.|
+|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Testy, jeśli obiekt deque — po lewej stronie operatora jest większa niż lub równa obiektu deque — po prawej stronie.|
+
+### <a name="functions"></a>Funkcje
+
+|Funkcja|Opis|
+|-|-|
+|[swap](../standard-library/deque-functions.md#swap)|Zamienia deques dwa elementy.|
+
+### <a name="classes"></a>Klasy
+
+|Class|Opis|
+|-|-|
+|[deque, klasa](../standard-library/deque-class.md)|Klasy szablonów sekwencji kontenerów, które Rozmieść elementy danego typu w układzie liniowej i, takich jak wektory, dostęp do szybkiego losowego dowolnego elementu i wydajne wstawiania i usuwania tyłu kontenera.|
+
+## <a name="see-also"></a>Zobacz także
+
+[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

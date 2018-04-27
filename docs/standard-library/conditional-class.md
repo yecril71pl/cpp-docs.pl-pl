@@ -1,12 +1,12 @@
 ---
-title: "Conditional — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Conditional — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - type_traits/std::conditional
@@ -16,51 +16,50 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c0c6deb6a7167852101efba30a978aee78f96f9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 40d7e873ce7ae5814423d4b5e3899ef8bbb46fa7
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="conditional-class"></a>conditional — Klasa
-Wybiera jeden z dwóch typów, w zależności od określonego warunku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```
-template <bool B, class T1, class T2>  
+
+Wybiera jeden z dwóch typów, w zależności od określonego warunku.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template <bool B, class T1, class T2>
 struct conditional;
 
-template <bool _Test, class _T1, class _T2>  
+template <bool _Test, class _T1, class _T2>
 using conditional_t = typename conditional<_Test, _T1, _T2>::type;
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `B`  
- Wartość, która określa wybrany typ.  
-  
- `T1`  
- Wynik typu, jeśli B ma wartość true.  
-  
- `T2`  
- Wynik typu, gdy B ma wartość false.  
-  
-## <a name="remarks"></a>Uwagi  
- Element typedef elementu członkowskiego szablonu `conditional<B, T1, T2>::type` daje w wyniku `T1` podczas `B` daje w wyniku `true`i daje w wyniku `T2` podczas `B` daje w wyniku `false`.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<type_traits >  
-  
- **Namespace:** Standard  
-  
-## <a name="see-also"></a>Zobacz też  
- [<type_traits>](../standard-library/type-traits.md)
+```
 
+### <a name="parameters"></a>Parametry
 
+`B` Wartość, która określa wybranego typu.
 
+`T1` Wynik typu, jeśli B ma wartość true.
+
+`T2` Wynik typu, gdy B ma wartość false.
+
+## <a name="remarks"></a>Uwagi
+
+Element typedef elementu członkowskiego szablonu `conditional<B, T1, T2>::type` daje w wyniku `T1` podczas `B` daje w wyniku `true`i daje w wyniku `T2` podczas `B` daje w wyniku `false`.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** \<type_traits >
+
+**Namespace:** Standard
+
+## <a name="see-also"></a>Zobacz także
+
+[<type_traits>](../standard-library/type-traits.md)<br/>

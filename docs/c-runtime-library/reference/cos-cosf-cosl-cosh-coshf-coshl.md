@@ -1,12 +1,12 @@
 ---
 title: cos, cosf, cosl, cosh, coshf, coshl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - coshl
@@ -50,17 +50,17 @@ helpviewer_keywords:
 - coshl function
 - hyperbolic functions
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b9ef8330842f090c5a63cfea65886e6b7c25cee3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="cos-cosf-cosl-cosh-coshf-coshl"></a>cos, cosf, cosl, cosh, coshf, coshl
 Oblicza cosinus (`cos`, `cosf`, lub `cosl`), lub cosinus hiperboliczny (`cosh`, `coshf`, lub `coshl`).  
@@ -113,7 +113,7 @@ long double coshl(
 |-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|brak|`_DOMAIN`|  
 |± ∞  (`cosf`, `cos`, `cosl`)|`INVALID`|`_DOMAIN`|  
-|x ≥ 7.104760e+002  (`cosh`, `coshf`, `coshl`)|`INEXACT`+`OVERFLOW`|`OVERFLOW`|  
+|x ≥ 7.104760e + 002 (`cosh`, `coshf`, `coshl`)|`INEXACT`+`OVERFLOW`|`OVERFLOW`|  
   
 ## <a name="remarks"></a>Uwagi  
  Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia `cos` i `cosh` który przyjmować i zwracać `float` lub `long double` wartości. W programie C `cos` i `cosh` zawsze przyjmować i zwracać `double`.  

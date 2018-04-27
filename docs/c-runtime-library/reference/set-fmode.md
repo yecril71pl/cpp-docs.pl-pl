@@ -1,12 +1,12 @@
 ---
-title: "_set_fmode — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _set_fmode — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_fmode
@@ -34,114 +34,119 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89917dc107971a5b58d46eb8676f094f7d7e70cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 556c53284076b2b27b1bf5a55692c9bf8c70d3c5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setfmode"></a>_set_fmode
-Ustawia domyślny tryb tłumaczenia pliku dla operacji We/Wy pliku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-errno_t _set_fmode(   
-   int mode   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- [in] `mode`  
- Tryb tłumaczenia pliku żądanego: `_O_TEXT` lub `_O_BINARY`.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość zero, jeśli to się powiedzie, kod błędu w przypadku awarii. Jeśli `mode` nie jest `_O_TEXT` lub `_O_BINARY` lub `_O_WTEXT`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia `errno` do `EINVAL` i zwraca `EINVAL`.  
-  
-## <a name="remarks"></a>Uwagi  
- Zestawy funkcji [_fmode —](../../c-runtime-library/fmode.md) zmiennej globalnej. Ta zmienna Określa domyślny tryb tłumaczenia pliku dla operacji We/Wy pliku `_open` i `_pipe`.  
-  
- `_O_TEXT` i `_O_BINARY` są zdefiniowane w Fcntl.h. `EINVAL` jest zdefiniowany w Errno.h.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
-|-------------|---------------------|---------------------|  
-|`_set_fmode`|\<stdlib.h>|\<fcntl.h>, \<errno.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_set_fmode.c  
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <fcntl.h>     /* for _O_TEXT and _O_BINARY */  
-#include <errno.h>     /* for EINVAL */  
-#include <sys\stat.h>  /* for _S_IWRITE */  
-#include <share.h>     /* for _SH_DENYNO */  
-  
-int main()  
-{  
-   int mode, fd, ret;  
-   errno_t err;  
-   int buf[12] = { 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,  
-                   75, 76 };  
-   char * filename = "fmode.out";  
-  
-   err = _get_fmode(&mode);  
-   if (err == EINVAL)  
-   {  
-      printf( "Invalid parameter: mode\n");  
-      return 1;  
-   }  
-   else  
-      printf( "Default Mode is %s\n", mode == _O_TEXT ? "text" :  
-              "binary");  
-  
-   err = _set_fmode(_O_BINARY);  
-   if (err == EINVAL)  
-   {  
-      printf( "Invalid mode.\n");  
-      return 1;  
-   }  
-  
-   if ( _sopen_s(&fd, filename, _O_RDWR | _O_CREAT, _SH_DENYNO, _S_IWRITE | _S_IREAD) != 0 )  
-   {  
-      printf( "Error opening the file %s\n", filename);  
-      return 1;  
-   }  
-  
-   if (ret = _write(fd, buf, 12*sizeof(int)) < 12*sizeof(int))  
-   {  
-      printf( "Problem writing to the file %s.\n", filename);  
-      printf( "Number of bytes written: %d\n", ret);  
-   }  
-  
-   if (_close(fd) != 0)  
-   {  
-      printf("Error closing the file %s. Error code %d.\n",  
-             filename, errno);  
-   }  
-  
-   system("type fmode.out");  
-}  
-```  
-  
-```Output  
-Default Mode is binary  
-A   B   C   D   E   F   G   H   I   J   K   L     
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [_fmode —](../../c-runtime-library/fmode.md)   
- [_get_fmode](../../c-runtime-library/reference/get-fmode.md)   
- [_setmode —](../../c-runtime-library/reference/setmode.md)   
- [We/Wy pliku w trybie binarnym i tekstowym](../../c-runtime-library/text-and-binary-mode-file-i-o.md)
+
+Ustawia domyślny tryb tłumaczenia pliku dla operacji We/Wy pliku.
+
+## <a name="syntax"></a>Składnia
+
+```C
+errno_t _set_fmode( 
+   int mode 
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Tryb*<br/>
+Tryb tłumaczenia pliku żądanego: **_o_text —** lub **_o_binary —**.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość zero, jeśli to się powiedzie, kod błędu w przypadku awarii. Jeśli *tryb* nie jest **_o_text —** lub **_o_binary —** lub **_O_WTEXT**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **einval —**.
+
+## <a name="remarks"></a>Uwagi
+
+Zestawy funkcji [_fmode —](../../c-runtime-library/fmode.md) zmiennej globalnej. Ta zmienna Określa domyślny tryb tłumaczenia pliku dla operacji We/Wy pliku **_otwórz** i **_pipe —**.
+
+**_O_text —** i **_o_binary —** są zdefiniowane w Fcntl.h. **Einval —** jest zdefiniowany w Errno.h.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|-------------|---------------------|---------------------|
+|**_set_fmode**|\<stdlib.h>|\<fcntl.h>, \<errno.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_set_fmode.c
+#include <stdlib.h>
+#include <stdio.h>
+#include <fcntl.h>     /* for _O_TEXT and _O_BINARY */
+#include <errno.h>     /* for EINVAL */
+#include <sys\stat.h>  /* for _S_IWRITE */
+#include <share.h>     /* for _SH_DENYNO */
+
+int main()
+{
+   int mode, fd, ret;
+   errno_t err;
+   int buf[12] = { 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
+                   75, 76 };
+   char * filename = "fmode.out";
+
+   err = _get_fmode(&mode);
+   if (err == EINVAL)
+   {
+      printf( "Invalid parameter: mode\n");
+      return 1;
+   }
+   else
+      printf( "Default Mode is %s\n", mode == _O_TEXT ? "text" :
+              "binary");
+
+   err = _set_fmode(_O_BINARY);
+   if (err == EINVAL)
+   {
+      printf( "Invalid mode.\n");
+      return 1;
+   }
+
+   if ( _sopen_s(&fd, filename, _O_RDWR | _O_CREAT, _SH_DENYNO, _S_IWRITE | _S_IREAD) != 0 )
+   {
+      printf( "Error opening the file %s\n", filename);
+      return 1;
+   }
+
+   if (ret = _write(fd, buf, 12*sizeof(int)) < 12*sizeof(int))
+   {
+      printf( "Problem writing to the file %s.\n", filename);
+      printf( "Number of bytes written: %d\n", ret);
+   }
+
+   if (_close(fd) != 0)
+   {
+      printf("Error closing the file %s. Error code %d.\n",
+             filename, errno);
+   }
+
+   system("type fmode.out");
+}
+```
+
+```Output
+Default Mode is binary
+A   B   C   D   E   F   G   H   I   J   K   L
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[_fmode](../../c-runtime-library/fmode.md)<br/>
+[_get_fmode](get-fmode.md)<br/>
+[_setmode](setmode.md)<br/>
+[We/Wy pliku w trybie binarnym i tekstowym](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>

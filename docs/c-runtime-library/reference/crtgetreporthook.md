@@ -1,12 +1,12 @@
 ---
-title: "_Crtgetreporthook — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _Crtgetreporthook — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtGetReportHook
@@ -31,49 +31,55 @@ helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07902a92fea767a4f57f44dbb9bb6692d12611c1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4b1e499b1663cbde3bcaa0a01a26e96d544ca390
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtgetreporthook"></a>_CrtGetReportHook
-Pobiera zdefiniowane przez klienta funkcji raportowania dla Przechwytywanie go do C wykonawczego do debugowania raportowania procesu (tylko wersja do debugowania).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-_CRT_REPORT_HOOK _CrtGetReportHook( void );  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca bieżącą funkcję raportowania zdefiniowane przez klienta.  
-  
-## <a name="remarks"></a>Uwagi  
- `_CrtGetReportHook` umożliwia aplikacji można pobrać bieżącą funkcję raportowania dla biblioteki wykonawcze debugowania C raportowania procesu.  
-  
- Aby uzyskać więcej informacji na temat korzystania innych obsługą punktu zaczepienia funkcji środowiska wykonawczego i pisanie własnych klienta zdefiniowane przez funkcje punktów zaczepienia, zobacz [debugowania pisanie funkcji punktów zaczepienia](/visualstudio/debugger/debug-hook-function-writing).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_CrtGetReportHook`|\<crtdbg.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="libraries"></a>Biblioteki  
- Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.  
-  
-## <a name="example"></a>Przykład  
- Przykładowe zastosowania `_CrtSetReportHook`, zobacz [raport](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Procedury debugowania](../../c-runtime-library/debug-routines.md)   
- [_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md)
+
+Pobiera zdefiniowane przez klienta funkcji raportowania dla Przechwytywanie go do C wykonawczego do debugowania raportowania procesu (tylko wersja do debugowania).
+
+## <a name="syntax"></a>Składnia
+
+```C
+_CRT_REPORT_HOOK _CrtGetReportHook( void );
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca bieżącą funkcję raportowania zdefiniowane przez klienta.
+
+## <a name="remarks"></a>Uwagi
+
+**_Crtgetreporthook —** umożliwia pobieranie bieżącej funkcji raportowania dla biblioteki wykonawcze debugowania C raportowania procesu aplikacji.
+
+Aby uzyskać więcej informacji na temat korzystania innych obsługą punktu zaczepienia funkcji środowiska wykonawczego i pisanie własnych klienta zdefiniowane przez funkcje punktów zaczepienia, zobacz [debugowania pisanie funkcji punktów zaczepienia](/visualstudio/debugger/debug-hook-function-writing).
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_CrtGetReportHook**|\<crtdbg.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Biblioteki
+
+Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.
+
+## <a name="example"></a>Przykład
+
+Przykładowe zastosowania **_crtsetreporthook —**, zobacz [raport](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
+
+## <a name="see-also"></a>Zobacz także
+
+[Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>
+[_CrtSetReportHook](crtsetreporthook.md)<br/>

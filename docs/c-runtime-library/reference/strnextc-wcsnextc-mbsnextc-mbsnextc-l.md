@@ -1,12 +1,12 @@
 ---
 title: _strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _strnextc
@@ -53,85 +53,90 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c77954cd7eefaa1e739622af4ccf1b3d7a43b7ad
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d9e8eb7bb0aef8bdc64c296b55e6dc96c8ef050c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
-Znajduje następny znak w ciągu.  
-  
+
+Znajduje następny znak w ciągu.
+
 > [!IMPORTANT]
->  `_mbsnextc` i `_mbsnextc_l` nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unsigned int _strnextc(  
-   const char *str  
-);  
-unsigned int _wscnextc(  
-   const wchar_t *str  
-);   
-unsigned int _mbsnextc(  
-   const unsigned char *str   
-);  
-unsigned int _mbsnextc_l(  
-   const unsigned char *str,  
-   _locale_t locale  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `str`  
- Ciąg źródła.  
-  
- `locale`  
- Ustawienia regionalne do użycia.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Każda z tych funkcji zwraca wartość liczby całkowitej następny znak w `str`.  
-  
-## <a name="remarks"></a>Uwagi  
- `_mbsnextc` Funkcja zwraca wartość liczby całkowitej dla następnego znaków wielobajtowych w `str`, bez przesuwania wskaźnika ciągu. `_mbsnextc` rozpoznaje wielobajtowych sekwencji znaków zgodnie z [strony kodowe wielobajtowe](../../c-runtime-library/code-pages.md) obecnie w użyciu.  
-  
- Jeśli `str` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i funkcja zwraca wartość 0.  
-  
- **Uwaga dotycząca zabezpieczeń** ten interfejs API ponosi potencjalne zagrożenie wynikające z problem przepełnienie buforu. Przepełnienie buforu problemy używanej metody ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcsnextc`|`_strnextc`|`_mbsnextc`|`_wcsnextc`|  
-  
- `_strnextc` i `_wcsnextc` ciąg pojedynczych bajtów znaków i wersje ciąg znaków dwubajtowych `_mbsnextc`. `_wcsnextc` Zwraca wartość liczby całkowitej dalej znaków dwubajtowych w `string`; `_strnextc` zwraca wartość liczby całkowitej następny znak jednobajtowe w `string`. `_strnextc` i `_wcsnextc` są dostępne tylko dla tego mapowania i nie powinna być używana w inny sposób. Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania zwykłego tekstu](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania zwykłego tekstu](../../c-runtime-library/generic-text-mappings.md).  
-  
- `_mbsnextc_l` jest identyczny z tą różnicą, że zamiast przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_mbsnextc`|\<mbstring.h>|  
-|`_mbsnextc_l`|\<mbstring.h>|  
-|`_strnextc`|\<tchar.h>|  
-|`_wcsnextc`|\<tchar.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)   
- [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_strdec, _wcsdec, _mbsdec, _mbsdec_l](../../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)   
- [_strinc, _wcsinc, _mbsinc, _mbsinc_l](../../c-runtime-library/reference/strinc-wcsinc-mbsinc-mbsinc-l.md)   
- [_strninc, _wcsninc, _mbsninc, _mbsninc_l](../../c-runtime-library/reference/strninc-wcsninc-mbsninc-mbsninc-l.md)
+> **_mbsnextc** i **_mbsnextc_l** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Składnia
+
+```C
+unsigned int _strnextc(
+   const char *str
+);
+unsigned int _wscnextc(
+   const wchar_t *str
+);
+unsigned int _mbsnextc(
+   const unsigned char *str
+);
+unsigned int _mbsnextc_l(
+   const unsigned char *str,
+   _locale_t locale
+);
+
+```
+
+### <a name="parameters"></a>Parametry
+
+*str*<br/>
+Ciąg źródła.
+
+*Ustawienia regionalne*<br/>
+Ustawienia regionalne do użycia.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Każda z tych funkcji zwraca wartość liczby całkowitej następny znak w *str*.
+
+## <a name="remarks"></a>Uwagi
+
+**_Mbsnextc** funkcja zwraca wartość liczby całkowitej dla następnego znaków wielobajtowych w *str*, bez przesuwania wskaźnika ciągu. **_mbsnextc** rozpoznaje wielobajtowych sekwencji znaków zgodnie z [strony kodowe wielobajtowe](../../c-runtime-library/code-pages.md) obecnie w użyciu.
+
+Jeśli *str* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca wartość 0.
+
+**Uwaga dotycząca zabezpieczeń** ten interfejs API ponosi potencjalne zagrożenie wynikające z problem przepełnienie buforu. Przepełnienie buforu problemy używanej metody ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
+
+**_strnextc** i **_wcsnextc** ciąg pojedynczych bajtów znaków i wersje ciąg znaków dwubajtowych **_mbsnextc**. **_wcsnextc** zwraca wartość liczby całkowitej dalej znaków dwubajtowych w *str*; **_strnextc** zwraca wartość liczby całkowitej następny znak jednobajtowe w *str*. **_strnextc** i **_wcsnextc** są dostępne tylko dla tego mapowania i nie powinna być używana w inny sposób. Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania zwykłego tekstu](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania zwykłego tekstu](../../c-runtime-library/generic-text-mappings.md).
+
+**_mbsnextc_l** jest identyczny z tą różnicą, że zamiast przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_mbsnextc**|\<mbstring.h>|
+|**_mbsnextc_l**|\<mbstring.h>|
+|**_strnextc**|\<tchar.h >|
+|**_wcsnextc**|\<tchar.h >|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
+[_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>
+[_strninc, _wcsninc, _mbsninc, _mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

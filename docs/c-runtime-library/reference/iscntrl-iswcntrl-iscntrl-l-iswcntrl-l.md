@@ -1,12 +1,12 @@
 ---
-title: "iscntrl —, iswcntrl —, _iscntrl_l —, _iswcntrl_l — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: iscntrl —, iswcntrl —, _iscntrl_l —, _iswcntrl_l — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - iscntrl
@@ -44,73 +44,77 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f56b4060f6b83aca11121ad6c40c22de64a24b8f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7c0eecee5d33bd9e250e88021556625101202082
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
-Określa, czy liczba całkowita reprezentuje znaków kontrolnych.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int iscntrl(   
-   int c   
-);  
-int iswcntrl(   
-   wint_t c   
-);  
-int _iscntrl_l(   
-   int c,  
-   _locale_t locale  
-);  
-int _iswcntrl_l(   
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Liczba całkowita do testowania  
-  
- `locale`  
- Ustawienia regionalne do użycia.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Każdy z tych procedur zwraca różną od zera, jeśli `c` jest reprezentację określonego znaku kontrolnego. `iscntrl` Zwraca wartość niezerową, jeśli `c` jest znak kontrolny (0x00-0x1F lub 0x7F). `iswcntrl` Zwraca wartość niezerową, jeśli `c` jest formantem szerokość znaku. Każdy z tych procedur zwraca 0, jeśli `c` nie spełnia warunku.  
-  
- Wersje tych funkcji, które mają `_l` sufiks Użyj parametr ustawień regionalnych, który jest przekazywany w zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
-  
- Zachowanie `iscntrl` i `_iscntrl_l` jest niezdefiniowana, jeśli `c` nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i `c` nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istcntrl`|`iscntrl`|`iscntrl`|`iswcntrl`|  
-|`_istcntrl_l`|`_iscntrl_l`|`_iscntrl_l`|`_iswcntrl_l`|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`iscntrl`|\<ctype.h>|  
-|`iswcntrl`|\<CType.h > lub \<wchar.h >|  
-|`_iscntrl_l`|\<ctype.h>|  
-|`_iswcntrl_l`|\<CType.h > lub \<wchar.h >|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)   
- [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [is, isw, procedury](../../c-runtime-library/is-isw-routines.md)
+
+Określa, czy liczba całkowita reprezentuje znaków kontrolnych.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int iscntrl(
+   int c
+);
+int iswcntrl(
+   wint_t c
+);
+int _iscntrl_l(
+   int c,
+   _locale_t locale
+);
+int _iswcntrl_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Liczba całkowita do testowania
+
+*Ustawienia regionalne*<br/>
+Ustawienia regionalne do użycia.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Każdy z tych procedur zwraca różną od zera, jeśli *c* jest reprezentację określonego znaku kontrolnego. **iscntrl —** zwraca wartość niezerową, jeśli *c* jest znak kontrolny (0x00-0x1F lub 0x7F). **iswcntrl —** zwraca wartość niezerową, jeśli *c* jest formantem szerokość znaku. Każdy z tych procedur zwraca 0, jeśli *c* nie spełnia warunku.
+
+Wersje tych funkcji, które mają **_l** sufiks Użyj parametr ustawień regionalnych, który jest przekazywany w zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+
+Zachowanie **iscntrl —** i **_iscntrl_l —** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i *c* nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istcntrl —**|**iscntrl**|**iscntrl**|**iswcntrl**|
+|**_istcntrl_l —**|**_iscntrl_l**|**_iscntrl_l**|**_iswcntrl_l**|
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**iscntrl**|\<ctype.h>|
+|**iswcntrl**|\<CType.h > lub \<wchar.h >|
+|**_iscntrl_l**|\<ctype.h>|
+|**_iswcntrl_l**|\<CType.h > lub \<wchar.h >|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
+[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

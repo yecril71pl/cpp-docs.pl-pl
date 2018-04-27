@@ -1,12 +1,12 @@
 ---
-title: '&lt;istream&gt; | Microsoft Docs'
-ms.custom: 
+title: '&lt;IStream&gt; | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - istream/std::<istream>
@@ -17,61 +17,60 @@ dev_langs:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ad1cd6a07e4b8b6ce71e6803170ce3cc1c0342
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6ed7f0eabe0fb67177197f8bb30eb258acd0e38f
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
-Definiuje basic_istream szablonu klasy —, które przekazuje ekstrakcje dla iostream, i basic_iostream szablonu klasy —, które przekazuje zarówno wstawienia i ekstrakcje. Nagłówek definiuje również manipulatora pokrewne. Ten plik nagłówka jest zwykle dołączone dla Ciebie przez inny nagłówek iostream; rzadko musi zawierać go bezpośrednio.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-#include <istream>  
-  
-```  
-  
-### <a name="typedefs"></a>Typedefs  
-  
-|||  
-|-|-|  
-|[iostream](../standard-library/istream-typedefs.md#iostream)|Typ `basic_iostream` specjalne na `char`.|  
-|[istream](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` specjalne na `char`.|  
-|[wiostream](../standard-library/istream-typedefs.md#wiostream)|Typ `basic_iostream` specjalne na **wchar**.|  
-|[wistream](../standard-library/istream-typedefs.md#wistream)|Typ `basic_istream` specjalne na **wchar**.|  
-  
-### <a name="manipulators"></a>Manipulatory  
-  
-|||  
-|-|-|  
-|[ws](../standard-library/istream-functions.md#ws)|Pomija biały znak w strumieniu.|  
-|[swap](../standard-library/istream-functions.md#istream_swap)|Zamienia dwa obiekty stream.|  
-  
-### <a name="operators"></a>Operatory  
-  
-|||  
-|-|-|  
-|[operator>>](../standard-library/istream-operators.md#op_gt_gt)|Wyodrębnia znaki i ciągi ze strumienia.|  
-  
-### <a name="classes"></a>Klasy  
-  
-|||  
-|-|-|  
-|[basic_iostream](../standard-library/basic-iostream-class.md)|Klasy strumienia, który można wykonać obie czynności danych wejściowych i wyjściowych.|  
-|[basic_istream](../standard-library/basic-istream-class.md)|Klasy szablonu opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia elementami typu **elementu**, znanej także jako [char_type](../standard-library/basic-ios-class.md#char_type), są którego cech znaków Określona klasa **Tr**, znanej także jako [traits_type](../standard-library/basic-ios-class.md#traits_type).|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream — programowanie](../standard-library/iostream-programming.md)   
- [Konwencje iostream](../standard-library/iostreams-conventions.md)
 
+Definiuje basic_istream szablonu klasy —, które przekazuje ekstrakcje dla iostream, i basic_iostream szablonu klasy —, które przekazuje zarówno wstawienia i ekstrakcje. Nagłówek definiuje również manipulatora pokrewne. Ten plik nagłówka jest zwykle dołączone dla Ciebie przez inny nagłówek iostream; rzadko musi zawierać go bezpośrednio.
 
+## <a name="syntax"></a>Składnia
 
+```cpp
+#include <istream>
+
+```
+
+### <a name="typedefs"></a>Typedefs
+
+|Nazwa typu|Opis|
+|-|-|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Typ `basic_iostream` specjalne na `char`.|
+|[istream](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` specjalne na `char`.|
+|[wiostream](../standard-library/istream-typedefs.md#wiostream)|Typ `basic_iostream` specjalne na **wchar**.|
+|[wistream](../standard-library/istream-typedefs.md#wistream)|Typ `basic_istream` specjalne na **wchar**.|
+
+### <a name="manipulators"></a>Manipulatory
+
+|||
+|-|-|
+|[ws](../standard-library/istream-functions.md#ws)|Pomija biały znak w strumieniu.|
+|[swap](../standard-library/istream-functions.md#istream_swap)|Zamienia dwa obiekty stream.|
+
+### <a name="operators"></a>Operatory
+
+|Operator|Opis|
+|-|-|
+|[operator>>](../standard-library/istream-operators.md#op_gt_gt)|Wyodrębnia znaki i ciągi ze strumienia.|
+
+### <a name="classes"></a>Klasy
+
+|Class|Opis|
+|-|-|
+|[basic_iostream](../standard-library/basic-iostream-class.md)|Klasy strumienia, który można wykonać obie czynności danych wejściowych i wyjściowych.|
+|[basic_istream](../standard-library/basic-istream-class.md)|Klasy szablonu opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia elementami typu **elementu**, znanej także jako [char_type](../standard-library/basic-ios-class.md#char_type), są którego cech znaków Określona klasa **Tr**, znanej także jako [traits_type](../standard-library/basic-ios-class.md#traits_type).|
+
+## <a name="see-also"></a>Zobacz także
+
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[iostream, programowanie](../standard-library/iostream-programming.md)<br/>
+[Konwencje iostream](../standard-library/iostreams-conventions.md)<br/>

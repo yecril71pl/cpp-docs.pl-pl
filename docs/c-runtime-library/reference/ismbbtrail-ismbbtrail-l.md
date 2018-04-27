@@ -1,12 +1,12 @@
 ---
-title: "_ismbbtrail —, _ismbbtrail_l — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _ismbbtrail —, _ismbbtrail_l — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbtrail
@@ -37,57 +37,62 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc0a56d64a44f9c2fc0c72ec7019cc56420c7dda
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5b062dff3ef38743af21e2dcf75ea1cfb4a8c921
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
-Określa, czy bajt końcowego bajtu znaków wielobajtowych.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _ismbbtrail(  
-   unsigned int c   
-);  
-int _ismbbtrail_l(  
-   unsigned int c,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Liczba całkowita ma zostać przetestowana.  
-  
- `locale`  
- Ustawienia regionalne do użycia.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_ismbbtrail` Zwraca wartość niezerową, jeśli liczba całkowita `c` jest drugi bajt znaków wielobajtowych. Na przykład w kodzie strony 932 tylko, prawidłowe zakresy są 0x40 do 0x7E i 0x80 do 0xFC.  
-  
-## <a name="remarks"></a>Uwagi  
- `_ismbbtrail` używa bieżące ustawienia regionalne dla zachowania zależnych od ustawień regionalnych. `_ismbbtrail_l` jest identyczny z tą różnicą, że używa ustawień regionalnych, który jest przekazywany w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
-|-------------|---------------------|---------------------|  
-|`_ismbbtrail`|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
-|`_ismbbtrail_l`|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
-  
- \* Dla manifestu stałe warunki testu.  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)   
- [_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)
+
+Określa, czy bajt końcowego bajtu znaków wielobajtowych.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _ismbbtrail(
+   unsigned int c
+);
+int _ismbbtrail_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Liczba całkowita ma zostać przetestowana.
+
+*Ustawienia regionalne*<br/>
+Ustawienia regionalne do użycia.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**_ismbbtrail —** zwraca wartość niezerową, jeśli liczba całkowita *c* jest drugi bajt znaków wielobajtowych. Na przykład w kodzie strony 932 tylko, prawidłowe zakresy są 0x40 do 0x7E i 0x80 do 0xFC.
+
+## <a name="remarks"></a>Uwagi
+
+**_ismbbtrail —** używa bieżące ustawienia regionalne dla zachowania zależnych od ustawień regionalnych. **_ismbbtrail_l —** jest identyczny z tą różnicą, że używa ustawień regionalnych, który jest przekazywany w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|-------------|---------------------|---------------------|
+|**_ismbbtrail —**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbbtrail_l —**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+
+\* Dla manifestu stałe warunki testu.
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>

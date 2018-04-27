@@ -1,12 +1,12 @@
 ---
-title: "_set_abort_behavior — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _set_abort_behavior — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_abort_behavior
@@ -37,18 +37,18 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d26f8339772854ab053c08deae3372ac567f9249
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b7ee65b603997a0be4fe9e937299eab9520c6f5b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 Określa akcję do wykonania, kiedy program jest nieprawidłowo zakończone.
 
 > [!NOTE]
-> Nie używaj `abort` funkcji, aby zamknąć aplikację Microsoft Store, z wyjątkiem w testowania i debugowania scenariuszy. Programowe lub interfejsu użytkownika sposobów Zamknij aplikację sklepu nie są dozwolone zgodnie z [zasady Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Aby uzyskać więcej informacji, zobacz [cykl życia aplikacji platformy uniwersalnej systemu Windows](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> Nie używaj [przerwać](abort.md) funkcji, aby zamknąć aplikację Microsoft Store, z wyjątkiem w testowania i debugowania scenariuszy. Programowe lub interfejsu użytkownika sposobów Zamknij aplikację sklepu nie są dozwolone zgodnie z [zasady Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Aby uzyskać więcej informacji, zobacz [cykl życia aplikacji platformy uniwersalnej systemu Windows](http://go.microsoft.com/fwlink/p/?LinkId=865934).
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,11 +61,11 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Parametry
 
-[in] _flagi_  
-Nowa wartość `abort` flagi.
+*Flagi*<br/>
+Nowa wartość [przerwać](abort.md) flagi.
 
-[in] _maska_  
-Maski dla `abort` usługi bits można ustawić flagi.
+*Maska*<br/>
+Maski dla [przerwać](abort.md) usługi bits można ustawić flagi.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -73,13 +73,13 @@ Stara wartość flagi.
 
 ## <a name="remarks"></a>Uwagi
 
-Istnieją dwa `abort` flagi: `_WRITE_ABORT_MSG` i `_CALL_REPORTFAULT`. `_WRITE_ABORT_MSG` Określa, czy wiadomość SMS pomocne jest drukowane, gdy program jest nieprawidłowo zakończone. Komunikat, że aplikacja została wywołana `abort` funkcji. Domyślnym zachowaniem jest wydrukowanie wiadomości. `_CALL_REPORTFAULT`, jeśli ustawiona, określa, że zrzutu awaryjnego Watson jest generowana i zgłaszane, gdy `abort` jest wywoływana. Domyślnie zgłoszenie zrzutu awaryjnego jest włączone w kompilacjach bez debugowania.
+Istnieją dwa [przerwać](abort.md) flagi: **_WRITE_ABORT_MSG** i **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** Określa, czy wiadomość SMS pomocne jest drukowane, gdy program jest nieprawidłowo zakończone. Komunikat, że aplikacja została wywołana [przerwać](abort.md) funkcji. Domyślnym zachowaniem jest wydrukowanie wiadomości. **_CALL_REPORTFAULT**, jeśli ustawiona, określa, że zrzutu awaryjnego Watson jest generowana i zgłaszane, gdy [przerwać](abort.md) jest wywoływana. Domyślnie zgłoszenie zrzutu awaryjnego jest włączone w kompilacjach bez debugowania.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`_set_abort_behavior`|\<stdlib.h>|
+|**_set_abort_behavior**|\<stdlib.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -106,4 +106,4 @@ Suppressing the abort message. If successful, this message will be the only outp
 
 ## <a name="see-also"></a>Zobacz także
 
-[abort](../../c-runtime-library/reference/abort.md)  
+[abort](abort.md)<br/>

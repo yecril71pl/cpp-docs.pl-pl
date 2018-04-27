@@ -1,12 +1,12 @@
 ---
-title: "_clear87 —, _clearfp — | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: _clear87 —, _clearfp — | Dokumentacja firmy Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _clearfp
@@ -38,87 +38,91 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e1afc7bd1b5921a7ac24e8df2ed0adf0a807616
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2b686fd454ac20584f1a18d4d5ee36b0fe2f964f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="clear87-clearfp"></a>_clear87, _clearfp
-Pobiera i czyści słowa stanu zmiennoprzecinkowych.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unsigned int _clear87( void );  
-unsigned int _clearfp( void );  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Usługa bits w wartości zwracanej wskazują stan zmiennoprzecinkowe przed wywołaniem do `_clear87` lub `_clearfp`. Dla pełnej definicji bitów zwrócony przez `_clear87`, zobacz float.h —. Wiele funkcji biblioteki matematyczne zmodyfikować programu word 8087/80287 stan może mieć nieprzewidywalne skutki. Wartości zwracanych z `_clear87` i `_status87` staną się bardziej niezawodny mniejszej liczby zmiennoprzecinkowe operacje są wykonywane między Stanami znane Word stan zmiennoprzecinkowy.  
-  
-## <a name="remarks"></a>Uwagi  
- `_clear87` Funkcja czyści flagi wyjątek w programie word zmiennoprzecinkowy stan, ustawia bit zajęty 0 i zwraca słowa stanu. Słowa stanu zmiennoprzecinkowej jest kombinacją słowa stanu 8087/80287 i innych warunków wykrytych przez program obsługi wyjątku 8087/80287, takie jak przepełnienie stosu zmiennoprzecinkowych i niedopełnienie.  
-  
- `_clearfp` to wersja niezależne od platformy, przenośne `_clear87` procedury. Jest on identyczny `_clear87` na platformach firmy Intel (x86) i jest również obsługiwana przez platformy ARM i x64. Zapewnienie zmiennoprzecinkowe kodu przenośnego x64 i ARM, użyj `_clearfp`. Jeśli przeznaczonych tylko x86 platform, możesz użyć dowolnej `_clear87` lub `_clearfp`.  
-  
- Te funkcje są przestarzałe podczas kompilowania za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) ponieważ środowisko uruchomieniowe języka wspólnego obsługuje tylko domyślna dokładność zmiennoprzecinkowych.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_clear87`|\<float.h>|  
-|`_clearfp`|\<float.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_clear87.c  
-// compile with: /Od  
-  
-// This program creates various floating-point   
-// problems, then uses _clear87 to report on these problems.  
-// Compile this program with Optimizations disabled (/Od).   
-// Otherwise the optimizer will remove the code associated with   
-// the unused floating-point values.  
-//  
-  
-#include <stdio.h>  
-#include <float.h>  
-  
-int main( void )  
-{  
-   double a = 1e-40, b;  
-   float x, y;  
-  
-   printf( "Status: %.4x - clear\n", _clear87()  );  
-  
-   // Store into y is inexact and underflows:  
-   y = a;  
-   printf( "Status: %.4x - inexact, underflow\n", _clear87() );  
-  
-   // y is denormal:   
-   b = y;  
-   printf( "Status: %.4x - denormal\n", _clear87() );  
-}  
-```  
-  
-```Output  
-Status: 0000 - clear  
-Status: 0003 - inexact, underflow  
-Status: 80000 - denormal  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
- [_status87, _statusfp, _statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)
+
+Pobiera i czyści słowa stanu zmiennoprzecinkowych.
+
+## <a name="syntax"></a>Składnia
+
+```C
+unsigned int _clear87( void );
+unsigned int _clearfp( void );
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Usługa bits w wartości zwracanej wskazują stan zmiennoprzecinkowe przed wywołaniem do **_clear87 —** lub **_clearfp —**. Dla pełnej definicji bitów zwrócony przez **_clear87 —**, zobacz float.h —. Wiele funkcji biblioteki matematyczne zmodyfikować programu word 8087/80287 stan może mieć nieprzewidywalne skutki. Wartości zwracanych z **_clear87 —** i **_status87 —** staną się bardziej niezawodny mniejszej liczby zmiennoprzecinkowe operacje są wykonywane między Stanami znane Word stan zmiennoprzecinkowy.
+
+## <a name="remarks"></a>Uwagi
+
+**_Clear87 —** funkcja czyści flagi wyjątek w programie word zmiennoprzecinkowy stan, ustawia bit zajęty 0 i zwraca słowa stanu. Słowa stanu zmiennoprzecinkowej jest kombinacją słowa stanu 8087/80287 i innych warunków wykrytych przez program obsługi wyjątku 8087/80287, takie jak przepełnienie stosu zmiennoprzecinkowych i niedopełnienie.
+
+**_clearfp —** jest niezależne od platformy, przenośne wersja **_clear87 —** procedury. Jest on identyczny **_clear87 —** na platformach firmy Intel (x86) i jest również obsługiwana przez platformy ARM i x64. Zapewnienie zmiennoprzecinkowe kodu przenośnego x64 i ARM, użyj **_clearfp —**. Jeśli przeznaczonych tylko x86 platform, możesz użyć dowolnej **_clear87 —** lub **_clearfp —**.
+
+Te funkcje są przestarzałe podczas kompilowania za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) ponieważ środowisko uruchomieniowe języka wspólnego obsługuje tylko domyślna dokładność zmiennoprzecinkowych.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_clear87**|\<float.h>|
+|**_clearfp —**|\<float.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_clear87.c
+// compile with: /Od
+
+// This program creates various floating-point
+// problems, then uses _clear87 to report on these problems.
+// Compile this program with Optimizations disabled (/Od).
+// Otherwise the optimizer will remove the code associated with
+// the unused floating-point values.
+//
+
+#include <stdio.h>
+#include <float.h>
+
+int main( void )
+{
+   double a = 1e-40, b;
+   float x, y;
+
+   printf( "Status: %.4x - clear\n", _clear87()  );
+
+   // Store into y is inexact and underflows:
+   y = a;
+   printf( "Status: %.4x - inexact, underflow\n", _clear87() );
+
+   // y is denormal:
+   b = y;
+   printf( "Status: %.4x - denormal\n", _clear87() );
+}
+```
+
+```Output
+Status: 0000 - clear
+Status: 0003 - inexact, underflow
+Status: 80000 - denormal
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "_fclose_nolock — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _fclose_nolock — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fclose_nolock
@@ -33,51 +33,56 @@ helpviewer_keywords:
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba6e5a0955088a7acdbef5ecb7b9c746c0b37674
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 42a01b7174fd644af0fbb60f09795f7e93f9d46b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fclosenolock"></a>_fclose_nolock
-Zamyka strumienia bez blokowania wątku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _fclose_nolock(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `stream`  
- Wskaźnik do `FILE` struktury.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `fclose` Zwraca wartość 0, jeśli strumień jest zamknięty pomyślnie. Zwraca `EOF` wystąpił błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- Tej funkcji jest wersja — blokowanie `fclose`. Jest on identyczny z tą różnicą, że nie jest chroniony przez inne wątki od zakłóceń. Może to oznaczać szybsze nie wpływa negatywnie obciążenie zablokowania inne wątki. Ta funkcja służy tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|  
-|--------------|---------------------|  
-|`_fclose_nolock`|\<stdio.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [_zamknij](../../c-runtime-library/reference/close.md)   
- [_fdopen —, _wfdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fflush](../../c-runtime-library/reference/fflush.md)   
- [fopen —, _wfopen —](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)
+
+Zamyka strumienia bez blokowania wątku.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _fclose_nolock(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Strumień*<br/>
+Wskaźnik do **pliku** struktury.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**fclose —** zwraca wartość 0, jeśli strumień jest zamknięty pomyślnie. Zwraca **EOF** wystąpił błąd.
+
+## <a name="remarks"></a>Uwagi
+
+Tej funkcji jest wersja — blokowanie **fclose —**. Jest on identyczny z tą różnicą, że nie jest chroniony przez inne wątki od zakłóceń. Może to oznaczać szybsze nie wpływa negatywnie obciążenie zablokowania inne wątki. Ta funkcja służy tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|
+|--------------|---------------------|
+|**_fclose_nolock**|\<stdio.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[_close](close.md)<br/>
+[_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
+[fflush](fflush.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[freopen, _wfreopen](freopen-wfreopen.md)<br/>

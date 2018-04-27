@@ -1,12 +1,12 @@
 ---
-title: "_flushall — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _flushall — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _flushall
@@ -33,72 +33,76 @@ helpviewer_keywords:
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25e8a0045758d22a9b519cd1ffe4cc675a7674c2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 936a0c4c18b36c490f0edfeefa651e21c017e1fc
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="flushall"></a>_flushall
-Czyści wszystkie strumienie; Czyści wszystkie bufory.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _flushall( void );  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_flushall` Zwraca liczbę otwartych strumieni (dane wejściowe i wyjściowe). Nie ma żadnych zwracany błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- Domyślnie `_flushall` funkcja zapisuje odpowiednią zawartość buforów wszystkie skojarzone z strumienie wyjściowe otwarte pliki. Wszystkie bufory skojarzone z otwartych strumienie wejściowe są usuwane z ich bieżącej zawartości. (Bufory są zazwyczaj obsługiwane przez system operacyjny, który określa czas optymalnego automatycznie zapisać danych na dysku: gdy bufor jest pełny, gdy strumień jest zamknięty lub gdy program kończy się zwykle bez zamykania strumieni.)  
-  
- Jeśli odczytu następuje po wywołaniu `_flushall`, nowe dane są odczytywane z plików wejściowych do buforów. Wszystkie strumienie pozostają otwarte po wywołaniu `_flushall`.  
-  
- Funkcja commit-to-disk biblioteki wykonawczej umożliwia upewnij się, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie do buforów systemu operacyjnego. Bez ponowne zapisywanie istniejący program, łącząc plików obiektów programu z Commode.obj można włączyć tę funkcję. W wynikowym pliku wykonywalnego, wywołań `_flushall` zapisać zawartość buforów wszystkich na dysku. Tylko `_flushall` i `fflush` dotyczy Commode.obj.  
-  
- Aby uzyskać informacje na temat funkcji commit-to-disk, zobacz [strumień we/wy](../../c-runtime-library/stream-i-o.md), [fopen —](../../c-runtime-library/reference/fopen-wfopen.md), i [_fdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|  
-|--------------|---------------------|  
-|`_flushall`|\<stdio.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_flushall.c  
-// This program uses _flushall  
-// to flush all open buffers.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int numflushed;  
-  
-   numflushed = _flushall();  
-   printf( "There were %d streams flushed\n", numflushed );  
-}  
-```  
-  
-```Output  
-There were 3 streams flushed  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [_commit —](../../c-runtime-library/reference/commit.md)   
- [fclose —, _fcloseall —](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [fflush](../../c-runtime-library/reference/fflush.md)   
- [setvbuf](../../c-runtime-library/reference/setvbuf.md)
+
+Czyści wszystkie strumienie; Czyści wszystkie bufory.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _flushall( void );
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+**_flushall —** zwraca liczbę otwartych strumieni (dane wejściowe i wyjściowe). Nie ma żadnych zwracany błąd.
+
+## <a name="remarks"></a>Uwagi
+
+Domyślnie **_flushall —** funkcja zapisuje odpowiednią zawartość buforów wszystkie skojarzone z strumienie wyjściowe otwarte pliki. Wszystkie bufory skojarzone z otwartych strumienie wejściowe są usuwane z ich bieżącej zawartości. (Bufory są zazwyczaj obsługiwane przez system operacyjny, który określa czas optymalnego automatycznie zapisać danych na dysku: gdy bufor jest pełny, gdy strumień jest zamknięty lub gdy program kończy się zwykle bez zamykania strumieni.)
+
+Jeśli odczytu następuje po wywołaniu **_flushall —**, nowe dane są odczytywane z plików wejściowych do buforów. Wszystkie strumienie pozostają otwarte po wywołaniu **_flushall —**.
+
+Funkcja commit-to-disk biblioteki wykonawczej umożliwia upewnij się, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie do buforów systemu operacyjnego. Bez ponowne zapisywanie istniejący program, łącząc plików obiektów programu z Commode.obj można włączyć tę funkcję. W wynikowym pliku wykonywalnego, wywołań **_flushall —** zapisać zawartość buforów wszystkich na dysku. Tylko **_flushall —** i [fflush —](fflush.md) dotyczy Commode.obj.
+
+Aby uzyskać informacje na temat funkcji commit-to-disk, zobacz [strumień we/wy](../../c-runtime-library/stream-i-o.md), [fopen —](fopen-wfopen.md), i [_fdopen —](fdopen-wfdopen.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|
+|--------------|---------------------|
+|**_flushall**|\<stdio.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_flushall.c
+// This program uses _flushall
+// to flush all open buffers.
+
+#include <stdio.h>
+
+int main( void )
+{
+   int numflushed;
+
+   numflushed = _flushall();
+   printf( "There were %d streams flushed\n", numflushed );
+}
+```
+
+```Output
+There were 3 streams flushed
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[_commit](commit.md)<br/>
+[fclose, _fcloseall](fclose-fcloseall.md)<br/>
+[fflush](fflush.md)<br/>
+[setvbuf](setvbuf.md)<br/>

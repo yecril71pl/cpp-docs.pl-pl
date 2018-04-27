@@ -1,13 +1,13 @@
 ---
-title: "tgamma —, tgammaf —, tgammal | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: tgamma —, tgammaf —, tgammal | Dokumentacja firmy Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - tgamma
@@ -40,82 +40,87 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7525da71d114179d40b937816f9ebe08d5a892a9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 951e5635ae1e2b8ee22af7cb26902bd309d62b40
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
-Określa funkcja gamma określonej wartości.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-double tgamma(  
-   double x  
-);  
-  
-float tgamma(  
-   float x  
-); //C++ only  
-  
-long double tgamma(  
-   long double x  
-); //C++ only  
-  
-float tgammaf(  
-   float x  
-);  
-  
-long double tgammal(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- [in] `x`  
- Wartość, aby znaleźć wartości gamma.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca gamma `x`.  
-  
- Błąd zakresu może wystąpić, jeśli wielkość `x` jest za duża albo za mała dla wartości typu danych. Błąd domeny lub zakres błąd może wystąpić, jeśli `x` < = 0.  
-  
-|Problem|Zwraca|  
-|-----------|------------|  
-|x = ±0|±INFINITY|  
-|x = ujemnej liczby całkowitej|NaN|  
-|x = - INFINITY|NaN|  
-|x = + INFINITY|+ INFINITY|  
-|x = NaN|NaN|  
-|błąd domeny|NaN|  
-|Błąd Bieguna|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|  
-|Błąd przepełnienia zakresu|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|  
-|Błąd zakresu niedopełnienie|prawidłowa wartość zaokrągloną.|  
-  
- Błędy są zgłaszane jak określono w [_matherr —](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Uwagi  
- Ponieważ C++ pozwala przeładowanie, mogą wywoływać przeciążenia tgamma —, które podejmują i zwracać zmiennoprzecinkowych i podwójnej długości. W programie C tgamma — zawsze przyjmuje i zwraca wartość o podwójnej precyzji.  
-  
- Jeśli x to liczba naturalna, funkcja zwraca silnię liczby (x-1).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Nagłówek C|Nagłówek C++|  
-|--------------|--------------|------------------|  
-|`tgamma`,                `tgammaf`,  `tgammal`|\<math.h>|\<cmath>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [lgamma, lgammaf, lgammal](../../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)
+
+Określa funkcja gamma określonej wartości.
+
+## <a name="syntax"></a>Składnia
+
+```C
+double tgamma(
+   double x
+);
+
+float tgamma(
+   float x
+); //C++ only
+
+long double tgamma(
+   long double x
+); //C++ only
+
+float tgammaf(
+   float x
+);
+
+long double tgammal(
+   long double x
+);
+
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Wartość, aby znaleźć wartości gamma.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Jeśli to się powiedzie, zwraca gamma *x*.
+
+Błąd zakresu może wystąpić, jeśli wielkość *x* jest za duża albo za mała dla wartości typu danych. Błąd domeny lub zakres błąd może wystąpić, jeśli *x* < = 0.
+
+|Problem|Zwraca|
+|-----------|------------|
+|x = ±0|±INFINITY|
+|x = ujemnej liczby całkowitej|NaN|
+|x = - INFINITY|NaN|
+|x = + INFINITY|+ INFINITY|
+|x = NaN|NaN|
+|błąd domeny|NaN|
+|Błąd Bieguna|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|
+|Błąd przepełnienia zakresu|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|
+|Błąd zakresu niedopełnienie|prawidłowa wartość zaokrągloną.|
+
+Błędy są zgłaszane jak określono w [_matherr —](matherr.md).
+
+## <a name="remarks"></a>Uwagi
+
+Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **tgamma —** który przyjmować i zwracać **float** i **długi** **podwójne** typów. W programie C **tgamma —** zawsze przyjmuje i zwraca **podwójne**.
+
+Jeśli x to liczba naturalna, funkcja zwraca silnię liczby (x-1).
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Nagłówek C|Nagłówek C++|
+|--------------|--------------|------------------|
+|**tgamma —**, **tgammaf —**, **tgammal**|\<math.h>|\<cmath >|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
+[lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

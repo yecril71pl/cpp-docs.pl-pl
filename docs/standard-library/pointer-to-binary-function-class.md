@@ -1,12 +1,12 @@
 ---
-title: "pointer_to_binary_function — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: pointer_to_binary_function — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xfunctional/std::pointer_to_binary
@@ -16,24 +16,25 @@ helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c449d66dfe1889e403cd288361bb5cc20e7f884d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3e43c5f906aa68480120df504b95152bbd346348
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function — Klasa
-Konwertuje wskaźnika funkcji binarne dostosowywalne funkcja binarnej.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```
+
+Konwertuje wskaźnika funkcji binarne dostosowywalne funkcja binarnej.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
 template <class Arg1, class Arg2, class Result>
 class pointer_to_binary_function
     : public binary_function <Arg1, Arg2, Result>
@@ -43,34 +44,34 @@ public:
         Result(*pfunc)(Arg1, Arg2));
     Result operator()(Arg1 left, Arg2 right) const;
 };
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `pfunc`  
- Funkcja binarnej ma zostać przekonwertowany.  
-  
- `left`  
- Po lewej stronie obiekt, który  *\*pfunc* jest wywoływana na.  
-  
- `right`  
- Prawo obiekt, który  *\*pfunc* jest wywoływana na.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Klasy szablonów przechowuje kopię **pfunc**. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie (\* **pfunc**) (_ *lewej*, \_ *prawej*).  
-  
-## <a name="remarks"></a>Uwagi  
- Wskaźnik funkcji binarny jest obiektem funkcji i mogą być przekazywane do dowolnego algorytmu standardowa biblioteka C++, która oczekuje binarne funkcji jako parametr, ale nie jest to dostosowywalne. Aby używać go z karty, takie jak powiązania wartości do niego lub użyciu negator, musi być zasilane zagnieżdżone typy **first_argument_type**, **second_argument_type**, i **result_type**  który umożliwiają takie dostosowanie. Konwersja poprzez `pointer_to_binary_function` umożliwia adapterów funkcja do wykonania wskaźniki funkcji binarnego.  
-  
-## <a name="example"></a>Przykład  
- Konstruktor obiektu `pointer_to_binary_function` jest rzadko używana bezpośrednio. Zobacz opis funkcji pomocnika [ptr_fun —](../standard-library/functional-functions.md#ptr_fun) przykład sposobu deklarowanie i użycie `pointer_to_binary_function` predykatu karty.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<funkcjonalności >  
-  
- **Namespace:** Standard  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+```
 
+### <a name="parameters"></a>Parametry
 
+`pfunc` Funkcja binarnej ma zostać przekonwertowany.
 
+`left` Po lewej stronie obiekt, który  *\*pfunc* jest wywoływana na.
+
+`right` Prawo obiekt, który  *\*pfunc* jest wywoływana na.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Klasy szablonów przechowuje kopię **pfunc**. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie (\* **pfunc**) (_ *lewej*, \_ *prawej*).
+
+## <a name="remarks"></a>Uwagi
+
+Wskaźnik funkcji binarny jest obiektem funkcji i mogą być przekazywane do dowolnego algorytmu standardowa biblioteka C++, która oczekuje binarne funkcji jako parametr, ale nie jest to dostosowywalne. Aby używać go z karty, takie jak powiązania wartości do niego lub użyciu negator, musi być zasilane zagnieżdżone typy **first_argument_type**, **second_argument_type**, i **result_type**  który umożliwiają takie dostosowanie. Konwersja poprzez `pointer_to_binary_function` umożliwia adapterów funkcja do wykonania wskaźniki funkcji binarnego.
+
+## <a name="example"></a>Przykład
+
+Konstruktor obiektu `pointer_to_binary_function` jest rzadko używana bezpośrednio. Zobacz opis funkcji pomocnika [ptr_fun —](../standard-library/functional-functions.md#ptr_fun) przykład sposobu deklarowanie i użycie `pointer_to_binary_function` predykatu karty.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** \<funkcjonalności >
+
+**Namespace:** Standard
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

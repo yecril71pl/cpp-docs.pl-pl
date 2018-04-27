@@ -1,12 +1,12 @@
 ---
-title: "__security_init_cookie — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: __security_init_cookie — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - __security_init_cookie
@@ -33,44 +33,48 @@ helpviewer_keywords:
 - security_init_cookie function
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c51e02a36df9a54d2f301eafc24a0181e97153f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c905004702fe7a767ea7d91285a66d6b91465fd7
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
-Inicjuje plik cookie zabezpieczeń globalnych.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __security_init_cookie(void);  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Plik cookie zabezpieczeń globalnych służy do ochrony przepełnienie buforu w kodzie skompilowanym z [/GS (Sprawdzanie zabezpieczeń bufora)](../../build/reference/gs-buffer-security-check.md) w kodu korzystającego z obsługi wyjątków. Przy wejściu do funkcji chronionych przekroczenie plik cookie jest umieszczany na stosie, a po zakończeniu wartości na stosie jest porównywana z globalnego pliku cookie. Różnicę między nimi wskazuje, czy nastąpiło przepełnienie buforu oraz powoduje natychmiastowe przerwanie działania programu.  
-  
- Zwykle `__security_init_cookie` jest wywoływana przez CRT podczas jego inicjowania. Jeśli obejścia Inicjalizacja CRT — na przykład, jeśli używasz [/Entry](../../build/reference/entry-entry-point-symbol.md) do określenia punktu wejścia — należy wywołać `__security_init_cookie` samodzielnie. Jeśli `__security_init_cookie` nie jest wywoływany, jest globalnym plik cookie zabezpieczeń ma ustawioną wartość domyślną i zostanie naruszony ochrony przepełnienie buforu. Osoba atakująca może wykorzystać tę wartość pliku cookie domyślną pokonanie kontroli przepełnienie buforu, dlatego zaleca się zawsze telefoniczne skontaktowanie się z `__security_init_cookie` podczas definiowania punktu wejścia.  
-  
- Wywołanie `__security_init_cookie` musi być dokonana przed dowolnego chronionego przekroczenie funkcja została wprowadzona; w przeciwnym razie zostanie wykryty przepełnienie buforu fałszywe. Aby uzyskać więcej informacji, zobacz [po R6035 błąd środowiska uruchomieniowego C](../../error-messages/tool-errors/c-runtime-error-r6035.md).  
-  
-## <a name="example"></a>Przykład  
- Przykłady w [po R6035 błąd środowiska uruchomieniowego C](../../error-messages/tool-errors/c-runtime-error-r6035.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`__security_init_cookie`|\<process.h >|  
-  
- `__security_init_cookie` to rozszerzenie Microsoft standardowa biblioteka języka C w czasie wykonywania. Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrole zabezpieczeń kompilatora szczegółowo](http://go.microsoft.com/fwlink/p/?linkid=7260)
+
+Inicjuje plik cookie zabezpieczeń globalnych.
+
+## <a name="syntax"></a>Składnia
+
+```C
+void __security_init_cookie(void);
+```
+
+## <a name="remarks"></a>Uwagi
+
+Plik cookie zabezpieczeń globalnych służy do ochrony przepełnienie buforu w kodzie skompilowanym z [/GS (Sprawdzanie zabezpieczeń bufora)](../../build/reference/gs-buffer-security-check.md) w kodu korzystającego z obsługi wyjątków. Przy wejściu do funkcji chronionych przekroczenie plik cookie jest umieszczany na stosie, a po zakończeniu wartości na stosie jest porównywana z globalnego pliku cookie. Różnicę między nimi wskazuje, czy nastąpiło przepełnienie buforu oraz powoduje natychmiastowe przerwanie działania programu.
+
+Zwykle **__security_init_cookie —** jest wywoływana przez CRT podczas jego inicjowania. Jeśli obejścia Inicjalizacja CRT — na przykład, jeśli używasz [/Entry](../../build/reference/entry-entry-point-symbol.md) do określenia punktu wejścia — należy wywołać **__security_init_cookie —** samodzielnie. Jeśli **__security_init_cookie —** nie jest wywoływany, jest globalnym plik cookie zabezpieczeń ma ustawioną wartość domyślną i zostanie naruszony ochrony przepełnienie buforu. Osoba atakująca może wykorzystać tę wartość pliku cookie domyślną pokonanie kontroli przepełnienie buforu, dlatego zaleca się zawsze telefoniczne skontaktowanie się z **__security_init_cookie —** podczas definiowania punktu wejścia.
+
+Wywołanie **__security_init_cookie —** musi być dokonana przed dowolnego chronionego przekroczenie funkcja została wprowadzona; w przeciwnym razie zostanie wykryty przepełnienie buforu fałszywe. Aby uzyskać więcej informacji, zobacz [po R6035 błąd środowiska uruchomieniowego C](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+
+## <a name="example"></a>Przykład
+
+Przykłady w [po R6035 błąd środowiska uruchomieniowego C](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**__security_init_cookie**|\<process.h >|
+
+**__security_init_cookie —** to rozszerzenie Microsoft standardowa biblioteka języka C w czasie wykonywania. Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Kontrole zabezpieczeń kompilatora szczegółowo](http://go.microsoft.com/fwlink/p/?linkid=7260)<br/>

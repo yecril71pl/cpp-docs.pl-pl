@@ -1,12 +1,12 @@
 ---
-title: "_fgetc_nolock —, _fgetwc_nolock — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _fgetc_nolock —, _fgetwc_nolock — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fgetc_nolock
@@ -44,108 +44,113 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475693126cbc33b16710bf260d342c5c5f079540
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fcd14bf2645d021dacdc922667b7df27b6fb3624
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
-Odczytuje znak ze strumienia bez blokowania wątku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _fgetc_nolock(   
-   FILE *stream   
-);  
-wint_t _fgetwc_nolock(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `stream`  
- Wskaźnik do `FILE` struktury.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zobacz[fgetc —, fgetwc —](../../c-runtime-library/reference/fgetc-fgetwc.md).  
-  
-## <a name="remarks"></a>Uwagi  
- `_fgetc_nolock` i `_fgetwc_nolock` są takie same jak `fgetc` i `fgetwc`odpowiednio z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_fgettc_nolock`|`_fgetc_nolock`|`_fgetc_nolock`|`_fgetwc_nolock`|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|  
-|--------------|---------------------|  
-|`_fgetc_nolock`|\<stdio.h>|  
-|`_fgetwc_nolock`|\<stdio.h > lub \<wchar.h >|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_fgetc_nolock.c  
-// This program uses getc to read the first  
-// 80 input characters (or until the end of input)  
-// and place them into a string named buffer.  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char buffer[81];  
-   int  i, ch;  
-  
-   // Open file to read line from:   
-   if( fopen_s( &stream, "crt_fgetc_nolock.txt", "r" ) != 0 )  
-      exit( 0 );  
-  
-   // Read in first 80 characters and place them in "buffer":  
-   ch = fgetc( stream );  
-   for( i=0; (i < 80 ) && ( feof( stream ) == 0 ); i++ )  
-   {  
-      buffer[i] = (char)ch;  
-      ch = _fgetc_nolock( stream );  
-   }  
-  
-   // Add null to end string   
-   buffer[i] = '\0';  
-   printf( "%s\n", buffer );  
-   fclose( stream );  
-}  
-```  
-  
-## <a name="input-crtfgetcnolocktxt"></a>Dane wejściowe: crt_fgetc_nolock.txt  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-### <a name="output"></a>Dane wyjściowe  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [fputc —, fputwc —](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+Odczytuje znak ze strumienia bez blokowania wątku.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _fgetc_nolock(
+   FILE *stream
+);
+wint_t _fgetwc_nolock(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Strumień*<br/>
+Wskaźnik do **pliku** struktury.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zobacz[fgetc —, fgetwc —](fgetc-fgetwc.md).
+
+## <a name="remarks"></a>Uwagi
+
+**_fgetc_nolock —** i **_fgetwc_nolock —** są takie same jak **fgetc —** i **fgetwc —**odpowiednio z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_fgettc_nolock —**|**_fgetc_nolock**|**_fgetc_nolock**|**_fgetwc_nolock**|
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|
+|--------------|---------------------|
+|**_fgetc_nolock**|\<stdio.h>|
+|**_fgetwc_nolock**|\<stdio.h > lub \<wchar.h >|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_fgetc_nolock.c
+// This program uses getc to read the first
+// 80 input characters (or until the end of input)
+// and place them into a string named buffer.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   FILE *stream;
+   char buffer[81];
+   int  i, ch;
+
+   // Open file to read line from:
+   if( fopen_s( &stream, "crt_fgetc_nolock.txt", "r" ) != 0 )
+      exit( 0 );
+
+   // Read in first 80 characters and place them in "buffer":
+   ch = fgetc( stream );
+   for( i=0; (i < 80 ) && ( feof( stream ) == 0 ); i++ )
+   {
+      buffer[i] = (char)ch;
+      ch = _fgetc_nolock( stream );
+   }
+
+   // Add null to end string
+   buffer[i] = '\0';
+   printf( "%s\n", buffer );
+   fclose( stream );
+}
+```
+
+## <a name="input-crtfgetcnolocktxt"></a>Dane wejściowe: crt_fgetc_nolock.txt
+
+```Input
+Line one.
+Line two.
+```
+
+### <a name="output"></a>Dane wyjściowe
+
+```Output
+Line one.
+Line two.
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>

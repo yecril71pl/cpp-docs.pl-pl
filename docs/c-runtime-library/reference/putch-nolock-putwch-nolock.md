@@ -1,12 +1,12 @@
 ---
-title: "_putch_nolock —, _putwch_nolock — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _putch_nolock —, _putwch_nolock — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putwch_nolock
@@ -42,65 +42,70 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13db2622b7dd9829b744a0164fbb0a025f4013ae
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24d0f847e272c31edda3dea0ea0b0369148c2f73
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putchnolock-putwchnolock"></a>_putch_nolock, _putwch_nolock
-Zapisuje znak do konsoli bez blokowania wątku.  
-  
+
+Zapisuje znak do konsoli bez blokowania wątku.
+
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-      int _putch_nolock(  
-int c  
-);  
-wint_t _putwch_nolock(  
-wchar_t c  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *c*  
- Znak jako dane wyjściowe.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca *c* w przypadku powodzenia. Jeśli **_putch_nolock —** nie powiedzie się, zwraca **EOF**; Jeśli **_putwch_nolock —** nie powiedzie się, zwraca **weof —**.  
-  
-## <a name="remarks"></a>Uwagi  
- **_putch_nolock —** i **_putwch_nolock —** są takie same jak **_putch —** i **_putwch —**odpowiednio z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|**_puttch_nolock**|**_putch_nolock**|**_putch_nolock**|**_putwch_nolock**|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|**_putch_nolock**|\<conio.h>|  
-|**_putwch_nolock**|\<conio.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Biblioteki  
- Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)   
- [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)
+> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _putch_nolock(
+int c
+);
+wint_t _putwch_nolock(
+wchar_t c
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Znak jako dane wyjściowe.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca *c* w przypadku powodzenia. Jeśli **_putch_nolock —** nie powiedzie się, zwraca **EOF**; Jeśli **_putwch_nolock —** nie powiedzie się, zwraca **weof —**.
+
+## <a name="remarks"></a>Uwagi
+
+**_putch_nolock —** i **_putwch_nolock —** są takie same jak **_putch —** i **_putwch —**odpowiednio z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_puttch_nolock**|**_putch_nolock**|**_putch_nolock**|**_putwch_nolock**|
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_putch_nolock**|\<conio.h>|
+|**_putwch_nolock**|\<conio.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Biblioteki
+
+Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
+[_getch, _getwch](getch-getwch.md)<br/>

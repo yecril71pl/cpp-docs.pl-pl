@@ -1,6 +1,6 @@
 ---
-title: "_beginthread —, _beginthreadex — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _beginthread —, _beginthreadex — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 02/27/2018
 ms.technology:
 - cpp-standard-libraries
@@ -40,11 +40,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7b575883bfad702d32a161a985a76494797747
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: f5a85367a59ca16b9447c8fd60aa61932bf9797a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -84,7 +84,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 ### <a name="parameters"></a>Parametry
 
 *start_address*<br/>
-Początkowy adres procedury, która rozpoczyna się wykonanie nowego wątku. Dla `_beginthread`, jest Konwencja wywoływania [__cdecl](../../cpp/cdecl.md) (dla natywnego kodu) lub [__clrcall](../../cpp/clrcall.md) (dla kodu zarządzanego); w przypadku `_beginthreadex`, jest ona [__stdcall](../../cpp/stdcall.md)(dla natywnego kodu) lub [__clrcall](../../cpp/clrcall.md) (dla zarządzanego kodu).
+Początkowy adres procedury, która rozpoczyna się wykonanie nowego wątku. Dla **_beginthread —**, jest Konwencja wywoływania [__cdecl](../../cpp/cdecl.md) (dla natywnego kodu) lub [__clrcall](../../cpp/clrcall.md) (dla kodu zarządzanego); w przypadku **_beginthreadex —**, jest ona [__stdcall](../../cpp/stdcall.md) (dla natywnego kodu) lub [__clrcall](../../cpp/clrcall.md) (dla zarządzanego kodu).
 
 *stack_size*<br/>
 Rozmiar stosu dla nowego wątku lub 0.
@@ -96,60 +96,60 @@ Lista argumentów do przekazania do nowego wątku lub wartość NULL.
 Wskaźnik do [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struktury, która określa, czy zwrócone dojście mogą być dziedziczone przez procesy podrzędne. Jeśli *zabezpieczeń* ma wartość NULL, dojście nie może być dziedziczona. Musi to być wartość NULL dla systemu Windows 95 aplikacji.
 
 *initflag*<br/>
-Flagi określające początkowy stan nowego wątku. Ustaw *initflag* do `0` natychmiast, uruchomić lub `CREATE_SUSPENDED` można utworzyć wątku, w stanie wstrzymania; użyj [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) do wykonania wątku. Ustaw *initflag* do `STACK_SIZE_PARAM_IS_A_RESERVATION` flagi używania *stack_size* jako początkowa zarezerwowany rozmiar stosu w bajtach; Jeśli ta flaga nie zostanie określony, *stack_size* określa przydzielony rozmiar.
+Flagi określające początkowy stan nowego wątku. Ustaw *initflag* na 0, aby natychmiast uruchomić lub do **CREATE_SUSPENDED** można utworzyć wątku, w stanie wstrzymania; użyj [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) do wykonania wątku. Ustaw *initflag* do **STACK_SIZE_PARAM_IS_A_RESERVATION** flagi używania *stack_size* jako pierwszy zarezerwować rozmiar stosu w bajtach; Jeśli ta flaga jest nie jest określony, *stack_size* Określa rozmiar zatwierdzenia.
 
 *thrdaddr*<br/>
 Wskazuje zmienna 32-bitowego, która odbiera identyfikator wątku. Jeśli ma wartość NULL, nie jest używane.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia, każda z tych funkcji zwraca dojścia do nowo utworzonej wątku; jednak, czy nowo utworzony wątku istnieje zbyt szybko `_beginthread` nie mogą zwracać prawidłowy uchwyt. (Zobacz Omówienie w sekcji uwag.) W przypadku wystąpienia błędu `_beginthread` zwraca L-1 i `errno` ma ustawioną wartość `EAGAIN` jeżeli istnieją zbyt wiele wątków do `EINVAL` argument jest nieprawidłowy lub rozmiar stosu jest niepoprawny, czy do `EACCES` Jeśli za mało zasobów (np. pamięci) . W przypadku wystąpienia błędu `_beginthreadex` zwraca wartość 0, a `errno` i `_doserrno` są ustawione.
+W przypadku powodzenia, każda z tych funkcji zwraca dojścia do nowo utworzonej wątku; jednak, czy nowo utworzony wątku istnieje zbyt szybko **_beginthread —** nie mogą zwracać prawidłowy uchwyt. (Zobacz Omówienie w sekcji uwag.) W przypadku wystąpienia błędu **_beginthread —** zwraca L-1 i **errno** ma ustawioną wartość **eagain —** jeżeli istnieją zbyt wiele wątków do **einval —** Jeśli wartością argumentu jest nieprawidłowy lub rozmiar stosu jest nieprawidłowy, lub do **eacces —** Jeśli za mało zasobów (np. pamięci). W przypadku wystąpienia błędu **_beginthreadex —** zwraca wartość 0, a **errno** i **_doserrno —** są ustawione.
 
-Jeśli *start_address* ma wartość NULL, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwróć -1.
+Jeśli *start_address* ma wartość NULL, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1.
 
 Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Aby uzyskać więcej informacji na temat `uintptr_t`, zobacz [standardowych typów](../../c-runtime-library/standard-types.md).
+Aby uzyskać więcej informacji na temat **uintptr_t —**, zobacz [standardowych typów](../../c-runtime-library/standard-types.md).
 
 ## <a name="remarks"></a>Uwagi
 
-`_beginthread` Funkcja tworzy wątku, który rozpoczyna się wykonanie procedury na *start_address*. Procedury w *start_address* należy użyć `__cdecl` (dla natywnego kodu) lub `__clrcall` (dla kodu zarządzanego) konwencji wywoływania i powinna mieć Brak wartości zwracanej. Po powrocie z tej procedury wątku zostanie automatycznie zakończony. Aby uzyskać więcej informacji na temat wątków, zobacz [Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
+**_Beginthread —** funkcja tworzy wątku, który rozpoczyna się wykonanie procedury na *start_address*. Procedury w *start_address* należy użyć **__cdecl** (dla natywnego kodu) lub **__clrcall** (dla kodu zarządzanego) konwencji wywoływania i powinna mieć Brak wartości zwracanej. Po powrocie z tej procedury wątku zostanie automatycznie zakończony. Aby uzyskać więcej informacji na temat wątków, zobacz [Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-`_beginthreadex` podobny Win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) API więcej ściśle niż `_beginthread` jest. `_beginthreadex` różni się od `_beginthread` w następujący sposób:
+**_beginthreadex —** podobny Win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) API więcej ściśle niż **_beginthread —** jest. **_beginthreadex —** różni się od **_beginthread —** w następujący sposób:
 
-- `_beginthreadex` ma trzy dodatkowe parametry: *initflag*, *zabezpieczeń*, i `threadaddr`. Nowego wątku w stanie wstrzymanym, z określonym zabezpieczeń, można tworzyć i jest możliwy za pomocą *thrdaddr*, który jest identyfikatorem wątku.
+- **_beginthreadex —** ma trzy dodatkowe parametry: *initflag*, *zabezpieczeń*, i **threadaddr**. Nowego wątku w stanie wstrzymanym, z określonym zabezpieczeń, można tworzyć i jest możliwy za pomocą *thrdaddr*, który jest identyfikatorem wątku.
 
-- Procedury w *start_address* przekazywany do `_beginthreadex` należy użyć `__stdcall` (dla natywnego kodu) lub `__clrcall` (dla kodu zarządzanego) konwencji wywoływania i musi zwracać kod zakończenia wątku.
+- Procedury w *start_address* przekazywany do **_beginthreadex —** należy użyć **__stdcall** (dla natywnego kodu) lub **__clrcall** (dla kod zarządzany) konwencji wywoływania i musi zwracać kod zakończenia wątku.
 
-- `_beginthreadex` Zwraca wartość 0, niepowodzenia zamiast L-1.
+- **_beginthreadex —** zwraca 0 w przypadku awarii, a nie L-1.
 
-- Wątek, który jest tworzony przy użyciu `_beginthreadex` zostało zakończone przez wywołanie do [_endthreadex —](../../c-runtime-library/reference/endthread-endthreadex.md).
+- Wątek, który jest tworzony przy użyciu **_beginthreadex —** zostało zakończone przez wywołanie do [_endthreadex —](endthread-endthreadex.md).
 
-`_beginthreadex` Funkcja zapewnia większą kontrolę nad procesem tworzenia wątku niż `_beginthread` jest. `_endthreadex` Funkcja jest również bardziej elastyczne. Na przykład z `_beginthreadex`, użyj informacji dotyczących zabezpieczeń, ustaw początkowy stan wątku (uruchomiona lub wstrzymana) i Pobierz identyfikator wątku nowo utworzony wątku. Można również użyć dojście wątku, który jest zwracany przez `_beginthreadex` przy synchronizacji interfejsów API, które nie `_beginthread`.
+**_Beginthreadex —** funkcja zapewnia większą kontrolę nad procesem tworzenia wątku niż **_beginthread —** jest. **_Endthreadex —** funkcja jest również bardziej elastyczne. Na przykład z **_beginthreadex —**, użyj informacji dotyczących zabezpieczeń, ustaw początkowy stan wątku (uruchomiona lub wstrzymana) i Pobierz identyfikator wątku nowo utworzony wątku. Można również użyć dojście wątku, który jest zwracany przez **_beginthreadex —** przy synchronizacji interfejsów API, które nie **_beginthread —**.
 
-Jest bezpieczniejsze w użyciu `_beginthreadex` niż `_beginthread`. Jeśli wątek, który jest generowany przez `_beginthread` kończy się szybko, dojście, która jest zwracana do wywołującego `_beginthread` może być nieprawidłowy lub wskaż inny wątek. Jednak zwracany przez dojście `_beginthreadex` zamknąć przez obiekt wywołujący `_beginthreadex`, więc jego gwarantuje to prawidłowe, jeśli `_beginthreadex` nie zwrócił błąd.
+Jest bezpieczniejsze w użyciu **_beginthreadex —** niż **_beginthread —**. Jeśli wątek, który jest generowany przez **_beginthread —** kończy się szybko, dojście, która jest zwracana do wywołującego **_beginthread —** może być nieprawidłowy lub wskaż inny wątek. Jednak zwracany przez dojście **_beginthreadex —** zamknąć przez obiekt wywołujący **_beginthreadex —**, więc jego gwarantuje to prawidłowe, jeśli **_beginthreadex —** nie zwrócił błąd.
 
-Możesz wywołać [_endthread —](../../c-runtime-library/reference/endthread-endthreadex.md) lub `_endthreadex` jawnie na zakończenie wątku; jednak `_endthread` lub `_endthreadex` automatycznie jest wywoływane, gdy wątek zwraca z procedury, która została przekazana jako parametr. Przerywanie wątków w wyniku wywołania `_endthread` lub `_endthreadex` pomaga zapewnić poprawne odzyskiwania zasobów przydzielonych dla wątku.
+Możesz wywołać [_endthread —](endthread-endthreadex.md) lub **_endthreadex —** jawnie na zakończenie wątku; jednak **_endthread —** lub **_endthreadex —** nosi nazwę automatycznie po wątek zwraca z procedury, która została przekazana jako parametr. Przerywanie wątków w wyniku wywołania **_endthread —** lub **_endthreadex —** pomaga zapewnić poprawne odzyskiwania zasobów przydzielonych dla wątku.
 
-`_endthread` konieczne jest automatycznie zamykany dojście wątku `_endthreadex` nie. W związku z tym, kiedy należy używać `_beginthread` i `_endthread`, nie zamykaj jawnie dojście wątku przez wywołanie Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) interfejsu API. To zachowanie różni się od środowiska Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) interfejsu API.
+**_endthread —** automatycznie zamykany dojście wątku, podczas gdy **_endthreadex —** nie. W związku z tym, kiedy należy używać **_beginthread —** i **_endthread —**, nie zamykaj jawnie dojście wątku przez wywołanie Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) interfejsu API. To zachowanie różni się od środowiska Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) interfejsu API.
 
-> [!NOTE]  
-> Dla pliku wykonywalnego połączone z Libcmt.lib, nie należy wywoływać Win32 `ExitThread` interfejsu API, aby nie uniemożliwiają odzyskiwanie przez system środowiska wykonawczego przydzielone zasoby. `_endthread` i `_endthreadex` odzyskać wątku przydzielone zasoby, a następnie wywołać `ExitThread`.
+> [!NOTE]
+> Dla pliku wykonywalnego połączone z Libcmt.lib, nie należy wywoływać Win32 **ExitThread** interfejsu API, aby nie uniemożliwiają odzyskiwanie przez system środowiska wykonawczego przydzielone zasoby. **_endthread —** i **_endthreadex —** odzyskać wątku przydzielone zasoby, a następnie wywołać **ExitThread**.
 
-Alokacja stosu obsługi systemu operacyjnego podczas albo `_beginthread` lub `_beginthreadex` nazywa się; nie trzeba przekazać adres stosu wątku do jednej z tych funkcji. Ponadto *stack_size* argument może być 0, w którym w przypadku systemu operacyjnego korzysta z tej samej wartości jako stosu, który jest określony wątku głównego.
+Alokacja stosu obsługi systemu operacyjnego podczas albo **_beginthread —** lub **_beginthreadex —** nazywa się; nie trzeba przekazać adres stosu wątku do jednej z tych funkcji. Ponadto *stack_size* argument może być 0, w którym w przypadku systemu operacyjnego korzysta z tej samej wartości jako stosu, który jest określony wątku głównego.
 
-*lista_argumentów* parametr do przekazania do nowo utworzonej wątku. Zazwyczaj jest to adres elementu danych, takiego jak ciąg znaków. *lista_argumentów* może mieć wartość NULL, jeśli nie jest wymagana, ale `_beginthread` i `_beginthreadex` należy podać niektóre wartości do przekazania do nowego wątku. Wszystkie wątki są zakończone, jeśli żadnego wątku wywołania `abort`, `exit`, `_exit`, lub `ExitProcess`.
+*lista_argumentów* parametr do przekazania do nowo utworzonej wątku. Zazwyczaj jest to adres elementu danych, takiego jak ciąg znaków. *lista_argumentów* może mieć wartość NULL, jeśli nie jest wymagana, ale **_beginthread —** i **_beginthreadex —** należy podać niektóre wartości do przekazania do nowego wątku. Wszystkie wątki są zakończone, jeśli żadnego wątku wywołania [przerwać](abort.md), **zakończyć**, **_exit —**, lub **ExitProcess**.
 
-Ustawienia regionalne nowego wątku został zainicjowany przy użyciu na proces globalne bieżących ustawień regionalnych informacji. Jeśli ustawienia regionalne dla każdego wątku jest włączona przez wywołanie do [_configthreadlocale —](../../c-runtime-library/reference/configthreadlocale.md) (globalnie lub dla nowych wątków), Wątek można zmieniać tylko jego ustawienia regionalne niezależnie od innych wątków wywołując `setlocale` lub `_wsetlocale`. Wątków, które nie mają Ustaw flagę ustawienia regionalne dla każdego wątku mogą wpływać na informacje o ustawień regionalnych w innych wątków, które nie mają także ustawić flagę ustawienia regionalne dla każdego wątku, a także wszystkie wątki nowo utworzona. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Ustawienia regionalne nowego wątku został zainicjowany przy użyciu na proces globalne bieżących ustawień regionalnych informacji. Jeśli ustawienia regionalne dla każdego wątku jest włączona przez wywołanie do [_configthreadlocale —](configthreadlocale.md) (globalnie lub dla nowych wątków), Wątek można zmieniać tylko jego ustawienia regionalne niezależnie od innych wątków wywołując **setlocale** lub **_wsetlocale —**. Wątków, które nie mają Ustaw flagę ustawienia regionalne dla każdego wątku mogą wpływać na informacje o ustawień regionalnych w innych wątków, które nie mają także ustawić flagę ustawienia regionalne dla każdego wątku, a także wszystkie wątki nowo utworzona. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Kod mieszany i czystego `_beginthread` i `_beginthreadex` mieć dwa przeciążenia. Wyższy wskaźnik funkcji macierzystej Konwencja wywoływania i innych przyjmuje `__clrcall` wskaźnik funkcji. Pierwszy przeciążenia nie jest bezpieczne dla domeny aplikacji i nigdy nie będzie można. Podczas pisania kodu mieszanych lub czystej należy się upewnić, że nowego wątku wprowadza domeny właściwej aplikacji przed uzyskuje dostęp do zasobów zarządzanych. Można to zrobić, na przykład za pomocą [call_in_appdomain — funkcja](../../dotnet/call-in-appdomain-function.md). Drugi przeciążenie to aplikacja bezpieczne domeny; nowo utworzony wątku zawsze kończy się do domeny aplikacji obiektu wywołującego z `_beginthread` lub `_beginthreadex`.
+Kod mieszany i czystego **_beginthread —** i **_beginthreadex —** mieć dwa przeciążenia. Wyższy wskaźnik funkcji macierzystej Konwencja wywoływania i innych przyjmuje **__clrcall** wskaźnik funkcji. Pierwszy przeciążenia nie jest bezpieczne dla domeny aplikacji i nigdy nie będzie można. Podczas pisania kodu mieszanych lub czystej należy się upewnić, że nowego wątku wprowadza domeny właściwej aplikacji przed uzyskuje dostęp do zasobów zarządzanych. Można to zrobić, na przykład za pomocą [call_in_appdomain — funkcja](../../dotnet/call-in-appdomain-function.md). Drugi przeciążenie to aplikacja bezpieczne domeny; nowo utworzony wątku zawsze kończy się do domeny aplikacji obiektu wywołującego z **_beginthread —** lub **_beginthreadex —**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`_beginthread`|\<process.h >|
-|`_beginthreadex`|\<process.h >|
+|**_beginthread**|\<process.h >|
+|**_beginthreadex**|\<process.h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -157,11 +157,11 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtim
 
 Wielowątkowe wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.
 
-Aby użyć `_beginthread` lub `_beginthreadex`, aplikacja musi łączyć się z jednym z wielowątkowe biblioteki wykonawcze języka C.
+Aby użyć **_beginthread —** lub **_beginthreadex —**, aplikacja musi łączyć się z jednym z wielowątkowe biblioteki wykonawcze języka C.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie użyto `_beginthread` i `_endthread`.
+W poniższym przykładzie użyto **_beginthread —** i **_endthread —**.
 
 ```C
 // crt_BEGTHRD.C
@@ -181,7 +181,7 @@ void CheckKey( void * );
 // GetGlyph returns a printable ASCII character value
 #define GetGlyph( val ) ((char)((val + 32) % 93 + 33))
 
-BOOL repeat = TRUE;                 // Global repeat flag 
+BOOL repeat = TRUE;                 // Global repeat flag
 HANDLE hStdOut;                     // Handle for console window
 CONSOLE_SCREEN_BUFFER_INFO csbi;    // Console information structure
 
@@ -197,7 +197,7 @@ int main()
     // Launch CheckKey thread to check for terminating keystroke.
     _beginthread( CheckKey, 0, NULL );
 
-    // Loop until CheckKey terminates program or 1000 threads created. 
+    // Loop until CheckKey terminates program or 1000 threads created.
     while( repeat && param < 1000 )
     {
         // launch another character thread.
@@ -235,9 +235,9 @@ void Bounce( void * parg )
 
     // Generate location, letter and color attribute from thread argument.
     srand( _threadid );
-    oldcoord.X = region.Left = region.Right = 
+    oldcoord.X = region.Left = region.Right =
         GetRandom(csbi.srWindow.Left, csbi.srWindow.Right - 1);
-    oldcoord.Y = region.Top = region.Bottom = 
+    oldcoord.Y = region.Top = region.Bottom =
         GetRandom(csbi.srWindow.Top, csbi.srWindow.Bottom - 1);
     ci.Char.AsciiChar = GetGlyph(*((int *)parg));
     ci.Attributes = GetRandom(1, 15);
@@ -281,7 +281,7 @@ Naciśnij dowolny klawisz, aby zakończyć przykładowej aplikacji.
 
 ## <a name="example"></a>Przykład
 
-Następujący przykładowy kod pokazuje, jak używasz dojście wątku, który jest zwracany przez `_beginthreadex` przy synchronizacji interfejsu API [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx). Wątku głównego czeka na zakończenie przed kontynuowaniem drugiego wątku. Podczas drugiego wątku wywołuje `_endthreadex`, powoduje jego obiekt wątku przejść do stanu sygnałowego. Dzięki temu podstawowy wątku z działającym systemem. Nie można tego dokonać z `_beginthread` i `_endthread`, ponieważ `_endthread` wywołania `CloseHandle`, który niszczy obiekt wątku przed można ustawić stan sygnałowego.
+Następujący przykładowy kod pokazuje, jak używasz dojście wątku, który jest zwracany przez **_beginthreadex —** przy synchronizacji interfejsu API [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx). Wątku głównego czeka na zakończenie przed kontynuowaniem drugiego wątku. Podczas drugiego wątku wywołuje **_endthreadex —**, powoduje jego obiekt wątku przejść do stanu sygnałowego. Dzięki temu podstawowy wątku z działającym systemem. Nie można tego dokonać z **_beginthread —** i **_endthread —**, ponieważ **_endthread —** wywołania **CloseHandle**, który niszczy wątku obiekt przed można ustawić stan sygnałowego.
 
 ```cpp
 // crt_begthrdex.cpp
@@ -290,7 +290,7 @@ Następujący przykładowy kod pokazuje, jak używasz dojście wątku, który je
 #include <stdio.h>
 #include <process.h>
 
-unsigned Counter; 
+unsigned Counter;
 unsigned __stdcall SecondThreadFunc( void* pArguments )
 {
     printf( "In second thread...\n" );
@@ -332,7 +332,7 @@ Counter should be 1000000; it is-> 1000000
 ## <a name="see-also"></a>Zobacz także
 
 [Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md)<br/>
-[abort](../../c-runtime-library/reference/abort.md)<br/>
-[exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)<br/>
+[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
+[abort](abort.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>

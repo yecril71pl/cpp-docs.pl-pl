@@ -1,13 +1,13 @@
 ---
 title: fesetenv | Dokumentacja firmy Microsoft
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fesetenv
@@ -32,54 +32,59 @@ dev_langs:
 helpviewer_keywords:
 - fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2717c0fee2582cac3c9013f3f49ff37744cbde9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 466d37a55cbd0d4fdf3e1fc0eed085cb9fcb5b6a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fesetenv"></a>fesetenv
-Ustawia bieżącego środowiska zmiennoprzecinkowych.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int fesetenv(  
-   const fenv_t *penv  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `penv`  
- Wskaźnik do `fenv_t` obiekt, który zawiera zmiennoprzecinkowe środowiska zgodnie z ustaleniami przez wywołanie do [fegetenv](fegetenv1.md) lub [feholdexcept](feholdexcept2.md). Można również określić domyślnego środowiska zmiennoprzecinkowe uruchamiania za pomocą makra FE_DFL_ENV.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość 0, jeśli skonfigurowano środowisku. W przeciwnym razie zwraca wartość różną od zera.  
-  
-## <a name="remarks"></a>Uwagi  
- `fesetenv` Funkcja ustawia bieżącego środowiska zmiennoprzecinkowe z wartości przechowywanej w `fenv_t` obiekt wskazywany przez `penv`. Wartość zmiennoprzecinkowa punktu środowiska to zbiór flagi stanu i tryby kontroli, które mają wpływ na obliczenia liczb zmiennoprzecinkowych. W tym flagi stanu, wyjątki zmiennoprzecinkowe i tryb zaokrąglania.  Jeśli `penv` nie jest FE_DFL_ENV lub nie wskazuje na prawidłową `fenv_t` obiekt, kolejne zachowanie jest niezdefiniowany.  
-  
- Wywołanie tej funkcji ustawia wyjątek flagi stanu, które znajdują się w `penv` obiekt, ale nie wygenerował tych wyjątków.  
-  
- Aby użyć tej funkcji, należy wyłączyć funkcję zmiennoprzecinkowe funkcje optymalizacji, które może uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Nagłówek C|Nagłówek C++|  
-|--------------|--------------|------------------|  
-|`fesetenv`|\<fenv.h>|\<cfenv>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fegetenv](../../c-runtime-library/reference/fegetenv1.md)   
- [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [feholdexcept](../../c-runtime-library/reference/feholdexcept2.md)   
- [fesetexceptflag](../../c-runtime-library/reference/fesetexceptflag2.md)
+
+Ustawia bieżącego środowiska zmiennoprzecinkowych.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int fesetenv(
+   const fenv_t *penv
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*penv*<br/>
+Wskaźnik do **fenv_t** obiekt, który zawiera zmiennoprzecinkowe środowiska zgodnie z ustaleniami przez wywołanie do [fegetenv](fegetenv1.md) lub [feholdexcept](feholdexcept2.md). Można również określić domyślnego środowiska zmiennoprzecinkowe uruchamiania przy użyciu **FE_DFL_ENV** makra.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość 0, jeśli skonfigurowano środowisku. W przeciwnym razie zwraca wartość różną od zera.
+
+## <a name="remarks"></a>Uwagi
+
+**Fesetenv** funkcja ustawia bieżącego środowiska zmiennoprzecinkowe z wartości przechowywanej w **fenv_t** obiekt wskazywany przez *penv*. Wartość zmiennoprzecinkowa punktu środowiska to zbiór flagi stanu i tryby kontroli, które mają wpływ na obliczenia liczb zmiennoprzecinkowych. W tym flagi stanu, wyjątki zmiennoprzecinkowe i tryb zaokrąglania.  Jeśli *penv* nie jest **FE_DFL_ENV** lub nie wskazuje na prawidłową **fenv_t** obiekt, kolejne zachowanie jest niezdefiniowany.
+
+Wywołanie tej funkcji ustawia wyjątek flagi stanu, które znajdują się w *penv* obiekt, ale nie wygenerował tych wyjątków.
+
+Aby użyć tej funkcji, należy wyłączyć funkcję zmiennoprzecinkowe funkcje optymalizacji, które może uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Nagłówek C|Nagłówek C++|
+|--------------|--------------|------------------|
+|**fesetenv**|\<fenv.h>|\<cfenv>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
+[fegetenv](fegetenv1.md)<br/>
+[feclearexcept](feclearexcept1.md)<br/>
+[feholdexcept](feholdexcept2.md)<br/>
+[fesetexceptflag](fesetexceptflag2.md)<br/>

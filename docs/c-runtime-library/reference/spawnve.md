@@ -1,12 +1,12 @@
 ---
-title: "spawnve — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: spawnve — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - spawnve
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - spawnve function
 ms.assetid: 39507df8-f15f-45fb-b2b6-01359272b147
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc41bbc42365b4065ebf20d3500c7485224799ea
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: eae2b3fded278202a5eac3af6c3e037d56706a45
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="spawnve"></a>spawnve
-Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_spawnve —](../../c-runtime-library/reference/spawnve-wspawnve.md) zamiast tego.  
-  
+
+Ta funkcja POSIX jest przestarzały. Użyj zgodność ISO C++ [_spawnve —](spawnve-wspawnve.md) zamiast tego.
+
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

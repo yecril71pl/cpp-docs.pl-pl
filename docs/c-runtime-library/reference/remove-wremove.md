@@ -1,12 +1,12 @@
 ---
-title: "Usuń _wremove — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Usuń _wremove — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wremove
@@ -39,92 +39,97 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bfccec10c08563f647b10fd9ad9dff70930668b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 97c258d79af8247af993732405d2c792a0822075
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="remove-wremove"></a>remove, _wremove
-Usuń plik.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-      int remove(  
-   const char *path   
-);  
-int _wremove(  
-   const wchar_t *path   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *Ścieżka*  
- Ścieżka pliku do usunięcia.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Każda z tych funkcji zwraca wartość 0, jeśli plik zostanie pomyślnie usunięty. W przeciwnym razie zwraca wartość -1 i ustawia `errno` albo `EACCES` aby wskazać, że ścieżka Określa plik tylko do odczytu lub plik jest otwarty, lub do **enoent —** wskazująca, że nazwa pliku lub ścieżka nie został znaleziony lub ścieżki Określa katalog.  
-  
- Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych.  
-  
-## <a name="remarks"></a>Uwagi  
- **Usuń** funkcja usuwa plik określony przez *ścieżki.* `_wremove` jest to wersja znaków dwubajtowych **_Usuń**; *ścieżki* argument `_wremove` jest ciągiem znaków dwubajtowych. `_wremove` i **_Usuń** zachowują się tak samo w przeciwnym razie wartość. Należy zamknąć wszystkie dojścia do pliku, aby można było usunąć.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tremove`|**remove**|**remove**|`_wremove`|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|**remove**|\<stdio.h > lub \<io.h >|  
-|`_wremove`|\<stdio.h > lub \<wchar.h >|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="libraries"></a>Biblioteki  
- Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_remove.c  
-/* This program uses remove to delete crt_remove.txt */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   if( remove( "crt_remove.txt" ) == -1 )  
-      perror( "Could not delete 'CRT_REMOVE.TXT'" );  
-   else  
-      printf( "Deleted 'CRT_REMOVE.TXT'\n" );  
-}  
-```  
-  
-## <a name="input-crtremovetxt"></a>Dane wejściowe: crt_remove.txt  
-  
-```  
-This file will be deleted.  
-```  
-  
-## <a name="sample-output"></a>Przykładowe dane wyjściowe  
-  
-```  
-Deleted 'CRT_REMOVE.TXT'  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_unlink, _wunlink](../../c-runtime-library/reference/unlink-wunlink.md)
+
+Usuń plik.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int remove(
+   const char *path
+);
+int _wremove(
+   const wchar_t *path
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Ścieżka*<br/>
+Ścieżka pliku do usunięcia.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Każda z tych funkcji zwraca wartość 0, jeśli plik zostanie pomyślnie usunięty. W przeciwnym razie zwraca wartość -1 i ustawia **errno** albo **eacces —** aby wskazać, że ścieżka Określa plik tylko do odczytu lub plik jest otwarty, lub do **enoent —** z informacją, że Nazwa pliku lub ścieżka nie została odnaleziona, lub określa, że ścieżka katalogu.
+
+Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych.
+
+## <a name="remarks"></a>Uwagi
+
+**Usuń** funkcja usuwa plik określony przez *ścieżki.* **_wremove —** jest wersja znaków dwubajtowych **_Usuń**; *ścieżki* argument **_wremove —** jest ciągiem znaków dwubajtowych. **_wremove —** i **_Usuń** zachowują się tak samo w przeciwnym razie wartość. Należy zamknąć wszystkie dojścia do pliku, aby można było usunąć.
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tremove —**|**remove**|**remove**|**_wremove —**|
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**remove**|\<stdio.h > lub \<io.h >|
+|**_wremove —**|\<stdio.h > lub \<wchar.h >|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Biblioteki
+
+Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_remove.c
+/* This program uses remove to delete crt_remove.txt */
+
+#include <stdio.h>
+
+int main( void )
+{
+   if( remove( "crt_remove.txt" ) == -1 )
+      perror( "Could not delete 'CRT_REMOVE.TXT'" );
+   else
+      printf( "Deleted 'CRT_REMOVE.TXT'\n" );
+}
+```
+
+### <a name="input-crtremovetxt"></a>Dane wejściowe: crt_remove.txt
+
+```Input
+This file will be deleted.
+```
+
+### <a name="sample-output"></a>Przykładowe dane wyjściowe
+
+```Output
+Deleted 'CRT_REMOVE.TXT'
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
+[_unlink, _wunlink](unlink-wunlink.md)<br/>

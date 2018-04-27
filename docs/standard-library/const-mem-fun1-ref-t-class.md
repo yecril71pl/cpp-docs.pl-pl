@@ -1,12 +1,12 @@
 ---
-title: "const_mem_fun1_ref_t — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: const_mem_fun1_ref_t — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xfunctional/std::const_mem_fun1_ref_t
@@ -15,60 +15,61 @@ dev_langs:
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d27d61880eb2e1841c7871c4ce82fb87de0b31
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4236f510ad942dc0ab8cbe64a34670623ea3aaf2
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t — Klasa
-Klasa karty, który umożliwia **const** funkcji członkowskiej, która pobiera jeden argument ma być wywoływana jako obiektu binarnego funkcja po zainicjowaniu z argumentem odwołania.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```
+
+Klasa karty, który umożliwia **const** funkcji członkowskiej, która pobiera jeden argument ma być wywoływana jako obiektu binarnego funkcja po zainicjowaniu z argumentem odwołania.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
 template <class Result, class Type, class Arg>
 class const_mem_fun1_ref_t
- : public binary_function<Type, Arg, Result> 
+ : public binary_function<Type, Arg, Result>
  {
     explicit const_mem_fun1_ref_t(Result (Type::* Pm)(Arg) const);
     Result operator()(const Type& left, Arg right) const;
  };
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `Pm`  
- Wskaźnik do funkcji członkowskiej klasy **typu** do przekonwertowania na obiekt funkcji.  
-  
- `left`  
- **Const** obiekt, który `Pm` funkcja członkowska jest wywoływana na.  
-  
- `right`  
- Argument, który są przyznawane `Pm`.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Dostosowywalne funkcja binarnej.  
-  
-## <a name="remarks"></a>Uwagi  
- Klasy szablonów przechowuje kopię `Pm`, która musi być wskaźnikiem do funkcji członkowskiej klasy **typu**, w obiekcie prywatnego elementu członkowskiego. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie ( `left`.\* *PM*) ( `right`) **const**.  
-  
-## <a name="example"></a>Przykład  
- Konstruktor obiektu `const_mem_fun1_ref_t` nie jest zwykle używana bezpośrednio; funkcja Pomocnika `mem_fun_ref` umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fun_ref —](../standard-library/functional-functions.md#mem_fun_ref) przykłady dotyczące używania karty funkcja elementu członkowskiego.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<funkcjonalności >  
-  
- **Namespace:** Standard  
-  
-## <a name="see-also"></a>Zobacz też  
- [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+```
 
+### <a name="parameters"></a>Parametry
 
+`Pm` Wskaźnik do funkcji członkowskiej klasy **typu** do przekonwertowania na obiekt funkcji.
 
+`left` **Const** obiekt, który `Pm` funkcja członkowska jest wywoływana na.
+
+`right` Argument, który są przyznawane `Pm`.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Dostosowywalne funkcja binarnej.
+
+## <a name="remarks"></a>Uwagi
+
+Klasy szablonów przechowuje kopię `Pm`, która musi być wskaźnikiem do funkcji członkowskiej klasy **typu**, w obiekcie prywatnego elementu członkowskiego. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie ( `left`.\* *PM*) ( `right`) **const**.
+
+## <a name="example"></a>Przykład
+
+Konstruktor obiektu `const_mem_fun1_ref_t` nie jest zwykle używana bezpośrednio; funkcja Pomocnika `mem_fun_ref` umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fun_ref —](../standard-library/functional-functions.md#mem_fun_ref) przykłady dotyczące używania karty funkcja elementu członkowskiego.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** \<funkcjonalności >
+
+**Namespace:** Standard
+
+## <a name="see-also"></a>Zobacz także
+
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -1,13 +1,13 @@
 ---
-title: fegetenv1 | Dokumentacja firmy Microsoft
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fegetenv | Dokumenty Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fetegenv
@@ -32,50 +32,54 @@ dev_langs:
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 025b934ec6a2d9bc98d46cabbd13b93e263cd777
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3569b015784f41fae4a4a91b6a32fe08dd57284
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fegetenv"></a>fegetenv
-Przechowuje bieżącego środowiska zmiennoprzecinkowe określonego obiektu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int fegetenv(  
-   fenv_t *penv  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `penv`  
- Wskaźnik do `fenv_t` obiektu zawiera bieżące wartości zmiennoprzecinkowych środowiska.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość 0, jeśli środowisko zmiennoprzecinkowe pomyślnie była przechowywana w `penv`. W przeciwnym razie zwraca wartość inną niż zero.  
-  
-## <a name="remarks"></a>Uwagi  
- `fegetenv` Funkcja przechowuje bieżącego środowiska liczb zmiennoprzecinkowych w obiekcie wskazywana przez `penv`. Wartość zmiennoprzecinkowa punktu środowiska to zbiór flagi stanu i tryby kontroli, które mają wpływ na obliczenia liczb zmiennoprzecinkowych. W tym trybu zaokrąglania kierunku i flagi stanu zmiennoprzecinkowych wyjątków.  Jeśli `penv` nie wskazuje na prawidłową `fenv_t` obiekt, kolejne zachowanie jest niezdefiniowany.  
-  
- Aby użyć tej funkcji, należy wyłączyć funkcję zmiennoprzecinkowe funkcje optymalizacji, które może uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Nagłówek C|Nagłówek C++|  
-|--------------|--------------|------------------|  
-|`fegetenv`|\<fenv.h>|\<cfenv>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne odwołanie funkcji](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fesetenv](../../c-runtime-library/reference/fesetenv1.md)
+
+Przechowuje bieżącego środowiska zmiennoprzecinkowe określonego obiektu.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int fegetenv(
+   fenv_t *penv
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*penv*<br/>
+Wskaźnik do **fenv_t** obiektu zawiera bieżące wartości zmiennoprzecinkowych środowiska.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość 0, jeśli środowisko zmiennoprzecinkowe pomyślnie była przechowywana w *penv*. W przeciwnym razie zwraca wartość inną niż zero.
+
+## <a name="remarks"></a>Uwagi
+
+**Fegetenv** funkcja przechowuje bieżącego środowiska liczb zmiennoprzecinkowych w obiekcie wskazywana przez *penv*. Wartość zmiennoprzecinkowa punktu środowiska to zbiór flagi stanu i tryby kontroli, które mają wpływ na obliczenia liczb zmiennoprzecinkowych. W tym trybu zaokrąglania kierunku i flagi stanu zmiennoprzecinkowych wyjątków.  Jeśli *penv* nie wskazuje na prawidłową **fenv_t** obiekt, kolejne zachowanie jest niezdefiniowany.
+
+Aby użyć tej funkcji, należy wyłączyć funkcję zmiennoprzecinkowe funkcje optymalizacji, które może uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Nagłówek C|Nagłówek C++|
+|--------------|--------------|------------------|
+|**fegetenv**|\<fenv.h>|\<cfenv>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
+[fesetenv](fesetenv1.md)<br/>

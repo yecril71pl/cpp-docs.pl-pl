@@ -1,5 +1,5 @@
 ---
-title: _countof Macro | Microsoft Docs
+title: _countof — makro | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -31,11 +31,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: e9e5dc49b59ac534d871d6b31efdeec0afef5c8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="countof-macro"></a>_countof — Makro
 
@@ -58,15 +58,15 @@ Liczba elementów w tablicy, wyrażony jako **size_t**.
 
 ## <a name="remarks"></a>Uwagi
 
-`_countof` jest implementowany jako preprocesor makra przypominającej funkcji. Wersja języka C++ ma dodatkowy szablon maszyny do wykrywania w czasie kompilacji, jeśli wskaźnik jest przekazywany zamiast statycznie zadeklarowanych tablicy.
+**_countof —** jest zaimplementowany jako preprocesor makra przypominającej funkcji. Wersja języka C++ ma dodatkowy szablon maszyny do wykrywania w czasie kompilacji, jeśli wskaźnik jest przekazywany zamiast statycznie zadeklarowanych tablicy.
 
-Upewnij się, że *tablicy* jest rzeczywiście tablicy, nie wskaźnik. W języku C `_countof` tworzy błędne wyniki, jeśli *tablicy* wskaźnik. W języku C++ `_countof` kompilacji Jeśli *tablicy* wskaźnik.  Tablica przekazany jako parametr do funkcji *decays do wskaźnika*, co oznacza, że w funkcji, nie można użyć `_countof` do ustalenia zakresu tablicy.
+Upewnij się, że *tablicy* jest rzeczywiście tablicy, nie wskaźnik. W języku C **_countof —** tworzy błędne wyniki, jeśli *tablicy* wskaźnik. W języku C++ **_countof —** kompilacji Jeśli *tablicy* wskaźnik.  Tablica przekazany jako parametr do funkcji *decays do wskaźnika*, co oznacza, że w funkcji, nie można użyć **_countof —** do ustalenia zakresu tablicy.
 
 ## <a name="requirements"></a>Wymagania
 
 |Macro|Wymagany nagłówek|
 |-----------|---------------------|
-|`_countof`|\<stdlib.h>|
+|**_countof**|\<stdlib.h>|
 
 ## <a name="example"></a>Przykład
 

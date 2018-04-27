@@ -1,12 +1,12 @@
 ---
-title: "_set_error_mode — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _set_error_mode — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_error_mode
@@ -32,82 +32,87 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae0e413e46776d9d0df0508a30905b9fdb09062
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 557af6f9fe37db1e0811508f247eadd0fcfa74a2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="seterrormode"></a>_set_error_mode
-Modyfikuje `__error_mode` do określenia lokalizacji innych niż domyślne, gdzie C runtime zapisuje komunikat o błędzie dla błędu, który może zakończyć program.  
-  
+
+Modyfikuje **__error_mode** do określenia lokalizacji innych niż domyślne, gdzie C runtime zapisuje komunikat o błędzie dla błędu, który może zakończyć program.
+
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _set_error_mode(  
-   int modeval   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `modeval`  
- Miejsce docelowe komunikaty o błędach.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca stare ustawienia lub wartość -1, jeśli wystąpi błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- Określa ujście danych wyjściowych błędu, ustawiając wartość `__error_mode`. Na przykład Przekieruj dane wyjściowe do standardowego błędu lub użyj `MessageBox` interfejsu API.  
-  
- `modeval` Parametr może należeć do jednej z następujących wartości.  
-  
-|Parametr|Opis|  
-|---------------|-----------------|  
-|`_OUT_TO_DEFAULT`|Błąd zbiornika jest określany przez `__app_type`.|  
-|`_OUT_TO_STDERR`|Błąd zbiornika jest błąd standardowy.|  
-|`_OUT_TO_MSGBOX`|Błąd zbiornika jest okno komunikatu.|  
-|`_REPORT_ERRMODE`|Bieżący raport `__error_mode` wartość.|  
-  
- Jeśli przekazano wartość inną niż wymienione program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `_set_error_mode` ustawia `errno` do `EINVAL` i zwraca wartość -1.  
-  
- Gdy jest używana z [assert](../../c-runtime-library/reference/assert-macro-assert-wassert.md), `_set_error_mode` wyświetla instrukcji nie powiodło się w oknie dialogowym i umożliwia wybór `Ignore` przycisk Tak, aby można kontynuować do uruchomienia programu.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_set_error_mode`|\<stdlib.h>|  
-  
-## <a name="example"></a>Przykład  
-  
-```C  
-// crt_set_error_mode.c  
-// compile with: /c  
-#include <stdlib.h>  
-#include <assert.h>  
-  
-int main()  
-{  
-   _set_error_mode(_OUT_TO_STDERR);  
-   assert(2+2==5);  
-}  
-```  
-  
-```Output  
-Assertion failed: 2+2==5, file crt_set_error_mode.c, line 8  
-  
-This application has requested the Runtime to terminate it in an unusual way.  
-Please contact the application's support team for more information.  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [assert Macro, _assert, _wassert](../../c-runtime-library/reference/assert-macro-assert-wassert.md)
+> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _set_error_mode(
+   int mode_val
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*mode_val*<br/>
+Miejsce docelowe komunikaty o błędach.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca stare ustawienia lub wartość -1, jeśli wystąpi błąd.
+
+## <a name="remarks"></a>Uwagi
+
+Określa ujście danych wyjściowych błędu, ustawiając wartość **__error_mode**. Na przykład Przekieruj dane wyjściowe do standardowego błędu lub użyj **MessageBox** interfejsu API.
+
+*Mode_val* parametru może należeć do jednej z następujących wartości.
+
+|Parametr|Opis|
+|---------------|-----------------|
+|**_OUT_TO_DEFAULT**|Błąd zbiornika jest określany przez **__app_type**.|
+|**_OUT_TO_STDERR**|Błąd zbiornika jest błąd standardowy.|
+|**_OUT_TO_MSGBOX**|Błąd zbiornika jest okno komunikatu.|
+|**_REPORT_ERRMODE**|Bieżący raport **__error_mode** wartości.|
+
+Jeśli przekazano wartość inną niż wymienione program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **_set_error_mode —** ustawia **errno** do **einval —** i zwraca wartość -1.
+
+Gdy jest używana z [assert](assert-macro-assert-wassert.md), **_set_error_mode —** wyświetla instrukcji nie powiodło się w oknie dialogowym i umożliwia wybór **Ignoruj** przycisk Tak, aby można było Kontynuuj uruchomić program.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_set_error_mode**|\<stdlib.h>|
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_set_error_mode.c
+// compile with: /c
+#include <stdlib.h>
+#include <assert.h>
+
+int main()
+{
+   _set_error_mode(_OUT_TO_STDERR);
+   assert(2+2==5);
+}
+```
+
+```Output
+Assertion failed: 2+2==5, file crt_set_error_mode.c, line 8
+
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[assert Macro, _assert, _wassert](assert-macro-assert-wassert.md)<br/>

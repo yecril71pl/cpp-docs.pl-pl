@@ -1,12 +1,12 @@
 ---
 title: Pojedyncze dziedziczenie | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 003e407edfd50440a2bbeaf483c2fba94d178b57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d005d4d973ca3ac1873b588975683b14624f21f
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="single-inheritance"></a>Pojedyncze dziedziczenie
 W "pojedyncze dziedziczenie," wspólnej formy dziedziczenia klasy mają tylko jedną klasę podstawową. Należy wziąć pod uwagę relację przedstawiono na poniższej ilustracji.  
   
- ![Jednym z podstawowych &#45; Wykres dziedziczenia](../cpp/media/vc38xj1.gif "vc38XJ1")  
+ ![Jednym z podstawowych&#45;Wykres dziedziczenia](../cpp/media/vc38xj1.gif "vc38XJ1")  
 Prosty wykres dziedziczące pojedynczo  
   
  Należy pamiętać, przejście z ogólne do określonych na rysunku. Znaleziono w projekcie większość klasy hierarchie innego atrybutu wspólnego jest klasy pochodnej z klasy podstawowej "rodzaju" relacją. Na rysunku `Book` jest rodzajem elementu `PrintedDocument`i `PaperbackBook` jest rodzajem elementu `book`.  
@@ -53,7 +53,7 @@ class Book : public PrintedDocument {};
 class PaperbackBook : public Book {};  
 ```  
   
- `PrintedDocument`uważa się klasy "bezpośredniej klasy podstawowej" `Book`; jest to klasa "base pośredniego" do `PaperbackBook`. Różnica polega na tym że bezpośredniej klasie podstawowej pojawi się na liście podstawowej deklaracji klasy, a nie jest pośrednie base.  
+ `PrintedDocument` uważa się klasy "bezpośredniej klasy podstawowej" `Book`; jest to klasa "base pośredniego" do `PaperbackBook`. Różnica polega na tym że bezpośredniej klasie podstawowej pojawi się na liście podstawowej deklaracji klasy, a nie jest pośrednie base.  
   
  Klasa podstawowa, z którego pochodzi każdej klasy jest zadeklarowana przed deklaracją klasy pochodnej. Nie jest wystarczające, aby zapewnić deklaracji odwołujące się do przodu dla klasy podstawowej; musi istnieć pełne deklaracji.  
   
@@ -155,8 +155,10 @@ class PaperbackBook : public Document {};
   
 int main() {  
    Document * DocLib[10];   // Library of ten documents.  
-   for (int i = 0 ; i < 10 ; i++)  
+   for (int i = 0 ; i < 5 ; i++)  
       DocLib[i] = new Document;  
+   for (int i = 5 ; i < 10 ; i++)  
+      DocLib[i] = new PaperbackBook;  
 }  
 ```  
   

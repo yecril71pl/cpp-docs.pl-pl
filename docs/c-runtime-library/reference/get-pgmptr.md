@@ -1,12 +1,12 @@
 ---
-title: "_get_pgmptr — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _get_pgmptr — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_pgmptr
@@ -34,46 +34,51 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c5fc146c3b1385879172ecd9e2c6862bca135d0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6af6203f8c6f40335a132f21929abf3cc4ce1808
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getpgmptr"></a>_get_pgmptr
-Pobiera bieżącą wartość `_pgmptr` zmiennej globalnej.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-errno_t _get_pgmptr(   
-   char **pValue   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- [out] `pValue`  
- Wskaźnik do ciągu należy podać bieżącą wartość `_pgmptr` zmiennej.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość zero w przypadku powodzenia; błąd o kodzie błędu. Jeśli `pValue` jest `NULL`, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia `errno` do `EINVAL` i zwraca `EINVAL`.  
-  
-## <a name="remarks"></a>Uwagi  
- Wywoływać tylko `_get_pgmptr` program ma punktu wejścia wąskie, takich jak `main()` lub `WinMain()`. `_pgmptr` — Zmienna globalna zawiera pełną ścieżkę do pliku wykonywalnego skojarzonych z procesem. Aby uzyskać więcej informacji, zobacz [_pgmptr —, _wpgmptr —](../../c-runtime-library/pgmptr-wpgmptr.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_get_pgmptr`|\<stdlib.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [_get_wpgmptr](../../c-runtime-library/reference/get-wpgmptr.md)
+
+Pobiera bieżącą wartość **_pgmptr —** zmiennej globalnej.
+
+## <a name="syntax"></a>Składnia
+
+```C
+errno_t _get_pgmptr( 
+   char **pValue 
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*pValue*<br/>
+Wskaźnik do ciągu należy podać bieżącą wartość **_pgmptr —** zmiennej.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość zero w przypadku powodzenia; błąd o kodzie błędu. Jeśli *pValue* jest **NULL**, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **einval —**.
+
+## <a name="remarks"></a>Uwagi
+
+Wywoływać tylko **_get_pgmptr —** program ma punktu wejścia wąskie, takich jak **main()** lub **WinMain()**. **_Pgmptr —** — zmienna globalna zawiera pełną ścieżkę do pliku wykonywalnego skojarzonych z procesem. Aby uzyskać więcej informacji, zobacz [_pgmptr —, _wpgmptr —](../../c-runtime-library/pgmptr-wpgmptr.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_get_pgmptr**|\<stdlib.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[_get_wpgmptr](get-wpgmptr.md)<br/>

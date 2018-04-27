@@ -1,12 +1,12 @@
 ---
-title: "fflush — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: fflush — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fflush
@@ -32,108 +32,113 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23d90b61862736fc97c18343fe82f8ccf3aa42b5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9a92affa1483c8dba9be0718acc00d4574eb44bb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fflush"></a>fflush
-Opróżnienia strumienia.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int fflush(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `stream`  
- Wskaźnik do `FILE` struktury.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `fflush` Zwraca wartość 0, jeśli bufor został pomyślnie opróżniany. Wartość 0 jest także zwracany w przypadkach, w których określonego strumienia ma bufor nie jest otwarty do odczytu tylko. Zwracana wartość `EOF` wskazuje błąd.  
-  
+
+Opróżnienia strumienia.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int fflush(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Strumień*<br/>
+Wskaźnik do **pliku** struktury.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**fflush —** zwraca wartość 0, jeśli bufor został pomyślnie opróżniany. Wartość 0 jest także zwracany w przypadkach, w których określonego strumienia ma bufor nie jest otwarty do odczytu tylko. Zwracana wartość **EOF** wskazuje błąd.
+
 > [!NOTE]
->  Jeśli `fflush` zwraca `EOF`, dane mogą zostać utracone z powodu błędu zapisu. Podczas konfigurowania obsługi błąd krytyczny, jest najbezpieczniejszy wyłączyć buforowanie z `setvbuf` funkcji lub używać procedury we/wy niskiego poziomu, takich jak `_open`, `_close`, i `_write` zamiast funkcje We/Wy strumienia.  
-  
-## <a name="remarks"></a>Uwagi  
- `fflush` Funkcja opróżnienia strumienia `stream`. Jeśli strumień został otwarty na skutek zapisu trybu, lub został otwarty w trybie aktualizacji i zapis został ostatniej operacji, zawartości buforu strumienia są zapisywane do pliku źródłowego lub urządzenia i buforu zostaną odrzucone. Jeśli strumień został otwarty w trybie do odczytu albo strumienia nie ma żadnych buforu wywołanie `fflush` nie obowiązuje i są przechowywane wszystkie buforu. Wywołanie `fflush` Negacja efekt wszelkie wcześniejsze wywołanie elementu `ungetc` dla tego strumienia. Strumień pozostaje otwarty po wywołaniu.  
-  
- Jeśli `stream` jest `NULL`, zachowanie jest taka sama jak wywołanie `fflush` na temat każdego strumienia otwarte. Wszystkie strumienie otwartym w trybie zapisu i wszystkich strumieni otwartym w trybie aktualizacji których ostatnia operacja zakończyła zapisu są opróżniane. Wywołanie nie ma wpływu na innych strumieni.  
-  
- Bufory są zazwyczaj obsługiwane przez system operacyjny, który określa czas optymalnego automatycznie zapisać danych na dysku: gdy bufor jest pełny, gdy strumień jest zamknięty lub gdy program kończy się zwykle bez zamykania strumienia. Funkcja commit-to-disk biblioteki wykonawczej umożliwia upewnij się, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie do buforów systemu operacyjnego. Bez ponowne zapisywanie istniejący program, łącząc plików obiektów programu z COMMODE.OBJ można włączyć tę funkcję. W wynikowym pliku wykonywalnego, wywołań `_flushall` zapisać zawartość buforów wszystkich na dysku. Tylko `_flushall` i `fflush` dotyczy COMMODE.OBJ.  
-  
- Aby uzyskać informacje na temat funkcji commit-to-disk, zobacz [strumień we/wy](../../c-runtime-library/stream-i-o.md), [fopen —](../../c-runtime-library/reference/fopen-wfopen.md), i [_fdopen —](../../c-runtime-library/reference/fdopen-wfdopen.md).  
-  
- Ta funkcja umożliwia zablokowanie wątek wywołujący i dlatego wątkowo. Wersja — blokowanie dla `_fflush_nolock`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|  
-|--------------|---------------------|  
-|`fflush`|\<stdio.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_fflush.c  
-#include <stdio.h>  
-#include <conio.h>  
-  
-int main( void )  
-{  
-   int integer;  
-   char string[81];  
-  
-   // Read each word as a string.  
-   printf( "Enter a sentence of four words with scanf: " );  
-   for( integer = 0; integer < 4; integer++ )  
-   {  
-      scanf_s( "%s", string, sizeof(string) );        
-      printf( "%s\n", string );  
-   }  
-  
-   // You must flush the input buffer before using gets.   
-   // fflush on input stream is an extension to the C standard   
-   fflush( stdin );     
-   printf( "Enter the same sentence with gets: " );  
-   gets_s( string, sizeof(string) );  
-   printf( "%s\n", string );  
-}  
-```  
-  
-```Output  
-  
-      This is a test  
-This is a test  
-  
-```  
-  
-```Output  
-  
-      This is a test  
-This is a testEnter a sentence of four words with scanf: This is a test  
-This  
-is  
-a  
-test  
-Enter the same sentence with gets: This is a test  
-This is a test  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [fclose —, _fcloseall —](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [_flushall](../../c-runtime-library/reference/flushall.md)   
- [setvbuf](../../c-runtime-library/reference/setvbuf.md)
+> Jeśli **fflush —** zwraca **EOF**, dane mogą zostać utracone z powodu błędu zapisu. Podczas konfigurowania obsługi błąd krytyczny, jest najbezpieczniejszy wyłączyć buforowanie z **setvbuf —** funkcji lub używać procedury we/wy niskiego poziomu, takich jak **_otwórz**, **_zamknij**, i **_write** zamiast funkcje We/Wy strumienia.
+
+## <a name="remarks"></a>Uwagi
+
+**Fflush —** funkcja opróżnienia strumienia *strumienia*. Jeśli strumień został otwarty na skutek zapisu trybu, lub został otwarty w trybie aktualizacji i zapis został ostatniej operacji, zawartości buforu strumienia są zapisywane do pliku źródłowego lub urządzenia i buforu zostaną odrzucone. Jeśli strumień został otwarty w trybie do odczytu albo strumienia nie ma żadnych buforu wywołanie **fflush —** nie obowiązuje i są przechowywane wszystkie buforu. Wywołanie **fflush —** Negacja efekt wszelkie wcześniejsze wywołanie elementu **ungetc —** dla tego strumienia. Strumień pozostaje otwarty po wywołaniu.
+
+Jeśli *strumienia* jest **NULL**, zachowanie jest taka sama jak wywołanie **fflush —** na temat każdego strumienia otwarte. Wszystkie strumienie otwartym w trybie zapisu i wszystkich strumieni otwartym w trybie aktualizacji których ostatnia operacja zakończyła zapisu są opróżniane. Wywołanie nie ma wpływu na innych strumieni.
+
+Bufory są zazwyczaj obsługiwane przez system operacyjny, który określa czas optymalnego automatycznie zapisać danych na dysku: gdy bufor jest pełny, gdy strumień jest zamknięty lub gdy program kończy się zwykle bez zamykania strumienia. Funkcja commit-to-disk biblioteki wykonawczej umożliwia upewnij się, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie do buforów systemu operacyjnego. Bez ponowne zapisywanie istniejący program, łącząc plików obiektów programu z COMMODE.OBJ można włączyć tę funkcję. W wynikowym pliku wykonywalnego, wywołań **_flushall —** zapisać zawartość buforów wszystkich na dysku. Tylko **_flushall —** i **fflush —** dotyczy COMMODE.OBJ.
+
+Aby uzyskać informacje na temat funkcji commit-to-disk, zobacz [strumień we/wy](../../c-runtime-library/stream-i-o.md), [fopen —](fopen-wfopen.md), i [_fdopen —](fdopen-wfdopen.md).
+
+Ta funkcja umożliwia zablokowanie wątek wywołujący i dlatego wątkowo. Wersja — blokowanie dla **_fflush_nolock —**.
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|
+|--------------|---------------------|
+|**fflush**|\<stdio.h>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_fflush.c
+#include <stdio.h>
+#include <conio.h>
+
+int main( void )
+{
+   int integer;
+   char string[81];
+
+   // Read each word as a string.
+   printf( "Enter a sentence of four words with scanf: " );
+   for( integer = 0; integer < 4; integer++ )
+   {
+      scanf_s( "%s", string, sizeof(string) );
+      printf( "%s\n", string );
+   }
+
+   // You must flush the input buffer before using gets.
+   // fflush on input stream is an extension to the C standard
+   fflush( stdin );
+   printf( "Enter the same sentence with gets: " );
+   gets_s( string, sizeof(string) );
+   printf( "%s\n", string );
+}
+```
+
+```Output
+
+      This is a test
+This is a test
+
+```
+
+```Output
+
+      This is a test
+This is a testEnter a sentence of four words with scanf: This is a test
+This
+is
+a
+test
+Enter the same sentence with gets: This is a test
+This is a test
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[fclose, _fcloseall](fclose-fcloseall.md)<br/>
+[_flushall](flushall.md)<br/>
+[setvbuf](setvbuf.md)<br/>

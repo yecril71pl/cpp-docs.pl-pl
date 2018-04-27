@@ -1,15 +1,18 @@
 ---
-title: "ldexp — | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: ldexp —, ldexpf —, ldexpl | Dokumentacja firmy Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ldexp
+- ldexpf
+- ldexpl
+- _ldexpl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,6 +28,8 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - ldexp
+- ldexpf
+- ldexpl
 - _ldexpl
 dev_langs:
 - C++
@@ -33,97 +38,104 @@ helpviewer_keywords:
 - computing real numbers
 - mantissas, floating-point variables
 - ldexp function
+- ldexpf function
+- ldexpl function
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d6098b6755267551dff86d063dccb6213ca4a74
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c0149832285013d9572c785ce109e0bb87974747
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="ldexp"></a>ldexp
-Mnoży liczba zmiennoprzecinkowa przez całkowitą potęgą liczby dwa.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-double ldexp(  
-   double x,  
-   int exp   
-);  
-float ldexp(  
-   float x,  
-   int exp  
-);  // C++ only  
-long double ldexp(  
-   long double x,  
-   int exp  
-);  // C++ only   
-float ldexpf(  
-   float x,  
-   int exp  
-);   
-long double ldexpl(  
-   long double x,  
-   int exp  
-);   
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `x`  
- Wartość zmiennoprzecinkowa.  
-  
- `exp`  
- Wykładnik liczby całkowitej.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `ldexp` Funkcja zwraca wartość `x` * 2<sup>exp</sup> w przypadku powodzenia. Na przepełnienia, a także w zależności od jej znaku `x`, `ldexp` zwraca `HUGE_VAL`; `errno` ma wartość `ERANGE`.  
-  
- Aby uzyskać więcej informacji na temat `errno` i może zawierać błąd zwracają wartości, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Uwagi  
- Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia `ldexp` które trwają `float` lub `long double` typów. W programie C `ldexp` zawsze ma `double` i `int` i zwraca `double`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Nagłówek C|Nagłówek C++|  
-|-------------|--------------|------------------|  
-|`ldexp`, `ldexpf`, `ldexpl`|\<math.h>|\<cmath>|  
-  
- Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_ldexp.c  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double x = 4.0, y;  
-   int p = 3;  
-  
-   y = ldexp( x, p );  
-   printf( "%2.1f times two to the power of %d is %2.1f\n", x, p, y );  
-}  
-```  
-  
-## <a name="output"></a>Dane wyjściowe  
-  
-```  
-4.0 times two to the power of 3 is 32.0  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [frexp —](../../c-runtime-library/reference/frexp.md)   
- [modf, modff, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)
+# <a name="ldexp-ldexpf-ldexpl"></a>ldexp —, ldexpf —, ldexpl
+
+Mnoży liczba zmiennoprzecinkowa przez całkowitą potęgą liczby dwa.
+
+## <a name="syntax"></a>Składnia
+
+```C
+double ldexp(
+   double x,
+   int exp
+);
+float ldexp(
+   float x,
+   int exp
+);  // C++ only
+long double ldexp(
+   long double x,
+   int exp
+);  // C++ only
+float ldexpf(
+   float x,
+   int exp
+);
+long double ldexpl(
+   long double x,
+   int exp
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Wartość zmiennoprzecinkowa.
+
+*EXP*<br/>
+Wykładnik liczby całkowitej.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**Ldexp —** zwracają wartość *x* * 2<sup>*exp* </sup> w przypadku powodzenia. Na przepełnienia, a także w zależności od jej znaku *x*, **ldexp —** zwraca **huge_val —**; **errno** ma wartość **erange —** .
+
+Aby uzyskać więcej informacji na temat **errno** i może zawierać błąd zwracają wartości, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Uwagi
+
+Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **ldexp —** które trwają **float** lub **długi** **podwójne** typów. W programie C **ldexp —** zawsze ma **podwójne** i **int** i zwraca **podwójne**.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Nagłówek C|Nagłówek C++|
+|-------------|--------------|------------------|
+|**ldexp —**, **ldexpf —**, **ldexpl**|\<math.h>|\<cmath >|
+
+Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_ldexp.c
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double x = 4.0, y;
+   int p = 3;
+
+   y = ldexp( x, p );
+   printf( "%2.1f times two to the power of %d is %2.1f\n", x, p, y );
+}
+```
+
+## <a name="output"></a>Dane wyjściowe
+
+```Output
+4.0 times two to the power of 3 is 32.0
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[frexp](frexp.md)<br/>
+[modf, modff, modfl](modf-modff-modfl.md)<br/>

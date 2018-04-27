@@ -1,12 +1,12 @@
 ---
-title: "ASIN asinf —, asinl — | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: ASIN asinf —, asinl — | Dokumentacja firmy Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - asinf
@@ -38,73 +38,72 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cb5f90a909a4e2250768bf158f6f51f53bbee4a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6dd1399042e1055d124cd3c53363a6979d4256d3
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
-Oblicza sinus.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-double asin(   
-   double x   
-);  
-float asin(  
-   float x  
-);  // C++ only  
-long double asin(  
-   long double x  
-);  // C++ only  
-float asinf (   
-   float x   
-);  
-long double asinl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `x`  
- Wartość, którego sinus ma zostać obliczona.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `asin` Funkcja Zwraca arcus sinus (Funkcja sinus) `x` w zakresie - π/2 na radiany π/2.  
-  
- Domyślnie jeśli `x` jest mniejsza niż -1 lub większą niż 1, `asin` zwraca nieokreślony.  
-  
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|  
-|-----------|-------------------|-----------------------|  
-|± ∞|`INVALID`|`_DOMAIN`|  
-|± `QNAN`,`IND`|brak|`_DOMAIN`|  
-|&#124;x&#124;>1|`INVALID`|`_DOMAIN`|  
-  
-## <a name="remarks"></a>Uwagi  
- Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia `asin` z `float` i `long double` wartości. W programie C `asin` zawsze przyjmuje i zwraca wartość o podwójnej precyzji.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`asin`, `asinf`, `asinl`|\<math.h>|  
-  
-## <a name="example"></a>Przykład  
- Aby uzyskać więcej informacji, zobacz [acos acosf —, acosl —](../../c-runtime-library/reference/acos-acosf-acosl.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [ACOS acosf —, acosl —](../../c-runtime-library/reference/acos-acosf-acosl.md)   
- [ATAN, atanf —, atanl —, atan2 atan2f —, atan2l —](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
- [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [_matherr](../../c-runtime-library/reference/matherr.md)   
- [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
- [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)
+
+Oblicza sinus.
+
+## <a name="syntax"></a>Składnia
+
+```C
+double asin( double x );
+float asinf ( float x );
+long double asinl( long double x );
+```
+
+```cpp
+float asin( float x );  // C++ only
+long double asin( long double x );  // C++ only
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Wartość, którego sinus ma zostać obliczona.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**Asin** funkcja Zwraca arcus sinus (Funkcja sinus) *x* w zakresie - π/2 na radiany π/2.
+
+Domyślnie jeśli *x* jest mniejsza niż -1 lub większą niż 1, **asin** zwraca nieokreślony.
+
+|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|-----------|-------------------|-----------------------|
+|± ∞|**NIEPRAWIDŁOWY**|**_DOMAIN —**|
+|GRANICACH **QNAN**, **IND**|brak|**_DOMAIN —**|
+|&#124;x&#124;>1|**NIEPRAWIDŁOWY**|**_DOMAIN —**|
+
+## <a name="remarks"></a>Uwagi
+
+Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **asin** z **float** i **długi** **podwójne** wartości. W programie C **asin** zawsze przyjmuje i zwraca **podwójne**.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|-------------|---------------------|-|
+|**ASIN**, **asinf —**, **asinl —**|\<math.h>|\<cmath > lub \<math.h >|
+
+## <a name="example"></a>Przykład
+
+Aby uzyskać więcej informacji, zobacz [acos acosf —, acosl —](acos-acosf-acosl.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[acos, acosf, acosl](acos-acosf-acosl.md)<br/>
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
+[COS cosf —, cosl —](cos-cosf-cosl.md)<br/>
+[_matherr](matherr.md)<br/>
+[SIN sinf —, sinl —](sin-sinf-sinl.md)<br/>
+[tan tanf —, tanl —](tan-tanf-tanl.md)<br/>

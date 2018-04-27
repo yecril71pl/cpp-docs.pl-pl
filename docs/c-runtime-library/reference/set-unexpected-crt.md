@@ -1,12 +1,12 @@
 ---
-title: "set_unexpected — (CRT) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: set_unexpected — (CRT) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - set_unexpected
@@ -31,65 +31,68 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc1d3b96ee5b52d349b30434932d2c9770267b4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c740f74dc13ea22819d0f792bfc1e3dbcc9f425e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setunexpected-crt"></a>set_unexpected (CRT)
-Instaluje własnej funkcji zakończenia ma zostać wywołana przez `unexpected`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unexpected_function set_unexpected(  
-   unexpected_function unexpFunction   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `unexpFunction`  
- Wskaźnik do funkcji, która zapisu zastąpić `unexpected` funkcji.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do funkcji zakończenia poprzedniej zarejestrowany przez `_set_unexpected` tak, aby później można przywrócić poprzedniego funkcji. Jeśli nie ustawiono Brak poprzedniej funkcji, zwracana wartość może służyć do przywrócić domyślne zachowanie; Ta wartość może mieć wartości NULL.  
-  
-## <a name="remarks"></a>Uwagi  
- `set_unexpected` Funkcji instaluje `unexpFunction` jako funkcja wywoływana przez `unexpected`. `unexpected` nie jest używany w obecnej obsługi wyjątków C++. `unexpected_function` Typ jest zdefiniowany w EH. H jako wskaźnik do zdefiniowanych przez użytkownika funkcji nieoczekiwany, `unexpFunction` zwracającą `void`. Niestandardowe `unexpFunction` funkcja nie może zwracać do swojego obiektu wywołującego.  
-  
-```  
-typedef void ( *unexpected_function )( );  
-```  
-  
- Domyślnie `unexpected` wywołania `terminate`. To zachowanie domyślne można zmienić, pisanie funkcji zakończenia i wywołanie `set_unexpected` z nazwą funkcji jako jej argument. `unexpected` wywołuje ostatniej podany jako argument do funkcji `set_unexpected`.  
-  
- W odróżnieniu od funkcji niestandardowych zakończenia zainstalowane przez wywołanie do `set_terminate`, może zostać wygenerowany wyjątek z poziomu `unexpFunction`.  
-  
- W środowisku wielowątkowym nieoczekiwany funkcje są obsługiwane osobno dla każdego wątku. Każdym nowym wątku, należy zainstalować nieoczekiwany funkcji. W związku z tym każdy wątek jest odpowiedzialny za własną nieoczekiwany obsługi.  
-  
- Bieżący implementacji Microsoft C++, obsługa wyjątków `unexpected` wywołania `terminate` domyślnie i nigdy nie jest wywoływany przez biblioteki wykonawczej obsługi wyjątków. Nie ma żadnych dodatkowych zalet określonego wywołania `unexpected` zamiast `terminate`.  
-  
- Istnieje jeden `set_unexpected` obsługę wszystkie połączone dynamicznie biblioteki DLL lub exe; nawet wtedy, gdy jest wywoływana `set_unexpected` programu obsługi może być zastąpiony innym lub użytkownik zastępuje obsługi ustawiony przez inny plik DLL lub EXE.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`set_unexpected`|\<eh.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa wyjątków — procedury](../../c-runtime-library/exception-handling-routines.md)   
- [Przerwania](../../c-runtime-library/reference/abort.md)   
- [_get_unexpected](../../c-runtime-library/reference/get-unexpected.md)   
- [set_terminate —](../../c-runtime-library/reference/set-terminate-crt.md)   
- [Zakończenie](../../c-runtime-library/reference/terminate-crt.md)   
- [Nieoczekiwany](../../c-runtime-library/reference/unexpected-crt.md)
+
+Instaluje własnej funkcji zakończenia ma zostać wywołana przez **nieoczekiwany**.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+unexpected_function set_unexpected( unexpected_function unexpFunction );
+```
+
+### <a name="parameters"></a>Parametry
+
+*unexpFunction*<br/>
+Wskaźnik do funkcji, która zapisu zastąpić **nieoczekiwany** funkcji.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca wskaźnik do funkcji zakończenia poprzedniej zarejestrowany przez **_set_unexpected** tak, aby później można przywrócić poprzedniego funkcji. Jeśli nie ustawiono Brak poprzedniej funkcji, zwracana wartość może służyć do przywrócić domyślne zachowanie; Ta wartość może mieć wartości NULL.
+
+## <a name="remarks"></a>Uwagi
+
+**Set_unexpected —** funkcji instaluje *unexpFunction* jako funkcja wywoływana przez **nieoczekiwany**. **Nieoczekiwany** nie jest używana w bieżącej implementacji obsługi wyjątków C++. **Unexpected_function** typ jest zdefiniowany w EH. H jako wskaźnik do zdefiniowanych przez użytkownika funkcji nieoczekiwany, *unexpFunction* zwracającą **void**. Niestandardowe *unexpFunction* funkcja nie może zwracać do swojego obiektu wywołującego.
+
+```cpp
+typedef void ( *unexpected_function )( );
+```
+
+Domyślnie **nieoczekiwany** wywołania **przerwanie**. To zachowanie domyślne można zmienić, pisanie funkcji zakończenia i wywołanie **set_unexpected —** z nazwą funkcji jako jej argument. **Nieoczekiwany** wywołuje ostatniej podany jako argument do funkcji **set_unexpected —**.
+
+W odróżnieniu od funkcji niestandardowych zakończenia zainstalowane przez wywołanie do **set_terminate —**, może zostać wygenerowany wyjątek z poziomu *unexpFunction*.
+
+W środowisku wielowątkowym nieoczekiwany funkcje są obsługiwane osobno dla każdego wątku. Każdym nowym wątku, należy zainstalować nieoczekiwany funkcji. W związku z tym każdy wątek jest odpowiedzialny za własną nieoczekiwany obsługi.
+
+Bieżący implementacji Microsoft C++, obsługa wyjątków **nieoczekiwany** wywołania **przerwanie** domyślnie i nigdy nie jest wywoływany przez biblioteki wykonawczej obsługi wyjątków. Nie ma żadnych dodatkowych zalet określonego wywołania **nieoczekiwany** zamiast **przerwanie**.
+
+Istnieje jeden **set_unexpected —** obsługę wszystkie połączone dynamicznie biblioteki DLL lub exe; nawet wtedy, gdy jest wywoływana **set_unexpected —** programu obsługi może być zastąpiony innym lub zamienianych ustawione przez program obsługi innego pliku DLL lub EXE.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**set_unexpected**|\<eh.h>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa wyjątków — procedury](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
+[_get_unexpected](get-unexpected.md)<br/>
+[set_terminate —](set-terminate-crt.md)<br/>
+[Zakończenie](terminate-crt.md)<br/>
+[Nieoczekiwany](unexpected-crt.md)<br/>

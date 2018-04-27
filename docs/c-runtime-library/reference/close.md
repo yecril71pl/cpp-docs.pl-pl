@@ -1,12 +1,12 @@
 ---
 title: _zamknij | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _close
@@ -32,58 +32,64 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9532d8fb98786f35dfa888b5bf8bef5e3e8b2583
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e49906a1ea0bf66400a6ac753c5d4041bc47217c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="close"></a>_close
-Zamyka plik.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _close(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `fd`  
- Plik deskryptora odwołujących się do otwartego pliku.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_close` Zwraca wartość 0, jeśli plik został zamknięty pomyślnie. Zwracana wartość -1 wskazuje błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- `_close` Funkcja zamyka plik skojarzony z `fd`.  
-  
- Deskryptorów plików i dojście do pliku podstawowego systemu operacyjnego są zamknięte. W związku z tym nie jest konieczne do wywołania `CloseHandle` Jeśli plik został pierwotnie otwarty przy użyciu funkcji Win32 `CreateFile` i przekonwertować deskryptora pliku przy użyciu `_open_osfhandle`.  
-  
- Ta funkcja weryfikuje jego parametrów. Jeśli `fd` deskryptor nieprawidłowego pliku, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, funkcje, zwraca -1 i `errno` ma ustawioną wartość `EBADF`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
-|-------------|---------------------|---------------------|  
-|`_close`|\<io.h>|\<errno.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
- Zobacz przykład [_otwórz](../../c-runtime-library/reference/open-wopen.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)   
- [_chsize —](../../c-runtime-library/reference/chsize.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
- [_otwórz, _wopen —](../../c-runtime-library/reference/open-wopen.md)   
- [_unlink, _wunlink](../../c-runtime-library/reference/unlink-wunlink.md)
+
+Zamyka plik.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _close(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*FD*<br/>
+Plik deskryptora odwołujących się do otwartego pliku.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**_zamknij** zwraca wartość 0, jeśli plik został zamknięty pomyślnie. Zwracana wartość -1 wskazuje błąd.
+
+## <a name="remarks"></a>Uwagi
+
+**_Zamknij** funkcja zamyka plik skojarzony z *fd*.
+
+Deskryptorów plików i dojście do pliku podstawowego systemu operacyjnego są zamknięte. W związku z tym nie jest konieczne do wywołania **CloseHandle** Jeśli plik został pierwotnie otwarty przy użyciu funkcji Win32 **CreateFile** i przekonwertować deskryptora pliku przy użyciu **_open_osfhandle —**.
+
+Ta funkcja weryfikuje jego parametrów. Jeśli *fd* deskryptor nieprawidłowego pliku, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, funkcje, zwraca -1 i **errno** ustawiono **ebadf —**.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|-------------|---------------------|---------------------|
+|**_close**|\<io.h>|\<errno.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz przykład [_otwórz](open-wopen.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[_chsize](chsize.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_dup, _dup2](dup-dup2.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_unlink, _wunlink](unlink-wunlink.md)<br/>

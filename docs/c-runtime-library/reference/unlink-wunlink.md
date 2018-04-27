@@ -1,12 +1,12 @@
 ---
 title: _unlink, _wunlink | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _unlink
@@ -41,89 +41,95 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 394638d8e8115bb5b3dc9629669067f5f9158c77
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 93b3551028ade7f510b94fb560e8535665677e3b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
-Usuń plik.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _unlink(  
-   const char *filename   
-);  
-int _wunlink(  
-   const wchar_t *filename   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `filename`  
- Nazwa pliku do usunięcia.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Każda z tych funkcji zwraca wartość 0 w przypadku powodzenia. W przeciwnym razie funkcja zwraca wartość -1 i zestawy `errno` do `EACCES`, co oznacza, że ścieżka Określa plik tylko do odczytu lub `ENOENT`, co oznacza pliku lub ścieżka nie zostanie znaleziony, lub określona ścieżka katalogu.  
-  
- Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.  
-  
-## <a name="remarks"></a>Uwagi  
- `_unlink` Funkcja usuwa plik określony przez `filename`. `_wunlink` jest to wersja znaków dwubajtowych `_unlink`; `filename` argument `_wunlink` jest ciągiem znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tunlink`|`_unlink`|`_unlink`|`_wunlink`|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_unlink`|\<IO.h > i \<stdio.h >|  
-|`_wunlink`|\<IO.h > lub \<wchar.h >|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="code-example"></a>Przykład kodu  
- _Unlink — jest używane do usuwania CRT_UNLINK. TXT.  
-  
-```  
-// crt_unlink.c  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   if( _unlink( "crt_unlink.txt" ) == -1 )  
-      perror( "Could not delete 'CRT_UNLINK.TXT'" );  
-   else  
-      printf( "Deleted 'CRT_UNLINK.TXT'\n" );  
-}  
-```  
-  
-### <a name="input-crtunlinktxt"></a>Input: crt_unlink.txt  
-  
-```  
-This file will be deleted.  
-```  
-  
-### <a name="sample-output"></a>Przykładowe dane wyjściowe  
-  
-```  
-Deleted 'CRT_UNLINK.TXT'  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa plików](../../c-runtime-library/file-handling.md)   
- [_zamknij](../../c-runtime-library/reference/close.md)   
- [remove, _wremove](../../c-runtime-library/reference/remove-wremove.md)
+
+Usuń plik.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _unlink(
+   const char *filename
+);
+int _wunlink(
+   const wchar_t *filename
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Nazwa pliku*<br/>
+Nazwa pliku do usunięcia.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Każda z tych funkcji zwraca wartość 0 w przypadku powodzenia. W przeciwnym razie funkcja zwraca wartość -1 i zestawy **errno** do **eacces —**, co oznacza, że ścieżka Określa plik tylko do odczytu lub **enoent —**, co oznacza pliku lub ścieżka nie można odnaleźć lub Określona ścieżka katalogu.
+
+Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
+
+## <a name="remarks"></a>Uwagi
+
+**_Unlink —** funkcja usuwa plik określony przez *filename*. **_wunlink —** jest wersja znaków dwubajtowych **_unlink —**; *filename* argument **_wunlink —** jest ciągiem znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tunlink —**|**_unlink**|**_unlink**|**_wunlink**|
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_unlink**|\<IO.h > i \<stdio.h >|
+|**_wunlink**|\<IO.h > lub \<wchar.h >|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="code-example"></a>Przykład kodu
+
+_Unlink — jest używane do usuwania CRT_UNLINK. TXT.
+
+```C
+// crt_unlink.c
+
+#include <stdio.h>
+
+int main( void )
+{
+   if( _unlink( "crt_unlink.txt" ) == -1 )
+      perror( "Could not delete 'CRT_UNLINK.TXT'" );
+   else
+      printf( "Deleted 'CRT_UNLINK.TXT'\n" );
+}
+```
+
+### <a name="input-crtunlinktxt"></a>Input: crt_unlink.txt
+
+```Input
+This file will be deleted.
+```
+
+### <a name="sample-output"></a>Przykładowe dane wyjściowe
+
+```Output
+Deleted 'CRT_UNLINK.TXT'
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
+[_close](close.md)<br/>
+[remove, _wremove](remove-wremove.md)<br/>

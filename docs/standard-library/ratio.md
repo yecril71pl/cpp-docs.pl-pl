@@ -1,12 +1,12 @@
 ---
-title: "&lt;współczynnik&gt; | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: '&lt;współczynnik&gt; | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - ratio/std::mega
@@ -40,29 +40,29 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 415c91f79102103fe71e21384b16d691779e6a2d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f91c3914a935c1882500ba8462b16dd6b08f5f13
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
-Dołącz nagłówek standardowy \<stosunek > Aby zdefiniować stałe i szablony, które są używane do przechowywania i manipulowania liczby wymierne w czasie kompilacji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-#include <ratio>  
-```  
-  
-### <a name="ratio-template"></a>współczynnik szablonu  
+Dołącz nagłówek standardowy \<stosunek > Aby zdefiniować stałe i szablony, które są używane do przechowywania i manipulowania liczby wymierne w czasie kompilacji.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+#include <ratio>
+```
+
+### <a name="ratio-template"></a>współczynnik szablonu
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
@@ -72,35 +72,35 @@ template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
    static constexpr std::intmax_t den;
    typedef ratio<num, den> type;
 }
-```  
+```
 
-Szablon `ratio` definiuje stałe statyczne `num` i `den` tak, aby `num`  /  `den` == licznik / Denominator i `num` i `den` mieć nie typowych czynników. `num` / `den` to wartość, która jest reprezentowana przez klasy szablonu. W związku z tym `type` wyznacza wystąpienia `ratio<num, den>`.  
-  
+Szablon `ratio` definiuje stałe statyczne `num` i `den` tak, aby `num`  /  `den` == licznik / Denominator i `num` i `den` mieć nie typowych czynników. `num` / `den` to wartość, która jest reprezentowana przez klasy szablonu. W związku z tym `type` wyznacza wystąpienia `ratio<num, den>`.
+
 ### <a name="specializations"></a>Specjalizacje
 
-\<współczynnik > definiuje również specjalizacjach `ratio` mają następującą postać.  
-  
-`template <class R1, class R2> struct ratio_specialization`  
-  
-Każdy specjalizacji przyjmuje dwa parametry szablonu, które muszą być również specjalizacjach `ratio`. Wartość `type` jest określany przez skojarzony operacji logicznej.  
-  
-|Nazwa|`type` Wartość|  
-|----------|------------------|  
-|`ratio_add`|`R1 + R2`|  
-|`ratio_divide`|`R1 / R2`|  
-|`ratio_equal`|`R1 == R2`|  
-|`ratio_greater`|`R1 > R2`|  
-|`ratio_greater_equal`|`R1 >= R2`|  
-|`ratio_less`|`R1 < R2`|  
-|`ratio_less_equal`|`R1 <= R2`|  
-|`ratio_multiply`|`R1 * R2`|  
-|`ratio_not_equal`|`!(R1 == R2)`|  
-|`ratio_subtract`|`R1 - R2`|  
-  
-### <a name="typedefs"></a>definicje typów  
+\<współczynnik > definiuje również specjalizacjach `ratio` mają następującą postać.
+
+`template <class R1, class R2> struct ratio_specialization`
+
+Każdy specjalizacji przyjmuje dwa parametry szablonu, które muszą być również specjalizacjach `ratio`. Wartość `type` jest określany przez skojarzony operacji logicznej.
+
+|Nazwa|`type` Wartość|
+|----------|------------------|
+|`ratio_add`|`R1 + R2`|
+|`ratio_divide`|`R1 / R2`|
+|`ratio_equal`|`R1 == R2`|
+|`ratio_greater`|`R1 > R2`|
+|`ratio_greater_equal`|`R1 >= R2`|
+|`ratio_less`|`R1 < R2`|
+|`ratio_less_equal`|`R1 <= R2`|
+|`ratio_multiply`|`R1 * R2`|
+|`ratio_not_equal`|`!(R1 == R2)`|
+|`ratio_subtract`|`R1 - R2`|
+
+### <a name="typedefs"></a>definicje typów
 
 Dla wygody nagłówka definiuje stosunek dla standardowych prefiksów SI:
-  
+
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
 typedef ratio<1, 1000000000000000> femto;
@@ -118,10 +118,8 @@ typedef ratio<1000000000, 1> giga;
 typedef ratio<1000000000000, 1> tera;
 typedef ratio<1000000000000000, 1> peta;
 typedef ratio<1000000000000000000, 1> exa;
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)
+```
 
+## <a name="see-also"></a>Zobacz także
 
-
+[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>

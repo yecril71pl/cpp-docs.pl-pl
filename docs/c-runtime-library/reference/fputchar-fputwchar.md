@@ -1,12 +1,12 @@
 ---
-title: "_fputchar —, _fputwchar — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _fputchar —, _fputwchar — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fputchar
@@ -42,85 +42,90 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4b7e510e978bcffb8b3744f63d5da24ec7afc5a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e8ce9209f8ee99ef2f48eeb81c79548ff6e8cbf6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
-Zapisuje znaku `stdout`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _fputchar(  
-   int c   
-);  
-wint_t _fputwchar(  
-   wchar_t c   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Znak do zapisania.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Każda z tych funkcji zwraca znak zapisywane. Aby uzyskać `_fputchar`, zwracana wartość `EOF` wskazuje błąd. Aby uzyskać `_fputwchar`, zwracana wartość `WEOF` wskazuje błąd. Jeśli jest c `NULL`, te funkcje wygeneruje wyjątek nieprawidłowy parametr, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają `EOF` (lub `WEOF`) i ustawić `errno` do `EINVAL`.  
-  
- Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Uwagi  
- Obie te funkcje zapisuje pojedynczy znak `c` do `stdout` i przesuwa wskaźnik zależnie od potrzeb. `_fputchar` jest odpowiednikiem `fputc( stdout )`. Również jest odpowiednikiem `putchar`, ale zaimplementowany tylko jako funkcję, a nie jako funkcję i makra. W odróżnieniu od `fputc` i `putchar`, te funkcje nie są zgodne ze standardem ANSI.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_fputtchar`|`_fputchar`|`_fputchar`|`_fputwchar`|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|  
-|--------------|---------------------|  
-|`_fputchar`|\<stdio.h>|  
-|`_fputwchar`|\<stdio.h > lub \<wchar.h >|  
-  
- Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_fputchar.c  
-// This program uses _fputchar  
-// to send a character array to stdout.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-    char strptr[] = "This is a test of _fputchar!!\n";  
-    char *p = NULL;  
-  
-    // Print line to stream using _fputchar.   
-    p = strptr;  
-    while( (*p != '\0') && _fputchar( *(p++) ) != EOF )  
-      ;  
-}  
-```  
-  
-```Output  
-This is a test of _fputchar!!  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [fgetc —, fgetwc —](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)
+
+Zapisuje znaku **stdout**.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _fputchar(
+   int c
+);
+wint_t _fputwchar(
+   wchar_t c
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Znak do zapisania.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Każda z tych funkcji zwraca znak zapisywane. Aby uzyskać **_fputchar —**, zwracana wartość **EOF** wskazuje błąd. Aby uzyskać **_fputwchar —**, zwracana wartość **weof —** wskazuje błąd. Jeśli jest c **NULL**, te funkcje wygeneruje wyjątek nieprawidłowy parametr, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają **EOF** (lub **weof —**) i ustawić **errno** do **einval —**.
+
+Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Uwagi
+
+Obie te funkcje zapisuje pojedynczy znak *c* do **stdout** i przesuwa wskaźnik zależnie od potrzeb. **_fputchar —** jest odpowiednikiem `fputc( stdout )`. Również jest odpowiednikiem **putchar —**, ale zaimplementowany tylko jako funkcję, a nie jako funkcję i makra. W odróżnieniu od **fputc —** i **putchar —**, te funkcje nie są zgodne ze standardem ANSI.
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_fputtchar —**|**_fputchar —**|**_fputchar —**|**_fputwchar —**|
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|
+|--------------|---------------------|
+|**_fputchar —**|\<stdio.h>|
+|**_fputwchar —**|\<stdio.h > lub \<wchar.h >|
+
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —**stdin**, **stdout**, i **stderr**— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_fputchar.c
+// This program uses _fputchar
+// to send a character array to stdout.
+
+#include <stdio.h>
+
+int main( void )
+{
+    char strptr[] = "This is a test of _fputchar!!\n";
+    char *p = NULL;
+
+    // Print line to stream using _fputchar.
+    p = strptr;
+    while( (*p != '\0') && _fputchar( *(p++) ) != EOF )
+      ;
+}
+```
+
+```Output
+This is a test of _fputchar!!
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[fgetc, fgetwc](fgetc-fgetwc.md)<br/>
+[putc, putwc](putc-putwc.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: _fcvt | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: _fcvt — | Dokumentacja firmy Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fcvt
@@ -34,101 +34,106 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def428073c15f3d408174916098573ddff98cde0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 780010fc31fe8e3667fcff1ace32ae83a6846c01
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fcvt"></a>_fcvt
-Konwertuje liczba zmiennoprzecinkowa na ciąg. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [_fcvt_s —](../../c-runtime-library/reference/fcvt-s.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-char *_fcvt(   
-   double value,  
-   int count,  
-   int *dec,  
-   int *sign   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `value`  
- Numer do skonwertowania.  
-  
- `count`  
- Liczba cyfr po punkcie dziesiętnym.  
-  
- `dec`  
- Wskaźnik do składowanej położenie punktu dziesiętnego.  
-  
- `sign`  
- Wskaźnik do wskaźnika logowania przechowywanej.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_fcvt` Zwraca wskaźnik do ciągu znaków, wartość NULL w przypadku błędu.  
-  
-## <a name="remarks"></a>Uwagi  
- `_fcvt` Funkcja konwertuje liczba zmiennoprzecinkowa na ciąg znaków zakończony znakiem null. `value` Parametr jest liczbie zmiennoprzecinkowej do skonwertowania. `_fcvt` przechowuje cyfry `value` jako ciąg i dołącza znak null ('\0'). `count` Parametr określa liczbę cyfr po punkcie dziesiętnym przechowywania. Nadmiarowe cyfry są zaokrąglane do `count` miejsca. Jeśli jest dostępnych mniej niż `count` cyfr precyzji, ten ciąg jest uzupełniana zerami z.  
-  
- Całkowita liczba cyfr zwrócony przez `_fcvt` nie przekroczy `_CVTBUFSIZE`.  
-  
- Tylko cyfry są przechowywane w ciągu. Położenie punktu dziesiętnego i znak `value` można uzyskać z `dec` i zalogować się po wywołaniu. `dec` Parametr wskazuje na wartość całkowitą; daje to wartość całkowita położenie punktu dziesiętnego względem początku ciąg. Wartość zero lub wartość ujemną całkowitą wskazuje dziesiętnego znajduje się na lewo od pierwszą. Parametr `sign` wskazuje na liczbę całkowitą określającą znak `value`. Liczba całkowita jest ustawiony na 0, jeśli `value` jest dodatnia i ma ustawioną wartość różna od zera, jeśli liczba `value` jest ujemna.  
-  
- Różnica między `_ecvt` i `_fcvt` jest interpretacji `count` parametru. `_ecvt` interpretuje `count` jako liczba cyfr w ciągu wyjściowego, podczas gdy `_fcvt` interpretuje `count` jako liczbę cyfr po punkcie dziesiętnym.  
-  
- `_ecvt` i `_fcvt` do konwersji użyj pojedynczego statycznie przydzielonego buforu. Każde wywołanie do jednej z tych procedur niszczy wyniki poprzedniego wywołania.  
-  
- Ta funkcja weryfikuje jego parametrów. Jeśli `dec` lub `sign` ma wartość NULL, lub `count` wynosi 0, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i zostanie zwrócona wartość NULL.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|  
-|--------------|---------------------|  
-|`_fcvt`|\<stdlib.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_fcvt.c  
-// compile with: /W3  
-// This program converts the constant  
-// 3.1415926535 to a string and sets the pointer  
-// buffer to point to that string.  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int  decimal, sign;  
-   char *buffer;  
-   double source = 3.1415926535;  
-  
-   buffer = _fcvt( source, 7, &decimal, &sign ); // C4996  
-   // Note: _fcvt is deprecated; consider using _fcvt_s instead  
-   printf( "source: %2.10f   buffer: '%s'   decimal: %d   sign: %d\n",  
-            source, buffer, decimal, sign );  
-}  
-```  
-  
-```Output  
-source: 3.1415926535   buffer: '31415927'   decimal: 1   sign: 0  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwersja danych](../../c-runtime-library/data-conversion.md)   
- [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [_gcvt](../../c-runtime-library/reference/gcvt.md)
+
+Konwertuje liczba zmiennoprzecinkowa na ciąg. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [_fcvt_s —](fcvt-s.md).
+
+## <a name="syntax"></a>Składnia
+
+```C
+char *_fcvt(
+   double value,
+   int count,
+   int *dec,
+   int *sign
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*value*<br/>
+Numer do skonwertowania.
+
+*Liczba*<br/>
+Liczba cyfr po punkcie dziesiętnym.
+
+*DEC*<br/>
+Wskaźnik do składowanej położenie punktu dziesiętnego.
+
+*sign*<br/>
+Wskaźnik do wskaźnika logowania przechowywanej.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**_fcvt —** zwraca wskaźnik do ciągu znaków, wartość NULL w przypadku błędu.
+
+## <a name="remarks"></a>Uwagi
+
+**_Fcvt —** funkcja konwertuje liczba zmiennoprzecinkowa na ciąg znaków zakończony znakiem null. *Wartość* parametr jest liczbie zmiennoprzecinkowej do skonwertowania. **_fcvt —** przechowuje cyfry *wartość* jako ciąg i dołącza znak null ('\0'). *Liczba* parametr określa liczbę cyfr po punkcie dziesiętnym przechowywania. Nadmiarowe cyfry są zaokrąglane do *liczba* miejsca. Jeśli jest dostępnych mniej niż *liczba* cyfr precyzji, ten ciąg jest uzupełniana zerami z.
+
+Całkowita liczba cyfr zwrócony przez **_fcvt —** nie przekroczy **_CVTBUFSIZE**.
+
+Tylko cyfry są przechowywane w ciągu. Położenie punktu dziesiętnego i znak *wartość* można uzyskać od *gru* i zalogować się po wywołaniu. *Gru* parametr wskazuje na wartość całkowitą; daje to wartość całkowita położenie punktu dziesiętnego względem początku ciąg. Wartość zero lub wartość ujemną całkowitą wskazuje dziesiętnego znajduje się na lewo od pierwszą. Parametr *znak* wskazuje na liczbę całkowitą określającą znak *wartość*. Liczba całkowita jest ustawiony na 0, jeśli *wartość* jest dodatnia i ma ustawioną wartość różna od zera, jeśli liczba *wartość* jest ujemna.
+
+Różnica między **_ecvt —** i **_fcvt —** jest interpretacji *liczba* parametru. **_ecvt —** interpretuje *liczba* jako liczba cyfr w ciągu wyjściowego, natomiast **_fcvt —** interpretuje *liczby* jako liczbę cyfr po separatorem dziesiętnym.
+
+**_ecvt —** i **_fcvt —** do konwersji użyj pojedynczego statycznie przydzielonego buforu. Każde wywołanie do jednej z tych procedur niszczy wyniki poprzedniego wywołania.
+
+Ta funkcja weryfikuje jego parametrów. Jeśli *gru* lub *znak* ma wartość NULL, lub *liczba* wynosi 0, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i zostanie zwrócona wartość NULL.
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|
+|--------------|---------------------|
+|**_fcvt**|\<stdlib.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_fcvt.c
+// compile with: /W3
+// This program converts the constant
+// 3.1415926535 to a string and sets the pointer
+// buffer to point to that string.
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   int  decimal, sign;
+   char *buffer;
+   double source = 3.1415926535;
+
+   buffer = _fcvt( source, 7, &decimal, &sign ); // C4996
+   // Note: _fcvt is deprecated; consider using _fcvt_s instead
+   printf( "source: %2.10f   buffer: '%s'   decimal: %d   sign: %d\n",
+            source, buffer, decimal, sign );
+}
+```
+
+```Output
+source: 3.1415926535   buffer: '31415927'   decimal: 1   sign: 0
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
+[_ecvt](ecvt.md)<br/>
+[_gcvt](gcvt.md)<br/>

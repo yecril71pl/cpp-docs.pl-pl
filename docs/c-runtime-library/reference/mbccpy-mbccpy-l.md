@@ -1,12 +1,12 @@
 ---
 title: _mbccpy, _mbccpy_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbccpy
@@ -43,74 +43,75 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ad2ff9b8d9b1369b009898ae9b78c34c3643f85
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 583f241d85c3c94a2f276e39c187baf175c5a1f4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
-Kopiuje znaków wielobajtowych z jednego ciągu na inny ciąg. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_mbccpy_s —, _mbccpy_s_l —](../../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md).  
-  
+
+Kopiuje znaków wielobajtowych z jednego ciągu na inny ciąg. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_mbccpy_s —, _mbccpy_s_l —](mbccpy-s-mbccpy-s-l.md).
+
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void _mbccpy(  
-   unsigned char *dest,  
-   const unsigned char *src   
-);  
-void _mbccpy_l(  
-   unsigned char *dest,  
-   const unsigned char *src,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `dest`  
- Lokalizacji docelowej kopiowania.  
-  
- `src`  
- Znaków wielobajtowych do skopiowania.  
-  
- `locale`  
- Ustawienia regionalne do użycia.  
-  
-## <a name="remarks"></a>Uwagi  
- `_mbccpy` Funkcja kopiuje znaków wielobajtowych jednego z `src` do `dest`.  
-  
- Ta funkcja weryfikuje jego parametrów. Jeśli `_mbccpy` jest przekazywany wskaźnika o wartości null `dest` lub `src`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ma ustawioną wartość `EINVAL`.  
-  
- `_mbccpy` używa bieżące ustawienia regionalne dla dowolnego zachowanie zależnych od ustawień regionalnych. `_mbccpy_l` jest taka sama jak `_mbccpy` z tą różnicą, że `_mbccpy_l` korzysta z ustawień regionalnych przekazano wszystkie działania zależne od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
-  
- **Uwaga dotycząca zabezpieczeń** użyć ciągu zakończonego wartością null. Ciąg znaków zakończony znakiem null nie może przekraczać rozmiar buforu docelowego. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795). Przepełnienie buforu problemy używanej metody ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tccpy`|Map — makro lub wewnętrznej funkcji|`_mbccpy`|Map — makro lub wewnętrznej funkcji|  
-|`_tccpy_l`|n/d|`_mbccpy_l`|n/d|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_mbccpy`|\<mbctype.h>|  
-|`_mbccpy_l`|\<mbctype.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)
+> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Składnia
+
+```C
+void _mbccpy(
+   unsigned char *dest,
+   const unsigned char *src
+);
+void _mbccpy_l(
+   unsigned char *dest,
+   const unsigned char *src,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*docelowy* lokalizacji docelowej kopiowania.
+
+*SRC* znaków wielobajtowych do skopiowania.
+
+*Ustawienia regionalne* ustawienia regionalne do użycia.
+
+## <a name="remarks"></a>Uwagi
+
+**_Mbccpy —** funkcja kopiuje znaków wielobajtowych jednego z *src* do *dest*.
+
+Ta funkcja weryfikuje jego parametrów. Jeśli **_mbccpy —** jest przekazywany wskaźnika o wartości null *dest* lub *src*, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —**.
+
+**_mbccpy —** używa bieżące ustawienia regionalne dla dowolnego zachowanie zależnych od ustawień regionalnych. **_mbccpy_l —** jest taka sama jak **_mbccpy —** z tą różnicą, że **_mbccpy_l —** korzysta z ustawień regionalnych przekazano wszystkie działania zależne od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+
+**Uwaga dotycząca zabezpieczeń** użyć ciągu zakończonego wartością null. Ciąg znaków zakończony znakiem null nie może przekraczać rozmiar buforu docelowego. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795). Przepełnienie buforu problemy używanej metody ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień.
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tccpy —**|Map — makro lub wewnętrznej funkcji|**_mbccpy**|Map — makro lub wewnętrznej funkcji|
+|**_tccpy_l —**|n/d|**_mbccpy_l**|n/d|
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_mbccpy**|\<mbctype.h>|
+|**_mbccpy_l**|\<mbctype.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

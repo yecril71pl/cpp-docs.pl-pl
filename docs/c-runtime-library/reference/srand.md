@@ -1,12 +1,12 @@
 ---
-title: "srand — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: srand — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srand
@@ -42,15 +42,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cc76b80ca6c01d6512c69cc13fb0934e79b6ae5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a01e56159bf4f04f2c8a53f39e3fcd1e7dd450b5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="srand"></a>srand
 
-Ustawia wartość początkową inicjatora dla generatora liczb pseudolosowych używane przez `rand` funkcji.
+Ustawia wartość początkową inicjatora dla generatora liczb pseudolosowych używane przez **rand** funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,26 +62,25 @@ void srand(
 
 ### <a name="parameters"></a>Parametry
 
-*inicjatora*  
-Inicjator dla Generowanie liczb pseudolosowych
+*seed* inicjatora dla Generowanie liczb pseudolosowych
 
 ## <a name="remarks"></a>Uwagi
 
-`srand` Funkcja określa punkt początkowy generowania serii liczb pseudolosowych w bieżącym wątku. Aby ponownie zainicjować generatora, aby utworzyć taką samą sekwencję wyników, należy wywołać `srand` funkcji i używać tego samego *inicjatora* argument ponownie. Wszystkie inne wartości *inicjatora* ustawia generator do innego punktu początkowego pseudolosowych sekwencji. `rand` pobiera liczb pseudolosowych, które zostały wygenerowane. Wywoływanie `rand` przed wywołaniem dowolnej `srand` generuje takiej samej kolejności, co wywołanie `srand` z *inicjatora* przekazany jako 1.
+**Srand —** funkcja określa punkt początkowy generowania serii liczb pseudolosowych w bieżącym wątku. Aby ponownie zainicjować generatora, aby utworzyć taką samą sekwencję wyników, należy wywołać **srand —** funkcji i używać tego samego *inicjatora* argument ponownie. Wszystkie inne wartości *inicjatora* ustawia generator do innego punktu początkowego pseudolosowych sekwencji. **RAND** pobiera liczb pseudolosowych, które zostały wygenerowane. Wywoływanie **rand** przed wywołaniem dowolnej **srand —** generuje takiej samej kolejności, co wywołanie **srand —** z *inicjatora* przekazany jako 1.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`srand`|\<stdlib.h>|
+|**srand**|\<stdlib.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [rand](../../c-runtime-library/reference/rand.md).
+Zobacz przykład [rand](rand.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)  
-[rand](../../c-runtime-library/reference/rand.md)  
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[rand](rand.md)<br/>

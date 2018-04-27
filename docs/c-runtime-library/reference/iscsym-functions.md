@@ -1,12 +1,12 @@
 ---
-title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l | Microsoft Docs
-ms.custom: 
+title: iscsym —, iscsymf —, __iscsym —, __iswcsym —, __iscsymf —, __iswcsymf —, _iscsym_l —, _iswcsym_l —, _iscsymf_l —, _iswcsymf_l — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _iswcsym_l
@@ -71,17 +71,17 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85c650efa09bb093da65be874c890c77282d3fa3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 225a5ab6dd00619b825be5b7e5220de70aafc3ba
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
@@ -124,32 +124,32 @@ int _iswcsymf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*  
+*c*<br/>
 Liczba całkowita do testowania. *c* powinien być z zakresu od 0 do 255 dla wersji znaki wąskie funkcji.
 
-*Ustawienia regionalne*  
+*Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zarówno `__iscsym` i `__iswcsym` zwrócić wartość niezerową, jeśli *c* litera, podkreślenie lub cyfr. Zarówno `__iscsymf` i `__iswcsymf` zwrócić wartość niezerową, jeśli *c* jest literą lub znakiem podkreślenia. Każdy z tych procedur zwraca 0, jeśli *c* nie spełnia warunku. Wersje tych funkcji z `_l` sufiks są identyczne z tą różnicą, że używają one *ustawień regionalnych* przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Zarówno **__iscsym —** i **__iswcsym —** zwrócić wartość niezerową, jeśli *c* litera, podkreślenie lub cyfr. Zarówno **__iscsymf —** i **__iswcsymf —** zwrócić wartość niezerową, jeśli *c* jest literą lub znakiem podkreślenia. Każdy z tych procedur zwraca 0, jeśli *c* nie spełnia warunku. Wersje tych funkcji z **_l** sufiks są identyczne z tą różnicą, że używają one *ustawień regionalnych* przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Uwagi
 
 Te procedury są definiowane jako makra, chyba że jest zdefiniowane _CTYPE_DISABLE_MACROS makro preprocesora. Gdy używasz wersji makro tych procedur, argumenty może przyjąć więcej niż raz. Należy zachować ostrożność, korzystając z wyrażeń, które ma efekty uboczne w liście argumentów.
 
-W celu zapewnienia zgodności z poprzednimi wersjami `iscsym` i `iscsymf` są zdefiniowane jako makra tylko wtedy, gdy [&#95; &#95; STDC &#95; &#95; ](../../preprocessor/predefined-macros.md) nie został zdefiniowany lub jest zdefiniowany jako 0; w przeciwnym razie zostały zdefiniowane.
+W celu zapewnienia zgodności z poprzednimi wersjami **iscsym —** i **iscsymf —** są zdefiniowane jako makra tylko wtedy, gdy [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) nie został zdefiniowany lub jest zdefiniowany jako 0; w przeciwnym razie zostały zdefiniowane.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l`, `_iswcsymf_l`|C: \<ctype.h><br /><br /> C++: \<cctype — > lub \<ctype.h >|
+|**iscsym —**, **iscsymf —**, **__iscsym —**, **__iswcsym —**, **__iscsymf —**, **__iswcsymf —**, **_iscsym_l —**, **_iswcsym_l —**, **_iscsymf_l —**, **_iswcsymf_l —**|C: \<ctype.h ><br /><br /> C++: \<cctype — > lub \<ctype.h >|
 
-`iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l`, I `_iswcsymf_l` procedury są określone firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+**Iscsym —**, **iscsymf —**, **__iscsym —**, **__iswcsym —**, **__iscsymf —**, **__ iswcsymf**, **_iscsym_l —**, **_iswcsym_l —**, **_iscsymf_l —**, i **_iswcsymf_l —** są procedury Określone firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Klasyfikacja znaków](../../c-runtime-library/character-classification.md)   
-[Ustawienia regionalne](../../c-runtime-library/locale.md)   
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)
+[Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
+[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

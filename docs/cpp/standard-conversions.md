@@ -1,12 +1,12 @@
 ---
 title: Konwersje standardowe | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: bdb7477d0ea07803bf2219118e1fb530a889118c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
 Język C++ definiuje konwersji między typami podstawowymi. Definiuje również konwersji dla wskaźnika, odwołanie, i typów pochodnych wskaźnika do elementu członkowskiego. Konwersje te są nazywane "konwersje standardowe." (Aby uzyskać więcej informacji na temat typów, standardowych typów i typów pochodnych, zobacz [typy](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  Zachowujące wartość promocje i promocje, które zachowują znak zazwyczaj generują te same wyniki. Jednakże, mogą wygenerować różne wyniki, jeśli promowany obiekt jest jednym z poniższych:  
   
--   Argument operacji  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , lub **>=**  
+-   Argument operacji **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, lub **>=**  
   
      Operatory te opierają się na znaku w celu określenia wyniku. W związku z tym, zachowujące wartość i znak promocje generują różne wyniki w razie zastosowania do tych operandów.  
   
--   Lewy argument operacji  **>>**  lub **>>=**  
+-   Lewy argument operacji **>>** lub **>>=**  
   
      Podczas wykonywania operacji przesunięcia, operatory inaczej traktują ilości oznaczone i nieznaczone. W przypadku ilości oznaczonych, przesunięcie liczby w prawo powoduje propagację bitu znaku na pozycje opuszczonych bitów. W przypadku ilości nieznaczonych, opuszczone pozycje bitowe są wypełniane zerami.  
   
@@ -120,8 +120,7 @@ int main()
   
  Obiekty niepodpisanych typów całkowitych można przekonwertować na odpowiednie typy ze znakiem. Takie Konwersja może jednak spowodować błędnej interpretacji danych, jeśli wartość bez znaku obiektu jest poza zakresem można przedstawić według typu ze znakiem, jak pokazano w poniższym przykładzie:  
   
-```  
-  
+```cpp
 #include <iostream>  
   
 using namespace std;  
@@ -142,11 +141,11 @@ int main()
   
  Przestawne typu obiektu również można przekonwertować typowi mniej dokładne, jeśli są w jej zasięgu można przedstawić według tego typu. (Zobacz [limity liczb zmiennoprzecinkowych](../cpp/floating-limits.md) dla zakresów z typów zmiennoprzecinkowych.) Jeśli oryginalna wartość nie może być reprezentowany dokładnie, aby można było przekonwertować jednej następnej wyższej lub dalej można przedstawić niższą wartość. Jeśli takie wartość nie istnieje, wynikiem jest niezdefiniowany. Rozważmy następujący przykład:  
   
-```  
+```cpp
 cout << (float)1E300 << endl;  
 ```  
   
- Wartość maksymalna można przedstawić według typu **float** jest 3.402823466E38 — znacznie mniejszą wartość niż 1E300. W związku z tym liczba jest konwertowana do nieskończoności, a wynik jest 1. #INF.  
+ Wartość maksymalna można przedstawić według typu **float** jest 3.402823466E38 — znacznie mniejszą wartość niż 1E300. W związku z tym liczba jest konwertowana do nieskończoności, a wynik jest "inf".  
   
 ## <a name="conversions-between-integral-and-floating-point-types"></a>Konwersje między typami punktu całkowitych i zmiennoprzecinkowych  
  Niektóre wyrażenia może spowodować obiekty przestawne typu do konwersji na typy całkowite ani odwrotnie. Gdy obiekt typu całkowitego jest konwertowana na typ zmiennoprzecinkowych i oryginalna wartość nie może być reprezentowany dokładnie, wynikiem jest albo następnej wyższej lub dalej można przedstawić niższą wartość.  

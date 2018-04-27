@@ -1,12 +1,12 @@
 ---
-title: "regex_constants — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: regex_constants — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - regex/std::regex_constants
@@ -91,43 +91,47 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b14c219f755e50e1ede0e8fd58d9a5158283235
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 239dbe69d32a5d9a463e33d9d3c1076aa0e79f50
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="regexconstants-class"></a>regex_constants — Klasa
-Przestrzeń nazw dla flag wyrażenia regularnego.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-namespace regex_constants {  
-    enum syntax_option_type;  
-    enum match_flag_type;  
-    enum error_type;  
- }  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Przestrzeń nazw `regex_constants` hermetyzuje kilka typów flagę i ich wartości flag skojarzone.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<regex >  
-  
- **Namespace:** Standard  
-  
-##  <a name="error_type"></a>  regex_constants::error_type  
- Flagi dla raportowania błędów składni wyrażeń regularnych.  
-  
-```  
+
+Przestrzeń nazw dla flag wyrażenia regularnego.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+namespace regex_constants {
+    enum syntax_option_type;
+    enum match_flag_type;
+    enum error_type;
+ }
+```
+
+## <a name="remarks"></a>Uwagi
+
+Przestrzeń nazw `regex_constants` hermetyzuje kilka typów flagę i ich wartości flag skojarzone.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** \<regex >
+
+**Namespace:** Standard
+
+## <a name="error_type"></a>  regex_constants::error_type
+
+Flagi dla raportowania błędów składni wyrażeń regularnych.
+
+```cpp
 enum error_type
     {    // identify error
     error_collate,
@@ -145,49 +149,51 @@ enum error_type
     error_stack,
     error_parse,
     error_syntax
-    };  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Typ jest Typ wyliczany opisujący obiekt, który może zawierać flag błędów. Flaga różne wartości są następujące:  
-  
- `error_backref` --wyrażenie zawiera nieprawidłowe odwołanie do tyłu  
-  
- `error_badbrace` --wyrażenie zawiera nieprawidłową liczbę w wyrażeniu {}  
-  
- `error_badrepeat` --powtarzania wyrażenia (jedną z "*", ","+"," {"w kontekstach większości) nie był poprzedzony przez wyrażenie  
-  
- `error_brace` --wyrażenie zawiera niedopasowane "{" lub "}"  
-  
- `error_brack` --wyrażenie zawiera niedopasowane "[" lub "]"  
-  
- `error_collate` --wyrażenie zawiera nieprawidłową nazwę sortowania elementu  
-  
- `error_complexity` --próbę dopasowania nie powiodło się, ponieważ był zbyt złożony  
-  
- `error_ctype` --wyrażenie zawiera nieprawidłowy znak nazwy klasy  
-  
- `error_escape` --wyrażenie zawiera nieprawidłową sekwencję ucieczki  
-  
- `error_paren` --wyrażenie zawiera niedopasowane "(" lub")"  
-  
- `error_parse` --Nie można przeanalizować wyrażenia  
-  
- `error_range` --wyrażenie zawiera nieprawidłowy znak specyfikator zakresu  
-  
- `error_space` — podczas analizowania wyrażenia regularnego nie powiodło się, ponieważ nie były dostępne za mało zasobów  
-  
- `error_stack` — dopasowanie próba nie powiodła się, ponieważ nie był dostępny za mało pamięci  
-  
- `error_syntax` --Wystąpił błąd podczas analizowania składni błędu  
-  
- `error_backref` --wyrażenie zawiera nieprawidłowe odwołanie do tyłu  
-  
-##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
- Flagi dla wyrażenia regularnego dopasowanie opcje.  
-  
-```  
-enum match_flag_type 
+    };
+```
+
+### <a name="remarks"></a>Uwagi
+
+Typ jest Typ wyliczany opisujący obiekt, który może zawierać flag błędów. Flaga różne wartości są następujące:
+
+`error_backref` --wyrażenie zawiera nieprawidłowe odwołanie do tyłu
+
+`error_badbrace` --wyrażenie zawiera nieprawidłową liczbę w wyrażeniu {}
+
+`error_badrepeat` --powtarzania wyrażenia (jedną z "*", ","+"," {"w kontekstach większości) nie był poprzedzony przez wyrażenie
+
+`error_brace` --wyrażenie zawiera niedopasowane "{" lub "}"
+
+`error_brack` --wyrażenie zawiera niedopasowane "[" lub "]"
+
+`error_collate` --wyrażenie zawiera nieprawidłową nazwę sortowania elementu
+
+`error_complexity` --próbę dopasowania nie powiodło się, ponieważ był zbyt złożony
+
+`error_ctype` --wyrażenie zawiera nieprawidłowy znak nazwy klasy
+
+`error_escape` --wyrażenie zawiera nieprawidłową sekwencję ucieczki
+
+`error_paren` --wyrażenie zawiera niedopasowane "(" lub")"
+
+`error_parse` --Nie można przeanalizować wyrażenia
+
+`error_range` --wyrażenie zawiera nieprawidłowy znak specyfikator zakresu
+
+`error_space` — podczas analizowania wyrażenia regularnego nie powiodło się, ponieważ nie były dostępne za mało zasobów
+
+`error_stack` — dopasowanie próba nie powiodła się, ponieważ nie był dostępny za mało pamięci
+
+`error_syntax` --Wystąpił błąd podczas analizowania składni błędu
+
+`error_backref` --wyrażenie zawiera nieprawidłowe odwołanie do tyłu
+
+## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+
+Flagi dla wyrażenia regularnego dopasowanie opcje.
+
+```cpp
+enum match_flag_type
     {    // specify matching and formatting rules
     match_default = 0x0000,
     match_not_bol = 0x0001,
@@ -203,46 +209,48 @@ enum match_flag_type
     format_no_copy = 0x0800,
     format_first_only = 0x1000,
     _Match_not_null = 0x2000
-    };  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Typ jest typem maski, który opisuje opcje, które będą używane podczas dopasowywania tekstu sekwencję przed wyrażeniem regularnym i format flagi do użycia podczas zamieniania tekstu. Opcje można łączyć z `|`.  
-  
- Dostępne są opcje dopasowania:  
-  
- `match_default`  
-  
- `match_not_bol` --nie Traktuj pierwszą pozycję w sekwencji docelowy jako początek wiersza  
-  
- `match_not_eol` --nie Traktuj przeszłości end pozycji w sekwencji docelowy jako koniec wiersza  
-  
- `match_not_bow` --nie Traktuj pierwszą pozycję w sekwencji docelowy jako początku słowa  
-  
- `match_not_eow` --nie Traktuj przeszłości end pozycji w sekwencji docelowy jako koniec słowa  
-  
- `match_any` — Jeśli możliwe jest więcej niż jedno dopasowanie dopuszczalny jest żadnego dopasowania  
-  
- `match_not_null` --nie Traktuj puste podsekwencji jako dopasowanie  
-  
- `match_continuous` --Nie wyszukuj dopasowań innych niż na początku sekwencji docelowego  
-  
- `match_prev_avail` -- `--first` jest prawidłowy iteratora; Ignoruj `match_not_bol` i `match_not_bow` Jeśli ustawiona  
-  
- Flagi format to:  
-  
- `format_default` — Użyj reguł format języka ECMAScript  
-  
- `format_sed` — Użyj reguł format mniejszyć  
-  
- `format_no_copy` --nie Kopiuj tekst, który nie pasuje do wyrażenia regularnego  
-  
- `format_first_only` --nie wyszukiwania po pierwszego dopasowania  
-  
-##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
- Flagi do wybierania opcji składni.  
-  
-```  
+    };
+```
+
+### <a name="remarks"></a>Uwagi
+
+Typ jest typem maski, który opisuje opcje, które będą używane podczas dopasowywania tekstu sekwencję przed wyrażeniem regularnym i format flagi do użycia podczas zamieniania tekstu. Opcje można łączyć z `|`.
+
+Dostępne są opcje dopasowania:
+
+`match_default`
+
+`match_not_bol` --nie Traktuj pierwszą pozycję w sekwencji docelowy jako początek wiersza
+
+`match_not_eol` --nie Traktuj przeszłości end pozycji w sekwencji docelowy jako koniec wiersza
+
+`match_not_bow` --nie Traktuj pierwszą pozycję w sekwencji docelowy jako początku słowa
+
+`match_not_eow` --nie Traktuj przeszłości end pozycji w sekwencji docelowy jako koniec słowa
+
+`match_any` — Jeśli możliwe jest więcej niż jedno dopasowanie dopuszczalny jest żadnego dopasowania
+
+`match_not_null` --nie Traktuj puste podsekwencji jako dopasowanie
+
+`match_continuous` --Nie wyszukuj dopasowań innych niż na początku sekwencji docelowego
+
+`match_prev_avail` -- `--first` jest prawidłowy iteratora; Ignoruj `match_not_bol` i `match_not_bow` Jeśli ustawiona
+
+Flagi format to:
+
+`format_default` — Użyj reguł format języka ECMAScript
+
+`format_sed` — Użyj reguł format mniejszyć
+
+`format_no_copy` --nie Kopiuj tekst, który nie pasuje do wyrażenia regularnego
+
+`format_first_only` --nie wyszukiwania po pierwszego dopasowania
+
+## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+
+Flagi do wybierania opcji składni.
+
+```cpp
 enum syntax_option_type
     {    // specify RE syntax rules
     ECMAScript = 0x01,
@@ -257,42 +265,44 @@ enum syntax_option_type
     nosubs = 0x0200,
     optimize = 0x0400,
     collate = 0x0800
-    };  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Typ jest typem maski, który opisuje specyfikatory języka i Modyfikatory składni do użycia w przypadku kompilowania kodu wyrażenia regularnego. Opcje można łączyć z `|`. Specyfikator nie więcej niż jednym języku, należy używać w czasie.  
-  
- Specyfikatory języka są:  
-  
- `ECMAScript` --Skompiluj jako ECMAScript  
-  
- `basic` --Skompiluj jako BRE  
-  
- `extended` --Skompiluj jako ERE  
-  
- `awk` --Skompiluj jako awk  
-  
- `grep` --Skompiluj jako grep  
-  
- `egrep` --Skompiluj jako egrep  
-  
- Modyfikatory składnia to:  
-  
- `icase` — upewnić zgodna bez uwzględniania wielkości liter  
-  
- `nosubs` --przewidujące muszą nie zachować informacje o zawartości grupy przechwytywania  
-  
- `optimize` --wdrożenia należy wyróżnić szybkości zgodnych, a nie szybkość kompilacji wyrażeń regularnych  
-  
- `collate` — Utwórz odpowiada zależne od ustawień regionalnych  
-  
-## <a name="see-also"></a>Zobacz też  
-[\<regex>](../standard-library/regex.md)  
-[regex_error, klasa](../standard-library/regex-error-class.md)  
-[\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)  
-[regex_iterator, klasa](../standard-library/regex-iterator-class.md)  
-[\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)  
-[regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)  
-[regex_traits, klasa](../standard-library/regex-traits-class.md)  
-[\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)  
+    };
+```
+
+### <a name="remarks"></a>Uwagi
+
+Typ jest typem maski, który opisuje specyfikatory języka i Modyfikatory składni do użycia w przypadku kompilowania kodu wyrażenia regularnego. Opcje można łączyć z `|`. Specyfikator nie więcej niż jednym języku, należy używać w czasie.
+
+Specyfikatory języka są:
+
+`ECMAScript` --Skompiluj jako ECMAScript
+
+`basic` --Skompiluj jako BRE
+
+`extended` --Skompiluj jako ERE
+
+`awk` --Skompiluj jako awk
+
+`grep` --Skompiluj jako grep
+
+`egrep` --Skompiluj jako egrep
+
+Modyfikatory składnia to:
+
+`icase` — upewnić zgodna bez uwzględniania wielkości liter
+
+`nosubs` --przewidujące muszą nie zachować informacje o zawartości grupy przechwytywania
+
+`optimize` --wdrożenia należy wyróżnić szybkości zgodnych, a nie szybkość kompilacji wyrażeń regularnych
+
+`collate` — Utwórz odpowiada zależne od ustawień regionalnych
+
+## <a name="see-also"></a>Zobacz także
+
+[\<regex>](../standard-library/regex.md)<br/>
+[regex_error, klasa](../standard-library/regex-error-class.md)<br/>
+[\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)<br/>
+[regex_iterator, klasa](../standard-library/regex-iterator-class.md)<br/>
+[\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)<br/>
+[regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)<br/>
+[regex_traits, klasa](../standard-library/regex-traits-class.md)<br/>
+[\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)<br/>

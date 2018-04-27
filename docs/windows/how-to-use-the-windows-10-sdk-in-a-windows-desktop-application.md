@@ -1,28 +1,28 @@
 ---
-title: "Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu systemu Windows | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 'Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu systemu Windows | Dokumentacja firmy Microsoft'
+ms.custom: ''
+ms.date: 04/19/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f5e6f09b371c4d295b4bcdff469396a2671d22a
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 6cd358be2e9c28dae5c495d2a18cbbb7a0976ea7
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu systemu Windows
 Po utworzeniu klasycznego projekt pulpitu systemu Windows w programie Visual Studio 2017 ją skonfigurowano domyślnie do kompilacji z wersją systemu Windows 10 SDK został zainstalowany, gdy obciążenie pulpitu C++ został zainstalowany lub ostatniej aktualizacji. Ta wersja zestawu Windows SDK jest zgodna z wszystkich najnowszych wersji systemu Windows. Jeśli chcesz przeanalizować starszej wersji zestawu SDK, można otworzyć projektu | Właściwości i wybierz jedną z dostępnych na liście rozwijanej zestawu SDK systemu Windows w wersji wersji zestawu SDK.  
@@ -31,7 +31,8 @@ Po utworzeniu klasycznego projekt pulpitu systemu Windows w programie Visual Stu
   
 ### <a name="to-target-the-windows-10-sdk"></a>Docelowy zestaw Windows 10 SDK  
   
-1.  Upewnij się, że jest zainstalowany zestaw Windows 10 SDK. Zestaw Windows 10 SDK jest instalowane jako część [narzędzi dla systemu Windows 10](http://go.microsoft.com/fwlink/p/?linkid=617631).  
+1.  Upewnij się, że jest zainstalowany zestaw Windows 10 SDK. Zestaw Windows 10 SDK jest instalowane jako część **tworzenia klasycznych aplikacji w języku C++** obciążenia. Autonomiczna wersja jest dostępna na [pliki do pobrania i narzędzi dla systemu Windows 10](https://developer.microsoft.com/windows/downloads).
+
   
 2.  Otwórz menu skrótów węzła projektu i wybierz polecenie **Przekieruj zestawu SDK w wersji**.  
   

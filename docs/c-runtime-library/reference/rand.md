@@ -1,12 +1,12 @@
 ---
 title: RAND | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - rand
@@ -39,15 +39,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fecd9079de1ae846d83847eb299890d62c29d17
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b5d60cdedf69d03871be4c408241660ea726b5c5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rand"></a>rand
 
-Generuje liczby pseudolosowe za pomocą algorytmu dobrze znanych i pełni odtworzenia. Więcej programowo bezpiecznego wersja ta funkcja jest dostępna; zobacz [rand_s —](../../c-runtime-library/reference/rand-s.md). Kody generowane przez `rand` nie są zabezpieczone kryptograficznie. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj `rand_s` lub zadeklarowany funkcje standardowej biblioteki C++ w [ \<losowe >](../../standard-library/random.md).
+Generuje liczby pseudolosowe za pomocą algorytmu dobrze znanych i pełni odtworzenia. Więcej programowo bezpiecznego wersja ta funkcja jest dostępna; zobacz [rand_s —](rand-s.md). Kody generowane przez **rand** nie są zabezpieczone kryptograficznie. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj [rand_s —](rand-s.md) lub zadeklarowany funkcje standardowej biblioteki C++ w [ \<losowe >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,21 +57,21 @@ int rand( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`rand` Zwraca liczbę pseudolosowych, jak opisano powyżej. Nie ma żadnych zwracany błąd.
+**RAND** zwraca liczby pseudolosowe jak opisano powyżej. Nie ma żadnych zwracany błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-`rand` Funkcja zwraca pseudolosowych liczbą całkowitą z zakresu od 0 do `RAND_MAX` (32767). Użyj [srand —](../../c-runtime-library/reference/srand.md) funkcji jako zalążek generatora liczby pseudolosowe przed wywołaniem `rand`.
+**Rand** funkcja zwraca pseudolosowych liczbą całkowitą z zakresu od 0 do **rand_max —** (32767). Użyj [srand —](srand.md) funkcji jako zalążek generatora liczby pseudolosowe przed wywołaniem **rand**.
 
-`rand` Funkcji generuje dobrze znanego sekwencji i nie jest odpowiedni dla funkcji kryptograficznych. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj `rand_s` lub zadeklarowany funkcje standardowej biblioteki C++ w [ \<losowe >](../../standard-library/random.md). Aby uzyskać informacje o problem z `rand()` i w jaki sposób `<random>` dotyczy tych nieprawidłowości, zobacz [ten film](http://go.microsoft.com/fwlink/?LinkId=397615).
+**Rand** funkcji generuje dobrze znanego sekwencji i nie jest odpowiedni dla funkcji kryptograficznych. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj [rand_s —](rand-s.md) lub zadeklarowany funkcje standardowej biblioteki C++ w [ \<losowe >](../../standard-library/random.md). Aby uzyskać informacje o problem z **rand** i w jaki sposób \<losowe > dotyczy tych nieprawidłowości zobacz [ten film](http://go.microsoft.com/fwlink/?LinkId=397615).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`rand`|\<stdlib.h>|
+|**rand**|\<stdlib.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -125,7 +125,7 @@ int main( void )
 11651
 27464
 18093
- 3284
+3284
 11785
 14686
 11447
@@ -145,6 +145,6 @@ int main( void )
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)  
-[srand](../../c-runtime-library/reference/srand.md)  
-[rand_s](../../c-runtime-library/reference/rand-s.md)  
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[srand](srand.md)<br/>
+[rand_s](rand-s.md)<br/>

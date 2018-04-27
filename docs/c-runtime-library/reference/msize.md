@@ -1,12 +1,12 @@
 ---
-title: _msize | Microsoft Docs
-ms.custom: 
+title: _msize — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _msize
@@ -33,61 +33,67 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fdf8e5b6c9b0f6b63ac14784a90a4dc94b6abdc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ec596d74c5374720676b0c02f9d053fa443c3a3
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="msize"></a>_msize
-Zwraca rozmiar bloku pamięci przydzielić w stercie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-      size_t _msize(  
-   void *memblock   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `memblock`  
- Wskaźnik do bloku pamięci.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_msize` Zwraca rozmiar (w bajtach) jako liczbę całkowitą bez znaku.  
-  
-## <a name="remarks"></a>Uwagi  
- `_msize` Funkcja zwraca rozmiar w bajtach blok pamięci przydzielonej przez wywołanie `calloc`, `malloc`, lub `realloc`.  
-  
- Gdy aplikacja jest połączony z wersją debugowania biblioteki wykonawcze języka C, `_msize` jest rozpoznawana jako [_msize_dbg —](../../c-runtime-library/reference/msize-dbg.md). Aby uzyskać więcej informacji dotyczących sposobu zarządzania infrastrukturą sterty podczas debugowania procesu, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).  
-  
- Ta funkcja weryfikuje jej parametr. Jeśli `memblock` wskaźnika o wartości null, jest `_msize` wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli ten błąd jest obsługiwane, funkcja ustawia `errno` do `EINVAL` i zwraca wartość -1.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_msize`|\<malloc.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="libraries"></a>Biblioteki  
- Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Przykład  
- Zobacz przykład [realloc](../../c-runtime-library/reference/realloc.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)   
- [calloc](../../c-runtime-library/reference/calloc.md)   
- [_rozszerz lokację](../../c-runtime-library/reference/expand.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [realloc](../../c-runtime-library/reference/realloc.md)
+
+Zwraca rozmiar bloku pamięci przydzielić w stercie.
+
+## <a name="syntax"></a>Składnia
+
+```C
+size_t _msize(
+   void *memblock
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*memblock*<br/>
+Wskaźnik do bloku pamięci.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**_msize —** zwraca rozmiar (w bajtach) jako liczba całkowita bez znaku.
+
+## <a name="remarks"></a>Uwagi
+
+**_Msize —** funkcja zwraca rozmiar w bajtach blok pamięci przydzielonej przez wywołanie **calloc —**, **— funkcja malloc**, lub **realloc**.
+
+Gdy aplikacja jest połączony z wersją debugowania biblioteki wykonawcze języka C, **_msize —** jest rozpoznawana jako [_msize_dbg —](msize-dbg.md). Aby uzyskać więcej informacji dotyczących sposobu zarządzania infrastrukturą sterty podczas debugowania procesu, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+
+Ta funkcja weryfikuje jej parametr. Jeśli *memblock* wskaźnika o wartości null, jest **_msize —** wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli ten błąd jest obsługiwane, funkcja ustawia **errno** do **einval —** i zwraca wartość -1.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_msize**|\<malloc.h>|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Biblioteki
+
+Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz przykład [realloc](realloc.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
+[calloc](calloc.md)<br/>
+[_expand](expand.md)<br/>
+[malloc](malloc.md)<br/>
+[realloc](realloc.md)<br/>

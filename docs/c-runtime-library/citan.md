@@ -1,13 +1,10 @@
 ---
 title: _CItan | Dokumentacja firmy Microsoft
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/11/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CItan
 apilocation:
@@ -28,35 +25,38 @@ helpviewer_keywords:
 - CItan intrinsic
 - _CItan intrinsic
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42bf2d2f7d38779dbed78414fcd94dc33ab82480
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f67c7303bd20b4b9b6088b9107e1a60ffd19f2b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="citan"></a>_CItan
-Oblicza tangens wartość top w stosie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __cdecl _CItan();  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta wersja `tan` funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Funkcja przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowane i pomaga w alokacja rejestru.  
-  
- Wartość wynikową spoczywa na wierzchu stosu.  
-  
-## <a name="requirements"></a>Wymagania  
- **Platforma:** x86  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne odwołanie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [tan, tanf, tanl, tanh, tanhf, tanhl](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)
+
+Oblicza tangens wartość top w stosie zmiennoprzecinkowych.
+
+## <a name="syntax"></a>Składnia
+
+```C
+void __cdecl _CItan();
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta wersja [tan](../c-runtime-library/reference/tan-tanf-tanl.md) funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Funkcja przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowane i pomaga w alokacja rejestru.
+
+Wartość wynikową spoczywa na wierzchu stosu zmiennoprzecinkowych.
+
+## <a name="requirements"></a>Wymagania
+
+**Platforma:** x86
+
+## <a name="see-also"></a>Zobacz także
+
+[Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[tan tanf —, tanl —](../c-runtime-library/reference/tan-tanf-tanl.md)<br/>

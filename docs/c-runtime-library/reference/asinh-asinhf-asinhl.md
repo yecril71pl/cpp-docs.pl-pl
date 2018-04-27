@@ -1,12 +1,12 @@
 ---
-title: "ASINH asinhf —, asinhl | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: ASINH asinhf —, asinhl | Dokumentacja firmy Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - asinh
@@ -36,96 +36,92 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 563e8a87adc07707aa6eb9baaacb634321bd768e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 50cd387f2c943d407dd11fe2e191457314f5cba9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
-Oblicza sinus hiperboliczny.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-double asinh(  
-   double x   
-);  
-float asinh(  
-   float x   
-);  // C++ only  
-long double asinh(  
-   long double x  
-);  // C++ only  
-float asinhf(  
-   float x   
-);  
-long double asinhl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `x`  
- Wartość zmiennoprzecinkowa.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `asinh` Hyberbolic odwrotny sinus (arcus sinus hiperboliczny) zwracają `x`. Ta funkcja jest prawidłowa w zmiennoprzecinkowe domenie. Jeśli `x` jest NaN quiet — nieokreślony, lub nieskończoności, jest zwracana przez tę samą wartość.  
-  
-|Dane wejściowe|Wyjątek SEH|`_matherr` Wyjątek|  
-|-----------|-------------------|--------------------------|  
-|± QNAN, IND, INF|brak|brak|  
-  
-## <a name="remarks"></a>Uwagi  
- Korzystając z języka C++, można wywoływać przeciążenia `asinh` który przyjmować i zwracać `float` lub `long double` wartości. W programie C `asinh` zawsze przyjmuje i zwraca `double`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Nagłówek C|Nagłówek C++|  
-|--------------|--------------|------------------|  
-|`asinh`, `asinhf`, `asinhl`|\<math.h>|\<cmath>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Przykład  
-  
-```C  
-// crt_asinh.c  
-// Compile by using: cl /W4 crt_asinh.c  
-// This program displays the hyperbolic sine of pi / 4  
-// and the arc hyperbolic sine of the result.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double pi = 3.1415926535;  
-   double x, y;  
-  
-   x = sinh( pi / 4 );  
-   y = asinh( x );  
-   printf( "sinh( %f ) = %f\n", pi/4, x );  
-   printf( "asinh( %f ) = %f\n", x, y );  
-}  
-```  
-  
-```Output  
-sinh( 0.785398 ) = 0.868671  
-asinh( 0.868671 ) = 0.785398  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [ACOSH acoshf —, acoshl](../../c-runtime-library/reference/acosh-acoshf-acoshl.md)   
- [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
- [TAN, tanf —, tanl —, tanh tanhf —, tanhl —](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [atanh, atanhf, atanhl](../../c-runtime-library/reference/atanh-atanhf-atanhl.md)   
- [_CItan](../../c-runtime-library/citan.md)
+
+Oblicza sinus hiperboliczny.
+
+## <a name="syntax"></a>Składnia
+
+```C
+double asinh( double x );
+float asinhf( float x );
+long double asinhl( long double x );
+```
+
+```cpp
+float asinh( float x );  // C++ only
+long double asinh( long double x );  // C++ only
+```
+
+### <a name="parameters"></a>Parametry
+
+*x*<br/>
+Wartość zmiennoprzecinkowa.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**Asinh** hyberbolic odwrotny sinus (arcus sinus hiperboliczny) zwracają *x*. Ta funkcja jest prawidłowa w zmiennoprzecinkowe domenie. Jeśli *x* jest NaN quiet — nieokreślony, lub nieskończoności, jest zwracana przez tę samą wartość.
+
+|Dane wejściowe|Wyjątek SEH|**_matherr —** wyjątku|
+|-----------|-------------------|--------------------------|
+|INF QNAN, IND GRANICACH|brak|brak|
+
+## <a name="remarks"></a>Uwagi
+
+Korzystając z języka C++, można wywoływać przeciążenia **asinh** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **asinh** zawsze przyjmuje i zwraca **podwójne**.
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|
+|--------------|--------------|------------------|
+|**ASINH**, **asinhf —**, **asinhl**|\<math.h>|\<cmath > lub \<math.h <|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_asinh.c
+// Compile by using: cl /W4 crt_asinh.c
+// This program displays the hyperbolic sine of pi / 4
+// and the arc hyperbolic sine of the result.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double pi = 3.1415926535;
+   double x, y;
+
+   x = sinh( pi / 4 );
+   y = asinh( x );
+   printf( "sinh( %f ) = %f\n", pi/4, x );
+   printf( "asinh( %f ) = %f\n", x, y );
+}
+```
+
+```Output
+sinh( 0.785398 ) = 0.868671
+asinh( 0.868671 ) = 0.785398
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
+[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
+[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
+[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
+[TANH tanhf —, tanhl —](tanh-tanhf-tanhl.md)<br/>

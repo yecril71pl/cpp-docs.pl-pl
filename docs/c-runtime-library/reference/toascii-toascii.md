@@ -1,12 +1,12 @@
 ---
-title: "ToAscii, __toascii — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: ToAscii, __toascii — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - __toascii
@@ -36,19 +36,19 @@ helpviewer_keywords:
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf4c29934d22d3f20d79650faa406f217ffdd4c6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 62b94724e95738c424ee04b0fbccfad1fdf6951c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="toascii-toascii"></a>toascii, __toascii
+# <a name="toascii-toascii"></a>ToAscii, __toascii —
 
 Konwertuje znaki ASCII 7-bitowego przez obcięcie.
 
@@ -63,29 +63,29 @@ int __toascii(
 
 ### <a name="parameters"></a>Parametry
 
-*c*  
+*c*<br/>
 Znak do konwersji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`__toascii` Konwertuje wartość *c* ASCII 7-bitowego zakres i zwraca wynik. Brak wartości zwracanej jest zastrzeżony wystąpił błąd.
+**__toascii —** konwertuje wartość *c* ASCII 7-bitowego zakres i zwraca wynik. Brak wartości zwracanej jest zastrzeżony wystąpił błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-`__toascii` Procedury konwertuje dany znak znaków ASCII przez obcinanie do mniej znaczącego 7 bitów. Nie inne transformacja jest stosowana.
+**__Toascii —** procedury konwertuje dany znak znaków ASCII przez obcinanie do mniej znaczącego 7 bitów. Nie inne transformacja jest stosowana.
 
-`__toascii` Procedura jest zdefiniowany jako makra, jeśli _CTYPE_DISABLE_MACROS makro preprocesora nie jest zdefiniowany. W celu zapewnienia zgodności z poprzednimi wersjami `toascii` jest zdefiniowany jako makra tylko wtedy, gdy [&#95; &#95; STDC &#95; &#95; ](../../preprocessor/predefined-macros.md) nie został zdefiniowany lub jest zdefiniowany jako 0; w przeciwnym razie jest niezdefiniowany.
+**__Toascii —** procedura jest zdefiniowany jako makra, jeśli _CTYPE_DISABLE_MACROS makro preprocesora nie jest zdefiniowany. W celu zapewnienia zgodności z poprzednimi wersjami **toascii** jest zdefiniowany jako makra tylko wtedy, gdy [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) nie został zdefiniowany lub jest zdefiniowany jako 0; w przeciwnym razie jest niezdefiniowany.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`toascii`, `__toascii`|C: \<ctype.h><br /><br /> C++: \<cctype — > lub \<ctype.h >|
+|**ToAscii**, **__toascii —**|C: \<ctype.h ><br /><br /> C++: \<cctype — > lub \<ctype.h >|
 
-`toascii` Makro to rozszerzenie POSIX i `__toascii` jest implementacją rozszerzenia POSIX specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.
+**Toascii** makro to rozszerzenie POSIX i **__toascii —** jest implementacją rozszerzenia POSIX specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Konwersja danych](../../c-runtime-library/data-conversion.md)   
-[jest isw — procedury](../../c-runtime-library/is-isw-routines.md)   
-[to, funkcje](../../c-runtime-library/to-functions.md)
+[Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
+[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, funkcje](../../c-runtime-library/to-functions.md)<br/>

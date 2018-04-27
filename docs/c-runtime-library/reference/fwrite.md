@@ -1,12 +1,12 @@
 ---
-title: "fwrite — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: fwrite — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fwrite
@@ -31,69 +31,75 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73b5328ce6851ceb61ad3260760e95cd329ee064
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3b91ad6efe0573bc469e0752ed27978b12018ee7
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fwrite"></a>fwrite
-Zapisuje dane do strumienia.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-size_t fwrite(  
-   const void *buffer,  
-   size_t size,  
-   size_t count,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `buffer`  
- Wskaźnik do zapisania danych.  
-  
- `size`  
- Rozmiar elementu w bajtach.  
-  
- `count`  
- Maksymalna liczba elementów do zapisania.  
-  
- `stream`  
- Wskaźnik do `FILE` struktury.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `fwrite` Zwraca liczbę pełnych elementów zapisana, co może być mniejsza niż `count` w przypadku wystąpienia błędu. Ponadto jeśli wystąpi błąd, nie można ustalić wskaźnika położenia pliku. Jeśli dowolny `stream` lub `buffer` jest wskaźnika o wartości null, lub jeśli nieparzystą liczbę bajtów do zapisania określono w trybie Unicode, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia `errno` do `EINVAL` i zwraca wartość 0.  
-  
-## <a name="remarks"></a>Uwagi  
- `fwrite` Funkcja zapisuje do `count` elementów, z `size` długość, z `buffer` z danymi wyjściowymi `stream`. Wskaźnika pliku skojarzone z `stream` (jeśli istnieje) jest zwiększany o liczba bajtów zapisanych w rzeczywistości. Jeśli `stream` jest otwarty w trybie tekstowym każdego wysuwu wiersza jest zastępowany znak powrotu karetki - pary wysuwu wiersza. Zastąpienie nie ma wpływu na wartość zwracaną.  
-  
- Gdy `stream` jest otwarty w trybie translacji Unicode — na przykład, jeśli `stream` jest otwarty przez wywołanie metody `fopen` i przy użyciu trybu parametru, który zawiera `ccs=UNICODE`, `ccs=UTF-16LE`, lub `ccs=UTF-8`, lub jeśli tryb jest zmieniana na Unicode Tryb tłumaczenia przy użyciu `_setmode` i parametr tryb, który obejmuje `_O_WTEXT`, `_O_U16TEXT`, lub `_O_U8TEXT`—`buffer` jest interpretowany jako wskaźnik do tablicy `wchar_t` zawierający dane UTF-16. Próba zapisu nieparzystą liczbę bajtów w tym trybie powoduje błąd sprawdzania poprawności parametru.  
-  
- Ponieważ ta funkcja umożliwia zablokowanie wątek wywołujący, jest bezpieczne wątkowo. Wersja — blokowanie dla `_fwrite_nolock`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|  
-|--------------|---------------------|  
-|`fwrite`|\<stdio.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Przykład  
- Zobacz przykład [fread —](../../c-runtime-library/reference/fread.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [_setmode —](../../c-runtime-library/reference/setmode.md)   
- [fread —](../../c-runtime-library/reference/fread.md)   
- [_fwrite_nolock](../../c-runtime-library/reference/fwrite-nolock.md)   
- [_write](../../c-runtime-library/reference/write.md)
+
+Zapisuje dane do strumienia.
+
+## <a name="syntax"></a>Składnia
+
+```C
+size_t fwrite(
+   const void *buffer,
+   size_t size,
+   size_t count,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*buffer*<br/>
+Wskaźnik do zapisania danych.
+
+*Rozmiar*<br/>
+Rozmiar elementu w bajtach.
+
+*Liczba*<br/>
+Maksymalna liczba elementów do zapisania.
+
+*Strumień*<br/>
+Wskaźnik do **pliku** struktury.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**fwrite —** zwraca liczbę pełnych zapisana elementów, które mogą być mniejsza niż *liczba* w przypadku wystąpienia błędu. Ponadto jeśli wystąpi błąd, nie można ustalić wskaźnika położenia pliku. Jeśli dowolny *strumienia* lub *buforu* jest wskaźnika o wartości null, lub jeśli nieparzystą liczbę bajtów do zapisania określono w trybie Unicode, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [ Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca wartość 0.
+
+## <a name="remarks"></a>Uwagi
+
+**Fwrite —** funkcja zapisuje do *liczba* elementów, z *rozmiar* długość, z *buforu* z danymi wyjściowymi *strumienia*. Wskaźnika pliku skojarzone z *strumienia* (jeśli istnieje) jest zwiększany o liczba bajtów zapisanych w rzeczywistości. Jeśli *strumienia* jest otwarty w trybie tekstowym każdego wysuwu wiersza jest zastępowany znak powrotu karetki - pary wysuwu wiersza. Zastąpienie nie ma wpływu na wartość zwracaną.
+
+Gdy *strumienia* jest otwarty w trybie translacji Unicode — na przykład, jeśli *strumienia* jest otwarty przez wywołanie metody **fopen —** i przy użyciu trybu parametru, który zawiera **ccs = UNICODE**, **ccs = UTF-16LE**, lub **ccs = UTF-8**, lub jeśli tryb jest zmienione na tryb tłumaczenia Unicode za pomocą **_setmode —** i tryb parametr, który zawiera **_O_WTEXT**, **_O_U16TEXT**, lub **_O_U8TEXT**—*buforu* jest interpretowana jako wskaźnik do Tablica **wchar_t** zawierający dane UTF-16. Próba zapisu nieparzystą liczbę bajtów w tym trybie powoduje błąd sprawdzania poprawności parametru.
+
+Ponieważ ta funkcja umożliwia zablokowanie wątek wywołujący, jest bezpieczne wątkowo. Wersja — blokowanie dla **_fwrite_nolock —**.
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|
+|--------------|---------------------|
+|**fwrite**|\<stdio.h>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz przykład [fread —](fread.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[_setmode](setmode.md)<br/>
+[fread](fread.md)<br/>
+[_fwrite_nolock](fwrite-nolock.md)<br/>
+[_write](write.md)<br/>

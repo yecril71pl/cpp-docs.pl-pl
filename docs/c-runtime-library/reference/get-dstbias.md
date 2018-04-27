@@ -1,12 +1,12 @@
 ---
-title: "_get_dstbias — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _get_dstbias — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_dstbias
@@ -36,55 +36,57 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f6d43b904b96f7323c76637d1f38c024d4696f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 15d3b4167e030f3861b7f01bc20bcbd8358dc376
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getdstbias"></a>_get_dstbias
-Pobiera przesunięcie czasu letniego, w sekundach.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-      error_t _get_dstbias(   
-    int* seconds  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `seconds`  
- Przesunięcie w sekundach czas letni.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zera w razie powodzenia lub `errno` wartość, gdy wystąpi błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- `_get_dstbias` Funkcja pobiera liczbę sekund czasu letniego jako liczba całkowita. Jeśli obowiązuje czas letni, przesunięcie domyślny jest 3600 sekund, czyli liczbę sekund w ciągu jednej godziny (chociaż kilka regionów obserwować przesunięcie dwóch godzin).  
-  
- Jeśli `seconds` jest `NULL`, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia `errno` do `EINVAL` i zwraca `EINVAL`.  
-  
- Firma Microsoft zaleca, aby użyć tej funkcji zamiast makra `_dstbias` lub przestarzałych funkcji `__dstbias`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_get_dstbias`|\<time.h>|  
-  
- Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zarządzanie czasem](../../c-runtime-library/time-management.md)   
- [errno, _doserrno — _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
- [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
- [_get_timezone](../../c-runtime-library/reference/get-timezone.md)   
- [_get_tzname](../../c-runtime-library/reference/get-tzname.md)
+
+Pobiera przesunięcie czasu letniego, w sekundach.
+
+## <a name="syntax"></a>Składnia
+
+```C
+error_t _get_dstbias( int* seconds );
+```
+
+### <a name="parameters"></a>Parametry
+
+*Sekund*<br/>
+Przesunięcie w sekundach czas letni.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zera w razie powodzenia lub **errno** wartość, gdy wystąpi błąd.
+
+## <a name="remarks"></a>Uwagi
+
+**_Get_dstbias —** funkcja pobiera liczbę sekund czasu letniego jako liczba całkowita. Jeśli obowiązuje czas letni, przesunięcie domyślny jest 3600 sekund, czyli liczbę sekund w ciągu jednej godziny (chociaż kilka regionów obserwować przesunięcie dwóch godzin).
+
+Jeśli *sekund* jest **NULL**, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **einval —**.
+
+Firma Microsoft zaleca, aby użyć tej funkcji zamiast makra **_dstbias** lub przestarzałych funkcji **__dstbias**.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_get_dstbias**|\<time.h>|
+
+Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
+[errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[_get_daylight](get-daylight.md)<br/>
+[_get_timezone](get-timezone.md)<br/>
+[_get_tzname](get-tzname.md)<br/>

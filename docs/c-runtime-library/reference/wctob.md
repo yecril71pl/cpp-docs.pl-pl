@@ -1,12 +1,12 @@
 ---
-title: "wctob — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: wctob — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wctob
@@ -32,88 +32,94 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2534eb98c39be91ed753fdc0ff286a9a5c5ce707
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6bb45aec4b337a7b0aed1a51c50903ad76d2f916
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wctob"></a>wctob
-Określa, czy znaków dwubajtowych odpowiada znaków wielobajtowych i zwraca jego reprezentacja znaków wielobajtowych.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int wctob(  
-   wint_t wchar  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `wchar`  
- Wartość do tłumaczenia.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Jeśli `wctob` pomyślnie konwertuje znaków dwubajtowych, zwraca jej reprezentacji znaków wielobajtowych tylko wtedy, gdy znaków wielobajtowych dokładnie jednego bajtu. Jeśli `wctob` napotka znaków dwubajtowych nie można konwertować znaków wielobajtowych lub znaków wielobajtowych nie jest dokładnie jeden długi, zwraca -1 bajt.  
-  
-## <a name="remarks"></a>Uwagi  
- `wctob` Funkcja konwertuje znaków dwubajtowych zawarte w `wchar` do odpowiednich znaków wielobajtowych przekazany przez zwracany `int` wartość, jeśli znaków wielobajtowych jest dokładnie jeden bajt.  
-  
- Jeśli `wctob` nie powiodła się i nie odpowiednich znaków wielobajtowych znaleziono funkcja ustawia `errno` do `EILSEQ` i zwraca wartość -1.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`wctob`|\<wchar.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
- Ten program ilustruje zachowanie `wcstombs` funkcji.  
-  
-```  
-// crt_wctob.c  
-#include <stdio.h>  
-#include <wchar.h>  
-  
-int main( void )  
-{  
-    int     bChar = 0;  
-    wint_t  wChar = 0;  
-  
-    // Set the corresponding wide character to exactly one byte.  
-    wChar = (wint_t)'A';  
-  
-    bChar = wctob( wChar );  
-    if (bChar == WEOF)  
-    {  
-        printf( "No corresponding multibyte character was found.\n");  
-    }  
-    else  
-    {  
-        printf( "Determined the corresponding multibyte character to"  
-                " be \"%c\".\n", bChar);  
-    }  
-}  
-  
-```  
-  
-```Output  
-Determined the corresponding multibyte character to be "A".  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwersja danych](../../c-runtime-library/data-conversion.md)   
- [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wctomb —, _wctomb_l —](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
+
+Określa, czy znaków dwubajtowych odpowiada znaków wielobajtowych i zwraca jego reprezentacja znaków wielobajtowych.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int wctob(
+   wint_t wchar
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*WChar*<br/>
+Wartość do tłumaczenia.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Jeśli **wctob —** pomyślnie konwertuje znaków dwubajtowych, zwraca jej reprezentacji znaków wielobajtowych tylko wtedy, gdy znaków wielobajtowych dokładnie jednego bajtu. Jeśli **wctob —** napotka znaków dwubajtowych nie można konwertować znaków wielobajtowych lub znaków wielobajtowych nie jest dokładnie jeden długi, zwraca -1 bajt.
+
+## <a name="remarks"></a>Uwagi
+
+**Wctob —** funkcja konwertuje znaków dwubajtowych zawarte w *wchar* do odpowiednich znaków wielobajtowych przekazany przez zwracany **int** wartość, jeśli wielobajtowe znak jest dokładnie jeden bajt.
+
+Jeśli **wctob —** nie powiodła się i nie odpowiednich znaków wielobajtowych znaleziono funkcja ustawia **errno** do **eilseq —** i zwraca wartość -1.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**wctob**|\<WChar.h >|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+Ten program ilustruje zachowanie **wcstombs —** funkcji.
+
+```C
+// crt_wctob.c
+#include <stdio.h>
+#include <wchar.h>
+
+int main( void )
+{
+    int     bChar = 0;
+    wint_t  wChar = 0;
+
+    // Set the corresponding wide character to exactly one byte.
+    wChar = (wint_t)'A';
+
+    bChar = wctob( wChar );
+    if (bChar == WEOF)
+    {
+        printf( "No corresponding multibyte character was found.\n");
+    }
+    else
+    {
+        printf( "Determined the corresponding multibyte character to"
+                " be \"%c\".\n", bChar);
+    }
+}
+
+```
+
+```Output
+Determined the corresponding multibyte character to be "A".
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
+[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
+[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
+[wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
+[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>

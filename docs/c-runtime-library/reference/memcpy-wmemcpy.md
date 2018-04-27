@@ -1,12 +1,12 @@
 ---
-title: "memcpy, wmemcpy — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: memcpy, wmemcpy — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - memcpy
@@ -32,92 +32,98 @@ helpviewer_keywords:
 - wmemcpy function
 - memcpy function
 ms.assetid: 34abb90b-bffb-46dc-a2f3-a5e9940839d6
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 415d8d4f604625b8bafbb953d381c2a43e394a3f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a31ada40bfab599b6da41da268bf79792f8ebf20
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
-Kopie bajty pomiędzy buforów. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [memcpy_s —, wmemcpy_s —](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void *memcpy(  
-   void *dest,  
-   const void *src,  
-   size_t count   
-);  
-wchar_t *wmemcpy(  
-   wchar_t *dest,  
-   const wchar_t *src,  
-   size_t count  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `dest`  
- Bufor nowego.  
-  
- `src`  
- Bufor do skopiowania.  
-  
- `count`  
- Liczba znaków do skopiowania.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Wartość `dest`.  
-  
-## <a name="remarks"></a>Uwagi  
- `memcpy` kopie `count` bajtów z `src` do `dest`; `wmemcpy` kopie `count` znaki dwubajtowe (dwa bajty). Jeśli na źródłowym i docelowym nakładają się, zachowanie `memcpy` jest niezdefiniowana. Użyj `memmove` do obsługi pokrywających się obszarów.  
-  
+
+Kopie bajty pomiędzy buforów. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [memcpy_s —, wmemcpy_s —](memcpy-s-wmemcpy-s.md).
+
+## <a name="syntax"></a>Składnia
+
+```C
+void *memcpy(
+   void *dest,
+   const void *src,
+   size_t count
+);
+wchar_t *wmemcpy(
+   wchar_t *dest,
+   const wchar_t *src,
+   size_t count
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*dest*<br/>
+Bufor nowego.
+
+*src*<br/>
+Bufor do skopiowania.
+
+*Liczba*<br/>
+Liczba znaków do skopiowania.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Wartość *dest*.
+
+## <a name="remarks"></a>Uwagi
+
+**memcpy** kopie *liczba* bajtów z *src* do *dest*; **wmemcpy —** kopie *liczba* znaki dwubajtowe (dwa bajty). Jeśli na źródłowym i docelowym nakładają się, zachowanie **memcpy** jest niezdefiniowana. Użyj **memmove —** do obsługi pokrywających się obszarów.
+
 > [!IMPORTANT]
->  Upewnij się, że bufor docelowy jest taki sam lub większy rozmiar niż bufor źródłowy. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
+> Upewnij się, że bufor docelowy jest taki sam lub większy rozmiar niż bufor źródłowy. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
 > [!IMPORTANT]
->  Ponieważ tyle przepełnienia buforu, a w związku z tym potencjalnych luk zabezpieczeń, mieć śledzone do niewłaściwe użycie `memcpy`, ta funkcja jest na liście "zabronione" funkcje przez Security Development Lifecycle (SDL).  Można zauważyć, że niektóre klasy biblioteki VC ++ w dalszym ciągu używać `memcpy`.  Ponadto można zauważyć, że optymalizator kompilatora VC ++ czasami emituje wywołania `memcpy`.  Produkt Visual C++ został utworzony zgodnie z procesem cyklu projektowania zabezpieczeń i w związku z tym użycie tej funkcji zabronione ściśle oszacowano.  W przypadku biblioteki z niej korzystać, wywołań ma dokładnie kontroli aby upewnić się, że przepełnienia buforu nie będzie można za pomocą tych wywołań.  W przypadku kompilatora, czasami pewnych wzorców kodu są rozpoznawane jako identyczne struktury `memcpy`i w związku z tym są zamieniane na wywołanie funkcji.  W takich przypadkach użycia `memcpy` jest niebezpieczne ma więcej niż oryginalna byłby instrukcje; ich po prostu zostały zoptymalizowane do wywołania wydajność dostosowana `memcpy` funkcji.  Podobnie jak użycie "bezpiecznej" funkcje CRT nie gwarantuje bezpieczeństwa (one tylko utrudnić jako niebezpieczny) Użyj funkcji "zabronione" nie gwarantuje zagrożenia (tylko potrzebują większej kontroli w celu zapewnienia bezpieczeństwa).  
->   
->  Ponieważ `memcpy` więc uważnie kontroli użycia VC ++ kompilatora i bibliotek, te wywołania są dozwolone w przeciwnym razie jest zgodne z SDL kodem.  `memcpy` wywołania wprowadzone w kodzie źródłowym aplikacji są zgodne z SDL tylko w przypadku, gdy używające zostały poddane analizie przez ekspertów zabezpieczeń.  
-  
- `memcpy` i `wmemcpy` funkcje zostaną wycofane tylko, jeśli stała `_CRT_SECURE_DEPRECATE_MEMORY` jest zdefiniowana przed instrukcji włączenia w kolejności dla funkcji wycofane, takich jak pokazano w przykładzie poniżej:  
-  
-```  
-#define _CRT_SECURE_DEPRECATE_MEMORY  
-#include <memory.h>  
-```  
-  
- lub  
-  
-```  
-#define _CRT_SECURE_DEPRECATE_MEMORY  
-#include <wchar.h>  
-```  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`memcpy`|\<Memory.h > lub \<string.h >|  
-|`wmemcpy`|\<wchar.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
- Zobacz [memmove —](../../c-runtime-library/reference/memmove-wmemmove.md) przykładowy sposób użycia `memcpy`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)   
- [_memccpy](../../c-runtime-library/reference/memccpy.md)   
- [memchr, wmemchr —](../../c-runtime-library/reference/memchr-wmemchr.md)   
- [funkcji memcmp, wmemcmp —](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [memmove —, wmemmove —](../../c-runtime-library/reference/memmove-wmemmove.md)   
- [memset —, wmemset —](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
- [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
+> Ponieważ tyle przepełnienia buforu, a w związku z tym potencjalnych luk zabezpieczeń, mieć śledzone do niewłaściwe użycie **memcpy**, ta funkcja jest na liście "zabronione" funkcje przez Security Development Lifecycle (SDL).  Można zauważyć, że niektóre klasy biblioteki VC ++ w dalszym ciągu używać **memcpy**.  Ponadto można zauważyć, że optymalizator kompilatora VC ++ czasami emituje wywołań **memcpy**.  Produkt Visual C++ został utworzony zgodnie z procesem cyklu projektowania zabezpieczeń i w związku z tym użycie tej funkcji zabronione ściśle oszacowano.  W przypadku biblioteki z niej korzystać, wywołań ma dokładnie kontroli aby upewnić się, że przepełnienia buforu nie będzie można za pomocą tych wywołań.  W przypadku kompilatora, czasami pewnych wzorców kodu są rozpoznawane jako identyczne struktury **memcpy**i w związku z tym są zamieniane na wywołanie funkcji.  W takich przypadkach użycia **memcpy** jest niebezpieczne ma więcej niż oryginalna byłby instrukcje; ich po prostu zostały zoptymalizowane do wywołania wydajność dostosowana **memcpy** funkcji.  Podobnie jak użycie "bezpiecznej" funkcje CRT nie gwarantuje bezpieczeństwa (one tylko utrudnić jako niebezpieczny) Użyj funkcji "zabronione" nie gwarantuje zagrożenia (tylko potrzebują większej kontroli w celu zapewnienia bezpieczeństwa).
+>
+> Ponieważ **memcpy** więc uważnie kontroli użycia VC ++ kompilatora i bibliotek, te wywołania są dozwolone w przeciwnym razie jest zgodne z SDL kodem.  **memcpy** wywołania wprowadzone w kodzie źródłowym aplikacji są zgodne z SDL tylko, jeśli zostały poddane analizie używające przez ekspertów zabezpieczeń.
+
+**Memcpy** i **wmemcpy —** funkcje zostaną wycofane tylko, jeśli stała **_CRT_SECURE_DEPRECATE_MEMORY** zdefiniowano przed instrukcji włączenia Aby Funkcje przestarzałe, takich jak pokazano w przykładzie poniżej:
+
+```C
+#define _CRT_SECURE_DEPRECATE_MEMORY
+#include <memory.h>
+```
+
+lub
+
+```C
+#define _CRT_SECURE_DEPRECATE_MEMORY
+#include <wchar.h>
+```
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**memcpy**|\<Memory.h > lub \<string.h >|
+|**wmemcpy**|\<WChar.h >|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz [memmove —](memmove-wmemmove.md) przykładowy sposób użycia **memcpy**.
+
+## <a name="see-also"></a>Zobacz także
+
+[Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)<br/>
+[_memccpy](memccpy.md)<br/>
+[memchr, wmemchr](memchr-wmemchr.md)<br/>
+[memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
+[memmove, wmemmove](memmove-wmemmove.md)<br/>
+[memset, wmemset](memset-wmemset.md)<br/>
+[strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)<br/>
+[strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)<br/>

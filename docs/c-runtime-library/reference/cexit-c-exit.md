@@ -1,12 +1,12 @@
 ---
 title: _cexit, _c_exit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _c_exit
@@ -38,59 +38,62 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825ed933d5a164fd6a07f13319d30fdf97a928e1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3b4310ac5c0bac6853da23f7f491a757a7014ebe
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cexit-cexit"></a>_cexit, _c_exit
-Wykonuje operacje oczyszczania i zwraca bez Trwa kończenie procesu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void _cexit( void );  
-void _c_exit( void );  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `_cexit` Funkcji wywołań w ostatniej w kolejności wytworzenia, funkcje zarejestrowane przez `atexit` i `_onexit`. Następnie `_cexit` opróżnia wszystkie bufory We/Wy i zamknięcie wszystkich otwartych strumieni przed zwróceniem. `_c_exit` jest taka sama jak `_exit` , ale zwraca do wywoływania procesu bez jej przetwarzania `atexit` lub `_onexit` lub opróżnianie buforów strumienia. Zachowanie `exit`,`_exit`, `_cexit`, i `_c_exit` przedstawiono w poniższej tabeli.  
-  
-|Funkcja|Zachowanie|  
-|--------------|--------------|  
-|`exit`|Wykonuje pełne procedury zakończenia biblioteki C, kończy proces i kończy działanie z kodem stanu dostarczony.|  
-|`_exit`|Wykonuje szybkie procedury zakończenia biblioteki C, kończy proces i kończy działanie z kodem stanu dostarczony.|  
-|`_cexit`|Wykonuje pełne procedury zakończenia biblioteki C i zwraca obiekt wywołujący, ale nie kończy proces.|  
-|`_c_exit`|Wykonuje szybkie procedury zakończenia biblioteki C i zwraca obiekt wywołujący, ale nie kończy proces.|  
-  
- Podczas wywoływania `_cexit` lub `_c_exit` funkcje, destruktory dla tymczasowych lub automatyczne obiektów, które istnieją w momencie wywołania nie są wywoływane. Automatyczne obiekt jest obiekt, który jest zdefiniowany w funkcji, której obiekt nie jest zadeklarowany jako statyczny. Tymczasowy obiekt to obiekt utworzony przez kompilator. Aby zniszczyć automatyczne obiekt przed wywołaniem `_cexit` lub `_c_exit`, jawnie Wywołaj destruktor dla obiektu, w następujący sposób:  
-  
-```  
-myObject.myClass::~myClass( );  
-```  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_cexit`|\<process.h >|  
-|`_c_exit`|\<process.h >|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Proces i kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)   
- [Przerwania](../../c-runtime-library/reference/abort.md)   
- [atexit —](../../c-runtime-library/reference/atexit.md)   
- [_execwexec — funkcje](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+
+Wykonuje operacje oczyszczania i zwraca bez Trwa kończenie procesu.
+
+## <a name="syntax"></a>Składnia
+
+```C
+void _cexit( void );
+void _c_exit( void );
+```
+
+## <a name="remarks"></a>Uwagi
+
+**_Cexit —** funkcji wywołań w ostatniej w kolejności wytworzenia, funkcje zarejestrowane przez **atexit —** i **_onexit —**. Następnie **_cexit —** opróżnia wszystkie bufory We/Wy i zamknięcie wszystkich otwartych strumieni przed zwróceniem. **_c_exit —** jest taka sama jak **_exit —** , ale zwraca do wywoływania procesu bez jej przetwarzania **atexit —** lub **_onexit —** lub opróżnianie buforów strumienia. Zachowanie **zakończyć**, **_exit —**, **_cexit —**, i **_c_exit —** przedstawiono w poniższej tabeli.
+
+|Funkcja|Zachowanie|
+|--------------|--------------|
+|**Zakończ**|Wykonuje pełne procedury zakończenia biblioteki C, kończy proces i kończy działanie z kodem stanu dostarczony.|
+|**_exit —**|Wykonuje szybkie procedury zakończenia biblioteki C, kończy proces i kończy działanie z kodem stanu dostarczony.|
+|**_cexit**|Wykonuje pełne procedury zakończenia biblioteki C i zwraca obiekt wywołujący, ale nie kończy proces.|
+|**_c_exit**|Wykonuje szybkie procedury zakończenia biblioteki C i zwraca obiekt wywołujący, ale nie kończy proces.|
+
+Podczas wywoływania **_cexit —** lub **_c_exit —** funkcje, destruktory dla tymczasowych lub automatyczne obiektów, które istnieją w momencie wywołania nie są wywoływane. Automatyczne obiekt jest obiekt, który jest zdefiniowany w funkcji, której obiekt nie jest zadeklarowany jako statyczny. Tymczasowy obiekt to obiekt utworzony przez kompilator. Aby zniszczyć automatyczne obiekt przed wywołaniem **_cexit —** lub **_c_exit —**, jawnie Wywołaj destruktor dla obiektu, w następujący sposób:
+
+```cpp
+myObject.myClass::~myClass( );
+```
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_cexit**|\<process.h >|
+|**_c_exit**|\<process.h >|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[_exec, _wexec, funkcje](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>
+[_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

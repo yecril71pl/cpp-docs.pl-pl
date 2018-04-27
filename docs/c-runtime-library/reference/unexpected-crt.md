@@ -1,12 +1,12 @@
 ---
 title: Nieoczekiwany (CRT) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - unexpected
@@ -29,42 +29,45 @@ dev_langs:
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b86200fc9501b9a543bae3ebc19f5069e49859bb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3fce88dd7b2fdb821fc015130d25e54701c3e467
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unexpected-crt"></a>nieoczekiwany (CRT)
-Wywołania `terminate` lub można ją określić za pomocą funkcji `set_unexpected`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void unexpected( void );  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `unexpected` Procedura nie jest używany z bieżąca implementacja C++, obsługa wyjątków. `unexpected` wywołania `terminate` domyślnie. To zachowanie domyślne można zmienić, pisanie funkcji niestandardowych zakończenia i wywołanie `set_unexpected` z nazwą funkcji jako jej argument. `unexpected` wywołuje ostatniej podany jako argument do funkcji `set_unexpected`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`unexpected`|\<eh.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa wyjątków — procedury](../../c-runtime-library/exception-handling-routines.md)   
- [Przerwania](../../c-runtime-library/reference/abort.md)   
- [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)   
- [set_terminate —](../../c-runtime-library/reference/set-terminate-crt.md)   
- [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
- [Zakończenie](../../c-runtime-library/reference/terminate-crt.md)
+
+Wywołania **przerwanie** lub można ją określić za pomocą funkcji **set_unexpected —**.
+
+## <a name="syntax"></a>Składnia
+
+```C
+void unexpected( void );
+```
+
+## <a name="remarks"></a>Uwagi
+
+**Nieoczekiwany** procedura nie jest używany z bieżąca implementacja C++, obsługa wyjątków. **Nieoczekiwany** wywołania **przerwanie** domyślnie. To zachowanie domyślne można zmienić, pisanie funkcji niestandardowych zakończenia i wywołanie **set_unexpected —** z nazwą funkcji jako jej argument. **Nieoczekiwany** wywołuje ostatniej podany jako argument do funkcji **set_unexpected —**.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**Nieoczekiwany**|\<eh.h>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa wyjątków — procedury](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
+[_set_se_translator](set-se-translator.md)<br/>
+[set_terminate —](set-terminate-crt.md)<br/>
+[set_unexpected](set-unexpected-crt.md)<br/>
+[Zakończenie](terminate-crt.md)<br/>

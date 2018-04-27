@@ -1,12 +1,12 @@
 ---
-title: "_isctype —, iswctype —, _isctype_l —, _iswctype_l — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _isctype —, iswctype —, _isctype_l —, _iswctype_l — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isctype_l
@@ -47,81 +47,86 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe43830894be3c004fb21598b0324b864fe5b9b0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 25df7ddaaea8c1f4df0907ebd92827f2a4865007
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
-Testy `c` dla określona przez właściwość `desc` argumentu. Dla każdego prawidłowa wartość `desc`, brak procedury klasyfikacji znaków dwubajtowych równoważne.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _isctype(  
-   int c,  
-   _ctype_t desc  
-);  
-int _isctype_l(  
-   int c,  
-   _ctype_t desc,  
-   _locale_t locale  
-);  
-int iswctype(  
-   wint_t c,  
-   wctype_t desc   
-);  
-int _iswctype_l(  
-   wint_t c,  
-   wctype_t desc,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Liczba całkowita do testowania.  
-  
- `desc`  
- Właściwość do sprawdzenia. To jest zwykle pobrany przy użyciu ctype lub [wctype —](../../c-runtime-library/reference/wctype.md).  
-  
- `locale`  
- Ustawienia regionalne dla żadnych testów zależnych od ustawień regionalnych.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_isctype` i `iswctype` zwrócić wartość niezerową, jeśli `c` została określona przez właściwość `desc` w bieżących ustawień regionalnych lub 0, jeśli nie ma. Wersje tych funkcji z `_l` sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
-  
- Zachowanie `_isctype` i `_isctype_l` jest niezdefiniowana, jeśli `c` nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i `c` nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`n/a`|`_isctype`|`n/a`|`_iswctype`|  
-|`n/a`|`_isctype_l`|`n/a`|`_iswctype_l`|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_isctype`|\<ctype.h>|  
-|`iswctype`|\<CType.h > lub \<wchar.h >|  
-|`_isctype_l`|\<ctype.h>|  
-|`_iswctype_l`|\<CType.h > lub \<wchar.h >|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="libraries"></a>Biblioteki  
- Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)   
- [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [is, isw, procedury](../../c-runtime-library/is-isw-routines.md)
+
+Testy *c* dla określonego przez właściwość ctype *desc* argumentu. Dla każdego prawidłowa wartość *desc*, brak procedury klasyfikacji znaków dwubajtowych równoważne.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int _isctype(
+   int c,
+   _ctype_t desc
+);
+int _isctype_l(
+   int c,
+   _ctype_t desc,
+   _locale_t locale
+);
+int iswctype(
+   wint_t c,
+   wctype_t desc
+);
+int _iswctype_l(
+   wint_t c,
+   wctype_t desc,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Liczba całkowita do testowania.
+
+*desc*<br/>
+Właściwość do sprawdzenia. To jest zwykle pobrany przy użyciu ctype lub [wctype —](wctype.md).
+
+*Ustawienia regionalne*<br/>
+Ustawienia regionalne dla żadnych testów zależnych od ustawień regionalnych.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**_isctype —** i **iswctype —** zwrócić wartość niezerową, jeśli *c* została określona przez właściwość *desc* w bieżących ustawień regionalnych lub 0, jeśli nie ma. Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby były używane ustawienia regionalne przekazana zamiast bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+
+Zachowanie **_isctype —** i **_isctype_l —** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy zostanie użyty bibliotek debugowania CRT i *c* nie jest jedną z tych wartości, zgłoś funkcje potwierdzenia.
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|n/d|**_isctype**|n/d|**_iswctype —**|
+|n/d|**_isctype_l**|n/d|**_iswctype_l —**|
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_isctype**|\<ctype.h>|
+|**iswctype —**|\<CType.h > lub \<wchar.h >|
+|**_isctype_l**|\<ctype.h>|
+|**_iswctype_l —**|\<CType.h > lub \<wchar.h >|
+
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Biblioteki
+
+Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
+[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

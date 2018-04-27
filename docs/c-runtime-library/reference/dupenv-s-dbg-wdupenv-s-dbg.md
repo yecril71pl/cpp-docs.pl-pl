@@ -1,12 +1,12 @@
 ---
 title: _dupenv_s_dbg, _wdupenv_s_dbg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _dupenv_s_dbg
@@ -38,121 +38,124 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f9f35fba63fd5b0866a8f2fe13164855d722588
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dc6aa566770bd8b2e12cefac22c414fd4c43a118
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
-Pobieranie wartości z bieżącego środowiska.  Wersje [_dupenv_s —, _wdupenv_s —](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md) który przydzielić pamięci z [_malloc_dbg —](../../c-runtime-library/reference/malloc-dbg.md) o podanie dodatkowych informacji debugowania.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-errno_t _dupenv_s_dbg(  
-   char **buffer,  
-   size_t *numberOfElements,  
-   const char *varname,  
-   int blockType,  
-   const char *filename,  
-   int linenumber  
-);  
-errno_t _wdupenv_s_dbg(  
-   wchar_t **buffer,  
-   size_t * numberOfElements,  
-   const wchar_t *varname,  
-   int blockType,  
-   const char *filename,  
-   int linenumber  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `buffer`  
- Bufor do przechowywania wartość zmiennej.  
-  
- `numberOfElements`  
- Rozmiar `buffer`.  
-  
- `varname`  
- Nazwa zmiennej środowiskowej.  
-  
- `blockType`  
- Żądany typ bloku pamięci: `_CLIENT_BLOCK` lub `_NORMAL_BLOCK`.  
-  
- `filename`  
- Wskaźnik do nazwy pliku źródłowego lub `NULL`.  
-  
- `linenumber`  
- Numer wiersza na pliku źródłowego lub `NULL`.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zero w przypadku powodzenia, kod błędu w przypadku awarii.  
-  
- Te funkcje walidację ich parametrów; Jeśli `buffer` lub `varname` jest `NULL`, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, Ustaw funkcje `errno` do `EINVAL` i zwracać `EINVAL`.  
-  
- Jeśli te funkcje nie może przydzielić wystarczającej ilości pamięci, sami ustawiają `buffer` do `NULL` i `numberOfElements` 0 i powrotu `ENOMEM`.  
-  
-## <a name="remarks"></a>Uwagi  
- `_dupenv_s_dbg` i `_wdupenv_s_dbg` funkcje są takie same jak `_dupenv_s` i `_wdupenv_s` z wyjątkiem tego, kiedy `_DEBUG` jest zdefiniowana, te funkcje przy użyciu wersji debugowania [— funkcja malloc](../../c-runtime-library/reference/malloc.md), [_ malloc_dbg —](../../c-runtime-library/reference/malloc-dbg.md), można przydzielić pamięci dla wartości zmiennej środowiskowej. Aby uzyskać informacje dotyczące debugowania funkcji `_malloc_dbg`, zobacz [_malloc_dbg —](../../c-runtime-library/reference/malloc-dbg.md).  
-  
- Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można określić flagę `_CRTDBG_MAP_ALLOC`. Gdy `_CRTDBG_MAP_ALLOC` jest zdefiniowany, wywołań `_dupenv_s` i `_wdupenv_s` są mapowane ponownie do `_dupenv_s_dbg` i `_wdupenv_s_dbg`odpowiednio z `blockType` ustawioną `_NORMAL_BLOCK`. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako `_CLIENT_BLOCK`. Aby uzyskać więcej informacji o typach bloku, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tdupenv_s_dbg`|`_dupenv_s_dbg`|`_dupenv_s_dbg`|`_wdupenv_s_dbg`|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_dupenv_s_dbg`|\<crtdbg.h>|  
-|`_wdupenv_s_dbg`|\<crtdbg.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_dupenv_s_dbg.c  
-#include  <stdlib.h>  
-#include <crtdbg.h>  
-  
-int main( void )  
-{  
-   char *pValue;  
-   size_t len;  
-   errno_t err = _dupenv_s_dbg( &pValue, &len, "pathext",  
-      _NORMAL_BLOCK, __FILE__, __LINE__ );  
-   if ( err ) return -1;  
-   printf( "pathext = %s\n", pValue );  
-   free( pValue );  
-   err = _dupenv_s_dbg( &pValue, &len, "nonexistentvariable",  
-      _NORMAL_BLOCK, __FILE__, __LINE__ );  
-   if ( err ) return -1;  
-   printf( "nonexistentvariable = %s\n", pValue );  
-   free( pValue ); // It's OK to call free with NULL  
-}  
-```  
-  
-## <a name="sample-output"></a>Przykładowe dane wyjściowe  
-  
-```  
-pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl  
-nonexistentvariable = (null)  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Proces i kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)   
- [Stałe środowiska](../../c-runtime-library/environmental-constants.md)   
- [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
- [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)
+
+Pobieranie wartości z bieżącego środowiska.  Wersje [_dupenv_s —, _wdupenv_s —](dupenv-s-wdupenv-s.md) który przydzielić pamięci z [_malloc_dbg —](malloc-dbg.md) o podanie dodatkowych informacji debugowania.
+
+## <a name="syntax"></a>Składnia
+
+```C
+errno_t _dupenv_s_dbg(
+   char **buffer,
+   size_t *numberOfElements,
+   const char *varname,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+errno_t _wdupenv_s_dbg(
+   wchar_t **buffer,
+   size_t * numberOfElements,
+   const wchar_t *varname,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*buffer*<br/>
+Bufor do przechowywania wartość zmiennej.
+
+*numberOfElements*<br/>
+Rozmiar *buforu*.
+
+*nazwa_zmiennej*<br/>
+Nazwa zmiennej środowiskowej.
+
+*blockType*<br/>
+Żądany typ bloku pamięci: **_client_block —** lub **_normal_block —**.
+
+*Nazwa pliku*<br/>
+Wskaźnik do nazwy pliku źródłowego lub **NULL**.
+
+*numer wiersza*<br/>
+Numer wiersza na pliku źródłowego lub **NULL**.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zero w przypadku powodzenia, kod błędu w przypadku awarii.
+
+Te funkcje walidację ich parametrów; Jeśli *buforu* lub *nazwa_zmiennej* jest **NULL**, zgodnie z opisem w wywołaniu program obsługi nieprawidłowych parametrów [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, Ustaw funkcje **errno** do **einval —** i zwracać **einval —**.
+
+Jeśli te funkcje nie może przydzielić wystarczającej ilości pamięci, sami ustawiają *buforu* do **NULL** i *numberOfElements* 0 i powrotu **enomem —**.
+
+## <a name="remarks"></a>Uwagi
+
+**_Dupenv_s_dbg —** i **_wdupenv_s_dbg —** funkcje są takie same jak **_dupenv_s —** i **_wdupenv_s —** z wyjątkiem tego, kiedy **_DEBUG** jest zdefiniowany, te funkcje przy użyciu wersji debugowania [— funkcja malloc](malloc.md), [_malloc_dbg —](malloc-dbg.md), można przydzielić pamięci dla wartości zmiennej środowiskowej. Aby uzyskać informacje dotyczące debugowania funkcji **_malloc_dbg —**, zobacz [_malloc_dbg —](malloc-dbg.md).
+
+Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można określić flagę **_crtdbg_map_alloc —**. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_dupenv_s —** i **_wdupenv_s —** są mapowane ponownie do **_dupenv_s_dbg —** i **_wdupenv_s_dbg —**odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji o typach bloku, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tdupenv_s_dbg —**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**_dupenv_s_dbg**|\<crtdbg.h>|
+|**_wdupenv_s_dbg**|\<crtdbg.h>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_dupenv_s_dbg.c
+#include  <stdlib.h>
+#include <crtdbg.h>
+
+int main( void )
+{
+   char *pValue;
+   size_t len;
+   errno_t err = _dupenv_s_dbg( &pValue, &len, "pathext",
+      _NORMAL_BLOCK, __FILE__, __LINE__ );
+   if ( err ) return -1;
+   printf( "pathext = %s\n", pValue );
+   free( pValue );
+   err = _dupenv_s_dbg( &pValue, &len, "nonexistentvariable",
+      _NORMAL_BLOCK, __FILE__, __LINE__ );
+   if ( err ) return -1;
+   printf( "nonexistentvariable = %s\n", pValue );
+   free( pValue ); // It's OK to call free with NULL
+}
+```
+
+```Output
+pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
+nonexistentvariable = (null)
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Stałe środowiska](../../c-runtime-library/environmental-constants.md)<br/>
+[getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md)<br/>
+[_putenv_s, _wputenv_s](putenv-s-wputenv-s.md)<br/>

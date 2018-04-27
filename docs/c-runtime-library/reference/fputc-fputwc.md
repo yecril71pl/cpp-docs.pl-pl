@@ -1,12 +1,12 @@
 ---
-title: "fputc —, fputwc — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: fputc —, fputwc — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fputc
@@ -37,101 +37,106 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af95e4b11048ebda50ac4d73fc87b6b67903494b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 707c6d7fa2e45a4fb0c841015f59ef786e539168
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
-Zapisuje znak w strumieniu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int fputc(  
-   int c,  
-   FILE *stream   
-);  
-wint_t fputwc(  
-   wchar_t c,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `c`  
- Znak do zapisania.  
-  
- `stream`  
- Wskaźnik do `FILE` struktury.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Każda z tych funkcji zwraca znak zapisywane. Aby uzyskać `fputc`, zwracana wartość `EOF` wskazuje błąd. Aby uzyskać `fputwc`, zwracana wartość `WEOF` wskazuje błąd. Jeśli `stream` jest `NULL`, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają `EOF` i ustaw `errno` do `EINVAL`.  
-  
- Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.  
-  
-## <a name="remarks"></a>Uwagi  
- Każda z tych funkcji zapisuje pojedynczy znak `c` do pliku w pozycji wskazywana przez wskaźnik położenia skojarzony plik (jeśli jest zdefiniowana) i przesuwa wskaźnik zależnie od potrzeb. W przypadku liczby `fputc` i `fputwc`, plik jest skojarzony z `stream`. Jeśli plik nie może obsłużyć żądań pozycjonowania lub został otwarty w trybie append, znak jest dołączany do końca strumienia.  
-  
- Dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. `fputc` aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.  
-  
- Wersje z `_nolock` sufiks są identyczne z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Aby uzyskać więcej informacji, zobacz[_fputc_nolock —, _fputwc_nolock —](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md).  
-  
- Uwagi dotyczące procedury należy wykonać.  
-  
-|Procedura|Uwagi|  
-|-------------|-------------|  
-|`fputc`|Odpowiednikiem `putc`, ale zaimplementowany tylko jako funkcję, a nie jako funkcję i makra.|  
-|`fputwc`|Wersja znaków dwubajtowych `fputc`. Zapisuje `c` jako znaków wielobajtowych lub znaków dwubajtowych zgodnie z czy `stream` jest otwarty w trybie tekst lub binarny.|  
-  
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
-  
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_fputtc`|`fputc`|`fputc`|`fputwc`|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Funkcja|Wymagany nagłówek|  
-|--------------|---------------------|  
-|`fputc`|\<stdio.h>|  
-|`fputwc`|\<stdio.h > lub \<wchar.h >|  
-  
- Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —`stdin`, `stdout`, i `stderr`— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_fputc.c  
-// This program uses fputc  
-// to send a character array to stdout.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char strptr1[] = "This is a test of fputc!!\n";  
-   char *p;  
-  
-   // Print line to stream using fputc.   
-   p = strptr1;  
-   while( (*p != '\0') && fputc( *(p++), stdout ) != EOF ) ;  
-  
-}  
-```  
-  
-```Output  
-This is a test of fputc!!  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)   
- [fgetc —, fgetwc —](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)
+
+Zapisuje znak w strumieniu.
+
+## <a name="syntax"></a>Składnia
+
+```C
+int fputc(
+   int c,
+   FILE *stream
+);
+wint_t fputwc(
+   wchar_t c,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*c*<br/>
+Znak do zapisania.
+
+*Strumień*<br/>
+Wskaźnik do **pliku** struktury.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Każda z tych funkcji zwraca znak zapisywane. Aby uzyskać **fputc —**, zwracana wartość **EOF** wskazuje błąd. Aby uzyskać **fputwc —**, zwracana wartość **weof —** wskazuje błąd. Jeśli *strumienia* jest **NULL**, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają **EOF** i ustaw **errno** do **einval —**.
+
+Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.
+
+## <a name="remarks"></a>Uwagi
+
+Każda z tych funkcji zapisuje pojedynczy znak *c* do pliku w pozycji wskazywana przez wskaźnik położenia skojarzony plik (jeśli jest zdefiniowana) i przesuwa wskaźnik zależnie od potrzeb. W przypadku liczby **fputc —** i **fputwc —**, plik jest skojarzony z *strumienia*. Jeśli plik nie może obsłużyć żądań pozycjonowania lub został otwarty w trybie append, znak jest dołączany do końca strumienia.
+
+Dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **fputc —** nie obsługuje obecnie dane wyjściowe do strumienia UNICODE.
+
+Wersje z **_nolock —** sufiks są identyczne z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Aby uzyskać więcej informacji, zobacz[_fputc_nolock —, _fputwc_nolock —](fputc-nolock-fputwc-nolock.md).
+
+Uwagi dotyczące procedury należy wykonać.
+
+|Procedura|Uwagi|
+|-------------|-------------|
+|**fputc —**|Odpowiednikiem **putc —**, ale zaimplementowany tylko jako funkcję, a nie jako funkcję i makra.|
+|**fputwc —**|Wersja znaków dwubajtowych **fputc —**. Zapisuje *c* jako znaków wielobajtowych lub znaków dwubajtowych zgodnie z czy *strumienia* jest otwarty w trybie tekst lub binarny.|
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+
+|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_fputtc —**|**fputc —**|**fputc —**|**fputwc —**|
+
+## <a name="requirements"></a>Wymagania
+
+|Funkcja|Wymagany nagłówek|
+|--------------|---------------------|
+|**fputc —**|\<stdio.h>|
+|**fputwc —**|\<stdio.h > lub \<wchar.h >|
+
+Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —**stdin**, **stdout**, i **stderr**— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_fputc.c
+// This program uses fputc
+// to send a character array to stdout.
+
+#include <stdio.h>
+
+int main( void )
+{
+   char strptr1[] = "This is a test of fputc!!\n";
+   char *p;
+
+   // Print line to stream using fputc.
+   p = strptr1;
+   while( (*p != '\0') && fputc( *(p++), stdout ) != EOF ) ;
+
+}
+```
+
+```Output
+This is a test of fputc!!
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[fgetc, fgetwc](fgetc-fgetwc.md)<br/>
+[putc, putwc](putc-putwc.md)<br/>

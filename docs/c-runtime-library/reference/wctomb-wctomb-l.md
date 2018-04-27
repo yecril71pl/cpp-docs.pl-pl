@@ -1,12 +1,12 @@
 ---
-title: "wctomb —, _wctomb_l — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: wctomb —, _wctomb_l — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wctomb_l
@@ -37,92 +37,98 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adb05340bee89ff86c4ab30a61f32ca53c71519b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fe99a7394e9ec883780a1f70d8cecb004814e39c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
-Przekonwertować odpowiednich znaków wielobajtowych znaków dwubajtowych. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [wctomb_s —, _wctomb_s_l —](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int wctomb(  
-   char *mbchar,  
-   wchar_t wchar   
-);  
-int _wctomb_l(  
-   char *mbchar,  
-   wchar_t wchar,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `mbchar`  
- Adres znaków wielobajtowych.  
-  
- `wchar`  
- Znaków dwubajtowych.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Jeśli `wctomb` konwertuje znaków dwubajtowych do znaków wielobajtowych, zwraca liczbę bajtów (który nigdy nie jest większa niż `MB_CUR_MAX`) w znaków dwubajtowych. Jeśli `wchar` jest znakiem pustym znaków dwubajtowych (L '\0'), `wctomb` zwraca wartość 1. Jeśli wskaźnika docelowej `mbchar` ma wartość NULL, `wctomb` zwraca wartość 0. Jeśli konwersja nie jest możliwe w bieżących ustawień regionalnych, `wctomb` zwraca wartość -1 i `errno` ma ustawioną wartość `EILSEQ`.  
-  
-## <a name="remarks"></a>Uwagi  
- `wctomb` Funkcji konwertuje jego `wchar` argument odpowiednich znaków wielobajtowych i zapisuje wynik w `mbchar`. Funkcję można wywołać z dowolnego punktu w programach. `wctomb` używa bieżące ustawienia regionalne dla dowolnego zachowań zależnych od ustawień regionalnych. `_wctomb_l` jest taka sama jak `wctomb` z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).  
-  
- `wctomb` sprawdza poprawność parametrów. Jeśli `mbchar` jest `NULL`, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, `errno` ustawiono `EINVAL` i funkcja zwraca wartość -1.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`wctomb`|\<stdlib.h>|  
-  
- Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
- Ten program ilustruje zachowanie wctomb — funkcja.  
-  
-```  
-// crt_wctomb.cpp  
-// compile with: /W3  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   int i;  
-   wchar_t wc = L'a';  
-   char *pmb = (char *)malloc( MB_CUR_MAX );  
-  
-   printf( "Convert a wide character:\n" );  
-   i = wctomb( pmb, wc ); // C4996  
-   // Note: wctomb is deprecated; consider using wctomb_s  
-   printf( "   Characters converted: %u\n", i );  
-   printf( "   Multibyte character: %.1s\n\n", pmb );  
-}  
-```  
-  
-```Output  
-Convert a wide character:  
-   Characters converted: 1  
-   Multibyte character: a  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwersja danych](../../c-runtime-library/data-conversion.md)   
- [Ustawienia regionalne](../../c-runtime-library/locale.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs —, _wcstombs_l —](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
+
+Przekonwertować odpowiednich znaków wielobajtowych znaków dwubajtowych. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [wctomb_s —, _wctomb_s_l —](wctomb-s-wctomb-s-l.md).
+
+## <a name="syntax"></a>Składnia
+
+```C
+int wctomb(
+   char *mbchar,
+   wchar_t wchar
+);
+int _wctomb_l(
+   char *mbchar,
+   wchar_t wchar,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*mbchar*<br/>
+Adres znaków wielobajtowych.
+
+*WChar*<br/>
+Znaków dwubajtowych.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Jeśli **wctomb —** konwertuje znaków dwubajtowych do znaków wielobajtowych, zwraca liczbę bajtów (który nigdy nie jest większa niż **mb_cur_max —**) w znaków dwubajtowych. Jeśli *wchar* jest znakiem pustym znaków dwubajtowych (L '\0'), **wctomb —** zwraca wartość 1. Jeśli wskaźnika docelowej *mbchar* ma wartość NULL, **wctomb —** zwraca wartość 0. Jeśli konwersja nie jest możliwe w bieżących ustawień regionalnych, **wctomb —** zwraca wartość -1 i **errno** ustawiono **eilseq —**.
+
+## <a name="remarks"></a>Uwagi
+
+**Wctomb —** funkcji konwertuje jego *wchar* argument odpowiednich znaków wielobajtowych i zapisuje wynik w *mbchar*. Funkcję można wywołać z dowolnego punktu w programach. **wctomb —** używa bieżące ustawienia regionalne dla dowolnego zachowań zależnych od ustawień regionalnych. **_wctomb_l —** jest taka sama jak **wctomb —** z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+
+**wctomb —** sprawdza poprawność parametrów. Jeśli *mbchar* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca wartość -1.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**wctomb —**|\<stdlib.h>|
+
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Przykład
+
+Ten program ilustruje zachowanie wctomb — funkcja.
+
+```cpp
+// crt_wctomb.cpp
+// compile with: /W3
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   int i;
+   wchar_t wc = L'a';
+   char *pmb = (char *)malloc( MB_CUR_MAX );
+
+   printf( "Convert a wide character:\n" );
+   i = wctomb( pmb, wc ); // C4996
+   // Note: wctomb is deprecated; consider using wctomb_s
+   printf( "   Characters converted: %u\n", i );
+   printf( "   Multibyte character: %.1s\n\n", pmb );
+}
+```
+
+```Output
+Convert a wide character:
+   Characters converted: 1
+   Multibyte character: a
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
+[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
+[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
+[wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
+[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>

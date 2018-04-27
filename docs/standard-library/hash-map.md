@@ -1,12 +1,12 @@
 ---
-title: "&lt;hash_map —&gt; | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: '&lt;hash_map —&gt; | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <hash_map>
@@ -20,11 +20,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50716912b42aace87b1132672331c86d9eae162
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 177afaca1ddad1145c9465dc6b71863c846b6b5c
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -52,7 +52,7 @@ Definiuje hash_map klasy szablonu kontenera i hash_multimap i ich obsługi szabl
 
 ### <a name="classes"></a>Klasy
 
-|||
+|Class|Opis|
 |-|-|
 |[hash_compare, klasa](hash-compare-class.md)|Opisuje obiekt, który mogą być używane przez dowolny kontener asocjacyjna skrótu — hash_map hash_multimap, hash_set, lub hash_multiset — domyślnie **cech** obiektu parameter kolejność i wyznaczania wartości skrótu elementy zawierają.|
 |[value_compare, klasa](value-compare-class.md)|Udostępnia obiekt funkcji, który można porównać elementów hash_map porównując wartości ich kluczy, aby określić ich kolejność względne w hash_map.|
@@ -67,6 +67,6 @@ Definiuje hash_map klasy szablonu kontenera i hash_multimap i ich obsługi szabl
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](cpp-standard-library-header-files.md)  
-[Bezpieczeństwo wątku w standardowej bibliotece C++](thread-safety-in-the-cpp-standard-library.md)  
-[Dokumentacja standardowej biblioteki C++](cpp-standard-library-reference.md)  
+[Pliki nagłówkowe odwołanie](cpp-standard-library-header-files.md)
+[bezpieczeństwo wątku w standardowej bibliotece C++](thread-safety-in-the-cpp-standard-library.md)
+[odwołanie do biblioteki C++ Standard](cpp-standard-library-reference.md)

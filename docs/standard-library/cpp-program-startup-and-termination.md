@@ -1,12 +1,12 @@
 ---
-title: "Uruchamianie programu C++ i kończenie działania | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Uruchamianie programu C++ i kończenie działania | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,37 +18,37 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42baa08777e8e898ee4c6e49ce74b03c293c9b96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eec5c6d72152f2aaea8d77df7ca65bf5f5f5565b
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-program-startup-and-termination"></a>Uruchamianie i kończenie działania programu C++
-Program w języku C++ wykonuje te same operacje, jak C program w momencie uruchamiania programu i kończenie działania programu, a także kilka więcej opisana w tym temacie.  
-  
- Przed elementem docelowym środowisko wywołuje funkcję `main`, a po przechowuje stałej wartości początkowe Określ wszystkich obiektów, które ma statyczny czasu trwania, program wykonuje wszelkie pozostałe konstruktory takie obiekty statyczne. Nie określono kolejność wykonywania między jednostek tłumaczenia, ale można jednak założyć, że niektóre [iostream](../standard-library/iostreams-conventions.md) obiekty zostały poprawnie zainicjowane do użytku przez te konstruktory statyczne. Te strumienie tekstu formantu są:  
-  
--   [CIN](../standard-library/iostream.md#cin) — dla standardowe dane wejściowe.  
-  
--   [Cout](../standard-library/iostream.md#cout) — do wyjścia standardowego.  
-  
--   [cerr](../standard-library/iostream.md#cerr) — Niebuforowane błędów w danych wyjściowych.  
-  
--   [clog —](../standard-library/iostream.md#clog) — dla buforowane dane wyjściowe błędów.  
-  
- Umożliwia także te obiekty w ramach destruktory wywołana dla statycznych obiektów podczas Kończenie działania programu.  
-  
- Podobnie jak w przypadku C, zwracanie z `main` lub wywoływania `exit` wywołuje wszystkich funkcji w zarejestrowany `atexit` w odwrotnej kolejności z rejestru. Wywołuje funkcję zarejestrowanych wyjątek zgłoszony z takiego `terminate`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd biblioteki C++ Standard](../standard-library/cpp-standard-library-overview.md)   
- [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
+Program w języku C++ wykonuje te same operacje, jak C program w momencie uruchamiania programu i kończenie działania programu, a także kilka więcej opisana w tym temacie.
 
+Przed elementem docelowym środowisko wywołuje funkcję `main`, a po przechowuje stałej wartości początkowe Określ wszystkich obiektów, które ma statyczny czasu trwania, program wykonuje wszelkie pozostałe konstruktory takie obiekty statyczne. Nie określono kolejność wykonywania między jednostek tłumaczenia, ale można jednak założyć, że niektóre [iostream](../standard-library/iostreams-conventions.md) obiekty zostały poprawnie zainicjowane do użytku przez te konstruktory statyczne. Te strumienie tekstu formantu są:
+
+- [CIN](../standard-library/iostream.md#cin) — dla standardowe dane wejściowe.
+
+- [Cout](../standard-library/iostream.md#cout) — do wyjścia standardowego.
+
+- [cerr](../standard-library/iostream.md#cerr) — Niebuforowane błędów w danych wyjściowych.
+
+- [clog —](../standard-library/iostream.md#clog) — dla buforowane dane wyjściowe błędów.
+
+Umożliwia także te obiekty w ramach destruktory wywołana dla statycznych obiektów podczas Kończenie działania programu.
+
+Podobnie jak w przypadku C, zwracanie z `main` lub wywoływania `exit` wywołuje wszystkich funkcji w zarejestrowany `atexit` w odwrotnej kolejności z rejestru. Wywołuje funkcję zarejestrowanych wyjątek zgłoszony z takiego `terminate`.
+
+## <a name="see-also"></a>Zobacz także
+
+[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

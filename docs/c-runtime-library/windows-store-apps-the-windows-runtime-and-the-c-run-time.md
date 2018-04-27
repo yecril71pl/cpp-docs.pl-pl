@@ -1,27 +1,27 @@
 ---
-title: "Aplikacji platformy uniwersalnej systemu Windows, środowiska uruchomieniowego systemu Windows i C Run-Time | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Aplikacji platformy uniwersalnej systemu Windows, środowiska uruchomieniowego systemu Windows i C Run-Time | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 120e02caab735455224ad75f0944ceb25f4baf33
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e9e6053cdcd7797319379e1e5e7290bcff373b6f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Aplikacji platformy uniwersalnej systemu Windows, środowiska uruchomieniowego systemu Windows i C Run-Time
 
@@ -31,7 +31,7 @@ Uniwersalnych aplikacji platformy systemu Windows (UWP) są programy, które dzi
 
 - Większość funkcji CRT, które są powiązane z nieobsługiwanych funkcji.
 
-   Na przykład aplikacji platformy uniwersalnej systemu Windows nie może utworzyć procesu za pomocą `exec` i `spawn` rodzin procedury.
+   Na przykład aplikacji platformy uniwersalnej systemu Windows nie może utworzyć procesu za pomocą **exec** i **duplikowanie** rodzin procedury.
 
    Gdy funkcja CRT jest nieobsługiwana w aplikacji platformy uniwersalnej systemu Windows, że fakt znajdują się w artykule o jego.
 
@@ -58,4 +58,7 @@ Uniwersalnych aplikacji platformy systemu Windows (UWP) są programy, które dzi
 Pełną listę funkcji CRT, które nie są dostępne w aplikacji platformy uniwersalnej systemu Windows i sugestie dotyczące funkcji alternatywnych, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="see-also"></a>Zobacz też
- [Zgodność](../c-runtime-library/compatibility.md) [środowiska wykonawczego systemu Windows nieobsługiwane funkcje CRT](../c-runtime-library/windows-runtime-unsupported-crt-functions.md) [procedury czasu wykonywania według kategorii](../c-runtime-library/run-time-routines-by-category.md)
+
+[Zgodność](../c-runtime-library/compatibility.md)<br/>
+[Nieobsługiwane funkcje CRT środowiska uruchomieniowego systemu Windows](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
+[Universal C procedury czasu wykonywania według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

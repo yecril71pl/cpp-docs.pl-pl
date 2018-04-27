@@ -1,10 +1,10 @@
 ---
-title: "&lt;bitset —&gt; operatory | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: '&lt;bitset —&gt; operatory | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - bitset/std::operator&amp;
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -25,302 +25,311 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45dab1512054f80d5cec309ca4637b4972d8b555
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 967e2f85b01125790144626994fb66486a6c680c
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset —&gt; operatory
-||||  
-|-|-|-|  
-|[Operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
-|[operator^](#op_xor)|[— operator|](#op_or)|  
-  
-##  <a name="op_amp">Operator</a>&amp;  
- Wykonuje bitowej `AND` między dwoma bitsets.  
-  
-```  
-template <size_t size>  
-bitset<size>  
-operator&(
-    const bitset<size>& left,  
-    const bitset<size>& right);
-```  
-  
-### <a name="parameters"></a>Parametry  
- `left`  
- Pierwszy z dwóch bitsets, której elementy odpowiednich mają być łączone z bitowego `AND`.  
-  
- `right`  
- Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego `AND`.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Bitset —, której elementy są wynik wykonania `AND` operacji do odpowiednich elementów `left` i `right`.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// bitset_and.cpp  
-// compile with: /EHsc  
-#include <bitset>  
-#include <iostream>  
-#include <string>  
-  
-using namespace std;  
-  
-int main()  
-{  
-   bitset<4> b1 ( string("0101") );  
-   bitset<4> b2 ( string("0011") );  
-   bitset<4> b3 = b1 & b2;  
-   cout << "bitset 1: " << b1 << endl;  
-   cout << "bitset 2: " << b2 << endl;  
-   cout << "bitset 3: " << b3 << endl;  
-}  
-```  
-  
-```Output  
-bitset 1: 0101  
-bitset 2: 0011  
-bitset 3: 0001  
-```  
-  
-##  <a name="op_lt_lt">Operator</a>&lt;  
- Wstawia tekst reprezentację sekwencji bit do strumienia wyjściowego.  
-  
-```  
- 
-template <class CharType, class Traits, size_t N>  
-basic_ostream<CharType, Traits>& operator<<(
-    basic_ostream<CharType, Traits>& ostr,  
-    const bitset<N>& right);
-```  
-  
-### <a name="parameters"></a>Parametry  
- `right`  
- Obiekt typu **bitset —\<N >** to ma zostać wstawiony do strumienia wyjściowego jako ciąg.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Tekstowa reprezentacja sekwencji bitowe w **ostr**.  
-  
-### <a name="remarks"></a>Uwagi  
- Przeciążenia funkcji szablonu **operator <<**, dzięki czemu bitset — należy zapisać bez uprzedniego przekonwertowania na ciąg. Funkcja szablonu skutecznie wykonuje:  
-  
- **OSTR** << _ *prawej*. [to_string](bitset-class.md) < **CharType**, **cech**, **alokatora** \< **CharType**>>)  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// bitset_op_insert.cpp  
-// compile with: /EHsc  
-#include <bitset>  
-#include <iostream>  
-#include <string>  
-  
-int main( )  
-{  
-   using namespace std;  
-  
-   bitset<5> b1 ( 9 );  
-  
-   // bitset inserted into output stream directly  
-   cout << "The ordered set of bits in the bitset<5> b1(9)"  
-        << "\n can be output with the overloaded << as: ( "  
-        << b1 << " )" << endl;  
-  
-   // Compare converting bitset to a string before  
-   // inserting it into the output steam  
-   string s1;  
-   s1 =  b1.template to_string<char,   
-      char_traits<char>, allocator<char> >( );  
-   cout << "The string returned from the bitset b1"  
-        << "\n by the member function to_string( ) is: "  
-        << s1 << "." << endl;  
-}  
-```  
-  
-##  <a name="op_gt_gt">Operator</a>&gt;  
- Odczytuje ciąg znaków z bitowego do bitset —.  
-  
-```  
- 
-template <class CharType, class Traits, size_t Bits>  
-basic_istream<CharType, Traits>& operator>> (
-    basic_istream<CharType, Traits>& 
-_Istr,  
-    bitset<N>& 
-    right);
-```  
-  
-### <a name="parameters"></a>Parametry  
- `_Istr`  
- Ciąg, który jest wprowadzany do strumień wejściowy ma zostać wstawiony do bitset —.  
-  
- `right`  
- Bitset — otrzymuje bity ze strumienia wejściowego.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Funkcja szablonu zwraca ciąg `_Istr`.  
-  
-### <a name="remarks"></a>Uwagi  
- Przeciążenia funkcji szablonu **operator >>** do przechowywania w _ bitset — *prawej* bitset — wartość ( `str`), gdzie `str` jest obiektem typu [basic_string — ](basic-string-class.md)  <  **CharType**, **cech**, **alokatora** \< **CharType**> >  **&**  wyodrębniony z `_Istr`.  
-  
- Funkcja szablonu wyodrębnia elementy z `_Istr` i wstawia je do bitset — do:  
-  
--   Wszystkie elementy z bitowego zostały wyodrębnione ze strumienia wejściowego i przechowywane w bitset —.  
-  
--   Bitset — należy wypełnić z bitami ze strumienia wejściowego.  
-  
--   Napotkano element wejściowy nie jest 0 ani 1.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-#include <bitset>  
-#include <iostream>  
-#include <string>  
-  
-using namespace std;  
-int main()  
-{  
-  
-   bitset<5> b1;  
-   cout << "Enter string of (0 or 1) bits for input into bitset<5>.\n"  
-        << "Try bit string of length less than or equal to 5,\n"  
-        << " (for example: 10110): ";  
-   cin >>  b1;  
-  
-   cout << "The ordered set of bits entered from the "  
-        << "keyboard\n has been input into bitset<5> b1 as: ( "  
-        << b1 << " )" << endl;  
-  
-   // Truncation due to longer string of bits than length of bitset  
-   bitset<2> b3;  
-   cout << "Enter string of bits (0 or 1) for input into bitset<2>.\n"  
-        << " Try bit string of length greater than 2,\n"  
-        << " (for example: 1011): ";  
-   cin >>  b3;  
-  
-   cout << "The ordered set of bits entered from the "  
-        << "keyboard\n has been input into bitset<2> b3 as: ( "  
-        << b3 << " )" << endl;  
-  
-   // Flushing the input stream  
-   char buf[100];  
-   cin.getline(&buf[0], 99);  
-  
-   // Truncation with non-bit value  
-   bitset<5> b2;  
-   cout << "Enter a string for input into  bitset<5>.\n"  
-        << " that contains a character than is NOT a 0 or a 1,\n "  
-        << " (for example: 10k01): ";  
-   cin >>  b2;  
-  
-   cout << "The string entered from the keyboard\n"  
-        << " has been input into bitset<5> b2 as: ( "  
-        << b2 << " )" << endl;  
-}  
-```  
-  
-##  <a name="op_xor"></a>  operator ^  
- Wykonuje bitowej `EXCLUSIVE-OR` między dwoma bitsets.  
-  
-```  
-template <size_t size>  
-bitset<size>  
-operator^(
-    const bitset<size>& left,  
-    const bitset<size>& right);
-```  
-  
-### <a name="parameters"></a>Parametry  
- `left`  
- Pierwszy z dwóch bitsets, której elementy odpowiednich mają być łączone z bitowego `EXCLUSIVE-OR`.  
-  
- `right`  
- Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego `EXCLUSIVE-OR`.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Bitset —, której elementy są wynik wykonania `EXCLUSIVE-OR` operacji do odpowiednich elementów `left` i `right`.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// bitset_xor.cpp  
-// compile with: /EHsc  
-#include <bitset>  
-#include <iostream>  
-#include <string>  
-  
-using namespace std;  
-  
-int main()  
-{  
-   bitset<4> b1 ( string("0101") );  
-   bitset<4> b2 ( string("0011") );  
-   bitset<4> b3 = b1 ^ b2;  
-   cout << "bitset 1: " << b1 << endl;  
-   cout << "bitset 2: " << b2 << endl;  
-   cout << "bitset 3: " << b3 << endl;  
-}  
-```  
-  
-```Output  
-bitset 1: 0101  
-bitset 2: 0011  
-bitset 3: 0110  
-```  
-  
-##  <a name="op_or"></a>  operator |  
- Wykonuje bitowej `OR` między dwoma bitsets.  
-  
-```  
-template <size_t size>  
-bitset<size>  
-operator|(
-    const bitset<size>& left,  
-    const bitset<size>& right);
-```  
-  
-### <a name="parameters"></a>Parametry  
- `left`  
- Pierwszy z dwóch bitsets, której elementy odpowiednich mają być łączone z bitowego `OR`.  
-  
- `right`  
- Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego `OR`.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Bitset —, której elementy są wynik wykonania `OR` operacji do odpowiednich elementów `left` i `right`.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// bitset_or.cpp  
-// compile with: /EHsc  
-#include <bitset>  
-#include <iostream>  
-#include <string>  
-  
-using namespace std;  
-  
-int main()  
-{  
-   bitset<4> b1 ( string("0101") );  
-   bitset<4> b2 ( string("0011") );  
-   bitset<4> b3 = b1 | b2;  
-   cout << "bitset 1: " << b1 << endl;  
-   cout << "bitset 2: " << b2 << endl;  
-   cout << "bitset 3: " << b3 << endl;  
-}  
-```  
-  
-```Output  
-bitset 1: 0101  
-bitset 2: 0011  
-bitset 3: 0111  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [\<bitset — >](../standard-library/bitset.md)
 
+||||
+|-|-|-|
+|[Operator&amp;](#op_amp)|[Operator&gt;&gt;](#op_gt_gt)|[Operator&lt;&lt;](#op_lt_lt)|
+|[operator^](#op_xor)|[— operator|](#op_or)|
+
+## <a name="op_amp"></a>  Operator&amp;
+
+Wykonuje bitowej `AND` między dwoma bitsets.
+
+```cpp
+template <size_t size>
+bitset<size>
+operator&(
+    const bitset<size>& left,
+    const bitset<size>& right);
+```
+
+### <a name="parameters"></a>Parametry
+
+`left` Pierwszy z dwóch bitsets, której elementy odpowiednich mają być łączone z bitowego `AND`.
+
+`right` Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego `AND`.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Bitset —, której elementy są wynik wykonania `AND` operacji do odpowiednich elementów `left` i `right`.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// bitset_and.cpp
+// compile with: /EHsc
+#include <bitset>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+   bitset<4> b1 ( string("0101") );
+   bitset<4> b2 ( string("0011") );
+   bitset<4> b3 = b1 & b2;
+   cout << "bitset 1: " << b1 << endl;
+   cout << "bitset 2: " << b2 << endl;
+   cout << "bitset 3: " << b3 << endl;
+}
+```
+
+```Output
+bitset 1: 0101
+bitset 2: 0011
+bitset 3: 0001
+```
+
+## <a name="op_lt_lt"></a>  Operator&lt;&lt;
+
+Wstawia tekst reprezentację sekwencji bit do strumienia wyjściowego.
+
+```
+
+template <class CharType, class Traits, size_t N>
+basic_ostream<CharType, Traits>& operator<<(
+    basic_ostream<CharType, Traits>& ostr,
+    const bitset<N>& right);
+```
+
+### <a name="parameters"></a>Parametry
+
+`right` Obiekt typu **bitset —\<N >** to ma zostać wstawiony do strumienia wyjściowego jako ciąg.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Tekstowa reprezentacja sekwencji bitowe w **ostr**.
+
+### <a name="remarks"></a>Uwagi
+
+Przeciążenia funkcji szablonu **operator <<**, dzięki czemu bitset — należy zapisać bez uprzedniego przekonwertowania na ciąg. Funkcja szablonu skutecznie wykonuje:
+
+**OSTR** << _ *prawej*. [to_string](bitset-class.md) < **CharType**, **cech**, **alokatora** \< **CharType**>>)
+
+### <a name="example"></a>Przykład
+
+```cpp
+// bitset_op_insert.cpp
+// compile with: /EHsc
+#include <bitset>
+#include <iostream>
+#include <string>
+
+int main( )
+{
+   using namespace std;
+
+   bitset<5> b1 ( 9 );
+
+   // bitset inserted into output stream directly
+   cout << "The ordered set of bits in the bitset<5> b1(9)"
+        << "\n can be output with the overloaded << as: ( "
+        << b1 << " )" << endl;
+
+   // Compare converting bitset to a string before
+   // inserting it into the output steam
+   string s1;
+   s1 =  b1.template to_string<char,
+      char_traits<char>, allocator<char> >( );
+   cout << "The string returned from the bitset b1"
+        << "\n by the member function to_string( ) is: "
+        << s1 << "." << endl;
+}
+```
+
+## <a name="op_gt_gt"></a>  Operator&gt;&gt;
+
+Odczytuje ciąg znaków z bitowego do bitset —.
+
+```
+
+template <class CharType, class Traits, size_t Bits>
+basic_istream<CharType, Traits>& operator>> (
+    basic_istream<CharType, Traits>&
+_Istr,
+    bitset<N>&
+    right);
+```
+
+### <a name="parameters"></a>Parametry
+
+`_Istr` Ciąg, który jest wprowadzany do strumień wejściowy ma zostać wstawiony do bitset —.
+
+`right` Bitset — otrzymuje bity ze strumienia wejściowego.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Funkcja szablonu zwraca ciąg `_Istr`.
+
+### <a name="remarks"></a>Uwagi
+
+Przeciążenia funkcji szablonu **operator >>** do przechowywania w _ bitset — *prawej* bitset — wartość ( `str`), gdzie `str` jest obiektem typu [basic_string — ](basic-string-class.md)  <  **CharType**, **cech**, **alokatora** \< **CharType**> > **&** wyodrębniony z `_Istr`.
+
+Funkcja szablonu wyodrębnia elementy z `_Istr` i wstawia je do bitset — do:
+
+- Wszystkie elementy z bitowego zostały wyodrębnione ze strumienia wejściowego i przechowywane w bitset —.
+
+- Bitset — należy wypełnić z bitami ze strumienia wejściowego.
+
+- Napotkano element wejściowy nie jest 0 ani 1.
+
+### <a name="example"></a>Przykład
+
+```cpp
+#include <bitset>
+#include <iostream>
+#include <string>
+
+using namespace std;
+int main()
+{
+
+   bitset<5> b1;
+   cout << "Enter string of (0 or 1) bits for input into bitset<5>.\n"
+        << "Try bit string of length less than or equal to 5,\n"
+        << " (for example: 10110): ";
+   cin >>  b1;
+
+   cout << "The ordered set of bits entered from the "
+        << "keyboard\n has been input into bitset<5> b1 as: ( "
+        << b1 << " )" << endl;
+
+   // Truncation due to longer string of bits than length of bitset
+   bitset<2> b3;
+   cout << "Enter string of bits (0 or 1) for input into bitset<2>.\n"
+        << " Try bit string of length greater than 2,\n"
+        << " (for example: 1011): ";
+   cin >>  b3;
+
+   cout << "The ordered set of bits entered from the "
+        << "keyboard\n has been input into bitset<2> b3 as: ( "
+        << b3 << " )" << endl;
+
+   // Flushing the input stream
+   char buf[100];
+   cin.getline(&buf[0], 99);
+
+   // Truncation with non-bit value
+   bitset<5> b2;
+   cout << "Enter a string for input into  bitset<5>.\n"
+        << " that contains a character than is NOT a 0 or a 1,\n "
+        << " (for example: 10k01): ";
+   cin >>  b2;
+
+   cout << "The string entered from the keyboard\n"
+        << " has been input into bitset<5> b2 as: ( "
+        << b2 << " )" << endl;
+}
+```
+
+## <a name="op_xor"></a>  operator ^
+
+Wykonuje bitowej `EXCLUSIVE-OR` między dwoma bitsets.
+
+```cpp
+template <size_t size>
+bitset<size>
+operator^(
+    const bitset<size>& left,
+    const bitset<size>& right);
+```
+
+### <a name="parameters"></a>Parametry
+
+`left` Pierwszy z dwóch bitsets, której elementy odpowiednich mają być łączone z bitowego `EXCLUSIVE-OR`.
+
+`right` Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego `EXCLUSIVE-OR`.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Bitset —, której elementy są wynik wykonania `EXCLUSIVE-OR` operacji do odpowiednich elementów `left` i `right`.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// bitset_xor.cpp
+// compile with: /EHsc
+#include <bitset>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+   bitset<4> b1 ( string("0101") );
+   bitset<4> b2 ( string("0011") );
+   bitset<4> b3 = b1 ^ b2;
+   cout << "bitset 1: " << b1 << endl;
+   cout << "bitset 2: " << b2 << endl;
+   cout << "bitset 3: " << b3 << endl;
+}
+```
+
+```Output
+bitset 1: 0101
+bitset 2: 0011
+bitset 3: 0110
+```
+
+## <a name="op_or"></a>  operator |
+
+Wykonuje bitowej `OR` między dwoma bitsets.
+
+```cpp
+template <size_t size>
+bitset<size>
+operator|(
+    const bitset<size>& left,
+    const bitset<size>& right);
+```
+
+### <a name="parameters"></a>Parametry
+
+`left` Pierwszy z dwóch bitsets, której elementy odpowiednich mają być łączone z bitowego `OR`.
+
+`right` Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego `OR`.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Bitset —, której elementy są wynik wykonania `OR` operacji do odpowiednich elementów `left` i `right`.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// bitset_or.cpp
+// compile with: /EHsc
+#include <bitset>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+   bitset<4> b1 ( string("0101") );
+   bitset<4> b2 ( string("0011") );
+   bitset<4> b3 = b1 | b2;
+   cout << "bitset 1: " << b1 << endl;
+   cout << "bitset 2: " << b2 << endl;
+   cout << "bitset 3: " << b3 << endl;
+}
+```
+
+```Output
+bitset 1: 0101
+bitset 2: 0011
+bitset 3: 0111
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[\<bitset — >](../standard-library/bitset.md)<br/>

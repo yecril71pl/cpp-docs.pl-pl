@@ -1,11 +1,12 @@
 ---
 title: Konfigurowanie projektu CMake systemu Linux w programie Visual Studio | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/25/2107
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-linux
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 author: corob-msft
@@ -14,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 67665f3271caf71d16788b2e102d0e756d9f702f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 961419e9ffcd5dede0db01f81e1b1eedc3290436
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
   
@@ -103,19 +104,13 @@ cmake -E capabilities
 
 W danych wyjściowych, wyszukaj "serverMode": wartość true. Należy pamiętać, że nawet jeśli kompilacja CMake ze źródła opisanych poniżej możesz należy sprawdzić możliwości po zakończeniu. Linux system może mieć ograniczenia, które uniemożliwiają jest włączony tryb serwera.
 
-Aby rozpocząć korzystanie budynku ze źródła w powłoce programu Linux systemu upewnij się, że Menedżera pakietów jest aktualny, i czy masz git i cmake dostępne. Najpierw sklonuj CMake źródeł:
+Aby rozpocząć korzystanie budynku ze źródła w powłoce programu Linux systemu upewnij się, że Menedżera pakietów jest aktualny, i czy masz git i cmake dostępne. Najpierw sklonuj źródeł CMake z naszym repozytorium, której używamy dla programu Visual Studio CMake obsługi:
 
 ```cmd
 sudo apt-get update
 sudo apt-get install -y git cmake
-git clone https://github.com/Kitware/CMake.git
+git clone https://github.com/Microsoft/CMake.git
 cd CMake
-```
-
-Następnie upewnij się, że jesteś na obsługiwanych wersji CMake dla programu Visual Studio. Aktywnie Śledzimy programowanie CMake, ale nie możemy zagwarantować, że firma Microsoft obsługuje r. Aby utworzyć CMake 3.9.0 (na przykład), najpierw uruchom:
-
-```cmd
-git checkout tags/v3.9.0
 ```
 
 Następnie uruchom następujące polecenia:
