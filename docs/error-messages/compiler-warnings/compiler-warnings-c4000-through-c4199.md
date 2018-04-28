@@ -1,12 +1,12 @@
 ---
-title: "C4000 ostrzeżenia kompilatora za pośrednictwem C4199 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: C4000 ostrzeżenia kompilatora za pośrednictwem C4199 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4000
@@ -98,17 +98,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61298ccfbe1fc1d0d6f74df983984d0b70ee30f2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 5c66738ee482c9e244cf9e1a9cc6aecb157b9346
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>C4000 ostrzeżenia kompilatora za pośrednictwem C4199
 
@@ -159,6 +159,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |Ostrzeżenie kompilatora (poziom 1) C4051|Konwersja typu; Możliwa utrata danych|
 |Ostrzeżenie kompilatora (poziom 4) C4052|deklaracje funkcji różne; jeden z nich zawiera zmienne argumenty|
 |Ostrzeżenie kompilatora (poziom 4) C4053|jeden operand void dla "?:"|
+|[Ostrzeżenie kompilatora (poziom 1) C4055](compiler-warning-level-1-c4055.md)|"konwersji": ze wskaźnika danych "*type1*"do wskaźnika funkcji"*type2*"|
 |[Ostrzeżenie kompilatora (poziom 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|przepełnienie zmiennoprzecinkowej stałej arytmetycznej|
 |Ostrzeżenie kompilatora (poziom 4) C4057|"operator": "identifier1" różni się w operatorze pośrednim do nieco innych typów podstawowych z "identifier2"|
 |Ostrzeżenie C4060 kompilatora|Instrukcja switch zawiera etykiety "case" nie "default"|

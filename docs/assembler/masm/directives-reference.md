@@ -1,12 +1,9 @@
 ---
-title: "Odwołania do dyrektyw | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Odwołania do dyrektyw | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - Directives Reference
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), directives reference
 ms.assetid: da6efcd1-18f7-41de-81cd-a002a02f9a22
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba0d13a4dab5668f1ee125c79275b93a7f5f7f04
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 06077d5da6b34e41a710058900d61569e3c06939
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="directives-reference"></a>Odwołania do dyrektyw
 **x64**  
@@ -74,7 +69,7 @@ ms.lasthandoff: 02/14/2018
   
 ||||  
 |-|-|-|  
-|[DOPASUJ](../../assembler/masm/align-masm.md)|[BYTE](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[SDWORD —](../../assembler/masm/sdword.md)|  
+|[DOPASUJ](../../assembler/masm/align-masm.md)|[BAJT](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[SDWORD —](../../assembler/masm/sdword.md)|  
 |[EVEN](../../assembler/masm/even.md)|[FWORD](../../assembler/masm/fword.md)|[LABEL](../../assembler/masm/label-masm.md)|  
 |[ORG](../../assembler/masm/org.md)|[QWORD](../../assembler/masm/qword.md)|[REAL4](../../assembler/masm/real4.md)|  
 |[REAL8](../../assembler/masm/real8.md)|[REAL10](../../assembler/masm/real10.md)|[TBYTE](../../assembler/masm/tbyte.md)|  
@@ -136,7 +131,7 @@ ms.lasthandoff: 02/14/2018
   
 ||||  
 |-|-|-|  
-|[ENDM](../../assembler/masm/endm.md)|[FOR](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|  
+|[ENDM](../../assembler/masm/endm.md)|[DLA](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|  
 |[PRZEJDŹ DO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[WHILE](../../assembler/masm/while-masm.md)|  
   
 ### <a name="scope"></a>Zakres  

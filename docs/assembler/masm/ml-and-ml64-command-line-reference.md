@@ -1,12 +1,9 @@
 ---
 title: Informacje w wierszu polecenia programu ML i ML64 | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - ML
@@ -63,17 +60,15 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb7f0c19e9517b1bcefcc2400542f910a73c8f0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: da3fb143aeaaf6fa8cf31c45b31707fa01bf6898
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Informacje w wierszu polecenia programu ML i ML64
 Składana i łączy co najmniej jeden plik źródłowy języka zestawu. Opcje wiersza polecenia jest uwzględniana wielkość liter.  
@@ -104,7 +99,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/Cx**|Zachowuje wielkość liter w publicznym i extern symboli.|  
 |**/D** `symbol`[[=`value`]]|Określa tekst makra o podanej nazwie. Jeśli `value` jest Brak, jest pusta. Wiele tokenów rozdzielone spacjami musi być ujęta w cudzysłów.|  
 |**/EP**|Generuje listę wstępnie przetworzonych źródła (wysyłane do STDOUT). Zobacz **/Sf**.|  
-|**/ ERRORREPORT** [ **BRAK** &#124; **MONITU** &#124; **KOLEJKI** &#124; **WYSYŁANIA** ]|Jeśli ml.exe lub ml64.exe kończy się niepowodzeniem w czasie wykonywania, możesz użyć **/errorreport** wysyłać informacje do firmy Microsoft informacji o tych błędach wewnętrznych.<br /><br /> Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md).|  
+|**/ ERRORREPORT** [ **BRAK** &AMP;#124; **MONITU** &AMP;#124; **KOLEJKI** &AMP;#124; **WYSYŁANIA** ]|Jeśli ml.exe lub ml64.exe kończy się niepowodzeniem w czasie wykonywania, możesz użyć **/errorreport** wysyłać informacje do firmy Microsoft informacji o tych błędach wewnętrznych.<br /><br /> Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md).|  
 |**/F** `hexnum`|Ustawia rozmiar do stosu `hexnum` bajtów (to jest taka sama jak **/link/STOS**:`number`). Wartość musi być wyrażony w formacie szesnastkowym. Musi istnieć odstęp między **/F** i `hexnum`.|  
 |**/Fe** `filename`|Określa nazwę pliku wykonywalnego.|  
 |**/Fl**[[`filename`]]|Generuje listę złożony kodu. Zobacz **/Sf**.|  
@@ -122,9 +117,9 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/nologo**|Pomija wiadomości dla zestawu powiodło się.|  
 |**/omf**|Generuje typ obiektu modułu pliku formatu (OMF) obiektu modułu.  **/ omf** oznacza **/c**; ML.exe nie obsługuje tworzenia połączeń obiektów OMF.<br /><br /> Nie jest dostępna w ml64.exe.|  
 |**/Sa**|Włącza listę wszystkich dostępnych informacji.|  
-|**/safeseh**|Oznacza obiekt jako albo niezawierające nie programów obsługi wyjątków lub zawierające programy obsługi wyjątków, zadeklarowane za [. SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Nie jest dostępna w ml64.exe.|  
+|**Opcja/SAFESEH**|Oznacza obiekt jako albo niezawierające nie programów obsługi wyjątków lub zawierające programy obsługi wyjątków, zadeklarowane za [. SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Nie jest dostępna w ml64.exe.|  
 |**/Sf**|Dodaje Przekaż pierwszy plik listy do listy.|  
-|**/Sl** `width`|Ustawia szerokość linii źródła w znaków w wierszu. Zakres to 60 do 255 lub 0. Domyślna to 0. Taki sam jak [strony](../../assembler/masm/page.md) szerokości.|  
+|**/SL** `width`|Ustawia szerokość linii źródła w znaków w wierszu. Zakres to 60 do 255 lub 0. Domyślna to 0. Taki sam jak [strony](../../assembler/masm/page.md) szerokości.|  
 |**/Sn**|Wyłącza tabeli symboli podczas produkowania na liście.|  
 |**/SP** `length`|Ustawia długość strony źródła w wierszy na stronie. Zakres jest 10 do 255 lub 0. Domyślna to 0. Taki sam jak [strony](../../assembler/masm/page.md) długości.|  
 |**/Ss** `text`|Określa tekst dla listy źródłowej. Taki sam jak [PODTYTUŁ](../../assembler/masm/subtitle.md) tekstu.|  
