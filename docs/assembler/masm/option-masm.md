@@ -1,12 +1,9 @@
 ---
 title: OPCJA (MASM) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - option
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d8e8049ecea3775b9df85eb1d5c8ee5e94a9243
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 80291c805cad3ef041fffc58983ff399da07c9d9
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 Włącza i wyłącza funkcje asemblera.  
@@ -47,7 +42,7 @@ optionlist
 |**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULATOR**|  
 |**NOEMULATOR**|**EPILOGU**|**EXPR16**|**EXPR32**|  
 |**JĘZYK**|**LJMP**|**NOLJMP**|**M510**|  
-|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|  
+|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**PRZESUNIĘCIE**|  
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|  
 |**PROC**|**PROLOGU**|**TYLKO DO ODCZYTU**|**NOREADONLY**|  
 |**ZAKRES**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|  

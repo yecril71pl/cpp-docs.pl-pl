@@ -1,13 +1,10 @@
 ---
 title: __asm | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 f1_keywords:
 - __asm
 - __asm_cpp
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75a5d272e4ac26b87728506e45759733ffa26472
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77e09f6af92839c6113c9c5ba375a1583bcf7149
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="asm"></a>__asm
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  `__asm` — Słowo kluczowe wywołuje asemblera wbudowanego i mogą pojawiać się wszędzie tam, gdzie instrukcję języka C lub C++ jest dozwolony. Nie może pojawić się samodzielnie. Musi występować przez instrukcję zestawu, grupy instrukcji ujęta w nawiasy klamrowe, lub co najmniej, pustą parę nawiasów klamrowych. Termin "`__asm` bloku" odnosi się tutaj do dowolnego instrukcji lub grupę instrukcji, czy w nawiasach klamrowych.  
   
@@ -49,9 +44,9 @@ ms.lasthandoff: 12/21/2017
  `__asm {`  `assembly-instruction-list`  `};`OPT  
   
  *zestaw instrukcji listy*:  
- `assembly-instruction``;`opcjonalnych  
+ `assembly-instruction` `;`OPT  
   
- `assembly-instruction``;` `assembly-instruction-list` `;`opcjonalnych  
+ `assembly-instruction` `;` `assembly-instruction-list` `;`OPT  
   
  Jeśli używane bez nawiasów klamrowych, `__asm` — słowo kluczowe oznacza, że pozostała część wiersza instrukcji języka zestawu. Jeśli używana w nawiasy klamrowe, oznacza to, że każdy wiersz między nawiasy klamrowe jest instrukcji języka zestawu. Zgodność z poprzednimi wersjami `_asm` jest synonimem `__asm`.  
   
@@ -65,7 +60,7 @@ __asm int 3
   
  nie spowodowało natywny kod zostanie wygenerowany, gdy skompilowano z opcją **/CLR**; kompilator translacji instrukcji do instrukcji break CLR.  
   
- `__asm int 3`teraz powoduje generowanie kodu natywnego dla funkcji. Jeśli chcesz, aby spowodować punkt przerwania w kodzie i że funkcja, skompilowane do MSIL, należy użyć funkcji [__debugbreak](../../intrinsics/debugbreak.md).  
+ `__asm int 3` teraz powoduje generowanie kodu natywnego dla funkcji. Jeśli chcesz, aby spowodować punkt przerwania w kodzie i że funkcja, skompilowane do MSIL, należy użyć funkcji [__debugbreak](../../intrinsics/debugbreak.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy fragment kodu jest prostą `__asm` bloku ujęta w nawiasy klamrowe:  
@@ -99,5 +94,5 @@ __asm mov al, 2   __asm mov dx, 0xD007   __asm out dx, al
  **KOŃCOWY określonych firmy Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [Słowa kluczowe](../../cpp/keywords-cpp.md)   
+ [Keywords](../../cpp/keywords-cpp.md)   
  [Wbudowany asembler](../../assembler/inline/inline-assembler.md)

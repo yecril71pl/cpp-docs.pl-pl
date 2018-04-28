@@ -1,13 +1,10 @@
 ---
-title: "Przy użyciu języka C lub C++ w blokach __asm | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przy użyciu języka C lub C++ w blokach __asm | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ab706f682372cb0a76f0d3283157d4da9105ed6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e9451a0b665e5377c2acaf871154ec78a38c8b5
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>Korzystanie z C lub C++ w blokach __asm
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
@@ -47,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 -   Makra i dyrektywy preprocesora  
   
--   Komentarze (zarówno  **/ \* \* /**  i  **//**  )  
+-   Komentarze (zarówno **/ \* \* /** i **//** )  
   
 -   Wpisz nazwy (wszędzie tam, gdzie typ MASM byłoby prawne)  
   
--   `typedef`nazwy, zazwyczaj używane przy użyciu operatorów takich jak **PTR** i **typu** lub określić elementy członkowskie struktury lub związku  
+-   `typedef` nazwy, zazwyczaj używane przy użyciu operatorów takich jak **PTR** i **typu** lub określić elementy członkowskie struktury lub związku  
   
  W ramach `__asm` bloku, stałe całkowite można określić za pomocą notacji C lub notacji podstawa asemblera (0x100 i 100 h są równoważne, na przykład). Dzięki temu można określić (przy użyciu `#define`) stała w języku C i używać go w części C lub C++ i zestawu programu. Można również określić stałe w ósemkowe poprzedzając od 0. Na przykład 0777 określa ósemkowe stała.  
   
