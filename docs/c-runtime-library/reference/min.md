@@ -1,12 +1,9 @@
 ---
-title: "__min — | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: __min — | Dokumentacja firmy Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - __min
@@ -34,72 +31,72 @@ helpviewer_keywords:
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8e4f282331caaef9b56d1ca0b52ebf7c5e63ab6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e984dcfe6d4cf135a41a95a314c144d13b8db8e7
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="min"></a>__min
-Zwraca mniejszy z dwóch wartości.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-type __min(  
-   type a,  
-   type b   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `type`  
- Wszystkie dane typu liczbowego.  
-  
- `a, b`  
- Wartości typu liczbowego do porównania.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Mniejszy z dwóch argumentów.  
-  
-## <a name="remarks"></a>Uwagi  
- `__min` Makro porównuje dwie wartości i zwraca wartość mniejszy. Argumenty mogą być dowolnego liczbowego typu danych, podpisu lub bez znaku. Zarówno argumentów i zwracana wartość musi być tego samego typu danych.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`__min`|\<stdlib.h>|  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_minmax.c  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int a = 10;  
-   int b = 21;  
-  
-   printf( "The larger of %d and %d is %d\n",  a, b, __max( a, b ) );  
-   printf( "The smaller of %d and %d is %d\n", a, b, __min( a, b ) );  
-}  
-```  
-  
-```Output  
-The larger of 10 and 21 is 21  
-The smaller of 10 and 21 is 10  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [__max](../../c-runtime-library/reference/max.md)
+
+Makro preprocesora, które zwraca mniejszy z dwóch wartości.
+
+## <a name="syntax"></a>Składnia
+
+```C
+#define __min(a,b) (((a) < (b)) ? (a) : (b))
+```
+
+### <a name="parameters"></a>Parametry
+
+*a*, *b*<br/>
+Typ wartości dowolnego, które **<** operator działa na.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Mniejszy z dwóch argumentów.
+
+## <a name="remarks"></a>Uwagi
+
+**__Min —** makro porównuje dwie wartości i zwraca wartość mniejszy. Argumenty mogą być dowolnego liczbowego typu danych, podpisu lub bez znaku. Zarówno argumentów i zwracana wartość musi być tego samego typu danych.
+
+Argument zwrócił jest oceniane dwukrotnie przez makra. Może to prowadzić do nieoczekiwanych wyników, jeśli wartością argumentu jest wyrażenie, które zmienia jego wartość, gdy wartość jest szacowana, takich jak `*p++`.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|**__min**|\<stdlib.h>|
+
+## <a name="example"></a>Przykład
+
+```C
+// crt_minmax.c
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   int a = 10;
+   int b = 21;
+
+   printf( "The larger of %d and %d is %d\n",  a, b, __max( a, b ) );
+   printf( "The smaller of %d and %d is %d\n", a, b, __min( a, b ) );
+}
+```
+
+```Output
+The larger of 10 and 21 is 21
+The smaller of 10 and 21 is 10
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[__max](max.md)<br/>

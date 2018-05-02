@@ -1,12 +1,12 @@
 ---
-title: "__max — | Dokumentacja firmy Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: __max — | Dokumentacja firmy Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - __max
@@ -32,52 +32,54 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1868106e4224e05d661aba5bfb0ed4dca31f508a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5bc89f74bb98b8fb51dc652ab57c57d37a46d5a0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="max"></a>__max
-Zwraca większy z dwóch wartości.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-type __max(  
-   type a,  
-   type b   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `type`  
- Wszystkie dane typu liczbowego.  
-  
- `a, b`  
- Wartości typu liczbowego do porównania.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `__max` Zwraca większy z jego argumentów.  
-  
-## <a name="remarks"></a>Uwagi  
- `__max` Makro porównuje dwie wartości i zwraca wartość typu, który większy. Argumenty mogą być dowolnego liczbowego typu danych, podpisu lub bez znaku. Zarówno argumentów i zwracana wartość musi być tego samego typu danych.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`__max`|\<stdlib.h>|  
-  
-## <a name="example"></a>Przykład  
- Aby uzyskać więcej informacji, zobacz przykład [__min —](../../c-runtime-library/reference/min.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)   
- [__min](../../c-runtime-library/reference/min.md)
+
+Makro preprocesora zwraca większy z dwóch wartości.
+
+## <a name="syntax"></a>Składnia
+
+```C
+#define __max(a,b) (((a) > (b)) ? (a) : (b))
+```
+
+### <a name="parameters"></a>Parametry
+
+*a*, *b*<br/>
+Wartości typu liczbowego do porównania.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**__max —** zwraca większy z jego argumentów.
+
+## <a name="remarks"></a>Uwagi
+
+**__Max —** makro porównuje dwie wartości i zwraca wartość typu, który większy. Argumenty mogą być dowolnego liczbowego typu danych, podpisu lub bez znaku. Zarówno argumentów i zwracana wartość musi być tego samego typu danych.
+
+Argument zwrócił jest oceniane dwukrotnie przez makra. Może to prowadzić do nieoczekiwanych wyników, jeśli wartością argumentu jest wyrażenie, które zmienia jego wartość, gdy wartość jest szacowana, takich jak `*p++`.
+
+## <a name="requirements"></a>Wymagania
+
+|Macro|Wymagany nagłówek|
+|-------------|---------------------|
+|**__max**|\<stdlib.h>|
+
+## <a name="example"></a>Przykład
+
+Aby uzyskać więcej informacji, zobacz przykład [__min —](min.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[__min](min.md)<br/>
