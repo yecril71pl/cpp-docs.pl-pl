@@ -1,32 +1,27 @@
 ---
 title: Definicje i Declarations (C) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - export functions
 ms.assetid: d150395a-89d4-4298-9ac4-08f84fe1261c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4886ee6a8bce115c2f7676124477ec81e71b16d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d44a98fee82e41252b27fa5a1605b04a15af9115
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="definitions-and-declarations-c"></a>Definicje i deklaracje (C)
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Interfejsu biblioteki DLL odwołuje się do wszystkich elementów (funkcje i dane), które są znane do wyeksportowania przez program w systemie; oznacza to, że wszystkie elementy, które są zadeklarowane jako **dllimport** lub `dllexport`. Wszystkie deklaracje objęte interfejsu biblioteki DLL należy określić albo **dllimport** lub `dllexport` atrybutu. Jednak definicji można określić tylko `dllexport` atrybutu. Na przykład następujące definicji funkcji generuje błąd kompilatora:  
   

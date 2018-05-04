@@ -1,13 +1,10 @@
 ---
 title: Deklaracje tablicy | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,40 +12,38 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06742239c48503a5917317a674a39f50a38702c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f64d5f5ec5dc0f84de504026ea92b88fb1da4d94
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="array-declarations"></a>Deklaracje tablicy
 "Array deklaracji" nazwy tablicy i określa typ swoich elementów. Można również zdefiniować liczbę elementów w tablicy. Zmienna typu tablicy jest traktowany jako wskaźnika na typ elementów tablicy.  
   
 ## <a name="syntax"></a>Składnia  
  `declaration`:  
- *Specyfikatory deklaracji w init listy deklarator* opt**;**  
+ *Specyfikatory deklaracji w init listy deklarator* opt **;**  
   
- *init — deklarator — lista*:  
- *init — deklarator*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
  *init — deklarator — lista* **,***init deklarator*   
   
- *init — deklarator*:  
- *deklarator*  
+ *init-declarator*:  
+ *declarator*  
   
- *deklarator***=***inicjatora*   
+ *deklarator***=***inicjatora*  
   
  `declarator`:  
  *wskaźnik* opt*bezpośrednio deklarator*  
   
  *deklarator bezpośrednio*:  
- *deklarator bezpośrednio***[***wyrażenia* opt**]**   
+ *deklarator bezpośrednio***[***wyrażenia* opt **]**   
   
  Ponieważ *wyrażenia* jest opcjonalny, składnia ma dwie formy:  
   
@@ -105,7 +100,7 @@ extern char *name[];
   
  Ta instrukcja deklaruje typ i nazwa tablicy wskaźników do `char`. Rzeczywiste definicji `name` występuje w innym miejscu.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Rozmiar jest typu Liczba całkowita wymagane do przechowywania maksymalny rozmiar tablicy **size_t**. Zdefiniowany w pliku nagłówka STDDEF. H, **size_t** jest `unsigned int` z zakresem 0x00000000 do 0x7CFFFFFF.  
   

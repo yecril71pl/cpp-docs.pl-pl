@@ -1,12 +1,9 @@
 ---
-title: "Deklarator odwołania do wartości: &amp; &amp; | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Deklarator odwołania do wartości: &amp; &amp; | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '&&'
@@ -15,19 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35d0efc92e011cfb4d93746efd1b03ac94a0779
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c2f775573693f0897122502d7ca092cfe392ebd9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Deklarator odwołania do wartości:&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Deklarator odwołania do wartości: &amp;&amp;
 Zawiera odwołanie do r-wartości wyrażenia.  
   
 ## <a name="syntax"></a>Składnia  
@@ -63,7 +58,7 @@ int main()
 }  
 ```  
   
- Przed Visual C++ 2010, każdy wywołanie `operator+` przydziela i zwraca nowy tymczasowy `string` obiektu (r-wartości). `operator+`Nie można dołączyć jeden ciąg wzajemnie, ponieważ nie może określić, czy ciągi źródła są lvalues i rvalues. Jeśli parametry źródła są obie lvalues, może być przywoływany w innym miejscu w programie i w związku z tym nie może być modyfikowany. Za pomocą odwołania wartościowane prawostronnie `operator+` można zmodyfikować, aby wykonać rvalues, która nie może być przywoływany w innym miejscu w programie. W związku z tym `operator+` teraz dołączyć jednego ciągu na inny. Może to znacznie zmniejszyć liczbę alokacji pamięci dynamicznej który `string` klasy należy wykonać. Aby uzyskać więcej informacji na temat `string` , zobacz [basic_string — klasa](../standard-library/basic-string-class.md).  
+ Przed Visual C++ 2010, każdy wywołanie `operator+` przydziela i zwraca nowy tymczasowy `string` obiektu (r-wartości). `operator+` Nie można dołączyć jeden ciąg wzajemnie, ponieważ nie może określić, czy ciągi źródła są lvalues i rvalues. Jeśli parametry źródła są obie lvalues, może być przywoływany w innym miejscu w programie i w związku z tym nie może być modyfikowany. Za pomocą odwołania wartościowane prawostronnie `operator+` można zmodyfikować, aby wykonać rvalues, która nie może być przywoływany w innym miejscu w programie. W związku z tym `operator+` teraz dołączyć jednego ciągu na inny. Może to znacznie zmniejszyć liczbę alokacji pamięci dynamicznej który `string` klasy należy wykonać. Aby uzyskać więcej informacji na temat `string` , zobacz [basic_string — klasa](../standard-library/basic-string-class.md).  
   
  Semantyki przenoszenia pomaga również w przypadku, gdy kompilator nie można użyć zwrócić wartość optymalizacji (RVO) lub o nazwie zwrócić wartość optymalizacji (NRVO). W takich przypadkach kompilator wywołuje konstruktor przenoszenia, jeśli typ definiuje ją. Aby uzyskać więcej informacji na temat o nazwie optymalizacji wartości, zobacz [o nazwie zwracać optymalizacji wartość w programie Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   

@@ -2,11 +2,8 @@
 title: try-finally — instrukcja | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __try
@@ -27,20 +24,18 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement"></a>try-finally — instrukcja
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  W tym artykule opisano następującej składni `try-finally` instrukcji:  
   
@@ -55,9 +50,9 @@ __finally {
   
 ## <a name="grammar"></a>Gramatyka  
  *try-finally — instrukcji*:  
- `__try`*złożonej instrukcji*  
+ `__try` *złożone — instrukcja*  
   
- `__finally`*złożonej instrukcji*  
+ `__finally` *złożone — instrukcja*  
   
  `try-finally` Instrukcja jest rozszerzenia Microsoft do języków C i C++, umożliwiającą aplikacjom docelowy gwarantuje wykonywanie czyszczenia kodu, gdy wykonanie bloku kodu zostanie przerwane. Oczyszczanie składa się z zadania, takie jak cofanie przydziału pamięci, zamykanie plików i zwalniania dojść do plików. `try-finally` Instrukcja jest szczególnie przydatne dla procedur, które mają kilku miejscach, w którym dokonuje wystąpił błąd, który może powodować przedwczesny zwracać rutynowych.  
   
@@ -80,7 +75,7 @@ __finally {
   
  Załóżmy na przykład, szereg wywołania funkcji łącza funkcji A działanie D, jak pokazano na poniższej ilustracji. Każda funkcja ma jeden programu obsługi zakończenia. Jeśli wyjątek jest zgłaszany w funkcji D i obsługiwane A, programy obsługi zakończenia są nazywane w tej kolejności, jak system cofa stosu: D-C, B.  
   
- ![Kolejność zakończenia &#45; wykonywanie programu obsługi](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![Kolejność zakończenia&#45;wykonywanie programu obsługi](../cpp/media/vc38cx1.gif "vc38CX1")  
 Kolejność wykonywania programu obsługi zakończenia  
   
 > [!NOTE]
@@ -103,5 +98,5 @@ Kolejność wykonywania programu obsługi zakończenia
 ## <a name="see-also"></a>Zobacz też  
  [Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)   
  [(C/C++) obsługi wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
  [Składnia programu obsługi zakończenia](http://msdn.microsoft.com/library/windows/desktop/ms681393)

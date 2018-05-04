@@ -1,13 +1,10 @@
 ---
-title: "Konwersje z podpisanych typów całkowitych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Konwersje z podpisanych typów całkowitych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8977c70fc2ebdc6e9fccf22e44a04afaceae1392
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8747f6c1bfde3f076101cc9330d73b1c76c1055b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conversions-from-signed-integral-types"></a>Konwersje z podpisanych typów całkowitych
 Gdy całkowita jest konwertowany na liczbę całkowitą bez znaku z równym lub większym rozmiarze, a wartość całkowita nie jest ujemna, wartość jest bez zmian. Konwersja zostało utworzone przez znak rozszerzanie liczbę całkowitą ze znakiem. Całkowita jest konwertowana na krótszą całkowita tworzy bardziej znaczących bitów. Wynik jest interpretowana jako wartość bez znaku, jak pokazano w poniższym przykładzie.  
@@ -76,7 +71,7 @@ printf_s( "%hu\n", u );  // Prints 65533
   
  1. Wszystkie **char** wpisy przyjęto założenie, że **char** typ ma znak domyślnie.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Dla kompilatora C Microsoft 32-bitowa liczba całkowita jest odpowiednikiem **długi**. Konwersja **int** wartość będzie kontynuowana takie same jak w przypadku **długi**.  
   

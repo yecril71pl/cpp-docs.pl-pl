@@ -1,12 +1,9 @@
 ---
 title: noalias | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - noalias_cpp
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fd57b10aba4298ff7facd725ab3ce1934ccf1ab
-ms.sourcegitcommit: f3c398b1c7dbf36ab71b5ca89d365b1913afa307
+ms.openlocfilehash: 1cbb5c1b4162f3326aade092c7e20ca42a825d13
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="noalias"></a>noalias
 
 **Microsoft Specific**
 
-`noalias`oznacza, że wywołanie funkcji nie Modyfikuj lub odwołać widoczny stan globalny i tylko modyfikuje pamięci wskazywał *bezpośrednio* przez parametry wskaźnika (pierwszego poziomu elementów pośrednich).
+`noalias` oznacza, że wywołanie funkcji nie Modyfikuj lub odwołać widoczny stan globalny i tylko modyfikuje pamięci wskazywał *bezpośrednio* przez parametry wskaźnika (pierwszego poziomu elementów pośrednich).
 
 Jeśli funkcja jest oznaczony jako `noalias`, optymalizator może przyjmować, że oprócz parametrów się elementów pośrednich tylko pierwszy poziom parametrów wskaźnika są odwołuje się do lub zmodyfikować wewnątrz funkcji. Zbiór wszystkich danych, które nie jest zdefiniowana lub do których odwołuje się poza zasięgiem kompilacji jest widoczny stan globalny, a ich adres nie jest brana. Zakres kompilacji jest wszystkich plików źródłowych ([opcję/LTCG (Generowanie kodu w czasie Link)](../build/reference/ltcg-link-time-code-generation.md) kompilacje) lub jednym pliku źródłowym (z systemem innym niż**opcję/LTCG** kompilacji).
 

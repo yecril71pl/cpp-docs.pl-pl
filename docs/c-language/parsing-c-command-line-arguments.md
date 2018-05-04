@@ -1,13 +1,10 @@
 ---
-title: "Analizowanie argumentów wiersza polecenia C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Analizowanie argumentów wiersza polecenia C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e3db47ca48e52babc03923dfba7b1dcb8173cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b61bae046e73c4e49bbcaeb095b7bf230e95dd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analizowanie argumentów wiersza polecenia języka C
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Kod uruchomienia Microsoft C stosowane są następujące reguły przy interpretowaniu argumenty podane w wierszu polecenia systemu operacyjnego:  
   
@@ -42,9 +37,9 @@ ms.lasthandoff: 12/21/2017
   
 -   Używanie ukośników odwrotnych będą interpretowane jako literału, chyba że bezpośrednio poprzedzać podwójny cudzysłów.  
   
--   Jeśli parzystą liczbą ukośników odwrotnych następuje podwójny cudzysłów, a następnie co ukośnik odwrotny (**\\**) znajduje się w `argv` tablicy dla każdej pary ukośników odwrotnych ( **\\ \\** ) i podwójnego cudzysłowu (**"**) jest interpretowana jako ogranicznik ciągu.  
+-   Jeśli parzystą liczbą ukośników odwrotnych następuje podwójny cudzysłów, a następnie co ukośnik odwrotny (**\\**) znajduje się w `argv` tablicy dla każdej pary ukośników odwrotnych (**\\ \\**) i podwójnego cudzysłowu (**"**) jest interpretowana jako ogranicznik ciągu.  
   
--   Jeśli nieparzystą liczbę ukośników odwrotnych następuje podwójny cudzysłów, a następnie co ukośnik odwrotny (**\\**) znajduje się w `argv` tablicy dla każdej pary ukośników odwrotnych ( **\\ \\** ) i podwójnego cudzysłowu jest interpretowana jako — sekwencja specjalna przez pozostałe ukośnik odwrotny, powodując literału podwójny cudzysłów (**"**) należy umieścić w `argv`.  
+-   Jeśli nieparzystą liczbę ukośników odwrotnych następuje podwójny cudzysłów, a następnie co ukośnik odwrotny (**\\**) znajduje się w `argv` tablicy dla każdej pary ukośników odwrotnych (**\\ \\**) i podwójnego cudzysłowu jest interpretowana jako — sekwencja specjalna przez pozostałe ukośnik odwrotny, powodując literału podwójny cudzysłów (**"**) należy umieścić w `argv`.  
   
  Ta lista przedstawia reguły powyżej wyświetlając wynik interpretowany przekazany do `argv` kilka przykładów argumentów wiersza polecenia. Dane wyjściowe wymienione w ciągu sekundy trzecie, a czwarta kolumn jest Argumentów. Program C, znajdujący się na liście.  
   

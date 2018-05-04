@@ -1,12 +1,9 @@
 ---
-title: "if-else — instrukcja (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: if-else — instrukcja (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="if-else-statement-c"></a>if-else — instrukcja (C++)
 Formanty warunkowego rozgałęziania. Instrukcje w *bloku if* są wykonywane tylko wtedy, gdy *wyrażenie if* ma wartość inną niż zero (lub `true`). Jeśli wartość *wyrażenie* jest różna od zera, *statement1* i inne instrukcje w bloku są wykonywane oraz innego bloku, jeśli istnieje, zostanie pominięty. Jeśli wartość *wyrażenie* wynosi zero, a następnie bloku Jeśli zostanie pominięta i innego bloku, jeśli istnieje, jest wykonywane. Są wyrażenia, których ocena ma inną niż zero
@@ -176,7 +171,7 @@ int main()
  **Else** klauzuli `if...else` instrukcja jest skojarzony z najbardziej poprzedniej **Jeśli** instrukcji w tym samym zakresie, który nie ma odpowiadającego **else** instrukcji.   
 
 ## <a name="constexpr-if-statements"></a>constexpr Jeśli — instrukcje
-**Visual Studio 2017 wersji 15.3 i nowszych** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): W szablonów funkcji, można użyć **constexpr Jeśli** instrukcji podejmowanie decyzji rozgałęziania kompilacji bez potrzeby odwołać się do wielu przeciążeń funkcji. Na przykład można napisać jednej funkcji tego dojścia do parametru rozpakowywania (niezbędne żadne przeciążenie parametru zero): 
+**Visual Studio 2017 wersji 15.3 i nowszych** (dostępne z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): Szablony funkcji można **constexpr Jeśli** instrukcji podejmowanie decyzji rozgałęziania kompilacji bez o odwołać się do wielu przeciążeń funkcji. Na przykład można napisać jednej funkcji tego dojścia do parametru rozpakowywania (niezbędne żadne przeciążenie parametru zero): 
 
 ```cpp
 template <class T, class... Rest>
@@ -202,5 +197,5 @@ void f(T&& t, Rest&&... r)
  
 ## <a name="see-also"></a>Zobacz też  
  [Zaznaczenie — instrukcje](../cpp/selection-statements-cpp.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
  [switch, instrukcja (C++)](../cpp/switch-statement-cpp.md)

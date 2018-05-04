@@ -1,12 +1,9 @@
 ---
 title: Inicjatory | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be05c53e6f41c4df4d62bd4ba1920fcf57c1f0cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializers"></a>Inicjatory
 Inicjator określa wartość początkową zmiennej. Można zainicjować zmienne w tych kontekstach:  
@@ -128,7 +123,7 @@ int main() {
 }  
 ```  
   
-### <a name="default_initialization"></a>Inicjowanie domyślnych  
+### <a name="default_initialization"></a> Inicjowanie domyślnych  
  Inicjowanie domyślnych dla klas, struktur i Unii jest inicjowania przy użyciu domyślnego konstruktora. Brak wyrażenia inicjowania lub z można wywołać konstruktora domyślnego `new` — słowo kluczowe:  
   
 ```cpp  
@@ -285,7 +280,7 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
   
 -   zmienna jest zainicjowana z `new` — słowo kluczowe plus niepustym nawiasami  
   
--   zmienna jest zainicjowana z`static_cast`  
+-   zmienna jest zainicjowana z `static_cast`  
   
 -   w konstruktorze klasy podstawowe i z systemem innym niż statyczne elementy członkowskie są inicjowane przy użyciu listy inicjatora  
   
@@ -370,7 +365,7 @@ int main() {
 }  
 ```  
   
-### <a name="agginit"></a>Inicjalizacja agregacji  
+### <a name="agginit"></a> Inicjalizacja agregacji  
  Inicjalizacja agregacji jest formą inicjalizacji listy dla tablic lub typów klas (zwykle struktur lub unii), które:  
   
 -   nie prywatne lub chronione elementy członkowskie  
@@ -531,7 +526,7 @@ int main()
  ![Wykres decyzji inicjowania typu ref](../cpp/media/vc38s71.gif "vc38S71")  
 Wykres decyzji dla inicjowania typów referencyjnych  
   
- Odwołuje się do `volatile` typów (zadeklarowany jako `volatile` *typename*  **&**  *identyfikator*) mogą być inicjowane z `volatile` obiekty tego samego typu lub obiektami, które nie zostały zgłoszone jako `volatile`. Nie można jednak, można zainicjować przy użyciu **const** obiekty tego typu. Podobnie, odwołuje się do **const** typów (zadeklarowany jako **const** *typename*  **&**  *identyfikator* ) mogą być inicjowane z **const** obiekty tego samego typu (lub wszystkie elementy, które ma konwersji do typu lub obiektami, które nie zostały zgłoszone jako **const**). Nie mogą one jednak być inicjowane z obiektami `volatile` tego typu.  
+ Odwołuje się do `volatile` typów (zadeklarowany jako `volatile` *typename *** &** *identyfikator*) mogą być inicjowane z `volatile` obiekty tego samego typu lub za pomocą obiekty, które nie zostały zgłoszone jako `volatile`. Nie można jednak, można zainicjować przy użyciu **const** obiekty tego typu. Podobnie, odwołuje się do **const** typów (zadeklarowany jako **const** *typename *** &** *identyfikator*) może być inicjowany z **const** obiekty tego samego typu (lub wszystkie elementy, które ma konwersji do typu lub obiektami, które nie zostały zgłoszone jako **const**). Nie mogą one jednak być inicjowane z obiektami `volatile` tego typu.  
   
  Odwołania, które nie jest kwalifikowany za pomocą albo **const** lub `volatile` — słowo kluczowe mogą być inicjowane tylko z obiektami zadeklarowany jako ani **const** ani `volatile`.  
   

@@ -1,13 +1,10 @@
 ---
 title: Operator obliczania sekwencyjnego | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dee769d0a5bc2d0992dfb51de240bdd5e3d62d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ed58e141dd811d95fe43ed2d587a2de17b3d656
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sequential-evaluation-operator"></a>Operator obliczania sekwencyjnego
 Operator obliczania sekwencyjnego, nazywane również "operatora przecinka" oblicza dwóch argumentów sekwencyjnie od lewej do prawej.  
   
 ## <a name="syntax"></a>Składnia  
  *wyrażenie*:  
- *wyrażenia przypisania*  
+ *assignment-expression*  
   
  *wyrażenie***,***wyrażenia przypisania*   
   

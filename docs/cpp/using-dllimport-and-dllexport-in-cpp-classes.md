@@ -1,12 +1,9 @@
 ---
 title: Korzystanie z dllimport i dllexport w klasach C++ | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 - dllexport attribute [C++], classes [C++]
 ms.assetid: 8d7d1303-b9e9-47ca-96cc-67bf444a08a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8f9434387efcf3377cdc983116a51b524d16662
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 764ee2026e0ffcd112f202e0d400805c9df55e0b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dllimport-and-dllexport-in-c-classes"></a>Korzystanie z dllimport i dllexport w klasach C++
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
@@ -51,18 +46,18 @@ class DllExport C {
   
  Należy zwrócić uwagę że jawne użycie **dllimport** i `dllexport` atrybutów w elementach członkowskich klasy umożliwiające Eksport jest zabronione.  
   
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a>dllexport klas  
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a> dllexport klas  
  Gdy zadeklarować klasy `dllexport`, eksportowane są wszystkie jego funkcje Członkowskie i statyczne elementy członkowskie danych. Należy podać definicje wszystkich tych elementów członkowskich w ten sam program. W przeciwnym razie zostanie wygenerowany błąd konsolidatora. Jedynym wyjątkiem od tej reguły ma zastosowanie do czystych funkcji wirtualnych, dla których nie muszą dostarczać jawne definicje. Jednak ponieważ destruktor dla klasy abstrakcyjnej zawsze jest wywoływana przez destruktor klasy podstawowej, czystej wirtualnej destruktory muszą zawsze podawać definicji. Należy pamiętać, że te reguły są takie same dla klas nonexportable.  
   
  Podczas eksportowania danych typu klasy lub funkcje, które zwracają klasy, należy wyeksportować klasie.  
   
-##  <a name="_pluslang_dllexport_classesdllexportclasses"></a>DllImport klasy  
+##  <a name="_pluslang_dllexport_classesdllexportclasses"></a> DllImport klasy  
  Gdy zadeklarować klasy **dllimport**, wszystkie jego funkcje Członkowskie i statyczne elementy członkowskie danych są importowane. W przeciwieństwie do zachowania **dllimport** i `dllexport` na typy nonclass statyczne elementy członkowskie danych nie można określić definicję w ten sam program, w którym **dllimport** klasa jest zdefiniowana.  
   
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a>Klasy umożliwiające Eksport i dziedziczenie  
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a> Klasy umożliwiające Eksport i dziedziczenie  
  Wszystkie klasy podstawowe klasy umożliwiające Eksport musi być możliwy do eksportu. W przeciwnym razie generowania ostrzeżeń kompilatora. Ponadto wszystkie dostępne elementy członkowskie, które są również klasy musi być eksportowalny. Ta reguła zezwala `dllexport` klasa dziedziczy po **dllimport** klasy, a **dllimport** klasa dziedziczy po `dllexport` klasy (chociaż to drugie nie jest zalecane). Zgodnie z zasadą dostępnym dla klienta biblioteki DLL (zgodnie z regułami dostępu C++) powinno być częścią można eksportować interfejsu. Obejmuje to dane prywatne elementy członkowskie przywoływany w funkcji śródwierszowych.  
   
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a>Członek selektywnego Import/Eksport  
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a> Członek selektywnego Import/Eksport  
  Ponieważ funkcji Członkowskich i danych statycznych w obrębie klasy niejawnie ma połączenie zewnętrzne, mogą zadeklarować je za pomocą **dllimport** lub `dllexport` atrybutu, chyba że całej klasy jest eksportowany. Jeśli całej klasy jest zaimportować lub wyeksportować jawnej deklaracji funkcji Członkowskich i dane jako **dllimport** lub `dllexport` jest zabronione. Jeśli deklaruje element członkowski danych statycznych w definicji klasy jako `dllexport`, definicji musi wystąpić gdzieś w ten sam program (podobnie jak w przypadku nonclass połączenie zewnętrzne).  
   
  Podobnie można zadeklarować elementu członkowskiego ich w funkcji z **dllimport** lub `dllexport` atrybutów. W takim przypadku należy podać `dllexport` definicji w obrębie tego samego programu.  

@@ -1,12 +1,9 @@
 ---
 title: static_assert | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - static_assert_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660b91f4902e42d393509aa190172e53839b2621
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47046090da45d963cc0005f47e2bea680ad17795
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="staticassert"></a>static_assert
 Testy potwierdzenia oprogramowania, w czasie kompilacji. Jeśli określone wyrażenie stałe jest `false`, kompilator Wyświetla określony komunikat, jeśli zostało ono określone i kompilacja zakończy się niepowodzeniem z powodu błędu C2338; w przeciwnym razie deklaracji nie ma wpływu.  
@@ -118,7 +113,7 @@ public:
 ## <a name="see-also"></a>Zobacz też  
  [Potwierdzanie i komunikaty dostarczone przez użytkownika (C++)](../cpp/assertion-and-user-supplied-messages-cpp.md)   
  [#error — dyrektywa (C/C++)](../preprocessor/hash-error-directive-c-cpp.md)   
- [Assert — makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
+ [assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
  [Szablony](../cpp/templates-cpp.md)   
  [Zestaw znaków ASCII](../c-language/ascii-character-set.md)   
  [Deklaracje i definicje](declarations-and-definitions-cpp.md)

@@ -2,11 +2,8 @@
 title: Funkcje (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 01/25/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 720147992540b53c51e731db361cd9946a7a5313
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-c"></a>Funkcje (C++)
 
@@ -310,35 +305,6 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-<<<<<<< HEAD
-4. Oprócz przy użyciu sama wartość zwrotną, możesz można "return" wartości, definiując dowolną liczbę parametry używane przekazywany przez odwołanie, tak aby funkcji można zmodyfikować lub zainicjować wartości obiektów, które zawiera obiekt wywołujący. Aby uzyskać więcej informacji, zobacz [argumenty funkcji typu odwołania](reference-type-function-arguments.md).  
-  
-## <a name="function-pointers"></a>Wskaźniki funkcji  
- C++ obsługuje wskaźników funkcji w taki sam sposób jak w języku C. Jednak bardziej bezpieczne alternatywą jest zwykle użycie obiektem funkcji.  
-  
- Zalecane jest, aby `typedef` był wykorzystywany do deklarowania aliasu dla typu wskaźnika funkcji, jeśli deklarowana jest funkcja, która zwraca typ wskaźnika funkcji.  Na przykład  
-  
-```  
-typedef int (*fp)(int);  
-fp myFunction(char* s); // function returning function pointer  
-```  
-  
- Jeśli to nie nastąpi, poprawna składnia deklaracji funkcji może być wyprowadzona ze składni deklaratora dla wskaźnika funkcji przez zastąpienie identyfikatora (`fp` w powyższym przykładzie) nazwą i listą argumentów funkcji, w następujący sposób:  
-  
-```  
-int (*myFunction(char* s))(int);  
-```  
-  
- Poprzednia deklaracja jest równoważna z deklaracją przy użyciu elementu typedef powyżej.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przeładowywanie funkcji](../cpp/function-overloading.md)   
- [Funkcje z listami zmiennych argumentów](../cpp/functions-with-variable-argument-lists-cpp.md)   
- [Jawnie domyślne i usunięte funkcje](../cpp/explicitly-defaulted-and-deleted-functions.md)   
- [Odnośnik do nazwy zależnej od argumentu (Koenig) funkcji](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
- [Argumenty domyślne](../cpp/default-arguments.md)   
- [Funkcje śródwierszowe](../cpp/inline-functions-cpp.md)
-=======
 ## <a name="returning-multiple-values-from-a-function"></a>Zwracanie wartości wielu z funkcją
 
 Istnieją różne sposoby więcej niż jedną wartość zwrócona przez funkcję:
@@ -475,4 +441,3 @@ Poprzednia deklaracja jest równoważna z deklaracją przy użyciu elementu type
 - [Odnośnik do nazwy zależnej od argumentu (Koenig) funkcji](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [Argumenty domyślne](../cpp/default-arguments.md)
 - [Funkcje śródwierszowe](../cpp/inline-functions-cpp.md)
->>>>>>> główne

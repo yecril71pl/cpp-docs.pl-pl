@@ -1,36 +1,31 @@
 ---
-title: "Porady: Tworzenie wystąpień unique_ptr i korzystanie | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: Tworzenie wystąpień unique_ptr i korzystanie | Dokumentacja firmy Microsoft'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae4610e7b26eecd6ef444f3c7c73e95af365ca71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82cf4fb475f9c89a4a088cac9d5ee0e1231d436e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Porady: tworzenie wystąpień unique_ptr i korzystanie z nich
 A [unique_ptr](../standard-library/unique-ptr-class.md) udostępniaj go. Nie można skopiować do innego `unique_ptr`, przekazany przez wartość do funkcji lub używane w dowolny algorytm standardowa biblioteka C++ wymagającego kopie ma zostać wykonane. A `unique_ptr` tylko mogą zostać przeniesione. Oznacza to, że własności zasobów pamięci jest przenoszona do innego `unique_ptr` i oryginalny `unique_ptr` nie jest właścicielem. Zalecamy, aby ograniczyć obiekt do jednego właściciela, ponieważ wiele własności zwiększa złożoność logiki programu. W związku z tym wskaźnika inteligentnego dla obiekt zwykły C++, użyj `unique_ptr`, i kiedy utworzyć `unique_ptr`, użyj [make_unique](../standard-library/memory-functions.md#make_unique) funkcji pomocnika.  
   
  Na poniższym diagramie przedstawiono przeniesienie własności między dwiema `unique_ptr` wystąpień.  
   
- ![Przeniesienie własności unikatowego &#95; ptr](../cpp/media/unique_ptr.png "unique_ptr")  
+ ![Przeniesienie własności unikatowego&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr`jest zdefiniowany w `<memory>` nagłówka w standardowej bibliotece C++. Jest dokładnie wydajnym jako wskaźnik pierwotnych i mogą być używane w kontenerach standardowa biblioteka C++. Dodanie `unique_ptr` wystąpień do kontenerów standardowa biblioteka C++ jest wydajne ponieważ Konstruktor przenoszenia obiektu `unique_ptr` eliminuje potrzebę stosowania operacji kopiowania.  
+ `unique_ptr` jest zdefiniowany w `<memory>` nagłówka w standardowej bibliotece C++. Jest dokładnie wydajnym jako wskaźnik pierwotnych i mogą być używane w kontenerach standardowa biblioteka C++. Dodanie `unique_ptr` wystąpień do kontenerów standardowa biblioteka C++ jest wydajne ponieważ Konstruktor przenoszenia obiektu `unique_ptr` eliminuje potrzebę stosowania operacji kopiowania.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia sposób tworzenia `unique_ptr` wystąpień i przekaż je pomiędzy funkcjami.  
