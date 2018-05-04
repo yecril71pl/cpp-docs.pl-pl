@@ -1,27 +1,22 @@
 ---
-title: "Przenośność na granicach ABI (Modern C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przenośność na granicach ABI (Modern C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06cb6c97580b4c4c9a6c961cb76f2c4d84d841ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c214ed18e5afec51f52514abdd73e0e5b658635a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Przenośność na granicach ABI (Modern C++)
 Użyj typów wystarczająco przenośnych i konwencje na granicach binarny interfejsu. "Typ portable" jest typem wbudowanym C lub struktury, która zawiera tylko typy wbudowane C. Typy klas można użyć tylko, gdy obiekt wywołujący i wywoływany uzgodnić układu, wywoływanie Konwencji, np. Jest to możliwe tylko wtedy, gdy oba są kompilowane przy użyciu tego samego kompilatora i ustawienia kompilatora.  

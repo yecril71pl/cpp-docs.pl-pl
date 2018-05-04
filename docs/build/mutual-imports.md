@@ -1,13 +1,10 @@
 ---
 title: Importy wzajemne | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutual-imports"></a>Importy wzajemne
 Eksportowanie lub importowanie do innego pliku wykonywalnego przedstawia komplikacji, gdy Importy wzajemne (lub cykliczne). Na przykład dwa pliki dll importować symbole od siebie, podobnie jak funkcje wzajemnie rekursywne.  
@@ -87,7 +82,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- Po utworzeniu A.dll został skompilowany za `/D A_IMPL` i po utworzeniu B.dll został skompilowany za `/D B_IMPL`. Przy użyciu osobnych symbole dla każdej biblioteki DLL `CExampleB` są eksportowane i `CExampleA` jest importowany podczas kompilowania B.dll. `CExampleA`wyeksportowaniu podczas kompilowania A.dll i zaimportowane, gdy jest używana przez B.dll (lub innego klienta).  
+ Po utworzeniu A.dll został skompilowany za `/D A_IMPL` i po utworzeniu B.dll został skompilowany za `/D B_IMPL`. Przy użyciu osobnych symbole dla każdej biblioteki DLL `CExampleB` są eksportowane i `CExampleA` jest importowany podczas kompilowania B.dll. `CExampleA` wyeksportowaniu podczas kompilowania A.dll i zaimportowane, gdy jest używana przez B.dll (lub innego klienta).  
   
  Tworzenie warstw tego typu nie można wykonać przy użyciu wbudowanych **afx_ext_class —** i `_AFXEXT` symboli preprocesora. Techniki opisane powyżej rozwiązuje ten problem w sposób nie w przeciwieństwie do mechanizmu MFC sam używa podczas kompilowania jego technologii Active, bazy danych i bibliotek DLL rozszerzeń MFC sieci.  
   

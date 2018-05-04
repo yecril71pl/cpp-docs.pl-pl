@@ -1,13 +1,10 @@
 ---
-title: "Lokalny magazyn wątków | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Lokalny magazyn wątków | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eef6199f67702aeb3d3a886c52e910302a7dcad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c98cca6afb096cc9b5e88fe31aa949621d326c98
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thread-local-storage"></a>Lokalny magazyn wątków
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Lokalnego magazynu wątków (TLS) to mechanizm, za pomocą której każdy wątek w danym procesie wielowątkowe przydziela magazynu dla danych właściwych dla wątku. W standardowych programach wielowątkowych, dane są współużytkowane przez wszystkie wątki danego procesu, natomiast pamięć lokalna wątku jest mechanizmem przydzielania danych osobno dla danego wątku. Aby uzyskać szczegółowe omówienie wątków, zobacz [procesów i wątków](http://msdn.microsoft.com/library/windows/desktop/ms684841) w [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
@@ -99,7 +94,7 @@ __declspec( thread ) int tls_i = 1;
   
      Należy pamiętać, że wyrażenie sizeof, które obejmuje Zainicjowanie nie stanowi odwołanie do samej siebie, czy jest dozwolone.  
   
--   Korzystanie z **__declspec(thread)** może zakłócać [opóźnienia ładowania](../build/reference/linker-support-for-delay-loaded-dlls.md) biblioteki DLL importuje**.**  
+-   Korzystanie z **__declspec(thread)** może zakłócać [opóźnienia ładowania](../build/reference/linker-support-for-delay-loaded-dlls.md) biblioteki DLL importuje **.**  
   
  Aby uzyskać więcej informacji o używaniu atrybut wątku, zobacz [wielowątkowość tematy](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   

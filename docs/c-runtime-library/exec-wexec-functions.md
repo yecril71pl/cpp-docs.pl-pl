@@ -1,13 +1,10 @@
 ---
-title: "_execwexec — funkcje | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _execwexec — funkcje | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr110_clr0400.dll
 - msvcr120.dll
@@ -62,17 +59,15 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b01ce48463f3aad723bee38ee9f3ef1b499c3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ef98749c094165cb7cdff9f20370a55dfdaaa3a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exec-wexec-functions"></a>_exec, _wexec — Funkcje
 Każda funkcja w tej rodzinie ładuje i wykonuje nowy proces:  
@@ -90,7 +85,7 @@ Każda funkcja w tej rodzinie ładuje i wykonuje nowy proces:
 |----------------------------|-----------------|  
 |`e`|`envp`, tablicy wskaźników do ustawienia środowiska, są przekazywane do nowego procesu.|  
 |`l`|Argumenty wiersza polecenia są przekazywane indywidualnie do `_exec` funkcji. Zazwyczaj używany, gdy liczba parametrów do nowego procesu jest znany wcześniej.|  
-|`p`|`PATH`Zmienna środowiskowa służy do znajdowania plików do wykonania.|  
+|`p`|`PATH` Zmienna środowiskowa służy do znajdowania plików do wykonania.|  
 |`v`|`argv`, tablicy wskaźników do argumentów wiersza polecenia, są przekazywane do `_exec`. Zazwyczaj używany, gdy liczba parametrów do nowego procesu jest zmienna.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -117,7 +112,7 @@ Każda funkcja w tej rodzinie ładuje i wykonuje nowy proces:
 >  Spacji osadzonych w ciągach może spowodować nieoczekiwane zachowanie; na przykład przekazywanie `_exec` ciąg `"hi there"` spowoduje nowego procesu pobierania dwa argumenty `"hi"` i `"there"`. Jeśli celem ma nowy proces, otwórz plik o nazwie "Cześć", proces nie powiedzie się. Można tego uniknąć przez zamykający ciąg: `"\"hi there\""`.  
   
 > [!IMPORTANT]
->  Nie przekazuj danych wejściowych użytkownika na `_exec` bez jawnie sprawdzania jego zawartości. `_exec`spowoduje wywołanie [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx) tak należy pamiętać, że ścieżka niekwalifikowanych nazw może prowadzić do potencjalnych luk w zabezpieczeniach.  
+>  Nie przekazuj danych wejściowych użytkownika na `_exec` bez jawnie sprawdzania jego zawartości. `_exec` spowoduje wywołanie [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx) tak należy pamiętać, że ścieżka niekwalifikowanych nazw może prowadzić do potencjalnych luk w zabezpieczeniach.  
   
  `_exec` Funkcje walidację ich parametrów. Jeśli oczekiwane parametry są wskaźniki o wartości null, puste ciągi, lub jest pominięty, `_exec` funkcji Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji `errno` do `EINVAL` i zwróć -1. Żaden nowy proces jest wykonywany.  
   
@@ -127,7 +122,7 @@ Każda funkcja w tej rodzinie ładuje i wykonuje nowy proces:
   
  `_execv`, `_execve`, `_execvp`, I `_execvpe` wywołania są pomocne, gdy liczba parametrów do nowego procesu jest zmienna. Wskaźniki do parametrów są przekazywane jako tablica `argv`. Parametr `argv`[0] jest zwykle wskaźnik do `cmdname`. Parametry `argv`[1] za pomocą `argv`[`n`] wskaż ciągi znaków tworzących nowe listy parametrów. Parametr `argv`[`n`+ 1] musi być `NULL` wskaźnika można oznaczyć końca listy parametrów.  
   
- Otwórz pliki, które są, kiedy `_exec` wywołanie pozostają otwarte w nowym procesie. W `_execl`, `_execlp`, `_execv`, i `_execvp` wywołań, nowy proces dziedziczy środowisko procesu wywołującego. `_execle`, `_execlpe`, `_execve`, i `_execvpe` wywołania wpływu na środowisko nowy proces, przekazując listę ustawień środowiska za pośrednictwem `envp` parametru. `envp`tablicy wskaźników znak każdego elementu (z wyjątkiem ostatniego elementu) wskazuje ciąg znaków zakończony znakiem null, jest zdefiniowanie zmiennej środowiskowej. Taki ciąg ma zazwyczaj postać `NAME` = `value` gdzie `NAME` to nazwa zmiennej środowiskowej i `value` jest wartość ciągu, do którego jest wartość tej zmiennej. (Należy pamiętać, że `value` nie jest ujęta w znaki podwójnego cudzysłowu.) Końcowy element `envp` tablicy powinna być `NULL`. Gdy `envp` jest `NULL`, nowy proces dziedziczy ustawienia środowiska procesu wywołującego.  
+ Otwórz pliki, które są, kiedy `_exec` wywołanie pozostają otwarte w nowym procesie. W `_execl`, `_execlp`, `_execv`, i `_execvp` wywołań, nowy proces dziedziczy środowisko procesu wywołującego. `_execle`, `_execlpe`, `_execve`, i `_execvpe` wywołania wpływu na środowisko nowy proces, przekazując listę ustawień środowiska za pośrednictwem `envp` parametru. `envp` tablicy wskaźników znak każdego elementu (z wyjątkiem ostatniego elementu) wskazuje ciąg znaków zakończony znakiem null, jest zdefiniowanie zmiennej środowiskowej. Taki ciąg ma zazwyczaj postać `NAME` = `value` gdzie `NAME` to nazwa zmiennej środowiskowej i `value` jest wartość ciągu, do którego jest wartość tej zmiennej. (Należy pamiętać, że `value` nie jest ujęta w znaki podwójnego cudzysłowu.) Końcowy element `envp` tablicy powinna być `NULL`. Gdy `envp` jest `NULL`, nowy proces dziedziczy ustawienia środowiska procesu wywołującego.  
   
  Program wykonać jeden z `_exec` tak, jakby maksymalna alokacja pole w nagłówku pliku .exe programu ustawiono wartość domyślną 0xFFFFH funkcji zawsze jest ładowany do pamięci.  
   
@@ -247,7 +242,7 @@ int main( int ac, char* av[] )
   
 ## <a name="see-also"></a>Zobacz też  
  [Proces i kontroli środowiska](../c-runtime-library/process-and-environment-control.md)   
- [przerwania](../c-runtime-library/reference/abort.md)   
+ [Przerwania](../c-runtime-library/reference/abort.md)   
  [atexit —](../c-runtime-library/reference/atexit.md)   
  [exit, _exit — _exit —](../c-runtime-library/reference/exit-exit-exit.md)   
  [_onexit —, _onexit_m —](../c-runtime-library/reference/onexit-onexit-m.md)   

@@ -2,11 +2,8 @@
 title: Makra wymiany danych rejestru | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlplus/ATL::BEGIN_RDX_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bc12c48ef628a42c309c44ce0fc37abda9b6690
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62a26e8d602010ce637114464a844d2f95e635c9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-data-exchange-macros"></a>Makra wymiany danych rejestru
 Te makra operacji wymiana danych z rejestru.  
@@ -47,7 +42,7 @@ Te makra operacji wymiana danych z rejestru.
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlplus.h  
    
-##  <a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
+##  <a name="begin_rdx_map"></a>  BEGIN_RDX_MAP  
  Oznacza początek mapy wymiany danych rejestru.  
   
 ```
@@ -57,7 +52,7 @@ BEGIN_RDX_MAP
 ### <a name="remarks"></a>Uwagi  
  Następujące makra są używane w mapie wymiany danych rejestru do odczytu i zapisu wpisy w rejestrze systemu:  
   
-|Makra|Opis|  
+|Macro|Opis|  
 |-----------|-----------------|  
 |[RDX_BINARY](#rdx_binary)|Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu BYTE.|  
 |[RDX_DWORD](#rdx_dword)|Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu DWORD.|  
@@ -66,14 +61,14 @@ BEGIN_RDX_MAP
   
  Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcja członkowska o takiej samej nazwie utworzone przez `BEGIN_RDX_MAP` i `END_RDX_MAP` makra, powinna być używana zawsze, gdy kod musi wymiany danych między rejestru systemowego i określone w planie RDX zmienne.  
   
-##  <a name="end_rdx_map"></a>END_RDX_MAP  
+##  <a name="end_rdx_map"></a>  END_RDX_MAP  
  Oznacza koniec mapy wymiany danych rejestru.  
   
 ```
 END_RDX_MAP
 ```  
   
-##  <a name="rdx_binary"></a>RDX_BINARY  
+##  <a name="rdx_binary"></a>  RDX_BINARY  
  Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu BYTE.  
   
 ```
@@ -104,7 +99,7 @@ RDX_BINARY(
 ### <a name="remarks"></a>Uwagi  
  To makro jest używane w połączeniu z `BEGIN_RDX_MAP` i `END_RDX_MAP` makra do skojarzenia z wpisu rejestru danego zmiennej członkowskiej. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcja członkowska o takiej samej nazwie utworzone przez `BEGIN_RDX_MAP` i `END_RDX_MAP` makra, powinny być używane do wykonywania wymiany danych między rejestru systemowego i element członkowski zmienne w mapie RDX.  
   
-##  <a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
+##  <a name="rdx_cstring_text"></a>  RDX_CSTRING_TEXT  
  Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu obiektu CString.  
   
 ```
@@ -135,7 +130,7 @@ RDX_CSTRING_TEXT(
 ### <a name="remarks"></a>Uwagi  
  To makro jest używane w połączeniu z `BEGIN_RDX_MAP` i `END_RDX_MAP` makra do skojarzenia z wpisu rejestru danego zmiennej członkowskiej. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcja członkowska o takiej samej nazwie utworzone przez `BEGIN_RDX_MAP` i `END_RDX_MAP` makra, powinny być używane do wykonywania wymiany danych między rejestru systemowego i element członkowski zmienne w mapie RDX.  
   
-##  <a name="rdx_dword"></a>RDX_DWORD  
+##  <a name="rdx_dword"></a>  RDX_DWORD  
  Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu DWORD.  
   
 ```
@@ -166,7 +161,7 @@ RDX_DWORD(
 ### <a name="remarks"></a>Uwagi  
  To makro jest używane w połączeniu z `BEGIN_RDX_MAP` i `END_RDX_MAP` makra do skojarzenia z wpisu rejestru danego zmiennej członkowskiej. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcja członkowska o takiej samej nazwie utworzone przez `BEGIN_RDX_MAP` i `END_RDX_MAP` makra, powinny być używane do wykonywania wymiany danych między rejestru systemowego i element członkowski zmienne w mapie RDX.  
   
-##  <a name="rdx_text"></a>RDX_TEXT  
+##  <a name="rdx_text"></a>  RDX_TEXT  
  Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu tchar —.  
   
 ```

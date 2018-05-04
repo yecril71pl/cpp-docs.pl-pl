@@ -1,12 +1,9 @@
 ---
 title: __restrict | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __restrict_cpp
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c21872c5d6fe6000038a3a2f4fe39451b566dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d96abd70990f1c01229004e9be000ec4e35a8595
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restrict"></a>__restrict
 Podobnie jak **__declspec ( [ograniczyć](../cpp/restrict.md) )** , modyfikator `__restrict` — słowo kluczowe wskazuje, czy symbol nie jest używane z aliasem w bieżącym zakresie. `__restrict` — Słowo kluczowe różni się od `__declspec ( restrict )` modyfikator w następujący sposób:  
   
 -   `__restrict` — Słowo kluczowe jest prawidłowa tylko dla zmiennych i `__declspec ( restrict )` jest prawidłowy tylko w deklaracji i definicji funkcji.  
   
--   `__restrict`przypomina `restrict` od specyfikacji C99, ale `__restrict` mogą być używane w C++ lub C programów.  
+-   `__restrict` przypomina `restrict` od specyfikacji C99, ale `__restrict` mogą być używane w C++ lub C programów.  
   
 -   Gdy `__restrict` jest używana, kompilator nie zostaną przeniesione właściwości aliasu nie zmiennej. Oznacza to po przypisaniu `__restrict` zmiennej niż`__restrict` zmiennej, kompilator zezwala nie __restrict zmienną jako alias. Ta lokalizacja jest inna od zachowania `restrict` — słowo kluczowe ze specyfikacji C99.  
   

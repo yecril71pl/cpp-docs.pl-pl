@@ -1,13 +1,10 @@
 ---
-title: "-MANIFESTUAC (osadza informacje UAC w manifeście) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -MANIFESTUAC (osadza informacje UAC w manifeście) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.UACUIAccess
 - VC.Project.VCLinkerTool.UACExecutionLevel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 564c17336936866750d05137a7bcd101b3a6534d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd872b43fbabdb14457ca54e6c4dfbe039313f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Osadza informacje UAC w manifeście)
 Określa, czy informacje o kontroli konta użytkownika (UAC) jest osadzony w manifeście program.  
@@ -52,7 +47,7 @@ Określa, czy informacje o kontroli konta użytkownika (UAC) jest osadzony w man
  Jeden z *asInvoker*, *highestAvailable*, lub *requireAdministrator*. Wartość domyślna to asInvoker. Aby uzyskać więcej informacji zobacz sekcję uwag w dalszej części tego tematu.  
   
  `_uiAccess`  
- `true`Jeśli chcesz, aby aplikacja do obejścia poziomów ochrony interfejsu użytkownika i dysków danych wejściowych do systemu windows nowszej uprawnień na pulpit. w przeciwnym razie `false`. Domyślnie `false`. Ustaw `true` tylko dla aplikacji ułatwień dostępu interfejsu użytkownika.  
+ `true` Jeśli chcesz, aby aplikacja do obejścia poziomów ochrony interfejsu użytkownika i dysków danych wejściowych do systemu windows nowszej uprawnień na pulpit. w przeciwnym razie `false`. Domyślnie `false`. Ustaw `true` tylko dla aplikacji ułatwień dostępu interfejsu użytkownika.  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli określisz wiele opcji /MANIFESTUAC w wierszu polecenia, pierwszeństwo ma ostatnią wprowadzona.  

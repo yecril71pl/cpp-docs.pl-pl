@@ -1,12 +1,9 @@
 ---
 title: Klasa CRect | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRect
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f683b5322b11a4ca33f015d64850c8113ce18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a819cfc95588dc9225570a82b8a359d90a8f6b9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crect-class"></a>Klasa CRect
 Podobnie jak Windows [RECT](../../mfc/reference/rect-structure1.md) struktury.  
@@ -84,7 +79,7 @@ class CRect : public tagRECT
 |[CRect::Height](#height)|Oblicza wysokość `CRect`.|  
 |[CRect::InflateRect](#inflaterect)|Zwiększa szerokość i wysokość `CRect`.|  
 |[CRect::IntersectRect](#intersectrect)|Ustawia `CRect` równą część wspólną dwóch prostokątów.|  
-|[CRect::IsRectEmpty](#isrectempty)|Określa, czy `CRect` jest pusta. `CRect`Jeśli szerokość lub wysokość są 0 jest pusty.|  
+|[CRect::IsRectEmpty](#isrectempty)|Określa, czy `CRect` jest pusta. `CRect` Jeśli szerokość lub wysokość są 0 jest pusty.|  
 |[CRect::IsRectNull](#isrectnull)|Określa, czy **górnej**, **dolnej**, **po lewej stronie**, i **prawo** zmienne Członkowskie są równe 0.|  
 |[CRect::MoveToX](#movetox)|Przenosi `CRect` do określonego współrzędną x.|  
 |[CRect::MoveToXY](#movetoxy)|Przenosi `CRect` do określonych x i y współrzędnych.|  
@@ -107,8 +102,8 @@ class CRect : public tagRECT
 |[Lpcrect — CRect::operator](#operator_lpcrect)|Konwertuje `CRect` do **lpcrect —**.|  
 |[CRect::operator lprect —](#operator_lprect)|Konwertuje `CRect` do `LPRECT`.|  
 |[CRect::operator! =](#operator_neq)|Określa, czy `CRect` nie jest równa prostokąta.|  
-|[CRect::operator&amp;](#operator_amp)|Tworzy punkt przecięcia `CRect` i prostokąt i zwraca wynikowy `CRect`.|  
-|[CRect::operator&amp;=](#operator_amp_eq)|Ustawia `CRect` równą część wspólną `CRect` i prostokąta.|  
+|[CRect::operator &amp;](#operator_amp)|Tworzy punkt przecięcia `CRect` i prostokąt i zwraca wynikowy `CRect`.|  
+|[CRect::operator &amp;=](#operator_amp_eq)|Ustawia `CRect` równą część wspólną `CRect` i prostokąta.|  
 |[CRect::operator |](#operator_or)|Tworzy złożenie `CRect` i prostokąt i zwraca wynikowy `CRect`.|  
 |[CRect::operator |=](#operator_or_eq)|Ustawia `CRect` równa złożenie `CRect` i prostokąta.|  
 |[CRect::operator +](#operator_add)|Dodaje danego przesunięcia do `CRect` lub nadyma `CRect` i zwraca wynikowy `CRect`.|  
@@ -118,7 +113,7 @@ class CRect : public tagRECT
 |[CRect::operator ==](#operator_eq_eq)|Określa, czy `CRect` jest równa prostokąta.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CRect`zawiera również funkcje elementów członkowskich do manipulowania `CRect` obiektów i Windows `RECT` struktury.  
+ `CRect` zawiera również funkcje elementów członkowskich do manipulowania `CRect` obiektów i Windows `RECT` struktury.  
   
  A `CRect` obiekt można przekazać jako parametru funkcji wszędzie tam, gdzie `RECT` struktury **lpcrect —**, lub `LPRECT` mogą zostać przekazane.  
   
@@ -142,7 +137,7 @@ class CRect : public tagRECT
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atltypes.h  
   
-##  <a name="bottomright"></a>CRect::BottomRight  
+##  <a name="bottomright"></a>  CRect::BottomRight  
  Współrzędne są zwracane jako odwołanie do [CPoint](cpoint-class.md) obiektu, który jest zawarty w `CRect`.  
   
 ```  
@@ -181,7 +176,7 @@ rect2.BottomRight() = ptLow;
    ASSERT(rect2 == CRect(10, 10, 180, 180));   
 ```
   
-##  <a name="centerpoint"></a>CRect::CenterPoint 
+##  <a name="centerpoint"></a>  CRect::CenterPoint 
  Oblicza centerpoint z `CRect` przez dodanie wartości lewy i prawy i podzielenie przez dwa i dodawanie górnej i dolnej wartości i podzielenie przez dwa.  
   
 ```  
@@ -242,7 +237,7 @@ void CMyDlg::OnPaint()
 }
 ```
   
-##  <a name="copyrect"></a>CRect::CopyRect  
+##  <a name="copyrect"></a>  CRect::CopyRect  
  Kopie `lpSrcRect` prostokąta do `CRect`.  
   
 ```  
@@ -275,7 +270,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
   
-##  <a name="crect"></a>CRect::CRect  
+##  <a name="crect"></a>  CRect::CRect  
  Konstruuje `CRect` obiektu.  
   
 ```  
@@ -312,7 +307,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  `size`  
  Określa przesunięcie od lewego górnego rogu do prawego dolnego rogu prostokąta nastąpi.  
   
- *topLeft*  
+ *TopLeft*  
  Umiejscowienie lewego górnego `CRect`.  
   
  *bottomRight*  
@@ -361,8 +356,8 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  ASSERT(rect5 == rect4);  
 ```
   
-##  <a name="deflaterect"></a>CRect::DeflateRect  
- `DeflateRect`deflates `CRect` przenosząc boków kierunku jej center.  
+##  <a name="deflaterect"></a>  CRect::DeflateRect  
+ `DeflateRect` deflates `CRect` przenosząc boków kierunku jej center.  
   
 ```  
 void DeflateRect(int x, int y) throw();
@@ -415,7 +410,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
    ASSERT(rect2.top == 12 && rect2.bottom == 46);   
 ```
   
-##  <a name="equalrect"></a>CRect::EqualRect  
+##  <a name="equalrect"></a>  CRect::EqualRect  
  Określa, czy `CRect` jest równa danego prostokąta.  
   
 ```  
@@ -450,7 +445,7 @@ ASSERT(rect1.EqualRect(rect2));
  ASSERT(rect1.EqualRect(&test));  
 ```
 
-##  <a name="height"></a>CRect::Height  
+##  <a name="height"></a>  CRect::Height  
  Oblicza wysokość `CRect` przez odjęcie wysokiej wartości niż wartość dolnej.  
   
 ```  
@@ -480,8 +475,8 @@ int nHt = rect.Height();
 ```
 
   
-##  <a name="inflaterect"></a>CRect::InflateRect  
- `InflateRect`nadyma `CRect` przenosząc boków od środka.  
+##  <a name="inflaterect"></a>  CRect::InflateRect  
+ `InflateRect` nadyma `CRect` przenosząc boków od środka.  
   
 ```  
 void InflateRect(int x, int y) throw();
@@ -529,7 +524,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  ASSERT(rect == CRect(-50, -200, 350, 500));  
 ```
   
-##  <a name="intersectrect"></a>CRect::IntersectRect  
+##  <a name="intersectrect"></a>  CRect::IntersectRect  
  Sprawia, że `CRect` równą część wspólną dwóch prostokątów istniejących.  
   
 ```  
@@ -572,7 +567,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
  ASSERT(rectInter2 == CRect(125, 75, 150, 95));  
 ```
   
-##  <a name="isrectempty"></a>CRect::IsRectEmpty  
+##  <a name="isrectempty"></a>  CRect::IsRectEmpty  
  Określa, czy `CRect` jest pusta.  
   
 ```  
@@ -603,7 +598,7 @@ CRect rectEmpty(35, 35, 35, 35);
 ```
 
   
-##  <a name="isrectnull"></a>CRect::IsRectNull  
+##  <a name="isrectnull"></a>  CRect::IsRectNull  
  Określa, czy, lewego górnego, dół i kliknij prawym przyciskiem myszy wartości `CRect` są równe 0.  
   
 ```  
@@ -632,7 +627,7 @@ ASSERT(rectNone.IsRectNull());
  ASSERT(!rectNotNull.IsRectNull());  
 ```
   
-##  <a name="movetox"></a>CRect::MoveToX  
+##  <a name="movetox"></a>  CRect::MoveToX  
  Wywołanie tej funkcji, aby przenieść prostokąt bezwzględną współrzędną x określony przez *x*.  
   
 ```  
@@ -656,7 +651,7 @@ rect.MoveToX(10);
    ASSERT(rect == CRect(10, 0, 110, 100));   
 ```
   
-##  <a name="movetoxy"></a>CRect::MoveToXY  
+##  <a name="movetoxy"></a>  CRect::MoveToXY  
  Wywołanie tej funkcji można przesuwać do bezwzględne współrzędne x i y-określony.  
   
 ```  
@@ -687,7 +682,7 @@ void MoveToXY(POINT point) throw();
 ```
 
   
-##  <a name="movetoy"></a>CRect::MoveToY  
+##  <a name="movetoy"></a>  CRect::MoveToY  
  Wywołanie tej funkcji, aby przenieść prostokąt bezwzględną współrzędną y określony przez *y*.  
   
 ```  
@@ -711,7 +706,7 @@ void MoveToY(int y) throw();
 ```
 
   
-##  <a name="normalizerect"></a>CRect::NormalizeRect  
+##  <a name="normalizerect"></a>  CRect::NormalizeRect  
  Normalizuje `CRect` tak, aby wysokość i szerokość są dodatnie.  
   
 ```  
@@ -719,10 +714,10 @@ void NormalizeRect() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Prostokąt jest znormalizowanych się dla wiązania kwadrantu czwarty rozmieszczania, używający systemu Windows zazwyczaj współrzędnych. `NormalizeRect`porównuje wartości górny i dolny i zamienia je, jeśli górnej jest większa od dołu. Podobnie go zamienia wartości lewy i prawy, jeśli po lewej stronie jest większa niż prawo. Ta funkcja jest przydatne podczas pracy nad mapowania różnych trybach i prostokąty odwrócony.  
+ Prostokąt jest znormalizowanych się dla wiązania kwadrantu czwarty rozmieszczania, używający systemu Windows zazwyczaj współrzędnych. `NormalizeRect` porównuje wartości górny i dolny i zamienia je, jeśli górnej jest większa od dołu. Podobnie go zamienia wartości lewy i prawy, jeśli po lewej stronie jest większa niż prawo. Ta funkcja jest przydatne podczas pracy nad mapowania różnych trybach i prostokąty odwrócony.  
   
 > [!NOTE]
->  Następujące `CRect` funkcje Członkowskie znormalizowane prostokąty prawidłowego funkcjonowania wymagają: [wysokość](#height), [szerokość](#width), [rozmiar](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [operator ==](#operator_eq_eq), [operator! =](#operator_neq), [operatora &#124;](#operator_or), [operatora &#124; =](#operator_or_eq), [operatora &](#operator_amp), i [— operator & =](#operator_amp_eq).  
+>  Następujące `CRect` funkcje Członkowskie znormalizowane prostokąty prawidłowego funkcjonowania wymagają: [wysokość](#height), [szerokość](#width), [rozmiar](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [operator ==](#operator_eq_eq), [operator! =](#operator_neq), [operator &#124; ](#operator_or), [operator &#124;=](#operator_or_eq), [operatora &](#operator_amp), i [— operator & =](#operator_amp_eq).  
   
 ### <a name="example"></a>Przykład  
 ```cpp  
@@ -737,7 +732,7 @@ rect1.NormalizeRect();
  ASSERT(rect1 == rect2);  
 ```
   
-##  <a name="offsetrect"></a>CRect::OffsetRect  
+##  <a name="offsetrect"></a>  CRect::OffsetRect  
  Przenosi `CRect` przez określonych przesunięć.  
   
 ```  
@@ -776,7 +771,7 @@ void OffsetRect(SIZE size) throw();
 ```
 
   
-##  <a name="operator_lpcrect"></a>Konwertuje lpcrect — CRect::operator `CRect` do [lpcrect —](../../mfc/reference/data-types-mfc.md).  
+##  <a name="operator_lpcrect"></a>  Konwertuje lpcrect — CRect::operator `CRect` do [lpcrect —](../../mfc/reference/data-types-mfc.md).  
 
   
 ```  
@@ -787,7 +782,7 @@ operator LPCRECT() const throw();
  Korzystając z tej funkcji, nie potrzebujesz adresu z (**&**) operatora. Ten operator będzie automatycznie używany podczas przekazywania `CRect` obiektu do funkcji, która oczekuje **lpcrect —**.  
   
 
-##  <a name="operator_lprect"></a>CRect::operator lprect —  
+##  <a name="operator_lprect"></a>  CRect::operator lprect —  
  Konwertuje `CRect` do [lprect —](../../mfc/reference/data-types-mfc.md).  
 
   
@@ -801,7 +796,7 @@ operator LPRECT() throw();
 ### <a name="example"></a>Przykład  
  Zobacz przykład [lpcrect — CRect::operator](#operator_lpcrect).  
   
-##  <a name="operator_eq"></a>CRect::operator =  
+##  <a name="operator_eq"></a>  CRect::operator =  
  Przypisuje *srcRect* do `CRect`.  
   
 ```  
@@ -826,7 +821,7 @@ void operator=(const RECT& srcRect) throw();
 ```
 
   
-##  <a name="operator_eq_eq"></a>CRect::operator ==  
+##  <a name="operator_eq_eq"></a>  CRect::operator ==  
  Określa, czy `rect` jest równa `CRect` porównując współrzędne ich rogi górnego lewego i prawego dolnego.  
   
 ```  
@@ -868,7 +863,7 @@ ASSERT(rect1 == rect2);
 ```
 
   
-##  <a name="operator_neq"></a>CRect::operator! =  
+##  <a name="operator_neq"></a>  CRect::operator! =  
  Określa, czy `rect` nie jest równa `CRect` porównując współrzędne ich rogi górnego lewego i prawego dolnego.  
   
 ```  
@@ -909,7 +904,7 @@ ASSERT(rect1 != rect3);
  ASSERT(rect3 != test);  
 ```
   
-##  <a name="operator_add_eq"></a>CRect::operator +=  
+##  <a name="operator_add_eq"></a>  CRect::operator +=  
  Przenieś pierwsze dwa przeciążenia `CRect` przez określonych przesunięć.  
   
 ```  
@@ -948,7 +943,7 @@ void operator+=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rect2);   
 ```
   
-##  <a name="operator_-_eq"></a>CRect::operator-=  
+##  <a name="operator_-_eq"></a>  CRect::operator-=  
  Przenieś pierwsze dwa przeciążenia `CRect` przez określonych przesunięć.  
   
 ```  
@@ -987,7 +982,7 @@ void operator-=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rectResult);   
 ```
   
-##  <a name="operator_amp_eq"></a>CRect::operator&amp;=  
+##  <a name="operator_amp_eq"></a>  CRect::operator &amp;=  
  Ustawia `CRect` równą część wspólną `CRect` i `rect`.  
   
 ```  
@@ -1007,7 +1002,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CRect::IntersectRect](#intersectrect).  
   
-##  <a name="operator_or_eq"></a>CRect::operator &#124; =  
+##  <a name="operator_or_eq"></a>  CRect::operator &#124;=  
  Ustawia `CRect` równa złożenie `CRect` i `rect`.  
   
 ```  
@@ -1040,7 +1035,7 @@ void operator|=(const RECT& rect) throw();
 ```
 
   
-##  <a name="operator_add"></a>CRect::operator +  
+##  <a name="operator_add"></a>  CRect::operator +  
  Zwraca pierwsze dwa przeciążenia `CRect` obiekt, który jest taki sam `CRect` przesuwane za pomocą określonego przesunięcia.  
   
 ```  
@@ -1079,7 +1074,7 @@ CRect operator+(SIZE size) const throw();
 ```
 
   
-##  <a name="operator_-"></a>CRect::operator-  
+##  <a name="operator_-"></a>  CRect::operator-  
  Zwraca pierwsze dwa przeciążenia `CRect` obiekt, który jest taki sam `CRect` przesuwane za pomocą określonego przesunięcia.  
   
 ```  
@@ -1118,7 +1113,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 ```
 
   
-##  <a name="operator_amp"></a>CRect::operator&amp;  
+##  <a name="operator_amp"></a>  CRect::operator &amp;  
  Zwraca `CRect` czyli przecięcie `CRect` i *rect2*.  
   
 ```  
@@ -1150,7 +1145,7 @@ CRect operator&(const RECT& rect2) const throw();
 ```
 
   
-##  <a name="operator_or"></a>CRect::operator &#124;  
+##  <a name="operator_or"></a>  CRect::operator&#124;  
  Zwraca `CRect` to znaczy sumę `CRect` i *rect2*.  
   
 ```   
@@ -1188,7 +1183,7 @@ rect2) const throw();
 ```
 
   
-##  <a name="ptinrect"></a>CRect::PtInRect  
+##  <a name="ptinrect"></a>  CRect::PtInRect  
  Określa, czy określony punkt znajduje się w obrębie `CRect`.  
   
 ```   
@@ -1235,7 +1230,7 @@ BOOL PtInRect(POINT point) const throw();
  ASSERT(rect.PtInRect(pt));  
 ```
   
-##  <a name="setrect"></a>CRect::SetRect  
+##  <a name="setrect"></a>  CRect::SetRect  
  Ustawia wymiary `CRect` do określonych współrzędnych.  
   
 ```   
@@ -1267,7 +1262,7 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
   
-##  <a name="setrectempty"></a>CRect::SetRectEmpty  
+##  <a name="setrectempty"></a>  CRect::SetRectEmpty  
  Sprawia, że `CRect` zerowy prostokąt przez ustawienie wszystkie współrzędne od zera.  
   
 ```  
@@ -1283,7 +1278,7 @@ rect.SetRectEmpty();
 ASSERT(rect.IsRectEmpty());  
 ```
   
-##  <a name="size"></a>CRect::SIZE 
+##  <a name="size"></a>  CRect::SIZE 
  `cx` i `cy` zawierają elementy członkowskie wartości zwracanej wysokość i szerokość `CRect`.  
   
 ```  
@@ -1306,7 +1301,7 @@ CSize Size() const throw();
  ASSERT(sz.cx == 40 && sz.cy == 40);  
 ```
 
-##  <a name="subtractrect"></a>CRect::SubtractRect  
+##  <a name="subtractrect"></a>  CRect::SubtractRect  
  Powoduje, że wymiary **CRect** równa odejmowanie `lpRectSrc2` z `lpRectSrc1`.  
   
 ```  
@@ -1330,7 +1325,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
   
  Na przykład jeśli `lpRectSrc1` zostały (10,10, 100,100) i `lpRectSrc2` zostały (50,50, 150,150), prostokąt wskazywana przez `lpRectSrc1` byłoby bez zmian, gdy wartość zwrócona przez funkcję. Jeśli `lpRectSrc1` zostały (10,10, 100,100) i `lpRectSrc2` zostały (50,10, 150,150), jednak prostokąt wskazywana przez `lpRectSrc1` będzie zawierać współrzędne (10,10, 50,100) Jeśli wartość zwrócona przez funkcję.  
   
- `SubtractRect`nie jest taka sama jak [operator -](#operator_-) ani [operator-=](#operator_-_eq). Żadna z tych operatorów kiedykolwiek wywołuje `SubtractRect`.  
+ `SubtractRect` nie jest taka sama jak [operator -](#operator_-) ani [operator-=](#operator_-_eq). Żadna z tych operatorów kiedykolwiek wywołuje `SubtractRect`.  
   
 > [!NOTE]
 >  Zarówno prostokątów muszą być znormalizowane lub tej funkcji może zakończyć się niepowodzeniem. Możesz wywołać [NormalizeRect](#normalizerect) do normalizacji prostokątów przed wywołaniem tej funkcji.  
@@ -1368,7 +1363,7 @@ CRect   rectResult(10, 10, 50, 100);
    ASSERT(rectResult == rectOut);   
 ```
   
-##  <a name="topleft"></a>CRect::TopLeft  
+##  <a name="topleft"></a>  CRect::TopLeft  
  Współrzędne są zwracane jako odwołanie do [CPoint](cpoint-class.md) obiektu, który jest zawarty w `CRect`.  
   
 ```  
@@ -1385,7 +1380,7 @@ const CPoint& TopLeft() const throw();
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CRect::CenterPoint](#centerpoint).  
   
-##  <a name="unionrect"></a>CRect::UnionRect  
+##  <a name="unionrect"></a>  CRect::UnionRect  
  Powoduje, że wymiary `CRect` równa Unii prostokąty dwa źródła.  
   
 ```  
@@ -1421,7 +1416,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
    ASSERT(rectResult == rect3);   
 ```
  
-##  <a name="width"></a>CRect::Width  
+##  <a name="width"></a>  CRect::Width  
  Oblicza szerokość `CRect` przez odjęcie wartości po lewej stronie z wartość prawej strony.  
   
 ```  

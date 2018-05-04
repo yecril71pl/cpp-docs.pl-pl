@@ -1,12 +1,9 @@
 ---
 title: Klasa CComMultiThreadModelNoCS | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComMultiThreadModelNoCS
@@ -23,20 +20,18 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc32ab53469b1f125b56343806c7920461c64bf2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 758811b10757cd7903b4f1d6218a5f34f8a98462
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>Klasa CComMultiThreadModelNoCS
-`CComMultiThreadModelNoCS`udostępnia metody wątkowo zwiększanie oraz zmniejszanie wartości zmiennej, bez sekcja krytyczna blokowanie lub odblokowywanie funkcji.  
+`CComMultiThreadModelNoCS` udostępnia metody wątkowo zwiększanie oraz zmniejszanie wartości zmiennej, bez sekcja krytyczna blokowanie lub odblokowywanie funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -62,7 +57,7 @@ class CComMultiThreadModelNoCS
 |[CComMultiThreadModelNoCS::Increment](#increment)|(Statyczny) Zwiększa wartość zmiennej określonej w sposób wątkowo.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComMultiThreadModelNoCS`przypomina [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) w tym zapewnia metody wątkowo zwiększanie oraz zmniejszanie zmiennej. Jednak podczas odwoływania się za pośrednictwem klasy sekcja krytyczna `CComMultiThreadModelNoCS`, metod, takich jak `Lock` i `Unlock` nie przynosi.  
+ `CComMultiThreadModelNoCS` przypomina [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) w tym zapewnia metody wątkowo zwiększanie oraz zmniejszanie zmiennej. Jednak podczas odwoływania się za pośrednictwem klasy sekcja krytyczna `CComMultiThreadModelNoCS`, metod, takich jak `Lock` i `Unlock` nie przynosi.  
   
  Zazwyczaj `CComMultiThreadModelNoCS` za pośrednictwem `ThreadModelNoCS` `typedef` nazwy. To `typedef` jest zdefiniowany w `CComMultiThreadModelNoCS`, `CComMultiThreadModel`, i [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md).  
   
@@ -74,7 +69,7 @@ class CComMultiThreadModelNoCS
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
-##  <a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>  CComMultiThreadModelNoCS::AutoCriticalSection  
  Korzystając z `CComMultiThreadModelNoCS`, `typedef` nazwa `AutoCriticalSection` odwołuje się do klasy [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).  
   
 ```
@@ -97,7 +92,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 ### <a name="example"></a>Przykład  
  Zobacz [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
-##  <a name="criticalsection"></a>CComMultiThreadModelNoCS::CriticalSection  
+##  <a name="criticalsection"></a>  CComMultiThreadModelNoCS::CriticalSection  
  Korzystając z `CComMultiThreadModelNoCS`, `typedef` nazwa `CriticalSection` odwołuje się do klasy [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).  
   
 ```
@@ -120,7 +115,7 @@ typedef CComFakeCriticalSection CriticalSection;
 ### <a name="example"></a>Przykład  
  Zobacz [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
-##  <a name="decrement"></a>CComMultiThreadModelNoCS::Decrement  
+##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement  
  Ta funkcja statyczna wywołania funkcji Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), które zmniejsza wartość zmiennej wskazywana przez `p`.  
   
 ```
@@ -137,7 +132,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 ### <a name="remarks"></a>Uwagi  
  **InterlockedDecrement** uniemożliwia więcej niż jeden wątek jednocześnie za pomocą tej zmiennej.  
   
-##  <a name="increment"></a>CComMultiThreadModelNoCS::Increment  
+##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment  
  Ta funkcja statyczna wywołania funkcji Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), która zwiększa wartość zmiennej wskazywana przez `p`.  
   
 ```
@@ -154,7 +149,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 ### <a name="remarks"></a>Uwagi  
  **InterlockedIncrement** uniemożliwia więcej niż jeden wątek jednocześnie za pomocą tej zmiennej.  
   
-##  <a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>  CComMultiThreadModelNoCS::ThreadModelNoCS  
  Korzystając z `CComMultiThreadModelNoCS`, `typedef` nazwa `ThreadModelNoCS` po prostu odwołuje się do `CComMultiThreadModelNoCS`.  
   
 ```

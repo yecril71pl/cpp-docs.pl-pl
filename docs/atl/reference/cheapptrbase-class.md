@@ -1,12 +1,9 @@
 ---
 title: Klasa CHeapPtrBase | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CHeapPtrBase
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59520211ae577c4ca4358874ef1d8ff71de59921
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ca18054509ab069722e632308b4d8f57706e548
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cheapptrbase-class"></a>Klasa CHeapPtrBase
 Ta klasa stanowi podstawę dla kilku klas wskaźnika inteligentnego stosu.  
@@ -93,7 +88,7 @@ class CHeapPtrBase
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcore.h  
   
-##  <a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
+##  <a name="allocatebytes"></a>  CHeapPtrBase::AllocateBytes  
  Wywołanie tej metody można przydzielić pamięci.  
   
 ```
@@ -110,7 +105,7 @@ bool AllocateBytes(size_t nBytes) throw();
 ### <a name="remarks"></a>Uwagi  
  W kompilacjach do debugowania błędu potwierdzenia wystąpi, jeśli [CHeapPtrBase::m_pData](#m_pdata) zmiennej członkowskiej wskazuje obecnie istniejącej wartości; oznacza to, że nie jest równa NULL.  
   
-##  <a name="attach"></a>CHeapPtrBase::Attach  
+##  <a name="attach"></a>  CHeapPtrBase::Attach  
  Wywołaj tę metodę, aby przejąć na własność istniejącego wskaźnika.  
   
 ```
@@ -126,7 +121,7 @@ void Attach(T* pData) throw();
   
  W kompilacjach do debugowania błędu potwierdzenia wystąpi, jeśli [CHeapPtrBase::m_pData](#m_pdata) zmiennej członkowskiej wskazuje obecnie istniejącej wartości; oznacza to, że nie jest równa NULL.  
   
-##  <a name="dtor"></a>CHeapPtrBase:: ~ CHeapPtrBase  
+##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase  
  Destruktor.  
   
 ```
@@ -136,7 +131,7 @@ void Attach(T* pData) throw();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wszystkie przydzielone zasoby.  
   
-##  <a name="detach"></a>CHeapPtrBase::Detach  
+##  <a name="detach"></a>  CHeapPtrBase::Detach  
  Wywołanie tej metody, aby zwolnić własność wskaźnika.  
   
 ```
@@ -149,7 +144,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia własność wskaźnik, ustawia [CHeapPtrBase::m_pData](#m_pdata) zmiennej członkowskiej na wartość NULL i zwraca kopię wskaźnika.  
   
-##  <a name="free"></a>CHeapPtrBase::Free  
+##  <a name="free"></a>  CHeapPtrBase::Free  
  Wywołanie tej metody, aby usunąć obiekt wskazywany przez `CHeapPtrBase`.  
   
 ```
@@ -159,7 +154,7 @@ void Free() throw();
 ### <a name="remarks"></a>Uwagi  
  Obiekt wskazywany przez `CHeapPtrBase` zostanie zwolniona i [CHeapPtrBase::m_pData](#m_pdata) zmiennej członkowskiej jest równa NULL.  
   
-##  <a name="m_pdata"></a>CHeapPtrBase::m_pData  
+##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData  
  Zmienna elementu członkowskiego danych wskaźnika.  
   
 ```
@@ -169,7 +164,7 @@ T* m_pData;
 ### <a name="remarks"></a>Uwagi  
  Ta zmienna elementu członkowskiego zawiera informacje wskaźnika.  
   
-##  <a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;  
  & — Operator.  
   
 ```
@@ -180,7 +175,7 @@ T** operator&() throw();
  Zwraca adres wskazywanego przez obiekt `CHeapPtrBase` obiektu.  
   
 
-##  <a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;  
 
  Operator wskaźnika do elementu członkowskiego.  
   
@@ -194,7 +189,7 @@ T* operator->() const throw();
 ### <a name="remarks"></a>Uwagi  
  Użyj tego operatora, aby wywołać metodę w klasie wskazywana przez `CHeapPtrBase` obiektu. W kompilacjach do debugowania błędu potwierdzenia wystąpi, jeśli `CHeapPtrBase` wskazuje na wartość NULL.  
   
-##  <a name="operator_t_star"></a>CHeapPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *  
  Operator rzutowania.  
   
 ```  
@@ -204,7 +199,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>Uwagi  
  Zwraca [CHeapPtrBase::m_pData](#m_pdata).  
   
-##  <a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
+##  <a name="reallocatebytes"></a>  CHeapPtrBase::ReallocateBytes  
  Wywołaj tę metodę, aby ponownie przydzielić pamięci.  
   
 ```

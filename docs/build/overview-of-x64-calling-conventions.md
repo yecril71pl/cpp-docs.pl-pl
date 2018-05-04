@@ -1,34 +1,29 @@
 ---
-title: "Omówienie x64 konwencji wywoływania | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Omówienie x64 konwencji wywoływania | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb4071cd3223ad2ab073f84418e641b515c05112
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Przegląd konwencji wywoływania x64
 Dwie ważne różnice między x86 i [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] są możliwości adresowania 64-bitowe i rejestruje płaski zestaw 16 64-bitowej do użytku ogólnego. Podany rozwinięte zarejestrować zestawu, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] używa [__fastcall](../cpp/fastcall.md) wywoływanie Konwencji i opartych na standardzie RISC model obsługi wyjątków. `__fastcall` Konwencji używa rejestruje pierwsze cztery argumenty i ramki stosu, aby przekazać dodatkowe argumenty.  
   
  Następująca opcja kompilatora pomaga zoptymalizować aplikacji dla [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [/ favor pod (Optymalizuj pod kątem specyfiki architektury)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor (Optymalizacja pod kątem specyfiki architektury)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
 ## <a name="calling-convention"></a>Konwencja wywoływania  
  [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Aplikacji binarny interfejsu (ABI) domyślnie używa konwencji wywoływania wywołania fast cztery rejestru. Miejsce jest przydzielane w stosie wywołań jako magazyn cienia na potrzeby callees można zapisać tych rejestrów. Brak odpowiednika strict między argumentów dla wywołania funkcji i rejestruje używane dla tych argumentów. Któryś argument, który nie mieści się w 8 bajtów, lub nie jest 1, 2, 4 lub 8 bajtów, muszą być przekazywane przez odwołanie. Próba rozłożyć pojedynczy argument na wielu rejestrów nie istnieje. X87 stosu rejestru nie jest używana. Mogą być używane przez funkcję wywołującą, ale muszą być traktowane jako nietrwałe między wywołania funkcji. Zmiennoprzecinkowej wszystkie operacje są wykonywane przy użyciu 16 rejestruje XMM. Liczba całkowita argumenty są przekazywane w rejestrach RCX, RDX, R8 i R9. Liczba zmiennoprzecinkowa się, że argumenty są przekazywane w XMM0L, XMM1L XMM2L i XMM3L. 16-bajtowych argumenty są przekazywane przez odwołanie. Przekazywanie parametru opisano szczegółowo w [przekazywanie parametru](../build/parameter-passing.md). Oprócz tych rejestrów RAX, R10 R11, XMM4 i XMM5 są traktowane jako nietrwałe. Wszystkie inne rejestrów jest trwała. Rejestrowanie użycia jest zostały szczegółowo opisane w [rejestrowanie użycia](../build/register-usage.md) i [wywołujący/wywoływany zapisane rejestruje](../build/caller-callee-saved-registers.md).  

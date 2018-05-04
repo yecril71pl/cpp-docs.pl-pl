@@ -1,12 +1,9 @@
 ---
 title: __declspec | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
@@ -16,14 +13,13 @@ helpviewer_keywords:
 - __declspec keyword [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a08092160ecb288decae343713e5a4f6e507b1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c610da3545e7269c307542930140616dc6af9dce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declspec"></a>__declspec
 
@@ -41,12 +37,12 @@ Składnia rozszerzonych atrybutów do określenia klasy magazynowania informacji
 &nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony decl — modyfikator* *rozszerzony decl — modyfikator seq*
 
 *rozszerzony decl — modyfikator*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**Dopasuj (**  *#*  **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Dopasuj (** *#* **)**  
 &nbsp;&nbsp;&nbsp;&nbsp;**Przydziel ("** *segname* **")**  
 &nbsp;&nbsp;&nbsp;&nbsp;**domeny aplikacji**  
-&nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**przestarzałe**  
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**  
+&nbsp;&nbsp;&nbsp;&nbsp;**code_seg ("** *segname* **")**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Przestarzałe**  
+&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**  
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**  
@@ -55,14 +51,14 @@ Składnia rozszerzonych atrybutów do określenia klasy magazynowania informacji
 &nbsp;&nbsp;&nbsp;&nbsp;**noreturn**  
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**  
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
-&nbsp;&nbsp;&nbsp;&nbsp;**proces**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Proces**  
 &nbsp;&nbsp;&nbsp;&nbsp;**Właściwość (** { **uzyskać =**_get_func_name_ &#124; **, umieść =**_put_func_name_ } **)**  
 &nbsp;&nbsp;&nbsp;&nbsp;**Ogranicz**  
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**  
 &nbsp;&nbsp;&nbsp;&nbsp;**Wątek**  
-&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Identyfikator UUID ("** *ComObjectGUID* **")**  
 
 Spacja oddziela sekwencje modyfikatora deklaracji. Przykłady są zamieszczone w kolejnych sekcjach.
 

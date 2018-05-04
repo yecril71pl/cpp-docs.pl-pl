@@ -1,12 +1,9 @@
 ---
-title: "Cstring — podstawowe operacje | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cstring — podstawowe operacje | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - string comparison, CString operations
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42353a9c59bead96da8eb3b114c8acb2361b53d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b66b6fc5578960e4b6ec9b392622256b66db9cfa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="basic-cstring-operations"></a>Cstring — podstawowe operacje
 W tym temacie opisano następujące basic [cstring —](../atl-mfc-shared/reference/cstringt-class.md) operacje:  
@@ -43,15 +38,15 @@ W tym temacie opisano następujące basic [cstring —](../atl-mfc-shared/refere
   
 - [Konwertowanie cstring — obiekty](#_core_converting_cstring_objects)  
   
- `Class CString`jest oparty na szablonie klasy [CStringT klasy](../atl-mfc-shared/reference/cstringt-class.md). `CString`jest `typedef` z `CStringT`. Bardziej dokładnie `CString` jest `typedef` z *jawna specjalizacja* z `CStringT`, który jest typowym sposobem umożliwia definiowanie klasy szablonu klasy. Podobnie zdefiniowanych klas są `CStringA` i `CStringW`.  
+ `Class CString` jest oparty na szablonie klasy [CStringT klasy](../atl-mfc-shared/reference/cstringt-class.md). `CString` jest `typedef` z `CStringT`. Bardziej dokładnie `CString` jest `typedef` z *jawna specjalizacja* z `CStringT`, który jest typowym sposobem umożliwia definiowanie klasy szablonu klasy. Podobnie zdefiniowanych klas są `CStringA` i `CStringW`.  
   
- `CString`, `CStringA`, i `CStringW` są zdefiniowane w atlstr.h. `CStringT`jest zdefiniowany w cstringt.h.  
+ `CString`, `CStringA`, i `CStringW` są zdefiniowane w atlstr.h. `CStringT` jest zdefiniowany w cstringt.h.  
   
  `CString`, `CStringA`, i `CStringW` uzyskania każdego zestawu metod i operatory zdefiniowane przez `CStringT` dla danych ciąg ich obsługi. Niektóre metody duplikatów, a w niektórych przypadkach przekroczenia usług ciąg biblioteki wykonawcze języka C.  
   
  Uwaga: `CString` jest klasą macierzystego. Dla klasy ciąg, który ma być używany w języku C + +/ CLI zarządzanego projektu, użyj `System.String`.  
   
-##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a>Tworzenie cstring — obiekty z ciągi literału Standard C  
+##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a> Tworzenie cstring — obiekty z ciągi literału Standard C  
  Ciągi literałów w stylu języka C do można przypisać `CString` tylko należy przypisać jeden `CString` obiektu do innego.  
   
 -   Przypisanie wartości literału ciągu C do `CString` obiektu.  
@@ -67,17 +62,17 @@ W tym temacie opisano następujące basic [cstring —](../atl-mfc-shared/refere
     > [!NOTE]
     >  Pisanie aplikacji, dzięki czemu mogą być kompilowane Unicode lub ANSI, ciągi literału kodu za pomocą makra _t —. Aby uzyskać więcej informacji, zobacz [Unicode i pomocy technicznej ustawić znaków wielobajtowych (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
   
-##  <a name="_core_accessing_individual_characters_in_a_cstring"></a>Uzyskiwanie dostępu do poszczególnych znaków cstring —  
+##  <a name="_core_accessing_individual_characters_in_a_cstring"></a> Uzyskiwanie dostępu do poszczególnych znaków cstring —  
  Można uzyskać dostępu do poszczególnych znaków `CString` obiektu za pomocą `GetAt` i `SetAt` metody. Można również użyć operatora elementu lub indeks dolny, tablicy ([]) zamiast `GetAt` można uzyskać znaki. (To jest podobny do uzyskiwania dostępu do elementów tablicy przez indeks, tak jak standardowe ciągów w stylu języka C.) Indeks wartości `CString` znaków jest liczony od zera.  
   
-##  <a name="_core_concatenating_two_cstring_objects"></a>Łączenie dwóch cstring — obiekty  
+##  <a name="_core_concatenating_two_cstring_objects"></a> Łączenie dwóch cstring — obiekty  
  Do łączenia dwóch `CString` obiektów, użyj operatory łączenia (+ lub +=) w następujący sposób.  
   
  [!code-cpp[NVC_ATLMFC_Utilities#185](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_3.cpp)]  
   
  Co najmniej jeden argument operatory łączenia (+ lub +=) musi być `CString` obiekt, ale można użyć ciągu znaków stała (na przykład `"big"`) lub `char` (na przykład "x") dla innych argumentu.  
   
-##  <a name="_core_comparing_cstring_objects"></a>Porównywanie cstring — obiekty  
+##  <a name="_core_comparing_cstring_objects"></a> Porównywanie cstring — obiekty  
  `Compare` — Metoda i == — operator dla `CString` są równoważne. `Compare`, `operator==`, i `CompareNoCase` wiedzą MBCS i Unicode; `CompareNoCase` jest również bez uwzględniania wielkości liter. `Collate` Metody `CString` jest zależne od ustawień regionalnych i często jest mniejsza niż `Compare`. Użyj `Collate` tylko gdy należy przestrzegać sortowania reguły określone przez bieżące ustawienia regionalne.  
   
  W poniższej tabeli przedstawiono dostępne [cstring —](../atl-mfc-shared/reference/cstringt-class.md) porównanie funkcji i ich równoważne funkcje Unicode/MBCS — portable biblioteki wykonawcze języka C.  
@@ -92,7 +87,7 @@ W tym temacie opisano następujące basic [cstring —](../atl-mfc-shared/refere
   
  [!code-cpp[NVC_ATLMFC_Utilities#186](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_4.cpp)]  
   
-##  <a name="_core_converting_cstring_objects"></a>Konwertowanie cstring — obiekty  
+##  <a name="_core_converting_cstring_objects"></a> Konwertowanie cstring — obiekty  
  Uzyskać informacji na temat konwertowania cstring — obiekty na inne typy string, zobacz [porady: konwertowanie między rozmaitymi typami ciągów](../text/how-to-convert-between-various-string-types.md).  
   
 ## <a name="using-cstring-with-wcout"></a>Przy użyciu obiektu CString z wcout  

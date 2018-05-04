@@ -1,12 +1,9 @@
 ---
 title: Szablony (C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - template_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5aa532246054ff0a0b67b9560e40ae704a40fc8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-c"></a>Szablony (C++)
 Szablony stanowią podstawę dla ogólnego programowania w języku C++. Jako jednoznacznie języka C++ wymaga wszystkie zmienne określonego typu jawnie zadeklarowana przez programistę albo ustalona przez kompilator. Jednak wielu struktur danych i algorytmy wyglądają tak samo, niezależnie od tego, jakiego typu działają na. Włącz szablony do definiowania operacji klasy lub funkcji i umożliwia użytkownikowi określenie, jakie konkretnych typów te operacje powinny działać na.  
@@ -42,7 +37,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- Powyższy kod zawiera opis szablonu dla ogólnych funkcji z parametrem jednego typu `T`, której wartość zwracana i wywołać parametrów (lhs i rhs) są wszystkie tego typu. Nazwa parametru typu można coś, co możesz podobnie jak, ale przez Konwencję pojedynczego wielkie litery są najczęściej używane. `T`jest to parametr szablonu; `typename` — słowo kluczowe mówi, że ten parametr jest symbolem zastępczym dla typu. W przypadku wywołania funkcji Kompilator zastąpi każde wystąpienie `T` z argumentem typu konkretnego, które jest określone przez użytkownika lub ustalona przez kompilator. Proces, w którym kompilator generuje klasę lub funkcji z szablonu jest określana jako *Tworzenie wystąpienia szablonu*;   `minimum<int>` jest utworzenie wystąpienia szablonu `minimum<T>`.  
+ Powyższy kod zawiera opis szablonu dla ogólnych funkcji z parametrem jednego typu `T`, której wartość zwracana i wywołać parametrów (lhs i rhs) są wszystkie tego typu. Nazwa parametru typu można coś, co możesz podobnie jak, ale przez Konwencję pojedynczego wielkie litery są najczęściej używane. `T` jest to parametr szablonu; `typename` — słowo kluczowe mówi, że ten parametr jest symbolem zastępczym dla typu. W przypadku wywołania funkcji Kompilator zastąpi każde wystąpienie `T` z argumentem typu konkretnego, które jest określone przez użytkownika lub ustalona przez kompilator. Proces, w którym kompilator generuje klasę lub funkcji z szablonu jest określana jako *Tworzenie wystąpienia szablonu*;   `minimum<int>` jest utworzenie wystąpienia szablonu `minimum<T>`.  
   
  W innym miejscu użytkownika można zadeklarować wystąpienie szablonu, który jest przeznaczone do int. Załóżmy, że get_a() i get_b() są funkcje, które zwracają int:  
   
@@ -70,7 +65,7 @@ int i = minimum(a, b);
   
  Zasady jak kompilator wykonuje wnioskowanie typu w szablonach funkcji są oparte na zasady zwykłej funkcji. Aby uzyskać więcej informacji, zobacz [przeciążenia rozwiązania z wywołań szablonów funkcji](../cpp/overload-resolution-of-function-template-calls.md).  
   
-## <a id="type_parameters"></a>Parametry typu  
+## <a id="type_parameters"></a> Parametry typu  
  W `minimum` szablonu powyżej, należy pamiętać, że parametr typu `T` nie jest kwalifikowana w dowolny sposób, dopóki nie jest on używany w parametrów wywołania funkcji, której są dodawane const i kwalifikatory odwołania.  
   
  Nie ma żadnego praktyczne limitu liczby parametrów typu. Wiele parametrów należy oddzielić przecinkami:  
@@ -153,7 +148,7 @@ MyArray<MyClass*, 10> arr;
   
  Inne rodzaje tym wskaźników i odwołania do wartości mogą być przekazywane w jako parametry bez typu. Na przykład można przekazać wskaźnika do funkcji lub funkcja obiektu do dostosowania niektórych operacji wewnątrz kod szablonu.  
   
-## <a id="template_parameters"></a>Szablony jako parametry szablonu  
+## <a id="template_parameters"></a> Szablony jako parametry szablonu  
  Szablon może być parametrem szablonu. W tym przykładzie MyClass2 ma dwa parametry szablonu: parametru typename `T` i parametr szablonu `Arr`:  
   
 ```cpp  

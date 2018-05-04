@@ -1,13 +1,10 @@
 ---
 title: Funkcja CAtlServiceModuleT::ServiceMain | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - ServiceMain
 - CServiceModule::ServiceMain
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - ServiceMain method
 ms.assetid: f21408c1-1919-4dec-88d8-bf5b39ac9808
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 633e9bc4689ced93e1c22151b32654f7ae9d7ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9936090793890b1e33f0d5e29787d65f378afa84
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlservicemoduletservicemain-function"></a>Funkcja CAtlServiceModuleT::ServiceMain
 Wywołuje Menedżera sterowania usługami (SCM) `ServiceMain` po otwarciu aplikacji usługi w Panelu sterowania, wybierz usługę i kliknij przycisk **Start**.  
@@ -36,7 +31,7 @@ Wywołuje Menedżera sterowania usługami (SCM) `ServiceMain` po otwarciu aplika
   
  Podczas uruchamiania usługi informowało SCM jego bieżący stan. Robi to przez przekazanie **SERVICE_START_PENDING** funkcji Win32 API [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241).  
   
- `ServiceMain`następnie wywołuje `CAtlExeModuleT::InitializeCom`, który wywołuje funkcję Win32 API [funkcja CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279). Domyślnie `InitializeCom` przekazuje **COINIT_MULTITHREADED** flagi funkcji. Ta flaga wskazuje, że program ma być serwerem bezwątkowy.  
+ `ServiceMain` następnie wywołuje `CAtlExeModuleT::InitializeCom`, który wywołuje funkcję Win32 API [funkcja CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279). Domyślnie `InitializeCom` przekazuje **COINIT_MULTITHREADED** flagi funkcji. Ta flaga wskazuje, że program ma być serwerem bezwątkowy.  
   
  Teraz `CAtlServiceModuleT::Run` jest wywoływana w celu wykonywania głównych pracy usługi. **Uruchom** kontynuuje wykonywanie aż do zatrzymania usługi.  
   

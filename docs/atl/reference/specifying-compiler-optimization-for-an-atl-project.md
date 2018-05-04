@@ -1,12 +1,9 @@
 ---
-title: "Określanie Optymalizacja kompilatora Projekt ATL | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Określanie Optymalizacja kompilatora Projekt ATL | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.optimization
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e60f22b7b91567948dfc2efc90935fce266d7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0060437613bcdd6281ce5cceb112f5fd7f470bf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Określanie Optymalizacja kompilatora Projekt ATL
 Domyślnie [Kreator formantu ATL](../../atl/reference/atl-control-wizard.md) generuje nowe klasy z makra ATL_NO_VTABLE w następujący sposób:  

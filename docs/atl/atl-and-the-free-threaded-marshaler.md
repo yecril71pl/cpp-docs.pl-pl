@@ -1,13 +1,10 @@
 ---
-title: "ATL i Marshaler trybu wolnych wątków | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: ATL i Marshaler trybu wolnych wątków | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - threading [ATL], free threaded marshaler
 - FTM in ATL
 ms.assetid: 2db88a13-2217-4ebc-aa7e-432d5da902eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b8586d7df5a521b48bfce61a097ed6ca450196
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1716985adf65b714a418f20d3873f45c32d368b4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL i marshaler trybu wolnych wątków
 Strona atrybutów ATL prosty obiekt kreatora zawiera opcję umożliwiającą klasy agregacji Organizator trybu wolnych wątków (FTM).  

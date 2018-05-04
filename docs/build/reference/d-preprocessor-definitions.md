@@ -2,12 +2,9 @@
 title: -D (definicje preprocesora) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCNMakeTool.PreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.PreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08812cdd0a4ffb27b387cce8cfb26e72ef80770a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b8b386d55804421fb6cb454b4818db52e7cea85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Definicje preprocesora)
 Definiuje symbol przetwarzania wstępnego dla pliku źródłowego.  
@@ -50,7 +45,7 @@ Definiuje symbol przetwarzania wstępnego dla pliku źródłowego.
   
  Domyślnie wartość skojarzona z symbolem to 1. Na przykład **/D** `name` jest odpowiednikiem **/D**`name`**= 1**. W tym przykładzie na końcu tego artykułu, definicji **testu** jest wyświetlany na drukowanie `1`.  
   
- Kompilowanie przy użyciu **/D** `name`  **=**  powoduje, że symbol niezawierające skojarzone wartości. Mimo że nadal można używać symbolu, aby warunkowo skompilować kod, szacuje się on na wartość nothing. W tym przykładzie skompilować przy użyciu **/DTEST =**, wystąpi błąd. To zachowanie jest podobny do stosowania `#define` z lub bez wartości.  
+ Kompilowanie przy użyciu **/D** `name` **=** powoduje, że symbol niezawierające skojarzone wartości. Mimo że nadal można używać symbolu, aby warunkowo skompilować kod, szacuje się on na wartość nothing. W tym przykładzie skompilować przy użyciu **/DTEST =**, wystąpi błąd. To zachowanie jest podobny do stosowania `#define` z lub bez wartości.  
   
  To polecenie definiuje symbol DEBUG w TEST.c:  
   

@@ -1,12 +1,9 @@
 ---
-title: "Wyrażenia z operatorami Jednoargumentowymi | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wyrażenia z operatorami Jednoargumentowymi | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44485f0c5749db36ececd2061955f9956cb49ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-with-unary-operators"></a>Wyrażenia z operatorami jednoargumentowymi
 Operatory jednoargumentowe działa tylko jedno operandu w wyrażeniu. Operatory jednoargumentowe są następujące:  
@@ -64,17 +59,17 @@ Operatory jednoargumentowe działa tylko jedno operandu w wyrażeniu. Operatory 
   
 -   *Operatory przyrostka wyrażenia*  
   
--   `++`*wyrażenie jednoargumentowe*  
+-   `++` *wyrażenie jednoargumentowe*  
   
--   `--`*wyrażenie jednoargumentowe*  
+-   `--` *wyrażenie jednoargumentowe*  
   
 -   *operator jednoargumentowy* *wyrażenie cast*  
   
--   `sizeof`*wyrażenie jednoargumentowe*  
+-   `sizeof` *wyrażenie jednoargumentowe*  
   
--   `sizeof(`*nazwy typu*`)`  
+-   `sizeof(` *Nazwa typu* `)`  
   
--   `decltype(`*wyrażenie*`)`  
+-   `decltype(` *wyrażenie* `)`  
   
 -   *wyrażenie alokacji*  
   
@@ -82,7 +77,7 @@ Operatory jednoargumentowe działa tylko jedno operandu w wyrażeniu. Operatory 
   
  Wszelkie *wyrażenie przyrostek* jest uznawany za *wyrażenie jednoargumentowe*, i ponieważ przyjęto, że wszystkie wyrażenia podstawowego *przyrostek wyrażenie*, jest wszystkie wyrażenia podstawowe uznawane za *wyrażenie jednoargumentowe* również. Aby uzyskać więcej informacji, zobacz [wyrażenia przyrostków](../cpp/postfix-expressions.md) i [wyrażenia podstawowe](../cpp/primary-expressions.md).  
   
- A *operatora jednoargumentowego* składa się z co najmniej jeden z następujących symboli:`* & + - ! ~`  
+ A *operatora jednoargumentowego* składa się z co najmniej jeden z następujących symboli: `* & + - ! ~`  
   
  *Wyrażenie cast* wyrażenie jednoargumentowe z opcjonalne Rzutowanie na typ zmiany. Aby uzyskać więcej informacji, zobacz [Operator rzutowania: ()](../cpp/cast-operator-parens.md).  
   

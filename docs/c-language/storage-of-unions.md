@@ -1,13 +1,10 @@
 ---
-title: "Magazyn złożeń | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Magazyn złożeń | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - union keyword [C], storage
 - union keyword [C]
 ms.assetid: b33d246a-8d20-41c4-89b2-ab05f1428792
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6ceb3e20bdf6ba2ef8402c7881f6aa4cc9de290
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a741444aa9b0e9af1e1eb344a8ac7029127af3f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-of-unions"></a>Magazyn złożeń
 Magazyn skojarzone ze zmienną Unii jest magazynu wymaganego przez największy element członkowski Unii. Gdy mniejszych elementu członkowskiego jest przechowywana, union zmienna może zawierać miejsca nieużywanej pamięci. Wszystkie elementy członkowskie są przechowywane w tym samym obszarze pamięci i Rozpocznij od tego samego adresu. Wartość przechowywana jest zastępowany zawsze, gdy wartość jest przypisany do innego członka. Na przykład:  

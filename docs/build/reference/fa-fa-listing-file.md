@@ -1,13 +1,10 @@
 ---
 title: / FA, /Fa (umieszczanie pliku) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Umieszczanie pliku na liście)
 Tworzy listę plik zawierający kod asemblera.  
@@ -55,12 +50,12 @@ brak
 Tylko język asemblera znajduje się na liście.  
   
 `c`  
-Opcjonalny. Zawiera kod maszynowy na liście.  
+Opcjonalna. Zawiera kod maszynowy na liście.  
   
 `s`  
-Opcjonalny. Zawiera kod źródłowy na liście.  
+Opcjonalna. Zawiera kod źródłowy na liście.  
   
-`u`Opcjonalne. Koduje plik listy w formacie UTF-8 i zawiera znacznika kolejności bajtów. Domyślnie plik jest zakodowany jako ANSI. Użyj `u` do utworzenia pliku listy, który jest wyświetlane prawidłowo w każdym systemie, lub jeśli używasz Unicode kod plików źródłowych jako dane wejściowe do kompilatora.  
+`u` Opcjonalne. Koduje plik listy w formacie UTF-8 i zawiera znacznika kolejności bajtów. Domyślnie plik jest zakodowany jako ANSI. Użyj `u` do utworzenia pliku listy, który jest wyświetlane prawidłowo w każdym systemie, lub jeśli używasz Unicode kod plików źródłowych jako dane wejściowe do kompilatora.  
   
 Jeśli oba `s` i `u` są określone, a jeśli plik kod źródłowy używa kodowania Unicode, inne niż UTF-8, a następnie wierszy kodu w pliku .asm mogą nie wyświetlać się poprawnie.  
   
@@ -73,7 +68,7 @@ Jeden *źródła*.asm plik jest tworzony dla każdego pliku kodu źródłowego w
 *filename.Extension*  
 Plik listy o nazwie *filename.extension* znajduje się w bieżącym katalogu. To jest prawidłowe tylko podczas kompilowania pliku kodu jednego źródła.  
   
-*katalog*\  
+*Katalog*\  
 Jeden *source_file*.asm pliku jest tworzony i umieszczane w określonym *katalogu* dla każdego pliku kodu źródłowego w kompilacji. Należy pamiętać, wymagane końcowy ukośnik odwrotny. Dozwolone są tylko ścieżki na bieżącym dysku.  
   
 *katalog*\\*filename* plik listy o nazwie *filename*.asm znajduje się w określonym *katalogu*. To jest prawidłowe tylko podczas kompilowania pliku kodu jednego źródła.  

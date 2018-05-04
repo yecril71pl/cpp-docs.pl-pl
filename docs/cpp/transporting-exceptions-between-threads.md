@@ -1,12 +1,9 @@
 ---
-title: "Transport wyjątków między wątkami | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Transport wyjątków między wątkami | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61847500e9e4fbcfc0912e51afe599ed31601ec2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transporting-exceptions-between-threads"></a>transport wyjątków między wątkami
 Visual C++ obsługuje *transportowania wyjątek* z jednego wątku na inny. Transport wyjątków umożliwia przechwytywanie wyjątków w jednym wątku, a następnie powodowanie, aby były generowane w innym wątku. Na przykład, możesz użyć tej funkcji do pisania aplikacji wielowątkowych, gdzie wątek główny obsługuje wszystkie wyjątki generowane przez pomocnicze wątki. Transport wyjątków jest przydatny głównie dla deweloperów, którzy tworzą biblioteki lub systemy programowania równoległego. Aby zaimplementować transportu wyjątki, zapewnia Visual C++ [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) typu i [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), i [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funkcji.  
@@ -259,4 +254,4 @@ exception_ptr 1: Caught a  myException exception.
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)     
  [/EH (Model obsługi wyjątku)](../build/reference/eh-exception-handling-model.md)   
- [/ CLR (kompilacja języka wspólnego środowiska wykonawczego)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md)

@@ -2,11 +2,8 @@
 title: Klasa CAtlFile | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFile
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66e697a3599e7bfeef0f1d5d147e19b668222ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43ee71aae842ca7100f70af67cd8845d31e39a96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfile-class"></a>Klasa CAtlFile
 Ta klasa udostępnia cienką otoką wokół systemu Windows, plików obsługi interfejsu API.  
@@ -94,7 +89,7 @@ class CAtlFile : public CHandle
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlfile.h  
   
-##  <a name="catlfile"></a>CAtlFile::CAtlFile  
+##  <a name="catlfile"></a>  CAtlFile::CAtlFile  
  Konstruktor.  
   
 ```
@@ -117,7 +112,7 @@ explicit CAtlFile(HANDLE hFile) throw();
 ### <a name="remarks"></a>Uwagi  
  Konstruktor kopiujący przesyła własność dojście do pliku z oryginalnym `CAtlFile` obiekt do nowo skonstruowanego obiektu.  
   
-##  <a name="create"></a>CAtlFile::Create  
+##  <a name="create"></a>  CAtlFile::Create  
  Wywołaj tę metodę, aby utworzyć lub otworzyć pliku.  
   
 ```
@@ -159,7 +154,7 @@ HRESULT Create(
 ### <a name="remarks"></a>Uwagi  
  Wywołania [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) można utworzyć lub otworzyć pliku.  
   
-##  <a name="flush"></a>CAtlFile::Flush  
+##  <a name="flush"></a>  CAtlFile::Flush  
  Wywołaj tę metodę, aby wyczyścić buforów dla pliku i spowodować, że wszystkie buforowane dane są zapisywane w pliku.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT Flush() throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołania [opróżnienie buforów plików przez](http://msdn.microsoft.com/library/windows/desktop/aa364439) opróżnić buforowane dane do pliku.  
   
-##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  Wywołanie tej metody, aby uzyskać wyniki nachodzące operacji na pliku.  
   
 ```
@@ -198,7 +193,7 @@ HRESULT GetOverlappedResult(
 ### <a name="remarks"></a>Uwagi  
  Wywołania [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) Aby uzyskać wyniki nachodzące operacji na pliku.  
   
-##  <a name="getposition"></a>CAtlFile::GetPosition  
+##  <a name="getposition"></a>  CAtlFile::GetPosition  
  Wywołanie tej metody, aby uzyskać bieżącą pozycję wskaźnika pliku.  
   
 ```
@@ -215,7 +210,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołania [funkcji SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) można pobrać bieżącą pozycję wskaźnika pliku.  
   
-##  <a name="getsize"></a>CAtlFile::GetSize  
+##  <a name="getsize"></a>  CAtlFile::GetSize  
  Wywołaj tę metodę, aby pobrać rozmiar w bajtach pliku.  
   
 ```
@@ -232,7 +227,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołania [funkcji GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) można pobrać rozmiar w bajtach pliku.  
   
-##  <a name="lockrange"></a>CAtlFile::LockRange  
+##  <a name="lockrange"></a>  CAtlFile::LockRange  
  Wywołaj tę metodę, aby zablokować region, w pliku, aby uniemożliwić dostęp do jej przez inne procesy.  
   
 ```
@@ -250,9 +245,9 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) zablokować regionu w pliku. Blokowanie bajtów w pliku uniemożliwia dostęp do tych bajtów przez inne procesy. Można zablokować więcej niż jeden region, pliku, ale nie nakładające się regiony są dozwolone. Po odblokowaniu region przy użyciu [CAtlFile::UnlockRange](#unlockrange), zakres bajtów musi dokładnie odpowiadać region, który wcześniej był zablokowany. `LockRange`Scala sąsiadujących ze sobą regionów; Jeśli dwóch regionach zablokowanym sąsiadujących ze sobą, należy odblokować każdego oddzielnie.  
+ Wywołania [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) zablokować regionu w pliku. Blokowanie bajtów w pliku uniemożliwia dostęp do tych bajtów przez inne procesy. Można zablokować więcej niż jeden region, pliku, ale nie nakładające się regiony są dozwolone. Po odblokowaniu region przy użyciu [CAtlFile::UnlockRange](#unlockrange), zakres bajtów musi dokładnie odpowiadać region, który wcześniej był zablokowany. `LockRange` Scala sąsiadujących ze sobą regionów; Jeśli dwóch regionach zablokowanym sąsiadujących ze sobą, należy odblokować każdego oddzielnie.  
   
-##  <a name="m_ptm"></a>CAtlFile::m_pTM  
+##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  Wskaźnik do `CAtlTransactionManager` obiektu.  
   
 ```
@@ -261,7 +256,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="read"></a>CAtlFile::Read  
+##  <a name="read"></a>  CAtlFile::Read  
  Wywołaj tę metodę w celu odczytania danych z pliku, zaczynając od pozycji wskaźnika pliku.  
   
 ```
@@ -308,7 +303,7 @@ HRESULT Read(
 ### <a name="remarks"></a>Uwagi  
  Pierwsze trzy formularze wywołać [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), ostatniego [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) można odczytać danych z pliku. Użyj [CAtlFile::Seek](#seek) przesuwanie wskaźnika pliku.  
   
-##  <a name="seek"></a>CAtlFile::Seek  
+##  <a name="seek"></a>  CAtlFile::Seek  
  Wywołanie tej metody można przenieść pliku wskaźnika pliku.  
   
 ```
@@ -330,7 +325,7 @@ HRESULT Seek(
 ### <a name="remarks"></a>Uwagi  
  Wywołania [funkcji SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) przesuwanie wskaźnika pliku.  
   
-##  <a name="setsize"></a>CAtlFile::SetSize  
+##  <a name="setsize"></a>  CAtlFile::SetSize  
  Wywołanie tej metody, aby ustawić limit rozmiaru pliku.  
   
 ```
@@ -347,7 +342,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołania [funkcji SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) i [funkcji SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) można ustawić rozmiaru pliku. Przy powrocie wskaźnika pliku znajduje się na końcu pliku.  
   
-##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
+##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  Wywołaj tę metodę, aby odblokować regionu pliku.  
   
 ```
@@ -367,7 +362,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołania [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) do odblokowania regionu pliku.  
   
-##  <a name="write"></a>CAtlFile::Write  
+##  <a name="write"></a>  CAtlFile::Write  
  Wywołanie tej metody można zapisać danych do pliku, zaczynając od pozycji wskaźnika pliku.  
   
 ```

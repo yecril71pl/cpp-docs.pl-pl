@@ -2,12 +2,9 @@
 title: -Zm (Określ Limit alokacji pamięci Prekompilowanego nagłówka) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /zm
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a45425215fcaf336c0b1630634d0adf37ba3984
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 379d3d6673e673522334d685a47220bcfa2523ec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Określ limit alokacji pamięci prekompilowanego nagłówka)
 Określa ilość pamięci przydzielanej przez kompilator do konstruowania wstępnie skompilowanych nagłówków.  
@@ -57,7 +52,7 @@ Określa ilość pamięci przydzielanej przez kompilator do konstruowania wstęp
   
  W poniższej tabeli przedstawiono sposób `factor` argument dotyczy limit alokacji pamięci, jeśli użytkownik ponosi rozmiar buforu prekompilowany nagłówek domyślny jest 75 MB.  
   
-|Wartość`factor`|Limit alokacji pamięci|  
+|Wartość `factor`|Limit alokacji pamięci|  
 |-----------------------|-----------------------------|  
 |10|7.5 MB|  
 |100|75 MB|  

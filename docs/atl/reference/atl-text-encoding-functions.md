@@ -1,10 +1,7 @@
 ---
 title: Kodowanie funkcji tekstu ATL | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -30,12 +27,11 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: "3"
-ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 26eb0709c4009070e6255c6ee178f19d13d8a9c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-text-encoding-functions"></a>Kodowanie funkcji tekstu ATL
 Te funkcje obsługuje tekstu kodowania i dekodowania.
@@ -69,7 +65,7 @@ Te funkcje obsługuje tekstu kodowania i dekodowania.
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlenc.h  
  
-## <a name="atlgethexvalue"></a>AtlGetHexValue
+## <a name="atlgethexvalue"></a> AtlGetHexValue
 Wywołaj tę funkcję, aby uzyskać wartość liczbową z liczby szesnastkowej.  
   
 ```    
@@ -83,7 +79,7 @@ inline char AtlGetHexValue(char chIn) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość liczbowa znak wejściowy interpretowane jako cyfrą szesnastkową. Na przykład dane wejściowe "0" zwraca wartość 0 i dane wejściowe "A" zwraca wartość 10. Jeśli znak wejściowy nie jest szesnastkową wartością cyfrową, funkcja zwraca wartość -1.  
   
-## <a name="atlgetversion"></a>AtlGetVersion
+## <a name="atlgetversion"></a> AtlGetVersion
 Wywołanie tej funkcji, aby pobrać wersję biblioteki ATL, którego używasz.  
   
 ```  
@@ -105,7 +101,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
 
-## <a name="atlhexdecode"></a>AtlHexDecode
+## <a name="atlhexdecode"></a> AtlHexDecode
 Dekoduje ciąg danych, który został zakodowany jako szesnastkowym, takich jak przez poprzednie wywołanie [AtlHexEncode](#atlhexencode).  
   
 ```    
@@ -132,7 +128,7 @@ inline BOOL AtlHexDecode(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **TRUE** w przypadku powodzenia **FALSE** w przypadku awarii.  
   
-## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
 Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego szesnastkowo o określonej długości.  
   
 ```  
@@ -146,7 +142,7 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Liczbę bajtów wymaganą dla buforu, który można umieścić Dekodowany ciąg z `nSrcLen` znaków.  
   
-## <a name="atlhexencode"></a>AtlHexEncode
+## <a name="atlhexencode"></a> AtlHexEncode
 Wywołaj tę funkcję, aby zakodować dane jako ciąg tekstu szesnastkowego.  
   
 ```  
@@ -176,7 +172,7 @@ int * pnDestLen) throw();
 ### <a name="remarks"></a>Uwagi  
  Każdego bajtu danych źródłowych jest zakodowany jako 2 znaków szesnastkowych.  
   
-## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
 Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.  
   
 ```  
@@ -190,7 +186,7 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Wymagana liczba znaków dla buforu, które można przechowywać dane zakodowane z `nSrcLen` bajtów.  
   
-## <a name="atlhexvalue"></a>AtlHexValue
+## <a name="atlhexvalue"></a> AtlHexValue
 Wywołaj tę funkcję, aby uzyskać wartość liczbową z liczby szesnastkowej.  
   
 ```  
@@ -204,7 +200,7 @@ inline short AtlHexValue(char chIn) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość liczbowa znak wejściowy interpretowane jako cyfrą szesnastkową. Na przykład dane wejściowe "0" zwraca wartość 0 i dane wejściowe "A" zwraca wartość 10. Jeśli znak wejściowy nie jest szesnastkową wartością cyfrową, funkcja zwraca wartość -1.  
   
-## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
 Wywołaj tę funkcję, aby przekonwertować ciąg Unicode na UTF-8.  
   
 ```  
@@ -234,7 +230,7 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 ### <a name="remarks"></a>Uwagi  
  Aby określić rozmiar buforu wymagane dla skonwertowany ciąg, wywołanie tej funkcji, przekazywanie 0 dla `szDest` i `nDest`.  
   
-## <a name="bencode"></a>BEncode  
+## <a name="bencode"></a> BEncode  
 Wywołaj tę funkcję, aby skonwertować dane przy użyciu kodowania „B”.  
   
 ```  
@@ -268,7 +264,7 @@ inline BOOL BEncode(
 ### <a name="remarks"></a>Uwagi  
  Schemat kodowania "B" jest opisana w dokumencie RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength 
+## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength 
 Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.  
   
 ```  
@@ -288,7 +284,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>Uwagi  
  Schemat kodowania "B" jest opisana w dokumencie RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="escapexml"></a>EscapeXML
+## <a name="escapexml"></a> EscapeXML
 Wywołaj tę funkcję, aby skonwertować znaki niebezpieczne w XML na ich bezpieczne odpowiedniki.  
   
 ```  
@@ -316,8 +312,8 @@ inline int EscapeXML(
  `dwFlags`  
  ATL_ESC flagi opisujące, jak ma być wykonywane konwersji. 
 
-- `ATL_ESC_FLAG_NONE`Zachowanie domyślne. Oferta znaki apostrofów i nie są konwertowane.
-- `ATL_ESC_FLAG_ATTR`Oferta apostrofów i znaczniki są konwertowane na `&quot;` i `&apos;` odpowiednio.
+- `ATL_ESC_FLAG_NONE` Zachowanie domyślne. Oferta znaki apostrofów i nie są konwertowane.
+- `ATL_ESC_FLAG_ATTR` Oferta apostrofów i znaczniki są konwertowane na `&quot;` i `&apos;` odpowiednio.
 
 
   
@@ -335,7 +331,7 @@ inline int EscapeXML(
 |'|&apos;|  
 |"|&quot;|  
   
-## <a name="getextendedchars"></a>GetExtendedChars
+## <a name="getextendedchars"></a> GetExtendedChars
 Wywołaj tę funkcję, aby uzyskać liczbę znaków rozszerzonych w ciągu.  
   
 ```  
@@ -352,7 +348,7 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca liczbę znaków rozszerzonych znaleziono w ciągu zgodnie z ustaleniami [IsExtendedChar](#isextendedchar).  
   
-## <a name="isextendedchar"></a>IsExtendedChar
+## <a name="isextendedchar"></a> IsExtendedChar
 Wywołaj tę funkcję, aby się dowiedzieć, czy dany znak to znak rozszerzony (mniej niż 32, więcej niż 126 i nie znak tabulacji, znak nowego wiersza lub znak powrotu karetki)  
   
 ```  
@@ -366,7 +362,7 @@ inline int IsExtendedChar(char ch) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  **Wartość TRUE,** Jeśli znak jest rozszerzony, **FALSE** inaczej.  
   
-## <a name="qencode"></a>QEncode
+## <a name="qencode"></a> QEncode
 Wywołaj tę funkcję, aby skonwertować dane przy użyciu kodowania „Q”.  
   
 ```  
@@ -404,7 +400,7 @@ inline BOOL QEncode(
 ### <a name="remarks"></a>Uwagi  
  Schemat kodowania "Q" opisanej w dokumencie RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength 
+## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength 
 Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.  
   
 ```  
@@ -424,7 +420,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>Uwagi  
  Schemat kodowania "Q" opisanej w dokumencie RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qpdecode"></a>QPDecode
+## <a name="qpdecode"></a> QPDecode
 Dekoduje ciąg danych, który został zakodowany w formacie cudzysłowach niedrukowalne, takie jak przez poprzednie wywołanie [QPEncode](#qpencode).  
   
 ```  
@@ -437,19 +433,19 @@ inline BOOL QPDecode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pbSrcData`  
+ [in] `pbSrcData`  
  Bufor zawierające dane, które ma być zdekodowany.  
   
- [in]`nSrcLen`  
+ [in] `nSrcLen`  
  Długość w bajtach `pbSrcData`.  
   
- [out]`szDest`  
+ [out] `szDest`  
  Przydzielone przez obiekt wywołujący bufor odbioru dekodowane dane.  
   
- [out]`pnDestLen`  
+ [out] `pnDestLen`  
  Wskaźnik do zmiennej, która zawiera długość w bajtach `szDest`. Jeśli funkcja zakończy się powodzeniem, zmienna odbiera liczba bajtów zapisanych w buforze. W przypadku niepowodzenia funkcji zmiennej odbiera wymaganą długość w bajtach buforu.  
   
- [in]`dwFlags`  
+ [in] `dwFlags`  
  Flagi opisujące, jak ma być wykonywane konwersji. Zobacz [flagi ATLSMTP_QPENCODE](http://msdn.microsoft.com/library/6b15a3ab-8e57-49e4-8104-09b26ebb96c4).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -458,7 +454,7 @@ inline BOOL QPDecode(
 ### <a name="remarks"></a>Uwagi  
  Schemat kodowania w cudzysłowach do wydrukowania jest opisany w RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego w quoted-printable o określonej długości.  
   
 ```  
@@ -475,7 +471,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="remarks"></a>Uwagi  
  Schemat kodowania w cudzysłowach do wydrukowania jest opisany w RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencode"></a>QPEncode
+## <a name="qpencode"></a> QPEncode
 Wywołaj tę funkcję, aby zakodować dane w formacie quoted-printable.  
   
 ```  
@@ -502,8 +498,8 @@ inline BOOL QPEncode(
   
  `dwFlags`  
  ATLSMTP_QPENCODE flagi opisujące, jak ma być wykonywane konwersji. 
-- `ATLSMTP_QPENCODE_DOT`Jeśli okres pojawi się na początku wiersza, jego jest dodawane do wyników jak również kodowany.
-- `ATLSMTP_QPENCODE_TRAILING_SOFT`Dołącza `=\r\n` zakodowany ciąg.
+- `ATLSMTP_QPENCODE_DOT` Jeśli okres pojawi się na początku wiersza, jego jest dodawane do wyników jak również kodowany.
+- `ATLSMTP_QPENCODE_TRAILING_SOFT` Dołącza `=\r\n` zakodowany ciąg.
 
 Opisano w cudzysłowach niedrukowalne schemat kodowania [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt).
   
@@ -513,7 +509,7 @@ Opisano w cudzysłowach niedrukowalne schemat kodowania [RFC 2045](http://www.ie
 ### <a name="remarks"></a>Uwagi  
  Schemat kodowania w cudzysłowach do wydrukowania jest opisany w RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.  
   
 ```  
@@ -530,7 +526,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>Uwagi  
  Schemat kodowania w cudzysłowach do wydrukowania jest opisany w RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="uudecode"></a>UUDecode
+## <a name="uudecode"></a> UUDecode
 Dekoduje ciąg danych, która została uuencoded, takich jak przez poprzednie wywołanie [UUEncode](#uuencode).  
   
 ```  
@@ -560,7 +556,7 @@ inline BOOL UUDecode(
 ### <a name="remarks"></a>Uwagi  
  Ta implementacja uuencoding zgodna ze specyfikacją POSIX P1003.2b/D11.  
   
-## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a> UUDecodeGetRequiredLength
 Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego w uuencode o określonej długości.  
   
 ```  
@@ -577,7 +573,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>Uwagi  
  Ta implementacja uuencoding zgodna ze specyfikacją POSIX P1003.2b/D11.  
   
-## <a name="uuencode"></a>UUEncode
+## <a name="uuencode"></a> UUEncode
 Wywołaj tę funkcję, aby zakodować dane w uuencode.  
   
 ```  
@@ -608,9 +604,9 @@ inline BOOL UUEncode(
   
  `dwFlags`  
  Flagi sterujące zachowaniem tej funkcji. 
-- `ATLSMTP_UUENCODE_HEADE`Nagłówek będzie zapisywana.
-- `ATLSMTP_UUENCODE_END`Zakończenie będzie zapisywana.
-- `ATLSMTP_UUENCODE_DOT`Wypychania danych zostaną wykonane.  
+- `ATLSMTP_UUENCODE_HEADE` Nagłówek będzie zapisywana.
+- `ATLSMTP_UUENCODE_END` Zakończenie będzie zapisywana.
+- `ATLSMTP_UUENCODE_DOT` Wypychania danych zostaną wykonane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **TRUE** w przypadku powodzenia **FALSE** w przypadku awarii.  
@@ -618,7 +614,7 @@ inline BOOL UUEncode(
 ### <a name="remarks"></a>Uwagi  
  Ta implementacja uuencoding zgodna ze specyfikacją POSIX P1003.2b/D11.  
   
-## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a> UUEncodeGetRequiredLength
 Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.  
   
 ```  
@@ -637,4 +633,4 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
   
 ### <a name="see-also"></a>Zobacz też  
  [Pojęcia](../../atl/active-template-library-atl-concepts.md)   
- [Składniki COM pulpitu ATL](../../atl/atl-com-desktop-components.md)   
+ [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)   

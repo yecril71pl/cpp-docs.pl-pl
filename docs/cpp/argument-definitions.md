@@ -2,11 +2,8 @@
 title: Definicje argumentu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30dd0c58cd4967065ee3e3c3c4df9538ea194a0
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ca012d7b391e011d9658b0b74e0f4433d5dc9fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="argument-definitions"></a>Definicje argumentu
 Argumenty w prototypie  
@@ -46,7 +41,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  `argv`  
  Tablica ciągów zakończonych znakiem null, która reprezentuje argumenty wiersza polecenia wprowadzone przez użytkownika programu. Według konwencji `argv` **[0]** polecenia, z którym program zostanie wywołany, `argv` **[1]** jest pierwszy argument wiersza polecenia i tak dalej, aż do `argv`  **[**`argc`**]**, która jest zawsze **NULL**. Zobacz [Dostosowywanie przetwarzania wiersza polecenia](../cpp/customizing-cpp-command-line-processing.md) uzyskać informacji o pomijanie przetwarzania w wierszu polecenia.  
   
- Pierwszy argument wiersza polecenia jest zawsze `argv` **[1]** i jest ostatni z nich `argv` **[** `argc` - 1**]**.  
+ Pierwszy argument wiersza polecenia jest zawsze `argv` **[1]** i jest ostatni z nich `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
 >  Według konwencji `argv` **[0]** polecenia, z którym program jest wywoływany.  Jednak jest możliwe zduplikować procesu przy użyciu [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) i użycie pierwszy i drugi argument (`lpApplicationName` i `lpCommandLine`), `argv` **[0]** nie może być Nazwa pliku wykonywalnego; Użyj [Funkcja GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) można pobrać nazwy pliku wykonywalnego, a jego w pełni kwalifikowaną ścieżkę.  

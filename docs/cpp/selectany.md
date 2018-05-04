@@ -1,12 +1,9 @@
 ---
 title: selectany | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - selectany_cpp
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d8b4a1a78fb8231d407e60ded2c6dea3f7c891d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a6543188525bea9a04c82bf5202160b42bcb6b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="selectany"></a>selectany
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Informuje kompilator, że element zadeklarowane danych globalnych (zmiennej lub obiektu) jest pobranie wszystkich COMDAT (spakowanych funkcji).  
   
@@ -46,10 +41,10 @@ __declspec( selectany ) declarator
   
  W przypadku obiektów dynamicznie zainicjowany, globalnych `selectany` spowoduje odrzucenie kod inicjujący nieużywane obiektu, a także.  
   
- Element danych globalnych normalnie mogą być inicjowane tylko raz w projekcie plik EXE lub DLL. `selectany`może służyć inicjowania danych globalnych, zdefiniowane przez nagłówków, gdy ten sam nagłówek pojawi się w więcej niż jeden plik źródłowy. `selectany`jest dostępna w C i C++ kompilatory.  
+ Element danych globalnych normalnie mogą być inicjowane tylko raz w projekcie plik EXE lub DLL. `selectany` może służyć inicjowania danych globalnych, zdefiniowane przez nagłówków, gdy ten sam nagłówek pojawi się w więcej niż jeden plik źródłowy. `selectany` jest dostępna w C i C++ kompilatory.  
   
 > [!NOTE]
->  `selectany`można zastosować tylko do rzeczywistego inicjowania elementów danych globalnych, które są widoczne na zewnątrz.  
+>  `selectany` można zastosować tylko do rzeczywistego inicjowania elementów danych globalnych, które są widoczne na zewnątrz.  
   
 ## <a name="example"></a>Przykład  
  Ten kod przedstawia sposób użycia `selectany` atrybutu:  

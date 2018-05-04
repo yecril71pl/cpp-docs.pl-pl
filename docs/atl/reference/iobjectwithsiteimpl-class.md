@@ -1,12 +1,9 @@
 ---
 title: Klasa IObjectWithSiteImpl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectWithSiteImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49574d31ef0c606528f29c0045506e5febe69b28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Klasa IObjectWithSiteImpl
 Ta klasa dostarcza metody, dzięki czemu obiekt do komunikacji z jej lokacją.  
@@ -66,7 +61,7 @@ template <class T>
 ## <a name="remarks"></a>Uwagi  
  [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) interfejs umożliwiający obiekt do komunikacji z jej lokacją. Klasa `IObjectWithSiteImpl` udostępnia domyślną implementację tego interfejsu i implementuje **IUnknown** , wysyłając informacje o do zrzutu kompilacje urządzenia podczas debugowania.  
   
- `IObjectWithSiteImpl`Określa dwie metody. Pierwsze wywołania klienta `SetSite`, przekazywanie witryny **IUnknown** wskaźnika. Ten wskaźnik jest przechowywany wewnątrz obiektu, a później mogą zostać pobrane za pośrednictwem wywołania `GetSite`.  
+ `IObjectWithSiteImpl` Określa dwie metody. Pierwsze wywołania klienta `SetSite`, przekazywanie witryny **IUnknown** wskaźnika. Ten wskaźnik jest przechowywany wewnątrz obiektu, a później mogą zostać pobrane za pośrednictwem wywołania `GetSite`.  
   
  Zwykle, pochodzi z klasy `IObjectWithSiteImpl` podczas tworzenia obiektu, który nie jest formantem. Dla formantów, pochodzi z klasy [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), zapewniające wskaźnik lokacji. Nie pochodzi z klasy z obu `IObjectWithSiteImpl` i `IOleObjectImpl`.  
   
@@ -78,7 +73,7 @@ template <class T>
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
  Wysyła zapytanie do lokacji dla wskaźnika interfejsu identyfikowane przez `riid`.  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetSite)(
   
  Zobacz [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) w systemie Windows SDK.  
   
-##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  Zarządza witryny **IUnknown** wskaźnika.  
   
 ```
@@ -100,9 +95,9 @@ CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `m_spUnkSite`początkowo odbiera ten wskaźnik poprzez wywołanie [SetSite](#setsite).  
+ `m_spUnkSite` początkowo odbiera ten wskaźnik poprzez wywołanie [SetSite](#setsite).  
   
-##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
  Udostępnia obiekt z witryny **IUnknown** wskaźnika.  
   
 ```
@@ -116,7 +111,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `S_OK`.  
   
-##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
  Udostępnia obiekt z witryny **IUnknown** wskaźnika.  
   
 ```

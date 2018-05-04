@@ -1,13 +1,10 @@
 ---
 title: Rodzaje bibliotek DLL | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ce4a9264a59f88f22cd40bc3b6d6620c9702c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 605d60535df8d0a94d58e120df89f975402b8a22
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kinds-of-dlls"></a>Rodzaje bibliotek DLL
 Ten temat zawiera informacje ułatwiające wybór rodzaju biblioteki DLL do kompilacji.  
   
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>Różne rodzaje dostępnych bibliotek DLL  
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> Różne rodzaje dostępnych bibliotek DLL  
  Visual C++ można utworzyć biblioteki DLL systemu Win32 w języka C lub C++, który nie należy używać biblioteki Microsoft Foundation Class (MFC). Kreator aplikacji Win32, można utworzyć projektu z systemem innym niż MFC DLL.  
   
  Biblioteki MFC sam jest dostępna, albo biblioteki dołączanej statycznie lub liczba biblioteki DLL przy użyciu Kreatora biblioteki DLL MFC. Jeśli biblioteki DLL używa MFC, Visual C++ obsługuje trzy różne scenariusze programowania biblioteki DLL:  
@@ -53,7 +48,7 @@ Ten temat zawiera informacje ułatwiające wybór rodzaju biblioteki DLL do komp
   
 -   [Jakiego rodzaju biblioteki DLL do użycia](#_core_which_kind_of_dll_to_use)  
   
-##  <a name="_core_which_kind_of_dll_to_use"></a>Jakiego typu biblioteki DLL do użycia  
+##  <a name="_core_which_kind_of_dll_to_use"></a> Jakiego typu biblioteki DLL do użycia  
  Jeśli biblioteki DLL nie korzysta z MFC, użyj Visual C++ do kompilacji z systemem innym niż — MFC Win32 biblioteki DLL. Łączenie biblioteki DLL z MFC (statycznie lub dynamicznie) zajmuje znacznej ilości miejsca i pamięci. Nie należy połączyć MFC, chyba że biblioteki DLL MFC korzysta.  
   
  Jeśli biblioteki DLL będą używać MFC i będą używane przez MFC lub innego typu niż MFC aplikacji, należy utworzyć regularne biblioteki DLL MFC, która łączy dynamicznie z MFC lub regularne biblioteki DLL MFC, która łączy statycznie z MFC. W większości przypadków prawdopodobnie chcesz użyć regularne biblioteki DLL MFC, łączącą dynamicznie z MFC oszczędności w pamięci z udostępnionego wersji MFC mogą być istotne, ponieważ będzie znacznie mniejszy rozmiar pliku biblioteki dll. Jeśli łączysz się statycznie z MFC, rozmiar pliku biblioteki DLL będzie większa i potencjalnie zajmują dodatkową pamięć, ponieważ ładuje własną prywatną kopię kod biblioteki MFC.  

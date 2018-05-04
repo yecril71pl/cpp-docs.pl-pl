@@ -1,12 +1,9 @@
 ---
 title: final, Specyfikator | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - final_CPP
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3f7c5afd4010983ea943193b7abfb99f22eda38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82fb9e13fc5dbbafcc37905716a37322b2966c6d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="final-specifier"></a>final, specyfikator
 Można użyć `final` — słowo kluczowe do wyznaczenia wirtualnego funkcje, których nie można zastąpić w klasie pochodnej. Można również użyć do wyznaczenia klasy, które nie może być dziedziczona.  
@@ -43,7 +38,7 @@ class class-name final base-classes
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `final`kontekstowa i ma specjalne znaczenie tylko wtedy, gdy jest używany po deklaracji funkcji lub nazwy klasy; w przeciwnym razie nie jest zarezerwowanym słowem kluczowym.  
+ `final` kontekstowa i ma specjalne znaczenie tylko wtedy, gdy jest używany po deklaracji funkcji lub nazwy klasy; w przeciwnym razie nie jest zarezerwowanym słowem kluczowym.  
   
  Gdy `final` jest używany w deklaracjach klas `base-classes` jest opcjonalnym składnikiem deklaracji.  
   
@@ -79,5 +74,5 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Słowa kluczowe](../cpp/keywords-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
  [override, specyfikator](../cpp/override-specifier.md)

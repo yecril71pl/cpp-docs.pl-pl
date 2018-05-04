@@ -1,12 +1,9 @@
 ---
 title: Typy podstawowe (C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
@@ -52,17 +49,15 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamental-types--c"></a>Typy podstawowe (C++)
 Typy podstawowe w języku C++ są podzielone na trzy kategorie: całkowitych, zmiennoprzecinkowych, a typ void. Typy całkowite są w stanie obsługiwać liczb całkowitych. Zmiennoprzecinkowych typów są w stanie określania wartości, które mogą mieć ułamkowych części.  
@@ -83,17 +78,17 @@ Typy podstawowe w języku C++ są podzielone na trzy kategorie: całkowitych, zm
 |--------------|----------|--------------|  
 |Typy całkowite|`char`|Typ `char` jest typem całkowitym, zawierający zestaw znaków wykonania podstawowych elementów członkowskich — domyślnie jest to ASCII języka Microsoft C++.<br /><br /> Kompilator języka C++ traktuje zmiennych typu `char`, `signed` `char`, i `unsigned` `char` jako mający różnych typów. Zmienne typu `char` awansowane na `int` tak, jakby są typu `signed` `char` domyślnie, chyba że używana jest opcją / kompilacji. W tym przypadku są traktowane jako typ `unsigned` `char` i awansowane na `int` bez rozszerzenia logowania.|  
 ||`bool`|Typ `bool` jest typem całkowitym, który może mieć jedną z dwóch wartości `true` lub `false`. Jego rozmiar jest nieokreślony.|  
-||`short`|Typ `short` `int` (lub po prostu `short`) jest typem całkowitym, która jest większa niż lub równe rozmiarowi typu `char`i krótszy niż lub równe rozmiarowi typu `int`.<br /><br /> Obiekty typu `short` mogą być deklarowane jako `signed` `short` lub `unsigned short`. `Signed short`jest synonimem `short`.|  
-||`int`|Typ `int` jest typem całkowitym, która jest większa niż lub równe rozmiarowi typu `short` `int`i krótszy niż lub równe rozmiarowi typu `long`.<br /><br /> Obiekty typu `int` mogą być deklarowane jako `signed` `int` lub `unsigned` `int`. `Signed``int` jest synonimem `int`.|  
-||`__int8`, `__int16`, `__int32`, `__int64`|Całkowite o określonym rozmiarze `__int n`, gdzie `n` w bitach zmienna całkowitoliczbowa rozmiar. `__int8`, `__int16`, `__int32` i `__int64` są słowa kluczowe specyficzne dla firmy Microsoft. Nie wszystkie typy są dostępne na wszystkich architektury. `(__int128`nie jest obsługiwany.)|  
-||`long`|Typ `long` (lub `long` `int`) jest typem całkowitym, która jest większa niż lub równe rozmiarowi typu `int`.<br /><br /> Obiekty typu `long` mogą być deklarowane jako `signed` `long` lub `unsigned` `long`. `Signed``long` jest synonimem `long`.|  
-||`long``long`|Większe niż niepodpisany `long`.<br /><br /> Obiekty typu `long long` mogą być deklarowane jako `signed` `long long` lub `unsigned` `long long`. `signed``long long` jest synonimem `long long`.|  
+||`short`|Typ `short` `int` (lub po prostu `short`) jest typem całkowitym, która jest większa niż lub równe rozmiarowi typu `char`i krótszy niż lub równe rozmiarowi typu `int`.<br /><br /> Obiekty typu `short` mogą być deklarowane jako `signed` `short` lub `unsigned short`. `Signed short` jest synonimem `short`.|  
+||`int`|Typ `int` jest typem całkowitym, która jest większa niż lub równe rozmiarowi typu `short` `int`i krótszy niż lub równe rozmiarowi typu `long`.<br /><br /> Obiekty typu `int` mogą być deklarowane jako `signed` `int` lub `unsigned` `int`. `Signed` `int` jest synonimem `int`.|  
+||`__int8`, `__int16`, `__int32`, `__int64`|Całkowite o określonym rozmiarze `__int n`, gdzie `n` w bitach zmienna całkowitoliczbowa rozmiar. `__int8`, `__int16`, `__int32` i `__int64` są słowa kluczowe specyficzne dla firmy Microsoft. Nie wszystkie typy są dostępne na wszystkich architektury. `(__int128` nie jest obsługiwany.)|  
+||`long`|Typ `long` (lub `long` `int`) jest typem całkowitym, która jest większa niż lub równe rozmiarowi typu `int`.<br /><br /> Obiekty typu `long` mogą być deklarowane jako `signed` `long` lub `unsigned` `long`. `Signed` `long` jest synonimem `long`.|  
+||`long``long`|Większe niż niepodpisany `long`.<br /><br /> Obiekty typu `long long` mogą być deklarowane jako `signed` `long long` lub `unsigned` `long long`. `signed` `long long` jest synonimem `long long`.|  
 ||`wchar_t`, `__wchar_t`|Zmienna typu `wchar_t` wyznacza typ znaków dwubajtowych lub wielobajtowych znaków. Domyślnie `wchar_t` jest typem natywnym, ale może użyć [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) aby `wchar_t` element typedef dla `unsigned short`. `__wchar_t` Typu jest specyficzne dla firmy Microsoft synonimem natywnego `wchar_t` typu.<br /><br /> Użyj prefiksu L przed znakiem lub literału ciągu do wyznaczenia typu znaków dwubajtowych.|  
 |Liczba zmiennoprzecinkowa|`float`|Typ `float` jest wartość zmiennoprzecinkowa najmniejsza typu punktu.|  
 ||`double`|Typ `double` jest przestawne typ punktu, który jest większy niż lub równy wpisz `float`, ale krótszy niż lub równe rozmiarowi typu `long` `double`.<br /><br /> Dotyczące firmy Microsoft: reprezentacja `long double` i `double` są identyczne. Jednak `long double` i `double` są osobne typy.|  
 ||`long double`|Typ `long` `double` jest przestawne typ punktu, który jest większy niż lub równy wpisz `double`.|  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  W poniższej tabeli wymieniono ilości miejsca wymaganego dla podstawowych typów języka Microsoft C++.  
   

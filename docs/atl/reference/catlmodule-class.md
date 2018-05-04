@@ -1,12 +1,9 @@
 ---
 title: Klasa CAtlModule | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlModule
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c969341656d0861224cf0835d08e31907328b5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2be5d5a777d4b9aed9ee4d07016771ee91c913b0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlmodule-class"></a>Klasa CAtlModule
 Ta klasa udostępnia metody używane przez kilka klasy modułów ALT.  
@@ -96,7 +91,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
-##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
+##  <a name="addcommonrgsreplacements"></a>  CAtlModule::AddCommonRGSReplacements  
  Zastępuje tę metodę, aby dodać parametry do mapy zastępczy składnik rejestru Alt (Rejestrator).  
   
 ```
@@ -115,7 +110,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
   
  Zobacz temat [przy użyciu parametry wymienne (Rejestrator preprocesora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) więcej szczegółów.  
   
-##  <a name="addtermfunc"></a>CAtlModule::AddTermFunc  
+##  <a name="addtermfunc"></a>  CAtlModule::AddTermFunc  
  Dodaje nowe funkcja wywoływana, gdy kończy modułu.  
   
 ```
@@ -132,7 +127,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
   
-##  <a name="catlmodule"></a>CAtlModule::CAtlModule  
+##  <a name="catlmodule"></a>  CAtlModule::CAtlModule  
  Konstruktor.  
   
 ```
@@ -142,7 +137,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>Uwagi  
  Inicjuje elementów członkowskich danych i inicjuje sekcja krytyczna wokół modułu wątku.  
   
-##  <a name="dtor"></a>CAtlModule:: ~ CAtlModule  
+##  <a name="dtor"></a>  CAtlModule:: ~ CAtlModule  
  Destruktor.  
   
 ```
@@ -152,7 +147,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wszystkie elementy członkowskie danych.  
   
-##  <a name="getgitptr"></a>CAtlModule::GetGITPtr  
+##  <a name="getgitptr"></a>  CAtlModule::GetGITPtr  
  Pobiera wskaźnik do Tabela interfejsu globalnego.  
   
 ```
@@ -173,7 +168,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  Zobacz [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) dla informacji na temat Tabela interfejsu globalnego.  
   
-##  <a name="getlockcount"></a>CAtlModule::GetLockCount  
+##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  Zwraca liczbę blokad.  
   
 ```
@@ -183,7 +178,7 @@ virtual LONG GetLockCount() throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca liczbę blokad. Ta wartość może być przydatne w przypadku diagnostyki i debugowania.  
   
-##  <a name="lock"></a>CAtlModule::Lock  
+##  <a name="lock"></a>  CAtlModule::Lock  
  Zwiększa liczbę blokad.  
   
 ```
@@ -193,21 +188,21 @@ virtual LONG Lock() throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwiększa liczbę blokad i zwraca zaktualizowanej wartości. Ta wartość może być przydatne w przypadku diagnostyki i debugowania.  
   
-##  <a name="m_libid"></a>CAtlModule::m_libid  
+##  <a name="m_libid"></a>  CAtlModule::m_libid  
  Zawiera unikatowy identyfikator GUID bieżącego modułu.  
   
 ```
 static GUID m_libid;
 ```  
   
-##  <a name="m_pgit"></a>CAtlModule::m_pGIT  
+##  <a name="m_pgit"></a>  CAtlModule::m_pGIT  
  Wskaźnik do Tabela interfejsu globalnego.  
   
 ```
 IGlobalInterfaceTable* m_pGIT;
 ```  
   
-##  <a name="term"></a>CAtlModule::Term  
+##  <a name="term"></a>  CAtlModule::Term  
  Zwalnia wszystkie elementy członkowskie danych.  
   
 ```
@@ -217,7 +212,7 @@ void Term() throw();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wszystkie elementy członkowskie danych. Ta metoda jest wywoływana przez destruktor.  
   
-##  <a name="unlock"></a>CAtlModule::Unlock  
+##  <a name="unlock"></a>  CAtlModule::Unlock  
  Zmniejsza liczbę blokad.  
   
 ```
@@ -227,7 +222,7 @@ virtual LONG Unlock() throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zmniejsza liczbę blokad i zwraca zaktualizowanej wartości. Ta wartość może być przydatne w przypadku diagnostyki i debugowania.  
   
-##  <a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD  
+##  <a name="updateregistryfromresourced"></a>  CAtlModule::UpdateRegistryFromResourceD  
  Uruchamia skrypt zawartych w określonym zasobie do zarejestrowania lub wyrejestrowania obiektu.  
   
 ```
@@ -265,7 +260,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
   
  Ta metoda wywołuje [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) i [IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister).  
   
-##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper  
+##  <a name="updateregistryfromresourcedhelper"></a>  CAtlModule::UpdateRegistryFromResourceDHelper  
  Ta metoda jest wywoływana przez `UpdateRegistryFromResourceD` do przeprowadzenia aktualizacji rejestru.  
   
 ```
@@ -291,7 +286,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zapewnia implementacji [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced).  
   
-##  <a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS  
+##  <a name="updateregistryfromresources"></a>  CAtlModule::UpdateRegistryFromResourceS  
  Uruchamia skrypt zawartych w określonym zasobie do zarejestrowania lub wyrejestrowania obiektu. Ta metoda statycznie łączy się składnik rejestru ALT.  
   
 ```

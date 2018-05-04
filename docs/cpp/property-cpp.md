@@ -1,12 +1,9 @@
 ---
-title: "właściwości (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: właściwości (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - property_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313123a75c2fbcf295d1c1d87aa423e76154091e
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-c"></a>właściwość (C++)
 **Microsoft Specific**  
@@ -51,7 +46,7 @@ ms.lasthandoff: 01/25/2018
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
- Powyższe stwierdzenie wskazuje, że `x[]` może być używany z co najmniej jeden indeksy tablicy. W takim przypadku `i=p->x[a][b]` przekonwertowany `i=p->GetX(a, b)`, i `p->x[a][b] = i` są konwertowane`p->PutX(a, b, i);`  
+ Powyższe stwierdzenie wskazuje, że `x[]` może być używany z co najmniej jeden indeksy tablicy. W takim przypadku `i=p->x[a][b]` przekonwertowany `i=p->GetX(a, b)`, i `p->x[a][b] = i` są konwertowane `p->PutX(a, b, i);`  
   
  **KOŃCOWY określonych firmy Microsoft**  
   

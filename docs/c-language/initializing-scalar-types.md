@@ -1,13 +1,10 @@
 ---
-title: "Inicjowanie typów skalarnych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Inicjowanie typów skalarnych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,24 +18,22 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3863ea5a6edfd0c7bc605231182a8d5dfc17b9d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fef7356768a594694e0fcf3415c66ef63568a7cf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializing-scalar-types"></a>Inicjowanie typów skalarnych
 Podczas inicjowania skalarną typy, wartość *wyrażenia przypisania* jest przypisany do zmiennej. Zastosuj reguły konwersji dla przypisania. (Zobacz [konwersje typów](../c-language/type-conversions-c.md) Aby uzyskać informacje dotyczące reguły konwersji.)  
   
 ## <a name="syntax"></a>Składnia  
  `declaration`:  
- *Specyfikatory deklaracji w init listy deklarator* opt**;**  
+ *Specyfikatory deklaracji w init listy deklarator* opt **;**  
   
  *Specyfikatory deklaracji*:  
  *Specyfikatory deklaracji Specyfikator klasy magazynu* opcjonalnych  
@@ -47,18 +42,18 @@ Podczas inicjowania skalarną typy, wartość *wyrażenia przypisania* jest przy
   
  *Specyfikatory deklaracji kwalifikator typu* opcjonalnych  
   
- *init — deklarator — lista*:  
- *init — deklarator*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
- *init — deklarator — lista***,***init deklarator*   
+ *init — deklarator — lista***,***init deklarator*  
   
- *init — deklarator*:  
- *deklarator*  
+ *init-declarator*:  
+ *declarator*  
   
- *deklarator***=***inicjatora* / * dla inicjowania skalarne    \*/  
+ *deklarator***=***inicjatora* / * dla inicjowania skalarne \*/  
   
  *Inicjator*:  
- *wyrażenia przypisania*  
+ *assignment-expression*  
   
  Należy zainicjować zmienne dowolnego typu, pod warunkiem, że należy przestrzegać następujących reguł:  
   

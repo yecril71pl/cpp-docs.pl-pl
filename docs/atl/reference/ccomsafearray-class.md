@@ -1,12 +1,9 @@
 ---
 title: Klasa CComSafeArray | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSafeArray
@@ -37,17 +34,15 @@ dev_langs:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bed846015090ef9c4da841adff4968c91d8719d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c7c4e0603d70513194f8672752ec704011e8326
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsafearray-class"></a>Klasa CComSafeArray
 Ta klasa jest otoki dla **SAFEARRAY** struktury.  
@@ -112,9 +107,9 @@ class CComSafeArray
 |[CComSafeArray::m_psa](#m_psa)|Ten element członkowski danych przechowuje adres **SAFEARRAY** struktury.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComSafeArray`udostępnia otokę dla [— typ danych parametru SAFEARRAY](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) klasy, dzięki czemu polegać na tworzenie i zarządzanie nimi jedno - i są one Wielowymiarowe tablice z niemal dowolnego typu VARIANT, obsługiwane.  
+ `CComSafeArray` udostępnia otokę dla [— typ danych parametru SAFEARRAY](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) klasy, dzięki czemu polegać na tworzenie i zarządzanie nimi jedno - i są one Wielowymiarowe tablice z niemal dowolnego typu VARIANT, obsługiwane.  
   
- `CComSafeArray`Przekazywanie tablic między procesami upraszcza, a ponadto zapewnia dodatkowe zabezpieczenia sprawdzając wartości indeksu tablicy względem górnej i dolne granice tablicy.  
+ `CComSafeArray` Przekazywanie tablic między procesami upraszcza, a ponadto zapewnia dodatkowe zabezpieczenia sprawdzając wartości indeksu tablicy względem górnej i dolne granice tablicy.  
   
  Dolna granica `CComSafeArray` można uruchomić w dowolnej wartości zdefiniowanej przez użytkownika; jednak używać tablic, które są dostępne za pośrednictwem C++ dolna granica 0. Innych języków, takich jak Visual Basic może użyć innych wartości obwiedni (na przykład -10-10).  
   
@@ -146,7 +141,7 @@ class CComSafeArray
 ## <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
-##  <a name="add"></a>CComSafeArray::Add  
+##  <a name="add"></a>  CComSafeArray::Add  
  Dodaje jeden lub więcej elementów, lub **SAFEARRAY** struktury do `CComSafeArray`.  
   
 ```
@@ -162,7 +157,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
  `ulCount`  
  Liczba obiektów, aby dodać do tablicy.  
   
- *pT*  
+ *PT*  
  Wskaźnik do co najmniej jeden obiekt ma zostać dodany do tablicy.  
   
  *t*  
@@ -179,7 +174,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
   
  `bCopy` Flaga jest brana pod uwagę podczas elementów typu `BSTR` lub **VARIANT** są dodawane do tablicy. Wartość domyślna **TRUE** zapewnia, że nowa kopia jest wykonany danych, gdy element zostanie dodany do tablicy.  
   
-##  <a name="attach"></a>CComSafeArray::Attach  
+##  <a name="attach"></a>  CComSafeArray::Attach  
  Dołącza **SAFEARRAY** struktury do `CComSafeArray` obiektu.  
   
 ```
@@ -196,7 +191,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>Uwagi  
  Dołącza **SAFEARRAY** struktury do `CComSafeArray` obiektu, co istniejący `CComSafeArray` dostępnych metod.  
   
-##  <a name="ccomsafearray"></a>CComSafeArray::CComSafeArray  
+##  <a name="ccomsafearray"></a>  CComSafeArray::CComSafeArray  
  Konstruktor.  
   
 ```
@@ -234,7 +229,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>Uwagi  
  Tworzy `CComSafeArray` obiektu.  
   
-##  <a name="dtor"></a>CComSafeArray:: ~ CComSafeArray  
+##  <a name="dtor"></a>  CComSafeArray:: ~ CComSafeArray  
  Destruktor.  
   
 ```
@@ -244,7 +239,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wszystkie przydzielone zasoby.  
   
-##  <a name="copyfrom"></a>CComSafeArray::CopyFrom  
+##  <a name="copyfrom"></a>  CComSafeArray::CopyFrom  
  Kopiuje zawartość **SAFEARRAY** struktury w `CComSafeArray` obiektu.  
   
 ```
@@ -261,7 +256,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia skopiowanie zawartości **SAFEARRAY** do bieżącego `CComSafeArray` obiektu. Zastępuje istniejącą zawartość elementu tablicy.  
   
-##  <a name="copyto"></a>CComSafeArray::CopyTo  
+##  <a name="copyto"></a>  CComSafeArray::CopyTo  
  Tworzy kopię `CComSafeArray` obiektu.  
   
 ```
@@ -278,7 +273,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia skopiowanie zawartości `CComSafeArray` obiekt do **SAFEARRAY** struktury.  
   
-##  <a name="create"></a>CComSafeArray::Create  
+##  <a name="create"></a>  CComSafeArray::Create  
  Tworzy `CComSafeArray`.  
   
 ```
@@ -305,7 +300,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="remarks"></a>Uwagi  
  A `CComSafeArray` można utworzyć obiektu z istniejącego **SAFEARRAYBOUND** struktury i liczba wymiarów lub określając liczbę elementów w tablicy oraz dolną granicę. Jeśli tablica jest udostępniany z języka Visual C++, dolna granica musi mieć wartość 0. Inne języki mogą zezwalać innych wartości dolna granica (na przykład Visual Basic obsługuje tablice elementów z zakresem, takich jak -10-10).  
   
-##  <a name="destroy"></a>CComSafeArray::Destroy  
+##  <a name="destroy"></a>  CComSafeArray::Destroy  
  Niszczy `CComSafeArray` obiektu.  
   
 ```
@@ -318,7 +313,7 @@ HRESULT Destroy();
 ### <a name="remarks"></a>Uwagi  
  Niszczy istniejącą `CComSafeArray` obiekt i wszystkie dane w nim zawarte.  
   
-##  <a name="detach"></a>CComSafeArray::Detach  
+##  <a name="detach"></a>  CComSafeArray::Detach  
  Odłącza **SAFEARRAY** z `CComSafeArray` obiektu.  
   
 ```
@@ -331,7 +326,7 @@ LPSAFEARRAY Detach();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda odłącza **SAFEARRAY** obiekt z `CComSafeArray` obiektu.  
   
-##  <a name="getat"></a>CComSafeArray::GetAt  
+##  <a name="getat"></a>  CComSafeArray::GetAt  
  Pobiera pojedynczego elementu z tablicy jednowymiarowej.  
   
 ```
@@ -345,7 +340,7 @@ T& GetAt(LONG lIndex) const;
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwołanie do elementu tablicy wymagane.  
   
-##  <a name="getcount"></a>CComSafeArray::GetCount  
+##  <a name="getcount"></a>  CComSafeArray::GetCount  
  Zwraca liczbę elementów w tablicy.  
   
 ```
@@ -362,7 +357,7 @@ ULONG GetCount(UINT uDim = 0) const;
 ### <a name="remarks"></a>Uwagi  
  W przypadku użycia z tablicy wielowymiarowej, ta metoda zwróci liczbę elementów tylko określonego wymiaru.  
   
-##  <a name="getdimensions"></a>CComSafeArray::GetDimensions  
+##  <a name="getdimensions"></a>  CComSafeArray::GetDimensions  
  Zwraca liczbę wymiarów tablicy.  
   
 ```
@@ -372,7 +367,7 @@ UINT GetDimensions() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca liczbę wymiarów tablicy.  
   
-##  <a name="getlowerbound"></a>CComSafeArray::GetLowerBound  
+##  <a name="getlowerbound"></a>  CComSafeArray::GetLowerBound  
  Zwraca dolną granicę określonego wymiaru tablicy.  
   
 ```
@@ -389,7 +384,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>Uwagi  
  Jeśli dolna granica jest równa 0, oznacza to tablicy notacji języka C, w których pierwszy element to element o numerze 0. W przypadku wystąpienia błędu, na przykład wymiar nieprawidłowy argument, ta metoda wywołuje `AtlThrow` z opisem błędu HRESULT.  
   
-##  <a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
+##  <a name="getsafearrayptr"></a>  CComSafeArray::GetSafeArrayPtr  
  Zwraca adres `m_psa` element członkowski danych.  
   
 ```
@@ -399,7 +394,7 @@ LPSAFEARRAY* GetSafeArrayPtr() throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wskaźnik do [CComSafeArray::m_psa](#m_psa) element członkowski danych.  
   
-##  <a name="gettype"></a>CComSafeArray::GetType  
+##  <a name="gettype"></a>  CComSafeArray::GetType  
  Zwraca typ danych przechowywanych w tablicy.  
   
 ```
@@ -427,7 +422,7 @@ VARTYPE GetType() const;
 |VT_VARIANT|wskaźnik typu Variant|  
 |VT_CY|Currency — Typ danych|  
   
-##  <a name="getupperbound"></a>CComSafeArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CComSafeArray::GetUpperBound  
  Zwraca górną granicę dla każdego wymiaru tablicy.  
   
 ```
@@ -444,7 +439,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>Uwagi  
  W przypadku wystąpienia błędu, na przykład wymiar nieprawidłowy argument, ta metoda wywołuje `AtlThrow` z opisem błędu HRESULT.  
   
-##  <a name="issizable"></a>CComSafeArray::IsSizable  
+##  <a name="issizable"></a>  CComSafeArray::IsSizable  
  Sprawdza, czy `CComSafeArray` obiektu można zmieniać.  
   
 ```
@@ -454,14 +449,14 @@ bool IsSizable() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **true** Jeśli `CComSafeArray` można zmieniać, **false** Jeśli nie jest możliwy.  
   
-##  <a name="m_psa"></a>CComSafeArray::m_psa  
+##  <a name="m_psa"></a>  CComSafeArray::m_psa  
  Zawiera adres **SAFEARRAY** uzyskać dostępu do struktury.  
   
 ```
 LPSAFEARRAY m_psa;
 ```  
   
-##  <a name="multidimgetat"></a>CComSafeArray::MultiDimGetAt  
+##  <a name="multidimgetat"></a>  CComSafeArray::MultiDimGetAt  
  Pobiera pojedynczego elementu z tablicy wielowymiarowej.  
   
 ```
@@ -478,7 +473,7 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
   
-##  <a name="multidimsetat"></a>CComSafeArray::MultiDimSetAt  
+##  <a name="multidimsetat"></a>  CComSafeArray::MultiDimSetAt  
  Ustawia wartość elementu w tablicy wielowymiarowej.  
   
 ```
@@ -498,7 +493,7 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 ### <a name="remarks"></a>Uwagi  
  To jest wersja wielowymiarowe [CComSafeArray::SetAt](#setat).  
   
-##  <a name="operator_at"></a>CComSafeArray::operator\[\]  
+##  <a name="operator_at"></a>  CComSafeArray::operator \[\]  
  Pobiera element z tablicy.  
   
 ```
@@ -516,7 +511,7 @@ T& operator[]int nindex) const;
 ### <a name="remarks"></a>Uwagi  
  Pełni podobną funkcję do [CComSafeArray::GetAt](#getat), jednak ten operator działa tylko tablice jednowymiarowe.  
   
-##  <a name="operator_eq"></a>CComSafeArray::operator =  
+##  <a name="operator_eq"></a>  CComSafeArray::operator =  
  Operator przypisania.  
   
 ```
@@ -534,7 +529,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca typ danych przechowywanych w tablicy.  
   
-##  <a name="operator_lpsafearray"></a>CComSafeArray::operator LPSAFEARRAY  
+##  <a name="operator_lpsafearray"></a>  CComSafeArray::operator LPSAFEARRAY  
  Rzutuje wartość **SAFEARRAY** wskaźnika.  
   
 ```
@@ -544,7 +539,7 @@ operator LPSAFEARRAY() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Rzutuje wartość **SAFEARRAY** wskaźnika.  
   
-##  <a name="resize"></a>CComSafeArray::Resize  
+##  <a name="resize"></a>  CComSafeArray::Resize  
  Zmienia rozmiar `CComSafeArray` obiektu.  
   
 ```
@@ -568,7 +563,7 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zmienia rozmiar tylko ostatni wymiar. Nie zmieni się rozmiar tablic zwracających **IsResizable** jako **false**.  
   
-##  <a name="setat"></a>CComSafeArray::SetAt  
+##  <a name="setat"></a>  CComSafeArray::SetAt  
  Ustawia wartość elementu w tablicy jednowymiarowej.  
   
 ```

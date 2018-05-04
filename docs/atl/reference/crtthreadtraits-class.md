@@ -1,12 +1,9 @@
 ---
 title: Klasa CRTThreadTraits | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRTThreadTraits
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6fbe71ff23db8dba431b9d46d71fc6c924fbc5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f08f0d6ea57aa5a153d190b357785911e64d6f09
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtthreadtraits-class"></a>Klasa CRTThreadTraits
 Ta klasa udostępnia funkcję tworzenia dla wątku CRT. Użyj tej klasy, jeśli wątek użyje funkcji CRT.  
@@ -65,7 +60,7 @@ class CRTThreadTraits
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
-##  <a name="createthread"></a>CRTThreadTraits::CreateThread  
+##  <a name="createthread"></a>  CRTThreadTraits::CreateThread  
  Wywołanie tej funkcji można utworzyć wątku, który można używać funkcji CRT.  
   
 ```

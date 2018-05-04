@@ -1,12 +1,9 @@
 ---
 title: Klasa CComEnumOnSTL | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnumOnSTL
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d42d99baf154bc5434f2d771aeaabb71c5502b30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c380ba7b6c2c13f178a15263e1ff510f9f3c31c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenumonstl-class"></a>Klasa CComEnumOnSTL
 Ta klasa definiuje obiekt modułu wyliczającego COM oparte na kolekcji standardowa biblioteka C++.  
@@ -60,11 +55,11 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
  Klasa standardowa biblioteka C++ kontenera.  
   
 ## <a name="remarks"></a>Uwagi  
- `CComEnumOnSTL`Definiuje obiekt modułu wyliczającego COM oparte na kolekcji standardowa biblioteka C++. Ta klasa może być używana samodzielnie lub w połączeniu z [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Typowe kroki do używania tej klasy są przedstawione poniżej. Aby uzyskać więcej informacji, zobacz [kolekcje i wyliczenia ATL](../../atl/atl-collections-and-enumerators.md).  
+ `CComEnumOnSTL` Definiuje obiekt modułu wyliczającego COM oparte na kolekcji standardowa biblioteka C++. Ta klasa może być używana samodzielnie lub w połączeniu z [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Typowe kroki do używania tej klasy są przedstawione poniżej. Aby uzyskać więcej informacji, zobacz [kolekcje i wyliczenia ATL](../../atl/atl-collections-and-enumerators.md).  
   
 ## <a name="to-use-this-class-with-icollectiononstlimpl"></a>Aby użyć tej klasy z ICollectionOnSTLImpl:  
   
-- `typedef`Specjalizacja tej klasy.  
+- `typedef` Specjalizacja tej klasy.  
   
 -   Użyj `typedef` jako ostatnim argumentem szablonu w specjalizacji `ICollectionOnSTLImpl`.  
   
@@ -72,7 +67,7 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
   
 ## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>Aby użyć tej klasy, niezależnie od ICollectionOnSTLImpl:  
   
-- `typedef`Specjalizacja tej klasy.  
+- `typedef` Specjalizacja tej klasy.  
   
 -   Użyj `typedef` jako argument szablonu w specjalizacji `CComObject`.  
   

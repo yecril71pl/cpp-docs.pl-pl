@@ -2,26 +2,21 @@
 title: ISO646 Operatory | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 04/11/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 93e6d3e7-4889-4d8e-8dcb-c1a6b9bbe0f5
-caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8110b6ae26416e3f24956d6c491b120183f3d0c7
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: b94f95a824dfe2e2e0c3e5193ad125dfc9744af2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iso646-operators"></a>Operatory ISO646
 
@@ -46,4 +41,4 @@ Zawiera czytelne alternatywy dla niektórych operatorów lub separatorów. Stand
 ## <a name="see-also"></a>Zobacz też
 
 [Internacjonalizacja](../c-runtime-library/internationalization.md)<br/>
- [Universal C procedury czasu wykonywania według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+ [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

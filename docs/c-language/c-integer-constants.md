@@ -1,29 +1,24 @@
 ---
-title: "Stałe całkowite języka C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Stałe całkowite języka C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 02/27/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0f28b41c54b14c9e673d3fb8e7bb4947206cfd3
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: eef5ba48d28b898ffc624d5790b0f414a8c112c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-integer-constants"></a>Stałe całkowite języka C
 
@@ -31,7 +26,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="syntax"></a>Składnia
 
-*integer-constant*:<br/>
+*stała całkowita*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *integer-suffix*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *integer-suffix*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub><br/>
@@ -63,10 +58,10 @@ ms.lasthandoff: 02/28/2018
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**<br/>
 
 *integer-suffix*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sufiks niepodpisane* *long sufiks*<sub>opcjonalnych</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-long-suffix*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *64-bit-integer-suffix*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sufiks Long* *niepodpisane sufiks*<sub>opcjonalnych</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*long-long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*64-bit-integer-suffix*<br/>
 

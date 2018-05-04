@@ -2,12 +2,9 @@
 title: Opcje BSCMAKE | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCBscMakeTool.OutputFile
 - VC.Project.VCBscMakeTool.SuppressStartupBanner
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c258a5591615bb277823ccc5261fade3c5e2af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16fd9bc8813179d23e83ab0a21a84ad815501bf6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bscmake-options"></a>Opcje BSCMAKE
 W tej sekcji opisano dostępne kontrolowanie BSCMAKE opcje. Kilka opcji kontrolować zawartość pliku informacyjnego przeglądarki, z wyłączeniem lub w tym informacje o niektórych. Opcje wykluczeń można zezwolić na BSCMAKE do szybsze i może spowodować mniejszy plik .bsc. Opcja nazwy jest uwzględniana wielkość liter (z wyjątkiem **/HELP** i **/nologo**).  
@@ -70,7 +65,7 @@ W tej sekcji opisano dostępne kontrolowanie BSCMAKE opcje. Kilka opcji kontrolo
  /ES  
  Wyklucza z pliku informacyjnego przeglądarki każdego pliku dołączanego określona za pomocą ścieżki bezwzględnej lub znaleziony w określone w zmiennej środowiskowej INCLUDE ścieżkę bezwzględną. (Zazwyczaj są to system zawierać pliki, które zawierają wiele informacji, które nie mogą być potrzebne w pliku informacji o przeglądaniu.) Ta opcja nie wyklucza określono bez ścieżki lub za pomocą ścieżek względnych lub pliki znajdujące się w ścieżki względnej DOŁĄCZANIA plików. Można użyć **/Ei** opcji wraz z **/Es** Aby wykluczyć pliki **/Es** nie wyklucza. Jeśli chcesz wykluczyć tylko niektóre pliki który **/Es** wyklucza, użyj **/Ei** zamiast **/Es** i wyświetlić listę plików, które chcesz wykluczyć.  
   
- / errorreport: [Brak &#124; wiersz &#124; kolejki &#124; wysyłania]  
+ / errorreport: [Brak &#124; wiersza &#124; kolejki &#124; wysyłania]  
  Umożliwia wysyłanie informacji do firmy Microsoft dotyczące błędy wewnętrzne w bscmake.exe.  
   
  Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
@@ -82,12 +77,12 @@ W tej sekcji opisano dostępne kontrolowanie BSCMAKE opcje. Kilka opcji kontrolo
  Zawiera symbole bez odwołań. Domyślnie BSCMAKE nie obsługuje żadnych symboli, które są zdefiniowane, ale nie odwołuje się do. Jeśli pakowane pliku .sbr tej opcji nie ma wpływu na tego pliku wejściowego kompilator został już usunięty nieużywane symboli.  
   
  /n  
- Wymusza nieprzyrostowa kompilacji. Użyj  **/n**  Aby wymusić pełne kompilacji pliku informacyjnego przeglądarki, czy istnieje plik .bsc i aby zapobiec obcinania plików SBR. Zobacz [sposób BSCMAKE kompiluje plik .bsc](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
+ Wymusza nieprzyrostowa kompilacji. Użyj **/n** Aby wymusić pełne kompilacji pliku informacyjnego przeglądarki, czy istnieje plik .bsc i aby zapobiec obcinania plików SBR. Zobacz [sposób BSCMAKE kompiluje plik .bsc](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
   
  /NOLOGO  
  Pomija komunikat o prawach autorskich BSCMAKE.  
   
- /o`filename`  
+ /o `filename`  
  Określa nazwę pliku informacyjnego przeglądarki. Domyślnie BSCMAKE daje pliku informacyjnego przeglądarki z podstawowej nazwy pierwszy plik SBR i rozszerzenia .bsc.  
   
  /S ( `filename`...)  

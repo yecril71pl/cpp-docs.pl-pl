@@ -1,12 +1,9 @@
 ---
 title: Klasa IProvideClassInfo2Impl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IProvideClassInfo2Impl
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fe466608acaecfaf6219b6d15d27e0611ac2511
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a970b0258c8d353dabad96d712598416caf2acb4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Klasa IProvideClassInfo2Impl
 Ta klasa udostępnia domyślną implementację [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) i [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) metody.  
@@ -91,7 +86,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ## <a name="remarks"></a>Uwagi  
  [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) rozszerza interfejs [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) przez dodanie `GetGUID` metody. Ta metoda umożliwia klientowi można pobrać obiektu wychodzącego identyfikatora IID interfejsu dla jego domyślny zestaw zdarzeń. Klasa `IProvideClassInfo2Impl` udostępnia domyślną implementację elementu **IProvideClassInfo** i `IProvideClassInfo2` metody.  
   
- `IProvideClassInfo2Impl`zawiera statyczny element członkowski typu `CComTypeInfoHolder` który zarządza informacji o typie dla klasy coclass.  
+ `IProvideClassInfo2Impl` zawiera statyczny element członkowski typu `CComTypeInfoHolder` który zarządza informacji o typie dla klasy coclass.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `IProvideClassInfo2`  
@@ -101,7 +96,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo  
+##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo  
  Pobiera `ITypeInfo` wskaźnika do klasy coclass typu informacji.  
   
 ```
@@ -111,7 +106,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) w systemie Windows SDK.  
   
-##  <a name="getguid"></a>IProvideClassInfo2Impl::GetGUID  
+##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
  Pobiera identyfikator GUID obiektu dispinterface wychodzących.  
   
 ```
@@ -123,7 +118,7 @@ STDMETHOD(GetGUID)(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) w systemie Windows SDK.  
   
-##  <a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl  
+##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  Konstruktor.  
   
 ```
@@ -133,7 +128,7 @@ IProvideClassInfo2Impl();
 ### <a name="remarks"></a>Uwagi  
  Wywołania `AddRef` na [_tih](#_tih) elementu członkowskiego. Wywołania destruktora **wersji**.  
   
-##  <a name="_tih"></a>IProvideClassInfo2Impl::_tih  
+##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih  
  Ten element członkowski danych statycznych jest wystąpieniem klasy parametr szablonu, `tihclass`, która domyślnie wynosi `CComTypeInfoHolder`.  
   
 ```
@@ -142,7 +137,7 @@ static  tihclass
 ```     
   
 ### <a name="remarks"></a>Uwagi  
- `_tih`zarządza informacji o typie dla klasy coclass.  
+ `_tih` Zarządza informacji o typie dla klasy coclass.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd klas](../../atl/atl-class-overview.md)

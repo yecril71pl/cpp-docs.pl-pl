@@ -1,13 +1,10 @@
 ---
-title: "-vmm, - vms, - vmv (ogólnego przeznaczenia reprezentacja) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -vmm, - vms, - vmv (ogólnego przeznaczenia reprezentacja) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vms
 - /vmm
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d54ea3cabbbe631006cc22a80fdbf500585ff20f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd2f79238c890d43678332203acbe9d935a54102
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Ogólna reprezentacja celu)
 Używane podczas [/vmb, / vmg (metoda reprezentacji)](../../build/reference/vmb-vmg-representation-method.md) został wybrany jako [metoda reprezentacji](../../build/reference/vmb-vmg-representation-method.md). Te opcje wskazują modelu dziedziczenia definicji klasy nie zostały jeszcze napotkano.  
@@ -56,9 +51,9 @@ Używane podczas [/vmb, / vmg (metoda reprezentacji)](../../build/reference/vmb-
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/ VMM**|Określa najbardziej ogólna reprezentacja wskaźnika do elementu członkowskiego klasy jedną, który używa dziedziczenie wielokrotne.<br /><br /> Odpowiednie [— słowo kluczowe dziedziczenia](../../cpp/inheritance-keywords.md) i argument [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) jest **multiple_inheritance**.<br /><br /> Taka reprezentacja jest większy niż wymagane dla pojedynczego dziedziczenia.<br /><br /> W przypadku wirtualnych modelu dziedziczenia definicji klasy, dla którego jest zadeklarowany jako wskaźnik do elementu członkowskiego, kompilator generuje błąd.|  
-|**/ VMS**|Określa najbardziej ogólna reprezentacja wskaźnika do elementu członkowskiego klasy, który korzysta z dziedziczenia lub żaden pojedyncze dziedziczenie się.<br /><br /> Odpowiednie [— słowo kluczowe dziedziczenia](../../cpp/inheritance-keywords.md) i argument [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) jest **pojedynczego dziedziczenia**.<br /><br /> Jest to najmniejsza możliwa reprezentacja wskaźnika do elementu członkowskiego klasy.<br /><br /> Jeśli model dziedziczenia definicji klasy, dla którego jest zadeklarowany jako wskaźnik do elementu członkowskiego jest wiele lub wirtualne, kompilator generuje błąd.|  
-|**/ vmv**|Określa najbardziej ogólna reprezentacja wskaźnika do elementu członkowskiego klasy, aby używa wirtualnego dziedziczenia. Nigdy nie powoduje, że wystąpił błąd i jest ustawieniem domyślnym.<br /><br /> Odpowiednie [— słowo kluczowe dziedziczenia](../../cpp/inheritance-keywords.md) i argument [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) jest **virtual_inheritance**.<br /><br /> Ta opcja wymaga większych wskaźnik i dodatkowy kod, aby zinterpretować wskaźnika niż inne opcje.|  
+|**/vmm**|Określa najbardziej ogólna reprezentacja wskaźnika do elementu członkowskiego klasy jedną, który używa dziedziczenie wielokrotne.<br /><br /> Odpowiednie [— słowo kluczowe dziedziczenia](../../cpp/inheritance-keywords.md) i argument [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) jest **multiple_inheritance**.<br /><br /> Taka reprezentacja jest większy niż wymagane dla pojedynczego dziedziczenia.<br /><br /> W przypadku wirtualnych modelu dziedziczenia definicji klasy, dla którego jest zadeklarowany jako wskaźnik do elementu członkowskiego, kompilator generuje błąd.|  
+|**/vms**|Określa najbardziej ogólna reprezentacja wskaźnika do elementu członkowskiego klasy, który korzysta z dziedziczenia lub żaden pojedyncze dziedziczenie się.<br /><br /> Odpowiednie [— słowo kluczowe dziedziczenia](../../cpp/inheritance-keywords.md) i argument [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) jest **pojedynczego dziedziczenia**.<br /><br /> Jest to najmniejsza możliwa reprezentacja wskaźnika do elementu członkowskiego klasy.<br /><br /> Jeśli model dziedziczenia definicji klasy, dla którego jest zadeklarowany jako wskaźnik do elementu członkowskiego jest wiele lub wirtualne, kompilator generuje błąd.|  
+|**/vmv**|Określa najbardziej ogólna reprezentacja wskaźnika do elementu członkowskiego klasy, aby używa wirtualnego dziedziczenia. Nigdy nie powoduje, że wystąpił błąd i jest ustawieniem domyślnym.<br /><br /> Odpowiednie [— słowo kluczowe dziedziczenia](../../cpp/inheritance-keywords.md) i argument [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) jest **virtual_inheritance**.<br /><br /> Ta opcja wymaga większych wskaźnik i dodatkowy kod, aby zinterpretować wskaźnika niż inne opcje.|  
   
  Po określeniu jednej z tych opcji modelu dziedziczenia modelu jest używany dla wszystkich wskaźników do elementów członkowskich klasy, niezależnie od ich typ dziedziczenia i określa, czy wskaźnik jest zadeklarowany jako przed lub po klasie. W związku z tym jeśli zawsze używać klasy dziedziczące pojedynczo, można zmniejszyć rozmiar kodu przez kompilowania przy użyciu **/VMS**; jednak jeśli chcesz użyć w przypadku większości (kosztem największy reprezentacja danych), kompilować z **/vmv**.  
   

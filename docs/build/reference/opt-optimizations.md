@@ -2,12 +2,9 @@
 title: -OPT (optymalizacje) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
 - /opt
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: f8ac107f8a5654601f0c974f82fa83ae6aa83518
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="opt-optimizations"></a>/OPT (Optymalizacje)
 Kontroluje optymalizacje, które LINK wykonuje podczas kompilacji.  
@@ -63,7 +58,7 @@ Kontroluje optymalizacje, które LINK wykonuje podczas kompilacji.
   
  Określanie **/OPT: ICF** nie obsługuje **/OPT:REF** opcji.  
   
- **ICF [=** `iterations` **] &AMP;#124; NOICF**   
+ **ICF [=** `iterations` **] &AMP;#124; NOICF**  
  Użyj **/OPT: ICF [=**`iterations`**]** przeprowadzić identycznych sekcji comdat. Zbędne dane COMDAT mogą być usunięte z danych wyjściowych konsolidatora. Opcjonalny `iterations` parametr określa liczbę razy, aby przechodzić między nimi symbole duplikatów. Domyślna liczba iteracji wynosi dwa. Dodatkowe iteracje mogą zlokalizować więcej duplikatów, które zostaną odkryte przez składanie w poprzedniej iteracji.  
   
  Konsolidator zachowuje się inaczej po **/OPT:REF** określono — i **ICF** jest włączona domyślnie — niż podczas **/OPT:REF, Zapora połączenia internetowego** został jawnie określony. Formę **ICF** z włączoną funkcją **/OPT:REF** samodzielnie nie fold danych tylko do odczytu — dotyczy to również .rdata, .pdata i .xdata. W związku z tym złożone są mniej funkcji, gdy obrazy są tworzone dla [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] ponieważ funkcje w tych modułach zależą więcej danych tylko do odczytu — na przykład .pdata i .xdata. Aby uzyskać pełne **ICF** składania zachowanie, jawnie określ **/OPT: ICF**.  

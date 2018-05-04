@@ -1,27 +1,22 @@
 ---
-title: "Zapraszamy ponownie do języka C++ (Modern C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zapraszamy ponownie do języka C++ (Modern C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Zapraszamy ponownie do języka C++ (Modern C++)
 C++ jest jednym z najpopularniejszych języków programowania na świecie. Programy dobrze napisane w języku C++ są szybkie i wydajne. Język jest bardziej elastyczna niż innych języków, ponieważ służy do tworzenia szerokiej gamy aplikacji — od fun i gry atrakcyjnych, wysokiej wydajności naukowych oprogramowaniem, sterowników urządzeń, osadzonych programy i aplikacje klienta systemu Windows. Ponad 20 lat C++ został użyty do rozwiązywania problemów, takich jak te i wiele innych. Co może być niemożliwe jest coraz programistów języka C++ ma złożony dowdy programowania stylu języka C wczoraj oraz ma zamiast tego donned nowoczesnych wersji języka C++.  
@@ -36,7 +31,7 @@ C++ jest jednym z najpopularniejszych języków programowania na świecie. Progr
   
 -   Wskaźniki inteligentne zamiast wskaźniki raw.  
   
--   `std::string`i `std::wstring` typów (zobacz [ \<ciąg >](../standard-library/string.md)) zamiast raw `char[]` tablic.  
+-   `std::string` i `std::wstring` typów (zobacz [ \<ciąg >](../standard-library/string.md)) zamiast raw `char[]` tablic.  
   
 -   [Standardowa biblioteka C++](../standard-library/cpp-standard-library-header-files.md) , takich jak kontenery `vector`, `list`, i `map` zamiast tablice raw lub niestandardowych kontenerów. Zobacz [ \<wektor >](../standard-library/vector.md), [ \<listy >](../standard-library/list.md), i [ \<mapy >](../standard-library/map.md).  
   
@@ -114,7 +109,7 @@ void f()
   
  C++ występują odrodzenia ponieważ zasilania jest najważniejsza ponownie. W językach Java i C# są dobrym programisty wydajności jest ważne, ale pokazywały ich ograniczenia, gdy mocy i wydajności są podstawowym. Wysokiej wydajności i zasilania, szczególnie w przypadku urządzeń, które mają ograniczoną sprzętu nic nie uderzeń nowoczesnych wersji języka C++.  
   
- Nie tylko język jest nowoczesnych, narzędzi programistycznych są zbyt. [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]powoduje, że wszystkie części cyklu programowanie niezawodny i efektywny. Obejmuje narzędzia do zarządzania cyklem życia aplikacji (ALM), IDE ulepszenia, takie jak IntelliSense, narzędzie przyjaznego mechanizmów XAML i kompilowanie, debugowanie i wiele innych narzędzi.  
+ Nie tylko język jest nowoczesnych, narzędzi programistycznych są zbyt. [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] powoduje, że wszystkie części cyklu programowanie niezawodny i efektywny. Obejmuje narzędzia do zarządzania cyklem życia aplikacji (ALM), IDE ulepszenia, takie jak IntelliSense, narzędzie przyjaznego mechanizmów XAML i kompilowanie, debugowanie i wiele innych narzędzi.  
   
  Artykuły w tej części dokumentacji zawierają ogólne wskazówki i najlepsze rozwiązania dotyczące najważniejszych funkcjach i techniki pisanie programów modern C++.  
   

@@ -2,12 +2,9 @@
 title: Zmiany systemu kompilacji | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.msbuild.changes
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01eb3a38ddaf7cdb1d54061e48680396f16b25e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-system-changes"></a>Zmiany systemu kompilacji
 MSBuild system jest używany do tworzenia projektów Visual C++. Jednak w programie Visual Studio 2008 i wcześniejszych wersjach systemu program VCBuild została użyta. Niektóre typy plików i założenia, że program VCBuild nie istnieją lub są reprezentowane inaczej w bieżącym systemie. W tym dokumencie omówiono różnice w systemie kompilacji.  
@@ -65,10 +60,10 @@ MSBuild system jest używany do tworzenia projektów Visual C++. Jednak w progra
 Property=<value>;$(MyProperty)  
 ```  
   
-## <a name="vcxprojuser-files"></a>.vcxproj.user Files  
+## <a name="vcxprojuser-files"></a>. vcxproj.user plików  
  Plik użytkownika (. vcxproj.user) przechowuje właściwości specyficzne dla użytkownika, na przykład, debugowanie i ustawienia wdrażania. Plik vcxproj.user odnosi się do wszystkich projektów dla danego użytkownika.  
   
-## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
+## <a name="vcxprojfilters-file"></a>. vcxproj.filters pliku  
  Podczas **Eksploratora rozwiązań** służy do dodawania pliku do projektu, pliku filtrów (. vcxproj.filters) określa, gdzie w **Eksploratora rozwiązań** drzewa widoku, plik zostanie dodany, na podstawie ich rozszerzenia nazwy pliku.  
   
 ## <a name="vc-directories-settings"></a>Ustawienia katalogi VC ++  

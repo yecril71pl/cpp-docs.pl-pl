@@ -1,29 +1,24 @@
 ---
-title: "Pisanie filtra wyjątku | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Pisanie filtra wyjątku | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 138bb17b8ccbb13371a1c31e4f7347a9bbdbf64b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-exception-filter"></a>Pisanie filtra wyjątku
 Możesz obsłużyć wyjątek wykonując skok na poziom programu obsługi wyjątków lub kontynuując wykonywanie. Zamiast za pomocą kodu obsługi wyjątków do obsługi wyjątku i/lub za pośrednictwem, możesz użyć *filtru* aby wyczyścić problem, a następnie, zwracając wartość -1, Wznów normalnym przepływie bez wyczyszczenie stosu.  
@@ -60,7 +55,7 @@ int Eval_Exception ( int n_except ) {
   
  Jest warto używać wywołania funkcji w *filtru* wyrażenie zawsze, gdy *filtru* trzeba podejmować żadnych działań złożonych. Obliczanie wyrażenia powoduje wykonanie funkcji, w tym przypadku jest to `Eval_Exception`.  
   
- Zwróć uwagę na użycie [getexceptioncode —](http://msdn.microsoft.com/library/windows/desktop/ms679356) ustalenie wyjątek. Musisz wywołać tę funkcję wewnątrz samego filtru. `Eval_Exception`Nie można wywołać **getexceptioncode —**, ale musi być przekazywane do niego kod wyjątku.  
+ Zwróć uwagę na użycie [getexceptioncode —](http://msdn.microsoft.com/library/windows/desktop/ms679356) ustalenie wyjątek. Musisz wywołać tę funkcję wewnątrz samego filtru. `Eval_Exception` Nie można wywołać **getexceptioncode —**, ale musi być przekazywane do niego kod wyjątku.  
   
  Ten program obsługi wyjątków przekazuje sterowanie do innego programu obsługi wyjątków, o ile wyjątek nie dotyczy przepełnienia liczby całkowitej lub zmiennoprzecinkowej. Jeśli tak się stanie, program obsługi wyjątku wywołuje funkcję (`ResetVars` jest tylko przykładem, a nie funkcją API), aby zresetować niektóre zmienne globalne. *Instrukcja bloku 2*, który w tym przykładzie jest pusta, nie można wykonać ponieważ `Eval_Exception` nigdy nie zwraca exception_execute_handler — (1).  
   

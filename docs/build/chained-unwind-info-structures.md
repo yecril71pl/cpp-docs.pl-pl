@@ -1,27 +1,22 @@
 ---
-title: "Łańcuchowej Unwind struktury informacji o | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Łańcuchowej Unwind struktury informacji o | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 176835bf-f118-45d9-9128-9db4b7571864
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ac09c1f107b51542b7a17c8661eb784b4abf14a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87469a381c038462549d20b105b791ddb17b1656
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chained-unwind-info-structures"></a>Struktury informacji o operacji łańcuchowej unwind
 Jeśli ustawiono flagi UNW_FLAG_CHAININFO, struktura informacji unwind ubocznym i pole udostępnionego adresu — program obsługi/łańcuchowej — informacje o wyjątku zawiera informacje unwind podstawowego. Następujące pobiera kod podstawowy unwind informacji, przy założeniu, że `unwindInfo` jest struktura, która ma UNW_FLAG_CHAININFO Flaga.  

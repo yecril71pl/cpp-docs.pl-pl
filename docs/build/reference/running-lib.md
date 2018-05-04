@@ -1,13 +1,10 @@
 ---
 title: Uruchamianie LIB | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a487bb6f6ffd740f6479916c5115bf95d568655
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c306ba58bfef11f92d7e861272aad2aa605c8fde
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="running-lib"></a>Uruchamianie LIB
 Różne opcje wiersza polecenia mogą służyć do sterowania LIB.  
@@ -74,12 +69,12 @@ LIB @commandfile
   
  Następujące opcje są stosowane do wszystkich rodzajów LIB:  
   
- / ERRORREPORT [BRAK &#124; WIERSZ &#124; KOLEJKI &#124; WYŚLIJ]  
+ / ERRORREPORT [BRAK &AMP;#124; MONITU &AMP;#124; KOLEJKI &AMP;#124; WYSYŁANIA]  
  Jeśli lib.exe zakończy się niepowodzeniem w czasie wykonywania, można użyć/errorreport wysyłać informacje do firmy Microsoft informacji o tych błędach wewnętrznych.  
   
  Aby uzyskać więcej informacji na temat/errorreport, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
   
- / LTCG  
+ /LTCG  
  Powoduje, że biblioteka ma zostać utworzony przy użyciu Generowanie łączonych kodów czasowych.  Aby uzyskać więcej informacji, zobacz [opcję/LTCG](../../build/reference/ltcg-link-time-code-generation.md).  
   
  / MACHINE  

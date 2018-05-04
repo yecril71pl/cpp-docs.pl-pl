@@ -1,13 +1,10 @@
 ---
-title: "Ciąg na wartość liczbową funkcje | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Ciąg na wartość liczbową funkcje | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr80.dll
 - msvcr110.dll
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68586bac573018bceb7dc982625ff6a859d18871
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c7c793590daee13841439fc7c372ff02d18f83b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-to-numeric-value-functions"></a>Konwertowanie ciągów na wartości
 -   [strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)  
@@ -67,17 +62,17 @@ ms.lasthandoff: 12/21/2017
   
  Jeśli nie ustawiono dostarczone przez użytkownika wskaźnik do znaku zakończenia z konwersji **NULL** w momencie wywołania wskaźnik do znaku zatrzymania skanowania będzie znajdować się zamiast tego. Jeśli konwersja nie można wykonać (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłowy atrybut podstawowy), wartość wskaźnika ciągu znajduje się pod tym adresem.  
   
- `strtod`spodziewa się ciągu na następującą postać:  
+ `strtod` spodziewa się ciągu na następującą postać:  
   
- [*odstępem*] [*znak*] [`digits`] [**.** `digits`] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*znak*]`digits`]  
+ [*odstępem*] [*znak*] [`digits`] [**.** `digits`] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*znak*] `digits`]  
   
  A *odstępem* może zawierać znaków spację lub tabulator, które są ignorowane. *znak* jest plus (**+**) lub minus (**-**); i `digits` są co najmniej jeden cyfr dziesiętnych. Jeśli cyfr nie pojawia się przed znakiem podstawa, co najmniej jeden musi występować po znaku podstawę systemu liczbowego. Wykładnik, obejmującego wprowadzające litery może zawierać wyłącznie cyfr dziesiętnych (**d**, **D**, **e**, lub **E**) i opcjonalnie liczbę całkowitą ze znakiem. Jeśli pojawi się części wykładnika ani znaków podstawa, znak radix — zakłada się, że wykonaj ostatnich cyfr w ciągu. Pierwszy znak należący do tego formularza zatrzymuje skanowania.  
   
  `strtol`, `strtoul`, `_strtoi64`, I `_strtoui64` funkcje oczekiwany ciąg następującą postać:  
   
- [*odstępem*] [{ **+**  &#124;  **-** }] [**0** [{ **x** &#124; **X** }]] [`digits`]  
+ [*odstępem*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]  
   
- W przypadku podstawowej argument od 2 do 36, następnie jest używany jako bazowy liczby. Jeśli jest 0 znaków odwołuje się do wskaźnika celu z konwersji są używane na podstawie. Jeśli pierwszym znakiem 0 i nie jest znak "x" lub "X", ciąg jest interpretowany jako ósemkową liczby całkowitej; w przeciwnym razie wartość jest interpretowana jako liczbę dziesiętną. Jeśli pierwszym znakiem jest "0" i jest znak "x" lub "X", ciąg jest interpretowany jako szesnastkową liczby całkowitej. Jeśli pierwszym znakiem jest "1" do "9", ciąg jest interpretowany jako dziesiętną liczbą całkowitą. Litery "" do "z" (lub "" do "Z") mają przypisane wartości 10 do 35; tylko litery, w których przypisane wartości są mniej niż *podstawowej* są dozwolone. `strtoul`i `_strtoui64` Zezwalaj znakiem plus (**+**) lub minus (**-**) znak prefiksu; wiodący znak minus wskazuje, że wartość zwracana jest zanegowane.  
+ W przypadku podstawowej argument od 2 do 36, następnie jest używany jako bazowy liczby. Jeśli jest 0 znaków odwołuje się do wskaźnika celu z konwersji są używane na podstawie. Jeśli pierwszym znakiem 0 i nie jest znak "x" lub "X", ciąg jest interpretowany jako ósemkową liczby całkowitej; w przeciwnym razie wartość jest interpretowana jako liczbę dziesiętną. Jeśli pierwszym znakiem jest "0" i jest znak "x" lub "X", ciąg jest interpretowany jako szesnastkową liczby całkowitej. Jeśli pierwszym znakiem jest "1" do "9", ciąg jest interpretowany jako dziesiętną liczbą całkowitą. Litery "" do "z" (lub "" do "Z") mają przypisane wartości 10 do 35; tylko litery, w których przypisane wartości są mniej niż *podstawowej* są dozwolone. `strtoul` i `_strtoui64` Zezwalaj znakiem plus (**+**) lub minus (**-**) znak prefiksu; wiodący znak minus wskazuje, że wartość zwracana jest zanegowane.  
   
  Wartość wyjściowa jest zagrożony ustawienie `LC_NUMERIC` ustawienie kategorii ustawień regionalnych; zobacz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego.  
   
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
 |--------------|---------------|--------------------|  
 |`strtod`|Przepełnienie|+/- `HUGE_VAL`|  
 |`strtod`|Niedopełnienie lub brak konwersji|0|  
-|`strtol`|+ Przepełnienie|**LONG_MAX —**|  
+|`strtol`|+ Przepełnienie|**LONG_MAX**|  
 |`strtol`|-Przepełnienia|**LONG_MIN —**|  
 |`strtol`|Niedopełnienie lub brak konwersji|0|  
 |`_strtoi64`|+ Przepełnienie|**_I64_MAX**|  
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
  **_I64_MAX**, _**I64_MIN**, i **_UI64_MAX** są definiowane w granicach. H.  
   
- `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`, i `_wcstoui64` wersji znaków dwubajtowych `strtod`, `strtol`, `strtoul`, `_strtoi64`, i `_strtoui64`odpowiednio; wskaźnik do Każda z tych funkcji znaków dwubajtowych zakończenia z konwersji argument jest ciąg znaków dwubajtowych. W przeciwnym wypadku każda z tych funkcji znaków dwubajtowych zachowuje się tak samo z jego odpowiednikiem pojedynczych bajtów znaków.  
+ `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`, i `_wcstoui64` wersji znaków dwubajtowych `strtod`, `strtol`, `strtoul`, `_strtoi64`, i `_strtoui64`odpowiednio; wskaźnik do zakończenia z konwersji Każda z tych funkcji znaków dwubajtowych argument jest ciąg znaków dwubajtowych. W przeciwnym wypadku każda z tych funkcji znaków dwubajtowych zachowuje się tak samo z jego odpowiednikiem pojedynczych bajtów znaków.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersja danych](../c-runtime-library/data-conversion.md)   

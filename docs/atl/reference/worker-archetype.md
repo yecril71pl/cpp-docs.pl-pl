@@ -1,29 +1,24 @@
 ---
 title: Proces roboczy Archetype | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f275568df9b4f8200a3fac1d77520bab38e8d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42ff0e71e15c70d8d5d9dee0b398d4f0c075eb47
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="worker-archetype"></a>Archetype procesu roboczego
 Klasy, które odpowiadają *procesu roboczego* archetype Podaj kod do elementów roboczych procesu umieszczonych w kolejce na puli wątków.  
@@ -88,7 +83,7 @@ void Execute(
  `pOverlapped`  
  Wskaźnik do [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struktury używane do tworzenia kolejek w pracy, dla których elementów umieszczonych w kolejce.  
   
-## <a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a> WorkerArchetype::Initialize
 Wywoływana w celu zainicjowania obiektu proces roboczy, zanim wszystkie żądania są przekazywane do `WorkerArchetype::Execute`.  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -101,7 +96,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **TRUE** w przypadku powodzenia **FALSE** w przypadku awarii.  
   
-## <a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a> WorkerArchetype::RequestType
 Element typedef dla typu elementu roboczego, które mogą być przetwarzane przez klasę procesu roboczego.  
   
 ```  
@@ -111,7 +106,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>Uwagi  
  Ten typ musi być używany jako pierwszy parametr `WorkerArchetype::Execute` i musi być w stanie trwa rzutowania z typu ULONG_PTR i.  
   
-## <a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a> WorkerArchetype::Terminate
 O nazwie uninitialize obiektu procesu roboczego po przejściu do wszystkich żądań `WorkerArchetype::Execute`).  
     
 ``` 

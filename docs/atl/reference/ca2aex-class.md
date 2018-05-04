@@ -1,12 +1,9 @@
 ---
 title: Klasa CA2AEX | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CA2AEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec54e698723b801823d58a3bad2a53e6f1708369
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdbdebb1ab79ceab44a408fc182b6037f2d32fae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ca2aex-class"></a>Klasa CA2AEX
 Ta klasa jest używana przez makra konwersji ciągu `CA2TEX` i `CT2AEX`i typedef **CA2A**.  
@@ -97,7 +92,7 @@ class CA2AEX
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlconv.h  
   
-##  <a name="ca2aex"></a>CA2AEX::CA2AEX  
+##  <a name="ca2aex"></a>  CA2AEX::CA2AEX  
  Konstruktor.  
   
 ```
@@ -115,7 +110,7 @@ CA2AEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Uwagi  
  Tworzy wymagane do tłumaczenia buforu.  
   
-##  <a name="dtor"></a>CA2AEX:: ~ CA2AEX  
+##  <a name="dtor"></a>  CA2AEX:: ~ CA2AEX  
  Destruktor.  
   
 ```
@@ -125,21 +120,21 @@ CA2AEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Uwagi  
  Zwalnia przydzielonego buforu.  
   
-##  <a name="m_psz"></a>CA2AEX::m_psz  
+##  <a name="m_psz"></a>  CA2AEX::m_psz  
  Element członkowski danych, która przechowuje ciąg źródłowy.  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CA2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CA2AEX::m_szBuffer  
  Bufor statycznych, używany do przechowywania skonwertowany ciąg.  
   
 ```
 char m_szBuffer[ t_nBufferLength];
 ```  
   
-##  <a name="operator_lpstr"></a>CA2AEX::operator LPSTR  
+##  <a name="operator_lpstr"></a>  CA2AEX::operator LPSTR  
  Operator konwersji.  
   
 ```

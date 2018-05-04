@@ -1,12 +1,9 @@
 ---
-title: "_com_error — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _com_error — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_error
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 95550c81235db58b1f8d372bf028750c003c7a9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comerror-class"></a>_com_error — Klasa
 **Microsoft Specific**  
@@ -48,7 +43,7 @@ ms.lasthandoff: 01/25/2018
   
 |||  
 |-|-|  
-|[Błąd](../cpp/com-error-error.md)|Pobiera `HRESULT` przekazany do konstruktora.|  
+|[Error](../cpp/com-error-error.md)|Pobiera `HRESULT` przekazany do konstruktora.|  
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|Pobiera `IErrorInfo` obiekt przekazany do konstruktora.|  
 |[WCode](../cpp/com-error-wcode.md)|Pobiera kod błędu 16-bitowych przypisywane do hermetyzowany `HRESULT`.|  
   
@@ -80,7 +75,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<comdef.h >  
   
- `Lib:`comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)  
+ `Lib:` comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kompilator klas obsługi COM](../cpp/compiler-com-support-classes.md)   

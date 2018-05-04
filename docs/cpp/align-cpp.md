@@ -1,12 +1,9 @@
 ---
 title: Dopasuj (C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - align_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c83ebb195cf4ee75c7be15b4d2ab9607f46743
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: ae88262724dfec5702e2769eb10e076502c09342
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -38,13 +33,13 @@ Użyj `__declspec(align(#))` do precyzyjne sterowanie wyrównania danych zdefini
 
 ## <a name="syntax"></a>Składnia
 
-> **__declspec (wyrównanie (**  *#*  **))** *deklarator*  
+> **__declspec (wyrównanie (** *#* **))** *deklarator*  
 
 ## <a name="remarks"></a>Uwagi
 
 Pisanie aplikacji, które korzystają z najnowszej instrukcjami procesora wprowadza pewne problemy i nowych ograniczeń. W szczególności wiele nowych instrukcji wymagają, że dane muszą być wyrównane do 16-bajtowych granicach. Ponadto dzięki wyrównaniu często używanych danych do rozmiaru wiersza pamięci podręcznej konkretny procesor, możesz zwiększyć wydajność pamięci podręcznej. Na przykład w przypadku definiowania struktury, którego rozmiar jest mniejszy niż 32 bajtów, może być dostosowanie go do 32 bajtów, aby upewnić się, że obiekty tego typu struktury wydajne są buforowane.
 
-\#jest to wartość wyrównania. Prawidłowymi wpisami są potęgami liczby całkowitej liczby dwa z zakresu od 1 do 8192 (w bajtach), na przykład 2, 4, 8, 16, 32 lub 64. `declarator`to dane, które są deklarowanie jako wyrównane.
+\# jest to wartość wyrównania. Prawidłowymi wpisami są potęgami liczby całkowitej liczby dwa z zakresu od 1 do 8192 (w bajtach), na przykład 2, 4, 8, 16, 32 lub 64. `declarator` to dane, które są deklarowanie jako wyrównane.
 
 Informacje na temat zwracać wartość typu `size_t` to wymaganie wyrównania typu, zobacz [__alignof](../cpp/alignof-operator.md). Informacje o sposobie deklarowanie niewyrównany wskaźników, gdy 64-bitowych procesorach, zobacz [__unaligned](../cpp/unaligned.md).
 
@@ -80,7 +75,7 @@ Kompilator używa tych reguł dla wyrównania struktury:
 
 - Rozmiar struktury jest najmniejsza wielokrotnością wyrównania większa lub równa przesunięcia końca jego ostatniego członka.
 
-`__declspec(align(#))`tylko zwiększyć liczbę ograniczeń wyrównania.
+`__declspec(align(#))` tylko zwiększyć liczbę ograniczeń wyrównania.
 
 Aby uzyskać więcej informacji, zobacz:
 
@@ -94,7 +89,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Przykłady wyrównania struktury](../build/examples-of-structure-alignment.md) (x64 określonych)
 
-##  <a name="vclrfalignexamples"></a>Dopasuj przykłady
+##  <a name="vclrfalignexamples"></a> Dopasuj przykłady
 
 W poniższych przykładach pokazano sposób `__declspec(align(#))` wpływa na rozmiar i wyrównanie struktur danych. Przykłady Załóżmy następujące definicje:
 
@@ -103,7 +98,7 @@ W poniższych przykładach pokazano sposób `__declspec(align(#))` wpływa na ro
 #define CACHE_ALIGN __declspec(align(CACHE_LINE))
 ```
 
-W tym przykładzie `S1` struktura jest definiowana za pomocą `__declspec(align(32))`. Wszystkie zastosowania `S1` dla definicji zmiennej lub innego typu deklaracje są wyrównane do 32 bajtów. `sizeof(struct S1)`Zwraca 32, i `S1` ma 16 bajtów uzupełnienia po 16 bajtów do przeprowadzenia czterech liczb całkowitych. Każdy `int` wyrównanie 4-bajtowych wymaga elementu członkowskiego, ale wyrównania struktury sam został zadeklarowany jako 32. W związku z tym ogólnego wyrównania to 32.
+W tym przykładzie `S1` struktura jest definiowana za pomocą `__declspec(align(32))`. Wszystkie zastosowania `S1` dla definicji zmiennej lub innego typu deklaracje są wyrównane do 32 bajtów. `sizeof(struct S1)` Zwraca 32, i `S1` ma 16 bajtów uzupełnienia po 16 bajtów do przeprowadzenia czterech liczb całkowitych. Każdy `int` wyrównanie 4-bajtowych wymaga elementu członkowskiego, ale wyrównania struktury sam został zadeklarowany jako 32. W związku z tym ogólnego wyrównania to 32.
 
 ```cpp
 struct CACHE_ALIGN S1 { // cache align all instances of S1
@@ -131,7 +126,7 @@ struct S3 {
 };
 ```
 
-W tym przykładzie należy zauważyć, że `a` ma wyrównanie jego fizyczną typu, w tym przypadku 4 bajty. Jednak `S1` muszą być 32-bajtowych wyrównane. Dwudziestu ośmiu bajtów wypełniania wykonaj `a`, dzięki czemu `s1` rozpoczyna się od przesunięcia 32. `S4`następnie dziedziczy wymóg wyrównanie `S1`, ponieważ jest on największego zapotrzebowania wyrównania w strukturze. `sizeof(struct S4)`Zwraca 64.
+W tym przykładzie należy zauważyć, że `a` ma wyrównanie jego fizyczną typu, w tym przypadku 4 bajty. Jednak `S1` muszą być 32-bajtowych wyrównane. Dwudziestu ośmiu bajtów wypełniania wykonaj `a`, dzięki czemu `s1` rozpoczyna się od przesunięcia 32. `S4` następnie dziedziczy wymóg wyrównanie `S1`, ponieważ jest on największego zapotrzebowania wyrównania w strukturze. `sizeof(struct S4)` Zwraca 64.
 
 ```cpp
 struct S4 {
@@ -170,7 +165,7 @@ struct S7 {
 };
 ```
 
-`S6`i `S7` mają identyczne wyrównania, alokacji i rozmiar właściwości.
+`S6` i `S7` mają identyczne wyrównania, alokacji i rozmiar właściwości.
 
 W tym przykładzie adresy wyrównanie początkową, b, c, a d są odpowiednio 4, 1, 4 i 1.
 
@@ -185,7 +180,7 @@ void fn() {
 
 Wyrównanie, gdy jest przydzielana pamięć na stercie zależy od tego, których alokacji funkcja jest wywoływana.  Na przykład, jeśli używasz `malloc`, wynik zależy od rozmiaru argument. Jeśli *arg* > = 8, pamięć zwracane jest wyrównany 8 bajtów. Jeśli *arg* < 8, wyrównanie pamięci, zwracany jest pierwszy potęgą liczby 2 mniej niż *arg*. Na przykład jeśli używasz malloc(7) wyrównanie jest 4 bajty.
 
-##  <a name="vclrf_declspecaligntypedef"></a>Definiowanie nowych typów z __declspec(align(#))
+##  <a name="vclrf_declspecaligntypedef"></a> Definiowanie nowych typów z __declspec(align(#))
 
 Można określić typ z charakterystyki wyrównania.
 
@@ -198,7 +193,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 Teraz `aType` i `bType` są tego samego rozmiaru (8 bajtów), ale zmiennych typu `bType` są wyrównane do 32 bajtów.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a>Wyrównywanie danych w lokalny magazyn wątków
+##  <a name="vclrfthreadlocalstorageallocation"></a> Wyrównywanie danych w lokalny magazyn wątków
 
 Statyczne lokalny magazyn wątków (TLS) utworzone za pomocą `__declspec(thread)` atrybutu i umieszcza w sekcji TLS works obrazu dla wyrównania, tak samo jak normalne danych statycznych. Aby utworzyć dane TLS, system operacyjny przydziela pamięć rozmiar sekcji TLS i szanuje atrybut wyrównania sekcji TLS.
 
@@ -221,7 +216,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a>Jak wyrównać współpracuje z danych dokumentu
+##  <a name="vclrfhowalignworkswithdatapacking"></a> Jak wyrównać współpracuje z danych dokumentu
 
 **/Zp** — opcja kompilatora i `pack` pragma obowiązują pakowania danych elementy członkowskie struktury i Unii. W tym przykładzie pokazano sposób **/Zp** i `__declspec(align(#))` współpracują ze sobą:
 
@@ -246,7 +241,7 @@ W poniższej tabeli wymieniono przesunięcie każdy element członkowski w róż
 |d|32|32|32|32|
 |e|40|40|40|40|
 |f|41|42|44|48|
-|sizeof(S)|64|64|64|64|
+|sizeof (S)|64|64|64|64|
 
 Aby uzyskać więcej informacji, zobacz [/Zp (wyrównanie członka struktury)](../build/reference/zp-struct-member-alignment.md).
 

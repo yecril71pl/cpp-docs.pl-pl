@@ -1,25 +1,23 @@
 ---
 title: Opcje kompilatora alfabetycznym | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7906893c1dce20344a9da805ad508a7836b1291d
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 259958d789ed189c38b75fe708034fb0d76fc35c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 
@@ -30,7 +28,7 @@ Oto kompleksowe alfabetyczną listę opcji kompilatora. Lista kategorii, [kompil
 |[@](at-specify-a-compiler-response-file.md)|Określa plik odpowiedzi.|
 |[/?](help-compiler-command-line-help.md)|Wyświetla listę opcji kompilatora.|
 |[/AI](ai-specify-metadata-directories.md)|Określa katalog wyszukiwania można rozpoznać odwołania do pliku przekazany do [#using](../../preprocessor/hash-using-directive-cpp.md) dyrektywy.|
-|[/analyze](analyze-code-analysis.md)|Włącz analizę kodu.|
+|[/ analyze](analyze-code-analysis.md)|Włącz analizę kodu.|
 |[/ arch](arch-minimum-cpu-architecture.md)|Określa architektury dla generowania kodu.|
 |[/await](await-enable-coroutine-support.md)|Włącz rozszerzenia koprocedurach (funkcji wznawialnych).|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Zwiększa liczbę adresowanego sekcji w pliku .obj.|
@@ -57,7 +55,7 @@ Oto kompleksowe alfabetyczną listę opcji kompilatora. Lista kategorii, [kompil
 |[/FI](fi-name-forced-include-file.md)|Przetwarza wstępnie dołączanego określonego pliku.|
 |[/Fi](fi-preprocess-output-file-name.md)|Ustawia nazwę pliku wstępnie przetworzonych danych wyjściowych.|
 |[/Fm](fm-name-mapfile.md)|Tworzy plik mapowania.|
-|[/Fo](fo-object-file-name.md)|Tworzy plik obiektu.|
+|[/FO](fo-object-file-name.md)|Tworzy plik obiektu.|
 |[/ FP](fp-specify-floating-point-behavior.md)|Określenie zachowania zmiennoprzecinkowego.|
 |[/ FP](fp-name-dot-pch-file.md)|Określa nazwę pliku prekompilowanego nagłówka.|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/FR](fr-fr-create-dot-sbr-file.md)|Generuje pliki przeglądarki. **/FR** jest przestarzały.|
@@ -106,7 +104,7 @@ Oto kompleksowe alfabetyczną listę opcji kompilatora. Lista kategorii, [kompil
 |[/Ob](ob-inline-function-expansion.md)|Określa rozszerzenie funkcji wbudowanej.|
 |[/Od](od-disable-debug.md)|Wyłącza optymalizacji.|
 |[/Og](og-global-optimizations.md)|Przestarzałe. Używa optymalizacje globalne.|
-|[/Oi](oi-generate-intrinsic-functions.md)|Generuje funkcje wewnętrzne.|
+|[/OI](oi-generate-intrinsic-functions.md)|Generuje funkcje wewnętrzne.|
 |[/ OpenMP](openmp-enable-openmp-2-0-support.md)|Umożliwia [#pragma omp](../../preprocessor/omp.md) w kodzie źródłowym.|
 |[/ OS](os-ot-favor-small-code-favor-fast-code.md)|Preferuje mały kod.|
 |[/OT](os-ot-favor-small-code-favor-fast-code.md)|Pełne szybki kod.|
@@ -122,7 +120,7 @@ Oto kompleksowe alfabetyczną listę opcji kompilatora. Lista kategorii, [kompil
 |[/Qvec-report (Poziom raportowania automatycznej wektoryzacji)](qvec-report-auto-vectorizer-reporting-level.md)|Włącza raportowanie poziomy vectorization automatycznego.|
 |[/RTC](rtc-run-time-error-checks.md)|Włącza sprawdzanie błędów czasu wykonywania.|
 |[/ SDL](sdl-enable-additional-security-checks.md)|Włącza dodatkowe funkcje zabezpieczeń i ostrzeżenia.|
-|[/showIncludes](showincludes-list-include-files.md)|Wyświetlanie listy plików dołączanych podczas kompilacji.|
+|[/ showincludes](showincludes-list-include-files.md)|Wyświetlanie listy plików dołączanych podczas kompilacji.|
 |[/ Source-Charset](source-charset-set-source-character-set.md)|Ustaw zestaw znaków źródła.|
 |[/STD](std-specify-language-standard-version.md)|Selektor zgodność wersji standard C++.|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy C.|

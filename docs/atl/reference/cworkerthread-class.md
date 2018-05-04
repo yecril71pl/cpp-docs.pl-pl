@@ -1,12 +1,9 @@
 ---
 title: Klasa CWorkerThread | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWorkerThread
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e87001ca341ae27cb173357f74e06e543f5eb262
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cworkerthread-class"></a>Klasa CWorkerThread
 Ta klasa tworzy wątku roboczego lub korzysta z jednego z istniejących, czeka na jeden lub więcej dojść obiektu jądra i wykonuje funkcję określonego klienta, gdy jeden z uchwytów zostanie zasygnalizowane.  
@@ -103,7 +98,7 @@ class CWorkerThread
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlutil.h  
   
-##  <a name="addhandle"></a>CWorkerThread::AddHandle  
+##  <a name="addhandle"></a>  CWorkerThread::AddHandle  
  Wywołaj tę metodę, aby dodać obiekt waitable uchwyt do listy przez wątek roboczy.  
   
 ```
@@ -129,7 +124,7 @@ HRESULT AddHandle(
 ### <a name="remarks"></a>Uwagi  
  [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) zostanie wywołana za pomocą `pClient` podczas uchwytu `hObject`, zostanie zasygnalizowane.  
   
-##  <a name="addtimer"></a>CWorkerThread::AddTimer  
+##  <a name="addtimer"></a>  CWorkerThread::AddTimer  
  Wywołanie tej metody można dodać do listy przez wątek roboczy okresowe czasomierza waitable.  
   
 ```
@@ -161,14 +156,14 @@ HRESULT AddTimer(
   
  Przekaż dojście czasomierza z `phTimer` do [CWorkerThread::RemoveHandle](#removehandle) zamknąć czasomierza.  
   
-##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
+##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread  
  Konstruktor.  
   
 ```
 CWorkerThread() throw();
 ```  
   
-##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
+##  <a name="dtor"></a>  CWorkerThread:: ~ CWorkerThread  
  Destruktor.  
   
 ```
@@ -178,7 +173,7 @@ CWorkerThread() throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołania [CWorkerThread::Shutdown](#shutdown).  
   
-##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>  CWorkerThread::GetThreadHandle  
  Wywołanie tej metody można pobrać uchwytu wątku dla wątku roboczego.  
   
 ```
@@ -188,7 +183,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca dojście wątku lub wartość NULL, jeśli wątek roboczy nie został zainicjowany.  
   
-##  <a name="getthreadid"></a>CWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>  CWorkerThread::GetThreadId  
  Wywołanie tej metody można uzyskać Identyfikatora wątku dla wątku roboczego.  
   
 ```
@@ -198,7 +193,7 @@ DWORD GetThreadId() throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca identyfikator wątku lub wartość NULL, jeśli wątek roboczy nie został zainicjowany.  
   
-##  <a name="initialize"></a>CWorkerThread::Initialize  
+##  <a name="initialize"></a>  CWorkerThread::Initialize  
  Wywołaj tę metodę, aby zainicjować wątku roboczego.  
   
 ```
@@ -221,7 +216,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
   
  Zobacz [CWorkerThread::Shutdown](#shutdown) Aby uzyskać informacje dotyczące sposobu zachowanie tej metody zmienia się po zainicjowaniu przy użyciu wskaźnika do istniejącego obiektu.  
   
-##  <a name="removehandle"></a>CWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle  
  Wywołaj tę metodę, aby usunąć z listy obiektów waitable dojścia.  
   
 ```
@@ -238,7 +233,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="remarks"></a>Uwagi  
  Po usunięciu dojście [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) wywołano skojarzonego obiektu, który został przekazany do [AddHandle](#addhandle). Jeśli to wywołanie nie powiodło się, `CWorkerThread` wywoła systemu Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) funkcja na uchwycie.  
   
-##  <a name="shutdown"></a>CWorkerThread::Shutdown  
+##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  Wywołaj tę metodę, aby zamknąć wątku roboczego.  
   
 ```

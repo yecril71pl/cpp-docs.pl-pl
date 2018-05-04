@@ -1,12 +1,9 @@
 ---
 title: Klasa IServiceProviderImpl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IServiceProviderImpl
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4946a88e6bf6767de0e3965670f94b91d1ddaf90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b1472fe5d952e93b45240128383db9fdec5b093
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iserviceproviderimpl-class"></a>Klasa IServiceProviderImpl
 Ta klasa udostępnia domyślną implementację `IServiceProvider` interfejsu.  
@@ -57,7 +52,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
  **IServiceProviderImpl** Określa jedną metodę: [QueryService](#queryservice), która tworzy lub uzyskuje dostęp do określonej usługi i zwraca wskaźnika interfejsu do określonego interfejsu usługi.  
   
- `IServiceProviderImpl`używa mapy usługi, zaczynając od [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) i kończąc [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
+ `IServiceProviderImpl` używa mapy usługi, zaczynając od [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) i kończąc [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
   
  Mapy usług zawiera dwie pozycje: [SERVICE_ENTRY](service-map-macros.md#service_entry), co oznacza identyfikator określonej usługi (SID), obsługiwane przez obiekt, i [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), które wywołuje `QueryService` łańcucha do innego obiekt.  
   
@@ -69,7 +64,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  Tworzy lub uzyskuje dostęp do określonej usługi i zwraca wskaźnika interfejsu do określonego interfejsu usługi.  
   
 ```
@@ -80,13 +75,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [IN]`guidService`  
+ [IN] `guidService`  
  Wskaźnik do identyfikatora usługi (SID).  
   
- [IN]`riid`  
+ [IN] `riid`  
  Identyfikator interfejsu, do którego ma dostęp obiekt wywołujący.  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  Pośredni wskaźnik do żądanego interfejsu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -101,7 +96,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|Żądany interfejs nie jest częścią tej usługi lub usługa jest nieznany.|  
   
 ### <a name="remarks"></a>Uwagi  
- `QueryService`Zwraca pośredni wskaźnik do żądanego interfejsu w określonej usługi. Obiekt wywołujący jest odpowiedzialny za zwolnienie ten wskaźnik, gdy nie jest już wymagane.  
+ `QueryService` Zwraca pośredni wskaźnik do żądanego interfejsu w określonej usługi. Obiekt wywołujący jest odpowiedzialny za zwolnienie ten wskaźnik, gdy nie jest już wymagane.  
   
  Podczas wywoływania `QueryService`, Przekaż identyfikatorem usługi ( `guidService`) i identyfikator interfejsu ( `riid`). `guidService` Określa usługę, do którego ma dostęp, i `riid` identyfikuje interfejs, który jest częścią usługi. W zamian zostanie wyświetlony pośredni wskaźnik do interfejsu.  
   

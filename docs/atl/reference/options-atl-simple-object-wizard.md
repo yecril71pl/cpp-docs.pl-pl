@@ -1,12 +1,9 @@
 ---
-title: "Opcje, Kreator prostych obiektów ATL | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Opcje, Kreator prostych obiektów ATL | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37341dc23f95e1863aeae4a1b57c01d24d6ad365
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ffc38f5359b68b90f91a2643e1fbaa743a94e559
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opcje, Kreator prostych obiektów ATL
 Ta strona kreatora prosty obiekt ATL do projektowania dla zwiększenia wydajności i obsługa błędów dla obiekt.  

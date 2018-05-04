@@ -1,13 +1,10 @@
 ---
-title: "_set_output_format — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _set_output_format — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - _set_output_format
 apilocation:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0ad6631d9171e8fcdc59e13e60eda2cc729c79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d61b17bb597028bec55edb148897929f178392d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setoutputformat"></a>_set_output_format
 Dostosowuje formatów wyjściowych przez sformatowany funkcje We/Wy.  
@@ -58,16 +53,16 @@ unsigned int _set_output_format(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`format`  
+ [in] `format`  
  Wartość reprezentująca formatu do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Poprzednie format danych wyjściowych.  
   
 ## <a name="remarks"></a>Uwagi  
- `_set_output_format`Służy do konfigurowania dane wyjściowe sformatowany funkcje We/Wy, takich jak [printf_s —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Obecnie tylko Konwencji formatowania, który może zostać zmieniona przez tę funkcję jest liczbę miejsc po przecinku wyświetlane w wykładniki w danych wyjściowych punktu liczb zmiennoprzecinkowych.  
+ `_set_output_format` Służy do konfigurowania dane wyjściowe sformatowany funkcje We/Wy, takich jak [printf_s —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Obecnie tylko Konwencji formatowania, który może zostać zmieniona przez tę funkcję jest liczbę miejsc po przecinku wyświetlane w wykładniki w danych wyjściowych punktu liczb zmiennoprzecinkowych.  
   
- Domyślnie dane wyjściowe zmiennoprzecinkową punktu numery przez funkcje takie jak `printf_s`, `wprintf_s`, i powiązane funkcje biblioteki Visual C++, C Standard drukuje trzech cyfr dla wykładnik, nawet jeśli trzech cyfr nie są wymagane do reprezentowania wartości wykładnik. Wartości zerowe są używane do konsoli wartość do trzech cyfr. `_set_output_format`Pozwala zmienić to zachowanie, dzięki czemu są podane dwie cyfry wykładnika, chyba że trzecia cyfra jest wymagany przez rozmiar wykładnik.  
+ Domyślnie dane wyjściowe zmiennoprzecinkową punktu numery przez funkcje takie jak `printf_s`, `wprintf_s`, i powiązane funkcje biblioteki Visual C++, C Standard drukuje trzech cyfr dla wykładnik, nawet jeśli trzech cyfr nie są wymagane do reprezentowania wartości wykładnik. Wartości zerowe są używane do konsoli wartość do trzech cyfr. `_set_output_format` Pozwala zmienić to zachowanie, dzięki czemu są podane dwie cyfry wykładnika, chyba że trzecia cyfra jest wymagany przez rozmiar wykładnik.  
   
  Aby włączyć wykładniki dwucyfrowe, wywołanie tej funkcji z parametrem `_TWO_DIGIT_EXPONENT`, jak pokazano w przykładzie. Aby wyłączyć dwóch wykładniki cyfrę, wywołanie tej funkcji z argumentu o wartości 0.  
   
@@ -75,7 +70,7 @@ unsigned int _set_output_format(
   
 |Procedura|Wymagany nagłówek|  
 |-------------|---------------------|  
-|`_set_output_format`|\<stdio.h >|  
+|`_set_output_format`|\<stdio.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
@@ -130,5 +125,5 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [printf_s —, _printf_s_l —, wprintf_s — _wprintf_s_l —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
+ [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
  [_get_output_format](../c-runtime-library/get-output-format.md)

@@ -1,12 +1,9 @@
 ---
 title: Przestrzenie nazw (C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 801bd8ee8e81c0126ae88c1fb9213b25b9f103dd
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: aac72a23e50ca3bc6d5b737d533bd11a40ed9da3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="namespaces-c"></a>Przestrzenie nazw (C++)
 Przestrzeń nazw jest deklaratywne region, który zawiera zakres identyfikatorów (nazwy typów, funkcji, zmienne, itp.) w nim. Przestrzenie nazw są używane do organizowania kodu w logiczne grupy i aby uniknąć konfliktów nazw, które mogą wystąpić, szczególnie w przypadku, gdy kodzie zawiera wiele bibliotek. Wszystkie identyfikatory w zakresie przestrzeni nazw są widoczne dla siebie bez kwalifikacji. Identyfikatory poza obszar nazw mogą uzyskiwać dostęp do elementów członkowskich przy użyciu w pełni kwalifikowanej nazwy dla każdego identyfikatora, na przykład `std::vector<std::string> vec;`, w przeciwnym razie przez [za pomocą deklaracji](../cpp/using-declaration.md) dla jednego identyfikatora (`using std::string`), lub [dyrektywa using](../cpp/namespaces-cpp.md#using_directives) dla wszystkich identyfikatorów w przestrzeni nazw (`using namespace std;`). Kod w nagłówku plików zawsze należy używać przestrzeni nazw w pełni kwalifikowanej nazwy.  

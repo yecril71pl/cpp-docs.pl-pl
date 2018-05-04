@@ -36,14 +36,13 @@ helpviewer_keywords:
 - hyperbolic functions
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2482a6e6e51efea50cac6a5a56154f5dc85663d
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: d77bb1d1b8f055bb4fe11d4c44c48fb3bf3be535
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cosh-coshf-coshl"></a>COSH coshf —, coshl —
 
@@ -102,4 +101,4 @@ Zapoznaj się z przykładem w [sinh sinhf —, sinhl —](sinh-sinhf-sinhl.md).
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [_matherr](matherr.md)<br/>
 [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
-[TANH tanhf —, tanhl —](tanh-tanhf-tanhl.md)<br/>
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>

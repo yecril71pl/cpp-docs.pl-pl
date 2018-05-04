@@ -1,13 +1,10 @@
 ---
-title: "-FS (Wymuś synchroniczne PDB zapisuje) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -FS (Wymuś synchroniczne PDB zapisuje) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /FS
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - -FS compiler option [C++]
 - /FS compiler option [C++]
 ms.assetid: b2caaffe-f6e1-4963-b068-648f06b105e0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec8aa3d1b3417b6bfcb35757ac4a4a51961e16b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8565022a77742a1a8c7ed1f243a192d94c8627fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (Wymuś synchroniczne zapisy do bazy PDB)
 Wymusza zapisuje plik programu (PDB) bazy danych — utworzone przez [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) lub [/zi](../../build/reference/z7-zi-zi-debug-information-format.md)— za pośrednictwem MSPDBSRV szeregowanie. WYWOŁANIE PLIKU EXE.  

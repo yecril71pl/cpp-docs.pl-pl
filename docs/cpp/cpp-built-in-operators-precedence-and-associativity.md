@@ -2,11 +2,8 @@
 title: Operatory C++ wbudowanych, priorytet i łączność | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4d2bb339d4147e6ea82c713d83a046e0e9780bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Operatory C++ wbudowanych, priorytet i łączność
 
@@ -70,11 +65,11 @@ Operator *pierwszeństwo* określa kolejność operacji w wyrażeniach zawieraj�
 |[Zniszczyć obiektu](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Rzutowania](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**Priorytet grupy 4, od lewej do prawej łączność**|
-|[Wskaźnik do-elementu członkowskiego (obiekty lub wskaźniki)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; lub -> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
+|[Wskaźnik do-elementu członkowskiego (obiekty lub wskaźniki)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; lub ->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**Priorytet grupy 5, od lewej do prawej łączność**|
 |[Mnożenia](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
-|[Dzielenie](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
-|[Modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|[dzielenie](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|[modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**Priorytet grupy 6, od lewej do prawej łączność**|
 |[Dodanie](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Odejmowanie](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
@@ -100,7 +95,7 @@ Operator *pierwszeństwo* określa kolejność operacji w wyrażeniach zawieraj�
 |**Priorytet grupy 14, od lewej do prawej łączność**|
 |[Logiczne lub](../cpp/logical-or-operator-pipe-pipe.md)|[&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)|
 |**Priorytet grupy 15, od prawej do lewej łączność**|
-|[Warunkowe](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
+|[warunkowe](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
 |**Priorytet grupy 16, od prawej do lewej łączność**|
 |[Przypisanie](../cpp/assignment-operators.md)|[=](../cpp/assignment-operators.md)|
 |[Przypisania mnożenia](../cpp/assignment-operators.md)|[&#42;=](../cpp/assignment-operators.md)|

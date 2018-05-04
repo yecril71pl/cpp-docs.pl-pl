@@ -1,12 +1,9 @@
 ---
 title: Klasy i struktury (C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - classes [C++]
 - user-defined types, C++ classes
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac15db222aed3abad980f4e1a0c715c099e2019c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61348578018a5bbddcaff293fa3ed76575eb16de
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="classes-and-structs-c"></a>Klasy i struktury (C++)
 W tej sekcji przedstawiono C++ klas i struktur. Dwa konstrukcje są takie same jak w języku C++, ale w strukturach dostępność domyślny jest publiczny, w klasach wartość domyślna jest prywatny.  
@@ -42,13 +37,13 @@ W tej sekcji przedstawiono C++ klas i struktur. Dwa konstrukcje są takie same j
   
 -   [Omówienie składowej klasy](../cpp/class-member-overview.md)  
   
--   [Kontrola dostępu do elementów członkowskich](../cpp/member-access-control-cpp.md)  
+-   [Kontrola dostępu do składowych](../cpp/member-access-control-cpp.md)  
   
 -   [Dziedziczenie](../cpp/inheritance-cpp.md)  
   
--   [Statyczne elementy członkowskie](../cpp/static-members-cpp.md)  
+-   [Statyczne składowe](../cpp/static-members-cpp.md)  
   
--   [Konwersje zdefiniowane przez użytkownika](../cpp/user-defined-type-conversions-cpp.md)  
+-   [Konwersje typów zdefiniowane przez użytkownika](../cpp/user-defined-type-conversions-cpp.md)  
   
 -   [Modyfikowalne elementy członkowskie danych (specyfikator modyfikowalny)](../cpp/mutable-data-members-cpp.md)  
   
@@ -70,7 +65,7 @@ W tej sekcji przedstawiono C++ klas i struktur. Dwa konstrukcje są takie same j
   
 |Struktury|Klasy|Unie|  
 |----------------|-------------|------------|  
-|klucz klasy`struct`|klucz klasy jest **— klasa**|klucz klasy jest **Unii**|  
+|klucz klasy `struct`|klucz klasy jest **— klasa**|klucz klasy jest **Unii**|  
 |Dostęp do domyślnej jest publiczny|Dostęp do domyślnej jest prywatny|Dostęp do domyślnej jest publiczny|  
 |Brak ograniczeń użycia|Brak ograniczeń użycia|Użyj tylko jeden element członkowski w czasie|  
   

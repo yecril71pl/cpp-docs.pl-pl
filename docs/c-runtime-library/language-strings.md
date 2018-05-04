@@ -1,13 +1,10 @@
 ---
-title: "Ciągi języka | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Ciągi języka | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92ad129a5703f509cfd9543497cceffae3a6e7b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-strings"></a>Ciągi języka
 `setlocale` i `_create_locale` funkcji można użyć interfejsu API NLS systemu Windows obsługiwane języki w systemach operacyjnych, które nie korzystają z strony kodowej Unicode. Aby uzyskać listę języków obsługiwanych przez wersję systemu operacyjnego, zobacz [dokumentacja interfejsu API National obsługi Language (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Ciąg języka może być dowolna z wartości w **języka** i **skrót nazwy języka** kolumn listę obsługiwanych języków. Aby uzyskać dodatkowe informacje na temat obsługi języków przez wersję systemu operacyjnego, zobacz [dodatek A: produktu zachowanie](http://msdn.microsoft.com/goglobal/bb896001.aspx) w [MS-LCID]: odwołanie do identyfikatora kodu języka systemu Windows (LCID).   
@@ -46,7 +41,7 @@ Implementacja biblioteki wykonawczej języka C obsługuje także te ciągi języ
 |chiński Hongkongu|zh-HK|  
 |chiński uproszczony|zh-CN|  
 |chiński Singapuru|zh-SG|  
-|chiński tradycyjny|zh-TW.|  
+|chiński tradycyjny|zh-TW|  
 |holenderski Belgijskie|NL-być|  
 |amerykański angielski|EN US|  
 |aus angielski|EN-AU|  
@@ -72,7 +67,7 @@ Implementacja biblioteki wykonawczej języka C obsługuje także te ciągi języ
 |angielski Irlandii|EN-IE|  
 |Włoski Szwajcaria|IT CH|  
 |Norweski|Brak|  
-|Norweski bokmal|NR NB|  
+|Norweski bokmal|nb-NO|  
 |Norweski nynorsk|NR nn|  
 |Portugalski — Brazylia|pt-BR|  
 |Hiszpański Argentyny|ES AR|  
@@ -85,7 +80,7 @@ Implementacja biblioteki wykonawczej języka C obsługuje także te ciągi języ
 |Hiszpański Salwador|ES SV|  
 |Hiszpański Gwatemali|ES >|  
 |Hiszpański Hondurasu|ES HN|  
-|Hiszpański Meksykańskimi|ES MX|  
+|Hiszpański Meksykańskimi|es-MX|  
 |Hiszpański modern|es-ES|  
 |Hiszpański Nikaragua|ES NI|  
 |Hiszpański Panamy|ES PA|  

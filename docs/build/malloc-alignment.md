@@ -1,27 +1,22 @@
 ---
-title: "Wyrównanie — funkcja malloc | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wyrównanie — funkcja malloc | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a8d1d1b4-5122-456f-9a64-a50e105e55a5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9acaf1c8912e1b563bb5d05ae600d1430049e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d503d0dd891c651a405cb79bb5ce50996f46cff6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="malloc-alignment"></a>Wyrównanie — funkcja malloc
 [malloc](../c-runtime-library/reference/malloc.md) może zwracać odpowiednio wyrównania przechowywania dowolny obiekt wyrównanie podstawowych i który może pasować ilości pamięci przydzielonej pamięci. A *podstawowych wyrównanie* jest wyrównania, która jest mniejsza niż największa wyrównania, która jest obsługiwana przez implementację bez wyrównania. (W programie Visual C++, to wyrównania, która jest wymagana dla `double`, lub 8 bajtów. W kodzie, przeznaczonego dla platformy 64-bitowych jest 16 bajtów). Na przykład alokacji 4 bajtowych może być wyrównany na granicy obsługuje dowolny obiekt 4 bajtowych lub mniejszy.  

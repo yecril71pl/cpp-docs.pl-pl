@@ -1,12 +1,9 @@
 ---
-title: "Zdefiniowane przez użytkownika konwersje typów (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zdefiniowane przez użytkownika konwersje typów (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - explicit_cpp
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561730527a215d5314f7239affc764d9f5925f67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfe76a74a46a6da48e22cc07232457f8c0957fbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-type-conversions-c"></a>Typ zdefiniowany przez użytkownika konwersje (C++)
 A *konwersji* tworzy nową wartość typu z wartością innego typu. *Konwersje standardowe* są wbudowane w języku C++ i pomocy technicznej, można utworzyć swoją wbudowanych typów, a *zdefiniowane przez użytkownika konwersje* do wykonywania konwersji do z i między typy danych zdefiniowane przez użytkownika.  
@@ -83,7 +78,7 @@ A *konwersji* tworzy nową wartość typu z wartością innego typu. *Konwersje 
   
  `explicit` — Słowo kluczowe może odnosić się do konstruktory konwersji od języka C ++ 98 oraz do funkcji konwersji od języka C ++ 11. Poniższe sekcje zawierają więcej informacji o sposobie używania `explicit` — słowo kluczowe.  
   
-##  <a name="ConvCTOR"></a>Konwersja konstruktorów  
+##  <a name="ConvCTOR"></a> Konwersja konstruktorów  
  Konstruktory konwersji zdefiniuj konwersje z typów zdefiniowanych przez użytkownika lub wbudowanych do typu zdefiniowanego przez użytkownika. W poniższym przykładzie pokazano konwersji konstruktora, który konwertuje z typu wbudowanego `double` do typu zdefiniowanego przez użytkownika `Money`.  
   
 ```  
@@ -164,7 +159,7 @@ int main(int argc, char* argv[])
   
  Chociaż wygodę zezwalanie niejawne konwersje może być kuszące, spowoduje to mogą stać się twarde do znalezienia usterek. Zasadą jest zapewnienie wszystkie konstruktory konwersji jawnej z wyjątkiem przypadków, gdy wiesz, które mają określone konwersji występuje niejawnie.  
   
-##  <a name="ConvFunc"></a>Funkcje konwersji  
+##  <a name="ConvFunc"></a> Funkcje konwersji  
  Funkcje konwersji zdefiniuj konwersji z typu zdefiniowanego przez użytkownika na inne typy. Te funkcje są czasami określane jako "operatory rzutowania" ponieważ, wraz z konstruktory konwersji, są one nazywane gdy wartość jest rzutowane do innego typu. W poniższym przykładzie pokazano konwertuje z typu zdefiniowanego przez użytkownika funkcja konwersji `Money`, na typ wbudowany `double`:  
   
 ```  

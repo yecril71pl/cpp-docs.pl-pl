@@ -1,13 +1,10 @@
 ---
-title: "-GF (eliminowanie ciągów zduplikowanych) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -GF (eliminowanie ciągów zduplikowanych) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.StringPooling
 - VC.Project.VCCLWCECompilerTool.StringPooling
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d69e892fb9487b66da4dfa2a801bab302e962af7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e2710fe8c5cc444d9e2681620f6813312a1d65a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Eliminowanie ciągów zduplikowanych)
 Umożliwia kompilatorowi tworzenia pojedynczej kopii identycznych ciągów w obrazie programu i pamięci podczas wykonywania. Jest to optymalizacją nazywaną *buforowania ciągu* aby tworzenia mniejszymi programami.  

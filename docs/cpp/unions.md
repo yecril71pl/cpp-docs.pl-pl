@@ -1,12 +1,9 @@
 ---
 title: Unie | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - union_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9371aaf978f2ea9498445d0124b9be16cf3b0fa7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 066f7c50940e6c68bb0fca554bb3bc56fc20b93c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unions"></a>Unie
 A `union` jest typem zdefiniowane przez użytkownika, w której wszyscy członkowie mają tę samą lokalizację pamięci. Oznacza to, w danym momencie Unii może zawierać nie więcej niż jeden obiekt z listy elementów członkowskich. Oznacza to również, że niezależnie od tego, jak wiele elementów członkowskich Unii ma, zawsze używa tylko wystarczającej ilości pamięci do przechowywania największy element członkowski.  
@@ -645,7 +640,7 @@ int main()
  ![Przechowywanie danych w Unii typ liczbowy](../cpp/media/vc38ul1.png "vc38UL1")  
 Przechowywanie danych w unii NumericType  
   
-## <a name="anonymous_unions"></a>Związki anonimowe  
+## <a name="anonymous_unions"></a> Związki anonimowe  
  Związki anonimowe są Unii, które są zadeklarowane bez *Nazwa klasy* lub *deklarator listy*.  
   
 ```cpp  
@@ -664,6 +659,6 @@ Oprócz ograniczeń dla nazwanego unie związki anonimowe obowiązują następuj
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasy i struktury](../cpp/classes-and-structs-cpp.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)   
- [klasy](../cpp/class-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
+ [Klasy](../cpp/class-cpp.md)   
  [struct](../cpp/struct-cpp.md)

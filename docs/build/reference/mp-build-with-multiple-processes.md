@@ -1,6 +1,6 @@
 ---
 title: /MP (kompilacja z wieloma procesami) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -16,14 +16,13 @@ helpviewer_keywords:
 - cl.exe compiler, multi-process build
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa190d2cb2d1e0b0d13979d5e0044291d7cd8a7
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Kompilacja z wieloma procesami)
 
@@ -62,7 +61,7 @@ W poniższej tabeli wymieniono opcje kompilatora i funkcje językowe, które są
 |[#import](../../preprocessor/hash-import-directive-cpp.md) dyrektywy preprocesora|Konwertuje typy w bibliotece typów w klasach C++, a następnie zapisuje te klasy w pliku nagłówka.|
 |[/E](../../build/reference/e-preprocess-to-stdout.md), [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego (**stdout**).|
 |[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|Umożliwia przyrostowe ponownej kompilacji.|
-|[/showIncludes](../../build/reference/showincludes-list-include-files.md)|Zapisuje listy plików dołączanych do standardowego błędu (**stderr**).|
+|[/ showincludes](../../build/reference/showincludes-list-include-files.md)|Zapisuje listy plików dołączanych do standardowego błędu (**stderr**).|
 |[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|Zapisuje prekompilowanego pliku nagłówkowego.|
 
 ## <a name="diagnostic-messages"></a>Komunikaty diagnostyczne
@@ -143,4 +142,4 @@ Domyślnie projektu kompilacji umożliwia **/GM ponowną** — opcja kompilatora
 
 [#import — dyrektywa](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [Dokumentacja wiersza polecenia](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/ZF (Generowanie szybciej PDB)](zf.md)<br/>
+[/Zf (Szybsze generowanie pliku PDB)](zf.md)<br/>

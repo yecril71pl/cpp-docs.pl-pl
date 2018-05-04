@@ -1,12 +1,9 @@
 ---
 title: naked (C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - naked_cpp
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], naked
 - naked __declspec keyword
 ms.assetid: 69723241-05e1-439b-868e-20a83a16ab6d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa03ee746de422f96e8f39dc451a71da2e0259c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84e172c24bbb87f9243a4c0de25a98c90e043acc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="naked-c"></a>naked (C++)
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Dla funkcji zadeklarowana z `naked` atrybutu, kompilator generuje kod bez prolog i epilog kodu. Ta funkcja umożliwia pisanie własnych sekwencji kodu prologu/epilogu przy użyciu kodu wbudowanego asemblera. Gołe funkcje są szczególnie przydatne w pisaniu sterowniki urządzeń wirtualnych.  Należy pamiętać, że `naked` atrybut jest prawidłowy tylko w x86 i ARM i nie jest dostępny na [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
   
@@ -80,5 +75,5 @@ __declspec( naked ) int func();  // Error--naked attribute not
   
 ## <a name="see-also"></a>Zobacz też  
  [__declspec](../cpp/declspec.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
  [Wywołania funkcji Naked](../cpp/naked-function-calls.md)

@@ -1,13 +1,10 @@
 ---
-title: "-Os -Ot (Preferuj mały kod, Preferuj szybki kod) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -Os -Ot (Preferuj mały kod, Preferuj szybki kod) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed
 - /os
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ce4b7d5c9617a88450fd90b4ac6c75d41148ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9f97ab0a53eb82b65149ea0f27139743e065f7ea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Preferuj mały kod, Preferuj szybki kod)
 Minimalizuje lub maksymalizuje rozmiar plików exe i dll.  
@@ -58,7 +53,7 @@ Minimalizuje lub maksymalizuje rozmiar plików exe i dll.
 > [!NOTE]
 >  Informacje, które są zbierane z profilowania uruchomień testów spowoduje zastąpienie optymalizacji, które w przeciwnym razie będą w efekcie Jeśli określisz **/Ob**, **/OS**, lub **/Ot**. Aby uzyskać więcej informacji [optymalizacje Profile-Guided](../../build/reference/profile-guided-optimizations.md).  
   
- **x86 określonych**  
+ **x86 Specific**  
   
  Poniższy przykładowy kod przedstawia różnice między Preferuj mały kod (**/OS**) opcje i Preferuj szybki kod (**/Ot**) opcja:  
   

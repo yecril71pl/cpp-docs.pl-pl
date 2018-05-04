@@ -1,39 +1,34 @@
 ---
 title: Pola bitowe C | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af47bbebdf3b3a71e2b63b07a1fa467801728061
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Pola bitowe języka C
 Oprócz deklaratorów dla elementów członkowskich struktury lub Unii deklaratorze struktury można też określoną liczbę bitów, nazywany "pole bitowe". Jego długość jest ustawiona z deklarator nazw pól dwukropkiem. Pola bitowego jest interpretowany jako typ całkowity.  
   
 ## <a name="syntax"></a>Składnia  
- *Struktura deklarator*:  
- *deklarator*  
+ *struct-declarator*:  
+ *declarator*  
   
- *Specyfikator typu deklarator* opt**:** *wyrażenie stałej*  
+ *Specyfikator typu deklarator* opt **:** *wyrażenie stałej*  
   
  *Wyrażenia* Określa szerokość pola w bitach. *Specyfikatora typu* dla `declarator` musi być `unsigned int`, **podpisany int**, lub `int`i *wyrażenia* musi być nieujemna wartość całkowita. Jeśli wartość wynosi zero, nie ma deklaracji `declarator`. Tablice pól bitowych, wskaźników do pól bitowych i funkcji zwracających pola bitowe nie są dozwolone. Opcjonalny `declarator` nazwy pola bitowego. Pola bitowe mogą być deklarowane tylko w ramach struktury. Address-of — operator (**&**) nie można zastosować do pola bitowego składników.  
   
@@ -62,7 +57,7 @@ struct
   
  Pola bitowe mieć tej samej semantyki jako typu Liczba całkowita. Oznacza to, że pola bitowego jest używane w wyrażeniach w dokładnie tak samo, jak zmienna typu tego samego podstawowego będzie służyć bez względu na liczbę bitów w pole bitowe.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Bit pola zdefiniowane jako `int` są traktowane jako podpisany. Umożliwia rozszerzenie Microsoft ze standardem ANSI C `char` i **długi** typów (zarówno **podpisany** i `unsigned`) dla pól bitowych. Bez nazwy pól bitowych z typu podstawowego **długi**, **krótki**, lub `char` (**podpisany** lub `unsigned`) wymusić wyrównanie do granicy odpowiednie do typu podstawowego.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Kreator prostych obiektów ATL | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kreator prostych obiektów ATL | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbefa4a8036802599dd97f31d57f18204fd6104f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ff9648cfc350f724a333e38622d082d8d399b3b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-simple-object-wizard"></a>Kreator prostych obiektów ATL
 Ten kreator wstawia do projektu minimalnego obiektu COM. Ta strona kreatora umożliwia określenie nazwy, które zidentyfikować klasę C++ i pliki dla obiekt i jego funkcje COM.  
@@ -53,7 +48,7 @@ Ten kreator wstawia do projektu minimalnego obiektu COM. Ta strona kreatora umo�
   
  Kreator nie powoduje zastąpienia pliku. Jeśli po kliknięciu przycisku Wybierz nazwę istniejącego pliku, **Zakończ**, Kreator wyświetli monit, aby wskazać, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** pliku; kliknij przycisk **nr** aby powrócić do kreatora i podaj inną nazwę pliku.  
   
- **Klasy**  
+ **Class**  
  Ustawia nazwę klasy, która ma być utworzony. Ta nazwa jest na podstawie nazwy podanych w **krótką nazwę**, poprzedzającą "C", typowy prefiks nazwy klasy.  
   
  **plik .cpp**  
@@ -82,7 +77,7 @@ Ten kreator wstawia do projektu minimalnego obiektu COM. Ta strona kreatora umo�
  **Typ**  
  Określa opis obiektu, który będzie widoczny w rejestrze  
   
- **Interfejs**  
+ **Interface**  
  Ustawia interfejs, który można utworzyć obiektu. Ten interfejs zawiera niestandardowej metody.  
   
  **Identyfikator programu**  

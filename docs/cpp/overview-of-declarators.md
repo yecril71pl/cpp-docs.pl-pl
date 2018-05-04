@@ -1,29 +1,24 @@
 ---
-title: "Przegląd Deklaratorów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przegląd Deklaratorów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 81ba4ff8e50d646a6a3918c2104756c4378a1aea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarators"></a>Przegląd deklaratorów
 Deklaratory są składnikami deklaracji, które określają nazwy obiektów lub funkcji. Deklaratory określają również, czy nazwany obiekt jest obiektem, wskaźnikiem, odwołaniem lub tablicą.  Deklaratory nie określają typu podstawowego, ale modyfikują informacje o typie w obrębie typu podstawowego w celu określenia typów pochodnych, takich jak wskaźniki, odwołania i tablice.  Deklarator w zastosowaniu do funkcji współpracuje ze specyfikatorem typu, aby w pełni określić, że typ zwracany funkcji jest obiektem, wskaźnikiem lub odwołaniem. (Specyfikatory omówione w [deklaracje i definicje](declarations-and-definitions-cpp.md), przedstawienia właściwości, takie jak klasa typu i magazynu. Modyfikatory omówione w tej sekcji, a w [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md), zmodyfikuj deklaratorów.) Na poniższej ilustracji pokazano pełną deklarację `MyFunction` i wywołano składniki deklaracji.  
@@ -57,7 +52,7 @@ const char *pch, ch;
   
  **Deklaratory wskaźniki, odwołania i tablice**  
   
- Operatory wskaźników wstawione przed nazwą powodują, że obiekt jest wskaźnikiem lub odwołaniem.   **\***  Operator deklaruje nazwę jako wskaźnik;  **&**  operator deklaruje go jako odwołanie.  
+ Operatory wskaźników wstawione przed nazwą powodują, że obiekt jest wskaźnikiem lub odwołaniem.  **\*** Operator deklaruje nazwę jako wskaźnik; **&** operator deklaruje go jako odwołanie.  
   
 ```  
 int *i; // declarator is *i  

@@ -1,12 +1,9 @@
 ---
 title: Klasa IViewObjectExImpl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IViewObjectExImpl
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742198b0bf6c5c615baed033e8a0fab7e73b06ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c51bc9e5feb02d837c37341b82a1fc19a3cea558
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iviewobjecteximpl-class"></a>Klasa IViewObjectExImpl
 Ta klasa implementuje **IUnknown** i zawiera domyślne implementacje [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), i [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)interfejsów.  
@@ -91,7 +86,7 @@ class ATL_NO_VTABLE IViewObjectExImpl
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlctl.h  
   
-##  <a name="draw"></a>IViewObjectExImpl::Draw  
+##  <a name="draw"></a>  IViewObjectExImpl::Draw  
  Rysuje reprezentację formant na kontekst urządzenia.  
   
 ```
@@ -112,7 +107,7 @@ STDMETHOD(Draw)(
   
  Zobacz [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) w systemie Windows SDK.  
   
-##  <a name="freeze"></a>IViewObjectExImpl::Freeze  
+##  <a name="freeze"></a>  IViewObjectExImpl::Freeze  
  Zawiesza się narysowanego reprezentację formantu, więc nie zmieni się do `Unfreeze`. Zwraca implementację ATL **E_NOTIMPL**.  
   
 ```
@@ -126,7 +121,7 @@ STDMETHOD(Freeze)(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IViewObject::Freeze](http://msdn.microsoft.com/library/windows/desktop/ms688728) w systemie Windows SDK.  
   
-##  <a name="getadvise"></a>IViewObjectExImpl::GetAdvise  
+##  <a name="getadvise"></a>  IViewObjectExImpl::GetAdvise  
  Pobiera istniejące połączenie advisory zbiornika w formancie, jeśli istnieje.  
   
 ```
@@ -141,7 +136,7 @@ STDMETHOD(GetAdvise)(
   
  Zobacz [IViewObject::GetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692772) w systemie Windows SDK.  
   
-##  <a name="getcolorset"></a>IViewObjectExImpl::GetColorSet  
+##  <a name="getcolorset"></a>  IViewObjectExImpl::GetColorSet  
  Zwraca wartość logiczną paletę używanych przez formant na rysunku. Zwraca implementację ATL **E_NOTIMPL**.  
   
 ```
@@ -157,7 +152,7 @@ STDMETHOD(GetColorSet)(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IViewObject::GetColorSet](http://msdn.microsoft.com/library/windows/desktop/ms686553) w systemie Windows SDK.  
   
-##  <a name="getextent"></a>IViewObjectExImpl::GetExtent  
+##  <a name="getextent"></a>  IViewObjectExImpl::GetExtent  
  Pobiera rozmiar wyświetlania formantu w jednostkach HIMETRIC (0,01 milimetra na jednostkę) z element członkowski danych klasy formantu [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).  
   
 ```
@@ -171,7 +166,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) w systemie Windows SDK.  
   
-##  <a name="getnaturalextent"></a>IViewObjectExImpl::GetNaturalExtent  
+##  <a name="getnaturalextent"></a>  IViewObjectExImpl::GetNaturalExtent  
  Zawiera wskazówki dotyczące zmiany rozmiaru w kontenerze dla obiekt, który ma być używana jako użytkownik zmienia jego rozmiar.  
   
 ```
@@ -189,7 +184,7 @@ STDMETHOD(GetNaturalExtent)(
   
  Zobacz [IViewObjectEx::GetNaturalExtent](http://msdn.microsoft.com/library/windows/desktop/ms683718) w systemie Windows SDK.  
   
-##  <a name="getrect"></a>IViewObjectExImpl::GetRect  
+##  <a name="getrect"></a>  IViewObjectExImpl::GetRect  
  Zwraca prostokąt opisujący żądany aspekt rysowania. Zwraca implementację ATL **E_NOTIMPL**.  
   
 ```
@@ -199,7 +194,7 @@ STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IViewObjectEx::GetRect](http://msdn.microsoft.com/library/windows/desktop/ms695246) w systemie Windows SDK.  
   
-##  <a name="getviewstatus"></a>IViewObjectExImpl::GetViewStatus  
+##  <a name="getviewstatus"></a>  IViewObjectExImpl::GetViewStatus  
  Zwraca informacje dotyczące przezroczystości obiektu oraz obsługiwanych aspektów rysujących.  
   
 ```
@@ -211,7 +206,7 @@ STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
   
  Zobacz [IViewObjectEx::GetViewStatus](http://msdn.microsoft.com/library/windows/desktop/ms693371) w systemie Windows SDK.  
   
-##  <a name="queryhitpoint"></a>IViewObjectExImpl::QueryHitPoint  
+##  <a name="queryhitpoint"></a>  IViewObjectExImpl::QueryHitPoint  
  Sprawdza, czy określony punkt znajduje się w prostokącie określonego i zwraca [HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187) wartość w `pHitResult`.  
   
 ```
@@ -230,7 +225,7 @@ STDMETHOD(QueryHitPoint)(
   
  Zobacz [IViewObjectEx::QueryHitPoint](http://msdn.microsoft.com/library/windows/desktop/ms691209) w systemie Windows SDK.  
   
-##  <a name="queryhitrect"></a>IViewObjectExImpl::QueryHitRect  
+##  <a name="queryhitrect"></a>  IViewObjectExImpl::QueryHitRect  
  Sprawdza, czy prostokątny obszar wyświetlania formantu nakłada się na dowolnym etapie prostokąt określonej lokalizacji i zwraca [HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187) wartość w `pHitResult`.  
   
 ```
@@ -249,7 +244,7 @@ STDMETHOD(QueryHitRect)(
   
  Zobacz [IViewObjectEx::QueryHitRect](http://msdn.microsoft.com/library/windows/desktop/ms693797) w systemie Windows SDK.  
   
-##  <a name="setadvise"></a>IViewObjectExImpl::SetAdvise  
+##  <a name="setadvise"></a>  IViewObjectExImpl::SetAdvise  
  Konfiguruje połączenia między formantem a zbiornika Porada — obiekt sink można powiadamiani o zmianach wprowadzonych w widoku formantu.  
   
 ```
@@ -266,7 +261,7 @@ STDMETHOD(SetAdvise)(
   
  Zobacz [IViewObject::SetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms683950) w systemie Windows SDK.  
   
-##  <a name="unfreeze"></a>IViewObjectExImpl::Unfreeze  
+##  <a name="unfreeze"></a>  IViewObjectExImpl::Unfreeze  
  Unfreezes narysowanego reprezentację formantu. Zwraca implementację ATL **E_NOTIMPL**.  
   
 ```
@@ -276,7 +271,7 @@ STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IViewObject::Unfreeze](http://msdn.microsoft.com/library/windows/desktop/ms686641) w systemie Windows SDK.  
   
-##  <a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
+##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle  
  Zaimplementuj tę metodę, aby zamknąć dojścia skojarzone z tym obiektem.  
   
 ```
@@ -298,7 +293,7 @@ HRESULT CloseHandle(HANDLE hHandle);
   
  [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iviewobjecteximpl-class_1.cpp)]  
   
-##  <a name="execute"></a>IWorkerThreadClient::Execute  
+##  <a name="execute"></a>  IWorkerThreadClient::Execute  
  Zaimplementuj tę metodę do wykonania kodu, gdy staje się sygnalizowane dojścia skojarzone z tym obiektem.  
   
 ```

@@ -1,13 +1,10 @@
 ---
-title: "Pliki poleceń CL | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Pliki poleceń CL | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command files
 - command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a711b2f4a484a6370af828c5d0aad522686ca3f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 367ea6dc22777b473cad44f35b1f5e4c34528471
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cl-command-files"></a>Pliki poleceń CL
 Plik polecenia to plik tekstowy, który zawiera opcje i nazwy plików, w przeciwnym razie należy wpisać w [wiersza polecenia](../../build/reference/compiler-command-line-syntax.md) lub określić za pomocą [zmiennej środowiskowej CL](../../build/reference/cl-environment-variables.md). CL akceptuje pliku poleceń kompilatora jako argumentu w zmiennej środowiskowej CL lub w wierszu polecenia. W przeciwieństwie do wiersza polecenia lub zmiennej środowiskowej CL, plik poleceń pozwala na używanie wielu wierszy opcji i nazw plików.  

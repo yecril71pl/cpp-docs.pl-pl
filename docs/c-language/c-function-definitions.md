@@ -1,13 +1,10 @@
 ---
-title: "Definicje funkcji języka C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Definicje funkcji języka C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-function-definitions"></a>Definicje funkcji języka C
 Definicja funkcji Określa nazwę funkcji, typy i liczby parametrów, które oczekuje na odbieranie i jej typu zwracanego. Definicja funkcji obejmuje również treść funkcji z deklaracji jego zmiennych lokalnych i instrukcje, które określają, jak działa funkcja.  
@@ -43,7 +38,7 @@ Definicja funkcji Określa nazwę funkcji, typy i liczby parametrów, które ocz
  *Deklaracja zewnętrznej jednostki tłumaczenia*  
   
  *Deklaracja zewnętrzne*: /\* dozwolone tylko w zakresie zewnętrzne (plik) \*/  
- *function-definition*  
+ *Definicja funkcji*  
   
  `declaration`  
   
@@ -70,9 +65,9 @@ Definicja funkcji Określa nazwę funkcji, typy i liczby parametrów, które ocz
  *wskaźnik* opt*bezpośrednio deklarator*  
   
  *deklarator bezpośrednio*: /\* deklarator funkcji \*/  
- *deklarator bezpośrednio***(***listy parametrów typu***)** / * nowy styl deklarator       \*/  
+ *deklarator bezpośrednio***(***listy parametrów typu***)** / * nowy styl deklarator \*/  
   
- *deklarator bezpośrednio***(***listy identyfikatorów* opt**)** / * przestarzały styl deklarator     \*/  
+ *deklarator bezpośrednio***(***listy identyfikatorów* opt **)** / * przestarzały styl deklarator \*/  
   
  Lista parametrów w definicji używa następującej składni:  
   
@@ -84,7 +79,7 @@ Definicja funkcji Określa nazwę funkcji, typy i liczby parametrów, które ocz
  *Lista parametrów*:  
  *Deklaracja parametru*  
   
- *Lista parametrów* **,***deklaracji parametru*   
+ *Lista parametrów* **,***deklaracji parametru*  
   
  *Deklaracja parametru*:  
  *Specyfikatory deklaracji deklarator*  
@@ -94,14 +89,14 @@ Definicja funkcji Określa nazwę funkcji, typy i liczby parametrów, które ocz
  Lista parametrów w definicji funkcji w starym stylu używa następującej składni:  
   
  *Lista identyfikatorów*: /\* używany w funkcji przestarzały styl definicje i deklaracje \*/  
- *identifier*  
+ *Identyfikator*  
   
- *Lista identyfikatorów* **,***identyfikator*   
+ *Lista identyfikatorów* **,***identyfikator*  
   
  Składnia treści funkcji to:  
   
  *instrukcji złożonej*: /\* treść funkcji \*/  
- **{**`declaration`-*listy* opt*listy instrukcji* opt**}**   
+ **{**`declaration`-*listy* opt*listy instrukcji* opt **}**  
   
  Są tylko specyfikatory klasy magazynowania, które można modyfikować deklaracji funkcji `extern` i **statycznych**. `extern` Specyfikator oznacza, że funkcja mogą być przywoływane z innych plików; oznacza to, że nazwa funkcji są eksportowane do konsolidatora. **Statycznych** specyfikator oznacza, że funkcja nie może być przywoływany z innych plików; oznacza to, że nazwa nie jest eksportowany przez konsolidator. Jeśli klasa magazynu nie znajduje się w definicji funkcji `extern` zakłada, że. W każdym przypadku funkcji jest zawsze widoczne z punktu definicji na końcu pliku.  
   

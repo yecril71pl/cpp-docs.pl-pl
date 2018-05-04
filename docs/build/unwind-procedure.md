@@ -1,27 +1,22 @@
 ---
 title: Procedura unwind | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 82c5d0ca-70be-4d1a-a306-bfe01c29159f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b8caa2be1528c26cf374637f3d0357847721de9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e2a5af5d8db5974aa10595bbd3bac1cd032a0f4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unwind-procedure"></a>Procedura Unwind
 Tablica kodu unwind jest sortowany w kolejności malejącej. Po wystąpieniu wyjątku, pełną kontekst jest przechowywany przez system operacyjny w rekordu kontekstu. Następnie wywoływana jest logiki wysyłania wyjątek, który wielokrotnie wykonuje następujące czynności, aby znaleźć obsługi wyjątków.  

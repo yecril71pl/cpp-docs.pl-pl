@@ -1,12 +1,9 @@
 ---
 title: __alignof operator | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - alignas_cpp
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faceca31928d9c49f3c1cf5b933a65767ece7453
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 061557b4d017254584e8ddc3da0127f02d352720
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignof-operator"></a>Operator __alignof
 Wprowadza c ++ 11 `alignof` operator, który zwraca wyrównania w bajtach określonego typu. Przenośności maksymalna należy użyć operatora alignof zamiast operator __alignof specyficzne dla firmy Microsoft.  
@@ -74,7 +69,7 @@ typedef struct { int a; double b; } S;
 typedef __declspec(align(32)) struct { int a; } S;  
 ```  
   
- `__alignof(S)`jest równa `32`.  
+ `__alignof(S)` jest równa `32`.  
   
  Użycie jednego `__alignof` byłoby jako parametr do jednego z własnych procedur alokacji pamięci. Na przykład, biorąc pod uwagę następujące zdefiniowane struktury `S`, można wywołać procedury alokacji pamięci o nazwie `aligned_malloc` można przydzielić pamięci na granicy wyrównania konkretnego.  
   
@@ -88,7 +83,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [pakiet](../preprocessor/pack.md)  
   
--   [Dopasuj](../cpp/align-cpp.md)  
+-   [align](../cpp/align-cpp.md)  
   
 -   [__unaligned](../cpp/unaligned.md)  
   

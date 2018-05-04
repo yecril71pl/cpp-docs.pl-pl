@@ -1,12 +1,9 @@
 ---
-title: "Podsumowanie reguł zakresu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Podsumowanie reguł zakresu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d901103f36493e74f73b2edb18faa1188e704ef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-scope-rules"></a>Podsumowanie reguł zakresu
 Użycie nazwy musi być jednoznaczne w jego zakresie (do punktu, w której jest określana przeładowanie). Jeśli nazwa oznacza funkcję, funkcja musi być jednoznaczne względem liczba i typ parametrów. Jeśli nazwa pozostanie jednoznaczne, [dostęp do elementu członkowskiego](../cpp/member-access-control-cpp.md) reguły są stosowane.  
@@ -47,7 +42,7 @@ Użycie nazwy musi być jednoznaczne w jego zakresie (do punktu, w której jest 
 ## <a name="qualified-names"></a>Kwalifikowane nazwy  
  Nazwy używane z binarnym operatorem rozwiązywania zakresu (`::`) są nazywane „nazwami kwalifikowanymi”. Nazwa określona po binarnym operatorze rozwiązywania zakresu musi być składową klasy określonej po lewej stronie operatora lub składową jej klas podstawowych.  
   
- Nazwy określone po operatorze wyboru elementu członkowskiego (**.** lub  **->** ) muszą być elementami członkowskimi typu klasy obiektu określonego w lewej strony operatora i członkowie jego klasy podstawowej. Nazwy określone po prawej stronie operatora wyboru elementu członkowskiego (**->**) może być także obiekty innego typu klasy, pod warunkiem, że po lewej stronie  **->**  jest obiektem klasy i Czy tej klasy definiuje operator przeciążone wyboru elementu członkowskiego (**->**) zwraca wskaźnik do innego typu klasy. (Niniejszymi omówiono bardziej szczegółowo w [dostęp do elementu członkowskiego klasy](../cpp/member-access.md).)  
+ Nazwy określone po operatorze wyboru elementu członkowskiego (**.** lub **->**) muszą być elementami członkowskimi typu klasy obiektu określonego w lewej strony operatora i członkowie jego klasy podstawowej. Nazwy określone po prawej stronie operatora wyboru elementu członkowskiego (**->**) może być także obiekty innego typu klasy, pod warunkiem, że po lewej stronie **->** jest obiektem klasy i Czy tej klasy definiuje operator przeciążone wyboru elementu członkowskiego (**->**) zwraca wskaźnik do innego typu klasy. (Niniejszymi omówiono bardziej szczegółowo w [dostęp do elementu członkowskiego klasy](../cpp/member-access.md).)  
   
  Kompilator wyszukuje nazwy w następującej kolejności, zatrzymując się, gdy nazwa zostanie znaleziona:  
   

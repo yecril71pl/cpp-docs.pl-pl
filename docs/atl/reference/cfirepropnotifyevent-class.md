@@ -1,12 +1,9 @@
 ---
 title: Klasa CFirePropNotifyEvent | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CFirePropNotifyEvent
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9571ad4ba928c208c6c028f6e30cf7c27c196d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 728f4e973a7ef74dcdbb44150375df235e0d990e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfirepropnotifyevent-class"></a>Klasa CFirePropNotifyEvent
 Ta klasa dostarcza metody do powiadamiania zbiornika kontenera dotyczące zmiany właściwości formantu.  
@@ -54,7 +49,7 @@ class CFirePropNotifyEvent
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Statyczny) Powiadamia zbiornika kontenera, który ma zmienić właściwości formantu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CFirePropNotifyEvent`ma dwie metody, które powiadamiają o zbiornika kontenera, który właściwości formantu został zmieniony lub ma zostać zmieniona.  
+ `CFirePropNotifyEvent` ma dwie metody, które powiadamiają o zbiornika kontenera, który właściwości formantu został zmieniony lub ma zostać zmieniona.  
   
  Jeśli jest pochodną klasy Implementowanie formantu `IPropertyNotifySink`, `CFirePropNotifyEvent` metody są wywoływane podczas wywoływania `FireOnRequestEdit` lub `FireOnChanged`. Jeśli nie jest pochodną klasy formantu `IPropertyNotifySink`, zwracany wywołania funkcji `S_OK`.  
   
@@ -63,7 +58,7 @@ class CFirePropNotifyEvent
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlctl.h  
   
-##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
+##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
  Powiadamia wszystkie połączone [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfejsów (na każdym punkcie połączenia obiektu), które właściwości określonego obiektu został zmieniony.  
   
 ```
@@ -74,7 +69,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
  *pUnk*  
  [in] Wskaźnik do **IUnknown** obiektu wysyłania powiadomienia.  
   
- *Identyfikator dispID*  
+ *dispID*  
  [in] Identyfikator właściwości, która została zmieniona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -83,7 +78,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja jest bezpiecznie wywołać nawet wtedy, gdy formant nie obsługuje punkty połączenia.  
   
-##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
  Powiadamia wszystkie połączone [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfejsów (na każdym punkcie połączenia obiektu), które właściwości określony obiekt ma zostać zmieniona.  
   
 ```
@@ -94,7 +89,7 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
  *pUnk*  
  [in] Wskaźnik do **IUnknown** obiektu wysyłania powiadomienia.  
   
- *Identyfikator dispID*  
+ *dispID*  
  [in] Identyfikator właściwości zostać zmieniona.  
   
 ### <a name="return-value"></a>Wartość zwracana  

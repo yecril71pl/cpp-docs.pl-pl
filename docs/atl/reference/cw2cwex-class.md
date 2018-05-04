@@ -2,11 +2,8 @@
 title: Klasa CW2CWEX | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CW2CWEX
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a83f0fefed5e2393c303038346e3b84ec1a3d570
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 671311b0788438d7b92dad9d9137e28cbb88df60
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cw2cwex-class"></a>Klasa CW2CWEX
 Ta klasa jest używana przez makra konwersji ciągu `CW2CTEX` i `CT2CWEX`i typedef `CW2W`.  
@@ -91,7 +86,7 @@ class CW2CWEX
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlconv.h  
   
-##  <a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
+##  <a name="cw2cwex"></a>  CW2CWEX::CW2CWEX  
  Konstruktor.  
   
 ```
@@ -109,7 +104,7 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Uwagi  
  Przydziela bufora używanego w procesie tłumaczenia.  
   
-##  <a name="dtor"></a>CW2CWEX:: ~ CW2CWEX  
+##  <a name="dtor"></a>  CW2CWEX:: ~ CW2CWEX  
  Destruktor.  
   
 ```
@@ -119,14 +114,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Uwagi  
  Zwalnia przydzielonego buforu.  
   
-##  <a name="m_psz"></a>CW2CWEX::m_psz  
+##  <a name="m_psz"></a>  CW2CWEX::m_psz  
  Element członkowski danych, która przechowuje ciąg źródłowy.  
   
 ```
 LPCWSTR m_psz;
 ```  
   
-##  <a name="operator_lpcwstr"></a>CW2CWEX::operator LPCWSTR  
+##  <a name="operator_lpcwstr"></a>  CW2CWEX::operator LPCWSTR  
  Operator konwersji.  
   
 ```  

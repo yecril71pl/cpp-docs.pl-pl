@@ -1,13 +1,10 @@
 ---
-title: "Literały ciągu języka C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Literały ciągu języka C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,26 +12,24 @@ helpviewer_keywords:
 - strings [C++], string literals
 - literal strings, C
 ms.assetid: 4b05523e-49a2-4900-b21a-754350af3328
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0be3ee70ef708441d20fdbbc14f25f5102d734a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 303ad83c5e366f32a99a501a58b168ef25adbb42
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-string-literals"></a>Literały ciągu języka C
 "Literału ciągu" jest sekwencji znaków z zestawu ujęty w podwójnym cudzysłowie znaków źródła (**""**). Literały ciągu są używane do reprezentowania sekwencji znaków, które, razem tworzą ciąg znaków zakończony znakiem null. Należy zawsze prefiksu całej literały z literą **L**.  
   
 ## <a name="syntax"></a>Składnia  
  *literał ciągu*:  
- **"** *s char sekwencji* opt**"**  
+ **"** *s char sekwencji* opt **"**  
   
- **L"** *s char sekwencji* opt**"**  
+ **L"** *s char sekwencji* opt **"**  
   
  *s char sekwencji*:  
  *s char*  

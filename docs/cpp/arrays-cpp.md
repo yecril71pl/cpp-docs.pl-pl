@@ -1,12 +1,9 @@
 ---
 title: Tablice (C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-c"></a>Tablice (C++)
 Tablica jest kolekcją jak w przypadku obiektów. Najprostszym przypadku tablicy jest wektorem, który może być deklarowana przez następująca sekwencja:  
@@ -57,7 +52,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. Opcjonalne inicjatora.  Zobacz [inicjatory](../cpp/initializers.md).  
   
- Liczba elementów w tablicy jest podawany przez wyrażenie stałe. Pierwszy element w tablicy jest 0th element i jest ostatnim elementem (*n*-1) elementu, gdzie  *n*  jest liczba elementów tablicy może zawierać. *Wyrażenia* musi być typem całkowitym i musi być większa niż 0. Zerowy rozmiar tablicy jest dozwolony tylko wtedy, gdy tablica jest ostatnim polu `struct` lub **Unii** oraz gdy są włączone rozszerzenia Microsoft (/Ze).  
+ Liczba elementów w tablicy jest podawany przez wyrażenie stałe. Pierwszy element w tablicy jest 0th element i jest ostatnim elementem (*n*-1) elementu, gdzie *n* jest liczba elementów tablicy może zawierać. *Wyrażenia* musi być typem całkowitym i musi być większa niż 0. Zerowy rozmiar tablicy jest dozwolony tylko wtedy, gdy tablica jest ostatnim polu `struct` lub **Unii** oraz gdy są włączone rozszerzenia Microsoft (/Ze).  
   
  Poniższy przykład przedstawia sposób definiowania tablicy w czasie wykonywania:  
   
@@ -92,7 +87,7 @@ int i2[5][7];
   
  Określa tablicę typu `int`, koncepcyjnie uszeregowanych w macierzy dwuwymiarowa pięć wierszy i kolumn siedmiu, jak pokazano na poniższej ilustracji:  
   
- ![Układ pojęć związanych z wieloma &#45; tablicą wielowymiarową](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![Koncepcyjny układ multi&#45;tablicą wielowymiarową](../cpp/media/vc38rc1.gif "vc38RC1")  
 Koncepcyjny układ tablicy wielowymiarowej  
   
  W deklaracjach multidimensioned tablic, których listy inicjatorów (zgodnie z opisem w [inicjatory](../cpp/initializers.md)), można pominąć wyrażenie stałe, który określa granice wymiar. Na przykład:  

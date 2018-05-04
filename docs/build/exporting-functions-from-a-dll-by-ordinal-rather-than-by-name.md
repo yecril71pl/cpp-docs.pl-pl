@@ -1,13 +1,10 @@
 ---
-title: "Eksportowanie funkcji z biblioteki DLL według liczby porządkowej, a nie nazwa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Eksportowanie funkcji z biblioteki DLL według liczby porządkowej, a nie nazwa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - NONAME
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - exporting DLLs [C++], ordinal values
 - NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b49cc54336f596d6815a2ebe53e60ed2dd51e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b05f3e429406b3c24c7a21ce9ee8e10fe19c14b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Eksportowanie funkcji z biblioteki DLL według numeru porządkowego a nie nazwy
 Najprostszym sposobem, aby wyeksportować funkcji z biblioteki DLL jest wyeksportować je według nazwy. Jest to, co się dzieje, gdy używasz **__declspec(dllexport)**, np. Ale zamiast tego można wyeksportować funkcji według liczby porządkowej. W przypadku tej techniki, należy użyć pliku .def zamiast **__declspec(dllexport)**. Aby określić wartość porządkową funkcji, należy dołączyć jego liczby porządkowej nazwa funkcji w pliku .def. Informacje o określaniu porządkowe, zobacz [eksportowanie z biblioteki DLL przy użyciu .def — pliki](../build/exporting-from-a-dll-using-def-files.md).  

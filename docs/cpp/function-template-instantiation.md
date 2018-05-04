@@ -1,12 +1,9 @@
 ---
-title: "Tworzenie wystąpienia szablonu funkcji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Tworzenie wystąpienia szablonu funkcji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - function templates, instantiation
 - instantiation, function templates
 ms.assetid: f22a07c7-3ad1-465a-84f5-8737e274bd47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41bf7f6ba3a2a17c6355ee9239cadb6e5014ee96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6374dcd9dad263afd0961be91971d3283ba863ab
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-template-instantiation"></a>Tworzenie wystąpienia szablonu funkcji
 Gdy szablonu funkcji najpierw zostanie wywołana dla każdego typu, kompilator tworzy wystąpienia. Każdego wystąpienia jest wersja szablonem funkcji przeznaczone dla typu. Tego wystąpienia zostanie wywołana za każdym razem, gdy funkcja jest używana dla typu. Jeśli masz kilka wystąpień identyczne, nawet w różnych modułach tylko jedna kopia wystąpienia zakończą się w pliku wykonywalnego.  

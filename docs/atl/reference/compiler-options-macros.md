@@ -1,12 +1,9 @@
 ---
 title: Makra opcji kompilatora | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -25,17 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f48abc864133849353aeccf82ea3eb9aab1edb5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e84c92e8bbf65ff3b8b54111bcce2306628edb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-macros"></a>Makra opcji kompilatora
 Te makra kontrolowania kompilatora określonych funkcji.  
@@ -54,7 +49,7 @@ Te makra kontrolowania kompilatora określonych funkcji.
 |[ATL_NOINLINE](#atl_noinline)|Symbol, który wskazuje funkcji nie może być wbudowane.|  
 |[_ATL_SINGLE_THREADED —](#_atl_single_threaded)|Określenie, czy wszystkie obiekty używać pojedynczego modelu wątkowości.|  
   
-##  <a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS  
+##  <a name="_atl_all_warnings"></a>  _ATL_ALL_WARNINGS  
  Symbol, który umożliwia błędy w projektach przekonwertować z poprzednich wersji ATL.  
   
 ```
@@ -88,7 +83,7 @@ Te makra kontrolowania kompilatora określonych funkcji.
   
  Nowy projekt ma to `#define` domyślnie ustawione w pliku stdafx.h.  
   
-##  <a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED —  
+##  <a name="_atl_apartment_threaded"></a>  _ATL_APARTMENT_THREADED —  
  Zdefiniuj użycie co najmniej jeden z obiektów wątkowości typu apartment.  
   
 ```
@@ -98,7 +93,7 @@ _ATL_APARTMENT_THREADED
 ### <a name="remarks"></a>Uwagi  
  Określa wątkowości typu apartment. Zobacz [określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) dla innych wątków opcje, a [opcji, Kreator prostych obiektów ATL](../../atl/reference/options-atl-simple-object-wizard.md) opis wątkowość modele dostępne dla obiekt ATL.  
   
-##  <a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
+##  <a name="_atl_cstring_explicit_constructors"></a>  _ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
  Sprawia, że niektóre `CString` jawne jakiejkolwiek konwersji niezamierzone zapobieganie konstruktorów.  
   
 ```
@@ -110,7 +105,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  Za pomocą makra _t — na wszystkie argumenty ciągu konstruktora, można zdefiniować _ATL_CSTRING_EXPLICIT_CONSTRUCTORS i uniknąć błędów kompilacji, niezależnie od tego, czy _unicode — jest zdefiniowane.  
   
-##  <a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING  
+##  <a name="_atl_enable_ptm_warning"></a>  _ATL_ENABLE_PTM_WARNING  
  Zdefiniuj to makro, aby wymusić użycie składni zgodne standard ANSI C++ dla wskaźnika do funkcji Członkowskich. Użycie tego makra spowoduje błąd kompilatora C4867 ma być generowany, gdy niestandardowa składnia jest używany w celu zainicjowania wskaźnika do funkcji członkowskiej.  
   
 ```
@@ -132,7 +127,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  Należy pamiętać, że dla makra mapy, które dodać znaku "&", nie należy dodawać go ponownie w kodzie.  
   
-##  <a name="_atl_free_threaded"></a>_ATL_FREE_THREADED —  
+##  <a name="_atl_free_threaded"></a>  _ATL_FREE_THREADED —  
  Zdefiniuj użycie co najmniej jeden z obiektów wolnego lub neutralną wątków.  
   
 ```
@@ -142,7 +137,7 @@ _ATL_FREE_THREADED
 ### <a name="remarks"></a>Uwagi  
  Określa wolnych wątków. Wolnych wątków jest równoważna z modelem typu apartment wielowątkowe. Zobacz [określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) dla innych wątków opcje, a [opcji, Kreator prostych obiektów ATL](../../atl/reference/options-atl-simple-object-wizard.md) opis wątkowość modele dostępne dla obiekt ATL.  
   
-##  <a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED  
+##  <a name="_atl_multi_threaded"></a>  _ATL_MULTI_THREADED  
  Symbol, który wskazuje projekt będzie mieć obiektów, które są oznaczone jako oba wolne lub neutralna.  
   
 ```
@@ -152,7 +147,7 @@ _ATL_MULTI_THREADED
 ### <a name="remarks"></a>Uwagi  
  Jeśli ta ikona jest zdefiniowany, ATL będzie pobierać w kodzie, który będzie poprawnie synchronizujący dostęp do danych globalnych. Nowy kod powinien użyć równoważnych makra [_atl_free_threaded —](#_atl_free_threaded) zamiast tego.  
   
-##  <a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE  
+##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE  
  Symbol, który uniemożliwia użycie domyślnej przestrzeni nazw jako ATL.  
   
 ```
@@ -162,7 +157,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 ### <a name="remarks"></a>Uwagi  
  Jeśli ten symbol nie jest zdefiniowany, zostanie przeprowadzone w tym atlbase.h **za pomocą przestrzeni nazw ATL** domyślnie, który może prowadzić do konfliktów nazw. Aby tego uniknąć, należy zdefiniować tego symbolu.  
   
-##  <a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT  
+##  <a name="_atl_no_com_support"></a>  _ATL_NO_COM_SUPPORT  
  Symbol, który uniemożliwia kodu związanego z modelu COM jest kompilowane z projektu.  
   
 ```

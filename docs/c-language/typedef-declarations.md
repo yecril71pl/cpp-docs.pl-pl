@@ -1,13 +1,10 @@
 ---
 title: Deklaracje TypeDef | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 851776be55ce485d660aa46f4338235c3a1a413a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 192f7ab037362219261852cfdb0a5eac53e5df9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="typedef-declarations"></a>Deklaracje typedef
 Deklaracji typedef jest deklaracją z typedef jako klasa magazynu. Deklarator staje się nowego typu. Deklaracje typedef można użyć do utworzenia krótszy lub bardziej zrozumiałej nazwy dla typów zdefiniowanych przez C lub dla typów, które zostały zadeklarowane. Nazwy zdefiniowane przez typedef pozwalają na hermetyzację szczegółów implementacji, które mogą się zmieniać.  
@@ -34,7 +29,7 @@ Deklaracji typedef jest deklaracją z typedef jako klasa magazynu. Deklarator st
   
 ## <a name="syntax"></a>Składnia  
  `declaration`:  
- *Specyfikatory deklaracji w init listy deklarator* opt**;**  
+ *Specyfikatory deklaracji w init listy deklarator* opt **;**  
   
  *Specyfikatory deklaracji*:  
  *Specyfikatory deklaracji Specyfikator klasy magazynu* opcjonalnych  
@@ -43,7 +38,7 @@ Deklaracji typedef jest deklaracją z typedef jako klasa magazynu. Deklarator st
   
  *Specyfikatory deklaracji kwalifikator typu* opcjonalnych  
   
- *Specyfikator klasy magazynu*:  
+ *storage-class-specifier*:  
  `typedef`  
   
  *Specyfikator typu*:  
@@ -61,13 +56,13 @@ Deklaracji typedef jest deklaracją z typedef jako klasa magazynu. Deklarator st
   
  **double**  
   
- **podpisany**  
+ **Podpisany**  
   
- **bez znaku**  
+ **Bez znaku**  
   
- *Specyfikator Struct lub union*  
+ *struct-or-union-specifier*  
   
- *Enum — Specyfikator*  
+ *enum-specifier*  
   
  *Nazwa typu TypeDef*  
   

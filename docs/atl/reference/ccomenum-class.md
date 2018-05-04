@@ -1,12 +1,9 @@
 ---
 title: Klasa CComEnum | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnum
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792c5ff95858936d38d9a87350dd3ca405c5ec66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17046239cf4ca5cc95afbc709f10b9c8aedaa9fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenum-class"></a>Klasa CComEnum
 Ta klasa definiuje obiekt modułu wyliczającego COM na podstawie tablicy.  
@@ -59,11 +54,11 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
  Model wątkowości klasy. Ten parametr jest domyślnie używany w projekcie modelu wątku globalny obiekt.  
   
 ## <a name="remarks"></a>Uwagi  
- `CComEnum`Definiuje obiekt modułu wyliczającego COM na podstawie tablicy. Ta klasa jest odpowiednikiem [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) która implementuje moduł wyliczający oparte na kontenera standardowa biblioteka C++. Typowe kroki do używania tej klasy są przedstawione poniżej. Aby uzyskać więcej informacji, zobacz [kolekcje i wyliczenia ATL](../../atl/atl-collections-and-enumerators.md).  
+ `CComEnum` Definiuje obiekt modułu wyliczającego COM na podstawie tablicy. Ta klasa jest odpowiednikiem [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) która implementuje moduł wyliczający oparte na kontenera standardowa biblioteka C++. Typowe kroki do używania tej klasy są przedstawione poniżej. Aby uzyskać więcej informacji, zobacz [kolekcje i wyliczenia ATL](../../atl/atl-collections-and-enumerators.md).  
   
 ## <a name="to-use-this-class"></a>Aby użyć tej klasy:  
   
-- `typedef`Specjalizacja tej klasy.  
+- `typedef` Specjalizacja tej klasy.  
   
 -   Użyj `typedef` jako argument szablonu w specjalizacji `CComObject`.  
   

@@ -2,11 +2,8 @@
 title: Klasa CAtlTransactionManager | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 02ab9cd6f8867f9e6bc9d81ff825e8fe8f7b57d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>Klasa CAtlTransactionManager
 Klasa CAtlTransactionManager udostępnia otokę dla funkcji Menedżera transakcji jądra (KTM).  
@@ -92,7 +87,7 @@ class CAtlTransactionManager;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[m_bFallback](#m_bfallback)|`TRUE`Jeśli powrotu jest obsługiwany; `FALSE` inaczej.|  
+|[m_bFallback](#m_bfallback)|`TRUE` Jeśli powrotu jest obsługiwany; `FALSE` inaczej.|  
 |[m_hTransaction](#m_htransaction)|Dojście transakcji.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -103,7 +98,7 @@ class CAtlTransactionManager;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atltransactionmanager.h  
   
-##  <a name="dtor"></a>~ CAtlTransactionManager  
+##  <a name="dtor"></a>  ~ CAtlTransactionManager  
  Destruktor CAtlTransactionManager.  
   
 ```
@@ -113,7 +108,7 @@ virtual ~CAtlTransactionManager();
 ### <a name="remarks"></a>Uwagi  
  Podczas normalnego przetwarzania transakcji jest automatycznie zatwierdzone i zamknięte. Jeśli destruktor jest wywoływana podczas unwind wyjątek, transakcja jest wycofana i zamknąć.  
   
-##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
+##  <a name="catltransactionmanager"></a>  CAtlTransactionManager  
  Konstruktor CAtlTransactionManager.  
   
 ```
@@ -122,14 +117,14 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="parameters"></a>Parametry  
  `bFallback`  
- `TRUE`Wskazuje powrotu pomocy technicznej. Jeśli funkcja transakcyjne nie powiedzie się, klasa automatycznie wywołuje funkcję "nietransakcyjnej". `FALSE`Wskazuje nie wywołania "rezerwowej".  
+ `TRUE` Wskazuje powrotu pomocy technicznej. Jeśli funkcja transakcyjne nie powiedzie się, klasa automatycznie wywołuje funkcję "nietransakcyjnej". `FALSE` Wskazuje nie wywołania "rezerwowej".  
   
  `bAutoCreateTransaction`  
- `TRUE`Wskazuje, że program obsługi transakcji jest tworzone automatycznie w konstruktorze. `FALSE`Wskazuje, że nie jest.  
+ `TRUE` Wskazuje, że program obsługi transakcji jest tworzone automatycznie w konstruktorze. `FALSE` Wskazuje, że nie jest.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="close"></a>Zamknij  
+##  <a name="close"></a>  Zamknij  
  Zamyka dojście transakcji.  
   
 ```
@@ -137,12 +132,12 @@ inline BOOL Close();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`w przypadku powodzenia; w przeciwnym razie `FALSE`.  
+ `TRUE` w przypadku powodzenia; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `CloseHandle` funkcji. Metoda jest wywoływana automatycznie w destruktor.  
   
-##  <a name="commit"></a>Zatwierdź  
+##  <a name="commit"></a>  Zatwierdź  
  Żądania można zatwierdzić transakcji.  
   
 ```
@@ -150,12 +145,12 @@ inline BOOL Commit();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`w przypadku powodzenia; w przeciwnym razie `FALSE`.  
+ `TRUE` w przypadku powodzenia; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `CommitTransaction` funkcji. Metoda jest wywoływana automatycznie w destruktor.  
   
-##  <a name="create"></a>Utwórz  
+##  <a name="create"></a>  Utwórz  
  Tworzy dojście transakcji.  
   
 ```
@@ -163,12 +158,12 @@ inline BOOL Create();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`w przypadku powodzenia; w przeciwnym razie `FALSE`.  
+ `TRUE` w przypadku powodzenia; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `CreateTransaction` funkcji. Sprawdź go dla  
   
-##  <a name="createfile"></a>CreateFile  
+##  <a name="createfile"></a>  CreateFile  
  Tworzy lub otwiera plik, strumienia pliku lub katalogu jako operacją transakcji.  
   
 ```
@@ -210,7 +205,7 @@ inline HANDLE CreateFile(
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `CreateFileTransacted` funkcji.  
   
-##  <a name="deletefile"></a>DeleteFile  
+##  <a name="deletefile"></a>  DeleteFile  
  Usuwa istniejący plik jako operacją transakcji.  
   
 ```
@@ -224,7 +219,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `DeleteFileTransacted` funkcji.  
   
-##  <a name="findfirstfile"></a>FindFirstFile  
+##  <a name="findfirstfile"></a>  FindFirstFile  
  Wyszukuje katalog dla pliku lub podkatalogu co transakcyjne operacji.  
   
 ```
@@ -246,7 +241,7 @@ inline HANDLE FindFirstFile(
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `FindFirstFileTransacted` funkcji.  
   
-##  <a name="getfileattributes"></a>GetFileAttributes  
+##  <a name="getfileattributes"></a>  GetFileAttributes  
  Pobiera atrybuty systemu plików dla określonego pliku lub katalogu jako operacją transakcji.  
   
 ```
@@ -260,7 +255,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `GetFileAttributesTransacted` funkcji.  
   
-##  <a name="getfileattributesex"></a>GetFileAttributesEx  
+##  <a name="getfileattributesex"></a>  GetFileAttributesEx  
  Pobiera atrybuty systemu plików dla określonego pliku lub katalogu jako operacją transakcji.  
   
 ```
@@ -283,7 +278,7 @@ inline BOOL GetFileAttributesEx(
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `GetFileAttributesTransacted` funkcji.  
   
-##  <a name="gethandle"></a>GetHandle  
+##  <a name="gethandle"></a>  GetHandle  
  Zwraca dojście transakcji.  
   
 ```
@@ -295,7 +290,7 @@ HANDLE GetHandle() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isfallback"></a>IsFallback  
+##  <a name="isfallback"></a>  IsFallback  
  Określa, czy rezerwowy wywołania są włączone.  
   
 ```
@@ -303,12 +298,12 @@ BOOL IsFallback() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `TRUE` jest klasa obsługuje wywołania rezerwowego. `FALSE`w przeciwnym razie wartość.  
+ Zwraca `TRUE` jest klasa obsługuje wywołania rezerwowego. `FALSE` w przeciwnym razie wartość.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="m_bfallback"></a>m_bFallback  
- `TRUE`Jeśli powrotu jest obsługiwany; `FALSE` inaczej.  
+##  <a name="m_bfallback"></a>  m_bFallback  
+ `TRUE` Jeśli powrotu jest obsługiwany; `FALSE` inaczej.  
   
 ```
 BOOL m_bFallback;
@@ -316,7 +311,7 @@ BOOL m_bFallback;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="m_htransaction"></a>m_hTransaction  
+##  <a name="m_htransaction"></a>  m_hTransaction  
  Dojście transakcji.  
   
 ```
@@ -325,7 +320,7 @@ HANDLE m_hTransaction;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="movefile"></a>MoveFile  
+##  <a name="movefile"></a>  MoveFile  
  Przenosi istniejący plik lub katalog, w tym jej funkcji podrzędnych jako operacją transakcji.  
   
 ```
@@ -342,7 +337,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `MoveFileTransacted` funkcji.  
   
-##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
+##  <a name="regcreatekeyex"></a>  RegCreateKeyEx  
  Tworzy określony klucz rejestru i kojarzy ją z transakcji. Jeśli klucz już istnieje, funkcja go otwiera.  
   
 ```
@@ -392,7 +387,7 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `RegCreateKeyTransacted` funkcji.  
   
-##  <a name="regdeletekey"></a>RegDeleteKey  
+##  <a name="regdeletekey"></a>  RegDeleteKey  
  Usuwa podklucz i jego wartości z rejestru określony widok specyficzne dla platformy jako operacją transakcji.  
   
 ```
@@ -412,7 +407,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `RegDeleteKeyTransacted` funkcji.  
   
-##  <a name="regopenkeyex"></a>RegOpenKeyEx  
+##  <a name="regopenkeyex"></a>  RegOpenKeyEx  
  Otwiera określony klucz rejestru i kojarzy ją z transakcji.  
   
 ```
@@ -446,7 +441,7 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `RegOpenKeyTransacted` funkcji.  
   
-##  <a name="rollback"></a>Wycofywanie  
+##  <a name="rollback"></a>  Wycofywanie  
  Żądania, które wycofana transakcji.  
   
 ```
@@ -454,12 +449,12 @@ inline BOOL Rollback();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`w przypadku powodzenia; w przeciwnym razie `FALSE`.  
+ `TRUE` w przypadku powodzenia; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołuje tę otokę `RollbackTransaction` funkcji.  
   
-##  <a name="setfileattributes"></a>SetFileAttributes  
+##  <a name="setfileattributes"></a>  SetFileAttributes  
  Ustawia wartości atrybutów pliku lub katalogu jako operacją transakcji.  
   
 ```

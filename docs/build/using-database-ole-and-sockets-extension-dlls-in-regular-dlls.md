@@ -2,12 +2,9 @@
 title: Przy użyciu bazy danych, OLE i MFC gniazda biblioteki DLL rozszerzeń w zwykłych bibliotekach DLL MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f902f3b512b5684cf185829fdf4346b8851ff8ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Przy użyciu bazy danych, OLE i MFC gniazda biblioteki DLL rozszerzeń w zwykłych bibliotekach DLL MFC
 Jeśli z rozszerzeniem MFC DLL z regularne biblioteki DLL MFC rozszerzenia MFC DLL nie jest dostępna w **CDynLinkLibrary** obiekt łańcucha regularne biblioteki DLL MFC może działać w co najmniej jeden zbiór problemów pokrewnych. Ponieważ obsługuje wersje debugowania MFC bazy danych, OLE i gniazda biblioteki DLL są zaimplementowane jako biblioteki DLL rozszerzeń MFC, można napotkać funkcje podobne problemy, jeśli używasz tych MFC, nawet jeśli nie jest jawnie używana żadnego własne biblioteki DLL rozszerzeń MFC. Niektóre symptomy są:  
@@ -38,7 +33,7 @@ Jeśli z rozszerzeniem MFC DLL z regularne biblioteki DLL MFC rozszerzenia MFC D
   
 -   `DllGetClassObject`, `DllCanUnloadNow`i `UpdateRegistry`, `Revoke`, `RevokeAll`, i `RegisterAll` funkcji Członkowskich `COleObjectFactory` nie można zlokalizować fabrykę klas zdefiniowanych w bibliotece DLL rozszerzenia MFC.  
   
--   `AfxDoForAllClasses`nie działa dla wszystkich klas w bibliotece DLL rozszerzenia MFC.  
+-   `AfxDoForAllClasses` nie działa dla wszystkich klas w bibliotece DLL rozszerzenia MFC.  
   
 -   Standardowa baza danych MFC, gniazda lub zasobów OLE nie można załadować. Na przykład **AfxLoadString**(**AFX_IDP_SQL_CONNECT_FAIL**) zwraca pusty ciąg, nawet wtedy, gdy regularne biblioteki DLL MFC prawidłowo przy użyciu klasy baz danych MFC.  
   

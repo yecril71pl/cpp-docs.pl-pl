@@ -1,12 +1,12 @@
 ---
-title: "Porady: Dodawanie obsługi Menedżera ponownego uruchamiania | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: Dodawanie obsługi Menedżera ponownego uruchamiania | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,27 +14,28 @@ helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a413f28909a52e3bc82e9d8f2694d559bf8a885c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 4550a8a6a6457c4bf5b7acc137a592aa5ecb2e4b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-add-restart-manager-support"></a>Porady: dodawanie obsługi menedżera ponownego uruchamiania
-Menedżer ponownego uruchamiania jest dodane do funkcji [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] dla [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. Menedżer ponownego uruchamiania dodaje obsługę aplikacji, jeśli nieoczekiwane zamknięcie lub ponowne uruchomienie. Zachowanie ponownego uruchamiania Menedżera zależy od typu aplikacji. Jeśli aplikacja jest Edytor dokumentów, Menedżer ponownego uruchamiania włączona automatycznie Zapisz stan aplikacji i zawartości wszelkie otwarte dokumenty i ponowne uruchomienie aplikacji po nieoczekiwanego zamknięcia. Jeśli aplikacja nie jest to edytor dokumentu, Menedżer ponownego uruchamiania spowoduje ponowne uruchomienie aplikacji, ale domyślnie nie może zapisać stanu aplikacji.  
+
+Menedżer ponownego uruchamiania to funkcja dodana do programu Visual Studio dla systemu Windows Vista lub nowszych systemów operacyjnych. Menedżer ponownego uruchamiania dodaje obsługę aplikacji, jeśli nieoczekiwane zamknięcie lub ponowne uruchomienie. Zachowanie ponownego uruchamiania Menedżera zależy od typu aplikacji. Jeśli aplikacja jest Edytor dokumentów, Menedżer ponownego uruchamiania włączona automatycznie Zapisz stan aplikacji i zawartości wszelkie otwarte dokumenty i ponowne uruchomienie aplikacji po nieoczekiwanego zamknięcia. Jeśli aplikacja nie jest to edytor dokumentu, Menedżer ponownego uruchamiania spowoduje ponowne uruchomienie aplikacji, ale domyślnie nie może zapisać stanu aplikacji.  
   
  Po ponownym uruchomieniu aplikacji Wyświetla okno dialogowe zadania, jeśli aplikacja jest Unicode. Jeśli jest to aplikacja ANSI, aplikacja wyświetla komunikat systemu Windows. W tym momencie użytkownik wybierze opcję przywracania automatycznie zapisanych dokumentów. Jeśli użytkownik nie przywraca automatycznie zapisanych dokumentów, Menedżer ponownego uruchamiania odrzuca plików tymczasowych.  
   
 > [!NOTE]
 >  Można zastąpić domyślne zachowanie Menedżer ponownego uruchamiania zapisywania danych i ponowne uruchomienie aplikacji.  
   
- Domyślnie aplikacje MFC utworzone za pomocą Kreatora projektu w [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] obsługi Menedżera ponownego uruchomienia, gdy aplikacje są uruchamiane na komputerze, który ma [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. Jeśli chcesz, aby aplikacja do obsługi Menedżera ponownego uruchomienia, można wyłączyć Menedżera ponownego uruchomienia komputera w Kreatorze nowego projektu.  
+ Domyślnie aplikacje MFC utworzone za pomocą Kreatora projektu w [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] obsługi Menedżera ponownego uruchomienia, gdy aplikacje są uruchamiane na komputerze z systemem Windows Vista lub nowszego systemu operacyjnego. Jeśli chcesz, aby aplikacja do obsługi Menedżera ponownego uruchomienia, można wyłączyć Menedżera ponownego uruchomienia komputera w Kreatorze nowego projektu.  
   
 ### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>Aby dodać obsługę Menedżer ponownego uruchamiania do istniejącej aplikacji  
   

@@ -1,13 +1,10 @@
 ---
 title: Kolekcje i wyliczenia ATL | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b74f51733947ca46c0ddb1039f92ce7f69e670
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 537d7e8b7264beddc68805ab8b8dec2ce7883859
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-collections-and-enumerators"></a>Kolekcje i wyliczenia ATL
 A `collection` jest obiekt COM, który udostępnia interfejs, który zezwala na dostęp do grupy elementów danych (nieprzetworzone dane lub inne obiekty). Interfejs, który wykonuje normy dla dostępowi do grupy obiektów nosi nazwę *interfejs kolekcji*.  

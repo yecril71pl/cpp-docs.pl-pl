@@ -1,13 +1,10 @@
 ---
 title: Funkcje wyszukiwania filename | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16aff4db1a04c31b3b45c9a61f74c44d6c9465f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 777ac61828abbdc93bdf3fe6ceda05f927472494
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filename-search-functions"></a>Funkcje wyszukiwania nazwy pliku
 Te funkcje wyszukiwania i zamknij wyszukiwanie nazwy określonego pliku:  
@@ -72,7 +67,7 @@ Te funkcje wyszukiwania i zamknij wyszukiwanie nazwy określonego pliku:
   
  W systemie plików, które nie obsługują tworzenie i czasu pliku, takich jak FAT system `time_create` i `time_access` pola są zawsze L-1.  
   
- `_MAX_PATH`jest zdefiniowany w Stdlib.h 260 bajtów.  
+ `_MAX_PATH` jest zdefiniowany w Stdlib.h 260 bajtów.  
   
  Nie można określić atrybutów (takie jak `_A_RDONLY`) aby ograniczyć liczbę operacji wyszukiwania. Te atrybuty są zwracane w `attrib` pole `_finddata_t` struktury i może mieć następujące wartości (zdefiniowanego w IO.h). Użytkownicy nie będą miały są tylko wartości możliwe `attrib` pola.  
   
@@ -94,17 +89,17 @@ Te funkcje wyszukiwania i zamknij wyszukiwanie nazwy określonego pliku:
  `_A_SYSTEM`  
  System plików. Zwykle nie występuje w przypadku **DIR** poleceń, chyba że **/A** lub **/A:S** jest używana opcja. Wartość: 0x04.  
   
- `_findnext`znajduje nazwę Dalej, jeśli istnieje, odpowiadający `filespec` argument określony w wywołaniu wcześniejszych `_findfirst`. `fileinfo` Argument powinny wskazywać na strukturze zainicjowane przez poprzednie wywołanie `_findfirst`. W przypadku odnalezienia pasującego `fileinfo` jest zmieniana zawartość struktury, zgodnie z wcześniejszym opisem. W przeciwnym razie jest pozostawiany bez zmian. `_findclose`Zamyka dojście wyszukiwania i zwalnia wszystkie powiązane zasoby dla obu `_findfirst` i `_findnext`. Zwracane przez dojście `_findfirst` lub `_findnext` najpierw muszą być przekazywane do `_findclose`, zanim będzie można wykonać operacji modyfikacji, takich jak usuwanie, na katalogi, które tworzą ścieżek przekazany do nich.  
+ `_findnext` znajduje nazwę Dalej, jeśli istnieje, odpowiadający `filespec` argument określony w wywołaniu wcześniejszych `_findfirst`. `fileinfo` Argument powinny wskazywać na strukturze zainicjowane przez poprzednie wywołanie `_findfirst`. W przypadku odnalezienia pasującego `fileinfo` jest zmieniana zawartość struktury, zgodnie z wcześniejszym opisem. W przeciwnym razie jest pozostawiany bez zmian. `_findclose` Zamyka dojście wyszukiwania i zwalnia wszystkie powiązane zasoby dla obu `_findfirst` i `_findnext`. Zwracane przez dojście `_findfirst` lub `_findnext` najpierw muszą być przekazywane do `_findclose`, zanim będzie można wykonać operacji modyfikacji, takich jak usuwanie, na katalogi, które tworzą ścieżek przekazany do nich.  
   
  Można zagnieżdżać `_find` funkcji. Na przykład, jeśli wywołanie `_findfirst` lub `_findnext` znajdzie plik, który jest podkatalogiem nowego wyszukiwania może być inicjowane z innym wywołaniu `_findfirst` lub `_findnext`.  
   
- `_wfindfirst`i `_wfindnext` wersji znaków dwubajtowych `_findfirst` i `_findnext`. Argument Struktura wersji znaków dwubajtowych ma `_wfinddata_t` typu danych, który jest zdefiniowany w IO.h i Wchar.h. Pola tego typu danych są takie same, jak `_finddata_t` typu danych, z wyjątkiem w `_wfinddata_t` pole nazwy jest typu `wchar_t` zamiast typu `char`. W przeciwnym razie `_wfindfirst` i `_wfindnext` zachowują się tak samo do `_findfirst` i `_findnext`.  
+ `_wfindfirst` i `_wfindnext` wersji znaków dwubajtowych `_findfirst` i `_findnext`. Argument Struktura wersji znaków dwubajtowych ma `_wfinddata_t` typu danych, który jest zdefiniowany w IO.h i Wchar.h. Pola tego typu danych są takie same, jak `_finddata_t` typu danych, z wyjątkiem w `_wfinddata_t` pole nazwy jest typu `wchar_t` zamiast typu `char`. W przeciwnym razie `_wfindfirst` i `_wfindnext` zachowują się tak samo do `_findfirst` i `_findnext`.  
   
- `_findfirst`i `_findnext` Użyj typu czasu 64-bitowych. Jeśli musi używać typu Stara godzina 32-bitowe, można zdefiniować `_USE_32BIT_TIME_T`. Wersje tych funkcji, które mają `32` sufiks w nazwach Użyj typu czasu 32-bitowe i tych, których `64` sufiks Użyj typu czasu 64-bitowych.  
+ `_findfirst` i `_findnext` Użyj typu czasu 64-bitowych. Jeśli musi używać typu Stara godzina 32-bitowe, można zdefiniować `_USE_32BIT_TIME_T`. Wersje tych funkcji, które mają `32` sufiks w nazwach Użyj typu czasu 32-bitowe i tych, których `64` sufiks Użyj typu czasu 64-bitowych.  
   
  Funkcje `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`, i `_wfindnext32i64` również zachowują się tak samo do czasu 32-bitowej wersji typu tych funkcji z wyjątkiem użycia i zwracać długości plików 64-bitowych. Funkcje `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32`, i `_wfindnext64i32` typu czasu 64-bitowym, ale używania długości 32-bitowy plik. Funkcje te używają odpowiednie odmian `_finddata_t` typu, w którym pola mają różne typy czasu i rozmiaru pliku.  
   
- `_finddata_t`jest rzeczywiście to makro, która daje w wyniku `_finddata64i32_t` (lub `_finddata32_t` Jeśli `_USE_32BIT_TIME_T` jest zdefiniowana). W poniższej tabeli przedstawiono różnice w `_finddata_t`:  
+ `_finddata_t` jest rzeczywiście to makro, która daje w wyniku `_finddata64i32_t` (lub `_finddata32_t` Jeśli `_USE_32BIT_TIME_T` jest zdefiniowana). W poniższej tabeli przedstawiono różnice w `_finddata_t`:  
   
 |Struktura|Typu czasu|Typ rozmiaru pliku|  
 |---------------|---------------|--------------------|  
@@ -114,7 +109,7 @@ Te funkcje wyszukiwania i zamknij wyszukiwanie nazwy określonego pliku:
 |`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|  
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|  
   
- `_fsize_t`jest `typedef` dla `unsigned long` (32-bitowy).  
+ `_fsize_t` jest `typedef` dla `unsigned long` (32-bitowy).  
   
 ## <a name="example"></a>Przykład  
   

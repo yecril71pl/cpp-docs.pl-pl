@@ -1,13 +1,10 @@
 ---
 title: Nazwy ozdobione | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ad7fc8e6d9b7fa261d7811086ef02738c77e49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 794e7583158379f84c5ee20408fb784aca213669
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decorated-names"></a>Nazwy ozdobione
 Funkcje, danych i obiektów w programach C i C++ są reprezentowane wewnętrznie przez ich nazwy ozdobione. A *dekorowane nazwy* jest zakodowany ciąg utworzony przez kompilator podczas kompilowania obiektu, danych lub definicji funkcji. Rejestruje konwencji wywoływania, typy parametrów funkcji i inne informacje, łącznie z nazwą. Ta nazwij dekorację, nazywany również *przekręcona nazwa*, pomaga konsolidator Znajdź poprawne funkcje i obiekty podczas łączenia pliku wykonywalnego.  
@@ -44,14 +39,14 @@ Funkcje, danych i obiektów w programach C i C++ są reprezentowane wewnętrznie
   
 -   [Wyświetlanie bez nazwy](#Undecorated)  
   
-##  <a name="Using"></a>Przy użyciu nazwy ozdobione  
+##  <a name="Using"></a> Przy użyciu nazwy ozdobione  
  Zwykle nie trzeba znać nazwa napisać kod, który kompiluje i linki pomyślnie. Nazwy ozdobione są wewnętrzne kompilatorze i konsolidatorze szczegóły implementacji. Narzędzia zazwyczaj może obsługiwać nazwy w postaci bez. Jednak nazwy ozdobione czasami jest wymagany po określeniu nazwę funkcji, aby konsolidator i inne narzędzia. Na przykład aby dopasować przeciążonej funkcji języka C++, elementów członkowskich przestrzeni nazw, konstruktorów klas i destruktory specjalnych funkcji Członkowskich, należy określić nazwę dekorowany. Aby uzyskać więcej informacji dotyczących opcji flagi i w innych sytuacjach, które wymagają nazwy ozdobione, zobacz dokumentację narzędzia i opcje, które są używane.  
   
  Jeśli zmienisz nazwę funkcji, klasy, Konwencja wywoływania, zwracany typ lub żadnego parametru ozdobione zmienia się również nazwa. W takim przypadku należy pobrać nowe nazwy ozdobione i użyj wszędzie tam, gdzie nazwa jest określona.  
   
  Nazwij dekorację są też ważne podczas łączenia z kodu napisanego w innych językach programowania lub przy użyciu inne kompilatory. Kompilatory różnych Użyj różnych nazw decoration Konwencji. Jeśli pliku wykonywalnego zawiera łącza do kodu napisanego w innym języku, należy szczególną do dopasowania nazwy wyeksportowane i zaimportowane i konwencji wywoływania. Kod języka zestawu musi użyć Visual C++ dekorowane nazwy i Konwencje wywoływania, aby połączyć do kodu źródłowego napisane przy użyciu języka Visual C++.  
   
-##  <a name="Format"></a>Nazwy ozdobione format C++  
+##  <a name="Format"></a> Nazwy ozdobione format C++  
  Ozdobione nazwę funkcji C++ zawiera następujące informacje:  
   
 -   Nazwa funkcji.  
@@ -73,7 +68,7 @@ Funkcje, danych i obiektów w programach C i C++ są reprezentowane wewnętrznie
 |`int a(char){int i=3;return i;};`|`?a@@YAHD@Z`|  
 |`void __stdcall b::c(float){};`|`?c@b@@AAGXM@Z`|  
   
-##  <a name="FormatC"></a>Nazwy ozdobione format języka c  
+##  <a name="FormatC"></a> Nazwy ozdobione format języka c  
  Formę decoration dla funkcji C zależy od Konwencja wywoływania używany w jego deklaracji, jak pokazano w poniższej tabeli. Jest używany, gdy kod w języku C++ jest zadeklarowana, aby mieć format decoration `extern "C"` połączenie. Jest domyślną konwencję wywoływania `__cdecl`. Należy pamiętać, że w środowisku 64-bitowym, funkcje nie są oznaczone.  
   
 |Konwencja wywoływania|Decoration|  
@@ -83,7 +78,7 @@ Funkcje, danych i obiektów w programach C i C++ są reprezentowane wewnętrznie
 |`__fastcall`|Spacji wiodących i końcowych znaków (@) następuje liczbą dziesiętną reprezentujący liczbę bajtów na liście parametrów|  
 |`__vectorcall`|Końcowe dwóch znaków @@ następuje liczbą dziesiętną bajtów na liście parametrów|  
   
-##  <a name="Viewing"></a>Nazwy ozdobione wyświetlania  
+##  <a name="Viewing"></a> Nazwy ozdobione wyświetlania  
  Możesz uzyskać ozdobione formę nazwy symbolu Po skompilowaniu plik źródłowy, który zawiera dane, obiekt, lub definicji funkcji lub prototypu. Aby Sprawdź nazwy ozdobione w programie, można użyć jednej z następujących metod:  
   
 -   #### <a name="to-use-a-listing-to-view-decorated-names"></a>Umożliwia wyświetlanie listy nazwy ozdobione  
@@ -98,9 +93,9 @@ Funkcje, danych i obiektów w programach C i C++ są reprezentowane wewnętrznie
   
     1.  Aby zobaczyć wyeksportowane symboli w pliku obj lub lib, wprowadź `dumpbin /symbols` `objfile` w wierszu polecenia dewelopera.  
   
-    2.  Aby znaleźć ozdobione formularza symbolu, wyszukaj nazwę bez w nawiasach. Nazwa jest w tym samym wierszu, kreski pionowej (&#124;) po znaku i przed bez nazwy.  
+    2.  Aby znaleźć ozdobione formularza symbolu, wyszukaj nazwę bez w nawiasach. Nazwa jest w tym samym wierszu, po kreski pionowej (&#124;) znaków i przed bez nazwy.  
   
-##  <a name="Undecorated"></a>Wyświetlanie bez nazwy  
+##  <a name="Undecorated"></a> Wyświetlanie bez nazwy  
  Undname.exe służy do konwertowania nazwy ozdobione do postaci bez. Ten przykład przedstawia, jak to działa:  
   
 ```  

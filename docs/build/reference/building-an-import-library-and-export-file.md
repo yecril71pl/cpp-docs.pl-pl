@@ -1,13 +1,10 @@
 ---
 title: Kompilowanie biblioteki importowanej oraz pliku eksportowanego | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.ModuleDefinitionFile
 - VC.Project.VCLibrarianTool.ExportNamedFunctions
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 979e052147f058e6c46a1c10b1dd89cfd36ee362
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93f817aadf2de826c628a14255ae9257be2f29ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-an-import-library-and-export-file"></a>Kompilowanie biblioteki importowanej oraz pliku eksportowanego
 Do tworzenia biblioteki importu i eksportu pliku, użyj następującej składni:  
@@ -59,7 +54,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
 2.  Specyfikacji/Export:*nazwa* w wierszu polecenia LIB  
   
-3.  Definicja w **EKSPORTÓW** instrukcji w`deffile`  
+3.  Definicja w **EKSPORTÓW** instrukcji w `deffile`  
   
  Są to te same metody używanej do określenia eksportu podczas łączenia programu eksportowanie. Program można używać więcej niż jedna metoda. Można określić części polecenia LIB (takich jak wiele *objfiles* lub specyfikacji/Export) w pliku poleceń w poleceniu LIB, podobnie jak można w poleceniu łącza.  
   
@@ -73,7 +68,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
  *Nazwa_wpisu* jest nazwa elementu funkcję lub dane, ponieważ jest używane przez program wywołujący. Opcjonalnie można określić *internalname* jako funkcja znane w programie definiującego; domyślnie *internalname* jest taka sama jak *Nazwa_wpisu*. `ordinal` Określa indeks do tabeli eksportu w zakresie od 1 do 65 535; Jeśli nie określisz `ordinal`, LIB przypisuje jeden. **NONAME** — słowo kluczowe eksportuje funkcję tylko jako numer bez *Nazwa_wpisu*. **Danych** — słowo kluczowe jest używany do eksportowania obiektów tylko do danych.  
   
- / INCLUDE:`symbol`  
+ / INCLUDE: `symbol`  
  Dodaje określony symbol do tabeli symboli. Ta opcja jest przydatna do wymuszania użycia obiektu biblioteki, które w przeciwnym razie nie będą uwzględniane.  
   
  Należy pamiętać, że w przypadku utworzenia biblioteki importu w krok wstępny, przed utworzeniem sieci dll, należy podać ten sam zestaw plików obiektów podczas tworzenia biblioteki dll, jako przekazaną podczas tworzenia biblioteki importu.  

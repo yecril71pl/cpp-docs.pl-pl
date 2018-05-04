@@ -1,12 +1,9 @@
 ---
-title: "Jawne tworzenie wystąpienia | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Jawne tworzenie wystąpienia | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - explicit instantiation
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e272652ecc82b65d0251194f17a746ddde58fcc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f4925a60843ada350a2795709d9257ab796616a7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicit-instantiation"></a>Jawne tworzenie wystąpienia
 Jawne tworzenie wystąpienia można użyć do utworzenia wystąpienia szablonu klasy lub funkcja nie jest używana w kodzie. Ponieważ jest to przydatne podczas tworzenia biblioteki plików (lib), które używają szablonów do dystrybucji, definicje szablonów bez wystąpień nie są umieszczane w plikach obiektu (.obj).  

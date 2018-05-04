@@ -1,13 +1,10 @@
 ---
 title: Active Template Library (ATL) samouczek | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a7737728668adddbf3ca8ed0c41cdbf5e6bb61d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 069d5d84b06850705db5c48f09bb0d0122f58fa3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="active-template-library-atl-tutorial"></a>Biblioteka Active Template Library (ATL) — Samouczek
 ATL zaprojektowano w celu uproszczenia procesu tworzenia wydajne, elastyczne, lekkie formantów. W tym samouczku poprowadzi Cię przez tworzenie formantu ActiveX, prezentacja wiele podstawy ATL i COM.  

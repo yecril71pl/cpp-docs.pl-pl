@@ -1,12 +1,9 @@
 ---
 title: 'Bitowy Operator AND: &amp; | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bitand
@@ -17,19 +14,17 @@ helpviewer_keywords:
 - bitwise operators [C++], AND operator
 - '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3d74a39c68e4c16e55837a87e027e9e5991351f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aeacac8afb7a8195642ebbfb6aac7c697544cd16
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="bitwise-and-operator-amp"></a>Bitowy Operator AND:&amp;
+# <a name="bitwise-and-operator-amp"></a>Bitowy Operator AND: &amp;
 ## <a name="syntax"></a>Składnia  
   
 ```  
@@ -48,7 +43,7 @@ expression
  Oba argumenty do bitowy operator AND musi być typów całkowitych. Popularne konwersje arytmetyczne objęte [konwersje standardowe](standard-conversions.md), są stosowane do argumentów operacji.  
   
 ## <a name="operator-keyword-for-"></a>Operator — słowo kluczowe dla &  
- `bitand` Operator jest odpowiednikiem tekst  **&** . Istnieją dwa sposoby `bitand` operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub skompiluj z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).  
+ `bitand` Operator jest odpowiednikiem tekst **&**. Istnieją dwa sposoby `bitand` operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub skompiluj z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).  
   
 ## <a name="example"></a>Przykład  
   

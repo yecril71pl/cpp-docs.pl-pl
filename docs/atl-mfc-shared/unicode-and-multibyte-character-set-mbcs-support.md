@@ -1,12 +1,9 @@
 ---
-title: "Unicode i znaków wielobajtowych (MBCS) obsługi zestawu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Unicode i znaków wielobajtowych (MBCS) obsługi zestawu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 1/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -21,14 +18,13 @@ helpviewer_keywords:
 - strings [C++], character set support
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbe6ca25afd31c0aba853fde8b503dc333f63f4
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: 8492e4a6777e4d609e3b457cfc77d1b8a691eed3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode i znaków wielobajtowych (MBCS) obsługi zestawu
 
@@ -48,7 +44,7 @@ Te biblioteki debugera i pliki DLL są używane do obsługi standardu Unicode w 
 
 |||||
 |-|-|-|-|
-|UAFXCW. LIB|UAFXCW. PDB|UAFXCWD. LIB|UAFXCWD. PDB|
+|UAFXCW.LIB|UAFXCW. PDB|UAFXCWD.LIB|UAFXCWD. PDB|
 |MFC*wersji*U.LIB|MFC*wersji*U.PDB|MFC*wersji*U.DLL|MFC*wersji*UD. LIB|
 |MFC*wersji*UD. PDB|MFC*wersji*UD. BIBLIOTEKI DLL|MFCS*wersji*U.LIB|MFCS*wersji*U.PDB|
 |MFCS*wersji*UD. LIB|MFCS*wersji*UD. PDB|MFCM*wersji*U.LIB|MFCM*wersji*U.PDB|
@@ -56,7 +52,7 @@ Te biblioteki debugera i pliki DLL są używane do obsługi standardu Unicode w 
 
 (*wersji* reprezentuje numer wersji pliku, np; na przykład "140" oznacza wersji 14.0.)
 
-`CString`jest oparta na `TCHAR` — typ danych. Jeśli symbolu `_UNICODE` jest zdefiniowany dla kompilacji programu, `TCHAR` jest zdefiniowany jako typ `wchar_t`, typ kodowania znaków 16-bitowych. W przeciwnym razie `TCHAR` jest zdefiniowany jako `char`, kodowanie normalne znaki 8-bitową. W związku z tym w kodowaniu Unicode `CString` składa się z 16-bitowe znaki. Bez Unicode, składa się z znaków typu `char`.
+`CString` jest oparta na `TCHAR` — typ danych. Jeśli symbolu `_UNICODE` jest zdefiniowany dla kompilacji programu, `TCHAR` jest zdefiniowany jako typ `wchar_t`, typ kodowania znaków 16-bitowych. W przeciwnym razie `TCHAR` jest zdefiniowany jako `char`, kodowanie normalne znaki 8-bitową. W związku z tym w kodowaniu Unicode `CString` składa się z 16-bitowe znaki. Bez Unicode, składa się z znaków typu `char`.
 
 Do ukończenia programowania Unicode aplikacji, należy również:
 
@@ -72,9 +68,9 @@ Do ukończenia programowania Unicode aplikacji, należy również:
 
    - Użyj `LPTSTR` użycia `char*`.
 
-   - Użyj `LPCTSTR` użycia `const char*`. `CString`zawiera operator `LPCTSTR` konwersję między `CString` i `LPCTSTR`.
+   - Użyj `LPCTSTR` użycia `const char*`. `CString` zawiera operator `LPCTSTR` konwersję między `CString` i `LPCTSTR`.
 
-`CString`udostępnia również obsługujących Unicode konstruktorów operatory przypisania i operatory porównania.
+`CString` udostępnia również obsługujących Unicode konstruktorów operatory przypisania i operatory porównania.
 
 [Odwołanie do biblioteki wykonawczej](../c-runtime-library/c-run-time-library-reference.md) definiuje przenośne wersje wszystkich funkcji obsługi ciągów. Aby uzyskać więcej informacji, zobacz kategorii [internacjonalizacji](../c-runtime-library/internationalization.md).
 
@@ -91,12 +87,12 @@ W obszarze zestawów znaków Dwubajtowych dany ciąg znaków może zawierać zna
 > [!NOTE]
 > Serializacji ciągu Unicode w MFC mogą odczytywać zarówno Unicode i MBCS ciągi niezależnie od tego, która wersja aplikacji, które są uruchomione. Pliki danych można przenosić między wersjami Unicode i MBCS programu.
 
-`CString`Funkcje Członkowskie użyć wersji specjalne "zwykłego tekstu" funkcje wykonawcze języka C, które wywołują lub ich funkcje świadomi Unicode. W związku z tym, na przykład jeśli `CString` zwykle spowodowałoby wywołanie funkcji `strcmp`, wywołuje funkcję odpowiedniego zwykłego tekstu `_tcscmp` zamiast tego. W zależności od tego, jak symbole `_MBCS` i `_UNICODE` są zdefiniowane `_tcscmp` mapy w następujący sposób:
+`CString` Funkcje Członkowskie użyć wersji specjalne "zwykłego tekstu" funkcje wykonawcze języka C, które wywołują lub ich funkcje świadomi Unicode. W związku z tym, na przykład jeśli `CString` zwykle spowodowałoby wywołanie funkcji `strcmp`, wywołuje funkcję odpowiedniego zwykłego tekstu `_tcscmp` zamiast tego. W zależności od tego, jak symbole `_MBCS` i `_UNICODE` są zdefiniowane `_tcscmp` mapy w następujący sposób:
 
 |||
 |-|-|
-|`_MBCS`Definicja|`_mbscmp`|
-|`_UNICODE`Definicja|`wcscmp`|
+|`_MBCS` Definicja|`_mbscmp`|
+|`_UNICODE` Definicja|`wcscmp`|
 |Żadna symbol zdefiniowany|`strcmp`|
 
 > [!NOTE]

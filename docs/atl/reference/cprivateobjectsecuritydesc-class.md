@@ -1,12 +1,9 @@
 ---
 title: Klasa CPrivateObjectSecurityDesc | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CPrivateObjectSecurityDesc
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4845d652d2b1dceb8ffc0f2772f88565eb81e29
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 6f47adc413a0e6d3d9c820b824dec95f55924867
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Klasa CPrivateObjectSecurityDesc
 Ta klasa reprezentuje obiekt deskryptora zabezpieczeń obiektu prywatnego.  
@@ -49,7 +44,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|Konstruktor.|  
-|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|Destruktor.|  
+|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -79,7 +74,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h  
   
-##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
+##  <a name="converttoautoinherit"></a>  CPrivateObjectSecurityDesc::ConvertToAutoInherit  
  Wywołaj tę metodę, aby przekonwertować deskryptora zabezpieczeń i jego listy kontroli dostępu (ACL) do formatu, który obsługuje automatyczne propagacji zapisów dziedziczne kontroli dostępu (ACE).  
   
 ```
@@ -109,7 +104,7 @@ bool ConvertToAutoInherit(
 ### <a name="remarks"></a>Uwagi  
  Tej metody spróbuje określić, czy wpisy kontroli dostępu w DACL kontroli dostępu lista (DACL) i system listy kontroli dostępu (SACL) bieżącego deskryptora zabezpieczeń były dziedziczone z nadrzędnego deskryptora zabezpieczeń. Wywołuje [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) funkcji.  
   
-##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
+##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  Konstruktor.  
   
 ```
@@ -119,7 +114,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Uwagi  
  Inicjuje `CPrivateObjectSecurityDesc` obiektu.  
   
-##  <a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
+##  <a name="dtor"></a>  CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
  Destruktor.  
   
 ```
@@ -129,7 +124,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Uwagi  
  Destruktor zwalnia wszystkie przydzielone zasoby i usuwa deskryptora zabezpieczeń obiektu prywatnego.  
   
-##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
+##  <a name="create"></a>  CPrivateObjectSecurityDesc::Create  
  Wywołanie tej metody można przydzielić i zainicjować deskryptor zabezpieczeń autorelacyjnym prywatnego obiektu utworzonego przez wywołanie Menedżera zasobów.  
   
 ```
@@ -186,7 +181,7 @@ bool Create(
 > [!NOTE]
 >  Deskryptor zabezpieczeń autorelacyjnym jest deskryptora zabezpieczeń, która przechowuje wszystkie jej informacje o zabezpieczeniach w ciągłego bloku pamięci.  
   
-##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>  CPrivateObjectSecurityDesc::Get  
  Wywołaj tę metodę w celu pobrania informacji z deskryptora zabezpieczeń obiektu prywatnego.  
   
 ```
@@ -208,7 +203,7 @@ bool Get(
 ### <a name="remarks"></a>Uwagi  
  Deskryptor zabezpieczeń ma strukturę i skojarzone dane, który zawiera informacje dotyczące zabezpieczeń dla obiektu zabezpieczanego.  
   
-##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CPrivateObjectSecurityDesc::operator =  
  Operator przypisania.  
   
 ```
@@ -222,7 +217,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca zaktualizowane `CPrivateObjectSecurityDesc` obiektu.  
   
-##  <a name="set"></a>CPrivateObjectSecurityDesc::Set  
+##  <a name="set"></a>  CPrivateObjectSecurityDesc::Set  
  Wywołanie tej metody można zmodyfikować deskryptora zabezpieczeń obiektu prywatnego.  
   
 ```

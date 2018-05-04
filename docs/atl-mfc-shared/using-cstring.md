@@ -1,12 +1,9 @@
 ---
-title: "Przy użyciu obiektu CString | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przy użyciu obiektu CString | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3844e10dc12207513e074e76e822e4999fadec7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-cstring"></a>Przy użyciu obiektu CString
 Tematy w tej sekcji opisano sposób programu z `CString`. Dokumentacja odwołanie `CString` , zobacz dokumentację [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
@@ -36,11 +31,11 @@ Tematy w tej sekcji opisano sposób programu z `CString`. Dokumentacja odwołani
   
  A `CStringW` zawiera obiekt `wchar_t` wpisz i obsługuje ciągów Unicode. A `CStringA` zawiera obiekt `char` typu i obsługuje jednobajtowe i wielobajtowe ciągów (MBCS). A `CString` obiekt obsługuje albo `char` typu lub `wchar_t` typu, w zależności od tego, czy `MBCS` symbolu lub `UNICODE` symbol jest zdefiniowany w czasie kompilacji.  
   
- A `CString` obiekt przechowuje dane znakowe w `CStringData` obiektu. `CString`akceptuje `null`-zakończone stylu języka C ciągów, ale nie zachowuje `null` znak w znaku przechowywanych danych. Zamiast tego `CString` długość ciągu ścieżki. `CString`Podaj terminatorem null, gdy jej eksportuje ciąg stylu języka C. Możesz wstawić `null` w `CString`, ale może dać nieoczekiwane wyniki.  
+ A `CString` obiekt przechowuje dane znakowe w `CStringData` obiektu. `CString` akceptuje `null`-zakończone stylu języka C ciągów, ale nie zachowuje `null` znak w znaku przechowywanych danych. Zamiast tego `CString` długość ciągu ścieżki. `CString` Podaj terminatorem null, gdy jej eksportuje ciąg stylu języka C. Możesz wstawić `null` w `CString`, ale może dać nieoczekiwane wyniki.  
   
  Następujący zestaw klas ciąg może być używany bez konsolidacji biblioteki MFC z lub bez obsługi CRT: `CAtlString`, `CAtlStringA`, i `CAtlStringW`.  
   
- `CString`jest używany w projektów natywnych. Dla kodu zarządzanego (C + +/ CLI) projektów, użyj `System::String`.  
+ `CString` jest używany w projektów natywnych. Dla kodu zarządzanego (C + +/ CLI) projektów, użyj `System::String`.  
   
  Aby dodać więcej możliwości niż `CString`, `CStringA`, lub `CStringW` aktualnie oferować, należy utworzyć podklasy `CStringT` zawierający dodatkowe funkcje.  
   

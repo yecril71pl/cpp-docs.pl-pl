@@ -1,13 +1,10 @@
 ---
-title: "strcoll — funkcje | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: strcoll — funkcje | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e97e16ec3360764411b36bf129c344a3455ce6a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strcoll-functions"></a>strcoll — Funkcje
 Każdy z `strcoll` i `wcscoll` funkcje porównuje dwa ciągi zgodnie z `LC_COLLATE` ustawienie kategorii Strona kodowa ustawień lokalnych obecnie w użyciu. Każdy z `_mbscoll` funkcji porównuje dwa ciągi zgodnie ze strony kodowe wielobajtowe obecnie w użyciu. Użyj `coll` funkcje do porównywnania ciągów, gdy ma różnicy między kolejność zestaw znaków i kolejność lexicographic znaków w bieżącej stronie kodowej i różnica jest przydatne do porównania. Użyj odpowiedniej `cmp` funkcji, aby przetestować tylko w przypadku ciągu równości.  
@@ -45,10 +40,10 @@ Każdy z `strcoll` i `wcscoll` funkcje porównuje dwa ciągi zgodnie z `LC_COLLA
   
 |SBCS|Unicode|MBCS|Opis|  
 |----------|-------------|----------|-----------------|  
-|[strcoll —](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll —](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll —](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|Porównuje dwa ciągi|  
-|[_stricoll —](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll —](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll —](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|Porównuje dwa ciągi (bez uwzględniania wielkości liter)|  
-|[_strncoll —](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll —](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll —](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|COLLATE — najpierw `count` znaki z dwóch ciągów|  
-|[_strnicoll —](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll —](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll —](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|COLLATE — najpierw `count` znaki z dwóch ciągów (bez uwzględniania wielkości liter)|  
+|[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|Porównuje dwa ciągi|  
+|[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll —](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|Porównuje dwa ciągi (bez uwzględniania wielkości liter)|  
+|[_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll —](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|COLLATE — najpierw `count` znaki z dwóch ciągów|  
+|[_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll —](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|COLLATE — najpierw `count` znaki z dwóch ciągów (bez uwzględniania wielkości liter)|  
   
 ## <a name="remarks"></a>Uwagi  
  Funkcje te wersje znaków jednobajtowych (SBCS) (`strcoll`, `stricoll`, `_strncoll`, i `_strnicoll`) porównania `string1` i `string2` zgodnie z `LC_COLLATE` ustawienie kategorii bieżące ustawienia regionalne. Funkcje te różnią się od odpowiadającego `strcmp` funkcje, w tym `strcoll` funkcje używają kodu strony informacji o ustawieniach regionalnych udostępniający sekwencji sortowania. Do porównywania ciągów znaków w lokalizacjach, w których zestawu znaków, kolejności i kolejność lexicographic znaków są różne `strcoll` można używać funkcji, zamiast odpowiadającego `strcmp` funkcji. Aby uzyskać więcej informacji na temat `LC_COLLATE`, zobacz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  
