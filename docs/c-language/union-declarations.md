@@ -1,13 +1,10 @@
 ---
-title: "Deklaracje złożeń | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Deklaracje złożeń | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,48 +12,46 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4088aea4025e7c51aba75efe28978d05c0e48730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d8c52752c1e05cb3c9f2b18a827fb493ba503ad
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="union-declarations"></a>Deklaracje złożeń
 "Złożenia deklaracji" Określa zestaw wartości zmiennych i, opcjonalnie, tag nazewnictwa Unii. Wartości zmiennych są nazywane "Członkowie" Unii i mogą mieć różnych typów. Unie są podobne do "rekordy wariantów" w innych językach.  
   
 ## <a name="syntax"></a>Składnia  
- *Specyfikator Struct lub union*:  
- *Identyfikator struktury lub Unii* opt**{** *struktury deklaracji listy* **}**  
+ *struct-or-union-specifier*:  
+ *Identyfikator struktury lub Unii* opt **{** *struktury deklaracji listy* **}**  
   
  *Identyfikator struktury lub związku*  
   
- *Struktura lub Unia*:  
+ *struct-or-union*:  
  **struct**  
   
  **Unii**  
   
- *Struktura deklaracji listy*:  
- *Deklaracja — struktura*  
+ *struct-declaration-list*:  
+ *struct-declaration*  
   
  *Deklaracja struktury deklaracjach — struktura*  
   
  Zawartość Unii jest zdefiniowany  
   
- *Deklaracja struktury*:  
- *Specyfikator kwalifikator listy w strukturze listy deklarator***;**   
+ *struct-declaration*:  
+ *Specyfikator kwalifikator listy w strukturze listy deklarator***;**  
   
- *Specyfikator kwalifikator listy*:  
+ *specifier-qualifier-list*:  
  *Specyfikator typu w specyfikatorze listy kwalifikator* opcjonalnych  
   
  *Kwalifikator typu w specyfikatorze listy kwalifikator* opcjonalnych  
   
- *Struktura deklarator listy*:  
+ *struct-declarator-list*:  
  *deklarator — struktura*  
   
  *Struktura deklarator listy***,***deklarator — struktura*   
@@ -97,7 +92,7 @@ union               /* Defines a two-dimensional */
   
  `screen` Tablica zawiera elementy 2000. Każdy element tablicy jest poszczególnych związek z dwóch elementów: `window1` i `screenval`. `window1` Element członkowski jest strukturą z dwóch członków pola bitowego, `icon` i `color`. `screenval` Element członkowski jest `int`. W dowolnym momencie, każdy element złożenia przechowuje albo `int` reprezentowany przez `screenval` lub struktury reprezentowany przez `window1`.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Unie zagnieżdżonych mogą być deklarowane anonimowo, gdy są oni członkami innego struktury lub związku. To jest przykład typ Unii:  
   

@@ -1,13 +1,10 @@
 ---
 title: try-finally Statement (C) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - __finally keyword [C]
 - structured exception handling, try-finally
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82e8f55d927edbad4812e23b96ad806510d39b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54e33f4648861e872ab8d866930d3412a56a5ef4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement-c"></a>try-finally — instrukcja (C)
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  `try-finally` Instrukcja jest rozszerzeniem firmy Microsoft dla języka C, umożliwiającą aplikacjom zagwarantować wykonywanie czyszczenia kodu po przerwaniu wykonywania bloku kodu. Oczyszczanie składa się z zadania, takie jak cofanie przydziału pamięci, zamykanie plików i zwalniania dojść do plików. `try-finally` Instrukcja jest szczególnie przydatne dla procedur, które mają kilku miejscach, w którym dokonuje wystąpił błąd, który może powodować przedwczesny zwracać rutynowych.  
   

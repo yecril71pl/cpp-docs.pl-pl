@@ -1,13 +1,10 @@
 ---
 title: Sekwencje specjalne | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d341aa5af2b16d1a29bc4e3dfe2f97a68b73d6ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cd58f7418e2e6a2ca7592c345c5d71729cf8324
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="escape-sequences"></a>Sekwencje unikowe
 Znak kombinacji składające się z od ukośnika odwrotnego (**\\**) następują litery lub przy użyciu kombinacji cyfr są nazywane "sekwencje specjalne". Aby przedstawić znaku nowego wiersza, pojedynczego cudzysłowu lub niektórych innych znaków w stałej znakowej, należy użyć sekwencji unikowych. Sekwencja specjalna jest traktowany jako pojedynczy znak i dlatego jest nieprawidłowe w stałej znakowej.  
@@ -73,11 +68,11 @@ Znak kombinacji składające się z od ukośnika odwrotnego (**\\**) następują
 |**\\"**|Podwójny cudzysłów|  
 |**\\\\**|ukośnik odwrotny|  
 |**\\?**|Literał znaku zapytania|  
-|**\\***ooo*|Znaków ASCII w notacji ósemkowe|  
+|**\\** *OOO*|Znaków ASCII w notacji ósemkowe|  
 |**\x** *hh*|Znaków ASCII w formacie szesnastkowym|  
 |**\x** *gg*|Znak Unicode w systemie szesnastkowym, jeśli ta sekwencja ucieczki jest używana w szerokich znaków stała ani literał ciągu Unicode.<br /><br /> Na przykład `WCHAR f = L'\x4e00'` lub `WCHAR b[] = L"The Chinese character for one is \x4e00"`.|  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Jeśli ukośnik odwrotny poprzedza znak, który nie ma w tabeli, kompilator obsługuje Niezdefiniowany znak jako sam znak. Na przykład `\c` jest traktowany jako `c`.  
   

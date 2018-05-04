@@ -1,13 +1,10 @@
 ---
-title: "-DW (Wyłącz przemieszczanie konstrukcji) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -DW (Wyłącz przemieszczanie konstrukcji) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vd
 dev_langs:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b945c4a3191554d5299522ff376772d6362a616c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Wyłącz przemieszczanie konstrukcji)
 ## <a name="syntax"></a>Składnia  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Uwagi  
  Opcje te dotyczą tylko kod w języku C++, która korzysta z wirtualnymi podstawami.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]implementuje obsługi przemieszczanie konstrukcji języka C++ w sytuacjach, w których jest używany wirtualnego dziedziczenia. Przemieszczanie konstrukcji rozwiązuje problem utworzenia funkcją wirtualną zadeklarowanej w wirtualnej podstawy i przesłonięcia w klasie pochodnej, jest wywoływana z konstruktora podczas konstruowania dalsze klasy pochodnej.  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] implementuje obsługi przemieszczanie konstrukcji języka C++ w sytuacjach, w których jest używany wirtualnego dziedziczenia. Przemieszczanie konstrukcji rozwiązuje problem utworzenia funkcją wirtualną zadeklarowanej w wirtualnej podstawy i przesłonięcia w klasie pochodnej, jest wywoływana z konstruktora podczas konstruowania dalsze klasy pochodnej.  
   
  Problem jest, że funkcji wirtualnej mogą być przekazywane przez niepoprawny `this` wskaźnika w związku z tym rozbieżności między przemieszczanie do wirtualnej podstaw klasę i przemieszczanie do jej klas pochodnych. Rozwiązanie zawiera dostosowania przemieszczenie pojedynczego konstrukcji, nazywane polem vtordisp dla każdej wirtualnej podstawy klasy.  
   

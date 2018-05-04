@@ -1,13 +1,10 @@
 ---
-title: "Limity liczb całkowitych C++ | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Limity liczb całkowitych C++ | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - limits, integer constants
 - integer limits
 ms.assetid: 0c23cbd6-29fb-4d9c-b689-5984e19748de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df6bd92f38078b55280248e071193ecf7149a308
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c95e0affa9047aa41ee5ff04b011ac0fbd8d63d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-integer-limits"></a>Limity liczb całkowitych C++
 
@@ -35,13 +30,13 @@ W poniższej tabeli wymieniono limity dla typów całkowitych. Ograniczenia te s
 
 ## <a name="limits-on-integer-constants"></a>Limity stałe całkowite
 
-|**Stałe**|Znaczenie|Wartość|
+|**Stała**|Znaczenie|Wartość|
 |------------------|-------------|-----------|
 |**CHAR_BIT**|Liczba bitów w najmniejszą zmiennej, która nie jest polem bitowym.|8|
 |**SCHAR_MIN**|Minimalna wartość dla zmiennej typu **podpisany char**.|-128|
 |**SCHAR_MAX**|Maksymalna wartość dla zmiennej typu **podpisany char**.|127|
 |**UCHAR_MAX**|Maksymalna wartość dla zmiennej typu **unsigned char**.|255 (0xff)|
-|**CHAR_MIN**|Minimalna wartość dla zmiennej typu **char**.|-128; 0, jeśli używana z opcją /|
+|**CHAR_MIN —**|Minimalna wartość dla zmiennej typu **char**.|-128; 0, jeśli używana z opcją /|
 |**CHAR_MAX**|Maksymalna wartość dla zmiennej typu **char**.|127; 255, jeśli używana z opcją /|
 |**MB_LEN_MAX**|Maksymalna liczba bajtów w literał stałej.|5|
 |**SHRT_MIN**|Minimalna wartość dla zmiennej typu **krótki**.|-32768|

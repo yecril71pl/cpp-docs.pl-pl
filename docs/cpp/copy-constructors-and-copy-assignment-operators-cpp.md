@@ -1,12 +1,9 @@
 ---
-title: "Konstruktory kopiujące i kopiujące operatory przypisania (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Konstruktory kopiujące i kopiujące operatory przypisania (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2ebf51f28912c3cb798acc1ff4aa377c1bebb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1292240e5343c461142e8c6029c277175f6a62f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Konstruktory kopiujące i kopiujące operatory przypisania (C++)
 > [!NOTE]
@@ -66,7 +61,7 @@ b = a;
   
  Jeśli nie zadeklarować konstruktora kopiującego, kompilator generuje konstruktora kopiującego member-wise dla Ciebie.  Jeśli nie można zadeklarować operatora przypisania kopii, kompilator generuje operatora przypisania kopii member-wise dla Ciebie. Deklarowanie konstruktora kopiującego odrzuca operatora przypisania kopii generowane przez kompilator, ani na odwrót. W przypadku zastosowania jednej, zalecamy również stosowanie innego tak, aby znaczenie kodu jest wyczyszczone.  
    
- Konstruktor kopiujący przyjmuje argument typu *Nazwa klasy***&**, gdzie *Nazwa klasy* jest nazwa klasy, dla którego zdefiniowano konstruktora. Na przykład:  
+ Konstruktor kopiujący przyjmuje argument typu * klasy — nazwa ***&**, gdzie *Nazwa klasy* jest nazwa klasy, dla którego zdefiniowano konstruktora. Na przykład:  
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -83,14 +78,14 @@ int main()
 ```  
   
 > [!NOTE]
->  Typ argumentu konstruktora kopiującego *const Nazwa klasy*  **&**  zawsze, gdy jest to możliwe. Zapobiega to przypadkowym zmianom obiektu, z którego jest kopiowanie konstruktora kopiującego. Umożliwia również kopiowanie z **const** obiektów.  
+>  Typ argumentu konstruktora kopiującego *const klasy — Nazwa *** &** Jeśli to możliwe. Zapobiega to przypadkowym zmianom obiektu, z którego jest kopiowanie konstruktora kopiującego. Umożliwia również kopiowanie z **const** obiektów.  
   
 ## <a name="compiler-generated-copy-constructors"></a>Wygenerowanego przez kompilator kopiowanie konstruktorów  
- Kopiowanie generowane przez kompilator konstruktorów, takich jak konstruktorów zdefiniowanych przez użytkownika kopiowania mieć jeden argument typu "odwołanie do *Nazwa klasy*." Jest wyjątek, jeśli wszystkie klasy podstawowe i element członkowski klasy kopiowanie konstruktorów zadeklarowany jako jeden argument typu biorąc **const** *Nazwa klasy***&**. W takim przypadku argument konstruktora kopiowania generowane przez kompilator jest również **const**.  
+ Kopiowanie generowane przez kompilator konstruktorów, takich jak konstruktorów zdefiniowanych przez użytkownika kopiowania mieć jeden argument typu "odwołanie do *Nazwa klasy*." Jest wyjątek, jeśli wszystkie klasy podstawowe i element członkowski klasy kopiowanie konstruktorów zadeklarowany jako jeden argument typu biorąc **const** * klasy — nazwa ***&**. W takim przypadku argument konstruktora kopiowania generowane przez kompilator jest również **const**.  
   
  Jeśli typ argumentu do konstruktora kopiowania nie jest **const**, inicjowanie przez skopiowanie **const** obiektu generuje błąd. Sytuacja odwrotna nie jest prawdziwe: Jeśli wartością argumentu jest **const**, można zainicjować przez skopiowanie obiektu, który nie jest **const**.  
   
- Operatory przypisania generowane przez kompilator wykonują te same czynności w odniesieniu do **const.** Podejmują jeden argument typu *Nazwa klasy*  **&**  , chyba że operatory przypisania w wszystkie klasy podstawowe i element członkowski przyjmują argumentów typu **const** *Nazwa klasy &.* W takim przypadku klasa obiektu generowane ma operatora przypisania **const** argumentu.  
+ Operatory przypisania generowane przez kompilator wykonują te same czynności w odniesieniu do **const.** Podejmują jeden argument typu *klasy — Nazwa *** &** o ile operatory przypisania w wszystkie klasy podstawowe i element członkowski przyjmują argumentów typu **const** *Nazwa klasy &.* W takim przypadku klasa obiektu generowane ma operatora przypisania **const** argumentu.  
   
 > [!NOTE]
 >  Jeśli wirtualne klasy podstawowe są inicjowane przez kopiowanie konstruktorów, generowane przez kompilator lub zdefiniowanej przez użytkownika, są one inicjowane tylko raz: w momencie, gdy są one utworzony.  

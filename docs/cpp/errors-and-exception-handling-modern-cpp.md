@@ -1,27 +1,22 @@
 ---
-title: "Błędy i obsługa wyjątków (Modern C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Błędy i obsługa wyjątków (Modern C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b1ee1c7307f4e19db4ca0b7d03e218b0916538c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eab4199415974c995aa9b71ad53db41b7695827
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Błędy w obsłudze wyjątków (Modern C++)
 W nowoczesnych wersji języka C++, w większości przypadków preferowany sposób raportu i obsługiwać zarówno błędów logicznych i błędów czasu wykonywania jest używać wyjątków. Dotyczy to zwłaszcza stosu może zawierać kilka wywołania funkcji między funkcję, która wykrywa błąd i funkcji, która ma kontekstu wiedzieć, jak je obsłużyć. Wyjątki umożliwiają formalne, dobrze zdefiniowany kod, który wykryje błędy do przekazywania informacji w górę stosu wywołań.  

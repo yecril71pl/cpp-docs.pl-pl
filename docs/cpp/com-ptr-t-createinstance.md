@@ -2,11 +2,8 @@
 title: _com_ptr_t::CreateInstance | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::CreateInstance
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - CreateInstance method [C++]
 ms.assetid: ab89b0e1-9da3-4784-a079-58b17340f111
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4764cf615bf04e9f2b1c3c816becc5a58da35f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70ccd73980295bdda67a4c49d034b6d185d2d93c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Tworzy nowe wystąpienie obiektu podane **CLSID** lub **ProgID**.  
   
@@ -72,11 +67,11 @@ HRESULT CreateInstance(
 ## <a name="remarks"></a>Uwagi  
  Wywołanie funkcji tych elementów członkowskich `CoCreateInstance` do utworzenia nowego obiektu modelu COM, a następnie zapytania dla typu interfejsu wskaźnika inteligentnego. Wynikowa wskaźnika jest następnie hermetyzowany w ramach tego `_com_ptr_t` obiektu. **Wersja** jest wywoływana, aby zmniejszyć licznika odwołań do wcześniej hermetyzowany wskaźnika. Ta procedura zwraca `HRESULT` do wskazania powodzenia lub niepowodzenia.  
   
--   **CreateInstance (** `rclsid` **,**`dwClsContext`**)** tworzy nowe wystąpienie uruchomionych danego obiektu **CLSID**.  
+-   **CreateInstance (** `rclsid` **,**`dwClsContext`**)** tworzy nowe wystąpienie uruchomionych danego obiektu **CLSID**.        
   
--   **CreateInstance (** `clsidString` **,**`dwClsContext`**)** tworzy uruchomione nowe wystąpienie obiektu podany ciąg Unicode, która przechowuje albo **CLSID** (począwszy od "**{**") lub **ProgID**.  
+-   **CreateInstance (** `clsidString` **,**`dwClsContext`**)** tworzy uruchomione nowe wystąpienie obiektu podany ciąg Unicode, która przechowuje albo **CLSID**(począwszy od "**{**") lub **ProgID**.        
   
--   **CreateInstance (** `clsidStringA` **,**`dwClsContext`**)** tworzy uruchomione nowe wystąpienie obiektu podany ciąg znaków wielobajtowych, który przechowuje albo  **Identyfikator CLSID** (począwszy od "**{**") lub **ProgID**. Wywołania [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), który zakłada, że ten ciąg w stronę kodową ANSI zamiast strony kodowej OEM.  
+-   **CreateInstance (** `clsidStringA` **,**`dwClsContext`**)** tworzy uruchomione nowe wystąpienie obiektu podany ciąg znaków wielobajtowych, który przechowuje albo **CLSID**  (począwszy od "**{**") lub **ProgID**.       Wywołania [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), który zakłada, że ten ciąg w stronę kodową ANSI zamiast strony kodowej OEM.  
   
  **KOŃCOWY określonych firmy Microsoft**  
   

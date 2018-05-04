@@ -1,13 +1,10 @@
 ---
-title: "-OI-(Generuj funkcje wewnętrzne) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -OI-(Generuj funkcje wewnętrzne) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableIntrinsicFunctions
 - /oi
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a24830dbc67466e52f3f3c488dda7ac5b4778d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f28051f5d7aaaa4606fffa4d4c94fb2086031419
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Generuj funkcje wewnętrzne)
 Szybsze zastępuje niektórych funkcji wywołania z wewnętrznych lub w przeciwnym razie specjalnych formy funkcji pomagających w aplikacji.  
@@ -49,7 +44,7 @@ Szybsze zastępuje niektórych funkcji wywołania z wewnętrznych lub w przeciwn
   
  **/OI** jest tylko żądania do kompilatora zastąpić niektóre wywołania funkcji funkcje wewnętrzne; kompilator może wywołanie funkcji (i nie Zastąp wywołanie funkcji wewnętrznej) czy będzie zapewnia lepszą wydajność.  
   
- **x86 określonych**  
+ **x86 Specific**  
   
  Wewnętrzne funkcje liczb zmiennoprzecinkowych nie wykonywać żadnych specjalnych kontrole wartości wejściowe tak działają w ograniczonym zakresy danych wejściowych i mają różne wyjątków i warunków ograniczających niż procedury biblioteki o takiej samej nazwie. Za pomocą formularzy wewnętrzna wartość true oznacza utraty IEEE wyjątków i utratę `_matherr` i `errno` funkcjonalności; oznacza to drugie utraty zgodność ANSI. Jednak wewnętrzna formularze znacznie przyspieszyć floating point obciążający programy, a wiele programów problemy dotyczące zgodności są o niewielkiej wartości praktyczne.  
   

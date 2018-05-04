@@ -1,27 +1,22 @@
 ---
-title: "Podsumowanie wyrażeń | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Podsumowanie wyrażeń | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e8d3317a77093855a4f61d027f5f37f60d1b41e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 456a9b98c260107f07c302174e4d9f95d6a62aa6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-expressions"></a>Podsumowanie wyrażeń
 *wyrażenia podstawowe*:  
@@ -34,12 +29,12 @@ ms.lasthandoff: 12/21/2017
  **(***wyrażenie***)**   
   
  *wyrażenie*:  
- *wyrażenia przypisania*  
+ *assignment-expression*  
   
  *wyrażenie***,***wyrażenia przypisania*   
   
  *wyrażenia*:  
- *wyrażenia warunkowego*  
+ *Wyrażenia warunkowego*  
   
  *wyrażenia warunkowego*:  
  *wyrażenie logiczne OR*  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
  *wyrażenia logicznego lub***?**   *wyrażenie***:***wyrażenia warunkowego*   
   
  *wyrażenia przypisania*:  
- *wyrażenia warunkowego*  
+ *Wyrażenia warunkowego*  
   
  *wyrażenie jednoargumentowe operator przypisania z wyrażenia przypisania*  
   
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
  *Operatory przyrostka wyrażenie***[***wyrażenie***]**   
   
- *wyrażenie przyrostek***(***lista wyrażeń argument* opt**)**   
+ *wyrażenie przyrostek***(***lista wyrażeń argument* opt **)**   
   
  *Operatory przyrostka wyrażenie***.**   *Identyfikator*  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
  *Operatory przyrostka wyrażenia*  **--**  
   
  *Lista wyrażeń argument*:  
- *wyrażenia przypisania*  
+ *assignment-expression*  
   
  *Lista wyrażeń argument***,***wyrażenia przypisania*   
   
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
  *operator jednoargumentowy*  
   
- *wyrażenie CAST*  
+ *cast-expression*  
   
  **sizeof***wyrażenie jednoargumentowe*   
   
@@ -92,10 +87,10 @@ ms.lasthandoff: 12/21/2017
  *wyrażenie CAST*:  
  *wyrażenie jednoargumentowe*  
   
- **(***nazwy typu***)***wyrażenie cast*   
+ **(***nazwy typu***)***wyrażenie cast*  
   
  *wyrażenia mnożenia*:  
- *wyrażenie CAST*  
+ *cast-expression*  
   
  *wyrażenia mnożenia***\****wyrażenie cast*   
   
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/21/2017
   
  *wyrażenie relacyjne***\<***shift wyrażenie*   
   
- *wyrażenie relacyjne***>***wyrażenie relacyjne wyrażenia przesunięcia*  **\< =**  *shift wyrażenie*   
+ *wyrażenie relacyjne***>***wyrażenie relacyjne wyrażenia przesunięcia* **\< =** *shift wyrażenie*   
   
  *wyrażenie relacyjne***>=***shift wyrażenie*   
   
@@ -146,7 +141,7 @@ ms.lasthandoff: 12/21/2017
  *wraz z wartościami granicznymi wyrażenie OR*:  
  *wyrażenie OR-na wyłączność*  
   
- *wraz z wartościami granicznymi wyrażenie OR***&#124;** *wyłącznie OR-wyrażenie*   
+ *wraz z wartościami granicznymi wyrażenie OR***&#124;***wyłącznie OR-wyrażenie*   
   
  *i wyrażenie logiczne*:  
  *wraz z wartościami granicznymi wyrażenie OR*  
@@ -156,7 +151,7 @@ ms.lasthandoff: 12/21/2017
  *wyrażenia logicznego lub*:  
  *i wyrażenie logiczne*  
   
- *wyrażenia logicznego lub***&#124; &#124;** *-i wyrażenie logiczne*   
+ *wyrażenia logicznego lub***&#124;&#124;***-i wyrażenie logiczne*   
   
 ## <a name="see-also"></a>Zobacz też  
  [Gramatyka struktury fazy](../c-language/phrase-structure-grammar.md)

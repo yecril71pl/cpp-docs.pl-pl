@@ -1,32 +1,27 @@
 ---
-title: "Porady: interfejs między kodem obsługi wyjątków a innym kodem | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: interfejs między kodem obsługi wyjątków a innym kodem | Dokumentacja firmy Microsoft'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59838fa1797fc87561b081d40143693dea385668
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2cf2216ba75912520f744f0f0331a50520aa895
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Porady: interfejs między kodem obsługi wyjątków a innym kodem
 W tym artykule opisano sposobu wdrażania spójne obsługi wyjątków w module języka C++, a także tłumaczenie tych wyjątków do i z kodów błędów na granicach wyjątek.  
   
- Czasami ma moduł C++ do interfejsu z kodem, który nie używa wyjątków (z systemem innym niż wyjątkowych kodu). Takiego interfejsu jest nazywany *granic wyjątek*. Na przykład można wywołać funkcji Win32 `CreateFile` programu C++. `CreateFile`nie zgłaszają wyjątki; Zamiast tego ustawia kody błędów, które mogą zostać pobrane przez `GetLastError` funkcji. W przypadku nieuproszczony program w języku C++, następnie w nim prawdopodobnie preferowane spójne wyjątek na podstawie zasad obsługi błędów. I prawdopodobnie nie chcesz abandon wyjątki tak, ponieważ połączenie z innym kodem kodu i nie chcesz mieszać zasady na podstawie wyjątku i systemem wyjątek Błąd w module języka C++.  
+ Czasami ma moduł C++ do interfejsu z kodem, który nie używa wyjątków (z systemem innym niż wyjątkowych kodu). Takiego interfejsu jest nazywany *granic wyjątek*. Na przykład można wywołać funkcji Win32 `CreateFile` programu C++. `CreateFile` nie zgłaszają wyjątki; Zamiast tego ustawia kody błędów, które mogą zostać pobrane przez `GetLastError` funkcji. W przypadku nieuproszczony program w języku C++, następnie w nim prawdopodobnie preferowane spójne wyjątek na podstawie zasad obsługi błędów. I prawdopodobnie nie chcesz abandon wyjątki tak, ponieważ połączenie z innym kodem kodu i nie chcesz mieszać zasady na podstawie wyjątku i systemem wyjątek Błąd w module języka C++.  
   
 ## <a name="calling-non-exceptional-functions-from-c"></a>Wywoływanie funkcji innym kodem z C++  
  Podczas wywoływania funkcji innym kodem z C++, będzie zawijany tej funkcji w funkcji języka C++, która wykrywa wszystkie błędy i prawdopodobnie zgłasza wyjątek. Podczas projektowania funkcja otoki, najpierw wybierz typ wyjątku gwarancji, aby zapewnić: throw nie, silne lub podstawowa. Po drugie projektowanie funkcji tak, aby wszystkie zasoby, na przykład dojść do plików, są zwalniane poprawnie, jeśli wyjątek. Zazwyczaj oznacza to, użyj wskaźniki inteligentne lub podobne menedżerowie zasobów do własnych zasobów. Aby uzyskać więcej informacji na temat projektowania, zobacz [porady: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md).  

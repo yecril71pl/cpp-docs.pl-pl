@@ -1,13 +1,10 @@
 ---
-title: "-ASSEMBLYRESOURCE (Osadź zarządzany zasób) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -ASSEMBLYRESOURCE (Osadź zarządzany zasób) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.EmbedManagedResourceFile
 - /ASSEMBLYRESOURCE
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - assemblies [C++], linking resource files
 - /ASSEMBLYRESOURCE linker option
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed8fd2b127a828eb8279671817cc4f099ae528c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88afe292905ee46c1e939d29f787055f98058dc9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (Osadź zarządzany zasób)
 ```  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
  Zarządzany zasób, do którego ma zostać osadzony w tym zestawie.  
   
  *Nazwa*  
- Opcjonalny. Nazwa logiczna zasobu; Nazwa używana do załadowania zasobu. Wartość domyślna to nazwa pliku.  
+ Opcjonalna. Nazwa logiczna zasobu; Nazwa używana do załadowania zasobu. Wartość domyślna to nazwa pliku.  
   
  Opcjonalnie można określić, czy ten plik powinien być prywatna w manifeście zestawu. Domyślnie *nazwa* jest publiczny w zestawie.  
   
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  Inne opcje konsolidatora, które mają wpływ na generowanie zestawów są:  
   
--   [/ ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
+-   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
 -   [/ ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
   

@@ -1,13 +1,10 @@
 ---
-title: "Inicjowanie typów agregacji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Inicjowanie typów agregacji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,31 +14,29 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8656d1c9f5f08e8736ee83705ea2daf9031c2446
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c12ece1767c73e94551072532bfde6b36650bca9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializing-aggregate-types"></a>Inicjowanie typów agregacji
 Typ "agregacji" jest struktura, Unią lub typ tablicy. Jeśli typ agregacji zawiera elementy członkowskie typów agregacji, rekursywnie zastosowanie zasady inicjowania.  
   
 ## <a name="syntax"></a>Składnia  
  *Inicjator*:  
- **{***listy inicjatorów***}** / * dla inicjowania agregacji    \*/  
+ **{***listy inicjatorów***}** / * dla inicjowania agregacji \*/  
   
  **{***listy inicjatorów***,}**   
   
- *listy inicjatorów*:  
- *Inicjator*  
+ *initializer-list*:  
+ *initializer*  
   
- *Lista inicjalizatora***,***inicjatora*   
+ *Lista inicjalizatora***,***inicjatora*  
   
  *Listy inicjatorów* znajduje się lista inicjatory rozdzielonych przecinkami. Każdy na liście jest wyrażenie stałe lub listy inicjatorów. W związku z tym mogą być zagnieżdżane listy inicjatorów. Ten formularz jest przydatne w przypadku inicjowania agregacji elementów członkowskich typu agregacji, jak przedstawiono w przykładach w tej sekcji. Jednak jeśli inicjator dla identyfikatora automatyczne jedno wyrażenie, go nie musisz być wyrażeniem stałym; go jedynie musi mieć odpowiedni typ dla przypisania z identyfikatorem.  
   
@@ -63,7 +58,7 @@ int x[ ] = { 0, 1, 2 }
   
  Określ rozmiar, nadaj niewłaściwą liczbę inicjatory jednak kompilator generuje błąd.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Maksymalny rozmiar tablicy jest definiowana za pomocą **size_t**. Zdefiniowany w pliku nagłówka STDDEF. H, **size_t** jest `unsigned int` z zakresem 0x00000000 do 0x7CFFFFFF.  
   

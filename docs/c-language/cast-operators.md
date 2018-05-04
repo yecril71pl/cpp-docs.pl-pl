@@ -1,13 +1,10 @@
 ---
 title: Operatory rzutowania | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - operators [C++], cast
 - type conversion, cast operators
 ms.assetid: 43b90bbd-39ef-43e6-ae5d-e8a67a01de40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3f922bb052d6a69bc8a051769bc552b1f2653de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fe1001c4a35e40b10abefd60faedcbcb6398445
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cast-operators"></a>Operatory rzutowania
 Rzutowanie typu zapewnia metodę jawnej konwersji typu obiektu w konkretnej sytuacji.  
@@ -35,7 +30,7 @@ Rzutowanie typu zapewnia metodę jawnej konwersji typu obiektu w konkretnej sytu
  *wyrażenie CAST*:  
  *wyrażenie jednoargumentowe*  
   
- **(***nazwy typu***)***wyrażenie cast*   
+ **(***nazwy typu***)***wyrażenie cast*  
   
  Kompilator traktuje *wyrażenie cast* jako typ *nazwy typu* po dokonaniu rzutowanie typu. Rzutowania może służyć do przekonwertowania obiekty dowolnego typu skalarnych do lub z innych typów skalarnych. Rzutowania jawnego typu są ograniczone przez określenia wpływu niejawne konwersje omówione w tym samym reguły [konwersje przypisań](../c-language/assignment-conversions.md). Dodatkowe ograniczenia na prezentacji mogą wynikać z rzeczywistego rozmiarów lub reprezentację określonych typów. Zobacz [magazyn typów podstawowych](../c-language/storage-of-basic-types.md) informacji na temat rzeczywistego rozmiary typów całkowitych. Aby uzyskać więcej informacji na rzutowania typów, zobacz [konwersje rzutowania typów](../c-language/type-cast-conversions.md).  
   

@@ -1,12 +1,9 @@
 ---
 title: code_seg (__declspec) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - code_seg_cpp
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - code_seg __declspec keyword
 ms.assetid: ad3c1105-15d3-4e08-b7b9-e4bd9d7b6aa0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae69cd9e88b97a31dda86648d86e143ab9bd5d40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70477759046c153bf78d7a870492a332210cca5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="codeseg-declspec"></a>code_seg (__declspec)
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  `code_seg` Deklaracji atrybutu nazwy segment pliku wykonywalnego tekst w pliku .obj, w którym będzie przechowywany kod obiektu funkcja lub funkcje elementu członkowskiego klasy.  
   

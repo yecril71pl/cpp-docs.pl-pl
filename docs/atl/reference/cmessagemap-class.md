@@ -1,12 +1,9 @@
 ---
 title: Klasa CMessageMap | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CMessageMap
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04aff6922358048fcbd330096eb26a412cdb75ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187d9964da0929516207a67b0e3a769649fc375b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cmessagemap-class"></a>Klasa CMessageMap
 Ta klasa umożliwia mapy wiadomości obiektu jako dostępu przez inny obiekt.  
@@ -52,7 +47,7 @@ class ATL_NO_VTABLE CMessageMap
 |[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Uzyskuje dostęp do mapy komunikatów w `CMessageMap`-klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CMessageMap`jest to abstrakcyjna klasa podstawowa umożliwiająca komunikat obiektu mapy można uzyskać dostęp przez inny obiekt. Aby dla obiekt do udostępnienia jej mapy komunikatów, jej klasa musi pochodzić od `CMessageMap`.  
+ `CMessageMap` jest to abstrakcyjna klasa podstawowa umożliwiająca komunikat obiektu mapy można uzyskać dostęp przez inny obiekt. Aby dla obiekt do udostępnienia jej mapy komunikatów, jej klasa musi pochodzić od `CMessageMap`.  
   
  ATL używa `CMessageMap` zawarte pomocy technicznej systemu windows i łańcucha mapy wiadomości dynamicznych. Na przykład wszystkie klasy zawierające [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) obiekt musi pochodzić od `CMessageMap`. Poniższy kod jest pobierana z [SUBEDIT](../../visual-cpp-samples.md) próbki. Za pomocą [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` automatycznie pochodną klasy `CMessageMap`.  
   
@@ -65,7 +60,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
-##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
+##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  
  Uzyskuje dostęp do mapy komunikatów identyfikowane przez `dwMsgMapID` w `CMessageMap`-klasy.  
   
 ```

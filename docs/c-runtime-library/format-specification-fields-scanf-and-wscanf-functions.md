@@ -1,13 +1,10 @@
 ---
 title: 'Pola specyfikacji formatu: funkcji wscanf | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr80.dll
 - msvcr110.dll
@@ -30,24 +27,22 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2286d7a6b82cf917c264cc43b82dec3939af6d94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c99b951e0cbbb5d2a295eb336a856bdb6c4cc0e1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Pola specyfikacji formatu dla funkcji wscanf
 Informacje w tym miejscu ma zastosowanie do całej `scanf` rodziny funkcji, łącznie z wersjami bezpiecznego i opisano symbole używane mówić `scanf` działa jak przeanalizować strumienia wejściowego, takich jak strumień wejściowy `stdin` dla `scanf`, na wartości, które są wstawiane do zmiennych programu.  
   
  Specyfikacji formatu ma następujący format:  
   
- `%`[`*`] [[szerokość](../c-runtime-library/scanf-width-specification.md)] [{[h &#124; l &#124; wszystki &#124; Komputerach 64 &#124; L](../c-runtime-library/scanf-width-specification.md)}][typu](../c-runtime-library/scanf-type-field-characters.md)  
+ `%`[`*`] [[szerokość](../c-runtime-library/scanf-width-specification.md)] [{[h &#124; l &#124; ll &#124; komputerach 64 &#124; L](../c-runtime-library/scanf-width-specification.md)}][typu](../c-runtime-library/scanf-type-field-characters.md)  
   
  `format` Argument określa interpretacji danych wejściowych i może zawierać jeden lub więcej z następujących czynności:  
   

@@ -2,11 +2,8 @@
 title: Potwierdzanie i komunikaty dostarczone przez użytkownika (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - '#error%2C assert%2C static_assert [C++]'
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3465202908cb0ca375ab5dcc77a085b208071f3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93798dadee3e4270d82eac84a794c6133c05c07
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Potwierdzanie i komunikaty dostarczone przez użytkownika (C++)
 C++ języka obsługuje trzy obsługi błędów mechanizmy ułatwiające debugowania aplikacji: [dyrektywa #error](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) — słowo kluczowe i [assert — makro, _assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) makra. Wszystkie trzy mechanizmy emitują komunikaty o błędach a dwa testują również potwierdzenia oprogramowania. Potwierdzenie oprogramowania określa warunek, który będzie mieć wartość true w określonym punkcie w programie. Jeśli potwierdzenia w czasie kompilacji zakończą się niepowodzeniem, kompilator generuje komunikat diagnostyczny i błąd kompilacji. Jeśli potwierdzenia czasu wykonania nie powiodą się, system operacyjny wysyła komunikat diagnostyczny i zamyka aplikację.  
@@ -44,7 +39,7 @@ C++ języka obsługuje trzy obsługi błędów mechanizmy ułatwiające debugowa
   
 ## <a name="see-also"></a>Zobacz też  
  [#error — dyrektywa (C/C++)](../preprocessor/hash-error-directive-c-cpp.md)   
- [Assert — makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
+ [assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
  [_ASSERT, _asserte —, _ASSERT_EXPR makra](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)   
  [static_assert](../cpp/static-assert.md)   
  [_Static_assert — makro](../c-runtime-library/reference/static-assert-macro.md)   

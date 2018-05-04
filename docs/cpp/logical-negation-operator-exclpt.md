@@ -1,12 +1,9 @@
 ---
-title: 'Operator logiczny negacji: ! | Dokumentacja firmy Microsoft'
-ms.custom: 
+title: 'Operator logiczny negacji: ! | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '!'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - NOT operator
 - logical negation
 ms.assetid: 650add9f-a7bc-426c-b01d-5fc6a81c8b62
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f63d36fc5974241fb624dd3a2afc863142516e9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b64e9887e51666405d3c6c106b40c99528ea4510
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-negation-operator-"></a>Operator logiczny negacji: !
 ## <a name="syntax"></a>Składnia  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Uwagi  
  Operator logiczny negacji (**!**) odwraca znaczenie jej argument. Argument musi być typu arytmetycznego lub wskaźnikowego (lub wyrażenie obliczane do typu arytmetycznego lub wskaźnikowego). Argument operacji jest niejawnie przekonwertować na typ `bool`. Wynik jest **true** Jeśli przekonwertowanego argument operacji jest **false**; wynik jest **false** Jeśli przekonwertowanego argument operacji jest **true**. Wynik jest typu `bool`.  
   
- Wyrażenie *e*, wyrażenie jednoargumentowe **!** *e* jest równoznaczne z wyrażeniem **(***e* `==` 0), z wyjątkiem przypadków, w których przeciążone operatory są zaangażowane.  
+ Wyrażenie *e*, wyrażenie jednoargumentowe **! *** e* jest równoznaczne z wyrażeniem **(*** e* `==` 0), z wyjątkiem przypadków, w których przeciążone operatory są zaangażowane.  
   
 ## <a name="operator-keyword-for-"></a>Operator — słowo kluczowe dla!  
  **Nie** operator jest odpowiednikiem tekst **!**. Istnieją dwa sposoby **nie** operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub skompiluj z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).  

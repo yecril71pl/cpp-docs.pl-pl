@@ -1,13 +1,10 @@
 ---
-title: "Operatory logiczne języka C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Operatory logiczne języka C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - '&& operator'
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0308b4d3531c52b229771629e245af0b772ec5d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f92adbeab4175178be8f41a09c4455d8a581131
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-logical-operators"></a>Operatory logiczne języka C
 Operatory logiczne wykonania logicznej- i (**&&**) i operatora logicznego OR ( `||` ) operacji.  
@@ -45,7 +40,7 @@ Operatory logiczne wykonania logicznej- i (**&&**) i operatora logicznego OR ( `
  *wyrażenia logicznego lub*:  
  *i wyrażenie logiczne*  
   
- *wyrażenia logicznego lub***&#124; &#124;** *-i wyrażenie logiczne*   
+ *wyrażenia logicznego lub***&#124;&#124;***-i wyrażenie logiczne*   
   
  Operatory logiczne nie wykonuj popularne konwersje arytmetyczne. Zamiast tego umożliwiają podawanie wartości każdy argument pod względem jego odpowiednik na 0. Wynik operacji logicznej jest równa 0 lub 1. Typ wyniku jest `int`.  
   
@@ -78,4 +73,4 @@ printf( "%d" , (x == w || x == y || x == z) );
   
 ## <a name="see-also"></a>Zobacz też  
  [Operator logiczny AND: & &](../cpp/logical-and-operator-amp-amp.md)   
- [Logiczny OR Operator: &#124; &#124;](../cpp/logical-or-operator-pipe-pipe.md)
+ [Logiczny OR Operator:&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

@@ -1,12 +1,9 @@
 ---
-title: "Połączenia nazw z zakresem pliku | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Połączenia nazw z zakresem pliku | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - external linkage, scope linkage rules
 - static variables, external declarations
 ms.assetid: 38d3fa5e-1861-466e-a590-84b86f7b184e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 581d7798f4f3aaa409d843f8b7f3b5869b47407e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 770b30516d16cf9ffccaae4724b368ca8fa33be0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linkage-in-names-with-file-scope"></a>Połączenia nazw z zakresem pliku
 Mają zastosowanie następujące reguły połączenie nazwy (inne niż `typedef` i nazwy modułu wyliczającego) z zakresem pliku:  
@@ -42,7 +37,7 @@ Mają zastosowanie następujące reguły połączenie nazwy (inne niż `typedef`
   
 -   Innych nazw z zakresem pliku ma połączenie zewnętrzne.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
 -   Jeśli nazwy funkcji z zakresem pliku jest jawnie zadeklarowana jako **wbudowanego**, ma połączenie zewnętrzne, jeśli zostanie on uruchomiony lub odwołanie do jego adres. W związku z tym jest możliwe w dla funkcji z zakresem pliku mieć powiązanie wewnętrzne lub zewnętrzne.  
   

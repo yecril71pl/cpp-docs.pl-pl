@@ -1,13 +1,10 @@
 ---
-title: "Typowe problemy przy migracji 64-bitowe języka Visual C++ | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Typowe problemy przy migracji 64-bitowe języka Visual C++ | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea3690e04106f0836d236eefee4acd9dda3a82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab4b8a8e693a9e1a87ddb3a06fe609416808d3dc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Typowe problemy przy migracji Visual C++ w wersji 64-bitowej
 
@@ -41,7 +36,7 @@ Korzystając z programu Visual C++ do tworzenia aplikacji do uruchomienia w 64-b
   
 -   `size_t`, `time_t`, i `ptrdiff_t` wartości 64-bitowym na 64-bitowych systemach operacyjnych Windows.  
   
--   `time_t`jest to wartość 32-bitowego w 32-bitowych systemach operacyjnych Windows w wersjach programu Visual C++ przed Visual C++ 2005. `time_t`jest teraz 64-bitową liczbę całkowitą domyślnie. Aby uzyskać więcej informacji, zobacz [zarządzanie czasem](../c-runtime-library/time-management.md).  
+-   `time_t` jest to wartość 32-bitowego w 32-bitowych systemach operacyjnych Windows w wersjach programu Visual C++ przed Visual C++ 2005. `time_t` jest teraz 64-bitową liczbę całkowitą domyślnie. Aby uzyskać więcej informacji, zobacz [zarządzanie czasem](../c-runtime-library/time-management.md).  
   
      Należy zwrócić uwagę w przypadku gdy ma kod `int` wartość i przetwarza je jako `size_t` lub `time_t` wartość. Jest możliwe, że liczba wzrostu może być większe niż 32-bitową liczbą i dane zostaną obcięte podczas jego jest przekazywane z powrotem do `int` magazynu.  
   

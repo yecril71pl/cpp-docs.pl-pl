@@ -1,9 +1,9 @@
 ---
-title: "-ograniczająca - (standardów zgodność) | Dokumentacja firmy Microsoft"
+title: -ograniczająca - (standardów zgodność) | Dokumentacja firmy Microsoft
 ms.date: 11/11/2016
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -15,17 +15,15 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ ograniczająca-(standardów zgodność)
 
@@ -275,7 +273,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-Jeśli T reprezentuje jeden z typów zerem ciągu jest wyjątek ważne tego wspólnego wzorca (na przykład `const char *`, `const char16_t *`i tak dalej) i rzeczywisty argument `?:` jest ciągiem literału odpowiedniego typu. C ++ 17 zmieniła semantykę języka C ++ 14. W związku z tym kod w przykładzie 2 jest akceptowany w obszarze **/std:c ++ 14** i odrzucone w obszarze **/std:c ++ 17** podczas **/Zc:ternary** lub **/permissive-**jest używany.
+Jeśli T reprezentuje jeden z typów zerem ciągu jest wyjątek ważne tego wspólnego wzorca (na przykład `const char *`, `const char16_t *`i tak dalej) i rzeczywisty argument `?:` jest ciągiem literału odpowiedniego typu. C ++ 17 zmieniła semantykę języka C ++ 14. W związku z tym kod w przykładzie 2 jest akceptowany w obszarze **/std:c ++ 14** i odrzucone w obszarze **/std:c ++ 17** podczas **/Zc:ternary** lub **/permissive-** jest używany.
 
 ```cpp
 // Example 2: exception from the above

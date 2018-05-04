@@ -1,29 +1,24 @@
 ---
-title: "for — instrukcja (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: for — instrukcja (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8358af0cd6784b1974767456602350a8ccf1c57f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38181a43134c35c4db1db3d78a79d3338934b7d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="for-statement-c"></a>for — instrukcja (C++)
 Wykonuje instrukcję wielokrotnie, dopóki warunek przestaje być prawdziwy. Aby uzyskać informacji na temat zakresu na podstawie instrukcji, zobacz [opartej na zakresie — instrukcja (C++)](../cpp/range-based-for-statement-cpp.md).  
@@ -45,7 +40,7 @@ for ( init-expression ; cond-expression ; loop-expression )
 |Nazwa składni|Kiedy wykonywane|Opis|  
 |-----------------|-------------------|-----------------|  
 |`init-expression`|Przed wszystkie inne elementy **dla** instrukcji `init-expression` jest wykonywane tylko raz. Kontrola następnie przechodzi do `cond-expression`.|Często używane do zainicjowania indeksów pętli. Może zawierać wyrażenia lub deklaracje.|  
-|`cond-expression`|Przed wykonaniem każdej iteracji `statement`, łącznie z pierwszej iteracji. `statement`jest wykonywane tylko wtedy, gdy `cond-expression` zwraca wartość true (różną od zera).|Wyrażenie obliczane do typu całkowitoliczbowego lub typu klasy, która ma jednoznaczną konwersję na typ całkowitoliczbowy. Normalnie używane do sprawdzania kryteriów zakończenia pętli for.|  
+|`cond-expression`|Przed wykonaniem każdej iteracji `statement`, łącznie z pierwszej iteracji. `statement` jest wykonywane tylko wtedy, gdy `cond-expression` zwraca wartość true (różną od zera).|Wyrażenie obliczane do typu całkowitoliczbowego lub typu klasy, która ma jednoznaczną konwersję na typ całkowitoliczbowy. Normalnie używane do sprawdzania kryteriów zakończenia pętli for.|  
 |`loop-expression`|Na koniec każdej iteracji `statement`. Po `loop-expression` jest wykonywane, `cond-expression` oceny.|Zwykle jest używane do zwiększania indeksów pętli.|  
   
  W poniższych przykładach pokazano różne sposoby stosowania `for` instrukcji.  
@@ -75,7 +70,7 @@ int main() {
     // Output: 012  
 ```  
   
- `init-expression`i `loop-expression` może zawierać wiele instrukcji rozdzielonych przecinkami. Na przykład:  
+ `init-expression` i `loop-expression` może zawierać wiele instrukcji rozdzielonych przecinkami. Na przykład:  
   
 ```cpp  
 #include <iostream>  
@@ -93,7 +88,7 @@ int main(){
     i + j = 19  
 ```  
   
- `loop-expression`może być zwiększany lub zmniejszany lub zmodyfikowany w inny sposób.  
+ `loop-expression` może być zwiększany lub zmniejszany lub zmodyfikowany w inny sposób.  
   
 ```cpp  
 #include <iostream>  
@@ -159,7 +154,7 @@ int main(){
   
 ## <a name="see-also"></a>Zobacz też  
  [Iteracja — instrukcje](../cpp/iteration-statements-cpp.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
  [while — instrukcja (C++)](../cpp/while-statement-cpp.md)   
  [czy-while — instrukcja (C++)](../cpp/do-while-statement-cpp.md)   
  [Range-based for, instrukcja (C++)](../cpp/range-based-for-statement-cpp.md)

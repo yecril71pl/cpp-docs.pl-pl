@@ -2,11 +2,8 @@
 title: Klasa CSnapInPropertyPageImpl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInPropertyPageImpl
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fc1135f02c31c644d7d149900bbaa755a52c579
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13714553bdf926b00bd4dd76e039d89c7f78f959
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Klasa CSnapInPropertyPageImpl
 Ta klasa dostarcza metody wykonywania obiekt strony właściwości przystawki.  
@@ -91,7 +86,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 |[CSnapInPropertyPageImpl::m_psp](#m_psp)|Windows **PROPSHEETPAGE** struktury używane przez `CSnapInPropertyPageImpl` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CSnapInPropertyPageImpl`udostępnia podstawową implementację dla obiekt strony właściwości przystawki. Podstawowe funkcje strony właściwości przystawki są implementowane za pomocą kilku różnych interfejsach i mapowania typów.  
+ `CSnapInPropertyPageImpl` udostępnia podstawową implementację dla obiekt strony właściwości przystawki. Podstawowe funkcje strony właściwości przystawki są implementowane za pomocą kilku różnych interfejsach i mapowania typów.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `CDialogImplBase`  
@@ -101,7 +96,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsnap.h  
   
-##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
+##  <a name="canceltoclose"></a>  CSnapInPropertyPageImpl::CancelToClose  
  Wywołanie tej funkcji po dokonaniu zmiany odzyskać danych na stronie modalny arkusz właściwości.  
   
 ```
@@ -113,7 +108,7 @@ void CancelToClose();
   
  `CancelToClose` Funkcji członkowskiej nie działa w niemodalnego arkusza właściwości, ponieważ nie ma niemodalnego arkusza właściwości **anulować** przycisk domyślny.  
   
-##  <a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
+##  <a name="csnapinpropertypageimpl"></a>  CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
  Konstruuje `CSnapInPropertyPageImpl` obiektu.  
   
 ```
@@ -127,7 +122,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 ### <a name="remarks"></a>Uwagi  
  Aby zainicjować podstawowej struktury, należy wywołać [CSnapInPropertyPageImpl::Create](#create).  
   
-##  <a name="create"></a>CSnapInPropertyPageImpl::Create  
+##  <a name="create"></a>  CSnapInPropertyPageImpl::Create  
  Wywołanie tej funkcji, aby zainicjować struktury strony właściwości.  
   
 ```
@@ -140,8 +135,8 @@ HPROPSHEETPAGE Create();
 ### <a name="remarks"></a>Uwagi  
  Należy najpierw wywołać [CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl) przed wywołaniem tej funkcji.  
   
-##  <a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
- `m_psp`jest strukturą, której członkowie przechowywania właściwości **PROPSHEETPAGE**.  
+##  <a name="m_psp"></a>  CSnapInPropertyPageImpl::m_psp  
+ `m_psp` jest strukturą, której członkowie przechowywania właściwości **PROPSHEETPAGE**.  
   
 ```
 PROPSHEETPAGE m_psp;
@@ -152,7 +147,7 @@ PROPSHEETPAGE m_psp;
   
  Więcej informacji dotyczących tej struktury, w tym listę jej członków, zobacz [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) w zestawie Windows SDK.  
   
-##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
+##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  Ta funkcja elementu członkowskiego jest wywoływana, gdy użytkownik kliknie **OK** lub **Zastosuj teraz** przycisku.  
   
 ```
@@ -169,7 +164,7 @@ BOOL OnApply();
   
  Domyślna implementacja `OnApply` zwraca **TRUE**.  
   
-##  <a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
+##  <a name="onhelp"></a>  CSnapInPropertyPageImpl::OnHelp  
  Ta funkcja elementu członkowskiego jest wywoływana, gdy użytkownik kliknie **pomocy** przycisk strony właściwości.  
   
 ```
@@ -179,7 +174,7 @@ void OnHelp();
 ### <a name="remarks"></a>Uwagi  
  Przesłonić tę funkcję elementu członkowskiego, aby wyświetlić Pomoc do strony właściwości.  
   
-##  <a name="onkillactive"></a>CSnapInPropertyPageImpl::OnKillActive  
+##  <a name="onkillactive"></a>  CSnapInPropertyPageImpl::OnKillActive  
  Ta funkcja elementu członkowskiego jest wywoływana, gdy strona nie jest już stroną aktywną.  
   
 ```
@@ -192,7 +187,7 @@ BOOL OnKillActive();
 ### <a name="remarks"></a>Uwagi  
  Przesłonić tę funkcję elementu członkowskiego do wykonywania zadań weryfikacji danych specjalne.  
   
-##  <a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
+##  <a name="onquerycancel"></a>  CSnapInPropertyPageImpl::OnQueryCancel  
  Ta funkcja elementu członkowskiego jest wywoływana, gdy użytkownik kliknie **anulować** przycisk i przed Anuluj działanie miało miejsce.  
   
 ```
@@ -207,7 +202,7 @@ BOOL OnQueryCancel();
   
  Domyślna implementacja `OnQueryCancel` zwraca **TRUE**.  
   
-##  <a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
+##  <a name="onreset"></a>  CSnapInPropertyPageImpl::OnReset  
  Ta funkcja elementu członkowskiego jest wywoływana, gdy użytkownik kliknie **anulować** przycisku.  
   
 ```
@@ -219,7 +214,7 @@ void OnReset();
   
  Przesłonić tę funkcję elementu członkowskiego, aby określić, jakie działanie ma program, gdy użytkownik kliknie **anulować** przycisku.  
   
-##  <a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
+##  <a name="onsetactive"></a>  CSnapInPropertyPageImpl::OnSetActive  
  Ta funkcja elementu członkowskiego jest wywoływana, gdy strona jest wybierany przez użytkownika i staje się stroną aktywną.  
   
 ```
@@ -234,7 +229,7 @@ BOOL OnSetActive();
   
  Domyślna implementacja zwraca **TRUE**.  
   
-##  <a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
+##  <a name="onwizardback"></a>  CSnapInPropertyPageImpl::OnWizardBack  
  Ta funkcja elementu członkowskiego jest wywoływana, gdy użytkownik kliknie **ponownie** przycisk w kreatorze.  
   
 ```
@@ -252,7 +247,7 @@ BOOL OnWizardBack();
 ### <a name="remarks"></a>Uwagi  
  Przesłonić tę funkcję elementu członkowskiego, aby określić niektóre akcje, użytkownik musi wykonać, gdy **ponownie** kliknięciu przycisku.  
   
-##  <a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
+##  <a name="onwizardfinish"></a>  CSnapInPropertyPageImpl::OnWizardFinish  
  Ta funkcja elementu członkowskiego jest wywoływana, gdy użytkownik kliknie **Zakończ** przycisk w kreatorze.  
   
 ```
@@ -265,7 +260,7 @@ BOOL OnWizardFinish();
 ### <a name="remarks"></a>Uwagi  
  Przesłonić tę funkcję elementu członkowskiego, aby określić niektóre akcje, użytkownik musi wykonać, gdy **Zakończ** kliknięciu przycisku.  
   
-##  <a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
+##  <a name="onwizardnext"></a>  CSnapInPropertyPageImpl::OnWizardNext  
  Ta funkcja elementu członkowskiego jest wywoływana, gdy użytkownik kliknie `Next` przycisk w kreatorze.  
   
 ```
@@ -283,7 +278,7 @@ BOOL OnWizardNext();
 ### <a name="remarks"></a>Uwagi  
  Przesłonić tę funkcję elementu członkowskiego, aby określić niektóre akcje, użytkownik musi wykonać, gdy `Next` kliknięciu przycisku.  
   
-##  <a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
+##  <a name="querysiblings"></a>  CSnapInPropertyPageImpl::QuerySiblings  
  Wywołanie tej funkcji Członkowskich do przesyłania dalej wiadomości do każdej strony w arkuszu właściwości.  
   
 ```
@@ -303,7 +298,7 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 ### <a name="remarks"></a>Uwagi  
  Jeśli strona zwróci wartość niezerową, arkusza właściwości nie wysyła komunikat do kolejnych stron.  
   
-##  <a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
+##  <a name="setmodified"></a>  CSnapInPropertyPageImpl::SetModified  
  Wywołanie tej funkcji Członkowskich, aby włączyć lub wyłączyć **Zastosuj teraz** przycisk według tego, czy do odpowiedniego obiektu zewnętrznego, w którym mają zostać zastosowane ustawienia na stronie właściwości.  
   
 ```

@@ -1,12 +1,9 @@
 ---
 title: _variant_t::operator = | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t::operator=
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88998f18c750e064ee8eae254ca7ee4487be7176
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0db0ea95fe3f5491780cd0297e8d3f56b6800e1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -132,37 +127,37 @@ _variant_t& operator=(
 ## <a name="remarks"></a>Uwagi  
  Operator przypisuje nową wartość do `_variant_t` obiektu:  
   
--   **Operator = (***varSrc***)** przypisuje istniejące **VARIANT** do `_variant_t` obiektu.  
+-   **Operator = (***varSrc***)** przypisuje istniejące **VARIANT** do `_variant_t` obiektu.      
   
--   **Operator = (***pVarSrc***)** przypisuje istniejące **VARIANT** do `_variant_t` obiektu.  
+-   **Operator = (***pVarSrc***)** przypisuje istniejące **VARIANT** do `_variant_t` obiektu.      
   
--   **Operator = (***var_t_Src***)** przypisuje istniejące `_variant_t` do obiektu `_variant_t` obiektu.  
+-   **Operator = (***var_t_Src***)** przypisuje istniejące `_variant_t` do obiektu `_variant_t` obiektu.      
   
--   **Operator = (***sSrc***)** przypisuje **krótki** wartość całkowitą `_variant_t` obiektu.  
+-   **Operator = (***sSrc***)** przypisuje **krótki** wartość całkowitą `_variant_t` obiektu.      
   
--   **Operator = (**`lSrc`**)** przypisuje **długi** wartość całkowitą `_variant_t` obiektu.  
+-   **Operator = (**`lSrc`**)** przypisuje **długi** wartość całkowitą `_variant_t` obiektu.      
   
--   **Operator = (***fltSrc***)** przypisuje **float** wartość liczbową `_variant_t` obiektu.  
+-   **Operator = (***fltSrc***)** przypisuje **float** wartość liczbową `_variant_t` obiektu.      
   
--   **Operator = (***dblSrc***)** przypisuje **podwójne** wartość liczbową `_variant_t` obiektu.  
+-   **Operator = (***dblSrc***)** przypisuje **podwójne** wartość liczbową `_variant_t` obiektu.      
   
--   **Operator = (***cySrc***)** przypisuje **CY** do obiektu `_variant_t` obiektu.  
+-   **Operator = (***cySrc***)** przypisuje **CY** do obiektu `_variant_t` obiektu.      
   
--   **Operator = (***bstrSrc***)** przypisuje `BSTR` do obiektu `_variant_t` obiektu.  
+-   **Operator = (***bstrSrc***)** przypisuje `BSTR` do obiektu `_variant_t` obiektu.      
   
--   **Operator = (***wstrSrc***)** przypisuje ciąg Unicode `_variant_t` obiektu.  
+-   **Operator = (***wstrSrc***)** przypisuje ciąg Unicode `_variant_t` obiektu.      
   
--   **Operator = (**`strSrc`**)** przypisuje wielobajtowe ciąg `_variant_t` obiektu.  
+-   **Operator = (**`strSrc`**)** przypisuje wielobajtowe ciąg `_variant_t` obiektu.      
   
--   **Operator = (** `bSrc` **)** przypisuje `bool` do wartości `_variant_t` obiektu.  
+-   **Operator = (** `bSrc` **)** przypisuje `bool` do wartości `_variant_t` obiektu.    
   
--   **Operator = (***pDispSrc***)** przypisuje **VT_DISPATCH** do obiektu `_variant_t` obiektu.  
+-   **Operator = (***pDispSrc***)** przypisuje **VT_DISPATCH** do obiektu `_variant_t` obiektu.      
   
--   **Operator = (***pIUnknownSrc***)** przypisuje **VT_UNKNOWN** do obiektu `_variant_t` obiektu.  
+-   **Operator = (***pIUnknownSrc***)** przypisuje **VT_UNKNOWN** do obiektu `_variant_t` obiektu.      
   
--   **Operator = (***decSrc***)** przypisuje **DZIESIĘTNĄ** do wartości `_variant_t` obiektu.  
+-   **Operator = (***decSrc***)** przypisuje **DZIESIĘTNĄ** do wartości `_variant_t` obiektu.      
   
--   **Operator = (** `bSrc` **)** przypisuje **BAJTÓW** do wartości `_variant_t` obiektu.  
+-   **Operator = (** `bSrc` **)** przypisuje **BAJTÓW** do wartości `_variant_t` obiektu.    
   
  **KOŃCOWY określonych firmy Microsoft**  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.math
 dev_langs:
@@ -17,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 358f47716ee998d5070e226ee71f865d6bfc64a4
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: ddf4a6ce7e2ad98841c20fcef5fd9639a5797852
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="math-and-floating-point-support"></a>Matematyczne i Obsługa liczb zmiennoprzecinkowych
 
@@ -129,14 +127,14 @@ Poprzednich wersji 16-bitowych Microsoft C/C++ i Microsoft Visual C++ obsługiwa
 [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Mnoży liczba zmiennoprzecinkowa przez całkowitą potęgą liczby **flt_radix —**
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Ustawia słowa formantu liczb zmiennoprzecinkowych
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Włącza lub wyłącza instrukcje SSE2
-[SIN sinf —, sinl —](../c-runtime-library/reference/sin-sinf-sinl.md)|Oblicza sinus
+[sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Oblicza sinus
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Oblicza sinus hiperboliczny
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Oblicza pierwiastek kwadratowy
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Pobiera słowa stanu liczb zmiennoprzecinkowych
 [strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Konwertuje ciąg na **liczb zmiennoprzecinkowych**
 [strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Konwertuje ciąg na **długi** **podwójne**
-[tan tanf —, tanl —](../c-runtime-library/reference/tan-tanf-tanl.md)|Oblicza tangens
-[TANH tanhf —, tanhl —](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Oblicza tangens hiperboliczny
+[tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Oblicza tangens
+[tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Oblicza tangens hiperboliczny
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Oblicza funkcji gamma
 [trunc, truncf, truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|Obcina część ułamkowa
 [_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Konwertuje ciąg typu wide do **podwójne**
@@ -144,4 +142,4 @@ Poprzednich wersji 16-bitowych Microsoft C/C++ i Microsoft Visual C++ obsługiwa
 
 ## <a name="see-also"></a>Zobacz także
 
-[Universal C procedury czasu wykonywania według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

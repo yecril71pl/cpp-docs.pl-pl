@@ -1,13 +1,10 @@
 ---
-title: "Punkty połączenia ATL | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Punkty połączenia ATL | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ATL, connection points
 - connection points [C++], about connection points
 ms.assetid: 17d76165-5f83-4f95-b36d-483821c247a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2063bd35627fd86c0cab82e4e50e5e8a126ddfa7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 179f4329d55261d71d3d122e6a2601ce7e805c0f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-connection-points"></a>Punkty połączenia ATL
 Obiekt składnika jest taki, który obsługuje interfejsy wychodzących. Wychodzące interfejs sprawia, że obiekt do komunikacji z klientem. Dla każdego interfejsu wychodzącego składnika obiekt ujawnia punktu połączenia. Każdy wychodzących interfejs jest implementowany przez klienta do obiektu o nazwie zbiorniku.  

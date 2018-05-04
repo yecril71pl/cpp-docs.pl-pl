@@ -1,12 +1,9 @@
 ---
-title: "Omówienie elementu członkowskiego klasy | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Omówienie elementu członkowskiego klasy | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd280255afe98aa5ca512c63bb00623891eafc4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="class-member-overview"></a>Omówienie elementu członkowskiego klasy
 Klasy lub struktury składa się z jego elementów członkowskich. Pracy, który wykonuje klasy jest wykonywane przez funkcje elementu członkowskiego. Stan, który przechowuje jest przechowywany w jego elementów członkowskich danych. Inicjowania elementów członkowskich odbywa się przez konstruktory i oczyszczania pracy, takich jak zwalnianie pamięci i zwolnienie zasobów jest realizowane przez destruktorów. W języku C ++ 11 i nowszych, elementy członkowskie danych można i zazwyczaj powinien być inicjowane w punkcie deklaracji.  

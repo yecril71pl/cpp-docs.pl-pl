@@ -2,12 +2,9 @@
 title: Pola bitowe języka C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff6b2a37c511313bd129705da38e66380e89edae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5ecac0263f1e8ebbfe41f654f2ef2e03b2395f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Pola bitowe języka C++
 Klasy i struktury może zawierać elementów członkowskich, które zajmują mniej miejsca niż typ całkowity. Elementy te są określone jako pól bitowych. Składnia pola bitowego *deklarator elementu członkowskiego* specyfikacji w następujący sposób:  
@@ -63,7 +58,7 @@ Układ pamięci Date — obiekt
   
  Należy pamiętać, że `nYear` jest 8 bitów i spowodowałoby przepełnienie granic programu word z zadeklarowanym typem **niepodpisane krótko**. W związku z tym rozpoczyna się na początku nowego **niepodpisane krótko**. Nie jest konieczne, wszystkie-bitowy pola mieści się w jeden obiekt typu źródłowego; nowe jednostki magazynu są przydzielane zgodnie z liczbą bitów w deklaracji.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Porządkowanie danych zadeklarowany jako pola bitowego jest z bitowego niskiego na wysoki, jak pokazano na rysunku powyżej.  
   
@@ -85,7 +80,7 @@ struct Date {
   
  Układ pamięci jest, jak pokazano na poniższej ilustracji.  
   
- ![Układ obiektu Data zero &#45; długość pola bitowego](../cpp/media/vc38uq2.png "vc38UQ2")  
+ ![Układ Date — obiekt o wartości zero&#45;długość pola bitowego](../cpp/media/vc38uq2.png "vc38UQ2")  
 Układ obiekt Date pole bitowe o zerowej długości  
   
  Podstawowy typ pola bitowego musi być typem całkowitym, zgodnie z opisem w [podstawowych typów](../cpp/fundamental-types-cpp.md).  

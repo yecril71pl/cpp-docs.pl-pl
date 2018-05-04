@@ -1,12 +1,9 @@
 ---
-title: "Bieżący czas: Klasy automatyzacji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Bieżący czas: Klasy automatyzacji | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - Automation classes, current time
 - time, getting current
 ms.assetid: cc967f17-1189-4cf3-85f9-1969462d5f72
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3031d6ff22daf996ef2ab6fccff61fac313773a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3a6f1792dd74999a2ee7bcb6e9f24b958539e7f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="current-time-automation-classes"></a>Bieżący czas: Klasy automatyzacji
 Poniższa procedura przedstawia sposób tworzenia `COleDateTime` i zainicjować go przy użyciu bieżącego czasu.  
   
 #### <a name="to-get-the-current-time"></a>Aby uzyskać bieżącą godzinę  
   
-1.  Utwórz `COleDateTime` obiektu.  
+1.  Tworzy obiekt `COleDateTime`.  
   
 2.  Wywołanie `GetCurrentTime`.  
   

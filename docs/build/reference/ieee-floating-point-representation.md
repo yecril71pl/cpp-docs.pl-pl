@@ -1,13 +1,10 @@
 ---
 title: Odwzorowanie liczby zmiennoprzecinkowej IEEE | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d209d1c2a7429515383f8ebe80c621d6f2b15890
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ieee-floating-point-representation"></a>Odwzorowanie liczby zmiennoprzecinkowej IEEE
 Microsoft Visual C++ jest zgodne ze standardami liczbowych IEEE. Istnieją trzy wewnętrznego odmian liczb rzeczywistych. Rzeczywiste\*4 i rzeczywistych\*8 są używane w programie Visual C++. Rzeczywiste\*4 jest zadeklarowane za pomocą słowa **float**. Rzeczywiste\*8 jest zadeklarowane za pomocą słowa **podwójne**. W programowaniu Windows 32-bitowych `long double` mapowana na typ danych **podwójne**. Jest jednak obsługa języka zestawu obliczenia przy użyciu rzeczywistego * typ danych 10.  

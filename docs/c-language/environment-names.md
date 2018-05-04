@@ -1,27 +1,22 @@
 ---
-title: "Nazwy środowiska | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Nazwy środowiska | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 9af409a5-e724-465a-9a21-88d3586c2e92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efae64f64ef6b5ed92dffafb9f83a0e32ab38513
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a1eea91a6955705c062a9c8509cbdeb8dc4598d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-names"></a>Nazwy środowiska
 **ANSI 4.10.4.4** zbiór nazwy środowiska, a także metoda zmieniania listy środowiska używane przez [getenv —](../c-runtime-library/reference/getenv-wgetenv.md) — funkcja  

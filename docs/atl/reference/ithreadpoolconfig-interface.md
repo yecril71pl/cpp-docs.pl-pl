@@ -1,12 +1,9 @@
 ---
 title: Interfejs IThreadPoolConfig | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IThreadPoolConfig
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IThreadPoolConfig interface
 ms.assetid: 69e642bf-6925-46e6-9a37-cce52231b1cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d967720778305eace4eff9ad8b2163456fb4bb46
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 237671ce971d54209f3889fd93396fb4e0a42fee
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ithreadpoolconfig-interface"></a>Interfejs IThreadPoolConfig
 Ten interfejs umożliwia stosowanie metod konfigurowania puli wątków.  
@@ -62,7 +57,7 @@ __interface
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlutil.h  
   
-##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
  Wywołaj tę metodę, aby pobrać liczbę wątków w puli.  
   
 ```
@@ -79,7 +74,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
-##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
  Wywołanie tej metody, aby uzyskać maksymalny czas (w milisekundach) oczekiwania na wątek zamknięcia puli wątków.  
   
 ```
@@ -96,7 +91,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="example"></a>Przykład  
  Zobacz [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
  Wywołanie tej metody, aby ustawić liczbę wątków w puli.  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="example"></a>Przykład  
  Zobacz [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
  Wywołaj tę metodę, aby ustawić maksymalny czas (w milisekundach) oczekiwania na wątek zamknięcia puli wątków.  
   
 ```

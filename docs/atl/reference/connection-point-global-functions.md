@@ -1,12 +1,9 @@
 ---
-title: "Funkcje globalne punkt połączenia z | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje globalne punkt połączenia z | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlAdvise
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7f6fc3d2a0b51f88952dd720955367b1dfe9d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dc6cd11cb1f04ba877524cd1ae6134a7dd93d09
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-point-global-functions"></a>Globalne funkcje punktu połączenia
 Funkcje te zapewniają obsługę punkty połączenia i sink mapy.  
@@ -44,7 +39,7 @@ Funkcje te zapewniają obsługę punkty połączenia i sink mapy.
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
    
-##  <a name="atladvise"></a>AtlAdvise  
+##  <a name="atladvise"></a>  AtlAdvise  
  Tworzy połączenie między punktem połączenia obiektu a zbiornikiem klienta.  
   
 > [!IMPORTANT]
@@ -80,7 +75,7 @@ HRESULT    AtlAdvise(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
-##  <a name="atlunadvise"></a>AtlUnadvise  
+##  <a name="atlunadvise"></a>  AtlUnadvise  
  Przerywa połączenie nawiązane za pośrednictwem [AtlAdvise](#atladvise).  
   
 > [!IMPORTANT]
@@ -109,7 +104,7 @@ HRESULT    AtlUnadvise(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
-##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
+##  <a name="atladvisesinkmap"></a>  AtlAdviseSinkMap  
  Wywołaj tę funkcję, aby przeprowadzić operację advise lub unadvise na wszystkich wpisach w mapie zdarzeń zbiornika obiektu.  
   
 > [!IMPORTANT]
@@ -120,7 +115,7 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *pT*  
+ *PT*  
  [in] Wskaźnik do obiektu zawierającego mapy ujścia.  
   
  `bAdvise`  

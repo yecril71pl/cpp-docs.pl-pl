@@ -2,11 +2,8 @@
 title: Klasa CDynamicChain | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDynamicChain
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08f6d09546d4514950b5b45ffb9494116294d051
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdynamicchain-class"></a>Klasa CDynamicChain
 Ta klasa zawiera metody pomocnicze dynamiczne tworzenie łańcuchów mapy komunikatów.  
@@ -64,13 +59,13 @@ class CDynamicChain
 |[CDynamicChain::SetChainEntry](#setchainentry)|Dodaje wpis mapy wiadomości do kolekcji lub modyfikuje istniejący wpis.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CDynamicChain`Zarządza kolekcją mapy komunikatów, włączanie komunikatów systemu Windows, będą kierowane w czasie wykonywania, do innego obiektu mapy wiadomości.  
+ `CDynamicChain` Zarządza kolekcją mapy komunikatów, włączanie komunikatów systemu Windows, będą kierowane w czasie wykonywania, do innego obiektu mapy wiadomości.  
   
  Aby dodać obsługę dynamiczne tworzenie łańcuchów mapy komunikatów, wykonaj następujące czynności:  
   
 -   Pochodzi z klasy `CDynamicChain`. Mapy wiadomości określ [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) makro do tworzenia łańcucha mapy komunikatów domyślną innego obiektu.  
   
--   Pochodzi z klasy, co ma być powiązane z [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap`Umożliwia obiektu do udostępnienia jej mapy wiadomości do innych obiektów.  
+-   Pochodzi z klasy, co ma być powiązane z [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` Umożliwia obiektu do udostępnienia jej mapy wiadomości do innych obiektów.  
   
 -   Wywołanie `CDynamicChain::SetChainEntry` do identyfikowania, której obiekt i komunikat, który mapuje możesz do tworzenia łańcucha.  
   
@@ -89,7 +84,7 @@ class CDynamicChain
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
-##  <a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>  CDynamicChain::CallChain  
  Określa, że komunikatów systemu Windows do innego obiektu mapy wiadomości.  
   
 ```
@@ -127,16 +122,16 @@ BOOL CallChain(
 ### <a name="remarks"></a>Uwagi  
  Wywołaj procedurę okna `CallChain`, należy określić [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) makra mapy wiadomości. Na przykład zobacz [CDynamicChain](../../atl/reference/cdynamicchain-class.md) omówienie.  
   
- `CallChain`poprzednie wywołanie wymaga [SetChainEntry](#setchainentry) do skojarzenia `dwChainID` wartości z obiektu i jego mapę komunikatów.  
+ `CallChain` poprzednie wywołanie wymaga [SetChainEntry](#setchainentry) do skojarzenia `dwChainID` wartości z obiektu i jego mapę komunikatów.  
   
-##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
  Konstruktor.  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain  
  Destruktor.  
   
 ```
@@ -146,7 +141,7 @@ CDynamicChain();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wszystkie przydzielone zasoby.  
   
-##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry  
  Usuwa określony komunikat mapy z kolekcji.  
   
 ```
@@ -160,7 +155,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="return-value"></a>Wartość zwracana  
  **Wartość TRUE,** Jeśli mapy komunikatów został pomyślnie usunięty z kolekcji. W przeciwnym razie **FALSE**.  
   
-##  <a name="setchainentry"></a>CDynamicChain::SetChainEntry  
+##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry  
  Dodaje określony komunikat mapy do kolekcji.  
   
 ```

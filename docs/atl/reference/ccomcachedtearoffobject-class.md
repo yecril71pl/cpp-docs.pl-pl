@@ -1,12 +1,9 @@
 ---
 title: Klasa CComCachedTearOffObject | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCachedTearOffObject
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89240e913f46a3522062317da8089c3ae4bd81ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1072faed01033bec9fec127318334f8a61ac29e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Klasa CComCachedTearOffObject
 Ta klasa implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) oderwania interfejsu.  
@@ -80,7 +75,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|A `CComContainedObject` obiektu pochodzi od klasy oderwania (klasa `contained`).|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComCachedTearOffObject`implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) oderwania interfejsu. Ta klasa różni się od `CComTearOffObject` w tym `CComCachedTearOffObject` ma własną **IUnknown**, niezależnie od właściciela obiektu **IUnknown** (właścicielem jest obiekt, dla którego oderwania jest tworzony). `CComCachedTearOffObject`zachowuje własną odwołania liczba na jego **IUnknown** i usuwana po jego liczba odwołań wynosi zero. Jednak po wykonaniu zapytania dla każdego z jego oderwania interfejsy, liczba odwołań obiektu właściciela **IUnknown** jest zwiększany.  
+ `CComCachedTearOffObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) oderwania interfejsu. Ta klasa różni się od `CComTearOffObject` w tym `CComCachedTearOffObject` ma własną **IUnknown**, niezależnie od właściciela obiektu **IUnknown** (właścicielem jest obiekt, dla którego oderwania jest tworzony). `CComCachedTearOffObject` zachowuje własną odwołania liczba na jego **IUnknown** i usuwana po jego liczba odwołań wynosi zero. Jednak po wykonaniu zapytania dla każdego z jego oderwania interfejsy, liczba odwołań obiektu właściciela **IUnknown** jest zwiększany.  
   
  Jeśli `CComCachedTearOffObject` implementacja oderwania jest już utworzone i interfejs oderwania zostanie zapytany o ponownie, same obiektów `CComCachedTearOffObject` obiekt zostanie ponownie użyty. Natomiast jeśli oderwania interfejs implementowany przez `CComTearOffObject` ponownie zostanie zapytany o za pośrednictwem obiektu właściciela innego `CComTearOffObject` będzie można utworzyć wystąpienia.  
   
@@ -98,7 +93,7 @@ public CComObjectRootEx<contained
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="addref"></a>CComCachedTearOffObject::AddRef  
+##  <a name="addref"></a>  CComCachedTearOffObject::AddRef  
  Zwiększa liczbę odwołanie z `CComCachedTearOffObject` obiektu o 1.  
   
 ```
@@ -108,7 +103,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość, która może być przydatne w przypadku diagnostyki i testowania.  
   
-##  <a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject  
+##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject  
  Konstruktor.  
   
 ```
@@ -122,7 +117,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>Uwagi  
  Inicjuje `CComContainedObject` — członek, [m_contained](#m_contained).  
   
-##  <a name="dtor"></a>CComCachedTearOffObject:: ~ CComCachedTearOffObject  
+##  <a name="dtor"></a>  CComCachedTearOffObject:: ~ CComCachedTearOffObject  
  Destruktor.  
   
 ```
@@ -132,7 +127,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wszystkie przydzielone zasoby i wywołania [FinalRelease](#finalrelease).  
   
-##  <a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct  
  Wywołania **m_contained::FinalConstruct** utworzyć `m_contained`, `CComContainedObject` <  `contained`> umożliwiają dostęp do interfejsu zaimplementowany przez klasę oderwania obiektu.  
   
 ```
@@ -142,14 +137,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>Wartość zwracana  
  Standard `HRESULT` wartość.  
   
-##  <a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease  
+##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease  
  Wywołania **m_contained::FinalRelease** zwolnienia `m_contained`, `CComContainedObject` <  `contained`> obiektu.  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="m_contained"></a>CComCachedTearOffObject::m_contained  
+##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) obiektu pochodzi od klasy oderwania.  
   
 ```
@@ -163,7 +158,7 @@ CcomContainedObject <contained> m_contained;
 ### <a name="remarks"></a>Uwagi  
  Metody `m_contained` dziedziczy umożliwiają dostęp do interfejsu oderwania w klasie oderwania za pośrednictwem pamięci podręcznej oderwania obiektu `QueryInterface`, `FinalConstruct`, i `FinalRelease`.  
   
-##  <a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface  
  Pobiera wskaźnik do żądanego interfejsu.  
   
 ```
@@ -184,7 +179,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  Jeśli jest żądany interfejs **IUnknown**, zwraca wskaźnik do `CComCachedTearOffObject`na własnych **IUnknown** i zwiększa liczbę odwołań. W przeciwnym razie zapytania dla interfejsu na przy użyciu klasy oderwania [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) odziedziczone metody `CComObjectRootEx`.  
 
   
-##  <a name="release"></a>CComCachedTearOffObject::Release  
+##  <a name="release"></a>  CComCachedTearOffObject::Release  
  Zmniejsza odwołanie liczba 1 i, jeśli liczba odwołań wynosi 0, usuwa `CComCachedTearOffObject` obiektu.  
   
 ```

@@ -1,27 +1,22 @@
 ---
 title: Dodawanie strony właściwości (ALT — samouczek, część 6) | Dokumentacja firmy Microsoft
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf7f0383697fbc1e23e179936a2616d1d236b5f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Dodawanie strony właściwości (ALT — Samouczek, część 6)
 Strony właściwości są zaimplementowane jako osobne obiekty COM, które pozwalają na udostępnionym, jeśli jest to wymagane. W tym kroku spowoduje wykonanie następujących zadań, które można dodać strony właściwości do kontrolki:  
@@ -104,7 +99,7 @@ Strony właściwości są zaimplementowane jako osobne obiekty COM, które pozwa
   
  Kod sprawdza ustawienie `Sides` właściwości tygodniowo. Jeśli nie powiedzie się, kod wyświetla komunikat wyświetlanie szczegółów błędu z **IErrorInfo** interfejsu. Zazwyczaj kontener prosi obiekt **ISupportErrorInfo** interfejsu i wywołania `InterfaceSupportsErrorInfo` first, aby ustalić, czy obiekt obsługuje ustawienie informacje o błędzie. Można pominąć to zadanie.  
   
- [CComPtr](../atl/reference/ccomptr-class.md) pomaga przez automatycznie obsługi liczenie odwołań, dzięki czemu nie trzeba wywołać `Release` w interfejsie. `CComBSTR`pomaga przy `BSTR` przetwarzania, dzięki czemu nie trzeba wykonać ostatecznego `SysFreeString` wywołania. Możesz także użyć jednej z różnymi klasami Konwersja ciągu, można przekonwertować `BSTR` w razie potrzeby (jest to dlaczego `USES_CONVERSION` makro jest na początku funkcji).  
+ [CComPtr](../atl/reference/ccomptr-class.md) pomaga przez automatycznie obsługi liczenie odwołań, dzięki czemu nie trzeba wywołać `Release` w interfejsie. `CComBSTR` pomaga przy `BSTR` przetwarzania, dzięki czemu nie trzeba wykonać ostatecznego `SysFreeString` wywołania. Możesz także użyć jednej z różnymi klasami Konwersja ciągu, można przekonwertować `BSTR` w razie potrzeby (jest to dlaczego `USES_CONVERSION` makro jest na początku funkcji).  
   
  Należy również ustawić stronę właściwości dirty flagi z informacją, że **Zastosuj** przycisku powinno być włączone. Dzieje się tak, gdy użytkownik zmieni wartość w **strony** polu edycji.  
   
@@ -126,7 +121,7 @@ Strony właściwości są zaimplementowane jako osobne obiekty COM, które pozwa
   
      [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides`będzie ona wywoływana podczas **WM_COMMAND** komunikat jest wysyłany z **EN_CHANGE** powiadomienia o `IDC_SIDES` formantu. `OnEnChangeSides`następnie wywołuje `SetDirty` i przekazuje `TRUE` można wskazać właściwości strony teraz jest zanieczyszczony i **Zastosuj** przycisku powinno być włączone.  
+ `OnEnChangeSides` będzie ona wywoływana podczas **WM_COMMAND** komunikat jest wysyłany z **EN_CHANGE** powiadomienia o `IDC_SIDES` formantu. `OnEnChangeSides` następnie wywołuje `SetDirty` i przekazuje `TRUE` można wskazać właściwości strony teraz jest zanieczyszczony i **Zastosuj** przycisku powinno być włączone.  
   
 ## <a name="adding-the-property-page-to-the-control"></a>Dodawanie strony właściwości do kontrolki  
  Kreator dodawania klasy ATL i Kreator strony właściwości ATL nie dodawaj stronę właściwości do formantu można automatycznie, ponieważ może istnieć wiele formantów w projekcie. Należy dodać wpis do mapy właściwości formantu.  
@@ -152,7 +147,7 @@ Strony właściwości są zaimplementowane jako osobne obiekty COM, które pozwa
   
  Następnie należy umieścić formantu na stronie sieci Web.  
   
- [Wróć do kroku 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [Do kroku 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [Wróć do kroku 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [do kroku 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Samouczek](../atl/active-template-library-atl-tutorial.md)

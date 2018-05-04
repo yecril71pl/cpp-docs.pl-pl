@@ -1,13 +1,10 @@
 ---
-title: "Przykłady skryptów rejestru | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przykłady skryptów rejestru | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c192e8bec1d32dd7d7a7953e5da72a139c7520e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-scripting-examples"></a>Przykłady skryptów rejestru
 Przykłady skryptów w tym temacie przedstawiają sposób Dodaj klucz do rejestru systemowego, Zarejestruj serwer COM rejestratora i określ wiele drzewa analizy.  
@@ -59,7 +54,7 @@ HKCU
   
  Teraz, skrypt ten dodaje podklucz, `HasASubkey`, do `MyVeryOwnKey`. Do tego podklucza dodaje zarówno `PrettyCool` podklucz (domyślnie `DWORD` wartość 55) i `ANameValue` o nazwie wartość (o wartości ciągu `WithANamedValue`).  
   
-##  <a name="_atl_register_the_registrar_com_server"></a>Zarejestruj serwer COM rejestratora  
+##  <a name="_atl_register_the_registrar_com_server"></a> Zarejestruj serwer COM rejestratora  
  Poniższy skrypt rejestruje sam serwer COM rejestratora.  
   
 ```  
@@ -102,7 +97,7 @@ HKCR
   
 -   Dodaje `ATL Registrar Class` jako domyślną wartość ciągu dla `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
   
- W drzewie analizy teraz dodaje dwa nowe podklucze do `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. Pierwszy klucz `ProgID`, pobiera domyślną wartość ciągu, która jest identyfikator ProgID. Drugi klucz `InprocServer32`, pobiera wartość domyślną ciąg `%MODULE%`, która jest wartość preprocesora wyjaśniono w sekcji [przy użyciu parametry wymienne (Rejestrator preprocesora)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), tego artykułu. `InprocServer32`pobiera również wartość nazwanego `ThreadingModel`, z wartością ciągu `Apartment`.  
+ W drzewie analizy teraz dodaje dwa nowe podklucze do `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. Pierwszy klucz `ProgID`, pobiera domyślną wartość ciągu, która jest identyfikator ProgID. Drugi klucz `InprocServer32`, pobiera wartość domyślną ciąg `%MODULE%`, która jest wartość preprocesora wyjaśniono w sekcji [przy użyciu parametry wymienne (Rejestrator preprocesora)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), tego artykułu. `InprocServer32` pobiera również wartość nazwanego `ThreadingModel`, z wartością ciągu `Apartment`.  
   
 ## <a name="specify-multiple-parse-trees"></a>Określ wiele drzewa analizy  
  Aby określić więcej niż jeden drzewo analizy w skrypcie, po prostu umieść jednym drzewie na końcu innego. Na przykład poniższy skrypt dodaje klucz, `MyVeryOwnKey`, do drzewa analizy dla obu `HKEY_CLASSES_ROOT` i `HKEY_CURRENT_USER`:  

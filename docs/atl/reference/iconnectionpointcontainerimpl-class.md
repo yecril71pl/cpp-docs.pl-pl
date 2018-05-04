@@ -1,12 +1,9 @@
 ---
 title: Klasa IConnectionPointContainerImpl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IConnectionPointContainerImpl
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5e3a6ee6790c4fa0e93fe312d6a6b840b754a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af5e8b1bc1af0a515cc8fad0500c3f7d040b1eb9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>Klasa IConnectionPointContainerImpl
 Ta klasa implementuje kontener punktu połączenia, aby zarządzanie kolekcją [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) obiektów.  
@@ -57,11 +52,11 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 |[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|Pobiera wskaźnika interfejsu do obsługującą określony identyfikator IID punktu połączenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- `IConnectionPointContainerImpl`implementuje kontener punktu połączenia, aby zarządzanie kolekcją [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) obiektów. `IConnectionPointContainerImpl`udostępnia dwie metody, które klient może wywoływać można pobrać więcej informacji na temat obiektu składnika:  
+ `IConnectionPointContainerImpl` implementuje kontener punktu połączenia, aby zarządzanie kolekcją [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) obiektów. `IConnectionPointContainerImpl` udostępnia dwie metody, które klient może wywoływać można pobrać więcej informacji na temat obiektu składnika:  
   
-- `EnumConnectionPoints`Umożliwia klienta w celu określenia, które wychodzące interfejsy obsługuje obiektu.  
+- `EnumConnectionPoints` Umożliwia klienta w celu określenia, które wychodzące interfejsy obsługuje obiektu.  
   
-- `FindConnectionPoint`Umożliwia klienta w celu określenia, czy obiekt obsługuje określony interfejs wychodzących.  
+- `FindConnectionPoint` Umożliwia klienta w celu określenia, czy obiekt obsługuje określony interfejs wychodzących.  
   
  Aby dowiedzieć się, jak za pomocą punktów połączenia w ATL, zobacz artykuł [punkty połączenia](../../atl/atl-connection-points.md).  
   
@@ -73,7 +68,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints  
+##  <a name="enumconnectionpoints"></a>  IConnectionPointContainerImpl::EnumConnectionPoints  
  Tworzy moduł wyliczający do iteracji punkty połączenia obsługiwane w obiekcie składnika.  
   
 ```
@@ -83,7 +78,7 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IConnectionPointContainer::EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460) w systemie Windows SDK.  
   
-##  <a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
+##  <a name="findconnectionpoint"></a>  IConnectionPointContainerImpl::FindConnectionPoint  
  Pobiera wskaźnika interfejsu do obsługującą określony identyfikator IID punktu połączenia.  
   
 ```

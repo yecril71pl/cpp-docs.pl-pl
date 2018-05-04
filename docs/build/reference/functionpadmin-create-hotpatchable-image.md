@@ -1,10 +1,10 @@
 ---
-title: "/ FUNCTIONPADMIN (Utwórz obraz możliwych) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: / FUNCTIONPADMIN (Utwórz obraz możliwych) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /functionpadmin
 dev_langs:
@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c941ec7f0e94ba03979c914ddd26b8bd21237369
-ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
+ms.openlocfilehash: d0a5ecfcc336e198de0adcc2393f740072d70cae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (Utwórz obraz możliwy do poprawiania w trakcie działania)
 
@@ -34,7 +33,7 @@ Przygotowuje obraz do poprawiania w trakcie działania.
 
 ### <a name="arguments"></a>Argumenty
 
-*space*<br/>
+*Miejsca*<br/>
 Wielkość uzupełnienia do dodania na początku każdej funkcji w bajtach. Na x86 domyślnie 5 bajtów uzupełnienia i na x64 domyślnie do 6 bajtów. Należy podać wartość dla innych elementów docelowych.
 
 ## <a name="remarks"></a>Uwagi

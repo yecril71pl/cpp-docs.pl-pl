@@ -1,29 +1,24 @@
 ---
 title: Generowanie manifestu w Visual Studio | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d701d73103ee2c5ac72eb36d9919132f0578b1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73b5cbe631d078dd6ee27b4f7e0a97503c36638b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generowanie manifestu w Visual Studio
 Generowanie pliku manifestu dla określonego projektu mogą być kontrolowane w projekcie **strony właściwości** okna dialogowego. Na **właściwości konfiguracji** , kliknij pozycję **konsolidatora**, następnie **plik manifestu**, następnie **Generuj Manifest**. Domyślnie nowe projekty właściwości projektu są ustawiane na generowanie pliku manifestu. Jednak jest możliwe wyłącz generowanie manifestu dla projektu przy użyciu **Generuj Manifest** właściwości projektu. Jeśli ta właściwość jest skonfigurowana **tak**, jest generowany manifestu dla tego projektu. W przeciwnym razie konsolidator ignoruje informacji o zestawie podczas rozpoznawania zależności kodu aplikacji i nie powoduje generowania manifestu.  

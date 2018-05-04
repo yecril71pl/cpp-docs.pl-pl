@@ -1,12 +1,9 @@
 ---
 title: Klasa CWindowImpl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWindowImpl
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aa14c3ae6c083cbf440d8b5b94fcb3754bd6fff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4884bbacd03675d00cb1a49b937265ab5faa2835
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwindowimpl-class"></a>Klasa CWindowImpl
 Udostępnia metody do tworzenia lub Tworzenie podklasy okna.  
@@ -97,14 +92,14 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ## <a name="remarks"></a>Uwagi  
  Można użyć `CWindowImpl` można utworzyć okna lub podklasa klasy istniejącego okna. `CWindowImpl` procedurę okna używa mapy komunikatów do kierowania wiadomości na odpowiednie programy obsługi.  
   
- `CWindowImpl::Create`Tworzy okno na podstawie informacji klasy okna, który jest zarządzany przez [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl`zawiera [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) makra, co oznacza `CWndClassInfo` rejestruje nową klasę okna. Jeśli chcesz superklasie istniejącej klasy okna, pochodzi z klasy `CWindowImpl` i obejmują [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra. W takim przypadku `CWndClassInfo` rejestruje klasę okna, jest oparta na istniejącej klasy, która używa `CWindowImpl::WindowProc`. Na przykład:  
+ `CWindowImpl::Create` Tworzy okno na podstawie informacji klasy okna, który jest zarządzany przez [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl` zawiera [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) makra, co oznacza `CWndClassInfo` rejestruje nową klasę okna. Jeśli chcesz superklasie istniejącej klasy okna, pochodzi z klasy `CWindowImpl` i obejmują [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra. W takim przypadku `CWndClassInfo` rejestruje klasę okna, jest oparta na istniejącej klasy, która używa `CWindowImpl::WindowProc`. Na przykład:  
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
   
 > [!NOTE]
 >  Ponieważ `CWndClassInfo` zarządza informacjami dla tylko jednej klasy okna, każde okno został utworzony za pomocą wystąpienia `CWindowImpl` opiera się na tej samej klasy okna.  
   
- `CWindowImpl`obsługuje również podklasy okna. `SubclassWindow` Metody dołącza do istniejącego okna `CWindowImpl` obiektu i zmienia procedurę okna `CWindowImpl::WindowProc`. Każde wystąpienie `CWindowImpl` można podklasy innego okna.  
+ `CWindowImpl` obsługuje również podklasy okna. `SubclassWindow` Metody dołącza do istniejącego okna `CWindowImpl` obiektu i zmienia procedurę okna `CWindowImpl::WindowProc`. Każde wystąpienie `CWindowImpl` można podklasy innego okna.  
   
 > [!NOTE]
 >  Dla żadnej podanej `CWindowImpl` obiektu, albo wywoływać **Utwórz** lub `SubclassWindow`. Nie należy wywoływać obu metod dla tego samego obiektu.  
@@ -113,7 +108,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
   
  Destruktor klasy podstawowej (~ **CWindowImplRoot**) zapewnia, że okno jest usunięty przed obiekt zostanie zniszczony.  
   
- `CWindowImpl`pochodną **CWindowImplBaseT**, co wynika ze **CWindowImplRoot**, co wynika ze **TBase** i [CMessageMap](../../atl/reference/cmessagemap-class.md).  
+ `CWindowImpl` pochodną **CWindowImplBaseT**, co wynika ze **CWindowImplRoot**, co wynika ze **TBase** i [CMessageMap](../../atl/reference/cmessagemap-class.md).  
   
 |Aby uzyskać więcej informacji dotyczących|Zobacz|  
 |--------------------------------|---------|  
@@ -135,7 +130,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
-##  <a name="create"></a>CWindowImpl::Create  
+##  <a name="create"></a>  CWindowImpl::Create  
  Tworzy okno oparte na nową klasę okna.  
   
 ```
@@ -185,7 +180,7 @@ HWND Create(
 > [!NOTE]
 >  Jeśli 0 jest używany jako wartość `MenuOrID` parametru musi być określona jako 0U (wartość domyślna), aby uniknąć błędów kompilatora.  
   
-##  <a name="defwindowproc"></a>CWindowImpl::DefWindowProc  
+##  <a name="defwindowproc"></a>  CWindowImpl::DefWindowProc  
  Wywoływane przez [WindowProc](#windowproc) do przetwarzania komunikatów, które nie są obsługiwane przez mapy komunikatów.  
   
 ```
@@ -215,7 +210,7 @@ LRESULT DefWindowProc();
   
  Funkcja bez parametrów automatycznie pobiera wymagane parametry z bieżącego komunikatu.  
   
-##  <a name="getcurrentmessage"></a>CWindowImpl::GetCurrentMessage  
+##  <a name="getcurrentmessage"></a>  CWindowImpl::GetCurrentMessage  
  Zwraca bieżący komunikat w `MSG` struktury.  
   
 ```
@@ -225,7 +220,7 @@ const MSG* GetCurrentMessage();
 ### <a name="return-value"></a>Wartość zwracana  
  Bieżący komunikat.  
   
-##  <a name="getwindowproc"></a>CWindowImpl::GetWindowProc  
+##  <a name="getwindowproc"></a>  CWindowImpl::GetWindowProc  
  Zwraca `WindowProc`, bieżącą procedurę okna.  
   
 ```
@@ -238,7 +233,7 @@ virtual WNDPROC GetWindowProc();
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę, aby zastąpić procedurę okna swoją własną.  
   
-##  <a name="getwndclassinfo"></a>CWindowImpl::GetWndClassInfo  
+##  <a name="getwndclassinfo"></a>  CWindowImpl::GetWndClassInfo  
  Wywoływane przez [Utwórz](#create) dostępu do informacji klasy okna.  
   
 ```
@@ -255,7 +250,7 @@ static CWndClassInfo& GetWndClassInfo();
   
  Oprócz funkcji `DECLARE_WND_CLASS` i `DECLARE_WND_SUPERCLASS` makra, można zastąpić `GetWndClassInfo` z własną implementację.  
   
-##  <a name="m_pfnsuperwindowproc"></a>CWindowImpl::m_pfnSuperWindowProc  
+##  <a name="m_pfnsuperwindowproc"></a>  CWindowImpl::m_pfnSuperWindowProc  
  W zależności od oknie wskazuje na jedną z poniższych procedur okna.  
   
 ```
@@ -272,7 +267,7 @@ WNDPROC m_pfnSuperWindowProc;
   
  [CWindowImpl::DefWindowProc](#defwindowproc) wysyła komunikat informacji do procedury okna zapisane w `m_pfnSuperWindowProc`.  
   
-##  <a name="onfinalmessage"></a>CWindowImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>  CWindowImpl::OnFinalMessage  
  Wywołuje się po otrzymaniu ostatniego komunikatu (zazwyczaj `WM_NCDESTROY`).  
   
 ```
@@ -286,7 +281,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja `OnFinalMessage` nie działa, ale można ją zastąpić tę funkcję, aby obsłużyć oczyszczania, zanim niszczenie okna. Jeśli chcesz automatycznie usunąć obiekt na zniszczenie okna, należy wywołać `delete this;` w tej funkcji.  
   
-##  <a name="subclasswindow"></a>CWindowImpl::SubclassWindow  
+##  <a name="subclasswindow"></a>  CWindowImpl::SubclassWindow  
  Podklasy okna identyfikowane przez `hWnd` i dołącza go do `CWindowImpl` obiektu.  
   
 ```
@@ -306,7 +301,7 @@ BOOL SubclassWindow(HWND hWnd);
 > [!NOTE]
 >  Nie wywołuj `SubclassWindow` Jeśli już o nazwie [Utwórz](#create).  
   
-##  <a name="unsubclasswindow"></a>CWindowImpl::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>  CWindowImpl::UnsubclassWindow  
  Odłącza okno podklasą od `CWindowImpl` obiektu i przywraca oryginalną procedurę okna zapisane w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ```
@@ -316,7 +311,7 @@ HWND UnsubclassWindow();
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do wcześniej utworzono podklasę okna.  
   
-##  <a name="windowproc"></a>CWindowImpl::WindowProc  
+##  <a name="windowproc"></a>  CWindowImpl::WindowProc  
  Ta funkcja statyczna wykonuje procedurę okna.  
   
 ```
@@ -344,7 +339,7 @@ static LRESULT CALLBACK WindowProc(
  Wynik przetwarzania komunikatów.  
   
 ### <a name="remarks"></a>Uwagi  
- `WindowProc`używa domyślnej mapy komunikatów (zadeklarowana z [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) do kierowania wiadomości na odpowiednie programy obsługi. W razie potrzeby `WindowProc` wywołania [DefWindowProc](#defwindowproc) dla przetwarzania dodatkowych komunikatów. Jeśli komunikatu końcowego nie jest obsługiwana, `WindowProc` wykonuje następujące czynności:  
+ `WindowProc` używa domyślnej mapy komunikatów (zadeklarowana z [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) do kierowania wiadomości na odpowiednie programy obsługi. W razie potrzeby `WindowProc` wywołania [DefWindowProc](#defwindowproc) dla przetwarzania dodatkowych komunikatów. Jeśli komunikatu końcowego nie jest obsługiwana, `WindowProc` wykonuje następujące czynności:  
   
 -   Wykonuje unsubclassing, jeśli unsubclassed okna.  
   

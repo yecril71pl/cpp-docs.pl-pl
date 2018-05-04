@@ -1,12 +1,9 @@
 ---
 title: QueryInterface | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - QueryInterface
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - interfaces, availability
 - QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce14ebef3649cea78e8cf4315a62392cfa142152
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cde92ee56e51a86acbfb7e459571291bc3cae76c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="queryinterface"></a>QueryInterface
 Mimo że istnieją mechanizmy, które obiektu można wyrazić funkcji zapewnia statycznie (zanim zostanie on uruchomiony), podstawowe mechanizmu COM jest użycie **IUnknown** wywołano metodę [QueryInterface ](http://msdn.microsoft.com/library/windows/desktop/ms682521).  

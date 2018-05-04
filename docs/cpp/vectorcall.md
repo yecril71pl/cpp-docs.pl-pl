@@ -2,31 +2,26 @@
 title: __vectorcall | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54c1473e2341c783ebf73883680d51f161d99163
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29c202a888d4c741a9a9fb54a84109100038d32a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vectorcall"></a>__vectorcall
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
- `__vectorcall` Konwencji wywoływania Określa, że argumenty funkcji są przekazywane w rejestrach, gdy jest to możliwe. `__vectorcall`używa rejestrów więcej argumentów niż [__fastcall](../cpp/fastcall.md) lub wartość domyślną [x64 konwencji wywoływania](../build/overview-of-x64-calling-conventions.md) użycia. `__vectorcall` Konwencji wywoływania jest obsługiwana tylko w kodzie natywnym na x86 i x64 procesorów, które obejmują Streaming SIMD Extensions 2 (SSE2) lub nowszym. Użyj `__vectorcall` szybkości funkcje, które przejdą kilka liczb zmiennoprzecinkowych lub argumentów wektorów SIMD i wykonywać operacje, które korzystają z argumentów załadowany w rejestrach. Poniższa lista zawiera funkcje, które są wspólne dla implementacji x86 i x64 `__vectorcall`. Różnice zostały omówione w dalszej części tego artykułu.  
+ `__vectorcall` Konwencji wywoływania Określa, że argumenty funkcji są przekazywane w rejestrach, gdy jest to możliwe. `__vectorcall` używa rejestrów więcej argumentów niż [__fastcall](../cpp/fastcall.md) lub wartość domyślną [x64 konwencji wywoływania](../build/overview-of-x64-calling-conventions.md) użycia. `__vectorcall` Konwencji wywoływania jest obsługiwana tylko w kodzie natywnym na x86 i x64 procesorów, które obejmują Streaming SIMD Extensions 2 (SSE2) lub nowszym. Użyj `__vectorcall` szybkości funkcje, które przejdą kilka liczb zmiennoprzecinkowych lub argumentów wektorów SIMD i wykonywać operacje, które korzystają z argumentów załadowany w rejestrach. Poniższa lista zawiera funkcje, które są wspólne dla implementacji x86 i x64 `__vectorcall`. Różnice zostały omówione w dalszej części tego artykułu.  
   
 |Element|Implementacja|  
 |-------------|--------------------|  

@@ -1,30 +1,25 @@
 ---
 title: Operatory przyrostka | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C], postfix
 - postfix operators
 ms.assetid: 76260011-1624-484e-8bef-72ae7ab556cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa82ded9bf53a00efe33f589c832550da967c96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14a23da2e8ed41954bd6faa2803d6e6c7dfb37a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-operators"></a>Operatory przyrostka
 Operatory przyrostek ma najwyższy priorytet (najbardziej restrykcyjne metody powiązanie) obliczania wyrażeń.  
@@ -35,7 +30,7 @@ Operatory przyrostek ma najwyższy priorytet (najbardziej restrykcyjne metody po
   
  *Operatory przyrostka wyrażenie***[***wyrażenie***]**   
   
- *wyrażenie przyrostek***(***lista wyrażeń argument* opt**)**   
+ *wyrażenie przyrostek***(***lista wyrażeń argument* opt **)**   
   
  *Operatory przyrostka wyrażenie***.**   *Identyfikator*  
   

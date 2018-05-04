@@ -2,11 +2,8 @@
 title: Kontrola dostępu do elementów członkowskich (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1f36b23ce76c4f4e639e824116f7f80063a8748
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-access-control-c"></a>Kontrola dostępu do elementów członkowskich (C++)
 Kontrolę dostępu umożliwiają oddzielenie [publicznego](../cpp/public-cpp.md) interfejsu klasy z [prywatnej](../cpp/private-cpp.md) szczegóły implementacji i [chronione](../cpp/protected-cpp.md) elementów członkowskich, które są tylko w przypadku użycia przez klasy pochodne. Specyfikator dostępu ma zastosowanie do wszystkich elementów członkowskich zadeklarowanych po nim, dopóki nie napotkano dalej specyfikator dostępu.  
@@ -109,7 +104,7 @@ int main()
 }  
 ```  
   
- W `DerivedClass1`, funkcja członkowska `PublicFunc` jest publicznym elementem członkowskim i `ProtectedFunc` jest chroniony element członkowski, ponieważ `BaseClass` jest klasą podstawową publicznego. `PrivateFunc`jest oznaczony jako prywatny `BaseClass`, i jest niedostępny dla dowolnej klasy pochodnej.  
+ W `DerivedClass1`, funkcja członkowska `PublicFunc` jest publicznym elementem członkowskim i `ProtectedFunc` jest chroniony element członkowski, ponieważ `BaseClass` jest klasą podstawową publicznego. `PrivateFunc` jest oznaczony jako prywatny `BaseClass`, i jest niedostępny dla dowolnej klasy pochodnej.  
   
  W `DerivedClass2`, funkcje `PublicFunc` i `ProtectedFunc` są uznawane za prywatne elementy członkowskie, ponieważ `BaseClass` jest klasą podstawową prywatnych. Ponownie `PrivateFunc` jest prywatnym kodem `BaseClass`, i jest niedostępny dla dowolnej klasy pochodnej.  
   

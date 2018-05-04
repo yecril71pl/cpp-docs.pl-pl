@@ -1,13 +1,10 @@
 ---
-title: "Słowa kluczowe języka C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Słowa kluczowe języka C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,35 +12,33 @@ helpviewer_keywords:
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fd746124cdfc267267bc5d6803700cca507c34d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98d815a8b0d185ccfb2ea89f653cd34d54fbd6ed
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C
 „Słowa kluczowe” to słowa, które mają specjalne znaczenie dla kompilatora C. W fazach translacji 7 i 8 identyfikator nie może mieć tej samej pisowni i wielkości liter co słowo kluczowe C. (Zobacz opis [fazy tłumaczenia](../preprocessor/phases-of-translation.md) w *odwołania preprocesora*; w przypadku informacji na temat identyfikatorów, zobacz [identyfikatory](../c-language/c-identifiers.md).) Język C używa następujących słów kluczowych:  
   
 |||||  
 |-|-|-|-|  
-|**Automatycznie**|**double**|**int**|**struct**|  
+|**auto**|**double**|**int**|**struct**|  
 |**break**|**else**|**long**|**switch**|  
-|**Case**|**enum**|**Rejestr**|**Element TypeDef**|  
+|**Case**|**enum**|**register**|**Element TypeDef**|  
 |**char**|**extern**|**return**|**Unii**|  
-|**const**|**float**|**short**|**bez znaku**|  
-|**continue**|**for**|**podpisany**|**void**|  
+|**const**|**float**|**short**|**Bez znaku**|  
+|**continue**|**for**|**Podpisany**|**void**|  
 |**default**|**goto**|**sizeof**|**volatile**|  
-|**do**|**Jeśli**|**static**|**while**|  
+|**do**|**if**|**static**|**while**|  
   
  Nie można przedefiniować słów kluczowych. Można jednak określić tekst, który można podstawić przed kompilacji za pomocą C [dyrektywy preprocesora](../preprocessor/preprocessor-directives.md).  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Standard ANSI C umożliwia identyfikatorom z dwoma podkreśleniami wiodącymi rezerwację do implementacji kompilatora. Tym samym, konwencja Microsoft zakłada, że podwójne podkreślenie będzie poprzedzało charakterystyczne dla Microsoft słowa kluczowe. Te słowa nie można użyć jako nazwy identyfikatora. Opis ANSI reguły nazewnictwa identyfikatorów, łącznie z użyciem podwójne podkreślenia, zobacz [identyfikatory](../c-language/c-identifiers.md).  
   

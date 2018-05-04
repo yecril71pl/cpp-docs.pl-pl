@@ -1,12 +1,9 @@
 ---
 title: Klasa CSimpleDialog | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleDialog
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e497d5f1646ab890b7dafa3e1fb7e1c711a8a09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimpledialog-class"></a>Klasa CSimpleDialog
 Ta klasa implementuje podstawowe modalne okno dialogowe.  
@@ -59,9 +54,9 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|Tworzy modalne okno dialogowe.|  
   
 ## <a name="remarks"></a>Uwagi  
- Implementuje modalne okno dialogowe z podstawowymi funkcjami. `CSimpleDialog`Formanty standardowe systemu Windows tylko zapewnia obsługę. Można tworzyć i wyświetlać modalne okno dialogowe, należy utworzyć wystąpienie tej klasy, podając nazwę istniejącego szablonu zasobów dla okna dialogowego. Obiekt okno dialogowe zostanie zamknięte po kliknięciu dowolnej kontrolki z wstępnie zdefiniowanych wartości (na przykład IDOK lub IDCANCEL).  
+ Implementuje modalne okno dialogowe z podstawowymi funkcjami. `CSimpleDialog` Formanty standardowe systemu Windows tylko zapewnia obsługę. Można tworzyć i wyświetlać modalne okno dialogowe, należy utworzyć wystąpienie tej klasy, podając nazwę istniejącego szablonu zasobów dla okna dialogowego. Obiekt okno dialogowe zostanie zamknięte po kliknięciu dowolnej kontrolki z wstępnie zdefiniowanych wartości (na przykład IDOK lub IDCANCEL).  
   
- `CSimpleDialog`Umożliwia tworzenie tylko modalnych okien dialogowych. `CSimpleDialog`zawiera procedury okno dialogowe używa domyślnej mapy wiadomości do kierowania wiadomości na odpowiednie programy obsługi.  
+ `CSimpleDialog` Umożliwia tworzenie tylko modalnych okien dialogowych. `CSimpleDialog` zawiera procedury okno dialogowe używa domyślnej mapy wiadomości do kierowania wiadomości na odpowiednie programy obsługi.  
   
  Zobacz [implementacja okno dialogowe](../../atl/implementing-a-dialog-box.md) Aby uzyskać więcej informacji.  
   
@@ -73,7 +68,7 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
-##  <a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>  CSimpleDialog::DoModal  
  Wywołuje modalne okno dialogowe i zwraca wynik okno dialogowe po zakończeniu.  
   
 ```

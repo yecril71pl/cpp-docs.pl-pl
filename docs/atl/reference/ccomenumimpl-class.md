@@ -1,12 +1,9 @@
 ---
 title: Klasa CComEnumImpl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnumImpl
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cda4598f5d5b0e5b3dbca265066c8366cfd6d67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14c7b1e72db3337b786a0e524ae3d8da964f6bbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenumimpl-class"></a>Klasa CComEnumImpl
 Ta klasa zawiera implementację interfejsu COM modułu wyliczającego przechowywania wyliczany elementów w tablicy.  
@@ -93,7 +88,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|**IUnknown** wskaźnika obiektu podając wyliczany kolekcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComEnumImpl`udostępnia implementację dla interfejsu COM modułu wyliczającego przechowywania wyliczany elementów w tablicy. Ta klasa jest odpowiednikiem `IEnumOnSTLImpl` w kontenerze standardowa biblioteka C++ na podstawie klasy, która dostarcza implementację interfejsu modułu wyliczającego.  
+ `CComEnumImpl` udostępnia implementację dla interfejsu COM modułu wyliczającego przechowywania wyliczany elementów w tablicy. Ta klasa jest odpowiednikiem `IEnumOnSTLImpl` w kontenerze standardowa biblioteka C++ na podstawie klasy, która dostarcza implementację interfejsu modułu wyliczającego.  
   
 > [!NOTE]
 >  Aby uzyskać więcej informacji na temat dalszych różnic między `CComEnumImpl` i `IEnumOnSTLImpl`, zobacz [CComEnumImpl::Init](#init).  
@@ -112,21 +107,21 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl  
  Konstruktor.  
   
 ```
 CComEnumImpl();
 ```  
   
-##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
+##  <a name="dtor"></a>  CComEnumImpl:: ~ CComEnumImpl  
  Destruktor.  
   
 ```
 ~CComEnumImpl();
 ```  
   
-##  <a name="init"></a>CComEnumImpl::Init  
+##  <a name="init"></a>  CComEnumImpl::Init  
  Tej metody należy wywołać przed przekazaniem wskaźnik do interfejsu modułu wyliczającego do wszystkich klientów.  
   
 ```
@@ -138,7 +133,7 @@ HRESULT Init(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *Rozpocznij*  
+ *begin*  
  Wskaźnik do pierwszego elementu obiektu tablicę zawierającą elementy, które mają zostać wyliczone.  
   
  `end`  
@@ -158,7 +153,7 @@ HRESULT Init(
   
  Jeśli przekazujesz wskaźników do elementów w tablicy przechowywany w innym obiekcie (i nie pytaj modułu wyliczającego, aby skopiować dane), możesz użyć *pUnk* parametr, aby upewnić się, że obiekt a tablica posiada są dostępne dla tak długo, jak moduł wyliczający należy je. Moduł wyliczający zawiera po prostu odwołania COM na obiekt, aby go podtrzymywania. Odwołanie COM jest wydawane automatycznie, gdy moduł wyliczający zostanie zniszczony.  
   
- `flags` Parametr umożliwia określenie, jak moduł wyliczający powinny traktować przekazany do niego elementów tablicy. `flags`można wykonać jedną z wartości z **CComEnumFlags** wyliczenie pokazano poniżej:  
+ `flags` Parametr umożliwia określenie, jak moduł wyliczający powinny traktować przekazany do niego elementów tablicy. `flags` można wykonać jedną z wartości z **CComEnumFlags** wyliczenie pokazano poniżej:  
   
 ```  
 enum CComEnumFlags  
@@ -178,7 +173,7 @@ enum CComEnumFlags
 > [!NOTE]
 >  Prototyp ta metoda określa elementy tablicy jako typu **T**, gdzie **T** został zdefiniowany jako parametr szablonu do klasy. Jest to ten sam typ uwidocznionego za pomocą metody interfejsu COM [CComEnumImpl::Next](#next). Wpływ na tego jest fakt, że w przeciwieństwie do [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), ta klasa nie obsługuje innego magazynu i udostępniany typów danych. Typ danych elementów w tablicy musi być taki sam jak typ danych udostępniane za pomocą interfejsu COM.  
   
-##  <a name="clone"></a>CComEnumImpl::Clone  
+##  <a name="clone"></a>  CComEnumImpl::Clone  
  Ta metoda zapewnia implementacji [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) metody poprzez utworzenie obiektu typu `CComEnum`, inicjowanie go przy użyciu tej samej tablicy i iteratora używane przez bieżący obiekt i zwracanie na interfejsie nowo utworzony obiekt.  
   
 ```
@@ -195,42 +190,42 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="remarks"></a>Uwagi  
  Należy pamiętać, że sklonowany moduły wyliczające nie należy wprowadzać ich własnych kopiowania (lub Przejmij na własność) dane używane przez oryginalnego modułu wyliczającego. W razie potrzeby sklonowany moduły wyliczające będzie podtrzymywania oryginalnego modułu wyliczającego (przy użyciu odwołania COM) aby upewnić się, że dane są dostępne dla tak długo, jak potrzebują.  
   
-##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+##  <a name="m_spunk"></a>  CComEnumImpl::m_spUnk  
  This, wskaźnik inteligentny obsługuje odwołania na obiekt przekazany do [CComEnumImpl::Init](#init), zapewniając, że pozostaje aktywne przez cały okres istnienia modułu wyliczającego.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-##  <a name="m_begin"></a>CComEnumImpl::m_begin  
+##  <a name="m_begin"></a>  CComEnumImpl::m_begin  
  Wskaźnik lokalizacji bezpośrednio po ostatnim elemencie tablicy zawierającej elementy, które mają zostać wyliczone.  
   
 ```
 T* m_begin;
 ```  
   
-##  <a name="m_end"></a>CComEnumImpl::m_end  
+##  <a name="m_end"></a>  CComEnumImpl::m_end  
  Wskaźnik do pierwszego elementu obiektu tablicę zawierającą elementy, które mają zostać wyliczone.  
   
 ```
 T* m_end;
 ```  
   
-##  <a name="m_iter"></a>CComEnumImpl::m_iter  
+##  <a name="m_iter"></a>  CComEnumImpl::m_iter  
  Wskaźnik do bieżącego elementu tablicę zawierającą elementy, które mają zostać wyliczone.  
   
 ```
 T* m_iter;
 ```  
   
-##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+##  <a name="m_dwflags"></a>  CComEnumImpl::m_dwFlags  
  Flagi przekazywane do [CComEnumImpl::Init](#init).  
   
 ```
 DWORD m_dwFlags;
 ```  
   
-##  <a name="next"></a>CComEnumImpl::Next  
+##  <a name="next"></a>  CComEnumImpl::Next  
  Ta metoda zapewnia implementacji [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) metody.  
   
 ```
@@ -250,7 +245,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="return-value"></a>Wartość zwracana  
  Standard `HRESULT` wartość.  
   
-##  <a name="reset"></a>CComEnumImpl::Reset  
+##  <a name="reset"></a>  CComEnumImpl::Reset  
  Ta metoda zapewnia implementacji [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) metody.  
   
 ```
@@ -260,7 +255,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Wartość zwracana  
  Standard `HRESULT` wartość.  
   
-##  <a name="skip"></a>CComEnumImpl::Skip  
+##  <a name="skip"></a>  CComEnumImpl::Skip  
  Ta metoda zapewnia implementacji [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) metody.  
   
 ```

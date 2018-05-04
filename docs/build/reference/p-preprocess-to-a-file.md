@@ -1,13 +1,10 @@
 ---
-title: "-P (Przetwarzaj wstępnie do pliku) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -P (Przetwarzaj wstępnie do pliku) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GeneratePreprocessedFile
 - /p
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - output files, preprocessor
 - preprocessing output files
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4de2f19820a846197806e0a24ddc213dd636c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26e9d2d63c7244990a047749f15273b45229c7bd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (Przetwarzaj wstępnie do pliku)
 Przetwarza wstępnie pliki źródłowe C i C++ i zapisuje wstępnie przetworzone produkty wyjściowe do pliku.  

@@ -1,13 +1,10 @@
 ---
 title: Funkcja Main i wykonywanie programu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9967481734c49d40d3121f825783b1824ad6f4f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca08ecc5be82ec256320c87a9a49e354dccd40f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="main-function-and-program-execution"></a>Funkcja main i wykonywanie programu
 Każdy program C ma podstawowej funkcji (głównego), która musi mieć nazwę **głównego**. Jeśli kod jest zgodna z modelem programowania Unicode, można użyć znaków dwubajtowych wersja **głównego**, **wmain**. **Głównego** funkcji służy jako punkt początkowy dla wykonania programu. Zwykle kontroluje wykonywanie programu przez kierowanie wywołań do innych funkcji programu. Program przestanie zazwyczaj wykonywane na końcu **głównego**, chociaż może obsłużyć w innych punktach programu z różnych przyczyn. Niekiedy po wykryciu określonego błędu, możesz chcieć wymusić przerwanie programu. Aby to zrobić, użyj **zakończyć** funkcji. Zobacz *odwołanie do biblioteki wykonawczej* informacji na temat i przykład za pomocą [zakończyć](../c-runtime-library/reference/exit-exit-exit.md) funkcji.  

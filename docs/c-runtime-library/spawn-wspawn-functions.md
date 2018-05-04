@@ -1,13 +1,10 @@
 ---
-title: "_spawn, _wspawn — funkcje | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _spawn, _wspawn — funkcje | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr80.dll
 - msvcr110_clr0400.dll
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0634aeb37d0374f5e6e1dfae0ac004792c279fc8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 298e2a1abddc477e406bca17bce04999c6e09415
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn — Funkcje
 Każdy z `_spawn` funkcje tworzy i wykonuje nowy proces:  
@@ -85,7 +80,7 @@ Każdy z `_spawn` funkcje tworzy i wykonuje nowy proces:
  Argumenty wiersza polecenia są przekazywane indywidualnie do `_spawn` funkcji. Ten sufiks zazwyczaj jest używany, gdy liczba parametrów do nowego procesu jest znany wcześniej.  
   
  `p`  
- `PATH`Zmienna środowiskowa służy do znajdowania plików do wykonania.  
+ `PATH` Zmienna środowiskowa służy do znajdowania plików do wykonania.  
   
  `v`  
  `argv`, tablicy wskaźników do argumentów wiersza polecenia, są przekazywane do `_spawn` funkcji. Ten sufiks zazwyczaj jest używany, gdy liczba parametrów do nowego procesu jest zmienna.  
@@ -114,7 +109,7 @@ Każdy z `_spawn` funkcje tworzy i wykonuje nowy proces:
  `_P_WAIT`  
  Wstrzymuje wątek wywołujący przed zakończeniem wykonywania nowego procesu (synchroniczne `_spawn`).  
   
- `_P_NOWAIT`lub`_P_NOWAITO`  
+ `_P_NOWAIT` lub `_P_NOWAITO`  
  Kontynuuje wykonywanie procesu wywołującego równocześnie z nowego procesu (asynchroniczne `_spawn`).  
   
  `_P_DETACH`  
@@ -138,7 +133,7 @@ Każdy z `_spawn` funkcje tworzy i wykonuje nowy proces:
 >  Spacji osadzonych w ciągach może spowodować nieoczekiwane zachowanie; na przykład przekazywanie `_spawn` ciąg `"hi there"` spowoduje nowego procesu pobierania dwa argumenty `"hi"` i `"there"`. Jeśli celem ma nowy proces, otwórz plik o nazwie "Cześć", proces nie powiedzie się. Można tego uniknąć przez zamykający ciąg: `"\"hi there\""`.  
   
 > [!IMPORTANT]
->  Nie przekazuj danych wejściowych użytkownika na `_spawn` bez jawnie sprawdzania jego zawartości. `_spawn`spowoduje wywołanie [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) tak należy pamiętać, że ścieżka niekwalifikowanych nazw może prowadzić do potencjalnych luk w zabezpieczeniach.  
+>  Nie przekazuj danych wejściowych użytkownika na `_spawn` bez jawnie sprawdzania jego zawartości. `_spawn` spowoduje wywołanie [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) tak należy pamiętać, że ścieżka niekwalifikowanych nazw może prowadzić do potencjalnych luk w zabezpieczeniach.  
   
  Wskaźniki argument można przekazać jako osobne argumentów (w `_spawnl`, `_spawnle`, `_spawnlp`, i `_spawnlpe`) lub w postaci tablicy wskaźników (w `_spawnv`, `_spawnve`, `_spawnvp`, i `_spawnvpe`). Należy podać co najmniej jednego argumentu `arg0` lub `argv`[0], do uruchomionego procesu. Konwencja ten argument jest nazwę programu, należy go wpisać w wierszu polecenia. Inną wartością nie generuje błędu.  
   
@@ -247,12 +242,12 @@ from SPAWN!
   
 ## <a name="see-also"></a>Zobacz też  
  [Proces i kontroli środowiska](../c-runtime-library/process-and-environment-control.md)   
- [przerwania](../c-runtime-library/reference/abort.md)   
+ [Przerwania](../c-runtime-library/reference/abort.md)   
  [atexit —](../c-runtime-library/reference/atexit.md)   
  [_execwexec — funkcje](../c-runtime-library/exec-wexec-functions.md)   
  [exit, _exit — _exit —](../c-runtime-library/reference/exit-exit-exit.md)   
  [_flushall —](../c-runtime-library/reference/flushall.md)   
- [_getmbcp —](../c-runtime-library/reference/getmbcp.md)   
+ [_getmbcp](../c-runtime-library/reference/getmbcp.md)   
  [_onexit —, _onexit_m —](../c-runtime-library/reference/onexit-onexit-m.md)   
- [_setmbcp —](../c-runtime-library/reference/setmbcp.md)   
+ [_setmbcp](../c-runtime-library/reference/setmbcp.md)   
  [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

@@ -1,13 +1,10 @@
 ---
-title: "-Yu (Użyj Prekompilowanego pliku nagłówka) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -Yu (Użyj Prekompilowanego pliku nagłówka) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /yu
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83f159882b9ed6fcfe5557c150413303c401dda
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d115017e843e7f03455e1eef2b384b3475a1b798
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (Korzystaj z prekompilowanego pliku nagłówka)
 Instruuje kompilator, aby wykorzystywała istniejący plik prekompilowanego nagłówka (.pch) w bieżącej kompilacji.  

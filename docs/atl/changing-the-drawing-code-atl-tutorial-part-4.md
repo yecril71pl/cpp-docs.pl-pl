@@ -1,29 +1,24 @@
 ---
-title: "Zmiana kodu rysującego (ATL — samouczek, część 4) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zmiana kodu rysującego (ATL — samouczek, część 4) | Dokumentacja firmy Microsoft
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccbf7dab7d39a80efa2b0b0b88b615c55cd9e56d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c077aca8c3276fac963eda8cdd2c413a9d6d5f5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Zmiana kodu rysującego (ATL — Samouczek, część 4)
 Domyślnie kod rysowania formantu Wyświetla kwadrat i tekst **PolyCtl**. W tym kroku zostanie zmieniony kod, aby wyświetlić ciekawsze. Obejmuje następujące zadania:  
@@ -125,7 +120,7 @@ Domyślnie kod rysowania formantu Wyświetla kwadrat i tekst **PolyCtl**. W tym 
   
  W następnym kroku należy dodać zdarzenie.  
   
- [Wróć do kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [Do kroku 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
+ [Wróć do kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [do kroku 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Samouczek](../atl/active-template-library-atl-tutorial.md)   

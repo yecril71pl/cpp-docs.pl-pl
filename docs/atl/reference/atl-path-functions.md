@@ -1,10 +1,7 @@
 ---
-title: "Funkcje ATL ścieżka | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje ATL ścieżka | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - ATL, path
@@ -46,16 +43,15 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa9795af90e28b2c021b179876a9f69609c7884
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 38286d169591dd55f7a2618332b6f5d5c9c86719
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-path-functions"></a>Funkcje ścieżki ATL
 
@@ -217,7 +213,7 @@ inline wchar_t* Combine(
 Aby uzyskać więcej informacji, zobacz PathCombine.
 
 
-## <a name="commonprefix">ATLPath::CommonPrefix</a>
+## <a name="commonprefix"></a> ATLPath::CommonPrefix
  Ta funkcja jest przeciążony element otoki dla [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
   
 ### <a name="syntax"></a>Składnia  
@@ -378,7 +374,7 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
  
   
 
-## <a name="isprefix">ATLPath::IsPrefix</a>
+## <a name="isprefix"></a> ATLPath::IsPrefix
  Ta funkcja jest przeciążony element otoki dla [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
   
 ### <a name="syntax"></a>Składnia  

@@ -1,27 +1,22 @@
 ---
-title: "Obsługa wyjątków ARM | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obsługa wyjątków ARM | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdbb6ea3563fb82e90b2bc4ca19f76c43c703cf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb8990dacc9503d5f329db9e7ddd9b8208efd13a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 System Windows na ARM używa tego samego wyjątków strukturalnych obsługę mechanizmem asynchroniczne wyjątki generowane przez sprzęt i synchroniczne wyjątki generowane przez oprogramowanie. Programy obsługi wyjątków specyficzne dla języka są wbudowane obsługi przy użyciu funkcji języka pomocnika wyjątków strukturalnych systemu Windows. W tym dokumencie opisano obsługi wyjątków w systemu Windows na ARM i pomocników języka używany przez kod, który jest generowany przez MASM i kompilatora języka Visual C++.  
@@ -304,9 +299,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
   
  Kod 0xFD jest specjalne koniec sekwencji, która oznacza, że epilogu jest dłuższa niż prologu jednej instrukcji 16-bitowych. Umożliwia udostępnianie większej unwind kodów.  
   
- W tym przykładzie Jeśli wystąpi wyjątek podczas wykonywania treści funkcji między prologu i epilogu odwijaniem rozpoczyna się epilogu sprawy, przy przesunięciu 0 kodem epilogu. Odpowiada to przesunięcie 0x140 w przykładzie. Unwinder wykonuje sekwencji unwind pełne, ponieważ nie została wykonana nie czyszczenia. Zamiast tego wyjątki jednej instrukcji po rozpoczęciu kod epilogu, unwinder można pomyślnie operacji unwind przez pominięcie pierwszy kod unwind. Podane mapowanie jeden do jednego między opcodes i unwind kody, jeśli odwijanie od instrukcji  *n*  w epilogu unwinder należy pominąć pierwszy  *n*  unwind kodów.  
+ W tym przykładzie Jeśli wystąpi wyjątek podczas wykonywania treści funkcji między prologu i epilogu odwijaniem rozpoczyna się epilogu sprawy, przy przesunięciu 0 kodem epilogu. Odpowiada to przesunięcie 0x140 w przykładzie. Unwinder wykonuje sekwencji unwind pełne, ponieważ nie została wykonana nie czyszczenia. Zamiast tego wyjątki jednej instrukcji po rozpoczęciu kod epilogu, unwinder można pomyślnie operacji unwind przez pominięcie pierwszy kod unwind. Podane mapowanie jeden do jednego między opcodes i unwind kody, jeśli odwijanie od instrukcji *n* w epilogu unwinder należy pominąć pierwszy *n* unwind kodów.  
   
- Podobne logiki działa odwrotnie dla prologu. Odwijanie od przesunięcia 0 w prologu, nic nie musi być wykonywane. Jeśli odwijanie od jednej instrukcji w, sekwencji unwind należy uruchomić jeden kod unwind od jej końca, ponieważ prologu unwind kody są przechowywane w odwrotnej kolejności. W przypadku ogólne, jeśli odwijanie od instrukcji  *n*  w prologu rozwinięcia powinien rozpocząć wykonywania na  *n*  unwind kody od końca listy kodów.  
+ Podobne logiki działa odwrotnie dla prologu. Odwijanie od przesunięcia 0 w prologu, nic nie musi być wykonywane. Jeśli odwijanie od jednej instrukcji w, sekwencji unwind należy uruchomić jeden kod unwind od jej końca, ponieważ prologu unwind kody są przechowywane w odwrotnej kolejności. W przypadku ogólne, jeśli odwijanie od instrukcji *n* w prologu rozwinięcia powinien rozpocząć wykonywania na *n* unwind kody od końca listy kodów.  
   
  Kody unwind prologu i epilogu nie zawsze pasują dokładnie. W takim przypadku unwind tablicy kod może być zawiera kilka sekwencji kodów. Aby określić przesunięcie rozpoczęcie przetwarzania kodów, użyj logiki to:  
   

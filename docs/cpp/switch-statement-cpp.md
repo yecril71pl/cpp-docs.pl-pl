@@ -1,12 +1,9 @@
 ---
-title: "Przełącz — instrukcja (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przełącz — instrukcja (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - default_cpp
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e668756e8cabafbdef522d6754487efe452f96de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5cea2c7e4bff895f9ccabc044ed5b7f5ae506b32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-statement-c"></a>switch — instrukcja (C++)
 Umożliwia wybór między wielu fragmentów kodu, w zależności od wartości wyrażenia wartości całkowitych.  

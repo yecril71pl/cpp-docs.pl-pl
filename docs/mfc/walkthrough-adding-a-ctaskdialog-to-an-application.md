@@ -1,12 +1,12 @@
 ---
-title: "Wskazówki: Dodawanie obiektu CTaskDialog do aplikacji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Dodawanie obiektu CTaskDialog do aplikacji | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,34 +14,34 @@ helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e9e75cb705bb4497cfefa350c2b34eca75cf2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 7b0d820b45b85b5dc20e82cb647c05f839e7ab41
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Wskazówki: dodawanie obiektu CTaskDialog do aplikacji
 W tym przewodniku przedstawiono [klasy obiektu CTaskDialog](../mfc/reference/ctaskdialog-class.md) i pokazuje, jak i dodaj je do aplikacji.  
   
- `CTaskDialog` Okno dialogowe zadania zastępujący pola wiadomości Windows w [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. `CTaskDialog` Zwiększa oryginalnego pola wiadomości i dodaje funkcjonalność. W oknie komunikatu systemu Windows nadal jest obsługiwany w [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+ `CTaskDialog` Okno dialogowe zadania zastępujący pole komunikatów systemu Windows w systemie Windows Vista lub nowszym. `CTaskDialog` Zwiększa oryginalnego pola wiadomości i dodaje funkcjonalność. W oknie komunikatu systemu Windows nadal jest obsługiwany w programie Visual Studio.  
   
 > [!NOTE]
->  Wersje systemu Windows starszych niż [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] nie obsługują `CTaskDialog`. Jeśli chcesz wyświetlić komunikat do użytkownika, który uruchamia aplikację we wcześniejszej wersji systemu Windows należy zaprogramować opcji w oknie dialogowym alternatywnych. Można użyć metody statycznej [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) do określenia w czasie wykonywania, czy komputer użytkownika można wyświetlić `CTaskDialog`. Ponadto `CTaskDialog` jest dostępna tylko po utworzeniu aplikacji z biblioteką Unicode.  
+> Wersje systemu Windows starszych niż Windows Vista nie obsługują `CTaskDialog`. Jeśli chcesz wyświetlić komunikat do użytkownika, który uruchamia aplikację we wcześniejszej wersji systemu Windows należy zaprogramować opcji w oknie dialogowym alternatywnych. Można użyć metody statycznej [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) do określenia w czasie wykonywania, czy komputer użytkownika można wyświetlić `CTaskDialog`. Ponadto `CTaskDialog` jest dostępna tylko po utworzeniu aplikacji z biblioteką Unicode.  
   
  `CTaskDialog` Obsługuje kilka opcjonalne elementy do zbierania i wyświetlania informacji. Na przykład `CTaskDialog` można wyświetlać polecenia łącza, dostosowane przycisków ikon niestandardowych i stopki. `CTaskDialog` Ma również kilka metod, które pozwalają zbadać stanu zadania okno dialogowe, aby ustalić, jakie elementy opcjonalne wybrany przez użytkownika.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
-- [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
+- Visual Studio 2010 lub w nowszej wersji  
   
-- [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+- Windows Vista lub nowszy  
   
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Zastąpienie obiektu CTaskDialog okno komunikatu systemu Windows  
  W poniższej procedurze przedstawiono użycie najprostsze `CTaskDialog`, który ma zastąpić pole komunikatów systemu Windows. W tym przykładzie zmienia także ikon skojarzonych z zadań — okno dialogowe. Zmiana ikony sprawia, że `CTaskDialog` są wyświetlane takie same jak pole komunikatów systemu Windows.  

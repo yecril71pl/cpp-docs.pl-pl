@@ -1,12 +1,9 @@
 ---
-title: "Błąd informacji Classe (ATL) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Błąd informacji Classe (ATL) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.errors
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - error handling, classes
 - error information, classes
 ms.assetid: ba40c8fb-81fd-4f61-8f47-fa2cb540e274
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d1c5393ffad7ea22d2e2793f328ec8ed5a6fc6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c3cccddf76eaa97b0bc73239c6e89fde1c23b301
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="error-information-classes"></a>Błąd informacji klasy
 Następujące klasy wskazuje sposobu obsługi informacji o błędzie:  

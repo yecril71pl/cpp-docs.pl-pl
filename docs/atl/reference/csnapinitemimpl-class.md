@@ -2,11 +2,8 @@
 title: Klasa CSnapInItemImpl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 759917497f06f80cde97f4e1bba9f3711add94a8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinitemimpl-class"></a>Klasa CSnapInItemImpl
 Ta klasa dostarcza metody implementacji obiektu węzła przystawki.  
@@ -103,7 +98,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Windows **SCOPEDATAITEM** struktury używane przez `CSnapInItemImpl` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CSnapInItemImpl`udostępnia podstawową implementację obiektu przystawki węzeł, na przykład dodawanie elementów menu i pasków narzędzi oraz przekazywania poleceń dla funkcji obsługi odpowiedniego węzła przystawki. Te funkcje są implementowane za pomocą kilku różnych interfejsach i mapowania typów. Domyślna implementacja obsługuje powiadomień wysyłanych do obiektu węzła przez określenie poprawne wystąpienie klasy pochodnej, a następnie przekazywania wiadomości na prawidłowe wystąpienie.  
+ `CSnapInItemImpl` udostępnia podstawową implementację obiektu przystawki węzeł, na przykład dodawanie elementów menu i pasków narzędzi oraz przekazywania poleceń dla funkcji obsługi odpowiedniego węzła przystawki. Te funkcje są implementowane za pomocą kilku różnych interfejsach i mapowania typów. Domyślna implementacja obsługuje powiadomień wysyłanych do obiektu węzła przez określenie poprawne wystąpienie klasy pochodnej, a następnie przekazywania wiadomości na prawidłowe wystąpienie.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `CSnapInItem`  
@@ -113,7 +108,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsnap.h  
   
-##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
  Ta metoda implementuje funkcję Win32 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
   
 ```
@@ -149,7 +144,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED** obiekt danych ma nieprawidłowy typ.  
   
-##  <a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>  CSnapInItemImpl::Command  
  Ta metoda implementuje funkcję Win32 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
   
 ```
@@ -171,7 +166,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED** obiekt danych ma nieprawidłowy typ.  
   
-##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
  Ta metoda implementuje funkcję Win32 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
   
 ```
@@ -186,7 +181,7 @@ CreatePropertyPages(
  *lpProvider*  
  [in] Wskaźnik do **IPropertySheetCallback** interfejsu.  
   
- *dojście*  
+ *Dojście*  
  [in] Określa uchwyt używany do trasy **MMCN_PROPERTY_CHANGE** wiadomość z powiadomieniem do klasy odpowiednie dane.  
   
  *pUnk*  
@@ -203,14 +198,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED** obiekt danych ma nieprawidłowy typ.  
   
-##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl  
  Konstruuje `CSnapInItemImpl` obiektu.  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>  CSnapInItemImpl::FillData  
  Ta funkcja jest wywoływana w celu uzyskania informacji o elemencie.  
   
 ```
@@ -227,7 +222,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>Uwagi  
  Aby prawidłowo zaimplementować tę funkcję, należy skopiować poprawnych informacji do strumienia ( `pStream`), w zależności od formatu Schowka wskazywanym przez `cf`.  
   
-##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType  
  Wywołanie tej funkcji można pobrać typu widoku dla okienka wyników przystawki obiektu.  
   
 ```
@@ -247,7 +242,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 umożliwia domyślne opcje widoku.  
   
-##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo  
  Wywołanie tej funkcji można pobrać **SCOPEDATAITEM** struktury przystawki.  
   
 ```
@@ -258,7 +253,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out] Wskaźnik do **SCOPEDATAITEM** struktury `CSnapInItemImpl` obiektu.  
   
-##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo  
  Wywołanie tej funkcji można pobrać **RESULTDATAITEM** struktury przystawki.  
   
 ```
@@ -269,28 +264,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out] Wskaźnik do **RESULTDATAITEM** struktury `CSnapInItemImpl` obiektu.  
   
-##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName  
  Zawiera ciąg wyświetlany dla elementu węzła.  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>  CSnapInItemImpl::m_scopeDataItem  
  `SCOPEDATAITEM` Strukturę obiektu danych przystawki.  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
  [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) strukturę obiektu danych przystawki.  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>  CSnapInItemImpl::Notify  
  Wywoływane, gdy obiekt przystawki jest reagować przez użytkownika.  
   
 ```
@@ -358,14 +353,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED** obiekt danych ma nieprawidłowy typ.  
   
-##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor  
  Wywołuje się, czy węzeł przystawki obsługuje strony właściwości.  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>  CSnapInItemImpl::SetMenuInsertionFlags  
  Wywołanie tej funkcji, aby zmodyfikować flagi wstawiania menu, określony przez `pInsertionAllowed`, dla obiekt przystawki.  
   
 ```
@@ -394,7 +389,7 @@ void SetMenuInsertionFlags(
   
  Nie należy próbować ustawiać bitów `pInsertionAllowed` które pierwotnie zostały wyczyszczone. Przyszłych wersjach programu MMC może używać usługi bits nie jest obecnie zdefiniowane, nie należy zmieniać bitów, które aktualnie jest niezdefiniowana.  
   
-##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo  
  Wywołanie tej funkcji, aby zmodyfikować styl do przycisku paska narzędzi, obiektu przystawki przed utworzeniem pasku narzędzi.  
   
 ```
@@ -411,32 +406,32 @@ void SetToolbarButtonInfo(
  `fsState`  
  [in] Flagi stanu przycisku. Może to być jeden lub więcej z następujących czynności:  
   
-- `TBSTATE_CHECKED`Przycisk ma **TBSTYLE_CHECKED** styl i Trwa naciśnięciu.  
+- `TBSTATE_CHECKED` Przycisk ma **TBSTYLE_CHECKED** styl i Trwa naciśnięciu.  
   
-- `TBSTATE_ENABLED`Przycisk akceptuje dane wejściowe użytkownika. Przycisk, którego nie ma w tym stanie nie akceptuje dane wejściowe użytkownika i jest niedostępny.  
+- `TBSTATE_ENABLED` Przycisk akceptuje dane wejściowe użytkownika. Przycisk, którego nie ma w tym stanie nie akceptuje dane wejściowe użytkownika i jest niedostępny.  
   
-- `TBSTATE_HIDDEN`Przycisk nie jest widoczny i nie może odbierać dane wejściowe użytkownika.  
+- `TBSTATE_HIDDEN` Przycisk nie jest widoczny i nie może odbierać dane wejściowe użytkownika.  
   
-- `TBSTATE_INDETERMINATE`Ten przycisk jest niedostępny.  
+- `TBSTATE_INDETERMINATE` Ten przycisk jest niedostępny.  
   
-- `TBSTATE_PRESSED`Przycisk jest naciśnięty.  
+- `TBSTATE_PRESSED` Przycisk jest naciśnięty.  
   
-- `TBSTATE_WRAP`Podział wiersza jest zgodna przycisku. Przycisk musi mieć również `TBSTATE_ENABLED`.  
+- `TBSTATE_WRAP` Podział wiersza jest zgodna przycisku. Przycisk musi mieć również `TBSTATE_ENABLED`.  
   
  *fsType*  
  [in] Flagi stanu przycisku. Może to być jeden lub więcej z następujących czynności:  
   
-- `TBSTYLE_BUTTON`Tworzy standardowe przycisku.  
+- `TBSTYLE_BUTTON` Tworzy standardowe przycisku.  
   
-- `TBSTYLE_CHECK`Tworzy stanów naciśniętego i naciśnięciu nie zawsze kliknięcie przycisku. Przycisk ma inny kolor tła, gdy jest on w stan naciśnięcia.  
+- `TBSTYLE_CHECK` Tworzy stanów naciśniętego i naciśnięciu nie zawsze kliknięcie przycisku. Przycisk ma inny kolor tła, gdy jest on w stan naciśnięcia.  
   
-- `TBSTYLE_CHECKGROUP`Tworzy przycisk wyboru, która pozostaje wciśnięty, dopóki nie zostanie naciśnięty przycisk innej grupy.  
+- `TBSTYLE_CHECKGROUP` Tworzy przycisk wyboru, która pozostaje wciśnięty, dopóki nie zostanie naciśnięty przycisk innej grupy.  
   
-- `TBSTYLE_GROUP`Tworzy przycisk, który pozostaje wciśnięty, dopóki nie zostanie naciśnięty przycisk innej grupy.  
+- `TBSTYLE_GROUP` Tworzy przycisk, który pozostaje wciśnięty, dopóki nie zostanie naciśnięty przycisk innej grupy.  
   
-- `TBSTYLE_SEP`Tworzy separatora, zapewniając mały odstęp między grupami przycisku. Przycisk, który ma tego stylu nie otrzymuje dane wejściowe użytkownika.  
+- `TBSTYLE_SEP` Tworzy separatora, zapewniając mały odstęp między grupami przycisku. Przycisk, który ma tego stylu nie otrzymuje dane wejściowe użytkownika.  
   
-##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState  
  Wywołanie tej funkcji można zmodyfikować elementu menu, zanim zostanie wstawiony do menu kontekstowego obiektu przystawki.  
   
 ```
@@ -466,7 +461,7 @@ void UpdateMenuState(
   
 - **MF_DISABLED** wyłącza element menu, więc nie można wybrać, ale flaga nie jest szary go.  
   
-- `MF_ENABLED`Umożliwia element menu, dlatego można ją wybrać, przywracania jej z wyszarzonymi polami stanu.  
+- `MF_ENABLED` Umożliwia element menu, dlatego można ją wybrać, przywracania jej z wyszarzonymi polami stanu.  
   
 - **MF_GRAYED** wyłącza element menu graying go, więc nie może być zaznaczone.  
   
@@ -484,7 +479,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED** i **MF_UNCHECKED**.  
   
-##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton  
  Wywołanie tej funkcji, aby zmodyfikować przycisku paska narzędzi, obiektu przystawki, przed wyświetleniem.  
   
 ```

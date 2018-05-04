@@ -1,12 +1,12 @@
 ---
-title: "Lokalny magazyn wątków (TLS) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Lokalny magazyn wątków (TLS) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e6be3645e03892d17e45256a5a003d982d973f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b01bd50fa50a449128842755898d703f7bafe76
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thread-local-storage-tls"></a>Lokalny magazyn wątków (TLS)
 Lokalnego magazynu wątków (TLS) to metoda, za pomocą której każdy wątek w danym procesie wielowątkowe można przydzielić lokalizacje, w którym będą przechowywane dane specyficzne dla danego wątku. Dynamicznie dane właściwe dla wątków granica (run-time) są obsługiwane i interfejsu API protokołu TLS ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), i [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Aby uzyskać więcej informacji na temat implementowania lokalny magazyn wątków w systemie Windows, zobacz [lokalny magazyn wątków (system Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 i kompilatora języka Visual C++ obsługuje teraz statycznie powiązanej (czas ładowania) dla każdego wątku danych oprócz istniejącej implementacji interfejsu API.  
   
-##  <a name="_core_compiler_implementation_for_tls"></a>Implementacja kompilatora dla protokołu TLS  
+##  <a name="_core_compiler_implementation_for_tls"></a> Implementacja kompilatora dla protokołu TLS  
  **C ++ 11:** `thread_local` Specyfikator klasy magazynu jest zalecany sposób, aby określić lokalny magazyn wątków dla obiektów i klasy elementów członkowskich. Aby uzyskać więcej informacji, zobacz [klasy magazynu (C++)](../cpp/storage-classes-cpp.md).  
   
  Udostępnia atrybut specyficzne dla firmy Microsoft, Visual C++ [wątku](../cpp/thread.md), jako modyfikator klasy magazynu rozszerzonego. Użyj `__declspec` — słowo kluczowe, aby zadeklarować **wątku** zmiennej. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:  
@@ -119,7 +119,7 @@ __declspec( thread ) int tls_i = 1;
   
      C++ z powodu możliwych przyszłe ulepszenia funkcji magazynu lokalnego wątku nie zezwala na takie dynamiczna inicjalizacja danych wątku.  
   
--   W systemach operacyjnych Windows przed [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)], `__declspec`(wątek) ma pewne ograniczenia. Jeśli biblioteki DLL deklaruje żadnych danych lub obiekt jako `__declspec`(wątek) może spowodować błąd ochrony po załadowaniu dynamicznie. Po załadowaniu biblioteki DLL z [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), powoduje awarii systemu zawsze, gdy kod odwołuje się do `__declspec`danych (wątek). Ponieważ zmiennej globalnej przestrzeni dla wątku jest przydzielane w czasie wykonywania, rozmiar tego miejsca jest oparta na obliczanie wymagań aplikacji oraz wymagania wszystkie biblioteki DLL połączone statycznie. Jeśli używasz `LoadLibrary`, nie można rozszerzyć to miejsce, aby umożliwić zmienne lokalne wątków zadeklarowana z `__declspec`(wątek). Użyj TLS interfejsów API, takiego jak [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), w bibliotece DLL przydzielić TLS, jeśli biblioteka DLL może być załadowany z `LoadLibrary`.  
+-   W systemach operacyjnych Windows przed w systemie Windows Vista `__declspec`(wątek) ma pewne ograniczenia. Jeśli biblioteki DLL deklaruje żadnych danych lub obiekt jako `__declspec`(wątek) może spowodować błąd ochrony po załadowaniu dynamicznie. Po załadowaniu biblioteki DLL z [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), powoduje awarii systemu zawsze, gdy kod odwołuje się do `__declspec`danych (wątek). Ponieważ zmiennej globalnej przestrzeni dla wątku jest przydzielane w czasie wykonywania, rozmiar tego miejsca jest oparta na obliczanie wymagań aplikacji oraz wymagania wszystkie biblioteki DLL połączone statycznie. Jeśli używasz `LoadLibrary`, nie można rozszerzyć to miejsce, aby umożliwić zmienne lokalne wątków zadeklarowana z `__declspec`(wątek). Użyj TLS interfejsów API, takiego jak [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), w bibliotece DLL przydzielić TLS, jeśli biblioteka DLL może być załadowany z `LoadLibrary`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)   

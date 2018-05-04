@@ -1,29 +1,24 @@
 ---
-title: "Zasady ogólne dotyczące przeciążania operatorów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zasady ogólne dotyczące przeciążania operatorów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199db318eb847687d10044e0376b70c8d6d44feb
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0abd32f2c46f7d7b26ea617e2cf43f1dc3c124bf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="general-rules-for-operator-overloading"></a>Zasady ogólne dotyczące przeciążania operatorów
 Następujące reguły ograniczają sposób implementacji przeciążonych operatorów. Jednak nie dotyczą one [nowe](../cpp/new-operator-cpp.md) i [usunąć](../cpp/delete-operator-cpp.md) operatory, które są przedstawione oddzielnie.  
@@ -59,7 +54,7 @@ Następujące reguły ograniczają sposób implementacji przeciążonych operato
   
 -   Operatory binarne deklarowane jako funkcje członkowskie przyjmują jeden argument; jeśli są zadeklarowane jako funkcje globalne, przyjmują dwa argumenty.  
   
--   Jeśli operator może służyć jako jednoargumentowy lub operator binarny (**&**,  **\*** ,  **+** , i  **-** ), można przeciążać każdego zastosowania osobno.  
+-   Jeśli operator może służyć jako jednoargumentowy lub operator binarny (**&**, **\***, **+**, i **-**), można przeciążać każdego zastosowania osobno.  
   
 -   Przeciążone operatory nie mogą mieć argumentów domyślnych.  
   

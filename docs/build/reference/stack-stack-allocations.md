@@ -1,13 +1,10 @@
 ---
-title: "-STACK (twórz stos z alokacji) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -STACK (twórz stos z alokacji) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.StackReserveSize
 - VC.Project.VCLinkerTool.StackCommitSize
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b487ff830abd3dfa97a748c81d541cbd9fdd0b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8ee3fac90bcbb972278d9b3e2cf7cebd62fedf4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stack-stack-allocations"></a>/STACK (Twórz stos z alokacji)
 ```  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  `reserve` Wartość określa alokacji całkowita stosu w pamięci wirtualnej. Dla ARM, x86 i [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] maszyny, rozmiar stosu domyślna to 1 MB.  
   
- `commit`podlega interpretacji przez system operacyjny. W systemie Windows, Windows RT określa ilość pamięci fizycznej do przydzielenia naraz. Zadeklarowanej pamięci wirtualnej spowoduje, że miejsca, które mają zostać zarezerwowane w pliku stronicowania. Wyższy `commit` wartość zaoszczędzić czas podczas aplikacji wymaga więcej miejsca na stosie, ale zwiększa wymagania dotyczące pamięci i być może czas uruchamiania. Dla ARM, x86 i [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] maszyny, zatwierdzania wartość domyślna to 4 KB.  
+ `commit` podlega interpretacji przez system operacyjny. W systemie Windows, Windows RT określa ilość pamięci fizycznej do przydzielenia naraz. Zadeklarowanej pamięci wirtualnej spowoduje, że miejsca, które mają zostać zarezerwowane w pliku stronicowania. Wyższy `commit` wartość zaoszczędzić czas podczas aplikacji wymaga więcej miejsca na stosie, ale zwiększa wymagania dotyczące pamięci i być może czas uruchamiania. Dla ARM, x86 i [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] maszyny, zatwierdzania wartość domyślna to 4 KB.  
   
  Określ `reserve` i `commit` wartości dziesiętne lub notacji języka C.  
   

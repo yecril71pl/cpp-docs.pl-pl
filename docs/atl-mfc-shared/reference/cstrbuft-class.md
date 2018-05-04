@@ -2,11 +2,8 @@
 title: Klasa CStrBufT | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStrBufT
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8df7f6c1dbd9987a9f83ed5b33a4c97fd90fec7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 695c3bc4c5e03f2ff6c1865f456b1ef358e3dcf4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstrbuft-class"></a>Klasa CStrBufT
 Ta klasa udostępnia Oczyszczanie automatyczne zasobów dla `GetBuffer` i `ReleaseBuffer` wywołuje na istniejącym `CStringT` obiektu.  
@@ -46,11 +41,11 @@ class CStrBufT
   
 #### <a name="parameters"></a>Parametry  
  *TCharType*  
- Typ znakowy `CStrBufT` klasy. Może to być jedna z następujących czynności:  
+ Typ znakowy `CStrBufT` klasy. Może to być jeden z następujących elementów:  
   
-- `char`(dla ciągów znaków ANSI)  
+- `char` (dla ciągów znaków ANSI)  
   
-- `wchar_t`(dla ciągów znaków Unicode)  
+- `wchar_t` (dla ciągów znaków Unicode)  
   
 - **Tchar —** (dla ciągów znaków ANSI jak również Unicode)  
   
@@ -98,7 +93,7 @@ class CStrBufT
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsimpstr.h  
   
-##  <a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
+##  <a name="auto_length"></a>  CStrBufT::AUTO_LENGTH  
  Automatycznie określić nowe długość ciągu w wersji.  
   
 ```
@@ -108,7 +103,7 @@ static const DWORD AUTO_LENGTH = 0x01;
 ### <a name="remarks"></a>Uwagi  
  Automatycznie określić nowe długość ciągu w wersji. Ciąg musi być zakończony zerem.  
   
-##  <a name="cstrbuft"></a>CStrBufT::CStrBufT  
+##  <a name="cstrbuft"></a>  CStrBufT::CStrBufT  
  Tworzy obiekt buforu.  
   
 ```
@@ -124,7 +119,7 @@ explicit CStrBufT(StringType& str) throw(...);
  Minimalna długość buforu znaków.  
   
  `dwFlags`  
- Określa, czy długość ciągu jest ustalany automatycznie. Może to być jedna z następujących czynności:  
+ Określa, czy długość ciągu jest ustalany automatycznie. Może to być jeden z następujących elementów:  
   
 - **AUTO_LENGTH** długość ciągu jest automatycznie ustalić, kiedy [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) jest wywoływana. Ciąg musi być zakończony zerem. Wartość domyślna.  
   
@@ -135,7 +130,7 @@ explicit CStrBufT(StringType& str) throw(...);
   
  Należy pamiętać, że Konstruktor kopiujący jest `private`.  
   
-##  <a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>  CStrBufT::operator PCXSTR  
  Bezpośredni dostęp do znaków przechowywanych w obiekcie skojarzone ciągu jako ciąg w stylu języka C.  
   
 ```  
@@ -148,7 +143,7 @@ operator PCXSTR() const throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji do zwraca wskaźnik do buforu znak z obiektem ciągu. Nie można zmienić zawartość z obiektem ciągu z ten wskaźnik.  
   
-##  <a name="operator_pxstr"></a>CStrBufT::operator PXSTR  
+##  <a name="operator_pxstr"></a>  CStrBufT::operator PXSTR  
  Bezpośredni dostęp do znaków przechowywanych w obiekcie skojarzone ciągu jako ciąg w stylu języka C.  
   
 ```
@@ -161,21 +156,21 @@ operator PXSTR() throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji do zwraca wskaźnik do buforu znak z obiektem ciągu. Deweloper może zmienić zawartość z obiektem ciągu z ten wskaźnik.  
   
-##  <a name="pcxstr"></a>CStrBufT::PCXSTR  
+##  <a name="pcxstr"></a>  CStrBufT::PCXSTR  
  Wskaźnik ze stałym ciągiem.  
   
 ```
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```  
   
-##  <a name="pxstr"></a>CStrBufT::PXSTR  
+##  <a name="pxstr"></a>  CStrBufT::PXSTR  
  Wskaźnik do ciągu.  
   
 ```
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```  
   
-##  <a name="set_length"></a>CStrBufT::SET_LENGTH  
+##  <a name="set_length"></a>  CStrBufT::SET_LENGTH  
  Ustawianie długości z obiektem ciągu w `GetBuffer` czasu.  
   
 ```
@@ -187,7 +182,7 @@ static const DWORD SET_LENGTH = 0x02;
   
  Określa, czy [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) i [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) są wywoływane, gdy jest tworzony obiekt buforu ciągu.  
   
-##  <a name="setlength"></a>CStrBufT::SetLength  
+##  <a name="setlength"></a>  CStrBufT::SetLength  
  Ustawia długość buforu znaków.  
   
 ```
@@ -204,7 +199,7 @@ void SetLength(int nLength);
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji, aby ustawić długość ciągu reprezentowanych przez obiekt buforu.  
   
-##  <a name="stringtype"></a>CStrBufT::StringType  
+##  <a name="stringtype"></a>  CStrBufT::StringType  
  Typu ciąg, którego buforu się manipulować specjalizacji szablonu klasy.  
   
 ```

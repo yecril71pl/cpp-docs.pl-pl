@@ -1,13 +1,10 @@
 ---
-title: "Okno dialogowe wdrażanie | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Okno dialogowe wdrażanie | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 672696027a43cd5a50e2ad630824d305f7ca4b68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-dialog-box"></a>Implementowanie okno dialogowe
 Istnieją dwa sposoby okno dialogowe Dodawanie do projektu ATL: za pomocą Kreatora okna dialogowego ATL lub Dodaj ją ręcznie.  
@@ -45,7 +40,7 @@ Istnieją dwa sposoby okno dialogowe Dodawanie do projektu ATL: za pomocą Kreat
 > [!NOTE]
 >  Po utworzeniu za pomocą Kreatora okna dialogowego ATL okno dialogowe Kreator automatycznie doda `IDD` elementu członkowskiego jako `enum` typu.  
   
- `CDialogImpl`Umożliwia wdrożenie modalne i niemodalne okno dialogowe, które obsługuje formantów systemu Windows. `CAxDialogImpl`Umożliwia wdrożenie modalne i niemodalne okno dialogowe, które obsługuje zarówno ActiveX i systemu Windows.  
+ `CDialogImpl` Umożliwia wdrożenie modalne i niemodalne okno dialogowe, które obsługuje formantów systemu Windows. `CAxDialogImpl` Umożliwia wdrożenie modalne i niemodalne okno dialogowe, które obsługuje zarówno ActiveX i systemu Windows.  
   
  Aby utworzyć modalne okno dialogowe, Utwórz wystąpienie z `CDialogImpl`— pochodnych (lub `CAxDialogImpl`— pochodnych) klasy, a następnie wywołać [DoModal](../atl/reference/cdialogimpl-class.md#domodal) — metoda. Aby zamknąć modalne okno dialogowe, wywołaj [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) metody obsługi wiadomości. Aby utworzyć niemodalne okno dialogowe, wywołaj [Utwórz](../atl/reference/cdialogimpl-class.md#create) zamiast metody `DoModal`. Aby zniszczyć niemodalne okno dialogowe, wywołaj [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).  
   

@@ -1,13 +1,10 @@
 ---
-title: "Operatory przypisania w języku C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Operatory przypisania w języku C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - operator >>=, C assignment operators
 - <<= operator
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c839538b94ff8f80eabed98dbaf16e4009d3e500
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a13f3b36ae4f5bbd11f170d78d735427882d2ff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-assignment-operators"></a>Operatory przypisania w języku C
 Operacja przypisania przypisuje wartość prawostronny operand do lokalizacji magazynu o nazwie przez argument po lewej stronie. W związku z tym lewostronny operand operatora przypisania musi być modyfikowalną l wartość. Po przypisania wyrażenie przypisania ma wartość lewy operand, ale nie jest wartością l-value.  
@@ -57,7 +52,7 @@ Operacja przypisania przypisuje wartość prawostronny operand do lokalizacji ma
  **Składnia**  
   
  *wyrażenia przypisania*:  
- *wyrażenia warunkowego*  
+ *Wyrażenia warunkowego*  
   
  *wyrażenie jednoargumentowe operator przypisania z wyrażenia przypisania*  
   

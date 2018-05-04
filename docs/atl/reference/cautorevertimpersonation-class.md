@@ -2,11 +2,8 @@
 title: Klasa CAutoRevertImpersonation | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoRevertImpersonation
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b1982fc3c8b0d46dfd636cab63be82509fa07f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 942c446fc64bb7e4210bc82e21fc2511ae01503a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautorevertimpersonation-class"></a>Klasa CAutoRevertImpersonation
 Ta klasa umożliwia przywrócenie [CAccessToken](../../atl/reference/caccesstoken-class.md) obiekty do nonimpersonating stanu, gdy przechodzi ona poza zakresem.  
@@ -68,7 +63,7 @@ class CAutoRevertImpersonation
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h  
   
-##  <a name="attach"></a>CAutoRevertImpersonation::Attach  
+##  <a name="attach"></a>  CAutoRevertImpersonation::Attach  
  Automatyzuje odwrócenie personifikacji tokenu dostępu.  
   
 ```
@@ -82,7 +77,7 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Uwagi  
  Tej metody należy używać tylko wtedy, gdy [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) obiekt został utworzony przy użyciu wartości NULL `CAccessToken` wskaźnika, lub jeśli [Detach](#detach) wywołano wcześniej. W przypadku prostego nie jest konieczne do używania tej metody.  
   
-##  <a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
+##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation  
  Konstruuje `CAutoRevertImpersonation` obiektu.  
   
 ```
@@ -96,7 +91,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Uwagi  
  Rzeczywiste personifikacji tokenu dostępu należy przeprowadzić oddzielnie od, najlepiej przed tworzeniem `CAutoRevertImpersonation` obiektu. Ta personifikacji zostaną cofnięte automatycznie po `CAutoRevertImpersonation` obiektu wykracza poza zakres.  
   
-##  <a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
+##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
  Niszczy obiekt i przywraca personifikacji tokenu dostępu.  
   
 ```
@@ -106,7 +101,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Uwagi  
  Przywraca wszystkie personifikacji obecnie dotyczące [CAccessToken](../../atl/reference/caccesstoken-class.md) obiektu dostarczonego w konstrukcji lub za pomocą [Attach](#attach) metody. Jeśli nie `CAccessToken` jest skojarzony, destruktor nie ma wpływu.  
   
-##  <a name="detach"></a>CAutoRevertImpersonation::Detach  
+##  <a name="detach"></a>  CAutoRevertImpersonation::Detach  
  Anuluje odwrócenie automatycznej personifikacji.  
   
 ```
@@ -117,9 +112,9 @@ const CAccessToken* Detach() throw();
  Adres wcześniej skojarzone [CAccessToken](../../atl/reference/caccesstoken-class.md), lub wartość NULL, jeśli istniały żadne skojarzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywoływanie **Detach** uniemożliwia `CAutoRevertImpersonation` Przywracanie wszelkich personifikacji obecnie dla obiekt [CAccessToken](../../atl/reference/caccesstoken-class.md) obiekt skojarzony z tym obiektem. `CAutoRevertImpersonation`następnie można zniszczone bez zmiany lub ponownie kojarzyć na tym samym lub innym `CAccessToken` przy użyciu [Attach](#attach).  
+ Wywoływanie **Detach** uniemożliwia `CAutoRevertImpersonation` Przywracanie wszelkich personifikacji obecnie dla obiekt [CAccessToken](../../atl/reference/caccesstoken-class.md) obiekt skojarzony z tym obiektem. `CAutoRevertImpersonation` następnie można zniszczone bez zmiany lub ponownie kojarzyć na tym samym lub innym `CAccessToken` przy użyciu [Attach](#attach).  
   
-##  <a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
+##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken  
  Pobiera bieżący token dostępu skojarzone z tym obiektem.  
   
 ```

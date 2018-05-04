@@ -1,12 +1,9 @@
 ---
 title: Klasa CComUnkArray | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComUnkArray
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComUnkArray class
 ms.assetid: 5fd4b378-a7b5-4cc1-8866-8ab72a73639e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca462648a43869b11984e4582c8eb2c3dfaece7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de49180052a6fdb7bde32274e032ea1dd9bfb87
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomunkarray-class"></a>Klasa CComUnkArray
 Ta klasa przechowuje **IUnknown** wskaźniki i jest przeznaczony do użycia jako parametr [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) klasy szablonu.  
@@ -77,12 +72,12 @@ class CComUnkArray
  Zobacz [dodanie do niej punkty połączenia do obiektu](../../atl/adding-connection-points-to-an-object.md) szczegółowe informacje na temat automatyzacji tworzenia połączenia punktu proxy.  
   
 > [!NOTE]
-> **Uwaga** klasy [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) jest używany przez **Dodaj klasę** kreatora podczas tworzenia formant, który ma punkty połączenia. Jeśli chcesz ręcznie określić liczbę punktów połączenia, zmień odwołania z **CComDynamicUnkArray** do `CComUnkArray<`  *n*  `>`, gdzie  *n*  jest liczba punktów połączenia wymagane.  
+> **Uwaga** klasy [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) jest używany przez **Dodaj klasę** kreatora podczas tworzenia formant, który ma punkty połączenia. Jeśli chcesz ręcznie określić liczbę punktów połączenia, zmień odwołania z **CComDynamicUnkArray** do `CComUnkArray<` *n* `>`, gdzie *n*jest to liczba punktów połączenia wymagane.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="add"></a>CComUnkArray::Add  
+##  <a name="add"></a>  CComUnkArray::Add  
  Wywołanie tej metody, aby dodać **IUnknown** wskaźnika do tablicy.  
   
 ```
@@ -96,7 +91,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca plik cookie skojarzone z nowo dodanego wskaźnika lub 0, jeśli tablica nie jest wystarczająco duży, aby zawierać nowego wskaźnika.  
   
-##  <a name="begin"></a>CComUnkArray::begin  
+##  <a name="begin"></a>  CComUnkArray::begin  
  Zwraca kursor na początku kolekcji **IUnknown** wskaźniki interfejsu.  
   
 ```
@@ -112,7 +107,7 @@ IUnknown**
   
  Przed użyciem **IUnknown** interfejsu, należy sprawdzić, czy nie jest **NULL**.  
   
-##  <a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
+##  <a name="ccomunkarray"></a>  CComUnkArray::CComUnkArray  
  Konstruktor.  
   
 ```
@@ -122,7 +117,7 @@ CComUnkArray();
 ### <a name="remarks"></a>Uwagi  
  Ustawia kolekcję do przechowywania `nMaxSize` **IUnknown** wskaźniki i inicjuje wskaźniki do **NULL**.  
   
-##  <a name="end"></a>CComUnkArray::end  
+##  <a name="end"></a>  CComUnkArray::end  
  Zwraca wskaźnik do jednego poza ostatniego **IUnknown** wskaźnika w kolekcji.  
   
 ```
@@ -138,7 +133,7 @@ IUnknown**
   
  [!code-cpp[NVC_ATL_COM#44](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
-##  <a name="getcookie"></a>CComUnkArray::GetCookie  
+##  <a name="getcookie"></a>  CComUnkArray::GetCookie  
  Wywołanie tej metody, aby uzyskać plik cookie skojarzone z danym **IUnknown** wskaźnika.  
   
 ```
@@ -155,7 +150,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>Uwagi  
  Jeśli istnieje więcej niż jedno wystąpienie tego samego **IUnknown** wskaźnika, ta funkcja zwraca wartość pliku cookie dla pierwszego z nich.  
   
-##  <a name="getunknown"></a>CComUnkArray::GetUnknown  
+##  <a name="getunknown"></a>  CComUnkArray::GetUnknown  
  Wywołanie tej metody, aby uzyskać **IUnknown** wskaźnika skojarzone z danym pliku cookie.  
   
 ```
@@ -169,7 +164,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **IUnknown** wskaźnika lub wartość NULL, jeśli nie dopasowania zostanie znaleziony cookie.  
   
-##  <a name="remove"></a>CComUnkArray::Remove  
+##  <a name="remove"></a>  CComUnkArray::Remove  
  Wywołanie tej metody, aby usunąć **IUnknown** wskaźnika z tablicy.  
   
 ```

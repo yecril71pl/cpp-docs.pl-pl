@@ -1,13 +1,10 @@
 ---
 title: Prototypy funkcji | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 6979bb90debc1734ccadf40b5d0e814d3c28c1ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-prototypes"></a>Prototypy funkcji
 Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany Klasa magazynu i inne atrybuty funkcji. Jako prototyp deklaracji funkcji należy również określić typy i identyfikatory dla argumentów funkcji.  
   
 ## <a name="syntax"></a>Składnia  
  `declaration`:  
- *Specyfikatory deklaracji atrybutu seq* opt*init deklarator listy* opt**;**  
+ *Specyfikatory deklaracji atrybutu seq* opt*init deklarator listy* opt **;**  
   
  /\* *Atrybut seq* opt jest Specific Microsoft * /  
   
@@ -48,7 +43,7 @@ Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany K
  *init-declarator-list*:  
  *init-declarator*  
   
- *init — deklarator — lista***,***init deklarator*   
+ *init — deklarator — lista***,***init deklarator*  
   
  *init-declarator*:  
  *declarator*  
@@ -59,9 +54,9 @@ Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany K
  *wskaźnik* opt*bezpośrednio deklarator*  
   
  *deklarator bezpośrednio*: /\* deklarator funkcji \*/  
- *deklarator bezpośrednio***(***listy parametrów typu***)** / * nowy styl deklarator       \*/  
+ *deklarator bezpośrednio***(***listy parametrów typu***)** / * nowy styl deklarator \*/  
   
- *deklarator bezpośrednio***(***listy identyfikatorów* opt**)** / * przestarzały styl deklarator     \*/  
+ *deklarator bezpośrednio***(***listy identyfikatorów* opt **)** / * przestarzały styl deklarator \*/  
   
  Prototyp ma tego samego formularza jako definicji funkcji, z wyjątkiem, że jest zakończona średnikiem bezpośrednio po nawiasie zamykającym i w związku z tym ma treść nie. W obu przypadkach zwracany typ należy uzgodnić z zwracany typ określony w definicji funkcji.  
   

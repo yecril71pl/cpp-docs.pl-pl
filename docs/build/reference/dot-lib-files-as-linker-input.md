@@ -1,13 +1,10 @@
 ---
-title: ". Lib pliki jako dane wejściowe konsolidatora | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: . Lib pliki jako dane wejściowe konsolidatora | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.AdditionalDependencies
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 181c8c3e5e762f2f20d99ca2acadaf285e717b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8382e43398c4b6e5241542e6b41fdee8e2f70eff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lib-files-as-linker-input"></a>Pliki .Lib — Wejście konsolidatora
 ŁĄCZE akceptuje COFF standardowych bibliotek i COFF Importuj biblioteki, które zwykle mają rozszerzenie. lib. Biblioteki standardowe zawierają obiekty i są tworzone przez narzędzie LIB. Import biblioteki zawierają informacje o eksportu w inne programy i są tworzone przez łącze podczas tworzenia programu, który zawiera eksportu lub przez narzędzie LIB. Uzyskać informacji na temat używania LIB można utworzyć standardowy lub Importuj biblioteki, zobacz [odwołanie do biblioteki LIB](../../build/reference/lib-reference.md). Aby uzyskać więcej informacji dotyczących używania łącze do tworzenia biblioteki importowanej, zobacz [/dll](../../build/reference/dll-build-a-dll.md) opcji.  

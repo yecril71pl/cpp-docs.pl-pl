@@ -1,13 +1,10 @@
 ---
-title: "Komentarze języka C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Komentarze języka C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /* */ comment delimiters
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2962669c6d925931d0e8ff0cbf3796dbbd1b430
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3a6c2d32596aa8205d02ee5cddb28b5ba3c8166
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-comments"></a>Komentarze języka C
 "comment" jest sekwencji znaków, zaczynając od kombinacji kreską ułamkową/gwiazdki (<b>/\*</b>) który jest traktowany jako pojedynczy znak odstępu przez kompilator, a w przeciwnym razie jest ignorowana. Komentarz może zawierać dowolną kombinację znaków z zestawu można przedstawić znaku, łącznie ze znakami nowego wiersza, z wyłączeniem ogranicznika "końca komentarza" (<b>\*/</b>). Komentarze mogą zajmować więcej niż jeden wiersz, ale nie mogą być zagnieżdżone.  
@@ -72,7 +67,7 @@ printf( "Hello\n" );  /* Comments can go here */
   
  Podczas gdy można używać komentarzy do oznaczenia pewnych linii kodu jako nieaktywnych dla celów testowych, dyrektywy preprocesora `#if`, `#endif` i kompilacja warunkowa są przydatną alternatywą dla wykonania tego zadania. Aby uzyskać więcej informacji, zobacz [dyrektywy preprocesora](../preprocessor/preprocessor-directives.md) w *odwołania preprocesora*.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Kompilator Microsoft obsługuje również Komentarze jednowierszowe poprzedzony przez dwa ukośniki (**//**). W przypadku kompilacji z użyciem /Za (standard ANSI), te komentarze spowodują wygenerowanie błędów. Nie można rozszerzać komentarzy do drugiego wiersza.  
   

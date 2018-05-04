@@ -2,12 +2,9 @@
 title: Biblioteki dll i zachowanie biblioteki wykonawczej programu Visual C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -24,21 +21,19 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bf84eeaf9277c5cf037c4fa59c28d109d95856
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: feee3d888fbf43bfd8675ccc83a04fd4e1f0b528
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Biblioteki dll i zachowanie biblioteki wykonawczej programu Visual C++  
   
-Podczas tworzenia biblioteki dołączanej dynamicznie (DLL) przy użyciu programu Visual C++, domyślnie, konsolidator obejmuje biblioteki wykonawczej programu Visual C++ (VCRuntime). VCRuntime zawiera kod wymagany do rozpoczęcia i zakończenia wykonywalny C/C++. Gdy są połączone do biblioteki DLL, kod VCRuntime stanowi Wewnętrzna funkcja punktu wejścia biblioteki DLL wywoływana `_DllMainCRTStartup` obsługująca komunikatów systemu operacyjnego do pliku DLL umożliwia dołączanie do lub odłączyć od proces lub wątek. `_DllMainCRTStartup` Funkcji wykonuje podstawowe zadania, takie jak ustawianie C Biblioteka run-time (CRT) inicjowanie i kończenie działania zabezpieczeń bufora stosu i wywołań konstruktory i destruktory dla obiektów globalnych i statyczne. `_DllMainCRTStartup`również wywołania funkcje punktów zaczepienia innych bibliotek WinRT, MFC i ATL wykonać własne inicjowanie i kończenie działania programu. Bez tego inicjowania, CRT i innych bibliotek, a także zmiennych statycznych pozostanie w stanie niezainicjowanym. Tej samej inicjacji wewnętrzny VCRuntime i zakończenie procedury są nazywane czy biblioteki DLL używa statycznie połączone CRT lub połączone dynamicznie biblioteki DLL CRT.  
+Podczas tworzenia biblioteki dołączanej dynamicznie (DLL) przy użyciu programu Visual C++, domyślnie, konsolidator obejmuje biblioteki wykonawczej programu Visual C++ (VCRuntime). VCRuntime zawiera kod wymagany do rozpoczęcia i zakończenia wykonywalny C/C++. Gdy są połączone do biblioteki DLL, kod VCRuntime stanowi Wewnętrzna funkcja punktu wejścia biblioteki DLL wywoływana `_DllMainCRTStartup` obsługująca komunikatów systemu operacyjnego do pliku DLL umożliwia dołączanie do lub odłączyć od proces lub wątek. `_DllMainCRTStartup` Funkcji wykonuje podstawowe zadania, takie jak ustawianie C Biblioteka run-time (CRT) inicjowanie i kończenie działania zabezpieczeń bufora stosu i wywołań konstruktory i destruktory dla obiektów globalnych i statyczne. `_DllMainCRTStartup` również wywołania funkcje punktów zaczepienia innych bibliotek WinRT, MFC i ATL wykonać własne inicjowanie i kończenie działania programu. Bez tego inicjowania, CRT i innych bibliotek, a także zmiennych statycznych pozostanie w stanie niezainicjowanym. Tej samej inicjacji wewnętrzny VCRuntime i zakończenie procedury są nazywane czy biblioteki DLL używa statycznie połączone CRT lub połączone dynamicznie biblioteki DLL CRT.  
   
 ## <a name="default-dll-entry-point-dllmaincrtstartup"></a>Domyślna _DllMainCRTStartup punktu wejścia biblioteki DLL  
   

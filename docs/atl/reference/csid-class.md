@@ -1,12 +1,9 @@
 ---
 title: Klasa CSid | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSid
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ed55fd2286c3d6e37b59b16a06f43cc4efe55091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csid-class"></a>Klasa CSid
 Ta klasa jest otoki dla `SID` struktury (identyfikator zabezpieczeń).  
@@ -67,7 +62,7 @@ class CSid
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|Konstruktor.|  
-|[CSid::~CSid](#dtor)|Destruktor.|  
+|[CSid:: ~ CSid](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -99,9 +94,9 @@ class CSid
 |-|-|  
 |[operator ==](#operator_eq_eq)|Dwa obiekty deskryptora zabezpieczeń dla równości testów|  
 |[operator! =](#operator_neq)|Dwa obiekty deskryptora zabezpieczeń dla nierówności testów|  
-|[operator\<](#operator_lt_)|Porównuje wartości względnej dwóch obiektów deskryptora zabezpieczeń.|  
+|[Operator \<](#operator_lt_)|Porównuje wartości względnej dwóch obiektów deskryptora zabezpieczeń.|  
 |[operator >](#operator_gt_)|Porównuje wartości względnej dwóch obiektów deskryptora zabezpieczeń.|  
-|[operator\<=](#operator_lt__eq)|Porównuje wartości względnej dwóch obiektów deskryptora zabezpieczeń.|  
+|[Operator \<=](#operator_lt__eq)|Porównuje wartości względnej dwóch obiektów deskryptora zabezpieczeń.|  
 |[operator > =](#operator_gt__eq)|Porównuje wartości względnej dwóch obiektów deskryptora zabezpieczeń.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -114,7 +109,7 @@ class CSid
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h  
   
-##  <a name="accountname"></a>CSid::AccountName  
+##  <a name="accountname"></a>  CSid::AccountName  
  Zwraca nazwę konta skojarzonego z `CSid` obiektu.  
   
 ```
@@ -129,7 +124,7 @@ LPCTSTR AccountName() const throw(...);
   
  Jeśli nie nazwy konta dla `SID` można znaleźć `AccountName` zwraca pusty ciąg. Może to wystąpić, jeśli limit czasu sieci uniemożliwia znajdowanie nazwę tej metody. Występuje również w przypadku identyfikatorów zabezpieczeń bez odpowiedniej nazwy konta, takich jak logowanie `SID` identyfikującym sesji logowania.  
   
-##  <a name="csid"></a>CSid::CSid  
+##  <a name="csid"></a>  CSid::CSid  
  Konstruktor.  
   
 ```
@@ -175,7 +170,7 @@ explicit CSid(
   
  Jeśli inicjowanie zakończy się niepowodzeniem, spowoduje zgłoszenie konstruktora [CAtlException klasy](../../atl/reference/catlexception-class.md).  
   
-##  <a name="dtor"></a>CSid:: ~ CSid  
+##  <a name="dtor"></a>  CSid:: ~ CSid  
  Destruktor.  
   
 ```
@@ -185,7 +180,7 @@ virtual ~CSid() throw();
 ### <a name="remarks"></a>Uwagi  
  Destruktor zwalnia wszystkie zasoby uzyskaną przez obiekt.  
   
-##  <a name="csidarray"></a>CSid::CSidArray  
+##  <a name="csidarray"></a>  CSid::CSidArray  
  Tablica [CSid](../../atl/reference/csid-class.md) obiektów.  
   
 ```
@@ -195,7 +190,7 @@ typedef CAtlArray<CSid> CSidArray;
 ### <a name="remarks"></a>Uwagi  
  Ten element typedef Określa typ tablicy, która może służyć do pobierania identyfikatorów zabezpieczeń z listy kontroli dostępu (listy kontroli dostępu). Zobacz [CAcl::GetAclEntries](../../atl/reference/cacl-class.md#getaclentries).  
   
-##  <a name="domain"></a>CSid::Domain  
+##  <a name="domain"></a>  CSid::Domain  
  Zwraca nazwę domeny skojarzone z `CSid` obiektu.  
   
 ```
@@ -210,7 +205,7 @@ LPCTSTR Domain() const throw(...);
   
  Jeśli nie nazwy konta dla `SID` można znaleźć **domeny** zwraca domeny w postaci pustego ciągu. Może to wystąpić, jeśli limit czasu sieci uniemożliwia znajdowanie nazwę tej metody. Występuje również w przypadku identyfikatorów zabezpieczeń bez odpowiedniej nazwy konta, takich jak logowanie `SID` identyfikującym sesji logowania.  
   
-##  <a name="equalprefix"></a>CSid::EqualPrefix  
+##  <a name="equalprefix"></a>  CSid::EqualPrefix  
  Testy `SID` prefiksy (identyfikator zabezpieczeń) pod kątem równości.  
   
 ```
@@ -228,7 +223,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 ### <a name="remarks"></a>Uwagi  
  Zobacz [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) w zestawie SDK systemu Windows, aby uzyskać więcej informacji.  
   
-##  <a name="getlength"></a>CSid::GetLength  
+##  <a name="getlength"></a>  CSid::GetLength  
  Zwraca długość `CSid` obiektu.  
   
 ```
@@ -244,7 +239,7 @@ UINT GetLength() const throw();
 > [!NOTE]
 >  W kompilacjach debugowania funkcji spowoduje ASSERT, jeśli `CSid` obiekt jest nieprawidłowy.  
   
-##  <a name="getpsid"></a>CSid::GetPSID  
+##  <a name="getpsid"></a>  CSid::GetPSID  
  Zwraca wskaźnik do `SID` struktury (identyfikator zabezpieczeń).  
   
 ```
@@ -254,7 +249,7 @@ const SID* GetPSID() const throw(...);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca adres `CSid` podstawowej obiektu `SID` struktury.  
   
-##  <a name="getpsid_identifier_authority"></a>CSid::GetPSID_IDENTIFIER_AUTHORITY  
+##  <a name="getpsid_identifier_authority"></a>  CSid::GetPSID_IDENTIFIER_AUTHORITY  
  Zwraca wskaźnik do **SID_IDENTIFIER_AUTHORITY** struktury.  
   
 ```
@@ -267,7 +262,7 @@ const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
 > [!NOTE]
 >  W kompilacjach debugowania funkcji spowoduje ASSERT, jeśli `CSid` obiekt jest nieprawidłowy.  
   
-##  <a name="getsubauthority"></a>CSid::GetSubAuthority  
+##  <a name="getsubauthority"></a>  CSid::GetSubAuthority  
  Zwraca określony podrzędna w `SID` struktury (identyfikator zabezpieczeń).  
   
 ```
@@ -287,7 +282,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 > [!NOTE]
 >  W kompilacjach debugowania funkcji spowoduje ASSERT, jeśli `CSid` obiekt jest nieprawidłowy.  
   
-##  <a name="getsubauthoritycount"></a>CSid::GetSubAuthorityCount  
+##  <a name="getsubauthoritycount"></a>  CSid::GetSubAuthorityCount  
  Zwraca liczbę podrzędna.  
   
 ```
@@ -302,7 +297,7 @@ UCHAR GetSubAuthorityCount() const throw();
 > [!NOTE]
 >  W kompilacjach debugowania funkcji spowoduje ASSERT, jeśli `CSid` obiekt jest nieprawidłowy.  
   
-##  <a name="isvalid"></a>CSid::IsValid  
+##  <a name="isvalid"></a>  CSid::IsValid  
  Testy `CSid` obiektu ważności.  
   
 ```
@@ -315,7 +310,7 @@ bool IsValid() const throw();
 ### <a name="remarks"></a>Uwagi  
  `IsValid` Metoda sprawdza `CSid` obiektu upewniając się, że numer poprawki znajduje się w zakresie znane i liczba subauthorities jest mniejsza niż maksymalna.  
   
-##  <a name="loadaccount"></a>CSid::LoadAccount  
+##  <a name="loadaccount"></a>  CSid::LoadAccount  
  Aktualizacje `CSid` obiektu daną nazwę konta i domeny lub istniejącej struktury identyfikatora SID (identyfikator zabezpieczeń).  
   
 ```
@@ -342,9 +337,9 @@ bool LoadAccount(
  Zwraca **true** w przypadku powodzenia **false** w przypadku awarii. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać `GetLastError`.  
   
 ### <a name="remarks"></a>Uwagi  
- `LoadAccount`próbuje znaleźć identyfikatora zabezpieczeń dla określonej nazwy. Zobacz [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) więcej szczegółów.  
+ `LoadAccount` próbuje znaleźć identyfikatora zabezpieczeń dla określonej nazwy. Zobacz [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) więcej szczegółów.  
   
-##  <a name="operator_eq"></a>CSid::operator =  
+##  <a name="operator_eq"></a>  CSid::operator =  
  Operator przypisania.  
   
 ```
@@ -359,7 +354,7 @@ CSid& operator= (const SID& rhs) throw(...);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwołanie do zaktualizowanego `CSid` obiektu.  
   
-##  <a name="operator_eq_eq"></a>CSid::operator ==  
+##  <a name="operator_eq_eq"></a>  CSid::operator ==  
  Testy dwa obiekty deskryptora zabezpieczeń pod kątem równości.  
   
 ```
@@ -378,7 +373,7 @@ bool operator==(
 ### <a name="return-value"></a>Wartość zwracana  
  **wartość true,** deskryptorów zabezpieczeń są równe, w przeciwnym razie **false**.  
   
-##  <a name="operator_neq"></a>CSid::operator! =  
+##  <a name="operator_neq"></a>  CSid::operator! =  
  Testy dwa obiekty deskryptora zabezpieczeń dla nierówności.  
   
 ```
@@ -397,7 +392,7 @@ bool operator!=(
 ### <a name="return-value"></a>Wartość zwracana  
  **wartość true,** deskryptorów zabezpieczeń nie są równe, w przeciwnym razie **false**.  
   
-##  <a name="operator_lt"></a>CSid::operator&lt;  
+##  <a name="operator_lt"></a>  CSid::operator &lt;  
  Porównuje wartości względnej dwóch obiektów deskryptora zabezpieczeń.  
   
 ```
@@ -416,7 +411,7 @@ bool operator<(
 ### <a name="return-value"></a>Wartość zwracana  
  **wartość true,** Jeśli `lhs` jest mniejsza niż `rhs`, w przeciwnym razie **false**.  
   
-##  <a name="operator_lt__eq"></a>CSid::operator&lt;=  
+##  <a name="operator_lt__eq"></a>  CSid::operator &lt;=  
  Porównuje wartości względnej dwóch obiektów deskryptora zabezpieczeń.  
   
 ```
@@ -435,7 +430,7 @@ bool operator<=(
 ### <a name="return-value"></a>Wartość zwracana  
  **wartość true,** Jeśli `lhs` jest mniejsza niż lub równa `rhs`, w przeciwnym razie **false**.  
   
-##  <a name="operator_gt"></a>CSid::operator&gt;  
+##  <a name="operator_gt"></a>  CSid::operator &gt;  
  Porównuje wartości względnej dwóch obiektów deskryptora zabezpieczeń.  
   
 ```
@@ -454,7 +449,7 @@ bool operator>(
 ### <a name="return-value"></a>Wartość zwracana  
  **wartość true,** Jeśli `lhs` jest większa niż `rhs`, w przeciwnym razie **false**.  
   
-##  <a name="operator_gt__eq"></a>CSid::operator&gt;=  
+##  <a name="operator_gt__eq"></a>  CSid::operator &gt;=  
  Porównuje wartości względnej dwóch obiektów deskryptora zabezpieczeń.  
   
 ```
@@ -473,7 +468,7 @@ bool operator>=(
 ### <a name="return-value"></a>Wartość zwracana  
  **wartość true,** Jeśli `lhs` jest większa niż lub równa `rhs`, w przeciwnym razie **false**.  
   
-##  <a name="operator_const_sid__star"></a>CSid::operator const SID *  
+##  <a name="operator_const_sid__star"></a>  CSid::operator const SID *  
  Rzutowania `CSid` obiektu na wskaźnik do `SID` struktury (identyfikator zabezpieczeń).  
   
 ```  
@@ -483,7 +478,7 @@ operator const SID *() const throw(...);
 ### <a name="remarks"></a>Uwagi  
  Zwraca adres `SID` struktury.  
   
-##  <a name="sid"></a>CSid::Sid  
+##  <a name="sid"></a>  CSid::Sid  
  Zwraca `SID` struktury (identyfikator zabezpieczeń) jako ciąg.  
   
 ```
@@ -493,7 +488,7 @@ LPCTSTR Sid() const throw(...);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `SID` struktury jako ciąg w formacie odpowiednie do wyświetlania, gromadzenia i przekazywania. Odpowiednikiem [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399).  
   
-##  <a name="sidnameuse"></a>CSid::SidNameUse  
+##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  Zwraca opis stanu `CSid` obiektu.  
   
 ```
@@ -516,7 +511,7 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeComputer|Wskazuje `SID` dla komputera.|  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie [CSid::LoadAccount](#loadaccount) zaktualizować `CSid` obiekt przed wywołaniem `SidNameUse` do zwrócenia stanu. `SidNameUse`nie zmienia stanu obiektu (przez wywołanie do **LookupAccountName** lub **LookupAccountSid**), ale zwraca tylko bieżący stan.  
+ Wywołanie [CSid::LoadAccount](#loadaccount) zaktualizować `CSid` obiekt przed wywołaniem `SidNameUse` do zwrócenia stanu. `SidNameUse` nie zmienia stanu obiektu (przez wywołanie do **LookupAccountName** lub **LookupAccountSid**), ale zwraca tylko bieżący stan.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia — przykład](../../visual-cpp-samples.md)   

@@ -1,12 +1,9 @@
 ---
 title: Klasa CStringRefElementTraits | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CStringRefElementTraits
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c89a1e0d87550614fb8991ac3efe6bf369d147e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8746bf216be417fb569aae58421b272c983914b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringrefelementtraits-class"></a>Klasa CStringRefElementTraits
 Ta klasa udostępnia statyczne funkcje związane z przechowywane w obiektach klasy kolekcji ciągów. Obiekty ciągu są traktowane jako odwołania.  
@@ -68,7 +63,7 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcoll.h  
   
-##  <a name="compareelements"></a>CStringRefElementTraits::CompareElements  
+##  <a name="compareelements"></a>  CStringRefElementTraits::CompareElements  
  Wywołanie tej funkcji statycznych, można porównać dwóch elementów ciąg pod kątem równości.  
   
 ```
@@ -85,7 +80,7 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość PRAWDA, jeśli elementy są takie same, wartość false w przeciwnym razie wartość.  
   
-##  <a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>  CStringRefElementTraits::CompareElementsOrdered  
  Wywołanie tej funkcji statycznych, aby porównać dwa elementy ciągu.  
   
 ```
@@ -102,7 +97,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zero, jeśli ciągi są identyczne, < 0 Jeśli `str1` jest mniejsza niż `str2`, lub > 0 Jeśli `str1` jest większa niż `str2`. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metoda jest używana do wykonania porównania.  
   
-##  <a name="hash"></a>CStringRefElementTraits::Hash  
+##  <a name="hash"></a>  CStringRefElementTraits::Hash  
  Wywołanie tej funkcji statycznych, aby obliczyć wartość skrótu dla elementu dany ciąg znaków.  
   
 ```

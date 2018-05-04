@@ -2,12 +2,9 @@
 title: Opcje DUMPBIN | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - dumpbin
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f142071a2a6b71dd134a7fb31474f917d5348f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93d2de8a8912d9f141443b10bd5cdc0448c23ecd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dumpbin-options"></a>Opcje DUMPBIN
 Opcja składa się z specyfikator opcji kreski (-) lub ukośnikiem (/), a po niej nazwę opcji. Nie można stosować skrót nazw opcji. Niektóre opcje przyjmują argumentów, podać po dwukropkiem (:). Bez spacji i karty są dozwolone w obrębie Specyfikacja opcji. Użyj spacji lub karty do oddzielania specyfikacje opcji w wierszu polecenia. Nazwy opcji i ich argumentów nazwy — słowo kluczowe lub plik nie jest uwzględniana. Większość opcji dotyczą wszystkich plików binarnych; kilka mają zastosowanie tylko do niektórych typów plików. Domyślnie DUMPBIN wysyła informacje do wyjścia standardowego. Użyj [/OUT](../../build/reference/out-dumpbin.md) opcję, aby wysłać dane wyjściowe do pliku.  

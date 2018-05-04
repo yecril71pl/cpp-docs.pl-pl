@@ -1,13 +1,10 @@
 ---
 title: -QIfist (pomijanie _ftol) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /qifist
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7377824b45027318a21f464650ecbc837a76d31c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77ec65e330cebb1de718330ba129e960383b31c6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Pomijanie _ftol)
 Przestarzałe. Pomija wywołanie funkcji Pomocnik `_ftol` podczas konwersji z typu zmiennoprzecinkowego na typ całkowity jest wymagana.  

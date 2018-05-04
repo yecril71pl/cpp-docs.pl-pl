@@ -1,13 +1,10 @@
 ---
-title: "Przy użyciu parametry wymienne (Rejestrator ALT) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przy użyciu parametry wymienne (Rejestrator ALT) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - AddReplacement
 - ClearReplacements
@@ -16,22 +13,20 @@ dev_langs:
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b06333ba51b74501f3b7cd68248e5fb7e51ca94f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91deabfd14d89c4a26384a14445fc51edbb3ac94
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Przy użyciu parametry wymienne (rejestratora &#39; preprocesora s)
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Przy użyciu parametry wymienne (rejestratora&#39;preprocesora s)
 Parametry wymienne Zezwalaj klientowi rejestratora Określ dane czasu wykonywania. Aby to zrobić, rejestratora obsługuje mapy zastąpienia, w której wchodzi wartości skojarzone z parametry zmienne w skrypcie. Rejestratora sprawia, że te wpisy w czasie wykonywania.  
   
-##  <a name="_atl_using_.25.module.25"></a>Przy użyciu modułu %  
+##  <a name="_atl_using_.25.module.25"></a> Przy użyciu modułu %  
  [Kreator formantu ATL](../atl/reference/atl-control-wizard.md) automatycznie generuje skryptu, który używa `%MODULE%`. ATL używa tego parametru replaceable rzeczywistej lokalizacji na serwerze biblioteki DLL lub EXE.  
   
 ## <a name="concatenating-run-time-data-with-script-data"></a>Łączenie danych czasu wykonywania z danymi skryptu  

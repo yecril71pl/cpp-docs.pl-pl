@@ -2,11 +2,8 @@
 title: Klasa IOleObjectImpl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleObjectImpl
@@ -58,17 +55,15 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f710953a32ccb32c63742ab28e84818f3a330336
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a98d3e0ad75d2eaa0325699369bfe4473182049
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ioleobjectimpl-class"></a>Klasa IOleObjectImpl
 Ta klasa implementuje **IUnknown** i jest główną interfejs, za pomocą którego kontener komunikuje się za pomocą formantu.  
@@ -147,7 +142,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlctl.h  
   
-##  <a name="advise"></a>IOleObjectImpl::Advise  
+##  <a name="advise"></a>  IOleObjectImpl::Advise  
  Ustanawia połączenie advisory z formantem.  
   
 ```
@@ -159,7 +154,7 @@ STDMETHOD(Advise)(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) w systemie Windows SDK.  
   
-##  <a name="close"></a>IOleObjectImpl::Close  
+##  <a name="close"></a>  IOleObjectImpl::Close  
  Zmienia stan formantu uruchomienie załadowany.  
   
 ```
@@ -173,7 +168,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  Zobacz [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) w systemie Windows SDK.  
   
-##  <a name="doverb"></a>IOleObjectImpl::DoVerb  
+##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  Określa, że formant wykonanie jednej z jego wyliczany akcji.  
   
 ```
@@ -202,7 +197,7 @@ STDMETHOD(DoVerb)(
   
  Zobacz [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) w systemie Windows SDK.  
   
-##  <a name="doverbdiscardundo"></a>IOleObjectImpl::DoVerbDiscardUndo  
+##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  Określa, że formant, aby odrzucić wszystkie stany cofania, których obsługi.  
   
 ```
@@ -219,7 +214,7 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `S_OK`.  
   
-##  <a name="doverbhide"></a>IOleObjectImpl::DoVerbHide  
+##  <a name="doverbhide"></a>  IOleObjectImpl::DoVerbHide  
  Dezaktywuje usuwa formantu interfejsu użytkownika i ukrywa formantu.  
   
 ```
@@ -236,7 +231,7 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `S_OK`.  
   
-##  <a name="doverbinplaceactivate"></a>IOleObjectImpl::DoVerbInPlaceActivate  
+##  <a name="doverbinplaceactivate"></a>  IOleObjectImpl::DoVerbInPlaceActivate  
  Uruchamia formantu i instaluje okna, ale nie można zainstalować formantu interfejsu użytkownika.  
   
 ```
@@ -256,7 +251,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="remarks"></a>Uwagi  
  Aktywuje formant w miejscu, wywołując [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Jeśli element członkowski danych klasy formantu `m_bWindowOnly` jest **TRUE**, `DoVerbInPlaceActivate` najpierw próbuje aktywować formant jako formantem bez okien (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteWindowless ](http://msdn.microsoft.com/library/windows/desktop/ms682300)). W przypadku niepowodzenia funkcji umożliwia przeprowadzenie próby aktywacji formantu o rozszerzonych funkcji (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)). W przypadku niepowodzenia funkcji umożliwia przeprowadzenie próby aktywacji kontrolki z nie rozszerzonych funkcji (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)). Jeśli aktywacja zakończy się powodzeniem, funkcja powiadamia kontenera formant został aktywowany.  
   
-##  <a name="doverbopen"></a>IOleObjectImpl::DoVerbOpen  
+##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  Powoduje, że formant można edytowane otwarty w osobnym oknie.  
   
 ```
@@ -273,7 +268,7 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `S_OK`.  
   
-##  <a name="doverbprimary"></a>IOleObjectImpl::DoVerbPrimary  
+##  <a name="doverbprimary"></a>  IOleObjectImpl::DoVerbPrimary  
  Określa akcję wykonywaną, gdy użytkownik kliknie dwukrotnie formantu.  
   
 ```
@@ -293,7 +288,7 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 ### <a name="remarks"></a>Uwagi  
  Domyślnie do wyświetlenia strony właściwości. Można zmienić w Twojej klasy kontrolki do wywołania, inaczej po dwukrotnym kliknięciu; na przykład odtwarzanie wideo lub przejdź aktywny w miejscu.  
   
-##  <a name="doverbshow"></a>IOleObjectImpl::DoVerbShow  
+##  <a name="doverbshow"></a>  IOleObjectImpl::DoVerbShow  
  Określa, że kontener, aby uwidocznić formantu.  
   
 ```
@@ -310,7 +305,7 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="return-value"></a>Wartość zwracana  
  Jeden standardowy `HRESULT` wartości.  
   
-##  <a name="doverbuiactivate"></a>IOleObjectImpl::DoVerbUIActivate  
+##  <a name="doverbuiactivate"></a>  IOleObjectImpl::DoVerbUIActivate  
  Aktywuje formantu interfejsu użytkownika i powiadamia kontener o tym, że jego menu są zastępowane przez złożone menu.  
   
 ```
@@ -327,7 +322,7 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="return-value"></a>Wartość zwracana  
  Jeden standardowy `HRESULT` wartości.  
   
-##  <a name="enumadvise"></a>IOleObjectImpl::EnumAdvise  
+##  <a name="enumadvise"></a>  IOleObjectImpl::EnumAdvise  
  Dostarcza wyliczenie zarejestrowanych advisory połączeń dla tego formantu.  
   
 ```
@@ -337,7 +332,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) w systemie Windows SDK.  
   
-##  <a name="enumverbs"></a>IOleObjectImpl::EnumVerbs  
+##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  Dostarcza wyliczenie zarejestrowanych działań (poleceń) dla tego formantu, wywołując **OleRegEnumVerbs**.  
   
 ```
@@ -349,7 +344,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
   
  Zobacz [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) w systemie Windows SDK.  
   
-##  <a name="getclientsite"></a>IOleObjectImpl::GetClientSite  
+##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  Umieszcza kursor w element członkowski danych klasy formantu [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) do *ppClientSite* i zwiększa liczbę odwołanie wskaźnika.  
   
 ```
@@ -359,7 +354,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) w systemie Windows SDK.  
   
-##  <a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData  
+##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  Pobiera dane ze Schowka.  
   
 ```
@@ -374,7 +369,7 @@ STDMETHOD(GetClipboardData)(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) w systemie Windows SDK.  
   
-##  <a name="getextent"></a>IOleObjectImpl::GetExtent  
+##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  Pobiera rozmiar wyświetlania formantu uruchomionej w jednostkach HIMETRIC (0,01 milimetra na jednostkę).  
   
 ```
@@ -388,7 +383,7 @@ STDMETHOD(GetExtent)(
   
  Zobacz [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) w systemie Windows SDK.  
   
-##  <a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus  
+##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  Zwraca wskaźnik do informacji o stanie zastrzeżonymi formantu przez wywołanie metody **OleRegGetMiscStatus**.  
   
 ```
@@ -402,7 +397,7 @@ STDMETHOD(GetMiscStatus)(
   
  Zobacz [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) w systemie Windows SDK.  
   
-##  <a name="getmoniker"></a>IOleObjectImpl::GetMoniker  
+##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  Pobiera moniker formantu.  
   
 ```
@@ -418,7 +413,7 @@ STDMETHOD(GetMoniker)(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) w systemie Windows SDK.  
   
-##  <a name="getuserclassid"></a>IOleObjectImpl::GetUserClassID  
+##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  Zwraca identyfikator klasy formantu.  
   
 ```
@@ -428,7 +423,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) w systemie Windows SDK.  
   
-##  <a name="getusertype"></a>IOleObjectImpl::GetUserType  
+##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  Zwraca nazwę użytkownika — typ formantu przez wywołanie metody **OleRegGetUserType**.  
   
 ```
@@ -442,7 +437,7 @@ STDMETHOD(GetUserType)(
   
  Zobacz [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) w systemie Windows SDK.  
   
-##  <a name="initfromdata"></a>IOleObjectImpl::InitFromData  
+##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  Inicjuje formantu z wybranych danych.  
   
 ```
@@ -458,7 +453,7 @@ STDMETHOD(InitFromData)(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) w systemie Windows SDK.  
   
-##  <a name="isuptodate"></a>IOleObjectImpl::IsUpToDate  
+##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  Sprawdza, czy formant jest aktualny.  
   
 ```
@@ -471,7 +466,7 @@ STDMETHOD(IsUpToDate)(void);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) w systemie Windows SDK.  
   
-##  <a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo  
+##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) po poprzedni stan zostaną odrzucone.  
   
 ```
@@ -484,7 +479,7 @@ HRESULT OnPostVerbDiscardUndo();
 ### <a name="remarks"></a>Uwagi  
  Zastąpienie tej metody za pomocą kodu, który ma być wykonywane po poprzedni stan zostaną odrzucone.  
   
-##  <a name="onpostverbhide"></a>IOleObjectImpl::OnPostVerbHide  
+##  <a name="onpostverbhide"></a>  IOleObjectImpl::OnPostVerbHide  
  Wywoływane przez [DoVerbHide](#doverbhide) po formant jest ukryty.  
   
 ```
@@ -497,7 +492,7 @@ HRESULT OnPostVerbHide();
 ### <a name="remarks"></a>Uwagi  
  Zastąpienie tej metody za pomocą kodu, który ma być wykonywane po formant jest ukryty.  
   
-##  <a name="onpostverbinplaceactivate"></a>IOleObjectImpl::OnPostVerbInPlaceActivate  
+##  <a name="onpostverbinplaceactivate"></a>  IOleObjectImpl::OnPostVerbInPlaceActivate  
  Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) po aktywowaniu formantu w miejscu.  
   
 ```
@@ -510,7 +505,7 @@ HRESULT OnPostVerbInPlaceActivate();
 ### <a name="remarks"></a>Uwagi  
  Zastąpienie tej metody za pomocą kodu, który ma być wykonywane po uaktywnieniu formantu w miejscu.  
   
-##  <a name="onpostverbopen"></a>IOleObjectImpl::OnPostVerbOpen  
+##  <a name="onpostverbopen"></a>  IOleObjectImpl::OnPostVerbOpen  
  Wywoływane przez [DoVerbOpen](#doverbopen) po formant został otwarty do edycji w osobnym oknie.  
   
 ```
@@ -523,7 +518,7 @@ HRESULT OnPostVerbOpen();
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę z kodem, który ma zostać wykonana po formant został otwarty do edycji w osobnym oknie.  
   
-##  <a name="onpostverbshow"></a>IOleObjectImpl::OnPostVerbShow  
+##  <a name="onpostverbshow"></a>  IOleObjectImpl::OnPostVerbShow  
  Wywoływane przez [DoVerbShow](#doverbshow) po formantu widoczne.  
   
 ```
@@ -536,7 +531,7 @@ HRESULT OnPostVerbShow();
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę z kodem, który ma być wykonywane po formantu widoczne.  
   
-##  <a name="onpostverbuiactivate"></a>IOleObjectImpl::OnPostVerbUIActivate  
+##  <a name="onpostverbuiactivate"></a>  IOleObjectImpl::OnPostVerbUIActivate  
  Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) po uaktywnieniu formantu interfejsu użytkownika.  
   
 ```
@@ -549,7 +544,7 @@ HRESULT OnPostVerbUIActivate();
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę z kodem, który ma zostać wykonana po uaktywnieniu formantu interfejsu użytkownika.  
   
-##  <a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreVerbDiscardUndo  
+##  <a name="onpreverbdiscardundo"></a>  IOleObjectImpl::OnPreVerbDiscardUndo  
  Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) przed cofnięcie stanu zostaną odrzucone.  
   
 ```
@@ -562,7 +557,7 @@ HRESULT OnPreVerbDiscardUndo();
 ### <a name="remarks"></a>Uwagi  
  Aby zapobiec poprzedni stan zostanie odrzucony, należy przesłonić tę metodę do zwrócony błąd HRESULT.  
   
-##  <a name="onpreverbhide"></a>IOleObjectImpl::OnPreVerbHide  
+##  <a name="onpreverbhide"></a>  IOleObjectImpl::OnPreVerbHide  
  Wywoływane przez [DoVerbHide](#doverbhide) zanim formant jest ukryty.  
   
 ```
@@ -575,7 +570,7 @@ HRESULT OnPreVerbHide();
 ### <a name="remarks"></a>Uwagi  
  Aby zapobiec ukrywane formantu, należy przesłonić tę metodę do zwrócony błąd HRESULT.  
   
-##  <a name="onpreverbinplaceactivate"></a>IOleObjectImpl::OnPreVerbInPlaceActivate  
+##  <a name="onpreverbinplaceactivate"></a>  IOleObjectImpl::OnPreVerbInPlaceActivate  
  Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) aktywowania formantu w miejscu.  
   
 ```
@@ -588,7 +583,7 @@ HRESULT OnPreVerbInPlaceActivate();
 ### <a name="remarks"></a>Uwagi  
  Aby zapobiec formantu aktywowana w miejscu, należy przesłonić tę metodę do zwrócony błąd HRESULT.  
   
-##  <a name="onpreverbopen"></a>IOleObjectImpl::OnPreVerbOpen  
+##  <a name="onpreverbopen"></a>  IOleObjectImpl::OnPreVerbOpen  
  Wywoływane przez [DoVerbOpen](#doverbopen) zanim formant został otwarty do edycji w osobnym oknie.  
   
 ```
@@ -601,7 +596,7 @@ HRESULT OnPreVerbOpen();
 ### <a name="remarks"></a>Uwagi  
  Aby zapobiec formantu jest otwarty do edycji w osobnym oknie, należy przesłonić tę metodę do zwrócony błąd HRESULT.  
   
-##  <a name="onpreverbshow"></a>IOleObjectImpl::OnPreVerbShow  
+##  <a name="onpreverbshow"></a>  IOleObjectImpl::OnPreVerbShow  
  Wywoływane przez [DoVerbShow](#doverbshow) przed formantu stało się widoczne.  
   
 ```
@@ -614,7 +609,7 @@ HRESULT OnPreVerbShow();
 ### <a name="remarks"></a>Uwagi  
  Aby zapobiec formantu jest widoczne, należy przesłonić tę metodę do zwrócony błąd HRESULT.  
   
-##  <a name="onpreverbuiactivate"></a>IOleObjectImpl::OnPreVerbUIActivate  
+##  <a name="onpreverbuiactivate"></a>  IOleObjectImpl::OnPreVerbUIActivate  
  Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) przed formantu interfejsu użytkownika został aktywowany.  
   
 ```
@@ -627,7 +622,7 @@ HRESULT OnPreVerbUIActivate();
 ### <a name="remarks"></a>Uwagi  
  Aby zapobiec aktywowane formantu interfejsu użytkownika, należy przesłonić tę metodę do zwrócony błąd HRESULT.  
   
-##  <a name="setclientsite"></a>IOleObjectImpl::SetClientSite  
+##  <a name="setclientsite"></a>  IOleObjectImpl::SetClientSite  
  Określa, że formant o jego lokacji klienta w kontenerze.  
   
 ```
@@ -639,7 +634,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
   
  Zobacz [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) w systemie Windows SDK.  
   
-##  <a name="setcolorscheme"></a>IOleObjectImpl::SetColorScheme  
+##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  Zaleca schemat kolorów aplikacji formantu, jeśli istnieje.  
   
 ```
@@ -652,7 +647,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) w systemie Windows SDK.  
   
-##  <a name="setextent"></a>IOleObjectImpl::SetExtent  
+##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  Ustawia zakres obszar wyświetlania formantu.  
   
 ```
@@ -670,7 +665,7 @@ STDMETHOD(SetExtent)(
   
  Zobacz [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) w systemie Windows SDK.  
   
-##  <a name="sethostnames"></a>IOleObjectImpl::SetHostNames  
+##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  Określa, że kontrolka nazwy aplikacji kontenera i kontenerem.  
   
 ```
@@ -683,7 +678,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) w systemie Windows SDK.  
   
-##  <a name="setmoniker"></a>IOleObjectImpl::SetMoniker  
+##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  Określa, że formant jest jego nazwie.  
   
 ```
@@ -698,7 +693,7 @@ STDMETHOD(SetMoniker)(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) w systemie Windows SDK.  
   
-##  <a name="unadvise"></a>IOleObjectImpl::Unadvise  
+##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  Usuwa advisory połączenia, przechowywane w klasy formantu `m_spOleAdviseHolder` element członkowski danych.  
   
 ```
@@ -708,7 +703,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) w systemie Windows SDK.  
   
-##  <a name="update"></a>IOleObjectImpl::Update  
+##  <a name="update"></a>  IOleObjectImpl::Update  
  Aktualizuje formantu.  
   
 ```

@@ -1,13 +1,10 @@
 ---
 title: Popularne konwersje arytmetyczne | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - conversions [C++], arithmetic
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73da6d96b0dc03fa3f4c4807d6a2dff4fef2879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e17540d8d1e45ace69e45c3eac3444f70c6f343
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="usual-arithmetic-conversions"></a>Popularne konwersje arytmetyczne
 Większość operatorów C wykonywania konwersji typu można wyświetlić operandy wyrażenia na wspólny typ, albo aby rozszerzyć krótkich wartości rozmiar całkowitą w operacjach maszyny. Konwersje wykonywane przez operatorów C zależy od określonego operatora i typu argumentu lub argumentów operacji. Jednak wielu operatorów wykonywać podobne konwersje typów całkowitych i zmiennoprzecinkowych argumentów operacji. Konwersje te są określane jako "konwersje arytmetyczne." Konwersja wartości operandu na zgodne z typem nie powoduje żadnych zmian, jego wartość.  

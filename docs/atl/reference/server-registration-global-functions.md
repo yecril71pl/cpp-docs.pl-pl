@@ -1,12 +1,9 @@
 ---
 title: Globalne funkcje rejestracji serwera | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-registration-global-functions"></a>Funkcje globalne serwera rejestracji
 Funkcje te zapewniają obsługę rejestrowania i wyrejestrowywania obiektów serwera w mapie obiektu.  
@@ -46,7 +41,7 @@ Funkcje te zapewniają obsługę rejestrowania i wyrejestrowywania obiektów ser
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
    
-##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer  
  Ta funkcja jest wywoływana, aby zarejestrować każdy obiekt na mapie obiektów.  
   
 ```
@@ -70,11 +65,11 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
   
 ### <a name="remarks"></a>Uwagi  
- `AtlComModuleRegisterServer`przeprowadzi mapy obiektu ATL wygenerowany automatycznie i rejestruje każdego obiektu w planie. Jeśli `pCLSID` nie jest równa NULL, a następnie obiekt odwołuje się `pCLSID` jest zarejestrowany; w przeciwnym razie wszystkie obiekty są rejestrowane.  
+ `AtlComModuleRegisterServer` przeprowadzi mapy obiektu ATL wygenerowany automatycznie i rejestruje każdego obiektu w planie. Jeśli `pCLSID` nie jest równa NULL, a następnie obiekt odwołuje się `pCLSID` jest zarejestrowany; w przeciwnym razie wszystkie obiekty są rejestrowane.  
   
  Ta funkcja jest wywoływana [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).  
   
-##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer  
  Ta funkcja jest wywoływana, aby wyrejestrować każdy obiekt na mapie obiektów.  
   
 ```
@@ -98,11 +93,11 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
   
 ### <a name="remarks"></a>Uwagi  
- `AtlComModuleUnregisterServer`przeprowadzi mapy obiektu ATL i wyrejestrowuje każdego obiektu w planie. Jeśli `pCLSID` nie jest równa NULL, a następnie obiekt odwołuje się `pCLSID` jest niezarejestrowany; w przeciwnym razie są wszystkie obiekty wyrejestrowany.  
+ `AtlComModuleUnregisterServer` przeprowadzi mapy obiektu ATL i wyrejestrowuje każdego obiektu w planie. Jeśli `pCLSID` nie jest równa NULL, a następnie obiekt odwołuje się `pCLSID` jest niezarejestrowany; w przeciwnym razie są wszystkie obiekty wyrejestrowany.  
   
  Ta funkcja jest wywoływana [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).  
   
-##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects  
  Ta funkcja jest wywoływana, aby zarejestrować obiekty klasy.  
   
 ```
@@ -128,7 +123,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja pomocnika jest wykorzystywany przez [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (przestarzałe w wersji 7.0 ATL) i [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).  
   
-##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects  
  Ta funkcja jest wywoływana, aby usunąć fabrykę/fabryki klas z tabeli działających obiektów.  
   
 ```
@@ -145,7 +140,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja pomocnika jest wykorzystywany przez [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (przestarzałe w wersji 7.0 ATL) i [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).  
   
-##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject  
  Ta funkcja jest wywoływana, aby zwrócić fabrykę klasy.  
   
 ```

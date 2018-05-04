@@ -1,27 +1,22 @@
 ---
-title: "Porady: Projektowanie pod kątem bezpieczeństwa wyjątków | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: Projektowanie pod kątem bezpieczeństwa wyjątków | Dokumentacja firmy Microsoft'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d15df2f810848bb9349bc98c722ac02ff8cda17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-design-for-exception-safety"></a>Porady: projektowanie pod kątem bezpieczeństwa wyjątków
 Jedna z zalet mechanizmu wyjątków polega na tym, że wykonywanie, wraz z danymi o wyjątku, przechodzi bezpośrednio z instrukcji generującej wyjątek do pierwszej instrukcji „catch” zdolnej go obsłużyć. Program obsługi może się znajdować o dowolną liczbę poziomów wyżej w stosie wywołań. Funkcje wywoływane między instrukcjami „try” i „throw” nie muszą nic wiedzieć o zgłaszanym wyjątku.  Muszą jednak być zaprojektowane w taki sposób, aby mogły wykroczyć poza zakres „niespodziewanie” w każdym momencie, gdy istnieje ryzyko rozpowszechnienia wyjątku z niższego poziomu, nie pozostawiając przy tym za sobą żadnych częściowo utworzonych obiektów, przecieków pamięci ani struktur danych w bezużytecznych stanach.  

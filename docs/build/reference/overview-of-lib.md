@@ -2,12 +2,9 @@
 title: Informacje o LIB | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Lib
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fd3d370da4f841e85086e3d061508d68414e96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-lib"></a>Informacje o LIB
 LIB tworzy standardowych bibliotek, importowanie bibliotek i eksportowanie plików, których można używać z [łącze](../../build/reference/linker-options.md) podczas tworzenia programu. LIB uruchamiane z wiersza polecenia.  
@@ -48,12 +43,12 @@ LIB tworzy standardowych bibliotek, importowanie bibliotek i eksportowanie plik�
   
  Aby uzyskać więcej informacji, zobacz [kompilowanie biblioteki importowanej oraz pliku eksportu](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **/ ERRORREPORT**  
+ **/ERRORREPORT**  
  Wyślij informacje do firmy Microsoft o wewnętrznych błędach z lib.exe.  
   
  Aby uzyskać więcej informacji, zobacz [systemem LIB](../../build/reference/running-lib.md).  
   
- **/ EXPORT**  
+ **/EXPORT**  
  Eksportuje funkcję z programu.  
   
  Aby uzyskać więcej informacji, zobacz [kompilowanie biblioteki importowanej oraz pliku eksportu](../../build/reference/building-an-import-library-and-export-file.md).  
@@ -63,7 +58,7 @@ LIB tworzy standardowych bibliotek, importowanie bibliotek i eksportowanie plik�
   
  Aby uzyskać więcej informacji, zobacz [wyodrębnianie członka biblioteki](../../build/reference/extracting-a-library-member.md).  
   
- **/ INCLUDE**  
+ **/INCLUDE**  
  Dodaje symbol do tabeli symboli.  
   
  Aby uzyskać więcej informacji, zobacz [kompilowanie biblioteki importowanej oraz pliku eksportu](../../build/reference/building-an-import-library-and-export-file.md).  
@@ -78,7 +73,7 @@ LIB tworzy standardowych bibliotek, importowanie bibliotek i eksportowanie plik�
   
  Aby uzyskać więcej informacji, zobacz [Zarządzanie biblioteką](../../build/reference/managing-a-library.md).  
   
- **/ LTCG**  
+ **/LTCG**  
  Powoduje, że biblioteka ma zostać utworzony przy użyciu Generowanie łączonych kodów czasowych.  
   
  Aby uzyskać więcej informacji, zobacz [systemem LIB](../../build/reference/running-lib.md).  
@@ -98,7 +93,7 @@ LIB tworzy standardowych bibliotek, importowanie bibliotek i eksportowanie plik�
   
  Aby uzyskać więcej informacji, zobacz [Zarządzanie biblioteką](../../build/reference/managing-a-library.md).  
   
- **/ NOLOGO**  
+ **/NOLOGO**  
  Pomija wyświetlanie LIB praw autorskich wiadomości oraz numer wersji i uniemożliwia wyświetlanie plików polecenia.  
   
  Aby uzyskać więcej informacji, zobacz [systemem LIB](../../build/reference/running-lib.md).  
@@ -118,12 +113,12 @@ LIB tworzy standardowych bibliotek, importowanie bibliotek i eksportowanie plik�
   
  Aby uzyskać więcej informacji, zobacz [Zarządzanie biblioteką](../../build/reference/managing-a-library.md).  
   
- **/ VERBOSE**  
+ **/VERBOSE**  
  Wyświetla szczegółowe informacje o postępie sesji, w tym nazwy plików .obj dodawany.  
   
  Aby uzyskać więcej informacji, zobacz [systemem LIB](../../build/reference/running-lib.md).  
   
- **WX**  
+ **/WX**  
  Traktuj ostrzeżenia jako błędy.  
   
  Aby uzyskać więcej informacji, zobacz [systemem LIB](../../build/reference/running-lib.md).  

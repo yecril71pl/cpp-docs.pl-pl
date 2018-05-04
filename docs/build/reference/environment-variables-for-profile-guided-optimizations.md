@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 701f0292d9960801139abc698946122718247645
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 19edc9c8a2702e5b7ac9ae4a49364718f19d3900
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Zmienne środowiskowe dla optymalizacji sterowanych profilem
 

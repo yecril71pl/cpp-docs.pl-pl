@@ -1,12 +1,9 @@
 ---
-title: "Wyniki przykładu wywołania | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wyniki przykładu wywołania | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - results, __cdecl call
 - results, __stdcall call
 ms.assetid: aa70a7cb-ba1d-4aa6-bd0a-ba783da2e642
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa47af17e46f51ef92cc15b8d2275b2ed8e05f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5cc5d5f96b5ffabd5397f26b6ff1372232fe0cd6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="results-of-calling-example"></a>Wyniki przykładu wywołania
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
@@ -41,13 +36,13 @@ Konwencja wywoływania __cdecl
 ## <a name="stdcall-and-thiscall"></a>__stdcall i thiscall  
  Nazwy ozdobione C (`__stdcall`) jest "_MyFunc@20." Nazwy ozdobione C++ jest zastrzeżone.  
   
- ![&#95; &#95; stdcall i Konwencje wywoływania thiscall](../cpp/media/vc37i02.gif "vc37I02")  
+ ![&#95;&#95;STDCALL i Konwencje wywoływania thiscall](../cpp/media/vc37i02.gif "vc37I02")  
 __Stdcall i thiscall Konwencje wywoływania  
   
 ## <a name="fastcall"></a>__fastcall  
  Nazwy ozdobione C (`__fastcall`) jest "@MyFunc@20." Nazwy ozdobione C++ jest zastrzeżone.  
   
- ![Konwencja wywoływania dla &#95; &#95; fastcall](../cpp/media/vc37i03.gif "vc37I03")  
+ ![Konwencja wywoływania &#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03")  
 Konwencja wywoływania __fastcall  
   
 **KOŃCOWY określonych firmy Microsoft**  

@@ -1,13 +1,10 @@
 ---
-title: "Stałe globalne | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Stałe globalne | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.constants
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - global constants
 ms.assetid: 778d86fd-3ca6-4d2b-b4c5-aee6dc1efe6b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 552ce3e1e1f535cf01f458af28c44aeb5cf8980b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d405e35f2f9bb2c403ad7775ce905b9af9f8e4a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="global-constants"></a>Stałe globalne
 Biblioteka wykonawcza Microsoft zawiera definicje stałe globalne używane przez procedury biblioteki. Aby korzystać z tych stałe, obejmują odpowiednie pliki nagłówkowe wskazane opis każdego stała. Stałe globalne są wymienione w poniższej tabeli.  
@@ -46,7 +41,7 @@ Biblioteka wykonawcza Microsoft zawiera definicje stałe globalne używane przez
 |[HUGE_VAL, _HUGE](../c-runtime-library/huge-val-huge.md)|[Kategorie regionalne](../c-runtime-library/locale-categories.md)|  
 |[_locking, stałe](../c-runtime-library/locking-constants.md)|[Stałe matematyczne](../c-runtime-library/math-constants.md)|  
 |[Stałe błędów matematycznych](../c-runtime-library/math-error-constants.md)|[_MAX_ENV](../c-runtime-library/max-env.md)|  
-|[MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)|[WARTOŚĆ NULL](../c-runtime-library/null-crt.md)|  
+|[MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)|[NULL](../c-runtime-library/null-crt.md)|  
 |[Stałe pola ścieżki](../c-runtime-library/path-field-limits.md)|[RAND_MAX](../c-runtime-library/rand-max.md)|  
 |[setvbuf, stałe](../c-runtime-library/setvbuf-constants.md)|[Udostępnianie stałych](../c-runtime-library/sharing-constants.md)|  
 |[sygnał, stałe](../c-runtime-library/signal-constants.md)|[stałe akcji sygnałów](../c-runtime-library/signal-action-constants.md)|  

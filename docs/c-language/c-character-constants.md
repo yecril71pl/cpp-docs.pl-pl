@@ -1,13 +1,10 @@
 ---
-title: "Stałe znakowe języka C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Stałe znakowe języka C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - constants, character
 - single quotation mark
 ms.assetid: 388ae7d7-2c3a-44d6-a507-63f541ecd2da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 374870a385e12d301731c0f9232d09895d8906c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0009f795936da7eb0c2ff69aa192e8f609638d2f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-character-constants"></a>Stałe znakowe języka C
 "Stała znakowa" jest tworzony przez otaczającej pojedynczy znak ze znakiem można przedstawić w pojedynczym cudzysłowie (**""**). Stałe znakowe są używane do reprezentowania znaków [zestaw znaków wykonania](../c-language/execution-character-set.md).  

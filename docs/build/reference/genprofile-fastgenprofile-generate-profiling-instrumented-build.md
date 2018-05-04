@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GENPROFILE
 - FASTGENPROFILE
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6174c1fdd53ec14f0cb63292a9036caabc98a7d
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 05d7961ff46661b8f6df2768591932699c3965d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/ Opcję GENPROFILE, /FASTGENPROFILE (Generuj profilowania Instrumentowanej kompilacji)
 
@@ -41,16 +40,16 @@ Można określić jedną z następujących argumentów, aby **opcji/genprofile**
 **COUNTER32** &AMP;#124; **COUNTER64**<br/>
 Użyj **COUNTER32** stosowanie liczniki sondowania 32-bitowe i **COUNTER64** do określenia liczniki sondowania 64-bitowych. Po określeniu **opcji/genprofile**, wartość domyślna to **COUNTER64**. Po określeniu **/FASTGENPROFILE**, wartość domyślna to **COUNTER32**.
 
-**EXACT** &#124; **NOEXACT**<br/>
+**DOKŁADNE** &AMP;#124; **NOEXACT**<br/>
 Użyj **EXACT** do określenia wątkowo zwiększa blokowanego dla sondy. **NOEXACT** Określa przyrost niechronione operacje dla sondy. Wartość domyślna to **NOEXACT**.
 
 **MEMMAX**=*wartość*, **MEMMIN**=*wartości*<br/>
 Użyj **MEMMAX** i **MEMMIN** do określania rozmiarów minimalnego i maksymalnego rezerwacji danych szkoleniowych w pamięci. Wartość to ilość pamięci do zarezerwowania w bajtach. Domyślnie te wartości są określane przez wewnętrzny heurystycznego.
 
-**PATH**  &#124; **NOPATH** <br/>
+**ŚCIEŻKA** &AMP;#124; **NOPATH**  <br/>
 Użyj **ścieżki** określić osobny zestaw liczników PGO dla każdej unikatowej ścieżki do funkcji. Użyj **NOPATH** można określić tylko jeden zestaw liczników dla każdej funkcji. Po określeniu **opcji/genprofile**, wartość domyślna to **ścieżki** . Po określeniu **/FASTGENPROFILE**, wartość domyślna to **NOPATH** .
 
-**TRACKEH** &AMP;#124; **NOTRACKEH**  <br/>
+**TRACKEH** &AMP;#124; **NOTRACKEH** <br/>
 Określa, czy zachować dokładne liczby, gdy wyjątki zostaną zgłoszone podczas uczenia przy użyciu dodatkowych liczników. Użyj **TRACKEH** Aby określić dodatkowe liczniki dokładne Count. Użyj **NOTRACKEH** do określenia pojedynczego liczniki dla kodu, który nie korzysta z wyjątkiem obsługi lub że nie występują wyjątków w Twojej scenariusze szkoleniowe.  Po określeniu **opcji/genprofile**, wartość domyślna to **TRACKEH** . Po określeniu **/FASTGENPROFILE**, wartość domyślna to **NOTRACKEH** .
 
 **PGD**=*filename*<br/>

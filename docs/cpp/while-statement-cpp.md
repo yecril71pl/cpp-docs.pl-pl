@@ -1,12 +1,9 @@
 ---
-title: "while — instrukcja (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: while — instrukcja (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - while_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93d31457beb3c1546b55d303fd71566176a9367
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="while-statement-c"></a>while — instrukcja (C++)
 Wykonuje *instrukcji* wielokrotnie do *wyrażenie* oblicza od zera.  
@@ -77,7 +72,7 @@ int main()
   
 ## <a name="see-also"></a>Zobacz też  
  [Iteracja — instrukcje](../cpp/iteration-statements-cpp.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
  [czy-while — instrukcja (C++)](../cpp/do-while-statement-cpp.md)   
  [for — instrukcja (C++)](../cpp/for-statement-cpp.md)   
  [Range-based for, instrukcja (C++)](../cpp/range-based-for-statement-cpp.md)

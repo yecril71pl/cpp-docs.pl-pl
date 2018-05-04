@@ -1,13 +1,10 @@
 ---
-title: "jest isw — procedury | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: jest isw — procedury | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr110_clr0400.dll
 - msvcr90.dll
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa1cc76bf925a334b78e5f15565c089081cfe9d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="is-isw-routines"></a>is, isw — Procedury
 |||  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
  `__iscsymf`  
  Litery lub podkreślenia.  
   
- **isdigit —**  
+ **isdigit**  
  Cyfrę (0 - 9).  
   
  `isgraph`  
@@ -111,10 +106,10 @@ ms.lasthandoff: 12/21/2017
  Aby uzyskać **isw —** procedury, wynik testu dla określonego warunku jest niezależna od ustawień regionalnych. Test warunki dotyczące **isw —** dostępne są następujące funkcje:  
   
  `iswalnum`  
- `iswalpha`lub `iswdigit`.  
+ `iswalpha` lub `iswdigit`.  
   
  `iswalpha`  
- Znaków dwubajtowych, który jest jednym z zestawu zdefiniowane w implementacji, dla których żadna `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. `iswalpha`Zwraca niezerową tylko w przypadku znaki dwubajtowe, dla którego `iswupper` lub `iswlower` jest różna od zera.  
+ Znaków dwubajtowych, który jest jednym z zestawu zdefiniowane w implementacji, dla których żadna `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. `iswalpha` Zwraca niezerową tylko w przypadku znaki dwubajtowe, dla którego `iswupper` lub `iswlower` jest różna od zera.  
   
  `iswascii`  
  Reprezentacja znaków dwubajtowych znaków ASCII (0x0000 - 0x007F).  
@@ -125,10 +120,10 @@ ms.lasthandoff: 12/21/2017
  `iswcntrl`  
  Formant znaków dwubajtowych.  
   
- **__iswcsym —**  
+ **__iswcsym**  
  Dowolny znak szerokości, dla którego **isalnum —** jest wartość PRAWDA lub znakiem "_".  
   
- **__iswcsymf —**  
+ **__iswcsymf**  
  Dowolny znak szerokości, dla którego `iswalpha` jest wartość PRAWDA lub znakiem "_".  
   
  `iswctype`  
@@ -140,13 +135,13 @@ ms.lasthandoff: 12/21/2017
 |Wartość *desc* argumentu|iswctype — ( *c, desc* ) równoważne|  
 |------------------------------|----------------------------------------|  
 |**_ALPHA**|**iswalpha — (** `c` **)**|  
-|**_ALPHA** &#124; **_DIGIT**|**iswalnum — (** `c` **)**|  
+|**_ALPHA** &AMP;#124; **_DIGIT**|**iswalnum — (** `c` **)**|  
 |**_BLANK**|**iswblank (** `c` **)**|  
 |**STE_ROWANIA**|**iswcntrl — (** `c` **)**|  
 |**_DIGIT**|**iswdigit — (** `c` **)**|  
-|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph — (** `c` **)**|  
+|**_ALPHA** &AMP;#124; **_DIGIT** &AMP;#124; **_PUNCT**|**iswgraph — (** `c` **)**|  
 |**_LOWER**|**iswlower — (** `c` **)**|  
-|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint — (** `c` **)**|  
+|**_ALPHA** &AMP;#124; **_BLANK** &AMP;#124; **_DIGIT** &AMP;#124; **_PUNCT**|**iswprint — (** `c` **)**|  
 |**_PUNCT**|**iswpunct — (** `c` **)**|  
 |**_BLANK**|**iswblank (** `c` **)**|  
 |**_SPACE**|**iswspace — (** `c` **)**|  
@@ -160,7 +155,7 @@ ms.lasthandoff: 12/21/2017
  Drukowalnych znaków dwubajtowych z wyjątkiem miejsca wielu znaków (L "").  
   
  `iswlower`  
- Małe litery, lub jeden z zdefiniowane w implementacji zestaw znaki dwubajtowe dla których żadna `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. `iswlower`Zwraca wartość niezerową tylko w przypadku znaki dwubajtowe, które odpowiadają na małe litery.  
+ Małe litery, lub jeden z zdefiniowane w implementacji zestaw znaki dwubajtowe dla których żadna `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. `iswlower` Zwraca wartość niezerową tylko w przypadku znaki dwubajtowe, które odpowiadają na małe litery.  
   
  `iswprint`  
  Drukowalnych znaków dwubajtowych, w tym miejsca szerokość znaku (L "").  
@@ -172,7 +167,7 @@ ms.lasthandoff: 12/21/2017
  Szerokość znaku odpowiada standardowe biały znak lub jest zdefiniowane w implementacji zestawu z znaki dwubajtowe, dla którego `iswalnum` ma wartość false. Standardowa białe znaki są: miejsca (L ""), wysuwu strony (L "\f"), znaków nowego wiersza (L "\n"), powrotu karetki (L "\r"), tabulator poziomy (L "\t") i tabulator pionowy (L "\v").  
   
  `iswupper`  
- Szerokość znaku które wielkie lub jeden zestaw znaki dwubajtowe, dla których żadna zdefiniowane w implementacji `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. `iswupper`Zwraca niezerową tylko w przypadku znaki dwubajtowe, które odpowiadają na wielkie litery.  
+ Szerokość znaku które wielkie lub jeden zestaw znaki dwubajtowe, dla których żadna zdefiniowane w implementacji `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. `iswupper` Zwraca niezerową tylko w przypadku znaki dwubajtowe, które odpowiadają na wielkie litery.  
   
  `iswxdigit`  
  Znaków typu Wide umożliwiająca cyfrę szesnastkową.  

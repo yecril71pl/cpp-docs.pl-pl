@@ -1,12 +1,9 @@
 ---
 title: Zakres (Visual C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 469fc76701161fda8116627c2b16fb4dfa63224e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-visual-c"></a>Zakres (Visual C++)
 Nazwy C++ mogą być użyte tylko w określonych regionach programu. Ten obszar jest nazywany 'scope' Nazwa. Zakres określa "ważności" nazwę, która nie określa obiektu statycznego obszaru. Zakres określa również widoczność nazwy, wywołanego klasy konstruktory i destruktory i są inicjowane zmiennych lokalnych do zakresu. (Aby uzyskać więcej informacji, zobacz [konstruktorów](../cpp/constructors-cpp.md) i [destruktory](../cpp/destructors-cpp.md).) Istnieje pięć rodzajów zakresu:  
@@ -50,7 +45,7 @@ Nazwy C++ mogą być użyte tylko w określonych regionach programu. Ten obszar 
   
      W języku C++ pliku zakresu jest nazywana zakresie przestrzeni nazw.  
   
--   **Klasa zakresu** nazwy elementów członkowskich klasy mają zakres klasy. Funkcje elementów członkowskich klasy jest możliwy tylko za pomocą operatory wyboru elementu członkowskiego (**.** lub  **->** ) lub operatory wskaźników do elementów członkowskich (**.\***  lub  **-> \*** ) na obiekt lub wskaźnik do obiektu dla tej klasy; klasa niestatycznego elementu członkowskiego danych jest uznawany za lokalne dla obiekt tej klasy. Należy wziąć pod uwagę następujące deklaracji klasy:  
+-   **Klasa zakresu** nazwy elementów członkowskich klasy mają zakres klasy. Funkcje elementów członkowskich klasy jest możliwy tylko za pomocą operatory wyboru elementu członkowskiego (**.** lub **->**) lub operatory wskaźników do elementów członkowskich (**.\***  lub **-> \***) na obiekt lub wskaźnik do obiektu dla tej klasy; klasa niestatycznego elementu członkowskiego danych jest uznawany za lokalne dla obiekt tej klasy. Należy wziąć pod uwagę następujące deklaracji klasy:  
   
     ```  
     class Point  
@@ -71,7 +66,7 @@ Nazwy C++ mogą być użyte tylko w określonych regionach programu. Ten obszar 
 ## <a name="hiding-names"></a>Ukrywanie nazw  
  Aby ukryć nazwę, deklarowanie go w zamkniętym bloku. Na poniższej ilustracji `i` jest ponownie zadeklarować w bloku wewnętrznym, a tym samym ukrywanie zmiennej skojarzone z `i` w zakresie bloku zewnętrzne.  
   
- ![Blok &#45; ukrywania nazwa zakresu](../cpp/media/vc38sf1.png "vc38SF1")  
+ ![Blok&#45;zakres ukrywanie nazwa](../cpp/media/vc38sf1.png "vc38SF1")  
 Zakresu bloku i ukrywanie nazwy  
   
  Dane wyjściowe z programu na ilustracji to:  

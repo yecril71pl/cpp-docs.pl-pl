@@ -1,12 +1,9 @@
 ---
 title: Kreator formantu ATL | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.overview
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - controls [ATL], adding to projects
 - ATL Control Wizard
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a9167153c2b827e1bc2597e830e9b3c82ee31b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1df64cd0661a7f905ebcc068efb698306ac9007e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-control-wizard"></a>Kreator formantu ATL
 Wstawia do Projekt ATL (lub projektu MFC z obsługą ATL) formantu ATL. Ten kreator służy do wstawienia jedną z trzech rodzajów kontrolek:  
@@ -55,7 +50,7 @@ Wstawia do Projekt ATL (lub projektu MFC z obsługą ATL) formantu ATL. Ten krea
  **Krótka nazwa**  
  Ustawia skróconą nazwę obiektu. Nazwa udostępnianej Określa klasę i **Coclass** nazwy pliku (. CPP i. H) nazw, nazwę interfejsu i **typu** nazw, jeśli nie zmienisz tych pól pojedynczo.  
   
- **Klasy**  
+ **Class**  
  Ustawia nazwę klasy, która implementuje obiektu. Ta nazwa jest na podstawie nazwy podanych w **krótką nazwę**, poprzedzającą "C", typowy prefiks nazwy klasy.  
   
  **w pliku .h**  
@@ -86,7 +81,7 @@ Wstawia do Projekt ATL (lub projektu MFC z obsługą ATL) formantu ATL. Ten krea
 > [!NOTE]
 >  Jeśli tworzysz projekt przy użyciu atrybutów, lub jeśli na tej stronie kreatora wskazaniu, że kontrolka używa atrybutów, nie można zmienić tej opcji, ponieważ nie ma ATL **coclass** atrybutu.  
   
- **Interfejs**  
+ **Interface**  
  Ustawia nazwę interfejsu dla obiektu. Domyślnie nazwa interfejsu jest poprzedzony przez "I".  
   
  **Typ**  

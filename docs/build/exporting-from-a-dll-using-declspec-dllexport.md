@@ -1,13 +1,10 @@
 ---
-title: "Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - dllexport
 - __declspec
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f20e47724a6d32dad014fbaf025cd283112c54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ab1d11c117c75633ce4ab836965449c4cc6ca1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)
 Microsoft wprowadzone **__export** w wersji 16-bitowych kompilatora Visual C++, aby umożliwić kompilator, aby automatycznie wygenerować nazw eksportu i umieścić je w pliku lib. Ten plik lib można tak samo jak statycznej lib do łączenia z biblioteki DLL.  
@@ -54,7 +49,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```  
   
 > [!NOTE]
->  `__declspec(dllexport)`Nie można zastosować do funkcji z `__clrcall` konwencji wywoływania.  
+>  `__declspec(dllexport)` Nie można zastosować do funkcji z `__clrcall` konwencji wywoływania.  
   
  Podczas tworzenia biblioteki DLL, zwykle Utwórz plik nagłówka zawierający prototypy funkcji i/lub klasy są eksportowane i Dodaj **__declspec(dllexport)** deklaracje w pliku nagłówka. Aby zwiększyć czytelność kodu, zdefiniuj makro **__declspec(dllexport)** i makra za pomocą każdej symbol w przypadku eksportowania:  
   

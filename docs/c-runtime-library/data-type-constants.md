@@ -1,13 +1,10 @@
 ---
-title: "Stałe typu danych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Stałe typu danych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - FLT_MIN
 - SHRT_MAX
@@ -95,17 +92,15 @@ helpviewer_keywords:
 - FLT_MANT_DIG constant
 - SCHAR_MIN constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1702065a8157596d4366af31fed3f2a80d53149c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf9a64b81ae90c517e9cd15e796dfb1333c7b08c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-constants"></a>Typ danych — Stałe
 Stałe typu danych są zależne od implementacji zakresów wartości dozwolone na typy całkowite danych. Stałe wymienione poniżej Przypisz zakresy na typy całkowite danych i są definiowane w granicach. H.  
@@ -115,22 +110,22 @@ Stałe typu danych są zależne od implementacji zakresów wartości dozwolone n
   
 |Stała|Wartość|Znaczenie|  
 |--------------|-----------|-------------|  
-|**SCHAR_MAX —**|127|Maksymalna podpisany `char` wartość|  
-|**SCHAR_MIN —**|-128|Co najmniej podpisany `char` wartość|  
-|**UCHAR_MAX —**|255 (0xff)|Maksymalna `unsigned char` wartość|  
-|**CHAR_BIT —**|8|Liczba bitów`char`|  
-|**USHRT_MAX —**|65535 (0xffff)|Maksymalna **niepodpisane krótko** wartość|  
-|**SHRT_MAX —**|32767|Maksymalna (ze znakiem) **krótki** wartość|  
-|**SHRT_MIN —**|-32768|Minimalna (ze znakiem) **krótki** wartość|  
-|**UINT_MAX —**|4294967295 (0xffffffff)|Maksymalna `unsigned int` wartość|  
-|**ULONG_MAX —**|4294967295 (0xffffffff)|Maksymalna `unsigned long` wartość|  
-|**INT_MAX —**|2147483647|Maksymalna (ze znakiem) `int` wartość|  
-|**INT_MIN —**|-2147483647-1|Minimalna (ze znakiem) `int` wartość|  
-|**LONG_MAX —**|2147483647|Maksymalna (ze znakiem) **długi** wartość|  
+|**SCHAR_MAX**|127|Maksymalna podpisany `char` wartość|  
+|**SCHAR_MIN**|-128|Co najmniej podpisany `char` wartość|  
+|**UCHAR_MAX**|255 (0xff)|Maksymalna `unsigned char` wartość|  
+|**CHAR_BIT**|8|Liczba bitów `char`|  
+|**USHRT_MAX**|65535 (0xffff)|Maksymalna **niepodpisane krótko** wartość|  
+|**SHRT_MAX**|32767|Maksymalna (ze znakiem) **krótki** wartość|  
+|**SHRT_MIN**|-32768|Minimalna (ze znakiem) **krótki** wartość|  
+|**UINT_MAX**|4294967295 (0xffffffff)|Maksymalna `unsigned int` wartość|  
+|**ULONG_MAX**|4294967295 (0xffffffff)|Maksymalna `unsigned long` wartość|  
+|**INT_MAX**|2147483647|Maksymalna (ze znakiem) `int` wartość|  
+|**INT_MIN**|-2147483647-1|Minimalna (ze znakiem) `int` wartość|  
+|**LONG_MAX**|2147483647|Maksymalna (ze znakiem) **długi** wartość|  
 |**LONG_MIN —**|-2147483647-1|Minimalna (ze znakiem) **długi** wartość|  
-|**CHAR_MAX —**|127 (jeśli jest używana z opcją / 255)|Maksymalna `char` wartość|  
+|**CHAR_MAX**|127 (jeśli jest używana z opcją / 255)|Maksymalna `char` wartość|  
 |**CHAR_MIN —**|-128 (0, jeśli używana z opcją /)|Minimalna `char` wartość|  
-|**MB_LEN_MAX —**|2|Maksymalna liczba bajtów w wielobajtowe`char`|  
+|**MB_LEN_MAX**|2|Maksymalna liczba bajtów w wielobajtowe `char`|  
 |**_I64_MAX**|9223372036854775807|Maksymalna __ (podpisanego)**int64** wartość|  
 |**_I64_MIN**|-9223372036854775807-1|Minimalna __ (podpisanego)**int64** wartość|  
 |**_UI64_MAX**|0xffffffffffffffff|Maksymalna __ (bez znaku)**int64** wartość|  

@@ -1,27 +1,22 @@
 ---
 title: Deklaracje i definicje (C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea0f8210993e494cbd4795a2c4cf7c6c0afa8aa2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f8a0922d66a9421bcc7c6c07b9396b277499d0d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declarations-and-definitions-c"></a>Deklaracje i definicje (C++)
 Deklaracje wprowadzenie nazwy w programie, na przykład nazwy zmiennych, obszary nazw, funkcje i klasy. Deklaracje również określić informacje o typie, a także innych charakterystyk obiekt, który jest został zadeklarowany. Nazwa musi być zadeklarowana przed jej użyciem; w języku C++ punktu, w którym jest zadeklarowany jako nazwę określa, czy jest widoczne dla kompilatora. Nie odwołuje się do funkcji lub klasa, która jest zadeklarowana w pewnym momencie nowsze jednostki kompilacji; można użyć *Przekaż dalej deklaracje* Aby uniknąć problemów tego ograniczenia.  

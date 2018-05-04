@@ -1,30 +1,25 @@
 ---
 title: Najlepsze praktyki optymalizacji | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec12e847eef72827e11700be322fd2a2ca309037
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e869a12635117f37f32fad3dcfdd38ed45d401e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimization-best-practices"></a>Najlepsze praktyki optymalizacji
 Ten dokument zawiera opis najlepsze rozwiązania dotyczące optymalizacji w programie Visual C++. Omówiono następujące zagadnienia:  
@@ -80,7 +75,7 @@ Ten dokument zawiera opis najlepsze rozwiązania dotyczące optymalizacji w prog
 ## <a name="optimization-declspecs"></a>Declspecs optymalizacji  
  W tej sekcji przedstawiono dwie declspecs, używane w programach w celu wydajności: `__declspec(restrict)` i `__declspec(noalias)`.  
   
- `restrict` Declspec można stosować tylko do deklaracji funkcji, które zwraca wskaźnik, takich jak`__declspec(restrict) void *malloc(size_t size);`  
+ `restrict` Declspec można stosować tylko do deklaracji funkcji, które zwraca wskaźnik, takich jak `__declspec(restrict) void *malloc(size_t size);`  
   
  `restrict` Declspec jest używany w funkcji zwracających unaliased wskaźników. To słowo kluczowe jest używany do wykonania biblioteki C Runtime `malloc` ponieważ nigdy nie zwróci wartość wskaźnika, który jest już używany w bieżącym programem (chyba, że należy wykonać coś niedozwolone, takie jak użycie pamięci po został zwolniony).  
   
@@ -113,24 +108,24 @@ int myFunc() {...}
   
  Ze Śródwierszowaniem jest jednym z najważniejszych funkcje optymalizacji, które wykonuje kompilator i tutaj omawianiu kilka pragm, które pomagają zmienić to zachowanie.  
   
- `#pragma inline_recursion`jest przydatne do określenia, czy nie ma aplikacji, aby można było wbudowanego wywołań cyklicznych. Domyślnie jest wyłączona. Skrócona rekursji o małe funkcje mogą ją włączyć. Aby uzyskać więcej informacji, zobacz [inline_recursion](../../preprocessor/inline-recursion.md).  
+ `#pragma inline_recursion` jest przydatne do określenia, czy nie ma aplikacji, aby można było wbudowanego wywołań cyklicznych. Domyślnie jest wyłączona. Skrócona rekursji o małe funkcje mogą ją włączyć. Aby uzyskać więcej informacji, zobacz [inline_recursion](../../preprocessor/inline-recursion.md).  
   
  Inny pragma przydatne dla ograniczenia głębokość ze śródwierszowaniem jest `#pragma inline_depth`. Jest to zazwyczaj przydatne w sytuacjach, w którym jest nawiązywane limit rozmiaru program lub funkcja. Aby uzyskać więcej informacji, zobacz [inline_depth](../../preprocessor/inline-depth.md).  
   
 ## <a name="restrict-and-assume"></a>__restrict i \__assume  
  Istnieje kilka słów kluczowych w języku Visual C++, które mogą ułatwić wydajności: [__restrict](../../cpp/extension-restrict.md) i [__assume](../../intrinsics/assume.md).  
   
- Najpierw należy zauważyć, że `__restrict` i `__declspec(restrict)` są dwa różne. Gdy są nieco powiązane, ich semantyki są różne. `__restrict`tak samo, jak jest kwalifikator typu `const` lub `volatile`, ale wyłącznie do typów wskaźnika.  
+ Najpierw należy zauważyć, że `__restrict` i `__declspec(restrict)` są dwa różne. Gdy są nieco powiązane, ich semantyki są różne. `__restrict` tak samo, jak jest kwalifikator typu `const` lub `volatile`, ale wyłącznie do typów wskaźnika.  
   
  Wskaźnik zmodyfikowanego z `__restrict` nazywa się *__restrict wskaźnik*. Wskaźnik __restrict jest wskaźnik, który jest możliwy tylko za pośrednictwem \__ogranicz wskaźnika. Innymi słowy, nie można użyć innego wskaźnika do uzyskiwania dostępu do danych wskazywanego przez \__ogranicz wskaźnika.  
   
- `__restrict`może być użyteczny Optymalizator Visual C++, ale jej używać z szczególną uwagę na to. Jeśli używane nieprawidłowo, optymalizator może wykonywać optymalizacji, która spowoduje awarię aplikacji.  
+ `__restrict` może być użyteczny Optymalizator Visual C++, ale jej używać z szczególną uwagę na to. Jeśli używane nieprawidłowo, optymalizator może wykonywać optymalizacji, która spowoduje awarię aplikacji.  
   
  `__restrict` Zastępuje — słowo kluczowe **porównuje** przełączyć się z poprzednimi wersjami.  
   
  Z `__assume`, deweloper może nakazuje kompilatorowi zakładają wartość niektórych zmiennej.  
   
- Na przykład `__assume(a < 5);` informuje Optymalizator, który w tym wierszu kodu zmiennej `a` jest mniejsza niż 5. Ponownie to obietnicę w celu kompilatora. Jeśli `a` jest rzeczywiście 6 w tym momencie w programie, a następnie zachowanie programu po optymalizacji kompilatora nie może być mogą spodziewać. `__assume`jest najbardziej przydatna przed instrukcji switch i/lub wyrażenia warunkowego.  
+ Na przykład `__assume(a < 5);` informuje Optymalizator, który w tym wierszu kodu zmiennej `a` jest mniejsza niż 5. Ponownie to obietnicę w celu kompilatora. Jeśli `a` jest rzeczywiście 6 w tym momencie w programie, a następnie zachowanie programu po optymalizacji kompilatora nie może być mogą spodziewać. `__assume` jest najbardziej przydatna przed instrukcji switch i/lub wyrażenia warunkowego.  
   
  Istnieją pewne ograniczenia dotyczące `__assume`. Po pierwsze, takich jak `__restrict`, jest tylko sugestia, dlatego kompilator jest bezpłatna dla go zignorować. Ponadto `__assume` obecnie działa tylko w przypadku zmiennych nierówności na stałe. Nie propaguje ono symboliczne nierówności, na przykład assume(a < b).  
   

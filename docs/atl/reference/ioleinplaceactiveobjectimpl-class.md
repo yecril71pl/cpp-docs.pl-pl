@@ -1,12 +1,9 @@
 ---
 title: Klasa IOleInPlaceActiveObjectImpl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceActiveObjectImpl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - ActiveX controls [C++], communication between container and control
 - IOleInPlaceActiveObject, ATL implementation
 ms.assetid: 44e6cc6d-a2dc-4187-98e3-73cf0320dea9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d88f85e83a88b0a1ce2bd4566e3ca479dddc1af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0d98b8dd082a09de461452b43b70ddeb9431abe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Klasa IOleInPlaceActiveObjectImpl
 Ta klasa dostarcza metody do wspomagania komunikacji między formantem w miejscu, a jego kontenera.  
@@ -82,7 +77,7 @@ class IOleInPlaceActiveObjectImpl
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlctl.h  
   
-##  <a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>  IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
  Umożliwia pomoc kontekstową.  
   
 ```
@@ -95,7 +90,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) w systemie Windows SDK.  
   
-##  <a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless  
+##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless  
  Umożliwia Niemodalne okna dialogowe.  
   
 ```
@@ -108,7 +103,7 @@ HRESULT EnableModeless(BOOL fEnable);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) w systemie Windows SDK.  
   
-##  <a name="getwindow"></a>IOleInPlaceActiveObjectImpl::GetWindow  
+##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow  
  Kontener wywołuje tej funkcji można pobrać uchwytu okna formantu.  
   
 ```
@@ -120,7 +115,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  Zobacz [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) w systemie Windows SDK.  
   
-##  <a name="ondocwindowactivate"></a>IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  Powiadamia kontrolkę, gdy okno dokumentu kontenera jest aktywowane lub dezaktywowane.  
   
 ```
@@ -133,7 +128,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) w systemie Windows SDK.  
   
-##  <a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  Powiadamia kontrolkę, gdy kontenera okna ramowego najwyższego poziomu jest aktywowane lub dezaktywowane.  
   
 ```
@@ -146,7 +141,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) w systemie Windows SDK.  
   
-##  <a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::ResizeBorder  
+##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder  
  Należy zmienić rozmiar obramowania informuje o formantu.  
   
 ```
@@ -162,7 +157,7 @@ HRESULT ResizeBorder(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) w systemie Windows SDK.  
   
-##  <a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator  
+##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  Przetwarza wiadomości klawisz skrótu menu z kontenera.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
 ### <a name="return-value"></a>Wartość zwracana  
  Ta metoda obsługuje zwraca następujące wartości:  
   
- `S_OK`Jeśli komunikat przetłumaczony pomyślnie.  
+ `S_OK` Jeśli komunikat przetłumaczony pomyślnie.  
   
  **Wartości S_FALSE** Jeśli wiadomość nie została przekonwertowana.  
   

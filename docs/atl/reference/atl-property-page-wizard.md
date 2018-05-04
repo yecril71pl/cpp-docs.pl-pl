@@ -1,12 +1,9 @@
 ---
-title: "Kreator strony właściwości ATL | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kreator strony właściwości ATL | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c5d863ef14aeddcd66f813449b514360f657a4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-property-page-wizard"></a>Kreator strony właściwości ATL
 Ten kreator [dodaje do projektu ATL strony właściwości](../../atl/reference/adding-an-atl-property-page.md) lub do projektu MFC z obsługą ATL. Strony właściwości ATL udostępnia interfejs użytkownika do ustawiania właściwości (lub wywołanie metody) jeden lub więcej obiektów COM.  
@@ -48,7 +43,7 @@ Ten kreator [dodaje do projektu ATL strony właściwości](../../atl/reference/a
 |Termin|Definicja|  
 |**Krótka nazwa**|Ustawia skróconą nazwę obiektu. Nazwa udostępnianej Określa klasę i **Coclass** nazwy pliku (**.cpp** i **.h**) nazw, **typu** nazwy i  **ProgID**, chyba że indywidualnie zmiany tych pól.|  
 |**w pliku .h**|Ustawia nazwę pliku nagłówka dla klasy nowego obiektu. Domyślnie ta nazwa jest na podstawie nazwy podanych w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji lub do dołączenia do istniejącego pliku deklaracji klasy. W przypadku wybrania istniejącego pliku, Kreator nie zapisze go w wybranej lokalizacji dopóki kliknij **Zakończ** w kreatorze.<br /><br /> Kreator nie powoduje zastąpienia pliku. Jeśli po kliknięciu przycisku Wybierz nazwę istniejącego pliku, **Zakończ**, Kreator wyświetli monit, aby wskazać, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** pliku; kliknij przycisk **nr** aby powrócić do kreatora i podaj inną nazwę pliku.|  
-|**Klasy**|Ustawia nazwę klasy, która implementuje obiektu. Ta nazwa jest na podstawie nazwy podanych w **krótką nazwę**, poprzedzającą "C", typowy prefiks nazwy klasy.|  
+|**Class**|Ustawia nazwę klasy, która implementuje obiektu. Ta nazwa jest na podstawie nazwy podanych w **krótką nazwę**, poprzedzającą "C", typowy prefiks nazwy klasy.|  
 |**plik .cpp**|Ustawia nazwę pliku implementacji dla nowego obiektu klasy. Domyślnie ta nazwa jest na podstawie nazwy podanych w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji do momentu kliknięcia **Zakończ** w kreatorze.<br /><br /> Kreator nie powoduje zastąpienia pliku. Jeśli po kliknięciu przycisku Wybierz nazwę istniejącego pliku, **Zakończ**, Kreator wyświetli monit, aby wskazać, czy klasa implementacji powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** pliku; kliknij przycisk **nr** aby powrócić do kreatora i podaj inną nazwę pliku.|  
 |**Atrybut**|Wskazuje, czy obiekt używa atrybutów. Jeśli obiekt jest dodawany do projekcie ATL z atrybutami, ta opcja jest zaznaczona i nie można zmienić, oznacza to, można dodać tylko przypisane obiekty do projektu utworzonych za pomocą atrybutu pomocy technicznej.<br /><br /> Obiekt oparte na atrybutach można dodać tylko do Projekt ATL, który używa atrybutów. Jeśli wybierzesz tę opcję, aby Projekt ATL, który nie ma atrybutu obsługuje, Kreator wyświetli monit Określ, czy dodać atrybut obsługę do projektu.<br /><br /> Domyślnie wszystkie obiekty dodać po ustawieniu tej opcji są oznaczone jako atrybut (pole wyboru jest zaznaczone). Można wyczyść to pole, aby dodać obiekt, który nie używa atrybutów.<br /><br /> Zobacz [ustawienia aplikacji, Kreator projektu ATL](../../atl/reference/application-settings-atl-project-wizard.md) i [podstawowa mechanika atrybutów](../../windows/basic-mechanics-of-attributes.md) Aby uzyskać więcej informacji.|  
   

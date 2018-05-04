@@ -1,12 +1,9 @@
 ---
 title: Klasa CComObjectRootEx | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bab27a9d8b5af8315d9d3468933ea016b12e3399
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b147f0ad3f1a54c2ae640b6bf2426bcddf060b35
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectrootex-class"></a>Klasa CComObjectRootEx
 Ta klasa dostarcza metody zarządzania liczba odwołanie do obiektu zarówno nieagregowane zagregowane obiekty i.  
@@ -65,8 +60,8 @@ class CComObjectRootEx : public CComObjectRootBase
 |[CComObjectRootEx](#ccomobjectrootex)|Konstruktor.|  
 |[InternalAddRef](#internaladdref)|Zwiększa liczbę odwołania dla obiekt nieagregowane.|  
 |[InternalRelease](#internalrelease)|Zmniejsza odwołania są liczone dla obiekt nieagregowane.|  
-|[Blokady](#lock)|Jeśli model wątków jest wielowątkowe, uzyskuje prawo własności obiektu sekcja krytyczna.|  
-|[Odblokowywanie](#unlock)|W przypadku wielowątkowe modelu wątku zwalnia prawo własności obiektu sekcja krytyczna.|  
+|[blokady](#lock)|Jeśli model wątków jest wielowątkowe, uzyskuje prawo własności obiektu sekcja krytyczna.|  
+|[odblokowywanie](#unlock)|W przypadku wielowątkowe modelu wątku zwalnia prawo własności obiektu sekcja krytyczna.|  
   
 ### <a name="ccomobjectrootbase-methods"></a>Metody CComObjectRootBase  
   
@@ -93,7 +88,7 @@ class CComObjectRootEx : public CComObjectRootBase
 |[m_pOuterUnknown](#m_pouterunknown)|Z `m_dwRef`, część Unii. Używany, gdy obiekt jest agregowana na wskaźnik do nieznanego zewnętrzne.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComObjectRootEx`obsługuje zarządzanie liczba odwołanie do obiektu zarówno nieagregowane zagregowane obiekty i. Jeśli obiekt nie jest agregowana i przechowuje wskaźnik do nieznanego zewnętrzne, jeśli obiekt jest agregowana posiada liczebności referencyjnej obiektu. Zagregowane obiekty `CComObjectRootEx` metody może służyć do obsługi błędów wewnętrzny obiekt w celu utworzenia i ochrony obiektu zewnętrznego przed usunięciem po udostępnieniu wewnętrzny interfejsów lub wewnętrzny obiekt jest usunięty.  
+ `CComObjectRootEx` obsługuje zarządzanie liczba odwołanie do obiektu zarówno nieagregowane zagregowane obiekty i. Jeśli obiekt nie jest agregowana i przechowuje wskaźnik do nieznanego zewnętrzne, jeśli obiekt jest agregowana posiada liczebności referencyjnej obiektu. Zagregowane obiekty `CComObjectRootEx` metody może służyć do obsługi błędów wewnętrzny obiekt w celu utworzenia i ochrony obiektu zewnętrznego przed usunięciem po udostępnieniu wewnętrzny interfejsów lub wewnętrzny obiekt jest usunięty.  
   
  Klasa, która implementuje serwer COM musi dziedziczyć z `CComObjectRootEx` lub [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md).  
   
@@ -110,14 +105,14 @@ class CComObjectRootEx : public CComObjectRootBase
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
+##  <a name="ccomobjectrootex"></a>  CComObjectRootEx::CComObjectRootEx  
  Konstruktor inicjuje liczebności referencyjnej równą 0.  
   
 ```
 CComObjectRootEx();
 ```  
   
-##  <a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComObjectRootEx::FinalConstruct  
  Mogą przesłaniać tę metodę w klasie pochodnej przeprowadzić inicjowanie wymagane dla obiekt.  
   
 ```
@@ -157,7 +152,7 @@ HRESULT FinalConstruct();
   
 -   Zastąpienie `FinalRelease` zwolnienia **IUnknown** wskaźnika.  
   
-##  <a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
+##  <a name="finalrelease"></a>  CComObjectRootEx::FinalRelease  
  Mogą przesłaniać tę metodę w klasie pochodnej, aby wykonać wszelkie Oczyszczanie wymagane dla obiekt.  
   
 ```
@@ -169,7 +164,7 @@ void FinalRelease();
   
  Oczyszczać w `FinalRelease` lepiej jest dodawanie kodu do destruktora klasy, ponieważ nadal pełni konstruowania obiektu w momencie, w którym `FinalRelease` jest wywoływana. Dzięki temu można bezpiecznie uzyskać dostępu do metody dostarczone przez klasę najdalszych pochodnych. Jest to szczególnie ważne w przypadku zwalnianie zagregowane obiekty przed usunięciem.  
   
-##  <a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
+##  <a name="internaladdref"></a>  CComObjectRootEx::InternalAddRef  
  Zwiększa liczbę odwołanie do obiektu nieagregowane o 1.  
   
 ```
@@ -182,7 +177,7 @@ ULONG InternalAddRef();
 ### <a name="remarks"></a>Uwagi  
  Jeśli model wątków jest wielowątkowe, **InterlockedIncrement** jest używany, aby uniemożliwić zmianę liczbę odwołań w tym samym czasie więcej niż jeden wątek.  
   
-##  <a name="internalqueryinterface"></a>CComObjectRootEx::InternalQueryInterface  
+##  <a name="internalqueryinterface"></a>  CComObjectRootEx::InternalQueryInterface  
  Pobiera wskaźnik do żądanego interfejsu.  
   
 ```
@@ -210,9 +205,9 @@ static HRESULT InternalQueryInterface(
  Jeden standardowy `HRESULT` wartości.  
   
 ### <a name="remarks"></a>Uwagi  
- `InternalQueryInterface`obsługuje tylko interfejsy COM tabeli mapy. Jeśli obiekt jest agregowana, `InternalQueryInterface` nie delegować do zewnętrznego nieznany. Interfejsy można wprowadzić do tabeli mapy COM z makra [com_interface_entry —](com-interface-entry-macros.md#com_interface_entry) lub jednej z jej wariantów.  
+ `InternalQueryInterface` Obsługuje tylko interfejsy COM tabeli mapy. Jeśli obiekt jest agregowana, `InternalQueryInterface` nie delegować do zewnętrznego nieznany. Interfejsy można wprowadzić do tabeli mapy COM z makra [com_interface_entry —](com-interface-entry-macros.md#com_interface_entry) lub jednej z jej wariantów.  
   
-##  <a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
+##  <a name="internalrelease"></a>  CComObjectRootEx::InternalRelease  
  Zmniejsza odwołanie liczba nieagregowane obiektu o 1.  
   
 ```
@@ -225,7 +220,7 @@ ULONG InternalRelease();
 ### <a name="remarks"></a>Uwagi  
  Jeśli model wątków jest wielowątkowe, **InterlockedDecrement** jest używany, aby uniemożliwić zmianę liczbę odwołań w tym samym czasie więcej niż jeden wątek.  
   
-##  <a name="lock"></a>CComObjectRootEx::Lock  
+##  <a name="lock"></a>  CComObjectRootEx::Lock  
  W przypadku wielowątkowe modelu wątków, ta metoda wywołuje funkcji Win32 API [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), które czeka, aż wątku mogą przejąć prawo własności obiektu sekcja krytyczna uzyskanymi za pośrednictwem elementu członkowskiego danych prywatnych.  
   
 ```
@@ -237,7 +232,7 @@ void Lock();
   
  W przypadku modelu wątku jednowątkowego, ta metoda nie działa.  
   
-##  <a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
+##  <a name="m_dwref"></a>  CComObjectRootEx::m_dwRef  
  Część Unii, który uzyskuje dostęp do czterech bajtów pamięci.  
   
 ```
@@ -259,7 +254,7 @@ long m_dwRef;
   
  Jeśli obiekt nie jest agregowany, liczba odwołań dostępu `AddRef` i **wersji** są przechowywane w `m_dwRef`. Jeśli obiekt jest agregowana, wskaźnik do nieznanego zewnętrzne są przechowywane w [m_pOuterUnknown](#m_pouterunknown).  
   
-##  <a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
+##  <a name="m_pouterunknown"></a>  CComObjectRootEx::m_pOuterUnknown  
  Część Unii, który uzyskuje dostęp do czterech bajtów pamięci.  
   
 ```
@@ -282,7 +277,7 @@ IUnknown*
   
  Jeśli obiekt jest agregowana, wskaźnik do nieznanego zewnętrzne są przechowywane w `m_pOuterUnknown`. Jeśli obiekt nie jest agregowany, liczba odwołań dostępu `AddRef` i **wersji** są przechowywane w [m_dwRef](#m_dwref).  
   
-##  <a name="objectmain"></a>CComObjectRootEx::ObjectMain  
+##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
  Dla każdej klasy na liście [mapy obiektu](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f), ta funkcja jest wywoływana, gdy po zainicjowaniu modułu i ponownie, gdy zostanie zakończony.  
   
 ```
@@ -296,12 +291,12 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>Uwagi  
  Wartość `bStarting` parametr wskazuje, czy moduł jest zainicjowana lub zakończenia. Domyślna implementacja `ObjectMain` nie działa, ale można przesłonić tę funkcję w klasie, aby zainicjować lub wyczyścić zasoby, które mają zostać przydzielone na klasie. Należy pamiętać, że `ObjectMain` jest wywoływana przed wymagane są wszystkie wystąpienia klasy.  
   
- `ObjectMain`jest wywoływana z punktu wejścia biblioteki dll, więc typ operacji, która może przeprowadzać funkcję punktu wejścia jest ograniczony. Aby uzyskać więcej informacji o tych ograniczeń, zobacz [biblioteki dll i Visual C++ zachowanie biblioteki wykonawczej](../../build/run-time-library-behavior.md) i [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
+ `ObjectMain` jest wywoływana z punktu wejścia biblioteki dll, więc typ operacji, która może przeprowadzać funkcję punktu wejścia jest ograniczony. Aby uzyskać więcej informacji o tych ograniczeń, zobacz [biblioteki dll i Visual C++ zachowanie biblioteki wykonawczej](../../build/run-time-library-behavior.md) i [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
-##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
+##  <a name="outeraddref"></a>  CComObjectRootEx::OuterAddRef  
  Zwiększa liczbę odwołanie zewnętrzne nieznany agregacji.  
   
 ```
@@ -311,7 +306,7 @@ ULONG OuterAddRef();
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość, która może być przydatne w przypadku diagnostyki i testowania.  
   
-##  <a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
+##  <a name="outerqueryinterface"></a>  CComObjectRootEx::OuterQueryInterface  
  Pobiera pośredni wskaźnik do żądanego interfejsu.  
   
 ```
@@ -328,7 +323,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>Wartość zwracana  
  Jeden standardowy `HRESULT` wartości.  
   
-##  <a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
+##  <a name="outerrelease"></a>  CComObjectRootEx::OuterRelease  
  Zmniejsza liczba odwołanie zewnętrzne nieznany agregacji.  
   
 ```
@@ -338,7 +333,7 @@ ULONG OuterRelease();
 ### <a name="return-value"></a>Wartość zwracana  
  W kompilacjach do debugowania nie zawsze zwraca wartość 0. W kompilacjach debugowania zwraca wartość, która może być przydatne w przypadku diagnostyki lub testowania.  
   
-##  <a name="unlock"></a>CComObjectRootEx::Unlock  
+##  <a name="unlock"></a>  CComObjectRootEx::Unlock  
  W przypadku wielowątkowe modelu wątków, ta metoda wywołuje funkcji Win32 API [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), które wersje prawo własności obiektu sekcja krytyczna uzyskanymi za pośrednictwem elementu członkowskiego danych prywatnych.  
   
 ```

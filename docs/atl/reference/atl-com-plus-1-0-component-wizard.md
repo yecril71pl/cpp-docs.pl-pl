@@ -1,12 +1,9 @@
 ---
-title: "ATL COM + 1.0 Kreator składników stron ASP | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: ATL COM + 1.0 Kreator składników stron ASP | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c82cf91c61f047a80c513d1aead25fe73c77715
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19151ca659f7bc3235f84eefb39b640c4856fa43
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM + 1.0 Kreator składników stron ASP
 Użyj tego kreatora można dodać obiektu do projektu obsługującego usług COM + 1.0, w tym transakcji.  
@@ -47,7 +42,7 @@ Użyj tego kreatora można dodać obiektu do projektu obsługującego usług COM
   
  Kreator nie powoduje zastąpienia pliku. Jeśli po kliknięciu przycisku Wybierz nazwę istniejącego pliku, **Zakończ**, Kreator wyświetli monit, aby wskazać, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** pliku; kliknij przycisk **nr** aby powrócić do kreatora i podaj inną nazwę pliku.  
   
- **Klasy**  
+ **Class**  
  Ustawia nazwę klasy, która ma być utworzony. Ta nazwa jest na podstawie nazwy podane **krótką nazwę**, poprzedzającą "C", typowy prefiks nazwy klasy.  
   
  **plik .cpp**  
@@ -76,7 +71,7 @@ Użyj tego kreatora można dodać obiektu do projektu obsługującego usług COM
  **Typ**  
  Określa opis obiektu, który będzie widoczny w rejestrze  
   
- **Interfejs**  
+ **Interface**  
  Ustawia interfejs, który można utworzyć obiektu. Ten interfejs zawiera niestandardowej metody.  
   
  **Identyfikator programu**  

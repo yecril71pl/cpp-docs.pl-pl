@@ -1,30 +1,25 @@
 ---
-title: "Które klasy ATL ułatwienia zawierania formantów ActiveX? | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Które klasy ATL ułatwienia zawierania formantów ActiveX? | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - hosting controls using ATL
 - ActiveX control containers [C++], ATL control hosting
 ms.assetid: 803a4605-7f4c-4139-8638-49d8783d31b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c7bd52476614a4356690aff2fda286e9f3aef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f024e9929e916e15b110bfc32bc704c4aef755a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>Które klasy ATL ułatwienia zawierania formantów ActiveX?
 Kod hosting kontrolki w ATL nie wymagają użycia dowolnej klasy ATL; Możesz po prostu utworzyć **"AtlAxWin80"** okno i użyj interfejsu API hosting kontrolki w razie potrzeby (Aby uzyskać więcej informacji, zobacz **co to jest interfejs API Hosting formantu ATL**. Jednak następujące klasy ułatwić funkcje zawierania do użycia.  

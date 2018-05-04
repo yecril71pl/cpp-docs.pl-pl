@@ -1,12 +1,9 @@
 ---
 title: Klasa IConnectionPointImpl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IConnectionPointImpl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c49057153a23f0e17d09032df8781b64cef8677
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 444dea401fa711b40e4d8229b26c9cdbf6d1fcbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iconnectionpointimpl-class"></a>Klasa IConnectionPointImpl
 Ta klasa implementuje punkt połączenia.  
@@ -74,7 +69,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 |[IConnectionPointImpl::m_vec](#m_vec)|Zarządza połączeniami punktu połączenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- `IConnectionPointImpl`implementuje punkt połączenia, dzięki czemu obiektu do udostępnienia interfejsu wychodzącego do klienta. Klient implementuje ten interfejs dla obiektu o nazwie zbiorniku.  
+ `IConnectionPointImpl` implementuje punkt połączenia, dzięki czemu obiektu do udostępnienia interfejsu wychodzącego do klienta. Klient implementuje ten interfejs dla obiektu o nazwie zbiorniku.  
   
  ATL używa [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) do zaimplementowania obiektu składnika. Każdy punkt połączenia w obiekcie składnika reprezentuje interfejs wychodzących, identyfikowane przez `piid`. Klasa *kor* zarządza połączeniami między punktem połączenia i odbioru. Każde połączenie jest unikatowo identyfikowana przez "plik cookie".  
   
@@ -88,7 +83,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="advise"></a>IConnectionPointImpl::Advise  
+##  <a name="advise"></a>  IConnectionPointImpl::Advise  
  Ustanawia połączenie między punktem połączenia i odbioru.  
   
 ```
@@ -102,7 +97,7 @@ STDMETHOD(Advise)(
   
  Zobacz [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) w systemie Windows SDK.  
   
-##  <a name="enumconnections"></a>IConnectionPointImpl::EnumConnections  
+##  <a name="enumconnections"></a>  IConnectionPointImpl::EnumConnections  
  Tworzy moduł wyliczający do iteracji połączenia punktu połączenia.  
   
 ```
@@ -112,7 +107,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IConnectionPoint::EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) w systemie Windows SDK.  
   
-##  <a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface  
+##  <a name="getconnectioninterface"></a>  IConnectionPointImpl::GetConnectionInterface  
  Pobiera identyfikator IID interfejsu reprezentowany przez punkt połączenia.  
   
 ```
@@ -122,7 +117,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IConnectionPoint::GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) w systemie Windows SDK.  
   
-##  <a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer  
+##  <a name="getconnectionpointcontainer"></a>  IConnectionPointImpl::GetConnectionPointContainer  
  Pobiera wskaźnika interfejsu do obiektu składnika.  
   
 ```
@@ -132,7 +127,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IConnectionPoint::GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) w systemie Windows SDK.  
   
-##  <a name="m_vec"></a>IConnectionPointImpl::m_vec  
+##  <a name="m_vec"></a>  IConnectionPointImpl::m_vec  
  Zarządza połączeń między obiektu punktu połączenia i odbioru.  
   
 ```
@@ -142,7 +137,7 @@ CDV m_vec;
 ### <a name="remarks"></a>Uwagi  
  Domyślnie `m_vec` jest typu [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md).  
   
-##  <a name="unadvise"></a>IConnectionPointImpl::Unadvise  
+##  <a name="unadvise"></a>  IConnectionPointImpl::Unadvise  
  Przerywa połączenie wcześniej ustanowione za pośrednictwem [Porada](#advise).  
   
 ```

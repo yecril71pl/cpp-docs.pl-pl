@@ -1,13 +1,10 @@
 ---
-title: "Deklaracje wskaźników | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Deklaracje wskaźników | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac15c18ce3277e8268b6b4582de4046f5f74d64
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 9d9600c27f40a43105ae9a8fc2fd1579907891cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pointer-declarations"></a>Deklaracje wskaźników
 Deklaracji"wskaźnik" nazwy zmiennej wskaźnikowej i określa typ obiektu, na które wskazuje zmiennej. Zmienna zadeklarowana jako wskaźnik przechowuje adres pamięci.  
@@ -35,7 +30,7 @@ Deklaracji"wskaźnik" nazwy zmiennej wskaźnikowej i określa typ obiektu, na kt
  *deklarator*:  
  &nbsp;&nbsp;*wskaźnik*<sub>opt</sub> *bezpośrednio deklarator*  
   
- *direct-declarator*:  
+ *deklarator bezpośrednio*:  
  &nbsp;&nbsp;*Identyfikator*  
   
  &nbsp;&nbsp;**(** *deklarator* **)**  
@@ -51,8 +46,8 @@ Deklaracji"wskaźnik" nazwy zmiennej wskaźnikowej i określa typ obiektu, na kt
   
  &nbsp;&nbsp;**\*** *Lista typów kwalifikator*<sub>opt</sub> *wskaźnika*  
   
- *type-qualifier-list*:  
- &nbsp;&nbsp;*type-qualifier*  
+ *Lista typów kwalifikator*:  
+ &nbsp;&nbsp;*Kwalifikator typu*  
   
  &nbsp;&nbsp;*Lista typów kwalifikator* *kwalifikator typu*  
   

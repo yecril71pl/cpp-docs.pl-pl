@@ -1,13 +1,10 @@
 ---
-title: "Deklaracje modułów Wyliczających C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Deklaracje modułów Wyliczających C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 697e4f37c8a59c40df80e29ff89f2021f61fb468
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-enumeration-declarations"></a>Deklaracje modułów wyliczających języka C
 Wyliczenie składa się z zestawem stałe całkowite nazwanego. Deklaracja typu wyliczenia nadaje nazwę tagu — wyliczenie (opcjonalnie) i definiuje zestaw identyfikatorów całkowitą o nazwie (o nazwie "wyliczenie zestawu," "stałe modułu wyliczającego", "wyliczenia" lub "Członkowie"). Zmienna typu wyliczenia przechowuje jedną z wartości wyliczenia zestawu wynika z tego typu.  
@@ -39,9 +34,9 @@ Wyliczenie składa się z zestawem stałe całkowite nazwanego. Deklaracja typu 
   
 ## <a name="syntax"></a>Składnia  
  *Specyfikator wyliczenia*:  
- **wyliczenia***identyfikator* opt**{** *listy modułu wyliczającego* **}**   
+ **wyliczenia***identyfikator* opt **{** *listy modułu wyliczającego* **}**   
   
- **wyliczenia***identyfikator*   
+ **wyliczenia***identyfikator*  
   
  Opcjonalny *identyfikator* nazwy typu wyliczenia zdefiniowanych przez *modułu wyliczającego listy*. Ten identyfikator jest często nazywana "tag" określony przez listy wyliczenia. Specyfikator typu formularza  
   
@@ -61,14 +56,14 @@ enumerator-list
   
 ## <a name="syntax"></a>Składnia  
  *Moduł wyliczający listy*:  
- *Moduł wyliczający*  
+ *enumerator*  
   
  *Moduł wyliczający listy* **,**  `enumerator`  
   
  `enumerator`:  
  *Stała wyliczenia*  
   
- *Stała wyliczenia***=***wyrażenie stałej*   
+ *Stała wyliczenia***=***wyrażenie stałej*  
   
  *Stała wyliczenia*:  
  *Identyfikator*  

@@ -1,13 +1,10 @@
 ---
-title: "Funkcje zabezpieczeń w CRT | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje zabezpieczeń w CRT | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d32a69e179acee501c17d96218cc4ef2e10f0c3
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-features-in-the-crt"></a>Funkcje zabezpieczeń w CRT
 Wiele funkcji CRT starego ma bezpieczniejsze nowszej wersji. Jeśli istnieje funkcja bezpieczny, starszej wersji mniej bezpieczne jest oznaczony jako przestarzały i nowa wersja ma `_s` sufiks ("zabezpieczenia").  

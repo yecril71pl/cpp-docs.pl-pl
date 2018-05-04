@@ -1,12 +1,9 @@
 ---
 title: Klasa CAtlFileMappingBase | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFileMappingBase
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b5e0dd90894e052d4b9bcff08e7e12234dde8f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e315a29f72c887b5bff2e8177e7a47aed18c3fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfilemappingbase-class"></a>Klasa CAtlFileMappingBase
 Ta klasa reprezentuje plik mapowanych na pamięć.  
@@ -85,7 +80,7 @@ class CAtlFileMappingBase
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlfile.h  
   
-##  <a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
+##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase  
  Konstruktor.  
   
 ```
@@ -103,7 +98,7 @@ CAtlFileMappingBase() throw();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
-##  <a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
+##  <a name="dtor"></a>  CAtlFileMappingBase:: ~ CAtlFileMappingBase  
  Destruktor.  
   
 ```
@@ -113,7 +108,7 @@ CAtlFileMappingBase() throw();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wszystkie zasoby przydzielone przez klasy i wywołania [CAtlFileMappingBase::Unmap](#unmap) metody.  
   
-##  <a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
+##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom  
  Wywołaj tę metodę, aby skopiować z obiektu mapowania pliku.  
   
 ```
@@ -127,7 +122,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
   
-##  <a name="getdata"></a>CAtlFileMappingBase::GetData  
+##  <a name="getdata"></a>  CAtlFileMappingBase::GetData  
  Wywołaj tę metodę w celu pobrania danych z obiektu mapowania pliku.  
   
 ```
@@ -137,7 +132,7 @@ void* GetData() const throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wskaźnik do danych.  
   
-##  <a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
+##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle  
  Wywołanie tej metody, aby powrócić do dojścia do obiektu mapowania pliku.  
   
 ```
@@ -147,7 +142,7 @@ HANDLE GetHandle() throw ();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca uchwyt do obiektu mapowania pliku.  
   
-##  <a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
+##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize  
  Wywołanie tej metody można pobrać rozmiaru mapowania z obiektu mapowania pliku.  
   
 ```
@@ -160,7 +155,7 @@ SIZE_T GetMappingSize() throw();
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="mapfile"></a>CAtlFileMappingBase::MapFile  
+##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile  
  Wywołaj tę metodę w celu otwarcia lub utworzenia obiektu mapowania pliku określonego pliku.  
   
 ```
@@ -174,7 +169,7 @@ HRESULT MapFile(
   
 ### <a name="parameters"></a>Parametry  
  `hFile`  
- Dojście do pliku, w którym można utworzyć obiektu mapowania. `hFile`musi być prawidłowy i nie można ustawić INVALID_HANDLE_VALUE.  
+ Dojście do pliku, w którym można utworzyć obiektu mapowania. `hFile` musi być prawidłowy i nie można ustawić INVALID_HANDLE_VALUE.  
   
  `nMappingSize`  
  Rozmiar mapowania. 0, maksymalny rozmiar obiektu mapowania pliku jest taki sam, jak bieżący rozmiar pliku identyfikowane przez *hFile.*  
@@ -197,7 +192,7 @@ HRESULT MapFile(
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
+##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem  
  Wywołanie tej metody można utworzyć obiektu mapowania pliku, który zezwala na dostęp do wszystkich procesów.  
   
 ```
@@ -212,7 +207,7 @@ HRESULT MapSharedMem(
   
 ### <a name="parameters"></a>Parametry  
  `nMappingSize`  
- Rozmiar mapowania. W przypadku wartości 0 maksymalny rozmiar obiektu mapowania pliku jest równe rozmiarowi bieżącego obiektu mapowania pliku identyfikowane przez`szName.`  
+ Rozmiar mapowania. W przypadku wartości 0 maksymalny rozmiar obiektu mapowania pliku jest równe rozmiarowi bieżącego obiektu mapowania pliku identyfikowane przez `szName.`  
   
  `szName`  
  Nazwa obiektu mapowania.  
@@ -235,7 +230,7 @@ HRESULT MapSharedMem(
 ### <a name="remarks"></a>Uwagi  
  **MapShareMem** umożliwia istniejącego obiektu mapowania pliku utworzonego przez [funkcja CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), aby być udostępniane między procesami.  
   
-##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
+##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Wywołanie tej metody, aby otworzyć nazwanego obiektu mapowania pliku określonego pliku.  
   
 ```
@@ -251,7 +246,7 @@ HRESULT OpenMapping(
  Nazwa obiektu mapowania. Jeśli jest otwarte dojście do obiektu mapowania pliku o tej nazwie i deskryptora zabezpieczeń obiektu mapowania nie powoduje konfliktu z `dwViewDesiredAccess` operacja otwierania parametru zakończy się pomyślnie.  
   
  `nMappingSize`  
- Rozmiar mapowania. W przypadku wartości 0 maksymalny rozmiar obiektu mapowania pliku jest równe rozmiarowi bieżącego obiektu mapowania pliku identyfikowane przez`szName.`  
+ Rozmiar mapowania. W przypadku wartości 0 maksymalny rozmiar obiektu mapowania pliku jest równe rozmiarowi bieżącego obiektu mapowania pliku identyfikowane przez `szName.`  
   
  `nOffset`  
  Przesunięcie w pliku mapowania w przypadku rozpoczęcia. Wartość przesunięcia musi być wielokrotnością liczby szczegółowości alokacji pamięci systemu.  
@@ -265,7 +260,7 @@ HRESULT OpenMapping(
 ### <a name="remarks"></a>Uwagi  
  W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli parametry wejściowe są nieprawidłowe.  
   
-##  <a name="operator_eq"></a>CAtlFileMappingBase::operator =  
+##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =  
  Ustawia bieżący obiekt mapowania pliku do innego obiektu mapowania pliku.  
   
 ```
@@ -279,7 +274,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwołanie do bieżącego obiektu.  
   
-##  <a name="unmap"></a>CAtlFileMappingBase::Unmap  
+##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap  
  Wywołaj tę metodę, aby usunąć mapowanie obiektu mapowania pliku.  
   
 ```

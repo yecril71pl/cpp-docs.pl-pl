@@ -1,13 +1,10 @@
 ---
-title: "Operatory mnożenia języka C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Operatory mnożenia języka C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,31 +17,29 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 1810cc9dd7a991e302e0e9e2db69f65aebebc613
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-multiplicative-operators"></a>Operatory mnożenia języka C
 Operatory mnożenia wykonać mnożenia (**\***), dzielenia (**/**), a reszta (`%`) operacji.  
   
- **Syntax**  
+ **Składnia**  
   
- *multiplicative-expression*:  
+ *wyrażenia mnożenia*:  
  *cast-expression*  
   
- *multiplicative-expression*  **\***  *cast-expression*  
+ *wyrażenia mnożenia***\****wyrażenie cast*   
   
- *multiplicative-expression*  **/**  *cast-expression*  
+ *wyrażenia mnożenia***/***wyrażenie cast*   
   
- *multiplicative-expression*  **%**  *cast-expression*  
+ *wyrażenia mnożenia***%***wyrażenie cast*   
   
  Argumenty operacji operatora pozostałej (`%`) musi być wartością całkowitą. ILOCZYN (**\***) i dzielenia (**/**) operatory może zająć argumentów operacji typu całkowitego lub zmiennoprzecinkową typ -; typy argumenty mogą być różne.  
   

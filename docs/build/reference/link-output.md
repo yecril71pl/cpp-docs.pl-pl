@@ -1,13 +1,10 @@
 ---
-title: "Dane wyjściowe LINK | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Dane wyjściowe LINK | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -26,22 +23,20 @@ helpviewer_keywords:
 - DLLs [C++], as linker output
 - LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 567a87ab5cb4badd5f32423b8fb3067b21c46e9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae68de707ece35825a32a404ce14032d4bbd3141
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="link-output"></a>Dane wyjściowe LINK
 Dane wyjściowe Link zawiera pliki .exe, biblioteki DLL mapfiles i komunikatów.  
   
-##  <a name="_core_output_files"></a>Pliki wyjściowe  
+##  <a name="_core_output_files"></a> Pliki wyjściowe  
  Domyślny plik wyjściowy z łącza jest pliku .exe. Jeśli [/dll](../../build/reference/dll-build-a-dll.md) zostanie określona opcja, LINK tworzy plik dll. Można kontrolować, nazwa pliku wyjściowego z [nazwę pliku wyjściowego (/ OUT)](../../build/reference/out-output-file-name.md) opcji.  
   
  W trybie przyrostowe łącze tworzy plik .ilk do przechowywania informacji o stanie dla nowszej kompilacji przyrostowej programu. Aby uzyskać więcej informacji o plikach .ilk, zobacz [.ilk — pliki](../../build/reference/dot-ilk-files-as-linker-input.md). Aby uzyskać więcej informacji na temat konsolidowania przyrostowego zobacz [przyrostowo łącza (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) opcji.  
@@ -52,7 +47,7 @@ Dane wyjściowe Link zawiera pliki .exe, biblioteki DLL mapfiles i komunikatów.
   
  Jeśli [Generuj informacje o debugowaniu (/ DEBUG)](../../build/reference/debug-generate-debug-info.md) zostanie określona opcja, łącze tworzy PDB zawierają informacje o debugowaniu dla programu.  
   
-##  <a name="_core_other_output"></a>Inne dane wyjściowe  
+##  <a name="_core_other_output"></a> Inne dane wyjściowe  
  Podczas wpisywania `link` bez żadnych innych danych wiersza polecenia, LINK wyświetla instrukcji użycia, która zawiera podsumowanie jej opcji.  
   
  Wyświetla komunikat o prawach autorskich i wersji i zwraca plik poleceń do wprowadzania, chyba że łącze [Pomijaj transparent startowy (/ NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md) jest używana opcja.  

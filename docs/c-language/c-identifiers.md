@@ -1,13 +1,10 @@
 ---
-title: "Identyfikatory języka C | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Identyfikatory języka C | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe8ab231d6bf4051cc730ff1beb23f93a8f301d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cca0381392a1f7c2f227c3296597dc3c614ae0b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-identifiers"></a>Identyfikatory języka C
 "Identyfikatory" lub "symbole" są podane nazwy zmiennych, typów, funkcji i etykiet w programie. Nazwy identyfikatorów muszą różnić się w pisowni i liter od dowolnego słowa kluczowe. Słowa kluczowe (C lub Microsoft) nie można używać jako identyfikatorów; są one zarezerwowane do użytku specjalnych. Utworzysz identyfikatora, określając w deklaracji zmiennej, typu lub funkcji. W tym przykładzie `result` jest identyfikatorem zmienna typu Liczba całkowita i `main` i `printf` to identyfikator nazwy funkcji.  
@@ -67,7 +62,7 @@ int main()
   
  Pierwszy znak nazwy identyfikatora musi być `nondigit` (to znaczy pierwszy znak musi być znaku podkreślenia ani wielkie i małe litery). ANSI umożliwia sześciu znaczących znaki w nazwie identyfikatora zewnętrznego i 31 w nazwach identyfikatorów wewnętrznych (w funkcji). Zewnętrzne identyfikatory (tych zadeklarowana w zakresie globalnym lub zadeklarowana przy użyciu klasy magazynu `extern`) mogą paść dodatkowe ograniczenia nazewnictwa, ponieważ takie identyfikatory muszą być przetwarzane przez inne oprogramowanie, takie jak linkery.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Mimo że ANSI umożliwia 6 znaki znaczące zewnętrznych identyfikatorów, nazw i 31 w nazwach identyfikatorów wewnętrznych (w funkcji), kompilator Microsoft C umożliwia 247 znaków w nazwie identyfikatora wewnętrznych lub zewnętrznych. Jeśli nie są związane z zgodność ANSI, można zmodyfikować to ustawienie domyślne na mniejszą lub większą liczbę przy użyciu /H (Ograniczaj długość nazw zewnętrznych) opcja.  
   
@@ -82,7 +77,7 @@ Add
 aDD  
 ```  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Nie zaznaczaj nazwy identyfikatorów zaczynających dwóch znaków podkreślenia lub podkreśleniem następuje polecenie wielkiej litery. Standard ANSI C umożliwia nazwy identyfikatorów, które zaczynają się od kombinacji tych znaków mają zostać zarezerwowane do użytku kompilatora. Identyfikatory o zakresie poziomu plików powinny również nie miały nazwę nadaną przez podkreślenia i małą literę jako dwa pierwsze litery. Nazwy identyfikatorów, które zaczynają się od tych znaków również są zastrzeżone. Konwencja firma Microsoft używa podkreślenia i wielką literę zacząć nazwy makr i podwójnego podkreślenia nazw — słowo kluczowe specyficzne dla firmy Microsoft. Aby uniknąć konfliktów nazw, należy zawsze wybierać identyfikator nazw, które nie rozpoczynają się co najmniej dwa znaki podkreślenia lub nazwy zaczynające się od znaku podkreślenia następuje polecenie wielkiej litery.  
   
@@ -99,7 +94,7 @@ skip12
 LastNum  
 ```  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Identyfikatory w plikach źródłowych jest uwzględniana wielkość liter, domyślnie, symboli w plikach obiektu nie są. Microsoft C traktuje identyfikatorów w ramach jednostki kompilacji jako wielkość liter.  
   

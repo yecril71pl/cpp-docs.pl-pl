@@ -2,12 +2,9 @@
 title: 'Składnia specyfikacji formatu: funkcje printf i wprintf | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: c15ba418657dde291c6833caafae071ca0260a65
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
@@ -77,15 +72,15 @@ Liczba całkowita typów, takie jak `short`, `int`, `long`, `long long`i ich `un
 |**u**|Liczba całkowita|Dziesiętną liczbą całkowitą bez znaku.|
 |**x**|Liczba całkowita|Szesnastkową liczby całkowitej bez znaku; używa "abcdef".|
 |**X**|Liczba całkowita|Szesnastkową liczby całkowitej bez znaku; używa "ABCDEF".|
-|**e**|Floating-point|Wartość, która ma formę [-] podpisane*d.dddd*__e±__*dd*[*d*] gdzie *d* jest jedną cyfrę, *dddd* jest jeden lub więcej cyfr dziesiętnych, w zależności od określona precyzja lub sześć domyślnie i *dd*[*d*] jest dwóch lub trzech cyfr dziesiętnych, w zależności od [format danych wyjściowych](../c-runtime-library/set-output-format.md) i rozmiar wykładnik.|
-|**E**|Floating-point|Taki sam jak **e** formatowania z wyjątkiem **E** zamiast **e** wprowadza wykładnik.|
-|**f**|Floating-point|Wartość, która ma formę [-] podpisane*dddd*__.__ *dddd*, gdzie *dddd* jest jeden lub więcej cyfr dziesiętnych. Liczba cyfr przed separatorem dziesiętnym zależy od wielkości numer, a liczba cyfr po dziesiętnego zależy od żądanego dokładność lub sześć domyślnie.|
-|**F**|Floating-point|Taki sam jak **f** formatowania z tą różnicą, że Wielka nieskończoności i nan danych wyjściowych.|
-|**g**|Floating-point|Podpisem wartości zostają wyświetlone w **f** lub **e** sformatować, nastąpi mniejszych podanej wartości i precyzji. **e** format jest używany tylko wtedy, gdy wykładnik wartość jest mniejsza niż -4 lub większa niż lub równa *dokładności* argumentu. Końcowe zero są obcinane i dziesiętnego jest wyświetlana tylko wtedy, gdy jeden lub więcej cyfr po nim.|
-|**G**|Floating-point|Taki sam jak **g** sformatować, z wyjątkiem **E**, a nie **e**, wprowadza wykładnik (o ile jest to możliwe).|
-|**a**|Floating-point|Podpisana szesnastkową wartość zmiennoprzecinkowe podwójnej precyzji, która ma formę [-] 0 x*h.hhhh*__p±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu małych liter) mantysa i *dd* są co najmniej jedną cyfrę dla wykładnik. Dokładność określa liczbę cyfr po punkcie.|
-|**A**|Floating-point|Podpisana szesnastkową wartość zmiennoprzecinkowe podwójnej precyzji, która ma formę [-] 0 X*h.hhhh*__P±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu wielkimi literami) mantysa i *dd* są co najmniej jedną cyfrę dla wykładnik. Dokładność określa liczbę cyfr po punkcie.|
-|**n**|Wskaźnik do liczby całkowitej.|Liczba znaków, które zostały pomyślnie zapisane do tej pory strumienia lub buforu. Ta wartość jest przechowywana w całkowitą, której adres jest podawana jako argument. Rozmiar całkowitą wskazywał kontrolowana przez prefiks Specyfikacja rozmiaru argumentu. **n** specyfikator jest domyślnie wyłączona; informacji, zobacz uwagę ważny.|
+|**e**|Zmiennoprzecinkowe|Wartość, która ma formę [-] podpisane*d.dddd*__e±__*dd*[*d*] gdzie *d* jest jedną cyfrę, *dddd* jest jeden lub więcej cyfr dziesiętnych, w zależności od określona precyzja lub sześć domyślnie i *dd*[*d*] jest dwóch lub trzech cyfr dziesiętnych, w zależności od [format danych wyjściowych](../c-runtime-library/set-output-format.md) i rozmiar wykładnik.|
+|**E**|Zmiennoprzecinkowe|Taki sam jak **e** formatowania z wyjątkiem **E** zamiast **e** wprowadza wykładnik.|
+|**f**|Zmiennoprzecinkowe|Wartość, która ma formę [-] podpisane*dddd*__.__ *dddd*, gdzie *dddd* jest jeden lub więcej cyfr dziesiętnych. Liczba cyfr przed separatorem dziesiętnym zależy od wielkości numer, a liczba cyfr po dziesiętnego zależy od żądanego dokładność lub sześć domyślnie.|
+|**F**|Zmiennoprzecinkowe|Taki sam jak **f** formatowania z tą różnicą, że Wielka nieskończoności i nan danych wyjściowych.|
+|**g**|Zmiennoprzecinkowe|Podpisem wartości zostają wyświetlone w **f** lub **e** sformatować, nastąpi mniejszych podanej wartości i precyzji. **e** format jest używany tylko wtedy, gdy wykładnik wartość jest mniejsza niż -4 lub większa niż lub równa *dokładności* argumentu. Końcowe zero są obcinane i dziesiętnego jest wyświetlana tylko wtedy, gdy jeden lub więcej cyfr po nim.|
+|**G**|Zmiennoprzecinkowe|Taki sam jak **g** sformatować, z wyjątkiem **E**, a nie **e**, wprowadza wykładnik (o ile jest to możliwe).|
+|**a**|Zmiennoprzecinkowe|Podpisana szesnastkową wartość zmiennoprzecinkowe podwójnej precyzji, która ma formę [-] 0 x*h.hhhh*__p±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu małych liter) mantysa i *dd* są co najmniej jedną cyfrę dla wykładnik. Dokładność określa liczbę cyfr po punkcie.|
+|**A**|Zmiennoprzecinkowe|Podpisana szesnastkową wartość zmiennoprzecinkowe podwójnej precyzji, która ma formę [-] 0 X*h.hhhh*__P±__*dd*, gdzie *h.hhhh* są szesnastkowy cyfry (przy użyciu wielkimi literami) mantysa i *dd* są co najmniej jedną cyfrę dla wykładnik. Dokładność określa liczbę cyfr po punkcie.|
+|**N**|Wskaźnik do liczby całkowitej.|Liczba znaków, które zostały pomyślnie zapisane do tej pory strumienia lub buforu. Ta wartość jest przechowywana w całkowitą, której adres jest podawana jako argument. Rozmiar całkowitą wskazywał kontrolowana przez prefiks Specyfikacja rozmiaru argumentu. **n** specyfikator jest domyślnie wyłączona; informacji, zobacz uwagę ważny.|
 |**p**|Typ wskaźnika|Wyświetla argument jako adresu cyfr szesnastkowych.|
 |**s**|String|W przypadku użycia z `printf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowego; w przypadku użycia z `wprintf` funkcje, określa ciąg znaków dwubajtowych. Znaki są wyświetlane do pierwszego znaku null lub do czasu *dokładności* osiągnięciem wartości.|
 |**S**|String|W przypadku użycia z `printf` funkcje, określa ciąg znaków dwubajtowych; w przypadku użycia z `wprintf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowego. Znaki są wyświetlane do pierwszego znaku null lub do czasu *dokładności* osiągnięciem wartości.|

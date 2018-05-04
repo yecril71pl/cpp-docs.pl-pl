@@ -1,12 +1,9 @@
 ---
 title: Konwencja __thiscall | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __thiscall
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55f7d288758b345dfc4f182f2153e0d39a1b349
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dccd9e80a23b1636bd869d406824c9997f4cdef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thiscall"></a>__thiscall
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  W wersjach przed Visual C++ 2005 thiscall konwencji wywoływania może nie być jawnie określona w programie, ponieważ `thiscall` nie jest słowem kluczowym.  
   
- `vararg`Funkcje Członkowskie użyj `__cdecl` konwencji wywoływania. Wszystkie argumenty funkcji są przenoszone na stosie, z `this` wskaźnika ostatnio umieszczane na stosie  
+ `vararg` Funkcje Członkowskie użyj `__cdecl` konwencji wywoływania. Wszystkie argumenty funkcji są przenoszone na stosie, z `this` wskaźnika ostatnio umieszczane na stosie  
   
  Konwencja wywoływania dotyczy tylko C++, nie istnieje żaden schemat decoration nazwa C.  
   

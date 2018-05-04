@@ -1,12 +1,9 @@
 ---
 title: Klasa CDacl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDacl
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac83d5c1f72bf1df20d41ec39b464ddb79e4f8e
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2724eebd218cea2795d483351ef91b34c9f1bf39
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdacl-class"></a>Klasa CDacl
 Ta klasa jest otoki dla struktury DACL (listy DACL kontroli dostępu).  
@@ -88,7 +83,7 @@ class CDacl : public CAcl
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h  
   
-##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
+##  <a name="addallowedace"></a>  CDacl::AddAllowedAce  
  Dodaje wpis ACE dozwolonych (wpisu kontroli dostępu) do `CDacl` obiektu.  
   
 ```
@@ -129,7 +124,7 @@ bool AddAllowedAce(
   
  Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flagi, które można ustawić w `AceFlags` parametru.  
   
-##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
+##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce  
  Dodaje odmowy ACE (wpis kontroli dostępu) do `CDacl` obiektu.  
   
 ```
@@ -170,7 +165,7 @@ bool AddDeniedAce(
   
  Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flagi, które można ustawić w `AceFlags` parametru.  
   
-##  <a name="cdacl"></a>CDacl::CDacl  
+##  <a name="cdacl"></a>  CDacl::CDacl  
  Konstruktor.  
   
 ```
@@ -185,7 +180,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Uwagi  
  `CDacl` Obiektu można opcjonalnie utworzyć przy użyciu istniejącego **ACL** struktury. Należy pamiętać, aby tylko DACL (listy DACL kontroli dostępu), a nie listę kontroli dostępu (listy kontroli dostępu system), powinien zostać przekazany jako parametr. W kompilacjach do debugowania przekazywanie SACL spowoduje potwierdzenia. W kompilacjach wydania przekazywanie SACL spowoduje, że wpisy kontroli dostępu (wpisy kontroli dostępu) na liście ACL mają być ignorowane, a błąd nie nastąpi.  
   
-##  <a name="dtor"></a>CDacl:: ~ CDacl  
+##  <a name="dtor"></a>  CDacl:: ~ CDacl  
  Destruktor.  
   
 ```
@@ -195,7 +190,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Uwagi  
  Destruktor zwalnia wszystkie zasoby uzyskaną przez obiekt, w tym wszystkie wpisy kontroli dostępu (wpisy kontroli dostępu) przy użyciu [CDacl::RemoveAllAces](#removeallaces).  
   
-##  <a name="getacecount"></a>CDacl::GetAceCount  
+##  <a name="getacecount"></a>  CDacl::GetAceCount  
  Zwraca liczbę ACE (wpisy kontroli dostępu) w `CDacl` obiektu.  
   
 ```
@@ -205,7 +200,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca liczbę ACE zawarte w `CDacl` obiektu.  
   
-##  <a name="operator_eq"></a>CDacl::operator =  
+##  <a name="operator_eq"></a>  CDacl::operator =  
  Operator przypisania.  
   
 ```
@@ -222,7 +217,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Uwagi  
  Należy upewnić się, tylko przekazać DACL (listy DACL kontroli dostępu) do tej funkcji. Przekazywanie SACL (systemowa lista kontroli dostępu) do tej funkcji spowoduje, że ASSERT w kompilacjach debugowania, ale spowoduje, że żaden błąd w kompilacjach wydania.  
   
-##  <a name="removeace"></a>CDacl::RemoveAce  
+##  <a name="removeace"></a>  CDacl::RemoveAce  
  Usuwa określone ACE (wpis kontroli dostępu) `CDacl` obiektu.  
   
 ```
@@ -236,7 +231,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest określana na podstawie [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CDacl::RemoveAllAces  
  Usuwa wszystkie wpisy kontroli dostępu (wpisy kontroli dostępu) zawartych w `CDacl` obiektu.  
   
 ```

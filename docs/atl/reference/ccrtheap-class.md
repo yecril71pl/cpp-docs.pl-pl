@@ -1,12 +1,9 @@
 ---
 title: Klasa CCRTHeap | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CCRTHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CCRTHeap class
 ms.assetid: 321bd6c5-1856-4ff7-8590-95044a1209f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9864ce3522cf33927a3f6d3572e9d2e12187f5d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83655bddfb56bdd0e532b520b2389278e3fbd762
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccrtheap-class"></a>Klasa CCRTHeap
 Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji CRT stosu.  
@@ -53,7 +48,7 @@ class CCRTHeap : public IAtlMemMgr
 |[CCRTHeap::Reallocate](#reallocate)|Wywołaj tę metodę, aby ponownie przydzielić pamięci przydzielonej przez ten Menedżer pamięci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CCRTHeap`implementuje pamięci funkcji alokacji przy użyciu CRT stercie funkcji, w tym [— funkcja malloc](../../c-runtime-library/reference/malloc.md), [wolnego](../../c-runtime-library/reference/free.md), [realloc](../../c-runtime-library/reference/realloc.md), i [_msize —](../../c-runtime-library/reference/msize.md).  
+ `CCRTHeap` implementuje pamięci funkcji alokacji przy użyciu CRT stercie funkcji, w tym [— funkcja malloc](../../c-runtime-library/reference/malloc.md), [wolnego](../../c-runtime-library/reference/free.md), [realloc](../../c-runtime-library/reference/realloc.md), i [_msize —](../../c-runtime-library/reference/msize.md).  
   
 ## <a name="example"></a>Przykład  
  Zobacz przykład [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -66,7 +61,7 @@ class CCRTHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlmem.h  
   
-##  <a name="allocate"></a>CCRTHeap::Allocate  
+##  <a name="allocate"></a>  CCRTHeap::Allocate  
  Wywołanie tej metody można przydzielić bloku pamięci.  
   
 ```
@@ -85,7 +80,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementowane za pomocą [— funkcja malloc](../../c-runtime-library/reference/malloc.md).  
   
-##  <a name="free"></a>CCRTHeap::Free  
+##  <a name="free"></a>  CCRTHeap::Free  
  Wywołanie tej metody, aby zwolnić blok pamięci przydzielonej przez ten Menedżer pamięci.  
   
 ```
@@ -99,7 +94,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Uwagi  
  Implementowane za pomocą [wolnego](../../c-runtime-library/reference/free.md).  
   
-##  <a name="getsize"></a>CCRTHeap::GetSize  
+##  <a name="getsize"></a>  CCRTHeap::GetSize  
  Wywołaj tę metodę, aby pobrać przydzielony rozmiar bloku pamięci przydzielonej przez ten Menedżer pamięci.  
   
 ```
@@ -116,7 +111,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Uwagi  
  Implementowane za pomocą [_msize —](../../c-runtime-library/reference/msize.md).  
   
-##  <a name="reallocate"></a>CCRTHeap::Reallocate  
+##  <a name="reallocate"></a>  CCRTHeap::Reallocate  
  Wywołaj tę metodę, aby ponownie przydzielić pamięci przydzielonej przez ten Menedżer pamięci.  
   
 ```

@@ -1,27 +1,22 @@
 ---
-title: "Tworzenie projektu (ALT — samouczek, część 1) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Tworzenie projektu (ALT — samouczek, część 1) | Dokumentacja firmy Microsoft
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9a5fc9a0d2175a419bbc0fb1aacbc9ea25006c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1aedf7b4112d4c8d4bb5b2a174e93925f5a46ce5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Tworzenie projektu (ALT — Samouczek, część 1)
 Ten samouczek przedstawia instrukcje dotyczące nonattributed Projekt ATL, który tworzy obiekt ActiveX, który wyświetla wielokąta. Obiekt zawiera opcje dzięki czemu użytkownik Aby zmienić liczbę stron tworzących wielokąt i kod odświeżyć ekran.  

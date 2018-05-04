@@ -1,12 +1,9 @@
 ---
 title: Klasa CNoWorkerThread | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CNoWorkerThread
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CNoWorkerThread class
 ms.assetid: 29f06bae-b658-4aac-9c14-331e996d25d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36af37fae778a572d790a137073c62cfde22019c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85e1962d10f274f4f8c35ba27cb05c41e8bf19cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cnoworkerthread-class"></a>Klasa CNoWorkerThread
 Klasa jest używana jako argument dla `MonitorClass` parametr szablonu klasy pamięci podręcznej, jeśli chcesz wyłączyć konserwacji dynamiczne pamięci podręcznej.  
@@ -69,7 +64,7 @@ class CNoWorkerThread
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlutil.h  
   
-##  <a name="addhandle"></a>CNoWorkerThread::AddHandle  
+##  <a name="addhandle"></a>  CNoWorkerThread::AddHandle  
  Odpowiednik współzależności funkcjonalnych [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ```
@@ -87,7 +82,7 @@ HRESULT AddHandle(HANDLE /* hObject
 ### <a name="remarks"></a>Uwagi  
  Implementacja udostępniane przez tę klasę nie działa.  
   
-##  <a name="addtimer"></a>CNoWorkerThread::AddTimer  
+##  <a name="addtimer"></a>  CNoWorkerThread::AddTimer  
  Odpowiednik współzależności funkcjonalnych [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).  
   
 ```
@@ -107,7 +102,7 @@ HRESULT AddTimer(DWORD /* dwInterval
 ### <a name="remarks"></a>Uwagi  
  Implementacja udostępniane przez tę klasę nie działa.  
   
-##  <a name="getthreadhandle"></a>CNoWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>  CNoWorkerThread::GetThreadHandle  
  Odpowiednik współzależności funkcjonalnych [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).  
   
 ```
@@ -120,7 +115,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="remarks"></a>Uwagi  
  Implementacja udostępniane przez tę klasę nie działa.  
   
-##  <a name="getthreadid"></a>CNoWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>  CNoWorkerThread::GetThreadId  
  Odpowiednik współzależności funkcjonalnych [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).  
   
 ```
@@ -133,7 +128,7 @@ DWORD GetThreadId() throw();
 ### <a name="remarks"></a>Uwagi  
  Implementacja udostępniane przez tę klasę nie działa.  
   
-##  <a name="initialize"></a>CNoWorkerThread::Initialize  
+##  <a name="initialize"></a>  CNoWorkerThread::Initialize  
  Odpowiednik współzależności funkcjonalnych [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).  
   
 ```
@@ -146,7 +141,7 @@ HRESULT Initialize() throw();
 ### <a name="remarks"></a>Uwagi  
  Implementacja udostępniane przez tę klasę nie działa.  
   
-##  <a name="removehandle"></a>CNoWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>  CNoWorkerThread::RemoveHandle  
  Odpowiednik współzależności funkcjonalnych [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).  
   
 ```
@@ -160,7 +155,7 @@ HRESULT RemoveHandle(HANDLE /* hObject
 ### <a name="remarks"></a>Uwagi  
  Implementacja udostępniane przez tę klasę nie działa.  
   
-##  <a name="shutdown"></a>CNoWorkerThread::Shutdown  
+##  <a name="shutdown"></a>  CNoWorkerThread::Shutdown  
  Odpowiednik współzależności funkcjonalnych [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).  
   
 ```

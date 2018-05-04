@@ -1,29 +1,24 @@
 ---
-title: "Aliasy i definicje typów (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Aliasy i definicje typów (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - typedef_cpp
 dev_langs:
 - C++
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8946c87c18e1781f95df7a91e8cc4fa0eba02158
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c020d9fc4a8bc5275fe77b05eff74fdcec25ec6c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliasy i definicje typów (C++)
 Można użyć *Deklaracja aliasu* Aby zadeklarować nazwa ma być używana jako synonim wcześniej zadeklarowanego typu. (Ten mechanizm jest również nazywany nieformalnego *alias typu*). Ten mechanizm również służy do tworzenia *szablonu aliasu*, które mogą być szczególnie przydatne w przypadku niestandardowych allocators —.  
@@ -357,7 +352,7 @@ typedef struct {
 } POINT;  
 ```  
   
- Powyższy przykład deklaruje klasę o nazwie `POINT` za pomocą nazwy klasy `typedef` składni. `POINT`jest traktowany jako nazwy klasy; jednak następujące ograniczenia dotyczące nazw wprowadzonych w ten sposób:  
+ Powyższy przykład deklaruje klasę o nazwie `POINT` za pomocą nazwy klasy `typedef` składni. `POINT` jest traktowany jako nazwy klasy; jednak następujące ograniczenia dotyczące nazw wprowadzonych w ten sposób:  
   
 -   Nazwa (synonim) nie może występować po **klasy**, `struct`, lub **Unii** prefiks.  
   

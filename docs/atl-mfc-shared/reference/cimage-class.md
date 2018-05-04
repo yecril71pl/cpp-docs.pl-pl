@@ -1,12 +1,9 @@
 ---
-title: "CImage — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: CImage — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 02/01/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CImage
@@ -63,20 +60,18 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 762941834820edda09970750af752d4c8a9df61c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cimage-class"></a>CImage — klasa
-`CImage`zapewnia obsługę rozszerzonych mapy bitowej, łącznie z możliwością przy ładowaniu i zapisywaniu obrazów w formacie JPEG, GIF, BMP i Portable Network Graphics (PNG).  
+`CImage` Zapewnia obsługę rozszerzonych mapy bitowej, łącznie z możliwością przy ładowaniu i zapisywaniu obrazów w formacie JPEG, GIF, BMP i Portable Network Graphics (PNG).  
   
 > [!IMPORTANT]
 >  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
@@ -146,7 +141,7 @@ class CImage
 |[HBITMAP CImage::operator](#operator_hbitmap)|Zwraca dojście Windows dołączona do `CImage` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CImage`Trwa mapy bitowe, które są albo sekcje map bitowych niezależnych od urządzenia (DIB) czy nie; można jednak użyć [Utwórz](#create) lub [CImage::Load](#load) tylko DIB sekcje. Możesz dołączyć mapę bitową sekcji z systemem innym niż DIB do `CImage` przy użyciu [Attach](#attach), następnie można użyć następujących `CImage` metody, które obsługują tylko DIB sekcji bitmapy:  
+ `CImage` Trwa mapy bitowe, które są albo sekcje map bitowych niezależnych od urządzenia (DIB) czy nie; można jednak użyć [Utwórz](#create) lub [CImage::Load](#load) tylko DIB sekcje. Możesz dołączyć mapę bitową sekcji z systemem innym niż DIB do `CImage` przy użyciu [Attach](#attach), następnie można użyć następujących `CImage` metody, które obsługują tylko DIB sekcji bitmapy:  
   
 - [GetBits](#getbits)  
   
@@ -170,7 +165,7 @@ class CImage
 > [!NOTE]
 >  Za pomocą globalnej `CImage` obiektów w bibliotece DLL nie jest zalecane. Jeśli musisz użyć globalnym `CImage` obiektu w bibliotece DLL, wywołanie [CImage::ReleaseGDIPlus](#releasegdiplus) jawnie zwolnić zasoby używane przez GDI +.  
   
- `CImage`Nie można wybrać do nowego [CDC](../../mfc/reference/cdc-class.md). `CImage`tworzy własne **elementu HDC** obrazu. Ponieważ `HBITMAP` można wybrać tylko do jednej **elementu HDC** w czasie, `HBITMAP` skojarzone z `CImage` nie można wybrać do innego **elementu HDC**. Jeśli potrzebujesz `CDC`, pobrać **elementu HDC** z `CImage` i nadaj [CDC::FromHandle] (.. /.. /MFC/Reference/CDC-Class.MD#cdc__fromhandle.  
+ `CImage` Nie można wybrać do nowego [CDC](../../mfc/reference/cdc-class.md). `CImage` tworzy własne **elementu HDC** obrazu. Ponieważ `HBITMAP` można wybrać tylko do jednej **elementu HDC** w czasie, `HBITMAP` skojarzone z `CImage` nie można wybrać do innego **elementu HDC**. Jeśli potrzebujesz `CDC`, pobrać **elementu HDC** z `CImage` i nadaj [CDC::FromHandle] (.. /.. /MFC/Reference/CDC-Class.MD#cdc__fromhandle.  
   
 ## <a name="example"></a>Przykład  
 ```cpp  
@@ -212,7 +207,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlimage.h  
   
-##  <a name="alphablend"></a>CImage::AlphaBlend  
+##  <a name="alphablend"></a>  CImage::AlphaBlend  
  Wyświetla bitmap przezroczysty lub półprzezroczysty pikseli.  
   
 ```
@@ -301,7 +296,7 @@ BOOL AlphaBlend(
   
  Gdy `bBlendOp` ma ustawioną wartość domyślną **AC_SRC_OVER**, mapy bitowej źródła znajduje się nad mapy bitowej docelowym na podstawie wartości alfa źródłowych.  
 
-##  <a name="attach"></a>CImage::Attach  
+##  <a name="attach"></a>  CImage::Attach  
  Dołącza `hBitmap` do `CImage` obiektu.  
   
 ```
@@ -313,7 +308,7 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
  Dojście do `HBITMAP`.  
   
  *eOrientation*  
- Określa orientację mapy bitowej. Może to być jedna z następujących czynności:  
+ Określa orientację mapy bitowej. Może to być jeden z następujących elementów:  
   
 - **DIBOR_DEFAULT** orientację mapy bitowej jest określany przez system operacyjny. Jednak to może nie zawsze być zamierzone wyniki we wszystkich systemach operacyjnych. Aby uzyskać więcej informacji na ten, zobacz następujący artykuł bazy wiedzy Knowledge Base ( **Q186586**): PRB: GetObject() zawsze zwraca wartość dodatnią wysokości dla DIB sekcje.  
   
@@ -396,7 +391,7 @@ BOOL BitBlt(
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) w zestawie Windows SDK.  
   
-##  <a name="cimage"></a>CImage::CImage  
+##  <a name="cimage"></a>  CImage::CImage  
  Konstruuje `CImage` obiektu.  
   
 ```
@@ -410,7 +405,7 @@ CImage() throw();
   
  Za pomocą globalnej `CImage` obiektów w bibliotece DLL nie jest zalecane. Jeśli musisz użyć globalnym `CImage` obiektu w bibliotece DLL, wywołanie [CImage::ReleaseGDIPlus](#releasegdiplus) jawnie zwolnić zasoby używane przez GDI +.  
   
-##  <a name="create"></a>CImage::Create  
+##  <a name="create"></a>  CImage::Create  
  Tworzy `CImage` bitmap i dołączenie go do wcześniej utworzone `CImage` obiektu.  
   
 ```
@@ -442,7 +437,7 @@ BOOL Create(
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
-##  <a name="createex"></a>CImage::CreateEx  
+##  <a name="createex"></a>  CImage::CreateEx  
  Tworzy `CImage` bitmap i dołączenie go do wcześniej utworzone `CImage` obiektu.  
   
 ```
@@ -495,14 +490,14 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
 
 
-##  <a name="destroy"></a>CImage::Destroy  
+##  <a name="destroy"></a>  CImage::Destroy  
  Odłącza mapy bitowej z `CImage` obiektu i niszczy mapy bitowej.  
   
 ```
 void Destroy() throw();
 ```  
   
-##  <a name="detach"></a>CImage::Detach  
+##  <a name="detach"></a>  CImage::Detach  
  Odłącza mapę bitową z `CImage` obiektu.  
   
 ```
@@ -512,7 +507,7 @@ HBITMAP Detach() throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do mapy bitowej odłączyć, lub **NULL** Jeżeli nie jest podłączone nie mapy bitowej.  
   
-##  <a name="draw"></a>CImage::Draw  
+##  <a name="draw"></a>  CImage::Draw  
  Kopiuje mapę bitową z kontekstu urządzenia źródłowego dla bieżącego kontekstu urządzenia.  
   
 ```
@@ -598,7 +593,7 @@ BOOL Draw(
   
  W przypadku wersji **rysowania** nie określaj prostokąta źródłowego, całego obrazu źródłowego jest ustawieniem domyślnym. Dla wersji **rysowania** nie określa rozmiar docelowy prostokąt, rozmiar obrazu źródłowego jest domyślnie i nie rozciąganie lub zmniejszanie występuje.  
   
-##  <a name="getbits"></a>CImage::GetBits  
+##  <a name="getbits"></a>  CImage::GetBits  
  Pobiera wskaźnik z bitowego rzeczywisty wartościami pikselu mapy bitowej.  
   
 ```
@@ -614,7 +609,7 @@ void* GetBits() throw();
 > [!NOTE]
 >  Ta metoda obsługuje tylko map bitowych sekcji DIB; w rezultacie dostęp piksele `CImage` obiektu tak samo jak pikseli sekcji DIB. Zwrócony wskaźnik wskazuje na piksel w lokalizacji (0, 0).  
   
-##  <a name="getbpp"></a>CImage::GetBPP  
+##  <a name="getbpp"></a>  CImage::GetBPP  
  Pobiera wartość bitów na piksel.  
   
 ```
@@ -629,7 +624,7 @@ int GetBPP() const throw();
   
  Bity na piksel jest zwykle 1, 4, 8, 16, 24 lub 32. Zobacz **biBitCount** członkiem [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) w zestawie SDK systemu Windows, aby uzyskać więcej informacji na temat tej wartości.  
   
-##  <a name="getcolortable"></a>CImage::GetColorTable  
+##  <a name="getcolortable"></a>  CImage::GetColorTable  
  Pobiera czerwony, zielony, niebieski wartości kolorów (RGB) z zakresu zapisów w palecie sekcji DIB.  
   
 ```
@@ -648,7 +643,7 @@ void GetColorTable(UINT iFirstColor,
  `prgbColors`  
  Wskaźnik do tablicy [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) struktury tak, aby pobrać kolor tabeli wpisów.  
   
-##  <a name="getdc"></a>CImage::GetDC  
+##  <a name="getdc"></a>  CImage::GetDC  
  Pobiera kontekst urządzenia, który aktualnie ma do niego obraz.  
   
 ```
@@ -661,7 +656,7 @@ HDC GetDC() const throw();
 ### <a name="remarks"></a>Uwagi  
  Dla każdego wywołania `GetDC`, musi mieć kolejne wywołanie [ReleaseDC](#releasedc).  
   
-##  <a name="getexporterfilterstring"></a>CImage::GetExporterFilterString  
+##  <a name="getexporterfilterstring"></a>  CImage::GetExporterFilterString  
  Wyszukuje dostępne formatów obrazów zapisywanie obrazów.  
   
 ```
@@ -732,15 +727,15 @@ CImage::GetExporterFilterString(
   
  Parametr *strExporter* ma format:  
   
- description0 plik &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... opis pliku  *n* &#124;\*. Roz  *n* &#124; &#124;  
+ Plik description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. opis .xls *n*&#124;\*.roz *n*&#124;&#124;  
   
  gdzie "&#124;" określono znaku separatora za pomocą `chSeparator`. Na przykład:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Użyj ustawienia domyślne "&#124;", jeśli te parametry są przekazywane do MFC `CFileDialog` obiektu. Użyj wartości null separatora '\0', jeśli te parametry są przekazywane do wspólnego okno dialogowe Zapisz plik.  
+ Użyj ustawienia domyślne "&#124;" Jeśli te parametry są przekazywane do MFC `CFileDialog` obiektu. Użyj wartości null separatora '\0', jeśli te parametry są przekazywane do wspólnego okno dialogowe Zapisz plik.  
   
-##  <a name="getheight"></a>CImage::GetHeight  
+##  <a name="getheight"></a>  CImage::GetHeight  
  Pobiera wysokość w pikselach obrazu.  
   
 ```
@@ -750,7 +745,7 @@ int GetHeight() const throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Wysokość w pikselach obrazu.  
   
-##  <a name="getimporterfilterstring"></a>CImage::GetImporterFilterString  
+##  <a name="getimporterfilterstring"></a>  CImage::GetImporterFilterString  
  Wyszukuje dostępne formatów obrazów ładowania obrazów.  
   
 ```
@@ -818,15 +813,15 @@ CImage::GetImporterFilterString(
   
  Parametr *strImporter* ma format:  
   
- description0 plik &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... opis pliku  *n* &#124;\*. Roz  *n* &#124; &#124;  
+ Plik description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. opis .xls *n*&#124;\*.roz *n*&#124;&#124;  
   
  gdzie "&#124;" określono znaku separatora za pomocą `chSeparator`. Na przykład:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Użyj ustawienia domyślne "&#124;", jeśli te parametry są przekazywane do MFC `CFileDialog` obiektu. Użyj wartości null separatora '\0', jeśli te parametry są przekazywane do wspólnego **Otwórz plik** okno dialogowe.  
+ Użyj ustawienia domyślne "&#124;" Jeśli te parametry są przekazywane do MFC `CFileDialog` obiektu. Użyj wartości null separatora '\0', jeśli te parametry są przekazywane do wspólnego **Otwórz plik** okno dialogowe.  
   
-##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
+##  <a name="getmaxcolortableentries"></a>  CImage::GetMaxColorTableEntries  
  Pobiera maksymalną liczbę wpisów w tabeli kolorów.  
   
 ```
@@ -839,7 +834,7 @@ int GetMaxColorTableEntries() const throw();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda obsługuje tylko DIB sekcji bitmapy.  
   
-##  <a name="getpitch"></a>CImage::GetPitch  
+##  <a name="getpitch"></a>  CImage::GetPitch  
  Pobiera wysokość obrazu.  
   
 ```
@@ -857,7 +852,7 @@ int GetPitch() const throw();
 > [!NOTE]
 >  Ta metoda obsługuje tylko DIB sekcji bitmapy.  
   
-##  <a name="getpixel"></a>CImage::GetPixel  
+##  <a name="getpixel"></a>  CImage::GetPixel  
  Pobiera kolor pikseli w lokalizacji określonej przez *x* i *y*.  
   
 ```
@@ -874,7 +869,7 @@ COLORREF GetPixel(int x,int y) const throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Czerwony, zielony, niebieski (RGB) wartość piksela. Jeśli spoza obszaru przycinania bieżącego piksela, jest zwracana wartość **CLR_INVALID**.  
   
-##  <a name="getpixeladdress"></a>CImage::GetPixelAddress  
+##  <a name="getpixeladdress"></a>  CImage::GetPixelAddress  
  Pobiera dokładny adres piksela.  
   
 ```
@@ -896,7 +891,7 @@ void* GetPixelAddress(int x,int y) throw();
 > [!NOTE]
 >  Ta metoda obsługuje tylko DIB sekcji bitmapy.  
   
-##  <a name="gettransparentcolor"></a>CImage::GetTransparentColor  
+##  <a name="gettransparentcolor"></a>  CImage::GetTransparentColor  
  Pobiera lokalizację indeksowanego przezroczysty kolor w palecie kolorów.  
   
 ```
@@ -906,7 +901,7 @@ LONG GetTransparentColor() const throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks kolor przezroczysty.  
   
-##  <a name="getwidth"></a>CImage::GetWidth  
+##  <a name="getwidth"></a>  CImage::GetWidth  
  Pobiera szerokość obrazu w pikselach,.  
   
 ```
@@ -916,7 +911,7 @@ int GetWidth() const throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Szerokość mapy bitowej w pikselach.  
   
-##  <a name="isdibsection"></a>CImage::IsDIBSection  
+##  <a name="isdibsection"></a>  CImage::IsDIBSection  
  Określa, czy dołączone mapy bitowej jest sekcji DIB.  
   
 ```
@@ -943,7 +938,7 @@ bool IsDIBSection() const throw();
   
 - [SetColorTable](#setcolortable)  
   
-##  <a name="isindexed"></a>CImage::IsIndexed  
+##  <a name="isindexed"></a>  CImage::IsIndexed  
  Określa, czy pikseli mapy bitowej są zamapowane do palety kolorów.  
   
 ```
@@ -969,7 +964,7 @@ bool IsNull() const throw();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zwraca **True** Jeśli bitmapy nie jest aktualnie załadowany; w przeciwnym razie **False**.  
   
-##  <a name="istransparencysupported"></a>CImage::IsTransparencySupported  
+##  <a name="istransparencysupported"></a>  CImage::IsTransparencySupported  
  Wskazuje, czy aplikacja obsługuje przezroczysty map bitowych.  
   
 ```
@@ -983,7 +978,7 @@ static BOOL IsTransparencySupported() throw();
  Jeśli wartość zwracana jest niezerowa i przezroczystość jest obsługiwana, wywołanie [AlphaBlend](#alphablend), [TransparentBlt](#transparentblt), lub [rysowania](#draw) obsłuży kolory przezroczyste.  
   
 
-##  <a name="load"></a>CImage::Load  
+##  <a name="load"></a>  CImage::Load  
  Ładuje obraz.  
   
 ```
@@ -1006,7 +1001,7 @@ HRESULT Load(IStream* pStream) throw();
   
  Nieprawidłowy obraz typy BMP, GIF, JPEG, PNG i TIFF.  
   
-##  <a name="loadfromresource"></a>CImage::LoadFromResource  
+##  <a name="loadfromresource"></a>  CImage::LoadFromResource  
  Ładuje obraz z `BITMAP` zasobów.  
   
 ```
@@ -1032,7 +1027,7 @@ void LoadFromResource(
 ### <a name="remarks"></a>Uwagi  
  Zasób musi być typu `BITMAP`.  
   
-##  <a name="maskblt"></a>CImage::MaskBlt  
+##  <a name="maskblt"></a>  CImage::MaskBlt  
  Łączy dane kolorów mapy bitowe źródłowych i docelowych przy użyciu określona maska i rastrowe operacji.  
   
 ```
@@ -1123,7 +1118,7 @@ BOOL MaskBlt(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda ma zastosowanie do systemu Windows NT w wersji 4.0 i późniejsze.  
   
-##  <a name="operator_hbitmap"></a>HBITMAP CImage::operator  
+##  <a name="operator_hbitmap"></a>  HBITMAP CImage::operator  
  Użyj tego operatora, aby uzyskać dojście Windows GDI dołączonych `CImage` obiektu. Ten operator jest operatora rzutowania obsługuje bezpośredniego użycia `HBITMAP` obiektu.  
   
 ##  <a name="plgblt"></a>  CImage::PlgBlt  
@@ -1206,7 +1201,7 @@ void ReleaseDC() const throw();
 ### <a name="remarks"></a>Uwagi  
  Ponieważ do kontekstu urządzenia można wybrać tylko jeden mapy bitowej w czasie, należy wywołać `ReleaseDC` dla każdego wywołania [GetDC](#getdc).  
   
-##  <a name="releasegdiplus"></a>CImage::ReleaseGDIPlus  
+##  <a name="releasegdiplus"></a>  CImage::ReleaseGDIPlus  
  Zwalnia zasoby używane przez GDI +.  
   
 ```
@@ -1216,7 +1211,7 @@ void ReleaseGDIPlus() throw();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda musi zostać wywołana, aby zwolnić zasoby przydzielone przez globalną `CImage` obiektu. Zobacz [CImage::CImage](#cimage).  
   
-##  <a name="save"></a>CImage::Save  
+##  <a name="save"></a>  CImage::Save  
  Zapisuje obraz do określonego obiektu stream lub pliku na dysku.  
   
 ```
@@ -1235,7 +1230,7 @@ HRESULT Save(LPCTSTR pszFileName,
  Wskaźnik do nazwy pliku obrazu.  
   
  `guidFileType`  
- Typ pliku do zapisania jako obrazu. Może to być jedna z następujących czynności:  
+ Typ pliku do zapisania jako obrazu. Może to być jeden z następujących elementów:  
   
 - **ImageFormatBMP** obrazu nieskompresowaną.  
   
@@ -1254,7 +1249,7 @@ HRESULT Save(LPCTSTR pszFileName,
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji, aby zapisać obraz przy użyciu określonej nazwy i typu. Jeśli `guidFileType` parametru nie jest dołączana, rozszerzenie nazwy pliku będzie służyć do określenia format obrazu. Jeśli podano bez rozszerzenia, obraz zostaną zapisane w formacie BMP.  
   
-##  <a name="setcolortable"></a>CImage::SetColorTable  
+##  <a name="setcolortable"></a>  CImage::SetColorTable  
  Ustawia czerwony, zielony, niebieski () wartości kolorów RGB dla zakresu zapisów w palecie sekcji DIB.  
   
 ```
@@ -1297,7 +1292,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda kończy się niepowodzeniem, jeśli piksela koordynuje znajdują się poza region wybrany wycinka.  
   
-##  <a name="setpixelindexed"></a>CImage::SetPixelIndexed  
+##  <a name="setpixelindexed"></a>  CImage::SetPixelIndexed  
  Ustawia kolor pikseli na kolor znajdujący się w `iIndex` palety kolorów.  
   
 ```
@@ -1314,7 +1309,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
  `iIndex`  
  Indeks kolorów palety kolorów.  
   
-##  <a name="setpixelrgb"></a>CImage::SetPixelRGB  
+##  <a name="setpixelrgb"></a>  CImage::SetPixelRGB  
  Ustawia piksel w lokalizacjach określonych przez *x* i *y* kolory wskazywanym przez *r*, *g*, i *b*, na czerwono zielone, niebieski obrazu (RGB).  
   
 ```
@@ -1345,7 +1340,7 @@ void SetPixelRGB(
 ### <a name="remarks"></a>Uwagi  
  Każdy parametry czerwonemu, zielonemu i niebieska są reprezentowane przez liczbą z zakresu od 0 do 255. Jeśli wszystkie trzy parametry można ustawić na zero, łączna kolor wynikowy będzie czarny. Jeśli ustawisz wszystkie trzy parametry do 255 Scalonej wynikowy kolor jest białe.  
   
-##  <a name="settransparentcolor"></a>CImage::SetTransparentColor  
+##  <a name="settransparentcolor"></a>  CImage::SetTransparentColor  
  Określa kolor w danej lokalizacji indeksowanych jako przezroczysty.  
   
 ```
@@ -1438,7 +1433,7 @@ BOOL StretchBlt(
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) w zestawie Windows SDK.  
   
-##  <a name="transparentblt"></a>CImage::TransparentBlt  
+##  <a name="transparentblt"></a>  CImage::TransparentBlt  
  Kopiuje mapę bitową z kontekstu urządzenia źródłowego dla tego bieżącego kontekstu urządzenia.  
   
 ```
@@ -1515,7 +1510,7 @@ BOOL TransparentBlt(
  **Wartość TRUE,** w przypadku powodzenia, w przeciwnym razie **FALSE**.  
   
 ### <a name="remarks"></a>Uwagi  
- `TransparentBlt`jest obsługiwana dla mapy bitowe źródła 4 bitów na piksel i 8 bitów na piksel. Użyj [CImage::AlphaBlend](#alphablend) do określenia map bitowych 32 bity na piksel przezroczystości.  
+ `TransparentBlt` jest obsługiwana dla mapy bitowe źródła 4 bitów na piksel i 8 bitów na piksel. Użyj [CImage::AlphaBlend](#alphablend) do określenia map bitowych 32 bity na piksel przezroczystości.  
   
   
 ### <a name="example"></a>Przykład  

@@ -1,37 +1,32 @@
 ---
-title: "Statement (C) złożona | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Statement (C) złożona | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9422e3229aa5e800859f50e1ca058e32a4120074
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e25bef33e374d7e0dbf97a337cb58146b05bd093
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compound-statement-c"></a>Instrukcja złożona (C)
 Instrukcja złożona (również o nazwie "blok") zwykle pojawia się jako treść inną instrukcję, takich jak **Jeśli** instrukcji. [Deklaracje i typy](../c-language/declarations-and-types.md) opisuje formularza i znaczenie deklaracje, które mogą być wyświetlane w nagłówek złożonej instrukcji.  
   
 ## <a name="syntax"></a>Składnia  
  *instrukcji złożonej*:  
- **{***lista deklaracji* opt*listy instrukcji*opt**}**   
+ **{***lista deklaracji* opt*listy instrukcji*opt **}**   
   
  *Lista deklaracji*:  
  *Deklaracja*  

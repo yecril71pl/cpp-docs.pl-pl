@@ -1,27 +1,22 @@
 ---
-title: "Przegląd Konwencji ABI ARM | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przegląd Konwencji ABI ARM | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073fe113c1915913d06a63c7feabcb7808896188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f78e5731e6c8d4125fb8afc184cd6e4f2a74cb7a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-arm-abi-conventions"></a>Przegląd Konwencji ABI ARM
 Interfejs binarne aplikacji (ABI) dla kodu skompilowanego dla systemu Windows na procesorów ARM jest oparta na standardowe EABI ARM. W tym artykule omówiono podstawowe różnice między systemem Windows na ARM i standardowe. Aby uzyskać więcej informacji o standardowych EABI ARM, zobacz [aplikacji binarny interfejsu (ABI) dla architektury ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html).  
@@ -67,7 +62,7 @@ Interfejs binarne aplikacji (ABI) dla kodu skompilowanego dla systemu Windows na
     |LDR, LDR [S] B, H LDR [S]|Ładowanie z pamięci|Ale nie LDR literału formularzy|  
     |STRH STR, CIĄG_B,|Przechowywanie w pamięci||  
     |DODAJ ADC, RSB, SBC, SUB|Dodaj lub usuń|Ale nie SP ADD/SUB, SP, imm7 formularzy<br /><br /> RM! = PC, Rdn! = PC, Rdm! = PC|  
-    |CMP, CMN|Porównaj|RM! = PC, Rn! = PC|  
+    |CMP, CMN|{1&gt;Compare&lt;1}|RM! = PC, Rn! = PC|  
     |MUL|Mnożenia||  
     |FUNKCJA AUTOMATYCZNEGO ODZYSKIWANIA SYSTEMU LSL, LSR, ROR|Przesunięcia bitowego||  
     |I ORR KOD, EOR, TST|Operatory arytmetyczne||  
@@ -197,7 +192,7 @@ Interfejs binarne aplikacji (ABI) dla kodu skompilowanego dla systemu Windows na
 ## <a name="cc-specifics"></a>Szczegóły C/C++  
  Wyliczenia są typy 32-bitową liczbę całkowitą, chyba że co najmniej jedną wartość w wyliczeniu wymaga 64-bitowe o podwójnej precyzji word magazynu. W takim przypadku wyliczenia jest podwyższany do typu 64-bitową liczbę całkowitą.  
   
- `wchar_t`jest zdefiniowany jako równoważne `unsigned short`, aby zachować zgodność z innych platform.  
+ `wchar_t` jest zdefiniowany jako równoważne `unsigned short`, aby zachować zgodność z innych platform.  
   
 ## <a name="stack-walking"></a>Stosie  
  Kod systemu Windows jest skompilowana przy użyciu wskaźniki ramek włączone ([/Oy (pominięcie wskaźnika ramki)](../build/reference/oy-frame-pointer-omission.md)) umożliwiające stosu szybkie przejście. Ogólnie rzecz biorąc, r11 zarejestrować punktów do następnego łącza w łańcuchu, czyli {r11, lr} pary określający wskaźnik do poprzedniej ramki stosu i adres zwrotny. Zaleca się, że kod również włączyć wskaźników ramek na lepsze profilowania i śledzenia.  

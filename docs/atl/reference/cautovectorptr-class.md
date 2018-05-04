@@ -2,11 +2,8 @@
 title: Klasa CAutoVectorPtr | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoVectorPtr
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b01bb9f74793e739ff0930bae070f00cb909dd61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df21eabe70c1d9ed8684fa1409e24dcdc76ffec0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautovectorptr-class"></a>Klasa CAutoVectorPtr
 Ta klasa reprezentuje obiekt wskaźnika inteligentnego wektora, używając nowego i delete — operatory.  
@@ -83,7 +78,7 @@ class CAutoVectorPtr
 |[CAutoVectorPtr::m_p](#m_p)|Zmienna elementu członkowskiego danych wskaźnika.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa dostarcza metody do tworzenia i zarządzania wskaźnika inteligentnego, co pomoże zapewnić ochronę przed przecieki pamięci przez automatycznie zwolnić zasobów, gdy znajduje się poza zakresem. `CAutoVectorPtr`przypomina `CAutoPtr`, jedyną różnicą, że trwa `CAutoVectorPtr` używa [nowy wektor &#91; &#93;](../../standard-library/new-operators.md#op_new_arr) i [wektorów Usuń &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr) można przydzielić i zwolnić pamięć, a nie C++ **nowe** i **usunąć** operatorów. Zobacz [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) Jeśli klasy kolekcji `CAutoVectorPtr` są wymagane.  
+ Ta klasa dostarcza metody do tworzenia i zarządzania wskaźnika inteligentnego, co pomoże zapewnić ochronę przed przecieki pamięci przez automatycznie zwolnić zasobów, gdy znajduje się poza zakresem. `CAutoVectorPtr` przypomina `CAutoPtr`, jedyną różnicą, że trwa `CAutoVectorPtr` używa [nowy wektor&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) i [usuwanie wektora&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) można przydzielić i zwolnić pamięć zamiast C++ **nowe** i **usunąć** operatorów. Zobacz [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) Jeśli klasy kolekcji `CAutoVectorPtr` są wymagane.  
 
   
  Zobacz [CAutoPtr](../../atl/reference/cautoptr-class.md) przykład za pomocą klasy wskaźnika inteligentnego.  
@@ -91,7 +86,7 @@ class CAutoVectorPtr
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
-##  <a name="allocate"></a>CAutoVectorPtr::Allocate  
+##  <a name="allocate"></a>  CAutoVectorPtr::Allocate  
  Wywołanie tej metody można przydzielić pamięci wymaganej przez tablicę obiektów wskazywana przez `CAutoVectorPtr`.  
   
 ```
@@ -108,7 +103,7 @@ bool Allocate(size_t nElements) throw();
 ### <a name="remarks"></a>Uwagi  
  W kompilacjach do debugowania błędu potwierdzenia wystąpi, jeśli [CAutoVectorPtr::m_p](#m_p) zmiennej członkowskiej wskazuje obecnie istniejącej wartości; oznacza to, że nie jest równa NULL.  
   
-##  <a name="attach"></a>CAutoVectorPtr::Attach  
+##  <a name="attach"></a>  CAutoVectorPtr::Attach  
  Wywołaj tę metodę, aby przejąć na własność istniejącego wskaźnika.  
   
 ```
@@ -124,7 +119,7 @@ void Attach(T* p) throw();
   
  W kompilacjach do debugowania błędu potwierdzenia wystąpi, jeśli [CAutoVectorPtr::m_p](#m_p) zmiennej członkowskiej wskazuje obecnie istniejącej wartości; oznacza to, że nie jest równa NULL.  
   
-##  <a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr  
+##  <a name="cautovectorptr"></a>  CAutoVectorPtr::CAutoVectorPtr  
  Konstruktor.  
   
 ```
@@ -140,7 +135,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Uwagi  
  `CAutoVectorPtr` Można utworzyć obiektu przy użyciu istniejącego wskaźnika, w którym to przypadku przesyłania własność wskaźnika.  
   
-##  <a name="dtor"></a>CAutoVectorPtr:: ~ CAutoVectorPtr  
+##  <a name="dtor"></a>  CAutoVectorPtr:: ~ CAutoVectorPtr  
  Destruktor.  
   
 ```
@@ -150,7 +145,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wszystkie zasoby przydzielone. Wywołania [CAutoVectorPtr::Free](#free).  
   
-##  <a name="detach"></a>CAutoVectorPtr::Detach  
+##  <a name="detach"></a>  CAutoVectorPtr::Detach  
  Wywołanie tej metody, aby zwolnić własność wskaźnika.  
   
 ```
@@ -163,7 +158,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia własność wskaźnik, ustawia [CAutoVectorPtr::m_p](#m_p) zmiennej członkowskiej na wartość NULL i zwraca kopię wskaźnika. Po wywołaniu **Detach**, maksymalnie programisty zwolnienia żadnego przydzielany zasobów służącym `CAutoVectorPtr` obiekt może mieć wcześniej zakłada, że odpowiedzialności.  
   
-##  <a name="free"></a>CAutoVectorPtr::Free  
+##  <a name="free"></a>  CAutoVectorPtr::Free  
  Wywołanie tej metody, aby usunąć obiekt wskazywany przez `CAutoVectorPtr`.  
   
 ```
@@ -173,7 +168,7 @@ void Free() throw();
 ### <a name="remarks"></a>Uwagi  
  Obiekt wskazywany przez `CAutoVectorPtr` zostanie zwolniona i [CAutoVectorPtr::m_p](#m_p) zmiennej członkowskiej jest równa NULL.  
   
-##  <a name="m_p"></a>CAutoVectorPtr::m_p  
+##  <a name="m_p"></a>  CAutoVectorPtr::m_p  
  Zmienna elementu członkowskiego danych wskaźnika.  
   
 ```
@@ -183,7 +178,7 @@ T* m_p;
 ### <a name="remarks"></a>Uwagi  
  Ta zmienna elementu członkowskiego zawiera informacje wskaźnika.  
   
-##  <a name="operator_eq"></a>CAutoVectorPtr::operator =  
+##  <a name="operator_eq"></a>  CAutoVectorPtr::operator =  
  Operator przypisania.  
   
 ```
@@ -200,7 +195,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Uwagi  
  Operator przypisania odłącza `CAutoVectorPtr` obiektu z dowolnym bieżącego wskaźnika i dołącza nowy wskaźnik `p`, w tym miejscu.  
   
-##  <a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
+##  <a name="operator_t__star"></a>  CAutoVectorPtr::operator T *  
  Operator rzutowania.  
   
 ```  

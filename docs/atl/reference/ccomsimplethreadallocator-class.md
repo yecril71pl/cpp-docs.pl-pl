@@ -1,12 +1,9 @@
 ---
 title: Klasa CComSimpleThreadAllocator | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSimpleThreadAllocator
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CComSimpleThreadAllocator class
 - ATL threads, allocating
 ms.assetid: 66b2166a-8c50-49fd-b8e4-7f293470327d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 244443692478d0391c2079e55995c1fef1e1655e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da050dbf2b4052aeadd9fe8380857a0ba15b264f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Klasa CComSimpleThreadAllocator
 Ta klasa zarządza wyboru wątku dla klasy `CComAutoThreadModule`.  
@@ -50,12 +45,12 @@ class CComSimpleThreadAllocator
 |[CComSimpleThreadAllocator::GetThread](#getthread)|Wybiera wątku.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComSimpleThreadAllocator`zarządza wyboru wątku do [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread`po prostu przełączanie po kolei każdy wątek i zwraca kolejnego w sekwencji.  
+ `CComSimpleThreadAllocator` zarządza wyboru wątku do [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` po prostu przełączanie po kolei każdy wątek i zwraca kolejnego w sekwencji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
-##  <a name="getthread"></a>CComSimpleThreadAllocator::GetThread  
+##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread  
  Wybiera wątku, określając następnego wątku w sekwencji.  
   
 ```
@@ -75,7 +70,7 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 ### <a name="remarks"></a>Uwagi  
  Można zastąpić `GetThread` Podaj inną metodę wyboru lub dokonanie użycie `pApt` parametru.  
   
- `GetThread`Metoda jest wywoływana przez [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
+ `GetThread` Metoda jest wywoływana przez [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CComApartment](../../atl/reference/ccomapartment-class.md)   

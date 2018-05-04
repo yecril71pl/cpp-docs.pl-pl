@@ -1,12 +1,9 @@
 ---
-title: "Limity liczb całkowitych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Limity liczb całkowitych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - limits.h header file
 - integer limits
 ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5fc79f225d340777751ca513c0fb47dd33e17ad
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 656873dc510f53fc05250a28c61cc452078c4aca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integer-limits"></a>Limity liczb całkowitych
 
@@ -42,7 +37,7 @@ W poniższej tabeli wymieniono limity dla typów całkowitych. Te limity równie
 |**SCHAR_MIN**|Minimalna wartość dla zmiennej typu **podpisany char**.|-128|
 |**SCHAR_MAX**|Maksymalna wartość dla zmiennej typu **podpisany char**.|127|
 |**UCHAR_MAX**|Maksymalna wartość dla zmiennej typu **unsigned char**.|255 (0xff)|
-|**CHAR_MIN**|Minimalna wartość dla zmiennej typu **char**.|-128; 0, jeśli używana z opcją /|
+|**CHAR_MIN —**|Minimalna wartość dla zmiennej typu **char**.|-128; 0, jeśli używana z opcją /|
 |**CHAR_MAX**|Maksymalna wartość dla zmiennej typu **char**.|127; 255, jeśli używana z opcją /|
 |**MB_LEN_MAX**|Maksymalna liczba bajtów w literał stałej.|5|
 |**SHRT_MIN**|Minimalna wartość dla zmiennej typu **krótki**.|-32768|

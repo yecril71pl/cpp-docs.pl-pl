@@ -1,12 +1,9 @@
 ---
 title: _variant_t::_variant_t | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t::_variant_t
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - _variant_t class [C++], constructor
 - _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd85a54e9f73352894f6575051fe1ea8be0698fb
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 59ec19adc66a72a7c98772db99aaab3eee4e3b2c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft Specific**  
@@ -213,39 +208,39 @@ _variant_t(
   
 -   **_variant_t ()** tworzy pustą `_variant_t` obiektu `VT_EMPTY`.  
   
--   **_variant_t — (VARIANT &***varSrc***)** tworzy `_variant_t` obiektu z kopii **VARIANT** obiektu.     Typ wariantu są zachowywane.  
+-   **_variant_t — (VARIANT &***varSrc***)** tworzy `_variant_t` obiektu z kopii **VARIANT** obiektu. Typ wariantu są zachowywane.  
   
--   **_variant_t — (VARIANT\****pVarSrc***)** tworzy `_variant_t` obiektu z kopii **VARIANT** obiektu.     Typ wariantu są zachowywane.  
+-   **_variant_t — (VARIANT\****pVarSrc***)** tworzy `_variant_t` obiektu z kopii **VARIANT** obiektu. Typ wariantu są zachowywane.  
   
--   **_variant_t — (_variant_t &***var_t_Src***)** tworzy `_variant_t` obiektu z innego `_variant_t` obiektu.     Typ wariantu są zachowywane.  
+-   **_variant_t — (_variant_t &***var_t_Src***)** tworzy `_variant_t` obiektu z innego `_variant_t` obiektu. Typ wariantu są zachowywane.  
   
--   **_variant_t — (VARIANT &***varSrc* **, bool**`fCopy`**)** tworzy `_variant_t` obiektu z istniejącego  **VARIANT** obiektu.       Jeśli `fCopy` jest **false**, **VARIANT** obiekt jest dołączony do nowego obiektu bez tworzenia kopii.  
+-   **_variant_t — (VARIANT &***varSrc* **, bool**`fCopy`**)** tworzy `_variant_t` obiektu z istniejącego  **VARIANT** obiektu. Jeśli `fCopy` jest **false**, **VARIANT** obiekt jest dołączony do nowego obiektu bez tworzenia kopii.  
   
--   **_variant_t — (krótka***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** tworzy `_variant_t` obiektu typu `VT_I2` lub `VT_BOOL` z **krótki** wartości całkowitej.       Inne **VARTYPE** powoduje `E_INVALIDARG` błędu.  
+-   **_variant_t — (krótka***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** tworzy `_variant_t` obiektu typu `VT_I2` lub `VT_BOOL` z **krótki** wartości całkowitej. Inne **VARTYPE** powoduje `E_INVALIDARG` błędu.  
   
--   **_variant_t — (długi** `lSrc` **, VARTYPE**`vtSrc`**= VT_I4)** tworzy `_variant_t` typu obiektu `VT_I4`, `VT_BOOL`, lub `VT_ERROR`z **długi** wartości całkowitej.       Inne **VARTYPE** powoduje `E_INVALIDARG` błędu.  
+-   **_variant_t — (długi** `lSrc` **, VARTYPE**`vtSrc`**= VT_I4)** tworzy `_variant_t` typu obiektu `VT_I4`, `VT_BOOL`, lub `VT_ERROR`z **długi** wartości całkowitej. Inne **VARTYPE** powoduje `E_INVALIDARG` błędu.  
   
--   **_variant_t — (float**`fltSrc`**)** tworzy `_variant_t` typu obiektu `VT_R4` z **float** wartość liczbową.      
+-   **_variant_t — (float**`fltSrc`**)** tworzy `_variant_t` typu obiektu `VT_R4` z **float** wartość liczbową.  
   
--   **_variant_t — (dwa razy** `dblSrc` **, VARTYPE**`vtSrc`**= VT_R8)** tworzy `_variant_t` typu obiektu `VT_R8` lub `VT_DATE` z **podwójne** wartość liczbową.       Inne **VARTYPE** powoduje `E_INVALIDARG` błędu.  
+-   **_variant_t — (dwa razy** `dblSrc` **, VARTYPE**`vtSrc`**= VT_R8)** tworzy `_variant_t` typu obiektu `VT_R8` lub `VT_DATE` z **podwójne** wartość liczbową. Inne **VARTYPE** powoduje `E_INVALIDARG` błędu.  
   
--   **_variant_t — (CY &**`cySrc`**)** tworzy `_variant_t` typu obiektu `VT_CY` z **CY** obiektu.      
+-   **_variant_t — (CY &**`cySrc`**)** tworzy `_variant_t` typu obiektu `VT_CY` z **CY** obiektu.  
   
--   **_variant_t — (_bstr_t &**`bstrSrc`**)** tworzy `_variant_t` typu obiektu `VT_BSTR` z `_bstr_t` obiektu.     Nowy `BSTR` został przydzielony.  
+-   **_variant_t — (_bstr_t &**`bstrSrc`**)** tworzy `_variant_t` typu obiektu `VT_BSTR` z `_bstr_t` obiektu. Nowy `BSTR` został przydzielony.  
   
--   **_variant_t — (wchar_t \***  *wstrSrc***)** tworzy `_variant_t` obiektu typu `VT_BSTR` z ciągiem Unicode.   Nowy `BSTR` został przydzielony.  
+-   **_variant_t — (wchar_t \***  *wstrSrc***)** tworzy `_variant_t` obiektu typu `VT_BSTR` z ciągiem Unicode. Nowy `BSTR` został przydzielony.  
   
--   **_variant_t — (char\***`strSrc`**)** tworzy `_variant_t` typu obiektu `VT_BSTR` z ciągu.     Nowy `BSTR` został przydzielony.  
+-   **_variant_t — (char\***`strSrc`**)** tworzy `_variant_t` typu obiektu `VT_BSTR` z ciągu. Nowy `BSTR` został przydzielony.  
   
--   **_variant_t (wartość logiczna**`bSrc`**)** tworzy `_variant_t` typu obiektu `VT_BOOL` z `bool` wartości.      
+-   **_variant_t (wartość logiczna**`bSrc`**)** tworzy `_variant_t` typu obiektu `VT_BOOL` z `bool` wartości.  
   
--   **_variant_t — (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** tworzy `_variant_t` typu obiektu **VT_UNKNOWN** ze wskaźnika interfejsu COM.       Jeśli `fAddRef` jest **true**, następnie `AddRef` jest wywoływana na wskaźniku interfejs dostarczony w celu dopasowania wywołania do **wersji** który nastąpi po `_variant_t` obiekt zostanie zniszczony. Aby wywołać jest **wersji** na wskaźnik interfejsu podany. Jeśli `fAddRef` jest **false**, ten konstruktor przejmuje wskaźnika interfejsu podany; nie należy wywoływać **wersji** na wskaźnik interfejsu podany.  
+-   **_variant_t — (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** tworzy `_variant_t` typu obiektu **VT_UNKNOWN** ze wskaźnika interfejsu COM. Jeśli `fAddRef` jest **true**, następnie `AddRef` jest wywoływana na wskaźniku interfejs dostarczony w celu dopasowania wywołania do **wersji** który nastąpi po `_variant_t` obiekt zostanie zniszczony. Aby wywołać jest **wersji** na wskaźnik interfejsu podany. Jeśli `fAddRef` jest **false**, ten konstruktor przejmuje wskaźnika interfejsu podany; nie należy wywoływać **wersji** na wskaźnik interfejsu podany.  
   
--   **_variant_t — (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** tworzy `_variant_t` typu obiektu **VT_DISPATCH** ze wskaźnika interfejsu COM.       Jeśli `fAddRef` jest **true**, następnie `AddRef` jest wywoływana na wskaźniku interfejs dostarczony w celu dopasowania wywołania do **wersji** który nastąpi po `_variant_t` obiekt zostanie zniszczony. Aby wywołać jest **wersji** na wskaźnik interfejsu podany. Jeśli **fAddRef** jest false, ten konstruktor przejmuje wskaźnika interfejsu podany; nie należy wywoływać **wersji** na wskaźnik interfejsu podany.  
+-   **_variant_t — (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** tworzy `_variant_t` typu obiektu **VT_DISPATCH** ze wskaźnika interfejsu COM. Jeśli `fAddRef` jest **true**, następnie `AddRef` jest wywoływana na wskaźniku interfejs dostarczony w celu dopasowania wywołania do **wersji** który nastąpi po `_variant_t` obiekt zostanie zniszczony. Aby wywołać jest **wersji** na wskaźnik interfejsu podany. Jeśli **fAddRef** jest false, ten konstruktor przejmuje wskaźnika interfejsu podany; nie należy wywoływać **wersji** na wskaźnik interfejsu podany.  
   
--   **_variant_t — (dziesiętne &**`decSrc`**)** tworzy `_variant_t` typu obiektu **VT_DECIMAL** z **DZIESIĘTNĄ** wartość.      
+-   **_variant_t — (dziesiętne &**`decSrc`**)** tworzy `_variant_t` typu obiektu **VT_DECIMAL** z **DZIESIĘTNĄ** wartość.  
   
--   **_variant_t — (BYTE**`bSrc`**)** tworzy `_variant_t` typu obiektu `VT_UI1` z **BAJTÓW** wartość.      
+-   **_variant_t — (BYTE**`bSrc`**)** tworzy `_variant_t` typu obiektu `VT_UI1` z **BAJTÓW** wartość.  
   
  **KOŃCOWY określonych firmy Microsoft**  
   

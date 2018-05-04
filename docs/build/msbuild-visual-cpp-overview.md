@@ -2,28 +2,23 @@
 title: Przegląd MSBuild (Visual C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c-overview"></a>Informacje o MSBuild (Visual C++)  
   
@@ -84,9 +79,9 @@ Domyślnie podstawowe pliki obsługi języka Visual C++ znajdują się w następ
   
 |Katalog|Opis|  
 |---------------|-----------------|  
-|*dysk*: \Program Files *(x86)*\Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ <br /><br />*dysk*: \Program Files *(x86)*\v4.0 \MSBuild\Microsoft.Cpp (x86)\\*wersji*\ |Zawiera pliki docelowe głównej (.targets) i pliki właściwości (.props), które są używane przez elementy docelowe. Domyślnie makro $(VCTargetsPath) odwołuje się do tego katalogu.|  
-|*dysk*: \Program Files *(x86)*\Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ Platformy\\*platformy*\ <br /><br />*dysk*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*wersji*\Platforms\\*platformy*\ |Zawiera pliki docelowy i właściwości specyficzne dla platformy, które zastępują elementy docelowe i właściwości w katalogu nadrzędnego. Ten katalog zawiera także biblioteki DLL, który definiuje zadania, które są używane przez elementy docelowe w tym katalogu.<br /><br /> *Platformy* symbol zastępczy reprezentuje x64 RAMIĘ lub Win32 podkatalogu.|  
-|*dysk*: \Program Files *(x86)*\Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ Platformy\\*platformy*\PlatformToolsets\\*zestawu narzędzi*\ <br /><br />*dysk*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*wersji*\Platforms\\*platformy*\ PlatformToolsets\\*zestawu narzędzi*\ <br /><br />*dysk*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platformy*\PlatformToolsets\\*zestawu narzędzi*\ |Zawiera katalogi, umożliwiających kompilacji do generowania aplikacji Visual C++ przy użyciu określonego *zestawu narzędzi*.<br /><br /> *Roku* i *wersji* symbole zastępcze są używane przez program Visual Studio 2017 i późniejszych wersjach. *Wersji* symbol zastępczy jest V110 dla programu Visual Studio 2012, V120 dla programu Visual Studio 2013 lub Visual Studio 2015 w wersji 140. *Platformy* symbol zastępczy reprezentuje x64 RAMIĘ lub Win32 podkatalogu. *Zestawu narzędzi* symbol zastępczy reprezentuje podkatalogu zestawu narzędzi, na przykład w wersji 140 do tworzenia aplikacji systemu Windows za pomocą narzędzi Visual Studio 2015, v120_xp do kompilacji dla systemu Windows XP przy użyciu zestawu narzędzi programu Visual Studio 2013 lub v110_wp80 do Tworzenie aplikacji Windows Phone 8.0 przy użyciu zestawu narzędzi programu Visual Studio 2012.<br /><br />Ścieżkę zawierającą katalogów, umożliwiających kompilacji do generowania aplikacji Visual C++ 2008 lub Visual C++ 2010 nie zawiera *wersji*i *platformy* reprezentuje symbolu zastępczego x64 Itanium lub Win32 podkatalogu. *Zestawu narzędzi* podkatalogu zestawu narzędzi v90 lub v100 reprezentuje symbol zastępczy.|  
+|*dysk*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ <br /><br />*dysk*: \Program Files *(x86)* \v4.0 \MSBuild\Microsoft.Cpp (x86)\\*wersji*\ |Zawiera pliki docelowe głównej (.targets) i pliki właściwości (.props), które są używane przez elementy docelowe. Domyślnie makro $(VCTargetsPath) odwołuje się do tego katalogu.|  
+|*dysk*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ Platformy\\*platformy*\ <br /><br />*dysk*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*wersji*\Platforms\\*platformy*\ |Zawiera pliki docelowy i właściwości specyficzne dla platformy, które zastępują elementy docelowe i właściwości w katalogu nadrzędnego. Ten katalog zawiera także biblioteki DLL, który definiuje zadania, które są używane przez elementy docelowe w tym katalogu.<br /><br /> *Platformy* symbol zastępczy reprezentuje x64 RAMIĘ lub Win32 podkatalogu.|  
+|*dysk*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ Platformy\\*platformy*\PlatformToolsets\\*zestawu narzędzi*\ <br /><br />*dysk*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*wersji*\Platforms\\*platformy*\ PlatformToolsets\\*zestawu narzędzi*\ <br /><br />*dysk*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platformy*\PlatformToolsets\\*zestawu narzędzi*\ |Zawiera katalogi, umożliwiających kompilacji do generowania aplikacji Visual C++ przy użyciu określonego *zestawu narzędzi*.<br /><br /> *Roku* i *wersji* symbole zastępcze są używane przez program Visual Studio 2017 i późniejszych wersjach. *Wersji* symbol zastępczy jest V110 dla programu Visual Studio 2012, V120 dla programu Visual Studio 2013 lub Visual Studio 2015 w wersji 140. *Platformy* symbol zastępczy reprezentuje x64 RAMIĘ lub Win32 podkatalogu. *Zestawu narzędzi* symbol zastępczy reprezentuje podkatalogu zestawu narzędzi, na przykład w wersji 140 do tworzenia aplikacji systemu Windows za pomocą narzędzi Visual Studio 2015, v120_xp do kompilacji dla systemu Windows XP przy użyciu zestawu narzędzi programu Visual Studio 2013 lub v110_wp80 do Tworzenie aplikacji Windows Phone 8.0 przy użyciu zestawu narzędzi programu Visual Studio 2012.<br /><br />Ścieżkę zawierającą katalogów, umożliwiających kompilacji do generowania aplikacji Visual C++ 2008 lub Visual C++ 2010 nie zawiera *wersji*i *platformy* reprezentuje symbolu zastępczego x64 Itanium lub Win32 podkatalogu. *Zestawu narzędzi* podkatalogu zestawu narzędzi v90 lub v100 reprezentuje symbol zastępczy.|  
   
 ### <a name="support-files"></a>Pliki obsługi  
   
@@ -96,7 +91,7 @@ Katalogi plików pomocy technicznej zawiera pliki o następujących rozszerzenia
 |---------------|-----------------|  
 |.TARGETS|Zawiera `Target` elementów XML, które określają zadania, które są wykonywane przez element docelowy. Może również zawierać `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`, a zdefiniowane przez użytkownika `Item` elementów służących do przypisywania pliki i opcje wiersza polecenia do parametrów zadania.<br /><br /> Aby uzyskać więcej informacji, zobacz [Target — Element (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|  
 |.props|Zawiera `Property Group` i zdefiniowanych przez użytkownika `Property` elementów XML, które określają ustawienia plików i parametrów, które są używane podczas kompilacji.<br /><br /> Może również zawierać `ItemDefinitionGroup` i zdefiniowanych przez użytkownika `Item` elementów XML, które określają dodatkowe ustawienia. Elementy zdefiniowane w grupie definicji elementu przypominają właściwości, ale nie ma dostępu z poziomu wiersza polecenia. Pliki projektu Visual C++ często używa elementów zamiast właściwości do reprezentowania ustawienia.<br /><br /> Aby uzyskać więcej informacji, zobacz [ItemGroup — Element (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [ItemDefinitionGroup — Element (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild), i [Item — Element (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|  
-|.XML|Zawiera elementy XML, które deklaruje i zainicjuj elementy interfejsu użytkownika IDE, takich jak arkusze właściwości i strony właściwości i formantów pól tekstowych pole i listy.<br /><br /> Pliki .xml obsługuje bezpośrednio IDE, nie programu MSBuild. Jednak wartości właściwości IDE są przypisane do tworzenia właściwości i elementów.<br /><br /> Większość plików .xml znajdują się w podkatalogu specyficzne dla ustawień regionalnych. Na przykład pliki dla regionu Stanów Zjednoczonych angielski znajdują się w $(VCTargetsPath) \1033\\.|  
+|.xml|Zawiera elementy XML, które deklaruje i zainicjuj elementy interfejsu użytkownika IDE, takich jak arkusze właściwości i strony właściwości i formantów pól tekstowych pole i listy.<br /><br /> Pliki .xml obsługuje bezpośrednio IDE, nie programu MSBuild. Jednak wartości właściwości IDE są przypisane do tworzenia właściwości i elementów.<br /><br /> Większość plików .xml znajdują się w podkatalogu specyficzne dla ustawień regionalnych. Na przykład pliki dla regionu Stanów Zjednoczonych angielski znajdują się w $(VCTargetsPath) \1033\\.|  
   
 ## <a name="user-targets-and-properties"></a>Cele użytkownika i właściwości  
   

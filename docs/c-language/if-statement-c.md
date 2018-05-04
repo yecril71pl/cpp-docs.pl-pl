@@ -1,13 +1,10 @@
 ---
-title: "Jeśli Statement (C) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Jeśli Statement (C) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 f1_keywords:
 - else
 - if
@@ -20,26 +17,24 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0e4929b55d6cfc0ef01ee183b74b2439b85d10
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: f307860ce71e8c9fc74b2ab97e88ced02e08332f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="if-statement-c"></a>if — instrukcja (C)
 **Jeśli** instrukcji steruje rozgałęzień warunkowych. Treść **Jeśli** instrukcja jest wykonywana, jeśli wartość wyrażenia jest różna od zera. Składnia **Jeśli** instrukcji ma dwie formy.  
   
 ## <a name="syntax"></a>Składnia  
  *Wybór instrukcji*:  
- **Jeśli (***wyrażenie***)***— instrukcja*   
+ **Jeśli (***wyrażenie***)***— instrukcja*  
   
- **Jeśli (***wyrażenie***)***instrukcji***else***— instrukcja*   
+ **Jeśli (***wyrażenie***)***instrukcji***else***— instrukcja*  
   
  W obu formach **Jeśli** instrukcji, wyrażeń, które mogą mieć dowolną wartość z wyjątkiem strukturą, są oceniane, w tym wszystkie efekty uboczne.  
   

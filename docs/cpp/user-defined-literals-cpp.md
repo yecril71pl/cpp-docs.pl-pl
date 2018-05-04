@@ -2,26 +2,21 @@
 title: Zdefiniowane przez użytkownika literałów (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a461f4ca384585008ccf47fa2bfda91d36e724ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbe3819d2271db85696825d82ba26335e380163
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-literals--c"></a>Zdefiniowane przez użytkownika literałów (C++)
 Istnieje pięć głównych kategorii literałów: liczba całkowita, ciąg znaków, liczb zmiennoprzecinkowych, boolean i wskaźnika.  Uruchamianie w języku C++ 11 można definiować własnych literały oparte na tych kategorii w celu zapewnienia składni skróty wspólnej idioms i zwiększyć bezpieczeństwo typów. Załóżmy na przykład, że istnieje klasa odległości. Można zdefiniować literałem dla kilometrach a innym dla mil i zachęcić użytkowników na jawne jednostki miary, po prostu zapisywania: automatycznie d = 42.0_km lub auto d = 42.0_mi. Nie ma żadnej korzyści wydajności ani wadą literały definiowane przez użytkownika; są one przede wszystkim dla wygody lub wnioskowanie typów w czasie kompilacji. Standardowa biblioteka ma zdefiniowane przez użytkownika literałów std:string, std::complex i jednostki w czas i czas trwania operacji w \<chrono > nagłówka:  

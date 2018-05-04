@@ -1,13 +1,10 @@
 ---
-title: "-clr (kompilacja języka wspólnego środowiska uruchomieniowego) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -clr (kompilacja języka wspólnego środowiska uruchomieniowego) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a754e6c2fd8c709fd0397a2c0f78a7385819c586
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)
 Umożliwia aplikacji i składników można używać funkcji z środowisko uruchomieniowe języka wspólnego (CLR).  
@@ -56,13 +51,13 @@ Umożliwia aplikacji i składników można używać funkcji z środowisko urucho
   
  [Porady: Migracja do/CLR](../../dotnet/how-to-migrate-to-clr.md).  
   
- **/clr:pure**  
+ **/ CLR: pure**  
  / CLR: pure jest przestarzały. Przyszłych wersji kompilatora mogą nie obsługiwać tę opcję. Zaleca się, że portu kod, który musi być czysty MSIL do języka C#.  
   
  **/clr:safe**  
  / CLR: Safe jest przestarzały. Przyszłych wersji kompilatora mogą nie obsługiwać tę opcję. Zaleca się, że portu kod, który musi być bezpieczne MSIL do języka C#. 
   
- **/clr:noAssembly**  
+ **/CLR:noAssembly**  
  Określa, że nie można wstawić manifest zestawu do pliku wyjściowego. Domyślnie **noAssembly** opcja nie jest włączone.  
   
  **NoAssembly** opcji jest przestarzały. Użyj [/LN (Utwórz moduł MSIL)](../../build/reference/ln-create-msil-module.md) zamiast tego.  

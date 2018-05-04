@@ -1,13 +1,10 @@
 ---
-title: "_TRUNCATE — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _TRUNCATE — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _TRUNCATE
 - TRUNCATE
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e512aefc19ab9d4e41bd4921ad6cacc5c440c806
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8bec6553502942fa3dc0376fff05a14f1971f53
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="truncate"></a>_TRUNCATE
 Określa zachowanie obcięcie ciągu.  
@@ -39,7 +34,7 @@ Określa zachowanie obcięcie ciągu.
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `_TRUNCATE`Włącza zachowanie obcięcie, gdy dane są przekazywane jako `count` parametru do tych funkcji:  
+ `_TRUNCATE` Włącza zachowanie obcięcie, gdy dane są przekazywane jako `count` parametru do tych funkcji:  
   
  [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
   

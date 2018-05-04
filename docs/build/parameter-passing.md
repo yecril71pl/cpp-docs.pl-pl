@@ -2,26 +2,21 @@
 title: Przekazywanie parametru | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e838ee5f-c2fe-40b0-9a23-8023c949c820
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ec0c5b6fe00430c8b08fefdd8781b677004085e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameter-passing"></a>Przekazywanie parametru
 Pierwszy argumenty cztery liczby całkowitej są przekazywane w rejestrach. Liczby całkowite są przekazywane (w kolejności od lewej do prawej) w RCX, RDX, R8 i R9. Argumenty 5 i nowszym są przekazywane na stosie. Wszystkie argumenty mają wyrównany do prawej w rejestrach. Jest to zrobić, jeśli wywoływany można zignorować górny bitów rejestru musi być i może uzyskać dostęp tylko część konieczne rejestru.  

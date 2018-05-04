@@ -1,13 +1,10 @@
 ---
 title: Testowanie formant ATL DHTML | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, testing
 ms.assetid: 0e4b4358-80ce-4505-8b06-ef4f30b1d1f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd92900ffbb8170e942053910d3faedd1f5ab2ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b523b981a58f577a3e98925899b32c0e9e69e98
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="testing-the-atl-dhtml-control"></a>Testowanie formant ATL DHTML
 Po utworzeniu projektu możesz skompilować i sprawdzić formant przykładowe. Zanim to zrobisz, użyj widoku klasy i Eksploratora rozwiązań Sprawdź projektu. Elementy projektu są opisane bardziej szczegółowo w [określający elementy projektu kontroli DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  

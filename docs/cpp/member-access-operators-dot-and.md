@@ -1,12 +1,9 @@
 ---
-title: "Operatory dostępu do elementów członkowskich:. i -&gt; | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Operatory dostępu do elementów członkowskich:. i -&gt; | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - .
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - . operator
 - member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dc08bce80d27493a8a13ac24bce7011282d7cd3
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 2958291551d081b4284c6683d62f6dd5de06f70d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-access-operators--and--gt"></a>Operatory dostępu do elementów członkowskich:. i -&gt;
 ## <a name="syntax"></a>Składnia  
@@ -44,13 +39,13 @@ postfix-expression -> name
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Operatory dostępu do elementu członkowskiego **.** i  **->**  są używane do odwoływania się do elementów członkowskich klasy, Unii i struktur. Wyrażenia dostęp do elementów członkowskich mają wartości i typ wybrany element członkowski.  
+ Operatory dostępu do elementu członkowskiego **.** i **->** są używane do odwoływania się do elementów członkowskich klasy, Unii i struktur. Wyrażenia dostęp do elementów członkowskich mają wartości i typ wybrany element członkowski.  
   
  Istnieją dwa rodzaje wyrażeń dostępu do elementów członkowskich:  
   
 1.  W formularzu pierwszy *wyrażenie przyrostek* reprezentuje wartość struktury, klasy lub typu Unii i *nazwa* nazwy jest członkiem określonej struktury, Unią lub klasy. Wartość operacji jest *nazwa* i jest wartością l-value, jeśli *wyrażenie przyrostek* jest wartością l-value.  
   
-2.  W drugiej formy *wyrażenie przyrostek* reprezentuje wskaźnik do struktury, Unią lub klasa, i *nazwa* nazwy jest członkiem określonej struktury, Unią lub klasy. Wartość jest *nazwę* i jest wartością l-value.  **->**  Operator wyłuskań wskaźnika. W związku z tym wyrażenia * e * **->**  `member` i **(\****e***)**.`member` (gdzie *e* reprezentuje wskaźnik) uzyskanie identycznych wyników (z wyjątkiem sytuacji, gdy operatory  **->**  lub  **\***  są przeciążone).  
+2.  W drugiej formy *wyrażenie przyrostek* reprezentuje wskaźnik do struktury, Unią lub klasa, i *nazwa* nazwy jest członkiem określonej struktury, Unią lub klasy. Wartość jest *nazwę* i jest wartością l-value. **->** Operator wyłuskań wskaźnika. W związku z tym wyrażenia * e ***->** `member` i **(\****e***)**.`member` (gdzie *e* reprezentuje wskaźnik) uzyskanie identycznych wyników (z wyjątkiem sytuacji, gdy operatory **->** lub **\*** są przeciążone).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano obu rodzajów operatora dostępu do elementu członkowskiego.  

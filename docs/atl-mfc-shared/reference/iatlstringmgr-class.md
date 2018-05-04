@@ -1,12 +1,9 @@
 ---
 title: Klasa IAtlStringMgr | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - IAtlStringMgr
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85b99b0b1f35ecbc35b4096ac8c2260d0a55680d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05d7ff0a38c0a557016887e6fce92fcb0bf28226
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iatlstringmgr-class"></a>Klasa IAtlStringMgr
 Ta klasa reprezentuje interfejs służący do `CStringT` Menedżer pamięci.  
@@ -51,7 +46,7 @@ __interface IAtlStringMgr
 |||  
 |-|-|  
 |[Przydziel](#allocate)|Wywołanie tej metody można przydzielić nowej struktury danych ciągu.|  
-|[Klonowania](#clone)|Wywołanie tej metody do zwraca wskaźnik do nowego Menedżera ciąg do użycia z innego wystąpienia `CSimpleStringT`.|  
+|[klonowania](#clone)|Wywołanie tej metody do zwraca wskaźnik do nowego Menedżera ciąg do użycia z innego wystąpienia `CSimpleStringT`.|  
 |[W warstwie bezpłatna](#free)|Wywołać tę metodę można zwolnić struktury danych ciągu.|  
 |[GetNilString](#getnilstring)|Zwraca wskaźnik do `CStringData` obiekt używany przez obiekty pusty ciąg.|  
 |[Ponowne przydzielenie](#reallocate)|Wywołaj tę metodę, aby ponownie przydzielić to struktura danych ciągu.|  
@@ -64,7 +59,7 @@ __interface IAtlStringMgr
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsimpstr.h  
   
-##  <a name="allocate"></a>IAtlStringMgr::Allocate  
+##  <a name="allocate"></a>  IAtlStringMgr::Allocate  
  Przydziela strukturą danych ciągu.  
   
 ```
@@ -90,7 +85,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 > [!NOTE]
 >  Przykłady użycia można znaleźć [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="clone"></a>IAtlStringMgr::Clone  
+##  <a name="clone"></a>  IAtlStringMgr::Clone  
  Zwraca wskaźnik do nowego Menedżera ciąg do użycia z innego wystąpienia `CSimpleStringT`.  
   
 ```
@@ -108,7 +103,7 @@ IAtlStringMgr* Clone() throw();
 > [!NOTE]
 >  Przykłady użycia można znaleźć [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="free"></a>IAtlStringMgr::Free  
+##  <a name="free"></a>  IAtlStringMgr::Free  
  Zwalnia to struktura danych ciągu.  
   
 ```
@@ -125,7 +120,7 @@ void Free(CStringData* pData) throw();
 > [!NOTE]
 >  Przykłady użycia można znaleźć [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="getnilstring"></a>IAtlStringMgr::GetNilString  
+##  <a name="getnilstring"></a>  IAtlStringMgr::GetNilString  
  Zwraca wskaźnik do struktury danych ciąg dla pustego ciągu.  
   
 ```
@@ -144,7 +139,7 @@ CStringData* GetNilString() throw();
 > [!NOTE]
 >  Przykłady użycia można znaleźć [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="reallocate"></a>IAtlStringMgr::Reallocate  
+##  <a name="reallocate"></a>  IAtlStringMgr::Reallocate  
  Przydziela ponownie to struktura danych ciągu.  
   
 ```

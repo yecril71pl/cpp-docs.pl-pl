@@ -1,12 +1,9 @@
 ---
 title: 'Operatory przyrostka inkrementacji i dekrementacji: ++ i--| Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edfbb5076dfcbcbe511f8ec25c74f698cb82f33e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatory przyrostka inkrementacji i dekrementacji: ++ i --
 ## <a name="syntax"></a>Składnia  
@@ -56,7 +51,7 @@ i++;
   
  Po zastosowaniu przyrostkowego operatora do argumentu funkcji, nie ma gwarancji, że wartość zostanie zwiększona lub zmniejszona przed przekazaniem jej do funkcji.  Zobacz sekcję 1.9.17 w standardzie języka C++, aby uzyskać więcej informacji.  
   
- Zastosowanie operatora inkrementacji przyrostek do wskaźnika do tablicy obiektów typu **długi** faktycznie dodaje czterech do reprezentacji wewnętrznej wskaźnika. To działanie powoduje wskaźnika, które wcześniej określone  *n* element th tablicy, aby odwołać się do (*n*+ 1) th element.  
+ Zastosowanie operatora inkrementacji przyrostek do wskaźnika do tablicy obiektów typu **długi** faktycznie dodaje czterech do reprezentacji wewnętrznej wskaźnika. To działanie powoduje wskaźnika, które wcześniej określone *n*element th tablicy, aby odwołać się do (*n*+ 1) th element.  
   
  Argumenty operacji przyrostka inkrementacji i dekrementacji przyrostka musi być modyfikowalną (nie **const**) l wartości typu arytmetycznego lub wskaźnikowego. Typ wyniku jest taki sam, jak te *wyrażenie przyrostek*, ale nie jest już wartością l-value.  
   

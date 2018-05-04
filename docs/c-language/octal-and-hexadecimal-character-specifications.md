@@ -1,33 +1,28 @@
 ---
-title: "Ósemkowe i szesnastkowe specyfikacje znaków | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Ósemkowe i szesnastkowe specyfikacje znaków | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf3a27dc61543482d1d6484d0edd4b5e1bb04373
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f5709ef6fdcaaceecc79cd635374ee77d537100
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Ósemkowe i szesnastkowe specyfikacje znaków
-Sekwencja  **\\**  *ooo* zestaw jako kod znaku ósemkowe trzycyfrowa znaków oznacza, że możesz określić znaków ASCII. Liczbowa wartość ósemkowej liczby całkowitej określa wartość wymaganego znaku lub znak dwubajtowy.  
+Sekwencja **\\*** ooo* zestaw jako kod znaku ósemkowe trzycyfrowa znaków oznacza, że możesz określić znaków ASCII. Liczbowa wartość ósemkowej liczby całkowitej określa wartość wymaganego znaku lub znak dwubajtowy.  
   
  Podobnie, sekwencja **\x***hhh* służy do określenia znaków ASCII jako kod znaków szesnastkowych. Na przykład można podać znaków ASCII backspace jako normalne sekwencji unikowej C (**\b**), lub kodu, jako **\010** (ósemkowe) lub **\x008** (szesnastkowo).  
   

@@ -2,12 +2,9 @@
 title: -SECTION (POLECENIA EDITBIN) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /section
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ffb9bd0645cab51e4140697c41e5b715380fe8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e29e258b4fb661cfa06e057704bba983ad924f34
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 ```  
@@ -50,9 +45,9 @@ ms.lasthandoff: 12/21/2017
 |mogę|danymi zainicjowanymi|  
 |K|pamięci podręcznej pamięci wirtualnej|  
 |m|Usuń Link|  
-|O|informacje o łączu|  
-|P|stronicowania pamięci wirtualnej|  
-|R|przeczytaj|  
+|o|informacje o łączu|  
+|p|stronicowania pamięci wirtualnej|  
+|r|przeczytaj|  
 |s|udostępnione|  
 |u|niezainicjowanych danych|  
 |w|pisz|  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
 |2|2|  
 |4|4|  
 |8|8|  
-|P|16|  
+|p|16|  
 |t|32|  
 |s|64|  
 |x|brak wyrównania|  

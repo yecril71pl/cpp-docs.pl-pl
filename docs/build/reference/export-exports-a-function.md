@@ -2,12 +2,9 @@
 title: -EXPORT (Eksportuje funkcję) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f366b40e8e40e62f67ec45f3e59ad61eb338c427
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Eksportuje funkcję)
 ```  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Uwagi  
  Po wybraniu tej opcji można wyeksportować funkcji z programu, aby inne programy można wywołać funkcji. Można również eksportować dane. Eksporty są zazwyczaj definiowane w bibliotece DLL.  
   
- *Nazwa_wpisu* jest nazwa elementu funkcję lub dane, ponieważ jest używane przez program wywołujący. `ordinal`Określa indeks do tabeli eksportu w zakresie od 1 do 65 535; Jeśli nie określisz `ordinal`, LINK przypisuje jeden. **NONAME** — słowo kluczowe eksportuje funkcję tylko jako numer bez *Nazwa_wpisu*.  
+ *Nazwa_wpisu* jest nazwa elementu funkcję lub dane, ponieważ jest używane przez program wywołujący. `ordinal` Określa indeks do tabeli eksportu w zakresie od 1 do 65 535; Jeśli nie określisz `ordinal`, LINK przypisuje jeden. **NONAME** — słowo kluczowe eksportuje funkcję tylko jako numer bez *Nazwa_wpisu*.  
   
  **Danych** — słowo kluczowe Określa, że element wyeksportowanego elementu danych. Element danych w programie klienta musi być zadeklarowany za pomocą **extern __declspec(dllimport)**.  
   

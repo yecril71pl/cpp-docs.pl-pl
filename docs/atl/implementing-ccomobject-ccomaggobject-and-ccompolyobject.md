@@ -1,13 +1,10 @@
 ---
 title: Implementowanie element CComObject, CComAggObject i CComPolyObject | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - CComPolyObject
 - CComAggObject
@@ -20,27 +17,25 @@ helpviewer_keywords:
 - CComAggObject class
 - CComObject class, implementing
 ms.assetid: 5aabe938-104d-492e-9c41-9f7fb1c62098
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54f237a629c4af9ea7ae30aeca21c03786abcd97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ac45a6edbe606ba445ed3ae58cfde348f83e4de
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementowanie element CComObject, CComAggObject i CComPolyObject
 Klasy szablonów [element CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), i [CComPolyObject](../atl/reference/ccompolyobject-class.md) są zawsze najdalszych pochodnych klas w łańcuch dziedziczenia. Ich odpowiedzialność za obsługę wszystkich metod **IUnknown**: `QueryInterface`, `AddRef`, i **wersji**. Ponadto `CComAggObject` i `CComPolyObject` (jeśli jest używane dla obiektów zagregowane) podaj liczenie odwołań w specjalne i `QueryInterface` semantyki wymagane wewnętrzny nieznany.  
   
  Czy `CComObject`, `CComAggObject`, lub `CComPolyObject` służy zależy od zadeklarować jedną lub żadne następujące makra:  
   
-|Makra|Efekt|  
+|Macro|Efekt|  
 |-----------|------------|  
 |`DECLARE_NOT_AGGREGATABLE`|Zawsze używa `CComObject`.|  
-|`DECLARE_AGGREGATABLE`|Używa `CComAggObject` Jeśli obiekt jest agregowana i `CComObject` Jeśli nie jest. `CComCoClass`zawiera to makro, jeśli żadna z **DECLARE_\*_AGGREGATABLE** makra są zadeklarowane w klasie, będzie to wartość domyślna.|  
+|`DECLARE_AGGREGATABLE`|Używa `CComAggObject` Jeśli obiekt jest agregowana i `CComObject` Jeśli nie jest. `CComCoClass` zawiera to makro, jeśli żadna z **DECLARE_\*_AGGREGATABLE** makra są zadeklarowane w klasie, będzie to wartość domyślna.|  
 |`DECLARE_ONLY_AGGREGATABLE`|Zawsze używa `CComAggObject`. Zwraca błąd, jeśli obiekt nie jest agregowany.|  
 |`DECLARE_POLY_AGGREGATABLE`|ATL tworzy wystąpienie **CComPolyObject\<CYourClass >** podczas **IClassFactory::CreateInstance** jest wywoływana. Podczas tworzenia zaznaczono wartość zewnętrzne nieznany. Jeśli jest **NULL**, **IUnknown** jest zaimplementowany dla obiekt nieagregowane. Jeśli nie jest zewnętrzna nieznany **NULL**, **IUnknown** jest zaimplementowany dla obiekt zagregowanych.|  
   

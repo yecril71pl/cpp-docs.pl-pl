@@ -1,13 +1,10 @@
 ---
-title: "@ (Określ plik odpowiedzi kompilatora) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: '@ (Określ plik odpowiedzi kompilatora) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - '@'
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - '@ compiler option'
 - cl.exe compiler, specifying response files
 ms.assetid: 400fffee-909d-4f60-bf76-45833e822685
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 698039e22a8c760097d009454db5a3872666729b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f291ed9a0ccc86ea1ef6fe6703205d76cdcd0fa1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (Określ plik odpowiedzi kompilatora)
 Określa plik odpowiedzi kompilatora.  
@@ -45,7 +40,7 @@ Określa plik odpowiedzi kompilatora.
 ## <a name="remarks"></a>Uwagi  
  Plik odpowiedzi może zawierać dowolne polecenia, które należy określić w wierszu polecenia. Może to być przydatne, jeśli jego argumenty wiersza polecenia przekracza 127 znaków.  
   
- Nie jest możliwe określenie  **@**  opcję w pliku odpowiedzi. Oznacza to, że plik odpowiedzi nie można osadzić inny plik odpowiedzi.  
+ Nie jest możliwe określenie **@** opcję w pliku odpowiedzi. Oznacza to, że plik odpowiedzi nie można osadzić inny plik odpowiedzi.  
   
  W wierszu polecenia można określić dowolną liczbę opcji pliku odpowiedzi (na przykład `@respfile.1 @respfile.2`) można dowolnie.  
   

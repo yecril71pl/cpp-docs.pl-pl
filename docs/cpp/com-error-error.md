@@ -1,12 +1,9 @@
 ---
-title: "_com_error::błąd | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _com_error::błąd | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_error::Error
@@ -16,20 +13,18 @@ dev_langs:
 helpviewer_keywords:
 - Error method [C++]
 ms.assetid: b53a15fd-198e-4276-afcd-13439c4807f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a318ba69fe5e5d19bacb6d5890889d31a5a44d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02afac78de5eb5908d477f8503ceeebffe46f672
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comerrorerror"></a>_com_error::Error
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Pobiera `HRESULT` przekazany do konstruktora.  
   

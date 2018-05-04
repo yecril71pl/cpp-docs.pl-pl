@@ -1,12 +1,9 @@
 ---
-title: "Funkcje z listami zmiennych argumentów (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje z listami zmiennych argumentów (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a715662ac6680218e3b15822108f429733569bfa
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 14bbb56c7ae62bd7ef8c58b45704a4ba809965e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Funkcje z argumentem zmiennej listy (C++)
 Deklaracje funkcji, w których ostatniego członka jest wielokropek (...) może potrwać zmienną liczbę argumentów. W takich przypadkach C++ zawiera tylko sprawdzanie jawnie zadeklarowana argumentów typu. Listy zmiennych argumentów można użyć, gdy trzeba tworzyć funkcję, co może różnić się ogólne, że nawet liczbę i typy argumentów. Rodziny funkcji jest przykład funkcji, które używają listy zmiennych argumentów. `printf` *listy argumentów — deklaracja*  

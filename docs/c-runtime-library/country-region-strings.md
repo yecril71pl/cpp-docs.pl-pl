@@ -2,12 +2,9 @@
 title: Ciągi Kraj Region | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94ad99ebd05fa9e37a56f2e12818f30f1f4b1212
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ffa2ac8d08e28cac4f5798868013fe9883fac5d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="countryregion-strings"></a>Ciągi kraj/region
 Ciągi kraj lub region można łączyć z ciągiem języka Aby utworzyć specyfikację ustawień regionalnych dla `setlocale`, `_wsetlocale`, `_create_locale`, i `_wcreate_locale` funkcji. Dla listy nazw kraju/regionu, które są obsługiwane przez różne wersje systemu operacyjnego Windows, temacie [dokumentacja interfejsu API National obsługi Language (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Na listach ciąg kraj/region może być dowolna z wartości kraju w **ustawień regionalnych - języka Kraj/Region** kolumny lub dowolnym skróty w **skrót nazwę kraju lub regionu** kolumny. Język dodatkowe informacje pomocy w systemach operacyjnych Windows w wersji, zobacz [dodatek A: produktu zachowanie](http://msdn.microsoft.com/goglobal/bb896001.aspx) w [MS-LCID]: odwołanie do identyfikatora kodu języka systemu Windows (LCID).  
@@ -47,10 +42,10 @@ Ciągi kraj lub region można łączyć z ciągiem języka Aby utworzyć specyfi
 |Oczyść Chin|CHN|zh-CN|  
 |Oczyść Chin|CHN|zh-CN|  
 |Portoryko|PRI|Oczyść ES|  
-|Słowacki|SVK|sk SK|  
-|Republika Południowej Afryki|ZAF|AF ZA|  
+|Słowacki|SVK|sk-SK|  
+|Republika Południowej Afryki|ZAF|af-ZA|  
 |korea Południowa|KOR|ko-KR|  
-|Republika Południowej Afryki|ZAF|AF ZA|  
+|Republika Południowej Afryki|ZAF|af-ZA|  
 |korea Południowa|KOR|ko-KR|  
 |Trynidad i tobago|ABY|EN TT|  
 |Wielka Brytania|GBR|pl pl.|  

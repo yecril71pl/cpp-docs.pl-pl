@@ -1,27 +1,22 @@
 ---
 title: Dodawanie kontrolki (ALT — samouczek, część 2) | Dokumentacja firmy Microsoft
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Dodawanie kontrolki (ALT — Samouczek, część 2)
 W tym kroku zostanie Dodawanie formantu do projektu, skompiluj go i przetestować go na stronie sieci Web.  
@@ -47,13 +42,13 @@ W tym kroku zostanie Dodawanie formantu do projektu, skompiluj go i przetestowa�
 |Pole|Spis treści|  
 |-----------|--------------|  
 |**Krótka nazwa**|Nazwa wprowadzona dla formantu.|  
-|**Klasy**|Nazwa klasy C++ utworzone w celu wdrożenia formantu.|  
+|**Class**|Nazwa klasy C++ utworzone w celu wdrożenia formantu.|  
 |**w pliku .h**|Plik zawiera definicję klasy C++.|  
 |**plik .cpp**|Plik zawiera implementację klasy C++.|  
 |**Klasa coClass**|Nazwa klasy składnika dla tego formantu.|  
 |**Interface**|Nazwa interfejsu, na którym formantu zostanie Implementowanie niestandardowych metod i właściwości.|  
 |**Typ**|Opis dla formantu.|  
-|**ProgID**|Dla użytkownika nazwę używaną do odszukania CLSID formantu.|  
+|**Identyfikator programu**|Dla użytkownika nazwę używaną do odszukania CLSID formantu.|  
   
  Konieczne będzie wprowadzenie kilka dodatkowych ustawień kreatora ATL kontroli.  
   

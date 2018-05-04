@@ -1,13 +1,10 @@
 ---
-title: "_heapadd — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _heapadd — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - _heapadd
 apilocation:
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c046f9e26848edbbc609b9f3c729a0654fe3718
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1f212bdbf8ee617a1cfb6647627bc0c881b49be
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="heapadd"></a>_heapadd
 Dodaje pamięci sterty.  
@@ -76,16 +71,16 @@ int _heapadd(
   
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
 |-------------|---------------------|---------------------|  
-|`_heapadd`|\<malloc.h >|\<errno.h >|  
+|`_heapadd`|\<malloc.h>|\<errno.h>|  
   
  Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wprowadzeniu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Alokacja pamięci](../c-runtime-library/memory-allocation.md)   
- [w warstwie bezpłatna](../c-runtime-library/reference/free.md)   
- [_heapchk —](../c-runtime-library/reference/heapchk.md)   
+ [W warstwie bezpłatna](../c-runtime-library/reference/free.md)   
+ [_heapchk](../c-runtime-library/reference/heapchk.md)   
  [_heapmin —](../c-runtime-library/reference/heapmin.md)   
  [_heapset —](../c-runtime-library/heapset.md)   
- [_heapwalk —](../c-runtime-library/reference/heapwalk.md)   
+ [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
  [— funkcja malloc](../c-runtime-library/reference/malloc.md)   
  [realloc](../c-runtime-library/reference/realloc.md)

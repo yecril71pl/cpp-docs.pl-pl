@@ -1,13 +1,10 @@
 ---
 title: Dokumentacja języka C++ | Dokumentacja firmy Microsoft
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852f4522ecf32643611f6bbd4d86028e883bb6eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25315121d3004601914c5b8872b496e57acec99f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-language-reference"></a>Materiał referencyjny na temat języka C++
 To źródło odniesienia wyjaśnia sposób implementacji C++ w Microsoft Visual C++. Organizacja jest oparta na *opatrzone adnotacjami C++ podręcznika* Margaret Ellis i Bjarne Stroustrup oraz na ANSI/ISO C++ międzynarodowej standardowy (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.  
@@ -83,8 +78,8 @@ Omówienie programowania rozwiązań nowoczesnych wersji języka C++, zobacz [j�
  [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)  
  Obsługa wyjątków C++, obsługa wyjątków strukturalnych (SEH), słowa kluczowe używane w pisaniu instrukcji obsługi wyjątków.  
   
- [Potwierdzanie i komunikaty dostarczone przez użytkownika](../cpp/assertion-and-user-supplied-messages-cpp.md)  
- `#error`dyrektywa, `static_assert` — słowo kluczowe, `assert` makra.  
+ [Potwierdzenia i komunikaty dostarczane przez użytkownika](../cpp/assertion-and-user-supplied-messages-cpp.md)  
+ `#error` dyrektywa, `static_assert` — słowo kluczowe, `assert` makra.  
   
  [Szablony](../cpp/templates-cpp.md)  
  Specyfikacje szablonów, szablony funkcji, szablony klas, słowo kluczowe typename, szablony a makra, szablony i inteligentne wskaźniki.  

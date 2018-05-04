@@ -1,13 +1,10 @@
 ---
-title: "-Yd (umieść informacje o debugowaniu w pliku obiektu) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -Yd (umieść informacje o debugowaniu w pliku obiektu) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /yd
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 419d97357fd3424d5de980f76c6758eaa47f3c7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b03b0faf975caba8c5a287c88afcdf53f7a71f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Umieść informacje o debugowaniu w pliku obiektu)
 Pełne informacje we wszystkich plikach obiektu debugowania nadać tempo utworzone na podstawie pliku prekompilowanego nagłówka (.pch), gdy jest używany z [/Yc](../../build/reference/yc-create-precompiled-header-file.md) i [/z7](../../build/reference/z7-zi-zi-debug-information-format.md) opcje. Przestarzałe.  

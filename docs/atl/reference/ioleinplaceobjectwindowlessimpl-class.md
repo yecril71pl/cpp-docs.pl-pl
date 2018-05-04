@@ -2,11 +2,8 @@
 title: Klasa IOleInPlaceObjectWindowlessImpl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f455172723be4f46751b45d244e74dda5fcacae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5616258405eb8346132d32b8f7fd71d0b4794d6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>Klasa IOleInPlaceObjectWindowlessImpl
 Ta klasa implementuje **IUnknown** i dostarcza metod umożliwiających formantem bez okien do odbierania komunikatów okien i uczestniczyć w operacji przeciągania i upuszczania.  
@@ -86,7 +81,7 @@ class IOleInPlaceObjectWindowlessImpl
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlctl.h  
   
-##  <a name="contextsensitivehelp"></a>IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>  IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
  Zwraca **E_NOTIMPL**.  
   
 ```
@@ -96,7 +91,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) w systemie Windows SDK.  
   
-##  <a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl::GetDropTarget  
+##  <a name="getdroptarget"></a>  IOleInPlaceObjectWindowlessImpl::GetDropTarget  
  Zwraca **E_NOTIMPL**.  
   
 ```
@@ -106,7 +101,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleInPlaceObjectWindowless::GetDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms678535) w systemie Windows SDK.  
   
-##  <a name="getwindow"></a>IOleInPlaceObjectWindowlessImpl::GetWindow  
+##  <a name="getwindow"></a>  IOleInPlaceObjectWindowlessImpl::GetWindow  
  Kontener wywołuje tej funkcji można pobrać uchwytu okna formantu.  
   
 ```
@@ -118,7 +113,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  Zobacz [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) w systemie Windows SDK.  
   
-##  <a name="inplacedeactivate"></a>IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
+##  <a name="inplacedeactivate"></a>  IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
  Metoda wywoływana przez kontener, aby zdezaktywować w miejscu aktywny formant.  
   
 ```
@@ -130,7 +125,7 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
   
  Zobacz [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) w systemie Windows SDK.  
   
-##  <a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
+##  <a name="onwindowmessage"></a>  IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
  Wysyła wiadomość z kontenera z formantem bez okien, który jest aktywny w miejscu.  
   
 ```
@@ -144,7 +139,7 @@ HRESULT OnWindowMessage(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleInPlaceObjectWindowless::OnWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms693783) w systemie Windows SDK.  
   
-##  <a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
+##  <a name="reactivateandundo"></a>  IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
  Zwraca **E_NOTIMPL**.  
   
 ```
@@ -154,7 +149,7 @@ HRESULT ReactivateAndUndo();
 ### <a name="remarks"></a>Uwagi  
  Zobacz [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) w systemie Windows SDK.  
   
-##  <a name="setobjectrects"></a>IOleInPlaceObjectWindowlessImpl::SetObjectRects  
+##  <a name="setobjectrects"></a>  IOleInPlaceObjectWindowlessImpl::SetObjectRects  
  Metoda wywoływana przez kontener, aby poinformować formant, który zmienił jego rozmiaru i/lub pozycji.  
   
 ```
@@ -166,7 +161,7 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
   
  Zobacz [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) w systemie Windows SDK.  
   
-##  <a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl::UIDeactivate  
+##  <a name="uideactivate"></a>  IOleInPlaceObjectWindowlessImpl::UIDeactivate  
  Dezaktywuje i usuwa formantu interfejsu użytkownika, który obsługuje aktywacji w miejscu.  
   
 ```

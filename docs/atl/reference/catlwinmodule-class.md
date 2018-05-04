@@ -1,12 +1,9 @@
 ---
 title: Klasa CAtlWinModule | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlWinModule
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcaf3d6573432b7f6f16826b2551a7e9330abed9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14b918747d9b7bee1b661eebd61fbb35325861e7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlwinmodule-class"></a>Klasa CAtlWinModule
 Ta klasa obsługuje składniki okien ALT.  
@@ -70,7 +65,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
-##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
+##  <a name="addcreatewnddata"></a>  CAtlWinModule::AddCreateWndData  
  Ta metoda inicjuje i dodaje `_AtlCreateWndData` struktury.  
   
 ```
@@ -87,7 +82,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wywołuje [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) które inicjuje [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struktury. Ta struktura będzie przechowywać **to** wskaźnika, używany do uzyskania wystąpienia klasy w procedury okna.  
   
-##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
+##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule  
  Konstruktor.  
   
 ```
@@ -97,7 +92,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>Uwagi  
  W przypadku niepowodzenia inicjowania **EXCEPTION_NONCONTINUABLE** zgłoszony wyjątek.  
   
-##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
+##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule  
  Destruktor.  
   
 ```
@@ -107,7 +102,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wszystkie przydzielone zasoby.  
   
-##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
+##  <a name="extractcreatewnddata"></a>  CAtlWinModule::ExtractCreateWndData  
  Ta metoda zwraca wskaźnik do `_AtlCreateWndData` struktury.  
   
 ```

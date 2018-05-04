@@ -1,12 +1,9 @@
 ---
-title: "Zagadnienia dotyczące pisania kodu prologu epilogu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zagadnienia dotyczące pisania kodu prologu epilogu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,23 +14,21 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9578e106c536f14059be95724ac1c2c9af92f3cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5bd87d4af4c797d324e6f882cc5c2e139a784543
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Zagadnienia dotyczące pisania kodu prologu/epilogu
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
  Przed napisaniem własnej sekwencji kodu prologu i epilogu należy zrozumieć ułożenie ramki stosu. Warto również wiedzieć, jak używać **__local_size —** symbolu.  
   
-##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a>Ramka stosu — układ  
+##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Ramka stosu — układ  
  W tym przykładzie pokazano standardowy kod prologu, który może pojawić się w 32-bitowej funkcji:  
   
 ```  
@@ -54,7 +49,7 @@ ret                       ; Return from function
   
  Stos zawsze powiększa się w dół (od najwyższego do najniższego adresu pamięci). Podstawowy wskaźnik (`ebp`) wskazuje na umieszczoną wartość `ebp`. Zmienne lokalne obszaru zaczyna się od `ebp-4`. Aby uzyskać dostęp do zmiennych lokalnych, należy obliczyć przesunięcie z `ebp` przez odjęcie odpowiedniej wartości od `ebp`.  
   
-##  <a name="_pluslang___local_size"></a>__LOCAL_SIZE —  
+##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE —  
  Kompilator zawiera symbol, **__local_size —**, do użycia w bloku asemblera wbudowanego kodu prologu funkcji. Ten symbol jest używany do przydzielenia miejsca dla zmiennych lokalnych w ramce stosu w prologu niestandardowego kodu.  
   
  Kompilator określa wartość **__local_size —**. Wartość jest to całkowita liczba bajtów wszystkich zdefiniowanych przez użytkownika zmiennych lokalnych i generowane przez kompilator zmiennych tymczasowych. **__Local_size —** mogą być używane tylko jako argumentu natychmiastowego; nie można użyć w wyrażeniu. Nie musisz zmienić lub zmień definicję wartość tego symbolu. Na przykład:  

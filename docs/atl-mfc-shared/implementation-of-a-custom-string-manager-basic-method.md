@@ -1,32 +1,27 @@
 ---
-title: "Wdrożenia z menedżerem ciąg niestandardowy (podstawowa metoda) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wdrożenia z menedżerem ciąg niestandardowy (podstawowa metoda) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b80af4fc8b463b6987f586c426bd465520f75ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 259f9533747b266f0be0a782cdc94c98f167d2d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Wdrożenia z menedżerem ciąg niestandardowy (Metoda podstawowa)
-Najprostszym sposobem dostosowania schematu alokacji pamięci dla danych dotyczących ciągu jest korzystanie z warunkiem ATL **CAtlStringMgr** klasy, ale podać własne pamięci procedury alokacji. Konstruktor **CAtlStringMgr** przyjmuje jeden parametr: wskaźnik do `IAtlMemMgr` obiektu. `IAtlMemMgr`jest to abstrakcyjna klasa podstawowa, który udostępnia interfejs rodzajowy na stos. Przy użyciu `IAtlMemMgr` interfejsu **CAtlStringMgr** przydziela ponownie i zwalnia pamięć używana do przechowywania danych ciągu. Można albo zaimplementuj `IAtlMemMgr` interfejsu użytkownika, lub użyj jednej z pięciu klasy Menedżer pamięci ATL — pod warunkiem. Menedżerowie pamięci ATL — pod warunkiem zawijać po prostu istniejących urządzeń alokacji pamięci:  
+Najprostszym sposobem dostosowania schematu alokacji pamięci dla danych dotyczących ciągu jest korzystanie z warunkiem ATL **CAtlStringMgr** klasy, ale podać własne pamięci procedury alokacji. Konstruktor **CAtlStringMgr** przyjmuje jeden parametr: wskaźnik do `IAtlMemMgr` obiektu. `IAtlMemMgr` jest to abstrakcyjna klasa podstawowa, który udostępnia interfejs rodzajowy na stos. Przy użyciu `IAtlMemMgr` interfejsu **CAtlStringMgr** przydziela ponownie i zwalnia pamięć używana do przechowywania danych ciągu. Można albo zaimplementuj `IAtlMemMgr` interfejsu użytkownika, lub użyj jednej z pięciu klasy Menedżer pamięci ATL — pod warunkiem. Menedżerowie pamięci ATL — pod warunkiem zawijać po prostu istniejących urządzeń alokacji pamięci:  
   
 -   [CCRTHeap](../atl/reference/ccrtheap-class.md) Opakowuje standardowe funkcje sterty CRT ([— funkcja malloc](../c-runtime-library/reference/malloc.md), [wolnego](../c-runtime-library/reference/free.md), i [realloc](../c-runtime-library/reference/realloc.md))  
   

@@ -1,13 +1,10 @@
 ---
-title: "C relacyjnych i operatory równości | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: C relacyjnych i operatory równości | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6860198b9acce372b710e819a17f534e793f1ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac6503b2c684b5acb921fe13ebf0b0ca11adbf04
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-relational-and-equality-operators"></a>Operatory relacyjne i porównania języka C
 Binarny relacyjnych i operatory równości porównać ich pierwszego operandu na ich drugi argument, aby sprawdzić poprawność określonej relacji. Wynik wyrażenia relacyjne to 1, jeśli testowany relacji jest true i 0, jeśli ma wartość false. Typ wyniku jest `int`.  
@@ -67,7 +62,7 @@ Binarny relacyjnych i operatory równości porównać ich pierwszego operandu na
   
  Argumenty operacji może mieć wartości całkowitej, zmiennoprzecinkową lub wskaźnika typu. Typy argumentów operacji mogą być różne. Operatory relacyjne Wykonaj popularne konwersje arytmetyczne w wypadku argumentów operacji typu wartości całkowitych i zmiennoprzecinkowych. Ponadto można użyć następujących kombinacji typów operand z relacyjnych i operatory porównania:  
   
--   Wskaźniki do tego samego typu można zarówno argumentów operacji żadnym relacyjny lub operator równości. Pod względem równości (`==`) i nierówności (`!=`) operatorów, wynik porównania wskazuje, czy dwa wskaźniki adresów w tej samej lokalizacji pamięci. Dla innych operatory relacyjne (**\<**,  **>** ,  **\<** =, i  **>** =), względne położenie adresów pamięci dwóch obiektów wskazywał wskazuje wynik porównania. Operatory porównania tylko przesunięcia.  
+-   Wskaźniki do tego samego typu można zarówno argumentów operacji żadnym relacyjny lub operator równości. Pod względem równości (`==`) i nierówności (`!=`) operatorów, wynik porównania wskazuje, czy dwa wskaźniki adresów w tej samej lokalizacji pamięci. Dla innych operatory relacyjne (**\<**, **>**, **\<**=, i **>**=), względne położenie adresów pamięci dwóch obiektów wskazywał wskazuje wynik porównania. Operatory porównania tylko przesunięcia.  
   
      Porównanie wskaźników jest zdefiniowana tylko dla elementów tego samego obiektu. Jeśli wskaźniki odwołują się do elementów członkowskich w tablicy, porównanie jest odpowiednikiem porównania odpowiednich indeksów dolnych. Adres pierwszy element tablicy jest "poniżej" adres ostatnim elemencie. W przypadku struktury wskaźników do elementów członkowskich struktury zadeklarowany później jest "większe niż" wskaźników do elementów członkowskich zadeklarowanych wcześniej w strukturze. Wskaźniki do elementów członkowskich Unii tego samego są takie same.  
   

@@ -1,13 +1,10 @@
 ---
 title: C rozszerzone atrybuty klasy magazynu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 972a8dc27283839ce1eade0e1e9b81dc92998b15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 014027f9b9917f6490bb54eaf21a05230ef5f2a2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-extended-storage-class-attributes"></a>Rozszerzone atrybuty klasy magazynu języka C
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Więcej aktualne informacje na ten temat można znaleźć w [__declspec (C++ — dokumentacja)](../cpp/declspec.md).  
   
@@ -38,8 +33,8 @@ ms.lasthandoff: 12/21/2017
  Składnia atrybutu rozszerzonego służący do określania informacji o klasie magazynu używa __declspec — słowo kluczowe, które określa, że wystąpienie podanego typu do przechowania atrybuty klasy magazynu specyficzne dla firmy Microsoft (wątek naked dllimport i dllexport). Przykładami innych modyfikatorów klasy magazynowania statyczne i zewnętrzne słów kluczowych. Jednak te słowa kluczowe są częścią ANSI C standard i jako takie nie są objęte składni rozszerzonych atrybutów.  
   
 ## <a name="syntax"></a>Składnia  
- *Specyfikator klasy magazynu*:  
- `__declspec`( *rozszerzony decl — modyfikator seq* ) / * Specific firmy Microsoft\*/  
+ *storage-class-specifier*:  
+ `__declspec` ( *rozszerzony decl — modyfikator seq* ) / * Specific firmy Microsoft \*/  
   
  *rozszerzony decl — modyfikator seq*:  
  *rozszerzony decl — modyfikator* opcjonalnych  

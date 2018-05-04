@@ -1,12 +1,9 @@
 ---
-title: "Przeciążanie funkcji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przeciążanie funkcji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 1/25/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-overloading"></a>Przeładowywanie funkcji
 C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Są one nazywane *przeciążony* funkcji. Funkcje przeciążone umożliwiają podać semantykę różną dla funkcji, w zależności od typów i liczby argumentów. 
@@ -274,13 +269,13 @@ volatile Over&
   
 1.  Dokładne dopasowanie. Dokładnego dopasowania z typów, z którymi funkcja jest wywoływana i typy zadeklarowane w prototyp funkcji jest zawsze najlepsze dopasowanie. Sekwencje trivial konwersje sklasyfikowanych jako dokładne dopasowania. Jednak sekwencji, których nie należy wprowadzać dowolne z tych konwersji są traktowane jako lepszym rozwiązaniem niż sekwencje konwersji:  
   
-    -   Ze wskaźnika na wskaźnik do **const** (`type`  **\***  do **const** `type`  **\***  ).  
+    -   Ze wskaźnika na wskaźnik do **const** (`type` **\*** do **const** `type` **\*** ).  
   
-    -   Ze wskaźnika na wskaźnik do `volatile` (`type`  **\***  do `volatile` `type`  **\*** ).  
+    -   Ze wskaźnika na wskaźnik do `volatile` (`type` **\*** do `volatile` `type` **\***).  
   
-    -   Z odwołania do odwołania do **const** (`type`  **&**  do **const** `type`  **&** ).  
+    -   Z odwołania do odwołania do **const** (`type` **&** do **const** `type` **&**).  
   
-    -   Z odwołania do odwołania do `volatile` (`type`  **&**  do `volatile` `type`  **&** ).  
+    -   Z odwołania do odwołania do `volatile` (`type` **&** do `volatile` `type` **&**).  
   
 2.  Dopasuj je przy użyciu promocji. Wszelkie sekwencji nie są sklasyfikowane jako dokładnego dopasowania, który zawiera tylko promocje typów całkowitych, konwersje z **float** do **podwójne**, i konwersje trivial zostanie sklasyfikowany jako dopasowanie przy użyciu promocji. Chociaż nie tak dobrze dopasowania jako żadnych dokładnego dopasowania, dopasowanie przy użyciu promocji jest lepszym rozwiązaniem niż przy użyciu standardowych konwersji dopasowania.  
   

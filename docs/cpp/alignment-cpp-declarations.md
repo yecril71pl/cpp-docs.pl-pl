@@ -2,26 +2,21 @@
 title: Wyrównanie (deklaracje języka C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019884793eb3472e52c7772351b2f5826520a193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f39fe0cf3706a67e2aa42aa89de5914808e9cec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignment-c-declarations"></a>Wyrównanie (deklaracje języka C++)
 Jedną z niskiego poziomu funkcji C++ jest możliwość określenia dokładne dostosowanie obiektów w pamięci, aby wykorzystać maksymalną architektury sprzętu. Domyślnie kompilator wyrównuje klasy i struktury elementów członkowskich na ich wartość rozmiaru: bool i char są wyrównane co granice jednego bajtu, short na dwubajtowo, int na 4 bajty, long double i long double 8 bajtów. W większości przypadków nie trzeba być związane z wyrównania, ponieważ domyślne wyrównanie już jest optymalna. W niektórych przypadkach jednak można osiągnąć znaczną poprawę wydajności lub zużycie pamięci, określając niestandardowy Wyrównanie struktury danych użytkownika. Przed Visual Studio 2015 umożliwiają __alignof słowa kluczowe specyficzne dla firmy Microsoft i declspec(alignas) określ wyrównanie większe niż wartość domyślna. Poczynając od programu Visual Studio 2015 należy używać języka C ++ 11 standardowe słowa kluczowe [alignof i alignas](../cpp/alignof-and-alignas-cpp.md) przenośności maksymalną kodu. Zachowanie nowych słów kluczowych w taki sam sposób kulisy jako rozszerzenia specyficzne dla firmy Microsoft, a w dokumentacji tych rozszerzeń ma również zastosowanie do nowych słów kluczowych. Zobacz [__alignof Operator](../cpp/alignof-operator.md) i [Dopasuj](../cpp/align-cpp.md) Aby uzyskać więcej informacji. C++ standard nie określa zachowanie pakowania wyrównywania na granicach mniejszą niż domyślne kompilatora dla platformy docelowej, dzięki czemu nadal trzeba korzystać z usługi Microsoft #pragma [pakietu](../preprocessor/pack.md) w takiej sytuacji.  

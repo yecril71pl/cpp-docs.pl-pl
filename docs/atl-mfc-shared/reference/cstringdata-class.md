@@ -1,12 +1,9 @@
 ---
 title: Klasa CStringData | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringData
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7523ca52c0ded8ec9b3cf02dd6798beca8be5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187892b74536de47079324d90bb21b2569e00498
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringdata-class"></a>Klasa CStringData
 Ta klasa reprezentuje dane z obiektem ciągu.  
@@ -56,12 +51,12 @@ struct CStringData
 |||  
 |-|-|  
 |[AddRef](#addref)|Zwiększa liczbę odwołanie do obiektu danych ciągu.|  
-|[dane](#data)|Pobiera dane znaków z obiektem ciągu.|  
+|[Dane](#data)|Pobiera dane znaków z obiektem ciągu.|  
 |[IsLocked](#islocked)|Określa, czy jest on zablokowany buforu z obiektem ciągu skojarzone.|  
 |[IsShared](#isshared)|Określa, czy buforu z obiektem ciągu skojarzona jest aktualnie udostępniony.|  
-|[Blokady](#lock)|Blokuje buforu z obiektem ciągu skojarzone.|  
+|[blokady](#lock)|Blokuje buforu z obiektem ciągu skojarzone.|  
 |[Wersja](#release)|Zwalnia obiektu określonego ciągu.|  
-|[Odblokowywanie](#unlock)|Umożliwia odblokowanie buforu z obiektem ciągu skojarzone.|  
+|[odblokowywanie](#unlock)|Umożliwia odblokowanie buforu z obiektem ciągu skojarzone.|  
   
 ### <a name="data-members"></a>Elementy członkowskie danych  
   
@@ -98,7 +93,7 @@ struct CStringData
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsimpstr.h  
   
-##  <a name="addref"></a>CStringData::AddRef  
+##  <a name="addref"></a>  CStringData::AddRef  
  Zwiększa liczbę odwołanie z obiektem ciągu.  
   
 ```
@@ -111,7 +106,7 @@ void AddRef() throw();
 > [!NOTE]
 >  Nie wywołuj tej metody w ciągu z liczbą ujemną odwołanie ponieważ ujemna liczebność wskazuje, że buforu ciągu jest zablokowany.  
   
-##  <a name="data"></a>CStringData::data  
+##  <a name="data"></a>  CStringData::data  
  Zwraca wskaźnik do buforu znak z obiektem ciągu.  
   
 ```
@@ -127,7 +122,7 @@ void* data() throw();
 > [!NOTE]
 >  Ten bufor nie jest przydzielony przez `CStringData` obiektu, ale przez Menedżera ciągu w razie potrzeby. Przydzielone, bufor jest dołączany do obiektu danych ciągu.  
   
-##  <a name="islocked"></a>CStringData::IsLocked  
+##  <a name="islocked"></a>  CStringData::IsLocked  
  Określa, czy bufor znak jest zablokowany.  
   
 ```
@@ -140,7 +135,7 @@ bool IsLocked() const throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji w celu ustalenia, jeśli bufor znaków ciągu obiektu jest zablokowany.  
   
-##  <a name="isshared"></a>CStringData::IsShared  
+##  <a name="isshared"></a>  CStringData::IsShared  
  Określa, jeśli bufor znak jest udostępniony.  
   
 ```
@@ -153,7 +148,7 @@ bool IsShared() const throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji, aby ustalić, jeśli bufor znaków ciągu obiektu danych obecnie współużytkowany wiele obiektów typu string.  
   
-##  <a name="lock"></a>CStringData::Lock  
+##  <a name="lock"></a>  CStringData::Lock  
  Blokuje buforu znaków ciągu skojarzonego obiektu.  
   
 ```
@@ -166,7 +161,7 @@ void Lock() throw();
 > [!NOTE]
 >  Bufor znak może być zablokowany, jeśli bufor nie jest udostępniana między nowszej ciąg obiektów.  
   
-##  <a name="nalloclength"></a>CStringData::nAllocLength  
+##  <a name="nalloclength"></a>  CStringData::nAllocLength  
  Długość buforu przydzielone znaków.  
   
 ```
@@ -176,7 +171,7 @@ int nAllocLength;
 ### <a name="remarks"></a>Uwagi  
  Przechowuje długość buforu danych przydzielone w `XCHAR`s (bez przerywania null).  
   
-##  <a name="ndatalength"></a>CStringData::nDataLength  
+##  <a name="ndatalength"></a>  CStringData::nDataLength  
  Bieżąca długość z obiektem ciągu.  
   
 ```
@@ -186,7 +181,7 @@ int nDataLength;
 ### <a name="remarks"></a>Uwagi  
  Przechowuje długość danych aktualnie używanego w `XCHAR`s (bez przerywania null).  
   
-##  <a name="nrefs"></a>CStringData::nRefs  
+##  <a name="nrefs"></a>  CStringData::nRefs  
  Liczba odwołań do obiektów danych ciągu.  
   
 ```
@@ -196,7 +191,7 @@ long nRefs;
 ### <a name="remarks"></a>Uwagi  
  Przechowuje liczebności referencyjnej obiektu danych ciągu. Ten licznik wskazuje liczbę wyższej obiektów string skojarzonych z obiektem danych ciągu. Ujemna wartość oznacza obiekt danych ciągu jest obecnie zablokowany.  
   
-##  <a name="pstringmgr"></a>CStringData::pStringMgr  
+##  <a name="pstringmgr"></a>  CStringData::pStringMgr  
  Menedżer pamięci obiektu skojarzone parametry.  
   
 ```
@@ -206,7 +201,7 @@ IAtlStringMgr* pStringMgr;
 ### <a name="remarks"></a>Uwagi  
  Przechowuje Menedżer pamięci dla obiektu skojarzone parametry. Aby uzyskać więcej informacji na menedżerów zarządzania pamięcią i ciągów, zobacz [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="release"></a>CStringData::Release  
+##  <a name="release"></a>  CStringData::Release  
  Zmniejsza odwołanie liczba obiektu danych ciągu.  
   
 ```
@@ -220,7 +215,7 @@ void Release() throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities#104](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
-##  <a name="unlock"></a>CStringData::Unlock  
+##  <a name="unlock"></a>  CStringData::Unlock  
  Umożliwia odblokowanie buforu znaków ciągu skojarzonego obiektu.  
   
 ```

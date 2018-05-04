@@ -1,12 +1,9 @@
 ---
-title: "Obsługa zdarzeń w modelu COM | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obsługa zdarzeń w modelu COM | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c57b8429a05ab3989dce318f4c16a58475560a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ccf5ad83afe2151ac9ceb90029780989ca33487
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-handling-in-com"></a>Obsługa zdarzeń w modelu COM
 W obsłudze zdarzeń COM, konfigurowanie obsługiwanego odbiornika źródła i zdarzeń za pomocą [event_source —](../windows/event-source.md) i [event_receiver](../windows/event-receiver.md) atrybutów, określając `type` = **com**. Te atrybuty wprowadzają odpowiedni kod dla interfejsów niestandardowych, wysyłania i dualnych, aby umożliwić odpowiednim klasom wywoływanie zdarzeń i obsługę zdarzeń za pośrednictwem punktów połączenia COM.  
@@ -165,7 +160,7 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.  
 ```  
   
-##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Zdarzenia COM zależnych układu  
+##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> Zdarzenia COM zależnych układu  
  Zależność układu jest tylko problemem programowania COM. W obsłudze zdarzeń macierzystych i zarządzanych, podpisy (typy zwracane, konwencja wywoływania i argumenty) z programów obsługi muszą odpowiadać ich zdarzeniom, ale nazwy programów obsługi nie muszą odpowiadać ich zdarzeniom.  
   
  Jednak w obsłudze zdarzeń COM, gdy ustawisz *layout_dependent* parametr **event_receiver** do **true**, zgodność nazwy i podpisu jest wymuszana. Oznacza to, że nazwy i wzory podpisów w programach obsługi zdarzeń muszą dokładnie odpowiadać nazwom i wzorom podpisów zdarzeń, do których są podłączone.  

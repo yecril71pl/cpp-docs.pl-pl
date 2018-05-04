@@ -1,13 +1,10 @@
 ---
 title: Deklaracje struktury | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,53 +14,51 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-declarations"></a>Deklaracje struktur
 "Deklaracja struktury" nazwy typu i określa sekwencję wartości zmiennych (nazywany "Członkowie" lub "pola" konstrukcji), które mogą mieć różnych typów. Opcjonalny identyfikator o nazwie "tag", nadaje nazwę typu struktury i mogą być używane w kolejnych odwołań do typ struktury. Zmienna typu Struktura zawiera całą sekwencję wynika z tego typu. Struktury w języku C są podobne do typów znana jako "rekordy" w innych językach.  
   
 ## <a name="syntax"></a>Składnia  
- *Specyfikator Struct lub union*:  
- *Identyfikator struktury lub Unii* opt**{** *struktury deklaracji listy* **}**  
+ *struct-or-union-specifier*:  
+ *Identyfikator struktury lub Unii* opt **{** *struktury deklaracji listy* **}**  
   
  *Identyfikator struktury lub związku*  
   
- *Struktura lub Unia*:  
+ *struct-or-union*:  
  **struct**  
   
  **Unii**  
   
- *Struktura deklaracji listy*:  
- *Deklaracja — struktura*  
+ *struct-declaration-list*:  
+ *struct-declaration*  
   
  *Deklaracja struktury deklaracjach — struktura*  
   
  Struktura zawartości jest zdefiniowany  
   
- *Deklaracja struktury*:  
- *Specyfikator kwalifikator listy w strukturze listy deklarator***;**   
+ *struct-declaration*:  
+ *Specyfikator kwalifikator listy w strukturze listy deklarator***;**  
   
- *Specyfikator kwalifikator listy*:  
+ *specifier-qualifier-list*:  
  *Specyfikator typu w specyfikatorze listy kwalifikator* opcjonalnych  
   
  *Kwalifikator typu w specyfikatorze listy kwalifikator* opcjonalnych  
   
- *Struktura deklarator listy*:  
+ *struct-declarator-list*:  
  *deklarator — struktura*  
   
  *Struktura deklarator listy***,***deklarator — struktura*   
   
- *Struktura deklarator*:  
+ *struct-declarator*:  
  `declarator`  
   
  Deklaracja typu struktury nie zarezerwowane miejsce dla struktury. Jest tylko szablon dla nowszej deklaracje zmiennych struktury.  
@@ -163,11 +158,11 @@ struct somestruct
 } w;  
 ```  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  Kompilator umożliwia bez określonego rozmiaru lub zerowy rozmiar tablicy jako ostatni element członkowski struktury. Może to być przydatne, jeśli rozmiar tablicy stałej różni się w różnych sytuacjach. Deklaracja taka struktura wygląda następująco:  
   
- `struct`*identyfikator***{** *zestawu z deklaracji* *wpisz nazwę tablicy***[];};**  
+ `struct` *Identyfikator *** {** *zestawu z deklaracji* *typu tablicy — [nazwa ***];};**  
   
  Tablic bez określonego rozmiaru może występować tylko jako ostatni element członkowski struktury. Struktury zawierające deklaracje bez określonego rozmiaru tablicy mogą być zagnieżdżane w innych konstrukcji tak długo, jak długo ma więcej elementów członkowskich są zadeklarowane w dowolnej struktury otaczającej. Tablice takie struktury są niedozwolone. `sizeof` Operatora, gdy jest stosowany do zmiennej tego typu lub sam typ zakłada 0 dla rozmiaru tablicy.  
   

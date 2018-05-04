@@ -1,13 +1,10 @@
 ---
-title: "_pgmptr —, _wpgmptr — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: _pgmptr —, _wpgmptr — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - pgmptr
 - _pgmptr
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8bf941f5e020a608817919b2819f2d6be023d89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c0e944e57125def89d41010a9e76cd28bae5286
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
 Ścieżka pliku wykonywalnego. Przestarzałe; Użyj [_get_pgmptr —](../c-runtime-library/reference/get-pgmptr.md) i [_get_wpgmptr —](../c-runtime-library/reference/get-wpgmptr.md).  
@@ -52,7 +47,7 @@ C> hello
   
  Program nie jest uruchamiany z wiersza polecenia `_pgmptr` może być zainicjowana nazwę programu (nazwę podstawową dla tego pliku bez rozszerzenia nazwy pliku) lub nazwy pliku, ścieżka względna lub pełną ścieżkę.  
   
- `_wpgmptr`jest odpowiednikiem znaków dwubajtowych `_pgmptr` do użytku z programy używające `wmain`.  
+ `_wpgmptr` jest odpowiednikiem znaków dwubajtowych `_pgmptr` do użytku z programy używające `wmain`.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -64,7 +59,7 @@ C> hello
   
 |Zmienna|Wymagany nagłówek|  
 |--------------|---------------------|  
-|`_pgmptr`, `_wpgmptr`|\<stdlib.h >|  
+|`_pgmptr`, `_wpgmptr`|\<stdlib.h>|  
   
 ## <a name="example"></a>Przykład  
  Następujący program zademonstrowano użycie `_pgmptr`.  

@@ -1,12 +1,9 @@
 ---
-title: "Makra debugowania i raportowanie błędów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Makra debugowania i raportowanie błędów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b99147c9eb9a331d7cc0f9064b858979d00e2804
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra debugowania i raportowanie błędów
 Te makra udostępniać przydatne narzędzia debugowania i śledzenia.  
@@ -45,7 +40,7 @@ Te makra udostępniać przydatne narzędzia debugowania i śledzenia.
 |[ATLTRACE](#alttrace)|Raporty ostrzeżenia na urządzeniach, takich jak okna debugera, zgodnie z określoną flagi i poziomów. Zawarte dla zgodności z poprzednimi wersjami.|  
 |[ATLTRACE2](#atltrace2)|Raporty ostrzeżenia na urządzeniach, takich jak okna debugera, zgodnie z określoną flagi i poziomów.|  
   
-##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES  
+##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES  
  Zdefiniuj to makro przed dołączeniem wszelkie pliki nagłówkowe ATL do śledzenia wszystkich `AddRef` i **wersji** wywołuje dla interfejsów składników programu w oknie danych wyjściowych.  
   
 ```
@@ -72,9 +67,9 @@ Te makra udostępniać przydatne narzędzia debugowania i śledzenia.
  Informacje podane w tym miejscu map bezpośrednio do informacji dostępnych w poprzednich instrukcji śledzenia, tak, można sprawdzić odwołanie zlicza w okresie istnienia całego thunk interfejsu. Ponadto możesz uzyskać wskazuje maksymalną liczbę odwołań na thunk tego interfejsu.  
   
 > [!NOTE]
-> `_ATL_DEBUG_INTERFACES`można w sprzedaży detalicznej kompilacji.  
+> `_ATL_DEBUG_INTERFACES` można w sprzedaży detalicznej kompilacji.  
   
-##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI  
+##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI  
  Zapisuje wszystkie wywołania `QueryInterface` w oknie danych wyjściowych.  
   
 ```
@@ -86,7 +81,7 @@ Te makra udostępniać przydatne narzędzia debugowania i śledzenia.
   
  *Nazwa interfejsu* - `failed`  
   
-##  <a name="atlassert"></a>ATLASSERT  
+##  <a name="atlassert"></a>  ATLASSERT  
  `ATLASSERT` Makro wykonuje te same funkcje co [_asserte —](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) makro znaleziono biblioteki wykonawcze języka C.  
   
 ```
@@ -103,7 +98,7 @@ ATLASSERT(booleanExpression);
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atldef.h  
     
-##  <a name="atlensure"></a>ATLENSURE  
+##  <a name="atlensure"></a>  ATLENSURE  
  To makro jest używane do sprawdzania poprawności parametrów przekazanych do funkcji.  
   
 ```
@@ -135,7 +130,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afx.h  
 
-##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL  
+##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL  
  W kompilacjach do debugowania ATL wysyła ciąg " `funcname` nie jest zaimplementowana" zrzutu urządzenia i zwraca **E_NOTIMPL**.  
   
 ```
@@ -155,7 +150,7 @@ ATLTRACENOTIMPL(funcname);
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atltrace.h 
 
-##  <a name="atltrace"></a>ATLTRACE
+##  <a name="atltrace"></a>  ATLTRACE
  Raporty ostrzeżenia na urządzeniach, takich jak okna debugera, zgodnie z określoną flagi i poziomów. Zawarte dla zgodności z poprzednimi wersjami.  
   
 ```
@@ -183,7 +178,7 @@ ATLTRACE(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [ATLTRACE2](#atltrace2) opis **ATLTRACE**. **ATLTRACE** i `ATLTRACE2` ma takie samo zachowanie **ATLTRACE** dla zgodności z poprzednimi wersjami.  
   
-##  <a name="atltrace2"></a>ATLTRACE2  
+##  <a name="atltrace2"></a>  ATLTRACE2  
  Raporty ostrzeżenia na urządzeniach, takich jak okna debugera, zgodnie z określoną flagi i poziomów.  
   
 ```
@@ -264,7 +259,7 @@ ATLTRACE2(
   
  W kompilacjach wydania `ATLTRACE2` kompiluje do `(void) 0`.  
   
- `ATLTRACE2`ogranicza zawartość ciąg, który ma zostać wysłany do urządzeń zrzutu do nie więcej niż 1023 znaków po sformatowaniu.  
+ `ATLTRACE2` ogranicza zawartość ciąg, który ma zostać wysłany do urządzeń zrzutu do nie więcej niż 1023 znaków po sformatowaniu.  
   
  **ATLTRACE** i `ATLTRACE2` ma takie samo zachowanie **ATLTRACE** dla zgodności z poprzednimi wersjami.  
   

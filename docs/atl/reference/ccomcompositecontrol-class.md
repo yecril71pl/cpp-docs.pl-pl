@@ -1,12 +1,9 @@
 ---
 title: Klasa CComCompositeControl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCompositeControl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2308c2c8da67a7d6fe048f3e498e6d7ba1e3cad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 592eb6c897f47bede5aa0a09149aaf791e8cfbce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcompositecontrol-class"></a>Klasa CComCompositeControl
 Ta klasa udostępnia metody wymagane do wykonania formantu złożonego.  
@@ -83,7 +78,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="remarks"></a>Uwagi  
  Klasy pochodne klasy `CComCompositeControl` dziedziczyć funkcje złożonego formantu ActiveX. Kontrolki ActiveX pochodną `CComCompositeControl` są obsługiwane przez standardowe okno dialogowe. Typy formantów są nazywane formanty złożone, ponieważ są w stanie obsługiwać inne formanty (native formantów systemu Windows i formantów ActiveX).  
   
- `CComCompositeControl`Określa zasób okna dialogowego do użycia w tworzenie formantu złożonego, wyszukując element członkowski wyliczenia danych klasy podrzędnej. Element członkowski IDD tej klasy podrzędnej jest ustawiony na identyfikator zasobu zasobu okna dialogowego, która będzie służyć jako okno formantu. Poniżej przedstawiono przykład elementu członkowskiego danych, która jest pochodną klasy `CComCompositeControl` powinien zawierać do identyfikacji zasobu okna dialogowego do użycia dla formantu okna:  
+ `CComCompositeControl` Określa zasób okna dialogowego do użycia w tworzenie formantu złożonego, wyszukując element członkowski wyliczenia danych klasy podrzędnej. Element członkowski IDD tej klasy podrzędnej jest ustawiony na identyfikator zasobu zasobu okna dialogowego, która będzie służyć jako okno formantu. Poniżej przedstawiono przykład elementu członkowskiego danych, która jest pochodną klasy `CComCompositeControl` powinien zawierać do identyfikacji zasobu okna dialogowego do użycia dla formantu okna:  
   
  [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]  
   
@@ -110,7 +105,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlctl.h  
   
-##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap  
  Wywołaj tę metodę w celu poinformowania lub unadvise wszystkich kontrolek formantu złożonego na użytek.  
   
 ```
@@ -143,7 +138,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="remarks"></a>Uwagi  
  Podstawowa implementacja tej metody przeszuka wpisy zdarzeń zbiornika mapy. Następnie zaleceniem lub unadvises punkty połączenia do obiektów COM opisanego przez wpisy zbiornika mapy obiekt sink zdarzenia. Ta metoda elementu członkowskiego również jest oparta na fakt, że klasa pochodna dziedziczy z jednego wystąpienia `IDispEventImpl` dla każdego formantu w mapie zbiornika, który ma być zaleca lub unadvised.  
   
-##  <a name="calcextent"></a>CComCompositeControl::CalcExtent  
+##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent  
  Wywołanie tej metody można obliczyć rozmiaru w **HIMETRIC** jednostki zasobu okna dialogowego używany do obsługi złożonych kontrolek.  
   
 ```
@@ -160,7 +155,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="remarks"></a>Uwagi  
  Rozmiar jest zwracany w `size` parametru.  
   
-##  <a name="create"></a>CComCompositeControl::Create  
+##  <a name="create"></a>  CComCompositeControl::Create  
  Ta metoda jest wywoływana w celu utworzenia okna formantu złożonego formantu.  
   
 ```
@@ -186,7 +181,7 @@ HWND Create(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest zazwyczaj wywoływana podczas aktywacji w miejscu formantu.  
   
-##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
+##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl  
  Konstruktor.  
   
 ```
@@ -196,7 +191,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Uwagi  
  Inicjuje [CComCompositeControl::m_hbrBackground](#m_hbrbackground) i [CComCompositeControl::m_hWndFocus](#m_hwndfocus) elementy członkowskie danych na wartość NULL.  
   
-##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
+##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl  
  Destruktor.  
   
 ```
@@ -206,7 +201,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Uwagi  
  Usuwa obiekt tła, jeśli istnieje.  
   
-##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow  
  Wywołaj tę metodę, aby utworzyć okno kontrolki i służyć poradą wszystkie formanty hostowanej.  
   
 ```
@@ -228,21 +223,21 @@ virtual HWND CreateControlWindow(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wywołuje [CComCompositeControl::Create](#create) i [CComCompositeControl::AdviseSinkMap](#advisesinkmap).  
   
-##  <a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
+##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground  
  Pędzel tła.  
   
 ```
 HBRUSH m_hbrBackground;
 ```  
   
-##  <a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
+##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus  
  Uchwyt okna, który aktualnie ma fokus.  
   
 ```
 HWND m_hWndFocus;
 ```  
   
-##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
+##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient  
  Wywołaj tę metodę, aby ustawić kolor tła formantu złożonego za pomocą kontenera kolor tła.  
   
 ```

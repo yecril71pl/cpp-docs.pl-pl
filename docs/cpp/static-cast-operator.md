@@ -1,12 +1,9 @@
 ---
 title: static_cast Operator | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - static_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3913937d9099304c478404c4c55a09fa54392785
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0cd6ea7e2268940febca9e1e564f30d29dcff0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="staticcast-operator"></a>Operator static_cast
 Konwertuje *wyrażenie* do typu *identyfikator typu* oparte tylko na typy, które znajdują się w wyrażeniu.  
@@ -41,7 +36,7 @@ static_cast <type-id> ( expression )
   
  `static_cast` Operator może służyć do operacji, takich jak konwersja wskaźnika do klasy podstawowej na wskaźnik do klasy pochodnej. Takie konwersje nie zawsze są bezpieczne.  
   
- Ogólnie rzecz biorąc użyj `static_cast` niektórych typów danych umożliwia konwertowanie typów danych liczbowych, takich jak typy wyliczeniowe wskazówki lub wskazówki elementów przestawnych, i są zaangażowane w konwersji. `static_cast`Konwersje nie są bezpieczne, jak i `dynamic_cast` konwersji, ponieważ `static_cast` sprawdza nie typu run-time, podczas gdy `dynamic_cast` jest. A `dynamic_cast` do wskaźnika niejednoznaczne zakończy się niepowodzeniem, gdy `static_cast` zwraca tak, jakby nie był nieprawidłowy; może to być niebezpieczne. Mimo że `dynamic_cast` konwersje są bezpieczniejsze, `dynamic_cast` tylko do działania na wskaźniki lub odniesienia i wyboru typu run-time jest zmniejszenie. Aby uzyskać więcej informacji, zobacz [dynamic_cast Operator](../cpp/dynamic-cast-operator.md).  
+ Ogólnie rzecz biorąc użyj `static_cast` niektórych typów danych umożliwia konwertowanie typów danych liczbowych, takich jak typy wyliczeniowe wskazówki lub wskazówki elementów przestawnych, i są zaangażowane w konwersji. `static_cast` Konwersje nie są bezpieczne, jak i `dynamic_cast` konwersji, ponieważ `static_cast` sprawdza nie typu run-time, podczas gdy `dynamic_cast` jest. A `dynamic_cast` do wskaźnika niejednoznaczne zakończy się niepowodzeniem, gdy `static_cast` zwraca tak, jakby nie był nieprawidłowy; może to być niebezpieczne. Mimo że `dynamic_cast` konwersje są bezpieczniejsze, `dynamic_cast` tylko do działania na wskaźniki lub odniesienia i wyboru typu run-time jest zmniejszenie. Aby uzyskać więcej informacji, zobacz [dynamic_cast Operator](../cpp/dynamic-cast-operator.md).  
   
  W następującym przykładzie, wiersz `D* pd2 = static_cast<D*>(pb);` nie jest bezpieczne ponieważ `D` mogą mieć pól i metod, które nie znajdują się w `B`. Jednak wiersza `B* pb2 = static_cast<B*>(pd);` jest bezpieczne konwersji, ponieważ `D` zawsze zawiera wszystkie `B`.  
   

@@ -1,13 +1,10 @@
 ---
-title: "scanf — specyfikacje szerokości | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: scanf — specyfikacje szerokości | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0052f4b270366b2f3aa1e1550f790efcb860597
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scanf-width-specification"></a>scanf — Specyfikacje szerokości
 Te informacje dotyczą interpretacji ciągów formatu w `scanf` rodziny funkcji, takich jak także bezpiecznego wersji `scanf_s`. Funkcje te zwykle założenie, że strumień wejściowy jest podzielony na sekwencja tokenów. Tokeny są rozdzielone odstępem (miejsce, karty lub nowego wiersza) lub w przypadku typów wartości liczbowych, do końca fizycznych typu danych numerycznych wskazywany przez pierwszego znaku, której nie można przekonwertować na tekst wartości liczbowych. Specyfikacja szerokości można jednak powoduje analizowanie danych wejściowych zatrzymać przed zakończeniem fizycznych tokenu.  
@@ -69,15 +64,15 @@ scanf_s("%20s", str, 21);
 |**długie long**|**wszystko**|**d**, **i**, **o**, **x**, lub **X**|  
 |`short int`|**h**|**d**, **i**, **o**, **x**, lub **X**|  
 |**krótkich liczb całkowitych bez znaku**|**h**|**u**|  
-|__**int64**|**KOMPUTERACH 64**|**d**, **i**, **o**, **u**, **x**, lub **X**|  
-|Znaków z`scanf`|**h**|**c** lub **C**|  
-|Znaków z`wscanf`|**h**|**c** lub **C**|  
-|Szerokich znaków z`scanf`|**l**|**c** lub **C**|  
-|Szerokich znaków z`wscanf`|**l**|**c**, lub **C**|  
-|Jednobajtowe — ciąg znaków z`scanf`|**h**|**s** lub **S**|  
-|Jednobajtowe — ciąg znaków z`wscanf`|**h**|**s** lub **S**|  
-|Ciąg znaków dwubajtowych z`scanf`|**l**|**s** lub **S**|  
-|Ciąg znaków dwubajtowych z`wscanf`|**l**|**s** lub **S**|  
+|__**int64**|**I64**|**d**, **i**, **o**, **u**, **x**, lub **X**|  
+|Znaków z `scanf`|**h**|**c** lub **C**|  
+|Znaków z `wscanf`|**h**|**c** lub **C**|  
+|Szerokich znaków z `scanf`|**l**|**c** lub **C**|  
+|Szerokich znaków z `wscanf`|**l**|**c**, lub **C**|  
+|Jednobajtowe — ciąg znaków z `scanf`|**h**|**s** lub **S**|  
+|Jednobajtowe — ciąg znaków z `wscanf`|**h**|**s** lub **S**|  
+|Ciąg znaków dwubajtowych z `scanf`|**l**|**s** lub **S**|  
+|Ciąg znaków dwubajtowych z `wscanf`|**l**|**s** lub **S**|  
   
  W poniższych przykładach użyto **h** i **l** z `scanf_s` funkcje i `wscanf_s` funkcje:  
   
@@ -94,7 +89,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
  Należy pamiętać, że **% [a-z]** i **% [z-a]** będą interpretowane jako odpowiednik **%[abcde...z]**. Jest to wspólny `scanf` rozszerzenia funkcji, ale należy pamiętać, że standardu ANSI nie wymaga.  
   
 ## <a name="reading-unterminated-strings"></a>Niezakończony odczytu ciągów  
- Aby ciąg bez przechowywania znak końcowy null ('\0'), należy użyć specyfikację `%`  *n*  **c** gdzie  *n*  jest dziesiętną liczbą całkowitą. W takim przypadku **c** znaku typu wskazuje, że argument jest wskaźnik do tablicy znaków. Następne  *n*  znaki są odczytywane ze strumienia wejściowego w określonej lokalizacji, a nie znak null ('\0') jest dołączony. Jeśli  *n*  nie zostanie określony, jego wartość domyślna to 1.  
+ Aby ciąg bez przechowywania znak końcowy null ('\0'), należy użyć specyfikację `%` *n *** c** gdy *n* jest dziesiętną liczbą całkowitą. W takim przypadku **c** znaku typu wskazuje, że argument jest wskaźnik do tablicy znaków. Następne *n* znaki są odczytywane ze strumienia wejściowego w określonej lokalizacji, a nie znak null ('\0') jest dołączony. Jeśli *n* nie zostanie określony, jego wartość domyślna to 1.  
   
 ## <a name="when-scanf-stops-reading-a-field"></a>Gdy scanf zatrzymuje odczytywania pola  
  `scanf` Funkcja skanuje każdego pola wejściowego, znak po znaku. Może zatrzymać, odczytywania określonego pola wejściowego, przed jego znak spacji z różnych powodów:  

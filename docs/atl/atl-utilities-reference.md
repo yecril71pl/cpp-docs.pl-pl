@@ -1,27 +1,22 @@
 ---
-title: "Odwołanie do narzędzi ALT | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Odwołanie do narzędzi ALT | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b802d8764dda321e2e313f793f4f2e4745dbcc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-utilities-reference"></a>Odwołanie do narzędzi ALT
 ATL udostępnia kod do manipulowania adresy URL i ścieżki w formie [CPathT](../atl/reference/cpatht-class.md) i [CUrl](../atl/reference/curl-class.md). Puli wątków [CThreadPool](../atl/reference/cthreadpool-class.md), mogą być używane w aplikacji. Ten kod znajduje się w atlpath.h i atlutil.h.  

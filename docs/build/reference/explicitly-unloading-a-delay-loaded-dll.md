@@ -1,13 +1,10 @@
 ---
-title: "Jawne zwalnianie bibliotek DLL załadowanych z opóźnieniem | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Jawne zwalnianie bibliotek DLL załadowanych z opóźnieniem | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b26a1a17952693be9db6a80649aad2c40227d53e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 171acf9689c01649b86c2383d17136c926e25c57
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Jawne zwalnianie bibliotek DLL załadowanych z opóźnieniem
 [/Delay](../../build/reference/delay-delay-load-import-settings.md): unload — opcja konsolidatora można zwolnić bibliotekę DLL, która załadowane z opóźnieniem. Domyślnie po kodzie zwalnia biblioteki DLL (przy użyciu/DELAY: Unload i **__FUnloadDelayLoadedDLL2**), pozostają Importy załadowane z opóźnieniem w tabelę adresów importu (IAT). Jednak jeśli używasz/DELAY: Unload w wierszu polecenia konsolidatora funkcji Pomocnik będzie obsługiwać ładowanej biblioteki DLL zresetowanie IAT do postaci oryginalnej; wskaźniki obecnie nieprawidłowym zostaną zastąpione. IAT jest polem w [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) zawierający adres kopię oryginalnej IAT (jeśli istnieje).  

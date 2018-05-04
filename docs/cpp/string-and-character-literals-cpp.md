@@ -2,11 +2,8 @@
 title: Literały ciągów i znakowe (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - R
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8714ff649471b0f84e11a65ae4100c8facb06c52
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: cede3ee6efb063141fc9ba7db58c6ec1dbcae845
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-and-character-literals--c"></a>Literały ciągów i znakowe (C++)
 C++ obsługuje różne typy ciągów i znakowe i zapewnia sposobów express wartości literałów dla każdego z tych typów. W kodzie źródłowym express jest zawartość z literały znaków i ciąg, przy użyciu zestawu znaków. Uniwersalne nazwy znaków i znaki specjalne umożliwia express dowolny ciąg przy użyciu zestawu znaków podstawowego źródła. Nieprzetworzonego literału ciągu pozwala uniknąć przy użyciu znaki specjalne i może służyć do express wszystkie typy literałów ciągów. Można również utworzyć literałów std::string bez konieczności wykonać kroki konwersji lub dodatkowe konstrukcji.  

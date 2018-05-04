@@ -1,13 +1,10 @@
 ---
-title: "Spróbuj — z wyjątkiem Statement (C) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Spróbuj — z wyjątkiem Statement (C) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,20 +16,18 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9896e8a348a70ff6e27342f53f627097ef15dfa8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c55ff2599fac14be0be9ac852727167dd34e02d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-except-statement-c"></a>try-except — instrukcja (C)
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  **Spróbuj — z wyjątkiem** instrukcji to rozszerzenie firmy Microsoft dla języka C, który umożliwia aplikacjom przejąć kontrolę nad programu w przypadku wystąpienia zdarzenia, które zwykle na zakończenie wykonywania. Takie zdarzenia nazywane są wyjątkami, a mechanizm, który zajmuje się wyjątkami nazywa się strukturalną obsługą wyjątków.  
   
@@ -52,11 +47,11 @@ ms.lasthandoff: 12/21/2017
   
 3.  Jeśli wystąpi wyjątek podczas wykonywania sekcji ochroną lub w dowolnej procedury wywołuje sekcji ochroną, `__except` wyrażenie jest obliczane i wartość zwracana określa sposób obsługi wyjątków. Istnieją trzy wartości:  
   
-     `EXCEPTION_CONTINUE_SEARCH`Wyjątek nie został rozpoznany. Kontynuować wyszukiwanie górę stosu w przypadku obsługi najpierw zawierający **spróbuj — z wyjątkiem** instrukcje, a następnie dla programów obsługi o najwyższym priorytecie dalej.  
+     `EXCEPTION_CONTINUE_SEARCH` Wyjątek nie został rozpoznany. Kontynuować wyszukiwanie górę stosu w przypadku obsługi najpierw zawierający **spróbuj — z wyjątkiem** instrukcje, a następnie dla programów obsługi o najwyższym priorytecie dalej.  
   
-     `EXCEPTION_CONTINUE_EXECUTION`Wyjątek jest rozpoznany, ale zostanie odrzucony. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.  
+     `EXCEPTION_CONTINUE_EXECUTION` Wyjątek jest rozpoznany, ale zostanie odrzucony. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.  
   
-     `EXCEPTION_EXECUTE_HANDLER`Wyjątek został rozpoznany. Transfer kontroli do obsługi wyjątków, wykonując `__except` instrukcja złożona, a następnie kontynuować działanie w momencie Wystąpił wyjątek.  
+     `EXCEPTION_EXECUTE_HANDLER` Wyjątek został rozpoznany. Transfer kontroli do obsługi wyjątków, wykonując `__except` instrukcja złożona, a następnie kontynuować działanie w momencie Wystąpił wyjątek.  
   
  Ponieważ `__except` wyrażenie jest obliczane jako wyrażenie C, jest ograniczona do jednej wartości, operator wyrażenia warunkowego lub przecinka. Jeśli wymagane jest bardziej rozległe przetwarzanie, wyrażenie może wywołać procedurę, która zwraca jedną z trzech wartości wymienionych powyżej.  
   

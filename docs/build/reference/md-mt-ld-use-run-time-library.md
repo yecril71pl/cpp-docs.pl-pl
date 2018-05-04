@@ -2,12 +2,9 @@
 title: -MT, -LD -MD, (biblioteki wykonawczej Użyj) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ld
 - /mt
@@ -44,17 +41,15 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b54a6aac55554cd7bd4698762779e540c4bc4c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b6fc814c1c2b0630a99cdaa19601be25c861580
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Korzystaj z bibliotek wykonawczych)
 Wskazuje, czy moduł wielowątkowy jest biblioteką DLL i określa wersje biblioteki wykonawczej handlowe lub przeznaczone do debugowania.  
@@ -71,12 +66,12 @@ Wskazuje, czy moduł wielowątkowy jest biblioteką DLL i określa wersje biblio
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/ / MD**|Powoduje, że aplikacja korzysta z wersji biblioteki wykonawczej specyficznej dla wielowątkowości i specyficznej dla DLL. Definiuje `_MT` i `_DLL` i powoduje, że kompilator umieszcza nazwę biblioteki MSVCRT.lib w pliku obj.<br /><br /> Aplikacje skompilowane przy użyciu tej opcji są łączone statycznie z MSVCRT.lib. Ta biblioteka zawiera warstwę kodu, która umożliwia konsolidatorowi rozwiązywanie odwołań zewnętrznych. Rzeczywisty kod pracy jest zawarta w MSVCR*numerwersji*. Biblioteki DLL, który musi być dostępny w czasie wykonywania dla aplikacji związane z MSVCRT.lib.|  
-|**/ MDd**|Definiuje `_DEBUG`, `_MT`, i `_DLL` i powoduje, że aplikacja korzysta z debugowania specyficzne dla wielowątkowej i specyficznej dla biblioteki DLL wersji biblioteki czasu wykonywania. Powoduje też, że kompilator umieszcza nazwę biblioteki MSVCRTD.lib w pliku .obj.|  
-|**/ MT**|Powoduje, że aplikacja korzysta ze statycznej, wielowątkowej wersji biblioteki wykonawczej. Definiuje `_MT` i powoduje, że kompilator umieszcza nazwę biblioteki LIBCMT.lib w pliku .obj, tak aby konsolidator używał LIBCMT.lib do rozpoznawania symboli zewnętrznych.|  
+|**/MD**|Powoduje, że aplikacja korzysta z wersji biblioteki wykonawczej specyficznej dla wielowątkowości i specyficznej dla DLL. Definiuje `_MT` i `_DLL` i powoduje, że kompilator umieszcza nazwę biblioteki MSVCRT.lib w pliku obj.<br /><br /> Aplikacje skompilowane przy użyciu tej opcji są łączone statycznie z MSVCRT.lib. Ta biblioteka zawiera warstwę kodu, która umożliwia konsolidatorowi rozwiązywanie odwołań zewnętrznych. Rzeczywisty kod pracy jest zawarta w MSVCR*numerwersji*. Biblioteki DLL, który musi być dostępny w czasie wykonywania dla aplikacji związane z MSVCRT.lib.|  
+|**/MDd**|Definiuje `_DEBUG`, `_MT`, i `_DLL` i powoduje, że aplikacja korzysta z debugowania specyficzne dla wielowątkowej i specyficznej dla biblioteki DLL wersji biblioteki czasu wykonywania. Powoduje też, że kompilator umieszcza nazwę biblioteki MSVCRTD.lib w pliku .obj.|  
+|**/MT**|Powoduje, że aplikacja korzysta ze statycznej, wielowątkowej wersji biblioteki wykonawczej. Definiuje `_MT` i powoduje, że kompilator umieszcza nazwę biblioteki LIBCMT.lib w pliku .obj, tak aby konsolidator używał LIBCMT.lib do rozpoznawania symboli zewnętrznych.|  
 |**/ MTd**|Definiuje `_DEBUG` i `_MT`. Ta opcja również powoduje, że kompilator umieszcza nazwę biblioteki LIBCMTD.lib w pliku .obj, tak aby konsolidator użył LIBCMTD.lib, aby rozwiązać zewnętrzne symbole.|  
 |**/LD**|Tworzy DLL.<br /><br /> Przekazuje **/dll** opcji do konsolidatora. Konsolidator szuka, ale nie wymaga `DllMain` funkcji. Jeśli nie zapisuj `DllMain` wstawia konsolidator funkcji `DllMain` funkcja, która zwraca wartość TRUE.<br /><br /> Łączy kod uruchamiający biblioteki DLL.<br /><br /> Tworzy bibliotekę importu (.lib), jeżeli nie określono pliku eksportu (.exp) w wierszu polecenia. Bibliotekę importu łączy się z aplikacjami, które wywołują bibliotekę DLL.<br /><br /> Interpretuje [/Fe (Nazwij plik EXE)](../../build/reference/fe-name-exe-file.md) jako nazwy biblioteki DLL, zamiast pliku .exe. Domyślnie nazwa programu staje się *nazwę bazową*dll zamiast *nazwę bazową*.exe.<br /><br /> Oznacza **/MT** , chyba że zostaną jawnie określone **/ / MD**.|  
-|**/ LDd**|Tworzy DLL przeznaczoną do debugowania. Definiuje `_MT` i `_DEBUG`.|  
+|**/LDd**|Tworzy DLL przeznaczoną do debugowania. Definiuje `_MT` i `_DEBUG`.|  
   
  Aby uzyskać więcej informacji na temat biblioteki wykonawcze języka C i które biblioteki są używane podczas kompilacji z [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md), zobacz [Biblioteka CRT — funkcje](../../c-runtime-library/crt-library-features.md).  
   

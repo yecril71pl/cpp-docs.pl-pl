@@ -1,29 +1,24 @@
 ---
 title: Opcje kompilatora rozbiciu na kategorie | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87eb79e7932d18ac5aae47a39ec207fec326d58e
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: fff661bf573ca30a5b0e7550c2e53b00a7ff3d8f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-by-category"></a>Opcje kompilatora w rozbiciu na kategorie
 
@@ -38,7 +33,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetycz
 |[/Ob](ob-inline-function-expansion.md)|Określa rozszerzenie funkcji wbudowanej.|
 |[/Od](od-disable-debug.md)|Wyłącza optymalizacji.|
 |[/Og](og-global-optimizations.md)|Przestarzałe. Używa optymalizacje globalne.|
-|[/Oi](oi-generate-intrinsic-functions.md)|Generuje funkcje wewnętrzne.|
+|[/OI](oi-generate-intrinsic-functions.md)|Generuje funkcje wewnętrzne.|
 |[/ OS](os-ot-favor-small-code-favor-fast-code.md)|Preferuje mały kod.|
 |[/OT](os-ot-favor-small-code-favor-fast-code.md)|Pełne szybki kod.|
 |[/Ox](ox-full-optimization.md)|Używa optymalizacji maksymalną (/ Ob2gity/GS).|
@@ -79,7 +74,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetycz
 |[QIfist](qifist-suppress-ftol.md)|Przestarzałe. Pomija wywołanie funkcji Pomocnik `_ftol` podczas konwersji z typu zmiennoprzecinkowego na typ całkowity jest wymagana. (tylko x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Usuwa `fwait` poleceniach wewnątrz `try` bloków.|
 |[/Qpar](qpar-auto-parallelizer.md)|Umożliwia automatyczne paralelizacja pętli.|
-|[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Włącza raportowanie poziomy automatyczna paralelizacja.|
+|[/ Qpar raport](qpar-report-auto-parallelizer-reporting-level.md)|Włącza raportowanie poziomy automatyczna paralelizacja.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Instrukcje przenoszenia całkowitą używa wartości zmiennoprzecinkowych i wyłącza niektórych zmiennoprzecinkową optymalizacje obciążenia punktu.|
 |[/Qspectre](qspectre.md)|Włącz środki zaradcze dla CVE 2017-5753 dla klasy Spectre ataków.|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|Włącza raportowanie poziomy vectorization automatycznego.|
@@ -97,7 +92,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetycz
 |[/Fe](fe-name-exe-file.md)|Zmienia nazwę pliku wykonywalnego.|
 |[/Fi](fi-preprocess-output-file-name.md)|Określa nazwę pliku wstępnie przetworzonych danych wyjściowych.|
 |[/Fm](fm-name-mapfile.md)|Tworzy plik mapowania.|
-|[/Fo](fo-object-file-name.md)|Tworzy plik obiektu.|
+|[/FO](fo-object-file-name.md)|Tworzy plik obiektu.|
 |[/ FP](fp-name-dot-pch-file.md)|Określa nazwę pliku prekompilowanego nagłówka.|
 |[/ FR, /Fr](fr-fr-create-dot-sbr-file.md)|Wygenerowana nazwa plików SBR przeglądarki.|
 
@@ -139,7 +134,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetycz
 |[/ZI](z7-zi-zi-debug-information-format.md)|Zawiera informacje o debugowaniu w bazie danych programu zgodne z opcją Edytuj i Kontynuuj. (tylko x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Generuje pełne informacje debugowania.|
 |[/Zl](zl-omit-default-library-name.md)|Usuwa domyślną nazwę biblioteki z pliku .obj.|
-|[/Zp](zp-struct-member-alignment.md) *n*|Pakiety struktury elementów członkowskich.|
+|[/ZP](zp-struct-member-alignment.md) *n*|Pakiety struktury elementów członkowskich.|
 |[/Zs](zs-syntax-check-only.md)|Sprawdza, czy tylko składni.|
 |[/ZW](zw-windows-runtime-compilation.md)|Tworzy plik wyjściowy do uruchamiania na środowiska uruchomieniowego systemu Windows.|
 
@@ -163,7 +158,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetycz
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|Wyświetla listę opcji kompilatora.|
 |[@](at-specify-a-compiler-response-file.md)|Określa plik odpowiedzi.|
-|[/analyze](analyze-code-analysis.md)|Umożliwia analizy kodu.|
+|[/ analyze](analyze-code-analysis.md)|Umożliwia analizy kodu.|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Zwiększa liczbę adresowanego sekcji w pliku .obj.|
 |[/c](c-compile-without-linking.md)|Kompiluje bez konsolidacji.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Określa liczbę wątków cl.exe do użycia na potrzeby optymalizacji i generowania kodu.|
@@ -177,7 +172,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetycz
 |[/MP](mp-build-with-multiple-processes.md)|Tworzy jednocześnie wiele plików źródłowych.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Pomija wyświetlanie banera logowania jednokrotnego.|
 |[/ SDL](sdl-enable-additional-security-checks.md)|Włącza dodatkowe funkcje zabezpieczeń i ostrzeżenia.|
-|[/showIncludes](showincludes-list-include-files.md)|Wyświetla listę wszystkich pliki dołączane podczas kompilacji.|
+|[/ showincludes](showincludes-list-include-files.md)|Wyświetla listę wszystkich pliki dołączane podczas kompilacji.|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy C.|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Określa, że wszystkie pliki źródłowe pakietu to C.|
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy języka C++.|
@@ -212,7 +207,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby uzyskać alfabetycz
 
 |Opcja|Cel|
 |------------|-------------|
-|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Przestarzałe. Użyj [/LN (Utwórz moduł MSIL)](ln-create-msil-module.md) zamiast tego.|
+|[/CLR:noAssembly](clr-common-language-runtime-compilation.md)|Przestarzałe. Użyj [/LN (Utwórz moduł MSIL)](ln-create-msil-module.md) zamiast tego.|
 |[/FR](fr-fr-create-dot-sbr-file.md)|Przestarzałe. Tworzy plik informacji przeglądania bez zmiennych lokalnych.|
 |[/Ge](ge-enable-stack-probes.md)|Przestarzałe. Aktywuje sondy stosu. Na domyślnie.|
 |[/GX](gx-enable-exception-handling.md)|Przestarzałe. Włącza obsługę synchronicznych wyjątku. Użyj [/EH](eh-exception-handling-model.md) zamiast tego.|

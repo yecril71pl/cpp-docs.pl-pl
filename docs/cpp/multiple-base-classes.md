@@ -2,11 +2,8 @@
 title: Wiele klas podstawowych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-base-classes"></a>Wiele klas podstawowych
 Zgodnie z opisem w [dziedziczenie wielokrotne](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), klasy mogą pochodzić z więcej niż jedną klasę podstawową. W modelu dziedziczenia wielokrotnego (gdzie klasy pochodne więcej niż jedną klasę podstawową) klasy podstawowe są określane za pomocą *lista podstawowego* element gramatyki. Na przykład, można określić deklarację klasy dla `CollectionOfBook`, pochodzącej z `Collection` i `Book`:  
@@ -69,7 +64,7 @@ Wykres symulowanej kolejki po obiad
   
  Na rysunku `Queue` jest klasą bazową dla `CashierQueue` i `LunchQueue`. Jednakże, gdy obie klasy są połączone, tworząc `LunchCashierQueue`, pojawia się następujący problem: nowa klasa zawiera dwa podobiekty typu `Queue`, jeden `CashierQueue`, a drugi `LunchQueue`. Na poniższej ilustracji pokazano koncepcyjny układ pamięci (rzeczywisty układ pamięci może być zoptymalizowany).  
   
- ![Symulowane obiad &#45; obiekt](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![Symulowane obiad&#45;obiektu wiersza](../cpp/media/vc38xp2.gif "vc38XP2")  
 Obiekt symulowanej kolejki po obiad  
   
  Należy zauważyć, że istnieją dwa podobiekty `Queue` w obiekcie `LunchCashierQueue`. W poniższym kodzie `Queue` zadeklarowano jako wirtualną klasę bazową:  
@@ -85,7 +80,7 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
   
  Słowo kluczowe `virtual` zapewnia, że zawarta jest tylko jedna kopia podobiektu `Queue` (patrz poniższy rysunek).  
   
- ![Symulowane obiad &#45; obiektu wiersza i wirtualne klasy podstawowe](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![Symulowane obiad&#45;obiektu wiersza, wirtualne klasy podstawowe](../cpp/media/vc38xp3.gif "vc38XP3")  
 Obiekt symulowanej kolejki po obiad z wirtualnymi klasami podstawowymi  
   
  Klasa może mieć zarówno wirtualny jak i niewirtualny składnik danego typu. Tak się dzieje w warunkach przedstawionych na poniższej ilustracji.  

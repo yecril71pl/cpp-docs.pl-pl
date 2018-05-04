@@ -1,29 +1,24 @@
 ---
-title: "Zwężanie liczb całkowitych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zwężanie liczb całkowitych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - demoting integers
 ms.assetid: 51fb3654-60b0-4de7-80eb-bd910086c18a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30af1eb47bc459cccf9ad08c36d05a3fe7b31bf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d380fd36cc71b6d188bbbfe8e51ce3185405611
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="demotion-of-integers"></a>Zwężanie liczb całkowitych
 **ANSI 3.2.1.2** wynik konwersji typu integer na krótszą całkowita lub wynik konwersji całkowitą bez znaku na liczbę całkowitą ze znakiem o równej długości, jeśli wartość nie może być reprezentowany  

@@ -2,12 +2,9 @@
 title: Zarządzanie biblioteką | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLibrarianTool.AdditionalDependencies
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ced49a960aea0b32365b80fe76095893f63d5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97c6da9e12e9071b4792476d2e49739a55d7ea8e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-a-library"></a>Zarządzanie biblioteką
 Jest to domyślny tryb dla LIB do tworzenia lub modyfikowania biblioteki obiektów COFF. LIB działa w tym trybie, jeśli nie określisz/extract (Aby skopiować obiekt do pliku) lub/DEF (do tworzenia biblioteki importowanej).  
@@ -76,7 +71,7 @@ LIB [options...] files...
   
  Następujące opcje są stosowane do tworzenia i modyfikowania biblioteki:  
   
- / LIBPATH:`dir`  
+ / LIBPATH: `dir`  
  Powoduje zastąpienie środowiska ścieżki biblioteki. Aby uzyskać więcej informacji, zobacz opis łącza [/libpath](../../build/reference/libpath-additional-libpath.md) opcji.  
   
  / LIST  
@@ -94,7 +89,7 @@ LIB [options...] files...
  / REMOVE: *obiektu*  
  Pomija określony *obiektu* z biblioteki wyjściowej. LIB tworzy bibliotekę wyjściową, łącząc wszystkie obiekty (zarówno w plikach obiektu lub biblioteki), a następnie usuwając wszystkie obiekty określone za pomocą/Remove.  
   
- / SUBSYSTEM: {KONSOLI &#124; EFI_APPLICATION &#124; EFI_BOOT_SERVICE_DRIVER &#124; EFI_ROM &#124; EFI_RUNTIME_DRIVER &#124; NATYWNY &#124; POSIX &#124; WINDOWS &#124; WINDOWSCE} [, #[. ##]]  
+ / SUBSYSTEM: {KONSOLI &AMP;#124; EFI_APPLICATION &AMP;#124; EFI_BOOT_SERVICE_DRIVER &AMP;#124; EFI_ROM &AMP;#124; EFI_RUNTIME_DRIVER &AMP;#124; NATYWNEGO &AMP;#124; POSIX &AMP;#124; WINDOWS &AMP;#124; WINDOWSCE} [, #[. ##]]  
  Informuje system operacyjny, jak uruchomić program utworzony przez łączenie z biblioteki wyjściowej. Aby uzyskać więcej informacji, zobacz opis łącza [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) opcji.  
   
  Opcje LIB określona w wierszu polecenia nie jest uwzględniana.  

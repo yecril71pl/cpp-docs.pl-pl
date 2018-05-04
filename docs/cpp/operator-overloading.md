@@ -1,12 +1,9 @@
 ---
-title: "Przeładowanie operatora | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przeładowanie operatora | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - operator_cpp
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617236d30f3c4473f6c7785db97789105d6cd565
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c7e80167c2022d5871d52879036dc9fef0d29f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operator-overloading"></a>Przeciążanie operatora
 `operator` — Słowo kluczowe deklaruje funkcję określenie, jakie `operator-symbol` oznacza to, gdy jest stosowany do wystąpienia klasy. Zapewnia znaczenie więcej niż jeden operator lub "overloads" go. Kompilator rozróżnia znaczenie innego operatora, sprawdzając typy argumentów.  
@@ -108,7 +103,7 @@ type operator operator-symbol ( parameter-list )
   
 -   [Przypisanie](../cpp/assignment.md)  
   
--   [Wywołania funkcji](../cpp/function-call-cpp.md)  
+-   [Wywołanie funkcji](../cpp/function-call-cpp.md)  
   
 -   [Tworzenie indeksów dolnych](../cpp/subscripting.md)  
   
@@ -116,7 +111,7 @@ type operator operator-symbol ( parameter-list )
   
 -   [Inkrementacja i dekrementacja](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
--   [Konwersje zdefiniowane przez użytkownika](../cpp/user-defined-type-conversions-cpp.md)  
+-   [Konwersje typów zdefiniowane przez użytkownika](../cpp/user-defined-type-conversions-cpp.md)  
   
  Operatory pokazano w poniższej tabeli nie może być przeciążony. W tabeli przedstawiono symboli preprocesora `#` i `##`.  
   
@@ -187,7 +182,7 @@ int main() {
   
 4.  [Przypisanie](../cpp/assignment.md)  
   
-5.  [Wywołania funkcji](../cpp/function-call-cpp.md)  
+5.  [Wywołanie funkcji](../cpp/function-call-cpp.md)  
   
 6.  [Tworzenie indeksów dolnych](../cpp/subscripting.md)  
   

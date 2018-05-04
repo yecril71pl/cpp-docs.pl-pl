@@ -1,12 +1,9 @@
 ---
 title: Klasa CSecurityAttributes | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSecurityAttributes
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 918f90c9f04736eb2328d989e21b7b9997edab86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csecurityattributes-class"></a>Klasa CSecurityAttributes
 Ta klasa jest cienką otoką dla struktury atrybutów zabezpieczeń.  
@@ -69,7 +64,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h  
   
-##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
+##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes  
  Konstruktor.  
   
 ```
@@ -84,7 +79,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
  `bInheritsHandle`  
  Określa, czy zwrócone dojścia jest dziedziczone po utworzeniu nowego procesu. Jeśli ten element członkowski ma wartość true, nowy proces dziedziczy dojście.  
   
-##  <a name="set"></a>CSecurityAttributes::Set  
+##  <a name="set"></a>  CSecurityAttributes::Set  
  Wywołanie tej metody, aby ustawić atrybuty `CSecurityAttributes` obiektu.  
   
 ```

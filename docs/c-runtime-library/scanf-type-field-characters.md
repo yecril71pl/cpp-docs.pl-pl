@@ -1,13 +1,10 @@
 ---
-title: "scanf — znaki pola typu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: scanf — znaki pola typu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr90.dll
 - msvcr80.dll
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - scanf function, type field characters
 ms.assetid: 5d546a84-715b-44ca-b1c5-bbe997f9ff62
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebc971ea109a0e83288f5bb000e09461f4fbefec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb4c1c25c5b45fc967954ea78a35a9420b712f81
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scanf-type-field-characters"></a>scanf — Znaki pola typu
 Poniższe informacje dotyczą poszczególnych `scanf` rodzinę funkcji, w tym bezpiecznego wersje, takie jak `scanf_s`.  
@@ -44,8 +39,8 @@ Poniższe informacje dotyczą poszczególnych `scanf` rodzinę funkcji, w tym be
   
 |Znak|Typ danych wejściowych jest oczekiwana|Typ argumentu|Rozmiar argumentu w bezpiecznej wersji?|  
 |---------------|----------------------------|----------------------|--------------------------------------|  
-|`c`|Znak. W przypadku użycia z `scanf` funkcje, określa znaków jednobajtowych; w przypadku użycia z `wscanf` funkcje, określa znaków dwubajtowych. Białe znaki, które zwykle są pomijane są odczytywane podczas `c` jest określona. Aby odczytać następny z systemem innym niż biały znak jednobajtowe, użyj `%1s`; do odczytania dalej z systemem innym niż biały znak całego, użyj `%1ws`.|Wskaźnik do `char` w przypadku użycia z `scanf` funkcji, wskaźnik do `wchar_t` w przypadku użycia z `wscanf` funkcji.|Wymagany. Wartość nie obejmuje miejsca dla terminatora o wartości null.|  
-|`C`|Przeciwne wielkość znaków. W przypadku użycia z `scanf` funkcje, określa znaków typu wide; w przypadku użycia z `wscanf` funkcje, określa znaków. Białe znaki, które zwykle są pomijane są odczytywane podczas `C` jest określona. Aby odczytać następny z systemem innym niż biały znak jednobajtowe, użyj `%1s`; do odczytania dalej z systemem innym niż biały znak całego, użyj `%1ws`.|Wskaźnik do `wchar_t` w przypadku użycia z `scanf` funkcji, wskaźnik do `char` w przypadku użycia z `wscanf` funkcji.|Wymagany. Rozmiar argumentu nie obejmuje miejsca dla terminatora o wartości null.|  
+|`c`|Znak. W przypadku użycia z `scanf` funkcje, określa znaków jednobajtowych; w przypadku użycia z `wscanf` funkcje, określa znaków dwubajtowych. Białe znaki, które zwykle są pomijane są odczytywane podczas `c` jest określona. Aby odczytać następny z systemem innym niż biały znak jednobajtowe, użyj `%1s`; do odczytania dalej z systemem innym niż biały znak całego, użyj `%1ws`.|Wskaźnik do `char` w przypadku użycia z `scanf` funkcji, wskaźnik do `wchar_t` w przypadku użycia z `wscanf` funkcji.|Wymagana. Wartość nie obejmuje miejsca dla terminatora o wartości null.|  
+|`C`|Przeciwne wielkość znaków. W przypadku użycia z `scanf` funkcje, określa znaków typu wide; w przypadku użycia z `wscanf` funkcje, określa znaków. Białe znaki, które zwykle są pomijane są odczytywane podczas `C` jest określona. Aby odczytać następny z systemem innym niż biały znak jednobajtowe, użyj `%1s`; do odczytania dalej z systemem innym niż biały znak całego, użyj `%1ws`.|Wskaźnik do `wchar_t` w przypadku użycia z `scanf` funkcji, wskaźnik do `char` w przypadku użycia z `wscanf` funkcji.|Wymagana. Rozmiar argumentu nie obejmuje miejsca dla terminatora o wartości null.|  
 |`d`|Dziesiętną liczbą całkowitą.|Wskaźnik do `int`.|Nie.|  
 |`i`|Liczba całkowita. Szesnastkowy, jeśli ciąg wejściowy rozpoczyna się od "0 x" lub "0 X" ósemkową, jeżeli ciąg rozpoczyna się od "0", w przeciwnym razie wartość dziesiętną.|Wskaźnik do `int`.|Nie.|  
 |`o`|Ósemkową liczby całkowitej.|Wskaźnik do `int`.|Nie.|  
@@ -55,8 +50,8 @@ Poniższe informacje dotyczą poszczególnych `scanf` rodzinę funkcji, w tym be
 |`e`, `E`, `f`, `F`, `g`, `G`|Wartość zmiennoprzecinkowa składające się z opcjonalne znak (+ lub -), serii jeden lub więcej cyfr dziesiętnych zawierające dziesiętnego i wykładnik opcjonalne ("e" lub "E"), a następnie opcjonalnie podpisem liczbę całkowitą z przedziału.|Wskaźnik do `float`.|Nie.|  
 |`a`, `A`|Wartość zmiennoprzecinkowa składające się z serii jeden lub więcej cyfr szesnastkowych zawierający opcjonalnym separatorem dziesiętnym i wykładnik ("p" lub "P"), a następnie wartości dziesiętnej.|Wskaźnik do `float`.|Nie.|  
 |`n`|Nie wprowadzono odczytu ze strumienia lub buforu.|Wskaźnik do `int`, do przechowywanej liczba znaków, która jest pomyślnie odczytane ze strumienia lub bufor do tego punktu w bieżącym wywołaniu `scanf` funkcji lub `wscanf` funkcji.|Nie.|  
-|`s`|Ciąg do pierwszego znaku spacji (miejsca, karty lub nowego wiersza). Aby odczytać ciągów nie są rozdzielone spacjami, należy użyć zestawu nawiasy kwadratowe (`[ ]`), zgodnie z opisem w [scanf — specyfikacje szerokości](../c-runtime-library/scanf-width-specification.md).|W przypadku użycia z `scanf` funkcje, oznacza, że tablica znaków; w przypadku użycia z `wscanf` funkcje, oznacza, że tablica znaków dwubajtowych. W obu przypadkach tablicy znaków musi być wystarczająco duży dla pola wejściowego oraz znak końcowy null, która jest automatycznie dołączane.|Wymagany. Rozmiar obejmuje miejsca dla terminatora o wartości null.|  
-|`S`|Przeciwieństwem rozmiar ciągu znaków do pierwszego znaku spacji (miejsca, karty lub nowego wiersza). Aby odczytać ciągów nie są rozdzielone spacjami, należy użyć zestawu nawiasy kwadratowe (`[ ]`), zgodnie z opisem w [scanf — specyfikacje szerokości](../c-runtime-library/scanf-width-specification.md).|W przypadku użycia z `scanf` funkcje, oznacza, że tablica znaków dwubajtowych; w przypadku użycia z `wscanf` funkcje, oznacza, że tablica bajtów jednoznakowym. W obu przypadkach tablicy znaków musi być wystarczająco duży dla pola wejściowego oraz znak końcowy null, która jest automatycznie dołączane.|Wymagany. Rozmiar obejmuje miejsca dla terminatora o wartości null.|  
+|`s`|Ciąg do pierwszego znaku spacji (miejsca, karty lub nowego wiersza). Aby odczytać ciągów nie są rozdzielone spacjami, należy użyć zestawu nawiasy kwadratowe (`[ ]`), zgodnie z opisem w [scanf — specyfikacje szerokości](../c-runtime-library/scanf-width-specification.md).|W przypadku użycia z `scanf` funkcje, oznacza, że tablica znaków; w przypadku użycia z `wscanf` funkcje, oznacza, że tablica znaków dwubajtowych. W obu przypadkach tablicy znaków musi być wystarczająco duży dla pola wejściowego oraz znak końcowy null, która jest automatycznie dołączane.|Wymagana. Rozmiar obejmuje miejsca dla terminatora o wartości null.|  
+|`S`|Przeciwieństwem rozmiar ciągu znaków do pierwszego znaku spacji (miejsca, karty lub nowego wiersza). Aby odczytać ciągów nie są rozdzielone spacjami, należy użyć zestawu nawiasy kwadratowe (`[ ]`), zgodnie z opisem w [scanf — specyfikacje szerokości](../c-runtime-library/scanf-width-specification.md).|W przypadku użycia z `scanf` funkcje, oznacza, że tablica znaków dwubajtowych; w przypadku użycia z `wscanf` funkcje, oznacza, że tablica bajtów jednoznakowym. W obu przypadkach tablicy znaków musi być wystarczająco duży dla pola wejściowego oraz znak końcowy null, która jest automatycznie dołączane.|Wymagana. Rozmiar obejmuje miejsca dla terminatora o wartości null.|  
   
   
  Na liście parametrów bezpośrednio po argumentu, które dotyczą one powinien zostać przekazany argumenty rozmiar w razie potrzeby. Na przykład następujący kod:  
@@ -72,10 +67,10 @@ scanf_s("%10s %8s", string1, 11, string2, 9);
   
 |Aby odczytać znak jako|Użyj tej funkcji|Z tych specyfikatory formatu|  
 |--------------------------|-----------------------|----------------------------------|  
-|jednobajtowe|`scanf`Funkcje|`c`, `hc`, lub`hC`|  
-|jednobajtowe|`wscanf`Funkcje|`C`, `hc`, lub`hC`|  
-|szerokie|`wscanf`Funkcje|`c`, `lc`, lub`lC`|  
-|szerokie|`scanf`Funkcje|`C`, `lc`, lub`lC`|  
+|jednobajtowe|`scanf` Funkcje|`c`, `hc`, lub `hC`|  
+|jednobajtowe|`wscanf` Funkcje|`C`, `hc`, lub `hC`|  
+|szerokie|`wscanf` Funkcje|`c`, `lc`, lub `lC`|  
+|szerokie|`scanf` Funkcje|`C`, `lc`, lub `lC`|  
   
  Skanowanie ciągów `scanf` funkcje, i `wscanf` funkcji, należy użyć powyższej tabeli z specyfikatory typ formatu `s` i `S` zamiast `c` i `C`.  
   

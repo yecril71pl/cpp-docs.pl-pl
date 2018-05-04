@@ -1,13 +1,10 @@
 ---
 title: 'Porady: osadzanie manifestu w aplikacji C/C++ | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Porady: osadzanie manifestu w aplikacji C/C++
 Jest zalecane aplikacji C/C++ (lub biblioteka) swoim manifeście osadzony w ostatnim pliku binarnego, ponieważ gwarantuje to poprawne zachowanie w większości przypadków. Domyślnie [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] próbuje osadzania manifestu podczas tworzenia projektu przy użyciu plików źródłowych; zobacz [Generowanie manifestu w Visual Studio](../build/manifest-generation-in-visual-studio.md) Aby uzyskać więcej informacji. Jednak jeśli aplikacja jest zbudowany przy użyciu nmake, konieczne są pewne zmiany do istniejącego pliku reguł programu make. W tej sekcji przedstawiono, jak zmienić istniejące pliki reguł programu make automatycznie osadzanie manifestu w ostatnim pliku binarnego.  

@@ -2,11 +2,8 @@
 title: decltype (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decltype_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decltype--c"></a>decltype (C++)
 `decltype` Specyfikatora typu daje typ określonego wyrażenia. `decltype` Wpisz specyfikator, wraz z [auto — słowo kluczowe](../cpp/auto-cpp.md), przydaje się głównie do deweloperów, którzy zapisu biblioteki szablonów. Użyj `auto` i `decltype` do zadeklarowania funkcji szablonu, którego zwracany typ zależy od typów argumentów szablonu. Lub użyj `auto` i `decltype` do zadeklarowania funkcji szablonu, który opakowuje wywołania do innej funkcji, a następnie zwraca typ zwracany funkcji opakowana.  
@@ -49,7 +44,7 @@ decltype( expression )
  Typ `expression` parametru.  
   
 ## <a name="remarks"></a>Uwagi  
- `decltype` Specyfikatora typu jest obsługiwane w Visual C++ 2010 lub nowszy i może być używany z kodu natywnego lub zarządzanego. `decltype(auto)`(C ++ 14) jest obsługiwana w programie Visual Studio 2015 i nowszych.  
+ `decltype` Specyfikatora typu jest obsługiwane w Visual C++ 2010 lub nowszy i może być używany z kodu natywnego lub zarządzanego. `decltype(auto)` (C ++ 14) jest obsługiwana w programie Visual Studio 2015 i nowszych.  
   
  Kompilator używa następujących reguł w celu określenia typu `expression` parametru.  
   
@@ -91,7 +86,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  Następujące prototypu ilustruje składnię deklaracji funkcji alternatywnych. Należy pamiętać, że `const` i `volatile` kwalifikatorów i `throw` [specyfikacji wyjątku](../cpp/exception-specifications-throw-cpp.md) są opcjonalne. *Function_body* złożonej instrukcji, która określa, jak działa funkcja reprezentuje symbol zastępczy. Jako najlepszym rozwiązaniem, kodowania *wyrażenie* symbol zastępczy w `decltype` instrukcji powinna być zgodna z wyrażeniem określonym przez `return` instrukcji, jeśli istnieje w *function_body*.  
   
- **automatycznie** *nazwa_funkcji* **(** *parametry*<sub>opt</sub> **)**  **Const**<sub>opt</sub> **volatile**<sub>opt</sub>  **->**  **decltype (** *wyrażenie* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
+ **automatycznie** *nazwa_funkcji* **(** *parametry*<sub>opt</sub> **)**  **Const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *wyrażenie* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
   
  W poniższym przykładzie kodu późne określony zwracany typ `myFunc` funkcji szablonu jest określana przez typy `t` i `u` argumentów szablonu. Jako najlepsze praktyki kodowania, przykładowy kod używa również odwołania do r-wartości i `forward` szablonu funkcji, które obsługuje *doskonała przekazywania*. Aby uzyskać więcej informacji, zobacz [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
@@ -213,5 +208,5 @@ static_assert(test2, "PASS2");
 ## <a name="requirements"></a>Wymagania  
  Visual C++ 2010 lub nowszy.  
   
- `decltype(auto)`wymaga programu Visual Studio 2015 lub nowszego.  
+ `decltype(auto)` wymaga programu Visual Studio 2015 lub nowszego.  
   

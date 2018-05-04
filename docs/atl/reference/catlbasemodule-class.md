@@ -1,12 +1,9 @@
 ---
 title: Klasa CAtlBaseModule | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlBaseModule
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88671ae94a1df10f3866dd2ae2e70092d1ca0c4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07f1252fe993ff2f2e646528996c1a53d25c5a63
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlbasemodule-class"></a>Klasa CAtlBaseModule
 W każdym projekcie ATL tworzenia wystąpienia tej klasy.  
@@ -71,7 +66,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 |[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Zmienna, która wskazuje, czy Inicjowanie modułu nie powiodło się.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wystąpienie `CAtlBaseModule` _AtlBaseModule o nazwie znajduje się w każdym projekcie ATL, zawierający dojścia do wystąpienia modułu, dojścia do modułu zawierającego zasoby (które domyślnie są tego samego), a tablica dojść do zapewnienia podstawowej modułów zasoby. `CAtlBaseModule`może być bezpiecznie uzyskać dostęp wiele wątków.  
+ Wystąpienie `CAtlBaseModule` _AtlBaseModule o nazwie znajduje się w każdym projekcie ATL, zawierający dojścia do wystąpienia modułu, dojścia do modułu zawierającego zasoby (które domyślnie są tego samego), a tablica dojść do zapewnienia podstawowej modułów zasoby. `CAtlBaseModule` może być bezpiecznie uzyskać dostęp wiele wątków.  
   
  Ta klasa zastępuje przestarzałe [ccommodule —](../../atl/reference/ccommodule-class.md) klasy używany w starszych wersjach ATL.  
   
@@ -83,7 +78,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcore.h  
   
-##  <a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
+##  <a name="addresourceinstance"></a>  CAtlBaseModule::AddResourceInstance  
  Dodaje wystąpienia zasobu do listy przechowywanej uchwytów.  
   
 ```
@@ -97,7 +92,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość PRAWDA, jeśli zasób został pomyślnie dodany, wartość false w przeciwnym razie wartość.  
   
-##  <a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
+##  <a name="catlbasemodule"></a>  CAtlBaseModule::CAtlBaseModule  
  Konstruktor.  
   
 ```
@@ -107,7 +102,7 @@ CAtlBaseModule() throw();
 ### <a name="remarks"></a>Uwagi  
  Tworzy `CAtlBaseModule`.  
   
-##  <a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
+##  <a name="gethinstanceat"></a>  CAtlBaseModule::GetHInstanceAt  
  Zwraca dojście do wystąpienia określonego zasobu.  
   
 ```
@@ -121,7 +116,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca dojście wystąpienia zasobu lub wartość NULL, jeśli nie ma odpowiedniego wystąpień zasobów.  
   
-##  <a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
+##  <a name="getmoduleinstance"></a>  CAtlBaseModule::GetModuleInstance  
  Zwraca wystąpienie modułu z `CAtlBaseModule` obiektu.  
   
 ```
@@ -131,7 +126,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wystąpienie modułu.  
   
-##  <a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance  
+##  <a name="getresourceinstance"></a>  CAtlBaseModule::GetResourceInstance  
  Zwraca wystąpienie zasobów.  
   
 ```
@@ -141,7 +136,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wystąpienie zasobów.  
   
-##  <a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
+##  <a name="m_binitfailed"></a>  CAtlBaseModule::m_bInitFailed  
  Zmienna, która wskazuje, czy Inicjowanie modułu nie powiodło się.  
   
 ```
@@ -151,7 +146,7 @@ static bool m_bInitFailed;
 ### <a name="remarks"></a>Uwagi  
  Wartość true, jeśli moduł został zainicjowany, false, jeśli nie można go zainicjować.  
   
-##  <a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
+##  <a name="removeresourceinstance"></a>  CAtlBaseModule::RemoveResourceInstance  
  Usuwa wystąpienia zasobu z listy przechowywanych uchwytów.  
   
 ```
@@ -165,7 +160,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość PRAWDA, jeśli zasób został pomyślnie usunięty, wartość false w przeciwnym razie wartość.  
   
-##  <a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
+##  <a name="setresourceinstance"></a>  CAtlBaseModule::SetResourceInstance  
  Ustawia wystąpienia zasobu `CAtlBaseModule` obiektu.  
   
 ```

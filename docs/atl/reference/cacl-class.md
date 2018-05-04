@@ -1,12 +1,9 @@
 ---
 title: Klasa CAcl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAcl
@@ -31,17 +28,15 @@ dev_langs:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd3b17c3cf74e87b709353a8dd2cd00c5355c7fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bab138d743dc3f5346ce15449c2a31b5b2484fd9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cacl-class"></a>Klasa CAcl
 Ta klasa jest otoki dla `ACL` struktury (lista kontroli dostępu).  
@@ -96,7 +91,7 @@ class CAcl
 |[CAcl::operator =](#operator_eq)|Operator przypisania.|  
   
 ## <a name="remarks"></a>Uwagi  
- **ACL** struktura jest nagłówka listy kontroli dostępu (listy kontroli dostępu). Listy ACL zawiera listę sekwencyjnych zero lub więcej [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868) (wpisy kontroli dostępu). Poszczególne wpisy kontroli dostępu na liście ACL są ponumerowane od 0 do *n-1*, gdzie  *n*  jest liczba wpisów na liście ACL. Podczas edytowania listy ACL, aplikacja odwołuje się do wpisu kontroli dostępu (ACE) w obrębie listy ACL według indeksu.  
+ **ACL** struktura jest nagłówka listy kontroli dostępu (listy kontroli dostępu). Listy ACL zawiera listę sekwencyjnych zero lub więcej [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868) (wpisy kontroli dostępu). Poszczególne wpisy kontroli dostępu na liście ACL są ponumerowane od 0 do *n-1*, gdzie *n* jest liczba wpisów na liście ACL. Podczas edytowania listy ACL, aplikacja odwołuje się do wpisu kontroli dostępu (ACE) w obrębie listy ACL według indeksu.  
   
  Istnieją dwa typy listy ACL:  
   
@@ -115,7 +110,7 @@ class CAcl
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h  
   
-##  <a name="caccessmaskarray"></a>CAcl::CAccessMaskArray  
+##  <a name="caccessmaskarray"></a>  CAcl::CAccessMaskArray  
  Tablica obiektów ACCESS_MASK.  
   
 ```
@@ -125,7 +120,7 @@ typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
 ### <a name="remarks"></a>Uwagi  
  Ten element typedef Określa typ tablicy, która może służyć do przechowywania praw dostępu używany w wpisów kontroli dostępu (ACE).  
   
-##  <a name="caceflagarray"></a>CAcl::CAceFlagArray  
+##  <a name="caceflagarray"></a>  CAcl::CAceFlagArray  
  Tablica bajtów.  
   
 ```
@@ -135,7 +130,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 ### <a name="remarks"></a>Uwagi  
  Ten element typedef Określa typ tablicy używane do definiowania flagi kontrolne określonego typu wpisu kontroli dostępu. Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) definicji Pełna lista możliwości flagi.  
   
-##  <a name="cacetypearray"></a>CAcl::CAceTypeArray  
+##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray  
  Tablica bajtów.  
   
 ```
@@ -145,7 +140,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 ### <a name="remarks"></a>Uwagi  
  Ten element typedef Określa używany do definiowania rodzaj obiektów wpisu kontroli dostępu, takich jak ACCESS_ALLOWED_ACE_TYPE lub ACCESS_DENIED_ACE_TYPE typu tablicy. Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) definicji, aby uzyskać pełną listę możliwych typów.  
   
-##  <a name="cacl"></a>CAcl::CAcl  
+##  <a name="cacl"></a>  CAcl::CAcl  
  Konstruktor.  
   
 ```
@@ -160,7 +155,7 @@ CAcl(const CAcl& rhs) throw(...);
 ### <a name="remarks"></a>Uwagi  
  `CAcl` Obiektu można opcjonalnie utworzyć przy użyciu istniejącego `CAcl` obiektu.  
   
-##  <a name="dtor"></a>CAcl:: ~ CAcl  
+##  <a name="dtor"></a>  CAcl:: ~ CAcl  
  Destruktor.  
   
 ```
@@ -170,7 +165,7 @@ virtual ~CAcl() throw();
 ### <a name="remarks"></a>Uwagi  
  Destruktor zwalnia wszystkie zasoby uzyskaną przez obiekt.  
   
-##  <a name="getacecount"></a>CAcl::GetAceCount  
+##  <a name="getacecount"></a>  CAcl::GetAceCount  
  Zwraca liczbę kontroli dostępu do obiektów wpisu.  
   
 ```
@@ -180,7 +175,7 @@ virtual UINT GetAceCount() const throw() = 0;
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca liczbę wpisów ACE w `CAcl` obiektu.  
   
-##  <a name="getaclentries"></a>CAcl::GetAclEntries  
+##  <a name="getaclentries"></a>  CAcl::GetAclEntries  
  Pobiera wpisów kontroli dostępu listę kontroli dostępu (ACL) z `CAcl` obiektu.  
   
 ```
@@ -211,7 +206,7 @@ void GetAclEntries(
   
  Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) szczegółowe na typach ACE i flagi.  
   
-##  <a name="getaclentry"></a>CAcl::GetAclEntry  
+##  <a name="getaclentry"></a>  CAcl::GetAclEntry  
  Pobiera wszystkie informacje o wpis na liście kontroli dostępu (ACL).  
   
 ```
@@ -252,7 +247,7 @@ void GetAclEntry(
   
  Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) szczegółowe na typach ACE i flagi.  
   
-##  <a name="getlength"></a>CAcl::GetLength  
+##  <a name="getlength"></a>  CAcl::GetLength  
  Zwraca długość listy kontroli dostępu (ACL).  
   
 ```
@@ -262,7 +257,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wymaganą długość w bajtach niezbędne do przechowywania **ACL** struktury.  
   
-##  <a name="getpacl"></a>CAcl::GetPACL  
+##  <a name="getpacl"></a>  CAcl::GetPACL  
  Zwraca wskaźnik do listy kontroli dostępu (ACL).  
   
 ```
@@ -272,7 +267,7 @@ const ACL* GetPACL() const throw(...);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wskaźnik do **ACL** struktury.  
   
-##  <a name="isempty"></a>CAcl::IsEmpty  
+##  <a name="isempty"></a>  CAcl::IsEmpty  
  Testy `CAcl` obiektu wpisy.  
   
 ```
@@ -282,7 +277,7 @@ bool IsEmpty() const throw();
 ### <a name="remarks"></a>Uwagi  
  Zwraca **true** Jeśli `CAcl` obiekt nie ma wartości NULL i nie ma żadnych członków. Zwraca **false** Jeśli `CAcl` obiektu ma wartość NULL lub zawiera co najmniej jeden wpis.  
   
-##  <a name="isnull"></a>CAcl::IsNull  
+##  <a name="isnull"></a>  CAcl::IsNull  
  Zwraca stan `CAcl` obiektu.  
   
 ```
@@ -292,7 +287,7 @@ bool IsNull() const throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **true** Jeśli `CAcl` obiektu ma wartość NULL, **false** inaczej.  
   
-##  <a name="operator_const_acl__star"></a>CAcl::operator const ACL *  
+##  <a name="operator_const_acl__star"></a>  CAcl::operator const ACL *  
  Rzutowania `CAcl` do obiektu **ACL** struktury (lista kontroli dostępu).  
   
 ```  
@@ -302,7 +297,7 @@ operator const ACL *() const throw(...);
 ### <a name="remarks"></a>Uwagi  
  Zwraca adres **ACL** struktury.  
   
-##  <a name="operator_eq"></a>CAcl::operator =  
+##  <a name="operator_eq"></a>  CAcl::operator =  
  Operator przypisania.  
   
 ```
@@ -316,7 +311,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwołanie do zaktualizowanego `CAcl` obiektu.  
   
-##  <a name="removeace"></a>CAcl::RemoveAce  
+##  <a name="removeace"></a>  CAcl::RemoveAce  
  Usuwa określone ACE (wpis kontroli dostępu) **CAcl** obiektu.  
   
 ```
@@ -330,7 +325,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest określana na podstawie [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="removeaces"></a>CAcl::RemoveAces  
+##  <a name="removeaces"></a>  CAcl::RemoveAces  
  Usuwa wszystkim ACE (wpisy kontroli dostępu) `CAcl` przeznaczonych do danej `CSid`.  
   
 ```
@@ -341,7 +336,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
  `rSid`  
  Odwołanie do `CSid` obiektu.  
   
-##  <a name="setempty"></a>CAcl::SetEmpty  
+##  <a name="setempty"></a>  CAcl::SetEmpty  
  Znaczniki `CAcl` obiekt jako pusta.  
   
 ```
@@ -351,7 +346,7 @@ void SetEmpty() throw();
 ### <a name="remarks"></a>Uwagi  
  `CAcl` Można ustawić pustą lub null: dwa stany są unikatowe.  
   
-##  <a name="setnull"></a>CAcl::SetNull  
+##  <a name="setnull"></a>  CAcl::SetNull  
  Znaczniki `CAcl` obiektu jako wartość NULL.  
   
 ```

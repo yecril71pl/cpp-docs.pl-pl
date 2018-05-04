@@ -2,11 +2,8 @@
 title: Klasa CComObjectGlobal | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectGlobal
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d5264a2ab8e1bbc4c3f4eac4d83d096d91e8846
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3614962d3bebada0c63b7fe804b52efaa965c6a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectglobal-class"></a>Klasa CComObjectGlobal
 Ta klasa zarządza liczebności referencyjnej na moduł zawierający Twoje `Base` obiektu.  
@@ -71,7 +66,7 @@ class CComObjectGlobal : public Base
 |[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Zawiera **HRESULT** zwrócony podczas tworzenia `CComObjectGlobal` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComObjectGlobal`zarządza liczebności referencyjnej na moduł zawierający Twoje `Base` obiektu. `CComObjectGlobal`gwarantuje, że obiekt nie zostaną usunięte, tak długo, jak moduł nie jest zwalniany. Obiektu tylko zostaną usunięte, gdy liczba odwołań na cały moduł przechodzi od zera.  
+ `CComObjectGlobal` zarządza liczebności referencyjnej na moduł zawierający Twoje `Base` obiektu. `CComObjectGlobal` gwarantuje, że obiekt nie zostaną usunięte, tak długo, jak moduł nie jest zwalniany. Obiektu tylko zostaną usunięte, gdy liczba odwołań na cały moduł przechodzi od zera.  
   
  Na przykład za pomocą `CComObjectGlobal`, fabrykę klas mogą zawierać wspólnej obiekt globalny, który jest współużytkowany przez wszystkich klientów.  
   
@@ -83,7 +78,7 @@ class CComObjectGlobal : public Base
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="addref"></a>CComObjectGlobal::AddRef  
+##  <a name="addref"></a>  CComObjectGlobal::AddRef  
  Zwiększa liczbę odwołanie do obiektu o 1.  
   
 ```
@@ -96,7 +91,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>Uwagi  
  Domyślnie `AddRef` wywołania **_Module::Lock**, gdzie **_Module** jest globalne wystąpienie [ccommodule —](../../atl/reference/ccommodule-class.md) lub klasą pochodną go.  
   
-##  <a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
+##  <a name="ccomobjectglobal"></a>  CComObjectGlobal::CComObjectGlobal  
  Konstruktor. Wywołania `FinalConstruct` , a następnie ustawia [m_hResFinalConstruct](#m_hresfinalconstruct) do `HRESULT` zwrócony przez `FinalConstruct`.  
   
 ```
@@ -106,7 +101,7 @@ CComObjectGlobal(void* = NULL));
 ### <a name="remarks"></a>Uwagi  
  Jeśli nie ma pochodzi z klasy podstawowej [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), należy podać własne `FinalConstruct` metody. Wywołania destruktora `FinalRelease`.  
   
-##  <a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
+##  <a name="dtor"></a>  CComObjectGlobal:: ~ CComObjectGlobal  
  Destruktor.  
   
 ```
@@ -116,14 +111,14 @@ CComObjectGlobal();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wszystkie przydzielone zasoby i wywołania [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
-##  <a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>  CComObjectGlobal::m_hResFinalConstruct  
  Zawiera `HRESULT` z wywołaniem `FinalConstruct` podczas budowy `CComObjectGlobal` obiektu.  
   
 ```
 HRESULT m_hResFinalConstruct;
 ```  
   
-##  <a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectGlobal::QueryInterface  
  Pobiera wskaźnik na wskaźnik żądanego interfejsu.  
   
 ```
@@ -141,9 +136,9 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  Standard `HRESULT` wartość.  
   
 ### <a name="remarks"></a>Uwagi  
- `QueryInterface`obsługuje tylko interfejsy COM tabeli mapy.  
+ `QueryInterface` Obsługuje tylko interfejsy COM tabeli mapy.  
   
-##  <a name="release"></a>CComObjectGlobal::Release  
+##  <a name="release"></a>  CComObjectGlobal::Release  
  Zmniejsza odwołanie liczba obiektu o 1.  
   
 ```

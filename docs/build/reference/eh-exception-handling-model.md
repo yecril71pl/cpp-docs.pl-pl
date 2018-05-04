@@ -1,13 +1,10 @@
 ---
-title: "-EH (Model obsługi wyjątku) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -EH (Model obsługi wyjątku) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b009a9f209ffcc4bb84550c5f37680ef71c9fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Model obsługi wyjątku)
 Określa rodzaj obsługi wyjątku przez kompilator, gdy w celu zoptymalizowania wyjątek zadań sprawdza i czy zniszczyć obiektów C++, które wykraczają poza zakres z powodu wyjątku. Jeśli **/EH** nie zostanie określony, kompilator połowy zarówno asynchroniczne wyjątki strukturalne i wyjątków języka C++, ale nie niszczy obiektami C++, które wykraczają poza zakres ze względu na wyjątek asynchroniczny.  
@@ -105,7 +100,7 @@ int main() {
   
  Informacji o ograniczenia wynikające z obsługi wyjątków **/CLR**, zobacz [_set_se_translator —](../../c-runtime-library/reference/set-se-translator.md).  
   
- Opcja można wyczyścić za pomocą symbolu  **-** . Na przykład **/EHsc-** jest interpretowana jako **/EHc-/EHS** i stanowi odpowiednik **/EHS**.  
+ Opcja można wyczyścić za pomocą symbolu **-**. Na przykład **/EHsc-** jest interpretowana jako **/EHc-/EHS** i stanowi odpowiednik **/EHS**.  
   
  **/EHr** — opcja kompilatora wymusza sprawdzania zakończenia środowiska uruchomieniowego w wszystkie funkcje, które mają `noexcept` atrybutu. Domyślnie sprawdzanie czasu wykonania może w celu optymalizacji Jeśli wewnętrznych kompilatora określa funkcja tylko wywołuje *-zgłaszanie* funkcji. Funkcje wyrzucające nie są wszystkie funkcje, które mają atrybut określający, że żadne wyjątki może zostać zgłoszony. Dotyczy to również funkcje oznaczone `noexcept`, `throw()`, `__declspec(nothrow)`i kiedy **opcja/ehc** jest określony, `extern "C"` funkcji. Funkcje wyrzucające nie obejmują które kompilator stwierdził są z systemem innym niż wyrzucające przez inspekcji. Należy jawnie określić domyślny przy użyciu **/EHr-**.  
   

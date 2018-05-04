@@ -2,11 +2,8 @@
 title: Makra mapy usługi | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d89833d84f23099ff0de8bce29bfc9d0a1344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2d2fa313c574951a8f8ba7c85d5b405707ec220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="service-map-macros"></a>Makra mapy usługi
 Te makra zdefiniuj mapy usług i zapisów.  
@@ -41,7 +36,7 @@ Te makra zdefiniuj mapy usług i zapisów.
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
    
-##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
+##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP  
  Oznacza początek mapy usługi.  
   
 ```
@@ -62,7 +57,7 @@ BEGIN_SERVICE_MAP(theClass)
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
-##  <a name="end_service_map"></a>END_SERVICE_MAP  
+##  <a name="end_service_map"></a>  END_SERVICE_MAP  
  Oznacza koniec mapy usługi.  
   
 ```
@@ -72,7 +67,7 @@ END_SERVICE_MAP()
 ### <a name="example"></a>Przykład  
  Zobacz przykład [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry"></a>SERVICE_ENTRY  
+##  <a name="service_entry"></a>  SERVICE_ENTRY  
  Oznacza, że obiekt obsługuje podany identyfikator usługi przez *SID*.  
   
 ```
@@ -86,7 +81,7 @@ SERVICE_ENTRY( SID )
 ### <a name="example"></a>Przykład  
  Zobacz przykład [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
+##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN  
  Powoduje, że [IServiceProviderImpl::QueryService](#queryservice) do tworzenia łańcucha obiekt określony przez `punk`.  
   
 ```
@@ -100,7 +95,7 @@ SERVICE_ENTRY_CHAIN( punk )
 ### <a name="example"></a>Przykład  
  Zobacz przykład [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  Tworzy lub uzyskuje dostęp do określonej usługi i zwraca wskaźnika interfejsu do określonego interfejsu usługi.  
   
 ```
@@ -111,13 +106,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [IN]`guidService`  
+ [IN] `guidService`  
  Wskaźnik do identyfikatora usługi (SID).  
   
- [IN]`riid`  
+ [IN] `riid`  
  Identyfikator interfejsu, do którego ma dostęp obiekt wywołujący.  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  Pośredni wskaźnik do żądanego interfejsu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -132,7 +127,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|Żądany interfejs nie jest częścią tej usługi lub usługa jest nieznany.|  
   
 ### <a name="remarks"></a>Uwagi  
- `QueryService`Zwraca pośredni wskaźnik do żądanego interfejsu w określonej usługi. Obiekt wywołujący jest odpowiedzialny za zwolnienie ten wskaźnik, gdy nie jest już wymagane.  
+ `QueryService` Zwraca pośredni wskaźnik do żądanego interfejsu w określonej usługi. Obiekt wywołujący jest odpowiedzialny za zwolnienie ten wskaźnik, gdy nie jest już wymagane.  
   
  Podczas wywoływania `QueryService`, Przekaż identyfikatorem usługi ( `guidService`) i identyfikator interfejsu ( `riid`). `guidService` Określa usługę, do którego ma dostęp, i `riid` identyfikuje interfejs, który jest częścią usługi. W zamian zostanie wyświetlony pośredni wskaźnik do interfejsu.  
   

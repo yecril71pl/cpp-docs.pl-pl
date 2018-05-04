@@ -1,12 +1,9 @@
 ---
 title: Klasa CComObjectStack | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectStack
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7fa9d14a27277d4c26fc6e7589400e19ef1395
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ac37ac5abc193082aaccb8d5de1a4f75f8a3f7c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectstack-class"></a>Klasa CComObjectStack
 Ta klasa tworzy tymczasowy obiekt COM i dostarcza mu szkieletowych implementacja **IUnknown**.  
@@ -72,7 +67,7 @@ class CComObjectStack
 |[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Zawiera **HRESULT** zwrócony podczas tworzenia `CComObjectStack` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComObjectStack`Pozwala utworzyć tymczasowego obiektu modelu COM oraz określić obiekt szkieletowych wdrożenia **IUnknown**. Zazwyczaj obiekt jest używany jako zmienną lokalną w obrębie jednej funkcji (tj. spoczywa na stosie). Ponieważ obiekt zostanie zniszczony po zakończeniu działania funkcji, liczenie odwołań nie odbywa się zwiększyć wydajność.  
+ `CComObjectStack` Pozwala utworzyć tymczasowego obiektu modelu COM oraz określić obiekt szkieletowych wdrożenia **IUnknown**. Zazwyczaj obiekt jest używany jako zmienną lokalną w obrębie jednej funkcji (tj. spoczywa na stosie). Ponieważ obiekt zostanie zniszczony po zakończeniu działania funkcji, liczenie odwołań nie odbywa się zwiększyć wydajność.  
   
  Poniższy przykład pokazuje, jak utworzyć obiektu COM, użyć wewnątrz funkcji:  
   
@@ -88,7 +83,7 @@ class CComObjectStack
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="addref"></a>CComObjectStack::AddRef  
+##  <a name="addref"></a>  CComObjectStack::AddRef  
  Zwraca wartość zero.  
   
 ```
@@ -101,7 +96,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>Uwagi  
  W trybie debugowania, wywołuje `_ASSERTE`.  
   
-##  <a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack  
+##  <a name="ccomobjectstack"></a>  CComObjectStack::CComObjectStack  
  Konstruktor.  
   
 ```
@@ -111,7 +106,7 @@ CComObjectStack(void* = NULL);
 ### <a name="remarks"></a>Uwagi  
  Wywołania `FinalConstruct` , a następnie ustawia [m_hResFinalConstruct](#m_hresfinalconstruct) do `HRESULT` zwrócony przez `FinalConstruct`. Jeśli nie ma pochodzi z klasy podstawowej [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), należy podać własne `FinalConstruct` metody. Wywołania destruktora `FinalRelease`.  
   
-##  <a name="dtor"></a>CComObjectStack:: ~ CComObjectStack  
+##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack  
  Destruktor.  
   
 ```
@@ -121,14 +116,14 @@ CComObjectStack();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wszystkie przydzielone zasoby i wywołania [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
-##  <a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct  
  Zawiera `HRESULT` zwracana z wywołania `FinalConstruct` podczas budowy `CComObjectStack` obiektu.  
   
 ```
 HRESULT    m_hResFinalConstruct;
 ```  
   
-##  <a name="queryinterface"></a>CComObjectStack::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface  
  Zwraca **E_NOINTERFACE**.  
   
 ```
@@ -142,7 +137,7 @@ HRESULT    QueryInterface(REFIID, void**)
 ### <a name="remarks"></a>Uwagi  
  W trybie debugowania, wywołuje `_ASSERTE`.  
   
-##  <a name="release"></a>CComObjectStack::Release  
+##  <a name="release"></a>  CComObjectStack::Release  
  Zwraca wartość zero.  
   
 ```

@@ -1,12 +1,9 @@
 ---
 title: Klasa CAxWindow2T | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAxWindow2T
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b7c8c66a092a92ef7fce25ce283f5145d9f910
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 077ecfe36e1ddf6c319f02bdabb89d660a5f22d8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caxwindow2t-class"></a>Klasa CAxWindow2T
 Ta klasa dostarcza metody do manipulowania typu window, który hostuje formantu ActiveX i ma również obsługa hostingu licencjonowane formanty ActiveX.  
@@ -75,14 +70,14 @@ template <class TBase = CWindow>
 |[CAxWindow2T::operator =](#operator_eq)|Przypisuje `HWND` do istniejącej `CAxWindow2T` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CAxWindow2T`udostępnia metody do manipulowania okna obsługującego formantu ActiveX. `CAxWindow2T`ma również obsługa hostingu licencjonowane formanty ActiveX. Hosting są dostarczane przez " **AtlAxWinLic80**", który jest opakowane przez `CAxWindow2T`.  
+ `CAxWindow2T` udostępnia metody do manipulowania okna obsługującego formantu ActiveX. `CAxWindow2T` ma również obsługa hostingu licencjonowane formanty ActiveX. Hosting są dostarczane przez " **AtlAxWinLic80**", który jest opakowane przez `CAxWindow2T`.  
   
  Klasa `CAxWindow2` jest zaimplementowany jako specjalizacji `CAxWindow2T` klasy. Ta specjalizacja jest zadeklarowany jako:  
   
  `typedef CAxWindow2T <CWindow> CAxWindow2;`  
   
 > [!NOTE]
-> `CAxWindowT`elementy członkowskie są udokumentowane w obszarze [CAxWindow](../../atl/reference/caxwindow-class.md).  
+> `CAxWindowT` elementy członkowskie są udokumentowane w obszarze [CAxWindow](../../atl/reference/caxwindow-class.md).  
   
  Zobacz [Hosting AXHost za pomocą biblioteki ATL programu ActiveX formanty](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z członkami tej klasy.  
   
@@ -96,7 +91,7 @@ template <class TBase = CWindow>
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
-##  <a name="caxwindow2t"></a>CAxWindow2T::CAxWindow2T  
+##  <a name="caxwindow2t"></a>  CAxWindow2T::CAxWindow2T  
  Konstruuje `CAxWindow2T` obiektu.  
   
 ```
@@ -107,7 +102,7 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
  `hWnd`  
  Uchwyt istniejącego okna.  
   
-##  <a name="create"></a>CAxWindow2T::Create  
+##  <a name="create"></a>  CAxWindow2T::Create  
  Tworzy okno hosta.  
   
 ```
@@ -122,7 +117,7 @@ HWND Create(
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `CAxWindow2T::Create`wywołania [CWindow::Create](../../atl/reference/cwindow-class.md#create) z `LPCTSTR lpstrWndClass` ustawiona klasy okna, która udostępnia hosting kontrolki ( **AtlAxWinLic80**).  
+ `CAxWindow2T::Create` wywołania [CWindow::Create](../../atl/reference/cwindow-class.md#create) z `LPCTSTR lpstrWndClass` ustawiona klasy okna, która udostępnia hosting kontrolki ( **AtlAxWinLic80**).  
   
  Zobacz `CWindow::Create` opis parametrów i zwracanych wartości.  
   
@@ -131,7 +126,7 @@ HWND Create(
 ### <a name="example"></a>Przykład  
  Zobacz [Hosting AXHost za pomocą biblioteki ATL programu ActiveX formanty](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z `CAxWindow2T::Create`.  
   
-##  <a name="createcontrollic"></a>CAxWindow2T::CreateControlLic  
+##  <a name="createcontrollic"></a>  CAxWindow2T::CreateControlLic  
  Tworzy licencjonowany formant ActiveX, inicjuje go i umieszcza w określonym oknie.  
   
 ```
@@ -158,7 +153,7 @@ HRESULT CreateControlLic(
 ### <a name="example"></a>Przykład  
  Zobacz [Hosting AXHost za pomocą biblioteki ATL programu ActiveX formanty](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z `CAxWindow2T::CreateControlLic`.  
   
-##  <a name="createcontrollicex"></a>CAxWindow2T::CreateControlLicEx  
+##  <a name="createcontrollicex"></a>  CAxWindow2T::CreateControlLicEx  
  Tworzy licencjonowanego formantu ActiveX, inicjowane znajduje się w określonym oknie i pobiera wskaźnika interfejsu (lub wskaźniki) z formantu.  
   
 ```
@@ -191,7 +186,7 @@ HRESULT CreateControlLicEx(
 ### <a name="example"></a>Przykład  
  Zobacz [Hosting AXHost za pomocą biblioteki ATL programu ActiveX formanty](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z `CAxWindow2T::CreateControlLicEx`.  
   
-##  <a name="getwndclassname"></a>CAxWindow2T::GetWndClassName  
+##  <a name="getwndclassname"></a>  CAxWindow2T::GetWndClassName  
  Pobiera nazwę klasy okna.  
   
 ```
@@ -201,7 +196,7 @@ static LPCTSTR GetWndClassName();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do ciągu zawierającego nazwę klasy okna ( **AtlAxWinLic80**) który może obsługiwać licencjonowane i nonlicensed formantów ActiveX.  
   
-##  <a name="operator_eq"></a>CAxWindow2T::operator =  
+##  <a name="operator_eq"></a>  CAxWindow2T::operator =  
  Przypisuje `HWND` do istniejącej `CAxWindow2T` obiektu.  
   
 ```

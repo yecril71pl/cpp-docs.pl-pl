@@ -1,13 +1,10 @@
 ---
 title: __RTDynamicCast | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - __RTDynamicCast
 apilocation:
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 375fcbb4d059ebd431cfd3f86bbf7e3ddb7a3d93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fa20222a4d64afa9fcb8d0c1a91e63db989dae2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 Implementacja interfejsu środowiska wykonawczego [dynamic_cast](../cpp/dynamic-cast-operator.md) operatora.  
@@ -67,16 +62,16 @@ PVOID __RTDynamicCast (
  Żądany wynik rzutowania.  
   
  `isReference`  
- `true`Jeśli dane wejściowe jest odwołaniem; `false` Jeśli wejściowy jest wskaźnik.  
+ `true` Jeśli dane wejściowe jest odwołaniem; `false` Jeśli wejściowy jest wskaźnik.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do odpowiedniego obiektu podrzędnego, w przypadku powodzenia; w przeciwnym razie wartość NULL.  
   
 ## <a name="exceptions"></a>Wyjątki  
- `bad_cast()`Jeśli w danych wejściowych `dynamic_cast<>` jest odwołaniem i Rzutowanie nie powiedzie się.  
+ `bad_cast()` Jeśli w danych wejściowych `dynamic_cast<>` jest odwołaniem i Rzutowanie nie powiedzie się.  
   
 ## <a name="remarks"></a>Uwagi  
- Konwertuje `inptr` do obiektu typu `TargetType`. Typ `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l wartość, jeśli `TargetType` to odwołanie. `TargetType`musi być wskaźnikiem lub odwołaniem do typu klasy uprzednio zdefiniowany lub wskaźnika do typu void.  
+ Konwertuje `inptr` do obiektu typu `TargetType`. Typ `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l wartość, jeśli `TargetType` to odwołanie. `TargetType` musi być wskaźnikiem lub odwołaniem do typu klasy uprzednio zdefiniowany lub wskaźnika do typu void.  
   
 ## <a name="requirements"></a>Wymagania  
   

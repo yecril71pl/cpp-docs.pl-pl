@@ -1,12 +1,9 @@
 ---
-title: "Kreator składników stron ASP ATL | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kreator składników stron ASP ATL | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ASP components, creating in ATL
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2d707b5dbfc78ec8975471114bc87bf23fe5f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d717eefe9c9ee353692d343b88c57469eeb6892
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Kreator składników stron ASP ATL
 Ten kreator wstawia w projekcie składnik Active Server Pages (ASP). Microsoft Internet Information Services (IIS) używa składników stron ASP w ramach jego architektury programowanie udoskonalone strony sieci Web.  
@@ -52,7 +47,7 @@ Ten kreator wstawia w projekcie składnik Active Server Pages (ASP). Microsoft I
   
  Kreator nie powoduje zastąpienia pliku. Jeśli po kliknięciu przycisku Wybierz nazwę istniejącego pliku, **Zakończ**, Kreator wyświetli monit, aby wskazać, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** pliku; kliknij przycisk **nr** aby powrócić do kreatora i podaj inną nazwę pliku.  
   
- **Klasy**  
+ **Class**  
  Ustawia nazwę klasy, która ma być utworzony. Ta nazwa jest na podstawie nazwy podanych w **krótką nazwę**, poprzedzającą "C", typowy prefiks nazwy klasy.  
   
  **plik .cpp**  
@@ -78,7 +73,7 @@ Ten kreator wstawia w projekcie składnik Active Server Pages (ASP). Microsoft I
  **Typ**  
  Określa opis obiektu, który będzie widoczny w rejestrze dla klasy coclass.  
   
- **Interfejs**  
+ **Interface**  
  Ustawia interfejs, który można utworzyć obiektu. Ten interfejs zawiera niestandardowej metody.  
   
  **Identyfikator programu**  

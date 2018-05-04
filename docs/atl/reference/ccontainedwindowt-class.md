@@ -1,12 +1,9 @@
 ---
 title: Klasa CContainedWindowT | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CContainedWindowT
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f3f90e23eed3bd1eba80bbf90fe73de45eb7cfa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccontainedwindowt-class"></a>Klasa CContainedWindowT
 Ta klasa zawiera implementację okna zawarty w innym obiekcie.  
@@ -97,11 +92,11 @@ class CContainedWindowT : public TBase
 |[CContainedWindowT::m_pObject](#m_pobject)|Wskazuje zawierającego go obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CContainedWindowT`implementuje okna zawarty w innym obiekcie. `CContainedWindowT`od użytkownika używa procedury okna mapy wiadomości w obiektu zawierającego do komunikatów bezpośrednich na odpowiednie programy obsługi. Podczas konstruowania `CContainedWindowT` obiektu, określ, które mapy wiadomości powinna być używana.  
+ `CContainedWindowT` implementuje okna zawarty w innym obiekcie. `CContainedWindowT`od użytkownika używa procedury okna mapy wiadomości w obiektu zawierającego do komunikatów bezpośrednich na odpowiednie programy obsługi. Podczas konstruowania `CContainedWindowT` obiektu, określ, które mapy wiadomości powinna być używana.  
   
- `CContainedWindowT`Służy do tworzenia nowego okna przez tworzenie nadklas istniejącej klasy okna. **Utwórz** metoda najpierw rejestruje klasę okna, jest oparta na istniejącej klasy, która używa `CContainedWindowT::WindowProc`. **Utwórz** następnie tworzy okno oparte na tej nowej klasy okna. Każde wystąpienie `CContainedWindowT` można superklasie klasy innego okna.  
+ `CContainedWindowT` Służy do tworzenia nowego okna przez tworzenie nadklas istniejącej klasy okna. **Utwórz** metoda najpierw rejestruje klasę okna, jest oparta na istniejącej klasy, która używa `CContainedWindowT::WindowProc`. **Utwórz** następnie tworzy okno oparte na tej nowej klasy okna. Każde wystąpienie `CContainedWindowT` można superklasie klasy innego okna.  
   
- `CContainedWindowT`obsługuje również podklasy okna. `SubclassWindow` Metody dołącza do istniejącego okna `CContainedWindowT` obiektu i zmienia procedurę okna `CContainedWindowT::WindowProc`. Każde wystąpienie `CContainedWindowT` można podklasy innego okna.  
+ `CContainedWindowT` obsługuje również podklasy okna. `SubclassWindow` Metody dołącza do istniejącego okna `CContainedWindowT` obiektu i zmienia procedurę okna `CContainedWindowT::WindowProc`. Każde wystąpienie `CContainedWindowT` można podklasy innego okna.  
   
 > [!NOTE]
 >  Dla żadnej podanej `CContainedWindowT` obiektu, albo wywoływać **Utwórz** lub `SubclassWindow`. Nie należy wywoływać obu metod dla tego samego obiektu.  
@@ -129,7 +124,7 @@ class CContainedWindowT : public TBase
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
-##  <a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT  
+##  <a name="ccontainedwindowt"></a>  CContainedWindowT::CContainedWindowT  
  Konstruktor inicjuje elementy członkowskie danych.  
   
 ```
@@ -167,7 +162,7 @@ CContainedWindowT(
   
  Jeśli podklasy istniejącego okna za pośrednictwem [SubclassWindow](#subclasswindow), `lpszClassName` nie zostanie użyta wartość; w związku z tym można przekazać **NULL** dla tego parametru.  
   
-##  <a name="create"></a>CContainedWindowT::Create  
+##  <a name="create"></a>  CContainedWindowT::Create  
  Wywołania [RegisterWndSuperclass](#registerwndsuperclass) można zarejestrować klasy okna, jest oparta na istniejącej klasy, która używa [CContainedWindowT::WindowProc](#windowproc).  
   
 ```
@@ -224,7 +219,7 @@ HWND Create(
  [in] Określa nazwę okna. Wartość domyślna to **NULL**.  
   
  `dwStyle`  
- [in] Styl okna. Wartość domyślna to **ws_child — &#124; Ws_visible —**. Aby uzyskać listę możliwych wartości, zobacz [właściwości CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
+ [in] Styl okna. Wartość domyślna to **ws_child — &#124; ws_visible —**. Aby uzyskać listę możliwych wartości, zobacz [właściwości CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
   
  `dwExStyle`  
  [in] Styl okna rozszerzonej. Wartość domyślna to 0, co oznacza brak rozszerzonego stylu. Aby uzyskać listę możliwych wartości, zobacz [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
@@ -247,7 +242,7 @@ HWND Create(
 > [!NOTE]
 >  Jeśli 0 jest używany jako wartość `MenuOrID` parametru musi być określona jako 0U (wartość domyślna), aby uniknąć błędów kompilatora.  
   
-##  <a name="defwindowproc"></a>CContainedWindowT::DefWindowProc  
+##  <a name="defwindowproc"></a>  CContainedWindowT::DefWindowProc  
  Wywoływane przez [WindowProc](#windowproc) do przetwarzania komunikatów, które nie są obsługiwane przez mapy komunikatów.  
   
 ```
@@ -274,7 +269,7 @@ LRESULT DefWindowProc(
 ### <a name="remarks"></a>Uwagi  
  Domyślnie `DefWindowProc` wywołania [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) Win32/funkcja do wysyłania informacji wiadomości do procedury okna, określony w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
-##  <a name="getcurrentmessage"></a>CContainedWindowT::GetCurrentMessage  
+##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  Zwraca bieżący komunikat ( **m_pCurrentMsg**).  
   
 ```
@@ -284,7 +279,7 @@ const _ATL_MSG* GetCurrentMessage();
 ### <a name="return-value"></a>Wartość zwracana  
  Bieżący komunikat w `MSG` struktury.  
   
-##  <a name="m_dwmsgmapid"></a>CContainedWindowT::m_dwMsgMapID  
+##  <a name="m_dwmsgmapid"></a>  CContainedWindowT::m_dwMsgMapID  
  Przechowuje identyfikator aktualnie używane dla zawartego okna mapy wiadomości.  
   
 ```
@@ -296,9 +291,9 @@ DWORD m_dwMsgMapID;
   
  Domyślną mapę komunikatów zadeklarowana z [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), zawsze jest identyfikowany przez zero. Mapy wiadomości alternatywny zadeklarowana z [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), jest identyfikowany przez `msgMapID`.  
   
- `m_dwMsgMapID`najpierw jest zainicjowany przez Konstruktor i może zostać zmieniona przez wywołanie [SwitchMessageMap](#switchmessagemap). Na przykład zobacz [omówienie CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md).  
+ `m_dwMsgMapID` najpierw jest zainicjowany przez Konstruktor i może zostać zmieniona przez wywołanie [SwitchMessageMap](#switchmessagemap). Na przykład zobacz [omówienie CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md).  
   
-##  <a name="m_lpszclassname"></a>CContainedWindowT::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CContainedWindowT::m_lpszClassName  
  Określa nazwę istniejącej klasy okna.  
   
 ```
@@ -308,9 +303,9 @@ LPTSTR m_lpszClassName;
 ### <a name="remarks"></a>Uwagi  
  Podczas tworzenia okna, [Utwórz](#create) rejestruje nową klasę okna jest oparta na istniejąca klasa, która używa [CContainedWindowT::WindowProc](#windowproc).  
   
- `m_lpszClassName`zainicjowano konstruktora. Na przykład zobacz [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) omówienie.  
+ `m_lpszClassName` zainicjowano konstruktora. Na przykład zobacz [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) omówienie.  
   
-##  <a name="m_pfnsuperwindowproc"></a>CContainedWindowT::m_pfnSuperWindowProc  
+##  <a name="m_pfnsuperwindowproc"></a>  CContainedWindowT::m_pfnSuperWindowProc  
  Jeśli podklasy zawartego okna `m_pfnSuperWindowProc` wskazuje oryginalną procedurę okna klasy okna.  
   
 ```
@@ -322,7 +317,7 @@ WNDPROC m_pfnSuperWindowProc;
   
  [DefWindowProc](#defwindowproc) metody wysyła informacje komunikat do procedury okna zapisane w `m_pfnSuperWindowProc`.  
   
-##  <a name="m_pobject"></a>CContainedWindowT::m_pObject  
+##  <a name="m_pobject"></a>  CContainedWindowT::m_pObject  
  Wskazuje obiekt zawierający `CContainedWindowT` obiektu.  
   
 ```
@@ -332,9 +327,9 @@ CMessageMap* m_pObject;
 ### <a name="remarks"></a>Uwagi  
  Ten kontener, w których klasa musi pochodzić od [CMessageMap](../../atl/reference/cmessagemap-class.md), deklaruje mapy komunikatów używany przez zawartego okna.  
   
- `m_pObject`zainicjowano konstruktora. Na przykład zobacz [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) omówienie.  
+ `m_pObject` zainicjowano konstruktora. Na przykład zobacz [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) omówienie.  
   
-##  <a name="registerwndsuperclass"></a>CContainedWindowT::RegisterWndSuperclass  
+##  <a name="registerwndsuperclass"></a>  CContainedWindowT::RegisterWndSuperclass  
  Wywoływane przez [Utwórz](#create) można zarejestrować klasy okna zawartego okna.  
   
 ```
@@ -347,7 +342,7 @@ ATOM RegisterWndSuperClass();
 ### <a name="remarks"></a>Uwagi  
  Ta klasa okna jest oparta na istniejącej klasy, ale używa [CContainedWindowT::WindowProc](#windowproc). Procedury okno i nazwę istniejącej klasy okna są zapisywane w [m_lpszClassName](#m_lpszclassname) i [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)odpowiednio.  
   
-##  <a name="subclasswindow"></a>CContainedWindowT::SubclassWindow  
+##  <a name="subclasswindow"></a>  CContainedWindowT::SubclassWindow  
  Podklasy okna identyfikowane przez `hWnd` i dołącza go do `CContainedWindowT` obiektu.  
   
 ```
@@ -367,7 +362,7 @@ BOOL SubclassWindow(HWND hWnd);
 > [!NOTE]
 >  Nie wywołuj `SubclassWindow` Jeśli już o nazwie [Utwórz](#create).  
   
-##  <a name="switchmessagemap"></a>CContainedWindowT::SwitchMessageMap  
+##  <a name="switchmessagemap"></a>  CContainedWindowT::SwitchMessageMap  
  Mapy wiadomości, które będzie służyć do przetwarzania komunikatów okien zawartych w niej zmiany.  
   
 ```
@@ -383,7 +378,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
   
  Określa się wstępnie identyfikator mapy wiadomości w konstruktorze.  
   
-##  <a name="unsubclasswindow"></a>CContainedWindowT::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>  CContainedWindowT::UnsubclassWindow  
  Odłącza okno podklasą od `CContainedWindowT` obiektu i przywraca oryginalną procedurę okna zapisane w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ```
@@ -400,7 +395,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 ### <a name="remarks"></a>Uwagi  
  Tej metody można użyć tylko wtedy, gdy chcesz przywrócić oryginalną procedurę okna przed okna. W przeciwnym razie [WindowProc](#windowproc) automatycznie zostanie to zrobić, gdy okno zostanie zniszczone.  
   
-##  <a name="windowproc"></a>CContainedWindowT::WindowProc  
+##  <a name="windowproc"></a>  CContainedWindowT::WindowProc  
  Ta metoda statyczna wykonuje procedurę okna.  
   
 ```
@@ -428,7 +423,7 @@ static LRESULT CALLBACK WindowProc(
  Wynik przetwarzania komunikatów.  
   
 ### <a name="remarks"></a>Uwagi  
- `WindowProc`kieruje komunikaty do mapy komunikatów identyfikowane przez [m_dwMsgMapID](#m_dwmsgmapid). W razie potrzeby `WindowProc` wywołania [DefWindowProc](#defwindowproc) dla przetwarzania dodatkowych komunikatów.  
+ `WindowProc` kieruje komunikaty do mapy komunikatów identyfikowane przez [m_dwMsgMapID](#m_dwmsgmapid). W razie potrzeby `WindowProc` wywołania [DefWindowProc](#defwindowproc) dla przetwarzania dodatkowych komunikatów.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CWindow](../../atl/reference/cwindow-class.md)   

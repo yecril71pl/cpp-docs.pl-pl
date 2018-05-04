@@ -1,12 +1,9 @@
 ---
 title: Klasa CComMultiThreadModel | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComMultiThreadModel
@@ -23,20 +20,18 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96f8c24736309ef1030664ee0fd466537d739496
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a89af8507150ee708ad381be2d47201c9266f763
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccommultithreadmodel-class"></a>Klasa CComMultiThreadModel
-`CComMultiThreadModel`udostępnia bezpieczne wątkowo metody zwiększanie oraz zmniejszanie wartości zmiennej.  
+`CComMultiThreadModel` udostępnia bezpieczne wątkowo metody zwiększanie oraz zmniejszanie wartości zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -69,14 +64,14 @@ class CComMultiThreadModel
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
   
- S = `CComSingleThreadModel`; M =`CComMultiThreadModel`  
+ S = `CComSingleThreadModel`; M = `CComMultiThreadModel`  
   
- `CComMultiThreadModel`definiuje się trzy `typedef` nazwy. `AutoCriticalSection`i `CriticalSection` odwołania klasy, które udostępniają metody służące do uzyskiwania i wydanie własność sekcja krytyczna. `ThreadModelNoCS`odwołania do klasy [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md).  
+ `CComMultiThreadModel` definiuje się trzy `typedef` nazwy. `AutoCriticalSection` i `CriticalSection` odwołania klasy, które udostępniają metody służące do uzyskiwania i wydanie własność sekcja krytyczna. `ThreadModelNoCS` odwołania do klasy [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
-##  <a name="autocriticalsection"></a>CComMultiThreadModel::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>  CComMultiThreadModel::AutoCriticalSection  
  Korzystając z `CComMultiThreadModel`, `typedef` nazwa `AutoCriticalSection` odwołuje się do klasy [CComAutoCriticalSection](ccomautocriticalsection-class.md), który udostępnia metody uzyskiwania i zwalniania prawo własności obiektu sekcja krytyczna.  
   
 ```
@@ -140,7 +135,7 @@ private:
 |`InternalAddRef`|Przyrost nie jest bezpieczne wątkowo.|Przyrost jest bezpieczne wątkowo.|  
 |`Lock`|Nie robi nic; nie ma krytycznych części do zablokowania.|Nie robi nic; nie ma krytycznych części do zablokowania.|  
   
-##  <a name="criticalsection"></a>CComMultiThreadModel::CriticalSection  
+##  <a name="criticalsection"></a>  CComMultiThreadModel::CriticalSection  
  Korzystając z `CComMultiThreadModel`, `typedef` nazwa `CriticalSection` odwołuje się do klasy [CComCriticalSection](ccomcriticalsection-class.md), który udostępnia metody uzyskiwania i zwalniania prawo własności obiektu sekcja krytyczna.  
   
 ```
@@ -161,7 +156,7 @@ typedef CComCriticalSection CriticalSection;
 ### <a name="example"></a>Przykład  
  Zobacz [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).  
   
-##  <a name="decrement"></a>CComMultiThreadModel::Decrement  
+##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
  Ta funkcja statyczna wywołania funkcji Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), które zmniejsza wartość zmiennej wskazywana przez `p`.  
   
 ```
@@ -178,7 +173,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 ### <a name="remarks"></a>Uwagi  
  **InterlockedDecrement** uniemożliwia więcej niż jeden wątek jednocześnie za pomocą tej zmiennej.  
   
-##  <a name="increment"></a>CComMultiThreadModel::Increment  
+##  <a name="increment"></a>  CComMultiThreadModel::Increment  
  Ta funkcja statyczna wywołania funkcji Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), która zwiększa wartość zmiennej wskazywana przez `p`.  
   
 ```
@@ -195,7 +190,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 ### <a name="remarks"></a>Uwagi  
  **InterlockedIncrement** uniemożliwia więcej niż jeden wątek jednocześnie za pomocą tej zmiennej.  
   
-##  <a name="threadmodelnocs"></a>CComMultiThreadModel::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>  CComMultiThreadModel::ThreadModelNoCS  
  Korzystając z `CComMultiThreadModel`, `typedef` nazwa `ThreadModelNoCS` odwołuje się do klasy [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md).  
   
 ```
@@ -203,7 +198,7 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `CComMultiThreadModelNoCS`udostępnia metody wątkowo zwiększanie oraz zmniejszanie zmiennej; jednak nie zawiera sekcja krytyczna.  
+ `CComMultiThreadModelNoCS` udostępnia metody wątkowo zwiększanie oraz zmniejszanie zmiennej; jednak nie zawiera sekcja krytyczna.  
   
  [CComSingleThreadModel](ccomsinglethreadmodel-class.md) i `CComMultiThreadModelNoCS` również zawierają definicje `ThreadModelNoCS`. W poniższej tabeli przedstawiono relację między klasę modelu wątkowości i klasy odwołuje się `ThreadModelNoCS`:  
   

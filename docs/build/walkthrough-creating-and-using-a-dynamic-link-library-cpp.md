@@ -1,30 +1,25 @@
 ---
-title: "Wskazówki: Tworzenie i używanie własnych dynamicznej biblioteki łącza (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Tworzenie i używanie własnych dynamicznej biblioteki łącza (C++) | Dokumentacja firmy Microsoft'
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdcc02cf7c86b85684df0e8d8b7a1f0049ff7e25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19c9c013d591f4c6de14ecd4a2c582d8f0f3e4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Wskazówki: Tworzenie i używanie własnych dynamicznej biblioteki łącza (C++)
 
@@ -89,7 +84,7 @@ W tym zestawie zadania utworzenia projektu dla biblioteki DLL, Dodaj kod i skomp
 >
 >1. Na pasku menu wybierz **projektu**, **właściwości**.
 >
->1. W lewym okienku **strony właściwości** okno dialogowe, wybierz opcję **preprocesora** w obszarze **właściwości konfiguracji**, **C/C++**. Sprawdź zawartość **definicje preprocesora** właściwości.<br/><br/>![Sprawdź właściwość definicje preprocesora](media/mathlibrary-153bug-preprocessor-definitions-check.png "Sprawdź właściwość definicje preprocesora")<br/><br/>Jeśli widzisz **MATHLIBRARY &#95; EKSPORTY** w **definicje preprocesora** listy, a następnie jest konieczne wprowadzanie zmian. Jeśli widzisz **MathLibrary &#95; EKSPORTY** , następnie przejdź do wykonaj następujące kroki.
+>1. W lewym okienku **strony właściwości** okno dialogowe, wybierz opcję **preprocesora** w obszarze **właściwości konfiguracji**, **C/C++**. Sprawdź zawartość **definicje preprocesora** właściwości.<br/><br/>![Sprawdź właściwość definicje preprocesora](media/mathlibrary-153bug-preprocessor-definitions-check.png "Sprawdź właściwość definicje preprocesora")<br/><br/>Jeśli widzisz **MATHLIBRARY&#95;EKSPORTÓW** w **definicje preprocesora** listy, a następnie jest konieczne wprowadzanie zmian. Jeśli widzisz **MathLibrary&#95;EKSPORTÓW** , następnie przejdź do wykonaj następujące kroki.
 >
 >1. W górnej części **strony właściwości** okna dialogowego, zmień **konfiguracji** listy rozwijanej **wszystkie konfiguracje**.
 >
@@ -176,9 +171,9 @@ Prawo teraz tej biblioteki DLL nie bardzo. Następnie utwórz plik nagłówka do
 
 Ten plik nagłówka deklaruje niektóre funkcje do tworzenia uogólniony sekwencji Fibonacci danego dwóch wartości początkowej. Wywołanie `fibonacci_init(1, 1)` generuje znanych Fibonacci numer sekwencji.
 
-Zwróć uwagę, preprocesora instrukcje w górnej części pliku. Domyślnie szablon nowego projektu biblioteki DLL dodaje  ***PROJECTNAME*&#95; EKSPORTY** do zdefiniowanego makra preprocesora dla projektu biblioteki DLL. W tym przykładzie definiuje Visual Studio **MATHLIBRARY &#95; EKSPORTY** po utworzeniu projektu MathLibrary biblioteki DLL. (Kreatora w programie Visual Studio 2017 wersji 15 ustęp 3 nie wymusza definicji symbolu, aby wielkimi literami. Jeśli nazwy projektu "MathLibrary" to symbol zdefiniowany jest MathLibrary &#95; EKSPORTY zamiast MATHLIBRARY &#95; EKSPORTUJE. That's Dlaczego istnieją dodatkowe kroki opisane powyżej, aby dodać ten symbol.)
+Zwróć uwagę, preprocesora instrukcje w górnej części pliku. Domyślnie dodaje nowy projekt szablonu dla biblioteki DLL ***PROJECTNAME *&#95;EKSPORTÓW** do zdefiniowanego makra preprocesora dla projektu biblioteki DLL. W tym przykładzie definiuje Visual Studio **MATHLIBRARY&#95;EKSPORTÓW** po utworzeniu projektu MathLibrary biblioteki DLL. (Kreatora w programie Visual Studio 2017 wersji 15 ustęp 3 nie wymusza definicji symbolu, aby wielkimi literami. Jeśli nazwy projektu "MathLibrary", symbol zdefiniowany jest MathLibrary&#95;EKSPORTÓW zamiast MATHLIBRARY&#95;eksportu. That's Dlaczego istnieją dodatkowe kroki opisane powyżej, aby dodać ten symbol.)
 
-Gdy **MATHLIBRARY &#95; EKSPORTY** makro jest zdefiniowany, **MATHLIBRARY &#95; Interfejs API** zestawy makro `__declspec(dllexport)` modyfikatora w deklaracji funkcji. Modyfikator informuje kompilator i konsolidator, aby wyeksportować funkcji lub zmienna z biblioteki DLL, dzięki czemu mogą być używane przez inne aplikacje. Gdy **MATHLIBRARY &#95; EKSPORTY** jest niezdefiniowana, na przykład, gdy plik nagłówka jest dołączony przez aplikację klienta **MATHLIBRARY &#95; Interfejs API** stosuje `__declspec(dllimport)` modyfikator deklaracje. Modyfikator optymalizuje importu funkcji lub zmienna w aplikacji. Aby uzyskać więcej informacji, zobacz [dllexport i dllimport](../cpp/dllexport-dllimport.md).
+Podczas **MATHLIBRARY&#95;EKSPORTÓW** makro jest zdefiniowany, **MATHLIBRARY&#95;interfejsu API** zestawy makro `__declspec(dllexport)` modyfikatora w deklaracji funkcji. Modyfikator informuje kompilator i konsolidator, aby wyeksportować funkcji lub zmienna z biblioteki DLL, dzięki czemu mogą być używane przez inne aplikacje. Gdy **MATHLIBRARY&#95;EKSPORTUJE** jest niezdefiniowana, na przykład, gdy plik nagłówka jest dołączony przez aplikację klienta **MATHLIBRARY&#95;interfejsu API** stosuje `__declspec(dllimport)` modyfikator do deklaracje. Modyfikator optymalizuje importu funkcji lub zmienna w aplikacji. Aby uzyskać więcej informacji, zobacz [dllexport i dllimport](../cpp/dllexport-dllimport.md).
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>Aby dodać implementację biblioteki dll
 

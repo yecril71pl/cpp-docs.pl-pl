@@ -1,12 +1,9 @@
 ---
-title: "Globalne funkcje rejestru i biblioteki typów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Globalne funkcje rejestru i biblioteki typów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb919cb2fe4d91f5665fbea3dcfd2140d178341
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb0a89ecf8bb81e515703abe819bb1edfbf80d59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-and-typelib-global-functions"></a>Globalne funkcje rejestru i biblioteki typów
 Funkcje te zapewniają obsługę ładowania i rejestrowania biblioteki typów.  
@@ -68,7 +63,7 @@ Funkcje te zapewniają obsługę ładowania i rejestrowania biblioteki typów.
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h
 
-## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
+## <a name="atlgetperuserregistration"></a> AtlGetPerUserRegistration
 Ta funkcja służy do określenia, czy aplikacja przekierowuje dostęp do rejestru **HKEY_CURRENT_USER** (**HKCU**) węzła.  
   
 ### <a name="syntax"></a>Składnia  
@@ -78,11 +73,11 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`pEnabled`  
- `TRUE`Wskazuje, że informacje rejestru jest kierowany do **HKCU** węzła; `FALSE` wskazuje, że aplikacja zapisuje informacje rejestru do domyślnego węzła. Domyślny węzeł jest **wpisów z HKEY_CLASSES_ROOT** (**HKCR**).  
+ [out] `pEnabled`  
+ `TRUE` Wskazuje, że informacje rejestru jest kierowany do **HKCU** węzła; `FALSE` wskazuje, że aplikacja zapisuje informacje rejestru do domyślnego węzła. Domyślny węzeł jest **wpisów z HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `S_OK`Jeśli metoda zakończy się pomyślnie, w przeciwnym razie `HRESULT` kodu błędu, jeśli wystąpi błąd.  
+ `S_OK` Jeśli metoda zakończy się pomyślnie, w przeciwnym razie `HRESULT` kodu błędu, jeśli wystąpi błąd.  
   
 ### <a name="remarks"></a>Uwagi  
  Przekierowanie rejestru nie jest domyślnie włączona. Jeśli ta opcja jest włączona, dostępu do rejestru jest przekierowywany do **HKEY_CURRENT_USER\Software\Classes**.  
@@ -92,7 +87,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
 
- ## <a name="afxregcreatekey"></a>AfxRegCreateKey
+ ## <a name="afxregcreatekey"></a> AfxRegCreateKey
  Tworzy określony klucz rejestru.  
   
 ### <a name="syntax"></a>Składnia  
@@ -120,7 +115,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxpriv.h  
 
-## <a name="afxregdeletekey"></a>AfxRegDeleteKey
+## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 Usuwa określony klucz rejestru.  
   
 ### <a name="syntax"></a>Składnia  
@@ -167,7 +162,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h   
 
-##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib  
+##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib  
  Ta funkcja jest wywoływana, aby zarejestrować bibliotekę typów.  
   
   
@@ -190,7 +185,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h
 
- ## <a name="afxregopenkey"></a>AfxRegOpenKey
+ ## <a name="afxregopenkey"></a> AfxRegOpenKey
  Otwiera określony klucz rejestru.  
   
 ### <a name="syntax"></a>Składnia  
@@ -218,7 +213,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxpriv.h  
 
-## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
+## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 Otwiera określony klucz rejestru. 
 
 ### <a name="syntax"></a>Składnia  
@@ -252,7 +247,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxpriv.h  
 
- ## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
+ ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
  Pomocnik wyrejestrować Obsługa podglądu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -268,7 +263,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h  
 
-## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
+## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 Określa, czy aplikacja przekierowuje dostęp do rejestru **HKEY_CURRENT_USER** (**HKCU**) węzła.  
   
 ### <a name="syntax"></a>Składnia  
@@ -278,11 +273,11 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bEnable`  
- `TRUE`Wskazuje, że informacje rejestru jest kierowany do **HKCU** węzła; `FALSE` wskazuje, że aplikacja zapisuje informacje rejestru do domyślnego węzła. Domyślny węzeł jest **wpisów z HKEY_CLASSES_ROOT** (**HKCR**).  
+ [in] `bEnable`  
+ `TRUE` Wskazuje, że informacje rejestru jest kierowany do **HKCU** węzła; `FALSE` wskazuje, że aplikacja zapisuje informacje rejestru do domyślnego węzła. Domyślny węzeł jest **wpisów z HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `S_OK`Jeśli metoda zakończy się pomyślnie, w przeciwnym razie `HRESULT` kodu błędu, jeśli wystąpi błąd.  
+ `S_OK` Jeśli metoda zakończy się pomyślnie, w przeciwnym razie `HRESULT` kodu błędu, jeśli wystąpi błąd.  
   
 ### <a name="remarks"></a>Uwagi  
  Przekierowanie rejestru nie jest domyślnie włączona. Jeśli ta opcja jest włączona, dostępu do rejestru jest przekierowywany do **HKEY_CURRENT_USER\Software\Classes**.  
@@ -291,7 +286,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
 
-##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib  
+##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib  
  Ta funkcja jest wywoływana, aby wyrejestrować bibliotekę typów.  
   
 ### <a name="syntax"></a>Składnia  
@@ -316,7 +311,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h
 
-##  <a name="atlloadtypelib"></a>AtlLoadTypeLib  
+##  <a name="atlloadtypelib"></a>  AtlLoadTypeLib  
  Ta funkcja jest wywoływana, aby załadować bibliotekę typów.  
   
 ### <a name="syntax"></a>Składnia  
@@ -347,7 +342,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja pomocnika jest wykorzystywany przez [AtlRegisterTypeLib](#atlregistertypelib) i [AtlUnRegisterTypeLib](#atlunregistertypelib).  
   
-##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD  
+##  <a name="atlupdateregistryfromresourced"></a>  AtlUpdateRegistryFromResourceD  
  Ta funkcja została uznana za przestarzałą w programie Visual Studio 2013 i zostanie usunięta w programie Visual Studio 2015.  
   
 ```
@@ -356,7 +351,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
   
 
   
-##  <a name="registrydataexchange"></a>RegistryDataExchange  
+##  <a name="registrydataexchange"></a>  RegistryDataExchange  
  Ta funkcja jest wywoływana, aby odczytywać dane z lub zapisywać do rejestru systemowego.  
 
 ### <a name="syntax"></a>Składnia  
@@ -368,7 +363,7 @@ HRESULT RegistryDataExchange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *pT*  
+ *PT*  
  Wskaźnik do bieżącego obiektu.  
   
  *rdxOp*  

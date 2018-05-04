@@ -1,12 +1,9 @@
 ---
 title: Makra mapy obiekt | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::DECLARE_OBJECT_DESCRIPTION
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 626744eb9f2d9dbe6a013bd329406150af35ecca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 671fd80bc2c4ad320efb282fd659899756c2ecbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-map-macros"></a>Makra mapy obiektu
 Te makra zdefiniuj map obiekt i wpisów.  
@@ -39,7 +34,7 @@ Te makra zdefiniuj map obiekt i wpisów.
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
    
-##  <a name="declare_object_description"></a>DECLARE_OBJECT_DESCRIPTION  
+##  <a name="declare_object_description"></a>  DECLARE_OBJECT_DESCRIPTION  
  Można określić opis dla obiekt klasy.  
   
 ```
@@ -53,7 +48,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 ### <a name="remarks"></a>Uwagi  
  ATL wejścia mapy obiektu przez ten opis [OBJECT_ENTRY](http://msdn.microsoft.com/en-us/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd) makra.  
   
- `DECLARE_OBJECT_DESCRIPTION`implementuje `GetObjectDescription` funkcja, która służy do zastępowania [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) metody.  
+ `DECLARE_OBJECT_DESCRIPTION` implementuje `GetObjectDescription` funkcja, która służy do zastępowania [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) metody.  
 
   
  `GetObjectDescription` Funkcja jest wywoływana przez **IComponentRegistrar::GetComponents**. **IComponentRegistrar** jest interfejsem automatyzacji, która pozwala na rejestrowanie i wyrejestrowywanie pojedynczych składników w bibliotece DLL. Podczas tworzenia obiektu rejestratora składników przy użyciu kreatora Projekt ATL, Kreator automatycznie wykona **IComponentRegistrar** interfejsu. **IComponentRegistrar** jest zwykle używany przez program Microsoft Transaction Server.  
@@ -63,7 +58,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#123](../../atl/codesnippet/cpp/object-map-macros_1.h)]  
   
-##  <a name="object_entry_auto"></a>OBJECT_ENTRY_AUTO  
+##  <a name="object_entry_auto"></a>  OBJECT_ENTRY_AUTO  
  Wejścia obiekt ATL Mapa obiektów, aktualizuje rejestr i tworzy wystąpienie obiektu.  
   
 ```
@@ -80,7 +75,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 ### <a name="remarks"></a>Uwagi  
  Obiekt wpisu makra są umieszczane w globalnym zakresie w projekcie w celu zapewnienia obsługi rejestracji, inicjowanie i Tworzenie klasy.  
   
- `OBJECT_ENTRY_AUTO`wprowadza wskaźników funkcji klasy creator oraz klasy twórcy fabryki klasy `CreateInstance` funkcji dla tego obiektu do mapy obiektu ATL wygenerowany automatycznie. Gdy [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) jest wywoływana, aktualizacji rejestru systemowego dla każdego obiektu w mapie obiektu.  
+ `OBJECT_ENTRY_AUTO` wprowadza wskaźników funkcji klasy creator oraz klasy twórcy fabryki klasy `CreateInstance` funkcji dla tego obiektu do mapy obiektu ATL wygenerowany automatycznie. Gdy [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) jest wywoływana, aktualizacji rejestru systemowego dla każdego obiektu w mapie obiektu.  
 
   
  W poniższej tabeli opisano sposób uzyskiwania informacji dodany do mapy obiekt z klasy nadawane to makro jako drugiego parametru.  
@@ -94,7 +89,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 |Klasa poziom inicjowanie i oczyszczanie|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
 
   
-##  <a name="object_entry_non_createable_ex_auto"></a>OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO  
+##  <a name="object_entry_non_createable_ex_auto"></a>  OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO  
  Umożliwia określenie, że zarejestrowane i zainicjować obiektu, ale nie powinien być zewnętrznie możliwość utworzenia za pośrednictwem `CoCreateInstance`.  
   
 ```
@@ -111,7 +106,7 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 ### <a name="remarks"></a>Uwagi  
  Obiekt wpisu makra są umieszczane w globalnym zakresie w projekcie w celu zapewnienia obsługi rejestracji, inicjowanie i Tworzenie klasy.  
   
- `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO`Umożliwia określenie, że zarejestrowane i zainicjować obiektu (zobacz [OBJECT_ENTRY_AUTO](#object_entry_auto) Aby uzyskać więcej informacji), ale nie należy tworzyć za pomocą `CoCreateInstance`.  
+ `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` Umożliwia określenie, że zarejestrowane i zainicjować obiektu (zobacz [OBJECT_ENTRY_AUTO](#object_entry_auto) Aby uzyskać więcej informacji), ale nie należy tworzyć za pomocą `CoCreateInstance`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Makra](../../atl/reference/atl-macros.md)

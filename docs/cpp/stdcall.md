@@ -1,12 +1,9 @@
 ---
 title: __stdcall | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __stdcall_cpp
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec45f93331178f62799fb826ff31dfb6e66c3337
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f018a87f7a73de6500294b0817263e6f847af8ad
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stdcall"></a>__stdcall
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  `__stdcall` Konwencji wywoływania służy do wywołania funkcji Win32 API. Wywoływany czyści stosu, więc sprawia, że kompilator **vararg** funkcji `__cdecl`. Funkcje programu wykorzystujące Konwencja wywoływania wymagają prototypu funkcji.  
   
@@ -47,7 +42,7 @@ return-type __stdcall function-name[(argument-list)]
 |Kolejność przekazywania argumentów|Od prawej do lewej.|  
 |Przekazywanie argumentów Konwencji|Według wartości chyba że przekazywany jest wskaźnik lub odwołanie do typu.|  
 |Odpowiedzialność za utrzymanie stosu|Wywoływana funkcja POP własną argumentów ze stosu.|  
-|Konwencja dekorowania nazw|Znaku podkreślenia (_) jest prefiksem nazwy. Nazwa następuje znak @ (@) następuje liczba bajtów (dziesiętna) na liście argumentów. W związku z tym funkcja zadeklarowana jako `int func( int a, double b )` ma przypisany w następujący sposób:`_func@12`|  
+|Konwencja dekorowania nazw|Znaku podkreślenia (_) jest prefiksem nazwy. Nazwa następuje znak @ (@) następuje liczba bajtów (dziesiętna) na liście argumentów. W związku z tym funkcja zadeklarowana jako `int func( int a, double b )` ma przypisany w następujący sposób: `_func@12`|  
 |Konwencja translacji wielkości liter|Brak|  
   
  [GZ](../build/reference/gd-gr-gv-gz-calling-convention.md) określa — opcja kompilatora `__stdcall` dla wszystkich funkcji, nie jest jawnie zadeklarowana z różnych konwencję wywołania.  

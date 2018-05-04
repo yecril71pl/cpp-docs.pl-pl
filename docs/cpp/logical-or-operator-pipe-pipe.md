@@ -1,12 +1,9 @@
 ---
 title: 'Logiczny OR Operator: || | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '||'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a826b23f94c4eae4a4fdb5379563b015f05dde71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd0642e9759eaa4d39eac680ba165af7dbbb0d44
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-or-operator-"></a>Operator logiczny OR: ||
 ## <a name="syntax"></a>Składnia  
@@ -56,7 +51,7 @@ printf( "%d" , (x == w || x == y || x == z) );
   
  W powyższym przykładzie Jeśli `x` jest równa albo `w`, `y`, lub `z`, drugi argument `printf` funkcja zwraca wartość true, a wartość 1 jest drukowana. W przeciwnym razie jest spełniony, drukowana wartość 0. Gdy tylko jeden z warunków zwraca wartość true, wygasa oceny.  
   
-## <a name="operator-keyword-for-124124"></a>Operator — słowo kluczowe dla &#124; &#124;  
+## <a name="operator-keyword-for-124124"></a>Operator — słowo kluczowe dla&#124;&#124;  
  **Lub** operator jest odpowiednikiem tekstu `||`. Istnieją dwa sposoby **lub** operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub skompiluj z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).  
   
 ## <a name="example"></a>Przykład  

@@ -1,30 +1,25 @@
 ---
-title: "Dodawanie właściwości do kontrolki (ALT — samouczek, część 3) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Dodawanie właściwości do kontrolki (ALT — samouczek, część 3) | Dokumentacja firmy Microsoft
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a316ba56c551d0ee47261160058b00eca5e51a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Dodawanie właściwości do kontrolki (ALT — Samouczek, część 3)
-`IPolyCtl`to interfejs, który zawiera kontrolki niestandardowe metody i właściwości, a właściwość spowoduje dodanie do niej.  
+`IPolyCtl` to interfejs, który zawiera kontrolki niestandardowe metody i właściwości, a właściwość spowoduje dodanie do niej.  
   
 ### <a name="to-add-a-property-using-the-add-property-wizard"></a>Aby dodać właściwość przy użyciu Kreatora dodawania właściwości  
   
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  Istnieje już właściwość o nazwie `Sides`. W następnym kroku zostanie zmieniony kod rysowania z niego korzystać.  
   
- [Wróć do kroku 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [Do kroku 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
+ [Wróć do kroku 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [do kroku 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Samouczek](../atl/active-template-library-atl-tutorial.md)

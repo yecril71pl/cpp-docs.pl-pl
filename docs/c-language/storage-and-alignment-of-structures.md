@@ -1,13 +1,10 @@
 ---
-title: "Magazynowanie i wyrównanie struktur | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Magazynowanie i wyrównanie struktur | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb5ec55ed3125ac86b0042812ba7fc25388a155
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4a70ab5fbeb4a1672279e7e9b617e3b4de1c1b5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-and-alignment-of-structures"></a>Magazynowanie i wyrównanie struktur
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Elementy członkowskie struktur są przechowywane sekwencyjnie, w kolejności, w której były zadeklarowane: pierwszy element członkowski ma najniższy adres pamięci, a ostatni element członkowski – najwyższy.  
   
@@ -39,13 +34,13 @@ ms.lasthandoff: 12/21/2017
   
  Sąsiadujące pola bitowe są pakowane w takie same 1-, 2- lub 4-bajtowe jednostki alokacji, jeśli typy całkowite mają taki sam rozmiar i jeśli następne pole bitowe pasuje do bieżącej jednostki alokacji bez przekraczania granicy nałożonej przez wspólne wymagania wyrównania pól bitowych.  
   
- Aby zaoszczędzić miejsce lub zachować zgodność z istniejącymi strukturami danych, możesz chcieć przechowywać struktury w mniej lub bardziej kompaktowy sposób. [/Zp](../build/reference/zp-struct-member-alignment.md)[*n*] — opcja kompilatora i [#pragma pack](../preprocessor/pack.md) kontroli, jak struktury danych jest "opakowane" w pamięci. Jeśli używasz /Zp [*n*] opcji, których  *n*  jest 1, 2, 4, 8 lub 16, każdy element członkowski struktury po pierwszym znajduje się na granice bajtów, które są wymagane wyrównania pole lub rozmiar pakowania (*n*), w zależności od jest mniejsza. Wyrażone jako formuła, granice bajtowe są  
+ Aby zaoszczędzić miejsce lub zachować zgodność z istniejącymi strukturami danych, możesz chcieć przechowywać struktury w mniej lub bardziej kompaktowy sposób. [/Zp](../build/reference/zp-struct-member-alignment.md)[*n*] — opcja kompilatora i [#pragma pack](../preprocessor/pack.md) kontroli, jak struktury danych jest "opakowane" w pamięci. Jeśli używasz /Zp [*n*] opcji, gdzie *n* jest 1, 2, 4, 8 lub 16, każdy element członkowski struktury po zapisaniu pierwszy na bajt granice, które są wymaganie wyrównanie pola albo pakowania rozmiaru ( *n*), w zależności od jest mniejsza. Wyrażone jako formuła, granice bajtowe są  
   
 ```  
 min( n, sizeof( item ) )  
 ```  
   
- gdzie  *n*  rozmiar pakowania wyrażone z /Zp [*n*] opcji i *elementu* jest element członkowski struktury. Domyślny rozmiar pakowania to /Zp8.  
+ gdzie *n* rozmiar pakowania wyrażone z /Zp [*n*] opcji i *elementu* jest element członkowski struktury. Domyślny rozmiar pakowania to /Zp8.  
   
  Aby użyć dyrektywy `pack` do określenia pakowania innego, niż określone w wierszu polecenia dla określonej struktury, przed strukturą podaj dyrektywę `pack`, gdzie rozmiar pakowania wynosi 1, 2, 4, 8 lub 16. Aby przywrócić pakowanie podane w wierszu polecenia, określ dyrektywę `pack` bez argumentów.  
   

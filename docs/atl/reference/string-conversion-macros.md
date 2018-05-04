@@ -1,12 +1,9 @@
 ---
-title: "Makra konwersji ciągu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Makra konwersji ciągu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlconv/ATL::DEVMODEA2W
@@ -20,27 +17,25 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a166fec6eceb84b1b22563849ff1b9462ef9a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 917afc7dae7a0ed96d5d5cc476b4f8394abe8913
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-conversion-macros"></a>Makra konwersji ciągu
 
 Te makra Podaj funkcji konwersji.  
  
-##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL i makr konwersji MFC ciągu
+##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL i makr konwersji MFC ciągu
 
 Makra konwersji ciągu omówione w tym miejscu są prawidłowe dla ATL i MFC. Aby uzyskać więcej informacji o konwersji ciągu MFC, zobacz [TN059: za pomocą makr konwersji MFC MBCS/Unicode](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) i [makr MFC i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md).
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE i makra konwersji ciągu TEXTMETRIC
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE i makra konwersji ciągu TEXTMETRIC
 
 Te makra Utwórz kopię [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) lub [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktury i konwertowanie ciągów w strukturze nowe na nowy typ ciągu. Makra przydzielić pamięci na stosie dla nowej struktury i zwraca wskaźnik do nowej struktury.  
   

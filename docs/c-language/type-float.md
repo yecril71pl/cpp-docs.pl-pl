@@ -1,13 +1,10 @@
 ---
 title: Typ float | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0b1362d5cb0451f5190ca63ab0344f557256190
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e218f7b5025de10dc06bf20fc759aed93189ec53
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-float"></a>Typ float
 Liczby zmiennoprzecinkowe formatu IEEE (Institute of Electrical and Electronics Engineers). Wartości o pojedynczej precyzji z typem float mieć 4 bajty, składające się z bitu znaku, 8-bitową 127 nadmiarowe binarne wykładnik i mantysy 23-bitowych. Mantysa reprezentuje liczbą z zakresu od 1.0 i 2.0. Ponieważ bit znaczącymi bitami mantysa ma zawsze numer 1, nie są przechowywane w kodzie. Taka reprezentacja zapewnia szereg około 3.4E-38 do 3.4E + 38 na typ float.  

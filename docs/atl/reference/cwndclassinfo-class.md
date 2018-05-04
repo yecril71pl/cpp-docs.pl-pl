@@ -2,11 +2,8 @@
 title: Klasa CWndClassInfo | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWndClassInfo
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b07f6b12914e18f3f83abedf59742a8b7c7867b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 878d6065f3a158ac4404620205ef9c60912d89ca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwndclassinfo-class"></a>Klasa CWndClassInfo
 Ta klasa dostarcza metody do rejestrowania informacji o klasy okna.  
@@ -69,13 +64,13 @@ class CWndClassInfo
 |[pWndProc](#pwndproc)|Wskazuje procedurę okna istniejącej klasy okna.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CWndClassInfo`zarządza informacjami klasy okna. Zazwyczaj używają `CWndClassInfo` za pomocą jednego z trzech makra `DECLARE_WND_CLASS`, `DECLARE_WND_CLASS_EX`, lub `DECLARE_WND_SUPERCLASS`, zgodnie z opisem w poniższej tabeli:  
+ `CWndClassInfo` zarządza informacjami klasy okna. Zazwyczaj używają `CWndClassInfo` za pomocą jednego z trzech makra `DECLARE_WND_CLASS`, `DECLARE_WND_CLASS_EX`, lub `DECLARE_WND_SUPERCLASS`, zgodnie z opisem w poniższej tabeli:  
   
-|Makra|Opis|  
+|Macro|Opis|  
 |-----------|-----------------|  
-|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo`rejestruje informacje dla nowej klasy okna.|  
-|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo`rejestruje informacje dla nowej klasy okna tym parametrów klasy.|  
-|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo`rejestruje informacje dla klasy okna jest oparta na istniejącej klasy, która korzysta z innego okna procedury. Ta metoda jest wywoływana tworzenie nadklas.|  
+|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` rejestruje informacje dla nowej klasy okna.|  
+|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` rejestruje informacje dla nowej klasy okna tym parametrów klasy.|  
+|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo` rejestruje informacje dla klasy okna jest oparta na istniejącej klasy, która korzysta z innego okna procedury. Ta metoda jest wywoływana tworzenie nadklas.|  
   
  Domyślnie [CWindowImpl](../../atl/reference/cwindowimpl-class.md) obejmuje `DECLARE_WND_CLASS` makro można utworzyć okna oparte na nową klasę okna. DECLARE_WND_CLASS zawiera domyślne style i kolor tła formantu. Jeśli chcesz określić styl i kolor tła samodzielnie, pochodzi z klasy `CWindowImpl` i obejmują `DECLARE_WND_CLASS_EX` makra w definicji klasy.  
   
@@ -90,14 +85,14 @@ class CWndClassInfo
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
-##  <a name="m_atom"></a>CWndClassInfo::m_atom  
+##  <a name="m_atom"></a>  CWndClassInfo::m_atom  
  Zawiera unikatowy identyfikator klasy okna zarejestrowany.  
   
 ```
 ATOM m_atom;
 ```  
   
-##  <a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
+##  <a name="m_bsystemcursor"></a>  CWndClassInfo::m_bSystemCursor  
  Jeśli **TRUE**, zasobu kursora systemu zostanie załadowany po zarejestrowaniu klasy okna.  
   
 ```
@@ -107,9 +102,9 @@ BOOL m_bSystemCursor;
 ### <a name="remarks"></a>Uwagi  
  W przeciwnym razie zostanie załadowany zasobu kursora zawarte w module.  
   
- `CWndClassInfo`używa `m_bSystemCursor` tylko wtedy, gdy [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (domyślnie [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) lub [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) makro jest określona. W takim przypadku `m_bSystemCursor` jest ustawiana na **TRUE**. Aby uzyskać więcej informacji, zobacz [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) omówienie.  
+ `CWndClassInfo` używa `m_bSystemCursor` tylko wtedy, gdy [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (domyślnie [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) lub [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) makro jest określona. W takim przypadku `m_bSystemCursor` jest ustawiana na **TRUE**. Aby uzyskać więcej informacji, zobacz [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) omówienie.  
   
-##  <a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
+##  <a name="m_lpszcursorid"></a>  CWndClassInfo::m_lpszCursorID  
  Określa nazwy zasobu kursora lub identyfikator zasobu w programie word znaczącymi bitami i zero w programie word znaczących.  
   
 ```
@@ -119,9 +114,9 @@ LPCTSTR m_lpszCursorID;
 ### <a name="remarks"></a>Uwagi  
  Po zarejestrowaniu klasy okna, dojście do kursora identyfikowane przez `m_lpszCursorID` jest pobierany i przechowywane przez [m_wc](#m_wc).  
   
- `CWndClassInfo`używa `m_lpszCursorID` tylko wtedy, gdy [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (domyślnie [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) lub [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) makro jest określona. W takim przypadku `m_lpszCursorID` jest ustawiana na **IDC_ARROW**. Aby uzyskać więcej informacji, zobacz [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) omówienie.  
+ `CWndClassInfo` używa `m_lpszCursorID` tylko wtedy, gdy [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (domyślnie [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) lub [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) makro jest określona. W takim przypadku `m_lpszCursorID` jest ustawiana na **IDC_ARROW**. Aby uzyskać więcej informacji, zobacz [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) omówienie.  
   
-##  <a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
+##  <a name="m_lpszorigname"></a>  CWndClassInfo::m_lpszOrigName  
  Zawiera nazwę istniejącej klasy okna.  
   
 ```
@@ -129,9 +124,9 @@ LPCTSTR m_lpszOrigName;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `CWndClassInfo`używa `m_lpszOrigName` tylko Jeśli dołączysz [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra w definicji klasy. W takim przypadku `CWndClassInfo` rejestruje klasę okna w oparciu o nazwie klasy `m_lpszOrigName`. Aby uzyskać więcej informacji, zobacz [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) omówienie.  
+ `CWndClassInfo` używa `m_lpszOrigName` tylko Jeśli dołączysz [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra w definicji klasy. W takim przypadku `CWndClassInfo` rejestruje klasę okna w oparciu o nazwie klasy `m_lpszOrigName`. Aby uzyskać więcej informacji, zobacz [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) omówienie.  
   
-##  <a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
+##  <a name="m_szautoname"></a>  CWndClassInfo::m_szAutoName  
  Przechowuje nazwę klasy okna.  
   
 ```
@@ -139,9 +134,9 @@ TCHAR m_szAutoName[13];
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `CWndClassInfo`używa `m_szAutoName` tylko wtedy, gdy **NULL** została przekazana `WndClassName` parametr [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) lub [ DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL utworzy nazwę po zarejestrowaniu klasy okna.  
+ `CWndClassInfo` używa `m_szAutoName` tylko wtedy, gdy **NULL** została przekazana `WndClassName` parametr [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) lub [ DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL utworzy nazwę po zarejestrowaniu klasy okna.  
   
-##  <a name="m_wc"></a>CWndClassInfo::m_wc  
+##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
  Przechowuje informacje o klasie okna w [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) struktury.  
   
 ```
@@ -153,7 +148,7 @@ WNDCLASSEX m_wc;
   
  Jeśli określono [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra `m_wc` zawiera informacje o superklasie — jest oparta na istniejącej klasy, która korzysta z innego okna procedury klasy okna. [m_lpszOrigName](#m_lpszorigname) i [pWndProc](#pwndproc) odpowiednio Zapisz nazwę istniejącej klasy okna i procedurę okna.  
   
-##  <a name="pwndproc"></a>CWndClassInfo::pWndProc  
+##  <a name="pwndproc"></a>  CWndClassInfo::pWndProc  
  Wskazuje procedurę okna istniejącej klasy okna.  
   
 ```
@@ -161,9 +156,9 @@ WNDPROC pWndProc;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `CWndClassInfo`używa `pWndProc` tylko Jeśli dołączysz [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra w definicji klasy. W takim przypadku `CWndClassInfo` rejestruje klasę okna, jest oparta na istniejącej klasy, która korzysta z innego okna procedury. Procedurę okna istniejącej klasy okna jest zapisywany w `pWndProc`. Aby uzyskać więcej informacji, zobacz [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) omówienie.  
+ `CWndClassInfo` używa `pWndProc` tylko Jeśli dołączysz [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra w definicji klasy. W takim przypadku `CWndClassInfo` rejestruje klasę okna, jest oparta na istniejącej klasy, która korzysta z innego okna procedury. Procedurę okna istniejącej klasy okna jest zapisywany w `pWndProc`. Aby uzyskać więcej informacji, zobacz [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) omówienie.  
   
-##  <a name="register"></a>CWndClassInfo::Register  
+##  <a name="register"></a>  CWndClassInfo::Register  
  Wywoływane przez [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create) można zarejestrować klasy okna, jeśli nie została jeszcze zarejestrowana.  
   
 ```

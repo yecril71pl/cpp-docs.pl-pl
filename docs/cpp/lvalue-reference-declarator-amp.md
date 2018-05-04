@@ -2,11 +2,8 @@
 title: 'Deklarator odwołania do wartości: &amp; | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '&'
@@ -16,19 +13,17 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bea07ed3139240279848d94184564ec821a8cd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de716ec8c29bbdb50462cd6ea642ed603d411c2a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lvalue-reference-declarator-amp"></a>Deklarator odwołania do wartości:&amp;
+# <a name="lvalue-reference-declarator-amp"></a>Deklarator odwołania do wartości: &amp;
 Przechowuje adres obiektu, ale składniowo zachowuje się jak obiektu.  
   
 ## <a name="syntax"></a>Składnia  

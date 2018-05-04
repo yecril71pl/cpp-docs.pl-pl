@@ -1,13 +1,10 @@
 ---
-title: "errno _doserrno —, _sys_errlist — i _sys_nerr — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: errno _doserrno —, _sys_errlist — i _sys_nerr — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - _errno
 apilocation:
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 767b7623a231ad01b51bfc60212a23593544df8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b17abb975ea9f3212d4bd6171bcd2bffb78e483c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
 Makra globalne, które zawiera kody błędów, które są ustawiane podczas wykonywania programu i odpowiedniki ciągu kodów błędów do wyświetlenia.  
@@ -55,7 +50,7 @@ Makra globalne, które zawiera kody błędów, które są ustawiane podczas wyko
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zarówno `errno` i `_doserrno` są ustawione na 0 w czasie wykonywania podczas uruchamiania programu. `errno`jest ustawiony na błąd w wywołaniu poziomie systemu. Ponieważ `errno` blokad wartość ostatniego wywołania, które go, ta wartość może zostać zmieniona przez pomyślne wywołania. Biblioteki wykonawczej wywołuje ten zestaw `errno` w przypadku wystąpienia błędu nie usuwaj `errno` w przypadku powodzenia. Wyczyść zawsze `errno` przez wywołanie metody `_set_errno(0)` bezpośrednio przed wywołaniem elementu, który może go ustawić i sprawdź go natychmiast po wywołaniu.  
+ Zarówno `errno` i `_doserrno` są ustawione na 0 w czasie wykonywania podczas uruchamiania programu. `errno` jest ustawiony na błąd w wywołaniu poziomie systemu. Ponieważ `errno` blokad wartość ostatniego wywołania, które go, ta wartość może zostać zmieniona przez pomyślne wywołania. Biblioteki wykonawczej wywołuje ten zestaw `errno` w przypadku wystąpienia błędu nie usuwaj `errno` w przypadku powodzenia. Wyczyść zawsze `errno` przez wywołanie metody `_set_errno(0)` bezpośrednio przed wywołaniem elementu, który może go ustawić i sprawdź go natychmiast po wywołaniu.  
   
  W przypadku wystąpienia błędu `errno` nie ustawiono niekoniecznie taką samą wartość jak kod błędu zwrócony przez wywołanie systemu. Dla operacji We/Wy `_doserrno` przechowuje odpowiedniki kod błędu systemu operacyjnego `errno` kodów. Dla większości operacji nie I/O wartości `_doserrno` nie jest ustawiona.  
   
@@ -65,7 +60,7 @@ Makra globalne, które zawiera kody błędów, które są ustawiane podczas wyko
 |------------------|----------------------------|  
 |`_doserrno`|[_get_doserrno —](../c-runtime-library/reference/get-doserrno.md), [_set_doserrno —](../c-runtime-library/reference/set-doserrno.md)|  
 |`errno`|[_get_errno —](../c-runtime-library/reference/get-errno.md), [_set_errno —](../c-runtime-library/reference/set-errno.md)|  
-|`_sys_errlist`, `_sys_nerr`|[strerror_s —, _strerror_s —, _wcserror_s —, \__wcserror_s —](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|  
+|`_sys_errlist`, `_sys_nerr`|[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|  
   
  Biblioteki matematyczne procedury zestaw `errno` przez wywołanie metody [_matherr —](../c-runtime-library/reference/matherr.md). Do obsługi błędów matematycznych inaczej, napisać własny procedury zgodnie z `_matherr` odwołania opis i nadaj mu nazwę `_matherr`.  
   
@@ -119,7 +114,7 @@ Makra globalne, które zawiera kody błędów, które są ustawiane podczas wyko
 |Globalne — makro|Wymagany nagłówek|Opcjonalne nagłówki|  
 |------------------|---------------------|---------------------|  
 |`errno`|\<errno.h > lub \<stdlib.h >, \<cerrno — > lub \<cstdlib — > (C++)||  
-|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h >, \<cstdlib — > (C++)|\<errno.h >, \<cerrno — > (C++)|  
+|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h >, \<cerrno — > (C++)|  
   
  `_doserrno`, `_sys_errlist`, I `_sys_nerr` makra są rozszerzenia Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).  
   
@@ -129,7 +124,7 @@ Makra globalne, które zawiera kody błędów, które są ustawiane podczas wyko
  [perror, _wperror —](../c-runtime-library/reference/perror-wperror.md)   
  [strerror —, _strerror —, _wcserror —, \__wcserror —](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)   
  [strerror_s —, _strerror_s —, _wcserror_s —, \__wcserror_s —](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)   
- [_get_doserrno —](../c-runtime-library/reference/get-doserrno.md)   
- [_set_doserrno —](../c-runtime-library/reference/set-doserrno.md)   
- [_get_errno —](../c-runtime-library/reference/get-errno.md)   
+ [_get_doserrno](../c-runtime-library/reference/get-doserrno.md)   
+ [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)   
+ [_get_errno](../c-runtime-library/reference/get-errno.md)   
  [_set_errno](../c-runtime-library/reference/set-errno.md)

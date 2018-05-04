@@ -1,12 +1,9 @@
 ---
 title: Klasa CComGITPtr | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComGITPtr
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c001d0d1ca8e756b24d97051d100e7d71723569c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 049873ce6ff630e8f00ea5ad5ec9b3786bd5e71b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomgitptr-class"></a>Klasa CComGITPtr
 Ta klasa dostarcza metody zajmujących się wskaźniki interfejsu i tabela interfejsu globalnego (GIT).  
@@ -90,7 +85,7 @@ class CComGITPtr
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
-##  <a name="attach"></a>CComGITPtr::Attach  
+##  <a name="attach"></a>  CComGITPtr::Attach  
  Wywołaj tę metodę, aby zarejestrować wskaźnika interfejsu w Tabela interfejsu globalnego (GIT).  
   
 ```
@@ -112,7 +107,7 @@ HRESULT Attach(DWORD dwCookie) throw();
 ### <a name="remarks"></a>Uwagi  
  W kompilacjach do debugowania wystąpi błąd potwierdzenia, czy usługa GIT nie jest prawidłowy, czy plik cookie jest równa NULL.  
   
-##  <a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
+##  <a name="ccomgitptr"></a>  CComGITPtr::CComGITPtr  
  Konstruktor.  
   
 ```
@@ -124,16 +119,16 @@ CComGITPtr(CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`p`  
+ [in] `p`  
  Wskaźnik interfejsu mają być przechowywane w tabeli interfejsu globalnego (GIT).  
   
- [in]`git`  
+ [in] `git`  
  Odwołanie do istniejącej `CComGITPtr` obiektu.  
   
- [in]`dwCookie`  
+ [in] `dwCookie`  
  Plik cookie używany do identyfikowania wskaźnika interfejsu.  
   
- [in]`rv`  
+ [in] `rv`  
  Źródło `CComGITPtr` obiektu do przeniesienia danych z.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -141,7 +136,7 @@ CComGITPtr(CComGITPtr&& rv);
   
  Przy użyciu konstruktora `rv` jest konstruktor przenoszenia. Dane jest przenoszony ze źródła, `rv`, a następnie `rv` jest wyczyszczone.  
   
-##  <a name="dtor"></a>CComGITPtr:: ~ CComGITPtr  
+##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr  
  Destruktor.  
   
 ```
@@ -151,7 +146,7 @@ CComGITPtr(CComGITPtr&& rv);
 ### <a name="remarks"></a>Uwagi  
  Usuwa interfejs z Tabela interfejsu globalnego (GIT), za pomocą [CComGITPtr::Revoke](#revoke).  
   
-##  <a name="copyto"></a>CComGITPtr::CopyTo  
+##  <a name="copyto"></a>  CComGITPtr::CopyTo  
  Wywołaj tę metodę w celu skopiowania interfejsu Tabela interfejsu globalnego (GIT) na wskaźnik przekazany.  
   
 ```
@@ -168,7 +163,7 @@ HRESULT CopyTo(T** pp) const throw();
 ### <a name="remarks"></a>Uwagi  
  Interfejs z repozytorium GIT jest kopiowana na wskaźnik przekazany. Wskaźnik muszą zostać zwolnione przez obiekt wywołujący, gdy nie jest już wymagane.  
   
-##  <a name="detach"></a>CComGITPtr::Detach  
+##  <a name="detach"></a>  CComGITPtr::Detach  
  Wywołanie tej metody, aby usunąć skojarzenie interfejsu z `CComGITPtr` obiektu.  
   
 ```
@@ -181,7 +176,7 @@ DWORD Detach() throw();
 ### <a name="remarks"></a>Uwagi  
  Jest obiekt wywołujący, aby usunąć interfejs z repozytorium GIT, za pomocą [CComGITPtr::Revoke](#revoke).  
   
-##  <a name="getcookie"></a>CComGITPtr::GetCookie  
+##  <a name="getcookie"></a>  CComGITPtr::GetCookie  
  Wywołanie tej metody, aby przywrócić plik cookie z `CComGITPtr` obiektu.  
   
 ```
@@ -194,7 +189,7 @@ DWORD GetCookie() const;
 ### <a name="remarks"></a>Uwagi  
  Plik cookie jest zmienną używane do identyfikowania interfejs i jego lokalizacji.  
   
-##  <a name="m_dwcookie"></a>CComGITPtr::m_dwCookie  
+##  <a name="m_dwcookie"></a>  CComGITPtr::m_dwCookie  
  Plik cookie.  
   
 ```
@@ -204,7 +199,7 @@ DWORD m_dwCookie;
 ### <a name="remarks"></a>Uwagi  
  Plik cookie jest zmienną członkowską używane do identyfikowania interfejs i jego lokalizacji.  
   
-##  <a name="operator_eq"></a>CComGITPtr::operator =  
+##  <a name="operator_eq"></a>  CComGITPtr::operator =  
  Operator przypisania.  
   
 ```
@@ -215,16 +210,16 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`p`  
+ [in] `p`  
  Wskaźnik do interfejsu.  
   
- [in]`git`  
+ [in] `git`  
  Odwołanie do `CComGITPtr` obiektu.  
   
- [in]`dwCookie`  
+ [in] `dwCookie`  
  Plik cookie używany do identyfikowania wskaźnika interfejsu.  
   
- [in]`rv`  
+ [in] `rv`  
  `CComGITPtr` Do przeniesienia danych z.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -233,7 +228,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ### <a name="remarks"></a>Uwagi  
  Przypisuje nową wartość do `CComGITPtr` obiektu, albo z istniejącego obiektu lub odwołanie do tabeli interfejsu globalnego.  
   
-##  <a name="operator_dword"></a>CComGITPtr::operator DWORD  
+##  <a name="operator_dword"></a>  CComGITPtr::operator DWORD  
  Zwraca plik cookie skojarzone z `CComGITPtr` obiektu.  
   
 ```  
@@ -243,7 +238,7 @@ operator DWORD() const;
 ### <a name="remarks"></a>Uwagi  
  Plik cookie jest zmienną używane do identyfikowania interfejs i jego lokalizacji.  
   
-##  <a name="revoke"></a>CComGITPtr::Revoke  
+##  <a name="revoke"></a>  CComGITPtr::Revoke  
  Wywołaj tę metodę, aby usunąć bieżący interfejs z Tabela interfejsu globalnego (GIT).  
   
 ```

@@ -1,29 +1,24 @@
 ---
-title: "Implementacja programu niestandardowy ciąg Manager (zaawansowana metoda) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Implementacja programu niestandardowy ciąg Manager (zaawansowana metoda) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 23798a4e3c1a5d3c46ea28dec39b37697aae640f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Wdrożenia z menedżerem ciąg niestandardowy (zaawansowana metoda)
 W sytuacjach, specjalne można zaimplementować Menedżera niestandardowy ciąg, który więcej niż tylko ulega zmianie stosu, który służy do przydzielenia pamięci. W takiej sytuacji należy ręcznie zaimplementować [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfejsu Menedżera niestandardowy ciąg.  
@@ -34,7 +29,7 @@ W sytuacjach, specjalne można zaimplementować Menedżera niestandardowy ciąg,
   
 -   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr) wskazuje to pole `IAtlStringMgr` interfejs używany do zarządzania danymi to ciąg. Gdy `CStringT` konieczne ponowne przydzielenie lub wolnego buforu ciągu wywołuje realokacja lub wolnego metody tego interfejsu przekazywanie `CStringData` struktury jako parametr. Podczas przydzielania `CStringData` struktury w ciągu menedżera, należy ustawić to pole, aby wskazywał Menedżera niestandardowy ciąg.  
   
--   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) to pole zawiera logiczne Bieżąca długość ciągu przechowywane w buforze bez przerywania wartości null. `CStringT`aktualizuje zawartość tego pola, gdy zmienia się długość ciągu. Podczas przydzielania `CStringData` struktury Menedżera ciąg musi ustawić tego pola na zero. Jeśli ponowne przydzielanie `CStringData` struktury Menedżera niestandardowy ciąg to pole powinno pozostać bez zmian.  
+-   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) to pole zawiera logiczne Bieżąca długość ciągu przechowywane w buforze bez przerywania wartości null. `CStringT` aktualizuje zawartość tego pola, gdy zmienia się długość ciągu. Podczas przydzielania `CStringData` struktury Menedżera ciąg musi ustawić tego pola na zero. Jeśli ponowne przydzielanie `CStringData` struktury Menedżera niestandardowy ciąg to pole powinno pozostać bez zmian.  
   
 -   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength) to pole zawiera maksymalną liczbę znaków (bez przerywania null), które mogą być przechowywane w tym buforu ciągu bez ponowne przydzielanie go. Zawsze, gdy `CStringT` należy zwiększyć logicznej długość ciągu, najpierw sprawdza to pole, upewnij się, że istnieje wystarczająca ilość miejsca w buforze. W przypadku niepowodzenia sprawdzania `CStringT` wywołuje Menedżera niestandardowy ciąg ponownie przydzielić buforu. Podczas przydzielania lub ponowne przydzielanie `CStringData` struktury, trzeba ustawić pól do liczbę znaków wymaganą w **nChars** parametr [IAtlStringMgr::Allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate) lub [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate). Jeśli istnieje więcej miejsca w buforze niż żądana, możesz ustawić tę wartość, aby odzwierciedlić rzeczywista ilość dostępnego miejsca. Dzięki temu `CStringT` zwiększa ciąg w celu wypełnienia całego miejsce przydzielone przed ma do wywołania zwrotnego do Menedżera ciąg ponownie przydzielić buforu.  
   

@@ -1,29 +1,24 @@
 ---
-title: "Implementacja strony właściwości (ALT) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Implementacja strony właściwości (ALT) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96314b4b8ba7696f784354c2353070ca3873c11c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 139bdd9076e99139f4da105b4bb2b375689efe15
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-implementing-a-property-page"></a>Przykład: Implementacja strony właściwości
 W tym przykładzie pokazano, jak zbudować stronę właściwości, która wyświetla (i umożliwia zmianę) właściwości [klasy dokumentów](../mfc/document-classes.md) interfejsu.  
@@ -50,7 +45,7 @@ W tym przykładzie pokazano, jak zbudować stronę właściwości, która wyświ
   
 - [Tworzenie makra](#vcconcreating_a_macro) który Testuj stronę właściwości.  
   
-##  <a name="vcconusing_the_atl_object_wizard"></a>Dodawanie klasy strony właściwości ATL  
+##  <a name="vcconusing_the_atl_object_wizard"></a> Dodawanie klasy strony właściwości ATL  
  Najpierw utwórz nowy projekt ATL DLL serwera o nazwie `ATLPages7`. Teraz używać [Kreator strony właściwości ATL](../atl/reference/atl-property-page-wizard.md) do generowania strony właściwości. Nadaj stronę właściwości **krótką nazwę** z **DocProperties** następnie przełącz się do **ciągów** można ustawić właściwości strony dotyczące elementów, jak pokazano w poniższej tabeli.  
   
 |Element|Wartość|  
@@ -66,7 +61,7 @@ W tym przykładzie pokazano, jak zbudować stronę właściwości, która wyświ
   
  Kliknij przycisk **OK** aby Kreator generowania strony właściwości.  
   
-##  <a name="vcconediting_the_dialog_resource"></a>Edytowanie zasobu okna dialogowego  
+##  <a name="vcconediting_the_dialog_resource"></a> Edytowanie zasobu okna dialogowego  
  Teraz, gdy został wygenerowany strony właściwości, należy dodać kilka formantów do zasobu okna dialogowego reprezentujący stronę. Dodaj pole edycji, kontrolę tekst statyczny oraz pole wyboru i ustawić ich identyfikatorów, jak pokazano poniżej:  
   
  ![Zasób okna dialogowego Edytowanie](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")  
@@ -76,7 +71,7 @@ W tym przykładzie pokazano, jak zbudować stronę właściwości, która wyświ
 > [!NOTE]
 >  Zasób okna dialogowego nie zawiera przyciski poleceń lub ramki, ani nie ma wygląd z kartami, który może mieć miały. Funkcje te są dostarczane przez ramki strony właściwości, takie jak utworzyć przez wywołanie [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
   
-##  <a name="vcconadding_message_handlers"></a>Dodawanie programów obsługi wiadomości  
+##  <a name="vcconadding_message_handlers"></a> Dodawanie programów obsługi wiadomości  
  Kontroli w miejscu można dodać obsługi komunikatów, aby zaktualizować zanieczyszczeniu stan strony po zmianie wartości każdej kontrolki:  
   
  [!code-cpp[NVC_ATL_Windowing#73](../atl/codesnippet/cpp/example-implementing-a-property-page_1.h)]  
@@ -86,7 +81,7 @@ W tym przykładzie pokazano, jak zbudować stronę właściwości, która wyświ
 > [!NOTE]
 >  Własne stronach właściwości może być konieczne do śledzenia dokładnie właściwości, które zostały zmienione przez użytkownika tak, aby uniknąć aktualizowanie właściwości, które nie zostały zmienione. W tym przykładzie implementuje ten kod przez rejestrowanie informacji o oryginalnej wartości właściwości oraz porównanie ich z bieżących wartości z interfejsu użytkownika, gdy nadejdzie czas, aby zastosować zmiany.  
   
-##  <a name="vcconhousekeeping"></a>Celów  
+##  <a name="vcconhousekeeping"></a> Celów  
  Teraz dodaj kilka `#import` instrukcje DocProperties.h tak, że kompilator zna **dokumentu** interfejsu:  
   
  [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]  
@@ -95,7 +90,7 @@ W tym przykładzie pokazano, jak zbudować stronę właściwości, która wyświ
   
  [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]  
   
-##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a>Zastępowanie IPropertyPageImpl::SetObjects  
+##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> Zastępowanie IPropertyPageImpl::SetObjects  
  Pierwszy `IPropertyPageImpl` metody, której należy zastąpić [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects). Będzie w tym miejscu Dodaj kod, aby sprawdzić, czy tylko jeden obiekt został przekazany, i czy obsługuje **dokumentu** interfejs, który jest oczekiwany:  
   
  [!code-cpp[NVC_ATL_Windowing#76](../atl/codesnippet/cpp/example-implementing-a-property-page_4.h)]  
@@ -103,7 +98,7 @@ W tym przykładzie pokazano, jak zbudować stronę właściwości, która wyświ
 > [!NOTE]
 >  Warto obsługuje tylko jeden obiekt na tej stronie, ponieważ umożliwi użytkownikowi określenie nazwy pliku obiektu — może istnieć tylko jeden plik, w jednym miejscu.  
   
-##  <a name="vcconoverriding_ipropertypageimpl_activate"></a>Zastępowanie IPropertyPageImpl::Activate  
+##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> Zastępowanie IPropertyPageImpl::Activate  
  Następnym krokiem jest zainicjować stronę właściwości z wartościami właściwości obiektu podstawowego po pierwszym utworzeniu strony.  
   
  W takim przypadku należy dodać następujące elementy członkowskie do klasy, ponieważ będą także używać początkowe wartości właściwości do porównania, gdy użytkownicy strony ich zmiany:  
@@ -116,7 +111,7 @@ W tym przykładzie pokazano, jak zbudować stronę właściwości, która wyświ
   
  Ten kod używa metody COM **dokumentu** interfejsu można pobrać właściwości, które Cię interesują. Następnie używa otoki Win32 API dostarczonych przez [cdialogimpl —](../atl/reference/cdialogimpl-class.md) i jej klas podstawowych, aby wyświetlić wartości właściwości dla użytkownika.  
   
-##  <a name="vcconoverride_ipropertypageimpl_apply"></a>Zastępowanie IPropertyPageImpl::Apply  
+##  <a name="vcconoverride_ipropertypageimpl_apply"></a> Zastępowanie IPropertyPageImpl::Apply  
  Kiedy użytkownik chce zastosować zmiany ich do obiektów, lokacja strony właściwości wywoła [Zastosuj](../atl/reference/ipropertypageimpl-class.md#apply) metody. Jest to miejsce na wykonanie kodu w odwrotnej **Aktywuj** — należy **Aktywuj** trwało wartości z obiektu i ich przypisany do kontrolki na stronie właściwości **Zastosuj** pobiera wartości z kontrolki na stronie właściwości i umieszcza je w obiekcie.  
   
  [!code-cpp[NVC_ATL_Windowing#79](../atl/codesnippet/cpp/example-implementing-a-property-page_7.h)]  
@@ -127,7 +122,7 @@ W tym przykładzie pokazano, jak zbudować stronę właściwości, która wyświ
 > [!NOTE]
 > **Dokument** przedstawia **imię i nazwisko** jako właściwość tylko do odczytu. Aby zaktualizować nazwa pliku dokumentu na podstawie zmian wprowadzonych na stronie właściwości, należy użyć **zapisać** metodę, aby zapisać plik pod inną nazwą. W związku z tym nie ma kodu na stronie właściwości ograniczyć się do pobierania lub ustawiania właściwości.  
   
-##  <a name="vccontesting_the_property_page"></a>Strona właściwości  
+##  <a name="vccontesting_the_property_page"></a> Strona właściwości  
  Aby wyświetlić tę stronę, należy utworzyć obiekt pomocnika proste. Obiekt pomocnika zapewnia metodę, która upraszcza **OleCreatePropertyFrame** interfejsu API do wyświetlania pojedynczej strony podłączone do pojedynczego obiektu. Tego pomocnika projektowania, aby mogą być używane z języka Visual Basic.  
   
  Użyj [okno dialogowe Dodaj klasę](../ide/add-class-dialog-box.md) i [Kreator prostych obiektów ATL](../atl/reference/atl-simple-object-wizard.md) nową klasę do generowania i użytkowania `Helper` krótką nazwę. Po utworzeniu, Dodaj metodę, jak pokazano w poniższej tabeli.  
@@ -143,7 +138,7 @@ W tym przykładzie pokazano, jak zbudować stronę właściwości, która wyświ
   
  [!code-cpp[NVC_ATL_Windowing#80](../atl/codesnippet/cpp/example-implementing-a-property-page_8.cpp)]  
   
-##  <a name="vcconcreating_a_macro"></a>Tworzenie makra  
+##  <a name="vcconcreating_a_macro"></a> Tworzenie makra  
  Gdy projekt został utworzony, można sprawdzić stronę właściwości i obiekt pomocnika za pomocą prostego makra, które można tworzyć i uruchamiać w środowisku projektowym Visual Studio. To makro utworzy pomocnika obiekt, a następnie wywołaj jego **ShowPage** metodę przy użyciu identyfikatora ProgID **DocProperties** stronę właściwości i **IUnknown** wskaźnik dokumentu aktualnie aktywne w edytorze programu Visual Studio. Poniżej pokazano kod, który należy do tego makra:  
   
 ```  

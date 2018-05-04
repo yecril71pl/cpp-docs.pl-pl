@@ -2,11 +2,8 @@
 title: Klasa CComCritSecLock | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCritSecLock
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb07c2cca9394c23c6c3db156e205749f62e3f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcritseclock-class"></a>Klasa CComCritSecLock
 Ta klasa dostarcza metody do blokowanie i odblokowywanie obiektu sekcja krytyczna.  
@@ -66,7 +61,7 @@ template<class TLock> class CComCritSecLock
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
-##  <a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+##  <a name="ctor"></a>  CComCritSecLock::CComCritSecLock  
  Konstruktor.  
   
 ```
@@ -83,7 +78,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>Uwagi  
  Inicjuje obiekt sekcja krytyczna.  
   
-##  <a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock  
  Destruktor.  
   
 ```
@@ -93,7 +88,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>Uwagi  
  Umożliwia odblokowanie obiektu sekcja krytyczna.  
   
-##  <a name="lock"></a>CComCritSecLock::Lock  
+##  <a name="lock"></a>  CComCritSecLock::Lock  
  Wywołanie tej metody można zablokować obiektu sekcja krytyczna.  
   
 ```
@@ -106,7 +101,7 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>Uwagi  
  Jeśli obiekt jest już zablokowany, wystąpi błąd potwierdzenia w kompilacjach debugowania.  
   
-##  <a name="unlock"></a>CComCritSecLock::Unlock  
+##  <a name="unlock"></a>  CComCritSecLock::Unlock  
  Wywołaj tę metodę w celu odblokowania obiektu sekcja krytyczna.  
   
 ```

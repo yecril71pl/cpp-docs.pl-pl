@@ -1,10 +1,10 @@
 ---
 title: Funkcje bibliotek CRT | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2018
 ms.technology:
 - cpp-standard-libraries
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.runtime
 dev_langs:
@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33e3e5f63aebfd1b169210eaa3748feb761e0422
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crt-library-features"></a>Biblioteka CRT — Funkcje
 
@@ -77,8 +76,8 @@ Ta tabela zawiera listę bibliotek, które implementują CRT inicjowanie i końc
 |msvcrtd.lib|Biblioteka statyczna dla wersji do debugowania natywnego uruchamiania CRT do użycia z biblioteki DLL Biblioteka UCRT i vcruntime. Nie do dystrybucji.|**/MDd**|_DEBUG, _MT, _DLL|
 |msvcmrt.lib|Biblioteka statyczna mieszanych początkowa CRT natywnych i zarządzanych do użycia z biblioteki DLL Biblioteka UCRT i vcruntime.|**/clr**||
 |msvcmrtd.lib|Biblioteka statyczna dla wersji do debugowania mieszanych uruchamiania CRT natywnego i zarządzanego służących do biblioteki DLL Biblioteka UCRT i vcruntime. Nie do dystrybucji.|**/clr**||
-|msvcurt.lib|**Przestarzałe** biblioteki statycznej dla czystych zarządzanego CRT.|**/clr:pure**||
-|msvcurtd.lib|**Przestarzałe** biblioteki statycznej wersji debugowania czyste zarządzanego CRT. Nie do dystrybucji.|**/clr:pure**||
+|msvcurt.lib|**Przestarzałe** biblioteki statycznej dla czystych zarządzanego CRT.|**/ CLR: pure**||
+|msvcurtd.lib|**Przestarzałe** biblioteki statycznej wersji debugowania czyste zarządzanego CRT. Nie do dystrybucji.|**/ CLR: pure**||
 
 Jeśli łączysz się z programem w wierszu polecenia bez opcji kompilatora, która określa biblioteki wykonawczej języka C, konsolidator użyje statycznie połączonych bibliotek CRT: libcmt.lib, libvcruntime.lib i libucrt.lib.
 

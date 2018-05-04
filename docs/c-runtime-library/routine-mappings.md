@@ -1,13 +1,10 @@
 ---
 title: Mapowanie procedur | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.mappings
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f44da30387421123ab6998cfbb2855a743aace39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f0a1cd6011b0e5cce313c804bd955a0a9e5a994
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="routine-mappings"></a>Mapowanie procedur
-Mapowanie procedur zwykłego tekstu są definiowane w tchar —. H. `_tccpy`i `_tclen` Mapuj na funkcje w modelu MBCS; są mapowane do makra i funkcje wbudowane w modelach SBCS i Unicode, aby informacje były kompletne. Uzyskać informacji o procedury zwykłego tekstu, zobacz temat Pomocy dotyczący odpowiadającego `SBCS`-, `_MBCS`-, lub `_UNICODE`-związane z procedury.  
+Mapowanie procedur zwykłego tekstu są definiowane w tchar —. H. `_tccpy` i `_tclen` Mapuj na funkcje w modelu MBCS; są mapowane do makra i funkcje wbudowane w modelach SBCS i Unicode, aby informacje były kompletne. Uzyskać informacji o procedury zwykłego tekstu, zobacz temat Pomocy dotyczący odpowiadającego `SBCS`-, `_MBCS`-, lub `_UNICODE`-związane z procedury.  
   
  Bardziej szczegółowe informacje o poszczególnych procedury wymienione w lewej kolumnie w poniższej tabeli nie jest dostępna w niniejszej dokumentacji. Jednak można łatwo wyszukiwać informacje na temat odpowiadającego `SBCS`-, `_MBCS`-, lub `_UNICODE`-związane z procedury. Użyj **wyszukiwania** na **pomocy** menu, aby wyszukać wszystkie procedury zwykłego tekstu wymienionych poniżej.  
   

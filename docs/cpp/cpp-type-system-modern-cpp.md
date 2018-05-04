@@ -2,26 +2,21 @@
 title: System typów języka C++ (Modern C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
-ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
+ms.openlocfilehash: 82c017b7048c8b62f58068d22b8efefd72f31d4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-type-system-modern-c"></a>System typów języka C++ (Modern C++)
 Pojęcie *typu* jest bardzo ważna w języku C++. Zwracana wartość każdej zmiennej, argumentu funkcji oraz funkcji musi mieć typ, aby mogła zostać skompilowana. Ponadto, kompilator niejawnie nadaje typ każdemu wyrażeniu (w tym wartości literału), zanim zostanie on oceniony. Oto przykłady typów `int` do przechowywania wartości całkowite `double` do przechowywania wartości zmiennoprzecinkowych (znanej także jako *skalarne* typów danych), lub klasy biblioteki standardowej [std::basic_string](../standard-library/basic-string-class.md) do przechowywania tekstu. Można utworzyć własny typ, definiując `class` lub `struct`. Typ określa wielkość pamięci, która zostanie zaalokowana dla zmiennej (lub wyniku wyrażenia), rodzaje wartości, które mogą być przechowywane w tej zmiennej, sposób interpretacji tych wartości (jako wzorców bajtów) oraz operacje, jakie mogą zostać na nich wykonane. Ten artykuł zawiera nieformalny przegląd głównych funkcji systemu typów C++.  

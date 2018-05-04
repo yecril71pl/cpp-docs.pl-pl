@@ -1,12 +1,9 @@
 ---
 title: 'Operatory dodawania: + i - | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additive-operators--and--"></a>Operatory dodawania: + i -
 ## <a name="syntax"></a>Składnia  
@@ -58,7 +53,7 @@ expression - expression
   
 |Typ|Znaczenie|  
 |----------|-------------|  
-|*operacje arytmetyczne*|Typów całkowitych i zmiennoprzecinkowych są nazywane zbiorczo "arytmetycznego" typów.|  
+|*Operacje arytmetyczne*|Typów całkowitych i zmiennoprzecinkowych są nazywane zbiorczo "arytmetycznego" typów.|  
 |*integral*|Typy char i int (krótki czas,) i wyliczenia są typy "zintegrowane".|  
 |*scalar*|Argumenty skalarne są argumentów operacji typu arytmetycznego lub wskaźnikowego.|  
   
@@ -121,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>Odejmowanie wskaźnika  
  Jeśli oba argumenty są wskaźnikami, wynik odejmowania różni się (w elementach tablicy) argumenty operacji. Wyrażenie odejmowania daje podpisem integralną wyniku ptrdiff_t — typ (zdefiniowany w pliku dołączanego standardowe \<stddef.h >).  
   
- Jeden z argumentów może być typu całkowitego, tak długo, jak jest drugi argument operacji. Wynik odejmowania jest taki sam typ jak oryginalny wskaźnika. Wartość odejmowania jest wskaźnik do (*n* - *i*) th elementu tablicy, której  *n*  jest element wskazywana przez Oryginalny wskaźnik i *i* jest integralną wartość drugiego argumentu operacji.  
+ Jeden z argumentów może być typu całkowitego, tak długo, jak jest drugi argument operacji. Wynik odejmowania jest taki sam typ jak oryginalny wskaźnika. Wartość odejmowania jest wskaźnik do (*n* - *i*) th elementu tablicy, której *n* jest element wskazywana przez wskaźnik oryginalnego i *i* jest integralną wartość drugiego argumentu operacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyrażenia z operatorami Dwuargumentowymi](../cpp/expressions-with-binary-operators.md)   

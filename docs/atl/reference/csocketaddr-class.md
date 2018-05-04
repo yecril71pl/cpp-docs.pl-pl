@@ -1,12 +1,9 @@
 ---
 title: Klasa CSocketAddr | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSocketAddr
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cadd771e6c3a9e7addb6893b4427183cfff293c9
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 830b1087d0a4792b449c516ed12ad7e8a84b2a51
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csocketaddr-class"></a>Klasa CSocketAddr
 Ta klasa dostarcza metody do konwertowania nazwy hosta na adresy hosta, obsługa formatów protokołów IPv4 i IPV6.  
@@ -71,7 +66,7 @@ class CSocketAddr
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsocket.h  
   
-##  <a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
+##  <a name="csocketaddr"></a>  CSocketAddr::CSocketAddr  
  Konstruktor.  
   
 ```
@@ -81,7 +76,7 @@ CSocketAddr();
 ### <a name="remarks"></a>Uwagi  
  Tworzy nową `CSocketAddr` obiektu i inicjuje połączonej listy zawierający informacje o odpowiedzi o hoście.  
   
-##  <a name="findaddr"></a>CSocketAddr::FindAddr  
+##  <a name="findaddr"></a>  CSocketAddr::FindAddr  
  Wywołaj tę metodę, aby przekonwertować podanej nazwy hosta jako adres hosta.  
   
 ```
@@ -130,7 +125,7 @@ int FindAddr(
 ### <a name="remarks"></a>Uwagi  
  Parametr nazwy hosta może być w formacie IPv4 lub IPv6. Ta metoda wywołuje funkcji Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) do wykonania konwersji.  
   
-##  <a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
+##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr  
  Wywołanie tej metody można skonwertować nazwy hostów protokołu IPv4 jako adres hosta.  
   
 ```
@@ -160,7 +155,7 @@ int FindINET4Addr(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wywołuje funkcji Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) do wykonania konwersji.  
   
-##  <a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
+##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr  
  Wywołanie tej metody można skonwertować nazwy hosta IPv6 jako adres hosta.  
   
 ```
@@ -190,7 +185,7 @@ int FindINET6Addr(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wywołuje funkcji Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) do wykonania konwersji.  
   
-##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
+##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo  
  Wywołanie tej metody do zwraca wskaźnik do elementu określonego w **addrinfo** listy.  
   
 ```
@@ -204,7 +199,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wskaźnik do **addrinfo** struktury odwołuje się `nIndex` w połączonej listy zawierający informacje o odpowiedzi o hoście.  
   
-##  <a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
+##  <a name="getaddrinfolist"></a>  CSocketAddr::GetAddrInfoList  
  Wywołaj tę metodę, aby zwracać wskaźnik do **addrinfo** listy.  
   
 ```

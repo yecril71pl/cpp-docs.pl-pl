@@ -1,29 +1,24 @@
 ---
 title: Unikanie stos rywalizacji | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - heap contention
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17f73efc8fba19bb129e3b118f8a4357444aad0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 731fcb2328f789e5c487dc56510bbd6f7ec049ea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="avoidance-of-heap-contention"></a>Unikanie stos rywalizacji
 Menedżerowie ciąg domyślnej zapewniane przez MFC i ATL są proste otoki na szczycie stosu globalne. Tym globalnych sterty jest całkowicie bezpieczne wątkowo, co oznacza, że wiele wątków można przydzielić i zwolnić pamięć z niego bez jednocześnie uszkodzenie sterty. Aby zapewnić bezpieczeństwo wątków sterty musi serializować dostępu do samej siebie. Zazwyczaj jest to realizowane za pomocą sekcja krytyczna lub podobny mechanizm blokowania. Zawsze, gdy dwa wątków próbuje uzyskać jednocześnie dostęp do sterty, jeden wątek jest zablokowany do momentu zakończenia żądania innego wątku. Dla wielu aplikacji ta sytuacja rzadko występuje i wpływu na wydajność mechanizmu blokującego sterty jest niewielka. Dla aplikacji, które często dostęp wiele wątków stos rywalizacji o blokadę sterty może jednak spowodować aplikacji działać wolniej niż jeśli zostały jednowątkowe (nawet na komputerach wieloprocesorowych).  

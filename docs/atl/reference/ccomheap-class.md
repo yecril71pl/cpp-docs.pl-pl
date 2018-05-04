@@ -1,12 +1,9 @@
 ---
 title: Klasa CComHeap | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cf86ebe45cdb0a70af6eebaaed90690e83e8db7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75bd4ad2f182d2a9f62e82b78f9ee9d0db44fa00
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomheap-class"></a>Klasa CComHeap
 Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji alokacji pamięci COM.  
@@ -56,7 +51,7 @@ class CComHeap : public IAtlMemMgr
 |[CComHeap::Reallocate](#reallocate)|Wywołaj tę metodę, aby ponownie przydzielić pamięci przydzielonej przez ten Menedżer pamięci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComHeap`implementuje funkcje alokacji pamięci przy użyciu funkcji alokacji COM, w tym [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)i [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). Maksymalna ilość pamięci, która może być przydzielona jest równa **int_max —** (2147483647) bajtów.  
+ `CComHeap` implementuje funkcje alokacji pamięci przy użyciu funkcji alokacji COM, w tym [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)i [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). Maksymalna ilość pamięci, która może być przydzielona jest równa **int_max —** (2147483647) bajtów.  
   
 ## <a name="example"></a>Przykład  
  Zobacz przykład [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -69,7 +64,7 @@ class CComHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ATLComMem.h  
   
-##  <a name="allocate"></a>CComHeap::Allocate  
+##  <a name="allocate"></a>  CComHeap::Allocate  
  Wywołanie tej metody można przydzielić bloku pamięci.  
   
 ```
@@ -88,7 +83,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementowane za pomocą [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
   
-##  <a name="free"></a>CComHeap::Free  
+##  <a name="free"></a>  CComHeap::Free  
  Wywołanie tej metody, aby zwolnić blok pamięci przydzielonej przez ten Menedżer pamięci.  
   
 ```
@@ -102,7 +97,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Uwagi  
  Implementowane za pomocą [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
   
-##  <a name="getsize"></a>CComHeap::GetSize  
+##  <a name="getsize"></a>  CComHeap::GetSize  
  Wywołaj tę metodę, aby pobrać przydzielony rozmiar bloku pamięci przydzielonej przez ten Menedżer pamięci.  
   
 ```
@@ -119,7 +114,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Uwagi  
  Implementowane za pomocą [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
   
-##  <a name="reallocate"></a>CComHeap::Reallocate  
+##  <a name="reallocate"></a>  CComHeap::Reallocate  
  Wywołaj tę metodę, aby ponownie przydzielić pamięci przydzielonej przez ten Menedżer pamięci.  
   
 ```

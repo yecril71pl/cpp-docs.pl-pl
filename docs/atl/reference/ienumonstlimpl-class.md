@@ -1,12 +1,9 @@
 ---
 title: Klasa IEnumOnSTLImpl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IEnumOnSTLImpl
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38d645f7841cb71af9812bd1d62a979752a0343d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1de4bdd0d07e694303f850d6298d77afe3322214
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ienumonstlimpl-class"></a>Klasa IEnumOnSTLImpl
 Ta klasa definiuje interfejs modułu wyliczającego oparte na kolekcji standardowa biblioteka C++.  
@@ -84,7 +79,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 |[IEnumOnSTLImpl::m_spUnk](#m_spunk)|**IUnknown** wskaźnika obiektu podając kolekcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- `IEnumOnSTLImpl`udostępnia implementację dla interfejsu COM modułu wyliczającego przechowywania wyliczany elementów w kontenerze zgodnej biblioteki C++ Standard. Ta klasa jest odpowiednikiem [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) klasy, która dostarcza implementację interfejsu modułu wyliczającego na podstawie tablicy.  
+ `IEnumOnSTLImpl` udostępnia implementację dla interfejsu COM modułu wyliczającego przechowywania wyliczany elementów w kontenerze zgodnej biblioteki C++ Standard. Ta klasa jest odpowiednikiem [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) klasy, która dostarcza implementację interfejsu modułu wyliczającego na podstawie tablicy.  
   
 > [!NOTE]
 >  Zobacz [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init) szczegółowe informacje na temat dalszych różnice między `CComEnumImpl` i `IEnumOnSTLImpl`.  
@@ -101,7 +96,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="init"></a>IEnumOnSTLImpl::Init  
+##  <a name="init"></a>  IEnumOnSTLImpl::Init  
  Inicjuje modułu wyliczającego.  
   
 ```
@@ -125,7 +120,7 @@ HRESULT Init(
   
  Tej metody należy wywołać przed przekazaniem wskaźnik do interfejsu modułu wyliczającego do wszystkich klientów.  
   
-##  <a name="clone"></a>IEnumOnSTLImpl::Clone  
+##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
  Ta metoda zapewnia implementacji [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) metody poprzez utworzenie obiektu typu `CComEnumOnSTL`, inicjowanie go przy użyciu tej samej kolekcji i iteratora używane przez bieżący obiekt i zwracanie na interfejsie nowo utworzony obiekt.  
   
 ```
@@ -139,7 +134,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="return-value"></a>Wartość zwracana  
  Standard `HRESULT` wartość.  
   
-##  <a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
+##  <a name="m_spunk"></a>  IEnumOnSTLImpl::m_spUnk  
  **IUnknown** wskaźnika obiektu podając kolekcji.  
   
 ```
@@ -149,7 +144,7 @@ CComPtr<IUnknown> m_spUnk;
 ### <a name="remarks"></a>Uwagi  
  This, wskaźnik inteligentny obsługuje odwołania na obiekt przekazany do [IEnumOnSTLImpl::Init](#init), zapewniając, że pozostaje aktywne przez cały okres istnienia modułu wyliczającego.  
   
-##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
+##  <a name="m_pcollection"></a>  IEnumOnSTLImpl::m_pcollection  
  Ten element członkowski punktów do kolekcji, która dostarcza dane kierowania implementacji interfejsu modułu wyliczającego.  
   
 ```
@@ -159,14 +154,14 @@ CollType* m_pcollection;
 ### <a name="remarks"></a>Uwagi  
  Ten element członkowski jest inicjowany przez wywołanie [IEnumOnSTLImpl::Init](#init).  
   
-##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
+##  <a name="m_iter"></a>  IEnumOnSTLImpl::m_iter  
  Ten element członkowski przechowuje iteratora używane, aby oznaczyć bieżącą pozycję w kolekcji i przechodzić do kolejnych elementów.  
   
 ```
 CollType::iterator m_iter;
 ```  
   
-##  <a name="next"></a>IEnumOnSTLImpl::Next  
+##  <a name="next"></a>  IEnumOnSTLImpl::Next  
  Ta metoda zapewnia implementacji [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) metody.  
   
 ```
@@ -189,7 +184,7 @@ STDMETHOD(Next)(
 ### <a name="return-value"></a>Wartość zwracana  
  Standard `HRESULT` wartość.  
   
-##  <a name="reset"></a>IEnumOnSTLImpl::Reset  
+##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
  Ta metoda zapewnia implementacji [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) metody.  
   
 ```
@@ -199,7 +194,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Wartość zwracana  
  Standard `HRESULT` wartość.  
   
-##  <a name="skip"></a>IEnumOnSTLImpl::Skip  
+##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
  Ta metoda zapewnia implementacji [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) metody.  
   
 ```

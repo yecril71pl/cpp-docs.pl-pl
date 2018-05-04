@@ -1,12 +1,9 @@
 ---
-title: "Dodatkowe zagadnienia dotyczące uruchamiania | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Dodatkowe zagadnienia dotyczące uruchamiania | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - startup code
 - initializing before main
 ms.assetid: 0e942aa6-8342-447c-b068-8980ed7622bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57b1de8fbbdb3d969dca8e84e57e18b81749d944
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c05ce0fa1a80de8f5ab8b9335bbab22628f3f158
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additional-startup-considerations"></a>Dodatkowe zagadnienia dotyczące uruchamiania
 W języku C++ konstrukcji obiektów i likwidacja może obejmować wykonywanie kodu użytkownika. W związku z tym należy zrozumieć, których inicjowanie stanie przed wejściem do **głównego** i destruktory, które są wywoływane po wyjściu z **głównego**. (Aby uzyskać szczegółowe informacje dotyczące konstruowania i niszczenie obiektów, zobacz [konstruktorów](../cpp/constructors-cpp.md) i [destruktory](../cpp/destructors-cpp.md).)  
@@ -36,7 +31,7 @@ W języku C++ konstrukcji obiektów i likwidacja może obejmować wykonywanie ko
   
 -   Inicjowanie statyczne obiektów globalnych w jednostce tłumaczenia. To może wystąpić przed wejściem do **głównego** lub przed pierwszym użyciem dowolnej funkcji lub obiektu w jednostce tłumaczenia obiektu.  
   
- **Dotyczące firmy Microsoft**  
+ **Microsoft Specific**  
   
  W Microsoft C++ statycznych obiektów globalnych są inicjowane przed wejściem do **głównego**.  
   
@@ -45,4 +40,4 @@ W języku C++ konstrukcji obiektów i likwidacja może obejmować wykonywanie ko
  Globalne obiekty statycznych, które są wykluczają się wzajemnie, ale w różnych tłumaczenia jednostki mogą spowodować nieprawidłowe zachowanie.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Uruchamianie i kończenie działania](../cpp/startup-and-termination-cpp.md)
+ [Uruchomienie i zakończenie](../cpp/startup-and-termination-cpp.md)

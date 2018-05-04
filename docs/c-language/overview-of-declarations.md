@@ -1,37 +1,32 @@
 ---
-title: "Przegląd deklaracji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przegląd deklaracji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: cd8670815b908f66a6e2ed400bc87ca07c369ee4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarations"></a>Przegląd deklaracji
 "Deklaracji" Określa interpretacji i atrybuty zestaw identyfikatorów. Deklaracja powodujący magazynu, które mają zostać zarezerwowane dla obiekt lub funkcji o nazwie przez identyfikator jest nazywany "definition". Deklaracje C zmienne, funkcje i typy mają następującej składni:  
   
 ## <a name="syntax"></a>Składnia  
  `declaration`:  
- *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt**;**  
+ *Specyfikatory deklaracji* *seq atrybutu*opt*init deklarator listy*opt **;**  
   
  /\* *Atrybut seq*opt dotyczy Microsoft * /  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 03/16/2018
  *init-declarator*:  
  *declarator*  
   
- *deklarator***=***inicjatora*   
+ *deklarator***=***inicjatora*  
   
 > [!NOTE]
 >  Ta składnia `declaration` nie jest powtarzany w poniższych sekcjach. Składnia w poniższych sekcjach zazwyczaj rozpoczyna się od `declarator` nonterminal.  

@@ -2,12 +2,9 @@
 title: Strumień we/wy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.io
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6451cef75beccf5cb7b57c528d0a86dd4b75239
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: a3fba53f16fad9321701e641020ed01349b13a5c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stream-io"></a>We/Wy strumienia
 
@@ -112,4 +107,4 @@ Te funkcje przetwarzania danych w różnych rozmiarach i formaty pojedynczy znak
 ## <a name="see-also"></a>Zobacz też
 
 [Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>
- [Universal C procedury czasu wykonywania według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+ [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

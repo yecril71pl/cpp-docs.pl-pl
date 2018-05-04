@@ -1,13 +1,10 @@
 ---
-title: "-U, -u (Usuń definicje symboli) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: -U, -u (Usuń definicje symboli) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fdaf0c2cb980f1ed19fdfc0577769a9985cf85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 897ca229ec7312812b6f2bd2991bf519e98c836c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Usuń definicje symboli)
 **/U** — opcja kompilatora definicji określony symbol preprocesora do usunięcia. **/U** — opcja kompilatora anulowanie definicji symboli specyficzne dla firmy Microsoft, które definiuje kompilatora.  
@@ -86,4 +81,4 @@ ms.lasthandoff: 12/21/2017
  [/J (domyślny typ unsigned char)](../../build/reference/j-default-char-type-is-unsigned.md)   
  [/GR (Włącz informacje typu Run-Time)](../../build/reference/gr-enable-run-time-type-information.md)   
  [/EH (Model obsługi wyjątku)](../../build/reference/eh-exception-handling-model.md)   
- [/ MD, / MT, /LD (Biblioteka Użyj środowiska wykonawczego)](../../build/reference/md-mt-ld-use-run-time-library.md)
+ [/MD, /MT, /LD (Korzystaj z bibliotek wykonawczych)](../../build/reference/md-mt-ld-use-run-time-library.md)

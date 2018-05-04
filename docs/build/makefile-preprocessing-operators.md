@@ -1,13 +1,10 @@
 ---
-title: "Przetwarzanie wstępne operatorów pliku makefile | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przetwarzanie wstępne operatorów pliku makefile | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,22 +15,20 @@ helpviewer_keywords:
 - DEFINED operator
 - makefiles, preprocessing operators
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59007bdabc81b5fe49aa4b5265dc0fc73ef4f0b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9a99bf6388a4aa15b2126aca8e09210b7202d46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing-operators"></a>Operatory przetwarzania wstępnego pliku reguł programu Make
 Pliku reguł programu make przetwarzania wstępnego wyrażenia można używać operatorów, które działają na stałych kody wyjścia z poleceń, ciągi makra i ścieżki systemu plików. Można oszacować wyrażenia, preprocesora najpierw rozszerza makra, a następnie wykonuje polecenia, a następnie wykonuje operacje. Operacje są oceniane według grupowanie jawne w nawiasy, a następnie według kolejność wykonywania działań. Wynik jest wartością stałą.  
   
- `DEFINED` Operator to operator logiczny, który działa na nazwę makra. Wyrażenie `DEFINED(` *makra* `)` ma wartość true Jeśli *makra* jest zdefiniowany, nawet jeśli nie ma przypisanej wartości. `DEFINED`w połączeniu z `!IF` lub `!ELSE IF` jest odpowiednikiem `!IFDEF` lub `!ELSE IFDEF`. Jednak w przeciwieństwie do tych dyrektyw `DEFINED` mogą być używane w złożonych wyrażeń.  
+ `DEFINED` Operator to operator logiczny, który działa na nazwę makra. Wyrażenie `DEFINED(` *makra* `)` ma wartość true Jeśli *makra* jest zdefiniowany, nawet jeśli nie ma przypisanej wartości. `DEFINED` w połączeniu z `!IF` lub `!ELSE IF` jest odpowiednikiem `!IFDEF` lub `!ELSE IFDEF`. Jednak w przeciwieństwie do tych dyrektyw `DEFINED` mogą być używane w złożonych wyrażeń.  
   
  `EXIST` Operator to operator logiczny, który działa na ścieżki systemu plików. `EXIST(`*ścieżka* `)` ma wartość true Jeśli *ścieżki* istnieje. Wynik `EXIST` można używać w wyrażeniach binarnego. Jeśli *ścieżki* zawiera spacje, ujmij ją w podwójny cudzysłów.  
   
@@ -45,8 +40,8 @@ Pliku reguł programu make przetwarzania wstępnego wyrażenia można używać o
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|`DEFINED(`*makra*`)`|Tworzy wartość logiczną dla bieżącego stanu definicji *makra*.|  
-|`EXIST(`*ścieżki*`)`|Tworzy wartość logiczną istnienie w pliku *ścieżki*.|  
+|`DEFINED(` *makra* `)`|Tworzy wartość logiczną dla bieżącego stanu definicji *makra*.|  
+|`EXIST(` *Ścieżka* `)`|Tworzy wartość logiczną istnienie w pliku *ścieżki*.|  
 |||  
 |`!`|NEGACJA jednoargumentowy.|  
 |`~`|Uzupełnienie jednoargumentowy osoby.|  

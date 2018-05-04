@@ -2,11 +2,8 @@
 title: Klasa CComClassFactoryAutoThread | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactoryAutoThread
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 916bd22a982e70a7acb50793723be23416516d04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 601f67d4a753dd617b9d7a3d5856ca64588a66c6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Klasa CComClassFactoryAutoThread
 Ta klasa implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfejsu i umożliwia tworzenie w apartamentach wiele obiektów.  
@@ -54,7 +49,7 @@ class CComClassFactoryAutoThread
 |[CComClassFactoryAutoThread::LockServer](#lockserver)|Blokuje fabryki klasy w pamięci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComClassFactoryAutoThread`przypomina [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), ale możliwe jest tworzenie w apartamentach wiele obiektów. Aby móc korzystać z tej pomocy technicznej, pochodzi z modułu EXE [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ `CComClassFactoryAutoThread` przypomina [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), ale możliwe jest tworzenie w apartamentach wiele obiektów. Aby móc korzystać z tej pomocy technicznej, pochodzi z modułu EXE [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
  Zwykle obiektów ATL uzyskać fabryki klasy przez wynikających z [klasy CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera makra [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), który deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako domyślną fabrykę klas. Aby użyć `CComClassFactoryAutoThread`, określ [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) makra w definicji klasy do obiektu. Na przykład:  
   
@@ -72,7 +67,7 @@ class CComClassFactoryAutoThread
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactoryAutoThread::CreateInstance  
  Tworzy obiekt określonego identyfikatora CLSID i pobiera wskaźnika interfejsu do tego obiektu.  
   
 ```
@@ -98,7 +93,7 @@ STDMETHODIMP CreateInstance(
 ### <a name="remarks"></a>Uwagi  
  Jeśli pochodzi z klasy modułu [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` najpierw wybiera do utworzenia obiektu w skojarzonych apartamentu wątku.  
   
-##  <a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
+##  <a name="lockserver"></a>  CComClassFactoryAutoThread::LockServer  
  Zwiększa i zmniejsza liczbę blokad modułu wywołując **_Module::Lock** i **_Module::Unlock**odpowiednio.  
   
 ```

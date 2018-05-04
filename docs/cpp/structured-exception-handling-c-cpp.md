@@ -2,11 +2,8 @@
 title: (C/C++) Obsługa wyjątków strukturalnych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-exception-handling-cc"></a>Obsługa wyjątków strukturalnych (C/C++)
 Chociaż system Windows i program Visual C++ obsługuje (SEH) do obsługi wyjątków strukturalnych, zalecane jest użycie normy ISO Obsługa wyjątków języka C++ ponieważ sprawia, że kod bardziej przenośne i elastyczne. Niemniej jednak w istniejącym kodzie lub konkretnej rodzaje programów, użytkownik nadal może być konieczne użycie SEH.  
@@ -38,9 +33,9 @@ Chociaż system Windows i program Visual C++ obsługuje (SEH) do obsługi wyjąt
 ## <a name="grammar"></a>Gramatyka  
  *instrukcji z wyjątkiem try* :  
   
- `__try`*złożonej instrukcji*  
+ `__try` *złożone — instrukcja*  
   
- `__except`( `expression` ) *złożonej instrukcji*  
+ `__except` ( `expression` ) *złożonej instrukcji*  
   
 ## <a name="remarks"></a>Uwagi  
  Z SEH można zapewnić, że zasoby, takie jak bloki pamięci i pliki są poprawnie Jeśli wykonanie następuje nieoczekiwane zakończenie. Można również obsługiwać określonych problemów — na przykład za mało pamięci — przy użyciu zwięzły strukturalny, które nie korzystają z `goto` instrukcji lub testowania złożonych kodów powrotnych.  
@@ -155,7 +150,7 @@ Executing SEH __except block
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
  [\<wyjątku >](../standard-library/exception.md)   
  [Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [(System Windows) do obsługi wyjątków strukturalnych](http://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)

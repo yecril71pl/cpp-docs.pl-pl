@@ -1,12 +1,9 @@
 ---
 title: Klasa CComSafeDeleteCriticalSection | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSafeDeleteCriticalSection
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df86d5219940ffc1dd3c34f47920675014eefd13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cff637f9e307f2714cd351f3c6bcaf1e4b78342e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>Klasa CComSafeDeleteCriticalSection
 Ta klasa dostarcza metody uzyskiwania i zwalniania prawo własności obiektu sekcja krytyczna.  
@@ -66,7 +61,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 |[m_bInitialized](#m_binitialized)|Flagi czy wewnętrznej **CRITICAL_SECTION** obiekt został zainicjowany.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComSafeDeleteCriticalSection`pochodzi z klasy [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Jednak `CComSafeDeleteCriticalSection` udostępnia mechanizmy dodatkowego bezpieczeństwa w porównaniu z [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).  
+ `CComSafeDeleteCriticalSection` pochodzi z klasy [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Jednak `CComSafeDeleteCriticalSection` udostępnia mechanizmy dodatkowego bezpieczeństwa w porównaniu z [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).  
   
  Gdy wystąpienie klasy `CComSafeDeleteCriticalSection` wykracza poza zakres lub jest jawnie usunięte z pamięci, obiekt sekcja krytyczna zostaną automatycznie wyczyszczone, jeśli jest nadal ważny. Ponadto [CComSafeDeleteCriticalSection::Term](#term) metody zakończyć bezpiecznie Jeśli sekcja krytyczna obiekt źródłowy nie został jeszcze przydzielony lub już została zwolniona z pamięci.  
   
@@ -80,7 +75,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcore.h  
   
-##  <a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
+##  <a name="ccomsafedeletecriticalsection"></a>  CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
  Konstruktor.  
   
 ```
@@ -90,7 +85,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>Uwagi  
  Ustawia [m_bInitialized](#m_binitialized) element członkowski danych do **false**.  
   
-##  <a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
+##  <a name="dtor"></a>  CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
  Destruktor.  
   
 ```
@@ -100,7 +95,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>Uwagi  
  Zwalnia wewnętrznej **CRITICAL_SECTION** obiekt z pamięci, jeśli [m_bInitialized](#m_binitialized) ma ustawioną wartość elementu członkowskiego danych **true**.  
   
-##  <a name="init"></a>CComSafeDeleteCriticalSection::Init  
+##  <a name="init"></a>  CComSafeDeleteCriticalSection::Init  
  Klasa podstawowa implementacja wywołuje [Init](/visualstudio/debugger/init) i ustawia [m_bInitialized](#m_binitialized) do **true** w przypadku powodzenia.  
   
 ```
@@ -110,7 +105,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wynik [CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init).  
   
-##  <a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
+##  <a name="lock"></a>  CComSafeDeleteCriticalSection::Lock  
 Klasa podstawowa implementacja wywołuje [blokady](ccomcriticalsection-class.md#lock).  
 
   
@@ -126,7 +121,7 @@ HRESULT Lock();
   
  Aby uzyskać więcej informacji dotyczących zachowania funkcji, zapoznaj się [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock).  
   
-##  <a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
+##  <a name="m_binitialized"></a>  CComSafeDeleteCriticalSection::m_bInitialized  
  Flagi czy wewnętrznej **CRITICAL_SECTION** obiekt został zainicjowany.  
   
 ```
@@ -136,7 +131,7 @@ bool m_bInitialized;
 ### <a name="remarks"></a>Uwagi  
  **M_bInitialized** elementu członkowskiego danych jest używane do śledzenia ważności podstawowych **CRITICAL_SECTION** obiekt skojarzony z [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) klasy. Podstawowa **CRITICAL_SECTION** obiektu nie zostanie podjęta próba zwolniona z pamięci, jeśli ta flaga nie jest równa **true**.  
   
-##  <a name="term"></a>CComSafeDeleteCriticalSection::Term  
+##  <a name="term"></a>  CComSafeDeleteCriticalSection::Term  
  Klasa podstawowa implementacja wywołuje [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term) Jeśli wewnętrznej **CRITICAL_SECTION** obiekt jest prawidłowy.  
   
 ```

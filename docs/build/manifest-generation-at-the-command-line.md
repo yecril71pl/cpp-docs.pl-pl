@@ -1,30 +1,25 @@
 ---
 title: Generowanie manifestu w wierszu polecenia | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - manifests [C++]
 - manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ba88017e0003c7a552c985516dba9a6254317a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f740030e48a33284a31da4ebd46f0c4d7b6ac7e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manifest-generation-at-the-command-line"></a>Generowanie manifestu w wierszu polecenia
 Podczas kompilowania aplikacji C/C++ za pomocą nmake lub podobne narzędzia wiersza polecenia, po konsolidator ma przetwarzane wszystkie pliki obiektu i utworzony plik binarny końcowego jest tworzony plik manifestu. Konsolidator zbiera informacje o zestawie zapisanych w plikach obiektu i scala te informacje w końcowym pliku manifestu. Domyślnie konsolidator wygeneruje plik o nazwie < binary_name >. \<rozszerzenia > manifest do opisywania końcowego pliku binarnego. Konsolidator nie można osadzić pliku manifestu w danych binarnych i można generować tylko jako zewnętrzny plik manifestu. Istnieje kilka sposobów osadzanie manifestu w końcowym binarnego, takich jak przy użyciu [narzędziu manifestu (mt.exe)](http://msdn.microsoft.com/library/aa375649) lub kompilowanie manifestu do pliku zasobów. Należy pamiętać, że określone zasady muszą być przestrzegane podczas osadzania manifestu w końcowym pliku binarnego do Włącz takie funkcje jak konsolidowania przyrostowego podpisywanie i Edytuj i Kontynuuj. Te i inne opcje, które zostały omówione w [porady: osadzanie manifestu w aplikacji C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) podczas kompilowania w wierszu polecenia.  

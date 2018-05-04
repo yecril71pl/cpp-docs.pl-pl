@@ -1,30 +1,25 @@
 ---
-title: "Rejestrator ALT i Nauer formularz Backus tworzą składni (BNF) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Rejestrator ALT i Nauer formularz Backus tworzą składni (BNF) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - BNF notation
 - Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d364313420c0a950f8eba222e3ae020fbd86cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4137dd94886456d5813076f3cb328bac5ecf5c03
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Opis Nauer formularz Backus składni formularza (BNF)
 W tym temacie przy użyciu składni BNF, który używa notacji pokazano w poniższej tabeli opisano skryptów używanych przez rejestrator ALT.  
@@ -34,7 +29,7 @@ W tym temacie przy użyciu składni BNF, który używa notacji pokazano w poniż
 |`::=`|Odpowiednik|  
 |`&#124;`|LUB|  
 |`X+`|Co najmniej jeden `X`s.|  
-|`[X]`|`X`jest opcjonalna. Ograniczniki opcjonalne są wskazywane przez `[]`.|  
+|`[X]`|`X` jest opcjonalna. Ograniczniki opcjonalne są wskazywane przez `[]`.|  
 |Wszelkie **bold** tekstu|Literał ciągu.|  
 |Wszelkie *kursywy* tekstu|Jak utworzyć literału ciągu.|  
   

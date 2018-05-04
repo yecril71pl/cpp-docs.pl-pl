@@ -2,11 +2,8 @@
 title: Makra mapy właściwości | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd99fa59fc5e1d97011ac3dba4d16dd222c35b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 718028385b3910b955c49ab9e0abddf23b443967
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-map-macros"></a>Makra mapy właściwości
 Te makra określić map właściwości i wpisy.  
@@ -47,7 +42,7 @@ Te makra określić map właściwości i wpisy.
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
    
-##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP  
  Oznacza początek mapę właściwości obiektu.  
   
 ```
@@ -63,12 +58,12 @@ BEGIN_PROP_MAP(theClass)
   
  Podczas tworzenia obiektu przy użyciu kreatora Projekt ATL, który Kreator ma utworzyć mapy właściwości empty, określając `BEGIN_PROP_MAP` następuje [END_PROP_MAP](#end_prop_map).  
   
- `BEGIN_PROP_MAP`nie są zapisywane limit zakresu (wymiarów) mapę właściwości, ponieważ obiekt przy użyciu mapy właściwości nie ma interfejsu użytkownika, więc zakresu nie może mieć. Jeśli obiekt jest kontrolki ActiveX z interfejsem użytkownika, ma zakres. W takim przypadku należy określić [PROP_DATA_ENTRY](#prop_data_entry) na mapie właściwości umożliwiają określanie wartości w zakresie.  
+ `BEGIN_PROP_MAP` nie są zapisywane limit zakresu (wymiarów) mapę właściwości, ponieważ obiekt przy użyciu mapy właściwości nie ma interfejsu użytkownika, więc zakresu nie może mieć. Jeśli obiekt jest kontrolki ActiveX z interfejsem użytkownika, ma zakres. W takim przypadku należy określić [PROP_DATA_ENTRY](#prop_data_entry) na mapie właściwości umożliwiają określanie wartości w zakresie.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY  
  Wskazuje zakres lub wymiarów formantu ActiveX.  
   
 ```
@@ -82,7 +77,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
  `member`  
  [in] Element członkowski danych zawierającego zakres; na przykład `m_sizeExtent`.  
   
- *VT*  
+ *vt*  
  [in] Określa typ WARIANTU właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -97,7 +92,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE  
  Umożliwia to makro wejścia strony właściwości, właściwość DISPID oraz opis właściwości identyfikatora CLSID obiektu właściwości mapy.  
   
 ```
@@ -125,7 +120,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>Przykład  
  Zobacz przykład [BEGIN_PROP_MAP](#begin_prop_map).  
   
-##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
+##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX  
  Podobnie jak [PROP_ENTRY_TYPE](#prop_entry_type), ale można określić konkretnego identyfikatora IID, jeśli obiekt obsługuje wiele podwójne interfejsy.  
   
 ```
@@ -158,7 +153,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>  PROP_PAGE  
  Umożliwia to makro wprowadź identyfikator CLSID strony właściwości do mapy właściwości obiektu.  
   
 ```
@@ -170,7 +165,7 @@ PROP_PAGE(clsid)
  [in] Identyfikator CLSID strony właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
- `PROP_PAGE`przypomina [PROP_ENTRY_TYPE](#prop_entry_type), ale nie wymaga opisu właściwości lub identyfikator DISPID.  
+ `PROP_PAGE` przypomina [PROP_ENTRY_TYPE](#prop_entry_type), ale nie wymaga opisu właściwości lub identyfikator DISPID.  
   
 > [!NOTE]
 >  Jeśli zostały już wprowadzone formantu o identyfikatorze CLSID `PROP_ENTRY_TYPE` lub [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), nie należy wprowadzać dodatkowych z `PROP_PAGE`.  
@@ -180,7 +175,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>  END_PROP_MAP  
  Oznacza koniec mapę właściwości obiektu.  
   
 ```

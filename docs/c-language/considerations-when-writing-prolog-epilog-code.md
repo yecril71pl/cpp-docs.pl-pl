@@ -1,13 +1,10 @@
 ---
-title: "Zagadnienia dotyczące pisania kodu prologu epilogu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zagadnienia dotyczące pisania kodu prologu epilogu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01a153011ad0cd571762c6473f6121a55045396c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd3d63ed06ee07943263e6f8a59bb9fceea4d99d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Zagadnienia dotyczące pisania kodu prologu/epilogu
-**Dotyczące firmy Microsoft**  
+**Microsoft Specific**  
   
  Przed napisaniem własnej sekwencji kodu prologu i epilogu należy zrozumieć ułożenie ramki stosu. Warto również wiedzieć, jak używać **__local_size —** stała wstępnie zdefiniowane.  
   
-##  <a name="_clang_c_stack_frame_layout"></a>C — ramka stosu — układ  
+##  <a name="_clang_c_stack_frame_layout"></a> C — ramka stosu — układ  
  W tym przykładzie pokazano standardowy kod prologu, który może pojawić się w 32-bitowej funkcji:  
   
 ```  
@@ -54,7 +49,7 @@ ret                          ; Return from function
   
  Stos zawsze powiększa się w dół (od najwyższego do najniższego adresu pamięci). Podstawowy wskaźnik (`ebp`) wskazuje na umieszczoną wartość `ebp`. Obszar zmiennych lokalnych rozpoczyna się od `ebp-2`. Aby uzyskać dostęp do zmiennych lokalnych, należy obliczyć przesunięcie z `ebp` przez odjęcie odpowiedniej wartości od `ebp`.  
   
-##  <a name="_clang_the___local_size_constant"></a>__Local_size — stała  
+##  <a name="_clang_the___local_size_constant"></a> __Local_size — stała  
  Kompilator zapewnia stałą, **__local_size —**, do użycia w bloku asemblera wbudowanego kodu prologu funkcji. Stała jest używana do alokowania miejsca dla zmiennych lokalnych na ramce stosu w niestandardowym kodzie prologu.  
   
  Kompilator określa wartość **__local_size —**. Wartość to całkowita liczba bajtów wszystkich zmiennych lokalnych zdefiniowanych przez użytkownika i zmiennych tymczasowych wygenerowanych przez kompilator. **__Local_size —** mogą być używane tylko jako argumentu natychmiastowego; nie można użyć w wyrażeniu. Nie wolno zmieniać lub ponownie definiować wartości tej stałej. Na przykład:  

@@ -1,12 +1,9 @@
 ---
 title: Klasa _U_STRINGorID | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL._U_STRINGorID
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebc1b8f65f2a0841baf09b5c95528f571f97ce38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a601b1c64b28681c13a0b9e8f42156d8820cb4b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ustringorid-class"></a>Klasa _U_STRINGorID
 Ta klasa karta argument umożliwia albo nazw zasobów ( `LPCTSTR`s) lub identyfikatory zasobów ( **UINT**s) mają być przekazane do funkcji bez konieczności obiekt wywołujący, aby przekonwertować ciąg za pomocą Identyfikatora **MAKEINTRESOURCE** makra.  
@@ -64,14 +59,14 @@ class _U_STRINGorID
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
-##  <a name="_u_stringorid__m_lpstr"></a>_U_STRINGorID::m_lpstr  
+##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr  
  Klasa zawiera wartość przekazywane do jednego z jego konstruktorów jako publiczną `LPCTSTR` element członkowski danych.  
   
 ```
 LPCTSTR m_lpstr;
 ```  
   
-##  <a name="_u_stringorid___u_stringorid"></a>_U_STRINGorID::_U_STRINGorID  
+##  <a name="_u_stringorid___u_stringorid"></a>  _U_STRINGorID::_U_STRINGorID  
  **UINT** Konstruktor konwertuje jej argument typu zasobu zgodne z funkcji zarządzania zasobami systemu Windows przy użyciu **MAKEINTRESOURCE** makro i wynik są przechowywane w jednym klasy element członkowski danych, [m_lpstr](#_u_stringorid__m_lpstr).  
   
 ```

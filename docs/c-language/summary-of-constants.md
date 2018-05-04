@@ -1,29 +1,24 @@
 ---
-title: "Podsumowanie dotyczące stałych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Podsumowanie dotyczące stałych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - constants, C
 ms.assetid: 4158234c-e189-4e25-970f-52a04bc6380a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e46966d56084a615ffdf2763adefbcd1e416a6ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d4a39de6b995f30daee33f6be178b486ecc0ab1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-constants"></a>Podsumowanie dotyczące stałych
 `constant`:  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  *wykładnik części sekwencji cyfr zmiennoprzecinkową sufiks* opcjonalnych  
   
  *Stała ułamkowych*:  
- *cyfra sekwencji* opt**.** *sekwencji cyfr*  
+ *cyfra sekwencji* opt **. *** sekwencji cyfr*  
   
  *cyfra sekwencji***.**   
   
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
  **+ -**  
   
  *cyfra sekwencji*:  
- *cyfra*  
+ *digit*  
   
  *cyfra sekwencji cyfr*  
   
@@ -109,7 +104,7 @@ ms.lasthandoff: 12/21/2017
   
  **"L"** *c char sekwencji* **"**  
   
- *Liczba całkowita sufiks*:  
+ *integer-suffix*:  
  *sufiks unsigned long sufiks* opcjonalnych  
   
  *sufiks unsigned long sufiks* opcjonalnych  
@@ -135,11 +130,11 @@ ms.lasthandoff: 12/21/2017
  **\\' \\" \\\ \\?**  
   
  *ósemkową sekwencja ucieczki*:  
- **\\***-ósemkowego*  
+ **\\** *ósemkowego*  
   
- **\\***-ósemkowego ósemkowego*  
+ **\\** *ósemkowego ósemkowego*  
   
- **\\***-ósemkowego ósemkowego ósemkowego*  
+ **\\** *ósemkowego ósemkowego ósemkowego*  
   
  *szesnastkowa Sekwencja*:  
  **\x***cyfrę szesnastkową*   
