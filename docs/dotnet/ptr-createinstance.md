@@ -2,11 +2,8 @@
 title: PTR::CreateInstance | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.CreateInstance
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::CreateInstance
 ms.assetid: 9e8e4c4c-1651-4839-8829-5857d74470fe
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d764d18f3148dba663e1e6796c44a0add6aa8109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd4ba56b92150046b986f2b101f6a004c114bf28
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrcreateinstance"></a>ptr::CreateInstance
 Tworzy wystąpienie obiektu COM w ramach `com::ptr`.  
@@ -86,7 +81,7 @@ void CreateInstance(
  Kontekst, w którym będzie uruchamiany kod, który zarządza nowo utworzony obiekt. Wartości te są pobierane z `CLSCTX` wyliczenia. Jeśli `cls_context` nie zostanie określony, wartość CLSCTX_ALL jest używany.  
   
  `rclsid`  
- `CLSID`skojarzony z danymi i kod, który będzie używany do utworzenia obiektu.  
+ `CLSID` skojarzony z danymi i kod, który będzie używany do utworzenia obiektu.  
   
 ## <a name="exceptions"></a>Wyjątki  
  Jeśli `com::ptr` już posiada odwołanie do obiektu COM `CreateInstance` zgłasza <xref:System.InvalidOperationException>.  
@@ -94,7 +89,7 @@ void CreateInstance(
  Ta funkcja wymaga `CoCreateInstance` i używa <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> przekonwertować błędu `HRESULT` do odpowiednich wyjątków.  
   
 ## <a name="remarks"></a>Uwagi  
- `CreateInstance`używa `CoCreateInstance` do utworzenia nowego wystąpienia określonego obiektu identyfikowany albo identyfikator ProgID lub CLSID. `com::ptr` Odwołuje się do nowo utworzony obiekt i automatycznie spowoduje zwolnienie wszystkich należących do odwołania na zniszczenia.  
+ `CreateInstance` używa `CoCreateInstance` do utworzenia nowego wystąpienia określonego obiektu identyfikowany albo identyfikator ProgID lub CLSID. `com::ptr` Odwołuje się do nowo utworzony obiekt i automatycznie spowoduje zwolnienie wszystkich należących do odwołania na zniszczenia.  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie implementuje klasy CLR, która używa `com::ptr` opakowywać jego prywatnego elementu członkowskiego `IXMLDOMDocument` obiektu. Konstruktory klas użycie dwóch różnych metod `CreateInstance` można utworzyć obiektu dokumentu z identyfikator ProgID lub CLSID plus CLSCTX.  

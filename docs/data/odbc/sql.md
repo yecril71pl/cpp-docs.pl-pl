@@ -1,13 +1,10 @@
 ---
 title: SQL | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df1563d8bb3d53bb405fbb0d89b2b26cc964bd44
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql"></a>SQL
 SQL (Structured Query Language) to sposób komunikowania się z relacyjnej bazy danych, który pozwala zdefiniować, zapytania, modyfikowania i kontrolowanie danych. Przy użyciu składni SQL, można utworzyć instrukcję, która wyodrębnia rekordów w zależności od określonych kryteriów.  
@@ -47,10 +42,10 @@ SQL (Structured Query Language) to sposób komunikowania się z relacyjnej bazy 
   
 -   [Jak korzystać z klasami baz danych SQL](#_core_how_the_database_classes_use_sql).  
   
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a>Otwórz połączenie z bazą danych (ODBC)  
+##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Otwórz połączenie z bazą danych (ODBC)  
  Klasy baz danych są wdrażane z ODBC, który używa programu SQL w interfejsu poziom wywołania zamiast osadzania poleceń SQL w kodzie. ODBC używa SQL do komunikowania się z [źródła danych](../../data/odbc/data-source-odbc.md) za pomocą sterowników ODBC. Te sterowniki interpretacji SQL i tłumaczyć, jeśli jest to niezbędne do używania formatu określoną bazę danych, takich jak program Microsoft Access. Aby uzyskać więcej informacji o używaniu ODBC SQL, zobacz [ODBC](../../data/odbc/odbc-basics.md) i zestawu SDK ODBC *Podręcznik programisty* na dysku CD biblioteki MSDN.  
   
-##  <a name="_core_the_database_classes"></a>Klasy baz danych  
+##  <a name="_core_the_database_classes"></a> Klasy baz danych  
  Klasy baz danych mają możliwość manipulowania i aktualizacji danych w istniejącym [źródła danych](../../data/odbc/data-source-odbc.md). [Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md), [Kreator konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (dostępnej za pośrednictwem **Dodaj klasę**), i klasy baz danych utworzyć większości instrukcji SQL dla Ciebie.  
   
  Klasy baz danych za pomocą część SQL znane jako manipulowania języka DML (Data). Te polecenia pozwalają pracować z całość lub część źródła danych, dodawać nowe rekordy edytowania rekordów i usuwania rekordów. Poniższa tabela zawiera listę typowych słów kluczowych SQL i metod klasy baz danych ich używać.  
@@ -79,7 +74,7 @@ SQL (Structured Query Language) to sposób komunikowania się z relacyjnej bazy 
   
  Można znaleźć więcej informacji na temat SQL, łącznie z listą obsługiwanych instrukcji SQL, typy danych gramatyki SQL rdzeni i odczytu wykaz zalecanych publikacji o SQL, w *ODBC SDK* *Podręcznik programisty*  na dysku CD biblioteki MSDN.  
   
-##  <a name="_core_how_the_database_classes_use_sql"></a>Jak korzystać z klasami baz danych SQL  
+##  <a name="_core_how_the_database_classes_use_sql"></a> Jak korzystać z klasami baz danych SQL  
  Zestawy rekordów, który pochodzi od klasy baz danych używanie ODBC do komunikowania się ze źródłem danych i ODBC pobiera rekordy ze źródła danych, wysyłając instrukcji SQL. W tym temacie wyjaśniono relację między klasami baz danych i SQL.  
   
  Zestaw rekordów tworzy instrukcję SQL przez tworzenie części instrukcję SQL do `CString`. Ten ciąg jest tworzony jako **wybierz** instrukcja, która zwraca zestaw rekordów.  

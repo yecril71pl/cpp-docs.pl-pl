@@ -1,13 +1,10 @@
 ---
-title: "C3050 błąd kompilatora | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: C3050 błąd kompilatora | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3050
 dev_langs:
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - C3050
 ms.assetid: ee090a0b-29cc-4215-a2f9-d82af79b8e82
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1c471e931ce2f2e69cccf5fd4e02956ecd81f57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a4c5220cbfc897f2952d366d9ce09bfb8d85dc3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3050"></a>C3050 błąd kompilatora
 "type1": klasa ref nie może dziedziczyć po "type1"  
   
- `System::ValueType`nie może być klasą bazową dla typu odwołania.  
+ `System::ValueType` nie może być klasą bazową dla typu odwołania.  
   
  Poniższy przykład generuje C3050:  
   

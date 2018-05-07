@@ -1,26 +1,21 @@
 ---
 title: Klasa platform::WeakReference | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d87d2e00ef567c0273e71410ad58ebf0a5c061
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a8db5c855b6a377a0202183d48b8fd34e93b6072
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformweakreference-class"></a>Klasa platform::WeakReference
 Reprezentuje słabe odwołanie do wystąpienia klasy ref.  
@@ -57,7 +52,7 @@ class WeakReference
 ### <a name="remarks"></a>Uwagi  
  Weakreference — klasa nie jest klasa ref i dlatego nie dziedziczy on Platform::Object ^ i nie można używać w podpisie metody publicznej.  
 
-## <a name="operator-assign">WeakReference::operator =</a>
+## <a name="operator-assign"></a> WeakReference::operator =
 Przypisuje wartość do weakreference —.  
   
 ### <a name="syntax"></a>Składnia  
@@ -72,7 +67,7 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ### <a name="remarks"></a>Uwagi  
  Ostatni przeciążenia na powyższej liście umożliwia przypisanie klasy ref ze zmienną weakreference —. W takim przypadku klasa ref jest przypisanie elementu podrzędnego do [Platform::Object](../cppcx/platform-object-class.md)^. Później przywrócić oryginalny typ określając jako argumentu dla parametru typu w [WeakReference::Resolve\<T >](#resolve) funkcję elementu członkowskiego.  
   
-## <a name="booltype">WeakReference::operator BoolType</a>
+## <a name="booltype"></a> WeakReference::operator BoolType
 Implementuje wzorzec bezpieczne bool weakreference — klasa. Nie można wywoływać bezpośrednio w kodzie.  
   
 ### <a name="syntax"></a>Składnia  

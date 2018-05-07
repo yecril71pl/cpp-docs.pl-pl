@@ -1,12 +1,9 @@
 ---
-title: "Pola w metodach dostępu generowanych przez kreatora, elementy członkowskie dotyczących stanu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Pola w metodach dostępu generowanych przez kreatora, elementy członkowskie dotyczących stanu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 663b26d77138af60d13c3caf24960730a324131e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3f1017c3decacfee223f0e0f89267b192208fe7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Elementy członkowskie dotyczące stanu pola w metodach dostępu generowanych przez kreatora
 Użycie do utworzenia konsumenta OLE DB Kreator konsumenta ATL, Kreator generuje element członkowski danych klasy rekordu użytkownika, dla każdego pola, które określisz na mapie kolumny. Każdy element członkowski danych jest typu `DWORD` i zawiera wartość stanu, odpowiadający jej odpowiednie pola.  

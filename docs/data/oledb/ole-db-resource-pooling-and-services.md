@@ -1,12 +1,9 @@
 ---
-title: "OLE DB buforowanie zasobów i usługi | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: OLE DB buforowanie zasobów i usługi | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - OLE DB services [OLE DB]
 - OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f1f97bde5c2922af3d6a5da5ca77fd270867ff21
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ab8c5e5a3e219da7204ef1a1b4942dc70b2f2ad2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Buforowanie zasobów i usługi OLE DB
 Aby pracować z puli OLE DB lub z dowolnej usługi OLE DB, Twój dostawca musi obsługiwać agregacji wszystkich obiektów. Jest to wymagane, OLE DB w wersji 1.5 lub nowszego dostawcy. Jest to niezbędne do korzystania z usługi. Dostawców, które nie obsługują agregacji nie może być w puli i żadnych dodatkowych usług są dostępne.  

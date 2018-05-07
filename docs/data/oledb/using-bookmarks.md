@@ -1,12 +1,9 @@
 ---
-title: "Korzystanie z zakładek | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Korzystanie z zakładek | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18c3f8cfb77e9bcd0719fd7130441f628df6eb58
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5aa16d5f2a3a02d0e9fd6bb3dd5de71494e81d4a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-bookmarks"></a>Korzystanie z zakładek
 Przed otwarciem zestawu wierszy, należy wskazać dostawcy chcesz używać zakładek. Aby to zrobić, ustaw **DBPROP_BOOKMARKS** właściwości **true** w Twojej właściwości zestawu. Dostawca pobiera zakładki jako kolumny wartości zero, trzeba używać makra specjalnego `BOOKMARK_ENTRY` i `CBookmark` klasy, jeśli używane są statyczne metody dostępu. `CBookmark` to klasa szablonu, gdy argument jest długość w bajtach buforu zakładki. Długość buforu wymagane do zakładki zależy od dostawcy. Jeśli używasz Dostawca ODBC OLE DB, jak pokazano w poniższym przykładzie buforu musi być 4 bajty.  

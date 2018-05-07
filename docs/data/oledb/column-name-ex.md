@@ -1,12 +1,9 @@
 ---
 title: COLUMN_NAME_EX | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_NAME_EX
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_NAME_EX macro
 ms.assetid: 4f916a85-f6ae-464a-9cbe-0a56dbb274a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 389b853255a8c0dadcebac8d18efacd9c8150db6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3992a727519ed83a0dbf4c570bad3bbf8d0404ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnnameex"></a>COLUMN_NAME_EX
 Reprezentuje powiązanie w zestawie wierszy w kolumnie określonej w zestawie wierszy. Podobnie jak [COLUMN_NAME](../../data/oledb/column-name.md), ale to makro ma również — typ danych, rozmiar, dokładność, skala, długość kolumny i stan kolumny.  
@@ -56,7 +51,7 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
  `data`  
  [in] Odpowiedni element członkowski danych w rekordzie użytkownika.  
   
- *length*  
+ *długość*  
  [in] Zmienna może być powiązane z długość kolumny.  
   
  *status*  

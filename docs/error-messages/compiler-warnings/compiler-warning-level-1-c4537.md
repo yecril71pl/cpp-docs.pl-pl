@@ -1,12 +1,9 @@
 ---
-title: "Kompilatora (poziom 1) ostrzeżenie C4537 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kompilatora (poziom 1) ostrzeżenie C4537 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4537
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4537
 ms.assetid: 9454493c-d419-475e-8f35-9c00233c9329
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cdc3cc00b1b6ea52657f441423e61c3003652ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c3762d79d5c6937eb23428fe00b86b1489ea869a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4537"></a>Kompilator C4537 ostrzegawcze (poziom 1)
 "object": "operator" zastosowany do typu z systemem innym niż UDT  

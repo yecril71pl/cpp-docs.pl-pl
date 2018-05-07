@@ -1,12 +1,9 @@
 ---
-title: "Dokumentacja szablonów OLE DB Provider | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Dokumentacja szablonów OLE DB Provider | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 68c741f09772c881b42dc4e4cd17de31ed107f8c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 040e8a5e244b7978a2b9ead394e243207939655c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-provider-templates-reference"></a>Szablony dostawców OLE DB — kompendium
 Klasy i interfejsy dla OLE DB szablonów dostawców można podzielić na następujące kategorie. Materiałów referencyjnych zawiera także informacje o [makra dla szablony OLE DB Provider](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -48,7 +43,7 @@ Klasy i interfejsy dla OLE DB szablonów dostawców można podzielić na następ
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
  Udostępnia domyślną implementację dla dojście do wiersza, który jest używany w `IRowsetImpl` klasy. Dojście do wiersza jest logicznie unikatowy tag dla wiersza wynik. `IRowsetImpl` Tworzy nowy `CSimpleRow` dla każdego wiersza w wymagane `IRowsetImpl::GetNextRows`.  
   
- [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
+ [Iaccessorimpl —](../../data/oledb/iaccessorimpl-class.md)  
  OLE DB wymaga dostawców do zaimplementowania **HACCESSOR**, która jest tag do tablicy **DBBINDING** struktury. Udostępnia **HACCESSOR**, które są adresy **BindType** struktury. Obowiązkowe na polecenia i zestawy wierszy.  
   
  [IColumnsInfoImpl](../../data/oledb/icolumnsinfoimpl-class.md)  
@@ -57,7 +52,7 @@ Klasy i interfejsy dla OLE DB szablonów dostawców można podzielić na następ
  [IConvertTypeImpl](../../data/oledb/iconverttypeimpl-class.md)  
  Zapewnia informacje o dostępności konwersje typów polecenia lub w zestawie wierszy. Obowiązkowe poleceń, zestawy wierszy i zestawy wierszy indeksu. Implementuje **IConvertType** interfejsu przez delegowanie do obiektu konwersji dostarczonych przez OLE DB.  
   
- [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)  
+ [Idbschemarowsetimpl —](../../data/oledb/idbschemarowsetimpl-class.md)  
  Implementuje **IDBSchemaRowset** interfejsu i funkcja twórcy szablonowej `CreateSchemaRowset`.  
   
  [Iopenrowsetimpl —](../../data/oledb/iopenrowsetimpl-class.md)  
@@ -78,7 +73,7 @@ Klasy i interfejsy dla OLE DB szablonów dostawców można podzielić na następ
  [Irowsetinfoimpl —](../../data/oledb/irowsetinfoimpl-class.md)  
  Implementuje właściwości zestawu wierszy za pomocą właściwości ustaw mapy zdefiniowany w klasie polecenia. Obowiązkowego interfejsu na zestawów wierszy.  
   
- [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)  
+ [Irowsetlocateimpl —](../../data/oledb/irowsetlocateimpl-class.md)  
  Implementuje OLE DB [irowsetlocate —](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfejs, który pobiera dowolne wiersze z zestawu wierszy. Obsługuje OLE DB zakładek w zestawie wierszy, aby wierszy pochodne względem tej klasy.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
@@ -94,7 +89,7 @@ Klasy i interfejsy dla OLE DB szablonów dostawców można podzielić na następ
  [Icommandpropertiesimpl —](../../data/oledb/icommandpropertiesimpl-class.md)  
  Ta implementacja **ICommandProperties** interfejsu jest udostępniany przez funkcję statyczną zdefiniowane przez `BEGIN_PROPSET_MAP` makra. Obowiązkowe na polecenia.  
   
- [ICommandTextImpl](../../data/oledb/icommandtextimpl-class.md)  
+ [Icommandtextimpl —](../../data/oledb/icommandtextimpl-class.md)  
  Ustawia przechowuje i zwraca tekst polecenia. Obowiązkowe na polecenia.  
   
  [IDBCreateCommandImpl](../../data/oledb/idbcreatecommandimpl-class.md)  

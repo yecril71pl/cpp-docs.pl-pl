@@ -1,12 +1,9 @@
 ---
-title: "Irowsetlocateimpl — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Irowsetlocateimpl — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetLocateImpl
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IRowsetLocateImpl class
 - bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27af767c9104159d6c398db226a5a45a36e01e2f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: db8d0b5d81a53a71413998b39947eb71a1bd508a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl — Klasa
 Implementuje OLE DB [irowsetlocate —](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfejs, który pobiera dowolne wiersze z zestawu wierszy.  
@@ -79,7 +74,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
   
 |||  
 |-|-|  
-|[Porównaj](../../data/oledb/irowsetlocateimpl-compare.md)|Porównuje dwa zakładki.|  
+|[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|Porównuje dwa zakładki.|  
 |[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Pobiera wiersze, zaczynając od określonej przez przesunięcie od zakładki wiersza.|  
 |[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Pobiera wiersze spełniające określony zakładki.|  
 |[Wyznaczania wartości skrótu](../../data/oledb/irowsetlocateimpl-hash.md)|Zwraca wartość skrótu wartości dla określonego zakładek.|  

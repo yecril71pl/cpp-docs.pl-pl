@@ -1,11 +1,8 @@
 ---
 title: Klasa platform::String | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Klasa platform::String
 Reprezentuje kolekcję sekwencyjnych znaków Unicode, który jest używany do reprezentowania tekstu. Aby uzyskać dodatkowe informacje i przykłady, zobacz [ciągów](../cppcx/strings-c-cx.md).  
@@ -76,7 +71,7 @@ public ref class String sealed : Object,
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[String::Begin](#begin)|Zwraca wskaźnik do początku bieżącego ciągu.|  
+|[String::BEGIN](#begin)|Zwraca wskaźnik do początku bieżącego ciągu.|  
 |[String::CompareOrdinal](#compareordinal)|Porównuje dwa `String` obiektów w wyniku obliczenia wartości liczbowe odpowiadające im znaki w ciągu dwóch wartości reprezentowane przez obiekty.|  
 |[String::concat](#concat)|Łączy dwa obiekty ciągu wartości.|  
 |[String::Data](#data)|Zwraca wskaźnik do początku bieżącego ciągu.|  
@@ -87,7 +82,7 @@ public ref class String sealed : Object,
 |[String::IsEmpty](#isempty)|Wskazuje, czy bieżący obiekt ciąg jest pusty.|  
 |[String::IsFastPass](#isfastpass)|Wskazuje, czy bieżący obiekt jest ciąg uczestniczy w *szybko przekazywany* operacji. Szybkie dokonują operacji, liczenie odwołań jest wstrzymana.|  
 |[String::Length](#length)|Pobiera długość ciągu bieżącego obiektu.|  
-|[String::ToString](#tostring)|Zwraca obiekt ciągu, którego wartość jest taka sama jak bieżący ciąg.|  
+|[String::toString](#tostring)|Zwraca obiekt ciągu, którego wartość jest taka sama jak bieżący ciąg.|  
   
  **Operatory**  
   

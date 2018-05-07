@@ -1,12 +1,9 @@
 ---
-title: "hash_multiset — (STL/CLR) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: hash_multiset — (STL/CLR) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multiset
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - hash_multiset class [STL/CLR]
 - <hash_set> header [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f07e2e063be9c5a30a63b445d06100124e4250a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 819dd9835f173c15b23831e32d6c3a207a3d07c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `hash_multiset` do zarządzania sekwencję elementów jako tablicy skrótów, każdego wpisu tabeli przechowywania dwukierunkowy połączone listy węzłów i w każdym węźle przechowywania jeden element. Wartość każdego elementu jest używany jako klucz porządkowania sekwencji.  
@@ -127,7 +122,7 @@ template<typename Key>
   
  Dostęp do obiektu delegowanego przechowywanych przez wywołanie funkcji Członkowskich [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Obiekt delegowany musi definiować równoważne kolejności między kluczami typu [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Oznacza to, na dowolne dwa klucze `X` i `Y`:  
   
- `key_comp()(X, Y)`Zwraca wyniku tego samego typu Boolean przy każdym wywołaniu.  
+ `key_comp()(X, Y)` Zwraca wyniku tego samego typu Boolean przy każdym wywołaniu.  
   
  Jeśli `key_comp()(X, Y) && key_comp()(Y, X)` ma wartość true, następnie `X` i `Y` są określane jako mają równoważne porządkowania.  
   
@@ -137,7 +132,7 @@ template<typename Key>
   
  Obiekt Określa, które zasobnika powinna zawierać klucz porządkowania przez wywołanie metody typu obiektu delegowanego przechowywanych [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Dostęp do tego obiektu przechowywanych przez wywołanie funkcji Członkowskich [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` można uzyskać wartość całkowitą, która jest zależna od wartości klucza. Można określić obiektu delegowanego przechowywanych podczas konstruowania hash_set; Jeśli określisz ma obiektu delegowanego, wartość domyślna to funkcja `System::Object::hash_value(key_type)`. Oznacza to, żadnych kluczy `X` i `Y`:  
   
- `hash_delegate()(X)`Zwraca takiego samego wyniku całkowitą przy każdym wywołaniu.  
+ `hash_delegate()(X)` Zwraca takiego samego wyniku całkowitą przy każdym wywołaniu.  
   
  Jeśli `X` i `Y` mają równoważne określania kolejności, następnie `hash_delegate()(X)` powinien zwrócić takiego samego wyniku całkowitą jako `hash_delegate()(Y)`.  
   

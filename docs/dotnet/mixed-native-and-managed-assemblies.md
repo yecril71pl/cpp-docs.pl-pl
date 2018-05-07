@@ -1,13 +1,10 @@
 ---
-title: "Mieszane (natywne i zarządzane) zestawy | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Mieszane (natywne i zarządzane) zestawy | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ac18841d5050bc8fb849ac542dc298ce89c964f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Zestawy mieszane (natywne i zarządzane)
 Zestawy mieszane mogą zawierać zarówno niezarządzane instrukcje maszynowe, jak i instrukcje MSIL. Pozwala im to na wywołanie i bycie wywoływanym przez składniki .NET, przy zachowaniu zgodność ze składnikami, które są całkowicie niezarządzane. Używając zestawów mieszanych, deweloperzy mogą tworzyć aplikacje przy użyciu mieszanki funkcjonalności zarządzanej i niezarządzanej. Dzięki temu, zestawy mieszane są idealne do migrowania istniejących aplikacji Visual C++ do platformy .NET.  
@@ -69,7 +64,7 @@ Zestawy mieszane mogą zawierać zarówno niezarządzane instrukcje maszynowe, j
  [Instrukcje: tworzenie aplikacji częściowo zaufanej przez usunięcie zależności od biblioteki DLL środowiska CRT](../dotnet/create-a-partially-trusted-application.md)  
  W tym artykule omówiono sposób tworzenia aplikacji środowisko uruchomieniowe języka wspólnego częściowo zaufanej przez usunięcie zależności msvcm90.dll przy użyciu programu Visual C++.  
   
- Aby uzyskać więcej informacji na temat wytycznych programowania dla zestawów mieszanych, zobacz artykuł w witrynie MSDN "Przegląd z zarządzanego/niezarządzany współdziałanie kodu" w [http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
+ Aby uzyskać więcej informacji na temat wytycznych programowania dla zestawów mieszanych, zobacz artykuł w witrynie MSDN "Przegląd z zarządzanego/niezarządzany współdziałanie kodu" w [ http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp ](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

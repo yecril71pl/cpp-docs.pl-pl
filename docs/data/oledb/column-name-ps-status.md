@@ -1,12 +1,9 @@
 ---
 title: COLUMN_NAME_PS_STATUS | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_NAME_PS_STATUS
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_NAME_PS_STATUS macro
 ms.assetid: 134e1bfe-abfa-4b64-9159-e492f31de44b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 05fb08c9165c5b46827891905bc90c3b453e3c30
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f4b2409e343ea9899994c7c391bbd3273e5fad23
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnnamepsstatus"></a>COLUMN_NAME_PS_STATUS
 Reprezentuje powiązanie w zestawie wierszy w kolumnie określonej w zestawie wierszy. Podobnie jak [COLUMN_NAME](../../data/oledb/column-name.md), ale to makro również ma stan precyzja, skala i kolumny.  

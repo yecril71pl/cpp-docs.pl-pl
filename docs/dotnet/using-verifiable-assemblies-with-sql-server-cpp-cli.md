@@ -2,36 +2,31 @@
 title: Używanie zestawów weryfikowalnych z programem SQL Server (C + +/ CLI) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d03d54dd52f95f3fbba35bb896594e90aa92e867
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f172eea3108771e129636e9aa95d721d45c99609
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Używanie zestawów weryfikowalnych z programem SQL Server (C++/CLI)
 Rozszerzone procedury składowane dostarczana w bibliotek dołączanych dynamicznie (dll), zapewnia możliwości rozszerzania funkcji programu SQL Server za pośrednictwem funkcji utworzonych w języku Visual C++. Rozszerzone procedury składowane są zaimplementowane jako funkcjami wewnątrz biblioteki dll. Oprócz funkcji, można również zdefiniować rozszerzonych procedur składowanych [typy danych zdefiniowane przez użytkownika](../cpp/classes-and-structs-cpp.md) i [funkcje agregujące](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (np. Suma lub AVG).  
   
  Gdy klient wykonuje rozszerzoną procedurę składowaną, wyszukiwanie programu SQL Server dla biblioteki DLL skojarzone z rozszerzoną procedurę składowaną i ładuje bibliotekę DLL. SQL Server wywołuje żądanego rozszerzoną procedurę składowaną i wykonuje go w kontekście zabezpieczeń określony. Rozszerzonej procedury składowanej, a następnie przekazuje wynik ustawia i zwraca parametry do serwera.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)]udostępnia rozszerzenia do języka Transact-SQL (T-SQL), aby umożliwić zainstalowanie zestawy podlegające weryfikacji do programu SQL Server. Zestaw uprawnień programu SQL Server Określa kontekst zabezpieczeń z następujących poziomów zabezpieczeń:  
+ [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] udostępnia rozszerzenia do języka Transact-SQL (T-SQL), aby umożliwić zainstalowanie zestawy podlegające weryfikacji do programu SQL Server. Zestaw uprawnień programu SQL Server Określa kontekst zabezpieczeń z następujących poziomów zabezpieczeń:  
   
 -   Trybie nieograniczonym: uruchamianie kodu na własne ryzyko; kod nie musi być sprawdzalnie bezpieczny.  
   

@@ -1,12 +1,9 @@
 ---
 title: COLUMN_ENTRY_EX | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_ENTRY_EX
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_ENTRY_EX macro
 ms.assetid: dfad1b67-51c3-4289-b89a-da42d7e8bb88
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 45429d57ae2191e0fc91e6a0bb2e3aa5e743062c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 843bb017bc575275c74f06f9bfc24973021f280b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnentryex"></a>COLUMN_ENTRY_EX
 Reprezentuje powiązanie w zestawie wierszy do określonej kolumny w bazie danych.  
@@ -59,7 +54,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
  `data`  
  [in] Odpowiedni element członkowski danych w rekordzie użytkownika.  
   
- *length*  
+ *długość*  
  [in] Zmienna może być powiązane z długość kolumny.  
   
  *status*  

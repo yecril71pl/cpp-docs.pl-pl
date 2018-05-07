@@ -1,13 +1,10 @@
 ---
-title: "Hosting systemu Windows formantu użytkownika jako widoku MFC formularzy | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Hosting systemu Windows formantu użytkownika jako widoku MFC formularzy | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7e4e0b7bc081d3b16b3f9aa55719d298f710cdab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf9e54b3e2808a232bc13052c885a341cb51297f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hostowanie kontrolki użytkownika interfejsu Windows Forms jako widoku MFC
 MFC używa klasy CWinFormsView do hostowania kontrolki użytkownika formularzy systemu Windows w widoku MFC. Widoki formularzy systemu Windows MFC są formantów ActiveX. Kontrola użytkownika jest obsługiwany jako element podrzędny widoku macierzystego i zajmuje całego obszaru klienta natywnego widoku.  

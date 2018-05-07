@@ -1,13 +1,10 @@
 ---
-title: "Porady: Migracja do środowiska clr-| Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: Migracja do środowiska clr-| Dokumentacja firmy Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: f5d7dafdc377723e33372529af1b8f125561366e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>Porady: migracja do /clr
 W tym temacie opisano problemy, które wystąpić podczas kompilowania kodu natywnego z **/CLR** (zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji). **/ CLR** umożliwia moduł Visual C++ do wywołania i można wywołać z zestawów platformy .NET, zachowując zgodność z modułami niezarządzane. Zobacz [zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md) i [natywne i .NET współdziałanie](../dotnet/native-and-dotnet-interoperability.md) uzyskać więcej informacji o zaletach kompilowania przy użyciu **/CLR**.  
@@ -131,7 +126,7 @@ COMObj2->Method(args);  // C++ equivalent
  Typy natywne są domyślnie prywatne. Może to spowodować typ macierzysty nie jest widoczny spoza biblioteki DLL. Rozwiązać ten problem, dodając `public` do tych typów.  
   
 ### <a name="floating-point-and-alignment-issues"></a>Liczby zmiennoprzecinkowe punktu i problemy wyrównania  
- `__controlfp`nie jest obsługiwana na środowisko uruchomieniowe języka wspólnego (zobacz [_control87 —, _controlfp —, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) Aby uzyskać więcej informacji). Środowisko CLR będzie również nie przestrzega [Dopasuj](../cpp/align-cpp.md).  
+ `__controlfp` nie jest obsługiwana na środowisko uruchomieniowe języka wspólnego (zobacz [_control87 —, _controlfp —, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) Aby uzyskać więcej informacji). Środowisko CLR będzie również nie przestrzega [Dopasuj](../cpp/align-cpp.md).  
   
 ### <a name="com-initialization"></a>Zainicjowanie modelu COM  
  Środowisko uruchomieniowe języka wspólnego inicjuje automatycznie COM, podczas inicjowania modułu (gdy COM jest inicjowany automatycznie wystąpiło to jako MTA). W związku z tym jawnie inicjowanie COM daje kody powrotu, wskazujący, że COM jest już zainicjowany. Podjęto próbę jawnie zainicjować modelu COM o jeden model wątkowości, gdy CLR już zainicjowany COM do innego modelu wątkowości może spowodować awarię aplikacji.  

@@ -1,12 +1,9 @@
 ---
-title: "PTR::operator — wartość logiczna | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: PTR::operator — wartość logiczna | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr::operator bool
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::operator bool
 ms.assetid: 31123377-6ecd-4cef-9b75-3db3996fbcd1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5aaec44d5b8f2e8b43a94fa5d0e8b4250ac7bf49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 263810b4fbd369445c2ead55277381bc81b092d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptroperator-bool"></a>ptr::operator — wartość logiczna
 Operator przy użyciu `com::ptr` w wyrażeniu warunkowym.  
@@ -42,7 +37,7 @@ operator bool();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli należących do obiektu COM jest nieprawidłowy; `false` inaczej.  
+ `true` Jeśli należących do obiektu COM jest nieprawidłowy; `false` inaczej.  
   
 ## <a name="remarks"></a>Uwagi  
  Należących do obiektu COM jest prawidłowa, jeśli nie jest `nullptr`.  

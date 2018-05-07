@@ -2,12 +2,9 @@
 title: 'SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3099fbf6b97f3ad18a28c071fcd08ec8280fa24a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f385127d1b61e1453eb7a079963da727f82f1874
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: dostosowywanie instrukcji SQL zestawu rekordów (ODBC)
 W tym temacie opisano:  
@@ -69,7 +64,7 @@ SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
 > [!NOTE]
 >  Użycie literałów ciągów w filtry (lub innych części instrukcji SQL), może być konieczne "oferta" (należy ująć w określonych ograniczników) sufiks takich ciągów z prefiksem literału specyficznych dla systemu DBMS i literału znaku (lub znaków).  
   
- Specjalne wymagania składni dla operacji, takich jak sprzężenia zewnętrzne, może wystąpić także w zależności od systemu DBMS. Użyj funkcji ODBC, aby uzyskać te informacje z sterownik dla systemu DBMS. Na przykład wywołać **:: SQLGetTypeInfo** dla określonego typu danych, takich jak **SQL_VARCHAR**, aby zażądać **LITERAL_PREFIX** i **LITERAL_SUFFIX** znaków. Jeśli piszesz kod niezależny od bazy danych, zobacz dodatek C w *ODBC SDK**Podręcznik programisty* na dysku CD biblioteki MSDN, aby uzyskać szczegółowe informacje o składni.  
+ Specjalne wymagania składni dla operacji, takich jak sprzężenia zewnętrzne, może wystąpić także w zależności od systemu DBMS. Użyj funkcji ODBC, aby uzyskać te informacje z sterownik dla systemu DBMS. Na przykład wywołać **:: SQLGetTypeInfo** dla określonego typu danych, takich jak **SQL_VARCHAR**, aby zażądać **LITERAL_PREFIX** i **LITERAL_SUFFIX** znaków. Jeśli piszesz kod niezależny od bazy danych, zobacz dodatek C w *ODBC SDK ** Podręcznik programisty* na dysku CD biblioteki MSDN, aby uzyskać szczegółowe informacje o składni.  
   
  Obiekty zestawów rekordów tworzy instrukcji SQL, która jest używana do wybierania rekordów, chyba że przekazujesz niestandardową instrukcję SQL. Jak to zrobić zależy głównie od wartości przekazywane w `lpszSQL` parametr **Otwórz** funkcję elementu członkowskiego.  
   
@@ -98,13 +93,13 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
   
 |Case|Przekaż w lpszSQL|Wynikowa instrukcji SELECT|  
 |----------|------------------------------|------------------------------------|  
-|1|**WARTOŚĆ NULL**|**Wybierz** *rfx pole listy* **FROM** *nazwy tabeli*<br /><br /> `CRecordset::Open`wywołania `GetDefaultSQL` można pobrać nazwy tabeli. Wynikowy ciąg jest jednym z przypadków 2 do 5, w zależności od tego, co `GetDefaultSQL` zwraca.|  
+|1|**NULL**|**Wybierz** *rfx pole listy* **FROM** *nazwy tabeli*<br /><br /> `CRecordset::Open` wywołania `GetDefaultSQL` można pobrać nazwy tabeli. Wynikowy ciąg jest jednym z przypadków 2 do 5, w zależności od tego, co `GetDefaultSQL` zwraca.|  
 |2|Nazwa tabeli|**Wybierz** *rfx pole listy* **FROM** *nazwy tabeli*<br /><br /> W oknie Lista pól jest pobierana z instrukcji RFX w `DoFieldExchange`. Jeśli **m_strFilter** i `m_strSort` nie są puste, dodaje **gdzie** i/lub **ORDER BY** klauzul.|  
 |3 *|Kompletna **wybierz** instrukcji ale bez **gdzie** lub **ORDER BY** — klauzula|Jako zakończony pomyślnie. Jeśli **m_strFilter** i `m_strSort` nie są puste, dodaje **gdzie** i/lub **ORDER BY** klauzul.|  
 |4 *|Kompletna **wybierz** instrukcji z **gdzie** i/lub **ORDER BY** — klauzula|Jako zakończony pomyślnie. **m_strFilter** i/lub `m_strSort` musi pozostać pusta lub dwóch filtru i/lub są produkowane instrukcje sortowania.|  
 |5 *|Wywołanie procedury składowanej|Jako zakończony pomyślnie.|  
   
- \*`m_nFields` musi być mniejsza niż liczba kolumn określona w **wybierz** instrukcji. Typ danych każdej kolumny określone w **wybierz** instrukcja musi być taki sam jak typ danych w odpowiadającej mu kolumny RFX w danych wyjściowych.  
+ \* `m_nFields` musi być mniejsza niż liczba kolumn określona w **wybierz** instrukcji. Typ danych każdej kolumny określone w **wybierz** instrukcja musi być taki sam jak typ danych w odpowiadającej mu kolumny RFX w danych wyjściowych.  
   
 ### <a name="case-1---lpszsql--null"></a>Przypadek 1 lpszSQL = NULL  
  Wybór rekordów jest zależna od co `GetDefaultSQL` po `CRecordset::Open` wywołuje go. Przypadków 2 do 5 opisano możliwe ciągów.  

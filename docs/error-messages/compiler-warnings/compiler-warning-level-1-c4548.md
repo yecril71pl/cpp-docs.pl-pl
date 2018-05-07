@@ -1,12 +1,9 @@
 ---
-title: "Kompilatora (poziom 1) ostrzeżenie C4548 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kompilatora (poziom 1) ostrzeżenie C4548 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4548
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4548
 ms.assetid: 2cee817e-e463-4d90-bbd2-de120d48c101
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02982b4cbab1bc2152c90f8a95feec9dddbd41da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f8d58aafa88c67a3e4b785f6edfce0e649324e09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4548"></a>Kompilator C4548 ostrzegawcze (poziom 1)
 wyrażenie przed przecinkiem nie przynosi efektu; oczekiwane wyrażenie, który przynosi efekt  

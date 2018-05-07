@@ -1,13 +1,10 @@
 ---
-title: "Konwertowanie projektów z trybu na czysty język bezpośredni mieszanego | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Konwertowanie projektów z trybu na czysty język bezpośredni mieszanego | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad39f7943effdea8029390971071724bf2294bdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Konwertowanie projektów z trybu mieszanego na czysty język bezpośredni
 Wszystkie projekty Visual C++ CLR łącze do biblioteki wykonawcze języka C domyślnie. W rezultacie te projekty są sklasyfikowane jako aplikacje w trybie mieszanym, ponieważ łączą kodu natywnego z kodem, którego celem jest środowisko uruchomieniowe języka wspólnego (zarządzany kod). Gdy są one kompilowane są one kompilowane w języku pośrednim (IL), znanej także jako Microsoft język pośredni (MSIL).  
@@ -86,20 +81,20 @@ Wszystkie projekty Visual C++ CLR łącze do biblioteki wykonawcze języka C dom
   
         |Struktura|Opis|  
         |---------------|-----------------|  
-        |[Wartość logiczna](https://msdn.microsoft.com/en-us/library/system.boolean\(v=vs.140\).aspx)|Reprezentuje wartość logiczną.|  
-        |[Bajtów](https://msdn.microsoft.com/en-us/library/system.byte\(v=vs.140\).aspx)|Reprezentuje 8-bitową nieznakowaną liczbą całkowitą.|  
-        |[Char](https://msdn.microsoft.com/en-us/library/system.char\(v=vs.140\).aspx)|Reprezentuje znak Unicode.|  
-        |[Data i godzina](https://msdn.microsoft.com/en-us/library/system.datetime.datetime.aspx)|Reprezentuje moment w czasie, zwykle wyrażone jako datę i godzinę.|  
+        |[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean\(v=vs.140\).aspx)|Reprezentuje wartość logiczną.|  
+        |[Byte](https://msdn.microsoft.com/en-us/library/system.byte\(v=vs.140\).aspx)|Reprezentuje 8-bitową nieznakowaną liczbą całkowitą.|  
+        |[char](https://msdn.microsoft.com/en-us/library/system.char\(v=vs.140\).aspx)|Reprezentuje znak Unicode.|  
+        |[DateTime](https://msdn.microsoft.com/en-us/library/system.datetime.datetime.aspx)|Reprezentuje moment w czasie, zwykle wyrażone jako datę i godzinę.|  
         |[Decimal](https://msdn.microsoft.com/en-us/library/system.decimal\(v=vs.140\).aspx)|Reprezentuje liczbę dziesiętną.|  
-        |[O podwójnej precyzji](https://msdn.microsoft.com/en-us/library/system.double\(v=vs.140\).aspx)|Reprezentuje liczbie zmiennoprzecinkowej podwójnej precyzji.|  
+        |[Double](https://msdn.microsoft.com/en-us/library/system.double\(v=vs.140\).aspx)|Reprezentuje liczbie zmiennoprzecinkowej podwójnej precyzji.|  
         |[Identyfikator GUID](https://msdn.microsoft.com/en-us/library/system.guid\(v=vs.140\).aspx)|Reprezentuje unikatowy identyfikator globalny (GUID).|  
         |[Int16](https://msdn.microsoft.com/en-us/library/system.int16\(v=vs.140\).aspx)|Reprezentuje 16-bitową liczbę całkowitą ze znakiem.|  
         |[Int32](https://msdn.microsoft.com/en-us/library/system.int32\(v=vs.140\).aspx)|Reprezentuje całkowita 32-bitowych.|  
         |[Int64](https://msdn.microsoft.com/en-us/library/system.int64\(v=vs.140\).aspx)|Reprezentuje 64-bitowej podpisanej liczby całkowitej.|  
         |[IntPtr](https://msdn.microsoft.com/en-us/library/system.intptr\(v=vs.140\).aspx)|Typ specyficzne dla platformy, który jest używany do reprezentowania wskaźnika lub dojścia.|  
-        |[Sbyte —](https://msdn.microsoft.com/en-us/library/system.byte.aspx)|Reprezentuje 8-bitową liczbę całkowitą ze znakiem.|  
+        |[SByte](https://msdn.microsoft.com/en-us/library/system.byte.aspx)|Reprezentuje 8-bitową liczbę całkowitą ze znakiem.|  
         |[Pojedynczy](https://msdn.microsoft.com/en-us/library/system.single.aspx)|Reprezentuje liczbie zmiennoprzecinkowej pojedynczej precyzji.|  
-        |[Zakres czasu](https://msdn.microsoft.com/en-us/library/system.timespan\(v=vs.140\).aspx)|Reprezentuje przedział czasu.|  
+        |[TimeSpan](https://msdn.microsoft.com/en-us/library/system.timespan\(v=vs.140\).aspx)|Reprezentuje przedział czasu.|  
         |[UInt16](https://msdn.microsoft.com/en-us/library/system.uint16\(v=vs.140\).aspx)|Reprezentuje 16-bitową liczbę całkowitą bez znaku.|  
         |[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|Reprezentuje 32-bitowej liczby całkowitej bez znaku.|  
         |[UInt64 —](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|Reprezentuje 64-bitowej liczby całkowitej bez znaku.|  
