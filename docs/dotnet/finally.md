@@ -2,29 +2,24 @@
 title: na koniec | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd357c8eeed9eddc6940ce02de6e5d2b4f8c68d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70057cad8ff5bca0606f06dd43eaa485834d2c70
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="finally"></a>finally
 Oprócz `try` i `catch` klauzule, obsługa obsługuje wyjątków CLR `finally` klauzuli. Semantyka są takie same jak `__finally` block (SEH) do obsługi wyjątków strukturalnych. A `__finally` bloku można wykonać `try` lub `catch` bloku.  
@@ -32,7 +27,7 @@ Oprócz `try` i `catch` klauzule, obsługa obsługuje wyjątków CLR `finally` k
 ## <a name="remarks"></a>Uwagi  
  Celem `finally` blok jest, aby wyczyścić wszystkie zasoby po Wystąpił wyjątek. Należy pamiętać, że `finally` bloku jest wykonywane zawsze, nawet jeśli nie zgłoszono wyjątek. `catch` Bloku jest wykonywana tylko w przypadku zarządzanych wyjątku w skojarzonych `try` bloku.  
   
- `finally`jest słowem kluczowym kontekstowa; zobacz [słowa kluczowe Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
+ `finally` jest słowem kluczowym kontekstowa; zobacz [słowa kluczowe Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano prosty `finally` bloku:  

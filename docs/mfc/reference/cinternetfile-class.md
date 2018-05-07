@@ -1,12 +1,9 @@
 ---
 title: Klasa CInternetFile | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetFile
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e4b05e2aceb8fb4c8a4abed0dd6038fff6cfee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60ee6e3d23dc197f7d8114f571bd121f864701d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetfile-class"></a>Klasa CInternetFile
 Umożliwia dostęp do plików w systemach zdalnych, które używają protokołów internetowych.  
@@ -117,7 +112,7 @@ class CInternetFile : public CStdioFile
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxinet.h  
   
-##  <a name="abort"></a>CInternetFile::Abort  
+##  <a name="abort"></a>  CInternetFile::Abort  
  Zamyka pliku skojarzone z tym obiektem i sprawia, że plik jest niedostępny dla operacji odczytu lub zapisu.  
   
 ```  
@@ -129,7 +124,7 @@ virtual void Abort();
   
  Podczas obsługi wyjątków, **przerwać** różni się od [Zamknij](#close) na dwa sposoby ważne. Najpierw **przerwać** funkcji nie Zgłoś wyjątek przy błędach ponieważ ignoruje ona błędów. Drugi, **przerwać** nie **ASSERT** Jeśli plik nie został otwarty lub została wcześniej zamknięta.  
   
-##  <a name="cinternetfile"></a>CInternetFile::CInternetFile  
+##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
  Ta funkcja członkowska jest wywoływane, gdy `CInternetFile` tworzony jest obiekt.  
   
 ```  
@@ -174,7 +169,7 @@ CInternetFile(
 ### <a name="remarks"></a>Uwagi  
  Nigdy nie twórz `CInternetFile` obiekt bezpośrednio. Zamiast tego utworzyć przez wywołanie obiektu jednej z jej klas pochodnych [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) lub [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). Można również utworzyć `CInternetFile` obiektu przez wywołanie metody [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
-##  <a name="close"></a>CInternetFile::Close  
+##  <a name="close"></a>  CInternetFile::Close  
  Zamyka `CInternetFile` i zwalnia jego zasobach.  
   
 ```  
@@ -184,7 +179,7 @@ virtual void Close();
 ### <a name="remarks"></a>Uwagi  
  Jeśli plik został otwarty do zapisu, jest niejawne wywołanie [opróżnić](#flush) aby mieć pewność, że wszystkie buforowane dane są zapisywane do hosta. Należy wywołać **Zamknij** po zakończeniu przy użyciu pliku.  
   
-##  <a name="flush"></a>CInternetFile::Flush  
+##  <a name="flush"></a>  CInternetFile::Flush  
  Wywołanie tej funkcji Członkowskich opróżnić zawartości buforu zapisu.  
   
 ```  
@@ -192,30 +187,30 @@ virtual void Flush();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `Flush` aby mieć pewność, że wszystkie dane w pamięci faktycznie został zapisany na komputerze docelowym i upewnić się, że wykonano transakcji o komputerze hosta. `Flush`obowiązuje tylko na `CInternetFile` obiektów otwarty do zapisu.  
+ Użyj `Flush` aby mieć pewność, że wszystkie dane w pamięci faktycznie został zapisany na komputerze docelowym i upewnić się, że wykonano transakcji o komputerze hosta. `Flush` obowiązuje tylko na `CInternetFile` obiektów otwarty do zapisu.  
   
-##  <a name="getlength"></a>CInternetFile::GetLength  
+##  <a name="getlength"></a>  CInternetFile::GetLength  
  Zwraca rozmiar pliku.  
   
 ```  
 virtual ULONGLONG GetLength() const;  
 ```  
   
-##  <a name="m_hfile"></a>CInternetFile::m_hFile  
+##  <a name="m_hfile"></a>  CInternetFile::m_hFile  
  Dojście do pliku skojarzone z tym obiektem.  
   
 ```  
 HINTERNET m_hFile;  
 ```  
   
-##  <a name="operator_hinternet"></a>CInternetFile::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetFile::operator HINTERNET  
  Użyj tego operatora, można pobrać uchwytu systemu Windows dla bieżącej sesji Internet.  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="read"></a>CInternetFile::Read  
+##  <a name="read"></a>  CInternetFile::Read  
  Wywołanie tej funkcji Członkowskich do odczytu do danego pamięci, zaczynając od `lpvBuf`, określona liczba bajtów, `nCount`.  
   
 ```  
@@ -239,7 +234,7 @@ virtual UINT Read(
   
  Aby upewnić się, wszystkie dane są pobierane, aplikacja musi nadal wywołać **CInternetFile::Read** metody do momentu metoda zwraca wartość zero.  
   
-##  <a name="readstring"></a>CInternetFile::ReadString  
+##  <a name="readstring"></a>  CInternetFile::ReadString  
  Wywołanie tej funkcji członkowskich można odczytać strumienia znaków, aż do znalezienia znaku nowego wiersza.  
   
 ```  
@@ -271,7 +266,7 @@ virtual LPTSTR ReadString(
   
  Jeśli należy wywołać `ReadString` bez wywoływania pierwszego elementu [SetReadBufferSize](#setreadbuffersize), otrzymasz buforu 4096 bajtów.  
   
-##  <a name="seek"></a>CInternetFile::Seek  
+##  <a name="seek"></a>  CInternetFile::Seek  
  Wywołanie tej funkcji Członkowskich, aby przesunąć kursor w uprzednio otwarty plik.  
   
 ```  
@@ -291,7 +286,7 @@ virtual ULONGLONG Seek(
   
 - **CFile::current** przesunięcia wskaźnika pliku `lOff` bajtów z bieżącej pozycji w pliku.  
   
-- **CFile::end** przesunięcia wskaźnika pliku `lOff` bajtów na końcu pliku. `lOff`może być ujemna do wyszukania z istniejącym plikiem; wartości dodatnie będzie wyszukiwać poza końcem pliku.  
+- **CFile::end** przesunięcia wskaźnika pliku `lOff` bajtów na końcu pliku. `lOff` może być ujemna do wyszukania z istniejącym plikiem; wartości dodatnie będzie wyszukiwać poza końcem pliku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Przesunięcie od początku pliku, jeśli żądana pozycja jest dozwolony; nowy bajtów w przeciwnym razie wartość jest niezdefiniowana i [CInternetException](../../mfc/reference/cinternetexception-class.md) obiekt jest generowany.  
@@ -309,7 +304,7 @@ virtual ULONGLONG Seek(
 ### <a name="example"></a>Przykład  
   Zobacz przykład implementacji klasy podstawowej ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
   
-##  <a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  
+##  <a name="setreadbuffersize"></a>  CInternetFile::SetReadBufferSize  
  Wywołanie tej funkcji Członkowskich ustawia rozmiar buforu odczytu tymczasowy używany przez `CInternetFile`-pochodzi z obiektu.  
   
 ```  
@@ -330,7 +325,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
   
  Można zwiększyć rozmiar buforu w dowolnym momencie, ale zmniejszanie buforu nie odniesie żadnego skutku. Jeśli należy wywołać [ReadString](#readstring) bez wywoływania pierwszego elementu `SetReadBufferSize`, otrzymasz buforu 4096 bajtów.  
   
-##  <a name="setwritebuffersize"></a>CInternetFile::SetWriteBufferSize  
+##  <a name="setwritebuffersize"></a>  CInternetFile::SetWriteBufferSize  
  Wywołanie tej funkcji elementu członkowskiego, aby ustawić rozmiar buforu zapisu tymczasowy używany przez `CInternetFile`-pochodzi z obiektu.  
   
 ```  
@@ -349,7 +344,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
   
  Domyślnie `CInternetFile` obiekt nie ma żadnych buforowanie zapisu. Wywołanie funkcji członkowskiej, należy się upewnić, że plik został otwarty do zapisu. Rozmiar buforu zapisu można zmienić w dowolnym momencie, ale powoduje to wywołanie niejawne [opróżnić](#flush).  
   
-##  <a name="write"></a>CInternetFile::Write  
+##  <a name="write"></a>  CInternetFile::Write  
  Wywołanie tej funkcji Członkowskich do zapisu w danym pamięci `lpvBuf`, określona liczba bajtów, `nCount`.  
   
 ```  
@@ -368,7 +363,7 @@ virtual void Write(
 ### <a name="remarks"></a>Uwagi  
  W przypadku błędu podczas zapisywania danych, funkcja zwraca [CInternetException](../../mfc/reference/cinternetexception-class.md) obiektu opisem błędu.  
   
-##  <a name="writestring"></a>CInternetFile::WriteString  
+##  <a name="writestring"></a>  CInternetFile::WriteString  
  Ta funkcja zapisuje skojarzony plik ciąg znaków zakończony znakiem null.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Wywoływanie funkcji natywnych z kodu zarządzanego | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wywoływanie funkcji natywnych z kodu zarządzanego | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Wywoływanie funkcji natywnych z kodu zarządzanego
 Środowisko uruchomieniowe języka wspólnego zapewnia usług wywołania platformy lub funkcji PInvoke, że umożliwia zarządzanego kodu do wywołania funkcji w stylu języka C w natywnej biblioteki łączone dynamicznie (dll). Organizowanie danych sam jest używany jak w przypadku współdziałania COM ze środowiskiem uruchomieniowym i mechanizmu "Ją po prostu działa" lub IJW.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Bliższe spojrzenie na platformie wywołania](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
- Próbek w tej sekcji po prostu przedstawiają sposób `PInvoke` mogą być używane. `PInvoke`można uprościć przekazywanie danych niestandardowych, ponieważ dostarcza informacji organizacyjnych deklaratywnie w atrybutach zamiast zapisywania procedurach kodu zestawiającego.  
+ Próbek w tej sekcji po prostu przedstawiają sposób `PInvoke` mogą być używane. `PInvoke` można uprościć przekazywanie danych niestandardowych, ponieważ dostarcza informacji organizacyjnych deklaratywnie w atrybutach zamiast zapisywania procedurach kodu zestawiającego.  
   
 > [!NOTE]
 >  Biblioteka organizowania zapewnia alternatywny sposób organizowania danych między środowiskami natywne i zarządzane w sposób zoptymalizowane. Zobacz [omówienie z Marshalingu w języku C++](../dotnet/overview-of-marshaling-in-cpp.md) Aby uzyskać więcej informacji na temat biblioteki marshalingu. Biblioteka marshalingu jest możliwe, tylko dane, a nie funkcji.  

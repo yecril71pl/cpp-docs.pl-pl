@@ -1,11 +1,8 @@
 ---
 title: Namespace platform::details | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Details
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dd178e539da57d0df05440eeb896112d2ce3aa
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: aa3de0d0f21c1155e550528287c03ae707f44ea2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformdetails-namespace"></a>Namespace platform::details
 Ta przestrzeń nazw jest przeznaczony tylko do użytku wewnętrznego i nie mają być używane do tworzenia aplikacji.  
@@ -51,7 +46,7 @@ namespace Platform {
 |IActivationFactory|Interface|  
 |IAgileObject|Interface|  
 |IClassFactory|Interface|  
-|IEquatable|Interface|  
+|Interfejsu IEquatable|Interface|  
 |IPrintable|Interface|  
 |Słabego odwołania|Interface|  
 |IWeakReferenceSource|Interface|  

@@ -1,13 +1,10 @@
 ---
-title: "Serwery: Implementowanie dokumentów serwera | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Serwery: Implementowanie dokumentów serwera | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4b8618e4951ac499d504cc68b0552ea45eed03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-server-documents"></a>Serwery: implementowanie dokumentów serwera
 W tym artykule opisano kroki, które należy wykonać, aby pomyślnie wdrożyć dokument serwera, jeśli nie określono opcji serwera OLE w Kreatorze aplikacji.  
@@ -39,7 +34,7 @@ W tym artykule opisano kroki, które należy wykonać, aby pomyślnie wdrożyć 
   
 3.  Implementowanie `OnGetEmbeddedItem` funkcji członkowskiej klasy dokumentu serwera.  
   
-     `OnGetEmbeddedItem`jest wywoływane, gdy użytkownik aplikacji kontenera tworzy lub edytować element osadzony. Powinien zostać zwrócony element reprezentujący całego dokumentu. Powinna to być obiekt z `COleServerItem`-klasy.  
+     `OnGetEmbeddedItem` jest wywoływane, gdy użytkownik aplikacji kontenera tworzy lub edytować element osadzony. Powinien zostać zwrócony element reprezentujący całego dokumentu. Powinna to być obiekt z `COleServerItem`-klasy.  
   
 4.  Zastąpienie `Serialize` funkcji członkowskiej do serializacji zawartość dokumentu. Nie należy do serializacji na liście elementów serwera, o ile nie są używane do reprezentowania danych natywnych w dokumencie. Aby uzyskać więcej informacji, zobacz *elementy Implementowanie serwera* w artykule [serwery: elementy serwera](../mfc/servers-server-items.md).  
   

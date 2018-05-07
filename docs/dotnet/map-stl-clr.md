@@ -1,12 +1,9 @@
 ---
 title: mapy (STL/CLR) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - map class [STL/CLR]
 - <cliext/map> header [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c90fcb415b186257cd2aef801867918b367413b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cda679ed01e5266f0605639df45940d8f17e506d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `map` do zarządzania sekwencję elementów jako drzewo uporządkowanej zrównoważony (prawie) węzły, każdy przechowywania jeden element. Element składa się z kluczem porządkowania sekwencji i zmapowane wartość, która dotyczy jazdy.  
@@ -39,9 +34,9 @@ Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych dług
   
  gdzie:  
   
- `GKey`jest taka sama jak `Key` o ile nie jest typu ref, w którym to przypadku jest`Key^`  
+ `GKey` jest taka sama jak `Key` o ile nie jest typu ref, w którym to przypadku jest `Key^`  
   
- `GMapped`jest taka sama jak `Mapped` o ile nie jest typu ref, w którym to przypadku jest`Mapped^`  
+ `GMapped` jest taka sama jak `Mapped` o ile nie jest typu ref, w którym to przypadku jest `Mapped^`  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -143,7 +138,7 @@ template<typename Key,
   
  Obiekt delegowany musi nałożyć strict słabe porządkowanie dla kluczy typu [map::key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md). Oznacza to, na dowolne dwa klucze `X` i `Y`:  
   
- `key_comp()(X, Y)`Zwraca wyniku tego samego typu Boolean przy każdym wywołaniu.  
+ `key_comp()(X, Y)` Zwraca wyniku tego samego typu Boolean przy każdym wywołaniu.  
   
  Jeśli `key_comp()(X, Y)` ma wartość true, następnie `key_comp()(Y, X)` musi mieć wartość false.  
   

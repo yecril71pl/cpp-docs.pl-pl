@@ -2,12 +2,9 @@
 title: Jak MFC ułatwia tworzenie klienckich aplikacji internetowych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - Internet applications [MFC], MFC
 - MFC, Internet applications
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6270cdd3e64d24f1c2000acb9e8466f8c85edba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d04a27a51645fc44296db7f5fd84bc2524804c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>Jak MFC ułatwia tworzenie klienckich aplikacji internetowych
 Biblioteka Microsoft Foundation Classes hermetyzować funkcje rozszerzenia internetowe Win32 (WinInet) w taki sposób, który zapewnia znanych kontekst dla programistów MFC. MFC udostępnia trzy klasy pliku Internet ([CInternetFile](../mfc/reference/cinternetfile-class.md), [CHttpFile](../mfc/reference/chttpfile-class.md), i [cgopherfile —](../mfc/reference/cgopherfile-class.md)) pochodną [CStdioFile](../mfc/reference/cstdiofile-class.md) — klasa . Nie tylko tych klas wprowadzaj pobierania danych i operowanie nimi Internet znanych dla programistów, którzy użyli `CStdioFile` plików lokalnych, ale z tych klas w sposób spójny, przezroczysty może obsłużyć lokalnych plików i plików internetowych.  

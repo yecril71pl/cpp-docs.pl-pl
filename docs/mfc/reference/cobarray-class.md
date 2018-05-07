@@ -1,12 +1,9 @@
 ---
 title: Klasa CObArray | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b73299c64d6657d099b3dea9817c08649080df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cobarray-class"></a>Klasa CObArray
 Obsługuje tablic `CObject` wskaźników.  
@@ -117,7 +112,7 @@ class CObArray : public CObject
   
  Za pomocą tablicy C, czas dostępu dla `CObArray` indeksowanego elementu jest stała i nie zależy od rozmiaru tablicy.  
   
- `CObArray`zawiera `IMPLEMENT_SERIAL` makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli tablica `CObject` wskaźniki są przechowywane do archiwum z operatorem przeciążone wstawiania lub z `Serialize` wszystkich funkcji członkowskiej `CObject` element z kolei serializacji wraz z jego indeksu tablicy.  
+ `CObArray` zawiera `IMPLEMENT_SERIAL` makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli tablica `CObject` wskaźniki są przechowywane do archiwum z operatorem przeciążone wstawiania lub z `Serialize` wszystkich funkcji członkowskiej `CObject` element z kolei serializacji wraz z jego indeksu tablicy.  
   
  Jeśli potrzebujesz zrzutu osoba `CObject` elementów w tablicy, należy ustawić głębokość `CDumpContext` obiekt do 1 lub większą.  
   
@@ -139,7 +134,7 @@ class CObArray : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcoll.h  
   
-##  <a name="add"></a>CObArray::Add  
+##  <a name="add"></a>  CObArray::Add  
  Dodaje nowy element do końca tablicy rośnie tablicy o 1.  
   
 ```  
@@ -180,7 +175,7 @@ INT_PTR Add(CObject* newElement);
   
  `[1] = a CAge at $4468 40`  
   
-##  <a name="append"></a>CObArray::Append  
+##  <a name="append"></a>  CObArray::Append  
  Wywołanie tej funkcji Członkowskich, aby dodać zawartość innej tablicy na końcu podanej tablicy.  
   
 ```  
@@ -215,7 +210,7 @@ INT_PTR Append(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
-##  <a name="copy"></a>CObArray::Copy  
+##  <a name="copy"></a>  CObArray::Copy  
  Wywołanie tej funkcji Członkowskich w celu zastąpienia elementy danej tablicy elementów tablicy innego tego samego typu.  
   
 ```  
@@ -245,7 +240,7 @@ void Copy(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
-##  <a name="cobarray"></a>CObArray::CObArray  
+##  <a name="cobarray"></a>  CObArray::CObArray  
  Tworzy pustą `CObject` wskaźnika tablicy.  
   
 ```  
@@ -269,7 +264,7 @@ CObArray();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#78](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CObArray::ElementAt  
+##  <a name="elementat"></a>  CObArray::ElementAt  
  Zwraca tymczasowego odwołanie do wskaźnika elementu w tablicy.  
   
 ```  
@@ -300,7 +295,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CObArray::GetSize](#getsize).  
   
-##  <a name="freeextra"></a>CObArray::FreeExtra  
+##  <a name="freeextra"></a>  CObArray::FreeExtra  
  Zwalnia wszelkie dodatkowe pamięci przydzielony podczas tablicy został rozszerzony.  
   
 ```  
@@ -324,7 +319,7 @@ void FreeExtra();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CObArray::GetData](#getdata).  
   
-##  <a name="getat"></a>CObArray::GetAt  
+##  <a name="getat"></a>  CObArray::GetAt  
  Zwraca element tablicy w określonym indeksie.  
   
 ```  
@@ -359,7 +354,7 @@ CObject* GetAt(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CObArray::GetCount  
+##  <a name="getcount"></a>  CObArray::GetCount  
  Zwraca liczbę elementów tablicy.  
   
 ```  
@@ -388,7 +383,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CObArray::GetData  
+##  <a name="getdata"></a>  CObArray::GetData  
  Aby uzyskać bezpośredni dostęp do elementów w tablicy, należy użyć tej funkcji elementu członkowskiego.  
   
 ```  
@@ -421,7 +416,7 @@ CObject** GetData();
   
  [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CObArray::GetSize  
+##  <a name="getsize"></a>  CObArray::GetSize  
  Zwraca rozmiar tablicy.  
   
 ```  
@@ -447,7 +442,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CObArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CObArray::GetUpperBound  
  Zwraca bieżący górna granica tej tablicy.  
   
 ```  
@@ -478,7 +473,7 @@ INT_PTR GetUpperBound() const;
   
  [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
-##  <a name="insertat"></a>CObArray::InsertAt  
+##  <a name="insertat"></a>  CObArray::InsertAt  
  Wstawia elementu (lub wszystkie elementy w innej tablicy) od określonego indeksu.  
   
 ```  
@@ -542,7 +537,7 @@ void InsertAt(
   
  `[2] = a CAge at $4606 40`  
   
-##  <a name="isempty"></a>CObArray::IsEmpty  
+##  <a name="isempty"></a>  CObArray::IsEmpty  
  Określa, czy tablica jest pusta.  
   
 ```  
@@ -552,7 +547,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli tablica jest pusta. w przeciwnym razie 0.  
   
-##  <a name="operator_at"></a>[CObArray::operator]  
+##  <a name="operator_at"></a>  [CObArray::operator]  
  Indeks dolny są to wygodny zastępuje `SetAt` i `GetAt` funkcji.  
   
 ```  
@@ -581,7 +576,7 @@ CObject* operator[](int_ptr nindex) const;
   
  [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
-##  <a name="removeall"></a>CObArray::RemoveAll  
+##  <a name="removeall"></a>  CObArray::RemoveAll  
  Usuwa wszystkie wskaźniki z tej tablicy, ale nie powoduje usunięcia faktycznie `CObject` obiektów.  
   
 ```  
@@ -597,19 +592,19 @@ void RemoveAll();
   
 |Class|Funkcja elementów członkowskich|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void RemoveAll ();**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void RemoveAll ();**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void RemoveAll ();**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void RemoveAll ();**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAll ();**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAll ();**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void RemoveAll( );**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void RemoveAll( );**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void RemoveAll( );**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void RemoveAll( );**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAll( );**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAll( );**|  
   
 ### <a name="example"></a>Przykład  
  Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana w wszystkie przykłady w kolekcji.  
   
  [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
-##  <a name="removeat"></a>CObArray::RemoveAt  
+##  <a name="removeat"></a>  CObArray::RemoveAt  
  Usuwa jeden lub więcej elementów, zaczynając od określonego indeksu tablicy.  
   
 ```  
@@ -654,7 +649,7 @@ void RemoveAt(
   
  `[0] = a CAge at $4606 40`  
   
-##  <a name="setat"></a>CObArray::SetAt  
+##  <a name="setat"></a>  CObArray::SetAt  
  Ustawia element tablicy w określonym indeksie.  
   
 ```  
@@ -671,7 +666,7 @@ void SetAt(
  Wskaźnik obiektu ma zostać wstawiony w tej macierzy. A **NULL** wartość jest dozwolona.  
   
 ### <a name="remarks"></a>Uwagi  
- `SetAt`nie spowoduje tablicy się rozrastać. Użyj `SetAtGrow` Jeśli chcesz tablicy, tak aby automatycznie powiększania.  
+ `SetAt` nie spowoduje tablicy się rozrastać. Użyj `SetAtGrow` Jeśli chcesz tablicy, tak aby automatycznie powiększania.  
   
  Należy się upewnić, że wartość indeksu reprezentuje prawidłową pozycją w tablicy. Jeśli jest poza zakresem, wersja do debugowania biblioteki potwierdzeń.  
   
@@ -699,7 +694,7 @@ void SetAt(
   
  `[1] = a CAge at $47A0 40`  
   
-##  <a name="setatgrow"></a>CObArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CObArray::SetAtGrow  
  Ustawia element tablicy w określonym indeksie.  
   
 ```  
@@ -746,7 +741,7 @@ void SetAtGrow(
   
  `[3] = a CAge at $4840 65`  
   
-##  <a name="setsize"></a>CObArray::SetSize  
+##  <a name="setsize"></a>  CObArray::SetSize  
  Określa rozmiar pusta lub istniejącej tablicy; przydziela pamięć, jeśli to konieczne.  
   
 ```  

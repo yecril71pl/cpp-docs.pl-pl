@@ -1,13 +1,10 @@
 ---
 title: 'Formanty MFC ActiveX: Lokalizowanie formantu ActiveX | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LocaleID
 - AfxOleRegisterTypeLib
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6384507982f74e02e8e4f42c97926f9125981e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Kontrolki ActiveX MFC: lokalizowanie kontrolki ActiveX
 W tym artykule omówiono procedury lokalizowanie interfejsy formantu ActiveX.  
@@ -52,7 +47,7 @@ W tym artykule omówiono procedury lokalizowanie interfejsy formantu ActiveX.
   
  Dalszej części tego artykułu opisano dwa strategie lokalizowanie. Pierwszy strategii [lokalizuje interfejs programowania formantu](#_core_localizing_your_control.92.s_programmability_interface) (nazwy właściwości, metod i zdarzeń). Drugi strategii [lokalizuje formantu interfejsu użytkownika](#_core_localizing_the_control.92.s_user_interface), za pomocą właściwości LocaleID kontenera. Próbka formantów MFC ActiveX dla pokaz lokalizacji kontrolki [LOKALIZUJ](../visual-cpp-samples.md).  
   
-##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a>Lokalizowanie formantu interfejsu programowania  
+##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Lokalizowanie formantu interfejsu programowania  
  Lokalizowanie formantu interfejsu programowania (interfejs używane przez programistów pisania aplikacji, które Użyj swojego formantu), należy utworzyć zmodyfikowanej wersji formantu. IDL pliku (skrypt do tworzenia biblioteki typu formantu) dla każdego języka, który ma obsługiwać. Jest to tylko miejsce potrzebne do zlokalizowania nazw właściwości formantu.  
   
  Podczas opracowywania zlokalizowanych formantu zawierać identyfikator ustawień regionalnych jako atrybut na poziomie biblioteki typów. Na przykład jeśli chcesz udostępnić francuskim zlokalizowanej właściwości nazwy biblioteki typów, należy utworzyć kopię PRZYKŁADU. IDL pliku i wywołują go SAMPLEFR. IDL. Dodaj atrybut Identyfikator ustawień regionalnych do pliku (identyfikator ustawień regionalnych francuski jest 0x040c), podobny do następującego:  
@@ -71,7 +66,7 @@ W tym artykule omówiono procedury lokalizowanie interfejsy formantu ActiveX.
   
 2.  W razie potrzeby wybierz dysk i katalog, aby wyświetlić.  
   
-3.  W **pliki typu** wybierz opcję **wszystkie pliki (\*.\*) **.  
+3.  W **pliki typu** wybierz opcję **wszystkie pliki (\*.\*)** .  
   
 4.  W polu listy plików kliknij dwukrotnie. Plik IDL, który chcesz wstawić do projektu.  
   
@@ -89,7 +84,7 @@ W tym artykule omówiono procedury lokalizowanie interfejsy formantu ActiveX.
   
  Po zarejestrowaniu formantu `AfxOleRegisterTypeLib` funkcja automatycznie wyszukuje określony. TLB pliku w tym samym katalogu co formantu i rejestruje go w bazie danych rejestracji systemu Windows. Jeśli. Nie znaleziono pliku TLB, funkcja nie ma wpływu.  
   
-##  <a name="_core_localizing_the_control.92.s_user_interface"></a>Lokalizowanie formantu interfejsu użytkownika  
+##  <a name="_core_localizing_the_control.92.s_user_interface"></a> Lokalizowanie formantu interfejsu użytkownika  
  Do zlokalizowania formantu interfejsu użytkownika, umieść wszystkie kontrolki zasoby widoczny dla użytkownika (np. strony właściwości i komunikaty o błędach) do biblioteki DLL zasobów specyficzne dla języka. Można następnie użyć kontenera otoczenia identyfikator ustawień regionalnych właściwości zaznacz odpowiednie biblioteki DLL dla ustawień regionalnych użytkownika.  
   
  Poniższy przykład kodu pokazuje jednym z podejść do lokalizowania i ładowania biblioteki DLL zasobów dla określonych ustawień regionalnych. Funkcji członkowskiej, nazywany `GetLocalizedResourceHandle` na przykład może być funkcją członkowską klasy formantu ActiveX:  

@@ -1,13 +1,10 @@
 ---
-title: "Zestaw rekordów: Jak zestawy rekordów pobierają rekordy (ODBC) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Zestaw rekordów: Jak zestawy rekordów pobierają rekordy (ODBC) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8664c5732c0cdf1042b6af338ea388ab29ab7863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9ff2f1e9946eb32356eb09fa2ee216aa636a351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Zestaw rekordów: jak zestawy rekordów pobierają rekordy (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -44,7 +39,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
  Zestawy rekordów wybierz rekordy ze źródła danych za pośrednictwem sterownika ODBC przez wysłanie do sterownika instrukcji SQL. SQL wysyłane zależy od tego, jak projektować i otwórz klasy zestawu rekordów.  
   
-##  <a name="_core_your_options_in_selecting_records"></a>Opcje w Wybieranie rekordów  
+##  <a name="_core_your_options_in_selecting_records"></a> Opcje w Wybieranie rekordów  
  W poniższej tabeli przedstawiono opcje w wybierania rekordów.  
   
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>Jak i kiedy może mieć wpływ na zestaw rekordów  
@@ -59,7 +54,7 @@ Ten temat dotyczy klasach MFC ODBC.
 
 | Wywołanie **Requery** do requery rekordów przy użyciu najnowszych wartości w źródle danych | Określ nowe parametry, filtrowania lub sortowania. Zobacz [zestaw rekordów: ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |  
   
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a>Jak zestaw rekordów konstruuje jej instrukcji SQL  
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Jak zestaw rekordów konstruuje jej instrukcji SQL  
  Podczas wywoływania obiektu zestawu rekordów [Otwórz](../../mfc/reference/crecordset-class.md#open) funkcji członkowskiej **Otwórz** tworzy instrukcję SQL przy użyciu niektóre lub wszystkie następujące składniki:  
   
 -   **LpszSQL** parametr przekazany do **Otwórz**. Jeśli nie **NULL**, ten parametr określa niestandardowy ciąg SQL lub jedną część. Platformę analizuje ciąg. Jeśli ciąg jest SQL **wybierz** instrukcji lub ODBC **WYWOŁAĆ** instrukcji, w ramach używa ciągu jako instrukcji SQL zestawu rekordów. Jeśli ciąg rozpoczyna się od "SELECT" lub "{CALL", framework używa co to jest dostarczany do skonstruowania SQL **FROM** klauzuli.  
@@ -85,7 +80,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
  Można otworzyć kombinacji tych metod [tabel](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) i utworzyć kwerendy na podstawie [sprzężenia](../../data/odbc/recordset-performing-a-join-odbc.md) z wielu tabel. Z dodatkowe dostosowanie, można wywołać [wstępnie zdefiniowane zapytania](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (procedury składowane), wybierz tabeli kolumn nie jest znany w czasie projektowania i [powiązać](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) je do pól rekordów albo można wykonać większość innych dostęp do danych zadania. Nadal można wykonać zadania nie może wykonać dostosowując zestawów rekordów za [wywoływanie funkcji ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) lub bezpośrednio wykonywania instrukcji SQL z [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).  
   
-##  <a name="_core_customizing_the_selection"></a>Dostosowywanie zaznaczenia  
+##  <a name="_core_customizing_the_selection"></a> Dostosowywanie zaznaczenia  
  Oprócz dostarczanie filtru, kolejności sortowania lub parametry, można wykonać następujące czynności, aby dostosować wybór w zestawie rekordów:  
   
 -   Przekaż niestandardowy ciąg SQL w **lpszSQL** podczas wywoływania [Otwórz](../../mfc/reference/crecordset-class.md#open) zestawu rekordów. Cokolwiek przekazywane w **lpsqSQL** ma pierwszeństwo przed co [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) zwraca funkcję elementu członkowskiego.  

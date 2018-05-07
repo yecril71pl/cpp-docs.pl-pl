@@ -1,13 +1,10 @@
 ---
 title: Ramka klas okien (system Windows) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.frame
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2668a8334192d4de199f1c42a648b74add1ca5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43d6df0231f9d8d1d64d01bd12fa7209eb7b537d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-window-classes-windows"></a>Klasy okien ramowych (Windows)
 Okna ramowe są systemu windows, które ramki aplikacji lub jej część aplikacji. Okna ramowe zwykle zawierają inne systemu windows, takich jak widoki, pasków narzędzi i paski stanu. W przypadku liczby `CMDIFrameWnd`, mogą zawierać `CMDIChildWnd` pośrednio obiektów.  

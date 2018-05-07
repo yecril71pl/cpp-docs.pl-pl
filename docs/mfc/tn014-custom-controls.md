@@ -1,13 +1,10 @@
 ---
 title: 'TN014: Formanty niestandardowe | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ffc4f26ed365673cdfb525c2bf3653827cc4ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn014-custom-controls"></a>TN014: formanty niestandardowe
 Ta uwaga opisuje Obsługa MFC dla formantów niestandardowych i własnym rysowania. On również opisuje podklasy dynamicznej oraz relacji między [CWnd](../mfc/reference/cwnd-class.md) obiektów i `HWND`s.  
@@ -128,15 +123,15 @@ Ta uwaga opisuje Obsługa MFC dla formantów niestandardowych i własnym rysowan
   
  Istnieją trzy sposoby wspólne, które odnoszą się one:  
   
-- `CWnd`Tworzy `HWND`. Można zmodyfikować zachowanie w klasie pochodnej, tworząc klasę pochodzącą od `CWnd`. `HWND` Jest tworzony, gdy aplikacja wywołuje [CWnd::Create](../mfc/reference/cwnd-class.md#create).  
+- `CWnd` Tworzy `HWND`. Można zmodyfikować zachowanie w klasie pochodnej, tworząc klasę pochodzącą od `CWnd`. `HWND` Jest tworzony, gdy aplikacja wywołuje [CWnd::Create](../mfc/reference/cwnd-class.md#create).  
   
 -   Dołącza aplikacji `CWnd` do istniejącej `HWND`. Zachowanie istniejące okno nie jest modyfikowany. To jest delegowanie i jest możliwe przez wywołanie metody [CWnd::Attach](../mfc/reference/cwnd-class.md#attach) alias istniejący `HWND` do `CWnd` obiektu.  
   
-- `CWnd`jest dołączony do istniejącego `HWND` i zachowanie w klasie pochodnej można zmienić. Jest to nazywane dynamiczne tworzenie podklas, ponieważ Zmieniamy zachowanie, a w związku z tym klasę obiektu systemu Windows w czasie wykonywania.  
+- `CWnd` jest dołączony do istniejącego `HWND` i zachowanie w klasie pochodnej można zmienić. Jest to nazywane dynamiczne tworzenie podklas, ponieważ Zmieniamy zachowanie, a w związku z tym klasę obiektu systemu Windows w czasie wykonywania.  
   
  Podklasy dynamicznej można osiągnąć za pomocą metody [CWnd::SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) i[CWnd::SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).  
   
- Dołącz zarówno procedury `CWnd` obiektu do istniejącego `HWND`. `SubclassWindow`Trwa `HWND` bezpośrednio. `SubclassDlgItem`jest to funkcja pomocnika pobierającej Identyfikatora formantu i okno nadrzędne. `SubclassDlgItem`jest przeznaczony do dołączania obiektów C++ do formantów okna dialogowego utworzone na podstawie szablonu okna dialogowego.  
+ Dołącz zarówno procedury `CWnd` obiektu do istniejącego `HWND`. `SubclassWindow` Trwa `HWND` bezpośrednio. `SubclassDlgItem` jest to funkcja pomocnika pobierającej Identyfikatora formantu i okno nadrzędne. `SubclassDlgItem` jest przeznaczony do dołączania obiektów C++ do formantów okna dialogowego utworzone na podstawie szablonu okna dialogowego.  
   
  Zobacz [CTRLTEST](../visual-cpp-samples.md) przykład przykłady zastosowania `SubclassWindow` i `SubclassDlgItem`.  
   

@@ -1,24 +1,19 @@
 ---
-title: "Słabe odwołania i cykle podziału (C + +/ CX) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Słabe odwołania i cykle podziału (C + +/ CX) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a98dc4dd43b40f378a91713770c4c5500c790d0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 48b5d73d85383056b17c806e061b131b12d821a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Słabe odwołania i cykle podziału (C + +/ CX)
 W każdym systemie typu opartego na liczenie odwołań w formularzu można odwołania do typów *cykle*— to znaczy jeden obiekt odwołuje się do innego obiektu, drugi obiekt odwołuje się do innego obiektu, i tak dalej do momentu niektóre końcowego obiektu odwołuje się do pierwszy obiekt. W cyklu nie można usunąć obiektów poprawnie, jeśli jeden obiekt liczba odwołań wynosi zero. Aby rozwiązać ten problem, C + +/ CX zapewnia [klasy Platform::WeakReference](../cppcx/platform-weakreference-class.md) klasy. A `WeakReference` obiekt obsługuje [rozwiązać](../cppcx/platform-weakreference-class.md#resolve) metodę, która zwraca wartość null, jeśli obiekt już istnieje, lub zgłasza [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) Jeśli obiekt jest aktywna, ale nie jest typu `T`.  

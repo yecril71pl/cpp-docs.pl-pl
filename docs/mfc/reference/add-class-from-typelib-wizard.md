@@ -1,13 +1,10 @@
 ---
-title: "Biblioteki typów Kreator dodawania klasy z | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Biblioteki typów Kreator dodawania klasy z | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aad89b6f3227cac59b6429cc67975db3dad424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-typelib-wizard"></a>Kreator dodawania klasy z biblioteki typów
 Ten kreator służy do dodawania klasy MFC z biblioteki typów dostępne. Kreator utworzy klasę dla każdego interfejsu dodawanych z wybranej biblioteki typów.  
@@ -36,7 +31,7 @@ Ten kreator służy do dodawania klasy MFC z biblioteki typów dostępne. Kreato
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**Rejestru**|Biblioteka typów jest zarejestrowana w systemie. Zarejestrowanych bibliotek typów są wymienione w **bibliotek typów dostępne**.|  
+|**Registry**|Biblioteka typów jest zarejestrowana w systemie. Zarejestrowanych bibliotek typów są wymienione w **bibliotek typów dostępne**.|  
 |**Plik**|Biblioteki typów nie zawsze jest zarejestrowany w systemie, ale jest zawarty w pliku. Należy podać lokalizację pliku w **lokalizacji**.|  
   
  **Biblioteki typów dostępne**  
@@ -58,9 +53,9 @@ Ten kreator służy do dodawania klasy MFC z biblioteki typów dostępne. Kreato
 |**<\<**|Usuwa wszystkie klasy w **wygenerowane klasy** listy. Jeśli na wygaszone **wygenerowane klasy** lista jest pusta.|  
   
  **Wygenerowane klasy**  
- Określa nazwę klasy do wygenerowania z interfejsów dodane przy użyciu  **>**  lub  **>>**  przycisku. Można kliknąć to pole, aby wybierz klasę, a następnie górę lub w dół klucze do przewijania na liście wyświetlanie nazwy klasy w `Class` pole i nazwę pliku w **pliku** pola, które generuje kreatora po kliknięciu  **Zakończ**. Jednocześnie można wybrać tylko jedną klasę, w tym polu.  
+ Określa nazwę klasy do wygenerowania z interfejsów dodane przy użyciu **>** lub **>>** przycisku. Można kliknąć to pole, aby wybierz klasę, a następnie górę lub w dół klucze do przewijania na liście wyświetlanie nazwy klasy w `Class` pole i nazwę pliku w **pliku** pola, które generuje kreatora po kliknięciu  **Zakończ**. Jednocześnie można wybrać tylko jedną klasę, w tym polu.  
   
- Klasy można usunąć, wybierając ją na liście i klikając  **<** . Nie musisz wybrać klasę w polu klasy generowane, aby usunąć wszystkie klasy; klikając  **<<** , należy usunąć wszystkie klasy w **wygenerowane klasy** pole.  
+ Klasy można usunąć, wybierając ją na liście i klikając **<**. Nie musisz wybrać klasę w polu klasy generowane, aby usunąć wszystkie klasy; klikając **<<**, należy usunąć wszystkie klasy w **wygenerowane klasy** pole.  
   
  `Class`  
  Określa nazwę klasy wybrany w **wygenerowane klasy** pola, które Kreator dodaje po kliknięciu **Zakończ**. Można edytować nazwy w `Class` pole.  

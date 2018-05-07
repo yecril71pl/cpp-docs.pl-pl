@@ -1,13 +1,10 @@
 ---
-title: "Inicjowanie aparatu bazy danych DAO i kończenie działania | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Inicjowanie aparatu bazy danych DAO i kończenie działania | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32dbcb02615f552a2bb26ec047b0b817bb828a95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f28c0c166bcbf13181161d6afce484fe4a45b80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Inicjowanie i kończenie działania aparatu bazy danych DAO
 Korzystając z obiektów MFC DAO, aparatu bazy danych DAO najpierw należy zainicjować i następnie zakończona przed kończy działanie aplikacji lub biblioteki DLL. Dwie funkcje `AfxDaoInit` i `AfxDaoTerm`, wykonać te zadania.  
@@ -38,7 +33,7 @@ Korzystając z obiektów MFC DAO, aparatu bazy danych DAO najpierw należy zaini
 |[Afxdaoinit —](#afxdaoinit)|Aparat bazy danych DAO.|  
 |[Afxdaoterm —](#afxdaoterm)|Kończy aparatu bazy danych DAO.|  
   
-##  <a name="afxdaoinit"></a>Afxdaoinit —  
+##  <a name="afxdaoinit"></a>  Afxdaoinit —  
  Ta funkcja inicjuje aparatu bazy danych DAO.  
   
 ```  
@@ -56,7 +51,7 @@ throw(CDaoException*);
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdao.h  
   
-##  <a name="afxdaoterm"></a>Afxdaoterm —  
+##  <a name="afxdaoterm"></a>  Afxdaoterm —  
  Ta funkcja kończy aparatu bazy danych DAO.  
   
 ```  

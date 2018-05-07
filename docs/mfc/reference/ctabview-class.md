@@ -1,12 +1,9 @@
 ---
 title: Klasa CTabView | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTabView
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbb5d92387634356f1185cee73d5969944ac27a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctabview-class"></a>Klasa CTabView
 `CTabView` Klasa upraszcza korzystanie z klasy formantu karty ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) w aplikacjach korzystających z architektury dokument/widok MFC.  
@@ -73,7 +68,7 @@ class CTabbedView : public CView
 |[CTabView::OnActivateView](#onactivateview)|Wywoływane przez platformę, gdy widok kartę nawiązuje aktywne lub nieaktywne.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa ułatwia poddane z kartami widoku aplikacji dokument/widok. `CTabView`jest `CView`-klasy, która zawiera osadzony `CMFCTabCtrl` obiektu. `CTabView`obsługuje wszystkie komunikaty muszą obsługiwać `CMFCTabCtrl` obiektu. Po prostu wyprowadzenia klasy z `CTabView` i podłącz go do aplikacji, a następnie dodaj `CView`-klas pochodnych przy użyciu `AddView` metody. Formant karty wyświetli tych widoków jako karty.  
+ Ta klasa ułatwia poddane z kartami widoku aplikacji dokument/widok. `CTabView` jest `CView`-klasy, która zawiera osadzony `CMFCTabCtrl` obiektu. `CTabView` obsługuje wszystkie komunikaty muszą obsługiwać `CMFCTabCtrl` obiektu. Po prostu wyprowadzenia klasy z `CTabView` i podłącz go do aplikacji, a następnie dodaj `CView`-klas pochodnych przy użyciu `AddView` metody. Formant karty wyświetli tych widoków jako karty.  
   
  Na przykład może być dokumentu, który może być reprezentowany na różne sposoby: jako arkusz kalkulacyjny, wykres można edytować formularza i tak dalej. Można tworzyć widoki poszczególnych pobieranie danych, zgodnie z potrzebami, wstawić je do Twojej `CTabView`-pochodnych obiektu i je z kartami bez żadnych dodatkowych kodowania.  
   
@@ -87,7 +82,7 @@ class CTabbedView : public CView
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxTabView.h  
   
-##  <a name="addview"></a>CTabView::AddView  
+##  <a name="addview"></a>  CTabView::AddView  
  Dodaje widoku do formantu karty.  
   
 ```  
@@ -99,16 +94,16 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pViewClass`  
+ [in] `pViewClass`  
  Wskaźnik do klasy środowiska uruchomieniowego wstawionego widoku.  
   
- [in]`strViewLabel`  
+ [in] `strViewLabel`  
  Określa tekst zakładki.  
   
- [in]`iIndex`  
+ [in] `iIndex`  
  Określa pozycję liczony od zera, w której mają zostać wstawione w widoku. Jeśli pozycja jest wartość -1 nową kartę są wstawiane na końcu.  
   
- [in]`pContext`  
+ [in] `pContext`  
  Wskaźnik do `CCreateContext` widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -117,7 +112,7 @@ int AddView(
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji, aby dodać widok do formantu karty, który jest osadzony w ramce.  
   
-##  <a name="findtab"></a>CTabView::FindTab  
+##  <a name="findtab"></a>  CTabView::FindTab  
  Zwraca indeks określony widok formantu karty.  
   
 ```  
@@ -125,7 +120,7 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`hWndView`  
+ [in] `hWndView`  
  Dojście widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -134,7 +129,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji można pobrać indeksu w widoku, który ma określony uchwyt.  
   
-##  <a name="getactiveview"></a>CTabView::GetActiveView  
+##  <a name="getactiveview"></a>  CTabView::GetActiveView  
  Zwraca wskaźnik do aktywnego widoku.  
   
 ```  
@@ -146,7 +141,7 @@ CView* GetActiveView() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
+##  <a name="gettabcontrol"></a>  CTabView::GetTabControl  
  Zwraca odwołanie do formantu karty skojarzone z tym widokiem.  
   
 ```  
@@ -156,7 +151,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do formantu karty skojarzone z tym widokiem.  
   
-##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
+##  <a name="isscrollbar"></a>  CTabView::IsScrollBar  
  Wywoływane przez platformę, podczas tworzenia widoku kartę, aby określić, czy widok kartę udostępnionego poziomy pasek przewijania.  
   
 ```  
@@ -164,14 +159,14 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli można utworzyć widoku kartę, wraz z udostępnionego przewijania na pasku przewijania. W przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli można utworzyć widoku kartę, wraz z udostępnionego przewijania na pasku przewijania. W przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę metodę po `CTabView` utworzeniu obiektu.  
   
  Zastąpienie `IsScrollBar` metody w `CTabView`-pochodzi z klasy i przywracać `TRUE` Jeśli chcesz utworzyć widok, który został udostępniony poziomy pasek przewijania.  
   
-##  <a name="onactivateview"></a>CTabView::OnActivateView  
+##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  Wywoływane przez platformę, gdy widok kartę nawiązuje aktywne lub nieaktywne.  
   
 ```  
@@ -179,13 +174,13 @@ virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`view`  
+ [in] `view`  
  Wskaźnik do widoku.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja nie działa. Należy przesłonić tę metodę w `CTabView`-klasy do przetworzenia tego powiadomienia.  
   
-##  <a name="removeview"></a>CTabView::RemoveView  
+##  <a name="removeview"></a>  CTabView::RemoveView  
  Usuwa widok z formantu karty.  
   
 ```  
@@ -193,7 +188,7 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iTabNum`  
+ [in] `iTabNum`  
  Indeks widoku do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -201,7 +196,7 @@ BOOL RemoveView(int iTabNum);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setactiveview"></a>CTabView::SetActiveView  
+##  <a name="setactiveview"></a>  CTabView::SetActiveView  
  Uaktywnia widoku.  
   
 ```  
@@ -209,11 +204,11 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iTabNum`  
+ [in] `iTabNum`  
  Liczony od zera indeks w widoku kartę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli określony widok została uaktywniona, `FALSE` Jeśli indeks widoku jest nieprawidłowy.  
+ `TRUE` Jeśli określony widok została uaktywniona, `FALSE` Jeśli indeks widoku jest nieprawidłowy.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  

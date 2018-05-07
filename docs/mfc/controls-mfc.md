@@ -1,13 +1,10 @@
 ---
 title: Formanty (MFC) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b18979ec502ea645cf8cdac39ca9ea75cb229e61
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: cd841b6bc3c55ed58db101c6226bbc24819b248f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls-mfc"></a>Formanty (MFC)
 Formanty są obiektami, które użytkownicy mogą wykorzystywać do wprowadzania lub manipulować danymi. Występują najczęściej w oknach dialogowych lub na paskach narzędzi. Ten temat rodziny obejmuje trzy główne rodzaje kontrolki:  
@@ -53,35 +48,35 @@ Formanty są obiektami, które użytkownicy mogą wykorzystywać do wprowadzania
   
 -   [CDragListBox](../mfc/reference/cdraglistbox-class.md)  
   
-##  <a name="_core_finding_information_about_windows_common_controls"></a>Znajdowanie informacji o formanty standardowe systemu Windows  
+##  <a name="_core_finding_information_about_windows_common_controls"></a> Znajdowanie informacji o formanty standardowe systemu Windows  
  W poniższej tabeli krótko opisano poszczególne formanty standardowe systemu Windows, łącznie z klasy otoki formantu MFC.  
   
-### <a name="_core_windows_common_controls_and_mfc_classes"></a>Formanty standardowe systemu Windows i klas MFC  
+### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Formanty standardowe systemu Windows i klas MFC  
   
 |Formant|Klasy MFC|Opis|Nowość w systemie Windows 95|  
 |-------------|---------------|-----------------|------------------------|  
 |[Animacja](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Wyświetla kolejnych klatek AVI klipu wideo|Tak|  
-|button|[CButton](../mfc/reference/cbutton-class.md)|Przyciski, które powodują akcji; również używane do pola wyboru, przyciski radiowe i pola grupy|Nie|  
+|Przycisk|[CButton](../mfc/reference/cbutton-class.md)|Przyciski, które powodują akcji; również używane do pola wyboru, przyciski radiowe i pola grupy|Nie|  
 |pole kombi|[CComboBox](../mfc/reference/ccombobox-class.md)|Kombinacja pole edycji i pola listy|Nie|  
 |[selektora daty i godziny](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|Zezwala użytkownikowi na wybranie wartości określonej daty lub czasu|Tak|  
 |pole edycji|[CEdit](../mfc/reference/cedit-class.md)|Pola do wprowadzania tekstu|Nie|  
 |[pole kombi rozszerzone](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|Kontrolka pola kombi umożliwia wyświetlanie obrazów|Tak|  
 |[header](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Przycisk, który pojawi się powyżej kolumny tekstu; Określa szerokość wyświetlanego tekstu|Tak|  
-|[klawisze skrótu](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Okno, który umożliwia użytkownikowi utworzenie "klawisza dostępu" szybko wykonania akcji|Tak|  
+|[Klawisze skrótu](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Okno, który umożliwia użytkownikowi utworzenie "klawisza dostępu" szybko wykonania akcji|Tak|  
 |[listy obrazów](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|Kolekcją obrazów, które umożliwiają zarządzanie dużymi zbiorami ikony lub mapy bitowe (listy obrazów nie jest naprawdę formantu; obsługuje list używane przez inne formanty)|Tak|  
 |[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Okno, który wyświetla listę wartości tekstowych z ikonami|Tak|  
 |pola listy|[CListBox](../mfc/reference/clistbox-class.md)|Pole zawierające listę ciągów|Nie|  
-|[kalendarza miesięcznego](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Formant, który wyświetla informacje o dacie|Tak|  
-|[postęp](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Okno, która wskazuje postępu długotrwałej operacji|Tak|  
+|[Kalendarza miesięcznego](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Formant, który wyświetla informacje o dacie|Tak|  
+|[Postęp](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Okno, która wskazuje postępu długotrwałej operacji|Tak|  
 |[paska pomocniczego](../mfc/using-crebarctrl.md)|[Crebarctrl —](../mfc/reference/crebarctrl-class.md)|Pasek narzędzi, zawierające więcej podrzędnych windows w postaci formantów|Tak|  
-|[edycji wzbogaconej](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Okna, w którym użytkownik może edytować z formatowanie znaków i akapitów (zobacz [klasy powiązane z formantów edycji wzbogaconej](../mfc/classes-related-to-rich-edit-controls.md))|Tak|  
+|[Edycji wzbogaconej](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Okna, w którym użytkownik może edytować z formatowanie znaków i akapitów (zobacz [klasy powiązane z formantów edycji wzbogaconej](../mfc/classes-related-to-rich-edit-controls.md))|Tak|  
 |pasek przewijania|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Pasek przewijania używany jako formant wewnątrz okno dialogowe (nie w oknie)|Nie|  
 |[slider](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|Znaczniki okna zawierającego formantu suwaka o opcjonalne|Tak|  
 |[przycisk pokrętła](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Para użytkownika przycisków strzałek można kliknąć przyrost lub zmniejszanie wartości|Tak|  
 |tekst statyczne|[CStatic](../mfc/reference/cstatic-class.md)|Tekst dla innych formantów etykiet|Nie|  
-|[pasek stanu](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|Okno do wyświetlania informacji o stanie, podobny do klasy MFC`CStatusBar`|Tak|  
-|[tab](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Analogiczne do separatorów w notesie; używane w "okna dialogowe kart" lub arkusze właściwości|Tak|  
-|[pasek narzędzi](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Przyciski okna z generowania polecenia, podobny do klasy MFC`CToolBar`|Tak|  
+|[Pasek stanu](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|Okno do wyświetlania informacji o stanie, podobny do klasy MFC `CStatusBar`|Tak|  
+|[Karta](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Analogiczne do separatorów w notesie; używane w "okna dialogowe kart" lub arkusze właściwości|Tak|  
+|[Pasek narzędzi](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Przyciski okna z generowania polecenia, podobny do klasy MFC `CToolBar`|Tak|  
 |[Etykietka narzędzia](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Niewielkie okno podręczne, opisujący cel przycisku paska narzędzi lub innego narzędzia|Tak|  
 |[drzewa](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Okna hierarchicznych listy elementów|Tak|  
   

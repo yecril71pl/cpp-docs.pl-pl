@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCColorDialog | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8b547b72a7094bb6337e9e412f8548a48820f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolordialog-class"></a>Klasa CMFCColorDialog
 `CMFCColorDialog` Klasa reprezentuje okno dialogowe wybór kolorów.  
@@ -78,8 +73,8 @@ class CMFCColorDialog : public CDialogEx
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`m_bIsMyPalette`|`TRUE`Jeśli okno dialogowe Wybieranie koloru używa własnego paletę kolorów lub `FALSE` czy okno dialogowe używa palety, który jest określony w `CMFCColorDialog` konstruktora.|  
-|`m_bPickerMode`|`TRUE`gdy użytkownik wybiera kolor z okna dialogowego wyboru; w przeciwnym razie `FALSE`.|  
+|`m_bIsMyPalette`|`TRUE` Jeśli okno dialogowe Wybieranie koloru używa własnego paletę kolorów lub `FALSE` czy okno dialogowe używa palety, który jest określony w `CMFCColorDialog` konstruktora.|  
+|`m_bPickerMode`|`TRUE` gdy użytkownik wybiera kolor z okna dialogowego wyboru; w przeciwnym razie `FALSE`.|  
 |`m_btnColorSelect`|Przycisk koloru, który został wybrany przez użytkownika.|  
 |`m_CurrentColor`|Obecnie wybranego koloru.|  
 |`m_hcurPicker`|Służy do pobierania kolor kursora.|  
@@ -99,11 +94,11 @@ class CMFCColorDialog : public CDialogEx
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cdialog —](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
  [CDialogEx](../../mfc/reference/cdialogex-class.md)  
   
@@ -117,7 +112,7 @@ class CMFCColorDialog : public CDialogEx
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcolordialog.h  
   
-##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
+##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
  Konstruuje `CMFCColorDialog` obiektu.  
   
 ```  
@@ -129,23 +124,23 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`clrInit`  
+ [in] `clrInit`  
  Domyślny wybór kolorów. Jeśli wartość nie zostanie określona, wartością domyślną jest RGB(0,0,0) (czarny).  
   
- [in]`dwFlags`  
+ [in] `dwFlags`  
  (Zastrzeżone).  
   
- [in]`pParentWnd`  
+ [in] `pParentWnd`  
  Wskaźnik do okna nadrzędnego lub właściciela okna dialogowego.  
   
- [in]`hPal`  
+ [in] `hPal`  
  Dojście do paletę kolorów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getcolor"></a>CMFCColorDialog::GetColor  
+##  <a name="getcolor"></a>  CMFCColorDialog::GetColor  
  Pobiera kolor, który użytkownik wybiera z okna dialogowego kolorów.  
   
 ```  
@@ -158,7 +153,7 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji po wywołaniu metody `DoModal` metody.  
   
-##  <a name="getpalette"></a>CMFCColorDialog::GetPalette  
+##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
  Pobiera paletę kolorów, które są dostępne w bieżącym oknie dialogowym koloru.  
   
 ```  
@@ -171,14 +166,14 @@ CPalette* GetPalette() const;
 ### <a name="remarks"></a>Uwagi  
  Określa paletę kolorów, kolorów, które użytkownik może wybrać.  
   
-##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
+##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette  
  Palety jest pochodną palety systemu.  
   
 ```  
 void RebuildPalette();
 ```  
   
-##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
+##  <a name="setcurrentcolor"></a>  CMFCColorDialog::SetCurrentColor  
  Ustawia bieżący kolor okna dialogowego.  
   
 ```  
@@ -186,12 +181,12 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`rgb`  
+ [in] `rgb`  
  Wartości kolorów RGB  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
+##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor  
  Ustawia bieżący kolor na kolor w palecie bieżącego najbardziej podobne.  
   
 ```  
@@ -199,12 +194,12 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`rgb`  
+ [in] `rgb`  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , który określa kolor RGB.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne  
+##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
  Jawnie określa składniki czerwony, zielonemu i niebieskiemu wybranego koloru na pierwszej stronie właściwości okna dialogowego kolorów.  
   
 ```  
@@ -215,18 +210,18 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`R`  
+ [in] `R`  
  Określa składnika czerwony wartości RGB.  
   
- [in]`G`  
+ [in] `G`  
  Określa składnika zielony wartości RGB.  
   
- [in]`B`  
+ [in] `B`  
  Określa składnika niebieski wartości RGB.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
+##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
  Jawnie określa składniki czerwony, zielonemu i niebieskiemu wybranego koloru na drugiej stronie właściwości okna dialogowego kolorów.  
   
 ```  
@@ -237,13 +232,13 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`R`  
+ [in] `R`  
  Określa składnik red wartości RGB  
   
- [in]`G`  
+ [in] `G`  
  Określa składnika zielony wartości RGB  
   
- [in]`B`  
+ [in] `B`  
  Określa składnika niebieski wartości RGB  
   
 ### <a name="remarks"></a>Uwagi  

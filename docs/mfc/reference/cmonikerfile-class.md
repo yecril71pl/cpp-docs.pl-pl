@@ -1,12 +1,9 @@
 ---
 title: Klasa CMonikerFile | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMonikerFile
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dfdf86a4375521d7db084b60c549b08a54dc992
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 431e743396cfc22d49c13a2a9e2f50c88c5ee036
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmonikerfile-class"></a>Klasa CMonikerFile
 Reprezentuje strumienia danych ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) o nazwie [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
@@ -76,7 +71,7 @@ class CMonikerFile : public COleStreamFile
   
  Pochodną `COleStreamFile`, `CMonikerFile` przyjmuje krótka nazwa lub reprezentację ciągu go do krótkiej nazwy i wiąże strumienia, dla której krótka nazwa jest nazwą. Następnie można odczytać i zapisać w strumieniu. Rzeczywistego celu `CMonikerFile` jest zapewnienie dostępu `IStream`o nazwie s `IMoniker`s, dzięki czemu nie trzeba powiązać strumienia samodzielnie, jeszcze `CFile` funkcji do strumienia.  
   
- `CMonikerFile`Nie można powiązać z innym niż strumienia. Jeśli chcesz powiązać z magazynu lub obiekt, należy użyć `IMoniker` interfejsu bezpośrednio.  
+ `CMonikerFile` Nie można powiązać z innym niż strumienia. Jeśli chcesz powiązać z magazynu lub obiekt, należy użyć `IMoniker` interfejsu bezpośrednio.  
   
  Aby uzyskać więcej informacji o strumieni i monikerów, zobacz [COleStreamFile](../../mfc/reference/colestreamfile-class.md) w *odwołania MFC* i [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) i [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705) w Zestaw Windows SDK.  
   
@@ -92,7 +87,7 @@ class CMonikerFile : public COleStreamFile
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxole.h  
   
-##  <a name="close"></a>CMonikerFile::Close  
+##  <a name="close"></a>  CMonikerFile::Close  
  Wywołanie tej funkcji, odłącz i wersji strumienia i zwolnić krótkiej nazwy.  
   
 ```  
@@ -102,14 +97,14 @@ virtual void Close();
 ### <a name="remarks"></a>Uwagi  
  Można wywołać dla strumieni nieotwarte lub już zamknięty.  
   
-##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
+##  <a name="cmonikerfile"></a>  CMonikerFile::CMonikerFile  
  Konstruuje `CMonikerFile` obiektu.  
   
 ```  
 CMonikerFile();
 ```  
   
-##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
+##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext  
  Wywołanie tej funkcji można utworzyć kontekstu wiązania domyślnie zainicjowane.  
   
 ```  
@@ -126,7 +121,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="remarks"></a>Uwagi  
  Kontekst powiązania jest obiekt, który przechowuje informacje dotyczące operacji wiązania określonego krótkiej nazwy. Można zastąpić tę funkcję, aby zapewnić kontekstu wiązania niestandardowego.  
   
-##  <a name="detach"></a>CMonikerFile::Detach  
+##  <a name="detach"></a>  CMonikerFile::Detach  
  Wywołanie tej funkcji, aby zamknąć strumienia.  
   
 ```  
@@ -140,7 +135,7 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
-##  <a name="getmoniker"></a>CMonikerFile::GetMoniker  
+##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker  
  Wywołanie tej funkcji można pobrać wskaźnik do bieżącego krótkiej nazwy.  
   
 ```  
@@ -153,7 +148,7 @@ IMoniker* GetMoniker() const;
 ### <a name="remarks"></a>Uwagi  
  Ponieważ `CMonikerFile` nie jest interfejsem, zwrócony wskaźnik nie zwiększa się liczba odwołań (za pośrednictwem [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), i krótka nazwa zostanie zwolniony podczas `CMonikerFile` obiektu zostanie zwolniony. Jeśli chcesz przechowywać na moniker lub zwolnij samodzielnie, należy najpierw `AddRef` go.  
   
-##  <a name="open"></a>CMonikerFile::Open  
+##  <a name="open"></a>  CMonikerFile::Open  
  Wywołanie tej funkcji członkowskich można otworzyć obiektu pliku lub krótkiej nazwy.  
   
 ```  

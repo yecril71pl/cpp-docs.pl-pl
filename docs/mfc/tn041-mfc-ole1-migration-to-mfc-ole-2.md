@@ -1,13 +1,10 @@
 ---
-title: "TN041: Migracja z MFC — OLE1 do MFC — OLE 2 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'TN041: Migracja z MFC — OLE1 do MFC — OLE 2 | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894c171c025ef125495faad21dba2a98c08e8b88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: migracja z MFC/OLE1 do MFC/OLE 2
 > [!NOTE]
@@ -312,7 +307,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT,
 ## <a name="adding-visual-editing"></a>Dodawanie "Edycja wizualna"  
  Jedną z najbardziej interesujących funkcji OLE jest aktywacja w miejscu (lub "Edycja wizualna"). Ta funkcja umożliwia aplikacji serwera do przejęcia części kontenera interfejsu użytkownika do określonych więcej edycji interfejs użytkownika. Aby zaimplementować Aktywacja w miejscu do OCLIENT, niektóre specjalne zasoby należy dodać oraz dodatkowy kod. Te zasoby oraz kod zwykle są dostarczane przez kreatorami AppWizard — w rzeczywistości większość tutaj kod został pobierają bezpośrednio z aplikacją kreatorami AppWizard świeże z obsługą "Kontener".  
   
- Przede wszystkim należy dodać zasób menu można użyć, gdy istnieje element, który jest aktywny w miejscu. Kopiowanie zasobów IDR_OCLITYPE i usuwając wszystkie oprócz wyskakujące okno i plików, można utworzyć tego zasobu dodatkowe menu w programie Visual C++. Dwa pasków separatorów są wstawiane plików i okno wyskakujące okienka wskazująca rozdzielenie grup (powinna wyglądać: plik &#124; &#124; Okno). Aby uzyskać więcej informacji na temat tych separatorów oznacza i jak scalania menu serwera i kontener zobacz "Menu i zasoby: scalanie Menu" w *klasy OLE 2*.  
+ Przede wszystkim należy dodać zasób menu można użyć, gdy istnieje element, który jest aktywny w miejscu. Kopiowanie zasobów IDR_OCLITYPE i usuwając wszystkie oprócz wyskakujące okno i plików, można utworzyć tego zasobu dodatkowe menu w programie Visual C++. Dwa pasków separatorów są wstawiane plików i okno wyskakujące okienka wskazująca rozdzielenie grup (powinna wyglądać: plik &#124; &#124; okno). Aby uzyskać więcej informacji na temat tych separatorów oznacza i jak scalania menu serwera i kontener zobacz "Menu i zasoby: scalanie Menu" w *klasy OLE 2*.  
   
  Po utworzeniu tych menu utworzone, należy powiadomić framework wiedzieć o nich. Jest to realizowane przez wywołanie `CDocTemplate::SetContainerInfo` dla szablonu dokumentów przed dodaniem go do listy szablonów dokumentów w InitInstance użytkownika. Nowy kod, aby zarejestrować szablonu dokumentu wygląda następująco:  
   
@@ -672,7 +667,7 @@ CSize CServerItem::CalcNodeSize()
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters  
 ```  
   
- `COleServerItem::CopyToClipboard`nie obsługuje już flagi "bIncludeNative". Danych natywnych (dane zapisywane przez funkcję serializacja elementu serwera) zawsze jest kopiowana, więc usunąć pierwszym parametrem. Ponadto `CopyToClipboard` po wystąpieniu błędu zamiast zwrócenie wartości FALSE spowoduje zgłoszenie wyjątku. Zmień kod dla CServerView::OnEditCopy w następujący sposób:  
+ `COleServerItem::CopyToClipboard` nie obsługuje już flagi "bIncludeNative". Danych natywnych (dane zapisywane przez funkcję serializacja elementu serwera) zawsze jest kopiowana, więc usunąć pierwszym parametrem. Ponadto `CopyToClipboard` po wystąpieniu błędu zamiast zwrócenie wartości FALSE spowoduje zgłoszenie wyjątku. Zmień kod dla CServerView::OnEditCopy w następujący sposób:  
   
 ```  
 void CServerView::OnEditCopy()  
@@ -710,7 +705,7 @@ void CServerView::OnEditCopy()
   
 -   Musisz Opisz platformę tych specjalnych zasobów i klasy.  
   
- Zasób menu jest łatwo utworzyć. Uruchom program Visual C++, kopiowanie zasobów menu IDR_HIERSVRTYPE do menu zasób o nazwie IDR_HIERSVRTYPE_SRVR_IP. Zmodyfikuj menu, tak, aby pozostało tylko okienek menu Edycja i uzyskać pomoc. Dodaj dwa separatory do menu Between menu Edycja i pomocy (powinna wyglądać: Edytuj &#124; &#124; Pomoc). Aby uzyskać więcej informacji o tych separatorów oznacza i jak scalania menu serwera i kontener, zobacz "Menu i zasoby: scalanie Menu" w *klasy OLE 2*.  
+ Zasób menu jest łatwo utworzyć. Uruchom program Visual C++, kopiowanie zasobów menu IDR_HIERSVRTYPE do menu zasób o nazwie IDR_HIERSVRTYPE_SRVR_IP. Zmodyfikuj menu, tak, aby pozostało tylko okienek menu Edycja i uzyskać pomoc. Dodaj dwa separatory do menu Between menu Edycja i pomocy (powinien wyglądać jak: edytowanie &#124; &#124; Pomoc). Aby uzyskać więcej informacji o tych separatorów oznacza i jak scalania menu serwera i kontener, zobacz "Menu i zasoby: scalanie Menu" w *klasy OLE 2*.  
   
  Mapy bitowej dla narzędzi podzestawu można łatwo tworzyć przez skopiowanie z pierwszą aplikację kreatorami AppWizard wygenerowane z zaznaczoną opcją "Server". Ta mapa bitowa można następnie zaimportować do programu Visual C++. Należy podać identyfikator IDR_HIERSVRTYPE_SRVR_IP mapy bitowej.  
   
@@ -750,7 +745,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
 -   Przewijanie okno kontenera jako zaznaczenie zostanie zmieniona.  
   
- Przykładowe HIERSVR 3.0 MFC używa również nieco inny projekt dla jego elementów serwera. Pomaga zachować pamięci i zapewnia bardziej elastyczne łącza. Przy użyciu wersji 2.0 HIERSVR każdy węzeł w drzewie *jest a* `COleServerItem`. `COleServerItem`Przenosi nieco większe obciążenie, niż jest to niezbędne dla każdego z tych węzłów, ale `COleServerItem` jest wymagany dla każdego aktywnego łącza. Jednak w większości przypadków istnieje bardzo niewiele aktywnych łączy w danym momencie. Aby osiągnąć większą wydajność, HIERSVR w tej wersji programu MFC oddziela węzła z `COleServerItem`. Ma ona zarówno CServerNode i **CServerItem** klasy. **CServerItem** (pochodną `COleServerItem`) jest tylko w razie potrzeby utworzone. Po kontenera (lub kontenery) Zatrzymaj przy użyciu tej określonej łącze, aby dany węzeł, do obiektu CServerItem skojarzonego z CServerNode są usuwane. Ten projekt jest bardziej wydajny i elastyczny. Jego elastyczność polega na podczas pracy nad wiele łączy zaznaczenia. Żadna z tych dwóch wersji HIERSVR nie obsługuje wyboru wielokrotnego, ale jest znacznie łatwiejsze do dodania (i obsługuje łącza do takich opcji) z wersji MFC 3.0 HIERSVR, ponieważ `COleServerItem` jest oddzielony od danych natywnych.  
+ Przykładowe HIERSVR 3.0 MFC używa również nieco inny projekt dla jego elementów serwera. Pomaga zachować pamięci i zapewnia bardziej elastyczne łącza. Przy użyciu wersji 2.0 HIERSVR każdy węzeł w drzewie *jest a* `COleServerItem`. `COleServerItem` Przenosi nieco większe obciążenie, niż jest to niezbędne dla każdego z tych węzłów, ale `COleServerItem` jest wymagany dla każdego aktywnego łącza. Jednak w większości przypadków istnieje bardzo niewiele aktywnych łączy w danym momencie. Aby osiągnąć większą wydajność, HIERSVR w tej wersji programu MFC oddziela węzła z `COleServerItem`. Ma ona zarówno CServerNode i **CServerItem** klasy. **CServerItem** (pochodną `COleServerItem`) jest tylko w razie potrzeby utworzone. Po kontenera (lub kontenery) Zatrzymaj przy użyciu tej określonej łącze, aby dany węzeł, do obiektu CServerItem skojarzonego z CServerNode są usuwane. Ten projekt jest bardziej wydajny i elastyczny. Jego elastyczność polega na podczas pracy nad wiele łączy zaznaczenia. Żadna z tych dwóch wersji HIERSVR nie obsługuje wyboru wielokrotnego, ale jest znacznie łatwiejsze do dodania (i obsługuje łącza do takich opcji) z wersji MFC 3.0 HIERSVR, ponieważ `COleServerItem` jest oddzielony od danych natywnych.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   

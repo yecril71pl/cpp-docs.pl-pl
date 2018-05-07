@@ -1,12 +1,9 @@
 ---
 title: Klasa CPictureHolder | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPictureHolder
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90bc58ce3d56852b983a673968df97b55f4bdeab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpictureholder-class"></a>Klasa CPictureHolder
 Implementuje właściwości obrazu, dzięki czemu użytkownika wyświetlić obraz w formantu.  
@@ -87,7 +82,7 @@ class CPictureHolder
 |[CPictureHolder::m_pPict](#m_ppict)|Wskaźnik do obiektu obrazu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CPictureHolder`nie ma klasy podstawowej.  
+ `CPictureHolder` nie ma klasy podstawowej.  
   
  Razem z właściwością obrazu podstawowego dewelopera można określić mapy bitowej, ikona lub metaplik do wyświetlenia.  
   
@@ -99,14 +94,14 @@ class CPictureHolder
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxctl.h  
   
-##  <a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
+##  <a name="cpictureholder"></a>  CPictureHolder::CPictureHolder  
  Konstruuje `CPictureHolder` obiektu.  
   
 ```  
 CPictureHolder();
 ```  
   
-##  <a name="createempty"></a>CPictureHolder::CreateEmpty  
+##  <a name="createempty"></a>  CPictureHolder::CreateEmpty  
  Tworzy pustą `CPictureHolder` obiektu i łączy go do `IPicture` interfejsu.  
   
 ```  
@@ -116,7 +111,7 @@ BOOL CreateEmpty();
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli obiekt jest pomyślnie utworzony; w przeciwnym razie 0.  
   
-##  <a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
+##  <a name="createfrombitmap"></a>  CPictureHolder::CreateFromBitmap  
  Używa mapy bitowej do zainicjowania obiektu obrazu w `CPictureHolder`.  
   
 ```  
@@ -161,7 +156,7 @@ BOOL CreateFromBitmap(
 ### <a name="remarks"></a>Uwagi  
  Jeśli `bTransferOwnership` jest **TRUE**, obiekt wywołujący nie należy używać mapy bitowej lub zwraca obiekt palety w jakikolwiek sposób po tym wywołaniu. Jeśli `bTransferOwnership` jest **FALSE**, element wywołujący jest odpowiedzialny za zapewnienie, że obiekt mapy bitowej i palety pozostają w mocy okres istnienia obiektu obrazu.  
   
-##  <a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
+##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  Używa ikonę można zainicjować obiektu obrazu w `CPictureHolder`.  
   
 ```  
@@ -190,7 +185,7 @@ BOOL CreateFromIcon(
 ### <a name="remarks"></a>Uwagi  
  Jeśli `bTransferOwnership` jest **TRUE**, obiekt wywołujący nie należy używać obiekt ikony w jakikolwiek sposób po powrocie tego wywołania. Jeśli `bTransferOwnership` jest **FALSE**, element wywołujący jest odpowiedzialny za egzekwowanie obiekt ikony pozostaje ważny przez czas ich istnienia obiektu obrazu.  
   
-##  <a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
+##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  Używa metaplik można zainicjować obiektu obrazu w `CPictureHolder`.  
   
 ```  
@@ -220,7 +215,7 @@ BOOL CreateFromMetafile(
 ### <a name="remarks"></a>Uwagi  
  Jeśli `bTransferOwnership` jest **TRUE**, obiekt wywołujący nie należy używać obiektu metaplik w jakikolwiek sposób po powrocie tego wywołania. Jeśli `bTransferOwnership` jest **FALSE**, element wywołujący jest odpowiedzialny za egzekwowanie obiektu metaplik pozostaje ważny przez czas ich istnienia obiektu obrazu.  
   
-##  <a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  Pobiera ciąg, który jest wyświetlany w przeglądarce właściwości kontenera.  
   
 ```  
@@ -234,7 +229,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli ciąg jest pomyślnie pobrać; w przeciwnym razie 0.  
   
-##  <a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
+##  <a name="getpicturedispatch"></a>  CPictureHolder::GetPictureDispatch  
  Ta funkcja zwraca wskaźnik do `CPictureHolder` obiektu `IPictureDisp` interfejsu.  
   
 ```  
@@ -247,7 +242,7 @@ LPPICTUREDISP GetPictureDispatch();
 ### <a name="remarks"></a>Uwagi  
  Obiekt wywołujący musi wywołać **wersji** na ten wskaźnik po jej zakończeniu.  
   
-##  <a name="gettype"></a>CPictureHolder::GetType  
+##  <a name="gettype"></a>  CPictureHolder::GetType  
  Wskazuje, czy obraz mapy bitowej, metaplik lub ikonę.  
   
 ```  
@@ -259,20 +254,20 @@ short GetType();
   
 |Wartość|Znaczenie|  
 |-----------|-------------|  
-|**PICTYPE_UNINITIALIZED**|`CPictureHolder`obiekt jest unititialized.|  
-|**PICTYPE_NONE**|`CPictureHolder`obiekt jest pusty.|  
+|**PICTYPE_UNINITIALIZED**|`CPictureHolder` obiekt jest unititialized.|  
+|**PICTYPE_NONE**|`CPictureHolder` obiekt jest pusty.|  
 |**PICTYPE_BITMAP**|Obraz jest mapą bitową.|  
 |**PICTYPE_METAFILE**|Obraz jest metaplik.|  
 |**PICTYPE_ICON**|Obraz jest ikona.|  
   
-##  <a name="m_ppict"></a>CPictureHolder::m_pPict  
+##  <a name="m_ppict"></a>  CPictureHolder::m_pPict  
  Wskaźnik do `CPictureHolder` obiektu `IPicture` interfejsu.  
   
 ```  
 LPPICTURE m_pPict;  
 ```  
   
-##  <a name="render"></a>CPictureHolder::Render  
+##  <a name="render"></a>  CPictureHolder::Render  
  Renderuje obraz w prostokącie odwołuje się `rcRender`.  
   
 ```  
@@ -292,7 +287,7 @@ void Render(
  *rcWBounds*  
  Prostokąt reprezentujący prostokątem obiektu renderowania obrazu. W przypadku formantu tym prostokącie, gdzie jest `rcBounds` parametr przekazany do zastępowania [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
   
-##  <a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
+##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  Łączy `CPictureHolder` do obiektu `IPictureDisp` interfejsu.  
   
 ```  

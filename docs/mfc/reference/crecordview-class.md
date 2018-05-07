@@ -1,12 +1,9 @@
 ---
-title: "CRecordView — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: CRecordView — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecordView
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ffc45e73a2e56acf17bd1a7107e599967b3279b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecordview-class"></a>CRecordView — klasa
 Widok, który wyświetla rekordów bazy danych w kontrolkach.  
@@ -71,7 +66,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 |[CRecordView::OnMove](#onmove)|Jeśli bieżący rekord został zmieniony, aktualizuje w źródle danych, a następnie przechodzi do określonego rekordu (następnego, poprzedniego, pierwszego lub ostatniego).|  
   
 ## <a name="remarks"></a>Uwagi  
- Widok jest widokiem formularza bezpośrednio podłączone do `CRecordset` obiektu. Widok jest tworzony na podstawie zasobu szablonu okna dialogowego i są wyświetlane pola `CRecordset` obiektu w formantach szablonu okna dialogowego. `CRecordView` Obiektu używa wymiana danych okna dialogowego (DDX) i wymiana pól rekordów (RFX) do automatycznego przenoszenia danych między pól zestawu rekordów i kontrolek w formularzu. `CRecordView`również udostępnia domyślną implementację przenoszenia jako pierwszy dalej, poprzedniego lub ostatniego rekordu i interfejs aktualizowania rekordu w widoku.  
+ Widok jest widokiem formularza bezpośrednio podłączone do `CRecordset` obiektu. Widok jest tworzony na podstawie zasobu szablonu okna dialogowego i są wyświetlane pola `CRecordset` obiektu w formantach szablonu okna dialogowego. `CRecordView` Obiektu używa wymiana danych okna dialogowego (DDX) i wymiana pól rekordów (RFX) do automatycznego przenoszenia danych między pól zestawu rekordów i kontrolek w formularzu. `CRecordView` również udostępnia domyślną implementację przenoszenia jako pierwszy dalej, poprzedniego lub ostatniego rekordu i interfejs aktualizowania rekordu w widoku.  
   
 > [!NOTE]
 >  Jeśli pracujesz z klas obiektów DAO (Data Access), a nie klasy otwarte połączenie bazy danych (ODBC), należy użyć klasy [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: programowania bazy danych](../../data/data-access-programming-mfc-atl.md).  
@@ -82,14 +77,14 @@ class AFX_NOVTABLE CRecordView : public CFormView
   
  Informacje w implementacji domyślnej do przechodzenia między rekordami, zobacz `IsOnFirstRecord` i `IsOnLastRecord` i artykułu [przy użyciu widoku rekordu](../../data/using-a-record-view-mfc-data-access.md).  
   
- `CRecordView`przechowuje informacje o pozycji użytkownika w zestawie rekordów, dzięki czemu widoku rekordu można zaktualizować interfejsu użytkownika. Gdy użytkownik zostanie przeniesiony do jednego z końców zestawu rekordów, widoku rekordu wyłącza obiekty interfejsu użytkownika — takich jak elementy menu lub przycisków paska narzędzi — przenoszenie więcej w tym samym kierunku.  
+ `CRecordView` przechowuje informacje o pozycji użytkownika w zestawie rekordów, dzięki czemu widoku rekordu można zaktualizować interfejsu użytkownika. Gdy użytkownik zostanie przeniesiony do jednego z końców zestawu rekordów, widoku rekordu wyłącza obiekty interfejsu użytkownika — takich jak elementy menu lub przycisków paska narzędzi — przenoszenie więcej w tym samym kierunku.  
   
  Aby uzyskać więcej informacji na temat deklarowanie i przy użyciu widoków rekordów i rekordów klas, zobacz "Projektowanie i tworzenie widoku rekordu" w artykule [widoków rekordów](../../data/record-views-mfc-data-access.md). Aby uzyskać więcej informacji na temat jak rekord widoków pracy i sposobu ich używania, zobacz artykuł [przy użyciu widoku rekordu](../../data/using-a-record-view-mfc-data-access.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -104,7 +99,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
   
-##  <a name="crecordview"></a>CRecordView::CRecordView  
+##  <a name="crecordview"></a>  CRecordView::CRecordView  
  Podczas tworzenia obiektu typu pochodną `CRecordView`, wywołanie jest używana dowolna forma konstruktora do zainicjowania obiektu widoku i identyfikacji zasobu okna dialogowego, na której oparto widoku.  
   
 ```  
@@ -133,7 +128,7 @@ explicit CRecordView(UINT nIDTemplate);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
   
-##  <a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>  CRecordView::IsOnFirstRecord  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy bieżący rekord jest pierwszy rekord w obiekcie rekordów skojarzonego z tym widokiem rekordu.  
   
 ```  
@@ -148,7 +143,7 @@ BOOL IsOnFirstRecord();
   
  Jeśli użytkownik przejdzie do pierwszego rekordu, struktury wyłącza wszystkie obiekty interfejsu użytkownika dla przenosząc pierwsza lub poprzedniego rekordu.  
   
-##  <a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>  CRecordView::IsOnLastRecord  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy bieżący rekord jest ostatni rekord w obiekcie rekordów skojarzonego z tym widokiem rekordu.  
   
 ```  
@@ -162,9 +157,9 @@ BOOL IsOnLastRecord();
  Ta funkcja jest przydatna do zapisywania własnych implementacji domyślnej programy obsługi aktualizacji poleceń, które ClassWizard zapisuje do obsługi interfejsu użytkownika do przechodzenia między rekordami.  
   
 > [!CAUTION]
->  Wynik tej funkcji jest niezawodne, z wyjątkiem tego widoku nie może wykryć koniec zestawu rekordów, dopóki użytkownik został przeniesiony poza jej. Użytkownik musi przenieść poza ostatni rekord przed widoku rekordu można określić, czy należy wyłączyć wszystkie obiekty interfejsu użytkownika do przechodzenia do następnego lub ostatniego rekordu. Jeśli użytkownik przenosi poza ostatniego rekordu, a następnie jest przenoszony do ostatniego rekordu (lub przed nim), widoku rekordu można śledzić położenie użytkownika w zestawie rekordów i poprawnie wyłączyć obiekty interfejsu użytkownika. `IsOnLastRecord`jest również zawodnych po wywołaniu funkcji implementacji **OnRecordLast**, która obsługuje `ID_RECORD_LAST` polecenia, lub `CRecordset::MoveLast`.  
+>  Wynik tej funkcji jest niezawodne, z wyjątkiem tego widoku nie może wykryć koniec zestawu rekordów, dopóki użytkownik został przeniesiony poza jej. Użytkownik musi przenieść poza ostatni rekord przed widoku rekordu można określić, czy należy wyłączyć wszystkie obiekty interfejsu użytkownika do przechodzenia do następnego lub ostatniego rekordu. Jeśli użytkownik przenosi poza ostatniego rekordu, a następnie jest przenoszony do ostatniego rekordu (lub przed nim), widoku rekordu można śledzić położenie użytkownika w zestawie rekordów i poprawnie wyłączyć obiekty interfejsu użytkownika. `IsOnLastRecord` jest również zawodnych po wywołaniu funkcji implementacji **OnRecordLast**, która obsługuje `ID_RECORD_LAST` polecenia, lub `CRecordset::MoveLast`.  
   
-##  <a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  Zwraca wskaźnik do `CRecordset`-pochodnych obiekt skojarzony z widokiem rekordów.  
   
 ```  
@@ -179,7 +174,7 @@ virtual CRecordset* OnGetRecordset() = 0;
   
  Aby uzyskać dodatkowe informacje i przykłady, zobacz artykuł [widoków rekordów: Używanie widoku rekordu](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>CRecordView::OnMove  
+##  <a name="onmove"></a>  CRecordView::OnMove  
  Wywołanie tej funkcji Członkowskich, aby przenieść do innego rekordu w zestawie rekordów i wyświetlić jego pól w formantach widoku rekordu.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Jedna z następujących wartości Identyfikatora standardowego polecenia:  
   
-- `ID_RECORD_FIRST`Przenieś na pierwszy rekord w zestawie rekordów.  
+- `ID_RECORD_FIRST` Przenieś na pierwszy rekord w zestawie rekordów.  
   
-- `ID_RECORD_LAST`Przejdź do ostatniego rekordu w zestawie rekordów.  
+- `ID_RECORD_LAST` Przejdź do ostatniego rekordu w zestawie rekordów.  
   
-- `ID_RECORD_NEXT`Przenieś do następnego rekordu w zestawie rekordów.  
+- `ID_RECORD_NEXT` Przenieś do następnego rekordu w zestawie rekordów.  
   
-- `ID_RECORD_PREV`Przenieś do poprzedniego rekordu w zestawie rekordów.  
+- `ID_RECORD_PREV` Przenieś do poprzedniego rekordu w zestawie rekordów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli przeniesienie zakończyło się pomyślnie; w przeciwnym razie 0, jeśli żądanie przeniesienia zostało odrzucone.  

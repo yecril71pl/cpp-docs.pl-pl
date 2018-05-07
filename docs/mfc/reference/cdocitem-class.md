@@ -1,12 +1,9 @@
 ---
 title: Klasa CDocItem | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocItem
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a4987554965674612eaf8d9aa78c659f7f28b75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724e5017f51a3527e2ad81bcf707179053cc3e88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocitem-class"></a>Klasa CDocItem
 Klasa podstawowa dla elementów dokumentu, które są składnikami danych dokumentu.  
@@ -50,21 +45,21 @@ class CDocItem : public CCmdTarget
 |[CDocItem::IsBlank](#isblank)|Określa, czy element zawiera wszystkie informacje.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CDocItem`obiekty są używane do reprezentowania elementy OLE w dokumentach klienta i serwera.  
+ `CDocItem` obiekty są używane do reprezentowania elementy OLE w dokumentach klienta i serwera.  
   
  Aby uzyskać więcej informacji, zobacz artykuł [kontenery: Implementowanie kontenera](../../mfc/containers-implementing-a-container.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CDocItem`  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxole.h  
   
-##  <a name="getdocument"></a>CDocItem::GetDocument  
+##  <a name="getdocument"></a>  CDocItem::GetDocument  
  Wywołanie tej funkcji, aby pobrać dokument, który zawiera element.  
   
 ```  
@@ -77,7 +72,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja jest przesłonięte w klasach pochodnych [COleClientItem](../../mfc/reference/coleclientitem-class.md) i [COleServerItem](../../mfc/reference/coleserveritem-class.md), zwracany jest wskaźnik do albo [COleDocument](../../mfc/reference/coledocument-class.md), [ COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), lub [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) obiektu.  
   
-##  <a name="isblank"></a>CDocItem::IsBlank  
+##  <a name="isblank"></a>  CDocItem::IsBlank  
  Wywoływane przez platformę, gdy wystąpi domyślnej serializacji.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: Klasa CIPAddressCtrl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CIPAddressCtrl
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67c775f314cc70da1b662ca9b9c5f0a2e68eb2bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cipaddressctrl-class"></a>Klasa CIPAddressCtrl
 Udostępnia funkcje formant adresu IP systemu Windows.  
@@ -85,7 +80,7 @@ class CIPAddressCtrl : public CWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -94,14 +89,14 @@ class CIPAddressCtrl : public CWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcmn.h  
   
-##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
+##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl  
  Tworzy `CIPAddressCtrl` obiektu.  
   
 ```  
 CIPAddressCtrl();
 ```  
   
-##  <a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
+##  <a name="clearaddress"></a>  CIPAddressCtrl::ClearAddress  
  Czyści zawartość formant adresu IP.  
   
 ```  
@@ -111,7 +106,7 @@ void ClearAddress();
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), zgodnie z opisem w zestawie Windows SDK.  
   
-##  <a name="create"></a>CIPAddressCtrl::Create  
+##  <a name="create"></a>  CIPAddressCtrl::Create  
  Tworzy kontrolkę adresów IP i dołącza go do `CIPAddressCtrl` obiektu.  
   
 ```  
@@ -147,7 +142,7 @@ virtual BOOL Create(
   
  Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CreateEx](#createex) zamiast **Utwórz**.  
   
-##  <a name="createex"></a>CIPAddressCtrl::CreateEx  
+##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  Wywołanie tej funkcji można utworzyć formantu (okno podrzędne) i skojarz ją z `CIPAddressCtrl` obiektu.  
   
 ```  
@@ -181,7 +176,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Użyj `CreateEx` zamiast [Utwórz](#create) dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
   
-##  <a name="getaddress"></a>CIPAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress  
  Pobiera wartości adresów dla wszystkich pól cztery w formant adresu IP.  
   
 ```  
@@ -223,7 +218,7 @@ int GetAddress(DWORD& dwAddress);
 |2|8 do 15|  
 |3|od 0 do 7|  
   
-##  <a name="isblank"></a>CIPAddressCtrl::IsBlank  
+##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank  
  Określa, czy wszystkie pola w formancie adresów IP są puste.  
   
 ```  
@@ -236,7 +231,7 @@ BOOL IsBlank() const;
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), zgodnie z opisem w zestawie Windows SDK.  
   
-##  <a name="setaddress"></a>CIPAddressCtrl::SetAddress  
+##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
  Ustawia wartości adresów dla wszystkich pól cztery w formant adresu IP.  
   
 ```  
@@ -275,7 +270,7 @@ void SetAddress(DWORD dwAddress);
 |2|8 do 15|  
 |3|od 0 do 7|  
   
-##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
+##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus  
  Ustawia fokus klawiatury określonego pola w formant adresu IP.  
   
 ```  
@@ -289,7 +284,7 @@ void SetFieldFocus(WORD nField);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), zgodnie z opisem w zestawie Windows SDK.  
   
-##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
+##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
  Ustawia zakres w określonym polu w formancie adresu IP.  
   
 ```  

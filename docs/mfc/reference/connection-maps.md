@@ -1,13 +1,10 @@
 ---
-title: "Mapy połączeń | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Mapy połączeń | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018f2f6c1cd57dc500d4161b02ccb5880a9889fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connection-maps"></a>Mapy połączeń
 Formanty OLE są możliwe do udostępnienia interfejsy do innych aplikacji. Te interfejsy umożliwiają dostęp z kontenera tylko do tego formantu. Jeśli formant OLE chce uzyskać dostępu do zewnętrznych interfejsów innych obiektów OLE, należy ustanowić punktu połączenia. Punkt połączenia z tym zapewnia kontrolę wychodzący dostęp do mapy wysyłania zewnętrznych, takich jak mapy zdarzeń lub funkcji powiadomień.  
@@ -55,7 +50,7 @@ Formanty OLE są możliwe do udostępnienia interfejsy do innych aplikacji. Te i
 |[Afxconnectionadvise —](#afxconnectionadvise)|Ustanawia połączenie między źródłem i odbioru.|  
 |[Afxconnectionunadvise —](#afxconnectionunadvise)|Przerywa połączenie między źródłem i odbioru.|  
   
-##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART —  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART —  
  Użyj `BEGIN_CONNECTION_PART` makra, aby rozpocząć definicji punkty połączenia dodatkowych poza punkty połączenia powiadomień zdarzeń i właściwości.  
   
 ```   
@@ -75,7 +70,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="end_connection_part"></a>END_CONNECTION_PART —  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART —  
  Kończy się deklaracja punktu połączenia.  
   
 ```   
@@ -89,7 +84,7 @@ END_CONNECTION_PART(localClass)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="connection_iid"></a>CONNECTION_IID —  
+##  <a name="connection_iid"></a>  CONNECTION_IID —  
  Użyj między `BEGIN_CONNECTION_PART` i `END_CONNECTION_PART` makra, aby zdefiniować identyfikator interfejsu punktu połączenia obsługiwane przez formant OLE.  
   
 ```   
@@ -110,7 +105,7 @@ CONNECTION_IID(iid)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP —  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP —  
  Każdy `COleControl`-klasy pochodnej w programie zapewniają Mapa połączenia podaj punkty połączenia dodatkowe, które obsługuje formantu.  
   
 ```   
@@ -123,7 +118,7 @@ DECLARE_CONNECTION_MAP()
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP —  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP —  
  Każdy `COleControl`-klasy pochodnej w programie zapewniają mapy połączenia w celu określenia punktów połączenia, które będą obsługiwać formantu.  
   
 ```   
@@ -143,7 +138,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="end_connection_map"></a>END_CONNECTION_MAP —  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP —  
  Kończy definicję mapy połączenia.  
   
 ```   
@@ -153,7 +148,7 @@ END_CONNECTION_MAP()
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="connection_part"></a>CONNECTION_PART —  
+##  <a name="connection_part"></a>  CONNECTION_PART —  
  Mapuje punktu połączenia dla formantu OLE na identyfikator określonego interfejsu.  
   
 ```   
@@ -180,7 +175,7 @@ CONNECTION_PART(theClass, iid, localClass)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="afxconnectionadvise"></a>Afxconnectionadvise —  
+##  <a name="afxconnectionadvise"></a>  Afxconnectionadvise —  
  Wywołaj tę funkcję, aby nawiązać połączenie między źródłem, określony przez `pUnkSrc`i odbiorczy, określony przez `pUnkSink`.  
   
 ```   
@@ -217,7 +212,7 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxctl.h 
 
-##  <a name="afxconnectionunadvise"></a>Afxconnectionunadvise —  
+##  <a name="afxconnectionunadvise"></a>  Afxconnectionunadvise —  
  Wywołaj tę funkcję, aby rozłączyć połączenie między źródłem, określony przez `pUnkSrc`i odbiorczy, określony przez `pUnkSink`.  
   
 ```   

@@ -1,24 +1,19 @@
 ---
-title: "System typów (C + +/ CX) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: System typów (C + +/ CX) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0a1016836d44b8ee83b033bf2d542d4e9b1db413
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-system-ccx"></a>System typów (C + +/ CX)
 Za pomocą architektury środowiska wykonawczego systemu Windows, można użyć C + +/ CX, Visual Basic, Visual C# i JavaScript do pisania aplikacji i składników, które bezpośrednio uzyskać dostępu do interfejsu API systemu Windows i współpraca z innymi środowiska wykonawczego systemu Windows, aplikacje i składniki. Uniwersalnych aplikacji platformy systemu Windows, które zostały napisane w języku C++ skompiluj do kodu natywnego, która wykonuje bezpośrednio w Procesor. Uniwersalnych aplikacji platformy systemu Windows, które zostały napisane w języku C# lub Visual Basic kompilacji na język pośredni firmy Microsoft (MSIL), a następnie wykonaj w środowisku uruchomieniowym języka (wspólnego CLR). Wykonanie uniwersalnych aplikacji platformy systemu Windows, które zostały napisane w języku JavaScript w środowisku czasu wykonywania. Samych elementów systemu operacyjnego środowiska wykonawczego systemu Windows są napisane w języku C++ i Uruchom jako kodu natywnego. Wszystkie te składniki i aplikacje platformy uniwersalnej systemu Windows komunikują się bezpośrednio za pośrednictwem interfejsu binarne (ABI) środowiska wykonawczego systemu Windows.  
@@ -27,15 +22,15 @@ Za pomocą architektury środowiska wykonawczego systemu Windows, można użyć 
   
  Szczegółowe omówienie C + +/ CX projekcji języka i jak działa w tle, zobacz wpisy na blogu:  
   
-1.  [C + +/ CX część 0 \[ n \]: wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
+1.  [C + +/ CX część 0 \[n\]: wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
   
-2.  [C + +/ CX część 1 z \[ n \]: prostą klasę](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
+2.  [C + +/ CX część 1 z \[n\]: prostą klasę](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
   
-3.  [C + +/ CX część 2 \[ n \]: typy, które nosić Kapelusze](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
+3.  [C + +/ CX część 2 \[n\]: typy, które nosić Kapelusze](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
   
-4.  [C + +/ CX część 3 \[ n \]: konstruowanego](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
+4.  [C + +/ CX część 3 \[n\]: konstruowanego](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
   
-5.  [C + +/ CX część 4 \[ n \]: statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
+5.  [C + +/ CX część 4 \[n\]: statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
   
 ## <a name="windows-metadata-winmd-files"></a>Pliki metadanych (.winmd) dla systemu Windows  
  Podczas kompilowania aplikacji platformy uniwersalnej systemu Windows, który jest napisany w języku C++ kompilator generuje plik wykonywalny w kodzie natywnym maszyny, a także generuje oddzielny plik metadanych (.winmd) systemu Windows, który zawiera opisy typy publiczne środowiska wykonawczego systemu Windows, które obejmują klasy, struktury, wyliczenia, interfejsów, sparametryzowane interfejsów i delegatów. Format, który jest używany w zestawach .NET Framework jest podobny do formatu metadanych.  W składniku C++ plik winmd zawiera tylko metadane; kod wykonywalny znajduje się w oddzielnym pliku. Jest to w przypadku składników środowiska wykonawczego systemu Windows, które są dołączone do systemu Windows. Nazwa pliku WinMD muszą być zgodne i być prefiksem głównej przestrzeni nazw w kodzie źródłowym. (Dla języków .NET Framework, plik winmd zawiera zarówno kod i metadanych, podobnie jak zestaw .NET Framework).  

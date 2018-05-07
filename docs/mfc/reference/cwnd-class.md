@@ -2,11 +2,8 @@
 title: Klasa CWnd | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWnd
@@ -827,17 +824,15 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e920b9bed8cb46ad960270dc1addda5605cdb302
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 Udostępnia podstawowe funkcje wszystkie klasy okna w programie Microsoft Foundation Class Library.  
@@ -2332,7 +2327,7 @@ int DlgDirList(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- W tym przykładzie `drive` to litera dysku, `directory` jest prawidłową nazwą folderu, i *filename* jest prawidłowa nazwa pliku, który musi zawierać co najmniej jeden symbol wieloznaczny. Symbole wieloznaczne są znak zapytania (*), co oznacza zgodne dowolny znak, a znak gwiazdki (  **\*** ), co oznacza odpowiada dowolnej liczbie znaków.  
+ W tym przykładzie `drive` to litera dysku, `directory` jest prawidłową nazwą folderu, i *filename* jest prawidłowa nazwa pliku, który musi zawierać co najmniej jeden symbol wieloznaczny. Symbole wieloznaczne są znak zapytania (*), co oznacza zgodne dowolny znak, a znak gwiazdki ( **\***), co oznacza odpowiada dowolnej liczbie znaków.  
   
  Jeśli określisz ciągiem o długości 0 dla `lpPathSpec`, lub jeśli określono nazwę katalogu, ale nie ma żadnych specyfikacji pliku, ciągu zostanie zmieniony na "*.\*".  
   
@@ -2379,7 +2374,7 @@ int DlgDirListComboBox(
   
 - **DDL_ARCHIVE** archiwa.  
   
-- **DDL_POSTMSGS CB_DIR** flag. Jeśli **CB_DIR** flaga jest ustawiona, system Windows umieszcza komunikaty generowane przez `DlgDirListComboBox` w kolejce aplikacji; w przeciwnym razie są one wysyłane bezpośrednio do procedury okno dialogowe.  
+- **DDL_POSTMSGS CB_DIR** flagi. Jeśli **CB_DIR** flaga jest ustawiona, system Windows umieszcza komunikaty generowane przez `DlgDirListComboBox` w kolejce aplikacji; w przeciwnym razie są one wysyłane bezpośrednio do procedury okno dialogowe.  
   
 - **DDL_DRIVES** dyski. Jeśli **DDL_DRIVES** flaga jest ustawiona, **DDL_EXCLUSIVE** flagę automatycznie. W związku z tym, aby utworzyć listę katalogów, który zawiera dyski i pliki, należy wywołać `DlgDirListComboBox` dwa razy: raz z **DDL_DRIVES** Flaga zestawu, a drugi raz z flagami w pozostałej części listy.  
   
@@ -2395,7 +2390,7 @@ int DlgDirListComboBox(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- W tym przykładzie `drive` to litera dysku, `directory` jest prawidłową nazwą folderu, i *filename* jest prawidłowa nazwa pliku, który musi zawierać co najmniej jeden symbol wieloznaczny. Symbole wieloznaczne są znak zapytania (*), co oznacza zgodne dowolny znak, a znak gwiazdki (  **\*** ), co oznacza, że odpowiada dowolnej liczbie znaków.  
+ W tym przykładzie `drive` to litera dysku, `directory` jest prawidłową nazwą folderu, i *filename* jest prawidłowa nazwa pliku, który musi zawierać co najmniej jeden symbol wieloznaczny. Symbole wieloznaczne są znak zapytania (*), co oznacza zgodne dowolny znak, a znak gwiazdki ( **\***), co oznacza, że odpowiada dowolnej liczbie znaków.  
   
  Jeśli określisz ciąg o zerowej długości `lpPathSpec`, będzie używany bieżący katalog i `lpPathSpec` nie zostaną zmodyfikowane. Jeśli określono nazwę katalogu, ale nie ma żadnych specyfikacji pliku, ciągu zostanie zmieniony na "*".  
   
@@ -5107,10 +5102,10 @@ int MessageBox(
   
 |||  
 |-|-|  
-|![Zatrzymaj &#40; x &#41; ikona](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **mb_iconstop —**, i **MB_ICONERROR**|  
+|![Zatrzymaj &#40;x&#41; ikona](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **mb_iconstop —**, i **MB_ICONERROR**|  
 |![Pomoc &#40; &#41; ikona](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION —**|  
 |![Ważne &#40; &#33; &#41; ikona](../../mfc/reference/media/vc364f3.gif "vc364f3")|**Mb_iconexclamation —** i **MB_ICONWARNING**|  
-|![Informacje o &#40; i &#41; ikona](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** i **mb_iconinformation —**|  
+|![Informacje o &#40;i&#41; ikona](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** i **mb_iconinformation —**|  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
@@ -5139,7 +5134,7 @@ BOOL ModifyStyle(
  Różna od zera, jeśli styl została pomyślnie zmodyfikowana; w przeciwnym razie wartość 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Style, które mają zostać dodane lub usunięte można łączyć przy użyciu wartości bitowe lub (&#124;) — operator. Zobacz tematy [Style okna](http://msdn.microsoft.com/library/windows/desktop/ms632600) i [właściwości CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK dla informacji o style dostępnym oknie.  
+ Style, które mają zostać dodane lub usunięte można łączyć, używając wartości bitowe lub (&#124;) operatora. Zobacz tematy [Style okna](http://msdn.microsoft.com/library/windows/desktop/ms632600) i [właściwości CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK dla informacji o style dostępnym oknie.  
   
  Jeśli `nFlags` jest różna od zera, `ModifyStyle` wywołuje funkcję Windows API [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) i ponownie rysuje okna łącząc `nFlags` z następujących czterech flag wstępnie zdefiniowane:  
   
@@ -5183,7 +5178,7 @@ BOOL ModifyStyleEx(
  Różna od zera, jeśli styl została pomyślnie zmodyfikowana; w przeciwnym razie wartość 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Style, które mają zostać dodane lub usunięte można łączyć przy użyciu wartości bitowe lub (&#124;) — operator. Zobacz tematy [rozszerzone Style okna](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) tego podręcznika i [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie SDK systemu Windows, aby uzyskać informacje o dostępnych rozszerzone style  
+ Style, które mają zostać dodane lub usunięte można łączyć, używając wartości bitowe lub (&#124;) operatora. Zobacz tematy [rozszerzone Style okna](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) tego podręcznika i [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie SDK systemu Windows, aby uzyskać informacje o dostępnych rozszerzone style  
   
  Jeśli `nFlags` jest różna od zera, `ModifyStyleEx` wywołuje funkcję Windows API [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) i ponownie rysuje okna łącząc `nFlags` z następujących czterech flag wstępnie zdefiniowane:  
   
@@ -8874,7 +8869,7 @@ virtual INT_PTR OnToolHitTest(
   
 - `uId` = **HWndChild (UINT)** dojścia do okna podrzędnego  
   
-- `uFlags` &#124; = **TTF_IDISHWND** uchwyt narzędzia  
+- `uFlags` &#124;= **TTF_IDISHWND** uchwyt narzędzia  
   
 - `lpszText` = **LPSTR_TEXTCALLBACK** wskaźnika na ciąg, który ma być wyświetlany w określonym oknie  
   

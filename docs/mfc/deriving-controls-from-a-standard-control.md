@@ -1,13 +1,10 @@
 ---
-title: "Wyprowadzanie formantów z formantu standardowego | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wyprowadzanie formantów z formantu standardowego | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b93bc07fc5ab4680caaa276daaeca86189b8ce5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Wyprowadzanie formantów z formantu standardowego
 Jako ze wszystkimi [CWnd](../mfc/reference/cwnd-class.md)-klasy, można zmodyfikować zachowanie formantu wyprowadzanie nowe klasy z istniejącej klasy formantu.  
@@ -49,7 +44,7 @@ Jako ze wszystkimi [CWnd](../mfc/reference/cwnd-class.md)-klasy, można zmodyfik
   
 2.  Zastąpienie `OnInitDialog` funkcji członkowskiej WE klasy okien dialogowych do wywołania `SubclassDlgItem` funkcja członkowska, pochodnych formantu.  
   
- `SubclassDlgItem`"dynamicznie podklasy" formantu utworzone na podstawie szablonu okna dialogowego. W wypadku dynamicznie podklasy formantu zostanie przyłączanie się do systemu Windows, przetwarzania niektórych komunikatów w ramach własnej aplikacji, a następnie przekazuje pozostałych komunikatów systemu Windows. Aby uzyskać więcej informacji, zobacz [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) funkcji członkowskiej klasy `CWnd` w *odwołania MFC*. W poniższym przykładzie pokazano, jak mogą pisać zastępująca `OnInitDialog` do wywołania `SubclassDlgItem`:  
+ `SubclassDlgItem` "dynamicznie podklasy" formantu utworzone na podstawie szablonu okna dialogowego. W wypadku dynamicznie podklasy formantu zostanie przyłączanie się do systemu Windows, przetwarzania niektórych komunikatów w ramach własnej aplikacji, a następnie przekazuje pozostałych komunikatów systemu Windows. Aby uzyskać więcej informacji, zobacz [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) funkcji członkowskiej klasy `CWnd` w *odwołania MFC*. W poniższym przykładzie pokazano, jak mogą pisać zastępująca `OnInitDialog` do wywołania `SubclassDlgItem`:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]  
   

@@ -1,30 +1,25 @@
 ---
-title: "Ustawienia dla narzędzia formantu etykietki | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Ustawienia dla narzędzia formantu etykietki | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - tool tips [MFC], activating
 - CToolTipCtrl class [MFC], settings
 ms.assetid: ff8c5c46-2047-403a-bd98-ffec3d21ee3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 406e35b6ab694ca972d4cd6add0dcca7586e5005
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b61fb9450e6206c8f96102b5feeec6fbf3bead3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Ustawienia formantu etykietki narzędzia
 Można ustawić formantem etykietki narzędzia ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) być aktywne lub nieaktywne. Po ustawieniu go jako aktywne formantem etykietki narzędzia jest wyświetlany, gdy kursor znajduje się na to narzędzie. Po ustawieniu go jako nieaktywny formantem etykietki narzędzia nie ma, nawet jeśli kursor znajduje się na to narzędzie. Wywołanie [Aktywuj](../mfc/reference/ctooltipctrl-class.md#activate) aktywować lub dezaktywować formantem etykietki narzędzia.  

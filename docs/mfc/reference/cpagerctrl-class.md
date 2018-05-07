@@ -2,11 +2,8 @@
 title: Klasa CPagerCtrl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPagerCtrl
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79fa877023c7a01c4814f61d75a54cb0dd64b51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpagerctrl-class"></a>Klasa CPagerCtrl
 `CPagerCtrl` Klasy opakowuje formantu modułu stronicowania systemu Windows, które mogą być przewijane w widoku zawartego okna, który nie mieści się okna nadrzędnego.  
@@ -121,7 +116,7 @@ class CPagerCtrl : public CWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -130,7 +125,7 @@ class CPagerCtrl : public CWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcmn.h  
   
-##  <a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl  
+##  <a name="cpagerctrl"></a>  CPagerCtrl::CPagerCtrl  
  Konstruuje `CPagerCtrl` obiektu.  
   
 ```  
@@ -140,7 +135,7 @@ CPagerCtrl();
 ### <a name="remarks"></a>Uwagi  
  Użyj [CPagerCtrl::Create](#create) lub [CPagerCtrl::CreateEx](#createex) metody Utwórz kontrolkę pagera i dołączenie go do `CPagerCtrl` obiektu.  
   
-##  <a name="create"></a>CPagerCtrl::Create  
+##  <a name="create"></a>  CPagerCtrl::Create  
  Tworzy kontrolkę pagera przy użyciu określonego stylów i dołącza go do bieżącej `CPagerCtrl` obiektu.  
   
 ```  
@@ -155,13 +150,13 @@ virtual BOOL Create(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`dwStyle`|Bitowe połączenie (lub) [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859) ma zostać zastosowany do formantu.|  
-|[in]`rect`|Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu we współrzędnych klienta.|  
-|[in]`pParentWnd`|Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może być `NULL`.|  
-|[in]`nID`|Identyfikator formantu.|  
+|[in] `dwStyle`|Bitowe połączenie (lub) [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859) ma zostać zastosowany do formantu.|  
+|[in] `rect`|Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu we współrzędnych klienta.|  
+|[in] `pParentWnd`|Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może być `NULL`.|  
+|[in] `nID`|Identyfikator formantu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby utworzyć kontrolkę pagera, należy zadeklarować `CPagerCtrl` zmiennej, następnie wywołaj [CPagerCtrl::Create](#create) lub [CPagerCtrl::CreateEx](#createex) metody dla tej zmiennej.  
@@ -171,7 +166,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CPagerCtrl::CreateEx  
+##  <a name="createex"></a>  CPagerCtrl::CreateEx  
  Tworzy kontrolkę pagera z określonym rozszerzone style i dołącza go do bieżącej `CPagerCtrl` obiektu.  
   
 ```  
@@ -187,19 +182,19 @@ virtual BOOL CreateEx(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`dwExStyle`|Bitowe połączenie rozszerzone style, które mają być zastosowane do formantu. Aby uzyskać więcej informacji, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji.|  
-|[in]`dwStyle`|Bitowe połączenie (lub) [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859) ma zostać zastosowany do formantu.|  
-|[in]`rect`|Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu we współrzędnych klienta.|  
-|[in]`pParentWnd`|Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może być `NULL`.|  
-|[in]`nID`|Identyfikator formantu.|  
+|[in] `dwExStyle`|Bitowe połączenie rozszerzone style, które mają być zastosowane do formantu. Aby uzyskać więcej informacji, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji.|  
+|[in] `dwStyle`|Bitowe połączenie (lub) [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859) ma zostać zastosowany do formantu.|  
+|[in] `rect`|Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu we współrzędnych klienta.|  
+|[in] `pParentWnd`|Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może być `NULL`.|  
+|[in] `nID`|Identyfikator formantu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby utworzyć kontrolkę pagera, należy zadeklarować `CPagerCtrl` zmiennej, następnie wywołaj [CPagerCtrl::Create](#create) lub [CPagerCtrl::CreateEx](#createex) metody dla tej zmiennej.  
   
-##  <a name="forwardmouse"></a>CPagerCtrl::ForwardMouse  
+##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
  Włącza lub wyłącza przekazywanie [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) wiadomości do okna, które znajduje się w bieżącej kontrolki modułu stronicowania.  
   
 ```  
@@ -210,12 +205,12 @@ void ForwardMouse(BOOL bForward);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`bForward`|`true`do przesyłania dalej komunikatów myszy lub `false` nie przekazywanie komunikatów myszy.|  
+|[in] `bForward`|`true` do przesyłania dalej komunikatów myszy lub `false` nie przekazywanie komunikatów myszy.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
-##  <a name="getborder"></a>CPagerCtrl::GetBorder  
+##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
  Pobiera rozmiar obramowania bieżącego formantu modułu stronicowania.  
   
 ```  
@@ -233,7 +228,7 @@ int GetBorder() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
-##  <a name="getbkcolor"></a>CPagerCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CPagerCtrl::GetBkColor  
  Pobiera kolor tła bieżącego formantu modułu stronicowania.  
   
 ```  
@@ -251,7 +246,7 @@ COLORREF GetBkColor() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize  
+##  <a name="getbuttonsize"></a>  CPagerCtrl::GetButtonSize  
  Pobiera rozmiar przycisku bieżącego formantu modułu stronicowania.  
   
 ```  
@@ -266,7 +261,7 @@ int GetButtonSize() const;
   
  Jeśli kontrolkę pagera `PGS_HORZ` styl i rozmiar przycisku określa szerokość przycisków modułu stronicowania, a jeśli kontrolkę pagera `PGS_VERT` styl i rozmiar przycisku określa wysokość przycisków modułu stronicowania. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
-##  <a name="getbuttonstate"></a>CPagerCtrl::GetButtonState  
+##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
  Pobiera stan przycisku przewijania określonego w bieżącym kontroli modułu stronicowania.  
   
 ```  
@@ -277,7 +272,7 @@ DWORD GetButtonState(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Stan określonego przez naciśnięcie przycisku `iButton` parametru. Stan jest `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, lub `PGF_HOT`. Aby uzyskać więcej informacji, zobacz sekcję zwrócić wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
@@ -285,7 +280,7 @@ DWORD GetButtonState(int iButton) const;
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
-##  <a name="getdroptarget"></a>CPagerCtrl::GetDropTarget  
+##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
  Pobiera [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfejs dla bieżącego formantu modułu stronicowania.  
   
 ```  
@@ -296,11 +291,11 @@ IDropTarget* GetDropTarget() const;
  Wskaźnik do `IDropTarget` interfejs dla bieżącego formantu modułu stronicowania.  
   
 ### <a name="remarks"></a>Uwagi  
- `IDropTarget`jest jednym z interfejsów zaimplementować w celu obsługi operacji przeciągania i upuszczania w aplikacji.  
+ `IDropTarget` jest jednym z interfejsów zaimplementować w celu obsługi operacji przeciągania i upuszczania w aplikacji.  
   
  Ta metoda wysyła [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) komunikat, który jest opisany w zestawie SDK systemu Windows. Wywołujący ta metoda jest odpowiedzialna za wywoływania `Release` członkiem [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfejs, gdy interfejs nie jest już potrzebne.  
   
-##  <a name="getscrollpos"></a>CPagerCtrl::GetScrollPos  
+##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
  Pobiera położenie przewijania bieżącego formantu modułu stronicowania.  
   
 ```  
@@ -318,7 +313,7 @@ int GetScrollPos() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
-##  <a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed  
+##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed  
  Wskazuje, czy przycisk przewijania określonego bieżącego formantu pagera jest w stanie naciśniętego.  
   
 ```  
@@ -329,15 +324,15 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`w przypadku określonego przycisku w stan naciśnięcia; w przeciwnym razie `false`.  
+ `true` w przypadku określonego przycisku w stan naciśnięcia; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie SDK systemu Windows. Następnie sprawdza, czy jest w stanie, który jest zwracany `PGF_DEPRESSED`. Aby uzyskać więcej informacji, zobacz sekcję zwrócić wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
   
-##  <a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed  
+##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
  Wskazuje, czy przycisk przewijania określonego bieżącego formantu pagera jest w stanie wygaszone.  
   
 ```  
@@ -348,15 +343,15 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli określonego przycisku jest w stanie wygaszone; w przeciwnym razie `false`.  
+ `true` Jeśli określonego przycisku jest w stanie wygaszone; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie SDK systemu Windows. Następnie sprawdza, czy jest w stanie, który jest zwracany `PGF_GRAYED`. Aby uzyskać więcej informacji, zobacz sekcję zwrócić wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
   
-##  <a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot  
+##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
  Wskazuje, czy przycisk przewijania określonego bieżącego formantu pagera jest w stanie dynamicznej.  
   
 ```  
@@ -367,15 +362,15 @@ BOOL IsButtonHot(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli określonego przycisku jest w stanie gorących; w przeciwnym razie `false`.  
+ `true` Jeśli określonego przycisku jest w stanie gorących; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie SDK systemu Windows. Następnie sprawdza, czy jest w stanie, który jest zwracany `PGF_HOT`. Aby uzyskać więcej informacji, zobacz sekcję zwrócić wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
   
-##  <a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonInvisible  
+##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
  Wskazuje, czy przycisk przewijania określonego bieżącego formantu pagera jest w stanie niewidoczne.  
   
 ```  
@@ -386,10 +381,10 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli określonego przycisku jest w stanie niewidoczne; w przeciwnym razie `false`.  
+ `true` Jeśli określonego przycisku jest w stanie niewidoczne; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Windows sprawia, że przycisku przewijania w określonym kierunku niewidoczne podczas zawartego okna jest przewijane w jego zakresie najdalszych, ponieważ kliknięcie przycisku Dalej nie można przełączyć więcej zawartego okna w widoku.  
@@ -401,7 +396,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
-##  <a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal  
+##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal  
  Wskazuje, czy przycisk przewijania określonego bieżącego formantu pagera jest w normalnym stanie.  
   
 ```  
@@ -412,15 +407,15 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`w przypadku określonego przycisku w normalnym stanie; w przeciwnym razie `false`.  
+ `true` w przypadku określonego przycisku w normalnym stanie; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie SDK systemu Windows. Następnie sprawdza, czy jest w stanie, który jest zwracany `PGF_NORMAL`. Aby uzyskać więcej informacji, zobacz sekcję zwrócić wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
   
-##  <a name="recalcsize"></a>CPagerCtrl::RecalcSize  
+##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
  Powoduje, że bieżący formant pagera ponownego obliczenia rozmiaru okna zawartych w niej.  
   
 ```  
@@ -440,7 +435,7 @@ void RecalcSize();
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
-##  <a name="setbkcolor"></a>CPagerCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CPagerCtrl::SetBkColor  
  Ustawia kolor tła bieżącego formantu modułu stronicowania.  
   
 ```  
@@ -451,7 +446,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartości, która zawiera na nowy kolor tła formantu modułu stronicowania.|  
+|[in] `clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartości, która zawiera na nowy kolor tła formantu modułu stronicowania.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartości, która zawiera poprzednie kolor tła formantu modułu stronicowania.  
@@ -464,7 +459,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="setborder"></a>CPagerCtrl::SetBorder  
+##  <a name="setborder"></a>  CPagerCtrl::SetBorder  
  Określa rozmiar obramowania bieżącego formantu modułu stronicowania.  
   
 ```  
@@ -475,7 +470,7 @@ int SetBorder(int iBorder);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`iBorder`|Nowy rozmiar obramowania (w pikselach). Jeśli `iBorder` parametru jest ujemna, rozmiar obramowania jest ustawione na zero.|  
+|[in] `iBorder`|Nowy rozmiar obramowania (w pikselach). Jeśli `iBorder` parametru jest ujemna, rozmiar obramowania jest ustawione na zero.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Poprzedni rozmiar obramowania (w pikselach).  
@@ -488,7 +483,7 @@ int SetBorder(int iBorder);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize  
+##  <a name="setbuttonsize"></a>  CPagerCtrl::SetButtonSize  
  Ustawia rozmiar przycisku bieżącego formantu modułu stronicowania.  
   
 ```  
@@ -499,7 +494,7 @@ int SetButtonSize(int iButtonSize);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`iButtonSize`|Nowy rozmiar przycisku (w pikselach).|  
+|[in] `iButtonSize`|Nowy rozmiar przycisku (w pikselach).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar przycisku poprzedniego (w pikselach).  
@@ -514,7 +509,7 @@ int SetButtonSize(int iButtonSize);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setchild"></a>CPagerCtrl::SetChild  
+##  <a name="setchild"></a>  CPagerCtrl::SetChild  
  Ustawia zawartego okna dla bieżącego formantu modułu stronicowania.  
   
 ```  
@@ -525,7 +520,7 @@ void SetChild(HWND hwndChild);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`hwndChild`|Dojście do okna, które mają być zawarte.|  
+|[in] `hwndChild`|Dojście do okna, które mają być zawarte.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) komunikat, który jest opisany w zestawie SDK systemu Windows.  
@@ -537,7 +532,7 @@ void SetChild(HWND hwndChild);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setscrollpos"></a>CPagerCtrl::SetScrollPos  
+##  <a name="setscrollpos"></a>  CPagerCtrl::SetScrollPos  
  Ustawia położenie przewijania bieżącego formantu modułu stronicowania.  
   
 ```  
@@ -548,7 +543,7 @@ void SetScrollPos(int iPos);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`iPos`|Nowa pozycja przewijania (w pikselach).|  
+|[in] `iPos`|Nowa pozycja przewijania (w pikselach).|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) komunikat, który jest opisany w zestawie SDK systemu Windows.  

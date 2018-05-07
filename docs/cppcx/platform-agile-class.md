@@ -1,11 +1,8 @@
 ---
 title: Klasa platform::Agile | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformagile-class"></a>Klasa platform::Agile
 Reprezentuje obiekt, który ma MashalingBehavior = Standard jako obiekt agile, znacznie ogranicza prawdopodobieństwo wątkowość wyjątków w czasie wykonywania. `Agile<T>` Umożliwia-agile obiektu połączeń telefonicznych, lub można wywołać z tym samym lub innym wątku. Aby uzyskać więcej informacji, zobacz [wątków i przekazywanie](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -116,7 +111,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>Uwagi  
  Pierwszą wersję tego konstruktora jest konstruktora domyślnego. Druga wersja inicjuje nową klasę wystąpienia Agile z obiekt określony przez `object` parametru. Trzeci wersja jest Konstruktor kopiujący. Wersja czwarty jest konstruktor przenoszenia. Ten konstruktor nie zgłaszają wyjątki.  
 
-## <a name="dtor">Elastyczne:: ~ Agile — destruktor</a>
+## <a name="dtor"></a>  Elastyczne:: ~ Agile — destruktor
 Niszczy bieżące wystąpienie klasy elastyczne.  
   
 ## <a name="syntax"></a>Składnia  

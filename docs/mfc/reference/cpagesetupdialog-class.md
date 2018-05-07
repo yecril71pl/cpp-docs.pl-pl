@@ -2,11 +2,8 @@
 title: Klasa CPageSetupDialog | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPageSetupDialog
@@ -39,19 +36,17 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca193c59c5d9c914f5bf8827601f389c546ea85
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="cpagesetupdialog-class"></a>CPageSetupDialog Class
+# <a name="cpagesetupdialog-class"></a>Klasa CPageSetupDialog
 Hermetyzuje usług świadczonych przez okno dialogowe Ustawienia strony OLE wspólne systemu Windows z obsługą dodatkowych ustawień i modyfikowania marginesów.  
   
 ## <a name="syntax"></a>Składnia  
@@ -309,7 +304,7 @@ virtual UINT OnDrawPage(
  Wskaźnik do kontekstu urządzenia drukarki.  
   
  `nMessage`  
- Określa komunikat, informujący o obszarze strony obecnie rysowane. Może to być jedna z następujących czynności:  
+ Określa komunikat, informujący o obszarze strony obecnie rysowane. Może to być jeden z następujących elementów:  
   
 - **WM_PSD_FULLPAGERECT** obszaru całej strony.  
   

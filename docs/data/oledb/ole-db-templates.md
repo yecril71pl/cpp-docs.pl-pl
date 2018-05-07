@@ -1,12 +1,9 @@
 ---
 title: Szablony OLE DB | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 037cb338db89e03b4e9457c5a0abc72c33c0ba57
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3133341b3dffa27cb5a6cec60ab58254fbe12dea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-templates"></a>Szablony OLE DB
 Szablony OLE DB ułatwić dostęp do danych OLE DB. Visual C++ udostępnia szablonu klasy, które implementuje wiele często używane interfejsy OLE DB. Można użyć szablonów konsumentów Visual C++ do pisania aplikacji klienta (użytkownik) OLE DB i szablony dostawcy do pisania aplikacji serwera (dostawcy).  

@@ -2,12 +2,9 @@
 title: Za pomocą języka Visual C++ szablonów Dodaj nowy element | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Używanie szablonów Dodaj nowy element programu Visual C++
 Możesz łatwo dodać elementy, które są wspólne dla projektów Visual C++ przy użyciu **Dodaj nowy element** polecenia. Jeśli używasz **Dodaj nowy element** polecenia `Add New Item` zostanie wyświetlone okno dialogowe z listy szablonów elementów, które dodają odpowiednie pliki do projektu.  
@@ -56,7 +51,7 @@ Możesz łatwo dodać elementy, które są wspólne dla projektów Visual C++ pr
 |Raport (RDLC)|Tworzy plik raportu.|  
 |Plik zasobów (.rc)|Tworzy plik zasobów Win32.|  
 |Plik szablonu zasobów (.rct —)|Tworzy plik szablonu zasobów.|  
-|Ribbon (.mfcribbon-ms)|Tworzy plik wstążki.|  
+|Wstążka (.mfcribbon ms)|Tworzy plik wstążki.|  
 |Plik odpowiedzi serwera (braku)|Tworzy plik odpowiedzi serwera, który jest używany przez serwer ATL.|  
 |Plik skryptu SQL (SQL)|Tworzy plik skryptu SQL. **Uwaga:** ten szablon nie jest funkcją Professional Edition.|  
 |Arkusz stylów (CSS)|Dodaje kaskadowy arkusz stylów używany do definicji wzbogaconych styli HTML.|  

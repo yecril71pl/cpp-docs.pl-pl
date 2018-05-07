@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCColorPopupMenu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorPopupMenu
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f91c8a6929ada133b3c2ab9f6fc26e9477a88d6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66bdd0cdf9e9c13ceac6eb01716ae8c859462524
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Klasa CMFCColorPopupMenu
 Reprezentuje menu podręczne, które użytkownicy umożliwia wybór kolorów w dokumentu lub aplikacji.  
@@ -80,7 +75,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -95,7 +90,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcolorpopupmenu.h  
   
-##  <a name="cmfccolorpopupmenu"></a>CMFCColorPopupMenu::CMFCColorPopupMenu  
+##  <a name="cmfccolorpopupmenu"></a>  CMFCColorPopupMenu::CMFCColorPopupMenu  
  Konstruuje `CMFCColorPopupMenu` obiektu.  
   
 ```  
@@ -137,50 +132,50 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`colors`  
+ [in] `colors`  
  Tablica kolorów, które Wyświetla platformę w menu podręcznym.  
   
- [in]`color`  
+ [in] `color`  
  Domyślnie wybrany kolor.  
   
- [in]`lpszAutoColor`  
+ [in] `lpszAutoColor`  
  Etykieta tekstowa elementu *automatyczne* przycisk koloru (ustawienie domyślne), lub `NULL`.  
   
  Standardowa etykieta przycisku automatycznego **automatyczne**.  
   
- [in]`lpszOtherColor`  
+ [in] `lpszOtherColor`  
  Etykieta tekstowa elementu *innych* przycisku, który wyświetla więcej kolorów, lub `NULL`.  
   
  Standardowe Etykieta przycisku innych **więcej kolorów...** .  
   
- [in]`lpszDocColors`  
+ [in] `lpszDocColors`  
  Etykieta tekstowa przycisk kolory dokumentu. Palety kolorów dokumentu zawiera listę wszystkich kolorów, które obecnie używane.  
   
- [in]`lstDocColors`  
+ [in] `lstDocColors`  
  Lista kolorów, które są obecnie używane.  
   
- [in]`nColumns`  
+ [in] `nColumns`  
  Liczba kolumn, które ma tablicę kolorów.  
   
- [in]`nHorzDockRows`  
+ [in] `nHorzDockRows`  
  Liczba wierszy, które pasek koloru ma, gdy jest zadokowany poziomo.  
   
- [in]`nVertDockColumns`  
+ [in] `nVertDockColumns`  
  Liczba kolumn, które pasek koloru ma, gdy jest zadokowany w pionie.  
   
- [in]`colorAutomatic`  
+ [in] `colorAutomatic`  
  Domyślny kolor platformę stosuje się po kliknięciu przycisku automatycznego.  
   
- [in]`uiCommandID`  
+ [in] `uiCommandID`  
  Identyfikator polecenia sterowania pasek koloru.  
   
- [in]`bStdColorDlg`  
+ [in] `bStdColorDlg`  
  Wartość logiczna wskazująca, czy wyświetlać okno dialogowe kolorów standardowych systemowych lub [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) okno dialogowe.  
   
- [in]`pParentBtn`  
+ [in] `pParentBtn`  
  Wskaźnik do nadrzędnego przycisku.  
   
- [in]`nID`  
+ [in] `nID`  
  Identyfikator polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -191,7 +186,7 @@ CMFCColorPopupMenu(
   
  [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]  
   
-##  <a name="createtearoffbar"></a>CMFCColorPopupMenu::CreateTearOffBar  
+##  <a name="createtearoffbar"></a>  CMFCColorPopupMenu::CreateTearOffBar  
  Tworzy dokującego oderwania pasek koloru.  
   
 ```  
@@ -206,9 +201,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in]`pWndMain`|Wskaźnik do okna nadrzędnego z paskiem oderwania.|  
-|[in]`uiID`|Identyfikator polecenia paskiem oderwania.|  
-|[in]`lpszName`|Tekst okna paskiem oderwania.|  
+|[in] `pWndMain`|Wskaźnik do okna nadrzędnego z paskiem oderwania.|  
+|[in] `uiID`|Identyfikator polecenia paskiem oderwania.|  
+|[in] `lpszName`|Tekst okna paskiem oderwania.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego obiektu formantu oderwania w pasku.  
@@ -216,7 +211,7 @@ virtual CPane* CreateTearOffBar(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda tworzy [klasy CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) obiektu i rzutuje do [klasy CPane](../../mfc/reference/cpane-class.md) wskaźnika. Tę wartość można rzutować do [klasy CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) wskaźnika za pomocą jednego z makra rzutowanie opisanego w [typu rzutowania dla obiektów klas MFC](../../mfc/reference/type-casting-of-mfc-class-objects.md).  
   
-##  <a name="getmenubar"></a>CMFCColorPopupMenu::GetMenuBar  
+##  <a name="getmenubar"></a>  CMFCColorPopupMenu::GetMenuBar  
  Zwraca [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) który jest osadzony w menu podręcznym.  
   
 ```  
@@ -229,7 +224,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 ### <a name="remarks"></a>Uwagi  
  Menu podręczne kolorów ma osadzonych [klasy CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) obiektu. Należy przesłonić tę metodę w klasie pochodnej, jeśli aplikacja korzysta z innego typu osadzonego.  
   
-##  <a name="setproplist"></a>CMFCColorPopupMenu::SetPropList  
+##  <a name="setproplist"></a>  CMFCColorPopupMenu::SetPropList  
  Ustawia właściwości siatki kontroli obiektu osadzonego `CMFCColorBar` obiektu.  
   
 ```  
@@ -237,7 +232,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWndList`  
+ [in] `pWndList`  
  Wskaźnik do obiektu formantu siatki właściwości.  
   
 ## <a name="see-also"></a>Zobacz też  

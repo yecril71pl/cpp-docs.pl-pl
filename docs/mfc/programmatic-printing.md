@@ -1,13 +1,10 @@
 ---
 title: Drukowanie programowe | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927a5d9b4bea41157c8cfac6f3dbfe42fc323bb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a439080cec7f3ae96014e9df6ddc65782686bf0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programmatic-printing"></a>Drukowanie programowe
 OLE podane środki do unikatowego identyfikowania trwałe dokumentów (**GetClassFile**) i załadować je do ich skojarzonego kodu (`CoCreateInstance`, **QueryInterface(IID_IPersistFile)**, **QueryInterface(IID_IPersistStorage)**, **IPersistFile::Load**, i **IPersistStorage::Load**). Aby umożliwić drukowanie dokumentów, zawieranie dokumentów aktywnych (przy użyciu istniejącego projektu OLE nie zostały wydane z OLE 2.0 pierwotnie) wprowadzono base standard interfejsu drukowania, `IPrint`, ogólnie dostępna za pośrednictwem wszystkich obiektów, które można załadować Stan trwały typu dokumentu. Każdy widok aktywnego dokumentu może opcjonalnie obsługiwać **iprint —** interfejsu zapewniają następujące możliwości.  
@@ -61,7 +56,7 @@ interface IPrint : IUnknown
   
  HKEY_CLASSES_ROOT\CLSID\\{...} \Printable  
   
- `IPrint`Zazwyczaj jest zaimplementowany dla tego samego obiektu, który obsługuje albo `IPersistFile` lub `IPersistStorage`. Obiekty wywołujące należy zwrócić uwagę możliwość programowane drukowanie trwały stan niektóre klasy przez wyszukiwanie w rejestrze dla klucza "Printable". Obecnie "Drukowalnych" wskazuje obsługę co najmniej `IPrint`; inne interfejsy może być zdefiniowana w przyszłości, który będzie wówczas dostępna za pośrednictwem `QueryInterface` gdzie **iprint —** po prostu reprezentuje podstawowym poziomie pomocy technicznej.  
+ `IPrint` Zazwyczaj jest zaimplementowany dla tego samego obiektu, który obsługuje albo `IPersistFile` lub `IPersistStorage`. Obiekty wywołujące należy zwrócić uwagę możliwość programowane drukowanie trwały stan niektóre klasy przez wyszukiwanie w rejestrze dla klucza "Printable". Obecnie "Drukowalnych" wskazuje obsługę co najmniej `IPrint`; inne interfejsy może być zdefiniowana w przyszłości, który będzie wówczas dostępna za pośrednictwem `QueryInterface` gdzie **iprint —** po prostu reprezentuje podstawowym poziomie pomocy technicznej.  
   
  Podczas drukowania procedury można, klienta lub kontenera, który zainicjował drukowanie do kontrolowania, czy powinno być kontynuowane drukowania. Na przykład kontener może obsługiwać "Zatrzymaj drukowanie" polecenie, które należy jak najszybciej zakończyć zadania drukowania. Obsługa tej możliwości, klient drukowalnych obiektu można zaimplementować obiekt sink małych powiadomień przy użyciu interfejsu `IContinueCallback`:  
   

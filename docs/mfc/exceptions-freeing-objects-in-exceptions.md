@@ -1,13 +1,10 @@
 ---
-title: "Wyjątki: Zwalnianie obiektów w wyjątkach | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wyjątki: Zwalnianie obiektów w wyjątkach | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a422347e319fabbd91f20e0ebf7897865f1ca4c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21a63a55103cbefda2ba501c5609b772b2203166
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Wyjątki: zwalnianie obiektów w wyjątkach
 W tym artykule opisano konieczność i metody zwalnianie obiektów w przypadku wystąpienia wyjątku. Tematy obejmują:  
@@ -53,14 +48,14 @@ W tym artykule opisano konieczność i metody zwalnianie obiektów w przypadku w
   
  Jak podano powyżej, `myPerson` nie zostaną usunięte, jeśli wyjątek jest zgłaszany przez `SomeFunc`. Wykonanie przechodzi bezpośrednio do następnego obsługi Wyjątek zewnętrzny, pomijanie zakończenia normalnej funkcji i kod, który usuwa obiekt. Wskaźnik do obiektu wykracza poza zakres, gdy wyjątek pozostawia funkcji i pamięci zajmowanego przez obiekt nigdy nie będzie można odzyskać, tak długo, jak działa program. To jest przeciek pamięci; można wykryć za pomocą narzędzia Diagnostyka pamięci.  
   
-##  <a name="_core_handling_the_exception_locally"></a>Obsługa wyjątków w lokalnie  
+##  <a name="_core_handling_the_exception_locally"></a> Obsługa wyjątków w lokalnie  
  **Bloku try/catch** modelu zapewnia obrony metodę programowania unikanie przecieki pamięci i zapewnienie, że obiekty zostały zniszczone w wystąpieniu wyjątku. Przykład pokazany w tym artykule można na przykład ulegną w następujący sposób:  
   
  [!code-cpp[NVC_MFCExceptions#15](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]  
   
  W tym przykładzie nowe Ustawia program obsługi wyjątku catch wyjątku i jego obsługa lokalnie. Następnie zazwyczaj kończy działanie funkcji i niszczy obiektu. Ważnym aspektem w tym przykładzie jest, że kontekstu do catch wyjątku jest nawiązywane z **bloku try/catch** bloków. Bez ramki lokalnego wyjątek funkcja nigdy nie wiedział, czy wyjątek ma zostać zgłoszony i byłyby nie można zakończyć normalnie i zniszcz obiektu.  
   
-##  <a name="_core_throwing_exceptions_after_destroying_objects"></a>Wyrzucanie wyjątków po niszczenie obiektów  
+##  <a name="_core_throwing_exceptions_after_destroying_objects"></a> Wyrzucanie wyjątków po niszczenie obiektów  
  Innym sposobem obsługi wyjątków jest przekazać je dalej zewnętrznego kontekstu obsługi wyjątków. W Twojej **catch** bloku, można wykonać niektóre Oczyszczanie lokalnie przydzielone obiekty i następnie zgłosić wyjątek potrzeby dalszego przetwarzania.  
   
  Funkcja przerzucane może lub nie może być konieczne cofnięcie przydziału stosu obiektów. Jeśli funkcja zawsze zwalnia obiektu heap przed zwróceniem w przypadku normalnych, następnie funkcja powinny również deallocate obiektu heap przed zgłoszeniem wyjątku. Z drugiej strony Jeśli funkcja nie zwykle cofnąć obiekt przed zwróceniem w przypadku normalnych, następnie należy zdecydować, na podstawie przypadku — czy ich alokację obiektu heap.  

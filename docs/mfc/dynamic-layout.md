@@ -1,27 +1,22 @@
 ---
-title: "Układ dynamiczny | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Układ dynamiczny | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e309d8ef023346c0e37babeabe23f7e6e1762939
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-layout"></a>Układ dynamiczny
 Z MFC w programie Visual Studio 2015 można utworzyć okna dialogowe, które użytkownik może zmienić rozmiar i kontrolować sposób, który dostosowuje układ na zmianę rozmiaru. Na przykład można dołączyć przycisków w dolnej części okna dialogowego do dolnej krawędzi, więc zawsze pozostają na dole. Można również skonfigurować niektóre formanty, takie jak pól list, editboxes i pola tekstowego rozszerzenia, ponieważ użytkownik rozwija okna dialogowego.  
@@ -46,7 +41,7 @@ Z MFC w programie Visual Studio 2015 można utworzyć okna dialogowe, które uż
   
      ![Otwórz okno dialogowe w edytorze zasobów. ] (../mfc/media/mfcdynamiclayout3.png "mfcdynamiclayout3")  
   
-2.  Wybierz kontrolkę i w oknie właściwości ustaw właściwości układ dynamiczny. **Układ dynamiczny** sekcji w oknie właściwości zawiera właściwości **przenoszenie typu**, **typ ustalania rozmiaru**i, w zależności od wartości wybrane do tych właściwości określone właściwości, które określają, ile formanty przenieść lub zmienić rozmiar. **Typ przenoszenia** Określa, jak formant zostanie przesunięty wraz ze zmianą rozmiaru okna dialogowego; **Typ ustalania rozmiaru** określa sposób zmieni się rozmiar kontrolki wraz ze zmianą rozmiaru okna dialogowego. **Typ przenoszenia** i **typ ustalania rozmiaru** może być **poziome**, **pionowy**, **zarówno**, lub **Brak** w zależności od wymiarów, które chcesz zmienić dynamicznie. Poziomy jest wymiarem X; Pionowe jest kierunku Y.  
+2.  Wybierz kontrolkę i w oknie właściwości ustaw właściwości układ dynamiczny. **Układ dynamiczny** sekcji w oknie właściwości zawiera właściwości **przenoszenie typu**, **typ ustalania rozmiaru**i, w zależności od wartości wybrane do tych właściwości określone właściwości, które określają, ile formanty przenieść lub zmienić rozmiar. **Typ przenoszenia** Określa, jak formant zostanie przesunięty wraz ze zmianą rozmiaru okna dialogowego; **Typ ustalania rozmiaru** określa sposób zmieni się rozmiar kontrolki wraz ze zmianą rozmiaru okna dialogowego. **Typ przenoszenia** i **typ ustalania rozmiaru** może być **poziome**, **pionowy**, **zarówno**, lub **Brak**w zależności od wymiarów, które chcesz zmienić dynamicznie. Poziomy jest wymiarem X; Pionowe jest kierunku Y.  
   
 3.  Jeśli chcesz kontrolować, takie jak przycisk o stałym rozmiarze i pozostanie w miejscu, w prawym dolnym rogu, co jest typowe dla **OK** lub **anulować** przycisków, ustaw **typ ustalania rozmiaru** do  **Brak**i ustaw **przenoszenie typu** do **zarówno**. Dla **przenoszenie X** i **przenoszenie Y** wartości w obszarze **przenoszenie typu**, ustaw 100% powoduje formant pozostanie stała odległość od dołu prawym narożniku.  
   

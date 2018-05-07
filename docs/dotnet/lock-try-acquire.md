@@ -2,11 +2,8 @@
 title: Lock::try_acquire | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - try_acquire
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::try_acquire
 ms.assetid: ef0649a9-e611-4495-84bd-2784533221d9
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da2372f513d9799cfddbebeefa7e9160d1a6b135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 Uzyskuje blokadę dla obiektu, określoną ilość czasu oczekiwania i zwracanie `bool` umożliwiające komunikowanie powodzenia nabycia zamiast generowania wyjątku.  
@@ -51,7 +46,7 @@ bool try_acquire(
  Wartość limitu czasu (w milisekundach) lub jako <xref:System.TimeSpan>.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli uzyskano blokady, `false` inaczej.  
+ `true` Jeśli uzyskano blokady, `false` inaczej.  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli już uzyskano blokady, ta funkcja nie działa.  

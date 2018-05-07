@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCToolTipCtrl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipCtrl
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae37349599977b236f111530f170da746b44b425
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 09a701498b47957f64558fe42408ff64351c238b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctooltipctrl-class"></a>Klasa CMFCToolTipCtrl
 Implementacja tooltip rozszerzonej na podstawie [CToolTipCtrl — klasa](../../mfc/reference/ctooltipctrl-class.md). Etykietka narzędzia na podstawie `CMFCToolTipCtrl` klasy można wyświetlać ikony, etykiety i opis. Jego wygląd można dostosować za pomocą wypełnienia gradientowego, niestandardowego tekstu i kolory obramowania, pogrubioną, zaokrąglonymi narożnikami lub styl dymek.  
@@ -154,7 +149,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -165,7 +160,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxtooltipctrl.h  
   
-##  <a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
+##  <a name="cmfctooltipctrl"></a>  CMFCToolTipCtrl::CMFCToolTipCtrl  
 
   
 ```  
@@ -173,11 +168,11 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pParams`  
+ [in] `pParams`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="geticonsize"></a>CMFCToolTipCtrl::GetIconSize  
+##  <a name="geticonsize"></a>  CMFCToolTipCtrl::GetIconSize  
  Zwraca rozmiar ikony w etykietce narzędzia.  
   
 ```  
@@ -187,7 +182,7 @@ virtual CSize GetIconSize();
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar ikony, w pikselach.  
   
-##  <a name="getparams"></a>CMFCToolTipCtrl::GetParams  
+##  <a name="getparams"></a>  CMFCToolTipCtrl::GetParams  
  Zwraca ustawienia wyświetlana etykietka narzędzia.  
   
 ```  
@@ -197,7 +192,7 @@ const CMFCToolTipInfo& GetParams() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Bieżące ustawienia wyświetlana etykietka narzędzia, które są przechowywane w [klasy CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) obiektu.  
   
-##  <a name="ondrawborder"></a>CMFCToolTipCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCToolTipCtrl::OnDrawBorder  
  Rysuje obramowanie etykietka narzędzia.  
   
 ```  
@@ -220,7 +215,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę w klasie pochodnej, aby dostosować wygląd obramowania etykietka narzędzia.  
   
-##  <a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription  
 
   
 ```  
@@ -231,15 +226,15 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
- [in]`rect`  
- [in]`bCalcOnly`  
+ [in] `pDC`  
+ [in] `rect`  
+ [in] `bCalcOnly`  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ondrawicon"></a>CMFCToolTipCtrl::OnDrawIcon  
+##  <a name="ondrawicon"></a>  CMFCToolTipCtrl::OnDrawIcon  
  Wyświetla ikonę w etykietce narzędzia.  
   
 ```  
@@ -249,19 +244,19 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
- [in]`rectImage`  
+ [in] `rectImage`  
  Współrzędne ikony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli ikona został wystawiony. W przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli ikona został wystawiony. W przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę w klasie pochodnej do wyświetlania ikon niestandardowych. Konieczne jest również przesłonięcie [CMFCToolTipCtrl::GetIconSize](#geticonsize) umożliwiające etykietki narzędzia w celu obliczenia poprawnie układu tekstu i opis.  
   
-##  <a name="ondrawlabel"></a>CMFCToolTipCtrl::OnDrawLabel  
+##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel  
  Pobiera etykietę etykietka narzędzia lub oblicza rozmiar etykiety.  
   
 ```  
@@ -287,7 +282,7 @@ virtual CSize OnDrawLabel(
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, jeśli chcesz dostosować wygląd etykietka narzędzia etykiety.  
   
-##  <a name="ondrawseparator"></a>CMFCToolTipCtrl::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>  CMFCToolTipCtrl::OnDrawSeparator  
  Rysuje separatora między etykiety i opis w etykietce narzędzia.  
   
 ```  
@@ -299,16 +294,16 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
- [in]`x1`  
+ [in] `x1`  
  Poziomy Współrzędna z lewej strony separatora.  
   
- [in]`x2`  
+ [in] `x2`  
  Poziomy Współrzędna prawej stronie separatora.  
   
- [in]`Y`  
+ [in] `Y`  
  Pionowy Współrzędna separatora.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -316,7 +311,7 @@ virtual void OnDrawSeparator(
   
  Zastępuje tę metodę w klasie pochodnej, aby dostosować wygląd separatora.  
   
-##  <a name="onfillbackground"></a>CMFCToolTipCtrl::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCToolTipCtrl::OnFillBackground  
  Wypełnia tło etykietek narzędzi.  
   
 ```  
@@ -345,7 +340,7 @@ virtual void OnFillBackground(
   
  Należy przesłonić tę metodę w klasie pochodnej, jeśli chcesz dostosować wygląd elementu tooltip.  
   
-##  <a name="setdescription"></a>CMFCToolTipCtrl::SetDescription  
+##  <a name="setdescription"></a>  CMFCToolTipCtrl::SetDescription  
  Określa opis, który będzie wyświetlany przez etykietkę narzędzia.  
   
 ```  
@@ -359,7 +354,7 @@ virtual void SetDescription(const CString strDesrciption);
 ### <a name="remarks"></a>Uwagi  
  Tekst opisu description jest wyświetlany na elemencie tooltip w separatorze.  
   
-##  <a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
+##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth  
 
   
 ```  
@@ -369,12 +364,12 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nWidthRegular`  
- [in]`nWidthLargeImage`  
+ [in] `nWidthRegular`  
+ [in] `nWidthLargeImage`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
+##  <a name="sethotribbonbutton"></a>  CMFCToolTipCtrl::SetHotRibbonButton  
 
   
 ```  
@@ -382,11 +377,11 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pRibbonButton`  
+ [in] `pRibbonButton`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
+##  <a name="setlocation"></a>  CMFCToolTipCtrl::SetLocation  
 
   
 ```  
@@ -394,11 +389,11 @@ void SetLocation(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pt`  
+ [in] `pt`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setparams"></a>CMFCToolTipCtrl::SetParams  
+##  <a name="setparams"></a>  CMFCToolTipCtrl::SetParams  
  Określa wygląd etykietka narzędzia, za pomocą [klasy CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) obiektu.  
   
 ```  

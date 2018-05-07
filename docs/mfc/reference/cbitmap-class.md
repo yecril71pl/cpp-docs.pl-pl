@@ -1,12 +1,9 @@
 ---
-title: "Cbitmap — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cbitmap — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmap
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmap-class"></a>Cbitmap — klasa
 Hermetyzuje mapy bitowej interfejsu (GDI) systemu Windows grafiki urządzenia i udostępnia funkcje elementów członkowskich do manipulowania mapy bitowej.  
@@ -111,7 +106,7 @@ class CBitmap : public CGdiObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
   
-##  <a name="cbitmap"></a>CBitmap::CBitmap  
+##  <a name="cbitmap"></a>  CBitmap::CBitmap  
  Konstruuje `CBitmap` obiektu.  
   
 ```  
@@ -121,7 +116,7 @@ CBitmap();
 ### <a name="remarks"></a>Uwagi  
  Wynikowy obiekt musi zostać zainicjowany z jednej z funkcji inicjowania elementu członkowskiego.  
   
-##  <a name="createbitmap"></a>CBitmap::CreateBitmap  
+##  <a name="createbitmap"></a>  CBitmap::CreateBitmap  
  Inicjuje określonej szerokości, wysokości i wzorca bitowego mapę bitową pamięci zależne od urządzenia.  
   
 ```  
@@ -161,7 +156,7 @@ BOOL CreateBitmap(
   
  Aby uzyskać więcej informacji, zobacz opis **bmBits** w **mapy BITOWEJ** struktury. [Mapy BITOWEJ](../../mfc/reference/bitmap-structure.md) struktury została opisana w sekcji [CBitmap::CreateBitmapIndirect](#createbitmapindirect) funkcję elementu członkowskiego.  
   
-##  <a name="createbitmapindirect"></a>CBitmap::CreateBitmapIndirect  
+##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect  
  Inicjuje mapę bitową szerokości, wysokości i wzorca bitowego (jeśli został określony) podany w strukturze wskazywana przez `lpBitmap`.  
   
 ```  
@@ -182,7 +177,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
   
  Po zakończeniu pracy z `CBitmap` utworzone za pomocą obiektu `CreateBitmapIndirect` funkcji, najpierw wybierz mapy bitowej poza kontekstem urządzenia, a następnie usuń `CBitmap` obiektu.  
   
-##  <a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap  
+##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
  Inicjuje mapy bitowej, która jest zgodna z urządzenia określonego przez `pDC`.  
   
 ```  
@@ -216,7 +211,7 @@ BOOL CreateCompatibleBitmap(
   
  Po zakończeniu pracy z `CBitmap` utworzone za pomocą obiektu `CreateCompatibleBitmap` funkcji, najpierw wybierz mapy bitowej poza kontekstem urządzenia, a następnie usuń `CBitmap` obiektu.  
   
-##  <a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap  
+##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
  Inicjuje discardable mapy bitowej zgodnego z kontekstu urządzenia identyfikowane przez `pDC`.  
   
 ```  
@@ -246,7 +241,7 @@ BOOL CreateDiscardableBitmap(
   
  Po zakończeniu pracy z `CBitmap` utworzone za pomocą obiektu `CreateDiscardableBitmap` funkcji, najpierw wybierz mapy bitowej poza kontekstem urządzenia, a następnie usuń `CBitmap` obiektu.  
   
-##  <a name="fromhandle"></a>CBitmap::FromHandle  
+##  <a name="fromhandle"></a>  CBitmap::FromHandle  
  Zwraca wskaźnik do `CBitmap` obiektu, gdy uchwyt do mapy bitowej GDI systemu Windows.  
   
 ```  
@@ -263,7 +258,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ### <a name="remarks"></a>Uwagi  
  Jeśli `CBitmap` obiekt nie jest już dołączony do uchwytu, tymczasowej `CBitmap` obiekt jest tworzony i dołączyć. To tymczasowe `CBitmap` obiekt jest prawidłowy tylko do momentu przy następnym aplikacja ma czas bezczynności w pętli jego zdarzeń, w czasu grafiki wszystkie tymczasowe obiekty zostaną usunięte. Innymi słowy to jest, że tymczasowy obiekt jest prawidłowy tylko podczas przetwarzania komunikatu jedno okno.  
   
-##  <a name="getbitmap"></a>CBitmap::GetBitmap  
+##  <a name="getbitmap"></a>  CBitmap::GetBitmap  
  Pobiera właściwości obrazu dołączone mapy bitowej.  
   
 ```  
@@ -279,7 +274,7 @@ int GetBitmap(BITMAP* pBitMap);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
+##  <a name="getbitmapbits"></a>  CBitmap::GetBitmapBits  
  Kopiuje wzorca bitowego mapy bitowej dołączone do określonego bufora.  
   
 ```  
@@ -301,7 +296,7 @@ DWORD GetBitmapBits(
 ### <a name="remarks"></a>Uwagi  
  Użyj [CBitmap::GetBitmap](#getbitmap) ustalenie wymagany rozmiar buforu.  
   
-##  <a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
+##  <a name="getbitmapdimension"></a>  CBitmap::GetBitmapDimension  
  Zwraca szerokość i wysokość mapy bitowej.  
   
 ```  
@@ -314,7 +309,7 @@ CSize GetBitmapDimension() const;
 ### <a name="remarks"></a>Uwagi  
  Szerokość i wysokość uznaje się, że wcześniej zostały ustawione za pomocą [SetBitmapDimension](#setbitmapdimension) funkcję elementu członkowskiego.  
   
-##  <a name="loadbitmap"></a>CBitmap::LoadBitmap  
+##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap  
  Ładuje zasobu mapy bitowej o nazwie `lpszResourceName` lub identyfikowany przez numer identyfikacyjny w `nIDResource` z pliku wykonywalnego aplikacji.  
   
 ```  
@@ -348,7 +343,7 @@ BOOL LoadBitmap(UINT nIDResource);
   
  Te mapy bitowe nie znajdują się w sterowniki urządzeń dla wersji systemu Windows 3.0 i wcześniejszych. Pełną listę mapy bitowe i wyświetlanie ich wyglądu zobacz zestaw Windows SDK.  
   
-##  <a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap  
+##  <a name="loadmappedbitmap"></a>  CBitmap::LoadMappedBitmap  
  Wywołanie tej funkcji Członkowskich załadować mapy bitowej i mapowania kolorów do bieżącego kolorów systemu.  
   
 ```  
@@ -380,7 +375,7 @@ BOOL LoadMappedBitmap(
   
  Informacji o tworzeniu zamapowanych mapy bitowej, zobacz opis funkcji Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) i [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) struktury w zestawie Windows SDK.  
   
-##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
+##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Ładuje mapę bitową wstępnie zdefiniowanych używane przez system Windows.  
   
 ```  
@@ -419,7 +414,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
   
  Należy pamiętać, że stała **OEMRESOURCE** muszą być zdefiniowane przed tym systemu WINDOWS. H, aby można było użyć dowolnego z **OBM_** stałe.  
   
-##  <a name="operator_hbitmap"></a>HBITMAP CBitmap::operator  
+##  <a name="operator_hbitmap"></a>  HBITMAP CBitmap::operator  
  Użyj tego operatora, aby uzyskać dojście Windows GDI dołączonych `CBitmap` obiektu.  
   
 ```  
@@ -434,7 +429,7 @@ operator HBITMAP() const;
   
  Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [obiektów grafiki](http://msdn.microsoft.com/library/windows/desktop/dd144962) w zestawie Windows SDK.  
   
-##  <a name="setbitmapbits"></a>CBitmap::SetBitmapBits  
+##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  Ustawia bity mapy bitowej wartości bitowe przez `lpBits`.  
   
 ```  
@@ -453,7 +448,7 @@ DWORD SetBitmapBits(
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba bajtów używanych podczas ustawiania bitowa; 0, jeśli funkcja nie powiedzie się.  
   
-##  <a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension  
+##  <a name="setbitmapdimension"></a>  CBitmap::SetBitmapDimension  
  Przypisuje mapę bitową w jednostkach milimetra 0,1 szerokości i wysokości.  
   
 ```  

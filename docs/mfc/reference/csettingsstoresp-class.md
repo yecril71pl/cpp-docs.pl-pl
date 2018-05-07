@@ -1,12 +1,9 @@
 ---
 title: Klasa CSettingsStoreSP | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStoreSP
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf9659b6c367146a565834bd65fdfc9f28a9812
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstoresp-class"></a>Klasa CSettingsStoreSP
 `CSettingsStoreSP` Klasy to klasa pomocy, która służy do tworzenia wystąpień [CSettingsStore klasy](../../mfc/reference/csettingsstore-class.md).  
@@ -77,12 +72,12 @@ class CSettingsStoreSP
   
  Zawsze, gdy platformę zwykle może uzyskać dostępu do rejestru, go będzie teraz dynamicznie utworzyć wystąpienia klasy niestandardowej i używać go do odczytu lub zapisu danych.  
   
- `CSettingsStoreSP::SetRuntimeClass`wykorzystuje globalne zmienna statyczna. W związku z tym tylko jeden magazyn niestandardowy jest dostępna w czasie.  
+ `CSettingsStoreSP::SetRuntimeClass` wykorzystuje globalne zmienna statyczna. W związku z tym tylko jeden magazyn niestandardowy jest dostępna w czasie.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxsettingsstore.h  
   
-##  <a name="create"></a>CSettingsStoreSP::Create  
+##  <a name="create"></a>  CSettingsStoreSP::Create  
  Tworzy nowe wystąpienie obiektu, który jest pochodną [CSettingsStore klasy](../../mfc/reference/csettingsstore-class.md).  
   
 ```  
@@ -92,10 +87,10 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bAdmin`  
+ [in] `bAdmin`  
  Parametr wartość logiczna określająca czy `CSettingsStore` obiekt jest tworzony w trybie administratora.  
   
- [in]`bReadOnly`  
+ [in] `bReadOnly`  
  Parametr wartość logiczna określająca czy `CSettingsStore` obiekt jest tworzony na dostęp tylko do odczytu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -113,7 +108,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
+##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP  
  Konstruuje [klasy CSettingsStoreSP](../../mfc/reference/csettingsstoresp-class.md) obiektu.  
   
 ```  
@@ -121,13 +116,13 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`dwUserData`  
+ [in] `dwUserData`  
  Dane zdefiniowane przez użytkownika który `CSettingsStoreSP` obiekt magazynów.  
   
 ### <a name="remarks"></a>Uwagi  
  `CSettingsStoreSP` Obiekt przechowuje dane z `dwUserData` w zmiennej członka chronionego `m_dwUserData`.  
   
-##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
+##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  Ustawia klasę środowiska uruchomieniowego. Metoda [CSettingsStoreSP::Create](#create) korzysta klasa środowiska uruchomieniowego, aby określić typ obiektu do utworzenia.  
   
 ```  
@@ -135,11 +130,11 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pRTI`  
+ [in] `pRTI`  
  Wskaźnik do informacji o klasie czasu wykonywania dla klasy pochodzące z [CSettingsStore klasy](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`w przypadku powodzenia; `FALSE` Jeśli klasa jest oznaczona `pRTI` nie pochodzi od `CSettingsStore`.  
+ `TRUE` w przypadku powodzenia; `FALSE` Jeśli klasa jest oznaczona `pRTI` nie pochodzi od `CSettingsStore`.  
   
 ### <a name="remarks"></a>Uwagi  
  Można użyć [klasy CSettingsStoreSP](../../mfc/reference/csettingsstoresp-class.md) wyprowadzenia klasy z `CSettingsStore`. Użyj metody `SetRuntimeClass` Jeśli chcesz utworzyć obiektów klasy niestandardowej pochodzącej z `CSettingsStore`.  

@@ -1,13 +1,10 @@
 ---
-title: "Tn025: tworzenie Dokumentów, wyświetlać i ramek | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Tn025: tworzenie Dokumentów, wyświetlać i ramek | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.creation
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ca395b19a36c42163b854c8997cce424352ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: tworzenie dokumentów, widoków i ramek
 > [!NOTE]
@@ -52,13 +47,13 @@ AddDocTemplate(pTemplate);
 ## <a name="doctemplates"></a>DocTemplates  
  `CDocTemplate` Jest twórcę i Menedżera dokumentów. Dokumenty, które tworzy jest właścicielem. Jeśli aplikacja używa podejście oparte na zasobach opisane poniżej, nie trzeba będzie dziedziczyć `CDocTemplate`.  
   
- Dla aplikacji SDI klasy `CSingleDocTemplate` przechowuje informacje o jednym otwartego dokumentu. Dla aplikacji MDI klasy `CMultiDocTemplate` przechowuje listę ( `CPtrList`) z aktualnie otwarte dokumenty utworzone na podstawie tego szablonu. `CDocTemplate::AddDocument`i `CDocTemplate::RemoveDocument` zapewnienia wirtualny element członkowski funkcji dodawania i usuwania dokumentu z szablonu. `CDocTemplate`jest zaprzyjaźniona z **CDocument** , firma Microsoft można ustawić chronionej **CDocument::m_pDocTemplate** wskaźnik Wstecz, aby wskazywały szablonu dokumentu, której go utworzono.  
+ Dla aplikacji SDI klasy `CSingleDocTemplate` przechowuje informacje o jednym otwartego dokumentu. Dla aplikacji MDI klasy `CMultiDocTemplate` przechowuje listę ( `CPtrList`) z aktualnie otwarte dokumenty utworzone na podstawie tego szablonu. `CDocTemplate::AddDocument` i `CDocTemplate::RemoveDocument` zapewnienia wirtualny element członkowski funkcji dodawania i usuwania dokumentu z szablonu. `CDocTemplate` jest zaprzyjaźniona z **CDocument** , firma Microsoft można ustawić chronionej **CDocument::m_pDocTemplate** wskaźnik Wstecz, aby wskazywały szablonu dokumentu, której go utworzono.  
   
- `CWinApp`Domyślnie obsługuje `OnFileOpen` wdrożenia, który z kolei wysyła kwerendy do wszystkich szablonów dokumentów. Implementacja obejmuje wyszukiwanie już otwarte dokumenty i podejmowania decyzji o jakiego formatu Otwórz nowe dokumenty programu.  
+ `CWinApp` Domyślnie obsługuje `OnFileOpen` wdrożenia, który z kolei wysyła kwerendy do wszystkich szablonów dokumentów. Implementacja obejmuje wyszukiwanie już otwarte dokumenty i podejmowania decyzji o jakiego formatu Otwórz nowe dokumenty programu.  
   
- `CDocTemplate`zarządza powiązania interfejsu użytkownika dla dokumentów i ramki.  
+ `CDocTemplate` zarządza powiązania interfejsu użytkownika dla dokumentów i ramki.  
   
- `CDocTemplate`Zlicza liczby dokumentów bez nazwy.  
+ `CDocTemplate` Zlicza liczby dokumentów bez nazwy.  
   
 ## <a name="cdocument"></a>CDocument  
  A **CDocument** jest własnością `CDocTemplate`.  

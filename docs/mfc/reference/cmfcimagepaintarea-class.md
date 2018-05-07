@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCImagePaintArea | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCImagePaintArea
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f4af09ad1da91e3d59f82736ae9b240812069eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcimagepaintarea-class"></a>Klasa CMFCImagePaintArea
 Udostępnia obszarze obrazu, który umożliwia modyfikowanie obrazu w oknie dialogowym edytora obrazów.  
@@ -79,7 +74,7 @@ class CMFCImagePaintArea : public CButton
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -90,7 +85,7 @@ class CMFCImagePaintArea : public CButton
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afximagepaintarea.h  
   
-##  <a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
+##  <a name="cmfcimagepaintarea"></a>  CMFCImagePaintArea::CMFCImagePaintArea  
  Konstruuje `CMFCImagePaintArea` obiektu.  
   
 ```  
@@ -102,9 +97,9 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in]`pParentDlg`|Wskaźnik do okna dialogowego, który jest elementem nadrzędnym edytor obrazów.|  
+|[in] `pParentDlg`|Wskaźnik do okna dialogowego, który jest elementem nadrzędnym edytor obrazów.|  
   
-##  <a name="getmode"></a>CMFCImagePaintArea::GetMode  
+##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Pobiera bieżący tryb rysowania.  
   
 ```  
@@ -114,7 +109,7 @@ IMAGE_EDIT_MODE GetMode() const;
 ### <a name="return-value"></a>Wartość zwracana  
  [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) wartość, która określa bieżący tryb rysowania.  
   
-##  <a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
+##  <a name="setbitmap"></a>  CMFCImagePaintArea::SetBitmap  
  Ustawia obraz mapy bitowej dla obszaru obrazu.  
   
 ```  
@@ -126,12 +121,12 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in]`pBitmap`|Nowy obraz mapy bitowej do wyświetlenia.|  
+|[in] `pBitmap`|Nowy obraz mapy bitowej do wyświetlenia.|  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli `pBitmap` jest `NULL`, ta metoda ustawia rozmiar obszaru można modyfikować paint równą zero. W przeciwnym razie ustawia rozmiar obszaru można modyfikować paint rozmiar obrazu dostarczonego mapy bitowej.  
   
-##  <a name="setcolor"></a>CMFCImagePaintArea::SetColor  
+##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  Ustawia bieżący kolor rysowania.  
   
 ```  
@@ -143,14 +138,14 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in]`color`|Nowy kolor rysowania.|  
+|[in] `color`|Nowy kolor rysowania.|  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli wybierz kolor na pasku palety edytora obrazów lub selektora kolorów, w ramach wywołuje tę metodę, aby zaktualizować bieżący kolor rysowania. Początkowy kolor rysowania jest czarny ( `COLORREF` wartość 0).  
   
  Kolor rysowania jest używany przez okno dialogowe Edytor obrazów dla wszystkie tryby rysowania z wyjątkiem `IMAGE_EDIT_MODE_COLOR`. Aby uzyskać więcej informacji na temat trybów rysowania, zobacz [wyliczenie CMFCImagePaintArea::IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
   
-##  <a name="setmode"></a>CMFCImagePaintArea::SetMode  
+##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode  
  Ustawia bieżący tryb rysowania.  
   
 ```  
@@ -162,7 +157,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in]`mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) wartość, która określa bieżący tryb rysowania.|  
+|[in] `mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) wartość, która określa bieżący tryb rysowania.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

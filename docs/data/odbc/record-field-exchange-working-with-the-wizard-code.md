@@ -1,13 +1,10 @@
 ---
-title: "Wymiana pól rekordów: Praca z kodem Kreatora | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wymiana pól rekordów: Praca z kodem Kreatora | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8909a9e933e7b3f1c59fa9ab283706f7a6d1f0c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d4f817ebfc3e6bb72865b4fc71fd5c5ebe5f671
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Wymiana pól rekordów: praca z kodem kreatora
 W tym temacie opisano kod który Kreator aplikacji MFC i **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zapisu do obsługi RFX i jak można zmienić tego kodu.  
@@ -47,11 +42,11 @@ W tym temacie opisano kod który Kreator aplikacji MFC i **Dodaj klasę** (zgodn
   
 -   Deklaracje elementy członkowskie danych pola rekordów w klasie zestawu rekordów  
   
--   Zastępowanie`CRecordset::DoFieldExchange`  
+-   Zastępowanie `CRecordset::DoFieldExchange`  
   
 -   Inicjowanie elementy członkowskie danych pola rekordów w konstruktorze klasy zestawu rekordów  
   
-##  <a name="_core_the_field_data_member_declarations"></a>Deklaracje elementu członkowskiego danych pola  
+##  <a name="_core_the_field_data_member_declarations"></a> Deklaracje elementu członkowskiego danych pola  
  Kreatorzy zapisu deklaracji klasy zestawu rekordów w pliku .h podobny do następującego dla klasy `CSections`:  
   
 ```  
@@ -88,9 +83,9 @@ public:
   
  Ponadto powiadomienia zastępujący kreatora `DoFieldExchange` funkcji członkowskiej klasy `CRecordset`.  
   
-##  <a name="_core_the_dofieldexchange_override"></a>DoFieldExchange zastąpienia  
+##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange zastąpienia  
 
- [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) jest centralnym RFX. Wywołania framework `DoFieldExchange` dowolnej chwili należy przenieść dane ze źródła danych do zestawu rekordów lub z zestawu rekordów do źródła danych. `DoFieldExchange`również obsługuje uzyskiwania informacji na temat pól członków danych za pośrednictwem [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) i [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) funkcji elementów członkowskich.  
+ [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) jest centralnym RFX. Wywołania framework `DoFieldExchange` dowolnej chwili należy przenieść dane ze źródła danych do zestawu rekordów lub z zestawu rekordów do źródła danych. `DoFieldExchange` również obsługuje uzyskiwania informacji na temat pól członków danych za pośrednictwem [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) i [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) funkcji elementów członkowskich.  
   
  Następujące `DoFieldExchange` jest zastąpienie `CSections` klasy. Kreator zapisuje funkcji w pliku .cpp klasy zestawu rekordów.  
   
@@ -119,7 +114,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
   
 -   `pFX` Wskaźnik do [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) obiekt, który przekazuje platformę, gdy wywołuje `DoFieldExchange`. `CFieldExchange` Operacji określa obiekt który `DoFieldExchange` jest wykonanie kierunek transferu i inne informacje o kontekście.  
   
-##  <a name="_core_the_recordset_constructor"></a>Konstruktor zestawu rekordów  
+##  <a name="_core_the_recordset_constructor"></a> Konstruktor zestawu rekordów  
  Konstruktor zestawu rekordów, który zapisu kreatorów zawiera dwie czynności związane z RFX:  
   
 -   Inicjowanie dla każdego elementu członkowskiego danych pola  

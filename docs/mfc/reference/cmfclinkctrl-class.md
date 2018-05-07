@@ -2,11 +2,8 @@
 title: Klasa CMFCLinkCtrl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCLinkCtrl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc83e5abf09102af8f27b1ee73fc78ed162b9335
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfclinkctrl-class"></a>Klasa CMFCLinkCtrl
 `CMFCLinkCtrl` Klasa przedstawia przycisk jako hiperłącze i wywołuje docelowy łącza, po kliknięciu przycisku.  
@@ -72,7 +67,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -85,7 +80,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxlinkctrl.h  
   
-##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
  Wywoływane przez platformę przed narysowaniem prostokąt fokusu przycisku.  
   
 ```  
@@ -95,16 +90,16 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
- [in]`rectClient`  
+ [in] `rectClient`  
  Prostokąt zakresem kontrolki łącza.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę, jeśli chcesz użyć własnego kodu do rysowania prostokąt fokusu przycisku.  
   
-##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
+##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
  Określony adres URL będzie wyświetlany jako tekst przycisku.  
   
 ```  
@@ -112,12 +107,12 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszURL`  
+ [in] `lpszURL`  
  Tekst przycisku do wyświetlenia.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
+##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
  Ustawia niejawne protokół (na przykład "http:") adresu URL.  
   
 ```  
@@ -125,13 +120,13 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszPrefix`  
+ [in] `lpszPrefix`  
  Prefiks adresu URL protokołu.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody, aby ustawić prefiksu adresu URL. Prefiks nie jest wyświetlany na przycisku, ale służy do pomocy, przejdź do docelowego adresu URL.  
   
-##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
  Zmienia rozmiar przycisku zawierają tekst przycisku lub mapy bitowej.  
   
 ```  
@@ -141,11 +136,11 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bVCenter`  
- `TRUE`Tekst przycisku center i mapy bitowej w pionie między górą a dołem kontroli łączy. w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
+ [in] `bVCenter`  
+ `TRUE` Tekst przycisku center i mapy bitowej w pionie między górą a dołem kontroli łączy. w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
   
- [in]`bHCenter`  
- `TRUE`Aby wyśrodkować tekst przycisku i mapy bitowej poziomo od lewej i prawej stronie formantu łącze; w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
+ [in] `bHCenter`  
+ `TRUE` Aby wyśrodkować tekst przycisku i mapy bitowej poziomo od lewej i prawej stronie formantu łącze; w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) obiekt, który zawiera nowy rozmiar kontrolki łącza.  

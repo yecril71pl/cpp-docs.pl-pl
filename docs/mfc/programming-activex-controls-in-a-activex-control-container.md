@@ -1,13 +1,10 @@
 ---
-title: "Kontenery formantów ActiveX: Programowanie formantów ActiveX w kontenerze formantów ActiveX | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Kontenery formantów ActiveX: Programowanie formantów ActiveX w kontenerze formantów ActiveX | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - wrapper classes [MFC], using
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a608d98b43e6daf340ab09c7adb275849f347a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Kontenery kontrolek ActiveX: programowanie kontrolek ActiveX w kontenerze kontrolek ActiveX
 W tym artykule opisano proces do uzyskiwania dostępu do narażonych [metody](../mfc/mfc-activex-controls-methods.md) i [właściwości](../mfc/mfc-activex-controls-properties.md) osadzonych formantów ActiveX. Zasadniczo spowoduje wykonaj następujące kroki:  
@@ -69,7 +64,7 @@ W tym artykule opisano proces do uzyskiwania dostępu do narażonych [metody](..
   
  [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]  
   
-##  <a name="_core_the_wrapper_class_header_28h29_file"></a>Nagłówka klasy otoki (. H) plik  
+##  <a name="_core_the_wrapper_class_header_28h29_file"></a> Nagłówka klasy otoki (. H) plik  
  Pobierz i ustaw właściwości (i wywołania metod) dla formantu OK `CCirc` klasy otoki zawiera deklarację narażonych wszystkie metody i właściwości. W tym przykładzie deklaracji znajdują się w okólnik H. Poniższy przykład jest częścią klasy `CCirc` definiuje interfejsów formantu ActiveX:  
   
  [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]  
@@ -77,7 +72,7 @@ W tym artykule opisano proces do uzyskiwania dostępu do narażonych [metody](..
   
  Następnie można wywołać funkcji z innych procedur aplikacji przy użyciu normalnego składni języka C++. Aby uzyskać więcej informacji na temat używania tej funkcji Członkowskich ustawić dostęp do metody i właściwości formantu, zobacz sekcję [programowania formantu ActiveX](#_core_programming_the_activex_control).  
   
-##  <a name="_core_member_variable_modifications_to_the_project"></a>Modyfikacje zmiennej elementu członkowskiego do projektu  
+##  <a name="_core_member_variable_modifications_to_the_project"></a> Modyfikacje zmiennej elementu członkowskiego do projektu  
  Gdy formant ActiveX został dodany do projektu i osadzone w kontenerze — okno dialogowe, jest dostępny przez inne części projektu. Najprostszym sposobem kontroli dostępu jest [Utwórz zmienną członkowską](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) klasy okna dialogowego `CContainerDlg` (krok 2), czyli z tego samego typu co klasy otoki dodane do projektu w programie Visual C++. Można następnie użyć zmiennej członkowskiej do formantu osadzonego w dowolnym momencie.  
   
  Gdy **Dodawanie zmiennej członkowskiej** dodaje okno dialogowe `m_circctl` elementu członkowskiego zmiennej do projektu, dodane również następujące wiersze do pliku nagłówka (. H) z `CContainerDlg` klasy:  
@@ -89,7 +84,7 @@ W tym artykule opisano proces do uzyskiwania dostępu do narażonych [metody](..
   
  [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
   
-##  <a name="_core_programming_the_activex_control"></a>Programowania formantu ActiveX  
+##  <a name="_core_programming_the_activex_control"></a> Programowania formantu ActiveX  
  W tym momencie zostały wstawione do szablonu okna dialogowego formantu ActiveX i utworzonej dla niego zmienną członkowską. Typowe składni języka C++ umożliwia teraz dostęp do właściwości i metod formantu osadzonego.  
   
  Jak wspomniano (w [nagłówka klasy otoki (. H) pliku](#_core_the_wrapper_class_header_28h29_file)), plik nagłówka (. H) dla `CCirc` klasy otoki, w tym okólnik wielkość H, zawiera listę funkcji elementów członkowskich, które służą do pobierania i ustawiania wartości właściwości uwidocznione. Dostępne są również funkcje Członkowskie dla metod uwidocznione.  

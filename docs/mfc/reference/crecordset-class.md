@@ -1,12 +1,9 @@
 ---
-title: "Crecordset — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Crecordset — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecordset
@@ -139,17 +136,15 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2375739fe4d8442d4ecb7a1514641d45de4a8be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 683f1d612a57e4f6e2d8661af17faa73f725d3d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecordset-class"></a>Crecordset — klasa
 Reprezentuje zestaw rekordów wybrane źródła danych.  
@@ -271,7 +266,7 @@ class CRecordset : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
   
-##  <a name="addnew"></a>CRecordset::AddNew  
+##  <a name="addnew"></a>  CRecordset::AddNew  
  Przygotowuje do dodawania nowego rekordu do tabeli.  
   
 ```  
@@ -284,7 +279,7 @@ virtual void AddNew();
 > [!NOTE]
 >  Jeśli zaimplementowano zbiorcze pobieranie z wiersza, nie można wywołać `AddNew`. Spowoduje to potwierdzenie nie powiodło się. Chociaż klasa `CRecordset` nie udostępniają mechanizm aktualizacji zbiorczej wiersze danych, można zapisać własnych funkcji przy użyciu funkcji interfejsu API ODBC **SQLSetPos**. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- `AddNew`przygotowuje nowy, pusty rekord przy użyciu elementy członkowskie danych pola w zestawie rekordów. Po wywołaniu metody `AddNew`, ustawić wartości ma elementy członkowskie danych pola w zestawie rekordów. (Nie trzeba wywołać [Edytuj](#edit) funkcji członkowskiej, w tym celu; użyj **Edytuj** tylko w przypadku istniejących rekordów.) Jeśli następnie wywołaj **aktualizacji**, zmienione wartości w elementy członkowskie danych pola są zapisywane w źródle danych.  
+ `AddNew` przygotowuje nowy, pusty rekord przy użyciu elementy członkowskie danych pola w zestawie rekordów. Po wywołaniu metody `AddNew`, ustawić wartości ma elementy członkowskie danych pola w zestawie rekordów. (Nie trzeba wywołać [Edytuj](#edit) funkcji członkowskiej, w tym celu; użyj **Edytuj** tylko w przypadku istniejących rekordów.) Jeśli następnie wywołaj **aktualizacji**, zmienione wartości w elementy członkowskie danych pola są zapisywane w źródle danych.  
   
 > [!CAUTION]
 >  Jeśli przewijania do nowego rekordu przed wywołaniem **aktualizacji**nowego rekordu zostaną utracone i podano bez ostrzeżenia.  
@@ -301,7 +296,7 @@ virtual void AddNew();
 ### <a name="example"></a>Przykład  
  Zapoznaj się z artykułem [transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="canappend"></a>CRecordset::CanAppend  
+##  <a name="canappend"></a>  CRecordset::CanAppend  
  Określa, czy wcześniej otwartych rekordów pozwala na dodawanie nowych rekordów.  
   
 ```  
@@ -309,9 +304,9 @@ BOOL CanAppend() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli zestaw rekordów zezwala na dodawanie nowych rekordów; w przeciwnym razie 0. `CanAppend`Zwraca wartość 0, gdy otwarty zestaw rekordów jako tylko do odczytu.  
+ Różna od zera, jeśli zestaw rekordów zezwala na dodawanie nowych rekordów; w przeciwnym razie 0. `CanAppend` Zwraca wartość 0, gdy otwarty zestaw rekordów jako tylko do odczytu.  
   
-##  <a name="canbookmark"></a>CRecordset::CanBookmark  
+##  <a name="canbookmark"></a>  CRecordset::CanBookmark  
  Określa, czy zestaw rekordów umożliwia oznaczanie rekordów korzystanie z zakładek.  
   
 ```  
@@ -322,14 +317,14 @@ BOOL CanBookmark() const;
  Różna od zera, jeśli zestaw rekordów obsługuje zakładki; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja jest niezależna od **CRecordset::useBookmarks** opcji `dwOptions` parametr [Otwórz](#open) funkcji członkowskiej. `CanBookmark`Wskazuje, czy danego sterownika ODBC i kursora typu zakładki pomocy technicznej. **CRecordset::useBookmarks** wskazuje, czy zakładki będzie dostępny, pod warunkiem są obsługiwane.  
+ Ta funkcja jest niezależna od **CRecordset::useBookmarks** opcji `dwOptions` parametr [Otwórz](#open) funkcji członkowskiej. `CanBookmark` Wskazuje, czy danego sterownika ODBC i kursora typu zakładki pomocy technicznej. **CRecordset::useBookmarks** wskazuje, czy zakładki będzie dostępny, pod warunkiem są obsługiwane.  
   
 > [!NOTE]
 >  Zakładki nie są obsługiwane na zestawy rekordów tylko do przodu.  
   
  Aby uzyskać więcej informacji na temat zakładek i nawigacji zestawu rekordów, zobacz artykuły [zestaw rekordów: zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) i [zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="cancel"></a>CRecordset::Cancel  
+##  <a name="cancel"></a>  CRecordset::Cancel  
  Żądania, że źródło danych anulować operacji asynchronicznej w toku lub procesu z drugiego wątku.  
   
 ```  
@@ -339,7 +334,7 @@ void Cancel();
 ### <a name="remarks"></a>Uwagi  
  Należy pamiętać, że klasach MFC ODBC nie jest już przetwarzania asynchronicznego; Próba wykonania operacji asychronous, możesz bezpośrednio wywołanie funkcji interfejsu API ODBC **SQLSetConnectOption**. Aby uzyskać więcej informacji, zobacz temat "Wykonywane asynchronicznie funkcje" w *ODBC SDK przewodnik*.  
   
-##  <a name="cancelupdate"></a>CRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>  CRecordset::CancelUpdate  
  Anuluje wszystkie oczekujące aktualizacje, spowodowane [Edytuj](#edit) lub [AddNew](#addnew) operacji przed [aktualizacji](#update) jest wywoływana.  
   
 ```  
@@ -355,7 +350,7 @@ void CancelUpdate();
   
  Aby uzyskać więcej informacji na temat aktualizowania danych, zobacz artykuł [zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).  
   
-##  <a name="canrestart"></a>CRecordset::CanRestart  
+##  <a name="canrestart"></a>  CRecordset::CanRestart  
  Określa, czy zestaw rekordów zezwala na ponowne uruchomienie jej zapytania (na przykład aby odświeżyć swoje rekordy) przez wywołanie metody **Requery** funkcję elementu członkowskiego.  
   
 ```  
@@ -365,7 +360,7 @@ BOOL CanRestart() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli jest dozwolone ponowne wykonanie kwerendy; w przeciwnym razie 0.  
   
-##  <a name="canscroll"></a>CRecordset::CanScroll  
+##  <a name="canscroll"></a>  CRecordset::CanScroll  
  Określa, czy zestaw rekordów umożliwia przewijania.  
   
 ```  
@@ -378,7 +373,7 @@ BOOL CanScroll() const;
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji na temat przewijania, zobacz artykuł [zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="cantransact"></a>CRecordset::CanTransact  
+##  <a name="cantransact"></a>  CRecordset::CanTransact  
  Określa, czy zestaw rekordów zezwala transakcji.  
   
 ```  
@@ -391,7 +386,7 @@ BOOL CanTransact() const;
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz artykuł [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="canupdate"></a>CRecordset::CanUpdate  
+##  <a name="canupdate"></a>  CRecordset::CanUpdate  
  Określa, czy zestaw rekordów może być aktualizowana.  
   
 ```  
@@ -404,7 +399,7 @@ BOOL CanUpdate() const;
 ### <a name="remarks"></a>Uwagi  
  Zestaw rekordów może być tylko do odczytu, jeśli źródła danych jest tylko do odczytu lub nie określono **CRecordset::readOnly** w `dwOptions` parametru po otwarciu zestawu rekordów.  
   
-##  <a name="checkrowseterror"></a>CRecordset::CheckRowsetError  
+##  <a name="checkrowseterror"></a>  CRecordset::CheckRowsetError  
  Wywołuje się, by obsłużyć wygenerowane błędy podczas pobierania rekordu.  
   
 ```  
@@ -418,7 +413,7 @@ virtual void CheckRowsetError(RETCODE nRetCode);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja wirtualny element członkowski obsługuje błędów występujących podczas rekordy są pobierane, co jest przydatne podczas zbiorcze pobieranie z wiersza. Warto rozważyć zastąpienie `CheckRowsetError` do zaimplementowania własne obsługi błędów.  
   
- `CheckRowsetError`jest wywoływana automatycznie w ramach operacji nawigacji kursora, takich jak **Otwórz**, **Requery**, lub **Przenieś** operacji. Została przekazana wartość zwracana funkcji interfejsu API ODBC **procedury SQLExtendedFetch**. W poniższej tabeli przedstawiono możliwe wartości `nRetCode` parametru.  
+ `CheckRowsetError` jest wywoływana automatycznie w ramach operacji nawigacji kursora, takich jak **Otwórz**, **Requery**, lub **Przenieś** operacji. Została przekazana wartość zwracana funkcji interfejsu API ODBC **procedury SQLExtendedFetch**. W poniższej tabeli przedstawiono możliwe wartości `nRetCode` parametru.  
   
 |nRetCode|Opis|  
 |--------------|-----------------|  
@@ -431,7 +426,7 @@ virtual void CheckRowsetError(RETCODE nRetCode);
   
  Aby uzyskać więcej informacji na temat **SQLError**, zobacz zestaw Windows SDK. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="close"></a>CRecordset::Close  
+##  <a name="close"></a>  CRecordset::Close  
  Zamyka zestawu rekordów.  
   
 ```  
@@ -446,7 +441,7 @@ virtual void Close();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDatabase#17](../../mfc/codesnippet/cpp/crecordset-class_1.cpp)]  
   
-##  <a name="crecordset"></a>CRecordset::CRecordset  
+##  <a name="crecordset"></a>  CRecordset::CRecordset  
  Konstruuje `CRecordset` obiektu.  
   
 ```  
@@ -468,7 +463,7 @@ CRecordset(CDatabase* pDatabase = NULL);
 ### <a name="example"></a>Przykład  
  Aby uzyskać więcej informacji, zobacz artykuł [zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).  
   
-##  <a name="delete"></a>CRecordset::Delete  
+##  <a name="delete"></a>  CRecordset::Delete  
  Umożliwia usunięcie bieżącego rekordu.  
   
 ```  
@@ -491,7 +486,7 @@ virtual void Delete();
   
  [!code-cpp[NVC_MFCDatabase#18](../../mfc/codesnippet/cpp/crecordset-class_2.cpp)]  
   
-##  <a name="dobulkfieldexchange"></a>CRecordset::DoBulkFieldExchange  
+##  <a name="dobulkfieldexchange"></a>  CRecordset::DoBulkFieldExchange  
  Wywołuje się, by wymienić zbiorczego wiersze danych ze źródła danych do zestawu rekordów. Implementuje zbiorcze wymiana pól rekordów (RFX zbiorczego).  
   
 ```  
@@ -503,12 +498,12 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
  Wskaźnik do [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) obiektu. Platformę będzie już skonfigurowano tego obiektu do określenia kontekstu dla operacji wymiana pola.  
   
 ### <a name="remarks"></a>Uwagi  
- Po zaimplementowaniu zbiorcze pobieranie z wiersza struktura wywołuje funkcji członkowskiej automatycznie przesyłać dane ze źródła danych do obiektu zestawu rekordów. `DoBulkFieldExchange`także wiąże użytkownika elementy członkowskie danych parametru do parametru zastępcze w ciągu instrukcji SQL dla zaznaczenia w zestawie rekordów.  
+ Po zaimplementowaniu zbiorcze pobieranie z wiersza struktura wywołuje funkcji członkowskiej automatycznie przesyłać dane ze źródła danych do obiektu zestawu rekordów. `DoBulkFieldExchange` także wiąże użytkownika elementy członkowskie danych parametru do parametru zastępcze w ciągu instrukcji SQL dla zaznaczenia w zestawie rekordów.  
   
  Jeśli zbiorcze pobieranie z wiersza nie jest zaimplementowana, struktura wywołuje [DoFieldExchange](#dofieldexchange). Aby zaimplementować zbiorcze pobieranie z wiersza, należy określić `CRecordset::useMultiRowFetch` opcji `dwOptions` parametru w [Otwórz](#open) funkcję elementu członkowskiego.  
   
 > [!NOTE]
-> `DoBulkFieldExchange`jest dostępna tylko wtedy, gdy używasz klasę pochodzącą od `CRecordset`. Jeśli utworzono obiekt zestawu rekordów bezpośrednio z `CRecordset`, należy wywołać [GetFieldValue](#getfieldvalue) funkcji członkowskiej do pobierania danych.  
+> `DoBulkFieldExchange` jest dostępna tylko wtedy, gdy używasz klasę pochodzącą od `CRecordset`. Jeśli utworzono obiekt zestawu rekordów bezpośrednio z `CRecordset`, należy wywołać [GetFieldValue](#getfieldvalue) funkcji członkowskiej do pobierania danych.  
   
  Zbiorcza wymiana pól rekordów (RFX zbiorczego) jest podobny do wymiana pól rekordów (RFX). Danych jest automatycznie przenoszona ze źródła danych do obiektu zestawu rekordów. Jednak nie można wywołać `AddNew`, **Edytuj**, **usunąć**, lub **aktualizacji** Aby przetransferować zmiany wprowadzone do źródła danych. Klasa `CRecordset` aktualnie nie zapewnia mechanizm aktualizacji zbiorczej wiersze danych; jednak napisania własnych funkcji za pomocą funkcji interfejsu API ODBC **SQLSetPos**.  
   
@@ -516,7 +511,7 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
   
  Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Aby uzyskać odpowiednie informacje, zobacz artykuł [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="dofieldexchange"></a>CRecordset::DoFieldExchange  
+##  <a name="dofieldexchange"></a>  CRecordset::DoFieldExchange  
  Wywoływane w celu wymiany danych (w obu kierunkach) między elementy członkowskie danych pola zestawu rekordów i odpowiedniego rekordu w źródle danych. Implementuje rekord wymiana pól (RFX).  
   
 ```  
@@ -528,12 +523,12 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
  Wskaźnik do [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) obiektu. Platformę będzie już skonfigurowano tego obiektu do określenia kontekstu dla operacji wymiana pola.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy zbiorcze pobieranie z wiersza nie jest zaimplementowana, struktura wywołuje funkcji członkowskiej do automatycznie wymiany danych między elementy członkowskie danych pola obiektu zestawu rekordów i odpowiednie kolumny bieżącego rekordu w źródle danych. `DoFieldExchange`także wiąże użytkownika elementy członkowskie danych parametru do parametru zastępcze w ciągu instrukcji SQL dla zaznaczenia w zestawie rekordów.  
+ Gdy zbiorcze pobieranie z wiersza nie jest zaimplementowana, struktura wywołuje funkcji członkowskiej do automatycznie wymiany danych między elementy członkowskie danych pola obiektu zestawu rekordów i odpowiednie kolumny bieżącego rekordu w źródle danych. `DoFieldExchange` także wiąże użytkownika elementy członkowskie danych parametru do parametru zastępcze w ciągu instrukcji SQL dla zaznaczenia w zestawie rekordów.  
   
  Jeśli zaimplementowano zbiorcze pobieranie z wiersza struktura wywołuje [DoBulkFieldExchange](#dobulkfieldexchange). Aby zaimplementować zbiorcze pobieranie z wiersza, należy określić `CRecordset::useMultiRowFetch` opcji `dwOptions` parametru w [Otwórz](#open) funkcję elementu członkowskiego.  
   
 > [!NOTE]
-> `DoFieldExchange`jest dostępna tylko wtedy, gdy używasz klasę pochodzącą od `CRecordset`. Jeśli utworzono obiekt zestawu rekordów bezpośrednio z `CRecordset`, należy wywołać [GetFieldValue](#getfieldvalue) funkcji członkowskiej do pobierania danych.  
+> `DoFieldExchange` jest dostępna tylko wtedy, gdy używasz klasę pochodzącą od `CRecordset`. Jeśli utworzono obiekt zestawu rekordów bezpośrednio z `CRecordset`, należy wywołać [GetFieldValue](#getfieldvalue) funkcji członkowskiej do pobierania danych.  
   
  Pola danych, nazywane wymiana pól rekordów (RFX) programu exchange działa w obu kierunkach: elementy członkowskie danych pola obiektu zestawu rekordów w polach rekordu w źródle danych oraz rekordu w źródle danych do obiektu zestawu rekordów.  
   
@@ -547,7 +542,7 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
   
  Dalsze przykłady i szczegółowe informacje o `DoFieldExchange`, zapoznaj się z artykułem [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Aby uzyskać ogólne informacje o RFX, zobacz artykuł [wymiana pól rekordów](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="edit"></a>CRecordset::Edit  
+##  <a name="edit"></a>  CRecordset::Edit  
  Zezwala na zmiany bieżącego rekordu.  
   
 ```  
@@ -575,7 +570,7 @@ virtual void Edit();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDatabase#20](../../mfc/codesnippet/cpp/crecordset-class_4.cpp)]  
   
-##  <a name="flushresultset"></a>CRecordset::FlushResultSet  
+##  <a name="flushresultset"></a>  CRecordset::FlushResultSet  
  Pobiera zestaw wyników dalej wstępnie zdefiniowanego zapytania (procedury składowanej), jeśli istnieje wiele zestawów wyników.  
   
 ```  
@@ -590,7 +585,7 @@ BOOL FlushResultSet();
   
  Jeśli wstępnie zdefiniowanego zapytania używa parametru wyjściowego lub parametry wejścia/wyjścia, należy wywołać `FlushResultSet` dopóki zwraca `FALSE` (wartość 0), w celu uzyskania tych wartości parametru.  
   
- `FlushResultSet`wywołuje funkcję interfejsu API ODBC `SQLMoreResults`. Jeśli `SQLMoreResults` zwraca `SQL_ERROR` lub `SQL_INVALID_HANDLE`, następnie `FlushResultSet` spowoduje zgłoszenie wyjątku. Aby uzyskać więcej informacji na temat `SQLMoreResults`, zobacz zestaw Windows SDK.  
+ `FlushResultSet` wywołuje funkcję interfejsu API ODBC `SQLMoreResults`. Jeśli `SQLMoreResults` zwraca `SQL_ERROR` lub `SQL_INVALID_HANDLE`, następnie `FlushResultSet` spowoduje zgłoszenie wyjątku. Aby uzyskać więcej informacji na temat `SQLMoreResults`, zobacz zestaw Windows SDK.  
   
  Twoja procedura składowana musi mieć powiązany pola, jeśli chcesz wywołać `FlushResultSet`.  
   
@@ -601,7 +596,7 @@ BOOL FlushResultSet();
   
  [!code-cpp[NVC_MFCDatabase#22](../../mfc/codesnippet/cpp/crecordset-class_6.cpp)]  
   
-##  <a name="getbookmark"></a>CRecordset::GetBookmark  
+##  <a name="getbookmark"></a>  CRecordset::GetBookmark  
  Pobiera wartość zakładki dla bieżącego rekordu.  
   
 ```  
@@ -618,14 +613,14 @@ void GetBookmark(CDBVariant& varBookmark);
 > [!NOTE]
 >  Jeśli zakładki są nieobsługiwane lub jest niedostępny, wywoływania `GetBookmark` spowodują wyjątek. Zakładki nie są obsługiwane na zestawy rekordów tylko do przodu.  
   
- `GetBookmark`przypisuje wartość zakładki dla bieżącego rekordu `CDBVariant` obiektu. Aby powrócić do tego rekordu w dowolnym momencie po przeniesieniu do innego rekordu, należy wywołać [SetBookmark](#setbookmark) z odpowiednimi `CDBVariant` obiektu.  
+ `GetBookmark` przypisuje wartość zakładki dla bieżącego rekordu `CDBVariant` obiektu. Aby powrócić do tego rekordu w dowolnym momencie po przeniesieniu do innego rekordu, należy wywołać [SetBookmark](#setbookmark) z odpowiednimi `CDBVariant` obiektu.  
   
 > [!NOTE]
 >  Po pewnych operacji rekordów zakładki może nie być już prawidłowe. Na przykład, jeśli wywołujesz `GetBookmark` następuje **Requery**, nie może być może zwrócić do rekordu o `SetBookmark`. Wywołanie [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) do sprawdzenia, czy można bezpiecznie wywołać `SetBookmark`.  
   
  Aby uzyskać więcej informacji na temat zakładek i nawigacji zestawu rekordów, zobacz artykuły [zestaw rekordów: zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) i [zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="getdefaultconnect"></a>CRecordset::GetDefaultConnect  
+##  <a name="getdefaultconnect"></a>  CRecordset::GetDefaultConnect  
  Wywołuje się, by pobrać domyślny ciąg połączenia.  
   
 ```  
@@ -638,7 +633,7 @@ virtual CString GetDefaultConnect();
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę funkcję elementu członkowskiego, aby pobrać domyślny ciąg połączenia dla źródła danych, na której oparto zestaw rekordów. ClassWizard implementuje tę funkcję dla Ciebie, określając to samo źródło danych używanych w ClassWizard, aby uzyskać informacje dotyczące tabel i kolumn. Prawdopodobnie znajduje się ona wygodne polegać na tym domyślne połączenie podczas tworzenia aplikacji. Jednak domyślne połączenie nie może być odpowiednie dla użytkowników aplikacji. Jeśli tak jest, należy reimplement tej funkcji, odrzucając ClassWizard w wersji. Aby uzyskać więcej informacji dotyczących parametrów połączenia, zobacz artykuł [źródła danych (ODBC)](../../data/odbc/data-source-odbc.md).  
   
-##  <a name="getdefaultsql"></a>CRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>  CRecordset::GetDefaultSQL  
  Wywołuje się, by pobrać domyślny ciąg SQL do wykonania.  
   
 ```  
@@ -660,7 +655,7 @@ virtual CString GetDefaultSQL();
 > [!CAUTION]
 >  Nazwa tabeli będzie pusty, jeśli w ramach nie można zidentyfikować nazwę tabeli, jeśli podano wiele nazw tabel lub **WYWOŁANIA** nie można zinterpretować instrukcji. Należy pamiętać, że podczas korzystania **WYWOŁAĆ** instrukcji, nie należy umieszczać odstępów między nawias klamrowy i **WYWOŁAĆ** — słowo kluczowe, ani powinien Wstaw odstęp przed nawias klamrowy lub przed  **Wybierz** — słowo kluczowe w **wybierz** instrukcji.  
   
-##  <a name="getfieldvalue"></a>CRecordset::GetFieldValue  
+##  <a name="getfieldvalue"></a>  CRecordset::GetFieldValue  
  Pobiera dane pola z bieżącego rekordu.  
   
 ```  
@@ -726,7 +721,7 @@ void GetFieldValue(
 > [!NOTE]
 >  W przypadku obiektu zestawu rekordów bez wynikających z `CRecordset`, nie ma załadowana Biblioteka kursorów ODBC. Biblioteka kursorów musi mieć zestawu rekordów co najmniej jedną kolumnę powiązane; Jednak jeśli używasz `CRecordset` bezpośrednio, Brak kolumn są powiązane. Funkcje Członkowskie [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) i [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) kontrolowanie, czy Biblioteka kursorów zostanie załadowany.  
   
- `GetFieldValue`wywołuje funkcję interfejsu API ODBC **Procedura SQLGetData**. Jeśli sterownik Wyświetla wartość **SQL_NO_TOTAL** rzeczywista długość wartości pola `GetFieldValue` zgłasza wyjątek. Aby uzyskać więcej informacji na temat **Procedura SQLGetData**, zobacz zestaw Windows SDK.  
+ `GetFieldValue` wywołuje funkcję interfejsu API ODBC **Procedura SQLGetData**. Jeśli sterownik Wyświetla wartość **SQL_NO_TOTAL** rzeczywista długość wartości pola `GetFieldValue` zgłasza wyjątek. Aby uzyskać więcej informacji na temat **Procedura SQLGetData**, zobacz zestaw Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Następujący przykładowy kod przedstawia wywołań `GetFieldValue` dla obiekt zestawu rekordów zadeklarowany bezpośrednio z `CRecordset`.  
@@ -738,7 +733,7 @@ void GetFieldValue(
   
  Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="getodbcfieldcount"></a>CRecordset::GetODBCFieldCount  
+##  <a name="getodbcfieldcount"></a>  CRecordset::GetODBCFieldCount  
  Pobiera całkowitą liczbę pól w obiekt zestawu rekordów.  
   
 ```  
@@ -751,7 +746,7 @@ short GetODBCFieldCount() const;
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji o tworzeniu zestawów rekordów, zobacz artykuł [zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="getodbcfieldinfo"></a>CRecordset::GetODBCFieldInfo  
+##  <a name="getodbcfieldinfo"></a>  CRecordset::GetODBCFieldInfo  
  Pobiera informacje o polach w zestawie rekordów.  
   
 ```  
@@ -782,7 +777,7 @@ void GetODBCFieldInfo(
   
  Aby uzyskać więcej informacji o tworzeniu zestawów rekordów, zobacz artykuł [zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="getrecordcount"></a>CRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>  CRecordset::GetRecordCount  
  Określa rozmiar zestawu rekordów.  
   
 ```  
@@ -797,7 +792,7 @@ long GetRecordCount() const;
 > [!CAUTION]
 >  Liczba rekordów jest przechowywany jako "znacznik limitu górnego," rekordu najwyższym numerze jeszcze występuje, gdy użytkownik przechodzi do rekordów. Całkowita liczba rekordów jest znany tylko, gdy użytkownik zostanie przeniesiona poza ostatniego rekordu. Ze względu na wydajność, licznik nie jest aktualizowany po wywołaniu `MoveLast`. Aby samodzielnie liczba rekordów, należy wywołać `MoveNext` wielokrotnie do `IsEOF` zwraca różną od zera. Dodawanie rekordów za pomocą **CRecordset:AddNew** i **aktualizacji** zwiększa liczbę; usuwanie rekordu za pośrednictwem `CRecordset::Delete` zmniejsza wartość licznika.  
   
-##  <a name="getrowsetsize"></a>CRecordset::GetRowsetSize  
+##  <a name="getrowsetsize"></a>  CRecordset::GetRowsetSize  
  Pobiera liczbę wierszy, które chcesz pobrać podczas pobierania danego bieżące ustawienia.  
   
 ```  
@@ -814,7 +809,7 @@ DWORD GetRowsetSize() const;
   
  Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="getrowsfetched"></a>CRecordset::GetRowsFetched  
+##  <a name="getrowsfetched"></a>  CRecordset::GetRowsFetched  
  Określa, ile rekordów rzeczywiście zostały pobrane po pobraniu.  
   
 ```  
@@ -834,7 +829,7 @@ DWORD GetRowsFetched() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDatabase#24](../../mfc/codesnippet/cpp/crecordset-class_8.cpp)]  
   
-##  <a name="getrowstatus"></a>CRecordset::GetRowStatus  
+##  <a name="getrowstatus"></a>  CRecordset::GetRowStatus  
  Uzyskuje informacje o stanie dla wiersza w bieżącym zestawie wierszy.  
   
 ```  
@@ -849,7 +844,7 @@ WORD GetRowStatus(WORD wRow) const;
  Wartość stanu wiersza. Aby uzyskać więcej informacji zobacz uwagi.  
   
 ### <a name="remarks"></a>Uwagi  
- `GetRowStatus`Zwraca wartość, która wskazuje zmiany stanu do wiersza od momentu jego ostatniego pobrane ze źródła danych, lub że nie wiersz odpowiadający `wRow` została pobrana. W poniższej tabeli przedstawiono możliwe wartości zwracane.  
+ `GetRowStatus` Zwraca wartość, która wskazuje zmiany stanu do wiersza od momentu jego ostatniego pobrane ze źródła danych, lub że nie wiersz odpowiadający `wRow` została pobrana. W poniższej tabeli przedstawiono możliwe wartości zwracane.  
   
 |Wartość stanu|Opis|  
 |------------------|-----------------|  
@@ -862,7 +857,7 @@ WORD GetRowStatus(WORD wRow) const;
   
  Aby uzyskać więcej informacji, zobacz opis funkcji interfejsu API ODBC **procedury SQLExtendedFetch** w zestawie Windows SDK.  
   
-##  <a name="getstatus"></a>CRecordset::GetStatus  
+##  <a name="getstatus"></a>  CRecordset::GetStatus  
  Określa indeks bieżącego rekordu w zestawie rekordów i czy została napotkana ostatniego rekordu.  
   
 ```  
@@ -874,7 +869,7 @@ void GetStatus(CRecordsetStatus& rStatus) const;
  Odwołanie do **CRecordsetStatus** obiektu. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.  
   
 ### <a name="remarks"></a>Uwagi  
- `CRecordset`próbuje śledzić indeksu, ale w pewnych okolicznościach to może nie być możliwe. Zobacz [GetRecordCount](#getrecordcount) wyjaśnienie.  
+ `CRecordset` próbuje śledzić indeksu, ale w pewnych okolicznościach to może nie być możliwe. Zobacz [GetRecordCount](#getrecordcount) wyjaśnienie.  
   
  **CRecordsetStatus** struktury ma następujący format:  
   
@@ -894,7 +889,7 @@ void GetStatus(CRecordsetStatus& rStatus) const;
   
 - **m_bRecordCountFinal** Nonzero Jeśli ustalono całkowita liczba rekordów w zestawie rekordów. Zazwyczaj te muszą być spełnione przez uruchomienie na początku zestawu rekordów i wywoływania `MoveNext` do momentu `IsEOF` zwraca różną od zera. Jeśli ten element członkowski jest równy zero, rekord liczba zwrócony przez `GetRecordCount`, jeśli nie -1, jest tylko licznik "znacznik limitu górnego" rekordów.  
   
-##  <a name="getsql"></a>CRecordset::GetSQL  
+##  <a name="getsql"></a>  CRecordset::GetSQL  
  Wywołanie tej funkcji Członkowskich uzyskanie instrukcji SQL, którego użyto do wybierania rekordów w zestawie rekordów, gdy została otwarta.  
   
 ```  
@@ -912,7 +907,7 @@ const CString& GetSQL() const;
 > [!NOTE]
 >  Wywołanie tej funkcji Członkowskich tylko po wywołaniu [Otwórz](#open).  
   
-##  <a name="gettablename"></a>CRecordset::GetTableName  
+##  <a name="gettablename"></a>  CRecordset::GetTableName  
  Pobiera nazwę tabeli SQL, na której oparto zapytania w zestawie rekordów.  
   
 ```  
@@ -923,12 +918,12 @@ const CString& GetTableName() const;
  A **const** odwołanie do `CString` zawierający tabeli nazw, jeśli zestaw rekordów jest oparte na dla tabeli, a w przeciwnym razie ciągiem pustym.  
   
 ### <a name="remarks"></a>Uwagi  
- `GetTableName`jest prawidłowa, jeśli zestaw rekordów jest oparty na tabeli nie sprzężenia wiele tabel lub wstępnie zdefiniowanego zapytania (procedury składowanej). Nazwa jest tylko do odczytu.  
+ `GetTableName` jest prawidłowa, jeśli zestaw rekordów jest oparty na tabeli nie sprzężenia wiele tabel lub wstępnie zdefiniowanego zapytania (procedury składowanej). Nazwa jest tylko do odczytu.  
   
 > [!NOTE]
 >  Wywołanie tej funkcji Członkowskich tylko po wywołaniu [Otwórz](#open).  
   
-##  <a name="isbof"></a>CRecordset::IsBOF  
+##  <a name="isbof"></a>  CRecordset::IsBOF  
  Zwraca wartość niezerową, jeśli zestaw rekordów ma zostać umieszczony przed pierwszy rekord. Brak bieżącego rekordu.  
   
 ```  
@@ -948,7 +943,7 @@ BOOL IsBOF() const;
   
  [!code-cpp[NVC_MFCDatabase#25](../../mfc/codesnippet/cpp/crecordset-class_9.cpp)]  
   
-##  <a name="isdeleted"></a>CRecordset::IsDeleted  
+##  <a name="isdeleted"></a>  CRecordset::IsDeleted  
  Określa, czy bieżący rekord został usunięty.  
   
 ```  
@@ -968,7 +963,7 @@ BOOL IsDeleted() const;
 > [!NOTE]
 >  Jeśli zaimplementowano zbiorcze pobieranie z wiersza, powinien nie wywołanie `IsDeleted`. Zamiast tego wywołać [GetRowStatus](#getrowstatus) funkcję elementu członkowskiego. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="iseof"></a>CRecordset::IsEOF  
+##  <a name="iseof"></a>  CRecordset::IsEOF  
  Zwraca wartość niezerową, jeśli zestaw rekordów zawiera została ustawiona za ostatni rekord. Brak bieżącego rekordu.  
   
 ```  
@@ -986,7 +981,7 @@ BOOL IsEOF() const;
 ### <a name="example"></a>Przykład  
  Zobacz przykład [IsBOF](#isbof).  
   
-##  <a name="isfielddirty"></a>CRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>  CRecordset::IsFieldDirty  
  Określa, czy element członkowski danych określone pole zostało zmienione od [Edytuj](#edit) lub [AddNew](#addnew) została wywołana.  
   
 ```  
@@ -1008,11 +1003,11 @@ BOOL IsFieldDirty(void* pv);
   
  Wywoływanie `IsFieldDirty` spowoduje zresetowanie efekty poprzednich wywołań [SetFieldDirty](#setfielddirty) od stanu zanieczyszczone pola jest ponownie oceniane. W `AddNew` przypadku, jeśli bieżąca wartość pola różni się od wartości null pseudo pole Stan jest ustawiony jako zakłócone. W **Edytuj** wielkość liter, jeśli wartość pola różni się od wartość w pamięci podręcznej, stan pola przybiera wartość zanieczyszczone.  
   
- `IsFieldDirty`jest implementowane za pośrednictwem [DoFieldExchange](#dofieldexchange).  
+ `IsFieldDirty` jest implementowane za pośrednictwem [DoFieldExchange](#dofieldexchange).  
   
  Aby uzyskać więcej informacji o zanieczyszczeniu flagi, zobacz artykuł [zestaw rekordów: jak zestawy rekordów wybierz rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
   
-##  <a name="isfieldnull"></a>CRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>  CRecordset::IsFieldNull  
  Zwraca wartość niezerową, jeśli określone pole bieżącego rekordu ma wartość Null (nie ma wartości).  
   
 ```  
@@ -1032,9 +1027,9 @@ BOOL IsFieldNull(void* pv);
 > [!NOTE]
 >  Ta funkcja członkowska nie ma zastosowania na zestawy rekordów, które korzystają z zbiorcze pobieranie z wiersza. Jeśli zaimplementowano zbiorcze pobieranie z wiersza, następnie `IsFieldNull` zawsze zwraca **FALSE** i spowoduje potwierdzenia nie powiodło się. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- `IsFieldNull`jest implementowane za pośrednictwem [DoFieldExchange](#dofieldexchange).  
+ `IsFieldNull` jest implementowane za pośrednictwem [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="isfieldnullable"></a>CRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>  CRecordset::IsFieldNullable  
  Zwraca wartość niezerową, jeśli określone pole bieżącego rekordu można ustawić wartości null (o wartości).  
   
 ```  
@@ -1065,9 +1060,9 @@ BOOL IsFieldNullable(void* pv);
   
  Oznacza to, nie można ustawić wszystkie **param** pól do **NULL**, jak w przypadku **outputColumn** pól.  
   
- `IsFieldNullable`jest implementowane za pośrednictwem [DoFieldExchange](#dofieldexchange).  
+ `IsFieldNullable` jest implementowane za pośrednictwem [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="isopen"></a>CRecordset::IsOpen  
+##  <a name="isopen"></a>  CRecordset::IsOpen  
  Określa, czy zestaw rekordów jest już otwarty.  
   
 ```  
@@ -1077,7 +1072,7 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli podano niezerowe obiekty zestawów rekordów [Otwórz](#open) lub [Requery](#requery) wcześniej została wywołana funkcja elementu członkowskiego i nie została zamknięta zestawu rekordów; w przeciwnym razie wartość 0.  
   
-##  <a name="m_hstmt"></a>CRecordset::m_hstmt  
+##  <a name="m_hstmt"></a>  CRecordset::m_hstmt  
  Zawiera dojście do struktury danych ODBC instrukcji typu **HSTMT**skojarzonych z zestawu rekordów.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1088,7 +1083,7 @@ BOOL IsOpen() const;
   
  Zwykle nie trzeba uzyskać dostępu do **HSTMT** bezpośrednio, ale trzeba bezpośrednie wykonywanie instrukcji SQL. `ExecuteSQL` Funkcji członkowskiej klasy `CDatabase` zawiera przykład za pomocą **m_hstmt**.  
   
-##  <a name="m_nfields"></a>CRecordset::m_nFields  
+##  <a name="m_nfields"></a>  CRecordset::m_nFields  
  Zawiera liczbę elementy członkowskie danych pola w klasie rekordów; oznacza to, że liczba kolumn wybranych przez zestaw rekordów ze źródła danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1106,7 +1101,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Przykład  
  Zapoznaj się z artykułem [wymiana pól rekordów: za pomocą RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
   
-##  <a name="m_nparams"></a>CRecordset::m_nParams  
+##  <a name="m_nparams"></a>  CRecordset::m_nParams  
  Zawiera liczbę elementy członkowskie danych parametru w klasie rekordów; oznacza to, że liczba parametrów przekazany z zapytaniem w zestawie rekordów.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1120,7 +1115,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Przykład  
   Zobacz artykuły [zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) i [wymiana pól rekordów: za pomocą RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
   
-##  <a name="m_pdatabase"></a>CRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CRecordset::m_pDatabase  
  Zawiera wskaźnik do `CDatabase` obiektu za pomocą których zestaw rekordów jest połączony ze źródłem danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1128,7 +1123,7 @@ BOOL IsOpen() const;
   
  Zwykle nie bezpośrednio należy używać wskaźnika przechowywane w **m_pDatabase**. Jeśli piszesz własnych rozszerzeń `CRecordset`, jednak czasami trzeba używać wskaźnika. Na przykład może być potrzebny wskaźnik generowanie własnego `CDBException`s. Lub może być potrzebny go należy zrobić coś korzystającej z tego samego `CDatabase` obiektu, na przykład przeprowadzania transakcji, ustawienia limitów czasu, lub wywoływania `ExecuteSQL` funkcji członkowskiej klasy `CDatabase` do wykonywania instrukcji SQL bezpośrednio.  
   
-##  <a name="m_strfilter"></a>CRecordset::m_strFilter  
+##  <a name="m_strfilter"></a>  CRecordset::m_strFilter  
  Po utworzenia obiekt zestawu rekordów, ale przed wywołaniem jego **Otwórz** elementu członkowskiego działania, użyj tego elementu członkowskiego danych do przechowywania `CString` zawierający SQL **gdzie** klauzuli.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1145,7 +1140,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDatabase#30](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]  
   
-##  <a name="m_strsort"></a>CRecordset::m_strSort  
+##  <a name="m_strsort"></a>  CRecordset::m_strSort  
  Po utworzenia obiekt zestawu rekordów, ale przed wywołaniem jego **Otwórz** elementu członkowskiego działania, użyj tego elementu członkowskiego danych do przechowywania `CString` zawierający SQL **ORDER BY** klauzuli.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1162,7 +1157,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDatabase#31](../../mfc/codesnippet/cpp/crecordset-class_13.cpp)]  
   
-##  <a name="move"></a>CRecordset::Move  
+##  <a name="move"></a>  CRecordset::Move  
  Przenosi bieżący wskaźnik rekordów w zestawie rekordów do przodu lub do tyłu.  
   
 ```  
@@ -1192,7 +1187,7 @@ virtual void Move(
   
 |wFetchType|Pobranych wierszy|Funkcja członkowska równoważne|  
 |----------------|--------------------|--------------------------------|  
-|`SQL_FETCH_RELATIVE`(wartość domyślna)|Uruchamianie zestawu wierszy `nRows` wiersze z pierwszego wiersza w bieżącym zestawie wierszy.||  
+|`SQL_FETCH_RELATIVE` (wartość domyślna)|Uruchamianie zestawu wierszy `nRows` wiersze z pierwszego wiersza w bieżącym zestawie wierszy.||  
 |`SQL_FETCH_NEXT`|Zestaw wierszy dalej; `nRows` jest ignorowana.|[MoveNext](#movenext)|  
 |`SQL_FETCH_PRIOR`|Poprzedniego zestawu wierszy; `nRows` jest ignorowana.|[MovePrev](#moveprev)|  
 |`SQL_FETCH_FIRST`|Pierwszy zestaw wierszy w zestawie rekordów; `nRows` jest ignorowana.|[MoveFirst](#movefirst)|  
@@ -1217,7 +1212,7 @@ virtual void Move(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDatabase#28](../../mfc/codesnippet/cpp/crecordset-class_14.cpp)]  
   
-##  <a name="movefirst"></a>CRecordset::MoveFirst  
+##  <a name="movefirst"></a>  CRecordset::MoveFirst  
  Sprawia, że pierwszy rekord pierwszy zestaw wierszy bieżącego rekordu.  
   
 ```  
@@ -1246,7 +1241,7 @@ void MoveFirst();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [IsBOF](#isbof).  
   
-##  <a name="movelast"></a>CRecordset::MoveLast  
+##  <a name="movelast"></a>  CRecordset::MoveLast  
  Sprawia, że pierwszy rekord w ostatnich wierszy pełną bieżącego rekordu.  
   
 ```  
@@ -1273,7 +1268,7 @@ void MoveLast();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [IsBOF](#isbof).  
   
-##  <a name="movenext"></a>CRecordset::MoveNext  
+##  <a name="movenext"></a>  CRecordset::MoveNext  
  Sprawia, że pierwszy rekord w zestawie wierszy dalej bieżącego rekordu.  
   
 ```  
@@ -1300,7 +1295,7 @@ void MoveNext();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [IsBOF](#isbof).  
   
-##  <a name="moveprev"></a>CRecordset::MovePrev  
+##  <a name="moveprev"></a>  CRecordset::MovePrev  
  Sprawia, że pierwszy rekord w poprzednim wierszy bieżącego rekordu.  
   
 ```  
@@ -1330,7 +1325,7 @@ void MovePrev();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [IsBOF](#isbof).  
   
-##  <a name="onsetoptions"></a>CRecordset::OnSetOptions  
+##  <a name="onsetoptions"></a>  CRecordset::OnSetOptions  
  Wywołuje się, by ustawić opcje (używane na wybór) określona w instrukcji ODBC.  
   
 ```  
@@ -1342,13 +1337,13 @@ virtual void OnSetOptions(HSTMT hstmt);
  **HSTMT** instrukcji ODBC, którego opcje mają być tworzone.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie `OnSetOptions` można ustawić opcje (używane na wybór) określona w instrukcji ODBC. Struktura wywołuje tę funkcję elementu członkowskiego, aby ustawić opcje początkowego zestawu rekordów. `OnSetOptions`Określa źródło danych obsługi przewijanego kursory i współbieżność kursora i odpowiednio ustawia opcje w zestawie rekordów. (Natomiast `OnSetOptions` jest używane dla operacji wyboru `OnSetUpdateOptions` jest używane dla operacji update.)  
+ Wywołanie `OnSetOptions` można ustawić opcje (używane na wybór) określona w instrukcji ODBC. Struktura wywołuje tę funkcję elementu członkowskiego, aby ustawić opcje początkowego zestawu rekordów. `OnSetOptions` Określa źródło danych obsługi przewijanego kursory i współbieżność kursora i odpowiednio ustawia opcje w zestawie rekordów. (Natomiast `OnSetOptions` jest używane dla operacji wyboru `OnSetUpdateOptions` jest używane dla operacji update.)  
   
  Zastąpienie `OnSetOptions` Aby ustawić opcje określonego sterownika lub źródła danych. Na przykład, jeśli źródło danych obsługuje otwieranie w trybie wyłączności, mogą zastąpić `OnSetOptions` mógł korzystać z tej możliwości.  
   
  Aby uzyskać więcej informacji na temat kursorów, zobacz artykuł [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="onsetupdateoptions"></a>CRecordset::OnSetUpdateOptions  
+##  <a name="onsetupdateoptions"></a>  CRecordset::OnSetUpdateOptions  
  Wywołuje się, by ustawić opcje (używane na aktualizację) określona w instrukcji ODBC.  
   
 ```  
@@ -1366,7 +1361,7 @@ virtual void OnSetUpdateOptions(HSTMT hstmt);
   
  Aby uzyskać więcej informacji na temat kursorów, zobacz artykuł [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="open"></a>CRecordset::Open  
+##  <a name="open"></a>  CRecordset::Open  
  Zostanie otwarty zestaw rekordów przez pobieranie tabeli lub wykonywania zapytania, który reprezentuje zestaw rekordów.  
   
 ```  
@@ -1422,7 +1417,7 @@ virtual BOOL Open(
   
 - **CRecordset::optimizeBulkAdd** Użyj przygotowanej instrukcji SQL w celu zoptymalizowania Dodawanie wielu rekordów w tym samym czasie. Ma zastosowanie tylko wtedy, gdy nie używasz funkcji interfejsu API ODBC **SQLSetPos** można zaktualizować zestawu rekordów. Pierwsza aktualizacja określa pola, które są oznaczonych jako zakłócone. Ta opcja jest wykluczają się wzajemnie z `CRecordset::useMultiRowFetch`.  
   
-- `CRecordset::useMultiRowFetch`Implementuje zbiorcze pobieranie z wiersza umożliwia wiele wierszy, które mają zostać pobrane w ramach jednego pobierania operacji. Jest to zaawansowana funkcja mające na celu poprawę wydajności; Zbiorcza wymiana pól rekordów nie jest jednak obsługiwane przez ClassWizard. Ta opcja jest wykluczają się wzajemnie z **CRecordset::optimizeBulkAdd**. Należy pamiętać, że jeśli określisz `CRecordset::useMultiRowFetch`, następnie opcję **CRecordset::noDirtyFieldCheck** zostanie włączona automatycznie (podwójnego buforowania nie będą dostępne); w zestawy rekordów tylko do przodu, opcja  **CRecordset::useExtendedFetch** zostanie włączone automatycznie. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+- `CRecordset::useMultiRowFetch` Implementuje zbiorcze pobieranie z wiersza umożliwia wiele wierszy, które mają zostać pobrane w ramach jednego pobierania operacji. Jest to zaawansowana funkcja mające na celu poprawę wydajności; Zbiorcza wymiana pól rekordów nie jest jednak obsługiwane przez ClassWizard. Ta opcja jest wykluczają się wzajemnie z **CRecordset::optimizeBulkAdd**. Należy pamiętać, że jeśli określisz `CRecordset::useMultiRowFetch`, następnie opcję **CRecordset::noDirtyFieldCheck** zostanie włączona automatycznie (podwójnego buforowania nie będą dostępne); w zestawy rekordów tylko do przodu, opcja  **CRecordset::useExtendedFetch** zostanie włączone automatycznie. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 - **CRecordset::skipDeletedRecords** pominąć wszystkie rekordy usunięte podczas nawigowania do zestawu rekordów. Spowoduje to spowolnienie wydajności w niektórych pobraniach względną. Ta opcja nie jest prawidłowy w zestawy rekordów tylko do przodu. Wywołanie [Przenieś](#move) z `nRows` parametru wartość 0 i **CRecordset::skipDeletedRecords** opcji set, **Przenieś** będzie potwierdzenia. Należy pamiętać, że **CRecordset::skipDeletedRecords** jest podobny do *pakowania sterownik*, co oznacza, że usunięte wiersze zostaną usunięte z tego zestawu rekordów. Jednak jeśli sterownik pakietów rekordów, następnie będzie pomijane tylko te rekordy, które należy usunąć; rekordy zostały usunięte przez innych użytkowników, gdy jest otwarty zestaw rekordów nie będzie pomijane. **CRecordset::skipDeletedRecords** pominie wiersz usunięty przez innych użytkowników.  
   
@@ -1451,7 +1446,7 @@ virtual BOOL Open(
   
 |Wartość parametru lpszSQL|Wybrane rekordy są określane przez|Przykład|  
 |------------------------------------|----------------------------------------|-------------|  
-|**WARTOŚĆ NULL**|Długość ciągu zwróconego przez `GetDefaultSQL`.||  
+|**NULL**|Długość ciągu zwróconego przez `GetDefaultSQL`.||  
 |Nazwa tabeli SQL|Wszystkie kolumny tabeli listy w `DoFieldExchange` lub `DoBulkFieldExchange`.|`"Customer"`|  
 |Nazwa wstępnie zdefiniowanego zapytania (procedury składowanej)|Kolumny, które zdefiniowano zapytania do zwrócenia.|`"{call OverDueAccts}"`|  
 |**Wybierz** listy kolumn **FROM** listę tabel|Określonych kolumn z określonych tabel.|`"SELECT CustId, CustName FROM`<br /><br /> `Customer"`|  
@@ -1474,7 +1469,7 @@ virtual BOOL Open(
   
  [!code-cpp[NVC_MFCDatabase#16](../../mfc/codesnippet/cpp/crecordset-class_15.cpp)]  
   
-##  <a name="refreshrowset"></a>CRecordset::RefreshRowset  
+##  <a name="refreshrowset"></a>  CRecordset::RefreshRowset  
  Aktualizuje dane i stan wiersza w bieżącym zestawie wierszy.  
   
 ```  
@@ -1495,17 +1490,17 @@ void RefreshRowset(
   
  Aby użyć `RefreshRowset`, musi zaimplementowano zbiorcze pobieranie z wiersza, określając **CRecordset::useMulitRowFetch** opcji w [Otwórz](#open) funkcji członkowskiej.  
   
- `RefreshRowset`wywołuje funkcję interfejsu API ODBC **SQLSetPos**. `wLockType` Parametr określa stan blokady wiersza po **SQLSetPos** zostało wykonane. W poniższej tabeli opisano możliwe wartości `wLockType`.  
+ `RefreshRowset` wywołuje funkcję interfejsu API ODBC **SQLSetPos**. `wLockType` Parametr określa stan blokady wiersza po **SQLSetPos** zostało wykonane. W poniższej tabeli opisano możliwe wartości `wLockType`.  
   
 |wLockType|Opis|  
 |---------------|-----------------|  
-|`SQL_LOCK_NO_CHANGE`(wartość domyślna)|Sterownik lub źródła danych zapewni, że wiersz w tym samym stanie zablokowany lub odblokowany sprzed `RefreshRowset` została wywołana.|  
+|`SQL_LOCK_NO_CHANGE` (wartość domyślna)|Sterownik lub źródła danych zapewni, że wiersz w tym samym stanie zablokowany lub odblokowany sprzed `RefreshRowset` została wywołana.|  
 |`SQL_LOCK_EXCLUSIVE`|Sterownik lub źródła danych wyłącznie blokuje wiersza. Nie wszystkie źródła danych obsługuje ten typ blokady.|  
 |`SQL_LOCK_UNLOCK`|Sterownik lub źródła danych odblokowuje wiersza. Nie wszystkie źródła danych obsługuje ten typ blokady.|  
   
  Aby uzyskać więcej informacji na temat **SQLSetPos**, zobacz zestaw Windows SDK. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="requery"></a>CRecordset::Requery  
+##  <a name="requery"></a>  CRecordset::Requery  
  Odtwarza (odświeża) zestawu rekordów.  
   
 ```  
@@ -1522,7 +1517,7 @@ virtual BOOL Requery();
   
  Zestaw dynamiczny lub migawki, należy wywołać **Requery** dowolnej chwili, aby odbudować rekordów przy użyciu nowego filtru lub sortowania lub nowe wartości parametru. Ustaw nowe właściwości filtrowania lub sortowania, przypisując nowych wartości **m_strFilter** i `m_strSort` przed wywołaniem **Requery**. Ustaw nowe parametry przez przypisanie wartości nowe elementy członkowskie danych parametru przed wywołaniem **Requery**. Jeśli filtrowanie i sortowanie ciągów nie uległy zmianie, można użyć ponownie zapytanie, co zwiększa wydajność.  
   
- Jeśli próba odbudować zestaw rekordów nie powiedzie się, zestaw rekordów jest zamknięty. Przed wywołaniem **Requery**, można określić, czy zestaw rekordów można ponowieniu wywołując `CanRestart` funkcję elementu członkowskiego. `CanRestart`nie gwarantuje, że **Requery** powiedzie się.  
+ Jeśli próba odbudować zestaw rekordów nie powiedzie się, zestaw rekordów jest zamknięty. Przed wywołaniem **Requery**, można określić, czy zestaw rekordów można ponowieniu wywołując `CanRestart` funkcję elementu członkowskiego. `CanRestart` nie gwarantuje, że **Requery** powiedzie się.  
   
 > [!CAUTION]
 >  Wywołanie **Requery** tylko po wywołaniu [Otwórz](#open).  
@@ -1532,7 +1527,7 @@ virtual BOOL Requery();
   
  [!code-cpp[NVC_MFCDatabase#29](../../mfc/codesnippet/cpp/crecordset-class_16.cpp)]  
   
-##  <a name="setabsoluteposition"></a>CRecordset::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>  CRecordset::SetAbsolutePosition  
  Umieszcza zestawu rekordów w rekordzie odpowiadającą liczbie określonego rekordu.  
   
 ```  
@@ -1544,7 +1539,7 @@ void SetAbsolutePosition(long nRows);
  Na podstawie jednej porządkowym dla bieżącego rekordu w zestawie rekordów.  
   
 ### <a name="remarks"></a>Uwagi  
- `SetAbsolutePosition`Przenosi bieżący wskaźnik rekord na podstawie tej pozycji porządkowej.  
+ `SetAbsolutePosition` Przenosi bieżący wskaźnik rekord na podstawie tej pozycji porządkowej.  
   
 > [!NOTE]
 >  Ta funkcja członkowska nie jest prawidłowy w zestawy rekordów tylko do przodu.  
@@ -1558,7 +1553,7 @@ void SetAbsolutePosition(long nRows);
   
  Aby uzyskać więcej informacji na temat nawigacji zestawu rekordów i zakładki, zobacz artykuły [zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) i [zestaw rekordów: zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="setbookmark"></a>CRecordset::SetBookmark  
+##  <a name="setbookmark"></a>  CRecordset::SetBookmark  
  Umieszcza zestawu rekordów na rekord zawierający zakładką.  
   
 ```  
@@ -1582,7 +1577,7 @@ void SetBookmark(const CDBVariant& varBookmark);
   
  Aby uzyskać więcej informacji na temat zakładek i nawigacji zestawu rekordów, zobacz artykuły [zestaw rekordów: zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) i [zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="setfielddirty"></a>CRecordset::SetFieldDirty  
+##  <a name="setfielddirty"></a>  CRecordset::SetFieldDirty  
  Flagi członka danych pola zestawu rekordów, ponieważ zmianie lub bez zmian.  
   
 ```  
@@ -1619,7 +1614,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
   
  Oznacza to, nie można ustawić wszystkie **param** pól do **NULL**, jak w przypadku **outputColumn** pól.  
   
-##  <a name="setfieldnull"></a>CRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>  CRecordset::SetFieldNull  
  Flags element członkowski danych pola zestawu rekordów jako wartości Null (o specjalnie żadna wartość) lub inną niż Null.  
   
 ```  
@@ -1659,9 +1654,9 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 > [!NOTE]
 >  Podczas ustawiania parametrów na wartość Null, wywołanie `SetFieldNull` przed zestaw rekordów jest otwarty powoduje potwierdzenia. W takim przypadku wywołania [SetParamNull](#setparamnull).  
   
- `SetFieldNull`jest implementowane za pośrednictwem [DoFieldExchange](#dofieldexchange).  
+ `SetFieldNull` jest implementowane za pośrednictwem [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="setlockingmode"></a>CRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>  CRecordset::SetLockingMode  
  Ustawia tryb blokowania "optymistycznej" blokowania (ustawienie domyślne) lub blokowania "pesymistyczne". Określa sposób blokowania rekordów aktualizacji.  
   
 ```  
@@ -1679,7 +1674,7 @@ void SetLockingMode(UINT nMode);
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji Członkowskich, jeśli chcesz określić, które z dwóch strategii blokowanie rekordów aktualizacji korzysta z zestawu rekordów. Domyślnie jest tryb blokowania rekordów **optymistycznej**. Można zmienić, aby zachować ostrożność **pesymistyczne** strategii blokowania. Wywołanie `SetLockingMode` po konstruowania i otworzyć obiektu zestawu rekordów, ale przed wywołaniem **Edytuj**.  
   
-##  <a name="setparamnull"></a>CRecordset::SetParamNull  
+##  <a name="setparamnull"></a>  CRecordset::SetParamNull  
  Parametr flag, jako wartość Null (o specjalnie żadna wartość) lub inną niż Null.  
   
 ```  
@@ -1698,9 +1693,9 @@ void SetParamNull(
 ### <a name="remarks"></a>Uwagi  
  W odróżnieniu od [SetFieldNull](#setfieldnull), można wywołać `SetParamNull` przed otwarciem zestawu rekordów.  
   
- `SetParamNull`zwykle jest używana z wstępnie zdefiniowanego zapytania (procedury składowane).  
+ `SetParamNull` zwykle jest używana z wstępnie zdefiniowanego zapytania (procedury składowane).  
   
-##  <a name="setrowsetcursorposition"></a>CRecordset::SetRowsetCursorPosition  
+##  <a name="setrowsetcursorposition"></a>  CRecordset::SetRowsetCursorPosition  
  Przesuwa kursor do wiersza w bieżącym zestawie wierszy.  
   
 ```  
@@ -1719,17 +1714,17 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
   
  Umożliwia `SetRowsetCursorPosition`, musi zaimplementowano zbiorcze pobieranie z wiersza, określając `CRecordset::useMultiRowFetch` opcji `dwOptions` parametru w [Otwórz](#open) funkcji członkowskiej.  
   
- `SetRowsetCursorPosition`wywołuje funkcję interfejsu API ODBC **SQLSetPos**. `wLockType` Parametr określa stan blokady wiersza po **SQLSetPos** zostało wykonane. W poniższej tabeli opisano możliwe wartości `wLockType`.  
+ `SetRowsetCursorPosition` wywołuje funkcję interfejsu API ODBC **SQLSetPos**. `wLockType` Parametr określa stan blokady wiersza po **SQLSetPos** zostało wykonane. W poniższej tabeli opisano możliwe wartości `wLockType`.  
   
 |wLockType|Opis|  
 |---------------|-----------------|  
-|`SQL_LOCK_NO_CHANGE`(wartość domyślna)|Sterownik lub źródła danych zapewni, że wiersz w tym samym stanie zablokowany lub odblokowany sprzed `SetRowsetCursorPosition` została wywołana.|  
+|`SQL_LOCK_NO_CHANGE` (wartość domyślna)|Sterownik lub źródła danych zapewni, że wiersz w tym samym stanie zablokowany lub odblokowany sprzed `SetRowsetCursorPosition` została wywołana.|  
 |`SQL_LOCK_EXCLUSIVE`|Sterownik lub źródła danych wyłącznie blokuje wiersza. Nie wszystkie źródła danych obsługuje ten typ blokady.|  
 |`SQL_LOCK_UNLOCK`|Sterownik lub źródła danych odblokowuje wiersza. Nie wszystkie źródła danych obsługuje ten typ blokady.|  
   
  Aby uzyskać więcej informacji na temat **SQLSetPos**, zobacz zestaw Windows SDK. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="setrowsetsize"></a>CRecordset::SetRowsetSize  
+##  <a name="setrowsetsize"></a>  CRecordset::SetRowsetSize  
  Określa liczbę rekordów, które chcesz pobrać podczas pobierania.  
   
 ```  
@@ -1755,7 +1750,7 @@ virtual void SetRowsetSize(DWORD dwNewRowsetSize);
   
  Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="update"></a>CRecordset::Update  
+##  <a name="update"></a>  CRecordset::Update  
  Kończy `AddNew` lub **Edytuj** operacji zapisując nowe lub zmodyfikowane dane w źródle danych.  
   
 ```  

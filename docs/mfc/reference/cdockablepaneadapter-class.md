@@ -1,12 +1,9 @@
 ---
 title: Klasa CDockablePaneAdapter | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDockablePaneAdapter
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb0e10490a381784e40167e16d1c7ec4e7e1a19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdockablepaneadapter-class"></a>Klasa CDockablePaneAdapter
 Zapewnia obsługę dokowania `CWnd`-pochodnych okienka.  
@@ -70,7 +65,7 @@ class CDockablePaneAdapter : public CDockablePane
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxDockablePaneAdapter.h  
   
-##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
+##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
  Zwraca podstawowej okna dokującego okienku karty.  
   
 ```  
@@ -83,7 +78,7 @@ virtual CWnd* GetWrappedWnd() const;
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja służy do okna opakowana.  
   
-##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
+##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
  Ładuje stan okienka z rejestru.  
   
 ```  
@@ -94,20 +89,20 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszProfileName`  
+ [in] `lpszProfileName`  
  Nazwa profilu.  
   
- [in]`nIndex`  
+ [in] `nIndex`  
  Indeks profilu.  
   
- [in]`uiID`  
+ [in] `uiID`  
  Identyfikator okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
+##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState  
  Zapisuje stan okienka w rejestrze.  
   
 ```  
@@ -118,20 +113,20 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszProfileName`  
+ [in] `lpszProfileName`  
  Nazwa profilu.  
   
- [in]`nIndex`  
+ [in] `nIndex`  
  Indeks profilu (wartość domyślna to identyfikator formantu okna).  
   
- [in]`uiID`  
+ [in] `uiID`  
  Identyfikator okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
+##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
  Ustawia podstawowy okna dokującego okienku karty.  
   
 ```  
@@ -139,7 +134,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWnd`  
+ [in] `pWnd`  
  Wskaźnik do okna okienku karty do zakodowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  

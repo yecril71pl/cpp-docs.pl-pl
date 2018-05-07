@@ -1,12 +1,9 @@
 ---
-title: "C2800 błędy kompilatora za pośrednictwem C2899 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: C2800 błędy kompilatora za pośrednictwem C2899 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2816
@@ -51,17 +48,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00357e68e831e58057faac1b4609ac34fadc1c8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc85ab15a262a5f4976fcdc7278401a0d9a128d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>C2800 błędy kompilatora za pośrednictwem C2899
 
@@ -88,7 +83,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty o błędach, kt
 |[Błąd kompilatora C2812](compiler-error-c2812.md)|#import nie jest obsługiwany z/CLR: pure i/CLR: Safe|
 |[Błąd kompilatora C2813](compiler-error-c2813.md)|#import nie jest obsługiwany z /MP|
 |[Błąd kompilatora C2814](compiler-error-c2814.md)|"*elementu członkowskiego*": typ natywny nie może być zagnieżdżone w obrębie typu managed WinRT "*klasy*"|
-|[Błąd kompilatora C2815](compiler-error-c2815.md)|"operator delete": pierwszy formalny parametr musi być "void *", ale "*typu *" użyto|
+|[Błąd kompilatora C2815](compiler-error-c2815.md)|"operator delete": pierwszy formalny parametr musi być "void *", ale "* typu *" użyto|
 |C2816 błąd kompilatora|Nieaktualne.|
 |[Błąd kompilatora C2817](compiler-error-c2817.md)|typem zwracanym dla "operator delete" musi być "void"|
 |[Błąd kompilatora C2818](compiler-error-c2818.md)|Aplikacja przeciążonego "operator ->" jest rekursywna za pośrednictwem typu "*klasy*"|

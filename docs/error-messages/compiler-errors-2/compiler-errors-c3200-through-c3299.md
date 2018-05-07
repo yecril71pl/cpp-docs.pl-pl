@@ -1,12 +1,9 @@
 ---
-title: "C3200 błędy kompilatora za pośrednictwem C3299 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: C3200 błędy kompilatora za pośrednictwem C3299 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3220
@@ -43,17 +40,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 339a4e0f1337e120d192515cecd4dba4e04e310e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 831f51981ff72a67a55698693514dce0a3d87535
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>C3200 błędy kompilatora za pośrednictwem C3299
 
@@ -139,9 +134,9 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty o błędach, kt
 |[Błąd kompilatora C3271](compiler-error-c3271.md)|"*pola*": Nieprawidłowa wartość "*numer*" atrybutu FieldOffset|
 |[Błąd kompilatora C3272](compiler-error-c3272.md)|"*symbol*": symbol wymaga FieldOffset, ponieważ jest elementem członkowskim klasy/struktury *type_name* zdefiniowanym przez StructLayout(LayoutKind::Explicit)|
 |[Błąd kompilatora C3273](compiler-error-c3273.md)|"*— słowo kluczowe*": niedozwolone w bloku try C++|
-|[Błąd kompilatora C3274](compiler-error-c3274.md)|na koniec / &#95; &#95; finally bez pasującego spróbuj|
+|[Błąd kompilatora C3274](compiler-error-c3274.md)|na koniec /&#95;&#95;finally bez pasującego spróbuj|
 |[Błąd kompilatora C3275](compiler-error-c3275.md)|"*identyfikator*": nie można użyć tego symbolu bez kwalifikatora|
-|[Błąd kompilatora C3276](compiler-error-c3276.md)|"*— słowo kluczowe*": przejście poza koniec / &#95; &#95; koniec bloku ma niezdefiniowane zachowanie podczas obsługi zakończenia|
+|[Błąd kompilatora C3276](compiler-error-c3276.md)|"*— słowo kluczowe*": przejście poza koniec /&#95;&#95;koniec bloku ma niezdefiniowane zachowanie podczas obsługi zakończenia|
 |[Błąd kompilatora C3277](compiler-error-c3277.md)|Nie można zdefiniować niezarządzanego wyliczenia "*wyliczenie*"wewnątrz zarządzanego"*typu*"|
 |[Błąd kompilatora C3278](compiler-error-c3278.md)|bezpośrednie wywołanie interfejsu lub czystej metody "*funkcja*" zakończy się niepowodzeniem w czasie wykonywania|
 |[Błąd kompilatora C3279](compiler-error-c3279.md)|częściowe i jawne specjalizacje jak również jawne utworzenia wystąpień szablonów klasy zadeklarowany w przestrzeni nazw cli są niedozwolone.|

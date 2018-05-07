@@ -1,13 +1,10 @@
 ---
-title: "Metody tworzenia etykietek narzędzi | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Metody tworzenia etykietek narzędzi | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - tool tips [MFC], tool tip controls
 - tool tips [MFC], creating
 ms.assetid: b015e9f4-ddfb-49a4-a5a6-fa2d45e4d328
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d38bd76ff5c8d06daf474cf1c1dcc0286183bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26f6e7cbf8c6464afa90c52f9cd91dcdb55de767
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="methods-of-creating-tool-tips"></a>Metody tworzenia etykietek narzędzi
 MFC udostępnia trzy klasy Tworzenie i zarządzanie nimi narzędzie formantu etykietki: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) i [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Funkcje Członkowskie Porada narzędzia w tych klas zawijanie formantu wspólnego interfejsu API systemu Windows. Klasa `CToolBarCtrl` i klasa `CToolTipCtrl` są pochodnymi klasy `CWnd`.  
   
- `CWnd`udostępnia cztery funkcje Członkowskie tworzenie i zarządzanie nimi etykietki narzędzi: [EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips), [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage), i [ OnToolHitTest](../mfc/reference/cwnd-class.md#ontoolhittest). Zobacz te funkcje poszczególnych elementów członkowskich, aby uzyskać więcej informacji na temat sposobu wdrażania etykietek narzędzi.  
+ `CWnd` udostępnia cztery funkcje Członkowskie tworzenie i zarządzanie nimi etykietki narzędzi: [EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips), [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage), i [OnToolHitTest ](../mfc/reference/cwnd-class.md#ontoolhittest). Zobacz te funkcje poszczególnych elementów członkowskich, aby uzyskać więcej informacji na temat sposobu wdrażania etykietek narzędzi.  
   
  W przypadku utworzenia przy użyciu narzędzi `CToolBarCtrl`, można zaimplementować etykietki narzędzi dla tego paska narzędzi bezpośrednio przy użyciu następujących funkcji elementów członkowskich: [GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips) i [SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips). Zobacz te funkcje poszczególnych elementów członkowskich i [Obsługa powiadomień dotyczących Porada narzędzi](../mfc/handling-tool-tip-notifications.md) uzyskać więcej informacji dotyczących sposobu wdrażania etykietek narzędzi.  
   

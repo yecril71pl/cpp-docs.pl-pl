@@ -1,13 +1,10 @@
 ---
-title: "Zestaw rekordów: Zbiorcze pobieranie rekordów (ODBC) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Zestaw rekordów: Zbiorcze pobieranie rekordów (ODBC) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d9738af557cb8d4dd26b792851f8be276e91380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ef8803459edeba98e472a0e7fd07e7f5daf2c4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>Zestaw rekordów: zbiorcze pobieranie rekordów (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -49,7 +44,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
 -   [Jak zaimplementować zbiorcza wymiana pól rekordów](#_core_how_to_implement_bulk_record_field_exchange).  
   
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Jak crecordset — obsługuje pobieranie z wiersza zbiorczego  
+##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> Jak crecordset — obsługuje pobieranie z wiersza zbiorczego  
  Przed otwarciem obiektu zestawu rekordów, można zdefiniować rozmiar wierszy z `SetRowsetSize` funkcję elementu członkowskiego. Rozmiar zestawu wierszy określa liczbę rekordów powinny zostać pobrane podczas jednego pobierania. Po zaimplementowaniu zbiorcze pobieranie z wiersza domyślny rozmiar wierszy wynosi 25. Jeśli zbiorcze pobieranie z wiersza nie jest zaimplementowana, rozmiar zestawu wierszy nie zmienia się na 1.  
   
  Po już zainicjować rozmiar zestawu wierszy, wywołać [Otwórz](../../mfc/reference/crecordset-class.md#open) funkcję elementu członkowskiego. W tym miejscu należy określić `CRecordset::useMultiRowFetch` opcji **dwOptions** parametru do zaimplementowania zbiorcze pobieranie z wiersza. Ponadto można ustawić **CRecordset::userAllocMultiRowBuffers** opcji. Mechanizm wymiany pól rekordów zbiorczego przechowuje tablice wiele wierszy pobranych podczas pobierania danych. Bufory magazynu mogą być automatycznie przydzielone przez platformę, lub można je przydzielić ręcznie. Określanie **CRecordset::userAllocMultiRowBuffers** opcja oznacza wykona alokacji.  
@@ -67,7 +62,7 @@ Ten temat dotyczy klasach MFC ODBC.
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Przesuwa kursor do określonego wiersza w zestawie wierszy.|  
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Funkcja wirtualna zmienia ustawienie rozmiaru wierszy z podaną wartością.|  
   
-##  <a name="_core_special_considerations"></a>Uwagi  
+##  <a name="_core_special_considerations"></a> Uwagi  
  Zbiorcze pobieranie z wiersza jest bardziej wydajne, niektóre funkcje działają inaczej. Przed podjęciem decyzji o implementacji zbiorcze pobieranie z wiersza, należy rozważyć następujące kwestie:  
   
 -   Struktura automatycznie wywołuje `DoBulkFieldExchange` funkcji członkowskiej na przesyłanie danych ze źródła danych do obiektu zestawu rekordów. Jednak dane nie są przesyłane w zestawie do źródła danych. Wywoływanie `AddNew`, **Edytuj**, **usunąć**, lub **aktualizacji** powoduje funkcje Członkowskie potwierdzenia nie powiodło się. Mimo że `CRecordset` aktualnie nie zapewnia mechanizm aktualizacji zbiorczej wiersze danych, można zapisać własnych funkcji przy użyciu funkcji interfejsu API ODBC **SQLSetPos**. Aby uzyskać więcej informacji na temat **SQLSetPos**, zobacz *ODBC SDK Podręcznik programisty* w dokumentacji MSDN.  
@@ -78,7 +73,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
 -   W odróżnieniu od wymiana pól rekordów kreatorów nie obsługują zbiorcza wymiana pól rekordów. Oznacza to, należy ręcznie zadeklarować użytkownika elementy członkowskie danych pola i ręczne zastąpienie `DoBulkFieldExchange` pisząc wywołania funkcji RFX zbiorczego. Aby uzyskać więcej informacji, zobacz [funkcje wymiany pól rekordów](../../mfc/reference/record-field-exchange-functions.md) w *informacje dotyczące biblioteki klas*.  
   
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a>Jak zaimplementować zbiorcza wymiana pól rekordów  
+##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> Jak zaimplementować zbiorcza wymiana pól rekordów  
  Zbiorcza wymiana pól rekordów przesyła zestawu wierszy danych ze źródła danych do obiektu zestawu rekordów. Funkcje zbiorczej wymiany RFX używają tablic do przechowywania tych danych, a także tablic do przechowywania długość każdego elementu danych w zestawie wierszy. W definicji klasy należy zdefiniować jako wskaźniki do tablic danych użytkownika elementy członkowskie danych pola. Ponadto należy zdefiniować zestaw wskaźniki do tablic o długości. Wszystkie elementy członkowskie danych parametru nie powinien być zadeklarowany jako wskaźników; deklarowanie elementy członkowskie danych parametru w przypadku korzystania z zbiorcza wymiana pól rekordów jest taka sama jak deklarowanie je, korzystając z wymiana pól rekordów. Poniższy kod przedstawia prosty przykład:  
   
 ```  

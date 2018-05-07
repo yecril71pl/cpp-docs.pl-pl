@@ -1,12 +1,9 @@
 ---
-title: "w przypadku każdego w | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: w przypadku każdego w | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::foreach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="for-each-in"></a>for each, in
 Wykonuje iterację przez tablicę lub kolekcję. To niestandardowe słowo kluczowe jest dostępne zarówno w projektach C++/CLI, jak i macierzystych projektach C++. Jego stosowanie nie jest jednak zalecane. Należy rozważyć użycie standardowego [opartej na zakresie — instrukcja (C++)](../cpp/range-based-for-statement-cpp.md) zamiast tego.  
@@ -65,7 +60,7 @@ Wykonuje iterację przez tablicę lub kolekcję. To niestandardowe słowo kluczo
   
  *Instrukcje* są wykonywane dla każdego elementu w tablicy lub kolekcji. Po ukończeniu iteracji dla wszystkich elementów w kolekcji, sterowanie jest przekazywane do instrukcji następującej `for each` bloku.  
   
- `for each`i `in` są [kontekstowe słowa kluczowe](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `for each` i `in` są [kontekstowe słowa kluczowe](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Informacje dodatkowe:  
   

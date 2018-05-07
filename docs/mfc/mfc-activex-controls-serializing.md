@@ -1,13 +1,10 @@
 ---
 title: 'Formanty MFC ActiveX: Serializacja | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - _wVerMinor
 - DoPropExchange
@@ -24,20 +21,18 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34b8f0520d1f071bb408f782b0f2370ef29f528e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74d62411747dbe920b772b66d11cd1e2a789c5db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-serializing"></a>Kontrolki ActiveX MFC: serializacja
-W tym artykule omówiono sposób zserializować formantu ActiveX. Serializacja jest proces Odczyt lub zapis na nośniku magazynu trwałego, takich jak pliku na dysku. Biblioteka Microsoft Foundation Class (MFC) udostępnia wbudowaną obsługę serializacji w klasie `CObject`. `COleControl`Rozszerza ta obsługa do formantu ActiveX przy użyciu właściwości mechanizm wymiany.  
+W tym artykule omówiono sposób zserializować formantu ActiveX. Serializacja jest proces Odczyt lub zapis na nośniku magazynu trwałego, takich jak pliku na dysku. Biblioteka Microsoft Foundation Class (MFC) udostępnia wbudowaną obsługę serializacji w klasie `CObject`. `COleControl` Rozszerza ta obsługa do formantu ActiveX przy użyciu właściwości mechanizm wymiany.  
   
  Serializacji dla formantów ActiveX jest implementowany przez zastępowanie [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Tej funkcji, wywoływana podczas ładowania i zapisywanie obiektu kontroli przechowuje wszystkie właściwości zaimplementowany przy użyciu zmiennej członkowskiej lub zmiennej członkowskiej z powiadomienia o zmianie.  
   
@@ -49,7 +44,7 @@ W tym artykule omówiono sposób zserializować formantu ActiveX. Serializacja j
   
 -   [Implementowanie obsługi wersji](#_core_implementing_version_support)  
   
-##  <a name="_core_implementing_the_dopropexchange_function"></a>Implementowanie funkcji DoPropExchange  
+##  <a name="_core_implementing_the_dopropexchange_function"></a> Implementowanie funkcji DoPropExchange  
  Podczas generowania projektu kontroli za pomocą Kreatora formantu ActiveX, niektóre funkcje programu obsługi domyślne są automatycznie dodawane do klasy formantu, w tym Domyślna implementacja [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). W poniższym przykładzie pokazano kod dodany do klasy utworzone za pomocą Kreatora formantów ActiveX:  
   
  [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]  
@@ -80,10 +75,10 @@ W tym artykule omówiono sposób zserializować formantu ActiveX. Serializacja j
   
  Aby uzyskać więcej informacji na temat tych właściwości funkcji programu exchange, zobacz [trwałości z OLE formanty](../mfc/reference/persistence-of-ole-controls.md) w *odwołania MFC*.  
   
-##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a>Dostosowywanie domyślnego zachowania DoPropExchange  
+##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Dostosowywanie domyślnego zachowania DoPropExchange  
  Domyślna implementacja **DoPropertyExchange** (zgodnie z informacjami podanymi w temacie poprzedniej) nawiązuje połączenie klasa podstawowa `COleControl`. Serializuje to zbiór właściwości automatycznie obsługiwane przez `COleControl`, który używa więcej miejsca niż serializacja właściwości niestandardowe kontrolki. Usunięcie tego wywołania umożliwia obiekt można szeregować tylko właściwości, które należy wziąć pod uwagę ważne. Wszystkie stany właściwości standardowych zaimplementowała formantu nie będą wykonywane szeregowo podczas zapisywania lub wczytywania obiekt formantu, chyba że dodasz **PX_** odwołuje się do nich.  
   
-##  <a name="_core_implementing_version_support"></a>Implementowanie obsługi wersji  
+##  <a name="_core_implementing_version_support"></a> Implementowanie obsługi wersji  
  Obsługa wersji umożliwia poprawione formantu ActiveX dodać nowe właściwości trwałych i nadal mieć możliwość wykrywania i załadować trwały stan utworzony we wcześniejszej wersji formantu. Aby udostępnić wersję formantu w ramach jego trwałych danych, należy wywołać [COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) w formancie `DoPropExchange` funkcji. To wywołanie jest automatycznie wstawiony, jeśli formant ActiveX został utworzony przy użyciu Kreatora formantów ActiveX. Można usunąć, jeśli nie jest potrzebna obsługa wersji. Jednak koszt rozmiar formantu jest bardzo mały (4 bajty) dodany elastyczność, która udostępnia obsługę wersji.  
   
  Jeśli formant nie został utworzony przy użyciu Kreatora formantu ActiveX, dodaj wywołanie do `COleControl::ExchangeVersion` wstawiając następujący wiersz na początku Twojej `DoPropExchange` — funkcja (przed wywołaniem do `COleControl::DoPropExchange`):  

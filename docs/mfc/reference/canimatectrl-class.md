@@ -1,12 +1,9 @@
 ---
-title: "Canimatectrl — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Canimatectrl — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimateCtrl
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58918a45daa1a6f64c160d79f52503e3a3c61cff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimatectrl-class"></a>Canimatectrl — klasa
 Udostępnia funkcje formantu animacji wspólne systemu Windows.  
@@ -103,7 +98,7 @@ class CAnimateCtrl : public CWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -112,7 +107,7 @@ class CAnimateCtrl : public CWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcmn.h  
   
-##  <a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
+##  <a name="canimatectrl"></a>  CAnimateCtrl::CAnimateCtrl  
  Konstruuje `CAnimateCtrl` obiektu.  
   
 ```  
@@ -125,7 +120,7 @@ CAnimateCtrl();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
   
-##  <a name="close"></a>CAnimateCtrl::Close  
+##  <a name="close"></a>  CAnimateCtrl::Close  
  Zamyka klip AVI, który został uprzednio otwarty w formantu animacji (jeśli istnieje) i usuwa go z pamięci.  
   
 ```  
@@ -138,7 +133,7 @@ BOOL Close();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="create"></a>CAnimateCtrl::Create  
+##  <a name="create"></a>  CAnimateCtrl::Create  
  Tworzy formantu animacji i dołącza go do `CAnimateCtrl` obiektu.  
   
 ```  
@@ -183,7 +178,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="createex"></a>CAnimateCtrl::CreateEx  
+##  <a name="createex"></a>  CAnimateCtrl::CreateEx  
  Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CAnimateCtrl` obiektu.  
   
 ```  
@@ -217,7 +212,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Użyj `CreateEx` zamiast [Utwórz](#create) dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
   
-##  <a name="isplaying"></a>CAnimateCtrl::IsPlaying  
+##  <a name="isplaying"></a>  CAnimateCtrl::IsPlaying  
  Wskazuje, czy jest odtwarzanie klipów Audio i wideo z przeplotem (AVI).  
   
 ```  
@@ -225,12 +220,12 @@ BOOL IsPlaying() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli jest odtwarzany klip AVI; w przeciwnym razie `false`.  
+ `true` Jeśli jest odtwarzany klip AVI; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
-##  <a name="open"></a>CAnimateCtrl::Open  
+##  <a name="open"></a>  CAnimateCtrl::Open  
  Wywołanie tej funkcji, aby otworzyć klip AVI i wyświetlić jej pierwszej ramki.  
   
 ```  
@@ -262,7 +257,7 @@ BOOL Open(UINT nID);
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="play"></a>CAnimateCtrl::Play  
+##  <a name="play"></a>  CAnimateCtrl::Play  
  Wywołanie tej funkcji, aby odtworzyć klip AVI w formantu animacji.  
   
 ```  
@@ -291,7 +286,7 @@ BOOL Play(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="seek"></a>CAnimateCtrl::Seek  
+##  <a name="seek"></a>  CAnimateCtrl::Seek  
  Wywołanie tej funkcji, aby wyświetlić statycznie jedną ramkę klip AVI.  
   
 ```  
@@ -311,7 +306,7 @@ BOOL Seek(UINT nTo);
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="stop"></a>CAnimateCtrl::Stop  
+##  <a name="stop"></a>  CAnimateCtrl::Stop  
  Wywołanie tej funkcji, aby zatrzymać odtwarzanie klip AVI formantu animacji.  
   
 ```  

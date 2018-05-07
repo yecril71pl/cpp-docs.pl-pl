@@ -1,12 +1,9 @@
 ---
 title: Klasa CMiniFrameWnd | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cminiframewnd-class"></a>Klasa CMiniFrameWnd
 Reprezentuje okno ramowe wysokości, zazwyczaj występuje wokół przestawne paski narzędzi.  
@@ -67,7 +62,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -78,7 +73,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
  Konstruuje `CMiniFrameWnd` obiekt, ale nie powoduje utworzenia okna.  
   
 ```  
@@ -88,7 +83,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>Uwagi  
  Aby utworzyć okno, należy wywołać [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
  Tworzy okno ramowe mini systemu Windows i dołącza go do `CMiniFrameWnd` obiektu.  
   
 ```  
@@ -133,7 +128,7 @@ virtual BOOL Create(
   
 - **MFS_BLOCKSYSMENU** wyłącza dostęp do menu systemowym i w menu sterowania i konwertuje je na część podpisu (paska tytułu).  
   
- Zobacz [CWnd::Create](../../mfc/reference/cwnd-class.md#create) opis okna możliwych wartości stylu. Typowy kombinacja używany dla okien ramowych mini jest **ws_popup — &#124; Ws_caption — &#124; Ws_sysmenu —**.  
+ Zobacz [CWnd::Create](../../mfc/reference/cwnd-class.md#create) opis okna możliwych wartości stylu. Typowy kombinacja używany dla okien ramowych mini jest **ws_popup —&#124;ws_caption —&#124;ws_sysmenu —**.  
   
  `rect`  
  A `RECT` struktury, określając odpowiednią wymiary okna.  
@@ -150,7 +145,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Uwagi  
  **Utwórz** inicjuje nazwę klasy okna i nazwa okna i rejestruje wartości domyślne dla styl i nadrzędnej.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  Tworzy `CMiniFrameWnd` obiektu.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL CreateEx(
  Zwraca wartość PRAWDA w przypadku powodzenia FALSE w przypadku awarii.  
   
 ### <a name="remarks"></a>Uwagi  
- `CreateEx` Parametry określają **WNDCLASS**, styl okna i (opcjonalnie) początkowe położenie i rozmiar okna. `CreateEx`Określa również okna nadrzędnego (jeśli istnieje) i identyfikator.  
+ `CreateEx` Parametry określają **WNDCLASS**, styl okna i (opcjonalnie) początkowe położenie i rozmiar okna. `CreateEx` Określa również okna nadrzędnego (jeśli istnieje) i identyfikator.  
   
  Gdy `CreateEx` wykonuje system Windows wysyła [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), i [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) wiadomości do okna.  
   
  Aby rozszerzyć domyślnej obsługi wiadomości, klasa wyprowadzona z `CMiniFrameWnd`, Dodaj mapowanie komunikatów do nowej klasy i zapewnić funkcji Członkowskich powyżej komunikatów. Zastąpienie `OnCreate`, na przykład, aby wykonać wymagane inicjowania dla nowej klasy.  
   
- Zastąpienie dalsze **na***komunikat* komunikatu programów obsługi, aby dodać dodatkowe funkcje do klasy pochodnej.  
+ Zastąpienie dalsze **na *** komunikat* komunikatu programów obsługi, aby dodać dodatkowe funkcje do klasy pochodnej.  
   
  Jeśli **ws_visible —** podano stylu, system Windows wysyła okna wszystkie komunikaty, które są wymagane do aktywowania i wyświetlenie okna. Jeśli styl okna określa paska tytułu, tytuł okna wskazywana przez `lpszWindowName` parametru jest wyświetlany w pasku tytułu.  
   

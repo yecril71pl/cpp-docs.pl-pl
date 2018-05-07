@@ -1,12 +1,9 @@
 ---
-title: "Kompilatora (poziom 3) ostrzeżenie C4619 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kompilatora (poziom 3) ostrzeżenie C4619 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4619
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4619
 ms.assetid: 701fea21-01aa-4bea-93d4-1cb8824170b0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01f2b9d3e7cc935b100272e74c94da9dec5c5a92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd598c99e87947d60831a1d62c268e3b5797b4ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-3-c4619"></a>Kompilator C4619 ostrzegawcze (poziom 3)
 \#warning elementu pragma: istnieje ostrzeżenie o numerze "number"  

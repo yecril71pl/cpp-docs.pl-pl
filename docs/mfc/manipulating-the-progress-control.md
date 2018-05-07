@@ -1,13 +1,10 @@
 ---
-title: "Operowanie formantem postępu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Operowanie formantem postępu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c75866cdcf947745db741a6626f01215e58932e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 415061306c5e743b9ed95ee5c7105133d2e4d340
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-the-progress-control"></a>Operowanie formantem postępu
 Istnieją trzy sposoby zmiany bieżącej pozycji formantu postępu ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  
@@ -45,11 +40,11 @@ Istnieją trzy sposoby zmiany bieżącej pozycji formantu postępu ([CProgressCt
 2.  Użyj [StepIt](../mfc/reference/cprogressctrl-class.md#stepit) funkcji członkowskiej, aby zwiększyć położenie. To powoduje, że formant do narysowania.  
   
     > [!NOTE]
-    >  `StepIt`spowoduje, że położenie jest zawijane. Na przykład, dla danego zakresu 1 -100, krok 20 i pozycji 90, `StepIt` ustawi pozycji 10.  
+    >  `StepIt` spowoduje, że położenie jest zawijane. Na przykład, dla danego zakresu 1 -100, krok 20 i pozycji 90, `StepIt` ustawi pozycji 10.  
   
 ### <a name="to-change-the-position-by-an-arbitrary-amount"></a>Aby zmienić pozycję przez dowolną kwotę  
   
-1.  Użyj [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) funkcji członkowskiej, aby zmienić pozycję. `OffsetPos`akceptuje wartości ujemnych.  
+1.  Użyj [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) funkcji członkowskiej, aby zmienić pozycję. `OffsetPos` akceptuje wartości ujemnych.  
   
     > [!NOTE]
     >  `OffsetPos`, w odróżnieniu od `StepIt`, nie będzie zawijany położenie. Nowa pozycja jest dostosowywana do pozostają w zakresie.  

@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCToolTipInfo | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipInfo
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CMFCToolTipInfo [MFC], m_nGradientAngle
 - CMFCToolTipInfo [MFC], m_nMaxDescrWidth
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda5da1b989ccc41a2f3136473dbe08200e091bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 325650f35d097b54eda160bbdbbd5c877dbd0242
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctooltipinfo-class"></a>Klasa CMFCToolTipInfo
 Przechowuje informacje o wygląd etykietek narzędzi.  
@@ -102,7 +97,7 @@ class CMFCToolTipInfo
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxtooltipctrl.h  
   
-##  <a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
+##  <a name="m_bballoontooltip"></a>  CMFCToolTipInfo::m_bBalloonTooltip  
  Określa styl wyświetlania wszystkich etykietek narzędzi.  
   
 ```  
@@ -110,9 +105,9 @@ BOOL m_bBalloonTooltip;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `TRUE`Wskazuje, że elementy ToolTip korzystać styl dymek `FALSE` wskazuje, że elementy ToolTip korzystać prostokątne stylu.  
+ `TRUE` Wskazuje, że elementy ToolTip korzystać styl dymek `FALSE` wskazuje, że elementy ToolTip korzystać prostokątne stylu.  
   
-##  <a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
+##  <a name="m_bboldlabel"></a>  CMFCToolTipInfo::m_bBoldLabel  
  Określa czcionkę tekstu etykietki narzędzia jest pogrubiony.  
   
 ```  
@@ -122,7 +117,7 @@ BOOL m_bBoldLabel;
 ### <a name="remarks"></a>Uwagi  
  Ustaw ten element członkowski `TRUE` do wyświetlania tekstu etykietki narzędzia czcionką pogrubioną, lub `FALSE` do wyświetlania etykiet tooltip-pogrubioną czcionką.  
   
-##  <a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
+##  <a name="m_bdrawdescription"></a>  CMFCToolTipInfo::m_bDrawDescription  
  Określa, czy każdy tooltip Wyświetla tekst opisu.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL m_bDrawDescription;
 ### <a name="remarks"></a>Uwagi  
  Ustaw ten element członkowski `TRUE` do wyświetlenia opisu, lub `FALSE` ukrycia opis. Można określić opis w etykietce narzędzia wywołując [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
-##  <a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
+##  <a name="m_bdrawicon"></a>  CMFCToolTipInfo::m_bDrawIcon  
  Określa, czy wszystkie elementy ToolTip wyświetlanie ikon.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL m_bDrawIcon;
 ### <a name="remarks"></a>Uwagi  
  Ustaw ten element członkowski `TRUE` do wyświetlenia ikony na każdym tooltip lub `FALSE` wyświetlać elementy ToolTip bez ikon.  
   
-##  <a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
+##  <a name="m_bdrawseparator"></a>  CMFCToolTipInfo::m_bDrawSeparator  
  Określa, czy każda wskazówka ma separatora między etykiety i jego opis.  
   
 ```  
@@ -152,7 +147,7 @@ BOOL m_bDrawSeparator;
 ### <a name="remarks"></a>Uwagi  
  Ustaw ten element członkowski `TRUE` do wyświetlenia separatora między etykietka narzędzia etykiety i opis, lub `FALSE` wyświetlać elementy ToolTip bez separatora.  
   
-##  <a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
+##  <a name="m_broundedcorners"></a>  CMFCToolTipInfo::m_bRoundedCorners  
  Określa, czy wszystkie elementy ToolTip mają zaokrąglone narożniki.  
   
 ```  
@@ -162,14 +157,14 @@ BOOL m_bRoundedCorners;
 ### <a name="remarks"></a>Uwagi  
  Ustaw ten element członkowski `TRUE` do wyświetlenia zaokrąglone narożniki na etykietki narzędzi, lub `FALSE` do wyświetlenia rogi prostokątne na elementy ToolTip.  
   
-##  <a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
+##  <a name="m_clrborder"></a>  CMFCToolTipInfo::m_clrBorder  
  Określa kolor obramowania na wszystkie elementy ToolTip.  
   
 ```  
 COLORREF m_clrBorder;  
 ```  
   
-##  <a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
+##  <a name="m_clrfill"></a>  CMFCToolTipInfo::m_clrFill  
  Określa kolor tła etykietka narzędzia.  
   
 ```  
@@ -179,7 +174,7 @@ COLORREF m_clrFill;
 ### <a name="remarks"></a>Uwagi  
  Jeśli [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) wynosi -1, jest kolor tła etykietek narzędzi `m_clrFill`. W przeciwnym razie `m_clrFill` Określa kolor początkowy gradientu i `m_clrFillGradient` Określa kolor końcowy gradientu. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) Określa kierunek gradientu.  
   
-##  <a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
+##  <a name="m_clrfillgradient"></a>  CMFCToolTipInfo::m_clrFillGradient  
  Określa kolor końcowy gradientu tła etykietek narzędzi.  
   
 ```  
@@ -189,14 +184,14 @@ COLORREF m_clrFillGradient;
 ### <a name="remarks"></a>Uwagi  
  Jeśli `m_clrFillGradient` wynosi -1, nie istnieje żadne gradientu. W przeciwnym razie kolor początkowy gradientu jest określona przez [CMFCToolTipInfo::m_clrFill](#m_clrfill) i określany przez kolor gradientu Zakończ `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) Określa kierunek gradientu.  
   
-##  <a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
+##  <a name="m_clrtext"></a>  CMFCToolTipInfo::m_clrText  
  Określa kolor tekstu wszystkie elementy ToolTip.  
   
 ```  
 COLORREF m_clrText;  
 ```  
   
-##  <a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
+##  <a name="m_ngradientangle"></a>  CMFCToolTipInfo::m_nGradientAngle  
  Określa kąt rysowania gradientu tła etykietek narzędzi.  
   
 ```  
@@ -204,18 +199,18 @@ int m_nGradientAngle;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `m_nGradientAngle`Określa kąt w stopniach, czy gradientu tła etykietek narzędzi jest przesunięta w poziomie. Jeśli `m_nGradientAngle` wynosi 0, rysowania gradientu od lewej do prawej. Jeśli `m_nGradientAngle` to od 1 do 360 gradientu jest obracanie wskazówek zegara przez ten numer stopni. Jeśli `m_nGradientAngle` wynosi -1, która jest wartością domyślną, rysowania gradientu od góry do dołu. Jest to taka sama jak ustawienie `m_nGradientAngle` do 90.  
+ `m_nGradientAngle` Określa kąt w stopniach, czy gradientu tła etykietek narzędzi jest przesunięta w poziomie. Jeśli `m_nGradientAngle` wynosi 0, rysowania gradientu od lewej do prawej. Jeśli `m_nGradientAngle` to od 1 do 360 gradientu jest obracanie wskazówek zegara przez ten numer stopni. Jeśli `m_nGradientAngle` wynosi -1, która jest wartością domyślną, rysowania gradientu od góry do dołu. Jest to taka sama jak ustawienie `m_nGradientAngle` do 90.  
   
  [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` Określa kolor początkowy gradientu i [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` Określa kolor końcowy gradientu. Jeśli `m_clrFillGradient` wynosi -1, nie istnieje żadne gradientu.  
   
-##  <a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
+##  <a name="m_nmaxdescrwidth"></a>  CMFCToolTipInfo::m_nMaxDescrWidth  
  Określa maksymalną szerokość opisu wyświetlanej w każdym etykietka narzędzia. Jeśli szerokość opis przekracza określoną wartość, tekst jest zawijany.  
   
 ```  
 int m_nMaxDescrWidth;  
 ```  
   
-##  <a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
+##  <a name="m_bvislmanagertheme"></a>  CMFCToolTipInfo::m_bVislManagerTheme  
  Określa, czy visual Menedżera aplikacji steruje wyglądem wszystkie elementy ToolTip.  
   
 ```  
@@ -225,7 +220,7 @@ BOOL m_bVislManagerTheme;
 ### <a name="remarks"></a>Uwagi  
  Jeśli `m_bVislManagerTheme` jest `TRUE`, co tooltip żądań nowy [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) visual Menedżera aplikacji przed ich są wyświetlane na ekranie i używa wartości w tym obiekcie w celu określenia sposobu ich wyświetlania. Elementy członkowskie z Twojej [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) są ignorowane.  
   
-##  <a name="operator_eq"></a>CMFCToolTipInfo::operator =  
+##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -233,7 +228,7 @@ CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`src`  
+ [in] `src`  
   
 ### <a name="return-value"></a>Wartość zwracana  
   

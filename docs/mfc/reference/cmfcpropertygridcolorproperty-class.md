@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCPropertyGridColorProperty | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridColorProperty
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33c807343c29fca74168167ef5d784e056b350fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Klasa CMFCPropertyGridColorProperty
 `CMFCPropertyGridColorProperty` Klasa obsługuje elementu formantu listy właściwości, które otwiera okno dialogowe Wybieranie koloru.  
@@ -94,7 +89,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
+##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
  Konstruuje `CMFCPropertyGridColorProperty` obiektu.  
   
 ```  
@@ -107,22 +102,22 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`strName`  
+ [in] `strName`  
  Nazwa właściwości.  
   
- [in]`color`  
+ [in] `color`  
  Wartość koloru właściwości.  
   
- [in]`pPalette`  
+ [in] `pPalette`  
  Wskaźnik do palety kolorów. Wartość domyślna to `NULL`.  
   
- [in]`lpszDescr`  
+ [in] `lpszDescr`  
  Opis właściwości. Wartość domyślna to `NULL`.  
   
- [in]`dwData`  
+ [in] `dwData`  
  Dane specyficzne dla aplikacji, takich jak liczby całkowitej lub wskaźnika do innych danych, która jest skojarzona z właściwością. Wartość domyślna to 0.  
   
-##  <a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  Umożliwia *automatyczne* przycisk w oknie dialogowym Wybieranie koloru. (Etykietą standardowe przycisk Automatyczny **automatyczne**.)  
   
 ```  
@@ -133,18 +128,18 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszLabel`  
+ [in] `lpszLabel`  
  Tekst etykiety przycisk Automatyczny.  
   
- [in]`colorAutomatic`  
+ [in] `colorAutomatic`  
  Wartości kolorów RGB koloru automatyczne (ustawienie domyślne).  
   
- [in]`bEnable`  
- `TRUE`Aby włączyć automatyczne przycisk; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
+ [in] `bEnable`  
+ `TRUE` Aby włączyć automatyczne przycisk; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
+##  <a name="enableotherbutton"></a>  CMFCPropertyGridColorProperty::EnableOtherButton  
  Umożliwia *innych* przycisk w oknie dialogowym Wybieranie koloru. (Standardowy etykietą inny przycisk **więcej kolorów**.)  
   
 ```  
@@ -155,18 +150,18 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszLabel`  
+ [in] `lpszLabel`  
  Tekst etykiety inny przycisk.  
   
- [in]`bAltColorDlg`  
- `TRUE`Aby wyświetlić `CMFCColorDialog` okno dialogowe; `FALSE` do wyświetlenia okna dialogowego wyboru Kolor standardowy. Wartość domyślna to `TRUE`.  
+ [in] `bAltColorDlg`  
+ `TRUE` Aby wyświetlić `CMFCColorDialog` okno dialogowe; `FALSE` do wyświetlenia okna dialogowego wyboru Kolor standardowy. Wartość domyślna to `TRUE`.  
   
- [in]`bEnable`  
- `TRUE`Aby wyświetlić przycisk; w przeciwnym razie `FALSE`.  Wartość domyślna to `TRUE`.  
+ [in] `bEnable`  
+ `TRUE` Aby wyświetlić przycisk; w przeciwnym razie `FALSE`.  Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
+##  <a name="getcolor"></a>  CMFCPropertyGridColorProperty::GetColor  
  Pobiera bieżący kolor właściwości.  
   
 ```  
@@ -178,7 +173,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
+##  <a name="setcolor"></a>  CMFCPropertyGridColorProperty::SetColor  
  Określa kolor nowej właściwości.  
   
 ```  
@@ -186,12 +181,12 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`color`  
+ [in] `color`  
  Wartości kolorów RGB.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>  CMFCPropertyGridColorProperty::SetColumnsNumber  
  Określa liczbę kolumn w siatce właściwości bieżący kolor.  
   
 ```  
@@ -199,13 +194,13 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nColumnsNumber`  
+ [in] `nColumnsNumber`  
  Preferowaną liczbę kolumn w siatce właściwości kolorów.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda ustawia wartość `m_nColumnsNumber` chroniony element członkowski danych.  
   
-##  <a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue  
+##  <a name="setoriginalvalue"></a>  CMFCPropertyGridColorProperty::SetOriginalValue  
  Ustawia oryginalnej wartości właściwości można edytować.  
   
 ```  
@@ -213,7 +208,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`varValue`  
+ [in] `varValue`  
  Wartość.  
   
 ### <a name="remarks"></a>Uwagi  

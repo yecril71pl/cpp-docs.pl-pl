@@ -1,13 +1,10 @@
 ---
-title: "Zestaw rekordów: Parametryzacja zestawu rekordów (ODBC) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Zestaw rekordów: Parametryzacja zestawu rekordów (ODBC) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Zestaw rekordów: parametryzacja zestawu rekordów (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -44,7 +39,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
 -   [Sposób przekazywania informacji o parametrach na obiekt zestawu rekordów w czasie wykonywania](#_core_passing_parameter_values_at_run_time).  
   
-##  <a name="_core_parameterized_recordsets"></a>Sparametryzowane zestawy rekordów  
+##  <a name="_core_parameterized_recordsets"></a> Sparametryzowane zestawy rekordów  
  Sparametryzowane rekordów umożliwia przekazywanie informacji o parametrach w czasie wykonywania. Ma to dwa cenne skutki:  
   
 -   Może to spowodować zwiększenia szybkości wykonywania.  
@@ -53,7 +48,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
  Podczas wywoływania **Otwórz** Aby uruchomić zapytanie, zestawu rekordów używa informacji parametru do ukończenia jej **SQL SELECT** instrukcji. Można parametryzacja żadnych rekordów.  
   
-##  <a name="_core_when_to_use_parameters"></a>Kiedy należy używać parametrów  
+##  <a name="_core_when_to_use_parameters"></a> Kiedy należy używać parametrów  
  Typowym zastosowaniem parametrów obejmują:  
   
 -   Przekazywanie argumentów czasu wykonywania dla wstępnie zdefiniowanego zapytania.  
@@ -97,7 +92,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
  Aby uzyskać więcej informacji na temat filtrów, zobacz [zestaw rekordów: filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>Ustawianie klasy zestawu rekordów  
+##  <a name="_core_parameterizing_your_recordset_class"></a> Ustawianie klasy zestawu rekordów  
   
 > [!NOTE]
 >  Ta sekcja dotyczy obiektów pochodzących od `CRecordset` w wiersz, który zbiorczego pobierania nie została zaimplementowana. Jeśli używasz wiersza zbiorcze pobieranie, wdrażanie parametrów jest podobnej procedury. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
@@ -149,7 +144,7 @@ Ten temat dotyczy klasach MFC ODBC.
 
 >  Najprawdopodobniej ciąg do pracy z jest ciągiem, możesz określić (jeśli istnieją) dla tej klasy [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) element członkowski danych, ale niektóre sterowniki ODBC może umożliwić parametrów w klauzulach innych SQL.  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>Przekazywanie wartości parametrów w czasie wykonywania  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> Przekazywanie wartości parametrów w czasie wykonywania  
  Należy określić wartości parametrów przed wywołaniem **Otwórz** (dla nowego obiektu zestawu rekordów) lub **Requery** (dla istniejącego).  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>Aby podać wartości parametrów na obiekt zestawu rekordów w czasie wykonywania  

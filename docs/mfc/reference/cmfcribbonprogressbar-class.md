@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCRibbonProgressBar | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonProgressBar
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1354b0b15837a733a890c438c7771ffe39526773
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Klasa CMFCRibbonProgressBar
 Implementuje formant, który wskazuje wizualnie postępu długotrwałej operacji.  
@@ -96,7 +91,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxRibbonProgressBar.h  
   
-##  <a name="cmfcribbonprogressbar"></a>CMFCRibbonProgressBar::CMFCRibbonProgressBar  
+##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar  
  Tworzy i inicjuje [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) obiektu.  
   
 ```  
@@ -110,16 +105,16 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nID`  
+ [in] `nID`  
  Określa identyfikator polecenia pasek postępu wstążki.  
   
- [in]`nWidth`  
+ [in] `nWidth`  
  Określa szerokość w pikselach, pasek postępu wstążki.  
   
- [in]`nHeight`  
+ [in] `nHeight`  
  Określa wysokość w pikselach, pasek postępu wstążki.  
   
-##  <a name="getpos"></a>CMFCRibbonProgressBar::GetPos  
+##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  Zwraca bieżącą pozycję pasek postępu.  
   
 ```  
@@ -132,7 +127,7 @@ int GetPos () const;
 ### <a name="remarks"></a>Uwagi  
  Zakres ustawiany musi znajdować się w zakresie określonym przez [CMFCRibbonProgressBar::SetRange](#setrange) metody.  
   
-##  <a name="getrangemax"></a>CMFCRibbonProgressBar::GetRangeMax  
+##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax  
  Zwraca bieżącego użytkownika pasek postępu wartość maksymalna.  
   
 ```  
@@ -144,7 +139,7 @@ int GetRangeMax() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getrangemin"></a>CMFCRibbonProgressBar::GetRangeMin  
+##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin  
  Zwraca bieżącego użytkownika pasek postępu minimalną wartość zakresu.  
   
 ```  
@@ -154,7 +149,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Minimalna wartość bieżącego zakresu.  
   
-##  <a name="getregularsize"></a>CMFCRibbonProgressBar::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -162,13 +157,13 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isinfinitemode"></a>CMFCRibbonProgressBar::IsInfiniteMode  
+##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode  
  Określa, czy pasek postępu działa w trybie nieskończoną.  
   
 ```  
@@ -176,12 +171,12 @@ BOOL IsInfiniteMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli pasek postępu jest w trybie nieskończone; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli pasek postępu jest w trybie nieskończone; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  W trybie nieskończone pasek postępu wypełnia wielokrotnie z wartością minimalną wartość maksymalna. Można użyć trybu nieskończone aby wskazać, że operacja jest wykonywana, ale że czas zakończenia jest nieznany.  
   
-##  <a name="ondraw"></a>CMFCRibbonProgressBar::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -189,11 +184,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setinfinitemode"></a>CMFCRibbonProgressBar::SetInfiniteMode  
+##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode  
  Ustawia pasek postępu do pracy w trybie nieskończoną.  
   
 ```  
@@ -201,13 +196,13 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bSet`  
- `TRUE`Aby określić, czy pasek postępu jest w trybie nieskończone; w przeciwnym razie `FALSE`.  
+ [in] `bSet`  
+ `TRUE` Aby określić, czy pasek postępu jest w trybie nieskończone; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Zwykle Jeśli pasek postępu jest w trybie nieskończone, go informuje użytkownika czy operacja jest wykonywana, ale że czas zakończenia jest nieznany. W związku z tym pasek postępu wypełnia wielokrotnie z wartością minimalną wartość maksymalna.  
   
-##  <a name="setpos"></a>CMFCRibbonProgressBar::SetPos  
+##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos  
  Ustawia bieżąca pozycja paska postępu.  
   
 ```  
@@ -217,16 +212,16 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nPos`  
+ [in] `nPos`  
  Określa położenie, do którego jest ustawiona na pasku postępu.  
   
- [in]`bRedraw`  
+ [in] `bRedraw`  
  Określa, czy pasek postępu powinien być narysowany ponownie.  
   
 ### <a name="remarks"></a>Uwagi  
  Zakres ustawiany musi znajdować się w zakresie określonym przez [CMFCRibbonProgressBar::SetRange](#setrange) metody.  
   
-##  <a name="setrange"></a>CMFCRibbonProgressBar::SetRange  
+##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange  
  Ustawia wartości minimalną i maksymalną dla pasek postępu.  
   
 ```  
@@ -236,10 +231,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nMin`  
+ [in] `nMin`  
  Określa minimalną wartość zakresu.  
   
- [in]`nMax`  
+ [in] `nMax`  
  Określa maksymalną wartość zakresu.  
   
 ### <a name="remarks"></a>Uwagi  

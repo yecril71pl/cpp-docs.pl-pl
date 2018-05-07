@@ -1,13 +1,10 @@
 ---
 title: Pomocnicy klasy kolekcji | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-class-helpers"></a>Pomocnicy klasy kolekcji
 Klasy kolekcji `CMap`, `CList`, i `CArray` za pomocą funkcji opartego na szablonie globalne pomocnika do celów takich jak porównywanie, kopiowanie i elementy serializacji. Jako część implementacji klasy na podstawie `CMap`, `CList`, i `CArray`, konieczne jest przesłonięcie tych funkcji w razie potrzeby z wersjami dostosowane do typu danych przechowywanych w mapie, listy lub tablicy. Aby uzyskać informacje dotyczące zastępowania takich jak funkcje pomocnicze `SerializeElements`, zapoznaj się z artykułem [kolekcje: porady: tworzenie bezpiecznej kolekcji](../../mfc/how-to-make-a-type-safe-collection.md). Należy pamiętać, że **constructelements —** i **destructelements —** są przestarzałe.  
@@ -46,8 +41,8 @@ Klasy kolekcji `CMap`, `CList`, i `CArray` za pomocą funkcji opartego na szablo
 |[HashKey](#hashkey)|Oblicza klucza mieszającego.|  
 |[Serializeelements —](#serializeelements)|Przechowuje i pobiera elementy do lub z archiwum.|  
   
-##  <a name="compareelements"></a>Compareelements —  
- Wywoływana bezpośrednio przez [CList::Find] (class.md clist — #not_found.md #clist__find i pośrednio przez [cmap__lookup](cmap-class.md#lookup) i [cmap__operator &#91; &#93;](cmap-class.md#operator_at).  
+##  <a name="compareelements"></a>  Compareelements —  
+ Wywoływana bezpośrednio przez [CList::Find] (class.md clist — #not_found.md #clist__find i pośrednio przez [cmap__lookup](cmap-class.md#lookup) i [cmap__operator &#91; &#93; ](cmap-class.md#operator_at).  
   
 ```   
 template<class TYPE, class ARG_TYPE>  
@@ -83,7 +78,7 @@ CompareElements(
 ### <a name="requirements"></a>Wymagania  
    **Nagłówek:** afxtempl.h   
   
-##  <a name="copyelements"></a>Copyelements —  
+##  <a name="copyelements"></a>  Copyelements —  
  Ta funkcja jest wywoływana bezpośrednio przez [CArray::Append](carray-class.md#append) i [CArray::Copy](carray-class.md#copy).  
   
 ```   
@@ -108,14 +103,14 @@ void AFXAPI CopyElements(
  Liczba elementów do skopiowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja używa operator przypisania prostego (  **=**  ) do wykonywania operacji kopiowania. Jeśli typ kopiowania nie jest przeciążony operator =, wykona kopię bitowe w implementacji domyślnej.  
+ Domyślna implementacja używa operator przypisania prostego ( **=** ) do wykonywania operacji kopiowania. Jeśli typ kopiowania nie jest przeciążony operator =, wykona kopię bitowe w implementacji domyślnej.  
   
  Aby uzyskać informacje dotyczące implementacji to i inne funkcje pomocnicze, zobacz artykuł [kolekcje: porady: tworzenie bezpiecznej kolekcji](../how-to-make-a-type-safe-collection.md).  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxtempl.h  
   
-##  <a name="dumpelements"></a>Dumpelements —  
+##  <a name="dumpelements"></a>  Dumpelements —  
  Udostępnia zorientowane na strumienia diagnostycznych danych wyjściowych w postaci tekstu dla elementów kolekcji w przypadku przesłonięcia.  
   
 ```   
@@ -148,7 +143,7 @@ void  AFXAPI DumpElements(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxtempl.h  
   
-##  <a name="hashkey"></a>HashKey  
+##  <a name="hashkey"></a>  HashKey  
  Oblicza wartość skrótu dla danego klucza.  
   
 ```  
@@ -167,7 +162,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
  Wartość skrótu klucza.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja jest wywoływana bezpośrednio przez [CMap::RemoveKey](cmap-class.md#removekey) i pośrednio przez [CMap::Lookup](cmap-class.md#lookup) i [CMap::Operator &#91; &#93;](cmap-class.md#operator_at).
+ Ta funkcja jest wywoływana bezpośrednio przez [CMap::RemoveKey](cmap-class.md#removekey) i pośrednio przez [CMap::Lookup](cmap-class.md#lookup) i [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
   
  Domyślna implementacja tworzy wartość skrótu przy przesunięciu `key` bezpośrednio przez cztery pozycji. Należy przesłonić tę funkcję, dzięki czemu wartości skrótu zwraca odpowiedni dla twojej aplikacji.  
   
@@ -184,7 +179,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxtempl.h 
   
-##  <a name="serializeelements"></a>Serializeelements —  
+##  <a name="serializeelements"></a>  Serializeelements —  
  [Carray —](carray-class.md), [clist —](clist-class.md), i [CMap](cmap-class.md) wywołanie tej funkcji do serializacji elementów.  
   
 ```   

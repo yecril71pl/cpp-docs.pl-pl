@@ -1,12 +1,9 @@
 ---
-title: "Klasy konsumentów generowane przez kreatora | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Klasy konsumentów generowane przez kreatora | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - consumer wizard-generated classes and methods
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 194c71fda245663e648298af17a6ceb874aef4d5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 030445a8e6b46afb9f893e21bceb221f7f9e89a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="consumer-wizard-generated-classes"></a>Klasy konsumentów generowane przez kreatora
 Gdy używasz OLE DB Kreator konsumenta ATL do wygenerowania z klientem, użytkownik może przy użyciu atrybutów szablony OLE DB lub OLE DB. W obu przypadkach kreator generuje klasę polecenie i klasy rekordu użytkownika. Klasa polecenia zawiera kod, aby otworzyć źródła danych i zestawu wierszy określone w kreatorze. Klasa rekordu użytkownika zawiera mapy kolumny dla wybranej tabeli bazy danych. Jednak wygenerowany kod różni się w każdym przypadku:  

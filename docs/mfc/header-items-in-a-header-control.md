@@ -1,13 +1,10 @@
 ---
-title: "Elementy nagłówka w formancie nagłówka | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Elementy nagłówka w formancie nagłówka | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], header items in
 - controls [MFC], header
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2143a89d9b91c9c6db53beedce0875ee76f34cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f43440cccda8afc437b213ae3356229c673358f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="header-items-in-a-header-control"></a>Elementy nagłówka w formancie nagłówka
 Masz znaczną kontrolę nad wygląd i zachowanie elementów nagłówka, wchodzące w skład formantu nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Każdy element nagłówka może mieć ciągu, map bitowych obrazów, obraz z listy skojarzony obraz lub zdefiniowane przez aplikację 32-bitową wartość skojarzonych z nim. Ciąg, mapa bitowa lub obraz jest wyświetlany w elemencie nagłówka.  

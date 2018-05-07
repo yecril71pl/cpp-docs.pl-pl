@@ -1,13 +1,10 @@
 ---
 title: Dane okna dialogowego wymiana i Walidacja | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af38919a65c7ecb16692f5833873a630e713951c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cc12a76f73e2d84a4cb5df66a6dd3d01249265a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Wymiana i walidacja danych w oknie dialogowym
 Wymiana danych okna dialogowego (DDX) jest to prosty sposób, aby zainicjować kontrolki w oknie dialogowym i zbieranie danych wejściowych przez użytkownika. Walidacja danych okna dialogowego (DDV) to prosty sposób można sprawdzić poprawności wprowadzania danych w oknie dialogowym. Aby skorzystać z DDX i DDV w polach okna dialogowego, należy użyć [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) do tworzenia elementów członkowskich danych i ustawić ich typy danych i określić reguły sprawdzania poprawności.  

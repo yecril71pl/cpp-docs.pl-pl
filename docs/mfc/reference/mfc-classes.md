@@ -1,12 +1,9 @@
 ---
 title: Klasy MFC | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3775ad9c67e2ab4be4f36d0de257cd075b77ce86
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2d2865d56c899cc9489fd4e09720ed22ef1bf540
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-classes"></a>Klasy MFC
 Klasy na poniższej liście znajdują się w bibliotece Microsoft Foundation Class (MFC).  
@@ -826,7 +821,7 @@ Klasy na poniższej liście znajdują się w bibliotece Microsoft Foundation Cla
  Zarządza załadowane z zasobów aplikacji lub z plików obrazów paska narzędzi.  
   
  [Klasa CMFCToolBarInfo](../../mfc/reference/cmfctoolbarinfo-class.md)  
- Zawiera identyfikatorów obrazów paska narzędzi w zależności od różnych stanów zasobów. `CMFCToolBarInfo`Klasa pomocy, który jest używany jako parametr typu jest [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metody.  
+ Zawiera identyfikatorów obrazów paska narzędzi w zależności od różnych stanów zasobów. `CMFCToolBarInfo` Klasa pomocy, który jest używany jako parametr typu jest [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metody.  
   
  [Klasa CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
  Przycisk paska narzędzi, który zawiera menu podręczne.  

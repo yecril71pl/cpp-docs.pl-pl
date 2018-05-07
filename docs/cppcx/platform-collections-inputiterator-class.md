@@ -1,11 +1,8 @@
 ---
 title: Klasa platform::Collections::InputIterator | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caf29e32fc4af5c6d1e3f65abbe250bb150679c0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7188cba0655e2ca89f82b60ffe9ee4b8ce94633a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Klasa platform::Collections::InputIterator
 Zawiera standardowe InputIterator biblioteki szablonu kolekcje pochodzące z środowiska uruchomieniowego systemu Windows.  
@@ -106,7 +101,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference">InputIterator::operator * — Operator</a>
+## <a name="operator-dereference"></a>  InputIterator::operator * — Operator
 Pobiera odwołanie do określonego przez InputIterator bieżącego elementu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -120,7 +115,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality">InputIterator::operator == — Operator</a>
+## <a name="operator-equality"></a>  InputIterator::operator == — Operator
 Wskazuje, czy bieżący InputIterator jest równa określonej InputIterator.  
   
 ### <a name="syntax"></a>Składnia  
@@ -138,7 +133,7 @@ bool operator== (const InputIterator& other) const;
   
 
 
-## <a name="operator-increment">InputIterator::operator ++ — Operator</a>
+## <a name="operator-increment"></a>  InputIterator::operator ++ — Operator
 Zwiększa InputIterator bieżącej.  
   
 ### <a name="syntax"></a>Składnia  
@@ -158,7 +153,7 @@ InputIterator operator++(int);
   
 
 
-## <a name="operator-inequality">InputIterator::operator! = — Operator</a>
+## <a name="operator-inequality"></a>  InputIterator::operator! = — Operator
 Wskazuje, czy bieżący InputIterator nie jest równa określonej InputIterator.  
   
 ### <a name="syntax"></a>Składnia  

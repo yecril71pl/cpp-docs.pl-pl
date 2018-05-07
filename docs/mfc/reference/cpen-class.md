@@ -1,12 +1,9 @@
 ---
-title: "Cpen — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cpen — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPen
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51ea9aadc5d5ca8fb5a5a253d2ddb5972bf0dfdc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpen-class"></a>Cpen — klasa
 Hermetyzuje pióra interfejsu (GDI) systemu Windows grafiki urządzenia.  
@@ -85,7 +80,7 @@ class CPen : public CGdiObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
   
-##  <a name="cpen"></a>CPen::CPen  
+##  <a name="cpen"></a>  CPen::CPen  
  Konstruuje `CPen` obiektu.  
   
 ```  
@@ -124,7 +119,7 @@ CPen(
   
 - **PS_INSIDEFRAME** tworzy Pióro rysuje wewnątrz ramki kształty zamknięte utworzonego przez funkcje dane wyjściowe GDI systemu Windows, które Określanie prostokąt ograniczający (na przykład **elipsy**, **prostokąt** , `RoundRect`, `Pie`, i `Chord` funkcji elementów członkowskich). Gdy ten styl jest używany z Windows GDI dane wyjściowe funkcji, które nie należy określać prostokąt ograniczający (na przykład `LineTo` funkcji członkowskiej), obszaru rysowania pióra nie jest ograniczona przez ramki.  
   
- Druga wersja `CPen` Konstruktor określa kombinację typu, stylu zakończenie i atrybuty sprzężenia. Wartości z każdej kategorii powinny być łączone przy użyciu bitowego operatora OR (&#124;). Typ pióra może być jedną z następujących wartości:  
+ Druga wersja `CPen` Konstruktor określa kombinację typu, stylu zakończenie i atrybuty sprzężenia. Wartości z każdej kategorii powinny być połączone przy użyciu bitowego operatora OR (&#124;). Typ pióra może być jedną z następujących wartości:  
   
 - **PS_GEOMETRIC** tworzy geometrycznych pióra.  
   
@@ -179,7 +174,7 @@ CPen(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
   
-##  <a name="createpen"></a>CPen::CreatePen  
+##  <a name="createpen"></a>  CPen::CreatePen  
  Tworzy logiczną pióra bardzo drobny lub geometrycznych z określonego stylu, szerokość i atrybuty pędzla i dołącza go do `CPen` obiektu.  
   
 ```  
@@ -243,7 +238,7 @@ BOOL CreatePen(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
-##  <a name="createpenindirect"></a>CPen::CreatePenIndirect  
+##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
  Inicjuje stylu, szerokość i kolor podany w strukturze wskazywana przez pióro `lpLogPen`.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
   
-##  <a name="fromhandle"></a>CPen::FromHandle  
+##  <a name="fromhandle"></a>  CPen::FromHandle  
  Zwraca wskaźnik do `CPen` obiekt na podstawie uchwyt do obiektu pióra GDI systemu Windows.  
   
 ```  
@@ -274,7 +269,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
   
 ### <a name="parameters"></a>Parametry  
  *hpen —*  
- `HPEN`dojście do pióra GDI systemu Windows.  
+ `HPEN` dojście do pióra GDI systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do `CPen` obiektu w przypadku powodzenia; w przeciwnym razie **NULL**.  
@@ -285,7 +280,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
   
-##  <a name="getextlogpen"></a>CPen::GetExtLogPen  
+##  <a name="getextlogpen"></a>  CPen::GetExtLogPen  
  Pobiera **EXTLOGPEN** struktury.  
   
 ```  
@@ -317,7 +312,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
   
-##  <a name="getlogpen"></a>CPen::GetLogPen  
+##  <a name="getlogpen"></a>  CPen::GetLogPen  
  Pobiera `LOGPEN` struktury.  
   
 ```  
@@ -347,7 +342,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
   
-##  <a name="operator_hpen"></a>CPen::operator hpen —  
+##  <a name="operator_hpen"></a>  CPen::operator hpen —  
  Pobiera dołączone dojście Windows GDI `CPen` obiektu.  
   
 ```  

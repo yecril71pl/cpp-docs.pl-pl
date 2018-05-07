@@ -1,29 +1,24 @@
 ---
-title: "Pliki reguł XML strony właściwości | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Pliki reguł XML strony właściwości | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81e8965773c64144059fa433b54484c786159a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcee2c416fba6a959785826781aefd96b0d06d75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-page-xml-rule-files"></a>Pliki reguł XML strony właściwości
 Strony właściwości projektu w środowisku IDE są konfigurowane przez pliki XML w folderze VCTargets. Dokładnej ścieżki zależy od tego, które edition(s) programu Visual Studio są zainstalowane, a język produktu. Dla programu Visual Studio 2017 Enterprise Edition w języku angielskim, ścieżka jest `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Pliki XML opisują nazwy reguły, kategorii i poszczególnych właściwości, typ danych, wartości domyślne i jak mają być wyświetlane. Po ustawieniu właściwości w IDE nowa wartość jest przechowywane w pliku projektu.
@@ -109,18 +104,18 @@ W poniższej sekcji opisano każdy główne elementy, a niektóre metadanych, kt
 
   f. **Nazwa wyświetlana:** jest to nazwa, który jest wyświetlany na stronie właściwości interfejsu użytkownika dla węzła reguły. Ta wartość jest zlokalizowana. Utworzyliśmy Nazwa wyświetlana jako element podrzędny reguły, a nie jako atrybut (np. nazwę lub SwitchPrefix) z powodu wewnętrznego lokalizacji narzędzia wymagania. Zarówno z perspektywy w języku XAML, są równoważne. Tak można tylko tworzyć i atrybutu, aby zwiększyć czytelność, lub pozostaw to pole, ponieważ jest on.
 
-  G. **Źródło danych:** jest bardzo ważne właściwość, która informuje system projektu w lokalizacji, w którym wartość właściwości musi odczytywane i zapisywane, a jego grupowania (co omówiono poniżej). Dla cl.xml te wartości są następujące:
+  g. **Źródło danych:** jest bardzo ważne właściwość, która informuje system projektu w lokalizacji, w którym wartość właściwości musi odczytywane i zapisywane, a jego grupowania (co omówiono poniżej). Dla cl.xml te wartości są następujące:
 
 ```xml  
        <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
 ```  
-   - `Persistence="ProjectFile`Określa, że system projektu, że wszystkie właściwości reguły mają być zapisywane do pliku projektu lub pliku arkusza właściwości (w zależności od węzła użyto wywołania strony właściwości). Możliwe wartości to "UserFile", która będzie zapisywała wartość plik .user.
+   - `Persistence="ProjectFile` Określa, że system projektu, że wszystkie właściwości reguły mają być zapisywane do pliku projektu lub pliku arkusza właściwości (w zależności od węzła użyto wywołania strony właściwości). Możliwe wartości to "UserFile", która będzie zapisywała wartość plik .user.
 
-   - `ItemType="ClCompile"`informuje, że właściwości będą przechowywane jako ItemDefinition ani elementu metadanych (drugie tylko wtedy, gdy strony właściwości zostały zduplikowany z węzła plików w Eksploratorze rozwiązań) tego typu elementu. Jeśli to pole nie jest ustawiona, właściwości są zapisywane jako wspólne właściwości w PropertyGroup.
+   - `ItemType="ClCompile"` informuje, że właściwości będą przechowywane jako ItemDefinition ani elementu metadanych (drugie tylko wtedy, gdy strony właściwości zostały zduplikowany z węzła plików w Eksploratorze rozwiązań) tego typu elementu. Jeśli to pole nie jest ustawiona, właściwości są zapisywane jako wspólne właściwości w PropertyGroup.
 
-   - `Label=""`Wskazuje, że podczas właściwości są zapisywane jako `ItemDefinition` metadanych, etykiety dominującego ItemDefinitionGroup będzie pusty (każdego elementu MSBuild może mieć etykietę). Visual Studio 2017 korzysta z etykietą grup można przejść do pliku .vcxproj projektu. Należy pamiętać, że grup, które zawierają większość właściwości reguły mieć ciągu pustego jako etykieta.
+   - `Label=""` Wskazuje, że podczas właściwości są zapisywane jako `ItemDefinition` metadanych, etykiety dominującego ItemDefinitionGroup będzie pusty (każdego elementu MSBuild może mieć etykietę). Visual Studio 2017 korzysta z etykietą grup można przejść do pliku .vcxproj projektu. Należy pamiętać, że grup, które zawierają większość właściwości reguły mieć ciągu pustego jako etykieta.
 
-   - `HasConfigurationCondition="true"`informuje system projektu, aby umieścić warunek konfiguracji wartość tak, aby obowiązuje tylko dla bieżącej konfiguracji projektu (warunek może zostać umieszczona w grupie nadrzędnej albo samą wartość). Na przykład otwieranie stron właściwości węzła projektu i ustawić wartość właściwości **Traktuj ostrzeżenia jako błąd** w obszarze **właściwości konfiguracji > Ogólne C/C++** "Yes". Następujące wartości są zapisywane w pliku projektu. Zwróć uwagę, warunek konfiguracji dołączony do obiektu nadrzędnego ItemDefinitionGroup.
+   - `HasConfigurationCondition="true"` informuje system projektu, aby umieścić warunek konfiguracji wartość tak, aby obowiązuje tylko dla bieżącej konfiguracji projektu (warunek może zostać umieszczona w grupie nadrzędnej albo samą wartość). Na przykład otwieranie stron właściwości węzła projektu i ustawić wartość właściwości **Traktuj ostrzeżenia jako błąd** w obszarze **właściwości konfiguracji > Ogólne C/C++** "Yes". Następujące wartości są zapisywane w pliku projektu. Zwróć uwagę, warunek konfiguracji dołączony do obiektu nadrzędnego ItemDefinitionGroup.
 
 ```xml  
      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">

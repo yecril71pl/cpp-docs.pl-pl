@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCPropertyGridToolTipCtrl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridToolTipCtrl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0b4a43da8943bc196a799ca4419dea7f34ed76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Klasa CMFCPropertyGridToolTipCtrl
 Implementuje w etykietce narzędzia kontrolować, które [klasy CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) używa wyświetlać elementy ToolTip.  
@@ -86,7 +81,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -95,14 +90,14 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxpropertygridtooltipctrl.h  
   
-##  <a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
+##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
  Konstruuje `CMFCPropertyGridToolTipCtrl` obiektu.  
   
 ```  
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```  
   
-##  <a name="create"></a>CMFCPropertyGridToolTipCtrl::Create  
+##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create  
  Utworzenie okna dla formantu tooltip.  
   
 ```  
@@ -110,13 +105,13 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWndParent`  
+ [in] `pWndParent`  
  Wskaźnik do okna nadrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pomyślnie utworzono okna; w przeciwnym razie wartość FALSE.  
   
-##  <a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate  
+##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate  
  Dezaktywuje i ukrywa formantu tooltip.  
   
 ```  
@@ -126,7 +121,7 @@ void Deactivate();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda ustawia ostatniej pozycji i tekst puste wartości, tak, aby w przyszłości wywołań [CMFCPropertyGridToolTipCtrl::Track](#track) wyświetlenia wskazówki.  
   
-##  <a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect  
+##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect  
  Zwraca współrzędne ostatniej pozycji formantu tooltip.  
   
 ```  
@@ -134,17 +129,17 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rect`  
+ [out] `rect`  
  Zawiera ostatniej pozycji formantu tooltip.  
   
-##  <a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide  
+##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  Ukrywa formantu tooltip.  
   
 ```  
 void Hide();
 ```  
   
-##  <a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin  
+##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin  
  Ustawia odstęp między tekst etykietki narzędzia i krawędź okna etykietki narzędzia.  
   
 ```  
@@ -152,10 +147,10 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nTextMargin`  
+ [in] `nTextMargin`  
  Określa odstępy między tekst formantu tooltip i krawędź okna etykietki narzędzia. Wartość domyślna to 10 pikseli.  
   
-##  <a name="track"></a>CMFCPropertyGridToolTipCtrl::Track  
+##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Wyświetla formantu tooltip.  
   
 ```  
@@ -165,10 +160,10 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`rect`  
+ [in] `rect`  
  Określa położenie i rozmiar formantu tooltip.  
   
- [in]`strText`  
+ [in] `strText`  
  Określa tekst, który ma być wyświetlany w etykietce narzędzia.  
   
 ### <a name="remarks"></a>Uwagi  

@@ -1,13 +1,10 @@
 ---
 title: 'TN039: Implementacja automatyzacji MFC OLE | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a5962c9b9254233b0990f19cdc1ff4f562d9cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: implementacja automatyzacji MFC/OLE
 > [!NOTE]
@@ -273,7 +268,7 @@ void CMyObject::SetItem(short row,
  Ciąg miejsca rozdzielone VTS_ dla każdego parametru.  
   
 ## <a name="remarks"></a>Uwagi  
- Makra te umożliwiają określenie **DISPID** zamiast czekać MFC automatycznie przypisać jeden. Te zaawansowane makra mają takie same nazwy, z wyjątkiem ten identyfikator jest dołączany do nazwy makra (np. **DISP_PROPERTY_ID**) i identyfikator jest określany przez parametr określony tuż po `pszName` parametru. Zobacz AFXDISP. H, aby uzyskać więcej informacji na temat tych makr. **_ID** wpisy muszą znajdować się na końcu mapy wysyłania. Będzie miało wpływ na automatyczne **DISPID** Generowanie w taki sam sposób jak niż**_ID** czy wersji makra ( **DISPID**s są określane na podstawie pozycji). Na przykład:  
+ Makra te umożliwiają określenie **DISPID** zamiast czekać MFC automatycznie przypisać jeden. Te zaawansowane makra mają takie same nazwy, z wyjątkiem ten identyfikator jest dołączany do nazwy makra (np. **DISP_PROPERTY_ID**) i identyfikator jest określany przez parametr określony tuż po `pszName` parametru. Zobacz AFXDISP. H, aby uzyskać więcej informacji na temat tych makr. **_ID** wpisy muszą znajdować się na końcu mapy wysyłania. Będzie miało wpływ na automatyczne **DISPID** Generowanie w taki sam sposób jak niż **_ID** czy wersji makra ( **DISPID**s są określane na podstawie pozycji). Na przykład:  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,

@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCPopupMenuBar | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPopupMenuBar
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 002e059fd905930409cb5f2745628f8ac1dea103
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpopupmenubar-class"></a>Klasa CMFCPopupMenuBar
 Pasek menu osadzone w menu podręczne.  
@@ -119,7 +114,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -136,7 +131,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxpopupmenubar.h  
   
-##  <a name="adjustsizeimmediate"></a>CMFCPopupMenuBar::AdjustSizeImmediate  
+##  <a name="adjustsizeimmediate"></a>  CMFCPopupMenuBar::AdjustSizeImmediate  
  Natychmiast ponownie oblicza układ okienku paska menu podręcznego. (Przesłania [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).  
   
 ```  
@@ -144,12 +139,12 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bRecalcLayout`  
- `TRUE`Aby automatycznie ponownie Oblicz układ okienku paska menu podręcznego. w przeciwnym razie `FALSE`.  
+ [in] `bRecalcLayout`  
+ `TRUE` Aby automatycznie ponownie Oblicz układ okienku paska menu podręcznego. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="buildorigitems"></a>CMFCPopupMenuBar::BuildOrigItems  
+##  <a name="buildorigitems"></a>  CMFCPopupMenuBar::BuildOrigItems  
  Ładuje elementów menu podręcznego z menu określonego zasobu.  
   
 ```  
@@ -157,7 +152,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiMenuResID`  
+ [in] `uiMenuResID`  
  Określa identyfikator menu zasobów menu do załadowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -165,7 +160,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="closedelayedsubmenu"></a>CMFCPopupMenuBar::CloseDelayedSubMenu  
+##  <a name="closedelayedsubmenu"></a>  CMFCPopupMenuBar::CloseDelayedSubMenu  
  Zamyka przycisk menu podręcznego opóźnione.  
   
 ```  
@@ -174,7 +169,7 @@ virtual void CloseDelayedSubMenu();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="exporttomenu"></a>CMFCPopupMenuBar::ExportToMenu  
+##  <a name="exporttomenu"></a>  CMFCPopupMenuBar::ExportToMenu  
  Tworzy menu z przycisków menu podręcznego.  
   
 ```  
@@ -186,7 +181,7 @@ virtual HMENU ExportToMenu() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="finddestintationtoolbar"></a>CMFCPopupMenuBar::FindDestintationToolBar  
+##  <a name="finddestintationtoolbar"></a>  CMFCPopupMenuBar::FindDestintationToolBar  
  Lokalizuje pasku narzędzi, gdzie znajduje się określony punkt.  
   
 ```  
@@ -194,7 +189,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Punkt na ekranie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -202,7 +197,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getcurrentmenuimagesize"></a>CMFCPopupMenuBar::GetCurrentMenuImageSize  
+##  <a name="getcurrentmenuimagesize"></a>  CMFCPopupMenuBar::GetCurrentMenuImageSize  
  Określa rozmiar obrazów przycisk menu.  
   
 ```  
@@ -214,7 +209,7 @@ virtual CSize GetCurrentMenuImageSize() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getdefaultmenuid"></a>CMFCPopupMenuBar::GetDefaultMenuId  
+##  <a name="getdefaultmenuid"></a>  CMFCPopupMenuBar::GetDefaultMenuId  
  Zwraca identyfikator domyślny element menu.  
   
 ```  
@@ -226,7 +221,7 @@ UINT GetDefaultMenuId() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getlastcommandindex"></a>CMFCPopupMenuBar::GetLastCommandIndex  
+##  <a name="getlastcommandindex"></a>  CMFCPopupMenuBar::GetLastCommandIndex  
  Pobiera indeks najbardziej ostatnio wywołanej polecenia menu.  
   
 ```  
@@ -238,7 +233,7 @@ static int __stdcall GetLastCommandIndex();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getoffset"></a>CMFCPopupMenuBar::GetOffset  
+##  <a name="getoffset"></a>  CMFCPopupMenuBar::GetOffset  
  Pobiera przesunięcia wiersza paska menu podręcznego.  
   
 ```  
@@ -251,7 +246,7 @@ int GetOffset() const;
 ### <a name="remarks"></a>Uwagi  
  Ta wartość jest ustawiana za pomocą [CMFCPopupMenuBar::SetOffset](#setoffset).  
   
-##  <a name="importfrommenu"></a>CMFCPopupMenuBar::ImportFromMenu  
+##  <a name="importfrommenu"></a>  CMFCPopupMenuBar::ImportFromMenu  
  Importuje przycisków menu podręcznego z określonym menu.  
   
 ```  
@@ -261,18 +256,18 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`hMenu`  
+ [in] `hMenu`  
  Menu, z którego będą importowane przycisków menu podręcznego.  
   
- [in]`bShowAllCommands`  
- `TRUE`w przypadku wszystkich poleceń menu do zaimportowania, lub `FALSE` Jeśli rzadko używane te mogą być ukryte.  
+ [in] `bShowAllCommands`  
+ `TRUE` w przypadku wszystkich poleceń menu do zaimportowania, lub `FALSE` Jeśli rzadko używane te mogą być ukryte.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `TRUE` Jeśli przycisków menu zostały pomyślnie zaimportowane z menu lub `FALSE` , jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isdropdownlistmode"></a>CMFCPopupMenuBar::IsDropDownListMode  
+##  <a name="isdropdownlistmode"></a>  CMFCPopupMenuBar::IsDropDownListMode  
  Wskazuje, czy pasek menu podręczne jest w trybie listy rozwijanej w dół.  
   
 ```  
@@ -284,7 +279,7 @@ BOOL IsDropDownListMode() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ispalettemode"></a>CMFCPopupMenuBar::IsPaletteMode  
+##  <a name="ispalettemode"></a>  CMFCPopupMenuBar::IsPaletteMode  
  Wskazuje, czy pasek menu podręczne jest w trybie palety.  
   
 ```  
@@ -297,7 +292,7 @@ BOOL IsPaletteMode() const;
 ### <a name="remarks"></a>Uwagi  
  Gdy na pasku menu jest ustawiona na tryb palety, elementy menu pojawiają się na wiele kolumn i ograniczonej liczby wierszy.  
   
-##  <a name="isribbonpanel"></a>CMFCPopupMenuBar::IsRibbonPanel  
+##  <a name="isribbonpanel"></a>  CMFCPopupMenuBar::IsRibbonPanel  
  Wskazuje, czy jest panelu wstążki ( `FALSE` domyślnie).  
   
 ```  
@@ -309,7 +304,7 @@ virtual BOOL IsRibbonPanel() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isribbonpanelinregularmode"></a>CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
+##  <a name="isribbonpanelinregularmode"></a>  CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
  Wskazuje, czy panel wstążki jest w trybie regularne ( `FALSE` domyślnie).  
   
 ```  
@@ -321,7 +316,7 @@ virtual BOOL IsRibbonPanelInRegularMode() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="loadfromhash"></a>CMFCPopupMenuBar::LoadFromHash  
+##  <a name="loadfromhash"></a>  CMFCPopupMenuBar::LoadFromHash  
  Ładuje menu zarchiwizowane.  
   
 ```  
@@ -329,7 +324,7 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`hMenu`  
+ [in] `hMenu`  
  Dojście do menu zarchiwizowane załadować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -337,7 +332,7 @@ BOOL LoadFromHash(HMENU hMenu);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="m_bdisablesidebarinxpmode"></a>CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
+##  <a name="m_bdisablesidebarinxpmode"></a>  CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
  Parametrów typu Boolean wskazującą, czy aplikacja ma wygląd systemu Windows XP, ma szarego paska bocznego.  
   
 ```  
@@ -349,7 +344,7 @@ BOOL m_bDisableSideBarInXPMode;
   
  Wartość domyślna to `FALSE`.  
   
-##  <a name="restoredelayedsubmenu"></a>CMFCPopupMenuBar::RestoreDelayedSubMenu  
+##  <a name="restoredelayedsubmenu"></a>  CMFCPopupMenuBar::RestoreDelayedSubMenu  
  Przywraca przycisk menu opóźnione zamknięcie paska menu podręcznego.  
   
 ```  
@@ -358,7 +353,7 @@ virtual void RestoreDelayedSubMenu();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setbuttonstyle"></a>CMFCPopupMenuBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>  CMFCPopupMenuBar::SetButtonStyle  
  Ustawia styl przycisku paska narzędzi pod danym indeksem. (Przesłania [CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle).)  
   
 ```  
@@ -368,15 +363,15 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nIndex`  
+ [in] `nIndex`  
  Liczony od zera indeks przycisku paska narzędzi, którego styl ma być utworzony.  
   
- [in]`nStyle`  
+ [in] `nStyle`  
  Styl przycisku. Zobacz [style formantu ToolBar](../../mfc/reference/toolbar-control-styles.md) listę dostępnych narzędzi style przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setoffset"></a>CMFCPopupMenuBar::SetOffset  
+##  <a name="setoffset"></a>  CMFCPopupMenuBar::SetOffset  
  Ustawia przesunięcie wiersza paska menu podręcznego.  
   
 ```  
@@ -384,12 +379,12 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iOffset`  
+ [in] `iOffset`  
  Liczba wierszy na pasku menu podręcznego powinien przesunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="startpopupmenutimer"></a>CMFCPopupMenuBar::StartPopupMenuTimer  
+##  <a name="startpopupmenutimer"></a>  CMFCPopupMenuBar::StartPopupMenuTimer  
  Uruchamia czasomierz dla określonego okna podręcznego opóźnione przycisku menu.  
   
 ```  
@@ -399,10 +394,10 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pMenuButton`  
+ [in] `pMenuButton`  
  Wskaźnik do przycisku menu, do których chcesz ustawić czasomierza opóźnienia.  
   
- [in]`nDelayFactor`  
+ [in] `nDelayFactor`  
  Współczynnik opóźnienie równa co najmniej jeden, aby pomnożyć przez czas opóźnienia standardowe menu (zazwyczaj między pół sekundy i 5 sekund).  
   
 ### <a name="remarks"></a>Uwagi  

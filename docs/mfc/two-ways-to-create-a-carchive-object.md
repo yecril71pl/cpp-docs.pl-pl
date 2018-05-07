@@ -1,13 +1,10 @@
 ---
 title: Dwa sposoby tworzenia obiektu CArchive | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b1db549544d421600ed6dae1a8a987006c2ab6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dwa sposoby tworzenia obiektu CArchive
 Istnieją dwa sposoby tworzenia `CArchive` obiektu:  
@@ -41,7 +36,7 @@ Istnieją dwa sposoby tworzenia `CArchive` obiektu:
   
 -   [Jawne utworzenie obiektu CArchive](#_core_explicit_creation_of_a_carchive_object)  
   
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>Niejawne Tworzenie obiektu CArchive przez platformę  
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> Niejawne Tworzenie obiektu CArchive przez platformę  
  Najbardziej typowe i najłatwiejszy, sposób jest umożliwienie framework utworzyć `CArchive` obiektu dokumentu w imieniu Zapisz, Zapisz jako i polecenia Otwórz w menu Plik.  
   
  Oto, co platformę nie w przypadku użytkowników aplikacji wydaje polecenia Zapisz jako z menu Plik:  
@@ -58,7 +53,7 @@ Istnieją dwa sposoby tworzenia `CArchive` obiektu:
   
  W związku z tym jeśli umożliwisz framework utworzyć `CArchive` obiekt do dokumentu, wszystkie wystarczy wykonać to implementacja tego dokumentu `Serialize` funkcja, która zapisuje i odczytuje do i z archiwum. Masz również implementować `Serialize` dla każdego `CObject`— pochodnych obiektów który dokumentu `Serialize` funkcji z kolei serializuje bezpośrednio lub pośrednio.  
   
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>Jawne utworzenie obiektu CArchive  
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> Jawne utworzenie obiektu CArchive  
  Oprócz serializacji dokumentu przez platformę, są tylko gdy może być konieczne `CArchive` obiektu. Na przykład można serializować danych ze Schowka reprezentowany przez `CSharedFile` obiektu. Możesz też użyć interfejsu użytkownika do zapisania pliku, który jest inny niż oferowany przez platformę. W takim przypadku można jawnie utworzyć `CArchive` obiektu. W tym ten sam sposób, w ramach nie, korzystając z następującej procedury.  
   
 #### <a name="to-explicitly-create-a-carchive-object"></a>Aby jawnie tworzenia obiektu CArchive  

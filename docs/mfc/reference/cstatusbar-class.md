@@ -1,12 +1,9 @@
 ---
-title: "Cstatusbar — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cstatusbar — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStatusBar
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c373f21762c1bf7f21d2a775453bab74c735891d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 199aa7adc6cb96a4bc92e196ff94d57abdedfede
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatusbar-class"></a>Cstatusbar — klasa
 Pasek sterowania z wiersza tekstu wyjściowego okienka lub "wskaźników."  
@@ -96,7 +91,7 @@ class CStatusBar : public CControlBar
 ## <a name="remarks"></a>Uwagi  
  Okienka wyjściowego często służą jako wiersze komunikat, a wskaźniki stanu. Przykładami krótko opisano wybrane polecenie Wiersze komunikat pomocy menu i wskaźników określenia stanu blokady PRZEWIJANIA, NUM LOCK i kluczy.  
   
- [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl), funkcji członkowskiej nowych 4.0 MFC umożliwia skorzystać z obsługi systemu Windows formantu wspólnego stanu paska dostosowania i dodatkowe funkcje. `CStatusBar`Funkcje Członkowskie zapewniają większość funkcjonalności formanty standardowe systemu Windows; Jednak jeśli wywołasz `GetStatusBarCtrl`, z paskami stanu można nadać jeszcze więcej właściwości paska stanu Windows 95/98. Podczas wywoływania `GetStatusBarCtrl`, zwróci odwołanie do `CStatusBarCtrl` obiektu. Zobacz [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) uzyskać więcej informacji o projektowaniu paski narzędzi przy użyciu formanty standardowe systemu Windows. Więcej ogólnych informacji na temat typowych formantów, zobacz [formanty standardowe](http://msdn.microsoft.com/library/windows/desktop/bb775493) w zestawie Windows SDK.  
+ [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl), funkcji członkowskiej nowych 4.0 MFC umożliwia skorzystać z obsługi systemu Windows formantu wspólnego stanu paska dostosowania i dodatkowe funkcje. `CStatusBar` Funkcje Członkowskie zapewniają większość funkcjonalności formanty standardowe systemu Windows; Jednak jeśli wywołasz `GetStatusBarCtrl`, z paskami stanu można nadać jeszcze więcej właściwości paska stanu Windows 95/98. Podczas wywoływania `GetStatusBarCtrl`, zwróci odwołanie do `CStatusBarCtrl` obiektu. Zobacz [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) uzyskać więcej informacji o projektowaniu paski narzędzi przy użyciu formanty standardowe systemu Windows. Więcej ogólnych informacji na temat typowych formantów, zobacz [formanty standardowe](http://msdn.microsoft.com/library/windows/desktop/bb775493) w zestawie Windows SDK.  
   
  Platformę przechowuje informacje wskaźnika w tablicy z lewej strony wskaźnika na pozycji 0. Podczas tworzenia paska stanu, możesz użyć tablica ciągów identyfikatorów, które kojarzy platformę z odpowiednich wskaźników. Następnie można identyfikator ciągu lub indeksu dostępu wskaźnika.  
   
@@ -125,7 +120,7 @@ class CStatusBar : public CControlBar
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -136,7 +131,7 @@ class CStatusBar : public CControlBar
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxext.h  
   
-##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
+##  <a name="commandtoindex"></a>  CStatusBar::CommandToIndex  
  Pobiera indeks wskaźnika dla podanego identyfikatora.  
   
 ```  
@@ -153,7 +148,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>Uwagi  
  Indeks pierwszego wskaźnika jest 0.  
   
-##  <a name="create"></a>CStatusBar::Create  
+##  <a name="create"></a>  CStatusBar::Create  
  Stan paska (okno podrzędne) tworzy i kojarzy ją z `CStatusBar` obiektu.  
   
 ```  
@@ -170,11 +165,11 @@ virtual BOOL Create(
  `dwStyle`  
  Style paska stanu. Oprócz standardowych systemu Windows [style](../../mfc/reference/styles-used-by-mfc.md#window-styles), te style są obsługiwane.  
   
-- `CBRS_TOP`Pasek sterowania jest u góry okna ramowego.  
+- `CBRS_TOP` Pasek sterowania jest u góry okna ramowego.  
   
-- `CBRS_BOTTOM`Pasek sterowania jest u dołu okna ramowego.  
+- `CBRS_BOTTOM` Pasek sterowania jest u dołu okna ramowego.  
   
-- `CBRS_NOALIGN`Pasek sterowania nie zostaje przeniesiony, gdy zmieniany jest rozmiar obiektu nadrzędnego.  
+- `CBRS_NOALIGN` Pasek sterowania nie zostaje przeniesiony, gdy zmieniany jest rozmiar obiektu nadrzędnego.  
   
  `nID`  
  Identyfikator paska narzędzi okna podrzędnego.  
@@ -185,7 +180,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Uwagi  
  Ponadto ustawia początkowej czcionki i ustawia stan wysokość paska wartość domyślna.  
   
-##  <a name="createex"></a>CStatusBar::CreateEx  
+##  <a name="createex"></a>  CStatusBar::CreateEx  
  Wywołanie tej funkcji, aby utworzyć stanu paska (okno podrzędne) i skojarz ją z `CStatusBar` obiektu.  
   
 ```  
@@ -223,14 +218,14 @@ virtual BOOL CreateEx(
   
  Użyj `CreateEx`, zamiast [Utwórz](#create)w przypadku niektórych style musi być obecny podczas tworzenia formantu paska stanu osadzonych. Na przykład ustawić `dwCtrlStyle` do **SBT_TOOLTIPS** do wyświetlenia etykietki narzędzi w obiekcie paska stanu.  
   
-##  <a name="cstatusbar"></a>CStatusBar::CStatusBar  
+##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
  Konstruuje `CStatusBar` obiekt, tworzy domyślną czcionkę paska stanu w razie potrzeby i ustawia charakterystyki czcionki do wartości domyślnych.  
   
 ```  
 CStatusBar();
 ```  
   
-##  <a name="drawitem"></a>CStatusBar::DrawItem  
+##  <a name="drawitem"></a>  CStatusBar::DrawItem  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy visual aspekt zmiany paska stanu rysowanych przez właściciela.  
   
 ```  
@@ -244,7 +239,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>Uwagi  
  **ItemAction** członkiem `DRAWITEMSTRUCT` struktury definiuje rysowania akcję, która ma zostać wykonane. Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysunku rysowania przez właściciela `CStatusBar` obiektu. Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w `lpDrawItemStruct` przed zakończeniem tej funkcji Członkowskich.  
   
-##  <a name="getitemid"></a>CStatusBar::GetItemID  
+##  <a name="getitemid"></a>  CStatusBar::GetItemID  
  Zwraca identyfikator określony przez wskaźnik `nIndex`.  
   
 ```  
@@ -258,7 +253,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator określony przez wskaźnik `nIndex`.  
   
-##  <a name="getitemrect"></a>CStatusBar::GetItemRect  
+##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
  Kopiuje współrzędnych wskaźnika określony przez `nIndex` w strukturze wskazywana przez `lpRect`.  
   
 ```  
@@ -277,7 +272,7 @@ void GetItemRect(
 ### <a name="remarks"></a>Uwagi  
  Współrzędne są podawane w pikselach względem lewego górnego rogu paska stanu.  
   
-##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
+##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
  Ustawia `nID`, `nStyle`, i `cxWidth` do Identyfikatora, stylu i szerokości panelu wskaźnika w lokalizacji określonej przez `nIndex`.  
   
 ```  
@@ -301,7 +296,7 @@ void GetPaneInfo(
  `cxWidth`  
  Odwołanie do liczba całkowita, która ma ustawioną wartość szerokość panelu.  
   
-##  <a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
+##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
  Wywołanie tej funkcji Członkowskich pobrać styl okienku paska stanu.  
   
 ```  
@@ -320,7 +315,7 @@ UINT GetPaneStyle(int nIndex) const;
   
  Aby uzyskać listę style dostępne na paskach stanu, zobacz [Utwórz](#create).  
   
-##  <a name="getpanetext"></a>CStatusBar::GetPaneText  
+##  <a name="getpanetext"></a>  CStatusBar::GetPaneText  
  Wywołanie tej funkcji Członkowskich pobrać tekst wyświetlany w okienku paska stanu.  
   
 ```  
@@ -340,7 +335,7 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 ### <a name="remarks"></a>Uwagi  
  Drugi formularz tego elementu członkowskiego funkcji wypełnienia `CString` obiekt z ciągu tekstowego.  
   
-##  <a name="getstatusbarctrl"></a>CStatusBar::GetStatusBarCtrl  
+##  <a name="getstatusbarctrl"></a>  CStatusBar::GetStatusBarCtrl  
  Ta funkcja członkowska umożliwia bezpośredni dostęp do podstawowych formant.  
   
 ```  
@@ -355,7 +350,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
   
  Więcej ogólnych informacji na temat typowych formantów, zobacz [formanty standardowe](http://msdn.microsoft.com/library/windows/desktop/bb775493) w zestawie Windows SDK.  
   
-##  <a name="setindicators"></a>CStatusBar::SetIndicators  
+##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
  Ustawia identyfikator każdy wskaźnik do wartości określonej przez odpowiadający mu element w tablicy `lpIDArray`Ładuje określony przez każdy identyfikator zasobu ciągu i ustawia tekst wskaźnika do ciągu.  
   
 ```  
@@ -374,7 +369,7 @@ BOOL SetIndicators(
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
-##  <a name="setpaneinfo"></a>CStatusBar::SetPaneInfo  
+##  <a name="setpaneinfo"></a>  CStatusBar::SetPaneInfo  
  Ustawia okienko określony wskaźnik do nowego Identyfikatora, stylu i szerokości.  
   
 ```  
@@ -411,7 +406,7 @@ void SetPaneInfo(
   
 - **SBPS_NORMAL** stretch, obramowania i wyskakującego.  
   
-##  <a name="setpanestyle"></a>CStatusBar::SetPaneStyle  
+##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
  Wywołanie funkcji członkowskiej na ustawienie stylu okienku paska stanu.  
   
 ```  
@@ -432,7 +427,7 @@ void SetPaneStyle(
   
  Aby uzyskać listę style dostępne na paskach stanu, zobacz [SetPaneInfo](#setpaneinfo).  
   
-##  <a name="setpanetext"></a>CStatusBar::SetPaneText  
+##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
  Wywołanie tej funkcji członkowskich można ustawić tekst okienko na ciąg wskazywana przez `lpszNewText`.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: Notacja rzutowania i przedstawienie safe_cast&lt; &gt; | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - C-style casts and /clr, motivation for new cast notation
 - safe_cast keyword [C++]
 ms.assetid: 4eb1d000-3b93-4394-a37b-8b8563f8dc4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 80d1a6e8b1a1691b4e76bfdc1232c95c22d01408
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b9432b40099f9893d7fd270faf5375646fb0493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>Notacja rzutowania i przedstawienie safe_cast&lt;&gt;
 Notacja rzutowania został zmieniony z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  
@@ -78,7 +73,7 @@ X x = X::X( 10 );
   
  Wniosku zostało odebrane dla dalszego brany pod uwagę i uwzględniono kilka notacji alternatywnych i jeden przywrócone Komitetowi został formularza (`?type`), który wskazano jego nieokreślonej — to znaczy dynamiczny charakter. To udzielił użytkownikowi możliwość przełączania między dwoma formularzami — statyczne lub dynamiczne —, ale nikt nie był zbyt przyjemnością z nim. Aby był powrót do tablicy rysunku. Trzeci i pomyślne jest obecnie standardowe `dynamic_cast<type>`, który został uogólnione w celu zestaw cztery notacji rzutowania w stylu nowe.  
   
- W języku C++ ISO `dynamic_cast` zwraca `0` po zastosowaniu do typu wskaźnika nieodpowiednie i zgłasza `std::bad_cast` wyjątku, gdy jest stosowany do typu referencyjnego. W przypadku rozszerzeń zarządzanych dla języka C++ stosowanie `dynamic_cast` do typu zarządzane odniesienia (ze względu na jego reprezentacja wskaźnika) zawsze zwracana `0`. `__try_cast<type>`wprowadzono analogowy wyjątek zgłaszanie wariant `dynamic_cast`, z wyjątkiem tego, że zgłasza `System::InvalidCastException` Jeśli Rzutowanie nie powiedzie się.  
+ W języku C++ ISO `dynamic_cast` zwraca `0` po zastosowaniu do typu wskaźnika nieodpowiednie i zgłasza `std::bad_cast` wyjątku, gdy jest stosowany do typu referencyjnego. W przypadku rozszerzeń zarządzanych dla języka C++ stosowanie `dynamic_cast` do typu zarządzane odniesienia (ze względu na jego reprezentacja wskaźnika) zawsze zwracana `0`. `__try_cast<type>` wprowadzono analogowy wyjątek zgłaszanie wariant `dynamic_cast`, z wyjątkiem tego, że zgłasza `System::InvalidCastException` Jeśli Rzutowanie nie powiedzie się.  
   
 ```  
 public __gc class ItemVerb;  

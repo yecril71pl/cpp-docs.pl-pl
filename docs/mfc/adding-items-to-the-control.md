@@ -1,29 +1,24 @@
 ---
-title: "Dodawanie elementów do formantu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Dodawanie elementów do formantu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CListCtrl class [MFC], adding items
 ms.assetid: 715994bd-340d-4ad2-9882-411654137830
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d117aa06f82da1024d11af38cc4277916c6bca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eab0c7cb1aebf1675d078aa99941edfd9afdc5a8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-items-to-the-control"></a>Dodawanie elementów do formantu
 Do dodawania elementów do formantu listy ([CListCtrl](../mfc/reference/clistctrl-class.md)), wywoływanie jednego z kilku wersji [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) funkcji członkowskiej, w zależności od tego, jakie informacje. Trwa jednej wersji [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury, którego można przygotować. Ponieważ `LV_ITEM` struktura zawiera wiele elementów członkowskich, masz większą kontrolę nad atrybuty kontrolki elementu listy.  

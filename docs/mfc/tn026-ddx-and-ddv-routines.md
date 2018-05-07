@@ -1,13 +1,10 @@
 ---
 title: 'Tn026: procedury DDX i Ddv | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: procedury DDX i DDV
 > [!NOTE]
@@ -78,7 +73,7 @@ DDV_Custom(pDX,
   
  Wartości początkowe dane są ustawione w Konstruktorze standard C++, zazwyczaj w bloku z `//{{AFX_DATA_INIT` i `//}}AFX_DATA_INIT` komentarze.  
   
- `CWnd::UpdateData`Operacja inicjowania i obsługi wokół wywołanie błędów `DoDataExchange`.  
+ `CWnd::UpdateData` Operacja inicjowania i obsługi wokół wywołanie błędów `DoDataExchange`.  
   
  Możesz wywołać `CWnd::UpdateData` w dowolnym momencie przeprowadzić wymiany danych i weryfikacji. Domyślnie `UpdateData`(PRAWDA) jest wywoływana w domyślnym `CDialog::OnOK` obsługi i `UpdateData`(FALSE) jest wywoływana w domyślnym `CDialog::OnInitDialog`.  
   
@@ -99,7 +94,7 @@ DDV_Custom(pDX,
   
 - `m_pDlgWnd`: Okno (zazwyczaj okna dialogowego), który zawiera formanty. Ma to zapobiec wywołań DDX_ i DDV_ funkcje globalne do przekazania "this" do każdej procedury DDX/ddv za.  
   
-- `PrepareCtrl`, a `PrepareEditCtrl`: przygotowuje formantu okna dialogowego do wymiany danych. Przechowuje dojście tego formantu do ustawiania fokus, jeśli weryfikacja zakończy się niepowodzeniem. `PrepareCtrl`Służy do formantów nonedit i `PrepareEditCtrl` jest używany dla formantów edycyjnych.  
+- `PrepareCtrl`, a `PrepareEditCtrl`: przygotowuje formantu okna dialogowego do wymiany danych. Przechowuje dojście tego formantu do ustawiania fokus, jeśli weryfikacja zakończy się niepowodzeniem. `PrepareCtrl` Służy do formantów nonedit i `PrepareEditCtrl` jest używany dla formantów edycyjnych.  
   
 - **Niepowodzenie**: wywoływana po wykonaniu otworzeniem okna komunikatu alerty użytkownikowi błąd danych wejściowych. Ta procedura spowoduje przywrócenie fokus ostatniego formantu (ostatnie wywołanie `PrepareCtrl` / `PrepareEditCtrl`) i zgłosić wyjątek. Ta funkcja członkowska może być wywoływana z zarówno DDX_ i DDV_ procedury.  
   

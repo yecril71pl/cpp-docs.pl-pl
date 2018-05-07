@@ -1,12 +1,9 @@
 ---
 title: Klasa CD2DRadialGradientBrush | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DRadialGradientBrush
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cdac3e2d2df31840ae90b79755b68d916033990
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Klasa CD2DRadialGradientBrush
 Otoka dla ID2D1RadialGradientBrush.  
@@ -122,14 +117,14 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
+##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
  Destruktor. Wywoływane, gdy trwa niszczenie obiektu D2D pędzla gradientu promieniowego.  
   
 ```  
 virtual ~CD2DRadialGradientBrush();
 ```  
   
-##  <a name="attach"></a>CD2DRadialGradientBrush::attach  
+##  <a name="attach"></a>  CD2DRadialGradientBrush::attach  
  Dołącza istniejący interfejs zasobów do obiektu  
   
 ```  
@@ -140,7 +135,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
  `pResource`  
  Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
   
-##  <a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush  
+##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
  Tworzy obiekt CD2DLinearGradientBrush.  
   
 ```  
@@ -180,7 +175,7 @@ CD2DRadialGradientBrush(
  `bAutoDestroy`  
  Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
   
-##  <a name="create"></a>CD2DRadialGradientBrush::Create  
+##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
  Tworzy CD2DRadialGradientBrush.  
   
 ```  
@@ -194,14 +189,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
   
-##  <a name="destroy"></a>CD2DRadialGradientBrush::Destroy  
+##  <a name="destroy"></a>  CD2DRadialGradientBrush::Destroy  
  Niszczy obiektu CD2DRadialGradientBrush.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DRadialGradientBrush::detach  
+##  <a name="detach"></a>  CD2DRadialGradientBrush::detach  
  Odłącza interfejsu zasobów z obiektu  
   
 ```  
@@ -211,7 +206,7 @@ ID2D1RadialGradientBrush* Detach();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do zasobów odłączyć interfejs.  
   
-##  <a name="get"></a>CD2DRadialGradientBrush::Get  
+##  <a name="get"></a>  CD2DRadialGradientBrush::Get  
  Zwraca interfejs ID2D1RadialGradientBrush  
   
 ```  
@@ -221,7 +216,7 @@ ID2D1RadialGradientBrush* Get();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do interfejsu ID2D1RadialGradientBrush lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
   
-##  <a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter  
+##  <a name="getcenter"></a>  CD2DRadialGradientBrush::GetCenter  
  Pobiera Centrum elipsy gradientu  
   
 ```  
@@ -231,7 +226,7 @@ CD2DPointF GetCenter() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Centrum elipsy gradientu. Ta wartość jest wyrażona w przestrzeni współrzędnych pędzla  
   
-##  <a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset  
+##  <a name="getgradientoriginoffset"></a>  CD2DRadialGradientBrush::GetGradientOriginOffset  
  Pobiera przesunięcia początkowego gradientu względem Centrum elipsy gradientu  
   
 ```  
@@ -241,7 +236,7 @@ CD2DPointF GetGradientOriginOffset() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Przesunięcie punktu początkowego gradientu od środka elipsy gradientu. Ta wartość jest wyrażona w przestrzeni współrzędnych pędzla  
   
-##  <a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX  
+##  <a name="getradiusx"></a>  CD2DRadialGradientBrush::GetRadiusX  
  Pobiera promień x elipsy gradientu  
   
 ```  
@@ -251,7 +246,7 @@ FLOAT GetRadiusX() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Promień x elipsy gradientu. Ta wartość jest wyrażona w przestrzeni współrzędnych pędzla  
   
-##  <a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY  
+##  <a name="getradiusy"></a>  CD2DRadialGradientBrush::GetRadiusY  
  Pobiera promień y elipsy gradientu  
   
 ```  
@@ -261,21 +256,21 @@ FLOAT GetRadiusY() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Promień y elipsy gradientu. Ta wartość jest wyrażona w przestrzeni współrzędnych pędzla  
   
-##  <a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush  
+##  <a name="m_pradialgradientbrush"></a>  CD2DRadialGradientBrush::m_pRadialGradientBrush  
  Wskaźnik do ID2D1RadialGradientBrush.  
   
 ```  
 ID2D1RadialGradientBrush* m_pRadialGradientBrush;  
 ```  
   
-##  <a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
+##  <a name="m_radialgradientbrushproperties"></a>  CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
  Centrum, przesunięcie początek gradientu i x radius i y-radius pędzla przez gradientu.  
   
 ```  
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *  
+##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *  
  Zwraca interfejs ID2D1RadialGradientBrush  
   
 ```  
@@ -285,7 +280,7 @@ operator ID2D1RadialGradientBrush*();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do interfejsu ID2D1RadialGradientBrush lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
   
-##  <a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter  
+##  <a name="setcenter"></a>  CD2DRadialGradientBrush::SetCenter  
  Określa Centrum gradientu elipsy w przestrzeni współrzędnych pędzla  
   
 ```  
@@ -296,7 +291,7 @@ void SetCenter(CD2DPointF point);
  `point`  
  Centrum gradientu elipsy, w przestrzeni współrzędnych pędzla  
   
-##  <a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset  
+##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
  Określa przesunięcie punktu początkowego gradientu względem elipsy gradientu Centrum  
   
 ```  
@@ -307,7 +302,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
  `gradientOriginOffset`  
  Przesunięcie punktu początkowego gradientu od środka elipsy gradientu  
   
-##  <a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX  
+##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
  Określa promień x elipsy gradientu w przestrzeni współrzędnych pędzla  
   
 ```  
@@ -318,7 +313,7 @@ void SetRadiusX(FLOAT radiusX);
  `radiusX`  
  Promień x elipsy gradientu. Ta wartość jest w przestrzeni współrzędnych pędzla  
   
-##  <a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY  
+##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
  Określa promień y elipsy gradientu w przestrzeni współrzędnych pędzla  
   
 ```  

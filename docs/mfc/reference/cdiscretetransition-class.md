@@ -1,12 +1,9 @@
 ---
 title: Klasa CDiscreteTransition | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDiscreteTransition
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4b1b7c868c13176d2cd99204b0bae1e2b9992d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdiscretetransition-class"></a>Klasa CDiscreteTransition
 Hermetyzuje odrębny przejścia.  
@@ -81,7 +76,7 @@ class CDiscreteTransition : public CBaseTransition;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxanimationcontroller.h  
   
-##  <a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
+##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition  
  Tworzy obiekt odrębny przejścia i inicjuje jego parametrów.  
   
 ```  
@@ -101,7 +96,7 @@ CDiscreteTransition(
  `hold`  
  Ilość czasu, przez których mają być przechowywane w końcowej wartości zmiennej.  
   
-##  <a name="create"></a>CDiscreteTransition::Create  
+##  <a name="create"></a>  CDiscreteTransition::Create  
  Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM.  
   
 ```  
@@ -117,21 +112,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli przejście jest tworzony pomyślnie; w przeciwnym razie wartość FALSE.  
   
-##  <a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CDiscreteTransition::m_dblFinalValue  
  Wartość zmiennej animacji na końcu przejścia.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_delay"></a>CDiscreteTransition::m_delay  
+##  <a name="m_delay"></a>  CDiscreteTransition::m_delay  
  Ilość czasu, za pomocą którego natychmiastowe przełączenie końcowa wartość opóźnienia.  
   
 ```  
 UI_ANIMATION_SECONDS m_delay;  
 ```  
   
-##  <a name="m_hold"></a>CDiscreteTransition::m_hold  
+##  <a name="m_hold"></a>  CDiscreteTransition::m_hold  
  Ilość czasu, przez których mają być przechowywane w końcowej wartości zmiennej.  
   
 ```  

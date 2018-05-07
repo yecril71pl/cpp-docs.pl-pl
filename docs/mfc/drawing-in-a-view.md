@@ -1,13 +1,10 @@
 ---
 title: Rysowanie w widoku | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3457597edce1b7ce36b132d1bdd16d286cb94d03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc716800c35aa922f7912f586d6e5b8429593615
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-in-a-view"></a>Rysowanie w widoku
 Prawie wszystkie rysowania w aplikacji występuje w widoku `OnDraw` funkcji członkowskiej, który należy zastąpić w klasie widoku. (Wyjątkiem jest myszy rysowania, omówione w [interpretowanie danych wejściowych za pośrednictwem widoku użytkownika](../mfc/interpreting-user-input-through-a-view.md).) Twoje `OnDraw` zastąpienia:  
@@ -39,9 +34,9 @@ Prawie wszystkie rysowania w aplikacji występuje w widoku `OnDraw` funkcji czł
   
 2.  Wyświetla dane przez wywoływanie funkcji Członkowskich obiektu kontekstu urządzenia platformę przekazuje do `OnDraw`.  
   
- Po zmianie danych dokumentu w inny sposób, widok musi być narysowany ponownie, aby odzwierciedlić zmiany. Zazwyczaj dzieje się tak, gdy użytkownik zmieni za pośrednictwem widoku dokumentu. W takim przypadku widok wywołuje dokumentu [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) funkcji członkowskiej do wszystkich widoków na tym samym dokumencie, aby zaktualizować się powiadomienia. `UpdateAllViews`wywołuje każdego widoku [OnUpdate](../mfc/reference/cview-class.md#onupdate) funkcję elementu członkowskiego. Domyślna implementacja `OnUpdate` unieważnia obszaru klienckiego całego widoku. Można je zastąpić, zanim unieważni tylko tych regionów obszaru klienta, które mapują zmodyfikowane części dokumentu.  
+ Po zmianie danych dokumentu w inny sposób, widok musi być narysowany ponownie, aby odzwierciedlić zmiany. Zazwyczaj dzieje się tak, gdy użytkownik zmieni za pośrednictwem widoku dokumentu. W takim przypadku widok wywołuje dokumentu [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) funkcji członkowskiej do wszystkich widoków na tym samym dokumencie, aby zaktualizować się powiadomienia. `UpdateAllViews` wywołuje każdego widoku [OnUpdate](../mfc/reference/cview-class.md#onupdate) funkcję elementu członkowskiego. Domyślna implementacja `OnUpdate` unieważnia obszaru klienckiego całego widoku. Można je zastąpić, zanim unieważni tylko tych regionów obszaru klienta, które mapują zmodyfikowane części dokumentu.  
   
- `UpdateAllViews` Funkcji członkowskiej klasy **CDocument** i `OnUpdate` funkcji członkowskiej klasy `CView` let przekazać informacje opisujące, które części dokumentu zostały zmodyfikowane. Ten mechanizm "wskazówka" pozwala ograniczyć obszar, który należy odświeżyć widok. `OnUpdate`przyjmuje dwa argumenty "wskazówka". Pierwsza strona, `lHint`, typu **LPARAM**, umożliwia przekazywanie danych Ci się podoba, a druga, `pHint`, typu `CObject`*, umożliwia wskaźnikiem do każdego obiektu pochodną `CObject`.  
+ `UpdateAllViews` Funkcji członkowskiej klasy **CDocument** i `OnUpdate` funkcji członkowskiej klasy `CView` let przekazać informacje opisujące, które części dokumentu zostały zmodyfikowane. Ten mechanizm "wskazówka" pozwala ograniczyć obszar, który należy odświeżyć widok. `OnUpdate` przyjmuje dwa argumenty "wskazówka". Pierwsza strona, `lHint`, typu **LPARAM**, umożliwia przekazywanie danych Ci się podoba, a druga, `pHint`, typu `CObject`*, umożliwia wskaźnikiem do każdego obiektu pochodną `CObject`.  
   
  Gdy widok staje się nieprawidłowy, system Windows wysyła on `WM_PAINT` wiadomości. Widok [OnPaint](../mfc/reference/cwnd-class.md#onpaint) funkcji obsługi odpowiada na komunikat przez utworzenie obiektu kontekstu urządzenia klasy [cpaintdc —](../mfc/reference/cpaintdc-class.md) i wywołuje danego widoku `OnDraw` funkcję elementu członkowskiego. Nie masz zwykle można zapisać, zastępując `OnPaint` funkcji obsługi.  
   

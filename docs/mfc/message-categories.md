@@ -1,13 +1,10 @@
 ---
-title: "Kategorie komunikatów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kategorie komunikatów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3bc617c0f3a9915c7ae0314b0e3889ecc561f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d0e4710c74c12bf62cd19df6a053aea9ac35eaf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-categories"></a>Kategorie komunikatów
 Jakiego rodzaju wiadomości podczas pisania obsług dla istnieją trzy główne kategorie:  
@@ -48,10 +43,10 @@ Jakiego rodzaju wiadomości podczas pisania obsług dla istnieją trzy główne 
   
      Obejmuje to **WM_COMMAND** komunikatów powiadomień z obiektów interfejsu użytkownika: menu, przycisków paska narzędzi i klawiszy skrótów. Platformę przetwarza polecenia inaczej niż inne komunikaty i mogą być obsługiwane za więcej typów obiektów, zgodnie z objaśnieniem w [obiekty docelowe poleceń](../mfc/command-targets.md).  
   
-##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a>Komunikaty systemu Windows i komunikaty powiadomień dotyczących formantu  
+##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Komunikaty systemu Windows i komunikaty powiadomień dotyczących formantu  
  Komunikaty w kategorii 1 i 2 — komunikaty systemu Windows i powiadomień dotyczących formantów — są obsługiwane przez system windows: obiekty klas pochodnych od klasy `CWnd`. Obejmuje to `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, i własnych klas pochodnych tych klas podstawowych. Hermetyzuj takie obiekty `HWND`, dojścia do okna systemu Windows.  
   
-##  <a name="_core_command_messages"></a>Komunikaty poleceń  
+##  <a name="_core_command_messages"></a> Komunikaty poleceń  
  Komunikaty w kategorii 3 — poleceń — są obsługiwane przez różnych obiektów: dokumentów, szablony dokumentów i obiekt aplikacji oprócz okien i widoków. Jeśli polecenie ma bezpośredni wpływ niektórych określonego obiektu, warto mieć obiektu obsługi polecenia. Na przykład polecenie Otwórz w menu Plik jest logicznie skojarzony z aplikacją: określony dokument po otrzymaniu polecenie otwarcia aplikacji. Dlatego Obsługa polecenia Otwórz jest funkcją członkowską klasy aplikacji. Aby uzyskać więcej informacji na temat poleceń i jak są kierowane do obiektów, zobacz [jak struktura wywołuje program obsługi](../mfc/how-the-framework-calls-a-handler.md).  
   
 ## <a name="see-also"></a>Zobacz też  

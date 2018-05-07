@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-options"></a>Opcje konsolidatora
 
@@ -116,6 +116,7 @@ Można użyć [komentarz](../../preprocessor/comment-c-cpp.md) pragma, aby okre�
 |[/ PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Używa alternatywną lokalizację do zapisania pliku PDB.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Tworzy plik bazy danych (PDB) program, którego niemającym symboli prywatnych.|
 |[/ PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Określa plik .pgd do optymalizacji sterowanych profilem.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Przestarzałe** tworzy nieobsługująca bezpieczeństwa wątków kompilacja PGO instrumentowany.|
 |[PROFIL](../../build/reference/profile-performance-tools-profiler.md)|Tworzy plik wyjściowy, który może być używany z profilerem narzędzi wydajności.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Ustawia sumę kontrolną w nagłówku .exe.|
 |[/ SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Określa, czy obraz będzie zawierać tabeli bezpieczną obsługę wyjątków.|
@@ -127,6 +128,7 @@ Można użyć [komentarz](../../preprocessor/comment-c-cpp.md) pragma, aby okre�
 |[/ TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Określa identyfikator zasobu biblioteki typów generowanych przez konsolidator.|
 |[/ TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Określa nazwę pliku .tlb i inne pliki wyjściowe MIDL.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Tworzy aplikację, której celem jest przeznaczony do uruchamiania serwera terminali.|
+|[/USEPROFILE](../../build/reference/useprofile.md)|Używa profilowana Optymalizacja danych szkoleniowych do utworzenia zoptymalizowanego obrazu.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Drukuje wiadomości dotyczące postępu konsolidatora.|
 |[/VERSION](../../build/reference/version-version-information.md)|Przypisuje numeru wersji.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Zawiera wszystkie pliki obiektu z określonej biblioteki statyczne.|

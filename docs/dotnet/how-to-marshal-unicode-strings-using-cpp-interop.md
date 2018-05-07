@@ -1,13 +1,10 @@
 ---
-title: "Porady: kierowanie ciągów Unicode za pomocą międzyoperacyjności języka C++ | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: kierowanie ciągów Unicode za pomocą międzyoperacyjności języka C++ | Dokumentacja firmy Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9226eaf035cee7614f2d072a5e2493c067012c2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5290958a55c61dd55adac0f182af7163896d694
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Porady: przeprowadzanie marshalingu ciągów Unicode za pomocą międzyoperacyjności języka C++
 W tym temacie przedstawiono jeden aspekt współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  

@@ -1,13 +1,10 @@
 ---
-title: "MFC: Używanie klas baz danych z dokumentami i widokami | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'MFC: Używanie klas baz danych z dokumentami i widokami | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6d3e2286c10d83b25576474692b5a7faeb9bb332
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcaee376b53c1d592f02aafc830a35d72f64feeb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: używanie klas baz danych z dokumentami i widokami
 Klasy baz danych MFC można użyć z lub bez architektury dokument/widok. Ten temat jest kładzie nacisk Praca z dokumentami i widokami. Objaśniono:  
@@ -47,16 +42,16 @@ Klasy baz danych MFC można użyć z lub bez architektury dokument/widok. Ten te
   
  Aby uzyskać opis rozwiązań alternatywnych, zobacz [MFC: przy użyciu klasy bazy danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md).  
   
-##  <a name="_core_writing_a_form.2d.based_application"></a>Pisanie aplikacji opartych na formularzach  
+##  <a name="_core_writing_a_form.2d.based_application"></a> Pisanie aplikacji opartych na formularzach  
  Wiele aplikacji dostęp do danych są oparte na formularzach. Interfejs użytkownika jest formularz zawierający kontrolki, w których użytkownik bada, wprowadza lub umożliwia edycję danych. Aby na podstawie formularza aplikacji, należy użyć klasy `CRecordView`. Po uruchomieniu Kreatora aplikacji MFC i wybierz **ODBC** typ klienta na **obsługi bazy danych** strony, projekt korzysta z `CRecordView` w klasie widoku.
   
- W aplikacji opartej na formularzu, każdy obiekt widoku rekordu przechowuje wskaźnik do `CRecordset` obiektu. W ramach pól rekordów (RFX) programu exchange mechanizm wymiany danych między zestawu rekordów i źródła danych. (DDX) mechanizm wymiany danych między elementy członkowskie danych pola obiektu zestawu rekordów i kontrolek w formularzu wymiany danych okna dialogowego. `CRecordView`udostępnia domyślne funkcje programu obsługi poleceń do nawigowania między rekordami w formularzu.  
+ W aplikacji opartej na formularzu, każdy obiekt widoku rekordu przechowuje wskaźnik do `CRecordset` obiektu. W ramach pól rekordów (RFX) programu exchange mechanizm wymiany danych między zestawu rekordów i źródła danych. (DDX) mechanizm wymiany danych między elementy członkowskie danych pola obiektu zestawu rekordów i kontrolek w formularzu wymiany danych okna dialogowego. `CRecordView` udostępnia domyślne funkcje programu obsługi poleceń do nawigowania między rekordami w formularzu.  
   
  Aby utworzyć aplikację na podstawie formularzy przy użyciu Kreatora aplikacji, zobacz [tworzenie aplikacji MFC opartej na formularzach](../mfc/reference/creating-a-forms-based-mfc-application.md) i [obsługi bazy danych, Kreator aplikacji MFC](../mfc/reference/database-support-mfc-application-wizard.md).  
   
  Pełne omówienie formularzy, zobacz [widoków rekordów](../data/record-views-mfc-data-access.md).  
   
-##  <a name="_core_using_recordsets_in_documents_and_views"></a>Za pomocą zestawów rekordów w dokumentach i widokach  
+##  <a name="_core_using_recordsets_in_documents_and_views"></a> Za pomocą zestawów rekordów w dokumentach i widokach  
  Wiele prostych aplikacji opartych na formularzach nie ma potrzeby dokumentów. Jeśli aplikacja jest bardziej złożony, prawdopodobnie chcesz użyć dokumentu jako serwer proxy dla bazy danych, przechowywanie `CDatabase` obiekt, który nawiązuje połączenie ze źródłem danych. Na podstawie formularzy aplikacji są przechowywane zazwyczaj wskaźnik do obiektu zestawu rekordów w widoku. Inne rodzaje aplikacji baz danych magazynu zestawów rekordów i `CDatabase` obiektu w dokumencie. Poniżej przedstawiono niektóre możliwości stosowania dokumentów w aplikacjach baz danych:  
   
 -   Jeśli uzyskują dostęp do zestawu rekordów w kontekście lokalnego, należy utworzyć `CRecordset` lokalnie obiektu w funkcji Członkowskich dokumentu lub widok, zgodnie z potrzebami.  
@@ -73,7 +68,7 @@ Klasy baz danych MFC można użyć z lub bez architektury dokument/widok. Ten te
   
      `CDatabase` Zarządza obiekt połączenia ze źródłem danych. Obiekt jest tworzony automatycznie podczas konstruowania dokumentu i wywołania jego **Otwórz** funkcji członkowskiej podczas inicjowania dokumentu. Podczas tworzenia obiektów zestawu rekordów w funkcji Członkowskich dokumentu, przekazać wskaźnik do dokumentu `CDatabase` obiektu. Każdy zestaw rekordów skojarzenie ze źródłem danych. Obiekt bazy danych jest zwykle zniszczone po zamknięciu dokumentu. Obiekty rekordów zwykle zostaną zniszczone podczas ich Zakończ zakres funkcji.  
   
-##  <a name="_core_other_factors"></a>Inne czynniki  
+##  <a name="_core_other_factors"></a> Inne czynniki  
  Aplikacje oparte na formularzu często nie znają użycia w ramach mechanizmu serializacji dokumentu, należy usunąć, wyłączyć lub Zastąp `New` i **Otwórz** polecenia w **pliku**menu. Zapoznaj się z artykułem [szeregowanie: vs serializacji. Baza danych wejścia/wyjścia](../mfc/serialization-serialization-vs-database-input-output.md).  
   
  Można także wprowadzić używać wiele możliwości interfejsu użytkownika obsługujące platformę. Na przykład można użyć wielu `CRecordView` obiektów w oknie podziału, Otwórz wiele zestawów rekordów w różnych wielu okien podrzędnych interfejsu (MDI) dokumentu i tak dalej.  

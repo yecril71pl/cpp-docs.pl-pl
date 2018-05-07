@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets: Używanie klasy CAsyncSocket | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Windows Sockets: Używanie klasy CAsyncSocket | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CAsyncSocket
 dev_langs:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a1bf9e7b162ecfe9724f22996f8883d95cce72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a96ccdd4ce5c49f18c12aa85060954fc97a3408b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: używanie klasy CAsyncSocket
-W tym artykule opisano sposób użycia klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Należy pamiętać, że ta klasa hermetyzuje API systemu Windows Sockets na bardzo niskim poziomie. `CAsyncSocket`jest przeznaczona dla programistów, którzy znasz komunikacji sieciowej szczegółowo, ale mają wygodę wywołań zwrotnych dla powiadomień o zdarzeniach w sieci. W oparciu o ten założeń, w tym artykule przedstawiono tylko podstawowe instrukcji. Prawdopodobnie należy rozważyć użycie `CAsyncSocket` łatwość zajmowanie się wiele protokołów sieciowych w aplikacji MFC Windows Sockets ale nie chcesz pochodzących z elastyczność. Może również uznać, że można uzyskać lepszą wydajność programowania więcej łączności bezpośrednio można samodzielnie niż przy użyciu bardziej ogólne modelu alternatywnych klasy `CSocket`.  
+W tym artykule opisano sposób użycia klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Należy pamiętać, że ta klasa hermetyzuje API systemu Windows Sockets na bardzo niskim poziomie. `CAsyncSocket` jest przeznaczona dla programistów, którzy znasz komunikacji sieciowej szczegółowo, ale mają wygodę wywołań zwrotnych dla powiadomień o zdarzeniach w sieci. W oparciu o ten założeń, w tym artykule przedstawiono tylko podstawowe instrukcji. Prawdopodobnie należy rozważyć użycie `CAsyncSocket` łatwość zajmowanie się wiele protokołów sieciowych w aplikacji MFC Windows Sockets ale nie chcesz pochodzących z elastyczność. Może również uznać, że można uzyskać lepszą wydajność programowania więcej łączności bezpośrednio można samodzielnie niż przy użyciu bardziej ogólne modelu alternatywnych klasy `CSocket`.  
   
- `CAsyncSocket`opisano w *odwołania MFC*. Visual C++ udostępnia również specyfikację Windows Sockets znajduje się w zestawie Windows SDK. Szczegóły pozostało do Ciebie. Visual C++ nie dostarcza Przykładowa aplikacja dla `CAsyncSocket`.  
+ `CAsyncSocket` opisano w *odwołania MFC*. Visual C++ udostępnia również specyfikację Windows Sockets znajduje się w zestawie Windows SDK. Szczegóły pozostało do Ciebie. Visual C++ nie dostarcza Przykładowa aplikacja dla `CAsyncSocket`.  
   
  Jeśli nie są wysoce wiedzę o komunikacji sieciowej i proste rozwiązanie, należy użyć klasy [CSocket —](../mfc/reference/csocket-class.md) z `CArchive` obiektu. Zobacz [Windows Sockets: przy użyciu gniazda z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md) Aby uzyskać więcej informacji.  
   
@@ -45,7 +40,7 @@ W tym artykule opisano sposób użycia klasy [CAsyncSocket](../mfc/reference/cas
   
 -   [Twoje obowiązki z CAsyncSocket](#_core_your_responsibilities_with_casyncsocket).  
   
-##  <a name="_core_creating_and_using_a_casyncsocket_object"></a>Tworzenie i używanie obiektu CAsyncSocket  
+##  <a name="_core_creating_and_using_a_casyncsocket_object"></a> Tworzenie i używanie obiektu CAsyncSocket  
   
 #### <a name="to-use-casyncsocket"></a>Aby użyć CAsyncSocket  
   
@@ -100,7 +95,7 @@ W tym artykule opisano sposób użycia klasy [CAsyncSocket](../mfc/reference/cas
   
  Na przykład ta sekwencja w kodzie (faktycznie dla `CSocket` obiektu), zobacz [Windows Sockets: Sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md).  
   
-##  <a name="_core_your_responsibilities_with_casyncsocket"></a>Twoje obowiązki z CAsyncSocket  
+##  <a name="_core_your_responsibilities_with_casyncsocket"></a> Twoje obowiązki z CAsyncSocket  
  Podczas tworzenia obiektu klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), obiekt hermetyzuje Windows **GNIAZDA** obsługi i dostarcza operacji na tym uchwycie. Jeśli używasz `CAsyncSocket`, muszą dotyczyć wszystkich problemów może sprostać Jeśli bezpośrednio za pomocą interfejsu API. Na przykład:  
   
 -   Scenariusze "Blokowanie".  
@@ -111,7 +106,7 @@ W tym artykule opisano sposób użycia klasy [CAsyncSocket](../mfc/reference/cas
   
  Definicje tych warunków i dodatkowe informacje, zobacz [Windows Sockets: Blokowanie](../mfc/windows-sockets-blocking.md), [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md) .  
   
- Pomimo tych problemów klasy **CAsycnSocket** może być odpowiednie opcje dla Ciebie, jeśli aplikacja wymaga elastyczność i sterowania można uzyskać. Jeśli nie, należy rozważyć użycie klasy `CSocket` zamiast tego. `CSocket`ukrywa wiele szczegółowych od Ciebie: it pomp Windows komunikaty podczas blokowania połączeń i umożliwia dostęp do `CArchive`, która zarządza różnice kolejności bajtów i Konwersja ciągu dla Ciebie.  
+ Pomimo tych problemów klasy **CAsycnSocket** może być odpowiednie opcje dla Ciebie, jeśli aplikacja wymaga elastyczność i sterowania można uzyskać. Jeśli nie, należy rozważyć użycie klasy `CSocket` zamiast tego. `CSocket` ukrywa wiele szczegółowych od Ciebie: it pomp Windows komunikaty podczas blokowania połączeń i umożliwia dostęp do `CArchive`, która zarządza różnice kolejności bajtów i Konwersja ciągu dla Ciebie.  
   
  Aby uzyskać więcej informacji, zobacz:  
   

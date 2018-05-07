@@ -1,12 +1,9 @@
 ---
 title: Klasa CSemaphore | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSemaphore
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378007ee4ebbb457fb8922d44d063b3bdf05729d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f3c5f7cb354bb4889c528fc55459eabcb032709
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csemaphore-class"></a>Klasa CSemaphore
 Obiekt klasy `CSemaphore` reprezentuje "semafora" — obiekt synchronizacji, który zapewnia ograniczoną liczbę wątków w jeden lub więcej procesów dostępu Maintains do liczba to liczba wątków obecnie uzyskują dostęp do określonego zasobu.  
@@ -69,7 +64,7 @@ class CSemaphore : public CSyncObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxmt.h  
   
-##  <a name="csemaphore"></a>CSemaphore::CSemaphore  
+##  <a name="csemaphore"></a>  CSemaphore::CSemaphore  
  Konstruuje nazwane i nienazwane `CSemaphore` obiektu.  
   
 ```  

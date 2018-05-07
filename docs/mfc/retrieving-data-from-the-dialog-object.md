@@ -1,13 +1,10 @@
 ---
 title: Pobieranie danych z obiektu okna dialogowego | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - DDX (dialog data exchange) [MFC], retrieving data from Dialog object
 - GetWindowText method [MFC]
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4b50ae3036a6f262312c7a05c2de093a977a588
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ac243333c8dc778486dd18323658f262c6d6610
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Pobieranie danych z obiektu okna dialogowego
 Platformę zapewnia prosty sposób zainicjować wartości formantów w oknie dialogowym oraz do pobierania wartości z kontroli. Więcej pracochłonne ręczne podejściem jest wywołaniem funkcji, takich jak `SetDlgItemText` i `GetDlgItemText` funkcji elementów członkowskich klasy `CWnd`, które mają zastosowanie do sterowania systemu windows. Z tych funkcji, należy każdy kontrola dostępu indywidualnie do ustawić lub pobrać jej wartość wywoływanie funkcji, takich jak `SetWindowText` i `GetWindowText`. Podejście framework automatyzuje zarówno inicjowania i pobierania.  

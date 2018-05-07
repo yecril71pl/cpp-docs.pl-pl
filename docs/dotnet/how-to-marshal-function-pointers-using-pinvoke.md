@@ -1,13 +1,10 @@
 ---
-title: "Porady: kierowanie wskaźników funkcji za pomocą funkcji PInvoke | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: kierowanie wskaźników funkcji za pomocą funkcji PInvoke | Dokumentacja firmy Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 38854e3debbaf34c9068ed9fbc22e34274512687
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1aa8da5e5b6931fb46ff283a5be15da5b2c7325d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Porady: przeprowadzanie marshalingu wskaźników funkcji za pomocą funkcji PInvoke
 W tym temacie opisano sposób zarządzanych obiektów delegowanych podczas współpracy z niezarządzanych funkcji przy użyciu funkcji .NET Framework P/Invoke można użyć zamiast wskaźników funkcji. Jednak programistów Visual C++ są zachęcani do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe), ponieważ P/Invoke zapewnia małego błąd kompilacji raportowania, nie jest bezpieczne i może być niewygodne wdrożenia. Jeśli niezarządzanego API jest dostarczana jako biblioteki DLL i kod źródłowy jest niedostępny, P/Invoke jest jedyną opcją. W przeciwnym razie zobacz następujące tematy:  

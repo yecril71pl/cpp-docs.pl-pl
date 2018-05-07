@@ -1,13 +1,10 @@
 ---
-title: "Kreatorzy i edytory zasobów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kreatorzy i edytory zasobów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,25 +18,23 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd81a8548dbb746da4afa5b89bc49ee801cbaeb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wizards-and-the-resource-editors"></a>Kreatorzy i edytory zasobów
 Visual C++ obejmuje kilka kreatorów do użycia w programowaniu MFC, oraz wiele edytorów zintegrowanym. Dla formantów ActiveX programowania, [Kreator kontrolek ActiveX](../mfc/reference/mfc-activex-control-wizard.md) pełni funkcję, podobne jak w przypadku Kreator aplikacji MFC. Podczas pisania aplikacji MFC bez większość tych narzędzi, narzędzia znacznie uprościć i przyspieszyć pracę.  
   
-##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a>Kreator aplikacji MFC umożliwia tworzenie aplikacji MFC  
+##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> Kreator aplikacji MFC umożliwia tworzenie aplikacji MFC  
  Użyj [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md) do tworzenia projektu MFC w programie Visual C++, która może obejmować OLE i obsługa bazy danych. Pliki w projekcie zawierają aplikacji, dokumentu, widok i klasy okien ramowych; Standardowe zasoby, w tym menu i paska narzędzi opcjonalne; inne wymagane pliki systemu Windows; i opcjonalnie .rtf — pliki zawierające standardowe tematy Pomocy systemu Windows, które można skorygować i rozszerzyć, aby utworzyć plik Pomocy programu.  
   
-##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a>Zarządzanie klas i komunikatów systemu Windows za pomocą klasy widoku  
+##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> Zarządzanie klas i komunikatów systemu Windows za pomocą klasy widoku  
  Klasa widok pomaga utworzyć funkcje obsługi komunikatów systemu Windows i poleceń, Utwórz i Zarządzaj klasy, Utwórz element członkowski klasy zmienne, utworzyć automatyzacji metody i właściwości, Tworzenie klasy baz danych i inne.  
   
 > [!NOTE]
@@ -53,7 +48,7 @@ Visual C++ obejmuje kilka kreatorów do użycia w programowaniu MFC, oraz wiele 
   
  Okno właściwości utworzy funkcji Członkowskich pusty obsługi wiadomości i obsługi wdrożenia za pomocą edytora kodu źródła. Można utworzyć lub edytować klasy (w tym klasy własny nie pochodzi od klasy MFC) i ich elementy członkowskie z widoku klasy. Aby uzyskać więcej informacji na widoku klasy i kreatorów, które Dodawanie kodu do projektu, zobacz [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md).  
   
-##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a>Edytory zasobów umożliwia tworzenie i edytowanie zasobów  
+##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> Edytory zasobów umożliwia tworzenie i edytowanie zasobów  
  Użyj Visual C++ [edytory zasobów](../windows/resource-editors.md) można tworzyć i edytować menu, okien dialogowych, niestandardowych formantów, klawisze skrótów, mapy bitowe, ikony, kursorów, ciągi i zasoby wersji. Począwszy od programu Visual C++ w wersji 4.0 Edytor paska narzędzi ułatwia utworzenie pasków narzędzi znacznie.  
   
  Aby pomóc Ci jeszcze więcej, Microsoft Foundation Class Library zawiera plik o nazwie wspólnej. RES, zawierającą zasoby "klip grafik", które można skopiować z typowych. RES i Wklej do pliku zasobów. TYPOWE. RES zawiera przyciski paska narzędzi, typowe kursory, ikony i inne. Można użyć, modyfikowania i Ponowna dystrybucja tych zasobów w aplikacji. Aby uzyskać więcej informacji na temat wspólnego. RES, zobacz [próbki Clipart](../visual-cpp-samples.md).  

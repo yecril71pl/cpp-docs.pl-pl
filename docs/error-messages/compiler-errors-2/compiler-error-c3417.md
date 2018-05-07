@@ -1,12 +1,9 @@
 ---
-title: "C3417 błąd kompilatora | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: C3417 błąd kompilatora | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3417
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3417
 ms.assetid: 3e7869ea-8948-42fb-ba30-6ccafe499c35
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 341f6e74c5d0815c4202a340bff5c72631940f85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b83c3b6cf5697ca2e52f9f8ad6afdc2754edd4f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3417"></a>C3417 błąd kompilatora
 "członek": typy wartości nie może zawierać zdefiniowane przez użytkownika specjalne funkcje Członkowskie  

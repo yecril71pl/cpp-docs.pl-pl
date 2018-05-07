@@ -1,12 +1,9 @@
 ---
 title: Klasa CPropExchange | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropExchange
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deea89ccc9c340537b1b33563455ea91b46fe8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropexchange-class"></a>Klasa CPropExchange
 Obsługuje implementacji trwałości dla formantów OLE.  
@@ -68,7 +63,7 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::IsLoading](#isloading)|Wskazuje, czy są właściwości do kontrolki zapisywany lub ładowany z niego.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CPropExchange`nie ma klasy podstawowej.  
+ `CPropExchange` nie ma klasy podstawowej.  
   
  Ustanawia kontekstu i kierunek exchange właściwości.  
   
@@ -78,7 +73,7 @@ class AFX_NOVTABLE CPropExchange
   
  Platformę przekazuje wskaźnik do to `CPropExchange` obiektu do formantu `DoPropExchange` funkcji. Jeśli Kreator jest używany do tworzenia plików starter formantu, formantu `DoPropExchange` wywołania funkcji `COleControl::DoPropExchange`. Wersja klasy podstawowej wymiany standardowych właściwości formantu; Możesz zmodyfikować klasy pochodnej w wersji exchange właściwości została dodana do formantu.  
   
- `CPropExchange`można serializować właściwości formantu lub zainicjować właściwości formantu w momencie ładowania lub tworzenia formantu. `ExchangeProp` i `ExchangeFontProp` funkcji Członkowskich `CPropExchange` mogą przechowywać właściwości, aby załadować je z innego nośnika.  
+ `CPropExchange` można serializować właściwości formantu lub zainicjować właściwości formantu w momencie ładowania lub tworzenia formantu. `ExchangeProp` i `ExchangeFontProp` funkcji Członkowskich `CPropExchange` mogą przechowywać właściwości, aby załadować je z innego nośnika.  
   
  Aby uzyskać więcej informacji na temat używania `CPropExchange`, zapoznaj się z artykułem [kontrolki ActiveX MFC: strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).  
   
@@ -88,7 +83,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxctl.h  
   
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
  Serializuje właściwość, która przechowuje dane dużego obiektu binarnego (BLOB).  
   
 ```  
@@ -116,7 +111,7 @@ virtual BOOL ExchangeBlobProp(
   
  Funkcje **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, i **CPropsetPropExchange::ExchangeBlobProp** zastąpienia czystej funkcji wirtualnej.  
   
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp  
  Zamienia właściwość czcionki między nośnika magazynowania i formantu.  
   
 ```  
@@ -148,7 +143,7 @@ virtual BOOL ExchangeFontProp(
   
  Funkcje **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, i **CPropsetPropExchange::ExchangeFontProp** zastąpienia czystej funkcji wirtualnej.  
   
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp  
  Zamienia właściwość między formantem a plikiem.  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL ExchangePersistentProp(
   
  Funkcje **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, i **CPropsetPropExchange::ExchangePersistentProp** zastąpienie tego czystej funkcji wirtualnej.  
   
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp  
  Zamienia właściwość między nośnika magazynowania i formantu.  
   
 ```  
@@ -202,7 +197,7 @@ virtual BOOL ExchangeProp(
 |------------|-------------------|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
-|`VT_BOOL`|**WARTOŚĆ LOGICZNA**|  
+|`VT_BOOL`|**BOOL**|  
 |`VT_BSTR`|`CString`|  
 |`VT_CY`|**CY**|  
 |`VT_R4`|**float**|  
@@ -222,7 +217,7 @@ virtual BOOL ExchangeProp(
   
  Funkcje **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, i **CPropsetPropExchange::ExchangeProp** zastąpienie tym czysty funkcję wirtualną.  
   
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion  
  Wywoływane przez platformę, by obsłużyć trwałości numeru wersji.  
   
 ```  
@@ -245,7 +240,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli funkcja zakończyło się pomyślnie; w przeciwnym razie 0.  
   
-##  <a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>  CPropExchange::GetVersion  
  Wywołanie tej funkcji można pobrać numeru wersji formantu.  
   
 ```  
@@ -255,7 +250,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>Wartość zwracana  
  Numer wersji formantu.  
   
-##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous  
  Określa, czy właściwość wymian są wykonywane asynchronicznie.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE, jeśli właściwości są wymieniane asynchronicznie, w przeciwnym razie wartość FALSE.  
   
-##  <a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>  CPropExchange::IsLoading  
  Wywołanie tej funkcji w celu ustalenia, czy są właściwości do kontrolki zapisywany lub ładowany z niego.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Uaktualnianie istniejącego formantu ActiveX | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Uaktualnianie istniejącego formantu ActiveX | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a7b9c76ffd4366522dce366a165698bd3a26173
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego kontrolki ActiveX
 Formanty ActiveX istniejących (dawniej formanty OLE) można używać w Internecie bez żadnych modyfikacji. Można zmodyfikować formantów, aby zwiększyć ich wydajność. Korzystając z formantu na stronie sieci Web, istnieją dodatkowe zagadnienia. Plik ocx i wszystkie pliki pomocnicze musi znajdować się na komputerze docelowym lub można pobrać przez Internet. Dzięki temu rozmiar kodu i pobierania czasu ważną kwestią. W pliku cab podpisem można spakować pliki do pobrania. Można oznaczyć jako bezpieczne do wykonywania skryptów i jako bezpieczne inicjowanie formantu.  
@@ -52,11 +47,11 @@ Formanty ActiveX istniejących (dawniej formanty OLE) można używać w Internec
   
  Możesz także dodać optymalizacje, zgodnie z opisem w [formantów ActiveX: Optymalizacja](../mfc/mfc-activex-controls-optimization.md). Monikery może służyć do pobierania właściwości i dużych obiektów blob asynchronicznie, zgodnie z opisem w [formantów ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md).  
   
-##  <a name="_core_packaging_code_for_downloading"></a>Kod opakowania do pobrania  
- Aby uzyskać więcej informacji na ten temat zobacz artykuł bazy wiedzy Knowledge Base "Opakowania MFC formantów dla Użyj za pośrednictwem Internetu" (Q167158). Można znaleźć artykuły bazy wiedzy w [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+##  <a name="_core_packaging_code_for_downloading"></a> Kod opakowania do pobrania  
+ Aby uzyskać więcej informacji na ten temat zobacz artykuł bazy wiedzy Knowledge Base "Opakowania MFC formantów dla Użyj za pośrednictwem Internetu" (Q167158). Można znaleźć artykuły bazy wiedzy w [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
 ### <a name="the-codebase-tag"></a>CODEBASE Tag  
- Formanty ActiveX są osadzone na stronach sieci Web przy użyciu `<OBJECT>` tagu. `CODEBASE` Parametr `<OBJECT>` tag Określa lokalizację, z której można pobrać formantu. `CODEBASE`można wskazać pomyślnie na wielu różnych typów plików.  
+ Formanty ActiveX są osadzone na stronach sieci Web przy użyciu `<OBJECT>` tagu. `CODEBASE` Parametr `<OBJECT>` tag Określa lokalizację, z której można pobrać formantu. `CODEBASE` można wskazać pomyślnie na wielu różnych typów plików.  
   
 ### <a name="using-the-codebase-tag-with-an-ocx-file"></a>Przy użyciu CODEBASE Tag przy użyciu pliku OCX  
   
@@ -144,7 +139,7 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
   
  W zależności od wersji określone możesz wymusić pobierania formantu. Do ukończenia specyfikacji `OBJECT` tym tag `CODEBASE` parametrów, zobacz W3C odwołania.  
   
-##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a>Oznaczenie bezpieczne kontrolki dla wykonywania skryptów i inicjalizacji  
+##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Oznaczenie bezpieczne kontrolki dla wykonywania skryptów i inicjalizacji  
  Kontrolki ActiveX używana na stronach sieci Web powinien być oznaczony jako bezpieczne do wykonywania skryptów i bezpieczne inicjowanie, jeśli w rzeczywistości są bezpieczne. Bezpieczne kontrolki zostanie nie we/wy dysku lub wykonać bezpośrednio uzyskać dostęp do pamięci lub rejestrów maszyny.  
   
  Formanty może być oznaczony jako bezpieczne do wykonywania skryptów i bezpieczne inicjowanie za pomocą rejestru. Modyfikowanie `DllRegisterServer` można dodać pozycje podobne do następujących czynności, aby oznaczyć formant jako bezpieczne do wykonywania skryptów i trwałości w rejestrze. Alternatywną metodą jest zaimplementowanie `IObjectSafety`.  
@@ -168,7 +163,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}   
 ```  
   
-##  <a name="_core_licensing_issues"></a>Licencjonowania  
+##  <a name="_core_licensing_issues"></a> Licencjonowania  
  Jeśli chcesz użyć licencjonowanego formantu na stronie sieci Web, należy sprawdzić, czy umowa licencyjna umożliwia jego użyciem w Internecie i utworzenie pliku pakietu licencji (LPK) dla niego.  
   
  Licencjonowanego formantu ActiveX nie zostanie załadowany prawidłowo na stronie HTML w przypadku komputera z uruchomionym programu Internet Explorer nie ma licencji na korzystanie z kontroli. Na przykład jeśli licencjonowanego formantu został utworzony przy użyciu programu Visual C++, strony HTML przy użyciu formantu zostanie załadowany prawidłowo na komputerze, gdy formant został utworzony, ale go nie zostanie załadowany na innym komputerze, chyba że wśród nich informacji licencjonowania.  
@@ -181,7 +176,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
 -   Użycie parametru Codebase  
   
- Aby użyć licencjonowanego formantu na stronie HTML na maszynie nonlicensed, należy wygenerować pliku pakietu licencji (LPK). Plik LPK zawiera licencji czasu wykonywania dla licencjonowane formanty na stronie HTML. Ten plik został wygenerowany za pomocą LPK_TOOL. EXE, który jest dostarczany z zestawem SDK ActiveX. Aby uzyskać więcej informacji, zobacz witrynę sieci Web MSDN pod [http://msdn.microsoft.com](http://msdn.microsoft.com).  
+ Aby użyć licencjonowanego formantu na stronie HTML na maszynie nonlicensed, należy wygenerować pliku pakietu licencji (LPK). Plik LPK zawiera licencji czasu wykonywania dla licencjonowane formanty na stronie HTML. Ten plik został wygenerowany za pomocą LPK_TOOL. EXE, który jest dostarczany z zestawem SDK ActiveX. Aby uzyskać więcej informacji, zobacz witrynę sieci Web MSDN pod [ http://msdn.microsoft.com ](http://msdn.microsoft.com).  
   
 #### <a name="to-create-an-lpk-file"></a>Aby utworzyć plik LPK  
   
@@ -222,7 +217,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Aby uzyskać więcej informacji na temat licencjonowania kontroli, zobacz [formantów ActiveX: Licencjonowanie formantu ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
   
-##  <a name="_core_signing_code"></a>Podpisywanie kodu  
+##  <a name="_core_signing_code"></a> Podpisywanie kodu  
  Podpisywanie kodu zaprojektowano w celu zidentyfikowania źródła kodu, a aby zagwarantować, że kod nie zmienił się od jej została podpisana. W zależności od ustawienia bezpieczeństwa przeglądarki użytkownicy mogą otrzymywać ostrzeżenie przed pobraniem kodu. Użytkownicy mogą wybrać opcję zaufania określonych właścicieli certyfikatu lub przedsiębiorstwa, w których wielkość kod jest podpisywany przez osoby zaufane, zostaną pobrane bez ostrzeżenia. Kod jest podpisany cyfrowo, aby zapobiec naruszeniu.  
   
  Upewnij się, że końcowego kodu jest podpisany, dzięki czemu formantu można automatycznie pobrać bez wyświetlania ostrzeżeń zaufania. Aby uzyskać więcej informacji na temat podpisywania kodu, zapoznaj się z dokumentacją na Authenticode w zestawie SDK ActiveX i zobacz [podpisywania pliku CAB](http://msdn.microsoft.com/en-us/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
@@ -231,7 +226,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Cyfrowego podpisywania kodu gwarancje nie została zmieniona, ponieważ jest on podpisany. Skrót kodu jest poświęcony i osadzone w certyfikacie. Ten skrót później jest porównywany ze skrótu podejmowane po pobraniu kod, ale przed uruchomieniem kodu. Firm, takich jak Verisign, można podać kluczy prywatnych i publicznych, niezbędnych do podpisywania kodu. Zestaw SDK ActiveX jest dostarczany z MakeCert, narzędzie do tworzenia certyfikatów testu.  
   
-##  <a name="_core_managing_the_palette"></a>Zarządzanie palety  
+##  <a name="_core_managing_the_palette"></a> Zarządzanie palety  
  Kontenery określić paletę i udostępni go jako właściwością otoczenia **DISPID_AMBIENT_PALETTE**. Kontener (na przykład Internet Explorer) wybiera paletę jest używany przez wszystkie kontrolki ActiveX na stronie w celu określenia własnych palety. Uniemożliwia wyświetlanie migotanie i przedstawia spójny wygląd.  
   
  Można zastąpić formantu `OnAmbientPropertyChange` do obsługi powiadomień o zmianach palety.  
@@ -242,7 +237,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Starsze kontenerów, które nie korzystają z właściwością otoczenia palety wyśle `WM_QUERYNEWPALETTE` i `WM_PALETTECHANGED` wiadomości. Można zastąpić formantu `OnQueryNewPalette` i `OnPaletteChanged` do obsługi tych wiadomości.  
   
-##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a>Programu Internet Explorer przeglądarki poziom bezpieczeństwa i kontroli zachowania  
+##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Programu Internet Explorer przeglądarki poziom bezpieczeństwa i kontroli zachowania  
  Przeglądarka musi opcje poziom bezpieczeństwa, można skonfigurować przez użytkownika. Strony sieci Web może zawierać zawartość, która może być szkodliwe dla komputera użytkownika, przeglądarek Zezwalaj użytkownikowi na wybranie opcji poziom bezpieczeństwa. W zależności od sposobu, w przeglądarce implementuje poziom bezpieczeństwa formantu nie może zostać pobrana w ogóle lub wyświetli certyfikatu lub komunikat ostrzegawczy, aby zezwolić użytkownikowi na wybranie w czasie wykonywania, czy nie można pobrać formantu. Poniżej przedstawiono zachowania formantów ActiveX w obszarze poziom bezpieczeństwa wysoki, średni i niski w programie Internet Explorer.  
   
 ### <a name="high-safety-mode"></a>Tryb wysokiego bezpieczeństwa  

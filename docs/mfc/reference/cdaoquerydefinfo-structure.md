@@ -1,13 +1,10 @@
 ---
-title: "Cdaoquerydefinfo — struktura | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cdaoquerydefinfo — struktura | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoQueryDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
 - CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e476fd8e95b48b59bbb3bae41d9ad84829ca8fa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo — Struktura
 `CDaoQueryDefInfo` Struktura zawiera informacje dotyczące obiektu querydef zdefiniowany dla obiektów dostępu do danych (DAO).  
@@ -106,7 +101,7 @@ struct CDaoQueryDefInfo
 ## <a name="remarks"></a>Uwagi  
  Querydef jest obiektem klasy [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Odwołania do podstawowej, pomocniczej i wszystkie powyższe wskazują, jak informacje zwracane przez [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) funkcji członkowskiej klasy `CDaoDatabase`.  
   
- Informacje o pobrane przez [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) funkcja członkowska jest przechowywany w `CDaoQueryDefInfo` struktury. Wywołanie `GetQueryDefInfo` dla obiektu bazy danych, w których querydefs — kolekcja jest obiekt querydef. `CDaoQueryDefInfo`definiuje również `Dump` kompilacje funkcji członkowskiej podczas debugowania. Można użyć `Dump` do zrzutu zawartość `CDaoQueryDefInfo` obiektu. Klasa `CDaoDatabase` dostarcza również funkcje Członkowskie uzyskać bezpośredni dostęp do wszystkich właściwości zwracane w `CDaoQueryDefInfo` obiektu, dzięki czemu prawdopodobnie rzadko trzeba wywołać `GetQueryDefInfo`.  
+ Informacje o pobrane przez [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) funkcja członkowska jest przechowywany w `CDaoQueryDefInfo` struktury. Wywołanie `GetQueryDefInfo` dla obiektu bazy danych, w których querydefs — kolekcja jest obiekt querydef. `CDaoQueryDefInfo` definiuje również `Dump` kompilacje funkcji członkowskiej podczas debugowania. Można użyć `Dump` do zrzutu zawartość `CDaoQueryDefInfo` obiektu. Klasa `CDaoDatabase` dostarcza również funkcje Członkowskie uzyskać bezpośredni dostęp do wszystkich właściwości zwracane w `CDaoQueryDefInfo` obiektu, dzięki czemu prawdopodobnie rzadko trzeba wywołać `GetQueryDefInfo`.  
   
  Można dołączyć nowego pola lub parametr obiektu do kolekcji pól lub parametrów obiektu querydef podstawowej bazy danych nie obsługuje typ danych określony dla nowego obiektu jest zgłaszany wyjątek.  
   

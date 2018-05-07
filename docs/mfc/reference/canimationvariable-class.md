@@ -1,12 +1,9 @@
 ---
 title: Klasa CAnimationVariable | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationVariable
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a90db931ca53687c42263df6a4112eb478059227
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: efaf47ef434e4f6c63b937d1f360851fa9826e3d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationvariable-class"></a>Klasa CAnimationVariable
 Reprezentuje zmienną animacji.  
@@ -130,14 +125,14 @@ class CAnimationVariable;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationvariable"></a>CAnimationVariable:: ~ CAnimationVariable  
+##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable:: ~ CAnimationVariable  
  Destruktor. Wywoływane, gdy obiekt CAnimationVariable jest niszczone.  
   
 ```  
 virtual ~CAnimationVariable();
 ```  
   
-##  <a name="addtransition"></a>CAnimationVariable::AddTransition  
+##  <a name="addtransition"></a>  CAnimationVariable::AddTransition  
  Dodaje przejście.  
   
 ```  
@@ -151,7 +146,7 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana, aby dodać przejście do wewnętrznej listy przejść do zastosowania do zmiennej animacji. Ta lista powinny zostać wyczyszczone, gdy zaplanowano animacji.  
   
-##  <a name="applytransitions"></a>CAnimationVariable::ApplyTransitions  
+##  <a name="applytransitions"></a>  CAnimationVariable::ApplyTransitions  
  Dodaje przejścia z listy wewnętrznych do scenorysu.  
   
 ```  
@@ -174,7 +169,7 @@ void ApplyTransitions(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda dodaje przejścia z listy wewnętrznych do scenorysu. Jest ona wywoływana z kodu najwyższego poziomu kilka razy można dodać przejścia, które nie są zależne od kluczowych i Dodawanie przejść, które są zależne od kluczowych. Jeśli nie utworzono podstawowej zmiennej animacji obiektu COM, ta metoda tworzy na tym etapie.  
   
-##  <a name="canimationvariable"></a>CAnimationVariable::CAnimationVariable  
+##  <a name="canimationvariable"></a>  CAnimationVariable::CAnimationVariable  
  Tworzy obiekt zmiennej animacji.  
   
 ```  
@@ -188,7 +183,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ### <a name="remarks"></a>Uwagi  
  Tworzy obiekt zmiennej animacji i ustawia wartość domyślną. Wartość domyślna jest używany, gdy zmienna nie jest animowany lub nie można animować.  
   
-##  <a name="cleartransitions"></a>CAnimationVariable::ClearTransitions  
+##  <a name="cleartransitions"></a>  CAnimationVariable::ClearTransitions  
  Czyści przejścia.  
   
 ```  
@@ -202,7 +197,7 @@ void ClearTransitions(BOOL bAutodestroy);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda usuwa wszystkie przejścia z wewnętrzną listę przejścia. Jeśli bAutodestroy ma wartość PRAWDA lub m_bAutodestroyTransitions ma wartość TRUE, przejścia są usuwane. W przeciwnym razie wywołujący powinien cofnięcie przydziału obiektów przejścia.  
   
-##  <a name="create"></a>CAnimationVariable::Create  
+##  <a name="create"></a>  CAnimationVariable::Create  
  Tworzy obiekt źródłowy COM zmiennej animacji.  
   
 ```  
@@ -219,7 +214,7 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda powoduje utworzenie podstawowej zmiennej animacji obiektu COM i ustawia wartość domyślną.  
   
-##  <a name="createtransitions"></a>CAnimationVariable::CreateTransitions  
+##  <a name="createtransitions"></a>  CAnimationVariable::CreateTransitions  
  Tworzy wszystkie przejścia, które ma zostać zastosowany do tej zmiennej animacji.  
   
 ```  
@@ -238,7 +233,7 @@ BOOL CreateTransitions(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez platformę, gdy trzeba utworzyć przejścia, które zostały dodane do zmiennej na wewnętrznej liście przejścia.  
   
-##  <a name="enableintegervaluechangedevent"></a>CAnimationVariable::EnableIntegerValueChangedEvent  
+##  <a name="enableintegervaluechangedevent"></a>  CAnimationVariable::EnableIntegerValueChangedEvent  
  Włącza lub wyłącza IntegerValueChanged zdarzeń.  
   
 ```  
@@ -257,7 +252,7 @@ void EnableIntegerValueChangedEvent (
 ### <a name="remarks"></a>Uwagi  
  Po włączeniu zdarzeń ValueChanged struktura wywołuje metody wirtualnej CAnimationController::OnAnimationIntegerValueChanged. Należy je zastąpić w klasy pochodzącej od CAnimationController, aby przetworzyć to zdarzenie. Ta metoda jest wywoływana za każdym razem, gdy zostanie zmieniona wartość całkowitą typu zmienną animacji.  
   
-##  <a name="enablevaluechangedevent"></a>CAnimationVariable::EnableValueChangedEvent  
+##  <a name="enablevaluechangedevent"></a>  CAnimationVariable::EnableValueChangedEvent  
  Włącza lub wyłącza ValueChanged zdarzeń.  
   
 ```  
@@ -276,7 +271,7 @@ void EnableValueChangedEvent (
 ### <a name="remarks"></a>Uwagi  
  Po włączeniu zdarzeń ValueChanged struktura wywołuje metody wirtualnej CAnimationController::OnAnimationValueChanged. Należy je zastąpić w klasy pochodzącej od CAnimationController, aby przetworzyć to zdarzenie. Ta metoda jest wywoływana za każdym razem, gdy zostanie zmieniona wartość zmiennej animacji.  
   
-##  <a name="getdefaultvalue"></a>CAnimationVariable::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationVariable::GetDefaultValue  
  Zwraca wartość domyślną.  
   
 ```  
@@ -289,7 +284,7 @@ DOUBLE GetDefaultValue() const;
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja służy do uzyskania wartości domyślnej zmiennej animacji. W konstruktorze lub metodą SetDefaultValue można ustawić wartości domyślnej.  
   
-##  <a name="getparentanimationobject"></a>CAnimationVariable::GetParentAnimationObject  
+##  <a name="getparentanimationobject"></a>  CAnimationVariable::GetParentAnimationObject  
  Zwraca element nadrzędny obiekt animacji.  
   
 ```  
@@ -302,7 +297,7 @@ CAnimationBaseObject* GetParentAnimationObject();
 ### <a name="remarks"></a>Uwagi  
  Tę metodę można wywołać pobrać wskaźnika do obiektu nadrzędnego animacji (kontener).  
   
-##  <a name="getvalue"></a>CAnimationVariable::GetValue  
+##  <a name="getvalue"></a>  CAnimationVariable::GetValue  
  Zwraca bieżącą wartość zmiennej animacji.  
   
 ```  
@@ -323,7 +318,7 @@ HRESULT GetValue(INT32& nValue);
 ### <a name="remarks"></a>Uwagi  
  Tę metodę można wywołać pobrać bieżącą wartość zmiennej animacji. Jeśli nie utworzono obiekt COM, dblValue będzie zawierać wartość domyślną, gdy funkcja zwraca wartość.  
   
-##  <a name="getvariable"></a>CAnimationVariable::GetVariable  
+##  <a name="getvariable"></a>  CAnimationVariable::GetVariable  
  Zwraca wskaźnik do obiektu IUIAnimationVariable COM.  
   
 ```  
@@ -336,7 +331,7 @@ IUIAnimationVariable* GetVariable();
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja służy do dostępu do podstawowego obiektu IUIAnimationVariable COM i bezpośrednio wywołać metody w razie potrzeby.  
   
-##  <a name="m_bautodestroytransitions"></a>CAnimationVariable::m_bAutodestroyTransitions  
+##  <a name="m_bautodestroytransitions"></a>  CAnimationVariable::m_bAutodestroyTransitions  
  Określa, czy mają zostać usunięte obiekty powiązane przejścia.  
   
 ```  
@@ -346,35 +341,35 @@ BOOL m_bAutodestroyTransitions;
 ### <a name="remarks"></a>Uwagi  
  Należy ustawić tę wartość na true, aby wymuszenia usunięcia obiektów przejścia, gdy są usuwane z wewnętrzną listę przejścia. Jeśli ta wartość wynosi FALSE przejścia należy usunąć wywołując aplikacji. Listy przejść zawsze są czyszczone po zaplanowano animacji. Wartość domyślna to FALSE.  
   
-##  <a name="m_dbldefaultvalue"></a>CAnimationVariable::m_dblDefaultValue  
+##  <a name="m_dbldefaultvalue"></a>  CAnimationVariable::m_dblDefaultValue  
  Określa wartość domyślną, która jest propagowana do IUIAnimationVariable.  
   
 ```  
 DOUBLE m_dblDefaultValue;  
 ```  
   
-##  <a name="m_lsttransitions"></a>CAnimationVariable::m_lstTransitions  
+##  <a name="m_lsttransitions"></a>  CAnimationVariable::m_lstTransitions  
  Zawiera listę przejścia Animacja tej zmiennej animacji.  
   
 ```  
 CObList m_lstTransitions;  
 ```  
   
-##  <a name="m_pparentobject"></a>CAnimationVariable::m_pParentObject  
+##  <a name="m_pparentobject"></a>  CAnimationVariable::m_pParentObject  
  Wskaźnik do obiektu animacji, który hermetyzuje tej zmiennej animacji.  
   
 ```  
 CAnimationBaseObject* m_pParentObject;  
 ```  
   
-##  <a name="m_variable"></a>CAnimationVariable::m_variable  
+##  <a name="m_variable"></a>  CAnimationVariable::m_variable  
  Przechowuje wskaźnik do obiektu IUIAnimationVariable COM. Wartość NULL, jeśli obiekt COM nie został jeszcze utworzony lub tworzenie nie powiodło się.  
   
 ```  
 ATL::CComPtr<IUIAnimationVariable> m_variable;  
 ```  
   
-##  <a name="setdefaultvalue"></a>CAnimationVariable::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationVariable::SetDefaultValue  
  Ustawia wartość domyślną i zwalnia obiektu IUIAnimationVariable COM.  
   
 ```  
@@ -388,7 +383,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody, aby zresetować wartość domyślną. Ta metoda zwalnia w związku z tym wewnętrznego obiektu IUIAnimationVariable COM, gdy zostaje odtworzone zmiennej animacji, obiekt COM pobiera nową wartością domyślną. Wartością domyślną jest zwracany przez GetValue, jeśli nie utworzono obiekt COM, reprezentujący zmiennej animacji lub zmienna ma nie animowany.  
   
-##  <a name="setparentanimationobject"></a>CAnimationVariable::SetParentAnimationObject  
+##  <a name="setparentanimationobject"></a>  CAnimationVariable::SetParentAnimationObject  
  Określa relację między zmienną animacji i obiektu animacji.  
   
 ```  

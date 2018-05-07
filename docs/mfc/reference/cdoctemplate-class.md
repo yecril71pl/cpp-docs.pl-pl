@@ -1,12 +1,9 @@
 ---
-title: "Cdoctemplate — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cdoctemplate — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocTemplate
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetPreviewInfo
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d44aac1ca7a018be7be1b375dd92920af96dba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7674e9a25f4794d40a977fce914ab6ac0131de25
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdoctemplate-class"></a>Cdoctemplate — klasa
 Abstrakcyjna klasa podstawowa definiujący funkcje podstawowe dla szablonów dokumentów.  
@@ -134,14 +129,14 @@ class CDocTemplate : public CCmdTarget
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CDocTemplate`  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
   
-##  <a name="adddocument"></a>CDocTemplate::AddDocument  
+##  <a name="adddocument"></a>  CDocTemplate::AddDocument  
  Ta funkcja służy do dodawania dokumentu do szablonu.  
   
 ```  
@@ -155,7 +150,7 @@ virtual void AddDocument(CDocument* pDoc);
 ### <a name="remarks"></a>Uwagi  
  Klasy pochodne [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) i [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) przesłonić tę funkcję. Jeśli pochodzi własne klasy szablonów dokumentów z `CDocTemplate`, klasy pochodne muszą przesłaniać tej funkcji.  
   
-##  <a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
+##  <a name="cdoctemplate"></a>  CDocTemplate::CDocTemplate  
  Konstruuje `CDocTemplate` obiektu.  
   
 ```  
@@ -196,7 +191,7 @@ CDocTemplate (
 ### <a name="remarks"></a>Uwagi  
  Użyj tej funkcji Członkowskich do skonstruowania `CDocTemplate` obiektu. Dynamiczne przydzielanie `CDocTemplate` obiektu i przekaż go do [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) z `InitInstance` funkcji członkowskiej klasy aplikacji.  
   
-##  <a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
+##  <a name="closealldocuments"></a>  CDocTemplate::CloseAllDocuments  
  Wywołanie tej funkcji Członkowskich, aby zamknąć wszystkie otwarte dokumenty.  
   
 ```  
@@ -212,7 +207,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
   
  Należy przesłonić tę funkcję, jeśli chcesz wymagać od użytkownika do wykonania oczyszczania specjalnego przetwarzania przed zamknięciem dokumentu. Na przykład jeśli dokument reprezentuje rekord w bazie danych, można przesłonić tę funkcję, aby zamknąć bazy danych.  
   
-##  <a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
+##  <a name="createnewdocument"></a>  CDocTemplate::CreateNewDocument  
  Wywołanie tej funkcji Członkowskich, aby utworzyć nowy dokument typu skojarzonego z tym szablonem dokumentu.  
   
 ```  
@@ -222,7 +217,7 @@ virtual CDocument* CreateNewDocument();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowo utworzonego dokumentu lub **NULL** w przypadku wystąpienia błędu.  
   
-##  <a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
+##  <a name="createnewframe"></a>  CDocTemplate::CreateNewFrame  
  Tworzy okno ramowe zawierające widok i dokumentów.  
   
 ```  
@@ -242,11 +237,11 @@ virtual CFrameWnd* CreateNewFrame(
  Wskaźnik do okno ramowe nowo utworzony lub **NULL** w przypadku wystąpienia błędu.  
   
 ### <a name="remarks"></a>Uwagi  
- `CreateNewFrame`używa `CRuntimeClass` obiektów przekazany do konstruktora, aby utworzyć nowe okno ramowe widok i dołączony dokument. Jeśli `pDoc` parametr jest **NULL**, ramach danych wyjściowych śledzenia wiadomości.  
+ `CreateNewFrame` używa `CRuntimeClass` obiektów przekazany do konstruktora, aby utworzyć nowe okno ramowe widok i dołączony dokument. Jeśli `pDoc` parametr jest **NULL**, ramach danych wyjściowych śledzenia wiadomości.  
   
  `pOther` Parametr jest używany do wdrożenia nowego okna polecenia. Zapewnia on okno ramowe, na którym się nowe okno ramowe modelu. Nowe okno ramowe jest zazwyczaj tworzony niewidoczne. Wywołanie tej funkcji można utworzyć okna ramowe poza implementacja standardowych ramy nowy plik i Otwórz plik.  
   
-##  <a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
+##  <a name="createoleframe"></a>  CDocTemplate::CreateOleFrame  
  Tworzy okno ramowe OLE.  
   
 ```  
@@ -272,7 +267,7 @@ CFrameWnd* CreateOleFrame(
 ### <a name="remarks"></a>Uwagi  
  Jeśli `bCreateView` wynosi zero, zostanie utworzona pusta ramka.  
   
-##  <a name="getdocstring"></a>CDocTemplate::GetDocString  
+##  <a name="getdocstring"></a>  CDocTemplate::GetDocString  
  Pobiera ciąg skojarzone z typem dokumentu.  
   
 ```  
@@ -285,7 +280,7 @@ virtual BOOL GetDocString(
  `rString`  
  Odwołanie do `CString` obiekt, który będzie zawierać ciąg, gdy funkcja zwraca wartość.  
   
- *Indeks*  
+ *index*  
  Indeks podciąg pobieranych z ciągu, który opisuje typ dokumentu. Ten parametr może mieć jedną z następujących wartości:  
   
 - **CDocTemplate::windowTitle** nazwę wyświetlaną w tytule okna aplikacji paska (na przykład "Microsoft Excel"). Przedstawia tylko z szablonu dla SDI — aplikacje.  
@@ -310,7 +305,7 @@ virtual BOOL GetDocString(
   
  Wywołanie tej funkcji tylko wtedy, gdy są wyprowadzanie klasy z `CDocTemplate`.  
   
-##  <a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
+##  <a name="getfirstdocposition"></a>  CDocTemplate::GetFirstDocPosition  
  Pobiera położenie pierwszego skojarzone z tym szablonem dokumentu.  
   
 ```  
@@ -325,7 +320,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
   
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) i [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) zarówno zastąpienie tego czystej funkcji wirtualnej. Każda klasa pochodzi od `CDocTemplate` musi także zastępować tej funkcji.  
   
-##  <a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
+##  <a name="getnextdoc"></a>  CDocTemplate::GetNextDoc  
  Pobiera element listy identyfikowane przez `rPos`, następnie ustawia `rPos` do **pozycji** wartość następnego wpisu na liście.  
   
 ```  
@@ -346,7 +341,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
   
  Upewnij się, że Twoje **pozycji** wartość reprezentuje prawidłową pozycją na liście. Jeśli jest nieprawidłowa wersja do debugowania programu Microsoft Foundation Class Library potwierdzeń.  
   
-##  <a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
+##  <a name="initialupdateframe"></a>  CDocTemplate::InitialUpdateFrame  
  Inicjuje okno ramowe i opcjonalnie umożliwia widoczne.  
   
 ```  
@@ -371,7 +366,7 @@ virtual void InitialUpdateFrame(
   
  Nie jest konieczne do wywołania tej funkcji, korzystając z programu framework implementacja nowy plik i Otwórz plik.  
   
-##  <a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
+##  <a name="loadtemplate"></a>  CDocTemplate::LoadTemplate  
  Ładuje zasobów dla danego `CDocTemplate` lub klasy.  
   
 ```  
@@ -381,7 +376,7 @@ virtual void LoadTemplate();
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, by załadować zasobów dla danego `CDocTemplate` lub klasy. Zazwyczaj jest to podczas konstruowania, z wyjątkiem gdy szablon jest budowany globalnie. W takim przypadku wywołania `LoadTemplate` jest opóźnione aż do [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) jest wywoływana.  
   
-##  <a name="matchdoctype"></a>CDocTemplate::MatchDocType  
+##  <a name="matchdoctype"></a>  CDocTemplate::MatchDocType  
  Określa stopień zaufania pasuje do typu dokumentu i ten szablon.  
   
 ```  
@@ -423,7 +418,7 @@ enum Confidence
   
  Domyślna implementacja zwraca **CDocTemplate::maybeAttemptForeign** lub **CDocTemplate::maybeAttemptNative**. Zastąp tę funkcję, aby wdrożyć logikę dopasowywanie typu odpowiedniego do aplikacji, być może przy użyciu tych dwóch wartości z **zaufania** wyliczenia.  
   
-##  <a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
+##  <a name="opendocumentfile"></a>  CDocTemplate::OpenDocumentFile  
  Otwiera plik określony przez ścieżkę.  
   
 ```  
@@ -435,11 +430,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszPathName`  
+ [in] `lpszPathName`  
  Wskaźnik do ścieżki pliku, który zawiera dokument, aby go otworzyć.  
   
- [in]`bAddToMRU`  
- `TRUE`Wskazuje, że dokument jest jednym z najbardziej aktualną plików; `FALSE` wskazuje dokumentu nie jest jednym z najnowszych plików.  
+ [in] `bAddToMRU`  
+ `TRUE` Wskazuje, że dokument jest jednym z najbardziej aktualną plików; `FALSE` wskazuje dokumentu nie jest jednym z najnowszych plików.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do dokumentu, którego plik ma nazwę przez `lpszPathName`; `NULL` w przypadku niepowodzenia.  
@@ -447,7 +442,7 @@ virtual CDocument* OpenDocumentFile(
 ### <a name="remarks"></a>Uwagi  
  Otwiera plik, w których ścieżka jest określona przez `lpszPathName`. Jeśli `lpszPathName` jest `NULL`, zostanie utworzony nowy plik, zawierający typu skojarzone z tym szablonem dokumentu.  
   
-##  <a name="removedocument"></a>CDocTemplate::RemoveDocument  
+##  <a name="removedocument"></a>  CDocTemplate::RemoveDocument  
  Usuwa dokumentu wskazywana przez `pDoc` z listy dokumentów skojarzone z tym szablonem.  
   
 ```  
@@ -461,7 +456,7 @@ virtual void RemoveDocument(CDocument* pDoc);
 ### <a name="remarks"></a>Uwagi  
  Klasy pochodne `CMultiDocTemplate` i `CSingleDocTemplate` przesłonić tę funkcję. Jeśli pochodzi własne klasy szablonów dokumentów z `CDocTemplate`, klasy pochodne muszą przesłaniać tej funkcji.  
   
-##  <a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
+##  <a name="saveallmodified"></a>  CDocTemplate::SaveAllModified  
  Zapisuje wszystkie dokumenty, które zostały zmodyfikowane.  
   
 ```  
@@ -471,7 +466,7 @@ virtual BOOL SaveAllModified();
 ### <a name="return-value"></a>Wartość zwracana  
  Niezerowa w przypadku powodzenia; w przeciwnym razie 0.  
   
-##  <a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
+##  <a name="setcontainerinfo"></a>  CDocTemplate::SetContainerInfo  
  Określa zasoby dla kontenerów OLE podczas edycji elementu OLE w miejscu.  
   
 ```  
@@ -487,7 +482,7 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
   
  Menu skojarzone z `nIDOleInPlaceContainer` zawiera separatorów umożliwiających menu aktywowanego elementu w miejscu do scalenia z menu kontenera aplikacji. Aby uzyskać więcej informacji dotyczących scalania menu serwera i kontener, zobacz artykuł [menu i zasoby (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
+##  <a name="setdefaulttitle"></a>  CDocTemplate::SetDefaultTitle  
  Wywołanie tej funkcji, aby załadować dokument domyślny tytuł i wyświetl ją w pasku tytułu dokumentu.  
   
 ```  
@@ -501,7 +496,7 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać informacje na domyślny tytuł, zobacz opis **CDocTemplate::docName** w [CDocTemplate::GetDocString](#getdocstring).  
   
-##  <a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
+##  <a name="setserverinfo"></a>  CDocTemplate::SetServerInfo  
  Określa klasy i zasobów, gdy dokument serwera jest osadzony lub edycji w miejscu.  
   
 ```  
@@ -530,7 +525,7 @@ void SetServerInfo(
   
  Menu skojarzone z `nIDOleInPlaceServer` zawiera separatorów umożliwiających menu serwera można scalić menu kontenera. Aby uzyskać więcej informacji dotyczących scalania menu serwera i kontener, zobacz artykuł [menu i zasoby (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
+##  <a name="createpreviewframe"></a>  CDocTemplate::CreatePreviewFrame  
  Tworzy ramkę podrzędnego używany do podglądu rozbudowanego.  
   
 ```  
@@ -551,7 +546,7 @@ CFrameWnd* CreatePreviewFrame(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
+##  <a name="setpreviewinfo"></a>  CDocTemplate::SetPreviewInfo  
  Konfiguruje poza Obsługa podglądu procesu.  
   
 ```  

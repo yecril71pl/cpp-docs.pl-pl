@@ -1,13 +1,10 @@
 ---
 title: Formanty ActiveX w Internecie | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-controls-on-the-internet"></a>Kontrolki ActiveX w Internecie
 Formanty ActiveX są zaktualizowaną wersję specyfikacji formantu OLE. Formanty są podstawowej architektury do tworzenia składników programowalny oprogramowania, których można użyć w wielu różnych kontenerów, w tym przeglądarek sieci Web obsługującej COM w Internecie. Formantu ActiveX mogą być formantu Internet i można dodać jego działanie do aktywnego dokumentu lub być częścią strony sieci Web. Formanty na stronie sieci Web może komunikować się ze sobą za pomocą skryptów.  
@@ -165,9 +160,9 @@ Formanty ActiveX są zaktualizowaną wersję specyfikacji formantu OLE. Formanty
   
  Można zaimplementować [monikery asynchroniczne](../mfc/asynchronous-monikers-on-the-internet.md) przy użyciu `CAsyncMonikerFile` klasy. Jednak można używać formantów ActiveX `CDataPathProperty` klasy, która jest pochodną `CAsyncMonikerFile`, pomagających w realizacji właściwości asynchronicznej formantu.  
   
- Przykładowe ASYNDOWN pokazano, jak skonfigurować pętli asynchronicznego odczytywania danych przy użyciu czasomierze. ASYNDOWN opisano szczegółowo w artykule bazy wiedzy Knowledge Base "Porada: AsyncDown pokazuje asynchroniczne danych Pobierz" (Q177244) i jest dostępny do pobrania firmy Microsoft Download Center. (Aby uzyskać więcej informacji na temat pobierania plików z Microsoft Download Center, zobacz artykuł "Jak można uzyskać obsługi plików z usługi Online firmy Microsoft" (Q119591) w bazie wiedzy Microsoft Knowledge Base.) Można znaleźć artykuły bazy wiedzy w [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+ Przykładowe ASYNDOWN pokazano, jak skonfigurować pętli asynchronicznego odczytywania danych przy użyciu czasomierze. ASYNDOWN opisano szczegółowo w artykule bazy wiedzy Knowledge Base "Porada: AsyncDown pokazuje asynchroniczne danych Pobierz" (Q177244) i jest dostępny do pobrania firmy Microsoft Download Center. (Aby uzyskać więcej informacji na temat pobierania plików z Microsoft Download Center, zobacz artykuł "Jak można uzyskać obsługi plików z usługi Online firmy Microsoft" (Q119591) w bazie wiedzy Microsoft Knowledge Base.) Można znaleźć artykuły bazy wiedzy w [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
- Podstawowe zastosowanych w ASYNDOWN jest skonfigurowanie czasomierz **CDataPathProperty::OnDataAvailable** wskazująca, kiedy dane są dostępne. Po otrzymaniu komunikatu czasomierza aplikacji odczytuje w blokach 128 bajtów danych i wypełnia kontrolkę edycji. Jeśli dane nie są dostępne podczas obsługi komunikatu czasomierza, czasomierz jest wyłączona. `OnDataAvailable`powoduje włączenie czasomierza, jeśli później większej ilości danych.  
+ Podstawowe zastosowanych w ASYNDOWN jest skonfigurowanie czasomierz **CDataPathProperty::OnDataAvailable** wskazująca, kiedy dane są dostępne. Po otrzymaniu komunikatu czasomierza aplikacji odczytuje w blokach 128 bajtów danych i wypełnia kontrolkę edycji. Jeśli dane nie są dostępne podczas obsługi komunikatu czasomierza, czasomierz jest wyłączona. `OnDataAvailable` powoduje włączenie czasomierza, jeśli później większej ilości danych.  
   
 ## <a name="displaying-a-control-on-a-web-page"></a>Wyświetlanie formantu na stronie sieci Web  
  Oto przykład tagu object i atrybuty Wstawianie kontrolki na stronie sieci Web.  

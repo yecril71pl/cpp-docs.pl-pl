@@ -1,12 +1,9 @@
 ---
-title: "Cdialogbar — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cdialogbar — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5663d093022345036f623dd344bae738e0acf5eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogbar-class"></a>Cdialogbar — klasa
 Udostępnia funkcje niemodalnego okna dialogowego systemu Windows w pasek sterowania.  
@@ -67,7 +62,7 @@ class CDialogBar : public CControlBar
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -78,14 +73,14 @@ class CDialogBar : public CControlBar
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
  Konstruuje `CDialogBar` obiektu.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>  CDialogBar::Create  
  Ładuje okno dialogowe szablon zasobu określonego przez `lpszTemplateName` lub `nIDTemplate`, tworzy okno dialogowe pasek, ustawia jego styl i kojarzy ją z `CDialogBar` obiektu.  
   
 ```  
@@ -113,13 +108,13 @@ virtual BOOL Create(
  `nStyle`  
  Styl toolbar. Style dodatkowych narzędzi obsługiwane są następujące:  
   
-- `CBRS_TOP`Pasek sterowania jest u góry okna ramki.  
+- `CBRS_TOP` Pasek sterowania jest u góry okna ramki.  
   
-- `CBRS_BOTTOM`Pasek sterowania jest w dolnej części okna ramki.  
+- `CBRS_BOTTOM` Pasek sterowania jest w dolnej części okna ramki.  
   
-- `CBRS_NOALIGN`Pasek sterowania nie zostaje przeniesiony, gdy zmieniany jest rozmiar obiektu nadrzędnego.  
+- `CBRS_NOALIGN` Pasek sterowania nie zostaje przeniesiony, gdy zmieniany jest rozmiar obiektu nadrzędnego.  
   
-- `CBRS_TOOLTIPS`Pasek sterowania Wyświetla etykietki narzędzi.  
+- `CBRS_TOOLTIPS` Pasek sterowania Wyświetla etykietki narzędzi.  
   
 - **Cbrs_size_dynamic —** pasek sterowania jest dynamiczny.  
   
@@ -127,7 +122,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** zmiennoprzecinkową jest pasek sterowania.  
   
-- `CBRS_FLYBY`Pasek stanu wyświetla informacje o przycisku.  
+- `CBRS_FLYBY` Pasek stanu wyświetla informacje o przycisku.  
   
 - **CBRS_HIDE_INPLACE** pasek sterowania jest niewidoczny dla użytkownika.  
   

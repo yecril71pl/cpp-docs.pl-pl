@@ -1,13 +1,10 @@
 ---
-title: "Formanty MFC ActiveX: Używanie czcionek | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Formanty MFC ActiveX: Używanie czcionek | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a788285aed8e8b7483e13c954ee193aca69d1100
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Kontrolki ActiveX MFC: używanie czcionek
 Jeśli formant ActiveX jest wyświetlany tekst, można zezwolić użytkownikowi kontroli Zmienianie wyglądu tekstu, zmieniając właściwość czcionki. Właściwości czcionki są zaimplementowane jako obiekty czcionki i może być jedna z dwóch typów: standardowych lub niestandardowych. Właściwości podstawowe czcionki są właściwości preimplemented czcionki, które można dodać za pomocą Kreatora dodawania właściwości. Właściwości niestandardowe czcionki nie są preimplemented i dewelopera kontrolek określa zachowanie i użycia właściwości.  
@@ -49,7 +44,7 @@ Jeśli formant ActiveX jest wyświetlany tekst, można zezwolić użytkownikowi 
   
 -   [Za pomocą właściwości niestandardowe czcionki formantu](#_core_implementing_a_custom_font_property)  
   
-##  <a name="_core_using_the_stock_font_property"></a>Za pomocą właściwości standardowych czcionki  
+##  <a name="_core_using_the_stock_font_property"></a> Za pomocą właściwości standardowych czcionki  
  Właściwości podstawowe czcionki są preimplemented przez klasę [colecontrol —](../mfc/reference/colecontrol-class.md). Ponadto standardowe strony właściwości czcionki jest również dostępny, umożliwiając użytkownikom na zmianę różnych atrybutów obiektu czcionki, takie jak jej nazwę, rozmiar i styl.  
   
  Dostęp do obiektu czcionki za pośrednictwem [GetFont](../mfc/reference/colecontrol-class.md#getfont), [SetFont](../mfc/reference/colecontrol-class.md#setfont), i [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) funkcji `COleControl`. Formant użytkownika będą uzyskiwać dostęp do obiektu czcionki za pośrednictwem `GetFont` i `SetFont` funkcje w taki sam sposób jak inne właściwości Get i Set. Podczas dostępu do obiektu czcionki jest wymagana od w formancie, użyj `InternalGetFont` funkcji.  
@@ -102,14 +97,14 @@ Jeśli formant ActiveX jest wyświetlany tekst, można zezwolić użytkownikowi 
   
  [!code-cpp[NVC_MFC_AxFont#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]  
   
-##  <a name="_core_modifying_the_ondraw_function"></a>Modyfikowanie funkcji OnDraw  
+##  <a name="_core_modifying_the_ondraw_function"></a> Modyfikowanie funkcji OnDraw  
  Domyślna implementacja `OnDraw` używa czcionki systemu Windows dla cały tekst wyświetlany w formancie. Oznacza to, że należy zmodyfikować `OnDraw` kodu, wybierając obiekt czcionki do kontekstu urządzenia. Aby to zrobić, należy wywołać [COleControl::SelectStockFont](../mfc/reference/colecontrol-class.md#selectstockfont) i Przekaż kontekst urządzenia formantu, jak pokazano w poniższym przykładzie:  
   
  [!code-cpp[NVC_MFC_AxFont#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_4.cpp)]  
   
  Po `OnDraw` funkcja została zmodyfikowana, aby używać obiektu czcionki, dowolny tekst w formancie zostanie wyświetlony z właściwości ze standardowych właściwość czcionki formantu.  
   
-##  <a name="_core_using_custom_font_properties_in_your_control"></a>Za pomocą właściwości niestandardowe czcionki formantu  
+##  <a name="_core_using_custom_font_properties_in_your_control"></a> Za pomocą właściwości niestandardowe czcionki formantu  
  Oprócz standardowych właściwość czcionki formantu ActiveX może mieć właściwości niestandardowe czcionki. Aby dodać właściwości niestandardowe czcionki należy:  
   
 -   Kreator dodawania właściwości do zaimplementowania niestandardowego właściwość czcionki.  
@@ -118,7 +113,7 @@ Jeśli formant ActiveX jest wyświetlany tekst, można zezwolić użytkownikowi 
   
 -   [Implementowanie nowy interfejs powiadomień czcionki](#_core_implementing_a_new_font_notification_interface).  
   
-###  <a name="_core_implementing_a_custom_font_property"></a>Implementowanie właściwości niestandardowe czcionki  
+###  <a name="_core_implementing_a_custom_font_property"></a> Implementowanie właściwości niestandardowe czcionki  
  Aby wdrożyć niestandardowy właściwość czcionki, umożliwia Kreatora dodawania właściwości Dodaj właściwości, a następnie wprowadź niektóre zmiany w kodzie. W poniższych sekcjach opisano sposób dodawania niestandardowego `HeadingFont` właściwości do kontrolki próbki.  
   
 ##### <a name="to-add-the-custom-font-property-using-the-add-property-wizard"></a>Aby dodać niestandardowe właściwości Font za pomocą Kreatora dodawania właściwości  
@@ -206,7 +201,7 @@ Jeśli formant ActiveX jest wyświetlany tekst, można zezwolić użytkownikowi 
   
  Po dokonaniu zmian, skompiluj ponownie cały projekt, aby włączyć dodatkowe funkcje.  
   
-###  <a name="_core_processing_font_notifications"></a>Przetwarzanie powiadomień czcionki  
+###  <a name="_core_processing_font_notifications"></a> Przetwarzanie powiadomień czcionki  
  W większości przypadków kontrolki musi znać modyfikacji właściwości obiektu czcionki. Każdy obiekt czcionki jest w stanie dostarczać powiadomienia o zmianie przez wywołanie funkcji członkowskiej klasy **IFontNotification** interfejsu implementowanego przez `COleControl`.  
   
  Jeśli formant używa standardowych właściwość czcionki, jego powiadomienia są obsługiwane przez `OnFontChanged` funkcji członkowskiej klasy `COleControl`. Podczas dodawania właściwości niestandardowe czcionki, może mieć za pomocą tego samego wykonania. W przykładzie w poprzedniej sekcji, to osiągnąć, przekazywanie &**m_xFontNotification** podczas inicjowania **m_fontHeading** zmiennej członkowskiej.  
@@ -218,7 +213,7 @@ Wdrażanie wielu interfejsów obiektów czcionek
   
  Jednym ze sposobów rozróżnienia powiadomienia obiektu czcionki formantu jest utworzenie oddzielnych implementacja **IFontNotification** interfejsu dla każdego obiektu font w formancie. Ta technika pozwala optymalizacji kodu rysunku, aktualizując tylko ciąg lub ciągi, korzystających z ostatnio zmodyfikowane czcionki. Poniższe sekcje przedstawiają kroki niezbędne do zaimplementowania interfejsów osobne powiadomienie dla drugiego właściwość czcionki. Druga właściwość czcionki zakłada się, że `HeadingFont` właściwość, która została dodana w poprzedniej sekcji.  
   
-###  <a name="_core_implementing_a_new_font_notification_interface"></a>Implementowanie nowy interfejs powiadomień czcionki  
+###  <a name="_core_implementing_a_new_font_notification_interface"></a> Implementowanie nowy interfejs powiadomień czcionki  
  Aby odróżnić powiadomienia o dwóch lub więcej czcionek, nowy interfejs powiadomień musi być implementowana dla każdej czcionki używany w formancie. W poniższych sekcjach opisano sposobu wdrażania nowy interfejs powiadomienie czcionki przez zmodyfikowanie pliki formant nagłówka i implementacji.  
   
 ### <a name="additions-to-the-header-file"></a>Dodatki do pliku nagłówka  

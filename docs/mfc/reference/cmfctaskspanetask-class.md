@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCTasksPaneTask | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTask
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CMFCTasksPaneTask [MFC], m_strName
 - CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64f1efd16a1ac372f6e8ce9ea9e0781046f1892
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctaskspanetask-class"></a>Klasa CMFCTasksPaneTask
 `CMFCTasksPaneTask` Klasy to klasa pomocy, która reprezentuje zadania dla formantu w okienku zadań ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Obiekt zadania reprezentuje element w grupie zadań ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Każde zadanie może mieć polecenie, które wykonuje platformę, gdy użytkownik kliknie zadania, a ikona wyświetlana na lewo od nazwy zadania.  
@@ -106,7 +101,7 @@ class CMFCTasksPaneTask : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxTasksPane.h  
   
-##  <a name="cmfctaskspanetask"></a>CMFCTasksPaneTask::CMFCTasksPaneTask  
+##  <a name="cmfctaskspanetask"></a>  CMFCTasksPaneTask::CMFCTasksPaneTask  
  Tworzy i inicjuje `CMFCTasksPaneTask` obiektu.  
   
 ```  
@@ -148,7 +143,7 @@ CMFCTasksPaneTask(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="m_bautodestroywindow"></a>CMFCTasksPaneTask::m_bAutoDestroyWindow  
+##  <a name="m_bautodestroywindow"></a>  CMFCTasksPaneTask::m_bAutoDestroyWindow  
  Określa, czy okno zadań automatycznie zostanie zniszczony.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL m_bAutoDestroyWindow;
 ### <a name="remarks"></a>Uwagi  
  Ustaw `TRUE` Aby określić, że okno zadań ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) należy zniszczyć automatycznie; w przeciwnym razie `FALSE`.  
   
-##  <a name="m_bisbold"></a>CMFCTasksPaneTask::m_bIsBold  
+##  <a name="m_bisbold"></a>  CMFCTasksPaneTask::m_bIsBold  
  Określa, czy etykieta zadania jest rysowana pogrubioną czcionką.  
   
 ```  
@@ -168,7 +163,7 @@ BOOL m_bIsBold;
 ### <a name="remarks"></a>Uwagi  
  Ustaw ten element członkowski `TRUE` do wyświetlenia pogrubiony tekst etykiety zadań.  
   
-##  <a name="m_dwuserdata"></a>CMFCTasksPaneTask::m_dwUserData  
+##  <a name="m_dwuserdata"></a>  CMFCTasksPaneTask::m_dwUserData  
  Zawiera dane zdefiniowane przez użytkownika, skojarzony z zadaniem. Jeśli nie są skojarzone z zadaniem żadne dane, należy ustawić na zero.  
   
 ```  
@@ -177,7 +172,7 @@ DWORD m_dwUserData;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="m_hwndtask"></a>CMFCTasksPaneTask::m_hwndTask  
+##  <a name="m_hwndtask"></a>  CMFCTasksPaneTask::m_hwndTask  
  Dojście do okna zadań.  
   
 ```  
@@ -187,7 +182,7 @@ HWND m_hwndTask;
 ### <a name="remarks"></a>Uwagi  
  Aby dodać okno zadań, należy wywołać [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
   
-##  <a name="m_nicon"></a>CMFCTasksPaneTask::m_nIcon  
+##  <a name="m_nicon"></a>  CMFCTasksPaneTask::m_nIcon  
  Pozycja indeksu listy obrazów, który identyfikuje obraz wyświetlany obok określonego zadania.  
   
 ```  
@@ -199,7 +194,7 @@ int m_nIcon;
   
  Ustaw `m_nIcon` -1, jeśli chcesz wyświetlić zadania bez obrazu.  
   
-##  <a name="m_nwindowheight"></a>CMFCTasksPaneTask::m_nWindowHeight  
+##  <a name="m_nwindowheight"></a>  CMFCTasksPaneTask::m_nWindowHeight  
  Wysokość okna zadań. Jeśli zadanie nie ma żadnego okna zadań, ta wartość wynosi zero.  
   
 ```  
@@ -208,7 +203,7 @@ int m_nWindowHeight;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="m_pgroup"></a>CMFCTasksPaneTask::m_pGroup  
+##  <a name="m_pgroup"></a>  CMFCTasksPaneTask::m_pGroup  
  Wskaźnik do [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) do której należy to zadanie.  
   
 ```  
@@ -218,7 +213,7 @@ CMFCTasksPaneTaskGroup* m_pGroup;
 ### <a name="remarks"></a>Uwagi  
  Każde zadanie musi mieć grupę nadrzędną. Dodaj grupy do okienka zadań, wywołując [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="m_rect"></a>CMFCTasksPaneTask::m_rect  
+##  <a name="m_rect"></a>  CMFCTasksPaneTask::m_rect  
  Określa prostokątem zadania.  
   
 ```  
@@ -228,7 +223,7 @@ CRect m_rect;
 ### <a name="remarks"></a>Uwagi  
  Ta wartość jest obliczana przez platformę, gdy zadanie jest rysowane.  
   
-##  <a name="m_strname"></a>CMFCTasksPaneTask::m_strName  
+##  <a name="m_strname"></a>  CMFCTasksPaneTask::m_strName  
  Nazwa zadania.  
   
 ```  
@@ -237,7 +232,7 @@ CString m_strName;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="m_uicommandid"></a>CMFCTasksPaneTask::m_uiCommandID  
+##  <a name="m_uicommandid"></a>  CMFCTasksPaneTask::m_uiCommandID  
  Określa identyfikator polecenia polecenia, która jest wykonywana, gdy użytkownik kliknie zadania. Jeśli ta wartość nie jest Identyfikatorem prawidłowe polecenie, zadania jest traktowany jako etykieta proste.  
   
 ```  
@@ -246,7 +241,7 @@ UINT m_uiCommandID;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setaccdata"></a>CMFCTasksPaneTask::SetACCData  
+##  <a name="setaccdata"></a>  CMFCTasksPaneTask::SetACCData  
  Określa dane ułatwień dostępu dla bieżącego zadania.  
   
 ```  
@@ -256,14 +251,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pParent`  
+ [in] `pParent`  
  Reprezentuje okna nadrzędnego bieżącego zadania.  
   
- [out]`data`  
+ [out] `data`  
  Obiekt typu `CAccessibilityData` który jest wypełniane przy użyciu danych dostępności bieżącego zadania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli `data` parametr został pomyślnie wypełnione z danymi dostępności bieżące zadanie, a w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli `data` parametr został pomyślnie wypełnione z danymi dostępności bieżące zadanie, a w przeciwnym razie `FALSE`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

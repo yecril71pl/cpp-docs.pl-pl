@@ -1,12 +1,9 @@
 ---
-title: "Błąd narzędzi konsolidatora LNK2001 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Błąd narzędzi konsolidatora LNK2001 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2001
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f78f436d0e19779d0ebca499a559a60d12bcf9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78dc0c0a3a030ecb88d7138484e2c64e145f69ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2001"></a>Błąd narzędzi konsolidatora LNK2001
 Nierozpoznany zewnętrzny symbol "*symbol*"  
@@ -76,7 +71,7 @@ Ten błąd może wystąpić, gdy łącze do bibliotek tryb wersji, podczas kompi
   
 Ten błąd może wystąpić, jeśli kod odnosi się do symbolu z jednej wersji biblioteki, ale podasz inną wersję biblioteki do konsolidatora. Ogólnie rzecz biorąc nie można mieszać plików obiektu i bibliotek, które są tworzone dla różnych wersji kompilatora. Biblioteki, które są dostarczane w nowej wersji może zawierać symbole, których nie można znaleźć biblioteki dołączony do poprzednich wersji i na odwrót. Aby rozwiązać ten problem, należy utworzyć wszystkich plików obiektu i bibliotek w tej samej wersji kompilatora przed łącząc je ze sobą.  
   
--  Narzędzia &#124; Opcje &#124; Projekty &#124; Katalogi VC ++ okna dialogowego, w obszarze Wybieranie plików biblioteki, można zmienić kolejność wyszukiwania biblioteki. Folder konsolidatora w oknie dialogowym stron właściwości projektu może również zawierać ścieżek, które mogą być nieaktualne.  
+-  Narzędzia &#124; opcje &#124; projekty &#124; katalogi VC ++ okna dialogowego, w obszarze Wybieranie plików biblioteki, umożliwia zmianę kolejności wyszukiwania biblioteki. Folder konsolidatora w oknie dialogowym stron właściwości projektu może również zawierać ścieżek, które mogą być nieaktualne.  
   
 -  Ten problem może występować, gdy nowy zestaw SDK jest zainstalowany (np. do innej lokalizacji), a kolejność wyszukiwania nie jest aktualizowany, aby wskazywał nową lokalizację. Zazwyczaj należy umieścić ścieżce do nowej wersji zestawu SDK obejmują i lib katalogów przed domyślnej lokalizacji Visual C++. Ponadto projektu zawierającego ścieżek osadzonych nadal może wskazywać stare ścieżek, które są prawidłowe, ale nieaktualny dla nowe funkcje dodane przez nową wersję zainstalowanego w innej lokalizacji.  
   

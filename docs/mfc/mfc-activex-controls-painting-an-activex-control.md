@@ -1,30 +1,25 @@
 ---
 title: 'Formanty MFC ActiveX: Malowanie formantu ActiveX | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2a2dc7b0cebbfaa6f6fe7dbe7dc69e5d4f80121
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Kontrolki ActiveX MFC: malowanie kontrolki ActiveX
 W tym artykule opisano proces malowanie formantu ActiveX i jak można zmienić kod farby, aby zoptymalizować proces. (Zobacz [Optymalizacja rysowania kontroli](../mfc/optimizing-control-drawing.md) dla techniki dotyczące optymalizacji rysunku, ponieważ nie ma pojedynczych formantów Przywróć wcześniej wybrane obiekty GDI. Po zostały wystawione wszystkie formanty, kontener może automatycznie Przywracanie oryginalnych obiektów.)  
@@ -39,7 +34,7 @@ W tym artykule opisano proces malowanie formantu ActiveX i jak można zmienić k
   
 -   [Jak namalować formantu przy użyciu metapliki](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a>Proces malowanie formantu ActiveX  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> Proces malowanie formantu ActiveX  
  Formanty ActiveX są początkowo wyświetlane lub są rysowane, należy wykonać procedurę rysowania podobnie jak inne aplikacje opracowane za pomocą MFC, z jedną istotną różnicę: formantów ActiveX może być aktywny lub nieaktywny.  
   
  Aktywny formant jest reprezentowana w kontenerze formantów ActiveX przez okna podrzędnego. Podobnie jak inne okna jest odpowiedzialny za malowanie się po `WM_PAINT` odebrać wiadomości. Klasa podstawowa dla formantu, [colecontrol —](../mfc/reference/colecontrol-class.md), obsługuje tę wiadomość w jego `OnPaint` funkcji. Ta domyślna implementacja wywołuje `OnDraw` funkcja formantu.  
@@ -62,14 +57,14 @@ W tym artykule opisano proces malowanie formantu ActiveX i jak można zmienić k
 > [!NOTE]
 >  Gdy malowanie formantu, nie należy podejmować założenia dotyczące stan kontekstu urządzenia, który jest przekazywany jako *kontrolera pdc* parametr `OnDraw` funkcji. Czasami kontekstu urządzenia jest dostarczany przez aplikację kontenera i nie zostaną niekoniecznie zainicjowane do stanu domyślnego. W szczególności należy jawnie wybrać pióra, pędzle, kolory, czcionki i inne zasoby, które zależy od swój kod rysowania.  
   
-##  <a name="_core_optimizing_your_paint_code"></a>Optymalizacja kodu malowania  
+##  <a name="_core_optimizing_your_paint_code"></a> Optymalizacja kodu malowania  
  Po formantu jest pomyślnie malowanie samego, następnym krokiem jest zoptymalizować `OnDraw` funkcji.  
   
  Domyślna implementacja malowanie formantu ActiveX umożliwia malowanie obszar całego kontroli. To jest wystarczająca dla formantów prostego, ale w wielu przypadkach ponownego rysowania formant będzie szybciej, jeśli tylko część wymaganej aktualizacji zostało odowieżany zamiast całego formantu.  
   
  `OnDraw` Funkcja zapewnia to łatwa metoda optymalizacji przez przekazanie `rcInvalid`, prostokątny obszar kontrolkę, która wymaga ponownego narysowania. Umożliwia ten obszar zwykle mniejsze niż obszar kontroli cały proces rysowania.  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a>Malowanie formantu przy użyciu metapliki  
+##  <a name="_core_painting_your_control_using_metafiles"></a> Malowanie formantu przy użyciu metapliki  
  W większości przypadków `pdc` parametr `OnDraw` funkcji wskazuje ekranu kontekstu urządzenia (DC). Jednak podczas drukowania obrazów formantu lub podczas sesji podglądu wydruku, kontroler domeny otrzymał celu renderowania jest specjalny typ o nazwie "metaplik kontrolera domeny". W przeciwieństwie do ekranu kontrolera domeny, która natychmiast obsługuje żądania wysyłane do niego, metaplików kontroler domeny przechowuje żądań, aby go odtworzyć w późniejszym czasie. Niektóre aplikacje kontener może też renderować obraz kontrolki za pomocą metaplik kontrolera domeny w trybie projektowania.  
   
  Metaplik rysowania żądań jest możliwe przez kontener za pośrednictwem dwóch funkcji interfejsu: **IViewObject::Draw** (Ta funkcja także dla może zostać wywołany z systemem innym niż metaplik rysowania) i **Metoda IDataObject::GetData**. Gdy metaplik kontrolera domeny jest przekazywany jako jeden z parametrów, struktura MFC nawiązuje połączenie [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Ponieważ jest to funkcja wirtualny element członkowski, należy przesłonić tę funkcję w klasie formantu do dowolnego specjalnego przetwarzania. Wywołania zachowanie domyślne `COleControl::OnDraw`.  
@@ -80,11 +75,11 @@ W tym artykule opisano proces malowanie formantu ActiveX i jak można zmienić k
   
 |Łuk|BibBlt|Akordu|  
 |---------|------------|-----------|  
-|**Elipsy**|**Specjalna**|`ExcludeClipRect`|  
+|**elipsy**|**Specjalna**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
-|`Pie`|**Wielokąta**|`Polyline`|  
+|`Pie`|**wielokąta**|`Polyline`|  
 |`PolyPolygon`|`RealizePalette`|`RestoreDC`|  
 |`RoundRect`|`SaveDC`|`ScaleViewportExt`|  
 |`ScaleWindowExt`|`SelectClipRgn`|`SelectObject`|  

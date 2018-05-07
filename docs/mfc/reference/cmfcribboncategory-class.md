@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCRibbonCategory | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCategory
@@ -139,17 +136,15 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c4e78017946ef335e04c8190b6ec4cd20e74ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91dbbe3b3207eba50fd9206719de2fd4afd5cc5b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncategory-class"></a>Klasa CMFCRibbonCategory
 `CMFCRibbonCategory` Klasa implementuje karty wstążki, który zawiera grupę dodatkowych elementów [wstążki panele](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -271,7 +266,7 @@ class CMFCRibbonCategory : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxribboncategory.h  
   
-##  <a name="addhidden"></a>CMFCRibbonCategory::AddHidden  
+##  <a name="addhidden"></a>  CMFCRibbonCategory::AddHidden  
  Dodaje element określony wstążki do tablicy elementów wstążki, które są wyświetlane w oknie dialogowym dostosowywania.  
   
 ```  
@@ -279,13 +274,13 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pElem`  
+ [in] `pElem`  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Elementów wstążki w oknie dialogowym dostosowywania są poleceniami, które można dodać do paska narzędzi Szybki dostęp.  
   
-##  <a name="addpanel"></a>CMFCRibbonCategory::AddPanel  
+##  <a name="addpanel"></a>  CMFCRibbonCategory::AddPanel  
  Tworzy panelu wstążki dla kategorii wstążki.  
   
 ```  
@@ -296,13 +291,13 @@ CMFCRibbonPanel* AddPanel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszPanelName`  
+ [in] `lpszPanelName`  
  Wskaźnik do nazwę nowego panelu wstążki.  
   
- [in]`hIcon`  
+ [in] `hIcon`  
  Dojście do domyślną ikonę Nowy panel wstążki.  
   
- [in]`pRTI`  
+ [in] `pRTI`  
  Wskaźnik do panelu niestandardowa Wstążka, informacje o klasie czasu wykonywania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -318,7 +313,7 @@ CMFCRibbonPanel* AddPanel(
   
  [!code-cpp[NVC_MFC_RibbonApp#10](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_1.cpp)]  
   
-##  <a name="cmfcribboncategory"></a>CMFCRibbonCategory::CMFCRibbonCategory  
+##  <a name="cmfcribboncategory"></a>  CMFCRibbonCategory::CMFCRibbonCategory  
  Tworzy i inicjuje [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) obiektu.  
   
 ```  
@@ -334,25 +329,25 @@ CMFCRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pParenrRibbonBar`  
+ [in] `pParenrRibbonBar`  
  Wskaźnik do nadrzędnego pasek wstążki kategorii wstążki.  
   
- [in]`lpszName`  
+ [in] `lpszName`  
  Nazwa kategorii wstążki.  
   
- [in]`uiSmallImagesResID`  
+ [in] `uiSmallImagesResID`  
  Identyfikator zasobu obrazu listy małych obrazów, które są używane przez elementów wstążki w kategorii wstążki.  
   
- [in]`uiLargeImagesResID`  
+ [in] `uiLargeImagesResID`  
  Identyfikator zasobu obrazu listy dużych obrazów, które są używane przez elementów wstążki w kategorii wstążki.  
   
- [in]`sizeSmallImage`  
+ [in] `sizeSmallImage`  
  Domyślny rozmiar małych obrazów dla elementów wstążki w kategorii wstążki.  
   
- [in]`sizeLargeImage`  
+ [in] `sizeLargeImage`  
  Domyślny rozmiar dużych obrazów dla elementów wstążki w kategorii wstążki.  
   
-##  <a name="copyfrom"></a>CMFCRibbonCategory::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
  Kopiuje określony stan [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) do bieżącego [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) obiektu.  
   
 ```  
@@ -360,12 +355,12 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`src`  
+ [in] `src`  
  Źródło `CMFCRibbonCategory` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="findbydata"></a>CMFCRibbonCategory::FindByData  
+##  <a name="findbydata"></a>  CMFCRibbonCategory::FindByData  
  Pobiera element wstążki skojarzone z określonymi danymi.  
   
 ```  
@@ -375,18 +370,18 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`dwData`  
+ [in] `dwData`  
  Dane skojarzone z elementem wstążki.  
   
- [in]`bVisibleOnly`  
- `TRUE`Aby uwzględnić elementów wstążki szybki dostęp do wyszukiwania; `FALSE` do wykluczenia elementów wstążki szybki dostęp do wyszukiwania.  
+ [in] `bVisibleOnly`  
+ `TRUE` Aby uwzględnić elementów wstążki szybki dostęp do wyszukiwania; `FALSE` do wykluczenia elementów wstążki szybki dostęp do wyszukiwania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do elementu wstążki, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `NULL`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="findbyid"></a>CMFCRibbonCategory::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonCategory::FindByID  
  Pobiera element wstążki skojarzone z identyfikatorem określonego polecenia.  
   
 ```  
@@ -396,18 +391,18 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmdID`  
+ [in] `uiCmdID`  
  Identyfikator polecenia skojarzony z elementem wstążki.  
   
- [in]`bVisibleOnly`  
- `TRUE`Aby uwzględnić elementów wstążki szybki dostęp do wyszukiwania; `FALSE` do wykluczenia elementów wstążki szybki dostęp do wyszukiwania.  
+ [in] `bVisibleOnly`  
+ `TRUE` Aby uwzględnić elementów wstążki szybki dostęp do wyszukiwania; `FALSE` do wykluczenia elementów wstążki szybki dostęp do wyszukiwania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do elementu wstążki, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `NULL`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="findpanelwithelem"></a>CMFCRibbonCategory::FindPanelWithElem  
+##  <a name="findpanelwithelem"></a>  CMFCRibbonCategory::FindPanelWithElem  
  Pobiera panelu wstążki, który zawiera element o określonym wstążki.  
   
 ```  
@@ -415,7 +410,7 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pElement`  
+ [in] `pElement`  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -423,7 +418,7 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getcontextid"></a>CMFCRibbonCategory::GetContextID  
+##  <a name="getcontextid"></a>  CMFCRibbonCategory::GetContextID  
  Pobiera identyfikator kontekstu kategorii wstążki.  
   
 ```  
@@ -436,7 +431,7 @@ UINT GetContextID() const;
 ### <a name="remarks"></a>Uwagi  
  Identyfikator kontekstu jest 0, jeśli kategoria wstążki nie jest kategorią wstążki kontekstu.  
   
-##  <a name="getdata"></a>CMFCRibbonCategory::GetData  
+##  <a name="getdata"></a>  CMFCRibbonCategory::GetData  
  Pobiera dane użytkownika skojarzonego z kategorią wstążki.  
   
 ```  
@@ -446,7 +441,7 @@ DWORD_PTR GetData() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Dane zdefiniowane przez użytkownika jest skojarzony z kategorią wstążki.  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonCategory::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonCategory::GetDroppedDown  
  Pobiera wskaźnik do elementu wstążki, który aktualnie ma wyświetlonym menu podręczne.  
   
 ```  
@@ -458,7 +453,7 @@ CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getelements"></a>CMFCRibbonCategory::GetElements  
+##  <a name="getelements"></a>  CMFCRibbonCategory::GetElements  
  Pobiera wszystkie elementy wstążki w kategorii wstążki.  
   
 ```  
@@ -467,13 +462,13 @@ void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out]`arElements`  
+ [w, out] `arElements`  
  Odwołanie do [carray —](../../mfc/reference/carray-class.md) elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Elementów wstążki, które są przeznaczone do użytku na pasku narzędzi Szybki dostęp znajdują się w tablicy.  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonCategory::GetElementsByID  
+##  <a name="getelementsbyid"></a>  CMFCRibbonCategory::GetElementsByID  
  Pobiera wszystkie elementy wstążki, które są skojarzone z identyfikatorem określonego polecenia.  
   
 ```  
@@ -483,16 +478,16 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmdID`  
+ [in] `uiCmdID`  
  Identyfikator polecenia skojarzony z elementem wstążki.  
   
- [w, out]`arElements`  
+ [w, out] `arElements`  
  Odwołanie do [carray —](../../mfc/reference/carray-class.md) elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Elementów wstążki, które są przeznaczone do użytku na pasku narzędzi Szybki dostęp znajdują się w tablicy.  
   
-##  <a name="getfirstvisibleelement"></a>CMFCRibbonCategory::GetFirstVisibleElement  
+##  <a name="getfirstvisibleelement"></a>  CMFCRibbonCategory::GetFirstVisibleElement  
  Pobiera pierwszy element widoczny, który należy do kategorii wstążki.  
   
 ```  
@@ -504,7 +499,7 @@ CMFCRibbonBaseElement* GetFirstVisibleElement() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getfocused"></a>CMFCRibbonCategory::GetFocused  
+##  <a name="getfocused"></a>  CMFCRibbonCategory::GetFocused  
  Zwraca element z fokusem.  
   
 ```  
@@ -516,7 +511,7 @@ CMFCRibbonBaseElement* GetFocused();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="gethighlighted"></a>CMFCRibbonCategory::GetHighlighted  
+##  <a name="gethighlighted"></a>  CMFCRibbonCategory::GetHighlighted  
  Zwraca zaznaczony element.  
   
 ```  
@@ -528,7 +523,7 @@ CMFCRibbonBaseElement* GetHighlighted();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getimagecount"></a>CMFCRibbonCategory::GetImageCount  
+##  <a name="getimagecount"></a>  CMFCRibbonCategory::GetImageCount  
  Pobiera liczbę obrazów na liście określonego obrazu, która znajduje się w kategorii wstążki.  
   
 ```  
@@ -536,15 +531,15 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bIsLargeImage`  
- `TRUE`Liczba obrazów z listy dużych obrazów; `FALSE` liczbę obrazów na liście mały obraz.  
+ [in] `bIsLargeImage`  
+ `TRUE` Liczba obrazów z listy dużych obrazów; `FALSE` liczbę obrazów na liście mały obraz.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba obrazów na liście określonego obrazu.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getimagesize"></a>CMFCRibbonCategory::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCRibbonCategory::GetImageSize  
  Pobiera rozmiar obrazu na liście określonego obrazu, która znajduje się w kategorii wstążki.  
   
 ```  
@@ -552,8 +547,8 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bIsLargeImage`  
- `TRUE`rozmiar duże obrazy; `FALSE` rozmiaru małe obrazy.  
+ [in] `bIsLargeImage`  
+ `TRUE` rozmiar duże obrazy; `FALSE` rozmiaru małe obrazy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar obrazu na liście określonego obrazu.  
@@ -561,7 +556,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ### <a name="remarks"></a>Uwagi  
  Rozmiar pobrać obejmuje współczynnik skali globalnej obrazu.  
   
-##  <a name="getitemidslist"></a>CMFCRibbonCategory::GetItemIDsList  
+##  <a name="getitemidslist"></a>  CMFCRibbonCategory::GetItemIDsList  
  Pobiera identyfikatory poleceń dla elementów wstążki, które znajdują się w kategorii wstążki.  
   
 ```  
@@ -571,15 +566,15 @@ void GetItemIDsList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`lstItems`  
+ [out] `lstItems`  
  Lista identyfikatorów poleceń dla elementów wstążki w kategorii wstążki.  
   
- [in]`bHiddenOnly`  
- `TRUE`Aby wykluczyć elementów wstążki wyświetlanych na panele wstążki w kategorii wstążki; `FALSE` uwzględnienie wszystkich elementów wstążki w kategorii wstążki.  
+ [in] `bHiddenOnly`  
+ `TRUE` Aby wykluczyć elementów wstążki wyświetlanych na panele wstążki w kategorii wstążki; `FALSE` uwzględnienie wszystkich elementów wstążki w kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getlargeimages"></a>CMFCRibbonCategory::GetLargeImages  
+##  <a name="getlargeimages"></a>  CMFCRibbonCategory::GetLargeImages  
  Pobiera listę duże obrazy znajdujące się w kategorii wstążki.  
   
 ```  
@@ -589,7 +584,7 @@ CMFCToolBarImages& GetLargeImages();
 ### <a name="return-value"></a>Wartość zwracana  
  Listy dużych obrazów, które są zawarte w kategorii wstążki.  
   
-##  <a name="getlastvisibleelement"></a>CMFCRibbonCategory::GetLastVisibleElement  
+##  <a name="getlastvisibleelement"></a>  CMFCRibbonCategory::GetLastVisibleElement  
  Pobiera ostatni element widoczne, który należy do kategorii wstążki.  
   
 ```  
@@ -601,7 +596,7 @@ CMFCRibbonBaseElement* GetLastVisibleElement() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getmaxheight"></a>CMFCRibbonCategory::GetMaxHeight  
+##  <a name="getmaxheight"></a>  CMFCRibbonCategory::GetMaxHeight  
  Pobiera maksymalną wysokość paneli wstążki, które znajdują się w kategorii wstążki.  
   
 ```  
@@ -609,7 +604,7 @@ int GetMaxHeight(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia panele wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -618,7 +613,7 @@ int GetMaxHeight(CDC* pDC);
 ### <a name="remarks"></a>Uwagi  
  Wartość pobraną obejmuje wysokość marginesy górny i dolny panele wstążki.  
   
-##  <a name="getname"></a>CMFCRibbonCategory::GetName  
+##  <a name="getname"></a>  CMFCRibbonCategory::GetName  
  Pobiera nazwę kategorii wstążki.  
   
 ```  
@@ -630,7 +625,7 @@ LPCTSTR GetName() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getpanel"></a>CMFCRibbonCategory::GetPanel  
+##  <a name="getpanel"></a>  CMFCRibbonCategory::GetPanel  
  Zwraca wskaźnik do panelu wstążki, które znajduje się w określonym indeksie.  
   
 ```  
@@ -638,7 +633,7 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nIndex`  
+ [in] `nIndex`  
  Liczony od zera indeks panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -647,7 +642,7 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ### <a name="remarks"></a>Uwagi  
  Jeśli jest zgłaszany wyjątek `nIndex` jest poza zakresem.  
   
-##  <a name="getpanelcount"></a>CMFCRibbonCategory::GetPanelCount  
+##  <a name="getpanelcount"></a>  CMFCRibbonCategory::GetPanelCount  
  Zwraca liczbę panele wstążki w kategorii wstążki.  
   
 ```  
@@ -657,7 +652,7 @@ int GetPanelCount() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba paneli wstążki w kategorii wstążki.  
   
-##  <a name="getpanelfrompoint"></a>CMFCRibbonCategory::GetPanelFromPoint  
+##  <a name="getpanelfrompoint"></a>  CMFCRibbonCategory::GetPanelFromPoint  
  Pobiera wskaźnik do panelu wstążki, jeśli określony punkt znajduje się w nim.  
   
 ```  
@@ -665,7 +660,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -674,7 +669,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ### <a name="remarks"></a>Uwagi  
  Sprawdzane są tylko paneli wstążki, które znajdują się w kategorii wstążki.  
   
-##  <a name="getpanelindex"></a>CMFCRibbonCategory::GetPanelIndex  
+##  <a name="getpanelindex"></a>  CMFCRibbonCategory::GetPanelIndex  
  Pobiera liczony od zera indeks panelu określonego wstążki.  
   
 ```  
@@ -682,7 +677,7 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pPanel`  
+ [in] `pPanel`  
  Wskaźnik do panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -691,7 +686,7 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ### <a name="remarks"></a>Uwagi  
  Przeszukiwane są tylko paneli wstążki, które znajdują się w kategorii wstążki.  
   
-##  <a name="getparentbutton"></a>CMFCRibbonCategory::GetParentButton  
+##  <a name="getparentbutton"></a>  CMFCRibbonCategory::GetParentButton  
  Pobiera element nadrzędny wstążki kategorii wstążki.  
   
 ```  
@@ -703,7 +698,7 @@ CMFCRibbonBaseElement* GetParentButton() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getparentmenubar"></a>CMFCRibbonCategory::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>  CMFCRibbonCategory::GetParentMenuBar  
  Zwraca wskaźnik do na pasku menu nadrzędne `CMFCRibbonCategory` obiektu.  
   
 ```  
@@ -715,7 +710,7 @@ CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getparentribbonbar"></a>CMFCRibbonCategory::GetParentRibbonBar  
+##  <a name="getparentribbonbar"></a>  CMFCRibbonCategory::GetParentRibbonBar  
  Pobiera pasek wstążki nadrzędnego dla kategorii wstążki.  
   
 ```  
@@ -727,7 +722,7 @@ CMFCRibbonBar* GetParentRibbonBar() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getrect"></a>CMFCRibbonCategory::GetRect  
+##  <a name="getrect"></a>  CMFCRibbonCategory::GetRect  
  Pobiera prostokątny obszar wyświetlania dla kategorii wstążki.  
   
 ```  
@@ -740,7 +735,7 @@ CRect GetRect() const;
 ### <a name="remarks"></a>Uwagi  
  Prostokątny obszar wyświetlania dla kategorii wstążki nie zawiera kartę kategorii.  
   
-##  <a name="getsmallimages"></a>CMFCRibbonCategory::GetSmallImages  
+##  <a name="getsmallimages"></a>  CMFCRibbonCategory::GetSmallImages  
  Pobiera listy małych obrazów, które są zawarte w kategorii wstążki.  
   
 ```  
@@ -750,7 +745,7 @@ CMFCToolBarImages& GetSmallImages();
 ### <a name="return-value"></a>Wartość zwracana  
  Listy małych obrazów, które są zawarte w kategorii wstążki.  
   
-##  <a name="gettabcolor"></a>CMFCRibbonCategory::GetTabColor  
+##  <a name="gettabcolor"></a>  CMFCRibbonCategory::GetTabColor  
  Zwraca bieżący kolor karty wstążki kategorii.  
   
 ```  
@@ -777,7 +772,7 @@ AFX_RibbonCategoryColor GetTabColor() const;
   
 -   AFX_CategoryColor_Violet  
   
-##  <a name="gettabrect"></a>CMFCRibbonCategory::GetTabRect  
+##  <a name="gettabrect"></a>  CMFCRibbonCategory::GetTabRect  
  Pobiera prostokątny obszar wyświetlania dla karty wstążki kategorii.  
   
 ```  
@@ -789,7 +784,7 @@ CRect GetTabRect() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="gettexttopline"></a>CMFCRibbonCategory::GetTextTopLine  
+##  <a name="gettexttopline"></a>  CMFCRibbonCategory::GetTextTopLine  
  Pobiera położenie w pionie tekstu na Wstążce przycisków w kategorii wstążki duże obrazy.  
   
 ```  
@@ -801,7 +796,7 @@ int GetTextTopLine() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getvisibleelements"></a>CMFCRibbonCategory::GetVisibleElements  
+##  <a name="getvisibleelements"></a>  CMFCRibbonCategory::GetVisibleElements  
  Pobiera wszystkie elementy widoczne, które należą do tej kategorii wstążki.  
   
 ```  
@@ -816,7 +811,7 @@ void GetVisibleElements(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="highlightpanel"></a>CMFCRibbonCategory::HighlightPanel  
+##  <a name="highlightpanel"></a>  CMFCRibbonCategory::HighlightPanel  
  Prezentuje panelu określonego wstążki.  
   
 ```  
@@ -826,10 +821,10 @@ CMFCRibbonPanel* HighlightPanel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pHLPanel`  
+ [in] `pHLPanel`  
  Wskaźnik do panelu wstążki, aby wyróżnić.  
   
- [in]`point`  
+ [in] `point`  
  Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -838,7 +833,7 @@ CMFCRibbonPanel* HighlightPanel(
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji na temat wyróżnianie panelu wstążki, zobacz [CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight).  
   
-##  <a name="hittest"></a>CMFCRibbonCategory::HitTest  
+##  <a name="hittest"></a>  CMFCRibbonCategory::HitTest  
  Pobiera wskaźnik do elementu wstążki, jeśli określony punkt znajduje się w nim.  
   
 ```  
@@ -848,11 +843,11 @@ CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Współrzędne x i y wskaźnika myszy względem lewego górnego rogu okna.  
   
- [in]`bCheckPanelCaption`  
- `TRUE`Aby przetestować podpis panelu wstążki; `FALSE` do wykluczenia podpis panelu wstążki.  
+ [in] `bCheckPanelCaption`  
+ `TRUE` Aby przetestować podpis panelu wstążki; `FALSE` do wykluczenia podpis panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do elementu wstążki, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `NULL`.  
@@ -860,7 +855,7 @@ CMFCRibbonBaseElement* HitTest(
 ### <a name="remarks"></a>Uwagi  
  Sprawdzane są tylko elementy wstążki, które znajdują się w kategorii wstążki.  
   
-##  <a name="hittestex"></a>CMFCRibbonCategory::HitTestEx  
+##  <a name="hittestex"></a>  CMFCRibbonCategory::HitTestEx  
  Pobiera liczony od zera indeks elementu wstążki, jeśli określony punkt znajduje się w nim.  
   
 ```  
@@ -868,7 +863,7 @@ int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Współrzędne x i y wskaźnika myszy względem lewego górnego rogu okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -877,7 +872,7 @@ int HitTestEx(CPoint point) const;
 ### <a name="remarks"></a>Uwagi  
  Sprawdzane są tylko elementy wstążki, które znajdują się w kategorii wstążki.  
   
-##  <a name="hittestscrollbuttons"></a>CMFCRibbonCategory::HitTestScrollButtons  
+##  <a name="hittestscrollbuttons"></a>  CMFCRibbonCategory::HitTestScrollButtons  
  Jeśli punkt znajduje się w kategorii wstążki przycisku przewijania w lewo lub w prawo, zwraca wskaźnik do tego przycisku.  
   
 ```  
@@ -885,7 +880,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Punkt do testowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -893,7 +888,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isactive"></a>CMFCRibbonCategory::IsActive  
+##  <a name="isactive"></a>  CMFCRibbonCategory::IsActive  
  Wskazuje, czy kategoria wstążki jest aktywnej kategorii w pasku wstążki.  
   
 ```  
@@ -901,12 +896,12 @@ BOOL IsActive() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli kategoria wstążki jest aktywnej kategorii; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli kategoria wstążki jest aktywnej kategorii; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Kategoria active wstążki Wyświetla panele jego wstążki.  
   
-##  <a name="isvisible"></a>CMFCRibbonCategory::IsVisible  
+##  <a name="isvisible"></a>  CMFCRibbonCategory::IsVisible  
  Wskazuje, czy kategoria wstążki jest widoczny.  
   
 ```  
@@ -914,12 +909,12 @@ BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli kategoria wstążki jest widoczna; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli kategoria wstążki jest widoczna; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Kategorie wstążki, które są widoczne wyświetlane na karcie kategorii.  
   
-##  <a name="iswindows7look"></a>CMFCRibbonCategory::IsWindows7Look  
+##  <a name="iswindows7look"></a>  CMFCRibbonCategory::IsWindows7Look  
  Wskazuje, czy na Wstążce nadrzędny ma wyglądać (przycisk małych aplikacji prostokątne) w systemie Windows 7.  
   
 ```  
@@ -927,11 +922,11 @@ BOOL IsWindows7Look() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli na Wstążce nadrzędny ma wyglądać; w systemie Windows 7 w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli na Wstążce nadrzędny ma wyglądać; w systemie Windows 7 w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="notifycontrolcommand"></a>CMFCRibbonCategory::NotifyControlCommand  
+##  <a name="notifycontrolcommand"></a>  CMFCRibbonCategory::NotifyControlCommand  
  Dostarcza komunikat WM_NOTIFY polecenia do wszystkich `CMFCRibbonPanel` elementów w `CMFCRibbonCategory` aż do obsługi wiadomości.  
   
 ```  
@@ -943,16 +938,16 @@ virtual BOOL NotifyControlCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bAccelerator`  
- `TRUE`Jeśli to polecenie pochodzi z akceleratora lub `FALSE` inaczej.  
+ [in] `bAccelerator`  
+ `TRUE` Jeśli to polecenie pochodzi z akceleratora lub `FALSE` inaczej.  
   
- [in]`nNotifyCode`  
+ [in] `nNotifyCode`  
  Kod powiadomienia.  
   
- [in]`wParam`  
+ [in] `wParam`  
  Pole WPARAM komunikatu.  
   
- [in]`lParam`  
+ [in] `lParam`  
  Pola LPARAM wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -960,7 +955,7 @@ virtual BOOL NotifyControlCommand(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="oncancelmode"></a>CMFCRibbonCategory::OnCancelMode  
+##  <a name="oncancelmode"></a>  CMFCRibbonCategory::OnCancelMode  
  Wywołuje tryb Anuluj we wszystkich `CMFCRibbonPanel` elementy `CMFCRibbonCategory`.  
   
 ```  
@@ -969,7 +964,7 @@ virtual void OnCancelMode();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ondraw"></a>CMFCRibbonCategory::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonCategory::OnDraw  
  Wywoływane przez platformę, by narysować kategorii wstążki.  
   
 ```  
@@ -977,12 +972,12 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia dla kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ondrawimage"></a>CMFCRibbonCategory::OnDrawImage  
+##  <a name="ondrawimage"></a>  CMFCRibbonCategory::OnDrawImage  
  Wywoływane przez platformę, by narysować określonego obrazu na Wstążce kategorii.  
   
 ```  
@@ -996,30 +991,30 @@ virtual BOOL OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia dla obrazu.  
   
- [in]`rect`  
+ [in] `rect`  
  Prostokątny obszar wyświetlania obrazu.  
   
- [in]`pElement`  
+ [in] `pElement`  
  Wskaźnik do elementu wstążki, który zawiera obraz.  
   
- [in]`bIsLargeImage`  
- `TRUE`Jeśli obraz jest duży rozmiar; `FALSE` Jeśli obraz jest mały rozmiar.  
+ [in] `bIsLargeImage`  
+ `TRUE` Jeśli obraz jest duży rozmiar; `FALSE` Jeśli obraz jest mały rozmiar.  
   
- [in]`nImageIndex`  
+ [in] `nImageIndex`  
  Liczony od zera indeks obrazu w tablicy obrazu, która znajduje się w kategorii wstążki.  
   
- [in]`bCenter`  
- `TRUE`do środka obrazu w prostokątny obszar wyświetlania; `FALSE` do rysowania obrazu w lewym górnym rogu prostokątny obszar wyświetlania.  
+ [in] `bCenter`  
+ `TRUE` do środka obrazu w prostokątny obszar wyświetlania; `FALSE` do rysowania obrazu w lewym górnym rogu prostokątny obszar wyświetlania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ondrawmenuborder"></a>CMFCRibbonCategory::OnDrawMenuBorder  
+##  <a name="ondrawmenuborder"></a>  CMFCRibbonCategory::OnDrawMenuBorder  
  Wywoływane przez platformę, by narysować obramowanie menu podręcznego.  
   
 ```  
@@ -1029,16 +1024,16 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Ten parametr nie jest używany.  
   
- [in]`pMenuBar`  
+ [in] `pMenuBar`  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Zastępuje tę metodę, aby narysować obramowanie menu podręcznego.  
   
-##  <a name="onkey"></a>CMFCRibbonCategory::OnKey  
+##  <a name="onkey"></a>  CMFCRibbonCategory::OnKey  
  Wywoływane przez platformę, gdy użytkownik naciśnie przycisk klawiatury.  
   
 ```  
@@ -1051,7 +1046,7 @@ virtual BOOL OnKey(UINT nChar);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="onlbuttondown"></a>CMFCRibbonCategory::OnLButtonDown  
+##  <a name="onlbuttondown"></a>  CMFCRibbonCategory::OnLButtonDown  
  Wywoływane przez platformę, by pobrać element wstążki w określonym punkcie po naciśnięciu lewego przycisku myszy.  
   
 ```  
@@ -1059,7 +1054,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Współrzędne x i y wskaźnika myszy względem lewego górnego rogu okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1067,7 +1062,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="onlbuttonup"></a>CMFCRibbonCategory::OnLButtonUp  
+##  <a name="onlbuttonup"></a>  CMFCRibbonCategory::OnLButtonUp  
  Wywoływane przez platformę, gdy użytkownik zwolni lewego przycisku myszy, a wskaźnik myszy znajduje się nad kategorii wstążki.  
   
 ```  
@@ -1075,12 +1070,12 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="onmousemove"></a>CMFCRibbonCategory::OnMouseMove  
+##  <a name="onmousemove"></a>  CMFCRibbonCategory::OnMouseMove  
  Wywoływane przez platformę, gdy wskaźnik myszy przesuwa na pasku wstążki, aby można było zaktualizować ekran kategorii wstążki.  
   
 ```  
@@ -1088,12 +1083,12 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonCategory::OnRTLChanged  
+##  <a name="onrtlchanged"></a>  CMFCRibbonCategory::OnRTLChanged  
  Wywoływane przez platformę, gdy układ zmienia kierunku.  
   
 ```  
@@ -1101,13 +1096,13 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bIsRTL`  
- `TRUE`w przypadku układu od prawej do lewej; `FALSE` Jeśli układ jest od lewej do prawej.  
+ [in] `bIsRTL`  
+ `TRUE` w przypadku układu od prawej do lewej; `FALSE` Jeśli układ jest od lewej do prawej.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda dostosowuje układ wstążki paneli i elementów wstążki, które są zawarte w kategorii wstążki.  
   
-##  <a name="onscrollhorz"></a>CMFCRibbonCategory::OnScrollHorz  
+##  <a name="onscrollhorz"></a>  CMFCRibbonCategory::OnScrollHorz  
  Przewija kategorii wstążki w kierunku poziomym.  
   
 ```  
@@ -1117,18 +1112,18 @@ virtual BOOL OnScrollHorz(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bScrollLeft`  
- `TRUE`przewijanie w lewo; `FALSE` przewiń w prawo.  
+ [in] `bScrollLeft`  
+ `TRUE` przewijanie w lewo; `FALSE` przewiń w prawo.  
   
- [in]`nScrollOffset`  
+ [in] `nScrollOffset`  
  Przewiń odległość w pikselach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli kategoria wstążki przeniesiona w kierunku poziomym; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli kategoria wstążki przeniesiona w kierunku poziomym; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="onupdatecmdui"></a>CMFCRibbonCategory::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCRibbonCategory::OnUpdateCmdUI  
  Wywołania `OnUpdateCmdUI` funkcji członkowskiej we wszystkich `CMFCRibbonPanel` elementy `CMFCRibbonCategory` Aby włączyć lub wyłączyć elementy interfejsu użytkownika w tych obiektach.  
   
 ```  
@@ -1139,18 +1134,18 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pCmdUI`  
+ [in] `pCmdUI`  
  Wskaźnik do `CMFCRibbonCmdUI` obiekt, który określa, które mają być włączone elementy interfejsu użytkownika, które mają być wyłączone.  
   
- [in]`pTarget`  
+ [in] `pTarget`  
  Wskaźnik do okna, która kontroluje, włączanie lub wyłączanie elementów interfejsu użytkownika.  
   
- [in]`bDisableIfNoHndler`  
- `TRUE`Aby wyłączyć elementu interfejsu użytkownika, jeśli bez obsługi jest zdefiniowany w mapy komunikatów; w przeciwnym razie `FALSE`.  
+ [in] `bDisableIfNoHndler`  
+ `TRUE` Aby wyłączyć elementu interfejsu użytkownika, jeśli bez obsługi jest zdefiniowany w mapy komunikatów; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="recalclayout"></a>CMFCRibbonCategory::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCRibbonCategory::RecalcLayout  
  Dostosowuje układ wszystkich kontrolek kategorii wstążki.  
   
 ```  
@@ -1158,12 +1153,12 @@ virtual void RecalcLayout(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia dla kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="removepanel"></a>CMFCRibbonCategory::RemovePanel  
+##  <a name="removepanel"></a>  CMFCRibbonCategory::RemovePanel  
  Usuwa panelu wstążki z kategorii wstążki.  
   
 ```cpp  
@@ -1173,16 +1168,16 @@ BOOL RemovePanel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nIndex`  
+ [in] `nIndex`  
  Numer indeksu panelu do usunięcia. Można uzyskać przez wywołanie [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) metody.  
   
- [in]`bDelete`  
- `TRUE`Aby usunąć obiekt panel z pamięci. `FALSE` usuwania obiektu panel bez jego usuwania.  
+ [in] `bDelete`  
+ `TRUE` Aby usunąć obiekt panel z pamięci. `FALSE` usuwania obiektu panel bez jego usuwania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
   
-##  <a name="repospanels"></a>CMFCRibbonCategory::ReposPanels  
+##  <a name="repospanels"></a>  CMFCRibbonCategory::ReposPanels  
  Dostosowuje układ wszystkich kontrolek paneli wstążki, które znajdują się w kategorii wstążki.  
   
 ```  
@@ -1190,12 +1185,12 @@ virtual void ReposPanels(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia panele wstążki, które są zawarte w kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setcollapseorder"></a>CMFCRibbonCategory::SetCollapseOrder  
+##  <a name="setcollapseorder"></a>  CMFCRibbonCategory::SetCollapseOrder  
  Definiuje kolejność, w którym zwijanie paneli wstążki kategorii wstążki.  
   
 ```  
@@ -1203,7 +1198,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`arCollapseOrder`  
+ [in] `arCollapseOrder`  
  Określa kolejność Zwiń. Tablica zawiera indeksy liczony od zera paneli wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1218,7 +1213,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
   
  [!code-cpp[NVC_MFC_RibbonApp#13](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_2.cpp)]  
   
-##  <a name="setdata"></a>CMFCRibbonCategory::SetData  
+##  <a name="setdata"></a>  CMFCRibbonCategory::SetData  
  Ustawia dane zdefiniowane przez użytkownika ma zostać skojarzony z kategorii wstążki.  
   
 ```  
@@ -1226,10 +1221,10 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`dwData`  
+ [in] `dwData`  
  Dane zdefiniowane przez użytkownika.  
   
-##  <a name="setkeys"></a>CMFCRibbonCategory::SetKeys  
+##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
  Przypisuje właściwości keytip kategorii wstążki.  
   
 ```  
@@ -1237,13 +1232,13 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszKeys`  
+ [in] `lpszKeys`  
  Tekst właściwości keytip.  
   
 ### <a name="remarks"></a>Uwagi  
  Porady dotyczące klawiszy są wyświetlane, gdy użytkownik naciśnie klawisz F10 lub klawisz Alt.  
   
-##  <a name="setname"></a>CMFCRibbonCategory::SetName  
+##  <a name="setname"></a>  CMFCRibbonCategory::SetName  
  Przypisuje nazwę i właściwości keytip kategorii wstążki.  
   
 ```  
@@ -1251,13 +1246,13 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszName`  
+ [in] `lpszName`  
  Nazwa i właściwości keytip kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby ustawić właściwości keytip dla kategorii wstążki, Dołącz sekwencja znaków nowego wiersza następują znaki właściwości keytip do `lpszName`.  
   
-##  <a name="settabcolor"></a>CMFCRibbonCategory::SetTabColor  
+##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor  
  Ustawia kolor kategorii wstążki.  
   
 ```  
@@ -1265,7 +1260,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`color`  
+ [in] `color`  
  Określa kolor kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  

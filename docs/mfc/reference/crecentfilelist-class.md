@@ -2,11 +2,8 @@
 title: Klasa CRecentFileList | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecentFileList
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 968c15b1382233dc166a174e4ef074033c76619c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecentfilelist-class"></a>Klasa CRecentFileList
 Formant obsługuje listy ostatnio używanych (MRU) pliku.  
@@ -91,7 +86,7 @@ class CRecentFileList
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxadv.h  
   
-##  <a name="add"></a>CRecentFileList::Add  
+##  <a name="add"></a>  CRecentFileList::Add  
  Dodaje plik do listy plików ostatnio używanych (MRU).  
   
 ```  
@@ -137,7 +132,7 @@ void Add(
 ### <a name="remarks"></a>Uwagi  
  Nazwa pliku zostanie dodany na początku listy. Jeśli nazwa pliku już istnieje na liście MRU, zostanie przeniesiony do góry.  
   
-##  <a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
+##  <a name="crecentfilelist"></a>  CRecentFileList::CRecentFileList  
  Konstruuje `CRecentFileList` obiektu.  
   
 ```  
@@ -168,7 +163,7 @@ CRecentFileList(
 ### <a name="remarks"></a>Uwagi  
  Ciąg formatu wskazywana przez `lpszEntryFormat` powinien zawierać "%d", która będzie używana dla podstawiając indeks każdego elementu MRU. Na przykład, jeśli ciąg formatu `"file%d"` , a następnie będzie miała nazwę wpisy `file0`, `file1`i tak dalej.  
   
-##  <a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
+##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  Pobiera nazwę wyświetlaną dla pliku na liście ostatnio używanych plików do użytku w menu Wyświetlanie listy ostatnio używanych.  
   
 ```  
@@ -202,7 +197,7 @@ virtual BOOL GetDisplayName(
 ### <a name="remarks"></a>Uwagi  
  Jeśli plik znajduje się w bieżącym katalogu, funkcja pozostawia katalogu opcję wyświetlania. Jeśli nazwa pliku jest za długa, katalogów i rozszerzenia są usuwane. Jeśli nazwa pliku nadal jest za długa, nazwę wyświetlaną ustawiono pusty ciąg, chyba że `bAtLeastName` jest różna od zera.  
   
-##  <a name="getsize"></a>CRecentFileList::GetSize  
+##  <a name="getsize"></a>  CRecentFileList::GetSize  
  Pobiera liczbę plików na liście MRU.  
   
 ```  
@@ -212,7 +207,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba plików w bieżącym ostatnio używanych (MRU) listy plików.  
   
-##  <a name="operator_at"></a>[CRecentFileList::operator]  
+##  <a name="operator_at"></a>  [CRecentFileList::operator]  
  Przeciążenia indeksu dolnego ( `[]`) — operator zwraca pojedynczą `CString` określonego przez ten liczony od zera indeks `nIndex`.  
   
 ```  
@@ -223,14 +218,14 @@ CString& operator[ ](int nindex);
  `nIndex`  
  Liczony od zera indeks `CString` w zestawie `CString`s.  
   
-##  <a name="readlist"></a>CRecentFileList::ReadList  
+##  <a name="readlist"></a>  CRecentFileList::ReadList  
  Odczytuje listy ostatnio używanych (MRU) pliku z rejestru lub aplikacji. Pliku INI.  
   
 ```  
 virtual void ReadList();
 ```  
   
-##  <a name="remove"></a>CRecentFileList::Remove  
+##  <a name="remove"></a>  CRecentFileList::Remove  
  Usuwa plik z listy ostatnio używanych plików.  
   
 ```  
@@ -241,7 +236,7 @@ virtual void Remove(int nIndex);
  `nIndex`  
  Liczony od zera indeks pliku, który ma zostać usunięty z listy ostatnio używanych plików (MRU).  
   
-##  <a name="updatemenu"></a>CRecentFileList::UpdateMenu  
+##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
  Aktualizuje wyświetlanie menu listy ostatnio używanych plików.  
   
 ```  
@@ -252,7 +247,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
  `pCmdUI`  
  Wskaźnik do [CCmdUI](../../mfc/reference/ccmdui-class.md) obiekt do menu listy plików ostatnio używanych (MRU).  
   
-##  <a name="writelist"></a>CRecentFileList::WriteList  
+##  <a name="writelist"></a>  CRecentFileList::WriteList  
  Zapisuje listy ostatnio używanych (MRU) plików w rejestrze lub w aplikacji. Pliku INI.  
   
 ```  

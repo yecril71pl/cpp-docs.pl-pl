@@ -1,12 +1,9 @@
 ---
 title: Klasa CWinFormsDialog | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c59faec7fc981cff31bea4ce6e846d89d0b8bf99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsdialog-class"></a>Klasa CWinFormsDialog
 Otoka dla klasy okien dialogowych MFC, obsługującym kontrolki użytkownika formularza systemu Windows.  
@@ -74,14 +69,14 @@ class CWinFormsDialog :
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Rzutuje typu jako odwołanie do formantu użytkownika formularzy systemu Windows.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CWinFormsDialog`Otoka dla klasy okien dialogowych MFC jest ( [cdialog —](../../mfc/reference/cdialog-class.md)) obsługującego kontrolki użytkownika formularza systemu Windows. Dzięki temu wyświetlania formantów .NET Framework na modalne i niemodalne okno dialogowe MFC.  
+ `CWinFormsDialog` Otoka dla klasy okien dialogowych MFC jest ( [cdialog —](../../mfc/reference/cdialog-class.md)) obsługującego kontrolki użytkownika formularza systemu Windows. Dzięki temu wyświetlania formantów .NET Framework na modalne i niemodalne okno dialogowe MFC.  
   
  Aby uzyskać więcej informacji na temat używania formularzy systemu Windows, zobacz [za pomocą formantu użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) i [hostowanie formantu użytkownika formularza systemu Windows jako okna dialogowego MFC](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwinforms.h  
   
-##  <a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
+##  <a name="cwinformsdialog"></a>  CWinFormsDialog::CWinFormsDialog  
  Konstruuje `CWinFormsDialog` obiektu.  
   
 ```  
@@ -92,7 +87,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
  `nIDTemplate`  
  Zawiera identyfikator zasobu szablon — okno dialogowe. Edytor okien dialogowych umożliwia tworzenie szablonu okna dialogowego i zapisz go w pliku skryptu zasobu aplikacji. Aby uzyskać więcej informacji na szablony okna dialogowego, zobacz [cdialog — klasa](../../mfc/reference/cdialog-class.md).  
   
-##  <a name="getcontrol"></a>CWinFormsDialog::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
  Pobiera odwołanie do formantu użytkownika formularzy systemu Windows.  
   
 ```  
@@ -102,7 +97,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwołanie do formantu formularzy systemu Windows w oknie dialogowym MFC.  
   
-##  <a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsDialog::GetControlHandle  
  Pobiera uchwyt okna do kontrolki użytkownika formularzy systemu Windows.  
   
 ```  
@@ -112,7 +107,7 @@ inline HWND GetControlHandle() const throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca uchwyt okna do formantu użytkownika formularzy systemu Windows.  
   
-##  <a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>  CWinFormsDialog::OnInitDialog  
  Inicjowanie okna dialogowego MFC przez utworzenie i hostowanie formantu użytkownika formularzy systemu Windows na nim.  
   
 ```  
@@ -127,7 +122,7 @@ virtual BOOL OnInitDialog();
   
  Przesłonić tę funkcję elementu członkowskiego, jeśli należy przeprowadzić specjalnego przetwarzania, gdy okno dialogowe jest inicjowany. Aby uzyskać więcej informacji na temat używania tej metody, zobacz [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog).  
   
-##  <a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;  
  Zastępuje [CWinFormsDialog::GetControl](#getcontrol) w wyrażeniach.  
   
 ```  
@@ -139,7 +134,7 @@ inline TManagedControl^  operator->() const throw();
   
  Aby uzyskać informacje na temat używania formularzy systemu Windows, temacie [za pomocą formantu użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^  
  Rzutuje typu jako odwołanie do formantu użytkownika formularzy systemu Windows.  
   
 ```  

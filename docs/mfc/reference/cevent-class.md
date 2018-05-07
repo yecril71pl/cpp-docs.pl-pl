@@ -1,12 +1,9 @@
 ---
 title: Klasa CEvent | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEvent
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0646e703f172777817aa569fa28d3430624ccae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cevent-class"></a>Klasa CEvent
 Reprezentuje zdarzenia jest obiekt synchronizacji, który umożliwia jeden wątek, aby powiadomić innego wystąpienia zdarzenia.  
@@ -66,7 +61,7 @@ class CEvent : public CSyncObject
 ## <a name="remarks"></a>Uwagi  
  Zdarzenia są przydatne, gdy wątek musi wiedzieć, kiedy wykonania tego zadania. Na przykład wątku, który kopiuje dane do archiwum danych musi być powiadamiani o nowe dane są dostępne. Za pomocą `CEvent` obiektu powiadomiono wątku kopii, jeśli nowe dane są dostępne, wątek zadanie można wykonać jego tak szybko, jak to możliwe.  
   
- `CEvent`obiekty mają dwa typy: ręczna i automatyczna.  
+ `CEvent` obiekty mają dwa typy: ręczna i automatyczna.  
   
  Automatyczne `CEvent` obiektu automatycznie powróci do stanu (niedostępne)-sygnalizowane po wydaniu co najmniej jeden wątek. Domyślnie `CEvent` obiektu jest automatycznie, chyba że przekazujesz `TRUE` dla `bManualReset` parametru podczas tworzenia.  
   
@@ -95,7 +90,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxmt.h  
   
-##  <a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>  CEvent::CEvent  
  Konstruuje nazwane i nienazwane `CEvent` obiektu.  
   
 ```  
@@ -127,7 +122,7 @@ CEvent(
 > [!IMPORTANT]
 >  Po utworzeniu `CEvent` obiektów, użyj [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aby upewnić się, że obiektu mutex nie został już istnieje. Nieoczekiwanie istniał obiektu mutex, może oznaczać nieautoryzowanego zajmowanie i procesu może zamierza użyć obiektu mutex złośliwie. W takim przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.  
   
-##  <a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  Ustawia stan zdarzenia sygnalizuje (dostępne), zwalnia wszelkie wątków oczekujących, a ponadto resetuje go do nonsignaled (niedostępne) automatycznie.  
   
 ```  
@@ -142,9 +137,9 @@ BOOL PulseEvent();
   
  Jeśli nie ma wątków oczekujących lub wątków nie może być zwolnione, `PulseEvent` ustawia stan zdarzenia do nonsignaled i zwraca.  
   
- `PulseEvent`używa podstawowej Win32 `PulseEvent` funkcji, które mogą na chwilę usunięte ze stanu oczekiwania przez wywołanie asynchroniczne procedury trybu jądra. W związku z tym `PulseEvent` jest tymczasowy i nie powinny być używane przez nowych aplikacji. Aby uzyskać więcej informacji, zobacz [funkcja PulseEvent](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
+ `PulseEvent` używa podstawowej Win32 `PulseEvent` funkcji, które mogą na chwilę usunięte ze stanu oczekiwania przez wywołanie asynchroniczne procedury trybu jądra. W związku z tym `PulseEvent` jest tymczasowy i nie powinny być używane przez nowych aplikacji. Aby uzyskać więcej informacji, zobacz [funkcja PulseEvent](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
   
-##  <a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>  CEvent::ResetEvent  
  Ustawia stan zdarzenia, nonsignaled do momentu, jawnie ustawiona na sygnałowego przez [SetEvent](#setevent) funkcję elementu członkowskiego.  
   
 ```  
@@ -159,7 +154,7 @@ BOOL ResetEvent();
   
  Ta funkcja członkowska nie jest używany przez automatyczne zdarzenia.  
   
-##  <a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>  CEvent::SetEvent  
  Ustawia stan zdarzenia sygnalizuje, udostępnia wszystkie wątków oczekujących.  
   
 ```  
@@ -172,7 +167,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>Uwagi  
  W przypadku ręcznego zdarzenia zdarzenia pozostanie sygnałowego do [ResetEvent](#resetevent) jest wywoływana. W takim przypadku można można zwolnić więcej niż jeden wątek. Jeśli zdarzenie jest automatyczne, zdarzenie pozostanie sygnałowego do czasu zwolnienia jest jednego wątku. System zostanie następnie ustawioną stan zdarzenia nonsignaled. Nie wątków oczekujących, stan pozostaje sygnałowego do czasu zwolnienia jest jeden wątek.  
   
-##  <a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>  CEvent::Unlock  
  Udostępnia obiekt zdarzenia.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: Klasy okien dialogowych | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.dialog
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 60d33289d8025d7cdcaf4f6f69062230730b958c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-classes"></a>Klasy okien dialogowych
 Klasa `CDialog` i pochodne Hermetyzowanie funkcji okno dialogowe. Ponieważ jest specjalnym rodzajem okna, okno dialogowe `CDialog` jest pochodną `CWnd`. Pochodzi z klasy okien dialogowych z `CDialog` lub użyj jednego z klasy wspólnych okien dialogowych dla standardowych oknach dialogowych, takich jak otwieranie lub zapisywanie pliku, drukowania, wybierając czcionek i kolorów, Inicjowanie operacji wyszukiwania i zamieniania lub przy użyciu różnych związane z mechanizmem OLE operacje.  
@@ -71,7 +66,7 @@ Klasa `CDialog` i pochodne Hermetyzowanie funkcji okno dialogowe. Ponieważ jest
  OLE dodaje kilka wspólne okna dialogowe systemu Windows. Te klasy hermetyzacji wspólnych okien dialogowych OLE.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Używane przez platformę do przechowywania najczęściej występujące implementacje dla wszystkich okien dialogowych OLE. Wszystkie klasy okien dialogowych w kategorii interfejsu użytkownika są uzyskiwane z tej klasy podstawowej. `COleDialog`Nie można używać bezpośrednio.  
+ Używane przez platformę do przechowywania najczęściej występujące implementacje dla wszystkich okien dialogowych OLE. Wszystkie klasy okien dialogowych w kategorii interfejsu użytkownika są uzyskiwane z tej klasy podstawowej. `COleDialog` Nie można używać bezpośrednio.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  Wyświetla okno dialogowe Wstaw obiekt standardowy interfejs użytkownika dla wstawiania nowych OLE połączone lub osadzone elementy.  

@@ -1,24 +1,19 @@
 ---
-title: "Wyjątki (C + +/ CX) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wyjątki (C + +/ CX) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7e54d98ac4e1398753746dcac074de53ee2e7a0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5e58ad68f4cfc7d514c4d8434cf52f6d348640c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-ccx"></a>Wyjątki (C + +/ CX)
 
@@ -45,7 +40,7 @@ W poniższej tabeli wymieniono wyjątki standardowa.
 |ChangedStateException|E\_ZMIENIONE\_STANU|Element zgłaszany, gdy metody iteracyjnej kolekcji lub tego widoku kolekcji są wywoływane po zmianie kolekcji nadrzędnej, a tym samym unieważnienie wyniki metody.|
 |ClassNotRegisteredException|REGDB\_E\_CLASSNOTREG|Element zgłaszany, gdy klasa COM nie został zarejestrowany.|
 |DisconnectedException|RPC\_E\_ROZŁĄCZONO|Element zgłaszany, gdy obiekt jest odłączony od klientów.|
-|FailureException|E\_FAIL|Element zgłaszany, gdy operacja nie powiedzie się.|
+|FailureException|E\_ZAKOŃCZYĆ SIĘ NIEPOWODZENIEM|Element zgłaszany, gdy operacja nie powiedzie się.|
 |InvalidArgumentException|E\_INVALIDARG —|Element zgłaszany, gdy jeden z argumentów, które są dostarczane do metody jest nieprawidłowy.|
 |Invalidcastexception —|E\_NOINTERFACE|Element zgłaszany, gdy nie można rzutować typu do innego typu.|
 |Notimplementedexception —|E\_NOTIMPL|Element zgłaszany, gdy metoda interfejsu nie została zaimplementowana w klasie.|

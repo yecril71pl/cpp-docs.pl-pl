@@ -1,13 +1,10 @@
 ---
-title: "Wskazówki: Aktualizowanie aplikacji bazgrołów MFC (część 1) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Aktualizowanie aplikacji bazgrołów MFC (część 1) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Wskazówki: Aktualizowanie aplikacji bazgrołów MFC (część 1)
 W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC korzystanie ze Wstążki. Program Visual Studio obsługuje zarówno wstążki pakietu Office 2007 i Windows 7 scen wstążki. Aby uzyskać więcej informacji na temat interfejsu użytkownika wstążki, zobacz [wstążek](http://go.microsoft.com/fwlink/p/?linkid=129233) w witrynie MSDN.  
@@ -40,7 +35,7 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
   
  [Przykłady Visual C++](../visual-cpp-samples.md)  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  Ta część przewodnika zawiera następujące sekcje:  
   
 - [Zastąpienie klas podstawowych](#replaceclass)  
@@ -55,7 +50,7 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
   
 - [Ustawienie wyglądu aplikacji](#setlook)  
   
-##  <a name="replaceclass"></a>Zastąpienie klas podstawowych  
+##  <a name="replaceclass"></a> Zastąpienie klas podstawowych  
  Aby przekonwertować aplikacji, która obsługuje menu do aplikacji, która obsługuje wstążki, musi pochodzić od zaktualizowane klasy podstawowej aplikacji, okno ramowe i klasy narzędzi. (Zalecamy czy możesz nie modyfikować oryginalnego przykładu bazgrołów; zamiast tego, wyczyść projekt bazgrołów, skopiuj go do innego katalogu, a następnie zmodyfikuj kopii.)  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Zastąpienie klas podstawowych w aplikacji bazgrołów  
@@ -101,11 +96,11 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
   
 8.  W pliku mainfrm.cpp:  
   
-    1.  Zastąp `m_wndToolBar.SetBarStyle` z`m_wndToolBar.SetPaneStyle`  
+    1.  Zastąp `m_wndToolBar.SetBarStyle` z `m_wndToolBar.SetPaneStyle`  
   
-    2.  Zastąp `m_wndToolBar.GetBarStyle` z`m_wndToolBar.GetPaneStyle`  
+    2.  Zastąp `m_wndToolBar.GetBarStyle` z `m_wndToolBar.GetPaneStyle`  
   
-    3.  Zastąp `DockControlBar(&m_wndToolBar)` z`DockPane(&m_wndToolBar)`  
+    3.  Zastąp `DockControlBar(&m_wndToolBar)` z `DockPane(&m_wndToolBar)`  
   
 9. W pliku ipframe.cpp komentarz następujące trzy wiersze kodu.  
   
@@ -130,7 +125,7 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
   
  [[Sekcje](#top)]  
   
-##  <a name="addbitmap"></a>Dodawanie bitmap do projektu  
+##  <a name="addbitmap"></a> Dodawanie bitmap do projektu  
  Następnie cztery kroki tego przewodnika wymaga zasobów mapy bitowej. Możesz uzyskać odpowiednie map bitowych na różne sposoby:  
   
 -   Użyj [edytory zasobów](../windows/resource-editors.md) do magazynu własne map bitowych. Lub użyj edytory zasobów do włączenia mapy bitowe z obrazów PNG przenośne sieci, które są dołączone [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Te obrazy są w `VS2008ImageLibrary` katalogu.  
@@ -175,7 +170,7 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
   
  [[Sekcje](#top)]  
   
-##  <a name="addribbon"></a>Dodawanie zasobu wstążki do projektu  
+##  <a name="addribbon"></a> Dodawanie zasobu wstążki do projektu  
  Podczas konwertowania aplikacji korzystającej z menu do aplikacji, która używa wstążki, nie trzeba usunąć lub wyłączyć istniejące menu. Zamiast tego utwórz zasób wstążki, dodawanie przycisków Wstążki i następnie skojarzyć nowe przyciski z istniejącymi elementami menu. Mimo że menu nie są już widoczne, wiadomości w pasku wstążki są przesyłane za pośrednictwem menu. Ponadto menu skrótów kontynuować pracę.  
   
  Wstążka składa się z przycisku aplikacji, który jest duży przycisk w lewej górnej części wstążki, i co najmniej jednej karty kategorii. Każda karta kategoria zawiera co najmniej jeden panele, które działają jak kontenery przycisków Wstążki i kontrolek. Poniższa procedura przedstawia sposób tworzenia zasobu wstążki, a następnie dostosować przycisku aplikacji.  
@@ -226,7 +221,7 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
   
  [[Sekcje](#top)]  
   
-##  <a name="createinstance"></a>Utworzenie wystąpienia pasek wstążki  
+##  <a name="createinstance"></a> Utworzenie wystąpienia pasek wstążki  
  Poniższe kroki pokazują, jak utworzyć wystąpienia pasek wstążki podczas uruchamiania aplikacji. Aby dodać pasek wstążki do aplikacji, należy zadeklarować na pasku wstążki w pliku mainfrm.h. Następnie w pliku mainfrm.cpp napisz kod umożliwiający ładowanie zasobu wstążki.  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Aby utworzyć wystąpienie pasek wstążki  
@@ -250,7 +245,7 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
   
  [[Sekcje](#top)]  
   
-##  <a name="addcategory"></a>Dostosowywanie zasób wstążki  
+##  <a name="addcategory"></a> Dostosowywanie zasób wstążki  
  Teraz, po utworzeniu przycisku aplikacji, można dodać elementów do wstążki.  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
   
  [[Sekcje](#top)]  
   
-##  <a name="setlook"></a>Ustawienie wyglądu aplikacji  
+##  <a name="setlook"></a> Ustawienie wyglądu aplikacji  
  A *Menedżera visual* jest globalny obiekt, który kontroluje wszystkie rysunku dla aplikacji. Ponieważ oryginalne aplikacji bazgrołów używa styl interfejsu użytkownika pakietu Office 2000, aplikacja może wyglądać stosowane. Możesz resetować aplikacji tak, aby podobny do aplikacji pakietu Office 2007 za pomocą Menedżera visual Office 2007.  
   
 #### <a name="to-set-the-look-of-the-application"></a>Aby ustawić wygląd aplikacji  

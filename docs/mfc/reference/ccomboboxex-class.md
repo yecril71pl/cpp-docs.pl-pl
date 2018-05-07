@@ -2,11 +2,8 @@
 title: Ccomboboxex — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CComboBoxEx
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aecbb168316b3d6416d3a41a6f6a56b04aeb990
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd7d2c5bbd3445e604620dc1f23f45004b7a3b73
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccomboboxex-class"></a>Ccomboboxex — klasa
 Rozszerza pole kombi kontrolki pola, zapewniając obsługę listy obrazów.  
@@ -100,7 +95,7 @@ class CComboBoxEx : public CComboBox
  W polu kombi standardowe właściciel pola kombi jest odpowiedzialny za rysowania obrazu, tworząc pole kombi jako formant rysowania przez właściciela. Jeśli używasz `CComboBoxEx`, nie trzeba ustawić style rysowania **cbs_ownerdrawfixed —** i **cbs_hasstrings —** ponieważ są one niejawnego. W przeciwnym razie należy napisać kod, aby wykonać operacje rysowania. A `CComboBoxEx` sterowanie obsługuje maksymalnie trzy obrazy dla każdego elementu: jeden dla wybranego stanu: jeden dla stanu niezaznaczone i jeden dla obrazu nakładki.  
   
 ## <a name="styles"></a>Style  
- `CComboBoxEx`obsługuje style **cbs_simple —**, **cbs_dropdown —**, **cbs_dropdownlist —**, i **ws_child —**. Wszystkie inne style przekazany podczas tworzenia okna są ignorowane przez formant. Po utworzeniu okna, możesz podać inne kombi style pola wywołując `CComboBoxEx` funkcji członkowskiej [SetExtendedStyle](#setextendedstyle). Przy użyciu tych stylów możesz:  
+ `CComboBoxEx` obsługuje style **cbs_simple —**, **cbs_dropdown —**, **cbs_dropdownlist —**, i **ws_child —**. Wszystkie inne style przekazany podczas tworzenia okna są ignorowane przez formant. Po utworzeniu okna, możesz podać inne kombi style pola wywołując `CComboBoxEx` funkcji członkowskiej [SetExtendedStyle](#setextendedstyle). Przy użyciu tych stylów możesz:  
   
 -   Ustaw ciąg wyszukiwania na liście będzie uwzględniana wielkość liter.  
   
@@ -120,25 +115,25 @@ class CComboBoxEx : public CComboBox
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Ccombobox —](../../mfc/reference/ccombobox-class.md)  
+ [CComboBox](../../mfc/reference/ccombobox-class.md)  
   
  `CComboBoxEx`  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcmn.h  
   
-##  <a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
+##  <a name="ccomboboxex"></a>  CComboBoxEx::CComboBoxEx  
  Wywołanie tej funkcji Członkowskich, aby utworzyć `CComboBoxEx` obiektu.  
   
 ```  
 CComboBoxEx();
 ```  
   
-##  <a name="create"></a>CComboBoxEx::Create  
+##  <a name="create"></a>  CComboBoxEx::Create  
  Tworzy pole kombi i dołącza go do `CComboBoxEx` obiektu.  
   
 ```  
@@ -190,7 +185,7 @@ virtual BOOL Create(
   
  Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CreateEx](#createex) zamiast **Utwórz**.  
   
-##  <a name="createex"></a>CComboBoxEx::CreateEx  
+##  <a name="createex"></a>  CComboBoxEx::CreateEx  
  Wywołanie tej funkcji, aby utworzyć formancie rozszerzonego pola kombi (okno podrzędne) i skojarzyć go z `CComboBoxEx` obiektu.  
   
 ```  
@@ -224,9 +219,9 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Użyj `CreateEx` zamiast **Utwórz** dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
   
- `CreateEx`Tworzy formantu z rozszerzone style Windows określonego przez `dwExStyle`. Należy ustawić rozszerzone style określone na kombi rozszerzonego pola formantu przy użyciu [SetExtendedStyle](#setextendedstyle). Na przykład użyć `CreateEx` można ustawić takie style jako **ws_ex_contexthelp —**, ale użyj `SetExtendedStyle` można ustawić takie style jako **CBES_EX_CASESENSITIVE**. Aby uzyskać więcej informacji, zobacz opisane w temacie style [ComboBoxEx kontroli rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb775742) w zestawie Windows SDK.  
+ `CreateEx` Tworzy formantu z rozszerzone style Windows określonego przez `dwExStyle`. Należy ustawić rozszerzone style określone na kombi rozszerzonego pola formantu przy użyciu [SetExtendedStyle](#setextendedstyle). Na przykład użyć `CreateEx` można ustawić takie style jako **ws_ex_contexthelp —**, ale użyj `SetExtendedStyle` można ustawić takie style jako **CBES_EX_CASESENSITIVE**. Aby uzyskać więcej informacji, zobacz opisane w temacie style [ComboBoxEx kontroli rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb775742) w zestawie Windows SDK.  
   
-##  <a name="deleteitem"></a>CComboBoxEx::DeleteItem  
+##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  Usuwa element z **ComboBoxEx** formantu.  
   
 ```  
@@ -243,7 +238,7 @@ int DeleteItem(int iIndex);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje funkcje wiadomości [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768), zgodnie z opisem w zestawie Windows SDK. Podczas wywoływania DeleteItem, [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatów z **CBEN_DELETEITEM** powiadomienie zostanie wysłane do okna nadrzędnego.  
   
-##  <a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
+##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl  
  Wywołanie tej funkcji Członkowskich otrzymywać wskaźnik do kontrolki pola kombi, w ramach `CComboBoxEx` obiektu.  
   
 ```  
@@ -258,7 +253,7 @@ CComboBox* GetComboBoxCtrl();
   
  `CComboBox` Obiekt wskazywany przez wartość zwracana jest obiektem tymczasowym i zostanie zniszczony podczas następnego przetwarzania bezczynności.  
   
-##  <a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
+##  <a name="geteditctrl"></a>  CComboBoxEx::GetEditCtrl  
  Wywołanie tej funkcji Członkowskich otrzymywać wskaźnik na formancie edycyjnym pola kombi.  
   
 ```  
@@ -273,7 +268,7 @@ CEdit* GetEditCtrl();
   
  `CEdit` Obiekt wskazywany przez wartość zwracana jest obiektem tymczasowym i zostanie zniszczony podczas następnego przetwarzania bezczynności.  
   
-##  <a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>  CComboBoxEx::GetExtendedStyle  
  Wywołanie tej funkcji Członkowskich uzyskanie rozszerzone style używane dla `CComboBoxEx` formantu.  
   
 ```  
@@ -286,7 +281,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>Uwagi  
  Zobacz [ComboBoxEx kontroli rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb775742) w zestawie SDK systemu Windows, aby uzyskać więcej informacji na temat tych stylów.  
   
-##  <a name="getimagelist"></a>CComboBoxEx::GetImageList  
+##  <a name="getimagelist"></a>  CComboBoxEx::GetImageList  
  Wywołanie tej funkcji Członkowskich otrzymywać wskaźnik do listy obrazów, używany przez `CComboBoxEx` formantu.  
   
 ```  
@@ -299,7 +294,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>Uwagi  
  `CImageList` Obiekt wskazywany przez wartość zwracana jest obiektem tymczasowym i zostanie zniszczony podczas następnego przetwarzania bezczynności.  
   
-##  <a name="getitem"></a>CComboBoxEx::GetItem  
+##  <a name="getitem"></a>  CComboBoxEx::GetItem  
  Pobiera element informacje dotyczące danego **ComboBoxEx** elementu.  
   
 ```  
@@ -316,7 +311,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje funkcje wiadomości [CBEM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775779), zgodnie z opisem w zestawie Windows SDK.  
   
-##  <a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
+##  <a name="haseditchanged"></a>  CComboBoxEx::HasEditChanged  
  Określa, czy użytkownik zmienił zawartość **ComboBoxEx** formantów edycji, wpisując polecenie.  
   
 ```  
@@ -329,7 +324,7 @@ BOOL HasEditChanged();
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje funkcje wiadomości [CBEM_HASEDITCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb775782), zgodnie z opisem w zestawie Windows SDK.  
   
-##  <a name="insertitem"></a>CComboBoxEx::InsertItem  
+##  <a name="insertitem"></a>  CComboBoxEx::InsertItem  
  Wstawia nowy element **ComboBoxEx** formantu.  
   
 ```  
@@ -346,7 +341,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Uwagi  
  Podczas wywoływania `InsertItem`, [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatów z [CBEN_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb775764) powiadomienie zostanie wysłane do okna nadrzędnego.  
   
-##  <a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle  
  Wywołanie tej funkcji członkowskich można ustawić rozszerzone style używany rozszerzony kontrolki pola kombi.  
   
 ```  
@@ -370,7 +365,7 @@ DWORD SetExtendedStyle(
   
  Aby utworzyć rozszerzony formantu o windows rozszerzone style pola kombi, użyj [CreateEx](#createex).  
   
-##  <a name="setimagelist"></a>CComboBoxEx::SetImageList  
+##  <a name="setimagelist"></a>  CComboBoxEx::SetImageList  
  Ustawia dla listy obrazów **ComboBoxEx** formantu.  
   
 ```  
@@ -389,7 +384,7 @@ CImageList* SetImageList(CImageList* pImageList);
   
  `CImageList` Obiekt wskazywany przez wartość zwracana jest obiektem tymczasowym i zostanie zniszczony podczas następnego przetwarzania bezczynności.  
   
-##  <a name="setitem"></a>CComboBoxEx::SetItem  
+##  <a name="setitem"></a>  CComboBoxEx::SetItem  
  Określa atrybuty elementu w **ComboBoxEx** formantu.  
   
 ```  
@@ -406,7 +401,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje funkcje wiadomości [CBEM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775788), zgodnie z opisem w zestawie Windows SDK.  
   
-##  <a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
+##  <a name="setwindowtheme"></a>  CComboBoxEx::SetWindowTheme  
  Ustawia pole kombi rozszerzonego stylu kontrolki pola.  
   
 ```  

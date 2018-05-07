@@ -1,12 +1,9 @@
 ---
 title: Klasa CBaseKeyFrame | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBaseKeyFrame
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dba8ba22325d3ea9e68411f0372cfac4d6b0659d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f538874b1690be920e9c7a3b3f494ca6851c532
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbasekeyframe-class"></a>Klasa CBaseKeyFrame
 Implementuje podstawowych funkcji kluczową.  
@@ -88,7 +83,7 @@ class CBaseKeyFrame : public CObject;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard  
  Dodaje kluczową do scenorysu.  
   
 ```  
@@ -110,14 +105,14 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana, aby dodać kluczową do scenorysu.  
   
-##  <a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
+##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame  
  Tworzy obiekt klatki kluczowej.  
   
 ```  
 CBaseKeyFrame();
 ```  
   
-##  <a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
+##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe  
  Zwraca wartość klatki kluczowej podstawowej.  
   
 ```  
@@ -130,7 +125,7 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 ### <a name="remarks"></a>Uwagi  
  Jest to metoda dostępu do wartości klatki kluczowej podstawowej.  
   
-##  <a name="isadded"></a>CBaseKeyFrame::IsAdded  
+##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded  
  Informuje, czy kluczową został dodany do scenorysu.  
   
 ```  
@@ -143,7 +138,7 @@ BOOL IsAdded() const;
 ### <a name="remarks"></a>Uwagi  
  W klasie podstawowej IsAdded zawsze zwraca wartość TRUE, ale jest on przesłaniany w klasach pochodnych.  
   
-##  <a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
+##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset  
  Określa, czy kluczową powinny zostać dodane do scenorysu przy przesunięciu lub po przejściu.  
   
 ```  
@@ -156,21 +151,21 @@ BOOL IsKeyframeAtOffset() const;
 ### <a name="remarks"></a>Uwagi  
  Określa, czy kluczową powinny zostać dodane do scenorysu przy przesunięciu. Przesunięcie lub przejścia należy określić w klasie pochodnej.  
   
-##  <a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
+##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded  
  Określa, czy ten klatki kluczowej został dodany do scenorysu.  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
+##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset  
  Określa, czy ten klatki kluczowej powinny zostać dodane do scenorysu przy przesunięciu z innego istniejącego klatki kluczowej, lub na końcu niektóre przejścia.  
   
 ```  
 BOOL m_bIsKeyframeAtOffset;  
 ```  
   
-##  <a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
+##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe  
  Reprezentuje kluczową interfejsu API systemu Windows animacji. Nie zainicjowano kluczową jest ustawiona do wstępnie zdefiniowanych wartości UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
 ```  

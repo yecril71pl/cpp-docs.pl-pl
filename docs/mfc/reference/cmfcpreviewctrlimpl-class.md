@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCPreviewCtrlImpl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPreviewCtrlImpl
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8def8a8085bebdd09ce58cb6d9abd026fe713fe8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Klasa CMFCPreviewCtrlImpl
 Ta klasa implementuje okno, w którym znajduje się w oknie hostów udostępnianych przez powłokę dla podglądu rozbudowanego.  
@@ -110,19 +105,19 @@ class CMFCPreviewCtrlImpl : public CWnd;
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
  [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimpl"></a> CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
 Tworzy obiekt kontroli wersji zapoznawczej.
 
 ### <a name="syntax"></a>Składnia
 CMFCPreviewCtrlImpl();  
 
-## <a name="create"></a>CMFCPreviewCtrlImpl::Create
+## <a name="create"></a> CMFCPreviewCtrlImpl::Create
 Przeciążone. Metoda wywoływana przez program obsługi podglądu rozbudowanego można utworzyć okna systemu Windows.  
   
 ### <a name="syntax"></a>Składnia  
@@ -150,9 +145,9 @@ virtual BOOL Create(
  Wskaźnik do tworzenia kontekstu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli tworzenie zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli tworzenie zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
   
-## <a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
+## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
 Wywoływane przez program obsługi podglądu rozbudowanego, kiedy zachodzi potrzeba zniszczyć tego formantu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -161,7 +156,7 @@ Wywoływane przez program obsługi podglądu rozbudowanego, kiedy zachodzi potrz
 virtual void Destroy();  
 ```  
   
-## <a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
+## <a name="dopaint"></a> CMFCPreviewCtrlImpl::DoPaint  
 Wywoływane przez platformę, by renderować w wersji zapoznawczej.  
   
 ### <a name="syntax"></a>Składnia  
@@ -177,7 +172,7 @@ virtual void DoPaint(
  Wskaźnik do kontekstu urządzenia dla malowania.  
 
 
-## <a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
+## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus  
 Zestawy danych wejściowych fokus do tego formantu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -185,7 +180,7 @@ Zestawy danych wejściowych fokus do tego formantu.
 ```  
 virtual void Focus();  
 ```  
-## <a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
+## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
 Zwraca połączony ten formant podglądu dokumentu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -197,7 +192,7 @@ ATL::IDocument* GetDocument();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do dokumentu, których zawartość jest przeglądany w formancie.
 
-## <a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
+## <a name="m_clrbackcolor"></a> CMFCPreviewCtrlImpl::m_clrBackColor  
 Kolor tła okna podglądu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -206,7 +201,7 @@ Kolor tła okna podglądu.
 COLORREF m_clrBackColor;  
 ```  
 
-## <a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
+## <a name="m_clrtextcolor"></a> CMFCPreviewCtrlImpl::m_clrTextColor
 Kolor tekstu okna podglądu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -214,14 +209,14 @@ Kolor tekstu okna podglądu.
 ```  
 COLORREF m_clrTextColor;  
 ```  
-## <a name="m_font"></a>Czcionka CMFCPreviewCtrlImpl::m_font używany do wyświetlania tekstu w okienku podglądu.  
+## <a name="m_font"></a> Czcionka CMFCPreviewCtrlImpl::m_font używany do wyświetlania tekstu w okienku podglądu.  
   
 ### <a name="syntax"></a>Składnia  
   
 ```  
 CFont m_font;  
 ```  
-## <a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
+## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument  
 Wskaźnik do dokumentu, których zawartość jest przeglądany w formancie.  
   
 ### <a name="syntax"></a>Składnia  
@@ -230,7 +225,7 @@ Wskaźnik do dokumentu, których zawartość jest przeglądany w formancie.
 ATL::IDocument* m_pDocument;  
 ```  
 
-## <a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
+## <a name="redraw"></a> CMFCPreviewCtrlImpl::Redraw  
 Określa, że tego formantu, aby odświeżyć.  
   
 ### <a name="syntax"></a>Składnia  
@@ -238,7 +233,7 @@ Określa, że tego formantu, aby odświeżyć.
 ```  
 virtual void Redraw();  
 ```  
-## <a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
+## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument 
 Metoda wywoływana przez Obsługa podglądu, można utworzyć relacji między implementacji dokumentu i Podgląd formantu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -253,7 +248,7 @@ void SetDocument(
  `pDocument`  
  Wskaźnik do implementacji dokumentu.  
 
-## <a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
+## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
 Ustawia nowy element nadrzędny tego formantu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -268,7 +263,7 @@ virtual void SetHost(
  `hWndParent`  
  Dojście do nowego okna nadrzędnego.  
 
-## <a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
+## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
 Metoda wywoływana przez program obsługi podglądu rozbudowanego kiedy zachodzi potrzeba Ustaw obraz podglądu zawartości.  
   
 ### <a name="syntax"></a>Składnia  
@@ -291,7 +286,7 @@ virtual void SetPreviewVisuals(
  `plf`  
  Czcionka używana do wyświetlania tekstu w okienku podglądu. 
 
-##  <a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
 Ustawia nowy prostokąt ograniczający dla tego formantu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -313,7 +308,7 @@ virtual void SetRect(
 ### <a name="remarks"></a>Uwagi  
  Zazwyczaj nowy prostokąt ograniczający jest ustawiona, gdy zmieni się rozmiar kontrolki hosta.  
 
-## <a name="dtor"></a>CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
+## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
 Destructs obiektu podglądu formantu.  
   
 ### <a name="syntax"></a>Składnia  

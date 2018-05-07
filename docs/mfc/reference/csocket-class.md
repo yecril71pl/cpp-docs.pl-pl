@@ -1,12 +1,9 @@
 ---
-title: "CSocket — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: CSocket — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSocket
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csocket-class"></a>CSocket — klasa
 Pochodną `CAsyncSocket`dziedziczy jego hermetyzacja interfejsu API systemu Windows Sockets i reprezentuje wyższym poziomie abstrakcji niż `CAsyncSocket` obiektu.  
@@ -75,7 +70,7 @@ class CSocket : public CAsyncSocket
 |[CSocket::OnMessagePending](#onmessagepending)|Wywołuje się, by proces komunikatów oczekujących podczas oczekiwania na blokadzie wywołania do wykonania.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CSocket`działa z klasami `CSocketFile` i `CArchive` do zarządzania wysyłania i odbierania danych.  
+ `CSocket` działa z klasami `CSocketFile` i `CArchive` do zarządzania wysyłania i odbierania danych.  
   
  A `CSocket` obiekt zapewnia także blokuje, co jest niezbędne do działania synchroniczne `CArchive`. Blokowanie funkcje, takie jak `Receive`, `Send`, `ReceiveFrom`, `SendTo`, i `Accept` (wszystkie odziedziczone z `CAsyncSocket`), nie zwracać `WSAEWOULDBLOCK` błąd w `CSocket`. Zamiast tego należy te funkcje zaczekać, aż do zakończenia operacji. Ponadto wywołanie oryginalnego zostanie zamknięty z powodu błędu `WSAEINTR` Jeśli `CancelBlockingCall` jest wywoływana, gdy jeden z tych funkcji jest zablokowana.  
   
@@ -104,7 +99,7 @@ class CSocket : public CAsyncSocket
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxsock.h  
   
-##  <a name="attach"></a>CSocket::Attach  
+##  <a name="attach"></a>  CSocket::Attach  
  Wywołanie tej funkcji Członkowskich, aby dołączyć `hSocket` dojścia do `CSocket` obiektu.  
   
 ```  
@@ -130,7 +125,7 @@ BOOL Attach(SOCKET hSocket);
   
  [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
+##  <a name="cancelblockingcall"></a>  CSocket::CancelBlockingCall  
  Wywołanie tej funkcji elementu członkowskiego, aby anulować blokowania wywołań w toku.  
   
 ```  
@@ -146,7 +141,7 @@ void CancelBlockingCall();
   
  Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="create"></a>CSocket::Create  
+##  <a name="create"></a>  CSocket::Create  
  Wywołanie **Utwórz** funkcji członkowskiej po konstruowania obiektu gniazda, aby utworzyć gniazda systemu Windows i dołączyć go.  
   
 ```  
@@ -181,7 +176,7 @@ BOOL Create(
   
  Aby uzyskać więcej informacji na temat gniazd strumienia i datagram, zobacz artykuły [Windows Sockets: tła](../../mfc/windows-sockets-background.md), [Windows Sockets: porty i adresy gniazd](../../mfc/windows-sockets-ports-and-socket-addresses.md), i [Windows Sockets: przy użyciu Gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="csocket"></a>CSocket::CSocket  
+##  <a name="csocket"></a>  CSocket::CSocket  
  Konstruuje `CSocket` obiektu.  
   
 ```  
@@ -193,7 +188,7 @@ CSocket();
   
  Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="fromhandle"></a>CSocket::FromHandle  
+##  <a name="fromhandle"></a>  CSocket::FromHandle  
  Zwraca wskaźnik do `CSocket` obiektu.  
   
 ```  
@@ -212,7 +207,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
   
  Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="isblocking"></a>CSocket::IsBlocking  
+##  <a name="isblocking"></a>  CSocket::IsBlocking  
  Wywołaj tę funkcję elementu członkowskiego, aby określić, czy wywołanie blokowania jest w toku.  
   
 ```  
@@ -225,7 +220,7 @@ BOOL IsBlocking();
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="onmessagepending"></a>CSocket::OnMessagePending  
+##  <a name="onmessagepending"></a>  CSocket::OnMessagePending  
  Przesłonić tę funkcję elementu członkowskiego, aby znaleźć określone wiadomości z systemu Windows i zareagować w Twoje gniazda.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCRibbonFontComboBox | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonFontComboBox
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fab339300de907169ab7f4471d9892feadffad81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Klasa CMFCRibbonFontComboBox
 Implementuje pola kombi, który zawiera listę czcionek. Umieszcza pole kombi na panelu wstążki.  
@@ -99,7 +94,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxRibbonComboBox.h  
   
-##  <a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
+##  <a name="buildfonts"></a>  CMFCRibbonFontComboBox::BuildFonts  
  Wypełnienie pola kombi na Wstążce z czcionkami.  
   
 ```  
@@ -110,16 +105,16 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nFontType`  
+ [in] `nFontType`  
  Określa krój czcionki do dodania.  
   
- [in]`nCharSet`  
+ [in] `nCharSet`  
  Określa zestaw znaków czcionki do dodania.  
   
- [in]`nPitchAndFamily`  
+ [in] `nPitchAndFamily`  
  Określa gęstość i rodzinę czcionek do dodania.  
   
-##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
+##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Tworzy i inicjuje [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) obiektu.  
   
 ```  
@@ -132,19 +127,19 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nID`  
+ [in] `nID`  
  Identyfikator polecenia polecenie, które wykonuje się, gdy użytkownik wybiera element w polu kombi.  
   
- [in]`nFontType`  
+ [in] `nFontType`  
  Określa typy czcionki, która mają być wyświetlane w polu kombi. Prawidłowe opcje to **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, i **TRUETYPE_FONTTYPE**, lub dowolną ich kombinację bitowe.  
   
- [in]`nCharSet`  
+ [in] `nCharSet`  
  Filtry czcionki w polu kombi do tych, które należą do określonego zestawu znaków.  
   
- [in]`nPitchAndFamily`  
+ [in] `nPitchAndFamily`  
  Określa gęstość i rodzinę czcionek, które są wyświetlane w polu kombi.  
   
- [in]`nWidth`  
+ [in] `nWidth`  
  Określa szerokość w pikselach, pola kombi.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -152,7 +147,7 @@ CMFCRibbonFontComboBox(
   
  Aby uzyskać więcej informacji na temat zestawów prawidłowych znaków, które można przypisać do `nCharSet`i prawidłowe wartości, które można przypisać do `nPitchAndFamily`, zobacz [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) w dokumentacji zestawu SDK systemu Windows.  
   
-##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -160,13 +155,13 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iIndex`  
+ [in] `iIndex`  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
+##  <a name="rebuildfonts"></a>  CMFCRibbonFontComboBox::RebuildFonts  
  Wypełnia pole kombi na Wstążce z czcionkami wcześniej określonej czcionki, zestaw znaków i gęstość i rodzinę.  
   
 ```  
@@ -176,7 +171,7 @@ void RebuildFonts();
 ### <a name="remarks"></a>Uwagi  
  Można określić typ czcionki, zestaw znaków i gęstość i rodzinę czcionek, aby uwzględnić w pole kombi czcionki wstążki pole [Konstruktor](#cmfcribbonfontcombobox) dla tej klasy lub poprzez wywołanie [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
   
-##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
+##  <a name="setfont"></a>  CMFCRibbonFontComboBox::SetFont  
  Wybiera czcionkę określonej w polu kombi.  
   
 ```  
@@ -194,14 +189,14 @@ BOOL SetFont(
  Określa zestaw znaków dla wybranej czcionki.  
   
  `bExact`  
- `TRUE`Aby określić, że zestaw znaków muszą być zgodne, wybierając czcionki; `FALSE` do określenia, czy zestaw znaków, można zignorować, wybierając czcionki.  
+ `TRUE` Aby określić, że zestaw znaków muszą być zgodne, wybierając czcionki; `FALSE` do określenia, czy zestaw znaków, można zignorować, wybierając czcionki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli znaleziono określonej czcionki i wybrać; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getcharset"></a>CMFCRibbonFontComboBox::GetCharSet  
+##  <a name="getcharset"></a>  CMFCRibbonFontComboBox::GetCharSet  
  Zwraca określonego zestawu znaków.  
   
 ```  
@@ -213,7 +208,7 @@ BYTE GetCharSet() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType  
+##  <a name="getfonttype"></a>  CMFCRibbonFontComboBox::GetFontType  
  Zwraca typów czcionek, które mają być wyświetlane w polu kombi. Prawidłowe opcje to DEVICE_FONTTYPE, RASTER_FONTTYPE i TRUETYPE_FONTTYPE lub dowolną ich kombinację bitowe.  
   
 ```  
@@ -225,7 +220,7 @@ int GetFontType() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily  
+##  <a name="getpitchandfamily"></a>  CMFCRibbonFontComboBox::GetPitchAndFamily  
  Zwraca gęstość i rodzinę czcionek, które są wyświetlane w polu kombi.  
   
 ```  

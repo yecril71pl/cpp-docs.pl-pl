@@ -1,13 +1,10 @@
 ---
-title: "Ciągi szablonu dokumentu, Kreator aplikacji MFC | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Ciągi szablonu dokumentu, Kreator aplikacji MFC | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.doctemp
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2fdabb971ab9aad06f5500b98e9d8591266c85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d6039459eed097af5e927c4bd2f30d3e7c3c4bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Ciągi szablonu dokumentu, kreator aplikacji MFC
 Na tej stronie Kreatora aplikacji MFC Podaj lub Popraw następujące opcje ułatwiające zarządzanie dokumentami i lokalizacja. Ciągi szablonu dokumentu są dostępne dla aplikacji, które obejmują **wsparcie dla architektury dokument/widok** w [typu aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md). Nie są one dostępne w oknach dialogowych. Ponieważ większość ciągi szablonu dokumentu są widoczne i używane przez użytkowników aplikacji, są zlokalizowane w **języka zasobu** wskazane **typu aplikacji** stronie kreatora.  

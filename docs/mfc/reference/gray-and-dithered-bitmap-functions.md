@@ -1,13 +1,10 @@
 ---
 title: Funkcje szarych i symulowanych map bitowych | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f895fb22e4f4d2649cdec1e4c9925b69b013e49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de887cdbe80642925bc935eb48726a59850f6f96
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Funkcje szarych i symulowanych map bitowych
 **Funkcje szarych map bitowych**  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 |[Afxdrawditheredbitmap —](#afxdrawditheredbitmap)|Rysuje mapy bitowej z symulowanych tła.|  
 |[Afxgetditheredbitmap —](#afxgetditheredbitmap)|Kopiuje mapy bitowej z symulowanych tła.|  
   
-##  <a name="afxdrawgraybitmap"></a>Afxdrawgraybitmap —  
+##  <a name="afxdrawgraybitmap"></a>  Afxdrawgraybitmap —  
  Rysuje szarego wersji mapy bitowej.  
   
 ```   
@@ -92,7 +87,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
 
-##  <a name="afxgetgraybitmap"></a>Afxgetgraybitmap —  
+##  <a name="afxgetgraybitmap"></a>  Afxgetgraybitmap —  
  Kopiuje szarego wersji mapy bitowej.  
   
 ```   
@@ -123,7 +118,7 @@ void AFXAPI AfxGetGrayBitmap(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
   
-##  <a name="afxdrawditheredbitmap"></a>Afxdrawditheredbitmap —  
+##  <a name="afxdrawditheredbitmap"></a>  Afxdrawditheredbitmap —  
  Rysuje mapy bitowej, zastępując tła wzorzec symulowanych (sprawdzania).  
   
 ```   
@@ -167,7 +162,7 @@ void AFXAPI AfxDrawDitheredBitmap(
  **Nagłówek:** afxwin.h  
 
 
-##  <a name="afxgetditheredbitmap"></a>Afxgetditheredbitmap —  
+##  <a name="afxgetditheredbitmap"></a>  Afxgetditheredbitmap —  
  Kopiuje mapy bitowej, zastępując tła wzorzec symulowanych (sprawdzania).  
   
 ```   

@@ -1,13 +1,10 @@
 ---
-title: "Funkcje wymiany danych w oknie dialogowym dla formantów OLE | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje wymiany danych w oknie dialogowym dla formantów OLE | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDISP/DDX_OCBool
 - AFXDISP/DDX_OCBoolRO
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funkcje wymiany danych w oknie dialogowym dla formantów OLE
 W tym temacie wymieniono funkcje DDX_OC używanego do wymiany danych między właściwości formantu OLE w okno dialogowe, widoku formularza lub kontrolki widoku obiektu i element członkowski danych klasy okno dialogowe, widoku Formularz lub formant widoku obiektu.  
@@ -59,7 +54,7 @@ W tym temacie wymieniono funkcje DDX_OC używanego do wymiany danych między wł
 |[Ddx_octext —](#ddx_octext)|Zarządza transferem **cstring —** danych między właściwości formantu OLE i **cstring —** element członkowski danych.|  
 |[Ddx_octextro —](#ddx_octextro)|Zarządza transferem **cstring —** danych między właściwością tylko do odczytu formantów OLE i **cstring —** element członkowski danych.|  
   
-##  <a name="ddx_ocbool"></a>Ddx_ocbool —  
+##  <a name="ddx_ocbool"></a>  Ddx_ocbool —  
  `DDX_OCBool` Funkcji zarządzania transferem **BOOL** tworzą dane między właściwością kontrolkę OLE w oknie dialogowym, widoku lub formantu widoku obiektu i **BOOL** element członkowski danych okna dialogowego, w widoku formularza lub Obiekt widoku formantu.  
   
 ```   
@@ -89,7 +84,7 @@ void AFXAPI DDX_OCBool(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek:** afxdisp.h  
   
-##  <a name="ddx_ocboolro"></a>Ddx_ocboolro —  
+##  <a name="ddx_ocboolro"></a>  Ddx_ocboolro —  
  `DDX_OCBoolRO` Funkcji zarządzania transferem **BOOL** danych między formantów OLE w oknie dialogowym właściwości tylko do odczytu formularza widoku lub formantu widoku obiektu i **BOOL** element członkowski danych okna dialogowego Widok formularza, lub obiekt formantu widoku.  
   
 ```   
@@ -119,7 +114,7 @@ void AFXAPI DDX_OCBoolRO(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="ddx_occolor"></a>Ddx_occolor —  
+##  <a name="ddx_occolor"></a>  Ddx_occolor —  
  `DDX_OCColor` Funkcji zarządzania transferem **OLE_COLOR** tworzą dane między właściwością kontrolkę OLE w oknie dialogowym, widoku lub formantu widoku obiektu i **OLE_COLOR** element członkowski danych okna dialogowego Widok formularza, lub obiekt formantu widoku.  
   
 ```   
@@ -149,7 +144,7 @@ void AFXAPI DDX_OCColor(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="ddx_occolorro"></a>Ddx_occolorro —  
+##  <a name="ddx_occolorro"></a>  Ddx_occolorro —  
  `DDX_OCColorRO` Funkcji zarządzania transferem **OLE_COLOR** danych między formantów OLE w oknie dialogowym właściwości tylko do odczytu formularza widoku lub formantu widoku obiektu i **OLE_COLOR** elementu członkowskiego danych okno dialogowe, widoku formularza lub kontrolki widok obiektu.  
   
 ```   
@@ -179,7 +174,7 @@ void AFXAPI DDX_OCColorRO(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="ddx_ocfloat"></a>Ddx_ocfloat —  
+##  <a name="ddx_ocfloat"></a>  Ddx_ocfloat —  
  `DDX_OCFloat` Funkcji zarządzania transferem **float** (lub **podwójne**) tworzą dane między właściwością kontrolkę OLE w oknie dialogowym, widoku lub formantu widoku obiektu i **float** (lub **podwójne**) elementu członkowskiego danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```   
@@ -215,7 +210,7 @@ void AFXAPI DDX_OCFloat(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="ddx_ocfloatro"></a>Ddx_ocfloatro —  
+##  <a name="ddx_ocfloatro"></a>  Ddx_ocfloatro —  
  `DDX_OCFloatRO` Funkcji zarządzania transferem **float** (lub **podwójne**) tworzą dane między właściwością tylko do odczytu formantów OLE w oknie dialogowym, widoku lub formantu widoku obiektu i  **float** (lub **podwójne**) elementu członkowskiego danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```   
@@ -251,7 +246,7 @@ void AFXAPI DDX_OCFloatRO(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="ddx_ocint"></a>Ddx_ocint —  
+##  <a name="ddx_ocint"></a>  Ddx_ocint —  
  `DDX_OCInt` Funkcji zarządzania transferem `int` (lub **długi**) tworzą dane między właściwością kontrolkę OLE w oknie dialogowym, widoku lub formantu widoku obiektu i `int` (lub **long**) elementu członkowskiego danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```   
@@ -287,7 +282,7 @@ void AFXAPI DDX_OCInt(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="ddx_ocintro"></a>Ddx_ocintro —  
+##  <a name="ddx_ocintro"></a>  Ddx_ocintro —  
  `DDX_OCIntRO` Funkcji zarządzania transferem `int` (lub **długi**) tworzą dane między właściwością tylko do odczytu formantów OLE w oknie dialogowym, widoku lub formantu widoku obiektu i `int` (lub **długa** ) elementu członkowskiego danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```   
@@ -323,7 +318,7 @@ void AFXAPI DDX_OCIntRO(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="ddx_ocshort"></a>Ddx_ocshort —  
+##  <a name="ddx_ocshort"></a>  Ddx_ocshort —  
  `DDX_OCShort` Funkcja zarządza transferem danych krótki między właściwości formantu OLE w widoku formularza, okno dialogowe lub obiekt formantu widoku i element członkowski danych krótkich okna dialogowego widok formularza lub kontrolować obiekt widoku.  
   
 ```   
@@ -353,7 +348,7 @@ void AFXAPI DDX_OCShort(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="ddx_ocshortro"></a>Ddx_ocshortro —  
+##  <a name="ddx_ocshortro"></a>  Ddx_ocshortro —  
  `DDX_OCShortRO` Funkcja zarządza transferem danych krótki między właściwością tylko do odczytu formantów OLE w oknie dialogowym widoku formularza lub obiekt formantu widoku i element członkowski danych krótkich okna dialogowego widok formularza lub kontrolować obiekt widoku.  
   
 ```   
@@ -383,7 +378,7 @@ void AFXAPI DDX_OCShortRO(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="ddx_octext"></a>Ddx_octext —  
+##  <a name="ddx_octext"></a>  Ddx_octext —  
  **Ddx_octext —** funkcji zarządzania transferem **cstring —** tworzą dane między właściwością kontrolkę OLE w oknie dialogowym, widoku lub formantu widoku obiektu i **cstring —** danych element członkowski — okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```   
@@ -413,7 +408,7 @@ void AFXAPI DDX_OCText(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="ddx_octextro"></a>Ddx_octextro —  
+##  <a name="ddx_octextro"></a>  Ddx_octextro —  
  `DDX_OCTextRO` Funkcji zarządzania transferem `CString` danych między formantów OLE w oknie dialogowym właściwości tylko do odczytu formularza widoku lub formantu widoku obiektu i `CString` element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  

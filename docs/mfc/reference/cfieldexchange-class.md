@@ -2,11 +2,8 @@
 title: Klasa CFieldExchange | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFieldExchange
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20a89e48475a0226d76ac719459b1b99cc4e355
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfieldexchange-class"></a>Klasa CFieldExchange
 Obsługuje wymiana pól rekordów (RFX) i procedury wymiany (zbiorczego RFX) pól rekordów zbiorczego używane przez klasy baz danych.  
@@ -50,14 +45,14 @@ class CFieldExchange
 |[CFieldExchange::SetFieldType](#setfieldtype)|Określa typ elementu członkowskiego danych rekordów — kolumna lub parametr — reprezentowany przez wszystkie wywołania następujące funkcje RFX aż do następnego wywołania `SetFieldType`.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CFieldExchange`nie ma klasy podstawowej.  
+ `CFieldExchange` nie ma klasy podstawowej.  
   
  Klasa używana podczas pisania procedury wymiany danych w niestandardowe typy danych lub gdy w przypadku implementowania zbiorcze pobieranie z wiersza; w przeciwnym razie nie będzie bezpośrednio używany tej klasy. RFX i RFX zbiorczego wymianie danych między elementy członkowskie danych pola obiektu zestawu rekordów i odpowiednie pola z bieżącego rekordu w źródle danych.  
   
 > [!NOTE]
 >  Jeśli pracujesz z klas obiektów DAO (Data Access), a nie klasy otwarte połączenie bazy danych (ODBC), należy użyć klasy [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [programowania omówienie: baza danych](../../data/data-access-programming-mfc-atl.md).  
   
- A `CFieldExchange` obiekt zapewnia informacje kontekstowe potrzebne wymiana pól rekordów lub zbiorcza wymiana pól rekordów podjęcie Umieść. `CFieldExchange`obiekty obsługują szereg działań, włącznie z parametrów wiązania i elementy członkowskie danych pola i ustawienie flagi różnych pól bieżącego rekordu. RFX i RFX zbiorcze operacje są wykonywane na klasy rekordów elementy członkowskie danych typów zdefiniowanych przez `enum` **typu pola** w `CFieldExchange`. Możliwe **typu pola** wartości to:  
+ A `CFieldExchange` obiekt zapewnia informacje kontekstowe potrzebne wymiana pól rekordów lub zbiorcza wymiana pól rekordów podjęcie Umieść. `CFieldExchange` obiekty obsługują szereg działań, włącznie z parametrów wiązania i elementy członkowskie danych pola i ustawienie flagi różnych pól bieżącego rekordu. RFX i RFX zbiorcze operacje są wykonywane na klasy rekordów elementy członkowskie danych typów zdefiniowanych przez `enum` **typu pola** w `CFieldExchange`. Możliwe **typu pola** wartości to:  
   
 - **CFieldExchange::outputColumn** dla elementy członkowskie danych pola.  
   
@@ -75,7 +70,7 @@ class CFieldExchange
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
   
-##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
+##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
  Jeśli piszesz funkcji RFX wywołanie `IsFieldType` na początku funkcji do określenia, czy można wykonać bieżącej operacji na określonego typu elementu członkowskiego danych pola lub parametr ( **CFieldExchange::outputColumn**, **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, lub **CFieldExchange::inoutParam** ).  
   
 ```  
@@ -92,7 +87,7 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="remarks"></a>Uwagi  
  Postępuj zgodnie z modelem istniejące funkcje RFX.  
   
-##  <a name="setfieldtype"></a>CFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>  CFieldExchange::SetFieldType  
  Należy wywołanie `SetFieldType` w klasie rekordów [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) lub [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) zastąpienia.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Wyświetlanie klas (system Windows) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wyświetlanie klas (system Windows) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>Klasy widoków (Windows)
-`CView`i jej klas pochodnych są okno podrzędne, które reprezentują obszar kliencki okno ramowe. Widoki Pokaż dane i akceptuje dane wejściowe dla dokumentu.  
+`CView` i jej klas pochodnych są okno podrzędne, które reprezentują obszar kliencki okno ramowe. Widoki Pokaż dane i akceptuje dane wejściowe dla dokumentu.  
   
  Klasa widoku jest skojarzony z klasy dokumentów i klasy okna ramki za pomocą obiektu szablonu dokumentu.  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
  [CFormView](../mfc/reference/cformview-class.md)  
  Widok przewijania, którego układ jest zdefiniowany w szablonie — okno dialogowe. Klasa wyprowadzona z `CFormView` do zaimplementowania interfejsu użytkownika na podstawie szablonu — okno dialogowe.  
   
- [Cdaorecordview —](../mfc/reference/cdaorecordview-class.md)  
+ [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
  Formularz zawiera widok podłączone bezpośrednio do obiektu zestawu rekordów obiekt DAO (Data Access). Wszystkie widoki formularzy, takich jak `CDaoRecordView` jest oparty na szablonie — okno dialogowe.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  Widok, który zawiera kontrolki drzewa systemu Windows (zobacz [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Formant drzewa Wyświetla listę hierarchiczną ikony i etykiety ułożone w sposób podobny do okienka po lewej stronie Eksploratora plików.  
   
 ## <a name="related-classes"></a>Klasy pokrewne  
- `CSplitterWnd`pozwala mieć wiele widoków w ramach jednej ramki okna. `CPrintDialog`i `CPrintInfo` obsługi drukowania i podglądu wydruku widoków. `CRichEditDoc`i `CRichEditCntrItem` są używane z `CRichEditView` wdrożenia funkcji kontenera OLE.  
+ `CSplitterWnd` pozwala mieć wiele widoków w ramach jednej ramki okna. `CPrintDialog` i `CPrintInfo` obsługi drukowania i podglądu wydruku widoków. `CRichEditDoc` i `CRichEditCntrItem` są używane z `CRichEditView` wdrożenia funkcji kontenera OLE.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  Okno użytkownika można podzielić na wiele okienek. Te okienka może być o zmiennym rozmiarze przez użytkownika lub o stałym rozmiarze.  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
  [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
  Zawiera standardowe okno dialogowe drukowania pliku.  
   
- [Cprintinfo —](../mfc/reference/cprintinfo-structure.md)  
+ [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
  Struktura zawierający informacje o zadaniu drukowania lub podglądu drukowania. Używane przez `CView`na drukowanie architektury.  
   
  [Cricheditdoc —](../mfc/reference/cricheditdoc-class.md)  

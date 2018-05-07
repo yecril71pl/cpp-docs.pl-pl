@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCFilterChunkValueImpl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFilterChunkValueImpl
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2f98125e8e84ec0271bb3dff2eab01e0cfef368
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d274cbafbd50df2f577b484e433c964f1dec096
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Klasa CMFCFilterChunkValueImpl
 Jest to klasa, która upraszcza zarówno fragmentu, jak i właściwość logiki pary wartości.  
@@ -135,7 +130,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
   
-##  <a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
+##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear  
  Czyści ChunkValue.  
   
 ```  
@@ -144,7 +139,7 @@ void Clear();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
+##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
  Tworzy obiekt.  
   
 ```  
@@ -153,7 +148,7 @@ CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
  Destructs obiektu.  
   
 ```  
@@ -162,7 +157,7 @@ virtual ~CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
+##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk  
  Kopiuje tego fragmentu struktury opisujące właściwości fragmentu.  
   
 ```  
@@ -178,7 +173,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom  
  Inicjuje wartość fragmentu inne wartości tego parametru.  
   
 ```  
@@ -191,7 +186,7 @@ void CopyFrom (IFilterChunkValue* pValue);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
+##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID  
  Pobiera fragmentu identyfikatora GUID.  
   
 ```  
@@ -203,7 +198,7 @@ REFGUID GetChunkGUID() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
+##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID  
  Pobiera fragmentu identyfikatora PID (identyfikator właściwości).  
   
 ```  
@@ -215,7 +210,7 @@ DWORD GetChunkPID() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
+##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType  
  Pobiera typ fragmentu.  
   
 ```  
@@ -227,7 +222,7 @@ CHUNKSTATE GetChunkType() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
+##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString  
  Pobiera wartość ciągu.  
   
 ```  
@@ -239,7 +234,7 @@ CString &GetString();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
+##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue  
  Pobiera wartość jako przydzielony propvariant.  
   
 ```  
@@ -255,7 +250,7 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
+##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc  
  Zwraca wartość-przydzielone (wewnętrzne wartości).  
   
 ```  
@@ -267,7 +262,7 @@ PROPVARIANT GetValueNoAlloc ();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
+##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid  
  Sprawdza, czy wartość tej właściwości jest nieprawidłowa lub nie.  
   
 ```  
@@ -275,11 +270,11 @@ BOOL IsValid() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli bieżąca wartość fragmentu jest nieprawidłowy; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli bieżąca wartość fragmentu jest nieprawidłowy; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
+##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue  
  Przeciążone. Ustawia właściwość według klucza na wartość logiczną.  
   
 ```  
@@ -330,7 +325,7 @@ HRESULT SetBoolValue(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
+##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk  
  Funkcja pomocnika, która ustawia typowe właściwości fragmentu.  
   
 ```  
@@ -367,7 +362,7 @@ HRESULT SetChunk(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
+##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue  
  Ustaw właściwość przez klucza DWORD.  
   
 ```  
@@ -408,7 +403,7 @@ HRESULT SetDwordValue(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
+##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
  Ustaw właściwość przez klucz do filetime.  
   
 ```  
@@ -449,7 +444,7 @@ HRESULT SetFileTimeValue(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
+##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value  
  Ustaw właściwość przez klucz do wartości typu int64.  
   
 ```  
@@ -490,7 +485,7 @@ HRESULT SetInt64Value(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
+##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue  
  Ustaw właściwość przez klucz do int.  
   
 ```  
@@ -531,7 +526,7 @@ HRESULT SetIntValue(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
+##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue  
  Ustaw właściwość przez klucz do postaci DŁUGIEJ.  
   
 ```  
@@ -572,7 +567,7 @@ HRESULT SetLongValue(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
+##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue  
  Ustawia właściwość przez klucz do SystemTime.  
   
 ```  
@@ -613,7 +608,7 @@ HRESULT SetSystemTimeValue(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
+##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue  
  Ustawia właściwość przez klucz na ciąg Unicode.  
   
 ```  

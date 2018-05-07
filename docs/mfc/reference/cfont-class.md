@@ -1,12 +1,9 @@
 ---
-title: "Cfont — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cfont — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFont
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5431461c7c2cc33131f72f059edcfbd984eae5fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c26cf70ad52037b4ebe88b983e6d9a91273897cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfont-class"></a>Cfont — klasa
 Hermetyzuje czcionkę interfejsu (GDI) systemu Windows grafiki urządzenia i udostępnia funkcje Członkowskie do manipulowania czcionki.  
@@ -92,7 +87,7 @@ class CFont : public CGdiObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
   
-##  <a name="cfont"></a>CFont::CFont  
+##  <a name="cfont"></a>  CFont::CFont  
  Konstruuje `CFont` obiektu.  
   
 ```  
@@ -105,7 +100,7 @@ CFont();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]  
   
-##  <a name="createfont"></a>CFont::CreateFont  
+##  <a name="createfont"></a>  CFont::CreateFont  
  Inicjuje `CFont` obiektu o określonej charakterystyce.  
   
 ```  
@@ -194,7 +189,7 @@ BOOL CreateFont(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
-##  <a name="createfontindirect"></a>CFont::CreateFontIndirect  
+##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect  
  Inicjuje `CFont` obiektu o charakterystyce podany w [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)struktury.  
   
 ```  
@@ -218,7 +213,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]  
   
-##  <a name="createpointfont"></a>CFont::CreatePointFont  
+##  <a name="createpointfont"></a>  CFont::CreatePointFont  
  Ta funkcja zapewnia prosty sposób utworzyć czcionkę określony krój czcionki i rozmiar w punktach.  
   
 ```  
@@ -249,7 +244,7 @@ BOOL CreatePointFont(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#73](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]  
   
-##  <a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect  
+##  <a name="createpointfontindirect"></a>  CFont::CreatePointFontIndirect  
  Ta funkcja jest taka sama jak [CreateFontIndirect](#createfontindirect) z tą różnicą, że **lfHeight** członkiem `LOGFONT` jest interpretowana w dziesiąte części jednostki punktu, a nie urządzeń.  
   
 ```  
@@ -276,7 +271,7 @@ BOOL CreatePointFontIndirect(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#74](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CFont::FromHandle  
+##  <a name="fromhandle"></a>  CFont::FromHandle  
  Zwraca wskaźnik do `CFont` obiektu, gdy **HFONT** uchwyt do obiektu czcionek GDI systemu Windows.  
   
 ```  
@@ -296,7 +291,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#75](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]  
   
-##  <a name="getlogfont"></a>CFont::GetLogFont  
+##  <a name="getlogfont"></a>  CFont::GetLogFont  
  Wywołanie tej funkcji, aby pobrać kopię `LOGFONT` struktury `CFont`.  
   
 ```  
@@ -313,7 +308,7 @@ int GetLogFont(LOGFONT* pLogFont);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#76](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]  
   
-##  <a name="operator_hfont"></a>HFONT CFont::operator  
+##  <a name="operator_hfont"></a>  HFONT CFont::operator  
  Użyj tego operatora, można pobrać uchwytu Windows GDI czcionki dołączony do `CFont` obiektu.  
   
 ```  

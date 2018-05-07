@@ -1,12 +1,9 @@
 ---
 title: Klasa CCheckListBox | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCheckListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64e22176d0df2408db8a8c9435fde5b4c6775d21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cchecklistbox-class"></a>Klasa CCheckListBox
 Udostępnia funkcje pole listy kontrolnej systemu Windows.  
@@ -84,7 +79,7 @@ class CCheckListBox : public CListBox
 ## <a name="remarks"></a>Uwagi  
  "Pole listy kontrolnej" Wyświetla listę elementów, takich jak nazwy plików. Każdy element na liście ma obok niej, które użytkownik może zaznacz lub usuń zaznaczenie pola wyboru.  
   
- `CCheckListBox`jest tylko w przypadku kontrolek rysowanych przez właściciela, ponieważ lista zawiera więcej niż ciągów tekstowych. W najprostszym okno Lista kontrolna zawiera ciągi i pól wyboru, ale nie trzeba mieć tekstu. Na przykład można mieć listę małych map bitowych z polem wyboru obok każdego elementu.  
+ `CCheckListBox` jest tylko w przypadku kontrolek rysowanych przez właściciela, ponieważ lista zawiera więcej niż ciągów tekstowych. W najprostszym okno Lista kontrolna zawiera ciągi i pól wyboru, ale nie trzeba mieć tekstu. Na przykład można mieć listę małych map bitowych z polem wyboru obok każdego elementu.  
   
  Aby utworzyć własne pole listy kontrolnej, musi dziedziczyć klasy z `CCheckListBox`. Do własnych klasa wyprowadzona zapisywanie konstruktora klasy pochodnej, następnie wywołaj **Utwórz**.  
   
@@ -92,7 +87,7 @@ class CCheckListBox : public CListBox
   
  Każdy wpis mapy komunikatów ma następującą postać:  
   
- **ON_**powiadomień **(**`id`, `memberFxn` **)**  
+ **ON_** powiadomień **(**`id`, `memberFxn` **)**  
   
  gdzie `id` Określa identyfikator okno podrzędne formantu wysyłania powiadomienia i `memberFxn` jest nazwą funkcji członkowskiej nadrzędnego zostały zapisane do obsługi powiadomień.  
   
@@ -111,18 +106,18 @@ class CCheckListBox : public CListBox
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Clistbox —](../../mfc/reference/clistbox-class.md)  
+ [CListBox](../../mfc/reference/clistbox-class.md)  
   
  `CCheckListBox`  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
   
-##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
+##  <a name="cchecklistbox"></a>  CCheckListBox::CCheckListBox  
  Konstruuje `CCheckListBox` obiektu.  
   
 ```  
@@ -135,7 +130,7 @@ CCheckListBox();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="create"></a>CCheckListBox::Create  
+##  <a name="create"></a>  CCheckListBox::Create  
  Tworzy okno Lista kontrolna systemu Windows i dołącza go do `CCheckListBox` obiektu.  
   
 ```  
@@ -185,7 +180,7 @@ virtual BOOL Create(
   
 - **Ws_tabstop —** umożliwia klawisza TAB do tego formantu  
   
-##  <a name="drawitem"></a>CCheckListBox::DrawItem  
+##  <a name="drawitem"></a>  CCheckListBox::DrawItem  
  Wywoływane przez platformę, gdy visual aspekt zmiany pola rysowanych przez właściciela listy kontrolnej.  
   
 ```  
@@ -205,7 +200,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Jeśli elementy pola listy kontrolnej nie są tego samego wysokość, listę kontrolną polu Styl (określony w **Utwórz**) musi być **LBS_OWNERVARIABLE**, i konieczne jest przesłonięcie [MeasureItem](#measureitem) Funkcja.  
   
-##  <a name="enable"></a>CCheckListBox::Enable  
+##  <a name="enable"></a>  CCheckListBox::Enable  
  Wywołanie tej funkcji, aby włączyć lub wyłączyć element pole listy kontrolnej.  
   
 ```  
@@ -221,7 +216,7 @@ void Enable(
  `bEnabled`  
  Określa, czy element jest włączony.  
   
-##  <a name="getcheck"></a>CCheckListBox::GetCheck  
+##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
  Pobiera stan określonego pola wyboru.  
   
 ```  
@@ -241,7 +236,7 @@ int GetCheck(int nIndex);
 |`BST_UNCHECKED`|Nie zaznaczono pola wyboru.|  
 |`BST_INDETERMINATE`|Stan pola wyboru jest nieokreślony.|  
   
-##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
+##  <a name="getcheckstyle"></a>  CCheckListBox::GetCheckStyle  
  Wywołanie tej funkcji można pobrać styl pole listy kontrolnej.  
   
 ```  
@@ -254,7 +249,7 @@ UINT GetCheckStyle();
 ### <a name="remarks"></a>Uwagi  
  Informacje dotyczące możliwych stylów znajdują się w temacie [SetCheckStyle](#setcheckstyle).  
   
-##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
+##  <a name="isenabled"></a>  CCheckListBox::IsEnabled  
  Wywołanie tej funkcji, aby określić, czy element jest włączony.  
   
 ```  
@@ -268,7 +263,7 @@ BOOL IsEnabled(int nIndex);
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli element jest włączony; w przeciwnym razie 0.  
   
-##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
+##  <a name="measureitem"></a>  CCheckListBox::MeasureItem  
  Wywoływane przez platformę, gdy pole listy kontrolnej, styl niestandardowy jest tworzony.  
   
 ```  
@@ -282,7 +277,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta funkcja członkowska nie działa. Zastąpienie tej funkcji Członkowskich i wypełnij `MEASUREITEMSTRUCT` struktury poinformować system Windows wymiarów elementów pole listy kontrolnej. Jeśli pole listy kontrolnej jest tworzony z [lbs_ownerdrawvariable —](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylu, struktura wywołuje tę funkcję elementu członkowskiego dla każdego elementu w polu listy. W przeciwnym razie ten element członkowski zostanie wywołana tylko raz.  
   
-##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
+##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition  
  Struktura wywołuje tę funkcję, aby uzyskać położenie i rozmiar pola wyboru w elemencie.  
   
 ```  
@@ -304,7 +299,7 @@ virtual CRect OnGetCheckPosition(
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja zwraca tylko domyślne położenie i rozmiar pola wyboru ( `rectCheckBox`). Domyślnie pole wyboru jest wyrównywany w lewym górnym rogu elementu i rozmiar standardowe pole wyboru. Może to być przypadkach, gdy mają pola wyboru po prawej stronie lub mają większy lub mniejszy pole wyboru. W takich sytuacjach należy zastąpić `OnGetCheckPosition` można zmienić pola wyboru położenie i rozmiar w elemencie.  
   
-##  <a name="setcheck"></a>CCheckListBox::SetCheck  
+##  <a name="setcheck"></a>  CCheckListBox::SetCheck  
  Ustawia stan określonego pola wyboru.  
   
 ```  
@@ -329,7 +324,7 @@ void SetCheck(
 |**BST_UNCHECKED**|Wyczyść pole wyboru określony.|  
 |**BST_INDETERMINATE**|Ustaw stan określonego pola wyboru nieokreślony.<br /><br /> Ten stan jest dostępna, gdy stylem pole wyboru jest tylko `BS_AUTO3STATE` lub `BS_3STATE`. Aby uzyskać więcej informacji, zobacz [style przycisku](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
   
-##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
+##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle  
  Wywołanie tej funkcji, aby ustawić styl pola wyboru w polu listy kontrolnej.  
   
 ```  

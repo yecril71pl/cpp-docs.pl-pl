@@ -1,12 +1,9 @@
 ---
-title: "Kompilatora (poziom 1) ostrzeżenie C4190 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kompilatora (poziom 1) ostrzeżenie C4190 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4190
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4190
 ms.assetid: a4d0ad93-a19a-4063-addd-36d605831567
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127eb4327826412d605f2a4a008e411880998073
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e62f6bcfaa499338d5fde1d09cb91574241ce8a0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4190"></a>Kompilator C4190 ostrzegawcze (poziom 1)
 "identifier1" ma określone powiązanie C, ale zwraca UDT identifier2, co jest niezgodne z C  

@@ -1,30 +1,25 @@
 ---
-title: "Redystrybuowanie formantów ActiveX programu Visual C++ | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Redystrybuowanie formantów ActiveX programu Visual C++ | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520d365a259c36baab8edeb9049aab9ac89925a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redystrybuowanie kontrolek ActiveX programu Visual C++
 Visual C++ 6.0 dostarcza formantów ActiveX, używanych w aplikacjach, które następnie ponownie rozesłać. Formanty znajdują się już w programie Visual C++. Na umów licencjonowania Visual C++ 6.0 można ponownie rozesłać tych kontrolek z aplikacji utworzonych w programie Visual C++.  
@@ -46,7 +41,7 @@ Visual C++ 6.0 dostarcza formantów ActiveX, używanych w aplikacjach, które na
   
 -   Stdole2.tlb  
   
- Te biblioteki DLL nie są dostępne na komputerze docelowym, należy je zaktualizować przy użyciu mechanizmu wymaganych aktualizacji odpowiedni system operacyjny. Możesz pobrać najnowszymi dodatkami service Pack dla systemu operacyjnego z [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com).  
+ Te biblioteki DLL nie są dostępne na komputerze docelowym, należy je zaktualizować przy użyciu mechanizmu wymaganych aktualizacji odpowiedni system operacyjny. Możesz pobrać najnowszymi dodatkami service Pack dla systemu operacyjnego z [ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com).  
   
  Jeśli aplikacja korzysta z jednego z kontrolki ActiveX, które nawiązuje połączenie z bazą danych, musisz mieć Microsoft Data Access Components (MDAC) zainstalowany na komputerze docelowym. Aby uzyskać więcej informacji, zobacz [redystrybuowanie plików obsługi baz danych](../ide/redistributing-database-support-files.md).  
   

@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCRibbonCheckBox | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCheckBox
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc46d934c99e24b63ef314ef1f63402893c6bb18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncheckbox-class"></a>Klasa CMFCRibbonCheckBox
 `CMFCRibbonCheckBox` Klasa implementuje pole wyboru, które można dodać do menu panelu, pasek narzędzi Szybki dostęp lub okna podręcznego wstążki.  
@@ -97,7 +92,7 @@ gdzie `nID` jest identyfikator polecenia pole wyboru i `lpszText` jest etykieta 
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxribboncheckbox.h  
   
-##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
+##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
  Konstruktor obiektu pole wyboru wstążki  
   
 ```  
@@ -107,10 +102,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nID`  
+ [in] `nID`  
  Określa identyfikator polecenia.  
   
- [in]`lpszText`  
+ [in] `lpszText`  
  Określa tekst etykiety.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -121,7 +116,7 @@ CMFCRibbonCheckBox(
   
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
-##  <a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize  
  W przypadku przesłonięcia pobiera compact rozmiar pola wyboru.  
   
 ```  
@@ -129,7 +124,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do `CDC` skojarzone z wyboru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -138,7 +133,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>Uwagi  
  Jeśli nie została zastąpiona, zwraca pośredniego rozmiar pola wyboru.  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize  
  Pobiera pośredniego rozmiar pola wyboru.  
   
 ```  
@@ -146,7 +141,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do `CDC` skojarzone z tego pola wyboru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -155,7 +150,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>Uwagi  
  Jeśli nie została zastąpiona, oblicza rozmiar pośredniego jako domyślny rozmiar pola wyboru ( `AFX_CHECK_BOX_DEFAULT_SIZE`) oraz rozmiar tekstu, a także marginesów.  
   
-##  <a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize  
  Pobiera zwykły rozmiar pola wyboru.  
   
 ```  
@@ -163,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do `CDC` obiekt skojarzony z tego pola wyboru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -172,7 +167,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>Uwagi  
  Jeśli nie została zastąpiona, zwraca pośredniego rozmiar pola wyboru.  
   
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage  
  Wskazuje, czy obraz etykietki narzędzia, skojarzone z wyboru.  
   
 ```  
@@ -184,7 +179,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw  
  Wywoływane przez platformę, by narysować pole wyboru przy użyciu kontekstu określonego urządzenia.  
   
 ```  
@@ -192,12 +187,12 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do `CDC` do rysowania pole wyboru.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
  Wywoływane przez platformę, by narysować obraz menu pola wyboru.  
   
 ```  
@@ -205,10 +200,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`CDC*`  
+ [in] `CDC*`  
  Wskaźnik do `CDC` skojarzone z wyboru.  
   
- [in]`CRect`  
+ [in] `CRect`  
  A `CRect` obiektu Określanie prostokąt do rysowania obrazu menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -217,7 +212,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ### <a name="remarks"></a>Uwagi  
  Jeśli nie została zastąpiona, zwraca `FALSE`.  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
  Wywoływane przez platformę, by narysować pole wyboru w polu listy poleceń.  
   
 ```  
@@ -231,27 +226,27 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia do rysowania pole wyboru.  
   
- [in]`strText`  
+ [in] `strText`  
  Wyświetlany tekst.  
   
- [in]`nTextOffset`  
+ [in] `nTextOffset`  
  Odległość w pikselach, po lewej stronie pola listy do wyświetlania tekstu.  
   
- [in]`rect`  
+ [in] `rect`  
  Prostokątny obszar wyświetlania pola wyboru.  
   
- [in]`bIsSelected`  
- `TRUE`Jeśli pole wyboru jest zaznaczone, lub `FALSE` , jeśli nie.  
+ [in] `bIsSelected`  
+ `TRUE` Jeśli pole wyboru jest zaznaczone, lub `FALSE` , jeśli nie.  
   
- [in]`bHighlighted`  
- `TRUE`Jeśli pole wyboru jest podświetlona, lub `FALSE` , jeśli nie.  
+ [in] `bHighlighted`  
+ `TRUE` Jeśli pole wyboru jest podświetlona, lub `FALSE` , jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonCheckBox::SetACCData  
  Ustawia dane ułatwień dostępu dla pola wyboru.  
   
 ```  

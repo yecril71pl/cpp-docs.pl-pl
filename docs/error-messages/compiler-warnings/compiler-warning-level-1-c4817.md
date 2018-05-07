@@ -1,13 +1,10 @@
 ---
-title: "Kompilatora (poziom 1) ostrzeżenie C4817 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kompilatora (poziom 1) ostrzeżenie C4817 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C4817
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4817
 ms.assetid: a68f5486-6940-4934-9f93-bfd4d71f92a9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f11e0c555bdf3a80dcc381ee642d6adb0ecc5c21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa1dfa3cf0e63e319198cd9394f194864f87eacf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4817"></a>Kompilator C4817 ostrzegawcze (poziom 1)
 "członek": niedozwolone użycie "." można uzyskać dostępu do tego elementu członkowskiego; Kompilator zastąpione "->"  

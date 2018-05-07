@@ -1,13 +1,10 @@
 ---
-title: "Deklarowanie zmiennej oparte na nowej klasie formantów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Deklarowanie zmiennej oparte na nowej klasie formantów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.control.variable
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa98f815d9f9322c11d4256c13c0c7a42b4ab66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 677006d441c940f478b3d23744d1057667307e1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Deklarowanie zmiennej opartej na nowej klasie formantów
 Po utworzeniu klasę formantu MFC można zadeklarować zmiennej na ich podstawie. Zapewnienie kontekst nową zmienną, musi otworzyć edytora okien dialogowych i edytować okno dialogowe, w której chcesz użyć do ponownego użycia formantu. Ponadto okno dialogowe musi mieć już skojarzone z nią klasy. Aby uzyskać informacje na temat używania edytora okien dialogowych, zobacz [Edytor okien dialogowych](../../windows/dialog-editor.md).  

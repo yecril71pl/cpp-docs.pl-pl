@@ -1,13 +1,10 @@
 ---
-title: "Odbieranie powiadomienia od formantów wspólnych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Odbieranie powiadomienia od formantów wspólnych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], notifications
 - WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58131874ed039378a312acaaa238388f335f8e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30e89c8d25d78477ed98bae0fd06a704e32d3906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="receiving-notification-from-common-controls"></a>Odbieranie powiadomienia od formantów wspólnych
 Formanty standardowe są okno podrzędne, które wysyłać powiadomienia do nadrzędnego okna w przypadku wystąpienia zdarzenia, takie jak dane wejściowe użytkownika w formancie.  
@@ -48,7 +43,7 @@ Formanty standardowe są okno podrzędne, które wysyłać powiadomienia do nadr
  Brak prosty sposób, w tym celu przez wywołanie metody `CWnd::GetCurrentMessage`. Ta metoda pobiera jednak tylko bieżącej pozycji kursora w momencie wiadomość została wysłana. Ponieważ kursor został przeniesiony, ponieważ komunikat został wysłany, należy wywołać **CWnd::GetCursorPos** można uzyskać w bieżącej pozycji kursora.  
   
 > [!NOTE]
->  `CWnd::GetCurrentMessage`należy wywoływać tylko w ramach obsługi wiadomości.  
+>  `CWnd::GetCurrentMessage` należy wywoływać tylko w ramach obsługi wiadomości.  
   
  Dodaj następujący kod do treści funkcji obsługi komunikatów powiadomień (w tym przykładzie **nm_rclick —**):  
   

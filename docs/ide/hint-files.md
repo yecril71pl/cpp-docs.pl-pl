@@ -1,13 +1,10 @@
 ---
-title: "Pliki wskazówki | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Pliki wskazówki | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hint-files"></a>Pliki wskazówki
 A *plik wskazówki* pomaga w Visual Studio identyfikatory Visual C++, takie jak nazwy funkcjami i makrami zinterpretować zintegrowane środowisko programistyczne (IDE). Po otwarciu projektu Visual C++, IDE w *analizy systemu* analizę kodu w każdym pliku źródłowego w projekcie i zbiera informacje na temat każdy identyfikator. Następnie IDE używa tych informacji do obsługi funkcji, takich jak **widoku klasy** przeglądarki i **pasek nawigacyjny**.  
@@ -107,13 +102,13 @@ STDMETHOD(myMethod)(int parameter1);
   
 |Składnia|Znaczenie|  
 |------------|-------------|  
-|`#define`*nazwa wskazówka* *ciąg zastępczy*<br /><br /> `#define`*nazwa wskazówka* `(` *parametru*,... `)` *ciąg zastępczy*|Dyrektywy preprocesora, który definiuje nową wskazówkę dotyczącą lub ponownie definiuje wskazówką istniejących. Po dyrektywie preprocesora zamienia każde wystąpienie *nazwa wskazówka* w kodzie źródłowym z *ciąg zastępczy*.<br /><br /> Drugi formularz składni definiuje wskazówkę podobnych funkcji. Sytuacji wskazówkę podobnych funkcji w kodzie źródłowym preprocesora najpierw zamienia każde wystąpienie *parametru* w *ciąg zastępczy* z argumentem odpowiedni kod źródłowy i zamienia *nazwa wskazówka* z *ciąg zastępczy*.|  
+|`#define` *Nazwa wskazówka* *ciąg zastępczy*<br /><br /> `#define` *Nazwa wskazówka* `(` *parametru*,... `)` *ciąg zastępczy*|Dyrektywy preprocesora, który definiuje nową wskazówkę dotyczącą lub ponownie definiuje wskazówką istniejących. Po dyrektywie preprocesora zamienia każde wystąpienie *nazwa wskazówka* w kodzie źródłowym z *ciąg zastępczy*.<br /><br /> Drugi formularz składni definiuje wskazówkę podobnych funkcji. Sytuacji wskazówkę podobnych funkcji w kodzie źródłowym preprocesora najpierw zamienia każde wystąpienie *parametru* w *ciąg zastępczy* z argumentem odpowiedni kod źródłowy i zamienia *nazwa wskazówka* z *ciąg zastępczy*.|  
 |`@<`|Określony plik wskazówki *ciąg zastępczy* wskazujące to początek zestawu elementów mapy.|  
 |`@=`|Określony plik wskazówki *ciąg zastępczy* który wskazuje element pośredni mapy. Mapa może mieć wielu elementów mapy.|  
 |`@>`|Określony plik wskazówki *ciąg zastępczy* oznacza koniec zbiór elementów mapy.|  
-|`#undef`*nazwa wskazówki*|Dyrektywy preprocesora usuwa istniejące wskazówki. Nazwa wskazówka odbywa się przy *nazwa wskazówka* identyfikator.|  
-|`//`*komentarza*|Jednowierszowego komentarza.|  
-|`/*`*komentarz*`*/`|Komentarz wielowierszowy.|  
+|`#undef` *Nazwa wskazówki*|Dyrektywy preprocesora usuwa istniejące wskazówki. Nazwa wskazówka odbywa się przy *nazwa wskazówka* identyfikator.|  
+|`//` *Komentarz*|Jednowierszowego komentarza.|  
+|`/*` *Komentarz* `*/`|Komentarz wielowierszowy.|  
   
 ## <a name="what-macros-require-a-hint"></a>Co makra wymagają wskazówkę?  
  Niektóre typy makr może zakłócać analizy systemu. W tej sekcji opisano typy makra, które mogą spowodować problem, a typ wskazówkę można utworzyć w celu rozwiązania tego problemu.  
@@ -244,7 +239,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
  Poniższa ilustracja przedstawia niektóre z katalogów fizycznych w projekcie Visual C++. Pliki wskazówki znajdują się w `vcpackages`, `Debug`, `A1`, i `A2` katalogów.  
   
 ### <a name="hint-file-directories"></a>Wskazówka katalogi plików  
- ![Typowe projektu &#45; i katalogi plików określonych wskazówki. ] (../ide/media/hintfile.png "HintFile")  
+ ![Typowe i projektu&#45;katalogi plików określonych wskazówki. ] (../ide/media/hintfile.png "HintFile")  
   
 ### <a name="directories-and-hint-file-contents"></a>Katalogi i zawartość pliku wskazówki  
  Poniższa lista zawiera katalogi w tego projektu, który zawiera pliki wskazówki i zawartość plików te wskazówki. Tylko niektóre z tych wskazówek wiele w `vcpackages` pliku wskazówka katalogu są wyświetlane.  

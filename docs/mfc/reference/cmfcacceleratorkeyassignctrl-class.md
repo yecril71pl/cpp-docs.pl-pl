@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCAcceleratorKeyAssignCtrl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKeyAssignCtrl
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CMFCAcceleratorKeyAssignCtrl [MFC], PreTranslateMessage
 - CMFCAcceleratorKeyAssignCtrl [MFC], ResetKey
 ms.assetid: 89fb8e62-596e-4e71-8c9a-32740347aaab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aacd22af0b2e0e14a3c1203a42e067b1f339c71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a2906071ce1e8c8f65f21554915feed0d134276
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>Klasa CMFCAcceleratorKeyAssignCtrl
 `CMFCAcceleratorKeyAssignCtrl` Rozszerza klasy [klasy CEdit](../../mfc/reference/cedit-class.md) do obsługi dodatkowych systemu przycisków ALT, sterowania i SHIFT.  
@@ -79,7 +74,7 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -90,14 +85,14 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxacceleratorkeyassignctrl.h  
   
-##  <a name="cmfcacceleratorkeyassignctrl"></a>CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl  
+##  <a name="cmfcacceleratorkeyassignctrl"></a>  CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl  
  Konstruuje [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) obiektu.  
   
 ```  
 CMFCAcceleratorKeyAssignCtrl();
 ```  
   
-##  <a name="getaccel"></a>CMFCAcceleratorKeyAssignCtrl::GetAccel  
+##  <a name="getaccel"></a>  CMFCAcceleratorKeyAssignCtrl::GetAccel  
  Pobiera `ACCEL` struktury dla wciśnięty klawisz skrótu [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) obiektu.  
   
 ```  
@@ -110,7 +105,7 @@ ACCEL const* GetAccel() const;
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja służy do pobierania `ACCEL` struktury klawisz skrótu, który użytkownik wprowadził do Twojej `CMFCAcceleratorKeyAssignCtrl` obiektu.  
   
-##  <a name="isfocused"></a>CMFCAcceleratorKeyAssignCtrl::IsFocused  
+##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -121,7 +116,7 @@ BOOL IsFocused() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="iskeydefined"></a>CMFCAcceleratorKeyAssignCtrl::IsKeyDefined  
+##  <a name="iskeydefined"></a>  CMFCAcceleratorKeyAssignCtrl::IsKeyDefined  
  Określa, czy klawisz skrótu został zdefiniowany w [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) obiektu.  
   
 ```  
@@ -134,7 +129,7 @@ BOOL IsKeyDefined() const;
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja służy do określenia, czy użytkownik wprowadził nieprawidłowy skrót klucza w Twojej `CMFCAcceleratorKeyAssignCtrl` obiektu. Jeśli istnieje klawisz skrótu, możesz użyć [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) metodę, aby uzyskać `ACCEL` struktury skojarzone z tym klawisz skrótu.  
   
-##  <a name="pretranslatemessage"></a>CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -142,13 +137,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pMsg`  
+ [in] `pMsg`  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="resetkey"></a>CMFCAcceleratorKeyAssignCtrl::ResetKey  
+##  <a name="resetkey"></a>  CMFCAcceleratorKeyAssignCtrl::ResetKey  
  Resetuje klawisz skrótu.  
   
 ```  

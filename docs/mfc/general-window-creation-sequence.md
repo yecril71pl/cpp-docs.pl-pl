@@ -1,13 +1,10 @@
 ---
-title: "Ogólna sekwencja tworzenia okna | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Ogólna sekwencja tworzenia okna | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bed4387a6b8e6edeb504e29d221e76a0b39d18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75a9c6ecf6516adceda845dadd4f0313ae605f0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-window-creation-sequence"></a>Ogólna sekwencja tworzenia okna
 Podczas tworzenia okna oknie użytkownika, takie jak element podrzędny platformę używa znacznie te same czynności, którą opisano w [tworzenia dokumentu/widoku](../mfc/document-view-creation.md).  
@@ -35,7 +30,7 @@ Podczas tworzenia okna oknie użytkownika, takie jak element podrzędny platform
   
  **Utwórz** funkcji członkowskiej sprawia, że okno systemu Windows i są przechowywane jego `HWND` w obiekcie C++ publicznego elementu członkowskiego danych [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). **Utwórz** przekazuje pełną elastyczność tworzenia parametrów. Przed wywołaniem **Utwórz**, można zarejestrować klasy okna za pomocą funkcji globalnej [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) było ustawić styl ikony, jak i klasy ramki.  
   
- Okna ramowe, można użyć [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) funkcji członkowskiej zamiast **Utwórz**. `LoadFrame`powoduje, że okno systemu Windows przy użyciu mniejszej liczby parametrów. Pobiera wiele wartości domyślnych z zasobów, w tym ramki podpis, ikona tabeli akceleratora i menu.  
+ Okna ramowe, można użyć [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) funkcji członkowskiej zamiast **Utwórz**. `LoadFrame` powoduje, że okno systemu Windows przy użyciu mniejszej liczby parametrów. Pobiera wiele wartości domyślnych z zasobów, w tym ramki podpis, ikona tabeli akceleratora i menu.  
   
 > [!NOTE]
 >  Ikona, w tabeli akceleratora i w zasoby menu musi mieć wspólny identyfikator zasobów, takich jak **IDR_MAINFRAME**, ich być załadowana przez LoadFrame.  

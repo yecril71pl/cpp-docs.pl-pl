@@ -1,12 +1,9 @@
 ---
 title: Kompilator ostrzegawcze (poziom 1 i 3) C4793 | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4793
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca10ae4303a77d65c7ad88ba08b20e06a31e4bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56b60a028f3fa1a847d4242c0768f8082d6a686e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Ostrzeżenie kompilatora (poziom 1 i 3) C4793
 "Funkcja": funkcja jest skompilowany, ponieważ kod natywny: "Przyczyna"  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |Przyczyna wiadomości|Uwagi|  
 |--------------------|-------------|  
 |Wyrównane typy danych nie są obsługiwane w kodzie zarządzanym|Środowisko CLR musi mieć możliwość przydzielić danych zgodnie z potrzebami, który może nie być możliwe, jeśli dane jest wyrównywana z deklaracji, takich jak [__m128](../../cpp/m128.md) lub [Dopasuj](../../cpp/align-cpp.md).|  
-|Funkcje, które używają "__ImageBase" nie są obsługiwane w kodzie zarządzanym|`__ImageBase`to symbol konsolidatora specjalne, który zazwyczaj jest używany tylko przez kod natywny niskiego poziomu można załadować biblioteki DLL.|  
+|Funkcje, które używają "__ImageBase" nie są obsługiwane w kodzie zarządzanym|`__ImageBase` to symbol konsolidatora specjalne, który zazwyczaj jest używany tylko przez kod natywny niskiego poziomu można załadować biblioteki DLL.|  
 |varargs nie są obsługiwane przez "/ clr" — opcja kompilatora|Funkcje natywne nie można wywołać zarządzanych funkcje, które mają [listy zmiennych argumentów](../../cpp/functions-with-variable-argument-lists-cpp.md) (VARARG) ponieważ funkcje mają wymagania układ różnych stosu. Jednak jeśli określisz `/clr:pure` — opcja kompilatora, zmiennych argumentów listy są obsługiwane, ponieważ zestaw może zawierać tylko funkcje zarządzania. Aby uzyskać więcej informacji, zobacz [czystej i weryfikowalny kod (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|  
 |64-bitowym CLR nie obsługuje danych zadeklarowana z modyfikatorem __ptr32|Wskaźnik musi być taki sam rozmiar jak wskaźnik natywny na bieżącej platformie. Aby uzyskać więcej informacji, zobacz [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  
 |32-bitowym CLR nie obsługuje danych zadeklarowana z modyfikatorem __ptr64|Wskaźnik musi być taki sam rozmiar jak wskaźnik natywny na bieżącej platformie. Aby uzyskać więcej informacji, zobacz [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  

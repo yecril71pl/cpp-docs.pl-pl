@@ -1,29 +1,24 @@
 ---
-title: "Wskazówki: Aktualizowanie aplikacji bazgrołów MFC (część 2) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Aktualizowanie aplikacji bazgrołów MFC (część 2) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Wskazówki: aktualizowanie aplikacji bazgrołów MFC (część 2)
 [Część 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) tego instruktażu pokazano, jak dodać Fluent wstążki pakietu Office do klasycznego Bazgroły aplikacji. Tej części przedstawiono sposób dodawania paneli Wstążki i kontrolek, które użytkownicy mogą używać zamiast menu i poleceń.  
@@ -31,7 +26,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="prerequisites"></a>Wymagania wstępne  
  [Przykłady Visual C++](../visual-cpp-samples.md)  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  Ta część przewodnika zawiera następujące sekcje:  
   
 - [Dodawanie nowych paneli do wstążki](#addnewpanel)  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 - [Inicjowanie pióra i preferencji zapisywania](#initpensave)  
   
-##  <a name="addnewpanel"></a>Dodawanie nowych paneli do wstążki  
+##  <a name="addnewpanel"></a> Dodawanie nowych paneli do wstążki  
  Te kroki pokazują, jak dodać **widoku** panel, która zawiera dwa pola wyboru kontrolujących widoczność paska narzędzi i paska stanu, a także **okna** panelu, który zawiera podział orientacji pionowej przycisk, który kontroluje tworzenie i układ interfejsu wielu dokumentów (MDI) systemu Windows.  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Aby dodać panel widoku i okno panel do pasek wstążki  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Sekcje](#top)]  
   
-##  <a name="addhelppanel"></a>Dodawanie panelu pomocy do wstążki  
+##  <a name="addhelppanel"></a> Dodawanie panelu pomocy do wstążki  
  Teraz można przypisać dwa elementy menu, które są zdefiniowane w aplikacji bazgrołów do przycisków wstążki, które są nazywane **tematy Pomocy** i **o Bazgroły**. Przyciski są dodawane do panelu nowe o nazwie **pomocy**.  
   
 #### <a name="to-add-a-help-panel"></a>Aby dodać panel pomocy  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Sekcje](#top)]  
   
-##  <a name="addpenpanel"></a>Dodawanie panelu pióra do wstążki  
+##  <a name="addpenpanel"></a> Dodawanie panelu pióra do wstążki  
  Teraz Dodaj panelu, aby wyświetlić przyciski, które sterują grubość i kolor pióra. Panel ten zawiera pole wyboru, które Przełącza pomiędzy grubych i alokowania pióra. Jego działanie przypomina z **grubości linii** elementu menu w aplikacji bazgrołów.  
   
  Oryginalnej aplikacji bazgrołów umożliwia użytkownikowi wybieranie szerokości pióra z okna dialogowego, który jest wyświetlany, gdy użytkownik kliknie **szerokości pióra** w menu. Ponieważ pasek wstążki ma wystarczającą ilość miejsca na nowe formanty, można zastąpić okna dialogowego za pomocą dwóch pól kombi na Wstążce. Grubość pióra alokowania dopasowuje jedno pole kombi i pole kombi dostosowuje szerokość grubość pióra.  
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[Sekcje](#top)]  
   
-##  <a name="addcolorbutton"></a>Dodawanie przycisk koloru do panelu pióra  
+##  <a name="addcolorbutton"></a> Dodawanie przycisk koloru do panelu pióra  
  Następnie dodaj [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) obiekt, który umożliwia użytkownikowi bazgrołów w kolorze.  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Aby dodać przycisk koloru do panelu pióra  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[Sekcje](#top)]  
   
-##  <a name="addcolormember"></a>Dodawanie członka kolorów do klasy dokumentów  
- Ponieważ oryginalne aplikacji bazgrołów nie ma kolor pióra, należy napisać implementacji dla nich. Aby przechowywać na kolor pióra dokumentu, Dodaj nowy element członkowski do klasy dokumentu`CscribbleDoc.`  
+##  <a name="addcolormember"></a> Dodawanie członka kolorów do klasy dokumentów  
+ Ponieważ oryginalne aplikacji bazgrołów nie ma kolor pióra, należy napisać implementacji dla nich. Aby przechowywać na kolor pióra dokumentu, Dodaj nowy element członkowski do klasy dokumentu `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>Aby dodać element członkowski kolorów do klasy dokumentów  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[Sekcje](#top)]  
   
-##  <a name="initpensave"></a>Inicjowanie pióra i preferencji zapisywania  
+##  <a name="initpensave"></a> Inicjowanie pióra i preferencji zapisywania  
  Następnie można zainicjować, kolor i szerokość pióra. Na koniec Zapisz i załadować koloru rysowania z pliku.  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Aby zainicjować kontrolki w pasku wstążki  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      Dodaj następujący kod do scribdoc.cpp, w `CScribbleDoc::InitDocument` metody, po `m_sizeDoc = CSize(200,200)` instrukcji.  
   
- ```*/ / Reset interfejs użytkownika wstążki do swojej wartości początkowej CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
+ ``` *Resetuj interfejs użytkownika wstążki do swojej wartości początkowej CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
 
  PColorBtn CMFCRibbonColorButton * = dynamic_downcast — (CMFCRibbonColorButton, pRibbon -> FindByID(ID_PEN_COLOR)); * / / Set ColorButton na kolor czarny  
     pColorBtn -> SetColor (RGB (0, 0, 0));

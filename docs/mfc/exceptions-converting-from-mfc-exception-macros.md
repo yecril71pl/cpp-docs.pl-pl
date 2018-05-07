@@ -1,13 +1,10 @@
 ---
-title: "Wyjątki: Konwertowanie z makr wyjątków MFC | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wyjątki: Konwertowanie z makr wyjątków MFC | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36adda235cf71d1a44218c98c109e72847ca9136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Wyjątki: konwertowanie z makr wyjątków MFC
 Jest to zaawansowane tematu.  
@@ -44,7 +39,7 @@ Jest to zaawansowane tematu.
   
 -   [Konwertowanie kodu z makr wyjątków do użycia wyjątków języka C++](#_core_doing_the_conversion)  
   
-##  <a name="_core_advantages_of_converting"></a>Zalety konwersji  
+##  <a name="_core_advantages_of_converting"></a> Zalety konwersji  
  Prawdopodobnie nie należy przekonwertować istniejący kod, ale należy zwrócić uwagę różnice między implementacje makra w wersji 3.0 MFC i implementacje we wcześniejszych wersjach. Te różnice i kolejne zmiany w zachowaniu kodu zostały omówione w [wyjątki: zmiany w makrach wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
   
  Główne zalety konwertowanie są następujące:  
@@ -67,7 +62,7 @@ Jest to zaawansowane tematu.
   
      W deklaracji wyjątku **catch** — słowo kluczowe używa następującej składni:  
   
-     **CATCH (** *exception_type* *exception_name***)**  
+     **CATCH (** *exception_type* *exception_name ***)**  
   
      Ta instrukcja deklaracji wyjątku wskazuje typ wyjątku catch zablokować uchwytów.  
   
@@ -81,7 +76,7 @@ Jest to zaawansowane tematu.
   
      Użyj makra `THROW_LAST` ponowne wygenerowanie bieżącego wyjątku. `throw` — Słowo kluczowe z nie argumentów ma ten sam efekt.  
   
-##  <a name="_core_doing_the_conversion"></a>Podczas konwersji  
+##  <a name="_core_doing_the_conversion"></a> Podczas konwersji  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Aby przekonwertować kod przy użyciu makra, aby użyć słów kluczowych języka C++, obsługa wyjątków  
   
@@ -93,13 +88,13 @@ Jest to zaawansowane tematu.
   
      **CATCH** (go zastąpić **catch**)  
   
-     `AND_CATCH`(Go zastąpić **catch**)  
+     `AND_CATCH` (Go zastąpić **catch**)  
   
-     `END_CATCH`(Usunąć jego)  
+     `END_CATCH` (Usunąć jego)  
   
      **THROW** (go zastąpić `throw`)  
   
-     `THROW_LAST`(Go zastąpić `throw`)  
+     `THROW_LAST` (Go zastąpić `throw`)  
   
 3.  Argumenty makra, dzięki czemu tworzą one deklaracje prawidłowy wyjątek.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Zapewnianie aktywacji niepowiązanej z oknami | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zapewnianie aktywacji niepowiązanej z oknami | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb33f1dd9f8be8cb06cdfcc2aeecb653c2762410
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-windowless-activation"></a>Zapewnianie aktywacji niepowiązanej z oknami
 Kod tworzenia okna (czyli wszystko, co się stanie w przypadku wywołania **właściwości CreateWindow**) jest kosztowne do wykonania. Formant, który obsługuje ekranowa okno ma zarządzać wiadomości dla okna. Formanty bez okien w związku z tym są szybsze niż formantów z systemem windows.  
@@ -47,7 +42,7 @@ Kod tworzenia okna (czyli wszystko, co się stanie w przypadku wywołania **wła
   
  Po włączeniu aktywacji niepowiązanej z oknami kontenera będzie delegowane komunikaty wejściowe do formantu `IOleInPlaceObjectWindowless` interfejsu. `COleControl`przez implementację tego interfejsu alokuje wiadomości formantu mapy komunikatów, po dostosowanie myszy koordynuje odpowiednio. Można przetwarzać komunikaty, takie jak komunikaty okna zwykłej, dodając odpowiednie wpisy mapy wiadomości. W programy obsługi dla tych wiadomości unikać `m_hWnd` zmiennej członkowskiej (lub dowolnej funkcji członkowskiej, która korzysta z niego) bez wcześniejszego sprawdzenia, że jego wartość nie jest **NULL**.  
   
- `COleControl`udostępnia funkcje Członkowskie, które wywołują przechwytywanie myszy, klawiatury, przewijanie i innych usług okna z kontenera zgodnie z potrzebami, w tym:  
+ `COleControl` udostępnia funkcje Członkowskie, które wywołują przechwytywanie myszy, klawiatury, przewijanie i innych usług okna z kontenera zgodnie z potrzebami, w tym:  
   
 -   [Przy uzyskaniu fokusu](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)  
   

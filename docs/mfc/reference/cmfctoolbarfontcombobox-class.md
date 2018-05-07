@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCToolBarFontComboBox | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontComboBox
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f499c5593460b10957c7d09e01c0f458529df0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea8f05c20c3a3276f51b4267b6763831dc23eacf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Klasa CMFCToolBarFontComboBox
 Przycisku paska narzędzi, który zawiera kontrolki pola kombi, który umożliwia użytkownikowi wybranie czcionki z listy czcionek systemu.  
@@ -88,7 +83,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
  Konstruuje [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) obiektu.  
   
 ```  
@@ -114,13 +109,13 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiID`  
+ [in] `uiID`  
  Identyfikator polecenia pola kombi.  
   
- [in]`iImage`  
+ [in] `iImage`  
  Liczony od zera indeks obrazu paska narzędzi. Obraz znajduje się w [klasy CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) obiekt, który [klasy CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) obsługuje klasy.  
   
- [in]`nFontType`  
+ [in] `nFontType`  
  Typów czcionek, które zawiera pola kombi. Ten parametr może mieć kombinację (wartość logiczna lub) z następujących wartości:  
   
  DEVICE_FONTTYPE  
@@ -129,19 +124,19 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [in]`nCharSet`  
+ [in] `nCharSet`  
  Jeśli ustawiono DEFAULT_CHARSET, pole kombi zawiera wszystkie unikatowej nazwy czcionki w wszystkich zestawów znaków. (Jeśli istnieją dwie czcionki o takiej samej nazwie, pole kombi zawiera jeden z nich). Jeśli ustawionym na wartość zestawu prawidłowych znaków pole kombi zawiera tylko czcionki w określonego zestawu znaków. Zobacz [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) listę możliwych znak ustawia.  
   
- [in]`dwStyle`  
+ [in] `dwStyle`  
  Style pola kombi. (zobacz [style pola kombi](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [in]`iWidth`  
+ [in] `iWidth`  
  Szerokość w pikselach kontrolki edycji.  
   
- [in]`nPitchAndFamily`  
+ [in] `nPitchAndFamily`  
  Jeśli ustawiono DEFAULT_PITCH, pole kombi zawiera czcionki, niezależnie od tego, wysokość. Jeśli ustawiono wartość FIXED_PITCH lub VARIABLE_PITCH, pole kombi zawiera tylko czcionki z danym typem wysokość. Filtrowanie oparte na rodziny czcionek nie jest obecnie obsługiwane.  
   
- [out]`pLstFontsExternal`  
+ [out] `pLstFontsExternal`  
  Wskaźnik do [klasy CObList](../../mfc/reference/coblist-class.md) obiekt zawierający informacje dostępne czcionki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -152,7 +147,7 @@ CMFCToolBarFontComboBox();
   
  [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc  
  Zwraca wskaźnik do `CMFCFontInfo` obiektu dla określonego indeksu w polu kombi.  
   
 ```  
@@ -160,13 +155,13 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iIndex`  
+ [in] `iIndex`  
  Określa liczony od zera indeks elementu pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do `CMFCFontInfo` obiektu. Jeśli `iIndex` nie określa indeks elementów prawidłową wartość zwracana jest `NULL`.  
   
-##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
+##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
  Określa wysokość w pikselach, znaków w polu kombi czcionki, jeśli pole kombi ma właściciela styl rysowania.  
   
 ```  
@@ -176,7 +171,7 @@ static int m_nFontHeight
 ### <a name="remarks"></a>Uwagi  
  Jeśli `m_nFontHeight` zmienna ma wartość 0, wysokość jest obliczana automatycznie zgodnie z domyślną czcionkę pola kombi. Wysokość obejmuje zarówno wzrastająca część znaki powyżej linii bazowej i spadku znaków poniżej linii bazowej.  
   
-##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
+##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont  
  Wybiera czcionkę w pole kombi czcionki, zgodnie z nazwę czcionki i znak zestawu, które zostały określone w parametrach.  
   
 ```  
@@ -187,13 +182,13 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszName`  
+ [in] `lpszName`  
  Określa nazwę czcionki lub prefiks.  
   
- [in]`nCharSet`  
+ [in] `nCharSet`  
  Określa zestaw znaków.  
   
- [in]`bExact`  
+ [in] `bExact`  
  Określa, czy `lpszName` zawiera nazwę czcionki lub prefiks czcionki.  
   
 ### <a name="return-value"></a>Wartość zwracana  

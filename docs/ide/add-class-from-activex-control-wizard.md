@@ -1,13 +1,10 @@
 ---
 title: Formant ActiveX, Kreator dodawania klasy z | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.class.axcontrol
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - Add Class from ActiveX Control Wizard [C++]
 ms.assetid: 668d801c-5fb6-4176-9191-5c38995a4713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Kreator dodawania klasy z kontrolki ActiveX
 Ten kreator służy do dodawania klasy MFC z formantu ActiveX dostępne. Kreator utworzy klasę dla każdego interfejsu dodawanych z wybranej kontrolki ActiveX.  
@@ -36,7 +31,7 @@ Ten kreator służy do dodawania klasy MFC z formantu ActiveX dostępne. Kreator
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**Rejestru**|Biblioteka typów jest zarejestrowana w systemie. Zarejestrowanych bibliotek typów są wymienione w **kontrolki ActiveX dostępne**.|  
+|**Registry**|Biblioteka typów jest zarejestrowana w systemie. Zarejestrowanych bibliotek typów są wymienione w **kontrolki ActiveX dostępne**.|  
 |**Plik**|Biblioteki typów nie zawsze jest zarejestrowany w systemie, ale jest zawarty w pliku. Należy podać lokalizację pliku w **lokalizacji**.|  
   
  **Dostępne formantów ActiveX**  
@@ -60,9 +55,9 @@ Ten kreator służy do dodawania klasy MFC z formantu ActiveX dostępne. Kreator
 |**<\<**|Usuwa wszystkie klasy w **wygenerowane klasy** listy. Niedostępne w przypadku **wygenerowane klasy** lista jest pusta.|  
   
  **Wygenerowane klasy**  
- Określa nazwę klasy do wygenerowania z interfejsów dodane przy użyciu  **>**  lub  **>>**  przycisku. Można kliknąć to pole, aby wybierz klasę, a następnie górę lub w dół klucze do przewijania na liście wyświetlanie nazwy klasy w `Class` pole i nazwę pliku w **pliku .h** pola, które generuje kreatora po kliknięciu  **Zakończ**. Jednocześnie można wybrać tylko jedną klasę, w tym polu.  
+ Określa nazwę klasy do wygenerowania z interfejsów dodane przy użyciu **>** lub **>>** przycisku. Można kliknąć to pole, aby wybierz klasę, a następnie górę lub w dół klucze do przewijania na liście wyświetlanie nazwy klasy w `Class` pole i nazwę pliku w **pliku .h** pola, które generuje kreatora po kliknięciu  **Zakończ**. Jednocześnie można wybrać tylko jedną klasę, w tym polu.  
   
- Klasy można usunąć, wybierając ją na liście i klikając  **<** . Nie musisz wybrać klasę w **wygenerowane klasy** pole, aby usunąć wszystkie klasy, a przez kliknięcie przycisku  **<<** , należy usunąć wszystkie klasy w **wygenerowane klasy** pole.  
+ Klasy można usunąć, wybierając ją na liście i klikając **<**. Nie musisz wybrać klasę w **wygenerowane klasy** pole, aby usunąć wszystkie klasy, a przez kliknięcie przycisku **<<**, należy usunąć wszystkie klasy w **wygenerowane klasy** pole.  
   
  `Class`  
  Określa nazwę klasy wybrany w **wygenerowane klasy** pola, które Kreator dodaje po kliknięciu **Zakończ**. Można edytować nazwy w `Class` pole.  

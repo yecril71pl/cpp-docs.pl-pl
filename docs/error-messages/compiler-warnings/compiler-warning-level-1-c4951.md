@@ -1,13 +1,10 @@
 ---
-title: "Kompilatora (poziom 1) ostrzeżenie C4951 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kompilatora (poziom 1) ostrzeżenie C4951 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C4951
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4951
 ms.assetid: 669d8bb7-5efa-4ba9-99db-4e65addbf054
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199df135d5d2c00255037e5a1b31db80e2683d4f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c3ebf012338bdf6b90cc943e754056335c6751a4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4951"></a>Kompilator C4951 ostrzegawcze (poziom 1)
 "Funkcja" został wyedytowany od profil, który został zebrany danych, dane profilu funkcji nie zostały użyte  

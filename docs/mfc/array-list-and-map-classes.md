@@ -1,13 +1,10 @@
 ---
 title: Array, listy i mapowania klas | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7de6f3c72b31ea9094af032bc81e9f2506606cce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41dfe0b36548d87b5e0501c557e70f3cf11eea5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-list-and-map-classes"></a>Klasy tablic, list i map
 Obsługa wartości zagregowanych danych, biblioteki klas zawiera grupę klasy kolekcji — stałych, list i map — które mogą zawierać wiele obiektów i wstępnie zdefiniowanych typów. Kolekcje są dynamicznie o rozmiarze. Te klasy mogą być używane w programach, czy napisane dla systemu Windows, czy nie. Są one jednak najbardziej przydatny w przypadku implementowania struktury danych, które zdefiniowanie klas dokumentów w ramach aplikacji. Klasy specjalne kolekcji można łatwo pochodzi z tych lub można utworzyć je w oparciu klasy szablonu. Aby uzyskać więcej informacji o tych metod, zobacz artykuł [kolekcji](../mfc/collections.md). Lista szablonu klasy kolekcji, zobacz artykuł [klasy szablonów dla tablic, list i map](../mfc/template-classes-for-arrays-lists-and-maps.md).  

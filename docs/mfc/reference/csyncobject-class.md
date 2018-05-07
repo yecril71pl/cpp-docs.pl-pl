@@ -1,12 +1,9 @@
 ---
 title: Klasa CSyncObject | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSyncObject
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0c5f53c80bed1814295fd190cf73675a269b32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csyncobject-class"></a>Klasa CSyncObject
 Czysty klasy wirtualnych zapewnia funkcje wspólne dla obiektów synchronizacji Win32.  
@@ -84,7 +79,7 @@ class CSyncObject : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxmt.h  
   
-##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>  CSyncObject::CSyncObject  
  Tworzy obiekt synchronizacji o podanej nazwie.  
   
 ```  
@@ -96,7 +91,7 @@ virtual ~CSyncObject();
  `pstrName`  
  Nazwa obiektu. Jeśli **NULL**, *pstrName* będzie mieć wartość null.  
   
-##  <a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>  CSyncObject::Lock  
  Wywołanie tej funkcji w celu uzyskania dostępu do zasobów kontrolowane przez obiekt synchronizacji.  
   
 ```  
@@ -113,14 +108,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>Uwagi  
  Jeśli obiekt synchronizacji jest sygnalizowane, `Lock` zwróci pomyślnie i Wątek jest właścicielem obiektu. Jeśli obiekt synchronizacji jest nonsignaled (niedostępny), `Lock` będzie oczekiwał na obiekt synchronizacji, aby stać się sygnalizowane maksymalnie wyrażony w milisekundach czas określony w *dwTimeOut* parametru. Jeśli obiekt synchronizacji stają się nie sygnalizowano w określonym czasie, `Lock` zwraca błąd.  
   
-##  <a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>  CSyncObject::m_hObject  
  Dojście do obiektu źródłowego synchronizacji.  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="operator_handle"></a>CSyncObject::operator dojścia  
+##  <a name="operator_handle"></a>  CSyncObject::operator dojścia  
  Użyj tego operatora, aby uzyskać dojście `CSyncObject` obiektu.  
   
 ```  
@@ -133,7 +128,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>Uwagi  
  Dojście służy do bezpośredniego wywoływania interfejsów API systemu Windows.  
   
-##  <a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>  CSyncObject::Unlock  
  Deklaracja `Unlock` bez parametrów jest czystej funkcji wirtualnej i musi zostać zastąpiona przez wszystkie klasy wywodzące się z `CSyncObject`.  
   
 ```  

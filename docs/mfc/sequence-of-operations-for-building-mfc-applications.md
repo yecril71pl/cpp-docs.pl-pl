@@ -1,29 +1,24 @@
 ---
 title: Sekwencja operacji przy tworzeniu aplikacji MFC | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1169b438a181e22696502352c19353421469b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bafcec75643c292a887b54de1b852609dd251c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Sekwencja operacji przy tworzeniu aplikacji MFC
 W poniższej tabeli opisano ogólne sekwencji, które zwykle może wykonać podczas opracowywania aplikacji MFC.  
@@ -50,7 +45,7 @@ W poniższej tabeli opisano ogólne sekwencji, które zwykle może wykonać podc
 |Dodaj przewijania.|Jeśli zachodzi potrzeba obsługi przewijania, pochodzi z widoku klasy lub klas z [CScrollView](../mfc/reference/cscrollview-class.md).|Widok automatycznie doda paski przewijania, gdy okno widoku stanie się zbyt mały.|  
 |Utwórz widoki formularzy.|Jeśli chcesz utworzyć widoków zasobów szablonu okna dialogowego, pochodzi z widoku klasy lub klas z [CFormView](../mfc/reference/cformview-class.md).|Widoku jest używana do wyświetlania formantów zasobów szablonu okna dialogowego. Użytkownik może karcie z formantu do formantu w widoku.|  
 |Tworzenie formularzy bazy danych.|Jeśli chcesz, aby aplikacja oparta na formularzu dostępu do danych, pochodzi z klasy widoku [CRecordView](../mfc/reference/crecordview-class.md) (na potrzeby programowania ODBC).|Widok działa tak jak widok formularza, ale jego formantów są połączone z pola [crecordset —](../mfc/reference/crecordset-class.md) obiekt reprezentujący tabeli bazy danych. MFC przenosi dane między formantami a zestaw rekordów dla Ciebie.|  
-|Utwórz Edytor tekstu proste.|Jeśli chcesz, aby widok był Edytor tekstowy, pochodzi z widoku klasy lub klas z [CEditView](../mfc/reference/ceditview-class.md) lub [cricheditview —](../mfc/reference/cricheditview-class.md).|Widok zawiera edycji plików wejścia/wyjścia, obsługa Schowka i funkcje. `CRichEditView`zawiera styl tekstu.|  
+|Utwórz Edytor tekstu proste.|Jeśli chcesz, aby widok był Edytor tekstowy, pochodzi z widoku klasy lub klas z [CEditView](../mfc/reference/ceditview-class.md) lub [cricheditview —](../mfc/reference/cricheditview-class.md).|Widok zawiera edycji plików wejścia/wyjścia, obsługa Schowka i funkcje. `CRichEditView` zawiera styl tekstu.|  
 |Dodaj okna podziału.|Jeśli chcesz obsługiwać Dzielenie okna, Dodaj [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) obiektu okno ramowe SDI lub MDI okna podrzędnego i dołączenie go w tym oknie [OnCreateClient](../mfc/reference/cframewnd-class.md#oncreateclient) funkcji członkowskiej.|Platformę dostarcza formanty podziału pole obok pasków przewijania i zarządza nimi podzielić na wiele okienka widoku. Jeśli użytkownik dzieli okno, platformę tworzy i dołącza dodatkowy widok obiektów do dokumentu.|  
 |Tworzenia, testowania i debugowania aplikacji.|Użyj funkcji Visual C++ do tworzenia, testowania i debugowania aplikacji.|Visual C++ pozwala dostosować kompilacji, łącza i inne opcje. Umożliwia również przeglądać źródło struktury kodu i klasy.|  
   

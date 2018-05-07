@@ -1,13 +1,10 @@
 ---
-title: "Definiowanie obsługi komunikatów dla komunikatów odbitych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Definiowanie obsługi komunikatów dla komunikatów odbitych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.defining.msg.msghandler
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f5e1c472cdbca177b91851f9b8104094c41047
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ed941816824c77f14a3364b06af0b3da171ee8f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definiowanie obsługi komunikatów dla komunikatów odbitych
 Po utworzeniu nowej klasie formantów MFC można zdefiniować dla niego obsługi komunikatów. Programy obsługi komunikatów odbitych Zezwalaj Twojej klasy kontrolki do obsługi własnych wiadomości, zanim komunikat jest odbierany przez element nadrzędny. Można używać MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) funkcja do wysyłania wiadomości z formantu do okna nadrzędnego.  

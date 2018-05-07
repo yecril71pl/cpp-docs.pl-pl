@@ -1,13 +1,10 @@
 ---
 title: Trackery | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 - OLE server applications [MFC], trackers
 ms.assetid: dcd09399-6637-4621-80e5-d12670429787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e4d3c556a5f7b6b3aed5daa0285ea6c2c15447
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f0a0cc52e3a5150702af4acd293def38df758fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trackers"></a>Trackery
 [Crecttracker —](../mfc/reference/crecttracker-class.md) klasy udostępnia interfejs użytkownika między elementami prostokątne w aplikacji i użytkownika, podając różnych stylów wyświetlania. Te style zawierają stały, kreskowanym lub przerywane obramowania; kreskowane wzorzec, który obejmuje pozycję; i uchwytów zmiany rozmiaru, które mogą znajdować się na zewnątrz lub wewnątrz obramowania. Trackery są często używane w połączeniu z elementami OLE, czyli obiekty pochodne `COleClientItem`. Prostokąty tracker nadaj wizualnych na bieżący stan elementu.  

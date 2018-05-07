@@ -1,13 +1,10 @@
 ---
-title: "Konteksty urządzenia | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Konteksty urządzenia | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d4a0e32a8b24a72447cf4227be128659316c0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45a2f99001d45de71ca3ea8a525152d53d67ee64
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="device-contexts"></a>Konteksty urządzenia
 Kontekst urządzenia jest strukturą danych systemu Windows zawierający informacje o atrybuty rysowania urządzeniami, takimi jak ekranu lub drukarki. Wszystkie wywołania rysowania są wykonywane za pośrednictwem obiektu kontekstu urządzenia, który hermetyzuje interfejsy API systemu Windows do rysowania linii, kształty i tekst. Konteksty urządzenia zezwala na rysowanie niezależne od urządzenia w systemie Windows. Konteksty urządzenia może służyć do rysowania ekranu, drukarki lub metaplik.  

@@ -1,24 +1,19 @@
 ---
-title: "Integrację środowiska CLR (C + +/ CX) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Integrację środowiska CLR (C + +/ CX) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d832e3856d7df444663e0b99b759e2ea620b27ed
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 50b455bd3b6fd4a96c3181b60904cb7a3250e866
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-integration-ccx"></a>Integrację środowiska CLR (C + +/ CX)
 Niektóre typy środowiska wykonawczego systemu Windows odbierania specjalnej obsługi w języku C + +/ CX oraz języki, które są oparte na środowisko uruchomieniowe języka wspólnego (CLR). W tym artykule opisano, jak kilka typów w jednym języku mapować do innego języka. Na przykład CLR mapuje Windows.Foundation.IVector interfejs System.Collections.IList, Windows.Foundation.IMap System.Collections.IDictionary i tak dalej. Podobnie, C + +/ CX specjalnie mapowania typów, takie jak Platform::Delegate i Platform::String.  
@@ -44,7 +39,7 @@ Niektóre typy środowiska wykonawczego systemu Windows odbierania specjalnej ob
   
 -   Kolor  
   
- **Windows::UI::Xaml**  
+ **Windows::UI::XAML**  
   
 -   CornerRadius  
   

@@ -1,12 +1,9 @@
 ---
 title: Klasa CDaoException | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoException
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5295a63a968162f5a891def06206eb50485ab1a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoexception-class"></a>Klasa CDaoException
 Reprezentuje warunku wyjątku wynikających z klasami baz danych MFC oparte na obiekty dostępu do danych (DAO).  
@@ -72,7 +67,7 @@ class CDaoException : public CException
 |[CDaoException::m_scode](#m_scode)|[SCODE](#m_scode) wartość skojarzoną z powodu błędu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Klasa zawiera publicznych elementów członkowskich danych używanych w celu ustalenia przyczyny wyjątku. `CDaoException`obiekty są zbudowane i zgłaszanych przez funkcje Członkowskie klas baz danych DAO.  
+ Klasa zawiera publicznych elementów członkowskich danych używanych w celu ustalenia przyczyny wyjątku. `CDaoException` obiekty są zbudowane i zgłaszanych przez funkcje Członkowskie klas baz danych DAO.  
   
 > [!NOTE]
 >  Klasy baz danych DAO różnią się od klasy baz danych MFC oparte na otwarte połączenie bazy danych (ODBC). Wszystkie nazwy klasy bazy danych DAO mają prefiks "CDao". Możesz nadal dostęp do źródła danych ODBC z klasy DAO. Ogólnie rzecz biorąc klas MFC DAO w oparciu mogą więcej niż klas MFC ODBC; w oparciu klasy oparte na DAO można uzyskać dostępu do danych, w tym za pomocą sterowników ODBC, za pomocą ich własnych aparatu bazy danych. Klasy oparte na DAO również obsługiwać operacji języka definicji danych (DDL), takich jak dodawanie tabel za pomocą klasy, bez konieczności wywoływanie obiektów DAO bezpośrednio. Aby uzyskać informacje na wyjątków zgłaszanych przez klasy ODBC, zobacz [CDBException](../../mfc/reference/cdbexception-class.md).  
@@ -95,7 +90,7 @@ class CDaoException : public CException
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
   
-##  <a name="cdaoexception"></a>CDaoException::CDaoException  
+##  <a name="cdaoexception"></a>  CDaoException::CDaoException  
  Konstruuje `CDaoException` obiektu.  
   
 ```  
@@ -123,7 +118,7 @@ CDaoException();
   
  Aby uzyskać więcej informacji na temat obsługi błędów w klas MFC DAO, zobacz artykuł [wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md).  
   
-##  <a name="geterrorcount"></a>CDaoException::GetErrorCount  
+##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount  
  Wywołanie tej funkcji Członkowskich, aby pobrać liczbę obiektów DAO błąd w kolekcji błędów aparatu bazy danych.  
   
 ```  
@@ -139,7 +134,7 @@ short GetErrorCount();
 > [!NOTE]
 >  Zwykle istnieje tylko jeden obiekt błąd w kolekcji błędów. Jeśli pracujesz z źródła danych ODBC, jednak może istnieć więcej niż jeden.  
   
-##  <a name="geterrorinfo"></a>CDaoException::GetErrorInfo  
+##  <a name="geterrorinfo"></a>  CDaoException::GetErrorInfo  
  Zwraca informacje o błędzie dotyczących obiektu określony błąd w kolekcji błędów.  
   
 ```  
@@ -163,11 +158,11 @@ void GetErrorInfo(int nIndex);
   
 -   Kontekst pomocy  
   
- `GetErrorInfo`zapisuje informacje w obiekt wyjątku `m_pErrorInfo` element członkowski danych. Krótki opis zwracanych informacji, zobacz [m_pErrorInfo](#m_perrorinfo). Jeśli catch wyjątku typu `CDaoException` zgłoszony przez MFC, `m_pErrorInfo` elementu członkowskiego już zostać wypełnione. Jeśli wybierzesz wywoływanie obiektów DAO bezpośrednio, należy wywołać obiekt wyjątku `GetErrorInfo` funkcji członkowskiej samodzielnie, aby wypełnić `m_pErrorInfo`. Aby uzyskać bardziej szczegółowy opis, zobacz [cdaoerrorinfo —](../../mfc/reference/cdaoerrorinfo-structure.md) struktury.  
+ `GetErrorInfo` zapisuje informacje w obiekt wyjątku `m_pErrorInfo` element członkowski danych. Krótki opis zwracanych informacji, zobacz [m_pErrorInfo](#m_perrorinfo). Jeśli catch wyjątku typu `CDaoException` zgłoszony przez MFC, `m_pErrorInfo` elementu członkowskiego już zostać wypełnione. Jeśli wybierzesz wywoływanie obiektów DAO bezpośrednio, należy wywołać obiekt wyjątku `GetErrorInfo` funkcji członkowskiej samodzielnie, aby wypełnić `m_pErrorInfo`. Aby uzyskać bardziej szczegółowy opis, zobacz [cdaoerrorinfo —](../../mfc/reference/cdaoerrorinfo-structure.md) struktury.  
   
  Informacje o wyjątki DAO i przykładowy kod, zobacz artykuł [wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md).  
   
-##  <a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
+##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError  
  Zawiera MFC, rozszerzony kod błędu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -183,7 +178,7 @@ void GetErrorInfo(int nIndex);
   
 - **AFX_DAO_ERROR_OBJECT_NOT_OPEN** próbował otworzyć zestaw rekordów na podstawie querydef lub obiektu tabledef, który nie był w stanie otwartym.  
   
-##  <a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
+##  <a name="m_perrorinfo"></a>  CDaoException::m_pErrorInfo  
  Zawiera wskaźnik do `CDaoErrorInfo` strukturę, która zawiera informacje na temat DAO obiekt błąd, który ostatnio pobranej poprzez wywołanie [GetErrorInfo](#geterrorinfo).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -199,7 +194,7 @@ void GetErrorInfo(int nIndex);
   
  Aby uzyskać szczegółowe informacje o informacje zawarte w `CDaoErrorInfo` obiektów, zobacz [cdaoerrorinfo —](../../mfc/reference/cdaoerrorinfo-structure.md) struktury.  
   
-##  <a name="m_scode"></a>CDaoException::m_scode  
+##  <a name="m_scode"></a>  CDaoException::m_scode  
  Zawiera wartość typu `SCODE` opisujący błąd.  
   
 ### <a name="remarks"></a>Uwagi  

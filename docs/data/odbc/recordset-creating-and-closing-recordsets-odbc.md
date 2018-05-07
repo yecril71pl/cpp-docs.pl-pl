@@ -1,13 +1,10 @@
 ---
-title: "Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec09c08aa4730c11960d675aef68c8a1007c900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbf020e12151e666aa8f88098865b1624403b828
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -44,7 +39,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
 -   [Kiedy i jak zamykać obiekty zestawów rekordów](#_core_closing_a_recordset).  
   
-##  <a name="_core_creating_recordsets_at_run_time"></a>Tworzenie zestawów rekordów w czasie wykonywania  
+##  <a name="_core_creating_recordsets_at_run_time"></a> Tworzenie zestawów rekordów w czasie wykonywania  
  Przed przystąpieniem do tworzenia rekordów obiektów w programie zwykle zapisu klasy specyficzne dla aplikacji zestawu rekordów. Aby uzyskać więcej informacji dotyczących tego kroku wstępnych, zobacz [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
   
  Otwórz obiekt dynamiczny lub gdy musisz wybrać rekordy ze źródła danych. Typ obiektu do utworzenia zależy od tego, co należy zrobić z danych w aplikacji i obsługuje jakie sterownik ODBC. Aby uzyskać więcej informacji, zobacz [dynamiczny](../../data/odbc/dynaset.md) i [migawki](../../data/odbc/snapshot.md).  
@@ -89,7 +84,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!TIP]
 >  Ciąg połączenia, używanego podczas tworzenia może nie być tego samego ciąg połączenia, który ostatecznego użytkownicy potrzebują. Aby poznać, w związku z tym uogólnianie aplikacji, zobacz [źródła danych: Zarządzanie połączeniami (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).  
   
-##  <a name="_core_setting_recordset_options"></a>Ustawianie opcji zestawu rekordów  
+##  <a name="_core_setting_recordset_options"></a> Ustawianie opcji zestawu rekordów  
  Po utworzenia obiektu zestawu rekordów, ale przed wywołaniem **Otwórz** aby wybrać rekordy, można ustawić niektóre opcje kontroli zachowania w zestawie rekordów. Dla wszystkich zestawów rekordów można:  
   
 -   Określ [filtru](../../data/odbc/recordset-filtering-records-odbc.md) Aby ograniczyć wybór rekordów.  
@@ -105,7 +100,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!NOTE]
 >  Wpływ na wybór rekordów, należy skonfigurować te opcje przed wywołaniem **Otwórz** funkcję elementu członkowskiego.  
   
-##  <a name="_core_closing_a_recordset"></a>Zamykanie zestawu rekordów  
+##  <a name="_core_closing_a_recordset"></a> Zamykanie zestawu rekordów  
  Po zakończeniu pracy z zestawu rekordów, należy usunąć ją i cofnięcie przydziału pamięci.  
   
 #### <a name="to-close-a-recordset"></a>Aby zamknąć zestawu rekordów  

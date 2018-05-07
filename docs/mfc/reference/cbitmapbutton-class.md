@@ -1,12 +1,9 @@
 ---
 title: Klasa CBitmapButton | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d926e538cf9f9f1cb4935a1d53ba6c1fd7f4696e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmapbutton-class"></a>Klasa CBitmapButton
 Tworzy łącznik formanty etykietą map bitowych obrazów zamiast tekstu.  
@@ -61,7 +56,7 @@ class CBitmapButton : public CButton
 |[CBitmapButton::SizeToContent](#sizetocontent)|Rozmiary przycisk, aby pomieścić mapy bitowej.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CBitmapButton`obiekty zawierają maksymalnie cztery mapy bitowe, zawierające obrazy do innych stanów przycisku można założyć: się (lub normalna), dół (lub wybranych), fokus i wyłączone. Tylko pierwszy mapy bitowej jest wymagana. inne są opcjonalne.  
+ `CBitmapButton` obiekty zawierają maksymalnie cztery mapy bitowe, zawierające obrazy do innych stanów przycisku można założyć: się (lub normalna), dół (lub wybranych), fokus i wyłączone. Tylko pierwszy mapy bitowej jest wymagana. inne są opcjonalne.  
   
  Obrazy dla przycisków mapy bitowej obejmują obramowania wokół obrazu, a także samego obrazu. Obramowanie zwykle odgrywa rolę podczas wyświetlania stanu przycisku. Na przykład mapy bitowej dla stanu ukierunkowanych zazwyczaj jest podobny do konfigurowania stanu, ale wstawki kreskowane prostokąta, obramowanie lub grubości linii ciągłej na granicy. Mapa bitowa dla osób niepełnosprawnych stanu zwykle podobny do jednego dla stan up, lecz jest niższe kontrastu (np. menu na wygaszone lub wyszarzonymi polami wyboru).  
   
@@ -111,7 +106,7 @@ class CBitmapButton : public CButton
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -122,7 +117,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxext.h  
   
-##  <a name="autoload"></a>CBitmapButton::AutoLoad  
+##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
  Kojarzy przycisk w oknie dialogowym z obiektu `CBitmapButton` klasy ładuje bitmap(s) według nazwy i rozmiar przycisk, aby dopasować mapy bitowej.  
   
 ```  
@@ -147,7 +142,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
  Tworzy `CBitmapButton` obiektu.  
   
 ```  
@@ -160,7 +155,7 @@ CBitmapButton();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
  Użyj tej funkcji, jeśli chcesz załadować bitmapy zidentyfikowane przy użyciu ich nazw zasobów lub numerów Identyfikacyjnych lub gdy nie można użyć `AutoLoad` działać, ponieważ na przykład tworzysz przycisk mapy bitowej, który nie jest częścią okno dialogowe.  
   
 ```  
@@ -180,7 +175,7 @@ BOOL LoadBitmaps(
   
 ### <a name="parameters"></a>Parametry  
  *lpszBitmapResource*  
- Wskazuje zerem ciągu zawierającego nazwę mapy bitowej do normalnego przycisku Mapa bitowa lub "informacje" o stanie. Wymagany.  
+ Wskazuje zerem ciągu zawierającego nazwę mapy bitowej do normalnego przycisku Mapa bitowa lub "informacje" o stanie. Wymagana.  
   
  *lpszBitmapResourceSel*  
  Punkty zerem ciąg zawierający nazwę mapy bitowej dla przycisku mapy bitowej na wybranych lub w "stanie dół". Może być **NULL**.  
@@ -192,7 +187,7 @@ BOOL LoadBitmaps(
  Wskazuje zerem ciągu zawierającego nazwę mapy bitowej dla przycisku mapy bitowej stan wyłączenia. Może być **NULL**.  
   
  *nIDBitmapResource*  
- Określa identyfikator zasobu zasobu mapy bitowej do normalnego przycisku Mapa bitowa lub "informacje" o stanie. Wymagany.  
+ Określa identyfikator zasobu zasobu mapy bitowej do normalnego przycisku Mapa bitowa lub "informacje" o stanie. Wymagana.  
   
  *nIDBitmapResourceSel*  
  Określa identyfikator zasobu zasobu mapy bitowej przez wybrany przycisk mapa bitowa lub "w dół" stan. Może być równa 0.  
@@ -209,7 +204,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
  Wywołanie tej funkcji, aby zmienić rozmiar przycisku mapy bitowej do rozmiaru mapy bitowej.  
   
 ```  

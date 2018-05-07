@@ -1,12 +1,9 @@
 ---
-title: "Cpropertypage — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cpropertypage — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropertyPage
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c42a0ba40797312a2108a288fecdea55c6873f3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropertypage-class"></a>Cpropertypage — klasa
 Reprezentuje poszczególnych stron arkusza właściwości, znanej także jako okno dialogowe kartę.  
@@ -114,18 +109,18 @@ class CPropertyPage : public CDialog
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cdialog —](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
  `CPropertyPage`  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdlgs.h  
   
-##  <a name="canceltoclose"></a>CPropertyPage::CancelToClose  
+##  <a name="canceltoclose"></a>  CPropertyPage::CancelToClose  
  Wywołanie tej funkcji po dokonaniu zmiany odzyskać danych na stronie modalny arkusz właściwości.  
   
 ```  
@@ -140,7 +135,7 @@ void CancelToClose();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertyPage::QuerySiblings](#querysiblings).  
   
-##  <a name="construct"></a>CPropertyPage::Construct  
+##  <a name="construct"></a>  CPropertyPage::Construct  
  Wywołanie tej funkcji Członkowskich do skonstruowania `CPropertyPage` obiektu.  
   
 ```  
@@ -200,7 +195,7 @@ void Construct(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
   
-##  <a name="cpropertypage"></a>CPropertyPage::CPropertyPage  
+##  <a name="cpropertypage"></a>  CPropertyPage::CPropertyPage  
  Konstruuje `CPropertyPage` obiektu.  
   
 ```  
@@ -266,7 +261,7 @@ CPropertyPage(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
-##  <a name="getpsp"></a>CPropertyPage::GetPSP  
+##  <a name="getpsp"></a>  CPropertyPage::GetPSP  
  Pobiera systemu Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktury skojarzone z `CPropertyPage` obiektu.  
   
 ```  
@@ -278,8 +273,8 @@ PROPSHEETPAGE& GetPSP();
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do **PROPSHEETPAGE** struktury.  
   
-##  <a name="m_psp"></a>CPropertyPage::m_psp  
- `m_psp`jest strukturą, której członkowie przechowywania właściwości [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548).  
+##  <a name="m_psp"></a>  CPropertyPage::m_psp  
+ `m_psp` jest strukturą, której członkowie przechowywania właściwości [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548).  
   
 ```  
 PROPSHEETPAGE m_psp;  
@@ -293,7 +288,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#128](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]  
   
-##  <a name="onapply"></a>CPropertyPage::OnApply  
+##  <a name="onapply"></a>  CPropertyPage::OnApply  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik wybierze przycisk Zastosuj teraz lub OK.  
   
 ```  
@@ -315,7 +310,7 @@ virtual BOOL OnApply();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertyPage::OnOK](#onok).  
   
-##  <a name="oncancel"></a>CPropertyPage::OnCancel  
+##  <a name="oncancel"></a>  CPropertyPage::OnCancel  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, po wybraniu przycisku Anuluj.  
   
 ```  
@@ -328,7 +323,7 @@ virtual void OnCancel();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]  
   
-##  <a name="onkillactive"></a>CPropertyPage::OnKillActive  
+##  <a name="onkillactive"></a>  CPropertyPage::OnKillActive  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy strona nie jest już aktywna strona.  
   
 ```  
@@ -348,7 +343,7 @@ virtual BOOL OnKillActive();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]  
   
-##  <a name="onok"></a>CPropertyPage::OnOK  
+##  <a name="onok"></a>  CPropertyPage::OnOK  
  Ta funkcja członkowska jest wywoływane przez platformę, gdy użytkownik wybierze przycisk Zastosuj teraz lub OK natychmiast po wywołania framework [OnKillActive](#onkillactive).  
   
 ```  
@@ -365,7 +360,7 @@ virtual void OnOK();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#116](../../mfc/codesnippet/cpp/cpropertypage-class_6.cpp)]  
   
-##  <a name="onquerycancel"></a>CPropertyPage::OnQueryCancel  
+##  <a name="onquerycancel"></a>  CPropertyPage::OnQueryCancel  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik kliknie przycisk Anuluj i przed Anuluj działanie miało miejsce.  
   
 ```  
@@ -383,7 +378,7 @@ virtual BOOL OnQueryCancel();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#117](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]  
   
-##  <a name="onreset"></a>CPropertyPage::OnReset  
+##  <a name="onreset"></a>  CPropertyPage::OnReset  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik wybierze przycisk Anuluj.  
   
 ```  
@@ -400,7 +395,7 @@ virtual void OnReset();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertyPage::OnCancel](#oncancel).  
   
-##  <a name="onsetactive"></a>CPropertyPage::OnSetActive  
+##  <a name="onsetactive"></a>  CPropertyPage::OnSetActive  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy strona jest wybierany przez użytkownika i staje się stroną aktywną.  
   
 ```  
@@ -418,7 +413,7 @@ virtual BOOL OnSetActive();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertySheet::SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext).  
   
-##  <a name="onwizardback"></a>CPropertyPage::OnWizardBack  
+##  <a name="onwizardback"></a>  CPropertyPage::OnWizardBack  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik kliknie przycisk Wstecz w kreatorze.  
   
 ```  
@@ -436,7 +431,7 @@ virtual LRESULT OnWizardBack();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#118](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]  
   
-##  <a name="onwizardfinish"></a>CPropertyPage::OnWizardFinish  
+##  <a name="onwizardfinish"></a>  CPropertyPage::OnWizardFinish  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik kliknie przycisk Zakończ w kreatorze.  
   
 ```  
@@ -464,7 +459,7 @@ virtual BOOL OnWizardFinish();
   
  [!code-cpp[NVC_MFCDocView#122](../../mfc/codesnippet/cpp/cpropertypage-class_12.cpp)]  
   
-##  <a name="onwizardnext"></a>CPropertyPage::OnWizardNext  
+##  <a name="onwizardnext"></a>  CPropertyPage::OnWizardNext  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik kliknie przycisk Dalej w kreatorze.  
   
 ```  
@@ -482,7 +477,7 @@ virtual LRESULT OnWizardNext();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#123](../../mfc/codesnippet/cpp/cpropertypage-class_13.cpp)]  
   
-##  <a name="querysiblings"></a>CPropertyPage::QuerySiblings  
+##  <a name="querysiblings"></a>  CPropertyPage::QuerySiblings  
  Wywołanie tej funkcji Członkowskich do przesyłania dalej wiadomości do każdej strony w arkuszu właściwości.  
   
 ```  
@@ -511,7 +506,7 @@ LRESULT QuerySiblings(
   
  [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]  
   
-##  <a name="setmodified"></a>CPropertyPage::SetModified  
+##  <a name="setmodified"></a>  CPropertyPage::SetModified  
  Wywołanie tej funkcji Członkowskich, aby włączyć lub wyłączyć przycisk Zastosuj teraz według tego, czy do odpowiedniego obiektu zewnętrznego, w którym mają zostać zastosowane ustawienia na stronie właściwości.  
   
 ```  

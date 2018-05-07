@@ -1,12 +1,9 @@
 ---
 title: Klasa CAutoHideDockSite | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAutoHideDockSite
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8cc4e9158ae9ff2ef6fd4d48483aa5a75dd9617
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4abdb76523f0b7b1ab87beb6daaf723c4dff5cc8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cautohidedocksite-class"></a>Klasa CAutoHideDockSite
 `CAutoHideDockSite` Rozszerza [klasy CDockSite](../../mfc/reference/cdocksite-class.md) do zaimplementowania autoukrywania dock okienka.  
@@ -91,7 +86,7 @@ class CAutoHideDockSite : public CDockSite
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -107,7 +102,7 @@ class CAutoHideDockSite : public CDockSite
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxautohidedocksite.h  
   
-##  <a name="canacceptpane"></a>CAutoHideDockSite::CanAcceptPane  
+##  <a name="canacceptpane"></a>  CAutoHideDockSite::CanAcceptPane  
  Określa, czy podstawowy okienko jest [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) obiekt lub typ pochodzący od `CMFCAutoHideBar`.  
   
 ```  
@@ -119,15 +114,15 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in]`pBar`|Okienko podstawową platformę testów.|  
+|[in] `pBar`|Okienko podstawową platformę testów.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli `pBar` jest pochodną `CMFCAutoHideBar`; `FALSE` inaczej.  
+ `TRUE` Jeśli `pBar` jest pochodną `CMFCAutoHideBar`; `FALSE` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli obiekt podstawowy okienko jest pochodną `CMFCAutoHideBar`, może zawierać `CAutoHideDockSite`.  
   
-##  <a name="dockpane"></a>CAutoHideDockSite::DockPane  
+##  <a name="dockpane"></a>  CAutoHideDockSite::DockPane  
  Stacje dokujące okienko tej [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) obiektu.  
   
 ```  
@@ -142,16 +137,16 @@ virtual void DockPane(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in]`pWnd`|Okienka stacje dokujące platformę.|  
-|[in]`dockMethod`|Dokowanie opcje okienka.|  
-|[in]`lpRect`|Prostokąt określa granice zadokowanego panelu.|  
+|[in] `pWnd`|Okienka stacje dokujące platformę.|  
+|[in] `dockMethod`|Dokowanie opcje okienka.|  
+|[in] `lpRect`|Prostokąt określa granice zadokowanego panelu.|  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja nie używa parametru `dockMethod`, które jest dostarczane do użytku w przyszłości.  
   
  Jeśli `lpRect` jest `NULL`, platformę umieszcza okienka w domyślnej lokalizacji w witrynie dokowania. Jeśli witryna dock jest poziomy, domyślna lokalizacja to lewej strony witryny dokowania. W przeciwnym razie wartość domyślna lokalizacja to u góry lokacji dokowania.  
   
-##  <a name="getalignrect"></a>CAutoHideDockSite::GetAlignRect  
+##  <a name="getalignrect"></a>  CAutoHideDockSite::GetAlignRect  
  Pobiera informacje o rozmiarze lokacji dokowania we współrzędnych ekranu.  
   
 ```  
@@ -163,12 +158,12 @@ void GetAlignRect(CRect& rect) const;
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in]`rect`|Odwołanie do prostokąta. Metoda przechowuje rozmiar lokacji dock w tym prostokącie.|  
+|[in] `rect`|Odwołanie do prostokąta. Metoda przechowuje rozmiar lokacji dock w tym prostokącie.|  
   
 ### <a name="remarks"></a>Uwagi  
  Prostokąt zostanie zmieniona dla przesunięcia marginesów tak, aby nie są uwzględniane.  
   
-##  <a name="m_nextraspace"></a>CAutoHideDockSite::m_nExtraSpace  
+##  <a name="m_nextraspace"></a>  CAutoHideDockSite::m_nExtraSpace  
  Wielkość odstępów między krawędzi [klasy CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) i [klasy CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) obiektów.  
   
 ```  
@@ -178,7 +173,7 @@ static int m_nExtraSpace;
 ### <a name="remarks"></a>Uwagi  
  Gdy `CMFCAutoHideBar` jest zadokowany w `CAutoHideDockSite`, nie będzie zajmować dokowania całej lokacji. Tę zmienną globalną określa dodatkowe miejsce od lewej lub górnej krawędzi elementu `CMFCAutoHideBar` i odpowiadający mu `CAutoHideDockSite` krawędzi. Czy używany jest góry lub lewej krawędzi zależy od bieżącego wyrównania.  
   
-##  <a name="setoffsetleft"></a>CAutoHideDockSite::SetOffsetLeft  
+##  <a name="setoffsetleft"></a>  CAutoHideDockSite::SetOffsetLeft  
  Ustawia margines po lewej stronie dokowania paska.  
   
 ```  
@@ -186,13 +181,13 @@ void SetOffsetLeft(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nOffset`  
+ [in] `nOffset`  
  Przesunięcie nowe.  
   
 ### <a name="remarks"></a>Uwagi  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) obiekty są rozmieszczone na statycznie `CAutoHideDockSite` obiektu. Oznacza to, że użytkownik nie może ręcznie zmienić lokalizację `CMFCAutoHideBar` obiektów. `SetOffsetLeft` Metody Określa odstępy między lewej skrajnej lewej `CMFCAutoHideBar` i z lewej strony `CAutoHideDockSite`.  
   
-##  <a name="setoffsetright"></a>CAutoHideDockSite::SetOffsetRight  
+##  <a name="setoffsetright"></a>  CAutoHideDockSite::SetOffsetRight  
  Ustawia margines po prawej stronie paska dokowania.  
   
 ```  
@@ -200,13 +195,13 @@ void SetOffsetRight(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nOffset`  
+ [in] `nOffset`  
  Przesunięcie nowe.  
   
 ### <a name="remarks"></a>Uwagi  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) obiekty są rozmieszczone na statycznie `CAutoHideDockSite` obiektu. Oznacza to, że użytkownik nie może ręcznie zmienić lokalizację `CMFCAutoHideBar` obiektów. `SetOffsetRight` Metody Określa odstępy między po prawej stronie prawej krawędzi `CMFCAutoHideBar` i po prawej stronie `CAutoHideDockSite`.  
   
-##  <a name="repositionpanes"></a>CAutoHideDockSite::RepositionPanes  
+##  <a name="repositionpanes"></a>  CAutoHideDockSite::RepositionPanes  
  Ponownie rysuje okienka na [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md).  
   
 ```  
@@ -218,12 +213,12 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in]`rectNewClientArea`|Wartością zastrzeżoną.|  
+|[in] `rectNewClientArea`|Wartością zastrzeżoną.|  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja używa `rectNewClientArea`. Ponownie go rysuje okienka z marginesami globalne narzędzi i odstęp.  
   
-##  <a name="unsetautohidemode"></a>CAutoHideDockSite::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CAutoHideDockSite::UnSetAutoHideMode  
  Wywołania [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) dla obiektów w lokacji dokowania.  
   
 ```  
@@ -235,7 +230,7 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in]`pAutoHideToolbar`|Wskaźnik do [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) okienko obiektów znajdujących się na `CAutoHideDockSite`.|  
+|[in] `pAutoHideToolbar`|Wskaźnik do [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) okienko obiektów znajdujących się na `CAutoHideDockSite`.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda szuka wiersza, który zawiera `pAutoHideToolbar`. Wywołuje `CMFCAutoHideBar.UnSetAutoHideMode` dla wszystkich `CMFCAutoHideBar` obiektów w tym wierszu. Jeśli `pAutoHideToolbar` nie można odnaleźć lub jest ona `NULL`, ta metoda wywołuje `CMFCAutoHideBar.UnSetAutoHideMode` dla wszystkich `CMFCAutoHideBar` obiektów na `CAutoHideDockSite`.  

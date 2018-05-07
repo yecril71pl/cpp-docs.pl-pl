@@ -1,12 +1,9 @@
 ---
-title: "Clist — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Clist — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CList
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d96a9c1a1b91d7738f768387bf0c24abd01ba22
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b2a84e73c165efd8f2f17e66af149e33d90395e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clist-class"></a>Clist — klasa
 Obsługuje uporządkowane listy obiektów nieunikatowy dostępny sekwencyjnie lub przez wartość.  
@@ -123,7 +118,7 @@ class CList : public CObject
  Typ używany do odwołują się obiekty przechowywane na liście. Może być odwołanie.  
   
 ## <a name="remarks"></a>Uwagi  
- `CList`Wyświetla przypominają podwójnie połączone list.  
+ `CList` Wyświetla przypominają podwójnie połączone list.  
   
  Zmienna typu **pozycji** jest kluczem dla listy. Można użyć **pozycji** zmiennej iteratora przechodzenia przez listę sekwencyjnie, a zakładkę do przechowywania miejsce. Pozycji nie jest taka sama jak indeksu, jednak.  
   
@@ -146,7 +141,7 @@ class CList : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxtempl.h  
   
-##  <a name="addhead"></a>CList::AddHead  
+##  <a name="addhead"></a>  CList::AddHead  
  Dodaje nowy element lub lista elementów nagłówek tej listy.  
   
 ```  
@@ -173,7 +168,7 @@ void AddHead(CList* pNewList);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#36](../../mfc/codesnippet/cpp/clist-class_2.cpp)]  
   
-##  <a name="addtail"></a>CList::AddTail  
+##  <a name="addtail"></a>  CList::AddTail  
  Dodaje nowy element lub lista elementów na końcu tej listy.  
   
 ```  
@@ -200,7 +195,7 @@ void AddTail(CList* pNewList);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#37](../../mfc/codesnippet/cpp/clist-class_3.cpp)]  
   
-##  <a name="clist"></a>CList::CList  
+##  <a name="clist"></a>  CList::CList  
  Tworzy pusty listy uporządkowanej.  
   
 ```  
@@ -217,7 +212,7 @@ CList(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
-##  <a name="find"></a>CList::Find  
+##  <a name="find"></a>  CList::Find  
  Wyszukuje liście sekwencyjnie, aby znaleźć pierwszego elementu dopasowania określonego `searchValue`.  
   
 ```  
@@ -242,7 +237,7 @@ POSITION Find(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
-##  <a name="findindex"></a>CList::FindIndex  
+##  <a name="findindex"></a>  CList::FindIndex  
  Używa wartości `nIndex` jako indeks w liście.  
   
 ```  
@@ -257,12 +252,12 @@ POSITION FindIndex(INT_PTR nIndex) const;
  A **pozycji** wartość, która może służyć do iteracji lub pobieranie wskaźnika obiektu; **NULL** Jeśli `nIndex` jest ujemny lub zbyt duży.  
   
 ### <a name="remarks"></a>Uwagi  
- Rozpoczyna się kolejny skanowania z węzła głównego listy zatrzymywanie na  *n* th element.  
+ Rozpoczyna się kolejny skanowania z węzła głównego listy zatrzymywanie na *n*th element.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#40](../../mfc/codesnippet/cpp/clist-class_6.cpp)]  
   
-##  <a name="getat"></a>CList::GetAt  
+##  <a name="getat"></a>  CList::GetAt  
  Pobiera element listy na określonej pozycji.  
   
 ```  
@@ -274,21 +269,21 @@ const TYPE& GetAt(POSITION position) const;
  *TYP*  
  Określanie typu obiektu na liście parametrów szablonu.  
   
- *stanowisko*  
+ *Stanowisko*  
  Pozycja na liście elementu do pobrania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zobacz opis wartości zwracanej `GetHead`.  
   
 ### <a name="remarks"></a>Uwagi  
- `GetAt`Zwraca element (lub odwołanie do elementu) skojarzone z określonej pozycji. Nie jest taka sama jak indeksu i nie może działać na **pozycji** wartość samodzielnie. Zmienna typu **pozycji** jest kluczem dla listy.  
+ `GetAt` Zwraca element (lub odwołanie do elementu) skojarzone z określonej pozycji. Nie jest taka sama jak indeksu i nie może działać na **pozycji** wartość samodzielnie. Zmienna typu **pozycji** jest kluczem dla listy.  
   
  Upewnij się, że Twoje **pozycji** wartość reprezentuje prawidłową pozycją na liście. Jeśli jest nieprawidłowa wersja do debugowania programu Microsoft Foundation Class Library potwierdzeń.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CList::GetHeadPosition](#getheadposition).  
   
-##  <a name="getcount"></a>CList::GetCount  
+##  <a name="getcount"></a>  CList::GetCount  
  Pobiera liczbę elementów na tej liście.  
   
 ```  
@@ -304,7 +299,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CList::RemoveHead](#removehead).  
   
-##  <a name="gethead"></a>CList::GetHead  
+##  <a name="gethead"></a>  CList::GetHead  
  Pobiera head element (lub odwołanie do elementu nagłówkowego) z tej listy.  
   
 ```  
@@ -328,7 +323,7 @@ TYPE& GetHead();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#41](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
   
-##  <a name="getheadposition"></a>CList::GetHeadPosition  
+##  <a name="getheadposition"></a>  CList::GetHeadPosition  
  Pobiera położenie elementu head tej listy.  
   
 ```  
@@ -341,7 +336,7 @@ POSITION GetHeadPosition() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
-##  <a name="getnext"></a>CList::GetNext  
+##  <a name="getnext"></a>  CList::GetNext  
  Pobiera element listy identyfikowane przez `rPosition`, następnie ustawia `rPosition` do **pozycji** wartość następnego wpisu na liście.  
   
 ```  
@@ -371,7 +366,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#43](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
   
-##  <a name="getprev"></a>CList::GetPrev  
+##  <a name="getprev"></a>  CList::GetPrev  
  Pobiera element listy identyfikowane przez `rPosition`, następnie ustawia `rPosition` do **pozycji** wartość poprzedniej pozycji listy.  
   
 ```  
@@ -401,7 +396,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
   
-##  <a name="getsize"></a>CList::GetSize  
+##  <a name="getsize"></a>  CList::GetSize  
  Zwraca liczbę elementów listy.  
   
 ```  
@@ -417,7 +412,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#45](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
   
-##  <a name="gettail"></a>CList::GetTail  
+##  <a name="gettail"></a>  CList::GetTail  
  Pobiera `CObject` wskaźnik, który reprezentuje element tail tej listy.  
   
 ```  
@@ -438,7 +433,7 @@ const TYPE& GetTail() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#46](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
   
-##  <a name="gettailposition"></a>CList::GetTailPosition  
+##  <a name="gettailposition"></a>  CList::GetTailPosition  
  Pobiera położenie elementu tail tej listy; **NULL** Jeśli lista jest pusta.  
   
 ```  
@@ -451,7 +446,7 @@ POSITION GetTailPosition() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#47](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
   
-##  <a name="insertafter"></a>CList::InsertAfter  
+##  <a name="insertafter"></a>  CList::InsertAfter  
  Dodaje element do tej listy po elemencie w określonej pozycji.  
   
 ```  
@@ -459,7 +454,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *stanowisko*  
+ *Stanowisko*  
  A **pozycji** wartość zwrócona przez poprzednie `GetNext`, `GetPrev`, lub **znaleźć** wywołanie funkcji Członkowskich.  
   
  `ARG_TYPE`  
@@ -474,7 +469,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#48](../../mfc/codesnippet/cpp/clist-class_14.cpp)]  
   
-##  <a name="insertbefore"></a>CList::InsertBefore  
+##  <a name="insertbefore"></a>  CList::InsertBefore  
  Dodaje element do tej listy przed elementem w określonej pozycji.  
   
 ```  
@@ -482,7 +477,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *stanowisko*  
+ *Stanowisko*  
  A **pozycji** wartość zwrócona przez poprzednie `GetNext`, `GetPrev`, lub **znaleźć** wywołanie funkcji Członkowskich.  
   
  `ARG_TYPE`  
@@ -500,7 +495,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#49](../../mfc/codesnippet/cpp/clist-class_15.cpp)]  
   
-##  <a name="isempty"></a>CList::IsEmpty  
+##  <a name="isempty"></a>  CList::IsEmpty  
  Wskazuje, czy ta lista nie zawiera żadnych elementów.  
   
 ```  
@@ -513,7 +508,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#50](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
   
-##  <a name="removeall"></a>CList::RemoveAll  
+##  <a name="removeall"></a>  CList::RemoveAll  
  Usuwa wszystkie elementy z tej listy i zwalnia pamięć skojarzone.  
   
 ```  
@@ -526,7 +521,7 @@ void RemoveAll();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#51](../../mfc/codesnippet/cpp/clist-class_17.cpp)]  
   
-##  <a name="removeat"></a>CList::RemoveAt  
+##  <a name="removeat"></a>  CList::RemoveAt  
  Usuwa określony element z tej listy.  
   
 ```  
@@ -534,7 +529,7 @@ void RemoveAt(POSITION position);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *stanowisko*  
+ *Stanowisko*  
  Położenie elementu do usunięcia z listy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -543,7 +538,7 @@ void RemoveAt(POSITION position);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#52](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
   
-##  <a name="removehead"></a>CList::RemoveHead  
+##  <a name="removehead"></a>  CList::RemoveHead  
  Usuwa element z węzła głównego z listy i zwraca wskaźnik do niego.  
   
 ```  
@@ -563,7 +558,7 @@ TYPE RemoveHead();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#53](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
   
-##  <a name="removetail"></a>CList::RemoveTail  
+##  <a name="removetail"></a>  CList::RemoveTail  
  Usuwa element z tail listy i zwraca wskaźnik do niego.  
   
 ```  
@@ -583,7 +578,7 @@ TYPE RemoveTail();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#54](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
   
-##  <a name="setat"></a>CList::SetAt  
+##  <a name="setat"></a>  CList::SetAt  
  Zmienna typu **pozycji** jest kluczem dla listy.  
   
 ```  
@@ -601,7 +596,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
  Element, który ma zostać dodany do listy.  
   
 ### <a name="remarks"></a>Uwagi  
- Nie jest taka sama jak indeksu i nie może działać na **pozycji** wartość samodzielnie. `SetAt`Zapisuje element w określonej pozycji na liście.  
+ Nie jest taka sama jak indeksu i nie może działać na **pozycji** wartość samodzielnie. `SetAt` Zapisuje element w określonej pozycji na liście.  
   
  Upewnij się, że Twoje **pozycji** wartość reprezentuje prawidłową pozycją na liście. Jeśli jest nieprawidłowa wersja do debugowania programu Microsoft Foundation Class Library potwierdzeń.  
   

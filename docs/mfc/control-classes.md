@@ -1,13 +1,10 @@
 ---
 title: Kontrolowanie klas | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.control
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376fb3836d92a1fae348929a7faa49b44dfd866e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ffd7b3b7d2eb9db68fd61ac693c65d87b2ee62d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-classes"></a>Klasy formantów
 Klasy formantów Hermetyzowanie różnych od statyczny tekst kontrolki do drzewa formantów standardowych formantów systemu Windows. Ponadto MFC zawiera niektóre nowe formanty przycisków z paskami mapy bitowe i kontroli w tym.  
@@ -55,13 +50,13 @@ Klasy formantów Hermetyzowanie różnych od statyczny tekst kontrolki do drzewa
  Formant, w którym użytkownik może wprowadzić i edytować tekst. W przeciwieństwie do formantu z `CEdit`, kontrolki zaawansowanej edycji obsługuje znaków i akapitu formatowanie i obiektów OLE.  
   
 ## <a name="controls-that-represent-numbers"></a>Formanty, które reprezentują cyfry  
- [Csliderctrl —](../mfc/reference/csliderctrl-class.md)  
+ [CSliderCtrl](../mfc/reference/csliderctrl-class.md)  
  Formant zawierający suwaka, użytkownik przechodzi do wybierz wartość lub zbiór wartości.  
   
  [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)  
  Para przycisków strzałek użytkownik może kliknąć, aby zwiększyć lub zmniejszyć wartość.  
   
- [Cprogressctrl —](../mfc/reference/cprogressctrl-class.md)  
+ [CProgressCtrl](../mfc/reference/cprogressctrl-class.md)  
  Wyświetla prostokąt stopniowo jest wypełniony od lewej do prawej strony, aby wskazać postęp operacji.  
   
  [CScrollBar](../mfc/reference/cscrollbar-class.md)  
@@ -75,13 +70,13 @@ Klasy formantów Hermetyzowanie różnych od statyczny tekst kontrolki do drzewa
  Przycisk z mapą bitową zamiast podpis tekstowy.  
   
 ## <a name="lists"></a>Listy  
- [Clistbox —](../mfc/reference/clistbox-class.md)  
+ [CListBox](../mfc/reference/clistbox-class.md)  
  Okno formantu pola listy. Pole listy wyświetla listę elementów, które użytkownik może wyświetlać i wybierać.  
   
  [CDragListBox](../mfc/reference/cdraglistbox-class.md)  
  Udostępnia funkcje systemu Windows pole listy; Umożliwia użytkownikowi Przenieś elementy pola listy, takich jak nazwy plików i ciągu literałów, w polu listy. Pola listy z tej funkcji są przydatne do listy elementów w kolejności innej niż alfabetyczne, takich jak obejmują nazwy ścieżek lub pliki w projekcie.  
   
- [Ccombobox —](../mfc/reference/ccombobox-class.md)  
+ [CComboBox](../mfc/reference/ccombobox-class.md)  
  Okno kontrolki pola kombi. Pole kombi składa się z formantu edycyjnego i pola listy.  
   
  [CComboBoxEx](../mfc/reference/ccomboboxex-class.md)  
@@ -132,7 +127,7 @@ Klasy formantów Hermetyzowanie różnych od statyczny tekst kontrolki do drzewa
  Udostępnia funkcje formantu WebBrowser ActiveX w oknie MFC.  
   
 ## <a name="related-classes"></a>Klasy pokrewne  
- [Cimagelist —](../mfc/reference/cimagelist-class.md)  
+ [CImageList](../mfc/reference/cimagelist-class.md)  
  Udostępnia funkcję listy obrazów systemu Windows. Listy obrazów są używane przez formanty listy i drzewa. One mogą służyć do przechowywania i archiwum zestaw o tej samej wielkości map bitowych.  
   
  [CCtrlView](../mfc/reference/cctrlview-class.md)  

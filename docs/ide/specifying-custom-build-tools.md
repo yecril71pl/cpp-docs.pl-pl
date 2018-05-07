@@ -1,13 +1,10 @@
 ---
-title: "Określanie niestandardowych narzędzi kompilacji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Określanie niestandardowych narzędzi kompilacji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
 - VC.Project.VCCustomBuildTool.Outputs
@@ -26,14 +23,13 @@ helpviewer_keywords:
 - builds (C++), custom build tools
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4edd3b1fdb2b6d09be6f5fcd9a6c9d08ba7a6994
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-custom-build-tools"></a>Określ niestandardowe narzędzia kompilacji
 
@@ -65,7 +61,7 @@ Aby uzyskać ogólne informacje o niestandardowych narzędzi kompilacji i niesta
 
       Wiele plików wejściowych i wyjściowych można określić symbolicznie z makra programu MSBuild. Aby uzyskać informacje na temat sposobu Określ lokalizację plików lub nazw zestawów plików, zobacz [wspólnej makra dla poleceń kompilacji oraz właściwości](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Ponieważ znak "%" jest zarezerwowany przez program MSBuild, jeśli określisz zmienną środowiskową Zastąp każdego  **%**  ucieczki znaku o **% 25** szesnastkowa sekwencja unikowa. Na przykład zastąpić **% WINDIR %** z **25WINDIR % 25**. MSBuild zastępuje wszystkie **% 25** sekwencji z  **%**  znak przed uzyskuje dostęp do zmiennej środowiskowej.
+      Ponieważ znak "%" jest zarezerwowany przez program MSBuild, jeśli określisz zmienną środowiskową Zastąp każdego **%** ucieczki znaku o **% 25** szesnastkowa sekwencja unikowa. Na przykład zastąpić **% WINDIR %** z **25WINDIR % 25**. MSBuild zastępuje wszystkie **% 25** sekwencji z **%** znak przed uzyskuje dostęp do zmiennej środowiskowej.
 
    - W **opis**, wprowadź opisowy komunikat dotyczący tego narzędzia kompilacji niestandardowej. Komunikat jest drukowana **dane wyjściowe** okna, jeśli system kompilacji przetwarza tego narzędzia.
 

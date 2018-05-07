@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCOutlookBarTabCtrl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCOutlookBarTabCtrl
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d38cfd03c9d4fe192b8c1ee7e235140dba382ddb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Klasa CMFCOutlookBarTabCtrl
 Formant karty, który ma wygląd **okienka nawigacji** w programie Microsoft Outlook.  
@@ -128,7 +123,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -139,7 +134,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxoutlookbartabctrl.h  
   
-##  <a name="addcontrol"></a>CMFCOutlookBarTabCtrl::AddControl  
+##  <a name="addcontrol"></a>  CMFCOutlookBarTabCtrl::AddControl  
  Dodaje nową kartę w pasku Outlook kontrolki systemu Windows.  
   
 ```  
@@ -152,19 +147,19 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWndCtrl`  
+ [in] `pWndCtrl`  
  Wskaźnik do formantu do dodania.  
   
- [in]`lpszName`  
+ [in] `lpszName`  
  Określa nazwę karty.  
   
- [in]`bDetachable`  
+ [in] `bDetachable`  
  Jeśli `TRUE`, strona zostanie utworzona jako odłączane.  
   
- [in]`nImageID`  
+ [in] `nImageID`  
  Indeks obrazu na liście wewnętrznych obrazu dla obrazu do wyświetlenia na nowej karcie.  
   
- [in]`dwControlBarStyle`  
+ [in] `dwControlBarStyle`  
  Określa AFX_ `CBRS_`* styl opakowana okienka dokowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -179,7 +174,7 @@ void AddControl(
   
  [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]  
   
-##  <a name="canshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrl::CanShowFewerPageButtons  
+##  <a name="canshowfewerpagebuttons"></a>  CMFCOutlookBarTabCtrl::CanShowFewerPageButtons  
  Wywoływane przez platformę podczas operacji w celu ustalenia, czy można wyświetlić mniej przycisków strony karty pasek Outlook nie są widoczne zmiany rozmiaru.  
   
 ```  
@@ -187,12 +182,12 @@ virtual BOOL CanShowFewerPageButtons() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli istnieje więcej niż jeden przycisk; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli istnieje więcej niż jeden przycisk; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Formantu paska Outlook dynamicznie dodaje lub usuwa karty z ekranu w zależności od tego, ile miejsca jest dostępne. Ta metoda jest używana przez platformę, aby pomóc w tym procesie.  
   
-##  <a name="canshowmorepagebuttons"></a>CMFCOutlookBarTabCtrl::CanShowMorePageButtons  
+##  <a name="canshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::CanShowMorePageButtons  
  Wywoływane przez platformę podczas operacji w celu ustalenia, czy można wyświetlić więcej przycisków strony karty pasek Outlook nie są widoczne zmiany rozmiaru.  
   
 ```  
@@ -200,12 +195,12 @@ virtual BOOL CanShowMorePageButtons() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`w przypadku przycisków, które nie są widoczne; w przeciwnym razie `FALSE`.  
+ `TRUE` w przypadku przycisków, które nie są widoczne; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Formant karty pasek Outlook dynamicznie dodaje lub usuwa karty z ekranu, w zależności od tego, ile miejsca jest dostępne. Ta metoda jest używana przez platformę, aby pomóc w tym procesie.  
   
-##  <a name="create"></a>CMFCOutlookBarTabCtrl::Create  
+##  <a name="create"></a>  CMFCOutlookBarTabCtrl::Create  
  Tworzy kontrolkę kartę paska programu Outlook.  
   
 ```  
@@ -216,13 +211,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`rect`  
+ [in] `rect`  
  Określa początkowy rozmiar i położenie w pikselach.  
   
- [in]`pParentWnd`  
+ [in] `pParentWnd`  
  Wskazuje okno nadrzędne. Nie może być `NULL`.  
   
- [in]`nID`  
+ [in] `nID`  
  Identyfikator formantu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -231,7 +226,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Uwagi  
  Zazwyczaj formanty kartę paska programu outlook są tworzone, gdy [klasy CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md) formanty `WM_CREATE` komunikat procesu.  
   
-##  <a name="enableanimation"></a>CMFCOutlookBarTabCtrl::EnableAnimation  
+##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  Określa, czy włączono animacji, która występuje podczas przełącznika między kartami active.  
   
 ```  
@@ -239,7 +234,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bEnable`  
+ [in] `bEnable`  
  Określa, czy animacja powinna być włączona lub wyłączona.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -247,7 +242,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
   
  Domyślnie program animacji jest włączone.  
   
-##  <a name="enableinplaceedit"></a>CMFCOutlookBarTabCtrl::EnableInPlaceEdit  
+##  <a name="enableinplaceedit"></a>  CMFCOutlookBarTabCtrl::EnableInPlaceEdit  
  Określa, czy użytkownik może modyfikować etykiet tekstowych na karcie strony przycisków paska Outlook.  
   
 ```  
@@ -261,7 +256,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji, aby włączyć lub wyłączyć edycji w miejscu etykiet tekst na przyciskach strony karty. Domyślnie edycji w miejscu jest wyłączona.  
   
-##  <a name="enablescrollbuttons"></a>CMFCOutlookBarTabCtrl::EnableScrollButtons  
+##  <a name="enablescrollbuttons"></a>  CMFCOutlookBarTabCtrl::EnableScrollButtons  
  Wywoływane przez platformę, by włączyć uchwytów przewijania, które umożliwiają użytkownikom przycisków w okienku paska przewijania.  
   
 ```  
@@ -272,19 +267,19 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bEnable`  
+ [in] `bEnable`  
  Określa, czy są wyświetlane przyciski przewijania.  
   
- [in]`bIsUp`  
+ [in] `bIsUp`  
  Określa, czy jest wyświetlany górny pasek przewijania.  
   
- [in]`bIsDown`  
+ [in] `bIsDown`  
  Określa, czy jest wyświetlany pasek przewijania dolnej.  
   
 ### <a name="remarks"></a>Uwagi  
  Umożliwia wyświetlanie przyciski przewijania. Ta metoda jest wywoływana przez platformę po zmianie aktywnego kartę do przywrócenia przyciski przewijania.  
   
-##  <a name="getbordersize"></a>CMFCOutlookBarTabCtrl::GetBorderSize  
+##  <a name="getbordersize"></a>  CMFCOutlookBarTabCtrl::GetBorderSize  
  Zwraca rozmiar obramowania formantu programu Outlook.  
   
 ```  
@@ -294,7 +289,7 @@ int GetBorderSize() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar obramowania w pikselach.  
   
-##  <a name="getvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
+##  <a name="getvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
 
   
 ```  
@@ -305,7 +300,7 @@ int GetVisiblePageButtons() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isanimation"></a>CMFCOutlookBarTabCtrl::IsAnimation  
+##  <a name="isanimation"></a>  CMFCOutlookBarTabCtrl::IsAnimation  
  Określa, czy włączono animacji, która występuje podczas przełącznika między kartami active.  
   
 ```  
@@ -318,7 +313,7 @@ static BOOL IsAnimation();
 ### <a name="remarks"></a>Uwagi  
  Wywołanie [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation) funkcji, aby włączyć lub wyłączyć animacji.  
   
-##  <a name="ismode2003"></a>CMFCOutlookBarTabCtrl::IsMode2003  
+##  <a name="ismode2003"></a>  CMFCOutlookBarTabCtrl::IsMode2003  
  Określa, czy formant karty pasek Outlook jest w trybie, która emuluje Microsoft Outlook 2003.  
   
 ```  
@@ -326,12 +321,12 @@ BOOL IsMode2003() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli paska formantu karty Outlook jest w trybie Outlook 2003; w przeciwnym razie `FALSE`;  
+ `TRUE` Jeśli paska formantu karty Outlook jest w trybie Outlook 2003; w przeciwnym razie `FALSE`;  
   
 ### <a name="remarks"></a>Uwagi  
  Ta wartość jest ustawiana przez [CMFCOutlookBar::SetMode2003](../../mfc/reference/cmfcoutlookbar-class.md#setmode2003).  
   
-##  <a name="onshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrl::OnShowFewerPageButtons  
+##  <a name="onshowfewerpagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowFewerPageButtons  
  Wywoływane przez platformę, aby zmniejszyć liczbę przycisków strony karty, które są widoczne.  
   
 ```  
@@ -341,7 +336,7 @@ virtual void OnShowFewerPageButtons();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda dostosowuje liczbę przycisków karty strony widoczny, gdy zmieniany jest rozmiar formantu.  
   
-##  <a name="onshowmorepagebuttons"></a>CMFCOutlookBarTabCtrl::OnShowMorePageButtons  
+##  <a name="onshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowMorePageButtons  
  Wywoływane przez platformę, aby zwiększyć liczbę przycisków strony karty, które są widoczne.  
   
 ```  
@@ -351,7 +346,7 @@ virtual void OnShowMorePageButtons();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda Dostosuj liczbę przycisków strony karty, które są widoczne, gdy zmieniany jest rozmiar formantu.  
   
-##  <a name="onshowoptions"></a>CMFCOutlookBarTabCtrl::OnShowOptions  
+##  <a name="onshowoptions"></a>  CMFCOutlookBarTabCtrl::OnShowOptions  
  Wyświetla **opcje okienka nawigacji** okno dialogowe.  
   
 ```  
@@ -363,7 +358,7 @@ virtual void OnShowOptions();
   
  Ta metoda jest wywoływana przez platformę, gdy użytkownik wybierze **opcje okienka nawigacji** element menu z menu Dostosowywanie formantu.  
   
-##  <a name="setactivetab"></a>CMFCOutlookBarTabCtrl::SetActiveTab  
+##  <a name="setactivetab"></a>  CMFCOutlookBarTabCtrl::SetActiveTab  
  Ustawia aktywnej karty. Karta active jest ten, który jest otwarty, wraz z zawartością widoczne.  
   
 ```  
@@ -371,7 +366,7 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iTab`  
+ [in] `iTab`  
  Liczony od zera indeks kartę, aby go otworzyć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -380,7 +375,7 @@ virtual BOOL SetActiveTab(int iTab);
 ### <a name="remarks"></a>Uwagi  
  Efekt ustawienia na karcie active zależy od tego, czy włączono animacji. Aby uzyskać więcej informacji, zobacz [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation).  
   
-##  <a name="setbordersize"></a>CMFCOutlookBarTabCtrl::SetBorderSize  
+##  <a name="setbordersize"></a>  CMFCOutlookBarTabCtrl::SetBorderSize  
  Określa rozmiar obramowania formantu karty programu Outlook.  
   
 ```  
@@ -388,13 +383,13 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nBorderSize`  
+ [in] `nBorderSize`  
  Określa nowy rozmiar obramowania w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
  Ustawia nowy rozmiar obramowania i ponownie oblicza układ okna programu outlook.  
   
-##  <a name="setpagebuttontextalign"></a>CMFCOutlookBarTabCtrl::SetPageButtonTextAlign  
+##  <a name="setpagebuttontextalign"></a>  CMFCOutlookBarTabCtrl::SetPageButtonTextAlign  
  Określa wyrównanie etykiety na karcie przycisków paska Outlook.  
   
 ```  
@@ -404,16 +399,16 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiAlign`  
+ [in] `uiAlign`  
  Określa wyrównanie tekstu.  
   
- [in]`bRedraw`  
+ [in] `bRedraw`  
  Jeśli `TRUE`, zostanie narysowany ponownie okno programu outlook.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja służy do zmiany wyrównania tekstu dla strony przycisków.  
   
- `uiAlign`może to być jedna z następujących wartości:  
+ `uiAlign` Może to być jedna z następujących wartości:  
   
 |Stała|Znaczenie|  
 |--------------|-------------|  
@@ -423,7 +418,7 @@ void SetPageButtonTextAlign(
   
  Wartość domyślna to TA_CENTER.  
   
-##  <a name="settoolbarimagelist"></a>CMFCOutlookBarTabCtrl::SetToolbarImageList  
+##  <a name="settoolbarimagelist"></a>  CMFCOutlookBarTabCtrl::SetToolbarImageList  
  Ustawia mapy bitowej zawierającego ikony, które są wyświetlane w dolnej części paska Outlook w trybie 2003 programu Outlook.  
   
 ```  
@@ -434,13 +429,13 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiID`  
+ [in] `uiID`  
  Określa identyfikator zasobu obrazu do załadowania.  
   
- [in]`cx`  
+ [in] `cx`  
  Określa szerokość obrazu na liście obrazu w pikselach.  
   
- [in]`clrTransp`  
+ [in] `clrTransp`  
  Wartości RGB, która określa kolor przezroczysty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -451,7 +446,7 @@ BOOL SetToolbarImageList(
   
  Nie można wywoływać tej metody nie w trybie Microsoft Office 2003. Aby uzyskać więcej informacji, zobacz [CMFCOutlookBar klasy](../../mfc/reference/cmfcoutlookbar-class.md).  
   
-##  <a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
+##  <a name="setvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
 
   
 ```  
@@ -459,7 +454,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nVisiblePageButtons`  
+ [in] `nVisiblePageButtons`  
   
 ### <a name="remarks"></a>Uwagi  
   

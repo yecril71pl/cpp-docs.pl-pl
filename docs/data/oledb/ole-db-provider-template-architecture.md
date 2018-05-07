@@ -1,12 +1,9 @@
 ---
 title: Architektura szablonu dostawcy OLE DB | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 122da4031eff1cacfaf3242000cbd36eb7b75356
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 099f6e3ce4a84baa156dd26d9bff62be8a4936da
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektura szablonu dostawcy OLE DB
 ## <a name="data-sources-and-sessions"></a>Źródła i sesje danych  

@@ -1,30 +1,25 @@
 ---
 title: Dodawanie interfejsu do dostawcy | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d62f3e4fc3a12c1aeb58f4d6d42ded38d4dfe58
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3d6bc5d1b6c47d2ffa26bffa98d47b930d6ed193
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Dodawanie interfejsu do dostawcy
 Określenia, które obiekty chcesz dodać interfejsu (zazwyczaj danych źródła wierszy, polecenie albo sesji obiektów utworzonych przez kreatora dostawcy bazy danych OLE). Istnieje możliwość, że obiekt, należy dodać interfejs do to taki, który dostawca nie obsługuje obecnie. W takim przypadku Kreator ATL OLE DB dostawcy do utworzenia obiektu. Kliknij prawym przyciskiem myszy projekt w widoku klas, kliknij przycisk **Dodaj klasę** z **Dodaj** menu, a następnie kliknij przycisk **ATL dostawcy OLE DB**. Możesz chcieć umieść kod interfejsu w oddzielnym katalogu, a następnie skopiuj pliki do projektu dostawcy.  

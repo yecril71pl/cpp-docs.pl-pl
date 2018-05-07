@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCMenuButton | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCMenuButton
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac8fe59fe5dbfb101ec0881dbf17925cf048caa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcmenubutton-class"></a>Klasa CMFCMenuButton
 Przycisk menu podręcznego i raporty w opcji menu użytkownika.  
@@ -80,7 +75,7 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="remarks"></a>Uwagi  
  `CMFCMenuButton` Jest pochodną klasy [klasy CMFCButton](../../mfc/reference/cmfcbutton-class.md) który z kolei pochodną [CButton klasy](../../mfc/reference/cbutton-class.md). W związku z tym można użyć `CMFCMenuButton` w taki sam sposób, należy użyć kodu `CButton`.  
   
- Po utworzeniu `CMFCMenuButton`, trzeba przekazać w dojścia do skojarzonego menu podręczne. Następnie wywołaj funkcję `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent`sprawdza, czy rozmiar przycisku jest wystarczająca do uwzględnienia strzałkę, która wskazuje lokalizację, gdzie okno podręczne pojawi się — to znaczy, poniżej lub po prawej stronie przycisku.  
+ Po utworzeniu `CMFCMenuButton`, trzeba przekazać w dojścia do skojarzonego menu podręczne. Następnie wywołaj funkcję `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent` sprawdza, czy rozmiar przycisku jest wystarczająca do uwzględnienia strzałkę, która wskazuje lokalizację, gdzie okno podręczne pojawi się — to znaczy, poniżej lub po prawej stronie przycisku.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano, jak ustawić dojście dołączone do przycisku menu, Zmień rozmiar przycisku zgodnie z jego tekstu i rozmiaru obrazka i ustaw menu podręczne jest wyświetlany przez platformę. Następujący fragment kodu jest częścią [próbki nowe formanty](../../visual-cpp-samples.md).  
@@ -91,7 +86,7 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -104,14 +99,14 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxmenubutton.h  
   
-##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
+##  <a name="cmfcmenubutton"></a>  CMFCMenuButton::CMFCMenuButton  
  Tworzy nowy [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) obiektu.  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
+##  <a name="m_bosmenu"></a>  CMFCMenuButton::m_bOSMenu  
  Wyświetla platformę zmienną członkowską logiczna, która wskazuje, które menu podręczne.  
   
 ```  
@@ -121,7 +116,7 @@ BOOL m_bOSMenu;
 ### <a name="remarks"></a>Uwagi  
  Jeśli `m_bOSMenu` jest `TRUE`, struktura wywołuje dziedziczonego `TrackPopupMenu` metody dla tego obiektu. W przeciwnym razie struktura wywołuje [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).  
   
-##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
+##  <a name="m_brightarrow"></a>  CMFCMenuButton::m_bRightArrow  
  Zmiennej członkowskiej Boolean, który wskazuje lokalizację, w menu podręcznym.  
   
 ```  
@@ -131,7 +126,7 @@ BOOL m_bRightArrow;
 ### <a name="remarks"></a>Uwagi  
  Gdy użytkownik naciśnie przycisk menu, aplikacja zawiera menu podręczne. Platformę będą wyświetlane po kliknięciu przycisku lub po prawej stronie przycisku menu podręcznym. Przycisk ma również małą strzałkę, która wskazuje, gdzie będą wyświetlane menu podręczne. Jeśli `m_bRightArrow` jest `TRUE`, platformę Wyświetla menu podręczne po prawej stronie przycisku. W przeciwnym razie on Wyświetla menu podręczne po kliknięciu przycisku.  
   
-##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
+##  <a name="m_bstaypressed"></a>  CMFCMenuButton::m_bStayPressed  
  Zmiennej członkowskiej Boolean wskazującą, czy jest wyświetlany przycisk menu naciśnięciu, gdy użytkownik nie wybrał wybór z menu podręcznego.  
   
 ```  
@@ -143,7 +138,7 @@ BOOL m_bStayPressed;
   
  Jeśli `m_bStayPressed` element członkowski jest `TRUE`, staje się naciśnięty przycisk menu, gdy użytkownik kliknie przycisk. Pozostaje on objęty naciśniętego dopiero po zamknięciu menu podręcznego Zaznaczanie lub anulowanie przez użytkownika.  
   
-##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
+##  <a name="m_hmenu"></a>  CMFCMenuButton::m_hMenu  
  Dojście do menu dołączone.  
   
 ```  
@@ -153,7 +148,7 @@ HMENU m_hMenu;
 ### <a name="remarks"></a>Uwagi  
  Platformę Wyświetla menu wskazywanym przez tej zmiennej członkowskiej, gdy użytkownik kliknie przycisk menu.  
   
-##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult  
  Liczba całkowita, która wskazuje, który element użytkownik wybiera z menu podręcznego.  
   
 ```  
@@ -163,7 +158,7 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Uwagi  
  Wartość tej zmiennej elementu członkowskiego wynosi zero, jeśli użytkownik anuluje menu bez dokonywania wyboru lub w przypadku wystąpienia błędu.  
   
-##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage  
  Wywoływane przez platformę, by tłumaczenie komunikaty okna przed ich wysłaniem.  
   
 ```  
@@ -171,7 +166,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pMsg`  
+ [in] `pMsg`  
  Wskazuje [MSG](../../mfc/reference/msg-structure1.md) strukturę, która zawiera komunikat do przetworzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -179,7 +174,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCMenuButton::SizeToContent  
  Zmienia rozmiar przycisku zgodnie z jego rozmiaru tekstu i rozmiaru obrazu.  
   
 ```  
@@ -187,7 +182,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bCalcOnly`  
+ [in] `bCalcOnly`  
  Parametrów typu Boolean wskazującą, czy ta metoda zmienia rozmiar przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  

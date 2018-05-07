@@ -1,12 +1,9 @@
 ---
 title: Klasa CFtpFileFind | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFtpFileFind
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4fe3b188d5b03c9e727349b9e30982cf52006c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cftpfilefind-class"></a>Klasa CFtpFileFind
 Pomoc w wyszukiwania plików internetowych serwerów FTP.  
@@ -61,7 +56,7 @@ class CFtpFileFind : public CFileFind
 |[CFtpFileFind::GetFileURL](#getfileurl)|Pobiera adres URL, w tym ścieżki znaleziony plik.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CFtpFileFind`obejmuje funkcje Członkowskie, które rozpocząć wyszukiwanie, zlokalizuj plik i zwraca adres URL lub inne informacje opisowe dotyczące pliku.  
+ `CFtpFileFind` obejmuje funkcje Członkowskie, które rozpocząć wyszukiwanie, zlokalizuj plik i zwraca adres URL lub inne informacje opisowe dotyczące pliku.  
   
  Inne klasy MFC przeznaczony dla Internet i lokalny plik przeszukiwane obejmują [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) i [CFileFind](../../mfc/reference/cfilefind-class.md). Razem z `CFtpFileFind`, te klasy zapewniają bezproblemowe mechanizm klienta można znaleźć określonych plików, niezależnie od serwera protokołu lub typu pliku (komputer lokalny lub zdalny serwer). Należy zauważyć, że nie jest Brak klasy MFC do wyszukiwania na serwerach HTTP, ponieważ HTTP nie obsługuje manipulowania bezpośredniego plików wymaganych do wyszukiwania.  
   
@@ -82,7 +77,7 @@ class CFtpFileFind : public CFileFind
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxinet.h  
   
-##  <a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
+##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind  
  Ta funkcja elementu członkowskiego jest wywoływana w celu utworzenia `CFtpFileFind` obiektu.  
   
 ```  
@@ -104,7 +99,7 @@ explicit CFtpFileFind(
 ### <a name="example"></a>Przykład  
   Zapoznaj się z przykładem w omówieniu klasy wcześniej w tym temacie.  
   
-##  <a name="findfile"></a>CFtpFileFind::FindFile  
+##  <a name="findfile"></a>  CFtpFileFind::FindFile  
  Wywołanie tej funkcji członkowskich można znaleźć pliku FTP.  
   
 ```  
@@ -139,7 +134,7 @@ virtual BOOL FindFile(
 ### <a name="example"></a>Przykład  
   Zobacz przykład wcześniej w tym temacie.  
   
-##  <a name="findnextfile"></a>CFtpFileFind::FindNextFile  
+##  <a name="findnextfile"></a>  CFtpFileFind::FindNextFile  
  Wywołanie tej funkcji Członkowskich, aby kontynuować wyszukiwanie plików uruchomione za pomocą wywołania [FindFile](#findfile) funkcję elementu członkowskiego.  
   
 ```  
@@ -152,12 +147,12 @@ virtual BOOL FindNextFile();
 ### <a name="remarks"></a>Uwagi  
  Tej funkcji należy wywołać co najmniej raz, przed wywołaniem dowolnej funkcji atrybutu (patrz [CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).  
   
- `FindNextFile`opakowuje funkcję Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
+ `FindNextFile` opakowuje funkcję Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
   
 ### <a name="example"></a>Przykład  
   Zapoznaj się z przykładem wcześniej w tym temacie.  
   
-##  <a name="getfileurl"></a>CFtpFileFind::GetFileURL  
+##  <a name="getfileurl"></a>  CFtpFileFind::GetFileURL  
  Wywołanie tej funkcji Członkowskich, aby uzyskać adres URL określony plik.  
   
 ```  
@@ -168,7 +163,7 @@ CString GetFileURL() const;
  Pliku i ścieżki Universal lokalizatora zasobów (URL).  
   
 ### <a name="remarks"></a>Uwagi  
- `GetFileURL`jest podobne do funkcji członkowskiej [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), ale zwraca adres URL w postaci `ftp://moose/dir/file.txt`.  
+ `GetFileURL` jest podobne do funkcji członkowskiej [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), ale zwraca adres URL w postaci `ftp://moose/dir/file.txt`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CFileFind](../../mfc/reference/cfilefind-class.md)   

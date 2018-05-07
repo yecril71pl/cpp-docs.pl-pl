@@ -1,13 +1,10 @@
 ---
-title: "Tworzenie kolekcji stosów i kolejek | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Tworzenie kolekcji stosów i kolejek | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd3c4d587f64fc89bf25cfd127e6b7efc490df8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5545a1803675965cdea716e009ab70d2d72a31f4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-stack-and-queue-collections"></a>Tworzenie kolekcji stosów i kolejek
 W tym artykule opisano sposób tworzenia inne struktury danych, takich jak [stosy](#_core_stacks) i [kolejek](#_core_queues), z MFC lista klas. W przykładach użyto klasy pochodzące od `CList`, ale można użyć `CList` bezpośrednio, chyba że konieczne jest dodanie funkcji.  
   
-##  <a name="_core_stacks"></a>Stosy  
+##  <a name="_core_stacks"></a> Stosy  
  Ponieważ kolekcji standardowych listy head oraz tail, jest łatwo utworzyć kolekcję pochodnej listy, która symuluje zachowanie stosu ostatnich w pierwszym poza. Stos przypomina stosu zasobników w kawiarnia. Gdy zasobników są dodawane do stosu, przejdź na szczycie stosu. Ostatniego na pasku zadań, dodane jest pierwsze do usunięcia. Funkcje Członkowskie kolekcji listy `AddHead` i `RemoveHead` może służyć do dodania i usunięcia elementów w szczególności z węzła głównego z listy; w związku z tym najbardziej ostatnio dodany element to pierwszy do usunięcia.  
   
 #### <a name="to-create-a-stack-collection"></a>Aby utworzyć kolekcję stosu  
@@ -48,7 +43,7 @@ W tym artykule opisano sposób tworzenia inne struktury danych, takich jak [stos
   
  Należy pamiętać, że to rozwiązanie przedstawia podstawową `CObList` klasy. Użytkownik może wywołać dowolną `CObList` funkcji członkowskiej, czy warto stosu lub nie.  
   
-##  <a name="_core_queues"></a>Kolejki  
+##  <a name="_core_queues"></a> Kolejki  
  Ponieważ kolekcji standardowych listy head oraz tail, również jest łatwo utworzyć kolekcję pochodnej listy, która symuluje zachowanie kolejki pierwszy w pierwszym poza. Kolejka jest jak linia życia osób w kawiarnia. Pierwsza osoba w wierszu jest pierwszy ma być obsługiwana. Ponieważ pochodzą więcej osób, przejdź do końca wiersza oczekiwania ich Włącz. Funkcje Członkowskie kolekcji listy `AddTail` i `RemoveHead` można dodać i usunąć elementy w szczególności head lub tail listy; w związku z tym maksymalnie niedawno dodano element jest zawsze ostatni usunięcie.  
   
 #### <a name="to-create-a-queue-collection"></a>Aby utworzyć kolekcję kolejki  

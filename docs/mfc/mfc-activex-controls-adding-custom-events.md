@@ -1,13 +1,10 @@
 ---
-title: "Formanty MFC ActiveX: Dodawanie zdarzeń niestandardowych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Formanty MFC ActiveX: Dodawanie zdarzeń niestandardowych | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,22 +21,20 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Kontrolki ActiveX MFC: dodawanie zdarzeń niestandardowych
 Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one automatycznie uruchamiane przez klasę `COleControl`. Zdarzenie niestandardowe rozpoznaje niektórych działań, określany przez dewelopera kontrolek jako zdarzenie. Wpisy mapy zdarzeń dla zdarzenia niestandardowe są reprezentowane przez `EVENT_CUSTOM` makra. Poniższa sekcja implementuje zdarzenie niestandardowe dla projektu formantu ActiveX, który został utworzony przy użyciu Kreatora formantów ActiveX.  
   
-##  <a name="_core_adding_a_custom_event_with_classwizard"></a>Dodawanie niestandardowych zdarzeń z Kreator dodawania zdarzenia  
+##  <a name="_core_adding_a_custom_event_with_classwizard"></a> Dodawanie niestandardowych zdarzeń z Kreator dodawania zdarzenia  
  Poniższa procedura dodaje określonego zdarzenia niestandardowe clickin —. Ta procedura służy do dodawania innych zdarzeń niestandardowych. Zastąp nazwę zdarzenie niestandardowe, a jego parametrów clickin — zdarzenie nazwy i parametry.  
   
 #### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>Aby dodać clickin — zdarzenie niestandardowe przy użyciu Kreatora dodawania zdarzenia  
@@ -62,7 +57,7 @@ Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one a
   
 8.  Kliknij przycisk **Zakończ** utworzyć zdarzenia.  
   
-##  <a name="_core_classwizard_changes_for_custom_events"></a>Dodawanie zdarzenia zmiany kreatora dla zdarzeń niestandardowych  
+##  <a name="_core_classwizard_changes_for_custom_events"></a> Dodawanie zdarzenia zmiany kreatora dla zdarzeń niestandardowych  
  Po dodaniu niestandardowych zdarzeń, Kreator dodawania zdarzenia zmienia klasy formantu. H. CPP, i. IDL, pliki. Poniższe przykłady kodu są specyficzne dla clickin — zdarzenie.  
   
  Następujące wiersze są dodawane do nagłówka (. H) pliku Twojej klasy kontrolki:  
@@ -83,7 +78,7 @@ Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one a
   
  Ten wiersz przypisuje clickin — zdarzenie określonych numer identyfikacyjny pobranych z pozycji zdarzenia na liście zdarzeń Kreator dodawania zdarzenia. Wpis na liście zdarzeń umożliwia kontenera do przewidzenia zdarzenia. Na przykład może ona kod obsługi do wykonania, gdy zdarzenie jest wywoływane.  
   
-##  <a name="_core_calling_fireclickin"></a>Fireclickin — wywołanie  
+##  <a name="_core_calling_fireclickin"></a> Fireclickin — wywołanie  
  Teraz, gdy zostaną dodane za pomocą Kreatora dodawania zdarzenia clickin — zdarzenie niestandardowe, należy zdecydować, gdy to zdarzenie ma być uruchamiane. Można to zrobić przez wywołanie metody `FireClickIn` po wystąpieniu odpowiednią akcję. Dla tej dyskusji używa kontrolki `InCircle` działać wewnątrz `WM_LBUTTONDOWN` obsługi wiadomości uruchomienie clickin — zdarzenie, gdy użytkownik kliknie wewnątrz okrągły lub eliptycznej regionu. Dodaje procedurę `WM_LBUTTONDOWN` obsługi.  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Aby dodać program obsługi komunikatów przy użyciu Kreatora dodawania zdarzenia  
@@ -117,7 +112,7 @@ Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one a
   
  [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]  
   
-##  <a name="_core_custom_events_with_stock_names"></a>Niestandardowe zdarzenia o standardowych nazwach  
+##  <a name="_core_custom_events_with_stock_names"></a> Niestandardowe zdarzenia o standardowych nazwach  
  Niestandardowe zdarzenia można utworzyć z taką samą nazwę jak standardowych zdarzeń, jednak nie można zaimplementować zarówno w tej samej kontrolki. Na przykład można utworzyć niestandardowe zdarzenie o nazwie kliknij przycisk, który nie jest wyzwalana, gdy zdarzenie standardowe kliknij zwykle spowoduje uruchomienie. Następnie można wywołać zdarzenia kliknij w dowolnym momencie przez wywołanie funkcji jego uruchamiania.  
   
  Poniższa procedura dodaje niestandardowych kliknij zdarzenie.  

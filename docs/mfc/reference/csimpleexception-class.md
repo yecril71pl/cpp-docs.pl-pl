@@ -1,12 +1,9 @@
 ---
 title: Klasa CSimpleException | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSimpleException
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7730fdd356b8145b771a85b8449974c2c8fa007
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csimpleexception-class"></a>Klasa CSimpleException
 Ta klasa jest klasą bazową dla zasobu o znaczeniu krytycznym wyjątków MFC.  
@@ -55,7 +50,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 |[CSimpleException::GetErrorMessage](#geterrormessage)|Zapewnia tekst o błędzie, który wystąpił.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CSimpleException`jest klasą bazową dla zasobu o znaczeniu krytycznym wyjątków MFC i obsługuje własności i inicjowania komunikat o błędzie. Następujące klasy użyj `CSimpleException` jako klasy podstawowej:  
+ `CSimpleException` jest klasą bazową dla zasobu o znaczeniu krytycznym wyjątków MFC i obsługuje własności i inicjowania komunikat o błędzie. Następujące klasy użyj `CSimpleException` jako klasy podstawowej:  
   
 |||  
 |-|-|  
@@ -79,7 +74,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afx.h  
   
-##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
+##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
  Konstruktor.  
   
 ```  
@@ -94,7 +89,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="remarks"></a>Uwagi  
  Zwykle nigdy nie należy bezpośrednio wywoływać tego konstruktora. Funkcja, która zgłasza wyjątek, należy utworzyć wystąpienie `CException`-klasy i Wywołaj jego konstruktora lub powinien użycie MFC zgłosić funkcje, takie jak [afxthrowfileexception —](exception-processing.md#afxthrowfileexception), aby zgłosić wstępnie zdefiniowanego typu.  
   
-##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
  Wywołanie tej funkcji Członkowskich, aby umieścić tekst o błędzie, który wystąpił.  
   
 ```  

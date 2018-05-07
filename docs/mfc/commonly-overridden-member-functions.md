@@ -1,13 +1,10 @@
 ---
-title: "Powszechnie zastępowane funkcje Członkowskie | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Powszechnie zastępowane funkcje Członkowskie | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa3fb072ca882b03b9da96d54cdefbba5e59a68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed090057394c385dd12825864c5de9ff7d079e29
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="commonly-overridden-member-functions"></a>Powszechnie zastępowane funkcje członkowskie
 W poniższej tabeli wymieniono najbardziej prawdopodobne funkcje Członkowskie do przesłonięcia w Twojej `CDialog`-klasy.  
@@ -44,11 +39,11 @@ W poniższej tabeli wymieniono najbardziej prawdopodobne funkcje Członkowskie d
   
  `OnInitDialog`, `OnOK`, i `OnCancel` są funkcje wirtualne. Aby je zastąpić, zastępowanie funkcja zadeklarować w klasie pochodnej okna dialogowego za pomocą [okna właściwości](/visualstudio/ide/reference/properties-window).  
   
- `OnInitDialog`jest wywoływana tuż przed wyświetleniem okna dialogowego. Należy wywołać domyślnie `OnInitDialog` programu obsługi z zastąpienia — zwykle jako pierwszą akcją w obsłudze. Domyślnie `OnInitDialog` zwraca **TRUE** aby wskazać, że należy ustawić fokus do pierwszego formantu w oknie dialogowym.  
+ `OnInitDialog` jest wywoływana tuż przed wyświetleniem okna dialogowego. Należy wywołać domyślnie `OnInitDialog` programu obsługi z zastąpienia — zwykle jako pierwszą akcją w obsłudze. Domyślnie `OnInitDialog` zwraca **TRUE** aby wskazać, że należy ustawić fokus do pierwszego formantu w oknie dialogowym.  
   
- `OnOK`Zazwyczaj jest wyłączona dla niemodalne, ale nie modalnych okien dialogowych. Razie przesłonięcia tej obsługi dla modalne okno dialogowe, wywołaj wersja klasy podstawowej z zastąpienia — do zapewnienia, że `EndDialog` jest nazywany — lub zadzwoń `EndDialog` samodzielnie.  
+ `OnOK` Zazwyczaj jest wyłączona dla niemodalne, ale nie modalnych okien dialogowych. Razie przesłonięcia tej obsługi dla modalne okno dialogowe, wywołaj wersja klasy podstawowej z zastąpienia — do zapewnienia, że `EndDialog` jest nazywany — lub zadzwoń `EndDialog` samodzielnie.  
   
- `OnCancel`Zazwyczaj jest wyłączona dla Niemodalne okna dialogowe.  
+ `OnCancel` Zazwyczaj jest wyłączona dla Niemodalne okna dialogowe.  
   
  Aby uzyskać więcej informacji o tych funkcjach Członkowskich zawiera klasa [cdialog —](../mfc/reference/cdialog-class.md) w *odwołania MFC* i dyskusji na [cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md).  
   

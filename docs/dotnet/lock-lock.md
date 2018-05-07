@@ -1,12 +1,9 @@
 ---
 title: Lock::Lock | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - lock::lock
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locklock"></a>lock::lock
 Konstruuje `lock` obiektu opcjonalnie oczekiwania na uzyskanie blokady w nieskończoność, na określony czas lub wcale.  
@@ -67,11 +62,11 @@ template<class T> lock(
 ## <a name="remarks"></a>Uwagi  
  Pierwsze trzy rodzaje konstruktora próby uzyskania blokady na `_object` przed upływem określonego limitu czasu (lub <xref:System.Threading.Timeout.Infinite> Jeśli nie zostanie określona).  
   
- Czwarty formularza konstruktora nie uzyskania blokady na `_object`. `lock_later`jest elementem członkowskim [wyliczenie lock_when](../dotnet/lock-when-enum.md). Użyj [lock::acquire](../dotnet/lock-acquire.md) lub [lock::try_acquire](../dotnet/lock-try-acquire.md) na przejęcie blokady w takim przypadku.  
+ Czwarty formularza konstruktora nie uzyskania blokady na `_object`. `lock_later` jest elementem członkowskim [wyliczenie lock_when](../dotnet/lock-when-enum.md). Użyj [lock::acquire](../dotnet/lock-acquire.md) lub [lock::try_acquire](../dotnet/lock-try-acquire.md) na przejęcie blokady w takim przypadku.  
   
  Zablokuj automatycznie zostanie wydana wywołanego destruktor.  
   
- `_object`nie może być <xref:System.Threading.ReaderWriterLock>.  Jeśli tak jest, wystąpi błąd kompilatora.  
+ `_object` nie może być <xref:System.Threading.ReaderWriterLock>.  Jeśli tak jest, wystąpi błąd kompilatora.  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie użycie pojedynczego wystąpienia klasy przez wiele wątków.  Klasy używa blokady na samym sobie, aby upewnić się, że dostęp do swoich danych wewnętrznych są spójne dla każdego wątku.  Wątku głównego aplikacji nawiązywał blokady dla tego samego wystąpienia klasy okresowo sprawdzać, czy wszystkie wątki robocze nadal istnieje i czeka, aby wyjść do wszystkich wątków zakończył ich zadań.  

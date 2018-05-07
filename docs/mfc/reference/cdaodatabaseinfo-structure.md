@@ -2,12 +2,9 @@
 title: Cdaodatabaseinfo — struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoDatabaseInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 085d0e525cb00c9fffb3698080194da92a6dbb8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo — Struktura
 `CDaoDatabaseInfo` Struktura zawiera informacje dotyczące obiektu bazy danych zdefiniowany dla obiektów dostępu do danych (DAO).  
@@ -109,7 +104,7 @@ struct CDaoDatabaseInfo
 ## <a name="remarks"></a>Uwagi  
  Baza danych jest obiektem DAO MFC obiekt klasy podstawowej [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). Odwołania do podstawowej, pomocniczej i wszystkie powyższe wskazują, jak informacje zwracane przez [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) funkcję elementu członkowskiego.  
   
- Informacje o pobrane przez [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) funkcja członkowska jest przechowywany w `CDaoDatabaseInfo` struktury. Wywołanie `GetDatabaseInfo` dla `CDaoWorkspace` obiektu, w których bazy danych kolekcji jest obiekt bazy danych. `CDaoDatabaseInfo`definiuje również `Dump` kompilacje funkcji członkowskiej podczas debugowania. Można użyć `Dump` do zrzutu zawartość `CDaoDatabaseInfo` obiektu.  
+ Informacje o pobrane przez [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) funkcja członkowska jest przechowywany w `CDaoDatabaseInfo` struktury. Wywołanie `GetDatabaseInfo` dla `CDaoWorkspace` obiektu, w których bazy danych kolekcji jest obiekt bazy danych. `CDaoDatabaseInfo` definiuje również `Dump` kompilacje funkcji członkowskiej podczas debugowania. Można użyć `Dump` do zrzutu zawartość `CDaoDatabaseInfo` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  

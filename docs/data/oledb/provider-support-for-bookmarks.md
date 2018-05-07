@@ -1,12 +1,9 @@
 ---
-title: "Obsługa dostawców dla zakładek | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obsługa dostawców dla zakładek | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 39720b271834a585eff3ef3893154462bcdf7424
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 139956fcd7d9244c486ad37797696817c7080fbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="provider-support-for-bookmarks"></a>Obsługa dostawców dla zakładek
 Dodaje na przykład w tym temacie `IRowsetLocate` interfejsu do `CMyProviderRowset` klasy. W większości przypadków możesz uruchomić Dodawanie interfejsu do istniejącego obiektu COM. Można następnie testować przez dodanie kolejnych wywołań z szablonami konsumentów. W przykładzie pokazano, jak:  

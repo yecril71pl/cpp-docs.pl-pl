@@ -1,13 +1,10 @@
 ---
-title: "Testowanie właściwości i zdarzeń za pomocą kontenera testu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Testowanie właściwości i zdarzeń za pomocą kontenera testu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 381f4e421b63b2ba48fe649a30e5bf7648b50d27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fbf2b7c26b7fc44a526381f4fb3e4dee5c94ba8d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Testowanie właściwości i zdarzeń za pomocą kontenera testu
 Kontener testu aplikacji, w programie Visual C++, jest kontenera formantu ActiveX, testowanie i debugowanie kontrolki ActiveX. Kontener testu umożliwia deweloperowi kontroli przetestować funkcje formantu przez zmianę jego właściwości, wywoływanie metod i wyzwalania jego zdarzenia. Kontener testu można wyświetlać dzienniki powiadomień wiązania z danymi i udostępnia również urządzenia do testowania funkcji trwałości formantu ActiveX: można zapisać właściwości do strumienia lub substorage, Załaduj ponownie je i sprawdzić dane przechowywane strumienia. Tej sekcji opisano sposób użycia podstawowych funkcji kontener testu. Aby uzyskać dodatkowe informacje, wybierz **pomocy** menu podczas wykonywania kontener testu.  

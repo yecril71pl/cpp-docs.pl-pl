@@ -1,11 +1,8 @@
 ---
 title: Klasa platform::Collections::Vector | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Klasa platform::Collections::Vector
 
@@ -399,7 +394,7 @@ Wskaźnik do `std::vector` używany bieżący wektor inicjowania.
 *pierwszy*  
 Pierwszym elementem w sekwencji obiektów, które są używane do bieżącego wektor inicjowania. Typ *pierwszy* jest przekazywany za pomocą klasy *doskonała przekazywania*. Aby uzyskać więcej informacji, zobacz [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*last*  
+*ostatni*  
 Ostatnim elementem w sekwencji obiektów, które są używane do bieżącego wektor inicjowania. Typ *ostatniego* jest przekazywany za pomocą klasy *doskonała przekazywania*. Aby uzyskać więcej informacji, zobacz [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Zobacz też

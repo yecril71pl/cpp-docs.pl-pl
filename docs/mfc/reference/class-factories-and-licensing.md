@@ -1,13 +1,10 @@
 ---
 title: Fabryki klas i Licencjonowanie | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79710cb1fa67ec8315fe287364126f88b4b498d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-factories-and-licensing"></a>Fabryki klas i licencjonowanie
 Aby utworzyć wystąpienia formantu OLE, aplikacji kontenera wywołania funkcji członkowskiej klasy fabryki klasy formantu. Ponieważ formantu rzeczywistego obiektu OLE, fabryki klasy jest odpowiedzialny za tworzenie wystąpienia formantu. Każda klasa formantu OLE musi mieć fabrykę klas.  
@@ -44,7 +39,7 @@ Aby utworzyć wystąpienia formantu OLE, aplikacji kontenera wywołania funkcji 
 |[END_OLEFACTORY —](#end_olefactory)|Kończy się deklaracji funkcji licencjonowania.|  
 |[Afxverifylicfile —](#afxverifylicfile)|Sprawdza, czy formant jest licencjonowany do użycia na danym komputerze.|  
   
-##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX —  
+##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX —  
  Deklaruje fabrykę klas i `GetClassID` funkcji członkowskiej klasy formantu.  
   
 ```   
@@ -65,7 +60,7 @@ DECLARE_OLECREATE_EX(class_name)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX —  
+##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX —  
  Implementuje fabryki klasy formantu i [Procedura GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) funkcji członkowskiej klasy formantu.  
   
 ```   
@@ -101,7 +96,7 @@ IMPLEMENT_OLECREATE_EX(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY —  
+##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY —  
  Rozpoczyna się deklaracja fabryce klasy w pliku nagłówka klasy formantu.  
   
 ``` 
@@ -118,7 +113,7 @@ BEGIN_OLEFACTORY(class_name)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="end_olefactory"></a>END_OLEFACTORY —  
+##  <a name="end_olefactory"></a>  END_OLEFACTORY —  
  Kończy się deklaracja fabryki klasy formantu.  
   
 ```  
@@ -132,7 +127,7 @@ END_OLEFACTORY(class_name)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="afxverifylicfile"></a>Afxverifylicfile —  
+##  <a name="afxverifylicfile"></a>  Afxverifylicfile —  
  Wywołanie tej funkcji, aby sprawdzić, czy plik licencji o nazwie `pszLicFileName` jest nieprawidłowa dla formantu OLE.  
   
 ```   

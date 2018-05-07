@@ -1,12 +1,9 @@
 ---
 title: Makra pomocnika DDX_DHtml | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - AFXDHTML/DDX_DHtml_ElementValue
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d5a69e08d06a53dcb2f3a4be58618e9829e8c8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ddxdhtml-helper-macros"></a>Makra pomocnika DDX_DHtml
 Zezwalaj na makra pomocnika DDX_DHtml łatwy dostęp do często używanych właściwości formantów na stronie HTML.  
@@ -57,7 +52,7 @@ Zezwalaj na makra pomocnika DDX_DHtml łatwy dostęp do często używanych wła�
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdhtml.h  
 
-## <a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
+## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 Ustawia lub pobiera docelowy adres URL i punktu kontrolnego.  
   
   
@@ -82,7 +77,7 @@ DDX_DHtml_Anchor_Href(
 ## <a name="remarks"></a>Uwagi  
  Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLANCHORELEMENT_HREF funkcję wysyłania identyfikatora.
 
-## <a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
+## <a name="ddx_dhtml_anchor_target"></a>  DDX_DHtml_Anchor_Target
  Ustawia lub pobiera docelowego okna lub ramki.  
     
 ```  
@@ -105,7 +100,7 @@ DDX_DHtml_Anchor_Target(
 ## <a name="remarks"></a>Uwagi  
  Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLANCHORELEMENT_TARGET funkcję wysyłania identyfikatora.  
 
-## <a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
+## <a name="ddx_dhtml_elementinnerhtml"></a>  DDX_DHtml_ElementInnerHtml
  Ustawia lub pobiera kod HTML między tagiem początkowym i końcowym bieżącego elementu.  
   
   
@@ -131,7 +126,7 @@ DDX_DHtml_ElementInnerHtml(
  Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLELEMENT_INNERHTML funkcję wysyłania identyfikatora.  
   
 
-## <a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
+## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
 Ustawia lub pobiera tekst między tagiem początkowym i końcowym bieżącego elementu.  
   
   
@@ -156,7 +151,7 @@ DDX_DHtml_ElementInnerText(
 ## <a name="remarks"></a>Uwagi  
  Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLELEMENT_INNERTEXT funkcję wysyłania identyfikatora. 
 
-## <a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue  
+## <a name="ddx_dhtml_elementvalue"></a> DDX_DHtml_ElementValue  
 Ustawia lub pobiera wartość właściwości z wybranego formantu.  
  
 ```  
@@ -181,7 +176,7 @@ DDX_DHtml_ElementValue(
   
  Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_A_VALUE funkcję wysyłania identyfikatora.  
 
-## <a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
+## <a name="ddx_dhtml_frame_src"></a> DDX_DHtml_Frame_Src
 Ustawia lub pobiera adres URL skojarzone ramki.  
   
 ```  
@@ -204,7 +199,7 @@ DDX_DHtml_Frame_Src(
 ## <a name="remarks"></a>Uwagi  
  Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLFRAMEBASE_SRC funkcję wysyłania identyfikatora.  
 
-## <a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
+## <a name="ddx_dhtml_iframe_src"></a> DDX_DHtml_IFrame_Src
 Ustawia lub pobiera adres URL skojarzone ramki.  
   
   

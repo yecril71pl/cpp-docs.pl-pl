@@ -1,12 +1,9 @@
 ---
-title: "Ostrzeżenia kompilatora — od C4200 do C4399 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Ostrzeżenia kompilatora — od C4200 do C4399 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4203
@@ -42,17 +39,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f0d58a0d7a348abd0b85d8d5dee41db28ed4f9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 41adf86af231a3f6dfc1f0ecdb14418dea78ec7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Ostrzeżenia kompilatora — od C4200 do C4399
 
@@ -175,7 +170,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |[Ostrzeżenie kompilatora (poziom 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Importowanie biblioteki typów odsyłaczy "*library1*"przed zaimportowaniem"*library2*"|
 |[Ostrzeżenie kompilatora (poziom 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|Biblioteka typów odsyłaczy "*library1*"in"*library2*" jest automatycznie importowana|
 |Ostrzeżenie kompilatora (poziom 4) C4338|#pragma *dyrektywy*: standardowa sekcja "*sekcji*" jest używana|
-|[Ostrzeżenie kompilatora (poziom 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|"*typu*": użycie niezdefiniowanego typu wykryte w "WinRT &#124; CLR' meta-data - użycie tego typu może spowodować wyjątek czasu wykonywania|
+|[Ostrzeżenie kompilatora (poziom 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|"*typu*": użycie niezdefiniowanego typu wykryte w "WinRT&#124;CLR' meta-data - użycie tego typu może spowodować wyjątek czasu wykonywania|
 |[Ostrzeżenie kompilatora (poziom 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|"*wartość*": wartość opakowano z dodatniej do ujemnej wartości|
 |[Ostrzeżenie kompilatora (poziom 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|Zmiana zachowania: "*funkcja*" o nazwie, ale operator elementu członkowskiego został wywołany w poprzednich wersjach|
 |Ostrzeżenie kompilatora (poziom 4) C4343|#pragma optimize("g",off) przesłania opcję /Og|

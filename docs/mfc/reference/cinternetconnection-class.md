@@ -1,12 +1,9 @@
 ---
 title: Klasa CInternetConnection | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetConnection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0c20cee097ae0ba61a9106da0476541e7d7c18e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07b269afce3ec0c3ef60e6cc37782fdea18260cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetconnection-class"></a>Klasa CInternetConnection
 Zarządzanie połączeniem internetowym serwerze.  
@@ -81,7 +76,7 @@ class CInternetConnection : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxinet.h  
   
-##  <a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
+##  <a name="cinternetconnection"></a>  CInternetConnection::CInternetConnection  
  Ta funkcja członkowska jest wywoływane, gdy `CInternetConnection` tworzony jest obiekt.  
   
 ```  
@@ -116,7 +111,7 @@ CInternetConnection(
   
  Wartością domyślną dla `dwContext` są wysyłane przez MFC do `CInternetConnection`-pochodnych obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt **InternetConnection**-pochodzi z obiektu. Wartość domyślna jest ustawiona na 1; jednak można jawnie przypisać identyfikatora kontekstu określonych w [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) konstruktora dla połączenia. Obiekt i pracę go nie będą skojarzone z tym identyfikatorem kontekstu. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którym zostanie zidentyfikowana. Zapoznaj się z artykułem [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
   
-##  <a name="getcontext"></a>CInternetConnection::GetContext  
+##  <a name="getcontext"></a>  CInternetConnection::GetContext  
  Wywołanie tej funkcji członkowskich można uzyskać Identyfikatora kontekstu dla tej sesji.  
   
 ```  
@@ -131,7 +126,7 @@ DWORD_PTR GetContext() const;
   
  Aby uzyskać więcej informacji o tym, jak **GetContext** współpracuje z innymi Wininet — klasy zapewniające informacje o stanie użytkownika, zobacz artykuł [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) Aby uzyskać więcej informacji o kontekście Identyfikator.  
   
-##  <a name="getservername"></a>CInternetConnection::GetServerName  
+##  <a name="getservername"></a>  CInternetConnection::GetServerName  
  Wywołanie tej funkcji członkowskich można odczytać nazwy serwera skojarzonego z tym połączeniem z Internetem.  
   
 ```  
@@ -141,7 +136,7 @@ CString GetServerName() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Nazwa serwera, w którym pracuje ten obiekt połączenia.  
   
-##  <a name="getsession"></a>CInternetConnection::GetSession  
+##  <a name="getsession"></a>  CInternetConnection::GetSession  
  Wywołanie tej funkcji Członkowskich otrzymywać wskaźnik do `CInternetSession` obiektu, który został skojarzony z tym połączeniem.  
   
 ```  
@@ -151,7 +146,7 @@ CInternetSession* GetSession() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiekt skojarzony z tym obiektem połączenia internetowego.  
   
-##  <a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetConnection::operator HINTERNET  
  Użyj tego operatora, można pobrać uchwytu poziom interfejsu API dla bieżącej sesji Internet.  
   
 ```  

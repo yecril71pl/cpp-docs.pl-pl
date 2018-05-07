@@ -1,13 +1,10 @@
 ---
-title: "Dostępu do danych programowania (MFC ATL) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Dostępu do danych programowania (MFC ATL) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 06ab0ff17db77975d365280b6ee95cafb094db3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5f4806d1f9d469088ea10fc56cadb7dd87d3279
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-access-programming-mfcatl"></a>Dostęp do danych programowania (MFC/ATL)
 Całościowo Visual C++ oferuje wiele możliwości korzystania z bazy danych. 2011 firma Microsoft poinformowała, że jest ona wyrównywanie na ODBC jako preferowaną technologią do uzyskiwania dostępu do programu SQL Server produkty z kodu macierzystego. ODBC jest standardem branżowym i za jego pomocą uzyskać maksymalną przenośność kodu przez wiele platform i źródeł danych. Większość produktów bazy danych SQL i wiele produktów NoSQL obsługuje ODBC. Można użyć ODBC bezpośrednio przez wywoływanie funkcji interfejsu API ODBC niskiego poziomu, lub skorzystać z MFC ODBC — klasy otoki lub biblioteki otoki C++ innych firm. 

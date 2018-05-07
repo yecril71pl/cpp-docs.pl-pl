@@ -1,13 +1,10 @@
 ---
-title: "Semantyka typów wartości | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Semantyka typów wartości | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 - __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44662f2ad8e79712b4aab17e2784a72e01ec4116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-type-semantics"></a>Semantyka typów wartości
 Semantyka typów wartości zostały zmienione od rozszerzeń zarządzanych dla języka C++ dla Visual C++.  
@@ -51,7 +46,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>Wywoływanie metody wirtualne dziedziczonych  
- `Form (1)`Obiekt wartości kanonicznej i dostatecznie dobrze przyjmuje się, z wyjątkiem przypadków, gdy ktoś spróbuje taką jak wywołanie dziedziczonej metody wirtualnej `ToString()`. Na przykład:  
+ `Form (1)` Obiekt wartości kanonicznej i dostatecznie dobrze przyjmuje się, z wyjątkiem przypadków, gdy ktoś spróbuje taką jak wywołanie dziedziczonej metody wirtualnej `ToString()`. Na przykład:  
   
 ```  
 v.ToString(); // error!  
@@ -91,7 +86,7 @@ v.ToString(); // new syntax
  Chcielibyśmy opakowywanie klasy natywnej małych w typu wartości, a nie typu odwołania w celu uniknięcia alokacji sterty podwójne: natywnej sterty natywnej typu i stosu CLR do przechowywania zarządzanych otoki. Zawijanie klasy natywnej w ramach typu wartości umożliwia uniknięcie sterty zarządzanej, ale zapewnia sposobem zautomatyzowania odzyskiwanie pamięci natywnej sterty. Typy odwołań są tylko jest to możliwe typ zarządzany, w którym do zakodowania nieuproszczony klasach macierzystych.  
   
 ## <a name="interior-pointers"></a>Wewnętrznych wskaźników  
- `Form (2)`i `Form (3)` powyżej można rozwiązać prawie wszystko w tym world lub następnego (czyli niczego zarządzanym lub macierzystym). Tak na przykład następujące są dozwolone w zarządzanych rozszerzeń:  
+ `Form (2)` i `Form (3)` powyżej można rozwiązać prawie wszystko w tym world lub następnego (czyli niczego zarządzanym lub macierzystym). Tak na przykład następujące są dozwolone w zarządzanych rozszerzeń:  
   
 ```  
 __value struct V { int i; };  
@@ -126,7 +121,7 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)`i `Form (3)` zarządzanych rozszerzeń Mapuj na `interior_ptr<V>`. `Form (4)`jest śledzenie dojścia. Dotyczy on cały obiekt, który został opakowany w stercie zarządzanej. Jest translacja w nowej składni w `V^`,  
+ `Form (2)` i `Form (3)` zarządzanych rozszerzeń Mapuj na `interior_ptr<V>`. `Form (4)` jest śledzenie dojścia. Dotyczy on cały obiekt, który został opakowany w stercie zarządzanej. Jest translacja w nowej składni w `V^`,  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    

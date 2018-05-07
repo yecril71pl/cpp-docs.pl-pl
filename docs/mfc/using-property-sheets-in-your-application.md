@@ -1,13 +1,10 @@
 ---
-title: "Używanie arkuszy właściwości w aplikacji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Używanie arkuszy właściwości w aplikacji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4247a40fa364774674c1c79845625df51ecd34ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74e63faf5b1cac5e0cb841a28fd59ecee47c9970
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-property-sheets-in-your-application"></a>Używanie arkuszy właściwości w aplikacji
 Aby użyć arkusza właściwości w aplikacji, wykonaj następujące kroki:  
@@ -63,7 +58,7 @@ Aby użyć arkusza właściwości w aplikacji, wykonaj następujące kroki:
   
     -   Wywołanie [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) dla każdej strony.  
   
-     Zazwyczaj obiekt, który tworzy `CPropertySheet` tworzy także `CPropertyPage` obiektów w tym kroku. Jednak w przypadku zastosowania `CPropertySheet`-klasy, można osadzić `CPropertyPage` obiekty w `CPropertySheet` obiekt i wywołanie `AddPage` dla każdej strony z `CPropertySheet`-konstruktora klasy pochodnej. `AddPage`dodaje `CPropertyPage` do listy stron arkusza właściwości obiektu, ale nie powoduje utworzenia okna dla tej strony. W związku z tym nie jest konieczne tworzenie okna arkusza właściwości do wywołania po upływie `AddPage`; można wywołać `AddPage` z arkusza właściwości konstruktora.  
+     Zazwyczaj obiekt, który tworzy `CPropertySheet` tworzy także `CPropertyPage` obiektów w tym kroku. Jednak w przypadku zastosowania `CPropertySheet`-klasy, można osadzić `CPropertyPage` obiekty w `CPropertySheet` obiekt i wywołanie `AddPage` dla każdej strony z `CPropertySheet`-konstruktora klasy pochodnej. `AddPage` dodaje `CPropertyPage` do listy stron arkusza właściwości obiektu, ale nie powoduje utworzenia okna dla tej strony. W związku z tym nie jest konieczne tworzenie okna arkusza właściwości do wywołania po upływie `AddPage`; można wywołać `AddPage` z arkusza właściwości konstruktora.  
   
      Domyślnie jeśli w arkuszu właściwości więcej kart niż mieści się w jednym wierszu arkusza właściwości kart będą umieszczane w wielu wierszach. Aby wyłączyć układania, należy wywołać [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) z parametrem ustawioną **FALSE**. Należy wywołać `EnableStackedTabs` podczas tworzenia arkusza właściwości.  
   

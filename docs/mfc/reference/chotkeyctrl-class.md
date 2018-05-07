@@ -2,11 +2,8 @@
 title: Chotkeyctrl — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHotKeyCtrl
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 982d4dec9c00490248da0b0e0dec7fd44376c218
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chotkeyctrl-class"></a>Chotkeyctrl — klasa
 Udostępnia funkcje systemu Windows wspólnej formantu klawisza dostępu.  
@@ -86,7 +81,7 @@ class CHotKeyCtrl : public CWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -95,14 +90,14 @@ class CHotKeyCtrl : public CWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcmn.h  
   
-##  <a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
+##  <a name="chotkeyctrl"></a>  CHotKeyCtrl::CHotKeyCtrl  
  Konstruuje `CHotKeyCtrl` obiektu.  
   
 ```  
 CHotKeyCtrl();
 ```  
   
-##  <a name="create"></a>CHotKeyCtrl::Create  
+##  <a name="create"></a>  CHotKeyCtrl::Create  
  Tworzy formantu klawisza dostępu i dołącza go do `CHotKeyCtrl` obiektu.  
   
 ```  
@@ -134,7 +129,7 @@ virtual BOOL Create(
   
  Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CreateEx](#createex) zamiast **Utwórz**.  
   
-##  <a name="createex"></a>CHotKeyCtrl::CreateEx  
+##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  Wywołanie tej funkcji można utworzyć formantu (okno podrzędne) i skojarz ją z `CHotKeyCtrl` obiektu.  
   
 ```  
@@ -168,7 +163,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Użyj `CreateEx` zamiast [Utwórz](#create) dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
   
-##  <a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
+##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey  
  Pobiera wirtualnego klucza flagi kodu i modyfikator skrótu klawiatury z formantu klawisza dostępu.  
   
 ```  
@@ -180,10 +175,10 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`wVirtualKeyCode`  
+ [out] `wVirtualKeyCode`  
  Kod klucza wirtualnego skrót klawiaturowy. Listę standardowych wirtualnego kodów klucza Zobacz Winuser.h.  
   
- [out]`wModifiers`  
+ [out] `wModifiers`  
  Bitowe połączenie (lub) flag, które wskazują klawisze modyfikujące w skrót klawiaturowy.  
   
  Modyfikator flagi są następujące:  
@@ -201,7 +196,7 @@ void GetHotKey(
 ### <a name="remarks"></a>Uwagi  
  Kod klucza wirtualnego i jednocześnie klawisze modyfikujące definiują skrót klawiaturowy.  
   
-##  <a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
+##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName  
  Wywołanie tej funkcji Członkowskich uzyskanie zlokalizowana nazwa klawisza dostępu.  
   
 ```  
@@ -214,7 +209,7 @@ CString GetHotKeyName() const;
 ### <a name="remarks"></a>Uwagi  
  Nazwa, która zwraca funkcji członkowskiej pochodzi z sterownik klawiatury. Można zainstalować sterownik klawiatury nie zlokalizowane w zlokalizowanej wersji systemu Windows i na odwrót.  
   
-##  <a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
+##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName  
  Wywołanie tej funkcji Członkowskich zlokalizowanej nazwy klucza przypisane do określonej wirtualnej kod klucza.  
   
 ```  
@@ -239,7 +234,7 @@ static CString GetKeyName(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
-##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
+##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey  
  Ustawia skrót klawiaturowy dla formantu klawisza dostępu.  
   
 ```  
@@ -249,10 +244,10 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`wVirtualKeyCode`  
+ [in] `wVirtualKeyCode`  
  Kod klucza wirtualnego skrót klawiaturowy. Listę standardowych wirtualnego kodów klucza Zobacz Winuser.h.  
   
- [in]`wModifiers`  
+ [in] `wModifiers`  
  Bitowe połączenie (lub) flag, które wskazują klawisze modyfikujące w skrót klawiaturowy.  
   
  Modyfikator flagi są następujące:  
@@ -267,7 +262,7 @@ void SetHotKey(
 ### <a name="remarks"></a>Uwagi  
  Kod klucza wirtualnego i jednocześnie klawisze modyfikujące definiują skrót klawiaturowy.  
   
-##  <a name="setrules"></a>CHotKeyCtrl::SetRules  
+##  <a name="setrules"></a>  CHotKeyCtrl::SetRules  
  Wywołanie tej funkcji, aby zdefiniować kombinacje nieprawidłowy i kombinacja modyfikatora domyślnego dla formantu klawisza dostępu.  
   
 ```  
@@ -280,21 +275,21 @@ void SetRules(
  `wInvalidComb`  
  Tablica flag, który określa nieprawidłowy kombinacje klawiszy. Może być kombinacją następujących wartości:  
   
-- `HKCOMB_A`ALT  
+- `HKCOMB_A` ALT  
   
-- `HKCOMB_C`CTRL  
+- `HKCOMB_C` CTRL  
   
-- `HKCOMB_CA`CTRL + ALT  
+- `HKCOMB_CA` CTRL + ALT  
   
-- `HKCOMB_NONE`Klucze zostały zmodyfikowane  
+- `HKCOMB_NONE` Klucze zostały zmodyfikowane  
   
-- `HKCOMB_S`SHIFT  
+- `HKCOMB_S` SHIFT  
   
-- `HKCOMB_SA`SHIFT + ALT  
+- `HKCOMB_SA` SHIFT + ALT  
   
-- `HKCOMB_SC`SHIFT + CTRL  
+- `HKCOMB_SC` SHIFT + CTRL  
   
-- `HKCOMB_SCA`SHIFT + CTRL + ALT  
+- `HKCOMB_SCA` SHIFT + CTRL + ALT  
   
  `wModifiers`  
  Tablica flag, która określa kombinację klawiszy do użycia, kiedy użytkownik wprowadzi nieprawidłowe połączenie. Aby uzyskać więcej informacji o flagach modyfikator, zobacz [GetHotKey](#gethotkey).  

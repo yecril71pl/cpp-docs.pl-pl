@@ -1,13 +1,10 @@
 ---
-title: "Porady: kierowanie tablic za pomocą funkcji PInvoke | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: kierowanie tablic za pomocą funkcji PInvoke | Dokumentacja firmy Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 50ff0e0a6e61b3c2c691296f92f6ad471a3007e9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 03e3cf184828c33c63c5252344eb0041640729cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>Porady: przeprowadzanie marshalingu tablic za pomocą funkcji PInvoke
 W tym temacie opisano sposób natywny funkcje, których ciągów w stylu języka C można wywołać przy użyciu typu ciąg CLR <xref:System.String> przy użyciu wywołania platformy Framework .NET pomocy technicznej. Visual C++ programistów są zachęcani do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe), ponieważ zapewnia P/Invoke małego błąd kompilacji raportowania, nie jest bezpieczne i może być niewygodne wdrożenia. Jeśli niezarządzanego API jest dostarczana jako biblioteki DLL i kod źródłowy jest niedostępny, P/Invoke jest jedyną opcją (w przeciwnym razie zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  

@@ -1,13 +1,10 @@
 ---
-title: "Połączenie static Const Int nie jest już literałem | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Połączenie static Const Int nie jest już literałem | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - constants, declaring
 - integral constant expressions
 ms.assetid: d2a5e3d2-ffb0-4b61-8114-bec5993a1195
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8f34682fa780ef430d27104d3df9658f9e32ad39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc3f72080c08807026c6458979ac0ba561e298df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="static-const-int-linkage-is-no-longer-literal"></a>Połączenie static const int nie jest już literałem
 Deklaracja stałej elementu członkowskiego klasy zmienił się z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  
@@ -73,4 +68,4 @@ public:
   
 ## <a name="see-also"></a>Zobacz też  
  [Deklaracje członków w obrębie klasy lub interfejsu (C + +/ CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [literału](../windows/literal-cpp-component-extensions.md)
+ [Literału](../windows/literal-cpp-component-extensions.md)

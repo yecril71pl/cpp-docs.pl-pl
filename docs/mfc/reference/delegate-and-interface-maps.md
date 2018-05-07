@@ -1,13 +1,10 @@
 ---
 title: Delegat i interfejs mapy makra (MFC) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9767c8b92316ffb9e458ba650e28db9ddf1a095b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 |||  
 |-|-|  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[MAKE_DELEGATE —](#make_delegate)|Dołącza program obsługi zdarzeń do zarządzanego formantu.|
 
 
-## <a name="begin_delegate_map"></a>BEGIN_DELEGATE_MAP —
+## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP —
 Rozpoczyna się mapy delegata.  
    
 ### <a name="syntax"></a>Składnia    
@@ -120,7 +115,7 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
  Identyfikator polecenia komunikatu.  
    
 ### <a name="remarks"></a>Uwagi  
- Ten delegat rejestruje metody wywołania zwrotnego komunikat polecenia aktualizacji interfejsu użytkownika. `CommandUIHandler`przypomina [commandhandler — obiekt](#commandhandler) z tą różnicą, że ten delegat jest używany z polecenia aktualizacji obiektu interfejsu użytkownika. Polecenia aktualizacji interfejsu użytkownika należy mapować w jeden do jednego z metody obsługi wiadomości.  
+ Ten delegat rejestruje metody wywołania zwrotnego komunikat polecenia aktualizacji interfejsu użytkownika. `CommandUIHandler` przypomina [commandhandler — obiekt](#commandhandler) z tą różnicą, że ten delegat jest używany z polecenia aktualizacji obiektu interfejsu użytkownika. Polecenia aktualizacji interfejsu użytkownika należy mapować w jeden do jednego z metody obsługi wiadomości.  
   
  Aby uzyskać więcej informacji na temat używania formularzy systemu Windows, zobacz [za pomocą formantu użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
    

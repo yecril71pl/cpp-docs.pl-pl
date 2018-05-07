@@ -1,24 +1,22 @@
 ---
-title: "Właściwości konsolidatora (C++ systemu Linux) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Właściwości konsolidatora (C++ systemu Linux) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 9/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: Linux
+ms.topic: conceptual
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 5396021410ec04baa8eb1218c676919a322ac978
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 9187222d2ced21ece2f183655591c483abc8d500
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-properties-linux-c"></a>Właściwości konsolidatora (Linux C++)
 
@@ -26,7 +24,7 @@ ms.lasthandoff: 01/03/2018
 
 Właściwość | Opis | Opcje
 --- | ---| ---
-Plik wyjściowy | Opcja przesłania domyślną nazwę i lokalizację programu tworzonego przez konsolidatora. (-o).
+Plik wyjściowy | Opcja przesłania domyślną nazwę i lokalizację programu tworzonego przez konsolidatora. (-o)
 Pokaż postęp | Drukuje wiadomości dotyczące postępu konsolidatora.
 Wersja | -Version — opcja nakazuje konsolidatorowi umieszczenie numeru wersji w nagłówku pliku wykonywalnego.
 Włącz pełne dane wyjściowe | Verbose — opcja nakazuje konsolidatorowi wysyłanie pełnych komunikatów na potrzeby debugowania.
@@ -49,7 +47,7 @@ Ignoruj określone biblioteki domyślne | Określa jedną lub więcej nazw bibli
 Ignoruj biblioteki domyślne | Ignoruj biblioteki domyślne i wyszukiwanie tylko określone jawnie bibliotek.
 Niezdefiniowany Symbol odwołań Force | Wymuś symbolu, które zostaną wprowadzone w pliku wyjściowym jako niezdefiniowanego symbolu. (- u symbol--niezdefiniowana = symboli)
 Zależności biblioteki | Ta opcja umożliwia określenie dodatkowych bibliotek, które mają zostać dodane do wiersza polecenia konsolidatora. Dodatkowe biblioteki zostaną dodane na końcu wiersza polecenia konsolidatora prefiksem "lib" i kończyć się rozszerzeniem ".a".  (-lFILE)
-Dodatkowe zależności | Określa dodatkowe elementy do dodania do wiersza polecenia konsolidacji.
+{1&gt;Dodatkowe zależności&lt;1} | Określa dodatkowe elementy do dodania do wiersza polecenia konsolidacji.
 
 ## <a name="debugging"></a>Debugowanie
 

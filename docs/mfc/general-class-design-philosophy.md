@@ -1,13 +1,10 @@
 ---
-title: "Zasady ogólne projektowania klas | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zasady ogólne projektowania klas | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - classes [MFC], MFC class design
 - Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c174b06b27e78ca61d2608b8e04205068ac436e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b2d0915c4b2940e93b781e7a56e2640c64a7f20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-class-design-philosophy"></a>Ogólne zasady projektowania klas
 Microsoft Windows zostało zaprojektowane na długo przed popularnych aktywowano języka C++. Ponieważ tysiące aplikacje korzystają z interfejsu programowania aplikacji (API) języka C z systemem Windows, ten interfejs będzie przechowywany w najbliższej przyszłości. Każdy interfejs Windows w języku C++ w związku z tym muszą być zbudowane w oparciu procedur API języka C. Gwarantuje to, że aplikacji C++ będą mogli współistnieć z aplikacji C.  

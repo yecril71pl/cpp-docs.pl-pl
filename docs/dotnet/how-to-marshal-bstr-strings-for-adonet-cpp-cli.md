@@ -1,13 +1,10 @@
 ---
 title: 'Porady: kierowanie ciągów BSTR dla ADO.NET (C + +/ CLI) | Dokumentacja firmy Microsoft'
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - ADO.NET [C++], marshaling BSTR strings
 - strings [C++], marshaling BSTR strings
 ms.assetid: 5daf4d9e-6ae8-4604-908f-855e37c8d636
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8b7abdd9df0aaba774cdf918db4ec0100f5f12c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 633b9d623a759caaee3aa6dcf2c93d95549927d3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-bstr-strings-for-adonet-ccli"></a>Porady: przeprowadzanie marshalingu ciągów BSTR dla ADO.NET (C++/CLI)
 Pokazuje, jak dodać ciąg COM (`BSTR`) do bazy danych i sposobu zorganizowania <xref:System.String?displayProperty=fullName> z bazy danych do `BSTR`.  

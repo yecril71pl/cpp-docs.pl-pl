@@ -1,13 +1,10 @@
 ---
-title: "Manifest wejściowy narzędzia i dane wyjściowe właściwości (Visual C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Manifest wejściowy narzędzia i dane wyjściowe właściwości (Visual C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.OutputManifestFile
 - VC.Project.VCManifestTool.InputResourceManifests
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77137e9bc0a4af60080234aac85afa59034d2c6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 15be7636188bb670febd7875974d683c1d78360f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Dane wejściowe i wyjściowe narzędzie, właściwości konfiguracji manifestu &lt;Projectname&gt; stron właściwości — okno dialogowe
 To okno dialogowe służy do określania opcji wejściowymi i wyjściowymi dla [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
@@ -62,7 +57,7 @@ To okno dialogowe służy do określania opcji wejściowymi i wyjściowymi dla [
  Używa **/makecdfs** opcję, aby określić, że narzędzia manifestu wygeneruje katalogu definicji plików (.cdf), które służą do tworzenia katalogów.  
   
  **Generuj Manifest z biblioteki ManagedAssembly**  
- Generuje manifest z zarządzanego zestawu. (**- managedassemblyname:***pliku*).  
+ Generuje manifest z zarządzanego zestawu. (**- managedassemblyname: *** pliku*).  
   
  **Pomijanie elementu zależności**  
  Używane z **- managedassembly** opcji. Ten tag pomija generację zależności elementów w manifeście końcowym.  

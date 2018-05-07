@@ -1,12 +1,9 @@
 ---
 title: Klasa COlePasteSpecialDialog | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COlePasteSpecialDialog
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8680842f0aeeebf98eabc0f278089781290ad902
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colepastespecialdialog-class"></a>Klasa COlePasteSpecialDialog
 Używane dla okna dialogowego OLE Wklej specjalne.  
@@ -96,11 +91,11 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cdialog —](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
  [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
   
@@ -111,7 +106,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxodlgs.h  
   
-##  <a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
+##  <a name="addformat"></a>  COlePasteSpecialDialog::AddFormat  
  Wywołanie tej funkcji, aby dodać nowy format lista formatów obsługiwanych przez aplikację w ramach operacji Wklej specjalne.  
   
 ```  
@@ -165,7 +160,7 @@ void AddFormat(
   
  Aby uzyskać więcej informacji, zobacz [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) wyliczyć typów w zestawie Windows SDK.  
   
-##  <a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
+##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
  Dodaje nowy wpis do listy obsługiwanych formatów Schowka.  
   
 ```  
@@ -179,7 +174,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ### <a name="return-value"></a>Wartość zwracana  
  [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) struktury zawierającej informacje dotyczące nowego wpisu łącza.  
   
-##  <a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
+##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
  Wywołanie tej funkcji, aby dodać następujące formaty Schowka do listy formatów obsługiwanych przez aplikację w ramach operacji Wklej specjalne:  
   
 ```  
@@ -204,7 +199,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
  Te formaty są używane do obsługi osadzanie i łączenie.  
   
-##  <a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
+##  <a name="colepastespecialdialog"></a>  COlePasteSpecialDialog::COlePasteSpecialDialog  
  Konstruuje `COlePasteSpecialDialog` obiektu.  
   
 ```  
@@ -218,13 +213,13 @@ COlePasteSpecialDialog(
  `dwFlags`  
  Flagi tworzenia zawiera dowolną liczbę następujące flagi łączyć, używając operator Alternatywy:  
   
-- `PSF_SELECTPASTE`Określa, że przycisk radiowy Wklej będą sprawdzane początkowo wywołanego okna dialogowego. Nie można używać w połączeniu z `PSF_SELECTPASTELINK`. Domyślnie włączone.  
+- `PSF_SELECTPASTE` Określa, że przycisk radiowy Wklej będą sprawdzane początkowo wywołanego okna dialogowego. Nie można używać w połączeniu z `PSF_SELECTPASTELINK`. Domyślnie włączone.  
   
-- `PSF_SELECTPASTELINK`Określa początkowo zaznaczone Wklej łącze przycisk radiowy będzie wówczas, gdy jest wywoływana okna dialogowego. Nie można używać w połączeniu z `PSF_SELECTPASTE`.  
+- `PSF_SELECTPASTELINK` Określa początkowo zaznaczone Wklej łącze przycisk radiowy będzie wówczas, gdy jest wywoływana okna dialogowego. Nie można używać w połączeniu z `PSF_SELECTPASTE`.  
   
-- `PSF_CHECKDISPLAYASICON`Określa, że pole wyboru Wyświetl jako ikonę będą sprawdzane początkowo wywołanego okna dialogowego.  
+- `PSF_CHECKDISPLAYASICON` Określa, że pole wyboru Wyświetl jako ikonę będą sprawdzane początkowo wywołanego okna dialogowego.  
   
-- `PSF_SHOWHELP`Określa, czy przycisk Pomoc, aby będą wyświetlane, gdy jest wywoływana w oknie dialogowym.  
+- `PSF_SHOWHELP` Określa, czy przycisk Pomoc, aby będą wyświetlane, gdy jest wywoływana w oknie dialogowym.  
   
  `pDataObject`  
  Wskazuje [COleDataObject](../../mfc/reference/coledataobject-class.md) wklejania. Jeśli ta wartość jest **NULL**, pobiera `COleDataObject` ze Schowka.  
@@ -237,7 +232,7 @@ COlePasteSpecialDialog(
   
  Aby uzyskać więcej informacji, zobacz [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) wyliczyć typów w zestawie Windows SDK.  
   
-##  <a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
+##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem  
  Tworzy nowy element, który został wybrany w oknie dialogowym Wklej specjalne.  
   
 ```  
@@ -254,7 +249,7 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="remarks"></a>Uwagi  
  Funkcja ta powinna być wywoływana tylko po [DoModal](#domodal) zwraca **IDOK**.  
   
-##  <a name="domodal"></a>COlePasteSpecialDialog::DoModal  
+##  <a name="domodal"></a>  COlePasteSpecialDialog::DoModal  
  Wyświetla okno dialogowe w OLE Wklej specjalne.  
   
 ```  
@@ -275,7 +270,7 @@ virtual INT_PTR DoModal();
   
  Jeśli `DoModal` zwraca **IDOK**, innego członka można wywołać funkcji można pobrać ustawień lub wprowadzania informacji przez użytkownika w oknie dialogowym.  
   
-##  <a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COlePasteSpecialDialog::GetDrawAspect  
  Określa, czy użytkownik wybrał opcję Wyświetl zaznaczony element jako ikonę.  
   
 ```  
@@ -285,16 +280,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Metoda wymagane do renderowania obiektu.  
   
-- `DVASPECT_CONTENT`Zwracany, jeśli pole wyboru Wyświetl jako ikonę nie została sprawdzona odrzucania okna dialogowego.  
+- `DVASPECT_CONTENT` Zwracany, jeśli pole wyboru Wyświetl jako ikonę nie została sprawdzona odrzucania okna dialogowego.  
   
-- `DVASPECT_ICON`Zwracany, jeśli pole wyboru Wyświetl jako ikonę zaznaczono odrzucania okna dialogowego.  
+- `DVASPECT_ICON` Zwracany, jeśli pole wyboru Wyświetl jako ikonę zaznaczono odrzucania okna dialogowego.  
   
 ### <a name="remarks"></a>Uwagi  
  Tylko wywołanie tej funkcji po [DoModal](#domodal) zwraca **IDOK**.  
   
  Aby uzyskać więcej informacji na rysunku aspekt, zobacz [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury w zestawie Windows SDK.  
   
-##  <a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
  Pobiera metaplików powiązanych z elementem wybrane przez użytkownika.  
   
 ```  
@@ -304,7 +299,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do Metaplik zawierający odpowiednikiem aspekt wybranego elementu, jeśli pole wyboru Wyświetl jako ikonę wybrano odrzucania okna dialogowego, wybierając **OK**; w przeciwnym razie **NULL**.  
   
-##  <a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
+##  <a name="getpasteindex"></a>  COlePasteSpecialDialog::GetPasteIndex  
  Pobiera wartość indeksu skojarzone z danym wpisem wybrany przez użytkownika.  
   
 ```  
@@ -317,7 +312,7 @@ int GetPasteIndex() const;
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) struktury w zestawie Windows SDK.  
   
-##  <a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
  Określa typ wybranego użytkownika.  
   
 ```  
@@ -349,7 +344,7 @@ enum Selection {
   
 - **COlePasteSpecialDialog::pasteStatic** metaplików został wybrany format.  
   
-##  <a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
+##  <a name="m_ps"></a>  COlePasteSpecialDialog::m_ps  
  Struktura typu **OLEUIPASTESPECIAL** służące do sterowania zachowaniem Wklej specjalne okna dialogowego.  
   
 ```  

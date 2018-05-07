@@ -1,11 +1,8 @@
 ---
 title: Interfejs platform::IBoxArray | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52f8c95851ec80df41fe9f0838345cf46876227
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 572724dcebbdb3921b26d6c688ff5d68d1392437
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformiboxarray-interface"></a>Interfejs platform::IBoxArray
 `IBoxArray` Otoka dla tablic typów wartości, które są przekazywane przez interfejs binarne aplikacji (ABI) lub przechowywane w kolekcji jest `Platform::Object^` elementów, takich jak te w formantach XAML.  

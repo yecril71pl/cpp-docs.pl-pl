@@ -1,12 +1,9 @@
 ---
 title: Klasa CVSListBox | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CVSListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97d55b0b23302920e71dfd35766bfa0a4294d97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cvslistbox-class"></a>Klasa CVSListBox
 `CVSListBox` Klasa obsługuje kontrolki edycji listy.  
@@ -104,7 +99,7 @@ class CVSListBox : public CVSListBoxBase
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -117,7 +112,7 @@ class CVSListBox : public CVSListBoxBase
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxvslistbox.h  
   
-##  <a name="additem"></a>CVSListBox::AddItem  
+##  <a name="additem"></a>  CVSListBox::AddItem  
  Dodaje ciąg do kontrolki listy.  
   
 ```  
@@ -128,13 +123,13 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`strIext`  
+ [in] `strIext`  
  Odwołanie do ciągu.  
   
- [in]`dwData`  
+ [in] `dwData`  
  Specyficzne dla aplikacji 32-bitowa wartość skojarzoną z ciągiem. Wartość domyślna to 0.  
   
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks położenie, w którym będą przechowywane na ciąg. Jeśli `iIndex` parametr ma wartość -1, ten ciąg jest dodawane na końcu listy. Wartość domyślna wynosi -1.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -143,7 +138,7 @@ virtual int AddItem(
 ### <a name="remarks"></a>Uwagi  
  Użyj [CVSListBox::GetItemData](#getitemdata) metodę, aby pobrać wartość, która jest określona przez `dwData` parametru. Ta wartość może być liczbą całkowitą specyficzne dla aplikacji lub wskaźnik do innych danych.  
   
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
+##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  Konstruuje `CVSListBox` obiektu.  
   
 ```  
@@ -154,7 +149,7 @@ CVSListBox();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="edititem"></a>CVSListBox::EditItem  
+##  <a name="edititem"></a>  CVSListBox::EditItem  
  Rozpoczyna operację edycji tekstu elementu kontrolki listy.  
   
 ```  
@@ -162,16 +157,16 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu kontrolki listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli operacja edytowania rozpoczyna się pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli operacja edytowania rozpoczyna się pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Użytkownik uruchamia operację edycji, klikając etykietę elementu lub naciskając klawisz **F2** lub **spacja** klucza, gdy element ma fokus.  
   
-##  <a name="getcount"></a>CVSListBox::GetCount  
+##  <a name="getcount"></a>  CVSListBox::GetCount  
  Pobiera liczbę ciągów w formancie listy można edytować.  
   
 ```  
@@ -184,7 +179,7 @@ virtual int GetCount() const;
 ### <a name="remarks"></a>Uwagi  
  Należy pamiętać, że liczba jest jeden większa niż wartość indeksu ostatniego elementu, ponieważ indeks jest liczony od zera.  
   
-##  <a name="getitemdata"></a>CVSListBox::GetItemData  
+##  <a name="getitemdata"></a>  CVSListBox::GetItemData  
  Pobiera wartość 32-bitowych specyficzne dla aplikacji, która jest skojarzony z elementem kontrolki edycji listy.  
   
 ```  
@@ -192,7 +187,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu kontrolki edycji listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -201,7 +196,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="remarks"></a>Uwagi  
  Użyj [CVSListBox::SetItemData](#setitemdata) lub [CVSListBox::AddItem](#additem) do kojarzenia 32-bitową wartość z listy element kontroli. Ta wartość może być liczbą całkowitą specyficzne dla aplikacji lub wskaźnik do innych danych.  
   
-##  <a name="getitemtext"></a>CVSListBox::GetItemText  
+##  <a name="getitemtext"></a>  CVSListBox::GetItemText  
  Pobiera tekst elementu kontrolki edycji listy.  
   
 ```  
@@ -209,7 +204,7 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu kontrolki edycji listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -217,7 +212,7 @@ virtual CString GetItemText(int iIndex) const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
+##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd  
  Zwraca dojście do bieżącego formantu widoku listy osadzonych.  
   
 ```  
@@ -230,7 +225,7 @@ virtual HWND GetListHwnd() const;
 ### <a name="remarks"></a>Uwagi  
  Ta metoda służy do pobrania dojścia do formantu widoku listy osadzone, który obsługuje `CVSListBox` klasy.  
   
-##  <a name="getselitem"></a>CVSListBox::GetSelItem  
+##  <a name="getselitem"></a>  CVSListBox::GetSelItem  
  Pobiera liczony od zera Indeks aktualnie zaznaczonego elementu w formancie listy można edytować.  
   
 ```  
@@ -242,7 +237,7 @@ virtual int GetSelItem() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="removeitem"></a>CVSListBox::RemoveItem  
+##  <a name="removeitem"></a>  CVSListBox::RemoveItem  
  Usuwa element z listy można edytować kontrolki.  
   
 ```  
@@ -250,15 +245,15 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu kontrolki edycji listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli określony element jest usunięty; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli określony element jest usunięty; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="selectitem"></a>CVSListBox::SelectItem  
+##  <a name="selectitem"></a>  CVSListBox::SelectItem  
  Wybiera ciągu kontrolki edycji listy.  
   
 ```  
@@ -266,16 +261,16 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iItem`  
+ [in] `iItem`  
  Liczony od zera indeks elementu kontrolki edycji listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wybiera określony element i w razie potrzeby, przewinąć element w celu wyświetlenia.  
   
-##  <a name="setitemdata"></a>CVSListBox::SetItemData  
+##  <a name="setitemdata"></a>  CVSListBox::SetItemData  
  Kojarzy specyficzne dla aplikacji 32-bitową wartość z listy można edytować elementu formantu.  
   
 ```  
@@ -285,10 +280,10 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu kontrolki edycji listy.  
   
- [in]`dwData`  
+ [in] `dwData`  
  32-bitowa wartość. Ta wartość może być liczbą całkowitą specyficzne dla aplikacji lub wskaźnik do innych danych.  
   
 ### <a name="remarks"></a>Uwagi  

@@ -1,13 +1,10 @@
 ---
 title: Paski dialogowe | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9d7319f23741f683e31cfd683a8ebd6d25acdd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7c68ca2725d25b493003ad7d847176c7dd8d17d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-bars"></a>Paski dialogowe
 Paska dialogowego jest pasek narzędzi rodzaju z [pasek sterowania](../mfc/control-bars.md) które mogą zawierać dowolne formantu. Ponieważ ma on właściwości okno dialogowe niemodalne [cdialogbar —](../mfc/reference/cdialogbar-class.md) obiekt zapewnia bardziej zaawansowanych narzędzi.  
@@ -45,5 +40,5 @@ Paska dialogowego
   
 ## <a name="see-also"></a>Zobacz też  
  [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)   
- [Próbki](../visual-cpp-samples.md)
+ [próbki](../visual-cpp-samples.md)
 

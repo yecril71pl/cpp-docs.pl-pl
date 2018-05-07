@@ -1,13 +1,10 @@
 ---
-title: "Formularz widoków (MFC) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Formularz widoków (MFC) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e784858c17c01c8a538edebdb15a89863d16438
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87775c8afa1fa6eec8fbbdbbaa11bc9b5e6f1faa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="form-views-mfc"></a>Widoki formularzy (MFC)
 Formularze można dodawać do dowolnej aplikacji Visual C++, która obsługuje biblioteki MFC, włączając [oparte na formularzach aplikacji](../mfc/reference/creating-a-forms-based-mfc-application.md) (jeden do którego widoku klasa pochodzi od `CFormView`). Jeśli aplikacja do obsługi formularzy nie został początkowo utworzony Visual C++ doda to obsługa po wstawieniu nowego formularza. SDI lub MDI aplikacji, które implementuje domyślny [architektura dokument/widok](../mfc/document-view-architecture.md), gdy użytkownik wybierze `New` polecenia (domyślnie na **pliku** menu), Visual C++ monituje użytkownika o Wybierz spośród dostępnych formularzy.  
@@ -35,7 +30,7 @@ Formularze można dodawać do dowolnej aplikacji Visual C++, która obsługuje b
  Za pomocą aplikacji SDI, gdy użytkownik wybierze `New` polecenia bieżącego wystąpienia formularza jest nadal uruchomiona, ale nowe wystąpienie aplikacji z wybranego formularza jest tworzony, jeśli nie można odnaleźć. W aplikacji MDI bieżącego wystąpienia formularza będzie kontynuował działanie, gdy użytkownik wybierze `New` polecenia.  
   
 > [!NOTE]
->  Wstawieniem formularza do aplikacji opartych na oknach dialogowych (jednej klasy okien dialogowych, których opiera się na `CDialog` i jeden w widoku nie zaimplementowano klasy). Jednak bez architektury dokument/widok Visual C++ nie automatycznie implementuje **pliku**&#124; **Nowe** funkcji. Należy utworzyć pozwala użytkownikowi na wyświetlanie dodatkowych formularzy, takie jak zaimplementowanie okno dialogowe z różnych strony właściwości.  
+>  Wstawieniem formularza do aplikacji opartych na oknach dialogowych (jednej klasy okien dialogowych, których opiera się na `CDialog` i jeden w widoku nie zaimplementowano klasy). Jednak bez architektury dokument/widok Visual C++ nie automatycznie implementuje **pliku**&#124;**nowy** funkcji. Należy utworzyć pozwala użytkownikowi na wyświetlanie dodatkowych formularzy, takie jak zaimplementowanie okno dialogowe z różnych strony właściwości.  
   
  Po włożeniu nowego formularza do aplikacji Visual C++ wykonuje następujące czynności:  
   
@@ -51,7 +46,7 @@ Formularze można dodawać do dowolnej aplikacji Visual C++, która obsługuje b
   
      **Ws_visible —**= wyłączone  
   
-     **Ws_caption — =**wyłączone  
+     **Ws_caption — =** wyłączone  
   
  Dla aplikacji, architektury dokument/widok **nowy formularz** polecenia (kliknij prawym przyciskiem myszy w widoku klasy) również:  
   

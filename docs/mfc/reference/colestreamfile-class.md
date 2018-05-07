@@ -1,12 +1,9 @@
 ---
 title: Klasa COleStreamFile | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colestreamfile-class"></a>Klasa COleStreamFile
 Reprezentuje strumienia danych ( `IStream`) w pliku złożonego jako część OLE magazynem strukturalnym.  
@@ -72,7 +67,7 @@ class COleStreamFile : public CFile
 ## <a name="remarks"></a>Uwagi  
  `IStorage` Obiektu muszą istnieć przed strumienia można otworzyć lub utworzyć, chyba że jest strumienia pamięci.  
   
- `COleStreamFile`obiekty są dokładnie tak samo, jak manipulować [cfile —](../../mfc/reference/cfile-class.md) obiektów.  
+ `COleStreamFile` obiekty są dokładnie tak samo, jak manipulować [cfile —](../../mfc/reference/cfile-class.md) obiektów.  
   
  Aby uzyskać więcej informacji na temat manipulowanie strumieni i magazynów, zobacz artykuł [kontenery: pliki złożone](../../mfc/containers-compound-files.md)...  
   
@@ -88,7 +83,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxole.h  
   
-##  <a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>  COleStreamFile::Attach  
  Kojarzy podany strumienia OLE z `COleStreamFile` obiektu.  
   
 ```  
@@ -104,7 +99,7 @@ void Attach(LPSTREAM lpStream);
   
  Aby uzyskać więcej informacji, zobacz [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) w zestawie Windows SDK.  
   
-##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  Tworzy `COleStreamFile` obiektu.  
   
 ```  
@@ -120,7 +115,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  Aby uzyskać więcej informacji, zobacz [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) w zestawie Windows SDK.  
   
-##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  Bezpiecznie tworzy strumień nowe za mało pamięci globalnej, udostępnionych awarii w przypadku normalnych, oczekiwany warunek.  
   
 ```  
@@ -139,7 +134,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  Aby uzyskać więcej informacji, zobacz [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) w zestawie Windows SDK.  
   
-##  <a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  Bezpiecznie tworzy nowy strumień w obiekcie dostarczony magazynu, gdzie awarii jest to normalne, oczekiwane.  
   
 ```  
@@ -171,7 +166,7 @@ BOOL CreateStream(
   
  Aby uzyskać więcej informacji, zobacz [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) w zestawie Windows SDK.  
   
-##  <a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>  COleStreamFile::Detach  
  Usuwa skojarzenia strumień z obiektu bez zamykania strumienia.  
   
 ```  
@@ -186,7 +181,7 @@ LPSTREAM Detach();
   
  Aby uzyskać więcej informacji, zobacz [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) w zestawie Windows SDK.  
   
-##  <a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>  COleStreamFile::GetStream  
  Wywołanie tej funkcji do zwraca wskaźnik do bieżącego strumienia.  
   
 ```  
@@ -196,7 +191,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do bieżącego interfejsu strumienia ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  Otwiera istniejący strumienia.  
   
 ```  

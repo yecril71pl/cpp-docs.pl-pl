@@ -1,13 +1,10 @@
 ---
-title: "TN048: Pisanie programów instalacyjnych ODBC i administracyjnych dla aplikacji baz danych MFC | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'TN048: Pisanie programów instalacyjnych ODBC i administracyjnych dla aplikacji baz danych MFC | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ec19e3c03d88fa088622c7ed8a5b4efeed0014b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c08366f995c1ecb4182fff04a88ac37fe7334bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: pisanie programów instalacyjnych i administracyjnych ODBC dla aplikacji baz danych MFC
 > [!NOTE]
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  Używanie klas baz danych MFC aplikacji należy program instalacyjny, który instaluje składniki ODBC. Może być konieczne programu ODBC administracji, który pobiera informacje o dostępnych sterowników, aby określić domyślny sterowniki oraz konfigurowanie źródeł danych. Ta uwaga Opisuje interfejs API Instalatora ODBC do zapisania tych programów.  
   
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a>Pisanie programu instalacyjnego ODBC  
+##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> Pisanie programu instalacyjnego ODBC  
  Aplikacja bazy danych MFC wymaga Menedżera sterowników ODBC (ODBC. Biblioteki DLL) i sterowników ODBC, aby można było uzyskać dostęp do źródła danych. Wiele sterowników ODBC wymaga również dodatkowe sieci i komunikacja z biblioteki dll. Większość sterowników ODBC dostarczanych z programem instalacyjnym, która będzie instalować składniki wymagane ODBC. Używanie klas baz danych MFC deweloperzy aplikacji można:  
   
 -   Zależne od programów instalacyjnych sterownika ODBC — składniki instalacji. Wymaga to żadnych pracy w części dewelopera — można po prostu ponownie rozesłać program instalacyjny sterownika.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Aby uzyskać więcej informacji na temat ODBC. INF, ODBCINST. INI i za pomocą Instalatora interfejsu API, zobacz ODBC SDK *Podręcznik programisty* rozdziale 19, instalowanie oprogramowania ODBC.  
   
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a>Pisanie ODBC Administrator  
+##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> Pisanie ODBC Administrator  
  Aplikacji bazy danych MFC mogą Instalowanie i konfigurowanie źródeł danych ODBC w jeden z dwóch sposobów, w następujący sposób:  
   
 -   Użyj Administratora ODBC (dostępne jako program lub jako element Panelu sterowania).  

@@ -1,12 +1,9 @@
 ---
 title: Klasa CFontHolder | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFontHolder
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5f13f2ec48f38fde140361d31a5e08ae6228b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5cb28b738822b3e35aa840c731eb11bc2c2b83d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfontholder-class"></a>Klasa CFontHolder
 Implementuje standardowych właściwość czcionki i hermetyzuje funkcjonalność obiektu czcionki systemu Windows i `IFont` interfejsu.  
@@ -84,7 +79,7 @@ class CFontHolder
 |[CFontHolder::m_pFont](#m_pfont)|Wskaźnik do `CFontHolder` obiektu `IFont` interfejsu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CFontHolder`nie ma klasy podstawowej.  
+ `CFontHolder` nie ma klasy podstawowej.  
   
  Ta klasa umożliwia Implementowanie właściwości niestandardowe czcionki dla formantu. Informacje o tworzeniu takich właściwości, zobacz artykuł [formantów ActiveX: przy użyciu czcionek](../../mfc/mfc-activex-controls-using-fonts.md).  
   
@@ -94,7 +89,7 @@ class CFontHolder
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxctl.h  
   
-##  <a name="cfontholder"></a>CFontHolder::CFontHolder  
+##  <a name="cfontholder"></a>  CFontHolder::CFontHolder  
  Konstruuje `CFontHolder` obiektu.  
   
 ```  
@@ -108,7 +103,7 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 ### <a name="remarks"></a>Uwagi  
  Należy wywołać `InitializeFont` zainicjować wynikowy obiekt przed jego użyciem.  
   
-##  <a name="getdisplaystring"></a>CFontHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>  CFontHolder::GetDisplayString  
  Pobiera ciąg, który może być wyświetlany w przeglądarce właściwości kontenera.  
   
 ```  
@@ -122,7 +117,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli ciąg jest pomyślnie pobrać; w przeciwnym razie 0.  
   
-##  <a name="getfontdispatch"></a>CFontHolder::GetFontDispatch  
+##  <a name="getfontdispatch"></a>  CFontHolder::GetFontDispatch  
  Wywołanie tej funkcji można pobrać wskaźnik do interfejsu wysyłania czcionki.  
   
 ```  
@@ -135,7 +130,7 @@ LPFONTDISP GetFontDispatch();
 ### <a name="remarks"></a>Uwagi  
  Wywołanie `InitializeFont` przed wywołaniem `GetFontDispatch`.  
   
-##  <a name="getfonthandle"></a>CFontHolder::GetFontHandle  
+##  <a name="getfonthandle"></a>  CFontHolder::GetFontHandle  
  Wywołanie tej funkcji można uzyskać dojścia do czcionki systemu Windows.  
   
 ```  
@@ -164,7 +159,7 @@ HFONT GetFontHandle(
   
  Wersja bez parametrów zwraca uchwyt do czcionki mały rozmiar dla ekranu.  
   
-##  <a name="initializefont"></a>CFontHolder::InitializeFont  
+##  <a name="initializefont"></a>  CFontHolder::InitializeFont  
  Inicjuje `CFontHolder` obiektu.  
   
 ```  
@@ -187,14 +182,14 @@ void InitializeFont(
   
  Wywołanie tej funkcji po konstruowania `CFontHolder` obiektu.  
   
-##  <a name="m_pfont"></a>CFontHolder::m_pFont  
+##  <a name="m_pfont"></a>  CFontHolder::m_pFont  
  Wskaźnik do `CFontHolder` obiektu `IFont` interfejsu.  
   
 ```  
 LPFONT m_pFont;  
 ```  
   
-##  <a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics  
+##  <a name="querytextmetrics"></a>  CFontHolder::QueryTextMetrics  
  Pobiera informacje o fizycznej czcionki reprezentowany przez `CFontHolder` obiektu.  
   
 ```  
@@ -205,14 +200,14 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
  `lptm`  
  Wskaźnik do [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) strukturę, która będzie odbierać dane.  
   
-##  <a name="releasefont"></a>CFontHolder::ReleaseFont  
+##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
  Ta funkcja rozłącza `CFontHolder` obiekt z jego `IFont` interfejsu.  
   
 ```  
 void ReleaseFont();
 ```  
   
-##  <a name="select"></a>CFontHolder::Select  
+##  <a name="select"></a>  CFontHolder::Select  
  Wywołanie tej funkcji, aby wybrać czcionki formantu w kontekście określonego urządzenia.  
   
 ```  
@@ -238,7 +233,7 @@ CFont* Select(
 ### <a name="remarks"></a>Uwagi  
  Zobacz [GetFontHandle](#getfonthandle) omówienie `cyLogical` i `cyHimetric` parametrów.  
   
-##  <a name="setfont"></a>CFontHolder::SetFont  
+##  <a name="setfont"></a>  CFontHolder::SetFont  
  Zwalnia wszelkie istniejące czcionki i łączy `CFontHolder` do obiektu `IFont` interfejsu.  
   
 ```  

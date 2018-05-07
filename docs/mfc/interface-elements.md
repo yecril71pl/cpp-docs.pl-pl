@@ -1,30 +1,25 @@
 ---
 title: Elementy interfejsu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3da476a4e8b18d5ac864f0cf690a6a113db11e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-elements"></a>Elementy interfejsu
 W tym dokumencie opisano elementy interfejsu, które zostały wprowadzone w [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] z dodatkiem SP1, a także opisano różnice ze starszą wersją biblioteki.  
@@ -49,7 +44,7 @@ W tym dokumencie opisano elementy interfejsu, które zostały wprowadzone w [!IN
  Dock lokacji (lub głównego okna ramowego) jest właścicielem wszystkich okienka i okna ramowe mini w aplikacji. Lokacja dock zawiera [CDockingManager](../mfc/reference/cdockingmanager-class.md) elementu członkowskiego. Ten element członkowski przechowuje listę wszystkich okienek, które należą do witryny dokowania. Lista jest uporządkowana tak, aby okienka utworzony w zewnętrznej krawędzi lokacji dokowania znajdują się na początku listy. Gdy w ramach ponownie rysuje lokacji dokowania, pętli tej listy i dostosowuje układ poszczególnych okienkach uwzględnienie bieżący prostokąt ograniczający lokacji dokowania. Możesz wywołać `AdjustDockingLayout` lub `RecalcLayout` po należy dostosować dokowania układ i ramach przekierowuje to wywołanie Menedżera dokowania.  
   
 ## <a name="dock-bars"></a>Paski doku.  
- Położenie każdego głównego okna ramowego *dokowania pasków* wraz z jego krawędzi. Pasek dokowania to okienko należącą do [CDockSite klasy](../mfc/reference/cdocksite-class.md). Dokowania pasków może akceptować obiektów pochodzących od [CPane](../mfc/reference/cpane-class.md), takich jak pasków narzędzi. Aby utworzyć dokowania pasków po zainicjowaniu głównego okna ramowego, należy wywołać `EnableDocking`. Aby włączyć automatyczne ukrywanie paski, należy wywołać `EnableAutoHideBars`. `EnableAutoHideBars`Tworzy [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) obiekty i umieszcza je obok każdego dokowania paska.  
+ Położenie każdego głównego okna ramowego *dokowania pasków* wraz z jego krawędzi. Pasek dokowania to okienko należącą do [CDockSite klasy](../mfc/reference/cdocksite-class.md). Dokowania pasków może akceptować obiektów pochodzących od [CPane](../mfc/reference/cpane-class.md), takich jak pasków narzędzi. Aby utworzyć dokowania pasków po zainicjowaniu głównego okna ramowego, należy wywołać `EnableDocking`. Aby włączyć automatyczne ukrywanie paski, należy wywołać `EnableAutoHideBars`. `EnableAutoHideBars` Tworzy [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) obiekty i umieszcza je obok każdego dokowania paska.  
   
  Każdy pasek dock jest podzielona na wiersze dokowania. Dock wierszy są reprezentowane przez [CDockingPanesRow klasy](../mfc/reference/cdockingpanesrow-class.md). Każdy wiersz dock zawiera listę pasków narzędzi. Jeśli użytkownik stacje dokujące paska narzędzi lub paska narzędzi są przenoszone z jednego wiersza do drugiej w ramach tego samego dokowania paska, ramach tworzy nowy wiersz i odpowiednio zmienia rozmiar paska dokowania lub Ustawia położenie paska narzędzi w istniejącym wierszu.  
   
@@ -66,7 +61,7 @@ W tym dokumencie opisano elementy interfejsu, które zostały wprowadzone w [!IN
  Domyślnie każdy `CDockablePane` obsługuje funkcję autoukrywania. Gdy użytkownik kliknie przycisk numeru pin na podpis `CDockablePane`, platformę zmienia okienku na tryb autoukrywania. Aby obsłużyć kliknięcie, tworzy platformę [klasy CMFCAutoHideBar](../mfc/reference/cmfcautohidebar-class.md) i [klasy CMFCAutoHideButton](../mfc/reference/cmfcautohidebutton-class.md) skojarzone z `CMFCAutoHideBar` obiektu. Platformę umieszcza nowy `CMFCAutoHideBar` na [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md). Platformę również dołącza `CMFCAutoHideButton` na pasku narzędzi. [Klasy CDockingManager](../mfc/reference/cdockingmanager-class.md) przechowuje `CDockablePane`.  
   
 ## <a name="tabbed-control-bars-and-outlook-bars"></a>Paski sterowania z kartami i paski programu Outlook  
- [Klasy CMFCBaseTabCtrl](../mfc/reference/cmfcbasetabctrl-class.md) implementuje podstawowe funkcje z kartami okno z kartami odłączane. Aby użyć `CMFCBaseTabCtrl` obiektów, zainicjować [klasy CBaseTabbedPane](../mfc/reference/cbasetabbedpane-class.md) w aplikacji. `CBaseTabbedPane`jest pochodną `CDockablePane` i obsługuje wskaźnik do `CMFCBaseTabCtrl` obiektu. `CBaseTabbedPane` Umożliwia użytkownikom dock, a następnie zmień rozmiar paski sterowania z kartami. Użyj [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) można dynamicznie utworzyć paski sterowania, które zadokowane i kartach.  
+ [Klasy CMFCBaseTabCtrl](../mfc/reference/cmfcbasetabctrl-class.md) implementuje podstawowe funkcje z kartami okno z kartami odłączane. Aby użyć `CMFCBaseTabCtrl` obiektów, zainicjować [klasy CBaseTabbedPane](../mfc/reference/cbasetabbedpane-class.md) w aplikacji. `CBaseTabbedPane` jest pochodną `CDockablePane` i obsługuje wskaźnik do `CMFCBaseTabCtrl` obiektu. `CBaseTabbedPane` Umożliwia użytkownikom dock, a następnie zmień rozmiar paski sterowania z kartami. Użyj [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) można dynamicznie utworzyć paski sterowania, które zadokowane i kartach.  
   
  Formantu paska Outlook również jest oparta na paski z kartami. [Klasy CMFCOutlookBar](../mfc/reference/cmfcoutlookbar-class.md) jest pochodną `CBaseTabbedPane`. Aby uzyskać więcej informacji o sposobie używania paska Outlook, zobacz [CMFCOutlookBar klasy](../mfc/reference/cmfcoutlookbar-class.md).  
   

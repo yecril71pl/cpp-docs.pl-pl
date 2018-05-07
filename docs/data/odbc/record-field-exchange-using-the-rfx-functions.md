@@ -1,13 +1,10 @@
 ---
-title: "Wymiana pól rekordów: Używanie funkcji RFX | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wymiana pól rekordów: Używanie funkcji RFX | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a270b26fc0fd9be721ee0656f9f0d14ab579b477
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f834f9f52c8d01dbd7eb3ff54b794afc11630ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Wymiana pól rekordów: używanie funkcji RFX
 W tym temacie opisano sposób korzystania z wywołania funkcji RFX wchodzące w skład treści Twojej `DoFieldExchange` zastąpienia.  
@@ -40,7 +35,7 @@ W tym temacie opisano sposób korzystania z wywołania funkcji RFX wchodzące w 
   
  Globalne funkcje RFX wymiany danych między kolumnami na źródłowym i pola danych elementów członkowskich danych w twoim zestawie rekordów. Pisania odwołuje się funkcja RFX w zestawie rekordów [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) funkcję elementu członkowskiego. Ten temat krótko opisano funkcje i zawiera typy danych, dla których RFX funkcje są dostępne. [43 Uwaga techniczna](../../mfc/tn043-rfx-routines.md) opisano, jak zapisać funkcji RFX dodatkowe typy danych.  
   
-##  <a name="_core_rfx_function_syntax"></a>Składnia funkcji RFX  
+##  <a name="_core_rfx_function_syntax"></a> Składnia funkcji RFX  
  Każdej funkcji RFX przyjmuje trzy parametry (i podjęcia niektórych opcjonalny parametr czterech lub pięciu):  
   
 -   Wskaźnik do [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) obiektu. Po prostu przekazują `pFX` wskaźnik przekazany do `DoFieldExchange`.  
@@ -55,12 +50,12 @@ W tym temacie opisano sposób korzystania z wywołania funkcji RFX wchodzące w 
   
  Aby uzyskać więcej informacji, zobacz funkcji RFX w obszarze [makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md) w *informacje dotyczące biblioteki klas*. Na przykład kiedy może uniemożliwić specjalnych parametrów, zobacz [zestaw rekordów: uzyskiwanie sum i innych wyników agregacji (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).  
   
-##  <a name="_core_rfx_data_types"></a>Typy danych RFX  
+##  <a name="_core_rfx_data_types"></a> Typy danych RFX  
  Biblioteka klas udostępnia funkcje RFX transferowania wiele różnych typów danych między źródłem danych i zestawach rekordów. Poniższa lista zawiera podsumowanie funkcji RFX według typu danych. W przypadkach, w którym należy napisać własny wywołania funkcji RFX wybierz funkcje te według typu danych.  
   
 |Funkcja|Typ danych|  
 |--------------|---------------|  
-|`RFX_Bool`|**WARTOŚĆ LOGICZNA**|  
+|`RFX_Bool`|**BOOL**|  
 |`RFX_Byte`|**BAJTÓW**|  
 |`RFX_Binary`|`CByteArray`|  
 |`RFX_Double`|**double**|  

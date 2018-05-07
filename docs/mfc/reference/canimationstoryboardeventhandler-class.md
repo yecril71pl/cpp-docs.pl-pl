@@ -1,12 +1,9 @@
 ---
 title: Klasa CAnimationStoryboardEventHandler | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationStoryboardEventHandler
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 599164d1bb2eca17b935fc74f13fe9b134fc4f2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb7c89e6441379949386baecbddbb30f7c01ebff
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>Klasa CAnimationStoryboardEventHandler
 Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji w przypadku zmiany stanu scenorysu lub zaktualizowaniu scenorysu.  
@@ -76,14 +71,14 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxanimationcontroller.h  
   
-##  <a name="canimationstoryboardeventhandler"></a>CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler  
+##  <a name="canimationstoryboardeventhandler"></a>  CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler  
  Tworzy obiekt CAnimationStoryboardEventHandler.  
   
 ```  
 CAnimationStoryboardEventHandler();
 ```  
   
-##  <a name="createinstance"></a>CAnimationStoryboardEventHandler::CreateInstance  
+##  <a name="createinstance"></a>  CAnimationStoryboardEventHandler::CreateInstance  
  Tworzy wystąpienie CAnimationStoryboardEventHandler wywołania zwrotnego.  
   
 ```  
@@ -101,7 +96,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
   
-##  <a name="onstoryboardstatuschanged"></a>CAnimationStoryboardEventHandler::OnStoryboardStatusChanged  
+##  <a name="onstoryboardstatuschanged"></a>  CAnimationStoryboardEventHandler::OnStoryboardStatusChanged  
  Obsługuje OnStoryboardStatusChanged zdarzenia, które występują po zmianie stanu scenorysu  
   
 ```  
@@ -124,7 +119,7 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL.  
   
-##  <a name="onstoryboardupdated"></a>CAnimationStoryboardEventHandler::OnStoryboardUpdated  
+##  <a name="onstoryboardupdated"></a>  CAnimationStoryboardEventHandler::OnStoryboardUpdated  
  Obsługuje OnStoryboardUpdated zdarzenia, które występują po zaktualizowaniu scenorysu  
   
 ```  
@@ -138,7 +133,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL.  
   
-##  <a name="setanimationcontroller"></a>CAnimationStoryboardEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>  CAnimationStoryboardEventHandler::SetAnimationController  
  Przechowuje wskaźnik do kontrolera animacji na zdarzenia trasy.  
   
 ```  

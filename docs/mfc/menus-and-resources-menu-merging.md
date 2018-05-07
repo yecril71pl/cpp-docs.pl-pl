@@ -1,13 +1,10 @@
 ---
 title: 'Menu i zasoby: scalanie Menu | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c686d461a3052feb4a55cf7948b58102f10ac1f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 252619872fc53e06629a4cbded7e3640131dc94a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menu i zasoby: scalanie menu
 W tym artykule szczegółowo kroki niezbędne do dokumenty i aplikacje OLE do obsługi edycji i aktywacja w miejscu poprawnie. Aktywacja w miejscu stanowi wyzwanie dla kontenera i serwera aplikacji (składnik). Użytkownik pozostaje w tym samym oknie ramki (w kontekście kontenerem), ale jest uruchomiona inna aplikacja (serwer). Wymaga to koordynację między zasobami kontenera i serwera aplikacji.  
@@ -40,7 +35,7 @@ W tym artykule szczegółowo kroki niezbędne do dokumenty i aplikacje OLE do ob
   
 - [Paski narzędzi i paski stanu](#_core_toolbars_and_status_bars)  
   
-##  <a name="_core_menu_layouts"></a>Układów menu  
+##  <a name="_core_menu_layouts"></a> Układów menu  
  Pierwszym krokiem jest koordynowanie układów menu. Aby uzyskać więcej informacji, zobacz **tworzenie Menu** sekcji [zagadnienia dotyczące Menu programowania](https://msdn.microsoft.com/library/ms647557.aspx) w zestawie Windows SDK.  
   
  Aplikacje kontenera należy utworzyć nowe menu do użycia tylko wtedy, gdy elementy osadzone zostaną aktywowane w miejscu. Co najmniej to menu powinien składać się z następujących czynności w podanej kolejności:  
@@ -113,14 +108,14 @@ END
   
  Po aktywowaniu element osadzony w miejscu platformę ładuje menu w miejscu. Następnie prosi aplikacji serwera w menu o aktywacji w miejscu i wstawia go skutkującej separatorów. Jest to, jak łączyć menu. Możesz uzyskać menu z kontenera na umieszczanie plików i okno i możesz uzyskać menu z serwera działających w elemencie.  
   
-##  <a name="_core_toolbars_and_status_bars"></a>Paski narzędzi i paski stanu  
+##  <a name="_core_toolbars_and_status_bars"></a> Paski narzędzi i paski stanu  
  Aplikacje serwera należy utworzyć nowy pasek narzędzi i zapisać jego mapy bitowej w osobnym pliku. Aplikacje generowane przez Kreatora aplikacji tej mapy bitowej są przechowywane w pliku o nazwie ITOOLBAR. BMP. Nowy pasek narzędzi zastępuje narzędzi aplikacji kontenera po elementu z serwera w miejscu i powinien zawierać te same elementy jako normalne paska narzędzi, jednak usunąć ikony reprezentujący elementy w menu Plik i okna.  
   
  Ten pasek narzędzi jest ładowany w Twojej `COleIPFrameWnd`-klasy tworzone przez Kreatora aplikacji. Na pasku stanu jest obsługiwany przez kontener aplikacji. Aby uzyskać więcej informacji o implementacji okna ramowe w miejscu, zobacz [serwery: Implementowanie serwera](../mfc/servers-implementing-a-server.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)   
- [Aktywacji](../mfc/activation-cpp.md)   
+ [aktywacji](../mfc/activation-cpp.md)   
  [Serwery](../mfc/servers.md)   
  [Kontenery](../mfc/containers.md)
 

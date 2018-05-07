@@ -1,12 +1,9 @@
 ---
 title: Klasa COleDropSource | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropSource
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486a236075ff33093b9a734d7f368e05ed29588e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledropsource-class"></a>Klasa COleDropSource
 Umożliwia danych przeciąganych do miejsca docelowego.  
@@ -72,21 +67,21 @@ class COleDropSource : public CCmdTarget
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleDropSource`  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxole.h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
  Konstruuje `COleDropSource` obiektu.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
  Wywoływane przez platformę po wywołaniu [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) lub [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
@@ -97,15 +92,15 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
  `dropEffect`  
  Efekt, który może zostać wyświetlony dla użytkownika, zwykle wskazujący, co się stanie, jeśli spadek wystąpił w tym punkcie z wybranych danych. Zazwyczaj jest to wartość zwrócona przez wywołanie najnowszych [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) lub [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Można co najmniej jeden z następujących czynności:  
   
-- `DROPEFFECT_NONE`Spadek będzie niemożliwe.  
+- `DROPEFFECT_NONE` Spadek będzie niemożliwe.  
   
-- `DROPEFFECT_COPY`Czy można wykonać operacji kopiowania.  
+- `DROPEFFECT_COPY` Czy można wykonać operacji kopiowania.  
   
-- `DROPEFFECT_MOVE`Czy można wykonać operacji przenoszenia.  
+- `DROPEFFECT_MOVE` Czy można wykonać operacji przenoszenia.  
   
-- `DROPEFFECT_LINK`Czy można ustanowić łącze z porzuconych danych do oryginalnych danych.  
+- `DROPEFFECT_LINK` Czy można ustanowić łącze z porzuconych danych do oryginalnych danych.  
   
-- `DROPEFFECT_SCROLL`Operację przeciągania przewijania może nastąpić lub występuje w miejscu docelowym.  
+- `DROPEFFECT_SCROLL` Operację przeciągania przewijania może nastąpić lub występuje w miejscu docelowym.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **DRAGDROP_S_USEDEFAULTCURSORS** Jeśli przeciąganie jest w toku, **brak błędu** Jeśli nie jest.  
@@ -115,7 +110,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  Aby uzyskać więcej informacji, zobacz [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), i [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) w zestawie Windows SDK.  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  Wywoływane przez platformę, gdy wystąpi zdarzenie, które można rozpocząć operacji przeciągania, takich jak naciśnięcie przycisku lewego przycisku myszy.  
   
 ```  
@@ -132,7 +127,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę funkcję, jeśli chcesz zmodyfikować sposób uruchomienia procesu przeciągania. Domyślna implementacja przechwytuje mysz i pozostaje w trybie przeciągania, dopóki użytkownik kliknie przycisk myszy do lewego lub prawego lub trafienia ESC, co zwalnia myszy.  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
  Po rozpoczęciu przeciągania, ta funkcja jest wywoływana wielokrotnie przez platformę do czasu anulowania lub zakończona operacja przeciągania.  
   
 ```  

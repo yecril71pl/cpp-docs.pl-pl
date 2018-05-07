@@ -1,13 +1,10 @@
 ---
-title: "ODBC: Wywołanie interfejsu API ODBC funkcje bezpośrednio | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'ODBC: Wywołanie interfejsu API ODBC funkcje bezpośrednio | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - catalog functions (ODBC), calling
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51fde2bb7ea73a2655c0b771dabfe14d2c833fb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55b95c5dd48631f9c724aebd163ce948c3469850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: bezpośrednie wywoływanie funkcji ODBC API
 Klasy baz danych zapewnia prostszy interfejs do [źródła danych](../../data/odbc/data-source-odbc.md) niż ODBC. W związku z tym klasy nie hermetyzować wszystkich interfejsu API ODBC. Dla żadnej funkcji, która znajduje się poza możliwości klas należy wywołać funkcji ODBC API bezpośrednio. Na przykład, należy wywołać funkcji katalogu ODBC (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**i inne) bezpośrednio.  

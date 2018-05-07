@@ -1,13 +1,10 @@
 ---
 title: Korzystanie z CListCtrl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CListCtrl
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc61b0bb9e1df702424c2e95d3d4ef3b2186dea0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-clistctrl"></a>Korzystanie z CListCtrl
 Formant listy umożliwia wyświetlenie każdy układ ikon z etykiet, jak Eksploratora plików lub list kolumnowy tekstu, z lub bez ikon. Opis cztery możliwe "opinie" (nie należy mylić z MFC widoków) może mieć w formancie listy — Widok ikony, widoku małych ikon widok listy i widok raportu — Zobacz widoków w [CListCtrl](../mfc/reference/clistctrl-class.md) Przegląd klasy.  

@@ -1,13 +1,10 @@
 ---
-title: "Przykład zawierania dokumentów aktywnych: Office Binder | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Przykład zawierania dokumentów aktywnych: Office Binder | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00451b41b047f433929ad58e4b275eb413f4e22e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7e4f82840a4c5620762ad57b5b9fa8dd7e62d0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Przykład zawierania dokumentów aktywnych: Office Binder
 Microsoft Office Binder jest przykładem kontenera dokumentów aktywnych. Office Binder zawiera dwa okienka podstawowego, jak kontenery zwykle. W okienku po lewej stronie zawiera ikony, które odpowiadają dokumenty aktywne w obiekt wiążący. Każdy dokument jest nazywany *sekcji* w ramach obiektu wiążącego. Na przykład integratora może zawierać dokumentów programu Word, PowerPoint pliki, arkusze programu Excel i tak dalej.  

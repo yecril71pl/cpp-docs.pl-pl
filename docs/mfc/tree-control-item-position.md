@@ -1,13 +1,10 @@
 ---
-title: "Położenie elementu formantu drzewa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Położenie elementu formantu drzewa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - tree controls [MFC], item position
 - position, CTreeCtrl items
 ms.assetid: cd264344-2cf9-4d90-9ea8-c6900b6f60e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db47e27ad0b556e08f51685bf84b6bd998722239
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7b7576786f456320a355920a7a9ef9e4935ab03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-item-position"></a>Położenie elementu kontrolki drzewa
 Położenie początkowe elementu jest ustawiona, gdy element zostanie dodany do formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) przy użyciu `InsertItem` funkcję elementu członkowskiego. Wywołanie funkcji Członkowskich określa uchwytu elementu nadrzędnego i obsługi po upływie którego nowy element ma zostać wstawiony element. Drugi dojścia musi zidentyfikować elementów podrzędnych danego elementu nadrzędnego lub jedną z tych wartości: `TVI_FIRST`, `TVI_LAST`, lub `TVI_SORT`.  

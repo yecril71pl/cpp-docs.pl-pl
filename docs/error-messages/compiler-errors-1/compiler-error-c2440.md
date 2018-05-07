@@ -1,12 +1,9 @@
 ---
-title: "C2440 błąd kompilatora | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: C2440 błąd kompilatora | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2440
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a83da358738f7892fd5db06fbe775ff0b7d7da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6b03dfc413e3a63e5084dc265d5b7010fbcebd4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2440"></a>C2440 błąd kompilatora
 "konwersji": nie można przekonwertować z "type1" na "type2".  
@@ -246,7 +241,7 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 ```
 
 ## <a name="example"></a>Przykład  
-### <a name="copy-list-initialization"></a>Inicjalizacja listy kopii
+### <a name="copy-list-initialization"></a>Copy-list-initialization
 
 Visual Studio 2017 i nowsze poprawnie Zgłoś błędy kompilatora dotyczące tworzenia obiektów przy użyciu listy inicjatorów, które nie zostały przechwycono w programie Visual Studio 2015 i może prowadzić do awarii lub niezdefiniowane zachowanie środowiska wykonawczego. W C ++ 17 kopiowania listy Inicjalizacja kompilator należy wziąć pod uwagę jawny Konstruktor Rozpoznanie przeciążenia, ale musi Zgłoś błąd, jeśli faktycznie jest wybierany tego przeciążenia.
 

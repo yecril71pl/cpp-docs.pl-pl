@@ -1,29 +1,24 @@
 ---
-title: "Struktura plików .vcxproj i .props | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Struktura plików .vcxproj i .props | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48b16d9a4250de8c8c3dfef62fdcfb5c1434960
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Struktura pliku .vcxproj i .props
 
@@ -100,7 +95,7 @@ W poniższych sekcjach opisano przeznaczenie każdej z tych elementów i dlaczeg
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003' >
 ```
 
-`Project`jest to węzeł główny. Określa wersję MSBuild do użycia, a także docelowy domyślna ma być wykonywana w przypadku ten plik jest przekazywany do MSBuild.exe.
+`Project` jest to węzeł główny. Określa wersję MSBuild do użycia, a także docelowy domyślna ma być wykonywana w przypadku ten plik jest przekazywany do MSBuild.exe.
 
 ### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations ItemGroup — element
 
@@ -108,7 +103,7 @@ W poniższych sekcjach opisano przeznaczenie każdej z tych elementów i dlaczeg
 <ItemGroup Label="ProjectConfigurations" />
 ```
 
-`ProjectConfigurations`Zawiera opis konfiguracji projektu. Przykłady debugowania | Win32, wersja | Win32, debugowania | ARM i tak dalej. Wiele ustawień projektu są specyficzne dla danej konfiguracji. Na przykład prawdopodobnie można ustawić właściwości optymalizacji kompilacji wydania, ale nie kompilację debugowania.
+`ProjectConfigurations` Zawiera opis konfiguracji projektu. Przykłady debugowania | Win32, wersja | Win32, debugowania | ARM i tak dalej. Wiele ustawień projektu są specyficzne dla danej konfiguracji. Na przykład prawdopodobnie można ustawić właściwości optymalizacji kompilacji wydania, ale nie kompilację debugowania.
 
 `ProjectConfigurations` Grupy elementów nie jest używany w czasie kompilacji. Środowiska IDE programu Visual Studio wymagają, aby można było załadować projekt. Ta grupa można przenieść pliku .props i importowane do pliku .vcxproj. Jednak w takim przypadku, jeśli musisz dodać lub usunąć konfiguracji, należy ręcznie zmienić plik .props; Nie można użyć IDE.
 
@@ -143,9 +138,9 @@ Można wyłączyć kompilacji i wdrażania polecenia dla żadnej konfiguracji w 
  <PropertyGroup Label="Globals" />
 ```
 
-`Globals`zawiera ustawienia poziomu projektu, takie jak ProjectGuid, RootNamespace i atrybutów ApplicationType / ApplicationTypeRevision. Ostatnie dwa często zdefiniować docelowy system operacyjny. Projekt tylko można kierować jednego systemu operacyjnego na fakt, że odwołania i elementy projektu nie może mieć warunki obecnie. Te właściwości zwykle nie są nadpisywane w innym miejscu w pliku projektu. Ta grupa nie jest zależne od konfiguracji i w związku z tym zazwyczaj tylko jedna grupa Globals istnieje w pliku projektu.
+`Globals` zawiera ustawienia poziomu projektu, takie jak ProjectGuid, RootNamespace i atrybutów ApplicationType / ApplicationTypeRevision. Ostatnie dwa często zdefiniować docelowy system operacyjny. Projekt tylko można kierować jednego systemu operacyjnego na fakt, że odwołania i elementy projektu nie może mieć warunki obecnie. Te właściwości zwykle nie są nadpisywane w innym miejscu w pliku projektu. Ta grupa nie jest zależne od konfiguracji i w związku z tym zazwyczaj tylko jedna grupa Globals istnieje w pliku projektu.
 
-### <a name="microsoftcppdefaultprops-import-element"></a>Microsoft.Cpp.default.props Import element
+### <a name="microsoftcppdefaultprops-import-element"></a>Microsoft.Cpp.default.props Import — element
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
@@ -191,7 +186,7 @@ A `Configuration` grupy właściwości zawiera warunek dołączone konfiguracji 
 <PropertyGroup Label="UserMacros" />
 ```
 
-`UserMacros`zawiera właściwości Utwórz jako zmienne, które są używane w celu dostosowania procesu kompilacji. Na przykład można zdefiniować makro użytkownika do definiowania ścieżce danych wyjściowych niestandardowego jako $(CustomOutputPath) i użyj go do zdefiniowania pozostałe zmienne. Ta grupa właściwość przechowuje takich właściwości. Należy pamiętać, że w programie Visual Studio, ta grupa nie zostanie wypełnione w pliku projektu ponieważ Visual C++ nie obsługuje konfiguracji makra użytkownika. Makra użytkownika są obsługiwane w arkuszach właściwości.
+`UserMacros` zawiera właściwości Utwórz jako zmienne, które są używane w celu dostosowania procesu kompilacji. Na przykład można zdefiniować makro użytkownika do definiowania ścieżce danych wyjściowych niestandardowego jako $(CustomOutputPath) i użyj go do zdefiniowania pozostałe zmienne. Ta grupa właściwość przechowuje takich właściwości. Należy pamiętać, że w programie Visual Studio, ta grupa nie zostanie wypełnione w pliku projektu ponieważ Visual C++ nie obsługuje konfiguracji makra użytkownika. Makra użytkownika są obsługiwane w arkuszach właściwości.
 
 ### <a name="per-configuration-propertygroup-elements"></a>Elementy PropertyGroup na konfiguracji
 

@@ -1,13 +1,10 @@
 ---
 title: Tworzenie okien ramowych dokumentu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - document frame windows [MFC], creating
 - MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098026c1a38f8e60093415ba1c5a2b3678b64d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e4b27154197e4e8347e73936f319aeb416a153d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-document-frame-windows"></a>Tworzenie okien ramowych dokumentu
 [Tworzenie dokumentu/widoku](../mfc/document-view-creation.md) przedstawia sposób [cdoctemplate —](../mfc/reference/cdoctemplate-class.md) obiektu organizuje tworzenie okien ramowych dokumentu, a widok i łącząc je do wszystkich elementów. Trzy [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argumenty `CDocTemplate` Konstruktor Określ okno ramowe, klasy dokumentów i widoków tworzone przez szablon dokumentu dynamicznie w odpowiedzi na polecenia użytkownika, takie jak nowe polecenie do pliku menu lub nowe okno polecenia menu okna MDI. Szablon dokumentu przechowuje tych informacji do późniejszego użycia podczas tworzenia ramkę okna do widoku i dokumentu.  

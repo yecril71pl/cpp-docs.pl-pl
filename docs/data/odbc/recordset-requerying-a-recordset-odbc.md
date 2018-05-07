@@ -2,12 +2,9 @@
 title: 'Zestaw rekordów: Ponowne wysyłanie zapytania do zestawu rekordów (ODBC) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Zestaw rekordów: ponowne wysyłanie zapytania do zestawu rekordów (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -41,16 +36,16 @@ Ten temat dotyczy klasach MFC ODBC.
   
 -   Odśwież zestawu rekordów opartego na zmianę wartości parametru.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a>Przywracanie w górę rekordów do daty  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> Przywracanie w górę rekordów do daty  
  Często warto requery nazwę obiektu zestawu rekordów, aby przenieść ją do aktualne. W środowisku wielodostępnym bazy danych innych użytkownicy mogą wprowadzać zmiany do danych w okresie obowiązywania zestawu rekordów. Aby uzyskać więcej informacji na temat po zestawu rekordów odzwierciedla zmiany wprowadzone przez innych użytkowników i gdy inni użytkownicy zestawów rekordów odzwierciedlać wprowadzone zmiany, zobacz [zestaw rekordów: jak zestawy rekordów aktualizacji rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) i [dynamiczny](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a>Ponowne wysyłanie zapytania na podstawie nowych parametrów  
+##  <a name="_core_requerying_based_on_new_parameters"></a> Ponowne wysyłanie zapytania na podstawie nowych parametrów  
  Inny częste — i równie ważne — użycie [Requery](../../mfc/reference/crecordset-class.md#requery) , należy wybrać nowy zestaw rekordów w oparciu o zmiany wartości parametrów.  
   
 > [!TIP]
 >  Szybkość zapytania jest prawdopodobnie znacznie szybsze, jeśli wywołujesz **Requery** ze zmianą wartości parametrów niż Jeśli wywołujesz **Otwórz** ponownie.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>Ponowne wysyłanie zapytania vs zestawów dynamicznych. Migawki  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Ponowne wysyłanie zapytania vs zestawów dynamicznych. Migawki  
  Zestawy dynamiczne są przeznaczone do wyświetlania zestawu rekordów z danymi dynamicznymi aktualne, chcesz requery zestawów dynamicznych często, jeśli chcesz odzwierciedlić dodatki do innych użytkowników. Migawki, z drugiej strony są przydatne, ponieważ można bezpiecznie polegać na ich zawartości statycznej podczas przygotowania raportów, obliczeń i tak dalej. Nadal czasami może być requery również migawki. W środowisku wielodostępnym migawki danych może spowodować utratę synchronizacji ze źródłem danych w innych użytkowników zmiany bazy danych.  
   
 #### <a name="to-requery-a-recordset-object"></a>Aby requery obiekty zestawów rekordów  

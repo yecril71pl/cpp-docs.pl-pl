@@ -1,12 +1,9 @@
 ---
 title: Klasa CDockingManager | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDockingManager
@@ -169,17 +166,15 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f1a436ab6bfbc5e21e43267d3992310ed6f6a20
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5dad441d2aa997a3e32d53f07683877442100a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdockingmanager-class"></a>Klasa CDockingManager
 Implementuje kontrolujące dokowania układ główne okno ramowe podstawowych funkcji.  
@@ -314,7 +309,7 @@ class CDockingManager : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxDockingManager.h  
   
-##  <a name="adddocksite"></a>CDockingManager::AddDockSite  
+##  <a name="adddocksite"></a>  CDockingManager::AddDockSite  
  Tworzy okienka dokowania i dodaje go do listy paski sterowania.  
   
 ```  
@@ -324,16 +319,16 @@ BOOL AddDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`info`  
+ [in] `info`  
  Odwołanie do struktury zawierający informacje o dock wyrównanie okienka.  
   
- [out]`ppDockBar`  
+ [out] `ppDockBar`  
  Wskaźnik na wskaźnik do nowego okienka dokowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli w okienku dokowania została utworzona pomyślnie; `FALSE` inaczej.  
+ `TRUE` Jeśli w okienku dokowania została utworzona pomyślnie; `FALSE` inaczej.  
   
-##  <a name="addhiddenmditabbedbar"></a>CDockingManager::AddHiddenMDITabbedBar  
+##  <a name="addhiddenmditabbedbar"></a>  CDockingManager::AddHiddenMDITabbedBar  
  Dodaje dojścia do paska okienko do listy ukrytych MDI kartach paska okienka.  
   
 ```  
@@ -341,10 +336,10 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBar`  
+ [in] `pBar`  
  Wskaźnik do paska okienko  
   
-##  <a name="addpane"></a>CDockingManager::AddPane  
+##  <a name="addpane"></a>  CDockingManager::AddPane  
  Rejestruje okienko dokujące menedżera.  
   
 ```  
@@ -356,25 +351,25 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out]`pWnd`  
+ [w, out] `pWnd`  
  Określa okienko, aby dodać do Menedżera dokowania.  
   
- [in]`bTail`  
- `TRUE`Aby dodać okienku na końcu listy okienka dokowania Menedżera; w przeciwnym razie `FALSE`.  
+ [in] `bTail`  
+ `TRUE` Aby dodać okienku na końcu listy okienka dokowania Menedżera; w przeciwnym razie `FALSE`.  
   
- [in]`bAutoHide`  
+ [in] `bAutoHide`  
  Tylko do użytku wewnętrznego. Zawsze używać domyślnej wartości `FALSE`.  
   
- [in]`bInsertForOuterEdge`  
+ [in] `bInsertForOuterEdge`  
  Tylko do użytku wewnętrznego. Zawsze używać domyślnej wartości `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli okienko został pomyślnie zarejestrowany przy użyciu Menedżera dokowania; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli okienko został pomyślnie zarejestrowany przy użyciu Menedżera dokowania; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby zarejestrować niezmienny, bez zmienny rozmiar okienka przy użyciu Menedżera dokowania. Jeśli nie zarejestrujesz okienka, nie będą wyświetlane prawidłowo gdy Menedżer dokowania jest poukładany.  
   
-##  <a name="adjustdockinglayout"></a>CDockingManager::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>  CDockingManager::AdjustDockingLayout  
  Ponownie oblicza i dostosowuje układ wszystkie okienka w oknie ramowym.  
   
 ```  
@@ -382,12 +377,12 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`hdwp`  
+ [in] `hdwp`  
  Określa strukturę położenie okna opóźnieniem. Aby uzyskać więcej informacji, zobacz [typów danych systemu Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="addminiframe"></a>CDockingManager::AddMiniFrame  
+##  <a name="addminiframe"></a>  CDockingManager::AddMiniFrame  
  Dodaje ramki do listy mini ramki.  
   
 ```  
@@ -395,13 +390,13 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWnd`  
+ [in] `pWnd`  
  Wskaźnik do ramki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli ramka nie jest na liście mini ramek i został dodany pomyślnie; `FALSE` inaczej.  
+ `TRUE` Jeśli ramka nie jest na liście mini ramek i został dodany pomyślnie; `FALSE` inaczej.  
   
-##  <a name="adjustpaneframes"></a>CDockingManager::AdjustPaneFrames  
+##  <a name="adjustpaneframes"></a>  CDockingManager::AdjustPaneFrames  
  Powoduje, że `WM_NCCALCSIZE` komunikat do wysłania do wszystkich okienek i `CPaneFrameWnd` systemu windows.  
   
 ```  
@@ -410,7 +405,7 @@ virtual void AdjustPaneFrames();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="adjustrecttoclientarea"></a>CDockingManager::AdjustRectToClientArea  
+##  <a name="adjustrecttoclientarea"></a>  CDockingManager::AdjustRectToClientArea  
  Dopasowuje wyrównanie prostokąta.  
   
 ```  
@@ -420,14 +415,14 @@ virtual BOOL AdjustRectToClientArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`rectResult`  
+ [in] `rectResult`  
  Odwołanie do `CRect` obiektu  
   
- [in]`dwAlignment`  
+ [in] `dwAlignment`  
  Wyrównanie `CRect` obiektu  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli wyrównanie `CRect` obiektu została dostosowana; `FALSE` inaczej.  
+ `TRUE` Jeśli wyrównanie `CRect` obiektu została dostosowana; `FALSE` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
  `dwAlignment` Parametr może mieć jedną z następujących wartości:  
@@ -440,7 +435,7 @@ virtual BOOL AdjustRectToClientArea(
   
 -   CBRS_ALIGN_RIGHT  
   
-##  <a name="alignautohidepane"></a>CDockingManager::AlignAutoHidePane  
+##  <a name="alignautohidepane"></a>  CDockingManager::AlignAutoHidePane  
  Zmienia rozmiar okienko dokujące w trybie autohide — tak, aby zajmuje pełnej szerokości lub wysokości obszaru klienckiego ramki otoczona dock witryn.  
   
 ```  
@@ -450,13 +445,13 @@ void AlignAutoHidePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDefaultSlider`  
+ [in] `pDefaultSlider`  
  Okienko dokujące suwaka.  
   
- [in]`bIsVisible`  
- `TRUE`Jeśli okienko dokujące jest widoczna; `FALSE` inaczej.  
+ [in] `bIsVisible`  
+ `TRUE` Jeśli okienko dokujące jest widoczna; `FALSE` inaczej.  
   
-##  <a name="autohidepane"></a>CDockingManager::AutoHidePane  
+##  <a name="autohidepane"></a>  CDockingManager::AutoHidePane  
  Tworzy automatycznie ukrywaj paska narzędzi.  
   
 ```  
@@ -466,16 +461,16 @@ CMFCAutoHideToolBar* AutoHidePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBar`  
+ [in] `pBar`  
  Wskaźnik do paska okienka.  
   
- [in]`pCurrAutoHideToolBar`  
+ [in] `pCurrAutoHideToolBar`  
  Wskaźnik do automatycznego ukrywanie paska narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `NULL`Jeśli automatyczne ukrywanie paska narzędzi nie została utworzona; w przeciwnym razie wskaźnik do nowego paska narzędzi.  
+ `NULL` Jeśli automatyczne ukrywanie paska narzędzi nie została utworzona; w przeciwnym razie wskaźnik do nowego paska narzędzi.  
   
-##  <a name="bringbarstotop"></a>CDockingManager::BringBarsToTop  
+##  <a name="bringbarstotop"></a>  CDockingManager::BringBarsToTop  
  Przełącza zadokowanych pasków, które mają określone wyrównanie do góry.  
   
 ```  
@@ -485,13 +480,13 @@ void BringBarsToTop(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`dwAlignment`  
+ [in] `dwAlignment`  
  Wyrównanie paski dokowania, których na początku innych okien.  
   
- [in]`bExcludeDockedBars`  
- `TRUE`Aby wykluczyć zadokowanych pasków przed u góry; w przeciwnym razie `FALSE`.  
+ [in] `bExcludeDockedBars`  
+ `TRUE` Aby wykluczyć zadokowanych pasków przed u góry; w przeciwnym razie `FALSE`.  
   
-##  <a name="buildpanesmenu"></a>CDockingManager::BuildPanesMenu  
+##  <a name="buildpanesmenu"></a>  CDockingManager::BuildPanesMenu  
  Dodaje nazwy dokowania okienka i paski narzędzi do menu.  
   
 ```  
@@ -501,13 +496,13 @@ void BuildPanesMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`menu`  
+ [in] `menu`  
  Menu można dodać nazwy dokowania okienka i pasków narzędzi.  
   
- [in]`bToolbarsOnly`  
- `TRUE`Aby dodać tylko nazwy narzędzi do menu. `FALSE` inaczej.  
+ [in] `bToolbarsOnly`  
+ `TRUE` Aby dodać tylko nazwy narzędzi do menu. `FALSE` inaczej.  
   
-##  <a name="calcexpecteddockedrect"></a>CDockingManager::CalcExpectedDockedRect  
+##  <a name="calcexpecteddockedrect"></a>  CDockingManager::CalcExpectedDockedRect  
  Oblicza oczekiwanego prostokąt zadokowanych okien.  
   
 ```  
@@ -520,25 +515,25 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWnd`  
+ [in] `pWnd`  
  Wskaźnik do okna, aby dokowania.  
   
- [in]`ptMouse`  
+ [in] `ptMouse`  
  Lokalizacja myszy.  
   
- [out]`rectResult`  
+ [out] `rectResult`  
  Obliczony prostokąt.  
   
- [in]`bDrawTab`  
- `TRUE`Rysowanie na karcie; w przeciwnym razie `FALSE`.  
+ [in] `bDrawTab`  
+ `TRUE` Rysowanie na karcie; w przeciwnym razie `FALSE`.  
   
- [out]`ppTargetBar`  
+ [out] `ppTargetBar`  
  Wskaźnik na wskaźnik do okienka docelowej.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda oblicza prostokąt okna zajmują użytkownika przeciągania okna do punktu określonego przez `ptMouse` i zadokowane go brak.  
   
-##  <a name="create"></a>CDockingManager::Create  
+##  <a name="create"></a>  CDockingManager::Create  
  Tworzy Menedżera dokowania.  
   
 ```  
@@ -546,13 +541,13 @@ BOOL Create(CFrameWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pParentWnd`  
+ [in] `pParentWnd`  
  Wskaźnik do ramki nadrzędnego menedżera dokowania. Ta wartość nie może być `NULL`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`zawsze.  
+ `TRUE` Zawsze.  
   
-##  <a name="determinepaneandstatus"></a>CDockingManager::DeterminePaneAndStatus  
+##  <a name="determinepaneandstatus"></a>  CDockingManager::DeterminePaneAndStatus  
  Określa okienka zawierającego danego punktu i jego stan dokowania.  
   
 ```  
@@ -566,22 +561,22 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pt`  
+ [in] `pt`  
  Lokalizacja okienka do sprawdzenia.  
   
- [in]`nSensitivity`  
+ [in] `nSensitivity`  
  Wartość, aby zwiększyć prostokąt okna każdego zaznaczone okienka. Okienko spełnia kryteria wyszukiwania, jeśli w tym regionie zwiększona danego punktu.  
   
- [in]`dwEnabledAlignment`  
+ [in] `dwEnabledAlignment`  
  Wyrównanie dokowania panelu.  
   
- [out]`ppTargetBar`  
+ [out] `ppTargetBar`  
  Wskaźnik na wskaźnik do okienka docelowej.  
   
- [in]`pBarToIgnore`  
+ [in] `pBarToIgnore`  
  Okienka ignoruje metody.  
   
- [in]`pBarToDock`  
+ [in] `pBarToDock`  
  Okienko, w którym jest zadokowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -597,7 +592,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 |CS_DELAY_DOCK|Kursor znajduje się nad innym okienko dokujące lub krawędzi ramki głównej lokacji dokowania.|  
 |CS_DELAY_DOCK_TO_TAB|Kursor znajduje się nad dokowania lokacji, która powoduje, że okienko, aby być zadokowane, w oknie z kartami. Dzieje się tak, gdy wskaźnik myszy znajduje się w podpis okienko dokujące w innym lub za pośrednictwem karty części okienka z kartami.|  
   
-##  <a name="disablerestoredockstate"></a>CDockingManager::DisableRestoreDockState  
+##  <a name="disablerestoredockstate"></a>  CDockingManager::DisableRestoreDockState  
  Włącza lub wyłącza ładowania dokowania układu z rejestru.  
   
 ```  
@@ -605,13 +600,13 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bDisable`  
- `TRUE`Aby wyłączyć ładowanie dokowania układu z rejestru; w przeciwnym razie `FALSE`.  
+ [in] `bDisable`  
+ `TRUE` Aby wyłączyć ładowanie dokowania układu z rejestru; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Tę metodę można wywołać, gdy musi zachować bieżącego układu dokowania okienka i pasków zadań podczas ładowania stanu aplikacji.  
   
-##  <a name="dockpane"></a>CDockingManager::DockPane  
+##  <a name="dockpane"></a>  CDockingManager::DockPane  
  Stacje dokujące okienko do innego okienka lub ramki okna.  
   
 ```  
@@ -622,16 +617,16 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBar`  
+ [in] `pBar`  
  Wskaźnik do paska okienko, aby zostało zadokowane do.  
   
- [in]`nDockBarID`  
+ [in] `nDockBarID`  
  Identyfikator Dokowanie paska.  
   
- [in]`lpRect`  
+ [in] `lpRect`  
  Prostokąt docelowy.  
   
-##  <a name="dockpaneleftof"></a>CDockingManager::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf  
  Stacje dokujące okienko na lewo od innego okienka.  
   
 ```  
@@ -641,16 +636,16 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBarToDock`  
+ [in] `pBarToDock`  
  Wskaźnik do okienko, aby być zadokowany z lewej strony `pTargetBar`.  
   
- [in]`pTargetBar`  
+ [in] `pTargetBar`  
  Wskaźnik do okienka docelowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli okienko zostało zadokowane pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli okienko zostało zadokowane pomyślnie; w przeciwnym razie `FALSE`.  
   
-##  <a name="enableautohidepanes"></a>CDockingManager::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>  CDockingManager::EnableAutoHidePanes  
  Włącza Dokowanie okienka do ramki głównej, tworzy okienku dokowania i dodaje go do listy paski sterowania.  
   
 ```  
@@ -658,13 +653,13 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`dwStyle`  
+ [in] `dwStyle`  
  Wyrównanie dokowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli w okienku dokowania została utworzona pomyślnie; `FALSE` inaczej.  
+ `TRUE` Jeśli w okienku dokowania została utworzona pomyślnie; `FALSE` inaczej.  
   
-##  <a name="enabledocking"></a>CDockingManager::EnableDocking  
+##  <a name="enabledocking"></a>  CDockingManager::EnableDocking  
  Tworzy okienka dokowania i umożliwia Dokowanie okienka do ramki głównej.  
   
 ```  
@@ -672,13 +667,13 @@ BOOL EnableDocking(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`dwStyle`  
+ [in] `dwStyle`  
  Wyrównanie dokowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli w okienku dokowania została utworzona pomyślnie; `FALSE` inaczej.  
+ `TRUE` Jeśli w okienku dokowania została utworzona pomyślnie; `FALSE` inaczej.  
   
-##  <a name="enabledocksitemenu"></a>CDockingManager::EnableDockSiteMenu  
+##  <a name="enabledocksitemenu"></a>  CDockingManager::EnableDockSiteMenu  
  Wyświetla dodatkowy przycisk otwiera menu podręczne na podpisy wszystkie okienka dokowania.  
   
 ```  
@@ -686,23 +681,23 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bEnable`  
- `TRUE`Aby włączyć menu lokacji dokowania. w przeciwnym razie `FALSE`.  
+ [in] `bEnable`  
+ `TRUE` Aby włączyć menu lokacji dokowania. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Menu lokacji dokowania wyświetla następujące opcje zmiany stanu dokowania okienka:  
   
-- `Floating`-Pojawia się okienko  
+- `Floating` -Pojawia się okienko  
   
-- `Docking`-Stacje dokujące okienko w ramce głównej w lokalizacji, w której został ostatnio zadokowany okienka  
+- `Docking` -Stacje dokujące okienko w ramce głównej w lokalizacji, w której został ostatnio zadokowany okienka  
   
-- `AutoHide`-Zmienia okienku na tryb autohide —  
+- `AutoHide` -Zmienia okienku na tryb autohide —  
   
-- `Hide`-Ukrywa okienko  
+- `Hide` -Ukrywa okienko  
   
  Domyślnie nie jest wyświetlany w tym menu.  
   
-##  <a name="enablepanecontextmenu"></a>CDockingManager::EnablePaneContextMenu  
+##  <a name="enablepanecontextmenu"></a>  CDockingManager::EnablePaneContextMenu  
  Określa, że biblioteki, aby wyświetlić menu kontekstowe specjalne zawierający listę pasków narzędzi aplikacji i okienka dokowania po kliknięciu prawym przyciskiem myszy i biblioteki przetwarza komunikat WM_CONTEXTMENU.  
   
 ```  
@@ -714,19 +709,19 @@ void EnablePaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bEnable`  
+ [in] `bEnable`  
  Jeśli `TRUE`, biblioteki włącza obsługę menu kontekstowe automatyczne; Jeśli `FALSE` biblioteki wyłącza obsługę menu kontekstowe automatycznego.  
   
- [in]`uiCustomizeCmd`  
+ [in] `uiCustomizeCmd`  
  Identyfikator polecenia **Dostosuj** elementu w menu.  
   
- [in]`strCustomizeText`  
+ [in] `strCustomizeText`  
  Tekst **Dostosuj** elementu.  
   
- [in]`bToolbarsOnly`  
+ [in] `bToolbarsOnly`  
  Jeśli `TRUE`, menu wyświetla tylko listę pasków narzędzi aplikacji; Jeśli `FALSE`, biblioteki dodaje okienka dokowania aplikacji do tej listy.  
   
-##  <a name="finddocksite"></a>CDockingManager::FindDockSite  
+##  <a name="finddocksite"></a>  CDockingManager::FindDockSite  
  Pobiera pasku okienko jest w określonej pozycji, na którym jest określone wyrównanie.  
   
 ```  
@@ -736,16 +731,16 @@ virtual CDockSite* FindDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`dwAlignment`  
+ [in] `dwAlignment`  
  Wyrównanie paska okienka.  
   
- [in]`bOuter`  
+ [in] `bOuter`  
  Jeśli `TRUE`, pobrać pasek head pozycji na liście pasków sterowania. W przeciwnym razie pobrać pasku tail pozycję na liście paski sterowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Okienko dokujące, który ma określone wyrównanie; `NULL` inaczej.  
   
-##  <a name="findpanebyid"></a>CDockingManager::FindPaneByID  
+##  <a name="findpanebyid"></a>  CDockingManager::FindPaneByID  
  Wyszukuje okienko określony formant identyfikatora.  
   
 ```  
@@ -755,18 +750,18 @@ virtual CBasePane* FindPaneByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uBarID`  
+ [in] `uBarID`  
  Określa identyfikator formantu okienka można znaleźć.  
   
- [in]`bSearchMiniFrames`  
- `TRUE`Aby w wyszukiwaniu uwzględnić wszystkie okienka zmiennoprzecinkowych. `FALSE`Aby uwzględnić zadokowanych paneli.  
+ [in] `bSearchMiniFrames`  
+ `TRUE` Aby w wyszukiwaniu uwzględnić wszystkie okienka zmiennoprzecinkowych. `FALSE` Aby uwzględnić zadokowanych paneli.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  [CBasePane](../../mfc/reference/cbasepane-class.md) obiektu, który ma identyfikator określony formant lub `NULL` Jeśli nie można odnaleźć określonego okienka.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="finddocksitebypane"></a>CDockingManager::FindDockSiteByPane  
+##  <a name="finddocksitebypane"></a>  CDockingManager::FindDockSiteByPane  
  Zwraca pasku okienka o identyfikatorze okienku paska docelowej.  
   
 ```  
@@ -774,13 +769,13 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pTargetBar`  
+ [in] `pTargetBar`  
  Wskaźnik do okienka pasek docelowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Pasek okienka o identyfikatorze okienku paska docelowej. `NULL` Jeśli nie ma takiej paska okienku istnieje.  
   
-##  <a name="fixupvirtualrects"></a>CDockingManager::FixupVirtualRects  
+##  <a name="fixupvirtualrects"></a>  CDockingManager::FixupVirtualRects  
  Zatwierdza wszystkie bieżącej pozycji narzędzi do wirtualnego prostokąty.  
   
 ```  
@@ -790,7 +785,7 @@ virtual void FixupVirtualRects();
 ### <a name="remarks"></a>Uwagi  
  Gdy użytkownik uruchomi przeciągnij pasek narzędzi, przejściu oryginalnego położenia w *wirtualnego prostokąt*. Gdy użytkownik przesuwa paska narzędzi w swojej witrynie dokowania, pasek narzędzi może przejść pasków narzędzi. Oryginalnego położenia innych pasków narzędzi są przechowywane w odpowiednich prostokąty wirtualnego.  
   
-##  <a name="framefrompoint"></a>CDockingManager::FrameFromPoint  
+##  <a name="framefrompoint"></a>  CDockingManager::FrameFromPoint  
  Zwraca ramki, która zawiera danego punktu.  
   
 ```  
@@ -801,19 +796,19 @@ virtual CPaneFrameWnd* FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pt`  
+ [in] `pt`  
  Określa punkt, we współrzędnych ekranu, aby sprawdzić.  
   
- [in]`pFrameToExclude`  
+ [in] `pFrameToExclude`  
  Wskaźnik do ramki, które mają zostać wykluczone.  
   
- [in]`bFloatMultiOnly`  
- `TRUE`Aby wykluczyć ramki, które nie są wystąpienia `CMultiPaneFrameWnd`; `FALSE` inaczej.  
+ [in] `bFloatMultiOnly`  
+ `TRUE` Aby wykluczyć ramki, które nie są wystąpienia `CMultiPaneFrameWnd`; `FALSE` inaczej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Ramki, która zawiera danego punktu; `NULL` inaczej.  
   
-##  <a name="getclientareabounds"></a>CDockingManager::GetClientAreaBounds  
+##  <a name="getclientareabounds"></a>  CDockingManager::GetClientAreaBounds  
  Pobiera prostokąt, który zawiera granice obszaru klienckiego.  
   
 ```  
@@ -823,13 +818,13 @@ void GetClientAreaBounds(CRect& rcClient);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rcClient`  
+ [out] `rcClient`  
  Odwołanie do prostokąta, który zawiera granice obszaru klienckiego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Prostokąt, który zawiera granice obszaru klienckiego.  
   
-##  <a name="getdockingmode"></a>CDockingManager::GetDockingMode  
+##  <a name="getdockingmode"></a>  CDockingManager::GetDockingMode  
  Zwraca bieżący tryb dokowania.  
   
 ```  
@@ -848,7 +843,7 @@ static AFX_DOCK_TYPE GetDockingMode();
 ### <a name="remarks"></a>Uwagi  
  Aby ustawić tryb dokowania, należy wywołać [CDockingManager::SetDockingMode](#setdockingmode).  
   
-##  <a name="getdocksiteframewnd"></a>CDockingManager::GetDockSiteFrameWnd  
+##  <a name="getdocksiteframewnd"></a>  CDockingManager::GetDockSiteFrameWnd  
  Pobiera wskaźnik do ramki okna nadrzędnego.  
   
 ```  
@@ -858,7 +853,7 @@ CFrameWnd* GetDockSiteFrameWnd() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do ramki okna nadrzędnego.  
   
-##  <a name="getenabledautohidealignment"></a>CDockingManager::GetEnabledAutoHideAlignment  
+##  <a name="getenabledautohidealignment"></a>  CDockingManager::GetEnabledAutoHideAlignment  
  Zwraca włączone wyrównanie okienka.  
   
 ```  
@@ -871,7 +866,7 @@ DWORD GetEnabledAutoHideAlignment() const;
 ### <a name="remarks"></a>Uwagi  
  Metoda zwraca włączone wyrównanie autohide — paski sterowania. Aby włączyć paski autohide —, należy wywołać [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes).  
   
-##  <a name="getminiframes"></a>CDockingManager::GetMiniFrames  
+##  <a name="getminiframes"></a>  CDockingManager::GetMiniFrames  
  Pobiera listę miniframes.  
   
 ```  
@@ -881,7 +876,7 @@ const CObList& GetMiniFrames() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Lista miniframes, która zawiera należące do Menedżera dokowania pasków kontrolki.  
   
-##  <a name="getouteredgebounds"></a>CDockingManager::GetOuterEdgeBounds  
+##  <a name="getouteredgebounds"></a>  CDockingManager::GetOuterEdgeBounds  
  Pobiera prostokąt, który zawiera zewnętrznej krawędzi ramki.  
   
 ```  
@@ -891,7 +886,7 @@ CRect GetOuterEdgeBounds() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Prostokąt zawiera zewnętrznej krawędzi ramki.  
   
-##  <a name="getpanelist"></a>CDockingManager::GetPaneList  
+##  <a name="getpanelist"></a>  CDockingManager::GetPaneList  
  Zwraca listę okienka należące do Menedżera dokowania. Dotyczy to również wszystkich okienka zmiennoprzecinkowych.  
   
 ```  
@@ -903,24 +898,24 @@ void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out]`lstBars`  
+ [w, out] `lstBars`  
  Zawiera wszystkie okienka bieżącego Menedżera dokowania.  
   
- [in]`bIncludeAutohide`  
- `TRUE`Aby uwzględnić okienka, które są w trybie autohide —; w przeciwnym razie `FALSE`.  
+ [in] `bIncludeAutohide`  
+ `TRUE` Aby uwzględnić okienka, które są w trybie autohide —; w przeciwnym razie `FALSE`.  
   
- [in]`pRTCFilter`  
+ [in] `pRTCFilter`  
  Jeśli nie `NULL`, zwracana lista zawiera okienka tylko klasy wykonawcze.  
   
- [in]`bIncludeTabs`  
- `TRUE`Aby uwzględnić kartach. w przeciwnym razie `FALSE`.  
+ [in] `bIncludeTabs`  
+ `TRUE` Aby uwzględnić kartach. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  W przypadku dowolnego z kartami okienka w Menedżerze dokowania, metoda zwraca wskaźniki do [klasy CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md) obiektów i należy wyliczyć kart jawnie.  
   
  Użyj `pRTCFilter` uzyskanie określonej klasy okienka. Na przykład odpowiednio ustawiając tę wartość można uzyskać tylko pasków narzędzi.  
   
-##  <a name="getsmartdockingmanager"></a>CDockingManager::GetSmartDockingManager  
+##  <a name="getsmartdockingmanager"></a>  CDockingManager::GetSmartDockingManager  
  Pobiera wskaźnik inteligentny Menedżera dokowania.  
   
 ```  
@@ -930,7 +925,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do [inteligentne Menedżera dokowania](http://msdn.microsoft.com/en-us/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
   
-##  <a name="getsmartdockingmanagerpermanent"></a>CDockingManager::GetSmartDockingManagerPermanent  
+##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  Pobiera wskaźnik inteligentny Menedżera dokowania.  
   
 ```  
@@ -940,7 +935,7 @@ CSmartDockingManager* GetSmartDockingManagerPermanent() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik inteligentny Menedżera dokowania.  
   
-##  <a name="getsmartdockingparams"></a>CDockingManager::GetSmartDockingParams  
+##  <a name="getsmartdockingparams"></a>  CDockingManager::GetSmartDockingParams  
  Zwraca inteligentne parametry dokowania Menedżera dokowania.  
   
 ```  
@@ -952,7 +947,7 @@ static CSmartDockingInfo& GetSmartDockingParams();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="hideautohidepanes"></a>CDockingManager::HideAutoHidePanes  
+##  <a name="hideautohidepanes"></a>  CDockingManager::HideAutoHidePanes  
  Ukrywa okienko, w którym znajduje się w trybie autohide —.  
   
 ```  
@@ -962,13 +957,13 @@ void HideAutoHidePanes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBarToExclude`  
+ [in] `pBarToExclude`  
  Wskaźnik do paska do wykluczenia z ukrytych.  
   
- [in]`bImmediately`  
- `TRUE`Aby ukryć okienko natychmiast; `FALSE` Aby ukryć okienko z mocą autohide —.  
+ [in] `bImmediately`  
+ `TRUE` Aby ukryć okienko natychmiast; `FALSE` Aby ukryć okienko z mocą autohide —.  
   
-##  <a name="insertdocksite"></a>CDockingManager::InsertDockSite  
+##  <a name="insertdocksite"></a>  CDockingManager::InsertDockSite  
  Tworzy okienka dokowania i wstawia go do listy paski sterowania.  
   
 ```  
@@ -979,19 +974,19 @@ BOOL InsertDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`info`  
+ [in] `info`  
  Struktura, która zawiera informacje wyrównanie dokowania panelu.  
   
- [in]`dwAlignToInsertAfter`  
+ [in] `dwAlignToInsertAfter`  
  Wyrównanie dokowania panelu.  
   
- [out]`ppDockBar`  
+ [out] `ppDockBar`  
  Wskaźnik na wskaźnik do okienka dokowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli w okienku dokowania została utworzona pomyślnie; `FALSE` inaczej.  
+ `TRUE` Jeśli w okienku dokowania została utworzona pomyślnie; `FALSE` inaczej.  
   
-##  <a name="insertpane"></a>CDockingManager::InsertPane  
+##  <a name="insertpane"></a>  CDockingManager::InsertPane  
  Wstawia listę pasków kontrolki panelu sterowania.  
   
 ```  
@@ -1002,22 +997,22 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pControlBar`  
+ [in] `pControlBar`  
  Wskaźnik do panelu sterowania.  
   
- [in]`pTarget`  
+ [in] `pTarget`  
  Wskaźnik do okienka docelowej.  
   
- [in]`bAfter`  
- `TRUE`Wstaw w okienku po pozycji okienka docelowym; `FALSE` inaczej.  
+ [in] `bAfter`  
+ `TRUE` Wstaw w okienku po pozycji okienka docelowym; `FALSE` inaczej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli okienko formantu został pomyślnie dodany do listy paski sterowania; `FALSE` inaczej.  
+ `TRUE` Jeśli okienko formantu został pomyślnie dodany do listy paski sterowania; `FALSE` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zwraca wartość false, jeśli w okienku kontroli jest już na liście paski sterowania lub w okienku docelowy nie istnieje na liście paski sterowania.  
   
-##  <a name="isdocksitemenu"></a>CDockingManager::IsDockSiteMenu  
+##  <a name="isdocksitemenu"></a>  CDockingManager::IsDockSiteMenu  
  Określa, czy menu podręczne jest wyświetlany na podpisy wszystkie okienka.  
   
 ```  
@@ -1025,12 +1020,12 @@ static BOOL IsDockSiteMenu();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli menu lokacji dock jest wyświetlany na podpisy wszystkie okienka dokowania; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli menu lokacji dock jest wyświetlany na podpisy wszystkie okienka dokowania; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Można włączyć menu lokacji dokowania przez wywołanie metody [CDockingManager::EnableDockSiteMenu](#enabledocksitemenu).  
   
-##  <a name="isinadjustlayout"></a>CDockingManager::IsInAdjustLayout  
+##  <a name="isinadjustlayout"></a>  CDockingManager::IsInAdjustLayout  
  Określa, po układów wszystkich okienek zostaną skorygowane.  
   
 ```  
@@ -1038,9 +1033,9 @@ BOOL IsInAdjustLayout() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli są dostosowane układów wszystkich okienek; `FALSE` inaczej.  
+ `TRUE` Jeśli są dostosowane układów wszystkich okienek; `FALSE` inaczej.  
   
-##  <a name="isolecontainermode"></a>CDockingManager::IsOLEContainerMode  
+##  <a name="isolecontainermode"></a>  CDockingManager::IsOLEContainerMode  
  Określa, czy dokowania manager jest w trybie kontenera OLE.  
   
 ```  
@@ -1048,12 +1043,12 @@ BOOL IsOLEContainerMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli dokowania manager jest w trybie kontenera OLE w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli dokowania manager jest w trybie kontenera OLE w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  W trybie kontenera OLE wszystkie okienka dokowania i pasków narzędzi aplikacji są ukryte. Okienka również są ukryte w tym trybie, jeśli ustawiono [CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) do `TRUE`.  
   
-##  <a name="ispointneardocksite"></a>CDockingManager::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>  CDockingManager::IsPointNearDockSite  
  Określa, czy określony punkt znajduje się w pobliżu lokacji dokowania.  
   
 ```  
@@ -1064,19 +1059,19 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Określony punkt.  
   
- [out]`dwBarAlignment`  
+ [out] `dwBarAlignment`  
  Określa, które krawędzi punkt znajduje się w pobliżu. Możliwe wartości to `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, i `CBRS_ALIGN_BOTTOM`.  
   
- [out]`bOuterEdge`  
- `TRUE`Jeśli punkt jest bliski zewnętrzną krawędzią dokowania lokacji; `FALSE` inaczej.  
+ [out] `bOuterEdge`  
+ `TRUE` Jeśli punkt jest bliski zewnętrzną krawędzią dokowania lokacji; `FALSE` inaczej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli punkt znajduje się w pobliżu lokacji dokowania; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli punkt znajduje się w pobliżu lokacji dokowania; w przeciwnym razie `FALSE`.  
   
-##  <a name="isprintpreviewvalid"></a>CDockingManager::IsPrintPreviewValid  
+##  <a name="isprintpreviewvalid"></a>  CDockingManager::IsPrintPreviewValid  
  Określa, czy ustawiono tryb podglądu wydruku.  
   
 ```  
@@ -1084,9 +1079,9 @@ BOOL IsPrintPreviewValid() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli ustawiono tryb podglądu wydruku; `FALSE` inaczej.  
+ `TRUE` Jeśli ustawiono tryb podglądu wydruku; `FALSE` inaczej.  
   
-##  <a name="loadstate"></a>CDockingManager::LoadState  
+##  <a name="loadstate"></a>  CDockingManager::LoadState  
  Ładuje stan dokowania menedżera z rejestru.  
   
 ```  
@@ -1096,16 +1091,16 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszProfileName`  
+ [in] `lpszProfileName`  
  Nazwa profilu.  
   
- [in]`uiID`  
+ [in] `uiID`  
  Identyfikator menedżera dokowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli stan dokowania manager został załadowany pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli stan dokowania manager został załadowany pomyślnie; w przeciwnym razie `FALSE`.  
   
-##  <a name="lockupdate"></a>CDockingManager::LockUpdate  
+##  <a name="lockupdate"></a>  CDockingManager::LockUpdate  
  Blokuje danego okna.  
   
 ```  
@@ -1113,13 +1108,13 @@ void LockUpdate(BOOL bLock);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bLock`  
- `TRUE`Jeśli okno jest zablokowany; `FALSE` inaczej.  
+ [in] `bLock`  
+ `TRUE` Jeśli okno jest zablokowany; `FALSE` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy okno jest zablokowany, nie można przenieść i nie może być narysowany ponownie.  
   
-##  <a name="m_bhidedockingbarsincontainermode"></a>CDockingManager::m_bHideDockingBarsInContainerMode  
+##  <a name="m_bhidedockingbarsincontainermode"></a>  CDockingManager::m_bHideDockingBarsInContainerMode  
  Określa, czy Menedżer dokowania powoduje ukrycie okienka w trybie kontenera OLE.  
   
 ```  
@@ -1129,7 +1124,7 @@ AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
 ### <a name="remarks"></a>Uwagi  
  Ta wartość `FALSE` Jeśli chcesz zachować wszystkie okienka zadokowane do ramki głównej widoczne gdy aplikacja jest w trybie kontenera OLE. Domyślnie ta wartość jest `TRUE`.  
   
-##  <a name="m_dockmodeglobal"></a>CDockingManager::m_dockModeGlobal  
+##  <a name="m_dockmodeglobal"></a>  CDockingManager::m_dockModeGlobal  
  Określa tryb globalny dokowania.  
   
 ```  
@@ -1139,7 +1134,7 @@ AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 ### <a name="remarks"></a>Uwagi  
  Domyślnie okienko dokujące w każdym korzysta z tego trybu dokowania. Aby uzyskać więcej informacji na temat wartości, które to pole może mieć wartości, zobacz [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).  
   
-##  <a name="m_ndocksensitivity"></a>CDockingManager::m_nDockSensitivity  
+##  <a name="m_ndocksensitivity"></a>  CDockingManager::m_nDockSensitivity  
  Określa czułości dokowania.  
   
 ```  
@@ -1149,7 +1144,7 @@ AFX_IMPORT_DATA static int m_nDockSensitivity;
 ### <a name="remarks"></a>Uwagi  
  Czułość dokowania Określa, jak blisko liczbą zmiennoprzecinkową okienku można podejścia okienko dokujące, dokującego witryny lub innego okienka zanim w ramach zmiany stanu do zadokowane.  
   
-##  <a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager::m_nTimeOutBeforeDockingBarDock  
+##  <a name="m_ntimeoutbeforedockingbardock"></a>  CDockingManager::m_nTimeOutBeforeDockingBarDock  
  Określa czas (w milisekundach), zanim dokujące okienko jest zadokowany w trybie natychmiastowym dokowania.  
   
 ```  
@@ -1159,7 +1154,7 @@ static UINT m_nTimeOutBeforeDockingBarDock;
 ### <a name="remarks"></a>Uwagi  
  Przed panel jest zadokowany, platformę oczekuje określony limit czasu. Zapobiega to przypadkowo jest zadokowany do lokalizacji podczas, gdy użytkownik nadal jest przeciąganie okienka.  
   
-##  <a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager::m_nTimeOutBeforeToolBarDock  
+##  <a name="m_ntimeoutbeforetoolbardock"></a>  CDockingManager::m_nTimeOutBeforeToolBarDock  
  Określa czas (w milisekundach), zanim paska narzędzi jest zadokowany do głównego okna ramowego.  
   
 ```  
@@ -1169,7 +1164,7 @@ static UINT m_nTimeOutBeforeToolBarDock;
 ### <a name="remarks"></a>Uwagi  
  Przed paska narzędzi jest zadokowany, platformę oczekuje określony limit czasu. Zapobiega to przypadkowo jest zadokowany do lokalizacji podczas, gdy użytkownik nadal jest przeciąganie paska narzędzi.  
   
-##  <a name="onactivateframe"></a>CDockingManager::OnActivateFrame  
+##  <a name="onactivateframe"></a>  CDockingManager::OnActivateFrame  
  Wywoływane przez platformę, gdy okno ramowe jest aktywowane lub jest dezaktywowana.  
   
 ```  
@@ -1177,10 +1172,10 @@ virtual void OnActivateFrame(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bActivate`  
+ [in] `bActivate`  
  Jeśli `TRUE`, okno ramowe jest aktywowane; Jeśli `FALSE`, okno ramowe zostanie zdezaktywowany.  
   
-##  <a name="onclosepopupmenu"></a>CDockingManager::OnClosePopupMenu  
+##  <a name="onclosepopupmenu"></a>  CDockingManager::OnClosePopupMenu  
  Wywoływane przez platformę, gdy aktywne menu podręczne przetwarza komunikat WM_DESTROY.  
   
 ```  
@@ -1190,7 +1185,7 @@ void OnClosePopupMenu();
 ### <a name="remarks"></a>Uwagi  
  Platformę wysyła komunikat WM_DESTROY, gdy jest zamknięcie bieżącego okna głównego. Przesłonić tę metodę obsługi powiadomień z `CMFCPopupMenu` obiektów, które należą do okno ramowe podczas `CMFCPopupMenu` obiekt procesów `WM_DESTROY` wiadomości.  
   
-##  <a name="onmoveminiframe"></a>CDockingManager::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>  CDockingManager::OnMoveMiniFrame  
  Wywoływane przez platformę, by przenieść okno ramowe minimalnej.  
   
 ```  
@@ -1198,13 +1193,13 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pFrame`  
+ [in] `pFrame`  
  Wskaźnik do okno ramowe minimalnej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
   
-##  <a name="onpanecontextmenu"></a>CDockingManager::OnPaneContextMenu  
+##  <a name="onpanecontextmenu"></a>  CDockingManager::OnPaneContextMenu  
  Wywoływane przez platformę, podczas tworzenia menu, która zawiera listę okienka.  
   
 ```  
@@ -1212,10 +1207,10 @@ void OnPaneContextMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Określa lokalizację, w menu.  
   
-##  <a name="panefrompoint"></a>CDockingManager::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint  
  Zwraca okienko, który zawiera danego punktu.  
   
 ```  
@@ -1236,25 +1231,25 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Określa punkt, we współrzędnych ekranu, aby sprawdzić.  
   
- [in]`nSensitivity`  
+ [in] `nSensitivity`  
  Wartość do zwiększyć prostokąt okna każdego zaznaczone okienka. Okienko spełnia kryteria wyszukiwania, jeśli w tym regionie nadmuchany danego punktu.  
   
- [in]`bExactBar`  
- `TRUE`ignorowanie `nSensitivity` parametru; w przeciwnym razie `FALSE`.  
+ [in] `bExactBar`  
+ `TRUE` ignorowanie `nSensitivity` parametru; w przeciwnym razie `FALSE`.  
   
- [in]`pRTCBarType`  
+ [in] `pRTCBarType`  
  Jeśli nie `NULL`, metoda szuka tylko okienka określonego typu.  
   
- [in]`bCheckVisibility`  
- `TRUE`Aby sprawdzić tylko widoczne okienka; w przeciwnym razie `FALSE`.  
+ [in] `bCheckVisibility`  
+ `TRUE` Aby sprawdzić tylko widoczne okienka; w przeciwnym razie `FALSE`.  
   
- [out]`dwAlignment`  
+ [out] `dwAlignment`  
  Jeśli okienko zostanie znaleziony w określonym momencie, ten parametr zawiera po stronie okienka, który był najbardziej zbliżony do określonego punktu. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
- [in]`pBarToIgnore`  
+ [in] `pBarToIgnore`  
  Jeśli nie `NULL`, metoda ignoruje okienka określonego przez tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1263,7 +1258,7 @@ virtual CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Uwagi  
  Gdy funkcja zwraca i okienku został znaleziony, `dwAlignment` zawiera wyrównanie określony punkt. Na przykład, jeśli punkt się najbliżej w górnej części okienka `dwAlignment` ma ustawioną wartość `CBRS_ALIGN_TOP`.  
   
-##  <a name="processpanecontextmenucommand"></a>CDockingManager::ProcessPaneContextMenuCommand  
+##  <a name="processpanecontextmenucommand"></a>  CDockingManager::ProcessPaneContextMenuCommand  
  Metoda wywoływana przez strukturę zaznacz lub usuń zaznaczenie pola wyboru dla określonego polecenia i ponownie Oblicz układ wyświetlane okienku.  
   
 ```  
@@ -1275,22 +1270,22 @@ BOOL ProcessPaneContextMenuCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nID`  
+ [in] `nID`  
  Identyfikator formantu paska menu.  
   
- [in]`nCode`  
+ [in] `nCode`  
  Polecenie kod powiadomienia.  
   
- [in]`pExtra`  
+ [in] `pExtra`  
  Wskaźnik do void, który jest rzutowana na wskaźnik do `CCmdUI` Jeśli `nCode` jest CN_UPDATE_COMMAND_UI.  
   
- [in]`pHandlerInfo`  
+ [in] `pHandlerInfo`  
  Wskaźnik do struktury informacji. Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli `pEXtra` nie ma wartości NULL i `nCode` jest równe CN_UPDATE_COMMAND_UI, lub jeśli brakuje pasek sterowania z określonym `nID`.  
+ `TRUE` Jeśli `pEXtra` nie ma wartości NULL i `nCode` jest równe CN_UPDATE_COMMAND_UI, lub jeśli brakuje pasek sterowania z określonym `nID`.  
   
-##  <a name="recalclayout"></a>CDockingManager::RecalcLayout  
+##  <a name="recalclayout"></a>  CDockingManager::RecalcLayout  
  Ponownie oblicza układ wewnętrzny formantów występuje na liście kontrolek.  
   
 ```  
@@ -1298,17 +1293,17 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bNotify`  
+ [in] `bNotify`  
  Ten parametr nie jest używany.  
   
-##  <a name="releaseemptypanecontainers"></a>CDockingManager::ReleaseEmptyPaneContainers  
+##  <a name="releaseemptypanecontainers"></a>  CDockingManager::ReleaseEmptyPaneContainers  
  Zwalnia kontenery okienku puste.  
   
 ```  
 void ReleaseEmptyPaneContainers();
 ```  
   
-##  <a name="removehiddenmditabbedbar"></a>CDockingManager::RemoveHiddenMDITabbedBar  
+##  <a name="removehiddenmditabbedbar"></a>  CDockingManager::RemoveHiddenMDITabbedBar  
  Usuwa określoną ukryte paska okienka.  
   
 ```  
@@ -1316,10 +1311,10 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBar`  
+ [in] `pBar`  
  Wskaźnik do paska okienko do usunięcia.  
   
-##  <a name="removeminiframe"></a>CDockingManager::RemoveMiniFrame  
+##  <a name="removeminiframe"></a>  CDockingManager::RemoveMiniFrame  
  Usuwa określony ramkę z listy ramek mini.  
   
 ```  
@@ -1327,13 +1322,13 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWnd`  
+ [in] `pWnd`  
  Wskaźnik do ramki do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`usunięcie określonej ramce; `FALSE` inaczej.  
+ `TRUE` usunięcie określonej ramce; `FALSE` inaczej.  
   
-##  <a name="removepanefromdockmanager"></a>CDockingManager::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>  CDockingManager::RemovePaneFromDockManager  
  Wyrejestrowuje okienko i usuwa go z listy w Menedżerze dokowania.  
   
 ```  
@@ -1346,22 +1341,22 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWnd`  
+ [in] `pWnd`  
  Wskaźnik do okienka do usunięcia.  
   
- [in]`bDestroy`  
+ [in] `bDestroy`  
  Jeśli `TRUE`, usunięto okienko zostanie zniszczony.  
   
- [in]`bAdjustLayout`  
+ [in] `bAdjustLayout`  
  Jeśli `TRUE`, natychmiast dostosować układ dokowania.  
   
- [in]`bAutoHide`  
+ [in] `bAutoHide`  
  Jeśli `TRUE`, okienku zostanie usunięty z listy paski autohide —. Jeśli `FALSE`, okienku zostanie usunięty z listy regularne okienka.  
   
- [in]`pBarReplacement`  
+ [in] `pBarReplacement`  
  Wskaźnik do okienka zastępujący okienku usunięte.  
   
-##  <a name="replacepane"></a>CDockingManager::ReplacePane  
+##  <a name="replacepane"></a>  CDockingManager::ReplacePane  
  Zastępuje jedno okienko na inny.  
   
 ```  
@@ -1371,23 +1366,23 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pOriginalBar`  
+ [in] `pOriginalBar`  
  Wskaźnik do oryginalnego okienka.  
   
- [in]`pNewBar`  
+ [in] `pNewBar`  
  Wskaźnik do okienka zastępuje oryginalnego okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli okienko jest pomyślnie zastąpił; `FALSE` inaczej.  
+ `TRUE` Jeśli okienko jest pomyślnie zastąpił; `FALSE` inaczej.  
   
-##  <a name="resortminiframesforzorder"></a>CDockingManager::ResortMiniFramesForZOrder  
+##  <a name="resortminiframesforzorder"></a>  CDockingManager::ResortMiniFramesForZOrder  
  Uporządkowana ramek na liście mini ramki.  
   
 ```  
 void ResortMiniFramesForZOrder();
 ```  
   
-##  <a name="savestate"></a>CDockingManager::SaveState  
+##  <a name="savestate"></a>  CDockingManager::SaveState  
  Zapisuje stan dokowania menedżera w rejestrze.  
   
 ```  
@@ -1397,19 +1392,19 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszProfileName`  
+ [in] `lpszProfileName`  
  Ścieżka do klucza rejestru.  
   
- [in]`uiID`  
+ [in] `uiID`  
  Dokowanie identyfikatora menedżera.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli stan został zapisany pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli stan został zapisany pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Zapisywanie do rejestru dokowania manager obejmuje zapisywanie stanów paski sterowania, Stany paski autohide — i stanów mini ramek istnieje w Menedżerze dokowania.  
   
-##  <a name="sendmessagetominiframes"></a>CDockingManager::SendMessageToMiniFrames  
+##  <a name="sendmessagetominiframes"></a>  CDockingManager::SendMessageToMiniFrames  
  Wysyła określoną wiadomość do ramki mini wszystkich.  
   
 ```  
@@ -1420,19 +1415,19 @@ BOOL SendMessageToMiniFrames(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uMessage`  
+ [in] `uMessage`  
  Komunikat do wysłania.  
   
- [in]`wParam`  
+ [in] `wParam`  
  Informacje zależne od dodatkowy komunikat.  
   
- [in]`lParam`  
+ [in] `lParam`  
  Informacje zależne od dodatkowy komunikat.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`zawsze.  
+ `TRUE` Zawsze.  
   
-##  <a name="serialize"></a>CDockingManager::Serialize  
+##  <a name="serialize"></a>  CDockingManager::Serialize  
  Zapisuje dokowania Menedżera do archiwum.  
   
 ```  
@@ -1440,13 +1435,13 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`ar`  
+ [in] `ar`  
  Odwołanie do obiektu archiwum.  
   
 ### <a name="remarks"></a>Uwagi  
  Pisanie dokowania Menedżera do archiwum obejmuje określenie, ile dokujące paski sterowania oraz suwaki i zapisywanie paski sterowania, mini ramki paski autohide — i paski z kartami MDI do archiwum.  
   
-##  <a name="setautohidezorder"></a>CDockingManager::SetAutohideZOrder  
+##  <a name="setautohidezorder"></a>  CDockingManager::SetAutohideZOrder  
  Ustawia rozmiar, szerokość i wysokość paski sterowania i okienko określony.  
   
 ```  
@@ -1454,10 +1449,10 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pAHDockingBar`  
+ [in] `pAHDockingBar`  
  Wskaźnik do okienka dokującego.  
   
-##  <a name="setdockingmode"></a>CDockingManager::SetDockingMode  
+##  <a name="setdockingmode"></a>  CDockingManager::SetDockingMode  
  Ustawia tryb dokowania.  
   
 ```  
@@ -1476,22 +1471,22 @@ static void SetDockingMode(
 ### <a name="remarks"></a>Uwagi  
  Wywołania tej metody statycznej można ustawić trybu dokowania.  
   
- `dockMode`może to być jedna z następujących wartości:  
+ `dockMode` może to być jedna z następujących wartości:  
   
-- `DT_STANDARD`-Dokowanie tryb zgodnie z implementacją w Visual Studio .NET 2003 standard. Okienka są przeciągane bez kontekstu przeciągania.  
+- `DT_STANDARD` -Dokowanie tryb zgodnie z implementacją w Visual Studio .NET 2003 standard. Okienka są przeciągane bez kontekstu przeciągania.  
   
-- `DT_IMMEDIATE`— Natychmiastowe trybie dokowania jako implementowana w programie Microsoft Visio. Okienka są przeciągane z kontekstem przeciągania, ale są wyświetlane nie znaczniki.  
+- `DT_IMMEDIATE` — Natychmiastowe trybie dokowania jako implementowana w programie Microsoft Visio. Okienka są przeciągane z kontekstem przeciągania, ale są wyświetlane nie znaczniki.  
   
-- `DT_SMART`-Inteligentne tryb dokowania, zgodnie z implementacją w programie Visual Studio 2005. Okienka są przeciągane z kontekstem przeciągania i są wyświetlane znaczniki inteligentne który Pokaż, gdzie może być zadokowany okienka.  
+- `DT_SMART` -Inteligentne tryb dokowania, zgodnie z implementacją w programie Visual Studio 2005. Okienka są przeciągane z kontekstem przeciągania i są wyświetlane znaczniki inteligentne który Pokaż, gdzie może być zadokowany okienka.  
   
-##  <a name="setdockstate"></a>CDockingManager::SetDockState  
+##  <a name="setdockstate"></a>  CDockingManager::SetDockState  
  Ustawia stan dokujące paski sterowania, mini ramki i paski autohide —.  
   
 ```  
 virtual void SetDockState();
 ```  
   
-##  <a name="setprintpreviewmode"></a>CDockingManager::SetPrintPreviewMode  
+##  <a name="setprintpreviewmode"></a>  CDockingManager::SetPrintPreviewMode  
  Ustawia tryb podglądu wydruku pasków, które są wyświetlane w podglądzie wydruku.  
   
 ```  
@@ -1501,13 +1496,13 @@ void SetPrintPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bPreview`  
- `TRUE`Jeśli ustawiono tryb podglądu wydruku; `FALSE` inaczej.  
+ [in] `bPreview`  
+ `TRUE` Jeśli ustawiono tryb podglądu wydruku; `FALSE` inaczej.  
   
- [in]`pState`  
+ [in] `pState`  
  Wskaźnik do stanu wersji zapoznawczej. Ten parametr nie jest używany.  
   
-##  <a name="setsmartdockingparams"></a>CDockingManager::SetSmartDockingParams  
+##  <a name="setsmartdockingparams"></a>  CDockingManager::SetSmartDockingParams  
  Ustawia parametrów, które określają zachowanie inteligentne dokowania.  
   
 ```  
@@ -1515,7 +1510,7 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out]`params`  
+ [w, out] `params`  
  Definiuje parametry inteligentne dokowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1523,7 +1518,7 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
   
  Aby użyć domyślnego wyglądu znaczniki inteligentnego dokowania, przekaż wystąpienie niezainicjowanej [klasy CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) do `params`.  
   
-##  <a name="showdelayshowminiframes"></a>CDockingManager::ShowDelayShowMiniFrames  
+##  <a name="showdelayshowminiframes"></a>  CDockingManager::ShowDelayShowMiniFrames  
  Pokazuje lub ukrywa windows mini ramek.  
   
 ```  
@@ -1531,10 +1526,10 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bShow`  
- `TRUE`Aby uaktywnić oknie pokazano ramki; `FALSE to` ukryć ramki okna.  
+ [in] `bShow`  
+ `TRUE` Aby uaktywnić oknie pokazano ramki; `FALSE to` ukryć ramki okna.  
   
-##  <a name="showpanes"></a>CDockingManager::ShowPanes  
+##  <a name="showpanes"></a>  CDockingManager::ShowPanes  
  Wyświetlenie lub ukrycie okienka pasków sterowania i autohide —.  
   
 ```  
@@ -1542,13 +1537,13 @@ virtual BOOL ShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bShow`  
- `TRUE`Aby pokazać okienka; `FALSE to` ukrywanie okienka.  
+ [in] `bShow`  
+ `TRUE` Aby pokazać okienka; `FALSE to` ukrywanie okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze `FALSE`.  
   
-##  <a name="startsdocking"></a>CDockingManager::StartSDocking  
+##  <a name="startsdocking"></a>  CDockingManager::StartSDocking  
  Uruchamia inteligentne dokowania określone okno zgodnie z wyrównanie inteligentne Menedżera dokowania.  
   
 ```  
@@ -1556,17 +1551,17 @@ void StartSDocking(CWnd* pDockingWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDockingWnd`  
+ [in] `pDockingWnd`  
  Wskaźnik do okna dokowania.  
   
-##  <a name="stopsdocking"></a>CDockingManager::StopSDocking  
+##  <a name="stopsdocking"></a>  CDockingManager::StopSDocking  
  Zatrzymuje inteligentne dokowania.  
   
 ```  
 void StopSDocking();
 ```  
   
-##  <a name="getsmartdockingtheme"></a>CDockingManager::GetSmartDockingTheme  
+##  <a name="getsmartdockingtheme"></a>  CDockingManager::GetSmartDockingTheme  
  Metoda statyczna zwraca motyw używany do wyświetlania znaczniki inteligentnego dokowania.  
   
 ```  

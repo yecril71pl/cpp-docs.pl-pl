@@ -1,13 +1,10 @@
 ---
 title: 'TN061: Komunikaty ON_NOTIFY i WM_NOTIFY | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd99f2ff37effb1e153a759eb36c9adba5f3671
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc8e49ec04e1932c7bac4faa9a8737b480d8ef54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: komunikaty ON_NOTIFY i WM_NOTIFY
 > [!NOTE]
@@ -93,7 +88,7 @@ typedef struct tagLV_KEYDOWN {
 |**NM_KILLFOCUS —**|Kontrolka utraciła fokus wprowadzania|  
 |**NM_OUTOFMEMORY —**|Formant nie można ukończyć operacji, ponieważ nie był dostępny za mało pamięci|  
   
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>On_notify —: Obsługa WM_NOTIFY komunikatów w aplikacjach MFC  
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> On_notify —: Obsługa WM_NOTIFY komunikatów w aplikacjach MFC  
  Funkcja `CWnd::OnNotify` obsługi komunikatów powiadomień. Jego domyślna implementacja sprawdza mapy komunikatów dla programów obsługi powiadomień do wywołania. Ogólnie rzecz biorąc, możesz nie zastępują `OnNotify`. Należy podać funkcji obsługi i dodanie wpisu mapy komunikatów dla tego programu obsługi do mapy komunikatów z oknem właściciela klasy.  
   
  ClassWizard, za pomocą ClassWizard arkusza właściwości, można utworzyć `ON_NOTIFY` wpisu mapy wiadomości i udostępnić funkcję obsługi szkielet. Aby uzyskać więcej informacji na temat używania ClassWizard ułatwić, zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md).  
@@ -163,7 +158,7 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
   
  Uwaga ClassWizard automatycznie zapewnia wskaźnika prawidłowego typu. Dostęp do struktury powiadomień przy użyciu jednej `pNMHDR` lub `pLVKeyDow`.  
   
-##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE —  
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE —  
  Aby przetwarzać takie same **WM_NOTIFY** komunikat zestaw kontrolek, można użyć **on_notify_range —** zamiast `ON_NOTIFY`. Na przykład może być zestaw przycisków, dla której chcesz wykonać tę samą akcję dla komunikatu powiadomienia.  
   
  Jeśli używasz **on_notify_range —**, określ ciągły zakres identyfikatorów podrzędnych dla którego, by obsłużyć komunikat powiadomienia przez określenie początku i zakończenia podrzędne identyfikatory zakresu.  
@@ -223,7 +218,7 @@ pNotifyStruct  ,
  *wynik*  
  Wskaźnik do kod wyniku zostanie ustawiona przed zwróceniem.  
   
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX —, ON_NOTIFY_EX_RANGE —  
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX —, ON_NOTIFY_EX_RANGE —  
  Jeśli chcesz, aby więcej niż jeden obiekt w powiadomieniu routingu do obsługi wiadomości, można użyć **on_notify_ex —** (lub **on_notify_ex_range —**) zamiast `ON_NOTIFY` (lub **on_notify_range —** ). Jedyną różnicą między **EX** i regularnego wersja jest, że funkcja członkowska wywołana dla **EX** zwraca wersji **BOOL** wskazujące, czy Przetwarzanie komunikatów powinno być kontynuowane. Zwracanie **FALSE** z tej funkcji umożliwia przetworzenie tego samego komunikatu w więcej niż jeden obiekt.  
   
  Nie obsługuje ClassWizard **on_notify_ex —** lub **on_notify_ex_range —**; Jeśli chcesz użyć dowolnej z tych funkcji, należy edytować mapy komunikatów samodzielnie.  

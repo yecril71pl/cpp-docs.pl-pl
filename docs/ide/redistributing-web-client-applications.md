@@ -1,13 +1,10 @@
 ---
 title: Ponowne dystrybuowanie aplikacji klienta sieci Web | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Internet applications [C++], redistributing
 - application deployment [C++], Web applications
 ms.assetid: fe05988b-dee8-4a46-b381-016b5103a6bf
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e764e42cb558d2e13e0609cb139e9538a72d09ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92bd843b24ee13b3d606ba8bb4f4f1cc265e8e5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-web-client-applications"></a>Ponowne dystrybuowanie Aplikacji klienta sieci Web
 Jeśli aplikacja korzysta z klas MFC Implementowanie formant WebBrowser (na przykład `CHtmlView` lub `CHtmlEditView`), programu Microsoft Internet Explorer w wersji 4.0 lub nowszym musi co najmniej minimalny zainstalowany na komputerze docelowym.  
@@ -37,7 +32,7 @@ Jeśli aplikacja korzysta z klas MFC Implementowanie formant WebBrowser (na przy
   
 -   Q185375, Porada: Tworzenie EXE jednej instalacji programu Internet Explorer ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp))  
   
- Artykuły bazy wiedzy można znaleźć w bibliotece MSDN lub na [http://support.microsoft.com](http://support.microsoft.com).  
+ Artykuły bazy wiedzy można znaleźć w bibliotece MSDN lub na [ http://support.microsoft.com ](http://support.microsoft.com).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wdrażanie natywnych aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)

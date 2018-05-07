@@ -1,13 +1,10 @@
 ---
 title: Tworzenie szablonu dokumentu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC, document templates
 - templates [MFC], document templates
 ms.assetid: c87f1821-7cbf-442e-9690-f126ae7fb783
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04950601a74b1ed3e44b236e1d07dcdff997eca6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-template-creation"></a>Tworzenie szablonu dokumentu
 Podczas tworzenia nowego dokumentu w odpowiedzi na `New` lub **Otwórz** polecenie **pliku** menu szablonu dokumentu również tworzy nowe okno ramowe za pośrednictwem której można wyświetlić dokument.  
@@ -36,7 +31,7 @@ Podczas tworzenia nowego dokumentu w odpowiedzi na `New` lub **Otwórz** polecen
   
  [!code-cpp[NVC_MFCDocView#7](../mfc/codesnippet/cpp/document-template-creation_1.cpp)]  
   
- Wskaźnik do nowego `CMultiDocTemplate` obiekt jest używany jako argument [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate). Argumenty `CMultiDocTemplate` Konstruktor zawierać identyfikator zasobu skojarzone z menu i akceleratorami typu dokumentu i trzy stosowania [runtime_class —](../mfc/reference/run-time-object-model-services.md#runtime_class) makra. `RUNTIME_CLASS`Zwraca [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) obiektu klasy C++ o nazwie jako jej argument. Trzy `CRuntimeClass` obiektów przekazany do konstruktora szablonu dokumentu, podaj informacje potrzebne do tworzenia nowych obiektów klasy określonej w trakcie procesu tworzenia dokumentu. W przykładzie pokazano tworzenie szablonu dokumentu, który tworzy `CScribDoc` obiekty z `CScribView` obiektów dołączonych. Widoki są w ramce przez standardowe okien ramowych podrzędnych MDI.  
+ Wskaźnik do nowego `CMultiDocTemplate` obiekt jest używany jako argument [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate). Argumenty `CMultiDocTemplate` Konstruktor zawierać identyfikator zasobu skojarzone z menu i akceleratorami typu dokumentu i trzy stosowania [runtime_class —](../mfc/reference/run-time-object-model-services.md#runtime_class) makra. `RUNTIME_CLASS` Zwraca [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) obiektu klasy C++ o nazwie jako jej argument. Trzy `CRuntimeClass` obiektów przekazany do konstruktora szablonu dokumentu, podaj informacje potrzebne do tworzenia nowych obiektów klasy określonej w trakcie procesu tworzenia dokumentu. W przykładzie pokazano tworzenie szablonu dokumentu, który tworzy `CScribDoc` obiekty z `CScribView` obiektów dołączonych. Widoki są w ramce przez standardowe okien ramowych podrzędnych MDI.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)   

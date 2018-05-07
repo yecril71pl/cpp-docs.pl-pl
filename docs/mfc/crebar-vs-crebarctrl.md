@@ -1,13 +1,10 @@
 ---
-title: "Crebar — vs. Crebarctrl — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Crebar — vs. Crebarctrl — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CReBar
 - CReBarCtrl
@@ -18,29 +15,27 @@ helpviewer_keywords:
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68cd21e21c14a34122f1b26345fab767728ac6a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a6d0b8df40676cc64c97a6bdef013321c404899f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crebar-vs-crebarctrl"></a>Crebar — vs. CReBarCtrl
 MFC oferuje dwie klasy, aby utworzyć pręty zbrojeniowe: [crebar —](../mfc/reference/crebar-class.md) i [crebarctrl —](../mfc/reference/crebarctrl-class.md) (który opakowuje interfejs API sterowania wspólne systemu Windows). **Crebar —** zawiera wszystkie funkcje formantu wspólnego paska pomocniczego i obsługuje wiele wymagane typowe ustawienia kontroli i struktur dla Ciebie.  
   
- `CReBarCtrl`to klasa otoki formantu paska pomocniczego Win32, który może być łatwiejsze do wdrożenia, jeśli nie chcesz zintegrować paska pomocniczego architekturę MFC. Jeśli planujesz używać `CReBarCtrl` i integrowanie paska pomocniczego architekturę MFC, należy zwrócić uwagę dodatkowe do komunikowania się manipulacje formantu paska pomocniczego z MFC. Ta komunikacja nie jest trudne; jest jednak dodatkowej pracy, który jest niepotrzebne, korzystając z **crebar —**.  
+ `CReBarCtrl` to klasa otoki formantu paska pomocniczego Win32, który może być łatwiejsze do wdrożenia, jeśli nie chcesz zintegrować paska pomocniczego architekturę MFC. Jeśli planujesz używać `CReBarCtrl` i integrowanie paska pomocniczego architekturę MFC, należy zwrócić uwagę dodatkowe do komunikowania się manipulacje formantu paska pomocniczego z MFC. Ta komunikacja nie jest trudne; jest jednak dodatkowej pracy, który jest niepotrzebne, korzystając z **crebar —**.  
   
  Visual C++ udostępnia dwa sposoby, aby móc korzystać z formantu wspólnego paska pomocniczego.  
   
 -   Tworzenie przy użyciu paska pomocniczego **crebar —**, a następnie wywołać [CReBar::GetReBarCtrl](../mfc/reference/crebar-class.md#getrebarctrl) uzyskać dostęp do `CReBarCtrl` funkcji elementów członkowskich.  
   
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl`jest wbudowaną funkcją elementu członkowskiego, który rzutuje **to** wskaźnika obiektu paska pomocniczego. Oznacza to, że w czasie wykonywania, wywołanie funkcji ma nie czynności.  
+    >  `CReBar::GetReBarCtrl` jest wbudowaną funkcją elementu członkowskiego, który rzutuje **to** wskaźnika obiektu paska pomocniczego. Oznacza to, że w czasie wykonywania, wywołanie funkcji ma nie czynności.  
   
 -   Tworzenie przy użyciu paska pomocniczego [crebarctrl —](../mfc/reference/crebarctrl-class.md)tego konstruktora.  
   

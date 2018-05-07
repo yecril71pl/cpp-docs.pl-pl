@@ -1,12 +1,9 @@
 ---
 title: Klasa CStringArray | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 6c637e06-bba8-4c08-b0fc-cf8cb067ce34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a2e9bc2a8f88ce79b6d4c31a4754ad660ecfcbe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a3ebc30304f2d194a10b71f832b42039bac6a53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstringarray-class"></a>Klasa CStringArray
 Obsługuje tablic [cstring —](../../atl-mfc-shared/using-cstring.md) obiektów.  
@@ -124,7 +119,7 @@ class CStringArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CStringArray`zawiera `IMPLEMENT_SERIAL` makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli tablica `CString` obiekty są przechowywane do archiwum z operatorem przeciążone wstawiania lub z `Serialize` funkcji członkowskiej, każdy element jest serializowany z kolei.  
+ `CStringArray` zawiera `IMPLEMENT_SERIAL` makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli tablica `CString` obiekty są przechowywane do archiwum z operatorem przeciążone wstawiania lub z `Serialize` funkcji członkowskiej, każdy element jest serializowany z kolei.  
   
 > [!NOTE]
 >  Przed rozpoczęciem korzystania z tablicy, użyj `SetSize` jego rozmiar i przydzielić pamięci dla niego. Jeśli nie używasz `SetSize`, dodawanie elementów do macierzy powoduje jego przydzielić często i skopiować. Częste zmiany alokacji i kopiowanie są mało wydajne i można fragmentu pamięci.  

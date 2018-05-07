@@ -1,13 +1,10 @@
 ---
 title: Obiekty okna | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - Visual C++, window objects [MFC]
 - HWND, window objects [MFC]
 ms.assetid: 28b33ce2-af05-4617-9d03-1cb9a02be687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15f53db2d0ec6a57261e22c58abd3e5e8423b716
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63b8d8dbde679d030eddd77fae6ca1fab519fdac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="window-objects"></a>Obiekty okien
 Klasa dostarcza MFC [CWnd](../mfc/reference/cwnd-class.md) celu hermetyzacji `HWND` uchwytu okna. `CWnd` Obiekt jest obiektem okna języka C++ różne od `HWND` reprezentujący systemu Windows, ale okna zawierającego go. Użyj `CWnd` pochodzić okna podrzędnego klas, lub użyj jednego z wielu klas MFC z `CWnd`. Klasa `CWnd` jest klasą bazową dla wszystkich windows, w tym okien ramowych, okna dialogowe okno podrzędne, formanty i paski sterowania, takie jak pasków narzędzi. Dobrą znajomość [relacja między obiektem okna języka C++ a właściwością HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) ma kluczowe znaczenie dla skuteczne programowanie z MFC.  
@@ -45,7 +40,7 @@ Klasa dostarcza MFC [CWnd](../mfc/reference/cwnd-class.md) celu hermetyzacji `HW
  Ogólne materiały dotyczące programowania dla systemu Windows jest dobrym zasobu poznanie `CWnd` funkcji elementów członkowskich, które hermetyzują `HWND` interfejsów API.  
   
 ## <a name="functions-for-operating-on-a-cwnd"></a>Funkcje obsługi na CWnd  
- `CWnd`i jego [okna klas pochodnych](../mfc/derived-window-classes.md) konstruktorów, destruktory i funkcje Członkowskie do inicjalizacji obiektu, tworzenie podstawowej struktury systemu Windows i dostęp hermetyzowany `HWND`. `CWnd`udostępnia funkcje Członkowskie, które hermetyzują interfejsów API systemu Windows do wysyłania wiadomości, uzyskiwanie dostępu do stanu okna, Konwersja współrzędnych, aktualizowanie, przewijania, dostęp do Schowka i wiele innych zadań. Większość Windows API zarządzania systemem Windows, prowadzące `HWND` argumentu są hermetyzowane jako funkcji Członkowskich `CWnd`. Nazwy funkcji i ich parametry są zachowywane w `CWnd` funkcję elementu członkowskiego. Szczegółowe informacje na temat interfejsów API systemu Windows zamknięte przez `CWnd`, zobacz klasę [CWnd](../mfc/reference/cwnd-class.md).  
+ `CWnd` i jego [okna klas pochodnych](../mfc/derived-window-classes.md) konstruktorów, destruktory i funkcje Członkowskie do inicjalizacji obiektu, tworzenie podstawowej struktury systemu Windows i dostęp hermetyzowany `HWND`. `CWnd` udostępnia funkcje Członkowskie, które hermetyzują interfejsów API systemu Windows do wysyłania wiadomości, uzyskiwanie dostępu do stanu okna, Konwersja współrzędnych, aktualizowanie, przewijania, dostęp do Schowka i wiele innych zadań. Większość Windows API zarządzania systemem Windows, prowadzące `HWND` argumentu są hermetyzowane jako funkcji Członkowskich `CWnd`. Nazwy funkcji i ich parametry są zachowywane w `CWnd` funkcję elementu członkowskiego. Szczegółowe informacje na temat interfejsów API systemu Windows zamknięte przez `CWnd`, zobacz klasę [CWnd](../mfc/reference/cwnd-class.md).  
   
 ## <a name="cwnd-and-windows-messages"></a>Komunikaty systemu Windows i CWnd  
  Jedną z głównych przeznaczeń `CWnd` jest zapewnienie interfejs do obsługi komunikatów systemu Windows, takich jak `WM_PAINT` lub `WM_MOUSEMOVE`. Wiele funkcji Członkowskich `CWnd` są programy obsługi dla standardowych komunikatów — zaczynających się od identyfikatora **afx_msg** i prefiksu "Włączone", takie jak `OnPaint` i **OnMouseMove**. [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md) obejmuje wiadomości i obsługa szczegółowo komunikatów. Informacje dotyczą jednakowo framework w systemie windows oraz te, utworzyć samodzielnie do celów specjalnych.  

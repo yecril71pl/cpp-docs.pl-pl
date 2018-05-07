@@ -1,12 +1,9 @@
 ---
 title: Klasa COleTemplateServer | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleTemplateServer
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4bf5f696eeff3e4e26a9d77714c0d5a6f093aaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coletemplateserver-class"></a>Klasa COleTemplateServer
 Używany dla OLE visual edycji serwery, serwery automatyzacji i łącze kontenery (aplikacje, które obsługują łącza do osadzonego).  
@@ -61,16 +56,16 @@ class COleTemplateServer : public COleObjectFactory
 |[COleTemplateServer::UpdateRegistry](#updateregistry)|Rejestruje typ dokumentu z rejestru systemowego OLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa pochodzi od klasy [coleobjectfactory —](../../mfc/reference/coleobjectfactory-class.md); zazwyczaj można użyć `COleTemplateServer` bezpośrednio zamiast wyprowadzanie własne klasy. `COleTemplateServer`używa [cdoctemplate —](../../mfc/reference/cdoctemplate-class.md) obiektu Zarządzanie dokumentami serwera. Użyj `COleTemplateServer` podczas implementowania całego serwera, oznacza to, że serwer, który może działać jako aplikacja autonomiczna. Pełne są to zazwyczaj wiele aplikacji interfejsu (MDI) dokumentu pojedynczego dokumentu (SDI) interfejsu aplikacji są obsługiwane. Jeden `COleTemplateServer` dla każdego typu dokumentu serwera aplikacji obsługuje wymagany jest obiekt; oznacza to, że jeśli aplikacja serwera obsługuje arkuszy i wykresy, użytkownik musi mieć dwa `COleTemplateServer` obiektów.  
+ Ta klasa pochodzi od klasy [coleobjectfactory —](../../mfc/reference/coleobjectfactory-class.md); zazwyczaj można użyć `COleTemplateServer` bezpośrednio zamiast wyprowadzanie własne klasy. `COleTemplateServer` używa [cdoctemplate —](../../mfc/reference/cdoctemplate-class.md) obiektu Zarządzanie dokumentami serwera. Użyj `COleTemplateServer` podczas implementowania całego serwera, oznacza to, że serwer, który może działać jako aplikacja autonomiczna. Pełne są to zazwyczaj wiele aplikacji interfejsu (MDI) dokumentu pojedynczego dokumentu (SDI) interfejsu aplikacji są obsługiwane. Jeden `COleTemplateServer` dla każdego typu dokumentu serwera aplikacji obsługuje wymagany jest obiekt; oznacza to, że jeśli aplikacja serwera obsługuje arkuszy i wykresy, użytkownik musi mieć dwa `COleTemplateServer` obiektów.  
   
- `COleTemplateServer`zastępuje `OnCreateInstance` funkcji członkowskich zdefiniowanych przez `COleObjectFactory`. Ta funkcja elementu członkowskiego jest wywoływana przez platformę, by utworzyć prawidłowego typu obiektu języka C++.  
+ `COleTemplateServer` zastępuje `OnCreateInstance` funkcji członkowskich zdefiniowanych przez `COleObjectFactory`. Ta funkcja elementu członkowskiego jest wywoływana przez platformę, by utworzyć prawidłowego typu obiektu języka C++.  
   
  Aby uzyskać więcej informacji na temat serwerów, zobacz artykuł [serwery: Implementowanie serwera](../../mfc/servers-implementing-a-server.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [Coleobjectfactory —](../../mfc/reference/coleobjectfactory-class.md)  
   
@@ -79,7 +74,7 @@ class COleTemplateServer : public COleObjectFactory
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h  
   
-##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
+##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer  
  Konstruuje `COleTemplateServer` obiektu.  
   
 ```  
@@ -89,7 +84,7 @@ COleTemplateServer();
 ### <a name="remarks"></a>Uwagi  
  Krótki opis stosowania `COleTemplateServer` , zobacz [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) Przegląd klasy.  
   
-##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
+##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
  Łączy szablonu dokumentu wskazywana przez `pDocTemplate` do odpowiadającego [coleobjectfactory —](../../mfc/reference/coleobjectfactory-class.md) obiektu.  
   
 ```  
@@ -112,7 +107,7 @@ void ConnectTemplate(
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [klucz CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) w zestawie Windows SDK.  
   
-##  <a name="unregister"></a>COleTemplateServer::Unregister  
+##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  Wyrejestrowuje szablonu skojarzonego dokumentu.  
   
 ```  
@@ -125,7 +120,7 @@ BOOL Unregister();
 ### <a name="remarks"></a>Uwagi  
  EnterRemarks  
   
-##  <a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
+##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry  
  Ładuje informacje typu pliku z ciągu szablonu dokumentu i umieszcza te informacje w rejestrze systemu OLE.  
   
 ```  
@@ -140,13 +135,13 @@ void UpdateRegistry(
  `nAppType`  
  Wartość z zakresu od **OLE_APPTYPE** wyliczenia, która jest zdefiniowana w AFXDISP. H. Może mieć jeden z następujących wartości:  
   
-- `OAT_INPLACE_SERVER`Serwer ma interfejs użytkownika całego serwera.  
+- `OAT_INPLACE_SERVER` Serwer ma interfejs użytkownika całego serwera.  
   
-- `OAT_SERVER`Serwer obsługuje tylko osadzania.  
+- `OAT_SERVER` Serwer obsługuje tylko osadzania.  
   
-- `OAT_CONTAINER`Kontener obsługuje łącza do osadzonych obiektów.  
+- `OAT_CONTAINER` Kontener obsługuje łącza do osadzonych obiektów.  
   
-- `OAT_DISPATCH_OBJECT`Obiekt jest `IDispatch`-stanie.  
+- `OAT_DISPATCH_OBJECT` Obiekt jest `IDispatch`-stanie.  
   
 - **OAT_DOC_OBJECT_SERVER** Server obsługuje zarówno osadzanie i składnik modelu obiektu dokumentu.  
   

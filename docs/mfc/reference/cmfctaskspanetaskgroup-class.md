@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCTasksPaneTaskGroup | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTaskGroup
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34bd53dec328ebf94e8bb9eb6f72aae1e8a90bc4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Klasa CMFCTasksPaneTaskGroup
 `CMFCTasksPaneTaskGroup` Klasa jest używana przez klasę Pomocnika [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) formantu. Obiekty typu `CMFCTasksPaneTaskGroup` reprezentują *grupy zadań*. Grupy zadań znajduje się lista elementów, które w ramach będzie wyświetlany w osobnym oknie posiadające przycisk Zwiń. Pole może mieć opcjonalnym podpisem (nazwa grupy). Jeśli grupa jest zwinięte, na liście zadań nie jest widoczne.  
@@ -106,7 +101,7 @@ class CMFCTasksPaneTaskGroup : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxTasksPane.h  
   
-##  <a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
+##  <a name="cmfctaskspanetaskgroup"></a>  CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
  Konstruuje `CMFCTasksPaneTaskGroup` obiektu.  
   
 ```  
@@ -140,7 +135,7 @@ CMFCTasksPaneTaskGroup(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
+##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom  
  Określa, czy grupy zadań jest wyrównane do dolnej części formant okienka zadań.  
   
 ```  
@@ -150,7 +145,7 @@ BOOL m_bIsBottom;
 ### <a name="remarks"></a>Uwagi  
  Tylko jedna grupa może być wyrównany do dołu formant okienka zadań. Tej grupy zadań musi zostać dodany jako ostatnie. Aby uzyskać więcej informacji, zobacz [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
+##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  Określa, czy jest zwinięte grupy zadań.  
   
 ```  
@@ -160,7 +155,7 @@ BOOL m_bIsCollapsed;
 ### <a name="remarks"></a>Uwagi  
  Można włączyć lub wyłączyć możliwość zwinąć grupy w okienku zadań, wywołując [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
   
-##  <a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
+##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial  
  Określa, czy grupa zadań jest *specjalne* i określa, czy podpis dla grupy zadań specjalne należy zidentyfikować według różnych kolorów.  
   
 ```  
@@ -170,7 +165,7 @@ BOOL m_bIsSpecial;
 ### <a name="remarks"></a>Uwagi  
  Jeśli aplikacja używa motyw wizualny systemu Windows XP i `m_bIsSpecial` jest `FALSE`, wywołania framework `DrawThemeBackground` z `EBP_NORMALGROUPBACKGROUND` flagi. Jeśli `m_bIsSpecial` jest `TRUE`, wywołania framework `DrawThemeBackground` z `EBP_SPECIALGROUPBACKGROUND` flagi.  
   
-##  <a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
+##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
  Zawiera wewnętrzną listę zadań.  
   
 ```  
@@ -180,7 +175,7 @@ CObList m_lstTasks;
 ### <a name="remarks"></a>Uwagi  
  Aby wypełnić tej listy, należy wywołać [CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask).  
   
-##  <a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
+##  <a name="m_rect"></a>  CMFCTasksPaneTaskGroup::m_rect  
  Określa prostokąt ograniczający podpis grupy.  
   
 ```  
@@ -190,7 +185,7 @@ CRect m_rect;
 ### <a name="remarks"></a>Uwagi  
  Ta wartość jest obliczana automatycznie przez platformę.  
   
-##  <a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
+##  <a name="m_rectgroup"></a>  CMFCTasksPaneTaskGroup::m_rectGroup  
  Określa prostokątem grupy.  
   
 ```  
@@ -200,7 +195,7 @@ CRect m_rectGroup;
 ### <a name="remarks"></a>Uwagi  
  Ta wartość jest obliczana automatycznie przez platformę.  
   
-##  <a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
+##  <a name="m_strname"></a>  CMFCTasksPaneTaskGroup::m_strName  
  Określa nazwę grupy.  
   
 ```  
@@ -210,7 +205,7 @@ CString m_strName;
 ### <a name="remarks"></a>Uwagi  
  Jeśli ta wartość jest pusta, nie jest wyświetlany podpis grupy i grupy nie może zostać zwinięty.  
   
-##  <a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
+##  <a name="setaccdata"></a>  CMFCTasksPaneTaskGroup::SetACCData  
  Określa dane ułatwień dostępu dla bieżącej grupy zadań.  
   
 ```  
@@ -220,14 +215,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pParent`  
+ [in] `pParent`  
  Reprezentuje okno nadrzędne bieżącej grupy zadań.  
   
- [out]`data`  
+ [out] `data`  
  Obiekt typu `CAccessibilityData` który jest wypełniane przy użyciu danych dostępności bieżącej grupy zadań.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli `data` parametr został pomyślnie wypełnione przy użyciu danych dostępności bieżącej grupy zadań, a w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli `data` parametr został pomyślnie wypełnione przy użyciu danych dostępności bieżącej grupy zadań, a w przeciwnym razie `FALSE`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

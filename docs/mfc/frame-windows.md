@@ -1,13 +1,10 @@
 ---
 title: Okna ramowe | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14dabd345f47b064f78a4e9a3dede834bddeb9d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 515df19bcc11f7a6706985014fc44bc4ff315f36
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-windows"></a>Okna ramowe
 Gdy aplikacja działa w systemie Windows, użytkownik wchodzi w interakcję z dokumentów wyświetlanych w oknach ramowych. Okno ramowe dokument ma dwa główne składniki: ramki i zawartość, która go ramki. Okna ramowe dokumentu może być [interfejs pojedynczego dokumentu](../mfc/sdi-and-mdi.md) okien ramowych (SDI) lub [interfejsu wielu dokumentów](../mfc/sdi-and-mdi.md) okna podrzędnego (MDI). System Windows zarządza większość interakcji z okno ramowe: przenoszenie i zmienia rozmiar okna, zamknięcia, minimalizując i jego zmaksymalizowaniu. Możesz zarządzać zawartości wewnątrz ramki.  

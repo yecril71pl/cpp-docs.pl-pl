@@ -1,12 +1,9 @@
 ---
 title: Klasa CFontDialog | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFontDialog
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab9420ce86785595bb2d172ef32afe89c2845374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfontdialog-class"></a>Klasa CFontDialog
 Umożliwia włączenie okno dialogowe Wybór czcionki do aplikacji.  
@@ -102,13 +97,13 @@ class CFontDialog : public CCommonDialog
   
  Raz `CFontDialog` obiekt został skonstruowany, możesz użyć `m_cf` struktury zainicjować wartości lub stany formantów w oknie dialogowym. [M_cf](#m_cf) struktura jest typu [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). Aby uzyskać więcej informacji na tej struktury zobacz zestaw Windows SDK.  
   
- Po podczas inicjowania obiektu okna dialogowego formantów, należy wywołać `DoModal` funkcji członkowskiej, aby wyświetlić okno dialogowe i Zezwalaj użytkownikowi na wybranie czcionki. `DoModal`Zwraca czy użytkownik wybrał OK ( **IDOK**), lub Anuluj ( **IDCANCEL**) przycisku.  
+ Po podczas inicjowania obiektu okna dialogowego formantów, należy wywołać `DoModal` funkcji członkowskiej, aby wyświetlić okno dialogowe i Zezwalaj użytkownikowi na wybranie czcionki. `DoModal` Zwraca czy użytkownik wybrał OK ( **IDOK**), lub Anuluj ( **IDCANCEL**) przycisku.  
   
  Jeśli `DoModal` zwraca **IDOK**, można użyć jednej z `CFontDialog`w funkcji elementów członkowskich do pobrania informacji o danych wejściowych przez użytkownika.  
   
  Można użyć Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkcji, aby ustalić, czy wystąpił błąd podczas inicjowania okna dialogowego i aby dowiedzieć się więcej o tym błędzie. Aby uzyskać więcej informacji dotyczących tej funkcji zobacz zestaw Windows SDK.  
   
- `CFontDialog`zależy od pliku COMMDLG. Plik DLL, która jest dostarczana z systemem Windows w wersji 3.1 lub nowszej.  
+ `CFontDialog` zależy od pliku COMMDLG. Plik DLL, która jest dostarczana z systemem Windows w wersji 3.1 lub nowszej.  
   
  Aby dostosować okno dialogowe, pochodzi z klasy `CFontDialog`, podaj szablon niestandardowe okno dialogowe i dodać mapy wiadomości do przetwarzania komunikatów powiadomień od formantów rozszerzonego. Komunikaty nieprzetworzone powinny zostać przekazane do klasy podstawowej.  
   
@@ -119,11 +114,11 @@ class CFontDialog : public CCommonDialog
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cdialog —](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
  [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
   
@@ -132,7 +127,7 @@ class CFontDialog : public CCommonDialog
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdlgs.h  
   
-##  <a name="cfontdialog"></a>CFontDialog::CFontDialog  
+##  <a name="cfontdialog"></a>  CFontDialog::CFontDialog  
  Konstruuje `CFontDialog` obiektu.  
   
 ```  
@@ -150,7 +145,7 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- l`plfInitial`  
+ l `plfInitial`  
  Wskaźnik do [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury danych, które można ustawić niektórych właściwości czcionki.  
   
  `charFormat`  
@@ -174,7 +169,7 @@ CFontDialog(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#78](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CFontDialog::DoModal  
+##  <a name="domodal"></a>  CFontDialog::DoModal  
  Wywołanie tej funkcji, aby wyświetlić okno dialogowe czcionki wspólne systemu Windows i Zezwalaj użytkownikowi na wybranie czcionki z.  
   
 ```  
@@ -194,7 +189,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Przykład  
   Przykłady dla [CFontDialog::CFontDialog](#cfontdialog) i [CFontDialog::GetColor](#getcolor).  
   
-##  <a name="getcharformat"></a>CFontDialog::GetCharFormat  
+##  <a name="getcharformat"></a>  CFontDialog::GetCharFormat  
  Pobiera formatowanie znaków wybranej czcionki.  
   
 ```  
@@ -205,7 +200,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
  `cf`  
  A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktury zawierającej informacje o formatowanie znaków wybranej czcionki.  
   
-##  <a name="getcolor"></a>CFontDialog::GetColor  
+##  <a name="getcolor"></a>  CFontDialog::GetColor  
  Wywołanie tej funkcji można pobrać kolorów wybranej czcionki.  
   
 ```  
@@ -218,7 +213,7 @@ COLORREF GetColor() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
-##  <a name="getcurrentfont"></a>CFontDialog::GetCurrentFont  
+##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
  Wywołanie tej funkcji można przypisać właściwości aktualnie wybranej czcionki do elementów członkowskich [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
 ```  
@@ -237,7 +232,7 @@ void GetCurrentFont(LPLOGFONT lplf);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#80](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]  
   
-##  <a name="getfacename"></a>CFontDialog::GetFaceName  
+##  <a name="getfacename"></a>  CFontDialog::GetFaceName  
  Wywołanie tej funkcji można pobrać nazwa czcionki wybranej czcionki.  
   
 ```  
@@ -250,7 +245,7 @@ CString GetFaceName() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#81](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]  
   
-##  <a name="getsize"></a>CFontDialog::GetSize  
+##  <a name="getsize"></a>  CFontDialog::GetSize  
  Wywołanie tej funkcji można pobrać rozmiaru wybranej czcionki.  
   
 ```  
@@ -263,7 +258,7 @@ int GetSize() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#82](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]  
   
-##  <a name="getstylename"></a>CFontDialog::GetStyleName  
+##  <a name="getstylename"></a>  CFontDialog::GetStyleName  
  Wywołaj tę funkcję, aby pobrać nazwę stylu wybranej czcionki.  
   
 ```  
@@ -276,7 +271,7 @@ CString GetStyleName() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#83](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]  
   
-##  <a name="getweight"></a>CFontDialog::GetWeight  
+##  <a name="getweight"></a>  CFontDialog::GetWeight  
  Wywołanie tej funkcji można pobrać wagę wybranej czcionki.  
   
 ```  
@@ -292,7 +287,7 @@ int GetWeight() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#84](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]  
   
-##  <a name="isbold"></a>CFontDialog::IsBold  
+##  <a name="isbold"></a>  CFontDialog::IsBold  
  Wywołanie tej funkcji, aby określić, czy wybrana czcionka jest pogrubiona.  
   
 ```  
@@ -305,7 +300,7 @@ BOOL IsBold() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#85](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]  
   
-##  <a name="isitalic"></a>CFontDialog::IsItalic  
+##  <a name="isitalic"></a>  CFontDialog::IsItalic  
  Wywołanie tej funkcji, aby określić, czy wybrana czcionka jest kursywą.  
   
 ```  
@@ -318,7 +313,7 @@ BOOL IsItalic() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#86](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]  
   
-##  <a name="isstrikeout"></a>CFontDialog::IsStrikeOut  
+##  <a name="isstrikeout"></a>  CFontDialog::IsStrikeOut  
  Wywołanie tej funkcji, aby określić, gdy wybrana czcionka zostanie wyświetlony z przekreślenia.  
   
 ```  
@@ -331,7 +326,7 @@ BOOL IsStrikeOut() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#87](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]  
   
-##  <a name="isunderline"></a>CFontDialog::IsUnderline  
+##  <a name="isunderline"></a>  CFontDialog::IsUnderline  
  Wywołanie tej funkcji w celu ustalenia, czy wybrana czcionka jest podkreślona.  
   
 ```  
@@ -344,7 +339,7 @@ BOOL IsUnderline() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#88](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]  
   
-##  <a name="m_cf"></a>CFontDialog::m_cf  
+##  <a name="m_cf"></a>  CFontDialog::m_cf  
  Struktura, której członkowie przechowywania właściwości obiektu okna dialogowego.  
   
 ```  

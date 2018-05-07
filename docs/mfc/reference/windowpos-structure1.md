@@ -1,13 +1,10 @@
 ---
 title: WINDOWPOS Structure1 | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPOS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db3991a6767e33c73857daf40a977ac5f6f0b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS Structure1
 `WINDOWPOS` Struktura zawiera informacje o rozmiar i położenie okna.  
@@ -72,15 +67,15 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_HIDEWINDOW** ukrywa okno.  
   
-- `SWP_NOACTIVATE`Nie aktywować okna.  
+- `SWP_NOACTIVATE` Nie aktywować okna.  
   
 - **SWP_NOCOPYBITS** odrzuca całą zawartość obszaru klienckiego. Jeśli ta flaga nie zostanie określony, Nieprawidłowa zawartość obszaru klienckiego są zapisywane i kopiowane do obszaru klienckiego po okna jest rozmiaru lub położenia.  
   
-- `SWP_NOMOVE`Zachowuje bieżące położenie (ignoruje **x** i **y** elementów członkowskich).  
+- `SWP_NOMOVE` Zachowuje bieżące położenie (ignoruje **x** i **y** elementów członkowskich).  
   
 - **SWP_NOOWNERZORDER** nie zmienia położenie okno właściciela w porządku osi Z.  
   
-- `SWP_NOSIZE`Zachowuje bieżący rozmiar (ignoruje **cx** i **cy** elementów członkowskich).  
+- `SWP_NOSIZE` Zachowuje bieżący rozmiar (ignoruje **cx** i **cy** elementów członkowskich).  
   
 - **SWP_NOREDRAW** zmiany nie są odświeżane.  
   
@@ -88,7 +83,7 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_NOSENDCHANGING** uniemożliwia odbieranie okna `WM_WINDOWPOSCHANGING` wiadomości.  
   
-- `SWP_NOZORDER`Zachowuje bieżący porządkowanie (ignoruje **hwndInsertAfter** element członkowski).  
+- `SWP_NOZORDER` Zachowuje bieżący porządkowanie (ignoruje **hwndInsertAfter** element członkowski).  
   
 - **SWP_SHOWWINDOW** Wyświetla okna.  
   

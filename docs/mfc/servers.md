@@ -1,13 +1,10 @@
 ---
 title: Serwery | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OLE server applications [MFC], server types
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a011201a521ed97cf9ebe4c0a8249526b9d7c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d153d73889520deaff12b64da36567a8b9a4087
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers"></a>Serwery
 Aplikacja serwera (lub składników aplikacji) tworzy elementy OLE (lub składników) do użycia przez aplikacje kontenera. Visual edytowania aplikacji serwera obsługuje również edycja wizualna lub Aktywacja w miejscu. Formularz innego serwera OLE [serwer automatyzacji](../mfc/automation-servers.md). Niektóre aplikacje serwera obsługuje tylko tworzenie elementy osadzone; obsługuje inne tworzenia elementów zarówno osadzone i połączone. Niektóre obsługiwana jest konsolidacja tylko, ale jest to rzadko. Wszystkie aplikacje serwera musi obsługiwać aktywacji przez kontener aplikacji, gdy użytkownik chce edytować element. Aplikacja może być zarówno kontener, jak i serwera. Innymi słowy go można jednocześnie dołączyć dane do swoich dokumentów i tworzyć dane, które można włączyć jako elementy w dokumentach inne aplikacje.  

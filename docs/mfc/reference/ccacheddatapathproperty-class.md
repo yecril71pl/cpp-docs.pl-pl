@@ -1,12 +1,9 @@
 ---
 title: Klasa CCachedDataPathProperty | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCachedDataPathProperty
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb62a905d092a347103ea98fcd323e3778ed458
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccacheddatapathproperty-class"></a>Klasa CCachedDataPathProperty
 Implementuje OLE kontrolować właściwości przesyłane asynchronicznie, a w pliku pamięci podręcznej.  
@@ -52,7 +47,7 @@ class CCachedDataPathProperty : public CDataPathProperty
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile`obiekt, w którym do pamięci podręcznej danych.|  
+|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` obiekt, w którym do pamięci podręcznej danych.|  
   
 ## <a name="remarks"></a>Uwagi  
  Plik pamięci są przechowywane w pamięci RAM, a nie na dysku i jest przydatne w przypadku transferów fast tymczasowych.  
@@ -85,7 +80,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxctl.h  
   
-##  <a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
+##  <a name="ccacheddatapathproperty"></a>  CCachedDataPathProperty::CCachedDataPathProperty  
  Konstruuje `CCachedDataPathProperty` obiektu.  
   
 ```  
@@ -102,12 +97,12 @@ CCachedDataPathProperty(
  Wskaźnik do obiektu formantu ActiveX ma zostać skojarzony z tym `CCachedDataPathProperty` obiektu.  
   
  `lpszPath`  
- Ścieżki, która może być bezwzględny lub względny, używany do tworzenia asynchroniczne krótkiej nazwy odwołujących się do rzeczywistej lokalizacji bezwzględnej właściwości. `CCachedDataPathProperty`używa adresów URL, a nie nazwy plików. Jeśli chcesz `CCachedDataPathProperty` obiektów do pliku, dołączenie wartości file:// do ścieżki.  
+ Ścieżki, która może być bezwzględny lub względny, używany do tworzenia asynchroniczne krótkiej nazwy odwołujących się do rzeczywistej lokalizacji bezwzględnej właściwości. `CCachedDataPathProperty` używa adresów URL, a nie nazwy plików. Jeśli chcesz `CCachedDataPathProperty` obiektów do pliku, dołączenie wartości file:// do ścieżki.  
   
 ### <a name="remarks"></a>Uwagi  
  `COleControl` Obiekt wskazywany przez `pControl` jest używany przez [Otwórz](../../mfc/reference/cdatapathproperty-class.md#open) i pobrać klas pochodnych. Jeśli `pControl` jest **NULL**, kontrolki używane z **Otwórz** powinien być ustawiony z [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Jeśli `lpszPath` jest **NULL**, można przekazać w ścieżce za pośrednictwem **Otwórz** lub ustaw ją z [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
-##  <a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
+##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  Zawiera nazwę klasy w pliku pamięci, do którego dane są buforowane.  
   
 ```  

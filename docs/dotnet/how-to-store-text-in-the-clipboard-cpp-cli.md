@@ -1,31 +1,26 @@
 ---
 title: 'Porady: przechowywanie tekstu w Schowku (C + +/ CLI) | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - text, storing in Clipboard
 - Clipboard, storing text
 ms.assetid: 9996023f-b700-47ad-8ad9-1ba201eaa5a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 05544d3ea65ee68fc6df8731e5de084be6d460ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ac33eb31dbda97d3c695847344cd857d2e77675
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>Porady: przechowywanie tekstu w schowku (C++/CLI)
 Poniższy przykład kodu wykorzystuje <xref:System.Windows.Forms.Clipboard> obiekt zdefiniowany w <xref:System.Windows.Forms> przestrzeni nazw do przechowywania ciągu. Ten obiekt zawiera dwie funkcje Członkowskie: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> i <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Dane są przechowywane w Schowku, wysyłając każdy obiekt pochodzi od <xref:System.Object> do <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  

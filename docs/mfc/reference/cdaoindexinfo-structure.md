@@ -1,13 +1,10 @@
 ---
-title: "Cdaoindexinfo — struktura | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cdaoindexinfo — struktura | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoIndexInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Indexes collection
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2617f8cb0d56098c0fef774dc56d56fa182e2482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo — Struktura
 `CDaoIndexInfo` Struktury zawiera informacje o obiekcie indeksu zdefiniowany dla obiektów dostępu do danych (DAO).  
@@ -87,9 +82,9 @@ struct CDaoIndexInfo {
   
 |IgnoreNulls|Wymagane|W polu Indeks o wartości null|  
 |-----------------|--------------|-------------------------|  
-|Wartość true|False|Wartości null są dozwolone; nie dodano wpis indeksu.|  
+|True|False|Wartości null są dozwolone; nie dodano wpis indeksu.|  
 |False|False|Wartości null są dozwolone; dodaje wpis indeksu.|  
-|Wartość PRAWDA lub FAŁSZ|Wartość true|Wartość null nie jest dozwolona; nie dodano wpis indeksu.|  
+|Wartość PRAWDA lub FAŁSZ|True|Wartość null nie jest dozwolona; nie dodano wpis indeksu.|  
   
  Aby uzyskać więcej informacji zobacz temat "IgnoreNulls Property" w pomocy DAO.  
   
@@ -110,9 +105,9 @@ struct CDaoIndexInfo {
   
  Indeks obiekty nie są reprezentowane przez klasę MFC. Zamiast tego DAO obiektów MFC obiektów klasy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) zawiera kolekcję obiektów indeksu, nazywanych kolekcji indeksów. Te klasy podać funkcji elementów członkowskich, aby uzyskiwać dostęp do poszczególnych elementów informacji indeksu lub uzyskać dostępu do nich jednocześnie z `CDaoIndexInfo` obiektu przez wywołanie metody `GetIndexInfo` funkcji członkowskiej krawędzi zawierającego go obiektu.  
   
- `CDaoIndexInfo`Konstruktor i destruktor, aby można było poprawnie przydzielić i cofnięcia przydzielenia pola informacji o indeksie `m_pFieldInfos`.  
+ `CDaoIndexInfo` Konstruktor i destruktor, aby można było poprawnie przydzielić i cofnięcia przydzielenia pola informacji o indeksie `m_pFieldInfos`.  
   
- Informacje o pobrane przez `GetIndexInfo` funkcji członkowskiej klasy obiektu tabledef są przechowywane w `CDaoIndexInfo` struktury. Wywołanie `GetIndexInfo` funkcji członkowskiej klasy obiektu zawierającego tabledef, w których kolekcji indeksów jest obiekt indeksu. `CDaoIndexInfo`definiuje również `Dump` kompilacje funkcji członkowskiej podczas debugowania. Można użyć `Dump` do zrzutu zawartość `CDaoIndexInfo` obiektu.  
+ Informacje o pobrane przez `GetIndexInfo` funkcji członkowskiej klasy obiektu tabledef są przechowywane w `CDaoIndexInfo` struktury. Wywołanie `GetIndexInfo` funkcji członkowskiej klasy obiektu zawierającego tabledef, w których kolekcji indeksów jest obiekt indeksu. `CDaoIndexInfo` definiuje również `Dump` kompilacje funkcji członkowskiej podczas debugowania. Można użyć `Dump` do zrzutu zawartość `CDaoIndexInfo` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  

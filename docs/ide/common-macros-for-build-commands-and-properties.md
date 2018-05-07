@@ -1,13 +1,10 @@
 ---
-title: "Typowe makra dla poleceń kompilacji oraz właściwości | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Typowe makra dla poleceń kompilacji oraz właściwości | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -101,28 +98,26 @@ helpviewer_keywords:
 - $(PlatformName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96e403516d6f85804fa798d7a0c28575482ff43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b94347e48a7b8b134915456c92aea3397f97a1b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>Typowe makra dla poleceń kompilacji oraz właściwości
 W zależności od opcji instalacji program Visual Studio można udostępnić setki makra użytkownika. Odpowiadają one właściwości programu MSBuild, które są ustawione domyślnie lub .props lub .targets plików lub ustawienia projektu. Użyj tych makr dowolne miejsce w projekcie **strony właściwości** okno dialogowe, w którym są akceptowane ciągów. Tych makr nie jest uwzględniana.  
   
  Aby wyświetlić dostępne makra, w kolumnie z prawej strony nazwy właściwości, kliknij strzałkę listy rozwijanej. Jeśli **Edytuj** jest dostępny, kliknij go, a następnie kliknij w oknie dialogowym Edycja **makra**. Aby uzyskać więcej informacji, zobacz **wartości Specifying User-Defined** sekcji [strony właściwości](../ide/property-pages-visual-cpp.md).  
   
- Makra, które są oznaczone jako "Przestarzałe" nie są już używane lub zostały zastąpione przez równoważne [makro metadanych elementu](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***nazwa***)**) . Makra, które są oznaczone jako "przestarzałe; Migracja"również są przestarzałe. I dodatkowo, jeśli projekt, który zawiera makro jest migracja z programu Visual Studio 2008, Visual Studio konwertuje makra na równoważne bieżącego makra.  
+ Makra, które są oznaczone jako "Przestarzałe" nie są już używane lub zostały zastąpione przez równoważne [makro metadanych elementu](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***nazwa***)**). Makra, które są oznaczone jako "przestarzałe; Migracja"również są przestarzałe. I dodatkowo, jeśli projekt, który zawiera makro jest migracja z programu Visual Studio 2008, Visual Studio konwertuje makra na równoważne bieżącego makra.  
   
  W poniższej tabeli opisano typowe podzbioru dostępnych makr. Ta lista nie jest wyczerpująca. Szczegółowe informacje dotyczące sposobu tworzenia i używany jako makra w .props, .targets i .vcxproj plików definicji właściwości programu MSBuild, zobacz [właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties).  
   
-|Makra|Opis|  
+|Macro|Opis|  
 |-----------|-----------------|  
 |**$(RemoteMachine)**|Ustaw wartość **maszyny zdalnej** właściwości na stronie właściwości debugowania. Zobacz [Zmienianie ustawienia projektu dla konfiguracji debugowania C/C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) Aby uzyskać więcej informacji.|  
 |**$(Configuration)**|Nazwa w bieżącej konfiguracji projektu, na przykład "Debugowanie".|  

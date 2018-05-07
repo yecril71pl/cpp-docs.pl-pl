@@ -1,37 +1,32 @@
 ---
 title: 'Schowek: Kopiowanie i wklejanie danych | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Schowek: kopiowanie i wklejanie danych
 W tym temacie opisano minimalną pracy, należy wykonać, kopiowanie i wklejanie ze Schowka w aplikacji OLE. Zaleca się przeczytanie [obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md) tematy przed kontynuowaniem.  
   
  Przed zaimplementowaniem albo kopiowanie i wklejanie, musisz podać funkcje do obsługi opcji kopiowanie, wycinanie i wklejanie w menu Edycja.  
   
-##  <a name="_core_copying_or_cutting_data"></a>Kopiowanie lub wycinanie danych  
+##  <a name="_core_copying_or_cutting_data"></a> Kopiowanie lub wycinanie danych  
   
 #### <a name="to-copy-data-to-the-clipboard"></a>Aby skopiować dane do Schowka  
   
@@ -47,7 +42,7 @@ W tym temacie opisano minimalną pracy, należy wykonać, kopiowanie i wklejanie
   
  Aby zapoznać się z przykładem tej sekwencji, zobacz **OnEditCut** i **OnEditCopy** funkcje w OLE MFC przykładowe programy [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md). Należy pamiętać, że te przykłady Obsługa wskaźnik do aktualnie wybrane dane, tak kroku 1 jest już zakończone.  
   
-##  <a name="_core_pasting_data"></a>Wklejanie danych  
+##  <a name="_core_pasting_data"></a> Wklejanie danych  
  Wklejanie danych jest bardziej skomplikowane niż go kopiować, ponieważ trzeba wybrać format używany w wkleić danych do aplikacji.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Można wkleić danych ze Schowka  

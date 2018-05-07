@@ -1,13 +1,10 @@
 ---
-title: "Określanie, które biblioteki dll do ponownej dystrybucji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Określanie, które biblioteki dll do ponownej dystrybucji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 03/13/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f942b01dd9379aea0c0ea2ab3751a6f140ef2a
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b3ca079fc69fe10f15a55812eaa55d4ba2d2ab04
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Ustalanie, które biblioteki DLL są przeznaczone do ponownej dystrybucji
 
@@ -53,7 +48,7 @@ W poniższej tabeli opisano niektóre z bibliotek DLL programu Visual C++, aplik
 
 |Biblioteka języka Visual C++|Opis|Informacje zawarte w tym artykule dotyczą|
 |--------------------------|-----------------|----------------|
-|vcruntime*version*.dll|Biblioteka środowiska uruchomieniowego dla kodu natywnego.|Aplikacje korzystające z normalnym C i C++ języka uruchamianie i kończenie działania usług.|
+|vcruntime*wersji*.dll|Biblioteka środowiska uruchomieniowego dla kodu natywnego.|Aplikacje korzystające z normalnym C i C++ języka uruchamianie i kończenie działania usług.|
 |vccorlib*version*.dll|Biblioteka środowiska uruchomieniowego dla kodu zarządzanego.|Aplikacje korzystające z usług języka C++ dla kodu zarządzanego.|
 |msvcp*wersji*dll i msvcp*wersji*_*dotnumber*.dll|Standardowa biblioteka C++ dla natywnego kodu.|Aplikacje używające [standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md).|
 |concrt*wersji*.dll|Współbieżność środowiska wykonawczego biblioteki dla kodu natywnego.|Aplikacje używające [współbieżność środowiska wykonawczego](../parallel/concrt/concurrency-runtime.md).|

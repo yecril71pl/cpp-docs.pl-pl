@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCRibbonButtonsGroup | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonButtonsGroup
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45851ea66e324f57cb7df3daaa99eb8a1b8b9311
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Klasa CMFCRibbonButtonsGroup
 `CMFCRibbonButtonsGroup` Klasa umożliwia organizowanie zestaw przycisków wstążki do grupy. Wszystkie przycisków w grupie są bezpośrednio sąsiadujących ze sobą w poziomie i w obramowanie.  
@@ -102,7 +97,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxribbonbuttonsgroup.h  
   
-##  <a name="addbutton"></a>CMFCRibbonButtonsGroup::AddButton  
+##  <a name="addbutton"></a>  CMFCRibbonButtonsGroup::AddButton  
  Dodaje przycisk do grupy.  
   
 ```  
@@ -110,10 +105,10 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pButton`  
+ [in] `pButton`  
  Wskaźnik do przycisk, aby dodać.  
   
-##  <a name="addbuttons"></a>CMFCRibbonButtonsGroup::AddButtons  
+##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  Lista przycisków dodaje do grupy.  
   
 ```  
@@ -122,10 +117,10 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lstButtons`  
+ [in] `lstButtons`  
  Lista wskaźników do przycisków, które chcesz dodać.  
   
-##  <a name="cmfcribbonbuttonsgroup"></a>CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
+##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  Konstruuje `CMFCRibbonButtonsGroup` obiektu.  
   
 ```  
@@ -134,14 +129,14 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pButton`  
+ [in] `pButton`  
  Określa przycisk, aby dodać do nowo utworzony `CMFCRibbonButtonsGroup` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getbutton"></a>CMFCRibbonButtonsGroup::GetButton  
+##  <a name="getbutton"></a>  CMFCRibbonButtonsGroup::GetButton  
  Zwraca wskaźnik na przycisku, który znajduje się w określonym indeksie.  
   
 ```  
@@ -149,15 +144,15 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`i`  
+ [in] `i`  
  Liczony od zera indeks przycisk, aby wrócić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do przycisku, który znajduje się w określonym indeksie. `NULL`Jeśli określony indeks jest poza zakresem.  
+ Wskaźnik do przycisku, który znajduje się w określonym indeksie. `NULL` Jeśli określony indeks jest poza zakresem.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getcount"></a>CMFCRibbonButtonsGroup::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonButtonsGroup::GetCount  
  Zwraca liczbę przycisków w grupie.  
   
 ```  
@@ -167,7 +162,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba przycisków w grupie.  
   
-##  <a name="getimagesize"></a>CMFCRibbonButtonsGroup::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCRibbonButtonsGroup::GetImageSize  
  Pobiera rozmiar obrazu źródłowego chronionej `CMFCToolBarImages` elementu członkowskiego `m_Images`.  
   
 ```  
@@ -179,7 +174,7 @@ const CSize GetImageSize() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getregularsize"></a>CMFCRibbonButtonsGroup::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonButtonsGroup::GetRegularSize  
  Pobiera maksymalna liczba elementu grupy wstążki.  
   
 ```  
@@ -187,14 +182,14 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia grupy wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="hasimages"></a>CMFCRibbonButtonsGroup::HasImages  
+##  <a name="hasimages"></a>  CMFCRibbonButtonsGroup::HasImages  
  Raporty czy `CMFCRibbonButtonsGroup` obiekt zawiera obrazy pasków narzędzi.  
   
 ```  
@@ -206,7 +201,7 @@ BOOL HasImages() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ondrawimage"></a>CMFCRibbonButtonsGroup::OnDrawImage  
+##  <a name="ondrawimage"></a>  CMFCRibbonButtonsGroup::OnDrawImage  
  Rysuje obraz odpowiednie dla określonego przycisku, w zależności od tego, czy przycisk jest normalne, wyróżnione lub wyłączone.  
   
 ```  
@@ -218,21 +213,21 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia z `CMFCRibbonButtonsGroup` obiektu.  
   
- [in]`rectImage`  
+ [in] `rectImage`  
  Prostokąt, w którym do rysowania obrazu.  
   
- [in]`pButton`  
+ [in] `pButton`  
  Przycisk do rysowania obrazu.  
   
- [in]`nImageIndex`  
+ [in] `nImageIndex`  
  Indeks obrazu do rysowania przycisk (w jednym tablic trzy obrazu przycisków normalne, wyróżnione lub wyłączone).  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="removeall"></a>CMFCRibbonButtonsGroup::RemoveAll  
+##  <a name="removeall"></a>  CMFCRibbonButtonsGroup::RemoveAll  
  Usuwa wszystkie przyciski z `CMFCRibbonButtonsGroup` obiektu.  
   
 ```  
@@ -241,7 +236,7 @@ void RemoveAll();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setimages"></a>CMFCRibbonButtonsGroup::SetImages  
+##  <a name="setimages"></a>  CMFCRibbonButtonsGroup::SetImages  
  Obrazy są przypisywane do grupy przycisków wstążki.  
   
 ```  
@@ -252,13 +247,13 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pImages`  
+ [in] `pImages`  
  Regularne obrazów.  
   
- [in]`pHotImages`  
+ [in] `pHotImages`  
  Gorących obrazów.  
   
- [in]`pDisabledImages`  
+ [in] `pDisabledImages`  
  Obrazy wyłączone.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -267,7 +262,7 @@ void SetImages(
 > [!NOTE]
 >  Obrazy gorących są obrazy, które są wyświetlane, gdy użytkownik znajduje się nad przyciskiem. Wyłączone obrazy są obrazy, które są wyświetlane, gdy przycisk jest wyłączony.  
   
-##  <a name="setparentcategory"></a>CMFCRibbonButtonsGroup::SetParentCategory  
+##  <a name="setparentcategory"></a>  CMFCRibbonButtonsGroup::SetParentCategory  
  Ustawia element nadrzędny `CMFCRibbonCategory` z `CMFCRibbonButtonsGroup` obiekt i wszystkie przyciski znajdujące się w nim.  
   
 ```  
@@ -275,7 +270,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pCategory`  
+ [in] `pCategory`  
  Wskaźnik do kategorii nadrzędnej, aby ustawić (grupy z kartami w formantów wstążki są nazywane kategorii).  
   
 ### <a name="remarks"></a>Uwagi  

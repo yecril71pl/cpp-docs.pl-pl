@@ -1,13 +1,10 @@
 ---
-title: "Praca z właściwościami projektu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Praca z właściwościami projektu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,41 +13,39 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c33a18ff0d492ef3a870a342c9d8ff292007748
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-project-properties"></a>Praca z właściwościami projektu
-W środowisku IDE, wszystkie informacje niezbędne do utworzenia projektu jest ujawniona jako *właściwości*. Informacje te obejmują nazwę aplikacji, rozszerzenia (takie jak biblioteki DLL, LIB EXE) — opcje kompilatora, opcje konsolidatora, ustawienia debugera, niestandardowe kroki procesu kompilacji i inne czynności. Zazwyczaj *strony właściwości* ( **projektu &#124; Właściwości**) do wyświetlania i modyfikowania tych właściwości. 
+W środowisku IDE, wszystkie informacje niezbędne do utworzenia projektu jest ujawniona jako *właściwości*. Informacje te obejmują nazwę aplikacji, rozszerzenia (takie jak biblioteki DLL, LIB EXE) — opcje kompilatora, opcje konsolidatora, ustawienia debugera, niestandardowe kroki procesu kompilacji i inne czynności. Zazwyczaj *strony właściwości* ( **projektu &#124; właściwości**) do wyświetlania i modyfikowania tych właściwości. 
   
  Podczas tworzenia projektu systemu przypisuje wartości różnych właściwości. Wartości domyślne różnią się w zależności od rodzaju projektu i opcje wybrać w Kreatorze aplikacji. Na przykład Projekt ATL ma właściwości związane z plikami MIDL, ale są nieobecne w aplikacji konsoli podstawowe. Domyślne właściwości są wyświetlane w okienku ogólne na stronach właściwości:  
   
- ![Visual C &43; &#43; Domyślne ustawienia projektu](../ide/media/visual-c---project-defaults.png "domyślne projektów Visual C++")  
+ ![Visual C&#43; &#43; projektu domyślne](../ide/media/visual-c---project-defaults.png "domyślne projektów Visual C++")  
   
  Niektóre właściwości, takie jak nazwa aplikacji, dotyczą wszystkich zmian kompilacji, niezależnie od platformy docelowej i czy jest kompilację debugowania lub wersji. Jednak większość właściwości są zależne od konfiguracji. Jest to spowodowane kompilator musi wiedzieć, program będzie uruchamiany na określonej platformy i jakie kompilatora określonych opcji Użyj, aby wygenerować prawidłowego kodu. W związku z tym podczas ustawiania właściwości jest zwrócenie uwagi na nową wartość stosuje się do platformy i konfiguracji. Należy również stosować tylko do kompilacji debugowania Win32 lub jego stosuje się również do debugowania ARM i debugowania x64? Na przykład **optymalizacji** właściwość domyślnie jest ustawiona **Maksymalizuj szybkość (/ O2)** w wersji konfiguracji, ale jest wyłączone w konfiguracji debugowania.  
   
  Strony właściwości są zaprojektowane tak, aby zawsze można zobaczyć i zmodyfikowania konieczne, których konfiguracja i platforma wartość właściwości dotyczą. Na poniższej ilustracji przedstawiono strony właściwości configuration i platform informacje w polach listy u góry. Gdy **optymalizacji** właściwość jest ustawiona w tym miejscu, zostanie zastosowana tylko do kompilacji debugowania Win32, które odbywa się za aktywnej konfiguracji, jak to przedstawiono Czerwone strzałki.  
   
- ![Visual C &43; &#43; Strony właściwości przedstawiający aktywnej konfiguracji](../ide/media/visual-c---property-pages-showing-active-configuration.png "aktywnej konfiguracji przedstawiający stron właściwości w usłudze Visual C++")  
+ ![Visual C&#43; &#43; strony właściwości przedstawiający aktywnej konfiguracji](../ide/media/visual-c---property-pages-showing-active-configuration.png "aktywnej konfiguracji przedstawiający stron właściwości w usłudze Visual C++")  
   
  Na poniższej ilustracji przedstawiono tej samej stronie właściwości projektu, ale zmieniono konfigurację do wydania. Należy pamiętać różnych wartości dla właściwości optymalizacji. Należy również zauważyć, że aktywnej konfiguracji jest nadal debugowania. Można ustawić właściwości dla żadnej konfiguracji nie musi być aktywne.  
   
- ![Visual C &43; &#43; Strony właściwości przedstawiający wersji konfiguracji](../ide/media/visual-c---property-pages-showing-release-config.png "config wersji przedstawiający stron właściwości w usłudze Visual C++")  
+ ![Visual C&#43; &#43; strony właściwości przedstawiający wersji konfiguracji](../ide/media/visual-c---property-pages-showing-release-config.png "config wersji przedstawiający stron właściwości w usłudze Visual C++")  
   
  System projektu opiera się na MSBuild, który definiuje formaty plików i reguł do tworzenia projektów dowolnego rodzaju. MSBuild zarządza znacznie złożoność budynku dla wielu platform i konfiguracje, ale należy zrozumieć nieco dotyczące sposobu działania. Jest to szczególnie ważne, jeśli chcesz zdefiniować konfiguracje niestandardowe lub Utwórz wielokrotnego użytku zestawy właściwości, które można udostępniać i zaimportować do wielu projektów.  
   
  Właściwości projektu są przechowywane bezpośrednio w pliku projektu (*.vcxproj) lub w innych plikach XML lub .props, że importuje plik projektu, które dostarczają wartości domyślne. Jak pokazano wcześniej, tę samą właściwość dla tej samej konfiguracji można przypisać inną wartość w różnych plikach. Podczas kompilowania projektu aparat MSBuild ocenia pliku projektu i wszystkich importowanych plików w dobrze zdefiniowanej kolejności (opisanych poniżej). Ponieważ każdy z plików jest obliczane, wszystkie wartości właściwości zdefiniowane w tym pliku zastępują istniejące wartości. Wartości, które nie są określone są dziedziczone z plików, które zostały ocenione wcześniej. W związku z tym podczas ustawiania właściwości ze strony właściwości, należy również należy zwrócić uwagę na których wartość. Jeśli wartość właściwości "X" w pliku .props, ale właściwość jest ustawiona na "Y" w pliku projektu, projekt zostanie utworzona z właściwością ustawioną wartość "Y". Jeśli tej samej właściwości jest równa "Z" w elemencie projektu, takich jak plik .cpp, aparat MSBuild użyje wartość "Z". Aby uzyskać więcej informacji, zobacz [dziedziczenia](#bkmkPropertyInheritance) dalszej części tego artykułu.  
   
 ## <a name="build-configurations"></a>Konfiguracje kompilacji  
- Konfiguracja jest tylko dowolnego grupy właściwości, które podano nazwę. Program Visual Studio udostępnia konfiguracje Debug i Release i każdego ustawia różne właściwości odpowiednio do kompilacji debugowania lub kompilacji wydania. Można użyć **programu Configuration Manager** Aby zdefiniować konfiguracje niestandardowe jako wygodny sposób właściwości grupy dla określonej wersji kompilacji. Służy Menedżer właściwości zaawansowane pracy z właściwościami, ale wprowadzeniu go tutaj ponieważ pomaga zwizualizować właściwości konfiguracji. Możesz uzyskać do niego dostęp z **widoku &#124;  Menedżer właściwości** lub **widoku &#124; Inne okna &#124; Menedżer właściwości** w zależności od ustawienia. Ma ona węzłów dla każdej pary konfiguracji/platform w projekcie. W każdej z tych węzłów są węzły arkusze właściwości (pliki .props), które ustawić niektórych właściwości specyficzne dla danej konfiguracji.  
+ Konfiguracja jest tylko dowolnego grupy właściwości, które podano nazwę. Program Visual Studio udostępnia konfiguracje Debug i Release i każdego ustawia różne właściwości odpowiednio do kompilacji debugowania lub kompilacji wydania. Można użyć **programu Configuration Manager** Aby zdefiniować konfiguracje niestandardowe jako wygodny sposób właściwości grupy dla określonej wersji kompilacji. Służy Menedżer właściwości zaawansowane pracy z właściwościami, ale wprowadzeniu go tutaj ponieważ pomaga zwizualizować właściwości konfiguracji. Możesz uzyskać do niego dostęp z **widoku &#124; Menedżer właściwości** lub **widoku &#124; inne okna &#124; Menedżer właściwości** w zależności od ustawienia. Ma ona węzłów dla każdej pary konfiguracji/platform w projekcie. W każdej z tych węzłów są węzły arkusze właściwości (pliki .props), które ustawić niektórych właściwości specyficzne dla danej konfiguracji.  
   
  ![Menedżer właściwości](../ide/media/property-manager.png "Menedżer właściwości")  
   
@@ -69,7 +64,7 @@ W środowisku IDE, wszystkie informacje niezbędne do utworzenia projektu jest u
 ## <a name="property-pages"></a>Strony właściwości  
  Jak już wspomniano wcześniej, system projektu Visual C++ jest oparty na [MSBuild](/visualstudio/msbuild/msbuild-properties) i wartości są przechowywane w pliku projektu XML, domyślne pliki .props i .targets. Dla programu Visual Studio 2015, te pliki znajdują się w **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Dla programu Visual Studio 2017 r, te pliki znajdują się w  **\\Program Files (x86)\\programu Microsoft Visual Studio\\2017\\_wersji_\\Common7\\ IDE\\VC\\VCTargets**, gdzie _wersji_ jest zainstalowanej wersji programu Visual Studio. Właściwości są także przechowywane w plikach .props niestandardowych, które można dodać do własnego projektu. Zdecydowanie zaleca się czy nie ręcznie edytować pliki, a zamiast tego użyć strony właściwości w IDE można zmodyfikować wszystkie właściwości, zwłaszcza tych, które uczestniczyć w dziedziczeniu, chyba że masz bardzo dobrą znajomością programu MSBuild.  
   
- Poniższa ilustracja przedstawia strony właściwości dla projektu Visual C++. W okienku po lewej stronie **katalogi VC ++***reguły* jest zaznaczona, i w okienku po prawej stronie listy właściwości, które są skojarzone z tej reguły. `$(...)` Wartości Niestety są nazywane *makra*. Są to *nie* makr C/C++, ale po prostu kompilacji stałe. Makra zostały omówione w [makra strony właściwości](#bkmkPropertiesVersusMacros) sekcji w dalszej części tego artykułu.)  
+ Poniższa ilustracja przedstawia strony właściwości dla projektu Visual C++. W okienku po lewej stronie **katalogi VC ++ *** reguły* jest zaznaczona, i w okienku po prawej stronie listy właściwości, które są skojarzone z tej reguły. `$(...)` Wartości Niestety są nazywane *makra*. Są to *nie* makr C/C++, ale po prostu kompilacji stałe. Makra zostały omówione w [makra strony właściwości](#bkmkPropertiesVersusMacros) sekcji w dalszej części tego artykułu.)  
   
  ![Strony właściwości projektu](../ide/media/project_property_pages_vc.png "Project_Property_Pages_VC")  
   
@@ -78,7 +73,7 @@ W środowisku IDE, wszystkie informacje niezbędne do utworzenia projektu jest u
   
 #### <a name="to-set-a-property-for-a-project"></a>Aby ustawić właściwość dla projektu  
   
-1.  W przypadku większości scenariuszy można ustawić właściwości na poziomie projektu bez tworzenia arkusza właściwości niestandardowej. W menu głównym wybierz **projektu &#124; Właściwości**, lub kliknij prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań** i wybierz polecenie **właściwości**.  
+1.  W przypadku większości scenariuszy można ustawić właściwości na poziomie projektu bez tworzenia arkusza właściwości niestandardowej. W menu głównym wybierz **projektu &#124; właściwości**, lub kliknij prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań** i wybierz polecenie **właściwości**.  
   
 2.  Użyj **konfiguracji** i **platformy** Lista pól w górnej części okna dialogowego, aby określić, które właściwości grupy należy zastosować zmiany. W wielu przypadkach **wszystkich platform** i **wszystkie konfiguracje** są właściwie. Można ustawić właściwości tylko do niektórych konfiguracji wielokrotnego wyboru w **Menedżer właściwości**, a następnie otwórz menu skrótów i wybierz **właściwości**.  
   
@@ -109,7 +104,7 @@ W środowisku IDE, wszystkie informacje niezbędne do utworzenia projektu jest u
 -   [Strona właściwości Narzędzie generowania danych XML](../ide/xml-data-generator-tool-property-page.md)  
   
 ## <a name="to-quickly-browse-and-search-all-properties"></a>Aby szybko przeglądać i wyszukiwanie wszystkich właściwości  
- **Wszystkie opcje** strony właściwości (w obszarze **właściwości konfiguracji &#124; C/C++** w węźle **strony właściwości** okno dialogowe) zapewnia szybkie przeglądać i wyszukiwać właściwości, które są dostępne w bieżącym kontekście. Ma specjalne pole wyszukiwania i prostą składnię, aby pomóc w filtrowaniu wyników:  
+ **Wszystkie opcje** strony właściwości (w obszarze **właściwości konfiguracji &#124; C/C++** w węźle **strony właściwości** okno dialogowe) umożliwia szybkie przeglądania i wyszukiwania właściwości, które są dostępne w bieżącym kontekście. Ma specjalne pole wyszukiwania i prostą składnię, aby pomóc w filtrowaniu wyników:  
   
  Brak prefiksu:  
  Wyszukiwanie tylko w nazwach właściwości (podciąg bez uwzględniania wielkości liter).  
@@ -120,7 +115,7 @@ W środowisku IDE, wszystkie informacje niezbędne do utworzenia projektu jest u
  v:  
  Wyszukiwanie tylko w wartościach (podciąg bez uwzględniania wielkości liter).  
   
-##  <a name="bkmkPropertiesVersusMacros"></a>Makra strony właściwości  
+##  <a name="bkmkPropertiesVersusMacros"></a> Makra strony właściwości  
  A *makro* jest stałą kompilacji, który może odnosić się wartość, która jest definiowana za pomocą programu Visual Studio lub system programu MSBuild lub wartości zdefiniowanej przez użytkownika. Za pomocą makr zamiast jednoznacznie ustalonych wartości, takich jak ścieżki katalogów, można łatwo udostępniać ustawienia właściwości między komputerami oraz między poszczególnymi wersjami programu Visual Studio, i lepiej zagwarantować, że ustawienia projektu poprawnie uczestniczą w dziedziczeniu właściwości. Edytor właściwości służy do wyświetlania wartości wszystkich dostępnych makr.  
   
 ### <a name="predefined-macros"></a>Wstępnie zdefiniowane makra  
@@ -146,13 +141,13 @@ W środowisku IDE, wszystkie informacje niezbędne do utworzenia projektu jest u
 ## <a name="property-editor"></a>Edytor właściwości  
  Edytor właściwości służy do modyfikowania niektórych właściwości ciągów i zaznaczania makr jako wartości. Aby otworzyć Edytor właściwości, zaznacz właściwość na stronie właściwości, a następnie wybierz strzałkę w dół po prawej stronie. Jeśli na liście rozwijanej znajdują się  **\<Edytuj >**, a następnie wybierz pozycję go, aby wyświetlić Edytor właściwości dla tej właściwości.  
   
- ![Właściwości &#95; Edytor &#95; listy rozwijanej](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
+ ![Właściwość&#95;edytor&#95;listy rozwijanej](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
   
  W edytorze właściwości można wybrać **makra** przycisk, aby wyświetlić dostępne makra i ich wartości. Na poniższej ilustracji przedstawiono edytora właściwości **dodatkowe katalogi dołączenia** właściwości po **makra** wybrano przycisku. Gdy **Dziedzicz po elemencie nadrzędnym lub domyślnych wartościach projektu** pole wyboru jest zaznaczone i Dodaj nową wartość, zostanie ono dodane do wartości, które obecnie są dziedziczone. Jeśli usuniesz zaznaczenie pola wyboru, nowa wartość zamieni wartości dziedziczone. W większości przypadków pozostaw zaznaczone pole wyboru.  
   
- ![Edytor właściwości Visual C &43; &#43; ] (../ide/media/propertyeditorvc.png "PropertyEditorVC")  
+ ![Edytor właściwości, Visual C&#43;&#43;](../ide/media/propertyeditorvc.png "PropertyEditorVC")  
   
-##  <a name="bkmkPropertySheets"></a>Tworzenie konfiguracji właściwości wielokrotnego użytku  
+##  <a name="bkmkPropertySheets"></a> Tworzenie konfiguracji właściwości wielokrotnego użytku  
  Chociaż możesz ustawiać właściwości „globalne” dla poszczególnych użytkowników i komputerów, nie zalecamy tego. Zamiast tego zaleca się używanie **Menedżer właściwości** utworzyć *arkusza właściwości* do przechowywania ustawień dla każdego rodzaju projektu, który chcesz mieć możliwość ponownego użycia lub udostępniać innym osobom. Arkusze właściwości również sprawiają, że jest mniej prawdopodobne, że ustawienia właściwości dla innych typów projektów zostaną przypadkowo zmienione. Arkusze właściwości omówiono bardziej szczegółowo [tworzenia konfiguracji wielokrotnego użytku właściwości](#bkmkPropertySheets).  
   
 > [!IMPORTANT]
@@ -191,7 +186,7 @@ W środowisku IDE, wszystkie informacje niezbędne do utworzenia projektu jest u
   
 3.  W **Menedżer właściwości**, otwórz nowy arkusz właściwości, a następnie ustaw właściwości, które chcesz dołączyć.  
   
-##  <a name="bkmkPropertyInheritance"></a>Dziedziczenie właściwości  
+##  <a name="bkmkPropertyInheritance"></a> Dziedziczenie właściwości  
  Właściwości projektu są warstwowe. Każda warstwa dziedziczy wartości poprzedniej warstwy, ale dziedziczone wartości mogą być zastąpione przez ustawienie właściwości w sposób jawny. Oto podstawowe drzewo dziedziczenia:  
   
 1.  Domyślne ustawienia z zestawu narzędzi CPP MSBuild (..\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.cpp.default.props, który jest importowany przez plik .vcxproj.)  

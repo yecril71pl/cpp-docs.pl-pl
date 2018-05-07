@@ -1,12 +1,9 @@
 ---
-title: "Crecttracker — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Crecttracker — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRectTracker
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f870ef92296636c8d27fc166d41cdefc54d1585
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eff57e1fde0af6e794c2c47db7d1e31daf545715
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecttracker-class"></a>Crecttracker — klasa
 Umożliwia element do wyświetlenia, przenieść i zmiany rozmiaru w różnych fashions.  
@@ -102,11 +97,11 @@ class CRectTracker
 |[CRectTracker::m_sizeMin](#m_sizemin)|Określa prostokątne minimalna szerokość i wysokość.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CRectTracker`nie ma klasy podstawowej.  
+ `CRectTracker` nie ma klasy podstawowej.  
   
  Mimo że `CRectTracker` klasy zaprojektowano w celu Zezwalaj użytkownikom na interakcję z elementami OLE przy użyciu interfejsu graficznego, jego użycie nie jest ograniczony do aplikacji obsługujących OLE. Mogą być używane wszędzie interfejs użytkownika jest wymagana.  
   
- `CRectTracker`Obramowanie może być stałe lub przerywana wierszy. Element można podany kreskowane obramowanie lub umieszczenia wzorem kreskowanym wskazująca innych stanów elementu. Osiem uchwytów zmiany rozmiaru można umieścić na zewnątrz lub wewnątrz obramowania elementu. (Aby uzyskać informacje o uchwytów zmiany rozmiaru, zobacz [GetHandleMask](#gethandlemask).) Na koniec `CRectTracker` umożliwia zmianę orientacji elementu podczas zmiany rozmiaru.  
+ `CRectTracker` Obramowanie może być stałe lub przerywana wierszy. Element można podany kreskowane obramowanie lub umieszczenia wzorem kreskowanym wskazująca innych stanów elementu. Osiem uchwytów zmiany rozmiaru można umieścić na zewnątrz lub wewnątrz obramowania elementu. (Aby uzyskać informacje o uchwytów zmiany rozmiaru, zobacz [GetHandleMask](#gethandlemask).) Na koniec `CRectTracker` umożliwia zmianę orientacji elementu podczas zmiany rozmiaru.  
   
  Aby użyć `CRectTracker`, utworzyć `CRectTracker` obiektu i określić, które stany wyświetlania są inicjowane. Następnie można ten interfejs Prześlij opinię visual użytkownika na bieżący stan elementu OLE skojarzonego z `CRectTracker` obiektu.  
   
@@ -118,7 +113,7 @@ class CRectTracker
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxext.h  
   
-##  <a name="adjustrect"></a>CRectTracker::AdjustRect  
+##  <a name="adjustrect"></a>  CRectTracker::AdjustRect  
  Wywoływane przez platformę, gdy zmieniany jest rozmiar prostokąta śledzenia przy użyciu uchwyt zmiany rozmiaru.  
   
 ```  
@@ -141,7 +136,7 @@ virtual void AdjustRect(
   
  Specjalne funkcje, które nie są bezpośrednio obsługiwane przez `CRectTracker`, takie jak przyciąganie do siatki lub keep proporcje, może być zaimplementowany przez zastępowanie tej funkcji.  
   
-##  <a name="crecttracker"></a>CRectTracker::CRectTracker  
+##  <a name="crecttracker"></a>  CRectTracker::CRectTracker  
  Tworzy i inicjuje `CRectTracker` obiektu.  
   
 ```  
@@ -175,7 +170,7 @@ CRectTracker(
 ### <a name="remarks"></a>Uwagi  
  Konstruktor domyślny inicjuje `CRectTracker` obiektu wartościami z `lpSrcRect` i inicjuje innych rozmiarach do wartości domyślnych systemu. Jeśli obiekt jest tworzony bez parametrów `m_rect` i `m_nStyle` elementy członkowskie danych są niezainicjowany.  
   
-##  <a name="draw"></a>CRectTracker::Draw  
+##  <a name="draw"></a>  CRectTracker::Draw  
  Wywołanie tej funkcji do rysowania linii zewnętrzne i wewnętrzne region prostokąta.  
   
 ```  
@@ -189,7 +184,7 @@ void Draw(CDC* pDC) const;
 ### <a name="remarks"></a>Uwagi  
  Styl śledzący Określa, jak jest wykonywane rysunku. Zobacz Konstruktor `CRectTracker` uzyskać więcej informacji o dostępnych style.  
   
-##  <a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
+##  <a name="drawtrackerrect"></a>  CRectTracker::DrawTrackerRect  
  Wywoływana przez platformę, gdy pozycja śledzący została zmieniona podczas wewnątrz `Track` lub `TrackRubberBand` funkcję elementu członkowskiego.  
   
 ```  
@@ -218,7 +213,7 @@ virtual void DrawTrackerRect(
   
  Należy przesłonić tę funkcję, aby przekazać opinię różnych podczas operacji śledzenia.  
   
-##  <a name="gethandlemask"></a>CRectTracker::GetHandleMask  
+##  <a name="gethandlemask"></a>  CRectTracker::GetHandleMask  
  Struktura wywołuje tę funkcję elementu członkowskiego, aby pobrać maski dla prostokąta uchwyty zmiany rozmiaru.  
   
 ```  
@@ -231,7 +226,7 @@ virtual UINT GetHandleMask() const;
 ### <a name="remarks"></a>Uwagi  
  Uchwyty zmiany rozmiaru są wyświetlane na stronach i narożników prostokąta i Zezwalaj użytkownikowi na kontrolowanie kształt i rozmiar.  
   
- Prostokąt ma 8 uchwytów zmiany rozmiaru nr 7-0. Każdy uchwyt zmiany rozmiaru odpowiada bit maski; wartość tego bit jest równa 2 ^  *n* , gdzie  *n*  jest numerem uchwyt zmiany rozmiaru. Bity 0-3 odpowiadają rogu uchwytów zmiany rozmiaru, zaczynając od góry po lewej przenoszenie do ruchu wskazówek zegara. Bity 4-7 odpowiadają stronie Zmień rozmiar dojść, począwszy od góry z ruchem wskazówek zegara. Na poniższej ilustracji przedstawiono zmiany rozmiaru prostokąta obsługuje i odpowiednie Zmień rozmiar uchwytu liczb i wartości:  
+ Prostokąt ma 8 uchwytów zmiany rozmiaru nr 7-0. Każdy uchwyt zmiany rozmiaru odpowiada bit maski; wartość tego bit jest równa 2 ^ *n*, gdzie *n* jest numerem uchwyt zmiany rozmiaru. Bity 0-3 odpowiadają rogu uchwytów zmiany rozmiaru, zaczynając od góry po lewej przenoszenie do ruchu wskazówek zegara. Bity 4-7 odpowiadają stronie Zmień rozmiar dojść, począwszy od góry z ruchem wskazówek zegara. Na poniższej ilustracji przedstawiono zmiany rozmiaru prostokąta obsługuje i odpowiednie Zmień rozmiar uchwytu liczb i wartości:  
   
  ![Zmień rozmiar uchwytu numery](../../mfc/reference/media/vc35dp1.gif "vc35dp1")  
   
@@ -239,7 +234,7 @@ virtual UINT GetHandleMask() const;
   
  Przesłonić tę funkcję elementu członkowskiego do ukrywania lub pokazywania się, że wskazany uchwyty zmiany rozmiaru.  
   
-##  <a name="gettruerect"></a>CRectTracker::GetTrueRect  
+##  <a name="gettruerect"></a>  CRectTracker::GetTrueRect  
  Wywołanie tej funkcji można pobrać współrzędne prostokąta.  
   
 ```  
@@ -253,7 +248,7 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ### <a name="remarks"></a>Uwagi  
  Wymiary prostokąta obejmują wysokość i szerokość uchwytów wszelkie zmiany rozmiaru znajduje się na granicy zewnętrznej. Na zwrócenie, `lpTrueRect` jest zawsze znormalizowane prostokąt we współrzędnych urządzenia.  
   
-##  <a name="hittest"></a>CRectTracker::HitTest  
+##  <a name="hittest"></a>  CRectTracker::HitTest  
  Wywołanie tej funkcji, aby dowiedzieć się, czy użytkownik ma chwycić uchwyt zmiany rozmiaru.  
   
 ```  
@@ -287,7 +282,7 @@ int HitTest(CPoint point) const;
   
 - **CRectTracker::hitMiddle** 8  
   
-##  <a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
+##  <a name="m_nhandlesize"></a>  CRectTracker::m_nHandleSize  
  Rozmiar wyrażony w pikselach, o `CRectTracker` uchwyty zmiany rozmiaru.  
   
 ```  
@@ -297,14 +292,14 @@ int m_nHandleSize;
 ### <a name="remarks"></a>Uwagi  
  Zainicjowany z wartością domyślną systemu.  
   
-##  <a name="m_rect"></a>CRectTracker::m_rect  
+##  <a name="m_rect"></a>  CRectTracker::m_rect  
  Bieżąca pozycja prostokąta we współrzędnych klienta (w pikselach).  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="m_sizemin"></a>CRectTracker::m_sizeMin  
+##  <a name="m_sizemin"></a>  CRectTracker::m_sizeMin  
  Minimalny rozmiar prostokąta.  
   
 ```  
@@ -314,7 +309,7 @@ CSize m_sizeMin;
 ### <a name="remarks"></a>Uwagi  
  Obie wartości domyślne **cx** i **cy**, jest obliczana na podstawie wartości domyślne systemu szerokości obramowania. Ten element członkowski danych jest używany tylko przez `AdjustRect` funkcję elementu członkowskiego.  
   
-##  <a name="m_nstyle"></a>CRectTracker::m_nStyle  
+##  <a name="m_nstyle"></a>  CRectTracker::m_nStyle  
  Bieżący styl krawędzi prostokąta.  
   
 ```  
@@ -324,7 +319,7 @@ UINT m_nStyle;
 ### <a name="remarks"></a>Uwagi  
  Zobacz [CRectTracker::CRectTracker](#crecttracker) listę możliwych stylów.  
   
-##  <a name="normalizehit"></a>CRectTracker::NormalizeHit  
+##  <a name="normalizehit"></a>  CRectTracker::NormalizeHit  
  Wywołanie tej funkcji można przekonwertować uchwyt potencjalnie odwrócony.  
   
 ```  
@@ -341,7 +336,7 @@ int NormalizeHit(int nHandle) const;
 ### <a name="remarks"></a>Uwagi  
  Gdy `CRectTracker::Track` lub `CRectTracker::TrackRubberBand` jest wywoływana z odwracanie dozwolone, jest możliwe, prostokąt, aby być zmieniany na osi x i y. W takim przypadku `HitTest` zwróci dojść, które są także odwracane względem prostokąta. Może to być nieodpowiednie rysowania opinii kursora, ponieważ opinii jest zależna od pozycji ekranu prostokąta nie część prostokąt struktury danych, które zostaną zmodyfikowane.  
   
-##  <a name="onchangedrect"></a>CRectTracker::OnChangedRect  
+##  <a name="onchangedrect"></a>  CRectTracker::OnChangedRect  
  Wywoływane przez platformę, gdy prostokąt śledzenia został zmieniony podczas wywoływania `Track`.  
   
 ```  
@@ -357,7 +352,7 @@ virtual void OnChangedRect(const CRect& rectOld);
   
  Należy przesłonić tę funkcję, jeśli chcesz wykonać żadnej akcji po zmianie rozmiaru okna.  
   
-##  <a name="setcursor"></a>CRectTracker::SetCursor  
+##  <a name="setcursor"></a>  CRectTracker::SetCursor  
  Wywołanie tej funkcji, aby zmienić kształt kursora, gdy znajduje się nad `CRectTracker` region obiektu.  
   
 ```  
@@ -379,7 +374,7 @@ BOOL SetCursor(
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji z wewnątrz funkcji okna obsługująca `WM_SETCURSOR` komunikatu (zazwyczaj `OnSetCursor`).  
   
-##  <a name="track"></a>CRectTracker::Track  
+##  <a name="track"></a>  CRectTracker::Track  
  Wywołanie tej funkcji, aby wyświetlić interfejs użytkownika do zmiany rozmiaru okna.  
   
 ```  
@@ -413,7 +408,7 @@ BOOL Track(
   
  Jeśli `bAllowInvert` jest **TRUE**, prostokąt śledzenia może być zmieniany na osi x lub osi y.  
   
-##  <a name="trackrubberband"></a>CRectTracker::TrackRubberBand  
+##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand  
  Wywołanie tej funkcji w celu zaznaczenia gumki —.  
   
 ```  

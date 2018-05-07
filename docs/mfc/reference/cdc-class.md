@@ -2,11 +2,8 @@
 title: Klasa CDC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>Klasa CDC
 Definiuje klasę obiektów kontekstu urządzenia.  
@@ -449,7 +444,7 @@ class CDC : public CObject
 |[CDC::AddMetaFileComment](#addmetafilecomment)|Kopiuje komentarz z buforu w określonym metaplik rozszerzony format.|  
 |[CDC::AlphaBlend](#alphablend)|Wyświetla bitmap przezroczysty lub półprzezroczysty pikseli.|  
 |[CDC::AngleArc](#anglearc)|Rysuje segment linii i łuk i przenosi do punktu końcowego łuku bieżącego położenia.|  
-|[CDC::Arc](#arc)|Rysuje łuku.|  
+|[CDC::ARC](#arc)|Rysuje łuku.|  
 |[CDC::ArcTo](#arcto)|Rysuje łuku. Ta funkcja jest podobny do `Arc`, z wyjątkiem tego, czy bieżące położenie jest aktualizowany.|  
 |[CDC::Attach](#attach)|Dołącza do tego kontekstu urządzenia z systemem Windows `CDC` obiektu.|  
 |[CDC::BeginPath](#beginpath)|Zostanie otwarty nawias ścieżki w kontekście urządzenia.|  
@@ -461,7 +456,7 @@ class CDC : public CObject
 |[CDC::CreateIC](#createic)|Tworzy kontekście informacji dla określonego urządzenia. Zapewnia to szybki sposób, aby uzyskać informacje o urządzeniu bez tworzenia kontekstu urządzenia.|  
 |[CDC::DeleteDC](#deletedc)|Usuwa kontekst urządzenia z systemem Windows, skojarzone z tym `CDC` obiektu.|  
 |[CDC::DeleteTempMap](#deletetempmap)|Wywoływane przez `CWinApp` obsługi czas bezczynności, aby usunąć wszystkie tymczasowe `CDC` obiekt utworzony przez `FromHandle`. Odłącza również kontekst urządzenia.|  
-|[CDC::Detach](#detach)|Odłącza kontekstu urządzenia z systemem Windows z tego `CDC` obiektu.|  
+|[CDC::detach](#detach)|Odłącza kontekstu urządzenia z systemem Windows z tego `CDC` obiektu.|  
 |[CDC::DPtoHIMETRIC](#dptohimetric)|Konwertuje jednostki urządzenia do **HIMETRIC** jednostki.|  
 |[CDC::DPtoLP](#dptolp)|Konwertuje jednostki urządzenia jednostki logiczne.|  
 |[CDC::Draw3dRect](#draw3drect)|Rysuje prostokąt trójwymiarowych.|  
@@ -673,7 +668,7 @@ class CDC : public CObject
   
  Czasami może potrzebne informacje Metryka tekstu z obu `m_hDC` i `m_hAttribDC` konteksty urządzenia. Następujące pary funkcji mieli tej możliwości:  
   
-|Używa m_hAttribDC|Uses m_hDC|  
+|Używa m_hAttribDC|Używa m_hDC|  
 |-----------------------|-----------------|  
 |[GetTextExtent](#gettextextent)|[GetOutputTextExtent](#getoutputtextextent)|  
 |[GetTabbedTextExtent](#gettabbedtextextent)|[GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|  
@@ -1373,7 +1368,7 @@ void Draw3dRect(
  cx  
  Określa szerokość prostokąta trójwymiarowych.  
   
- cy  
+ CY  
  Określa wysokość prostokąta trójwymiarowych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1541,7 +1536,7 @@ BOOL DrawFrameControl(
   
     - **DFCS_MENUARROW** strzałkę podmenu  
   
-    - **DFCS_MENUBULLET** Bullet  
+    - **DFCS_MENUBULLET** punktor  
   
     - **DFCS_MENUCHECK** znacznik wyboru  
   
@@ -5202,7 +5197,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
   
  Również nie trzeba wyeksportować nazwa funkcji **EKSPORTÓW** instrukcji w pliku definicji modułu aplikacji. Zamiast tego można użyć **WYEKSPORTOWAĆ** funkcji modyfikator, jak w programie  
   
- **BOOL CALLBACK EXPORT** AFunction( **HDC**, `int`**);**  
+ **BOOL wywołania zwrotnego eksportu** AFunction ( **elementu HDC**, `int` **);**  
   
  Aby spowodować, że kompilator Emituj rekordu prawidłowego eksportu eksportu według nazwy bez aliasów. To działanie jest w wielu zastosowaniach. W niektórych przypadkach specjalnych, takich jak eksportowanie funkcji numer lub aliasów eksportu, nadal musisz użyć **EKSPORTÓW** instrukcji w pliku definicji modułu.  
   

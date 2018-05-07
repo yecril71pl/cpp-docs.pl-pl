@@ -1,13 +1,10 @@
 ---
-title: "Transakcje (dostęp do danych MFC) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Transakcje (dostęp do danych MFC) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - transactions [C++]
 - databases [C++], transactions
 ms.assetid: f80afbfe-1517-4fec-8870-9ffc70a58b05
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2f0c028eaf58e828366ae9534ff06b53254e3601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9dd531aee6ac8014f2ce47ddee7fc5f82e35a63
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transactions--mfc-data-access"></a>Transakcje (dostęp do danych MFC)
 Pojęcie transakcji został opracowany do obsługi przypadków, w których Wynikowy stan bazy danych zależy od całkowitej Powodzenie czynności. Może to występować ponieważ kolejne czynności może zmodyfikować wyniki poprzednich operacji. W takich przypadkach Jeśli wszystkie jedna operacja nie powiedzie się, Wynikowy stan może być nieokreślony.  

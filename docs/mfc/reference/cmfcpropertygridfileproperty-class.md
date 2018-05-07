@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCPropertyGridFileProperty | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridFileProperty
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4111c7da24300d83128d56b85266ee808b304ace
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Klasa CMFCPropertyGridFileProperty
 `CMFCPropertyGridFileProperty` Klasa obsługuje elementu formantu listy właściwości, które otwiera okno dialogowe wyboru pliku.  
@@ -66,7 +61,7 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
+##  <a name="cmfcpropertygridfileproperty"></a>  CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
  Konstruuje `CMFCPropertyGridFileProperty` obiektu.  
   
 ```  
@@ -82,28 +77,28 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`strName`  
+ [in] `strName`  
  Nazwa właściwości.  
   
- [in]`bOpenFileDialog`  
- `TRUE`Aby otworzyć **Otwieranie pliku** okno dialogowe; `FALSE` otworzyć **Zapisz plik** okno dialogowe.  
+ [in] `bOpenFileDialog`  
+ `TRUE` Aby otworzyć **Otwieranie pliku** okno dialogowe; `FALSE` otworzyć **Zapisz plik** okno dialogowe.  
   
- [in]`strFileName`  
+ [in] `strFileName`  
  Początkowa nazwa pliku.  
   
- [in]`lpszDefExt`  
+ [in] `lpszDefExt`  
  Ciąg jednego lub więcej rozszerzeń nazw plików. Wartość domyślna to `NULL`.  
   
- [in]`dwFlags`  
+ [in] `dwFlags`  
  Flagi — okno dialogowe. Wartość domyślna to bitowe połączenie (lub) `OFN_HIDEREADONLY` i `OFN_OVERWRITEPROMPT`.  
   
- [in]`lpszFilter`  
+ [in] `lpszFilter`  
  Ciąg co najmniej jeden filtr plików. Wartość domyślna to `NULL`.  
   
- [in]`lpszDescr`  
+ [in] `lpszDescr`  
  Opis elementu właściwości. Wartość domyślna to `NULL`.  
   
- [in]`dwData`  
+ [in] `dwData`  
  Dane specyficzne dla aplikacji, które jest skojarzone z elementem właściwości. Na przykład 32-bitową liczbą całkowitą lub wskaźnik do innych danych. Wartość domyślna to 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  

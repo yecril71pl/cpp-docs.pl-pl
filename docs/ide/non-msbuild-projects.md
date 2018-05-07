@@ -1,13 +1,10 @@
 ---
-title: "Otwórz Folder projekty w programie Visual C++ | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Otwórz Folder projekty w programie Visual C++ | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Otwórz Folder projekty w programie Visual C++
 Visual Studio 2017 wprowadza funkcji "Otwórz Folder", która umożliwia otwieranie folderu plików źródłowych i natychmiast programować o obsługę funkcji IntelliSense, przeglądanie, refaktoryzacji, debugowanie i tak dalej. Żadne pliki SLN lub .vcxproj są ładowane; w razie potrzeby można określić niestandardowych zadań oraz tworzenie i uruchamianie parametrów za pomocą plików prostych JSON. Obsługiwane przez Otwórz Folder, Visual C++ może teraz obsługiwać nie tylko utracić kolekcje plików, ale również praktycznie dowolnego kompilacji systemu, w tym CMake, Nindżą, QMake (dla projektów Qt), gyp, SCons, Gradle, Buck, Utwórz i inne. 
@@ -75,7 +71,7 @@ Konfiguracja może być jedną z następujących właściwości:
 |`forcedInclude`|Nagłówek automatycznie uwzględnić w każdej jednostki kompilacji (mapuje /FI dla MSVC lub - zawierają clang)|
 |`undefines`|Lista makra być Niezdefiniowany (map do /U dla MSVC)|
 |`intelliSenseMode`|Aparat IntelliSense do użycia. Można określić architektury określonych wariantów MSVC, gcc lub Clang:
-- msvc-x86 (default)
+- msvc-x86 (ustawienie domyślne)
 - msvc-x64
 - msvc-arm
 - windows-clang-x86
@@ -253,7 +249,7 @@ Można zautomatyzować kompilacji skryptów lub inne operacje zewnętrznych od p
 
 ![Otwórz Folder skonfigurować zadania](media/open-folder-config-tasks.png)
 
-Tworzy (lub otwiera) `tasks.vs.json` pliku w folderze VS, które Visual Studio utworzy w folderze głównym projektu. Można zdefiniować dowolnego dowolnego zadania w tym pliku, a następnie wywołaj z **Eksploratora rozwiązań** menu kontekstowego. Poniższy przykład przedstawia plik tasks.vs.json, który definiuje jedno zadanie. `taskName`Określa nazwę, która jest wyświetlana w menu kontekstowym. `appliesTo`Określa pliki, które można wykonać polecenia na. `command` Właściwość odwołuje się do zmiennej środowiskowej COMSPEC, który określa ścieżkę do konsoli (cmd.exe w systemie Windows). Można także odwoływać zmiennych środowiskowych, które są zadeklarowane w CppProperties.json lub CMakeSettings.json. `args` Właściwość określa wiersz poleceń do wywołania. `${file}` Makro pobiera wybrany plik w **Eksploratora rozwiązań**. Poniższy przykład będzie wyświetlana nazwa pliku .cpp obecnie wybrany.
+Tworzy (lub otwiera) `tasks.vs.json` pliku w folderze VS, które Visual Studio utworzy w folderze głównym projektu. Można zdefiniować dowolnego dowolnego zadania w tym pliku, a następnie wywołaj z **Eksploratora rozwiązań** menu kontekstowego. Poniższy przykład przedstawia plik tasks.vs.json, który definiuje jedno zadanie. `taskName` Określa nazwę, która jest wyświetlana w menu kontekstowym. `appliesTo` Określa pliki, które można wykonać polecenia na. `command` Właściwość odwołuje się do zmiennej środowiskowej COMSPEC, który określa ścieżkę do konsoli (cmd.exe w systemie Windows). Można także odwoływać zmiennych środowiskowych, które są zadeklarowane w CppProperties.json lub CMakeSettings.json. `args` Właściwość określa wiersz poleceń do wywołania. `${file}` Makro pobiera wybrany plik w **Eksploratora rozwiązań**. Poniższy przykład będzie wyświetlana nazwa pliku .cpp obecnie wybrany.
 
 ```json
 {

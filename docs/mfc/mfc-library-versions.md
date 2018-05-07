@@ -1,13 +1,10 @@
 ---
 title: Wersje biblioteki MFC | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,14 +17,13 @@ helpviewer_keywords:
 - libraries [MFC], versions
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-library-versions"></a>Wersje biblioteki MFC
 
@@ -136,7 +132,7 @@ Biblioteki DLL MFC ma *wersji* numery, które wskazuje zgodności plików binarn
 |MFCM*wersji*. BIBLIOTEKI DLL|Biblioteki MFC DLL z formanty formularzy systemu Windows, wersja ANSI lub wersji MBCS|
 |MFCM*wersji*U.DLL|Biblioteki MFC DLL z formanty formularzy systemu Windows, wersja wydana Unicode|
 |MFCM*wersji*D.DLL|Biblioteki MFC DLL z formanty formularzy systemu Windows, wersja ANSI lub debugowania MBCS|
-|MFCM*version*UD.DLL|Biblioteki MFC DLL z formanty formularzy systemu Windows, wersja do debugowania kodu Unicode|
+|MFCM*wersji*UD. BIBLIOTEKI DLL|Biblioteki MFC DLL z formanty formularzy systemu Windows, wersja do debugowania kodu Unicode|
 
 Biblioteki importu niezbędnych do tworzenia aplikacji lub biblioteki dll, korzystających z tych udostępnionej biblioteki DLL rozszerzeń MFC ma taką samą nazwę podstawową jak plik DLL, ale ma rozszerzenie nazwy pliku lib. Korzystając z udostępnionej biblioteki dll, mała biblioteki statycznej nadal musi być połączony z kodu; Ta biblioteka ma nazwę MFCS*wersji*.lib {U} {D}.
 

@@ -1,12 +1,9 @@
 ---
-title: "Colecontrol — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Colecontrol — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControl
@@ -343,17 +340,15 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0b2a9f7a506c5ebc1d6fdf1a37960a9322fde131
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrol-class"></a>Colecontrol — klasa
 Zaawansowane klasę podstawową dla Programowanie formantów OLE.  
@@ -1107,7 +1102,7 @@ void AFX_CDECL FireEvent(
 |**VTS_COLOR**|**OLE_COLOR**|  
 |**VTS_FONT**|**IFontDisp\***|  
 |**VTS_HANDLE**|`HWND`|  
-|**VTS_PICTURE**|**IPictureDisp\***|  
+|**VTS_PICTURE —**|**IPictureDisp\***|  
 |**VTS_OPTEXCLUSIVE**|**OLE_OPTEXCLUSIVE\***|  
 |**VTS_TRISTATE —**|**OLE_TRISTATE**|  
 |**VTS_XPOS_HIMETRIC**|**OLE_XPOS_HIMETRIC**|  

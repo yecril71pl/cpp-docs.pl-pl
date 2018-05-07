@@ -1,12 +1,9 @@
 ---
-title: "Ctypedptrmap — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Ctypedptrmap — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9056fc73e2718b2a21936c39e630f4d4fddf1eed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrmap-class"></a>Ctypedptrmap — klasa
 Udostępnia bezpieczne "otoki" dla obiektów klasy mapy wskaźnika `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, i `CMapStringToPtr`.  
@@ -87,7 +82,7 @@ class CTypedPtrMap : public BASE_CLASS
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxtempl.h  
   
-##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
  Pobiera element mapy pod `rNextPosition`, następnie aktualizuje `rNextPosition` do odwoływania się do następnego elementu na mapie.  
   
 ```  
@@ -120,8 +115,8 @@ void GetNextAssoc(
   
  Wywołania tej funkcji wbudowanej `BASE_CLASS` **:: GetNextAssoc**.  
   
-##  <a name="lookup"></a>CTypedPtrMap::Lookup  
- `Lookup`używa algorytmu wyznaczania wartości skrótu, aby szybko znaleźć Mapuj element z kluczem takim samym dokładnie.  
+##  <a name="lookup"></a>  CTypedPtrMap::Lookup  
+ `Lookup` używa algorytmu wyznaczania wartości skrótu, aby szybko znaleźć Mapuj element z kluczem takim samym dokładnie.  
   
 ```  
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;  
@@ -146,7 +141,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>Uwagi  
  Wywołania tej funkcji wbudowanej `BASE_CLASS` **:: wyszukiwania**.  
   
-##  <a name="operator_at"></a>[CTypedPtrMap::operator]  
+##  <a name="operator_at"></a>  [CTypedPtrMap::operator]  
  Ten operator może służyć tylko po lewej stronie instrukcji przypisania (wartością l-value).  
   
 ```  
@@ -166,7 +161,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>Uwagi  
  Jeśli nie ma mapy elementu z określonym kluczem, jest tworzony nowy element. Nie jest równoważna tego operatora nie "po prawej stronie" (r), ponieważ istnieje możliwość, że nie można odnaleźć klucza na mapie. Użyj `Lookup` funkcji członkowskiej dla elementu pobierania.  
   
-##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey  
  Wywołania funkcji członkowskiej `BASE_CLASS` **:: RemoveKey**.  
   
 ```  
@@ -186,7 +181,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać bardziej szczegółowe uwagi, zobacz [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).  
   
-##  <a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>  CTypedPtrMap::SetAt  
  Wywołania funkcji członkowskiej `BASE_CLASS` **:: SetAt**.  
   
 ```  

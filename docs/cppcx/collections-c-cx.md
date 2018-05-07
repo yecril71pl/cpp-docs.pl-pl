@@ -1,31 +1,26 @@
 ---
 title: Kolekcje (C + +/ CX) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0296422ce0f9ef49b096d5ea8512530871fc733b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-ccx"></a>Kolekcje (C + +/ CX)
 W języku C + +/ CX programu, możesz wprowadzić wolnego korzystanie z kontenerów standardowa biblioteka szablonów (STL) lub dowolnego typu kolekcja zdefiniowanych przez użytkownika. Jednak gdy przekazujesz kolekcji i z powrotem przez interfejs binarne (ABI) środowiska wykonawczego systemu Windows — na przykład do formantu XAML lub klientowi JavaScript — należy użyć typów kolekcji środowiska wykonawczego systemu Windows.  
   
  Środowisko wykonawcze systemu Windows definiuje interfejsach dla kolekcji i powiązanych typów i C + +/ CX udostępnia konkretną implementacje C++ w pliku nagłówka collection.h. Ta ilustracja prezentuje jedynie relacje między typami kolekcji:  
   
- ![C &43; &#43; &#47; CX drzewa dziedziczenia dla typów kolekcji](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
+ ![C&#43;&#43;&#47;CX drzewa dziedziczenia dla typów kolekcji](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
   
 -   [Klasy Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) podobny [std::vector klasy](../standard-library/vector-class.md).  
   
@@ -71,7 +66,7 @@ W języku C + +/ CX programu, możesz wprowadzić wolnego korzystanie z kontener
   
  Na poniższej ilustracji pokazano `range for` pętli `IVector<Person^>`. Należy zauważyć, że wykonanie jest zatrzymana na punkt przerwania w wierszu 64. **QuickWatch** okna wskazuje, że zmienna sterująca `p` jest w rzeczywistości `VectorProxy<Person^>` mający `m_v` i `m_i` zmiennych Członkowskich. Jednak jeśli wywołasz `GetType` w tej zmiennej zwraca typ identyczne do `Person` wystąpienia `p2`. Takeaway jest to, że chociaż `VectorProxy` i `ArrowProxy` może się pojawić **QuickWatch**, debuger niektóre błędy kompilatora lub innych miejscach, zwykle nie trzeba jawnie kodu dla nich.  
   
- ![VectorProxy w &#45; zakresu na podstawie pętli for](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
+ ![VectorProxy zakresu&#45;na podstawie pętli for](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
   
  Jest jednym ze scenariuszy masz kod wokół obiekt serwera proxy, gdy należy wykonać `dynamic_cast` dla elementów — na przykład podczas szukania dla obiektów określonego typu w XAML `UIElement` kolekcji elementów. W takim przypadku należy najpierw rzutować elementu [Platform::Object](../cppcx/platform-object-class.md)^, a następnie wykonać rzutowania dynamicznego:  
   
@@ -139,8 +134,8 @@ void FindButton(UIElementCollection^ col)
 |[Platform::Collections::VectorIterator\<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Wewnętrznie przechowuje [Windows::Foundation::Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) i wewnętrznej)|[Rozpocznij](../cppcx/begin-function.md)/ [zakończenia](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
 |[Platform::Collections::VectorViewIterator\<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Wewnętrznie przechowuje [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ i wewnętrznej)|[Rozpocznij](../cppcx/begin-function.md)/ [zakończenia](../cppcx/end-function.md) ([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
 |[Platform::Collections::InputIterator\<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Wewnętrznie przechowuje [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ i T.)|[Rozpocznij](../cppcx/begin-function.md)/ [zakończenia](../cppcx/end-function.md) ([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
-|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Wewnętrznie przechowuje [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ i T.)|[Rozpocznij](../cppcx/begin-function.md)/ [zakończenia](../cppcx/end-function.md) ([IMap\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx).|  
-|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Wewnętrznie przechowuje [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ i T.)|[Rozpocznij](../cppcx/begin-function.md)/ [zakończenia](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
+|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Wewnętrznie przechowuje [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ i T.)|[Rozpocznij](../cppcx/begin-function.md)/ [zakończenia](../cppcx/end-function.md) ([IMap\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx).|  
+|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Wewnętrznie przechowuje [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ i T.)|[Rozpocznij](../cppcx/begin-function.md)/ [zakończenia](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
   
 ### <a name="collection-change-events"></a>Zdarzenia zmiany kolekcji  
  `Vector` i `Map` obsługuje wiązania danych w kolekcjach XAML zaimplementowanie zdarzeń występujących podczas zmiany obiektu kolekcji lub resetowania lub po wstawieniu dowolny element w kolekcji, usunięte lub zmodyfikowane. Napisania własnych typów tego wiązania z danymi pomocy technicznej, mimo że nie może dziedziczyć z `Map` lub `Vector` ponieważ te typy są zapieczętowane.  

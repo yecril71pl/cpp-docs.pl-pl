@@ -1,13 +1,10 @@
 ---
-title: "Dodawanie odwołań do projektów Visual C++ | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Dodawanie odwołań do projektów Visual C++ | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.References
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Dodawanie odwołań do projektów Visual C++
 Bardzo często programy do wywołania do interfejsów API w innych plików binarnych, takich jak biblioteki dll, składników środowiska wykonawczego systemu Windows, rozszerzenia SDK składników COM i zestawów platformy .NET. Sposób, w jaki te pliki binarne wyszukiwany zależy od zarówno na typ projektu, a typ danych binarnych.  
@@ -37,7 +32,7 @@ Bardzo często programy do wywołania do interfejsów API w innych plików binar
   
  W natywnego projektu C++ (ATL) pojęcie o *odwołania* ma zastosowanie tylko do innych projektów w rozwiązaniu, w tym udostępnionych projektów w taki sposób, aby wszystkie pojawi się w **Menedżera odwołań**:  
   
- ![Visual C &43; &#43; Menedżera odwołań &#40; Projekty ATL &#41; ] (../ide/media/visual-c---reference-manager--atl-projects-.png "Menedżera odwołań visual C++ (projekty ATL)")  
+ ![Visual C&#43; &#43; Menedżera odwołań &#40;projektów ATL&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Menedżera odwołań Visual C++ (projekty ATL)")  
   
  W języku C + +/ projektu interfejsu wiersza polecenia lub platformy uniwersalnej systemu Windows, pojęcie odwołań dotyczy rodzaje więcej plików binarnych, oprócz innych projektów w rozwiązaniu.  Te są wszystkie dostępne w **Menedżera odwołań**.
   
@@ -120,7 +115,7 @@ Bardzo często programy do wywołania do interfejsów API w innych plików binar
  Wyświetla token klucza publicznego, który służy do identyfikowania przywoływanego zestawu.  
   
  **Silnej nazwy**  
- `true`Jeśli przywoływany zestaw ma silnej nazwy. Zestaw jest unikalnie wersjonowany.  
+ `true` Jeśli przywoływany zestaw ma silnej nazwy. Zestaw jest unikalnie wersjonowany.  
   
  **Wersja**  
  Wyświetla wersję przywoływanego zestawu.  

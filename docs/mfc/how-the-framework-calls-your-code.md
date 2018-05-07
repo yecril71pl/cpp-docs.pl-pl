@@ -1,13 +1,10 @@
 ---
-title: "Jak struktura wywołuje kod | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Jak struktura wywołuje kod | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83eeb1c7fd3032ae33c213f17522b171bdb46e55
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f746ce3c3d658ab1dccc098939410b52d91b1188
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-framework-calls-your-code"></a>Jak struktura wywołuje kod
 Odgrywa zrozumienie relacji między kodu źródłowego i kodu w ramach MFC. Po uruchomieniu aplikacji, większość przepływu sterowania znajduje się w kodzie struktury. Platformę zarządza pętli komunikatów, która umożliwia pobieranie wiadomości z systemu Windows jako użytkownik wybiera poleceń i umożliwia edycję danych widoku. Zdarzenia, które w ramach może obsłużyć samodzielnie nie należy polegać na kodzie w ogóle. Na przykład platformę zna sposób zamknięcia systemu windows i zamknij aplikację w odpowiedzi na polecenia użytkownika. Jak te zadania, platformę używa programy obsługi wiadomości i funkcji wirtualnych C++ do udzielenia odpowiedzi na te zdarzenia, a także możliwości. Kod nie ma kontroli, jednak; jest platformę.  

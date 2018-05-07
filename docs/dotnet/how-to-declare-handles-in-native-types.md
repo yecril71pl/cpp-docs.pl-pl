@@ -1,13 +1,10 @@
 ---
-title: "Porady: deklarowanie dojść w typach natywnych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: deklarowanie dojść w typach natywnych | Dokumentacja firmy Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 f1_keywords:
 - gcroot
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 097889acd9a77cea5e0a81dd3bd13be712a70550
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4573aac37eedecceab861eb41a70fc858b409fec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Porady: deklarowanie dojść w typach natywnych
 Nie można zadeklarować typu uchwytu w typie natywnym. vcclr.h zapewnia bezpieczny otoki szablonu `gcroot` w odwołaniu do obiektu CLR ze stosu C++. Ten szablon umożliwia osadzanie dojścia wirtualnego w typie natywnym i traktować go tak, jakby była typu bazowego. W większości przypadków można użyć `gcroot` jako osadzony typ bez żadnych rzutowania. Jednak w przypadku [dla poszczególnych usług, w](../dotnet/for-each-in.md), należy użyć `static_cast` można pobrać odwołanie do podstawowej zarządzanych.  

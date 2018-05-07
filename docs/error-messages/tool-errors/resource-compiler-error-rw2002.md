@@ -2,11 +2,8 @@
 title: Błąd kompilatora zasobów RW2002 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - RW2002
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db322791c3804f387c452b3839260826585a2e30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb42298a7140439e3578281de60075f540b09175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-compiler-error-rw2002"></a>Błąd kompilatora zasobów RW2002
 Błąd analizy  
@@ -64,7 +59,7 @@ Błąd analizy
   
      Znak kontrolny w **AKCELERATORÓW** instrukcja jest nieprawidłowa. Znak następujący karetkę (**^**) musi należeć do zakresu od A i Z wartościami granicznymi.  
   
-9. **Pusty menu niedozwolone**  
+9. **pusty menu niedozwolone**  
   
      **Zakończenia** — słowo kluczowe pojawia się, aby wszystkie elementy menu są zdefiniowane w **MENU** instrukcji. Kompilator zasobów nie zezwala na puste menu. Upewnij się, że nie masz żadnych Otwórz znaki cudzysłowu w ciągu **MENU** instrukcji.  
   
@@ -120,7 +115,7 @@ Błąd analizy
   
      Kompilator zasobów nie mógł ustalić, jakiego rodzaju klucza jest konfigurowana dla akceleratora. `event` w **AKCELERATORÓW** instrukcja może być nieprawidłowy.  
   
-23. **Oczekiwany numer dla Identyfikatora**  
+23. **oczekiwany numer dla Identyfikatora**  
   
      Oczekiwany numer dla `id` pole w instrukcji sterowania **okna DIALOGOWEGO** instrukcji. Upewnij się, że masz liczbą lub `#define` instrukcji dla identyfikatora formantu.  
   

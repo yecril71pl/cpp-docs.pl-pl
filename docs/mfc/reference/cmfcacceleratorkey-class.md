@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCAcceleratorKey | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKey
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3303be9f37749436d140028cd5fa45cd4454c8c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcacceleratorkey-class"></a>Klasa CMFCAcceleratorKey
 Klasa pomocy, która implementuje wirtualnego mapowania klucza i formatowania.  
@@ -75,7 +70,7 @@ class CMFCAcceleratorKey : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxacceleratorkey.h  
   
-##  <a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
+##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey  
  Konstruuje [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) obiektu.  
   
 ```  
@@ -84,13 +79,13 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpAccel`  
+ [in] `lpAccel`  
  Wskaźnik do klawisza skrótu.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli nie podasz klawisz skrótu podczas tworzenia `CMFCAccleratorKey`, użyj [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) do kojarzenia klawisza skrótu z Twojej `CMFCAcceleratorKey` obiektu.  
   
-##  <a name="format"></a>CMFCAcceleratorKey::Format  
+##  <a name="format"></a>  CMFCAcceleratorKey::Format  
  Wykonuje translację struktury AKCELERACJA wartość ciągu skojarzone.  
   
 ```  
@@ -98,13 +93,13 @@ void Format(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`str`  
+ [out] `str`  
  Odwołanie do `CString` obiektu, którego metoda zapisuje klawisz skrótu przetłumaczonego.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda pobiera ciąg formatu klawisz skrótu skojarzony. Można ustawić formatu ciągu [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) przy użyciu konstruktora lub metody [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
   
-##  <a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
+##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
  Ustawia klawisz skrótu [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) obiektu.  
   
 ```  
@@ -112,7 +107,7 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpAccel`  
+ [in] `lpAccel`  
  Wskaźnik do klawisza skrótu.  
   
 ### <a name="remarks"></a>Uwagi  

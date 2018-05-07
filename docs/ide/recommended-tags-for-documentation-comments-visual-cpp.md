@@ -1,27 +1,22 @@
 ---
 title: Zalecane tagi przeznaczone do komentarzy dokumentacji (Visual C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c1b0e762ec2167a988e8e18f3dce932214716c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b25ad029a59c4b23bcab093b3742f16f7ca9175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>Tagi zalecane dla komentarzy do dokumentacji (Visual C++)
 Kompilator Visual C++ przetworzy komentarze do dokumentacji w kodzie i tworzy plik .xdc dla każdego compiland i xdcmake.exe rozpoczyna przetwarzanie plików xdc do pliku XML. Przetwarzanie pliku XML dokumentacji jest szczegółów, który musi zostać wdrożone w lokacji.  
@@ -38,7 +33,7 @@ Kompilator Visual C++ przetworzy komentarze do dokumentacji w kodzie i tworzy pl
 ||||  
 |-|-|-|  
 |[\<c >](../ide/c-visual-cpp.md)|[\<Kod >](../ide/code-visual-cpp.md)|[\<przykład >](../ide/example-visual-cpp.md)|  
-|[\<wyjątek >](../ide/exception-visual-cpp.md)1|[\<obejmują >](../ide/include-visual-cpp.md)1|[\<listy >](../ide/list-visual-cpp.md)|  
+|[\<wyjątek >](../ide/exception-visual-cpp.md)1|[\<obejmują >](../ide/include-visual-cpp.md)1|[\<list>](../ide/list-visual-cpp.md)|  
 |[\<para >](../ide/para-visual-cpp.md)|[\<param >](../ide/param-visual-cpp.md)1|[\<paramref >](../ide/paramref-visual-cpp.md)1|  
 |[\<uprawnienia >](../ide/permission-visual-cpp.md)1|[\<Remarks >](../ide/remarks-visual-cpp.md)|[\<Zwraca >](../ide/returns-visual-cpp.md)|  
 |[\<zobacz >](../ide/see-visual-cpp.md)1|[\<SeeAlso >](../ide/seealso-visual-cpp.md)1|[\<podsumowania >](../ide/summary-visual-cpp.md)|  

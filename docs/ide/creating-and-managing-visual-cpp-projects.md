@@ -1,13 +1,10 @@
 ---
-title: "Tworzenie i zarządzanie projektami Visual C++ | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Tworzenie i zarządzanie projektami Visual C++ | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vcprojects
 - creatingmanagingVC
@@ -20,32 +17,30 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c38f4c75a41de8b2f2b494941c6a52b1ff46fa4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Tworzenie projektów i zarządzanie nimi na podstawie MSBuild Visual C++
 MSBuild system natywnej kompilacji dla programu Visual C++ oraz jest zazwyczaj najlepiej systemu na potrzeby aplikacji platformy uniwersalnej systemu Windows, a także aplikacji klasycznych, które używają biblioteki MFC lub ATL kompilacji. MSBuild jest ściśle zintegrowany z programu Visual Studio IDE i system projektu, ale można również użyć go w wierszu polecenia. Począwszy od programu Visual Studio 2017 Visual C++ obsługuje [CMake i innych systemów innych niż MSBuild za pomocą funkcji Otwórz Folder](non-msbuild-projects.md).
 
 Plik projektu w formacie XML (.vcxproj), który określa wszystkich plików i zasobów potrzebnych do skompilowania programu, a także innych ustawień konfiguracyjnych, na przykład platformy docelowej (x 86, x64 lub ARM) i określa, czy tworzysz ma projektu MSBuild Wersja wydana lub wersja do debugowania programu. Projekt (lub wiele projektów), które są zawarte w *rozwiązania*, na przykład rozwiązanie może zawierać kilka projektów Win32 DLL i jednej aplikacji konsoli Win32, która używa tych bibliotek DLL. Podczas kompilowania projektu aparat MSBuild zużywa pliku projektu i tworzy plik wykonywalny i/lub innych niestandardowych wyjściowego określona.
 
-Projekty Visual C++ można utworzyć, wybierając **plik &#124; Nowy &#124; Projekt**, zapewnienie, że wybrano Visual C++, w okienku po lewej stronie, a następnie wybierając z listy szablonów projektu w środkowym okienku. Po kliknięciu szablonu w wielu przypadkach pojawi się Kreator umożliwiający ustawić różne właściwości projektu, przed utworzeniem projektu. Możesz wyświetlić i później zmodyfikować te właściwości, za pomocą stron właściwości projektu (**projektu &#124; Właściwości**).  
+Projekty Visual C++ można utworzyć, wybierając **pliku &#124; nowy &#124; projektu**, zapewnienie, że wybrano Visual C++, w okienku po lewej stronie, a następnie wybierając z listy szablonów projektu w środkowym okienku. Po kliknięciu szablonu w wielu przypadkach pojawi się Kreator umożliwiający ustawić różne właściwości projektu, przed utworzeniem projektu. Możesz wyświetlić i później zmodyfikować te właściwości, za pomocą stron właściwości projektu (**projektu &#124; właściwości**).  
   
  Można również tworzyć nowe projekty przez:  
   
--   Wybieranie **plik &#124; Nowy &#124; Projekt z istniejących źródeł** i zgodnie z monitami, aby dodać istniejących plików kodu źródłowego. Ta opcja działa najlepiej dla projektów stosunkowo małe i proste, prawdopodobnie 25 plików kodów źródłowych lub z kilku lub złożonych zależności.  
+-   Wybieranie **pliku &#124; nowy &#124; projekt z istniejących źródeł** i zgodnie z monitami, aby dodać istniejących plików kodu źródłowego. Ta opcja działa najlepiej dla projektów stosunkowo małe i proste, prawdopodobnie 25 plików kodów źródłowych lub z kilku lub złożonych zależności.  
   
 -   rozpoczyna się od pliku reguł programu make i wybierz szablon projektu pliku reguł programu make na karcie Ogólne.  
   
--   pusty projekt do tworzenia (w obszarze **ogólne** kartę) i ręczne dodanie plików kodu źródłowego prawym przyciskiem myszy węzeł projektu w Eksploratorze rozwiązań i wybierając pozycję **Dodaj &#124; Istniejący element**.  
+-   pusty projekt do tworzenia (w obszarze **ogólne** kartę) i ręczne dodanie plików kodu źródłowego prawym przyciskiem myszy węzeł projektu w Eksploratorze rozwiązań i wybierając pozycję **Dodaj &#124; istniejący element**.  
   
 -   przy użyciu [Kreator aplikacji Win32](../windows/win32-application-wizard.md).  
   

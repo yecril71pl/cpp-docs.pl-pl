@@ -1,12 +1,9 @@
 ---
 title: PROPERTY_INFO_ENTRY_EX | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - PROPERTY_INFO_ENTRY_EX
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - PROPERTY_INFO_ENTRY_EX macro
 ms.assetid: af32dfcd-4c50-449d-af3b-48d21bd67a04
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6696067e94a10e57d52f5875b712f100c5ac6902
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 186c30584c5c5844614994700bf2a7958a73ce2d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propertyinfoentryex"></a>PROPERTY_INFO_ENTRY_EX
 Reprezentuje określoną właściwość w zestawie właściwości.  
@@ -58,7 +53,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID
  Za pomocą makra, możesz bezpośrednio określić wartość właściwości typu `DWORD` oraz opcje i flagi. Wartość domyślna zdefiniowana w ATLDB jedynie ustawiania właściwości. H, użyj [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Aby ustawić właściwość na wartość wybranym bez ustawiania opcji lub flagi, użyj [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).  
   
 ## <a name="example"></a>Przykład  
- See [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+ Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atldb.h  

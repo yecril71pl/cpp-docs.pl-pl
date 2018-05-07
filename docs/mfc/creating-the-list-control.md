@@ -1,30 +1,25 @@
 ---
 title: Tworzenie formantu listy | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CListCtrl class [MFC], creating control
 - list controls [MFC]
 ms.assetid: a4cb1729-31b6-4d2b-a44b-367474848a39
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85afbe49943e06a66cf2fa914cc87f07b0fa8c52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42457e223bb7e12da64be54d757e05d0bac3a028
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-list-control"></a>Tworzenie kontrolki listy
 Metody kontrolowania listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) jest tworzony zależy od tego, czy jest bezpośrednio za pomocą formantu lub za pomocą klasy [clistview —](../mfc/reference/clistview-class.md) zamiast tego. Jeśli używasz `CListView`, platformę tworzy widok jako część jej Sekwencja tworzenia dokumentu/widoku. Tworzenie widoku listy tworzy kontrolki listy również (są to samo). Formant nie zostanie utworzony w widoku [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkcji obsługi. W takim przypadku formant jest gotowy do dodawania elementów za pomocą wywołania [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  

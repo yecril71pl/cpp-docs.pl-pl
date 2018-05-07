@@ -1,13 +1,10 @@
 ---
 title: Kroki w typowej aplikacji klienckiej FTP | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - FTP (File Transfer Protocol) [MFC], client applications
 - Internet applications [MFC], FTP client applications
 ms.assetid: 70bed7b5-6040-40d1-bc77-702e63a698f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d707d2b4903394b6b3b70367184767cce28ea1d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98f5a21bd5fa20a40123ce442959125ea62c60d3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Kroki wykonywane w typowej aplikacji klienckiej FTP
 Tworzy w typowej aplikacji klienckiej FTP [CInternetSession](../mfc/reference/cinternetsession-class.md) i [CFtpConnection](../mfc/reference/cftpconnection-class.md) obiektu. Należy pamiętać, że tych klas MFC WinInet nie faktycznie kontroli typ ustawień serwera proxy; Wykonuje usług IIS.  

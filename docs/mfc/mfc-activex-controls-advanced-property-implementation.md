@@ -1,13 +1,10 @@
 ---
-title: "Kontrolki ActiveX MFC: Implementacja właściwości zaawansowanych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Kontrolki ActiveX MFC: Implementacja właściwości zaawansowanych | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac8b2cb1a9c8de43ecfbd2f4712d19750bb143a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych
 W tym artykule opisano tematy związane z implementacją zaawansowane właściwości formantu ActiveX:  
@@ -34,7 +29,7 @@ W tym artykule opisano tematy związane z implementacją zaawansowane właściwo
   
 -   [Zwracanie kodów błędów z właściwością](#_core_returning_error_codes_from_a_property)  
   
-##  <a name="_core_read2donly_and_write2donly_properties"></a>Właściwości tylko do odczytu i tylko do zapisu  
+##  <a name="_core_read2donly_and_write2donly_properties"></a> Właściwości tylko do odczytu i tylko do zapisu  
  Kreator dodawania właściwości zapewnia szybki i łatwy sposób zaimplementowane właściwości tylko do odczytu lub w trybie tylko do zapisu dla formantu.  
   
 #### <a name="to-implement-a-read-only-or-write-only-property"></a>Aby zaimplementować właściwości tylko do odczytu lub w trybie tylko do zapisu  
@@ -69,13 +64,13 @@ W tym artykule opisano tematy związane z implementacją zaawansowane właściwo
   
  Ten przykładowy kod wywołuje `SetNotSupported` Jeśli `m_bReadOnlyMode` elementu członkowskiego danych jest **TRUE**. Jeśli **FALSE**, a następnie właściwość jest ustawiona na nową wartość.  
   
-##  <a name="_core_returning_error_codes_from_a_property"></a>Zwracanie kodów błędów z właściwością  
+##  <a name="_core_returning_error_codes_from_a_property"></a> Zwracanie kodów błędów z właściwością  
  Aby wskazać, że wystąpił błąd podczas próby pobrania lub ustaw właściwość, użyj `COleControl::ThrowError` funkcja, która przyjmuje `SCODE` (kod stanu) jako parametr. Można użyć wstępnie zdefiniowanej `SCODE` lub zdefiniuj własny. Lista wstępnie zdefiniowanych `SCODE`s i instrukcje dotyczące definiowania niestandardowych `SCODE`s, zobacz [obsługi błędów w tym formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w artykule formantów ActiveX: Tematy zaawansowane.  
   
  Funkcje pomocy istnieje dla najbardziej typowe wstępnie zdefiniowane `SCODE`s, takich jak [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), i [colecontrol —:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
->  `ThrowError`ma być używane tylko jako środek zwróci błąd w wartości właściwości Get lub Set z metody automatyzacji lub funkcji. Są to jedyna razy, które będą program obsługi wyjątku odpowiednie znajduje się on na stosie.  
+>  `ThrowError` ma być używane tylko jako środek zwróci błąd w wartości właściwości Get lub Set z metody automatyzacji lub funkcji. Są to jedyna razy, które będą program obsługi wyjątku odpowiednie znajduje się on na stosie.  
   
  Aby uzyskać więcej informacji na wyjątki w innych obszarach kodu raportowania, zobacz [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) i sekcji [obsługi błędów w tym formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w artykule formantów ActiveX: Zaawansowane Tematy.  
   

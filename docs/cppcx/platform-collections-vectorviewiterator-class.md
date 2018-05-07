@@ -1,11 +1,8 @@
 ---
 title: Klasa platform::Collections::VectorViewIterator | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e2bd8992477ccf50aed78107fcf7edc0f8d13fb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Klasa platform::Collections::VectorViewIterator
 Udostępnia iteratora standardowa biblioteka szablonów dla obiektów pochodzących od środowiska wykonawczego systemu Windows`IVectorView` interfejsu.  
@@ -104,7 +99,7 @@ Detail::ArrowProxy<T> operator->() const;
   
 
 
-## <a name="operator-decrement">VectorViewIterator::operator — Operator</a>
+## <a name="operator-decrement"></a>  VectorViewIterator::operator — Operator
 Zmniejsza VectorViewIterator bieżącej.  
   
 ### <a name="syntax"></a>Składnia  
@@ -124,7 +119,7 @@ VectorViewIterator operator--(int);
   
 
 
-## <a name="operator-dereference">VectorViewIterator::operator * — Operator</a>
+## <a name="operator-dereference"></a>  VectorViewIterator::operator * — Operator
 Pobiera odwołanie do określonego przez VectorViewIterator bieżącego elementu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -138,7 +133,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality">VectorViewIterator::operator == — Operator</a>
+## <a name="operator-equality"></a>  VectorViewIterator::operator == — Operator
 Wskazuje, czy bieżący VectorViewIterator jest równa określonej VectorViewIterator.  
   
 ### <a name="syntax"></a>Składnia  
@@ -194,7 +189,7 @@ bool operator>=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-increment">VectorViewIterator::operator ++ — Operator</a>
+## <a name="operator-increment"></a>  VectorViewIterator::operator ++ — Operator
 Zwiększa VectorViewIterator bieżącej.  
   
 ### <a name="syntax"></a>Składnia  
@@ -215,7 +210,7 @@ VectorViewIterator operator++(int);
   
 
 
-## <a name="operator-inequality">VectorViewIterator::operator! = — Operator</a>
+## <a name="operator-inequality"></a>  VectorViewIterator::operator! = — Operator
 Wskazuje, czy bieżący VectorViewIterator nie jest równa określonej VectorViewIterator.  
   
 ### <a name="syntax"></a>Składnia  
@@ -270,7 +265,7 @@ bool operator<=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-minus">VectorViewIterator::operator-— Operator</a>
+## <a name="operator-minus"></a>  VectorViewIterator::operator-— Operator
 Odejmuje określonej liczby elementów z bieżącym iteratora reaguje iteratora nowych lub iteratora określony przez iterator bieżąca liczba elementów między Iteratory reaguje.  
   
 ### <a name="syntax"></a>Składnia  
@@ -294,7 +289,7 @@ difference_type operator-(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-plus-equals">VectorViewIterator::operator += — Operator</a>
+## <a name="operator-plus-equals"></a>  VectorViewIterator::operator += — Operator
 Zwiększa bieżącego VectorViewIterator określonego przesunięcia.  
   
 ### <a name="syntax"></a>Składnia  
@@ -312,7 +307,7 @@ VectorViewIterator& operator+=(difference_type n);
   
 
 
-## <a name="operator-plus">VectorViewIterator::operator + — Operator</a>
+## <a name="operator-plus"></a>  VectorViewIterator::operator + — Operator
 Zwraca VectorViewIterator, która odwołuje się element pod określonym przemieszczenie VectorViewIterator określony.  
   
 ### <a name="syntax"></a>Składnia  
@@ -345,7 +340,7 @@ inline VectorViewIterator<T> operator+
   
 
 
-## <a name="operator-minus-assign">VectorViewIterator::operator-= — Operator</a>
+## <a name="operator-minus-assign"></a>  VectorViewIterator::operator-= — Operator
 Zmniejsza bieżącego VectorIterator przemieszczenie określony.  
   
 ### <a name="syntax"></a>Składnia  
@@ -363,7 +358,7 @@ VectorViewIterator& operator-=(difference_type n);
   
 
 
-## <a name="operator-at">VectorViewIterator::operator</a>\[\]
+## <a name="operator-at"></a>  VectorViewIterator::operator\[\]
 Pobiera odwołanie do elementu, który jest określony przesunięcia z bieżącej VectorViewIterator.  
   
 ### <a name="syntax"></a>Składnia  

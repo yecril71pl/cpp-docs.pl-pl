@@ -1,13 +1,10 @@
 ---
-title: "Programy obsługi dla poleceń i powiadomień dotyczących formantu karty | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Programy obsługi dla poleceń i powiadomień dotyczących formantu karty | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - notifications [MFC], handlers for control
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 748bdd1a2ce6b94a2c935df94de68767ee36875e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e6492c6ecc4c21c5c978ad031fed7182f2acee4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Programy obsługi dla poleceń i powiadomień dotyczących formantów
 Nie ma żadnych domyślne programy obsługi poleceń lub komunikaty powiadomień dotyczących formantu. W związku z tym są powiązane tylko przez Konwencję w nazewnictwa programu obsługi dla tych kategorii wiadomości. Podczas mapowania powiadomień polecenie lub formant do programu obsługi, okna właściwości zaproponuje nazwę na podstawie kodu polecenia Identyfikatora lub powiadomień dotyczących formantu. Można zaakceptować proponowana nazwa, zmień go lub go zastąpić.  

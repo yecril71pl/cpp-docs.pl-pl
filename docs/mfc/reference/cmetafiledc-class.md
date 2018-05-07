@@ -1,12 +1,9 @@
 ---
-title: "Cmetafiledc — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cmetafiledc — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb903bb38194be5b6a72f27ed683e965d7605b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmetafiledc-class"></a>Cmetafiledc — klasa
 Implementuje metaplik systemu Windows, który zawiera sekwencję grafiki urządzenia (GDI) interfejsu poleceń, które odtwarzasz można utworzyć odpowiedni obraz lub tekst.  
@@ -90,7 +85,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxext.h  
   
-##  <a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>  CMetaFileDC::Close  
  Zamyka metaplik kontekstu urządzenia i tworzy dojście metaplik systemu Windows, który może służyć do odtwarzania metaplik przy użyciu [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) funkcję elementu członkowskiego.  
   
 ```  
@@ -105,7 +100,7 @@ HMETAFILE Close();
   
  Usuń metaplik po użyciu przez wywołanie systemu Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funkcji.  
   
-##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Zamyka rozszerzonych metaplików kontekstu urządzenia i zwraca uchwyt identyfikuje format rozszerzony metaplik.  
   
 ```  
@@ -136,7 +131,7 @@ HENHMETAFILE CloseEnhanced();
   
  Gdy aplikacja nie będzie już potrzebował dojście rozszerzony metaplik, należy zwolnić dojścia wywołując Win32 **DeleteEnhMetaFile** funkcji.  
   
-##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC  
  Utworzyć `CMetaFileDC` obiektu w dwóch krokach.  
   
 ```  
@@ -146,7 +141,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>Uwagi  
  Najpierw należy wywołać `CMetaFileDC`, następnie wywołaj **Utwórz**, która tworzy kontekst urządzenia Windows metafile i dołącza go do `CMetaFileDC` obiektu.  
   
-##  <a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>  CMetaFileDC::Create  
  Utworzyć `CMetaFileDC` obiektu w dwóch krokach.  
   
 ```  
@@ -163,7 +158,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>Uwagi  
  Po pierwsze wywołanie konstruktora `CMetaFileDC`, następnie wywołaj **Utwórz**, która tworzy kontekst urządzenia Windows metafile i dołącza go do `CMetaFileDC` obiektu.  
   
-##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced  
  Tworzy kontekstu urządzenia dla formatu rozszerzony metaplik.  
   
 ```  

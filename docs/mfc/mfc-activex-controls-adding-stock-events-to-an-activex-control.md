@@ -1,13 +1,10 @@
 ---
-title: "Formanty MFC ActiveX: Dodawanie zdarzeń standardowych do formantu ActiveX | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Formanty MFC ActiveX: Dodawanie zdarzeń standardowych do formantu ActiveX | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - EVENT__STOCK_ERROR
 - EVENT__STOCK_READYSTATECHANGE
@@ -51,22 +48,20 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99de785bba9f566c5dbb4751f788320b96782427
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Kontrolki ActiveX MFC: dodawanie zdarzeń standardowych do kontrolki ActiveX
-Zdarzeń standardowych różnią się od zdarzeń niestandardowych, są one uruchamiane automatycznie przez klasę [colecontrol —](../mfc/reference/colecontrol-class.md). `COleControl`zawiera funkcji wstępnie zdefiniowanych elementów członkowskich, które wyzwalać zdarzenia wynikające z typowych akcji. Niektóre typowe akcje implementowane przez `COleControl` obejmują jednym - i double - clicks na kontroli, zdarzenia klawiatury i zmiany w stanie przycisku myszy. Wpisy mapy zdarzeń dla standardowych zdarzeń są zawsze poprzedzone **event_stock —** prefiks.  
+Zdarzeń standardowych różnią się od zdarzeń niestandardowych, są one uruchamiane automatycznie przez klasę [colecontrol —](../mfc/reference/colecontrol-class.md). `COleControl` zawiera funkcji wstępnie zdefiniowanych elementów członkowskich, które wyzwalać zdarzenia wynikające z typowych akcji. Niektóre typowe akcje implementowane przez `COleControl` obejmują jednym - i double - clicks na kontroli, zdarzenia klawiatury i zmiany w stanie przycisku myszy. Wpisy mapy zdarzeń dla standardowych zdarzeń są zawsze poprzedzone **event_stock —** prefiks.  
   
-##  <a name="_core_stock_events_supported_by_classwizard"></a>Podstawowy zdarzenia obsługiwane przez Kreator dodawania zdarzenia  
+##  <a name="_core_stock_events_supported_by_classwizard"></a> Podstawowy zdarzenia obsługiwane przez Kreator dodawania zdarzenia  
  `COleControl` Klasa udostępnia dziesięć zdarzeń standardowych wymienionych w poniższej tabeli. Można określić zdarzenia w za pomocą formantu [Kreator dodawania zdarzenia](../ide/add-event-wizard.md).  
   
 ### <a name="stock-events"></a>Zdarzeń standardowych  
@@ -84,7 +79,7 @@ Zdarzeń standardowych różnią się od zdarzeń niestandardowych, są one uruc
 |MouseUp|**firemouseup — void (krótka** `nButton` **, krótki** `nShiftState` **, float***x* **, float** *y***)** |Uruchamiany, jeśli istnieją **BUTTONUP** odebraniu (po lewej, środka lub do prawej). Przechwytywanie myszy jest zwolniony przed to zdarzenie jest wywoływane.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_mouseup —)**|  
 |ReadyStateChange|**void (FireReadyStateChange)**|Uruchamiany, gdy formant przejścia do następnego stanu gotowości ze względu na ilość danych otrzymywanych.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_readystatechange —)**|  
   
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a>Dodawanie zdarzeń standardowych przy użyciu Kreator dodawania zdarzenia  
+##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Dodawanie zdarzeń standardowych przy użyciu Kreator dodawania zdarzenia  
  Dodawanie zdarzeń standardowych wymaga mniej pracy niż dodawanie zdarzeń niestandardowych, ponieważ uruchamiania rzeczywistego zdarzenia odbywa się automatycznie przez klasę podstawową `COleControl`. Poniższa procedura dodaje zdarzeń standardowych do formantu, który został utworzony przy użyciu [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md). Zdarzenia o nazwie KeyPress generowane, gdy zostanie naciśnięty klawisz i kontrolka jest aktywny. Tę procedurę można również dodać innych standardowych zdarzeń. Zastąp nazwę wybranego standardowych zdarzenia KeyPress.  
   
 #### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>Aby dodać zdarzenie standardowe KeyPress za pomocą Kreatora dodawania zdarzenia  
@@ -101,7 +96,7 @@ Zdarzeń standardowych różnią się od zdarzeń niestandardowych, są one uruc
   
 5.  Kliknij przycisk **Zakończ**.  
   
-##  <a name="_core_classwizard_changes_for_stock_events"></a>Dodawanie zdarzenia zmiany kreatora dla standardowych zdarzeń  
+##  <a name="_core_classwizard_changes_for_stock_events"></a> Dodawanie zdarzenia zmiany kreatora dla standardowych zdarzeń  
  Ponieważ standardowych zdarzenia są obsługiwane przez klasę podstawową formantu, Kreator dodawania zdarzenia nie zmienia się z deklaracji klasy, w dowolny sposób. Dodaje zdarzenie do formantu mapy zdarzeń i powoduje, że wpis w jej. Plik IDL. Następujący wiersz zostanie dodany do mapy zdarzeń formantu, znajduje się w implementacji klasy formantu (. Pliku CPP):  
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  

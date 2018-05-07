@@ -1,13 +1,10 @@
 ---
 title: Kod czysty i weryfikowalny (C + +/ CLI) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ba218772bdedf772e995bb9289b18452d599e6c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c4f4b9bd590ad873d0b241d2c095be53ad1dacb4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pure-and-verifiable-code-ccli"></a>Kod czysty i weryfikowalny (C++/CLI)
 Programowania .NET, Visual C++ w programie Visual Studio 2017 obsługuje tworzenie zestawów mieszanych przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora. **/CLR: pure** i **CLR: Safe** opcje są przestarzałe począwszy od programu Visual Studio 2015 i zostanie usunięta w przyszłej wersji kompilatora. Jeśli kod musi być możliwe do zweryfikowania, następnie zalecamy portu dla C#.

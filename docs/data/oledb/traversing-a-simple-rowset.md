@@ -1,12 +1,9 @@
 ---
 title: Przechodzenie przez prosty zestaw wierszy | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7006d10191c3a2df31d3784a95b01f0adad0e202
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="traversing-a-simple-rowset"></a>Przechodzenie przez prosty zestaw wierszy
 W poniższym przykładzie przedstawiono dostępu szybkie i łatwe bazy danych, które nie używa polecenia. Poniższy kod konsumenta, Projekt ATL, pobiera rekordy z tabeli o nazwie *artystów* programu Microsoft Access bazy danych przy użyciu dostawcy Microsoft OLE DB dla ODBC. Kod tworzy [CTable](../../data/oledb/ctable-class.md) obiektu tabeli z metody dostępu oparte na klasie rekordu użytkownika `CArtists`. Otwiera połączenie, otwiera sesji na połączenie i otwiera tabelę w tej sesji.  

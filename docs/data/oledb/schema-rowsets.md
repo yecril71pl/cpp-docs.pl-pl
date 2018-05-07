@@ -1,30 +1,25 @@
 ---
 title: Zestawy wierszy schematu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - schema rowsets, defined
 ms.assetid: 0716a065-230c-4c20-bb53-98870e79ea29
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8101ade734713e8a2cdc6cff3801e86f43633c53
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4368f52bebf9bb171fd4b0956dfccf9794f91356
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="schema-rowsets"></a>Zestawy wierszy schematu
 Schemat (lub metadanych) jest żadnych informacji o bazie danych struktury lub organizacji, takich jak informacje o dostawcy, zestawu wierszy tabeli, kolumny, ani innych informacji od rzeczywistej bazy danych zawartości. OLE DB umożliwia uzyskiwanie tych informacji bez konieczności otwierania zestawu wierszy za pomocą zestawów wierszy schematu.  

@@ -1,30 +1,25 @@
 ---
-title: "Obsługa komunikatów odbitych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obsługa komunikatów odbitych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message handling [MFC], reflected messages
 - reflected messages, handling
 ms.assetid: 147a4e0c-51cc-4447-a8e1-c28b4cece578
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c3576e93ce7ce2d972e78433065feaf06f3ae15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05b5f62169d2b65010ec75ab8c8b5c30959b77b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-reflected-messages"></a>Obsługa komunikatów odbitych
 Odbicie umożliwia obsługi komunikatów dla formantu, takie jak wiadomości `WM_CTLCOLOR`, **WM_COMMAND**, i **WM_NOTIFY**, bezpośrednio w formancie. Dzięki temu formantu więcej niezależną i przenośną. Mechanizm współpracuje z formanty standardowe systemu Windows, a także z formantami ActiveX (wcześniej nazywanych formantów OLE).  

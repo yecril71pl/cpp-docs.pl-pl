@@ -1,12 +1,9 @@
 ---
-title: "priority_queue — (STL/CLR) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: priority_queue — (STL/CLR) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <queue> header [STL/CLR]
 - <cliext/queue> header [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63e806603a795a71dc2afb95ae17779d1c6f210b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Klasa szablonu opisuje obiekt, który kontroluje zróżnicowanie długości uporządkowane sekwencji elementów, który ma ograniczony dostęp. Użyj karty kontenera `priority_queue` Zarządzanie kontenerem podstawowej jako priorytet kolejki.  
@@ -102,7 +97,7 @@ template<typename Value,
   
  Obiekt delegowany musi nałożyć strict słabe porządkowanie dla wartości typu [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md). Oznacza to, na dowolne dwa klucze `X` i `Y`:  
   
- `value_comp()(X, Y)`Zwraca wyniku tego samego typu Boolean przy każdym wywołaniu.  
+ `value_comp()(X, Y)` Zwraca wyniku tego samego typu Boolean przy każdym wywołaniu.  
   
  Jeśli `value_comp()(X, Y)` ma wartość true, następnie `value_comp()(Y, X)` musi mieć wartość false.  
   

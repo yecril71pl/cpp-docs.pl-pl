@@ -1,13 +1,10 @@
 ---
 title: 'Windows Sockets: W tle | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446719d9d37d2930e08dc66303fd2d952fd88820
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fda86bbbeb49bcb253348ed02abef4fb8d4cff9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: podstawy
 W tym artykule opisano ujawnienia Windows Sockets. Artykuł również:  
@@ -62,7 +57,7 @@ W tym artykule opisano ujawnienia Windows Sockets. Artykuł również:
 > [!TIP]
 >  Ponieważ sockets korzystają z zestawem protokołów internetowych, są preferowane trasy dla aplikacji, które obsługują komunikację z Internetem na "autostrady informacji."  
   
-##  <a name="_core_definition_of_a_socket"></a>Definicja gniazda  
+##  <a name="_core_definition_of_a_socket"></a> Definicja gniazda  
  Gniazdo jest punkt końcowy komunikacji — obiekt, za pomocą którego aplikacji Windows Sockets wysyła i odbiera pakiety danych w sieci. Gniazda ma typ i są skojarzone z uruchomionego procesu i może mieć nazwę. Obecnie sockets zazwyczaj wymiany danych z innych sockets w tej samej"komunikacji," używający zestawem protokołów internetowych.  
   
  Oba rodzaje sockets są dwukierunkowych; są one przepływów danych, które mogą być przekazywane w obu kierunkach jednocześnie (pełny dupleks).  
@@ -84,12 +79,12 @@ W tym artykule opisano ujawnienia Windows Sockets. Artykuł również:
   
  Aby uzyskać informacje o tych typach i jakiego rodzaju gniazda do używania w jakich sytuacjach, zobacz [Windows Sockets: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md) i [Windows Sockets: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md).  
   
-##  <a name="_core_the_socket_data_type"></a>Typ danych GNIAZDA  
+##  <a name="_core_the_socket_data_type"></a> Typ danych GNIAZDA  
  Każdy obiekt MFC gniazda hermetyzuje uchwyt do obiektu Windows Sockets. Typ danych ta dojścia jest **GNIAZDA**. A **GNIAZDA** dojścia jest odpowiednikiem `HWND` okna. Klasy MFC gniazda Podaj operacje na hermetyzowany dojścia.  
   
  **GNIAZDA** — typ danych jest opisane szczegółowo w zestawie Windows SDK. Zobacz "Gniazda — typ danych i wartości błędów" w obszarze usługi Windows Sockets.  
   
-##  <a name="_core_uses_for_sockets"></a>Używa dla gniazda  
+##  <a name="_core_uses_for_sockets"></a> Używa dla gniazda  
  Gniazda są bardzo przydatne w kontekstach co najmniej trzy komunikacji:  
   
 -   Modele klient/serwer.  

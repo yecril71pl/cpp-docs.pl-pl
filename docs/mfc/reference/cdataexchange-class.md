@@ -1,12 +1,9 @@
 ---
-title: "Cdataexchange — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cdataexchange — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDataExchange
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e56df3ec4604a02ba9cf1075152a11eefe7e28f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03d68359d075efd72a1bf1907daa71e74110fa28
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdataexchange-class"></a>Cdataexchange — klasa
 Obsługuje wymiana danych okna dialogowego (DDX) i używane przez Microsoft Foundation classes procedury weryfikacji (DDV) danych okna dialogowego.  
@@ -75,7 +70,7 @@ class CDataExchange
 |[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|Okna dialogowego lub okna, gdy dane programu exchange ma miejsce.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CDataExchange`nie ma klasy podstawowej.  
+ `CDataExchange` nie ma klasy podstawowej.  
   
  Klasa używana podczas pisania procedury wymiany danych w niestandardowe typy danych lub formantów, lub jeśli piszesz własne procedury walidacji danych. Aby uzyskać więcej informacji na temat pisania własnych procedury DDX i DDV, zobacz [26 Uwaga techniczna](../../mfc/tn026-ddx-and-ddv-routines.md). Omówienie DDX i DDV, zobacz [wymiana danych okna dialogowego i weryfikacja](../../mfc/dialog-data-exchange-and-validation.md) i [okien dialogowych](../../mfc/dialog-boxes.md).  
   
@@ -87,7 +82,7 @@ class CDataExchange
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
   
-##  <a name="cdataexchange"></a>CDataExchange::CDataExchange  
+##  <a name="cdataexchange"></a>  CDataExchange::CDataExchange  
  Wywołanie tej funkcji Członkowskich do skonstruowania `CDataExchange` obiektu.  
   
 ```  
@@ -109,7 +104,7 @@ CDataExchange(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#70](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]  
   
-##  <a name="fail"></a>CDataExchange::Fail  
+##  <a name="fail"></a>  CDataExchange::Fail  
  Struktura wywołuje funkcji członkowskiej, gdy operacja sprawdzania poprawności (DDV) danych okna dialogowego nie powiodło się.  
   
 ```  
@@ -123,7 +118,7 @@ void Fail();
   
  Aby uzyskać więcej informacji na temat pisania własnych procedury DDX i DDV, zobacz [26 Uwaga techniczna](../../mfc/tn026-ddx-and-ddv-routines.md). Omówienie DDX i DDV, zobacz [wymiana danych okna dialogowego i weryfikacja](../../mfc/dialog-data-exchange-and-validation.md) i [tematy — okno dialogowe](../../mfc/dialog-boxes.md).  
   
-##  <a name="m_bsaveandvalidate"></a>CDataExchange::m_bSaveAndValidate  
+##  <a name="m_bsaveandvalidate"></a>  CDataExchange::m_bSaveAndValidate  
  Ta flaga wskazuje kierunek operacji wymiana (DDX) danych okna dialogowego.  
   
 ```  
@@ -137,7 +132,7 @@ BOOL m_bSaveAndValidate;
   
  Aby uzyskać więcej informacji na temat pisania własnych procedury DDX i DDV, zobacz [26 Uwaga techniczna](../../mfc/tn026-ddx-and-ddv-routines.md). Omówienie DDX i DDV, zobacz [wymiana danych okna dialogowego i weryfikacja](../../mfc/dialog-data-exchange-and-validation.md) i [tematy — okno dialogowe](../../mfc/dialog-boxes.md).  
   
-##  <a name="m_pdlgwnd"></a>CDataExchange::m_pDlgWnd  
+##  <a name="m_pdlgwnd"></a>  CDataExchange::m_pDlgWnd  
  Zawiera wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiektu, dla których okna dialogowego wymiany danych (DDX) lub sprawdzania poprawności (DDV) ma miejsce.  
   
 ```  
@@ -149,7 +144,7 @@ CWnd* m_pDlgWnd;
   
  Aby uzyskać więcej informacji na temat pisania własnych procedury DDX i DDV, zobacz [26 Uwaga techniczna](../../mfc/tn026-ddx-and-ddv-routines.md). Omówienie DDX i DDV, zobacz [wymiana danych okna dialogowego i weryfikacja](../../mfc/dialog-data-exchange-and-validation.md) i [tematy — okno dialogowe](../../mfc/dialog-boxes.md).  
   
-##  <a name="preparectrl"></a>CDataExchange::PrepareCtrl  
+##  <a name="preparectrl"></a>  CDataExchange::PrepareCtrl  
  Struktura wywołuje tę funkcję elementu członkowskiego, aby przygotować określony formant wymiana danych okna dialogowego (DDX) i sprawdzania poprawności (DDV).  
   
 ```  
@@ -172,7 +167,7 @@ HWND PrepareCtrl(int nIDC);
   
  Aby uzyskać więcej informacji na temat pisania własnych procedury DDX i DDV, zobacz [26 Uwaga techniczna](../../mfc/tn026-ddx-and-ddv-routines.md). Omówienie DDX i DDV, zobacz [wymiana danych okna dialogowego i weryfikacja](../../mfc/dialog-data-exchange-and-validation.md) i [tematy — okno dialogowe](../../mfc/dialog-boxes.md).  
   
-##  <a name="prepareeditctrl"></a>CDataExchange::PrepareEditCtrl  
+##  <a name="prepareeditctrl"></a>  CDataExchange::PrepareEditCtrl  
  Struktura wywołuje tę funkcję elementu członkowskiego, aby przygotować kontrolki edycji określony wymiana danych okna dialogowego (DDX) i sprawdzania poprawności (DDV).  
   
 ```  
@@ -195,7 +190,7 @@ HWND PrepareEditCtrl(int nIDC);
   
  Aby uzyskać więcej informacji na temat pisania własnych procedury DDX i DDV, zobacz [26 Uwaga techniczna](../../mfc/tn026-ddx-and-ddv-routines.md). Omówienie DDX i DDV, zobacz [wymiana danych okna dialogowego i weryfikacja](../../mfc/dialog-data-exchange-and-validation.md) i [tematy — okno dialogowe](../../mfc/dialog-boxes.md).  
   
-##  <a name="prepareolectrl"></a>CDataExchange::PrepareOleCtrl  
+##  <a name="prepareolectrl"></a>  CDataExchange::PrepareOleCtrl  
  Struktura wywołuje tę funkcję elementu członkowskiego, aby przygotować określony formant OLE wymiana danych okna dialogowego (DDX) i sprawdzania poprawności (DDV).  
   
 ```  

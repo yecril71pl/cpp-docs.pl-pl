@@ -1,13 +1,10 @@
 ---
-title: "Porady: dostęp do znaków w obiekcie System::String | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: dostęp do znaków w obiekcie System::String | Dokumentacja firmy Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9682492eedc915919758d42d5594560cb4a83a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Porady: dostęp do znaków w obiekcie System::String
 Dostęp można uzyskać znaki <xref:System.String> obiektu dla wywołań wysokiej wydajności w niezarządzanych funkcji, które trwają `wchar_t*` ciągów. Metoda zwraca wskaźnik wewnętrzny do pierwszego znaku <xref:System.String> obiektu. This, wskaźnik można manipulować bezpośrednio lub przypięty i przekazany do funkcji, oczekiwano zwykłego `wchar_t` ciągu.  
   
 ## <a name="example"></a>Przykład  
- `PtrToStringChars`Zwraca <xref:System.Char>, która jest wskaźnik wewnętrzny (znanej także jako `byref`). W efekcie go podlega wyrzucanie elementów bezużytecznych. Nie masz przypiąć ten wskaźnik, chyba że użytkownik chce go przekazać do funkcji macierzystej.  
+ `PtrToStringChars` Zwraca <xref:System.Char>, która jest wskaźnik wewnętrzny (znanej także jako `byref`). W efekcie go podlega wyrzucanie elementów bezużytecznych. Nie masz przypiąć ten wskaźnik, chyba że użytkownik chce go przekazać do funkcji macierzystej.  
   
  Rozważmy poniższy kod.  Przypinanie nie jest potrzebna, ponieważ `ppchar` jest wskaźnik wewnętrzny i jeśli moduł zbierający elementy bezużyteczne przenosi ciąg wskazuje, również spowoduje zaktualizowanie `ppchar`. Bez [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md), kod będzie działać i nie ma potencjalnych trafień wydajności spowodowany przez przypinanie.  
   

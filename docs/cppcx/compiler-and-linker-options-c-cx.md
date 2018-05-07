@@ -1,24 +1,19 @@
 ---
 title: Opcje kompilatora i konsolidatora (C + +/ CX) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e43418555722090c325c85bd4e77204640791b32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opcje kompilatora i konsolidatora (C + +/ CX)
 Wartość zmiennej środowiskowej, C + +/ CX — opcje kompilatora i opcje konsolidatora obsługuje tworzenie aplikacji dla środowiska uruchomieniowego systemu Windows.  
@@ -32,7 +27,7 @@ Wartość zmiennej środowiskowej, C + +/ CX — opcje kompilatora i opcje konso
 |------------|-----------------|  
 |[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Włącza rozszerzenia języka środowiska uruchomieniowego systemu Windows.<br /><br /> `nostdlib` Parametr zapobiega kompilatora przy użyciu ścieżki wyszukiwania standardowych, wstępnie zdefiniowanych można znaleźć plików zestawu i winmd.<br /><br /> **/ZW** — opcja kompilatora określa niejawnie następujących opcji kompilatora:<br /><br /> -   **/Fi** vccorlib.h, która wymusza włączenia vccorlib.h pliku nagłówka, który definiuje wiele typów, które są wymagane przez kompilator.<br />-   [/Fu](../build/reference/fu-name-forced-hash-using-file.md) plik Windows.winmd, który wymusza włączenia jego pliku metadanych plik Windows.winmd jest udostępniany przez system operacyjny, który definiuje wiele typów w środowisku wykonawczym systemu Windows.<br />-   **/Fu** Platform.winmd, która wymusza dołączania jest świadczona przez kompilator, który definiuje większość typów z nazw rodziny platformy pliku metadanych Platform.winmd.|  
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Dodaje katalog, który jest określony przez *dir* parametru do ścieżki wyszukiwania używające przez kompilator w celu znalezienia plików zestawu i winmd.|  
-|**/Fu***pliku* |Powoduje włączenie określonym module lub plik winmd. Oznacza to, że nie trzeba określić `#using` *pliku* w kodzie źródłowym. Kompilator automatycznie wymusza włączenia własny plik metadanych systemu Windows Platform.winmd.|  
+|**/Fu***pliku*|Powoduje włączenie określonym module lub plik winmd. Oznacza to, że nie trzeba określić `#using` *pliku* w kodzie źródłowym. Kompilator automatycznie wymusza włączenia własny plik metadanych systemu Windows Platform.winmd.|  
 |/D "WINAPI_FAMILY = 2"|Tworzy definicję, która umożliwia korzystanie z podzestawu Win32 SDK, który jest zgodny z środowiska uruchomieniowego systemu Windows.|  
   
 ## <a name="linker-options"></a>Opcje konsolidatora  
@@ -40,7 +35,7 @@ Wartość zmiennej środowiskowej, C + +/ CX — opcje kompilatora i opcje konso
 |Opcja|Opis|  
 |------------|-----------------|  
 |/ APPCONTAINER [: NO]|Oznacza plik wykonywalny jako do uruchomienia w kontenerze appcontainer (tylko).|  
-|/WINMD[:{NO&#124;ONLY}]|Emituje plik winmd i skojarzony plik binarny. Ta opcja muszą być przekazywane do konsolidatora dla winmd, aby emitować.<br /><br /> **NIE**— nie emituj pliku winmd, ale Emituj pliku binarnego.<br /><br /> **TYLKO**— emituje plik winmd, ale nie emituj pliku binarnego.|  
+|/ WINMD [: {NR&AMP;#124;TYLKO}]|Emituje plik winmd i skojarzony plik binarny. Ta opcja muszą być przekazywane do konsolidatora dla winmd, aby emitować.<br /><br /> **NIE**— nie emituj pliku winmd, ale Emituj pliku binarnego.<br /><br /> **TYLKO**— emituje plik winmd, ale nie emituj pliku binarnego.|  
 |/ WINMDFILE:*filename*|Nazwa pliku winmd do emisji, zamiast domyślnej nazwy pliku winmd. Jeśli w wierszu polecenia określono wiele nazw plików, nazwisko jest używany.|  
 |/WINMDDELAYSIGN[:NO]|Częściowo podpisuje plik winmd i umieszczenie klucza publicznego w danych binarnych.<br /><br /> **NIE**—(Default) nie podpisać plik winmd.<br /><br /> / WINMDDELAYSIGN nie ma znaczenia, chyba że /WINMDKEYFILE lub /WINMDKEYCONTAINER jest określona.|  
 |/ WINMDKEYCONTAINER:*nazwa*|Określa klucz kontenera, aby podpisać zestaw. *Nazwa* parametr odnosi się do kontenera klucza, który jest używany do podpisywania pliku metadanych.|  

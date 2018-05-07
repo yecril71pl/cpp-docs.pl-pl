@@ -1,12 +1,9 @@
 ---
 title: Struktura CRuntimeClass | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRuntimeClass
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b053e963f4e252302ed4c390a648846166aff62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cruntimeclass-structure"></a>Struktura CRuntimeClass
 Każda klasa pochodzi od `CObject` jest skojarzony z `CRuntimeClass` strukturę, która służy do wyświetlania informacji na temat obiektu lub jej klasa podstawowa w czasie wykonywania.  
@@ -61,11 +56,11 @@ struct CRuntimeClass
 |[CRuntimeClass::m_wSchema](#m_wschema)|Numer schematu klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CRuntimeClass`jest to struktura i dlatego nie ma klasy podstawowej.  
+ `CRuntimeClass` jest to struktura i dlatego nie ma klasy podstawowej.  
   
  Możliwość określenia klasy obiektów zawartych w czasie wykonywania jest przydatne, gdy wymagany jest typ dodatkowe sprawdzanie argumentów funkcji, lub gdy musisz napisać kod specjalnych oparty na klasie obiektu. Informacje o klasie czasu wykonywania nie jest obsługiwana bezpośrednio za pomocą języka C++.  
   
- `CRuntimeClass`zawiera informacje na temat powiązanego obiektu języka C++, takie jak wskaźnik do `CRuntimeClass` klasy podstawowej i nazwę klasy ASCII klasy pokrewne. Ta struktura implementuje również różne funkcje, które mogą służyć do dynamicznego tworzenia obiektów określenie typu obiektu przez przy użyciu przyjaznej nazwy, a także określenie, czy powiązane klasa pochodzi od określonej klasy.  
+ `CRuntimeClass` zawiera informacje na temat powiązanego obiektu języka C++, takie jak wskaźnik do `CRuntimeClass` klasy podstawowej i nazwę klasy ASCII klasy pokrewne. Ta struktura implementuje również różne funkcje, które mogą służyć do dynamicznego tworzenia obiektów określenie typu obiektu przez przy użyciu przyjaznej nazwy, a także określenie, czy powiązane klasa pochodzi od określonej klasy.  
   
  Aby uzyskać więcej informacji na temat używania `CRuntimeClass`, zapoznaj się z artykułem [podczas uzyskiwania dostępu do środowiska wykonawczego informacje o klasie](../../mfc/accessing-run-time-class-information.md).  
   
@@ -75,7 +70,7 @@ struct CRuntimeClass
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afx.h  
   
-##  <a name="createobject"></a>CRuntimeClass::CreateObject  
+##  <a name="createobject"></a>  CRuntimeClass::CreateObject  
  Wywołanie tej funkcji można dynamicznie utworzyć określonej klasy w czasie wykonywania.  
   
 ```  
@@ -99,7 +94,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ### <a name="example"></a>Przykład  
   Zobacz przykład [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="fromname"></a>CRuntimeClass::FromName  
+##  <a name="fromname"></a>  CRuntimeClass::FromName  
  Wywołanie tej funkcji można pobrać `CRuntimeClass` struktury skojarzone z przyjaznej nazwy.  
   
 ```  
@@ -118,7 +113,7 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
   
-##  <a name="isderivedfrom"></a>CRuntimeClass::IsDerivedFrom  
+##  <a name="isderivedfrom"></a>  CRuntimeClass::IsDerivedFrom  
  Wywołanie tej funkcji, aby określić, czy wywołanie klasa pochodzi z klasy określonej w *pBaseClass* parametru.  
   
 ```  
@@ -145,7 +140,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCObjectSample#18](../../mfc/codesnippet/cpp/cruntimeclass-structure_2.cpp)]  
   
-##  <a name="m_lpszclassname"></a>CRuntimeClass::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CRuntimeClass::m_lpszClassName  
  Zerem ciągu zawierającego nazwę klasy ASCII.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -154,7 +149,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_nobjectsize"></a>CRuntimeClass::m_nObjectSize  
+##  <a name="m_nobjectsize"></a>  CRuntimeClass::m_nObjectSize  
  Rozmiar obiektu w bajtach.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -163,7 +158,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_pbaseclass"></a>CRuntimeClass::m_pBaseClass  
+##  <a name="m_pbaseclass"></a>  CRuntimeClass::m_pBaseClass  
  Jeśli aplikacja łączy statycznie z MFC, ten element członkowski danych zawiera wskaźnik do `CRuntimeClass` struktury klasy podstawowej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -172,13 +167,13 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_pfncreateobject"></a>CRuntimeClass::m_pfnCreateObject  
+##  <a name="m_pfncreateobject"></a>  CRuntimeClass::m_pfnCreateObject  
  Wskaźnik funkcji do domyślnego konstruktora, który utworzył obiekt klasy.  
   
 ### <a name="remarks"></a>Uwagi  
  Wskaźnik jest nieprawidłowy, jeśli klasa obsługuje tworzenie dynamicznej; w przeciwnym razie funkcja zwraca **NULL**.  
   
-##  <a name="m_pfngetbaseclass"></a>CRuntimeClass::m_pfnGetBaseClass  
+##  <a name="m_pfngetbaseclass"></a>  CRuntimeClass::m_pfnGetBaseClass  
  Jeśli aplikacja używa biblioteki MFC jako udostępniony plik DLL, ten element członkowski danych wskazuje funkcja, która zwraca `CRuntimeClass` struktury klasy podstawowej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -187,7 +182,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_wschema"></a>CRuntimeClass::m_wSchema  
+##  <a name="m_wschema"></a>  CRuntimeClass::m_wSchema  
  Numer schematu (-1 dla klas nonserializable).  
   
 ### <a name="remarks"></a>Uwagi  

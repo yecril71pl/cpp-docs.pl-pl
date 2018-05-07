@@ -2,12 +2,9 @@
 title: Cdaotabledefinfo — struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoTableDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e949cb0348cb55fcee5a940b5753a5a8197e600b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53e20ca3f483bd9c00b298c69a526d8f5dd31cdb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo — Struktura
 `CDaoTableDefInfo` Struktura zawiera informacje dotyczące obiektu tabledef zdefiniowany dla obiektów dostępu do danych (DAO).  
@@ -54,7 +49,7 @@ struct CDaoTableDefInfo
  Unikatowej nazwy obiektu tabledef. Aby bezpośrednio pobrać wartości tej właściwości, należy wywołać obiekt tabledef [GetName](../../mfc/reference/cdaotabledef-class.md#getname) funkcję elementu członkowskiego. Aby uzyskać więcej informacji zobacz temat "Właściwości Name" w pomocy DAO.  
   
  `m_bUpdatable`  
- Wskazuje, czy zmiany mogą być tworzone w tabeli. Szybkie ustalenie, czy tabela jest aktualizowalny jest otwarcie `CDaoTableDef` obiektu dla tabeli i wywołania obiektu [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) funkcję elementu członkowskiego. `CanUpdate`zawsze zwraca wartość niezerową (**TRUE**) dla obiekt tabledef nowo utworzona i 0 (**FALSE**) dla obiekt tabledef dołączone. Nowy obiekt tabledef można dołączać tylko do bazy danych, dla którego bieżący użytkownik ma uprawnienia do zapisu. Jeśli tabela zawiera tylko pola nonupdatable `CanUpdate` zwraca wartość 0. Gdy nadaje się do aktualizacji, co najmniej jedno pole `CanUpdate` zwraca różną od zera. Można edytować tylko pola nadaje się do aktualizacji. Aby uzyskać więcej informacji zobacz temat "Nadaje się do aktualizacji właściwości" w pomocy DAO.  
+ Wskazuje, czy zmiany mogą być tworzone w tabeli. Szybkie ustalenie, czy tabela jest aktualizowalny jest otwarcie `CDaoTableDef` obiektu dla tabeli i wywołania obiektu [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) funkcję elementu członkowskiego. `CanUpdate` zawsze zwraca wartość niezerową (**TRUE**) dla obiekt tabledef nowo utworzona i 0 (**FALSE**) dla obiekt tabledef dołączone. Nowy obiekt tabledef można dołączać tylko do bazy danych, dla którego bieżący użytkownik ma uprawnienia do zapisu. Jeśli tabela zawiera tylko pola nonupdatable `CanUpdate` zwraca wartość 0. Gdy nadaje się do aktualizacji, co najmniej jedno pole `CanUpdate` zwraca różną od zera. Można edytować tylko pola nadaje się do aktualizacji. Aby uzyskać więcej informacji zobacz temat "Nadaje się do aktualizacji właściwości" w pomocy DAO.  
   
  `m_lAttributes`  
  Określa charakterystykę reprezentowanych przez obiekt tabledef tabeli. Aby pobrać bieżące atrybuty tabledef, należy wywołać jej [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) funkcję elementu członkowskiego. Wartość zwracana może być kombinacji tych długi stałych (przy użyciu wartości bitowe lub (**&#124;**) operatora):  
@@ -95,7 +90,7 @@ struct CDaoTableDefInfo
 ## <a name="remarks"></a>Uwagi  
  Tabledef jest obiektem klasy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). Odwołania do podstawowej, pomocniczej i wszystkie powyższe wskazują, jak informacje zwracane przez [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) funkcji członkowskiej klasy `CDaoDatabase`.  
   
- Informacje o pobrane przez [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) funkcja członkowska jest przechowywany w `CDaoTableDefInfo` struktury. Wywołanie `GetTableDefInfo` funkcji członkowskiej klasy `CDaoDatabase` obiektu, w których tabledefs — kolekcja obiekt tabledef jest przechowywany. `CDaoTableDefInfo`definiuje również `Dump` kompilacje funkcji członkowskiej podczas debugowania. Można użyć `Dump` do zrzutu zawartość `CDaoTableDefInfo` obiektu.  
+ Informacje o pobrane przez [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) funkcja członkowska jest przechowywany w `CDaoTableDefInfo` struktury. Wywołanie `GetTableDefInfo` funkcji członkowskiej klasy `CDaoDatabase` obiektu, w których tabledefs — kolekcja obiekt tabledef jest przechowywany. `CDaoTableDefInfo` definiuje również `Dump` kompilacje funkcji członkowskiej podczas debugowania. Można użyć `Dump` do zrzutu zawartość `CDaoTableDefInfo` obiektu.  
   
  Ustawienia daty i godziny są uzyskiwane z komputera, na którym utworzenia lub ostatniej aktualizacji tabeli podstawowej. W środowisku wielodostępnym użytkowników należy uzyskać te ustawienia bezpośrednio z serwera plików, aby uniknąć niezgodności w DateCreated i LastUpdated ustawienia właściwości.  
   

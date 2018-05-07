@@ -1,24 +1,19 @@
 ---
 title: Interfejsy (C + +/ CX) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa87713b49fe41dbdb7eb8f9e6382c8f78b51d0c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces-ccx"></a>Interfejsy (C + +/ CX)
 Chociaż klasa ref może dziedziczyć co najwyżej jedną konkretną klasę podstawową, on implementować dowolną liczbę interfejsu klasy. Klasa interfejsu (lub struktury interfejsu) siebie może dziedziczyć (lub wymagają) wielu interfejsu klasy, można przeciążyć funkcji jego elementów członkowskich i może mieć parametrów typu.  
